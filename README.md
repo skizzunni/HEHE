@@ -374,3 +374,58 @@ Two things worth recording:
 The standings short-name trap bit again while building this (`"Marlins"` vs
 `"Miami Marlins"`). Team identity now comes from the schedule feed, never from
 standings.
+
+## FIP investigation — the deGrom case, tested properly (2026-08-30)
+
+The model priced Texas at 54.9% with deGrom starting while the market had 65.2%.
+Hypothesis: the starter term reads only ERA, so it misprices pitchers whose ERA
+and peripherals disagree. Pulled K/BB/HBP/HR for all 7,807 starter outings and
+built a point-in-time FIP term.
+
+Sanity check: the derived FIP constant came out **3.085**, against the
+real-world MLB value of ~3.10.
+
+### Does FIP predict a pitcher's next start better than ERA?
+
+Marginally, across 2,887 point-in-time starts:
+
+| Predictor | Mean abs error, next start |
+|---|---|
+| ERA | 3.227 runs |
+| **FIP** | **3.181 runs** |
+| both averaged | 3.181 runs |
+
+**Where ERA and FIP disagree by 1+ runs (28% of starts), FIP is clearly
+better: 3.264 vs 3.412.** The hypothesis was right.
+
+### Does it improve win predictions? No.
+
+Sweeping the FIP weight, tuned on July and scored on August:
+
+| w_fip | July (tune) | August (holdout) |
+|---|---|---|
+| 0.00 | 59.5% / .2436 | 57.4% / .2458 |
+| 0.50 | 56.8% / .2455 | 56.1% / .2454 |
+| 0.75 | 57.0% / .2464 | 57.1% / .2453 |
+| 1.00 | 56.5% / .2473 | 57.1% / .2455 |
+
+July tuning selects **w_fip = 0.00**. Holdout accuracy is unchanged at 57.4%.
+
+### Why the fix is real but the gain is not
+
+Mean absolute error predicting one start is **3.2 runs**. The entire ERA spread
+between good and bad MLB starters is ~1.1 runs, and the standard deviation of a
+single start around a pitcher's own mean is **4.02 runs**. A 0.05-run
+improvement in the input is invisible under that much noise.
+
+FIP is kept at a 0.50 blend on one narrow ground: it cuts mean disagreement
+with the market from **5.3 to 4.5 points** across the 8/31 board. Closer
+agreement with a liquid market is the best available proxy for being less
+wrong. It is explicitly NOT claimed to improve win accuracy — the holdout says
+it does not.
+
+**And it did not rescue the case that motivated it.** deGrom's FIP (3.19) is
+much better than his ERA (4.21), which should raise Texas — but opposing
+starter Gage Jump's FIP (3.74 vs 4.69 ERA) improves by nearly as much, and they
+cancel. Texas moved 54.9% -> 55.6%, still 9.6 points under the market. That
+game remains a spot where the model is probably wrong and should not be bet.
