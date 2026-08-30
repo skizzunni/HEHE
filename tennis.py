@@ -67,6 +67,12 @@ def get(url):
         return json.load(r)
 
 
+def _clip(s, n):
+    """Shorten a name to n chars without leaving a dangling partial word."""
+    s = s or ""
+    return s if len(s) <= n else s[:n - 1].rstrip() + "."
+
+
 def norm(s):
     return re.sub(r"\s+", " ", (s or "").strip()).lower()
 
@@ -142,12 +148,17 @@ def board(date):
     ev = rows[0][1]["event"]
     print(f"\n{ev} -- {date} (ET) -- {len(rows)} singles matches")
     print("ranking-points model; no clean backtest -- see module docstring\n")
-    print(f"  {'TIME':<6}{'D':<3}{'MATCH (rank)':<48}{'LEAN':<24}CONF")
-    print("  " + "-" * 88)
+    print(f"  {'TIME':<6}{'D':<3}{'MATCH (rank)':<50}{'LEAN':<26}CONF")
+    print("  " + "-" * 92)
     for conf, m, fav, r1, r2 in rows:
         d = "M" if "Men" in m["draw"] else "W"
-        label = f"{m['p1'][:17]} ({r1 or 'NR'}) vs {m['p2'][:17]} ({r2 or 'NR'})"
-        print(f"  {m['time']:<6}{d:<3}{label[:48]:<48}{fav[:24]:<24}{conf*100:5.1f}%")
+        # Truncate each NAME, never the whole label: clipping the label hides
+        # the trailing rank and can run flush into the LEAN column, which makes
+        # two printouts of an unchanged board look like they disagree.
+        a = f"{_clip(m['p1'], 16)} ({r1 or 'NR'})"
+        b = f"{_clip(m['p2'], 16)} ({r2 or 'NR'})"
+        label = f"{a} vs {b}"
+        print(f"  {m['time']:<6}{d:<3}{label:<49} {_clip(fav, 24):<25} {conf*100:5.1f}%")
     coin = sum(1 for r in rows if r[0] < 0.60)
     print(f"\n  {coin} of {len(rows)} are inside 50-60% -- coin flips, not picks.")
     print("  NR = outside the top 150.\n")
