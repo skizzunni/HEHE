@@ -50,6 +50,35 @@ LEAGUES = [
     ("ufc",   "mma/ufc",                     "UFC"),
 ]
 THREE_WAY = {"epl", "mls"}
+
+# Measured on 4,090 real sides of 2,045 completed 2026 MLB games with closing
+# DraftKings prices. Every favourite bucket underperforms its own implied
+# probability; the underdog buckets land close to fair. This is the classic
+# favourite-longshot bias, and it is why a board that only names favourites is
+# pointing at the worst-priced side of every game.
+#   (low, high, actual win%, implied win%, flat ROI%)
+BUCKETS = [
+    (-10000, -200, 66.9, 70.8, -5.5),
+    (-200,   -160, 58.9, 63.8, -7.8),
+    (-160,   -130, 54.5, 58.8, -7.4),
+    (-130,   -100, 51.8, 53.3, -3.0),
+    (100,     130, 46.2, 47.0, -1.5),
+    (130,     160, 41.1, 41.3, -0.7),
+    (160,     200, 35.9, 36.4, -1.6),
+    (200,   10000, 28.6, 30.2, -5.1),
+]
+
+
+def bucket(price):
+    """Historical record for a price like this. None outside the tested range."""
+    try:
+        p = int(str(price).replace("+", ""))
+    except (TypeError, ValueError):
+        return None
+    for lo, hi, act, imp, roi in BUCKETS:
+        if lo <= p < hi:
+            return dict(act=act, imp=imp, roi=roi, gap=act - imp)
+    return None
 _NO_PRICE = {"OFF", "EVEN", "", "-", "N/A", "PK"}
 
 _CTX = ssl.create_default_context()
@@ -210,25 +239,31 @@ def collect(key, path, day, mlbctx):
                 label = ev.get("shortName") or ev.get("name") or "?"
             pr = raw_prices(c, 3 if key in THREE_WAY else 2)
             dv = devig(*pr) if pr else None
-            pick, conf, price = "", None, None
-            if dv:
-                labels = ["away", "draw", "home"] if len(dv) == 3 else ["away", "home"]
-                i = max(range(len(dv)), key=lambda j: dv[j])
-                pick = "Draw" if labels[i] == "draw" else n.get(labels[i], labels[i])
-                conf = dv[i]
-                price = pr[i]
+            legs = []
+            if dv and len(dv) == len(pr):
+                names = (["away", "draw", "home"] if len(dv) == 3 else ["away", "home"])
+                for lab_, p_, price_ in zip(names, dv, pr):
+                    who = "Draw" if lab_ == "draw" else n.get(lab_, lab_)
+                    b = bucket(price_)
+                    legs.append(dict(who=who, prob=p_, price=str(price_),
+                                     dog=(str(price_).startswith("+") or
+                                          (str(price_).lstrip("-").isdigit() and int(price_) > 0)),
+                                     roi=(b["roi"] if b else None),
+                                     gap=(b["gap"] if b else None)))
             note = ""
             if key == "mlb":
-                full = {}
+                fullnames = {}
                 for x in c.get("competitors") or []:
-                    tm = x.get("team") or {}
-                    full[x.get("homeAway")] = tm.get("displayName")
-                ctx = mlbctx.get((full.get("away"), full.get("home")))
+                    fullnames[x.get("homeAway")] = (x.get("team") or {}).get("displayName")
+                ctx = mlbctx.get((fullnames.get("away"), fullnames.get("home")))
                 if ctx:
                     note = ctx["sp"]
+            best = max(legs, key=lambda L: L["roi"] if L["roi"] is not None else -99) if legs else None
             rows.append(dict(id=f'{key}:{c.get("id")}', label=label,
-                             tip=t.strftime("%-I:%M %p"), pick=pick, conf=conf,
-                             price=str(price) if price is not None else "", note=note))
+                             tip=t.strftime("%-I:%M %p"), legs=legs, note=note,
+                             pick=(best["who"] if best else ""),
+                             price=(best["price"] if best else ""),
+                             conf=(best["prob"] if best else None)))
     rows.sort(key=lambda r: r["tip"])
     return rows
 

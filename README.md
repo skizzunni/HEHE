@@ -638,3 +638,34 @@ So keeping it current means re-baking and republishing it:
 |---|---|---|
 | `dashboard.py` | 5 min | yes |
 | published artifact | hourly, via Routine | no — republished |
+
+## Favourite-longshot bias, measured (2026-08-30)
+
+A board that only names favourites points at the worst-priced side of every
+game. Measured across **4,090 real sides of 2,045 completed 2026 games** at
+closing DraftKings prices:
+
+| Price band | Actually won | Price implied | Gap | Flat ROI |
+|---|---|---|---|---|
+| −200 or shorter | 66.9% | 70.8% | **−3.9** | −5.5% |
+| −200 to −160 | 58.9% | 63.8% | **−4.9** | **−7.8%** |
+| −160 to −130 | 54.5% | 58.8% | **−4.3** | −7.4% |
+| −130 to −100 | 51.8% | 53.3% | −1.5 | −3.0% |
+| +100 to +130 | 46.2% | 47.0% | −0.8 | −1.5% |
+| +130 to +160 | 41.1% | 41.3% | **−0.2** | **−0.7%** |
+| +160 to +200 | 35.9% | 36.4% | −0.5 | −1.6% |
+| +200 or longer | 28.6% | 30.2% | −1.6 | −5.1% |
+
+**Every favourite band won less often than its own price implied.** Underdog
+bands land within a point of fair. Blind on every game: **favourites −5.6%,
+underdogs −1.3%.**
+
+Neither wins — that is the vig — but the favourite is consistently the more
+expensive way to be right, and the −200 to −160 band, the worst on the board at
+−7.8%, is exactly where parlay legs come from.
+
+The board now shows **both sides of every game** with price, implied
+probability, and that band's historical ROI, plus a DOG tag on the side the
+market prices as less likely. The tag is a price marker, not a recommendation:
+on 2026-08-30 four underdogs won of thirteen priced games, and backing all of
+them blind lost four units.

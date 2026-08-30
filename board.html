@@ -1,10 +1,10 @@
-<title>The Form Guide</title>
+<title>Both Sides Of The Board</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
 :root{
   --ground:#FBFAF6; --panel:#FFFFFF; --rule:#E3DFD6; --rule-soft:#EFEBE3;
   --ink:#16181D; --ink-dim:#6E6A61; --accent:#0B6E6E; --accent-soft:#E4F0EE;
-  --live:#1C7A43; --final:#8B857A;
+  --live:#1C7A43; --final:#8B857A; --dog:#0B6E6E; --bad:#A33A1E;
   --display:"Archivo","Helvetica Neue",Arial,sans-serif;
   --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
@@ -13,13 +13,13 @@
   :root:not([data-theme="light"]){
     --ground:#101317; --panel:#171B21; --rule:#2A2F38; --rule-soft:#21262E;
     --ink:#E9EBEF; --ink-dim:#8D93A0; --accent:#4FC7BE; --accent-soft:#13302F;
-    --live:#5BD08A; --final:#767C88;
+    --live:#5BD08A; --final:#767C88; --dog:#4FC7BE; --bad:#E0765A;
   }
 }
 :root[data-theme="dark"]{
   --ground:#101317; --panel:#171B21; --rule:#2A2F38; --rule-soft:#21262E;
   --ink:#E9EBEF; --ink-dim:#8D93A0; --accent:#4FC7BE; --accent-soft:#13302F;
-  --live:#5BD08A; --final:#767C88;
+  --live:#5BD08A; --final:#767C88; --dog:#4FC7BE; --bad:#E0765A;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);
@@ -52,7 +52,23 @@ tbody tr:hover td{background:var(--panel)}
 td.match{font-weight:500;white-space:nowrap}
 td.state{font-family:var(--mono);font-size:12px;color:var(--ink-dim);white-space:nowrap}
 td.anly{font-family:var(--mono);font-size:12.5px;color:var(--ink-dim)}
-@media (max-width:700px){td.anly,th.anly{display:none}}
+@media (max-width:760px){td.anly,th.anly{display:none}}
+td.side{font-weight:600;padding-left:26px}
+td.side.dog::before{content:"DOG";font:600 9.5px var(--mono);letter-spacing:.09em;
+  color:var(--dog);border:1px solid var(--dog);border-radius:2px;padding:1px 4px;
+  margin-left:9px;vertical-align:1.5px}
+td.px{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--ink)}
+td.roi{font-family:var(--mono);font-size:12.5px;font-variant-numeric:tabular-nums}
+.bad{color:var(--bad)}.ok{color:var(--dog)}
+tr.gamehead td{border-bottom:0;padding-bottom:3px;padding-top:18px}
+tr.gamehead .match{font-weight:600}
+tr.leg td{border-bottom:1px solid var(--rule-soft);padding-top:5px;padding-bottom:5px}
+tr.leg:hover td{background:var(--panel)}
+.bias{margin:26px 0 0;border:1px solid var(--rule);background:var(--panel);padding:18px 20px}
+.bias h2{font:800 15px var(--display);margin:0 0 12px}
+.bias table{margin:0}
+.bias td,.bias th{padding:6px 10px;font-size:12.5px}
+.bias .n{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:right}
 tr[data-state="live"] td.state{color:var(--live);font-weight:600}
 tr[data-state="final"] td.state{color:var(--final)}
 td.lean{font-weight:600}
@@ -86,42 +102,41 @@ aside .fig{font-family:var(--mono);color:var(--accent);font-weight:600}
 </style>
 <div class="wrap">
 <header>
-  <div class="eyebrow">Upcoming only &middot; two-day board</div>
-  <h1>The Form Guide</h1>
+  <div class="eyebrow">Every side priced &middot; not just favourites</div>
+  <h1>Both Sides<br>Of The Board</h1>
   <div class="stamp" id="stamp"></div>
   <div class="days" id="days"></div>
 </header>
 <nav id="tabs" role="tablist"></nav>
-<div class="scroll"><div id="panel" role="tabpanel"></div></div>
+<div class="scroll"><div id="panel" role="tabpanel"></div></div><div id="bias"></div>
 <aside>
-  <h2>What the Lean column actually is</h2>
-  <p>It is the <b>market's</b> favourite with the bookmaker's margin stripped out &mdash;
-  not a model pick. That is a deliberate choice, and it cost something to learn.</p>
-  <p>Measured across <span class="fig">655</span> MLB games against real closing prices, the
-  market called <span class="fig">57.3%</span> of them correctly and my model
-  <span class="fig">55.9%</span>. Worse, backing the model wherever it disagreed with the book
-  lost money, and lost <em>more</em> the louder it disagreed: <span class="fig">&minus;1.0%</span>
-  at a two-point gap, <span class="fig">&minus;14.3%</span> at ten. So the board shows the
-  better forecast rather than mine.</p>
-  <p>Probabilities are de-vigged, so a 60% here means the book prices the game near 60% &mdash;
-  the price you are actually offered already carries their margin on top. <b>Analysis</b> shows
-  the probable starters and their ERAs, so you can see what is driving the number rather than
-  taking it on faith.</p>
-  <p><b>Only games that have not started appear here.</b> Finals are dropped &mdash; a settled
-  game is not a pick.</p>
-  <p>Tomorrow's rows fill in as books post &mdash; most MLB lines go up overnight, and an
-  event with no number simply had no price when this was captured.</p>
+  <h2>Read the price, not the pick</h2>
+  <p>This board shows <b>every side of every game</b> with its price, the probability that
+  price implies, and how that price band has actually performed across
+  <span class="fig">4,090</span> real sides of <span class="fig">2,045</span> completed 2026
+  MLB games settled at closing DraftKings numbers.</p>
+  <p>The table above is the point. <b>Every favourite band won less often than its own price
+  implied</b> &mdash; heavy favourites by nearly four points, the &minus;200 to &minus;160 band by
+  almost five. Underdog bands land within a point of fair. Backing every favourite blind returned
+  <span class="fig">&minus;5.6%</span>; backing every underdog blind returned
+  <span class="fig">&minus;1.3%</span>. Neither is a winning strategy &mdash; that is the vig
+  &mdash; but the favourite is consistently the more expensive way to be right.</p>
+  <p><b>The DOG tag is not a recommendation.</b> It marks the side the market prices as less
+  likely, which is also the side it prices closer to fair. On 2026-08-30, four underdogs won of
+  thirteen priced games and blindly backing all of them lost four units. A band being less
+  overpriced does not make a night profitable.</p>
   <p><b>Nothing here is a lock.</b> A 14-game slate at a 57% hit rate swings between six and ten
-  winners on an ordinary day. That range is the whole story of a good night and a bad one.</p>
+  winners on an ordinary day, and the worst-priced band on the board is exactly the one parlays
+  are built from.</p>
 </aside>
 </div>
 <script>
-const D = {"at":"Aug 30, 7:19 PM ET","dates":{"today":"20260830","tomorrow":"20260831"},"slots":{"today":{"mlb":{"label":"MLB","rows":[]},"wnba":{"label":"WNBA","rows":[{"m":"CON @ DAL","t":"8:30 PM","p":"DAL","c":89.3,"pr":"-1350","a":""}]},"nfl":{"label":"NFL","rows":[]},"ncaaf":{"label":"NCAA FB","rows":[]},"nba":{"label":"NBA","rows":[]},"nhl":{"label":"NHL","rows":[]},"atp":{"label":"Tennis (M)","rows":[{"m":"Jacob Fearnley @ Martin Landaluce","t":"7:20 PM","p":"","c":null,"pr":"","a":""},{"m":"J.J. Wolf @ Alexander Bublik","t":"8:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Sofia Kenin @ Venus Williams","t":"9:00 PM","p":"","c":null,"pr":"","a":""}]},"wta":{"label":"Tennis (W)","rows":[{"m":"Jacob Fearnley @ Martin Landaluce","t":"7:20 PM","p":"","c":null,"pr":"","a":""},{"m":"J.J. Wolf @ Alexander Bublik","t":"8:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Sofia Kenin @ Venus Williams","t":"9:00 PM","p":"","c":null,"pr":"","a":""}]},"pga":{"label":"PGA","rows":[]},"epl":{"label":"Premier Lg","rows":[]},"mls":{"label":"MLS","rows":[]},"ufc":{"label":"UFC","rows":[]}},"tomorrow":{"mlb":{"label":"MLB","rows":[{"m":"SF @ ATL","t":"6:05 PM","p":"","c":null,"pr":"","a":"Molina 2.89 vs Elder 3.95"},{"m":"NYM @ TB","t":"6:40 PM","p":"TB","c":60.5,"pr":"-172","a":"Stock 7.40 vs Seymour 4.21"},{"m":"SD @ CIN","t":"6:40 PM","p":"SD","c":56.4,"pr":"-144","a":"King 3.23 vs Singer 4.72"},{"m":"MIA @ WSH","t":"6:45 PM","p":"MIA","c":52.2,"pr":"-120","a":"Gusto 3.98 vs Dion 3.67"},{"m":"SEA @ BOS","t":"6:45 PM","p":"BOS","c":59.7,"pr":"-167","a":"Kirby 4.02 vs Tolle 3.09"},{"m":"DET @ MIN","t":"7:40 PM","p":"MIN","c":54.9,"pr":"-135","a":"Jobe 3.93 vs Bradley 3.97"},{"m":"MIL @ CHC","t":"7:40 PM","p":"CHC","c":50.9,"pr":"-114","a":"Harrison 2.79 vs Holmes 2.26"},{"m":"ATH @ TEX","t":"8:05 PM","p":"TEX","c":65.6,"pr":"-218","a":"Jump 4.69 vs deGrom 4.21"},{"m":"CHW @ HOU","t":"8:10 PM","p":"HOU","c":54.0,"pr":"-130","a":"Kay 4.09 vs Lambert 3.66"},{"m":"BAL @ COL","t":"8:40 PM","p":"BAL","c":56.3,"pr":"-143","a":"TBD vs Gordon 5.38"},{"m":"NYY @ LAA","t":"9:38 PM","p":"NYY","c":57.2,"pr":"-149","a":"Rodr\u00edguez 4.70 vs TBD"},{"m":"PHI @ ARI","t":"9:40 PM","p":"PHI","c":51.1,"pr":"-115","a":"Nola 5.03 vs TBD"}]},"wnba":{"label":"WNBA","rows":[]},"nfl":{"label":"NFL","rows":[]},"ncaaf":{"label":"NCAA FB","rows":[]},"nba":{"label":"NBA","rows":[]},"nhl":{"label":"NHL","rows":[]},"atp":{"label":"Tennis (M)","rows":[{"m":"Arthur Fils @ Stefanos Tsitsipas","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Andrey Rublev @ Otto Virtanen","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Aleksandar Kovacevic @ Valentin Vacherot","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Peyton Stearns @ Harriet Dart","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Marie Bouzkova @ Elsa Jacquemot","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Kristina Liutova @ Zheng Qinwen","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Panna Udvardy @ Mananchaya Sawangkaew","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Karolina Muchova @ Sinja Kraus","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Cristina Bucsa @ Sara Bejlek","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Himeno Sakatsume @ Anhelina Kalinina","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Tamara Korpatsch @ Lilli Tagger","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Camila Osorio @ Aryna Sabalenka","t":"11:30 AM","p":"","c":null,"pr":"","a":""},{"m":"Hubert Hurkacz @ Damir Dzumhur","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Giovanni Mpetshi Perricard @ Jurij Rodionov","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Sebastian Baez @ Brandon Nakashima","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Oksana Selekhmeteva @ Aoi Ito","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Taylor Townsend @ Maja Chwalinska","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Simona Waltert @ Nadia Podoroska","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Anna Kalinskaya @ Anna Blinkova","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"James Duckworth @ Matteo Arnaldi","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Carlos Alcaraz @ Roman Safiullin","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Maria Timofeeva @ Tamara Zidansek","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Diana Shnaider @ Daria Snigur","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Amanda Anisimova @ Ashlyn Krueger","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Catherine McNally @ Anouk Koevermans","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Harry Wendelken @ Luciano Darderi","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Stan Wawrinka @ Matteo Berrettini","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Valentin Royer @ Dalibor Svrcina","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Marco Trungelliti @ Shang Juncheng","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Clara Tauson @ Sloane Stephens","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Antonia Ruzic @ Ann Li","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Alejandro Tabilo @ Yannick Hanfmann","t":"2:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Tomas Barrios Vera @ Alexander Blockx","t":"2:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Linda Noskova @ Katie Volynets","t":"2:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Sorana Cirstea @ Julia Grabher","t":"3:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Diane Parry @ Viktorija Golubic","t":"3:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Alexei Popyrin @ Grigor Dimitrov","t":"3:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Facundo Diaz Acosta @ Quentin Halys","t":"4:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Karen Khachanov @ Roman Andres Burruchaga","t":"4:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Shintaro Mochizuki @ Jakub Mensik","t":"4:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Learner Tien @ Nuno Borges","t":"4:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Katerina Siniakova @ Elisabetta Cocciaretto","t":"4:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Rinky Hijikata @ Felix Auger-Aliassime","t":"5:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Liudmila Samsonova @ Maya Joint","t":"5:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Tallon Griekspoor @ Ben Shelton","t":"7:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Wang Xiyu @ Iga Swiatek","t":"7:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Frances Tiafoe @ Martin Damm","t":"8:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Anastasia Zakharova @ Naomi Osaka","t":"9:00 PM","p":"","c":null,"pr":"","a":""}]},"wta":{"label":"Tennis (W)","rows":[{"m":"Arthur Fils @ Stefanos Tsitsipas","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Andrey Rublev @ Otto Virtanen","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Aleksandar Kovacevic @ Valentin Vacherot","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Peyton Stearns @ Harriet Dart","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Marie Bouzkova @ Elsa Jacquemot","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Kristina Liutova @ Zheng Qinwen","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Panna Udvardy @ Mananchaya Sawangkaew","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Karolina Muchova @ Sinja Kraus","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Cristina Bucsa @ Sara Bejlek","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Himeno Sakatsume @ Anhelina Kalinina","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Tamara Korpatsch @ Lilli Tagger","t":"11:00 AM","p":"","c":null,"pr":"","a":""},{"m":"Camila Osorio @ Aryna Sabalenka","t":"11:30 AM","p":"","c":null,"pr":"","a":""},{"m":"Hubert Hurkacz @ Damir Dzumhur","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Giovanni Mpetshi Perricard @ Jurij Rodionov","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Sebastian Baez @ Brandon Nakashima","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Oksana Selekhmeteva @ Aoi Ito","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Taylor Townsend @ Maja Chwalinska","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Simona Waltert @ Nadia Podoroska","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Anna Kalinskaya @ Anna Blinkova","t":"12:30 PM","p":"","c":null,"pr":"","a":""},{"m":"James Duckworth @ Matteo Arnaldi","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Carlos Alcaraz @ Roman Safiullin","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Maria Timofeeva @ Tamara Zidansek","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Diana Shnaider @ Daria Snigur","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Amanda Anisimova @ Ashlyn Krueger","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Catherine McNally @ Anouk Koevermans","t":"1:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Harry Wendelken @ Luciano Darderi","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Stan Wawrinka @ Matteo Berrettini","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Valentin Royer @ Dalibor Svrcina","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Marco Trungelliti @ Shang Juncheng","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Clara Tauson @ Sloane Stephens","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Antonia Ruzic @ Ann Li","t":"2:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Alejandro Tabilo @ Yannick Hanfmann","t":"2:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Tomas Barrios Vera @ Alexander Blockx","t":"2:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Linda Noskova @ Katie Volynets","t":"2:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Sorana Cirstea @ Julia Grabher","t":"3:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Diane Parry @ Viktorija Golubic","t":"3:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Alexei Popyrin @ Grigor Dimitrov","t":"3:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Facundo Diaz Acosta @ Quentin Halys","t":"4:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Karen Khachanov @ Roman Andres Burruchaga","t":"4:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Shintaro Mochizuki @ Jakub Mensik","t":"4:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Learner Tien @ Nuno Borges","t":"4:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Katerina Siniakova @ Elisabetta Cocciaretto","t":"4:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Rinky Hijikata @ Felix Auger-Aliassime","t":"5:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Liudmila Samsonova @ Maya Joint","t":"5:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Tallon Griekspoor @ Ben Shelton","t":"7:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Wang Xiyu @ Iga Swiatek","t":"7:00 PM","p":"","c":null,"pr":"","a":""},{"m":"Frances Tiafoe @ Martin Damm","t":"8:30 PM","p":"","c":null,"pr":"","a":""},{"m":"Anastasia Zakharova @ Naomi Osaka","t":"9:00 PM","p":"","c":null,"pr":"","a":""}]},"pga":{"label":"PGA","rows":[]},"epl":{"label":"Premier Lg","rows":[{"m":"ARS @ AVL","t":"3:00 PM","p":"ARS","c":79.6,"pr":"-185","a":""}]},"mls":{"label":"MLS","rows":[]},"ufc":{"label":"UFC","rows":[]}}}};
+const D = {"at":"Aug 30, 7:53 PM ET","dates":{"today":"20260830","tomorrow":"20260831"},"buckets":[{"lo":-10000,"hi":-200,"act":66.9,"imp":70.8,"roi":-5.5},{"lo":-200,"hi":-160,"act":58.9,"imp":63.8,"roi":-7.8},{"lo":-160,"hi":-130,"act":54.5,"imp":58.8,"roi":-7.4},{"lo":-130,"hi":-100,"act":51.8,"imp":53.3,"roi":-3.0},{"lo":100,"hi":130,"act":46.2,"imp":47.0,"roi":-1.5},{"lo":130,"hi":160,"act":41.1,"imp":41.3,"roi":-0.7},{"lo":160,"hi":200,"act":35.9,"imp":36.4,"roi":-1.6},{"lo":200,"hi":10000,"act":28.6,"imp":30.2,"roi":-5.1}],"slots":{"today":{"mlb":{"label":"MLB","rows":[]},"wnba":{"label":"WNBA","rows":[{"m":"CON @ DAL","t":"8:30 PM","a":"","legs":[{"w":"CON","p":"+800","q":10.7,"d":true,"roi":-5.1,"gap":-1.5999999999999979},{"w":"DAL","p":"-1350","q":89.3,"d":false,"roi":-5.5,"gap":-3.8999999999999915}]}]},"nfl":{"label":"NFL","rows":[]},"ncaaf":{"label":"NCAA FB","rows":[]},"nba":{"label":"NBA","rows":[]},"nhl":{"label":"NHL","rows":[]},"atp":{"label":"Tennis (M)","rows":[{"m":"J.J. Wolf @ Alexander Bublik","t":"8:30 PM","a":"","legs":[]},{"m":"Sofia Kenin @ Venus Williams","t":"9:00 PM","a":"","legs":[]}]},"wta":{"label":"Tennis (W)","rows":[{"m":"J.J. Wolf @ Alexander Bublik","t":"8:30 PM","a":"","legs":[]},{"m":"Sofia Kenin @ Venus Williams","t":"9:00 PM","a":"","legs":[]}]},"pga":{"label":"PGA","rows":[]},"epl":{"label":"Premier Lg","rows":[]},"mls":{"label":"MLS","rows":[]},"ufc":{"label":"UFC","rows":[]}},"tomorrow":{"mlb":{"label":"MLB","rows":[{"m":"SF @ ATL","t":"6:05 PM","a":"Molina 2.89 vs Elder 3.95","legs":[{"w":"SF","p":"+118","q":43.9,"d":true,"roi":-1.5,"gap":-0.7999999999999972},{"w":"ATL","p":"-142","q":56.1,"d":false,"roi":-7.4,"gap":-4.299999999999997}]},{"m":"NYM @ TB","t":"6:40 PM","a":"Stock 7.40 vs Seymour 4.21","legs":[{"w":"NYM","p":"+142","q":39.5,"d":true,"roi":-0.7,"gap":-0.19999999999999574},{"w":"TB","p":"-172","q":60.5,"d":false,"roi":-7.8,"gap":-4.899999999999999}]},{"m":"SD @ CIN","t":"6:40 PM","a":"King 3.23 vs Singer 4.72","legs":[{"w":"SD","p":"-148","q":57.0,"d":false,"roi":-7.4,"gap":-4.299999999999997},{"w":"CIN","p":"+122","q":43.0,"d":true,"roi":-1.5,"gap":-0.7999999999999972}]},{"m":"MIA @ WSH","t":"6:45 PM","a":"Gusto 3.98 vs Dion 3.67","legs":[{"w":"MIA","p":"-120","q":52.2,"d":false,"roi":-3.0,"gap":-1.5},{"w":"WSH","p":"+100","q":47.8,"d":true,"roi":-1.5,"gap":-0.7999999999999972}]},{"m":"SEA @ BOS","t":"6:45 PM","a":"Kirby 4.02 vs Tolle 3.09","legs":[{"w":"SEA","p":"+137","q":40.3,"d":true,"roi":-0.7,"gap":-0.19999999999999574},{"w":"BOS","p":"-167","q":59.7,"d":false,"roi":-7.8,"gap":-4.899999999999999}]},{"m":"DET @ MIN","t":"7:40 PM","a":"Jobe 3.93 vs Bradley 3.97","legs":[{"w":"DET","p":"+112","q":45.1,"d":true,"roi":-1.5,"gap":-0.7999999999999972},{"w":"MIN","p":"-135","q":54.9,"d":false,"roi":-7.4,"gap":-4.299999999999997}]},{"m":"MIL @ CHC","t":"7:40 PM","a":"Harrison 2.79 vs Holmes 2.26","legs":[{"w":"MIL","p":"-106","q":49.1,"d":false,"roi":-3.0,"gap":-1.5},{"w":"CHC","p":"-114","q":50.9,"d":false,"roi":-3.0,"gap":-1.5}]},{"m":"ATH @ TEX","t":"8:05 PM","a":"Jump 4.69 vs deGrom 4.21","legs":[{"w":"ATH","p":"+183","q":33.8,"d":true,"roi":-1.6,"gap":-0.5},{"w":"TEX","p":"-225","q":66.2,"d":false,"roi":-5.5,"gap":-3.8999999999999915}]},{"m":"CHW @ HOU","t":"8:10 PM","a":"Kay 4.09 vs Lambert 3.66","legs":[{"w":"CHW","p":"+108","q":46.0,"d":true,"roi":-1.5,"gap":-0.7999999999999972},{"w":"HOU","p":"-130","q":54.0,"d":false,"roi":-3.0,"gap":-1.5}]},{"m":"BAL @ COL","t":"8:40 PM","a":"TBD vs Gordon 5.38","legs":[{"w":"BAL","p":"-143","q":56.3,"d":false,"roi":-7.4,"gap":-4.299999999999997},{"w":"COL","p":"+119","q":43.7,"d":true,"roi":-1.5,"gap":-0.7999999999999972}]},{"m":"NYY @ LAA","t":"9:38 PM","a":"Rodr\u00edguez 4.70 vs Ure\u00f1a 2.94","legs":[{"w":"NYY","p":"-149","q":57.2,"d":false,"roi":-7.4,"gap":-4.299999999999997},{"w":"LAA","p":"+123","q":42.8,"d":true,"roi":-1.5,"gap":-0.7999999999999972}]},{"m":"PHI @ ARI","t":"9:40 PM","a":"Nola 5.03 vs TBD","legs":[{"w":"PHI","p":"-115","q":51.1,"d":false,"roi":-3.0,"gap":-1.5},{"w":"ARI","p":"-105","q":48.9,"d":false,"roi":-3.0,"gap":-1.5}]}]},"wnba":{"label":"WNBA","rows":[]},"nfl":{"label":"NFL","rows":[]},"ncaaf":{"label":"NCAA FB","rows":[]},"nba":{"label":"NBA","rows":[]},"nhl":{"label":"NHL","rows":[]},"atp":{"label":"Tennis (M)","rows":[{"m":"Arthur Fils @ Stefanos Tsitsipas","t":"11:00 AM","a":"","legs":[]},{"m":"Andrey Rublev @ Otto Virtanen","t":"11:00 AM","a":"","legs":[]},{"m":"Aleksandar Kovacevic @ Valentin Vacherot","t":"11:00 AM","a":"","legs":[]},{"m":"Peyton Stearns @ Harriet Dart","t":"11:00 AM","a":"","legs":[]},{"m":"Marie Bouzkova @ Elsa Jacquemot","t":"11:00 AM","a":"","legs":[]},{"m":"Kristina Liutova @ Zheng Qinwen","t":"11:00 AM","a":"","legs":[]},{"m":"Panna Udvardy @ Mananchaya Sawangkaew","t":"11:00 AM","a":"","legs":[]},{"m":"Karolina Muchova @ Sinja Kraus","t":"11:00 AM","a":"","legs":[]},{"m":"Cristina Bucsa @ Sara Bejlek","t":"11:00 AM","a":"","legs":[]},{"m":"Himeno Sakatsume @ Anhelina Kalinina","t":"11:00 AM","a":"","legs":[]},{"m":"Tamara Korpatsch @ Lilli Tagger","t":"11:00 AM","a":"","legs":[]},{"m":"Camila Osorio @ Aryna Sabalenka","t":"11:30 AM","a":"","legs":[]},{"m":"Hubert Hurkacz @ Damir Dzumhur","t":"12:30 PM","a":"","legs":[]},{"m":"Giovanni Mpetshi Perricard @ Jurij Rodionov","t":"12:30 PM","a":"","legs":[]},{"m":"Sebastian Baez @ Brandon Nakashima","t":"12:30 PM","a":"","legs":[]},{"m":"Oksana Selekhmeteva @ Aoi Ito","t":"12:30 PM","a":"","legs":[]},{"m":"Taylor Townsend @ Maja Chwalinska","t":"12:30 PM","a":"","legs":[]},{"m":"Simona Waltert @ Nadia Podoroska","t":"12:30 PM","a":"","legs":[]},{"m":"Anna Kalinskaya @ Anna Blinkova","t":"12:30 PM","a":"","legs":[]},{"m":"James Duckworth @ Matteo Arnaldi","t":"1:00 PM","a":"","legs":[]},{"m":"Carlos Alcaraz @ Roman Safiullin","t":"1:00 PM","a":"","legs":[]},{"m":"Maria Timofeeva @ Tamara Zidansek","t":"1:00 PM","a":"","legs":[]},{"m":"Diana Shnaider @ Daria Snigur","t":"1:00 PM","a":"","legs":[]},{"m":"Amanda Anisimova @ Ashlyn Krueger","t":"1:00 PM","a":"","legs":[]},{"m":"Catherine McNally @ Anouk Koevermans","t":"1:00 PM","a":"","legs":[]},{"m":"Harry Wendelken @ Luciano Darderi","t":"2:00 PM","a":"","legs":[]},{"m":"Stan Wawrinka @ Matteo Berrettini","t":"2:00 PM","a":"","legs":[]},{"m":"Valentin Royer @ Dalibor Svrcina","t":"2:00 PM","a":"","legs":[]},{"m":"Marco Trungelliti @ Shang Juncheng","t":"2:00 PM","a":"","legs":[]},{"m":"Clara Tauson @ Sloane Stephens","t":"2:00 PM","a":"","legs":[]},{"m":"Antonia Ruzic @ Ann Li","t":"2:00 PM","a":"","legs":[]},{"m":"Alejandro Tabilo @ Yannick Hanfmann","t":"2:30 PM","a":"","legs":[]},{"m":"Tomas Barrios Vera @ Alexander Blockx","t":"2:30 PM","a":"","legs":[]},{"m":"Linda Noskova @ Katie Volynets","t":"2:30 PM","a":"","legs":[]},{"m":"Sorana Cirstea @ Julia Grabher","t":"3:00 PM","a":"","legs":[]},{"m":"Diane Parry @ Viktorija Golubic","t":"3:00 PM","a":"","legs":[]},{"m":"Alexei Popyrin @ Grigor Dimitrov","t":"3:30 PM","a":"","legs":[]},{"m":"Facundo Diaz Acosta @ Quentin Halys","t":"4:00 PM","a":"","legs":[]},{"m":"Karen Khachanov @ Roman Andres Burruchaga","t":"4:00 PM","a":"","legs":[]},{"m":"Shintaro Mochizuki @ Jakub Mensik","t":"4:00 PM","a":"","legs":[]},{"m":"Learner Tien @ Nuno Borges","t":"4:30 PM","a":"","legs":[]},{"m":"Katerina Siniakova @ Elisabetta Cocciaretto","t":"4:30 PM","a":"","legs":[]},{"m":"Rinky Hijikata @ Felix Auger-Aliassime","t":"5:00 PM","a":"","legs":[]},{"m":"Liudmila Samsonova @ Maya Joint","t":"5:00 PM","a":"","legs":[]},{"m":"Tallon Griekspoor @ Ben Shelton","t":"7:00 PM","a":"","legs":[]},{"m":"Wang Xiyu @ Iga Swiatek","t":"7:00 PM","a":"","legs":[]},{"m":"Frances Tiafoe @ Martin Damm","t":"8:30 PM","a":"","legs":[]},{"m":"Anastasia Zakharova @ Naomi Osaka","t":"9:00 PM","a":"","legs":[]}]},"wta":{"label":"Tennis (W)","rows":[{"m":"Arthur Fils @ Stefanos Tsitsipas","t":"11:00 AM","a":"","legs":[]},{"m":"Andrey Rublev @ Otto Virtanen","t":"11:00 AM","a":"","legs":[]},{"m":"Aleksandar Kovacevic @ Valentin Vacherot","t":"11:00 AM","a":"","legs":[]},{"m":"Peyton Stearns @ Harriet Dart","t":"11:00 AM","a":"","legs":[]},{"m":"Marie Bouzkova @ Elsa Jacquemot","t":"11:00 AM","a":"","legs":[]},{"m":"Kristina Liutova @ Zheng Qinwen","t":"11:00 AM","a":"","legs":[]},{"m":"Panna Udvardy @ Mananchaya Sawangkaew","t":"11:00 AM","a":"","legs":[]},{"m":"Karolina Muchova @ Sinja Kraus","t":"11:00 AM","a":"","legs":[]},{"m":"Cristina Bucsa @ Sara Bejlek","t":"11:00 AM","a":"","legs":[]},{"m":"Himeno Sakatsume @ Anhelina Kalinina","t":"11:00 AM","a":"","legs":[]},{"m":"Tamara Korpatsch @ Lilli Tagger","t":"11:00 AM","a":"","legs":[]},{"m":"Camila Osorio @ Aryna Sabalenka","t":"11:30 AM","a":"","legs":[]},{"m":"Hubert Hurkacz @ Damir Dzumhur","t":"12:30 PM","a":"","legs":[]},{"m":"Giovanni Mpetshi Perricard @ Jurij Rodionov","t":"12:30 PM","a":"","legs":[]},{"m":"Sebastian Baez @ Brandon Nakashima","t":"12:30 PM","a":"","legs":[]},{"m":"Oksana Selekhmeteva @ Aoi Ito","t":"12:30 PM","a":"","legs":[]},{"m":"Taylor Townsend @ Maja Chwalinska","t":"12:30 PM","a":"","legs":[]},{"m":"Simona Waltert @ Nadia Podoroska","t":"12:30 PM","a":"","legs":[]},{"m":"Anna Kalinskaya @ Anna Blinkova","t":"12:30 PM","a":"","legs":[]},{"m":"James Duckworth @ Matteo Arnaldi","t":"1:00 PM","a":"","legs":[]},{"m":"Carlos Alcaraz @ Roman Safiullin","t":"1:00 PM","a":"","legs":[]},{"m":"Maria Timofeeva @ Tamara Zidansek","t":"1:00 PM","a":"","legs":[]},{"m":"Diana Shnaider @ Daria Snigur","t":"1:00 PM","a":"","legs":[]},{"m":"Amanda Anisimova @ Ashlyn Krueger","t":"1:00 PM","a":"","legs":[]},{"m":"Catherine McNally @ Anouk Koevermans","t":"1:00 PM","a":"","legs":[]},{"m":"Harry Wendelken @ Luciano Darderi","t":"2:00 PM","a":"","legs":[]},{"m":"Stan Wawrinka @ Matteo Berrettini","t":"2:00 PM","a":"","legs":[]},{"m":"Valentin Royer @ Dalibor Svrcina","t":"2:00 PM","a":"","legs":[]},{"m":"Marco Trungelliti @ Shang Juncheng","t":"2:00 PM","a":"","legs":[]},{"m":"Clara Tauson @ Sloane Stephens","t":"2:00 PM","a":"","legs":[]},{"m":"Antonia Ruzic @ Ann Li","t":"2:00 PM","a":"","legs":[]},{"m":"Alejandro Tabilo @ Yannick Hanfmann","t":"2:30 PM","a":"","legs":[]},{"m":"Tomas Barrios Vera @ Alexander Blockx","t":"2:30 PM","a":"","legs":[]},{"m":"Linda Noskova @ Katie Volynets","t":"2:30 PM","a":"","legs":[]},{"m":"Sorana Cirstea @ Julia Grabher","t":"3:00 PM","a":"","legs":[]},{"m":"Diane Parry @ Viktorija Golubic","t":"3:00 PM","a":"","legs":[]},{"m":"Alexei Popyrin @ Grigor Dimitrov","t":"3:30 PM","a":"","legs":[]},{"m":"Facundo Diaz Acosta @ Quentin Halys","t":"4:00 PM","a":"","legs":[]},{"m":"Karen Khachanov @ Roman Andres Burruchaga","t":"4:00 PM","a":"","legs":[]},{"m":"Shintaro Mochizuki @ Jakub Mensik","t":"4:00 PM","a":"","legs":[]},{"m":"Learner Tien @ Nuno Borges","t":"4:30 PM","a":"","legs":[]},{"m":"Katerina Siniakova @ Elisabetta Cocciaretto","t":"4:30 PM","a":"","legs":[]},{"m":"Rinky Hijikata @ Felix Auger-Aliassime","t":"5:00 PM","a":"","legs":[]},{"m":"Liudmila Samsonova @ Maya Joint","t":"5:00 PM","a":"","legs":[]},{"m":"Tallon Griekspoor @ Ben Shelton","t":"7:00 PM","a":"","legs":[]},{"m":"Wang Xiyu @ Iga Swiatek","t":"7:00 PM","a":"","legs":[]},{"m":"Frances Tiafoe @ Martin Damm","t":"8:30 PM","a":"","legs":[]},{"m":"Anastasia Zakharova @ Naomi Osaka","t":"9:00 PM","a":"","legs":[]}]},"pga":{"label":"PGA","rows":[]},"epl":{"label":"Premier Lg","rows":[{"m":"ARS @ AVL","t":"3:00 PM","a":"","legs":[{"w":"ARS","p":"-185","q":79.6,"d":false,"roi":-7.8,"gap":-4.899999999999999},{"w":"AVL","p":"+500","q":20.4,"d":true,"roi":-5.1,"gap":-1.5999999999999979}]}]},"mls":{"label":"MLS","rows":[]},"ufc":{"label":"UFC","rows":[]}}}};
 const order = ["mlb","wnba","nfl","ncaaf","nba","nhl","atp","wta","pga","epl","mls","ufc"];
 let slot = "today", league = null;
 document.getElementById("stamp").textContent = "Researched " + D.at;
 const tabs = document.getElementById("tabs"), panel = document.getElementById("panel"),
-      days = document.getElementById("days");
+      days = document.getElementById("days"), bias = document.getElementById("bias");
 const pretty = s => s.slice(4,6).replace(/^0/,"") + "/" + s.slice(6).replace(/^0/,"");
 
 function buildTabs(){
@@ -145,19 +160,39 @@ function render(){
       + (slot === "today" ? "left today" : "tomorrow") + '.</p>';
     return;
   }
-  panel.innerHTML = '<table><thead><tr><th>Matchup</th><th>Start</th><th>Pick</th>'
-    + '<th class="anly">Analysis</th><th class="num">Prob</th></tr></thead><tbody>'
-    + lg.rows.map(r => {
-        const pick = r.p
-          ? '<td class="lean">' + r.p + (r.pr ? ' <span class="state">' + r.pr + '</span>' : '') + '</td>'
-          : '<td class="lean none">no price yet</td>';
-        const num = r.c !== null ? '<td class="num">' + r.c.toFixed(1) + '%</td>'
-                                 : '<td class="num none">&mdash;</td>';
-        return '<tr data-state="sched"><td class="match"><span class="stripe"></span>'
-             + r.m + '</td><td class="state">' + r.t + '</td>' + pick
-             + '<td class="anly">' + (r.a || "") + '</td>' + num + '</tr>';
-      }).join("")
-    + '</tbody></table>';
+  const body = lg.rows.map(r => {
+    const head = '<tr class="gamehead"><td class="match" colspan="2">' + r.m
+      + '</td><td class="state">' + r.t + '</td><td class="anly" colspan="2">'
+      + (r.a || "") + '</td></tr>';
+    if(!r.legs.length)
+      return head + '<tr class="leg"><td class="side none" colspan="5">no price posted yet</td></tr>';
+    return head + r.legs.map(L => {
+      const roi = L.roi === null ? '<td class="roi none">&mdash;</td>'
+        : '<td class="roi ' + (L.roi < -3 ? "bad" : "ok") + '">' + L.roi.toFixed(1) + '%</td>';
+      return '<tr class="leg"><td class="side' + (L.d ? " dog" : "") + '" colspan="2">'
+        + L.w + '</td><td class="px">' + L.p + '</td>'
+        + '<td class="num">' + L.q.toFixed(1) + '%</td>' + roi + '</tr>';
+    }).join("");
+  }).join("");
+  panel.innerHTML = '<table><thead><tr><th colspan="2">Side</th><th>Price</th>'
+    + '<th class="num">Implied</th><th>Hist ROI</th></tr></thead><tbody>'
+    + body + '</tbody></table>';
+}
+function renderBias(){
+  const rows = D.buckets.map(b => {
+    const lab = b.lo <= -10000 ? "\u2264 -200"
+      : b.hi >= 10000 ? "+200 or longer"
+      : (b.lo > 0 ? "+" + b.lo + " to +" + b.hi : b.lo + " to " + b.hi);
+    const gap = b.act - b.imp;
+    return '<tr><td>' + lab + '</td><td class="n">' + b.act.toFixed(1)
+      + '%</td><td class="n">' + b.imp.toFixed(1) + '%</td><td class="n '
+      + (gap < -2 ? "bad" : "ok") + '">' + gap.toFixed(1) + '</td><td class="n '
+      + (b.roi < -3 ? "bad" : "ok") + '">' + b.roi.toFixed(1) + '%</td></tr>';
+  }).join("");
+  bias.innerHTML = '<div class="bias"><h2>Why the favourite is usually the worse side</h2>'
+    + '<table><thead><tr><th>Price</th><th class="n">Actually won</th>'
+    + '<th class="n">Price implied</th><th class="n">Gap</th><th class="n">Flat ROI</th>'
+    + '</tr></thead><tbody>' + rows + '</tbody></table></div>';
 }
 ["today","tomorrow"].forEach(s => {
   const b = document.createElement("button");
@@ -171,5 +206,5 @@ function render(){
   };
   days.appendChild(b);
 });
-buildTabs(); render();
+buildTabs(); render(); renderBias();
 </script>
