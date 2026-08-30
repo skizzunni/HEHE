@@ -342,3 +342,35 @@ Players are assigned to teams by their most recent appearance, and any player
 without an appearance in 14 days is dropped. On the 2026-08-30 board that
 filter removed 49 players who would otherwise have been priced onto rosters
 they no longer play for.
+
+## MLB ensemble — the "ultimate model", and its honest ceiling (2026-08-30)
+
+Combined every component that had earned validation: point-in-time team run
+rates, sample-regressed starter ERA, **point-in-time bullpen ERA** (team runs
+allowed minus that game's starter earned runs, over the innings the pen threw),
+and MOV Elo from `anysport.py`. Weights tuned on **July only**, scored on
+**August only** — separate windows, after the first grid search was caught
+tuning and scoring on the same data.
+
+Tuned result: **starter 0.65 / bullpen 0.30 / team run-rate 0.05 / Elo 0.00.**
+
+| Model | August holdout | Brier |
+|---|---|---|
+| `model_v3` (starter + team) | 56.1% | 0.2456 |
+| **ensemble (+ bullpen)** | **57.4%** | 0.2458 |
+
+**The gain is +1.3 points with 1 standard error at 2.5 points, and Brier is
+flat.** Adding a bullpen term and an Elo ensemble to a validated model bought
+nothing measurable. That is the ceiling on this sport with these inputs.
+
+Two things worth recording:
+
+- **Elo tuned to weight zero.** The search was free to use it and refused.
+  Baseball has too little signal in win-loss sequence once you know the
+  starter — consistent with generic Elo scoring 54.3% on MLB in `anysport.py`.
+- **Bullpen took 0.30**, the second-largest weight, confirming the earlier
+  ablation where removing the pen cost more accuracy than removing the starter.
+
+The standings short-name trap bit again while building this (`"Marlins"` vs
+`"Miami Marlins"`). Team identity now comes from the schedule feed, never from
+standings.
