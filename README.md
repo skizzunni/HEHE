@@ -507,3 +507,35 @@ Saturday's 11-of-12 and Sunday's 2-of-6 are both ordinary outcomes of the same
 unchanged process. Nothing broke between them, and nothing was fixed between
 them either. **On 2026-08-30 the model went 2–4 on completed games and the
 market's favourites also went 2–4** — the day beat everyone holding chalk.
+
+## dashboard.py + board.html — the live board (2026-08-30)
+
+Twelve leagues in tabs: MLB, WNBA, NFL, NCAA FB, NBA, NHL, ATP, WTA, PGA,
+Premier League, MLS, UFC.
+
+**`dashboard.py` — the live one.** `python3 dashboard.py`, open
+`http://localhost:8000`. A background thread refetches every 5 minutes and the
+page reloads on the same cadence, so an open tab is never more than one cycle
+stale. `--port` and `--interval` are configurable.
+
+**`board.html` — the shareable one.** A published Artifact. It is a *snapshot*,
+not live, and that is a platform constraint rather than a shortcut: a published
+Artifact runs under a CSP that blocks external fetch/XHR entirely, and the only
+runtime capabilities available (`artifact`, `downloads`, `mcp`, `self`) grant no
+arbitrary network access. `mcp` reaches the viewer's own claude.ai connectors,
+not ESPN. So a hosted page can hold data baked in at publish time and nothing
+more. Republish to refresh it.
+
+### The Lean column is the market, not the model
+
+Deliberate. Over 655 MLB games against real closing prices the market called
+57.3% and the model 55.9%, and backing the model where it disagreed lost more
+the louder it disagreed (−1.0% at a two-point gap, −14.3% at ten). The board
+shows the better forecast.
+
+### Bug caught while building it
+
+The tennis tabs rendered **625 rows** — a Grand Slam returns its entire draw
+across all rounds and dates regardless of the scoreboard date filter. Ported the
+US-Eastern date filter from `slate.py`; tennis now shows the day's 40 matches.
+Same class of bug as the original `slate.py` tennis failure, in new code.
