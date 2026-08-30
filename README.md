@@ -539,3 +539,50 @@ The tennis tabs rendered **625 rows** — a Grand Slam returns its entire draw
 across all rounds and dates regardless of the scoreboard date filter. Ported the
 US-Eastern date filter from `slate.py`; tennis now shows the day's 40 matches.
 Same class of bug as the original `slate.py` tennis failure, in new code.
+
+## Everything else, thrown at it (2026-08-30)
+
+Pulled every remaining signal the feeds expose and tested each one walk-forward,
+tuned on July and scored on August. Weather coverage was 100% across 2,052
+games — temperature, condition, wind speed and direction, plus day/night, series
+position, and fatigue/rest computed from game logs.
+
+| Added feature | July (tune) | August (holdout) |
+|---|---|---|
+| **baseline** | 54.9% / .2455 | **56.0% / .2458** |
+| + starter rest days | 55.1% / .2452 | 56.2% / .2456 |
+| + getaway day | 55.7% / .2453 | 55.5% / .2459 |
+| + bullpen fatigue (3-day IP) | 54.3% / .2474 | 56.2% / .2456 |
+| + wind speed × direction | 54.6% / .2459 | **55.0%** / .2473 |
+| + temperature | 54.9% / .2457 | 55.8% / .2464 |
+| + day/night | 57.3% / .2455 | 56.8% / .2461 |
+| + head-to-head series | 55.7% / .2462 | **55.2%** / .2461 |
+| + win streak | 56.8% / .2465 | 56.5% / .2460 |
+| **all that helped on tune, combined** | — | **56.2% / .2457** |
+
+Two features improved on the tuning window. Combining them moved the holdout by
+**+0.2 points of accuracy and 0.0001 Brier** — noise. Several made it actively
+worse: wind cost a full point, head-to-head nearly as much.
+
+### The complete list of things tested this session
+
+park factors · FIP · Elo · margin-of-victory Elo · point-differential power
+ratings · bullpen ERA · platoon splits · probability sharpening · probability
+shrinking · weather · temperature · wind · day/night · getaway day ·
+head-to-head · win streaks · starter rest · bullpen fatigue
+
+**Only bullpen ERA ever produced a real gain.** Everything else landed inside
+the noise or hurt.
+
+### Why more data cannot fix this
+
+Every signal above is *public*. The book has the same weather report, the same
+rest days, the same bullpen usage — and prices them before posting. Adding
+information the market already holds cannot create an edge against that market;
+it can only move you closer to a number the market already found.
+
+Edge would require either data the market does not have, or a genuinely better
+way of combining what everyone has. Measured over 655 games with real closing
+prices, this model's combination is **worse** than the market's: 55.9% to 57.3%.
+
+That is the honest end of the road on public data.
