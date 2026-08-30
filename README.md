@@ -429,3 +429,44 @@ much better than his ERA (4.21), which should raise Texas — but opposing
 starter Gage Jump's FIP (3.74 vs 4.69 ERA) improves by nearly as much, and they
 cancel. Texas moved 54.9% -> 55.6%, still 9.6 points under the market. That
 game remains a spot where the model is probably wrong and should not be bet.
+
+## Does the model beat the market? No. (2026-08-30)
+
+The one test that was missing all session. ESPN's scoreboard drops moneylines
+once games finish, but the **core API retains them** —
+`/events/{eid}/competitions/{cid}/odds` → `awayTeamOdds.moneyLine`. That yields
+closing DraftKings prices for **2,045 completed 2026 games, 100% coverage**.
+
+Model run strictly point-in-time over 655 games, Jul 1 – Aug 30:
+
+| Method | Accuracy | Brier |
+|---|---|---|
+| model | 55.9% | 0.2452 |
+| **market favourite** | **57.3%** | **0.2418** |
+
+**The market is more accurate and better calibrated than the model.**
+
+### Betting the model's edge at real prices
+
+| Claimed edge | Bets | Win rate | ROI |
+|---|---|---|---|
+| ≥ 0 pts | 655 | 50.2% | +2.1% *(95% CI −5.8% to +9.7% — noise)* |
+| ≥ 2 pts | 491 | 47.9% | −1.0% |
+| ≥ 4 pts | 354 | 46.9% | −1.2% |
+| ≥ 6 pts | 225 | 44.0% | −6.5% |
+| ≥ 8 pts | 134 | 44.0% | −4.8% |
+| **≥ 10 pts** | **72** | **38.9%** | **−14.3%** |
+
+**The bigger the edge the model claims, the worse the bet does.** Monotonic.
+When this model says the market is ten points wrong, backing it has returned
+**−14.3%**.
+
+### What this retracts
+
+Every "+EV" number produced in this repo. A +20% EV figure does not mean value
+— it means the model has diverged violently from a market measured here as more
+accurate than the model, and those are precisely the bets that lose fastest.
+
+The 57.5% accuracy figure elsewhere in this README stands and is useless for
+betting. Beating a coin flip is not beating a book. The model's honest use is
+as a sanity check on a price, never as a reason to take one.
