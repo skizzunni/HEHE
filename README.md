@@ -224,3 +224,43 @@ model held up.
 **Cross-check of the MLB board:** validated `model_v3` agrees with the earlier
 v2.1 board on **14 of 14 sides**. Only confidence moved — v2.1 was inflated by
 the sharpening step the walk-forward test later showed to be harmful.
+
+## anysport.py — one engine, every league (2026-08-30)
+
+Closes the gap between `slate.py` (which fetched games for any sport) and the
+models, which were sport-specific. Walk-forward Elo with tuned K and home
+advantage, validated per league on a held-out second half.
+
+`python3 anysport.py wnba --backtest` / `python3 anysport.py nba --date 20261025`
+
+Leagues: wnba, nba, ncaab, nfl, ncaaf, nhl, mlb, epl, mls.
+
+### Validated accuracy by sport — predictability is NOT the same everywhere
+
+| League | Elo | better W-L record | home | n |
+|---|---|---|---|---|
+| NBA | 72.3% | 69.4% | 55.8% | 631 |
+| WNBA | 69.7% | **71.8%** | 55.6% | 142 |
+| Premier League | 64.0% | **65.3%** | 56.8% | 125 |
+| NHL | 57.1% | **60.0%** | 51.2% | 646 |
+| MLB (model_v3) | 57.5% | 55.6% | 53.4% | 757 |
+| Tennis (Elo) | 57.1% | **57.9%** | — | 776 |
+| Golf 2-ball | 54.8% | — | — | 1571 |
+
+### The consistent finding
+
+**Elo does not significantly beat "pick the team with the better record" in a
+single league tested.** It loses outright in WNBA, NHL, EPL and tennis; its
++2.9 in NBA is within 1.5 standard errors. Five sports, same answer.
+
+### The trap in this table
+
+High accuracy is not edge. Basketball is far more predictable than baseball —
+and the market knows, so favorites are priced short. On 2026-08-30 the model
+liked Dallas over Connecticut at 76.6%, the most likely winner on the board;
+the market priced Dallas at 89.3%. Being right 76.6% of the time at a price
+that demands 89.3% is a **losing** bet. The most predictable games are the
+least profitable ones.
+
+Accuracy tells you how often you are right. Only price tells you whether that
+is worth anything.
