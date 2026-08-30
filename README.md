@@ -303,3 +303,42 @@ keeping `model_v3.py` rather than folding MLB into this engine.
 
 Per-league best method is stored in `TUNED` and used automatically by the
 board; override with `--method elo|movelo|power`.
+
+## props.py — WNBA player props, backtested (2026-08-30)
+
+`python3 props.py --date 20260830`. Models "X or more" points / rebounds /
+assists. 7,759 player-games this season; tuned on July, scored on August
+(3,706 props).
+
+| Method | Accuracy | Calibration error |
+|---|---|---|
+| empirical rate, last 15 | 49.6% | 15.4 pts |
+| Poisson on last 10 | 54.9% | 13.0 |
+| Normal on last 10 | 54.3% | 9.1 |
+| **Normal x P(plays)** | **59.2%** | **4.9** |
+| Normal x P(plays), shrunk 0.70 | 58.2% | **3.1** |
+
+### Availability is the biggest single term
+
+Rotation players — 10+ logged games, 15+ minutes a night — **fail to appear in
+7.6% of their team's games**. Every "over" dies on those nights no matter how
+good the read. Multiplying by P(plays) cut calibration error nearly in half,
+the largest single gain of any change in this repo.
+
+### Raw prop models are wildly overconfident
+
+Before correction, the model said 80–90% and delivered **67.6%**. Books set
+prop lines at the player's median precisely so both sides sit near a coin flip.
+Any model claiming 85% on a median line has mispriced itself, not found an edge.
+
+The shrink exponent was fitted on July and *improved* August calibration
+(5.4 → 3.1 pts) — unlike the MLB sharpening experiment, which was fitted
+in-sample and failed out-of-sample. Same discipline, opposite result, which is
+why both are recorded.
+
+### Roster staleness
+
+Players are assigned to teams by their most recent appearance, and any player
+without an appearance in 14 days is dropped. On the 2026-08-30 board that
+filter removed 49 players who would otherwise have been priced onto rosters
+they no longer play for.
