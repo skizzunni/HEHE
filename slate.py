@@ -14,6 +14,7 @@ starting point to argue with.
 Times are US Eastern, as ESPN returns them.
 """
 import argparse
+import datetime as _dt
 import json
 import ssl
 import sys
@@ -49,6 +50,23 @@ except OSError:
 
 # ESPN posts these strings when a market is suspended or not yet open.
 _NO_PRICE = {"OFF", "EVEN", "-", "", "N/A", "PK"}
+
+
+def _on_date(comp, yyyymmdd):
+    """True if this competition falls on the requested date in US Eastern.
+
+    Multi-day events (a Grand Slam, a golf tournament) return every match in
+    the draw regardless of the ?dates= filter, so the caller has to filter.
+    """
+    raw = comp.get("date") or ""
+    for fmt in ("%Y-%m-%dT%H:%MZ", "%Y-%m-%dT%H:%M:%SZ"):
+        try:
+            t = _dt.datetime.strptime(raw, fmt).replace(tzinfo=_dt.timezone.utc)
+        except ValueError:
+            continue
+        et = t.astimezone(_dt.timezone(_dt.timedelta(hours=-4)))
+        return et.strftime("%Y%m%d") == str(yyyymmdd)
+    return True          # undated -> do not hide it
 
 
 def fetch(path, date=None):
@@ -146,10 +164,26 @@ def show(sport, date=None):
     day = (data.get("day") or {}).get("date") or date or "today"
     rows = []
     for ev in events:
-        comps = ev.get("competitions") or []
+        comps = list(ev.get("competitions") or [])
+        # Tennis (and some golf) feeds carry no competitions[] at all: the
+        # matches live under groupings[] -> "Men's Singles" / "Women's Singles"
+        # / doubles, each with its own competitions[]. Reading only
+        # competitions[] returns an empty slate for every tennis day.
+        for grp in ev.get("groupings") or []:
+            gname = (grp.get("grouping") or {}).get("displayName", "")
+            for c in grp.get("competitions") or []:
+                c = dict(c)
+                c["_draw"] = gname
+                comps.append(c)
         many = len(comps) > 1              # UFC card / golf field / tennis draw
         for c in comps:
-            rows.append((label_for(c, ev, many), c))
+            if date and not _on_date(c, date):
+                continue
+            lab = label_for(c, ev, many)
+            draw = c.get("_draw")
+            if draw:
+                lab = f"[{draw.replace(chr(39) + 's Singles', '').replace(chr(39) + 's Doubles', 'D')[:1]}] {lab}"
+            rows.append((lab, c))
     print(f"\n{label} -- {day}   ({len(rows)} matchups, times ET)")
     if not rows:
         print("  nothing scheduled.")

@@ -154,3 +154,42 @@ is not supported by the backtest.
 - `mlb_model.py` — earlier model, different functional form, **never validated**.
   Its constants were not retuned to v3's, because those were fitted for a
   different structure and porting them would create a new bug.
+
+## Tennis (added 2026-08-30)
+
+`tennis.py` — US Open / any tour date. `python3 tennis.py --date 20260830`
+
+**A walk-forward Elo was built, tested, and rejected.** On 7,812 completed 2026
+matches with an August holdout of 776:
+
+| Method | Accuracy |
+|---|---|
+| Elo (K=32, walk-forward) | 57.1% |
+| more 2026 wins to date | 57.9% |
+| better win rate to date | 56.0% |
+
+McNemar, Elo vs. win-count: **chi² = 0.03, p = 0.873.** Indistinguishable from
+a one-line heuristic.
+
+**Why it failed:** Elo has no concept of tour level. Final 2026 ratings:
+
+```
+Daniel Merida   1660 (29-12)     Novak Djokovic   1624 (15-6)
+Thiago Tirante  1643 (28-17)     Daniil Medvedev  1612 (33-15)
+Rafael Jodar    1738 (43-14)     Adrian Mannarino 1418 (12-23)
+```
+
+A Challenger win counts the same as a Grand Slam win, elite players play fewer
+matches, and their losses come against other elite players. Cold-starting
+everyone at 1500 compounds it. The model was rating match volume, not strength.
+
+**Replacement:** ranking points, which encode tour level directly —
+`p = 1/(1+exp(-(ln ptsA - ln ptsB) * 0.8))`. Scores 60.2% on the same August
+matches, but current rankings partly reflect those matches, so that is
+**contaminated and not a clean validation**. Unlike `model_v3.py`, this model
+has no uncontaminated backtest. Lean, with an asterisk.
+
+Also fixed: `slate.py` returned **zero** rows for every tennis date. Tennis
+nests matches under `groupings[]` (Men's/Women's Singles), not `competitions[]`,
+and a Grand Slam returns its entire draw regardless of the `?dates=` filter, so
+results now get date-filtered in US Eastern.
