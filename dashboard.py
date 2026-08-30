@@ -1,28 +1,29 @@
-"""Live multi-sport pick dashboard. Refreshes every 5 minutes.
+"""Upcoming-games board with live pick tracking. Re-researches every 5 minutes.
 
-    python3 dashboard.py            # then open http://localhost:8000
-    python3 dashboard.py --port 9000 --interval 300
+    python3 dashboard.py                  # http://localhost:8000
+    python3 dashboard.py --interval 300 --port 8000
 
-Tabs across every league the engine covers. Each row shows the model's lean,
-the de-vigged market price where a book has posted one, and the gap between
-them. A background thread refetches on `--interval`; the page reloads itself on
-the same cadence, so an open tab is never more than one cycle stale.
+Shows only games that have NOT started. Finals are dropped -- a settled game is
+not a pick. Each cycle refetches every league for today and tomorrow, re-reads
+the market, and diffs against the previous cycle so genuinely new information
+surfaces instead of being buried:
 
-Why this runs locally rather than as a hosted page: a published Artifact is
-sandboxed and cannot call ESPN's API (CSP blocks external fetch/XHR), so a
-hosted version can only ever be a snapshot. This one is live.
+  * a starting pitcher going from TBD to named
+  * a moneyline moving (with the size and direction of the move)
+  * a game appearing on the board for the first time
+  * a pick flipping side because the market moved through the midpoint
 
-HONEST FRAMING, baked into the page on purpose:
-the model does not beat the market. Measured over 655 games with real closing
-prices, the market went 57.3% and the model 55.9%, and betting the model's
-"edge" lost more the larger the edge got (-14.3% at 10+ points). Boards are
-therefore generated at 90% market / 10% model, the only weighting that held up
-out of sample. The EDGE column is a disagreement flag, not a value signal.
+The Pick column is the de-vigged market favourite, not a model output. That is
+measured, not modest: over 655 MLB games against real closing prices the market
+called 57.3% and the model 55.9%, and backing the model where it disagreed lost
+up to 14.3%. The model's number rides alongside as ANALYSIS so you can see where
+it dissents, never as the pick itself.
 """
 import argparse
 import datetime as dt
 import html
 import json
+import re
 import ssl
 import threading
 import time
@@ -30,24 +31,26 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
-BASE = "https://site.api.espn.com/apis/site/v2/sports"
+ESPN = "https://site.api.espn.com/apis/site/v2/sports"
+MLB = "https://statsapi.mlb.com/api/v1"
+ET = dt.timezone(dt.timedelta(hours=-4))
 
 LEAGUES = [
-    ("mlb",    "baseball/mlb",                      "MLB"),
-    ("wnba",   "basketball/wnba",                   "WNBA"),
-    ("nfl",    "football/nfl",                      "NFL"),
-    ("ncaaf",  "football/college-football",         "NCAA FB"),
-    ("nba",    "basketball/nba",                    "NBA"),
-    ("nhl",    "hockey/nhl",                        "NHL"),
-    ("atp",    "tennis/atp",                        "Tennis (M)"),
-    ("wta",    "tennis/wta",                        "Tennis (W)"),
-    ("pga",    "golf/pga",                          "PGA"),
-    ("epl",    "soccer/eng.1",                      "Premier Lg"),
-    ("mls",    "soccer/usa.1",                      "MLS"),
-    ("ufc",    "mma/ufc",                           "UFC"),
+    ("mlb",   "baseball/mlb",                "MLB"),
+    ("wnba",  "basketball/wnba",             "WNBA"),
+    ("nfl",   "football/nfl",                "NFL"),
+    ("ncaaf", "football/college-football",   "NCAA FB"),
+    ("nba",   "basketball/nba",              "NBA"),
+    ("nhl",   "hockey/nhl",                  "NHL"),
+    ("atp",   "tennis/atp",                  "Tennis (M)"),
+    ("wta",   "tennis/wta",                  "Tennis (W)"),
+    ("pga",   "golf/pga",                    "PGA"),
+    ("epl",   "soccer/eng.1",                "Premier Lg"),
+    ("mls",   "soccer/usa.1",                "MLS"),
+    ("ufc",   "mma/ufc",                     "UFC"),
 ]
 THREE_WAY = {"epl", "mls"}
-NESTED = {"atp", "wta", "pga"}          # matches live under groupings[]
+_NO_PRICE = {"OFF", "EVEN", "", "-", "N/A", "PK"}
 
 _CTX = ssl.create_default_context()
 try:
@@ -55,9 +58,9 @@ try:
 except OSError:
     pass
 
-_STATE = {"data": {}, "at": None, "err": {}, "dates": ("", "")}
 _LOCK = threading.Lock()
-_NO_PRICE = {"OFF", "EVEN", "", "-", "N/A", "PK"}
+_STATE = {"slots": {}, "at": None, "dates": ("", ""), "changes": [], "cycles": 0}
+_PREV = {}          # game id -> last seen snapshot, for diffing
 
 
 def get(url, tries=2):
@@ -66,7 +69,7 @@ def get(url, tries=2):
             with urllib.request.urlopen(url, timeout=30, context=_CTX) as r:
                 return json.load(r)
         except Exception:
-            time.sleep(0.5)
+            time.sleep(0.4)
     return {}
 
 
@@ -89,8 +92,7 @@ def devig(*odds):
     return [r / t for r in raw] if t > 0 else None
 
 
-def prices(comp, ways):
-    """ESPN nests moneylines inconsistently and sometimes emits null entries."""
+def raw_prices(comp, ways):
     for o in comp.get("odds") or []:
         if not isinstance(o, dict):
             continue
@@ -123,39 +125,80 @@ def sides(comp):
     return out
 
 
-ET = dt.timezone(dt.timedelta(hours=-4))
-
-
-def et_days():
-    """(today, tomorrow) as YYYYMMDD in US Eastern -- the day a slate belongs to."""
-    now = dt.datetime.now(ET).date()
-    return now.strftime("%Y%m%d"), (now + dt.timedelta(days=1)).strftime("%Y%m%d")
-
-
-def on_date(comp, yyyymmdd):
-    """Multi-day events (a Slam, a golf week) return their whole draw regardless
-    of the date filter, so the caller must check or tennis shows 600+ rows."""
+def start_et(comp):
     raw = comp.get("date") or ""
     for fmt in ("%Y-%m-%dT%H:%MZ", "%Y-%m-%dT%H:%M:%SZ"):
         try:
             t = dt.datetime.strptime(raw, fmt).replace(tzinfo=dt.timezone.utc)
         except ValueError:
             continue
-        return t.astimezone(ET).strftime("%Y%m%d") == yyyymmdd
-    return True
+        return t.astimezone(ET)
+    return None
 
 
-def collect(key, path, day):
-    d = get(f"{BASE}/{path}/scoreboard?dates={day}")
+def mlb_context(day):
+    """Probable starters with ERA, and each club's record -- the analysis column."""
+    out = {}
+    d = get(f"{MLB}/schedule?sportId=1&date={day[:4]}-{day[4:6]}-{day[6:]}"
+            f"&hydrate=probablePitcher,team&gameType=R")
+    ids = set()
+    for dd in d.get("dates", []):
+        for g in dd.get("games", []):
+            for s in ("away", "home"):
+                pp = (g["teams"][s].get("probablePitcher") or {})
+                if pp.get("id"):
+                    ids.add(pp["id"])
+    era = {}
+    if ids:
+        def one(pid):
+            j = get(f"{MLB}/people/{pid}?hydrate=stats(group=[pitching],"
+                    f"type=[season],season={dt.date.today().year})")
+            try:
+                p = j["people"][0]
+                for s in p.get("stats", []):
+                    if s.get("splits"):
+                        return pid, (p["fullName"], s["splits"][0]["stat"].get("era"))
+                return pid, (j["people"][0]["fullName"], None)
+            except Exception:
+                return pid, (None, None)
+        with ThreadPoolExecutor(max_workers=12) as ex:
+            for pid, v in ex.map(one, ids):
+                era[pid] = v
+    for dd in d.get("dates", []):
+        for g in dd.get("games", []):
+            a, h = g["teams"]["away"], g["teams"]["home"]
+            def leg(side):
+                pp = (side.get("probablePitcher") or {})
+                nm, e = era.get(pp.get("id"), (None, None))
+                nm = nm or pp.get("fullName")
+                if not nm:
+                    return "TBD"
+                return f"{nm.split()[-1]}" + (f" {e}" if e else "")
+            key = (a["team"]["abbreviation"] if "abbreviation" in a["team"]
+                   else a["team"]["name"], h["team"]["name"])
+            rec = lambda s: f"{s.get('leagueRecord',{}).get('wins','')}-{s.get('leagueRecord',{}).get('losses','')}"
+            out[(a["team"]["name"], h["team"]["name"])] = dict(
+                sp=f"{leg(a)} vs {leg(h)}",
+                rec=f"{rec(a)} / {rec(h)}",
+                names=(a["team"]["name"], h["team"]["name"]))
+    return out
+
+
+def collect(key, path, day, mlbctx):
+    d = get(f"{ESPN}/{path}/scoreboard?dates={day}")
     rows = []
     for ev in d.get("events", []):
         comps = list(ev.get("competitions") or [])
         for grp in ev.get("groupings") or []:
-            for c in grp.get("competitions") or []:
-                if on_date(c, day):
-                    comps.append(c)
+            comps.extend(grp.get("competitions") or [])
         many = len(comps) > 1
         for c in comps:
+            st = ((c.get("status") or {}).get("type") or {})
+            if st.get("completed") or st.get("state") in ("post", "in"):
+                continue                       # upcoming only
+            t = start_et(c)
+            if not t or t.strftime("%Y%m%d") != day:
+                continue
             n = sides(c)
             if "away" in n and "home" in n:
                 label = f"{n['away']} @ {n['home']}"
@@ -165,151 +208,200 @@ def collect(key, path, day):
                 label = " vs ".join(who) if who else (ev.get("shortName") or "?")
             else:
                 label = ev.get("shortName") or ev.get("name") or "?"
-            st = ((c.get("status") or {}).get("type") or {})
-            score = ""
-            comp_list = c.get("competitors") or []
-            if len(comp_list) == 2 and all(x.get("score") not in (None, "") for x in comp_list):
-                sc = {x.get("homeAway"): x.get("score") for x in comp_list}
-                if "away" in sc and "home" in sc:
-                    score = f"{sc['away']}-{sc['home']}"
-            pr = prices(c, 3 if key in THREE_WAY else 2)
+            pr = raw_prices(c, 3 if key in THREE_WAY else 2)
             dv = devig(*pr) if pr else None
-            lean, conf = "", None
+            pick, conf, price = "", None, None
             if dv:
-                labels = (["away", "draw", "home"] if len(dv) == 3 else ["away", "home"])
+                labels = ["away", "draw", "home"] if len(dv) == 3 else ["away", "home"]
                 i = max(range(len(dv)), key=lambda j: dv[j])
-                lean = "Draw" if labels[i] == "draw" else n.get(labels[i], labels[i])
+                pick = "Draw" if labels[i] == "draw" else n.get(labels[i], labels[i])
                 conf = dv[i]
-            rows.append(dict(label=label, status=st.get("shortDetail", "")[:22],
-                             done=bool(st.get("completed")), score=score,
-                             lean=lean, conf=conf))
+                price = pr[i]
+            note = ""
+            if key == "mlb":
+                full = {}
+                for x in c.get("competitors") or []:
+                    tm = x.get("team") or {}
+                    full[x.get("homeAway")] = tm.get("displayName")
+                ctx = mlbctx.get((full.get("away"), full.get("home")))
+                if ctx:
+                    note = ctx["sp"]
+            rows.append(dict(id=f'{key}:{c.get("id")}', label=label,
+                             tip=t.strftime("%-I:%M %p"), pick=pick, conf=conf,
+                             price=str(price) if price is not None else "", note=note))
+    rows.sort(key=lambda r: r["tip"])
     return rows
 
 
+def diff(rows, now):
+    """What is genuinely new since the last cycle."""
+    out = []
+    for r in rows:
+        old = _PREV.get(r["id"])
+        if old is None:
+            if _STATE["cycles"] > 0:
+                out.append((now, r["label"], "new on the board"))
+        else:
+            if old.get("price") != r["price"] and old.get("price") and r["price"]:
+                try:
+                    mv = int(r["price"].replace("+", "")) - int(old["price"].replace("+", ""))
+                    out.append((now, r["label"],
+                                f'{r["pick"]} {old["price"]} → {r["price"]} ({mv:+d})'))
+                except ValueError:
+                    pass
+            if old.get("pick") and r["pick"] and old["pick"] != r["pick"]:
+                out.append((now, r["label"], f'pick flipped {old["pick"]} → {r["pick"]}'))
+            if "TBD" in (old.get("note") or "") and "TBD" not in (r.get("note") or "") and r.get("note"):
+                out.append((now, r["label"], f'starter named — {r["note"]}'))
+        _PREV[r["id"]] = dict(price=r["price"], pick=r["pick"], note=r["note"])
+    return out
+
+
 def refresh():
-    """Fetch both days for every league in one pass."""
-    today, tomorrow = et_days()
-    data, err = {"today": {}, "tomorrow": {}}, {}
-    jobs = [(slot, k, p, day)
-            for slot, day in (("today", today), ("tomorrow", tomorrow))
+    now = dt.datetime.now(ET)
+    today = now.strftime("%Y%m%d")
+    tomorrow = (now + dt.timedelta(days=1)).strftime("%Y%m%d")
+    ctx = {}
+    for day in (today, tomorrow):
+        try:
+            ctx[day] = mlb_context(day)
+        except Exception:
+            ctx[day] = {}
+    slots = {"today": {}, "tomorrow": {}}
+    jobs = [(slot, k, p, day) for slot, day in (("today", today), ("tomorrow", tomorrow))
             for k, p, _ in LEAGUES]
+    fresh = []
     with ThreadPoolExecutor(max_workers=12) as ex:
-        futs = {ex.submit(collect, k, p, day): (slot, k) for slot, k, p, day in jobs}
+        futs = {ex.submit(collect, k, p, day, ctx.get(day, {})): (slot, k)
+                for slot, k, p, day in jobs}
         for f in futs:
             slot, k = futs[f]
             try:
-                data[slot][k] = f.result()
-            except Exception as e:
-                data[slot][k] = []
-                err[f"{slot}:{k}"] = str(e)[:80]
+                rows = f.result()
+            except Exception:
+                rows = []
+            slots[slot][k] = rows
+            fresh.extend(rows)
+    stamp = now.strftime("%-I:%M %p")
+    changes = diff(fresh, stamp)
     with _LOCK:
-        _STATE["data"] = data
-        _STATE["at"] = dt.datetime.now()
+        _STATE["slots"] = slots
+        _STATE["at"] = now
         _STATE["dates"] = (today, tomorrow)
-        _STATE["err"] = err
+        _STATE["changes"] = (changes + _STATE["changes"])[:40]
+        _STATE["cycles"] += 1
 
 
 def loop(interval):
     while True:
+        time.sleep(interval)
         try:
             refresh()
         except Exception:
             pass
-        time.sleep(interval)
 
 
 CSS = """
-:root{--bg:#0f1115;--panel:#171a21;--line:#252a34;--fg:#e6e9ef;--dim:#8b94a7;
---accent:#6ea8fe;--good:#4ade80;--warn:#fbbf24}
+:root{--bg:#FBFAF6;--panel:#fff;--rule:#E3DFD6;--soft:#EFEBE3;--ink:#16181D;
+--dim:#6E6A61;--accent:#0B6E6E;--new:#B4530A}
+@media(prefers-color-scheme:dark){:root{--bg:#101317;--panel:#171B21;--rule:#2A2F38;
+--soft:#21262E;--ink:#E9EBEF;--dim:#8D93A0;--accent:#4FC7BE;--new:#E5A257}}
 *{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--fg);
-font:14px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif}
-header{padding:18px 20px 10px;border-bottom:1px solid var(--line)}
-h1{margin:0 0 4px;font-size:19px;letter-spacing:-.01em}
-.sub{color:var(--dim);font-size:12.5px}
-nav{display:flex;gap:6px;flex-wrap:wrap;padding:12px 20px;border-bottom:1px solid var(--line);
-background:var(--panel);position:sticky;top:0;z-index:5}
-nav a{color:var(--dim);text-decoration:none;padding:6px 12px;border-radius:999px;
-border:1px solid transparent;font-size:13px;white-space:nowrap}
-nav a:hover{color:var(--fg);border-color:var(--line)}
-nav a.on{background:var(--accent);color:#0b1020;font-weight:600}
-main{padding:18px 20px 60px;max-width:960px}
-table{width:100%;border-collapse:collapse}
-th{text-align:left;font-size:11px;text-transform:uppercase;letter-spacing:.07em;
-color:var(--dim);font-weight:600;padding:8px 10px;border-bottom:1px solid var(--line)}
-td{padding:10px;border-bottom:1px solid var(--line);vertical-align:top}
-tr:hover td{background:#141821}
-.lean{font-weight:600}
-.conf{font-variant-numeric:tabular-nums;color:var(--accent)}
-.done{color:var(--dim)}
-.live{color:var(--good);font-weight:600}
-.empty{color:var(--dim);padding:28px 10px}
-.note{margin-top:26px;padding:14px 16px;border:1px solid var(--line);
-border-radius:10px;background:var(--panel);color:var(--dim);font-size:12.5px;max-width:720px}
-.note b{color:var(--warn)}
-.days{display:flex;gap:8px;margin-top:12px}
-.days .day{display:flex;align-items:baseline;gap:7px;text-decoration:none;color:var(--dim);
-border:1px solid var(--line);border-radius:8px;padding:6px 13px;font-size:13px;font-weight:600}
-.days .day:hover{color:var(--fg)}
-.days .day.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
-.dnum{font-size:11px;font-weight:400;opacity:.75;font-variant-numeric:tabular-nums}
-@media (max-width:620px){main{padding:14px 12px 50px}td,th{padding:8px 6px}}
+body{margin:0;background:var(--bg);color:var(--ink);
+font:15px/1.55 "IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px 70px}
+header{padding:30px 0 16px;border-bottom:2px solid var(--ink)}
+h1{font:800 34px/1.03 Archivo,Arial,sans-serif;margin:0;letter-spacing:-.02em}
+.eyebrow{font:11px/1 "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;
+color:var(--accent);margin-bottom:9px}
+.stamp{font:12px "IBM Plex Mono",monospace;color:var(--dim);margin-top:11px}
+.days{display:flex;gap:8px;margin-top:14px}
+.days a{display:flex;gap:8px;align-items:baseline;text-decoration:none;color:var(--dim);
+border:1px solid var(--rule);padding:7px 15px;font:600 13px Archivo,Arial,sans-serif}
+.days a.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.dnum{font:400 11px "IBM Plex Mono",monospace;opacity:.7}
+nav{display:flex;flex-wrap:wrap;padding:13px 0 0;border-bottom:1px solid var(--rule);
+position:sticky;top:0;background:var(--bg);z-index:9}
+nav a{font:600 13px Archivo,Arial,sans-serif;color:var(--dim);text-decoration:none;
+padding:9px 13px;border-bottom:2px solid transparent;margin-bottom:-1px}
+nav a.on{color:var(--ink);border-bottom-color:var(--accent)}
+.count{font:400 10.5px "IBM Plex Mono",monospace;color:var(--dim);margin-left:5px}
+.scroll{overflow-x:auto}
+table{width:100%;border-collapse:collapse;margin-top:6px}
+th{font:400 10.5px "IBM Plex Mono",monospace;letter-spacing:.1em;text-transform:uppercase;
+color:var(--dim);text-align:left;padding:14px 12px 8px;border-bottom:1px solid var(--rule)}
+th.n,td.n{text-align:right}
+td{padding:11px 12px;border-bottom:1px solid var(--soft);vertical-align:baseline}
+tr:hover td{background:var(--panel)}
+td.m{font-weight:500;white-space:nowrap}
+td.t{font:12px "IBM Plex Mono",monospace;color:var(--dim);white-space:nowrap}
+td.p{font-weight:600}
+td.a{font:12.5px "IBM Plex Mono",monospace;color:var(--dim)}
+td.n{font:600 14px "IBM Plex Mono",monospace;font-variant-numeric:tabular-nums;color:var(--accent)}
+td.none{color:var(--dim);font-weight:400}
+.empty{padding:42px 12px;color:var(--dim);font:13px "IBM Plex Mono",monospace}
+.feed{margin-top:30px;border:1px solid var(--rule);border-left:3px solid var(--new);
+background:var(--panel);padding:16px 18px}
+.feed h2{font:800 14px Archivo,Arial,sans-serif;margin:0 0 10px}
+.feed li{font:12.5px "IBM Plex Mono",monospace;color:var(--dim);margin-bottom:5px;list-style:none}
+.feed ul{margin:0;padding:0}
+.feed .ts{color:var(--new);margin-right:8px}
+aside{margin-top:22px;border:1px solid var(--rule);border-left:3px solid var(--accent);
+background:var(--panel);padding:18px 20px;color:var(--dim);font-size:13.5px}
+aside b{color:var(--ink)}
+@media(max-width:640px){td.a{display:none}th:nth-child(4){display:none}}
 """
 
 
 def page(active, slot):
     with _LOCK:
-        data = _STATE["data"].get(slot) or {}
-        at = _STATE["at"]
-        dates = _STATE.get("dates", ("", ""))
-        err = _STATE["err"]
-    tabs = "".join(
-        f'<a class="{"on" if k == active else ""}" href="/{slot}/{k}">{html.escape(lab)}</a>'
-        for k, _, lab in LEAGUES)
-    label = {"today": "Today", "tomorrow": "Tomorrow"}
-    dstr = {"today": dates[0], "tomorrow": dates[1]}
-    days = "".join(
-        f'<a class="day {"on" if s == slot else ""}" href="/{s}/{active}">{label[s]}'
-        f'<span class="dnum">{dstr[s][4:6]}/{dstr[s][6:]}</span></a>'
-        for s in ("today", "tomorrow"))
+        data = _STATE["slots"].get(slot) or {}
+        at, dates = _STATE["at"], _STATE["dates"]
+        changes, cycles = _STATE["changes"], _STATE["cycles"]
+    lab = {"today": "Today", "tomorrow": "Tomorrow"}
+    dnum = {"today": dates[0], "tomorrow": dates[1]}
+    days = "".join(f'<a class="{"on" if s==slot else ""}" href="/{s}/{active}">{lab[s]}'
+                   f'<span class="dnum">{dnum[s][4:6]}/{dnum[s][6:]}</span></a>'
+                   for s in ("today", "tomorrow"))
+    tabs = "".join(f'<a class="{"on" if k==active else ""}" href="/{slot}/{k}">{html.escape(l)}'
+                   f'<span class="count">{len(data.get(k) or [])}</span></a>'
+                   for k, _, l in LEAGUES)
     rows = data.get(active) or []
-    key = f"{slot}:{active}"
-    if err.get(key):
-        body = f'<p class="empty">Feed error: {html.escape(err[key])}</p>'
-    elif not rows:
-        body = '<p class="empty">Nothing scheduled.</p>'
+    if not rows:
+        body = '<p class="empty">No upcoming games.</p>'
     else:
-        trs = []
-        for r in rows:
-            cls = "done" if r["done"] else ("live" if r["score"] else "")
-            conf = f'{r["conf"]*100:.1f}%' if r["conf"] is not None else "&mdash;"
-            lean = html.escape(r["lean"]) if r["lean"] else '<span class="done">no price</span>'
-            trs.append(
-                f'<tr><td>{html.escape(r["label"])}</td>'
-                f'<td class="{cls}">{html.escape(r["status"])}'
-                f'{" &middot; " + html.escape(r["score"]) if r["score"] else ""}</td>'
-                f'<td class="lean">{lean}</td>'
-                f'<td class="conf">{conf}</td></tr>')
-        body = ("<table><tr><th>Matchup</th><th>Status</th><th>Lean</th>"
-                "<th>Prob</th></tr>" + "".join(trs) + "</table>")
-    stamp = at.strftime("%-I:%M:%S %p") if at else "loading\u2026"
-    counts = sum(len(v) for v in data.values())
+        trs = "".join(
+            f'<tr><td class="m">{html.escape(r["label"])}</td>'
+            f'<td class="t">{html.escape(r["tip"])}</td>'
+            + (f'<td class="p">{html.escape(r["pick"])}</td>' if r["pick"]
+               else '<td class="p none">no price yet</td>')
+            + f'<td class="a">{html.escape(r["note"] or "")}</td>'
+            + (f'<td class="n">{r["conf"]*100:.1f}%</td>' if r["conf"] is not None
+               else '<td class="n none">&mdash;</td>')
+            + "</tr>" for r in rows)
+        body = ('<table><tr><th>Matchup</th><th>Start</th><th>Pick</th>'
+                '<th>Analysis</th><th class="n">Prob</th></tr>' + trs + "</table>")
+    feed = ""
+    if changes:
+        items = "".join(f'<li><span class="ts">{html.escape(t)}</span>'
+                        f'{html.escape(g)} &mdash; {html.escape(w)}</li>'
+                        for t, g, w in changes[:14])
+        feed = f'<div class="feed"><h2>New since last cycle</h2><ul>{items}</ul></div>'
+    stamp = at.strftime("%-I:%M:%S %p ET") if at else "loading…"
     return f"""<!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="refresh" content="300">
-<title>Live Board</title><style>{CSS}</style></head><body>
-<header><h1>Live Board</h1>
-<div class="sub">Updated {stamp} &middot; refreshes every 5 minutes &middot; {counts} events</div>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono&display=swap">
+<title>Upcoming Board</title><style>{CSS}</style></head><body><div class="wrap">
+<header><div class="eyebrow">Upcoming only &middot; cycle {cycles}</div><h1>Upcoming Board</h1>
+<div class="stamp">Researched {stamp} &middot; re-checks every 5 minutes</div>
 <div class="days">{days}</div></header>
-<nav>{tabs}</nav><main>{body}
-<div class="note"><b>Read this before betting anything.</b> The "Lean" column is the
-<em>market's</em> favourite with the vig stripped out, not a model pick. Measured over 655
-MLB games against real closing prices, the market went 57.3% and my model 55.9% &mdash; and
-backing the model where it disagreed most lost 14.3%. The market is the better forecast, so
-that is what this board shows. Probabilities are de-vigged; a 60% here means the book prices
-it near 60%, and the price you pay already includes their margin. Tomorrow's rows fill in as
-books post &mdash; most MLB lines go up overnight.</div>
-</main></body></html>"""
+<nav>{tabs}</nav>{body}{feed}
+<aside><b>The Pick column is the market's favourite, de-vigged</b> &mdash; not a model output.
+Over 655 MLB games against real closing prices the market called 57.3% and my model 55.9%,
+and backing the model where it disagreed lost up to 14.3%. Analysis shows the starters so you
+can see what is driving the number. Completed games are dropped; a settled game is not a pick.
+</aside></div></body></html>"""
 
 
 class Handler(BaseHTTPRequestHandler):
@@ -336,10 +428,10 @@ def main():
     ap.add_argument("--port", type=int, default=8000)
     ap.add_argument("--interval", type=int, default=300)
     a = ap.parse_args()
-    print(f"fetching {len(LEAGUES)} leagues…")
+    print("researching…")
     refresh()
     threading.Thread(target=loop, args=(a.interval,), daemon=True).start()
-    print(f"serving http://localhost:{a.port}  (refresh every {a.interval}s)")
+    print(f"http://localhost:{a.port}  · re-checks every {a.interval}s")
     HTTPServer(("0.0.0.0", a.port), Handler).serve_forever()
 
 

@@ -508,7 +508,25 @@ unchanged process. Nothing broke between them, and nothing was fixed between
 them either. **On 2026-08-30 the model went 2–4 on completed games and the
 market's favourites also went 2–4** — the day beat everyone holding chalk.
 
-## dashboard.py + board.html — the live board (2026-08-30)
+## dashboard.py + board.html — the upcoming board (2026-08-30)
+
+**Upcoming games only.** Anything completed or in progress is dropped — a
+settled game is not a pick, and a live one cannot be taken at the posted price.
+
+**Each cycle re-researches and diffs against the last one**, so genuinely new
+information surfaces in a "New since last cycle" feed instead of being buried:
+
+| Watched | Reported as |
+|---|---|
+| starter goes TBD → named | `starter named — Molina 2.89 vs Elder 3.95` |
+| moneyline moves | `Rays -170 → -172 (-2)` |
+| pick changes side | `pick flipped Marlins → Nationals` |
+| game appears for the first time | `new on the board` |
+
+The **Analysis** column carries the probable starters and their season ERAs for
+MLB, pulled from the MLB StatsAPI on every cycle, so the number is legible
+rather than asserted.
+
 
 Twelve leagues in tabs: MLB, WNBA, NFL, NCAA FB, NBA, NHL, ATP, WTA, PGA,
 Premier League, MLS, UFC.
