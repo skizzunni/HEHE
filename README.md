@@ -470,3 +470,40 @@ accurate than the model, and those are precisely the bets that lose fastest.
 The 57.5% accuracy figure elsewhere in this README stands and is useless for
 betting. Beating a coin flip is not beating a book. The model's honest use is
 as a sanity check on a price, never as a reason to take one.
+
+## The fix: anchor to the market (2026-08-30)
+
+Pure model loses to the market. Pure market is beatable by a hair. Sweeping the
+blend weight, tuned on June–mid July and scored on 516 held-out games:
+
+| Weight on model | Test accuracy | Test Brier |
+|---|---|---|
+| pure market | 57.4% | 0.2407 |
+| **10% model / 90% market** | **57.8%** | **0.2406** |
+| 20% model | 59.3% | 0.2407 |
+| 50% model | 58.1% | 0.2413 |
+| pure model | 56.0% | 0.2440 |
+
+Tuning selects **10% model**. The gain over pure market is 0.0001 Brier —
+effectively a tie, but it means the model adds a sliver of information rather
+than subtracting. What is *robust* is the shape: **the more weight the model
+gets, the worse it does.** Pure model is the worst row in the table.
+
+Every board from here is generated at 90/10. That single change kills the
+"+20% EV" plays, which the ROI table already showed return −14.3%.
+
+### Why the day-to-day results swing so hard
+
+A 57% process on a 14-game slate has an expected 8.0 wins and a standard
+deviation of **1.9 games**. The normal range is 6 to 10.
+
+| Wins of 14 | Share of days |
+|---|---|
+| 11+ | 8.4% |
+| 8 | 21.2% |
+| 5 or fewer | 9.1% |
+
+Saturday's 11-of-12 and Sunday's 2-of-6 are both ordinary outcomes of the same
+unchanged process. Nothing broke between them, and nothing was fixed between
+them either. **On 2026-08-30 the model went 2–4 on completed games and the
+market's favourites also went 2–4** — the day beat everyone holding chalk.
