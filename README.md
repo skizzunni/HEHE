@@ -193,3 +193,34 @@ Also fixed: `slate.py` returned **zero** rows for every tennis date. Tennis
 nests matches under `groupings[]` (Men's/Women's Singles), not `competitions[]`,
 and a Grand Slam returns its entire draw regardless of the `?dates=` filter, so
 results now get date-filtered in US Eastern.
+
+## Golf two-balls, backtested (2026-08-30)
+
+`golf_2ball.py`. 36 tournaments, 4,191 player-tournament records, point-in-time
+skill only (a rating uses rounds from prior events, never the one predicted).
+R3/R4 only. Random pairings, n=1,571 decided:
+
+| Signal | Win rate |
+|---|---|
+| point-in-time season form | 57.8% |
+| better tournament position | 52.5% |
+| hotter previous round | **52.0%** |
+| tie rate | 11.1% |
+
+"Who is playing well right now" is worth **2 points**, confirming the negative
+round-to-round correlation found earlier. Season-long form is the only real
+signal, and it scales with the gap: 52.0% under half a stroke, 70.9% above two.
+
+**But real two-balls are leaderboard-adjacent**, so the gaps sit in the flat
+bottom of that curve. On adjacent pairings the same signal scores **54.8%** and
+the tie rate rises to **17.7%** — corrected up from the 9.6% previously
+simulated. Without "tie no bet", roughly one leg in six dies on a tie alone.
+
+**Cross-check of the Tour Championship R4 board:** the OWGR-anchored numbers
+issued earlier came within **1.1 points mean absolute error** of this empirical
+curve. Scheffler/Gotterup was called at 57.7% against an empirical 57.5%. That
+model held up.
+
+**Cross-check of the MLB board:** validated `model_v3` agrees with the earlier
+v2.1 board on **14 of 14 sides**. Only confidence moved — v2.1 was inflated by
+the sharpening step the walk-forward test later showed to be harmful.
