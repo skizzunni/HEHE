@@ -79,3 +79,78 @@ The sandbox this was written in blocks all outbound sports data
 one refused by the egress proxy). `mlb_model.py` reports that and exits rather
 than guessing. Run it somewhere with normal network access and it produces real
 numbers.
+
+---
+
+# v3 — stress test, audit, and multi-sport (2026-08-30)
+
+## The correction that matters
+
+An earlier pass in this session reported **61.6% accuracy** for the MLB model.
+That number was wrong. It came from a backtest that used end-of-season stats to
+predict August games — the model could see the future. Rebuilt with strictly
+point-in-time inputs (no stat used for a game includes that game or any later
+one), on a held-out window it never touched during fitting:
+
+| Method | Accuracy (757 games) |
+|---|---|
+| **model v3** | **57.5%** (Brier 0.2449) |
+| better W-L record | 55.6% |
+| better run differential | 54.6% |
+| always pick home | 53.4% |
+
+**McNemar test, model vs. better-record baseline: chi² = 1.03, p = 0.31.**
+
+The ~2-point edge is *not statistically significant* at this sample size. One
+standard error is 1.8 points. The model has found a little signal; it has not
+proven an edge.
+
+## Bugs found and fixed
+
+1. **Park factors were a no-op.** The venue constant multiplied both teams' run
+   expectation, so it cancelled exactly in the win-probability ratio. It was
+   reported as a model feature and contributed nothing. Removed — park belongs
+   in a totals model.
+2. **Probability sharpening made things worse.** An exponent k=1.18 was fitted
+   on contaminated in-sample data and pushed probabilities away from 50%.
+   Out-of-sample it *degraded* Brier (0.2449 → 0.2455). Shrinking (k=0.50)
+   was also worse (0.2456). Raw output wins; the curve is left alone.
+3. **Silent team-name mismatch.** The standings endpoint returns `"Rays"`; the
+   schedule endpoint returns `"Tampa Bay Rays"`. Keying on name matched nothing
+   and printed an empty slate instead of erroring. Now keyed on team **id**.
+4. **`slate.py` crashed on soccer** — ESPN emits literal `null` entries inside
+   the odds array.
+5. **`slate.py` showed only the main event** for UFC/golf/tennis. Those feeds
+   put every fight or matchup in `competitions[]`; it read only `[0]`.
+6. **`"OFF"` prices** (suspended markets) hit `int()` and were mislabelled
+   "price unreadable". Now reported as "market off".
+7. **Soccer was priced as a two-way market.** It is three-way; the draw is now
+   included in the de-vig.
+
+Not a bug, for the record: the hardcoded starters in `devig.py` were checked
+against the MLB API and are **correct**. The apparent mismatches were a
+doubleheader (it took game 2), pitchers not yet announced, and an accent in
+"Cristopher Sánchez".
+
+## Calibration — read this before betting anything
+
+| Model says | n | Actually wins |
+|---|---|---|
+| 50–55% | 315 | 55.9% |
+| 55–60% | 258 | 58.1% |
+| 60–65% | 128 | 59.4% |
+| 65–70% | 56 | **58.9%** |
+
+The model is **overconfident at the top**. Its most confident picks do not
+outperform its middling ones. Output is clamped at 66% because that is the
+edge of what the data supports; treating a 65% pick as better than a 58% one
+is not supported by the backtest.
+
+## Files
+
+- `slate.py` — any sport, any date, de-vigged market prices. 16 leagues.
+  `python3 slate.py mlb` / `slate.py ufc` / `slate.py epl --date 20260912` / `slate.py --all`
+- `model_v3.py` — the validated MLB model. `--backtest` reproduces the table above.
+- `mlb_model.py` — earlier model, different functional form, **never validated**.
+  Its constants were not retuned to v3's, because those were fitted for a
+  different structure and porting them would create a new bug.
