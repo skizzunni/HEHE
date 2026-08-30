@@ -518,6 +518,16 @@ Premier League, MLS, UFC.
 page reloads on the same cadence, so an open tab is never more than one cycle
 stale. `--port` and `--interval` are configurable.
 
+**Two days, not one.** Every refresh fetches *today and tomorrow* for all twelve
+leagues in a single pass, and both surfaces carry a Today/Tomorrow switch above
+the league tabs. Routes are `/{today|tomorrow}/{league}`. Multi-day events (a
+Grand Slam draw, a golf week) are filtered to the selected day in US Eastern, or
+tennis returns its entire bracket on both tabs.
+
+Tomorrow's rows fill in as books post — most MLB lines go up overnight, so a
+board captured in the afternoon shows fewer prices for tomorrow than one
+captured at night.
+
 **`board.html` — the shareable one.** A published Artifact. It is a *snapshot*,
 not live, and that is a platform constraint rather than a shortcut: a published
 Artifact runs under a CSP that blocks external fetch/XHR entirely, and the only

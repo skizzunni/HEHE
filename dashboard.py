@@ -55,7 +55,7 @@ try:
 except OSError:
     pass
 
-_STATE = {"data": {}, "at": None, "err": {}}
+_STATE = {"data": {}, "at": None, "err": {}, "dates": ("", "")}
 _LOCK = threading.Lock()
 _NO_PRICE = {"OFF", "EVEN", "", "-", "N/A", "PK"}
 
@@ -123,29 +123,36 @@ def sides(comp):
     return out
 
 
-def on_today(comp):
+ET = dt.timezone(dt.timedelta(hours=-4))
+
+
+def et_days():
+    """(today, tomorrow) as YYYYMMDD in US Eastern -- the day a slate belongs to."""
+    now = dt.datetime.now(ET).date()
+    return now.strftime("%Y%m%d"), (now + dt.timedelta(days=1)).strftime("%Y%m%d")
+
+
+def on_date(comp, yyyymmdd):
     """Multi-day events (a Slam, a golf week) return their whole draw regardless
-    of date, so the caller must filter or the tennis tab shows 600+ rows."""
+    of the date filter, so the caller must check or tennis shows 600+ rows."""
     raw = comp.get("date") or ""
     for fmt in ("%Y-%m-%dT%H:%MZ", "%Y-%m-%dT%H:%M:%SZ"):
         try:
             t = dt.datetime.strptime(raw, fmt).replace(tzinfo=dt.timezone.utc)
         except ValueError:
             continue
-        et = t.astimezone(dt.timezone(dt.timedelta(hours=-4)))
-        today = dt.datetime.now(dt.timezone(dt.timedelta(hours=-4))).date()
-        return et.date() == today
+        return t.astimezone(ET).strftime("%Y%m%d") == yyyymmdd
     return True
 
 
-def collect(key, path):
-    d = get(f"{BASE}/{path}/scoreboard")
+def collect(key, path, day):
+    d = get(f"{BASE}/{path}/scoreboard?dates={day}")
     rows = []
     for ev in d.get("events", []):
         comps = list(ev.get("competitions") or [])
         for grp in ev.get("groupings") or []:
             for c in grp.get("competitions") or []:
-                if on_today(c):
+                if on_date(c, day):
                     comps.append(c)
         many = len(comps) > 1
         for c in comps:
@@ -180,19 +187,25 @@ def collect(key, path):
 
 
 def refresh():
-    data, err = {}, {}
-    with ThreadPoolExecutor(max_workers=8) as ex:
-        futs = {ex.submit(collect, k, p): (k, lab) for k, p, lab in LEAGUES}
+    """Fetch both days for every league in one pass."""
+    today, tomorrow = et_days()
+    data, err = {"today": {}, "tomorrow": {}}, {}
+    jobs = [(slot, k, p, day)
+            for slot, day in (("today", today), ("tomorrow", tomorrow))
+            for k, p, _ in LEAGUES]
+    with ThreadPoolExecutor(max_workers=12) as ex:
+        futs = {ex.submit(collect, k, p, day): (slot, k) for slot, k, p, day in jobs}
         for f in futs:
-            k, lab = futs[f]
+            slot, k = futs[f]
             try:
-                data[k] = f.result()
+                data[slot][k] = f.result()
             except Exception as e:
-                data[k] = []
-                err[k] = str(e)[:80]
+                data[slot][k] = []
+                err[f"{slot}:{k}"] = str(e)[:80]
     with _LOCK:
         _STATE["data"] = data
         _STATE["at"] = dt.datetime.now()
+        _STATE["dates"] = (today, tomorrow)
         _STATE["err"] = err
 
 
@@ -234,21 +247,35 @@ tr:hover td{background:#141821}
 .note{margin-top:26px;padding:14px 16px;border:1px solid var(--line);
 border-radius:10px;background:var(--panel);color:var(--dim);font-size:12.5px;max-width:720px}
 .note b{color:var(--warn)}
+.days{display:flex;gap:8px;margin-top:12px}
+.days .day{display:flex;align-items:baseline;gap:7px;text-decoration:none;color:var(--dim);
+border:1px solid var(--line);border-radius:8px;padding:6px 13px;font-size:13px;font-weight:600}
+.days .day:hover{color:var(--fg)}
+.days .day.on{background:var(--fg);color:var(--bg);border-color:var(--fg)}
+.dnum{font-size:11px;font-weight:400;opacity:.75;font-variant-numeric:tabular-nums}
 @media (max-width:620px){main{padding:14px 12px 50px}td,th{padding:8px 6px}}
 """
 
 
-def page(active):
+def page(active, slot):
     with _LOCK:
-        data = _STATE["data"]
+        data = _STATE["data"].get(slot) or {}
         at = _STATE["at"]
+        dates = _STATE.get("dates", ("", ""))
         err = _STATE["err"]
     tabs = "".join(
-        f'<a class="{"on" if k == active else ""}" href="/{k}">{html.escape(lab)}</a>'
+        f'<a class="{"on" if k == active else ""}" href="/{slot}/{k}">{html.escape(lab)}</a>'
         for k, _, lab in LEAGUES)
+    label = {"today": "Today", "tomorrow": "Tomorrow"}
+    dstr = {"today": dates[0], "tomorrow": dates[1]}
+    days = "".join(
+        f'<a class="day {"on" if s == slot else ""}" href="/{s}/{active}">{label[s]}'
+        f'<span class="dnum">{dstr[s][4:6]}/{dstr[s][6:]}</span></a>'
+        for s in ("today", "tomorrow"))
     rows = data.get(active) or []
-    if err.get(active):
-        body = f'<p class="empty">Feed error: {html.escape(err[active])}</p>'
+    key = f"{slot}:{active}"
+    if err.get(key):
+        body = f'<p class="empty">Feed error: {html.escape(err[key])}</p>'
     elif not rows:
         body = '<p class="empty">Nothing scheduled.</p>'
     else:
@@ -265,29 +292,35 @@ def page(active):
                 f'<td class="conf">{conf}</td></tr>')
         body = ("<table><tr><th>Matchup</th><th>Status</th><th>Lean</th>"
                 "<th>Prob</th></tr>" + "".join(trs) + "</table>")
-    stamp = at.strftime("%-I:%M:%S %p") if at else "loading…"
+    stamp = at.strftime("%-I:%M:%S %p") if at else "loading\u2026"
+    counts = sum(len(v) for v in data.values())
     return f"""<!doctype html><html><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta http-equiv="refresh" content="300">
 <title>Live Board</title><style>{CSS}</style></head><body>
 <header><h1>Live Board</h1>
-<div class="sub">Updated {stamp} &middot; refreshes every 5 minutes</div></header>
+<div class="sub">Updated {stamp} &middot; refreshes every 5 minutes &middot; {counts} events</div>
+<div class="days">{days}</div></header>
 <nav>{tabs}</nav><main>{body}
 <div class="note"><b>Read this before betting anything.</b> The "Lean" column is the
 <em>market's</em> favourite with the vig stripped out, not a model pick. Measured over 655
 MLB games against real closing prices, the market went 57.3% and my model 55.9% &mdash; and
 backing the model where it disagreed most lost 14.3%. The market is the better forecast, so
 that is what this board shows. Probabilities are de-vigged; a 60% here means the book prices
-it near 60%, and the price you pay already includes their margin.</div>
+it near 60%, and the price you pay already includes their margin. Tomorrow's rows fill in as
+books post &mdash; most MLB lines go up overnight.</div>
 </main></body></html>"""
 
 
 class Handler(BaseHTTPRequestHandler):
     def do_GET(self):
-        key = (self.path.strip("/").split("?")[0] or LEAGUES[0][0]).lower()
+        parts = [p for p in self.path.split("?")[0].strip("/").split("/") if p]
+        slot = parts[0].lower() if parts and parts[0].lower() in ("today", "tomorrow") else "today"
+        rest = parts[1:] if (parts and parts[0].lower() in ("today", "tomorrow")) else parts
+        key = rest[0].lower() if rest else LEAGUES[0][0]
         if key not in {k for k, _, _ in LEAGUES}:
             key = LEAGUES[0][0]
-        out = page(key).encode()
+        out = page(key, slot).encode()
         self.send_response(200)
         self.send_header("Content-Type", "text/html; charset=utf-8")
         self.send_header("Content-Length", str(len(out)))
