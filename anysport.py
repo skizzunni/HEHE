@@ -14,9 +14,12 @@ found anything. On some leagues it will not have. That is a result, not a bug.
 """
 import argparse
 import datetime as dt
+import os
+import time
 import json
 import math
 import ssl
+import statistics
 import sys
 import urllib.request
 from collections import defaultdict
@@ -61,8 +64,15 @@ def season_dates(league, year=None):
     return out
 
 
-def fetch_games(league, dates, workers=14):
-    """Completed games with scores, deduped, chronological."""
+CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
+
+
+def fetch_games(league, dates, workers=14, cache=True):
+    """Completed games with scores, deduped, chronological. Cached for an hour."""
+    cf = os.path.join(CACHE, f"{league}.json")
+    if cache and os.path.exists(cf) and time.time() - os.path.getmtime(cf) < 3600:
+        with open(cf) as fh:
+            return json.load(fh)
     from concurrent.futures import ThreadPoolExecutor
     path = LEAGUES[league][0]
 
@@ -102,11 +112,16 @@ def fetch_games(league, dates, workers=14):
                         hs=hs, as_=as_)
     games = [g for g in seen.values() if g["home"] and g["away"] and g["date"]]
     games.sort(key=lambda g: g["date"])
+    if cache:
+        os.makedirs(CACHE, exist_ok=True)
+        with open(cf, "w") as fh:
+            json.dump(games, fh)
     return games
 
 
-def run_elo(games, K, hfa, predict_from=None):
-    """Walk forward. Returns (predictions, final ratings, games played)."""
+def run_elo(games, K, hfa, predict_from=None, cap=None):
+    """Walk forward on win/loss only. `cap` is accepted and ignored so every
+    method shares one signature -- win-loss Elo has no margin to cap."""
     R, n = defaultdict(lambda: 1500.0), defaultdict(int)
     preds = []
     for g in games:
@@ -121,6 +136,79 @@ def run_elo(games, K, hfa, predict_from=None):
     return preds, R, n
 
 
+
+# --------------------------------------------------------------- margin models
+def _phi(x):
+    """Standard normal CDF."""
+    return 0.5 * (1 + math.erf(x / math.sqrt(2)))
+
+
+def run_mov_elo(games, K, hfa, predict_from=None, cap=None):
+    """Elo updated with a margin-of-victory multiplier (FiveThirtyEight form).
+
+    The multiplier grows with margin but is damped by the favourite's rating
+    edge, so a blowout by an already-strong team moves the rating less. Without
+    that damping, MOV Elo runs away on garbage-time scorelines.
+    """
+    R, n = defaultdict(lambda: 1500.0), defaultdict(int)
+    preds = []
+    for g in games:
+        h, a = g["home"], g["away"]
+        diff = (R[h] + hfa) - R[a]
+        eh = 1 / (1 + 10 ** (-diff / 400))
+        hw = g["hs"] > g["as_"]
+        if n[h] >= 3 and n[a] >= 3 and (predict_from is None or g["date"] >= predict_from):
+            preds.append((eh, hw, g))
+        mov = abs(g["hs"] - g["as_"])
+        if cap:
+            mov = min(mov, cap)
+        winner_edge = diff if hw else -diff
+        mult = ((mov + 3) ** 0.8) / (7.5 + 0.006 * winner_edge)
+        R[h] += K * mult * (hw - eh)
+        R[a] -= K * mult * (hw - eh)
+        n[h] += 1
+        n[a] += 1
+    return preds, R, n
+
+
+def run_power(games, lr, hfa, predict_from=None, cap=None, sigma=None):
+    """Point-differential power ratings.
+
+    Each team carries a rating in POINTS -- its expected margin against an
+    average team on a neutral floor. Predicted margin is the rating gap plus
+    home advantage; the rating moves by a fraction of the prediction error.
+    Win probability comes from the normal CDF of the predicted margin over the
+    residual spread, which is estimated from the games seen so far.
+    """
+    R, n = defaultdict(float), defaultdict(int)
+    preds, resid = [], []
+    for g in games:
+        h, a = g["home"], g["away"]
+        pred = R[h] - R[a] + hfa
+        actual = g["hs"] - g["as_"]
+        if cap:
+            actual_upd = max(-cap, min(cap, actual))
+        else:
+            actual_upd = actual
+        s = sigma or (statistics.pstdev(resid) if len(resid) > 40 else 12.0)
+        if n[h] >= 3 and n[a] >= 3 and (predict_from is None or g["date"] >= predict_from):
+            preds.append((_phi(pred / s), actual > 0, g))
+        err = actual_upd - pred
+        R[h] += lr * err
+        R[a] -= lr * err
+        resid.append(actual - pred)
+        n[h] += 1
+        n[a] += 1
+    return preds, R, n
+
+
+METHODS = {
+    "elo": ("win-loss Elo", run_elo, (8, 12, 16, 20, 24, 32)),
+    "movelo": ("margin-of-victory Elo", run_mov_elo, (4, 6, 8, 12, 16, 20)),
+    "power": ("point-differential power", run_power, (0.02, 0.04, 0.06, 0.09, 0.13)),
+}
+
+
 def score(preds):
     if not preds:
         return 0.0, 0.0, 0
@@ -131,6 +219,7 @@ def score(preds):
 
 
 def backtest(league, split=0.55):
+    """Tune each method on the first part of the season, score on the rest."""
     label = LEAGUES[league][1]
     print(f"Fetching {label} season...", file=sys.stderr)
     games = fetch_games(league, season_dates(league))
@@ -138,55 +227,96 @@ def backtest(league, split=0.55):
         print(f"\n{label}: only {len(games)} completed games -- too few to validate.")
         return
     cut = games[int(len(games) * split)]["date"]
+    margins = [abs(g["hs"] - g["as_"]) for g in games]
     print(f"\n{label} -- {len(games)} completed games "
           f"({games[0]['date']} to {games[-1]['date']})")
-    print(f"tuning on games before {cut}, scoring on games after\n")
-    best = None
-    for K in (8, 12, 16, 20, 24, 32):
-        for hfa in (0, 25, 50, 75, 100):
-            tr, _, _ = run_elo(games, K, hfa)
-            tr = [p for p in tr if p[2]["date"] < cut]
-            _, br, nn = score(tr)
-            if nn > 30 and (best is None or br < best[0]):
-                best = (br, K, hfa)
-    _, K, hfa = best
-    te, R, n = run_elo(games, K, hfa, predict_from=cut)
-    acc, brier, nn = score(te)
-    home = 100 * sum(1 for _, w, _ in te if w) / nn
-    # better-record baseline, walk-forward
-    W = defaultdict(int); G = defaultdict(int); rec = []
+    print(f"tune on games before {cut}, score on games after "
+          f"| median margin {statistics.median(margins):.0f}\n")
+
+    results = {}
+    for key, (name, fn, grid) in METHODS.items():
+        best = None
+        for k in grid:
+            for hfa in ((0, 25, 50, 75, 100) if key != "power" else (0, 1.5, 2.5, 3.5, 5.0)):
+                for cap in (None, 20):
+                    tr, _, _ = fn(games, k, hfa, cap=cap)
+                    tr = [p for p in tr if p[2]["date"] < cut]
+                    _, br, nn = score(tr)
+                    if nn > 30 and (best is None or br < best[0]):
+                        best = (br, k, hfa, cap)
+        _, k, hfa, cap = best
+        te, R, n = fn(games, k, hfa, predict_from=cut, cap=cap)
+        acc, brier, nn = score(te)
+        results[key] = dict(name=name, acc=acc, brier=brier, n=nn,
+                            k=k, hfa=hfa, cap=cap, R=R, played=n)
+
+    # walk-forward baselines on the same holdout
+    W, G, rec = defaultdict(int), defaultdict(int), []
+    home = []
     for g in games:
         h, a = g["home"], g["away"]
+        hw = g["hs"] > g["as_"]
         if g["date"] >= cut and G[h] >= 3 and G[a] >= 3:
-            ph = W[h] / G[h]; pa = W[a] / G[a]
+            home.append(hw)
+            ph, pa = W[h] / G[h], W[a] / G[a]
             if ph != pa:
-                rec.append((ph > pa) == (g["hs"] > g["as_"]))
-        W[h] += g["hs"] > g["as_"]; W[a] += g["as_"] > g["hs"]; G[h] += 1; G[a] += 1
-    print(f"  best params: K={K}, home advantage={hfa} Elo\n")
-    print(f"  {'METHOD':<26}{'ACCURACY':<12}N")
-    print("  " + "-" * 46)
-    print(f"  {'Elo (walk-forward)':<26}{acc:.1f}%{'':<6}{nn}")
-    if rec:
-        print(f"  {'better W-L record':<26}{100*sum(rec)/len(rec):.1f}%{'':<6}{len(rec)}")
-    print(f"  {'always pick home':<26}{home:.1f}%{'':<6}{nn}")
-    print(f"  {'Brier':<26}{brier:.4f}")
-    edge = acc - max(home, (100*sum(rec)/len(rec)) if rec else 0)
-    se = math.sqrt(0.25 / nn) * 100
-    print(f"\n  edge over best baseline: {edge:+.1f} pts "
-          f"(1 s.e. = {se:.1f} pts) -- "
-          f"{'REAL' if edge > 2*se else 'NOT distinguishable from noise'}")
-    return dict(K=K, hfa=hfa, acc=acc, n=nn)
+                rec.append((ph > pa) == hw)
+        W[h] += hw; W[a] += not hw; G[h] += 1; G[a] += 1
+    rec_acc = 100 * sum(rec) / len(rec) if rec else 0.0
+    home_acc = 100 * sum(home) / len(home) if home else 0.0
+
+    print(f"  {'METHOD':<28}{'ACC':<9}{'BRIER':<9}{'PARAMS':<22}N")
+    print("  " + "-" * 74)
+    for key in ("elo", "movelo", "power"):
+        r = results[key]
+        p = f"k={r['k']}, hfa={r['hfa']}" + (f", cap={r['cap']}" if r["cap"] else "")
+        print(f"  {r['name']:<28}{r['acc']:.1f}%{'':<3}{r['brier']:.4f}   {p:<22}{r['n']}")
+    print(f"  {'-- better W-L record':<28}{rec_acc:.1f}%{'':<3}{'':<9}{'':<22}{len(rec)}")
+    print(f"  {'-- always pick home':<28}{home_acc:.1f}%{'':<3}{'':<9}{'':<22}{len(home)}")
+
+    baseline = max(rec_acc, home_acc)
+    best_key = min(results, key=lambda k: results[k]["brier"])
+    b = results[best_key]
+    se = math.sqrt(0.25 / b["n"]) * 100
+    edge = b["acc"] - baseline
+    print(f"\n  best model: {b['name']} ({b['acc']:.1f}%)")
+    print(f"  edge over best baseline: {edge:+.1f} pts, 1 s.e. = {se:.1f} pts -- "
+          f"{'REAL' if edge > 2 * se else 'not distinguishable from noise'}")
+    gain = b["acc"] - results["elo"]["acc"]
+    print(f"  margin models vs win-loss Elo: {gain:+.1f} pts")
+    return results
 
 
-def board(league, date=None):
+# Best method per league, chosen by held-out Brier score in --backtest.
+# Margin helps where margins are large and informative (basketball); it hurts
+# where they are small and noisy (hockey: empty-net goals; soccer: 1-0 games).
+TUNED = {
+    "nba":   ("movelo", 20, 50, None),
+    "wnba":  ("movelo", 20, 25, None),
+    "ncaab": ("movelo", 20, 50, None),
+    "nfl":   ("movelo", 20, 50, 20),
+    "ncaaf": ("movelo", 20, 50, 20),
+    "nhl":   ("power", 0.02, 0.0, None),
+    "mlb":   ("movelo", 8, 25, None),
+    "epl":   ("elo", 32, 50, None),
+    "mls":   ("elo", 32, 50, None),
+}
+
+
+def board(league, date=None, method=None):
     label, path = LEAGUES[league][1], LEAGUES[league][0]
+    key, k, hfa, cap = TUNED.get(league, ("elo", 20, 50, None))
+    if method:
+        key = method
+        k, hfa = METHODS[key][2][len(METHODS[key][2]) // 2], hfa
+    name, fn, _ = METHODS[key]
     games = fetch_games(league, season_dates(league))
     if len(games) < 40:
         print(f"{label}: only {len(games)} completed games -- ratings unreliable.")
-    K, hfa = 20, 50
-    _, R, n = run_elo(games, K, hfa)
+    _, R, n = fn(games, k, hfa, cap=cap)
     date = date or dt.date.today().strftime("%Y%m%d")
     d = get(f"{BASE}/{path}/scoreboard?dates={date}")
+    resid = 12.0
     rows = []
     for ev in d.get("events", []):
         for c in ev.get("competitions", []):
@@ -195,21 +325,25 @@ def board(league, date=None):
                 continue
             h = (cs["home"].get("team") or {}).get("displayName")
             a = (cs["away"].get("team") or {}).get("displayName")
-            eh = 1 / (1 + 10 ** ((R[a] - (R[h] + hfa)) / 400))
+            if key == "power":
+                margin = R[h] - R[a] + hfa
+                eh = _phi(margin / resid)
+            else:
+                eh = 1 / (1 + 10 ** (-((R[h] + hfa) - R[a]) / 400))
+                margin = None
             fav, conf = (h, eh) if eh >= 0.5 else (a, 1 - eh)
-            rows.append((conf, f"{a} @ {h}", fav, R[a], R[h], n[a], n[h]))
+            rows.append((conf, f"{a} @ {h}", fav, min(n[a], n[h])))
     if not rows:
         print(f"\n{label}: nothing scheduled {date}.")
         return
     rows.sort(key=lambda r: -r[0])
-    print(f"\n{label} -- {date}   ({len(rows)} games)")
-    print(f"  {'MATCHUP':<44}{'ELO LEAN':<26}CONF   (elo away/home)")
-    print("  " + "-" * 92)
-    for conf, m, fav, ra, rh, na, nh in rows:
-        thin = "  thin" if min(na, nh) < 10 else ""
-        print(f"  {m[:44]:<44}{fav[:26]:<26}{conf*100:5.1f}%   "
-              f"{ra:.0f}/{rh:.0f}{thin}")
-    print("\n  Run --backtest for this league before trusting any of it.\n")
+    print(f"\n{label} -- {date}   ({len(rows)} games)   model: {name}")
+    print(f"  {'MATCHUP':<46}{'LEAN':<28}CONF")
+    print("  " + "-" * 84)
+    for conf, m, fav, played in rows:
+        thin = "  thin data" if played < 10 else ""
+        print(f"  {m[:46]:<46}{fav[:28]:<28}{conf*100:5.1f}%{thin}")
+    print("\n  Accuracy is not edge -- compare every number to the price.\n")
 
 
 def main():
@@ -217,11 +351,12 @@ def main():
     ap.add_argument("league", choices=sorted(LEAGUES))
     ap.add_argument("--date")
     ap.add_argument("--backtest", action="store_true")
+    ap.add_argument("--method", choices=sorted(METHODS))
     a = ap.parse_args()
     if a.backtest:
         backtest(a.league)
     else:
-        board(a.league, a.date)
+        board(a.league, a.date, a.method)
 
 
 if __name__ == "__main__":

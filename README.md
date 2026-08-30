@@ -264,3 +264,42 @@ least profitable ones.
 
 Accuracy tells you how often you are right. Only price tells you whether that
 is worth anything.
+
+### Margin-of-victory upgrade
+
+Two margin models added alongside win-loss Elo:
+
+- **MOV Elo** — FiveThirtyEight-form multiplier `((mov+3)^0.8)/(7.5+0.006*edge)`,
+  which damps blowouts by already-strong teams so garbage time doesn't run the
+  ratings away.
+- **Point-differential power ratings** — each team's rating is its expected
+  margin vs an average opponent; win probability is the normal CDF of the
+  predicted margin over the residual spread.
+
+Both tuned on the first 55% of each season, scored on the rest.
+
+| League | median margin | win-loss Elo | **MOV Elo** | power | best baseline |
+|---|---|---|---|---|---|
+| NBA | 11 | 72.3% | **73.1%** | 72.7% | 69.4% |
+| WNBA | 9 | 69.7% | **70.4%** | 66.9% | *71.8%* |
+| EPL | 1 | **64.0%** | 63.2% | 60.8% | *65.3%* |
+| NHL | 2 | 57.1% | 53.9% | **58.0%** | *60.0%* |
+| MLB | 3 | 54.3% | 54.3% | 53.3% | 53.4% |
+
+**Margin helps exactly where margins carry information and hurts where they
+don't.** Basketball (median margin 9–11) gains; hockey (median 2, inflated by
+empty-net goals) loses 3.2 points from MOV Elo, and soccer (median 1) loses
+too. The mechanism, not the method, decides.
+
+**NBA is the one genuine win:** MOV Elo at 73.1% with the best Brier in the
+project (0.1875), beating the better-record baseline by +3.7 points. That is
+1.85 standard errors — suggestive, still short of the 2 s.e. bar this repo
+uses to call something real.
+
+Note the MLB row: this generic Elo scores 54.3%, while `model_v3.py` scores
+57.5% on the same sport. The gap is the starting pitcher. A sport-specific
+feature beat three generic rating systems, which is the honest argument for
+keeping `model_v3.py` rather than folding MLB into this engine.
+
+Per-league best method is stored in `TUNED` and used automatically by the
+board; override with `--method elo|movelo|power`.
