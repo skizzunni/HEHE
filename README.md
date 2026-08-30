@@ -614,3 +614,27 @@ way of combining what everyone has. Measured over 655 games with real closing
 prices, this model's combination is **worse** than the market's: 55.9% to 57.3%.
 
 That is the honest end of the road on public data.
+
+### Why the published board is not live, and what runs instead
+
+A published Artifact **cannot fetch anything**. Its CSP blocks every outbound
+request, and none of the runtime capabilities available (`artifact`,
+`downloads`, `mcp`, `self`) grant network access — `mcp` reaches the viewer's own
+claude.ai connectors, not ESPN. The page can only hold data baked in at publish
+time. That is a platform property, not a shortcut.
+
+So keeping it current means re-baking and republishing it:
+
+- **`rebuild_board.py`** re-researches all twelve leagues for today and
+  tomorrow, diffs against the previous run, rewrites the embedded data block in
+  `board.html`, and prints what moved. One command.
+- An **hourly Routine** (`trig_015WGar6u9pKE2SDuPMYdXay`, fires at :17) runs
+  that and republishes the artifact. **One hour is the scheduler's floor** — a
+  5-minute cron is rejected outright.
+- **`dashboard.py`** is the only genuine 5-minute surface, because it runs as a
+  real server that can make outbound calls. `python3 dashboard.py`.
+
+| Surface | Cadence | Fetches live? |
+|---|---|---|
+| `dashboard.py` | 5 min | yes |
+| published artifact | hourly, via Routine | no — republished |
