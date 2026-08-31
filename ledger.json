@@ -69,6 +69,11 @@
   "conf": 88.0,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Harry Wendelken": "1",
+   "Luciano Darderi": "1"
+  },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
   "matchup": "Harry Wendelken @ Luciano Darderi",
@@ -108,10 +113,10 @@
   "conf": 59.1,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
+  "live": "4th",
   "live_score": {
-   "James Duckworth": "5 6 5",
-   "Matteo Arnaldi": "7 3 2"
+   "James Duckworth": "5 6 6 1",
+   "Matteo Arnaldi": "7 3 2 1"
   },
   "logged": "2026-08-31T12:18",
   "market_agrees": null,
@@ -126,10 +131,10 @@
   "conf": 57.8,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
+  "live": "4th",
   "live_score": {
-   "Jacob Fearnley": "4 6 4",
-   "Martin Landaluce": "6 2 5"
+   "Jacob Fearnley": "4 6 4 1",
+   "Martin Landaluce": "6 2 6 1"
   },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
@@ -191,8 +196,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Damir Dzumhur": "4 0",
-   "Hubert Hurkacz": "6 0"
+   "Damir Dzumhur": "4 3",
+   "Hubert Hurkacz": "6 2"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -326,8 +331,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Dalibor Svrcina": "6 1",
-   "Valentin Royer": "4 1"
+   "Dalibor Svrcina": "6 4",
+   "Valentin Royer": "4 3"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -344,8 +349,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Carlos Alcaraz": "6 6 0",
-   "Roman Safiullin": "4 4 0"
+   "Carlos Alcaraz": "6 6 3",
+   "Roman Safiullin": "4 4 2"
   },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
@@ -423,21 +428,23 @@
  },
  "atp:182718": {
   "conf": 58.3,
+  "diagnosis": "lost 0-3 in sets \u00b7 never won a set \u00b7 called at 58%",
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Giovanni Mpetshi Perricard": "6(2) 0 5",
-   "Jurij Rodionov": "7(7) 6 5"
-  },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
   "matchup": "Giovanni Mpetshi Perricard @ Jurij Rodionov",
   "pick": "Giovanni Mpetshi Perricard",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Giovanni Mpetshi Perricard": "6(2) 0 6(4)",
+   "Jurij Rodionov": "7(7) 6 7(7)"
+  },
+  "settled": "2026-08-31T15:38",
+  "status": "lost",
   "tip": "1:30 PM",
-  "why": "rank 105 vs 143"
+  "why": "rank 105 vs 143",
+  "winner": "Jurij Rodionov"
  },
  "atp:182721": {
   "conf": 82.9,
@@ -657,6 +664,11 @@
   "conf": 66.7,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Brandon Nakashima": "3",
+   "Sebastian Baez": "1"
+  },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
   "matchup": "Sebastian Baez @ Brandon Nakashima",
@@ -668,27 +680,29 @@
  },
  "atp:182769": {
   "conf": 82.1,
+  "diagnosis": "lost 2-3 in sets \u00b7 took it the distance \u00b7 called at 82%",
   "dog": false,
   "league": "atp",
-  "live": "5th",
-  "live_score": {
-   "Raphael Collignon": "6 3 6 3 6",
-   "Sebastian Gorzny": "3 6 3 6 6"
-  },
   "logged": "2026-08-31T12:18",
   "market_agrees": null,
   "matchup": "Raphael Collignon @ Sebastian Gorzny",
   "pick": "Raphael Collignon",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Raphael Collignon": "6 3 6 3 6(9)",
+   "Sebastian Gorzny": "3 6 3 6 7(11)"
+  },
+  "settled": "2026-08-31T15:38",
+  "status": "lost",
   "tip": "12:30 PM",
-  "why": "rank 38 vs NR"
+  "why": "rank 38 vs NR",
+  "winner": "Sebastian Gorzny"
  },
  "epl:401879295": {
   "conf": 60.6,
   "dog": false,
   "league": "epl",
-  "live": "17'",
+  "live": "38'",
   "live_score": {
    "Arsenal": 0,
    "Aston Villa": 0
@@ -1093,21 +1107,23 @@
  },
  "wta:182595": {
   "conf": 68.2,
+  "diagnosis": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 68%",
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Maja Chwalinska": "2 2",
-   "Taylor Townsend": "6 4"
-  },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
   "matchup": "Taylor Townsend @ Maja Chwalinska",
   "pick": "Maja Chwalinska",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Maja Chwalinska": "2 3",
+   "Taylor Townsend": "6 6"
+  },
+  "settled": "2026-08-31T15:38",
+  "status": "lost",
   "tip": "2:00 PM",
-  "why": "rank 22 vs 96"
+  "why": "rank 22 vs 96",
+  "winner": "Taylor Townsend"
  },
  "wta:182597": {
   "conf": 83.9,
@@ -1210,6 +1226,11 @@
   "conf": 64.3,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Daria Snigur": "0",
+   "Diana Shnaider": "3"
+  },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
   "matchup": "Diana Shnaider @ Daria Snigur",
@@ -1258,8 +1279,8 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Nadia Podoroska": "4 0",
-   "Simona Waltert": "6 0"
+   "Nadia Podoroska": "4 3",
+   "Simona Waltert": "6 1"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -1547,8 +1568,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Diane Parry": "0",
-   "Viktorija Golubic": "1"
+   "Diane Parry": "2",
+   "Viktorija Golubic": "3"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -1597,8 +1618,8 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Amanda Anisimova": "6 2",
-   "Ashlyn Krueger": "1 1"
+   "Amanda Anisimova": "6 5",
+   "Ashlyn Krueger": "1 3"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -1672,6 +1693,11 @@
   "conf": 79.6,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Anouk Koevermans": "0",
+   "Catherine McNally": "1"
+  },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
   "matchup": "Catherine McNally @ Anouk Koevermans",
