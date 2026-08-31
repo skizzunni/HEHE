@@ -58,8 +58,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Alejandro Tabilo": "6 6 4",
-   "Yannick Hanfmann": "3 2 2"
+   "Alejandro Tabilo": "6 6 5",
+   "Yannick Hanfmann": "3 2 6"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -74,10 +74,10 @@
   "conf": 88.0,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Harry Wendelken": "2 5",
-   "Luciano Darderi": "6 3"
+   "Harry Wendelken": "2 6 0",
+   "Luciano Darderi": "6 3 0"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -179,8 +179,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Matteo Berrettini": "7(7) 1",
-   "Stan Wawrinka": "6(4) 1"
+   "Matteo Berrettini": "7(7) 3",
+   "Stan Wawrinka": "6(4) 5"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -346,8 +346,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Dalibor Svrcina": "6 6 5 2",
-   "Valentin Royer": "4 3 7 1"
+   "Dalibor Svrcina": "6 6 5 5",
+   "Valentin Royer": "4 3 7 4"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -544,10 +544,10 @@
   "conf": 73.3,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Alexander Blockx": "4",
-   "Tomas Barrios Vera": "2"
+   "Alexander Blockx": "6 1",
+   "Tomas Barrios Vera": "3 1"
   },
   "logged": "2026-08-31T16:18",
   "market_agrees": null,
@@ -601,6 +601,11 @@
   "conf": 75.4,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Marco Trungelliti": "0",
+   "Shang Juncheng": "0"
+  },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
   "matchup": "Marco Trungelliti @ Shang Juncheng",
@@ -1238,8 +1243,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Clara Tauson": "0",
-   "Sloane Stephens": "0"
+   "Clara Tauson": "3",
+   "Sloane Stephens": "2"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -1304,21 +1309,23 @@
  },
  "wta:182608": {
   "conf": 77.8,
+  "diagnosis": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 78%",
   "dog": false,
   "league": "wta",
-  "live": "3rd",
-  "live_score": {
-   "Nadia Podoroska": "4 7(7) 5",
-   "Simona Waltert": "6 6(5) 3"
-  },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
   "matchup": "Simona Waltert @ Nadia Podoroska",
   "pick": "Simona Waltert",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Nadia Podoroska": "4 7(7) 6",
+   "Simona Waltert": "6 6(5) 3"
+  },
+  "settled": "2026-08-31T17:38",
+  "status": "lost",
   "tip": "2:20 PM",
-  "why": "rank 89 vs NR"
+  "why": "rank 89 vs NR",
+  "winner": "Nadia Podoroska"
  },
  "wta:182609": {
   "conf": 79.2,
@@ -1427,19 +1434,20 @@
   "conf": 79.3,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Katie Volynets": "5 0",
-   "Linda Noskova": "7 1"
-  },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
   "matchup": "Linda Noskova @ Katie Volynets",
   "pick": "Linda Noskova",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Katie Volynets": "5 1",
+   "Linda Noskova": "7 6"
+  },
+  "settled": "2026-08-31T17:38",
+  "status": "won",
   "tip": "4:30 PM",
-  "why": "rank 6 vs 78"
+  "why": "rank 6 vs 78",
+  "winner": "Linda Noskova"
  },
  "wta:182618": {
   "conf": 75.0,
@@ -1503,6 +1511,11 @@
   "conf": 62.4,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Ann Li": "1",
+   "Antonia Ruzic": "0"
+  },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
   "matchup": "Antonia Ruzic @ Ann Li",
@@ -1518,7 +1531,7 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Julia Grabher": "1",
+   "Julia Grabher": "3",
    "Sorana Cirstea": "4"
   },
   "logged": "2026-08-31T16:18",
@@ -1579,6 +1592,11 @@
   "conf": 53.6,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Liudmila Samsonova": "1",
+   "Maya Joint": "2"
+  },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
   "matchup": "Liudmila Samsonova @ Maya Joint",
