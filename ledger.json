@@ -56,10 +56,10 @@
   "conf": 60.5,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Alejandro Tabilo": "5",
-   "Yannick Hanfmann": "2"
+   "Alejandro Tabilo": "6 3",
+   "Yannick Hanfmann": "3 0"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -76,8 +76,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Harry Wendelken": "2 0",
-   "Luciano Darderi": "6 0"
+   "Harry Wendelken": "2 1",
+   "Luciano Darderi": "6 2"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -120,7 +120,7 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "James Duckworth": "5 6 6 5",
+   "James Duckworth": "5 6 6 6",
    "Matteo Arnaldi": "7 3 2 6"
   },
   "logged": "2026-08-31T12:18",
@@ -138,8 +138,8 @@
   "league": "atp",
   "live": "5th",
   "live_score": {
-   "Jacob Fearnley": "4 6 4 7 0",
-   "Martin Landaluce": "6 2 6 5 0"
+   "Jacob Fearnley": "4 6 4 7 1",
+   "Martin Landaluce": "6 2 6 5 1"
   },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
@@ -175,8 +175,8 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "Matteo Berrettini": "4",
-   "Stan Wawrinka": "3"
+   "Matteo Berrettini": "5",
+   "Stan Wawrinka": "6"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -204,10 +204,10 @@
   "conf": 61.0,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
+  "live": "4th",
   "live_score": {
-   "Damir Dzumhur": "4 6 0",
-   "Hubert Hurkacz": "6 4 3"
+   "Damir Dzumhur": "4 6 1 0",
+   "Hubert Hurkacz": "6 4 6 0"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -341,8 +341,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Dalibor Svrcina": "6 6 1",
-   "Valentin Royer": "4 3 2"
+   "Dalibor Svrcina": "6 6 4",
+   "Valentin Royer": "4 3 5"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -675,10 +675,10 @@
   "conf": 66.7,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Brandon Nakashima": "6 4",
-   "Sebastian Baez": "2 0"
+   "Brandon Nakashima": "6 6 2",
+   "Sebastian Baez": "2 1 0"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -713,7 +713,7 @@
   "conf": 60.6,
   "dog": false,
   "league": "epl",
-  "live": "61'",
+  "live": "80'",
   "live_score": {
    "Arsenal": 1,
    "Aston Villa": 0
@@ -1237,19 +1237,20 @@
   "conf": 64.3,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Daria Snigur": "0 2",
-   "Diana Shnaider": "6 3"
-  },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
   "matchup": "Diana Shnaider @ Daria Snigur",
   "pick": "Diana Shnaider",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Daria Snigur": "0 4",
+   "Diana Shnaider": "6 6"
+  },
+  "settled": "2026-08-31T16:38",
+  "status": "won",
   "tip": "3:30 PM",
-  "why": "rank 16 vs 45"
+  "why": "rank 16 vs 45",
+  "winner": "Diana Shnaider"
  },
  "wta:182606": {
   "conf": 62.0,
@@ -1288,10 +1289,10 @@
   "conf": 77.8,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Nadia Podoroska": "4 6",
-   "Simona Waltert": "6 6"
+   "Nadia Podoroska": "4 7(7) 1",
+   "Simona Waltert": "6 6(5) 0"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -1411,8 +1412,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Katie Volynets": "3",
-   "Linda Noskova": "0"
+   "Katie Volynets": "4",
+   "Linda Noskova": "2"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -1584,8 +1585,8 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Diane Parry": "7 0",
-   "Viktorija Golubic": "5 0"
+   "Diane Parry": "7 2",
+   "Viktorija Golubic": "5 2"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -1710,10 +1711,10 @@
   "conf": 79.6,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Anouk Koevermans": "4",
-   "Catherine McNally": "4"
+   "Anouk Koevermans": "5 0",
+   "Catherine McNally": "7 0"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
