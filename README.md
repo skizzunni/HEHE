@@ -724,3 +724,30 @@ A bug worth recording: `render()` reads `SLIP`, but the initial paint ran before
 page on load. Caught by executing the script against a stub DOM before
 publishing rather than by eye. `SLIP` is now declared alongside `D`, and the
 first paint is the last statement in the file.
+
+### Fanatics handoff
+
+Fanatics publishes **no betslip deep link**. Verified three ways rather than
+assumed:
+
+- ESPN's odds feed carries 62 deep links across MLB, NFL, WNBA and NCAAF — **all
+  DraftKings**, no Fanatics;
+- The Odds API's deep-link product supports **FanDuel and Betfair only**;
+- no public Fanatics URL scheme is documented anywhere.
+
+Inventing a plausible-looking URL would ship a link that 404s, which is worse
+than none. So the Fanatics path is a **numbered transcription block** — one leg
+per line with its price and league, plus the parlay total — copied in one tap:
+
+```
+1. Boston Red Sox   -167   [MLB]
+2. Atlanta Braves   -155   [MLB]
+3. Tampa Bay Rays   -172   [MLB]
+
+3-leg parlay   +316   $5 returns $20.80
+```
+
+The clipboard API can be blocked in a sandboxed page, so a failed write falls
+back to selecting the block for a manual copy rather than silently doing
+nothing. The DraftKings link stays as a secondary because that one genuinely
+resolves.

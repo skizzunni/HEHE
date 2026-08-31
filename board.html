@@ -136,6 +136,10 @@ tbody tr.on td.mine::after{content:"\2713";color:var(--accent);font-weight:800;m
 .slipbtns a,.slipbtns button{font:600 12.5px var(--display);padding:8px 14px;border-radius:2px;
   border:1px solid var(--rule);background:none;color:var(--ink);cursor:pointer;text-decoration:none}
 .slipbtns .go{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.fanslip{margin:11px 0 0;padding:11px 13px;background:var(--ground);
+  border:1px solid var(--rule);font-family:var(--mono);font-size:12px;
+  line-height:1.65;white-space:pre-wrap;color:var(--ink);max-height:190px;overflow-y:auto}
+.fanslip:empty{display:none}
 .dkurl{margin-top:9px;font-family:var(--mono);font-size:10.5px;color:var(--ink-dim);
   word-break:break-all;line-height:1.4}
 #fab{position:fixed;right:18px;bottom:18px;z-index:19;font:700 13px var(--display);
@@ -163,11 +167,12 @@ tbody tr.on td.mine::after{content:"\2713";color:var(--accent);font-weight:800;m
       </div>
       <ul class="legs" id="legs"></ul>
       <div class="slipbtns">
-        <a class="go" id="dk" href="#" target="_blank" rel="noopener">Open in DraftKings</a>
-        <button id="copy">Copy slip</button>
+        <button class="go" id="copy">Copy for Fanatics</button>
+        <a id="dk" href="#" target="_blank" rel="noopener">DraftKings link</a>
         <button id="hide">Hide</button>
       </div>
       <div class="dkurl" id="dkurl"></div>
+      <pre class="fanslip" id="fanslip"></pre>
     </div>
     <div>
       <div class="calc" id="calc"></div>
@@ -331,6 +336,18 @@ function drawSlip(){
     v.push('Four-plus legs has never been the winning structure here: 9 of 12 and 11 of 12 both paid zero.');
   document.getElementById("verdict").innerHTML = v.join(" ");
 
+  // Fanatics publishes no betslip deep link, so the handoff is a clean
+  // transcription block: one leg per line, in the order the app lists them.
+  const fan = SLIP.map((r,i) =>
+    (i+1) + ". " + r.mp + (r.p ? "   " + r.p : "   (no line yet)")
+    + (r.lg ? "   [" + r.lg + "]" : "")).join("\n");
+  const pricedAll = SLIP.every(r => r.p);
+  const foot = pricedAll && SLIP.length > 1
+    ? "\n\n" + SLIP.length + "-leg parlay   " + amer(SLIP.reduce((a,r)=>a*dec(r.p),1))
+      + "   $5 returns $" + (5*SLIP.reduce((a,r)=>a*dec(r.p),1)).toFixed(2)
+    : "";
+  document.getElementById("fanslip").textContent = fan + foot;
+
   const dks = SLIP.filter(r => r.dk).map(r => r.dk.split(":")[1]);
   const dk = document.getElementById("dk"), url = document.getElementById("dkurl");
   if(dks.length){
@@ -338,12 +355,12 @@ function drawSlip(){
     const href = "https://sportsbook.draftkings.com/event/" + first
                + "?outcomes=" + dks.join(",");
     dk.href = href; dk.style.opacity = 1;
-    url.textContent = dks.length < SLIP.length
-      ? dks.length + " of " + SLIP.length + " legs have a DraftKings id; the rest have no posted line. " + href
-      : href;
+    url.textContent = "Fanatics publishes no betslip link, so the block above is for "
+      + "transcribing. DraftKings does: " + href;
   } else {
     dk.href = "#"; dk.style.opacity = .4;
-    url.textContent = "No DraftKings ids on these legs — no book has posted them yet.";
+    url.textContent = "Fanatics publishes no betslip link. No DraftKings ids on these "
+      + "legs either — no book has posted them yet.";
   }
   slip.hidden = false;
 }
@@ -357,10 +374,18 @@ document.getElementById("fab").onclick = () => { document.getElementById("slip")
 document.getElementById("hide").onclick = () => { document.getElementById("slip").hidden = true; };
 document.getElementById("clear").onclick = () => { SLIP.length = 0; render(); drawSlip(); };
 document.getElementById("copy").onclick = () => {
-  const txt = SLIP.map(r => r.mp + (r.p ? " (" + r.p + ")" : "")).join("\n");
-  navigator.clipboard && navigator.clipboard.writeText(txt);
-  const b = document.getElementById("copy"); const old = b.textContent;
-  b.textContent = "Copied"; setTimeout(() => b.textContent = old, 1200);
+  const txt = document.getElementById("fanslip").textContent;
+  const b = document.getElementById("copy"), old = b.textContent;
+  const done = () => { b.textContent = "Copied \u2713"; setTimeout(() => b.textContent = old, 1400); };
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(txt).then(done, () => { select(); });
+  } else { select(); }
+  function select(){                     // clipboard API can be blocked; fall back
+    const pre = document.getElementById("fanslip");
+    const rng = document.createRange(); rng.selectNodeContents(pre);
+    const sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(rng);
+    b.textContent = "Selected — copy it"; setTimeout(() => b.textContent = old, 1800);
+  }
 };
 
 buildTabs(); render(); drawSlip();
