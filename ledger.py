@@ -292,7 +292,12 @@ def board_payload(limit=40):
             for e in done[:limit]]
 
     gate = recs or []
-    return dict(graded=r.get("graded", 0), open=r.get("open", 0),
+    # epoch ms of this capture, so the page can show its own age at render
+    # time. The page cannot fetch, so honesty about staleness is the only
+    # substitute for freshness.
+    captured = int(dt.datetime.now(dt.timezone.utc).timestamp() * 1000)
+    return dict(captured=captured,
+                graded=r.get("graded", 0), open=r.get("open", 0),
                 won=r.get("won", 0), lost=r.get("lost", 0),
                 hit=round(r["hit"], 1) if r.get("graded") else None,
                 by_league=[dict(lg=k, n=v["n"], won=v["won"],

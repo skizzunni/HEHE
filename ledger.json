@@ -5,8 +5,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Arthur Fils": "6 3",
-   "Stefanos Tsitsipas": "4 0"
+   "Arthur Fils": "6 6(2)",
+   "Stefanos Tsitsipas": "4 6(4)"
   },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
@@ -125,10 +125,10 @@
   "conf": 73.7,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Andrey Rublev": "6(5) 3",
-   "Otto Virtanen": "7(7) 2"
+   "Andrey Rublev": "6(5) 6(0) 0",
+   "Otto Virtanen": "7(7) 7(7) 0"
   },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
@@ -548,8 +548,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Aleksandar Kovacevic": "2 3 1",
-   "Valentin Vacherot": "6 6 1"
+   "Aleksandar Kovacevic": "2 3 5",
+   "Valentin Vacherot": "6 6 5"
   },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
@@ -993,6 +993,11 @@
   "conf": 77.2,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Aoi Ito": "0",
+   "Oksana Selekhmeteva": "1"
+  },
   "logged": "2026-08-31T12:18",
   "market_agrees": null,
   "matchup": "Oksana Selekhmeteva @ Aoi Ito",
@@ -1006,10 +1011,10 @@
   "conf": 84.6,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Aryna Sabalenka": "4",
-   "Camila Osorio": "2"
+   "Aryna Sabalenka": "6 3",
+   "Camila Osorio": "2 3"
   },
   "logged": "2026-08-31T11:21",
   "market_agrees": null,
@@ -1141,10 +1146,10 @@
   "conf": 62.0,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Harriet Dart": "3 2",
-   "Peyton Stearns": "6 1"
+   "Harriet Dart": "3 6 0",
+   "Peyton Stearns": "6 3 0"
   },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
@@ -1198,19 +1203,20 @@
   "conf": 68.4,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Elsa Jacquemot": "2 1",
-   "Marie Bouzkova": "6 1"
-  },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
   "matchup": "Marie Bouzkova @ Elsa Jacquemot",
   "pick": "Marie Bouzkova",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Elsa Jacquemot": "2 2",
+   "Marie Bouzkova": "6 6"
+  },
+  "settled": "2026-08-31T12:52",
+  "status": "won",
   "tip": "11:00 AM",
-  "why": "rank 26 vs 114"
+  "why": "rank 26 vs 114",
+  "winner": "Marie Bouzkova"
  },
  "wta:182611": {
   "conf": 63.0,
@@ -1257,8 +1263,8 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Kristina Liutova": "6 0",
-   "Zheng Qinwen": "4 1"
+   "Kristina Liutova": "6 2",
+   "Zheng Qinwen": "4 5"
   },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
@@ -1316,21 +1322,23 @@
  },
  "wta:182619": {
   "conf": 54.0,
+  "diagnosis": "called at 54%",
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Mananchaya Sawangkaew": "6 3",
-   "Panna Udvardy": "4 1"
-  },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
   "matchup": "Panna Udvardy @ Mananchaya Sawangkaew",
   "pick": "Panna Udvardy",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Mananchaya Sawangkaew": "6 6",
+   "Panna Udvardy": "4 3"
+  },
+  "settled": "2026-08-31T12:52",
+  "status": "lost",
   "tip": "11:00 AM",
-  "why": "rank 68 vs 94"
+  "why": "rank 68 vs 94",
+  "winner": "Mananchaya Sawangkaew"
  },
  "wta:182621": {
   "conf": 50.4,
@@ -1472,6 +1480,11 @@
   "conf": 85.9,
   "dog": false,
   "league": "wta",
+  "live": "2nd",
+  "live_score": {
+   "Emma Navarro": "7(8) 5",
+   "Lois Boisson": "6(6) 5"
+  },
   "logged": "2026-08-31T12:18",
   "market_agrees": null,
   "matchup": "Lois Boisson @ Emma Navarro",
@@ -1511,10 +1524,10 @@
   "conf": 55.2,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Cristina Bucsa": "7 2",
-   "Sara Bejlek": "5 2"
+   "Cristina Bucsa": "7 4 1",
+   "Sara Bejlek": "5 6 0"
   },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
@@ -1592,21 +1605,23 @@
  },
  "wta:182647": {
   "conf": 64.6,
+  "diagnosis": "called at 65%",
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Anhelina Kalinina": "3 2",
-   "Himeno Sakatsume": "6 4"
-  },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
   "matchup": "Himeno Sakatsume @ Anhelina Kalinina",
   "pick": "Anhelina Kalinina",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Anhelina Kalinina": "3 3",
+   "Himeno Sakatsume": "6 6"
+  },
+  "settled": "2026-08-31T12:52",
+  "status": "lost",
   "tip": "11:00 AM",
-  "why": "rank 51 vs 144"
+  "why": "rank 51 vs 144",
+  "winner": "Himeno Sakatsume"
  },
  "wta:182648": {
   "conf": 60.0,
@@ -1653,8 +1668,8 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Lilli Tagger": "6 4",
-   "Tamara Korpatsch": "0 1"
+   "Lilli Tagger": "6 5",
+   "Tamara Korpatsch": "0 6"
   },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
