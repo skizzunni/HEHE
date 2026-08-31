@@ -226,13 +226,10 @@ def model_book(day):
     except Exception:
         book["mlb"] = {}
     for lgk in ("atp", "wta"):
-        book[lgk] = {}
-    try:
-        t = P.tennis_picks(day)
-        book["atp"] = t
-        book["wta"] = t
-    except Exception:
-        pass
+        try:
+            book[lgk] = P.tennis_picks(day, tour=lgk)
+        except Exception:
+            book[lgk] = {}
     def one(lgk):
         try:
             return lgk, P.elo_picks(lgk, day)

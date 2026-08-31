@@ -26,6 +26,7 @@ import dashboard as d          # noqa: E402
 
 
 def snapshot():
+    """Fresh research for both days, one row per game, best picks first."""
     d.refresh()
     out = {"at": d._STATE["at"].strftime("%b %-d, %-I:%M %p ET"),
            "dates": {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]},
@@ -33,11 +34,21 @@ def snapshot():
     for slot in ("today", "tomorrow"):
         lg = {}
         for k, _, lab in d.LEAGUES:
-            rows = d._STATE["slots"][slot].get(k) or []
-            lg[k] = {"label": lab,
-                     "rows": [{"m": r["label"], "t": r["tip"], "p": r["pick"],
-                               "c": round(r["conf"] * 100, 1) if r["conf"] is not None else None,
-                               "pr": r["price"], "a": r["note"]} for r in rows]}
+            rows = []
+            for r in d._STATE["slots"][slot].get(k) or []:
+                if not r.get("mypick"):
+                    continue
+                # join the price to my side; legs are keyed away/home, picks by name
+                leg = next((L for L in r["legs"]
+                            if L.get("side") and L["side"] == r.get("myside")), None)
+                rows.append({"mp": r["mypick"], "t": r["tip"],
+                             "mc": round(r["myconf"] * 100, 1) if r["myconf"] else None,
+                             "why": r["why"],
+                             "p": leg["price"] if leg else None,
+                             "d": bool(leg["dog"]) if leg else False})
+            # strongest calls first; anything unrated sinks to the bottom
+            rows.sort(key=lambda x: (x["mc"] is None, -(x["mc"] or 0)))
+            lg[k] = {"label": lab, "rows": rows}
         out["slots"][slot] = lg
     return out
 
@@ -50,10 +61,20 @@ def changes(new):
     except (OSError, ValueError):
         return ["first run — no prior board to compare"]
     def flat(b):
-        return {f'{s}:{k}:{r["m"]}': r
-                for s in b.get("slots", {}) for k in b["slots"][s]
-                for r in b["slots"][s][k]["rows"]}
+        """Key rows by slot/league/pick. Tolerates an older snapshot schema:
+        a stored board written before a field rename should produce 'first run'
+        rather than a KeyError."""
+        out = {}
+        for s in b.get("slots", {}):
+            for k in b["slots"][s]:
+                for r in b["slots"][s][k].get("rows", []):
+                    name = r.get("mp")
+                    if name:
+                        out[f"{s}:{k}:{name}"] = r
+        return out
     o, n = flat(old), flat(new)
+    if not o:
+        return ["previous board used an older format — no comparison possible"]
     out = []
     for key, r in n.items():
         prev = o.get(key)
@@ -61,18 +82,18 @@ def changes(new):
         if prev is None:
             out.append(f"{game}: new on the board")
             continue
-        if prev.get("pr") and r.get("pr") and prev["pr"] != r["pr"]:
+        if prev.get("p") and r.get("p") and prev["p"] != r["p"]:
             try:
-                mv = int(r["pr"].replace("+", "")) - int(prev["pr"].replace("+", ""))
-                out.append(f'{game}: {r["p"]} {prev["pr"]} → {r["pr"]} ({mv:+d})')
+                mv = int(r["p"].replace("+", "")) - int(prev["p"].replace("+", ""))
+                out.append(f'{game}: {prev["p"]} → {r["p"]} ({mv:+d})')
             except ValueError:
                 pass
-        if prev.get("p") and r.get("p") and prev["p"] != r["p"]:
-            out.append(f'{game}: pick flipped {prev["p"]} → {r["p"]}')
-        if "TBD" in (prev.get("a") or "") and r.get("a") and "TBD" not in r["a"]:
-            out.append(f'{game}: starter named — {r["a"]}')
-        if not prev.get("pr") and r.get("pr"):
-            out.append(f'{game}: price posted — {r["p"]} {r["pr"]}')
+        if not prev.get("p") and r.get("p"):
+            out.append(f'{game}: price posted at {r["p"]}')
+        if "TBD" in (prev.get("why") or "") and r.get("why") and "TBD" not in r["why"]:
+            out.append(f'{game}: starter named — {r["why"]}')
+        if prev.get("mc") and r.get("mc") and abs(prev["mc"] - r["mc"]) >= 3.0:
+            out.append(f'{game}: confidence {prev["mc"]:.1f}% → {r["mc"]:.1f}%')
     return out
 
 

@@ -208,8 +208,12 @@ def elo_picks(league, day):
 
 
 # ------------------------------------------------------------- tennis
-def tennis_picks(day):
-    """Ranking-points model over the day's singles matches."""
+def tennis_picks(day, tour=None):
+    """Ranking-points model over the day's singles matches.
+
+    `tour` limits the result to one feed ("atp" or "wta"); without it the ATP and
+    WTA tabs both render every match on both tours.
+    """
     def norm(s):
         return re.sub(r"\s+", " ", (s or "").strip()).lower()
     rank = {}
@@ -225,11 +229,16 @@ def tennis_picks(day):
         r = rank.get(norm(p))
         return float(r["pts"]) if r and r.get("pts") else UN
     out, seen = {}, set()
-    for lgk in ("atp", "wta"):
+    for lgk in ([tour] if tour else ["atp", "wta"]):
         d = get(f"{ESPN}/tennis/{lgk}/scoreboard?dates={day}")
         for ev in d.get("events", []):
             for grp in ev.get("groupings", []):
-                if "Singles" not in (grp.get("grouping") or {}).get("displayName", ""):
+                gname = (grp.get("grouping") or {}).get("displayName", "")
+                if "Singles" not in gname:
+                    continue
+                if tour == "atp" and "Women" in gname:
+                    continue
+                if tour == "wta" and "Men" in gname:
                     continue
                 for c in grp.get("competitions", []):
                     if c.get("id") in seen:
@@ -252,7 +261,10 @@ def tennis_picks(day):
                     pick = ps[0] if p1 >= 0.5 else ps[1]
                     r1 = (rank.get(norm(ps[0])) or {}).get("rank")
                     r2 = (rank.get(norm(ps[1])) or {}).get("rank")
+                    # name the PICK's rank first -- otherwise the reason reads as
+                    # though the winner is the lower-ranked player
+                    mine, theirs = (r1, r2) if pick == ps[0] else (r2, r1)
                     out[(ps[0], ps[1])] = dict(
                         pick=pick, conf=max(p1, 1 - p1),
-                        why=f'rank {r1 or "NR"} v {r2 or "NR"}')
+                        why=f'rank {mine or "NR"} vs {theirs or "NR"}')
     return out
