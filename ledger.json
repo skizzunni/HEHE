@@ -3,10 +3,10 @@
   "conf": 71.2,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
+  "live": "4th",
   "live_score": {
-   "Arthur Fils": "6 6(3) 1",
-   "Stefanos Tsitsipas": "4 7(7) 5"
+   "Arthur Fils": "6 6(3) 1 1",
+   "Stefanos Tsitsipas": "4 7(7) 6 1"
   },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
@@ -108,8 +108,8 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "James Duckworth": "2",
-   "Matteo Arnaldi": "0"
+   "James Duckworth": "3",
+   "Matteo Arnaldi": "2"
   },
   "logged": "2026-08-31T12:18",
   "market_agrees": null,
@@ -139,8 +139,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Andrey Rublev": "6(5) 6(0) 6 0",
-   "Otto Virtanen": "7(7) 7(7) 0 0"
+   "Andrey Rublev": "6(5) 6(0) 6 3",
+   "Otto Virtanen": "7(7) 7(7) 0 1"
   },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
@@ -324,6 +324,11 @@
   "conf": 87.4,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Carlos Alcaraz": "0",
+   "Roman Safiullin": "1"
+  },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
   "matchup": "Carlos Alcaraz @ Roman Safiullin",
@@ -402,6 +407,11 @@
   "conf": 58.3,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Giovanni Mpetshi Perricard": "2",
+   "Jurij Rodionov": "1"
+  },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
   "matchup": "Giovanni Mpetshi Perricard @ Jurij Rodionov",
@@ -632,7 +642,7 @@
   "live": "4th",
   "live_score": {
    "Raphael Collignon": "6 3 6 0",
-   "Sebastian Gorzny": "3 6 3 0"
+   "Sebastian Gorzny": "3 6 3 3"
   },
   "logged": "2026-08-31T12:18",
   "market_agrees": null,
@@ -1014,7 +1024,7 @@
   "live": "2nd",
   "live_score": {
    "Aoi Ito": "2 0",
-   "Oksana Selekhmeteva": "6 1"
+   "Oksana Selekhmeteva": "6 4"
   },
   "logged": "2026-08-31T12:18",
   "market_agrees": null,
@@ -1089,8 +1099,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Maria Timofeeva": "4",
-   "Tamara Zidansek": "0"
+   "Maria Timofeeva": "5",
+   "Tamara Zidansek": "2"
   },
   "logged": "2026-08-31T12:18",
   "market_agrees": null,
@@ -1168,21 +1178,23 @@
  },
  "wta:182606": {
   "conf": 62.0,
+  "diagnosis": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 62%",
   "dog": false,
   "league": "wta",
-  "live": "3rd",
-  "live_score": {
-   "Harriet Dart": "3 6 5",
-   "Peyton Stearns": "6 3 2"
-  },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
   "matchup": "Peyton Stearns @ Harriet Dart",
   "pick": "Peyton Stearns",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Harriet Dart": "3 6 6",
+   "Peyton Stearns": "6 3 2"
+  },
+  "settled": "2026-08-31T13:38",
+  "status": "lost",
   "tip": "11:00 AM",
-  "why": "rank 55 vs 131"
+  "why": "rank 55 vs 131",
+  "winner": "Harriet Dart"
  },
  "wta:182607": {
   "conf": 79.0,
@@ -1285,19 +1297,20 @@
   "conf": 50.3,
   "dog": false,
   "league": "wta",
-  "live": "3rd",
-  "live_score": {
-   "Kristina Liutova": "6 3 0",
-   "Zheng Qinwen": "4 6 3"
-  },
   "logged": "2026-08-31T10:17",
   "market_agrees": null,
   "matchup": "Kristina Liutova @ Zheng Qinwen",
   "pick": "Zheng Qinwen",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Kristina Liutova": "6 3 1",
+   "Zheng Qinwen": "4 6 6"
+  },
+  "settled": "2026-08-31T13:38",
+  "status": "won",
   "tip": "11:00 AM",
-  "why": "rank 121 vs 125"
+  "why": "rank 121 vs 125",
+  "winner": "Zheng Qinwen"
  },
  "wta:182615": {
   "conf": 72.3,
@@ -1368,10 +1381,10 @@
   "conf": 50.4,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Kimberly Birrell": "3 6",
-   "Petra Marcinko": "6 6"
+   "Kimberly Birrell": "3 7(7) 1",
+   "Petra Marcinko": "6 6(4) 1"
   },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
@@ -1511,8 +1524,8 @@
   "league": "wta",
   "live": "3rd",
   "live_score": {
-   "Emma Navarro": "7(8) 6(1) 1",
-   "Lois Boisson": "6(6) 7(7) 2"
+   "Emma Navarro": "7(8) 6(1) 4",
+   "Lois Boisson": "6(6) 7(7) 3"
   },
   "logged": "2026-08-31T12:18",
   "market_agrees": null,
@@ -1717,6 +1730,11 @@
   "conf": 67.2,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Anna Blinkova": "0",
+   "Anna Kalinskaya": "2"
+  },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
   "matchup": "Anna Kalinskaya @ Anna Blinkova",
