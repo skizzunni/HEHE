@@ -274,9 +274,10 @@ def collect(key, path, day, mlbctx, mybook=None):
             if dv and len(dv) == len(pr):
                 names = (["away", "draw", "home"] if len(dv) == 3 else ["away", "home"])
                 for lab_, p_, price_ in zip(names, dv, pr):
+                    side_ = lab_
                     who = "Draw" if lab_ == "draw" else n.get(lab_, lab_)
                     b = bucket(price_)
-                    legs.append(dict(who=who, prob=p_, price=str(price_),
+                    legs.append(dict(who=who, side=side_, prob=p_, price=str(price_),
                                      dog=(str(price_).startswith("+") or
                                           (str(price_).lstrip("-").isdigit() and int(price_) > 0)),
                                      roi=(b["roi"] if b else None),
@@ -297,11 +298,16 @@ def collect(key, path, day, mlbctx, mybook=None):
                     names[x.get("homeAway")] = ((x.get("team") or {}).get("displayName")
                                                 or (x.get("athlete") or {}).get("displayName"))
                 mine = (mybook.get(key) or {}).get((names.get("away"), names.get("home")), {})
+                # which side is my pick on? legs are keyed away/home, picks by full name
+                if mine.get("pick"):
+                    myside = ("away" if mine["pick"] == names.get("away")
+                              else "home" if mine["pick"] == names.get("home") else None)
+                    mine = dict(mine, side=myside)
             best = max(legs, key=lambda L: L["roi"] if L["roi"] is not None else -99) if legs else None
             rows.append(dict(id=f'{key}:{c.get("id")}', label=label,
                              tip=t.strftime("%-I:%M %p"), legs=legs, note=note,
                              mypick=mine.get("pick", ""), myconf=mine.get("conf"),
-                             why=mine.get("why", ""),
+                             why=mine.get("why", ""), myside=mine.get("side"),
                              pick=(best["who"] if best else ""),
                              price=(best["price"] if best else ""),
                              conf=(best["prob"] if best else None)))
