@@ -94,10 +94,10 @@
   "conf": 56.8,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Facundo Diaz Acosta": "4 5",
-   "Quentin Halys": "6 6"
+   "Facundo Diaz Acosta": "4 5 2",
+   "Quentin Halys": "6 7 1"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -112,10 +112,10 @@
   "conf": 51.2,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Alexei Popyrin": "1",
-   "Grigor Dimitrov": "2"
+   "Alexei Popyrin": "3 0",
+   "Grigor Dimitrov": "6 0"
   },
   "logged": "2026-08-31T19:18",
   "market_agrees": null,
@@ -208,10 +208,10 @@
   "conf": 73.5,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Ben Shelton": "1",
-   "Tallon Griekspoor": "3"
+   "Ben Shelton": "1 2",
+   "Tallon Griekspoor": "6 0"
   },
   "logged": "2026-08-31T19:18",
   "market_agrees": null,
@@ -325,8 +325,8 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "Felix Auger-Aliassime": "2",
-   "Rinky Hijikata": "3"
+   "Felix Auger-Aliassime": "5",
+   "Rinky Hijikata": "5"
   },
   "logged": "2026-08-31T18:17",
   "market_agrees": null,
@@ -532,8 +532,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Learner Tien": "6 1",
-   "Nuno Borges": "4 0"
+   "Learner Tien": "6 4",
+   "Nuno Borges": "4 1"
   },
   "logged": "2026-08-31T18:17",
   "market_agrees": null,
@@ -625,10 +625,10 @@
   "conf": 77.2,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Jakub Mensik": "3",
-   "Shintaro Mochizuki": "0"
+   "Jakub Mensik": "6 0",
+   "Shintaro Mochizuki": "1 0"
   },
   "logged": "2026-08-31T19:18",
   "market_agrees": null,
@@ -645,8 +645,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Marco Trungelliti": "0 7(7) 1 0",
-   "Shang Juncheng": "6 6(5) 6 0"
+   "Marco Trungelliti": "0 7(7) 1 4",
+   "Shang Juncheng": "6 6(5) 6 1"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -790,9 +790,9 @@
   "conf": 57.1,
   "dog": true,
   "league": "mlb",
-  "live": "End 3rd",
+  "live": "Mid 4th",
   "live_score": {
-   "Miami Marlins": 0,
+   "Miami Marlins": 3,
    "Washington Nationals": 0
   },
   "logged": "2026-08-31T18:17",
@@ -808,7 +808,7 @@
   "conf": 59.7,
   "dog": false,
   "league": "mlb",
-  "live": "End 4th",
+  "live": "End 5th",
   "live_score": {
    "New York Mets": 1,
    "Tampa Bay Rays": 0
@@ -826,10 +826,10 @@
   "conf": 58.7,
   "dog": false,
   "league": "mlb",
-  "live": "Top 4th",
+  "live": "Top 5th",
   "live_score": {
    "Cincinnati Reds": 0,
-   "San Diego Padres": 0
+   "San Diego Padres": 4
   },
   "logged": "2026-08-31T18:17",
   "market_agrees": false,
@@ -844,7 +844,7 @@
   "conf": 66.4,
   "dog": false,
   "league": "mlb",
-  "live": "End 3rd",
+  "live": "Top 5th",
   "live_score": {
    "Boston Red Sox": 3,
    "Seattle Mariners": 2
@@ -888,6 +888,11 @@
   "conf": 52.7,
   "dog": false,
   "league": "mlb",
+  "live": "Mid 2nd",
+  "live_score": {
+   "Detroit Tigers": 0,
+   "Minnesota Twins": 1
+  },
   "logged": "2026-08-31T19:18",
   "market_agrees": false,
   "matchup": "DET @ MIN",
@@ -901,6 +906,11 @@
   "conf": 52.3,
   "dog": false,
   "league": "mlb",
+  "live": "Bot 1st",
+  "live_score": {
+   "Chicago Cubs": 3,
+   "Milwaukee Brewers": 0
+  },
   "logged": "2026-08-31T19:18",
   "market_agrees": false,
   "matchup": "MIL @ CHC",
@@ -1148,7 +1158,7 @@
   "conf": 61.9,
   "dog": false,
   "league": "mlb",
-  "live": "Top 6th",
+  "live": "Bot 7th",
   "live_score": {
    "Atlanta Braves": 3,
    "San Francisco Giants": 6
@@ -1367,11 +1377,6 @@
   "conf": 79.0,
   "dog": false,
   "league": "wta",
-  "live": "1st",
-  "live_score": {
-   "Iga Swiatek": "4",
-   "Wang Xiyu": "1"
-  },
   "logged": "2026-08-31T18:17",
   "market_agrees": null,
   "matchup": "Wang Xiyu @ Iga Swiatek",
@@ -1463,19 +1468,20 @@
   "conf": 54.5,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Elisabetta Cocciaretto": "3 2",
-   "Katerina Siniakova": "6 4"
-  },
   "logged": "2026-08-31T18:17",
   "market_agrees": null,
   "matchup": "Katerina Siniakova @ Elisabetta Cocciaretto",
   "pick": "Katerina Siniakova",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Elisabetta Cocciaretto": "3 2",
+   "Katerina Siniakova": "6 6"
+  },
+  "settled": "2026-08-31T19:58",
+  "status": "won",
   "tip": "6:40 PM",
-  "why": "rank 42 vs 67"
+  "why": "rank 42 vs 67",
+  "winner": "Katerina Siniakova"
  },
  "wta:182614": {
   "conf": 50.3,
