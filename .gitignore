@@ -5,3 +5,8 @@ __pycache__/
 # Local scratch data pulls (schedules, odds, game logs)
 *.json
 !package.json
+
+# The pick record is not scratch data. It is the only thing in this repo that
+# cannot be refetched -- a graded call is gone the moment the container is
+# reclaimed -- so it is tracked.
+!ledger.json

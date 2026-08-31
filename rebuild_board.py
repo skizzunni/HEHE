@@ -23,11 +23,19 @@ BOARD = os.path.join(HERE, "board.html")
 STATE = os.path.join(HERE, ".cache", "last_board.json")
 
 import dashboard as d          # noqa: E402
+import ledger                  # noqa: E402
 
 
 def snapshot():
-    """Fresh research for both days, one row per game, best picks first."""
+    """Fresh research for both days, one row per game, best picks first.
+
+    The same pass also feeds the ledger: every pick on the board is recorded,
+    anything that has finished is graded, and the running record goes onto the
+    page. Research happens once and both consumers read the same state.
+    """
     d.refresh()
+    ledger.record(d._STATE)
+    ledger.grade()
     out = {"at": d._STATE["at"].strftime("%b %-d, %-I:%M %p ET"),
            "dates": {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]},
            "slots": {}}
@@ -52,6 +60,7 @@ def snapshot():
             rows.sort(key=lambda x: (x["mc"] is None, -(x["mc"] or 0)))
             lg[k] = {"label": lab, "rows": rows}
         out["slots"][slot] = lg
+    out["results"] = ledger.board_payload()
     return out
 
 
@@ -99,9 +108,8 @@ def changes(new):
     return out
 
 
-def main():
-    new = snapshot()
-    moved = changes(new)
+def write(new):
+    """Swap the embedded data block in board.html for `new`."""
     src = open(BOARD).read()
     blob = json.dumps(new, separators=(",", ":"))
     src2 = re.sub(r"const D = \{.*?\};\n", "const D = " + blob.replace("\\", "\\\\") + ";\n",
@@ -112,9 +120,41 @@ def main():
     os.makedirs(os.path.dirname(STATE), exist_ok=True)
     with open(STATE, "w") as fh:
         json.dump(new, fh)
+
+
+def scores_only():
+    """Re-grade and refresh live scores without re-researching the slate.
+
+    Scores move every few minutes; ratings and starters do not. This is the
+    cheap path for keeping the Results tab current between full rebuilds.
+    """
+    ledger.grade()
+    try:
+        with open(STATE) as fh:
+            new = json.load(fh)
+    except (OSError, ValueError):
+        sys.exit("no prior board — run a full rebuild first")
+    new["results"] = ledger.board_payload()
+    write(new)
+    R = new["results"]
+    print(f'scores refreshed — {len(R["live"])} live, {R["won"]}-{R["lost"]} graded')
+
+
+def main():
+    if "--scores" in sys.argv:
+        return scores_only()
+    new = snapshot()
+    moved = changes(new)
+    write(new)
     up = {s: sum(len(v["rows"]) for v in new["slots"][s].values()) for s in new["slots"]}
     print(f'rebuilt board.html — today {up["today"]} upcoming, tomorrow {up["tomorrow"]}')
     print(f'captured {new["at"]}')
+    R = new["results"]
+    if R["graded"]:
+        print(f'ledger {R["won"]}-{R["lost"]} ({R["hit"]}%) · '
+              f'{len(R["live"])} live · {R["open"]} open')
+    else:
+        print(f'ledger {R["open"]} open, none graded yet')
     if moved:
         print(f"\n{len(moved)} change(s):")
         for m in moved[:25]:
