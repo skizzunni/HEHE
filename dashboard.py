@@ -31,6 +31,8 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
+import picks as P
+
 ESPN = "https://site.api.espn.com/apis/site/v2/sports"
 MLB = "https://statsapi.mlb.com/api/v1"
 ET = dt.timezone(dt.timedelta(hours=-4))
@@ -213,7 +215,36 @@ def mlb_context(day):
     return out
 
 
-def collect(key, path, day, mlbctx):
+ELO_LEAGUES = {"wnba", "nba", "nhl", "epl", "mls", "ncaaf", "nfl", "ncaab"}
+
+
+def model_book(day):
+    """My own forecast for every league that has a validated model for it."""
+    book = {}
+    try:
+        book["mlb"] = P.mlb_picks(day)
+    except Exception:
+        book["mlb"] = {}
+    for lgk in ("atp", "wta"):
+        book[lgk] = {}
+    try:
+        t = P.tennis_picks(day)
+        book["atp"] = t
+        book["wta"] = t
+    except Exception:
+        pass
+    def one(lgk):
+        try:
+            return lgk, P.elo_picks(lgk, day)
+        except Exception:
+            return lgk, {}
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        for lgk, v in ex.map(one, sorted(ELO_LEAGUES & {k for k, _, _ in LEAGUES})):
+            book[lgk] = v
+    return book
+
+
+def collect(key, path, day, mlbctx, mybook=None):
     d = get(f"{ESPN}/{path}/scoreboard?dates={day}")
     rows = []
     for ev in d.get("events", []):
@@ -258,9 +289,19 @@ def collect(key, path, day, mlbctx):
                 ctx = mlbctx.get((fullnames.get("away"), fullnames.get("home")))
                 if ctx:
                     note = ctx["sp"]
+            # my own call, from the model that owns this league
+            mine = {}
+            if mybook:
+                names = {}
+                for x in c.get("competitors") or []:
+                    names[x.get("homeAway")] = ((x.get("team") or {}).get("displayName")
+                                                or (x.get("athlete") or {}).get("displayName"))
+                mine = (mybook.get(key) or {}).get((names.get("away"), names.get("home")), {})
             best = max(legs, key=lambda L: L["roi"] if L["roi"] is not None else -99) if legs else None
             rows.append(dict(id=f'{key}:{c.get("id")}', label=label,
                              tip=t.strftime("%-I:%M %p"), legs=legs, note=note,
+                             mypick=mine.get("pick", ""), myconf=mine.get("conf"),
+                             why=mine.get("why", ""),
                              pick=(best["who"] if best else ""),
                              price=(best["price"] if best else ""),
                              conf=(best["prob"] if best else None)))
@@ -296,18 +337,22 @@ def refresh():
     now = dt.datetime.now(ET)
     today = now.strftime("%Y%m%d")
     tomorrow = (now + dt.timedelta(days=1)).strftime("%Y%m%d")
-    ctx = {}
+    ctx, book = {}, {}
     for day in (today, tomorrow):
         try:
             ctx[day] = mlb_context(day)
         except Exception:
             ctx[day] = {}
+        try:
+            book[day] = model_book(day)
+        except Exception:
+            book[day] = {}
     slots = {"today": {}, "tomorrow": {}}
     jobs = [(slot, k, p, day) for slot, day in (("today", today), ("tomorrow", tomorrow))
             for k, p, _ in LEAGUES]
     fresh = []
     with ThreadPoolExecutor(max_workers=12) as ex:
-        futs = {ex.submit(collect, k, p, day, ctx.get(day, {})): (slot, k)
+        futs = {ex.submit(collect, k, p, day, ctx.get(day, {}), book.get(day, {})): (slot, k)
                 for slot, k, p, day in jobs}
         for f in futs:
             slot, k = futs[f]

@@ -669,3 +669,29 @@ probability, and that band's historical ROI, plus a DOG tag on the side the
 market prices as less likely. The tag is a price marker, not a recommendation:
 on 2026-08-30 four underdogs won of thirteen priced games, and backing all of
 them blind lost four units.
+
+## picks.py — my model's call on every game (2026-08-31)
+
+The board previously echoed the bookmaker's favourite. It now carries my own
+forecast for every game in every league that has a validated model, with the
+numbers that produced it.
+
+| League group | Method | Held-out accuracy |
+|---|---|---|
+| MLB | starter ERA/FIP (regressed) .65 + bullpen ERA .30 + team run rates .05 | 57.5% |
+| NBA / WNBA / NCAAF / NFL | margin-of-victory Elo | 73.1% / 70.4% |
+| NHL | point-differential power ratings | 58.0% |
+| EPL / MLS | win-loss Elo | 64.0% |
+| Tennis | ranking points, `1/(1+exp(-(ln ptsA − ln ptsB)·0.8))` | 57.1% |
+
+Each pick ships with a **Why**: the starters and their ERA/FIP, the bullpen gap
+where it exceeds 0.35 runs, recent form, or the rating gap and last-ten record
+for team sports. The reasoning is inspectable rather than asserted.
+
+The market moves to a check column. A **DOG** tag marks a game where my model
+takes the side the book prices as less likely — the real disagreements, and
+also the ones most likely to be my error: over 655 MLB games the market called
+57.3% against my 55.9%, and backing my disagreements lost up to 14.3%.
+
+Coverage on 2026-08-31: **109 of 109 upcoming games carry a model pick**, against
+13 that had a posted price.
