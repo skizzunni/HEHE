@@ -171,7 +171,24 @@ def _final(lg, comp_id):
 def diagnose(e, res):
     """Describe a loss. Description only -- no parameter is changed from this."""
     bits = []
-    sc = [v for v in (res.get("scores") or {}).values() if isinstance(v, int)]
+    scores = res.get("scores") or {}
+    # set-scored sports carry a string line ("6 7(8)"), not a number -- read
+    # the margin off the sets won rather than reporting nothing.
+    strs = [v for v in scores.values() if isinstance(v, str)]
+    if len(strs) == 2 and e["pick"] in scores:
+        mine = scores[e["pick"]].split()
+        other = next(v for k, v in scores.items() if k != e["pick"]).split()
+        pairs = [(a, b) for a, b in zip(mine, other)]
+        won = sum(1 for a, b in pairs
+                  if a.split("(")[0].isdigit() and b.split("(")[0].isdigit()
+                  and int(a.split("(")[0]) > int(b.split("(")[0]))
+        lost = len(pairs) - won
+        bits.append(f"lost {won}-{lost} in sets")
+        if won == 0:
+            bits.append("never won a set")
+        elif won >= 1:
+            bits.append("took it the distance")
+    sc = [v for v in scores.values() if isinstance(v, int)]
     if len(sc) == 2:
         margin = abs(sc[0] - sc[1])
         bits.append(f"margin {margin}")
