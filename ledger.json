@@ -56,6 +56,11 @@
   "conf": 60.5,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Alejandro Tabilo": "0",
+   "Yannick Hanfmann": "0"
+  },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
   "matchup": "Alejandro Tabilo @ Yannick Hanfmann",
@@ -72,7 +77,7 @@
   "live": "1st",
   "live_score": {
    "Harry Wendelken": "1",
-   "Luciano Darderi": "1"
+   "Luciano Darderi": "4"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -115,8 +120,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "James Duckworth": "5 6 6 1",
-   "Matteo Arnaldi": "7 3 2 1"
+   "James Duckworth": "5 6 6 2",
+   "Matteo Arnaldi": "7 3 2 4"
   },
   "logged": "2026-08-31T12:18",
   "market_agrees": null,
@@ -133,8 +138,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Jacob Fearnley": "4 6 4 1",
-   "Martin Landaluce": "6 2 6 1"
+   "Jacob Fearnley": "4 6 4 2",
+   "Martin Landaluce": "6 2 6 5"
   },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
@@ -168,6 +173,11 @@
   "conf": 66.0,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Matteo Berrettini": "1",
+   "Stan Wawrinka": "1"
+  },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
   "matchup": "Stan Wawrinka @ Matteo Berrettini",
@@ -196,8 +206,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Damir Dzumhur": "4 3",
-   "Hubert Hurkacz": "6 2"
+   "Damir Dzumhur": "4 5",
+   "Hubert Hurkacz": "6 4"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -329,10 +339,10 @@
   "conf": 61.0,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Dalibor Svrcina": "6 4",
-   "Valentin Royer": "4 3"
+   "Dalibor Svrcina": "6 6 0",
+   "Valentin Royer": "4 3 0"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -347,19 +357,20 @@
   "conf": 87.4,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Carlos Alcaraz": "6 6 3",
-   "Roman Safiullin": "4 4 2"
-  },
   "logged": "2026-08-31T13:18",
   "market_agrees": null,
   "matchup": "Carlos Alcaraz @ Roman Safiullin",
   "pick": "Carlos Alcaraz",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Carlos Alcaraz": "6 6 6",
+   "Roman Safiullin": "4 4 4"
+  },
+  "settled": "2026-08-31T15:58",
+  "status": "won",
   "tip": "1:25 PM",
-  "why": "rank 3 vs 99"
+  "why": "rank 3 vs 99",
+  "winner": "Carlos Alcaraz"
  },
  "atp:182706": {
   "conf": 62.0,
@@ -664,10 +675,10 @@
   "conf": 66.7,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Brandon Nakashima": "3",
-   "Sebastian Baez": "1"
+   "Brandon Nakashima": "6 1",
+   "Sebastian Baez": "2 0"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -702,7 +713,7 @@
   "conf": 60.6,
   "dog": false,
   "league": "epl",
-  "live": "38'",
+  "live": "HT",
   "live_score": {
    "Arsenal": 0,
    "Aston Villa": 0
@@ -1226,10 +1237,10 @@
   "conf": 64.3,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Daria Snigur": "0",
-   "Diana Shnaider": "3"
+   "Daria Snigur": "0 0",
+   "Diana Shnaider": "6 0"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -1279,8 +1290,8 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Nadia Podoroska": "4 3",
-   "Simona Waltert": "6 1"
+   "Nadia Podoroska": "4 4",
+   "Simona Waltert": "6 4"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -1568,8 +1579,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Diane Parry": "2",
-   "Viktorija Golubic": "3"
+   "Diane Parry": "3",
+   "Viktorija Golubic": "4"
   },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
@@ -1616,19 +1627,20 @@
   "conf": 76.9,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Amanda Anisimova": "6 5",
-   "Ashlyn Krueger": "1 3"
-  },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
   "matchup": "Amanda Anisimova @ Ashlyn Krueger",
   "pick": "Amanda Anisimova",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Amanda Anisimova": "6 6",
+   "Ashlyn Krueger": "1 3"
+  },
+  "settled": "2026-08-31T15:58",
+  "status": "won",
   "tip": "2:20 PM",
-  "why": "rank 10 vs 60"
+  "why": "rank 10 vs 60",
+  "winner": "Amanda Anisimova"
  },
  "wta:182639": {
   "conf": 74.1,
@@ -1695,8 +1707,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Anouk Koevermans": "0",
-   "Catherine McNally": "1"
+   "Anouk Koevermans": "2",
+   "Catherine McNally": "3"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
