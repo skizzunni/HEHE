@@ -64,6 +64,15 @@ def snapshot():
     return out
 
 
+def implied(american):
+    """American odds as an implied probability, vig included."""
+    try:
+        v = int(str(american).replace("+", ""))
+    except (TypeError, ValueError):
+        return None
+    return 100 / (v + 100) if v > 0 else -v / (-v + 100)
+
+
 def changes(new):
     """What moved since the last rebuild."""
     try:
@@ -94,11 +103,18 @@ def changes(new):
             out.append(f"{game}: new on the board")
             continue
         if prev.get("p") and r.get("p") and prev["p"] != r["p"]:
-            try:
-                mv = int(r["p"].replace("+", "")) - int(prev["p"].replace("+", ""))
-                out.append(f'{game}: {prev["p"]} → {r["p"]} ({mv:+d})')
-            except ValueError:
-                pass
+            a, b = implied(prev["p"]), implied(r["p"])
+            if a is not None and b is not None:
+                # American odds are not subtractable across the +/- boundary:
+                # +101 to -104 is five cents of probability, not 205. Report
+                # the move where it is actually comparable.
+                note = ""
+                if prev["p"].startswith("+") and r["p"].startswith("-"):
+                    note = "  — now a favourite"
+                elif prev["p"].startswith("-") and r["p"].startswith("+"):
+                    note = "  — now an underdog"
+                out.append(f'{game}: {prev["p"]} → {r["p"]} '
+                           f'({100*(b-a):+.1f} pts implied){note}')
         if not prev.get("p") and r.get("p"):
             out.append(f'{game}: price posted at {r["p"]}')
         if "TBD" in (prev.get("why") or "") and r.get("why") and "TBD" not in r["why"]:
