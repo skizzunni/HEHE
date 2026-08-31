@@ -56,19 +56,20 @@
   "conf": 60.5,
   "dog": false,
   "league": "atp",
-  "live": "4th",
-  "live_score": {
-   "Alejandro Tabilo": "6 6 6(7) 3",
-   "Yannick Hanfmann": "3 2 7(9) 2"
-  },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
   "matchup": "Alejandro Tabilo @ Yannick Hanfmann",
   "pick": "Alejandro Tabilo",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Alejandro Tabilo": "6 6 6(7) 6",
+   "Yannick Hanfmann": "3 2 7(9) 3"
+  },
+  "settled": "2026-08-31T18:37",
+  "status": "won",
   "tip": "3:30 PM",
-  "why": "rank 28 vs 54"
+  "why": "rank 28 vs 54",
+  "winner": "Alejandro Tabilo"
  },
  "atp:182664": {
   "conf": 88.0,
@@ -76,8 +77,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Harry Wendelken": "2 6 2 0",
-   "Luciano Darderi": "6 3 6 0"
+   "Harry Wendelken": "2 6 2 2",
+   "Luciano Darderi": "6 3 6 3"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -94,8 +95,8 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "Facundo Diaz Acosta": "0",
-   "Quentin Halys": "1"
+   "Facundo Diaz Acosta": "3",
+   "Quentin Halys": "4"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -184,7 +185,7 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Matteo Berrettini": "7(7) 7(7) 0",
+   "Matteo Berrettini": "7(7) 7(7) 3",
    "Stan Wawrinka": "6(4) 6(3) 0"
   },
   "logged": "2026-08-31T15:17",
@@ -347,21 +348,23 @@
  },
  "atp:182704": {
   "conf": 61.0,
+  "diagnosis": "lost 2-3 in sets \u00b7 took it the distance \u00b7 called at 61%",
   "dog": false,
   "league": "atp",
-  "live": "5th",
-  "live_score": {
-   "Dalibor Svrcina": "6 6 5 5 5",
-   "Valentin Royer": "4 3 7 7 0"
-  },
   "logged": "2026-08-31T14:17",
   "market_agrees": null,
   "matchup": "Valentin Royer @ Dalibor Svrcina",
   "pick": "Valentin Royer",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Dalibor Svrcina": "6 6 5 5 6",
+   "Valentin Royer": "4 3 7 7 2"
+  },
+  "settled": "2026-08-31T18:37",
+  "status": "lost",
   "tip": "2:20 PM",
-  "why": "rank 75 vs 134"
+  "why": "rank 75 vs 134",
+  "winner": "Dalibor Svrcina"
  },
  "atp:182705": {
   "conf": 87.4,
@@ -536,10 +539,10 @@
   "conf": 51.8,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Karen Khachanov": "5",
-   "Roman Andres Burruchaga": "2"
+   "Karen Khachanov": "6 3",
+   "Roman Andres Burruchaga": "3 0"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -556,8 +559,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Alexander Blockx": "6 6 0",
-   "Tomas Barrios Vera": "3 4 0"
+   "Alexander Blockx": "6 6 4",
+   "Tomas Barrios Vera": "3 4 1"
   },
   "logged": "2026-08-31T16:18",
   "market_agrees": null,
@@ -613,8 +616,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Marco Trungelliti": "0 3",
-   "Shang Juncheng": "6 1"
+   "Marco Trungelliti": "0 5",
+   "Shang Juncheng": "6 4"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -1096,9 +1099,9 @@
   "conf": 61.9,
   "dog": false,
   "league": "mlb",
-  "live": "End 1st",
+  "live": "Mid 3rd",
   "live_score": {
-   "Atlanta Braves": 1,
+   "Atlanta Braves": 2,
    "San Francisco Giants": 1
   },
   "logged": "2026-08-31T17:18",
@@ -1254,21 +1257,23 @@
  },
  "wta:182603": {
   "conf": 82.8,
+  "diagnosis": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 83%",
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Clara Tauson": "4 0",
-   "Sloane Stephens": "6 3"
-  },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
   "matchup": "Clara Tauson @ Sloane Stephens",
   "pick": "Clara Tauson",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Clara Tauson": "4 1",
+   "Sloane Stephens": "6 6"
+  },
+  "settled": "2026-08-31T18:38",
+  "status": "lost",
   "tip": "5:15 PM",
-  "why": "rank 38 vs NR"
+  "why": "rank 38 vs NR",
+  "winner": "Sloane Stephens"
  },
  "wta:182604": {
   "conf": 64.3,
@@ -1526,10 +1531,10 @@
   "conf": 62.4,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Ann Li": "5",
-   "Antonia Ruzic": "5"
+   "Ann Li": "7 2",
+   "Antonia Ruzic": "5 0"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -1544,19 +1549,20 @@
   "conf": 72.2,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Julia Grabher": "3 0",
-   "Sorana Cirstea": "6 5"
-  },
   "logged": "2026-08-31T16:18",
   "market_agrees": null,
   "matchup": "Sorana Cirstea @ Julia Grabher",
   "pick": "Sorana Cirstea",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Julia Grabher": "3 0",
+   "Sorana Cirstea": "6 6"
+  },
+  "settled": "2026-08-31T18:38",
+  "status": "won",
   "tip": "4:30 PM",
-  "why": "rank 17 vs 112"
+  "why": "rank 17 vs 112",
+  "winner": "Sorana Cirstea"
  },
  "wta:182626": {
   "conf": 80.3,
@@ -1609,8 +1615,8 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Liudmila Samsonova": "6 1",
-   "Maya Joint": "3 1"
+   "Liudmila Samsonova": "6 2",
+   "Maya Joint": "3 4"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
