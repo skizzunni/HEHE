@@ -77,8 +77,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Harry Wendelken": "2 6 2 2",
-   "Luciano Darderi": "6 3 6 3"
+   "Harry Wendelken": "2 6 2 5",
+   "Luciano Darderi": "6 3 6 5"
   },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
@@ -93,10 +93,10 @@
   "conf": 56.8,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Facundo Diaz Acosta": "3",
-   "Quentin Halys": "4"
+   "Facundo Diaz Acosta": "4 1",
+   "Quentin Halys": "6 0"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -183,19 +183,20 @@
   "conf": 66.0,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Matteo Berrettini": "7(7) 7(7) 3",
-   "Stan Wawrinka": "6(4) 6(3) 0"
-  },
   "logged": "2026-08-31T15:17",
   "market_agrees": null,
   "matchup": "Stan Wawrinka @ Matteo Berrettini",
   "pick": "Matteo Berrettini",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Matteo Berrettini": "7(7) 7(7) 6",
+   "Stan Wawrinka": "6(4) 6(3) 0"
+  },
+  "settled": "2026-08-31T18:57",
+  "status": "won",
   "tip": "3:30 PM",
-  "why": "rank 43 vs 127"
+  "why": "rank 43 vs 127",
+  "winner": "Matteo Berrettini"
  },
  "atp:182676": {
   "conf": 73.5,
@@ -513,6 +514,11 @@
   "conf": 65.8,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Learner Tien": "1",
+   "Nuno Borges": "0"
+  },
   "logged": "2026-08-31T18:17",
   "market_agrees": null,
   "matchup": "Learner Tien @ Nuno Borges",
@@ -539,10 +545,10 @@
   "conf": 51.8,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Karen Khachanov": "6 3",
-   "Roman Andres Burruchaga": "3 0"
+   "Karen Khachanov": "6 6 0",
+   "Roman Andres Burruchaga": "3 0 0"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -557,19 +563,20 @@
   "conf": 73.3,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Alexander Blockx": "6 6 4",
-   "Tomas Barrios Vera": "3 4 1"
-  },
   "logged": "2026-08-31T16:18",
   "market_agrees": null,
   "matchup": "Tomas Barrios Vera @ Alexander Blockx",
   "pick": "Alexander Blockx",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Alexander Blockx": "6 6 6",
+   "Tomas Barrios Vera": "3 4 2"
+  },
+  "settled": "2026-08-31T18:57",
+  "status": "won",
   "tip": "4:30 PM",
-  "why": "rank 34 vs 144"
+  "why": "rank 34 vs 144",
+  "winner": "Alexander Blockx"
  },
  "atp:182750": {
   "conf": 63.8,
@@ -616,8 +623,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Marco Trungelliti": "0 5",
-   "Shang Juncheng": "6 4"
+   "Marco Trungelliti": "0 6",
+   "Shang Juncheng": "6 6"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -761,6 +768,11 @@
   "conf": 57.1,
   "dog": true,
   "league": "mlb",
+  "live": "Bot 1st",
+  "live_score": {
+   "Miami Marlins": 0,
+   "Washington Nationals": 0
+  },
   "logged": "2026-08-31T18:17",
   "market_agrees": false,
   "matchup": "MIA @ WSH",
@@ -774,6 +786,11 @@
   "conf": 59.7,
   "dog": false,
   "league": "mlb",
+  "live": "Top 2nd",
+  "live_score": {
+   "New York Mets": 0,
+   "Tampa Bay Rays": 0
+  },
   "logged": "2026-08-31T18:17",
   "market_agrees": false,
   "matchup": "NYM @ TB",
@@ -787,6 +804,11 @@
   "conf": 58.7,
   "dog": false,
   "league": "mlb",
+  "live": "End 1st",
+  "live_score": {
+   "Cincinnati Reds": 0,
+   "San Diego Padres": 0
+  },
   "logged": "2026-08-31T18:17",
   "market_agrees": false,
   "matchup": "SD @ CIN",
@@ -800,6 +822,11 @@
   "conf": 66.4,
   "dog": false,
   "league": "mlb",
+  "live": "Bot 1st",
+  "live_score": {
+   "Boston Red Sox": 0,
+   "Seattle Mariners": 1
+  },
   "logged": "2026-08-31T18:17",
   "market_agrees": false,
   "matchup": "SEA @ BOS",
@@ -1099,7 +1126,7 @@
   "conf": 61.9,
   "dog": false,
   "league": "mlb",
-  "live": "Mid 3rd",
+  "live": "End 4th",
   "live_score": {
    "Atlanta Braves": 2,
    "San Francisco Giants": 1
@@ -1409,6 +1436,11 @@
   "conf": 54.5,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Elisabetta Cocciaretto": "1",
+   "Katerina Siniakova": "4"
+  },
   "logged": "2026-08-31T18:17",
   "market_agrees": null,
   "matchup": "Katerina Siniakova @ Elisabetta Cocciaretto",
@@ -1533,8 +1565,8 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Ann Li": "7 2",
-   "Antonia Ruzic": "5 0"
+   "Ann Li": "7 4",
+   "Antonia Ruzic": "5 1"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
@@ -1613,10 +1645,10 @@
   "conf": 53.6,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Liudmila Samsonova": "6 2",
-   "Maya Joint": "3 4"
+   "Liudmila Samsonova": "6 2 0",
+   "Maya Joint": "3 6 1"
   },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
