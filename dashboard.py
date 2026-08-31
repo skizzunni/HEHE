@@ -27,6 +27,7 @@ import re
 import ssl
 import threading
 import time
+import urllib.parse
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from http.server import BaseHTTPRequestHandler, HTTPServer
@@ -121,6 +122,35 @@ def devig(*odds):
     raw = [1 / d for d in decs]
     t = sum(raw)
     return [r / t for r in raw] if t > 0 else None
+
+
+def deep_links(comp):
+    """DraftKings bet-slip outcome ids per side, from ESPN's odds links.
+
+    ESPN wraps them in a tracking gateway whose `preurl` carries the real
+    sportsbook URL; the outcome id inside it is what a slip is built from.
+    """
+    out = {}
+    for o in comp.get("odds") or []:
+        if not isinstance(o, dict):
+            continue
+        ml = o.get("moneyline") or {}
+        for side in ("away", "home"):
+            for when in ("close", "open"):
+                node = (ml.get(side) or {}).get(when) or {}
+                href = (node.get("link") or {}).get("href")
+                if not href:
+                    continue
+                try:
+                    q = urllib.parse.parse_qs(urllib.parse.urlparse(href).query)
+                    pre = q.get("preurl", [""])[0]
+                    m = re.search(r"/event/(\d+)\?outcomes=([\w_]+)", pre)
+                    if m:
+                        out[side] = dict(event=m.group(1), outcome=m.group(2))
+                        break
+                except Exception:
+                    pass
+    return out
 
 
 def raw_prices(comp, ways):
@@ -265,6 +295,7 @@ def collect(key, path, day, mlbctx, mybook=None):
                 label = " vs ".join(who) if who else (ev.get("shortName") or "?")
             else:
                 label = ev.get("shortName") or ev.get("name") or "?"
+            dl = deep_links(c)
             pr = raw_prices(c, 3 if key in THREE_WAY else 2)
             dv = devig(*pr) if pr else None
             legs = []
@@ -274,7 +305,10 @@ def collect(key, path, day, mlbctx, mybook=None):
                     side_ = lab_
                     who = "Draw" if lab_ == "draw" else n.get(lab_, lab_)
                     b = bucket(price_)
+                    link = dl.get(side_) or {}
                     legs.append(dict(who=who, side=side_, prob=p_, price=str(price_),
+                                     dk=(f'{link["event"]}:{link["outcome"]}'
+                                         if link.get("outcome") else None),
                                      dog=(str(price_).startswith("+") or
                                           (str(price_).lstrip("-").isdigit() and int(price_) > 0)),
                                      roi=(b["roi"] if b else None),

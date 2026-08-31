@@ -105,6 +105,43 @@ aside .fig{font-family:var(--mono);color:var(--accent);font-weight:600}
 .days button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .dnum{font-family:var(--mono);font-size:11px;font-weight:400;opacity:.7;
   font-variant-numeric:tabular-nums}
+tbody tr[data-pick]{cursor:pointer}
+tbody tr.on td{background:var(--accent-soft)}
+tbody tr.on td.mine::after{content:"\2713";color:var(--accent);font-weight:800;margin-left:9px}
+#slip{position:fixed;right:0;bottom:0;left:0;background:var(--panel);
+  border-top:2px solid var(--ink);padding:14px 20px 16px;z-index:20;
+  box-shadow:0 -8px 24px rgba(0,0,0,.10);max-height:62vh;overflow-y:auto}
+#slip[hidden]{display:none}
+.slipwrap{max-width:940px;margin:0 auto;display:grid;grid-template-columns:1fr 300px;gap:24px}
+@media (max-width:760px){.slipwrap{grid-template-columns:1fr}}
+.sliphead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
+.sliphead h2{font:800 15px var(--display);margin:0}
+.legs{list-style:none;margin:0;padding:0}
+.legs li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;
+  border-bottom:1px solid var(--rule-soft);font-size:13.5px}
+.legs .px{font-family:var(--mono);color:var(--ink-dim);font-variant-numeric:tabular-nums}
+.legs button{background:none;border:0;color:var(--ink-dim);cursor:pointer;font-size:15px;
+  line-height:1;padding:0 0 0 8px}
+.legs button:hover{color:var(--bad)}
+.calc{font-family:var(--mono);font-size:12.5px}
+.calc div{display:flex;justify-content:space-between;padding:3px 0;
+  border-bottom:1px solid var(--rule-soft)}
+.calc .k{color:var(--ink-dim)}
+.calc .v{font-variant-numeric:tabular-nums;font-weight:600}
+.calc .big{font-size:16px;color:var(--accent)}
+.calc .neg{color:var(--bad)}
+.verdict{margin-top:10px;font-size:12.5px;line-height:1.5;color:var(--ink-dim)}
+.verdict b{color:var(--bad)}
+.slipbtns{display:flex;gap:8px;margin-top:11px;flex-wrap:wrap}
+.slipbtns a,.slipbtns button{font:600 12.5px var(--display);padding:8px 14px;border-radius:2px;
+  border:1px solid var(--rule);background:none;color:var(--ink);cursor:pointer;text-decoration:none}
+.slipbtns .go{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+.dkurl{margin-top:9px;font-family:var(--mono);font-size:10.5px;color:var(--ink-dim);
+  word-break:break-all;line-height:1.4}
+#fab{position:fixed;right:18px;bottom:18px;z-index:19;font:700 13px var(--display);
+  background:var(--ink);color:var(--ground);border:0;border-radius:999px;
+  padding:11px 18px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.22)}
+#fab[hidden]{display:none}
 @media (max-width:600px){.wrap{padding:0 13px 56px}td,th{padding-left:7px;padding-right:7px}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 </style>
@@ -117,6 +154,27 @@ aside .fig{font-family:var(--mono);color:var(--accent);font-weight:600}
 </header>
 <nav id="tabs" role="tablist"></nav>
 <div class="scroll"><div id="panel" role="tabpanel"></div></div>
+<button id="fab" hidden></button>
+<div id="slip" hidden>
+  <div class="slipwrap">
+    <div>
+      <div class="sliphead"><h2>Your slip</h2>
+        <button id="clear" style="background:none;border:0;color:var(--ink-dim);cursor:pointer;font-size:12.5px">clear all</button>
+      </div>
+      <ul class="legs" id="legs"></ul>
+      <div class="slipbtns">
+        <a class="go" id="dk" href="#" target="_blank" rel="noopener">Open in DraftKings</a>
+        <button id="copy">Copy slip</button>
+        <button id="hide">Hide</button>
+      </div>
+      <div class="dkurl" id="dkurl"></div>
+    </div>
+    <div>
+      <div class="calc" id="calc"></div>
+      <div class="verdict" id="verdict"></div>
+    </div>
+  </div>
+</div>
 <aside>
   <h2>One line per game &mdash; the side I have winning</h2>
   <p>Every row is a single call. The opponent is not listed because it is not the point:
@@ -137,9 +195,10 @@ aside .fig{font-family:var(--mono);color:var(--accent);font-weight:600}
 </aside>
 </div>
 <script>
-const D = {"at":"Aug 30, 9:43 PM ET","dates":{"today":"20260830","tomorrow":"20260831"},"slots":{"today":{"mlb":{"label":"MLB","rows":[]},"wnba":{"label":"WNBA","rows":[]},"nfl":{"label":"NFL","rows":[]},"ncaaf":{"label":"NCAA FB","rows":[]},"nba":{"label":"NBA","rows":[]},"nhl":{"label":"NHL","rows":[]},"atp":{"label":"Tennis (M)","rows":[]},"wta":{"label":"Tennis (W)","rows":[{"mp":"Sofia Kenin","t":"10:00 PM","mc":75.0,"why":"rank 110 vs NR","p":null,"d":false}]},"pga":{"label":"PGA","rows":[]},"epl":{"label":"Premier Lg","rows":[]},"mls":{"label":"MLS","rows":[]},"ufc":{"label":"UFC","rows":[]}},"tomorrow":{"mlb":{"label":"MLB","rows":[{"mp":"Boston Red Sox","t":"6:45 PM","mc":66.4,"why":"Tolle 3.09 ERA/3.20 FIP vs Kirby 4.02 \u00b7 pen 3.10 v 4.42 \u00b7 L10 6-4 v 4-6","p":"-167","d":false},{"mp":"Atlanta Braves","t":"6:05 PM","mc":61.9,"why":"Elder 3.95 ERA/4.46 FIP vs Molina 2.89 \u00b7 pen 3.39 v 4.27 \u00b7 L10 8-2 v 4-6","p":"-155","d":false},{"mp":"Tampa Bay Rays","t":"6:40 PM","mc":59.7,"why":"Seymour 4.21 ERA/4.01 FIP vs Stock 7.40 \u00b7 pen 4.06 v 3.70 \u00b7 L10 6-4 v 4-6","p":"-172","d":false},{"mp":"San Diego Padres","t":"6:40 PM","mc":58.9,"why":"King 3.23 ERA/4.20 FIP vs Singer 4.72 \u00b7 pen 3.49 v 4.71","p":"-148","d":false},{"mp":"Washington Nationals","t":"6:45 PM","mc":57.1,"why":"Dion 3.67 ERA/3.84 FIP vs Gusto 3.98 \u00b7 pen 4.94 v 3.95 \u00b7 L10 4-6 v 5-5","p":"+100","d":true},{"mp":"Texas Rangers","t":"8:05 PM","mc":55.8,"why":"deGrom 4.21 ERA/3.19 FIP vs Jump 4.69 \u00b7 pen 4.38 v 5.57 \u00b7 L10 5-5 v 4-6","p":"-231","d":false},{"mp":"Arizona Diamondbacks","t":"9:40 PM","mc":54.7,"why":"TBD vs Nola \u00b7 L10 6-4 v 8-2","p":"+104","d":true},{"mp":"Minnesota Twins","t":"7:40 PM","mc":52.6,"why":"Bradley 3.97 ERA/3.90 FIP vs Jobe 3.93 \u00b7 pen 4.86 v 3.82 \u00b7 L10 3-7 v 2-8","p":"-135","d":false},{"mp":"Chicago Cubs","t":"7:40 PM","mc":52.3,"why":"Holmes 2.26 ERA/3.35 FIP vs Harrison 2.79 \u00b7 pen 3.92 v 3.25 \u00b7 L10 4-6 v 7-3","p":"-114","d":false},{"mp":"New York Yankees","t":"9:38 PM","mc":52.1,"why":"Rodr\u00edguez 4.70 ERA/4.91 FIP vs Ure\u00f1a 2.94 \u00b7 pen 3.04 v 4.32 \u00b7 L10 6-4 v 2-8","p":"-143","d":false},{"mp":"Houston Astros","t":"8:10 PM","mc":51.9,"why":"Lambert 3.66 ERA/3.86 FIP vs Kay 4.09 \u00b7 L10 5-5 v 6-4","p":"-130","d":false},{"mp":"Baltimore Orioles","t":"8:40 PM","mc":51.3,"why":"TBD vs Gordon \u00b7 pen 3.94 v 4.76 \u00b7 L10 7-3 v 2-8","p":"-143","d":false}]},"wnba":{"label":"WNBA","rows":[]},"nfl":{"label":"NFL","rows":[]},"ncaaf":{"label":"NCAA FB","rows":[]},"nba":{"label":"NBA","rows":[]},"nhl":{"label":"NHL","rows":[]},"atp":{"label":"Tennis (M)","rows":[{"mp":"Luciano Darderi","t":"2:00 PM","mc":88.0,"why":"rank 22 vs NR","p":null,"d":false},{"mp":"Carlos Alcaraz","t":"1:00 PM","mc":87.4,"why":"rank 3 vs 99","p":null,"d":false},{"mp":"Raphael Collignon","t":"1:00 PM","mc":82.1,"why":"rank 38 vs NR","p":null,"d":false},{"mp":"Felix Auger-Aliassime","t":"5:00 PM","mc":81.5,"why":"rank 4 vs 85","p":null,"d":false},{"mp":"Alex Michelsen","t":"12:30 PM","mc":80.6,"why":"rank 46 vs NR","p":null,"d":false},{"mp":"Jakub Mensik","t":"4:00 PM","mc":77.2,"why":"rank 18 vs 117","p":null,"d":false},{"mp":"Marco Trungelliti","t":"3:30 PM","mc":75.4,"why":"rank 83 vs NR","p":null,"d":false},{"mp":"Frances Tiafoe","t":"8:30 PM","mc":74.6,"why":"rank 12 vs 90","p":null,"d":false},{"mp":"Aleksandar Vukic","t":"1:00 PM","mc":73.9,"why":"rank 96 vs NR","p":null,"d":false},{"mp":"Andrey Rublev","t":"11:00 AM","mc":73.7,"why":"rank 24 vs 109","p":null,"d":false},{"mp":"Ben Shelton","t":"7:00 PM","mc":73.5,"why":"rank 9 vs 56","p":null,"d":false},{"mp":"Alexander Blockx","t":"4:30 PM","mc":73.3,"why":"rank 34 vs 144","p":null,"d":false},{"mp":"Arthur Fils","t":"11:00 AM","mc":71.2,"why":"rank 11 vs 53","p":null,"d":false},{"mp":"Valentin Vacherot","t":"11:00 AM","mc":70.5,"why":"rank 23 vs 84","p":null,"d":false},{"mp":"Brandon Nakashima","t":"2:30 PM","mc":66.7,"why":"rank 17 vs 51","p":null,"d":false},{"mp":"Matteo Berrettini","t":"3:30 PM","mc":66.0,"why":"rank 43 vs 127","p":null,"d":false},{"mp":"Learner Tien","t":"4:30 PM","mc":65.8,"why":"rank 15 vs 41","p":null,"d":false},{"mp":"Valentin Royer","t":"2:00 PM","mc":61.0,"why":"rank 75 vs 134","p":null,"d":false},{"mp":"Hubert Hurkacz","t":"2:30 PM","mc":61.0,"why":"rank 47 vs 104","p":null,"d":false},{"mp":"Alejandro Tabilo","t":"4:30 PM","mc":60.5,"why":"rank 28 vs 54","p":null,"d":false},{"mp":"Matteo Arnaldi","t":"1:00 PM","mc":59.1,"why":"rank 36 vs 71","p":null,"d":false},{"mp":"Giovanni Mpetshi Perricard","t":"2:30 PM","mc":58.3,"why":"rank 105 vs 143","p":null,"d":false},{"mp":"Martin Landaluce","t":"12:30 PM","mc":57.8,"why":"rank 65 vs 101","p":null,"d":false},{"mp":"Quentin Halys","t":"5:30 PM","mc":56.8,"why":"rank 52 vs 82","p":null,"d":false},{"mp":"Thiago Agustin Tirante","t":"12:30 PM","mc":54.6,"why":"rank 42 vs 67","p":null,"d":false},{"mp":"Karen Khachanov","t":"4:00 PM","mc":51.8,"why":"rank 50 vs 59","p":null,"d":false},{"mp":"Alexei Popyrin","t":"3:30 PM","mc":51.2,"why":"rank 130 vs 137","p":null,"d":false}]},"wta":{"label":"Tennis (W)","rows":[{"mp":"Emma Navarro","t":"12:30 PM","mc":85.9,"why":"rank 27 vs NR","p":null,"d":false},{"mp":"Aryna Sabalenka","t":"11:30 AM","mc":84.6,"why":"rank 1 vs 59","p":null,"d":false},{"mp":"Clara Tauson","t":"2:00 PM","mc":82.8,"why":"rank 38 vs NR","p":null,"d":false},{"mp":"Karolina Muchova","t":"11:00 AM","mc":80.3,"why":"rank 7 vs 90","p":null,"d":false},{"mp":"Catherine McNally","t":"3:00 PM","mc":79.6,"why":"rank 65 vs NR","p":null,"d":false},{"mp":"Linda Noskova","t":"2:30 PM","mc":79.3,"why":"rank 6 vs 78","p":null,"d":false},{"mp":"Iga Swiatek","t":"7:00 PM","mc":79.0,"why":"rank 8 vs 80","p":null,"d":false},{"mp":"Simona Waltert","t":"2:00 PM","mc":77.8,"why":"rank 89 vs NR","p":null,"d":false},{"mp":"Oksana Selekhmeteva","t":"12:30 PM","mc":77.2,"why":"rank 93 vs NR","p":null,"d":false},{"mp":"Amanda Anisimova","t":"1:00 PM","mc":76.9,"why":"rank 10 vs 60","p":null,"d":false},{"mp":"Naomi Osaka","t":"9:00 PM","mc":74.2,"why":"rank 13 vs 101","p":null,"d":false},{"mp":"Sorana Cirstea","t":"3:00 PM","mc":72.2,"why":"rank 17 vs 112","p":null,"d":false},{"mp":"Marie Bouzkova","t":"11:00 AM","mc":68.4,"why":"rank 26 vs 114","p":null,"d":false},{"mp":"Maja Chwalinska","t":"2:00 PM","mc":68.2,"why":"rank 22 vs 96","p":null,"d":false},{"mp":"Anna Kalinskaya","t":"12:30 PM","mc":67.2,"why":"rank 23 vs 95","p":null,"d":false},{"mp":"Anhelina Kalinina","t":"11:00 AM","mc":64.6,"why":"rank 51 vs 144","p":null,"d":false},{"mp":"Diana Shnaider","t":"3:00 PM","mc":64.3,"why":"rank 16 vs 45","p":null,"d":false},{"mp":"Ann Li","t":"2:00 PM","mc":62.4,"why":"rank 28 vs 85","p":null,"d":false},{"mp":"Peyton Stearns","t":"11:00 AM","mc":62.0,"why":"rank 55 vs 131","p":null,"d":false},{"mp":"Maria Timofeeva","t":"1:00 PM","mc":60.6,"why":"rank 86 vs 146","p":null,"d":false},{"mp":"Diane Parry","t":"3:00 PM","mc":58.4,"why":"rank 31 vs 56","p":null,"d":false},{"mp":"Sara Bejlek","t":"11:00 AM","mc":55.2,"why":"rank 30 vs 40","p":null,"d":false},{"mp":"Katerina Siniakova","t":"6:30 PM","mc":54.5,"why":"rank 42 vs 67","p":null,"d":false},{"mp":"Panna Udvardy","t":"11:00 AM","mc":54.0,"why":"rank 68 vs 94","p":null,"d":false},{"mp":"Liudmila Samsonova","t":"5:00 PM","mc":53.6,"why":"rank 47 vs 72","p":null,"d":false},{"mp":"Kimberly Birrell","t":"12:30 PM","mc":50.4,"why":"rank 71 vs 77","p":null,"d":false},{"mp":"Zheng Qinwen","t":"11:00 AM","mc":50.3,"why":"rank 121 vs 125","p":null,"d":false},{"mp":"Tamara Korpatsch","t":"11:00 AM","mc":50.1,"why":"rank 48 vs 49","p":null,"d":false}]},"pga":{"label":"PGA","rows":[]},"epl":{"label":"Premier Lg","rows":[{"mp":"Arsenal","t":"3:00 PM","mc":60.6,"why":"rating 1684 v 1559 (+125) \u00b7 last 10: 8-2","p":"-185","d":false}]},"mls":{"label":"MLS","rows":[]},"ufc":{"label":"UFC","rows":[]}}}};
+const D = {"at":"Aug 30, 10:08 PM ET","dates":{"today":"20260830","tomorrow":"20260831"},"slots":{"today":{"mlb":{"label":"MLB","rows":[]},"wnba":{"label":"WNBA","rows":[]},"nfl":{"label":"NFL","rows":[]},"ncaaf":{"label":"NCAA FB","rows":[]},"nba":{"label":"NBA","rows":[]},"nhl":{"label":"NHL","rows":[]},"atp":{"label":"Tennis (M)","rows":[]},"wta":{"label":"Tennis (W)","rows":[{"mp":"Sofia Kenin","t":"11:00 PM","mc":75.0,"why":"rank 110 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (W)"}]},"pga":{"label":"PGA","rows":[]},"epl":{"label":"Premier Lg","rows":[]},"mls":{"label":"MLS","rows":[]},"ufc":{"label":"UFC","rows":[]}},"tomorrow":{"mlb":{"label":"MLB","rows":[{"mp":"Boston Red Sox","t":"6:45 PM","mc":66.4,"why":"Tolle 3.09 ERA/3.20 FIP vs Kirby 4.02 \u00b7 pen 3.10 v 4.42 \u00b7 L10 6-4 v 4-6","p":"-167","d":false,"dk":"34594892:0ML86087270_1","lg":"MLB"},{"mp":"Atlanta Braves","t":"6:05 PM","mc":61.9,"why":"Elder 3.95 ERA/4.46 FIP vs Molina 2.89 \u00b7 pen 3.39 v 4.27 \u00b7 L10 8-2 v 4-6","p":"-155","d":false,"dk":"34594889:0ML86087267_1","lg":"MLB"},{"mp":"Tampa Bay Rays","t":"6:40 PM","mc":59.7,"why":"Seymour 4.21 ERA/4.01 FIP vs Stock 7.40 \u00b7 pen 4.06 v 3.70 \u00b7 L10 6-4 v 4-6","p":"-172","d":false,"dk":"34594891:0ML86087269_1","lg":"MLB"},{"mp":"San Diego Padres","t":"6:40 PM","mc":58.9,"why":"King 3.23 ERA/4.20 FIP vs Singer 4.72 \u00b7 pen 3.49 v 4.71","p":"-148","d":false,"dk":"34594890:0ML86087268_3","lg":"MLB"},{"mp":"Washington Nationals","t":"6:45 PM","mc":57.1,"why":"Dion 3.67 ERA/3.84 FIP vs Gusto 3.98 \u00b7 pen 4.94 v 3.95 \u00b7 L10 4-6 v 5-5","p":"+102","d":true,"dk":"34594893:0ML86087271_1","lg":"MLB"},{"mp":"Texas Rangers","t":"8:05 PM","mc":55.8,"why":"deGrom 4.21 ERA/3.19 FIP vs Jump 4.69 \u00b7 pen 4.38 v 5.57 \u00b7 L10 5-5 v 4-6","p":"-231","d":false,"dk":"34594897:0ML86087275_1","lg":"MLB"},{"mp":"Arizona Diamondbacks","t":"9:40 PM","mc":54.7,"why":"TBD vs Nola \u00b7 L10 6-4 v 8-2","p":"+104","d":true,"dk":"34594910:0ML86087312_1","lg":"MLB"},{"mp":"Minnesota Twins","t":"7:40 PM","mc":52.6,"why":"Bradley 3.97 ERA/3.90 FIP vs Jobe 3.93 \u00b7 pen 4.86 v 3.82 \u00b7 L10 3-7 v 2-8","p":"-135","d":false,"dk":"34594895:0ML86087273_1","lg":"MLB"},{"mp":"Chicago Cubs","t":"7:40 PM","mc":52.3,"why":"Holmes 2.26 ERA/3.35 FIP vs Harrison 2.79 \u00b7 pen 3.92 v 3.25 \u00b7 L10 4-6 v 7-3","p":"-114","d":false,"dk":"34594894:0ML86087272_1","lg":"MLB"},{"mp":"New York Yankees","t":"9:38 PM","mc":52.1,"why":"Rodr\u00edguez 4.70 ERA/4.91 FIP vs Ure\u00f1a 2.94 \u00b7 pen 3.04 v 4.32 \u00b7 L10 6-4 v 2-8","p":"-143","d":false,"dk":"34594908:0ML86087303_3","lg":"MLB"},{"mp":"Houston Astros","t":"8:10 PM","mc":51.9,"why":"Lambert 3.66 ERA/3.86 FIP vs Kay 4.09 \u00b7 L10 5-5 v 6-4","p":"-130","d":false,"dk":"34594901:0ML86087280_1","lg":"MLB"},{"mp":"Baltimore Orioles","t":"8:40 PM","mc":51.3,"why":"TBD vs Gordon \u00b7 pen 3.94 v 4.76 \u00b7 L10 7-3 v 2-8","p":"-143","d":false,"dk":"34594903:0ML86087282_3","lg":"MLB"}]},"wnba":{"label":"WNBA","rows":[]},"nfl":{"label":"NFL","rows":[]},"ncaaf":{"label":"NCAA FB","rows":[]},"nba":{"label":"NBA","rows":[]},"nhl":{"label":"NHL","rows":[]},"atp":{"label":"Tennis (M)","rows":[{"mp":"Luciano Darderi","t":"2:00 PM","mc":88.0,"why":"rank 22 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Carlos Alcaraz","t":"1:00 PM","mc":87.4,"why":"rank 3 vs 99","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Raphael Collignon","t":"1:00 PM","mc":82.1,"why":"rank 38 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Felix Auger-Aliassime","t":"5:00 PM","mc":81.5,"why":"rank 4 vs 85","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Alex Michelsen","t":"12:30 PM","mc":80.6,"why":"rank 46 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Jakub Mensik","t":"4:00 PM","mc":77.2,"why":"rank 18 vs 117","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Marco Trungelliti","t":"3:30 PM","mc":75.4,"why":"rank 83 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Frances Tiafoe","t":"8:30 PM","mc":74.6,"why":"rank 12 vs 90","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Aleksandar Vukic","t":"1:00 PM","mc":73.9,"why":"rank 96 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Andrey Rublev","t":"11:00 AM","mc":73.7,"why":"rank 24 vs 109","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Ben Shelton","t":"7:00 PM","mc":73.5,"why":"rank 9 vs 56","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Alexander Blockx","t":"4:30 PM","mc":73.3,"why":"rank 34 vs 144","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Arthur Fils","t":"11:00 AM","mc":71.2,"why":"rank 11 vs 53","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Valentin Vacherot","t":"11:00 AM","mc":70.5,"why":"rank 23 vs 84","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Brandon Nakashima","t":"2:30 PM","mc":66.7,"why":"rank 17 vs 51","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Matteo Berrettini","t":"3:30 PM","mc":66.0,"why":"rank 43 vs 127","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Learner Tien","t":"4:30 PM","mc":65.8,"why":"rank 15 vs 41","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Valentin Royer","t":"2:00 PM","mc":61.0,"why":"rank 75 vs 134","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Hubert Hurkacz","t":"2:30 PM","mc":61.0,"why":"rank 47 vs 104","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Alejandro Tabilo","t":"4:30 PM","mc":60.5,"why":"rank 28 vs 54","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Matteo Arnaldi","t":"1:00 PM","mc":59.1,"why":"rank 36 vs 71","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Giovanni Mpetshi Perricard","t":"2:30 PM","mc":58.3,"why":"rank 105 vs 143","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Martin Landaluce","t":"12:30 PM","mc":57.8,"why":"rank 65 vs 101","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Quentin Halys","t":"5:30 PM","mc":56.8,"why":"rank 52 vs 82","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Thiago Agustin Tirante","t":"12:30 PM","mc":54.6,"why":"rank 42 vs 67","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Karen Khachanov","t":"4:00 PM","mc":51.8,"why":"rank 50 vs 59","p":null,"d":false,"dk":null,"lg":"Tennis (M)"},{"mp":"Alexei Popyrin","t":"3:30 PM","mc":51.2,"why":"rank 130 vs 137","p":null,"d":false,"dk":null,"lg":"Tennis (M)"}]},"wta":{"label":"Tennis (W)","rows":[{"mp":"Emma Navarro","t":"12:30 PM","mc":85.9,"why":"rank 27 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Aryna Sabalenka","t":"11:30 AM","mc":84.6,"why":"rank 1 vs 59","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Clara Tauson","t":"2:00 PM","mc":82.8,"why":"rank 38 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Karolina Muchova","t":"11:00 AM","mc":80.3,"why":"rank 7 vs 90","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Catherine McNally","t":"3:00 PM","mc":79.6,"why":"rank 65 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Linda Noskova","t":"2:30 PM","mc":79.3,"why":"rank 6 vs 78","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Iga Swiatek","t":"7:00 PM","mc":79.0,"why":"rank 8 vs 80","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Simona Waltert","t":"2:00 PM","mc":77.8,"why":"rank 89 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Oksana Selekhmeteva","t":"12:30 PM","mc":77.2,"why":"rank 93 vs NR","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Amanda Anisimova","t":"1:00 PM","mc":76.9,"why":"rank 10 vs 60","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Naomi Osaka","t":"9:00 PM","mc":74.2,"why":"rank 13 vs 101","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Sorana Cirstea","t":"3:00 PM","mc":72.2,"why":"rank 17 vs 112","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Marie Bouzkova","t":"11:00 AM","mc":68.4,"why":"rank 26 vs 114","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Maja Chwalinska","t":"2:00 PM","mc":68.2,"why":"rank 22 vs 96","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Anna Kalinskaya","t":"12:30 PM","mc":67.2,"why":"rank 23 vs 95","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Anhelina Kalinina","t":"11:00 AM","mc":64.6,"why":"rank 51 vs 144","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Diana Shnaider","t":"3:00 PM","mc":64.3,"why":"rank 16 vs 45","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Ann Li","t":"2:00 PM","mc":62.4,"why":"rank 28 vs 85","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Peyton Stearns","t":"11:00 AM","mc":62.0,"why":"rank 55 vs 131","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Maria Timofeeva","t":"1:00 PM","mc":60.6,"why":"rank 86 vs 146","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Diane Parry","t":"3:00 PM","mc":58.4,"why":"rank 31 vs 56","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Sara Bejlek","t":"11:00 AM","mc":55.2,"why":"rank 30 vs 40","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Katerina Siniakova","t":"6:30 PM","mc":54.5,"why":"rank 42 vs 67","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Panna Udvardy","t":"11:00 AM","mc":54.0,"why":"rank 68 vs 94","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Liudmila Samsonova","t":"5:00 PM","mc":53.6,"why":"rank 47 vs 72","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Kimberly Birrell","t":"12:30 PM","mc":50.4,"why":"rank 71 vs 77","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Zheng Qinwen","t":"11:00 AM","mc":50.3,"why":"rank 121 vs 125","p":null,"d":false,"dk":null,"lg":"Tennis (W)"},{"mp":"Tamara Korpatsch","t":"11:00 AM","mc":50.1,"why":"rank 48 vs 49","p":null,"d":false,"dk":null,"lg":"Tennis (W)"}]},"pga":{"label":"PGA","rows":[]},"epl":{"label":"Premier Lg","rows":[{"mp":"Arsenal","t":"3:00 PM","mc":60.6,"why":"rating 1684 v 1559 (+125) \u00b7 last 10: 8-2","p":"-185","d":false,"dk":"34569931:0ML86012768_3","lg":"Premier Lg"}]},"mls":{"label":"MLS","rows":[]},"ufc":{"label":"UFC","rows":[]}}}};
 const order = ["mlb","wnba","nfl","ncaaf","nba","nhl","atp","wta","pga","epl","mls","ufc"];
 let slot = "today", league = null;
+const SLIP = [];   // declared before render() reads it
 document.getElementById("stamp").textContent = "Researched " + D.at;
 const tabs = document.getElementById("tabs"), panel = document.getElementById("panel"),
       days = document.getElementById("days"), bias = document.getElementById("bias");
@@ -188,7 +247,10 @@ function render(){
         const price = r.p
           ? '<td class="mkt"><span class="' + (r.d ? "fade" : "agree") + '">' + r.p + '</span></td>'
           : '<td class="mkt none">no line</td>';
-        return '<tr><td class="mine"><span class="stripe"></span>' + esc(r.mp) + dog + '</td>'
+        const id = league + "|" + r.mp;
+        const on = SLIP.some(x => x.id === id) ? " class=\"on\"" : "";
+        return '<tr data-pick="' + esc(id) + '"' + on + '><td class="mine">'
+             + '<span class="stripe"></span>' + esc(r.mp) + dog + '</td>'
              + '<td class="state">' + esc(r.t) + '</td>' + conf
              + '<td class="why">' + esc(r.why) + '</td>' + price + '</tr>';
       }).join("")
@@ -206,5 +268,101 @@ function render(){
   };
   days.appendChild(b);
 });
-buildTabs(); render();
+// ---------------------------------------------------------------- bet slip
+const dec = a => { const v = parseInt(String(a).replace("+",""),10);
+  return v > 0 ? 1 + v/100 : 1 + 100/Math.abs(v); };
+const amer = d => d >= 2 ? "+" + Math.round((d-1)*100) : "-" + Math.round(100/(d-1));
+
+function rowFor(id){
+  const [lg, name] = id.split("|");
+  const r = (D.slots[slot][lg] || D.slots.today[lg] || D.slots.tomorrow[lg] || {rows:[]})
+              .rows.find(x => x.mp === name);
+  return r ? Object.assign({id, lg}, r) : null;
+}
+function toggle(id){
+  const i = SLIP.findIndex(x => x.id === id);
+  if(i >= 0) SLIP.splice(i,1);
+  else { const r = rowFor(id); if(r) SLIP.push(r); }
+  render(); drawSlip();
+}
+function drawSlip(){
+  const slip = document.getElementById("slip"), fab = document.getElementById("fab");
+  if(!SLIP.length){ slip.hidden = true; fab.hidden = true; return; }
+  fab.hidden = false;
+  fab.textContent = SLIP.length + " leg" + (SLIP.length>1?"s":"") + " · view slip";
+  document.getElementById("legs").innerHTML = SLIP.map(r =>
+    '<li><span>' + esc(r.mp) + '</span><span><span class="px">'
+    + (r.p || "no line") + '</span><button data-x="' + esc(r.id) + '">&times;</button></span></li>'
+  ).join("");
+
+  const priced = SLIP.filter(r => r.p);
+  const combined = priced.reduce((a,r) => a * dec(r.p), 1);
+  const mine = SLIP.reduce((a,r) => a * ((r.mc || 50)/100), 1);
+  const implied = priced.length ? 1/combined : null;
+  const ev = (implied !== null && priced.length === SLIP.length) ? mine*combined - 1 : null;
+  const rows = [];
+  rows.push(['legs', String(SLIP.length)]);
+  if(priced.length === SLIP.length && priced.length){
+    rows.push(['parlay price', amer(combined)]);
+    rows.push(['$5 returns', '$' + (5*combined).toFixed(2)]);
+    rows.push(['book implies', (implied*100).toFixed(2) + '%']);
+  } else if(priced.length){
+    rows.push(['priced legs', priced.length + ' of ' + SLIP.length]);
+  }
+  rows.push(['my probability', (mine*100).toFixed(2) + '%']);
+  document.getElementById("calc").innerHTML = rows.map(([k,v],i) =>
+    '<div><span class="k">' + k + '</span><span class="v' +
+    (i===rows.length-1?' big':'') + '">' + v + '</span></div>').join("")
+    + (ev !== null ? '<div><span class="k">expected value</span><span class="v '
+       + (ev<0?'neg':'') + '">' + (ev*100).toFixed(1) + '%</span></div>' : "");
+
+  const v = [];
+  if(priced.length === SLIP.length && priced.length){
+    v.push('At these prices you need every leg. My numbers put this at <b>'
+      + (mine*100).toFixed(2) + '%</b> against a book price implying '
+      + (implied*100).toFixed(2) + '%.');
+    if(ev !== null && ev < 0)
+      v.push('That is <b>' + (ev*100).toFixed(1) + '% expected value</b> — each added leg multiplies the margin, not the edge.');
+  }
+  const chalk = SLIP.filter(r => r.p && parseInt(r.p,10) <= -130 && parseInt(r.p,10) > -200).length;
+  if(chalk >= 2)
+    v.push('<b>' + chalk + ' legs sit between −130 and −200</b>, the band that returned −7.4% to −7.8% across 4,090 measured sides.');
+  if(SLIP.length >= 4)
+    v.push('Four-plus legs has never been the winning structure here: 9 of 12 and 11 of 12 both paid zero.');
+  document.getElementById("verdict").innerHTML = v.join(" ");
+
+  const dks = SLIP.filter(r => r.dk).map(r => r.dk.split(":")[1]);
+  const dk = document.getElementById("dk"), url = document.getElementById("dkurl");
+  if(dks.length){
+    const first = SLIP.find(r => r.dk).dk.split(":")[0];
+    const href = "https://sportsbook.draftkings.com/event/" + first
+               + "?outcomes=" + dks.join(",");
+    dk.href = href; dk.style.opacity = 1;
+    url.textContent = dks.length < SLIP.length
+      ? dks.length + " of " + SLIP.length + " legs have a DraftKings id; the rest have no posted line. " + href
+      : href;
+  } else {
+    dk.href = "#"; dk.style.opacity = .4;
+    url.textContent = "No DraftKings ids on these legs — no book has posted them yet.";
+  }
+  slip.hidden = false;
+}
+document.addEventListener("click", e => {
+  const x = e.target.closest("[data-x]");
+  if(x){ toggle(x.dataset.x); return; }
+  const tr = e.target.closest("tr[data-pick]");
+  if(tr){ toggle(tr.dataset.pick); return; }
+});
+document.getElementById("fab").onclick = () => { document.getElementById("slip").hidden = false; };
+document.getElementById("hide").onclick = () => { document.getElementById("slip").hidden = true; };
+document.getElementById("clear").onclick = () => { SLIP.length = 0; render(); drawSlip(); };
+document.getElementById("copy").onclick = () => {
+  const txt = SLIP.map(r => r.mp + (r.p ? " (" + r.p + ")" : "")).join("\n");
+  navigator.clipboard && navigator.clipboard.writeText(txt);
+  const b = document.getElementById("copy"); const old = b.textContent;
+  b.textContent = "Copied"; setTimeout(() => b.textContent = old, 1200);
+};
+
+buildTabs(); render(); drawSlip();
+
 </script>

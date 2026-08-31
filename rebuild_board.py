@@ -45,7 +45,9 @@ def snapshot():
                              "mc": round(r["myconf"] * 100, 1) if r["myconf"] else None,
                              "why": r["why"],
                              "p": leg["price"] if leg else None,
-                             "d": bool(leg["dog"]) if leg else False})
+                             "d": bool(leg["dog"]) if leg else False,
+                             "dk": (leg or {}).get("dk"),
+                             "lg": lab})
             # strongest calls first; anything unrated sinks to the bottom
             rows.sort(key=lambda x: (x["mc"] is None, -(x["mc"] or 0)))
             lg[k] = {"label": lab, "rows": rows}

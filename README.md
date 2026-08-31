@@ -695,3 +695,32 @@ also the ones most likely to be my error: over 655 MLB games the market called
 
 Coverage on 2026-08-31: **109 of 109 upcoming games carry a model pick**, against
 13 that had a posted price.
+
+## Slip builder (2026-08-31)
+
+Tap any pick to add it to a slip. The slip prices the parlay live and hands off
+to the sportsbook.
+
+**The handoff is real, not a mock.** ESPN's odds feed carries DraftKings
+bet-slip deep links per outcome, wrapped in a tracking gateway whose `preurl`
+holds the actual sportsbook URL. `deep_links()` unwraps it and extracts the
+outcome id; the slip joins them into
+`sportsbook.draftkings.com/event/{id}?outcomes=a,b,c`. All 24 sides of the
+2026-08-31 MLB slate resolved. The full URL is also printed as copyable text,
+since a sandboxed page cannot guarantee an outbound navigation succeeds.
+
+**What the analysis shows** — combined parlay price, what $5 returns, the
+probability the book's price implies, my model's own probability (product of
+per-leg confidences), and the resulting expected value. Plus two warnings drawn
+from measurements in this repo rather than intuition:
+
+- two or more legs priced −130 to −200 flags the band that returned −7.4% to
+  −7.8% across 4,090 settled sides;
+- four or more legs flags the structure that produced 9-of-12 and 11-of-12
+  tickets which both paid zero.
+
+A bug worth recording: `render()` reads `SLIP`, but the initial paint ran before
+`const SLIP` was declared — a temporal-dead-zone ReferenceError that blanks the
+page on load. Caught by executing the script against a stub DOM before
+publishing rather than by eye. `SLIP` is now declared alongside `D`, and the
+first paint is the last statement in the file.
