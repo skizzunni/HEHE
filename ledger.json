@@ -94,24 +94,30 @@
   "conf": 56.8,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Facundo Diaz Acosta": "4 5 6",
-   "Quentin Halys": "6 7 6"
-  },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
   "matchup": "Facundo Diaz Acosta @ Quentin Halys",
   "pick": "Quentin Halys",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Facundo Diaz Acosta": "4 5 7(9) 1",
+   "Quentin Halys": "6 7 6(7) 6"
+  },
+  "settled": "2026-08-31T22:27",
+  "status": "won",
   "tip": "6:30 PM",
-  "why": "rank 52 vs 82"
+  "why": "rank 52 vs 82",
+  "winner": "Quentin Halys"
  },
  "atp:182668": {
   "conf": 51.2,
   "dog": false,
   "league": "atp",
+  "live": "4th",
+  "live_score": {
+   "Alexei Popyrin": "3 6 6 4",
+   "Grigor Dimitrov": "6 3 2 1"
+  },
   "logged": "2026-08-31T19:18",
   "market_agrees": null,
   "matchup": "Alexei Popyrin @ Grigor Dimitrov",
@@ -203,19 +209,20 @@
   "conf": 73.5,
   "dog": false,
   "league": "atp",
-  "live": "4th",
-  "live_score": {
-   "Ben Shelton": "1 6 7(7) 4",
-   "Tallon Griekspoor": "6 1 6(3) 0"
-  },
   "logged": "2026-08-31T19:18",
   "market_agrees": null,
   "matchup": "Tallon Griekspoor @ Ben Shelton",
   "pick": "Ben Shelton",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Ben Shelton": "1 6 7(7) 6",
+   "Tallon Griekspoor": "6 1 6(3) 2"
+  },
+  "settled": "2026-08-31T22:27",
+  "status": "won",
   "tip": "7:15 PM",
-  "why": "rank 9 vs 56"
+  "why": "rank 9 vs 56",
+  "winner": "Ben Shelton"
  },
  "atp:182679": {
   "conf": 61.0,
@@ -318,6 +325,11 @@
   "conf": 81.5,
   "dog": false,
   "league": "atp",
+  "live": "3rd",
+  "live_score": {
+   "Felix Auger-Aliassime": "7 4 5",
+   "Rinky Hijikata": "5 6 2"
+  },
   "logged": "2026-08-31T18:17",
   "market_agrees": null,
   "matchup": "Rinky Hijikata @ Felix Auger-Aliassime",
@@ -616,19 +628,20 @@
   "conf": 77.2,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Jakub Mensik": "6 6 2",
-   "Shintaro Mochizuki": "1 4 1"
-  },
   "logged": "2026-08-31T19:18",
   "market_agrees": null,
   "matchup": "Shintaro Mochizuki @ Jakub Mensik",
   "pick": "Jakub Mensik",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Jakub Mensik": "6 6 7",
+   "Shintaro Mochizuki": "1 4 5"
+  },
+  "settled": "2026-08-31T22:27",
+  "status": "won",
   "tip": "7:25 PM",
-  "why": "rank 18 vs 117"
+  "why": "rank 18 vs 117",
+  "winner": "Jakub Mensik"
  },
  "atp:182754": {
   "conf": 75.4,
@@ -639,9 +652,15 @@
   "matchup": "Marco Trungelliti @ Shang Juncheng",
   "pick": "Marco Trungelliti",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Marco Trungelliti": "0 7(7) 1 6 6",
+   "Shang Juncheng": "6 6(5) 6 3 4"
+  },
+  "settled": "2026-08-31T22:27",
+  "status": "won",
   "tip": "5:30 PM",
-  "why": "rank 83 vs NR"
+  "why": "rank 83 vs NR",
+  "winner": "Marco Trungelliti"
  },
  "atp:182760": {
   "conf": 70.5,
@@ -666,10 +685,10 @@
   "conf": 79.8,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "3rd",
   "live_score": {
-   "Frances Tiafoe": "5",
-   "Martin Damm": "4"
+   "Frances Tiafoe": "6 4 0",
+   "Martin Damm": "4 6 0"
   },
   "logged": "2026-08-31T20:56",
   "market_agrees": null,
@@ -839,28 +858,29 @@
   "conf": 66.4,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 10th",
-  "live_score": {
-   "Boston Red Sox": 8,
-   "Seattle Mariners": 8
-  },
   "logged": "2026-08-31T18:17",
   "market_agrees": true,
   "matchup": "SEA @ BOS",
   "pick": "Boston Red Sox",
   "price": "-148",
-  "status": "open",
+  "scores": {
+   "Boston Red Sox": 9,
+   "Seattle Mariners": 8
+  },
+  "settled": "2026-08-31T22:27",
+  "status": "won",
   "tip": "6:45 PM",
-  "why": "Tolle 3.09 ERA/3.20 FIP vs Kirby 4.02 \u00b7 pen 3.10 v 4.42 \u00b7 L10 6-4 v 4-6"
+  "why": "Tolle 3.09 ERA/3.20 FIP vs Kirby 4.02 \u00b7 pen 3.10 v 4.42 \u00b7 L10 6-4 v 4-6",
+  "winner": "Boston Red Sox"
  },
  "mlb:401816751": {
   "conf": 55.8,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 6th",
+  "live": "Top 9th",
   "live_score": {
    "Athletics": 0,
-   "Texas Rangers": 7
+   "Texas Rangers": 8
   },
   "logged": "2026-08-31T19:18",
   "market_agrees": true,
@@ -875,10 +895,10 @@
   "conf": 51.9,
   "dog": false,
   "league": "mlb",
-  "live": "Top 5th",
+  "live": "Bot 6th",
   "live_score": {
    "Chicago White Sox": 2,
-   "Houston Astros": 3
+   "Houston Astros": 6
   },
   "logged": "2026-08-31T19:18",
   "market_agrees": true,
@@ -893,45 +913,47 @@
   "conf": 52.7,
   "dog": false,
   "league": "mlb",
-  "live": "End 7th",
-  "live_score": {
-   "Detroit Tigers": 1,
-   "Minnesota Twins": 9
-  },
   "logged": "2026-08-31T19:18",
   "market_agrees": true,
   "matchup": "DET @ MIN",
   "pick": "Minnesota Twins",
   "price": "-124",
-  "status": "open",
+  "scores": {
+   "Detroit Tigers": 1,
+   "Minnesota Twins": 11
+  },
+  "settled": "2026-08-31T22:27",
+  "status": "won",
   "tip": "7:40 PM",
-  "why": "Bradley 3.97 ERA/3.90 FIP vs Jobe 3.93 \u00b7 pen 4.86 v 3.82 \u00b7 L10 3-7 v 2-8"
+  "why": "Bradley 3.97 ERA/3.90 FIP vs Jobe 3.93 \u00b7 pen 4.86 v 3.82 \u00b7 L10 3-7 v 2-8",
+  "winner": "Minnesota Twins"
  },
  "mlb:401816754": {
   "conf": 52.3,
   "dog": false,
   "league": "mlb",
-  "live": "Top 7th",
-  "live_score": {
-   "Chicago Cubs": 9,
-   "Milwaukee Brewers": 0
-  },
   "logged": "2026-08-31T19:18",
   "market_agrees": true,
   "matchup": "MIL @ CHC",
   "pick": "Chicago Cubs",
   "price": "-105",
-  "status": "open",
+  "scores": {
+   "Chicago Cubs": 17,
+   "Milwaukee Brewers": 3
+  },
+  "settled": "2026-08-31T22:27",
+  "status": "won",
   "tip": "7:40 PM",
-  "why": "Holmes 2.26 ERA/3.35 FIP vs Harrison 2.79 \u00b7 pen 3.90 v 3.25 \u00b7 L10 3-7 v 7-3"
+  "why": "Holmes 2.26 ERA/3.35 FIP vs Harrison 2.79 \u00b7 pen 3.90 v 3.25 \u00b7 L10 3-7 v 7-3",
+  "winner": "Chicago Cubs"
  },
  "mlb:401816755": {
   "conf": 50.7,
   "dog": false,
   "league": "mlb",
-  "live": "End 4th",
+  "live": "Rain Delay, Top 6th",
   "live_score": {
-   "Baltimore Orioles": 0,
+   "Baltimore Orioles": 1,
    "Colorado Rockies": 1
   },
   "logged": "2026-08-31T20:19",
@@ -947,9 +969,9 @@
   "conf": 52.1,
   "dog": false,
   "league": "mlb",
-  "live": "Top 1st",
+  "live": "Bot 3rd",
   "live_score": {
-   "Los Angeles Angels": 0,
+   "Los Angeles Angels": 1,
    "New York Yankees": 0
   },
   "logged": "2026-08-31T21:17",
@@ -965,10 +987,10 @@
   "conf": 57.5,
   "dog": false,
   "league": "mlb",
-  "live": "Top 1st",
+  "live": "Mid 3rd",
   "live_score": {
    "Arizona Diamondbacks": 0,
-   "Philadelphia Phillies": 0
+   "Philadelphia Phillies": 2
   },
   "logged": "2026-08-31T21:17",
   "market_agrees": true,
@@ -1483,6 +1505,11 @@
   "conf": 79.4,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Anastasia Zakharova": "0",
+   "Naomi Osaka": "1"
+  },
   "logged": "2026-08-31T21:17",
   "market_agrees": null,
   "matchup": "Anastasia Zakharova @ Naomi Osaka",

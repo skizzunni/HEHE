@@ -5,6 +5,11 @@
 Every league gets a real forecast rather than an echo of the price:
 
   MLB      starter ERA/FIP (regressed) .65 + bullpen ERA .30 + team run rates .05
+           58.6% on 780 held-out Jul-Aug games, Brier 0.2443, walk-forward with
+           bullpen ERA rebuilt point-in-time. Beats model_v3.py's 0.55/0.45
+           (57.4%, 0.2448) on the same games. Grid-fitting these weights on the
+           training half produced 0.75/0.05/0.20, which scored WORSE out of
+           sample (57.1%) -- the hand-set weights are not improved by tuning.
   team     margin-of-victory Elo or point-differential power ratings, whichever
   sports   won that league's own held-out backtest (see anysport.TUNED)
   tennis   ranking points, p = 1/(1+exp(-(ln ptsA - ln ptsB)*scale)),

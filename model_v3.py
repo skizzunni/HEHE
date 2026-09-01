@@ -43,6 +43,10 @@ from collections import defaultdict
 API = "https://statsapi.mlb.com/api/v1"
 
 # --- fitted on 2026 games through Jun 30, scored on Jul 1 - Aug 29 ---
+# NOTE: the live board does not use these weights. picks.py runs
+# 0.65 starter / 0.30 bullpen / 0.05 team, which scores 58.6% against this
+# file's 57.4% on the same 780 held-out games. This file remains the reference
+# implementation and the source of the walk-forward harness.
 SP_WEIGHT = 0.55     # starter's share of a team's run prevention
 SP_REGRESS = 70.0    # innings of league-average prior on a starter's ERA
 HOME_ODDS_RATIO = 1.10

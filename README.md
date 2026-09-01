@@ -867,3 +867,34 @@ prices, and the confidence interval says so directly.
 
 Recorded here because the temptation is to keep the flattering window. The
 honest read remains the longer one.
+
+## Two MLB models, and the wrong one was being quoted
+
+`model_v3.py` is the file with the validated backtest, and every MLB accuracy
+figure in this repo and on the site came from it: 0.55 starter / 0.45 team run
+rates, no bullpen, 57.5%.
+
+The board does not use it. `picks.py` runs 0.65 starter / 0.30 bullpen / 0.05
+team, and had never been backtested. Every MLB pick shown has come from that
+formula while a number belonging to a different one was displayed beside it.
+
+Run head to head, walk-forward over 780 held-out Jul-Aug games, with bullpen
+ERA rebuilt point-in-time by differencing the pitcher index (each start's own
+ER and IP, so nothing from the future enters):
+
+| formula | Brier | accuracy |
+|---|---|---|
+| model_v3  0.55 / 0.00 / 0.45 | 0.2448 | 57.4% |
+| **board  0.65 / 0.30 / 0.05** | **0.2443** | **58.6%** |
+| fitted on train  0.75 / 0.05 / 0.20 | 0.2450 | 57.1% |
+
+The board's formula is the better one — bullpen ERA earns its 30%. The error
+was in the bookkeeping, not the picks: they were slightly better than
+advertised. The site now shows 58.6%.
+
+The third row is the recurring lesson. Grid-searching the three weights on the
+1,052-game training half returned 0.75/0.05/0.20, which then scored worse out
+of sample than either hand-set version. That is the fourth time in this project
+that fitting a parameter has degraded held-out performance. The bootstrap is
+also honest about the margin: the board's formula beats model_v3 on Brier in
+77.9% of 2,000 resamples, short of the 95% that would make it decisive.
