@@ -201,6 +201,7 @@ def run_power(games, lr, hfa, predict_from=None, cap=None, sigma=None):
     """
     R, n = defaultdict(float), defaultdict(int)
     preds, resid = [], []
+    run_power.sigma = None      # the scale this run settled on, for live callers
     for g in games:
         h, a = g["home"], g["away"]
         pred = R[h] - R[a] + hfa
@@ -216,6 +217,7 @@ def run_power(games, lr, hfa, predict_from=None, cap=None, sigma=None):
         R[h] += lr * err
         R[a] -= lr * err
         resid.append(actual - pred)
+        run_power.sigma = s
         n[h] += 1
         n[a] += 1
     return preds, R, n
@@ -310,11 +312,18 @@ def backtest(league, split=0.55):
 # Margin helps where margins are large and informative (basketball); it hurts
 # where they are small and noisy (hockey: empty-net goals; soccer: 1-0 games).
 TUNED = {
-    # soccer additions: each league's own backtest winner
-    "efl1": ("power", 0.09, 1.5, None), "efl3": ("elo", 24, 100, None),
-    "ksa": ("elo", 24, 100, None), "bra2": ("elo", 24, 100, None),
-    "col": ("elo", 24, 100, None), "per": ("elo", 24, 100, None),
-    "ecu": ("elo", 24, 100, None), "par": ("movelo", 20, 100, None),
+    # Soccer additions -- each league's own backtest winner, read off that
+    # league's run. An earlier version of this block copied one league's
+    # parameters onto all eight, which gave the Championship hfa=1.5 GOALS and
+    # made home advantage alone worth 79%.
+    "efl1": ("power",  0.04,   0, None),   # Brier 0.2236
+    "efl3": ("elo",      32,  50, None),   # Brier 0.2199
+    "ksa":  ("elo",      32,  25, None),   # Brier 0.1723
+    "bra2": ("elo",      32,  50, None),   # Brier 0.2074
+    "col":  ("elo",      24, 100, None),   # Brier 0.2051
+    "per":  ("elo",      32, 100, None),   # Brier 0.2194
+    "ecu":  ("elo",      32,  75, None),   # Brier 0.2146
+    "par":  ("movelo",   20,  75, None),   # Brier 0.2214
     "nba":   ("movelo", 20, 50, None),
     "wnba":  ("movelo", 20, 25, None),
     "ncaab": ("movelo", 20, 50, None),

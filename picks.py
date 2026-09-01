@@ -179,6 +179,7 @@ def elo_picks(league, day):
     if len(games) < 40:
         return {}
     _, R, n = fn(games, k, hfa, cap=cap)
+    sigma = getattr(A.run_power, "sigma", None) or 12.0
     form = {}
     for g in games[-400:]:
         for t, won in ((g["home"], g["hs"] > g["as_"]), (g["away"], g["as_"] > g["hs"])):
@@ -196,14 +197,26 @@ def elo_picks(league, day):
                 continue
             if key == "power":
                 margin = R[hn] - R[an] + hfa
-                ph = 0.5 * (1 + math.erf(margin / (12.0 * math.sqrt(2))))
+                # The spread of game margins, taken from the league's own games.
+                # This was hardcoded at 12.0 -- a basketball number. Applied to
+                # soccer, where a goal margin has a spread near 1.7, it divided
+                # every edge by seven and squashed the whole league to 50-58%.
+                # The backtest never saw it: anysport derives sigma from the
+                # data, so the validated model and the shipped one disagreed.
+                ph = 0.5 * (1 + math.erf(margin / (sigma * math.sqrt(2))))
             else:
                 ph = 1 / (1 + 10 ** (-((R[hn] + hfa) - R[an]) / 400))
             home = ph > 0.5
             pick = hn if home else an
             gap = abs(R[hn] - R[an])
             f = form.get(pick, [])[-10:]
-            bits = [f"rating {R[pick]:.0f} v {R[an if home else hn]:.0f} (+{gap:.0f})"]
+            # Elo sits near 1500; power ratings are a goal/point margin near
+            # zero, so rounding both to integers printed every soccer rating
+            # as "0 v -1 (+1)".
+            fmt = (lambda v: f"{v:+.2f}") if key == "power" else (lambda v: f"{v:.0f}")
+            bits = [f"rating {fmt(R[pick])} v {fmt(R[an if home else hn])} "
+                    f"({'+' if key != 'power' else ''}{gap:.2f}" +
+                    (" goals)" if key == "power" else ")")]
             if len(f) >= 5:
                 bits.append(f"last {len(f)}: {sum(f)}-{len(f)-sum(f)}")
             if home:
