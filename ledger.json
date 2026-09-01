@@ -378,10 +378,10 @@
   "conf": 55.5,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Mattia Bellucci": "4",
-   "Zsombor Piros": "2"
+   "Mattia Bellucci": "6 0",
+   "Zsombor Piros": "4 0"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -625,8 +625,8 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "Corentin Moutet": "3",
-   "Dane Sweeny": "2"
+   "Corentin Moutet": "5",
+   "Dane Sweeny": "4"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -747,8 +747,8 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "Nishesh Basavareddy": "2",
-   "Tristan Schoolkate": "3"
+   "Nishesh Basavareddy": "5",
+   "Tristan Schoolkate": "6"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -796,19 +796,20 @@
   "conf": 88.2,
   "dog": false,
   "league": "atp",
-  "live": "5th",
-  "live_score": {
-   "Flavio Cobolli": "3 2 6 6 5",
-   "Francisco Comesana": "6 6 3 4 4"
-  },
   "logged": "2026-09-01T10:18",
   "market_agrees": null,
   "matchup": "Flavio Cobolli @ Francisco Comesana",
   "pick": "Flavio Cobolli",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Flavio Cobolli": "3 2 6 6 6",
+   "Francisco Comesana": "6 6 3 4 4"
+  },
+  "settled": "2026-09-01T15:38",
+  "status": "won",
   "tip": "11:00 AM",
-  "why": "rank 6 vs 119"
+  "why": "rank 6 vs 119",
+  "winner": "Flavio Cobolli"
  },
  "atp:182725": {
   "conf": 50.0,
@@ -866,19 +867,20 @@
   "conf": 91.0,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Darwin Blanch": "3 2 3",
-   "Taylor Fritz": "6 6 4"
-  },
   "logged": "2026-09-01T10:18",
   "market_agrees": null,
   "matchup": "Darwin Blanch @ Taylor Fritz",
   "pick": "Taylor Fritz",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Darwin Blanch": "3 2 4",
+   "Taylor Fritz": "6 6 6"
+  },
+  "settled": "2026-09-01T15:38",
+  "status": "won",
   "tip": "1:00 PM",
-  "why": "rank 10 vs NR"
+  "why": "rank 10 vs NR",
+  "winner": "Taylor Fritz"
  },
  "atp:182734": {
   "conf": 65.8,
@@ -918,8 +920,8 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "Filip Misolic": "3",
-   "Francisco Cerundolo": "2"
+   "Filip Misolic": "4",
+   "Francisco Cerundolo": "5"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -3463,10 +3465,10 @@
   "conf": 83.3,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Maria Sakkari": "2",
-   "Robin Montgomery": "4"
+   "Maria Sakkari": "2 0",
+   "Robin Montgomery": "6 1"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -3481,10 +3483,10 @@
   "conf": 63.4,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Ella Seidel": "2",
-   "Yuliia Starodubtseva": "5"
+   "Ella Seidel": "2 0",
+   "Yuliia Starodubtseva": "6 0"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -3544,10 +3546,10 @@
   "conf": 95.1,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Elena Rybakina": "5",
-   "Thea Frodin": "2"
+   "Elena Rybakina": "6 2",
+   "Thea Frodin": "3 0"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -3660,10 +3662,10 @@
   "conf": 78.7,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Anna Bondar": "3",
-   "Lucie Havlickova": "2"
+   "Anna Bondar": "6 0",
+   "Lucie Havlickova": "3 0"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -3775,8 +3777,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Belinda Bencic": "3",
-   "Yulia Putintseva": "2"
+   "Belinda Bencic": "5",
+   "Yulia Putintseva": "4"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -3925,10 +3927,10 @@
   "conf": 75.8,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Eva Lys": "4",
-   "Gabriela Knutson": "3"
+   "Eva Lys": "6 0",
+   "Gabriela Knutson": "3 3"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
