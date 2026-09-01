@@ -198,10 +198,10 @@
   "conf": 73.5,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
+  "live": "4th",
   "live_score": {
-   "Ben Shelton": "1 6 6(3)",
-   "Tallon Griekspoor": "6 1 6(2)"
+   "Ben Shelton": "1 6 7(7) 3",
+   "Tallon Griekspoor": "6 1 6(3) 0"
   },
   "logged": "2026-08-31T19:18",
   "market_agrees": null,
@@ -658,8 +658,8 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "Frances Tiafoe": "2",
-   "Martin Damm": "2"
+   "Frances Tiafoe": "5",
+   "Martin Damm": "3"
   },
   "logged": "2026-08-31T20:56",
   "market_agrees": null,
@@ -771,7 +771,7 @@
   "conf": 57.1,
   "dog": true,
   "league": "mlb",
-  "live": "Top 8th",
+  "live": "Top 9th",
   "live_score": {
    "Miami Marlins": 3,
    "Washington Nationals": 6
@@ -787,47 +787,50 @@
  },
  "mlb:401816748": {
   "conf": 59.7,
+  "diagnosis": "margin 1 \u00b7 one-run game \u00b7 the book had my side favoured too \u00b7 called at 60%",
   "dog": false,
   "league": "mlb",
-  "live": "Bot 9th",
-  "live_score": {
-   "New York Mets": 3,
-   "Tampa Bay Rays": 2
-  },
   "logged": "2026-08-31T18:17",
   "market_agrees": true,
   "matchup": "NYM @ TB",
   "pick": "Tampa Bay Rays",
   "price": "-187",
-  "status": "open",
+  "scores": {
+   "New York Mets": 3,
+   "Tampa Bay Rays": 2
+  },
+  "settled": "2026-08-31T21:38",
+  "status": "lost",
   "tip": "6:40 PM",
-  "why": "Seymour 4.21 ERA/4.01 FIP vs Stock 7.40 \u00b7 pen 4.06 v 3.70 \u00b7 L10 6-4 v 4-6"
+  "why": "Seymour 4.21 ERA/4.01 FIP vs Stock 7.40 \u00b7 pen 4.06 v 3.70 \u00b7 L10 6-4 v 4-6",
+  "winner": "New York Mets"
  },
  "mlb:401816749": {
   "conf": 58.7,
   "dog": false,
   "league": "mlb",
-  "live": "Top 9th",
-  "live_score": {
-   "Cincinnati Reds": 0,
-   "San Diego Padres": 5
-  },
   "logged": "2026-08-31T18:17",
   "market_agrees": true,
   "matchup": "SD @ CIN",
   "pick": "San Diego Padres",
   "price": "-147",
-  "status": "open",
+  "scores": {
+   "Cincinnati Reds": 0,
+   "San Diego Padres": 5
+  },
+  "settled": "2026-08-31T21:38",
+  "status": "won",
   "tip": "6:40 PM",
-  "why": "King 3.23 ERA/4.20 FIP vs Singer 4.72 \u00b7 pen 3.49 v 4.72"
+  "why": "King 3.23 ERA/4.20 FIP vs Singer 4.72 \u00b7 pen 3.49 v 4.72",
+  "winner": "San Diego Padres"
  },
  "mlb:401816750": {
   "conf": 66.4,
   "dog": false,
   "league": "mlb",
-  "live": "Top 9th",
+  "live": "Top 10th",
   "live_score": {
-   "Boston Red Sox": 7,
+   "Boston Red Sox": 8,
    "Seattle Mariners": 8
   },
   "logged": "2026-08-31T18:17",
@@ -843,10 +846,10 @@
   "conf": 55.8,
   "dog": false,
   "league": "mlb",
-  "live": "Mid 5th",
+  "live": "Top 6th",
   "live_score": {
    "Athletics": 0,
-   "Texas Rangers": 4
+   "Texas Rangers": 7
   },
   "logged": "2026-08-31T19:18",
   "market_agrees": true,
@@ -861,10 +864,10 @@
   "conf": 51.9,
   "dog": false,
   "league": "mlb",
-  "live": "Top 4th",
+  "live": "Top 5th",
   "live_score": {
-   "Chicago White Sox": 1,
-   "Houston Astros": 1
+   "Chicago White Sox": 2,
+   "Houston Astros": 3
   },
   "logged": "2026-08-31T19:18",
   "market_agrees": true,
@@ -879,10 +882,10 @@
   "conf": 52.7,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 6th",
+  "live": "Bot 7th",
   "live_score": {
    "Detroit Tigers": 1,
-   "Minnesota Twins": 5
+   "Minnesota Twins": 8
   },
   "logged": "2026-08-31T19:18",
   "market_agrees": true,
@@ -897,7 +900,7 @@
   "conf": 52.3,
   "dog": false,
   "league": "mlb",
-  "live": "Top 5th",
+  "live": "Bot 6th",
   "live_score": {
    "Chicago Cubs": 9,
    "Milwaukee Brewers": 0
@@ -915,7 +918,7 @@
   "conf": 50.7,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 3rd",
+  "live": "Bot 4th",
   "live_score": {
    "Baltimore Orioles": 0,
    "Colorado Rockies": 0
@@ -933,6 +936,11 @@
   "conf": 52.1,
   "dog": false,
   "league": "mlb",
+  "live": "Top 1st",
+  "live_score": {
+   "Los Angeles Angels": 0,
+   "New York Yankees": 0
+  },
   "logged": "2026-08-31T21:17",
   "market_agrees": true,
   "matchup": "NYY @ LAA",
