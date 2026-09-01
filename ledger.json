@@ -365,10 +365,10 @@
   "conf": 72.6,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Francesco Passaro": "6 2",
-   "Jesper de Jong": "2 4"
+   "Francesco Passaro": "6 2 0",
+   "Jesper de Jong": "2 6 0"
   },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
@@ -415,10 +415,10 @@
   "conf": 82.8,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Carlos Taberner": "3 4",
-   "Zizou Bergs": "6 2"
+   "Carlos Taberner": "3 6 0",
+   "Zizou Bergs": "6 3 0"
   },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
@@ -577,8 +577,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Arthur Fery": "3 3 3",
-   "Lorenzo Musetti": "6 6 4"
+   "Arthur Fery": "3 3 5",
+   "Lorenzo Musetti": "6 6 6"
   },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
@@ -706,8 +706,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Arthur Gea": "6 2 3 1",
-   "Juan Manuel Cerundolo": "3 6 6 0"
+   "Arthur Gea": "6 2 3 4",
+   "Juan Manuel Cerundolo": "3 6 6 1"
   },
   "logged": "2026-09-01T15:18",
   "market_agrees": null,
@@ -1070,6 +1070,11 @@
   "conf": 52.0,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Alex Molcan": "1",
+   "Benjamin Bonzi": "0"
+  },
   "logged": "2026-09-01T18:22",
   "market_agrees": null,
   "matchup": "Benjamin Bonzi @ Alex Molcan",
@@ -3572,10 +3577,10 @@
   "conf": 56.2,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Darja Vidmanova": "3",
-   "Jessica Bouzas Maneiro": "5"
+   "Darja Vidmanova": "3 1",
+   "Jessica Bouzas Maneiro": "6 2"
   },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
@@ -4162,19 +4167,20 @@
   "conf": 81.2,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Oleksandra Oliynykova": "6 5",
-   "Reese Brantmeier": "4 4"
-  },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
   "matchup": "Reese Brantmeier @ Oleksandra Oliynykova",
   "pick": "Oleksandra Oliynykova",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Oleksandra Oliynykova": "6 6",
+   "Reese Brantmeier": "4 4"
+  },
+  "settled": "2026-09-01T18:39",
+  "status": "won",
   "tip": "4:30 PM",
-  "why": "rank 46 vs NR"
+  "why": "rank 46 vs NR",
+  "winner": "Oleksandra Oliynykova"
  },
  "wta:182643": {
   "conf": 79.6,
@@ -4199,10 +4205,10 @@
   "conf": 53.2,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Daria Kasatkina": "1",
-   "Paula Badosa": "4"
+   "Daria Kasatkina": "1 1",
+   "Paula Badosa": "6 1"
   },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
@@ -4252,8 +4258,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Jelena Ostapenko": "2",
-   "Tatjana Maria": "0"
+   "Jelena Ostapenko": "3",
+   "Tatjana Maria": "3"
   },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
@@ -4270,8 +4276,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Arantxa Rus": "3",
-   "Leolia Jeanjean": "3"
+   "Arantxa Rus": "4",
+   "Leolia Jeanjean": "4"
   },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
@@ -4288,7 +4294,7 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Anastasia Potapova": "6 3",
+   "Anastasia Potapova": "6 5",
    "Darja Semenistaja": "2 2"
   },
   "logged": "2026-09-01T17:17",
