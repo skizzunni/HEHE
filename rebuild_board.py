@@ -55,6 +55,7 @@ def snapshot():
                              "p": leg["price"] if leg else None,
                              "d": bool(leg["dog"]) if leg else False,
                              "dk": (leg or {}).get("dk"),
+                             "u": bool(r.get("unval")),
                              "lg": lab})
             # strongest calls first; anything unrated sinks to the bottom
             rows.sort(key=lambda x: (x["mc"] is None, -(x["mc"] or 0)))

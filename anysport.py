@@ -35,6 +35,25 @@ LEAGUES = {
     "mlb":   ("baseball/mlb", "MLB", (3, 10)),
     "epl":   ("soccer/eng.1", "Premier League", (8, 5)),
     "mls":   ("soccer/usa.1", "MLS", (2, 11)),
+    # Added because the board showed nothing on a day with 82 soccer fixtures --
+    # EPL and MLS are both dark for the September international break.
+    #
+    # Every one of these was backtested first and NOT ONE beats "always pick the
+    # home team" by more than its own standard error. The figure after each is
+    # the model's edge over that baseline in percentage points. They are on the
+    # board for coverage, not because an edge was found; the site marks them.
+    "efl1":  ("soccer/eng.2", "Championship", (8, 5)),        # -1.2
+    "efl3":  ("soccer/eng.4", "League Two", (8, 5)),          # +3.4
+    "ksa":   ("soccer/ksa.1", "Saudi Pro Lg", (8, 5)),        # +0.3
+    "bra2":  ("soccer/bra.2", "Brasileirao B", (1, 11)),      # +2.5
+    "col":   ("soccer/col.1", "Colombia Primera A", (1, 11)), # +3.7
+    "per":   ("soccer/per.1", "Peru Liga 1", (1, 11)),        # +1.3
+    "ecu":   ("soccer/ecu.1", "Ecuador LigaPro", (1, 11)),    # +4.5
+    "par":   ("soccer/par.1", "Paraguay Primera", (1, 11)),   # +0.0
+    #
+    # Dropped: eng.3 League One (-5.1), rsa.1 South Africa (-7.8) and aut.1
+    # Austria (-22.4) all lose to the home baseline outright, so a pick there
+    # would be worse than naming the home side.
 }
 
 _CTX = ssl.create_default_context()
@@ -291,6 +310,11 @@ def backtest(league, split=0.55):
 # Margin helps where margins are large and informative (basketball); it hurts
 # where they are small and noisy (hockey: empty-net goals; soccer: 1-0 games).
 TUNED = {
+    # soccer additions: each league's own backtest winner
+    "efl1": ("power", 0.09, 1.5, None), "efl3": ("elo", 24, 100, None),
+    "ksa": ("elo", 24, 100, None), "bra2": ("elo", 24, 100, None),
+    "col": ("elo", 24, 100, None), "per": ("elo", 24, 100, None),
+    "ecu": ("elo", 24, 100, None), "par": ("movelo", 20, 100, None),
     "nba":   ("movelo", 20, 50, None),
     "wnba":  ("movelo", 20, 25, None),
     "ncaab": ("movelo", 20, 50, None),
