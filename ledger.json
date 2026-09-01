@@ -1142,19 +1142,20 @@
   "conf": 79.8,
   "dog": false,
   "league": "atp",
-  "live": "5th",
-  "live_score": {
-   "Frances Tiafoe": "6 4 3 6 4",
-   "Martin Damm": "4 6 6 3 3"
-  },
   "logged": "2026-08-31T20:56",
   "market_agrees": null,
   "matchup": "Frances Tiafoe @ Martin Damm",
   "pick": "Frances Tiafoe",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Frances Tiafoe": "6 4 3 6 6",
+   "Martin Damm": "4 6 6 3 4"
+  },
+  "settled": "2026-09-01T00:58",
+  "status": "won",
   "tip": "9:00 PM",
-  "why": "rank 12 vs 90"
+  "why": "rank 12 vs 90",
+  "winner": "Frances Tiafoe"
  },
  "atp:182763": {
   "conf": 73.9,
@@ -2307,19 +2308,20 @@
   "conf": 50.7,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 8th",
-  "live_score": {
-   "Baltimore Orioles": 2,
-   "Colorado Rockies": 1
-  },
   "logged": "2026-08-31T20:19",
   "market_agrees": true,
   "matchup": "BAL @ COL",
   "pick": "Baltimore Orioles",
   "price": "-120",
-  "status": "open",
+  "scores": {
+   "Baltimore Orioles": 2,
+   "Colorado Rockies": 1
+  },
+  "settled": "2026-09-01T00:58",
+  "status": "won",
   "tip": "8:40 PM",
-  "why": "Povich 4.45 ERA/5.06 FIP vs Gordon 5.38 \u00b7 pen 3.94 v 4.76 \u00b7 L10 7-3 v 2-8"
+  "why": "Povich 4.45 ERA/5.06 FIP vs Gordon 5.38 \u00b7 pen 3.94 v 4.76 \u00b7 L10 7-3 v 2-8",
+  "winner": "Baltimore Orioles"
  },
  "mlb:401816756": {
   "conf": 52.1,
