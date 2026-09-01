@@ -7,7 +7,8 @@ Every league gets a real forecast rather than an echo of the price:
   MLB      starter ERA/FIP (regressed) .65 + bullpen ERA .30 + team run rates .05
   team     margin-of-victory Elo or point-differential power ratings, whichever
   sports   won that league's own held-out backtest (see anysport.TUNED)
-  tennis   ranking points, p = 1/(1+exp(-(ln ptsA - ln ptsB)*0.8))
+  tennis   ranking points, p = 1/(1+exp(-(ln ptsA - ln ptsB)*scale)),
+           scale 1.02 both ranked / 0.78 otherwise
 
 Each pick carries the numbers that produced it, so the reasoning is inspectable
 rather than asserted. Held-out accuracy by league is recorded in the README;
@@ -225,9 +226,16 @@ def tennis_picks(day, tour=None):
                 rank[norm(a["displayName"])] = dict(rank=e.get("current"),
                                                     pts=e.get("points"))
     UN = 180.0
+    # Scales fitted on Jan-Jul and validated on August; see tennis.py for the
+    # backtest. A single 0.80 was under-confident whenever both players were
+    # ranked. Picks are unchanged -- only the stated confidence moves.
+    S_RANKED, S_OTHER = 1.02, 0.78
     def pts(p):
         r = rank.get(norm(p))
         return float(r["pts"]) if r and r.get("pts") else UN
+    def scaled(p):
+        r = rank.get(norm(p))
+        return bool(r and r.get("pts"))
     out, seen = {}, set()
     for lgk in ([tour] if tour else ["atp", "wta"]):
         d = get(f"{ESPN}/tennis/{lgk}/scoreboard?dates={day}")
@@ -257,7 +265,8 @@ def tennis_picks(day, tour=None):
                         continue
                     seen.add(c.get("id"))
                     lp = math.log(pts(ps[0])) - math.log(pts(ps[1]))
-                    p1 = 1 / (1 + math.exp(-lp * 0.8))
+                    sc = S_RANKED if (scaled(ps[0]) and scaled(ps[1])) else S_OTHER
+                    p1 = 1 / (1 + math.exp(-lp * sc))
                     pick = ps[0] if p1 >= 0.5 else ps[1]
                     r1 = (rank.get(norm(ps[0])) or {}).get("rank")
                     r2 = (rank.get(norm(ps[1])) or {}).get("rank")

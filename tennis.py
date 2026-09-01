@@ -35,7 +35,10 @@ WHAT IS USED INSTEAD
 
 Ranking points, which encode tour level directly:
 
-    p(A beats B) = 1 / (1 + exp(-(ln ptsA - ln ptsB) * 0.8))
+    p(A beats B) = 1 / (1 + exp(-(ln ptsA - ln ptsB) * scale))
+
+where scale is 1.02 when both players are ranked and 0.78 when one is not --
+see the constants below for the walk-forward fit behind those numbers.
 
 On the same August matches this scores 60.2% -- but current rankings partly
 reflect those very matches, so that number is optimistic by an unknown amount
@@ -51,7 +54,17 @@ import re
 import ssl
 import urllib.request
 
-SCALE = 0.8           # fitted on August matches by Brier score
+# Two scales, fitted on 6,918 Jan-Jul matches and scored on a held-out August
+# set. A single 0.80 shrank ranked-v-ranked matchups too far toward 50%: over
+# the training sample those favourites were called at 62.3% and won 64.9%, and
+# the same gap reappeared out of sample (61.1% called, 67.0% won). Splitting the
+# scale by whether both players are ranked cut held-out Brier from 0.2207 to
+# 0.2190, better in 95% of 2,000 bootstrap resamples.
+#
+# It changes no picks. The transform is monotonic, so the favoured side is
+# identical either way -- this makes the confidence numbers honest, nothing more.
+SCALE_RANKED = 1.02   # both players in the ranking table
+SCALE_OTHER = 0.78    # one side unranked, so one input is a guess
 UNRANKED_PTS = 180.0  # floor for a player outside the top 150
 ESPN = "https://site.api.espn.com/apis/site/v2/sports/tennis"
 
@@ -127,8 +140,9 @@ def prob(p1, p2, rk):
     def pts(p):
         r = rk.get(norm(p))
         return float(r["pts"]) if r and r.get("pts") else UNRANKED_PTS
+    both = all((rk.get(norm(p)) or {}).get("pts") for p in (p1, p2))
     d = math.log(pts(p1)) - math.log(pts(p2))
-    return 1 / (1 + math.exp(-d * SCALE))
+    return 1 / (1 + math.exp(-d * (SCALE_RANKED if both else SCALE_OTHER)))
 
 
 def board(date):

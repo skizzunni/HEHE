@@ -751,3 +751,54 @@ The clipboard API can be blocked in a sandboxed page, so a failed write falls
 back to selecting the block for a manual copy rather than silently doing
 nothing. The DraftKings link stays as a secondary because that one genuinely
 resolves.
+
+## 8/31 — two plausible ideas, both wrong; one real fix that changes no picks
+
+Three high-confidence tennis picks lost today: Collignon (82%) to an unranked
+qualifier, Tauson (83%) to an unranked Sloane Stephens, Waltert (78%). Twice I
+wrote that the culprit looked like the model's flat 180-point floor for
+unranked players — an unranked former Slam champion and an unranked journeyman
+score identically. It was a clean story and it fit the losses.
+
+It was wrong. Tested on 7,892 deduplicated 2026 singles matches, split Jan–Jul
+train / August test:
+
+| bucket | n (train) | model said | actually won | gap |
+|---|---|---|---|---|
+| both ranked | 3,565 | 62.3% | 64.9% | **+2.6** |
+| opponent unranked | 2,048 | 76.5% | 75.9% | −0.5 |
+
+The unranked gap is −0.5 on two thousand matches. There is nothing there. It
+only appears in August (−6.3, n=267), which is the same small sample that
+produced the losses I was reasoning from. I was pattern-matching on noise and
+had said so out loud twice.
+
+**Recent form also fails.** Blending a last-10 win-rate differential in
+(weight fitted on train) flipped 55 August picks, and those flips were right
+**47%** — worse than a coin flip. Held-out accuracy went 65.3% → 65.0%. This
+is the third time a form-like feature has been tried and rejected here; Elo,
+which is largely a form-and-volume measure, failed the same way.
+
+**What is real** is the effect hiding in the first row: the model is
+under-confident whenever both players are ranked, and the gap replicates out of
+sample (+2.6 train, +5.9 test, both beyond two standard errors). A single scale
+of 0.80 shrinks those matchups too far toward 50%. Fitting two scales on
+Jan–Jul and scoring August:
+
+| | Brier | accuracy |
+|---|---|---|
+| 0.80 flat | 0.2207 | 65.3% |
+| 1.02 ranked / 0.78 otherwise | **0.2190** | 65.3% |
+
+Better in 95% of 2,000 bootstrap resamples, with no overshoot at the top
+(80–90% band lands +0.7 on n=91).
+
+**And it changes not one pick.** The scale is a monotonic transform, so the
+favoured side is identical either way — verified against tomorrow's board: 40
+of 40 tennis picks unchanged, 39 confidences moved. It makes the numbers
+honest; it does not find more winners.
+
+The lesson worth keeping: today's losses were mostly variance, and the two
+explanations that felt most insightful were both false. The only finding that
+survived contact with the training data was one I had not noticed and that
+pays nothing in accuracy. That is the normal shape of an honest result.
