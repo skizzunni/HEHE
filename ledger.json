@@ -378,19 +378,20 @@
   "conf": 55.5,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Mattia Bellucci": "6 6 3",
-   "Zsombor Piros": "4 2 0"
-  },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
   "matchup": "Zsombor Piros @ Mattia Bellucci",
   "pick": "Mattia Bellucci",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Mattia Bellucci": "6 6 6",
+   "Zsombor Piros": "4 2 0"
+  },
+  "settled": "2026-09-01T16:57",
+  "status": "won",
   "tip": "2:45 PM",
-  "why": "rank 95 vs 118"
+  "why": "rank 95 vs 118",
+  "winner": "Mattia Bellucci"
  },
  "atp:182684": {
   "conf": 50.0,
@@ -463,8 +464,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Camilo Ugo Carabelli": "4 2",
-   "Jan-Lennard Struff": "6 2"
+   "Camilo Ugo Carabelli": "4 3",
+   "Jan-Lennard Struff": "6 5"
   },
   "logged": "2026-09-01T15:18",
   "market_agrees": null,
@@ -565,8 +566,8 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "Arthur Fery": "1",
-   "Lorenzo Musetti": "1"
+   "Arthur Fery": "3",
+   "Lorenzo Musetti": "4"
   },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
@@ -635,8 +636,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Corentin Moutet": "6(4) 2",
-   "Dane Sweeny": "7(7) 2"
+   "Corentin Moutet": "6(4) 4",
+   "Dane Sweeny": "7(7) 4"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -690,10 +691,10 @@
   "conf": 60.5,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Arthur Gea": "4",
-   "Juan Manuel Cerundolo": "1"
+   "Arthur Gea": "6 0",
+   "Juan Manuel Cerundolo": "3 1"
   },
   "logged": "2026-09-01T15:18",
   "market_agrees": null,
@@ -762,8 +763,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Nishesh Basavareddy": "6(4) 6 0",
-   "Tristan Schoolkate": "7(7) 3 0"
+   "Nishesh Basavareddy": "6(4) 6 1",
+   "Tristan Schoolkate": "7(7) 3 3"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -935,8 +936,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Filip Misolic": "4 3 0",
-   "Francisco Cerundolo": "6 6 2"
+   "Filip Misolic": "4 3 2",
+   "Francisco Cerundolo": "6 6 5"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -3482,8 +3483,8 @@
   "league": "wta",
   "live": "3rd",
   "live_score": {
-   "Maria Sakkari": "2 7 1",
-   "Robin Montgomery": "6 5 1"
+   "Maria Sakkari": "2 7 5",
+   "Robin Montgomery": "6 5 2"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -3538,8 +3539,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Elise Mertens": "1",
-   "Kaitlin Quevedo": "1"
+   "Elise Mertens": "3",
+   "Kaitlin Quevedo": "3"
   },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
@@ -3798,10 +3799,10 @@
   "conf": 77.2,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Belinda Bencic": "6 4",
-   "Yulia Putintseva": "4 4"
+   "Belinda Bencic": "6 5 0",
+   "Yulia Putintseva": "4 7 0"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -3969,19 +3970,20 @@
   "conf": 80.9,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Janice Tjen": "2 1",
-   "Mirra Andreeva": "6 2"
-  },
   "logged": "2026-09-01T15:18",
   "market_agrees": null,
   "matchup": "Janice Tjen @ Mirra Andreeva",
   "pick": "Mirra Andreeva",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Janice Tjen": "2 2",
+   "Mirra Andreeva": "6 6"
+  },
+  "settled": "2026-09-01T16:59",
+  "status": "won",
   "tip": "3:30 PM",
-  "why": "rank 5 vs 36"
+  "why": "rank 5 vs 36",
+  "winner": "Mirra Andreeva"
  },
  "wta:182630": {
   "conf": 53.6,
@@ -4136,6 +4138,11 @@
   "conf": 81.2,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Oleksandra Oliynykova": "1",
+   "Reese Brantmeier": "1"
+  },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
   "matchup": "Reese Brantmeier @ Oleksandra Oliynykova",
