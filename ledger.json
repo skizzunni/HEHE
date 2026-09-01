@@ -94,6 +94,11 @@
   "conf": 56.8,
   "dog": false,
   "league": "atp",
+  "live": "3rd",
+  "live_score": {
+   "Facundo Diaz Acosta": "4 5 6",
+   "Quentin Halys": "6 7 6"
+  },
   "logged": "2026-08-31T17:18",
   "market_agrees": null,
   "matchup": "Facundo Diaz Acosta @ Quentin Halys",
@@ -200,7 +205,7 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Ben Shelton": "1 6 7(7) 3",
+   "Ben Shelton": "1 6 7(7) 4",
    "Tallon Griekspoor": "6 1 6(3) 0"
   },
   "logged": "2026-08-31T19:18",
@@ -611,6 +616,11 @@
   "conf": 77.2,
   "dog": false,
   "league": "atp",
+  "live": "3rd",
+  "live_score": {
+   "Jakub Mensik": "6 6 2",
+   "Shintaro Mochizuki": "1 4 1"
+  },
   "logged": "2026-08-31T19:18",
   "market_agrees": null,
   "matchup": "Shintaro Mochizuki @ Jakub Mensik",
@@ -659,7 +669,7 @@
   "live": "1st",
   "live_score": {
    "Frances Tiafoe": "5",
-   "Martin Damm": "3"
+   "Martin Damm": "4"
   },
   "logged": "2026-08-31T20:56",
   "market_agrees": null,
@@ -771,19 +781,20 @@
   "conf": 57.1,
   "dog": true,
   "league": "mlb",
-  "live": "Top 9th",
-  "live_score": {
-   "Miami Marlins": 3,
-   "Washington Nationals": 6
-  },
   "logged": "2026-08-31T18:17",
   "market_agrees": false,
   "matchup": "MIA @ WSH",
   "pick": "Washington Nationals",
   "price": "+104",
-  "status": "open",
+  "scores": {
+   "Miami Marlins": 3,
+   "Washington Nationals": 6
+  },
+  "settled": "2026-08-31T21:43",
+  "status": "won",
   "tip": "6:45 PM",
-  "why": "Dion 3.67 ERA/3.84 FIP vs Gusto 3.98 \u00b7 pen 4.94 v 3.95 \u00b7 L10 4-6 v 5-5"
+  "why": "Dion 3.67 ERA/3.84 FIP vs Gusto 3.98 \u00b7 pen 4.94 v 3.95 \u00b7 L10 4-6 v 5-5",
+  "winner": "Washington Nationals"
  },
  "mlb:401816748": {
   "conf": 59.7,
@@ -828,7 +839,7 @@
   "conf": 66.4,
   "dog": false,
   "league": "mlb",
-  "live": "Top 10th",
+  "live": "Bot 10th",
   "live_score": {
    "Boston Red Sox": 8,
    "Seattle Mariners": 8
@@ -846,7 +857,7 @@
   "conf": 55.8,
   "dog": false,
   "league": "mlb",
-  "live": "Top 6th",
+  "live": "Bot 6th",
   "live_score": {
    "Athletics": 0,
    "Texas Rangers": 7
@@ -882,10 +893,10 @@
   "conf": 52.7,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 7th",
+  "live": "End 7th",
   "live_score": {
    "Detroit Tigers": 1,
-   "Minnesota Twins": 8
+   "Minnesota Twins": 9
   },
   "logged": "2026-08-31T19:18",
   "market_agrees": true,
@@ -900,7 +911,7 @@
   "conf": 52.3,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 6th",
+  "live": "Top 7th",
   "live_score": {
    "Chicago Cubs": 9,
    "Milwaukee Brewers": 0
@@ -918,10 +929,10 @@
   "conf": 50.7,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 4th",
+  "live": "End 4th",
   "live_score": {
    "Baltimore Orioles": 0,
-   "Colorado Rockies": 0
+   "Colorado Rockies": 1
   },
   "logged": "2026-08-31T20:19",
   "market_agrees": true,
@@ -954,6 +965,11 @@
   "conf": 57.5,
   "dog": false,
   "league": "mlb",
+  "live": "Top 1st",
+  "live_score": {
+   "Arizona Diamondbacks": 0,
+   "Philadelphia Phillies": 0
+  },
   "logged": "2026-08-31T21:17",
   "market_agrees": true,
   "matchup": "PHI @ ARI",

@@ -802,3 +802,49 @@ The lesson worth keeping: today's losses were mostly variance, and the two
 explanations that felt most insightful were both false. The only finding that
 survived contact with the training data was one I had not noticed and that
 pays nothing in accuracy. That is the normal shape of an honest result.
+
+## The upgrade that was never a model problem
+
+Every improvement in this repo has targeted accuracy. Accuracy is not what has
+been losing. `parlay_opt.py` prices the structure instead, using hit rates
+measured on held-out data rather than model confidence — the two are different
+numbers and conflating them is how a 24-leg ticket gets built.
+
+At the best rate this project has ever measured (84.6%, tennis 80–90% band with
+both players ranked, n=91 August):
+
+| legs | wins | book pays | EV per $1 | 1+ win in 30 tickets |
+|---|---|---|---|---|
+| 1 | 84.6% | −756 | −4.2% | 100% |
+| 4 | 51.2% | −155 | −15.8% | 100% |
+| 8 | 26.2% | +170 | −29.1% | 100% |
+| 12 | 13.4% | +344 | −40.4% | 98.7% |
+| 24 | 1.8% | +1,869 | −64.4% | 42.1% |
+
+At the 70.6% rate that a realistic mixed tennis card supports, a 24-leg ticket
+wins **once every 4,253 tries** and returns −64.4%. The two tickets actually
+played on 8/31 were 24 and 25 legs.
+
+The mechanism is that the book's margin compounds at exactly the rate the win
+probability decays, so expected value falls monotonically with every leg added.
+No achievable model accuracy reverses that: at a perfect-looking 84.6% per leg,
+24 legs still returns −64.4%. Fewer legs is not a preference, it is arithmetic.
+
+## Does the model add anything the price does not already know?
+
+Asked properly for the first time: a logistic regression on 1,347 Apr–Jul games
+with two features, logit(market) and logit(model), scored on 405 August games.
+
+    market only    bias +0.045   market +0.876
+    market + model bias +0.045   market +0.580   MODEL +0.439
+
+    model coefficient, 95% CI over 300 bootstraps: [+0.097, +0.831]
+
+The coefficient excludes zero, so the model does carry information beyond the
+closing price — the first evidence in this repo that it is not pure noise once
+you know the line. On 349 training games the same test could not detect it
+(CI [−0.272, +1.494]); the earlier negative was underpowered, not a finding.
+
+It does not translate into better August predictions: Brier 0.2393 blended
+against 0.2391 for the raw price, accuracy 59.3% against 58.8%. Real signal,
+too small to beat the vig.
