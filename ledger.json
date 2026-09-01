@@ -365,10 +365,10 @@
   "conf": 72.6,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Francesco Passaro": "4",
-   "Jesper de Jong": "2"
+   "Francesco Passaro": "6 1",
+   "Jesper de Jong": "2 0"
   },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
@@ -415,10 +415,10 @@
   "conf": 82.8,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Carlos Taberner": "1",
-   "Zizou Bergs": "3"
+   "Carlos Taberner": "3 0",
+   "Zizou Bergs": "6 0"
   },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
@@ -472,19 +472,20 @@
   "conf": 58.7,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Camilo Ugo Carabelli": "4 3 2",
-   "Jan-Lennard Struff": "6 6 5"
-  },
   "logged": "2026-09-01T15:18",
   "market_agrees": null,
   "matchup": "Jan-Lennard Struff @ Camilo Ugo Carabelli",
   "pick": "Jan-Lennard Struff",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Camilo Ugo Carabelli": "4 3 3",
+   "Jan-Lennard Struff": "6 6 6"
+  },
+  "settled": "2026-09-01T17:57",
+  "status": "won",
   "tip": "3:30 PM",
-  "why": "rank 44 vs 77"
+  "why": "rank 44 vs 77",
+  "winner": "Jan-Lennard Struff"
  },
  "atp:182695": {
   "conf": 50.0,
@@ -574,10 +575,10 @@
   "conf": 65.1,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Arthur Fery": "3 2",
-   "Lorenzo Musetti": "6 5"
+   "Arthur Fery": "3 3 1",
+   "Lorenzo Musetti": "6 6 0"
   },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
@@ -705,8 +706,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Arthur Gea": "6 2 0",
-   "Juan Manuel Cerundolo": "3 6 0"
+   "Arthur Gea": "6 2 1",
+   "Juan Manuel Cerundolo": "3 6 4"
   },
   "logged": "2026-09-01T15:18",
   "market_agrees": null,
@@ -773,19 +774,20 @@
   "conf": 50.0,
   "dog": false,
   "league": "atp",
-  "live": "4th",
-  "live_score": {
-   "Nishesh Basavareddy": "6(4) 6 3 2",
-   "Tristan Schoolkate": "7(7) 3 6 3"
-  },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
   "matchup": "Tristan Schoolkate @ Nishesh Basavareddy",
   "pick": "Tristan Schoolkate",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Nishesh Basavareddy": "6(4) 6 3 4",
+   "Tristan Schoolkate": "7(7) 3 6 6"
+  },
+  "settled": "2026-09-01T17:57",
+  "status": "won",
   "tip": "2:45 PM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Tristan Schoolkate"
  },
  "atp:182718": {
   "conf": 58.3,
@@ -3553,7 +3555,7 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Elise Mertens": "6 1",
+   "Elise Mertens": "6 4",
    "Kaitlin Quevedo": "4 2"
   },
   "logged": "2026-09-01T16:22",
@@ -3569,6 +3571,11 @@
   "conf": 56.2,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Darja Vidmanova": "0",
+   "Jessica Bouzas Maneiro": "2"
+  },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
   "matchup": "Jessica Bouzas Maneiro @ Darja Vidmanova",
@@ -3811,21 +3818,23 @@
  },
  "wta:182615": {
   "conf": 77.2,
+  "diagnosis": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 77%",
   "dog": false,
   "league": "wta",
-  "live": "3rd",
-  "live_score": {
-   "Belinda Bencic": "6 5 3",
-   "Yulia Putintseva": "4 7 3"
-  },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
   "matchup": "Belinda Bencic @ Yulia Putintseva",
   "pick": "Belinda Bencic",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Belinda Bencic": "6 5 3",
+   "Yulia Putintseva": "4 7 6"
+  },
+  "settled": "2026-09-01T17:59",
+  "status": "lost",
   "tip": "2:45 PM",
-  "why": "rank 12 vs 84"
+  "why": "rank 12 vs 84",
+  "winner": "Yulia Putintseva"
  },
  "wta:182617": {
   "conf": 79.3,
@@ -4154,8 +4163,8 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Oleksandra Oliynykova": "6 0",
-   "Reese Brantmeier": "4 0"
+   "Oleksandra Oliynykova": "6 2",
+   "Reese Brantmeier": "4 2"
   },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
@@ -4248,6 +4257,11 @@
   "conf": 71.9,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Arantxa Rus": "0",
+   "Leolia Jeanjean": "0"
+  },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
   "matchup": "Leolia Jeanjean @ Arantxa Rus",
@@ -4263,8 +4277,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Anastasia Potapova": "2",
-   "Darja Semenistaja": "1"
+   "Anastasia Potapova": "5",
+   "Darja Semenistaja": "2"
   },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
