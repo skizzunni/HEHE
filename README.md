@@ -848,3 +848,22 @@ you know the line. On 349 training games the same test could not detect it
 It does not translate into better August predictions: Brier 0.2393 blended
 against 0.2391 for the raw price, accuracy 59.3% against 58.8%. Real signal,
 too small to beat the vig.
+
+## The August ROI that is not an edge
+
+Betting the model's disagreements at real closing prices, August only:
+
+    edge >= 0pt   n=227   ROI +10.8%   95% CI [-1.3%, +22.8%]
+    edge >= 4pt   n=117   ROI +12.2%   95% CI [-5.9%, +30.9%]
+
+Both intervals contain zero. And the same model over the longer Jul 1 - Aug 30
+window in `vs_market.py` returned -1.2% at the 4-point threshold and -14.3% at
+ten points, monotonically worse with edge size.
+
+Same model, overlapping data, opposite sign, depending on where the window is
+cut. That is the signature of noise, not of an edge that appeared in August. A
+single month of +10% on 227 bets is roughly what a coin flip produces at these
+prices, and the confidence interval says so directly.
+
+Recorded here because the temptation is to keep the flattering window. The
+honest read remains the longer one.
