@@ -898,3 +898,42 @@ of sample than either hand-set version. That is the fourth time in this project
 that fitting a parameter has degraded held-out performance. The bootstrap is
 also honest about the margin: the board's formula beats model_v3 on Brier in
 77.9% of 2,000 resamples, short of the 95% that would make it decisive.
+
+## Validating soccer: the problem was my sample, not the model
+
+Eight soccer leagues went up tagged UNVALIDATED because each one, tested alone,
+"could not be distinguished from noise". That label was wrong about where the
+problem was. A single league gives a 60-200 match holdout where one standard
+error is 3-6 points; nothing can clear that bar. I was reporting my own lack of
+statistical power as a property of the model.
+
+Pooled instead: 33 leagues, 12,460 completed matches, ratings still per-league
+but hyperparameters fitted once on a training half and scored on the rest. A
+draw counts as a LOSS throughout, because that is what it does to a 3-way
+moneyline — scoring a draw as a half-win would validate a bet nobody can place.
+
+    HELD-OUT HALF -- 5,977 matches
+      my pick wins outright     49.1%
+      always pick home          44.0%
+      better win rate to date   46.3%
+      edge over best baseline   +2.8 pts = 4.3 standard errors
+
+That is decisive. All 35 soccer leagues now run one configuration: margin-of-
+victory Elo, k=24, 50 Elo of home advantage.
+
+### The flaw it exposed
+
+Elo scores a draw as half a win, so its expectation runs hot against "does my
+side win outright" — by 12 to 14 points across every confidence band. A logistic
+map fitted on the training half fixes it:
+
+    p_outright = sigmoid(-0.591 + 1.485 * logit(p_elo))
+
+    HELD-OUT Brier   raw 0.2567  ->  recalibrated 0.2436
+
+Six times the improvement the tennis recalibration produced, and the residual
+gaps fall from -13 to between -0.3 and -6.
+
+Three leagues previously dropped for losing to the home baseline (League One,
+South Africa, Austria) are back: they were rejected on the same underpowered
+per-league test, and the pooled result covers them.

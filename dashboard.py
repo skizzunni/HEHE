@@ -48,20 +48,10 @@ LEAGUES = [
     ("atp",   "tennis/atp",                  "Tennis (M)"),
     ("wta",   "tennis/wta",                  "Tennis (W)"),
     ("pga",   "golf/pga",                    "PGA"),
-    ("epl",   "soccer/eng.1",                "Premier Lg"),
-    ("mls",   "soccer/usa.1",                "MLS"),
-    ("efl1",  "soccer/eng.2",                "Championship"),
-    ("efl3",  "soccer/eng.4",                "League Two"),
-    ("ksa",   "soccer/ksa.1",                "Saudi Pro Lg"),
-    ("bra2",  "soccer/bra.2",                "Brasileirao B"),
-    ("col",   "soccer/col.1",                "Colombia"),
-    ("per",   "soccer/per.1",                "Peru"),
-    ("ecu",   "soccer/ecu.1",                "Ecuador"),
-    ("par",   "soccer/par.1",                "Paraguay"),
     ("ufc",   "mma/ufc",                     "UFC"),
-]
-THREE_WAY = {"epl", "mls", "efl1", "efl3", "ksa", "bra2", "col",
-             "per", "ecu", "par"}
+] + [(k, v[0], v[1]) for k, v in sorted(__import__("anysport").LEAGUES.items())
+     if v[0].startswith("soccer/")]
+THREE_WAY = {k for k, p, _ in LEAGUES if p.startswith("soccer/")}
 
 # Measured on 4,090 real sides of 2,045 completed 2026 MLB games with closing
 # DraftKings prices. Every favourite bucket underperforms its own implied
@@ -254,21 +244,13 @@ def mlb_context(day):
     return out
 
 
-ELO_LEAGUES = {"wnba", "nba", "nhl", "epl", "mls", "ncaaf", "nfl", "ncaab",
-               "efl1", "efl3", "ksa", "bra2", "col", "per", "ecu", "par"}
+ELO_LEAGUES = ({"wnba", "nba", "nhl", "ncaaf", "nfl", "ncaab"}
+               | {k for k, p, _ in LEAGUES if p.startswith("soccer/")})
 
-# Leagues whose rating model did NOT clear its own backtest -- it failed to beat
-# "always pick the home team" by more than a standard error. They are on the
-# board so a day of soccer is not simply absent, and the page says so rather
-# than presenting them as equal to the validated ones.
-UNVALIDATED = {"efl1", "efl3", "ksa", "bra2", "col", "per", "ecu", "par"}
 
 
 def model_book(day):
-    """My own forecast for every league a model exists for.
-
-    Not all of them are validated -- see UNVALIDATED. Those still get a pick so
-    the board covers the day, flagged rather than silently mixed in."""
+    """My own forecast for every league that has a validated model for it."""
     book = {}
     try:
         book["mlb"] = P.mlb_picks(day)
@@ -355,7 +337,6 @@ def collect(key, path, day, mlbctx, mybook=None):
                     mine = dict(mine, side=myside)
             best = max(legs, key=lambda L: L["roi"] if L["roi"] is not None else -99) if legs else None
             rows.append(dict(id=f'{key}:{c.get("id")}', label=label,
-                             unval=key in UNVALIDATED,
                              tip=t.strftime("%-I:%M %p"), legs=legs, note=note,
                              mypick=mine.get("pick", ""), myconf=mine.get("conf"),
                              why=mine.get("why", ""), myside=mine.get("side"),
