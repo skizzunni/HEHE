@@ -367,7 +367,7 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "Francesco Passaro": "1",
+   "Francesco Passaro": "4",
    "Jesper de Jong": "2"
   },
   "logged": "2026-09-01T16:22",
@@ -415,6 +415,11 @@
   "conf": 82.8,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Carlos Taberner": "1",
+   "Zizou Bergs": "3"
+  },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
   "matchup": "Carlos Taberner @ Zizou Bergs",
@@ -469,8 +474,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Camilo Ugo Carabelli": "4 3 0",
-   "Jan-Lennard Struff": "6 6 3"
+   "Camilo Ugo Carabelli": "4 3 2",
+   "Jan-Lennard Struff": "6 6 5"
   },
   "logged": "2026-09-01T15:18",
   "market_agrees": null,
@@ -571,8 +576,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Arthur Fery": "3 1",
-   "Lorenzo Musetti": "6 2"
+   "Arthur Fery": "3 2",
+   "Lorenzo Musetti": "6 5"
   },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
@@ -637,21 +642,23 @@
  },
  "atp:182706": {
   "conf": 65.2,
+  "diagnosis": "lost 0-3 in sets \u00b7 never won a set \u00b7 called at 65%",
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Corentin Moutet": "6(4) 4 0",
-   "Dane Sweeny": "7(7) 6 2"
-  },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
   "matchup": "Corentin Moutet @ Dane Sweeny",
   "pick": "Corentin Moutet",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Corentin Moutet": "6(4) 4 0",
+   "Dane Sweeny": "7(7) 6 3"
+  },
+  "settled": "2026-09-01T17:38",
+  "status": "lost",
   "tip": "2:45 PM",
-  "why": "rank 62 vs 123"
+  "why": "rank 62 vs 123",
+  "winner": "Dane Sweeny"
  },
  "atp:182707": {
   "conf": 79.6,
@@ -696,10 +703,10 @@
   "conf": 60.5,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Arthur Gea": "6 2",
-   "Juan Manuel Cerundolo": "3 4"
+   "Arthur Gea": "6 2 0",
+   "Juan Manuel Cerundolo": "3 6 0"
   },
   "logged": "2026-09-01T15:18",
   "market_agrees": null,
@@ -768,8 +775,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Nishesh Basavareddy": "6(4) 6 3 0",
-   "Tristan Schoolkate": "7(7) 3 6 0"
+   "Nishesh Basavareddy": "6(4) 6 3 2",
+   "Tristan Schoolkate": "7(7) 3 6 3"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -3544,10 +3551,10 @@
   "conf": 75.1,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Elise Mertens": "5",
-   "Kaitlin Quevedo": "4"
+   "Elise Mertens": "6 1",
+   "Kaitlin Quevedo": "4 2"
   },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
@@ -3808,8 +3815,8 @@
   "league": "wta",
   "live": "3rd",
   "live_score": {
-   "Belinda Bencic": "6 5 2",
-   "Yulia Putintseva": "4 7 2"
+   "Belinda Bencic": "6 5 3",
+   "Yulia Putintseva": "4 7 3"
   },
   "logged": "2026-09-01T14:23",
   "market_agrees": null,
@@ -4145,10 +4152,10 @@
   "conf": 81.2,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Oleksandra Oliynykova": "4",
-   "Reese Brantmeier": "2"
+   "Oleksandra Oliynykova": "6 0",
+   "Reese Brantmeier": "4 0"
   },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
@@ -4254,6 +4261,11 @@
   "conf": 71.5,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Anastasia Potapova": "2",
+   "Darja Semenistaja": "1"
+  },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
   "matchup": "Darja Semenistaja @ Anastasia Potapova",
