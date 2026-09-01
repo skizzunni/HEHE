@@ -105,8 +105,13 @@ def record(state=None):
                              why=r.get("why", ""), tip=r.get("tip"),
                              price=(leg or {}).get("price"),
                              dog=bool((leg or {}).get("dog")),
-                             market_agrees=(r.get("pick") == r.get("mypick")
-                                            if r.get("pick") else None),
+                             # Whether the book made my side the favourite. Derive
+                             # it from the price, not from the board's `pick`
+                             # column -- that column holds the best historical ROI
+                             # band, which is usually the underdog, so comparing
+                             # against it labelled every favourite a market fade.
+                             market_agrees=(None if not leg or not leg.get("price")
+                                            else not leg.get("dog")),
                              status="open", logged=dt.datetime.now(ET).isoformat()[:16])
                 if key not in book:
                     added += 1
@@ -193,12 +198,13 @@ def diagnose(e, res):
         margin = abs(sc[0] - sc[1])
         bits.append(f"margin {margin}")
         if e["league"] == "mlb":
-            bits.append("blowout" if margin >= 5 else
+            bits.append("blowout" if margin >= 6 else
+                        "comfortable" if margin >= 4 else
                         "one-run game" if margin == 1 else "close")
     if e.get("market_agrees") is True:
-        bits.append("market had my side too")
+        bits.append("the book had my side favoured too")
     elif e.get("market_agrees") is False:
-        bits.append("I faded the market")
+        bits.append("I took the side the book had as less likely")
     if e.get("dog"):
         bits.append("I took the underdog")
     if "TBD" in (e.get("why") or ""):
