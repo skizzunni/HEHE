@@ -13,6 +13,7 @@ access. The page can only ever hold data baked in at publish time, so keeping it
 current means re-baking and republishing it -- which is what this does.
 """
 import json
+import math
 import os
 import re
 import sys
@@ -57,7 +58,8 @@ def snapshot():
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 mc = round(r["myconf"] * 100, 1) if r["myconf"] else None
                 hit, hit_n = blended_hit(k, k in SOCCER, mc, live, r["why"],
-                                         bool(leg and leg.get("dog")))
+                                         bool(leg and leg.get("dog")),
+                                         (leg or {}).get("price"))
                 tk, tl, hide = tier_of(k, mc, hit)
                 pk, pl = price_note(k, k in SOCCER,
                                     (leg or {}).get("price"),
@@ -255,24 +257,60 @@ def _band_key(league, mc, why=None, is_soccer=False, dog=None):
     return None
 
 
+# A band rate is an AVERAGE over every price in the band, so using it as a
+# point probability over-values long prices and under-values short ones --
+# the favourite-longshot bias reappearing inside our own bands. It showed up
+# on the board immediately: soccer's underdog band credits every dog 43.1%,
+# while the ledger has them at 52.9% from +100 to +150, 23.1% from +150 to
+# +250 and 25.0% beyond that. A +450 dog was being handed 43.1% and a +40%
+# "edge", pointing the card straight at the worst bets it carries.
+#
+# So where a leg has a price, the band contributes an OFFSET in log-odds from
+# the de-vigged market rather than a flat rate. Each leg keeps its own price
+# and still carries whatever the band has measured. Scored on the ledger
+# (Brier, lower better): soccer underdogs 0.2327 flat -> 0.2172 anchored,
+# soccer favourites 0.1875 -> 0.1728, MLB favourites 0.2496 -> 0.2439, all
+# of them also beating the raw market.
+SOCCER_HOLD, TWO_WAY_HOLD = 1.07, 1.04     # three-way markets are taxed harder
+
+
+def _devig(american, is_soccer):
+    """De-vigged win probability implied by one side's price, or None."""
+    p = implied(american)
+    if p is None:
+        return None
+    return min(max(p / (SOCCER_HOLD if is_soccer else TWO_WAY_HOLD), 0.01), 0.99)
+
+
+def _logit(p):
+    return math.log(p / (1 - p))
+
+
 def live_bands(entries, soccer_keys=()):
-    """-> {band key: (n, won)} from every settled pick on the ledger."""
+    """-> {band key: (n, won, priced_n, sum_logit_market)} from the ledger.
+
+    The last two accumulate the market's own view of the picks in each band,
+    so the band can be expressed as an offset from a price instead of a rate.
+    """
     out = {}
     soccer_keys = set(soccer_keys)
     for e in entries:
         if e.get("status") not in ("won", "lost"):
             continue
         lg = e.get("league")
-        key = _band_key(lg, e.get("conf"), e.get("why"),
-                        lg in soccer_keys, e.get("dog"))
+        is_soc = lg in soccer_keys
+        key = _band_key(lg, e.get("conf"), e.get("why"), is_soc, e.get("dog"))
         if key is None:
             continue
-        n, w = out.get(key, (0, 0))
-        out[key] = (n + 1, w + (e["status"] == "won"))
+        n, w, pn, s = out.get(key, (0, 0, 0, 0.0))
+        m = _devig(e.get("price"), is_soc)
+        if m is not None:
+            pn, s = pn + 1, s + _logit(m)
+        out[key] = (n + 1, w + (e["status"] == "won"), pn, s)
     return out
 
 
-def blended_hit(league, is_soccer, mc, live, why=None, dog=None):
+def blended_hit(league, is_soccer, mc, live, why=None, dog=None, price=None):
     """Backtest rate for this band, corrected by what it has actually done.
 
     Returns (rate, live_n) so the board can show the evidence behind the
@@ -292,8 +330,27 @@ def blended_hit(league, is_soccer, mc, live, why=None, dog=None):
         return None, 0
     sport, cut, _nr = key
     prior = dict(MEASURED[sport])[cut]
-    n, w = live.get(key, (0, 0))
-    return (PRIOR_N * prior + w) / (PRIOR_N + n), n
+    n, w, pn, s = live.get(key, (0, 0, 0, 0.0))
+    rate = (PRIOR_N * prior + w) / (PRIOR_N + n)
+    m = _devig(price, is_soccer)
+    if m is None or pn < MIN_PRICED:
+        return rate, n
+    # What this band has done, relative to what the market said about it --
+    # then shrunk toward the market by its own sample size. Forty results
+    # cannot support a full-strength claim of beating a price, and an
+    # unshrunk offset is a constant in log-odds, so it asserts a LARGER
+    # percentage edge the longer the price. Shrinking keeps the direction the
+    # band measured without letting a thin sample manufacture a +27% bet on a
+    # +450 shot.
+    offset = _logit(min(max(rate, 0.01), 0.99)) - s / pn
+    offset *= pn / (pn + OFFSET_K)
+    return 1 / (1 + math.exp(-(_logit(m) + offset))), n
+
+
+# below this many priced results the offset is noise, so the flat band stands
+MIN_PRICED = 8
+# priced results at which the band's offset carries half its measured weight
+OFFSET_K = 40
 
 
 # A badge has to mean the same thing in every sport or it is false

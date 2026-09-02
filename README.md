@@ -1715,3 +1715,57 @@ by day played:
 
 Sep 1 was the bad day, and it was MLB (6-9) and soccer (16-22) — tennis went
 21-5. That is the shape of every day on the ledger.
+
+## The edge column was pointing at the worst bets on the board
+
+Driving the page in a real browser (Chromium, Playwright) found two things
+static checks could not.
+
+**The rank buttons were dead.** They were written with inline `onclick`. The
+rest of the page uses delegated handlers — every other control, without
+exception — because an artifact's CSP blocks inline event handlers. The JS
+parsed, the buttons rendered, and nothing happened when clicked. Converted to
+`data-rank` plus a branch in the existing click delegate.
+
+**And with them working, the edge ranking put four soccer longshots on top:**
+Burnley +40.2%, Independiente Santa Fe +35.9%, Nacional Asunción +20.8%,
+Sportivo Ameliano +18.6%. Every one of them a phantom.
+
+A band rate is an *average over every price in the band*, so using it as a
+point probability over-values long prices and under-values short ones — the
+favourite-longshot bias reappearing inside our own bands. The soccer underdog
+band credits every dog 43.1%. The ledger:
+
+```
++100 to +150   n=17   52.9%      (market implied 46.2%)
++150 to +250   n=13   23.1%      (market implied 34.0%)
++250 and worse n= 8   25.0%      (market implied 23.4%)
+```
+
+A +450 dog was being handed 43.1% and a +40% edge. The card's "by edge" order
+was aiming at precisely the segment the price map found the worst measured
+anywhere (−11.4% over 9,206 games).
+
+### The fix, and its honest limit
+
+Where a leg has a price, the band now contributes an **offset in log-odds from
+the de-vigged market** instead of a flat rate, shrunk toward the market by the
+band's own priced sample size (half-weight at 40). Each leg keeps its own
+price. Al Ahli at +450 goes from a fake 36.8% to 19.8%.
+
+Leave-one-out over the ledger, so no pick ever grades itself:
+
+```
+              flat band   anchored   raw market
+soccer          0.2412     0.2159      0.2136
+mlb             0.2573     0.2463      0.2457
+```
+
+The flat band is decisively worst — the bug was real and costly. But the raw
+market narrowly beats the anchored version in both sports. **We have not
+demonstrated an edge over the price in MLB or soccer.** Anchoring ships
+because it fixes the phantom and is within a rounding error of the market,
+and its offset strengthens automatically as results accumulate. The edge
+numbers those two sports display are, on this evidence, close to zero and
+should be read that way. Tennis carries no prices at all, so its bands are
+untouched.
