@@ -1055,3 +1055,91 @@ two close players produce a coin flip, and no strength model can beat that — i
 estimator-independent. The exact cut is not. The ledger now tags each graded
 pick with its tier, so within a few hundred more calls the board can be
 validated against its own record instead of a proxy.
+
+---
+
+# MLB totals and run line — tested against closing prices, not shipped (2026-09-02)
+
+Asked to add over/under and run-line picks. Both were built, both were scored
+against **DraftKings closing numbers** on 1,812 games with a matched
+walk-forward model, and neither is worth shipping. Writing down why, so this
+does not get proposed again without new information.
+
+## The data
+
+ESPN's scoreboard drops the odds node once a game goes final, which is why an
+earlier harvest came back with 2,071 games and zero lines. The core API keeps
+`open` / `close` / `current`, so the sample here is genuine closing lines:
+2,071 of 2,071 games with a closing total and a closing run line.
+
+## Totals: the model knows nothing the line does not
+
+Expected runs per side come from the same engine that prices the moneyline;
+totals fall out of simulating both sides from a gamma-mixed Poisson whose
+dispersion (3.53) was fitted on April–June and frozen.
+
+    TRAIN 04-06   every game  49.6%   ROI  -5.6%
+    TEST  07-08   every game  53.1%   ROI  +1.3%
+
+Opposite signs across windows, which alone is disqualifying. Worse, the edge
+filter runs **backwards** — the more the model disagrees with the line, the
+worse it does:
+
+    TRAIN  edge>=2%  48.7%   edge>=6%  46.9%
+    TEST   edge>=2%  53.0%   edge>=8%  50.7%
+
+A real edge gets better as you raise the threshold. This gets worse, which is
+the signature of disagreement that is pure noise. The direct test confirms it:
+
+    corr(model total - line, actual total - line) = +0.014  (+-0.024)
+
+Zero, on all 1,812 games and in both halves separately. And the model's own
+number is a *worse* estimate of the actual total than the line is — mean
+absolute error 3.586 runs against the closing line's 3.485.
+
+One tempting artefact, checked and dismissed: the mean actual total (8.97)
+sits 0.48 runs above the mean closing line (8.49), which looks like a standing
+"overs" bias. It is not — it is right-skew, blowouts dragging the mean while
+the median sits still. Betting every over at the closing price:
+
+    over hits 49.4% over 1,979 games (+-1.1)   blind OVER ROI -5.5%
+
+and month to month it wanders 44.4% to 55.2% with no stability. The total is
+efficiently priced.
+
+## Run line: a high hit rate that still loses money
+
+    TRAIN  59.7% covered   ROI -2.0%
+    TEST   57.2% covered   ROI -6.3%
+
+Winning 57–60% of your bets sounds like the "solid" market, and it is the trap
+in this whole exercise. Those wins are almost all the underdog taking +1.5 at
+a price like -178, which needs ~64% to break even. A high hit rate at a bad
+price is worse than a low hit rate at a good one — and in a parlay it is worse
+still, because the payout is built from the prices.
+
+The mirror side, the favourite laying -1.5 at plus money, is the only place
+where an edge could survive the vig. It does not:
+
+    TRAIN  covered 41.2%   book implied 43.1%   model said 38.5%   ROI -4.5%
+    TEST   covered 42.0%   book implied 43.6%   model said 38.7%   ROI -3.4%
+
+The model is biased low by 3+ points — simulating the two sides independently
+understates how often a good team beats a bad pitcher badly. The filtered
+buckets that look positive (train edge>=6%: +18.5% on n=68) have no surviving
+counterpart in the test half, and the test's best bucket is +6.8% on n=136,
+where one standard error on ROI is about 10 points.
+
+## What this means
+
+The moneyline model carries real information; the derived markets do not.
+That is not a contradiction. A moneyline needs only the *ordering* of two
+teams' scoring, which season run rates and a starter's ERA capture. A total
+needs the *level* of combined scoring and a run line needs the *shape* of the
+margin — both of which demand park-adjusted, handedness-aware, bullpen-usage
+inputs that this public feed does not carry, and both of which the closing
+line already prices better than this model does.
+
+Nothing was shipped. Adding these as picks would have handed over legs with
+negative expectation dressed up as coverage, which is the exact failure the
+conviction tiers were added to prevent.
