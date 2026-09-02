@@ -160,6 +160,11 @@
   "conf": 92.1,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Alexander Zverev": "1",
+   "Lorenzo Sonego": "2"
+  },
   "logged": "2026-09-01T20:37",
   "market_agrees": null,
   "matchup": "Lorenzo Sonego @ Alexander Zverev",
@@ -365,6 +370,11 @@
   "conf": 72.6,
   "dog": false,
   "league": "atp",
+  "live": "3rd",
+  "live_score": {
+   "Francesco Passaro": "6 2 3",
+   "Jesper de Jong": "2 6 1"
+  },
   "logged": "2026-09-01T16:22",
   "market_agrees": null,
   "matchup": "Francesco Passaro @ Jesper de Jong",
@@ -410,6 +420,11 @@
   "conf": 82.8,
   "dog": false,
   "league": "atp",
+  "live": "3rd",
+  "live_score": {
+   "Carlos Taberner": "3 6 0",
+   "Zizou Bergs": "6 3 1"
+  },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
   "matchup": "Carlos Taberner @ Zizou Bergs",
@@ -695,6 +710,11 @@
   "conf": 60.5,
   "dog": false,
   "league": "atp",
+  "live": "4th",
+  "live_score": {
+   "Arthur Gea": "6 2 3 5",
+   "Juan Manuel Cerundolo": "3 6 6 3"
+  },
   "logged": "2026-09-01T15:18",
   "market_agrees": null,
   "matchup": "Arthur Gea @ Juan Manuel Cerundolo",
@@ -857,10 +877,10 @@
   "conf": 78.6,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
+  "live": "4th",
   "live_score": {
-   "Adolfo Daniel Vallejo": "6 1 2",
-   "Gael Monfils": "2 6 6"
+   "Adolfo Daniel Vallejo": "6 1 2 0",
+   "Gael Monfils": "2 6 6 2"
   },
   "logged": "2026-09-01T18:22",
   "market_agrees": null,
@@ -2421,10 +2441,10 @@
   "conf": 50.1,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 7th",
+  "live": "Bot 8th",
   "live_score": {
-   "Atlanta Braves": 2,
-   "Washington Nationals": 6
+   "Atlanta Braves": 5,
+   "Washington Nationals": 8
   },
   "logged": "2026-09-01T18:22",
   "market_agrees": true,
@@ -2439,27 +2459,28 @@
   "conf": 54.7,
   "dog": false,
   "league": "mlb",
-  "live": "End 8th",
-  "live_score": {
-   "New York Mets": 2,
-   "Tampa Bay Rays": 6
-  },
   "logged": "2026-09-01T18:22",
   "market_agrees": true,
   "matchup": "NYM @ TB",
   "pick": "Tampa Bay Rays",
   "price": "-136",
-  "status": "open",
+  "scores": {
+   "New York Mets": 2,
+   "Tampa Bay Rays": 6
+  },
+  "settled": "2026-09-01T21:16",
+  "status": "won",
   "tip": "6:40 PM",
-  "why": "Peralta 5.11 ERA/4.52 FIP vs Manaea 4.55 \u00b7 L10 6-4 v 4-6"
+  "why": "Peralta 5.11 ERA/4.52 FIP vs Manaea 4.55 \u00b7 L10 6-4 v 4-6",
+  "winner": "Tampa Bay Rays"
  },
  "mlb:401816760": {
   "conf": 57.6,
   "dog": false,
   "league": "mlb",
-  "live": "Top 8th",
+  "live": "Bot 8th",
   "live_score": {
-   "Cincinnati Reds": 2,
+   "Cincinnati Reds": 3,
    "San Diego Padres": 2
   },
   "logged": "2026-09-01T18:22",
@@ -2475,9 +2496,9 @@
   "conf": 57.1,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 6th",
+  "live": "Top 7th",
   "live_score": {
-   "Boston Red Sox": 1,
+   "Boston Red Sox": 2,
    "Seattle Mariners": 9
   },
   "logged": "2026-09-01T18:22",
@@ -2493,10 +2514,10 @@
   "conf": 61.2,
   "dog": false,
   "league": "mlb",
-  "live": "Top 6th",
+  "live": "Top 7th",
   "live_score": {
    "Pittsburgh Pirates": 11,
-   "San Francisco Giants": 6
+   "San Francisco Giants": 7
   },
   "logged": "2026-09-01T18:22",
   "market_agrees": true,
@@ -2511,28 +2532,29 @@
   "conf": 50.2,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 8th",
-  "live_score": {
-   "Cleveland Guardians": 6,
-   "Toronto Blue Jays": 1
-  },
   "logged": "2026-09-01T18:22",
   "market_agrees": true,
   "matchup": "TOR @ CLE",
   "pick": "Cleveland Guardians",
   "price": "-179",
-  "status": "open",
+  "scores": {
+   "Cleveland Guardians": 6,
+   "Toronto Blue Jays": 1
+  },
+  "settled": "2026-09-01T21:16",
+  "status": "won",
   "tip": "6:40 PM",
-  "why": "Williams 3.98 ERA/3.72 FIP vs Miles 2.92 \u00b7 L10 8-2 v 6-4"
+  "why": "Williams 3.98 ERA/3.72 FIP vs Miles 2.92 \u00b7 L10 8-2 v 6-4",
+  "winner": "Cleveland Guardians"
  },
  "mlb:401816764": {
   "conf": 54.7,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 3rd",
+  "live": "Top 4th",
   "live_score": {
    "Athletics": 1,
-   "Texas Rangers": 1
+   "Texas Rangers": 2
   },
   "logged": "2026-09-01T19:22",
   "market_agrees": true,
@@ -2547,7 +2569,7 @@
   "conf": 60.4,
   "dog": false,
   "league": "mlb",
-  "live": "Top 2nd",
+  "live": "Bot 3rd",
   "live_score": {
    "Chicago White Sox": 0,
    "Houston Astros": 0
@@ -2565,10 +2587,10 @@
   "conf": 52.6,
   "dog": false,
   "league": "mlb",
-  "live": "Top 5th",
+  "live": "Top 6th",
   "live_score": {
    "Detroit Tigers": 1,
-   "Minnesota Twins": 1
+   "Minnesota Twins": 4
   },
   "logged": "2026-09-01T19:22",
   "market_agrees": true,
@@ -2583,10 +2605,10 @@
   "conf": 51.2,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 6th",
+  "live": "Top 7th",
   "live_score": {
    "Kansas City Royals": 0,
-   "Miami Marlins": 3
+   "Miami Marlins": 6
   },
   "logged": "2026-09-01T19:22",
   "market_agrees": true,
@@ -2601,10 +2623,10 @@
   "conf": 54.5,
   "dog": false,
   "league": "mlb",
-  "live": "End 4th",
+  "live": "Bot 5th",
   "live_score": {
    "Chicago Cubs": 3,
-   "Milwaukee Brewers": 0
+   "Milwaukee Brewers": 1
   },
   "logged": "2026-09-01T19:22",
   "market_agrees": true,
@@ -2619,10 +2641,10 @@
   "conf": 53.9,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 1st",
+  "live": "Bot 2nd",
   "live_score": {
    "Baltimore Orioles": 0,
-   "Colorado Rockies": 0
+   "Colorado Rockies": 1
   },
   "logged": "2026-09-01T20:37",
   "market_agrees": true,
@@ -3623,6 +3645,11 @@
   "conf": 56.2,
   "dog": false,
   "league": "wta",
+  "live": "2nd",
+  "live_score": {
+   "Darja Vidmanova": "3 3",
+   "Jessica Bouzas Maneiro": "6 4"
+  },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
   "matchup": "Jessica Bouzas Maneiro @ Darja Vidmanova",
@@ -4079,6 +4106,11 @@
   "conf": 56.3,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Mayar Sherif": "0",
+   "Nikola Bartunkova": "1"
+  },
   "logged": "2026-09-01T20:37",
   "market_agrees": null,
   "matchup": "Mayar Sherif @ Nikola Bartunkova",
@@ -4111,6 +4143,11 @@
   "conf": 68.6,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Iva Jovic": "0",
+   "Magdalena Frech": "0"
+  },
   "logged": "2026-09-01T20:37",
   "market_agrees": null,
   "matchup": "Magdalena Frech @ Iva Jovic",
@@ -4195,6 +4232,11 @@
   "conf": 55.0,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Francesca Jones": "0",
+   "Magda Linette": "1"
+  },
   "logged": "2026-09-01T20:37",
   "market_agrees": null,
   "matchup": "Francesca Jones @ Magda Linette",
@@ -4246,6 +4288,11 @@
   "conf": 53.2,
   "dog": false,
   "league": "wta",
+  "live": "2nd",
+  "live_score": {
+   "Daria Kasatkina": "1 2",
+   "Paula Badosa": "6 1"
+  },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
   "matchup": "Paula Badosa @ Daria Kasatkina",
@@ -4298,6 +4345,11 @@
   "conf": 62.6,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Jelena Ostapenko": "5",
+   "Tatjana Maria": "4"
+  },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
   "matchup": "Jelena Ostapenko @ Tatjana Maria",
@@ -4311,6 +4363,11 @@
   "conf": 71.9,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Arantxa Rus": "5",
+   "Leolia Jeanjean": "6"
+  },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
   "matchup": "Leolia Jeanjean @ Arantxa Rus",
