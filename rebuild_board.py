@@ -61,6 +61,7 @@ def snapshot():
                 rows.append({"mp": r["mypick"], "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
                              "pk": pk, "pl": pl,
+                             "hit": measured_hit(k, k in SOCCER, mc),
                              "why": r["why"],
                              "p": leg["price"] if leg else None,
                              "d": bool(leg["dog"]) if leg else False,
@@ -138,6 +139,34 @@ def snapshot():
 # The best-powered results are the negative ones (soccer -5.83 at 3.4 standard
 # errors, NCAAF -11.13 at 3.2), and those are the ones that protect money.
 # The positive ones are weaker: WNBA +11.07 is 1.9 s.e., NHL +4.01 is 1.5.
+# Each sport's confidence means something different -- tennis runs to 95%,
+# the MLB model is capped at 66% -- so the raw number cannot rank a mixed
+# slate. This maps a pick onto the hit rate its OWN sport's backtest measured
+# for that band, which is comparable across sports and is what a slip actually
+# multiplies together.
+MEASURED = {
+    "tennis": ((72.0, 0.784), (64.0, 0.706), (58.0, 0.610), (0.0, 0.509)),
+    "mlb":    ((61.0, 0.596), (57.0, 0.580), (0.0, 0.550)),
+}
+
+
+def measured_hit(league, is_soccer, mc):
+    """Observed hit rate for a pick like this one, or None where untested."""
+    if mc is None:
+        return None
+    table = MEASURED["tennis"] if league in ("atp", "wta") else (
+        MEASURED["mlb"] if league == "mlb" else None)
+    if table is None:
+        # soccer and the rest have no per-band study yet; the pooled soccer
+        # result (49.1% outright against a 46.3% baseline) is all there is,
+        # so say so rather than invent a band
+        return None
+    for cut, hit in table:
+        if mc >= cut:
+            return hit
+    return None
+
+
 DOG_FRIENDLY = {"mlb", "nhl", "wnba"}       # underdogs carry the lighter tax
 DOG_TAXED = {"ncaaf", "nba", "nfl"}         # and the heavier one here
 SOCCER_LONG_DOG = 250                       # +250 and worse: -11.4% over 9,206
