@@ -55,8 +55,11 @@ def snapshot():
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 mc = round(r["myconf"] * 100, 1) if r["myconf"] else None
                 tk, tl, hide = tier_of(k, mc)
+                # an MLB underdog is where the model's edge is not eaten by vig
+                value = bool(k == "mlb" and leg and leg.get("dog"))
                 rows.append({"mp": r["mypick"], "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
+                             "vp": value,
                              "why": r["why"],
                              "p": leg["price"] if leg else None,
                              "d": bool(leg["dog"]) if leg else False,
@@ -107,6 +110,27 @@ def snapshot():
 # Every other league has no per-band validation yet, so it gets no tier claim
 # and nothing is hidden -- an unmeasured league should not be dressed in
 # numbers borrowed from a measured one.
+# WHERE THE MODEL'S EDGE SURVIVES THE VIG (MLB, 1,812 games at closing prices)
+#
+# The book's tax is not spread evenly. Betting every game at the close:
+#
+#     dog  +100..149   ROI -1.19%   (n=1371)
+#     fav  -100..149   ROI -5.24%   (n=1757)
+#     fav  -150..199   ROI -5.08%   (n= 531)
+#
+# Four points of difference -- the favourite-longshot bias, the price of the
+# public's preference for backing winners. Spending the model's edge on the
+# taxed side wastes it:
+#
+#     model picks that are favourites   n=1480  won 56.9%   ROI -2.95%
+#     model picks that are underdogs    n= 332  won 48.5%   ROI +5.31%
+#
+# The underdog picks win LESS often and still make money, which is the whole
+# point: this is not the model being clever, it is the price being cheaper.
+# That is also why it should hold up -- it does not require the model to beat
+# the market's read of the game, only for the vig to be lighter on that side.
+# Positive in both halves (Apr-Jun +1.2%, Jul-Aug +13.5%), though n=332 is
+# about one standard error, so it is well-founded rather than proven.
 TENNIS_CUTS = (58.0, 64.0, 72.0)
 MLB_CUTS = (57.0, 61.0)
 

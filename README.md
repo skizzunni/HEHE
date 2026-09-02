@@ -1143,3 +1143,95 @@ line already prices better than this model does.
 Nothing was shipped. Adding these as picks would have handed over legs with
 negative expectation dressed up as coverage, which is the exact failure the
 conviction tiers were added to prevent.
+
+---
+
+# Beating the price instead of the game (2026-09-02)
+
+Pushed on the fair point that filtering the board is what a book does, and
+that the job is to find what the price does not contain. Four attempts.
+
+## Rejected
+
+**Tennis fatigue.** A rating knows how good a player is; it cannot know that
+one of them went five sets the day before yesterday. A first pass looked
+promising — workload over 7 days correlated with the surprise in the result at
+2.7 standard errors. It was an artefact: the test labelled the winner `w` and
+then measured a variable defined from the winner's identity. Relabelled
+symmetrically (A = higher rated, y = A won, everything computed pre-match) and
+fitted on May–July, scored on August:
+
+    rating only                test 59.2%   Brier 0.2345
+    rating + workload          test 59.6%   Brier 0.2345
+    rating + rest days         test 58.6%   Brier 0.2344
+    rating + both              test 59.4%   Brier 0.2342
+
+Nothing. The first result was the trap, not the finding.
+
+**MLB bullpen availability.** The model puts 30% of its weight on a team's
+season relief ERA, which describes a bullpen that never exists — the arms that
+worked the last two days are down. Rebuilt from 13,340 relief appearances,
+point-in-time, counting an arm out if it worked back-to-back or threw 2+
+innings yesterday:
+
+    season bullpen      56.2%   available bullpen  55.7%   (-0.5 pts)
+
+The diagnostic explains it: availability moves a bullpen's ERA by a **median
+of 0.025 runs**, 0.26 at the 90th percentile. At 30% weight inside a ratio,
+that is nothing. The idea is sound and the magnitude is simply too small.
+
+**Predicting the line move.** The correlation between the model's disagreement
+with the opener and the market's subsequent drift is +0.103 (+-0.024), which
+looks like 4.4 standard errors of signal. It is not: the market moves the same
+way the model does only **49.9%** of the time. The correlation is picking up
+magnitude — volatile games move more — not direction. Slope is +0.037, so the
+market travels under 4% of the way toward the model. Betting the opener on
+disagreement returns +3.9% in April–June and −4.9% in July–August.
+
+## What did hold: the tax is not spread evenly
+
+Betting every 2026 MLB game at the closing price, by price bucket:
+
+    dog  +100..149   n=1371   ROI -1.19%
+    fav  -100..149   n=1757   ROI -5.24%
+    fav  -150..199   n= 531   ROI -5.08%
+
+Four points of difference. That is the favourite-longshot bias — the standing
+price of the public's preference for backing winners — and it is priced into
+every board on the internet whether or not anyone points at it.
+
+Spending the model's edge on the taxed side wastes it:
+
+    model picks that are favourites   n=1480   won 56.9%   ROI -2.95%
+    model picks that are underdogs    n= 332   won 48.5%   ROI +5.31%
+
+The underdog picks **win less often and still make money**. That is the whole
+result. It is not the model being clever — 48.5% is worse than its favourites
+by eight points — it is the price being cheaper. Which is also why it should
+travel: it does not require out-predicting the market's read of the game, only
+for the vig to be lighter on one side of it. Positive in both halves
+(Apr–Jun +1.2% on 221, Jul–Aug +13.5% on 111).
+
+Stated honestly: n=332 is about one standard error, so this is well-founded
+rather than proven. It has a known mechanism, it replicates in both halves,
+and it survives every edge threshold (+5.0% to +7.0%). The favourite picks
+clear zero at no threshold at all.
+
+## Shipped
+
+MLB underdog picks now carry a VALUE tag. The instruction that follows from
+the numbers is blunt: **when the model likes an underdog, that is the bet.
+When it likes a favourite, the book's tax is larger than the model's edge.**
+
+## The pattern across every test in this file
+
+Nine ideas tested over two days; two survived. Both survivors are about *which
+bets to place*, not about predicting games better — the dead zone in tennis
+confidence, and the vig gap between dogs and favourites. Every attempt to
+predict the games themselves better (park factors, recency, surface, Elo
+repairs, fatigue, bullpen availability, line movement) failed against
+held-out data.
+
+That is worth stating plainly rather than burying: on public data, at the
+game level, this model is at or near its ceiling. The remaining money is in
+selection and price.
