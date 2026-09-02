@@ -55,11 +55,12 @@ def snapshot():
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 mc = round(r["myconf"] * 100, 1) if r["myconf"] else None
                 tk, tl, hide = tier_of(k, mc)
-                # an MLB underdog is where the model's edge is not eaten by vig
-                value = bool(k == "mlb" and leg and leg.get("dog"))
+                pk, pl = price_note(k, k in SOCCER,
+                                    (leg or {}).get("price"),
+                                    bool(leg and leg.get("dog")))
                 rows.append({"mp": r["mypick"], "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
-                             "vp": value,
+                             "pk": pk, "pl": pl,
                              "why": r["why"],
                              "p": leg["price"] if leg else None,
                              "d": bool(leg["dog"]) if leg else False,
@@ -110,27 +111,55 @@ def snapshot():
 # Every other league has no per-band validation yet, so it gets no tier claim
 # and nothing is hidden -- an unmeasured league should not be dressed in
 # numbers borrowed from a measured one.
-# WHERE THE MODEL'S EDGE SURVIVES THE VIG (MLB, 1,812 games at closing prices)
+# WHERE THE BOOK'S TAX SITS -- MEASURED PER SPORT, AT CLOSING PRICES
 #
-# The book's tax is not spread evenly. Betting every game at the close:
+# Betting blind at the close and counting, across ~26,000 games:
 #
-#     dog  +100..149   ROI -1.19%   (n=1371)
-#     fav  -100..149   ROI -5.24%   (n=1757)
-#     fav  -150..199   ROI -5.08%   (n= 531)
+#     sport    favourites   underdogs    gap        n
+#     WNBA       -7.16%       +3.91%    +11.07     620
+#     MLB        -5.24%       -1.19%     +4.05    1812
+#     NHL        -5.50%       -1.49%     +4.01    2935
+#     NFL        -5.65%       -7.10%     -1.45     627
+#     NBA        -4.01%       -7.90%     -3.89    2705
+#     soccer     -2.93%       -8.76%     -5.83    8193
+#     NCAAF      -3.33%      -14.46%    -11.13    1666
 #
-# Four points of difference -- the favourite-longshot bias, the price of the
-# public's preference for backing winners. Spending the model's edge on the
-# taxed side wastes it:
+# Baseball is the EXCEPTION, not the rule. The first version of this file
+# generalised "take the underdog" from MLB alone; in college football that
+# rule loses 14.5% a bet, and long dogs at +250 or worse lose 22.5%.
 #
-#     model picks that are favourites   n=1480  won 56.9%   ROI -2.95%
-#     model picks that are underdogs    n= 332  won 48.5%   ROI +5.31%
+# The mechanism is consistent once the sports are lined up. Where a longshot
+# is genuinely hopeless -- NCAAF dogs at +250 win 14.7%, soccer's win 20.2% --
+# the public buys the lottery ticket anyway and the book prices the appetite.
+# Where the "longshot" is not really long, because the sport is low-scoring and
+# the odds stay compressed, dogs win often enough to be underpriced. Hockey
+# and baseball live at that end; college football lives at the other.
 #
-# The underdog picks win LESS often and still make money, which is the whole
-# point: this is not the model being clever, it is the price being cheaper.
-# That is also why it should hold up -- it does not require the model to beat
-# the market's read of the game, only for the vig to be lighter on that side.
-# Positive in both halves (Apr-Jun +1.2%, Jul-Aug +13.5%), though n=332 is
-# about one standard error, so it is well-founded rather than proven.
+# The best-powered results are the negative ones (soccer -5.83 at 3.4 standard
+# errors, NCAAF -11.13 at 3.2), and those are the ones that protect money.
+# The positive ones are weaker: WNBA +11.07 is 1.9 s.e., NHL +4.01 is 1.5.
+DOG_FRIENDLY = {"mlb", "nhl", "wnba"}       # underdogs carry the lighter tax
+DOG_TAXED = {"ncaaf", "nba", "nfl"}         # and the heavier one here
+SOCCER_LONG_DOG = 250                       # +250 and worse: -11.4% over 9,206
+
+
+def price_note(league, is_soccer, price, dog):
+    """-> (key, label) marking where this leg sits against the book's tax."""
+    if not dog or price is None:
+        return None, None
+    try:
+        v = int(str(price).replace("+", ""))
+    except (TypeError, ValueError):
+        return None, None
+    if is_soccer:
+        return ("taxed", "taxed") if v >= SOCCER_LONG_DOG else (None, None)
+    if league in DOG_FRIENDLY:
+        return "value", "value"
+    if league in DOG_TAXED:
+        return "taxed", "taxed"
+    return None, None
+
+
 TENNIS_CUTS = (58.0, 64.0, 72.0)
 MLB_CUTS = (57.0, 61.0)
 

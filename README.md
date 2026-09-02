@@ -1235,3 +1235,60 @@ held-out data.
 That is worth stating plainly rather than burying: on public data, at the
 game level, this model is at or near its ceiling. The remaining money is in
 selection and price.
+
+---
+
+# The price map: where each book's tax actually sits (2026-09-02)
+
+The MLB underdog result raised an obvious question — does it generalise? It
+does not, and finding that out mattered more than the original result.
+
+Betting blind at closing prices and counting, across roughly 26,000 games
+harvested from ESPN's core API (which retains odds after a game finalises,
+unlike the scoreboard):
+
+    sport    favourites   underdogs      gap        n
+    WNBA       -7.16%       +3.91%    +11.07      620
+    MLB        -5.24%       -1.19%     +4.05     1812
+    NHL        -5.50%       -1.49%     +4.01     2935
+    NFL        -5.65%       -7.10%     -1.45      627
+    NBA        -4.01%       -7.90%     -3.89     2705
+    soccer     -2.93%       -8.76%     -5.83     8193
+    NCAAF      -3.33%      -14.46%    -11.13     1666
+
+**Baseball is the exception, not the rule.** Generalising "take the underdog"
+from MLB would lose 14.5 cents on the dollar in college football, and the
+worst bucket in the whole study is NCAAF long dogs at +250 or worse:
+**-22.49% over 834 games.** Soccer's equivalent bucket is -11.37% over 9,206.
+
+The mechanism is consistent once the sports are lined up by scoring shape.
+Where a longshot is genuinely hopeless — NCAAF dogs at +250 win 14.7% of the
+time, soccer's win 20.2% — the public buys the lottery ticket anyway, and the
+book prices the appetite rather than the probability. Where the "longshot" is
+not really long, because the sport is low-scoring and the odds stay
+compressed, dogs win often enough to be underpriced. Hockey and baseball sit
+at that end; college football sits at the other, and basketball follows the
+football pattern.
+
+Worth being straight about the statistics. The best-powered findings are the
+negative ones — soccer -5.83 at 3.4 standard errors, NCAAF -11.13 at 3.2 —
+and those are the ones that protect money. The positive ones are weaker:
+WNBA +11.07 is 1.9 s.e. on 620 games, NHL +4.01 is 1.5. So the confident
+instruction is "do not buy the taxed longshots", and the speculative one is
+"the hockey and women's-basketball dogs look cheap".
+
+Per-league soccer numbers were computed too and are deliberately NOT used:
+they range from EPL favourites at -16.99% to EFL League One favourites at
++15.83%, but on 150-480 matches each with ROI standard errors near 10 points,
+that spread is mostly noise. Pooling is the honest read.
+
+## Shipped
+
+Every underdog leg now carries a chip cut from its own sport's table:
+**VALUE** in MLB, NHL and the WNBA; **TAXED** in college football, the NBA,
+the NFL, and on soccer dogs priced +250 or longer. Tennis has no prices on
+this feed, so it carries no chip.
+
+This is the second finding in a row that is about the price rather than the
+game — and the first one that would have done real damage if it had been
+generalised on instinct instead of measured.
