@@ -53,8 +53,10 @@ def snapshot():
                 # join the price to my side; legs are keyed away/home, picks by name
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)
+                mc = round(r["myconf"] * 100, 1) if r["myconf"] else None
+                tk, tl = tier_of(mc)
                 rows.append({"mp": r["mypick"], "t": r["tip"],
-                             "mc": round(r["myconf"] * 100, 1) if r["myconf"] else None,
+                             "mc": mc, "tk": tk, "tl": tl,
                              "why": r["why"],
                              "p": leg["price"] if leg else None,
                              "d": bool(leg["dog"]) if leg else False,
@@ -71,6 +73,40 @@ def snapshot():
         out["slots"][slot] = lg
     out["results"] = ledger.board_payload()
     return out
+
+
+# Conviction tiers, cut where the measured hit rate actually steps.
+#
+# Walk-forward Elo over 3,224 completed 2026 tennis matches, scored in monthly
+# blocks the cuts were never fitted to. Every month and every K gives the same
+# shape: below 58% the model is a coin flip, above it the number means what it
+# says.
+#
+#     says 50-58%   803/1577 = 50.9%  (+-1.3)      <- no signal at all
+#     says 58-64%   504/826  = 61.0%  (+-1.7)
+#     says 64%+     580/821  = 70.6%  (+-1.7)
+#
+# The same shape, weaker and less well powered, shows up in MLB: games where
+# the two starters are within a quarter run of ERA hit 50.0% on a held-out
+# August (n=96) against 58.2% for the rest.
+#
+# So a leg under 58% is not a weak lean, it is a coin flip wearing a number,
+# and it has no business in a parlay. The board says so out loud rather than
+# printing 55% and letting it read as an edge.
+NO_EDGE, LEAN, SOLID = 58.0, 64.0, 72.0
+
+
+def tier_of(mc):
+    """-> (key, label) for a confidence in percent, or None if unrated."""
+    if mc is None:
+        return None, None
+    if mc < NO_EDGE:
+        return "coin", "coin flip"
+    if mc < LEAN:
+        return "lean", "lean"
+    if mc < SOLID:
+        return "solid", "solid"
+    return "strong", "strong"
 
 
 def implied(american):

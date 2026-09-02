@@ -937,3 +937,121 @@ gaps fall from -13 to between -0.3 and -6.
 Three leagues previously dropped for losing to the home baseline (League One,
 South Africa, Austria) are back: they were rejected on the same underpowered
 per-league test, and the pooled result covers them.
+
+---
+
+# The dead zone (2026-09-01)
+
+Asked to push tennis and baseball higher, I tested five ideas. Four failed.
+The one that worked is not a better model — it is the discovery that half of
+what the model prints is noise wearing a number.
+
+## What was tested and rejected
+
+**MLB park factors.** Built point-in-time (a park's runs per game against the
+league, shrunk by sample size, from prior games only), used both to de-park
+team run rates and to re-park the run estimate for the game being played.
+Result: 3 picks changed out of 760, accuracy −0.1 pts.
+
+There is a reason, and it is algebraic rather than empirical. Pythagenpat is a
+*ratio* — `r_a^e / (r_a^e + r_h^e)`. A park factor multiplies both teams'
+expected runs by the same number, so it cancels exactly. Park can only reach
+the win probability through the second-order de-biasing of team rates, and that
+is worth nothing measurable. A park factor cannot help a ratio model unless it
+acts asymmetrically on the two sides — which needs batted-ball profiles the
+public feed does not carry.
+
+**MLB recency weighting.** Exponentially weighted team run rates against the
+flat season average, half-lives from 100 games down to 10:
+
+    season average          57.5%   Brier 0.2446   n=760
+    half-life 100 games     56.6%   (-0.9 pts)
+    half-life  40 games     56.7%   (-0.8 pts)
+    half-life  10 games     54.6%   (-2.9 pts)
+
+Monotonic and consistent on both holdout windows: the harder you weight recent
+games, the worse it gets. Team run-scoring is stable; recency weighting just
+throws away sample. **This is the fourth time in this project that "use recent
+form" has lost on held-out data.** It should stop being proposed.
+
+**Tennis Elo, repaired three ways.** `tennis.py` rejected Elo for rating
+Challenger grinders above Djokovic. In this ESPN sample the mechanism looked
+concrete and fixable: 2,600 of 7,919 matches are qualifying rounds, where a
+player can bank three wins that count as much as a Slam quarterfinal. So Elo
+was rebuilt with K scaled by draw level, by event tier, and by both:
+
+    plain         58.4%   (the rejected one)
+    round         56.2%   (-2.2 pts)   <- the hypothesis
+    tier          58.5%   (+0.1 pts)
+    both          57.5%   (-0.9 pts)
+    sets          58.8%   (+0.5 pts)
+    surface       58.4%   (+0.0 pts)
+
+Discounting qualifying matches made it *worse*, and every other variant landed
+inside one standard error (n=877, s.e. 1.7 pts). The qualifying-round theory
+was wrong, and separate surface ratings — the single most-cited tennis
+adjustment there is — did nothing at all.
+
+## What survived: the model is a coin flip half the time
+
+Walk-forward Elo over 3,224 completed 2026 matches, cut into monthly blocks
+the thresholds were never fitted to:
+
+    says 50-58%   803/1577 = 50.9%  (+-1.3)
+    says 58-64%   504/826  = 61.0%  (+-1.7)
+    says 64%+     580/821  = 70.6%  (+-1.7)
+
+The bottom band is not a weak edge. It is *nothing* — 50.9% against a coin's
+50%, with an error bar of 1.3 points. And it is not a quirk of one window or
+one hyperparameter. Every month gives it:
+
+    May 53.6%   June 49.0%   July 50.3%   August 50.8%
+
+and so does every K (16 → 53.9%, 24 → 53.4%, 32 → 50.9%, 48 → 50.4%). No
+monotone rescaling can repair it, because rescaling cannot create a flat
+region where the data has one.
+
+MLB shows the same shape, weaker and less well powered. Games where the two
+starters are within a quarter of a run of each other, on a holdout the cut was
+frozen before touching:
+
+    close-pitcher games    48/96   =  50.0%  (+-5.1)
+    clear-pitcher games   171/294  =  58.2%  (+-2.9)
+
++8.2 points, but only 1.4 standard errors — suggestive, not established. It
+points the same way on the training half (+2.9), and the close bucket has never
+once cleared 55% in any window.
+
+## Why this is worth more than a better model
+
+For a single bet, a 55% leg is mildly positive. For a parlay it is poison,
+because the slip multiplies. Keeping only tennis legs the model calls 58% or
+better:
+
+    keep everything      877 legs   58.4%
+    keep >= 58%          440 legs   65.9%
+    keep >= 64%          201 legs   73.1%
+    keep >= 70%           97 legs   78.4%
+
+Half the slate, a 7.5-point jump in per-leg hit rate. Across twenty legs that
+is the difference between one slip in five thousand and one in thirty.
+
+No model change achieved anything close to that. Throwing away the bottom half
+of the board did.
+
+## Shipped
+
+`rebuild_board.py` now tags every pick with a conviction tier at the measured
+break points (58 / 64 / 72), and `board.html` hides the coin flips by default
+with a one-click reveal. The tiers are cuts in the number the board already
+prints, so nothing about the underlying models changed — the page just stops
+presenting a coin flip as a lean.
+
+**Caveat, stated plainly:** the thresholds come from walk-forward Elo, because
+Elo is the only tennis estimator that can be built point-in-time from this
+feed. The shipped board runs on ranking points, whose current values are
+contaminated by the very matches any backtest would score. The *mechanism* —
+two close players produce a coin flip, and no strength model can beat that — is
+estimator-independent. The exact cut is not. The ledger now tags each graded
+pick with its tier, so within a few hundred more calls the board can be
+validated against its own record instead of a proxy.
