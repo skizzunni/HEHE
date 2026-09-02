@@ -56,7 +56,7 @@ def snapshot():
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 mc = round(r["myconf"] * 100, 1) if r["myconf"] else None
-                hit, hit_n = blended_hit(k, k in SOCCER, mc, live)
+                hit, hit_n = blended_hit(k, k in SOCCER, mc, live, r["why"])
                 tk, tl, hide = tier_of(k, mc, hit)
                 pk, pl = price_note(k, k in SOCCER,
                                     (leg or {}).get("price"),
@@ -167,27 +167,47 @@ MEASURED = {
 PRIOR_N = 40.0
 
 
-def _band_key(league, mc):
-    """-> (sport, band cut) naming the band a pick falls in, or None."""
+# Tennis confidence is built from the two rankings. When the opponent is
+# unranked the model has no information about them and substitutes a default,
+# so the number it prints is manufactured rather than measured -- and the
+# ledger shows it: holding claimed confidence almost fixed at 72-84%, picks
+# against a RANKED opponent went 16/17 (94.1%) while picks against an
+# unranked one went 9/14 (64.3%). Across all 90 settled tennis picks the
+# calibration error flips sign with it (+5.3 ranked, -3.4 unranked).
+#
+# n is too small to hard-code a penalty, so this splits the band instead and
+# lets each half earn its own rate from the record. The separation widens
+# only as fast as the evidence supports.
+def opponent_unranked(why):
+    """True when the model priced this pick against an unranked opponent."""
+    if not why:
+        return None
+    m = re.search(r"rank\s+(\S+)\s+vs\s+(\S+)", why)
+    return m.group(2) == "NR" if m else None
+
+
+def _band_key(league, mc, why=None):
+    """-> (sport, cut, opponent-unranked) naming this pick's band, or None."""
     if mc is None:
         return None
     sport = "tennis" if league in ("atp", "wta") else (
         "mlb" if league == "mlb" else None)
     if sport is None:
         return None
+    nr = opponent_unranked(why) if sport == "tennis" else None
     for cut, _ in MEASURED[sport]:
         if mc >= cut:
-            return sport, cut
+            return sport, cut, nr
     return None
 
 
 def live_bands(entries):
-    """-> {(sport, cut): (n, won)} from every settled pick on the ledger."""
+    """-> {band key: (n, won)} from every settled pick on the ledger."""
     out = {}
     for e in entries:
         if e.get("status") not in ("won", "lost"):
             continue
-        key = _band_key(e.get("league"), e.get("conf"))
+        key = _band_key(e.get("league"), e.get("conf"), e.get("why"))
         if key is None:
             continue
         n, w = out.get(key, (0, 0))
@@ -195,16 +215,16 @@ def live_bands(entries):
     return out
 
 
-def blended_hit(league, is_soccer, mc, live):
+def blended_hit(league, is_soccer, mc, live, why=None):
     """Backtest rate for this band, corrected by what it has actually done.
 
     Returns (rate, live_n) so the board can show the evidence behind the
     number rather than asking to be taken on faith.
     """
-    key = _band_key(league, mc)
+    key = _band_key(league, mc, why)
     if key is None:
         return None, 0
-    sport, cut = key
+    sport, cut, _nr = key
     prior = dict(MEASURED[sport])[cut]
     n, w = live.get(key, (0, 0))
     return (PRIOR_N * prior + w) / (PRIOR_N + n), n

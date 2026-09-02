@@ -1359,3 +1359,47 @@ lying about it.
 
 The honest state of play: tennis at 64%+ is the part of this board that has
 earned money. MLB moneyline has not, and now says so on its face.
+
+## The unranked-opponent hole
+
+Tennis confidence is built from the two rankings. When the opponent is
+unranked the model has nothing to work from and substitutes a default — so
+the number it prints there is manufactured, not measured. The ledger shows it
+clearly. Holding the claimed confidence almost fixed at 72-84%:
+
+```
+                        n   won   actual    said
+opponent RANKED        17    16    94.1%   77.4%
+opponent UNRANKED      14     9    64.3%   78.7%
+```
+
+Near-identical claims, a 29.8-point gap in what they delivered. Across all 90
+settled tennis picks the calibration error flips sign with it: +5.3 when the
+opponent is ranked, −3.4 when they are not. Five of the six losses in the
+whole 72%+ tier came against an unranked opponent.
+
+At 1.65 standard errors this is suggestive, not proven, and the historical
+sample cannot settle it — the archived backtest carries no point-in-time
+rankings, only names and results, so testing it there would mean scoring past
+matches with today's ranking list. That is look-ahead contamination and it
+was not done.
+
+So no penalty was hard-coded. The band was **split** instead, and each half
+now earns its own rate off the record: 72%+ against a ranked opponent sits at
+0.847 (22/23 live), against an unranked one at 0.769 (14/19). The gap widens
+only as fast as the evidence supports, and both halves stay on the board.
+
+## The arithmetic nobody wants to hear
+
+The best single leg this board has ever produced measures in the mid-80s.
+Ranked in order, a card of the strongest available legs runs:
+
+```
+1 leg  84.7%      4 legs 51.5%      8 legs 26.5%
+2 legs 71.7%      5 legs 43.6%     14 legs  9.8%
+```
+
+Four legs is where it crosses a coin flip. No amount of model work changes
+that — 0.847^4 is 51.5% however good the picks are. The card now leads with
+1-2-3-4 rather than starting at 5, because that is the range where the board's
+edge survives contact with the multiplication.
