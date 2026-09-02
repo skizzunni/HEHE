@@ -42,6 +42,8 @@ def snapshot():
     # every soccer competition collapses into one tab -- a parlay is built
     # across leagues, not within one, so splitting them cost more than it gave
     SOCCER = {k for k, p, _ in d.LEAGUES if p.startswith("soccer/")}
+    # what each band has actually done, so the badges answer to the record
+    live = live_bands(ledger.load().values())
     for slot in ("today", "tomorrow"):
         lg = {}
         soccer_rows = []
@@ -54,26 +56,31 @@ def snapshot():
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 mc = round(r["myconf"] * 100, 1) if r["myconf"] else None
-                tk, tl, hide = tier_of(k, mc)
+                hit, hit_n = blended_hit(k, k in SOCCER, mc, live)
+                tk, tl, hide = tier_of(k, mc, hit)
                 pk, pl = price_note(k, k in SOCCER,
                                     (leg or {}).get("price"),
                                     bool(leg and leg.get("dog")))
                 rows.append({"mp": r["mypick"], "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
                              "pk": pk, "pl": pl,
-                             "hit": measured_hit(k, k in SOCCER, mc),
+                             "hit": round(hit, 4) if hit is not None else None,
+                             "hn": hit_n,
                              "why": r["why"],
                              "p": leg["price"] if leg else None,
                              "d": bool(leg["dog"]) if leg else False,
                              "dk": (leg or {}).get("dk"),
                              "lg": lab})
-            # strongest calls first; anything unrated sinks to the bottom
-            rows.sort(key=lambda x: (x["mc"] is None, -(x["mc"] or 0)))
+            # rank by what the band has actually hit, not by a raw confidence
+            # that means something different in every sport
+            rows.sort(key=lambda x: (x["mc"] is None, -(x["hit"] or 0),
+                                     -(x["mc"] or 0)))
             if k in SOCCER:
                 soccer_rows.extend(rows)
             else:
                 lg[k] = {"label": lab, "rows": rows}
-        soccer_rows.sort(key=lambda x: (x["mc"] is None, -(x["mc"] or 0)))
+        soccer_rows.sort(key=lambda x: (x["mc"] is None, -(x["hit"] or 0),
+                                        -(x["mc"] or 0)))
         lg["soccer"] = {"label": "Soccer", "rows": soccer_rows}
         out["slots"][slot] = lg
     out["results"] = ledger.board_payload()
@@ -149,22 +156,67 @@ MEASURED = {
     "mlb":    ((61.0, 0.596), (57.0, 0.580), (0.0, 0.550)),
 }
 
+# The backtest is a prior, not a verdict. Every settled pick on this board is
+# evidence about how a band ACTUALLY performs live, and where the two disagree
+# the live record has to be allowed to win -- otherwise the board keeps
+# advertising a number the results have already contradicted.
+#
+# PRIOR_N is how many backtest games one live game is worth arguing against.
+# At 40 a single day barely moves a band and a full month moves it a long way,
+# which is the behaviour we want: responsive, not twitchy.
+PRIOR_N = 40.0
 
-def measured_hit(league, is_soccer, mc):
-    """Observed hit rate for a pick like this one, or None where untested."""
+
+def _band_key(league, mc):
+    """-> (sport, band cut) naming the band a pick falls in, or None."""
     if mc is None:
         return None
-    table = MEASURED["tennis"] if league in ("atp", "wta") else (
-        MEASURED["mlb"] if league == "mlb" else None)
-    if table is None:
-        # soccer and the rest have no per-band study yet; the pooled soccer
-        # result (49.1% outright against a 46.3% baseline) is all there is,
-        # so say so rather than invent a band
+    sport = "tennis" if league in ("atp", "wta") else (
+        "mlb" if league == "mlb" else None)
+    if sport is None:
         return None
-    for cut, hit in table:
+    for cut, _ in MEASURED[sport]:
         if mc >= cut:
-            return hit
+            return sport, cut
     return None
+
+
+def live_bands(entries):
+    """-> {(sport, cut): (n, won)} from every settled pick on the ledger."""
+    out = {}
+    for e in entries:
+        if e.get("status") not in ("won", "lost"):
+            continue
+        key = _band_key(e.get("league"), e.get("conf"))
+        if key is None:
+            continue
+        n, w = out.get(key, (0, 0))
+        out[key] = (n + 1, w + (e["status"] == "won"))
+    return out
+
+
+def blended_hit(league, is_soccer, mc, live):
+    """Backtest rate for this band, corrected by what it has actually done.
+
+    Returns (rate, live_n) so the board can show the evidence behind the
+    number rather than asking to be taken on faith.
+    """
+    key = _band_key(league, mc)
+    if key is None:
+        return None, 0
+    sport, cut = key
+    prior = dict(MEASURED[sport])[cut]
+    n, w = live.get(key, (0, 0))
+    return (PRIOR_N * prior + w) / (PRIOR_N + n), n
+
+
+# A badge has to mean the same thing in every sport or it is false
+# advertising. These cuts are on the MEASURED hit rate, not on a model
+# confidence, so "solid" is one promise across the whole board: tennis at 72%
+# confidence and MLB at 62% confidence get the same word only if they have
+# earned the same result.
+LABEL_CUTS = ((0.75, "strong", "strong"), (0.65, "solid", "solid"),
+              (0.57, "lean", "lean"), (0.53, "thin", "thin"))
 
 
 DOG_FRIENDLY = {"mlb", "nhl", "wnba"}       # underdogs carry the lighter tax
@@ -189,35 +241,25 @@ def price_note(league, is_soccer, price, dog):
     return None, None
 
 
-TENNIS_CUTS = (58.0, 64.0, 72.0)
-MLB_CUTS = (57.0, 61.0)
+TENNIS_DEAD_ZONE = 58.0     # replicated across every month and every K
 
 
-def tier_of(league, mc):
-    """-> (key, label, hide) for a confidence in percent.
+def tier_of(league, mc, hit):
+    """-> (key, label, hide) for a pick, from its measured hit rate.
 
-    `hide` marks legs with no measured edge, which the board keeps out of the
-    default view. Only tennis has a band that earns it.
+    `hide` is reserved for the tennis dead zone -- the one band with a
+    replicated no-signal finding. Everything else stays on the board wearing
+    an honest label, because a weak pick you can see beats a hidden one.
     """
     if mc is None:
         return None, None, False
-    if league in ("atp", "wta"):
-        a, b, c = TENNIS_CUTS
-        if mc < a:
-            return "coin", "coin flip", True
-        if mc < b:
-            return "lean", "lean", False
-        if mc < c:
-            return "solid", "solid", False
-        return "strong", "strong", False
-    if league == "mlb":
-        a, b = MLB_CUTS
-        if mc < a:
-            return "thin", "thin", False
-        if mc < b:
-            return "lean", "lean", False
-        return "solid", "solid", False
-    return None, None, False
+    dead = league in ("atp", "wta") and mc < TENNIS_DEAD_ZONE
+    if hit is None:
+        return (None, None, dead)
+    for cut, key, label in LABEL_CUTS:
+        if hit >= cut:
+            return key, label, dead
+    return "coin", "coin flip", dead
 
 
 def implied(american):

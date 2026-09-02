@@ -1292,3 +1292,70 @@ this feed, so it carries no chip.
 This is the second finding in a row that is about the price rather than the
 game — and the first one that would have done real damage if it had been
 generalised on instinct instead of measured.
+
+## The badge audit: why "solid" was losing
+
+Sky asked the obvious question — how is a leg labelled *strong* or *solid*
+still losing? Pulling the ledger apart answered it, and the answer was not
+variance.
+
+116 settled picks, split by the tier each one was wearing:
+
+```
+sport   tier      n  won  actual    said     gap    +-
+tennis  strong   42   36   85.7%   80.8%   +4.9    7.7
+tennis  solid    17   13   76.5%   67.5%   +8.9   12.1
+tennis  lean     12    7   58.3%   60.5%   -2.2   14.4
+tennis  coin     17    9   52.9%   53.3%   -0.3   12.1
+mlb     solid     4    3   75.0%   63.5%  +11.5   25.0
+mlb     lean      7    3   42.9%   58.3%  -15.4   18.9
+mlb     thin     16    8   50.0%   52.7%   -2.7   12.5
+```
+
+Tennis is not the problem. Both of its top tiers beat what they claimed.
+By league: WTA 76.0% over 50, ATP 71.1% over 38, **MLB 51.9% over 27**.
+
+The defect was that "solid" was defined per sport on the model's own
+confidence scale, and those scales are not the same thing. Tennis needed 72%
+to earn the word. MLB needed 61% — against a model that tops out at 66%. So
+the same badge was being handed to a 76.5% pick and to a coin flip.
+
+### MLB moneyline produces no independent information
+
+Worse than mislabelled — the MLB model is a favourite-follower that adds
+nothing over the price it is standing next to:
+
+```
+I took the book favourite   n=25  won 52.0%   book implied 58.9%   ROI -12.30%
+blind "always book favourite" on the same 27 games:  51.9%
+my model on the same 27 games:                       51.9%
+```
+
+Identical. It picks the book's side 25 times in 27. Its own confidence
+carries nothing within the sport (under 57%: 50.0%, over 57%: 54.5%, ±13),
+and the games where it claimed the biggest edge over the price won 50.0%.
+
+Brier over those 27: model 0.2452, de-vigged book 0.2467, coin flip 0.2500.
+Nobody — the book included — has demonstrated a read on this sample. Swapping
+to a market-anchored number would not have helped, so it was not done.
+
+### What shipped
+
+Nothing was removed from the board. The full slate stays; the labels stopped
+lying about it.
+
+1. **A badge now means one thing everywhere.** Tiers are cut on the MEASURED
+   hit rate, not on a per-sport confidence scale: 75% earns *strong*, 65%
+   *solid*, 57% *lean*, 53% *thin*, below that *coin flip*.
+2. **The backtest is a prior, not a verdict.** Every settled pick updates its
+   band, weighted at `PRIOR_N = 40` backtest games per live game, so a band
+   that stops working stops advertising. Tennis's top band has climbed
+   0.784 → 0.821 on 36/42 live; MLB's has fallen 0.596 → 0.610 on n=4 and its
+   two lower bands to 0.557 and 0.536.
+3. **Every MLB leg that said *solid* now says *lean* or *thin*.** 17 legs
+   moved down a tier; not one left the board.
+4. **The card ranks by measured rate**, and prints the sample size behind it,
+   so a number can be argued with instead of trusted.
+
+The honest state of play: tennis at 64%+ is the part of this board that has
+earned money. MLB moneyline has not, and now says so on its face.
