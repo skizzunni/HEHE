@@ -580,9 +580,19 @@ const amer = d => d >= 2 ? "+" + Math.round((d-1)*100) : "-" + Math.round(100/(d
 
 function rowFor(id){
   const [lg, name] = id.split("|");
-  const r = ((D.slots[slot] || {})[lg] || D.slots.today[lg] || D.slots.tomorrow[lg] || {rows:[]})
-              .rows.find(x => x.mp === name);
-  return r ? Object.assign({id, lg}, r) : null;
+  // Look for the ROW, not merely the league bucket. The old version took the
+  // first slate that had a bucket for this league and stopped there, so on
+  // the Card -- which shows tomorrow once today has emptied -- it kept
+  // matching today's zero-row bucket and returned nothing, and legs could not
+  // be added to the slip at all.
+  const slates = [D.slots[slot], D.slots.today, D.slots.tomorrow];
+  for(const sl of slates){
+    const bucket = sl && sl[lg];
+    if(!bucket || !bucket.rows) continue;
+    const r = bucket.rows.find(x => x.mp === name);
+    if(r) return Object.assign({id, lg}, r);
+  }
+  return null;
 }
 function toggle(id){
   const i = SLIP.findIndex(x => x.id === id);
@@ -602,7 +612,9 @@ function drawSlip(){
 
   const priced = SLIP.filter(r => r.p);
   const combined = priced.reduce((a,r) => a * dec(r.p), 1);
-  const mine = SLIP.reduce((a,r) => a * ((r.mc || 50)/100), 1);
+  // prefer each leg's MEASURED hit rate over the raw model number -- that is
+  // what the backtests actually observed for a pick in its band
+  const mine = SLIP.reduce((a,r) => a * (r.hit || ((r.mc || 50)/100)), 1);
   const implied = priced.length ? 1/combined : null;
   const ev = (implied !== null && priced.length === SLIP.length) ? mine*combined - 1 : null;
   const rows = [];
