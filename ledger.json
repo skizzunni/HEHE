@@ -160,10 +160,10 @@
   "conf": 92.1,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Alexander Zverev": "6",
-   "Lorenzo Sonego": "4"
+   "Alexander Zverev": "6 1",
+   "Lorenzo Sonego": "4 1"
   },
   "logged": "2026-09-01T20:37",
   "market_agrees": null,
@@ -372,7 +372,7 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Francesco Passaro": "6 2 6 0",
+   "Francesco Passaro": "6 2 6 1",
    "Jesper de Jong": "2 6 4 1"
   },
   "logged": "2026-09-01T16:22",
@@ -2504,9 +2504,9 @@
   "conf": 57.1,
   "dog": false,
   "league": "mlb",
-  "live": "Top 9th",
+  "live": "Bot 9th",
   "live_score": {
-   "Boston Red Sox": 4,
+   "Boston Red Sox": 6,
    "Seattle Mariners": 9
   },
   "logged": "2026-09-01T18:22",
@@ -2522,7 +2522,7 @@
   "conf": 61.2,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 8th",
+  "live": "Top 9th",
   "live_score": {
    "Pittsburgh Pirates": 12,
    "San Francisco Giants": 12
@@ -2577,7 +2577,7 @@
   "conf": 60.4,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 5th",
+  "live": "Mid 6th",
   "live_score": {
    "Chicago White Sox": 3,
    "Houston Astros": 0
@@ -2595,7 +2595,7 @@
   "conf": 52.6,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 7th",
+  "live": "Top 8th",
   "live_score": {
    "Detroit Tigers": 1,
    "Minnesota Twins": 14
@@ -2611,21 +2611,23 @@
  },
  "mlb:401816767": {
   "conf": 51.2,
+  "diagnosis": "margin 3 \u00b7 close \u00b7 the book had my side favoured too \u00b7 called at 51%",
   "dog": false,
   "league": "mlb",
-  "live": "Bot 9th",
-  "live_score": {
-   "Kansas City Royals": 2,
-   "Miami Marlins": 6
-  },
   "logged": "2026-09-01T19:22",
   "market_agrees": true,
   "matchup": "MIA @ KC",
   "pick": "Kansas City Royals",
   "price": "-114",
-  "status": "open",
+  "scores": {
+   "Kansas City Royals": 3,
+   "Miami Marlins": 6
+  },
+  "settled": "2026-09-01T22:07",
+  "status": "lost",
   "tip": "7:40 PM",
-  "why": "Dobnak 1.92 ERA/3.74 FIP vs Phillips 3.59 \u00b7 pen 5.09 v 4.01 \u00b7 L10 8-2 v 5-5"
+  "why": "Dobnak 1.92 ERA/3.74 FIP vs Phillips 3.59 \u00b7 pen 5.09 v 4.01 \u00b7 L10 8-2 v 5-5",
+  "winner": "Miami Marlins"
  },
  "mlb:401816768": {
   "conf": 54.5,
@@ -2634,7 +2636,7 @@
   "live": "Top 7th",
   "live_score": {
    "Chicago Cubs": 4,
-   "Milwaukee Brewers": 5
+   "Milwaukee Brewers": 6
   },
   "logged": "2026-09-01T19:22",
   "market_agrees": true,
@@ -2667,7 +2669,7 @@
   "conf": 64.3,
   "dog": false,
   "league": "mlb",
-  "live": "Top 2nd",
+  "live": "Bot 2nd",
   "live_score": {
    "Los Angeles Angels": 0,
    "New York Yankees": 3
@@ -2685,7 +2687,7 @@
   "conf": 51.6,
   "dog": true,
   "league": "mlb",
-  "live": "Bot 1st",
+  "live": "Top 2nd",
   "live_score": {
    "Arizona Diamondbacks": 0,
    "Philadelphia Phillies": 2
@@ -4163,11 +4165,6 @@
   "conf": 68.6,
   "dog": false,
   "league": "wta",
-  "live": "1st",
-  "live_score": {
-   "Iva Jovic": "4",
-   "Magdalena Frech": "3"
-  },
   "logged": "2026-09-01T20:37",
   "market_agrees": null,
   "matchup": "Magdalena Frech @ Iva Jovic",
@@ -4221,7 +4218,7 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Alexandra Eala": "0",
+   "Alexandra Eala": "2",
    "Mary Stoiana": "0"
   },
   "logged": "2026-09-01T21:50",
@@ -4257,10 +4254,10 @@
   "conf": 55.0,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Francesca Jones": "5",
-   "Magda Linette": "4"
+   "Francesca Jones": "6 0",
+   "Magda Linette": "4 0"
   },
   "logged": "2026-09-01T20:37",
   "market_agrees": null,
@@ -4388,19 +4385,20 @@
   "conf": 71.9,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Arantxa Rus": "6(6) 2",
-   "Leolia Jeanjean": "7(8) 4"
-  },
   "logged": "2026-09-01T17:17",
   "market_agrees": null,
   "matchup": "Leolia Jeanjean @ Arantxa Rus",
   "pick": "Leolia Jeanjean",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Arantxa Rus": "6(6) 2",
+   "Leolia Jeanjean": "7(8) 6"
+  },
+  "settled": "2026-09-01T22:08",
+  "status": "won",
   "tip": "6:15 PM",
-  "why": "rank 127 vs NR"
+  "why": "rank 127 vs NR",
+  "winner": "Leolia Jeanjean"
  },
  "wta:182650": {
   "conf": 71.5,
