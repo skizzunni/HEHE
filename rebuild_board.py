@@ -66,6 +66,8 @@ def snapshot():
                              "pk": pk, "pl": pl,
                              "hit": round(hit, 4) if hit is not None else None,
                              "hn": hit_n,
+                             "fv": fair_price(hit),
+                             "ev": edge_pct(hit, (leg or {}).get("price")),
                              "why": r["why"],
                              "p": leg["price"] if leg else None,
                              "d": bool(leg["dog"]) if leg else False,
@@ -152,9 +154,42 @@ def snapshot():
 # for that band, which is comparable across sports and is what a slip actually
 # multiplies together.
 MEASURED = {
+    # Cutting the top band finer (88 / 80 / 72) was tried and REVERTED. The
+    # ledger does show a gradient across it -- 82.6% / 84.6% / 100% on n of
+    # 23 / 13 / 7 -- but crossing that with the ranked-opponent split leaves
+    # cells of three and four picks, all inheriting the same prior, so the
+    # only thing separating them is noise. It duly inverted: a 95.3% call
+    # came out BELOW a 78.7% call. A band has to be wide enough to carry a
+    # number, and above 72% that means one band.
     "tennis": ((72.0, 0.784), (64.0, 0.706), (58.0, 0.610), (0.0, 0.509)),
     "mlb":    ((61.0, 0.596), (57.0, 0.580), (0.0, 0.550)),
 }
+
+
+def fair_price(p):
+    """The American price at which a bet at probability `p` breaks even.
+
+    This is the number a professional works from and the board never had: a
+    pick is only worth backing if the book pays BETTER than its fair price,
+    however high the win probability is. An 85% leg offered at -2000 is a bad
+    bet; the same leg at -300 is a good one.
+    """
+    if p is None or not 0.0 < p < 1.0:
+        return None
+    return (f"-{round(100 * p / (1 - p))}" if p >= 0.5
+            else f"+{round(100 * (1 - p) / p)}")
+
+
+def edge_pct(p, american):
+    """Expected return per unit staked, in percent, or None with no price."""
+    if p is None or american is None:
+        return None
+    try:
+        v = int(str(american).replace("+", ""))
+    except (TypeError, ValueError):
+        return None
+    dec = 1 + (v / 100 if v > 0 else 100 / -v)
+    return round((p * dec - 1) * 100, 1)
 
 # The backtest is a prior, not a verdict. Every settled pick on this board is
 # evidence about how a band ACTUALLY performs live, and where the two disagree

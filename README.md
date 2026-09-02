@@ -1440,3 +1440,74 @@ below it.
 Nothing about this makes a leg better. It makes the trade visible, which is
 the only honest lever left: the picks were never the reason the days were
 not clean.
+
+## What professionals do that this board wasn't
+
+Four techniques from serious bettors, tested against our own record.
+
+### 1. Closing line value — no edge, and a flaw in how we log prices
+
+CLV is the pro's test of whether a model is real: winning is noisy, but
+consistently taking a better number than the market settles on is not.
+Pulled the close for all 27 graded MLB picks:
+
+```
+mean CLV +0.01 pts    median +0.00
+took a better price than the close on 8/27 = 29.6%
+```
+
+Zero. Which is what a model that takes the book's favourite 25 times in 27
+should produce — we are not beating the market, we are copying it.
+
+The test also exposed something worth fixing: **16 of the 27 recorded prices
+are identical to the close, to the decimal.** The board logs whatever price is
+showing when it rebuilds, so for a game near first pitch it is logging the
+closing line and calling it our number. Any future CLV work needs a price
+stamped at first sight, not at last look.
+
+### 2. Line movement — no signal
+
+The classic sharp read is that a line moving toward your side means smarter
+money agrees. Open and close recovered on 27/27:
+
+```
+market moved TOWARD my side   n=11   45.5%
+market moved AWAY             n=12   50.0%
+line barely moved             n= 4   75.0%
+```
+
+Nothing. Not shipped.
+
+### 3. Fair price — shipped, and it reframes the whole board
+
+The board ranked by probability and never asked what the price was. That is
+the single largest gap against how a professional bets, and it is not
+academic: **an 85% leg is a losing bet at −2000 and a good one at −300.**
+
+Every leg now carries its **fair price** — the number at which it breaks even
+at its measured rate — and, where a price exists, its **edge** (return per unit
+staked). The top of today's card measures 84.7%, which is fair value of −554;
+a book will price those favourites far shorter than that, so the board's
+best *picks* may well be its worst *bets*.
+
+Tennis has no odds feed anywhere in ESPN's API — site and core both return
+nothing, and that is our only source — so those 65 legs show a fair price to
+compare against your own book by hand rather than an edge we cannot compute.
+Ranked by edge, the priced legs invert the board completely: the top two today
+are a +118 White Sox and a +109 Arizona at +16.8% and +16.5%, both of them
+legs the probability ranking buries.
+
+### 4. Splitting the top band finer — tested and REVERTED
+
+The 72%+ band lumps a 95% call in with a 73% call. The ledger does show a
+gradient (82.6% / 84.6% / 100% at n = 23 / 13 / 7), so the band was cut at 80
+and 88 — and it produced nonsense. Crossed with the ranked-opponent split it
+left cells of three and four picks all inheriting the same prior, so only
+noise separated them, and it duly inverted: a 95.3% call came out *below* a
+78.7% one. Reverted the same hour. Above 72% the evidence supports one band,
+not three.
+
+The remaining confidence/rate inversions on the board are all the
+ranked-opponent split doing its job — Sabalenka at 95.3% against an unranked
+opponent sits below Alcaraz at 89.8% against a ranked one, deliberately. Zero
+inversions are unexplained by it.
