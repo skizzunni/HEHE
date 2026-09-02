@@ -51,8 +51,8 @@ def snapshot():
         for k, _, lab in d.LEAGUES:
             rows = []
             for r in d._STATE["slots"][slot].get(k) or []:
-                if not r.get("mypick"):
-                    continue
+                if not r.get("mypick") or r["mypick"].strip().upper() == "TBD":
+                    continue          # an undetermined competitor is not a pick
                 # join the price to my side; legs are keyed away/home, picks by name
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)
@@ -67,10 +67,14 @@ def snapshot():
                 rows.append({"mp": r["mypick"], "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
                              "pk": pk, "pl": pl,
+                             # fair price and edge come from the SAME rounded
+                             # rate the row displays, so the three never
+                             # disagree by a rounding step on screen
                              "hit": round(hit, 4) if hit is not None else None,
                              "hn": hit_n,
-                             "fv": fair_price(hit),
-                             "ev": edge_pct(hit, (leg or {}).get("price")),
+                             "fv": fair_price(round(hit, 4) if hit is not None else None),
+                             "ev": edge_pct(round(hit, 4) if hit is not None else None,
+                                            (leg or {}).get("price")),
                              "why": r["why"],
                              "p": leg["price"] if leg else None,
                              "d": bool(leg["dog"]) if leg else False,

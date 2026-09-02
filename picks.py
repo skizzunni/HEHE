@@ -307,6 +307,15 @@ def tennis_picks(day, tour=None):
                           for x in c.get("competitors", [])]
                     if len(ps) != 2 or not all(ps):
                         continue
+                    # A draw slot that has not been filled yet is published as
+                    # "TBD". Rating it as an unranked 180-point player produced
+                    # real-looking picks against an opponent who does not exist:
+                    # four legs were sitting in the board's top tier at 73-83%
+                    # confidence, labelled "strong", against nobody. Those
+                    # matches are neither modellable nor bettable, so they are
+                    # skipped until the draw resolves.
+                    if any(p.strip().upper() == "TBD" for p in ps):
+                        continue
                     seen.add(c.get("id"))
                     lp = math.log(pts(ps[0])) - math.log(pts(ps[1]))
                     sc = S_RANKED if (scaled(ps[0]) and scaled(ps[1])) else S_OTHER

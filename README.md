@@ -1870,3 +1870,63 @@ What the board can honestly do is what it now does: state a measured rate,
 convert it to a fair price, and show the offered price beside it. Where a book
 hangs a number worse than fair, that is visible. That is line shopping, not
 prediction, and it is the part that survives contact with a closing line.
+
+## Full audit: every graded pick and every open leg
+
+Asked to check everything once more and be sure of it. Two independent
+audits, one over the settled record and one over the live board.
+
+### The record is clean
+
+Every graded pick re-verified against ESPN from scratch, not trusting the
+grader: is the game really final, is the recorded winner the team ESPN says
+won, and does won/lost follow from pick-vs-winner.
+
+```
+graded picks           197
+verified against ESPN  176
+DISCREPANCIES            0
+```
+
+The 21 unverified are older games ESPN's scoreboard no longer lists; nothing
+about them is contradicted, they simply cannot be re-checked.
+
+### The board had picks against opponents who do not exist
+
+Auditing the 100 open legs — pick is a real competitor, price belongs to our
+side, dog flag matches the price sign, fair price and edge follow from the
+probability, no duplicates — turned up the one that matters.
+
+ESPN publishes an undrawn slot as a competitor literally named **"TBD"**, and
+64 of tomorrow's 478 ATP singles competitions had one. The tennis model rated
+TBD as an unranked 180-point player, so:
+
+```
+wta  Nikola Bartunkova        83.3%   strong   rank 34 vs NR
+atp  Botic Van De Zandschulp  77.3%   strong   rank 70 vs NR
+atp  Arthur Gea               74.4%   strong   rank 87 vs NR
+atp  Benjamin Bonzi           73.3%   strong   rank 97 vs NR
+```
+
+Four legs sitting in the board's **top tier**, labelled strong, priced at the
+0.776 NR band — against nobody. The "NR" in those reasons was never an
+unranked player; it was a match that has not been drawn. Six more legs were
+TBD-versus-TBD and picked "TBD" itself.
+
+Both the model and the board now skip a competition with an undetermined
+competitor. This also puts the NR band under suspicion: some of what made
+"opponent unranked" weaker than "opponent ranked" was confidence computed
+against a placeholder rather than a player. The band keeps earning its rate
+from results either way.
+
+### Also fixed
+
+Fair price and edge are now derived from the same rounded rate the row
+displays, so the three numbers on a line can never disagree by a rounding
+step (a leg showed 25.28% with a fair price of +295 where its own displayed
+rate implies +296).
+
+Three legs flagged as "tip time passed but still listed upcoming" were
+checked and are correct: the board's slate is captured on the hourly rebuild
+and those matches had started since, with the score refresh already tracking
+two of them live.
