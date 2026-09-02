@@ -931,8 +931,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Ben Shelton": "6 5 7(7) 0",
-   "Hubert Hurkacz": "3 7 6(3) 0"
+   "Ben Shelton": "6 5 7(7) 2",
+   "Hubert Hurkacz": "3 7 6(3) 1"
   },
   "logged": "2026-09-02T13:13",
   "market_agrees": null,
@@ -1474,7 +1474,7 @@
   "conf": 50.9,
   "dog": false,
   "league": "aut",
-  "live": "51'",
+  "live": "68'",
   "live_score": {
    "RB Salzburg": 4,
    "Rapid Vienna": 1
@@ -1533,10 +1533,10 @@
   "conf": 65.0,
   "dog": false,
   "league": "bel",
-  "live": "53'",
+  "live": "70'",
   "live_score": {
    "Sint-Truidense": 0,
-   "Union St.-Gilloise": 1
+   "Union St.-Gilloise": 3
   },
   "logged": "2026-09-02T14:28",
   "market_agrees": true,
@@ -1709,19 +1709,21 @@
   "conf": 51.6,
   "dog": true,
   "league": "den",
-  "live": "82'",
-  "live_score": {
-   "AGF": 0,
-   "FC Midtjylland": 2
-  },
   "logged": "2026-09-02T13:50",
   "market_agrees": false,
   "matchup": "MID @ AGF",
   "pick": "FC Midtjylland",
+  "played": "2026-09-02",
   "price": "+120",
-  "status": "open",
+  "scores": {
+   "AGF": 0,
+   "FC Midtjylland": 2
+  },
+  "settled": "2026-09-02T15:58",
+  "status": "won",
   "tip": "2:00 PM",
-  "why": "rating 1563 v 1575 (+11.64) \u00b7 last 10: 7-3"
+  "why": "rating 1563 v 1575 (+11.64) \u00b7 last 10: 7-3",
+  "winner": "FC Midtjylland"
  },
  "den:401874523": {
   "conf": 51.8,
@@ -1821,10 +1823,10 @@
   "conf": 62.8,
   "dog": false,
   "league": "ecu",
-  "live": "41'",
+  "live": "HT",
   "live_score": {
    "Macar\u00e1": 1,
-   "Manta F.C.": 0
+   "Manta F.C.": 1
   },
   "logged": "2026-09-02T14:53",
   "market_agrees": true,
@@ -1865,7 +1867,7 @@
   "conf": 52.2,
   "dog": false,
   "league": "efl1",
-  "live": "HT",
+  "live": "55'",
   "live_score": {
    "Charlton Athletic": 0,
    "West Bromwich Albion": 0
@@ -1883,10 +1885,10 @@
   "conf": 59.3,
   "dog": true,
   "league": "efl1",
-  "live": "HT",
+  "live": "56'",
   "live_score": {
    "Cardiff City": 0,
-   "Queens Park Rangers": 1
+   "Queens Park Rangers": 2
   },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
@@ -1901,10 +1903,10 @@
   "conf": 50.3,
   "dog": true,
   "league": "efl1",
-  "live": "HT",
+  "live": "53'",
   "live_score": {
    "Millwall": 0,
-   "Wrexham": 1
+   "Wrexham": 2
   },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
@@ -1919,7 +1921,7 @@
   "conf": 62.4,
   "dog": true,
   "league": "efl1",
-  "live": "39'",
+  "live": "HT",
   "live_score": {
    "Burnley": 0,
    "Middlesbrough": 1
@@ -2101,10 +2103,10 @@
   "conf": 57.8,
   "dog": true,
   "league": "efl2",
-  "live": "42'",
+  "live": "HT",
   "live_score": {
    "Mansfield Town": 0,
-   "Reading": 2
+   "Reading": 3
   },
   "logged": "2026-09-02T14:53",
   "market_agrees": false,
@@ -2139,10 +2141,10 @@
   "conf": 58.5,
   "dog": true,
   "league": "efl2",
-  "live": "HT",
+  "live": "56'",
   "live_score": {
    "Milton Keynes Dons": 0,
-   "Wigan Athletic": 1
+   "Wigan Athletic": 2
   },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
@@ -2178,9 +2180,9 @@
   "conf": 53.4,
   "dog": true,
   "league": "efl2",
-  "live": "HT",
+  "live": "55'",
   "live_score": {
-   "Luton Town": 0,
+   "Luton Town": 1,
    "Stockport County": 0
   },
   "logged": "2026-09-02T14:28",
@@ -2259,10 +2261,10 @@
   "conf": 50.2,
   "dog": true,
   "league": "efl2",
-  "live": "HT",
+  "live": "55'",
   "live_score": {
    "AFC Wimbledon": 1,
-   "Burton Albion": 2
+   "Burton Albion": 3
   },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
@@ -2318,7 +2320,7 @@
   "conf": 55.6,
   "dog": true,
   "league": "efl2",
-  "live": "HT",
+  "live": "55'",
   "live_score": {
    "Barnsley": 0,
    "Blackpool": 0
@@ -3425,9 +3427,9 @@
   "conf": 52.8,
   "dog": true,
   "league": "mlb",
-  "live": "Mid 5th",
+  "live": "Mid 6th",
   "live_score": {
-   "Atlanta Braves": 0,
+   "Atlanta Braves": 3,
    "Washington Nationals": 0
   },
   "logged": "2026-09-02T12:22",
@@ -3516,9 +3518,9 @@
   "conf": 57.0,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 3rd",
+  "live": "Bot 4th",
   "live_score": {
-   "Athletics": 3,
+   "Athletics": 5,
    "Texas Rangers": 2
   },
   "logged": "2026-09-02T14:28",
@@ -3586,9 +3588,9 @@
   "conf": 54.7,
   "dog": false,
   "league": "mlb",
-  "live": "Top 3rd",
+  "live": "Bot 3rd",
   "live_score": {
-   "Baltimore Orioles": 0,
+   "Baltimore Orioles": 3,
    "Colorado Rockies": 0
   },
   "logged": "2026-09-02T14:53",
@@ -3617,7 +3619,7 @@
   "conf": 59.5,
   "dog": true,
   "league": "mlb",
-  "live": "Top 1st",
+  "live": "End 1st",
   "live_score": {
    "Arizona Diamondbacks": 0,
    "Philadelphia Phillies": 0
@@ -3929,7 +3931,7 @@
   "conf": 51.1,
   "dog": true,
   "league": "par",
-  "live": "43'",
+  "live": "HT",
   "live_score": {
    "Libertad": 0,
    "Nacional Asunci\u00f3n": 1
@@ -4000,7 +4002,7 @@
   "conf": 54.0,
   "dog": true,
   "league": "par",
-  "live": "42'",
+  "live": "HT",
   "live_score": {
    "Sportivo Ameliano": 0,
    "Sportivo Trinidense": 1
@@ -4113,7 +4115,7 @@
   "conf": 57.3,
   "dog": true,
   "league": "sco",
-  "live": "HT",
+  "live": "57'",
   "live_score": {
    "Dundee United": 0,
    "Motherwell": 1
@@ -4131,7 +4133,7 @@
   "conf": 51.4,
   "dog": true,
   "league": "sco",
-  "live": "HT",
+  "live": "58'",
   "live_score": {
    "Kilmarnock": 0,
    "St Mirren": 1
@@ -4162,9 +4164,9 @@
   "conf": 58.1,
   "dog": false,
   "league": "sco",
-  "live": "42'",
+  "live": "HT",
   "live_score": {
-   "Falkirk": 0,
+   "Falkirk": 1,
    "Rangers": 1
   },
   "logged": "2026-09-02T14:53",
@@ -4180,7 +4182,7 @@
   "conf": 60.4,
   "dog": true,
   "league": "sco",
-  "live": "HT",
+  "live": "57'",
   "live_score": {
    "Dundee": 0,
    "St Johnstone": 0
@@ -4198,7 +4200,7 @@
   "conf": 69.4,
   "dog": false,
   "league": "sco",
-  "live": "HT",
+  "live": "53'",
   "live_score": {
    "Aberdeen": 0,
    "Celtic": 3
@@ -4244,7 +4246,7 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Karolina Muchova": "1",
+   "Karolina Muchova": "5",
    "Katie Boulter": "1"
   },
   "logged": "2026-09-02T15:24",
