@@ -23,6 +23,7 @@ import argparse
 import datetime as dt
 import html
 import json
+import sys
 import re
 import ssl
 import threading
@@ -252,20 +253,26 @@ ELO_LEAGUES = ({"wnba", "nba", "nhl", "ncaaf", "nfl", "ncaab"}
 def model_book(day):
     """My own forecast for every league that has a validated model for it."""
     book = {}
+    # A model that throws must not take the board down, but it must not vanish
+    # silently either -- an empty tab looked identical to "no games today", so
+    # a broken feed could go unnoticed for days. Every failure is now named.
+    def _fail(lgk, e):
+        print(f"model_book: {lgk} raised {type(e).__name__}: {e}", file=sys.stderr)
+        return {}
     try:
         book["mlb"] = P.mlb_picks(day)
-    except Exception:
-        book["mlb"] = {}
+    except Exception as e:
+        book["mlb"] = _fail("mlb", e)
     for lgk in ("atp", "wta"):
         try:
             book[lgk] = P.tennis_picks(day, tour=lgk)
-        except Exception:
-            book[lgk] = {}
+        except Exception as e:
+            book[lgk] = _fail(lgk, e)
     def one(lgk):
         try:
             return lgk, P.elo_picks(lgk, day)
-        except Exception:
-            return lgk, {}
+        except Exception as e:
+            return lgk, _fail(lgk, e)
     with ThreadPoolExecutor(max_workers=6) as ex:
         for lgk, v in ex.map(one, sorted(ELO_LEAGUES & {k for k, _, _ in LEAGUES})):
             book[lgk] = v

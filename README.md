@@ -1571,3 +1571,102 @@ Union SG        conf 65.0%   fair -128   offered -105   edge  +9.6%
 Three soccer favourites the confidence ranking treats as near-identical. Two
 are among the worst bets available at any price; one is the only positive-edge
 soccer leg on the board. Probability alone could never tell them apart.
+
+## Session audit: four bugs, one upgrade, one dead end
+
+Asked to upgrade everything and then check for any error. Done in that
+order, priority on football, MLB and tennis.
+
+### Bug 1 — the soccer model was betting the draw's probability
+
+The draw correction maps a raw Elo expectation onto "home wins outright",
+and the old code then used `1 − ph` as the away side's chance. In a
+three-way market that is P(away) **plus** P(draw). Any home favourite whose
+outright chance dipped under 50% flipped to an away pick wearing the draw's
+probability. That is the mechanism behind every soccer finding above: the
+underdog taken 38 times in 49, those dogs hitting 36.8% against a claimed
+~58%, and confidence running inverted. Both sides are now mapped to their
+own outright probability and the pick is the larger. Soccer is de-prioritised
+by request, so this is a fix, not an investment; the live band tracks it.
+
+### Bug 2 — football ratings were built from the wrong season
+
+`season_dates()` anchored every cross-year league to *last* year's start, so
+from the opening kickoff until January, NFL and NCAAF ratings were built from
+the previous season and never saw a current game. On the second day of the
+2026 season the NCAAF cache held 958 games — all of them 2025-26. NBA and NHL
+would have hit the same wall in October. The window is now the season that
+is current today.
+
+### Upgrade — prior-season carry-over, validated
+
+Fixing bug 2 exposed the cold-start problem it had been masking: every team
+began each season at 1500 flat, so early-season picks were noise dressed as
+Elo. The professional answer is to seed from last season's finish, regressed
+toward the mean. Validated on the 2024 season seeding 2025, Brier on the
+first four weeks:
+
+```
+                      NFL early   NFL full   NCAAF early  NCAAF full
+  cold start 1500      0.2357     0.2319       0.2095      0.2143
+  regress 33%          0.2093     0.2279       0.1949      0.2014
+  regress 25%          0.2071     0.2279       0.1938      0.2004
+  no regression        0.2017     0.2287       0.1911      0.1978
+```
+
+NFL early-season accuracy went **60.3% → 73.0%** (+12.7 pts, 2.0 s.e.). The
+row that matters most is the one not in the table: under the old gate (three
+current-season games before a prediction counts) the cold-start model could
+score **1 NCAAF game and 15 NFL games in the entire first month**. Zero
+regression was marginally best on this single pair of seasons, but that is
+the edge of the grid on one holdout; 25% ships. Applied to NFL, NCAAF, NBA,
+NCAAB, NHL and WNBA; soccer is excluded (35 competitions × ~200 fetches on a
+sport the board has dropped). The NFL opener now rates Rams 1571 v 49ers 1542
+instead of 1500 v 1500.
+
+### Bug 3 — the tuning table listed every soccer league twice
+
+Harmless (Python keeps the last), but a table that lies about its own length
+is an error waiting to happen. Deduplicated: 42 entries, 42 unique.
+
+### Bug 4 — model failures were silent
+
+Each model ran under `except Exception: {}`, so a broken feed produced an
+empty tab that looked exactly like "no games today". Every failure is now
+named on stderr in the rebuild log.
+
+### Dead end — deeper tennis rankings
+
+ESPN's rankings feed stops at 150, so "NR" means "151+ or unranked" and
+everyone in it is priced at the same 180 points. The athlete and statistics
+endpoints on both the site and core APIs were probed for a rank; neither
+carries one. The split band already prices that bucket honestly (0.769 vs
+0.847), so nothing changes; the limit is recorded.
+
+### Error audit
+
+Ledger: 335 entries, 0 integrity problems (every graded pick has a winner
+consistent with its result, every confidence in range, every league field
+matches its key). Board: every row's numeric fields finite and in range,
+every tier key has a label, every fair price well-formed. Page JavaScript
+parses. All six priority pick functions run clean with exceptions surfaced.
+
+### Football legs now carry a fair price
+
+NCAAF had no measured band (its season is a week old), so its legs showed no
+fair price and no edge — the board was silent on a **−100000** favourite,
+the worst kind of bet it carries. The carry-over backtest scores the NCAAF
+model at Brier 0.2004, roughly what a well-calibrated ~73% model produces,
+so its own confidence now stands in as the rate, with the live sample shown
+as zero. Utah at 70.0% is fair value −233; offered −100000, that is a
+−30% bet however often Utah wins. The live band takes over as games settle.
+
+### On "the top picks keep losing"
+
+Checked rather than argued. The top tier — tennis at 72%+ against a ranked
+opponent — is **22/23 all-time (95.7%)**: 12/12 on Aug 31, 7/8 on Sep 1,
+3/3 on Sep 2. This morning's top-eight card is 3-for-3 with five not yet
+started. What has been losing is the rest of the board: soccer 22/49, MLB
+14/27 — and under the old per-sport labels those sat beside the 95.7% legs
+wearing the same words. That is the mislabelling this session removed; the
+top of the card was never the problem.

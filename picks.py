@@ -183,9 +183,12 @@ def elo_picks(league, day):
     DRAW_A, DRAW_B = -0.591, 1.485
     name, fn, _ = A.METHODS[key]
     games = A.fetch_games(league, A.season_dates(league))
-    if len(games) < 40:
+    # Ratings start from last season's finish, regressed toward the mean,
+    # instead of 1500 flat. Early in a season that is most of the signal.
+    init = A.prior_ratings(league, key, k, hfa, cap)
+    if len(games) < 40 and not init:
         return {}
-    _, R, n = fn(games, k, hfa, cap=cap)
+    _, R, n = fn(games, k, hfa, cap=cap, init=init)
     sigma = getattr(A.run_power, "sigma", None) or 12.0
     form = {}
     for g in games[-400:]:
@@ -214,9 +217,22 @@ def elo_picks(league, day):
             else:
                 ph = 1 / (1 + 10 ** (-((R[hn] + hfa) - R[an]) / 400))
             if soccer:
-                lp = math.log(min(max(ph, 1e-6), 1-1e-6) / (1 - min(max(ph, 1e-6), 1-1e-6)))
-                ph = 1 / (1 + math.exp(-(DRAW_A + DRAW_B * lp)))
-            home = ph > 0.5
+                # The correction maps a raw Elo expectation onto "wins
+                # OUTRIGHT". It has to be applied to BOTH sides: the old code
+                # corrected the home number and then used 1 - ph for the away
+                # side, which in a three-way market is P(away) + P(draw). Any
+                # home favourite whose outright chance dipped under 50% flipped
+                # to an away pick wearing the draw's probability -- hence the
+                # model taking the underdog 38 times in 49 and those dogs
+                # hitting 36.8% against a claimed ~58%.
+                def outright(p):
+                    p = min(max(p, 1e-6), 1 - 1e-6)
+                    return 1 / (1 + math.exp(-(DRAW_A + DRAW_B * math.log(p / (1 - p)))))
+                p_home, p_away = outright(ph), outright(1 - ph)
+                home = p_home >= p_away
+                ph = p_home if home else 1 - p_away      # so max(ph, 1-ph) is our side's outright chance
+            else:
+                home = ph > 0.5
             pick = hn if home else an
             gap = abs(R[hn] - R[an])
             f = form.get(pick, [])[-10:]

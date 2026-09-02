@@ -99,13 +99,25 @@ def get(url):
 
 
 def season_dates(league, year=None):
-    """Every date in the league's season window, oldest first."""
+    """Every date in the league's season window, oldest first.
+
+    `year` is the season's START year. Left unset it is the season that is
+    current today. For a league that crosses the new year that season began
+    THIS year once its opening month has arrived, and last year before it.
+
+    The old version always anchored a cross-year league to last year's start,
+    so from the opening kickoff until January every NFL and NCAAF rating was
+    built from the previous season and never saw a current game -- the NCAAF
+    cache held 958 games, all of them 2025-26, on the second day of the 2026
+    season. NBA and NHL would have hit the same wall in October.
+    """
     _, _, (m0, m1) = LEAGUES[league]
-    year = year or dt.date.today().year
+    today = dt.date.today()
+    if year is None:
+        year = today.year if (m1 >= m0 or today.month >= m0) else today.year - 1
     start = dt.date(year, m0, 1)
-    if m1 < m0:                       # season crosses the new year
-        start = dt.date(year - 1, m0, 1)
-    end = min(dt.date.today(), dt.date(year if m1 >= m0 else year, m1, 28))
+    end = dt.date(year + 1 if m1 < m0 else year, m1, 28)
+    end = min(end, today)
     out, d = [], start
     while d <= end:
         out.append(d.strftime("%Y%m%d"))
@@ -116,10 +128,14 @@ def season_dates(league, year=None):
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 
 
-def fetch_games(league, dates, workers=14, cache=True):
-    """Completed games with scores, deduped, chronological. Cached for an hour."""
-    cf = os.path.join(CACHE, f"{league}.json")
-    if cache and os.path.exists(cf) and time.time() - os.path.getmtime(cf) < 3600:
+def fetch_games(league, dates, workers=14, cache=True, tag="", ttl=3600):
+    """Completed games with scores, deduped, chronological. Cached for `ttl`.
+
+    `tag` keeps a second window for the same league (a prior season) in its
+    own file rather than overwriting the live one.
+    """
+    cf = os.path.join(CACHE, f"{league}{tag}.json")
+    if cache and os.path.exists(cf) and time.time() - os.path.getmtime(cf) < ttl:
         with open(cf) as fh:
             return json.load(fh)
     from concurrent.futures import ThreadPoolExecutor
@@ -168,15 +184,17 @@ def fetch_games(league, dates, workers=14, cache=True):
     return games
 
 
-def run_elo(games, K, hfa, predict_from=None, cap=None):
+def run_elo(games, K, hfa, predict_from=None, cap=None, init=None, min_games=3):
     """Walk forward on win/loss only. `cap` is accepted and ignored so every
-    method shares one signature -- win-loss Elo has no margin to cap."""
-    R, n = defaultdict(lambda: 1500.0), defaultdict(int)
+    method shares one signature -- win-loss Elo has no margin to cap.
+    `init` seeds the table (a regressed prior season); `min_games` is how many
+    current-season games both sides need before a prediction is scored."""
+    R, n = defaultdict(lambda: 1500.0, init or {}), defaultdict(int)
     preds = []
     for g in games:
         h, a = g["home"], g["away"]
         eh = 1 / (1 + 10 ** ((R[a] - (R[h] + hfa)) / 400))
-        if n[h] >= 3 and n[a] >= 3 and (predict_from is None or g["date"] >= predict_from):
+        if n[h] >= min_games and n[a] >= min_games and (predict_from is None or g["date"] >= predict_from):
             preds.append((eh, g["hs"] > g["as_"], g))
         R[h] += K * ((g["hs"] > g["as_"]) - eh)
         R[a] -= K * ((g["hs"] > g["as_"]) - eh)
@@ -192,21 +210,21 @@ def _phi(x):
     return 0.5 * (1 + math.erf(x / math.sqrt(2)))
 
 
-def run_mov_elo(games, K, hfa, predict_from=None, cap=None):
+def run_mov_elo(games, K, hfa, predict_from=None, cap=None, init=None, min_games=3):
     """Elo updated with a margin-of-victory multiplier (FiveThirtyEight form).
 
     The multiplier grows with margin but is damped by the favourite's rating
     edge, so a blowout by an already-strong team moves the rating less. Without
     that damping, MOV Elo runs away on garbage-time scorelines.
     """
-    R, n = defaultdict(lambda: 1500.0), defaultdict(int)
+    R, n = defaultdict(lambda: 1500.0, init or {}), defaultdict(int)
     preds = []
     for g in games:
         h, a = g["home"], g["away"]
         diff = (R[h] + hfa) - R[a]
         eh = 1 / (1 + 10 ** (-diff / 400))
         hw = g["hs"] > g["as_"]
-        if n[h] >= 3 and n[a] >= 3 and (predict_from is None or g["date"] >= predict_from):
+        if n[h] >= min_games and n[a] >= min_games and (predict_from is None or g["date"] >= predict_from):
             preds.append((eh, hw, g))
         mov = abs(g["hs"] - g["as_"])
         if cap:
@@ -220,7 +238,7 @@ def run_mov_elo(games, K, hfa, predict_from=None, cap=None):
     return preds, R, n
 
 
-def run_power(games, lr, hfa, predict_from=None, cap=None, sigma=None):
+def run_power(games, lr, hfa, predict_from=None, cap=None, sigma=None, init=None, min_games=3):
     """Point-differential power ratings.
 
     Each team carries a rating in POINTS -- its expected margin against an
@@ -229,7 +247,7 @@ def run_power(games, lr, hfa, predict_from=None, cap=None, sigma=None):
     Win probability comes from the normal CDF of the predicted margin over the
     residual spread, which is estimated from the games seen so far.
     """
-    R, n = defaultdict(float), defaultdict(int)
+    R, n = defaultdict(float, init or {}), defaultdict(int)
     preds, resid = [], []
     run_power.sigma = None      # the scale this run settled on, for live callers
     for g in games:
@@ -241,7 +259,7 @@ def run_power(games, lr, hfa, predict_from=None, cap=None, sigma=None):
         else:
             actual_upd = actual
         s = sigma or (statistics.pstdev(resid) if len(resid) > 40 else 12.0)
-        if n[h] >= 3 and n[a] >= 3 and (predict_from is None or g["date"] >= predict_from):
+        if n[h] >= min_games and n[a] >= min_games and (predict_from is None or g["date"] >= predict_from):
             preds.append((_phi(pred / s), actual > 0, g))
         err = actual_upd - pred
         R[h] += lr * err
@@ -251,6 +269,57 @@ def run_power(games, lr, hfa, predict_from=None, cap=None, sigma=None):
         n[h] += 1
         n[a] += 1
     return preds, R, n
+
+
+# How far last season's final rating is pulled back toward the mean before
+# the new season starts. Rosters turn over and coaches change, so a team is
+# never quite what it was -- but it is a far better guess than 1500 flat,
+# which is what every team started from before and why week-one ratings
+# were noise. FiveThirtyEight regresses NFL a third of the way; the value
+# here is whichever the backtest preferred.
+# Validated on the 2024 season seeding 2025, first four weeks, Brier
+# (lower is better):
+#
+#                      NFL early   NFL full   NCAAF early  NCAAF full
+#   cold start 1500     0.2357     0.2319       0.2095      0.2143
+#   regress 50%         0.2146     0.2281       0.1977      0.2040
+#   regress 33%         0.2093     0.2279       0.1949      0.2014
+#   regress 25%         0.2071     0.2279       0.1938      0.2004
+#   no regression       0.2017     0.2287       0.1911      0.1978
+#
+# NFL early accuracy went 60.3% -> 73.0% (+12.7 pts, 2.0 s.e.). Zero
+# regression was marginally best on this one pair of seasons, but that is
+# the edge of the grid on a single holdout; 25% is one step in and within
+# 0.005 of it everywhere, so that is what ships.
+REGRESS = 0.25
+
+
+# Leagues that seed from a prior season. Soccer is left out on purpose: its
+# 35 competitions would cost ~7,000 scoreboard fetches on the first rebuild
+# for a sport the board has stopped prioritising, and its bands are keyed on
+# side of the price rather than on the rating anyway.
+CARRY = {"nfl", "ncaaf", "nba", "ncaab", "nhl", "wnba"}
+
+
+def prior_ratings(league, key, k, hfa, cap=None, reg=REGRESS):
+    """Last season's final ratings, regressed toward the mean, or {}.
+
+    Cached for 30 days: a finished season does not change.
+    """
+    if league not in CARRY:
+        return {}
+    start = int(season_dates(league)[0][:4]) - 1
+    try:
+        games = fetch_games(league, season_dates(league, year=start),
+                            tag="-prior", ttl=30 * 86400)
+    except Exception:
+        return {}
+    if len(games) < 40:
+        return {}
+    _, fn, _ = METHODS[key]
+    _, R, _ = fn(games, k, hfa, cap=cap)
+    base = 0.0 if key == "power" else 1500.0
+    return {t: base + (r - base) * (1 - reg) for t, r in R.items()}
 
 
 METHODS = {
@@ -381,32 +450,6 @@ TUNED = {
     "kor": ("movelo", 24, 50, None),
     "aus": ("movelo", 24, 50, None),
     "rsa": ("movelo", 24, 50, None),
-    # soccer: one configuration, fitted on the pooled training half
-    "efl2": ("movelo", 24, 50, None),
-    "esp": ("movelo", 24, 50, None),
-    "ita": ("movelo", 24, 50, None),
-    "ger": ("movelo", 24, 50, None),
-    "fra": ("movelo", 24, 50, None),
-    "por": ("movelo", 24, 50, None),
-    "ned": ("movelo", 24, 50, None),
-    "sco": ("movelo", 24, 50, None),
-    "tur": ("movelo", 24, 50, None),
-    "bel": ("movelo", 24, 50, None),
-    "aut": ("movelo", 24, 50, None),
-    "sui": ("movelo", 24, 50, None),
-    "gre": ("movelo", 24, 50, None),
-    "den": ("movelo", 24, 50, None),
-    "nor": ("movelo", 24, 50, None),
-    "swe": ("movelo", 24, 50, None),
-    "bra": ("movelo", 24, 50, None),
-    "arg": ("movelo", 24, 50, None),
-    "chi": ("movelo", 24, 50, None),
-    "uru": ("movelo", 24, 50, None),
-    "mex": ("movelo", 24, 50, None),
-    "jpn": ("movelo", 24, 50, None),
-    "kor": ("movelo", 24, 50, None),
-    "aus": ("movelo", 24, 50, None),
-    "rsa": ("movelo", 24, 50, None),
     # non-soccer leagues keep their own tuned settings
     "nba":   ("movelo", 20, 50, None),
     "wnba":  ("movelo", 20, 25, None),
@@ -428,7 +471,7 @@ def board(league, date=None, method=None):
     games = fetch_games(league, season_dates(league))
     if len(games) < 40:
         print(f"{label}: only {len(games)} completed games -- ratings unreliable.")
-    _, R, n = fn(games, k, hfa, cap=cap)
+    _, R, n = fn(games, k, hfa, cap=cap, init=prior_ratings(league, key, k, hfa, cap))
     date = date or dt.date.today().strftime("%Y%m%d")
     d = get(f"{BASE}/{path}/scoreboard?dates={date}")
     resid = 12.0

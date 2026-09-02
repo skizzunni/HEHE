@@ -280,6 +280,15 @@ def blended_hit(league, is_soccer, mc, live, why=None, dog=None):
     """
     key = _band_key(league, mc, why, is_soccer, dog)
     if key is None:
+        # Football has no live band yet (its season is a week old). Rather
+        # than show nothing -- which left a -100000 leg with no fair price and
+        # no edge, silent on the worst bets the board carries -- use the
+        # model's own confidence as the rate. The prior-season carry-over
+        # backtest puts NCAAF's Brier at 0.2004, about what a well-calibrated
+        # ~73% model scores, so the number is honest to a first approximation.
+        # Live sample shows as zero, and the band takes over once it exists.
+        if league in ("ncaaf", "nfl") and mc is not None:
+            return mc / 100.0, 0
         return None, 0
     sport, cut, _nr = key
     prior = dict(MEASURED[sport])[cut]
