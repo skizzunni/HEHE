@@ -43,7 +43,7 @@ def snapshot():
     # across leagues, not within one, so splitting them cost more than it gave
     SOCCER = {k for k, p, _ in d.LEAGUES if p.startswith("soccer/")}
     # what each band has actually done, so the badges answer to the record
-    live = live_bands(ledger.load().values())
+    live = live_bands(ledger.load().values(), SOCCER)
     for slot in ("today", "tomorrow"):
         lg = {}
         soccer_rows = []
@@ -56,7 +56,8 @@ def snapshot():
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 mc = round(r["myconf"] * 100, 1) if r["myconf"] else None
-                hit, hit_n = blended_hit(k, k in SOCCER, mc, live, r["why"])
+                hit, hit_n = blended_hit(k, k in SOCCER, mc, live, r["why"],
+                                         bool(leg and leg.get("dog")))
                 tk, tl, hide = tier_of(k, mc, hit)
                 pk, pl = price_note(k, k in SOCCER,
                                     (leg or {}).get("price"),
@@ -163,6 +164,17 @@ MEASURED = {
     # number, and above 72% that means one band.
     "tennis": ((72.0, 0.784), (64.0, 0.706), (58.0, 0.610), (0.0, 0.509)),
     "mlb":    ((61.0, 0.596), (57.0, 0.580), (0.0, 0.550)),
+    # Soccer graded nothing at all until the grader's league map was fixed,
+    # and the 49 picks it had been silently discarding are the worst block on
+    # the board: 46.9% against a claimed 58.7%. Its confidence is INVERTED --
+    # the 50-55% band hits 55.6% while the 60-70% band hits 40.0% -- so there
+    # is no band structure worth keeping. What does separate is which side of
+    # the price we are on, and hard: favourites 9/11, underdogs 14/38, a
+    # 45-point gap at 2.6 s.e. That corroborates the price map's blind result
+    # over 8,193 games (favourites -2.93%, underdogs -8.76%), so it is two
+    # independent lines of evidence rather than one thin one. Prior is the
+    # pooled 49.1% outright rate; dog and favourite earn their way apart.
+    "soccer": ((0.0, 0.491),),
 }
 
 
@@ -221,28 +233,38 @@ def opponent_unranked(why):
     return m.group(2) == "NR" if m else None
 
 
-def _band_key(league, mc, why=None):
-    """-> (sport, cut, opponent-unranked) naming this pick's band, or None."""
+def _band_key(league, mc, why=None, is_soccer=False, dog=None):
+    """-> (sport, cut, split) naming this pick's band, or None.
+
+    The third slot is whatever actually separates that sport: for tennis
+    whether the opponent is unranked, for soccer whether we are on the
+    underdog. Both are measured, neither is assumed.
+    """
     if mc is None:
         return None
-    sport = "tennis" if league in ("atp", "wta") else (
-        "mlb" if league == "mlb" else None)
+    sport = ("tennis" if league in ("atp", "wta") else
+             "mlb" if league == "mlb" else
+             "soccer" if is_soccer else None)
     if sport is None:
         return None
-    nr = opponent_unranked(why) if sport == "tennis" else None
+    split = (opponent_unranked(why) if sport == "tennis" else
+             bool(dog) if sport == "soccer" else None)
     for cut, _ in MEASURED[sport]:
         if mc >= cut:
-            return sport, cut, nr
+            return sport, cut, split
     return None
 
 
-def live_bands(entries):
+def live_bands(entries, soccer_keys=()):
     """-> {band key: (n, won)} from every settled pick on the ledger."""
     out = {}
+    soccer_keys = set(soccer_keys)
     for e in entries:
         if e.get("status") not in ("won", "lost"):
             continue
-        key = _band_key(e.get("league"), e.get("conf"), e.get("why"))
+        lg = e.get("league")
+        key = _band_key(lg, e.get("conf"), e.get("why"),
+                        lg in soccer_keys, e.get("dog"))
         if key is None:
             continue
         n, w = out.get(key, (0, 0))
@@ -250,13 +272,13 @@ def live_bands(entries):
     return out
 
 
-def blended_hit(league, is_soccer, mc, live, why=None):
+def blended_hit(league, is_soccer, mc, live, why=None, dog=None):
     """Backtest rate for this band, corrected by what it has actually done.
 
     Returns (rate, live_n) so the board can show the evidence behind the
     number rather than asking to be taken on faith.
     """
-    key = _band_key(league, mc, why)
+    key = _band_key(league, mc, why, is_soccer, dog)
     if key is None:
         return None, 0
     sport, cut, _nr = key

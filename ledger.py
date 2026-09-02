@@ -39,11 +39,15 @@ LEDGER = os.path.join(HERE, "ledger.json")
 ESPN = "https://site.api.espn.com/apis/site/v2/sports"
 ET = dt.timezone(dt.timedelta(hours=-4))
 
-PATHS = {"mlb": "baseball/mlb", "wnba": "basketball/wnba", "nba": "basketball/nba",
-         "nfl": "football/nfl", "ncaaf": "football/college-football",
-         "nhl": "hockey/nhl", "atp": "tennis/atp", "wta": "tennis/wta",
-         "epl": "soccer/eng.1", "mls": "soccer/usa.1", "pga": "golf/pga",
-         "ufc": "mma/ufc"}
+# The board and the grader have to agree on where a league lives, so this is
+# derived from the board's own league table rather than kept as a second copy.
+# It used to be hardcoded here and had drifted to 12 entries against the
+# board's 45 -- every soccer competition except the Premier League was
+# unknown to the grader, so 105 settled picks sat "open" forever and their
+# results were silently thrown away.
+import dashboard as _d                                       # noqa: E402
+
+PATHS = {k: p for k, p, _ in _d.LEAGUES}
 
 _CTX = ssl.create_default_context()
 try:

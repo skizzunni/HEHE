@@ -1511,3 +1511,63 @@ The remaining confidence/rate inversions on the board are all the
 ranked-opponent split doing its job — Sabalenka at 95.3% against an unranked
 opponent sits below Alcaraz at 89.8% against a ranked one, deliberately. Zero
 inversions are unexplained by it.
+
+## The grader was throwing away a third of the record
+
+The board showed 216 open picks against 120 graded, which is the wrong shape.
+The cause: `ledger.py` kept its **own hardcoded copy** of the league-to-path
+map, and it had drifted to 12 entries against the board's 45. Thirty-three
+leagues — every soccer competition except the Premier League — were unknown
+to the grader, so `_final()` returned `None` for them forever and 105 settled
+picks sat "open" with their results silently discarded.
+
+The map is now derived from `dashboard.LEAGUES` rather than duplicated, so it
+cannot drift again. Forty-eight picks graded on the next run.
+
+### What was hidden: soccer is the worst block on the board
+
+```
+SOCCER OVERALL: 23/49 = 46.9%   model said 58.7%   (-11.8 pts)
+```
+
+Worse than the miss, the confidence signal is **inverted**:
+
+```
+conf 50-55%   n=18   55.6%      conf 60-70%   n=20   40.0%
+conf 55-60%   n= 9   44.4%      conf 70%+     n= 2   50.0%
+```
+
+The model's most confident soccer calls are its worst. There is no band
+structure there worth keeping. What does separate, and hard:
+
+```
+I took the favourite   n=11   81.8%  +-15.1
+I took the underdog    n=38   36.8%  +- 8.1
+```
+
+A 45-point gap at 2.6 s.e. — and the model took the underdog in 38 of 49.
+That corroborates the price map's blind result over 8,193 games (soccer
+favourites −2.93%, underdogs −8.76%, the worst segment measured anywhere), so
+this is two independent lines of evidence rather than one thin one.
+
+So soccer is banded on **side of the price**, not on confidence: favourites
+blend to 0.562 and label *thin*, underdogs to 0.431 and label *coin flip*.
+Every leg stays on the board. Nothing was removed.
+
+### The honest number went down
+
+The record moved from 82-38 (68.9%) to 105-64 (62.1%). Nothing got worse —
+the 68.9% was computed over a sample that excluded 48 mostly-losing soccer
+picks because the grader could not see them.
+
+### And the edge column earns its keep immediately
+
+```
+Celtic          conf 69.4%   fair -128   offered -425   edge -30.6%
+Flamengo        conf 62.6%   fair -128   offered -575   edge -34.1%
+Union SG        conf 65.0%   fair -128   offered -105   edge  +9.6%
+```
+
+Three soccer favourites the confidence ranking treats as near-identical. Two
+are among the worst bets available at any price; one is the only positive-edge
+soccer leg on the board. Probability alone could never tell them apart.
