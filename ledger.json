@@ -442,10 +442,10 @@
   "conf": 63.2,
   "dog": false,
   "league": "atp",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Arthur Rinderknech": "6",
-   "Jaume Munar": "6"
+   "Arthur Rinderknech": "7(7) 0",
+   "Jaume Munar": "6(4) 0"
   },
   "logged": "2026-09-02T10:25",
   "market_agrees": null,
@@ -1042,10 +1042,10 @@
   "conf": 70.3,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Alex Michelsen": "6 5",
-   "Brandon Nakashima": "3 3"
+   "Alex Michelsen": "6 6 2",
+   "Brandon Nakashima": "3 4 1"
   },
   "logged": "2026-09-02T10:25",
   "market_agrees": null,
@@ -1060,10 +1060,10 @@
   "conf": 64.5,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Andrey Rublev": "7(7) 1",
-   "Daniel Merida": "6(3) 4"
+   "Andrey Rublev": "7(7) 2 0",
+   "Daniel Merida": "6(3) 6 0"
   },
   "logged": "2026-09-02T10:25",
   "market_agrees": null,
@@ -1338,8 +1338,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Daniil Medvedev": "6 6 1",
-   "Sebastian Gorzny": "1 3 1"
+   "Daniil Medvedev": "6 6 2",
+   "Sebastian Gorzny": "1 3 3"
   },
   "logged": "2026-09-02T10:25",
   "market_agrees": null,
@@ -3721,7 +3721,7 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Diane Parry": "2 2",
+   "Diane Parry": "2 3",
    "Sorana Cirstea": "6 4"
   },
   "logged": "2026-09-02T10:25",
@@ -3778,7 +3778,7 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Jessica Pegula": "6 1",
+   "Jessica Pegula": "6 5",
    "Sofia Kenin": "3 0"
   },
   "logged": "2026-09-02T11:21",
@@ -3820,19 +3820,20 @@
   "conf": 64.7,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Leylah Fernandez": "6 5",
-   "Mananchaya Sawangkaew": "4 1"
-  },
   "logged": "2026-09-02T10:25",
   "market_agrees": null,
   "matchup": "Leylah Fernandez @ Mananchaya Sawangkaew",
   "pick": "Leylah Fernandez",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Leylah Fernandez": "6 6",
+   "Mananchaya Sawangkaew": "4 1"
+  },
+  "settled": "2026-09-02T12:38",
+  "status": "won",
   "tip": "11:00 AM",
-  "why": "rank 33 vs 94"
+  "why": "rank 33 vs 94",
+  "winner": "Leylah Fernandez"
  },
  "wta:182559": {
   "conf": 71.1,
@@ -3851,19 +3852,20 @@
   "conf": 77.8,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Jasmine Paolini": "6 5",
-   "Lucrezia Stefanini": "4 1"
-  },
   "logged": "2026-09-02T10:25",
   "market_agrees": null,
   "matchup": "Lucrezia Stefanini @ Jasmine Paolini",
   "pick": "Jasmine Paolini",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Jasmine Paolini": "6 6",
+   "Lucrezia Stefanini": "4 1"
+  },
+  "settled": "2026-09-02T12:38",
+  "status": "won",
   "tip": "11:00 AM",
-  "why": "rank 21 vs 119"
+  "why": "rank 21 vs 119",
+  "winner": "Jasmine Paolini"
  },
  "wta:182563": {
   "conf": 94.4,
@@ -3966,19 +3968,20 @@
   "conf": 70.5,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Diana Shnaider": "6 5",
-   "Karolina Pliskova": "1 6"
-  },
   "logged": "2026-09-02T10:25",
   "market_agrees": null,
   "matchup": "Diana Shnaider @ Karolina Pliskova",
   "pick": "Diana Shnaider",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Diana Shnaider": "6 7(7)",
+   "Karolina Pliskova": "1 6(4)"
+  },
+  "settled": "2026-09-02T12:39",
+  "status": "won",
   "tip": "11:00 AM",
-  "why": "rank 16 vs 57"
+  "why": "rank 16 vs 57",
+  "winner": "Diana Shnaider"
  },
  "wta:182577": {
   "conf": 57.7,
