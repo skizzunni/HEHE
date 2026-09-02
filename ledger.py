@@ -125,6 +125,18 @@ def record(state=None):
 
 
 # ------------------------------------------------------------------- grade
+def _played_on(comp):
+    """ET calendar date of a competition from its own UTC timestamp, or None."""
+    raw = comp.get("date") or comp.get("startDate") or ""
+    for fmt in ("%Y-%m-%dT%H:%MZ", "%Y-%m-%dT%H:%M:%SZ"):
+        try:
+            t = dt.datetime.strptime(raw, fmt).replace(tzinfo=dt.timezone.utc)
+            return t.astimezone(ET).strftime("%Y-%m-%d")
+        except ValueError:
+            continue
+    return None
+
+
 def _final(lg, comp_id):
     """(winner, away, home, ascore, hscore) once complete, else None."""
     path = PATHS.get(lg)
@@ -172,8 +184,13 @@ def _final(lg, comp_id):
                 win = names.get("winner")
                 if win is None and all(v is not None for v in scores.values()) and len(scores) == 2:
                     win = max(scores, key=scores.get)
+                # The day the game was PLAYED, from its own timestamp -- not
+                # the scoreboard date it was found on. A tennis scoreboard
+                # returns the tournament's entire draw on every date queried,
+                # so a match from three days ago is "on" today's board too.
                 return dict(live=False, winner=win, scores=scores,
-                            state=st.get("shortDetail", ""))
+                            state=st.get("shortDetail", ""),
+                            date=_played_on(c) or f"{day[:4]}-{day[4:6]}-{day[6:]}")
     return None
 
 
@@ -243,6 +260,11 @@ def grade():
         e["scores"] = res.get("scores")
         e["status"] = "won" if win == e["pick"] else "lost"
         e["settled"] = dt.datetime.now(ET).isoformat()[:16]
+        # `settled` is when the grader ran; `played` is when the game was.
+        # They diverge whenever grading lags -- when the league map was fixed,
+        # 42 picks from Sep 1 graded on Sep 2 and the results feed showed
+        # them as Sep 2 losses, which read as "lost all day" on a 16-9 day.
+        e["played"] = res.get("date") or e["settled"][:10]
         if e["status"] == "lost":
             e["diagnosis"] = diagnose(e, res)
         settled.append((key, e))
@@ -309,13 +331,14 @@ def board_payload(limit=40):
     live.sort(key=lambda x: (x["league"], x["pick"]))
 
     done = [e for e in book.values() if e.get("status") in ("won", "lost")]
-    done.sort(key=lambda e: e.get("settled") or e.get("logged") or "", reverse=True)
+    done.sort(key=lambda e: (e.get("played") or (e.get("settled") or "")[:10],
+                             e.get("settled") or e.get("logged") or ""), reverse=True)
     feed = [dict(league=e["league"], pick=e["pick"], status=e["status"],
                  conf=e.get("conf"), price=e.get("price"), dog=e.get("dog"),
                  score=e.get("scores") or {},
                  why=(e.get("diagnosis") if e["status"] == "lost"
                       else e.get("why") or ""),
-                 when=(e.get("settled") or e.get("logged") or "")[:10])
+                 when=(e.get("played") or e.get("settled") or e.get("logged") or "")[:10])
             for e in done[:limit]]
 
     gate = recs or []

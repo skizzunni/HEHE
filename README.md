@@ -1670,3 +1670,48 @@ started. What has been losing is the rest of the board: soccer 22/49, MLB
 14/27 — and under the old per-sport labels those sat beside the 95.7% legs
 wearing the same words. That is the mislabelling this session removed; the
 top of the card was never the problem.
+
+## "Lose lose lose all day" — the Results tab was mis-dating the backlog
+
+Checked before answering. 67 picks carried a settlement date of Sep 2. Only
+25 were Sep 2 games, and they went **16-9 (64%)**: WTA 7-1, the top tier
+3-for-3, ATP 3-3, MLB 1-2. The other 42 were the Sep 1 soccer backlog that
+graded on Sep 2 the moment the league map was fixed — 18-24 — and the feed
+stamped them with the day they were *graded*, not the day they were
+*played*. Yesterday's soccer losses were being shown as today's.
+
+`settled` now stays as the grader's timestamp (an audit trail) and a new
+`played` field carries the scoreboard date the game was found on. The feed
+orders and labels by `played`. Already-graded entries were backfilled.
+
+## Rank the Card by edge
+
+There are no MLB "locks" — 14/27 says so and no relabelling changes it. But
+MLB is the one sport where the board's price map found the underdog side
+cheap (−1.19% blind against −5.24% for favourites), and the edge column has
+been finding legs like a +118 White Sox at +16.8% that the hit-rate ranking
+buries beneath 55% soccer favourites. The Card now has a switch: **by hit
+rate** (the default — what a leg's band has actually done) or **by edge**
+(return per unit at the price offered, legs without a price sinking). The
+sweep table stays on hit-rate order, because it is about probability, not
+price. The choice is remembered per browser.
+
+### The backfill's first pass was wrong, and why
+
+The first backfill stamped each graded pick with the scoreboard date it was
+found on, nearest day first. That put 107 picks on Sep 2 when only 25 had
+been logged that day. Cause: a tennis scoreboard returns the tournament's
+**entire draw** on every date queried, so every completed US Open match is
+"on" today's board and nearest-day-wins hands them all today's date — the
+same trap `harvest_tennis.py` documents. Both the backfill and `_final()`
+now take the game's own UTC timestamp converted to Eastern. The true record
+by day played:
+
+```
+2026-08-31   48-21  (70%)   tennis 39-17   mlb 8-4    soccer  1-0
+2026-09-01   43-36  (54%)   tennis 21-5    mlb 6-9    soccer 16-22
+2026-09-02   16-9   (64%)   tennis 10-4               soccer  6-5    (in progress)
+```
+
+Sep 1 was the bad day, and it was MLB (6-9) and soccer (16-22) — tennis went
+21-5. That is the shape of every day on the ledger.
