@@ -1769,3 +1769,104 @@ and its offset strengthens automatically as results accumulate. The edge
 numbers those two sports display are, on this evidence, close to zero and
 should be read that way. Tennis carries no prices at all, so its bands are
 untouched.
+
+## Two attempts at beating the book, and what stopped them
+
+### Elo from tennis results — tested and REJECTED
+
+ESPN publishes only the top 150 per tour, and everyone below is "NR" priced
+at a flat 180 points. The obvious fix is to stop needing the feed: build Elo
+from match results, the way every team sport on this board works. There are
+7,812 completed singles matches archived for 2026.
+
+Built it, walk-forward, K tuned on the training 60% and scored on the rest.
+The first run looked like a breakthrough — the ranking model scoring 48.4% on
+unranked matches, *worse than a coin flip*, against Elo's 57.8%. That number
+was too bad to be true, and it was: in the 394 matches where **both** players
+are unranked the ranking model returns exactly 0.500, and the accuracy check
+was counting every one of those as a miss. Excluding predictions the model
+does not actually make:
+
+```
+SEGMENT                  n   ties   RANKING     ELO    diff
+both ranked           1491      1     64.4%   56.6%    -7.8
+exactly one unranked   758      0     73.5%   61.5%   -12.0
+both unranked          394    394       n/a   50.8%     n/a
+```
+
+Ranking points win everywhere, by 8 to 12 points. Elo from results is not
+shipped. The run was not wasted: 73.5% against exactly one unranked opponent
+matches the ledger's NR band almost exactly (14/19 = 73.7%), so the split
+band and its 0.769 rate are independently confirmed, and "both unranked" is
+confirmed as a segment where the model has no opinion at all.
+
+### Tennis prices — genuinely unavailable
+
+The rankings feed is hard-capped at 150 (`limit`, `page` and `season` are all
+ignored; the core API reports one list of 150). ESPN carries no tennis odds on
+either the site or core API. DraftKings' public endpoints answer 403 from this
+environment. There is no tennis price to test against here, so whether the
+tennis model beats a book is **unproven and unprovable with what is
+reachable** — not a claim to make either way.
+
+### NCAAF against the closing line — the definitive test, and the answer is no
+
+The board finally has a market it can be scored against properly: a full 2025
+NCAAF season, 958 games, with ESPN retaining both sides' closing moneyline.
+845 of them had a usable close. Ratings seeded from 2024 and walked forward,
+so nothing leaks.
+
+```
+                          BRIER      ACC
+  model (carry-over Elo)  0.1916    76.0%
+  de-vigged closing line  0.1716    74.2%
+```
+
+**The model picks winners better than the market — 76.0% against 74.2% — and
+prices them worse.** Brier is 0.0200 worse, which is a large miss. It is
+overconfident: the extra accuracy sits on heavy favourites where being right
+is cheap and the price is prohibitive, and the market's probabilities are
+better everywhere it counts.
+
+Betting every disagreement with the close:
+
+```
+   edge   bets   hit      ROI
+    2%     788  31.7%   -5.53%
+    4%     721  30.2%   -4.99%
+    6%     645  28.2%   -5.20%
+   10%     528  26.7%   -2.80%
+   15%     369  24.4%   +1.34%
+```
+
+Losses at every threshold but the last, and that one is 369 bets at roughly
+one standard error of zero — noise, not an edge.
+
+### So: can this board beat a sportsbook?
+
+On every market where the question can actually be asked with data, the
+answer measured here is no.
+
+```
+NCAAF   845 games, closing line     model Brier 0.1916 vs market 0.1716
+MLB      27 picks, leave-one-out    model 0.2463 vs market 0.2457
+soccer   50 picks, leave-one-out    model 0.2159 vs market 0.2136
+```
+
+Three independent markets, three losses to the close, the largest sample the
+most decisive. The model has genuine skill at picking winners — 76% in NCAAF,
+84.7% in the top tennis band — but that skill is in the same public inputs the
+book already prices: rankings, ratings, ERA and FIP. The book adds injury and
+lineup news, sharp money, and a closing line that is the aggregate of everyone
+who does this for a living.
+
+Tennis is the one place the question stays open, because no tennis price is
+reachable from here at all. Its top tier is 22/23 live and 84.7% measured,
+which is real — but real accuracy and a beatable price are different things,
+and the other three markets are exactly the case where the first did not
+deliver the second.
+
+What the board can honestly do is what it now does: state a measured rate,
+convert it to a fair price, and show the offered price beside it. Where a book
+hangs a number worse than fair, that is visible. That is line shopping, not
+prediction, and it is the part that survives contact with a closing line.
