@@ -444,8 +444,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Arthur Rinderknech": "7(7) 6 3",
-   "Jaume Munar": "6(4) 2 3"
+   "Arthur Rinderknech": "7(7) 6 4",
+   "Jaume Munar": "6(4) 2 4"
   },
   "logged": "2026-09-02T10:25",
   "market_agrees": null,
@@ -521,7 +521,7 @@
   "live": "3rd",
   "live_score": {
    "Botic Van De Zandschulp": "6 6 0",
-   "Jan Choinski": "3 1 0"
+   "Jan Choinski": "3 1 1"
   },
   "logged": "2026-09-02T12:22",
   "market_agrees": null,
@@ -603,7 +603,7 @@
   "live": "1st",
   "live_score": {
    "Bu Yunchaokete": "5",
-   "Rafael Jodar": "1"
+   "Rafael Jodar": "2"
   },
   "logged": "2026-09-02T13:13",
   "market_agrees": null,
@@ -752,7 +752,7 @@
   "live": "3rd",
   "live_score": {
    "Daniel Altmaier": "3 1 0",
-   "Zachary Svajda": "6 6 0"
+   "Zachary Svajda": "6 6 1"
   },
   "logged": "2026-09-02T12:22",
   "market_agrees": null,
@@ -783,7 +783,7 @@
   "live": "1st",
   "live_score": {
    "Jacob Fearnley": "2",
-   "Tomas Martin Etcheverry": "2"
+   "Tomas Martin Etcheverry": "3"
   },
   "logged": "2026-09-02T13:13",
   "market_agrees": null,
@@ -917,8 +917,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Ben Shelton": "6 0",
-   "Hubert Hurkacz": "3 0"
+   "Ben Shelton": "6 1",
+   "Hubert Hurkacz": "3 2"
   },
   "logged": "2026-09-02T13:13",
   "market_agrees": null,
@@ -1085,21 +1085,23 @@
  },
  "atp:182748": {
   "conf": 64.5,
+  "diagnosis": "lost 1-3 in sets \u00b7 took it the distance \u00b7 called at 64%",
   "dog": false,
   "league": "atp",
-  "live": "4th",
-  "live_score": {
-   "Andrey Rublev": "7(7) 2 4 3",
-   "Daniel Merida": "6(3) 6 6 5"
-  },
   "logged": "2026-09-02T10:25",
   "market_agrees": null,
   "matchup": "Andrey Rublev @ Daniel Merida",
   "pick": "Andrey Rublev",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Andrey Rublev": "7(7) 2 4 4",
+   "Daniel Merida": "6(3) 6 6 6"
+  },
+  "settled": "2026-09-02T13:57",
+  "status": "lost",
   "tip": "11:00 AM",
-  "why": "rank 24 vs 39"
+  "why": "rank 24 vs 39",
+  "winner": "Daniel Merida"
  },
  "atp:182750": {
   "conf": 67.3,
@@ -1107,7 +1109,7 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Ignacio Buse": "3 2",
+   "Ignacio Buse": "3 3",
    "Marcos Giron": "6 0"
   },
   "logged": "2026-09-02T12:22",
@@ -1126,7 +1128,7 @@
   "live": "3rd",
   "live_score": {
    "Alex Molcan": "4 6 0",
-   "Benjamin Bonzi": "6 3 1"
+   "Benjamin Bonzi": "6 3 3"
   },
   "logged": "2026-09-02T12:22",
   "market_agrees": null,
@@ -2970,7 +2972,7 @@
   "conf": 52.8,
   "dog": true,
   "league": "mlb",
-  "live": "Top 4th",
+  "live": "Delayed, Top 4th",
   "live_score": {
    "Atlanta Braves": 0,
    "Washington Nationals": 0
@@ -3001,7 +3003,7 @@
   "conf": 60.6,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 4th",
+  "live": "Top 5th",
   "live_score": {
    "Cincinnati Reds": 4,
    "San Diego Padres": 3
@@ -3801,8 +3803,8 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Catherine McNally": "4",
-   "Emma Navarro": "2"
+   "Catherine McNally": "5",
+   "Emma Navarro": "3"
   },
   "logged": "2026-09-02T13:13",
   "market_agrees": null,
@@ -4070,7 +4072,7 @@
   "league": "wta",
   "live": "1st",
   "live_score": {
-   "Marta Kostyuk": "2",
+   "Marta Kostyuk": "3",
    "Sloane Stephens": "0"
   },
   "logged": "2026-09-02T13:33",
