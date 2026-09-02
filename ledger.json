@@ -162,8 +162,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Alexander Zverev": "6 3 5",
-   "Lorenzo Sonego": "4 6 5"
+   "Alexander Zverev": "6 3 6(4)",
+   "Lorenzo Sonego": "4 6 6(3)"
   },
   "logged": "2026-09-01T20:37",
   "market_agrees": null,
@@ -2648,29 +2648,31 @@
  },
  "mlb:401816769": {
   "conf": 53.9,
+  "diagnosis": "margin 2 \u00b7 close \u00b7 the book had my side favoured too \u00b7 called at 54%",
   "dog": false,
   "league": "mlb",
-  "live": "Bot 8th",
-  "live_score": {
-   "Baltimore Orioles": 2,
-   "Colorado Rockies": 4
-  },
   "logged": "2026-09-01T20:37",
   "market_agrees": true,
   "matchup": "BAL @ COL",
   "pick": "Baltimore Orioles",
   "price": "-156",
-  "status": "open",
+  "scores": {
+   "Baltimore Orioles": 2,
+   "Colorado Rockies": 4
+  },
+  "settled": "2026-09-01T23:37",
+  "status": "lost",
   "tip": "8:40 PM",
-  "why": "Bradish 4.03 ERA/4.04 FIP vs Hughes 6.61 \u00b7 pen 3.90 v 4.74 \u00b7 L10 8-2 v 2-8"
+  "why": "Bradish 4.03 ERA/4.04 FIP vs Hughes 6.61 \u00b7 pen 3.90 v 4.74 \u00b7 L10 8-2 v 2-8",
+  "winner": "Colorado Rockies"
  },
  "mlb:401816770": {
   "conf": 64.3,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 6th",
+  "live": "Mid 7th",
   "live_score": {
-   "Los Angeles Angels": 1,
+   "Los Angeles Angels": 3,
    "New York Yankees": 4
   },
   "logged": "2026-09-01T21:21",
@@ -2686,7 +2688,7 @@
   "conf": 51.6,
   "dog": true,
   "league": "mlb",
-  "live": "Bot 6th",
+  "live": "Bot 7th",
   "live_score": {
    "Arizona Diamondbacks": 1,
    "Philadelphia Phillies": 3
@@ -2704,10 +2706,10 @@
   "conf": 54.3,
   "dog": false,
   "league": "mlb",
-  "live": "Top 4th",
+  "live": "Top 5th",
   "live_score": {
    "Los Angeles Dodgers": 3,
-   "St. Louis Cardinals": 7
+   "St. Louis Cardinals": 9
   },
   "logged": "2026-09-01T22:06",
   "market_agrees": true,
