@@ -63,6 +63,11 @@ Same $10, three ways: ten $1 singles returns $10.50; a 3-leg returns $8.76; a
 ## Files
 
 - `parlay_math.py` — slip autopsy and parlay EV math. No network needed.
+- `ncaaf_team_props.py` — opponent-adjusted SRS over all 1,633 FBS+FCS games of
+  2025, priced against the Thu 9/3/26 board and against DraftKings' live
+  numbers. Shrinkage and home-field are picked on a holdout (fit wk 1–10,
+  scored wk 11+), which puts the honest margin RMSE at 15.9 rather than the
+  flattering in-sample 12.7. Needs `site.api.espn.com`.
 - `mlb_model.py` — Pythagorean team strength + log5 + starting-pitcher
   adjustment + home field, priced against market moneylines with EV and Kelly
   sizing. Needs `statsapi.mlb.com`.
@@ -70,11 +75,14 @@ Same $10, three ways: ten $1 singles returns $10.50; a 3-leg returns $8.76; a
 ```
 python3 parlay_math.py
 python3 mlb_model.py --date 2026-08-29 --odds TOR=-155 ATL=-190
+python3 ncaaf_team_props.py
 ```
 
 ## Environment note
 
-The sandbox this was written in blocks all outbound sports data
+Egress varies by sandbox. `ncaaf_team_props.py` reaches ESPN fine and caches
+the season to `.cfb2025.json`, but the sandbox the MLB work was written in
+blocked all outbound sports data
 (`statsapi.mlb.com`, `mlb.com`, `espn.com`, Yahoo, Baseball-Reference — every
 one refused by the egress proxy). `mlb_model.py` reports that and exits rather
 than guessing. Run it somewhere with normal network access and it produces real
