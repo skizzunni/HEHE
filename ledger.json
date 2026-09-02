@@ -522,6 +522,11 @@
   "conf": 91.3,
   "dog": false,
   "league": "atp",
+  "live": "3rd",
+  "live_score": {
+   "Alex de Minaur": "6 6 0",
+   "Andrea Guerrieri": "2 2 0"
+  },
   "logged": "2026-09-02T13:50",
   "market_agrees": null,
   "matchup": "Alex de Minaur @ Andrea Guerrieri",
@@ -621,6 +626,11 @@
   "conf": 84.8,
   "dog": false,
   "league": "atp",
+  "live": "3rd",
+  "live_score": {
+   "Bu Yunchaokete": "6 6 5",
+   "Rafael Jodar": "2 1 1"
+  },
   "logged": "2026-09-02T13:13",
   "market_agrees": null,
   "matchup": "Bu Yunchaokete @ Rafael Jodar",
@@ -709,6 +719,11 @@
   "conf": 61.4,
   "dog": false,
   "league": "atp",
+  "live": "2nd",
+  "live_score": {
+   "Fabian Marozsan": "4 0",
+   "Michael Zheng": "6 0"
+  },
   "logged": "2026-09-02T14:28",
   "market_agrees": null,
   "matchup": "Michael Zheng @ Fabian Marozsan",
@@ -769,6 +784,11 @@
   "conf": 56.1,
   "dog": false,
   "league": "atp",
+  "live": "4th",
+  "live_score": {
+   "Daniel Altmaier": "3 1 7(7) 1",
+   "Zachary Svajda": "6 6 6(5) 2"
+  },
   "logged": "2026-09-02T12:22",
   "market_agrees": null,
   "matchup": "Daniel Altmaier @ Zachary Svajda",
@@ -795,6 +815,11 @@
   "conf": 70.2,
   "dog": false,
   "league": "atp",
+  "live": "3rd",
+  "live_score": {
+   "Jacob Fearnley": "3 3 0",
+   "Tomas Martin Etcheverry": "6 6 0"
+  },
   "logged": "2026-09-02T13:13",
   "market_agrees": null,
   "matchup": "Jacob Fearnley @ Tomas Martin Etcheverry",
@@ -929,19 +954,21 @@
   "conf": 76.9,
   "dog": false,
   "league": "atp",
-  "live": "4th",
-  "live_score": {
-   "Ben Shelton": "6 5 7(7) 6",
-   "Hubert Hurkacz": "3 7 6(3) 5"
-  },
   "logged": "2026-09-02T13:13",
   "market_agrees": null,
   "matchup": "Hubert Hurkacz @ Ben Shelton",
   "pick": "Ben Shelton",
+  "played": "2026-09-02",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Ben Shelton": "6 5 7(7) 7",
+   "Hubert Hurkacz": "3 7 6(3) 5"
+  },
+  "settled": "2026-09-02T16:57",
+  "status": "won",
   "tip": "1:10 PM",
-  "why": "rank 9 vs 47"
+  "why": "rank 9 vs 47",
+  "winner": "Ben Shelton"
  },
  "atp:182732": {
   "conf": 91.0,
@@ -1128,6 +1155,11 @@
   "conf": 67.3,
   "dog": false,
   "league": "atp",
+  "live": "4th",
+  "live_score": {
+   "Ignacio Buse": "3 6 6 0",
+   "Marcos Giron": "6 3 3 0"
+  },
   "logged": "2026-09-02T12:22",
   "market_agrees": null,
   "matchup": "Ignacio Buse @ Marcos Giron",
@@ -1422,6 +1454,11 @@
   "conf": 51.7,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Denis Shapovalov": "0",
+   "Luca Van Assche": "0"
+  },
   "logged": "2026-09-02T16:19",
   "market_agrees": null,
   "matchup": "Luca Van Assche @ Denis Shapovalov",
@@ -1827,10 +1864,10 @@
   "conf": 62.8,
   "dog": false,
   "league": "ecu",
-  "live": "74'",
+  "live": "90'+4'",
   "live_score": {
-   "Macar\u00e1": 2,
-   "Manta F.C.": 2
+   "Macar\u00e1": 4,
+   "Manta F.C.": 3
   },
   "logged": "2026-09-02T14:53",
   "market_agrees": true,
@@ -1910,39 +1947,44 @@
  },
  "efl1:401880295": {
   "conf": 50.3,
+  "diagnosis": "margin 3 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 50%",
   "dog": true,
   "league": "efl1",
-  "live": "90'+3'",
-  "live_score": {
-   "Millwall": 0,
-   "Wrexham": 3
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
   "matchup": "WXM @ MIL",
   "pick": "Millwall",
+  "played": "2026-09-02",
   "price": "+135",
-  "status": "open",
+  "scores": {
+   "Millwall": 0,
+   "Wrexham": 3
+  },
+  "settled": "2026-09-02T16:57",
+  "status": "lost",
   "tip": "2:45 PM",
-  "why": "rating 1542 v 1521 (+20.62) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1542 v 1521 (+20.62) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Wrexham"
  },
  "efl1:401880296": {
   "conf": 62.4,
   "dog": true,
   "league": "efl1",
-  "live": "76'",
-  "live_score": {
-   "Burnley": 1,
-   "Middlesbrough": 1
-  },
   "logged": "2026-09-02T14:53",
   "market_agrees": false,
   "matchup": "MID @ BUR",
   "pick": "Burnley",
+  "played": "2026-09-02",
   "price": "+225",
-  "status": "open",
+  "scores": {
+   "Burnley": 1,
+   "Middlesbrough": 1
+  },
+  "settled": "2026-09-02T16:57",
+  "status": "won",
   "tip": "3:00 PM",
-  "why": "rating 1500 v 1540 (+40.10) \u00b7 at home"
+  "why": "rating 1500 v 1540 (+40.10) \u00b7 at home",
+  "winner": "Burnley"
  },
  "efl1:401880297": {
   "conf": 54.1,
@@ -2112,19 +2154,21 @@
   "conf": 57.8,
   "dog": true,
   "league": "efl2",
-  "live": "81'",
-  "live_score": {
-   "Mansfield Town": 0,
-   "Reading": 4
-  },
   "logged": "2026-09-02T14:53",
   "market_agrees": false,
   "matchup": "MNF @ REA",
   "pick": "Reading",
+  "played": "2026-09-02",
   "price": "+105",
-  "status": "open",
+  "scores": {
+   "Mansfield Town": 0,
+   "Reading": 5
+  },
+  "settled": "2026-09-02T16:57",
+  "status": "won",
   "tip": "3:00 PM",
-  "why": "rating 1505 v 1523 (+17.89) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1505 v 1523 (+17.89) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "Reading"
  },
  "efl2:401880876": {
   "conf": 53.6,
@@ -2148,21 +2192,24 @@
  },
  "efl2:401880877": {
   "conf": 58.5,
+  "diagnosis": "margin 2 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 58%",
   "dog": true,
   "league": "efl2",
-  "live": "90'+6'",
-  "live_score": {
-   "Milton Keynes Dons": 1,
-   "Wigan Athletic": 3
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
   "matchup": "MKD @ WGA",
   "pick": "Milton Keynes Dons",
+  "played": "2026-09-02",
   "price": "+175",
-  "status": "open",
+  "scores": {
+   "Milton Keynes Dons": 1,
+   "Wigan Athletic": 3
+  },
+  "settled": "2026-09-02T16:57",
+  "status": "lost",
   "tip": "2:45 PM",
-  "why": "rating 1500 v 1479 (+21.13)"
+  "why": "rating 1500 v 1479 (+21.13)",
+  "winner": "Wigan Athletic"
  },
  "efl2:401880878": {
   "conf": 63.2,
@@ -2332,21 +2379,24 @@
  },
  "efl2:401880886": {
   "conf": 55.6,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 56%",
   "dog": true,
   "league": "efl2",
-  "live": "90'+5'",
-  "live_score": {
-   "Barnsley": 2,
-   "Blackpool": 1
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
   "matchup": "BLP @ BAR",
   "pick": "Blackpool",
+  "played": "2026-09-02",
   "price": "+190",
-  "status": "open",
+  "scores": {
+   "Barnsley": 2,
+   "Blackpool": 1
+  },
+  "settled": "2026-09-02T16:57",
+  "status": "lost",
   "tip": "2:45 PM",
-  "why": "rating 1491 v 1484 (+7.05) \u00b7 last 10: 7-3"
+  "why": "rating 1491 v 1484 (+7.05) \u00b7 last 10: 7-3",
+  "winner": "Barnsley"
  },
  "efl3:401881397": {
   "conf": 67.9,
@@ -3441,9 +3491,9 @@
   "conf": 52.8,
   "dog": true,
   "league": "mlb",
-  "live": "Top 8th",
+  "live": "Mid 9th",
   "live_score": {
-   "Atlanta Braves": 8,
+   "Atlanta Braves": 9,
    "Washington Nationals": 0
   },
   "logged": "2026-09-02T12:22",
@@ -3493,10 +3543,10 @@
   "conf": 62.6,
   "dog": false,
   "league": "mlb",
-  "live": "End 2nd",
+  "live": "Bot 3rd",
   "live_score": {
    "Boston Red Sox": 0,
-   "Seattle Mariners": 0
+   "Seattle Mariners": 4
   },
   "logged": "2026-09-02T15:24",
   "market_agrees": true,
@@ -3537,9 +3587,9 @@
   "conf": 57.0,
   "dog": false,
   "league": "mlb",
-  "live": "End 6th",
+  "live": "Top 8th",
   "live_score": {
-   "Athletics": 8,
+   "Athletics": 9,
    "Texas Rangers": 2
   },
   "logged": "2026-09-02T14:28",
@@ -3607,7 +3657,7 @@
   "conf": 54.7,
   "dog": false,
   "league": "mlb",
-  "live": "Top 6th",
+  "live": "Top 7th",
   "live_score": {
    "Baltimore Orioles": 3,
    "Colorado Rockies": 2
@@ -3638,7 +3688,7 @@
   "conf": 59.5,
   "dog": true,
   "league": "mlb",
-  "live": "Bot 4th",
+  "live": "Top 6th",
   "live_score": {
    "Arizona Diamondbacks": 0,
    "Philadelphia Phillies": 0
@@ -3950,19 +4000,21 @@
   "conf": 51.1,
   "dog": true,
   "league": "par",
-  "live": "78'",
-  "live_score": {
-   "Libertad": 0,
-   "Nacional Asunci\u00f3n": 2
-  },
   "logged": "2026-09-02T14:53",
   "market_agrees": false,
   "matchup": "LIB @ NAC",
   "pick": "Nacional Asunci\u00f3n",
+  "played": "2026-09-02",
   "price": "+180",
-  "status": "open",
+  "scores": {
+   "Libertad": 0,
+   "Nacional Asunci\u00f3n": 3
+  },
+  "settled": "2026-09-02T16:58",
+  "status": "won",
   "tip": "3:00 PM",
-  "why": "rating 1541 v 1527 (+13.77) \u00b7 last 10: 8-2 \u00b7 at home"
+  "why": "rating 1541 v 1527 (+13.77) \u00b7 last 10: 8-2 \u00b7 at home",
+  "winner": "Nacional Asunci\u00f3n"
  },
  "par:401888606": {
   "conf": 54.1,
@@ -4019,21 +4071,24 @@
  },
  "par:401888671": {
   "conf": 54.0,
+  "diagnosis": "margin 3 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 54%",
   "dog": true,
   "league": "par",
-  "live": "81'",
-  "live_score": {
-   "Sportivo Ameliano": 0,
-   "Sportivo Trinidense": 3
-  },
   "logged": "2026-09-02T14:53",
   "market_agrees": false,
   "matchup": "CST @ CSA",
   "pick": "Sportivo Ameliano",
+  "played": "2026-09-02",
   "price": "+175",
-  "status": "open",
+  "scores": {
+   "Sportivo Ameliano": 0,
+   "Sportivo Trinidense": 3
+  },
+  "settled": "2026-09-02T16:59",
+  "status": "lost",
   "tip": "3:00 PM",
-  "why": "rating 1518 v 1518 (+0.35) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1518 v 1518 (+0.35) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Sportivo Trinidense"
  },
  "par:401888672": {
   "conf": 59.4,
@@ -4188,19 +4243,21 @@
   "conf": 58.1,
   "dog": false,
   "league": "sco",
-  "live": "81'",
-  "live_score": {
-   "Falkirk": 1,
-   "Rangers": 2
-  },
   "logged": "2026-09-02T14:53",
   "market_agrees": true,
   "matchup": "RAN @ FALK",
   "pick": "Rangers",
+  "played": "2026-09-02",
   "price": "-205",
-  "status": "open",
+  "scores": {
+   "Falkirk": 1,
+   "Rangers": 2
+  },
+  "settled": "2026-09-02T16:59",
+  "status": "won",
   "tip": "3:00 PM",
-  "why": "rating 1565 v 1484 (+80.93) \u00b7 last 10: 6-4"
+  "why": "rating 1565 v 1484 (+80.93) \u00b7 last 10: 6-4",
+  "winner": "Rangers"
  },
  "sco:401878391": {
   "conf": 60.4,
@@ -4391,6 +4448,11 @@
   "conf": 63.8,
   "dog": false,
   "league": "wta",
+  "live": "3rd",
+  "live_score": {
+   "Catherine McNally": "6 2 0",
+   "Emma Navarro": "3 6 1"
+  },
   "logged": "2026-09-02T13:13",
   "market_agrees": null,
   "matchup": "Catherine McNally @ Emma Navarro",
@@ -4562,6 +4624,11 @@
   "conf": 50.9,
   "dog": false,
   "league": "wta",
+  "live": "1st",
+  "live_score": {
+   "Kamilla Rakhimova": "2",
+   "Oksana Selekhmeteva": "1"
+  },
   "logged": "2026-09-02T14:53",
   "market_agrees": null,
   "matchup": "Kamilla Rakhimova @ Oksana Selekhmeteva",
@@ -5494,6 +5561,11 @@
   "conf": 55.0,
   "dog": false,
   "league": "wta",
+  "live": "2nd",
+  "live_score": {
+   "Francesca Jones": "6 0",
+   "Magda Linette": "4 4"
+  },
   "logged": "2026-09-02T16:19",
   "market_agrees": null,
   "matchup": "Francesca Jones @ Magda Linette",
