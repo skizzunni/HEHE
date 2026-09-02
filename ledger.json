@@ -931,8 +931,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Ben Shelton": "6 5 7(7) 4",
-   "Hubert Hurkacz": "3 7 6(3) 3"
+   "Ben Shelton": "6 5 7(7) 6",
+   "Hubert Hurkacz": "3 7 6(3) 5"
   },
   "logged": "2026-09-02T13:13",
   "market_agrees": null,
@@ -1474,19 +1474,21 @@
   "conf": 50.9,
   "dog": false,
   "league": "aut",
-  "live": "89'",
-  "live_score": {
-   "RB Salzburg": 4,
-   "Rapid Vienna": 1
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": true,
   "matchup": "VIE @ SLZ",
   "pick": "RB Salzburg",
+  "played": "2026-09-02",
   "price": "-120",
-  "status": "open",
+  "scores": {
+   "RB Salzburg": 5,
+   "Rapid Vienna": 1
+  },
+  "settled": "2026-09-02T16:38",
+  "status": "won",
   "tip": "2:30 PM",
-  "why": "rating 1516 v 1493 (+23.22) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1516 v 1493 (+23.22) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "RB Salzburg"
  },
  "aut:401881799": {
   "conf": 50.8,
@@ -1533,19 +1535,21 @@
   "conf": 65.0,
   "dog": false,
   "league": "bel",
-  "live": "90'+1'",
-  "live_score": {
-   "Sint-Truidense": 0,
-   "Union St.-Gilloise": 3
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": true,
   "matchup": "USG @ STVV",
   "pick": "Union St.-Gilloise",
+  "played": "2026-09-02",
   "price": "-110",
-  "status": "open",
+  "scores": {
+   "Sint-Truidense": 0,
+   "Union St.-Gilloise": 3
+  },
+  "settled": "2026-09-02T16:38",
+  "status": "won",
   "tip": "2:30 PM",
-  "why": "rating 1588 v 1535 (+53.14) \u00b7 last 10: 8-2"
+  "why": "rating 1588 v 1535 (+53.14) \u00b7 last 10: 8-2",
+  "winner": "Union St.-Gilloise"
  },
  "bel:401879018": {
   "conf": 55.0,
@@ -1823,9 +1827,9 @@
   "conf": 62.8,
   "dog": false,
   "league": "ecu",
-  "live": "56'",
+  "live": "74'",
   "live_score": {
-   "Macar\u00e1": 1,
+   "Macar\u00e1": 2,
    "Manta F.C.": 2
   },
   "logged": "2026-09-02T14:53",
@@ -1867,43 +1871,48 @@
   "conf": 52.2,
   "dog": false,
   "league": "efl1",
-  "live": "77'",
-  "live_score": {
-   "Charlton Athletic": 1,
-   "West Bromwich Albion": 1
-  },
   "logged": "2026-09-02T14:46",
   "market_agrees": null,
   "matchup": "CHA @ WBA",
   "pick": "West Bromwich Albion",
+  "played": "2026-09-02",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Charlton Athletic": 1,
+   "West Bromwich Albion": 1
+  },
+  "settled": "2026-09-02T16:38",
+  "status": "won",
   "tip": "2:45 PM",
-  "why": "rating 1476 v 1467 (+8.73) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1476 v 1467 (+8.73) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "West Bromwich Albion"
  },
  "efl1:401880294": {
   "conf": 59.3,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 59%",
   "dog": true,
   "league": "efl1",
-  "live": "78'",
-  "live_score": {
-   "Cardiff City": 1,
-   "Queens Park Rangers": 2
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
   "matchup": "CAR @ QPR",
   "pick": "Cardiff City",
+  "played": "2026-09-02",
   "price": "+245",
-  "status": "open",
+  "scores": {
+   "Cardiff City": 1,
+   "Queens Park Rangers": 2
+  },
+  "settled": "2026-09-02T16:38",
+  "status": "lost",
   "tip": "2:45 PM",
-  "why": "rating 1500 v 1475 (+25.03)"
+  "why": "rating 1500 v 1475 (+25.03)",
+  "winner": "Queens Park Rangers"
  },
  "efl1:401880295": {
   "conf": 50.3,
   "dog": true,
   "league": "efl1",
-  "live": "75'",
+  "live": "90'+3'",
   "live_score": {
    "Millwall": 0,
    "Wrexham": 3
@@ -1921,7 +1930,7 @@
   "conf": 62.4,
   "dog": true,
   "league": "efl1",
-  "live": "57'",
+  "live": "76'",
   "live_score": {
    "Burnley": 1,
    "Middlesbrough": 1
@@ -2103,7 +2112,7 @@
   "conf": 57.8,
   "dog": true,
   "league": "efl2",
-  "live": "63'",
+  "live": "81'",
   "live_score": {
    "Mansfield Town": 0,
    "Reading": 4
@@ -2141,9 +2150,9 @@
   "conf": 58.5,
   "dog": true,
   "league": "efl2",
-  "live": "78'",
+  "live": "90'+6'",
   "live_score": {
-   "Milton Keynes Dons": 0,
+   "Milton Keynes Dons": 1,
    "Wigan Athletic": 3
   },
   "logged": "2026-09-02T14:28",
@@ -2178,21 +2187,24 @@
  },
  "efl2:401880879": {
   "conf": 53.4,
+  "diagnosis": "margin 2 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 53%",
   "dog": true,
   "league": "efl2",
-  "live": "77'",
-  "live_score": {
-   "Luton Town": 2,
-   "Stockport County": 0
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
   "matchup": "STO @ LTN",
   "pick": "Stockport County",
+  "played": "2026-09-02",
   "price": "+145",
-  "status": "open",
+  "scores": {
+   "Luton Town": 2,
+   "Stockport County": 0
+  },
+  "settled": "2026-09-02T16:38",
+  "status": "lost",
   "tip": "2:45 PM",
-  "why": "rating 1534 v 1537 (+3.06) \u00b7 last 10: 7-3"
+  "why": "rating 1534 v 1537 (+3.06) \u00b7 last 10: 7-3",
+  "winner": "Luton Town"
  },
  "efl2:401880880": {
   "conf": 61.6,
@@ -2261,19 +2273,21 @@
   "conf": 50.2,
   "dog": true,
   "league": "efl2",
-  "live": "77'",
-  "live_score": {
-   "AFC Wimbledon": 1,
-   "Burton Albion": 3
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
   "matchup": "WIM @ BRT",
   "pick": "Burton Albion",
+  "played": "2026-09-02",
   "price": "+145",
-  "status": "open",
+  "scores": {
+   "AFC Wimbledon": 1,
+   "Burton Albion": 4
+  },
+  "settled": "2026-09-02T16:38",
+  "status": "won",
   "tip": "2:45 PM",
-  "why": "rating 1475 v 1455 (+20.14) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1475 v 1455 (+20.14) \u00b7 last 10: 5-5 \u00b7 at home",
+  "winner": "Burton Albion"
  },
  "efl2:401880884": {
   "conf": 52.6,
@@ -2320,9 +2334,9 @@
   "conf": 55.6,
   "dog": true,
   "league": "efl2",
-  "live": "77'",
+  "live": "90'+5'",
   "live_score": {
-   "Barnsley": 1,
+   "Barnsley": 2,
    "Blackpool": 1
   },
   "logged": "2026-09-02T14:28",
@@ -3427,9 +3441,9 @@
   "conf": 52.8,
   "dog": true,
   "league": "mlb",
-  "live": "Mid 7th",
+  "live": "Top 8th",
   "live_score": {
-   "Atlanta Braves": 6,
+   "Atlanta Braves": 8,
    "Washington Nationals": 0
   },
   "logged": "2026-09-02T12:22",
@@ -3479,7 +3493,7 @@
   "conf": 62.6,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 1st",
+  "live": "End 2nd",
   "live_score": {
    "Boston Red Sox": 0,
    "Seattle Mariners": 0
@@ -3523,7 +3537,7 @@
   "conf": 57.0,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 5th",
+  "live": "End 6th",
   "live_score": {
    "Athletics": 8,
    "Texas Rangers": 2
@@ -3593,7 +3607,7 @@
   "conf": 54.7,
   "dog": false,
   "league": "mlb",
-  "live": "Top 5th",
+  "live": "Top 6th",
   "live_score": {
    "Baltimore Orioles": 3,
    "Colorado Rockies": 2
@@ -3624,7 +3638,7 @@
   "conf": 59.5,
   "dog": true,
   "league": "mlb",
-  "live": "Mid 3rd",
+  "live": "Bot 4th",
   "live_score": {
    "Arizona Diamondbacks": 0,
    "Philadelphia Phillies": 0
@@ -3936,7 +3950,7 @@
   "conf": 51.1,
   "dog": true,
   "league": "par",
-  "live": "60'",
+  "live": "78'",
   "live_score": {
    "Libertad": 0,
    "Nacional Asunci\u00f3n": 2
@@ -4007,10 +4021,10 @@
   "conf": 54.0,
   "dog": true,
   "league": "par",
-  "live": "62'",
+  "live": "81'",
   "live_score": {
    "Sportivo Ameliano": 0,
-   "Sportivo Trinidense": 1
+   "Sportivo Trinidense": 3
   },
   "logged": "2026-09-02T14:53",
   "market_agrees": false,
@@ -4120,37 +4134,42 @@
   "conf": 57.3,
   "dog": true,
   "league": "sco",
-  "live": "79'",
-  "live_score": {
-   "Dundee United": 0,
-   "Motherwell": 3
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
   "matchup": "DUN @ MOT",
   "pick": "Motherwell",
+  "played": "2026-09-02",
   "price": "+135",
-  "status": "open",
+  "scores": {
+   "Dundee United": 0,
+   "Motherwell": 3
+  },
+  "settled": "2026-09-02T16:39",
+  "status": "won",
   "tip": "2:45 PM",
-  "why": "rating 1534 v 1481 (+53.69) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1534 v 1481 (+53.69) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "Motherwell"
  },
  "sco:401878388": {
   "conf": 51.4,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
   "dog": true,
   "league": "sco",
-  "live": "80'",
-  "live_score": {
-   "Kilmarnock": 0,
-   "St Mirren": 1
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
   "matchup": "STM @ KIL",
   "pick": "Kilmarnock",
+  "played": "2026-09-02",
   "price": "+165",
-  "status": "open",
+  "scores": {
+   "Kilmarnock": 0,
+   "St Mirren": 1
+  },
+  "settled": "2026-09-02T16:39",
+  "status": "lost",
   "tip": "2:45 PM",
-  "why": "rating 1471 v 1445 (+25.67) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1471 v 1445 (+25.67) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "St Mirren"
  },
  "sco:401878389": {
   "conf": 63.9,
@@ -4169,10 +4188,10 @@
   "conf": 58.1,
   "dog": false,
   "league": "sco",
-  "live": "62'",
+  "live": "81'",
   "live_score": {
    "Falkirk": 1,
-   "Rangers": 1
+   "Rangers": 2
   },
   "logged": "2026-09-02T14:53",
   "market_agrees": true,
@@ -4185,39 +4204,44 @@
  },
  "sco:401878391": {
   "conf": 60.4,
+  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 60%",
   "dog": true,
   "league": "sco",
-  "live": "78'",
-  "live_score": {
-   "Dundee": 0,
-   "St Johnstone": 0
-  },
   "logged": "2026-09-02T14:28",
   "market_agrees": false,
   "matchup": "STJ @ DUN",
   "pick": "St Johnstone",
+  "played": "2026-09-02",
   "price": "+155",
-  "status": "open",
+  "scores": {
+   "Dundee": 1,
+   "St Johnstone": 1
+  },
+  "settled": "2026-09-02T16:39",
+  "status": "lost",
   "tip": "2:45 PM",
-  "why": "rating 1500 v 1470 (+30.47)"
+  "why": "rating 1500 v 1470 (+30.47)",
+  "winner": "Dundee"
  },
  "sco:401878392": {
   "conf": 69.4,
   "dog": false,
   "league": "sco",
-  "live": "75'",
-  "live_score": {
-   "Aberdeen": 0,
-   "Celtic": 3
-  },
   "logged": "2026-09-02T14:46",
   "market_agrees": null,
   "matchup": "ABE @ CEL",
   "pick": "Celtic",
+  "played": "2026-09-02",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Aberdeen": 0,
+   "Celtic": 3
+  },
+  "settled": "2026-09-02T16:39",
+  "status": "won",
   "tip": "2:45 PM",
-  "why": "rating 1576 v 1461 (+114.70) \u00b7 last 10: 9-1 \u00b7 at home"
+  "why": "rating 1576 v 1461 (+114.70) \u00b7 last 10: 9-1 \u00b7 at home",
+  "winner": "Celtic"
  },
  "swe:401874077": {
   "conf": 62.0,
@@ -4249,19 +4273,21 @@
   "conf": 83.7,
   "dog": false,
   "league": "wta",
-  "live": "2nd",
-  "live_score": {
-   "Karolina Muchova": "6 3",
-   "Katie Boulter": "1 0"
-  },
   "logged": "2026-09-02T15:24",
   "market_agrees": null,
   "matchup": "Karolina Muchova @ Katie Boulter",
   "pick": "Karolina Muchova",
+  "played": "2026-09-02",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Karolina Muchova": "6 6",
+   "Katie Boulter": "1 0"
+  },
+  "settled": "2026-09-02T16:39",
+  "status": "won",
   "tip": "3:30 PM",
-  "why": "rank 7 vs 62"
+  "why": "rank 7 vs 62",
+  "winner": "Karolina Muchova"
  },
  "wta:182532": {
   "conf": 75.7,
