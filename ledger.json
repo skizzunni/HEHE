@@ -162,8 +162,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Alexander Zverev": "6 3 6(7) 3",
-   "Lorenzo Sonego": "4 6 7(9) 2"
+   "Alexander Zverev": "6 3 6(7) 4",
+   "Lorenzo Sonego": "4 6 7(9) 4"
   },
   "logged": "2026-09-01T20:37",
   "market_agrees": null,
@@ -2852,45 +2852,48 @@
   "conf": 64.3,
   "dog": false,
   "league": "mlb",
-  "live": "Top 9th",
-  "live_score": {
-   "Los Angeles Angels": 3,
-   "New York Yankees": 7
-  },
   "logged": "2026-09-01T21:21",
   "market_agrees": true,
   "matchup": "NYY @ LAA",
   "pick": "New York Yankees",
   "price": "-180",
-  "status": "open",
+  "scores": {
+   "Los Angeles Angels": 3,
+   "New York Yankees": 7
+  },
+  "settled": "2026-09-02T00:38",
+  "status": "won",
   "tip": "9:38 PM",
-  "why": "Cole 3.19 ERA/3.37 FIP vs Rodriguez 6.03 \u00b7 pen 3.11 v 4.30 \u00b7 L10 5-5 v 2-8"
+  "why": "Cole 3.19 ERA/3.37 FIP vs Rodriguez 6.03 \u00b7 pen 3.11 v 4.30 \u00b7 L10 5-5 v 2-8",
+  "winner": "New York Yankees"
  },
  "mlb:401816771": {
   "conf": 51.6,
+  "diagnosis": "margin 6 \u00b7 blowout \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 52%",
   "dog": true,
   "league": "mlb",
-  "live": "Mid 9th",
-  "live_score": {
-   "Arizona Diamondbacks": 1,
-   "Philadelphia Phillies": 7
-  },
   "logged": "2026-09-01T21:21",
   "market_agrees": false,
   "matchup": "PHI @ ARI",
   "pick": "Arizona Diamondbacks",
   "price": "+114",
-  "status": "open",
+  "scores": {
+   "Arizona Diamondbacks": 1,
+   "Philadelphia Phillies": 7
+  },
+  "settled": "2026-09-02T00:38",
+  "status": "lost",
   "tip": "9:40 PM",
-  "why": "Rodriguez 2.50 ERA/3.70 FIP vs Luzardo 3.09 \u00b7 L10 5-5 v 8-2"
+  "why": "Rodriguez 2.50 ERA/3.70 FIP vs Luzardo 3.09 \u00b7 L10 5-5 v 8-2",
+  "winner": "Philadelphia Phillies"
  },
  "mlb:401816772": {
   "conf": 54.3,
   "dog": false,
   "league": "mlb",
-  "live": "Top 7th",
+  "live": "Top 8th",
   "live_score": {
-   "Los Angeles Dodgers": 4,
+   "Los Angeles Dodgers": 5,
    "St. Louis Cardinals": 11
   },
   "logged": "2026-09-01T22:06",
