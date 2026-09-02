@@ -1403,3 +1403,40 @@ Four legs is where it crosses a coin flip. No amount of model work changes
 that — 0.847^4 is 51.5% however good the picks are. The card now leads with
 1-2-3-4 rather than starting at 5, because that is the range where the board's
 edge survives contact with the multiplication.
+
+## Winning the day outright
+
+The ask was never "a better hit rate" — it was clean days. That is a
+different quantity, and it is almost entirely a function of how many legs go
+on the card.
+
+Replaying the ledger day by day, taking the top N legs by measured rate:
+
+```
+ N  days  clean  clean%  legs   hit%
+ 1     3      3  100.0%     3  100.0%
+ 3     3      3  100.0%     9  100.0%
+ 5     3      3  100.0%    15  100.0%
+ 6     3      2   66.7%    18   94.4%
+ 8     3      1   33.3%    24   91.7%
+10     3      1   33.3%    30   90.0%
+```
+
+Three days is three days — 15/15 at ~0.85 a leg is a 1.65-sigma run of good
+luck, not a law. But the shape is not luck, it is multiplication, and it is
+knowable in advance. At the 0.847 the top band currently measures:
+
+```
+3 legs -> 60.8% chance of a clean day     ~3 days in 5
+5 legs -> 43.6%                           ~2 days in 5
+8 legs -> 26.5%                           ~1 day  in 4
+```
+
+So the Card tab now opens with the sweep table: the chance every leg comes in,
+at 1 through 8 legs, computed from today's actual top legs rather than a
+generic assumption, with the top three named. The full slate is untouched
+below it.
+
+Nothing about this makes a leg better. It makes the trade visible, which is
+the only honest lever left: the picks were never the reason the days were
+not clean.
