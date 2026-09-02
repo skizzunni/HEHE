@@ -54,9 +54,9 @@ def snapshot():
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 mc = round(r["myconf"] * 100, 1) if r["myconf"] else None
-                tk, tl = tier_of(mc)
+                tk, tl, hide = tier_of(k, mc)
                 rows.append({"mp": r["mypick"], "t": r["tip"],
-                             "mc": mc, "tk": tk, "tl": tl,
+                             "mc": mc, "tk": tk, "tl": tl, "hd": hide,
                              "why": r["why"],
                              "p": leg["price"] if leg else None,
                              "d": bool(leg["dog"]) if leg else False,
@@ -75,38 +75,67 @@ def snapshot():
     return out
 
 
-# Conviction tiers, cut where the measured hit rate actually steps.
+# Conviction tiers, cut on each sport's OWN measured curve.
 #
-# Walk-forward Elo over 3,224 completed 2026 tennis matches, scored in monthly
-# blocks the cuts were never fitted to. Every month and every K gives the same
-# shape: below 58% the model is a coin flip, above it the number means what it
-# says.
+# A first pass used one 58% threshold everywhere. That was a category error:
+# the MLB model is capped at 66% by construction, so its whole confidence
+# scale is roughly half of tennis's, and a 54% baseball pick is not the same
+# animal as a 54% tennis pick. It was hiding 11 of 19 MLB picks as "coin
+# flips" when baseball has no coin-flip band at all.
 #
-#     says 50-58%   803/1577 = 50.9%  (+-1.3)      <- no signal at all
+# TENNIS -- walk-forward Elo, 3,224 matches, monthly blocks the cuts were
+# never fitted to. There is a genuine dead zone and it is wide:
+#
+#     says 50-58%   803/1577 = 50.9%  (+-1.3)     <- no signal at all
 #     says 58-64%   504/826  = 61.0%  (+-1.7)
-#     says 64%+     580/821  = 70.6%  (+-1.7)
+#     says 64-72%   ~
+#     says 72%+     ~                 up to 78.4%
 #
-# The same shape, weaker and less well powered, shows up in MLB: games where
-# the two starters are within a quarter run of ERA hit 50.0% on a held-out
-# August (n=96) against 58.2% for the rest.
+# MLB -- point-in-time backtest, 1,155 games from June. No dead zone, and a
+# much flatter gradient, because baseball is simply less predictable:
 #
-# So a leg under 58% is not a weak lean, it is a coin flip wearing a number,
-# and it has no business in a parlay. The board says so out loud rather than
-# printing 55% and letting it read as an edge.
-NO_EDGE, LEAN, SOLID = 58.0, 64.0, 72.0
+#     says 50-53%   165/298  = 55.4%  (+-2.9)     <- weak, but not a coin flip
+#     says 53-56%   148/266  = 55.6%  (+-3.1)
+#     says 56-59%   125/229  = 54.6%  (+-3.3)
+#     says 59-62%    93/154  = 60.4%  (+-4.0)
+#     says 62-67%   121/208  = 58.2%  (+-3.5)
+#
+# Keeping only MLB legs at 57%+ moves the hit rate 56.5% -> 58.0%, and 61%+
+# gets 59.6%. Tennis moves 58.4% -> 65.9% -> 73.1% over the same exercise.
+# Baseball's ceiling really is about 60%; no threshold repairs that.
+#
+# Every other league has no per-band validation yet, so it gets no tier claim
+# and nothing is hidden -- an unmeasured league should not be dressed in
+# numbers borrowed from a measured one.
+TENNIS_CUTS = (58.0, 64.0, 72.0)
+MLB_CUTS = (57.0, 61.0)
 
 
-def tier_of(mc):
-    """-> (key, label) for a confidence in percent, or None if unrated."""
+def tier_of(league, mc):
+    """-> (key, label, hide) for a confidence in percent.
+
+    `hide` marks legs with no measured edge, which the board keeps out of the
+    default view. Only tennis has a band that earns it.
+    """
     if mc is None:
-        return None, None
-    if mc < NO_EDGE:
-        return "coin", "coin flip"
-    if mc < LEAN:
-        return "lean", "lean"
-    if mc < SOLID:
-        return "solid", "solid"
-    return "strong", "strong"
+        return None, None, False
+    if league in ("atp", "wta"):
+        a, b, c = TENNIS_CUTS
+        if mc < a:
+            return "coin", "coin flip", True
+        if mc < b:
+            return "lean", "lean", False
+        if mc < c:
+            return "solid", "solid", False
+        return "strong", "strong", False
+    if league == "mlb":
+        a, b = MLB_CUTS
+        if mc < a:
+            return "thin", "thin", False
+        if mc < b:
+            return "lean", "lean", False
+        return "solid", "solid", False
+    return None, None, False
 
 
 def implied(american):

@@ -65,6 +65,7 @@ td.mkt{font-family:var(--mono);font-size:12px;color:var(--ink-dim);white-space:n
   letter-spacing:.08em;text-transform:uppercase;border-radius:2px;padding:1px 4px;
   border:1px solid currentColor;vertical-align:1.5px}
 .tier.coin{color:var(--ink-dim);opacity:.75}
+.tier.thin{color:var(--ink-dim);opacity:.75}
 .tier.lean{color:var(--ink-dim)}
 .tier.solid{color:var(--dog)}
 .tier.strong{color:var(--dog);background:color-mix(in srgb,var(--dog) 12%,transparent)}
@@ -259,10 +260,10 @@ function coinBar(n){
   if(!n) return "";
   return '<p class="coinbar">'
     + (SHOWCOIN
-        ? 'Showing ' + n + ' coin-flip leg' + (n === 1 ? '' : 's') + '. '
-          + 'Measured hit rate in this band is 50.9% over 1,577 matches.'
+        ? 'Showing ' + n + ' coin-flip leg' + (n === 1 ? '' : 's')
+          + '. Measured hit rate in this band is 50.9% over 1,577 matches.'
         : n + ' coin-flip leg' + (n === 1 ? '' : 's') + ' hidden &mdash; '
-          + 'under 58% the model hits 50.9%, so they add risk and no edge.')
+          + 'under 58% this model hits 50.9%, so they add risk and no edge.')
     + ' <button type="button" id="coinToggle">'
     + (SHOWCOIN ? 'Hide them' : 'Show anyway') + '</button></p>';
 }
@@ -327,11 +328,12 @@ function render(){
   }
   // Soccer is many competitions in one tab, so each row names its own.
   const mixed = new Set(lg.rows.map(r => r.lg)).size > 1;
-  // A leg the model calls under 58% hit 50.9% over 1,577 measured matches --
-  // a coin flip, not a lean. They are hidden by default so a parlay built off
-  // this page is built out of legs that actually carry signal.
-  const coins = lg.rows.filter(r => r.tk === "coin").length;
-  const shown = SHOWCOIN ? lg.rows : lg.rows.filter(r => r.tk !== "coin");
+  // Only legs the sport's OWN backtest shows no edge on are hidden. In tennis
+  // that is everything under 58%, which hit 50.9% over 1,577 measured matches.
+  // Baseball has no such band -- its weakest picks still hit ~55% -- so
+  // nothing is hidden there, it is only labelled thin.
+  const coins = lg.rows.filter(r => r.hd).length;
+  const shown = SHOWCOIN ? lg.rows : lg.rows.filter(r => !r.hd);
   if(!shown.length){
     panel.innerHTML = '<p class="empty">Every pick here is a coin flip '
       + '(' + coins + ' of them). Nothing worth a leg.</p>' + coinBar(coins);
