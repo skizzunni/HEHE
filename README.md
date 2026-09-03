@@ -1992,3 +1992,37 @@ dropped: 56–59 came out at 60.0% and 59–62 at 55.8%, an inversion well insid
 2 s.e. — the same failure as the tennis bands. Unpriced games (tomorrow's
 slate, before the book posts) never pass through the anchor, so they carry
 their own table measured on the raw model's confidence.
+
+## Self-updating site (GitHub Actions + Pages)
+
+`.github/workflows/board.yml` runs the same pipeline the assistant routines used
+to run, on GitHub's runners instead. The pipeline is pure standard-library
+Python, so there is nothing to install, and Actions is free on a public
+repository — the board refreshes without costing anything per run.
+
+Cadence, matching what it replaced:
+
+| when | what |
+|---|---|
+| `:20` past each hour | full re-research — ratings, starters, prices, grading |
+| `:00` and `:40` | score refresh only, no refetch |
+
+A `concurrency` group keeps the two from overlapping, and the ledger push
+retries on a rebase five times, because the two cadences can otherwise race.
+`ledger.json` is committed back (it is the only file the feeds cannot
+reproduce); `board.html` is a build artifact and goes straight to Pages.
+
+The page polls `build.txt` once a minute and reloads itself when the build id
+changes, so a tab left open on a phone keeps up on its own. Served anywhere
+without that file — the Claude artifact, a local `file://` — the fetch fails
+and the page behaves exactly as before.
+
+**One-time setup.** Scheduled workflows only run from the default branch, and
+Pages has to be switched on by a repository admin — the Actions token is
+refused (`Resource not accessible by integration`), so no workflow can do it:
+
+1. **Settings → Pages → Build and deployment → Source: GitHub Actions.**
+2. Re-run the latest `board` workflow, or wait for the next scheduled run.
+
+The site is then at `https://skizzunni.github.io/HEHE/`. The repository is
+public, so that URL is public too — anyone with the link can read the board.
