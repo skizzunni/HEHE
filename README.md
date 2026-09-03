@@ -1930,3 +1930,65 @@ Three legs flagged as "tip time passed but still listed upcoming" were
 checked and are correct: the board's slate is captured on the hourly rebuild
 and those matches had started since, with the score refresh already tracking
 two of them live.
+
+## The board's MLB model, rebuilt against closing prices (2026-09-03)
+
+Every earlier MLB number in this file was measured against *results*. None was
+measured against a *price*. This one is, on the whole season.
+
+**Setup.** All 2,100 completed 2026 regular-season games. Every model input
+rebuilt as of the morning of each game from game-by-game logs — team runs
+scored and allowed, each announced starter's innings/ER/K/BB/HR, and bullpen
+innings derived as the team's line minus the starter's — so nothing sees its
+own result or any later one. Scored against the de-vigged DraftKings closing
+moneyline, recovered for 2,099 of 2,100 games from ESPN's core API.
+
+**What the shipped model was doing.**
+
+| | Brier | accuracy |
+|---|---|---|
+| run-rate chain (starter .65 + bullpen .30 + team .05, Pythagenpat, flat HFA) | 0.2550 | 53.8% |
+| de-vigged closing line | 0.2449 | 56.5% |
+
+Worse than the headline gap: its confidence ran backwards. Its 70–80% band hit
+44%, and on the 55 games where it disagreed with the close by ten points or
+more it hit **47.3%**. The picks it liked most were the picks it lost.
+
+**The replacement.** A logistic fit on a fit/choose/report split of disjoint
+date ranges (50% / 25% / 25%). Only two inputs survived selection: run
+differential regressed toward the league by games played, and the
+innings-shrunk ERA/FIP starter blend. Bullpen ERA, bullpen innings over the
+previous three days, starter rest and team rest were each fitted and each
+failed to earn a place — bullpen fatigue actively hurt.
+
+On the untouched final quarter (488 games): **0.2438 / 56.8%**, against the
+line's 0.2408 / 58.0%.
+
+**It still does not beat the close, so it no longer pretends to.** Blending it
+into the line gains 0.0001 Brier, which is noise, and betting the
+disagreements makes money at a 2–4% threshold and loses sharply above it —
+the shape of noise, not edge. So where a price exists the MLB pick is taken
+from the de-vigged line with the model allowed a fifth of the say. That weight
+was best or joint-best of ten tried across three feature sets.
+
+**What that buys, on the untouched quarter:**
+
+| rule | Brier | accuracy | its 60 most confident calls |
+|---|---|---|---|
+| old run-rate chain | 0.2470 | 55.7% | 56.7% |
+| refitted model, raw | 0.2438 | 56.8% | 70.0% |
+| refitted model, anchored to the close | 0.2409 | 56.6% | **71.7%** |
+| the close alone | 0.2408 | 58.0% | 68.3% |
+
+The anchored rule makes no pick more than ten points from the close, so the
+47.3% block is gone by construction. Ranking all 1,948 priced games by the
+number the board now shows, the top 100 hit **70.0%** and the top 200 hit
+68.0% — against 66.9% for simply taking every favourite of -200 or shorter,
+which is the best filter available from the price alone.
+
+**Badges.** `MEASURED["mlb"]` came from 27 graded picks; it now comes from all
+1,948 games replayed through the exact shipped rule. Finer cuts were tried and
+dropped: 56–59 came out at 60.0% and 59–62 at 55.8%, an inversion well inside
+2 s.e. — the same failure as the tennis bands. Unpriced games (tomorrow's
+slate, before the book posts) never pass through the anchor, so they carry
+their own table measured on the raw model's confidence.

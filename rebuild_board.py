@@ -169,7 +169,20 @@ MEASURED = {
     # came out BELOW a 78.7% call. A band has to be wide enough to carry a
     # number, and above 72% that means one band.
     "tennis": ((72.0, 0.784), (64.0, 0.706), (58.0, 0.610), (0.0, 0.509)),
-    "mlb":    ((61.0, 0.596), (57.0, 0.580), (0.0, 0.550)),
+    # MLB's table used to come from 27 graded picks. It now comes from all
+    # 1,948 priced 2026 games replayed through the exact rule the board ships,
+    # market anchor included. Finer cuts were tried and dropped for the same
+    # reason as tennis: 56-59 came out at 60.0% and 59-62 at 55.8%, an
+    # inversion well inside 2 s.e. One cut survives, and it survives on the
+    # untouched quarter too (70.3% there against 68.4% overall).
+    "mlb":    ((62.0, 0.684), (0.0, 0.547)),
+    # Tomorrow's games have no price yet, so they never pass through the
+    # anchor, and an unanchored 61% is a different animal from an anchored
+    # one -- scoring it against the table above flattened every unpriced leg
+    # to the same number. This is the same 1,948 games scored on the model's
+    # OWN confidence. 57-60 (57.8%) and 54-57 (57.3%) are one band because
+    # nothing separates them but noise.
+    "mlb_raw": ((60.0, 0.609), (54.0, 0.575), (0.0, 0.513)),
     # Soccer graded nothing at all until the grader's league map was fixed,
     # and the 49 picks it had been silently discarding are the worst block on
     # the board: 46.9% against a claimed 58.7%. Its confidence is INVERTED --
@@ -239,17 +252,21 @@ def opponent_unranked(why):
     return m.group(2) == "NR" if m else None
 
 
-def _band_key(league, mc, why=None, is_soccer=False, dog=None):
+def _band_key(league, mc, why=None, is_soccer=False, dog=None, price=None):
     """-> (sport, cut, split) naming this pick's band, or None.
 
     The third slot is whatever actually separates that sport: for tennis
     whether the opponent is unranked, for soccer whether we are on the
     underdog. Both are measured, neither is assumed.
+
+    MLB splits a step earlier, on the sport itself: a priced MLB pick has been
+    pulled toward the close and an unpriced one has not, so the two carry
+    different calibration and cannot share a table.
     """
     if mc is None:
         return None
     sport = ("tennis" if league in ("atp", "wta") else
-             "mlb" if league == "mlb" else
+             ("mlb" if price else "mlb_raw") if league == "mlb" else
              "soccer" if is_soccer else None)
     if sport is None:
         return None
@@ -303,7 +320,8 @@ def live_bands(entries, soccer_keys=()):
             continue
         lg = e.get("league")
         is_soc = lg in soccer_keys
-        key = _band_key(lg, e.get("conf"), e.get("why"), is_soc, e.get("dog"))
+        key = _band_key(lg, e.get("conf"), e.get("why"), is_soc, e.get("dog"),
+                        e.get("price"))
         if key is None:
             continue
         n, w, pn, s = out.get(key, (0, 0, 0, 0.0))
@@ -320,7 +338,7 @@ def blended_hit(league, is_soccer, mc, live, why=None, dog=None, price=None):
     Returns (rate, live_n) so the board can show the evidence behind the
     number rather than asking to be taken on faith.
     """
-    key = _band_key(league, mc, why, is_soccer, dog)
+    key = _band_key(league, mc, why, is_soccer, dog, price)
     if key is None:
         # Football has no live band yet (its season is a week old). Rather
         # than show nothing -- which left a -100000 leg with no fair price and

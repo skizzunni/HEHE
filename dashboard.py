@@ -14,10 +14,12 @@ surfaces instead of being buried:
   * a pick flipping side because the market moved through the midpoint
 
 The Pick column is the de-vigged market favourite, not a model output. That is
-measured, not modest: over 655 MLB games against real closing prices the market
-called 57.3% and the model 55.9%, and backing the model where it disagreed lost
-up to 14.3%. The model's number rides alongside as ANALYSIS so you can see where
-it dissents, never as the pick itself.
+measured, not modest: over all 2,100 completed 2026 MLB games against real
+closing prices the market called 56.5% and the run-rate model 53.8%, and on the
+games where that model disagreed with the close by ten points or more it hit
+47.3%. The MLB pick is therefore built from the line with the refitted model
+allowed a fifth of the say, which is what turns its most confident calls from
+56.7% into 71.7%.
 """
 import argparse
 import datetime as dt
@@ -342,6 +344,20 @@ def collect(key, path, day, mlbctx, mybook=None):
                     myside = ("away" if mine["pick"] == names.get("away")
                               else "home" if mine["pick"] == names.get("home") else None)
                     mine = dict(mine, side=myside)
+                # MLB only: the model is behind the close on 2,100 backtested
+                # games, so it nudges the price rather than overruling it, and
+                # the side comes from the blend. This is what stops the board
+                # taking a stand the numbers cannot pay for.
+                if key == "mlb" and mine.get("p_away") is not None:
+                    mq = next((L["prob"] for L in legs if L["side"] == "away"), None)
+                    if mq is not None and 0.0 < mq < 1.0:
+                        pa = P.mlb_anchor(mine["p_away"], mq)
+                        away = pa > 0.5
+                        side_ = "away" if away else "home"
+                        who = names.get(side_)
+                        if who:
+                            mine = dict(mine, pick=who, side=side_,
+                                        conf=max(pa, 1 - pa), p_away=pa)
             best = max(legs, key=lambda L: L["roi"] if L["roi"] is not None else -99) if legs else None
             rows.append(dict(id=f'{key}:{c.get("id")}', label=label,
                              tip=t.strftime("%-I:%M %p"), legs=legs, note=note,
@@ -523,8 +539,9 @@ def page(active, slot):
 <div class="days">{days}</div></header>
 <nav>{tabs}</nav>{body}{feed}
 <aside><b>The Pick column is the market's favourite, de-vigged</b> &mdash; not a model output.
-Over 655 MLB games against real closing prices the market called 57.3% and my model 55.9%,
-and backing the model where it disagreed lost up to 14.3%. Analysis shows the starters so you
+Over all 2,100 completed 2026 MLB games against real closing prices the market called 56.5%
+and my model 53.8%, so the MLB pick is now taken from the line with the model allowed a fifth
+of the say; backing the model where it argued hardest with the price hit 47.3%. Analysis shows the starters so you
 can see what is driving the number. Completed games are dropped; a settled game is not a pick.
 </aside></div></body></html>"""
 

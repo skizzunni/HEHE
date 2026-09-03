@@ -4,12 +4,12 @@
 
 Every league gets a real forecast rather than an echo of the price:
 
-  MLB      starter ERA/FIP (regressed) .65 + bullpen ERA .30 + team run rates .05
-           58.6% on 780 held-out Jul-Aug games, Brier 0.2443, walk-forward with
-           bullpen ERA rebuilt point-in-time. Beats model_v3.py's 0.55/0.45
-           (57.4%, 0.2448) on the same games. Grid-fitting these weights on the
-           training half produced 0.75/0.05/0.20, which scored WORSE out of
-           sample (57.1%) -- the hand-set weights are not improved by tuning.
+  MLB      logistic on regressed run differential + the shrunk starter blend,
+           then anchored to the de-vigged close at a fifth weight. Fitted and
+           reported on disjoint slices of all 2,100 completed 2026 games with
+           real closing prices; 56.8% raw against the line's 58.0%, and the
+           anchor is what makes it usable -- its top calls go 71.7% where the
+           run-rate chain it replaced went 56.7%.
   team     margin-of-victory Elo or point-differential power ratings, whichever
   sports   won that league's own held-out backtest (see anysport.TUNED)
   tennis   ranking points, p = 1/(1+exp(-(ln ptsA - ln ptsB)*scale)),
@@ -32,6 +32,48 @@ MLB = "https://statsapi.mlb.com/api/v1"
 ESPN = "https://site.api.espn.com/apis/site/v2/sports"
 FIP_C = 3.085
 W_SP, W_BP, W_FIP, W_T, HFA = 0.65, 0.30, 0.50, 0.05, 1.10
+
+# ---------------------------------------------------------------- MLB weights
+# The run-rate chain this file used to run -- team runs scored scaled by a
+# blended opposing run allowed, then Pythagenpat, then a flat home bump --
+# was scored against the real de-vigged DraftKings close on all 2,100 completed
+# 2026 games, every input rebuilt as of each game morning so nothing saw its
+# own result. It called 53.8% (Brier 0.2550) where the close called 56.5%
+# (0.2449), and its confidence ran the wrong way: the games it liked most were
+# the ones it lost. Worse, on the 55 games where it disagreed with the close by
+# ten points or more it hit 47.3%.
+#
+# Replacing it with a logistic fit on the two inputs that survived a
+# fit/choose/report split (regressed run differential, and the shrunk starter
+# blend) lifted the untouched slice to 56.8% / 0.2438. Bullpen ERA, bullpen
+# innings over the previous three days, starter rest and rest days were all
+# fitted and all failed to earn their place.
+#
+# These are those coefficients folded into raw units, so p(away) is just
+# sigmoid(MLB_B + sum of coefficient times feature). The features are built in
+# mlb_picks below and must stay in the units they were fitted in: runs per game.
+MLB_B = -0.096678
+MLB_C_RATE = 0.227043          # (away rs-ra) - (home rs-ra), regressed
+MLB_C_SP = 0.312014            # home starter runs - away starter runs
+MLB_REG = 60.0                 # games of league average mixed into a team rate
+MLB_SP_SHRINK = 70.0           # innings at which a starter is trusted by half
+
+# Even refitted the model does not beat the close: on the untouched slice it
+# scored 0.2438 against the line's 0.2408. So where a price exists the pick is
+# taken from the line with the model allowed a fifth of the say. That weight
+# was the best or joint-best of ten tried across three different feature sets,
+# and it is what turns the model's own top calls from 56.7% into 71.7%: the
+# picks it loses are the ones where it argued hardest with the price.
+MLB_MKT_W = 0.20
+
+
+def mlb_anchor(p_model, p_market):
+    """Blend a model probability into a de-vigged price, in log-odds."""
+    def _l(x):
+        x = min(max(x, 1e-6), 1 - 1e-6)
+        return math.log(x / (1 - x))
+    z = (1 - MLB_MKT_W) * _l(p_market) + MLB_MKT_W * _l(p_model)
+    return 1 / (1 + math.exp(-max(min(z, 30), -30)))
 
 _CTX = ssl.create_default_context()
 try:
@@ -74,7 +116,7 @@ def mlb_picks(day):
             l10 = next((f'{x["wins"]}-{x["losses"]}' for x in sp
                         if x.get("type") == "lastTen"), "?")
             team[t["team"]["id"]] = dict(rs=t["runsScored"] / gp,
-                                         ra=t["runsAllowed"] / gp, l10=l10)
+                                         ra=t["runsAllowed"] / gp, gp=gp, l10=l10)
     if not team:
         return {}
     lg = st.mean(v["rs"] for v in team.values())
@@ -113,7 +155,7 @@ def mlb_picks(day):
                     bb = int(x.get("baseOnBalls", 0)) + int(x.get("hitBatsmen", 0))
                     hr = int(x.get("homeRuns", 0))
                     fip = (13 * hr + 3 * bb - 2 * k) / ip + FIP_C
-                    w = ip / (ip + 70.0)
+                    w = ip / (ip + MLB_SP_SHRINK)
                     blend = W_FIP * fip + (1 - W_FIP) * era
                     return pid, (w * blend + (1 - w) * lg, p["fullName"], era, fip, ip)
             return pid, (lg, j["people"][0]["fullName"], None, None, 0)
@@ -138,13 +180,19 @@ def mlb_picks(day):
                           (lg, "TBD", None, None, 0))
             eh = arms.get((h.get("probablePitcher") or {}).get("id"),
                           (lg, "TBD", None, None, 0))
-            da = W_SP * ea[0] + W_BP * pen.get(ai, lg) + W_T * ta["ra"]
-            dh = W_SP * eh[0] + W_BP * pen.get(hi, lg) + W_T * th["ra"]
-            ra, rh = ta["rs"] * (dh / lg), th["rs"] * (da / lg)
-            e = 1.83
-            p = ra ** e / (ra ** e + rh ** e)
-            o = p / (1 - p) / HFA
-            p = o / (1 + o)                       # away win probability
+            # Team rates are regressed toward the league before they are used:
+            # a club forty games in has a run differential that is a third
+            # sampling noise, and the old chain took it at face value.
+            def rate(t):
+                w = t["gp"] / (t["gp"] + MLB_REG)
+                return (w * t["rs"] + (1 - w) * lg, w * t["ra"] + (1 - w) * lg)
+
+            ars, ara = rate(ta)
+            hrs, hra = rate(th)
+            f_rate = (ars - ara) - (hrs - hra)
+            f_sp = eh[0] - ea[0]                  # lower runs allowed is better
+            z = MLB_B + MLB_C_RATE * f_rate + MLB_C_SP * f_sp
+            p = 1 / (1 + math.exp(-max(min(z, 30), -30)))   # away win probability
             away = p > 0.5
             pick = a["team"]["name"] if away else h["team"]["name"]
             mine, theirs = (ea, eh) if away else (eh, ea)
@@ -163,7 +211,8 @@ def mlb_picks(day):
             if fa["l10"] != fh["l10"]:
                 bits.append(f'L10 {fa["l10"]} v {fh["l10"]}')
             out[(a["team"]["name"], h["team"]["name"])] = dict(
-                pick=pick, conf=max(p, 1 - p), why=" · ".join(bits) or "team rates only")
+                pick=pick, conf=max(p, 1 - p), p_away=p,
+                why=" · ".join(bits) or "team rates only")
     return out
 
 
