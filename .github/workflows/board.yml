@@ -2,9 +2,12 @@
 # waking an assistant session. The pipeline is pure standard-library Python, so
 # there is nothing to install and nothing to pay for on a public repository.
 #
-# Two cadences, the same ones the assistant-driven routines used:
-#   :20          full re-research -- refetch ratings, starters, prices; grade
-#   :00 and :40  score refresh    -- regrade finished games only, no refetch
+# A full rebuild three times an hour. The assistant-driven routines used a
+# `--scores` fast path in between, but that reads .cache/last_board.json from
+# the previous run, and a runner is thrown away after every job -- so every
+# score-only run died on "no prior board — run a full rebuild first". The fast
+# path existed to save assistant time; here a full rebuild is 80 seconds and
+# free, so there is nothing to save.
 #
 # ledger.json is the one file that cannot be rebuilt from the feeds, so it is
 # committed back. board.html is a build artifact and goes straight to Pages.
@@ -12,8 +15,7 @@ name: board
 
 on:
   schedule:
-    - cron: '20 * * * *'
-    - cron: '0,40 * * * *'
+    - cron: '0,20,40 * * * *'
   workflow_dispatch:
   push:
     branches: [claude/mlb-picks-review-jlx9w1]
@@ -46,12 +48,7 @@ jobs:
           python-version: '3.11'
 
       - name: Rebuild the board
-        run: |
-          if [ "${{ github.event.schedule }}" = "0,40 * * * *" ]; then
-            python3 rebuild_board.py --scores
-          else
-            python3 rebuild_board.py
-          fi
+        run: python3 rebuild_board.py
 
       - name: Commit the ledger
         run: |

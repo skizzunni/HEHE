@@ -2002,13 +2002,16 @@ repository — the board refreshes without costing anything per run.
 
 Cadence, matching what it replaced:
 
-| when | what |
-|---|---|
-| `:20` past each hour | full re-research — ratings, starters, prices, grading |
-| `:00` and `:40` | score refresh only, no refetch |
+A full rebuild at `:00`, `:20` and `:40` — ratings, starters, prices, grading.
 
-A `concurrency` group keeps the two from overlapping, and the ledger push
-retries on a rebase five times, because the two cadences can otherwise race.
+There is deliberately no `--scores` fast path here. That mode reads
+`.cache/last_board.json` written by the previous run, and a runner is discarded
+after every job, so each score-only run died on `no prior board — run a full
+rebuild first`. The fast path existed to save assistant time; on a runner a
+full rebuild is 80 seconds and costs nothing.
+
+A `concurrency` group keeps runs from overlapping, and the ledger push retries
+on a rebase five times, because a run can otherwise race the previous one.
 `ledger.json` is committed back (it is the only file the feeds cannot
 reproduce); `board.html` is a build artifact and goes straight to Pages.
 
