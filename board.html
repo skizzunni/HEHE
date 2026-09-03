@@ -795,3 +795,25 @@ document.getElementById("copy").onclick = () => {
 buildTabs(); render(); drawSlip();
 
 </script>
+<script>
+// Self-refresh. GitHub Actions rebuilds this page on a schedule and writes the
+// build id next to it, so an open tab picks up new scores without anyone
+// touching it. On the Claude artifact there is no build.txt, the fetch simply
+// fails, and this does nothing.
+(function () {
+  var mine = null;
+  function check() {
+    fetch("build.txt", { cache: "no-store" })
+      .then(function (r) { return r.ok ? r.text() : null; })
+      .then(function (t) {
+        if (t === null) return;
+        t = t.trim();
+        if (mine === null) { mine = t; return; }
+        if (t !== mine) location.reload();
+      })
+      .catch(function () { /* offline, or not served from Pages */ });
+  }
+  check();
+  setInterval(check, 60000);
+})();
+</script>
