@@ -492,8 +492,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Kamil Majchrzak": "4 3",
-   "Valentin Vacherot": "6 2"
+   "Kamil Majchrzak": "4 5",
+   "Valentin Vacherot": "6 4"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
@@ -908,8 +908,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Mariano Navone": "3 6 2",
-   "Matteo Berrettini": "6 3 1"
+   "Mariano Navone": "3 6 4",
+   "Matteo Berrettini": "6 3 3"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
@@ -1117,11 +1117,6 @@
   "conf": 89.2,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
-  "live_score": {
-   "Frances Tiafoe": "6 4",
-   "Rei Sakamoto": "3 5"
-  },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
   "matchup": "Frances Tiafoe @ Rei Sakamoto",
@@ -1315,21 +1310,24 @@
  },
  "atp:182759": {
   "conf": 61.0,
+  "diagnosis": "lost 0-3 in sets \u00b7 never won a set \u00b7 called at 61%",
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "James Duckworth": "5 3 1",
-   "Wu Yibing": "7 6 4"
-  },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
   "matchup": "Wu Yibing @ James Duckworth",
   "pick": "James Duckworth",
+  "played": "2026-09-02",
   "price": null,
-  "status": "open",
+  "scores": {
+   "James Duckworth": "5 3 1",
+   "Wu Yibing": "7 6 6"
+  },
+  "settled": "2026-09-02T20:57",
+  "status": "lost",
   "tip": "5:30 PM",
-  "why": "rank 71 vs 113"
+  "why": "rank 71 vs 113",
+  "winner": "Wu Yibing"
  },
  "atp:182760": {
   "conf": 70.5,
@@ -1357,8 +1355,8 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Dino Prizmic": "2 0",
-   "Tommy Paul": "6 0"
+   "Dino Prizmic": "2 3",
+   "Tommy Paul": "6 2"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
@@ -1416,8 +1414,8 @@
   "league": "atp",
   "live": "1st",
   "live_score": {
-   "Carlos Alcaraz": "1",
-   "Jaime Faria": "0"
+   "Carlos Alcaraz": "3",
+   "Jaime Faria": "2"
   },
   "logged": "2026-09-02T20:23",
   "market_agrees": null,
@@ -1534,19 +1532,21 @@
   "conf": 70.7,
   "dog": false,
   "league": "atp",
-  "live": "4th",
-  "live_score": {
-   "Lloyd Harris": "7(7) 3 6(4) 3",
-   "Stefanos Tsitsipas": "6(1) 6 7(7) 3"
-  },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
   "matchup": "Stefanos Tsitsipas @ Lloyd Harris",
   "pick": "Stefanos Tsitsipas",
+  "played": "2026-09-02",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Lloyd Harris": "7(7) 3 6(4) 4",
+   "Stefanos Tsitsipas": "6(1) 6 7(7) 6"
+  },
+  "settled": "2026-09-02T20:57",
+  "status": "won",
   "tip": "5:15 PM",
-  "why": "rank 53 vs 139"
+  "why": "rank 53 vs 139",
+  "winner": "Stefanos Tsitsipas"
  },
  "atp:182776": {
   "conf": 81.5,
@@ -1572,10 +1572,10 @@
   "conf": 74.2,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
+  "live": "3rd",
   "live_score": {
-   "Adrian Mannarino": "3 1",
-   "Alexander Bublik": "6 5"
+   "Adrian Mannarino": "3 1 1",
+   "Alexander Bublik": "6 6 4"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
@@ -1771,7 +1771,7 @@
   "conf": 58.0,
   "dog": true,
   "league": "chi",
-  "live": "6'",
+  "live": "26'",
   "live_score": {
    "Deportes Limache": 0,
    "\u00d1ublense": 0
@@ -1922,10 +1922,10 @@
   "conf": 57.6,
   "dog": true,
   "league": "ecu",
-  "live": "39'",
+  "live": "HT",
   "live_score": {
    "Barcelona SC": 0,
-   "Independiente del Valle": 0
+   "Independiente del Valle": 1
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": false,
@@ -3624,9 +3624,9 @@
   "conf": 58.9,
   "dog": false,
   "league": "mlb",
-  "live": "Top 7th",
+  "live": "Bot 7th",
   "live_score": {
-   "New York Mets": 6,
+   "New York Mets": 9,
    "Tampa Bay Rays": 4
   },
   "logged": "2026-09-02T17:06",
@@ -3684,9 +3684,9 @@
   "conf": 59.2,
   "dog": false,
   "league": "mlb",
-  "live": "Top 7th",
+  "live": "Mid 8th",
   "live_score": {
-   "Pittsburgh Pirates": 1,
+   "Pittsburgh Pirates": 2,
    "San Francisco Giants": 3
   },
   "logged": "2026-09-02T17:06",
@@ -3702,10 +3702,10 @@
   "conf": 54.0,
   "dog": false,
   "league": "mlb",
-  "live": "Mid 7th",
+  "live": "Bot 8th",
   "live_score": {
    "Cleveland Guardians": 0,
-   "Toronto Blue Jays": 9
+   "Toronto Blue Jays": 10
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": true,
@@ -3741,7 +3741,7 @@
   "conf": 51.6,
   "dog": true,
   "league": "mlb",
-  "live": "Top 3rd",
+  "live": "Bot 4th",
   "live_score": {
    "Chicago White Sox": 0,
    "Houston Astros": 0
@@ -3759,10 +3759,10 @@
   "conf": 51.5,
   "dog": false,
   "league": "mlb",
-  "live": "Top 4th",
+  "live": "Top 5th",
   "live_score": {
    "Detroit Tigers": 2,
-   "Minnesota Twins": 0
+   "Minnesota Twins": 1
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": true,
@@ -3777,9 +3777,9 @@
   "conf": 53.0,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 3rd",
+  "live": "Top 5th",
   "live_score": {
-   "Kansas City Royals": 5,
+   "Kansas City Royals": 6,
    "Miami Marlins": 3
   },
   "logged": "2026-09-02T17:06",
@@ -3795,7 +3795,7 @@
   "conf": 61.8,
   "dog": false,
   "league": "mlb",
-  "live": "Top 3rd",
+  "live": "Top 4th",
   "live_score": {
    "Chicago Cubs": 5,
    "Milwaukee Brewers": 3
@@ -4610,10 +4610,10 @@
   "conf": 83.4,
   "dog": false,
   "league": "wta",
-  "live": "1st",
+  "live": "2nd",
   "live_score": {
-   "Elina Svitolina": "5",
-   "Maya Joint": "2"
+   "Elina Svitolina": "6 1",
+   "Maya Joint": "2 3"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
@@ -4953,8 +4953,8 @@
   "league": "wta",
   "live": "2nd",
   "live_score": {
-   "Ann Li": "5 2",
-   "Donna Vekic": "7 1"
+   "Ann Li": "5 4",
+   "Donna Vekic": "7 3"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
