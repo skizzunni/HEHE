@@ -492,8 +492,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Kamil Majchrzak": "4 6 3",
-   "Valentin Vacherot": "6 4 3"
+   "Kamil Majchrzak": "4 6 5",
+   "Valentin Vacherot": "6 4 4"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
@@ -908,8 +908,8 @@
   "league": "atp",
   "live": "4th",
   "live_score": {
-   "Mariano Navone": "3 6 6 3",
-   "Matteo Berrettini": "6 3 4 2"
+   "Mariano Navone": "3 6 6 4",
+   "Matteo Berrettini": "6 3 4 5"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
@@ -1117,19 +1117,21 @@
   "conf": 89.2,
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Frances Tiafoe": "6 7(7) 5",
-   "Rei Sakamoto": "3 6(2) 4"
-  },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
   "matchup": "Frances Tiafoe @ Rei Sakamoto",
   "pick": "Frances Tiafoe",
+  "played": "2026-09-02",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Frances Tiafoe": "6 7(7) 7",
+   "Rei Sakamoto": "3 6(2) 5"
+  },
+  "settled": "2026-09-02T21:58",
+  "status": "won",
   "tip": "7:00 PM",
-  "why": "rank 12 vs NR"
+  "why": "rank 12 vs NR",
+  "winner": "Frances Tiafoe"
  },
  "atp:182743": {
   "conf": 73.3,
@@ -1360,8 +1362,8 @@
   "league": "atp",
   "live": "3rd",
   "live_score": {
-   "Dino Prizmic": "2 3 3",
-   "Tommy Paul": "6 6 3"
+   "Dino Prizmic": "2 3 5",
+   "Tommy Paul": "6 6 5"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
@@ -1419,7 +1421,7 @@
   "league": "atp",
   "live": "2nd",
   "live_score": {
-   "Carlos Alcaraz": "4 2",
+   "Carlos Alcaraz": "4 6",
    "Jaime Faria": "6 0"
   },
   "logged": "2026-09-02T20:23",
@@ -1778,9 +1780,9 @@
   "conf": 58.0,
   "dog": true,
   "league": "chi",
-  "live": "HT",
+  "live": "64'",
   "live_score": {
-   "Deportes Limache": 0,
+   "Deportes Limache": 1,
    "\u00d1ublense": 0
   },
   "logged": "2026-09-02T20:23",
@@ -1796,7 +1798,7 @@
   "conf": 53.5,
   "dog": true,
   "league": "col",
-  "live": "12'",
+  "live": "31'",
   "live_score": {
    "Independiente Santa Fe": 0,
    "Millonarios": 1
@@ -1934,7 +1936,7 @@
   "conf": 57.6,
   "dog": true,
   "league": "ecu",
-  "live": "76'",
+  "live": "90'+6'",
   "live_score": {
    "Barcelona SC": 1,
    "Independiente del Valle": 1
@@ -3697,21 +3699,24 @@
  },
  "mlb:401816777": {
   "conf": 59.2,
+  "diagnosis": "margin 1 \u00b7 one-run game \u00b7 the book had my side favoured too \u00b7 called at 59%",
   "dog": false,
   "league": "mlb",
-  "live": "Bot 10th",
-  "live_score": {
-   "Pittsburgh Pirates": 4,
-   "San Francisco Giants": 5
-  },
   "logged": "2026-09-02T17:06",
   "market_agrees": true,
   "matchup": "SF @ PIT",
   "pick": "Pittsburgh Pirates",
+  "played": "2026-09-02",
   "price": "-162",
-  "status": "open",
+  "scores": {
+   "Pittsburgh Pirates": 4,
+   "San Francisco Giants": 5
+  },
+  "settled": "2026-09-02T21:58",
+  "status": "lost",
   "tip": "6:40 PM",
-  "why": "Chandler 4.26 ERA/4.08 FIP vs Roupp 4.25"
+  "why": "Chandler 4.26 ERA/4.08 FIP vs Roupp 4.25",
+  "winner": "San Francisco Giants"
  },
  "mlb:401816778": {
   "conf": 54.0,
@@ -3758,7 +3763,7 @@
   "conf": 51.6,
   "dog": true,
   "league": "mlb",
-  "live": "Bot 6th",
+  "live": "Top 8th",
   "live_score": {
    "Chicago White Sox": 0,
    "Houston Astros": 0
@@ -3776,7 +3781,7 @@
   "conf": 51.5,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 6th",
+  "live": "Top 8th",
   "live_score": {
    "Detroit Tigers": 5,
    "Minnesota Twins": 2
@@ -3794,10 +3799,10 @@
   "conf": 53.0,
   "dog": false,
   "league": "mlb",
-  "live": "Top 6th",
+  "live": "End 6th",
   "live_score": {
    "Kansas City Royals": 6,
-   "Miami Marlins": 6
+   "Miami Marlins": 7
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": true,
@@ -3812,7 +3817,7 @@
   "conf": 61.8,
   "dog": false,
   "league": "mlb",
-  "live": "Mid 5th",
+  "live": "Bot 6th",
   "live_score": {
    "Chicago Cubs": 5,
    "Milwaukee Brewers": 6
@@ -3851,6 +3856,11 @@
   "conf": 63.7,
   "dog": false,
   "league": "mlb",
+  "live": "Bot 2nd",
+  "live_score": {
+   "Los Angeles Angels": 0,
+   "New York Yankees": 0
+  },
   "logged": "2026-09-02T21:17",
   "market_agrees": true,
   "matchup": "NYY @ LAA",
@@ -4629,8 +4639,8 @@
   "league": "wta",
   "live": "3rd",
   "live_score": {
-   "Elina Svitolina": "6 6(6) 0",
-   "Maya Joint": "2 7(8) 0"
+   "Elina Svitolina": "6 6(6) 4",
+   "Maya Joint": "2 7(8) 1"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
@@ -4970,8 +4980,8 @@
   "league": "wta",
   "live": "3rd",
   "live_score": {
-   "Ann Li": "5 7(7) 0",
-   "Donna Vekic": "7 6(4) 1"
+   "Ann Li": "5 7(7) 3",
+   "Donna Vekic": "7 6(4) 3"
   },
   "logged": "2026-09-02T17:06",
   "market_agrees": null,
