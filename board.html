@@ -1,4 +1,9 @@
 <title>My Card</title>
+<!-- Served from Pages there is no favicon route, so a saved home-screen
+     bookmark comes up blank. Inline SVG needs no extra file. -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B6E6E'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='19' font-weight='bold' fill='%23fff' text-anchor='middle'%3E%E2%9C%93%3C/text%3E%3C/svg%3E">
+<meta name="theme-color" content="#0B6E6E">
+<meta name="apple-mobile-web-app-title" content="My Card">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
 <style>
 :root{
@@ -139,7 +144,10 @@ aside p{margin:0 0 11px;font-size:13.5px;color:var(--ink-dim);max-width:62ch}
 aside p:last-child{margin-bottom:0}
 aside b{color:var(--ink);font-weight:600}
 aside .fig{font-family:var(--mono);color:var(--accent);font-weight:600}
-.days{display:flex;gap:8px;margin-top:15px}
+/* Four slot buttons need 466px and a phone gives 390, so without wrapping the
+   whole page scrolls sideways by exactly the difference. The tables were never
+   the problem -- they already scroll inside .scroll. */
+.days{display:flex;gap:8px;margin-top:15px;flex-wrap:wrap}
 .days button{display:flex;align-items:baseline;gap:8px;font-family:var(--display);
   font-weight:600;font-size:13px;background:none;color:var(--ink-dim);
   border:1px solid var(--rule);border-radius:2px;padding:7px 15px;cursor:pointer}
