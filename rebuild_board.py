@@ -35,8 +35,20 @@ def snapshot():
     page. Research happens once and both consumers read the same state.
     """
     d.refresh()
-    ledger.record(d._STATE)
-    ledger.grade()
+    # Grading is a separate concern from research. When it throws, the board
+    # itself is still perfectly good, so losing the whole rebuild -- and with
+    # it the Pages deploy, since the deploy job is skipped when build fails --
+    # costs far more than the missed grading pass. About half the scheduled
+    # runs were dying somewhere in here with no way to tell where: Actions
+    # logs need admin rights to read, so a bare traceback in the job output is
+    # the only diagnostic available.
+    try:
+        ledger.record(d._STATE)
+        ledger.grade()
+    except Exception:
+        import traceback
+        sys.stderr.write("ledger pass failed -- board still rebuilt:\n")
+        traceback.print_exc()
     out = {"at": d._STATE["at"].strftime("%b %-d, %-I:%M %p ET"),
            "dates": {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]},
            "slots": {}}
@@ -550,4 +562,12 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    try:
+        main()
+    except Exception:
+        # Name the failure. Without this the Actions log shows only a non-zero
+        # exit and the run is unreadable without admin rights on the repo.
+        import traceback
+        sys.stderr.write("\n=== rebuild failed ===\n")
+        traceback.print_exc()
+        raise
