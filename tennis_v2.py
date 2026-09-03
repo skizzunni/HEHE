@@ -19,8 +19,11 @@ win moves the rating as much as a Slam win. Fix those two things and it works:
         win-count     59.5%   Brier 0.2396
         plain-elo     57.0%   Brier 0.2371
 
-Then the largest single gain, found twice independently: the level seed is far
-too generous to a debutant. Ramping a newcomer up from 200 Elo below their
+Then the largest single gain. Two experiments arrived at it from different
+directions, but an adversarial audit established they are the SAME feature, not
+an independent confirmation: -200*(g(a)-g(b)) with g=max(0,1-n/20) and
++240*min(n,20)/20 are algebraically the same term at 10 and 12 Elo per prior
+match. One finding found twice. The level seed is far too generous to a newcomer. Ramping a newcomer up from 200 Elo below their
 level's seed over their first 20 matches, with parameters fitted on Apr-Jun and
 July and August never touched during tuning:
 
@@ -34,7 +37,31 @@ July and August never touched during tuning:
         d-Brier     -0.0134   95% CI [-0.0169, -0.0100]   P(better) 1.000
 
 It is not a level proxy: it helps inside every level separately (tour
-57.9 -> 64.7, qualifying 55.6 -> 64.5, Slam 69.8 -> 71.6).
+57.9 -> 64.7, qualifying 55.6 -> 64.5, Slam 69.8 -> 71.6). The coefficient is a
+broad plateau, not a fitted knife-edge -- every value from 100 to 500 improves
+Brier in every month, and 200 was chosen on Apr-Jun before July or August were
+scored.
+
+EXPECT LESS THAN +6.2 IN LIVE USE
+
+52.5% of the held-out matches have at least one player with under 20 prior
+matches, and that is an artifact of a single-season rating pool that cold-starts
+every player in January 2026. In a mature multi-season pool far fewer matches
+would involve a player with under 20 CAREER matches, so the term touches fewer
+games and buys less. The mechanism is also not purely about debutants: only
+about an eighth of the low-experience slots are players who debuted that month,
+the rest are simply infrequent players. Treat +6.2 as the ceiling this dataset
+can show, not the number to expect next season.
+
+A NOTE ON THE LEAK TEST
+
+The antisymmetry check below (2.2e-16) proves the model is blind to which player
+is listed first. It does NOT prove the absence of look-ahead: an audit built a
+positive control that reads the entire future, scored 67.2%, and passed the same
+test with an identical residual. Field-order blindness and look-ahead freedom are
+different properties. The evidence for the latter is structural -- seen[] is
+incremented only in update(), strictly after the match has been scored, and every
+parameter was fitted on months disjoint from the ones reported.
 
 The ranking-points model also scores 60.2%, but that figure is contaminated:
 current rankings already contain the results of the August matches being

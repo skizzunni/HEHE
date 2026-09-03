@@ -339,8 +339,16 @@ def tennis_picks(day, tour=None):
     #     d-accuracy +6.21pp, 95% CI [+4.36, +8.12], P(better) 1.000
     #     d-Brier   -0.0134,  95% CI [-0.0169, -0.0100], P(better) 1.000
     #
-    # Verified not to be a field-order artefact: antisymmetry 2.2e-16, and
-    # shuffling which player is listed first moves accuracy by 0.000.
+    # Antisymmetry is 2.2e-16 and shuffling which player is listed first moves
+    # accuracy by 0.000, so the model is blind to field order. That is NOT proof
+    # of no look-ahead -- an audit's positive control that reads the whole future
+    # passes the same test. The look-ahead argument is structural: prior-match
+    # counts are incremented only after scoring, and every parameter was fitted
+    # on months disjoint from those reported.
+    #
+    # Expect less than +6.2pp live: 52.5% of held-out matches involve a player
+    # with under 20 prior matches, which is an artifact of a rating pool that
+    # cold-starts everyone in January. That coverage falls in a mature pool.
     def pts(p):
         r = rank.get(norm(p))
         return float(r["pts"]) if r and r.get("pts") else UN
