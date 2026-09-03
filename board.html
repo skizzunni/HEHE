@@ -279,10 +279,19 @@ td.num.ok{color:var(--dog)}
   this is who I think wins, the confidence behind it, and the numbers that got me there.</p>
   <p>Each league runs the method that won its own held-out backtest &mdash; MLB from starter
   ERA and FIP, bullpen ERA and team run rates; basketball, football and hockey from
-  margin-of-victory ratings; tennis from ranking points. Held-out accuracy: MLB
+  margin-of-victory ratings; tennis from a level-seeded surface Elo with an experience
+  ramp. Held-out accuracy: MLB
   <span class="fig">58.6%</span>, NBA <span class="fig">73.1%</span>, WNBA
   <span class="fig">70.4%</span>, NHL <span class="fig">58.0%</span>, tennis
-  <span class="fig">57.1%</span>.</p>
+  <span class="fig">65.9%</span>.</p>
+  <p>Tennis was rebuilt on 2026-09-03. The old ranking-points model quoted 60.2%, but that
+  figure was contaminated &mdash; current rankings already contain the results of the matches
+  being predicted, and ESPN serves no dated rankings table. The number above is walk-forward
+  on 1,996 held-out July and August matches with every parameter fitted on April&ndash;June
+  only. The gain is almost entirely one thing: a debutant was being seeded at the same rating
+  as an established player at that level, and ramping newcomers up over their first 20 matches
+  is worth <span class="fig">+6.2</span> points of accuracy
+  (95% CI +4.4 to +8.1, paired bootstrap).</p>
   <p><b>Price is shown only where a book has posted one</b>, and a
   <span class="dogtag">DOG</span> tag means I am taking the side priced as less likely.
   Those are the calls that are genuinely mine rather than an echo of the number &mdash; and

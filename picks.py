@@ -12,7 +12,8 @@ Every league gets a real forecast rather than an echo of the price:
            run-rate chain it replaced went 56.7%.
   team     margin-of-victory Elo or point-differential power ratings, whichever
   sports   won that league's own held-out backtest (see anysport.TUNED)
-  tennis   ranking points, p = 1/(1+exp(-(ln ptsA - ln ptsB)*scale)),
+  tennis   level-seeded surface Elo with an experience ramp (tennis_v2.py);
+           ranking points remain only as the displayed reason and a fallback,
            scale 1.02 both ranked / 0.78 otherwise
 
 Each pick carries the numbers that produced it, so the reasoning is inspectable
@@ -25,6 +26,7 @@ import math
 import re
 import ssl
 import statistics as st
+import sys
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
@@ -319,16 +321,36 @@ def tennis_picks(day, tour=None):
                 rank[norm(a["displayName"])] = dict(rank=e.get("current"),
                                                     pts=e.get("points"))
     UN = 180.0
-    # Scales fitted on Jan-Jul and validated on August; see tennis.py for the
-    # backtest. A single 0.80 was under-confident whenever both players were
-    # ranked. Picks are unchanged -- only the stated confidence moves.
-    S_RANKED, S_OTHER = 1.02, 0.78
+    # Ranking points are retained ONLY for the displayed reason string and as a
+    # fallback. The probability now comes from tennis_v2's rating model.
+    #
+    # Why the switch: the ranking-points model scored 60.2% on August, but that
+    # number is contaminated -- current rankings already contain the results of
+    # the matches being predicted, and there is no dated rankings endpoint
+    # (every ?date=/?week=/?season= variant returns the same current table).
+    # The rating model is walk-forward, so its numbers are clean:
+    #
+    #   held out Jul+Aug, n=1996, tuned on Apr-Jun only
+    #     level seeds only          59.12%   Brier 0.2338
+    #     + experience ramp         65.33%   Brier 0.2204
+    #     + surface blend           65.93%   Brier 0.2195
+    #
+    #   paired bootstrap of the ramp, 4000 resamples:
+    #     d-accuracy +6.21pp, 95% CI [+4.36, +8.12], P(better) 1.000
+    #     d-Brier   -0.0134,  95% CI [-0.0169, -0.0100], P(better) 1.000
+    #
+    # Verified not to be a field-order artefact: antisymmetry 2.2e-16, and
+    # shuffling which player is listed first moves accuracy by 0.000.
     def pts(p):
         r = rank.get(norm(p))
         return float(r["pts"]) if r and r.get("pts") else UN
-    def scaled(p):
-        r = rank.get(norm(p))
-        return bool(r and r.get("pts"))
+    _rt = None
+    try:
+        import tennis_v2 as _TV
+        _rt = _TV.Ratings().build(_TV.load_matches())
+    except Exception as _e:
+        sys.stderr.write("tennis: rating model unavailable (%s), "
+                         "falling back to ranking points\n" % _e)
     out, seen = {}, set()
     for lgk in ([tour] if tour else ["atp", "wta"]):
         d = get(f"{ESPN}/tennis/{lgk}/scoreboard?dates={day}")
@@ -366,9 +388,17 @@ def tennis_picks(day, tour=None):
                     if any(p.strip().upper() == "TBD" for p in ps):
                         continue
                     seen.add(c.get("id"))
-                    lp = math.log(pts(ps[0])) - math.log(pts(ps[1]))
-                    sc = S_RANKED if (scaled(ps[0]) and scaled(ps[1])) else S_OTHER
-                    p1 = 1 / (1 + math.exp(-lp * sc))
+                    if _rt is not None:
+                        major = bool(ev.get("major"))
+                        rnd = (c.get("round") or {}).get("displayName", "")
+                        men = "Men" in gname
+                        p1 = _rt.prob(ps[0], ps[1],
+                                      _TV._surface(ev.get("name"), et.date()),
+                                      _TV._level(ev.get("name"), major, rnd),
+                                      5 if (men and major and "qualif" not in rnd.lower()) else 3)
+                    else:
+                        lp = math.log(pts(ps[0])) - math.log(pts(ps[1]))
+                        p1 = 1 / (1 + math.exp(-lp * 1.02))
                     pick = ps[0] if p1 >= 0.5 else ps[1]
                     r1 = (rank.get(norm(ps[0])) or {}).get("rank")
                     r2 = (rank.get(norm(ps[1])) or {}).get("rank")

@@ -168,7 +168,14 @@ MEASURED = {
     # only thing separating them is noise. It duly inverted: a 95.3% call
     # came out BELOW a 78.7% call. A band has to be wide enough to carry a
     # number, and above 72% that means one band.
-    "tennis": ((72.0, 0.784), (64.0, 0.706), (58.0, 0.610), (0.0, 0.509)),
+    # Re-measured for the tennis_v2 rating model (level seeds + experience ramp
+    # + surface blend), walk-forward Apr-Sep, 5,166 predictions. The old table
+    # came from the ranking-points model, whose bottom band carried no signal at
+    # all (50-58% went 50.9%). The rating model finds real signal there -- 54.6%
+    # on n=1857 -- which is why the bottom band now carries a number instead of
+    # being a pure dead zone. It is still thin: 54.6% is barely past the 52.4%
+    # breakeven at -110, so the dead-zone hide stays in place.
+    "tennis": ((72.0, 0.757), (64.0, 0.697), (58.0, 0.608), (0.0, 0.546)),
     # MLB's table used to come from 27 graded picks. It now comes from all
     # 1,948 priced 2026 games replayed through the exact rule the board ships,
     # market anchor included. Finer cuts were tried and dropped for the same

@@ -10,3 +10,10 @@ __pycache__/
 # cannot be refetched -- a graded call is gone the moment the container is
 # reclaimed -- so it is tracked.
 !ledger.json
+
+# The ESPN day-cache is 500MB+ of refetchable scratch and never ships.
+data/espn_cache/
+
+# The match history is derived, but rebuilding it costs ~490 ESPN requests and
+# the board cannot compute a rating without it, so it ships like ledger.json.
+!data/matches_2026.json
