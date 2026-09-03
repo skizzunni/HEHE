@@ -81,10 +81,11 @@ jobs:
           cp ledger.json site/ledger.json
           touch site/.nojekyll
 
-      - uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
+      # No configure-pages step: it only exists to hand a base URL to static
+      # site generators, and this site is plain HTML. Its `enablement` option
+      # cannot turn Pages on either -- the Actions token is refused ("Resource
+      # not accessible by integration"), because creating a Pages site needs a
+      # repository admin. That is a one-time switch in Settings -> Pages.
       - uses: actions/upload-pages-artifact@v3
         with:
           path: site
