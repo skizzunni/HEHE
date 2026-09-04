@@ -51,6 +51,11 @@ def snapshot():
         traceback.print_exc()
     out = {"at": d._STATE["at"].strftime("%b %-d, %-I:%M %p ET"),
            "dates": {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]},
+           # ESPN path per league, so the open page can refresh live scores
+           # itself. GitHub throttles scheduled workflows hard -- the 20-minute
+           # cron actually fires every 1.5 to 4 hours -- so a build-triggered
+           # refresh alone leaves the Results tab looking frozen.
+           "paths": {k: pth for k, pth, _ in d.LEAGUES},
            "slots": {}}
     # every soccer competition collapses into one tab -- a parlay is built
     # across leagues, not within one, so splitting them cost more than it gave
