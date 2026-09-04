@@ -13,7 +13,16 @@
 # committed back. board.html is a build artifact and goes straight to Pages.
 name: board
 
+# GitHub throttles scheduled workflows on public repos. Measured on this repo:
+# gaps between consecutive scheduled runs of 267, 262, 205, 148 and 103 minutes
+# against a 20-minute cron. repository_dispatch fires immediately every time --
+# point a free cron service at
+#   POST https://api.github.com/repos/skizzunni/HEHE/dispatches
+#   Authorization: Bearer <fine-grained PAT, Contents: read+write>
+#   body: {"event_type":"rebuild"}
 on:
+  repository_dispatch:
+    types: [rebuild]
   schedule:
     - cron: '0,20,40 * * * *'
   workflow_dispatch:
