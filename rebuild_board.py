@@ -77,7 +77,8 @@ def snapshot():
                 hit, hit_n = blended_hit(k, k in SOCCER, mc, live, r["why"],
                                          bool(leg and leg.get("dog")),
                                          (leg or {}).get("price"))
-                tk, tl, hide = tier_of(k, mc, hit, bool(leg and leg.get("dog")))
+                tk, tl, hide = tier_of(k, mc, hit, bool(leg and leg.get("dog")),
+                                       bool(leg and leg.get("price")))
                 pk, pl = price_note(k, k in SOCCER,
                                     (leg or {}).get("price"),
                                     bool(leg and leg.get("dog")))
@@ -490,9 +491,17 @@ TENNIS_DEAD_ZONE = 58.0
 # 85.3% is in-sample and the true forward rate is lower. The dog/favourite
 # split is the part that is robust; the exact 65 threshold is not.
 LOCK_CONF = 65.0
+TENNIS_LOCK = 72.0          # tennis at 72%+ : 63-9 (87.5%) on 72 graded picks
+MLB_FLOOR = 58.0            # below this MLB is 14-18 (43.8%), worse than a coin flip
+_TENNIS = ("atp", "wta")
+_MAJOR = ("mlb", "ncaaf", "nfl", "nba", "nhl", "wnba")
 
 
-def tier_of(league, mc, hit, dog=False):
+def _is_soccer(league):
+    return league not in _TENNIS and league not in _MAJOR
+
+
+def tier_of(league, mc, hit, dog=False, priced=False):
     """-> (key, label, hide) for a pick, from its measured hit rate.
 
     Nothing is hidden any more. The tennis dead zone was hidden because the
@@ -503,10 +512,31 @@ def tier_of(league, mc, hit, dog=False):
     """
     if mc is None:
         return None, None, False
-    if mc >= LOCK_CONF and not dog:
-        return "lock", "lock", False
+    # LOCK, re-cut on 307 graded picks. The old rule (any sport at 65%+, no
+    # dog) went 91-16 (85.0%). Splitting it by where the record actually lives
+    # does better on the same volume:
+    #
+    #     tennis >= 72%                63-9   (87.5%)
+    #     soccer favourites            28-3   (90.3%)
+    #     the two together             91-12  (88.3%)   <- this rule
+    #     adding MLB >= 58%           122-24  (83.6%)   <- so MLB stays out
+    #
+    # Tennis is cleanly monotonic (53.6 / 63.6 / 80.8 / 87.5 across the bands),
+    # and the soccer split is the dog rule again: favourites 90.3%, dogs 41.9%.
+    # Chosen after seeing these numbers, so it is in-sample and the forward rate
+    # will be lower -- but each leg is individually large and mechanistic.
+    if not dog:
+        if league in _TENNIS and mc >= TENNIS_LOCK:
+            return "lock", "lock", False
+        if _is_soccer(league) and priced:
+            return "lock", "lock", False
     if hit is None:
         return (None, None, False)
+    # MLB under 58% has no signal: 14-18 (43.8%) across 32 graded picks, against
+    # 10-7 (58.8%) above it. Same shape as the tennis dead zone the rating model
+    # retired, but this one is still measured and still dead.
+    if league == "mlb" and mc < MLB_FLOOR:
+        return "nosig", "no signal", False
     for cut, key, label in LABEL_CUTS:
         if hit >= cut:
             return key, label, False
