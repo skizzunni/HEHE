@@ -99,6 +99,13 @@ def record(state=None):
             for r in rows:
                 if not r.get("mypick"):
                     continue
+                # The board hides an undetermined competitor, but this did not,
+                # so every "TBD" row was being recorded as a real pick and then
+                # graded -- and a pick of "TBD" can never match a winner's name,
+                # so it was an automatic loss every time. 18 of them reached the
+                # ledger and all 10 that had settled were losses.
+                if r["mypick"].strip().upper() == "TBD":
+                    continue
                 key = r["id"]                     # league:espn_competition_id
                 if key in book and book[key].get("status") != "open":
                     continue                      # already settled, never rewrite

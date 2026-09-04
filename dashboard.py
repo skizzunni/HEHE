@@ -287,6 +287,15 @@ def collect(key, path, day, mlbctx, mybook=None):
     for ev in d.get("events", []):
         comps = list(ev.get("competitions") or [])
         for grp in ev.get("groupings") or []:
+            # A combined event is returned in full by BOTH tennis feeds, so the
+            # ATP tab was picking up women's matches and the WTA tab men's.
+            # tennis_picks() filters by draw, so those rows arrived with no pick
+            # and rendered as "TBD" -- the source of every TBD in the ledger.
+            gname = (grp.get("grouping") or {}).get("displayName", "")
+            if key == "atp" and "Women" in gname:
+                continue
+            if key == "wta" and "Men" in gname:
+                continue
             comps.extend(grp.get("competitions") or [])
         many = len(comps) > 1
         for c in comps:

@@ -77,7 +77,7 @@ def snapshot():
                 hit, hit_n = blended_hit(k, k in SOCCER, mc, live, r["why"],
                                          bool(leg and leg.get("dog")),
                                          (leg or {}).get("price"))
-                tk, tl, hide = tier_of(k, mc, hit)
+                tk, tl, hide = tier_of(k, mc, hit, bool(leg and leg.get("dog")))
                 pk, pl = price_note(k, k in SOCCER,
                                     (leg or {}).get("price"),
                                     bool(leg and leg.get("dog")))
@@ -430,25 +430,52 @@ def price_note(league, is_soccer, price, dog):
     return None, None
 
 
-TENNIS_DEAD_ZONE = 58.0     # replicated across every month and every K
+# Retired. This hid every tennis pick under 58% because the ranking-points
+# model measured 50.9% there -- no signal at all. The rating model that
+# replaced it goes 54.6% on 1,857 walk-forward predictions in the same band,
+# so those picks now show with an honest label instead of being suppressed.
+TENNIS_DEAD_ZONE = 58.0
 
 
-def tier_of(league, mc, hit):
+# LOCK -- the one cut the ledger supports as a genuine tier, measured on 287
+# graded picks with the TBD recording bug removed:
+#
+#     everything graded            188-99  (65.5%)
+#     the board's old >=58 cut     130-50  (72.2%)
+#     conf >=65, favourites only    87-15  (85.3%)   <- LOCK
+#     conf >=70, favourites only    70-12  (85.4%)
+#     ANY plus-money underdog       27-39  (40.9%)   <- the leak
+#
+# Excluding underdogs is most of it. Taking the dog was called at 56.7% and
+# came in at 40.9%, a 15.8-point hole, while favourites called at 57.8% came
+# in at 66.7%. That split is large, on 66 and 69 picks respectively, and it is
+# the same failure the soccer slips showed: plus-money legs sold as floor.
+#
+# Honesty about the cut: it was chosen after looking at these results, so the
+# 85.3% is in-sample and the true forward rate is lower. The dog/favourite
+# split is the part that is robust; the exact 65 threshold is not.
+LOCK_CONF = 65.0
+
+
+def tier_of(league, mc, hit, dog=False):
     """-> (key, label, hide) for a pick, from its measured hit rate.
 
-    `hide` is reserved for the tennis dead zone -- the one band with a
-    replicated no-signal finding. Everything else stays on the board wearing
-    an honest label, because a weak pick you can see beats a hidden one.
+    Nothing is hidden any more. The tennis dead zone was hidden because the
+    ranking-points model had no signal below 58% (measured 50.9%), but the
+    rating model that replaced it goes 54.6% there on 1,857 walk-forward
+    predictions. That is thin rather than absent, and a thin pick wearing an
+    honest label beats a pick you cannot see.
     """
     if mc is None:
         return None, None, False
-    dead = league in ("atp", "wta") and mc < TENNIS_DEAD_ZONE
+    if mc >= LOCK_CONF and not dog:
+        return "lock", "lock", False
     if hit is None:
-        return (None, None, dead)
+        return (None, None, False)
     for cut, key, label in LABEL_CUTS:
         if hit >= cut:
-            return key, label, dead
-    return "coin", "coin flip", dead
+            return key, label, False
+    return "coin", "coin flip", False
 
 
 def implied(american):
