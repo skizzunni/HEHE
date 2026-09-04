@@ -33,10 +33,17 @@
   "market_agrees": false,
   "matchup": "SARM @ AAE",
   "pick": "Sarmiento (Jun\u00edn)",
+  "played": "2026-09-04",
   "price": "+135",
-  "status": "open",
+  "scores": {
+   "Estudiantes de R\u00edo Cuarto": 0,
+   "Sarmiento (Jun\u00edn)": 2
+  },
+  "settled": "2026-09-04T17:45",
+  "status": "won",
   "tip": "3:45 PM",
-  "why": "rating 1492 v 1436 (+55.98) \u00b7 last 10: 5-5"
+  "why": "rating 1492 v 1436 (+55.98) \u00b7 last 10: 5-5",
+  "winner": "Sarmiento (Jun\u00edn)"
  },
  "arg:401841543": {
   "conf": 50.7,
@@ -1033,19 +1040,21 @@
   "conf": 59.3,
   "dog": false,
   "league": "atp",
-  "live": "4th",
-  "live_score": {
-   "Alexander Bublik": "4 6 7(7) 1",
-   "Tommy Paul": "6 3 6(4) 2"
-  },
   "logged": "2026-09-04T11:09",
   "market_agrees": null,
   "matchup": "Tommy Paul @ Alexander Bublik",
   "pick": "Tommy Paul",
+  "played": "2026-09-04",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Alexander Bublik": "4 6 7(7) 1 3",
+   "Tommy Paul": "6 3 6(4) 6 6"
+  },
+  "settled": "2026-09-04T17:46",
+  "status": "won",
   "tip": "12:30 PM",
-  "why": "rank 21 vs 16"
+  "why": "rank 21 vs 16",
+  "winner": "Tommy Paul"
  },
  "atp:182720": {
   "conf": 51.2,
@@ -1092,19 +1101,21 @@
   "conf": 83.1,
   "dog": false,
   "league": "atp",
-  "live": "2nd",
-  "live_score": {
-   "Carlos Alcaraz": "6 3",
-   "Wu Yibing": "3 2"
-  },
   "logged": "2026-09-04T11:09",
   "market_agrees": null,
   "matchup": "Carlos Alcaraz @ Wu Yibing",
   "pick": "Carlos Alcaraz",
+  "played": "2026-09-04",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Carlos Alcaraz": "6 6 6",
+   "Wu Yibing": "3 4 1"
+  },
+  "settled": "2026-09-04T17:46",
+  "status": "won",
   "tip": "1:00 PM",
-  "why": "rank 3 vs 113"
+  "why": "rank 3 vs 113",
+  "winner": "Carlos Alcaraz"
  },
  "atp:182725": {
   "conf": 64.8,
@@ -1343,6 +1354,11 @@
   "conf": 57.8,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Mariano Navone": "0",
+   "Tomas Martin Etcheverry": "0"
+  },
   "logged": "2026-09-04T15:36",
   "market_agrees": null,
   "matchup": "Mariano Navone @ Tomas Martin Etcheverry",
@@ -1451,6 +1467,11 @@
   "conf": 56.9,
   "dog": false,
   "league": "atp",
+  "live": "1st",
+  "live_score": {
+   "Jiri Lehecka": "4",
+   "Stefanos Tsitsipas": "1"
+  },
   "logged": "2026-09-04T15:36",
   "market_agrees": null,
   "matchup": "Stefanos Tsitsipas @ Jiri Lehecka",
@@ -2288,7 +2309,7 @@
   "conf": 51.4,
   "dog": true,
   "league": "chi",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T17:45",
   "market_agrees": false,
   "matchup": "AUD @ CON",
   "pick": "Deportes Concepcion",
@@ -3827,7 +3848,7 @@
   "conf": 59.8,
   "dog": true,
   "league": "mex",
-  "logged": "2026-09-04T13:01",
+  "logged": "2026-09-04T17:45",
   "market_agrees": false,
   "matchup": "PAC @ JUA",
   "pick": "FC Juarez",
@@ -4930,6 +4951,11 @@
   "conf": 59.7,
   "dog": false,
   "league": "mlb",
+  "live": "Delayed, Top 1st",
+  "live_score": {
+   "Cincinnati Reds": 0,
+   "Milwaukee Brewers": 0
+  },
   "logged": "2026-09-04T15:36",
   "market_agrees": true,
   "matchup": "MIL @ CIN",
@@ -5057,40 +5083,40 @@
   "why": "Snell 2.42 ERA/1.82 FIP vs Kent 5.59 \u00b7 pen 3.95 v 5.02 \u00b7 L10 4-6 v 6-4"
  },
  "mlb:401816812": {
-  "conf": 62.0,
+  "conf": 61.7,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "LAA @ PIT",
   "pick": "Pittsburgh Pirates",
-  "price": null,
+  "price": "-181",
   "status": "open",
   "tip": "6:40 PM",
   "why": "Ashcraft 3.59 ERA/3.53 FIP vs Kikuchi 5.65 \u00b7 L10 6-4 v 1-9"
  },
  "mlb:401816813": {
-  "conf": 50.9,
+  "conf": 57.6,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "ATL @ PHI",
   "pick": "Philadelphia Phillies",
-  "price": null,
+  "price": "-163",
   "status": "open",
   "tip": "6:05 PM",
   "why": "Wheeler 3.31 ERA/3.65 FIP vs P\u00e9rez 3.05 \u00b7 pen 4.21 v 3.39 \u00b7 L10 7-3 v 8-2"
  },
  "mlb:401816814": {
-  "conf": 58.4,
+  "conf": 56.7,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "BOS @ BAL",
   "pick": "Boston Red Sox",
-  "price": null,
+  "price": "-143",
   "status": "open",
   "tip": "7:05 PM",
   "why": "Gray 2.82 ERA/3.54 FIP vs Bassitt 4.97 \u00b7 pen 3.18 v 3.96 \u00b7 L10 4-6 v 6-4"
@@ -5099,7 +5125,7 @@
   "conf": 51.2,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T17:45",
   "market_agrees": null,
   "matchup": "CHC @ MIA",
   "pick": "Miami Marlins",
@@ -5112,7 +5138,7 @@
   "conf": 59.1,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T17:45",
   "market_agrees": null,
   "matchup": "DET @ CLE",
   "pick": "Cleveland Guardians",
@@ -5122,92 +5148,92 @@
   "why": "Messick 2.46 ERA/3.05 FIP vs Valdez 4.36 \u00b7 L10 6-4 v 3-7"
  },
  "mlb:401816817": {
-  "conf": 58.2,
+  "conf": 59.1,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "MIL @ CIN",
   "pick": "Milwaukee Brewers",
-  "price": null,
+  "price": "-163",
   "status": "open",
   "tip": "6:40 PM",
   "why": "May 4.69 ERA/3.48 FIP vs Abbott 4.49 \u00b7 pen 3.31 v 4.65 \u00b7 L10 6-4 v 5-5"
  },
  "mlb:401816818": {
-  "conf": 56.2,
+  "conf": 61.0,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "SF @ NYM",
   "pick": "New York Mets",
-  "price": null,
+  "price": "-186",
   "status": "open",
   "tip": "4:10 PM",
   "why": "Thornton 2.93 ERA/3.88 FIP vs Molina 3.77 \u00b7 pen 3.71 v 4.23 \u00b7 L10 4-6 v 5-5"
  },
  "mlb:401816819": {
-  "conf": 55.0,
+  "conf": 50.7,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "ARI @ HOU",
   "pick": "Arizona Diamondbacks",
-  "price": null,
+  "price": "-108",
   "status": "open",
   "tip": "7:15 PM",
   "why": "Pfaadt 3.49 ERA/4.16 FIP vs Pecko 6.23 \u00b7 L10 5-5 v 7-3"
  },
  "mlb:401816820": {
-  "conf": 51.1,
+  "conf": 52.4,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "MIN @ CHW",
   "pick": "Chicago White Sox",
-  "price": null,
+  "price": "-123",
   "status": "open",
   "tip": "7:10 PM",
   "why": "Kay 4.28 ERA/4.80 FIP vs Bradley 3.85 \u00b7 pen 3.72 v 4.79 \u00b7 L10 5-5 v 4-6"
  },
  "mlb:401816821": {
-  "conf": 53.4,
+  "conf": 50.7,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "TB @ TEX",
   "pick": "Tampa Bay Rays",
-  "price": null,
+  "price": "-110",
   "status": "open",
   "tip": "7:05 PM",
   "why": "Rasmussen 2.95 ERA/2.90 FIP vs deGrom 4.00 \u00b7 pen 4.06 v 4.43 \u00b7 L10 6-4 v 5-5"
  },
  "mlb:401816822": {
-  "conf": 55.5,
+  "conf": 51.4,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "TOR @ KC",
   "pick": "Kansas City Royals",
-  "price": null,
+  "price": "-112",
   "status": "open",
   "tip": "7:10 PM",
   "why": "Lugo 5.03 ERA/4.16 FIP vs Scherzer 6.16 \u00b7 pen 5.06 v 3.79"
  },
  "mlb:401816823": {
-  "conf": 51.5,
+  "conf": 52.3,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "STL @ COL",
-  "pick": "Colorado Rockies",
-  "price": null,
+  "pick": "St. Louis Cardinals",
+  "price": "-126",
   "status": "open",
   "tip": "8:10 PM",
   "why": "Adams 3.00 ERA/5.42 FIP vs Liberatore 5.41"
@@ -5216,7 +5242,7 @@
   "conf": 58.4,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T17:45",
   "market_agrees": null,
   "matchup": "ATH @ SEA",
   "pick": "Seattle Mariners",
@@ -5226,27 +5252,27 @@
   "why": "Kirby vs TBD \u00b7 pen 4.51 v 5.52"
  },
  "mlb:401816825": {
-  "conf": 51.0,
+  "conf": 50.5,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "NYY @ SD",
-  "pick": "New York Yankees",
-  "price": null,
+  "pick": "San Diego Padres",
+  "price": "-114",
   "status": "open",
   "tip": "7:15 PM",
   "why": "Rod\u00f3n 3.20 ERA/3.73 FIP vs Ray 3.14 \u00b7 pen 3.09 v 3.51 \u00b7 L10 6-4 v 3-7"
  },
  "mlb:401816826": {
-  "conf": 55.2,
+  "conf": 64.6,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T15:36",
-  "market_agrees": null,
+  "logged": "2026-09-04T17:45",
+  "market_agrees": true,
   "matchup": "WSH @ LAD",
   "pick": "Los Angeles Dodgers",
-  "price": null,
+  "price": "-231",
   "status": "open",
   "tip": "9:10 PM",
   "why": "Glasnow 2.79 ERA/2.76 FIP vs Cavalli 3.12 \u00b7 pen 3.95 v 5.02 \u00b7 L10 4-6 v 6-4"
@@ -5255,11 +5281,6 @@
   "conf": 55.2,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 1st",
-  "live_score": {
-   "Cleveland Guardians": 0,
-   "Detroit Tigers": 4
-  },
   "logged": "2026-09-04T11:09",
   "market_agrees": true,
   "matchup": "DET @ CLE",
@@ -6703,10 +6724,17 @@
   "market_agrees": false,
   "matchup": "IKS @ AAL",
   "pick": "Aalesund",
+  "played": "2026-09-04",
   "price": "+110",
-  "status": "open",
+  "scores": {
+   "Aalesund": 2,
+   "IK Start": 0
+  },
+  "settled": "2026-09-04T17:46",
+  "status": "won",
   "tip": "1:00 PM",
-  "why": "rating 1471 v 1461 (+10.39) \u00b7 last 9: 2-7 \u00b7 at home"
+  "why": "rating 1471 v 1461 (+10.39) \u00b7 last 9: 2-7 \u00b7 at home",
+  "winner": "Aalesund"
  },
  "nor:401873914": {
   "conf": 52.3,
@@ -6723,16 +6751,24 @@
  },
  "nor:401873920": {
   "conf": 59.9,
+  "diagnosis": "margin 0 \u00b7 the book had my side favoured too \u00b7 called at 60%",
   "dog": false,
   "league": "nor",
   "logged": "2026-09-04T11:09",
   "market_agrees": true,
   "matchup": "VIK @ SAN",
   "pick": "Viking FK",
+  "played": "2026-09-04",
   "price": "-130",
-  "status": "open",
+  "scores": {
+   "Sandefjord": 1,
+   "Viking FK": 1
+  },
+  "settled": "2026-09-04T17:46",
+  "status": "lost",
   "tip": "3:00 PM",
-  "why": "rating 1555 v 1483 (+71.98) \u00b7 last 10: 8-2"
+  "why": "rating 1555 v 1483 (+71.98) \u00b7 last 10: 8-2",
+  "winner": "Sandefjord"
  },
  "nor:401873921": {
   "conf": 61.0,
@@ -6897,16 +6933,24 @@
  },
  "per:401886190": {
   "conf": 55.1,
+  "diagnosis": "margin 3 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 55%",
   "dog": true,
   "league": "per",
   "logged": "2026-09-04T13:01",
   "market_agrees": false,
   "matchup": "CIE @ CAJ",
   "pick": "FC Cajamarca",
+  "played": "2026-09-04",
   "price": "+240",
-  "status": "open",
+  "scores": {
+   "Cienciano del Cusco": 5,
+   "FC Cajamarca": 2
+  },
+  "settled": "2026-09-04T17:46",
+  "status": "lost",
   "tip": "2:00 PM",
-  "why": "rating 1496 v 1501 (+4.77) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1496 v 1501 (+4.77) \u00b7 last 10: 5-5 \u00b7 at home",
+  "winner": "Cienciano del Cusco"
  },
  "per:401886195": {
   "conf": 62.3,
@@ -6972,6 +7016,11 @@
   "conf": 58.3,
   "dog": false,
   "league": "per",
+  "live": "70'",
+  "live_score": {
+   "Alianza Atl\u00e9tico": 2,
+   "UTC": 2
+  },
   "logged": "2026-09-04T15:36",
   "market_agrees": null,
   "matchup": "UTC @ AAT",
@@ -7225,17 +7274,17 @@
   "why": "rating 1466 v 1446 (+20.00) \u00b7 last 10: 2-8 \u00b7 at home"
  },
  "uru:401914272": {
-  "conf": 52.7,
+  "conf": 56.1,
   "dog": false,
   "league": "uru",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T17:45",
   "market_agrees": true,
   "matchup": "CERR @ MCT",
   "pick": "Montevideo City Torque",
-  "price": "-175",
+  "price": "-185",
   "status": "open",
   "tip": "6:00 PM",
-  "why": "rating 1529 v 1497 (+31.70) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1545 v 1498 (+47.73) \u00b7 last 10: 9-1 \u00b7 at home"
  },
  "uru:401914289": {
   "conf": 50.3,
@@ -7384,16 +7433,24 @@
  },
  "wta:182537": {
   "conf": 75.6,
+  "diagnosis": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 76%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-04T13:01",
   "market_agrees": null,
   "matchup": "Karolina Muchova @ Emma Navarro",
   "pick": "Karolina Muchova",
+  "played": "2026-09-04",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Emma Navarro": "6 7",
+   "Karolina Muchova": "3 5"
+  },
+  "settled": "2026-09-04T17:46",
+  "status": "lost",
   "tip": "2:30 PM",
-  "why": "rank 7 vs 27"
+  "why": "rank 7 vs 27",
+  "winner": "Emma Navarro"
  },
  "wta:182538": {
   "conf": 71.6,
@@ -7472,6 +7529,11 @@
   "conf": 69.7,
   "dog": false,
   "league": "wta",
+  "live": "3rd",
+  "live_score": {
+   "Ann Li": "2 7(8) 1",
+   "Linda Noskova": "6 6(6) 1"
+  },
   "logged": "2026-09-04T15:36",
   "market_agrees": null,
   "matchup": "Linda Noskova @ Ann Li",
@@ -7509,10 +7571,17 @@
   "market_agrees": null,
   "matchup": "Leylah Fernandez @ Jessica Pegula",
   "pick": "Jessica Pegula",
+  "played": "2026-09-04",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Jessica Pegula": "1 6 6",
+   "Leylah Fernandez": "6 4 3"
+  },
+  "settled": "2026-09-04T17:46",
+  "status": "won",
   "tip": "11:30 AM",
-  "why": "rank 3 vs 33"
+  "why": "rank 3 vs 33",
+  "winner": "Jessica Pegula"
  },
  "wta:182546": {
   "conf": 83.4,
