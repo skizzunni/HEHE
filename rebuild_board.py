@@ -81,9 +81,11 @@ def snapshot():
                 pk, pl = price_note(k, k in SOCCER,
                                     (leg or {}).get("price"),
                                     bool(leg and leg.get("dog")))
+                ek, el = ev_note(k in SOCCER, mc, (leg or {}).get("price"),
+                                 bool(leg and leg.get("dog")))
                 rows.append({"mp": r["mypick"], "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
-                             "pk": pk, "pl": pl,
+                             "pk": pk, "pl": pl, "ek": ek, "el": el,
                              # fair price and edge come from the SAME rounded
                              # rate the row displays, so the three never
                              # disagree by a rounding step on screen
@@ -411,6 +413,39 @@ LABEL_CUTS = ((0.75, "strong", "strong"), (0.65, "solid", "solid"),
 DOG_FRIENDLY = {"mlb", "nhl", "wnba"}       # underdogs carry the lighter tax
 DOG_TAXED = {"ncaaf", "nba", "nfl"}         # and the heavier one here
 SOCCER_LONG_DOG = 250                       # +250 and worse: -11.4% over 9,206
+
+
+def ev_note(is_soccer, mc, price, dog):
+    """-> (key, label) for whether this pick beats the price it is offered at.
+
+    Hit rate and profit are different things, and the ledger separates them
+    cleanly. Across 140 priced graded picks:
+
+        model ABOVE the de-vigged price   86 picks  41-45 (47.7%)  ROI +10.4%
+        model BELOW it                    54 picks  35-19 (64.8%)  ROI  +3.9%
+
+    The lower hit rate makes more money, because it is getting paid better. And
+    the best cell on the board is +EV with the underdog rule applied: 19 picks,
+    13-6 (68.4%), ROI +24.1%. So a badge for "likely to win" is not a badge for
+    "worth betting" -- 97 of the 105 LOCK-grade picks carry no price at all and
+    cannot be bet at that number by anyone.
+
+    "no value" is the Rutgers case from Sept 3: a -8000 line the model rated
+    64.7%. That risks 80 units to win 1 on a pick its own model gives a 35%
+    chance of losing. It lost. One pick is not a pattern, but the arithmetic
+    does not need a sample to be wrong.
+    """
+    if price is None or mc is None:
+        return None, None
+    m = _devig(price, is_soccer)
+    if m is None:
+        return None, None
+    edge = mc / 100.0 - m
+    if edge >= 0.02 and not dog:
+        return "value", "+EV"
+    if edge <= -0.15:
+        return "noval", "no value"
+    return None, None
 
 
 def price_note(league, is_soccer, price, dog):
