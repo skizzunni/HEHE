@@ -49,7 +49,29 @@ def snapshot():
         import traceback
         sys.stderr.write("ledger pass failed -- board still rebuilt:\n")
         traceback.print_exc()
+    # Claimed held-out accuracy against what each league has ACTUALLY done.
+    # The page used to state backtest figures alone, which had drifted badly:
+    # it advertised MLB at 58.6% while MLB was running 49.0% live, and quoted
+    # NBA/WNBA/NHL numbers for leagues with no picks at all. Computing the
+    # comparison here means the boast cannot outlive the evidence.
+    CLAIMED = {"mlb": 58.6, "nba": 73.1, "wnba": 70.4, "nhl": 58.0, "tennis": 65.9}
+    seen = {}
+    for e in ledger.load().values():
+        if e.get("status") not in ("won", "lost"):
+            continue
+        k = "tennis" if e["league"] in ("atp", "wta") else e["league"]
+        v = seen.setdefault(k, [0, 0])
+        v[0] += 1 if e["status"] == "won" else 0
+        v[1] += 1
+    scoreboard = []
+    for k in sorted(set(list(CLAIMED) + [x for x, v in seen.items() if v[1] >= 8])):
+        w, n = seen.get(k, (0, 0))
+        scoreboard.append({"lg": k, "claim": CLAIMED.get(k),
+                           "n": n, "w": w,
+                           "act": round(100.0 * w / n, 1) if n else None})
+
     out = {"at": d._STATE["at"].strftime("%b %-d, %-I:%M %p ET"),
+           "scoreboard": scoreboard,
            "dates": {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]},
            # ESPN path per league, so the open page can refresh live scores
            # itself. GitHub throttles scheduled workflows hard -- the 20-minute
