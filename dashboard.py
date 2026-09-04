@@ -97,13 +97,24 @@ _STATE = {"slots": {}, "at": None, "dates": ("", ""), "changes": [], "cycles": 0
 _PREV = {}          # game id -> last seen snapshot, for diffing
 
 
-def get(url, tries=2):
+def get(url, tries=4):
+    """Fetch JSON, or {} after `tries` attempts.
+
+    Backoff matters more here than it looks: the failure that empties the whole
+    board is ESPN refusing a burst from a datacenter IP, and 12 leagues x 2 days
+    fired through a thread pool is exactly such a burst. Retries are spaced so a
+    short refusal window is ridden out rather than hammered.
+    """
+    delay = 0.6
     for a in range(tries):
         try:
             with urllib.request.urlopen(url, timeout=30, context=_CTX) as r:
                 return json.load(r)
         except Exception:
-            time.sleep(0.4)
+            if a == tries - 1:
+                break
+            time.sleep(delay)
+            delay *= 2
     return {}
 
 

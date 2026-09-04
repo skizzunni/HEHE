@@ -609,6 +609,29 @@ def main():
     if "--scores" in sys.argv:
         return scores_only()
     new = snapshot()
+
+    # An empty board is a failed fetch, not a quiet slate.
+    #
+    # On 2026-09-04T02:19Z the runner published a board with zero rows in every
+    # league for BOTH days and reported success, while the identical commit
+    # built 56 rows on a laptop three minutes earlier. ESPN returns nothing to
+    # the runner -- rate limit, datacenter-IP block, something -- and because
+    # dashboard.get() swallows failures and returns {}, that arrived as "no
+    # games today" rather than as an error. The site then served an empty board
+    # for hours. This is the same cause as the intermittent hard failures: when
+    # the fetch dies mid-parse it raises, and when it dies cleanly it just
+    # returns nothing.
+    #
+    # Publishing nothing is strictly worse than publishing yesterday's board,
+    # so bail before write() and let the deploy job skip. The last good board
+    # keeps serving and the job output says why.
+    rows = sum(len(v.get("rows") or [])
+               for slot in new["slots"].values() for v in slot.values())
+    if rows == 0:
+        sys.exit("refusing to publish an empty board: every league returned zero "
+                 "rows for both days, which means the feeds failed rather than "
+                 "that nothing is scheduled. Previous board left in place.")
+
     moved = changes(new)
     write(new)
     up = {s: sum(len(v["rows"]) for v in new["slots"][s].values()) for s in new["slots"]}
