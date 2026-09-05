@@ -3,7 +3,7 @@
   "conf": 59.4,
   "dog": true,
   "league": "arg",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "CABJ @ GMZ",
   "pick": "Gimnasia (Mendoza)",
@@ -16,11 +16,11 @@
   "conf": 50.2,
   "dog": true,
   "league": "arg",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "EST @ VEL",
   "pick": "V\u00e9lez Sarsfield",
-  "price": "+130",
+  "price": "+135",
   "status": "open",
   "tip": "8:15 PM",
   "why": "rating 1530 v 1512 (+18.02) \u00b7 last 10: 7-3 \u00b7 at home"
@@ -53,16 +53,23 @@
   "market_agrees": false,
   "matchup": "HUR @ BEL",
   "pick": "Belgrano (C\u00f3rdoba)",
+  "played": "2026-09-04",
   "price": "+115",
-  "status": "open",
+  "scores": {
+   "Belgrano (C\u00f3rdoba)": 1,
+   "Hurac\u00e1n": 1
+  },
+  "settled": "2026-09-04T21:21",
+  "status": "won",
   "tip": "6:00 PM",
-  "why": "rating 1530 v 1508 (+22.49) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1530 v 1508 (+22.49) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Belgrano (C\u00f3rdoba)"
  },
  "arg:401841545": {
   "conf": 61.3,
   "dog": true,
   "league": "arg",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "BAN @ ALDO",
   "pick": "Aldosivi",
@@ -75,25 +82,27 @@
   "conf": 53.0,
   "dog": true,
   "league": "arg",
-  "live": "68'",
-  "live_score": {
-   "Deportivo Riestra": 0,
-   "Platense": 1
-  },
   "logged": "2026-09-04T15:36",
   "market_agrees": false,
   "matchup": "RIE @ PLA",
   "pick": "Platense",
+  "played": "2026-09-04",
   "price": "+165",
-  "status": "open",
+  "scores": {
+   "Deportivo Riestra": 1,
+   "Platense": 1
+  },
+  "settled": "2026-09-04T21:21",
+  "status": "won",
   "tip": "6:00 PM",
-  "why": "rating 1478 v 1473 (+4.88) \u00b7 last 10: 2-8 \u00b7 at home"
+  "why": "rating 1478 v 1473 (+4.88) \u00b7 last 10: 2-8 \u00b7 at home",
+  "winner": "Platense"
  },
  "arg:401841551": {
   "conf": 54.7,
   "dog": true,
   "league": "arg",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "TALL @ SLO",
   "pick": "San Lorenzo",
@@ -106,7 +115,7 @@
   "conf": 53.7,
   "dog": true,
   "league": "arg",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "TIG @ GLP",
   "pick": "Gimnasia La Plata",
@@ -503,19 +512,21 @@
   "conf": 51.6,
   "dog": false,
   "league": "atp",
-  "live": "1st",
-  "live_score": {
-   "Alex Michelsen": "6",
-   "Daniel Merida": "6"
-  },
   "logged": "2026-09-04T15:36",
   "market_agrees": null,
   "matchup": "Daniel Merida @ Alex Michelsen",
   "pick": "Alex Michelsen",
+  "played": "2026-09-04",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Alex Michelsen": "7(7) 6 6",
+   "Daniel Merida": "6(5) 4 3"
+  },
+  "settled": "2026-09-04T21:21",
+  "status": "won",
   "tip": "4:50 PM",
-  "why": "rank 46 vs 39"
+  "why": "rank 46 vs 39",
+  "winner": "Alex Michelsen"
  },
  "atp:182690": {
   "conf": 63.2,
@@ -541,19 +552,21 @@
   "conf": 71.8,
   "dog": false,
   "league": "atp",
-  "live": "1st",
-  "live_score": {
-   "Frances Tiafoe": "4",
-   "Valentin Vacherot": "2"
-  },
   "logged": "2026-09-04T15:36",
   "market_agrees": null,
   "matchup": "Frances Tiafoe @ Valentin Vacherot",
   "pick": "Frances Tiafoe",
+  "played": "2026-09-04",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Frances Tiafoe": "6 6 6",
+   "Valentin Vacherot": "4 2 4"
+  },
+  "settled": "2026-09-04T21:21",
+  "status": "won",
   "tip": "7:00 PM",
-  "why": "rank 12 vs 23"
+  "why": "rank 12 vs 23",
+  "winner": "Frances Tiafoe"
  },
  "atp:182693": {
   "conf": 72.8,
@@ -680,7 +693,7 @@
   "conf": 80.2,
   "dog": false,
   "league": "atp",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Alejandro Tabilo @ Alexander Zverev",
   "pick": "Alexander Zverev",
@@ -1021,7 +1034,7 @@
   "conf": 52.0,
   "dog": false,
   "league": "atp",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Benjamin Bonzi @ Karen Khachanov",
   "pick": "Benjamin Bonzi",
@@ -1176,7 +1189,7 @@
   "conf": 68.6,
   "dog": false,
   "league": "atp",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Francisco Cerundolo @ Taylor Fritz",
   "pick": "Taylor Fritz",
@@ -1189,7 +1202,7 @@
   "conf": 50.5,
   "dog": false,
   "league": "atp",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Learner Tien @ Jakub Mensik",
   "pick": "Learner Tien",
@@ -1243,7 +1256,7 @@
   "conf": 70.2,
   "dog": false,
   "league": "atp",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Flavio Cobolli @ Alexander Blockx",
   "pick": "Flavio Cobolli",
@@ -1336,7 +1349,7 @@
   "conf": 67.8,
   "dog": false,
   "league": "atp",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Dane Sweeny @ Luciano Darderi",
   "pick": "Luciano Darderi",
@@ -1367,21 +1380,24 @@
  },
  "atp:182740": {
   "conf": 57.8,
+  "diagnosis": "lost 0-3 in sets \u00b7 never won a set \u00b7 called at 58%",
   "dog": false,
   "league": "atp",
-  "live": "3rd",
-  "live_score": {
-   "Mariano Navone": "4 4 0",
-   "Tomas Martin Etcheverry": "6 6 0"
-  },
   "logged": "2026-09-04T15:36",
   "market_agrees": null,
   "matchup": "Mariano Navone @ Tomas Martin Etcheverry",
   "pick": "Mariano Navone",
+  "played": "2026-09-04",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Mariano Navone": "4 4 3",
+   "Tomas Martin Etcheverry": "6 6 6"
+  },
+  "settled": "2026-09-04T21:21",
+  "status": "lost",
   "tip": "4:10 PM",
-  "why": "rank 49 vs 32"
+  "why": "rank 49 vs 32",
+  "winner": "Tomas Martin Etcheverry"
  },
  "atp:182741": {
   "conf": 60.8,
@@ -1448,13 +1464,13 @@
   "conf": 70.8,
   "dog": false,
   "league": "atp",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Denis Shapovalov @ Ben Shelton",
   "pick": "Ben Shelton",
   "price": null,
   "status": "open",
-  "tip": "8:30 PM",
+  "tip": "9:35 PM",
   "why": "rank 9 vs 48"
  },
  "atp:182746": {
@@ -1480,21 +1496,24 @@
  },
  "atp:182747": {
   "conf": 56.9,
+  "diagnosis": "lost 1-3 in sets \u00b7 took it the distance \u00b7 called at 57%",
   "dog": false,
   "league": "atp",
-  "live": "4th",
-  "live_score": {
-   "Jiri Lehecka": "6 1 6(3) 0",
-   "Stefanos Tsitsipas": "2 6 7(7) 1"
-  },
   "logged": "2026-09-04T15:36",
   "market_agrees": null,
   "matchup": "Stefanos Tsitsipas @ Jiri Lehecka",
   "pick": "Jiri Lehecka",
+  "played": "2026-09-04",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Jiri Lehecka": "6 1 6(3) 1",
+   "Stefanos Tsitsipas": "2 6 7(7) 6"
+  },
+  "settled": "2026-09-04T21:21",
+  "status": "lost",
   "tip": "5:00 PM",
-  "why": "rank 19 vs 53"
+  "why": "rank 19 vs 53",
+  "winner": "Stefanos Tsitsipas"
  },
  "atp:182748": {
   "conf": 64.5,
@@ -1521,7 +1540,7 @@
   "conf": 56.2,
   "dog": false,
   "league": "atp",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Arthur Gea @ Michael Zheng",
   "pick": "Arthur Gea",
@@ -1675,7 +1694,7 @@
   "conf": 51.4,
   "dog": false,
   "league": "atp",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Botic Van De Zandschulp @ Zizou Bergs",
   "pick": "Botic Van De Zandschulp",
@@ -2114,29 +2133,31 @@
   "conf": 51.3,
   "dog": false,
   "league": "bra2",
-  "live": "HT",
-  "live_score": {
-   "Crici\u00fama": 1,
-   "Cuiab\u00e1": 0
-  },
   "logged": "2026-09-04T15:36",
   "market_agrees": true,
   "matchup": "CUI @ CRI",
   "pick": "Crici\u00fama",
+  "played": "2026-09-04",
   "price": "-105",
-  "status": "open",
+  "scores": {
+   "Crici\u00fama": 2,
+   "Cuiab\u00e1": 0
+  },
+  "settled": "2026-09-04T21:21",
+  "status": "won",
   "tip": "6:30 PM",
-  "why": "rating 1528 v 1515 (+13.13) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1528 v 1515 (+13.13) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Crici\u00fama"
  },
  "bra2:401860313": {
   "conf": 63.1,
   "dog": true,
   "league": "bra2",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "SPO @ CEA",
   "pick": "Cear\u00e1",
-  "price": "+120",
+  "price": "+125",
   "status": "open",
   "tip": "5:30 PM",
   "why": "rating 1477 v 1521 (+43.61) \u00b7 last 10: 3-7 \u00b7 at home"
@@ -2165,7 +2186,7 @@
   "conf": 57.0,
   "dog": false,
   "league": "bra2",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "AVA @ NOV",
   "pick": "Novorizontino",
@@ -2178,7 +2199,7 @@
   "conf": 50.1,
   "dog": true,
   "league": "bra2",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "AGO @ JUV",
   "pick": "Juventude",
@@ -2191,7 +2212,7 @@
   "conf": 59.3,
   "dog": true,
   "league": "bra2",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "FOR @ GOI",
   "pick": "Goi\u00e1s",
@@ -2204,6 +2225,11 @@
   "conf": 60.1,
   "dog": true,
   "league": "bra2",
+  "live": "88'",
+  "live_score": {
+   "Athletic": 4,
+   "Vila Nova": 0
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": false,
   "matchup": "VIL @ ACMG",
@@ -2217,6 +2243,11 @@
   "conf": 62.3,
   "dog": false,
   "league": "bra2",
+  "live": "HT",
+  "live_score": {
+   "Am\u00e9rica Mineiro": 0,
+   "CRB": 1
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": true,
   "matchup": "AMG @ CRB",
@@ -2230,7 +2261,7 @@
   "conf": 57.6,
   "dog": false,
   "league": "bra",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "BAH @ BRA",
   "pick": "Red Bull Bragantino",
@@ -2243,7 +2274,7 @@
   "conf": 59.6,
   "dog": true,
   "league": "bra",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "CAM @ SAO",
   "pick": "S\u00e3o Paulo",
@@ -2256,11 +2287,11 @@
   "conf": 57.4,
   "dog": true,
   "league": "bra",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "VAS @ FLU",
   "pick": "Fluminense",
-  "price": "+105",
+  "price": "+110",
   "status": "open",
   "tip": "8:00 PM",
   "why": "rating 1523 v 1469 (+53.81) \u00b7 last 10: 7-3 \u00b7 at home"
@@ -2329,6 +2360,11 @@
   "conf": 51.4,
   "dog": true,
   "league": "chi",
+  "live": "HT",
+  "live_score": {
+   "Audax Italiano": 1,
+   "Deportes Concepcion": 0
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": false,
   "matchup": "AUD @ CON",
@@ -2342,11 +2378,11 @@
   "conf": 50.1,
   "dog": false,
   "league": "chi",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "COQ @ U. de Chile",
   "pick": "Universidad de Chile",
-  "price": "-115",
+  "price": "-110",
   "status": "open",
   "tip": "8:00 PM",
   "why": "rating 1526 v 1507 (+19.67) \u00b7 last 10: 7-3 \u00b7 at home"
@@ -2355,11 +2391,11 @@
   "conf": 54.6,
   "dog": true,
   "league": "chi",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "CDUC @ EVE",
   "pick": "Everton CD",
-  "price": "+175",
+  "price": "+180",
   "status": "open",
   "tip": "5:30 PM",
   "why": "rating 1522 v 1525 (+2.23) \u00b7 last 10: 7-3 \u00b7 at home"
@@ -2388,7 +2424,7 @@
   "conf": 56.2,
   "dog": false,
   "league": "col",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "FOR @ SFE",
   "pick": "Independiente Santa Fe",
@@ -2401,7 +2437,7 @@
   "conf": 56.0,
   "dog": true,
   "league": "col",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "PAS @ CUC",
   "pick": "C\u00facuta Deportivo",
@@ -2414,7 +2450,7 @@
   "conf": 59.9,
   "dog": false,
   "league": "col",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "CAL @ CHI",
   "pick": "Once Caldas",
@@ -2447,7 +2483,7 @@
   "conf": 58.4,
   "dog": false,
   "league": "col",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "COR @ JUN",
   "pick": "Atl\u00e9tico Junior",
@@ -2683,6 +2719,11 @@
   "conf": 63.9,
   "dog": false,
   "league": "ecu",
+  "live": "HT",
+  "live_score": {
+   "Liga de Quito": 0,
+   "T\u00e9cnico Universitario": 1
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": true,
   "matchup": "LDU @ TUA",
@@ -2696,7 +2737,7 @@
   "conf": 57.7,
   "dog": false,
   "league": "ecu",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "MAC @ IDV",
   "pick": "Independiente del Valle",
@@ -3531,7 +3572,7 @@
   "conf": 52.7,
   "dog": true,
   "league": "jpn",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "MITO @ AVF",
   "pick": "Avispa Fukuoka",
@@ -3829,7 +3870,7 @@
   "conf": 51.9,
   "dog": false,
   "league": "mex",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ATL @ ATS",
   "pick": "Atlas",
@@ -3842,7 +3883,7 @@
   "conf": 53.6,
   "dog": false,
   "league": "mex",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "NCX @ UANL",
   "pick": "Tigres UANL",
@@ -3855,7 +3896,7 @@
   "conf": 56.6,
   "dog": true,
   "league": "mex",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "GDL @ ASL",
   "pick": "Atl\u00e9tico de San Luis",
@@ -3868,7 +3909,7 @@
   "conf": 59.8,
   "dog": true,
   "league": "mex",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "PAC @ JUA",
   "pick": "FC Juarez",
@@ -4906,10 +4947,10 @@
   "conf": 63.0,
   "dog": false,
   "league": "mlb",
-  "live": "Top 2nd",
+  "live": "Bot 8th",
   "live_score": {
    "Los Angeles Angels": 0,
-   "Pittsburgh Pirates": 0
+   "Pittsburgh Pirates": 1
   },
   "logged": "2026-09-04T15:36",
   "market_agrees": true,
@@ -4922,27 +4963,30 @@
  },
  "mlb:401816798": {
   "conf": 52.0,
+  "diagnosis": "margin 3 \u00b7 close \u00b7 the book had my side favoured too \u00b7 called at 52%",
   "dog": false,
   "league": "mlb",
-  "live": "Bot 3rd",
-  "live_score": {
-   "Atlanta Braves": 3,
-   "Philadelphia Phillies": 1
-  },
   "logged": "2026-09-04T15:36",
   "market_agrees": true,
   "matchup": "ATL @ PHI",
   "pick": "Philadelphia Phillies",
+  "played": "2026-09-04",
   "price": "-124",
-  "status": "open",
+  "scores": {
+   "Atlanta Braves": 5,
+   "Philadelphia Phillies": 2
+  },
+  "settled": "2026-09-04T21:21",
+  "status": "lost",
   "tip": "6:40 PM",
-  "why": "Sale 2.06 ERA/2.18 FIP vs S\u00e1nchez 2.52 \u00b7 pen 3.39 v 4.21 \u00b7 L10 8-2 v 7-3"
+  "why": "Sale 2.06 ERA/2.18 FIP vs S\u00e1nchez 2.52 \u00b7 pen 3.39 v 4.21 \u00b7 L10 8-2 v 7-3",
+  "winner": "Atlanta Braves"
  },
  "mlb:401816799": {
   "conf": 52.1,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 2nd",
+  "live": "Bot 8th",
   "live_score": {
    "Baltimore Orioles": 0,
    "Boston Red Sox": 1
@@ -4960,10 +5004,10 @@
   "conf": 57.8,
   "dog": false,
   "league": "mlb",
-  "live": "Top 2nd",
+  "live": "Bot 7th",
   "live_score": {
-   "Chicago Cubs": 0,
-   "Miami Marlins": 0
+   "Chicago Cubs": 5,
+   "Miami Marlins": 1
   },
   "logged": "2026-09-04T15:36",
   "market_agrees": true,
@@ -4978,10 +5022,10 @@
   "conf": 56.2,
   "dog": false,
   "league": "mlb",
-  "live": "Delayed, Top 1st",
+  "live": "Bot 6th",
   "live_score": {
    "Cleveland Guardians": 0,
-   "Detroit Tigers": 0
+   "Detroit Tigers": 3
   },
   "logged": "2026-09-04T15:36",
   "market_agrees": true,
@@ -4996,10 +5040,10 @@
   "conf": 59.7,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 2nd",
+  "live": "Top 7th",
   "live_score": {
-   "Cincinnati Reds": 1,
-   "Milwaukee Brewers": 2
+   "Cincinnati Reds": 6,
+   "Milwaukee Brewers": 10
   },
   "logged": "2026-09-04T15:36",
   "market_agrees": true,
@@ -5014,6 +5058,11 @@
   "conf": 62.1,
   "dog": false,
   "league": "mlb",
+  "live": "Bot 7th",
+  "live_score": {
+   "New York Mets": 9,
+   "San Francisco Giants": 3
+  },
   "logged": "2026-09-04T15:36",
   "market_agrees": true,
   "matchup": "SF @ NYM",
@@ -5027,6 +5076,11 @@
   "conf": 53.8,
   "dog": false,
   "league": "mlb",
+  "live": "Bot 4th",
+  "live_score": {
+   "Arizona Diamondbacks": 1,
+   "Houston Astros": 3
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": true,
   "matchup": "ARI @ HOU",
@@ -5040,6 +5094,11 @@
   "conf": 54.1,
   "dog": false,
   "league": "mlb",
+  "live": "End 6th",
+  "live_score": {
+   "Chicago White Sox": 4,
+   "Minnesota Twins": 0
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": true,
   "matchup": "MIN @ CHW",
@@ -5053,6 +5112,11 @@
   "conf": 51.2,
   "dog": false,
   "league": "mlb",
+  "live": "Top 5th",
+  "live_score": {
+   "Tampa Bay Rays": 3,
+   "Texas Rangers": 1
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": true,
   "matchup": "TB @ TEX",
@@ -5066,6 +5130,11 @@
   "conf": 53.9,
   "dog": false,
   "league": "mlb",
+  "live": "End 5th",
+  "live_score": {
+   "Kansas City Royals": 1,
+   "Toronto Blue Jays": 5
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": true,
   "matchup": "TOR @ KC",
@@ -5079,6 +5148,11 @@
   "conf": 55.8,
   "dog": false,
   "league": "mlb",
+  "live": "Top 3rd",
+  "live_score": {
+   "Colorado Rockies": 1,
+   "St. Louis Cardinals": 2
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": true,
   "matchup": "STL @ COL",
@@ -5092,7 +5166,7 @@
   "conf": 67.0,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ATH @ SEA",
   "pick": "Seattle Mariners",
@@ -5102,27 +5176,27 @@
   "why": "Gilbert 3.42 ERA/3.64 FIP vs Morris 9.82 \u00b7 pen 4.51 v 5.52"
  },
  "mlb:401816810": {
-  "conf": 52.4,
+  "conf": 52.1,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "NYY @ SD",
   "pick": "New York Yankees",
-  "price": "-114",
+  "price": "-112",
   "status": "open",
   "tip": "9:40 PM",
   "why": "Fried 2.80 ERA/2.67 FIP vs Buehler 4.66 \u00b7 pen 3.09 v 3.51 \u00b7 L10 6-4 v 3-7"
  },
  "mlb:401816811": {
-  "conf": 68.8,
+  "conf": 69.1,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "WSH @ LAD",
   "pick": "Los Angeles Dodgers",
-  "price": "-280",
+  "price": "-285",
   "status": "open",
   "tip": "10:10 PM",
   "why": "Snell 2.42 ERA/1.82 FIP vs Kent 5.59 \u00b7 pen 3.95 v 5.02 \u00b7 L10 4-6 v 6-4"
@@ -5131,7 +5205,7 @@
   "conf": 61.7,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "LAA @ PIT",
   "pick": "Pittsburgh Pirates",
@@ -5144,20 +5218,20 @@
   "conf": 57.6,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ATL @ PHI",
   "pick": "Philadelphia Phillies",
   "price": "-163",
   "status": "open",
   "tip": "6:05 PM",
-  "why": "Wheeler 3.31 ERA/3.65 FIP vs P\u00e9rez 3.05 \u00b7 pen 4.21 v 3.39 \u00b7 L10 7-3 v 8-2"
+  "why": "Wheeler 3.31 ERA/3.65 FIP vs P\u00e9rez 3.05 \u00b7 pen 4.22 v 3.37 \u00b7 L10 6-4 v 8-2"
  },
  "mlb:401816814": {
   "conf": 56.7,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "BOS @ BAL",
   "pick": "Boston Red Sox",
@@ -5170,7 +5244,7 @@
   "conf": 51.2,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "CHC @ MIA",
   "pick": "Miami Marlins",
@@ -5183,7 +5257,7 @@
   "conf": 59.1,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "DET @ CLE",
   "pick": "Cleveland Guardians",
@@ -5193,14 +5267,14 @@
   "why": "Messick 2.46 ERA/3.05 FIP vs Valdez 4.36 \u00b7 L10 6-4 v 3-7"
  },
  "mlb:401816817": {
-  "conf": 59.1,
+  "conf": 59.5,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "MIL @ CIN",
   "pick": "Milwaukee Brewers",
-  "price": "-163",
+  "price": "-167",
   "status": "open",
   "tip": "6:40 PM",
   "why": "May 4.69 ERA/3.48 FIP vs Abbott 4.49 \u00b7 pen 3.31 v 4.65 \u00b7 L10 6-4 v 5-5"
@@ -5209,7 +5283,7 @@
   "conf": 61.0,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "SF @ NYM",
   "pick": "New York Mets",
@@ -5222,7 +5296,7 @@
   "conf": 50.7,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ARI @ HOU",
   "pick": "Arizona Diamondbacks",
@@ -5232,14 +5306,14 @@
   "why": "Pfaadt 3.49 ERA/4.16 FIP vs Pecko 6.23 \u00b7 L10 5-5 v 7-3"
  },
  "mlb:401816820": {
-  "conf": 52.1,
+  "conf": 52.2,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "MIN @ CHW",
   "pick": "Chicago White Sox",
-  "price": "-121",
+  "price": "-122",
   "status": "open",
   "tip": "7:10 PM",
   "why": "Kay 4.28 ERA/4.80 FIP vs Bradley 3.85 \u00b7 pen 3.72 v 4.79 \u00b7 L10 5-5 v 4-6"
@@ -5248,7 +5322,7 @@
   "conf": 50.7,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "TB @ TEX",
   "pick": "Tampa Bay Rays",
@@ -5258,10 +5332,10 @@
   "why": "Rasmussen 2.95 ERA/2.90 FIP vs deGrom 4.00 \u00b7 pen 4.06 v 4.43 \u00b7 L10 6-4 v 5-5"
  },
  "mlb:401816822": {
-  "conf": 51.4,
+  "conf": 51.5,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "TOR @ KC",
   "pick": "Kansas City Royals",
@@ -5274,7 +5348,7 @@
   "conf": 52.3,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "STL @ COL",
   "pick": "St. Louis Cardinals",
@@ -5284,23 +5358,23 @@
   "why": "Adams 3.00 ERA/5.42 FIP vs Liberatore 5.41"
  },
  "mlb:401816824": {
-  "conf": 58.4,
+  "conf": 67.0,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "ATH @ SEA",
   "pick": "Seattle Mariners",
   "price": null,
   "status": "open",
   "tip": "9:40 PM",
-  "why": "Kirby vs TBD \u00b7 pen 4.51 v 5.52"
+  "why": "Kirby 4.19 ERA/3.79 FIP vs Springs 6.37 \u00b7 pen 4.51 v 5.52"
  },
  "mlb:401816825": {
   "conf": 50.5,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "NYY @ SD",
   "pick": "San Diego Padres",
@@ -5313,7 +5387,7 @@
   "conf": 64.6,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "WSH @ LAD",
   "pick": "Los Angeles Dodgers",
@@ -5367,6 +5441,11 @@
   "conf": 60.6,
   "dog": true,
   "league": "mls",
+  "live": "83'",
+  "live_score": {
+   "Nashville SC": 0,
+   "New York City FC": 0
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": false,
   "matchup": "NSH @ NYC",
@@ -5377,290 +5456,290 @@
   "why": "rating 1566 v 1497 (+68.67) \u00b7 last 10: 9-1"
  },
  "mls:761771": {
-  "conf": 62.0,
+  "conf": 58.7,
   "dog": true,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "SD @ ORL",
   "pick": "Orlando City SC",
   "price": "+110",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1479 v 1517 (+38.05) \u00b7 last 5: 1-4 \u00b7 at home"
+  "why": "rating 1482 v 1504 (+22.21) \u00b7 last 10: 5-5 \u00b7 at home"
  },
  "mls:761772": {
-  "conf": 56.9,
+  "conf": 50.5,
   "dog": false,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "MTL @ PHI",
   "pick": "Philadelphia Union",
   "price": "-245",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1475 v 1488 (+13.19) \u00b7 last 5: 0-5 \u00b7 at home"
+  "why": "rating 1489 v 1472 (+16.62) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "mls:761773": {
-  "conf": 55.9,
+  "conf": 50.1,
   "dog": false,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "DC @ CIN",
   "pick": "FC Cincinnati",
   "price": "-190",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1492 v 1500 (+8.37) \u00b7 last 5: 2-3 \u00b7 at home"
+  "why": "rating 1502 v 1483 (+19.52) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "mls:761774": {
-  "conf": 52.1,
+  "conf": 56.0,
   "dog": true,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "HOU @ CLT",
   "pick": "Charlotte FC",
   "price": "+120",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1506 v 1497 (+9.42) \u00b7 at home"
+  "why": "rating 1517 v 1526 (+9.02) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "mls:761775": {
-  "conf": 58.8,
+  "conf": 60.6,
   "dog": true,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "COL @ CLB",
   "pick": "Columbus Crew",
   "price": "+115",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1487 v 1509 (+22.39) \u00b7 at home"
+  "why": "rating 1467 v 1498 (+31.33) \u00b7 last 10: 2-8 \u00b7 at home"
  },
  "mls:761776": {
-  "conf": 54.2,
+  "conf": 60.6,
   "dog": true,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "CHI @ TOR",
   "pick": "Toronto FC",
   "price": "+185",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1501 v 1501 (+0.52) \u00b7 at home"
+  "why": "rating 1491 v 1522 (+31.38) \u00b7 last 10: 5-5 \u00b7 at home"
  },
  "mls:761777": {
-  "conf": 50.9,
+  "conf": 61.5,
   "dog": false,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ATL @ MIA",
   "pick": "Inter Miami CF",
-  "price": "-330",
+  "price": "-340",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1513 v 1490 (+23.25) \u00b7 at home"
+  "why": "rating 1541 v 1467 (+74.09) \u00b7 last 10: 7-3 \u00b7 at home"
  },
  "mls:761778": {
-  "conf": 58.4,
+  "conf": 58.9,
   "dog": true,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "SJ @ ATX",
   "pick": "Austin FC",
   "price": "+120",
   "status": "open",
   "tip": "8:30 PM",
-  "why": "rating 1495 v 1516 (+20.41) \u00b7 at home"
+  "why": "rating 1479 v 1502 (+22.86) \u00b7 last 10: 4-6 \u00b7 at home"
  },
  "mls:761779": {
-  "conf": 50.5,
+  "conf": 62.3,
   "dog": false,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "SKC @ DAL",
   "pick": "FC Dallas",
   "price": "-250",
   "status": "open",
   "tip": "8:30 PM",
-  "why": "rating 1504 v 1487 (+16.97) \u00b7 at home"
+  "why": "rating 1520 v 1442 (+77.86) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "mls:761780": {
-  "conf": 50.2,
+  "conf": 52.3,
   "dog": false,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "RBNY @ SEA",
   "pick": "Seattle Sounders FC",
   "price": "-115",
   "status": "open",
   "tip": "8:30 PM",
-  "why": "rating 1512 v 1494 (+18.25) \u00b7 at home"
+  "why": "rating 1482 v 1474 (+8.38) \u00b7 last 10: 2-8 \u00b7 at home"
  },
  "mls:761781": {
-  "conf": 56.4,
+  "conf": 58.6,
   "dog": true,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "LAFC @ RSL",
   "pick": "Real Salt Lake",
   "price": "+165",
   "status": "open",
   "tip": "9:30 PM",
-  "why": "rating 1510 v 1521 (+10.91) \u00b7 at home"
+  "why": "rating 1493 v 1515 (+21.50) \u00b7 last 10: 3-7 \u00b7 at home"
  },
  "mls:761782": {
-  "conf": 53.8,
+  "conf": 61.1,
   "dog": true,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "NE @ LA",
   "pick": "LA Galaxy",
   "price": "+140",
   "status": "open",
   "tip": "9:30 PM",
-  "why": "rating 1494 v 1493 (+1.19) \u00b7 at home"
+  "why": "rating 1484 v 1517 (+33.51) \u00b7 last 10: 4-6 \u00b7 at home"
  },
  "mls:761783": {
-  "conf": 55.1,
+  "conf": 55.5,
   "dog": true,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "MIN @ POR",
   "pick": "Portland Timbers",
   "price": "+115",
   "status": "open",
   "tip": "10:30 PM",
-  "why": "rating 1487 v 1492 (+4.79) \u00b7 at home"
+  "why": "rating 1496 v 1502 (+6.51) \u00b7 last 10: 5-5 \u00b7 at home"
  },
  "mls:761784": {
-  "conf": 51.8,
+  "conf": 52.6,
   "dog": false,
   "league": "mls",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "STL @ VAN",
   "pick": "Vancouver Whitecaps",
-  "price": "-225",
+  "price": "-215",
   "status": "open",
   "tip": "10:30 PM",
-  "why": "rating 1518 v 1490 (+27.69) \u00b7 last 5: 4-1 \u00b7 at home"
+  "why": "rating 1549 v 1518 (+31.13) \u00b7 last 10: 7-3 \u00b7 at home"
  },
  "ncaaf:401856634": {
-  "conf": 58.5,
+  "conf": 58.1,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ECU @ ALA",
   "pick": "Alabama Crimson Tide",
   "price": "-6500",
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1551 v 1541 (+9.96) \u00b7 at home"
+  "why": "rating 1552 v 1545 (+6.94) \u00b7 at home"
  },
  "ncaaf:401856635": {
-  "conf": 54.1,
+  "conf": 53.0,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "UNA @ ARK",
   "pick": "Arkansas Razorbacks",
   "price": null,
   "status": "open",
   "tip": "4:15 PM",
-  "why": "rating 1469 v 1490 (+21.42) \u00b7 at home"
+  "why": "rating 1461 v 1490 (+28.94) \u00b7 at home"
  },
  "ncaaf:401856636": {
-  "conf": 57.6,
+  "conf": 59.5,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "BAY @ AUB",
   "pick": "Auburn Tigers",
   "price": "-285",
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1496 v 1493 (+3.36) \u00b7 at home"
+  "why": "rating 1503 v 1486 (+16.72) \u00b7 at home"
  },
  "ncaaf:401856637": {
-  "conf": 56.9,
+  "conf": 57.5,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "FAU @ FLA",
   "pick": "Florida Gators",
   "price": "-2800",
   "status": "open",
   "tip": "7:45 PM",
-  "why": "rating 1476 v 1478 (+1.64) \u00b7 at home"
+  "why": "rating 1476 v 1474 (+2.43) \u00b7 at home"
  },
  "ncaaf:401856658": {
-  "conf": 67.9,
+  "conf": 70.4,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "TNST @ UGA",
   "pick": "Georgia Bulldogs",
   "price": null,
   "status": "open",
   "tip": "3:00 PM",
-  "why": "rating 1567 v 1486 (+80.47) \u00b7 at home"
+  "why": "rating 1587 v 1486 (+100.28) \u00b7 at home"
  },
  "ncaaf:401856659": {
-  "conf": 58.1,
+  "conf": 56.8,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "YSU @ UK",
   "pick": "Kentucky Wildcats",
   "price": "-1650",
   "status": "open",
   "tip": "1:00 PM",
-  "why": "rating 1495 v 1488 (+6.66) \u00b7 at home"
+  "why": "rating 1486 v 1488 (+2.28) \u00b7 at home"
  },
  "ncaaf:401856660": {
-  "conf": 55.6,
+  "conf": 55.0,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "CLEM @ LSU",
   "pick": "LSU Tigers",
   "price": "-410",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1524 v 1534 (+10.81) \u00b7 at home"
+  "why": "rating 1508 v 1524 (+15.22) \u00b7 at home"
  },
  "ncaaf:401856662": {
-  "conf": 64.0,
+  "conf": 61.4,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ULM @ MSST",
   "pick": "Mississippi State Bulldogs",
   "price": "-4000",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1496 v 1446 (+50.20) \u00b7 at home"
+  "why": "rating 1470 v 1439 (+30.95) \u00b7 at home"
  },
  "ncaaf:401856663": {
   "conf": 60.8,
@@ -5686,6 +5765,11 @@
   "conf": 72.4,
   "dog": false,
   "league": "ncaaf",
+  "live": "1:42 - 2nd",
+  "live_score": {
+   "Oklahoma Sooners": 27,
+   "UTEP Miners": 0
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": null,
   "matchup": "UTEP @ OU",
@@ -5696,69 +5780,69 @@
   "why": "rating 1566 v 1448 (+117.58) \u00b7 at home"
  },
  "ncaaf:401856665": {
-  "conf": 59.2,
+  "conf": 57.3,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "KENT @ SC",
   "pick": "South Carolina Gamecocks",
   "price": "-100000",
   "status": "open",
   "tip": "12:45 PM",
-  "why": "rating 1484 v 1469 (+14.74) \u00b7 at home"
+  "why": "rating 1480 v 1478 (+1.19) \u00b7 at home"
  },
  "ncaaf:401856666": {
-  "conf": 61.9,
+  "conf": 62.8,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "FUR @ TENN",
   "pick": "Tennessee Volunteers",
   "price": null,
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1525 v 1491 (+34.54) \u00b7 at home"
+  "why": "rating 1532 v 1491 (+41.23) \u00b7 at home"
  },
  "ncaaf:401856667": {
-  "conf": 60.0,
+  "conf": 60.8,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "TXST @ TEX",
   "pick": "Texas Longhorns",
   "price": "-8000",
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1540 v 1519 (+20.37) \u00b7 at home"
+  "why": "rating 1553 v 1527 (+26.44) \u00b7 at home"
  },
  "ncaaf:401856668": {
-  "conf": 65.9,
+  "conf": 67.0,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "MOST @ TA&M",
   "pick": "Texas A&M Aggies",
   "price": null,
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1563 v 1499 (+64.49) \u00b7 at home"
+  "why": "rating 1567 v 1494 (+72.78) \u00b7 at home"
  },
  "ncaaf:401856669": {
-  "conf": 64.9,
+  "conf": 65.6,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "APSU @ VAN",
   "pick": "Vanderbilt Commodores",
   "price": "-4500",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1561 v 1504 (+57.14) \u00b7 at home"
+  "why": "rating 1567 v 1504 (+62.45) \u00b7 at home"
  },
  "ncaaf:401856767": {
   "conf": 57.8,
@@ -5804,6 +5888,11 @@
   "conf": 58.9,
   "dog": false,
   "league": "ncaaf",
+  "live": "3:50 - 2nd",
+  "live_score": {
+   "Kansas Jayhawks": 23,
+   "Long Island University Sharks": 0
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": null,
   "matchup": "LIU @ KU",
@@ -5814,82 +5903,82 @@
   "why": "rating 1509 v 1496 (+12.53) \u00b7 at home"
  },
  "ncaaf:401856770": {
-  "conf": 70.3,
+  "conf": 71.9,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "ACU @ TTU",
   "pick": "Texas Tech Red Raiders",
   "price": null,
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1581 v 1481 (+99.89) \u00b7 at home"
+  "why": "rating 1594 v 1481 (+113.34) \u00b7 at home"
  },
  "ncaaf:401856771": {
-  "conf": 60.3,
+  "conf": 62.1,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "NICH @ KSU",
   "pick": "Kansas State Wildcats",
   "price": null,
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1504 v 1481 (+22.28) \u00b7 at home"
+  "why": "rating 1517 v 1481 (+35.59) \u00b7 at home"
  },
  "ncaaf:401856772": {
-  "conf": 62.6,
+  "conf": 62.8,
   "dog": true,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "OKST @ TLSA",
   "pick": "Tulsa Golden Hurricane",
   "price": "+425",
   "status": "open",
   "tip": "3:45 PM",
-  "why": "rating 1469 v 1429 (+39.19) \u00b7 at home"
+  "why": "rating 1466 v 1424 (+41.33) \u00b7 at home"
  },
  "ncaaf:401856773": {
-  "conf": 64.7,
+  "conf": 65.6,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "NAU @ ARIZ",
   "pick": "Arizona Wildcats",
   "price": "-8000",
   "status": "open",
   "tip": "9:30 PM",
-  "why": "rating 1546 v 1490 (+55.42) \u00b7 at home"
+  "why": "rating 1552 v 1490 (+62.05) \u00b7 at home"
  },
  "ncaaf:401856774": {
-  "conf": 64.7,
+  "conf": 62.2,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "MORG @ ASU",
   "pick": "Arizona State Sun Devils",
   "price": null,
   "status": "open",
   "tip": "10:00 PM",
-  "why": "rating 1537 v 1482 (+55.31) \u00b7 at home"
+  "why": "rating 1518 v 1482 (+36.36) \u00b7 at home"
  },
  "ncaaf:401856775": {
-  "conf": 66.6,
+  "conf": 67.0,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "UTU @ BYU",
   "pick": "BYU Cougars",
   "price": null,
   "status": "open",
   "tip": "8:00 PM",
-  "why": "rating 1570 v 1500 (+69.59) \u00b7 at home"
+  "why": "rating 1573 v 1500 (+72.81) \u00b7 at home"
  },
  "ncaaf:401856776": {
   "conf": 65.9,
@@ -5916,53 +6005,53 @@
   "conf": 63.6,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "BC @ CIN",
   "pick": "Cincinnati Bearcats",
   "price": "-305",
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1504 v 1458 (+46.84) \u00b7 at home"
+  "why": "rating 1500 v 1453 (+47.17) \u00b7 at home"
  },
  "ncaaf:401856778": {
-  "conf": 69.2,
+  "conf": 70.3,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ORST @ HOU",
   "pick": "Houston Cougars",
   "price": "-1800",
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1530 v 1439 (+90.82) \u00b7 at home"
+  "why": "rating 1539 v 1440 (+99.65) \u00b7 at home"
  },
  "ncaaf:401856779": {
-  "conf": 64.6,
+  "conf": 63.3,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "SEMO @ ISU",
   "pick": "Iowa State Cyclones",
   "price": "-50000",
   "status": "open",
   "tip": "1:00 PM",
-  "why": "rating 1537 v 1482 (+54.24) \u00b7 at home"
+  "why": "rating 1527 v 1482 (+44.54) \u00b7 at home"
  },
  "ncaaf:401856780": {
-  "conf": 54.9,
+  "conf": 55.1,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "CCU @ WVU",
   "pick": "West Virginia Mountaineers",
-  "price": "-1450",
+  "price": "-1600",
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1478 v 1494 (+15.63) \u00b7 at home"
+  "why": "rating 1474 v 1488 (+14.40) \u00b7 at home"
  },
  "ncaaf:401858204": {
   "conf": 64.1,
@@ -5988,6 +6077,11 @@
   "conf": 56.4,
   "dog": false,
   "league": "ncaaf",
+  "live": "8:01 - 1st",
+  "live_score": {
+   "Miami Hurricanes": 7,
+   "Stanford Cardinal": 0
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": true,
   "matchup": "MIA @ STAN",
@@ -5998,69 +6092,69 @@
   "why": "rating 1581 v 1486 (+94.72)"
  },
  "ncaaf:401858207": {
-  "conf": 58.3,
+  "conf": 60.1,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "M-OH @ PITT",
   "pick": "Pittsburgh Panthers",
   "price": "-800",
   "status": "open",
   "tip": "12:30 PM",
-  "why": "rating 1528 v 1519 (+8.24) \u00b7 at home"
+  "why": "rating 1530 v 1509 (+21.05) \u00b7 at home"
  },
  "ncaaf:401858208": {
-  "conf": 50.6,
+  "conf": 51.4,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "UNH @ SYR",
   "pick": "New Hampshire Wildcats",
   "price": null,
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1495 v 1441 (+53.84)"
+  "why": "rating 1495 v 1436 (+59.62)"
  },
  "ncaaf:401858209": {
-  "conf": 55.8,
+  "conf": 55.6,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "TULN @ DUKE",
   "pick": "Duke Blue Devils",
   "price": "-325",
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1530 v 1540 (+9.74) \u00b7 at home"
+  "why": "rating 1538 v 1549 (+10.81) \u00b7 at home"
  },
  "ncaaf:401858210": {
-  "conf": 61.9,
+  "conf": 62.2,
   "dog": true,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "UCLA @ CAL",
   "pick": "California Golden Bears",
   "price": "+114",
   "status": "open",
   "tip": "10:30 PM",
-  "why": "rating 1496 v 1461 (+34.57) \u00b7 at home"
+  "why": "rating 1493 v 1456 (+36.35) \u00b7 at home"
  },
  "ncaaf:401858211": {
-  "conf": 51.0,
+  "conf": 51.1,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "VMI @ VT",
   "pick": "Virginia Tech Hokies",
   "price": null,
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1447 v 1490 (+43.08) \u00b7 at home"
+  "why": "rating 1447 v 1490 (+42.52) \u00b7 at home"
  },
  "ncaaf:401858422": {
   "conf": 59.6,
@@ -6124,61 +6218,66 @@
   "winner": "Illinois Fighting Illini"
  },
  "ncaaf:401858425": {
-  "conf": 60.8,
+  "conf": 64.2,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "UNT @ IU",
   "pick": "Indiana Hoosiers",
   "price": null,
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1594 v 1568 (+26.17) \u00b7 at home"
+  "why": "rating 1621 v 1570 (+51.32) \u00b7 at home"
  },
  "ncaaf:401858426": {
-  "conf": 67.9,
+  "conf": 70.4,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "NIU @ IOWA",
   "pick": "Iowa Hawkeyes",
   "price": "-100000",
   "status": "open",
   "tip": "4:15 PM",
-  "why": "rating 1538 v 1457 (+80.51) \u00b7 at home"
+  "why": "rating 1559 v 1458 (+100.73) \u00b7 at home"
  },
  "ncaaf:401858427": {
   "conf": 53.4,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "HAMP @ MD",
   "pick": "Maryland Terrapins",
   "price": null,
   "status": "open",
   "tip": "8:00 PM",
-  "why": "rating 1473 v 1500 (+26.66) \u00b7 at home"
+  "why": "rating 1474 v 1500 (+26.35) \u00b7 at home"
  },
  "ncaaf:401858428": {
-  "conf": 55.4,
+  "conf": 54.7,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "WMU @ MICH",
   "pick": "Michigan Wolverines",
-  "price": "-5000",
+  "price": "-6500",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1526 v 1538 (+12.25) \u00b7 at home"
+  "why": "rating 1533 v 1550 (+17.00) \u00b7 at home"
  },
  "ncaaf:401858429": {
   "conf": 56.0,
   "dog": true,
   "league": "ncaaf",
+  "live": "2:33 - 2nd",
+  "live_score": {
+   "Michigan State Spartans": 16,
+   "Toledo Rockets": 7
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": false,
   "matchup": "TOL @ MSU",
@@ -6189,74 +6288,79 @@
   "why": "rating 1564 v 1472 (+91.85)"
  },
  "ncaaf:401858430": {
-  "conf": 55.0,
+  "conf": 51.5,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "OHIO @ NEB",
   "pick": "Nebraska Cornhuskers",
   "price": "-2800",
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1503 v 1518 (+14.95) \u00b7 at home"
+  "why": "rating 1495 v 1535 (+39.29) \u00b7 at home"
  },
  "ncaaf:401858431": {
-  "conf": 55.9,
+  "conf": 58.4,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "SDST @ NU",
   "pick": "Northwestern Wildcats",
   "price": "-520",
   "status": "open",
   "tip": "8:00 PM",
-  "why": "rating 1500 v 1509 (+8.89) \u00b7 at home"
+  "why": "rating 1507 v 1498 (+8.66) \u00b7 at home"
  },
  "ncaaf:401858432": {
-  "conf": 74.4,
+  "conf": 74.7,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "BALL @ OSU",
   "pick": "Ohio State Buckeyes",
   "price": null,
   "status": "open",
   "tip": "12:30 PM",
-  "why": "rating 1596 v 1462 (+134.92) \u00b7 at home"
+  "why": "rating 1592 v 1453 (+138.31) \u00b7 at home"
  },
  "ncaaf:401858433": {
-  "conf": 68.9,
+  "conf": 66.6,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "BOIS @ ORE",
   "pick": "Oregon Ducks",
   "price": "-3200",
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1604 v 1516 (+87.95) \u00b7 at home"
+  "why": "rating 1599 v 1529 (+69.98) \u00b7 at home"
  },
  "ncaaf:401858434": {
-  "conf": 61.2,
+  "conf": 62.7,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "MRSH @ PSU",
   "pick": "Penn State Nittany Lions",
   "price": "-2400",
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1528 v 1498 (+29.37) \u00b7 at home"
+  "why": "rating 1538 v 1498 (+40.29) \u00b7 at home"
  },
  "ncaaf:401858435": {
   "conf": 51.6,
   "dog": false,
   "league": "ncaaf",
+  "live": "4:01 - 3rd",
+  "live_score": {
+   "Indiana State Sycamores": 6,
+   "Purdue Boilermakers": 30
+  },
   "logged": "2026-09-04T11:09",
   "market_agrees": null,
   "matchup": "INST @ PUR",
@@ -6270,6 +6374,11 @@
   "conf": 60.7,
   "dog": false,
   "league": "ncaaf",
+  "live": "6:10 - 1st",
+  "live_score": {
+   "Fresno State Bulldogs": 0,
+   "USC Trojans": 7
+  },
   "logged": "2026-09-04T19:29",
   "market_agrees": true,
   "matchup": "FRES @ USC",
@@ -6280,160 +6389,160 @@
   "why": "rating 1561 v 1536 (+25.30) \u00b7 at home"
  },
  "ncaaf:401860878": {
-  "conf": 56.4,
+  "conf": 52.3,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "WYO @ CSU",
   "pick": "Colorado State Rams",
   "price": "-155",
   "status": "open",
   "tip": "6:00 PM",
-  "why": "rating 1453 v 1458 (+5.11) \u00b7 at home"
+  "why": "rating 1432 v 1466 (+33.95) \u00b7 at home"
  },
  "ncaaf:401860879": {
-  "conf": 67.5,
+  "conf": 67.7,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "PRST @ SDSU",
   "pick": "San Diego State Aztecs",
   "price": null,
   "status": "open",
   "tip": "9:30 PM",
-  "why": "rating 1545 v 1468 (+76.58) \u00b7 at home"
+  "why": "rating 1547 v 1468 (+78.53) \u00b7 at home"
  },
  "ncaaf:401860880": {
-  "conf": 61.4,
+  "conf": 58.3,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "IDST @ USU",
   "pick": "Utah State Aggies",
   "price": "-550",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1519 v 1488 (+30.60) \u00b7 at home"
+  "why": "rating 1496 v 1488 (+7.90) \u00b7 at home"
  },
  "ncaaf:401861962": {
-  "conf": 66.7,
+  "conf": 64.6,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "LAF @ CONN",
   "pick": "UConn Huskies",
   "price": "-1350",
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1548 v 1477 (+70.51) \u00b7 at home"
+  "why": "rating 1532 v 1477 (+54.32) \u00b7 at home"
  },
  "ncaaf:401862694": {
   "conf": 52.8,
   "dog": true,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "CIT @ CLT",
   "pick": "The Citadel Bulldogs",
   "price": "+950",
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1478 v 1409 (+69.21)"
+  "why": "rating 1478 v 1409 (+69.56)"
  },
  "ncaaf:401862695": {
-  "conf": 66.1,
+  "conf": 62.2,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ARST @ MEM",
   "pick": "Memphis Tigers",
   "price": "-470",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1557 v 1491 (+65.90) \u00b7 at home"
+  "why": "rating 1539 v 1502 (+36.33) \u00b7 at home"
  },
  "ncaaf:401862696": {
-  "conf": 62.7,
+  "conf": 66.3,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "TOW @ NAVY",
   "pick": "Navy Midshipmen",
   "price": "-50000",
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1531 v 1491 (+40.20) \u00b7 at home"
+  "why": "rating 1558 v 1491 (+67.40) \u00b7 at home"
  },
  "ncaaf:401862697": {
-  "conf": 53.5,
+  "conf": 52.9,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "HCU @ RICE",
   "pick": "Rice Owls",
   "price": "-3600",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1465 v 1491 (+25.70) \u00b7 at home"
+  "why": "rating 1461 v 1491 (+29.62) \u00b7 at home"
  },
  "ncaaf:401862698": {
-  "conf": 56.4,
+  "conf": 55.9,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "URI @ TEM",
   "pick": "Temple Owls",
   "price": "-700",
   "status": "open",
   "tip": "2:00 PM",
-  "why": "rating 1484 v 1489 (+5.17) \u00b7 at home"
+  "why": "rating 1480 v 1489 (+8.79) \u00b7 at home"
  },
  "ncaaf:401862699": {
-  "conf": 63.9,
+  "conf": 63.3,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "FIU @ USF",
   "pick": "South Florida Bulls",
   "price": "-675",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1565 v 1515 (+49.27) \u00b7 at home"
+  "why": "rating 1550 v 1505 (+44.73) \u00b7 at home"
  },
  "ncaaf:401862700": {
-  "conf": 59.3,
+  "conf": 60.7,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "RGV @ UTSA",
   "pick": "UTSA Roadrunners",
   "price": "-9000",
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1516 v 1500 (+15.68) \u00b7 at home"
+  "why": "rating 1526 v 1500 (+25.66) \u00b7 at home"
  },
  "ncaaf:401862701": {
-  "conf": 58.8,
+  "conf": 60.5,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "BRY @ ARMY",
   "pick": "Army Black Knights",
   "price": null,
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1507 v 1495 (+11.81) \u00b7 at home"
+  "why": "rating 1519 v 1495 (+24.25) \u00b7 at home"
  },
  "ncaaf:401864424": {
   "conf": 57.4,
@@ -6476,26 +6585,26 @@
   "winner": "Kennesaw State Owls"
  },
  "ncaaf:401864432": {
-  "conf": 52.0,
+  "conf": 53.2,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "WKU @ NEV",
   "pick": "Western Kentucky Hilltoppers",
   "price": "-108",
   "status": "open",
   "tip": "10:30 PM",
-  "why": "rating 1519 v 1456 (+63.68)"
+  "why": "rating 1528 v 1456 (+72.22)"
  },
  "ncaaf:401864495": {
   "conf": 62.7,
   "dog": false,
   "league": "ncaaf",
-  "live": "9:19 - 2nd",
+  "live": "11:19 - 4th",
   "live_score": {
-   "Eastern Michigan Eagles": 7,
-   "San Jos\u00e9 State Spartans": 0
+   "Eastern Michigan Eagles": 21,
+   "San Jos\u00e9 State Spartans": 24
   },
   "logged": "2026-09-04T11:09",
   "market_agrees": true,
@@ -6507,56 +6616,56 @@
   "why": "rating 1483 v 1443 (+40.41) \u00b7 at home"
  },
  "ncaaf:401864496": {
-  "conf": 55.8,
+  "conf": 57.7,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "DUQ @ AFA",
   "pick": "Air Force Falcons",
   "price": "-8000",
   "status": "open",
   "tip": "1:00 PM",
-  "why": "rating 1470 v 1479 (+9.53) \u00b7 at home"
+  "why": "rating 1483 v 1479 (+3.89) \u00b7 at home"
  },
  "ncaaf:401864497": {
-  "conf": 56.6,
+  "conf": 56.8,
   "dog": true,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "UNLV @ HAW",
   "pick": "Hawai'i Rainbow Warriors",
   "price": "+130",
   "status": "open",
   "tip": "10:00 PM",
-  "why": "rating 1532 v 1537 (+4.09) \u00b7 at home"
+  "why": "rating 1527 v 1529 (+2.59) \u00b7 at home"
  },
  "ncaaf:401864498": {
-  "conf": 59.1,
+  "conf": 61.4,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "CMU @ UNM",
   "pick": "New Mexico Lobos",
   "price": "-440",
   "status": "open",
   "tip": "10:00 PM",
-  "why": "rating 1528 v 1514 (+13.86) \u00b7 at home"
+  "why": "rating 1538 v 1507 (+30.37) \u00b7 at home"
  },
  "ncaaf:401864499": {
-  "conf": 71.7,
+  "conf": 72.1,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "FOR @ NDSU",
   "pick": "North Dakota State Bison",
   "price": null,
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1601 v 1490 (+111.61) \u00b7 at home"
+  "why": "rating 1605 v 1490 (+115.30) \u00b7 at home"
  },
  "ncaaf:401866409": {
   "conf": 54.4,
@@ -6579,39 +6688,39 @@
   "winner": "Buffalo Bulls"
  },
  "ncaaf:401866410": {
-  "conf": 52.1,
+  "conf": 51.5,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "TAR @ BGSU",
   "pick": "Bowling Green Falcons",
   "price": "-135",
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1469 v 1505 (+35.50) \u00b7 at home"
+  "why": "rating 1466 v 1505 (+39.28) \u00b7 at home"
  },
  "ncaaf:401866411": {
-  "conf": 59.6,
+  "conf": 59.5,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "MVSU @ SAC",
   "pick": "Sacramento State Hornets",
   "price": null,
   "status": "open",
   "tip": "10:00 PM",
-  "why": "rating 1517 v 1500 (+17.19) \u00b7 at home"
+  "why": "rating 1517 v 1500 (+16.94) \u00b7 at home"
  },
  "ncaaf:401866623": {
   "conf": 52.4,
   "dog": true,
   "league": "ncaaf",
-  "live": "5:04 - 1st",
+  "live": "6:47 - 3rd",
   "live_score": {
-   "Georgia State Panthers": 7,
-   "North Carolina A&T Aggies": 0
+   "Georgia State Panthers": 45,
+   "North Carolina A&T Aggies": 7
   },
   "logged": "2026-09-04T11:09",
   "market_agrees": false,
@@ -6623,160 +6732,160 @@
   "why": "rating 1490 v 1423 (+66.88)"
  },
  "ncaaf:401866627": {
-  "conf": 57.3,
+  "conf": 56.8,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ME @ APP",
   "pick": "App State Mountaineers",
   "price": "-1100",
   "status": "open",
   "tip": "3:30 PM",
-  "why": "rating 1480 v 1480 (+0.84) \u00b7 at home"
+  "why": "rating 1477 v 1480 (+2.41) \u00b7 at home"
  },
  "ncaaf:401867866": {
   "conf": 53.2,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "MUR @ MTSU",
   "pick": "Middle Tennessee Blue Raiders",
   "price": "-1800",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1453 v 1480 (+27.53) \u00b7 at home"
+  "why": "rating 1453 v 1480 (+27.51) \u00b7 at home"
  },
  "ncaaf:401867973": {
-  "conf": 65.1,
+  "conf": 67.0,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "NORF @ ODU",
   "pick": "Old Dominion Monarchs",
   "price": null,
   "status": "open",
   "tip": "6:00 PM",
-  "why": "rating 1549 v 1491 (+58.60) \u00b7 at home"
+  "why": "rating 1563 v 1491 (+72.88) \u00b7 at home"
  },
  "ncaaf:401868140": {
-  "conf": 61.5,
+  "conf": 61.4,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "EKU @ JVST",
   "pick": "Jacksonville State Gamecocks",
   "price": "-1650",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1511 v 1480 (+31.59) \u00b7 at home"
+  "why": "rating 1510 v 1480 (+30.55) \u00b7 at home"
  },
  "ncaaf:401868170": {
-  "conf": 60.8,
+  "conf": 60.1,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "CHSO @ GASO",
   "pick": "Georgia Southern Eagles",
   "price": "-4500",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1509 v 1482 (+26.34) \u00b7 at home"
+  "why": "rating 1503 v 1482 (+20.89) \u00b7 at home"
  },
  "ncaaf:401868316": {
   "conf": 56.2,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "SELA @ USA",
   "pick": "South Alabama Jaguars",
   "price": "-535",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1475 v 1481 (+6.76) \u00b7 at home"
+  "why": "rating 1474 v 1481 (+7.03) \u00b7 at home"
  },
  "ncaaf:401868356": {
-  "conf": 58.0,
+  "conf": 57.7,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "ALCN @ USM",
   "pick": "Southern Miss Golden Eagles",
   "price": "-1200",
   "status": "open",
   "tip": "5:00 PM",
-  "why": "rating 1497 v 1491 (+6.02) \u00b7 at home"
+  "why": "rating 1495 v 1491 (+3.78) \u00b7 at home"
  },
  "ncaaf:401869129": {
-  "conf": 62.8,
+  "conf": 63.6,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "NWST @ LT",
   "pick": "Louisiana Tech Bulldogs",
   "price": null,
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating 1522 v 1481 (+41.03) \u00b7 at home"
+  "why": "rating 1528 v 1481 (+46.75) \u00b7 at home"
  },
  "ncaaf:401869142": {
-  "conf": 58.8,
+  "conf": 57.4,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "LAM @ UL",
   "pick": "Louisiana Ragin' Cajuns",
   "price": "-1200",
   "status": "open",
   "tip": "8:00 PM",
-  "why": "rating 1502 v 1490 (+11.98) \u00b7 at home"
+  "why": "rating 1491 v 1490 (+1.55) \u00b7 at home"
  },
  "ncaaf:401869960": {
-  "conf": 69.8,
+  "conf": 70.5,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "LIB @ JMU",
   "pick": "James Madison Dukes",
   "price": "-225",
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1576 v 1481 (+95.31) \u00b7 at home"
+  "why": "rating 1582 v 1481 (+101.34) \u00b7 at home"
  },
  "ncaaf:401870763": {
-  "conf": 69.1,
+  "conf": 68.5,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "SHSU @ TROY",
   "pick": "Troy Trojans",
   "price": "-850",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1513 v 1424 (+89.55) \u00b7 at home"
+  "why": "rating 1509 v 1424 (+85.09) \u00b7 at home"
  },
  "ncaaf:401870790": {
-  "conf": 52.4,
+  "conf": 52.5,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "MERC @ NMSU",
   "pick": "New Mexico State Aggies",
   "price": "-8000",
   "status": "open",
   "tip": "9:00 PM",
-  "why": "rating 1456 v 1489 (+33.00) \u00b7 at home"
+  "why": "rating 1456 v 1489 (+32.81) \u00b7 at home"
  },
  "nor:401843427": {
   "conf": 51.9,
@@ -6799,17 +6908,17 @@
   "winner": "Aalesund"
  },
  "nor:401873914": {
-  "conf": 52.3,
+  "conf": 50.9,
   "dog": false,
   "league": "nor",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "LIL @ SKBR",
   "pick": "SK Brann",
-  "price": "-120",
+  "price": "-130",
   "status": "open",
   "tip": "12:00 PM",
-  "why": "rating 1509 v 1480 (+29.81) \u00b7 last 6: 4-2 \u00b7 at home"
+  "why": "rating 1508 v 1493 (+14.86) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "nor:401873920": {
   "conf": 59.9,
@@ -6840,36 +6949,43 @@
   "market_agrees": true,
   "matchup": "BODO @ FRE",
   "pick": "Bodo/Glimt",
+  "played": "2026-09-04",
   "price": "-340",
-  "status": "open",
+  "scores": {
+   "Bodo/Glimt": 2,
+   "Fredrikstad": 1
+  },
+  "settled": "2026-09-04T21:22",
+  "status": "won",
   "tip": "1:00 PM",
-  "why": "rating 1566 v 1499 (+66.94) \u00b7 last 10: 10-0"
+  "why": "rating 1566 v 1499 (+66.94) \u00b7 last 10: 10-0",
+  "winner": "Bodo/Glimt"
  },
  "nor:401873923": {
-  "conf": 53.1,
+  "conf": 51.6,
   "dog": false,
   "league": "nor",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "HAM @ ROS",
   "pick": "Rosenborg",
-  "price": "-275",
+  "price": "-300",
   "status": "open",
   "tip": "10:00 AM",
-  "why": "rating 1520 v 1487 (+33.61) \u00b7 last 7: 5-2 \u00b7 at home"
+  "why": "rating 1502 v 1491 (+11.54) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "par:401888602": {
-  "conf": 62.4,
+  "conf": 58.2,
   "dog": true,
   "league": "par",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "MAY @ SSL",
   "pick": "2 de Mayo",
   "price": "+105",
   "status": "open",
   "tip": "5:30 PM",
-  "why": "rating 1517 v 1458 (+59.65) \u00b7 last 10: 7-3"
+  "why": "rating 1500 v 1419 (+80.54) \u00b7 last 10: 7-3"
  },
  "par:401888605": {
   "conf": 51.1,
@@ -7036,43 +7152,43 @@
   "winner": "Atl\u00e9tico Grau"
  },
  "per:401886206": {
-  "conf": 52.1,
+  "conf": 55.2,
   "dog": false,
   "league": "per",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "CMU @ UNI",
   "pick": "Universitario",
-  "price": "-370",
+  "price": "-380",
   "status": "open",
   "tip": "9:30 PM",
-  "why": "rating 1518 v 1489 (+28.96) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1536 v 1492 (+43.68) \u00b7 last 10: 7-3 \u00b7 at home"
  },
  "per:401886207": {
-  "conf": 52.0,
+  "conf": 53.6,
   "dog": false,
   "league": "per",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "MOQ @ CFC",
   "pick": "Cusco FC",
   "price": "-400",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating 1512 v 1484 (+28.33) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1514 v 1478 (+35.79) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "per:401886208": {
-  "conf": 59.7,
+  "conf": 60.4,
   "dog": false,
   "league": "per",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "SBA @ SHO",
   "pick": "Sport Huancayo",
   "price": "-155",
   "status": "open",
   "tip": "4:00 PM",
-  "why": "rating 1492 v 1519 (+26.94) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1478 v 1509 (+30.46) \u00b7 last 10: 4-6 \u00b7 at home"
  },
  "per:401886210": {
   "conf": 58.3,
@@ -7082,10 +7198,17 @@
   "market_agrees": null,
   "matchup": "UTC @ AAT",
   "pick": "Alianza Atl\u00e9tico",
+  "played": "2026-09-04",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Alianza Atl\u00e9tico": 3,
+   "UTC": 2
+  },
+  "settled": "2026-09-04T21:22",
+  "status": "won",
   "tip": "4:15 PM",
-  "why": "rating 1515 v 1457 (+58.40) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1515 v 1457 (+58.40) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Alianza Atl\u00e9tico"
  },
  "rsa:401902010": {
   "conf": 63.1,
@@ -7271,30 +7394,30 @@
   "winner": "Celtic"
  },
  "swe:401873993": {
-  "conf": 55.5,
+  "conf": 56.3,
   "dog": true,
   "league": "swe",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "BKH @ GAIS",
   "pick": "GAIS",
   "price": "+130",
   "status": "open",
   "tip": "9:00 AM",
-  "why": "rating 1506 v 1512 (+6.67) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1506 v 1517 (+10.61) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "swe:401874013": {
-  "conf": 62.0,
+  "conf": 61.7,
   "dog": true,
   "league": "swe",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": false,
   "matchup": "SIR @ VAS",
   "pick": "V\u00e4ster\u00e5s SK",
   "price": "+270",
   "status": "open",
   "tip": "11:30 AM",
-  "why": "rating 1503 v 1541 (+38.15) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1508 v 1545 (+36.70) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "swe:401874077": {
   "conf": 58.9,
@@ -7318,61 +7441,63 @@
   "winner": "Djurg\u00e5rden"
  },
  "swe:401874080": {
-  "conf": 52.1,
+  "conf": 50.2,
   "dog": false,
   "league": "swe",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "HBK @ DEG",
   "pick": "Degerfors IF",
   "price": "-110",
   "status": "open",
   "tip": "9:00 AM",
-  "why": "rating 1474 v 1445 (+29.02) \u00b7 last 10: 3-7 \u00b7 at home"
+  "why": "rating 1466 v 1446 (+20.00) \u00b7 last 10: 2-8 \u00b7 at home"
  },
  "uru:401914272": {
   "conf": 56.1,
   "dog": false,
   "league": "uru",
-  "live": "71'",
-  "live_score": {
-   "Cerro Largo": 1,
-   "Montevideo City Torque": 0
-  },
   "logged": "2026-09-04T17:45",
   "market_agrees": true,
   "matchup": "CERR @ MCT",
   "pick": "Montevideo City Torque",
+  "played": "2026-09-04",
   "price": "-185",
-  "status": "open",
+  "scores": {
+   "Cerro Largo": 1,
+   "Montevideo City Torque": 2
+  },
+  "settled": "2026-09-04T21:22",
+  "status": "won",
   "tip": "6:00 PM",
-  "why": "rating 1545 v 1498 (+47.73) \u00b7 last 10: 9-1 \u00b7 at home"
+  "why": "rating 1545 v 1498 (+47.73) \u00b7 last 10: 9-1 \u00b7 at home",
+  "winner": "Montevideo City Torque"
  },
  "uru:401914289": {
-  "conf": 53.0,
+  "conf": 50.3,
   "dog": false,
   "league": "uru",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "WAN @ MAL",
   "pick": "Deportivo Maldonado",
   "price": "-105",
   "status": "open",
   "tip": "5:00 PM",
-  "why": "rating 1525 v 1520 (+5.06) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1533 v 1512 (+20.46) \u00b7 last 10: 7-3 \u00b7 at home"
  },
  "uru:401914290": {
-  "conf": 62.1,
+  "conf": 61.0,
   "dog": false,
   "league": "uru",
-  "logged": "2026-09-04T19:29",
+  "logged": "2026-09-04T21:21",
   "market_agrees": true,
   "matchup": "PEN @ DAN",
   "pick": "Pe\u00f1arol",
   "price": "-140",
   "status": "open",
   "tip": "2:00 PM",
-  "why": "rating 1540 v 1479 (+61.26) \u00b7 last 10: 8-2"
+  "why": "rating 1540 v 1473 (+66.88) \u00b7 last 10: 8-2"
  },
  "wta:182528": {
   "conf": 92.8,
@@ -7398,20 +7523,20 @@
   "conf": 61.2,
   "dog": false,
   "league": "wta",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Anna Kalinskaya @ Elina Svitolina",
   "pick": "Elina Svitolina",
   "price": null,
   "status": "open",
-  "tip": "9:00 PM",
+  "tip": "9:25 PM",
   "why": "rank 9 vs 23"
  },
  "wta:182530": {
   "conf": 84.6,
   "dog": false,
   "league": "wta",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Elena Rybakina @ Yuliia Starodubtseva",
   "pick": "Elena Rybakina",
@@ -7484,7 +7609,7 @@
   "conf": 62.5,
   "dog": false,
   "league": "wta",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Nikola Bartunkova @ Mirra Andreeva",
   "pick": "Mirra Andreeva",
@@ -7558,7 +7683,7 @@
   "conf": 66.2,
   "dog": false,
   "league": "wta",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Amanda Anisimova @ Anastasia Potapova",
   "pick": "Amanda Anisimova",
@@ -7851,7 +7976,7 @@
   "conf": 63.7,
   "dog": false,
   "league": "wta",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Zheng Qinwen @ Madison Keys",
   "pick": "Madison Keys",
@@ -7922,22 +8047,30 @@
  },
  "wta:182565": {
   "conf": 65.1,
+  "diagnosis": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 65%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-04T13:01",
   "market_agrees": null,
   "matchup": "Diana Shnaider @ Taylor Townsend",
   "pick": "Diana Shnaider",
+  "played": "2026-09-04",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Diana Shnaider": "2 7(7) 3",
+   "Taylor Townsend": "6 6(3) 6"
+  },
+  "settled": "2026-09-04T21:22",
+  "status": "lost",
   "tip": "1:00 PM",
-  "why": "rank 16 vs 96"
+  "why": "rank 16 vs 96",
+  "winner": "Taylor Townsend"
  },
  "wta:182566": {
   "conf": 59.6,
   "dog": false,
   "league": "wta",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Elise Mertens @ Naomi Osaka",
   "pick": "Naomi Osaka",
@@ -8111,7 +8244,7 @@
   "conf": 60.0,
   "dog": false,
   "league": "wta",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Alexandra Eala @ Iva Jovic",
   "pick": "Alexandra Eala",
@@ -8164,7 +8297,7 @@
   "conf": 87.0,
   "dog": false,
   "league": "wta",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Coco Gauff @ Cristina Bucsa",
   "pick": "Coco Gauff",
@@ -8237,7 +8370,7 @@
   "conf": 75.7,
   "dog": false,
   "league": "wta",
-  "logged": "2026-09-04T15:36",
+  "logged": "2026-09-04T21:21",
   "market_agrees": null,
   "matchup": "Marie Bouzkova @ Iga Swiatek",
   "pick": "Iga Swiatek",
