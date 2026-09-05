@@ -24,7 +24,9 @@ allowed a fifth of the say, which is what turns its most confident calls from
 import argparse
 import datetime as dt
 import html
+import hashlib
 import json
+import os
 import sys
 import re
 import ssl
@@ -97,24 +99,67 @@ _STATE = {"slots": {}, "at": None, "dates": ("", ""), "changes": [], "cycles": 0
 _PREV = {}          # game id -> last seen snapshot, for diffing
 
 
-def get(url, tries=4):
-    """Fetch JSON, or {} after `tries` attempts.
+HERE = os.path.dirname(os.path.abspath(__file__))
+_GET_CACHE = os.path.join(HERE, ".cache", "http")
 
-    Backoff matters more here than it looks: the failure that empties the whole
-    board is ESPN refusing a burst from a datacenter IP, and 12 leagues x 2 days
-    fired through a thread pool is exactly such a burst. Retries are spaced so a
-    short refusal window is ridden out rather than hammered.
+
+def _ckey(url):
+    return hashlib.sha1(url.encode()).hexdigest() + ".json"
+
+
+def get(url, tries=6, fresh=900, stale=21600):
+    """Fetch JSON, with a disk cache that survives ESPN's bot blocking.
+
+    ESPN sits behind Akamai and intermittently answers 403 to this network --
+    measured 2 successes in 10 identical requests, and a browser User-Agent
+    does no better (0/6) so it is the IP being throttled, not the agent string.
+    Without a cache every 403 became MISSING DATA rather than an error: on
+    2026-09-05 the MLB scoreboard returned nothing and the board published a
+    day with zero games while NCAAF, fetched in the same pass, returned 68.
+
+    So: serve from cache inside `fresh` seconds, otherwise try the network with
+    backoff, and if the network will not answer fall back to the last good copy
+    up to `stale` seconds old. A six-hour-old slate is wrong at the margins; an
+    empty one is wrong entirely.
     """
-    delay = 0.6
+    path = os.path.join(_GET_CACHE, _ckey(url))
+    now = time.time()
+    if os.path.exists(path):
+        age = now - os.path.getmtime(path)
+        if age < fresh:
+            try:
+                with open(path) as fh:
+                    return json.load(fh)
+            except Exception:
+                pass
+    delay = 0.8
     for a in range(tries):
         try:
             with urllib.request.urlopen(url, timeout=30, context=_CTX) as r:
-                return json.load(r)
+                d = json.load(r)
+            try:
+                os.makedirs(_GET_CACHE, exist_ok=True)
+                tmp = path + ".tmp"
+                with open(tmp, "w") as fh:
+                    json.dump(d, fh)
+                os.replace(tmp, path)
+            except Exception:
+                pass
+            return d
         except Exception:
-            if a == tries - 1:
-                break
-            time.sleep(delay)
-            delay *= 2
+            if a < tries - 1:
+                time.sleep(delay)
+                delay = min(delay * 1.8, 8.0)
+    if os.path.exists(path) and (now - os.path.getmtime(path)) < stale:
+        try:
+            with open(path) as fh:
+                d = json.load(fh)
+            sys.stderr.write("get: serving %ds-old cache for %s\n"
+                             % (int(now - os.path.getmtime(path)), url[:90]))
+            return d
+        except Exception:
+            pass
+    sys.stderr.write("get: no data and no usable cache for %s\n" % url[:90])
     return {}
 
 
