@@ -100,7 +100,7 @@ def snapshot():
                                          bool(leg and leg.get("dog")),
                                          (leg or {}).get("price"))
                 tk, tl, hide = tier_of(k, mc, hit, bool(leg and leg.get("dog")),
-                                       bool(leg and leg.get("price")))
+                                       (leg or {}).get("price"))
                 pk, pl = price_note(k, k in SOCCER,
                                     (leg or {}).get("price"),
                                     bool(leg and leg.get("dog")))
@@ -513,7 +513,20 @@ TENNIS_DEAD_ZONE = 58.0
 # 85.3% is in-sample and the true forward rate is lower. The dog/favourite
 # split is the part that is robust; the exact 65 threshold is not.
 LOCK_CONF = 65.0
-TENNIS_LOCK = 72.0          # tennis at 72%+ : 63-9 (87.5%) on 72 graded picks
+TENNIS_LOCK = 72.0          # tennis at 72%+ : 68-10 (87.2%) on 78 graded picks
+# A soccer favourite priced near even money is a coin flip wearing a favourite's
+# label, and calling it a lock was the weak link. Split by de-vigged price:
+#
+#     implied >= 60%   19-0  (100.0%)  ROI +46.0%
+#     implied <  60%   12-4  ( 75.0%)  ROI +39.9%
+#
+# Sept 4 lost Viking FK at -130, i.e. 56.5% implied, straight out of the weak
+# band. Both bands are profitable -- the discarded one still returns +39.9% --
+# so this is a tightening of what may wear the LOCK badge, not a claim that the
+# dropped picks are bad. And 19-0 is a perfect record on nineteen picks: it will
+# regress, and the badge should be read as "the strongest cell measured so far",
+# not as a promise of 100%.
+SOCCER_LOCK_IMPLIED = 0.60
 MLB_FLOOR = 58.0            # below this MLB is 14-18 (43.8%), worse than a coin flip
 _TENNIS = ("atp", "wta")
 _MAJOR = ("mlb", "ncaaf", "nfl", "nba", "nhl", "wnba")
@@ -523,7 +536,7 @@ def _is_soccer(league):
     return league not in _TENNIS and league not in _MAJOR
 
 
-def tier_of(league, mc, hit, dog=False, priced=False):
+def tier_of(league, mc, hit, dog=False, priced=None):
     """-> (key, label, hide) for a pick, from its measured hit rate.
 
     Nothing is hidden any more. The tennis dead zone was hidden because the
@@ -538,9 +551,10 @@ def tier_of(league, mc, hit, dog=False, priced=False):
     # dog) went 91-16 (85.0%). Splitting it by where the record actually lives
     # does better on the same volume:
     #
-    #     tennis >= 72%                63-9   (87.5%)
-    #     soccer favourites            28-3   (90.3%)
-    #     the two together             91-12  (88.3%)   <- this rule
+    #     tennis >= 72%                68-10  (87.2%)
+    #     soccer favs, implied >= 60%  19-0  (100.0%)
+    #     the two together             87-10  (89.7%)   <- this rule
+    #     with ANY soccer favourite    99-14  (87.6%)   <- the looser previous cut
     #     adding MLB >= 58%           122-24  (83.6%)   <- so MLB stays out
     #
     # Tennis is cleanly monotonic (53.6 / 63.6 / 80.8 / 87.5 across the bands),
@@ -550,7 +564,8 @@ def tier_of(league, mc, hit, dog=False, priced=False):
     if not dog:
         if league in _TENNIS and mc >= TENNIS_LOCK:
             return "lock", "lock", False
-        if _is_soccer(league) and priced:
+        if _is_soccer(league) and _devig(priced, True) is not None \
+                and _devig(priced, True) >= SOCCER_LOCK_IMPLIED:
             return "lock", "lock", False
     if hit is None:
         return (None, None, False)
