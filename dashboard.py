@@ -281,6 +281,12 @@ def model_book(day):
             book[lgk] = P.tennis_picks(day, tour=lgk)
         except Exception as e:
             book[lgk] = _fail(lgk, e)
+    # UFC. Market-derived rather than modelled -- see picks.ufc_picks for why,
+    # and for the athlete-id mapping that keeps the lines from inverting.
+    try:
+        book["ufc"] = P.ufc_picks(day)
+    except Exception as e:
+        book["ufc"] = _fail("ufc", e)
     def one(lgk):
         try:
             return lgk, P.elo_picks(lgk, day)
@@ -355,14 +361,27 @@ def collect(key, path, day, mlbctx, mybook=None):
             mine = {}
             if mybook:
                 names = {}
+                ordered = []
                 for x in c.get("competitors") or []:
-                    names[x.get("homeAway")] = ((x.get("team") or {}).get("displayName")
-                                                or (x.get("athlete") or {}).get("displayName"))
-                mine = (mybook.get(key) or {}).get((names.get("away"), names.get("home")), {})
+                    nm = ((x.get("team") or {}).get("displayName")
+                          or (x.get("athlete") or {}).get("displayName"))
+                    names[x.get("homeAway")] = nm
+                    ordered.append(nm)
+                # Combat sports have no home or away side -- homeAway is null on
+                # every MMA competitor, so keying by it produced (None, None) and
+                # every UFC pick silently failed to match its row. Fall back to
+                # competitor order, which ufc_picks keys by for the same reason.
+                if names.get("away") is None and names.get("home") is None and len(ordered) == 2:
+                    lookup = (ordered[0], ordered[1])
+                else:
+                    lookup = (names.get("away"), names.get("home"))
+                mine = (mybook.get(key) or {}).get(lookup, {})
                 # which side is my pick on? legs are keyed away/home, picks by full name
                 if mine.get("pick"):
                     myside = ("away" if mine["pick"] == names.get("away")
                               else "home" if mine["pick"] == names.get("home") else None)
+                    if myside is None and len(ordered) == 2 and mine["pick"] in ordered:
+                        myside = "away" if mine["pick"] == ordered[0] else "home"
                     mine = dict(mine, side=myside)
                 # MLB only: the model is behind the close on 2,100 backtested
                 # games, so it nudges the price rather than overruling it, and

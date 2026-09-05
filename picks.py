@@ -303,6 +303,82 @@ def elo_picks(league, day):
     return out
 
 
+# ------------------------------------------------------------- ufc
+CORE_MMA = "https://sports.core.api.espn.com/v2/sports/mma/leagues/ufc"
+
+
+def ufc_picks(day):
+    """Fights on `day` with a de-vigged market probability per fighter.
+
+    This is NOT a model, and the board must not pretend otherwise. There is no
+    fighter rating system here: MMA fighters compete two or three times a year
+    against wildly varying levels of opposition, so the team-sport Elo in
+    anysport.py has nothing to work with. The number is the closing-ish market
+    price with the vig removed, which for MMA is a genuinely strong baseline --
+    favourites win roughly 65-70% of UFC fights -- but it is the market's
+    opinion, not ours, and it is labelled that way.
+
+    The odds mapping is the part that bites. ESPN returns awayAthleteOdds and
+    homeAthleteOdds, but MMA has no home or away fighter (homeAway is null on
+    every competitor) and those two blocks are NOT in competitor order. Pairing
+    them positionally inverted five of fourteen fights on the 2026-09-05 Paris
+    card -- it produced "Hooker -550" when Parnasse was the -550 favourite.
+    Always resolve athlete.$ref to an id and match that.
+    """
+    out = {}
+    d = get(f"{ESPN}/mma/ufc/scoreboard?dates={day}")
+    for ev in d.get("events", []):
+        eid = ev.get("id")
+        comps = list(ev.get("competitions") or [])
+        for grp in ev.get("groupings") or []:
+            comps.extend(grp.get("competitions") or [])
+        for c in comps:
+            byid, order = {}, []
+            for x in c.get("competitors") or []:
+                a = x.get("athlete") or {}
+                if a.get("displayName"):
+                    byid[str(x.get("id"))] = a["displayName"]
+                    order.append(a["displayName"])
+            if len(byid) != 2 or len(order) != 2:
+                continue
+            try:
+                items = get(f"{CORE_MMA}/events/{eid}/competitions/{c['id']}/odds")
+                it = (items.get("items") or [{}])[0]
+            except Exception:
+                continue
+            ml = {}
+            for k in ("awayAthleteOdds", "homeAthleteOdds"):
+                v = it.get(k) or {}
+                ref = str((v.get("athlete") or {}).get("$ref", ""))
+                aid = ref.rsplit("/", 1)[-1].split("?")[0]
+                if aid in byid and v.get("moneyLine") is not None:
+                    ml[aid] = v["moneyLine"]
+            if len(ml) != 2:
+                continue
+            ids = list(ml)
+            ps = {i: _mml(ml[i]) for i in ids}
+            tot = sum(ps.values())
+            if tot <= 0:
+                continue
+            nv = {i: ps[i] / tot for i in ids}
+            top = max(ids, key=lambda i: nv[i])
+            other = [i for i in ids if i != top][0]
+            price = ml[top]
+            # key by COMPETITOR order, which is what dashboard.collect looks up
+            # for MMA -- not by the odds-payload order, which differs.
+            out[(order[0], order[1])] = dict(
+                pick=byid[top], conf=nv[top],
+                why=f"market {('+' if price > 0 else '')}{price} de-vigged, "
+                    f"no fighter model -- see ufc_picks()",
+                model="market price (no model)")
+    return out
+
+
+def _mml(american):
+    v = float(american)
+    return 100.0 / (v + 100.0) if v > 0 else (-v) / ((-v) + 100.0)
+
+
 # ------------------------------------------------------------- tennis
 def tennis_picks(day, tour=None):
     """Ranking-points model over the day's singles matches.

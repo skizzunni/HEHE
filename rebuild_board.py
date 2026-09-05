@@ -398,6 +398,11 @@ def blended_hit(league, is_soccer, mc, live, why=None, dog=None, price=None):
         # Live sample shows as zero, and the band takes over once it exists.
         if league in ("ncaaf", "nfl") and mc is not None:
             return mc / 100.0, 0
+        # UFC's number IS the de-vigged market price, so it is already the best
+        # available estimate of the win probability -- but it is the market's
+        # estimate, not ours, and it has no graded history here yet.
+        if league == "ufc" and mc is not None:
+            return mc / 100.0, 0
         return None, 0
     sport, cut, _nr = key
     prior = dict(MEASURED[sport])[cut]
@@ -436,6 +441,28 @@ LABEL_CUTS = ((0.75, "strong", "strong"), (0.65, "solid", "solid"),
 DOG_FRIENDLY = {"mlb", "nhl", "wnba"}       # underdogs carry the lighter tax
 DOG_TAXED = {"ncaaf", "nba", "nfl"}         # and the heavier one here
 SOCCER_LONG_DOG = 250                       # +250 and worse: -11.4% over 9,206
+
+
+# College football breaks this model's confidence scale. The widest rating gap
+# in the pool is 348 Elo, which maps to at most 88.1%, while the market prices
+# CFB games at 97-99.9%. Measured on the Sept 5 slate: across 32 market
+# favourites at 85%+ implied, the model sat a mean 35.3 points BELOW the book,
+# and 25.0 points below across all 49 priced games.
+#
+# Direction survives that -- it agrees with the market favourite on 45 of 49 --
+# but a model that cannot express a mismatch has no standing to back a heavy
+# underdog. Where it fights a book price under 35% implied, the market side is
+# taken instead. On the Sept 5 slate that caught Tulsa at +425 and The Citadel
+# at +950.
+CFB_DOG_FLOOR = 0.35
+
+
+def cfb_dog_override(league, is_soccer, price, dog):
+    """True when a football pick backs a dog the market has all but written off."""
+    if league not in ("ncaaf", "nfl") or not dog or price is None:
+        return False
+    m = _devig(price, is_soccer)
+    return m is not None and m < CFB_DOG_FLOOR
 
 
 def ev_note(is_soccer, mc, price, dog):
@@ -529,7 +556,11 @@ TENNIS_LOCK = 72.0          # tennis at 72%+ : 68-10 (87.2%) on 78 graded picks
 SOCCER_LOCK_IMPLIED = 0.60
 MLB_FLOOR = 58.0            # below this MLB is 14-18 (43.8%), worse than a coin flip
 _TENNIS = ("atp", "wta")
-_MAJOR = ("mlb", "ncaaf", "nfl", "nba", "nhl", "wnba")
+# ufc belongs here, not in the soccer bucket. _is_soccer() is a negative test,
+# so without this a UFC favourite at 60%+ implied would inherit the soccer LOCK
+# rule -- a badge earned by 35 graded soccer picks, awarded to a sport with a
+# market-derived number, no model and no track record whatsoever.
+_MAJOR = ("mlb", "ncaaf", "nfl", "nba", "nhl", "wnba", "ufc")
 
 
 def _is_soccer(league):
