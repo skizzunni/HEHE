@@ -104,6 +104,7 @@ def _ip(s):
 
 
 MLB_DAILY = "https://skizzunni.github.io/mlb-daily/data.json"
+MLB_DAILY_TMR = "https://skizzunni.github.io/mlb-daily/data_tomorrow.json"
 
 
 def mlb_daily_picks(day):
@@ -126,11 +127,17 @@ def mlb_daily_picks(day):
     the model. Returns {} on any failure, and the caller falls back to the local
     model so the tab never goes empty.
     """
-    try:
-        d = get(MLB_DAILY)
-    except Exception:
-        return {}
-    if not isinstance(d, dict) or d.get("date") != _iso(day):
+    want = _iso(day)
+    d = {}
+    for url in (MLB_DAILY, MLB_DAILY_TMR):
+        try:
+            j = get(url)
+        except Exception:
+            continue
+        if isinstance(j, dict) and j.get("date") == want:
+            d = j
+            break
+    if not d:
         return {}
     out = {}
     for g in d.get("games", []):
