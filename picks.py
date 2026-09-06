@@ -103,6 +103,57 @@ def _ip(s):
     return w + round((f - w) * 10) / 3.0
 
 
+MLB_DAILY = "https://skizzunni.github.io/mlb-daily/data.json"
+
+
+def mlb_daily_picks(day):
+    """Pull the picks from the mlb-daily board instead of modelling MLB here.
+
+    Two different MLB models were running and this board was showing the worse
+    one. Graded records as of 2026-09-05:
+
+        mlb-daily model   14-7   (66.7%)
+        this board's      38-34  (52.8%)
+
+    mlb-daily is not just better tuned, it carries things this file has no
+    access to: starters blended across two prior seasons before regressing,
+    opener detection from game logs, a simulator calibrated to the real MLB run
+    distribution, frozen book prices, and per-game research covering bullpen
+    pitch counts, platoon splits and injuries -- with the research allowed to
+    overrule the model on which side to take.
+
+    It publishes its slate as JSON, so this reads that rather than duplicating
+    the model. Returns {} on any failure, and the caller falls back to the local
+    model so the tab never goes empty.
+    """
+    try:
+        d = get(MLB_DAILY)
+    except Exception:
+        return {}
+    if not isinstance(d, dict) or d.get("date") != _iso(day):
+        return {}
+    out = {}
+    for g in d.get("games", []):
+        try:
+            a, h = g["away"]["name"], g["home"]["name"]
+            pk = g["pick"]
+            src = pk.get("research")
+            note = pk["reasons"][0] if pk.get("reasons") else ""
+            tag = {"overrides": "research pick, against the model",
+                   "locked-before-research": "locked before research landed",
+                   "agrees": "model and research agree"}.get(src, "")
+            out[(a, h)] = dict(pick=pk["team_name"], conf=float(pk["p"]),
+                               why=(tag + " \u00b7 " + note)[:150] if tag else note[:150],
+                               model="mlb-daily run-expectancy + per-game research")
+        except Exception:
+            continue
+    return out
+
+
+def _iso(day):
+    return "%s-%s-%s" % (day[:4], day[4:6], day[6:8])
+
+
 # ------------------------------------------------------------------ MLB
 def mlb_picks(day):
     """day: YYYYMMDD. -> {(away_full, home_full): dict(pick, conf, why)}"""

@@ -326,8 +326,18 @@ def model_book(day):
     def _fail(lgk, e):
         print(f"model_book: {lgk} raised {type(e).__name__}: {e}", file=sys.stderr)
         return {}
+    # Prefer the mlb-daily board's picks -- 14-7 (66.7%) against this file's
+    # 38-34 (52.8%) -- and fall back to the local model if it is unreachable
+    # or is publishing a different date, so the tab never goes empty.
     try:
-        book["mlb"] = P.mlb_picks(day)
+        book["mlb"] = P.mlb_daily_picks(day)
+        if book["mlb"]:
+            print("model_book: mlb from mlb-daily (%d games)" % len(book["mlb"]),
+                  file=sys.stderr)
+        else:
+            book["mlb"] = P.mlb_picks(day)
+            print("model_book: mlb-daily unavailable, using the local model",
+                  file=sys.stderr)
     except Exception as e:
         book["mlb"] = _fail("mlb", e)
     for lgk in ("atp", "wta"):

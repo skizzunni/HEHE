@@ -555,6 +555,7 @@ TENNIS_LOCK = 72.0          # tennis at 72%+ : 68-10 (87.2%) on 78 graded picks
 # not as a promise of 100%.
 SOCCER_LOCK_IMPLIED = 0.60   # retired with soccer
 NCAAF_LOCK = 60.0            # NCAAF at 60%+ : 27-3 (90.0%) on 30 graded picks
+UFC_LOCK = 65.0              # UFC at 65%+   : 7-2  (77.8%) on 9 graded picks -- thin
 MLB_FLOOR = 58.0            # below this MLB is 14-18 (43.8%), worse than a coin flip
 _TENNIS = ("atp", "wta")
 # ufc belongs here, not in the soccer bucket. _is_soccer() is a negative test,
@@ -607,6 +608,14 @@ def tier_of(league, mc, hit, dog=False, priced=None):
     # it is a coin flip, and no threshold inside it reaches lock grade.
     if not dog:
         if league == "ncaaf" and mc >= NCAAF_LOCK:
+            return "lock", "lock", False
+        # Second leg, and it is thinner than the first: 7-2 on nine graded
+        # picks. It is here because it is the only other American cell above
+        # 75%, not because nine results prove anything. UFC's number is the
+        # de-vigged market price rather than a model of ours, so this badge
+        # says "the market is confident and has been right so far", which is
+        # a weaker claim than the NCAAF leg makes.
+        if league == "ufc" and mc >= UFC_LOCK:
             return "lock", "lock", False
     if hit is None:
         return (None, None, False)
