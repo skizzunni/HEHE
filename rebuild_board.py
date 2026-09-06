@@ -553,7 +553,8 @@ TENNIS_LOCK = 72.0          # tennis at 72%+ : 68-10 (87.2%) on 78 graded picks
 # dropped picks are bad. And 19-0 is a perfect record on nineteen picks: it will
 # regress, and the badge should be read as "the strongest cell measured so far",
 # not as a promise of 100%.
-SOCCER_LOCK_IMPLIED = 0.60
+SOCCER_LOCK_IMPLIED = 0.60   # retired with soccer
+NCAAF_LOCK = 60.0            # NCAAF at 60%+ : 27-3 (90.0%) on 30 graded picks
 MLB_FLOOR = 58.0            # below this MLB is 14-18 (43.8%), worse than a coin flip
 _TENNIS = ("atp", "wta")
 # ufc belongs here, not in the soccer bucket. _is_soccer() is a negative test,
@@ -592,11 +593,20 @@ def tier_of(league, mc, hit, dog=False, priced=None):
     # and the soccer split is the dog rule again: favourites 90.3%, dogs 41.9%.
     # Chosen after seeing these numbers, so it is in-sample and the forward rate
     # will be lower -- but each leg is individually large and mechanistic.
+    # LOCK, rebuilt for an American-sports-only board. The old rule was tennis
+    # at 72%+ plus soccer favourites; both sports are gone, so it is re-cut on
+    # what remains, measured across 141 graded American picks:
+    #
+    #     NCAAF >= 60%        27-3   (90.0%)   <- this rule
+    #     NCAAF overall       46-9   (83.6%)
+    #     UFC   >= 65%         7-2   (77.8%)   n=9, too thin to badge
+    #     MLB   >= 65%         3-2   (60.0%)   nothing here clears
+    #     any American >= 70% 9-1   (90.0%)    n=10
+    #
+    # NCAAF carries this board now. MLB stays out entirely -- at 38-34 (52.8%)
+    # it is a coin flip, and no threshold inside it reaches lock grade.
     if not dog:
-        if league in _TENNIS and mc >= TENNIS_LOCK:
-            return "lock", "lock", False
-        if _is_soccer(league) and _devig(priced, True) is not None \
-                and _devig(priced, True) >= SOCCER_LOCK_IMPLIED:
+        if league == "ncaaf" and mc >= NCAAF_LOCK:
             return "lock", "lock", False
     if hit is None:
         return (None, None, False)

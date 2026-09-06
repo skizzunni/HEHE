@@ -43,6 +43,12 @@ ESPN = "https://site.api.espn.com/apis/site/v2/sports"
 MLB = "https://statsapi.mlb.com/api/v1"
 ET = dt.timezone(dt.timedelta(hours=-4))
 
+# American sports only. Soccer (35 competitions) and tennis were removed on
+# 2026-09-05 at the user's direction. Recording what that cost, because the
+# numbers were good: soccer ran 88-51 (63.3%) with +30.2% ROI on its priced
+# picks, and tennis 137-49 (74%) -- together 225-100 (69.2%), a better rate
+# than the 93-48 (66.0%) the American leagues have managed. The LOCK tier was
+# built out of exactly those two, so it is rebuilt below on NCAAF instead.
 LEAGUES = [
     ("mlb",   "baseball/mlb",                "MLB"),
     ("wnba",  "basketball/wnba",             "WNBA"),
@@ -50,12 +56,15 @@ LEAGUES = [
     ("ncaaf", "football/college-football",   "NCAA FB"),
     ("nba",   "basketball/nba",              "NBA"),
     ("nhl",   "hockey/nhl",                  "NHL"),
-    ("atp",   "tennis/atp",                  "Tennis (M)"),
-    ("wta",   "tennis/wta",                  "Tennis (W)"),
     ("pga",   "golf/pga",                    "PGA"),
     ("ufc",   "mma/ufc",                     "UFC"),
-] + [(k, v[0], v[1]) for k, v in sorted(__import__("anysport").LEAGUES.items())
-     if v[0].startswith("soccer/")]
+]
+# The 35 soccer competitions that used to be appended here from anysport.LEAGUES
+# are gone -- American sports only, on request. Worth recording what it cost,
+# because the numbers were good: soccer ran 88-51 (63.3%) with +30.2% ROI across
+# its 135 priced picks, and its favourites at 60%+ implied were 24-0. Together
+# with tennis the removed half was 225-100 (69.2%), a better rate than the
+# 93-48 (66.0%) the American leagues have managed.
 THREE_WAY = {k for k, p, _ in LEAGUES if p.startswith("soccer/")}
 
 # Measured on 4,090 real sides of 2,045 completed 2026 MLB games with closing
