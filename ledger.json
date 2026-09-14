@@ -8190,19 +8190,21 @@
   "conf": 59.6,
   "dog": false,
   "league": "mlb",
-  "live": "Mid 8th",
-  "live_score": {
-   "Boston Red Sox": 2,
-   "Kansas City Royals": 1
-  },
   "logged": "2026-09-13T12:35",
   "market_agrees": true,
   "matchup": "KC @ BOS",
   "pick": "Boston Red Sox",
+  "played": "2026-09-13",
   "price": "-192",
-  "status": "open",
+  "scores": {
+   "Boston Red Sox": 4,
+   "Kansas City Royals": 1
+  },
+  "settled": "2026-09-13T21:05",
+  "status": "won",
   "tip": "3:05 PM",
-  "why": "Starter edge +0.50 RA/9: Payton Tolle (3.15 ERA, 10.45 K/9, 2.43 BB/9 over 137.0 IP) vs Noah Cameron (3.93 ERA, 8.14 K/9, 2.86 BB/9)"
+  "why": "Starter edge +0.50 RA/9: Payton Tolle (3.15 ERA, 10.45 K/9, 2.43 BB/9 over 137.0 IP) vs Noah Cameron (3.93 ERA, 8.14 K/9, 2.86 BB/9)",
+  "winner": "Boston Red Sox"
  },
  "mlb:401816923": {
   "conf": 50.1,
@@ -8352,6 +8354,11 @@
   "conf": 52.7,
   "dog": true,
   "league": "mlb",
+  "live": "Bot 5th",
+  "live_score": {
+   "San Diego Padres": 6,
+   "San Francisco Giants": 3
+  },
   "logged": "2026-09-13T19:11",
   "market_agrees": false,
   "matchup": "SD @ SF",
@@ -8365,19 +8372,21 @@
   "conf": 50.3,
   "dog": true,
   "league": "mlb",
-  "live": "Bot 8th",
-  "live_score": {
-   "Athletics": 6,
-   "Seattle Mariners": 7
-  },
   "logged": "2026-09-13T14:55",
   "market_agrees": false,
   "matchup": "SEA @ ATH",
   "pick": "Athletics",
+  "played": "2026-09-13",
   "price": "+111",
-  "status": "open",
+  "scores": {
+   "Athletics": 8,
+   "Seattle Mariners": 7
+  },
+  "settled": "2026-09-13T21:05",
+  "status": "won",
   "tip": "4:05 PM",
-  "why": "Bullpen edge -0.57 RA/9 (ATH pen 5.44 ERA vs SEA pen 4.47 ERA) \u2014 matters because the starters project to hand off around the 6th"
+  "why": "Bullpen edge -0.57 RA/9 (ATH pen 5.44 ERA vs SEA pen 4.47 ERA) \u2014 matters because the starters project to hand off around the 6th",
+  "winner": "Athletics"
  },
  "mlb:401816932": {
   "conf": 54.8,
@@ -8404,7 +8413,7 @@
   "conf": 54.5,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": true,
   "matchup": "BAL @ NYM",
   "pick": "New York Mets",
@@ -8414,10 +8423,10 @@
   "why": "Last 3 weeks: NYM 11-8 (5.68 R/G scored, 5.05 allowed) vs BAL 10-10 (4.6 / 4.3)"
  },
  "mlb:401816934": {
-  "conf": 52.0,
+  "conf": 54.0,
   "dog": true,
   "league": "mlb",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": false,
   "matchup": "CHW @ CLE",
   "pick": "Chicago White Sox",
@@ -8430,7 +8439,7 @@
   "conf": 52.3,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": true,
   "matchup": "DET @ TOR",
   "pick": "Toronto Blue Jays",
@@ -8440,14 +8449,14 @@
   "why": "Offense gap -0.42 R/G (TOR 4.05 R/G, .698 OPS vs DET 4.47 R/G, .715 OPS)"
  },
  "mlb:401816936": {
-  "conf": 65.4,
+  "conf": 65.3,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": true,
   "matchup": "LAD @ CIN",
   "pick": "Los Angeles Dodgers",
-  "price": "-207",
+  "price": "-216",
   "status": "open",
   "tip": "6:40 PM",
   "why": "Starter edge +1.85 RA/9: Tarik Skubal (2.84 ERA, 10.57 K/9, 1.55 BB/9 over 139.7 IP) vs Nick Lodolo (5.12 ERA, 7.53 K/9, 3.81 BB/9)"
@@ -8456,59 +8465,59 @@
   "conf": 58.7,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": true,
   "matchup": "ATL @ CHC",
   "pick": "Chicago Cubs",
-  "price": "-135",
+  "price": "-136",
   "status": "open",
   "tip": "7:40 PM",
   "why": "Bullpen edge -0.61 RA/9 (CHC pen 3.89 ERA vs ATL pen 3.41 ERA) \u2014 matters because the starters project to hand off around the 6th"
  },
  "mlb:401816938": {
-  "conf": 53.3,
+  "conf": 53.4,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": true,
   "matchup": "NYY @ MIN",
   "pick": "New York Yankees",
-  "price": "-142",
+  "price": "-135",
   "status": "open",
   "tip": "7:40 PM",
   "why": "Starter edge +0.40 RA/9: Will Warren (4.05 ERA, 8.92 K/9, 3.10 BB/9 over 142.3 IP) vs Dean Kremer (5.65 ERA, 8.67 K/9, 3.14 BB/9)"
  },
  "mlb:401816939": {
-  "conf": 56.4,
+  "conf": 52.8,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": null,
   "matchup": "SF @ STL",
   "pick": "St. Louis Cardinals",
   "price": null,
   "status": "open",
   "tip": "7:45 PM",
-  "why": "TBD has no meaningful 2026 track record \u2014 modelled at league average, which is itself a risk flag"
+  "why": "Last 3 weeks: STL 7-12 (5.37 R/G scored, 6.32 allowed) vs SF 10-11 (5.29 / 5.14)"
  },
  "mlb:401816940": {
-  "conf": 51.6,
+  "conf": 55.2,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": true,
   "matchup": "SD @ COL",
   "pick": "San Diego Padres",
   "price": "-181",
   "status": "open",
   "tip": "8:40 PM",
-  "why": "Bullpen edge +1.04 RA/9 (SD pen 3.43 ERA vs COL pen 4.97 ERA) \u2014 matters because the starters project to hand off around the 6th"
+  "why": "Starter edge +1.36 RA/9: Casey Mize (3.70 ERA, 8.07 K/9, 2.19 BB/9 over 119.3 IP) vs Tomoyuki Sugano (5.30 ERA, 5.49 K/9, 2.16 BB/9)"
  },
  "mlb:401816941": {
-  "conf": 50.6,
+  "conf": 51.2,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": true,
   "matchup": "MIA @ ARI",
   "pick": "Arizona Diamondbacks",
@@ -8518,14 +8527,14 @@
   "why": "Last 3 weeks: ARI 11-9 (3.55 R/G scored, 4.05 allowed) vs MIA 8-12 (4.85 / 5.4)"
  },
  "mlb:401816942": {
-  "conf": 56.1,
+  "conf": 56.0,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": true,
   "matchup": "SEA @ LAA",
   "pick": "Los Angeles Angels",
-  "price": "-102",
+  "price": "-106",
   "status": "open",
   "tip": "9:38 PM",
   "why": "Starter edge +1.01 RA/9: Reid Detmers (3.32 ERA, 10.23 K/9, 2.41 BB/9 over 168.0 IP) vs Kade Anderson (4.29 ERA, 6.86 K/9, 3.43 BB/9)"
@@ -12554,80 +12563,95 @@
  },
  "nfl:401872926": {
   "conf": 67.7,
+  "diagnosis": "margin 12 \u00b7 the book had my side favoured too \u00b7 called at 68%",
   "dog": false,
   "league": "nfl",
-  "live": "4:24 - 4th",
-  "live_score": {
-   "Arizona Cardinals": 23,
-   "Los Angeles Chargers": 14
-  },
   "logged": "2026-09-13T14:55",
   "market_agrees": true,
   "matchup": "ARI @ LAC",
   "pick": "Los Angeles Chargers",
+  "played": "2026-09-13",
   "price": "-500",
-  "status": "open",
+  "scores": {
+   "Arizona Cardinals": 26,
+   "Los Angeles Chargers": 14
+  },
+  "settled": "2026-09-13T21:05",
+  "status": "lost",
   "tip": "4:25 PM",
-  "why": "rating 1514 v 1436 (+78.18) \u00b7 at home"
+  "why": "rating 1514 v 1436 (+78.18) \u00b7 at home",
+  "winner": "Arizona Cardinals"
  },
  "nfl:401872927": {
   "conf": 57.5,
   "dog": false,
   "league": "nfl",
-  "live": "7:36 - 4th",
-  "live_score": {
-   "Green Bay Packers": 22,
-   "Minnesota Vikings": 17
-  },
   "logged": "2026-09-13T14:55",
   "market_agrees": true,
   "matchup": "GB @ MIN",
   "pick": "Minnesota Vikings",
+  "played": "2026-09-13",
   "price": "-130",
-  "status": "open",
+  "scores": {
+   "Green Bay Packers": 22,
+   "Minnesota Vikings": 39
+  },
+  "settled": "2026-09-13T21:05",
+  "status": "won",
   "tip": "4:25 PM",
-  "why": "rating 1508 v 1505 (+2.33) \u00b7 at home"
+  "why": "rating 1508 v 1505 (+2.33) \u00b7 at home",
+  "winner": "Minnesota Vikings"
  },
  "nfl:401872928": {
   "conf": 50.6,
+  "diagnosis": "margin 14 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
   "dog": true,
   "league": "nfl",
-  "live": "4:46 - 4th",
-  "live_score": {
-   "Las Vegas Raiders": 27,
-   "Miami Dolphins": 13
-  },
   "logged": "2026-09-13T14:55",
   "market_agrees": false,
   "matchup": "MIA @ LV",
   "pick": "Miami Dolphins",
+  "played": "2026-09-13",
   "price": "+142",
-  "status": "open",
+  "scores": {
+   "Las Vegas Raiders": 27,
+   "Miami Dolphins": 13
+  },
+  "settled": "2026-09-13T21:05",
+  "status": "lost",
   "tip": "4:25 PM",
-  "why": "rating 1472 v 1417 (+54.26)"
+  "why": "rating 1472 v 1417 (+54.26)",
+  "winner": "Las Vegas Raiders"
  },
  "nfl:401872929": {
   "conf": 64.9,
   "dog": false,
   "league": "nfl",
-  "live": "6:56 - 4th",
-  "live_score": {
-   "Philadelphia Eagles": 17,
-   "Washington Commanders": 16
-  },
   "logged": "2026-09-13T14:55",
   "market_agrees": true,
   "matchup": "WSH @ PHI",
   "pick": "Philadelphia Eagles",
+  "played": "2026-09-13",
   "price": "-265",
-  "status": "open",
+  "scores": {
+   "Philadelphia Eagles": 24,
+   "Washington Commanders": 22
+  },
+  "settled": "2026-09-13T21:05",
+  "status": "won",
   "tip": "4:25 PM",
-  "why": "rating 1515 v 1459 (+56.60) \u00b7 at home"
+  "why": "rating 1515 v 1459 (+56.60) \u00b7 at home",
+  "winner": "Philadelphia Eagles"
  },
  "nfl:401872930": {
   "conf": 55.0,
   "dog": true,
   "league": "nfl",
+  "live": "12:28 - 2nd",
+  "live_score": {
+   "Dallas Cowboys": 0,
+   "New York Giants": 7
+  },
   "logged": "2026-09-13T19:11",
   "market_agrees": false,
   "matchup": "DAL @ NYG",
@@ -12641,7 +12665,7 @@
   "conf": 52.6,
   "dog": true,
   "league": "nfl",
-  "logged": "2026-09-13T19:11",
+  "logged": "2026-09-13T21:05",
   "market_agrees": false,
   "matchup": "DEN @ KC",
   "pick": "Denver Broncos",
