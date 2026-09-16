@@ -8619,28 +8619,30 @@
   "conf": 61.0,
   "dog": false,
   "league": "mlb",
-  "live": "Mid 5th",
-  "live_score": {
-   "Athletics": 0,
-   "Tampa Bay Rays": 1
-  },
   "logged": "2026-09-15T17:43",
   "market_agrees": true,
   "matchup": "ATH @ TB",
   "pick": "Tampa Bay Rays",
+  "played": "2026-09-15",
   "price": "-233",
-  "status": "open",
+  "scores": {
+   "Athletics": 1,
+   "Tampa Bay Rays": 2
+  },
+  "settled": "2026-09-15T21:55",
+  "status": "won",
   "tip": "6:40 PM",
-  "why": "Starter edge +1.20 RA/9: Griffin Jax (3.99 ERA, 9.33 K/9, 2.99 BB/9 over 99.3 IP) vs Jack Perkins (6.53 ERA, 10.36 K/9, 4.09 BB/9)"
+  "why": "Starter edge +1.20 RA/9: Griffin Jax (3.99 ERA, 9.33 K/9, 2.99 BB/9 over 99.3 IP) vs Jack Perkins (6.53 ERA, 10.36 K/9, 4.09 BB/9)",
+  "winner": "Tampa Bay Rays"
  },
  "mlb:401816944": {
   "conf": 50.5,
   "dog": false,
   "league": "mlb",
-  "live": "Bot 2nd",
+  "live": "Top 10th",
   "live_score": {
-   "Baltimore Orioles": 2,
-   "New York Mets": 1
+   "Baltimore Orioles": 3,
+   "New York Mets": 3
   },
   "logged": "2026-09-15T17:43",
   "market_agrees": true,
@@ -8653,30 +8655,33 @@
  },
  "mlb:401816945": {
   "conf": 50.2,
+  "diagnosis": "margin 1 \u00b7 one-run game \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 50%",
   "dog": true,
   "league": "mlb",
-  "live": "Bot 4th",
-  "live_score": {
-   "Chicago White Sox": 1,
-   "Cleveland Guardians": 3
-  },
   "logged": "2026-09-15T17:43",
   "market_agrees": false,
   "matchup": "CHW @ CLE",
   "pick": "Chicago White Sox",
+  "played": "2026-09-15",
   "price": "+129",
-  "status": "open",
+  "scores": {
+   "Chicago White Sox": 6,
+   "Cleveland Guardians": 7
+  },
+  "settled": "2026-09-15T21:55",
+  "status": "lost",
   "tip": "6:40 PM",
-  "why": "Offense gap +0.59 R/G (CWS 4.68 R/G, .722 OPS vs CLE 4.09 R/G, .688 OPS)"
+  "why": "Offense gap +0.59 R/G (CWS 4.68 R/G, .722 OPS vs CLE 4.09 R/G, .688 OPS)",
+  "winner": "Cleveland Guardians"
  },
  "mlb:401816946": {
   "conf": 53.2,
   "dog": false,
   "league": "mlb",
-  "live": "Mid 3rd",
+  "live": "Top 9th",
   "live_score": {
-   "Detroit Tigers": 0,
-   "Toronto Blue Jays": 0
+   "Detroit Tigers": 9,
+   "Toronto Blue Jays": 1
   },
   "logged": "2026-09-15T17:43",
   "market_agrees": true,
@@ -8691,64 +8696,71 @@
   "conf": 63.9,
   "dog": false,
   "league": "mlb",
-  "live": "Mid 4th",
-  "live_score": {
-   "Cincinnati Reds": 0,
-   "Los Angeles Dodgers": 3
-  },
   "logged": "2026-09-15T17:43",
   "market_agrees": true,
   "matchup": "LAD @ CIN",
   "pick": "Los Angeles Dodgers",
+  "played": "2026-09-15",
   "price": "-245",
-  "status": "open",
+  "scores": {
+   "Cincinnati Reds": 0,
+   "Los Angeles Dodgers": 4
+  },
+  "settled": "2026-09-15T21:55",
+  "status": "won",
   "tip": "6:40 PM",
-  "why": "Starter edge +1.47 RA/9: Yoshinobu Yamamoto (2.62 ERA, 8.95 K/9, 2.04 BB/9 over 172.0 IP) vs Rhett Lowder (5.81 ERA, 7.09 K/9, 3.70 BB/9)"
+  "why": "Starter edge +1.47 RA/9: Yoshinobu Yamamoto (2.62 ERA, 8.95 K/9, 2.04 BB/9 over 172.0 IP) vs Rhett Lowder (5.81 ERA, 7.09 K/9, 3.70 BB/9)",
+  "winner": "Los Angeles Dodgers"
  },
  "mlb:401816948": {
   "conf": 64.0,
   "dog": false,
   "league": "mlb",
-  "live": "Top 4th",
-  "live_score": {
-   "Milwaukee Brewers": 1,
-   "Pittsburgh Pirates": 0
-  },
   "logged": "2026-09-15T17:43",
   "market_agrees": true,
   "matchup": "MIL @ PIT",
   "pick": "Milwaukee Brewers",
+  "played": "2026-09-15",
   "price": "-217",
-  "status": "open",
+  "scores": {
+   "Milwaukee Brewers": 5,
+   "Pittsburgh Pirates": 1
+  },
+  "settled": "2026-09-15T21:55",
+  "status": "won",
   "tip": "6:40 PM",
-  "why": "Starter edge +1.54 RA/9: Jacob Misiorowski (1.95 ERA, 13.17 K/9, 2.29 BB/9 over 161.3 IP) vs Lake Bachar (3.52 ERA, 9.42 K/9, 3.74 BB/9)"
+  "why": "Starter edge +1.54 RA/9: Jacob Misiorowski (1.95 ERA, 13.17 K/9, 2.29 BB/9 over 161.3 IP) vs Lake Bachar (3.52 ERA, 9.42 K/9, 3.74 BB/9)",
+  "winner": "Milwaukee Brewers"
  },
  "mlb:401816949": {
   "conf": 54.8,
+  "diagnosis": "margin 3 \u00b7 close \u00b7 the book had my side favoured too \u00b7 called at 55%",
   "dog": false,
   "league": "mlb",
-  "live": "End 3rd",
-  "live_score": {
-   "Philadelphia Phillies": 2,
-   "Washington Nationals": 2
-  },
   "logged": "2026-09-15T17:43",
   "market_agrees": true,
   "matchup": "PHI @ WSH",
   "pick": "Philadelphia Phillies",
+  "played": "2026-09-15",
   "price": "-218",
-  "status": "open",
+  "scores": {
+   "Philadelphia Phillies": 3,
+   "Washington Nationals": 6
+  },
+  "settled": "2026-09-15T21:55",
+  "status": "lost",
   "tip": "6:45 PM",
-  "why": "Starter edge +1.44 RA/9: Cristopher S\u00e1nchez (2.79 ERA, 10.09 K/9, 2.02 BB/9 over 187.3 IP) vs Jackson Kent (6.59 ERA, 7.57 K/9, 6.59 BB/9)"
+  "why": "Starter edge +1.44 RA/9: Cristopher S\u00e1nchez (2.79 ERA, 10.09 K/9, 2.02 BB/9 over 187.3 IP) vs Jackson Kent (6.59 ERA, 7.57 K/9, 6.59 BB/9)",
+  "winner": "Washington Nationals"
  },
  "mlb:401816950": {
   "conf": 59.2,
   "dog": false,
   "league": "mlb",
-  "live": "Top 1st",
+  "live": "Mid 8th",
   "live_score": {
-   "Atlanta Braves": 0,
-   "Chicago Cubs": 0
+   "Atlanta Braves": 4,
+   "Chicago Cubs": 3
   },
   "logged": "2026-09-15T17:43",
   "market_agrees": true,
@@ -8763,6 +8775,11 @@
   "conf": 53.7,
   "dog": false,
   "league": "mlb",
+  "live": "Top 6th",
+  "live_score": {
+   "Boston Red Sox": 2,
+   "Texas Rangers": 4
+  },
   "logged": "2026-09-15T19:47",
   "market_agrees": true,
   "matchup": "BOS @ TEX",
@@ -8776,6 +8793,11 @@
   "conf": 55.7,
   "dog": false,
   "league": "mlb",
+  "live": "Bot 6th",
+  "live_score": {
+   "Houston Astros": 4,
+   "Kansas City Royals": 2
+  },
   "logged": "2026-09-15T19:47",
   "market_agrees": true,
   "matchup": "KC @ HOU",
@@ -8789,10 +8811,10 @@
   "conf": 57.9,
   "dog": false,
   "league": "mlb",
-  "live": "Top 1st",
+  "live": "Top 8th",
   "live_score": {
-   "Minnesota Twins": 0,
-   "New York Yankees": 2
+   "Minnesota Twins": 1,
+   "New York Yankees": 7
   },
   "logged": "2026-09-15T17:43",
   "market_agrees": true,
@@ -8807,10 +8829,10 @@
   "conf": 56.6,
   "dog": false,
   "league": "mlb",
-  "live": "Top 1st",
+  "live": "End 7th",
   "live_score": {
-   "San Francisco Giants": 0,
-   "St. Louis Cardinals": 0
+   "San Francisco Giants": 8,
+   "St. Louis Cardinals": 2
   },
   "logged": "2026-09-15T17:43",
   "market_agrees": true,
@@ -8825,6 +8847,11 @@
   "conf": 51.1,
   "dog": true,
   "league": "mlb",
+  "live": "Top 5th",
+  "live_score": {
+   "Colorado Rockies": 2,
+   "San Diego Padres": 3
+  },
   "logged": "2026-09-15T19:47",
   "market_agrees": false,
   "matchup": "SD @ COL",
@@ -8838,6 +8865,11 @@
   "conf": 51.6,
   "dog": false,
   "league": "mlb",
+  "live": "Bot 1st",
+  "live_score": {
+   "Arizona Diamondbacks": 0,
+   "Miami Marlins": 0
+  },
   "logged": "2026-09-15T19:47",
   "market_agrees": true,
   "matchup": "MIA @ ARI",
@@ -8851,6 +8883,11 @@
   "conf": 56.8,
   "dog": false,
   "league": "mlb",
+  "live": "End 1st",
+  "live_score": {
+   "Los Angeles Angels": 0,
+   "Seattle Mariners": 0
+  },
   "logged": "2026-09-15T19:47",
   "market_agrees": true,
   "matchup": "SEA @ LAA",
@@ -8864,20 +8901,20 @@
   "conf": 59.1,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": true,
   "matchup": "ATH @ TB",
   "pick": "Tampa Bay Rays",
   "price": "-198",
   "status": "open",
   "tip": "6:40 PM",
-  "why": "Bullpen edge +0.50 RA/9 (TB pen 4.11 ERA vs ATH pen 5.42 ERA) \u2014 matters because the starters project to hand off around the 6th"
+  "why": "Bullpen edge +0.52 RA/9 (TB pen 4.10 ERA vs ATH pen 5.42 ERA) \u2014 matters because the starters project to hand off around the 6th"
  },
  "mlb:401816959": {
-  "conf": 53.1,
+  "conf": 53.2,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": true,
   "matchup": "BAL @ NYM",
   "pick": "New York Mets",
@@ -8887,10 +8924,10 @@
   "why": "Last 3 weeks: NYM 10-9 (5.16 R/G scored, 4.89 allowed) vs BAL 10-10 (4.55 / 4.5)"
  },
  "mlb:401816960": {
-  "conf": 56.8,
+  "conf": 56.7,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": null,
   "matchup": "CHW @ CLE",
   "pick": "Cleveland Guardians",
@@ -8900,62 +8937,62 @@
   "why": "TBD has no meaningful 2026 track record \u2014 modelled at league average, which is itself a risk flag"
  },
  "mlb:401816961": {
-  "conf": 51.6,
+  "conf": 52.1,
   "dog": true,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": false,
   "matchup": "DET @ TOR",
   "pick": "Detroit Tigers",
-  "price": "+100",
+  "price": "+105",
   "status": "open",
   "tip": "3:07 PM",
   "why": "Starter edge +0.81 RA/9: Keider Montero (3.55 ERA, 6.00 K/9, 2.08 BB/9 over 147.0 IP) vs Max Scherzer (6.38 ERA, 6.78 K/9, 3.72 BB/9)"
  },
  "mlb:401816962": {
-  "conf": 64.4,
+  "conf": 64.5,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": true,
   "matchup": "LAD @ CIN",
   "pick": "Los Angeles Dodgers",
   "price": "-207",
   "status": "open",
   "tip": "6:40 PM",
-  "why": "Starter edge +1.58 RA/9: Blake Snell (1.91 ERA, 12.19 K/9, 3.82 BB/9 over 37.7 IP) vs Andrew Abbott (4.78 ERA, 7.00 K/9, 4.08 BB/9)"
+  "why": "Starter edge +1.59 RA/9: Blake Snell (1.91 ERA, 12.19 K/9, 3.82 BB/9 over 37.7 IP) vs Andrew Abbott (4.78 ERA, 7.00 K/9, 4.08 BB/9)"
  },
  "mlb:401816963": {
-  "conf": 59.0,
+  "conf": 59.1,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": true,
   "matchup": "MIL @ PIT",
   "pick": "Milwaukee Brewers",
   "price": "-136",
   "status": "open",
   "tip": "6:40 PM",
-  "why": "Starter edge +0.53 RA/9: Logan Henderson (2.34 ERA, 10.09 K/9, 1.53 BB/9 over 88.3 IP) vs Jared Jones (4.10 ERA, 10.51 K/9, 3.15 BB/9)"
+  "why": "Starter edge +0.54 RA/9: Logan Henderson (2.34 ERA, 10.09 K/9, 1.53 BB/9 over 88.3 IP) vs Jared Jones (4.10 ERA, 10.51 K/9, 3.15 BB/9)"
  },
  "mlb:401816964": {
-  "conf": 53.4,
+  "conf": 50.4,
   "dog": true,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": false,
   "matchup": "PHI @ WSH",
   "pick": "Washington Nationals",
   "price": "+112",
   "status": "open",
   "tip": "6:45 PM",
-  "why": "Bullpen edge -0.93 RA/9 (WSH pen 5.14 ERA vs PHI pen 4.32 ERA) \u2014 matters because the starters project to hand off around the 6th"
+  "why": "Starter edge -0.76 RA/9: Jared Simpson (6.75 ERA, 9.00 K/9, 6.75 BB/9 over 4.0 IP) vs Zack Wheeler (3.14 ERA, 10.80 K/9, 2.83 BB/9)"
  },
  "mlb:401816965": {
-  "conf": 59.4,
+  "conf": 59.3,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": true,
   "matchup": "ATL @ CHC",
   "pick": "Chicago Cubs",
@@ -8965,23 +9002,23 @@
   "why": "Bullpen edge -0.60 RA/9 (CHC pen 3.91 ERA vs ATL pen 3.42 ERA) \u2014 matters because the starters project to hand off around the 6th"
  },
  "mlb:401816966": {
-  "conf": 50.1,
+  "conf": 50.0,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": true,
   "matchup": "BOS @ TEX",
-  "pick": "Boston Red Sox",
-  "price": "-105",
+  "pick": "Texas Rangers",
+  "price": "-115",
   "status": "open",
   "tip": "8:05 PM",
-  "why": "Bullpen edge +0.97 RA/9 (BOS pen 3.11 ERA vs TEX pen 4.52 ERA) \u2014 matters because the starters project to hand off around the 6th"
+  "why": "Bullpen edge -0.97 RA/9 (TEX pen 4.52 ERA vs BOS pen 3.11 ERA) \u2014 matters because the starters project to hand off around the 6th"
  },
  "mlb:401816967": {
-  "conf": 55.6,
+  "conf": 55.9,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": true,
   "matchup": "KC @ HOU",
   "pick": "Houston Astros",
@@ -8991,10 +9028,10 @@
   "why": "Bullpen edge +0.76 RA/9 (HOU pen 4.12 ERA vs KC pen 5.00 ERA) \u2014 matters because the starters project to hand off around the 6th"
  },
  "mlb:401816968": {
-  "conf": 55.8,
+  "conf": 56.1,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": true,
   "matchup": "NYY @ MIN",
   "pick": "New York Yankees",
@@ -9004,10 +9041,10 @@
   "why": "Starter edge +0.81 RA/9: Carlos Rod\u00f3n (2.94 ERA, 9.98 K/9, 4.48 BB/9 over 70.3 IP) vs Zebby Matthews (4.98 ERA, 7.47 K/9, 2.79 BB/9)"
  },
  "mlb:401816969": {
-  "conf": 53.2,
+  "conf": 52.8,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": null,
   "matchup": "SF @ STL",
   "pick": "St. Louis Cardinals",
@@ -9017,10 +9054,10 @@
   "why": "Last 3 weeks: STL 9-10 (5.26 R/G scored, 5.47 allowed) vs SF 10-11 (5.24 / 5.14)"
  },
  "mlb:401816970": {
-  "conf": 50.7,
+  "conf": 50.6,
   "dog": true,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": false,
   "matchup": "SD @ COL",
   "pick": "Colorado Rockies",
@@ -9033,20 +9070,20 @@
   "conf": 52.0,
   "dog": true,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": false,
   "matchup": "MIA @ ARI",
   "pick": "Miami Marlins",
   "price": "+110",
   "status": "open",
   "tip": "9:40 PM",
-  "why": "Starter edge +0.48 RA/9: Ryan Gusto (4.14 ERA, 7.47 K/9, 2.87 BB/9 over 78.3 IP) vs Merrill Kelly (4.97 ERA, 6.04 K/9, 3.97 BB/9)"
+  "why": "Starter edge +0.47 RA/9: Ryan Gusto (4.14 ERA, 7.47 K/9, 2.87 BB/9 over 78.3 IP) vs Merrill Kelly (4.97 ERA, 6.04 K/9, 3.97 BB/9)"
  },
  "mlb:401816972": {
   "conf": 51.4,
   "dog": false,
   "league": "mlb",
-  "logged": "2026-09-15T19:47",
+  "logged": "2026-09-15T21:55",
   "market_agrees": true,
   "matchup": "SEA @ LAA",
   "pick": "Seattle Mariners",
