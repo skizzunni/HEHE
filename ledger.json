@@ -19839,60 +19839,73 @@
   "conf": 51.0,
   "dog": false,
   "league": "nfl",
-  "live": "0:28 - 4th",
-  "live_score": {
-   "Minnesota Vikings": 23,
-   "Tampa Bay Buccaneers": 16
-  },
   "logged": "2026-09-27T13:44",
   "market_agrees": true,
   "matchup": "MIN @ TB",
   "pick": "Minnesota Vikings",
+  "played": "2026-09-27",
   "price": "-118",
-  "status": "open",
+  "scores": {
+   "Minnesota Vikings": 23,
+   "Tampa Bay Buccaneers": 16
+  },
+  "settled": "2026-09-27T21:56",
+  "status": "won",
   "tip": "4:05 PM",
-  "why": "rating 1530 v 1472 (+57.24)"
+  "why": "rating 1530 v 1472 (+57.24)",
+  "winner": "Minnesota Vikings"
  },
  "nfl:401872960": {
   "conf": 52.3,
+  "diagnosis": "margin 3 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 52%",
   "dog": true,
   "league": "nfl",
-  "live": "2:00 - 4th",
-  "live_score": {
-   "Baltimore Ravens": 24,
-   "Dallas Cowboys": 28
-  },
   "logged": "2026-09-27T13:44",
   "market_agrees": false,
   "matchup": "BAL @ DAL",
   "pick": "Dallas Cowboys",
+  "played": "2026-09-27",
   "price": "+145",
-  "status": "open",
+  "scores": {
+   "Baltimore Ravens": 34,
+   "Dallas Cowboys": 31
+  },
+  "settled": "2026-09-27T21:56",
+  "status": "lost",
   "tip": "4:25 PM",
-  "why": "rating 1481 v 1514 (+33.69) \u00b7 at home"
+  "why": "rating 1481 v 1514 (+33.69) \u00b7 at home",
+  "winner": "Baltimore Ravens"
  },
  "nfl:401872961": {
   "conf": 61.7,
+  "diagnosis": "margin 8 \u00b7 the book had my side favoured too \u00b7 called at 62%",
   "dog": false,
   "league": "nfl",
-  "live": "6:17 - 4th",
-  "live_score": {
-   "Las Vegas Raiders": 35,
-   "New Orleans Saints": 27
-  },
   "logged": "2026-09-27T13:44",
   "market_agrees": true,
   "matchup": "LV @ NO",
   "pick": "New Orleans Saints",
+  "played": "2026-09-27",
   "price": "-192",
-  "status": "open",
+  "scores": {
+   "Las Vegas Raiders": 35,
+   "New Orleans Saints": 27
+  },
+  "settled": "2026-09-27T21:56",
+  "status": "lost",
   "tip": "4:25 PM",
-  "why": "rating 1480 v 1447 (+32.54) \u00b7 at home"
+  "why": "rating 1480 v 1447 (+32.54) \u00b7 at home",
+  "winner": "Las Vegas Raiders"
  },
  "nfl:401872962": {
   "conf": 55.0,
   "dog": false,
   "league": "nfl",
+  "live": "Halftime",
+  "live_score": {
+   "Denver Broncos": 0,
+   "Los Angeles Rams": 16
+  },
   "logged": "2026-09-27T19:22",
   "market_agrees": true,
   "matchup": "LAR @ DEN",
@@ -19906,7 +19919,7 @@
   "conf": 57.8,
   "dog": true,
   "league": "nfl",
-  "logged": "2026-09-27T19:22",
+  "logged": "2026-09-27T21:56",
   "market_agrees": false,
   "matchup": "PHI @ CHI",
   "pick": "Chicago Bears",
@@ -23765,19 +23778,21 @@
   "conf": 64.3,
   "dog": false,
   "league": "wnba",
-  "live": "3:38 - 1st",
-  "live_score": {
-   "Atlanta Dream": 11,
-   "Washington Mystics": 16
-  },
   "logged": "2026-09-27T16:30",
   "market_agrees": true,
   "matchup": "WSH @ ATL",
   "pick": "Atlanta Dream",
+  "played": "2026-09-27",
   "price": "-305",
-  "status": "open",
+  "scores": {
+   "Atlanta Dream": 92,
+   "Washington Mystics": 77
+  },
+  "settled": "2026-09-27T21:56",
+  "status": "won",
   "tip": "7:00 PM",
-  "why": "rating 1640 v 1562 (+77.23) \u00b7 last 10: 9-1 \u00b7 at home"
+  "why": "rating 1640 v 1562 (+77.23) \u00b7 last 10: 9-1 \u00b7 at home",
+  "winner": "Atlanta Dream"
  },
  "wnba:401918014": {
   "conf": 65.7,
@@ -23824,6 +23839,11 @@
   "conf": 64.7,
   "dog": false,
   "league": "wnba",
+  "live": "Halftime",
+  "live_score": {
+   "Dallas Wings": 31,
+   "Golden State Valkyries": 58
+  },
   "logged": "2026-09-27T19:22",
   "market_agrees": true,
   "matchup": "DAL @ GS",
