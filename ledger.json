@@ -19901,29 +19901,31 @@
   "conf": 55.0,
   "dog": false,
   "league": "nfl",
-  "live": "Halftime",
-  "live_score": {
-   "Denver Broncos": 0,
-   "Los Angeles Rams": 16
-  },
   "logged": "2026-09-27T19:22",
   "market_agrees": true,
   "matchup": "LAR @ DEN",
   "pick": "Denver Broncos",
+  "played": "2026-09-27",
   "price": "-108",
-  "status": "open",
+  "scores": {
+   "Denver Broncos": 30,
+   "Los Angeles Rams": 26
+  },
+  "settled": "2026-09-28T04:00",
+  "status": "won",
   "tip": "8:20 PM",
-  "why": "rating 1544 v 1559 (+15.42) \u00b7 at home"
+  "why": "rating 1544 v 1559 (+15.42) \u00b7 at home",
+  "winner": "Denver Broncos"
  },
  "nfl:401872963": {
   "conf": 57.8,
   "dog": true,
   "league": "nfl",
-  "logged": "2026-09-27T21:56",
+  "logged": "2026-09-28T04:00",
   "market_agrees": false,
   "matchup": "PHI @ CHI",
   "pick": "Chicago Bears",
-  "price": "+170",
+  "price": "+160",
   "status": "open",
   "tip": "8:15 PM",
   "why": "rating 1528 v 1523 (+4.72) \u00b7 at home"
@@ -21255,6 +21257,71 @@
   "tip": "7:00 PM",
   "why": "rating +0.40 v -0.63 (1.02 goals) \u00b7 last 10: 5-5",
   "winner": "Toronto Maple Leafs"
+ },
+ "nhl:401891773": {
+  "conf": 67.6,
+  "dog": false,
+  "league": "nhl",
+  "logged": "2026-09-28T04:00",
+  "market_agrees": true,
+  "matchup": "FLA @ CAR",
+  "pick": "Carolina Hurricanes",
+  "price": "-125",
+  "status": "open",
+  "tip": "5:00 PM",
+  "why": "rating +1.06 v -0.10 (1.16 goals) \u00b7 last 10: 8-2 \u00b7 at home"
+ },
+ "nhl:401891774": {
+  "conf": 52.9,
+  "dog": false,
+  "league": "nhl",
+  "logged": "2026-09-28T04:00",
+  "market_agrees": true,
+  "matchup": "NYR @ BOS",
+  "pick": "Boston Bruins",
+  "price": "-115",
+  "status": "open",
+  "tip": "8:00 PM",
+  "why": "rating +0.15 v -0.03 (0.18 goals) \u00b7 last 10: 4-6 \u00b7 at home"
+ },
+ "nhl:401891775": {
+  "conf": 70.9,
+  "dog": false,
+  "league": "nhl",
+  "logged": "2026-09-28T04:00",
+  "market_agrees": true,
+  "matchup": "CHI @ VGK",
+  "pick": "Vegas Golden Knights",
+  "price": "-265",
+  "status": "open",
+  "tip": "10:30 PM",
+  "why": "rating +0.50 v -0.89 (1.40 goals) \u00b7 last 10: 6-4 \u00b7 at home"
+ },
+ "nhl:401891804": {
+  "conf": 68.5,
+  "dog": false,
+  "league": "nhl",
+  "logged": "2026-09-28T04:00",
+  "market_agrees": true,
+  "matchup": "VAN @ EDM",
+  "pick": "Edmonton Oilers",
+  "price": "-278",
+  "status": "open",
+  "tip": "10:00 PM",
+  "why": "rating +0.08 v -1.14 (1.22 goals) \u00b7 last 10: 4-6 \u00b7 at home"
+ },
+ "nhl:401891827": {
+  "conf": 66.0,
+  "dog": false,
+  "league": "nhl",
+  "logged": "2026-09-28T04:00",
+  "market_agrees": true,
+  "matchup": "MTL @ TOR",
+  "pick": "Montreal Canadiens",
+  "price": "-105",
+  "status": "open",
+  "tip": "7:00 PM",
+  "why": "rating +0.42 v -0.63 (1.05 goals) \u00b7 last 10: 4-6"
  },
  "nor:401843427": {
   "conf": 51.9,
@@ -23839,19 +23906,47 @@
   "conf": 64.7,
   "dog": false,
   "league": "wnba",
-  "live": "Halftime",
-  "live_score": {
-   "Dallas Wings": 31,
-   "Golden State Valkyries": 58
-  },
   "logged": "2026-09-27T19:22",
   "market_agrees": true,
   "matchup": "DAL @ GS",
   "pick": "Golden State Valkyries",
+  "played": "2026-09-27",
   "price": "-290",
-  "status": "open",
+  "scores": {
+   "Dallas Wings": 80,
+   "Golden State Valkyries": 104
+  },
+  "settled": "2026-09-28T04:00",
+  "status": "won",
   "tip": "9:00 PM",
-  "why": "rating 1659 v 1579 (+80.58) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1659 v 1579 (+80.58) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Golden State Valkyries"
+ },
+ "wnba:401918017": {
+  "conf": 53.2,
+  "dog": false,
+  "league": "wnba",
+  "logged": "2026-09-28T04:00",
+  "market_agrees": true,
+  "matchup": "MIN @ NY",
+  "pick": "Minnesota Lynx",
+  "price": "-142",
+  "status": "open",
+  "tip": "8:30 PM",
+  "why": "rating 1644 v 1597 (+47.39) \u00b7 last 10: 5-5"
+ },
+ "wnba:401918018": {
+  "conf": 50.2,
+  "dog": false,
+  "league": "wnba",
+  "logged": "2026-09-28T04:00",
+  "market_agrees": true,
+  "matchup": "LV @ IND",
+  "pick": "Indiana Fever",
+  "price": "-118",
+  "status": "open",
+  "tip": "6:30 PM",
+  "why": "rating 1612 v 1635 (+23.51) \u00b7 last 10: 5-5 \u00b7 at home"
  },
  "wta:182528": {
   "conf": 92.8,
