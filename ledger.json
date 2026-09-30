@@ -21267,26 +21267,34 @@
  },
  "nhl:401891773": {
   "conf": 67.6,
+  "diagnosis": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 68%",
   "dog": false,
   "league": "nhl",
-  "live": "13:41 - 3rd",
-  "live_score": {
-   "Carolina Hurricanes": 0,
-   "Florida Panthers": 0
-  },
   "logged": "2026-09-29T15:59",
   "market_agrees": true,
   "matchup": "FLA @ CAR",
   "pick": "Carolina Hurricanes",
+  "played": "2026-09-29",
   "price": "-130",
-  "status": "open",
+  "scores": {
+   "Carolina Hurricanes": 0,
+   "Florida Panthers": 1
+  },
+  "settled": "2026-09-29T22:19",
+  "status": "lost",
   "tip": "5:00 PM",
-  "why": "rating +1.06 v -0.10 (1.16 goals) \u00b7 last 10: 8-2 \u00b7 at home"
+  "why": "rating +1.06 v -0.10 (1.16 goals) \u00b7 last 10: 8-2 \u00b7 at home",
+  "winner": "Florida Panthers"
  },
  "nhl:401891774": {
   "conf": 52.9,
   "dog": false,
   "league": "nhl",
+  "live": "10:05 - 3rd",
+  "live_score": {
+   "Boston Bruins": 0,
+   "New York Rangers": 0
+  },
   "logged": "2026-09-29T19:26",
   "market_agrees": true,
   "matchup": "NYR @ BOS",
@@ -21300,11 +21308,11 @@
   "conf": 70.9,
   "dog": false,
   "league": "nhl",
-  "logged": "2026-09-29T19:26",
+  "logged": "2026-09-29T22:19",
   "market_agrees": true,
   "matchup": "CHI @ VGK",
   "pick": "Vegas Golden Knights",
-  "price": "-258",
+  "price": "-270",
   "status": "open",
   "tip": "10:30 PM",
   "why": "rating +0.50 v -0.89 (1.40 goals) \u00b7 last 10: 6-4 \u00b7 at home"
@@ -21313,7 +21321,7 @@
   "conf": 67.1,
   "dog": false,
   "league": "nhl",
-  "logged": "2026-09-29T19:26",
+  "logged": "2026-09-29T22:19",
   "market_agrees": true,
   "matchup": "LA @ COL",
   "pick": "Colorado Avalanche",
@@ -21326,6 +21334,11 @@
   "conf": 68.5,
   "dog": false,
   "league": "nhl",
+  "live": "14:07 - 1st",
+  "live_score": {
+   "Edmonton Oilers": 0,
+   "Vancouver Canucks": 0
+  },
   "logged": "2026-09-29T19:26",
   "market_agrees": true,
   "matchup": "VAN @ EDM",
@@ -21339,7 +21352,7 @@
   "conf": 50.1,
   "dog": false,
   "league": "nhl",
-  "logged": "2026-09-29T19:26",
+  "logged": "2026-09-29T22:19",
   "market_agrees": true,
   "matchup": "PIT @ PHI",
   "pick": "Philadelphia Flyers",
@@ -21352,25 +21365,27 @@
   "conf": 66.0,
   "dog": false,
   "league": "nhl",
-  "live": "17:26 - 1st",
-  "live_score": {
-   "Montreal Canadiens": 0,
-   "Toronto Maple Leafs": 1
-  },
   "logged": "2026-09-29T15:59",
   "market_agrees": true,
   "matchup": "MTL @ TOR",
   "pick": "Montreal Canadiens",
+  "played": "2026-09-29",
   "price": "-105",
-  "status": "open",
+  "scores": {
+   "Montreal Canadiens": 3,
+   "Toronto Maple Leafs": 2
+  },
+  "settled": "2026-09-29T22:19",
+  "status": "won",
   "tip": "7:00 PM",
-  "why": "rating +0.42 v -0.63 (1.05 goals) \u00b7 last 10: 4-6"
+  "why": "rating +0.42 v -0.63 (1.05 goals) \u00b7 last 10: 4-6",
+  "winner": "Montreal Canadiens"
  },
  "nhl:401892431": {
   "conf": 55.6,
   "dog": true,
   "league": "nhl",
-  "logged": "2026-09-29T19:26",
+  "logged": "2026-09-29T22:19",
   "market_agrees": false,
   "matchup": "NYI @ TOR",
   "pick": "New York Islanders",
@@ -23982,6 +23997,11 @@
   "conf": 53.2,
   "dog": false,
   "league": "wnba",
+  "live": "6:45 - 4th",
+  "live_score": {
+   "Minnesota Lynx": 60,
+   "New York Liberty": 76
+  },
   "logged": "2026-09-29T19:26",
   "market_agrees": true,
   "matchup": "MIN @ NY",
@@ -23995,25 +24015,27 @@
   "conf": 50.2,
   "dog": false,
   "league": "wnba",
-  "live": "Halftime",
-  "live_score": {
-   "Indiana Fever": 48,
-   "Las Vegas Aces": 43
-  },
   "logged": "2026-09-29T15:59",
   "market_agrees": true,
   "matchup": "LV @ IND",
   "pick": "Indiana Fever",
+  "played": "2026-09-29",
   "price": "-112",
-  "status": "open",
+  "scores": {
+   "Indiana Fever": 99,
+   "Las Vegas Aces": 89
+  },
+  "settled": "2026-09-29T22:19",
+  "status": "won",
   "tip": "6:30 PM",
-  "why": "rating 1612 v 1635 (+23.51) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1612 v 1635 (+23.51) \u00b7 last 10: 5-5 \u00b7 at home",
+  "winner": "Indiana Fever"
  },
  "wnba:401918019": {
   "conf": 59.9,
   "dog": false,
   "league": "wnba",
-  "logged": "2026-09-29T19:26",
+  "logged": "2026-09-29T22:19",
   "market_agrees": true,
   "matchup": "ATL @ WSH",
   "pick": "Atlanta Dream",
@@ -24026,11 +24048,11 @@
   "conf": 61.3,
   "dog": false,
   "league": "wnba",
-  "logged": "2026-09-29T19:26",
+  "logged": "2026-09-29T22:19",
   "market_agrees": true,
   "matchup": "GS @ DAL",
   "pick": "Golden State Valkyries",
-  "price": "-192",
+  "price": "-180",
   "status": "open",
   "tip": "9:00 PM",
   "why": "rating 1671 v 1567 (+104.80) \u00b7 last 10: 8-2"
