@@ -12745,16 +12745,23 @@
   "market_agrees": true,
   "matchup": "CLE @ ORL",
   "pick": "Orlando Magic",
+  "played": "2026-10-13",
   "price": "-105",
-  "status": "open",
+  "scores": {
+   "Cleveland Cavaliers": 116,
+   "Orlando Magic": 132
+  },
+  "settled": "2026-10-13T21:54",
+  "status": "won",
   "tip": "7:00 PM",
-  "why": "rating 1543 v 1572 (+29.64) \u00b7 at home"
+  "why": "rating 1543 v 1572 (+29.64) \u00b7 at home",
+  "winner": "Orlando Magic"
  },
  "nba:401898404": {
   "conf": 74.9,
   "dog": false,
   "league": "nba",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": null,
   "matchup": "BKN @ MIA",
   "pick": "Miami Heat",
@@ -12767,7 +12774,7 @@
   "conf": 68.5,
   "dog": false,
   "league": "nba",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": null,
   "matchup": "CHA @ BOS",
   "pick": "Boston Celtics",
@@ -12818,13 +12825,13 @@
  },
  "nba:401898718": {
   "conf": 68.2,
-  "dog": false,
+  "dog": true,
   "league": "nba",
-  "logged": "2026-10-13T19:04",
-  "market_agrees": true,
+  "logged": "2026-10-13T21:54",
+  "market_agrees": false,
   "matchup": "GS @ LAL",
   "pick": "Los Angeles Lakers",
-  "price": "-125",
+  "price": "+114",
   "status": "open",
   "tip": "10:00 PM",
   "why": "rating 1549 v 1466 (+82.41) \u00b7 at home"
@@ -12875,7 +12882,7 @@
   "conf": 74.4,
   "dog": false,
   "league": "nba",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": null,
   "matchup": "PHX @ SA",
   "pick": "San Antonio Spurs",
@@ -12970,7 +12977,7 @@
   "conf": 52.6,
   "dog": false,
   "league": "nba",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": null,
   "matchup": "NO @ DAL",
   "pick": "Dallas Mavericks",
@@ -12983,11 +12990,11 @@
   "conf": 69.6,
   "dog": false,
   "league": "nba",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": true,
   "matchup": "POR @ SAC",
   "pick": "Portland Trail Blazers",
-  "price": "-142",
+  "price": "-218",
   "status": "open",
   "tip": "10:00 PM",
   "why": "rating 1549 v 1355 (+194.19)"
@@ -13100,6 +13107,11 @@
   "conf": 85.2,
   "dog": false,
   "league": "nba",
+  "live": "End of 3rd",
+  "live_score": {
+   "Indiana Pacers": 84,
+   "Oklahoma City Thunder": 85
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "IND @ OKC",
@@ -13175,7 +13187,7 @@
   "conf": 57.4,
   "dog": false,
   "league": "nba",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": null,
   "matchup": "CHI @ MIL",
   "pick": "Milwaukee Bucks",
@@ -13186,16 +13198,24 @@
  },
  "nba:401908944": {
   "conf": 60.5,
+  "diagnosis": "margin 50 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 60%",
   "dog": true,
   "league": "nba",
   "logged": "2026-10-13T19:04",
   "market_agrees": false,
   "matchup": "NY @ TOR",
   "pick": "New York Knicks",
+  "played": "2026-10-13",
   "price": "+320",
-  "status": "open",
+  "scores": {
+   "New York Knicks": 98,
+   "Toronto Raptors": 148
+  },
+  "settled": "2026-10-13T21:55",
+  "status": "lost",
   "tip": "7:00 PM",
-  "why": "rating 1652 v 1528 (+124.43)"
+  "why": "rating 1652 v 1528 (+124.43)",
+  "winner": "Toronto Raptors"
  },
  "nba:401908947": {
   "conf": 69.3,
@@ -13304,7 +13324,7 @@
   "conf": 54.0,
   "dog": false,
   "league": "nba",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": null,
   "matchup": "DET @ MIN",
   "pick": "Minnesota Timberwolves",
@@ -13418,7 +13438,7 @@
   "conf": 50.7,
   "dog": false,
   "league": "nba",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": null,
   "matchup": "DEN @ LAC",
   "pick": "Denver Nuggets",
@@ -22281,6 +22301,11 @@
   "conf": 58.8,
   "dog": false,
   "league": "ncaaf",
+  "live": "Halftime",
+  "live_score": {
+   "Florida International Panthers": 17,
+   "Jacksonville State Gamecocks": 17
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "FIU @ JXST",
@@ -22294,7 +22319,7 @@
   "conf": 51.7,
   "dog": true,
   "league": "ncaaf",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": false,
   "matchup": "KENN @ MOST",
   "pick": "Missouri State Bears",
@@ -22327,10 +22352,10 @@
   "conf": 52.3,
   "dog": false,
   "league": "ncaaf",
-  "live": "13:53 - 1st",
+  "live": "9:50 - 4th",
   "live_score": {
-   "Delaware Blue Hens": 0,
-   "Middle Tennessee Blue Raiders": 0
+   "Delaware Blue Hens": 30,
+   "Middle Tennessee Blue Raiders": 26
   },
   "logged": "2026-10-13T14:34",
   "market_agrees": true,
@@ -22345,7 +22370,7 @@
   "conf": 55.3,
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": true,
   "matchup": "WKU @ SHSU",
   "pick": "Western Kentucky Hilltoppers",
@@ -27150,80 +27175,96 @@
  },
  "nhl:401892488": {
   "conf": 50.6,
+  "diagnosis": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 51%",
   "dog": false,
   "league": "nhl",
-  "live": "17:51 - 2nd",
-  "live_score": {
-   "Detroit Red Wings": 2,
-   "New Jersey Devils": 1
-  },
   "logged": "2026-10-13T14:34",
   "market_agrees": true,
   "matchup": "NJ @ DET",
   "pick": "Detroit Red Wings",
+  "played": "2026-10-13",
   "price": "-115",
-  "status": "open",
+  "scores": {
+   "Detroit Red Wings": 4,
+   "New Jersey Devils": 5
+  },
+  "settled": "2026-10-13T21:55",
+  "status": "lost",
   "tip": "6:00 PM",
-  "why": "rating -0.25 v -0.29 (0.04 goals) \u00b7 last 5: 1-4 \u00b7 at home"
+  "why": "rating -0.25 v -0.29 (0.04 goals) \u00b7 last 5: 1-4 \u00b7 at home",
+  "winner": "New Jersey Devils"
  },
  "nhl:401892489": {
   "conf": 54.5,
+  "diagnosis": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 54%",
   "dog": false,
   "league": "nhl",
-  "live": "End of 1st",
-  "live_score": {
-   "Columbus Blue Jackets": 1,
-   "Florida Panthers": 0
-  },
   "logged": "2026-10-13T14:34",
   "market_agrees": true,
   "matchup": "FLA @ CBJ",
   "pick": "Columbus Blue Jackets",
+  "played": "2026-10-13",
   "price": "-135",
-  "status": "open",
+  "scores": {
+   "Columbus Blue Jackets": 3,
+   "Florida Panthers": 7
+  },
+  "settled": "2026-10-13T21:55",
+  "status": "lost",
   "tip": "6:15 PM",
-  "why": "rating +0.02 v -0.27 (0.30 goals) \u00b7 at home"
+  "why": "rating +0.02 v -0.27 (0.30 goals) \u00b7 at home",
+  "winner": "Florida Panthers"
  },
  "nhl:401892490": {
   "conf": 51.7,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 52%",
   "dog": true,
   "league": "nhl",
-  "live": "8:06 - 1st",
-  "live_score": {
-   "Buffalo Sabres": 1,
-   "Montreal Canadiens": 0
-  },
   "logged": "2026-10-13T14:34",
   "market_agrees": false,
   "matchup": "BUF @ MTL",
   "pick": "Buffalo Sabres",
+  "played": "2026-10-13",
   "price": "+130",
-  "status": "open",
+  "scores": {
+   "Buffalo Sabres": 3,
+   "Montreal Canadiens": 4
+  },
+  "settled": "2026-10-13T21:55",
+  "status": "lost",
   "tip": "6:30 PM",
-  "why": "rating +0.32 v +0.21 (0.11 goals) \u00b7 last 6: 3-3"
+  "why": "rating +0.32 v +0.21 (0.11 goals) \u00b7 last 6: 3-3",
+  "winner": "Montreal Canadiens"
  },
  "nhl:401892491": {
   "conf": 60.2,
   "dog": false,
   "league": "nhl",
-  "live": "13:53 - 1st",
-  "live_score": {
-   "Carolina Hurricanes": 0,
-   "Washington Capitals": 0
-  },
   "logged": "2026-10-13T14:34",
   "market_agrees": true,
   "matchup": "WSH @ CAR",
   "pick": "Carolina Hurricanes",
+  "played": "2026-10-13",
   "price": "-155",
-  "status": "open",
+  "scores": {
+   "Carolina Hurricanes": 3,
+   "Washington Capitals": 2
+  },
+  "settled": "2026-10-13T21:55",
+  "status": "won",
   "tip": "6:45 PM",
-  "why": "rating +0.89 v +0.21 (0.68 goals) \u00b7 last 6: 5-1 \u00b7 at home"
+  "why": "rating +0.89 v +0.21 (0.68 goals) \u00b7 last 6: 5-1 \u00b7 at home",
+  "winner": "Carolina Hurricanes"
  },
  "nhl:401892492": {
   "conf": 51.6,
   "dog": false,
   "league": "nhl",
+  "live": "1:16 - OT",
+  "live_score": {
+   "Philadelphia Flyers": 2,
+   "Seattle Kraken": 2
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "SEA @ PHI",
@@ -27237,6 +27278,11 @@
   "conf": 53.3,
   "dog": false,
   "league": "nhl",
+  "live": "0:28 - 3rd",
+  "live_score": {
+   "New York Rangers": 4,
+   "Tampa Bay Lightning": 1
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "TB @ NYR",
@@ -27250,6 +27296,11 @@
   "conf": 55.3,
   "dog": true,
   "league": "nhl",
+  "live": "5:50 - 3rd",
+  "live_score": {
+   "Ottawa Senators": 1,
+   "St. Louis Blues": 4
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": false,
   "matchup": "STL @ OTT",
@@ -27263,6 +27314,11 @@
   "conf": 63.3,
   "dog": false,
   "league": "nhl",
+  "live": "13:47 - 3rd",
+  "live_score": {
+   "New York Islanders": 3,
+   "Vancouver Canucks": 2
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "VAN @ NYI",
@@ -27276,6 +27332,11 @@
   "conf": 62.4,
   "dog": false,
   "league": "nhl",
+  "live": "End of 2nd",
+  "live_score": {
+   "Chicago Blackhawks": 3,
+   "Pittsburgh Penguins": 2
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "PIT @ CHI",
@@ -27289,6 +27350,11 @@
   "conf": 61.6,
   "dog": false,
   "league": "nhl",
+  "live": "1:49 - 2nd",
+  "live_score": {
+   "Minnesota Wild": 2,
+   "Winnipeg Jets": 3
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "MIN @ WPG",
@@ -27302,6 +27368,11 @@
   "conf": 54.6,
   "dog": false,
   "league": "nhl",
+  "live": "15:01 - 2nd",
+  "live_score": {
+   "Colorado Avalanche": 2,
+   "Dallas Stars": 1
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "COL @ DAL",
@@ -27315,6 +27386,11 @@
   "conf": 56.2,
   "dog": false,
   "league": "nhl",
+  "live": "16:05 - 2nd",
+  "live_score": {
+   "Nashville Predators": 1,
+   "Vegas Golden Knights": 2
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "VGK @ NSH",
@@ -27328,6 +27404,11 @@
   "conf": 59.3,
   "dog": false,
   "league": "nhl",
+  "live": "End of 1st",
+  "live_score": {
+   "Toronto Maple Leafs": 0,
+   "Utah Mammoth": 1
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "TOR @ UTA",
@@ -27341,6 +27422,11 @@
   "conf": 59.7,
   "dog": false,
   "league": "nhl",
+  "live": "18:24 - 1st",
+  "live_score": {
+   "Anaheim Ducks": 0,
+   "Calgary Flames": 0
+  },
   "logged": "2026-10-13T19:04",
   "market_agrees": true,
   "matchup": "CGY @ ANA",
@@ -27351,23 +27437,23 @@
   "why": "rating -0.07 v -0.73 (0.65 goals) \u00b7 last 5: 4-1 \u00b7 at home"
  },
  "nhl:401892502": {
-  "conf": 57.0,
+  "conf": 57.2,
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": true,
   "matchup": "EDM @ LA",
   "pick": "Edmonton Oilers",
   "price": "-130",
   "status": "open",
   "tip": "10:30 PM",
-  "why": "rating +0.16 v -0.31 (0.47 goals)"
+  "why": "rating +0.17 v -0.31 (0.48 goals)"
  },
  "nhl:401892503": {
-  "conf": 59.8,
+  "conf": 59.9,
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": true,
   "matchup": "BOS @ SJ",
   "pick": "Boston Bruins",
@@ -27377,23 +27463,23 @@
   "why": "rating +0.24 v -0.42 (0.66 goals) \u00b7 last 5: 3-2"
  },
  "nhl:401892504": {
-  "conf": 50.0,
+  "conf": 50.4,
   "dog": true,
   "league": "nhl",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": false,
   "matchup": "MTL @ WSH",
   "pick": "Montreal Canadiens",
   "price": "+114",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating +0.21 v +0.21 (0.00 goals)"
+  "why": "rating +0.23 v +0.20 (0.03 goals) \u00b7 last 5: 2-3"
  },
  "nhl:401892505": {
   "conf": 54.6,
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-13T19:04",
+  "logged": "2026-10-13T21:54",
   "market_agrees": true,
   "matchup": "DAL @ COL",
   "pick": "Colorado Avalanche",
