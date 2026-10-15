@@ -1,54 +1,50 @@
 """Feed probe, run on GitHub's runners (the dev sandbox cannot reach ESPN).
-Round 4: can FanDuel's public content API give the market/selection ids a
-bet-slip deep link needs? And does Fanatics expose anything comparable?"""
+Round 5: FanDuel New York -- event names, game market types, and whether the
+event page carries alternate lines (what most stack legs are)."""
 import json
 import urllib.request
+from collections import Counter
 
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
       "Accept": "application/json"}
+AK = "FhMFpcPWXMeyZxOx"
+BASE = "https://sbapi.ny.sportsbook.fanduel.com/api"
 
 
 def get(url):
     try:
         req = urllib.request.Request(url, headers=UA)
         with urllib.request.urlopen(req, timeout=30) as r:
-            body = r.read()
-            try:
-                return r.status, json.loads(body)
-            except ValueError:
-                return r.status, body[:300].decode("utf-8", "replace")
+            return json.load(r)
     except Exception as e:
-        return None, f"{type(e).__name__}: {e}"
+        return {"_error": f"{type(e).__name__}: {e}"}
 
 
-AK = "FhMFpcPWXMeyZxOx"
-for state in ("nj", "ny", "pa", "va", "il"):
-    for page, extra in (("CUSTOM", "&customPageId=nfl"), ("CUSTOM", "&customPageId=nhl"),
-                        ("CUSTOM", "&customPageId=nba")):
-        url = (f"https://sbapi.{state}.sportsbook.fanduel.com/api/content-managed-page"
-               f"?page={page}{extra}&_ak={AK}&timezone=America%2FNew_York")
-        st, d = get(url)
-        if isinstance(d, dict):
-            att = d.get("attachments") or {}
-            ev = att.get("events") or {}
-            mk = att.get("markets") or {}
-            print(f"{state} {extra}: status {st} events={len(ev)} markets={len(mk)}")
-            if ev:
-                e = next(iter(ev.values()))
-                print("   event", {k: e.get(k) for k in ("eventId", "name", "openDate")})
-            if mk:
-                m = next(iter(mk.values()))
-                print("   market", {k: m.get(k) for k in ("marketId", "marketName", "marketType", "eventId")})
-                r = (m.get("runners") or [{}])[0]
-                print("   runner", {k: r.get(k) for k in ("selectionId", "runnerName", "handicap")},
-                      json.dumps(r.get("winRunnerOdds") or {})[:200])
-        else:
-            print(f"{state} {extra}: status {st} {str(d)[:160]}")
-    print()
-
-for url in ("https://sportsbook.fanatics.com/",
-            "https://sportsbook.fanduel.com/",
-            "https://sportsbook.fanduel.com/addToBetslip?marketId=1.1&selectionId=1"):
-    st, d = get(url)
-    print(url, "->", st, str(d)[:120].replace("\n", " "))
+for page in ("nfl", "nhl", "nba", "ncaaf", "ncaab", "college-football", "soccer",
+             "epl", "champions-league", "mlb", "wnba", "ufc", "tennis"):
+    d = get(f"{BASE}/content-managed-page?page=CUSTOM&customPageId={page}&_ak={AK}"
+            f"&timezone=America%2FNew_York")
+    att = d.get("attachments") or {}
+    ev, mk = att.get("events") or {}, att.get("markets") or {}
+    games = [e for e in ev.values() if " @ " in (e.get("name") or "") or " v " in (e.get("name") or "")]
+    print(f"\n== {page}: {d.get('_error','')} events={len(ev)} games={len(games)} markets={len(mk)}")
+    print("   names:", [e.get("name") for e in games[:4]])
+    print("   types:", Counter(m.get("marketType") for m in mk.values()).most_common(12))
+    if games and page in ("nhl", "nfl", "epl", "nba"):
+        eid = games[0]["eventId"]
+        for tab in ("", "&tab=popular", "&tab=goals", "&tab=totals", "&tab=all"):
+            ep = get(f"{BASE}/event-page?eventId={eid}&_ak={AK}{tab}")
+            em = (ep.get("attachments") or {}).get("markets") or {}
+            print(f"   event-page {eid}{tab}: {ep.get('_error','')} markets={len(em)}",
+                  Counter(m.get("marketType") for m in em.values()).most_common(25))
+            alt = next((m for m in em.values() if "ALT" in (m.get("marketType") or "")
+                        and "TOTAL" in (m.get("marketType") or "")), None)
+            if alt:
+                print("     alt sample:", alt.get("marketId"), alt.get("marketName"),
+                      [(r.get("runnerName"), r.get("handicap"), r.get("selectionId"))
+                       for r in (alt.get("runners") or [])[:6]])
+            ml = next((m for m in em.values() if m.get("marketType") == "MONEY_LINE"), None)
+            if ml:
+                print("     ML sample:", ml.get("marketId"),
+                      [(r.get("runnerName"), r.get("selectionId")) for r in ml.get("runners") or []])
