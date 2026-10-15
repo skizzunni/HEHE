@@ -41,7 +41,10 @@ STATE = os.path.join(HERE, ".cache", "last_board.json")
 MARKET_WEIGHT = 0.5
 HALF_VIG = 1.0225
 
-MAX_POOL = 12          # best legs considered; 12 choose 3 = 220 tickets
+MAX_POOL = 12
+# Legs shorter than -500 add almost nothing to the payout while still able to
+# sink the ticket; a -1450 / -2400 pair priced at -881 is risk without reward.
+MIN_DEC = 1.2          # best legs considered; 12 choose 3 = 220 tickets
 BAD_TIERS = {"nosig", "coin"}
 
 
@@ -67,7 +70,7 @@ def eligible(rows):
     for lgk, r in rows:
         o = dec(r.get("p"))
         hit = r.get("hit")
-        if o is None or not hit or r.get("d") or r.get("hd"):
+        if o is None or o < MIN_DEC or not hit or r.get("d") or r.get("hd"):
             continue
         if r.get("tk") in BAD_TIERS:
             continue

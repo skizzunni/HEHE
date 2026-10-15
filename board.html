@@ -1,3 +1,11 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<!-- Without this a phone lays the page out at desktop width and shrinks it to
+     fit, so every row is unreadably small. -->
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
 <title>My Card</title>
 <!-- Served from Pages there is no favicon route, so a saved home-screen
      bookmark comes up blank. Inline SVG needs no extra file. -->
@@ -227,6 +235,28 @@ tbody tr.on td.mine::after{content:"\2713";color:var(--accent);font-weight:800;m
   padding:11px 18px;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.22)}
 #fab[hidden]{display:none}
 @media (max-width:600px){.wrap{padding:0 13px 56px}td,th{padding-left:7px;padding-right:7px}}
+/* Phones: every table row becomes a small card -- the pick on its own line,
+   then each number with its column name -- instead of a wide table whose
+   price and confidence columns sit off the right edge of the screen. */
+@media (max-width:600px){
+  #panel table:not(.sweeptab) thead{display:none}
+  #panel table:not(.sweeptab),#panel table:not(.sweeptab) tbody{display:block;width:100%}
+  #panel table:not(.sweeptab) tr{display:flex;flex-wrap:wrap;align-items:baseline;
+    gap:4px 14px;padding:10px 4px;border-bottom:1px solid var(--rule)}
+  #panel table:not(.sweeptab) td{display:block;border:0;padding:0;text-align:left}
+  #panel table:not(.sweeptab) td.mine{flex:1 0 100%;font-size:16px}
+  #panel table:not(.sweeptab) td[data-l]:not(.mine)::before{content:attr(data-l);
+    display:block;font:600 9.5px var(--mono);letter-spacing:.08em;
+    text-transform:uppercase;color:var(--ink-dim)}
+  #panel td.why,#panel td.comp,#panel td.diag{display:block!important;flex:1 0 100%;
+    font-size:12.5px;color:var(--ink-dim);order:10}
+  #panel td.why::before,#panel td.diag::before{display:none!important}
+  .sweeptab tbody,.sweeptab tr{display:flex;flex-wrap:wrap;width:100%}
+  .sweeptab td{flex:1 0 25%;border-bottom:1px solid var(--rule)}
+  .sweeptab span{font-size:14px}
+  #days button{min-height:44px;display:inline-flex;align-items:center;gap:6px}
+  #panel tr[data-pick]{cursor:pointer}
+}
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
 .rhead{display:flex;flex-wrap:wrap;align-items:baseline;gap:10px 26px;padding:22px 0 8px;
   border-bottom:1px solid var(--rule)}
@@ -406,7 +436,23 @@ function marketCell(r){
   return '<td class="mkt"><span class="' + cls + '">' + mine.p + '</span> &middot; '
        + mine.q.toFixed(0) + '%' + dog + '</td>';
 }
-function render(){
+// Copy each column's header onto its cells, so the phone layout can label
+// numbers once the header row is hidden.
+function labelCells(){
+  document.querySelectorAll("#panel table").forEach(t => {
+    const hs = [...t.querySelectorAll("thead th")].map(h => h.textContent.trim());
+    if(!hs.length) return;
+    t.querySelectorAll("tbody tr").forEach(tr => {
+      // a soccer row adds a competition cell the header row does not have
+      const cells = [...tr.children];
+      const extra = cells.length > hs.length;
+      cells.filter(td => !(extra && td.classList.contains("comp")))
+        .forEach((td, i) => { if(hs[i]) td.setAttribute("data-l", hs[i]); });
+    });
+  });
+}
+function render(){ renderView(); labelCells(); }
+function renderView(){
   const how = document.getElementById("how");
   if(slot === "results"){
     tabs.hidden = true; how.hidden = true;   // that note explains the board, not this
