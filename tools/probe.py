@@ -6,17 +6,7 @@ import urllib.request
 
 UA = {"User-Agent": "Mozilla/5.0"}
 D = "https://docs.kalshi.com"
-PAGES = [
-    "/getting_started/rfqs.md",
-    "/api-reference/communications/create-rfq.md",
-    "/api-reference/communications/get-quotes.md",
-    "/api-reference/communications/get-rfq.md",
-    "/api-reference/communications/accept-rfq-quote.md",
-    "/api-reference/communications/accept-quote.md",
-    "/api-reference/communications/delete-rfq.md",
-    "/api-reference/communications/get-quote.md",
-    "/llms.txt",
-]
+PAGES = ["/getting_started/rfqs.md", "/api-reference/communications/create-rfq.md"]
 
 
 def get(url):
@@ -32,4 +22,7 @@ for p in PAGES:
     t = get(D + p)
     if p == "/llms.txt":
         t = "\n".join(l for l in t.splitlines() if re.search(r"(?i)rfq|quote|communicat", l))
-    print(f"\n\n######## {p} ({len(t)} chars)\n{t[:9000]}")
+    if "create-rfq" in p:
+        a = t.find("CreateRFQRequest:")
+        t = t[a:a + 6000]
+    print(f"\n\n######## {p} ({len(t)} chars)\n{t[:16000]}")
