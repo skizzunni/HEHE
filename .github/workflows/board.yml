@@ -40,6 +40,7 @@ concurrency:
   cancel-in-progress: false
 
 permissions:
+  actions: write         # each run starts the next one (see `next` below)
   contents: write        # commit ledger.json back
   pages: write           # publish the site
   id-token: write        # required by deploy-pages
@@ -47,7 +48,12 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    outputs:
+      started: ${{ steps.clock.outputs.started }}
     steps:
+      - id: clock
+        run: echo "started=$(date +%s)" >> "$GITHUB_OUTPUT"
+
       - uses: actions/checkout@v4
         with:
           ref: claude/mlb-picks-review-jlx9w1
@@ -113,3 +119,27 @@ jobs:
     steps:
       - id: deploy
         uses: actions/deploy-pages@v4
+
+  # A rebuild every five minutes. GitHub's cron is best-effort and on this repo
+  # fires every 1.5 to 4 hours, so each run starts the next one instead: wait
+  # out the rest of the five minutes, then dispatch. A run started by the
+  # Actions token may trigger workflow_dispatch (the one exception to "token
+  # events start no runs"). The concurrency group keeps at most one run going
+  # and one waiting, so chains can never pile up; the cron above restarts the
+  # chain if a dispatch is ever lost. Free on a public repository.
+  next:
+    needs: [build, deploy]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start the next rebuild five minutes after this one began
+        env:
+          GH_TOKEN: ${{ github.token }}
+          STARTED: ${{ needs.build.outputs.started }}
+        run: |
+          now=$(date +%s)
+          start=${STARTED:-$now}
+          wait=$(( 300 - (now - start) ))
+          if [ "$wait" -gt 0 ]; then sleep "$wait"; fi
+          gh workflow run board.yml --repo "$GITHUB_REPOSITORY" \
+            --ref claude/mlb-picks-review-jlx9w1
