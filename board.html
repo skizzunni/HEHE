@@ -771,6 +771,8 @@ function drawLocks(){
 // $1 tickets built to pay about $10,000 (lottery.py): the most efficient
 // plus-money legs, one per game, one book per ticket, with the honest chance.
 let LTDAY = null;
+let LTBOOST = 0;
+try { LTBOOST = +(localStorage.getItem("ltboost") || 0) || 0; } catch (e) {}
 function drawLottery(){
   const K = D.lottery || {};
   const has = d => (((K[d] || {}).tickets) || []).length;
@@ -781,13 +783,13 @@ function drawLottery(){
   let h = '<div class="parlays"><h3>Lottery &mdash; ' + day + '</h3>'
     + '<p><button type="button" data-ltday="today">Today</button> '
     + '<button type="button" data-ltday="tomorrow">Tomorrow</button></p>'
-    + '<p>Two kinds of $1 ticket. <b>1 in 100</b>: the biggest payout the model can find at a 1% '
-    + 'chance. <b>$10,000</b>: the best chance the model can find at a 10,000x payout. You cannot '
+    + '<p>Two kinds of $1 ticket. <b>1 in 100</b>: the biggest payout we can find at a 1% '
+    + 'chance. <b>$10,000</b>: the best chance we can find at a 10,000x payout. You cannot '
     + 'have both &mdash; a ticket that hits 1 time in 100 is worth at most about $100 before the '
     + 'book takes its cut, so a $10,000 payout is always around a 1-in-20,000 shot.</p>'
     + '<p>Every game line FanDuel posts (alternates included) and every priced player prop is '
     + 'scanned; one leg per game, from games that have not started. Game legs are FanDuel '
-    + 'prices; prop tickets are DraftKings prices. The 1-in-N is the honest chance from the marketThe 1-in-N is the model&rsquo;s honest chance.rsquo;s prices, corrected by what past prices really returned.</p>';
+    + 'prices; prop tickets are DraftKings prices. The 1-in-N is the honest chance from the market&rsquo;s prices, corrected by what past prices really returned.</p>';
   if(X.preview) h += '<p class="note"><b>Preview.</b> Today&rsquo;s tickets are set at 8:00 AM '
     + 'Eastern and then stay the same all day.</p>';
   if(X.set) h += '<p class="note">Tickets set at 8:00 AM Eastern for ' + esc(X.day)
@@ -797,17 +799,41 @@ function drawLottery(){
       + ' to build a ticket.</p></div>';
     return;
   }
+  // the profit boost the viewer has today on FanDuel / DraftKings
+  const B = LTBOOST;
+  const boostTier = B ? "10k+" + B : "10k";
+  const hasBoost = T.some(t => t.tier === boostTier);
+  h += '<p><b>Got a parlay profit boost today?</b> ' + [0, 25, 50, 100].map(b =>
+      '<button type="button" data-ltboost="' + b + '" aria-pressed="' + (b === B) + '">'
+      + (b ? '+' + b + '%' : 'None') + '</button>').join(" ")
+    + '<br><span class="note">FanDuel and DraftKings give these out most days (check Promos in '
+    + 'the app). A boost is the one real edge a $1 parlay can get: with +100% the legs only need '
+    + 'to reach 5,000x for $10,000, so the ticket needs fewer legs and hits about twice as often.'
+    + '</span></p>';
+  const shown = T.map((t, i) => [t, i]).filter(([t]) => {
+    const tr = t.tier || "10k";
+    return tr === "100" || tr === (hasBoost ? boostTier : "10k");
+  });
   let lastTier = null;
   const order = t => (t.tier || "10k") === "100" ? 0 : 1;
-  T.map((t, i) => [t, i]).sort((a, b) => order(a[0]) - order(b[0]) || a[1] - b[1]).forEach(([t, i]) => {
-    const tier = t.tier || "10k";
+  const withBoost = p => Math.round(1 + (p - 1) * (1 + B / 100));
+  shown.sort((a, b) => order(a[0]) - order(b[0]) || a[1] - b[1]).forEach(([t0, i]) => {
+    const tier = t0.tier || "10k";
+    // the 1-in-100 tickets get the boost on top; a boosted $10k ticket was
+    // built for it already
+    const t = tier === "100" && B ? Object.assign({}, t0, {pays: withBoost(t0.pays)}) : t0;
     if(tier !== lastTier){
       lastTier = tier;
+      const ones = shown.filter(([x]) => (x.tier || "10k") === "100");
       h += '<h3>' + (tier === "100" ? '1 in 100 &mdash; $1 pays about $' + Math.round(
-          T.filter(x => (x.tier || "10k") === "100").reduce((a, x) => a + x.pays, 0)
-          / Math.max(1, T.filter(x => (x.tier || "10k") === "100").length))
-        : '$1 &rarr; $10,000 &mdash; long shot') + '</h3>';
+          ones.reduce((a, [x]) => a + (B ? withBoost(x.pays) : x.pays), 0) / Math.max(1, ones.length))
+          + (B ? ' with your +' + B + '% boost' : '')
+        : '$1 &rarr; $10,000 &mdash; long shot' + (B && hasBoost ? ', built for your +' + B + '% boost' : '')
+          + (B && !hasBoost ? ' (no boosted ticket today; showing the regular one)' : '')) + '</h3>';
     }
+    if(t.boost) h += '<p class="note">Before the boost the legs pay $' + (t.base || 0).toLocaleString()
+      + '; apply your +' + Math.round(100 * t.boost) + '% profit boost to the parlay to get $'
+      + t.pays.toLocaleString() + '.</p>';
     const st = t.status && t.status !== "open"
       ? ' <b class="' + (t.status === "won" ? "agree" : "fade") + '">' + esc(t.status.toUpperCase()) + '</b>' : '';
     h += '<div class="ptk"><div class="hd"><span>' + esc(t.book) + ' &middot; ' + t.legs.length + ' legs'
@@ -1658,6 +1684,12 @@ document.addEventListener("click", e => {
   const sh = e.target.closest("[data-share]");
   if(sh){ const o = ticketFrom(sh.getAttribute("data-share")); if(o) shareTicket(o, sh); return; }
   if(e.target.id === "shareslip"){ shareTicket(slipTicket(), e.target); return; }
+  const ltb = e.target.closest("[data-ltboost]");
+  if(ltb){
+    LTBOOST = +ltb.getAttribute("data-ltboost") || 0;
+    try { localStorage.setItem("ltboost", String(LTBOOST)); } catch (err) {}
+    render(); return;
+  }
   const ltd = e.target.closest("[data-ltday]");
   if(ltd){ LTDAY = ltd.getAttribute("data-ltday"); render(); return; }
   const ltc = e.target.closest("[data-ltcopy]");

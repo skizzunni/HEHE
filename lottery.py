@@ -166,11 +166,25 @@ def _rank_chance(L):
 # Two tiers. The payout and the chance cannot both be set: a $1 ticket that
 # hits 1 time in 100 is worth at most about $100 before the book's margin,
 # so "1 in 100" pays tens of dollars and "$10,000" is a 1-in-20,000 shot.
+# FanDuel and DraftKings hand out parlay PROFIT boosts most days (+25% to
+# +100% on the winnings). A boost is the one real edge a $1 parlay can get:
+# with +100% the legs only need to reach ~5,000x for the ticket to pay
+# $10,000, which takes fewer legs and roughly doubles the chance. So the $10k
+# tier is also built for each common boost; the tab shows the one you have.
+BOOSTS = (0.25, 0.50, 1.00)
+
+
+def boosted(pay, boost):
+    """What a ticket returns with a profit boost on its winnings."""
+    return 1 + (pay - 1) * (1 + boost)
+
+
 TIERS = (
     # name, decimal price range, rank, stop rule
     dict(tier="100", dec=(1.25, 3.0), rank=_rank_chance, chance=0.01),
     dict(tier="10k", dec=DEC_BAND, rank=_rank, pay=TARGET),
-)
+) + tuple(dict(tier=f"10k+{int(b * 100)}", boost=b, dec=DEC_BAND, rank=_rank,
+               pay=1 + (TARGET - 1) / (1 + b), n=1) for b in BOOSTS)
 
 
 def _tickets(legs, book, tier=TIERS[1]):
@@ -183,13 +197,20 @@ def _tickets(legs, book, tier=TIERS[1]):
         best.setdefault(L["gid"], L)            # one leg per game: its best
     pool = sorted(best.values(), key=lambda L: -rank(L))
     used, made = set(), []
-    for _ in range(N_TICKETS):
+    for _ in range(tier.get("n", N_TICKETS)):
         pick, pay, prob = [], 1.0, 1.0
         for L in pool:
             if L["gid"] in used:
                 continue
             if tier.get("chance") and prob * L["p"] < tier["chance"] * 0.9:
                 continue                        # would overshoot the chance
+            if tier.get("pay") and pay * L["dec"] >= tier["pay"]:
+                # this leg finishes the ticket: finish it with the likeliest
+                # leg that still reaches the payout, not the next in line,
+                # so the ticket does not overshoot $10,000 at the cost of odds
+                fin = [x for x in pool if x["gid"] not in used and x not in pick
+                       and pay * x["dec"] >= tier["pay"]]
+                L = max(fin, key=lambda x: x["p"])
             pick.append(L)
             pay *= L["dec"]
             prob *= L["p"]
@@ -204,7 +225,9 @@ def _tickets(legs, book, tier=TIERS[1]):
         if tier.get("chance") and not tier["chance"] * 0.9 <= prob <= tier["chance"] * 1.25:
             break
         used.update(L["gid"] for L in pick)
-        made.append(dict(book=book, tier=tier["tier"], legs=pick, pays=round(pay),
+        b = tier.get("boost", 0)
+        made.append(dict(book=book, tier=tier["tier"], boost=b, legs=pick,
+                         pays=round(boosted(pay, b)), base=round(pay),
                          prob=prob, odds=round(1 / prob) if prob else None))
     return made
 
