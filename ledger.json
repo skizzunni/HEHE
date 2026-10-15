@@ -1,6 +1,7 @@
 {
  "arg:401841539": {
   "conf": 59.4,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 59%",
   "dog": true,
   "league": "arg",
   "logged": "2026-09-05T13:39",
@@ -9,15 +10,16 @@
   "pick": "Gimnasia (Mendoza)",
   "played": "2026-09-05",
   "price": "+210",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Boca Juniors": 2,
    "Gimnasia (Mendoza)": 2
   },
   "settled": "2026-09-05T18:14",
-  "status": "won",
+  "status": "lost",
   "tip": "3:30 PM",
   "why": "rating 1507 v 1532 (+25.26) \u00b7 last 10: 7-3 \u00b7 at home",
-  "winner": "Gimnasia (Mendoza)"
+  "winner": "Draw"
  },
  "arg:401841540": {
   "conf": 50.2,
@@ -27,10 +29,17 @@
   "market_agrees": false,
   "matchup": "EST @ VEL",
   "pick": "V\u00e9lez Sarsfield",
+  "played": "2026-09-05",
   "price": "+165",
-  "status": "open",
+  "scores": {
+   "Estudiantes de La Plata": 0,
+   "V\u00e9lez Sarsfield": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "8:15 PM",
-  "why": "rating 1530 v 1512 (+18.02) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1530 v 1512 (+18.02) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "V\u00e9lez Sarsfield"
  },
  "arg:401841541": {
   "conf": 63.2,
@@ -54,19 +63,28 @@
  },
  "arg:401841542": {
   "conf": 61.7,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 62%",
   "dog": true,
   "league": "arg",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "IND @ CTR",
   "pick": "Central C\u00f3rdoba (Santiago del Estero)",
+  "played": "2026-09-06",
   "price": "+250",
-  "status": "open",
+  "scores": {
+   "Central C\u00f3rdoba (Santiago del Estero)": 0,
+   "Independiente": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "4:00 PM",
-  "why": "rating 1468 v 1505 (+36.59) \u00b7 last 10: 3-7 \u00b7 at home"
+  "why": "rating 1468 v 1505 (+36.59) \u00b7 last 10: 3-7 \u00b7 at home",
+  "winner": "Independiente"
  },
  "arg:401841543": {
   "conf": 50.7,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
   "dog": true,
   "league": "arg",
   "logged": "2026-09-04T15:36",
@@ -75,15 +93,16 @@
   "pick": "Belgrano (C\u00f3rdoba)",
   "played": "2026-09-04",
   "price": "+115",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Belgrano (C\u00f3rdoba)": 1,
    "Hurac\u00e1n": 1
   },
   "settled": "2026-09-04T21:21",
-  "status": "won",
+  "status": "lost",
   "tip": "6:00 PM",
   "why": "rating 1530 v 1508 (+22.49) \u00b7 last 10: 7-3 \u00b7 at home",
-  "winner": "Belgrano (C\u00f3rdoba)"
+  "winner": "Draw"
  },
  "arg:401841545": {
   "conf": 61.3,
@@ -113,13 +132,21 @@
   "market_agrees": true,
   "matchup": "DYJ @ LAN",
   "pick": "Lan\u00fas",
+  "played": "2026-09-06",
   "price": "-120",
-  "status": "open",
+  "scores": {
+   "Defensa y Justicia": 0,
+   "Lan\u00fas": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "4:00 PM",
-  "why": "rating 1497 v 1507 (+10.14) \u00b7 last 10: 3-7 \u00b7 at home"
+  "why": "rating 1497 v 1507 (+10.14) \u00b7 last 10: 3-7 \u00b7 at home",
+  "winner": "Lan\u00fas"
  },
  "arg:401841547": {
   "conf": 53.0,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 53%",
   "dog": true,
   "league": "arg",
   "logged": "2026-09-04T15:36",
@@ -128,28 +155,37 @@
   "pick": "Platense",
   "played": "2026-09-04",
   "price": "+165",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Deportivo Riestra": 1,
    "Platense": 1
   },
   "settled": "2026-09-04T21:21",
-  "status": "won",
+  "status": "lost",
   "tip": "6:00 PM",
   "why": "rating 1478 v 1473 (+4.88) \u00b7 last 10: 2-8 \u00b7 at home",
-  "winner": "Platense"
+  "winner": "Draw"
  },
  "arg:401841548": {
   "conf": 53.7,
+  "diagnosis": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 54%",
   "dog": false,
   "league": "arg",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "CAT @ RAC",
   "pick": "Racing Club",
+  "played": "2026-09-06",
   "price": "-125",
-  "status": "open",
+  "scores": {
+   "Atl\u00e9tico Tucum\u00e1n": 2,
+   "Racing Club": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "8:30 PM",
-  "why": "rating 1490 v 1488 (+1.67) \u00b7 last 10: 3-7 \u00b7 at home"
+  "why": "rating 1490 v 1488 (+1.67) \u00b7 last 10: 3-7 \u00b7 at home",
+  "winner": "Atl\u00e9tico Tucum\u00e1n"
  },
  "arg:401841549": {
   "conf": 58.1,
@@ -159,23 +195,38 @@
   "market_agrees": true,
   "matchup": "RIV @ RIV",
   "pick": "River Plate",
+  "played": "2026-09-06",
   "price": "-140",
-  "status": "open",
+  "scores": {
+   "Independiente Rivadavia": 1,
+   "River Plate": 3
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "6:15 PM",
-  "why": "rating 1513 v 1532 (+19.20) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1513 v 1532 (+19.20) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "River Plate"
  },
  "arg:401841550": {
   "conf": 54.3,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 54%",
   "dog": false,
   "league": "arg",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "NOB @ ROS",
   "pick": "Rosario Central",
+  "played": "2026-09-06",
   "price": "-160",
-  "status": "open",
+  "scores": {
+   "Newell's Old Boys": 1,
+   "Rosario Central": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "1:45 PM",
-  "why": "rating 1525 v 1486 (+39.16) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1525 v 1486 (+39.16) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Draw"
  },
  "arg:401841551": {
   "conf": 54.7,
@@ -790,10 +841,17 @@
   "market_agrees": null,
   "matchup": "Alejandro Tabilo @ Alexander Zverev",
   "pick": "Alexander Zverev",
+  "played": "2026-09-05",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Alejandro Tabilo": "2 6(2) 2",
+   "Alexander Zverev": "6 7(7) 6"
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "9:30 PM",
-  "why": "rank 2 vs 28"
+  "why": "rank 2 vs 28",
+  "winner": "Alexander Zverev"
  },
  "atp:182700": {
   "conf": 62.2,
@@ -1152,10 +1210,17 @@
   "market_agrees": null,
   "matchup": "Tomas Martin Etcheverry @ Alex Michelsen",
   "pick": "Alex Michelsen",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Alex Michelsen": "7(8) 6 6",
+   "Tomas Martin Etcheverry": "6(6) 4 4"
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "2:30 PM",
-  "why": "rank 46 vs 32"
+  "why": "rank 46 vs 32",
+  "winner": "Alex Michelsen"
  },
  "atp:182718": {
   "conf": 58.3,
@@ -1247,10 +1312,17 @@
   "market_agrees": null,
   "matchup": "Stefanos Tsitsipas @ Ben Shelton",
   "pick": "Ben Shelton",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Ben Shelton": "6 6 6",
+   "Stefanos Tsitsipas": "2 3 4"
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "7:00 PM",
-  "why": "rank 9 vs 53"
+  "why": "rank 9 vs 53",
+  "winner": "Ben Shelton"
  },
  "atp:182723": {
   "conf": 83.1,
@@ -1280,10 +1352,17 @@
   "market_agrees": null,
   "matchup": "Carlos Alcaraz @ Tommy Paul",
   "pick": "Carlos Alcaraz",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Carlos Alcaraz": "6 6 6",
+   "Tommy Paul": "4 3 4"
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "2:00 PM",
-  "why": "rank 3 vs 21"
+  "why": "rank 3 vs 21",
+  "winner": "Carlos Alcaraz"
  },
  "atp:182725": {
   "conf": 64.8,
@@ -1354,10 +1433,17 @@
   "market_agrees": null,
   "matchup": "Learner Tien @ Jakub Mensik",
   "pick": "Learner Tien",
+  "played": "2026-09-05",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Jakub Mensik": "3 6 7(7) 3 4",
+   "Learner Tien": "6 1 6(2) 6 6"
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "9:30 PM",
-  "why": "rank 15 vs 18"
+  "why": "rank 15 vs 18",
+  "winner": "Learner Tien"
  },
  "atp:182729": {
   "conf": 78.6,
@@ -1631,10 +1717,17 @@
   "market_agrees": null,
   "matchup": "Frances Tiafoe @ Daniil Medvedev",
   "pick": "Frances Tiafoe",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Daniil Medvedev": "6(1) 4 6(6)",
+   "Frances Tiafoe": "7(7) 6 7(8)"
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "3:00 PM",
-  "why": "rank 12 vs 8"
+  "why": "rank 12 vs 8",
+  "winner": "Frances Tiafoe"
  },
  "atp:182745": {
   "conf": 70.8,
@@ -1888,10 +1981,17 @@
   "market_agrees": null,
   "matchup": "Botic Van De Zandschulp @ Zizou Bergs",
   "pick": "Botic Van De Zandschulp",
+  "played": "2026-09-05",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Botic Van De Zandschulp": "3 7(7) 4 7(8) 6",
+   "Zizou Bergs": "6 6(3) 6 6(6) 3"
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "4:30 PM",
-  "why": "rank 70 vs 37"
+  "why": "rank 70 vs 37",
+  "winner": "Botic Van De Zandschulp"
  },
  "atp:182759": {
   "conf": 61.0,
@@ -2300,7 +2400,7 @@
  },
  "bra2:401860308": {
   "conf": 67.8,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 68%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 68%",
   "dog": true,
   "league": "bra2",
   "logged": "2026-09-01T18:22",
@@ -2317,7 +2417,7 @@
   "status": "lost",
   "tip": "6:30 PM",
   "why": "rating 1538 v 1470 (+67.73) \u00b7 last 10: 9-1",
-  "winner": "Londrina"
+  "winner": "Draw"
  },
  "bra2:401860312": {
   "conf": 51.3,
@@ -2367,10 +2467,17 @@
   "market_agrees": true,
   "matchup": "BER @ PON",
   "pick": "S\u00e3o Bernardo",
+  "played": "2026-09-06",
   "price": "-290",
-  "status": "open",
+  "scores": {
+   "Ponte Preta": 0,
+   "S\u00e3o Bernardo": 2
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "5:30 PM",
-  "why": "rating 1501 v 1418 (+83.56) \u00b7 last 10: 3-7"
+  "why": "rating 1501 v 1418 (+83.56) \u00b7 last 10: 3-7",
+  "winner": "S\u00e3o Bernardo"
  },
  "bra2:401860315": {
   "conf": 52.9,
@@ -2414,19 +2521,28 @@
  },
  "bra2:401860317": {
   "conf": 60.8,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 61%",
   "dog": true,
   "league": "bra2",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "OPE @ LON",
   "pick": "Londrina",
+  "played": "2026-09-06",
   "price": "+135",
-  "status": "open",
+  "scores": {
+   "Londrina": 1,
+   "Oper\u00e1rio PR": 2
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "10:00 AM",
-  "why": "rating 1470 v 1502 (+32.03) \u00b7 last 10: 3-7 \u00b7 at home"
+  "why": "rating 1470 v 1502 (+32.03) \u00b7 last 10: 3-7 \u00b7 at home",
+  "winner": "Oper\u00e1rio PR"
  },
  "bra2:401860318": {
   "conf": 50.1,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 50%",
   "dog": true,
   "league": "bra2",
   "logged": "2026-09-05T16:28",
@@ -2435,15 +2551,16 @@
   "pick": "Juventude",
   "played": "2026-09-05",
   "price": "+115",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Atl\u00e9tico Goianiense": 2,
    "Juventude": 2
   },
   "settled": "2026-09-05T20:18",
-  "status": "won",
+  "status": "lost",
   "tip": "5:00 PM",
   "why": "rating 1538 v 1518 (+19.50) \u00b7 last 10: 9-1 \u00b7 at home",
-  "winner": "Juventude"
+  "winner": "Draw"
  },
  "bra2:401860319": {
   "conf": 59.3,
@@ -2514,62 +2631,101 @@
   "market_agrees": true,
   "matchup": "CAP @ CRU",
   "pick": "Cruzeiro",
+  "played": "2026-09-06",
   "price": "-110",
-  "status": "open",
+  "scores": {
+   "Athletico-PR": 1,
+   "Cruzeiro": 3
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "3:00 PM",
-  "why": "rating 1513 v 1535 (+22.03) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1513 v 1535 (+22.03) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Cruzeiro"
  },
  "bra:401841219": {
   "conf": 53.6,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 54%",
   "dog": true,
   "league": "bra",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "MIR @ CFC",
   "pick": "Coritiba",
+  "played": "2026-09-06",
   "price": "+140",
-  "status": "open",
+  "scores": {
+   "Coritiba": 1,
+   "Mirassol": 2
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "10:00 AM",
-  "why": "rating 1508 v 1472 (+35.97) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1508 v 1472 (+35.97) \u00b7 last 10: 5-5 \u00b7 at home",
+  "winner": "Mirassol"
  },
  "bra:401841220": {
   "conf": 57.4,
+  "diagnosis": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 57%",
   "dog": false,
   "league": "bra",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "CHA @ COR",
   "pick": "Corinthians",
+  "played": "2026-09-06",
   "price": "-260",
-  "status": "open",
+  "scores": {
+   "Chapecoense": 2,
+   "Corinthians": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "6:30 PM",
-  "why": "rating 1495 v 1441 (+54.07) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1495 v 1441 (+54.07) \u00b7 last 10: 5-5 \u00b7 at home",
+  "winner": "Chapecoense"
  },
  "bra:401841221": {
   "conf": 61.3,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 61%",
   "dog": true,
   "league": "bra",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "PAL @ BOT",
   "pick": "Palmeiras",
+  "played": "2026-09-06",
   "price": "+120",
-  "status": "open",
+  "scores": {
+   "Botafogo": 0,
+   "Palmeiras": 0
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "5:30 PM",
-  "why": "rating 1559 v 1494 (+65.16) \u00b7 last 10: 8-2"
+  "why": "rating 1559 v 1494 (+65.16) \u00b7 last 10: 8-2",
+  "winner": "Draw"
  },
  "bra:401841223": {
   "conf": 56.9,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 57%",
   "dog": true,
   "league": "bra",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "SAN @ INT",
   "pick": "Internacional",
+  "played": "2026-09-06",
   "price": "+100",
-  "status": "open",
+  "scores": {
+   "Internacional": 2,
+   "Santos": 3
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "3:00 PM",
-  "why": "rating 1478 v 1491 (+13.36) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1478 v 1491 (+13.36) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "Santos"
  },
  "bra:401841224": {
   "conf": 57.6,
@@ -2600,10 +2756,17 @@
   "market_agrees": true,
   "matchup": "FLA @ REMO",
   "pick": "Flamengo",
+  "played": "2026-09-06",
   "price": "-215",
-  "status": "open",
+  "scores": {
+   "Flamengo": 1,
+   "Remo": 0
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "3:00 PM",
-  "why": "rating 1559 v 1470 (+88.55) \u00b7 last 10: 8-2"
+  "why": "rating 1559 v 1470 (+88.55) \u00b7 last 10: 8-2",
+  "winner": "Flamengo"
  },
  "bra:401841226": {
   "conf": 59.6,
@@ -2633,10 +2796,17 @@
   "market_agrees": false,
   "matchup": "VAS @ FLU",
   "pick": "Fluminense",
+  "played": "2026-09-05",
   "price": "+140",
-  "status": "open",
+  "scores": {
+   "Fluminense": 1,
+   "Vasco da Gama": 0
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "8:00 PM",
-  "why": "rating 1523 v 1469 (+53.81) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1523 v 1469 (+53.81) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Fluminense"
  },
  "bra:401913077": {
   "conf": 62.6,
@@ -2727,10 +2897,17 @@
   "market_agrees": false,
   "matchup": "COQ @ U. de Chile",
   "pick": "Universidad de Chile",
+  "played": "2026-09-05",
   "price": "+100",
-  "status": "open",
+  "scores": {
+   "Coquimbo Unido": 2,
+   "Universidad de Chile": 4
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "8:00 PM",
-  "why": "rating 1526 v 1507 (+19.67) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1526 v 1507 (+19.67) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Universidad de Chile"
  },
  "chi:401850647": {
   "conf": 55.7,
@@ -2740,10 +2917,17 @@
   "market_agrees": true,
   "matchup": "UdeC @ PAL",
   "pick": "Palestino",
+  "played": "2026-09-06",
   "price": "-145",
-  "status": "open",
+  "scores": {
+   "Palestino": 2,
+   "Universidad de Concepci\u00f3n": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "6:30 PM",
-  "why": "rating 1513 v 1467 (+45.93) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1513 v 1467 (+45.93) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Palestino"
  },
  "chi:401850648": {
   "conf": 51.5,
@@ -2753,10 +2937,17 @@
   "market_agrees": true,
   "matchup": "ULC @ OHI",
   "pick": "O'Higgins",
+  "played": "2026-09-06",
   "price": "-125",
-  "status": "open",
+  "scores": {
+   "O'Higgins": 2,
+   "Uni\u00f3n La Calera": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "1:45 PM",
-  "why": "rating 1477 v 1450 (+26.34) \u00b7 last 10: 3-7 \u00b7 at home"
+  "why": "rating 1477 v 1450 (+26.34) \u00b7 last 10: 3-7 \u00b7 at home",
+  "winner": "O'Higgins"
  },
  "chi:401850649": {
   "conf": 56.2,
@@ -2766,23 +2957,38 @@
   "market_agrees": false,
   "matchup": "\u00d1UB @ LSE",
   "pick": "La Serena",
+  "played": "2026-09-06",
   "price": "+150",
-  "status": "open",
+  "scores": {
+   "La Serena": 2,
+   "\u00d1ublense": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "11:30 AM",
-  "why": "rating 1499 v 1509 (+10.08) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1499 v 1509 (+10.08) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "La Serena"
  },
  "chi:401850650": {
   "conf": 56.2,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 56%",
   "dog": false,
   "league": "chi",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "COL @ HUA",
   "pick": "Colo Colo",
+  "played": "2026-09-06",
   "price": "-125",
-  "status": "open",
+  "scores": {
+   "Colo Colo": 0,
+   "Huachipato": 0
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "4:00 PM",
-  "why": "rating 1567 v 1477 (+90.11) \u00b7 last 10: 10-0"
+  "why": "rating 1567 v 1477 (+90.11) \u00b7 last 10: 10-0",
+  "winner": "Draw"
  },
  "chi:401850651": {
   "conf": 54.6,
@@ -2827,6 +3033,7 @@
  },
  "col:401877843": {
   "conf": 56.2,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 56%",
   "dog": false,
   "league": "col",
   "logged": "2026-09-05T18:14",
@@ -2835,18 +3042,20 @@
   "pick": "Independiente Santa Fe",
   "played": "2026-09-05",
   "price": "-130",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Fortaleza CEIF": 2,
    "Independiente Santa Fe": 2
   },
   "settled": "2026-09-05T21:25",
-  "status": "won",
+  "status": "lost",
   "tip": "7:25 PM",
   "why": "rating 1527 v 1478 (+48.42) \u00b7 last 10: 8-2 \u00b7 at home",
-  "winner": "Independiente Santa Fe"
+  "winner": "Draw"
  },
  "col:401877867": {
   "conf": 56.0,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 56%",
   "dog": true,
   "league": "col",
   "logged": "2026-09-05T18:14",
@@ -2855,15 +3064,16 @@
   "pick": "C\u00facuta Deportivo",
   "played": "2026-09-05",
   "price": "+120",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "C\u00facuta Deportivo": 2,
    "Deportivo Pasto": 2
   },
   "settled": "2026-09-05T21:25",
-  "status": "won",
+  "status": "lost",
   "tip": "7:10 PM",
   "why": "rating 1466 v 1475 (+9.09) \u00b7 last 10: 4-6 \u00b7 at home",
-  "winner": "C\u00facuta Deportivo"
+  "winner": "Draw"
  },
  "col:401877870": {
   "conf": 59.9,
@@ -2888,16 +3098,24 @@
  },
  "col:401877872": {
   "conf": 61.2,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 61%",
   "dog": false,
   "league": "col",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "MIL @ PER",
   "pick": "Millonarios",
+  "played": "2026-09-06",
   "price": "-185",
-  "status": "open",
+  "scores": {
+   "Deportivo Pereira": 1,
+   "Millonarios": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "7:10 PM",
-  "why": "rating 1516 v 1450 (+65.63) \u00b7 last 10: 6-4"
+  "why": "rating 1516 v 1450 (+65.63) \u00b7 last 10: 6-4",
+  "winner": "Draw"
  },
  "col:401877879": {
   "conf": 64.8,
@@ -2921,29 +3139,45 @@
  },
  "col:401877889": {
   "conf": 58.4,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 58%",
   "dog": false,
   "league": "col",
   "logged": "2026-09-05T21:28",
   "market_agrees": true,
   "matchup": "COR @ JUN",
   "pick": "Atl\u00e9tico Junior",
+  "played": "2026-09-05",
   "price": "-285",
-  "status": "open",
+  "scores": {
+   "Atl\u00e9tico Junior": 3,
+   "Jaguares de C\u00f3rdoba": 3
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "9:30 PM",
-  "why": "rating 1517 v 1458 (+58.97) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1517 v 1458 (+58.97) \u00b7 last 10: 5-5 \u00b7 at home",
+  "winner": "Draw"
  },
  "col:401877949": {
   "conf": 57.3,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 57%",
   "dog": false,
   "league": "col",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "AGD @ BOG",
   "pick": "Internacional de Bogot\u00e1",
+  "played": "2026-09-06",
   "price": "-125",
-  "status": "open",
+  "scores": {
+   "Internacional de Bogot\u00e1": 2,
+   "\u00c1guilas Doradas": 2
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "5:00 PM",
-  "why": "rating 1489 v 1504 (+15.49) \u00b7 last 10: 3-7 \u00b7 at home"
+  "why": "rating 1489 v 1504 (+15.49) \u00b7 last 10: 3-7 \u00b7 at home",
+  "winner": "Draw"
  },
  "col:401878032": {
   "conf": 63.3,
@@ -3089,7 +3323,7 @@
  },
  "ecu:401859678": {
   "conf": 50.9,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
   "dog": true,
   "league": "ecu",
   "logged": "2026-09-01T19:22",
@@ -3106,10 +3340,11 @@
   "status": "lost",
   "tip": "8:00 PM",
   "why": "rating 1499 v 1514 (+14.71) \u00b7 last 10: 5-5",
-  "winner": "Liga de Quito"
+  "winner": "Draw"
  },
  "ecu:401859679": {
   "conf": 51.9,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 52%",
   "dog": true,
   "league": "ecu",
   "logged": "2026-09-03T18:42",
@@ -3118,15 +3353,16 @@
   "pick": "Libertad (Ecuador)",
   "played": "2026-09-03",
   "price": "+125",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Emelec": 1,
    "Libertad (Ecuador)": 1
   },
   "settled": "2026-09-03T22:06",
-  "status": "won",
+  "status": "lost",
   "tip": "8:00 PM",
   "why": "rating 1501 v 1491 (+10.25) \u00b7 last 10: 6-4 \u00b7 at home",
-  "winner": "Libertad (Ecuador)"
+  "winner": "Draw"
  },
  "ecu:401859680": {
   "conf": 62.8,
@@ -3150,6 +3386,7 @@
  },
  "ecu:401859681": {
   "conf": 52.5,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 52%",
   "dog": false,
   "league": "ecu",
   "logged": "2026-09-03T03:38",
@@ -3158,28 +3395,37 @@
   "pick": "Universidad Cat\u00f3lica (Quito)",
   "played": "2026-09-03",
   "price": "-115",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Aucas": 1,
    "Universidad Cat\u00f3lica (Quito)": 1
   },
   "settled": "2026-09-03T18:35",
-  "status": "won",
+  "status": "lost",
   "tip": "3:00 PM",
   "why": "rating 1528 v 1521 (+7.27) \u00b7 last 10: 6-4 \u00b7 at home",
-  "winner": "Universidad Cat\u00f3lica (Quito)"
+  "winner": "Draw"
  },
  "ecu:401859682": {
   "conf": 58.4,
+  "diagnosis": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 58%",
   "dog": false,
   "league": "ecu",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "LIB @ CLU",
   "pick": "Deportivo Cuenca",
+  "played": "2026-09-06",
   "price": "-135",
-  "status": "open",
+  "scores": {
+   "Deportivo Cuenca": 0,
+   "Libertad (Ecuador)": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "8:00 PM",
-  "why": "rating 1481 v 1501 (+20.59) \u00b7 last 10: 2-8 \u00b7 at home"
+  "why": "rating 1481 v 1501 (+20.59) \u00b7 last 10: 2-8 \u00b7 at home",
+  "winner": "Libertad (Ecuador)"
  },
  "ecu:401859683": {
   "conf": 61.6,
@@ -3189,23 +3435,38 @@
   "market_agrees": false,
   "matchup": "UCA @ DEL",
   "pick": "Universidad Cat\u00f3lica (Quito)",
+  "played": "2026-09-06",
   "price": "+100",
-  "status": "open",
+  "scores": {
+   "Delf\u00edn": 0,
+   "Universidad Cat\u00f3lica (Quito)": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "5:00 PM",
-  "why": "rating 1528 v 1464 (+63.75) \u00b7 last 10: 6-4"
+  "why": "rating 1528 v 1464 (+63.75) \u00b7 last 10: 6-4",
+  "winner": "Universidad Cat\u00f3lica (Quito)"
  },
  "ecu:401859684": {
   "conf": 52.4,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 52%",
   "dog": true,
   "league": "ecu",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "BAR @ AUC",
   "pick": "Aucas",
+  "played": "2026-09-06",
   "price": "+100",
-  "status": "open",
+  "scores": {
+   "Aucas": 1,
+   "Barcelona SC": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "8:00 PM",
-  "why": "rating 1521 v 1512 (+8.12) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1521 v 1512 (+8.12) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Draw"
  },
  "ecu:401859686": {
   "conf": 63.9,
@@ -3269,6 +3530,7 @@
  },
  "efl1:401880283": {
   "conf": 50.8,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
   "dog": true,
   "league": "efl1",
   "logged": "2026-09-05T13:39",
@@ -3277,31 +3539,41 @@
   "pick": "Swansea City",
   "played": "2026-09-05",
   "price": "+135",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Swansea City": 0,
    "Wrexham": 0
   },
   "settled": "2026-09-05T18:14",
-  "status": "won",
+  "status": "lost",
   "tip": "3:00 PM",
   "why": "rating 1518 v 1503 (+15.59) \u00b7 at home",
-  "winner": "Swansea City"
+  "winner": "Draw"
  },
  "efl1:401880292": {
   "conf": 54.3,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 54%",
   "dog": true,
   "league": "efl1",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "WOL @ BIR",
   "pick": "Birmingham City",
+  "played": "2026-09-06",
   "price": "+195",
-  "status": "open",
+  "scores": {
+   "Birmingham City": 2,
+   "Wolverhampton Wanderers": 2
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "7:00 AM",
-  "why": "rating 1506 v 1507 (+1.06) \u00b7 at home"
+  "why": "rating 1506 v 1507 (+1.06) \u00b7 at home",
+  "winner": "Draw"
  },
  "efl1:401880293": {
   "conf": 52.2,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 52%",
   "dog": false,
   "league": "efl1",
   "logged": "2026-09-02T14:46",
@@ -3310,15 +3582,16 @@
   "pick": "West Bromwich Albion",
   "played": "2026-09-02",
   "price": null,
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Charlton Athletic": 1,
    "West Bromwich Albion": 1
   },
   "settled": "2026-09-02T16:38",
-  "status": "won",
+  "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1476 v 1467 (+8.73) \u00b7 last 10: 4-6 \u00b7 at home",
-  "winner": "West Bromwich Albion"
+  "winner": "Draw"
  },
  "efl1:401880294": {
   "conf": 59.3,
@@ -3364,6 +3637,7 @@
  },
  "efl1:401880296": {
   "conf": 62.4,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 62%",
   "dog": true,
   "league": "efl1",
   "logged": "2026-09-02T14:53",
@@ -3372,15 +3646,16 @@
   "pick": "Burnley",
   "played": "2026-09-02",
   "price": "+225",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Burnley": 1,
    "Middlesbrough": 1
   },
   "settled": "2026-09-02T16:57",
-  "status": "won",
+  "status": "lost",
   "tip": "3:00 PM",
   "why": "rating 1500 v 1540 (+40.10) \u00b7 at home",
-  "winner": "Burnley"
+  "winner": "Draw"
  },
  "efl1:401880297": {
   "conf": 54.1,
@@ -3507,6 +3782,7 @@
  },
  "efl1:401880303": {
   "conf": 50.8,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
   "dog": true,
   "league": "efl1",
   "logged": "2026-09-01T14:23",
@@ -3515,19 +3791,20 @@
   "pick": "Lincoln City",
   "played": "2026-09-01",
   "price": "+140",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Blackburn Rovers": 0,
    "Lincoln City": 0
   },
   "settled": "2026-09-02T14:15",
-  "status": "won",
+  "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1500 v 1477 (+22.69) \u00b7 at home",
-  "winner": "Lincoln City"
+  "winner": "Draw"
  },
  "efl1:401880304": {
   "conf": 66.8,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 67%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 67%",
   "dog": true,
   "league": "efl1",
   "logged": "2026-09-01T14:23",
@@ -3544,7 +3821,7 @@
   "status": "lost",
   "tip": "3:00 PM",
   "why": "rating 1569 v 1506 (+62.52) \u00b7 last 10: 10-0",
-  "winner": "Birmingham City"
+  "winner": "Draw"
  },
  "efl2:401880875": {
   "conf": 57.8,
@@ -3609,7 +3886,7 @@
  },
  "efl2:401880878": {
   "conf": 63.2,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 63%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 63%",
   "dog": true,
   "league": "efl2",
   "logged": "2026-09-01T14:23",
@@ -3626,7 +3903,7 @@
   "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1517 v 1472 (+44.27) \u00b7 last 10: 6-4",
-  "winner": "Peterborough United"
+  "winner": "Draw"
  },
  "efl2:401880879": {
   "conf": 53.4,
@@ -3693,7 +3970,7 @@
  },
  "efl2:401880882": {
   "conf": 57.5,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 58%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 58%",
   "dog": true,
   "league": "efl2",
   "logged": "2026-09-01T14:23",
@@ -3710,7 +3987,7 @@
   "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1500 v 1484 (+16.20)",
-  "winner": "Doncaster Rovers"
+  "winner": "Draw"
  },
  "efl2:401880883": {
   "conf": 50.2,
@@ -3796,7 +4073,7 @@
  },
  "efl3:401881397": {
   "conf": 67.9,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 68%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 68%",
   "dog": true,
   "league": "efl3",
   "logged": "2026-09-01T14:23",
@@ -3813,7 +4090,7 @@
   "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1500 v 1431 (+68.57)",
-  "winner": "Tranmere Rovers"
+  "winner": "Draw"
  },
  "efl3:401881398": {
   "conf": 50.8,
@@ -3877,6 +4154,7 @@
  },
  "efl3:401881401": {
   "conf": 58.1,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 58%",
   "dog": false,
   "league": "efl3",
   "logged": "2026-09-01T14:23",
@@ -3885,19 +4163,20 @@
   "pick": "Northampton Town",
   "played": "2026-09-01",
   "price": "-140",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Crawley Town": 1,
    "Northampton Town": 1
   },
   "settled": "2026-09-02T14:16",
-  "status": "won",
+  "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1500 v 1443 (+57.30) \u00b7 at home",
-  "winner": "Northampton Town"
+  "winner": "Draw"
  },
  "efl3:401881402": {
   "conf": 59.3,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 59%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 59%",
   "dog": true,
   "league": "efl3",
   "logged": "2026-09-01T14:23",
@@ -3914,11 +4193,11 @@
   "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1523 v 1498 (+25.00) \u00b7 last 10: 5-5",
-  "winner": "Fleetwood Town"
+  "winner": "Draw"
  },
  "efl3:401881403": {
   "conf": 63.3,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 63%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 63%",
   "dog": true,
   "league": "efl3",
   "logged": "2026-09-01T14:23",
@@ -3935,11 +4214,11 @@
   "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1545 v 1500 (+44.53) \u00b7 last 10: 8-2",
-  "winner": "Exeter City"
+  "winner": "Draw"
  },
  "efl3:401881404": {
   "conf": 50.8,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
   "dog": true,
   "league": "efl3",
   "logged": "2026-09-01T14:23",
@@ -3956,10 +4235,11 @@
   "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1492 v 1507 (+15.19) \u00b7 last 10: 3-7",
-  "winner": "Crewe Alexandra"
+  "winner": "Draw"
  },
  "efl3:401881405": {
   "conf": 63.0,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 63%",
   "dog": false,
   "league": "efl3",
   "logged": "2026-09-01T14:23",
@@ -3968,15 +4248,16 @@
   "pick": "Chesterfield",
   "played": "2026-09-01",
   "price": "-170",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Chesterfield": 1,
    "Gillingham": 1
   },
   "settled": "2026-09-02T14:16",
-  "status": "won",
+  "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1543 v 1462 (+81.61) \u00b7 last 10: 7-3 \u00b7 at home",
-  "winner": "Chesterfield"
+  "winner": "Draw"
  },
  "efl3:401881406": {
   "conf": 61.9,
@@ -4022,7 +4303,7 @@
  },
  "efl3:401881408": {
   "conf": 69.1,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 69%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 69%",
   "dog": true,
   "league": "efl3",
   "logged": "2026-09-01T14:23",
@@ -4039,7 +4320,7 @@
   "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1540 v 1466 (+74.87) \u00b7 last 10: 7-3",
-  "winner": "Accrington Stanley"
+  "winner": "Draw"
  },
  "epl:401879295": {
   "conf": 60.6,
@@ -4063,6 +4344,7 @@
  },
  "esp:401882867": {
   "conf": 57.9,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 58%",
   "dog": false,
   "league": "esp",
   "logged": "2026-09-02T15:24",
@@ -4071,15 +4353,16 @@
   "pick": "Real Sociedad",
   "played": "2026-09-03",
   "price": "-105",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Celta Vigo": 0,
    "Real Sociedad": 0
   },
   "settled": "2026-09-03T18:35",
-  "status": "won",
+  "status": "lost",
   "tip": "3:00 PM",
   "why": "rating 1488 v 1506 (+18.23) \u00b7 last 10: 4-6 \u00b7 at home",
-  "winner": "Real Sociedad"
+  "winner": "Draw"
  },
  "fra:401876468": {
   "conf": 63.0,
@@ -4104,6 +4387,7 @@
  },
  "jpn:401877628": {
   "conf": 50.2,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 50%",
   "dog": true,
   "league": "jpn",
   "logged": "2026-09-05T02:16",
@@ -4112,54 +4396,79 @@
   "pick": "Avispa Fukuoka",
   "played": "2026-09-05",
   "price": "+105",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Avispa Fukuoka": 1,
    "Mito Hollyhock": 1
   },
   "settled": "2026-09-05T12:13",
-  "status": "won",
+  "status": "lost",
   "tip": "6:00 AM",
   "why": "rating 1481 v 1463 (+18.06) \u00b7 last 10: 5-5 \u00b7 at home",
-  "winner": "Avispa Fukuoka"
+  "winner": "Draw"
  },
  "jpn:401877629": {
   "conf": 63.6,
+  "diagnosis": "margin 2 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 64%",
   "dog": true,
   "league": "jpn",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "ZEL @ NAG",
   "pick": "Nagoya Grampus",
+  "played": "2026-09-06",
   "price": "+205",
-  "status": "open",
+  "scores": {
+   "Machida Zelvia": 3,
+   "Nagoya Grampus": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "5:00 AM",
-  "why": "rating 1503 v 1549 (+46.25) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1503 v 1549 (+46.25) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "Machida Zelvia"
  },
  "jpn:401877630": {
   "conf": 53.4,
+  "diagnosis": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 53%",
   "dog": false,
   "league": "jpn",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "YOK @ KRE",
   "pick": "Kashiwa Reysol",
+  "played": "2026-09-06",
   "price": "-145",
-  "status": "open",
+  "scores": {
+   "Kashiwa Reysol": 0,
+   "Yokohama F. Marinos": 2
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "6:00 AM",
-  "why": "rating 1500 v 1497 (+3.20) \u00b7 last 10: 8-2 \u00b7 at home"
+  "why": "rating 1500 v 1497 (+3.20) \u00b7 last 10: 8-2 \u00b7 at home",
+  "winner": "Yokohama F. Marinos"
  },
  "jpn:401877631": {
   "conf": 59.4,
+  "diagnosis": "margin 2 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 59%",
   "dog": true,
   "league": "jpn",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "GAM @ JEF",
   "pick": "Gamba Osaka",
+  "played": "2026-09-06",
   "price": "+115",
-  "status": "open",
+  "scores": {
+   "Gamba Osaka": 0,
+   "JEF United Ichihara-Chiba": 2
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "5:00 AM",
-  "why": "rating 1507 v 1432 (+74.74) \u00b7 last 10: 5-5"
+  "why": "rating 1507 v 1432 (+74.74) \u00b7 last 10: 5-5",
+  "winner": "JEF United Ichihara-Chiba"
  },
  "jpn:401877632": {
   "conf": 56.2,
@@ -4203,7 +4512,7 @@
  },
  "jpn:401877634": {
   "conf": 63.7,
-  "diagnosis": "margin 0 \u00b7 the book had my side favoured too \u00b7 called at 64%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 64%",
   "dog": false,
   "league": "jpn",
   "logged": "2026-09-02T05:18",
@@ -4220,7 +4529,7 @@
   "status": "lost",
   "tip": "6:00 AM",
   "why": "rating 1523 v 1477 (+46.44) \u00b7 last 10: 6-4",
-  "winner": "Shimizu S-Pulse"
+  "winner": "Draw"
  },
  "jpn:401877635": {
   "conf": 57.6,
@@ -4270,10 +4579,17 @@
   "market_agrees": true,
   "matchup": "SHI @ KAW",
   "pick": "Kawasaki Frontale",
+  "played": "2026-09-06",
   "price": "-115",
-  "status": "open",
+  "scores": {
+   "Kawasaki Frontale": 3,
+   "Shimizu S-Pulse": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "6:00 AM",
-  "why": "rating 1488 v 1477 (+11.65) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1488 v 1477 (+11.65) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "Kawasaki Frontale"
  },
  "jpn:401877642": {
   "conf": 61.5,
@@ -4283,10 +4599,17 @@
   "market_agrees": false,
   "matchup": "SAN @ OKA",
   "pick": "Fagiano Okayama",
+  "played": "2026-09-06",
   "price": "+290",
-  "status": "open",
+  "scores": {
+   "Fagiano Okayama": 3,
+   "Sanfrecce Hiroshima": 2
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "5:00 AM",
-  "why": "rating 1506 v 1541 (+35.53) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1506 v 1541 (+35.53) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Fagiano Okayama"
  },
  "jpn:401877643": {
   "conf": 58.6,
@@ -4296,23 +4619,38 @@
   "market_agrees": true,
   "matchup": "VVN @ VIS",
   "pick": "Vissel Kobe",
+  "played": "2026-09-06",
   "price": "-155",
-  "status": "open",
+  "scores": {
+   "V-Varen Nagasaki": 1,
+   "Vissel Kobe": 3
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "6:00 AM",
-  "why": "rating 1537 v 1477 (+59.88) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1537 v 1477 (+59.88) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Vissel Kobe"
  },
  "jpn:401877644": {
   "conf": 58.0,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 58%",
   "dog": false,
   "league": "jpn",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "TYKV @ CER",
   "pick": "Cerezo Osaka",
+  "played": "2026-09-06",
   "price": "-125",
-  "status": "open",
+  "scores": {
+   "Cerezo Osaka": 0,
+   "Tokyo Verdy 1969": 0
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "6:00 AM",
-  "why": "rating 1525 v 1468 (+57.09) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1525 v 1468 (+57.09) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Draw"
  },
  "jpn:401877645": {
   "conf": 56.7,
@@ -4322,27 +4660,42 @@
   "market_agrees": true,
   "matchup": "KYO @ TOK",
   "pick": "FC Tokyo",
+  "played": "2026-09-06",
   "price": "-155",
-  "status": "open",
+  "scores": {
+   "FC Tokyo": 2,
+   "Kyoto Sanga": 0
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "6:30 AM",
-  "why": "rating 1523 v 1473 (+50.49) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1523 v 1473 (+50.49) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "FC Tokyo"
  },
  "jpn:401877646": {
   "conf": 60.0,
+  "diagnosis": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 60%",
   "dog": false,
   "league": "jpn",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "URA @ KAN",
   "pick": "Kashima Antlers",
+  "played": "2026-09-06",
   "price": "-115",
-  "status": "open",
+  "scores": {
+   "Kashima Antlers": 0,
+   "Urawa Red Diamonds": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "5:00 AM",
-  "why": "rating 1562 v 1495 (+66.78) \u00b7 last 10: 8-2 \u00b7 at home"
+  "why": "rating 1562 v 1495 (+66.78) \u00b7 last 10: 8-2 \u00b7 at home",
+  "winner": "Urawa Red Diamonds"
  },
  "jpn:401877648": {
   "conf": 60.3,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 60%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 60%",
   "dog": true,
   "league": "jpn",
   "logged": "2026-09-02T05:18",
@@ -4359,7 +4712,7 @@
   "status": "lost",
   "tip": "6:00 AM",
   "why": "rating 1507 v 1477 (+29.72) \u00b7 last 10: 5-5",
-  "winner": "V-Varen Nagasaki"
+  "winner": "Draw"
  },
  "jpn:401877649": {
   "conf": 50.8,
@@ -4384,6 +4737,7 @@
  },
  "jpn:401877650": {
   "conf": 51.2,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
   "dog": true,
   "league": "jpn",
   "logged": "2026-09-02T05:18",
@@ -4392,15 +4746,16 @@
   "pick": "Yokohama F. Marinos",
   "played": "2026-09-02",
   "price": "+105",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Kyoto Sanga": 1,
    "Yokohama F. Marinos": 1
   },
   "settled": "2026-09-02T14:16",
-  "status": "won",
+  "status": "lost",
   "tip": "6:00 AM",
   "why": "rating 1497 v 1473 (+24.72) \u00b7 last 10: 6-4 \u00b7 at home",
-  "winner": "Yokohama F. Marinos"
+  "winner": "Draw"
  },
  "jpn:401877651": {
   "conf": 67.1,
@@ -4485,6 +4840,7 @@
  },
  "ksa:401900374": {
   "conf": 50.9,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
   "dog": true,
   "league": "ksa",
   "logged": "2026-09-02T15:24",
@@ -4493,15 +4849,16 @@
   "pick": "Al Fayha",
   "played": "2026-09-03",
   "price": "+180",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Al Fayha": 2,
    "Al Kholood": 2
   },
   "settled": "2026-09-03T14:40",
-  "status": "won",
+  "status": "lost",
   "tip": "11:55 AM",
   "why": "rating 1476 v 1461 (+15.08) \u00b7 last 10: 4-6 \u00b7 at home",
-  "winner": "Al Fayha"
+  "winner": "Draw"
  },
  "ksa:401900375": {
   "conf": 50.4,
@@ -4532,36 +4889,59 @@
   "market_agrees": true,
   "matchup": "SAN @ CAZ",
   "pick": "Cruz Azul",
+  "played": "2026-09-06",
   "price": "-255",
-  "status": "open",
+  "scores": {
+   "Cruz Azul": 1,
+   "Santos": 0
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "won",
   "tip": "7:00 PM",
-  "why": "rating 1500 v 1476 (+23.98) \u00b7 last 6: 3-3 \u00b7 at home"
+  "why": "rating 1500 v 1476 (+23.98) \u00b7 last 6: 3-3 \u00b7 at home",
+  "winner": "Cruz Azul"
  },
  "mex:401876985": {
   "conf": 51.9,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 52%",
   "dog": false,
   "league": "mex",
   "logged": "2026-09-05T21:31",
   "market_agrees": true,
   "matchup": "ATL @ ATS",
   "pick": "Atlas",
+  "played": "2026-09-05",
   "price": "-105",
-  "status": "open",
+  "scores": {
+   "Atlante": 1,
+   "Atlas": 1
+  },
+  "settled": "2026-10-15T00:06",
+  "status": "lost",
   "tip": "11:00 PM",
-  "why": "rating 1507 v 1497 (+10.46) \u00b7 last 6: 4-2 \u00b7 at home"
+  "why": "rating 1507 v 1497 (+10.46) \u00b7 last 6: 4-2 \u00b7 at home",
+  "winner": "Draw"
  },
  "mex:401876987": {
   "conf": 53.6,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 54%",
   "dog": false,
   "league": "mex",
   "logged": "2026-09-05T20:20",
   "market_agrees": true,
   "matchup": "NCX @ UANL",
   "pick": "Tigres UANL",
+  "played": "2026-09-05",
   "price": "-125",
-  "status": "open",
+  "scores": {
+   "Necaxa": 1,
+   "Tigres UANL": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "9:00 PM",
-  "why": "rating 1493 v 1490 (+2.44) \u00b7 at home"
+  "why": "rating 1493 v 1490 (+2.44) \u00b7 at home",
+  "winner": "Draw"
  },
  "mex:401876989": {
   "conf": 56.6,
@@ -10489,6 +10869,7 @@
  },
  "mlb:401817035": {
   "conf": 56.8,
+  "diagnosis": "void: Postponed",
   "dog": false,
   "league": "mlb",
   "logged": "2026-09-22T11:49",
@@ -10496,7 +10877,8 @@
   "matchup": "TOR @ BAL",
   "pick": "Baltimore Orioles",
   "price": "-123",
-  "status": "open",
+  "settled": "2026-10-15T00:07",
+  "status": "void",
   "tip": "6:35 PM",
   "why": "Starter edge +0.77 RA/9: Chris Bassitt (4.64 ERA, 6.68 K/9, 3.43 BB/9 over 97.0 IP) vs Max Scherzer (6.07 ERA, 6.69 K/9, 3.84 BB/9)"
  },
@@ -11870,6 +12252,7 @@
  },
  "mlb:401817103": {
   "conf": 53.2,
+  "diagnosis": "void: Canceled",
   "dog": false,
   "league": "mlb",
   "logged": "2026-09-27T13:44",
@@ -11877,7 +12260,8 @@
   "matchup": "BAL @ NYY",
   "pick": "New York Yankees",
   "price": "-120",
-  "status": "open",
+  "settled": "2026-10-15T00:07",
+  "status": "void",
   "tip": "1:05 PM",
   "why": "Starter edge -0.50 RA/9: Elmer Rodr\u00edguez (5.40 ERA, 7.09 K/9, 5.40 BB/9 over 26.7 IP) vs Shane Baz (4.11 ERA, 7.71 K/9, 3.16 BB/9)"
  },
@@ -12228,7 +12612,7 @@
  },
  "mls:761770": {
   "conf": 60.6,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 61%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 61%",
   "dog": true,
   "league": "mls",
   "logged": "2026-09-04T19:29",
@@ -12245,7 +12629,7 @@
   "status": "lost",
   "tip": "7:30 PM",
   "why": "rating 1566 v 1497 (+68.67) \u00b7 last 10: 9-1",
-  "winner": "New York City FC"
+  "winner": "Draw"
  },
  "mls:761771": {
   "conf": 58.7,
@@ -12255,10 +12639,17 @@
   "market_agrees": false,
   "matchup": "SD @ ORL",
   "pick": "Orlando City SC",
+  "played": "2026-09-05",
   "price": "+110",
-  "status": "open",
+  "scores": {
+   "Orlando City SC": 1,
+   "San Diego FC": 0
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "7:30 PM",
-  "why": "rating 1482 v 1504 (+22.21) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1482 v 1504 (+22.21) \u00b7 last 10: 5-5 \u00b7 at home",
+  "winner": "Orlando City SC"
  },
  "mls:761772": {
   "conf": 50.5,
@@ -12268,13 +12659,21 @@
   "market_agrees": true,
   "matchup": "MTL @ PHI",
   "pick": "Philadelphia Union",
+  "played": "2026-09-05",
   "price": "-245",
-  "status": "open",
+  "scores": {
+   "CF Montr\u00e9al": 0,
+   "Philadelphia Union": 2
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "7:30 PM",
-  "why": "rating 1489 v 1472 (+16.62) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1489 v 1472 (+16.62) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Philadelphia Union"
  },
  "mls:761773": {
   "conf": 50.1,
+  "diagnosis": "void: no final result found within 7 days of the game date",
   "dog": false,
   "league": "mls",
   "logged": "2026-09-05T21:24",
@@ -12282,22 +12681,31 @@
   "matchup": "DC @ CIN",
   "pick": "FC Cincinnati",
   "price": "-145",
-  "status": "open",
+  "settled": "2026-10-15T00:07",
+  "status": "void",
   "tip": "9:31 PM",
   "why": "rating 1502 v 1483 (+19.52) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "mls:761774": {
   "conf": 56.0,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 56%",
   "dog": true,
   "league": "mls",
   "logged": "2026-09-04T21:40",
   "market_agrees": false,
   "matchup": "HOU @ CLT",
   "pick": "Charlotte FC",
+  "played": "2026-09-05",
   "price": "+120",
-  "status": "open",
+  "scores": {
+   "Charlotte FC": 0,
+   "Houston Dynamo FC": 0
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "7:30 PM",
-  "why": "rating 1517 v 1526 (+9.02) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1517 v 1526 (+9.02) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Draw"
  },
  "mls:761775": {
   "conf": 60.6,
@@ -12307,49 +12715,80 @@
   "market_agrees": false,
   "matchup": "COL @ CLB",
   "pick": "Columbus Crew",
+  "played": "2026-09-05",
   "price": "+120",
-  "status": "open",
+  "scores": {
+   "Colorado Rapids": 0,
+   "Columbus Crew": 3
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "7:30 PM",
-  "why": "rating 1467 v 1498 (+31.33) \u00b7 last 10: 2-8 \u00b7 at home"
+  "why": "rating 1467 v 1498 (+31.33) \u00b7 last 10: 2-8 \u00b7 at home",
+  "winner": "Columbus Crew"
  },
  "mls:761776": {
   "conf": 60.6,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 61%",
   "dog": true,
   "league": "mls",
   "logged": "2026-09-04T21:40",
   "market_agrees": false,
   "matchup": "CHI @ TOR",
   "pick": "Toronto FC",
+  "played": "2026-09-05",
   "price": "+185",
-  "status": "open",
+  "scores": {
+   "Chicago Fire FC": 4,
+   "Toronto FC": 4
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "7:30 PM",
-  "why": "rating 1491 v 1522 (+31.38) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1491 v 1522 (+31.38) \u00b7 last 10: 5-5 \u00b7 at home",
+  "winner": "Draw"
  },
  "mls:761777": {
   "conf": 61.5,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 62%",
   "dog": false,
   "league": "mls",
   "logged": "2026-09-04T21:40",
   "market_agrees": true,
   "matchup": "ATL @ MIA",
   "pick": "Inter Miami CF",
+  "played": "2026-09-05",
   "price": "-340",
-  "status": "open",
+  "scores": {
+   "Atlanta United FC": 2,
+   "Inter Miami CF": 2
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "7:30 PM",
-  "why": "rating 1541 v 1467 (+74.09) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1541 v 1467 (+74.09) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Draw"
  },
  "mls:761778": {
   "conf": 58.9,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 59%",
   "dog": true,
   "league": "mls",
   "logged": "2026-09-05T20:18",
   "market_agrees": false,
   "matchup": "SJ @ ATX",
   "pick": "Austin FC",
+  "played": "2026-09-05",
   "price": "+130",
-  "status": "open",
+  "scores": {
+   "Austin FC": 1,
+   "San Jose Earthquakes": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "8:30 PM",
-  "why": "rating 1479 v 1502 (+22.86) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1479 v 1502 (+22.86) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "Draw"
  },
  "mls:761779": {
   "conf": 62.3,
@@ -12359,36 +12798,59 @@
   "market_agrees": true,
   "matchup": "SKC @ DAL",
   "pick": "FC Dallas",
+  "played": "2026-09-05",
   "price": "-255",
-  "status": "open",
+  "scores": {
+   "FC Dallas": 4,
+   "Sporting Kansas City": 3
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "8:30 PM",
-  "why": "rating 1520 v 1442 (+77.86) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1520 v 1442 (+77.86) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "FC Dallas"
  },
  "mls:761780": {
   "conf": 52.3,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 52%",
   "dog": false,
   "league": "mls",
   "logged": "2026-09-05T20:18",
   "market_agrees": true,
   "matchup": "RBNY @ SEA",
   "pick": "Seattle Sounders FC",
+  "played": "2026-09-05",
   "price": "-130",
-  "status": "open",
+  "scores": {
+   "Red Bull New York": 0,
+   "Seattle Sounders FC": 0
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "8:30 PM",
-  "why": "rating 1482 v 1474 (+8.38) \u00b7 last 10: 2-8 \u00b7 at home"
+  "why": "rating 1482 v 1474 (+8.38) \u00b7 last 10: 2-8 \u00b7 at home",
+  "winner": "Draw"
  },
  "mls:761781": {
   "conf": 58.6,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 59%",
   "dog": true,
   "league": "mls",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "LAFC @ RSL",
   "pick": "Real Salt Lake",
+  "played": "2026-09-05",
   "price": "+180",
-  "status": "open",
+  "scores": {
+   "LAFC": 2,
+   "Real Salt Lake": 2
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "9:30 PM",
-  "why": "rating 1493 v 1515 (+21.50) \u00b7 last 10: 3-7 \u00b7 at home"
+  "why": "rating 1493 v 1515 (+21.50) \u00b7 last 10: 3-7 \u00b7 at home",
+  "winner": "Draw"
  },
  "mls:761782": {
   "conf": 61.1,
@@ -12398,10 +12860,17 @@
   "market_agrees": false,
   "matchup": "NE @ LA",
   "pick": "LA Galaxy",
+  "played": "2026-09-05",
   "price": "+150",
-  "status": "open",
+  "scores": {
+   "LA Galaxy": 2,
+   "New England Revolution": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "9:30 PM",
-  "why": "rating 1484 v 1517 (+33.51) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1484 v 1517 (+33.51) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "LA Galaxy"
  },
  "mls:761783": {
   "conf": 55.5,
@@ -12411,23 +12880,38 @@
   "market_agrees": false,
   "matchup": "MIN @ POR",
   "pick": "Portland Timbers",
+  "played": "2026-09-05",
   "price": "+135",
-  "status": "open",
+  "scores": {
+   "Minnesota United FC": 4,
+   "Portland Timbers": 5
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "10:30 PM",
-  "why": "rating 1496 v 1502 (+6.51) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1496 v 1502 (+6.51) \u00b7 last 10: 5-5 \u00b7 at home",
+  "winner": "Portland Timbers"
  },
  "mls:761784": {
   "conf": 52.6,
+  "diagnosis": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 53%",
   "dog": false,
   "league": "mls",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "STL @ VAN",
   "pick": "Vancouver Whitecaps",
+  "played": "2026-09-05",
   "price": "-225",
-  "status": "open",
+  "scores": {
+   "St. Louis CITY SC": 3,
+   "Vancouver Whitecaps": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "10:30 PM",
-  "why": "rating 1549 v 1518 (+31.13) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1549 v 1518 (+31.13) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "St. Louis CITY SC"
  },
  "nba:401898388": {
   "conf": 80.7,
@@ -12761,37 +13245,41 @@
   "conf": 74.9,
   "dog": false,
   "league": "nba",
-  "live": "7:33 - 4th",
-  "live_score": {
-   "Brooklyn Nets": 112,
-   "Miami Heat": 124
-  },
   "logged": "2026-10-14T19:31",
   "market_agrees": true,
   "matchup": "BKN @ MIA",
   "pick": "Miami Heat",
+  "played": "2026-10-14",
   "price": "-180",
-  "status": "open",
+  "scores": {
+   "Brooklyn Nets": 128,
+   "Miami Heat": 144
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "7:30 PM",
-  "why": "rating 1543 v 1404 (+139.67) \u00b7 at home"
+  "why": "rating 1543 v 1404 (+139.67) \u00b7 at home",
+  "winner": "Miami Heat"
  },
  "nba:401898405": {
   "conf": 68.5,
   "dog": false,
   "league": "nba",
-  "live": "2:33 - 4th",
-  "live_score": {
-   "Boston Celtics": 107,
-   "Charlotte Hornets": 90
-  },
   "logged": "2026-10-14T19:31",
   "market_agrees": true,
   "matchup": "CHA @ BOS",
   "pick": "Boston Celtics",
+  "played": "2026-10-14",
   "price": "-310",
-  "status": "open",
+  "scores": {
+   "Boston Celtics": 114,
+   "Charlotte Hornets": 93
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "7:30 PM",
-  "why": "rating 1632 v 1547 (+84.87) \u00b7 at home"
+  "why": "rating 1632 v 1547 (+84.87) \u00b7 at home",
+  "winner": "Boston Celtics"
  },
  "nba:401898716": {
   "conf": 69.3,
@@ -12900,19 +13388,21 @@
   "conf": 74.4,
   "dog": false,
   "league": "nba",
-  "live": "7:09 - 3rd",
-  "live_score": {
-   "Phoenix Suns": 59,
-   "San Antonio Spurs": 77
-  },
   "logged": "2026-10-14T19:31",
   "market_agrees": true,
   "matchup": "PHX @ SA",
   "pick": "San Antonio Spurs",
+  "played": "2026-10-14",
   "price": "-575",
-  "status": "open",
+  "scores": {
+   "Phoenix Suns": 103,
+   "San Antonio Spurs": 123
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "8:00 PM",
-  "why": "rating 1652 v 1516 (+135.45) \u00b7 at home"
+  "why": "rating 1652 v 1516 (+135.45) \u00b7 at home",
+  "winner": "San Antonio Spurs"
  },
  "nba:401901820": {
   "conf": 86.3,
@@ -12998,21 +13488,24 @@
  },
  "nba:401901825": {
   "conf": 52.6,
+  "diagnosis": "margin 4 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 53%",
   "dog": true,
   "league": "nba",
-  "live": "4:04 - 3rd",
-  "live_score": {
-   "Dallas Mavericks": 56,
-   "New Orleans Pelicans": 67
-  },
   "logged": "2026-10-14T19:31",
   "market_agrees": false,
   "matchup": "NO @ DAL",
   "pick": "Dallas Mavericks",
+  "played": "2026-10-14",
   "price": "+160",
-  "status": "open",
+  "scores": {
+   "Dallas Mavericks": 97,
+   "New Orleans Pelicans": 101
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "8:00 PM",
-  "why": "rating 1415 v 1447 (+31.60) \u00b7 at home"
+  "why": "rating 1415 v 1447 (+31.60) \u00b7 at home",
+  "winner": "New Orleans Pelicans"
  },
  "nba:401901826": {
   "conf": 69.6,
@@ -13235,21 +13728,24 @@
  },
  "nba:401908942": {
   "conf": 57.4,
+  "diagnosis": "margin 21 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 57%",
   "dog": true,
   "league": "nba",
-  "live": "8:09 - 3rd",
-  "live_score": {
-   "Chicago Bulls": 73,
-   "Milwaukee Bucks": 47
-  },
   "logged": "2026-10-14T19:31",
   "market_agrees": false,
   "matchup": "CHI @ MIL",
   "pick": "Milwaukee Bucks",
+  "played": "2026-10-14",
   "price": "+164",
-  "status": "open",
+  "scores": {
+   "Chicago Bulls": 125,
+   "Milwaukee Bucks": 104
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "8:00 PM",
-  "why": "rating 1384 v 1383 (+1.56) \u00b7 at home"
+  "why": "rating 1384 v 1383 (+1.56) \u00b7 at home",
+  "winner": "Chicago Bulls"
  },
  "nba:401908944": {
   "conf": 60.5,
@@ -13390,21 +13886,24 @@
  },
  "nba:401914125": {
   "conf": 54.0,
+  "diagnosis": "margin 22 \u00b7 the book had my side favoured too \u00b7 called at 54%",
   "dog": false,
   "league": "nba",
-  "live": "7:35 - 3rd",
-  "live_score": {
-   "Detroit Pistons": 75,
-   "Minnesota Timberwolves": 67
-  },
   "logged": "2026-10-14T19:31",
   "market_agrees": true,
   "matchup": "DET @ MIN",
   "pick": "Minnesota Timberwolves",
+  "played": "2026-10-14",
   "price": "-205",
-  "status": "open",
+  "scores": {
+   "Detroit Pistons": 128,
+   "Minnesota Timberwolves": 106
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "8:00 PM",
-  "why": "rating 1577 v 1599 (+22.17) \u00b7 at home"
+  "why": "rating 1577 v 1599 (+22.17) \u00b7 at home",
+  "winner": "Detroit Pistons"
  },
  "nba:401914127": {
   "conf": 84.3,
@@ -13511,6 +14010,11 @@
   "conf": 50.7,
   "dog": false,
   "league": "nba",
+  "live": "7:53 - 3rd",
+  "live_score": {
+   "Denver Nuggets": 67,
+   "LA Clippers": 71
+  },
   "logged": "2026-10-14T21:45",
   "market_agrees": true,
   "matchup": "DEN @ LAC",
@@ -18451,6 +18955,20 @@
   "why": "rating 1556 v 1569 (+13.84) \u00b7 last 5: 3-2 \u00b7 at home",
   "winner": "Iowa Hawkeyes"
  },
+ "ncaaf:401858493": {
+  "conf": 53.3,
+  "date": "2026-10-16",
+  "dog": true,
+  "league": "ncaaf",
+  "logged": "2026-10-15T00:06",
+  "market_agrees": false,
+  "matchup": "WASH @ PUR",
+  "pick": "Washington Huskies",
+  "price": "+142",
+  "status": "open",
+  "tip": "8:00 PM",
+  "why": "rating 1539 v 1466 (+72.95) \u00b7 last 6: 3-3"
+ },
  "ncaaf:401859184": {
   "conf": 72.8,
   "dog": false,
@@ -19024,9 +19542,10 @@
  },
  "ncaaf:401860923": {
   "conf": 70.5,
+  "date": "2026-10-15",
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "CSU @ TXST",
   "pick": "Texas State Bobcats",
@@ -19968,9 +20487,10 @@
  },
  "ncaaf:401862800": {
   "conf": 56.1,
+  "date": "2026-10-15",
   "dog": false,
   "league": "ncaaf",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "ECU @ UAB",
   "pick": "East Carolina Pirates",
@@ -19978,6 +20498,20 @@
   "status": "open",
   "tip": "7:30 PM",
   "why": "rating 1551 v 1458 (+92.72)"
+ },
+ "ncaaf:401862801": {
+  "conf": 52.5,
+  "date": "2026-10-16",
+  "dog": true,
+  "league": "ncaaf",
+  "logged": "2026-10-15T00:06",
+  "market_agrees": false,
+  "matchup": "MEM @ TULN",
+  "pick": "Tulane Green Wave",
+  "price": "+215",
+  "status": "open",
+  "tip": "7:30 PM",
+  "why": "rating 1532 v 1565 (+32.58) \u00b7 last 5: 2-3 \u00b7 at home"
  },
  "ncaaf:401864424": {
   "conf": 57.4,
@@ -21825,6 +22359,20 @@
   "why": "rating 1494 v 1513 (+18.64) \u00b7 at home",
   "winner": "Old Dominion Monarchs"
  },
+ "ncaaf:401869844": {
+  "conf": 55.2,
+  "date": "2026-10-16",
+  "dog": false,
+  "league": "ncaaf",
+  "logged": "2026-10-15T00:06",
+  "market_agrees": true,
+  "matchup": "APP @ CCU",
+  "pick": "Coastal Carolina Chanticleers",
+  "price": "-102",
+  "status": "open",
+  "tip": "8:00 PM",
+  "why": "rating 1471 v 1485 (+13.88) \u00b7 last 5: 2-3 \u00b7 at home"
+ },
  "ncaaf:401869931": {
   "conf": 53.8,
   "dog": false,
@@ -22011,9 +22559,10 @@
  },
  "ncaaf:401869950": {
   "conf": 61.3,
+  "date": "2026-10-15",
   "dog": true,
   "league": "ncaaf",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": false,
   "matchup": "GASO @ ODU",
   "pick": "Old Dominion Monarchs",
@@ -22433,19 +22982,21 @@
   "conf": 51.7,
   "dog": true,
   "league": "ncaaf",
-  "live": "6:01 - 3rd",
-  "live_score": {
-   "Kennesaw State Owls": 13,
-   "Missouri State Bears": 14
-  },
   "logged": "2026-10-14T19:31",
   "market_agrees": false,
   "matchup": "KENN @ MOST",
   "pick": "Missouri State Bears",
+  "played": "2026-10-14",
   "price": "+120",
-  "status": "open",
+  "scores": {
+   "Kennesaw State Owls": 21,
+   "Missouri State Bears": 24
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "7:30 PM",
-  "why": "rating 1469 v 1507 (+37.98) \u00b7 at home"
+  "why": "rating 1469 v 1507 (+37.98) \u00b7 at home",
+  "winner": "Missouri State Bears"
  },
  "ncaaf:401871066": {
   "conf": 63.3,
@@ -22491,19 +23042,21 @@
   "conf": 55.3,
   "dog": false,
   "league": "ncaaf",
-  "live": "Halftime",
-  "live_score": {
-   "Sam Houston Bearkats": 3,
-   "Western Kentucky Hilltoppers": 10
-  },
   "logged": "2026-10-14T19:31",
   "market_agrees": true,
   "matchup": "WKU @ SHSU",
   "pick": "Western Kentucky Hilltoppers",
+  "played": "2026-10-14",
   "price": "-112",
-  "status": "open",
+  "scores": {
+   "Sam Houston Bearkats": 3,
+   "Western Kentucky Hilltoppers": 16
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "8:00 PM",
-  "why": "rating 1502 v 1415 (+86.80) \u00b7 last 6: 2-4"
+  "why": "rating 1502 v 1415 (+86.80) \u00b7 last 6: 2-4",
+  "winner": "Western Kentucky Hilltoppers"
  },
  "ncaaf:401871089": {
   "conf": 67.6,
@@ -24022,15 +24575,16 @@
   "pick": "Washington Commanders",
   "played": "2026-10-11",
   "price": "-192",
+  "regraded": "won -> push: level score is a draw",
   "scores": {
    "New York Giants": 27,
    "Washington Commanders": 27
   },
   "settled": "2026-10-11T18:33",
-  "status": "won",
+  "status": "push",
   "tip": "1:00 PM",
   "why": "rating 1436 v 1474 (+38.14) \u00b7 at home",
-  "winner": "Washington Commanders"
+  "winner": "Draw"
  },
  "nfl:401872989": {
   "conf": 53.0,
@@ -24158,9 +24712,10 @@
  },
  "nfl:401872995": {
   "conf": 52.2,
+  "date": "2026-10-15",
   "dog": false,
   "league": "nfl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "SEA @ DEN",
   "pick": "Seattle Seahawks",
@@ -27643,182 +28198,227 @@
  },
  "nhl:401892504": {
   "conf": 50.7,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 51%",
   "dog": true,
   "league": "nhl",
-  "live": "20:00 - 3rd",
-  "live_score": {
-   "Montreal Canadiens": 3,
-   "Washington Capitals": 3
-  },
   "logged": "2026-10-14T19:31",
   "market_agrees": false,
   "matchup": "MTL @ WSH",
   "pick": "Montreal Canadiens",
+  "played": "2026-10-14",
   "price": "+100",
-  "status": "open",
+  "scores": {
+   "Montreal Canadiens": 4,
+   "Washington Capitals": 5
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "7:30 PM",
-  "why": "rating +0.23 v +0.18 (0.05 goals) \u00b7 last 5: 2-3"
+  "why": "rating +0.23 v +0.18 (0.05 goals) \u00b7 last 5: 2-3",
+  "winner": "Washington Capitals"
  },
  "nhl:401892505": {
   "conf": 55.0,
+  "diagnosis": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 55%",
   "dog": false,
   "league": "nhl",
-  "live": "16:42 - 2nd",
-  "live_score": {
-   "Colorado Avalanche": 0,
-   "Dallas Stars": 0
-  },
   "logged": "2026-10-14T19:31",
   "market_agrees": true,
   "matchup": "DAL @ COL",
   "pick": "Colorado Avalanche",
+  "played": "2026-10-14",
   "price": "-162",
-  "status": "open",
+  "scores": {
+   "Colorado Avalanche": 2,
+   "Dallas Stars": 3
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "8:30 PM",
-  "why": "rating +0.62 v +0.28 (0.33 goals) \u00b7 last 5: 3-2 \u00b7 at home"
+  "why": "rating +0.62 v +0.28 (0.33 goals) \u00b7 last 5: 3-2 \u00b7 at home",
+  "winner": "Dallas Stars"
  },
  "nhl:401892506": {
   "conf": 60.5,
+  "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "BUF @ TOR",
   "pick": "Buffalo Sabres",
   "price": "-102",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating +0.30 v -0.40 (0.70 goals) \u00b7 last 7: 3-4"
+  "why": "rating +0.31 v -0.40 (0.70 goals) \u00b7 last 7: 3-4"
  },
  "nhl:401892507": {
-  "conf": 55.1,
+  "conf": 55.2,
+  "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "NYI @ OTT",
   "pick": "Ottawa Senators",
   "price": "-166",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating +0.26 v -0.07 (0.34 goals) \u00b7 last 7: 5-2 \u00b7 at home"
+  "why": "rating +0.27 v -0.07 (0.35 goals) \u00b7 last 7: 5-2 \u00b7 at home"
  },
  "nhl:401892508": {
-  "conf": 52.7,
+  "conf": 52.8,
+  "date": "2026-10-15",
   "dog": true,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": false,
   "matchup": "PHI @ DET",
   "pick": "Philadelphia Flyers",
   "price": "+120",
   "status": "open",
   "tip": "7:30 PM",
-  "why": "rating -0.09 v -0.27 (0.18 goals) \u00b7 last 7: 0-7"
+  "why": "rating -0.09 v -0.28 (0.18 goals) \u00b7 last 7: 0-7"
  },
  "nhl:401892509": {
-  "conf": 58.0,
+  "conf": 58.2,
+  "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "SEA @ TB",
   "pick": "Tampa Bay Lightning",
-  "price": "-245",
+  "price": "-258",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating +0.37 v -0.16 (0.53 goals) \u00b7 last 6: 4-2 \u00b7 at home"
+  "why": "rating +0.38 v -0.16 (0.55 goals) \u00b7 last 6: 4-2 \u00b7 at home"
  },
  "nhl:401892510": {
-  "conf": 61.7,
+  "conf": 61.9,
+  "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "VAN @ FLA",
   "pick": "Florida Panthers",
   "price": "-298",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating -0.19 v -0.97 (0.79 goals) \u00b7 last 6: 2-4 \u00b7 at home"
+  "why": "rating -0.20 v -0.99 (0.80 goals) \u00b7 last 6: 2-4 \u00b7 at home"
  },
  "nhl:401892511": {
-  "conf": 58.2,
+  "conf": 58.5,
+  "date": "2026-10-15",
   "dog": true,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": false,
   "matchup": "NYR @ NJ",
   "pick": "New York Rangers",
   "price": "+124",
   "status": "open",
   "tip": "7:00 PM",
-  "why": "rating +0.28 v -0.27 (0.55 goals) \u00b7 last 7: 6-1"
+  "why": "rating +0.29 v -0.27 (0.56 goals) \u00b7 last 7: 6-1"
  },
  "nhl:401892512": {
-  "conf": 56.3,
+  "conf": 56.2,
+  "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "WPG @ CHI",
   "pick": "Winnipeg Jets",
   "price": "-135",
   "status": "open",
   "tip": "8:00 PM",
-  "why": "rating -0.25 v -0.67 (0.42 goals) \u00b7 last 6: 4-2"
+  "why": "rating -0.25 v -0.66 (0.41 goals) \u00b7 last 6: 4-2"
  },
  "nhl:401892513": {
-  "conf": 55.4,
+  "conf": 55.3,
+  "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "SJ @ NSH",
   "pick": "Nashville Predators",
   "price": "-148",
   "status": "open",
   "tip": "8:00 PM",
-  "why": "rating -0.10 v -0.46 (0.36 goals) \u00b7 last 6: 2-4 \u00b7 at home"
+  "why": "rating -0.11 v -0.46 (0.35 goals) \u00b7 last 6: 2-4 \u00b7 at home"
  },
  "nhl:401892514": {
-  "conf": 53.8,
+  "conf": 54.1,
+  "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "STL @ MIN",
   "pick": "Minnesota Wild",
   "price": "-148",
   "status": "open",
   "tip": "8:00 PM",
-  "why": "rating +0.37 v +0.13 (0.25 goals) \u00b7 last 7: 4-3 \u00b7 at home"
+  "why": "rating +0.37 v +0.10 (0.27 goals) \u00b7 last 7: 4-3 \u00b7 at home"
  },
  "nhl:401892515": {
   "conf": 50.2,
+  "date": "2026-10-15",
   "dog": true,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": false,
   "matchup": "UTA @ EDM",
   "pick": "Utah Mammoth",
   "price": "+110",
   "status": "open",
   "tip": "9:00 PM",
-  "why": "rating +0.23 v +0.22 (0.01 goals) \u00b7 last 7: 5-2"
+  "why": "rating +0.23 v +0.21 (0.01 goals) \u00b7 last 7: 5-2"
  },
  "nhl:401892516": {
-  "conf": 65.9,
+  "conf": 65.8,
+  "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-14T21:45",
+  "logged": "2026-10-15T00:06",
   "market_agrees": true,
   "matchup": "CGY @ VGK",
   "pick": "Vegas Golden Knights",
   "price": "-305",
   "status": "open",
   "tip": "10:00 PM",
-  "why": "rating +0.41 v -0.67 (1.09 goals) \u00b7 last 7: 5-2 \u00b7 at home"
+  "why": "rating +0.42 v -0.65 (1.07 goals) \u00b7 last 7: 5-2 \u00b7 at home"
+ },
+ "nhl:401892517": {
+  "conf": 58.3,
+  "date": "2026-10-16",
+  "dog": false,
+  "league": "nhl",
+  "logged": "2026-10-15T00:06",
+  "market_agrees": null,
+  "matchup": "PIT @ COL",
+  "pick": "Colorado Avalanche",
+  "price": null,
+  "status": "open",
+  "tip": "9:00 PM",
+  "why": "rating +0.59 v +0.04 (0.55 goals) \u00b7 last 6: 3-3 \u00b7 at home"
+ },
+ "nhl:401892518": {
+  "conf": 56.2,
+  "date": "2026-10-16",
+  "dog": false,
+  "league": "nhl",
+  "logged": "2026-10-15T00:06",
+  "market_agrees": null,
+  "matchup": "BOS @ ANA",
+  "pick": "Boston Bruins",
+  "price": null,
+  "status": "open",
+  "tip": "10:00 PM",
+  "why": "rating +0.28 v -0.13 (0.41 goals) \u00b7 last 6: 4-2"
  },
  "nor:401843427": {
   "conf": 51.9,
@@ -27848,10 +28448,17 @@
   "market_agrees": false,
   "matchup": "TRO @ KRI",
   "pick": "Kristiansund BK",
+  "played": "2026-09-06",
   "price": "+360",
-  "status": "open",
+  "scores": {
+   "Kristiansund BK": 2,
+   "Tromso": 0
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "1:15 PM",
-  "why": "rating 1485 v 1518 (+33.23) \u00b7 last 5: 1-4 \u00b7 at home"
+  "why": "rating 1485 v 1518 (+33.23) \u00b7 last 5: 1-4 \u00b7 at home",
+  "winner": "Kristiansund BK"
  },
  "nor:401843431": {
   "conf": 50.2,
@@ -27861,23 +28468,38 @@
   "market_agrees": true,
   "matchup": "KFUM @ MOL",
   "pick": "Molde",
+  "played": "2026-09-06",
   "price": "-310",
-  "status": "open",
+  "scores": {
+   "KFUM Oslo": 0,
+   "Molde": 2
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "11:00 AM",
-  "why": "rating 1507 v 1487 (+20.30) \u00b7 last 5: 3-2 \u00b7 at home"
+  "why": "rating 1507 v 1487 (+20.30) \u00b7 last 5: 3-2 \u00b7 at home",
+  "winner": "Molde"
  },
  "nor:401873911": {
   "conf": 51.9,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 52%",
   "dog": true,
   "league": "nor",
   "logged": "2026-09-05T21:31",
   "market_agrees": false,
   "matchup": "VAL @ SAR",
   "pick": "Sarpsborg FK",
+  "played": "2026-09-06",
   "price": "+100",
-  "status": "open",
+  "scores": {
+   "Sarpsborg FK": 2,
+   "V\u00e5lerenga": 2
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "11:00 AM",
-  "why": "rating 1498 v 1487 (+10.17) \u00b7 at home"
+  "why": "rating 1498 v 1487 (+10.17) \u00b7 at home",
+  "winner": "Draw"
  },
  "nor:401873914": {
   "conf": 50.9,
@@ -27902,7 +28524,7 @@
  },
  "nor:401873920": {
   "conf": 59.9,
-  "diagnosis": "margin 0 \u00b7 the book had my side favoured too \u00b7 called at 60%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 60%",
   "dog": false,
   "league": "nor",
   "logged": "2026-09-04T11:09",
@@ -27919,7 +28541,7 @@
   "status": "lost",
   "tip": "3:00 PM",
   "why": "rating 1555 v 1483 (+71.98) \u00b7 last 10: 8-2",
-  "winner": "Sandefjord"
+  "winner": "Draw"
  },
  "nor:401873921": {
   "conf": 61.0,
@@ -27963,16 +28585,24 @@
  },
  "par:401888601": {
   "conf": 60.2,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 60%",
   "dog": true,
   "league": "par",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "OLI @ CST",
   "pick": "Sportivo Trinidense",
+  "played": "2026-09-06",
   "price": "+205",
-  "status": "open",
+  "scores": {
+   "Club Olimpia": 2,
+   "Sportivo Trinidense": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "9:00 AM",
-  "why": "rating 1526 v 1555 (+29.09) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1526 v 1555 (+29.09) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Club Olimpia"
  },
  "par:401888602": {
   "conf": 62.4,
@@ -28002,10 +28632,17 @@
   "market_agrees": true,
   "matchup": "CRN @ LIB",
   "pick": "Libertad",
+  "played": "2026-09-06",
   "price": "-150",
-  "status": "open",
+  "scores": {
+   "Libertad": 4,
+   "Rubio \u00d1\u00fa": 2
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "3:00 PM",
-  "why": "rating 1522 v 1466 (+56.01) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1522 v 1466 (+56.01) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Libertad"
  },
  "par:401888605": {
   "conf": 51.1,
@@ -28049,6 +28686,7 @@
  },
  "par:401888607": {
   "conf": 53.4,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 53%",
   "dog": true,
   "league": "par",
   "logged": "2026-09-01T17:17",
@@ -28057,18 +28695,20 @@
   "pick": "2 de Mayo",
   "played": "2026-09-01",
   "price": "+105",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "2 de Mayo": 2,
    "Sportivo Luque\u00f1o": 2
   },
   "settled": "2026-09-02T14:17",
-  "status": "won",
+  "status": "lost",
   "tip": "5:30 PM",
   "why": "rating 1500 v 1465 (+35.08) \u00b7 last 10: 7-3 \u00b7 at home",
-  "winner": "2 de Mayo"
+  "winner": "Draw"
  },
  "par:401888608": {
   "conf": 58.6,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 59%",
   "dog": false,
   "league": "par",
   "logged": "2026-09-02T17:06",
@@ -28077,28 +28717,37 @@
   "pick": "Club Olimpia",
   "played": "2026-09-02",
   "price": "-150",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "Club Olimpia": 1,
    "Guaran\u00ed": 1
   },
   "settled": "2026-09-02T20:25",
-  "status": "won",
+  "status": "lost",
   "tip": "5:30 PM",
   "why": "rating 1555 v 1495 (+59.55) \u00b7 last 10: 6-4 \u00b7 at home",
-  "winner": "Club Olimpia"
+  "winner": "Draw"
  },
  "par:401888670": {
   "conf": 63.4,
+  "diagnosis": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 63%",
   "dog": true,
   "league": "par",
   "logged": "2026-09-05T21:24",
   "market_agrees": false,
   "matchup": "CSA @ LUQ",
   "pick": "Sportivo Luque\u00f1o",
+  "played": "2026-09-06",
   "price": "+180",
-  "status": "open",
+  "scores": {
+   "Sportivo Ameliano": 2,
+   "Sportivo Luque\u00f1o": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "5:30 PM",
-  "why": "rating 1465 v 1510 (+45.36) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1465 v 1510 (+45.36) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "Sportivo Ameliano"
  },
  "par:401888671": {
   "conf": 54.0,
@@ -28150,10 +28799,17 @@
   "market_agrees": true,
   "matchup": "CHAN @ SCR",
   "pick": "Sporting Cristal",
+  "played": "2026-09-06",
   "price": "-370",
-  "status": "open",
+  "scores": {
+   "Los Chankas": 0,
+   "Sporting Cristal": 5
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "12:00 PM",
-  "why": "rating 1489 v 1506 (+16.42) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1489 v 1506 (+16.42) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "Sporting Cristal"
  },
  "per:401886190": {
   "conf": 55.1,
@@ -28178,16 +28834,24 @@
  },
  "per:401886191": {
   "conf": 58.2,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 58%",
   "dog": false,
   "league": "per",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "ALM @ JP2",
   "pick": "Alianza Lima",
+  "played": "2026-09-06",
   "price": "-140",
-  "status": "open",
+  "scores": {
+   "Alianza Lima": 1,
+   "Juan Pablo II": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "4:00 PM",
-  "why": "rating 1559 v 1478 (+80.24) \u00b7 last 10: 9-1"
+  "why": "rating 1559 v 1478 (+80.24) \u00b7 last 10: 9-1",
+  "winner": "Draw"
  },
  "per:401886192": {
   "conf": 58.0,
@@ -28197,10 +28861,17 @@
   "market_agrees": true,
   "matchup": "ADT @ MGR",
   "pick": "Melgar",
+  "played": "2026-09-06",
   "price": "-290",
-  "status": "open",
+  "scores": {
+   "ADT": 0,
+   "Melgar": 3
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "7:30 PM",
-  "why": "rating 1521 v 1464 (+56.92) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1521 v 1464 (+56.92) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Melgar"
  },
  "per:401886195": {
   "conf": 62.3,
@@ -28225,16 +28896,24 @@
  },
  "per:401886206": {
   "conf": 55.2,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 55%",
   "dog": false,
   "league": "per",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "CMU @ UNI",
   "pick": "Universitario",
+  "played": "2026-09-05",
   "price": "-300",
-  "status": "open",
+  "scores": {
+   "Comerciantes Unidos": 2,
+   "Universitario": 2
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "9:30 PM",
-  "why": "rating 1536 v 1492 (+43.68) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "rating 1536 v 1492 (+43.68) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Draw"
  },
  "per:401886207": {
   "conf": 53.6,
@@ -28284,10 +28963,17 @@
   "market_agrees": true,
   "matchup": "AGR @ GAR",
   "pick": "Deportivo Garcilaso",
+  "played": "2026-09-06",
   "price": "-180",
-  "status": "open",
+  "scores": {
+   "Atl\u00e9tico Grau": 2,
+   "Deportivo Garcilaso": 4
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "2:30 PM",
-  "why": "rating 1530 v 1491 (+39.17) \u00b7 last 10: 9-1 \u00b7 at home"
+  "why": "rating 1530 v 1491 (+39.17) \u00b7 last 10: 9-1 \u00b7 at home",
+  "winner": "Deportivo Garcilaso"
  },
  "per:401886210": {
   "conf": 58.3,
@@ -28351,7 +29037,7 @@
  },
  "rsa:401902056": {
   "conf": 53.8,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 54%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 54%",
   "dog": true,
   "league": "rsa",
   "logged": "2026-09-01T10:18",
@@ -28368,7 +29054,7 @@
   "status": "lost",
   "tip": "1:30 PM",
   "why": "rating 1491 v 1492 (+1.53) \u00b7 last 10: 6-4",
-  "winner": "Durban City"
+  "winner": "Draw"
  },
  "sco:401878387": {
   "conf": 57.3,
@@ -28453,7 +29139,7 @@
  },
  "sco:401878391": {
   "conf": 60.4,
-  "diagnosis": "margin 0 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 60%",
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 60%",
   "dog": true,
   "league": "sco",
   "logged": "2026-09-02T14:28",
@@ -28470,7 +29156,7 @@
   "status": "lost",
   "tip": "2:45 PM",
   "why": "rating 1500 v 1470 (+30.47)",
-  "winner": "Dundee"
+  "winner": "Draw"
  },
  "sco:401878392": {
   "conf": 69.4,
@@ -28500,26 +29186,42 @@
   "market_agrees": false,
   "matchup": "ELF @ BRO",
   "pick": "IF Brommapojkarna",
+  "played": "2026-09-06",
   "price": "+230",
-  "status": "open",
+  "scores": {
+   "IF Brommapojkarna": 2,
+   "IF Elfsborg": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "10:30 AM",
-  "why": "rating 1494 v 1520 (+26.07) \u00b7 last 10: 5-5 \u00b7 at home"
+  "why": "rating 1494 v 1520 (+26.07) \u00b7 last 10: 5-5 \u00b7 at home",
+  "winner": "IF Brommapojkarna"
  },
  "swe:401842817": {
   "conf": 59.2,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 59%",
   "dog": false,
   "league": "swe",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "HAM @ \u00d6RG",
   "pick": "Hammarby IF",
+  "played": "2026-09-06",
   "price": "-450",
-  "status": "open",
+  "scores": {
+   "Hammarby IF": 1,
+   "\u00d6rgryte IS": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "8:00 AM",
-  "why": "rating 1538 v 1462 (+75.41) \u00b7 last 10: 6-4"
+  "why": "rating 1538 v 1462 (+75.41) \u00b7 last 10: 6-4",
+  "winner": "Draw"
  },
  "swe:401873993": {
   "conf": 56.3,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 56%",
   "dog": true,
   "league": "swe",
   "logged": "2026-09-05T01:58",
@@ -28528,15 +29230,16 @@
   "pick": "GAIS",
   "played": "2026-09-05",
   "price": "+135",
+  "regraded": "won -> lost: level score is a draw",
   "scores": {
    "BK H\u00e4cken": 0,
    "GAIS": 0
   },
   "settled": "2026-09-05T16:28",
-  "status": "won",
+  "status": "lost",
   "tip": "9:00 AM",
   "why": "rating 1506 v 1517 (+10.61) \u00b7 last 10: 6-4 \u00b7 at home",
-  "winner": "GAIS"
+  "winner": "Draw"
  },
  "swe:401874013": {
   "conf": 61.7,
@@ -30128,16 +30831,24 @@
  },
  "uru:401914271": {
   "conf": 60.6,
+  "diagnosis": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 61%",
   "dog": false,
   "league": "uru",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "RAC @ CER",
   "pick": "Racing (Montevideo)",
+  "played": "2026-09-06",
   "price": "-120",
-  "status": "open",
+  "scores": {
+   "Cerro": 1,
+   "Racing (Montevideo)": 0
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "9:00 AM",
-  "why": "rating 1542 v 1473 (+68.89) \u00b7 last 10: 8-2"
+  "why": "rating 1542 v 1473 (+68.89) \u00b7 last 10: 8-2",
+  "winner": "Cerro"
  },
  "uru:401914272": {
   "conf": 56.1,
@@ -30161,29 +30872,45 @@
  },
  "uru:401914286": {
   "conf": 51.1,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 51%",
   "dog": false,
   "league": "uru",
   "logged": "2026-09-05T21:24",
   "market_agrees": null,
   "matchup": "DSC @ CEFC",
   "pick": "Central Espa\u00f1ol F\u00fatbol Club",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Central Espa\u00f1ol F\u00fatbol Club": 1,
+   "Defensor Sporting": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "12:00 PM",
-  "why": "rating 1495 v 1471 (+24.33) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "rating 1495 v 1471 (+24.33) \u00b7 last 10: 4-6 \u00b7 at home",
+  "winner": "Draw"
  },
  "uru:401914287": {
   "conf": 50.7,
+  "diagnosis": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 51%",
   "dog": false,
   "league": "uru",
   "logged": "2026-09-05T21:24",
   "market_agrees": true,
   "matchup": "JUV @ NAC",
   "pick": "Nacional",
+  "played": "2026-09-06",
   "price": "-145",
-  "status": "open",
+  "scores": {
+   "Juventud": 2,
+   "Nacional": 2
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "3:30 PM",
-  "why": "rating 1505 v 1482 (+22.41) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1505 v 1482 (+22.41) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Draw"
  },
  "uru:401914288": {
   "conf": 53.5,
@@ -30193,10 +30920,17 @@
   "market_agrees": true,
   "matchup": "BOS @ LIV",
   "pick": "Liverpool",
+  "played": "2026-09-06",
   "price": "-125",
-  "status": "open",
+  "scores": {
+   "Boston River": 0,
+   "Liverpool": 1
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "6:30 PM",
-  "why": "rating 1520 v 1485 (+35.57) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "rating 1520 v 1485 (+35.57) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Liverpool"
  },
  "uru:401914289": {
   "conf": 50.3,
@@ -31217,10 +31951,17 @@
   "market_agrees": null,
   "matchup": "Elena Rybakina @ Yuliia Starodubtseva",
   "pick": "Elena Rybakina",
+  "played": "2026-09-05",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Elena Rybakina": "7(8) 6",
+   "Yuliia Starodubtseva": "6(6) 3"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "8:30 PM",
-  "why": "rank 2 vs 58"
+  "why": "rank 2 vs 58",
+  "winner": "Elena Rybakina"
  },
  "wta:182531": {
   "conf": 83.7,
@@ -31392,10 +32133,17 @@
   "market_agrees": null,
   "matchup": "Taylor Townsend @ Aryna Sabalenka",
   "pick": "Aryna Sabalenka",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Aryna Sabalenka": "6 6",
+   "Taylor Townsend": "4 3"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "11:30 AM",
-  "why": "rank 1 vs 96"
+  "why": "rank 1 vs 96",
+  "winner": "Aryna Sabalenka"
  },
  "wta:182542": {
   "conf": 61.1,
@@ -31787,10 +32535,17 @@
   "market_agrees": null,
   "matchup": "Elise Mertens @ Naomi Osaka",
   "pick": "Naomi Osaka",
+  "played": "2026-09-05",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Elise Mertens": "3 6 5",
+   "Naomi Osaka": "6 3 7"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "7:00 PM",
-  "why": "rank 13 vs 20"
+  "why": "rank 13 vs 20",
+  "winner": "Naomi Osaka"
  },
  "wta:182567": {
   "conf": 50.7,
@@ -31874,16 +32629,24 @@
  },
  "wta:182571": {
   "conf": 53.1,
+  "diagnosis": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 53%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-05T21:24",
   "market_agrees": null,
   "matchup": "Linda Noskova @ Marta Kostyuk",
   "pick": "Marta Kostyuk",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Linda Noskova": "7 5 6",
+   "Marta Kostyuk": "5 7 4"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "12:30 PM",
-  "why": "rank 11 vs 6"
+  "why": "rank 11 vs 6",
+  "winner": "Linda Noskova"
  },
  "wta:182572": {
   "conf": 75.0,
@@ -31968,16 +32731,24 @@
  },
  "wta:182578": {
   "conf": 60.0,
+  "diagnosis": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 60%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-05T18:14",
   "market_agrees": null,
   "matchup": "Alexandra Eala @ Iva Jovic",
   "pick": "Alexandra Eala",
+  "played": "2026-09-05",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Alexandra Eala": "5 6 5",
+   "Iva Jovic": "7 3 7"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "7:00 PM",
-  "why": "rank 18 vs 14"
+  "why": "rank 18 vs 14",
+  "winner": "Iva Jovic"
  },
  "wta:182579": {
   "conf": 80.3,
@@ -32047,10 +32818,17 @@
   "market_agrees": null,
   "matchup": "Sorana Cirstea @ Jessica Pegula",
   "pick": "Jessica Pegula",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Jessica Pegula": "6 6",
+   "Sorana Cirstea": "3 4"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "5:00 PM",
-  "why": "rank 3 vs 17"
+  "why": "rank 3 vs 17",
+  "winner": "Jessica Pegula"
  },
  "wta:182583": {
   "conf": 58.9,
@@ -32154,16 +32932,24 @@
  },
  "wta:182588": {
   "conf": 57.9,
+  "diagnosis": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 58%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-05T21:24",
   "market_agrees": null,
   "matchup": "Emma Navarro @ Anna Kalinskaya",
   "pick": "Anna Kalinskaya",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Anna Kalinskaya": "4 2",
+   "Emma Navarro": "6 6"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "9:00 PM",
-  "why": "rank 23 vs 27"
+  "why": "rank 23 vs 27",
+  "winner": "Emma Navarro"
  },
  "wta:182590": {
   "conf": 77.2,
@@ -33167,10 +33953,17 @@
   "market_agrees": null,
   "matchup": "Sandra Samir @ Ilay Yoruk",
   "pick": "Ilay Yoruk",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Ilay Yoruk": "6 6",
+   "Sandra Samir": "0 4"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "4:00 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Ilay Yoruk"
  },
  "wta:185867": {
   "conf": 67.1,
@@ -33180,10 +33973,17 @@
   "market_agrees": null,
   "matchup": "OZ Ceylin @ Nastasja Schunk",
   "pick": "Nastasja Schunk",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Nastasja Schunk": "6 6",
+   "OZ Ceylin": "2 0"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "5:30 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Nastasja Schunk"
  },
  "wta:185868": {
   "conf": 68.7,
@@ -33193,23 +33993,38 @@
   "market_agrees": null,
   "matchup": "Tena Lukas @ Aya Akan",
   "pick": "Tena Lukas",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Aya Akan": "0 0",
+   "Tena Lukas": "6 6"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "7:00 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Tena Lukas"
  },
  "wta:185869": {
   "conf": 50.0,
+  "diagnosis": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 50%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-05T21:24",
   "market_agrees": null,
   "matchup": "Adelina Lacinova @ Rositsa Dencheva",
   "pick": "Adelina Lacinova",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Adelina Lacinova": "4 0",
+   "Rositsa Dencheva": "6 6"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "5:30 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Rositsa Dencheva"
  },
  "wta:185870": {
   "conf": 70.2,
@@ -33219,23 +34034,38 @@
   "market_agrees": null,
   "matchup": "Miriana Tona @ Denislava Glushkova",
   "pick": "Miriana Tona",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Denislava Glushkova": "3 1",
+   "Miriana Tona": "6 6"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "7:00 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Miriana Tona"
  },
  "wta:185871": {
   "conf": 57.8,
+  "diagnosis": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 58%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-05T21:24",
   "market_agrees": null,
   "matchup": "Aneta Laboutkova @ Rada Zolotareva",
   "pick": "Aneta Laboutkova",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Aneta Laboutkova": "6(2) 4",
+   "Rada Zolotareva": "7(7) 6"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "4:00 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Rada Zolotareva"
  },
  "wta:185872": {
   "conf": 55.0,
@@ -33245,10 +34075,17 @@
   "market_agrees": null,
   "matchup": "Dalila Jakupovic @ Ipek Oz",
   "pick": "Ipek Oz",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Dalila Jakupovic": "2 0",
+   "Ipek Oz": "6 6"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "4:00 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Ipek Oz"
  },
  "wta:185873": {
   "conf": 51.3,
@@ -33258,10 +34095,17 @@
   "market_agrees": null,
   "matchup": "Adrienn Nagy @ Samira De Stefano",
   "pick": "Samira De Stefano",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Adrienn Nagy": "2 1",
+   "Samira De Stefano": "6 6"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "5:30 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Samira De Stefano"
  },
  "wta:185878": {
   "conf": 53.4,
@@ -33271,36 +34115,59 @@
   "market_agrees": null,
   "matchup": "Madison Sieg @ Noelia Manta",
   "pick": "Madison Sieg",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Madison Sieg": "3 6 6",
+   "Noelia Manta": "6 4 3"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "6:30 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Madison Sieg"
  },
  "wta:185879": {
   "conf": 55.1,
+  "diagnosis": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 55%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-05T21:24",
   "market_agrees": null,
   "matchup": "Lucie Nguyen Tan @ Amandine Monnot",
   "pick": "Amandine Monnot",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Amandine Monnot": "6 3 6(4)",
+   "Lucie Nguyen Tan": "1 6 7(7)"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "5:00 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Lucie Nguyen Tan"
  },
  "wta:185880": {
   "conf": 50.2,
+  "diagnosis": "lost 0-1 in sets \u00b7 never won a set \u00b7 called at 50%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-05T21:24",
   "market_agrees": null,
   "matchup": "Dalila Spiteri @ Tatiana Pieri",
   "pick": "Tatiana Pieri",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Dalila Spiteri": "6",
+   "Tatiana Pieri": "2"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "6:30 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Dalila Spiteri"
  },
  "wta:185881": {
   "conf": 69.2,
@@ -33310,36 +34177,59 @@
   "market_agrees": null,
   "matchup": "Julia Stusek @ Martina Trevisan",
   "pick": "Martina Trevisan",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Julia Stusek": "1 0",
+   "Martina Trevisan": "6 6"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "9:30 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Martina Trevisan"
  },
  "wta:185882": {
   "conf": 56.0,
+  "diagnosis": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 56%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-05T21:24",
   "market_agrees": null,
   "matchup": "Katerina Tsygourova @ Lisa Zaar",
   "pick": "Lisa Zaar",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Katerina Tsygourova": "7 3 7(7)",
+   "Lisa Zaar": "5 6 6(5)"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "9:30 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Katerina Tsygourova"
  },
  "wta:185883": {
   "conf": 79.7,
+  "diagnosis": "lost 0-1 in sets \u00b7 never won a set \u00b7 called at 80%",
   "dog": false,
   "league": "wta",
   "logged": "2026-09-05T21:24",
   "market_agrees": null,
   "matchup": "Yelyzaveta Kotliar @ Elsa Bonelli",
   "pick": "Yelyzaveta Kotliar",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Elsa Bonelli": "5",
+   "Yelyzaveta Kotliar": "2"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "lost",
   "tip": "8:00 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Elsa Bonelli"
  },
  "wta:185884": {
   "conf": 51.3,
@@ -33349,10 +34239,17 @@
   "market_agrees": null,
   "matchup": "Diana Martynov @ Deborah Chiesa",
   "pick": "Deborah Chiesa",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Deborah Chiesa": "6 6",
+   "Diana Martynov": "3 3"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "8:00 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Deborah Chiesa"
  },
  "wta:185885": {
   "conf": 54.5,
@@ -33362,9 +34259,16 @@
   "market_agrees": null,
   "matchup": "Lucija Ciric Bagaric @ Jule Niemeier",
   "pick": "Lucija Ciric Bagaric",
+  "played": "2026-09-06",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Jule Niemeier": "6(8) 3",
+   "Lucija Ciric Bagaric": "7(10) 6"
+  },
+  "settled": "2026-10-15T00:07",
+  "status": "won",
   "tip": "5:00 AM",
-  "why": "rank NR vs NR"
+  "why": "rank NR vs NR",
+  "winner": "Lucija Ciric Bagaric"
  }
 }
