@@ -215,7 +215,9 @@ def snapshot():
         traceback.print_exc()
     # The day's locks: the 11 likeliest bets FanDuel lists, one per game
     try:
-        out["locks"] = {s_: locks.build(d._STATE["slots"].get(s_), SOCCER, labels, FD)
+        days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
+        out["locks"] = {s_: locks.build(d._STATE["slots"].get(s_), SOCCER, labels, FD,
+                                        day=days_[s_])
                         for s_ in ("today", "tomorrow")}
         locks.grade(ledger._final)
         if locks.card_time():

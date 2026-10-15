@@ -72,22 +72,39 @@ def fd_specs(FD):
     return fn
 
 
-def _not_started(row, now):
+START_BUFFER = dt.timedelta(minutes=10)   # board status can lag a live game
+
+
+def _eligible(row, day, now):
+    """Only games that start on `day` (Eastern), at or after 8:00 AM, and at
+    least START_BUFFER from now. A game with no start time is left out: it
+    cannot be shown not to be live or finished. The board itself already
+    drops games ESPN marks in progress or final (dashboard.collect)."""
     st = (row.get("mkt") or {}).get("start")
     if not st:
-        return True
+        return False
     try:
         t = dt.datetime.fromisoformat(str(st).replace("Z", "+00:00"))
     except ValueError:
-        return True
+        return False
     if t.tzinfo is None:
-        t = t.replace(tzinfo=ET)
-    return t > now
+        t = t.replace(tzinfo=dt.timezone.utc)
+    t = t.astimezone(ET)
+    if day:
+        d = str(day).replace("-", "")
+        if t.strftime("%Y%m%d") != d:
+            return False
+        floor = dt.datetime.strptime(d, "%Y%m%d").replace(hour=CARD_HOUR, tzinfo=ET)
+        if t < floor:
+            return False
+    if row.get("state") in ("in", "post") or row.get("completed"):
+        return False
+    return t >= now + START_BUFFER
 
 
-def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS):
+def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None):
     now = dt.datetime.now(dt.timezone.utc)
-    rows = {lg: [r for r in rs if _not_started(r, now)]
+    rows = {lg: [r for r in rs if _eligible(r, day, now)]
             for lg, rs in (slot_rows or {}).items() if lg in fanduel.PAGES}
     games = stacks.candidates(rows, soccer_keys, labels, extra=fd_specs(FD),
                               band=(LOCK_MIN, LOCK_MAX))
