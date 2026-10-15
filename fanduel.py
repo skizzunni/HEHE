@@ -100,7 +100,7 @@ def load():
                 continue
             away, home = nm.split(" @ ", 1)
             games[str(e.get("eventId"))] = dict(away=away, home=home, ml={}, spread={},
-                                                total={}, id=str(e.get("eventId")))
+                                                total={}, px={}, id=str(e.get("eventId")))
         for m in (att.get("markets") or {}).values():
             g = games.get(str(m.get("eventId")))
             if not g:
@@ -109,6 +109,8 @@ def load():
             for r in m.get("runners") or []:
                 ref = f'{m.get("marketId")}:{r.get("selectionId")}'
                 name, hc = r.get("runnerName") or "", r.get("handicap")
+                if t in ("MONEY_LINE", "MATCH_HANDICAP_(2-WAY)", "TOTAL_POINTS_(OVER/UNDER)"):
+                    g["px"][ref] = _odds(r)        # American price, e.g. "+135"
                 if t == "MONEY_LINE":
                     g["ml"][name] = ref
                 elif t == "MATCH_HANDICAP_(2-WAY)":

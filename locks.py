@@ -62,6 +62,7 @@ def fd_specs(FD, refs):
 
         def add(group, label, spec, ref, price=None, where=None):
             out.append((group, label, spec))
+            price = price or (gm.get("px") or {}).get(ref)
             refs[(row["id"], json.dumps(spec, sort_keys=True))] = (ref, price, where)
 
         def team_of(name):
@@ -243,28 +244,33 @@ def frozen(day):
 def grade(final):
     """Settle open locks with the same final-score feed as the picks."""
     book = load()
-    for k, L in book["legs"].items():
-        if L["status"] != "open":
-            continue
-        lg, comp = k.split("|", 1)[0].split(":", 1)
-        res = final(lg, comp, L)
-        if res and res.get("missing"):
-            import ledger as _ledger
-            if _ledger._stale(L):
-                L["status"] = "void"
-            continue
-        if not res or res.get("live"):
-            continue
-        if res.get("void"):
-            L["status"] = "void"
-            continue
-        sc = res.get("scores") or {}
-        h, a = sc.get(L["home"]), sc.get(L["away"])
-        if not isinstance(h, int) or not isinstance(a, int):
-            continue
-        L["status"] = "won" if stacks.predicate(L["spec"], L["home"], L["away"])(h, a) else "lost"
-        L["score"] = f"{L['away']} {a} - {L['home']} {h}"
+    for L in book["legs"].values():
+        settle(L, final)
     save(book)
+
+
+def settle(L, final):
+    """Grade one open game leg (needs gid, home, away, spec) in place."""
+    if L.get("status") != "open":
+        return
+    lg, comp = L["gid"].split(":", 1)
+    res = final(lg, comp, L)
+    if res and res.get("missing"):
+        import ledger as _ledger
+        if _ledger._stale(L):
+            L["status"] = "void"
+        return
+    if not res or res.get("live"):
+        return
+    if res.get("void"):
+        L["status"] = "void"
+        return
+    sc = res.get("scores") or {}
+    h, a = sc.get(L["home"]), sc.get(L["away"])
+    if not isinstance(h, int) or not isinstance(a, int):
+        return
+    L["status"] = "won" if stacks.predicate(L["spec"], L["home"], L["away"])(h, a) else "lost"
+    L["score"] = f"{L['away']} {a} - {L['home']} {h}"
 
 
 def report():

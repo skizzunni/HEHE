@@ -32,6 +32,7 @@ import kalshi                  # noqa: E402
 import player_props            # noqa: E402
 import props_ledger             # noqa: E402
 import locks                    # noqa: E402
+import lottery                  # noqa: E402
 
 
 def snapshot():
@@ -266,6 +267,29 @@ def snapshot():
     except Exception:
         import traceback
         sys.stderr.write("props failed -- board still rebuilt:\n")
+        traceback.print_exc()
+    # The lottery: $1 tickets built to pay ~$10,000, from game lines and props
+    try:
+        days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
+        out["lottery"] = {s_: lottery.build(d._STATE["slots"].get(s_), SOCCER, labels, FD,
+                                            ((out.get("props") or {}).get(s_) or {}).get("games"),
+                                            day=days_[s_])
+                          for s_ in ("today", "tomorrow")}
+        lottery.grade(ledger._final)
+        if locks.card_time():
+            lottery.record(out["lottery"]["today"], days_["today"])
+            fz = lottery.frozen(days_["today"])
+            if fz:
+                out["lottery"]["today"] = fz
+        else:
+            out["lottery"]["today"]["preview"] = True
+        out["lottery_record"] = lottery.report()
+        for t_ in out["lottery"]["today"]["tickets"]:
+            print(f'lottery {t_["book"]}: {len(t_["legs"])} legs pays {t_["pays"]}x, '
+                  f'1 in {t_["odds"]}', file=sys.stderr)
+    except Exception:
+        import traceback
+        sys.stderr.write("lottery failed -- board still rebuilt:\n")
         traceback.print_exc()
     return out
 

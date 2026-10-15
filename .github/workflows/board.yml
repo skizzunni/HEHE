@@ -78,6 +78,7 @@ jobs:
           git add ledger.json stacks.json
           if [ -f props.json ]; then git add props.json; fi
           if [ -f locks.json ]; then git add locks.json; fi
+          if [ -f lottery.json ]; then git add lottery.json; fi
           if git diff --cached --quiet; then
             echo "ledger unchanged"
             exit 0

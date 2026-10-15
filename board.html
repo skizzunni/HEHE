@@ -409,7 +409,7 @@ const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g,
   .replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 
 function buildTabs(){
-  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props" || slot === "shared" || slot === "bot" || slot === "locks"){
+  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props" || slot === "shared" || slot === "bot" || slot === "locks" || slot === "lottery"){
     tabs.innerHTML = ""; tabs.hidden = true; return;
   }
   tabs.innerHTML = "";
@@ -485,6 +485,10 @@ function renderView(){
   if(slot === "locks"){
     tabs.hidden = true; how.hidden = true;
     return drawLocks();
+  }
+  if(slot === "lottery"){
+    tabs.hidden = true; how.hidden = true;
+    return drawLottery();
   }
   if(slot === "shared"){
     tabs.hidden = true; how.hidden = true;
@@ -760,6 +764,72 @@ function drawLocks(){
   } else {
     h += '<p class="note">Every day&rsquo;s locks are recorded and graded; the record shows '
       + 'here once the first games finish.</p>';
+  }
+  panel.innerHTML = h + '</div>';
+}
+// ------------------------------------------------------------ lottery view
+// $1 tickets built to pay about $10,000 (lottery.py): the most efficient
+// plus-money legs, one per game, one book per ticket, with the honest chance.
+let LTDAY = null;
+function drawLottery(){
+  const K = D.lottery || {};
+  const has = d => (((K[d] || {}).tickets) || []).length;
+  const day = LTDAY || (has("today") ? "today" : "tomorrow");
+  const X = K[day] || {};
+  const T = X.tickets || [];
+  const R = D.lottery_record || {};
+  let h = '<div class="parlays"><h3>Lottery &mdash; ' + day + '</h3>'
+    + '<p><button type="button" data-ltday="today">Today</button> '
+    + '<button type="button" data-ltday="tomorrow">Tomorrow</button></p>'
+    + '<p>$1 tickets built to pay about <b>$10,000</b>. Every game and every priced player prop '
+    + 'is scanned; each ticket takes legs priced -150 to +500 that give up the least value for the '
+    + 'payout they add, one per game, from games that have not started. Game legs are FanDuel '
+    + 'prices; prop tickets are DraftKings prices. The chance shown is the model&rsquo;s honest '
+    + 'one &mdash; slim, not none. Treat it as a $1 lottery ticket, not a plan.</p>';
+  if(X.preview) h += '<p class="note"><b>Preview.</b> Today&rsquo;s tickets are set at 8:00 AM '
+    + 'Eastern and then stay the same all day.</p>';
+  if(X.set) h += '<p class="note">Tickets set at 8:00 AM Eastern for ' + esc(X.day)
+    + '. Results fill in as games finish.</p>';
+  if(!T.length){
+    panel.innerHTML = h + '<p class="empty">Not enough plus-money legs left ' + day
+      + ' to reach 10,000x.</p></div>';
+    return;
+  }
+  T.forEach((t, i) => {
+    const st = t.status && t.status !== "open"
+      ? ' <b class="' + (t.status === "won" ? "agree" : "fade") + '">' + esc(t.status.toUpperCase()) + '</b>' : '';
+    h += '<div class="ptk"><div class="hd"><span>' + esc(t.book) + ' &middot; ' + t.legs.length + ' legs'
+      + st + '</span><span>$1 pays $' + t.pays.toLocaleString() + '</span>'
+      + '<span>1 in ' + (t.odds || 0).toLocaleString() + '</span></div><ol>'
+      + t.legs.map(x => '<li><b>' + esc(x.label) + '</b> <b>' + esc(x.price) + '</b> '
+        + '<span style="color:var(--ink-dim)">' + esc(x.match) + ' &middot; ' + esc(x.lg || x.league)
+        + (x.tip ? ' &middot; ' + esc(x.tip) : '') + ' &middot; ' + (100 * x.p).toFixed(0) + '%</span>'
+        + (x.status && x.status !== "open"
+            ? ' <b class="' + (x.status === "won" ? "agree" : "fade") + '">' + esc(x.status.toUpperCase())
+              + (x.score ? ' (' + esc(x.score) + ')' : '') + '</b>'
+            : x.kind === "prop" ? ''
+            : x.where ? '<br><span class="note">On FanDuel: open the game, find <b>' + esc(x.where) + '</b></span>'
+            : legBtns(null, fdOne(x.fd)))
+        + '</li>').join("")
+      + '</ol><button type="button" data-ltcopy="' + day + '|' + i + '">Copy ticket</button></div>';
+  });
+  h += '<p class="note">Before placing, check every leg on the slip matches the line and price '
+    + 'here &mdash; a different line changes the ticket. The book takes its margin on every leg, '
+    + 'so a long parlay returns less than $1 per $1 on average; the 1-in-N is how often it '
+    + 'pays, not a promise.</p>';
+  if(R.legs){
+    h += '<h3>How the lottery has done</h3><p>' + R.hits + ' of ' + R.tickets + ' settled tickets hit. '
+      + 'Legs: ' + R.won + ' of ' + R.legs + ' won (' + (100 * R.won / R.legs).toFixed(1)
+      + '%) against ' + R.said + '% promised.</p>'
+      + '<table class="mk"><thead><tr><th>Day</th><th class="num">Tickets</th><th class="num">Hit</th>'
+      + '<th class="num">Most legs won</th><th class="num">Open</th></tr></thead><tbody>'
+      + (R.days || []).map(d => '<tr><td>' + esc(d.day) + '</td><td class="num">' + d.n
+        + '</td><td class="num">' + d.won + '</td><td class="num">' + d.best
+        + '</td><td class="num">' + d.open + '</td></tr>').join("")
+      + '</tbody></table>';
+  } else {
+    h += '<p class="note">Every day&rsquo;s tickets are recorded and graded; the record shows here '
+      + 'once the first games finish.</p>';
   }
   panel.innerHTML = h + '</div>';
 }
@@ -1124,7 +1194,7 @@ function drawCard(slot){
     + '</tbody></table>';
 }
 
-["today","tomorrow","locks","card","stacks","markets","props","results","bot"].forEach(s => {
+["today","tomorrow","locks","lottery","card","stacks","markets","props","results","bot"].forEach(s => {
   const b = document.createElement("button");
   b.setAttribute("aria-pressed", String(s === slot));
   const R = D.results || {};
@@ -1134,6 +1204,8 @@ function drawCard(slot){
   } else if(s === "locks"){
     const L = ((D.locks || {}).today || {}).locks || [];
     b.innerHTML = "Locks" + '<span class="dnum">' + L.length + ' FanDuel</span>';
+  } else if(s === "lottery"){
+    b.innerHTML = "Lottery" + '<span class="dnum">$1 &rarr; $10k</span>';
   } else if(s === "bot"){
     b.innerHTML = "Bot" + '<span class="dnum">Kalshi</span>';
   } else if(s === "props"){
@@ -1547,6 +1619,17 @@ document.addEventListener("click", e => {
   const sh = e.target.closest("[data-share]");
   if(sh){ const o = ticketFrom(sh.getAttribute("data-share")); if(o) shareTicket(o, sh); return; }
   if(e.target.id === "shareslip"){ shareTicket(slipTicket(), e.target); return; }
+  const ltd = e.target.closest("[data-ltday]");
+  if(ltd){ LTDAY = ltd.getAttribute("data-ltday"); render(); return; }
+  const ltc = e.target.closest("[data-ltcopy]");
+  if(ltc){
+    const [dy, i] = ltc.getAttribute("data-ltcopy").split("|");
+    const t = ((((D.lottery || {})[dy] || {}).tickets) || [])[+i];
+    if(t) copyText("Lottery ticket (" + t.book + ", pays " + t.pays.toLocaleString() + "x)\n"
+      + t.legs.map((x, j) => (j + 1) + ". " + x.label + "  (" + x.match + ")  " + x.price
+        + (x.where ? "  FanDuel: " + x.where : "")).join("\n"), ltc, "Copied");
+    return;
+  }
   const lkd = e.target.closest("[data-lkday]");
   if(lkd){ LKDAY = lkd.getAttribute("data-lkday"); render(); return; }
   const lkc = e.target.closest("[data-lkcopy]");
