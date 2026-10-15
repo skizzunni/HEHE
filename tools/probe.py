@@ -30,19 +30,23 @@ for lg in ("nhl", "mlb", "ncaaf"):
         continue
     eid = ev["eventId"]
     print("event", eid, ev.get("name"))
-    for tab in ("", "&tab=popular", "&tab=all", "&tab=alternates", "&tab=game-lines"):
-        p = get(f"{BASE}/event-page?_ak={AK}&eventId={eid}{tab}&useCombinedTouchdownsVirtualMarket=true&usePulse=true&useQuickBets=true")
-        mk = ((p.get("attachments") or {}).get("markets") or {})
-        types = collections.Counter(m.get("marketType") for m in mk.values())
-        print(f"  event-page{tab or ' (no tab)'}: {len(mk)} markets {p.get('_error', '')}")
-        if mk:
-            print("    types:", dict(types.most_common(40)))
-            for m in mk.values():
-                t = m.get("marketType") or ""
-                if "ALT" in t or "HANDICAP" in t or "TOTAL" in t:
-                    print(f"    e.g. {t} id={m.get('marketId')} name={m.get('marketName')!r} runners="
-                          f"{[(r.get('runnerName'), r.get('handicap'), r.get('selectionId'), ((r.get('winRunnerOdds') or {}).get('americanDisplayOdds') or {}).get('americanOdds')) for r in (m.get('runners') or [])][:8]}")
-            tabs = (p.get("layout") or {}).get("tabs")
-            if tabs:
-                print("    layout tabs:", [(t.get("id"), t.get("title")) for t in (tabs.values() if isinstance(tabs, dict) else tabs)][:20])
-            break
+    base = get(f"{BASE}/event-page?_ak={AK}&eventId={eid}&useCombinedTouchdownsVirtualMarket=true&usePulse=true&useQuickBets=true")
+    tabs = (base.get("layout") or {}).get("tabs") or {}
+    tabs = list(tabs.values()) if isinstance(tabs, dict) else tabs
+    seen = set()
+    for t in tabs:
+        title = t.get("title") or ""
+        slug = title.lower().replace(" & ", "-").replace("&", "").replace("/", "-").replace(" ", "-").replace("™", "")
+        for cand in (slug, title.lower().replace(" ", "-")):
+            if cand in seen:
+                continue
+            seen.add(cand)
+            p = get(f"{BASE}/event-page?_ak={AK}&eventId={eid}&tab={cand}&useCombinedTouchdownsVirtualMarket=true&usePulse=true&useQuickBets=true")
+            mk = ((p.get("attachments") or {}).get("markets") or {})
+            alt = {m.get("marketType"): m for m in mk.values()
+                   if any(w in (m.get("marketType") or "") for w in ("ALT", "HANDICAP", "TOTAL", "SPREAD", "LINE"))
+                   and not any(w in (m.get("marketType") or "") for w in ("INNING", "PERIOD", "QUARTER", "HALF", "PLAYER"))}
+            print(f"  tab={cand!r}: {len(mk)} markets; game-line-like: {sorted(alt)[:12]} {p.get('_error', '')}")
+            for t2, m in list(alt.items())[:6]:
+                print(f"     {t2} name={m.get('marketName')!r} runners="
+                      f"{[(r.get('runnerName'), r.get('handicap'), r.get('selectionId'), ((r.get('winRunnerOdds') or {}).get('americanDisplayOdds') or {}).get('americanOdds')) for r in (m.get('runners') or [])][:10]}")
