@@ -82,8 +82,9 @@ BOT_TAG = "hehebot-"
 # record of them that cannot be lost with the Actions cache).
 BOT_LEDGER = os.path.join(STATE_DIR or ROOT, "bot_trades.json")
 RFQ_DIR = os.path.join(STATE_DIR or os.path.join(ROOT, ".cache"), "bot_rfqs.json")  # one per ticket per day
+RETRY_UNQUOTED = 2 * 3600   # a ticket nobody quoted may be asked again after this
 BOARD_MAX_AGE = 30 * 60      # seconds; older tickets may include games already under way
-RFQ_WAIT = 6.0             # seconds to collect quotes; makers answer in well under one
+RFQ_WAIT = 8.0             # seconds to collect quotes; most answer in under one, a few take ~4
 
 
 STATUS = dict(mode="live" if LIVE else "practice", ok=False, lines=[], considered=[],
@@ -173,7 +174,8 @@ def api(method, path, body=None, auth=True):
                                  data=json.dumps(body).encode() if body is not None else None)
     try:
         with urllib.request.urlopen(req, timeout=30) as r:
-            return r.status, json.load(r)
+            raw = r.read()
+            return r.status, json.loads(raw) if raw.strip() else None   # 204s have no body
     except urllib.error.HTTPError as e:
         try:
             return e.code, json.load(e)
@@ -324,11 +326,16 @@ def request_quote(combo, count):
         log(f"{combo}: quote request refused ({st}) {json.dumps(d)[:160]}")
         return None, None
     best = None
+    seen = {}
     end = time.time() + RFQ_WAIT
     while time.time() < end:
         time.sleep(1)
         st, q = api("GET", f"/communications/quotes?rfq_id={rid}")
+        if st != 200:
+            log(f"  reading quotes failed ({st}) {json.dumps(q)[:160]}")
+            continue
         for x in (q or {}).get("quotes") or []:
+            seen[x.get("id")] = x
             if x.get("status") != "open":
                 continue
             no_bid = money(x, "no_bid")
@@ -337,6 +344,10 @@ def request_quote(combo, count):
             price = round(1 - no_bid, 4)
             if best is None or price < best["price"]:
                 best = dict(quote=x, price=price)
+    # every quote that came back, so a "no quote" can be told from a misread one
+    log(f"  {len(seen)} quote(s): " + "; ".join(
+        f'{x.get("status")} yes_bid {x.get("yes_bid_dollars")} no_bid {x.get("no_bid_dollars")}'
+        for x in list(seen.values())[:6]))
     return rid, best
 
 
@@ -423,10 +434,14 @@ def buy_tickets(board, sports, budget_left, open_n, held, history):
             seen["verdict"] = "stake too small for one contract"
             continue
         today = STATUS["started"][:10]
-        if asked.get(combo) == today:
-            seen["verdict"] = "already asked for a quote today"
+        prev = asked.get(combo)
+        if isinstance(prev, str):
+            prev = [prev, 0, False]      # written before quotes were tracked
+        if prev and prev[0] == today and (prev[2] or time.time() - prev[1] < RETRY_UNQUOTED):
+            seen["verdict"] = ("already quoted today" if prev[2]
+                               else "nobody quoted it earlier; asking again later")
             continue
-        asked[combo] = today
+        asked[combo] = [today, time.time(), False]
         try:
             rid, best = request_quote(combo, count)
         except Blocked as e:
@@ -437,6 +452,7 @@ def buy_tickets(board, sports, budget_left, open_n, held, history):
             STATUS["error"] = msg
             seen["verdict"] = "blocked by Kalshi's location rule"
             return
+        asked[combo][2] = bool(best)
         if not best:
             close_rfq(rid)
             log(f"{combo}: no market maker offered YES")
@@ -702,7 +718,8 @@ def run():
         buy_tickets(board, allowed_sports(), left, open_n, held, history)
     save_history(history)
     today = STATUS["started"][:10]
-    save_json(RFQ_DIR, {k: v for k, v in asked.items() if v == today})
+    save_json(RFQ_DIR, {k: v for k, v in asked.items()
+                        if (v if isinstance(v, str) else v[0]) == today})
     if trades.get("halted"):
         STATUS["error"] = trades["halted"]
     if not LIVE:

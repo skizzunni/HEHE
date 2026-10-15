@@ -45,22 +45,7 @@ print("     key file OK (RSA)")
 PY
 
 echo "3/4  GitHub token (lets the bot post its report to your site)"
-read -r -s -p "     Paste the token (it will not show), then press Enter: " GT
-echo
-printf '%s' "$GT" > "$H/github_token"
-chmod 600 "$H/github_token"
-S="$H/status"
-rm -rf "$S"
-mkdir -p "$S"
-git -C "$S" init -q
-git -C "$S" config user.name "hehe bot (mac)"
-git -C "$S" config user.email "hehe-bot@users.noreply.github.com"
-git -C "$S" remote add origin "https://x-access-token:${GT}@github.com/skizzunni/HEHE.git"
-if ! git -C "$S" ls-remote -q origin >/dev/null 2>&1; then
-  echo "     GitHub refused that token. Check it has Contents: Read and write on HEHE."
-  exit 1
-fi
-echo "     token OK"
+bash "$REPO/bot/mac/set_token.sh"
 
 echo "4/4  Scheduling the bot every 5 minutes"
 mkdir -p "$HOME/Library/LaunchAgents"
