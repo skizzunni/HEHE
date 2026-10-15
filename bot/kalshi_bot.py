@@ -61,6 +61,10 @@ MAX_OPEN = int(os.environ.get("KALSHI_MAX_OPEN", "5"))           # open combo po
 MIN_EDGE = float(os.environ.get("KALSHI_MIN_EDGE", "0.05"))      # buy only 5%+ over fair
 SELL_EDGE = float(os.environ.get("KALSHI_SELL_EDGE", "0.05"))    # sell only 5%+ over fair
 LEG_RANGE = (2, 6)                                                # ticket sizes it buys
+# Every order the bot places carries this client_order_id prefix. Spending,
+# holdings, cash-outs and the record only ever look at orders with it, so the
+# bot never counts -- or sells -- anything the account holder placed by hand.
+BOT_TAG = "hehebot-"
 
 
 STATUS = dict(mode="live" if LIVE else "practice", ok=False, lines=[], considered=[],
@@ -214,17 +218,37 @@ def collection_for(events):
     return None
 
 
-def spent_today():
-    """Dollars spent on buys today, from Kalshi's own fill records."""
-    start = dt.datetime.now(dt.timezone.utc).replace(hour=0, minute=0, second=0, microsecond=0)
-    st, d = api("GET", f"/portfolio/fills?min_ts={int(start.timestamp())}&limit=200")
-    total = 0.0
-    for f in (d or {}).get("fills") or []:
-        if f.get("action") != "buy":
-            continue
-        side = "yes" if f.get("side") == "yes" else "no"
-        total += count_of(f) * money(f, f"{side}_price")
-    return total
+def bot_orders(pages=10):
+    """Every order this bot placed, newest first, from Kalshi's order list."""
+    out, cursor = [], ""
+    for _ in range(pages):
+        st, d = api("GET", "/portfolio/orders?limit=200" + (f"&cursor={cursor}" if cursor else ""))
+        if st != 200:
+            raise RuntimeError(f"could not read the order list (HTTP {st}); "
+                               "not trading blind")
+        out += [o for o in (d or {}).get("orders") or []
+                if str(o.get("client_order_id") or "").startswith(BOT_TAG)]
+        cursor = (d or {}).get("cursor")
+        if not cursor:
+            break
+    return out
+
+
+def order_cost(o):
+    """Dollars an order actually spent (filled part only, fees included)."""
+    c = money(o, "taker_fill_cost") + money(o, "maker_fill_cost")
+    if not c:
+        side = "yes" if o.get("side") == "yes" else "no"
+        filled = float(o.get("fill_count_fp") or o.get("fill_count") or 0)
+        c = filled * money(o, f"{side}_price")
+    return c + money(o, "taker_fees") + money(o, "maker_fees")
+
+
+def spent_today(orders):
+    """Dollars the BOT spent on buys today (UTC), from Kalshi's records."""
+    today = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
+    return sum(order_cost(o) for o in orders
+               if o.get("action") == "buy" and str(o.get("created_time") or "")[:10] == today)
 
 
 # -------------------------------------------------------------------- buy
@@ -289,7 +313,7 @@ def buy_tickets(board, sports, budget_left, open_n, held, history):
             continue
         order = dict(ticker=combo, action="buy", side="yes", count=count, type="limit",
                      yes_price=int(round(ask * 100)), time_in_force="immediate_or_cancel",
-                     buy_max_cost=int(round(stake * 100)), client_order_id=str(uuid.uuid4()))
+                     buy_max_cost=int(round(stake * 100)), client_order_id=BOT_TAG + str(uuid.uuid4()))
         if not LIVE:
             log("  WOULD BUY", json.dumps(order))
             seen["verdict"] = f"practice buy: {count} @ ${ask:.2f}"
@@ -353,7 +377,7 @@ def cash_out(positions):
             continue
         order = dict(ticker=tk, action="sell", side="yes", count=int(n), type="limit",
                      yes_price=int(round(bid * 100)), time_in_force="immediate_or_cancel",
-                     client_order_id=str(uuid.uuid4()))
+                     client_order_id=BOT_TAG + str(uuid.uuid4()))
         if not LIVE:
             log("  WOULD SELL (bid beats fair value)", json.dumps(order))
             continue
@@ -366,14 +390,14 @@ def is_combo(ticker):
     return "MVE" in (ticker or "")
 
 
-def live_record():
-    """Every combo the account has traded, from Kalshi's own fills and
+def live_record(mine):
+    """Every combo the bot has traded, from Kalshi's own fills and
     settlements: what it cost, what came back, and the profit."""
     rec = {}
     st, d = api("GET", "/portfolio/fills?limit=200")
     for f in (d or {}).get("fills") or []:
         tk = f.get("ticker") or f.get("market_ticker")
-        if not is_combo(tk):
+        if tk not in mine:
             continue
         r = rec.setdefault(tk, dict(ticker=tk, bought=0.0, cost=0.0, sold=0.0,
                                     proceeds=0.0, payout=0.0, status="open",
@@ -461,17 +485,21 @@ def run():
         f"limits ${MAX_STAKE:.2f}/ticket, ${MAX_DAILY:.2f}/day, {MAX_OPEN} open")
     st, pos = api("GET", "/portfolio/positions?limit=200&count_filter=position")
     positions = (pos or {}).get("market_positions") or []
-    held = {p.get("ticker") for p in positions if is_combo(p.get("ticker"))
-            and float(p.get("position_fp") or p.get("position") or 0) > 0}
+    orders = bot_orders()
+    mine = {o.get("ticker") for o in orders if o.get("action") == "buy"}
+    positions = [p for p in positions if (p.get("ticker") or p.get("market_ticker")) in mine]
+    held = {p.get("ticker") or p.get("market_ticker") for p in positions
+            if float(p.get("position_fp") or p.get("position") or 0) > 0}
     cash_out(positions)
-    STATUS["record"] = live_record()
+    STATUS["record"] = live_record(mine)
     STATUS["record_summary"] = summary(STATUS["record"])
 
     history = load_history()
     grade_practice(history)
     today = STATUS["started"][:10]
     if LIVE:
-        left = MAX_DAILY - spent_today()
+        # never plan to spend cash the account does not have
+        left = min(MAX_DAILY - spent_today(orders), STATUS["balance"])
         open_n = len(held)
     else:
         # practice keeps its own books so it obeys the same limits
@@ -492,7 +520,7 @@ def run():
         STATUS["spent_today"] = round(sum(h["count"] * h["ask"] for h in history
                                           if h["ts"][:10] == today), 2)
     elif board:
-        STATUS["spent_today"] = round(spent_today(), 2)
+        STATUS["spent_today"] = round(spent_today(bot_orders()), 2)
     STATUS["practice"] = list(reversed(history[-100:]))
     STATUS["practice_summary"] = summary(history)
     return 0
