@@ -17,18 +17,11 @@ def get(url):
         return {"_error": str(e)}
 
 
-for lg, day in (("usa.1", "20261004"), ("uefa.europa", "20261002"), ("eng.1", "20260927"),
-                ("uefa.champions", "20261001")):
-    sb = get(f"{SITE}/{lg}/scoreboard?dates={day}")
-    evs = sb.get("events") or []
-    st = [((e.get("status") or {}).get("type") or {}).get("state") for e in evs]
-    print(f"### {lg} {day}: {len(evs)} events states={st[:8]} {sb.get('_error', '')}")
-    post = [e for e in evs if ((e.get("status") or {}).get("type") or {}).get("state") == "post"]
-    if not post:
-        continue
-    eid = post[0]["id"]
+for lg, eid in (("eng.3", "401880292"), ("usa.1", "761783"), ("eng.2", "401880292")):
     s = get(f"{SITE}/{lg}/summary?event={eid}")
-    print(f"   event {eid} {post[0].get('name')} keys={sorted(s.keys())}")
+    print(f"### {lg} {eid} err={s.get('_error', '')} keys={sorted(s.keys())[:25]}")
+    if s.get("_error"):
+        continue
     for team in (s.get("rosters") or [])[:1]:
         r = team.get("roster") or []
         print("   roster size", len(r))
