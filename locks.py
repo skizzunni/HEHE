@@ -108,6 +108,28 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None):
             for lg, rs in (slot_rows or {}).items() if lg in fanduel.PAGES}
     games = stacks.candidates(rows, soccer_keys, labels, extra=fd_specs(FD),
                               band=(LOCK_MIN, LOCK_MAX))
+    # where games drop out, per league: on the board -> eligible by time ->
+    # found in FanDuel's feed -> a FanDuel line in the probability band
+    import sys
+    diag = {}
+    for lg, rs in (slot_rows or {}).items():
+        if lg not in fanduel.PAGES:
+            continue
+        el = rows.get(lg) or []
+        found = 0
+        for r in el:
+            m = r.get("mkt") or {}
+            if fanduel.find(FD, lg, m.get("away"), m.get("home")):
+                found += 1
+        diag[lg] = [len(rs), len(el), found, len(FD.get(lg) or [])]
+    print(f"locks [{day}] board/eligible/onFanDuel/FDfeed: {diag}", file=sys.stderr)
+    if any(v[1] and not v[2] for v in diag.values()):
+        for lg, rs in rows.items():
+            for r in rs[:2]:
+                m = r.get("mkt") or {}
+                print(f"   unmatched? {lg}: board {m.get('away')!r} @ {m.get('home')!r}; "
+                      f"FanDuel has {[(g['away'], g['home']) for g in (FD.get(lg) or [])][:3]}",
+                      file=sys.stderr)
     picks = []
     for g in games:
         best = None
