@@ -54,7 +54,10 @@ MAX_EVENTS_PER_RUN = 30
 SPORT = {"nfl": ("football", "nfl"), "ncaaf": ("football", "college-football"),
          "nhl": ("hockey", "nhl"), "mlb": ("baseball", "mlb"),
          "nba": ("basketball", "nba"), "wnba": ("basketball", "wnba"),
-         "ncaab": ("basketball", "mens-college-basketball")}
+         "ncaab": ("basketball", "mens-college-basketball"),
+         "epl": ("soccer", "eng.1"), "esp": ("soccer", "esp.1"), "ger": ("soccer", "ger.1"),
+         "ita": ("soccer", "ita.1"), "fra": ("soccer", "fra.1"), "mls": ("soccer", "usa.1"),
+         "ucl": ("soccer", "uefa.champions"), "uel": ("soccer", "uefa.europa")}
 
 
 def _s(*keys):
@@ -148,10 +151,32 @@ BASKETBALL = {
     "Assists": _s("assists"), "Total Assists": _s("assists"),
     "Threes Made": _s("threePointFieldGoalsMade"),
 }
-MARKETS = {"nfl": FOOTBALL, "ncaaf": FOOTBALL, "nhl": HOCKEY, "mlb": BASEBALL,
+# ESPN soccer summaries (rosters[].roster[].stats, probed 2026-10-15) carry
+# goals, assists, shots, shots on target, cards, fouls, saves -- NOT tackles,
+# so tackle props stay ungradable. Several spellings of each market are
+# listed because the feed's soccer market names vary by competition.
+SOCCER = {}
+for _names, _f in (
+        (("Anytime Goalscorer", "Anytime Goal Scorer", "To Score"), _s("totalGoals")),
+        (("To Score 2+ Goals", "To Score 2 or More Goals"), _s("totalGoals")),
+        (("Shots", "Total Shots", "Player Shots"), _s("totalShots")),
+        (("Shots on Target", "Total Shots on Target", "Player Shots on Target",
+          "Shots On Target"), _s("shotsOnTarget")),
+        (("Assists", "Total Assists", "Player Assists", "To Assist"), _s("goalAssists")),
+        (("To Be Booked", "Player To Be Booked", "To Be Carded", "Player to be Carded",
+          "Cards", "Player Cards"), _s("yellowCards", "redCards")),
+        (("Goalkeeper Saves", "Saves", "Total Saves"), _s("saves"))):
+    for _n in _names:
+        SOCCER[_n] = _f
+MARKETS = {"epl": SOCCER, "esp": SOCCER, "ger": SOCCER, "ita": SOCCER, "fra": SOCCER,
+           "mls": SOCCER, "ucl": SOCCER, "uel": SOCCER,
+           "nfl": FOOTBALL, "ncaaf": FOOTBALL, "nhl": HOCKEY, "mlb": BASEBALL,
            "nba": BASKETBALL, "wnba": BASKETBALL, "ncaab": BASKETBALL}
 # scorer markets with no line: the count they need
-NEED = {"Anytime Touchdown Scorer": 1, "Player to score 2 or more touchdowns": 2,
+NEED = {"Anytime Goal Scorer": 1, "To Score": 1, "To Score 2 or More Goals": 2,
+        "To Be Booked": 1, "Player To Be Booked": 1, "To Be Carded": 1,
+        "Player to be Carded": 1, "To Assist": 1,
+        "Anytime Touchdown Scorer": 1, "Player to score 2 or more touchdowns": 2,
         "Player to score 3 or more touchdowns": 3, "Anytime Goalscorer": 1,
         "To Score 2+ Goals": 2, "To Score 3+ Goals": 3}
 
@@ -235,15 +260,25 @@ def summary(league, eid):
         return None
     comp = ((d.get("header") or {}).get("competitions") or [{}])[0]
     if ((comp.get("status") or {}).get("type") or {}).get("completed"):
+        keep = {"boxscore": d.get("boxscore"), "rosters": d.get("rosters"), "completed": True}
         with open(f, "w") as fh:
-            json.dump({"boxscore": d.get("boxscore"), "completed": True}, fh)
-        return {"boxscore": d.get("boxscore"), "completed": True}
+            json.dump(keep, fh)
+        return keep
     return {"completed": False}
 
 
 def box_stats(sm):
     """athlete id -> {'group.key': number, 'key': number}"""
     out = {}
+    # soccer: per-player stats under rosters; a squad player who never came
+    # on (appearances 0) did not play, so he is left out and the prop voids
+    for team in (sm or {}).get("rosters") or []:
+        for pl in team.get("roster") or []:
+            aid = str((pl.get("athlete") or {}).get("id") or "")
+            st = {x.get("name"): x.get("value") for x in pl.get("stats") or []
+                  if isinstance(x.get("value"), (int, float))}
+            if aid and st.get("appearances"):
+                out[aid] = st
     for team in ((sm or {}).get("boxscore") or {}).get("players") or []:
         for grp in team.get("statistics") or []:
             g = grp.get("name") or ""

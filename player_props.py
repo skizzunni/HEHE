@@ -216,7 +216,10 @@ def prop_tickets(games, tiers=(2, 3, 4, 6, 8), lo=0.75, hi=0.93, variants=3):
     pool = []
     for g in games:
         best = [p for p in g["props"] if lo <= p["p"] <= hi]
-        best.sort(key=lambda p: abs(p["p"] - 0.85))
+        # props the box score can settle first: they build the record that
+        # re-fits the margin (props_ledger); among them, nearest 85%
+        lg = g["id"].split(":", 1)[0]
+        best.sort(key=lambda p: (not props_ledger.gradable(lg, p["market"]), abs(p["p"] - 0.85)))
         if best:
             pool.append((g, best))
     out = {}
