@@ -47,6 +47,7 @@ from short legs, not locks.
 """
 import argparse
 import datetime as dt
+from collections import defaultdict
 import json
 import math
 import os
@@ -191,6 +192,79 @@ class Game:
             self.sd_t = SD_TOTAL[sport]
             self.mu_total = total
 
+    def prob_specs(self, specs):
+        """Probability that every spec holds. One spec on a normal model has a
+        closed form; anything else integrates the score distribution."""
+        if self.kind == "normal" and len(specs) == 1 and self.mu_t is not None:
+            sp = specs[0]
+            t, home = sp["t"], sp.get("team") == self.home
+            m, sm, T, st = self.mu_m, self.sd_m, self.mu_t, self.sd_t
+            up = lambda mu, sd, L: 1 - ncdf((L - mu) / sd)       # P(X > L)
+            if t == "over":
+                return up(T, st, sp["line"])
+            if t == "under":
+                return 1 - up(T, st, sp["line"])
+            if t == "win":
+                return up(m, sm, 0) if home else 1 - up(m, sm, 0)
+            if t == "spread":
+                L = sp["line"]
+                return up(m, sm, -L) if home else 1 - up(m, sm, L)
+            if t == "nomargin":
+                L = sp["line"]
+                return 1 - up(m, sm, L) if home else up(m, sm, -L)
+            if t in ("teamover", "teamunder"):
+                mu = (T + m) / 2 if home else (T - m) / 2
+                sd = math.sqrt(st * st + sm * sm) / 2
+                p = up(mu, sd, sp["line"])
+                return p if t == "teamover" else 1 - p
+        if self.kind == "normal" and self.mu_t is not None:
+            return self._joint_normal(specs)
+        return self.prob([predicate(sp, self.home, self.away) for sp in specs])
+
+    def _joint_normal(self, specs):
+        """Joint probability on the margin/total normals. Given the margin m,
+        every leg is a cutoff on the total t (or on m alone), so integrate m
+        finely and take t's part exactly."""
+        home = self.home
+        def bounds(sp, m):
+            """-> (ok_on_margin, t_low, t_high) for this spec at margin m."""
+            t, L = sp["t"], sp.get("line")
+            hm = sp.get("team") == home
+            inf = float("inf")
+            if t == "over":
+                return True, L, inf
+            if t == "under":
+                return True, -inf, L
+            if t == "win":
+                return (m > 0 if hm else m < 0), -inf, inf
+            if t == "spread":
+                return (m > -L if hm else m < L), -inf, inf
+            if t == "nomargin":
+                return (m < L if hm else m > -L), -inf, inf
+            if t == "teamover":      # (t + m)/2 > L  or  (t - m)/2 > L
+                return True, (2 * L - m if hm else 2 * L + m), inf
+            if t == "teamunder":
+                return True, -inf, (2 * L - m if hm else 2 * L + m)
+            raise ValueError(t)
+        steps, span = 3000, 6.0
+        tot = wsum = 0.0
+        for i in range(steps):
+            z = -span + 2 * span * (i + 0.5) / steps
+            w = math.exp(-z * z / 2)
+            wsum += w
+            m = self.mu_m + z * self.sd_m
+            lo, hi, ok = -float("inf"), float("inf"), True
+            for sp in specs:
+                o, a_, b_ = bounds(sp, m)
+                ok = ok and o
+                lo, hi = max(lo, a_), min(hi, b_)
+            if not ok or lo >= hi:
+                continue
+            pt = (ncdf((hi - self.mu_t) / self.sd_t) if hi != float("inf") else 1.0) - \
+                 (ncdf((lo - self.mu_t) / self.sd_t) if lo != -float("inf") else 0.0)
+            tot += w * pt
+        return tot / wsum
+
     # each leg is a predicate on the final (home, away) score
     def prob(self, preds):
         """Joint probability that every predicate holds."""
@@ -211,7 +285,7 @@ class Game:
         if self.mu_t is None:
             return None
         tot = 0.0
-        steps = 80          # even, so the centre falls between two points
+        steps = 200         # even, so the centre falls between two points
         # midpoints, so no grid point ever sits exactly on a .0 or .5 line
         zs = [-4 + 8 * (i + 0.5) / steps for i in range(steps)]
         ws = [math.exp(-z * z / 2) for z in zs]
@@ -226,8 +300,44 @@ class Game:
         return tot / norm
 
 
-def haircut(p):
-    return max(0.0, 1 - (1 - p) * MISS_INFLATE)
+def haircut(p, league=None):
+    k = MISS_BY_SPORT.get(sport_of(league), MISS_INFLATE)
+    return max(0.0, 1 - (1 - p) * k)
+
+
+def sport_of(league):
+    """Group a league key into the sport its backtest factor belongs to."""
+    if league in SD_MARGIN or league in POISSON:
+        return league
+    return "soccer"
+
+
+# Per-sport miss factors, filled from tools/backtest.py results. Until a sport
+# has one, MISS_INFLATE applies.
+MISS_BY_SPORT = {}
+
+
+def _load_backtest():
+    """Per-sport miss factors fitted by tools/backtest.py (soccer leagues are
+    pooled, weighted by how many legs each contributed)."""
+    try:
+        with open(os.path.join(HERE, "data", "backtest_stacks.json")) as fh:
+            bt = json.load(fh)
+    except (OSError, ValueError):
+        return
+    pool = defaultdict(lambda: [0.0, 0])
+    for k, v in (bt.get("sports") or {}).items():
+        n = ((v.get("stack_legs") or {}).get("fit")) or 0
+        f = v.get("fitted_miss_factor")
+        if f and n:
+            x = pool[sport_of(k)]
+            x[0] += f * n
+            x[1] += n
+    for sp, (w, n) in pool.items():
+        MISS_BY_SPORT[sp] = round(w / n, 2)
+
+
+_load_backtest()
 
 
 def half(x):
@@ -336,6 +446,13 @@ def game_from_row(row, league, soccer):
     ph, pa = (_ml_prob((legs.get("home") or {}).get("price")),
               _ml_prob((legs.get("away") or {}).get("price")))
     pdr = _ml_prob((legs.get("draw") or {}).get("price"))
+    if (ph is None or pa is None) and league in SD_MARGIN \
+            and m.get("spread") is not None and m.get("fav") in ("home", "away"):
+        # some college lines post a spread and no moneyline; the spread then
+        # sets the win probability through the same normal
+        mag = abs(float(m["spread"]))
+        pf = ncdf(mag / SD_MARGIN[league])
+        ph, pa = (pf, 1 - pf) if m["fav"] == "home" else (1 - pf, pf)
     if ph is None or pa is None:
         return None
     if soccer:
@@ -432,7 +549,7 @@ def markets(slots, soccer_keys, labels=None):
                         continue
                     ms = []
                     for group, label, spec in market_menu(g, league, row.get("mkt") or {}):
-                        p = g.prob([predicate(spec, g.home, g.away)])
+                        p = g.prob_specs([spec])
                         if p is None or not 0.01 <= p <= 0.99:
                             continue
                         ms.append(dict(g=group, l=label, p=round(p, 4), f=american(p)))
@@ -460,14 +577,14 @@ def candidates(board_slot, soccer_keys, labels=None):
                 continue
             if not g:
                 continue
-            fav_home = g.prob([predicate(dict(t="win", team=g.home), g.home, g.away)]) >= \
-                g.prob([predicate(dict(t="win", team=g.away), g.home, g.away)])
+            fav_home = g.prob_specs([dict(t="win", team=g.home)]) >= \
+                g.prob_specs([dict(t="win", team=g.away)])
             legs = []
             for group, label, spec in leg_specs(g, league, fav_home):
-                p = g.prob([predicate(spec, g.home, g.away)])
+                p = g.prob_specs([spec])
                 if p is None:
                     continue
-                q = haircut(p)
+                q = haircut(p, league)
                 if LEG_MIN <= q <= LEG_MAX:
                     legs.append(dict(group=group, label=label, spec=spec,
                                      p_model=round(p, 4), p=round(q, 4)))
@@ -491,7 +608,7 @@ def pick_for_game(game, n_legs):
         if len(chosen) == n_legs:
             break
     g = game["model"]
-    raw = g.prob([predicate(L["spec"], g.home, g.away) for L in chosen])
+    raw = g.prob_specs([L["spec"] for L in chosen])
     # the haircut applies per leg; carry it over to the joint figure
     joint = raw
     for L in chosen:

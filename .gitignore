@@ -19,3 +19,5 @@ data/espn_cache/
 # The match history is derived, but rebuilding it costs ~490 ESPN requests and
 # the board cannot compute a rating without it, so it ships like ledger.json.
 !data/matches_2026.json
+# Backtest results; stacks.py reads its per-sport haircut from them.
+!data/backtest_stacks.json

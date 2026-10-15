@@ -239,13 +239,13 @@ tbody tr.on td.mine::after{content:"\2713";color:var(--accent);font-weight:800;m
    then each number with its column name -- instead of a wide table whose
    price and confidence columns sit off the right edge of the screen. */
 @media (max-width:600px){
-  #panel table:not(.sweeptab) thead{display:none}
-  #panel table:not(.sweeptab),#panel table:not(.sweeptab) tbody{display:block;width:100%}
-  #panel table:not(.sweeptab) tr{display:flex;flex-wrap:wrap;align-items:baseline;
+  #panel table:not(.sweeptab):not(.mk) thead{display:none}
+  #panel table:not(.sweeptab):not(.mk),#panel table:not(.sweeptab):not(.mk) tbody{display:block;width:100%}
+  #panel table:not(.sweeptab):not(.mk) tr{display:flex;flex-wrap:wrap;align-items:baseline;
     gap:4px 14px;padding:10px 4px;border-bottom:1px solid var(--rule)}
-  #panel table:not(.sweeptab) td{display:block;border:0;padding:0;text-align:left}
-  #panel table:not(.sweeptab) td.mine{flex:1 0 100%;font-size:16px}
-  #panel table:not(.sweeptab) td[data-l]:not(.mine)::before{content:attr(data-l);
+  #panel table:not(.sweeptab):not(.mk) td{display:block;border:0;padding:0;text-align:left}
+  #panel table:not(.sweeptab):not(.mk) td.mine{flex:1 0 100%;font-size:16px}
+  #panel table:not(.sweeptab):not(.mk) td[data-l]:not(.mine)::before{content:attr(data-l);
     display:block;font:600 9.5px var(--mono);letter-spacing:.08em;
     text-transform:uppercase;color:var(--ink-dim)}
   #panel td.why,#panel td.comp,#panel td.diag{display:block!important;flex:1 0 100%;
@@ -254,6 +254,7 @@ tbody tr.on td.mine::after{content:"\2713";color:var(--accent);font-weight:800;m
   .sweeptab tbody,.sweeptab tr{display:flex;flex-wrap:wrap;width:100%}
   .sweeptab td{flex:1 0 25%;border-bottom:1px solid var(--rule)}
   .sweeptab span{font-size:14px}
+  #panel table.mk td,#panel table.mk th{padding:5px 6px}
   #days button{min-height:44px;display:inline-flex;align-items:center;gap:6px}
   #panel tr[data-pick]{cursor:pointer}
 }
@@ -401,7 +402,7 @@ const pretty = s => s.slice(4,6).replace(/^0/,"") + "/" + s.slice(6).replace(/^0
 const esc = s => (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;");
 
 function buildTabs(){
-  if(slot === "results" || slot === "card" || slot === "stacks"){
+  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets"){
     tabs.innerHTML = ""; tabs.hidden = true; return;
   }
   tabs.innerHTML = "";
@@ -461,6 +462,10 @@ function renderView(){
   if(slot === "stacks"){
     tabs.hidden = true; how.hidden = true;
     return drawStacks();
+  }
+  if(slot === "markets"){
+    tabs.hidden = true; how.hidden = true;
+    return drawMarkets();
   }
   if(slot === "card"){
     tabs.hidden = true; how.hidden = true;
@@ -611,6 +616,47 @@ function drawStacks(){
     + 'it like a long shot, because it is one.</p></div>';
   panel.innerHTML = html;
 }
+// Every market the score model prices for each game: winner, spread, totals,
+// alternates, team totals, both teams to score, double chance.
+let MKDAY = null, MKQ = "";
+function drawMarkets(){
+  const M = D.markets || {};
+  const day = MKDAY || ((M.today || []).length ? "today" : "tomorrow");
+  const q = MKQ.toLowerCase();
+  const games = (M[day] || []).filter(g => !q || (g.match + " " + g.lg).toLowerCase().includes(q));
+  let html = '<div class="parlays"><h3>Markets \u2014 ' + day + '</h3>'
+    + '<p>Every market priced from the game\u2019s moneyline, spread and total. '
+    + '<b>Chance</b> is the model\u2019s probability; <b>Fair</b> is the price '
+    + 'that breaks even at that chance. A book or Kalshi paying better than Fair '
+    + 'is the good side. These are the book\u2019s own numbers re-read, not an edge '
+    + 'over it \u2014 see the backtest in the README for how well they hold up.</p>'
+    + '<p><button type="button" data-mday="today">Today</button> '
+    + '<button type="button" data-mday="tomorrow">Tomorrow</button> '
+    + '<input id="mkq" placeholder="Filter team or league" value="' + esc(MKQ)
+    + '" style="font:inherit;padding:4px 8px;max-width:100%"></p>';
+  if(!games.length) html += '<p>No priced games for this day yet.</p>';
+  games.forEach(g => {
+    const groups = {};
+    g.m.forEach(x => (groups[x.g] = groups[x.g] || []).push(x));
+    html += '<details class="ptk"><summary><b>' + esc(g.match) + '</b> '
+      + '<span style="color:var(--ink-dim)">' + esc(g.lg) + ' &middot; ' + esc(g.tip || "")
+      + ' &middot; ' + g.m.length + ' markets</span></summary>'
+      + Object.keys(groups).map(k => '<p style="margin:8px 0 2px"><b>' + esc(k) + '</b></p>'
+        + '<table class="mk"><thead><tr><th>Market</th><th class="num">Chance</th><th class="num">Fair</th></tr></thead><tbody>'
+        + groups[k].map(x => '<tr><td>' + esc(x.l) + '</td><td class="num">'
+            + (100 * x.p).toFixed(1) + '%</td><td class="num">' + esc(x.f || "") + '</td></tr>').join("")
+        + '</tbody></table>').join("")
+      + '</details>';
+  });
+  panel.innerHTML = html + '</div>';
+  const inp = document.getElementById("mkq");
+  if(inp) inp.oninput = e => {
+    MKQ = e.target.value; const pos = e.target.selectionStart;
+    render();
+    const again = document.getElementById("mkq");
+    if(again){ again.focus(); again.setSelectionRange(pos, pos); }
+  };
+}
 function copyStack(btn){
   const [d, n, i] = btn.getAttribute("data-stack").split("|");
   const t = (((D.stacks || {})[d] || {}).tickets || {})[n][+i];
@@ -718,13 +764,16 @@ function drawCard(slot){
     + '</tbody></table>';
 }
 
-["today","tomorrow","card","stacks","results"].forEach(s => {
+["today","tomorrow","card","stacks","markets","results"].forEach(s => {
   const b = document.createElement("button");
   b.setAttribute("aria-pressed", String(s === slot));
   const R = D.results || {};
   if(s === "results"){
     b.innerHTML = "Results" + '<span class="dnum">'
       + (R.graded ? R.won + "-" + R.lost : "0-0") + '</span>';
+  } else if(s === "markets"){
+    const n = ((D.markets || {}).today || []).length + ((D.markets || {}).tomorrow || []).length;
+    b.innerHTML = "Markets" + '<span class="dnum">' + n + ' games</span>';
   } else if(s === "stacks"){
     const st = (D.stacks || {}).today || {};
     const k = Object.values(st.tickets || {}).reduce((a, v) => a + v.length, 0);
@@ -998,6 +1047,8 @@ document.addEventListener("click", e => {
   }
   const sk = e.target.closest("[data-stack]");
   if(sk){ copyStack(sk); return; }
+  const md = e.target.closest("[data-mday]");
+  if(md){ MKDAY = md.getAttribute("data-mday"); render(); return; }
   const sd = e.target.closest("[data-sday]");
   if(sd){ STACKDAY = sd.getAttribute("data-sday"); render(); return; }
   const pl = e.target.closest("[data-parlay]");

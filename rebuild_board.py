@@ -148,6 +148,7 @@ def snapshot():
         stacks.record(out["stacks"], dates)
         stacks.grade(ledger._final)
         out["stacks_record"] = stacks.report()
+        out["markets"] = stacks.markets(d._STATE["slots"], SOCCER, labels)
         st = out["stacks"]["today"]
         print(f'stacks: {st["games"]} games priced today, '
               + ", ".join(f'{n}-leg x{len(t)}' for n, t in st["tickets"].items()),

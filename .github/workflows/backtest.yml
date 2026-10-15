@@ -1,0 +1,51 @@
+# Backtests stacks.py on real closing lines and final scores, on GitHub's
+# runners (the dev sandbox cannot reach ESPN), and commits the results file
+# the live board reads its per-sport haircut from. Runs when the model or the
+# backtest changes, weekly to fold in new games, or on demand.
+name: backtest
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * 1'
+  push:
+    branches: [claude/mlb-picks-review-jlx9w1]
+    paths:
+      - 'stacks.py'
+      - 'tools/backtest.py'
+      - '.github/workflows/backtest.yml'
+concurrency:
+  group: backtest
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/mlb-picks-review-jlx9w1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      # finished games and their closing odds never change; keep them
+      - uses: actions/cache@v4
+        with:
+          path: .cache/bt
+          key: backtest-${{ github.run_id }}
+          restore-keys: backtest-
+      - run: python3 tools/backtest.py
+      - name: Commit the results
+        run: |
+          git add -f data/backtest_stacks.json
+          if git diff --cached --quiet; then echo "unchanged"; exit 0; fi
+          git config user.name  "board bot"
+          git config user.email "board-bot@users.noreply.github.com"
+          git commit -m "Backtest results [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin claude/mlb-picks-review-jlx9w1 \
+              && git push origin HEAD:claude/mlb-picks-review-jlx9w1 && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
