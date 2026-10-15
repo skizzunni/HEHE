@@ -37,6 +37,7 @@ import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 from http.server import BaseHTTPRequestHandler, HTTPServer
 
+import anysport as A
 import picks as P
 
 ESPN = "https://site.api.espn.com/apis/site/v2/sports"
@@ -66,6 +67,7 @@ LEAGUES = [
 # with tennis the removed half was 225-100 (69.2%), a better rate than the
 # 93-48 (66.0%) the American leagues have managed.
 THREE_WAY = {k for k, p, _ in LEAGUES if p.startswith("soccer/")}
+PRESEASON_LEAGUES = {"mlb", "wnba", "nfl", "ncaaf", "nba", "nhl"}
 
 # Measured on 4,090 real sides of 2,045 completed 2026 MLB games with closing
 # DraftKings prices. Every favourite bucket underperforms its own implied
@@ -366,6 +368,10 @@ def collect(key, path, day, mlbctx, mybook=None):
     d = get(f"{ESPN}/{path}/scoreboard?dates={day}")
     rows = []
     for ev in d.get("events", []):
+        # Exhibition games are not picks: starters sit, and the ratings that
+        # price them were built on real games. See anysport.is_preseason.
+        if key in PRESEASON_LEAGUES and A.is_preseason(ev):
+            continue
         comps = list(ev.get("competitions") or [])
         for grp in ev.get("groupings") or []:
             # A combined event is returned in full by BOTH tennis feeds, so the

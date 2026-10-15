@@ -48,6 +48,18 @@ ET = dt.timezone(dt.timedelta(hours=-4))
 import dashboard as _d                                       # noqa: E402
 
 PATHS = {k: p for k, p, _ in _d.LEAGUES}
+# Leagues that have since left the board still have picks in the ledger. With
+# only the board's map, 102 soccer and tennis picks recorded before the
+# 2026-09-05 cut could never find their games and sat "open" forever.
+import anysport as _A                                        # noqa: E402
+for _k, (_p, _, _) in _A.LEAGUES.items():
+    PATHS.setdefault(_k, _p)
+PATHS.setdefault("atp", "tennis/atp")
+PATHS.setdefault("wta", "tennis/wta")
+SOCCER = {k for k, p in PATHS.items() if p.startswith("soccer/")}
+# A pick still open this long after its game date was postponed, cancelled,
+# or dropped from the feed. It is voided, not counted as a win or a loss.
+VOID_AFTER_DAYS = 7
 
 _CTX = ssl.create_default_context()
 try:
@@ -94,7 +106,9 @@ def record(state=None):
         state = D._STATE
     book = load()
     added = 0
+    dates = dict(zip(("today", "tomorrow"), state.get("dates") or ()))
     for slot in ("today", "tomorrow"):
+        day = dates.get(slot)
         for lg, rows in (state["slots"].get(slot) or {}).items():
             for r in rows:
                 if not r.get("mypick"):
@@ -124,6 +138,11 @@ def record(state=None):
                              market_agrees=(None if not leg or not leg.get("price")
                                             else not leg.get("dog")),
                              status="open", logged=dt.datetime.now(ET).isoformat()[:16])
+                # The game's own ET date, so the grader knows where to look.
+                # Without it the grader only searched the last three days, and
+                # any game it missed in that window was never graded.
+                if day:
+                    entry["date"] = f"{day[:4]}-{day[4:6]}-{day[6:]}"
                 if key not in book:
                     added += 1
                 book[key] = {**book.get(key, {}), **entry}
@@ -144,14 +163,37 @@ def _played_on(comp):
     return None
 
 
-def _final(lg, comp_id):
-    """(winner, away, home, ascore, hscore) once complete, else None."""
+def _search_days(e):
+    """Scoreboard dates to look for a pick's game on, most likely first."""
+    now = dt.datetime.now(ET).date()
+    days = []
+    anchor = e.get("date") or (e.get("logged") or "")[:10]
+    try:
+        a = dt.date.fromisoformat(anchor)
+        # a recorded game date is exact; a legacy entry only knows when it was
+        # logged, and "tomorrow" picks are logged the day before
+        span = (0, 1) if e.get("date") else (0, 1, 2, 3)
+        days += [a + dt.timedelta(days=k) for k in span]
+    except ValueError:
+        pass
+    days += [now - dt.timedelta(days=k) for k in (0, 1, 2)]
+    out = []
+    for x in days:
+        if x <= now and x not in out:
+            out.append(x)
+    return [x.strftime("%Y%m%d") for x in out]
+
+
+def _final(lg, comp_id, e=None):
+    """Result dict once complete, a live dict while in progress, else None."""
     path = PATHS.get(lg)
     if not path:
         return None
-    for back in (0, 1, 2):
-        day = (dt.datetime.now(ET) - dt.timedelta(days=back)).strftime("%Y%m%d")
+    reached = True
+    for day in _search_days(e or {}):
         d = get(f"{ESPN}/{path}/scoreboard?dates={day}")
+        if not d:
+            reached = False              # fetch failed -- absence proves nothing
         for ev in d.get("events", []):
             comps = list(ev.get("competitions") or [])
             for grp in ev.get("groupings") or []:
@@ -181,6 +223,11 @@ def _final(lg, comp_id):
                         scores[who] = " ".join(sets) if sets else None
                     if x.get("winner"):
                         names["winner"] = who
+                if (st.get("name") or "") in ("STATUS_POSTPONED", "STATUS_CANCELED",
+                                              "STATUS_CANCELLED", "STATUS_FORFEIT",
+                                              "STATUS_ABANDONED"):
+                    return dict(live=False, void=True, scores=scores,
+                                state=st.get("shortDetail", ""))
                 if not st.get("completed"):
                     # "pre" is a game that has not started -- not live, and
                     # nothing to show. Only state "in" is actually underway.
@@ -189,7 +236,15 @@ def _final(lg, comp_id):
                     return dict(live=True, state=st.get("shortDetail", ""),
                                 scores=scores)
                 win = names.get("winner")
-                if win is None and all(v is not None for v in scores.values()) and len(scores) == 2:
+                ints = [v for v in scores.values() if isinstance(v, int)]
+                if len(ints) == 2 and ints[0] == ints[1]:
+                    # A level score is a draw on the moneyline even when the
+                    # feed flags a winner (penalties, or nothing at all). The
+                    # old fallback took max() of two equal scores, which
+                    # returns whichever team is listed first -- 21 soccer
+                    # draws were graded as WINS that way.
+                    win = DRAW
+                elif win is None and len(ints) == 2:
                     win = max(scores, key=scores.get)
                 # The day the game was PLAYED, from its own timestamp -- not
                 # the scoreboard date it was found on. A tennis scoreboard
@@ -198,7 +253,46 @@ def _final(lg, comp_id):
                 return dict(live=False, winner=win, scores=scores,
                             state=st.get("shortDetail", ""),
                             date=_played_on(c) or f"{day[:4]}-{day[4:6]}-{day[6:]}")
-    return None
+    # Every date was fetched and the game is on none of them. Only that, never
+    # a failed fetch, may let a pick age into a void.
+    return dict(missing=True) if reached else None
+
+
+DRAW = "Draw"
+
+
+def _settle(e, win):
+    """won / lost / push for a pick, given the result's winner (or DRAW)."""
+    if win == DRAW:
+        if e.get("pick") == DRAW:
+            return "won"
+        # a 3-way soccer moneyline loses on a draw; a two-way market (an NFL
+        # tie) refunds the stake
+        return "lost" if e.get("league") in SOCCER else "push"
+    return "won" if win == e.get("pick") else "lost"
+
+
+def _fix_draws(book):
+    """Re-grade picks settled before draws were recognised. Idempotent."""
+    n = 0
+    for e in book.values():
+        if e.get("status") not in ("won", "lost"):
+            continue
+        ints = [v for v in (e.get("scores") or {}).values() if isinstance(v, int)]
+        if len(ints) != 2 or ints[0] != ints[1]:
+            continue
+        st = _settle(e, DRAW)
+        if st != e["status"] or e.get("winner") != DRAW:
+            e["winner"] = DRAW
+            if st != e["status"]:
+                e["regraded"] = f'{e["status"]} -> {st}: level score is a draw'
+                e["status"] = st
+                n += 1
+            if st == "lost":
+                e["diagnosis"] = diagnose(e, {"scores": e.get("scores")})
+            else:
+                e.pop("diagnosis", None)
+    return n
 
 
 def diagnose(e, res):
@@ -229,6 +323,8 @@ def diagnose(e, res):
             bits.append("blowout" if margin >= 6 else
                         "comfortable" if margin >= 4 else
                         "one-run game" if margin == 1 else "close")
+    if len(sc) == 2 and sc[0] == sc[1]:
+        bits.append("drawn -- a draw loses a moneyline side")
     if e.get("market_agrees") is True:
         bits.append("the book had my side favoured too")
     elif e.get("market_agrees") is False:
@@ -242,17 +338,41 @@ def diagnose(e, res):
     return " · ".join(bits)
 
 
+def _stale(e):
+    anchor = e.get("date") or (e.get("logged") or "")[:10]
+    try:
+        a = dt.date.fromisoformat(anchor)
+    except ValueError:
+        return False
+    return (dt.datetime.now(ET).date() - a).days > VOID_AFTER_DAYS
+
+
 def grade():
     book = load()
+    _fix_draws(book)
     settled = []
     for key, e in book.items():
         if e.get("status") != "open":
             continue
         lg, comp = key.split(":", 1)
-        res = _final(lg, comp)
-        if not res:
+        res = _final(lg, comp, e)
+        if res and res.get("void"):
+            e.pop("live", None)
+            e.pop("live_score", None)
+            e["status"] = "void"
+            e["settled"] = dt.datetime.now(ET).isoformat()[:16]
+            e["diagnosis"] = f'void: {res.get("state") or "game not played"}'
+            settled.append((key, e))
+            continue
+        if not res or res.get("missing"):
             e.pop("live", None)          # was it ever marked live, it is not now
             e.pop("live_score", None)
+            if res and _stale(e):
+                e["status"] = "void"
+                e["settled"] = dt.datetime.now(ET).isoformat()[:16]
+                e["diagnosis"] = (f"void: no final result found within "
+                                  f"{VOID_AFTER_DAYS} days of the game date")
+                settled.append((key, e))
             continue
         if res.get("live"):
             e["live"] = res.get("state")
@@ -265,7 +385,7 @@ def grade():
         e.pop("live_score", None)
         e["winner"] = win
         e["scores"] = res.get("scores")
-        e["status"] = "won" if win == e["pick"] else "lost"
+        e["status"] = _settle(e, win)
         e["settled"] = dt.datetime.now(ET).isoformat()[:16]
         # `settled` is when the grader ran; `played` is when the game was.
         # They diverge whenever grading lags -- when the league map was fixed,
@@ -379,11 +499,11 @@ def main():
         s = grade()
         print(f"settled {len(s)} pick(s)")
         for k, e in s:
-            mark = "WON " if e["status"] == "won" else "LOST"
+            mark = {"won": "WON ", "lost": "LOST"}.get(e["status"], e["status"].upper())
             sc = e.get("scores") or {}
             line = " ".join(f"{k2} {v}" for k2, v in sc.items() if v is not None)
             print(f"  {mark} {e['pick'][:26]:<26} {line}")
-            if e["status"] == "lost":
+            if e["status"] in ("lost", "void"):
                 print(f"       why: {e['diagnosis']}")
     if a.cmd in ("report", "cycle"):
         r, recs = report()

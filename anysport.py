@@ -128,6 +128,20 @@ def season_dates(league, year=None):
 CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".cache")
 
 
+def is_preseason(ev):
+    """True for an exhibition game: ESPN season type 1 / slug "preseason".
+
+    Every team-sport window here opens on the first of a month, so the NBA and
+    NHL windows (October) and MLB's (March) swallow the exhibition schedule.
+    Those games were being fed into the ratings and -- worse -- picked and
+    graded as if they were real: the ledger's NBA picks called at 80%+ went
+    1-8, because starters sit in October. Soccer season types are large
+    competition ids, never 1, so this only ever fires on the team leagues.
+    """
+    s = ev.get("season") or {}
+    return s.get("slug") == "preseason" or s.get("type") == 1
+
+
 def fetch_games(league, dates, workers=14, cache=True, tag="", ttl=3600):
     """Completed games with scores, deduped, chronological. Cached for `ttl`.
 
@@ -153,6 +167,8 @@ def fetch_games(league, dates, workers=14, cache=True, tag="", ttl=3600):
     with ThreadPoolExecutor(max_workers=workers) as ex:
         for d in ex.map(one, dates):
             for ev in d.get("events", []):
+                if is_preseason(ev):
+                    continue
                 for c in ev.get("competitions", []):
                     if c.get("id") in seen:
                         continue

@@ -25,6 +25,7 @@ STATE = os.path.join(HERE, ".cache", "last_board.json")
 
 import dashboard as d          # noqa: E402
 import ledger                  # noqa: E402
+import parlays                 # noqa: E402
 
 
 def snapshot():
@@ -135,6 +136,7 @@ def snapshot():
         lg["soccer"] = {"label": "Soccer", "rows": soccer_rows}
         out["slots"][slot] = lg
     out["results"] = ledger.board_payload()
+    out["parlays"] = parlays.build_all(out)
     return out
 
 

@@ -2029,3 +2029,45 @@ refused (`Resource not accessible by integration`), so no workflow can do it:
 
 The site is then at `https://skizzunni.github.io/HEHE/`. The repository is
 public, so that URL is public too — anyone with the link can read the board.
+
+## Audit, 2026-10-15 — grading bugs, preseason, and suggested parlays
+
+Asked for a system that "makes no mistakes". That isn't possible for any
+model: on 1,144 priced, graded picks the board's favourites hit **69.0%
+against 68.9% implied by the price**. The sportsbook's line is the best
+available forecast, and a model that can't beat it can't promise wins. What
+can be removed are the mistakes in the *machinery*. Four were found.
+
+1. **Soccer draws graded as wins.** With no `winner` flag on a level score,
+   the grader took `max()` of two equal numbers, which returns whichever team
+   is listed first. 21 soccer draws were recorded as wins (a draw loses a
+   3-way moneyline side) and one NFL tie as a win (it's a push). The grader
+   now recognises a draw. `_fix_draws()` regrades the old entries on the
+   next run. **The "+30% soccer ROI" quoted above came partly from this bug.**
+2. **Picks stuck "open" forever.** The grader searched only the last three
+   days and only the leagues still on the board, so 102 soccer/tennis picks
+   never settled. Picks now store their game date; the grader searches around
+   it, knows the retired leagues, and voids a pick that is postponed,
+   cancelled, or missing for 7+ days. It never voids on a failed fetch.
+3. **Preseason games picked and rated as real.** NBA picks called at 80%+
+   went 1-8. They were October exhibition games where starters sit. Preseason
+   events (ESPN season type 1) are now excluded from the board and from the
+   ratings.
+4. **Underdog calls lose.** This is a policy finding, not a code bug: 240
+   model underdog picks hit 34.2% vs 39.0% implied, **−15.1% a bet**.
+
+### parlays.py — suggested 2- and 3-leg tickets
+
+`python3 parlays.py` prints them, and the Card tab shows them with a
+**Load into slip** button that fills the existing slip, including the
+DraftKings link and the Fanatics copy block. The rules:
+
+- priced favourites only, with a measured hit rate, no "no signal" legs;
+- one leg per game, so no leg is correlated with another;
+- two or three legs, never more;
+- each leg's probability pulled halfway to the book's de-vigged number,
+  because the ledger shows the band rates on their own are optimistic;
+- ranked by expected value at the posted prices, plus the likeliest ticket.
+
+A negative EV is shown as negative. A 3-leg ticket of 75% legs still loses
+58% of the time.
