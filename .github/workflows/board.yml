@@ -117,6 +117,8 @@ jobs:
           # the page polls this and reloads itself when it changes
           date -u +%Y-%m-%dT%H:%M:%SZ > site/build.txt
           cp ledger.json site/ledger.json
+          # the Bot tab reads this; absent until the Kalshi secrets are set
+          if [ -f bot_status.json ]; then cp bot_status.json site/bot.json; fi
           touch site/.nojekyll
 
       # No configure-pages step: it only exists to hand a base URL to static

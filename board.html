@@ -409,7 +409,7 @@ const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g,
   .replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 
 function buildTabs(){
-  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props" || slot === "shared"){
+  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props" || slot === "shared" || slot === "bot"){
     tabs.innerHTML = ""; tabs.hidden = true; return;
   }
   tabs.innerHTML = "";
@@ -477,6 +477,10 @@ function renderView(){
   if(slot === "props"){
     tabs.hidden = true; how.hidden = true;
     return drawProps();
+  }
+  if(slot === "bot"){
+    tabs.hidden = true; how.hidden = true;
+    return drawBot();
   }
   if(slot === "shared"){
     tabs.hidden = true; how.hidden = true;
@@ -1036,13 +1040,15 @@ function drawCard(slot){
     + '</tbody></table>';
 }
 
-["today","tomorrow","card","stacks","markets","props","results"].forEach(s => {
+["today","tomorrow","card","stacks","markets","props","results","bot"].forEach(s => {
   const b = document.createElement("button");
   b.setAttribute("aria-pressed", String(s === slot));
   const R = D.results || {};
   if(s === "results"){
     b.innerHTML = "Results" + '<span class="dnum">'
       + (R.graded ? R.won + "-" + R.lost : "0-0") + '</span>';
+  } else if(s === "bot"){
+    b.innerHTML = "Bot" + '<span class="dnum">Kalshi</span>';
   } else if(s === "props"){
     const P = D.props || {};
     const n = ["today", "tomorrow"].reduce((a, d) => a + ((P[d] || {}).games || [])
@@ -1074,6 +1080,114 @@ function drawCard(slot){
   };
   days.appendChild(b);
 });
+
+// ---------------------------------------------------------------- bot view
+// bot.json is written by bot/kalshi_bot.py after every rebuild. It is fetched
+// rather than embedded because the bot runs after the page is built.
+let BOT = null, BOTERR = null;
+function loadBot(){
+  fetch("bot.json?" + Date.now(), { cache: "no-store" })
+    .then(r => r.ok ? r.json() : Promise.reject(r.status))
+    .then(j => { BOT = j; BOTERR = null; })
+    .catch(e => { BOTERR = e; })
+    .then(() => { if(slot === "bot") render(); });
+}
+setInterval(() => { if(slot === "bot") loadBot(); }, 60000);
+function money(v){
+  if(v === null || v === undefined) return "&mdash;";
+  return (v < 0 ? "&minus;$" : "$") + Math.abs(v).toFixed(2);
+}
+function pl(v){
+  if(v === null || v === undefined) return '<td class="num none">open</td>';
+  return '<td class="num edge ' + (v >= 0 ? "pos" : "neg") + '">'
+       + (v > 0 ? "+" : "") + money(v) + '</td>';
+}
+function drawBot(){
+  if(BOT === null && BOTERR === null){
+    panel.innerHTML = '<p class="empty">Loading the bot&rsquo;s last report&hellip;</p>';
+    return loadBot();
+  }
+  const tune = ((D.backtest || {}).tuning) || {};
+  const tuneHTML = '<div class="sect"><h2>Self-tuning</h2>'
+    + '<p class="note">Every graded stack leg re-fits its sport&rsquo;s haircut. A sport '
+    + 'missing more than promised gets marked down, so fewer of its legs make '
+    + 'tickets; one delivering gets more. It starts once a sport has about 50 graded legs.</p>'
+    + (Object.keys(tune).length
+      ? '<table class="mk"><thead><tr><th>Sport</th><th class="num">Legs</th>'
+        + '<th class="num">Missed</th><th class="num">Model said</th>'
+        + '<th class="num">Backtest</th><th class="num">Now</th></tr></thead><tbody>'
+        + Object.entries(tune).map(([k, t]) => '<tr><td>' + esc(k) + '</td>'
+          + '<td class="num">' + t.legs + '</td><td class="num">' + t.missed + '</td>'
+          + '<td class="num">' + t.raw_expected + '</td><td class="num">'
+          + t.backtest + '</td><td class="num">' + t.used + '</td></tr>').join("")
+        + '</tbody></table>'
+      : '<p class="note">No stack legs graded yet.</p>') + '</div>';
+  if(!BOT){
+    panel.innerHTML = '<div class="rhead"><div class="rbig">Off</div><div class="rsub">'
+      + 'no report yet &mdash; the bot reports after the first run with the '
+      + 'KALSHI_KEY_ID and KALSHI_PRIVATE_KEY secrets set</div></div>' + tuneHTML;
+    return;
+  }
+  const B = BOT, live = B.mode === "live";
+  const age = B.updated ? Math.round((Date.now() - Date.parse(B.updated)) / 60000) : null;
+  const S = live ? (B.record_summary || {}) : (B.practice_summary || {});
+  let h = '<div class="rhead">'
+    + '<div class="rbig">' + (B.ok ? (live ? "LIVE" : "Practice") : "Error") + '</div>'
+    + '<div class="rsub">' + (B.ok ? 'balance ' + money(B.balance)
+        + (B.portfolio_value != null ? ' &middot; in play ' + money(B.portfolio_value) : '')
+        : esc(B.error || "not connected")) + '</div>'
+    + '<div class="rsub">' + (age === null ? "" : "reported " + age + " min ago")
+    + (B.limits ? ' &middot; limits $' + B.limits.stake + '/ticket, $' + B.limits.daily
+        + '/day, ' + B.limits.open + ' open' : '')
+    + ' &middot; spent today ' + money(B.spent_today || 0) + '</div></div>';
+  if(!live) h += '<p class="note" style="margin:10px 0 0">Practice mode: nothing is '
+    + 'placed. Each ticket it would have bought is logged at the real Kalshi price '
+    + 'and graded on Kalshi&rsquo;s own result, so this is the record it would have '
+    + 'made. It goes live only when the KALSHI_LIVE secret is set to yes.</p>';
+  h += '<div class="sect"><h2>' + (live ? "Profit" : "Practice profit") + '</h2>'
+    + '<table class="sweeptab"><tbody><tr>'
+    + '<td><b>tickets</b><span>' + (S.tickets || 0) + '</span></td>'
+    + '<td><b>settled</b><span>' + (S.settled || 0) + '</span></td>'
+    + '<td><b>won</b><span>' + (S.won || 0) + '</span></td>'
+    + '<td><b>staked</b><span>' + money(S.staked || 0) + '</span></td>'
+    + '<td><b>profit</b><span>' + money(S.profit || 0) + '</span></td>'
+    + '</tr></tbody></table></div>';
+  const open = B.open || [];
+  if(open.length) h += '<div class="sect"><h2>Holding</h2><p class="note">Sold early '
+    + 'only when someone bids more than the combo is worth now.</p>'
+    + '<table class="mk"><thead><tr><th>Combo</th><th class="num">Qty</th>'
+    + '<th class="num">Legs won</th><th class="num">Worth</th><th class="num">Bid</th>'
+    + '</tr></thead><tbody>' + open.map(o => '<tr><td>' + esc(o.title || o.ticker) + '</td>'
+      + '<td class="num">' + o.count + '</td><td class="num">' + o.won + '/' + o.legs
+      + '</td><td class="num">' + money(o.fair) + '</td><td class="num">'
+      + money(o.bid) + '</td></tr>').join("") + '</tbody></table></div>';
+  const rows = live ? (B.record || []) : (B.practice || []);
+  h += '<div class="sect"><h2>' + (live ? "Tickets" : "Practice tickets") + '</h2>'
+    + (rows.length ? '<table class="mk"><thead><tr><th>Ticket</th><th class="num">Cost</th>'
+      + '<th>Result</th><th class="num">Profit</th></tr></thead><tbody>'
+      + rows.slice(0, 60).map(r => '<tr><td>' + (r.legs
+          ? r.n + ' legs: ' + r.legs.map(esc).join("<br>")
+          : esc(r.ticker)) + '</td>'
+        + '<td class="num">' + money(r.cost != null ? r.cost : r.count * r.ask) + '</td>'
+        + '<td>' + esc(r.result || r.status || "open") + '</td>' + pl(r.profit) + '</tr>')
+        .join("") + '</tbody></table>'
+      : '<p class="note">None yet.</p>') + '</div>';
+  const c = B.considered || [];
+  h += '<div class="sect"><h2>Last run</h2><p class="note">Every Kalshi-ready ticket it '
+    + 'looked at and why it did or did not buy. It buys only when Kalshi pays at '
+    + 'least ' + Math.round(100 * ((B.limits || {}).min_edge || 0.05)) + '% more than fair.</p>'
+    + (c.length ? '<table class="mk"><thead><tr><th>Ticket</th><th class="num">Fair</th>'
+      + '<th class="num">Kalshi pays</th><th>Decision</th></tr></thead><tbody>'
+      + c.map(x => '<tr><td>' + x.n + ' legs: ' + x.legs.map(esc).join("<br>") + '</td>'
+        + '<td class="num">' + x.fair.toFixed(2) + 'x</td><td class="num">'
+        + (x.pays ? x.pays.toFixed(2) + 'x' : '&mdash;') + '</td><td>'
+        + esc(x.verdict) + '</td></tr>').join("") + '</tbody></table>'
+      : '<p class="note">No ticket in an allowed sport this run.</p>') + '</div>';
+  h += tuneHTML;
+  h += '<div class="sect"><h2>Log</h2><pre class="note" style="white-space:pre-wrap">'
+    + (B.lines || []).map(esc).join("\n") + '</pre></div>';
+  panel.innerHTML = h;
+}
 
 // ------------------------------------------------------------ results view
 // Everything here is graded off finished games, not projected. A pick enters

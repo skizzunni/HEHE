@@ -367,6 +367,53 @@ def _load_backtest():
 
 _load_backtest()
 
+# ----------------------------------------------------------- self-tuning
+# The backtest factor is a starting point, not the last word. Every graded
+# stack leg in stacks.json is an out-of-sample test the model did not see, so
+# each rebuild re-fits each sport's miss factor on backtest + live results:
+#
+#     k = (prior misses + live misses) / (prior expected + live expected)
+#
+# where "expected" is the misses the RAW model predicted, sum(1 - p_model).
+# The backtest counts as PRIOR_EXPECTED expected misses -- enough that a bad
+# weekend cannot swing it, little enough that a month of live results can.
+# A sport that misses more than promised gets a bigger haircut, so fewer of
+# its legs clear LEG_MIN and the builder leans on sports that are delivering.
+# Live misses never make a sport look better than the data says.
+PRIOR_EXPECTED = 40.0
+TUNE_MIN_EXPECTED = 5.0      # live evidence needed before it counts at all
+TUNE_BOUNDS = (0.7, 3.0)
+TUNING = {}                  # sport -> what was fitted, for the page
+
+
+def _self_tune():
+    try:
+        with open(LEDGER) as fh:
+            book = json.load(fh)
+    except (OSError, ValueError, NameError):
+        return
+    live = defaultdict(lambda: [0, 0.0, 0])   # misses, expected misses, legs
+    for L in (book.get("legs") or {}).values():
+        if L.get("status") not in ("won", "lost") or not L.get("p_model"):
+            continue
+        x = live[sport_of(L.get("league"))]
+        x[0] += L["status"] == "lost"
+        x[1] += 1 - L["p_model"]
+        x[2] += 1
+    for sp, (miss, exp, n) in live.items():
+        prior = MISS_BY_SPORT.get(sp, MISS_INFLATE)
+        row = dict(legs=n, missed=miss, raw_expected=round(exp, 1),
+                   backtest=prior, used=prior)
+        if exp >= TUNE_MIN_EXPECTED:
+            k = (prior * PRIOR_EXPECTED + miss) / (PRIOR_EXPECTED + exp)
+            k = round(min(max(k, TUNE_BOUNDS[0]), TUNE_BOUNDS[1]), 2)
+            MISS_BY_SPORT[sp] = k
+            row["used"] = k
+        TUNING[sp] = row
+
+
+_self_tune()
+
 
 def backtest_summary():
     """Per-sport backtest results for the page: leg calibration on the
@@ -390,7 +437,7 @@ def backtest_summary():
         rows.append(dict(sport=k, games=v.get("games"), legs=n, said=round(said, 1),
                          hit=round(hit, 1), tickets=sum(t["played"] for t in tk),
                          won=won, expected=round(exp, 1)))
-    return dict(run=bt.get("run"), rows=rows)
+    return dict(run=bt.get("run"), rows=rows, tuning=TUNING)
 
 
 def half(x):

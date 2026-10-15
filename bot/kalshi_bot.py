@@ -46,6 +46,8 @@ import uuid
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 STATE = os.path.join(ROOT, ".cache", "last_board.json")
+STATUS_FILE = os.path.join(ROOT, "bot_status.json")              # the page's Bot tab
+HISTORY = os.path.join(ROOT, ".cache", "bot_history.json")       # practice tickets
 BACKTEST = os.path.join(ROOT, "data", "backtest_stacks.json")
 HOST = "https://api.elections.kalshi.com"
 PREFIX = "/trade-api/v2"
@@ -61,8 +63,53 @@ SELL_EDGE = float(os.environ.get("KALSHI_SELL_EDGE", "0.05"))    # sell only 5%+
 LEG_RANGE = (2, 6)                                                # ticket sizes it buys
 
 
+STATUS = dict(mode="live" if LIVE else "practice", ok=False, lines=[], considered=[],
+              open=[], record=[], practice=[])
+
+
 def log(*a):
-    print("[kalshi-bot]" + ("" if LIVE else "[practice]"), *a, flush=True)
+    line = " ".join(str(x) for x in a)
+    print("[kalshi-bot]" + ("" if LIVE else "[practice]"), line, flush=True)
+    STATUS["lines"].append(line)
+
+
+def money(obj, name):
+    """A Kalshi money field in dollars: `<name>_dollars` if present, else the
+    integer-cents field (a string with a decimal point is already dollars)."""
+    v = obj.get(name + "_dollars")
+    if v is not None:
+        return float(v)
+    v = obj.get(name)
+    if v is None or v == "":
+        return 0.0
+    if isinstance(v, str) and "." in v:
+        return float(v)
+    return float(v) / 100
+
+
+def count_of(obj):
+    return float(obj.get("count_fp") or obj.get("count") or 0)
+
+
+def load_history():
+    try:
+        with open(HISTORY) as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return []
+
+
+def save_history(h):
+    os.makedirs(os.path.dirname(HISTORY), exist_ok=True)
+    with open(HISTORY, "w") as fh:
+        json.dump(h[-500:], fh)
+
+
+def write_status():
+    STATUS["updated"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    STATUS["lines"] = STATUS["lines"][-80:]
+    with open(STATUS_FILE, "w") as fh:
+        json.dump(STATUS, fh, indent=1)
 
 
 # ------------------------------------------------------------------ signing
@@ -175,15 +222,15 @@ def spent_today():
     for f in (d or {}).get("fills") or []:
         if f.get("action") != "buy":
             continue
-        n = float(f.get("count_fp") or f.get("count") or 0)
-        p = dollars(f.get("yes_price_dollars") if f.get("side") == "yes" else f.get("no_price_dollars")) \
-            or dollars(f.get("yes_price") if f.get("side") == "yes" else f.get("no_price")) or 0
-        total += n * p
+        side = "yes" if f.get("side") == "yes" else "no"
+        total += count_of(f) * money(f, f"{side}_price")
     return total
 
 
 # -------------------------------------------------------------------- buy
-def buy_tickets(board, sports, budget_left, open_n):
+def buy_tickets(board, sports, budget_left, open_n, held, history):
+    """`held` is every combo ticker already owned (live) or already taken in
+    practice, so the same ticket is never bought twice."""
     ks = ((board.get("kalshi_stacks") or {}).get("today") or {}).get("tickets") or {}
     tickets = [t for n, ts in ks.items() for t in ts]
     tickets = [t for t in tickets
@@ -201,10 +248,14 @@ def buy_tickets(board, sports, budget_left, open_n):
         if budget_left < 1:
             log("daily limit reached")
             return
+        labels = [f'{L["label"]} ({L["match"]})' for L in t["legs"]]
+        seen = dict(n=t["n"], legs=labels, fair=round(t["fair"], 2), verdict="")
+        STATUS["considered"].append(seen)
         legs = [L["kalshi"] for L in t["legs"]]
         coll = collection_for({k["event"] for k in legs})
         if not coll:
             log("no combo collection covers", t["n"], "legs; skipped")
+            seen["verdict"] = "Kalshi offers no combo for these games"
             continue
         sel = [dict(event_ticker=k["event"], market_ticker=k["ticker"], side=k["side"].lower())
                for k in legs]
@@ -212,17 +263,25 @@ def buy_tickets(board, sports, budget_left, open_n):
         combo = (d or {}).get("market_ticker")
         if st not in (200, 201) or not combo:
             log("could not create combo market:", st, json.dumps(d)[:200])
+            seen["verdict"] = "Kalshi refused the combo"
+            continue
+        seen["ticker"] = combo
+        if combo in held:
+            seen["verdict"] = "already holding it"
             continue
         st, book = api("GET", f"/markets/{combo}/orderbook", auth=False)
         ask = best_yes_ask(book)
         fair = t["fair"]                           # payout multiple at the board's odds
         if not ask:
             log(f"{combo}: no ask on the book (Kalshi may need a quote request); skipped")
+            seen["verdict"] = "nobody selling it right now"
             continue
         pays = 1 / ask
+        seen.update(ask=ask, pays=round(pays, 2))
         log(f"{combo}: {t['n']} legs, ask {ask:.2f} pays {pays:.2f}x, fair {fair:.2f}x")
         if pays < fair * (1 + MIN_EDGE):
             log("  pays less than fair + margin; not buying")
+            seen["verdict"] = f"Kalshi pays {pays:.2f}x, needs {fair * (1 + MIN_EDGE):.2f}x+"
             continue
         stake = min(MAX_STAKE, budget_left)
         count = int(stake // ask)
@@ -233,12 +292,22 @@ def buy_tickets(board, sports, budget_left, open_n):
                      buy_max_cost=int(round(stake * 100)), client_order_id=str(uuid.uuid4()))
         if not LIVE:
             log("  WOULD BUY", json.dumps(order))
+            seen["verdict"] = f"practice buy: {count} @ ${ask:.2f}"
+            history.append(dict(ts=STATUS["started"], ticker=combo, n=t["n"], legs=labels,
+                                count=count, ask=ask, fair=round(fair, 2), result=None))
+            held.add(combo)
+            budget_left -= count * ask
+            open_n += 1
             continue
         st, d = api("POST", "/portfolio/orders", order)
         log("  BUY", st, json.dumps(d)[:300])
         if st in (200, 201):
+            seen["verdict"] = f"BOUGHT up to {count} @ ${ask:.2f}"
+            held.add(combo)
             budget_left -= count * ask
             open_n += 1
+        else:
+            seen["verdict"] = f"order refused ({st})"
 
 
 # ------------------------------------------------------------------- sell
@@ -277,6 +346,9 @@ def cash_out(positions):
         st, book = api("GET", f"/markets/{tk}/orderbook", auth=False)
         bid = best_yes_bid(book)
         log(f"{tk}: {int(n)} held, fair now {fair:.2f}, best bid {bid}")
+        STATUS["open"].append(dict(ticker=tk, title=m.get("title") or m.get("subtitle") or "",
+                                   count=n, fair=round(fair, 2), bid=bid,
+                                   legs=len(legs), won=sum(1 for v in vals if v == 1.0)))
         if not bid or bid < fair * (1 + SELL_EDGE):
             continue
         order = dict(ticker=tk, action="sell", side="yes", count=int(n), type="limit",
@@ -289,30 +361,140 @@ def cash_out(positions):
         log("  SELL", st, json.dumps(d)[:300])
 
 
+# ---------------------------------------------------------------- record
+def is_combo(ticker):
+    return "MVE" in (ticker or "")
+
+
+def live_record():
+    """Every combo the account has traded, from Kalshi's own fills and
+    settlements: what it cost, what came back, and the profit."""
+    rec = {}
+    st, d = api("GET", "/portfolio/fills?limit=200")
+    for f in (d or {}).get("fills") or []:
+        tk = f.get("ticker") or f.get("market_ticker")
+        if not is_combo(tk):
+            continue
+        r = rec.setdefault(tk, dict(ticker=tk, bought=0.0, cost=0.0, sold=0.0,
+                                    proceeds=0.0, payout=0.0, status="open",
+                                    first=f.get("created_time")))
+        side = "yes" if f.get("side") == "yes" else "no"
+        amt = count_of(f) * money(f, f"{side}_price")
+        fee = money(f, "fee_cost")
+        if f.get("action") == "buy":
+            r["bought"] += count_of(f)
+            r["cost"] += amt + fee
+        else:
+            r["sold"] += count_of(f)
+            r["proceeds"] += amt - fee
+        r["first"] = min(filter(None, [r["first"], f.get("created_time")]), default=None)
+    st, d = api("GET", "/portfolio/settlements?limit=200")
+    for x in (d or {}).get("settlements") or []:
+        tk = x.get("ticker") or x.get("market_ticker")
+        if tk in rec:
+            rec[tk]["payout"] = money(x, "revenue")
+            rec[tk]["result"] = x.get("market_result")
+            rec[tk]["status"] = "won" if rec[tk]["payout"] > 0 else "lost"
+    for r in rec.values():
+        if r["status"] == "open" and r["bought"] and r["sold"] >= r["bought"]:
+            r["status"] = "cashed out"
+        r["profit"] = round(r["proceeds"] + r["payout"] - r["cost"], 2) \
+            if r["status"] != "open" else None
+        for k in ("cost", "proceeds", "payout"):
+            r[k] = round(r[k], 2)
+    out = sorted(rec.values(), key=lambda r: r.get("first") or "", reverse=True)
+    return out
+
+
+def grade_practice(history, budget=25):
+    """Settle practice tickets against Kalshi's result for the same combo."""
+    for h in history:
+        if h.get("result") or budget <= 0:
+            continue
+        budget -= 1
+        st, d = api("GET", f"/markets/{h['ticker']}", auth=False)
+        m = (d or {}).get("market") or {}
+        if m.get("result") in ("yes", "no"):
+            h["result"] = "won" if m["result"] == "yes" else "lost"
+            h["profit"] = round(h["count"] * ((1 if h["result"] == "won" else 0) - h["ask"]), 2)
+
+
+def summary(rows):
+    done = [r for r in rows if r.get("profit") is not None]
+    return dict(tickets=len(rows), settled=len(done),
+                won=sum(1 for r in done if r["profit"] > 0),
+                profit=round(sum(r["profit"] for r in done), 2),
+                staked=round(sum(r.get("cost", r.get("count", 0) * r.get("ask", 0))
+                                 for r in done), 2))
+
+
 # ------------------------------------------------------------------- main
 def main():
     if not KEY_ID or not KEY_PEM.strip():
         print("[kalshi-bot] no KALSHI_KEY_ID / KALSHI_PRIVATE_KEY secret set; bot is off")
         return 0
+    STATUS["started"] = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    STATUS["limits"] = dict(stake=MAX_STAKE, daily=MAX_DAILY, open=MAX_OPEN,
+                            min_edge=MIN_EDGE, sell_edge=SELL_EDGE)
+    try:
+        return run()
+    except Exception as e:
+        log("stopped on an error:", type(e).__name__, str(e)[:200])
+        STATUS["error"] = f"{type(e).__name__}: {str(e)[:200]}"
+        return 1
+    finally:
+        write_status()
+
+
+def run():
     st, bal = api("GET", "/portfolio/balance")
     if st != 200:
         log("authentication failed:", st, json.dumps(bal)[:200], "-- nothing else attempted")
+        STATUS["error"] = f"Kalshi refused the key (HTTP {st}). Check the key is RSA " \
+                          "and the whole private key, BEGIN to END, is in the secret."
         return 1
-    log(f"connected; balance ${dollars((bal or {}).get('balance')) or 0:.2f}; "
+    STATUS["ok"] = True
+    STATUS["balance"] = money(bal or {}, "balance")
+    if (bal or {}).get("portfolio_value") is not None or (bal or {}).get("portfolio_value_dollars"):
+        STATUS["portfolio_value"] = money(bal, "portfolio_value")
+    log(f"connected; balance ${STATUS['balance']:.2f}; "
         f"limits ${MAX_STAKE:.2f}/ticket, ${MAX_DAILY:.2f}/day, {MAX_OPEN} open")
     st, pos = api("GET", "/portfolio/positions?limit=200&count_filter=position")
     positions = (pos or {}).get("market_positions") or []
-    combos_open = sum(1 for p in positions if "MVE" in (p.get("ticker") or "")
-                      and float(p.get("position_fp") or p.get("position") or 0) > 0)
+    held = {p.get("ticker") for p in positions if is_combo(p.get("ticker"))
+            and float(p.get("position_fp") or p.get("position") or 0) > 0}
     cash_out(positions)
+    STATUS["record"] = live_record()
+    STATUS["record_summary"] = summary(STATUS["record"])
+
+    history = load_history()
+    grade_practice(history)
+    today = STATUS["started"][:10]
+    if LIVE:
+        left = MAX_DAILY - spent_today()
+        open_n = len(held)
+    else:
+        # practice keeps its own books so it obeys the same limits
+        left = MAX_DAILY - sum(h["count"] * h["ask"] for h in history if h["ts"][:10] == today)
+        open_n = sum(1 for h in history if not h.get("result"))
+        held |= {h["ticker"] for h in history}
+    STATUS["spent_today"] = round(MAX_DAILY - left, 2)
     try:
         with open(STATE) as fh:
             board = json.load(fh)
     except (OSError, ValueError):
         log("no board snapshot; buying skipped")
-        return 0
-    left = MAX_DAILY - spent_today()
-    buy_tickets(board, allowed_sports(), left, combos_open)
+        board = None
+    if board:
+        buy_tickets(board, allowed_sports(), left, open_n, held, history)
+    save_history(history)
+    if not LIVE:
+        STATUS["spent_today"] = round(sum(h["count"] * h["ask"] for h in history
+                                          if h["ts"][:10] == today), 2)
+    elif board:
+        STATUS["spent_today"] = round(spent_today(), 2)
+    STATUS["practice"] = list(reversed(history[-100:]))
+    STATUS["practice_summary"] = summary(history)
     return 0
 
 
