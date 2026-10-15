@@ -128,6 +128,8 @@ def raw_items(league, eid):
 
 
 def american_prob(a):
+    if str(a).strip().upper() == "EVEN":
+        a = "+100"
     try:
         v = float(str(a).replace("+", ""))
     except (TypeError, ValueError):

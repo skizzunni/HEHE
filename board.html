@@ -403,7 +403,10 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
 const tabs = document.getElementById("tabs"), panel = document.getElementById("panel"),
       days = document.getElementById("days"), bias = document.getElementById("bias");
 const pretty = s => s.slice(4,6).replace(/^0/,"") + "/" + s.slice(6).replace(/^0/,"");
-const esc = s => (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;");
+// Escapes for text AND for double-quoted attributes. It used to skip quotes,
+// so a crafted share link could close an href and inject its own attributes.
+const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;")
+  .replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 
 function buildTabs(){
   if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props" || slot === "shared"){
@@ -812,12 +815,13 @@ function copyStack(btn){
 // addToBetslip format The Odds API documents. They hand off to the book's
 // app when it is installed; in a plain browser they open the website.
 function dkOne(ref){
-  if(!ref) return null;
+  // only DraftKings' own id shape -- a share link is untrusted input
+  if(typeof ref !== "string" || !/^\d+:[A-Za-z0-9_]+$/.test(ref)) return null;
   const [e, o] = ref.split(":");
   return o ? "https://sportsbook.draftkings.com/event/" + e + "?outcomes=" + o : null;
 }
 function fdOne(ref){
-  if(!ref) return null;
+  if(typeof ref !== "string" || !/^\d+\.\d+:\d+$/.test(ref)) return null;
   const [m, x] = ref.split(":");
   return x ? "https://sportsbook.fanduel.com/addToBetslip?marketId=" + m + "&selectionId=" + x : null;
 }
@@ -866,7 +870,7 @@ function ticketFrom(key){
     const t = stackT(d, n, i);
     return t && { title: t.n + "-leg stack", note: "hits " + (100 * t.prob).toFixed(1)
       + "% \u00b7 fair payout " + t.fair.toFixed(2) + "x",
-      legs: t.legs.map(L => [L.label, L.match + " \u00b7 " + L.lg, null, fdOne(L.fd)]) };
+      legs: t.legs.map(L => [L.label, L.match + " \u00b7 " + L.lg, null, L.fd || null]) };
   }
   if(kind === "prop"){
     const t = ((((D.props || {})[d] || {}).tickets || {})[n] || [])[+i];
@@ -878,7 +882,7 @@ function ticketFrom(key){
     const t = (((D.parlays || {})[d] || {})[n] || [])[+i];
     if(!t) return null;
     return { title: t.n + "-leg parlay " + t.price, note: "hits " + (100 * t.prob).toFixed(1) + "%",
-      legs: t.legs.map(L => [L.pick, L.price + " \u00b7 " + L.league, dkOne(L.dk), fdOne(L.fd)]) };
+      legs: t.legs.map(L => [L.pick, L.price + " \u00b7 " + L.league, L.dk || null, L.fd || null]) };
   }
   return null;
 }
@@ -887,7 +891,7 @@ function slipTicket(){
   const c = all ? SLIP.reduce((a, r) => a * dec(r.p), 1) : null;
   return { title: SLIP.length + "-leg slip" + (c ? " " + amer(c) : ""),
     legs: SLIP.map(r => [r.mp, (r.p || "no line") + (r.lg ? " \u00b7 " + r.lg : ""),
-                         dkOne(r.dk), fdOne(r.fd)]),
+                         r.dk || null, r.fd || null]),
     note: c ? "$5 returns $" + (5 * c).toFixed(2) : "" };
 }
 let SHARED = null;
@@ -899,7 +903,7 @@ function drawShared(){
   } else {
     html += '<p><b>' + esc(o.title) + '</b></p><ul>'
       + o.legs.map(L => '<li>' + esc(L[0]) + (L[1] ? ' <span style="color:var(--ink-dim)">'
-          + esc(L[1]) + '</span>' : '') + legBtns(L[2], L[3]) + '</li>').join("") + '</ul>'
+          + esc(L[1]) + '</span>' : '') + legBtns(dkOne(L[2]), fdOne(L[3])) + '</li>').join("") + '</ul>'
       + (o.note ? '<p>' + esc(o.note) + '</p>' : '')
       + '<p><button type="button" id="sharedcopy">Copy ticket</button> '
       + '<a href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a> ' 
@@ -925,6 +929,12 @@ function readHash(){
   const m = location.hash.match(/^#t=(.+)$/);
   if(!m) return false;
   try { SHARED = decT(m[1]); } catch (e) { SHARED = null; }
+  // a share link is untrusted: accept only the shape this page writes
+  const str = v => v == null || typeof v === "string";
+  if(!SHARED || typeof SHARED !== "object" || !str(SHARED.title) || !str(SHARED.note)
+     || !Array.isArray(SHARED.legs) || SHARED.legs.length > 40
+     || !SHARED.legs.every(L => Array.isArray(L) && L.length <= 4 && L.every(str)))
+    SHARED = null;
   slot = "shared";
   [...days.children].forEach(x => x.setAttribute("aria-pressed", "false"));
   return true;

@@ -20,6 +20,7 @@ Each pick carries the numbers that produced it, so the reasoning is inspectable
 rather than asserted. Held-out accuracy by league is recorded in the README;
 nothing here has been shown to beat a closing price.
 """
+from zoneinfo import ZoneInfo
 import datetime as dt
 import json
 import math
@@ -513,7 +514,7 @@ def tennis_picks(day, tour=None):
                     except ValueError:
                         continue
                     et = t.replace(tzinfo=dt.timezone.utc).astimezone(
-                        dt.timezone(dt.timedelta(hours=-4)))
+                        ZoneInfo("America/New_York"))
                     if et.strftime("%Y%m%d") != day:
                         continue
                     ps = [(x.get("athlete") or {}).get("displayName")

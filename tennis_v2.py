@@ -116,6 +116,7 @@ Slams and Masters are where this is worth acting on. Ordinary tour-level main
 draws are close to noise, and the board says so per match rather than presenting
 every lean as equal.
 """
+from zoneinfo import ZoneInfo
 import argparse, datetime as dt, json, math, os, re, ssl, sys, urllib.request
 from collections import Counter, defaultdict
 
@@ -233,7 +234,7 @@ def upcoming(date):
                     try:
                         t = dt.datetime.strptime(c.get("date", ""), "%Y-%m-%dT%H:%MZ")
                         et = t.replace(tzinfo=dt.timezone.utc).astimezone(
-                            dt.timezone(dt.timedelta(hours=-4)))
+                            ZoneInfo("America/New_York"))
                     except ValueError:
                         continue
                     if et.strftime("%Y%m%d") != str(date):

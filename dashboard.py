@@ -42,7 +42,10 @@ import picks as P
 
 ESPN = "https://site.api.espn.com/apis/site/v2/sports"
 MLB = "https://statsapi.mlb.com/api/v1"
-ET = dt.timezone(dt.timedelta(hours=-4))
+# US Eastern with daylight saving. A fixed UTC-4 put every game after 11pm
+# EST on the next day's board from November to March.
+from zoneinfo import ZoneInfo                                    # noqa: E402
+ET = ZoneInfo("America/New_York")
 
 # American sports only. Soccer (35 competitions) and tennis were removed on
 # 2026-09-05 at the user's direction. Recording what that cost, because the
@@ -145,7 +148,7 @@ def bucket(price):
         if lo <= p < hi:
             return dict(act=act, imp=imp, roi=roi, gap=act - imp)
     return None
-_NO_PRICE = {"OFF", "EVEN", "", "-", "N/A", "PK"}
+_NO_PRICE = {"OFF", "", "-", "N/A", "PK"}
 
 _CTX = ssl.create_default_context()
 try:
@@ -226,6 +229,8 @@ def am_to_dec(o):
     if o is None:
         return None
     s = str(o).strip().upper().replace("+", "")
+    if s == "EVEN":                      # an even-money price is +100
+        s = "100"
     if s in _NO_PRICE or not s.lstrip("-").isdigit():
         return None
     v = int(s)
@@ -270,7 +275,17 @@ def deep_links(comp):
     return out
 
 
+def _even(v):
+    """'EVEN' is +100; every price consumer downstream expects a number."""
+    return "+100" if str(v).strip().upper() == "EVEN" else v
+
+
 def raw_prices(comp, ways):
+    out = _raw_prices(comp, ways)
+    return tuple(_even(v) for v in out) if out else out
+
+
+def _raw_prices(comp, ways):
     for o in comp.get("odds") or []:
         if not isinstance(o, dict):
             continue

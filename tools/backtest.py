@@ -237,7 +237,10 @@ def main():
                     continue
                 hit = int(S.predicate(spec, g.home, g.away)(hs, as_))
                 markets.append((group, p, hit))
-            fav_home = g.prob_specs([dict(t="win", team=g.home)]) >= 0.5
+            # the same favourite rule as the live board (stacks.candidates);
+            # ">= 0.5" picked the other side in soccer, where a draw exists
+            fav_home = g.prob_specs([dict(t="win", team=g.home)]) >= \
+                g.prob_specs([dict(t="win", team=g.away)])
             for grp, label, spec in S.leg_specs(g, key, fav_home):
                 p = g.prob_specs([spec])
                 if p is None or not 0.75 <= p <= 0.995:

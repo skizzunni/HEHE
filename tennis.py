@@ -46,6 +46,7 @@ and is NOT a clean validation. Treat the true figure as somewhere in the high
 fifties. Unlike model_v3.py for MLB, this model has no uncontaminated backtest.
 Its output is a lean with an asterisk, not a validated edge.
 """
+from zoneinfo import ZoneInfo
 import argparse
 import datetime as dt
 import json
@@ -119,7 +120,7 @@ def matches_on(date):
                     try:
                         t = dt.datetime.strptime(c.get("date", ""), "%Y-%m-%dT%H:%MZ")
                         et = t.replace(tzinfo=dt.timezone.utc).astimezone(
-                            dt.timezone(dt.timedelta(hours=-4)))
+                            ZoneInfo("America/New_York"))
                     except ValueError:
                         continue
                     if et.strftime("%Y%m%d") != str(date):

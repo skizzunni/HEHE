@@ -13,6 +13,7 @@ starting point to argue with.
 
 Times are US Eastern, as ESPN returns them.
 """
+from zoneinfo import ZoneInfo
 import argparse
 import datetime as _dt
 import json
@@ -64,7 +65,7 @@ def _on_date(comp, yyyymmdd):
             t = _dt.datetime.strptime(raw, fmt).replace(tzinfo=_dt.timezone.utc)
         except ValueError:
             continue
-        et = t.astimezone(_dt.timezone(_dt.timedelta(hours=-4)))
+        et = t.astimezone(ZoneInfo("America/New_York"))
         return et.strftime("%Y%m%d") == str(yyyymmdd)
     return True          # undated -> do not hide it
 

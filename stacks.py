@@ -45,6 +45,7 @@ that is a good bet; paying less, a bad one. Check before buying.
 A 20-leg ticket of 90% legs wins 12% of the time. These are long shots built
 from short legs, not locks.
 """
+from zoneinfo import ZoneInfo
 import argparse
 import datetime as dt
 from collections import defaultdict
@@ -143,7 +144,11 @@ def fit_poisson(p_home, total, p_draw=None, hockey=False, p_over=0.5):
         if p_draw is not None:
             e += (sum(p for (h, a), p in g.items() if h == a) - p_draw) ** 2
         if total:
-            over = sum(p for (h, a), p in g.items() if h + a > total)
+            # a level regulation score in hockey gains one goal in OT or the
+            # shootout -- prob() counts it, so the fit must count it too, or
+            # every over leg comes out several points too likely
+            over = sum(p for (h, a), p in g.items()
+                       if h + a > total or (hockey and h == a and h + a + 1 > total))
             e += 0.5 * (over - p_over) ** 2
         return e
 
@@ -452,6 +457,8 @@ def predicate(spec, home, away):
 
 # ----------------------------------------------------------------- inputs
 def _ml_prob(price):
+    if str(price).strip().upper() == "EVEN":
+        price = "+100"
     try:
         v = int(str(price).replace("+", ""))
     except (TypeError, ValueError):
@@ -722,7 +729,7 @@ def save(d):
 def record(stacks, dates):
     """Log every leg and ticket of today's stacks. Idempotent per day."""
     book = load()
-    now = dt.datetime.now(dt.timezone(dt.timedelta(hours=-4))).isoformat()[:16]
+    now = dt.datetime.now(ZoneInfo("America/New_York")).isoformat()[:16]
     for slot in ("today",):
         day = dates.get(slot)
         if not day:
@@ -756,7 +763,14 @@ def grade(final):
         gid = key.split("|", 1)[0]
         lg, comp = gid.split(":", 1)
         res = final(lg, comp, L)
-        if not res or res.get("live") or res.get("missing"):
+        if res and res.get("missing"):
+            # the game left the feed: void it once it is a week stale, the
+            # same rule the picks ledger uses, or the ticket never settles
+            import ledger as _ledger
+            if _ledger._stale(L):
+                L["status"] = "void"
+            continue
+        if not res or res.get("live"):
             continue
         if res.get("void"):
             L["status"] = "void"
@@ -774,8 +788,11 @@ def grade(final):
         st = [book["legs"].get(k, {}).get("status", "open") for k in t["legs"]]
         if "lost" in st:
             t["status"] = "lost"
-        elif all(s in ("won", "void") for s in st):
-            t["status"] = "won"
+        elif "open" not in st:
+            # A void leg changes what the ticket was: its stated probability
+            # no longer applies, so it is kept out of the won-vs-promised
+            # record rather than counted as a win at the original odds.
+            t["status"] = "void" if "void" in st else "won"
     save(book)
 
 

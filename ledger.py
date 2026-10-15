@@ -37,7 +37,8 @@ from collections import defaultdict
 HERE = os.path.dirname(os.path.abspath(__file__))
 LEDGER = os.path.join(HERE, "ledger.json")
 ESPN = "https://site.api.espn.com/apis/site/v2/sports"
-ET = dt.timezone(dt.timedelta(hours=-4))
+from zoneinfo import ZoneInfo                                    # noqa: E402
+ET = ZoneInfo("America/New_York")      # with daylight saving; see dashboard.ET
 
 # The board and the grader have to agree on where a league lives, so this is
 # derived from the board's own league table rather than kept as a second copy.
@@ -235,6 +236,27 @@ def _final(lg, comp_id, e=None):
                         return None
                     return dict(live=True, state=st.get("shortDetail", ""),
                                 scores=scores)
+                name = (st.get("name") or "").upper()
+                if lg in SOCCER and ("AET" in name or "PEN" in name or "EXTRA" in name):
+                    # Soccer moneylines and totals settle on 90 minutes; the
+                    # final score here includes extra time. Rebuild the
+                    # 90-minute score from the two halves, or void the pick
+                    # rather than grade it on the wrong score.
+                    reg = {}
+                    for x in cs:
+                        who = ((x.get("team") or {}).get("displayName")
+                               or (x.get("athlete") or {}).get("displayName"))
+                        try:
+                            ls = x.get("linescores") or []
+                            reg[who] = int(ls[0].get("value")) + int(ls[1].get("value"))
+                        except (IndexError, TypeError, ValueError, AttributeError):
+                            reg = None
+                            break
+                    if not reg:
+                        return dict(live=False, void=True, scores=scores,
+                                    state="decided in extra time; 90-minute score unavailable")
+                    scores = reg
+                    names.pop("winner", None)
                 win = names.get("winner")
                 ints = [v for v in scores.values() if isinstance(v, int)]
                 if len(ints) == 2 and ints[0] == ints[1]:

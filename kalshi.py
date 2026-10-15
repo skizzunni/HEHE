@@ -22,6 +22,7 @@ How our legs map:
     X -L              -> SPREAD market for X at L, YES
     X +L / X or draw  -> the other side's market, NO
 """
+from zoneinfo import ZoneInfo
 import datetime as dt
 import json
 import os
@@ -130,7 +131,7 @@ def _et_date(start):
         t = dt.datetime.strptime(start[:16], "%Y-%m-%dT%H:%M").replace(tzinfo=dt.timezone.utc)
     except (TypeError, ValueError):
         return None
-    return (t - dt.timedelta(hours=4)).date()
+    return t.astimezone(ZoneInfo("America/New_York")).date()
 
 
 def _norm(x):
@@ -155,11 +156,28 @@ def find(book, league, mkt):
         if day and _date_of(tail) not in (day, None):
             continue
         teams = [_norm(m.get("yes")) for m in g.get("GAME") or [] if _norm(m.get("yes")) != "tie"]
-        if len(teams) == 2 and all(any(t and (t == n or n.startswith(t + " ")) for n in (hn, an))
+        if len(teams) == 2 and all(any(name_match(n, t) for n in (hn, an))
                                    for t in teams) \
                 and teams[0] != teams[1]:
             return g
     return None
+
+
+def name_match(espn, kal):
+    """Does Kalshi's short name `kal` mean ESPN's full name `espn`?
+
+    'toronto' ~ 'toronto maple leafs'; 'los angeles c' ~ 'los angeles
+    chargers' (Kalshi's trailing letter starts the nickname). Both arguments
+    are already normalised."""
+    if not kal or not espn:
+        return False
+    if espn == kal or espn.startswith(kal + " "):
+        return True
+    head, _, last = kal.rpartition(" ")
+    if head and len(last) <= 2 and espn.startswith(head + " "):
+        nxt = espn[len(head) + 1:].split()
+        return bool(nxt) and nxt[0].startswith(last)
+    return False
 
 
 def _code(m):
@@ -188,7 +206,7 @@ def _team_market(g, kind, team, line=None, code=None):
     best = None
     for m in ms:
         name = re.sub(r" wins.*$", "", _norm(m.get("yes")))
-        if not name or not (tn == name or tn.startswith(name + " ")):
+        if not name_match(tn, name):
             continue
         # prefer the longest name match ("los angeles c" over "los angeles")
         if best is None or len(name) > len(best[0]):
@@ -286,8 +304,7 @@ def extra_specs(book):
             team = (mkt.get("home") if c and c == (mkt.get("home_abbr") or "").upper()
                     else mkt.get("away") if c and c == (mkt.get("away_abbr") or "").upper()
                     else next((t for t in (mkt.get("home"), mkt.get("away"))
-                               if t and (_norm(t) == re.sub(r" wins.*$", "", y)
-                                         or _norm(t).startswith(re.sub(r" wins.*$", "", y) + " "))),
+                               if t and name_match(_norm(t), re.sub(r" wins.*$", "", y))),
                               None))
             if not team:
                 continue
