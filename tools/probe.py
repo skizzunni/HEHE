@@ -1,12 +1,19 @@
-"""Feed probe, run on GitHub's runners. Round 10: Kalshi's RFQ documentation
-(the sandbox cannot reach docs.kalshi.com)."""
+"""Feed probe, run on GitHub's runners. Round 11: which side an RFQ requester
+gets on accept, and what price they pay."""
+import html
 import re
 import time
 import urllib.request
 
 UA = {"User-Agent": "Mozilla/5.0"}
-D = "https://docs.kalshi.com"
-PAGES = ["/getting_started/rfqs.md", "/api-reference/communications/create-rfq.md"]
+PAGES = [
+    "https://docs.kalshi.com/websockets/communications.md",
+    "https://docs.kalshi.com/api-reference/communications/create-quote.md",
+    "https://docs.kalshi.com/fix/rfq-messages.md",
+    "https://blog.predictefy.com/kalshi-rfq-api",
+    "https://www.oddpool.com/research/kalshi-rfq-market-makers",
+]
+KEY = re.compile(r"(?i)yes_bid|no_bid|accepted_side|accept|side|requester|parlay|combo|price|pay|vig|fair|seconds|quotes per")
 
 
 def get(url):
@@ -18,11 +25,15 @@ def get(url):
         return f"ERROR {e}"
 
 
-for p in PAGES:
-    t = get(D + p)
-    if p == "/llms.txt":
-        t = "\n".join(l for l in t.splitlines() if re.search(r"(?i)rfq|quote|communicat", l))
-    if "create-rfq" in p:
-        a = t.find("CreateRFQRequest:")
-        t = t[a:a + 6000]
-    print(f"\n\n######## {p} ({len(t)} chars)\n{t[:16000]}")
+for u in PAGES:
+    t = get(u)
+    if not u.endswith(".md"):
+        t = re.sub(r"(?s)<script.*?</script>|<style.*?</style>", " ", t)
+        t = html.unescape(re.sub(r"<[^>]+>", "\n", t))
+    lines = [l.strip() for l in t.splitlines() if l.strip()]
+    keep = set()
+    for i, l in enumerate(lines):
+        if KEY.search(l):
+            keep.update(range(max(0, i - 2), i + 3))
+    out = "\n".join(lines[i] for i in sorted(keep))
+    print(f"\n\n######## {u} ({len(t)} chars, {len(out)} kept)\n{out[:12000]}")
