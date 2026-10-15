@@ -27,6 +27,7 @@ import dashboard as d          # noqa: E402
 import ledger                  # noqa: E402
 import parlays                 # noqa: E402
 import stacks                  # noqa: E402
+import player_props            # noqa: E402
 
 
 def snapshot():
@@ -140,15 +141,16 @@ def snapshot():
     out["parlays"] = parlays.build_all(out)
     # Stacks: long tickets of high-probability legs (alt totals, "won't win
     # by N"), priced from each game's moneyline, spread and total. Kept apart
-    # from the picks ledger; every leg is graded in stacks.json.
+    # from the picks ledger; every leg is graded in stacks.json. Each section
+    # has its own try: one feed or model failing must not take the others, or
+    # the board, down with it.
+    labels = {k: lab for k, _, lab in d.LEAGUES}
     try:
-        labels = {k: lab for k, _, lab in d.LEAGUES}
         out["stacks"] = stacks.build(d._STATE["slots"], SOCCER, labels)
         dates = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
         stacks.record(out["stacks"], dates)
         stacks.grade(ledger._final)
         out["stacks_record"] = stacks.report()
-        out["markets"] = stacks.markets(d._STATE["slots"], SOCCER, labels)
         st = out["stacks"]["today"]
         print(f'stacks: {st["games"]} games priced today, '
               + ", ".join(f'{n}-leg x{len(t)}' for n, t in st["tickets"].items()),
@@ -156,6 +158,26 @@ def snapshot():
     except Exception:
         import traceback
         sys.stderr.write("stacks failed -- board still rebuilt:\n")
+        traceback.print_exc()
+    try:
+        out["markets"] = stacks.markets(d._STATE["slots"], SOCCER, labels)
+    except Exception:
+        import traceback
+        sys.stderr.write("markets failed -- board still rebuilt:\n")
+        traceback.print_exc()
+    # Player props, where DraftKings posts priced ones.
+    try:
+        out["props"] = {}
+        for slot in ("today", "tomorrow"):
+            games = player_props.for_slot(d._STATE["slots"][slot], labels)
+            out["props"][slot] = dict(games=games,
+                                      tickets=player_props.prop_tickets(games))
+        print("props: " + ", ".join(f'{s_} {len(v["games"])} games, '
+                                    f'{sum(len(g["props"]) for g in v["games"])} props'
+                                    for s_, v in out["props"].items()), file=sys.stderr)
+    except Exception:
+        import traceback
+        sys.stderr.write("props failed -- board still rebuilt:\n")
         traceback.print_exc()
     return out
 

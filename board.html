@@ -402,7 +402,7 @@ const pretty = s => s.slice(4,6).replace(/^0/,"") + "/" + s.slice(6).replace(/^0
 const esc = s => (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;");
 
 function buildTabs(){
-  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets"){
+  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props"){
     tabs.innerHTML = ""; tabs.hidden = true; return;
   }
   tabs.innerHTML = "";
@@ -466,6 +466,10 @@ function renderView(){
   if(slot === "markets"){
     tabs.hidden = true; how.hidden = true;
     return drawMarkets();
+  }
+  if(slot === "props"){
+    tabs.hidden = true; how.hidden = true;
+    return drawProps();
   }
   if(slot === "card"){
     tabs.hidden = true; how.hidden = true;
@@ -657,6 +661,60 @@ function drawMarkets(){
     if(again){ again.focus(); again.setSelectionRange(pos, pos); }
   };
 }
+// Player and team props, priced by DraftKings, with prop-only stacks.
+let PRDAY = null, PRQ = "";
+function drawProps(){
+  const P = D.props || {};
+  const has = d => ((P[d] || {}).games || []).length;
+  const day = PRDAY || (has("today") ? "today" : "tomorrow");
+  const q = PRQ.toLowerCase();
+  const games = ((P[day] || {}).games || []).map(g => Object.assign({}, g, {
+    props: g.props.filter(x => !q || (x.label + " " + g.match).toLowerCase().includes(q))
+  })).filter(g => g.props.length);
+  let html = '<div class="parlays"><h3>Props \u2014 ' + day + '</h3>'
+    + '<p>DraftKings player props (yards milestones, anytime scorer, shots, '
+    + 'receptions\u2026). <b>Chance</b> is the book\u2019s price with an assumed 7% '
+    + 'margin taken out \u2014 the book\u2019s opinion, not a model, and '
+    + '<b>not backtested</b>: finished games keep their game lines but not their '
+    + 'prop prices. NBA and college football props appear when DraftKings posts them.</p>'
+    + '<p><button type="button" data-pday="today">Today</button> '
+    + '<button type="button" data-pday="tomorrow">Tomorrow</button> '
+    + '<input id="prq" placeholder="Filter player, team or market" value="' + esc(PRQ)
+    + '" style="font:inherit;padding:4px 8px;max-width:100%"></p>';
+  const T = (P[day] || {}).tickets || {};
+  const sizes = Object.keys(T).map(Number).sort((a, b) => a - b);
+  if(sizes.some(n => (T[n] || []).length)){
+    html += '<p><b>Prop stacks</b> \u2014 one prop per game, so the legs are independent.</p>';
+    sizes.forEach(n => (T[n] || []).forEach((t, i) => {
+      html += '<div class="ptk"><div class="hd"><span>' + t.n + ' legs</span>'
+        + '<span>hits ' + (100 * t.prob).toFixed(1) + '%</span>'
+        + '<span>fair ' + t.fair.toFixed(2) + 'x</span></div><ul>'
+        + t.legs.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> '
+            + '<span style="color:var(--ink-dim)">' + esc(L.match) + ' &middot; '
+            + (100 * L.p).toFixed(1) + '%</span></li>').join("")
+        + '</ul></div>';
+    }));
+  }
+  if(!games.length) html += '<p>No priced props for this day yet.</p>';
+  games.forEach(g => {
+    html += '<details class="ptk"><summary><b>' + esc(g.match) + '</b> '
+      + '<span style="color:var(--ink-dim)">' + esc(g.lg) + ' &middot; ' + esc(g.tip || "")
+      + ' &middot; ' + g.props.length + ' props</span></summary>'
+      + '<table class="mk"><thead><tr><th>Prop</th><th class="num">Price</th>'
+      + '<th class="num">Chance</th></tr></thead><tbody>'
+      + g.props.map(x => '<tr><td>' + esc(x.label) + '</td><td class="num">' + esc(x.price)
+          + '</td><td class="num">' + (100 * x.p).toFixed(1) + '%</td></tr>').join("")
+      + '</tbody></table></details>';
+  });
+  panel.innerHTML = html + '</div>';
+  const inp = document.getElementById("prq");
+  if(inp) inp.oninput = e => {
+    PRQ = e.target.value; const pos = e.target.selectionStart;
+    render();
+    const again = document.getElementById("prq");
+    if(again){ again.focus(); again.setSelectionRange(pos, pos); }
+  };
+}
 function copyStack(btn){
   const [d, n, i] = btn.getAttribute("data-stack").split("|");
   const t = (((D.stacks || {})[d] || {}).tickets || {})[n][+i];
@@ -764,13 +822,18 @@ function drawCard(slot){
     + '</tbody></table>';
 }
 
-["today","tomorrow","card","stacks","markets","results"].forEach(s => {
+["today","tomorrow","card","stacks","markets","props","results"].forEach(s => {
   const b = document.createElement("button");
   b.setAttribute("aria-pressed", String(s === slot));
   const R = D.results || {};
   if(s === "results"){
     b.innerHTML = "Results" + '<span class="dnum">'
       + (R.graded ? R.won + "-" + R.lost : "0-0") + '</span>';
+  } else if(s === "props"){
+    const P = D.props || {};
+    const n = ["today", "tomorrow"].reduce((a, d) => a + ((P[d] || {}).games || [])
+      .reduce((b, g) => b + g.props.length, 0), 0);
+    b.innerHTML = "Props" + '<span class="dnum">' + n + '</span>';
   } else if(s === "markets"){
     const n = ((D.markets || {}).today || []).length + ((D.markets || {}).tomorrow || []).length;
     b.innerHTML = "Markets" + '<span class="dnum">' + n + ' games</span>';
@@ -1047,6 +1110,8 @@ document.addEventListener("click", e => {
   }
   const sk = e.target.closest("[data-stack]");
   if(sk){ copyStack(sk); return; }
+  const pd = e.target.closest("[data-pday]");
+  if(pd){ PRDAY = pd.getAttribute("data-pday"); render(); return; }
   const md = e.target.closest("[data-mday]");
   if(md){ MKDAY = md.getAttribute("data-mday"); render(); return; }
   const sd = e.target.closest("[data-sday]");
