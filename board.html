@@ -89,6 +89,8 @@ td.mkt{font-family:var(--mono);font-size:12px;color:var(--ink-dim);white-space:n
 .sweep p{margin:0 0 8px;font-size:13px;color:var(--ink-dim)}
 .sweep .three{color:var(--ink);font-size:13.5px;margin:10px 0 8px}
 .sweep .note{margin:0;font-size:12px;line-height:1.5}
+.addleg{display:inline-block;font:600 11.5px var(--mono);padding:3px 8px;margin:2px 0;
+  border:1px solid var(--accent);border-radius:3px;color:var(--accent);text-decoration:none;white-space:nowrap}
 .parlays{border:1px solid var(--rule);border-left:3px solid var(--accent);
   padding:12px 14px;margin:0 0 14px}
 .parlays h3{font-family:var(--display);font-weight:800;font-size:15px;margin:0 0 6px}
@@ -322,8 +324,7 @@ td.num.ok{color:var(--dog)}
       <div class="slipbtns">
         <button class="go" id="copy">Copy ticket</button>
         <button id="shareslip" type="button">Share link</button>
-        <a id="dk" href="#" target="_blank" rel="noopener">DraftKings link</a>
-        <a id="fdslip" href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a>
+        <a href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a>
         <a href="https://sportsbook.fanatics.com/" target="_blank" rel="noopener">Open Fanatics</a>
         <button id="hide">Hide</button>
       </div>
@@ -546,12 +547,11 @@ function parlayHTML(slot){
       + '<span>$5 \u2192 $' + t.ret5.toFixed(2) + '</span>'
       + (t.safest ? '<span>likeliest</span>' : '') + '</div><ul>'
       + t.legs.map(L => '<li>' + esc(L.pick) + ' <b>' + esc(L.price) + '</b> &middot; '
-          + esc(L.league) + ' &middot; ' + (100 * L.hit).toFixed(1) + '%</li>').join("")
+          + esc(L.league) + ' &middot; ' + (100 * L.hit).toFixed(1) + '%'
+          + legBtns(dkOne(L.dk), fdOne(L.fd)) + '</li>').join("")
       + '</ul><button type="button" data-parlay="' + slot + '|' + n + '|' + i
       + '">Load into slip</button> <button type="button" data-share="parlay|' + slot
-      + '|' + n + '|' + i + '">Share link</button>'
-      + (t.fd ? ' <a href="' + esc(t.fd) + '" target="_blank" rel="noopener">FanDuel slip (NY)</a>' : '')
-      + '</div>';
+      + '|' + n + '|' + i + '">Share link</button></div>';
   };
   let body = "";
   [2, 3].forEach(n => {
@@ -754,13 +754,12 @@ function stackCard(t, key, n, i){
     + '<span>$10 \u2192 $' + (10 * t.fair).toFixed(2) + '</span></div><ul>'
     + t.legs.map(L => '<li>' + esc(L.label) + ' <span style="color:var(--ink-dim)">'
         + esc(L.match) + ' &middot; ' + esc(L.lg) + ' &middot; '
-        + (100 * L.p).toFixed(1) + '%</span></li>').join("")
+        + (100 * L.p).toFixed(1) + '%</span>' + legBtns(null, fdOne(L.fd)) + '</li>').join("")
     + '</ul><button type="button" data-stack="' + key + '|' + n + '|' + i
     + '">Copy ticket</button> <button type="button" data-share="stack|' + key + '|' + n
     + '|' + i + '">Share link</button> '
-    + (t.fd ? '<a href="' + esc(t.fd) + '" target="_blank" rel="noopener">FanDuel slip (NY)</a>'
-            : '<span style="color:var(--ink-dim);font-size:12px">FanDuel: ' + (t.fd_n || 0)
-              + ' of ' + t.legs.length + ' legs listed</span>')
+    + '<span style="color:var(--ink-dim);font-size:12px">FanDuel lists ' + (t.fd_n || 0)
+              + ' of ' + t.legs.length + ' legs</span>' 
     + '<pre class="fanslip" hidden></pre>' + kalshiBlock(t, key, n, i, key.startsWith("k:")) + '</div>';
 }
 function kalshiText(t){
@@ -806,10 +805,27 @@ function copyStack(btn){
                                             show);
   } catch (e) { show(); }
 }
-function fdLink(refs){
-  if(!refs.length || refs.some(r => !r)) return null;
-  return "https://sportsbook.fanduel.com/addToBetslip?" + refs.map((r, i) =>
-    "marketId[" + i + "]=" + r.split(":")[0] + "&selectionId[" + i + "]=" + r.split(":")[1]).join("&");
+// One add-to-slip link per leg. No sportsbook publishes a link that fills a
+// whole multi-leg slip -- the ones that do are private partner deals -- so
+// every leg gets its own: tap them in turn and each adds one leg. DraftKings'
+// is the single-outcome link ESPN's own bet buttons use; FanDuel's is the
+// addToBetslip format The Odds API documents. They hand off to the book's
+// app when it is installed; in a plain browser they open the website.
+function dkOne(ref){
+  if(!ref) return null;
+  const [e, o] = ref.split(":");
+  return o ? "https://sportsbook.draftkings.com/event/" + e + "?outcomes=" + o : null;
+}
+function fdOne(ref){
+  if(!ref) return null;
+  const [m, x] = ref.split(":");
+  return x ? "https://sportsbook.fanduel.com/addToBetslip?marketId=" + m + "&selectionId=" + x : null;
+}
+function legBtns(dk, fd){
+  const a = [];
+  if(dk) a.push('<a class="addleg" href="' + esc(dk) + '" target="_blank" rel="noopener">+ DraftKings</a>');
+  if(fd) a.push('<a class="addleg" href="' + esc(fd) + '" target="_blank" rel="noopener">+ FanDuel</a>');
+  return a.length ? " " + a.join(" ") : "";
 }
 // ------------------------------------------------------------ share links
 // A ticket travels inside the link itself (#t=...), so a shared link shows
@@ -848,9 +864,9 @@ function ticketFrom(key){
   const [kind, d, n, i] = key.split("|");
   if(kind === "stack"){
     const t = stackT(d, n, i);
-    return t && { fd: t.fd || null, title: t.n + "-leg stack", note: "hits " + (100 * t.prob).toFixed(1)
+    return t && { title: t.n + "-leg stack", note: "hits " + (100 * t.prob).toFixed(1)
       + "% \u00b7 fair payout " + t.fair.toFixed(2) + "x",
-      legs: t.legs.map(L => [L.label, L.match + " \u00b7 " + L.lg]) };
+      legs: t.legs.map(L => [L.label, L.match + " \u00b7 " + L.lg, null, fdOne(L.fd)]) };
   }
   if(kind === "prop"){
     const t = ((((D.props || {})[d] || {}).tickets || {})[n] || [])[+i];
@@ -861,23 +877,18 @@ function ticketFrom(key){
   if(kind === "parlay"){
     const t = (((D.parlays || {})[d] || {})[n] || [])[+i];
     if(!t) return null;
-    const dk = t.legs.every(L => L.dk) ? "https://sportsbook.draftkings.com/event/"
-      + t.legs[0].dk.split(":")[0] + "?outcomes=" + t.legs.map(L => L.dk.split(":")[1]).join(",") : null;
-    return { fd: t.fd || null, title: t.n + "-leg parlay " + t.price, note: "hits " + (100 * t.prob).toFixed(1) + "%",
-      legs: t.legs.map(L => [L.pick, L.price + " \u00b7 " + L.league]), dk: dk };
+    return { title: t.n + "-leg parlay " + t.price, note: "hits " + (100 * t.prob).toFixed(1) + "%",
+      legs: t.legs.map(L => [L.pick, L.price + " \u00b7 " + L.league, dkOne(L.dk), fdOne(L.fd)]) };
   }
   return null;
 }
 function slipTicket(){
-  const dks = SLIP.filter(r => r.dk);
-  const dk = dks.length === SLIP.length && dks.length ? "https://sportsbook.draftkings.com/event/"
-    + dks[0].dk.split(":")[0] + "?outcomes=" + dks.map(r => r.dk.split(":")[1]).join(",") : null;
   const all = SLIP.every(r => r.p);
   const c = all ? SLIP.reduce((a, r) => a * dec(r.p), 1) : null;
-  return { fd: fdLink(SLIP.map(r => r.fd)),
-    title: SLIP.length + "-leg slip" + (c ? " " + amer(c) : ""),
-    legs: SLIP.map(r => [r.mp, (r.p || "no line") + (r.lg ? " \u00b7 " + r.lg : "")]),
-    note: c ? "$5 returns $" + (5 * c).toFixed(2) : "", dk: dk };
+  return { title: SLIP.length + "-leg slip" + (c ? " " + amer(c) : ""),
+    legs: SLIP.map(r => [r.mp, (r.p || "no line") + (r.lg ? " \u00b7 " + r.lg : ""),
+                         dkOne(r.dk), fdOne(r.fd)]),
+    note: c ? "$5 returns $" + (5 * c).toFixed(2) : "" };
 }
 let SHARED = null;
 function drawShared(){
@@ -888,19 +899,17 @@ function drawShared(){
   } else {
     html += '<p><b>' + esc(o.title) + '</b></p><ul>'
       + o.legs.map(L => '<li>' + esc(L[0]) + (L[1] ? ' <span style="color:var(--ink-dim)">'
-          + esc(L[1]) + '</span>' : '') + '</li>').join("") + '</ul>'
+          + esc(L[1]) + '</span>' : '') + legBtns(L[2], L[3]) + '</li>').join("") + '</ul>'
       + (o.note ? '<p>' + esc(o.note) + '</p>' : '')
       + '<p><button type="button" id="sharedcopy">Copy ticket</button> '
-      + (o.dk ? '<a href="' + esc(o.dk) + '" target="_blank" rel="noopener">Open in DraftKings</a> ' : '')
-      + (o.fd ? '<a href="' + esc(o.fd) + '" target="_blank" rel="noopener">Open in FanDuel (NY)</a> '
-              : '<a href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a> ')
+      + '<a href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a> ' 
       + '<a href="https://sportsbook.fanatics.com/" target="_blank" rel="noopener">Open Fanatics</a> '
       + '<a href="https://kalshi.com/" target="_blank" rel="noopener">Open Kalshi</a></p>'
-      + '<p style="color:var(--ink-dim)">' + (o.fd ? 'The FanDuel link fills the slip in New York. '
-          : 'FanDuel posts ids only for moneyline, main spread and main total, so this '
-          + 'ticket has no FanDuel slip link. ')
-      + 'Fanatics and Kalshi have no link that fills a slip from outside their apps, so '
-      + 'copy the ticket and add the legs there. Prices may have moved since this was shared.</p>';
+      + '<p style="color:var(--ink-dim)">No sportsbook offers a public link that fills a whole '
+      + 'slip. Where a leg has <b>+ DraftKings</b> or <b>+ FanDuel</b>, tap them one after another '
+      + '\u2014 each adds that leg (open this page in Safari or Chrome with the book\u2019s app installed '
+      + 'so the link hands off to the app). Fanatics and Kalshi have no add-leg link at all: copy the '
+      + 'ticket and add the legs in the app. Prices may have moved since this was shared.</p>';
   }
   html += '<p><button type="button" id="sharedback">See today\u2019s board</button></p></div>';
   panel.innerHTML = html;
@@ -1221,7 +1230,7 @@ function drawSlip(){
   fab.hidden = false;
   fab.textContent = SLIP.length + " leg" + (SLIP.length>1?"s":"") + " · view slip";
   document.getElementById("legs").innerHTML = SLIP.map(r =>
-    '<li><span>' + esc(r.mp) + '</span><span><span class="px">'
+    '<li><span>' + esc(r.mp) + legBtns(dkOne(r.dk), fdOne(r.fd)) + '</span><span><span class="px">'
     + (r.p || "no line") + '</span><button data-x="' + esc(r.id) + '">&times;</button></span></li>'
   ).join("");
 
@@ -1275,25 +1284,12 @@ function drawSlip(){
     : "";
   document.getElementById("fanslip").textContent = fan + foot;
 
-  const dks = SLIP.filter(r => r.dk).map(r => r.dk.split(":")[1]);
-  const dk = document.getElementById("dk"), url = document.getElementById("dkurl");
-  if(dks.length){
-    const first = SLIP.find(r => r.dk).dk.split(":")[0];
-    const href = "https://sportsbook.draftkings.com/event/" + first
-               + "?outcomes=" + dks.join(",");
-    dk.href = href; dk.style.opacity = 1;
-    url.textContent = "Fanatics publishes no betslip link, so the block above is for "
-      + "transcribing. DraftKings does: " + href;
-  } else {
-    dk.href = "#"; dk.style.opacity = .4;
-    url.textContent = "Fanatics publishes no betslip link. No DraftKings ids on these "
-      + "legs either — no book has posted them yet.";
-  }
-  // FanDuel (New York): a real bet-slip link only when every leg has an id
-  const fdl = fdLink(SLIP.map(r => r.fd));
-  const fda = document.getElementById("fdslip");
-  fda.href = fdl || "https://sportsbook.fanduel.com/";
-  fda.textContent = fdl ? "FanDuel slip (NY)" : "Open FanDuel";
+  const n_dk = SLIP.filter(r => r.dk).length, n_fd = SLIP.filter(r => r.fd).length;
+  document.getElementById("dkurl").textContent = "No sportsbook offers a public link that fills a "
+    + "whole slip. Tap + DraftKings or + FanDuel on each leg in turn \u2014 each adds one leg "
+    + "(DraftKings ids on " + n_dk + " of " + SLIP.length + " legs, FanDuel on " + n_fd + "). "
+    + "Open this page in Safari or Chrome with the book's app installed so the link hands off "
+    + "to the app. Fanatics has no add-leg link: use Copy ticket.";
   slip.hidden = false;
 }
 document.addEventListener("click", e => {

@@ -31,7 +31,6 @@ import itertools
 import json
 import os
 
-import fanduel
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(HERE, ".cache", "last_board.json")
@@ -100,8 +99,7 @@ def tickets(legs, n):
                         n=n, prob=round(p, 4), price=american(o),
                         ret5=round(5 * o, 2), ev=round(100 * (p * o - 1), 1),
                         dk="+".join(L["dk"] for L in combo if L["dk"])
-                           if all(L["dk"] for L in combo) else None,
-                        fd=fanduel.link([L.get("fd") for L in combo])))
+                           if all(L["dk"] for L in combo) else None))
     return out
 
 

@@ -11,9 +11,10 @@ Probed 2026-10-15 from GitHub's runners:
   * No alternate lines on the game pages, and no soccer, UFC or tennis pages,
     so most stack legs (alt totals, "won't win by N") have no FanDuel id.
 
-The link format is FanDuel's addToBetslip with indexed market/selection
-pairs. It cannot be checked from a server -- the page is an app that answers
-200 to anything -- so the first real tap on a phone is the test.
+Links are ONE selection each (addToBetslip?marketId=..&selectionId=..), the
+format The Odds API documents. FanDuel publishes no link that fills a
+multi-leg slip; an indexed multi-selection version was tried here and did
+not add the legs, so the page offers one add-leg link per leg instead.
 """
 import json
 import os
@@ -160,12 +161,3 @@ def leg_ref(book, league, home, away, spec):
         if v and v[0] is not None and abs(float(v[0]) - spec["line"]) < 1e-9:
             return v[1]
     return None
-
-
-def link(refs):
-    """refs ['736.1:25589', ...] -> one addToBetslip URL, or None."""
-    if not refs or any(not r for r in refs):
-        return None
-    q = "&".join(f"marketId[{i}]={r.split(':')[0]}&selectionId[{i}]={r.split(':')[1]}"
-                 for i, r in enumerate(refs))
-    return "https://sportsbook.fanduel.com/addToBetslip?" + q

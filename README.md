@@ -2165,9 +2165,16 @@ model's estimate, not a measured rate.
   US gateway lists games but has no combos, so there is nothing to build a
   ticket on yet.
 - **FanDuel (New York)** (`fanduel.py`). FanDuel's NY feed has moneyline, main
-  spread and main total ids. A ticket gets an addToBetslip link when every
-  leg has one. Market ids are per state; the link format can only be
-  confirmed by tapping one on a phone in NY.
+  spread and main total ids, and each such leg gets its own **+ FanDuel**
+  add-to-slip button.
+- **Correction, same day.** The first version built one link per ticket that
+  was meant to fill a whole FanDuel or DraftKings slip. Tapped on a phone,
+  those links only opened the site. No sportsbook publishes a public link
+  that fills a multi-leg slip; the services that do it (Action Network
+  QuickSlip, MetaBet ExpressLinks) are private partner integrations. Every
+  leg now has its own button instead: **+ DraftKings** (the single-outcome
+  link ESPN's bet buttons use) and **+ FanDuel** (the addToBetslip format The
+  Odds API documents), tapped one after another.
 - **Fanatics** refuses outside requests and publishes no slip link. Tickets
   carry an Open Fanatics button and copy-ready text.
 - **Share links.** Every ticket and the slip has a Share button. The ticket

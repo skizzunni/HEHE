@@ -163,7 +163,6 @@ def snapshot():
                     for L in t["legs"]:
                         L["fd"] = fanduel.leg_ref(FD, L["league"], L["home"], L["away"], L["spec"])
                     t["fd_n"] = sum(1 for L in t["legs"] if L["fd"])
-                    t["fd"] = fanduel.link([L["fd"] for L in t["legs"]])
         # Kalshi: the exact market and side for each leg, to rebuild the
         # ticket as a Kalshi combo
         try:
