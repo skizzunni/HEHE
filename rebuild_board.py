@@ -184,6 +184,11 @@ def snapshot():
                         kalshi.attach(t, KB, by_id)
             n = sum(len(v) for v in KB.values())
             kt = out["kalshi_stacks"]["today"]
+            legs_ = [L for st_ in out["kalshi_stacks"].values() for ts in st_["tickets"].values()
+                     for t in ts for L in t["legs"]]
+            priced = sum(1 for L in legs_ if (L.get("kalshi") or {}).get("price"))
+            print(f"kalshi: {priced} of {len(legs_)} ticket legs carry a Kalshi ask",
+                  file=sys.stderr)
             print(f"kalshi: {n} games listed; Kalshi-ready stacks today from "
                   f"{kt['games']} games: " + ", ".join(f"{n_}-leg x{len(t)}"
                   for n_, t in kt["tickets"].items()), file=sys.stderr)
