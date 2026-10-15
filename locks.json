@@ -1,4 +1,234 @@
 {
- "days": {},
- "legs": {}
+ "days": {
+  "2026-10-15": [
+   "ncaaf:401869950|Old Dominion Monarchs over 1.5 points",
+   "nhl:401892513|San Jose Sharks under 6.5 goals",
+   "nhl:401892515|Over 2.5 goals",
+   "ncaaf:401862800|UAB Blazers under 41.5 points",
+   "nhl:401892512|Chicago Blackhawks under 6.5 goals",
+   "ncaaf:401860923|Over 43.5 points",
+   "mlb:401908025|Cleveland Guardians +6.5",
+   "nfl:401872995|Seattle Seahawks +23.5",
+   "nhl:401892509|Over 2.5 goals",
+   "nhl:401892506|Under 11.5 goals",
+   "mlb:401908033|Under 16.5 runs"
+  ]
+ },
+ "legs": {
+  "mlb:401908025|Cleveland Guardians +6.5": {
+   "away": "Tampa Bay Rays",
+   "date": "2026-10-15",
+   "fd": "736.191270310:99530524",
+   "gid": "mlb:401908025",
+   "home": "Cleveland Guardians",
+   "label": "Cleveland Guardians +6.5",
+   "league": "mlb",
+   "lg": "MLB",
+   "match": "Tampa Bay Rays at Cleveland Guardians",
+   "p": 0.9683,
+   "price": "-4000",
+   "spec": {
+    "line": 6.5,
+    "t": "spread",
+    "team": "Cleveland Guardians"
+   },
+   "status": "open",
+   "tip": "1:00 PM"
+  },
+  "mlb:401908033|Under 16.5 runs": {
+   "away": "Milwaukee Brewers",
+   "date": "2026-10-15",
+   "fd": "736.191483709:32763059",
+   "gid": "mlb:401908033",
+   "home": "Los Angeles Dodgers",
+   "label": "Under 16.5 runs",
+   "league": "mlb",
+   "lg": "MLB",
+   "match": "Milwaukee Brewers at Los Angeles Dodgers",
+   "p": 0.9639,
+   "price": "-7000",
+   "spec": {
+    "line": 16.5,
+    "t": "under"
+   },
+   "status": "open",
+   "tip": "8:00 PM"
+  },
+  "ncaaf:401860923|Over 43.5 points": {
+   "away": "Colorado State Rams",
+   "date": "2026-10-15",
+   "fd": "736.191034571:12197173",
+   "gid": "ncaaf:401860923",
+   "home": "Texas State Bobcats",
+   "label": "Over 43.5 points",
+   "league": "ncaaf",
+   "lg": "NCAA FB",
+   "match": "Colorado State Rams at Texas State Bobcats",
+   "p": 0.9687,
+   "price": "-4500",
+   "spec": {
+    "line": 43.5,
+    "t": "over"
+   },
+   "status": "open",
+   "tip": "8:00 PM"
+  },
+  "ncaaf:401862800|UAB Blazers under 41.5 points": {
+   "away": "East Carolina Pirates",
+   "date": "2026-10-15",
+   "fd": "736.191031615:12197176",
+   "gid": "ncaaf:401862800",
+   "home": "UAB Blazers",
+   "label": "UAB Blazers under 41.5 points",
+   "league": "ncaaf",
+   "lg": "NCAA FB",
+   "match": "East Carolina Pirates at UAB Blazers",
+   "p": 0.969,
+   "price": "-7000",
+   "spec": {
+    "line": 41.5,
+    "t": "teamunder",
+    "team": "UAB Blazers"
+   },
+   "status": "open",
+   "tip": "7:30 PM"
+  },
+  "ncaaf:401869950|Old Dominion Monarchs over 1.5 points": {
+   "away": "Georgia Southern Eagles",
+   "date": "2026-10-15",
+   "fd": "736.191031841:25804859",
+   "gid": "ncaaf:401869950",
+   "home": "Old Dominion Monarchs",
+   "label": "Old Dominion Monarchs over 1.5 points",
+   "league": "ncaaf",
+   "lg": "NCAA FB",
+   "match": "Georgia Southern Eagles at Old Dominion Monarchs",
+   "p": 0.9695,
+   "price": "-50000",
+   "spec": {
+    "line": 1.5,
+    "t": "teamover",
+    "team": "Old Dominion Monarchs"
+   },
+   "status": "open",
+   "tip": "7:30 PM"
+  },
+  "nfl:401872995|Seattle Seahawks +23.5": {
+   "away": "Seattle Seahawks",
+   "date": "2026-10-15",
+   "fd": "736.190965103:16073905",
+   "gid": "nfl:401872995",
+   "home": "Denver Broncos",
+   "label": "Seattle Seahawks +23.5",
+   "league": "nfl",
+   "lg": "NFL",
+   "match": "Seattle Seahawks at Denver Broncos",
+   "p": 0.9683,
+   "price": "-20000",
+   "spec": {
+    "line": 23.5,
+    "t": "spread",
+    "team": "Seattle Seahawks"
+   },
+   "status": "open",
+   "tip": "8:15 PM"
+  },
+  "nhl:401892506|Under 11.5 goals": {
+   "away": "Buffalo Sabres",
+   "date": "2026-10-15",
+   "fd": "736.191613400:8060348",
+   "gid": "nhl:401892506",
+   "home": "Toronto Maple Leafs",
+   "label": "Under 11.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "match": "Buffalo Sabres at Toronto Maple Leafs",
+   "p": 0.964,
+   "price": "-8000",
+   "spec": {
+    "line": 11.5,
+    "t": "under"
+   },
+   "status": "open",
+   "tip": "7:00 PM"
+  },
+  "nhl:401892509|Over 2.5 goals": {
+   "away": "Seattle Kraken",
+   "date": "2026-10-15",
+   "fd": "736.191613102:8359788",
+   "gid": "nhl:401892509",
+   "home": "Tampa Bay Lightning",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "match": "Seattle Kraken at Tampa Bay Lightning",
+   "p": 0.9647,
+   "price": "-6000",
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open",
+   "tip": "7:00 PM"
+  },
+  "nhl:401892512|Chicago Blackhawks under 6.5 goals": {
+   "away": "Winnipeg Jets",
+   "date": "2026-10-15",
+   "fd": "736.191617329:7669422",
+   "gid": "nhl:401892512",
+   "home": "Chicago Blackhawks",
+   "label": "Chicago Blackhawks under 6.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "match": "Winnipeg Jets at Chicago Blackhawks",
+   "p": 0.969,
+   "price": "-6000",
+   "spec": {
+    "line": 6.5,
+    "t": "teamunder",
+    "team": "Chicago Blackhawks"
+   },
+   "status": "open",
+   "tip": "8:00 PM"
+  },
+  "nhl:401892513|San Jose Sharks under 6.5 goals": {
+   "away": "San Jose Sharks",
+   "date": "2026-10-15",
+   "fd": "736.191617190:7669422",
+   "gid": "nhl:401892513",
+   "home": "Nashville Predators",
+   "label": "San Jose Sharks under 6.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "match": "San Jose Sharks at Nashville Predators",
+   "p": 0.9692,
+   "price": "-6000",
+   "spec": {
+    "line": 6.5,
+    "t": "teamunder",
+    "team": "San Jose Sharks"
+   },
+   "status": "open",
+   "tip": "8:00 PM"
+  },
+  "nhl:401892515|Over 2.5 goals": {
+   "away": "Utah Mammoth",
+   "date": "2026-10-15",
+   "fd": "736.191625885:8359788",
+   "gid": "nhl:401892515",
+   "home": "Edmonton Oilers",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "match": "Utah Mammoth at Edmonton Oilers",
+   "p": 0.9692,
+   "price": "-8000",
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open",
+   "tip": "9:00 PM"
+  }
+ }
 }
