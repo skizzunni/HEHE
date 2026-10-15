@@ -1,0 +1,576 @@
+{
+ "mode": "practice",
+ "ok": true,
+ "lines": [
+  "connected; balance $0.40; limits $2.00/ticket, $10.00/day, 5 open",
+  "9 Kalshi-ready tickets in allowed sports (epl, esp, fra, ger, ita, mlb, mls, ncaab, ncaaf, nfl, nhl, wnba)",
+  "  14 quote(s): open yes_bid 0.7000 no_bid 0.0000; open yes_bid 0.6960 no_bid 0.2390; open yes_bid 0.6890 no_bid 0.2350; open yes_bid 0.6760 no_bid 0.2650; open yes_bid 0.6750 no_bid 0.2550; open yes_bid 0.6480 no_bid 0.2350",
+  "KXMVECROSSCATEGORY-S2026H6BLHI6GJMZUKOJM-SRAZYNZIT: 4 legs, quote 2 @ $0.73 (+fee) pays 1.33x, fair 1.28x",
+  "  pays less than fair + margin; not buying",
+  "  14 quote(s): open yes_bid 0.7320 no_bid 0.0000; open yes_bid 0.7050 no_bid 0.2020; open yes_bid 0.7010 no_bid 0.0000; open yes_bid 0.6840 no_bid 0.1590; open yes_bid 0.6640 no_bid 0.2180; open yes_bid 0.6420 no_bid 0.2020",
+  "KXMVECROSSCATEGORY-S2026NSV4SPJ6NDXHPIPJ-WYJXXDTYY: 6 legs, quote 2 @ $0.76 (+fee) pays 1.29x, fair 1.28x",
+  "  pays less than fair + margin; not buying",
+  "request failed: GET /multivariate_event_collections/KXMVESPORTSMULTIGAMEEXTENDED-R URLError",
+  "  13 quote(s): open yes_bid 0.7170 no_bid 0.0000; open yes_bid 0.7150 no_bid 0.2090; open yes_bid 0.6890 no_bid 0.1100; open yes_bid 0.6820 no_bid 0.0000; open yes_bid 0.6340 no_bid 0.2200; open yes_bid 0.6070 no_bid 0.1900",
+  "KXMVECROSSCATEGORY-S202677W6CIZPZ4ZU6HF3-HZ75MT3J6: 6 legs, quote 2 @ $0.78 (+fee) pays 1.27x, fair 1.29x",
+  "  pays less than fair + margin; not buying"
+ ],
+ "considered": [
+  {
+   "n": 2,
+   "legs": [
+    "Over 35.5 points (Northern Illinois Huskies at UNLV Rebels)",
+    "Over 39.5 points (Oregon State Beavers at Fresno State Bulldogs)"
+   ],
+   "fair": 1.23,
+   "verdict": "already quoted today",
+   "ticker": "KXMVECROSSCATEGORY-S2026TEMVXNSAXXFG2GIQ-SWF2XXR36"
+  },
+  {
+   "n": 2,
+   "legs": [
+    "Over 39.5 points (SMU Mustangs at Syracuse Orange)",
+    "Under 70.5 points (UConn Huskies at Air Force Falcons)"
+   ],
+   "fair": 1.23,
+   "verdict": "already quoted today",
+   "ticker": "KXMVECROSSCATEGORY-S2026VL6K6CVTV5D5HMU6-KXZDNMW4W"
+  },
+  {
+   "n": 2,
+   "legs": [
+    "Under 69.5 points (Mississippi State Bulldogs at Texas Longhorns)",
+    "Under 73.5 points (Georgia Tech Yellow Jackets at Pittsburgh Panthers)"
+   ],
+   "fair": 1.23,
+   "verdict": "already quoted today",
+   "ticker": "KXMVECROSSCATEGORY-S2026PGUUIZZES5UMOEBF-BZWGGQGVG"
+  },
+  {
+   "n": 3,
+   "legs": [
+    "Over 35.5 points (Northern Illinois Huskies at UNLV Rebels)",
+    "Over 39.5 points (Oregon State Beavers at Fresno State Bulldogs)",
+    "Over 39.5 points (SMU Mustangs at Syracuse Orange)"
+   ],
+   "fair": 1.37,
+   "verdict": "already quoted today",
+   "ticker": "KXMVECROSSCATEGORY-S20267KYZV3KJ7JJAX53A-FZSJGVLOM"
+  },
+  {
+   "n": 3,
+   "legs": [
+    "Under 70.5 points (UConn Huskies at Air Force Falcons)",
+    "Under 69.5 points (Mississippi State Bulldogs at Texas Longhorns)",
+    "Under 73.5 points (Georgia Tech Yellow Jackets at Pittsburgh Panthers)"
+   ],
+   "fair": 1.37,
+   "verdict": "already quoted today",
+   "ticker": "KXMVECROSSCATEGORY-S2026N2W3REPCV5IUVSQS-XSQ7LKPED"
+  },
+  {
+   "n": 4,
+   "legs": [
+    "No \u00b7 Levante wins by over 1.5 goals (Atl\u00e9tico Madrid at Levante)",
+    "Under 86.5 points (Texas State Bobcats at Boise State Broncos)",
+    "Under 69.5 points (Kansas State Wildcats at Colorado Buffaloes)",
+    "Under 70.5 points (Arizona State Sun Devils at BYU Cougars)"
+   ],
+   "fair": 1.28,
+   "verdict": "Kalshi pays 1.33x, needs 1.34x+",
+   "ticker": "KXMVECROSSCATEGORY-S2026H6BLHI6GJMZUKOJM-SRAZYNZIT",
+   "ask": 0.735,
+   "pays": 1.33,
+   "count": 2
+  },
+  {
+   "n": 4,
+   "legs": [
+    "Over 33.5 points (Notre Dame Fighting Irish at Navy Midshipmen)",
+    "Under 72.5 points (Clemson Tigers at Florida State Seminoles)",
+    "Over 30.5 points (Miami Hurricanes at North Carolina Tar Heels)",
+    "Under 9.5 goals (Columbus Blue Jackets at Dallas Stars)"
+   ],
+   "fair": 1.27,
+   "verdict": "already quoted today",
+   "ticker": "KXMVECROSSCATEGORY-S2026SST4YQOILAU2FTRH-JAP44XLXA"
+  },
+  {
+   "n": 6,
+   "legs": [
+    "No \u00b7 Coventry City wins by over 2.5 goals (Sunderland at Coventry City)",
+    "Under 61.5 points (Wisconsin Badgers at Iowa Hawkeyes)",
+    "Under 86.5 points (Colorado State Rams at Utah State Aggies)",
+    "Under 73.5 points (Arizona State Sun Devils at BYU Cougars)",
+    "No \u00b7 Calgary Flames wins by over 2.5 goals (Calgary Flames at Colorado Avalanche)",
+    "Over 2.5 goals (Tampa Bay Lightning at Nashville Predators)"
+   ],
+   "fair": 1.28,
+   "verdict": "Kalshi pays 1.29x, needs 1.34x+",
+   "ticker": "KXMVECROSSCATEGORY-S2026NSV4SPJ6NDXHPIPJ-WYJXXDTYY",
+   "ask": 0.76,
+   "pays": 1.29,
+   "count": 2
+  },
+  {
+   "n": 6,
+   "legs": [
+    "Over 0.5 goals (Brighton & Hove Albion at Manchester City)",
+    "Over 0.5 goals (SC Freiburg at FC Augsburg)",
+    "Under 70.5 points (Kansas Jayhawks at TCU Horned Frogs)",
+    "Over 2.5 goals (Chicago Blackhawks at Boston Bruins)",
+    "Over 2.5 goals (St. Louis Blues at Detroit Red Wings)",
+    "Under 80.5 points (Coastal Carolina Chanticleers at Georgia State Panthers)"
+   ],
+   "fair": 1.29,
+   "verdict": "Kalshi pays 1.27x, needs 1.35x+",
+   "ticker": "KXMVECROSSCATEGORY-S202677W6CIZPZ4ZU6HF3-HZ75MT3J6",
+   "ask": 0.775,
+   "pays": 1.27,
+   "count": 2
+  }
+ ],
+ "open": [],
+ "record": [],
+ "practice": [
+  {
+   "ts": "2026-10-31T04:55:49+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026NSSXRFVKT7YNXRS6-EWZGBVUND",
+   "n": 4,
+   "legs": [
+    "Under 86.5 points (Texas State Bobcats at Boise State Broncos)",
+    "Under 69.5 points (Kansas State Wildcats at Colorado Buffaloes)",
+    "Over 34.5 points (App State Mountaineers at Georgia Southern Eagles)",
+    "Under 70.5 points (Arizona State Sun Devils at BYU Cougars)"
+   ],
+   "count": 2,
+   "ask": 0.734,
+   "fair": 1.28,
+   "result": null
+  },
+  {
+   "ts": "2026-10-31T04:11:43+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S20262CIHTQNCHOTUP76E-VQKGSCLKP",
+   "n": 4,
+   "legs": [
+    "Under 86.5 points (Texas State Bobcats at Boise State Broncos)",
+    "Under 69.5 points (Kansas State Wildcats at Colorado Buffaloes)",
+    "Over 34.5 points (App State Mountaineers at Georgia Southern Eagles)",
+    "Under 80.5 points (Oklahoma State Cowboys at Iowa State Cyclones)"
+   ],
+   "count": 2,
+   "ask": 0.73,
+   "fair": 1.28,
+   "result": null
+  },
+  {
+   "ts": "2026-10-29T15:49:25+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S20265E2IUI2FEFQUICWM-TZ42VXYWE",
+   "n": 3,
+   "legs": [
+    "No \u00b7 Troy Trojans wins by over 1.5 points (Troy Trojans at James Madison Dukes)",
+    "No \u00b7 Chicago Blackhawks wins by over 2.5 goals (Chicago Blackhawks at Detroit Red Wings)",
+    "Over 58.5 points (Florida Atlantic Owls at North Texas Mean Green)"
+   ],
+   "count": 2,
+   "ask": 0.679,
+   "fair": 1.37,
+   "result": "lost",
+   "profit": -1.36
+  },
+  {
+   "ts": "2026-10-29T15:44:06+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S20267PZA52SU3GFYQ2IQ-HUBEDAEC6",
+   "n": 3,
+   "legs": [
+    "No \u00b7 Chicago Blackhawks wins by over 2.5 goals (Chicago Blackhawks at Detroit Red Wings)",
+    "No \u00b7 Montreal Canadiens wins by over 2.5 goals (Montreal Canadiens at Dallas Stars)",
+    "Over 58.5 points (Florida Atlantic Owls at North Texas Mean Green)"
+   ],
+   "count": 2,
+   "ask": 0.657,
+   "fair": 1.37,
+   "result": "lost",
+   "profit": -1.31
+  },
+  {
+   "ts": "2026-10-29T14:20:45+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026GPPWV3BGSZM6H5HQ-CSWPGKC3U",
+   "n": 4,
+   "legs": [
+    "No \u00b7 Columbus Blue Jackets wins by over 2.5 goals (Columbus Blue Jackets at Carolina Hurricanes)",
+    "No \u00b7 Winnipeg Jets wins by over 2.5 goals (Winnipeg Jets at Tampa Bay Lightning)",
+    "Under 74.5 points (Troy Trojans at James Madison Dukes)",
+    "Over 29.5 points (Carolina Panthers at Green Bay Packers)"
+   ],
+   "count": 2,
+   "ask": 0.728,
+   "fair": 1.3,
+   "result": "won",
+   "profit": 0.54
+  },
+  {
+   "ts": "2026-10-29T14:09:40+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026AQVAVEV53ROLT5NH-2RWF57DXI",
+   "n": 3,
+   "legs": [
+    "Over 58.5 points (Florida Atlantic Owls at North Texas Mean Green)",
+    "No \u00b7 Montreal Canadiens wins by over 2.5 goals (Montreal Canadiens at Dallas Stars)",
+    "Under 9.5 goals (Washington Capitals at Nashville Predators)"
+   ],
+   "count": 2,
+   "ask": 0.675,
+   "fair": 1.38,
+   "result": "lost",
+   "profit": -1.35
+  },
+  {
+   "ts": "2026-10-29T04:45:49+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026E3K2FFEYK7SUYUSJ-KIFAAQEVV",
+   "n": 2,
+   "legs": [
+    "Over 58.5 points (Florida Atlantic Owls at North Texas Mean Green)",
+    "No \u00b7 Montreal Canadiens wins by over 2.5 goals (Montreal Canadiens at Dallas Stars)"
+   ],
+   "count": 2,
+   "ask": 0.766,
+   "fair": 1.24,
+   "result": "lost",
+   "profit": -1.53
+  },
+  {
+   "ts": "2026-10-24T14:47:25+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026MVZP2C3CPE3OQXD6-JOQ3OOQHC",
+   "n": 3,
+   "legs": [
+    "Under 58.5 points (North Dakota State Bison at New Mexico Lobos)",
+    "Under 77.5 points (West Virginia Mountaineers at TCU Horned Frogs)",
+    "Under 73.5 points (Colorado Buffaloes at Oklahoma State Cowboys)"
+   ],
+   "count": 2,
+   "ask": 0.688,
+   "fair": 1.37,
+   "result": "lost",
+   "profit": -1.38
+  },
+  {
+   "ts": "2026-10-24T14:41:48+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S20264Y7CYB5Y7LLUQ253-CYHWOMXTK",
+   "n": 3,
+   "legs": [
+    "Under 58.5 points (North Dakota State Bison at New Mexico Lobos)",
+    "Under 77.5 points (West Virginia Mountaineers at TCU Horned Frogs)",
+    "Under 72.5 points (Ole Miss Rebels at Texas Longhorns)"
+   ],
+   "count": 2,
+   "ask": 0.675,
+   "fair": 1.37,
+   "result": "won",
+   "profit": 0.65
+  },
+  {
+   "ts": "2026-10-24T14:36:13+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026HKTQ7J3EWGNVXJIO-JGAJJAT7L",
+   "n": 4,
+   "legs": [
+    "Under 72.5 points (UL Monroe Warhawks at Troy Trojans)",
+    "Under 67.5 points (Old Dominion Monarchs at Louisiana Tech Bulldogs)",
+    "Over 35.5 points (Georgia State Panthers at Arkansas State Red Wolves)",
+    "Under 73.5 points (Vanderbilt Commodores at Kentucky Wildcats)"
+   ],
+   "count": 2,
+   "ask": 0.746,
+   "fair": 1.27,
+   "result": "won",
+   "profit": 0.51
+  },
+  {
+   "ts": "2026-10-24T14:13:35+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026GAJNFILB3TGV577J-WBPJWKDBV",
+   "n": 4,
+   "legs": [
+    "Under 83.5 points (North Texas Mean Green at Navy Midshipmen)",
+    "Under 72.5 points (UL Monroe Warhawks at Troy Trojans)",
+    "Under 67.5 points (Old Dominion Monarchs at Louisiana Tech Bulldogs)",
+    "Over 30.5 points (Boise State Broncos at Washington State Cougars)"
+   ],
+   "count": 2,
+   "ask": 0.737,
+   "fair": 1.27,
+   "result": "lost",
+   "profit": -1.47
+  },
+  {
+   "ts": "2026-10-24T05:44:44+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026Q32H3QQFSZ62XHAX-B63L37IMF",
+   "n": 4,
+   "legs": [
+    "Over 24.5 points (Western Michigan Broncos at Toledo Rockets)",
+    "Under 83.5 points (Utah State Aggies at Texas State Bobcats)",
+    "Under 73.5 points (LSU Tigers at Auburn Tigers)",
+    "Under 71.5 points (Virginia Tech Hokies at Clemson Tigers)"
+   ],
+   "count": 2,
+   "ask": 0.732,
+   "fair": 1.28,
+   "result": "won",
+   "profit": 0.54
+  },
+  {
+   "ts": "2026-10-20T23:19:19+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026Y77UIPLHHPISB6ZG-3ND3VCS7F",
+   "n": 3,
+   "legs": [
+    "Over 46.5 points (South Alabama Jaguars at Marshall Thundering Herd)",
+    "No \u00b7 Winnipeg Jets wins by over 2.5 goals (Winnipeg Jets at St. Louis Blues)",
+    "Under 9.5 goals (Minnesota Wild at Edmonton Oilers)"
+   ],
+   "count": 2,
+   "ask": 0.689,
+   "fair": 1.38,
+   "result": "lost",
+   "profit": -1.38
+  },
+  {
+   "ts": "2026-10-20T20:55:15+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026WZVL7ZQWQL3YIDNR-ARO4YCPAN",
+   "n": 3,
+   "legs": [
+    "Under 9.5 goals (Tampa Bay Lightning at Vegas Golden Knights)",
+    "Under 64.5 points (Middle Tennessee Blue Raiders at Florida International Panthers)",
+    "No \u00b7 Toronto Maple Leafs wins by over 2.5 goals (Toronto Maple Leafs at Columbus Blue Jackets)"
+   ],
+   "count": 2,
+   "ask": 0.693,
+   "fair": 1.37,
+   "result": "lost",
+   "profit": -1.39
+  },
+  {
+   "ts": "2026-10-20T20:55:15+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026K32UD736PMYYPOH3-JLR2RFAZ3",
+   "n": 2,
+   "legs": [
+    "Under 64.5 points (Middle Tennessee Blue Raiders at Florida International Panthers)",
+    "No \u00b7 Toronto Maple Leafs wins by over 2.5 goals (Toronto Maple Leafs at Columbus Blue Jackets)"
+   ],
+   "count": 2,
+   "ask": 0.764,
+   "fair": 1.24,
+   "result": "lost",
+   "profit": -1.53
+  },
+  {
+   "ts": "2026-10-18T11:45:22+00:00",
+   "ticker": "KXMVECROSSCATEGORY0-S2026PNPYKWWTIWWZ3WAM-QVIEZZXVK",
+   "n": 2,
+   "legs": [
+    "Under 70.5 points (Arizona Cardinals at Los Angeles Rams)",
+    "No \u00b7 Baltimore Ravens wins by over 20.5 points (Baltimore Ravens at Cleveland Browns)"
+   ],
+   "count": 2,
+   "ask": 0.725,
+   "fair": 1.23,
+   "result": "won",
+   "profit": 0.55
+  },
+  {
+   "ts": "2026-10-17T23:20:12+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S20263ANKZUFOCKK7KQKE-75DTSGD26",
+   "n": 6,
+   "legs": [
+    "Over 33.5 points (Louisiana Tech Bulldogs at UL Monroe Warhawks)",
+    "Under 84.5 points (Oklahoma State Cowboys at Houston Cougars)",
+    "Under 75.5 points (Wake Forest Demon Deacons at California Golden Bears)",
+    "Under 73.5 points (Nebraska Cornhuskers at Oregon Ducks)",
+    "No \u00b7 Hawai'i Rainbow Warriors wins by over 10.5 points (New Mexico Lobos at Hawai'i Rainbow Warriors)",
+    "Under 64.5 points (Wisconsin Badgers at UCLA Bruins)"
+   ],
+   "count": 2,
+   "ask": 0.642,
+   "fair": 1.48,
+   "result": "lost",
+   "profit": -1.28
+  },
+  {
+   "ts": "2026-10-17T17:57:08+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026WSGSOMTQJTRCLJWW-TE4LENAEX",
+   "n": 2,
+   "legs": [
+    "Under 65.5 points (Notre Dame Fighting Irish at BYU Cougars)",
+    "Under 61.5 points (Wisconsin Badgers at UCLA Bruins)"
+   ],
+   "count": 2,
+   "ask": 0.77,
+   "fair": 1.23,
+   "result": "won",
+   "profit": 0.46
+  },
+  {
+   "ts": "2026-10-17T15:55:59+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026Q3U67CLPHXRPYHIW-5NTGJIFO5",
+   "n": 3,
+   "legs": [
+    "Over 31.5 points (TCU Horned Frogs at Baylor Bears)",
+    "Under 65.5 points (Notre Dame Fighting Irish at BYU Cougars)",
+    "Under 61.5 points (Wisconsin Badgers at UCLA Bruins)"
+   ],
+   "count": 2,
+   "ask": 0.683,
+   "fair": 1.37,
+   "result": "lost",
+   "profit": -1.37
+  },
+  {
+   "ts": "2026-10-17T14:20:53+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S202672ITNQPRNIDH7UKD-FISXUK7ZF",
+   "n": 3,
+   "legs": [
+    "Under 68.5 points (Auburn Tigers at Georgia Bulldogs)",
+    "Under 66.5 points (UNLV Rebels at Air Force Falcons)",
+    "Under 65.5 points (Notre Dame Fighting Irish at BYU Cougars)"
+   ],
+   "count": 2,
+   "ask": 0.691,
+   "fair": 1.37,
+   "result": "lost",
+   "profit": -1.38
+  },
+  {
+   "ts": "2026-10-16T18:11:36+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026OYC4NOSHGMJ7JKRG-3LYOADHBY",
+   "n": 3,
+   "legs": [
+    "Under 68.5 points (Washington Huskies at Purdue Boilermakers)",
+    "No \u00b7 Pittsburgh Penguins wins by over 2.5 goals (Pittsburgh Penguins at Colorado Avalanche)",
+    "Under 73.5 points (Memphis Tigers at Tulane Green Wave)"
+   ],
+   "count": 2,
+   "ask": 0.686,
+   "fair": 1.36,
+   "result": "won",
+   "profit": 0.63
+  },
+  {
+   "ts": "2026-10-16T18:00:28+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S20264AWJ4TOFR5YU3BI3-V4DYQV2QD",
+   "n": 4,
+   "legs": [
+    "Over 2.5 runs (Tampa Bay Rays at Cleveland Guardians)",
+    "Under 73.5 points (Memphis Tigers at Tulane Green Wave)",
+    "Under 9.5 goals (Boston Bruins at Anaheim Ducks)",
+    "Under 68.5 points (Washington Huskies at Purdue Boilermakers)"
+   ],
+   "count": 2,
+   "ask": 0.638,
+   "fair": 1.48,
+   "result": "won",
+   "profit": 0.72
+  },
+  {
+   "ts": "2026-10-16T16:53:59+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026UKPKDNBEJ5ATEI3J-3C4XDC3SX",
+   "n": 3,
+   "legs": [
+    "Under 73.5 points (Memphis Tigers at Tulane Green Wave)",
+    "Under 9.5 goals (Boston Bruins at Anaheim Ducks)",
+    "Under 68.5 points (Washington Huskies at Purdue Boilermakers)"
+   ],
+   "count": 2,
+   "ask": 0.699,
+   "fair": 1.36,
+   "result": "won",
+   "profit": 0.6
+  },
+  {
+   "ts": "2026-10-16T15:33:48+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026LG4KWU5FBJL3NQY5-FICSHSCPI",
+   "n": 2,
+   "legs": [
+    "Under 73.5 points (Memphis Tigers at Tulane Green Wave)",
+    "No \u00b7 Pittsburgh Penguins wins by over 2.5 goals (Pittsburgh Penguins at Colorado Avalanche)"
+   ],
+   "count": 2,
+   "ask": 0.771,
+   "fair": 1.23,
+   "result": "won",
+   "profit": 0.46
+  },
+  {
+   "ts": "2026-10-15T09:30:00+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026HW357WTHBF7WHM5X-BPLAWS52C",
+   "n": 6,
+   "legs": [
+    "No \u00b7 Philadelphia Flyers wins by over 2.5 goals (Philadelphia Flyers at Detroit Red Wings)",
+    "No \u00b7 New York Rangers wins by over 2.5 goals (New York Rangers at New Jersey Devils)",
+    "No \u00b7 Calgary Flames wins by over 1.5 goals (Calgary Flames at Vegas Golden Knights)",
+    "No \u00b7 San Jose Sharks wins by over 2.5 goals (San Jose Sharks at Nashville Predators)",
+    "No \u00b7 Vancouver Canucks wins by over 1.5 goals (Vancouver Canucks at Florida Panthers)",
+    "No \u00b7 Chicago Blackhawks wins by over 2.5 goals (Winnipeg Jets at Chicago Blackhawks)"
+   ],
+   "count": 4,
+   "ask": 0.4215,
+   "fair": 2.18,
+   "result": "won",
+   "profit": 2.31
+  },
+  {
+   "ts": "2026-10-15T09:30:00+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S20265VVANX7KSNU32HGQ-AM5ETSNGR",
+   "n": 4,
+   "legs": [
+    "No \u00b7 Calgary Flames wins by over 1.5 goals (Calgary Flames at Vegas Golden Knights)",
+    "No \u00b7 San Jose Sharks wins by over 2.5 goals (San Jose Sharks at Nashville Predators)",
+    "No \u00b7 Vancouver Canucks wins by over 1.5 goals (Vancouver Canucks at Florida Panthers)",
+    "No \u00b7 Chicago Blackhawks wins by over 2.5 goals (Winnipeg Jets at Chicago Blackhawks)"
+   ],
+   "count": 3,
+   "ask": 0.559,
+   "fair": 1.7,
+   "result": "won",
+   "profit": 1.32
+  },
+  {
+   "ts": "2026-10-15T09:30:00+00:00",
+   "ticker": "KXMVECROSSCATEGORY-S2026PMETOOKO3XXU7IY2-FQ3ZF5NSY",
+   "n": 4,
+   "legs": [
+    "Under 65.5 points (East Carolina Pirates at UAB Blazers)",
+    "No \u00b7 St. Louis Blues wins by over 2.5 goals (St. Louis Blues at Minnesota Wild)",
+    "No \u00b7 Philadelphia Flyers wins by over 2.5 goals (Philadelphia Flyers at Detroit Red Wings)",
+    "No \u00b7 New York Rangers wins by over 2.5 goals (New York Rangers at New Jersey Devils)"
+   ],
+   "count": 3,
+   "ask": 0.564,
+   "fair": 1.62,
+   "result": "won",
+   "profit": 1.31
+  }
+ ],
+ "started": "2026-10-31T11:15:45+00:00",
+ "limits": {
+  "stake": 2.0,
+  "daily": 10.0,
+  "open": 5,
+  "min_edge": 0.05,
+  "sell_edge": 0.05
+ },
+ "balance": 0.4009,
+ "portfolio_value": 0.0,
+ "record_summary": {
+  "tickets": 0,
+  "settled": 0,
+  "won": 0,
+  "profit": 0,
+  "staked": 0
+ },
+ "spent_today": 2.93,
+ "practice_summary": {
+  "tickets": 27,
+  "settled": 25,
+  "won": 13,
+  "profit": -6.13,
+  "staked": 36.12
+ },
+ "updated": "2026-10-31T11:22:56+00:00"
+}
