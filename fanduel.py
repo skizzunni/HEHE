@@ -187,7 +187,13 @@ def _odds(r):
 
 
 def parse_alts(markets, g):
-    """[(kind, team-or-None, side, line, ref, price)] for one game's page."""
+    """[(kind, team-or-None, side, line, ref, price, where)] for one game's page.
+
+    `where` names the line the way FanDuel's page does ("Alternate Total
+    Goals: Over 2.5"). FanDuel reuses selection ids across markets, and its
+    addToBetslip link resolves an alternate line's id to a different line of
+    the game (checked 2026-10-15: Over 2.5 came up as Over 6.5 +104), so an
+    alternate leg is shown as text to find, not as a one-tap button."""
     out = []
     for m in (markets or {}).values():
         t = m.get("marketType") or ""
@@ -199,14 +205,15 @@ def parse_alts(markets, g):
             name = r.get("runnerName") or ""
             ref = f'{mid}:{r.get("selectionId")}'
             price = _odds(r)
+            where = f'{m.get("marketName") or t}: {name}'
             mt = _TOT.match(name)
             if mt:
                 kind = "teamtotal" if side_team else "total"
-                out.append((kind, side_team, mt.group(1).lower(), float(mt.group(2)), ref, price))
+                out.append((kind, side_team, mt.group(1).lower(), float(mt.group(2)), ref, price, where))
                 continue
             mh = _HCP.match(name)
             if mh and "TOTAL" not in t:
-                out.append(("spread", mh.group(1), None, float(mh.group(2)), ref, price))
+                out.append(("spread", mh.group(1), None, float(mh.group(2)), ref, price, where))
     return out
 
 
@@ -218,7 +225,9 @@ def load_alts(g):
     try:
         if time.time() - os.path.getmtime(f) < EVENT_TTL:
             with open(f) as fh:
-                return [tuple(x) for x in json.load(fh)]
+                alts = [tuple(x) for x in json.load(fh)]
+                if all(len(x) == 7 for x in alts):
+                    return alts
     except (OSError, ValueError):
         pass
     d = _get(f"{BASE}/event-page?_ak={AK}&eventId={g['id']}&tab=popular"

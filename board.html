@@ -700,8 +700,9 @@ function drawMarkets(){
 let PRDAY = null, PRQ = "";
 // ------------------------------------------------------------- locks view
 // The 11 likeliest bets FanDuel lists, one per game (locks.py). FanDuel has
-// no link that loads several legs at once, so each leg has its own button;
-// tapping them in turn adds each to the same FanDuel slip.
+// no link that loads several legs at once. Main lines get a one-tap button;
+// alternate lines (x.where) are shown as text, because FanDuel's
+// addToBetslip link resolves their ids to a different line of the game.
 let LKDAY = null;
 function drawLocks(){
   const K = D.locks || {};
@@ -736,11 +737,14 @@ function drawLocks(){
         + (x.status && x.status !== "open"
             ? ' <b class="' + (x.status === "won" ? "agree" : "fade") + '">' + esc(x.status.toUpperCase())
               + (x.score ? ' (' + esc(x.score) + ')' : '') + '</b>'
-            : legBtns(null, fdOne(x.fd)))
+            : x.where ? '<br><span class="note">On FanDuel: open the game, find <b>'
+                + esc(x.where) + '</b></span>' : legBtns(null, fdOne(x.fd)))
         + '</li>').join("")
     + '</ol><button type="button" data-lkcopy="' + day + '">Copy all legs</button></div>'
-    + '<p class="note">Tap <b>+ FanDuel</b> on each leg in turn: FanDuel keeps them in one slip, '
-    + 'then choose <b>Parlay</b>. Every leg is likely; all ' + L.length + ' together hit '
+    + '<p class="note">Alternate lines have no one-tap button: FanDuel&rsquo;s add-to-slip link '
+    + 'puts a <i>different</i> line of the same game on the slip (Over 2.5 came up as Over 6.5). '
+    + 'Open each game on FanDuel and pick the exact market and line shown, check the slip matches '
+    + 'the card (line and price), then choose <b>Parlay</b>. Every leg is likely; all ' + L.length + ' together hit '
     + (100 * X.prob).toFixed(0) + '% of the time &mdash; a lock each, not a lock together. '
     + 'Fewer legs hit far more often: the top 3 alone hit '
     + (100 * L.slice(0, 3).reduce((a, x) => a * x.p, 1)).toFixed(0) + '%.</p>';
@@ -1548,7 +1552,8 @@ document.addEventListener("click", e => {
   const lkc = e.target.closest("[data-lkcopy]");
   if(lkc){
     const L = (((D.locks || {})[lkc.getAttribute("data-lkcopy")] || {}).locks) || [];
-    copyText("Locks\n" + L.map((x, i) => (i + 1) + ". " + x.label + "  (" + x.match + ")").join("\n"),
+    copyText("Locks\n" + L.map((x, i) => (i + 1) + ". " + x.label + "  (" + x.match + ")"
+      + (x.where ? "  FanDuel: " + x.where : "") + (x.price ? " " + x.price : "")).join("\n"),
              lkc, "Copied");
     return;
   }
