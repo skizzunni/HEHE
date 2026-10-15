@@ -27,6 +27,7 @@ import dashboard as d          # noqa: E402
 import ledger                  # noqa: E402
 import parlays                 # noqa: E402
 import stacks                  # noqa: E402
+import fanduel                 # noqa: E402
 import player_props            # noqa: E402
 
 
@@ -87,6 +88,11 @@ def snapshot():
     SOCCER = {k for k, p, _ in d.LEAGUES if p.startswith("soccer/")}
     # what each band has actually done, so the badges answer to the record
     live = live_bands(ledger.load().values(), SOCCER)
+    # FanDuel (New York) ids, where FanDuel's feed has this game and market.
+    try:
+        FD = fanduel.load()
+    except Exception:
+        FD = {}
     for slot in ("today", "tomorrow"):
         lg = {}
         soccer_rows = []
@@ -124,6 +130,9 @@ def snapshot():
                              "p": leg["price"] if leg else None,
                              "d": bool(leg["dog"]) if leg else False,
                              "dk": (leg or {}).get("dk"),
+                             "fd": fanduel.ml_ref(FD, k, (r.get("mkt") or {}).get("away"),
+                                                  (r.get("mkt") or {}).get("home"),
+                                                  r["mypick"]),
                              "lg": lab})
             # rank by what the band has actually hit, not by a raw confidence
             # that means something different in every sport
@@ -147,10 +156,18 @@ def snapshot():
     labels = {k: lab for k, _, lab in d.LEAGUES}
     try:
         out["stacks"] = stacks.build(d._STATE["slots"], SOCCER, labels)
+        for st_ in out["stacks"].values():
+            for tickets in st_["tickets"].values():
+                for t in tickets:
+                    for L in t["legs"]:
+                        L["fd"] = fanduel.leg_ref(FD, L["league"], L["home"], L["away"], L["spec"])
+                    t["fd_n"] = sum(1 for L in t["legs"] if L["fd"])
+                    t["fd"] = fanduel.link([L["fd"] for L in t["legs"]])
         dates = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
         stacks.record(out["stacks"], dates)
         stacks.grade(ledger._final)
         out["stacks_record"] = stacks.report()
+        out["backtest"] = stacks.backtest_summary()
         st = out["stacks"]["today"]
         print(f'stacks: {st["games"]} games priced today, '
               + ", ".join(f'{n}-leg x{len(t)}' for n, t in st["tickets"].items()),

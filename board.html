@@ -323,7 +323,7 @@ td.num.ok{color:var(--dog)}
         <button class="go" id="copy">Copy ticket</button>
         <button id="shareslip" type="button">Share link</button>
         <a id="dk" href="#" target="_blank" rel="noopener">DraftKings link</a>
-        <a href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a>
+        <a id="fdslip" href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a>
         <a href="https://sportsbook.fanatics.com/" target="_blank" rel="noopener">Open Fanatics</a>
         <button id="hide">Hide</button>
       </div>
@@ -549,7 +549,9 @@ function parlayHTML(slot){
           + esc(L.league) + ' &middot; ' + (100 * L.hit).toFixed(1) + '%</li>').join("")
       + '</ul><button type="button" data-parlay="' + slot + '|' + n + '|' + i
       + '">Load into slip</button> <button type="button" data-share="parlay|' + slot
-      + '|' + n + '|' + i + '">Share link</button></div>';
+      + '|' + n + '|' + i + '">Share link</button>'
+      + (t.fd ? ' <a href="' + esc(t.fd) + '" target="_blank" rel="noopener">FanDuel slip (NY)</a>' : '')
+      + '</div>';
   };
   let body = "";
   [2, 3].forEach(n => {
@@ -610,6 +612,20 @@ function drawStacks(){
     html += '<p><b>Track record:</b> none graded yet \u2014 every leg is '
       + 'logged and graded from final scores, so this fills in daily.</p>';
   }
+  const BT = D.backtest;
+  if(BT && BT.rows && BT.rows.length){
+    html += '<details class="ptk"><summary><b>Backtest</b> \u2014 how these legs and tickets did on '
+      + BT.rows.reduce((a, r) => a + r.games, 0).toLocaleString() + ' past games (run ' + esc(BT.run) + ')</summary>'
+      + '<p>Closing lines and final scores; the safety haircut was fitted on the first half '
+      + 'of each season and these numbers are the second half, which it never saw. Tickets '
+      + 'below their promise (NHL, NFL, NBA) are where legs from the same day move together.</p>'
+      + '<table class="mk"><thead><tr><th>Sport</th><th class="num">Legs said</th>'
+      + '<th class="num">Hit</th><th class="num">Tickets won</th><th class="num">Promised</th></tr></thead><tbody>'
+      + BT.rows.map(r => '<tr><td>' + esc(r.sport.toUpperCase()) + '</td><td class="num">' + r.said
+          + '%</td><td class="num">' + r.hit + '%</td><td class="num">' + r.won + '/' + r.tickets
+          + '</td><td class="num">' + r.expected + '</td></tr>').join("")
+      + '</tbody></table></details>';
+  }
   if(!sizes.length) html += '<p>No stacks for this day yet \u2014 lines usually post the night before.</p>';
   sizes.forEach(n => {
     (st.tickets[n] || []).forEach((t, i) => {
@@ -622,7 +638,11 @@ function drawStacks(){
             + (100 * L.p).toFixed(1) + '%</span></li>').join("")
         + '</ul><button type="button" data-stack="' + day + '|' + n + '|' + i
         + '">Copy ticket</button> <button type="button" data-share="stack|' + day + '|' + n
-        + '|' + i + '">Share link</button><pre class="fanslip" hidden></pre></div>';
+        + '|' + i + '">Share link</button> '
+        + (t.fd ? '<a href="' + esc(t.fd) + '" target="_blank" rel="noopener">FanDuel slip (NY)</a>'
+                : '<span style="color:var(--ink-dim);font-size:12px">FanDuel: ' + (t.fd_n || 0)
+                  + ' of ' + t.legs.length + ' legs listed</span>')
+        + '<pre class="fanslip" hidden></pre></div>';
     });
   });
   html += '<p>A 20-leg ticket of 90% legs still loses 88% of the time. Stake '
@@ -735,6 +755,11 @@ function copyStack(btn){
                                             show);
   } catch (e) { show(); }
 }
+function fdLink(refs){
+  if(!refs.length || refs.some(r => !r)) return null;
+  return "https://sportsbook.fanduel.com/addToBetslip?" + refs.map((r, i) =>
+    "marketId[" + i + "]=" + r.split(":")[0] + "&selectionId[" + i + "]=" + r.split(":")[1]).join("&");
+}
 // ------------------------------------------------------------ share links
 // A ticket travels inside the link itself (#t=...), so a shared link shows
 // exactly the legs it was shared with, even after the board has moved on.
@@ -772,7 +797,7 @@ function ticketFrom(key){
   const [kind, d, n, i] = key.split("|");
   if(kind === "stack"){
     const t = ((((D.stacks || {})[d] || {}).tickets || {})[n] || [])[+i];
-    return t && { title: t.n + "-leg stack", note: "hits " + (100 * t.prob).toFixed(1)
+    return t && { fd: t.fd || null, title: t.n + "-leg stack", note: "hits " + (100 * t.prob).toFixed(1)
       + "% \u00b7 fair payout " + t.fair.toFixed(2) + "x",
       legs: t.legs.map(L => [L.label, L.match + " \u00b7 " + L.lg]) };
   }
@@ -787,7 +812,7 @@ function ticketFrom(key){
     if(!t) return null;
     const dk = t.legs.every(L => L.dk) ? "https://sportsbook.draftkings.com/event/"
       + t.legs[0].dk.split(":")[0] + "?outcomes=" + t.legs.map(L => L.dk.split(":")[1]).join(",") : null;
-    return { title: t.n + "-leg parlay " + t.price, note: "hits " + (100 * t.prob).toFixed(1) + "%",
+    return { fd: t.fd || null, title: t.n + "-leg parlay " + t.price, note: "hits " + (100 * t.prob).toFixed(1) + "%",
       legs: t.legs.map(L => [L.pick, L.price + " \u00b7 " + L.league]), dk: dk };
   }
   return null;
@@ -798,7 +823,8 @@ function slipTicket(){
     + dks[0].dk.split(":")[0] + "?outcomes=" + dks.map(r => r.dk.split(":")[1]).join(",") : null;
   const all = SLIP.every(r => r.p);
   const c = all ? SLIP.reduce((a, r) => a * dec(r.p), 1) : null;
-  return { title: SLIP.length + "-leg slip" + (c ? " " + amer(c) : ""),
+  return { fd: fdLink(SLIP.map(r => r.fd)),
+    title: SLIP.length + "-leg slip" + (c ? " " + amer(c) : ""),
     legs: SLIP.map(r => [r.mp, (r.p || "no line") + (r.lg ? " \u00b7 " + r.lg : "")]),
     note: c ? "$5 returns $" + (5 * c).toFixed(2) : "", dk: dk };
 }
@@ -815,12 +841,15 @@ function drawShared(){
       + (o.note ? '<p>' + esc(o.note) + '</p>' : '')
       + '<p><button type="button" id="sharedcopy">Copy ticket</button> '
       + (o.dk ? '<a href="' + esc(o.dk) + '" target="_blank" rel="noopener">Open in DraftKings</a> ' : '')
-      + '<a href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a> '
+      + (o.fd ? '<a href="' + esc(o.fd) + '" target="_blank" rel="noopener">Open in FanDuel (NY)</a> '
+              : '<a href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a> ')
       + '<a href="https://sportsbook.fanatics.com/" target="_blank" rel="noopener">Open Fanatics</a> '
       + '<a href="https://kalshi.com/" target="_blank" rel="noopener">Open Kalshi</a></p>'
-      + '<p style="color:var(--ink-dim)">FanDuel, Fanatics and Kalshi have no link that '
-      + 'fills a bet slip from outside their apps, so copy the ticket and add the legs '
-      + 'there. Prices may have moved since this was shared.</p>';
+      + '<p style="color:var(--ink-dim)">' + (o.fd ? 'The FanDuel link fills the slip in New York. '
+          : 'FanDuel posts ids only for moneyline, main spread and main total, so this '
+          + 'ticket has no FanDuel slip link. ')
+      + 'Fanatics and Kalshi have no link that fills a slip from outside their apps, so '
+      + 'copy the ticket and add the legs there. Prices may have moved since this was shared.</p>';
   }
   html += '<p><button type="button" id="sharedback">See today\u2019s board</button></p></div>';
   panel.innerHTML = html;
@@ -1209,6 +1238,11 @@ function drawSlip(){
     url.textContent = "Fanatics publishes no betslip link. No DraftKings ids on these "
       + "legs either — no book has posted them yet.";
   }
+  // FanDuel (New York): a real bet-slip link only when every leg has an id
+  const fdl = fdLink(SLIP.map(r => r.fd));
+  const fda = document.getElementById("fdslip");
+  fda.href = fdl || "https://sportsbook.fanduel.com/";
+  fda.textContent = fdl ? "FanDuel slip (NY)" : "Open FanDuel";
   slip.hidden = false;
 }
 document.addEventListener("click", e => {

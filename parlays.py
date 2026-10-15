@@ -31,6 +31,8 @@ import itertools
 import json
 import os
 
+import fanduel
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(HERE, ".cache", "last_board.json")
 
@@ -78,7 +80,7 @@ def eligible(rows):
         p = (1 - MARKET_WEIGHT) * hit + MARKET_WEIGHT * fair
         out.append(dict(lgk=lgk, pick=r["mp"], league=r.get("lg", lgk),
                         tip=r.get("t"), price=r["p"], dec=o, hit=p,
-                        implied=1 / o, ev=p * o - 1, dk=r.get("dk")))
+                        implied=1 / o, ev=p * o - 1, dk=r.get("dk"), fd=r.get("fd")))
     out.sort(key=lambda L: (-L["ev"], -L["hit"]))
     return out[:MAX_POOL]
 
@@ -93,12 +95,13 @@ def tickets(legs, n):
             o *= L["dec"]
         out.append(dict(legs=[dict(lgk=L["lgk"], pick=L["pick"], league=L["league"],
                                    tip=L["tip"], price=L["price"],
-                                   hit=round(L["hit"], 4), dk=L["dk"])
+                                   hit=round(L["hit"], 4), dk=L["dk"], fd=L.get("fd"))
                               for L in combo],
                         n=n, prob=round(p, 4), price=american(o),
                         ret5=round(5 * o, 2), ev=round(100 * (p * o - 1), 1),
                         dk="+".join(L["dk"] for L in combo if L["dk"])
-                           if all(L["dk"] for L in combo) else None))
+                           if all(L["dk"] for L in combo) else None,
+                        fd=fanduel.link([L.get("fd") for L in combo])))
     return out
 
 

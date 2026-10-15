@@ -340,6 +340,31 @@ def _load_backtest():
 _load_backtest()
 
 
+def backtest_summary():
+    """Per-sport backtest results for the page: leg calibration on the
+    holdout and how tickets did against what they promised."""
+    try:
+        with open(os.path.join(HERE, "data", "backtest_stacks.json")) as fh:
+            bt = json.load(fh)
+    except (OSError, ValueError):
+        return None
+    rows = []
+    for k, v in (bt.get("sports") or {}).items():
+        cal = (v.get("stack_legs") or {}).get("haircut") or []
+        n = sum(c["n"] for c in cal)
+        if not n:
+            continue
+        said = sum(c["said"] * c["n"] for c in cal) / n
+        hit = sum(c["hit"] * c["n"] for c in cal) / n
+        tk = v.get("tickets") or []
+        won = sum(t["won"] for t in tk)
+        exp = sum(t["expected"] for t in tk)
+        rows.append(dict(sport=k, games=v.get("games"), legs=n, said=round(said, 1),
+                         hit=round(hit, 1), tickets=sum(t["played"] for t in tk),
+                         won=won, expected=round(exp, 1)))
+    return dict(run=bt.get("run"), rows=rows)
+
+
 def half(x):
     """Nearest .5 line."""
     return math.floor(x) + 0.5
