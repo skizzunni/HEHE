@@ -1351,8 +1351,8 @@ function scoreboardHTML(){
       + (mins === null ? '' :
          '<p class="age' + (stale ? ' stale' : '') + '">Snapshot taken <b>'
          + (mins < 1 ? 'moments ago' : mins + ' minute' + (mins === 1 ? '' : 's') + ' ago')
-         + '</b>. This page cannot fetch on its own &mdash; it only holds what was '
-         + 'baked in when it was last published, about every 20 minutes.'
+         + '</b>. The site is rebuilt every 5 minutes and this page reloads itself '
+         + 'when a newer one is out; scores below update live from ESPN in between.'
          + (stale ? ' Some of these are likely finished by now; check the book for '
                   + 'anything you are acting on.' : '') + '</p>')
       + live.map(x =>
@@ -1594,20 +1594,39 @@ buildTabs(); render(); drawSlip();
 // touching it. On the Claude artifact there is no build.txt, the fetch simply
 // fails, and this does nothing.
 (function () {
-  var mine = null;
+  // The page knows when it was built (results.captured, ms); build.txt says
+  // when the newest page was published. If ours is older -- a phone resuming a
+  // background tab, or a cached copy -- reload, with the build in the address
+  // so no cache can hand back the old copy. iOS freezes timers in background
+  // tabs, so also check the moment the tab is shown again.
+  var built = (typeof D === "object" && D.results && D.results.captured) || null;
+  var tried = null;
   function check() {
-    fetch("build.txt", { cache: "no-store" })
+    fetch("build.txt?" + Date.now(), { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : null; })
       .then(function (t) {
         if (t === null) return;
         t = t.trim();
-        if (mine === null) { mine = t; return; }
-        if (t !== mine) location.reload();
+        var latest = Date.parse(t);
+        if (!built || isNaN(latest)) return;
+        // one try per published build: if the reload still hands back an old
+        // copy, stop rather than loop
+        var already = location.search.indexOf("v=" + encodeURIComponent(t)) >= 0;
+        if (latest - built > 120000 && tried !== t && !already) {
+          tried = t;
+          var u = location.pathname + "?v=" + encodeURIComponent(t) + location.hash;
+          location.replace(u);
+        }
       })
       .catch(function () { /* offline, or not served from Pages */ });
   }
   check();
   setInterval(check, 60000);
+  document.addEventListener("visibilitychange", function () {
+    if (document.visibilityState === "visible") check();
+  });
+  window.addEventListener("pageshow", check);
+  window.addEventListener("focus", check);
 })();
 </script>
 
