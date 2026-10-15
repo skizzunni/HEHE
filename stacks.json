@@ -1,5 +1,39 @@
 {
  "legs": {
+  "mlb:401908025|No \u00b7 Tampa Bay Rays wins by over 4.5 runs": {
+   "away": "Tampa Bay Rays",
+   "date": "2026-10-15",
+   "home": "Cleveland Guardians",
+   "label": "No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+   "league": "mlb",
+   "logged": "2026-10-15T01:41",
+   "match": "Tampa Bay Rays at Cleveland Guardians",
+   "p": 0.8989,
+   "p_model": 0.9222,
+   "spec": {
+    "line": 4.5,
+    "t": "nomargin",
+    "team": "Tampa Bay Rays"
+   },
+   "status": "open"
+  },
+  "mlb:401908033|No \u00b7 Milwaukee Brewers wins by over 4.5 runs": {
+   "away": "Milwaukee Brewers",
+   "date": "2026-10-15",
+   "home": "Los Angeles Dodgers",
+   "label": "No \u00b7 Milwaukee Brewers wins by over 4.5 runs",
+   "league": "mlb",
+   "logged": "2026-10-15T01:41",
+   "match": "Milwaukee Brewers at Los Angeles Dodgers",
+   "p": 0.9003,
+   "p_model": 0.9233,
+   "spec": {
+    "line": 4.5,
+    "t": "nomargin",
+    "team": "Milwaukee Brewers"
+   },
+   "status": "open"
+  },
   "ncaaf:401860923|No \u00b7 Colorado State Rams wins by over 7.5 points": {
    "away": "Colorado State Rams",
    "date": "2026-10-15",
@@ -98,6 +132,23 @@
    },
    "status": "open"
   },
+  "nhl:401892507|No \u00b7 New York Islanders wins by over 2.5 goals": {
+   "away": "New York Islanders",
+   "date": "2026-10-15",
+   "home": "Ottawa Senators",
+   "label": "No \u00b7 New York Islanders wins by over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-15T01:41",
+   "match": "New York Islanders at Ottawa Senators",
+   "p": 0.9011,
+   "p_model": 0.904,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "New York Islanders"
+   },
+   "status": "open"
+  },
   "nhl:401892507|Under 9.5 goals": {
    "away": "New York Islanders",
    "date": "2026-10-15",
@@ -180,6 +231,22 @@
    },
    "status": "open"
   },
+  "nhl:401892509|Under 9.5 goals": {
+   "away": "Seattle Kraken",
+   "date": "2026-10-15",
+   "home": "Tampa Bay Lightning",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-15T01:41",
+   "match": "Seattle Kraken at Tampa Bay Lightning",
+   "p": 0.8972,
+   "p_model": 0.9002,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "nhl:401892510|No \u00b7 Vancouver Canucks wins by over 2.5 goals": {
    "away": "Vancouver Canucks",
    "date": "2026-10-15",
@@ -194,6 +261,22 @@
     "line": 2.5,
     "t": "nomargin",
     "team": "Vancouver Canucks"
+   },
+   "status": "open"
+  },
+  "nhl:401892510|Under 9.5 goals": {
+   "away": "Vancouver Canucks",
+   "date": "2026-10-15",
+   "home": "Florida Panthers",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-15T01:41",
+   "match": "Vancouver Canucks at Florida Panthers",
+   "p": 0.9044,
+   "p_model": 0.9072,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
    },
    "status": "open"
   },
@@ -262,6 +345,22 @@
    },
    "status": "open"
   },
+  "nhl:401892513|Under 9.5 goals": {
+   "away": "San Jose Sharks",
+   "date": "2026-10-15",
+   "home": "Nashville Predators",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-15T01:41",
+   "match": "San Jose Sharks at Nashville Predators",
+   "p": 0.8996,
+   "p_model": 0.9026,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "nhl:401892514|No \u00b7 St. Louis Blues wins by over 2.5 goals": {
    "away": "St. Louis Blues",
    "date": "2026-10-15",
@@ -311,6 +410,22 @@
    },
    "status": "open"
   },
+  "nhl:401892515|Under 9.5 goals": {
+   "away": "Utah Mammoth",
+   "date": "2026-10-15",
+   "home": "Edmonton Oilers",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-15T01:41",
+   "match": "Utah Mammoth at Edmonton Oilers",
+   "p": 0.8845,
+   "p_model": 0.8879,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "nhl:401892516|No \u00b7 Calgary Flames wins by over 2.5 goals": {
    "away": "Calgary Flames",
    "date": "2026-10-15",
@@ -325,6 +440,22 @@
     "line": 2.5,
     "t": "nomargin",
     "team": "Calgary Flames"
+   },
+   "status": "open"
+  },
+  "nhl:401892516|Under 9.5 goals": {
+   "away": "Calgary Flames",
+   "date": "2026-10-15",
+   "home": "Vegas Golden Knights",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-15T01:41",
+   "match": "Calgary Flames at Vegas Golden Knights",
+   "p": 0.8996,
+   "p_model": 0.9026,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
    },
    "status": "open"
   }
@@ -409,6 +540,54 @@
    "logged": "2026-10-15T00:28",
    "n": 15,
    "prob": 0.1634,
+   "status": "open"
+  },
+  "20261015:15:1": {
+   "fair": 5.21,
+   "legs": [
+    "nhl:401892515|Under 9.5 goals",
+    "ncaaf:401869950|Over 30.5 points",
+    "mlb:401908033|No \u00b7 Milwaukee Brewers wins by over 4.5 runs",
+    "nhl:401892516|Under 9.5 goals",
+    "nhl:401892513|Under 9.5 goals",
+    "mlb:401908025|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "nhl:401892507|No \u00b7 New York Islanders wins by over 2.5 goals",
+    "nhl:401892509|Under 9.5 goals",
+    "nhl:401892510|Under 9.5 goals",
+    "nfl:401872995|Over 26.5 points",
+    "nhl:401892512|Under 9.5 goals",
+    "ncaaf:401860923|No \u00b7 Colorado State Rams wins by over 7.5 points",
+    "ncaaf:401862800|No \u00b7 UAB Blazers wins by over 14.5 points",
+    "nhl:401892506|Over 3.5 goals",
+    "nhl:401892511|No \u00b7 New York Rangers wins by over 2.5 goals"
+   ],
+   "logged": "2026-10-15T01:41",
+   "n": 15,
+   "prob": 0.1921,
+   "status": "open"
+  },
+  "20261015:15:2": {
+   "fair": 5.22,
+   "legs": [
+    "nhl:401892514|No \u00b7 St. Louis Blues wins by over 2.5 goals",
+    "nhl:401892508|No \u00b7 Philadelphia Flyers wins by over 2.5 goals",
+    "nhl:401892515|Under 9.5 goals",
+    "ncaaf:401869950|Over 30.5 points",
+    "mlb:401908033|No \u00b7 Milwaukee Brewers wins by over 4.5 runs",
+    "nhl:401892516|Under 9.5 goals",
+    "nhl:401892513|Under 9.5 goals",
+    "mlb:401908025|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "nhl:401892507|No \u00b7 New York Islanders wins by over 2.5 goals",
+    "nhl:401892509|Under 9.5 goals",
+    "nhl:401892510|Under 9.5 goals",
+    "nfl:401872995|Over 26.5 points",
+    "nhl:401892512|Under 9.5 goals",
+    "ncaaf:401860923|No \u00b7 Colorado State Rams wins by over 7.5 points",
+    "ncaaf:401862800|No \u00b7 UAB Blazers wins by over 14.5 points"
+   ],
+   "logged": "2026-10-15T01:41",
+   "n": 15,
+   "prob": 0.1916,
    "status": "open"
   },
   "20261015:20:0": {
