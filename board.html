@@ -833,14 +833,16 @@ function drawLottery(){
     + '~2 points of what they said). Where both together give a leg a better chance than FanDuel&rsquo;s '
     + 'price assumes, that leg pays more than it should &mdash; the tickets above take those first. '
     + (P.checked != null ? P.checked + ' FanDuel lines had a Kalshi price; ' + (P.edges || 0)
-       + ' come out ahead.' : '') + '</p>';
+       + ' come out ahead, ' + (P.confirmed || 0) + ' of them with Kalshi agreeing. A leg Kalshi '
+       + 'does not list rests on the model alone (marked &ldquo;model only&rdquo;) and is the less '
+       + 'trustworthy kind.' : '') + '</p>';
   if(E.length){
     h += '<table class="mk"><thead><tr><th>Leg</th><th class="num">FanDuel</th>'
       + '<th class="num">Model</th><th class="num">Kalshi</th><th class="num">Edge</th></tr></thead><tbody>'
       + E.map(e => '<tr><td>' + esc(e.label) + '<br><span style="color:var(--ink-dim)">' + esc(e.match)
         + ' &middot; ' + esc(e.lg) + '</span></td><td class="num">' + esc(e.price) + '</td><td class="num">'
         + (100 * e.p_model).toFixed(0) + '%</td><td class="num">'
-        + (e.p_kalshi != null ? (100 * e.p_kalshi).toFixed(0) + '%' : '&ndash;')
+        + (e.p_kalshi != null ? (100 * e.p_kalshi).toFixed(0) + '%' : 'model only')
         + '</td><td class="num edge pos">+' + e.edge.toFixed(1) + '%</td></tr>').join("")
       + '</tbody></table>';
   } else {
