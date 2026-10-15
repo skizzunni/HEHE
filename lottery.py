@@ -39,8 +39,9 @@ LEDGER = os.path.join(HERE, "lottery.json")
 TARGET = 10000.0            # payout multiple a ticket is built to reach
 MAX_LEGS = 14
 N_TICKETS = 3               # per book, built from disjoint games
-GAME_BAND = (0.15, 0.62)    # model chance of a game leg
-DEC_BAND = (1.65, 6.0)      # -154 .. +500: real plus-money legs, no moonshots
+GAME_BAND = (0.15, 0.80)    # model chance of a game leg
+DEC_BAND = (1.65, 6.0)      # $10k tier: -154 .. +500, no moonshots
+LEG_DEC = (1.25, 6.0)       # every leg considered: -400 .. +500
 
 
 def decimal(price):
@@ -63,7 +64,7 @@ def _game_legs(rows, soccer_keys, labels, FD):
             ref, price, where = refs.get((g["gid"], json.dumps(L["spec"], sort_keys=True)),
                                          (None, None, None))
             d = decimal(price)
-            if not ref or not d or not DEC_BAND[0] <= d <= DEC_BAND[1]:
+            if not ref or not d or not LEG_DEC[0] <= d <= LEG_DEC[1]:
                 continue
             out.append(dict(kind="game", gid=g["gid"], league=g["league"], lg=g["lg"],
                             match=g["match"], home=g["home"], away=g["away"], tip=g.get("tip"),
@@ -81,7 +82,7 @@ def _prop_legs(prop_games, ok_gids):
         lg = g["id"].split(":", 1)[0]
         for P in g.get("props") or []:
             d = decimal(P.get("price"))
-            if not d or not DEC_BAND[0] <= d <= DEC_BAND[1] or not P.get("aid"):
+            if not d or not LEG_DEC[0] <= d <= LEG_DEC[1] or not P.get("aid"):
                 continue
             if not props_ledger.gradable(lg, P["market"]):
                 continue
@@ -98,30 +99,55 @@ def _rank(L):
     return math.log(L["value"]) / math.log(L["dec"])
 
 
-def _tickets(legs, book):
-    """Up to N_TICKETS tickets of the most efficient legs, each reaching TARGET."""
+def _rank_chance(L):
+    """For a fixed chance, the best leg adds the most payout per unit of
+    chance it costs: log(value) / -log(p)."""
+    return math.log(L["value"]) / -math.log(L["p"])
+
+
+# Two tiers. The payout and the chance cannot both be set: a $1 ticket that
+# hits 1 time in 100 is worth at most about $100 before the book's margin,
+# so "1 in 100" pays tens of dollars and "$10,000" is a 1-in-20,000 shot.
+TIERS = (
+    # name, decimal price range, rank, stop rule
+    dict(tier="100", dec=(1.25, 3.0), rank=_rank_chance, chance=0.01),
+    dict(tier="10k", dec=DEC_BAND, rank=_rank, pay=TARGET),
+)
+
+
+def _tickets(legs, book, tier=TIERS[1]):
+    """Up to N_TICKETS tickets of the most efficient legs for the tier: built
+    up to the payout TARGET, or down to the chance (1 in 100)."""
+    lo, hi = tier["dec"]
+    rank = tier["rank"]
     best = {}
-    for L in sorted(legs, key=lambda L: -_rank(L)):
+    for L in sorted((L for L in legs if lo <= L["dec"] <= hi), key=lambda L: -rank(L)):
         best.setdefault(L["gid"], L)            # one leg per game: its best
-    pool = sorted(best.values(), key=lambda L: -_rank(L))
+    pool = sorted(best.values(), key=lambda L: -rank(L))
     used, made = set(), []
     for _ in range(N_TICKETS):
-        pick, pay = [], 1.0
+        pick, pay, prob = [], 1.0, 1.0
         for L in pool:
             if L["gid"] in used:
                 continue
+            if tier.get("chance") and prob * L["p"] < tier["chance"] * 0.9:
+                continue                        # would overshoot the chance
             pick.append(L)
             pay *= L["dec"]
-            if pay >= TARGET or len(pick) >= MAX_LEGS:
+            prob *= L["p"]
+            if len(pick) >= MAX_LEGS:
                 break
-        if pay < TARGET:
+            if tier.get("pay") and pay >= tier["pay"]:
+                break
+            if tier.get("chance") and prob <= tier["chance"] * 1.1:
+                break
+        if tier.get("pay") and pay < tier["pay"]:
+            break
+        if tier.get("chance") and not tier["chance"] * 0.9 <= prob <= tier["chance"] * 1.25:
             break
         used.update(L["gid"] for L in pick)
-        prob = 1.0
-        for L in pick:
-            prob *= L["p"]
-        made.append(dict(book=book, legs=pick, pays=round(pay), prob=prob,
-                         odds=round(1 / prob) if prob else None))
+        made.append(dict(book=book, tier=tier["tier"], legs=pick, pays=round(pay),
+                         prob=prob, odds=round(1 / prob) if prob else None))
     return made
 
 
@@ -133,7 +159,10 @@ def build(slot_rows, soccer_keys, labels, FD, prop_games=None, day=None):
     fd_rows = {lg: rs for lg, rs in rows.items() if lg in locks.fanduel.PAGES}
     games = _game_legs(fd_rows, soccer_keys, labels, FD)
     props = _prop_legs(prop_games, ok)
-    return dict(tickets=_tickets(games, "FanDuel") + _tickets(props, "DraftKings"),
+    tickets = []
+    for tier in TIERS:
+        tickets += _tickets(games, "FanDuel", tier) + _tickets(props, "DraftKings", tier)
+    return dict(tickets=tickets,
                 pool=dict(games=len({L["gid"] for L in games}), props=len(props)))
 
 
@@ -161,13 +190,17 @@ def record(res, day):
     props ledger, which settles them from box scores."""
     day = _iso(day)
     book = load()
-    if book["days"].get(day) or not res.get("tickets"):
-        return
+    have = {(t["book"], t.get("tier", "10k"))
+            for t in (book["days"].get(day) or {}).get("tickets", [])}
     tickets = []
-    for t in res["tickets"]:
+    for t in res.get("tickets") or []:
+        if (t["book"], t.get("tier", "10k")) in have:
+            continue                            # that tier's card already stands
         legs = [dict(L, status="open", date=day) for L in t["legs"]]
         tickets.append(dict(t, legs=legs))
-    book["days"][day] = dict(tickets=tickets)
+    if not tickets:
+        return
+    book["days"].setdefault(day, dict(tickets=[]))["tickets"] += tickets
     save(book)
     props = [L for t in tickets for L in t["legs"] if L["kind"] == "prop"]
     if props:

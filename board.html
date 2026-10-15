@@ -781,21 +781,33 @@ function drawLottery(){
   let h = '<div class="parlays"><h3>Lottery &mdash; ' + day + '</h3>'
     + '<p><button type="button" data-ltday="today">Today</button> '
     + '<button type="button" data-ltday="tomorrow">Tomorrow</button></p>'
-    + '<p>$1 tickets built to pay about <b>$10,000</b>. Every game and every priced player prop '
-    + 'is scanned; each ticket takes legs priced -150 to +500 that give up the least value for the '
-    + 'payout they add, one per game, from games that have not started. Game legs are FanDuel '
-    + 'prices; prop tickets are DraftKings prices. The chance shown is the model&rsquo;s honest '
-    + 'one &mdash; slim, not none. Treat it as a $1 lottery ticket, not a plan.</p>';
+    + '<p>Two kinds of $1 ticket. <b>1 in 100</b>: the biggest payout the model can find at a 1% '
+    + 'chance. <b>$10,000</b>: the best chance the model can find at a 10,000x payout. You cannot '
+    + 'have both &mdash; a ticket that hits 1 time in 100 is worth at most about $100 before the '
+    + 'book takes its cut, so a $10,000 payout is always around a 1-in-20,000 shot.</p>'
+    + '<p>Every game line FanDuel posts (alternates included) and every priced player prop is '
+    + 'scanned; one leg per game, from games that have not started. Game legs are FanDuel '
+    + 'prices; prop tickets are DraftKings prices. The 1-in-N is the model&rsquo;s honest chance.</p>';
   if(X.preview) h += '<p class="note"><b>Preview.</b> Today&rsquo;s tickets are set at 8:00 AM '
     + 'Eastern and then stay the same all day.</p>';
   if(X.set) h += '<p class="note">Tickets set at 8:00 AM Eastern for ' + esc(X.day)
     + '. Results fill in as games finish.</p>';
   if(!T.length){
-    panel.innerHTML = h + '<p class="empty">Not enough plus-money legs left ' + day
-      + ' to reach 10,000x.</p></div>';
+    panel.innerHTML = h + '<p class="empty">Not enough games left ' + day
+      + ' to build a ticket.</p></div>';
     return;
   }
-  T.forEach((t, i) => {
+  let lastTier = null;
+  const order = t => (t.tier || "10k") === "100" ? 0 : 1;
+  T.map((t, i) => [t, i]).sort((a, b) => order(a[0]) - order(b[0]) || a[1] - b[1]).forEach(([t, i]) => {
+    const tier = t.tier || "10k";
+    if(tier !== lastTier){
+      lastTier = tier;
+      h += '<h3>' + (tier === "100" ? '1 in 100 &mdash; $1 pays about $' + Math.round(
+          T.filter(x => (x.tier || "10k") === "100").reduce((a, x) => a + x.pays, 0)
+          / Math.max(1, T.filter(x => (x.tier || "10k") === "100").length))
+        : '$1 &rarr; $10,000 &mdash; long shot') + '</h3>';
+    }
     const st = t.status && t.status !== "open"
       ? ' <b class="' + (t.status === "won" ? "agree" : "fade") + '">' + esc(t.status.toUpperCase()) + '</b>' : '';
     h += '<div class="ptk"><div class="hd"><span>' + esc(t.book) + ' &middot; ' + t.legs.length + ' legs'
@@ -1205,7 +1217,7 @@ function drawCard(slot){
     const L = ((D.locks || {}).today || {}).locks || [];
     b.innerHTML = "Locks" + '<span class="dnum">' + L.length + ' FanDuel</span>';
   } else if(s === "lottery"){
-    b.innerHTML = "Lottery" + '<span class="dnum">$1 &rarr; $10k</span>';
+    b.innerHTML = "Lottery" + '<span class="dnum">1 in 100 &middot; $10k</span>';
   } else if(s === "bot"){
     b.innerHTML = "Bot" + '<span class="dnum">Kalshi</span>';
   } else if(s === "props"){
