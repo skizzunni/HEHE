@@ -2071,3 +2071,22 @@ DraftKings link and the Fanatics copy block. The rules:
 
 A negative EV is shown as negative. A 3-leg ticket of 75% legs still loses
 58% of the time.
+
+## All sports back on the board (2026-10-15)
+
+Soccer (35 domestic leagues), tennis (ATP/WTA) and NCAA men's basketball are
+back, plus the Champions League, Europa League and Conference League. The cups
+have no rating model (they mix clubs from leagues whose ratings are not
+comparable), so they carry the market's de-vigged favourite, labelled as such.
+
+Two fixes came with it:
+
+- A soccer game whose feed had no draw price was de-vigged as a two-way
+  market, which hands the draw's ~25% to the teams. It now shows no price.
+- Season results are fetched incrementally and cached between Actions runs.
+  A day three or more days old is final and never refetched, so ~40 leagues
+  cost a few hundred requests a run instead of ~12,000.
+
+Player props beyond the WNBA, "both teams to score" and totals are not
+modelled. A pick in one of those markets would be a guess, so the board
+doesn't make one.

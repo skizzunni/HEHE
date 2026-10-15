@@ -564,7 +564,7 @@ _TENNIS = ("atp", "wta")
 # so without this a UFC favourite at 60%+ implied would inherit the soccer LOCK
 # rule -- a badge earned by 35 graded soccer picks, awarded to a sport with a
 # market-derived number, no model and no track record whatsoever.
-_MAJOR = ("mlb", "ncaaf", "nfl", "nba", "nhl", "wnba", "ufc")
+_MAJOR = ("mlb", "ncaaf", "nfl", "nba", "nhl", "wnba", "ufc", "ncaab", "pga")
 
 
 def _is_soccer(league):

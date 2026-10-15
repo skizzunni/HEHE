@@ -149,9 +149,24 @@ def fetch_games(league, dates, workers=14, cache=True, tag="", ttl=3600):
     own file rather than overwriting the live one.
     """
     cf = os.path.join(CACHE, f"{league}{tag}.json")
+    df = os.path.join(CACHE, f"{league}{tag}.dates.json")
     if cache and os.path.exists(cf) and time.time() - os.path.getmtime(cf) < ttl:
         with open(cf) as fh:
             return json.load(fh)
+    # Incremental: a date three or more days old is final, so once fetched it
+    # is never fetched again. With ~40 leagues on the board a cold refetch of
+    # every season is ~12,000 requests a run; this makes it a few hundred.
+    done, prior = set(), []
+    if cache and os.path.exists(cf) and os.path.exists(df):
+        try:
+            with open(cf) as fh:
+                prior = json.load(fh)
+            with open(df) as fh:
+                done = set(json.load(fh))
+        except (OSError, ValueError):
+            done, prior = set(), []
+    settled = (dt.date.today() - dt.timedelta(days=3)).strftime("%Y%m%d")
+    todo = [x for x in dates if x not in done]
     from concurrent.futures import ThreadPoolExecutor
     path = LEAGUES[league][0]
 
@@ -163,9 +178,11 @@ def fetch_games(league, dates, workers=14, cache=True, tag="", ttl=3600):
                 pass
         return {}
 
-    seen = {}
+    seen, ok = {}, set()
     with ThreadPoolExecutor(max_workers=workers) as ex:
-        for d in ex.map(one, dates):
+        for ds, d in zip(todo, ex.map(one, todo)):
+            if d:
+                ok.add(ds)
             for ev in d.get("events", []):
                 if is_preseason(ev):
                     continue
@@ -187,16 +204,27 @@ def fetch_games(league, dates, workers=14, cache=True, tag="", ttl=3600):
                     if hs == as_:
                         continue          # draws carry no Elo signal here
                     seen[c["id"]] = dict(
+                        id=c["id"],
                         date=(c.get("date") or "")[:10],
                         home=(h.get("team") or {}).get("displayName"),
                         away=(a.get("team") or {}).get("displayName"),
                         hs=hs, as_=as_)
     games = [g for g in seen.values() if g["home"] and g["away"] and g["date"]]
+    # keep cached games only for dates not refetched this time
+    refetched = {f"{x[:4]}-{x[4:6]}-{x[6:]}" for x in todo}
+    keep = [g for g in prior if g.get("date") not in refetched
+            and g.get("id") not in seen]
+    want = {f"{x[:4]}-{x[4:6]}-{x[6:]}" for x in dates}
+    games = [g for g in keep if g.get("date") in want] + games
     games.sort(key=lambda g: g["date"])
     if cache:
         os.makedirs(CACHE, exist_ok=True)
         with open(cf, "w") as fh:
             json.dump(games, fh)
+        # a date counts as done only if its fetch came back and it is final
+        with open(df, "w") as fh:
+            json.dump(sorted((done | {x for x in todo if x in ok}) & set(dates)
+                             - {x for x in dates if x > settled}), fh)
     return games
 
 

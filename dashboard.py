@@ -59,7 +59,20 @@ LEAGUES = [
     ("nhl",   "hockey/nhl",                  "NHL"),
     ("pga",   "golf/pga",                    "PGA"),
     ("ufc",   "mma/ufc",                     "UFC"),
+    ("ncaab", "basketball/mens-college-basketball", "NCAA MBB"),
+    ("atp",   "tennis/atp",                  "ATP"),
+    ("wta",   "tennis/wta",                  "WTA"),
+    # European cups. No rating model -- a cup pools clubs from leagues whose
+    # ratings are not comparable -- so these carry the market's pick, labelled.
+    ("ucl",   "soccer/uefa.champions",       "Champions League"),
+    ("uel",   "soccer/uefa.europa",          "Europa League"),
+    ("uecl",  "soccer/uefa.europa.conf",     "Conference League"),
 ]
+# All sports, on request (2026-10-15): soccer and tennis are back. They were cut
+# on 2026-09-05; the soccer record quoted for them below was inflated by the
+# draw-grading bug fixed the same day as this change.
+LEAGUES += [(k, p, lab) for k, (p, lab, _) in A.LEAGUES.items()
+            if p.startswith("soccer/")]
 # The 35 soccer competitions that used to be appended here from anysport.LEAGUES
 # are gone -- American sports only, on request. Worth recording what it cost,
 # because the numbers were good: soccer ran 88-51 (63.3%) with +30.2% ROI across
@@ -67,7 +80,9 @@ LEAGUES = [
 # with tennis the removed half was 225-100 (69.2%), a better rate than the
 # 93-48 (66.0%) the American leagues have managed.
 THREE_WAY = {k for k, p, _ in LEAGUES if p.startswith("soccer/")}
-PRESEASON_LEAGUES = {"mlb", "wnba", "nfl", "ncaaf", "nba", "nhl"}
+PRESEASON_LEAGUES = {"mlb", "wnba", "nfl", "ncaaf", "nba", "nhl", "ncaab"}
+# Leagues whose pick is the market's favourite rather than a model's.
+MARKET_PICK = {"ucl", "uel", "uecl"}
 
 # Measured on 4,090 real sides of 2,045 completed 2026 MLB games with closing
 # DraftKings prices. Every favourite bucket underperforms its own implied
@@ -237,10 +252,19 @@ def raw_prices(comp, ways):
                 dr = d.get(when, {}).get("odds") if isinstance(d.get(when), dict) else None
                 if dr is not None:
                     return (a, dr, h)
+                # A three-way market priced as two-way de-vigs the draw's
+                # share onto the teams and overstates the favourite by ~10
+                # points. No price is better than a wrong one.
+                continue
             return (a, h)
         a = (o.get("awayTeamOdds") or {}).get("moneyLine")
         h = (o.get("homeTeamOdds") or {}).get("moneyLine")
         if a and h:
+            if ways == 3:
+                dr = (o.get("drawOdds") or {}).get("moneyLine")
+                if dr is None:
+                    continue
+                return (a, dr, h)
             return (a, h)
     return None
 
@@ -467,6 +491,16 @@ def collect(key, path, day, mlbctx, mybook=None):
                         if who:
                             mine = dict(mine, pick=who, side=side_,
                                         conf=max(pa, 1 - pa), p_away=pa)
+            if key in MARKET_PICK and not mine.get("pick") and legs:
+                fav = max((L for L in legs if L["side"] != "draw"),
+                          key=lambda L: L["prob"], default=None)
+                full = {x.get("homeAway"): (x.get("team") or {}).get("displayName")
+                        for x in c.get("competitors") or []}
+                who = full.get(fav["side"]) if fav else None
+                if who:
+                    mine = dict(pick=who, side=fav["side"], conf=fav["prob"],
+                                why="market favourite, de-vigged (no model for cup "
+                                    "competitions)")
             best = max(legs, key=lambda L: L["roi"] if L["roi"] is not None else -99) if legs else None
             rows.append(dict(id=f'{key}:{c.get("id")}', label=label,
                              tip=t.strftime("%-I:%M %p"), legs=legs, note=note,

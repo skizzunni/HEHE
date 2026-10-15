@@ -56,6 +56,14 @@ jobs:
         with:
           python-version: '3.11'
 
+      # Season results for ~40 leagues feed the ratings. A finished day never
+      # changes, so keep them between runs instead of refetching every season.
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: board-cache-${{ github.run_id }}
+          restore-keys: board-cache-
+
       - name: Rebuild the board
         run: python3 rebuild_board.py
 
