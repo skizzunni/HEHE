@@ -49,15 +49,21 @@ import uuid
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
-STATE = os.path.join(ROOT, ".cache", "last_board.json")
-STATUS_FILE = os.path.join(ROOT, "bot_status.json")              # the page's Bot tab
-HISTORY = os.path.join(ROOT, ".cache", "bot_history.json")       # practice tickets
+# On the Mac (bot/mac/run.sh) the board comes from the published site and all
+# of the bot's own files live in ~/.hehe-bot; on a checkout they live here.
+STATE_DIR = os.environ.get("HEHE_BOT_STATE") or ""
+STATE = os.environ.get("KALSHI_BOARD") or os.path.join(ROOT, ".cache", "last_board.json")
+STATUS_FILE = os.path.join(STATE_DIR or ROOT, "bot_status.json")              # the page's Bot tab
+HISTORY = os.path.join(STATE_DIR or os.path.join(ROOT, ".cache"), "bot_history.json")
 BACKTEST = os.path.join(ROOT, "data", "backtest_stacks.json")
 HOST = "https://api.elections.kalshi.com"
 PREFIX = "/trade-api/v2"
 
 KEY_ID = os.environ.get("KALSHI_KEY_ID", "").strip()
 KEY_PEM = os.environ.get("KALSHI_PRIVATE_KEY", "")
+if not KEY_PEM.strip() and os.environ.get("KALSHI_PRIVATE_KEY_FILE"):
+    with open(os.environ["KALSHI_PRIVATE_KEY_FILE"]) as _fh:
+        KEY_PEM = _fh.read()
 LIVE = os.environ.get("KALSHI_LIVE", "").strip().lower() == "yes"
 MAX_STAKE = float(os.environ.get("KALSHI_MAX_STAKE", "2"))       # dollars per ticket
 MAX_DAILY = float(os.environ.get("KALSHI_MAX_DAILY", "10"))      # dollars per day
@@ -74,8 +80,9 @@ BOT_TAG = "hehebot-"
 # way the Kalshi app builds combos. Quote fills carry no client_order_id, so
 # the bot records each quote trade here (committed to the repo -- the one
 # record of them that cannot be lost with the Actions cache).
-BOT_LEDGER = os.path.join(ROOT, "bot_trades.json")
-RFQ_DIR = os.path.join(ROOT, ".cache", "bot_rfqs.json")          # one RFQ per ticket per day
+BOT_LEDGER = os.path.join(STATE_DIR or ROOT, "bot_trades.json")
+RFQ_DIR = os.path.join(STATE_DIR or os.path.join(ROOT, ".cache"), "bot_rfqs.json")  # one per ticket per day
+BOARD_MAX_AGE = 30 * 60      # seconds; older tickets may include games already under way
 RFQ_WAIT = 6.0             # seconds to collect quotes; makers answer in well under one
 
 
@@ -684,6 +691,13 @@ def run():
     except (OSError, ValueError):
         log("no board snapshot; buying skipped")
         board = None
+    built = (board or {}).get("built")
+    if board and built:
+        age = time.time() - dt.datetime.fromisoformat(built.replace("Z", "+00:00")).timestamp()
+        if age > BOARD_MAX_AGE:
+            log(f"board is {age / 60:.0f} minutes old; buying skipped until a fresh one")
+            STATUS["error"] = f"the tickets are {age / 60:.0f} minutes old -- is the board still rebuilding?"
+            board = None
     if board:
         buy_tickets(board, allowed_sports(), left, open_n, held, history)
     save_history(history)

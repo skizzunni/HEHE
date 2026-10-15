@@ -1124,12 +1124,14 @@ function drawBot(){
       : '<p class="note">No stack legs graded yet.</p>') + '</div>';
   if(!BOT){
     panel.innerHTML = '<div class="rhead"><div class="rbig">Off</div><div class="rsub">'
-      + 'no report yet &mdash; the bot reports after the first run with the '
-      + 'KALSHI_KEY_ID and KALSHI_PRIVATE_KEY secrets set</div></div>' + tuneHTML;
+      + 'no report yet &mdash; the bot runs on your Mac (bot/mac/install.sh) and '
+      + 'reports here within 5 minutes of its first run</div></div>' + tuneHTML;
     return;
   }
   const B = BOT, live = B.mode === "live";
   const age = B.updated ? Math.round((Date.now() - Date.parse(B.updated)) / 60000) : null;
+  // the Mac cannot run while asleep or offline; say so instead of showing old numbers as current
+  const asleep = age !== null && age > 20;
   const S = live ? (B.record_summary || {}) : (B.practice_summary || {});
   let h = '<div class="rhead">'
     + '<div class="rbig">' + (B.ok ? (live ? "LIVE" : "Practice") : "Error") + '</div>'
@@ -1140,10 +1142,12 @@ function drawBot(){
     + (B.limits ? ' &middot; limits $' + B.limits.stake + '/ticket, $' + B.limits.daily
         + '/day, ' + B.limits.open + ' open' : '')
     + ' &middot; spent today ' + money(B.spent_today || 0) + '</div></div>';
+  if(asleep) h += '<p class="note" style="margin:10px 0 0;color:var(--neg,#c0392b)">No report for '
+    + age + ' minutes. The bot runs on your Mac: is it awake and online?</p>';
   if(!live) h += '<p class="note" style="margin:10px 0 0">Practice mode: nothing is '
     + 'placed. Each ticket it would have bought is logged at the real Kalshi price '
     + 'and graded on Kalshi&rsquo;s own result, so this is the record it would have '
-    + 'made. It goes live only when the KALSHI_LIVE secret is set to yes.</p>';
+    + 'made. It goes live only when you run <code>touch ~/.hehe-bot/LIVE</code> on the Mac.</p>';
   h += '<div class="sect"><h2>' + (live ? "Profit" : "Practice profit") + '</h2>'
     + '<table class="sweeptab"><tbody><tr>'
     + '<td><b>tickets</b><span>' + (S.tickets || 0) + '</span></td>'
