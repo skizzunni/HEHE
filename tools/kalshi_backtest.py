@@ -41,6 +41,9 @@ import backtest as B                                          # noqa: E402
 K = "https://api.elections.kalshi.com/trade-api/v2"
 CACHE = os.path.join(ROOT, ".cache", "kbt")
 OUT = os.path.join(ROOT, "data", "backtest_kalshi.json")
+# every priced leg, long shots included, for replaying lottery tickets
+# (tools/lottery_backtest.py)
+LEGS_OUT = os.path.join(ROOT, "data", "backtest_kalshi_legs.json")
 UA = {"User-Agent": "Mozilla/5.0", "Accept": "application/json"}
 MON = ("JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC")
 
@@ -54,7 +57,8 @@ LEAGUES = [
     ("epl", "soccer", "eng.1", "EPL", [("2025-08-15", "2026-05-24"), ("2026-08-14", None)]),
 ]
 MAX_GAMES = 450
-P_RANGE = (0.55, 0.99)         # legs worth pricing; the stack band sits inside
+P_RANGE = (0.10, 0.99)         # legs worth pricing, lottery long shots included
+VALUE_RANGE = (0.55, 0.99)     # the value-leg study below, as it always was
 
 
 # ------------------------------------------------------------- polite fetch
@@ -267,6 +271,7 @@ def run_league(key, sport, league, prefix, wins):
                 continue
             won = (m["result"] == "yes") == (side == "YES")
             found.append(dict(date=d.isoformat(), ticker=m["ticker"], side=side, spec=spec,
+                              game=f"{key}:{eid}",
                               p=round(p, 4), q=round(S.haircut(p, key), 4),
                               cost=round(cost, 4), fee=fee(cost), width=round(ask - bid, 4),
                               won=int(won)))
@@ -327,6 +332,9 @@ def main():
         allrows += rows
         print(f"{key}: {stats}", flush=True)
     allrows.sort(key=lambda r: r["date"])
+    with open(LEGS_OUT, "w") as fh:
+        json.dump(allrows, fh, separators=(",", ":"))
+    allrows = [r for r in allrows if VALUE_RANGE[0] <= r["p"] <= VALUE_RANGE[1]]
     half = len(allrows) // 2
     fit, test = allrows[:half], allrows[half:]
     edge = lambda r: r["q"] - (r["cost"] + r["fee"])

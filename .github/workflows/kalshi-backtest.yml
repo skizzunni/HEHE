@@ -37,7 +37,7 @@ jobs:
       - run: python3 tools/kalshi_backtest.py
       - name: Commit the results
         run: |
-          git add -f data/backtest_kalshi.json
+          git add -f data/backtest_kalshi.json data/backtest_kalshi_legs.json
           if git diff --cached --quiet; then echo "unchanged"; exit 0; fi
           git config user.name  "board bot"
           git config user.email "board-bot@users.noreply.github.com"
