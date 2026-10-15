@@ -288,6 +288,20 @@ def save_json(path, obj):
         json.dump(obj, fh, indent=1)
 
 
+class Blocked(Exception):
+    """Kalshi refused trading from where this runs (a location rule)."""
+
+
+def where_am_i():
+    """City/region of the machine the bot runs on, for the location error."""
+    try:
+        with urllib.request.urlopen("https://ipinfo.io/json", timeout=10) as r:
+            d = json.load(r)
+        return ", ".join(x for x in (d.get("city"), d.get("region"), d.get("country")) if x)
+    except Exception:
+        return "unknown"
+
+
 def request_quote(combo, count):
     """Ask market makers for a price on `count` YES contracts of `combo`.
     Returns (rfq_id, best) where best is the cheapest YES offer:
@@ -296,6 +310,9 @@ def request_quote(combo, count):
     st, d = api("POST", "/communications/rfqs",
                 dict(market_ticker=combo, contracts=int(count), rest_remainder=False))
     rid = (d or {}).get("id")
+    code = str(((d or {}).get("error") or {}).get("code") or "")
+    if st == 403 and "not_currently_allowed" in code.lower():
+        raise Blocked(code.replace("_", " "))
     if st not in (200, 201) or not rid:
         log(f"{combo}: quote request refused ({st}) {json.dumps(d)[:160]}")
         return None, None
@@ -403,7 +420,16 @@ def buy_tickets(board, sports, budget_left, open_n, held, history):
             seen["verdict"] = "already asked for a quote today"
             continue
         asked[combo] = today
-        rid, best = request_quote(combo, count)
+        try:
+            rid, best = request_quote(combo, count)
+        except Blocked as e:
+            place = where_am_i()
+            msg = (f"Kalshi refused trading from this server's location ({place}): {e}. "
+                   "Kalshi checks where the bot runs, not only where the account is.")
+            log(msg)
+            STATUS["error"] = msg
+            seen["verdict"] = "blocked by Kalshi's location rule"
+            return
         if not best:
             close_rfq(rid)
             log(f"{combo}: no market maker offered YES")
