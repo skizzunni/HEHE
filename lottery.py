@@ -30,6 +30,7 @@ import json
 import math
 import os
 
+import kalshi
 import locks
 import props_ledger
 import stacks
@@ -54,7 +55,27 @@ def decimal(price):
     return 1 + (v / 100 if v > 0 else 100 / -v)
 
 
-def _game_legs(rows, soccer_keys, labels, FD):
+# How much of a leg's chance comes from Kalshi's traders rather than the
+# model, where Kalshi lists the same line with a tight spread. On 7,547 past
+# legs Kalshi's prices hit within ~2 points of what they said in every band
+# (data/backtest_kalshi.json), so the market gets the larger share.
+KALSHI_WEIGHT = 0.6
+
+
+def _blend(p_model, p_kalshi):
+    if p_kalshi is None or not 0.01 < p_kalshi < 0.99:
+        return p_model
+    lg = lambda x: math.log(x / (1 - x))
+    z = KALSHI_WEIGHT * lg(p_kalshi) + (1 - KALSHI_WEIGHT) * lg(min(max(p_model, 0.01), 0.99))
+    return 1 / (1 + math.exp(-z))
+
+
+def _game_legs(rows, soccer_keys, labels, FD, KB=None):
+    """Every FanDuel line, with the chance from the model and Kalshi's
+    traders together. A leg's edge is that chance x FanDuel's price - 1: where
+    FanDuel pays longer than the two agree it should, the leg is worth more
+    than it costs. Those disagreements are what lift a ticket's odds."""
+    by_id = {r["id"]: r for rs in (rows or {}).values() for r in rs}
     refs = {}
     games = stacks.candidates(rows, soccer_keys, labels, extra=locks.fd_specs(FD, refs),
                               band=GAME_BAND)
@@ -66,11 +87,20 @@ def _game_legs(rows, soccer_keys, labels, FD):
             d = decimal(price)
             if not ref or not d or not LEG_DEC[0] <= d <= LEG_DEC[1]:
                 continue
+            k = None
+            if KB:
+                try:
+                    k = kalshi.leg(KB, g["league"], (by_id.get(g["gid"]) or {}).get("mkt") or {},
+                                   L["spec"])
+                except Exception:
+                    k = None
+            pk = (k or {}).get("mid")
+            p = round(_blend(L["p"], pk), 4)
             out.append(dict(kind="game", gid=g["gid"], league=g["league"], lg=g["lg"],
                             match=g["match"], home=g["home"], away=g["away"], tip=g.get("tip"),
-                            label=L["label"], spec=L["spec"], p=L["p"], price=price,
-                            dec=round(d, 3), fd=ref, where=where,
-                            value=round(L["p"] * d, 4)))
+                            label=L["label"], spec=L["spec"], p=p, p_model=L["p"], p_kalshi=pk,
+                            price=price, dec=round(d, 3), fd=ref, where=where,
+                            value=round(p * d, 4)))
     return out
 
 
@@ -151,19 +181,26 @@ def _tickets(legs, book, tier=TIERS[1]):
     return made
 
 
-def build(slot_rows, soccer_keys, labels, FD, prop_games=None, day=None):
+def build(slot_rows, soccer_keys, labels, FD, prop_games=None, day=None, KB=None):
     now = dt.datetime.now(dt.timezone.utc)
     rows = {lg: [r for r in rs if locks._eligible(r, day, now)]
             for lg, rs in (slot_rows or {}).items()}
     ok = {r["id"] for rs in rows.values() for r in rs}
     fd_rows = {lg: rs for lg, rs in rows.items() if lg in locks.fanduel.PAGES}
-    games = _game_legs(fd_rows, soccer_keys, labels, FD)
+    games = _game_legs(fd_rows, soccer_keys, labels, FD, KB)
     props = _prop_legs(prop_games, ok)
     tickets = []
     for tier in TIERS:
         tickets += _tickets(games, "FanDuel", tier) + _tickets(props, "DraftKings", tier)
+    edge = sorted((L for L in games if L["value"] > 1), key=lambda L: -L["value"])
     return dict(tickets=tickets,
-                pool=dict(games=len({L["gid"] for L in games}), props=len(props)))
+                pool=dict(games=len({L["gid"] for L in games}), props=len(props),
+                          checked=sum(L["p_kalshi"] is not None for L in games),
+                          edges=len(edge)),
+                edges=[dict(label=L["label"], match=L["match"], lg=L["lg"], price=L["price"],
+                            p=L["p"], p_model=L["p_model"], p_kalshi=L["p_kalshi"],
+                            edge=round(100 * (L["value"] - 1), 1), where=L.get("where"),
+                            fd=L["fd"]) for L in edge[:15]])
 
 
 # ------------------------------------------------------------------ record
@@ -243,7 +280,12 @@ def report():
             if L["status"] in ("won", "lost")]
     tickets = [t for d in book["days"].values() for t in d["tickets"]]
     done = [t for t in tickets if t.get("status") in ("won", "lost")]
-    return dict(legs=len(legs), won=sum(L["status"] == "won" for L in legs),
+    ed = [L for L in legs if L.get("value", 0) > 1]
+    ret = sum((L["dec"] - 1) if L["status"] == "won" else -1 for L in ed)
+    return dict(edge_legs=len(ed), edge_won=sum(L["status"] == "won" for L in ed),
+                edge_said=round(100 * sum(L["p"] for L in ed) / len(ed), 1) if ed else None,
+                edge_roi=round(100 * ret / len(ed), 1) if ed else None,
+                legs=len(legs), won=sum(L["status"] == "won" for L in legs),
                 said=round(100 * sum(L["p"] for L in legs) / len(legs), 1) if legs else None,
                 tickets=len(done), hits=sum(t["status"] == "won" for t in done),
                 days=[dict(day=k, n=len(v["tickets"]),

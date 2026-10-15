@@ -270,22 +270,33 @@ def snapshot():
         traceback.print_exc()
     # The lottery: $1 tickets built to pay ~$10,000, from game lines and props
     try:
+        try:
+            _kb = kalshi.load()             # cached minutes ago by the stacks step
+        except Exception:
+            _kb = None
         days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
         out["lottery"] = {s_: lottery.build(d._STATE["slots"].get(s_), SOCCER, labels, FD,
                                             ((out.get("props") or {}).get(s_) or {}).get("games"),
-                                            day=days_[s_])
+                                            day=days_[s_], KB=_kb)
                           for s_ in ("today", "tomorrow")}
         lottery.grade(ledger._final)
         if locks.card_time():
             lottery.record(out["lottery"]["today"], days_["today"])
             fz = lottery.frozen(days_["today"])
             if fz:
+                fz["edges"] = out["lottery"]["today"].get("edges")
+                fz["pool"] = out["lottery"]["today"].get("pool")
                 out["lottery"]["today"] = fz
         else:
             out["lottery"]["today"]["preview"] = True
         out["lottery_record"] = lottery.report()
+        pl_ = out["lottery"]["today"].get("pool") or {}
+        print(f'lottery pool: {pl_}', file=sys.stderr)
+        for e_ in out["lottery"]["today"].get("edges") or []:
+            print(f'   edge {e_["edge"]:+5.1f}%  {e_["label"]:<40} {e_["price"]:>6}  model '
+                  f'{e_["p_model"]:.2f} kalshi {e_["p_kalshi"]}  {e_["match"]}', file=sys.stderr)
         for t_ in out["lottery"]["today"]["tickets"]:
-            print(f'lottery {t_["book"]}: {len(t_["legs"])} legs pays {t_["pays"]}x, '
+            print(f'lottery {t_["book"]} {t_.get("tier")}: {len(t_["legs"])} legs pays {t_["pays"]}x, '
                   f'1 in {t_["odds"]}', file=sys.stderr)
     except Exception:
         import traceback

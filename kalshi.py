@@ -228,8 +228,12 @@ def leg(book, league, mkt, spec):
         if not m:
             return None
         p = m["yes_ask"] if side == "YES" else m["no_ask"]
+        q = m["no_ask"] if side == "YES" else m["yes_ask"]
+        # the traders' own chance: midway between buying this side (ask) and
+        # selling it (1 - the other side's ask), when the spread is tight
+        mid = round((p + 1 - q) / 2, 4) if p and q and 0 <= p - (1 - q) <= 0.06 else None
         return dict(ticker=m["ticker"], event=m["event"], series=m["series"], side=side,
-                    words=f'{side} · {m.get("yes") or m.get("title")}', price=p)
+                    words=f'{side} · {m.get("yes") or m.get("title")}', price=p, mid=mid)
     if t in ("over", "under"):
         m = next((m for m in g.get("TOTAL") or [] if m.get("strike") is not None
                   and abs(float(m["strike"]) - spec["line"]) < 1e-9), None)

@@ -825,6 +825,31 @@ function drawLottery(){
         + '</li>').join("")
       + '</ol><button type="button" data-ltcopy="' + day + '|' + i + '">Copy ticket</button></div>';
   });
+  const E = X.edges || [];
+  const P = X.pool || {};
+  h += '<h3>Where FanDuel pays more than the chance says</h3>'
+    + '<p>Each FanDuel line is checked against two independent opinions: the model, and the price '
+    + 'Kalshi&rsquo;s traders set on the same line (on 7,547 past legs Kalshi&rsquo;s prices hit within '
+    + '~2 points of what they said). Where both together give a leg a better chance than FanDuel&rsquo;s '
+    + 'price assumes, that leg pays more than it should &mdash; the tickets above take those first. '
+    + (P.checked != null ? P.checked + ' FanDuel lines had a Kalshi price; ' + (P.edges || 0)
+       + ' come out ahead.' : '') + '</p>';
+  if(E.length){
+    h += '<table class="mk"><thead><tr><th>Leg</th><th class="num">FanDuel</th>'
+      + '<th class="num">Model</th><th class="num">Kalshi</th><th class="num">Edge</th></tr></thead><tbody>'
+      + E.map(e => '<tr><td>' + esc(e.label) + '<br><span style="color:var(--ink-dim)">' + esc(e.match)
+        + ' &middot; ' + esc(e.lg) + '</span></td><td class="num">' + esc(e.price) + '</td><td class="num">'
+        + (100 * e.p_model).toFixed(0) + '%</td><td class="num">'
+        + (e.p_kalshi != null ? (100 * e.p_kalshi).toFixed(0) + '%' : '&ndash;')
+        + '</td><td class="num edge pos">+' + e.edge.toFixed(1) + '%</td></tr>').join("")
+      + '</tbody></table>';
+  } else {
+    h += '<p class="empty">No FanDuel line is priced longer than the model and Kalshi say right now.</p>';
+  }
+  if(R.edge_legs) h += '<p class="note">Edge legs so far: ' + R.edge_won + ' of ' + R.edge_legs
+    + ' won (' + (100 * R.edge_won / R.edge_legs).toFixed(1) + '%, ' + R.edge_said + '% expected), '
+    + 'returning ' + (R.edge_roi > 0 ? '+' : '') + R.edge_roi + '% at FanDuel&rsquo;s prices. '
+    + 'This is the number that says whether the edge is real.</p>';
   h += '<p class="note">Before placing, check every leg on the slip matches the line and price '
     + 'here &mdash; a different line changes the ticket. The book takes its margin on every leg, '
     + 'so a long parlay returns less than $1 per $1 on average; the 1-in-N is how often it '
