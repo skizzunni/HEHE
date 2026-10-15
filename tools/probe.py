@@ -20,10 +20,10 @@ def get(url):
         return {"_error": str(e)}
 
 
-for sport, lg, days in (("football", "nfl", "20261011-20261013"),
-                        ("soccer", "eng.1", "20261003-20261005"),
-                        ("hockey", "nhl", "20261013-20261014"),
-                        ("baseball", "mlb", "20261012-20261013")):
+for sport, lg, days in (("football", "nfl", "20261012"),
+                        ("soccer", "eng.1", "20261004"),
+                        ("hockey", "nhl", "20261013"),
+                        ("baseball", "mlb", "20261012")):
     sb = get(f"{SITE}/{sport}/{lg}/scoreboard?dates={days}")
     evs = [e for e in sb.get("events") or [] if (e.get("status") or {}).get("type", {}).get("completed")]
     print(f"\n######## {lg}: {len(evs)} finished events {sb.get('_error', '')}")
