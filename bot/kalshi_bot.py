@@ -330,9 +330,13 @@ def request_quote(combo, count):
     end = time.time() + RFQ_WAIT
     while time.time() < end:
         time.sleep(1)
-        st, q = api("GET", f"/communications/quotes?rfq_id={rid}")
+        # Kalshi requires a user filter on this list (403 "Either creator_user_id
+        # or rfq_creator_user_id must be filled"); rfq_user_filter=self means
+        # "quotes answering my RFQs"
+        st, q = api("GET", f"/communications/quotes?rfq_id={rid}&rfq_user_filter=self")
         if st != 200:
             log(f"  reading quotes failed ({st}) {json.dumps(q)[:160]}")
+            STATUS["quote_read_errors"] = STATUS.get("quote_read_errors", 0) + 1
             continue
         for x in (q or {}).get("quotes") or []:
             seen[x.get("id")] = x
@@ -453,6 +457,8 @@ def buy_tickets(board, sports, budget_left, open_n, held, history):
             seen["verdict"] = "blocked by Kalshi's location rule"
             return
         asked[combo][2] = bool(best)
+        if not best and STATUS.get("quote_read_errors"):
+            asked.pop(combo, None)          # our read failed, not the makers: retry next run
         if not best:
             close_rfq(rid)
             log(f"{combo}: no market maker offered YES")

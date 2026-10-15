@@ -286,7 +286,7 @@ def extra_specs(book):
         game = find(book, league, mkt)
         if not game:
             return []
-        unit = "goals" if g.kind == "poisson" else "points"
+        unit = ("runs" if league == "mlb" else "goals") if g.kind == "poisson" else "points"
         out = []
         for m in game.get("TOTAL") or []:
             L = m.get("strike")
