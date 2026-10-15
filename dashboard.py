@@ -73,6 +73,39 @@ LEAGUES = [
 # draw-grading bug fixed the same day as this change.
 LEAGUES += [(k, p, lab) for k, (p, lab, _) in A.LEAGUES.items()
             if p.startswith("soccer/")]
+# More competitions, each confirmed on 2026-10-15 to carry DraftKings odds on
+# ESPN (or to be a live slug between rounds, like the domestic cups). None has
+# a rating history here, so like the European cups they carry the market's
+# de-vigged favourite, labelled as such.
+EXTRA_SOCCER = [
+    ("nwsl",  "soccer/usa.nwsl",              "NWSL"),
+    ("wsl",   "soccer/eng.w.1",               "Women's Super League"),
+    ("lib",   "soccer/conmebol.libertadores", "Copa Libertadores"),
+    ("sud",   "soccer/conmebol.sudamericana", "Copa Sudamericana"),
+    ("ccc",   "soccer/concacaf.champions",    "CONCACAF Champions Cup"),
+    ("afc",   "soccer/afc.champions",         "AFC Champions League"),
+    ("ger2",  "soccer/ger.2",                 "2. Bundesliga"),
+    ("esp2",  "soccer/esp.2",                 "LaLiga 2"),
+    ("ita2",  "soccer/ita.2",                 "Serie B"),
+    ("fra2",  "soccer/fra.2",                 "Ligue 2"),
+    ("ned2",  "soccer/ned.2",                 "Eerste Divisie"),
+    ("sco2",  "soccer/sco.2",                 "Scottish Championship"),
+    ("chn",   "soccer/chn.1",                 "Chinese Super League"),
+    ("ind",   "soccer/ind.1",                 "Indian Super League"),
+    ("rus",   "soccer/rus.1",                 "Russian Premier League"),
+    ("usl",   "soccer/usa.usl.1",             "USL Championship"),
+    ("mex2",  "soccer/mex.2",                 "Liga de Expansión MX"),
+    ("facup", "soccer/eng.fa",                "FA Cup"),
+    ("eflc",  "soccer/eng.league_cup",        "EFL Cup"),
+    ("cdr",   "soccer/esp.copa_del_rey",      "Copa del Rey"),
+    ("dfb",   "soccer/ger.dfb_pokal",         "DFB-Pokal"),
+    ("cit",   "soccer/ita.coppa_italia",      "Coppa Italia"),
+    ("cdf",   "soccer/fra.coupe_de_france",   "Coupe de France"),
+    ("wcq",   "soccer/fifa.worldq.uefa",      "World Cup Qualifying (UEFA)"),
+    ("unl",   "soccer/uefa.nations",          "UEFA Nations League"),
+    ("intl",  "soccer/fifa.friendly",         "International Friendly"),
+]
+LEAGUES += EXTRA_SOCCER
 # The 35 soccer competitions that used to be appended here from anysport.LEAGUES
 # are gone -- American sports only, on request. Worth recording what it cost,
 # because the numbers were good: soccer ran 88-51 (63.3%) with +30.2% ROI across
@@ -82,7 +115,7 @@ LEAGUES += [(k, p, lab) for k, (p, lab, _) in A.LEAGUES.items()
 THREE_WAY = {k for k, p, _ in LEAGUES if p.startswith("soccer/")}
 PRESEASON_LEAGUES = {"mlb", "wnba", "nfl", "ncaaf", "nba", "nhl", "ncaab"}
 # Leagues whose pick is the market's favourite rather than a model's.
-MARKET_PICK = {"ucl", "uel", "uecl"}
+MARKET_PICK = {"ucl", "uel", "uecl"} | {k for k, _, _ in EXTRA_SOCCER}
 
 # Measured on 4,090 real sides of 2,045 completed 2026 MLB games with closing
 # DraftKings prices. Every favourite bucket underperforms its own implied

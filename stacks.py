@@ -211,20 +211,18 @@ class Game:
         if self.mu_t is None:
             return None
         tot = 0.0
-        steps = 81
-        for i in range(steps):
-            zm = -4 + 8 * i / (steps - 1)
+        steps = 80          # even, so the centre falls between two points
+        # midpoints, so no grid point ever sits exactly on a .0 or .5 line
+        zs = [-4 + 8 * (i + 0.5) / steps for i in range(steps)]
+        ws = [math.exp(-z * z / 2) for z in zs]
+        for zm, wm in zip(zs, ws):
             m = self.mu_m + zm * self.sd_m
-            wm = math.exp(-zm * zm / 2)
-            for j in range(steps):
-                zt = -4 + 8 * j / (steps - 1)
+            for zt, wt in zip(zs, ws):
                 t = self.mu_t + zt * self.sd_t
-                wt = math.exp(-zt * zt / 2)
                 h, a = (t + m) / 2, (t - m) / 2
                 if all(f(h, a) for f in preds):
                     tot += wm * wt
-        norm = (sum(math.exp(-(-4 + 8 * i / (steps - 1)) ** 2 / 2)
-                    for i in range(steps))) ** 2
+        norm = sum(ws) ** 2
         return tot / norm
 
 
@@ -293,7 +291,22 @@ def predicate(spec, home, away):
         return lambda h, a: h + a < spec["line"]
     if t == "btts":
         return lambda h, a: h >= 1 and a >= 1
+    if t == "btts_no":
+        return lambda h, a: h == 0 or a == 0
+    if t == "draw":
+        return lambda h, a: h == a
     is_home = spec["team"] == home
+    if t == "spread":
+        L = spec["line"]          # +3.5 = may lose by up to 3; -3.5 = must win by 4+
+        return (lambda h, a: h - a + L > 0) if is_home else (lambda h, a: a - h + L > 0)
+    if t == "teamover":
+        L = spec["line"]
+        return (lambda h, a: h > L) if is_home else (lambda h, a: a > L)
+    if t == "teamunder":
+        L = spec["line"]
+        return (lambda h, a: h < L) if is_home else (lambda h, a: a < L)
+    if t == "dc":                 # double chance: this team or the draw
+        return (lambda h, a: h >= a) if is_home else (lambda h, a: a >= h)
     if t == "win":
         return (lambda h, a: h > a) if is_home else (lambda h, a: a > h)
     if t == "nomargin":
@@ -347,6 +360,91 @@ def game_from_row(row, league, soccer):
         return None                       # MLB, tennis, golf, UFC: not modelled
     return Game(league, home, away, ph, total=total, spread=spread,
                 p_draw=pdr, soccer=soccer, p_over=p_over)
+
+
+# ---------------------------------------------------------------- markets
+def american(p):
+    if p <= 0 or p >= 1:
+        return None
+    return f"-{round(100 * p / (1 - p))}" if p >= 0.5 else f"+{round(100 * (1 - p) / p)}"
+
+
+def market_menu(g, league, mkt):
+    """Every market this model can price for one game: (group, label, spec)."""
+    H, A = g.home, g.away
+    out = [("Winner", f"{H} to win", dict(t="win", team=H)),
+           ("Winner", f"{A} to win", dict(t="win", team=A))]
+    if g.kind == "poisson":
+        unit = "goals"
+        if g.soccer:
+            out += [("Winner", "Draw", dict(t="draw")),
+                    ("Double chance", f"{H} or draw", dict(t="dc", team=H)),
+                    ("Double chance", f"{A} or draw", dict(t="dc", team=A)),
+                    ("Both teams to score", "Yes", dict(t="btts")),
+                    ("Both teams to score", "No", dict(t="btts_no"))]
+            lines, team_lines, spreads = (0.5, 1.5, 2.5, 3.5, 4.5), (0.5, 1.5, 2.5), (1.5, 2.5)
+        else:
+            lines, team_lines, spreads = (3.5, 4.5, 5.5, 6.5, 7.5), (1.5, 2.5, 3.5), (1.5, 2.5)
+        for L in lines:
+            out += [("Total", f"Over {L} {unit}", dict(t="over", line=L)),
+                    ("Total", f"Under {L} {unit}", dict(t="under", line=L))]
+        for team in (H, A):
+            for L in team_lines:
+                out.append(("Team total", f"{team} over {L} {unit}",
+                            dict(t="teamover", team=team, line=L)))
+            for L in spreads:
+                out += [("Spread", f"{team} -{L}", dict(t="spread", team=team, line=-L)),
+                        ("Spread", f"{team} +{L}", dict(t="spread", team=team, line=L))]
+        return out
+    T, spread = g.mu_t, abs(g.mu_m)
+    posted = mkt.get("spread")
+    base = abs(float(posted)) if posted is not None else round(spread * 2) / 2
+    fav, dog = (H, A) if g.mu_m >= 0 else (A, H)
+    for k in (-7, -3, 0, 3, 7):
+        L = base + k
+        if L <= 0:
+            continue
+        out += [("Spread", f"{fav} -{L:g}", dict(t="spread", team=fav, line=-L)),
+                ("Spread", f"{dog} +{L:g}", dict(t="spread", team=dog, line=L))]
+    tot = mkt.get("total") or T
+    for k in (-14, -10, -7, -3, 0, 3, 7, 10, 14):
+        L = tot + k
+        out += [("Total", f"Over {L:g}", dict(t="over", line=L)),
+                ("Total", f"Under {L:g}", dict(t="under", line=L))]
+    for team, share in ((H, (T + g.mu_m) / 2), (A, (T - g.mu_m) / 2)):
+        for k in (-7, -3, 0, 3, 7):
+            L = half(share + k)
+            out.append(("Team total", f"{team} over {L:g}",
+                        dict(t="teamover", team=team, line=L)))
+    return out
+
+
+def markets(slots, soccer_keys, labels=None):
+    """{slot: [game with its priced market list]} for the Markets tab."""
+    res = {}
+    for slot in ("today", "tomorrow"):
+        games = []
+        for league, rows in (slots.get(slot) or {}).items():
+            for row in rows:
+                try:
+                    g = game_from_row(row, league, league in soccer_keys)
+                    if not g:
+                        continue
+                    ms = []
+                    for group, label, spec in market_menu(g, league, row.get("mkt") or {}):
+                        p = g.prob([predicate(spec, g.home, g.away)])
+                        if p is None or not 0.01 <= p <= 0.99:
+                            continue
+                        ms.append(dict(g=group, l=label, p=round(p, 4), f=american(p)))
+                except Exception as e:
+                    print(f"markets: {league} {row.get('label')}: {e}", file=sys.stderr)
+                    continue
+                games.append(dict(id=row["id"], lg=(labels or {}).get(league, league),
+                                  match=f"{g.away} at {g.home}", tip=row.get("tip"),
+                                  m=ms))
+        games.sort(key=lambda x: (x["lg"], x["tip"] or ""))
+        res[slot] = games
+    return res
 
 
 # ---------------------------------------------------------------- tickets
