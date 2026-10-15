@@ -1174,7 +1174,8 @@ function drawBot(){
       : '<p class="note">None yet.</p>') + '</div>';
   const c = B.considered || [];
   h += '<div class="sect"><h2>Last run</h2><p class="note">Every Kalshi-ready ticket it '
-    + 'looked at and why it did or did not buy. It buys only when Kalshi pays at '
+    + 'looked at and why it did or did not buy. Combos are priced by asking Kalshi&rsquo;s market makers '
+    + 'for a quote, once per ticket per day. It buys only when the best quote pays at '
     + 'least ' + Math.round(100 * ((B.limits || {}).min_edge || 0.05)) + '% more than fair.</p>'
     + (c.length ? '<table class="mk"><thead><tr><th>Ticket</th><th class="num">Fair</th>'
       + '<th class="num">Kalshi pays</th><th>Decision</th></tr></thead><tbody>'

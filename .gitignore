@@ -12,6 +12,8 @@ __pycache__/
 !ledger.json
 # Every stack leg and ticket, graded -- same reason.
 !stacks.json
+# Every live Kalshi trade the bot made through a quote -- not refetchable.
+!bot_trades.json
 
 # The ESPN day-cache is 500MB+ of refetchable scratch and never ships.
 data/espn_cache/

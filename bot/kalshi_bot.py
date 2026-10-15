@@ -21,9 +21,13 @@ SAFETY, in order of precedence
 
 THE RULES
 
-  BUY   a Kalshi-ready stack only if Kalshi's ask on the combo pays at least
-        (1 + MIN_EDGE) times the board's fair payout. Paying less than fair
-        is a losing bet by the board's own, backtested numbers.
+  BUY   a Kalshi-ready stack only if the best market-maker quote on the
+        combo, after Kalshi's fee, pays at least (1 + MIN_EDGE) times the
+        board's fair payout. Paying less than fair is a losing bet by the
+        board's own, backtested numbers. Combos are priced by request for
+        quote (one per ticket per day); quotes not taken are withdrawn. The
+        first live quote trade is checked against Kalshi's positions and
+        buying halts if it is not a YES holding.
   SELL  a combo position when the best bid is at least (1 + SELL_EDGE) times
         what it is fairly worth now: legs already won count as 1, legs
         already lost as 0, open legs at Kalshi's own mid price. Selling for
@@ -65,6 +69,14 @@ LEG_RANGE = (2, 6)                                                # ticket sizes
 # holdings, cash-outs and the record only ever look at orders with it, so the
 # bot never counts -- or sells -- anything the account holder placed by hand.
 BOT_TAG = "hehebot-"
+# Combos have no standing order book: every one is a fresh market, and the
+# price comes from a request for quote (RFQ) answered by market makers, the
+# way the Kalshi app builds combos. Quote fills carry no client_order_id, so
+# the bot records each quote trade here (committed to the repo -- the one
+# record of them that cannot be lost with the Actions cache).
+BOT_LEDGER = os.path.join(ROOT, "bot_trades.json")
+RFQ_DIR = os.path.join(ROOT, ".cache", "bot_rfqs.json")          # one RFQ per ticket per day
+RFQ_WAIT = 6.0             # seconds to collect quotes; makers answer in well under one
 
 
 STATUS = dict(mode="live" if LIVE else "practice", ok=False, lines=[], considered=[],
@@ -244,6 +256,11 @@ def order_cost(o):
     return c + money(o, "taker_fees") + money(o, "maker_fees")
 
 
+def quote_spend_today():
+    today = STATUS["started"][:10]
+    return sum(x["cost"] for x in trades["trades"] if x["ts"][:10] == today)
+
+
 def spent_today(orders):
     """Dollars the BOT spent on buys today (UTC), from Kalshi's records."""
     today = dt.datetime.now(dt.timezone.utc).strftime("%Y-%m-%d")
@@ -251,7 +268,84 @@ def spent_today(orders):
                if o.get("action") == "buy" and str(o.get("created_time") or "")[:10] == today)
 
 
+def taker_fee(count, price):
+    """Kalshi's taker fee in dollars: 7% of count x P x (1-P), rounded up to a cent."""
+    import math
+    return math.ceil(round(7 * count * price * (1 - price), 6)) / 100
+
+
+def load_json(path, default):
+    try:
+        with open(path) as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return default
+
+
+def save_json(path, obj):
+    os.makedirs(os.path.dirname(path), exist_ok=True)
+    with open(path, "w") as fh:
+        json.dump(obj, fh, indent=1)
+
+
+def request_quote(combo, count):
+    """Ask market makers for a price on `count` YES contracts of `combo`.
+    Returns (rfq_id, best) where best is the cheapest YES offer:
+    {quote, price}. Buying YES takes the maker's NO bid, so the YES price is
+    1 - no_bid (Kalshi FIX spec: "BUY accepts the maker's NO quote")."""
+    st, d = api("POST", "/communications/rfqs",
+                dict(market_ticker=combo, contracts=int(count), rest_remainder=False))
+    rid = (d or {}).get("id")
+    if st not in (200, 201) or not rid:
+        log(f"{combo}: quote request refused ({st}) {json.dumps(d)[:160]}")
+        return None, None
+    best = None
+    end = time.time() + RFQ_WAIT
+    while time.time() < end:
+        time.sleep(1)
+        st, q = api("GET", f"/communications/quotes?rfq_id={rid}")
+        for x in (q or {}).get("quotes") or []:
+            if x.get("status") != "open":
+                continue
+            no_bid = money(x, "no_bid")
+            if not 0 < no_bid < 1:
+                continue                         # maker declined to sell YES
+            price = round(1 - no_bid, 4)
+            if best is None or price < best["price"]:
+                best = dict(quote=x, price=price)
+    return rid, best
+
+
+def close_rfq(rid):
+    if rid:
+        api("DELETE", f"/communications/rfqs/{rid}")
+
+
+def accept_quote(rid, quote):
+    """Accept the YES side and wait for the maker's confirmation (combos have
+    a 3-second window) and execution. Returns the final quote status."""
+    qid = quote["id"]
+    st, d = api("PUT", f"/communications/rfqs/{rid}/quotes/{qid}/accept",
+                dict(accepted_side="yes"))
+    if st not in (200, 204):
+        log(f"  accept refused ({st}) {json.dumps(d)[:160]}")
+        return "refused"
+    status = "accepted"
+    end = time.time() + 10
+    while time.time() < end:
+        time.sleep(1)
+        st, d = api("GET", f"/communications/quotes/{qid}")
+        status = ((d or {}).get("quote") or d or {}).get("status") or status
+        if status in ("executed", "cancelled"):
+            break
+    return status
+
+
 # -------------------------------------------------------------------- buy
+trades = {"trades": []}      # bot_trades.json, loaded in run()
+asked = {}                   # combo -> UTC date of the last quote request
+
+
 def buy_tickets(board, sports, budget_left, open_n, held, history):
     """`held` is every combo ticker already owned (live) or already taken in
     practice, so the same ticket is never bought twice."""
@@ -265,6 +359,9 @@ def buy_tickets(board, sports, budget_left, open_n, held, history):
                                                  and "soccer" in sports)
                        for L in t["legs"])]
     log(f"{len(tickets)} Kalshi-ready tickets in allowed sports ({', '.join(sorted(sports)) or 'none'})")
+    if LIVE and trades.get("halted"):
+        log("buying halted:", trades["halted"])
+        return
     for t in tickets:
         if open_n >= MAX_OPEN:
             log("open-position limit reached")
@@ -293,45 +390,87 @@ def buy_tickets(board, sports, budget_left, open_n, held, history):
         if combo in held:
             seen["verdict"] = "already holding it"
             continue
-        st, book = api("GET", f"/markets/{combo}/orderbook", auth=False)
-        ask = best_yes_ask(book)
         fair = t["fair"]                           # payout multiple at the board's odds
-        if not ask:
-            log(f"{combo}: no ask on the book (Kalshi may need a quote request); skipped")
-            seen["verdict"] = "nobody selling it right now"
+        stake = min(MAX_STAKE, budget_left)
+        # size the request for a price at fair; nothing is bought above fair
+        # less the margin, so the real cost is always below the stake
+        count = int(stake * fair)
+        if count < 1:
+            seen["verdict"] = "stake too small for one contract"
             continue
-        pays = 1 / ask
-        seen.update(ask=ask, pays=round(pays, 2))
-        log(f"{combo}: {t['n']} legs, ask {ask:.2f} pays {pays:.2f}x, fair {fair:.2f}x")
+        today = STATUS["started"][:10]
+        if asked.get(combo) == today:
+            seen["verdict"] = "already asked for a quote today"
+            continue
+        asked[combo] = today
+        rid, best = request_quote(combo, count)
+        if not best:
+            close_rfq(rid)
+            log(f"{combo}: no market maker offered YES")
+            seen["verdict"] = "no market maker quoted it"
+            continue
+        price = best["price"]
+        cost = count * price + taker_fee(count, price)
+        pays = count / cost                        # payout multiple after the fee
+        seen.update(ask=price, pays=round(pays, 2), count=count)
+        log(f"{combo}: {t['n']} legs, quote {count} @ ${price:.2f} (+fee) pays {pays:.2f}x, "
+            f"fair {fair:.2f}x")
         if pays < fair * (1 + MIN_EDGE):
+            close_rfq(rid)
             log("  pays less than fair + margin; not buying")
             seen["verdict"] = f"Kalshi pays {pays:.2f}x, needs {fair * (1 + MIN_EDGE):.2f}x+"
             continue
-        stake = min(MAX_STAKE, budget_left)
-        count = int(stake // ask)
-        if count < 1:
+        if cost > budget_left + 1e-9 or cost > STATUS.get("balance", 0) + (0 if LIVE else 1e9):
+            close_rfq(rid)
+            seen["verdict"] = f"costs ${cost:.2f}, over today's limit or balance"
             continue
-        order = dict(ticker=combo, action="buy", side="yes", count=count, type="limit",
-                     yes_price=int(round(ask * 100)), time_in_force="immediate_or_cancel",
-                     buy_max_cost=int(round(stake * 100)), client_order_id=BOT_TAG + str(uuid.uuid4()))
         if not LIVE:
-            log("  WOULD BUY", json.dumps(order))
-            seen["verdict"] = f"practice buy: {count} @ ${ask:.2f}"
+            close_rfq(rid)
+            log(f"  WOULD BUY {count} @ ${price:.2f}")
+            seen["verdict"] = f"practice buy: {count} @ ${price:.2f}"
             history.append(dict(ts=STATUS["started"], ticker=combo, n=t["n"], legs=labels,
-                                count=count, ask=ask, fair=round(fair, 2), result=None))
+                                count=count, ask=round(cost / count, 4), fair=round(fair, 2),
+                                result=None))
             held.add(combo)
-            budget_left -= count * ask
+            budget_left -= cost
             open_n += 1
             continue
-        st, d = api("POST", "/portfolio/orders", order)
-        log("  BUY", st, json.dumps(d)[:300])
-        if st in (200, 201):
-            seen["verdict"] = f"BOUGHT up to {count} @ ${ask:.2f}"
+        status = accept_quote(rid, best["quote"])
+        close_rfq(rid)
+        log(f"  ACCEPT {count} @ ${price:.2f}: {status}")
+        if status == "executed":
+            seen["verdict"] = f"BOUGHT {count} @ ${price:.2f}"
+            trades["trades"].append(dict(ts=STATUS["started"], ticker=combo, n=t["n"],
+                                         legs=labels, count=count, price=price,
+                                         cost=round(cost, 2), fair=round(fair, 2),
+                                         rfq_id=rid, quote_id=best["quote"]["id"]))
+            save_json(BOT_LEDGER, trades)
             held.add(combo)
-            budget_left -= count * ask
+            budget_left -= cost
             open_n += 1
+            if not trades.get("verified"):
+                verify_first_trade(combo)
+                return                             # one trade until the side is verified
         else:
-            seen["verdict"] = f"order refused ({st})"
+            seen["verdict"] = f"quote not filled ({status})"
+
+
+def verify_first_trade(combo):
+    """The first live quote trade is checked against Kalshi's positions: it
+    must be a YES holding. If it is anything else, buying halts for good
+    until a person looks (delete "halted" from bot_trades.json)."""
+    st, pos = api("GET", f"/portfolio/positions?ticker={combo}&count_filter=position")
+    p = next((x for x in (pos or {}).get("market_positions") or []
+              if (x.get("ticker") or x.get("market_ticker")) == combo), None)
+    n = float((p or {}).get("position_fp") or (p or {}).get("position") or 0)
+    if n > 0:
+        trades["verified"] = STATUS["started"]
+        log(f"  first quote trade verified: holding {n:g} YES")
+    else:
+        trades["halted"] = f"first quote trade on {combo} did not show as a YES holding ({n:g})"
+        log("  " + trades["halted"] + " -- buying halted")
+        STATUS["error"] = trades["halted"]
+    save_json(BOT_LEDGER, trades)
 
 
 # ------------------------------------------------------------------- sell
@@ -485,8 +624,14 @@ def run():
         f"limits ${MAX_STAKE:.2f}/ticket, ${MAX_DAILY:.2f}/day, {MAX_OPEN} open")
     st, pos = api("GET", "/portfolio/positions?limit=200&count_filter=position")
     positions = (pos or {}).get("market_positions") or []
+    trades.clear()
+    trades.update(load_json(BOT_LEDGER, {"trades": []}))
+    trades.setdefault("trades", [])
+    asked.clear()
+    asked.update(load_json(RFQ_DIR, {}))
     orders = bot_orders()
-    mine = {o.get("ticker") for o in orders if o.get("action") == "buy"}
+    mine = {o.get("ticker") for o in orders if o.get("action") == "buy"} \
+        | {x["ticker"] for x in trades["trades"]}
     positions = [p for p in positions if (p.get("ticker") or p.get("market_ticker")) in mine]
     held = {p.get("ticker") or p.get("market_ticker") for p in positions
             if float(p.get("position_fp") or p.get("position") or 0) > 0}
@@ -499,7 +644,7 @@ def run():
     today = STATUS["started"][:10]
     if LIVE:
         # never plan to spend cash the account does not have
-        left = min(MAX_DAILY - spent_today(orders), STATUS["balance"])
+        left = min(MAX_DAILY - spent_today(orders) - quote_spend_today(), STATUS["balance"])
         open_n = len(held)
     else:
         # practice keeps its own books so it obeys the same limits
@@ -516,11 +661,15 @@ def run():
     if board:
         buy_tickets(board, allowed_sports(), left, open_n, held, history)
     save_history(history)
+    today = STATUS["started"][:10]
+    save_json(RFQ_DIR, {k: v for k, v in asked.items() if v == today})
+    if trades.get("halted"):
+        STATUS["error"] = trades["halted"]
     if not LIVE:
         STATUS["spent_today"] = round(sum(h["count"] * h["ask"] for h in history
                                           if h["ts"][:10] == today), 2)
     elif board:
-        STATUS["spent_today"] = round(spent_today(bot_orders()), 2)
+        STATUS["spent_today"] = round(spent_today(bot_orders()) + quote_spend_today(), 2)
     STATUS["practice"] = list(reversed(history[-100:]))
     STATUS["practice_summary"] = summary(history)
     return 0
