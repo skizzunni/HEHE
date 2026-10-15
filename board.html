@@ -320,8 +320,11 @@ td.num.ok{color:var(--dog)}
       </div>
       <ul class="legs" id="legs"></ul>
       <div class="slipbtns">
-        <button class="go" id="copy">Copy for Fanatics</button>
+        <button class="go" id="copy">Copy ticket</button>
+        <button id="shareslip" type="button">Share link</button>
         <a id="dk" href="#" target="_blank" rel="noopener">DraftKings link</a>
+        <a href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a>
+        <a href="https://sportsbook.fanatics.com/" target="_blank" rel="noopener">Open Fanatics</a>
         <button id="hide">Hide</button>
       </div>
       <div class="dkurl" id="dkurl"></div>
@@ -402,7 +405,7 @@ const pretty = s => s.slice(4,6).replace(/^0/,"") + "/" + s.slice(6).replace(/^0
 const esc = s => (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;");
 
 function buildTabs(){
-  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props"){
+  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props" || slot === "shared"){
     tabs.innerHTML = ""; tabs.hidden = true; return;
   }
   tabs.innerHTML = "";
@@ -470,6 +473,10 @@ function renderView(){
   if(slot === "props"){
     tabs.hidden = true; how.hidden = true;
     return drawProps();
+  }
+  if(slot === "shared"){
+    tabs.hidden = true; how.hidden = true;
+    return drawShared();
   }
   if(slot === "card"){
     tabs.hidden = true; how.hidden = true;
@@ -541,7 +548,8 @@ function parlayHTML(slot){
       + t.legs.map(L => '<li>' + esc(L.pick) + ' <b>' + esc(L.price) + '</b> &middot; '
           + esc(L.league) + ' &middot; ' + (100 * L.hit).toFixed(1) + '%</li>').join("")
       + '</ul><button type="button" data-parlay="' + slot + '|' + n + '|' + i
-      + '">Load into slip</button></div>';
+      + '">Load into slip</button> <button type="button" data-share="parlay|' + slot
+      + '|' + n + '|' + i + '">Share link</button></div>';
   };
   let body = "";
   [2, 3].forEach(n => {
@@ -613,7 +621,8 @@ function drawStacks(){
             + esc(L.match) + ' &middot; ' + esc(L.lg) + ' &middot; '
             + (100 * L.p).toFixed(1) + '%</span></li>').join("")
         + '</ul><button type="button" data-stack="' + day + '|' + n + '|' + i
-        + '">Copy ticket</button><pre class="fanslip" hidden></pre></div>';
+        + '">Copy ticket</button> <button type="button" data-share="stack|' + day + '|' + n
+        + '|' + i + '">Share link</button><pre class="fanslip" hidden></pre></div>';
     });
   });
   html += '<p>A 20-leg ticket of 90% legs still loses 88% of the time. Stake '
@@ -692,7 +701,8 @@ function drawProps(){
         + t.legs.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> '
             + '<span style="color:var(--ink-dim)">' + esc(L.match) + ' &middot; '
             + (100 * L.p).toFixed(1) + '%</span></li>').join("")
-        + '</ul></div>';
+        + '</ul><button type="button" data-share="prop|' + day + '|' + n + '|' + i
+        + '">Share link</button></div>';
     }));
   }
   if(!games.length) html += '<p>No priced props for this day yet.</p>';
@@ -724,6 +734,111 @@ function copyStack(btn){
     navigator.clipboard.writeText(txt).then(() => { btn.textContent = "Copied"; },
                                             show);
   } catch (e) { show(); }
+}
+// ------------------------------------------------------------ share links
+// A ticket travels inside the link itself (#t=...), so a shared link shows
+// exactly the legs it was shared with, even after the board has moved on.
+// FanDuel and Fanatics publish no way to pre-fill a bet slip from outside,
+// so their buttons open the book and the ticket text is there to copy.
+const SITE = location.origin + location.pathname;
+function encT(o){
+  return btoa(unescape(encodeURIComponent(JSON.stringify(o))))
+    .replace(/\+/g, "-").replace(/\//g, "_").replace(/=+$/, "");
+}
+function decT(x){
+  x = x.replace(/-/g, "+").replace(/_/g, "/");
+  while(x.length % 4) x += "=";
+  return JSON.parse(decodeURIComponent(escape(atob(x))));
+}
+function ticketText(o){
+  return o.title + "\n" + o.legs.map((L, i) => (i + 1) + ". " + L[0]
+    + (L[1] ? "   " + L[1] : "")).join("\n") + (o.note ? "\n\n" + o.note : "");
+}
+function copyText(txt, btn, done){
+  const fall = () => { window.prompt("Copy this:", txt); };
+  try {
+    navigator.clipboard.writeText(txt).then(() => { if(btn) btn.textContent = done; }, fall);
+  } catch (e) { fall(); }
+}
+function shareTicket(o, btn){
+  const url = SITE + "#t=" + encT(o);
+  if(navigator.share){
+    navigator.share({ title: o.title, text: ticketText(o), url: url }).catch(() => {});
+    return;
+  }
+  copyText(url, btn, "Link copied");
+}
+function ticketFrom(key){
+  const [kind, d, n, i] = key.split("|");
+  if(kind === "stack"){
+    const t = ((((D.stacks || {})[d] || {}).tickets || {})[n] || [])[+i];
+    return t && { title: t.n + "-leg stack", note: "hits " + (100 * t.prob).toFixed(1)
+      + "% \u00b7 fair payout " + t.fair.toFixed(2) + "x",
+      legs: t.legs.map(L => [L.label, L.match + " \u00b7 " + L.lg]) };
+  }
+  if(kind === "prop"){
+    const t = ((((D.props || {})[d] || {}).tickets || {})[n] || [])[+i];
+    return t && { title: t.n + "-leg prop stack", note: "hits " + (100 * t.prob).toFixed(1)
+      + "% \u00b7 fair payout " + t.fair.toFixed(2) + "x",
+      legs: t.legs.map(L => [L.label, L.price + " \u00b7 " + L.match]) };
+  }
+  if(kind === "parlay"){
+    const t = (((D.parlays || {})[d] || {})[n] || [])[+i];
+    if(!t) return null;
+    const dk = t.legs.every(L => L.dk) ? "https://sportsbook.draftkings.com/event/"
+      + t.legs[0].dk.split(":")[0] + "?outcomes=" + t.legs.map(L => L.dk.split(":")[1]).join(",") : null;
+    return { title: t.n + "-leg parlay " + t.price, note: "hits " + (100 * t.prob).toFixed(1) + "%",
+      legs: t.legs.map(L => [L.pick, L.price + " \u00b7 " + L.league]), dk: dk };
+  }
+  return null;
+}
+function slipTicket(){
+  const dks = SLIP.filter(r => r.dk);
+  const dk = dks.length === SLIP.length && dks.length ? "https://sportsbook.draftkings.com/event/"
+    + dks[0].dk.split(":")[0] + "?outcomes=" + dks.map(r => r.dk.split(":")[1]).join(",") : null;
+  const all = SLIP.every(r => r.p);
+  const c = all ? SLIP.reduce((a, r) => a * dec(r.p), 1) : null;
+  return { title: SLIP.length + "-leg slip" + (c ? " " + amer(c) : ""),
+    legs: SLIP.map(r => [r.mp, (r.p || "no line") + (r.lg ? " \u00b7 " + r.lg : "")]),
+    note: c ? "$5 returns $" + (5 * c).toFixed(2) : "", dk: dk };
+}
+let SHARED = null;
+function drawShared(){
+  const o = SHARED;
+  let html = '<div class="parlays"><h3>Shared ticket</h3>';
+  if(!o){
+    html += '<p>This link could not be read.</p>';
+  } else {
+    html += '<p><b>' + esc(o.title) + '</b></p><ul>'
+      + o.legs.map(L => '<li>' + esc(L[0]) + (L[1] ? ' <span style="color:var(--ink-dim)">'
+          + esc(L[1]) + '</span>' : '') + '</li>').join("") + '</ul>'
+      + (o.note ? '<p>' + esc(o.note) + '</p>' : '')
+      + '<p><button type="button" id="sharedcopy">Copy ticket</button> '
+      + (o.dk ? '<a href="' + esc(o.dk) + '" target="_blank" rel="noopener">Open in DraftKings</a> ' : '')
+      + '<a href="https://sportsbook.fanduel.com/" target="_blank" rel="noopener">Open FanDuel</a> '
+      + '<a href="https://sportsbook.fanatics.com/" target="_blank" rel="noopener">Open Fanatics</a> '
+      + '<a href="https://kalshi.com/" target="_blank" rel="noopener">Open Kalshi</a></p>'
+      + '<p style="color:var(--ink-dim)">FanDuel, Fanatics and Kalshi have no link that '
+      + 'fills a bet slip from outside their apps, so copy the ticket and add the legs '
+      + 'there. Prices may have moved since this was shared.</p>';
+  }
+  html += '<p><button type="button" id="sharedback">See today\u2019s board</button></p></div>';
+  panel.innerHTML = html;
+  const c = document.getElementById("sharedcopy");
+  if(c) c.onclick = () => copyText(ticketText(o), c, "Copied");
+  document.getElementById("sharedback").onclick = () => {
+    history.replaceState(null, "", SITE); SHARED = null; slot = "today";
+    [...days.children].forEach((x, k) => x.setAttribute("aria-pressed", String(k === 0)));
+    buildTabs(); render();
+  };
+}
+function readHash(){
+  const m = location.hash.match(/^#t=(.+)$/);
+  if(!m) return false;
+  try { SHARED = decT(m[1]); } catch (e) { SHARED = null; }
+  slot = "shared";
+  [...days.children].forEach(x => x.setAttribute("aria-pressed", "false"));
+  return true;
 }
 function drawCard(slot){
   const panel = document.getElementById("panel");
@@ -1110,6 +1225,9 @@ document.addEventListener("click", e => {
   }
   const sk = e.target.closest("[data-stack]");
   if(sk){ copyStack(sk); return; }
+  const sh = e.target.closest("[data-share]");
+  if(sh){ const o = ticketFrom(sh.getAttribute("data-share")); if(o) shareTicket(o, sh); return; }
+  if(e.target.id === "shareslip"){ shareTicket(slipTicket(), e.target); return; }
   const pd = e.target.closest("[data-pday]");
   if(pd){ PRDAY = pd.getAttribute("data-pday"); render(); return; }
   const md = e.target.closest("[data-mday]");
@@ -1141,6 +1259,8 @@ document.getElementById("copy").onclick = () => {
   }
 };
 
+readHash();
+window.addEventListener("hashchange", () => { if(readHash()){ buildTabs(); render(); } });
 buildTabs(); render(); drawSlip();
 
 </script>
