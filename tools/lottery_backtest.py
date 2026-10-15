@@ -62,7 +62,7 @@ def s_random(legs, rng):
 def s_model(legs, rng):
     """the lottery's rule: most model value kept per unit of payout"""
     def k(r):
-        v = r["q"] / cost(r)
+        v = max(r["q"], 1e-4) / cost(r)
         return math.log(v) / -math.log(cost(r))
     return sorted(legs, key=lambda r: -k(r))
 

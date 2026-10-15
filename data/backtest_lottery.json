@@ -1,0 +1,311 @@
+{
+ "legs": 16000,
+ "days": 32,
+ "range": [
+  "2026-08-29",
+  "2026-10-13"
+ ],
+ "by_price": {
+  "0-10c": {
+   "n": 269,
+   "hit": 6.7,
+   "paid": 9.3,
+   "roi": -27.8,
+   "ci95": [
+    -60.4,
+    4.0
+   ]
+  },
+  "10-20c": {
+   "n": 1649,
+   "hit": 13.3,
+   "paid": 15.3,
+   "roi": -13.2,
+   "ci95": [
+    -23.7,
+    -1.8
+   ]
+  },
+  "20-30c": {
+   "n": 1604,
+   "hit": 22.8,
+   "paid": 24.8,
+   "roi": -8.2,
+   "ci95": [
+    -15.9,
+    0.8
+   ]
+  },
+  "30-40c": {
+   "n": 1575,
+   "hit": 33.8,
+   "paid": 34.5,
+   "roi": -2.0,
+   "ci95": [
+    -8.8,
+    4.8
+   ]
+  },
+  "40-50c": {
+   "n": 1868,
+   "hit": 41.7,
+   "paid": 44.6,
+   "roi": -6.6,
+   "ci95": [
+    -11.5,
+    -1.4
+   ]
+  },
+  "50-60c": {
+   "n": 1814,
+   "hit": 52.3,
+   "paid": 54.6,
+   "roi": -4.4,
+   "ci95": [
+    -8.6,
+    -0.1
+   ]
+  },
+  "60-70c": {
+   "n": 1707,
+   "hit": 61.0,
+   "paid": 64.3,
+   "roi": -5.0,
+   "ci95": [
+    -8.5,
+    -1.3
+   ]
+  },
+  "70-80c": {
+   "n": 1579,
+   "hit": 71.4,
+   "paid": 74.6,
+   "roi": -4.3,
+   "ci95": [
+    -7.3,
+    -1.3
+   ]
+  },
+  "80-90c": {
+   "n": 2195,
+   "hit": 82.0,
+   "paid": 84.7,
+   "roi": -3.1,
+   "ci95": [
+    -5.1,
+    -1.3
+   ]
+  },
+  "90-100c": {
+   "n": 1740,
+   "hit": 92.0,
+   "paid": 93.1,
+   "roi": -1.3,
+   "ci95": [
+    -2.7,
+    0.1
+   ]
+  }
+ },
+ "by_edge_test_half": {
+  "-1": {
+   "n": 8036,
+   "hit": 53.0,
+   "paid": 55.0,
+   "roi": -3.6,
+   "ci95": [
+    -11.0,
+    -6.0
+   ]
+  },
+  "0.0": {
+   "n": 1216,
+   "hit": 40.4,
+   "paid": 43.8,
+   "roi": -7.8,
+   "ci95": [
+    -29.6,
+    -13.8
+   ]
+  },
+  "0.03": {
+   "n": 240,
+   "hit": 22.9,
+   "paid": 28.6,
+   "roi": -20.0,
+   "ci95": [
+    -56.7,
+    -19.4
+   ]
+  },
+  "0.06": {
+   "n": 13,
+   "hit": 15.4,
+   "paid": 18.9,
+   "roi": -18.7,
+   "ci95": [
+    -118.0,
+    28.1
+   ]
+  },
+  "0.1": {
+   "n": 0
+  },
+  "0.15": {
+   "n": 0
+  }
+ },
+ "ladders": {
+  "pairs": 2950,
+  "breaks": 0,
+  "examples": []
+ },
+ "replay": {
+  "random/100": {
+   "tickets": 11,
+   "hits": 0,
+   "expected": 0.11,
+   "avg_pay": 96.1,
+   "avg_legs": 7.4,
+   "returned": 0,
+   "staked": 11,
+   "avg_legs_won": 65.7,
+   "legs_roi": {
+    "n": 81,
+    "hit": 67.9,
+    "paid": 61.4,
+    "roi": 10.6,
+    "ci95": [
+     -8.5,
+     53.0
+    ]
+   }
+  },
+  "random/10k": {
+   "tickets": 7,
+   "hits": 0,
+   "expected": 0.0,
+   "avg_pay": 25082.6,
+   "avg_legs": 11.6,
+   "returned": 0,
+   "staked": 7,
+   "avg_legs_won": 44.7,
+   "legs_roi": {
+    "n": 81,
+    "hit": 45.7,
+    "paid": 50.4,
+    "roi": -9.4,
+    "ci95": [
+     -41.0,
+     16.1
+    ]
+   }
+  },
+  "model/100": {
+   "tickets": 7,
+   "hits": 0,
+   "expected": 0.07,
+   "avg_pay": 103.2,
+   "avg_legs": 8.3,
+   "returned": 0,
+   "staked": 7,
+   "avg_legs_won": 48.4,
+   "legs_roi": {
+    "n": 58,
+    "hit": 65.5,
+    "paid": 72.5,
+    "roi": -9.6,
+    "ci95": [
+     -40.7,
+     -1.8
+    ]
+   }
+  },
+  "model/10k": {
+   "tickets": 6,
+   "hits": 0,
+   "expected": 0.0,
+   "avg_pay": 37657.9,
+   "avg_legs": 10.8,
+   "returned": 0,
+   "staked": 6,
+   "avg_legs_won": 47.6,
+   "legs_roi": {
+    "n": 65,
+    "hit": 52.3,
+    "paid": 58.9,
+    "roi": -11.1,
+    "ci95": [
+     -61.0,
+     1.8
+    ]
+   }
+  },
+  "favourites/100": {
+   "tickets": 0,
+   "hits": 0,
+   "expected": 0,
+   "avg_pay": null,
+   "avg_legs": null,
+   "returned": 0,
+   "staked": 0,
+   "avg_legs_won": null,
+   "legs_roi": {
+    "n": 0
+   }
+  },
+  "favourites/10k": {
+   "tickets": 0,
+   "hits": 0,
+   "expected": 0,
+   "avg_pay": null,
+   "avg_legs": null,
+   "returned": 0,
+   "staked": 0,
+   "avg_legs_won": null,
+   "legs_roi": {
+    "n": 0
+   }
+  },
+  "trend/100": {
+   "tickets": 9,
+   "hits": 0,
+   "expected": 0.09,
+   "avg_pay": 99.1,
+   "avg_legs": 5.7,
+   "returned": 0,
+   "staked": 9,
+   "avg_legs_won": 30.1,
+   "legs_roi": {
+    "n": 51,
+    "hit": 41.2,
+    "paid": 52.5,
+    "roi": -21.6,
+    "ci95": [
+     -62.2,
+     -11.2
+    ]
+   }
+  },
+  "trend/10k": {
+   "tickets": 9,
+   "hits": 0,
+   "expected": 0.0,
+   "avg_pay": 22500.6,
+   "avg_legs": 7.9,
+   "returned": 0,
+   "staked": 9,
+   "avg_legs_won": 24.3,
+   "legs_roi": {
+    "n": 71,
+    "hit": 26.8,
+    "paid": 30.4,
+    "roi": -11.8,
+    "ci95": [
+     -48.5,
+     32.6
+    ]
+   }
+  }
+ }
+}

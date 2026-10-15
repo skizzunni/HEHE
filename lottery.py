@@ -55,26 +55,50 @@ def decimal(price):
     return 1 + (v / 100 if v > 0 else 100 / -v)
 
 
-# How much of a leg's chance comes from Kalshi's traders rather than the
-# model, where Kalshi lists the same line with a tight spread. On 7,547 past
-# legs Kalshi's prices hit within ~2 points of what they said in every band
-# (data/backtest_kalshi.json), so the market gets the larger share.
-KALSHI_WEIGHT = 0.6
+# What the past says (tools/lottery_backtest.py, 16,000 priced Kalshi legs):
+#
+#   * Where the model disagreed with the market, the MARKET was right: legs
+#     the model rated as value lost 8% (edge >= 0) and 20% (edge >= 3 points)
+#     on games it had not seen. So a leg's chance is the market's, never the
+#     model's; the model only decides which lines are worth looking at.
+#   * The market itself is biased by price (favourite-longshot): 10-20c legs
+#     lost 13%, 90c+ legs lost 1%. BAND_VALUE carries what each price band
+#     actually returned, shrunk toward the average where the sample is thin,
+#     and a leg's chance is its market price corrected by that.
+#   * Ladders (one game's lines priced out of order): 0 in 2,950 pairs.
+BACKTEST = os.path.join(HERE, "data", "backtest_lottery.json")
+FD_HOLD = 1.045             # FanDuel's typical margin on a single alternate line
+SHRINK_N = 800              # legs at which a band's own return gets half weight
 
 
-def _blend(p_model, p_kalshi):
-    if p_kalshi is None or not 0.01 < p_kalshi < 0.99:
-        return p_model
-    lg = lambda x: math.log(x / (1 - x))
-    z = KALSHI_WEIGHT * lg(p_kalshi) + (1 - KALSHI_WEIGHT) * lg(min(max(p_model, 0.01), 0.99))
-    return 1 / (1 + math.exp(-z))
+def _band_values():
+    try:
+        bp = json.load(open(BACKTEST))["by_price"]
+    except (OSError, ValueError, KeyError):
+        return {}
+    rows = [(int(k.split("-")[0]) // 10, v) for k, v in bp.items() if v.get("n")]
+    n_all = sum(v["n"] for _, v in rows)
+    mean = sum(v["roi"] * v["n"] for _, v in rows) / n_all if n_all else 0.0
+    # Each band's return includes Kalshi's spread and fee, which every band
+    # pays; only the SHAPE across bands (the bias) carries over to a fair
+    # price, so each band is taken relative to the average.
+    return {b: (1 + ((v["n"] * v["roi"] + SHRINK_N * mean) / (v["n"] + SHRINK_N)) / 100)
+            / (1 + mean / 100) for b, v in rows}
+
+
+BAND_VALUE = _band_values()
+
+
+def market_chance(price_p):
+    """A fair market chance corrected for the bias its price band showed."""
+    f = BAND_VALUE.get(min(int(price_p * 10), 9), 1.0)
+    return min(price_p * f, 0.99)
 
 
 def _game_legs(rows, soccer_keys, labels, FD, KB=None):
-    """Every FanDuel line, with the chance from the model and Kalshi's
-    traders together. A leg's edge is that chance x FanDuel's price - 1: where
-    FanDuel pays longer than the two agree it should, the leg is worth more
-    than it costs. Those disagreements are what lift a ticket's odds."""
+    """Every FanDuel line, with the market's chance for it. A leg's edge is
+    that chance x FanDuel's price - 1: positive only where Kalshi's traders
+    price the same line shorter than FanDuel pays."""
     by_id = {r["id"]: r for rs in (rows or {}).values() for r in rs}
     refs = {}
     games = stacks.candidates(rows, soccer_keys, labels, extra=locks.fd_specs(FD, refs),
@@ -95,10 +119,14 @@ def _game_legs(rows, soccer_keys, labels, FD, KB=None):
                 except Exception:
                     k = None
             pk = (k or {}).get("mid")
-            p = round(_blend(L["p"], pk), 4)
+            # Kalshi's traders where they price the line; otherwise FanDuel's
+            # own price less its margin. Either way, corrected by price band.
+            p_mkt = pk if pk and 0.01 < pk < 0.99 else (1 / d) / FD_HOLD
+            p = round(market_chance(p_mkt), 4)
             out.append(dict(kind="game", gid=g["gid"], league=g["league"], lg=g["lg"],
                             match=g["match"], home=g["home"], away=g["away"], tip=g.get("tip"),
                             label=L["label"], spec=L["spec"], p=p, p_model=L["p"], p_kalshi=pk,
+                            p_market=round(p_mkt, 4),
                             price=price, dec=round(d, 3), fd=ref, where=where,
                             value=round(p * d, 4)))
     return out
