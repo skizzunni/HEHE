@@ -162,16 +162,33 @@ def find(book, league, mkt):
     return None
 
 
-def _team_market(g, kind, team, line=None):
-    """The market in `kind` naming this team (and line, for spreads)."""
+def _code(m):
+    """Team code from a market ticker: KXNFLSPREAD-26OCT12BUFLAR-BUF3 -> BUF."""
+    tail = (m.get("ticker") or "").rsplit("-", 1)[-1]
+    c = re.match(r"[A-Z]+", tail)
+    return c.group(0) if c else ""
+
+
+def _team_market(g, kind, team, line=None, code=None):
+    """The market in `kind` for this team (and line, for spreads).
+
+    The ticker's team code is the reliable key -- Kalshi words the same team
+    "Buffalo" in one season and "BUF Bills" in another -- so it is tried
+    first; the wording is the fallback for codes that differ from ESPN's
+    (Chelsea is CFC on Kalshi, CHE on ESPN)."""
+    def line_ok(m):
+        return line is None or (m.get("strike") is not None
+                                and abs(float(m["strike"]) - line) < 1e-9)
+    ms = [m for m in g.get(kind) or [] if line_ok(m)]
+    if code:
+        hit = [m for m in ms if _code(m) == code.upper()]
+        if len(hit) == 1:
+            return hit[0]
     tn = _norm(team)
     best = None
-    for m in g.get(kind) or []:
-        y = _norm(m.get("yes"))
-        name = re.sub(r" wins.*$", "", y)
+    for m in ms:
+        name = re.sub(r" wins.*$", "", _norm(m.get("yes")))
         if not name or not (tn == name or tn.startswith(name + " ")):
-            continue
-        if line is not None and (m.get("strike") is None or abs(float(m["strike"]) - line) > 1e-9):
             continue
         # prefer the longest name match ("los angeles c" over "los angeles")
         if best is None or len(name) > len(best[0]):
@@ -185,6 +202,10 @@ def leg(book, league, mkt, spec):
     if not g:
         return None
     t = spec.get("t")
+    codes = {mkt.get("home"): mkt.get("home_abbr"), mkt.get("away"): mkt.get("away_abbr")}
+
+    def tm(kind, team, line=None):
+        return _team_market(g, kind, team, line, codes.get(team))
     def out(m, side):
         if not m:
             return None
@@ -196,21 +217,21 @@ def leg(book, league, mkt, spec):
                   and abs(float(m["strike"]) - spec["line"]) < 1e-9), None)
         return out(m, "YES" if t == "over" else "NO")
     if t == "win":
-        return out(_team_market(g, "GAME", spec["team"]), "YES")
+        return out(tm("GAME", spec["team"]), "YES")
     if t == "draw":
         m = next((m for m in g.get("GAME") or [] if _norm(m.get("yes")) == "tie"), None)
         return out(m, "YES")
     if t == "dc":           # this team or the draw = the other team does not win
         other = mkt["away"] if spec["team"] == mkt["home"] else mkt["home"]
-        return out(_team_market(g, "GAME", other), "NO")
+        return out(tm("GAME", other), "NO")
     if t == "nomargin":
-        return out(_team_market(g, "SPREAD", spec["team"], spec["line"]), "NO")
+        return out(tm("SPREAD", spec["team"], spec["line"]), "NO")
     if t == "spread":
         L = spec["line"]
         if L < 0:           # must win by more than |L|
-            return out(_team_market(g, "SPREAD", spec["team"], -L), "YES")
+            return out(tm("SPREAD", spec["team"], -L), "YES")
         other = mkt["away"] if spec["team"] == mkt["home"] else mkt["home"]
-        return out(_team_market(g, "SPREAD", other, L), "NO")
+        return out(tm("SPREAD", other, L), "NO")
     return None
 
 
@@ -261,9 +282,13 @@ def extra_specs(book):
             if L is None:
                 continue
             L = float(L)
-            team = next((t for t in (mkt.get("home"), mkt.get("away"))
-                         if t and (_norm(t) == re.sub(r" wins.*$", "", y)
-                                   or _norm(t).startswith(re.sub(r" wins.*$", "", y) + " "))), None)
+            c = _code(m)
+            team = (mkt.get("home") if c and c == (mkt.get("home_abbr") or "").upper()
+                    else mkt.get("away") if c and c == (mkt.get("away_abbr") or "").upper()
+                    else next((t for t in (mkt.get("home"), mkt.get("away"))
+                               if t and (_norm(t) == re.sub(r" wins.*$", "", y)
+                                         or _norm(t).startswith(re.sub(r" wins.*$", "", y) + " "))),
+                              None))
             if not team:
                 continue
             out += [("side", f"No \u00b7 {team} wins by over {L:g} {unit}",
