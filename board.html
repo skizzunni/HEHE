@@ -694,6 +694,18 @@ function drawMarkets(){
 }
 // Player and team props, priced by DraftKings, with prop-only stacks.
 let PRDAY = null, PRQ = "";
+function propTuningHTML(){
+  const T = D.props_tuning || {};
+  const ks = Object.keys(T);
+  if(!ks.length) return '<p class="note">Graded props so far: none yet &mdash; the first '
+    + 'settle once today&rsquo;s games finish.</p>';
+  return '<table class="mk"><thead><tr><th>League</th><th class="num">Graded</th>'
+    + '<th class="num">Promised</th><th class="num">Hit</th><th class="num">Margin now</th>'
+    + '</tr></thead><tbody>' + ks.map(k => '<tr><td>' + esc(k) + '</td><td class="num">'
+    + T[k].graded + '</td><td class="num">' + T[k].said + '%</td><td class="num">'
+    + T[k].hit + '%</td><td class="num">' + ((T[k].hold - 1) * 100).toFixed(1)
+    + '%</td></tr>').join("") + '</tbody></table>';
+}
 function drawProps(){
   const P = D.props || {};
   const has = d => ((P[d] || {}).games || []).length;
@@ -707,7 +719,10 @@ function drawProps(){
     + 'receptions\u2026). <b>Chance</b> is the book\u2019s price with an assumed 7% '
     + 'margin taken out \u2014 the book\u2019s opinion, not a model, and '
     + '<b>not backtested</b>: finished games keep their game lines but not their '
-    + 'prop prices. NBA and college football props appear when DraftKings posts them.</p>'
+    + 'prop prices. So every prop on a stack is recorded before the game and graded '
+    + 'from the box score after it, and each league&rsquo;s margin is re-fitted from those '
+    + 'results on every rebuild. NBA and college football props appear when DraftKings posts them.</p>'
+    + propTuningHTML()
     + '<p><button type="button" data-pday="today">Today</button> '
     + '<button type="button" data-pday="tomorrow">Tomorrow</button> '
     + '<input id="prq" placeholder="Filter player, team or market" value="' + esc(PRQ)

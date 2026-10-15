@@ -12,6 +12,8 @@ __pycache__/
 !ledger.json
 # Every stack leg and ticket, graded -- same reason.
 !stacks.json
+# Every recommended prop and how it settled -- prop prices vanish after the game.
+!props.json
 # Every live Kalshi trade the bot made through a quote -- not refetchable.
 !bot_trades.json
 

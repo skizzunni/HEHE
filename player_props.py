@@ -26,10 +26,13 @@ book's opinion, lightly adjusted, and are labelled unvalidated on the page.
 """
 import json
 import os
+import re
 import sys
 import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
+
+import props_ledger
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CACHE = os.path.join(HERE, ".cache", "props")
@@ -139,7 +142,7 @@ def american_prob(a):
     return 100 / (v + 100) if v > 0 else -v / (-v + 100)
 
 
-def parse(items, who):
+def parse(items, who, hold=ONE_SIDED_HOLD):
     """Priced, full-game props -> [dict(name, market, line, price, p)]."""
     out = []
     for x in items:
@@ -159,12 +162,15 @@ def parse(items, who):
                                               if target.get("value") is not None else "")
         ref = (x.get("athlete") or x.get("team") or {}).get("$ref")
         name = who(ref) if ref else None
+        aid = re.search(r"/athletes/(\d+)", ref or "")
         if not name:
             continue
         market = t.replace(" (incl. overtime)", "").replace(" Milestones", "")
         label = f"{name}: {line} {market}".replace("  ", " ") if line else f"{name}: {market}"
+        # the margin is re-fitted per league from graded props (props_ledger)
         out.append(dict(name=name, market=market, line=line, price=str(price),
-                        p=round(min(imp / ONE_SIDED_HOLD, 0.99), 4), label=label.strip()))
+                        imp=round(imp, 4), aid=aid.group(1) if aid else None,
+                        p=round(min(imp / hold, 0.99), 4), label=label.strip()))
     # one entry per (player, market, line): the feed repeats some
     seen, uniq = set(), []
     for o in out:
@@ -195,7 +201,8 @@ def for_slot(board_slot, labels=None, max_games=40):
     out = []
     for (league, eid, row), items in zip(jobs, raws):
         # keep the page small: the 60 likeliest props worth stacking per game
-        props = [p for p in parse(items, who) if 0.30 <= p["p"] <= 0.97][:60]
+        props = [dict(p, gid=row["id"])
+                 for p in parse(items, who, props_ledger.hold(league)) if 0.30 <= p["p"] <= 0.97][:60]
         if props:
             out.append(dict(id=row["id"], lg=(labels or {}).get(league, league),
                             match=row.get("label", ""), tip=row.get("tip"),

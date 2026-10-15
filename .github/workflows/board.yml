@@ -76,6 +76,7 @@ jobs:
       - name: Commit the ledger
         run: |
           git add ledger.json stacks.json
+          if [ -f props.json ]; then git add props.json; fi
           if git diff --cached --quiet; then
             echo "ledger unchanged"
             exit 0

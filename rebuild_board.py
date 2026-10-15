@@ -30,6 +30,7 @@ import stacks                  # noqa: E402
 import fanduel                 # noqa: E402
 import kalshi                  # noqa: E402
 import player_props            # noqa: E402
+import props_ledger             # noqa: E402
 
 
 def snapshot():
@@ -219,11 +220,21 @@ def snapshot():
         traceback.print_exc()
     # Player props, where DraftKings posts priced ones.
     try:
+        # settle yesterday's recorded props first, so today's prices use the
+        # margin their own results support
+        try:
+            props_ledger.grade()
+            props_ledger.tune()
+        except Exception as e:
+            print("props grading skipped:", e, file=sys.stderr)
         out["props"] = {}
         for slot in ("today", "tomorrow"):
             games = player_props.for_slot(d._STATE["slots"][slot], labels)
             out["props"][slot] = dict(games=games,
                                       tickets=player_props.prop_tickets(games))
+        n = props_ledger.record(out["props"].get("today"), d._STATE["dates"][0])
+        out["props_tuning"] = props_ledger.TUNING
+        print(f"props: recorded {n} new legs; tuning {props_ledger.TUNING}", file=sys.stderr)
         print("props: " + ", ".join(f'{s_} {len(v["games"])} games, '
                                     f'{sum(len(g["props"]) for g in v["games"])} props'
                                     for s_, v in out["props"].items()), file=sys.stderr)
