@@ -1221,6 +1221,21 @@ function scoreboardHTML(){
     return h + '</table>';
   }
 
+  // What each league's numbers are currently corrected by, re-fitted from the
+  // graded record on every rebuild (rebuild_board.fit_platt).
+  function tuningHTML(){
+    const T = D.tuning || {};
+    const ks = Object.keys(T);
+    if (!ks.length) return "";
+    const pct = (a, b, c) => (100 / (1 + Math.exp(-(a + b * Math.log(c / (1 - c)))))).toFixed(0);
+    return '<div class="sbh">Self-tuning from results</div>'
+      + '<table class="sbt"><tr><th>league</th><th>graded</th><th>model says 60%</th><th>shown as</th></tr>'
+      + ks.map(k => '<tr><td>' + esc(k) + '</td><td>' + T[k].n + '</td><td>60%</td><td>'
+          + pct(T[k].a, T[k].b, 0.6) + '%</td></tr>').join("")
+      + '</table><p class="note" style="margin:6px 0 0">Each rebuild re-fits these from '
+      + 'every graded pick, so a league the model under- or over-rates corrects itself. '
+      + 'Thin leagues barely move until their record supports it.</p>';
+  }
   function renderResults(){
   const R = D.results || {};
   const live = R.live || [], feed = R.feed || [], cal = R.calibration || [];
@@ -1233,7 +1248,7 @@ function scoreboardHTML(){
           + '<div class="rsub">no call has finished yet</div>')
     + '<div class="rsub">' + live.length + ' in play &middot; ' + (R.open || 0)
     + ' not finished</div></div>'
-      + '<div class="sbh">Record vs claim</div>' + scoreboardHTML()
+      + '<div class="sbh">Record vs claim</div>' + scoreboardHTML() + tuningHTML()
     // a headline percentage off a handful of calls is noise wearing a number
     + (R.graded && R.graded < 30
         ? '<p class="note" style="margin:10px 0 0">' + R.graded + ' graded call'
