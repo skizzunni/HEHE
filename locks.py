@@ -49,25 +49,53 @@ def _unit(g, league):
     return "points"
 
 
-def fd_specs(FD):
-    """For stacks.candidates: every line FanDuel posts for the game."""
+def fd_specs(FD, refs):
+    """For stacks.candidates: every line FanDuel posts for the game -- main
+    lines from the league feed plus alternate spreads, totals and team totals
+    from the game's own page. `refs` collects (gid, spec) -> (ref, price)."""
     def fn(league, row, g):
         gm = fanduel.find(FD, league, g.away, g.home)
         if not gm:
             return []
         out = []
+
+        def add(group, label, spec, ref, price=None):
+            out.append((group, label, spec))
+            refs[(row["id"], json.dumps(spec, sort_keys=True))] = (ref, price)
+
+        def team_of(name):
+            if fanduel.same_team(name, g.home) or fanduel.same_team(g.home, name):
+                return g.home
+            if fanduel.same_team(name, g.away) or fanduel.same_team(g.away, name):
+                return g.away
+            return None
+
+        unit = _unit(g, league)
         for team in (g.home, g.away):
-            if fanduel._runner(gm["ml"], team):
-                out.append(("Winner", f"{team} to win", dict(t="win", team=team)))
+            ref = fanduel._runner(gm["ml"], team)
+            if ref:
+                add("Winner", f"{team} to win", dict(t="win", team=team), ref)
             v = fanduel._runner(gm["spread"], team)
             if v and v[0] is not None:
                 L = float(v[0])
-                out.append(("Spread", f"{team} {L:+g}", dict(t="spread", team=team, line=L)))
+                add("Spread", f"{team} {L:+g}", dict(t="spread", team=team, line=L), v[1])
         for side in ("over", "under"):
             v = gm["total"].get(side)
             if v and v[0] is not None:
-                out.append(("Total", f"{side.title()} {float(v[0]):g} {_unit(g, league)}",
-                            dict(t=side, line=float(v[0]))))
+                L = float(v[0])
+                add("Total", f"{side.title()} {L:g} {unit}", dict(t=side, line=L), v[1])
+        for kind, team, side, L, ref, price in fanduel.load_alts(gm):
+            if kind == "total":
+                add("Total", f"{side.title()} {L:g} {unit}", dict(t=side, line=L), ref, price)
+            elif kind == "spread":
+                tm = team_of(team)
+                if tm:
+                    add("Spread", f"{tm} {L:+g}", dict(t="spread", team=tm, line=L), ref, price)
+            elif kind == "teamtotal":
+                tm = team_of(team)
+                if tm:
+                    add("Team total", f"{tm} {side} {L:g} {unit}",
+                        dict(t="team" + side, team=tm, line=L), ref, price)
         return out
     return fn
 
@@ -106,7 +134,8 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None):
     now = dt.datetime.now(dt.timezone.utc)
     rows = {lg: [r for r in rs if _eligible(r, day, now)]
             for lg, rs in (slot_rows or {}).items() if lg in fanduel.PAGES}
-    games = stacks.candidates(rows, soccer_keys, labels, extra=fd_specs(FD),
+    refs = {}
+    games = stacks.candidates(rows, soccer_keys, labels, extra=fd_specs(FD, refs),
                               band=(LOCK_MIN, LOCK_MAX))
     # where games drop out, per league: on the board -> eligible by time ->
     # found in FanDuel's feed -> a FanDuel line in the probability band
@@ -134,14 +163,14 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None):
     for g in games:
         best = None
         for L in g["legs"]:
-            ref = fanduel.leg_ref(FD, g["league"], g["home"], g["away"], L["spec"])
+            ref, price = refs.get((g["gid"], json.dumps(L["spec"], sort_keys=True)), (None, None))
             if ref and (best is None or L["p"] > best["p"]):
-                best = dict(L, fd=ref)
+                best = dict(L, fd=ref, price=price)
         if best:
             picks.append(dict(gid=g["gid"], league=g["league"], lg=g["lg"], match=g["match"],
                               home=g["home"], away=g["away"], tip=g.get("tip"),
                               label=best["label"], spec=best["spec"], p=best["p"],
-                              p_model=best["p_model"], fd=best["fd"]))
+                              p_model=best["p_model"], fd=best["fd"], price=best["price"]))
     picks.sort(key=lambda x: -x["p"])
     locks = picks[:n]
     prob = 1.0
@@ -183,7 +212,8 @@ def record(res, day):
         book["legs"].setdefault(k, dict(league=L["league"], match=L["match"], label=L["label"],
                                         spec=L["spec"], home=L["home"], away=L["away"],
                                         p=L["p"], status="open", date=day, gid=L["gid"],
-                                        lg=L.get("lg"), tip=L.get("tip"), fd=L.get("fd")))
+                                        lg=L.get("lg"), tip=L.get("tip"), fd=L.get("fd"),
+                                        price=L.get("price")))
     save(book)
 
 

@@ -732,6 +732,7 @@ function drawLocks(){
     + L.map(x => '<li><b>' + esc(x.label) + '</b> <span style="color:var(--ink-dim)">'
         + esc(x.match) + ' &middot; ' + esc(x.lg || x.league) + (x.tip ? ' &middot; ' + esc(x.tip) : '')
         + ' &middot; ' + (100 * x.p).toFixed(1) + '%</span>'
+        + (x.price ? ' <b>' + esc(x.price) + '</b>' : '')
         + (x.status && x.status !== "open"
             ? ' <b class="' + (x.status === "won" ? "agree" : "fade") + '">' + esc(x.status.toUpperCase())
               + (x.score ? ' (' + esc(x.score) + ')' : '') + '</b>'

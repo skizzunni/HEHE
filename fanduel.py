@@ -100,7 +100,7 @@ def load():
                 continue
             away, home = nm.split(" @ ", 1)
             games[str(e.get("eventId"))] = dict(away=away, home=home, ml={}, spread={},
-                                                total={})
+                                                total={}, id=str(e.get("eventId")))
         for m in (att.get("markets") or {}).values():
             g = games.get(str(m.get("eventId")))
             if not g:
@@ -161,3 +161,73 @@ def leg_ref(book, league, home, away, spec):
         if v and v[0] is not None and abs(float(v[0]) - spec["line"]) < 1e-9:
             return v[1]
     return None
+
+
+# ------------------------------------------------------------ alternate lines
+# The league page above carries only the main lines, which sit near 50%. The
+# high-probability legs -- alternate spreads, totals and team totals -- live on
+# each game's own page, "popular" tab (probed 2026-10-15). Runner names carry
+# the line: "Philadelphia Flyers +2.5", "Over 4.5", "Over (30.5)".
+EVENT_TTL = 600
+ALT_TYPES = ("ALTERNATE_PUCK_LINE", "ALTERNATE_RUN_LINES", "ALTERNATE_HANDICAP",
+             "ALTERNATE_SPREAD", "ALTERNATE_SPREADS", "ALTERNATE_TOTAL_GOALS",
+             "ALTERNATE_TOTAL_RUNS", "ALTERNATE_TOTAL", "ALTERNATE_TOTAL_POINTS",
+             "HOME_TEAM_ALTERNATE_TOTAL_GOALS", "AWAY_TEAM_ALTERNATE_TOTAL_GOALS",
+             "HOME_TEAM_ALTERNATE_TOTAL", "AWAY_TEAM_ALTERNATE_TOTAL",
+             "HOME_TEAM_ALTERNATE_TOTAL_RUNS", "AWAY_TEAM_ALTERNATE_TOTAL_RUNS")
+_TOT = re.compile(r"^\s*(Over|Under)\s*\(?\s*(\d+(?:\.\d+)?)\s*\)?\s*$", re.I)
+_HCP = re.compile(r"^\s*(.+?)\s*\(?\s*([+-]\d+(?:\.\d+)?)\s*\)?\s*$")
+
+
+def _odds(r):
+    o = ((r.get("winRunnerOdds") or {}).get("americanDisplayOdds") or {}).get("americanOdds")
+    if o is None:
+        return None
+    return f"+{o}" if o > 0 else str(o)
+
+
+def parse_alts(markets, g):
+    """[(kind, team-or-None, side, line, ref, price)] for one game's page."""
+    out = []
+    for m in (markets or {}).values():
+        t = m.get("marketType") or ""
+        if t not in ALT_TYPES:
+            continue
+        mid = m.get("marketId")
+        side_team = g["home"] if t.startswith("HOME_") else g["away"] if t.startswith("AWAY_") else None
+        for r in m.get("runners") or []:
+            name = r.get("runnerName") or ""
+            ref = f'{mid}:{r.get("selectionId")}'
+            price = _odds(r)
+            mt = _TOT.match(name)
+            if mt:
+                kind = "teamtotal" if side_team else "total"
+                out.append((kind, side_team, mt.group(1).lower(), float(mt.group(2)), ref, price))
+                continue
+            mh = _HCP.match(name)
+            if mh and "TOTAL" not in t:
+                out.append(("spread", mh.group(1), None, float(mh.group(2)), ref, price))
+    return out
+
+
+def load_alts(g):
+    """Alternate lines for one FanDuel game, cached EVENT_TTL seconds."""
+    if not g.get("id"):
+        return []
+    f = os.path.join(os.path.dirname(CACHE), "fd_events", f'{g["id"]}.json')
+    try:
+        if time.time() - os.path.getmtime(f) < EVENT_TTL:
+            with open(f) as fh:
+                return [tuple(x) for x in json.load(fh)]
+    except (OSError, ValueError):
+        pass
+    d = _get(f"{BASE}/event-page?_ak={AK}&eventId={g['id']}&tab=popular"
+             "&useCombinedTouchdownsVirtualMarket=true&usePulse=true&useQuickBets=true")
+    alts = parse_alts(((d or {}).get("attachments") or {}).get("markets"), g)
+    try:
+        os.makedirs(os.path.dirname(f), exist_ok=True)
+        with open(f, "w") as fh:
+            json.dump(alts, fh)
+    except OSError:
+        pass
+    return alts
