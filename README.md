@@ -2117,3 +2117,32 @@ The tab shows the running hit rate, and `python3 stacks.py report` shows the
 calibration by probability band. That record is the only real test of the
 model. Until a few hundred legs have settled, the probabilities are the
 model's estimate, not a measured rate.
+
+## Everything, every five minutes (2026-10-15)
+
+- **Every 5 minutes.** GitHub's cron fires every 1.5–4 hours on this repo,
+  so each board run now starts the next one 5 minutes after it began (the
+  `next` job in `board.yml`). The concurrency group allows at most one run
+  going and one waiting; the cron restarts the chain if a dispatch is lost.
+  The open page checks for a new build every 60 seconds and reloads itself.
+- **75 leagues.** Added NWSL, Women's Super League, Libertadores,
+  Sudamericana, CONCACAF and AFC Champions, the European second divisions,
+  China, India, Russia, USL, Liga de Expansión MX, the domestic cups and
+  international windows. Each was probed on GitHub's runners for live
+  DraftKings odds. College hockey, PFL, LPGA and the DP World Tour have
+  events but no odds, so there is nothing to price.
+- **Markets tab.** Every market the score model can price for each game:
+  both sides of the moneyline (plus the draw), spread and alternates, total
+  and alternates, team totals, both teams to score, double chance, with
+  chance and fair odds.
+- **Props tab** (`player_props.py`). DraftKings player props from ESPN's
+  odds feed: NFL yards and reception milestones, anytime/2+ touchdowns,
+  soccer goalscorer and shots. Plain player over/unders come with the line
+  but no price, and NHL team totals carry no over/under marker, so neither
+  is used. Prop chances are the book's price less an assumed 7% margin. They
+  are not backtested, because finished games keep their game lines but not
+  their prop prices.
+- **Backtest** (`tools/backtest.py`, workflow `backtest.yml`). Replays finished
+  games through the live stack model on closing lines. Results land in
+  `data/backtest_stacks.json`, and the live board takes its per-sport haircut
+  from them.
