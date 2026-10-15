@@ -18,6 +18,7 @@ scored on the second half only, so the reported result is out of sample.
 
 Writes data/backtest_kalshi.json.
 """
+from zoneinfo import ZoneInfo
 import datetime as dt
 import json
 import math
@@ -141,7 +142,7 @@ def utc(iso):
 
 
 def tail_for(start, away_abbr, home_abbr):
-    et = start - dt.timedelta(hours=4)
+    et = start.astimezone(ZoneInfo("America/New_York"))
     return f"{et.strftime('%y')}{MON[et.month - 1]}{et.day:02d}{away_abbr}{home_abbr}".upper()
 
 
