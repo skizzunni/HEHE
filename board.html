@@ -627,23 +627,18 @@ function drawStacks(){
       + '</tbody></table></details>';
   }
   if(!sizes.length) html += '<p>No stacks for this day yet \u2014 lines usually post the night before.</p>';
+  // Kalshi-ready stacks first: every leg is a line Kalshi lists
+  const KS = ((D.kalshi_stacks || {})[day] || {});
+  const ksizes = Object.keys(KS.tickets || {}).map(Number).sort((a, b) => a - b);
+  if(ksizes.some(n => (KS.tickets[n] || []).length)){
+    html += '<h3 style="margin-top:14px">Kalshi-ready stacks</h3><p>Built only from lines Kalshi '
+      + 'lists, so every leg goes straight into a Kalshi combo. Open <b>Build on Kalshi</b> on a ticket '
+      + 'for each leg\u2019s exact market and YES/NO side.</p>';
+    ksizes.forEach(n => (KS.tickets[n] || []).forEach((t, i) => { html += stackCard(t, "k:" + day, n, i); }));
+    html += '<h3 style="margin-top:14px">All stacks</h3>';
+  }
   sizes.forEach(n => {
-    (st.tickets[n] || []).forEach((t, i) => {
-      html += '<div class="ptk"><div class="hd"><span>' + t.n + ' legs</span>'
-        + '<span>hits ' + (100 * t.prob).toFixed(1) + '%</span>'
-        + '<span>fair ' + t.fair.toFixed(2) + 'x</span>'
-        + '<span>$10 \u2192 $' + (10 * t.fair).toFixed(2) + '</span></div><ul>'
-        + t.legs.map(L => '<li>' + esc(L.label) + ' <span style="color:var(--ink-dim)">'
-            + esc(L.match) + ' &middot; ' + esc(L.lg) + ' &middot; '
-            + (100 * L.p).toFixed(1) + '%</span></li>').join("")
-        + '</ul><button type="button" data-stack="' + day + '|' + n + '|' + i
-        + '">Copy ticket</button> <button type="button" data-share="stack|' + day + '|' + n
-        + '|' + i + '">Share link</button> '
-        + (t.fd ? '<a href="' + esc(t.fd) + '" target="_blank" rel="noopener">FanDuel slip (NY)</a>'
-                : '<span style="color:var(--ink-dim);font-size:12px">FanDuel: ' + (t.fd_n || 0)
-                  + ' of ' + t.legs.length + ' legs listed</span>')
-        + '<pre class="fanslip" hidden></pre></div>';
-    });
+    (st.tickets[n] || []).forEach((t, i) => { html += stackCard(t, day, n, i); });
   });
   html += '<p>A 20-leg ticket of 90% legs still loses 88% of the time. Stake '
     + 'it like a long shot, because it is one.</p></div>';
@@ -745,10 +740,66 @@ function drawProps(){
     if(again){ again.focus(); again.setSelectionRange(pos, pos); }
   };
 }
+// Kalshi: each leg's exact market and side, to rebuild the ticket as a combo
+// in Kalshi's app (making a combo needs a logged-in account).
+// "k:today" is a Kalshi-ready ticket, "today" a regular stack
+function stackT(d, n, i){
+  const src = d.startsWith("k:") ? (D.kalshi_stacks || {})[d.slice(2)] : (D.stacks || {})[d];
+  return (((src || {}).tickets || {})[n] || [])[+i];
+}
+function stackCard(t, key, n, i){
+  return '<div class="ptk"><div class="hd"><span>' + t.n + ' legs</span>'
+    + '<span>hits ' + (100 * t.prob).toFixed(1) + '%</span>'
+    + '<span>fair ' + t.fair.toFixed(2) + 'x</span>'
+    + '<span>$10 \u2192 $' + (10 * t.fair).toFixed(2) + '</span></div><ul>'
+    + t.legs.map(L => '<li>' + esc(L.label) + ' <span style="color:var(--ink-dim)">'
+        + esc(L.match) + ' &middot; ' + esc(L.lg) + ' &middot; '
+        + (100 * L.p).toFixed(1) + '%</span></li>').join("")
+    + '</ul><button type="button" data-stack="' + key + '|' + n + '|' + i
+    + '">Copy ticket</button> <button type="button" data-share="stack|' + key + '|' + n
+    + '|' + i + '">Share link</button> '
+    + (t.fd ? '<a href="' + esc(t.fd) + '" target="_blank" rel="noopener">FanDuel slip (NY)</a>'
+            : '<span style="color:var(--ink-dim);font-size:12px">FanDuel: ' + (t.fd_n || 0)
+              + ' of ' + t.legs.length + ' legs listed</span>')
+    + '<pre class="fanslip" hidden></pre>' + kalshiBlock(t, key, n, i, key.startsWith("k:")) + '</div>';
+}
+function kalshiText(t){
+  return "Kalshi combo \u2014 " + t.legs.length + " legs\n" + t.legs.map((L, i) =>
+    (i + 1) + ". " + L.match + ": " + (L.kalshi ? L.kalshi.words + "   [" + L.kalshi.ticker + "]"
+                                : L.label + "   (not listed on Kalshi)")).join("\n")
+    + "\n\nFair payout " + t.fair.toFixed(2) + "x \u2014 a combo paying more is better than fair.";
+}
+function kalshiBlock(t, day, n, i, open){
+  if(t.kalshi_n === undefined) return "";
+  const all = t.kalshi_n === t.legs.length;
+  let h = '<details style="margin-top:6px"' + (open ? ' open' : '') + '><summary style="font-size:13px"><b>Build on Kalshi</b> \u2014 '
+    + t.kalshi_n + ' of ' + t.legs.length + ' legs listed</summary><ol style="font-size:13px">'
+    + t.legs.map(L => '<li>' + (L.kalshi
+        ? '<b>' + esc(L.kalshi.words) + '</b> <span style="color:var(--ink-dim)">' + esc(L.match)
+          + (L.kalshi.price ? ' \u00b7 ' + Math.round(100 * L.kalshi.price) + '\u00a2' : '')
+          + ' \u00b7 <a href="https://kalshi.com/markets/' + esc(L.kalshi.series.toLowerCase())
+          + '" target="_blank" rel="noopener">market</a></span>'
+        : esc(L.label) + ' <span style="color:var(--ink-dim)">not on Kalshi \u2014 swap it or drop it</span>')
+      + '</li>').join("") + '</ol>';
+  if(all && t.kalshi_cost){
+    const mult = 1 / t.kalshi_cost, good = mult >= t.fair;
+    h += '<p style="font-size:13px">Bought leg by leg at Kalshi\u2019s ask: pays <b>' + mult.toFixed(2)
+      + 'x</b> against a fair <b>' + t.fair.toFixed(2) + 'x</b> \u2014 '
+      + (good ? 'better than fair.' : 'worse than fair; the combo quote in Kalshi\u2019s app may differ, check it against ' + t.fair.toFixed(2) + 'x.')
+      + '</p>';
+  } else if(all){
+    h += '<p style="font-size:13px">Kalshi had no ask on some legs; in the app, a combo paying more than <b>'
+      + t.fair.toFixed(2) + 'x</b> beats fair.</p>';
+  }
+  h += '<p style="font-size:12.5px;color:var(--ink-dim)">In Kalshi: open Combos, pick the games, '
+    + 'and choose each line and YES/NO exactly as listed.</p>'
+    + '<button type="button" data-kalshi="' + day + '|' + n + '|' + i + '">Copy Kalshi legs</button></details>';
+  return h;
+}
 function copyStack(btn){
   const [d, n, i] = btn.getAttribute("data-stack").split("|");
-  const t = (((D.stacks || {})[d] || {}).tickets || {})[n][+i];
-  const txt = stackText(t), pre = btn.nextElementSibling;
+  const t = stackT(d, n, i);
+  const txt = stackText(t), pre = btn.closest(".ptk").querySelector("pre.fanslip");
   const show = () => { pre.textContent = txt; pre.hidden = false; };
   try {
     navigator.clipboard.writeText(txt).then(() => { btn.textContent = "Copied"; },
@@ -796,7 +847,7 @@ function shareTicket(o, btn){
 function ticketFrom(key){
   const [kind, d, n, i] = key.split("|");
   if(kind === "stack"){
-    const t = ((((D.stacks || {})[d] || {}).tickets || {})[n] || [])[+i];
+    const t = stackT(d, n, i);
     return t && { fd: t.fd || null, title: t.n + "-leg stack", note: "hits " + (100 * t.prob).toFixed(1)
       + "% \u00b7 fair payout " + t.fair.toFixed(2) + "x",
       legs: t.legs.map(L => [L.label, L.match + " \u00b7 " + L.lg]) };
@@ -1259,6 +1310,13 @@ document.addEventListener("click", e => {
   }
   const sk = e.target.closest("[data-stack]");
   if(sk){ copyStack(sk); return; }
+  const kc = e.target.closest("[data-kalshi]");
+  if(kc){
+    const [d, n, i] = kc.getAttribute("data-kalshi").split("|");
+    const t = stackT(d, n, i);
+    if(t) copyText(kalshiText(t), kc, "Copied");
+    return;
+  }
   const sh = e.target.closest("[data-share]");
   if(sh){ const o = ticketFrom(sh.getAttribute("data-share")); if(o) shareTicket(o, sh); return; }
   if(e.target.id === "shareslip"){ shareTicket(slipTicket(), e.target); return; }

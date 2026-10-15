@@ -590,8 +590,12 @@ def markets(slots, soccer_keys, labels=None):
 
 
 # ---------------------------------------------------------------- tickets
-def candidates(board_slot, soccer_keys, labels=None):
-    """All legs worth stacking, grouped by game, best first."""
+def candidates(board_slot, soccer_keys, labels=None, extra=None, keep=None):
+    """All legs worth stacking, grouped by game, best first.
+
+    `extra(league, row, game)` may add (group, label, spec) legs -- the lines
+    an exchange actually lists; `keep(league, row, spec)` may veto a leg, so a
+    ticket can be restricted to what one venue can fill."""
     games = []
     for league, rows in (board_slot or {}).items():
         for row in rows:
@@ -605,7 +609,17 @@ def candidates(board_slot, soccer_keys, labels=None):
             fav_home = g.prob_specs([dict(t="win", team=g.home)]) >= \
                 g.prob_specs([dict(t="win", team=g.away)])
             legs = []
-            for group, label, spec in leg_specs(g, league, fav_home):
+            specs = list(leg_specs(g, league, fav_home))
+            if extra:
+                specs += list(extra(league, row, g) or [])
+            seen = set()
+            for group, label, spec in specs:
+                key = json.dumps(spec, sort_keys=True)
+                if key in seen:
+                    continue
+                seen.add(key)
+                if keep and not keep(league, row, spec):
+                    continue
                 p = g.prob_specs([spec])
                 if p is None:
                     continue
@@ -683,10 +697,10 @@ def build_tickets(games, tiers=TIERS, variants=VARIANTS):
     return out
 
 
-def build(slots, soccer_keys, labels=None):
+def build(slots, soccer_keys, labels=None, extra=None, keep=None):
     res = {}
     for slot in ("today", "tomorrow"):
-        games = candidates(slots.get(slot), soccer_keys, labels)
+        games = candidates(slots.get(slot), soccer_keys, labels, extra, keep)
         res[slot] = dict(games=len(games), tickets=build_tickets(games))
     return res
 

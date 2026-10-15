@@ -312,7 +312,11 @@ def market_lines(comp):
     full = {x.get("homeAway"): ((x.get("team") or x.get("athlete") or {})
                                 .get("displayName"))
             for x in comp.get("competitors") or []}
-    out = dict(home=full.get("home"), away=full.get("away"))
+    abbr = {x.get("homeAway"): ((x.get("team") or {}).get("abbreviation"))
+            for x in comp.get("competitors") or []}
+    out = dict(home=full.get("home"), away=full.get("away"),
+               home_abbr=abbr.get("home"), away_abbr=abbr.get("away"),
+               start=comp.get("date") or comp.get("startDate"))
     for o in comp.get("odds") or []:
         if not isinstance(o, dict):
             continue

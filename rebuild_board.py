@@ -28,6 +28,7 @@ import ledger                  # noqa: E402
 import parlays                 # noqa: E402
 import stacks                  # noqa: E402
 import fanduel                 # noqa: E402
+import kalshi                  # noqa: E402
 import player_props            # noqa: E402
 
 
@@ -163,6 +164,34 @@ def snapshot():
                         L["fd"] = fanduel.leg_ref(FD, L["league"], L["home"], L["away"], L["spec"])
                     t["fd_n"] = sum(1 for L in t["legs"] if L["fd"])
                     t["fd"] = fanduel.link([L["fd"] for L in t["legs"]])
+        # Kalshi: the exact market and side for each leg, to rebuild the
+        # ticket as a Kalshi combo
+        try:
+            KB = kalshi.load()
+            by_id = {r["id"]: r for sl in d._STATE["slots"].values()
+                     for rows in sl.values() for r in rows}
+            for st_ in out["stacks"].values():
+                for tickets in st_["tickets"].values():
+                    for t in tickets:
+                        kalshi.attach(t, KB, by_id)
+            # Kalshi-ready stacks: built only from lines Kalshi lists, so
+            # every leg of every ticket can be placed in a Kalshi combo
+            out["kalshi_stacks"] = stacks.build(d._STATE["slots"], SOCCER, labels,
+                                                extra=kalshi.extra_specs(KB),
+                                                keep=kalshi.keep_listed(KB))
+            for st_ in out["kalshi_stacks"].values():
+                for tickets in st_["tickets"].values():
+                    for t in tickets:
+                        kalshi.attach(t, KB, by_id)
+            n = sum(len(v) for v in KB.values())
+            kt = out["kalshi_stacks"]["today"]
+            print(f"kalshi: {n} games listed; Kalshi-ready stacks today from "
+                  f"{kt['games']} games: " + ", ".join(f"{n_}-leg x{len(t)}"
+                  for n_, t in kt["tickets"].items()), file=sys.stderr)
+        except Exception:
+            import traceback
+            sys.stderr.write("kalshi lookup failed -- stacks kept without it:\n")
+            traceback.print_exc()
         dates = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
         stacks.record(out["stacks"], dates)
         stacks.grade(ledger._final)

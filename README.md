@@ -2146,3 +2146,30 @@ model's estimate, not a measured rate.
   games through the live stack model on closing lines. Results land in
   `data/backtest_stacks.json`, and the live board takes its per-sport haircut
   from them.
+
+## Building tickets on Kalshi, FanDuel and Fanatics (2026-10-15)
+
+- **Kalshi** (`kalshi.py`). Kalshi lists game markets per league in three
+  series: `KX{L}GAME` (winner, plus "Tie" in soccer), `KX{L}TOTAL` ("Over 3.5
+  goals scored", one market per line) and `KX{L}SPREAD` ("Toronto wins by
+  over 2.5 goals"). Every stack leg is mapped to its exact market and side:
+  over → TOTAL YES, under → TOTAL NO, "No · X wins by over N" → SPREAD NO.
+  A game matches only when both team codes (or both names) and the date
+  agree. The Stacks tab now leads with **Kalshi-ready stacks**, built only
+  from lines Kalshi lists. Each ticket's *Build on Kalshi* panel gives every
+  leg's market, side and current ask, the payout of buying the legs one by
+  one against the fair payout, and a copy button. Kalshi combos are created
+  in the logged-in app; its combo endpoint is not public, so no combo is
+  created from here.
+- **Polymarket.** Its public site lists season futures only, no games. The
+  US gateway lists games but has no combos, so there is nothing to build a
+  ticket on yet.
+- **FanDuel (New York)** (`fanduel.py`). FanDuel's NY feed has moneyline, main
+  spread and main total ids. A ticket gets an addToBetslip link when every
+  leg has one. Market ids are per state; the link format can only be
+  confirmed by tapping one on a phone in NY.
+- **Fanatics** refuses outside requests and publishes no slip link. Tickets
+  carry an Open Fanatics button and copy-ready text.
+- **Share links.** Every ticket and the slip has a Share button. The ticket
+  rides in the link itself (`#t=…`) and opens as a Shared ticket view on any
+  device.
