@@ -49,6 +49,7 @@ WINDOWS = [
     ("nba", "basketball", "nba", [("2025-10-21", "2026-04-13")]),
     ("ncaab", "basketball", "mens-college-basketball", [("2025-11-03", "2026-03-15")]),
     ("wnba", "basketball", "wnba", [("2026-05-15", "2026-09-15")]),
+    ("mlb", "baseball", "mlb", [("2026-03-26", "2026-10-14")]),
     ("epl", "soccer", "eng.1", [("2025-08-15", "2026-05-24"), ("2026-08-14", None)]),
     ("esp", "soccer", "esp.1", [("2025-08-15", "2026-05-24")]),
     ("ger", "soccer", "ger.1", [("2025-08-22", "2026-05-16")]),
@@ -160,7 +161,7 @@ def build(key, g, o):
     """A board-shaped row for stacks.game_from_row."""
     d, eid, home, away, hs, as_ = g
     legs = [dict(side="away", price=am(o["away_ml"])), dict(side="home", price=am(o["home_ml"]))]
-    soccer = key not in S.SD_MARGIN and key not in S.POISSON
+    soccer = key not in S.SD_MARGIN and key not in S.POISSON and key not in S.NEGBIN
     if soccer:
         legs.insert(1, dict(side="draw", price=am(o["draw_ml"])))
     fav = o["fav"]
@@ -266,7 +267,7 @@ def main():
             slot = {key: [r for r, _, _ in games_d]}
             score = {r["id"]: (hs, as_) for r, hs, as_ in games_d}
             cands = S.candidates(slot, set() if key in S.SD_MARGIN or key in S.POISSON
-                                 else {key})
+                                 or key in S.NEGBIN else {key})
             for n, tickets in S.build_tickets(cands, tiers=(2, 3, 4, 6, 8, 10)).items():
                 for t in tickets:
                     ok = all(S.predicate(L["spec"], L["home"], L["away"])(*score[L["gid"]])

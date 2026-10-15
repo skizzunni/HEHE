@@ -76,6 +76,13 @@ VARIANTS = 3                 # different tickets per size
 SD_MARGIN = {"nfl": 13.5, "ncaaf": 16.5, "nba": 12.0, "ncaab": 11.0, "wnba": 11.0}
 SD_TOTAL = {"nfl": 10.5, "ncaaf": 14.5, "nba": 18.0, "ncaab": 16.0, "wnba": 15.0}
 POISSON = {"nhl"}            # plus every soccer league (passed in)
+# Baseball runs are far more spread out than a Poisson allows (a team's runs
+# vary about twice as much as their mean), so MLB uses a negative binomial:
+# variance = mean + mean^2 / MLB_R. MLB_R = 4 matches a team mean near 4.5
+# runs with a standard deviation near 3.1. Extra innings settle a level score
+# the way overtime does in hockey. tools/backtest.py measures how well it holds.
+NEGBIN = {"mlb"}
+MLB_R = 4.0
 
 # alternate lines offered, as offsets from the posted number
 ALT = {
@@ -112,9 +119,23 @@ def pois(lam, kmax=15):
     return out
 
 
-def grid(lh, la, kmax=15):
-    """{(home, away): probability} for independent Poisson scoring."""
-    ph, pa = pois(lh, kmax), pois(la, kmax)
+def nbin(mean, r, kmax=25):
+    """Negative binomial pmf with this mean and dispersion r."""
+    q = mean / (r + mean)
+    out, p = [], (r / (r + mean)) ** r
+    for k in range(kmax + 1):
+        out.append(p)
+        p *= (k + r) / (k + 1) * q
+    return out
+
+
+def grid(lh, la, kmax=15, r=None):
+    """{(home, away): probability} for independent scoring: Poisson, or
+    negative binomial when a dispersion r is given."""
+    if r:
+        ph, pa = nbin(lh, r, kmax), nbin(la, r, kmax)
+    else:
+        ph, pa = pois(lh, kmax), pois(la, kmax)
     return {(h, a): ph[h] * pa[a] for h in range(kmax + 1) for a in range(kmax + 1)}
 
 
@@ -128,18 +149,19 @@ def _pwin(g, ot):
     return win
 
 
-def fit_poisson(p_home, total, p_draw=None, hockey=False, p_over=0.5):
+def fit_poisson(p_home, total, p_draw=None, hockey=False, p_over=0.5, r=None):
     """Scoring rates (home, away) reproducing the book's numbers.
 
     Least squares on the win probability, the draw probability (soccer) and
     the posted total sitting at the median of the modelled total. Coarse grid
     over (mean total, home share), then a fine grid around the best cell.
     """
-    t0 = total if total else (6.0 if hockey else 2.6)
+    t0 = total if total else (8.5 if r else 6.0 if hockey else 2.6)
+    kmax = 20 if r else 12
 
     def err(mu, s):
         lh, la = mu * s, mu * (1 - s)
-        g = grid(lh, la, 12)
+        g = grid(lh, la, kmax, r)
         e = (_pwin(g, s if hockey else None) - p_home) ** 2
         if p_draw is not None:
             e += (sum(p for (h, a), p in g.items() if h == a) - p_draw) ** 2
@@ -152,7 +174,7 @@ def fit_poisson(p_home, total, p_draw=None, hockey=False, p_over=0.5):
             e += 0.5 * (over - p_over) ** 2
         return e
 
-    span = 1.0 if hockey else 0.6
+    span = 1.6 if r else 1.0 if hockey else 0.6
     best = min(((err(mu, s), mu, s)
                 for mu in [t0 - span + k * span / 4 for k in range(9)] if mu > 0.3
                 for s in [k / 50 for k in range(3, 48)]))
@@ -176,11 +198,12 @@ class Game:
                  p_draw=None, soccer=False, p_over=0.5):
         self.sport, self.home, self.away = sport, home, away
         self.soccer = soccer
-        self.kind = "poisson" if (soccer or sport in POISSON) else "normal"
+        self.kind = "poisson" if (soccer or sport in POISSON or sport in NEGBIN) else "normal"
         if self.kind == "poisson":
+            r = MLB_R if sport in NEGBIN else None
             lh, la = fit_poisson(p_home, total, p_draw if soccer else None,
-                                 hockey=not soccer, p_over=p_over)
-            self.g = grid(lh, la)
+                                 hockey=not soccer, p_over=p_over, r=r)
+            self.g = grid(lh, la, 25 if r else 15, r)
             self.ot = None if soccer else lh / (lh + la)
             self.mu_total = lh + la
         else:
@@ -312,7 +335,7 @@ def haircut(p, league=None):
 
 def sport_of(league):
     """Group a league key into the sport its backtest factor belongs to."""
-    if league in SD_MARGIN or league in POISSON:
+    if league in SD_MARGIN or league in POISSON or league in NEGBIN:
         return league
     return "soccer"
 
@@ -383,10 +406,13 @@ def leg_specs(game, sport, fav_home):
     fav, dog = (H, A) if fav_home else (A, H)
     out = []
     if game.kind == "poisson":
-        unit = "goals"
-        overs = (0.5, 1.5, 2.5) if game.soccer else (2.5, 3.5, 4.5)
-        unders = (3.5, 4.5, 5.5) if game.soccer else (7.5, 8.5, 9.5)
-        margins = (2.5, 3.5) if game.soccer else (2.5,)
+        unit = "runs" if sport in NEGBIN else "goals"
+        if sport in NEGBIN:
+            overs, unders, margins = (4.5, 5.5, 6.5), (10.5, 11.5, 12.5), (1.5, 2.5, 3.5, 4.5)
+        else:
+            overs = (0.5, 1.5, 2.5) if game.soccer else (2.5, 3.5, 4.5)
+            unders = (3.5, 4.5, 5.5) if game.soccer else (7.5, 8.5, 9.5)
+            margins = (2.5, 3.5) if game.soccer else (2.5,)
         for L in overs:
             out.append(("total", f"Over {L} {unit}", dict(t="over", line=L)))
         for L in unders:
@@ -505,7 +531,8 @@ def game_from_row(row, league, soccer):
         spread = mag if m["fav"] == "home" else -mag
     if league in SD_MARGIN and not total:
         return None                       # alt lines need a posted total
-    if league not in SD_MARGIN and league not in POISSON and not soccer:
+    if league not in SD_MARGIN and league not in POISSON and league not in NEGBIN \
+            and not soccer:
         return None                       # MLB, tennis, golf, UFC: not modelled
     return Game(league, home, away, ph, total=total, spread=spread,
                 p_draw=pdr, soccer=soccer, p_over=p_over)
@@ -524,7 +551,7 @@ def market_menu(g, league, mkt):
     out = [("Winner", f"{H} to win", dict(t="win", team=H)),
            ("Winner", f"{A} to win", dict(t="win", team=A))]
     if g.kind == "poisson":
-        unit = "goals"
+        unit = "runs" if league in NEGBIN else "goals"
         if g.soccer:
             out += [("Winner", "Draw", dict(t="draw")),
                     ("Double chance", f"{H} or draw", dict(t="dc", team=H)),
@@ -532,6 +559,8 @@ def market_menu(g, league, mkt):
                     ("Both teams to score", "Yes", dict(t="btts")),
                     ("Both teams to score", "No", dict(t="btts_no"))]
             lines, team_lines, spreads = (0.5, 1.5, 2.5, 3.5, 4.5), (0.5, 1.5, 2.5), (1.5, 2.5)
+        elif league in NEGBIN:
+            lines, team_lines, spreads = (5.5, 6.5, 7.5, 8.5, 9.5, 10.5), (2.5, 3.5, 4.5, 5.5), (1.5, 2.5, 3.5)
         else:
             lines, team_lines, spreads = (3.5, 4.5, 5.5, 6.5, 7.5), (1.5, 2.5, 3.5), (1.5, 2.5)
         for L in lines:
