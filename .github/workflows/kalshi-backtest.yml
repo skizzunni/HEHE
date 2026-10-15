@@ -1,0 +1,50 @@
+# Backtests "value" legs: Kalshi's pre-game price against the board's fair
+# probability (from DraftKings closing lines), graded by Kalshi's own
+# settlement. Runs on GitHub's runners (the dev sandbox cannot reach Kalshi
+# or ESPN) and commits data/backtest_kalshi.json.
+name: kalshi-backtest
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '43 9 * * 1'
+  push:
+    branches: [claude/mlb-picks-review-jlx9w1]
+    paths:
+      - 'tools/kalshi_backtest.py'
+      - '.github/workflows/kalshi-backtest.yml'
+concurrency:
+  group: kalshi-backtest
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  backtest:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/mlb-picks-review-jlx9w1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      # settled markets, candles and finished games never change
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: kbt-${{ github.run_id }}
+          restore-keys: kbt-
+      - run: python3 tools/kalshi_backtest.py
+      - name: Commit the results
+        run: |
+          git add -f data/backtest_kalshi.json
+          if git diff --cached --quiet; then echo "unchanged"; exit 0; fi
+          git config user.name  "board bot"
+          git config user.email "board-bot@users.noreply.github.com"
+          git commit -m "Kalshi backtest results [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin claude/mlb-picks-review-jlx9w1 \
+              && git push origin HEAD:claude/mlb-picks-review-jlx9w1 && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
