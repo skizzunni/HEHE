@@ -1,0 +1,210 @@
+"""The day's locks: the 11 likeliest bets FanDuel (New York) actually lists,
+one per game, ready to add to a FanDuel slip.
+
+"Lock" is the page's word for "the most likely result on the board", not a
+promise. Each leg's probability is the same haircut, backtested and
+self-tuned model the stacks use (stacks.py), and every lock is graded in
+locks.json so the tab shows how locks really do.
+
+WHAT QUALIFIES
+
+  * A line FanDuel posts for the game right now -- moneyline, the posted
+    spread or the posted total (fanduel.py reads FanDuel's own feed, so a
+    leg here is a leg the FanDuel app will take). Alternate lines are not in
+    that feed, so they are not offered.
+  * A game that has not started.
+  * Probability between LOCK_MIN and LOCK_MAX. Above ~96% a leg is usually a
+    -2000 favourite that adds almost nothing to the payout while still able
+    to sink the ticket.
+  * One leg per game, so the legs are independent of each other.
+
+THE ARITHMETIC THE TAB STATES PLAINLY
+
+Eleven legs at 92% each all hit 40% of the time. A parlay of locks is not a
+lock; it is a long shot with a big payout. The tab shows the true combined
+chance next to every ticket.
+"""
+import datetime as dt
+import json
+import os
+from zoneinfo import ZoneInfo
+
+import fanduel
+import stacks
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+LEDGER = os.path.join(HERE, "locks.json")
+N_LOCKS = 11
+LOCK_MIN, LOCK_MAX = 0.75, 0.97
+# The day's card is set at 8:00 AM Eastern and then stands: the tab shows the
+# same legs all day, each with its result, instead of drifting with the odds.
+# Before 8 the tab shows a preview of what the card would be right now.
+CARD_HOUR = 8
+ET = ZoneInfo("America/New_York")
+
+
+def _unit(g, league):
+    if g.kind == "poisson":
+        return "runs" if league == "mlb" else "goals"
+    return "points"
+
+
+def fd_specs(FD):
+    """For stacks.candidates: every line FanDuel posts for the game."""
+    def fn(league, row, g):
+        gm = fanduel.find(FD, league, g.away, g.home)
+        if not gm:
+            return []
+        out = []
+        for team in (g.home, g.away):
+            if fanduel._runner(gm["ml"], team):
+                out.append(("Winner", f"{team} to win", dict(t="win", team=team)))
+            v = fanduel._runner(gm["spread"], team)
+            if v and v[0] is not None:
+                L = float(v[0])
+                out.append(("Spread", f"{team} {L:+g}", dict(t="spread", team=team, line=L)))
+        for side in ("over", "under"):
+            v = gm["total"].get(side)
+            if v and v[0] is not None:
+                out.append(("Total", f"{side.title()} {float(v[0]):g} {_unit(g, league)}",
+                            dict(t=side, line=float(v[0]))))
+        return out
+    return fn
+
+
+def _not_started(row, now):
+    st = (row.get("mkt") or {}).get("start")
+    if not st:
+        return True
+    try:
+        t = dt.datetime.fromisoformat(str(st).replace("Z", "+00:00"))
+    except ValueError:
+        return True
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=ET)
+    return t > now
+
+
+def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS):
+    now = dt.datetime.now(dt.timezone.utc)
+    rows = {lg: [r for r in rs if _not_started(r, now)]
+            for lg, rs in (slot_rows or {}).items() if lg in fanduel.PAGES}
+    games = stacks.candidates(rows, soccer_keys, labels, extra=fd_specs(FD),
+                              band=(LOCK_MIN, LOCK_MAX))
+    picks = []
+    for g in games:
+        best = None
+        for L in g["legs"]:
+            ref = fanduel.leg_ref(FD, g["league"], g["home"], g["away"], L["spec"])
+            if ref and (best is None or L["p"] > best["p"]):
+                best = dict(L, fd=ref)
+        if best:
+            picks.append(dict(gid=g["gid"], league=g["league"], lg=g["lg"], match=g["match"],
+                              home=g["home"], away=g["away"], tip=g.get("tip"),
+                              label=best["label"], spec=best["spec"], p=best["p"],
+                              p_model=best["p_model"], fd=best["fd"]))
+    picks.sort(key=lambda x: -x["p"])
+    locks = picks[:n]
+    prob = 1.0
+    for L in locks:
+        prob *= L["p"]
+    return dict(locks=locks, available=len(picks), prob=round(prob, 4),
+                fair=round(1 / prob, 2) if prob else None)
+
+
+# ------------------------------------------------------------------ record
+def load():
+    try:
+        with open(LEDGER) as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return {"days": {}, "legs": {}}
+
+
+def save(book):
+    with open(LEDGER, "w") as fh:
+        json.dump(book, fh, indent=1, sort_keys=True)
+
+
+def record(res, day):
+    """The day's first full card of locks stands; later rebuilds only add
+    legs for games that had no lock yet (a late line), up to N_LOCKS."""
+    book = load()
+    day = str(day)
+    if len(day) == 8:
+        day = f"{day[:4]}-{day[4:6]}-{day[6:]}"
+    keys = book["days"].setdefault(day, [])
+    for L in res["locks"]:
+        if len(keys) >= N_LOCKS:
+            break
+        k = f'{L["gid"]}|{L["label"]}'
+        if any(x.split("|", 1)[0] == L["gid"] for x in keys):
+            continue
+        keys.append(k)
+        book["legs"].setdefault(k, dict(league=L["league"], match=L["match"], label=L["label"],
+                                        spec=L["spec"], home=L["home"], away=L["away"],
+                                        p=L["p"], status="open", date=day, gid=L["gid"],
+                                        lg=L.get("lg"), tip=L.get("tip"), fd=L.get("fd")))
+    save(book)
+
+
+def card_time(now=None):
+    """True once today's card should be set (8:00 AM Eastern)."""
+    now = now or dt.datetime.now(ET)
+    return now.hour >= CARD_HOUR
+
+
+def frozen(day):
+    """The recorded card for `day`, in build()'s shape, with results."""
+    day = str(day)
+    if len(day) == 8:
+        day = f"{day[:4]}-{day[4:6]}-{day[6:]}"
+    book = load()
+    legs = [dict(book["legs"][k]) for k in book["days"].get(day, []) if k in book["legs"]]
+    prob = 1.0
+    for L in legs:
+        prob *= L["p"]
+    return dict(locks=legs, available=len(legs), prob=round(prob, 4),
+                fair=round(1 / prob, 2) if legs else None, set=True, day=day)
+
+
+def grade(final):
+    """Settle open locks with the same final-score feed as the picks."""
+    book = load()
+    for k, L in book["legs"].items():
+        if L["status"] != "open":
+            continue
+        lg, comp = k.split("|", 1)[0].split(":", 1)
+        res = final(lg, comp, L)
+        if res and res.get("missing"):
+            import ledger as _ledger
+            if _ledger._stale(L):
+                L["status"] = "void"
+            continue
+        if not res or res.get("live"):
+            continue
+        if res.get("void"):
+            L["status"] = "void"
+            continue
+        sc = res.get("scores") or {}
+        h, a = sc.get(L["home"]), sc.get(L["away"])
+        if not isinstance(h, int) or not isinstance(a, int):
+            continue
+        L["status"] = "won" if stacks.predicate(L["spec"], L["home"], L["away"])(h, a) else "lost"
+        L["score"] = f"{L['away']} {a} - {L['home']} {h}"
+    save(book)
+
+
+def report():
+    book = load()
+    legs = [L for L in book["legs"].values() if L["status"] in ("won", "lost")]
+    days = []
+    for day, keys in sorted(book["days"].items(), reverse=True)[:14]:
+        st = [book["legs"].get(k, {}).get("status", "open") for k in keys]
+        days.append(dict(day=day, n=len(keys), won=st.count("won"), lost=st.count("lost"),
+                         void=st.count("void"), open=st.count("open"),
+                         all_hit=bool(keys) and "lost" not in st and "open" not in st
+                         and st.count("won") > 0))
+    return dict(legs=len(legs), won=sum(1 for L in legs if L["status"] == "won"),
+                said=round(100 * sum(L["p"] for L in legs) / len(legs), 1) if legs else None,
+                days=days)

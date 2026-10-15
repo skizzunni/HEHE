@@ -409,7 +409,7 @@ const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g,
   .replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 
 function buildTabs(){
-  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props" || slot === "shared" || slot === "bot"){
+  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props" || slot === "shared" || slot === "bot" || slot === "locks"){
     tabs.innerHTML = ""; tabs.hidden = true; return;
   }
   tabs.innerHTML = "";
@@ -481,6 +481,10 @@ function renderView(){
   if(slot === "bot"){
     tabs.hidden = true; how.hidden = true;
     return drawBot();
+  }
+  if(slot === "locks"){
+    tabs.hidden = true; how.hidden = true;
+    return drawLocks();
   }
   if(slot === "shared"){
     tabs.hidden = true; how.hidden = true;
@@ -694,6 +698,66 @@ function drawMarkets(){
 }
 // Player and team props, priced by DraftKings, with prop-only stacks.
 let PRDAY = null, PRQ = "";
+// ------------------------------------------------------------- locks view
+// The 11 likeliest bets FanDuel lists, one per game (locks.py). FanDuel has
+// no link that loads several legs at once, so each leg has its own button;
+// tapping them in turn adds each to the same FanDuel slip.
+let LKDAY = null;
+function drawLocks(){
+  const K = D.locks || {};
+  const has = d => (((K[d] || {}).locks) || []).length;
+  const day = LKDAY || (has("today") ? "today" : "tomorrow");
+  const X = K[day] || {};
+  const L = X.locks || [];
+  const R = D.locks_record || {};
+  let h = '<div class="parlays"><h3>Locks &mdash; ' + day + '</h3>'
+    + '<p><button type="button" data-lkday="today">Today</button> '
+    + '<button type="button" data-lkday="tomorrow">Tomorrow</button></p>'
+    + '<p>The ' + (L.length || 11) + ' likeliest bets on the board that FanDuel (New York) lists right '
+    + 'now &mdash; moneylines, posted spreads and totals &mdash; one per game, from games that '
+    + 'have not started. Each chance is the same backtested, self-tuning model as the stacks.</p>';
+  if(!L.length){
+    panel.innerHTML = h + '<p class="empty">No FanDuel games left ' + day + '.</p></div>';
+    return;
+  }
+  if(X.preview) h += '<p class="note"><b>Preview.</b> Today&rsquo;s card is set at 8:00 AM '
+    + 'Eastern and then stays the same all day; until then this shows what it would be now.</p>';
+  if(X.set) h += '<p class="note">Card set at 8:00 AM Eastern for ' + esc(X.day)
+    + '. Results fill in as games finish.</p>';
+  if(L.length < 11) h += '<p class="note">Only ' + L.length + ' FanDuel games qualify '
+    + day + ', so ' + L.length + ' legs, not 11.</p>';
+  h += '<div class="ptk"><div class="hd"><span>' + L.length + ' legs</span>'
+    + '<span>all hit ' + (100 * X.prob).toFixed(1) + '%</span>'
+    + '<span>fair ' + X.fair.toFixed(2) + 'x</span></div><ol>'
+    + L.map(x => '<li><b>' + esc(x.label) + '</b> <span style="color:var(--ink-dim)">'
+        + esc(x.match) + ' &middot; ' + esc(x.lg || x.league) + (x.tip ? ' &middot; ' + esc(x.tip) : '')
+        + ' &middot; ' + (100 * x.p).toFixed(1) + '%</span>'
+        + (x.status && x.status !== "open"
+            ? ' <b class="' + (x.status === "won" ? "agree" : "fade") + '">' + esc(x.status.toUpperCase())
+              + (x.score ? ' (' + esc(x.score) + ')' : '') + '</b>'
+            : legBtns(null, fdOne(x.fd)))
+        + '</li>').join("")
+    + '</ol><button type="button" data-lkcopy="' + day + '">Copy all legs</button></div>'
+    + '<p class="note">Tap <b>+ FanDuel</b> on each leg in turn: FanDuel keeps them in one slip, '
+    + 'then choose <b>Parlay</b>. Every leg is likely; all ' + L.length + ' together hit '
+    + (100 * X.prob).toFixed(0) + '% of the time &mdash; a lock each, not a lock together. '
+    + 'Fewer legs hit far more often: the top 3 alone hit '
+    + (100 * L.slice(0, 3).reduce((a, x) => a * x.p, 1)).toFixed(0) + '%.</p>';
+  if(R.legs){
+    h += '<h3>How locks have done</h3><p>' + R.won + ' of ' + R.legs + ' graded locks won ('
+      + (100 * R.won / R.legs).toFixed(1) + '%) against ' + R.said + '% promised.</p>'
+      + '<table class="mk"><thead><tr><th>Day</th><th class="num">Won</th><th class="num">Lost</th>'
+      + '<th class="num">Open</th><th>All hit?</th></tr></thead><tbody>'
+      + (R.days || []).map(d => '<tr><td>' + esc(d.day) + '</td><td class="num">' + d.won
+        + '</td><td class="num">' + d.lost + '</td><td class="num">' + (d.open + d.void)
+        + '</td><td>' + (d.open ? 'pending' : (d.all_hit ? 'yes' : 'no')) + '</td></tr>').join("")
+      + '</tbody></table>';
+  } else {
+    h += '<p class="note">Every day&rsquo;s locks are recorded and graded; the record shows '
+      + 'here once the first games finish.</p>';
+  }
+  panel.innerHTML = h + '</div>';
+}
 function propTuningHTML(){
   const T = D.props_tuning || {};
   const ks = Object.keys(T);
@@ -1055,13 +1119,16 @@ function drawCard(slot){
     + '</tbody></table>';
 }
 
-["today","tomorrow","card","stacks","markets","props","results","bot"].forEach(s => {
+["today","tomorrow","locks","card","stacks","markets","props","results","bot"].forEach(s => {
   const b = document.createElement("button");
   b.setAttribute("aria-pressed", String(s === slot));
   const R = D.results || {};
   if(s === "results"){
     b.innerHTML = "Results" + '<span class="dnum">'
       + (R.graded ? R.won + "-" + R.lost : "0-0") + '</span>';
+  } else if(s === "locks"){
+    const L = ((D.locks || {}).today || {}).locks || [];
+    b.innerHTML = "Locks" + '<span class="dnum">' + L.length + ' FanDuel</span>';
   } else if(s === "bot"){
     b.innerHTML = "Bot" + '<span class="dnum">Kalshi</span>';
   } else if(s === "props"){
@@ -1475,6 +1542,15 @@ document.addEventListener("click", e => {
   const sh = e.target.closest("[data-share]");
   if(sh){ const o = ticketFrom(sh.getAttribute("data-share")); if(o) shareTicket(o, sh); return; }
   if(e.target.id === "shareslip"){ shareTicket(slipTicket(), e.target); return; }
+  const lkd = e.target.closest("[data-lkday]");
+  if(lkd){ LKDAY = lkd.getAttribute("data-lkday"); render(); return; }
+  const lkc = e.target.closest("[data-lkcopy]");
+  if(lkc){
+    const L = (((D.locks || {})[lkc.getAttribute("data-lkcopy")] || {}).locks) || [];
+    copyText("Locks\n" + L.map((x, i) => (i + 1) + ". " + x.label + "  (" + x.match + ")").join("\n"),
+             lkc, "Copied");
+    return;
+  }
   const pd = e.target.closest("[data-pday]");
   if(pd){ PRDAY = pd.getAttribute("data-pday"); render(); return; }
   const md = e.target.closest("[data-mday]");

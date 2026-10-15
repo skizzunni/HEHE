@@ -31,6 +31,7 @@ import fanduel                 # noqa: E402
 import kalshi                  # noqa: E402
 import player_props            # noqa: E402
 import props_ledger             # noqa: E402
+import locks                    # noqa: E402
 
 
 def snapshot():
@@ -211,6 +212,25 @@ def snapshot():
     except Exception:
         import traceback
         sys.stderr.write("stacks failed -- board still rebuilt:\n")
+        traceback.print_exc()
+    # The day's locks: the 11 likeliest bets FanDuel lists, one per game
+    try:
+        out["locks"] = {s_: locks.build(d._STATE["slots"].get(s_), SOCCER, labels, FD)
+                        for s_ in ("today", "tomorrow")}
+        locks.grade(ledger._final)
+        if locks.card_time():
+            # from 8:00 AM Eastern the day's card is set and shown as recorded
+            locks.record(out["locks"]["today"], d._STATE["dates"][0])
+            out["locks"]["today"] = locks.frozen(d._STATE["dates"][0])
+        else:
+            out["locks"]["today"]["preview"] = True
+        out["locks_record"] = locks.report()
+        lk = out["locks"]["today"]
+        print(f'locks: {len(lk["locks"])} of {lk["available"]} FanDuel games, '
+              f'all-hit chance {100 * lk["prob"]:.1f}%', file=sys.stderr)
+    except Exception:
+        import traceback
+        sys.stderr.write("locks failed -- board still rebuilt:\n")
         traceback.print_exc()
     try:
         out["markets"] = stacks.markets(d._STATE["slots"], SOCCER, labels)

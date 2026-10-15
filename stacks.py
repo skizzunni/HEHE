@@ -673,7 +673,8 @@ def markets(slots, soccer_keys, labels=None):
 
 
 # ---------------------------------------------------------------- tickets
-def candidates(board_slot, soccer_keys, labels=None, extra=None, keep=None):
+def candidates(board_slot, soccer_keys, labels=None, extra=None, keep=None,
+               band=None):
     """All legs worth stacking, grouped by game, best first.
 
     `extra(league, row, game)` may add (group, label, spec) legs -- the lines
@@ -707,7 +708,8 @@ def candidates(board_slot, soccer_keys, labels=None, extra=None, keep=None):
                 if p is None:
                     continue
                 q = haircut(p, league)
-                if LEG_MIN <= q <= LEG_MAX:
+                lo, hi = band or (LEG_MIN, LEG_MAX)
+                if lo <= q <= hi:
                     legs.append(dict(group=group, label=label, spec=spec,
                                      p_model=round(p, 4), p=round(q, 4)))
             if not legs:
