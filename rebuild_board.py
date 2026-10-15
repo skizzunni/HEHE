@@ -230,6 +230,9 @@ def snapshot():
         lk = out["locks"]["today"]
         print(f'locks: {len(lk["locks"])} of {lk["available"]} FanDuel games, '
               f'all-hit chance {100 * lk["prob"]:.1f}%', file=sys.stderr)
+        for L_ in lk["locks"]:
+            print(f'   lock {100 * L_["p"]:5.1f}%  {L_["label"]:<40} {str(L_.get("price") or ""):>7}  '
+                  f'{L_.get("lg") or L_.get("league")}  {L_["match"]}', file=sys.stderr)
     except Exception:
         import traceback
         sys.stderr.write("locks failed -- board still rebuilt:\n")
