@@ -401,7 +401,7 @@ const pretty = s => s.slice(4,6).replace(/^0/,"") + "/" + s.slice(6).replace(/^0
 const esc = s => (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;");
 
 function buildTabs(){
-  if(slot === "results" || slot === "card"){
+  if(slot === "results" || slot === "card" || slot === "stacks"){
     tabs.innerHTML = ""; tabs.hidden = true; return;
   }
   tabs.innerHTML = "";
@@ -457,6 +457,10 @@ function renderView(){
   if(slot === "results"){
     tabs.hidden = true; how.hidden = true;   // that note explains the board, not this
     return renderResults();
+  }
+  if(slot === "stacks"){
+    tabs.hidden = true; how.hidden = true;
+    return drawStacks();
   }
   if(slot === "card"){
     tabs.hidden = true; how.hidden = true;
@@ -552,6 +556,70 @@ function loadParlay(key){
   SLIP.length = 0;
   t.legs.forEach(L => { const r = rowFor(L.lgk + "|" + L.pick); if(r) SLIP.push(r); });
   render(); drawSlip();
+}
+// Stacks, built by stacks.py: long tickets of high-probability legs, each
+// priced from the game's moneyline, spread and total.
+let STACKDAY = null;
+function stackText(t){
+  return t.legs.map((L, i) => (i + 1) + ". " + L.label + "  (" + L.match + ", "
+    + L.lg + ")").join("\n")
+    + "\n\n" + t.n + " legs \u00b7 hits " + (100 * t.prob).toFixed(1)
+    + "% \u00b7 fair payout " + t.fair.toFixed(2) + "x";
+}
+function drawStacks(){
+  const S = D.stacks || {};
+  const has = d => Object.values(((S[d] || {}).tickets) || {}).some(v => v.length);
+  const day = STACKDAY || (has("today") ? "today" : "tomorrow");
+  const R = D.stacks_record || {};
+  const st = S[day] || {};
+  const sizes = Object.keys(st.tickets || {}).map(Number).sort((a, b) => a - b);
+  let html = '<div class="parlays"><h3>Stacks \u2014 ' + (day === "today" ? "today" : "tomorrow")
+    + '</h3>'
+    + '<p>Built like the big Kalshi combos: many legs that are each likely '
+    + '(alt totals, \u201cNo \u00b7 X wins by over N\u201d, Over 0.5 goals), '
+    + 'priced from each game\u2019s moneyline, spread and total. '
+    + (st.games || 0) + ' games had prices to build from. '
+    + '<b>Fair payout</b> is what the ticket should pay if the odds are right '
+    + '\u2014 only buy it where Kalshi pays <b>more</b> than that. Lines on '
+    + 'Kalshi can differ by a point; use the closest one on the safe side.</p>'
+    + '<p><button type="button" data-sday="today">Today</button> '
+    + '<button type="button" data-sday="tomorrow">Tomorrow</button></p>';
+  if(R.legs){
+    html += '<p><b>Track record:</b> ' + R.legs_won + ' of ' + R.legs
+      + ' graded legs hit (' + (100 * R.legs_won / R.legs).toFixed(1) + '%). '
+      + (R.tickets || []).map(x => x.n + '-leg ' + x.won + '/' + x.played
+          + ' (expected ' + x.expected + ')').join(' \u00b7 ') + '</p>';
+  } else {
+    html += '<p><b>Track record:</b> none graded yet \u2014 every leg is '
+      + 'logged and graded from final scores, so this fills in daily.</p>';
+  }
+  if(!sizes.length) html += '<p>No stacks for this day yet \u2014 lines usually post the night before.</p>';
+  sizes.forEach(n => {
+    (st.tickets[n] || []).forEach((t, i) => {
+      html += '<div class="ptk"><div class="hd"><span>' + t.n + ' legs</span>'
+        + '<span>hits ' + (100 * t.prob).toFixed(1) + '%</span>'
+        + '<span>fair ' + t.fair.toFixed(2) + 'x</span>'
+        + '<span>$10 \u2192 $' + (10 * t.fair).toFixed(2) + '</span></div><ul>'
+        + t.legs.map(L => '<li>' + esc(L.label) + ' <span style="color:var(--ink-dim)">'
+            + esc(L.match) + ' &middot; ' + esc(L.lg) + ' &middot; '
+            + (100 * L.p).toFixed(1) + '%</span></li>').join("")
+        + '</ul><button type="button" data-stack="' + day + '|' + n + '|' + i
+        + '">Copy ticket</button><pre class="fanslip" hidden></pre></div>';
+    });
+  });
+  html += '<p>A 20-leg ticket of 90% legs still loses 88% of the time. Stake '
+    + 'it like a long shot, because it is one.</p></div>';
+  panel.innerHTML = html;
+}
+function copyStack(btn){
+  const [d, n, i] = btn.getAttribute("data-stack").split("|");
+  const t = (((D.stacks || {})[d] || {}).tickets || {})[n][+i];
+  const txt = stackText(t), pre = btn.nextElementSibling;
+  const show = () => { pre.textContent = txt; pre.hidden = false; };
+  try {
+    navigator.clipboard.writeText(txt).then(() => { btn.textContent = "Copied"; },
+                                            show);
+  } catch (e) { show(); }
 }
 function drawCard(slot){
   const panel = document.getElementById("panel");
@@ -650,13 +718,17 @@ function drawCard(slot){
     + '</tbody></table>';
 }
 
-["today","tomorrow","card","results"].forEach(s => {
+["today","tomorrow","card","stacks","results"].forEach(s => {
   const b = document.createElement("button");
   b.setAttribute("aria-pressed", String(s === slot));
   const R = D.results || {};
   if(s === "results"){
     b.innerHTML = "Results" + '<span class="dnum">'
       + (R.graded ? R.won + "-" + R.lost : "0-0") + '</span>';
+  } else if(s === "stacks"){
+    const st = (D.stacks || {}).today || {};
+    const k = Object.values(st.tickets || {}).reduce((a, v) => a + v.length, 0);
+    b.innerHTML = "Stacks" + '<span class="dnum">' + k + ' tickets</span>';
   } else if(s === "card"){
     // how many legs carry a measured rate, across whichever slate is live
     const pick = Object.values(D.slots.today || {})
@@ -924,6 +996,10 @@ document.addEventListener("click", e => {
     render();
     return;
   }
+  const sk = e.target.closest("[data-stack]");
+  if(sk){ copyStack(sk); return; }
+  const sd = e.target.closest("[data-sday]");
+  if(sd){ STACKDAY = sd.getAttribute("data-sday"); render(); return; }
   const pl = e.target.closest("[data-parlay]");
   if(pl){ loadParlay(pl.getAttribute("data-parlay")); return; }
   const x = e.target.closest("[data-x]");

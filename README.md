@@ -2090,3 +2090,30 @@ Two fixes came with it:
 Player props beyond the WNBA, "both teams to score" and totals are not
 modelled. A pick in one of those markets would be a guess, so the board
 doesn't make one.
+
+## stacks.py — daily long tickets of high-probability legs (2026-10-15)
+
+The winning Kalshi combos people post aren't built from picks. They stack
+legs that are each likely: Over 0.5/1.5 goals, NHL Over 3.5, "No · X wins by
+over 2.5", college totals set 10+ points under the book's number. A 23-leg
+ticket paying 16x works out to about 89% a leg.
+
+`stacks.py` builds those every day, on the **Stacks** tab:
+
+- each game's moneyline, spread and total are turned into a full score
+  distribution (Poisson rates for hockey and soccer, normals for football and
+  basketball), and any alternate line is read off it;
+- a same-game pair is priced jointly from that distribution;
+- every leg's miss chance is inflated 30% for safety (Poisson misses NHL
+  empty-net blowouts; normals miss fat tails);
+- legs are kept between 82% and 94%, closest to 90% preferred, because 97%
+  legs pay almost nothing;
+- 2, 3, 4, 6, 8, 10, 15 and 20-leg tickets, three different ones per size;
+- each ticket shows its **fair payout**. Kalshi paying more than that is a
+  good price, less is a bad one.
+
+Every leg and ticket is logged to `stacks.json` and graded from final scores.
+The tab shows the running hit rate, and `python3 stacks.py report` shows the
+calibration by probability band. That record is the only real test of the
+model. Until a few hundred legs have settled, the probabilities are the
+model's estimate, not a measured rate.

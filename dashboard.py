@@ -269,6 +269,51 @@ def raw_prices(comp, ways):
     return None
 
 
+def market_lines(comp):
+    """Total, spread and favourite from the odds block, for stacks.py.
+
+    ESPN's `spread` sign convention is not something to trust blind, so the
+    favourite comes from the explicit `favorite` flags (or the moneyline) and
+    only the spread's size is used.
+    """
+    full = {x.get("homeAway"): ((x.get("team") or x.get("athlete") or {})
+                                .get("displayName"))
+            for x in comp.get("competitors") or []}
+    out = dict(home=full.get("home"), away=full.get("away"))
+    for o in comp.get("odds") or []:
+        if not isinstance(o, dict):
+            continue
+        def num(v):
+            try:
+                return float(str(v).lstrip("ouOU"))
+            except (TypeError, ValueError):
+                return None
+        if out.get("total") is None:
+            out["total"] = num(o.get("overUnder"))
+        if out.get("spread") is None:
+            out["spread"] = num(o.get("spread"))
+        if out.get("fav") is None:
+            for side in ("home", "away"):
+                if (o.get(side + "TeamOdds") or {}).get("favorite") is True:
+                    out["fav"] = side
+        tot = o.get("total") or {}
+        for k in ("over", "under"):
+            if out.get(k) is None:
+                for when in ("close", "open"):
+                    v = ((tot.get(k) or {}).get(when) or {}).get("odds")
+                    if v not in (None, "", "OFF"):
+                        out[k] = str(v)
+                        break
+    if out.get("fav") is None:
+        ml = raw_prices(comp, 2)
+        try:
+            a_, h_ = (int(str(x).replace("+", "")) for x in ml)
+            out["fav"] = "home" if h_ < a_ else "away"
+        except (TypeError, ValueError):
+            pass
+    return out
+
+
 def sides(comp):
     out = {}
     for x in comp.get("competitors") or []:
@@ -503,6 +548,7 @@ def collect(key, path, day, mlbctx, mybook=None):
                                     "competitions)")
             best = max(legs, key=lambda L: L["roi"] if L["roi"] is not None else -99) if legs else None
             rows.append(dict(id=f'{key}:{c.get("id")}', label=label,
+                             mkt=market_lines(c),
                              tip=t.strftime("%-I:%M %p"), legs=legs, note=note,
                              mypick=mine.get("pick", ""), myconf=mine.get("conf"),
                              why=mine.get("why", ""), myside=mine.get("side"),

@@ -69,13 +69,13 @@ jobs:
 
       - name: Commit the ledger
         run: |
-          if git diff --quiet -- ledger.json; then
+          if git diff --quiet -- ledger.json stacks.json; then
             echo "ledger unchanged"
             exit 0
           fi
           git config user.name  "board bot"
           git config user.email "board-bot@users.noreply.github.com"
-          git add ledger.json
+          git add ledger.json stacks.json
           git commit -m "Grade the ledger [skip ci]"
           # another run may have landed while this one was fetching feeds
           for i in 1 2 3 4 5; do

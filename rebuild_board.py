@@ -26,6 +26,7 @@ STATE = os.path.join(HERE, ".cache", "last_board.json")
 import dashboard as d          # noqa: E402
 import ledger                  # noqa: E402
 import parlays                 # noqa: E402
+import stacks                  # noqa: E402
 
 
 def snapshot():
@@ -137,6 +138,24 @@ def snapshot():
         out["slots"][slot] = lg
     out["results"] = ledger.board_payload()
     out["parlays"] = parlays.build_all(out)
+    # Stacks: long tickets of high-probability legs (alt totals, "won't win
+    # by N"), priced from each game's moneyline, spread and total. Kept apart
+    # from the picks ledger; every leg is graded in stacks.json.
+    try:
+        labels = {k: lab for k, _, lab in d.LEAGUES}
+        out["stacks"] = stacks.build(d._STATE["slots"], SOCCER, labels)
+        dates = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
+        stacks.record(out["stacks"], dates)
+        stacks.grade(ledger._final)
+        out["stacks_record"] = stacks.report()
+        st = out["stacks"]["today"]
+        print(f'stacks: {st["games"]} games priced today, '
+              + ", ".join(f'{n}-leg x{len(t)}' for n, t in st["tickets"].items()),
+              file=sys.stderr)
+    except Exception:
+        import traceback
+        sys.stderr.write("stacks failed -- board still rebuilt:\n")
+        traceback.print_exc()
     return out
 
 
