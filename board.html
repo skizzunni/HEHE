@@ -880,7 +880,7 @@ function drawLottery(){
         + (x.status && x.status !== "open"
             ? ' <b class="' + (x.status === "won" ? "agree" : "fade") + '">' + esc(x.status.toUpperCase())
               + (x.score ? ' (' + esc(x.score) + ')' : '') + '</b>'
-            : x.kind === "prop" ? ''
+            : x.kind === "prop" ? (x.where ? '<br><span class="note">On FanDuel: ' + esc(x.where) + '</span>' : '')
             : x.where ? '<br><span class="note">On FanDuel: open the game, find <b>' + esc(x.where) + '</b></span>'
             : legBtns(null, fdOne(x.fd)))
         + '</li>').join("")
@@ -955,16 +955,17 @@ function drawProps(){
     props: g.props.filter(x => !q || (x.label + " " + g.match).toLowerCase().includes(q))
   })).filter(g => g.props.length);
   let html = '<div class="parlays"><h3>Props \u2014 ' + day + '</h3>'
-    + '<p>DraftKings player props (yards milestones, anytime scorer, shots, '
-    + 'receptions\u2026). <b>Chance</b> is the book\u2019s price with an assumed 7% '
-    + 'margin taken out \u2014 the book\u2019s opinion, not a model, and '
-    + '<b>not backtested</b>: finished games keep their game lines but not their '
-    + 'prop prices. So every prop on a stack is recorded before the game and graded '
-    + 'from the box score after it, and each league&rsquo;s margin is re-fitted from those '
-    + 'results on every rebuild. NBA and college football props appear when DraftKings posts them.</p>'
+    + '<details class="explain"><summary>Where these come from</summary>'
+    + '<p>Player props from FanDuel (every league it lists: points, rebounds, assists, threes, '
+    + 'passing/rushing/receiving yards, receptions, anytime scorers, shots, hits, strikeouts) and '
+    + 'DraftKings. Where FanDuel prices both sides of a line, <b>Chance</b> is that price with the '
+    + 'margin taken out exactly; one-sided props use the margin each league&rsquo;s graded props have '
+    + 'actually shown. Every recorded prop is graded from the box score and checked in the daily '
+    + 'review; a kind of prop that misses its stated chance is taken off (soccer shots already '
+    + 'were).</p></details>'
     + propTuningHTML()
-    + '<p><button type="button" data-pday="today">Today</button> '
-    + '<button type="button" data-pday="tomorrow">Tomorrow</button> '
+    + '<p><button type="button" data-pday="today" aria-pressed="' + (day === "today") + '">Today</button> '
+    + '<button type="button" data-pday="tomorrow" aria-pressed="' + (day === "tomorrow") + '">Tomorrow</button> '
     + '<input id="prq" placeholder="Filter player, team or market" value="' + esc(PRQ)
     + '" style="font:inherit;padding:4px 8px;max-width:100%"></p>';
   const T = (P[day] || {}).tickets || {};
@@ -977,7 +978,9 @@ function drawProps(){
         + '<span>fair ' + t.fair.toFixed(2) + 'x</span></div><ul>'
         + t.legs.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> '
             + '<span style="color:var(--ink-dim)">' + esc(L.match) + ' &middot; '
-            + (100 * L.p).toFixed(1) + '%</span></li>').join("")
+            + (100 * L.p).toFixed(1) + '%</span>'
+            + (L.where ? '<br><span class="note">On FanDuel: ' + esc(L.where) + '</span>' : '')
+            + '</li>').join("")
         + '</ul><button type="button" data-share="prop|' + day + '|' + n + '|' + i
         + '">Share link</button></div>';
     }));
@@ -989,7 +992,9 @@ function drawProps(){
       + ' &middot; ' + g.props.length + ' props</span></summary>'
       + '<table class="mk"><thead><tr><th>Prop</th><th class="num">Price</th>'
       + '<th class="num">Chance</th></tr></thead><tbody>'
-      + g.props.map(x => '<tr><td>' + esc(x.label) + '</td><td class="num">' + esc(x.price)
+      + g.props.map(x => '<tr><td>' + esc(x.label)
+          + (x.fd ? ' <span class="lgpill">FD</span>' : ' <span class="lgpill">DK</span>')
+          + '</td><td class="num">' + esc(x.price)
           + '</td><td class="num">' + (100 * x.p).toFixed(1) + '%</td></tr>').join("")
       + '</tbody></table></details>';
   });

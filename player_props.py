@@ -198,11 +198,44 @@ def for_slot(board_slot, labels=None, max_games=40):
             for items in raws for x in items]
     who = resolve(refs)
     save_names()
+    # FanDuel's own player props, for every league it lists (fd_props.py);
+    # ESPN's feed only carries football
+    import fanduel
+    import fd_props
+    try:
+        FD = fanduel.load()
+    except Exception:
+        FD = {}
+    fd_jobs = []
+    for league, rows in (board_slot or {}).items():
+        if league not in fd_props.SPORT:
+            continue
+        for row in rows:
+            m = row.get("mkt") or {}
+            g = fanduel.find(FD, league, m.get("away"), m.get("home"))
+            if g:
+                fd_jobs.append((league, row, g))
+    fd_jobs = fd_jobs[:max_games]
+    with ThreadPoolExecutor(max_workers=6) as ex:
+        fd_raw = list(ex.map(lambda j: fd_props.for_game(j[2], j[0]), fd_jobs))
+    fd_by_row = {row["id"]: props for (league, row, g), props in zip(fd_jobs, fd_raw)}
+    for league, row, g in fd_jobs:
+        if row["id"] not in {r["id"] for _, _, r in jobs}:
+            jobs.append((league, row["id"].split(":", 1)[1], row))
+            raws.append([])
     out = []
     for (league, eid, row), items in zip(jobs, raws):
         # keep the page small: the 60 likeliest props worth stacking per game
-        props = [dict(p, gid=row["id"])
-                 for p in parse(items, who, props_ledger.hold(league))
+        merged, seen = [], set()
+        # FanDuel first: the same book the locks and lottery use
+        for p in list(fd_by_row.get(row["id"]) or []) + parse(items, who, props_ledger.hold(league)):
+            k = (props_ledger.norm_name(p["name"]), p["market"], str(p["line"]))
+            if k in seen:
+                continue
+            seen.add(k)
+            merged.append(p)
+        merged.sort(key=lambda o: -o["p"])
+        props = [dict(p, gid=row["id"]) for p in merged
                  if 0.30 <= p["p"] <= 0.97 and props_ledger.offered(league, p["market"])][:60]
         if props:
             out.append(dict(id=row["id"], lg=(labels or {}).get(league, league),

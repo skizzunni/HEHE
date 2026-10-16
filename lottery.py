@@ -140,7 +140,7 @@ def _prop_legs(prop_games, ok_gids):
         lg = g["id"].split(":", 1)[0]
         for P in g.get("props") or []:
             d = decimal(P.get("price"))
-            if not d or not LEG_DEC[0] <= d <= LEG_DEC[1] or not P.get("aid"):
+            if not d or not LEG_DEC[0] <= d <= LEG_DEC[1] or not (P.get("aid") or P.get("name")):
                 continue
             if not props_ledger.gradable(lg, P["market"]):
                 continue
@@ -242,7 +242,9 @@ def build(slot_rows, soccer_keys, labels, FD, prop_games=None, day=None, KB=None
     props = _prop_legs(prop_games, ok)
     tickets = []
     for tier in TIERS:
-        tickets += _tickets(games, "FanDuel", tier) + _tickets(props, "DraftKings", tier)
+        # a parlay is placed at one book: FanDuel props ride with FanDuel lines
+        tickets += (_tickets(games + [P for P in props if P.get("fd")], "FanDuel", tier)
+                    + _tickets([P for P in props if not P.get("fd")], "DraftKings", tier))
     edge = sorted((L for L in games if L["value"] > 1), key=lambda L: -L["value"])
     return dict(tickets=tickets,
                 pool=dict(games=len({L["gid"] for L in games}), props=len(props),
@@ -307,7 +309,7 @@ def grade(final):
                 if L["kind"] == "game":
                     locks.settle(L, final)
                 else:
-                    e = pl.get(f'{L["gid"]}|{L["aid"]}|{L["market"]}|{L["line"]}')
+                    e = pl.get(props_ledger.prop_key(L))
                     if e and e["status"] not in ("open",):
                         L["status"] = "void" if e["status"] == "ungradable" else e["status"]
                         if e.get("value") is not None:

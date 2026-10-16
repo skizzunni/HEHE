@@ -150,6 +150,11 @@ BASKETBALL = {
     "Rebounds": _s("rebounds"), "Total Rebounds": _s("rebounds"),
     "Assists": _s("assists"), "Total Assists": _s("assists"),
     "Threes Made": _s("threePointFieldGoalsMade"),
+    # FanDuel's combination markets
+    "Pts + Reb + Ast": _s("points", "rebounds", "assists"),
+    "Pts + Reb": _s("points", "rebounds"),
+    "Pts + Ast": _s("points", "assists"),
+    "Reb + Ast": _s("rebounds", "assists"),
 }
 # ESPN soccer summaries (rosters[].roster[].stats, probed 2026-10-15) carry
 # goals, assists, shots, shots on target, cards, fouls, saves -- NOT tackles,
@@ -200,9 +205,12 @@ def gradable(league, market):
 
 def won(league, market, line, value):
     """Did `value` clear the prop? Milestones read "50+" (at least 50); plain
-    lines read "0.5" (over); scorer markets carry no line."""
+    lines read "0.5" (over) or "u0.5" (under); scorer markets carry no line."""
     if market in NEED and not line:
         return value >= NEED[market]
+    u = re.match(r"^\s*u\s*(\d+(?:\.\d+)?)\s*$", str(line))
+    if u:
+        return value < float(u.group(1))
     m = re.match(r"^\s*(\d+(?:\.\d+)?)\s*\+\s*$", str(line))
     if m:
         return value >= float(m.group(1))
@@ -227,6 +235,11 @@ def save(book):
         json.dump(book, fh, indent=1, sort_keys=True)
 
 
+def prop_key(L):
+    who = L.get("aid") or "n:" + norm_name(L.get("name"))
+    return f'{L["gid"]}|{who}|{L["market"]}|{L["line"]}'
+
+
 def record(slot, day):
     """Log each leg of the slot's prop stacks once, at the first price seen."""
     book = load()
@@ -237,9 +250,9 @@ def record(slot, day):
     for tickets in ((slot or {}).get("tickets") or {}).values():
         for t in tickets:
             for L in t["legs"]:
-                if not L.get("gid") or not L.get("aid"):
+                if not L.get("gid") or not (L.get("aid") or L.get("name")):
                     continue
-                key = f'{L["gid"]}|{L["aid"]}|{L["market"]}|{L["line"]}'
+                key = prop_key(L)
                 if key in book:
                     continue
                 league = L["gid"].split(":", 1)[0]
@@ -280,8 +293,14 @@ def summary(league, eid):
     return {"completed": False}
 
 
+def norm_name(n):
+    n = re.sub(r"[^a-z ]", "", (n or "").lower().replace("-", " "))
+    return " ".join(w for w in n.split() if w not in ("jr", "sr", "ii", "iii", "iv"))
+
+
 def box_stats(sm):
-    """athlete id -> {'group.key': number, 'key': number}"""
+    """athlete id -> {'group.key': number, 'key': number}; also
+    'name:<normalised name>' -> the same dict, for props keyed by name."""
     out = {}
     # soccer: per-player stats under rosters; a squad player who never came
     # on (appearances 0) did not play, so he is left out and the prop voids
@@ -292,6 +311,9 @@ def box_stats(sm):
                   if isinstance(x.get("value"), (int, float))}
             if aid and st.get("appearances"):
                 out[aid] = st
+                nm = norm_name((pl.get("athlete") or {}).get("displayName"))
+                if nm:
+                    out["name:" + nm] = st
     for team in ((sm or {}).get("boxscore") or {}).get("players") or []:
         for grp in team.get("statistics") or []:
             g = grp.get("name") or ""
@@ -301,6 +323,9 @@ def box_stats(sm):
                 if not aid:
                     continue
                 st = out.setdefault(aid, {})
+                nm = norm_name((a.get("athlete") or {}).get("displayName"))
+                if nm:
+                    out.setdefault("name:" + nm, st)
                 for k, v in zip(keys, a.get("stats") or []):
                     # "hits-atBats" = "1-3", "completions/passingAttempts" =
                     # "12/19": one stat per part
@@ -337,7 +362,8 @@ def grade():
             continue
         stats = box_stats(sm)
         for e in es:
-            st = stats.get(str(e["aid"]))
+            st = (stats.get(str(e["aid"])) if e.get("aid")
+                  else stats.get("name:" + norm_name(e.get("name"))))
             if st is None:
                 e["status"] = "void"            # did not play: books void these
                 continue
