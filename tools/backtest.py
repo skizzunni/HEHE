@@ -203,6 +203,10 @@ def fit_miss(rows):
     return (act / pred) if pred > 0 else None
 
 
+BASE_TARGET = (S.TARGET, S.LEG_MAX)
+TARGET_TRIALS = [(0.90, 0.94), (0.92, 0.96), (0.94, 0.975)]
+
+
 def main():
     report = dict(run=TODAY.isoformat(), sports={})
     for key, sport, league, wins in WINDOWS:
@@ -263,11 +267,27 @@ def main():
         # tickets on the holdout days, built exactly as the board builds them
         S.MISS_BY_SPORT[S.sport_of(key)] = k
         tk = defaultdict(lambda: [0, 0, 0.0])
+        trials = defaultdict(lambda: [0, 0, 0.0, 0.0])
         for d, games_d in sorted(per_day.items()):
             slot = {key: [r for r, _, _ in games_d]}
             score = {r["id"]: (hs, as_) for r, hs, as_ in games_d}
             cands = S.candidates(slot, set() if key in S.SD_MARGIN or key in S.POISSON
                                  or key in S.NEGBIN else {key})
+            # the 10-leg ticket with legs aimed at different strengths: how
+            # often each won on these unseen days, and what it paid
+            for tgt, top in TARGET_TRIALS:
+                S.TARGET, S.LEG_MAX = tgt, top
+                c2 = S.candidates(slot, set() if key in S.SD_MARGIN or key in S.POISSON
+                                  or key in S.NEGBIN else {key})
+                for t in S.build_tickets(c2, tiers=(10,)).get(10, []):
+                    ok = all(S.predicate(L["spec"], L["home"], L["away"])(*score[L["gid"]])
+                             for L in t["legs"])
+                    x = trials[(tgt, top)]
+                    x[0] += 1
+                    x[1] += ok
+                    x[2] += t["prob"]
+                    x[3] += t["fair"] or 0
+            S.TARGET, S.LEG_MAX = BASE_TARGET
             for n, tickets in S.build_tickets(cands, tiers=(2, 3, 4, 6, 8, 10)).items():
                 for t in tickets:
                     ok = all(S.predicate(L["spec"], L["home"], L["away"])(*score[L["gid"]])
@@ -285,7 +305,11 @@ def main():
             markets={grp: dict(zip(("calibration", "brier"), summarise(v)))
                      for grp, v in by_group.items()},
             tickets=[dict(size=n, played=v[0], won=v[1], expected=round(v[2], 1))
-                     for n, v in sorted(tk.items())])
+                     for n, v in sorted(tk.items())],
+            ten_leg_trials=[dict(target=t, leg_max=m, played=v[0], won=v[1],
+                                 expected=round(v[2], 1),
+                                 avg_fair=round(v[3] / v[0], 2) if v[0] else None)
+                            for (t, m), v in sorted(trials.items())])
         r = report["sports"][key]
         print(f"\n===== {key}: {r['games']} games, miss factor fitted {k}")
         print("  stack legs, HOLDOUT, after haircut:")
@@ -295,6 +319,9 @@ def main():
         print("  tickets, HOLDOUT:")
         for t in r["tickets"]:
             print(f"    {t['size']:>2}-leg  won {t['won']}/{t['played']}  expected {t['expected']}")
+        for t in r["ten_leg_trials"]:
+            print(f"    10-leg aimed {t['target']}: won {t['won']}/{t['played']}  "
+                  f"expected {t['expected']}  pays ~{t['avg_fair']}x")
         sys.stdout.flush()
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w") as fh:
