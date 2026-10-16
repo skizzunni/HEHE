@@ -127,6 +127,8 @@ def record(state=None):
                     continue                      # already settled, never rewrite
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)
+                if r.get("dc"):
+                    leg = None        # "or draw": the straight price is not this bet's
                 entry = dict(league=lg, pick=r["mypick"], matchup=r["label"],
                              conf=round((r["myconf"] or 0) * 100, 1),
                              why=r.get("why", ""), tip=r.get("tip"),
@@ -142,6 +144,7 @@ def record(state=None):
                              p_model_away=r.get("p_model_away"),
                              p_market_away=r.get("p_market_away"),
                              myside=r.get("myside"),
+                             dc=bool(r.get("dc")),
                              status="open", logged=dt.datetime.now(ET).isoformat()[:16])
                 # The game's own ET date, so the grader knows where to look.
                 # Without it the grader only searched the last three days, and
@@ -301,7 +304,7 @@ DRAW = "Draw"
 def _settle(e, win):
     """won / lost / push for a pick, given the result's winner (or DRAW)."""
     if win == DRAW:
-        if e.get("pick") == DRAW:
+        if e.get("pick") == DRAW or e.get("dc"):     # "X or draw" wins on a draw
             return "won"
         # a 3-way soccer moneyline loses on a draw; a two-way market (an NFL
         # tie) refunds the stake
@@ -487,7 +490,7 @@ def board_payload(limit=40):
     """
     book = load()
     r, recs = report()
-    live = [dict(league=e["league"], pick=e["pick"], matchup=e.get("matchup", ""),
+    live = [dict(league=e["league"], pick=e["pick"] + (" or draw" if e.get("dc") else ""), matchup=e.get("matchup", ""),
                  state=e.get("live", ""), conf=e.get("conf"),
                  score=e.get("live_score") or {})
             for e in book.values()
@@ -497,7 +500,7 @@ def board_payload(limit=40):
     done = [e for e in book.values() if e.get("status") in ("won", "lost")]
     done.sort(key=lambda e: (e.get("played") or (e.get("settled") or "")[:10],
                              e.get("settled") or e.get("logged") or ""), reverse=True)
-    feed = [dict(league=e["league"], pick=e["pick"], status=e["status"],
+    feed = [dict(league=e["league"], pick=e["pick"] + (" or draw" if e.get("dc") else ""), status=e["status"],
                  conf=e.get("conf"), price=e.get("price"), dog=e.get("dog"),
                  score=e.get("scores") or {},
                  why=(e.get("diagnosis") if e["status"] == "lost"
@@ -512,7 +515,7 @@ def board_payload(limit=40):
     day_of = lambda e: (e.get("played") or e.get("date") or (e.get("settled") or "")[:10]
                         or (e.get("logged") or "")[:10])
     todays = [e for e in done if day_of(e) == today]
-    feed_today = [dict(league=e["league"], pick=e["pick"], status=e["status"],
+    feed_today = [dict(league=e["league"], pick=e["pick"] + (" or draw" if e.get("dc") else ""), status=e["status"],
                        conf=e.get("conf"), price=e.get("price"), dog=e.get("dog"),
                        score=e.get("scores") or {},
                        why=(e.get("diagnosis") if e["status"] == "lost" else e.get("why") or ""),

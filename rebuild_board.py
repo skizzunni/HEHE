@@ -111,10 +111,16 @@ def snapshot():
                 # join the price to my side; legs are keyed away/home, picks by name
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)
+                if r.get("dc"):
+                    leg = None        # "or draw": the straight price is not this bet's
                 mc = round(r["myconf"] * 100, 1) if r["myconf"] else None
                 hit, hit_n = blended_hit(k, k in SOCCER, mc, live, r["why"],
                                          bool(leg and leg.get("dog")),
                                          (leg or {}).get("price"))
+                if k in SOCCER and mc is not None:
+                    # soccer's number is now the de-vigged close itself, which
+                    # tools/soccer_lab.py found honest on 1,115 unseen matches
+                    hit, hit_n = mc / 100, 0
                 tk, tl, hide = tier_of(k, mc, hit, bool(leg and leg.get("dog")),
                                        (leg or {}).get("price"))
                 pk, pl = price_note(k, k in SOCCER,
@@ -122,7 +128,8 @@ def snapshot():
                                     bool(leg and leg.get("dog")))
                 ek, el = ev_note(k in SOCCER, mc, (leg or {}).get("price"),
                                  bool(leg and leg.get("dog")))
-                rows.append({"mp": r["mypick"], "t": r["tip"],
+                rows.append({"mp": r["mypick"] + (" or draw" if r.get("dc") else ""),
+                             "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
                              # below the league's cutoff: a lean, not a call
                              "nc": not calls.is_call(k, mc),

@@ -149,6 +149,8 @@ try:
     ANCHOR_W.update({k: float(v) for k, v in (_aw.get("weights") or {}).items()})
 except (OSError, ValueError, TypeError):
     pass
+# a soccer favourite the price gives less than this is called "or draw"
+SOCCER_STRAIGHT = 0.65
 MARKET_PICK = {"ucl", "uel", "uecl"} | {k for k, _, _ in EXTRA_SOCCER}
 
 # Measured on 4,090 real sides of 2,045 completed 2026 MLB games with closing
@@ -645,6 +647,41 @@ def collect(key, path, day, mlbctx, mybook=None):
                         if who:
                             mine = dict(mine, pick=who, side=side_,
                                         conf=max(pa, 1 - pa), p_away=pa)
+            # Soccer (2026-10-16). 214 graded picks hit 47.2% claiming 57.1%;
+            # 61 of 113 losses were draws, and picks against the price hit
+            # 35.7%. tools/soccer_lab.py asked the close on 2,229 league
+            # matches: the de-vigged price is honest (a 65-75% favourite won
+            # 67.6% on the unseen half, 75%+ won 87.1%), but a favourite under
+            # 65% wins outright barely half the time. So the side is the
+            # market's, the model breaks only near-ties, and a favourite the
+            # price gives under SOCCER_STRAIGHT is called "or draw" (double
+            # chance) -- 69.6-80.4% on unseen matches -- instead of a coin flip.
+            draw_leg = next((L for L in legs if L["side"] == "draw"), None)
+            if draw_leg:
+                ha = {L["side"]: L["prob"] for L in legs}
+                if "home" in ha and "away" in ha:
+                    ph, pa_ = ha["home"], ha["away"]
+                    mp = mine.get("conf") if mine.get("side") in ("home", "away") else None
+                    if mp is not None and 0 < mp < 1:
+                        mine_side = mine["side"]
+                        w = ANCHOR_W.get(key, ANCHOR_W_DEFAULT)
+                        if mine_side == "home":
+                            ph = P.anchor(mp, ph, w)
+                        else:
+                            pa_ = P.anchor(mp, pa_, w)
+                    side_ = "home" if ph >= pa_ else "away"
+                    p_out = ha[side_]                        # the price's own number
+                    full = {x.get("homeAway"): (x.get("team") or {}).get("displayName")
+                            for x in c.get("competitors") or []}
+                    who = full.get(side_)
+                    if who:
+                        dc = p_out < SOCCER_STRAIGHT
+                        conf = p_out + draw_leg["prob"] if dc else p_out
+                        mine = dict(pick=who, side=side_, conf=conf, dc=dc,
+                                    why=(f"market {round(100 * p_out)}% to win"
+                                         + (f", {round(100 * conf)}% to win or draw"
+                                            if dc else "")
+                                         + (" · " + mine["why"] if mine.get("why") else "")))
             if key in MARKET_PICK and not mine.get("pick") and legs:
                 fav = max((L for L in legs if L["side"] != "draw"),
                           key=lambda L: L["prob"], default=None)
@@ -661,6 +698,7 @@ def collect(key, path, day, mlbctx, mybook=None):
                              tip=t.strftime("%-I:%M %p"), legs=legs, note=note,
                              mypick=mine.get("pick", ""), myconf=mine.get("conf"),
                              why=mine.get("why", ""), myside=mine.get("side"),
+                             dc=bool(mine.get("dc")),
                              p_model_away=mine.get("p_model_away"),
                              p_market_away=mine.get("p_market_away"),
                              pick=(best["who"] if best else ""),
