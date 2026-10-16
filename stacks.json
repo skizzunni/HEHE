@@ -18,6 +18,39 @@
    },
    "status": "won"
   },
+  "mlb:401908026|No \u00b7 Tampa Bay Rays wins by over 4.5 runs": {
+   "away": "Tampa Bay Rays",
+   "date": "2026-10-16",
+   "home": "Cleveland Guardians",
+   "label": "No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+   "league": "mlb",
+   "logged": "2026-10-16T00:04",
+   "match": "Tampa Bay Rays at Cleveland Guardians",
+   "p": 0.896,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 4.5,
+    "t": "nomargin",
+    "team": "Tampa Bay Rays"
+   },
+   "status": "open"
+  },
+  "mlb:401908026|Under 11.5 runs": {
+   "away": "Tampa Bay Rays",
+   "date": "2026-10-16",
+   "home": "Cleveland Guardians",
+   "label": "Under 11.5 runs",
+   "league": "mlb",
+   "logged": "2026-10-16T00:04",
+   "match": "Tampa Bay Rays at Cleveland Guardians",
+   "p": 0.8911,
+   "p_model": 0.9044,
+   "spec": {
+    "line": 11.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "mlb:401908033|No \u00b7 Milwaukee Brewers wins by over 4.5 runs": {
    "away": "Milwaukee Brewers",
    "date": "2026-10-15",
@@ -35,6 +68,22 @@
     "team": "Milwaukee Brewers"
    },
    "status": "won"
+  },
+  "ncaaf:401858493|Under 67.5 points": {
+   "away": "Washington Huskies",
+   "date": "2026-10-16",
+   "home": "Purdue Boilermakers",
+   "label": "Under 67.5 points",
+   "league": "ncaaf",
+   "logged": "2026-10-16T00:04",
+   "match": "Washington Huskies at Purdue Boilermakers",
+   "p": 0.8816,
+   "p_model": 0.8816,
+   "spec": {
+    "line": 67.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "ncaaf:401860923|No \u00b7 Colorado State Rams wins by over 7.5 points": {
    "away": "Colorado State Rams",
@@ -88,6 +137,55 @@
     "team": "UAB Blazers"
    },
    "status": "won"
+  },
+  "ncaaf:401862801|No \u00b7 Tulane Green Wave wins by over 14.5 points": {
+   "away": "Memphis Tigers",
+   "date": "2026-10-16",
+   "home": "Tulane Green Wave",
+   "label": "No \u00b7 Tulane Green Wave wins by over 14.5 points",
+   "league": "ncaaf",
+   "logged": "2026-10-16T00:04",
+   "match": "Memphis Tigers at Tulane Green Wave",
+   "p": 0.9037,
+   "p_model": 0.9037,
+   "spec": {
+    "line": 14.5,
+    "t": "nomargin",
+    "team": "Tulane Green Wave"
+   },
+   "status": "open"
+  },
+  "ncaaf:401862801|Over 38.5 points": {
+   "away": "Memphis Tigers",
+   "date": "2026-10-16",
+   "home": "Tulane Green Wave",
+   "label": "Over 38.5 points",
+   "league": "ncaaf",
+   "logged": "2026-10-16T00:04",
+   "match": "Memphis Tigers at Tulane Green Wave",
+   "p": 0.8816,
+   "p_model": 0.8816,
+   "spec": {
+    "line": 38.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "ncaaf:401869844|Over 31.5 points": {
+   "away": "App State Mountaineers",
+   "date": "2026-10-16",
+   "home": "Coastal Carolina Chanticleers",
+   "label": "Over 31.5 points",
+   "league": "ncaaf",
+   "logged": "2026-10-16T00:04",
+   "match": "App State Mountaineers at Coastal Carolina Chanticleers",
+   "p": 0.8795,
+   "p_model": 0.8795,
+   "spec": {
+    "line": 31.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "ncaaf:401869950|Over 30.5 points": {
    "away": "Georgia Southern Eagles",
@@ -484,6 +582,72 @@
     "t": "under"
    },
    "status": "open"
+  },
+  "nhl:401892517|No \u00b7 Pittsburgh Penguins wins by over 2.5 goals": {
+   "away": "Pittsburgh Penguins",
+   "date": "2026-10-16",
+   "home": "Colorado Avalanche",
+   "label": "No \u00b7 Pittsburgh Penguins wins by over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-16T00:04",
+   "match": "Pittsburgh Penguins at Colorado Avalanche",
+   "p": 0.9163,
+   "p_model": 0.9187,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Pittsburgh Penguins"
+   },
+   "status": "open"
+  },
+  "nhl:401892517|Over 3.5 goals": {
+   "away": "Pittsburgh Penguins",
+   "date": "2026-10-16",
+   "home": "Colorado Avalanche",
+   "label": "Over 3.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-16T00:04",
+   "match": "Pittsburgh Penguins at Colorado Avalanche",
+   "p": 0.8848,
+   "p_model": 0.8881,
+   "spec": {
+    "line": 3.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892518|No \u00b7 Anaheim Ducks wins by over 2.5 goals": {
+   "away": "Boston Bruins",
+   "date": "2026-10-16",
+   "home": "Anaheim Ducks",
+   "label": "No \u00b7 Anaheim Ducks wins by over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-16T00:04",
+   "match": "Boston Bruins at Anaheim Ducks",
+   "p": 0.8484,
+   "p_model": 0.8528,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Anaheim Ducks"
+   },
+   "status": "open"
+  },
+  "nhl:401892518|Under 9.5 goals": {
+   "away": "Boston Bruins",
+   "date": "2026-10-16",
+   "home": "Anaheim Ducks",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-16T00:04",
+   "match": "Boston Bruins at Anaheim Ducks",
+   "p": 0.902,
+   "p_model": 0.9049,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
   }
  },
  "tickets": {
@@ -847,6 +1011,153 @@
    "logged": "2026-10-15T00:28",
    "n": 8,
    "prob": 0.4322,
+   "status": "open"
+  },
+  "20261016:10:0": {
+   "fair": 3.21,
+   "legs": [
+    "nhl:401892518|Under 9.5 goals",
+    "nhl:401892518|No \u00b7 Anaheim Ducks wins by over 2.5 goals",
+    "ncaaf:401862801|No \u00b7 Tulane Green Wave wins by over 14.5 points",
+    "ncaaf:401862801|Over 38.5 points",
+    "mlb:401908026|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "mlb:401908026|Under 11.5 runs",
+    "nhl:401892517|Over 3.5 goals",
+    "nhl:401892517|No \u00b7 Pittsburgh Penguins wins by over 2.5 goals",
+    "ncaaf:401858493|Under 67.5 points",
+    "ncaaf:401869844|Over 31.5 points"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 10,
+   "prob": 0.3118,
+   "status": "open"
+  },
+  "20261016:2:0": {
+   "fair": 1.23,
+   "legs": [
+    "nhl:401892518|Under 9.5 goals",
+    "ncaaf:401862801|No \u00b7 Tulane Green Wave wins by over 14.5 points"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 2,
+   "prob": 0.8152,
+   "status": "open"
+  },
+  "20261016:2:1": {
+   "fair": 1.26,
+   "legs": [
+    "mlb:401908026|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "nhl:401892517|Over 3.5 goals"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 2,
+   "prob": 0.7928,
+   "status": "open"
+  },
+  "20261016:2:2": {
+   "fair": 1.29,
+   "legs": [
+    "ncaaf:401858493|Under 67.5 points",
+    "ncaaf:401869844|Over 31.5 points"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 2,
+   "prob": 0.7754,
+   "status": "open"
+  },
+  "20261016:3:0": {
+   "fair": 1.37,
+   "legs": [
+    "nhl:401892518|Under 9.5 goals",
+    "ncaaf:401862801|No \u00b7 Tulane Green Wave wins by over 14.5 points",
+    "mlb:401908026|No \u00b7 Tampa Bay Rays wins by over 4.5 runs"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 3,
+   "prob": 0.7304,
+   "status": "open"
+  },
+  "20261016:3:1": {
+   "fair": 1.46,
+   "legs": [
+    "nhl:401892517|Over 3.5 goals",
+    "ncaaf:401858493|Under 67.5 points",
+    "ncaaf:401869844|Over 31.5 points"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 3,
+   "prob": 0.6861,
+   "status": "open"
+  },
+  "20261016:4:0": {
+   "fair": 1.55,
+   "legs": [
+    "nhl:401892518|Under 9.5 goals",
+    "ncaaf:401862801|No \u00b7 Tulane Green Wave wins by over 14.5 points",
+    "mlb:401908026|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "nhl:401892517|Over 3.5 goals"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 4,
+   "prob": 0.6463,
+   "status": "open"
+  },
+  "20261016:4:1": {
+   "fair": 1.58,
+   "legs": [
+    "ncaaf:401858493|Under 67.5 points",
+    "ncaaf:401869844|Over 31.5 points",
+    "nhl:401892518|Under 9.5 goals",
+    "ncaaf:401862801|No \u00b7 Tulane Green Wave wins by over 14.5 points"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 4,
+   "prob": 0.6321,
+   "status": "open"
+  },
+  "20261016:4:2": {
+   "fair": 1.63,
+   "legs": [
+    "mlb:401908026|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "nhl:401892517|Over 3.5 goals",
+    "ncaaf:401858493|Under 67.5 points",
+    "ncaaf:401869844|Over 31.5 points"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 4,
+   "prob": 0.6147,
+   "status": "open"
+  },
+  "20261016:6:0": {
+   "fair": 2.0,
+   "legs": [
+    "nhl:401892518|Under 9.5 goals",
+    "ncaaf:401862801|No \u00b7 Tulane Green Wave wins by over 14.5 points",
+    "mlb:401908026|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "nhl:401892517|Over 3.5 goals",
+    "ncaaf:401858493|Under 67.5 points",
+    "ncaaf:401869844|Over 31.5 points"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 6,
+   "prob": 0.5011,
+   "status": "open"
+  },
+  "20261016:8:0": {
+   "fair": 2.65,
+   "legs": [
+    "nhl:401892518|Under 9.5 goals",
+    "nhl:401892518|No \u00b7 Anaheim Ducks wins by over 2.5 goals",
+    "ncaaf:401862801|No \u00b7 Tulane Green Wave wins by over 14.5 points",
+    "ncaaf:401862801|Over 38.5 points",
+    "mlb:401908026|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "nhl:401892517|Over 3.5 goals",
+    "ncaaf:401858493|Under 67.5 points",
+    "ncaaf:401869844|Over 31.5 points"
+   ],
+   "logged": "2026-10-16T00:04",
+   "n": 8,
+   "prob": 0.3776,
    "status": "open"
   }
  }
