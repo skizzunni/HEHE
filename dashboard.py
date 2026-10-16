@@ -360,9 +360,13 @@ def market_lines(comp):
             for x in comp.get("competitors") or []}
     abbr = {x.get("homeAway"): ((x.get("team") or {}).get("abbreviation"))
             for x in comp.get("competitors") or []}
+    ven = comp.get("venue") or {}
+    addr = ven.get("address") or {}
     out = dict(home=full.get("home"), away=full.get("away"),
                home_abbr=abbr.get("home"), away_abbr=abbr.get("away"),
-               start=comp.get("date") or comp.get("startDate"))
+               start=comp.get("date") or comp.get("startDate"),
+               # for weather.py: where the game is played, and whether indoors
+               city=addr.get("city"), state=addr.get("state"), indoor=ven.get("indoor"))
     for o in comp.get("odds") or []:
         if not isinstance(o, dict):
             continue

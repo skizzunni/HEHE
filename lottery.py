@@ -122,7 +122,12 @@ def _game_legs(rows, soccer_keys, labels, FD, KB=None):
             # Kalshi's traders where they price the line; otherwise FanDuel's
             # own price less its margin. Either way, corrected by price band.
             p_mkt = pk if pk and 0.01 < pk < 0.99 else (1 / d) / FD_HOLD
-            p = round(market_chance(p_mkt), 4)
+            p = market_chance(p_mkt)
+            if L["spec"].get("t") in ("over", "under"):
+                import weather
+                p += weather.adjust(g["league"], (by_id.get(g["gid"]) or {}).get("mkt") or {},
+                                    L["spec"]["t"])
+            p = round(min(0.99, max(0.01, p)), 4)
             out.append(dict(kind="game", gid=g["gid"], league=g["league"], lg=g["lg"],
                             match=g["match"], home=g["home"], away=g["away"], tip=g.get("tip"),
                             label=L["label"], spec=L["spec"], p=p, p_model=L["p"], p_kalshi=pk,

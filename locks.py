@@ -200,6 +200,12 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
             if not ref or not d or not DEC_MIN <= d <= DEC_MAX:
                 continue
             pm = _market_p(price)
+            if pm and L["spec"].get("t") in ("over", "under"):
+                # kickoff wind on football totals (weather.py, tested both halves)
+                import weather
+                row_ = next((r for rs in rows.values() for r in rs if r["id"] == g["gid"]), {})
+                pm = min(0.99, max(0.01, pm + weather.adjust(g["league"], row_.get("mkt") or {},
+                                                             L["spec"]["t"])))
             if pm and (best is None or pm > best["p"]):
                 best = dict(L, fd=ref, price=price, where=where, p=pm)
         if best:
