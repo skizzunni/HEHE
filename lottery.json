@@ -544,6 +544,153 @@
      "tier": "100"
     }
    ]
+  },
+  "2026-10-16": {
+   "tickets": [
+    {
+     "base": 78,
+     "book": "FanDuel",
+     "boost": 0,
+     "legs": [
+      {
+       "away": "Washington Huskies",
+       "date": "2026-10-16",
+       "dec": 1.676,
+       "fd": "736.191035214:12194313",
+       "gid": "ncaaf:401858493",
+       "home": "Purdue Boilermakers",
+       "kind": "game",
+       "label": "Under 52.5 points",
+       "league": "ncaaf",
+       "lg": "NCAA FB",
+       "match": "Washington Huskies at Purdue Boilermakers",
+       "p": 0.6303,
+       "p_kalshi": 0.585,
+       "p_market": 0.585,
+       "p_model": 0.5549,
+       "price": "-148",
+       "spec": {
+        "line": 52.5,
+        "t": "under"
+       },
+       "status": "open",
+       "tip": "8:00 PM",
+       "value": 1.0562,
+       "where": "Alternate Total Points: Under (52.5)"
+      },
+      {
+       "away": "Memphis Tigers",
+       "date": "2026-10-16",
+       "dec": 2.8,
+       "fd": "736.191034721:12197195",
+       "gid": "ncaaf:401862801",
+       "home": "Tulane Green Wave",
+       "kind": "game",
+       "label": "Over 61.5 points",
+       "league": "ncaaf",
+       "lg": "NCAA FB",
+       "match": "Memphis Tigers at Tulane Green Wave",
+       "p": 0.3538,
+       "p_kalshi": 0.345,
+       "p_market": 0.345,
+       "p_model": 0.3243,
+       "price": "+180",
+       "spec": {
+        "line": 61.5,
+        "t": "over"
+       },
+       "status": "open",
+       "tip": "7:30 PM",
+       "value": 0.9906,
+       "where": "Alternate Total Points: Over (61.5)"
+      },
+      {
+       "away": "Tampa Bay Rays",
+       "date": "2026-10-16",
+       "dec": 3.0,
+       "fd": "736.191680846:43549812",
+       "gid": "mlb:401908026",
+       "home": "Cleveland Guardians",
+       "kind": "game",
+       "label": "Cleveland Guardians -1.5",
+       "league": "mlb",
+       "lg": "MLB",
+       "match": "Tampa Bay Rays at Cleveland Guardians",
+       "p": 0.3271,
+       "p_kalshi": null,
+       "p_market": 0.319,
+       "p_model": 0.2179,
+       "price": "+200",
+       "spec": {
+        "line": -1.5,
+        "t": "spread",
+        "team": "Cleveland Guardians"
+       },
+       "status": "open",
+       "tip": "8:00 PM",
+       "value": 0.9813,
+       "where": "Alternate Run Lines: Cleveland Guardians -1.5"
+      },
+      {
+       "away": "Pittsburgh Penguins",
+       "date": "2026-10-16",
+       "dec": 2.92,
+       "fd": "736.191803034:8359769",
+       "gid": "nhl:401892517",
+       "home": "Colorado Avalanche",
+       "kind": "game",
+       "label": "Pittsburgh Penguins over 3.5 goals",
+       "league": "nhl",
+       "lg": "NHL",
+       "match": "Pittsburgh Penguins at Colorado Avalanche",
+       "p": 0.3361,
+       "p_kalshi": null,
+       "p_market": 0.3277,
+       "p_model": 0.3129,
+       "price": "+192",
+       "spec": {
+        "line": 3.5,
+        "t": "teamover",
+        "team": "Pittsburgh Penguins"
+       },
+       "status": "open",
+       "tip": "9:00 PM",
+       "value": 0.9814,
+       "where": "Pittsburgh Penguins Alt Total Goals: Over 3.5"
+      },
+      {
+       "away": "Boston Bruins",
+       "date": "2026-10-16",
+       "dec": 1.909,
+       "fd": "736.190616933:25596",
+       "gid": "nhl:401892518",
+       "home": "Anaheim Ducks",
+       "kind": "game",
+       "label": "Boston Bruins to win",
+       "league": "nhl",
+       "lg": "NHL",
+       "match": "Boston Bruins at Anaheim Ducks",
+       "p": 0.5096,
+       "p_kalshi": 0.505,
+       "p_market": 0.505,
+       "p_model": 0.5023,
+       "price": "-110",
+       "spec": {
+        "t": "win",
+        "team": "Boston Bruins"
+       },
+       "status": "open",
+       "tip": "10:00 PM",
+       "value": 0.9729,
+       "where": null
+      }
+     ],
+     "odds": 80,
+     "pays": 78,
+     "prob": 0.01249348534248679,
+     "tier": "100"
+    }
+   ]
   }
  }
 }
