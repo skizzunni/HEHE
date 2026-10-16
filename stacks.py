@@ -66,6 +66,11 @@ MISS_INFLATE = 1.30          # see "why the probabilities are haircut"
 LEG_MIN, LEG_MAX = 0.82, 0.94
 TARGET = 0.90
 TIERS = (2, 3, 4, 6, 8, 10, 15, 20)
+# Per-size leg aim, where a backtest says another one wins more often. The
+# 10-leg ticket built from legs aimed at 94% (band up to 97.5%) won 48.3% of
+# 325 tickets on unseen days, against 42.0% of 314 aimed at 90% -- for a
+# smaller payout (~2.4x fair vs ~3.1x). tools/backtest.py, ten_leg_trials.
+TIER_AIM = {10: (0.94, 0.975)}
 VARIANTS = 3                 # different tickets per size
 
 # Standard deviation of (final margin - spread) and (final total - posted
@@ -783,10 +788,21 @@ def build_tickets(games, tiers=TIERS, variants=VARIANTS):
 
 
 def build(slots, soccer_keys, labels=None, extra=None, keep=None):
+    global TARGET, LEG_MAX
     res = {}
     for slot in ("today", "tomorrow"):
         games = candidates(slots.get(slot), soccer_keys, labels, extra, keep)
-        res[slot] = dict(games=len(games), tickets=build_tickets(games))
+        tickets = build_tickets(games, tiers=tuple(n for n in TIERS if n not in TIER_AIM))
+        base = (TARGET, LEG_MAX)
+        for n, (aim, top) in TIER_AIM.items():
+            TARGET, LEG_MAX = aim, top
+            try:
+                g2 = candidates(slots.get(slot), soccer_keys, labels, extra, keep)
+                tickets.update(build_tickets(g2, tiers=(n,)))
+            finally:
+                TARGET, LEG_MAX = base
+        tickets = {n: tickets.get(n, []) for n in TIERS}
+        res[slot] = dict(games=len(games), tickets=tickets)
     return res
 
 
