@@ -237,6 +237,11 @@ def snapshot():
             games = player_props.for_slot(d._STATE["slots"][slot], labels)
             out["props"][slot] = dict(games=games,
                                       tickets=player_props.prop_tickets(games))
+            mega = player_props.mega_ticket(games)
+            if mega:
+                out["props"][slot]["mega"] = mega
+                # recorded with the stacks so every leg is graded
+                out["props"][slot]["tickets"]["25"] = [mega]
         n = props_ledger.record(out["props"].get("today"), d._STATE["dates"][0])
         out["props_tuning"] = props_ledger.TUNING
         print(f"props: recorded {n} new legs; tuning {props_ledger.TUNING}", file=sys.stderr)

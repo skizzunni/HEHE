@@ -281,6 +281,53 @@ def prop_tickets(games, tiers=(2, 3, 4, 6, 8), lo=0.75, hi=0.93, variants=3):
     return out
 
 
+def _dec(price):
+    try:
+        v = float(str(price).replace("+", ""))
+    except (TypeError, ValueError):
+        return None
+    if -100 < v < 100:
+        return None
+    return 1 + (v / 100 if v > 0 else 100 / -v)
+
+
+def mega_ticket(games, n=25, dec_lo=1.25, dec_hi=1.834, per_game=2):
+    """The 25 likeliest FanDuel player props of the day, every sport together.
+
+    Same rule as the locks: normal odds only (-400 to -120), likeliest first
+    (a ladder rung's main-line fair chance where it beats the price), one
+    prop per player, at most `per_game` from any game (FanDuel takes the
+    same-game ones as SGP+). Recorded and graded like every prop."""
+    pool = []
+    for g in games or []:
+        for P in g.get("props") or []:
+            d = _dec(P.get("price"))
+            if not P.get("fd") or not d or not dec_lo <= d <= dec_hi:
+                continue
+            p = P["p_fair"] if P.get("p_fair") and P["p_fair"] > P["p"] else P["p"]
+            pool.append(dict(P, p=round(p, 4), dec=d, match=g["match"], lg=g["lg"],
+                             tip=g.get("tip"), gid=g["id"]))
+    pool.sort(key=lambda P: -P["p"])
+    legs, players, per = [], set(), {}
+    for P in pool:
+        who = props_ledger.norm_name(P["name"])
+        if who in players or per.get(P["gid"], 0) >= per_game:
+            continue
+        legs.append(P)
+        players.add(who)
+        per[P["gid"]] = per.get(P["gid"], 0) + 1
+        if len(legs) >= n:
+            break
+    if not legs:
+        return None
+    prob, pay = 1.0, 1.0
+    for L in legs:
+        prob *= L["p"]
+        pay *= L["dec"]
+    return dict(n=len(legs), prob=round(prob, 6), fair=round(1 / prob, 2), pays=round(pay, 1),
+                legs=legs)
+
+
 if __name__ == "__main__":
     lg, eid = sys.argv[1], sys.argv[2]
     items = raw_items(lg, eid)
