@@ -561,7 +561,7 @@ def tennis_picks(day, tour=None):
                     try:
                         import kalshi as _K
                         _tp = _tp_cache.setdefault("p", _K.tennis_prices())
-                        a, b = _tp.get(_K._norm(ps[0])), _tp.get(_K._norm(ps[1]))
+                        a, b = _K.tennis_lookup(_tp, ps[0]), _K.tennis_lookup(_tp, ps[1])
                         if a is not None and b is not None and 0.02 < a + b:
                             mk = a / (a + b)
                         elif a is not None:

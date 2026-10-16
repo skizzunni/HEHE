@@ -150,6 +150,33 @@ def tennis_prices():
     return out
 
 
+def tennis_lookup(prices, name):
+    """A player's Kalshi chance, tolerating the ways the two feeds spell a
+    name: "Martin Damm" vs "martin damm jr", "Joel Josef Schwaerzler" vs
+    "joel schwaerzler". Exact first; then same first and last word; then a
+    unique surname. None when it is ambiguous or absent."""
+    n = _norm(name)
+    if n in prices:
+        return prices[n]
+    drop = {"jr", "sr", "ii", "iii"}
+    w = [x for x in n.split() if x not in drop]
+    if len(w) < 2:
+        return None
+    # East Asian names arrive in either order: "Shi Han" / "Han Shi"
+    swap = [v for k, v in prices.items() if sorted(k.split()) == sorted(w)]
+    if len(swap) == 1:
+        return swap[0]
+    hits = [v for k, v in prices.items()
+            if (lambda kw: len(kw) >= 2 and kw[0] == w[0] and kw[-1] == w[-1])(
+                [x for x in k.split() if x not in drop])]
+    if len(hits) == 1:
+        return hits[0]
+    sur = [v for k, v in prices.items()
+           if [x for x in k.split() if x not in drop][-1:] == w[-1:]
+           and k.split()[0][:1] == w[0][:1]]
+    return sur[0] if len(sur) == 1 else None
+
+
 def _date_of(tail):
     m = re.match(r"(\d\d)([A-Z]{3})(\d\d)", tail or "")
     if not m or m.group(2) not in MONTHS:
