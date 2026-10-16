@@ -780,6 +780,7 @@ function legHTML(x, opts){
   return '<li class="leg"><div class="lgt"><span class="kind ' + kind + '">' + kind + '</span>'
     + '<b>' + esc(x.label) + '</b>' + (x.price ? '<span class="px">' + esc(x.price) + '</span>' : '')
     + '<span class="ch">' + (100 * x.p).toFixed(0) + '%</span>'
+    + (opts && opts.sgp ? '<span class="edgetag">same game</span>' : '')
     + (x.edge > 0 ? '<span class="edgetag" title="Priced off this player\'s own main line, this rung is underpriced">+'
        + x.edge.toFixed(0) + '% vs price</span>' : '') + res + '</div>'
     + '<div class="lgs">' + esc(x.match || '') + ' &middot; ' + esc(x.lg || x.league || '')
@@ -813,7 +814,10 @@ function drawLocks(){
               ["$10 pays", full ? "$" + Math.round(10 * full.pays).toLocaleString() : "&mdash;"],
               ["so far", won + "&ndash;" + lost],
               ["card", X.preview ? "preview" : "set 8 AM"]])
-    + '<ul class="legs">' + L.map(x => legHTML(x)).join("") + '</ul>'
+    + '<ul class="legs">' + L.map(x => legHTML(x, {sgp: L.filter(y => y.gid && y.gid === x.gid).length > 1})).join("") + '</ul>'
+    + (L.some(x => L.filter(y => y.gid && y.gid === x.gid).length > 1)
+        ? '<p class="note">Few games today, so some games give two or three legs (marked <b>same game</b>). '
+          + 'On FanDuel, add those together as a Same Game Parlay inside the parlay.</p>' : '')
     + '<p><button type="button" data-lkcopy="' + day + '">Copy all legs</button></p>'
     + (SZ.length ? '<h3 class="tier-h">How to play it</h3><p class="note">Take the top legs in order. '
         + 'Payout is FanDuel&rsquo;s own prices multiplied; chance is how often they all hit.</p>'
@@ -824,7 +828,7 @@ function drawLocks(){
           + '%</td></tr>').join("") + '</tbody></table>' : '')
     + '<details class="explain"><summary>What the locks are &amp; how to place them</summary>'
     + '<p>The likeliest bets FanDuel (New York) lists at <b>normal odds</b> (-400 to -120) &mdash; game '
-    + 'lines <i>and</i> player props &mdash; one per game, from games that start after 8:00 AM and have '
+    + 'lines <i>and</i> player props &mdash; one per game (more only on light days), from games that start after 8:00 AM and have '
     + 'not begun. Each chance is the market&rsquo;s own price with its margin taken out. The card is set at '
     + '8:00 AM Eastern and stays the same all day. Each is likely; all ' + L.length + ' together hit '
     + (100 * X.prob).toFixed(0) + '% of the time, the top 3 alone '

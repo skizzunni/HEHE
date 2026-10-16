@@ -190,9 +190,8 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                 print(f"   unmatched? {lg}: board {m.get('away')!r} @ {m.get('home')!r}; "
                       f"FanDuel has {[(g['away'], g['home']) for g in (FD.get(lg) or [])][:3]}",
                       file=sys.stderr)
-    picks = []
+    pool = []
     for g in games:
-        best = None
         for L in g["legs"]:
             ref, price, where = refs.get((g["gid"], json.dumps(L["spec"], sort_keys=True)),
                                          (None, None, None))
@@ -206,19 +205,17 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                 row_ = next((r for rs in rows.values() for r in rs if r["id"] == g["gid"]), {})
                 pm = min(0.99, max(0.01, pm + weather.adjust(g["league"], row_.get("mkt") or {},
                                                              L["spec"]["t"])))
-            if pm and (best is None or pm > best["p"]):
-                best = dict(L, fd=ref, price=price, where=where, p=pm)
-        if best:
-            picks.append(dict(gid=g["gid"], league=g["league"], lg=g["lg"], match=g["match"],
-                              home=g["home"], away=g["away"], tip=g.get("tip"),
-                              label=best["label"], spec=best["spec"], p=best["p"],
-                              p_model=best["p_model"], fd=best["fd"], price=best["price"],
-                              where=best["where"]))
+            if pm:
+                c = dict(L, fd=ref, price=price, where=where, p=pm)
+                pool.append(dict(gid=g["gid"], league=g["league"], lg=g["lg"], match=g["match"],
+                                 home=g["home"], away=g["away"], tip=g.get("tip"),
+                                 label=c["label"], spec=c["spec"], p=c["p"],
+                                 p_model=c["p_model"], fd=c["fd"], price=c["price"],
+                                 where=c["where"]))
     # FanDuel player props compete with the game lines: per game, the lock is
     # the likeliest of all of them. A prop's chance is FanDuel's own price,
     # de-vigged across both sides where it lists both (fd_props.py).
     ok = {r["id"]: r for rs in rows.values() for r in rs}
-    by_gid = {x["gid"]: x for x in picks}
     for pg in prop_games or []:
         row = ok.get(pg.get("id"))
         if not row:
@@ -236,25 +233,68 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
             if P.get("p_fair") and P["p_fair"] > pm:
                 pm = P["p_fair"]
             P = dict(P, p=pm)
-            cur = by_gid.get(pg["id"])
-            if cur and cur["p"] >= P["p"]:
-                continue
             m = row.get("mkt") or {}
-            by_gid[pg["id"]] = dict(kind="prop", gid=pg["id"], league=pg["id"].split(":", 1)[0],
+            pool.append(dict(kind="prop", gid=pg["id"], league=pg["id"].split(":", 1)[0],
                                     lg=pg.get("lg"), match=pg.get("match"), tip=pg.get("tip"),
                                     home=m.get("home"), away=m.get("away"),
                                     label=P["label"], p=P["p"], price=P["price"], fd=P["fd"],
                                     where=P.get("where"), name=P["name"], market=P["market"],
                                     line=P["line"], aid=P.get("aid"), edge=P.get("edge"),
-                                    p_fair=P.get("p_fair"))
-    picks = list(by_gid.values())
-    picks.sort(key=lambda x: -x["p"])
-    locks = picks[:n]
+                                    p_fair=P.get("p_fair")))
+    locks, picks = choose(pool, n), _best_per_game(pool)
+    locks.sort(key=lambda x: -x["p"])
     prob = 1.0
     for L in locks:
         prob *= L["p"]
     return dict(locks=locks, available=len(picks), prob=round(prob, 4),
                 fair=round(1 / prob, 2) if prob else None, sizes=sizes(locks))
+
+
+PER_GAME = 3          # legs from one game, only when games run short of n
+
+
+def _slot(L):
+    """What a leg is about, so one game never carries two legs on the same
+    question: one total, one side (spread or moneyline), one leg per player."""
+    t = (L.get("spec") or {}).get("t")
+    if L.get("kind") == "prop":
+        return ("player", L.get("name"))
+    if t in ("over", "under"):
+        return ("total",)
+    return ("side",)
+
+
+def _best_per_game(pool):
+    best = {}
+    for L in pool:
+        if L["gid"] not in best or L["p"] > best[L["gid"]]["p"]:
+            best[L["gid"]] = L
+    return sorted(best.values(), key=lambda x: -x["p"])
+
+
+def choose(pool, n):
+    """The likeliest leg from each game first -- the card is spread across as
+    many games as there are. Only when that leaves it short of n (a light
+    Friday: five FanDuel games after 8 AM) does a game give a second or third
+    leg, the next likeliest on a different question (a player prop beside a
+    total), never a contradiction of a leg already taken."""
+    out = _best_per_game(pool)[:n]
+    if len(out) >= n:
+        return out
+    used = {(L["gid"], _slot(L)) for L in out}
+    count = {}
+    for L in out:
+        count[L["gid"]] = count.get(L["gid"], 0) + 1
+    for L in sorted(pool, key=lambda x: -x["p"]):
+        if len(out) >= n:
+            break
+        k = (L["gid"], _slot(L))
+        if k in used or count.get(L["gid"], 0) >= PER_GAME:
+            continue
+        used.add(k)
+        count[L["gid"]] = count.get(L["gid"], 0) + 1
+        out.append(L)
+    return out
 
 
 def sizes(legs):
@@ -295,11 +335,20 @@ def record(res, day):
     if len(day) == 8:
         day = f"{day[:4]}-{day[4:6]}-{day[6:]}"
     keys = book["days"].setdefault(day, [])
+    first = not keys
     for L in res["locks"]:
         if len(keys) >= N_LOCKS:
             break
         k = f'{L["gid"]}|{L["label"]}'
-        if any(x.split("|", 1)[0] == L["gid"] for x in keys):
+        if k in keys:
+            continue
+        # a moved line must not add a second leg on the same question
+        same = [book["legs"][x] for x in keys if x.split("|", 1)[0] == L["gid"]]
+        if (any(_slot(x) == _slot(L) for x in same) or len(same) >= PER_GAME):
+            continue
+        # extra legs from one game belong to the 8 AM card only; later
+        # rebuilds may add a late game, never a second leg to a set card
+        if same and not first:
             continue
         keys.append(k)
         book["legs"].setdefault(k, dict(league=L["league"], match=L["match"], label=L["label"],
