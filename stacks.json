@@ -1,5 +1,253 @@
 {
  "legs": {
+  "arg:401841627|No \u00b7 Boca Juniors wins by over 3.5 goals": {
+   "away": "Talleres (C\u00f3rdoba)",
+   "date": "2026-10-16",
+   "home": "Boca Juniors",
+   "label": "No \u00b7 Boca Juniors wins by over 3.5 goals",
+   "league": "arg",
+   "logged": "2026-10-16T19:53",
+   "match": "Talleres (C\u00f3rdoba) at Boca Juniors",
+   "p": 0.9241,
+   "p_model": 0.927,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Boca Juniors"
+   },
+   "status": "open"
+  },
+  "arg:401841627|Under 4.5 goals": {
+   "away": "Talleres (C\u00f3rdoba)",
+   "date": "2026-10-16",
+   "home": "Boca Juniors",
+   "label": "Under 4.5 goals",
+   "league": "arg",
+   "logged": "2026-10-16T19:53",
+   "match": "Talleres (C\u00f3rdoba) at Boca Juniors",
+   "p": 0.8894,
+   "p_model": 0.8937,
+   "spec": {
+    "line": 4.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "mex2:401886340|No \u00b7 Club Atl\u00e9tico La Paz wins by over 3.5 goals": {
+   "away": "Tlaxcala FC",
+   "date": "2026-10-16",
+   "home": "Club Atl\u00e9tico La Paz",
+   "label": "No \u00b7 Club Atl\u00e9tico La Paz wins by over 3.5 goals",
+   "league": "mex2",
+   "logged": "2026-10-16T19:53",
+   "match": "Tlaxcala FC at Club Atl\u00e9tico La Paz",
+   "p": 0.8929,
+   "p_model": 0.897,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Club Atl\u00e9tico La Paz"
+   },
+   "status": "open"
+  },
+  "mex2:401886340|No \u00b7 Tlaxcala FC wins by over 2.5 goals": {
+   "away": "Tlaxcala FC",
+   "date": "2026-10-16",
+   "home": "Club Atl\u00e9tico La Paz",
+   "label": "No \u00b7 Tlaxcala FC wins by over 2.5 goals",
+   "league": "mex2",
+   "logged": "2026-10-16T19:53",
+   "match": "Tlaxcala FC at Club Atl\u00e9tico La Paz",
+   "p": 0.9717,
+   "p_model": 0.9728,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Tlaxcala FC"
+   },
+   "status": "open"
+  },
+  "mex2:401886340|Over 1.5 goals": {
+   "away": "Tlaxcala FC",
+   "date": "2026-10-16",
+   "home": "Club Atl\u00e9tico La Paz",
+   "label": "Over 1.5 goals",
+   "league": "mex2",
+   "logged": "2026-10-16T19:53",
+   "match": "Tlaxcala FC at Club Atl\u00e9tico La Paz",
+   "p": 0.8832,
+   "p_model": 0.8877,
+   "spec": {
+    "line": 1.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "mex2:401886342|No \u00b7 Correcaminos UAT wins by over 3.5 goals": {
+   "away": "Dorados de Sinaloa",
+   "date": "2026-10-16",
+   "home": "Correcaminos UAT",
+   "label": "No \u00b7 Correcaminos UAT wins by over 3.5 goals",
+   "league": "mex2",
+   "logged": "2026-10-16T19:53",
+   "match": "Dorados de Sinaloa at Correcaminos UAT",
+   "p": 0.9303,
+   "p_model": 0.933,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Correcaminos UAT"
+   },
+   "status": "open"
+  },
+  "mex:401876944|No \u00b7 Tijuana wins by over 2.5 goals": {
+   "away": "Puebla",
+   "date": "2026-10-16",
+   "home": "Tijuana",
+   "label": "No \u00b7 Tijuana wins by over 2.5 goals",
+   "league": "mex",
+   "logged": "2026-10-16T19:53",
+   "match": "Puebla at Tijuana",
+   "p": 0.8576,
+   "p_model": 0.8631,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Tijuana"
+   },
+   "status": "open"
+  },
+  "mex:401876944|Over 0.5 goals": {
+   "away": "Puebla",
+   "date": "2026-10-16",
+   "home": "Tijuana",
+   "label": "Over 0.5 goals",
+   "league": "mex",
+   "logged": "2026-10-16T19:53",
+   "match": "Puebla at Tijuana",
+   "p": 0.9402,
+   "p_model": 0.9425,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "mex:401876944|Under 5.5 goals": {
+   "away": "Puebla",
+   "date": "2026-10-16",
+   "home": "Tijuana",
+   "label": "Under 5.5 goals",
+   "league": "mex",
+   "logged": "2026-10-16T19:53",
+   "match": "Puebla at Tijuana",
+   "p": 0.9271,
+   "p_model": 0.9299,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "mex:401876945|No \u00b7 Atlante wins by over 2.5 goals": {
+   "away": "Pumas UNAM",
+   "date": "2026-10-16",
+   "home": "Atlante",
+   "label": "No \u00b7 Atlante wins by over 2.5 goals",
+   "league": "mex",
+   "logged": "2026-10-16T19:53",
+   "match": "Pumas UNAM at Atlante",
+   "p": 0.9437,
+   "p_model": 0.9458,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Atlante"
+   },
+   "status": "open"
+  },
+  "mex:401876945|No \u00b7 Pumas UNAM wins by over 2.5 goals": {
+   "away": "Pumas UNAM",
+   "date": "2026-10-16",
+   "home": "Atlante",
+   "label": "No \u00b7 Pumas UNAM wins by over 2.5 goals",
+   "league": "mex",
+   "logged": "2026-10-16T19:53",
+   "match": "Pumas UNAM at Atlante",
+   "p": 0.9261,
+   "p_model": 0.929,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Pumas UNAM"
+   },
+   "status": "open"
+  },
+  "mex:401876945|Over 0.5 goals": {
+   "away": "Pumas UNAM",
+   "date": "2026-10-16",
+   "home": "Atlante",
+   "label": "Over 0.5 goals",
+   "league": "mex",
+   "logged": "2026-10-16T19:53",
+   "match": "Pumas UNAM at Atlante",
+   "p": 0.9343,
+   "p_model": 0.9369,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "mex:401876946|No \u00b7 Atlas wins by over 2.5 goals": {
+   "away": "Atlas",
+   "date": "2026-10-16",
+   "home": "Necaxa",
+   "label": "No \u00b7 Atlas wins by over 2.5 goals",
+   "league": "mex",
+   "logged": "2026-10-16T19:53",
+   "match": "Atlas at Necaxa",
+   "p": 0.9024,
+   "p_model": 0.9062,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Atlas"
+   },
+   "status": "open"
+  },
+  "mex:401876946|Over 0.5 goals": {
+   "away": "Atlas",
+   "date": "2026-10-16",
+   "home": "Necaxa",
+   "label": "Over 0.5 goals",
+   "league": "mex",
+   "logged": "2026-10-16T19:53",
+   "match": "Atlas at Necaxa",
+   "p": 0.9435,
+   "p_model": 0.9457,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "mex:401876946|Under 5.5 goals": {
+   "away": "Atlas",
+   "date": "2026-10-16",
+   "home": "Necaxa",
+   "label": "Under 5.5 goals",
+   "league": "mex",
+   "logged": "2026-10-16T19:53",
+   "match": "Atlas at Necaxa",
+   "p": 0.9216,
+   "p_model": 0.9246,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "mlb:401908025|No \u00b7 Tampa Bay Rays wins by over 4.5 runs": {
    "away": "Tampa Bay Rays",
    "date": "2026-10-15",
@@ -68,6 +316,39 @@
     "team": "Milwaukee Brewers"
    },
    "status": "won"
+  },
+  "ncaaf:401858493|No \u00b7 Purdue Boilermakers wins by over 20.5 points": {
+   "away": "Washington Huskies",
+   "date": "2026-10-16",
+   "home": "Purdue Boilermakers",
+   "label": "No \u00b7 Purdue Boilermakers wins by over 20.5 points",
+   "league": "ncaaf",
+   "logged": "2026-10-16T19:53",
+   "match": "Washington Huskies at Purdue Boilermakers",
+   "p": 0.8556,
+   "p_model": 0.8556,
+   "spec": {
+    "line": 20.5,
+    "t": "nomargin",
+    "team": "Purdue Boilermakers"
+   },
+   "status": "open"
+  },
+  "ncaaf:401858493|Over 33.5 points": {
+   "away": "Washington Huskies",
+   "date": "2026-10-16",
+   "home": "Purdue Boilermakers",
+   "label": "Over 33.5 points",
+   "league": "ncaaf",
+   "logged": "2026-10-16T19:53",
+   "match": "Washington Huskies at Purdue Boilermakers",
+   "p": 0.8795,
+   "p_model": 0.8795,
+   "spec": {
+    "line": 33.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "ncaaf:401858493|Under 67.5 points": {
    "away": "Washington Huskies",
@@ -168,6 +449,23 @@
    "spec": {
     "line": 38.5,
     "t": "over"
+   },
+   "status": "open"
+  },
+  "ncaaf:401869844|No \u00b7 Coastal Carolina Chanticleers wins by over 18.5 points": {
+   "away": "App State Mountaineers",
+   "date": "2026-10-16",
+   "home": "Coastal Carolina Chanticleers",
+   "label": "No \u00b7 Coastal Carolina Chanticleers wins by over 18.5 points",
+   "league": "ncaaf",
+   "logged": "2026-10-16T19:53",
+   "match": "App State Mountaineers at Coastal Carolina Chanticleers",
+   "p": 0.8486,
+   "p_model": 0.8486,
+   "spec": {
+    "line": 18.5,
+    "t": "nomargin",
+    "team": "Coastal Carolina Chanticleers"
    },
    "status": "open"
   },
@@ -635,6 +933,22 @@
    },
    "status": "open"
   },
+  "nhl:401892518|Over 2.5 goals": {
+   "away": "Boston Bruins",
+   "date": "2026-10-16",
+   "home": "Anaheim Ducks",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-16T19:53",
+   "match": "Boston Bruins at Anaheim Ducks",
+   "p": 0.9663,
+   "p_model": 0.9679,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "nhl:401892518|Under 9.5 goals": {
    "away": "Boston Bruins",
    "date": "2026-10-16",
@@ -648,6 +962,23 @@
    "spec": {
     "line": 9.5,
     "t": "under"
+   },
+   "status": "open"
+  },
+  "nwsl:401854091|No \u00b7 Boston Legacy FC wins by over 3.5 goals": {
+   "away": "Racing Louisville FC",
+   "date": "2026-10-16",
+   "home": "Boston Legacy FC",
+   "label": "No \u00b7 Boston Legacy FC wins by over 3.5 goals",
+   "league": "nwsl",
+   "logged": "2026-10-16T19:53",
+   "match": "Racing Louisville FC at Boston Legacy FC",
+   "p": 0.9272,
+   "p_model": 0.93,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Boston Legacy FC"
    },
    "status": "open"
   }
@@ -1034,6 +1365,97 @@
    "prob": 0.3118,
    "status": "open"
   },
+  "20261016:10:1": {
+   "fair": 2.0,
+   "legs": [
+    "ncaaf:401858493|Over 33.5 points",
+    "mex:401876944|Over 0.5 goals",
+    "mex:401876946|Over 0.5 goals",
+    "mex:401876945|No \u00b7 Atlante wins by over 2.5 goals",
+    "mex2:401886342|No \u00b7 Correcaminos UAT wins by over 3.5 goals",
+    "nwsl:401854091|No \u00b7 Boston Legacy FC wins by over 3.5 goals",
+    "arg:401841627|No \u00b7 Boca Juniors wins by over 3.5 goals",
+    "nhl:401892518|Over 2.5 goals",
+    "mex2:401886340|No \u00b7 Tlaxcala FC wins by over 2.5 goals",
+    "nhl:401892517|No \u00b7 Pittsburgh Penguins wins by over 2.5 goals"
+   ],
+   "logged": "2026-10-16T19:53",
+   "n": 10,
+   "prob": 0.4995,
+   "status": "open"
+  },
+  "20261016:10:2": {
+   "fair": 2.05,
+   "legs": [
+    "ncaaf:401869844|Over 31.5 points",
+    "ncaaf:401858493|Over 33.5 points",
+    "mex:401876944|Over 0.5 goals",
+    "mex:401876946|Over 0.5 goals",
+    "mex:401876945|No \u00b7 Atlante wins by over 2.5 goals",
+    "mex2:401886342|No \u00b7 Correcaminos UAT wins by over 3.5 goals",
+    "nwsl:401854091|No \u00b7 Boston Legacy FC wins by over 3.5 goals",
+    "arg:401841627|No \u00b7 Boca Juniors wins by over 3.5 goals",
+    "nhl:401892518|Over 2.5 goals",
+    "mex2:401886340|No \u00b7 Tlaxcala FC wins by over 2.5 goals"
+   ],
+   "logged": "2026-10-16T19:53",
+   "n": 10,
+   "prob": 0.4876,
+   "status": "open"
+  },
+  "20261016:15:0": {
+   "fair": 4.9,
+   "legs": [
+    "mex:401876946|No \u00b7 Atlas wins by over 2.5 goals",
+    "mex:401876946|Under 5.5 goals",
+    "nhl:401892517|No \u00b7 Pittsburgh Penguins wins by over 2.5 goals",
+    "nhl:401892517|Over 3.5 goals",
+    "mex2:401886340|No \u00b7 Club Atl\u00e9tico La Paz wins by over 3.5 goals",
+    "mex2:401886340|Over 1.5 goals",
+    "nhl:401892518|Under 9.5 goals",
+    "nhl:401892518|No \u00b7 Anaheim Ducks wins by over 2.5 goals",
+    "arg:401841627|Under 4.5 goals",
+    "ncaaf:401869844|Over 31.5 points",
+    "ncaaf:401858493|Over 33.5 points",
+    "mex:401876945|No \u00b7 Pumas UNAM wins by over 2.5 goals",
+    "mex:401876944|Under 5.5 goals",
+    "nwsl:401854091|No \u00b7 Boston Legacy FC wins by over 3.5 goals",
+    "mex2:401886342|No \u00b7 Correcaminos UAT wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-16T19:53",
+   "n": 15,
+   "prob": 0.2041,
+   "status": "open"
+  },
+  "20261016:20:0": {
+   "fair": 8.72,
+   "legs": [
+    "mex:401876946|No \u00b7 Atlas wins by over 2.5 goals",
+    "mex:401876946|Under 5.5 goals",
+    "nhl:401892517|No \u00b7 Pittsburgh Penguins wins by over 2.5 goals",
+    "nhl:401892517|Over 3.5 goals",
+    "mex2:401886340|No \u00b7 Club Atl\u00e9tico La Paz wins by over 3.5 goals",
+    "mex2:401886340|Over 1.5 goals",
+    "nhl:401892518|Under 9.5 goals",
+    "nhl:401892518|No \u00b7 Anaheim Ducks wins by over 2.5 goals",
+    "arg:401841627|Under 4.5 goals",
+    "arg:401841627|No \u00b7 Boca Juniors wins by over 3.5 goals",
+    "ncaaf:401869844|Over 31.5 points",
+    "ncaaf:401869844|No \u00b7 Coastal Carolina Chanticleers wins by over 18.5 points",
+    "ncaaf:401858493|Over 33.5 points",
+    "ncaaf:401858493|No \u00b7 Purdue Boilermakers wins by over 20.5 points",
+    "mex:401876945|No \u00b7 Pumas UNAM wins by over 2.5 goals",
+    "mex:401876945|Over 0.5 goals",
+    "mex:401876944|Under 5.5 goals",
+    "mex:401876944|No \u00b7 Tijuana wins by over 2.5 goals",
+    "nwsl:401854091|No \u00b7 Boston Legacy FC wins by over 3.5 goals",
+    "mex2:401886342|No \u00b7 Correcaminos UAT wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-16T19:53",
+   "n": 20,
+   "prob": 0.1147,
+   "status": "open"
+  },
   "20261016:2:0": {
    "fair": 1.23,
    "legs": [
@@ -1157,6 +1579,36 @@
    "prob": 0.5011,
    "status": "open"
   },
+  "20261016:6:1": {
+   "fair": 1.7,
+   "legs": [
+    "ncaaf:401858493|Over 33.5 points",
+    "mex:401876945|No \u00b7 Pumas UNAM wins by over 2.5 goals",
+    "mex:401876944|Under 5.5 goals",
+    "nwsl:401854091|No \u00b7 Boston Legacy FC wins by over 3.5 goals",
+    "mex2:401886342|No \u00b7 Correcaminos UAT wins by over 3.5 goals",
+    "mex:401876946|No \u00b7 Atlas wins by over 2.5 goals"
+   ],
+   "logged": "2026-10-16T19:53",
+   "n": 6,
+   "prob": 0.5877,
+   "status": "open"
+  },
+  "20261016:6:2": {
+   "fair": 2.01,
+   "legs": [
+    "nhl:401892517|No \u00b7 Pittsburgh Penguins wins by over 2.5 goals",
+    "mex2:401886340|No \u00b7 Club Atl\u00e9tico La Paz wins by over 3.5 goals",
+    "nhl:401892518|Under 9.5 goals",
+    "arg:401841627|Under 4.5 goals",
+    "ncaaf:401869844|Over 31.5 points",
+    "ncaaf:401858493|Over 33.5 points"
+   ],
+   "logged": "2026-10-16T19:53",
+   "n": 6,
+   "prob": 0.4985,
+   "status": "open"
+  },
   "20261016:8:0": {
    "fair": 2.65,
    "legs": [
@@ -1172,6 +1624,40 @@
    "logged": "2026-10-16T00:04",
    "n": 8,
    "prob": 0.3776,
+   "status": "open"
+  },
+  "20261016:8:1": {
+   "fair": 2.16,
+   "legs": [
+    "mex:401876944|Under 5.5 goals",
+    "nwsl:401854091|No \u00b7 Boston Legacy FC wins by over 3.5 goals",
+    "mex2:401886342|No \u00b7 Correcaminos UAT wins by over 3.5 goals",
+    "mex:401876946|No \u00b7 Atlas wins by over 2.5 goals",
+    "nhl:401892517|No \u00b7 Pittsburgh Penguins wins by over 2.5 goals",
+    "mex2:401886340|No \u00b7 Club Atl\u00e9tico La Paz wins by over 3.5 goals",
+    "nhl:401892518|Under 9.5 goals",
+    "arg:401841627|Under 4.5 goals"
+   ],
+   "logged": "2026-10-16T19:53",
+   "n": 8,
+   "prob": 0.4623,
+   "status": "open"
+  },
+  "20261016:8:2": {
+   "fair": 2.12,
+   "legs": [
+    "ncaaf:401869844|Over 31.5 points",
+    "ncaaf:401858493|Over 33.5 points",
+    "mex:401876945|No \u00b7 Pumas UNAM wins by over 2.5 goals",
+    "mex:401876944|Under 5.5 goals",
+    "nwsl:401854091|No \u00b7 Boston Legacy FC wins by over 3.5 goals",
+    "mex2:401886342|No \u00b7 Correcaminos UAT wins by over 3.5 goals",
+    "mex:401876946|No \u00b7 Atlas wins by over 2.5 goals",
+    "nhl:401892517|No \u00b7 Pittsburgh Penguins wins by over 2.5 goals"
+   ],
+   "logged": "2026-10-16T19:53",
+   "n": 8,
+   "prob": 0.4714,
    "status": "open"
   }
  }
