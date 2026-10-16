@@ -222,7 +222,13 @@ def review_day(day, ledger, locks, lottery, props):
                     killed_by=[L["label"] for L in t["legs"] if L["status"] == "lost"])
                for t in lt]
     pr = [e for e in props.values() if e.get("date") == day and e.get("status") in ("won", "lost")]
-    pr_view = dict(n=len(pr), won=sum(e["status"] == "won" for e in pr),
+    # the ladder-consistency idea, all time: do rungs the main line says are
+    # cheap win more often than their price says?
+    fair = [e for e in props.values() if e.get("p_fair") and e.get("status") in ("won", "lost")]
+    fair_view = dict(n=len(fair), won=sum(e["status"] == "won" for e in fair),
+                     said_fair=round(100 * sum(e["p_fair"] for e in fair) / len(fair), 1) if fair else None,
+                     said_price=round(100 * sum(e.get("imp") or 0 for e in fair) / len(fair), 1) if fair else None)
+    pr_view = dict(fair=fair_view, n=len(pr), won=sum(e["status"] == "won" for e in pr),
                    said=round(100 * sum(e.get("p") or 0 for e in pr) / len(pr), 1) if pr else None)
     return dict(day=day, picks=summarize(todays), clv=clv([e for e in todays if e.get("first_price")]),
                 picks_by_league={k: summarize(v) for k, v in leagues.items()},
@@ -256,6 +262,10 @@ def words(r, fit):
     for t in r["lottery"]:
         out.append(f"Lottery {t['tier']}: {t['status']} ({t['won']}/{t['legs']} legs won"
                    + (", killed by " + ", ".join(t["killed_by"]) if t["killed_by"] else "") + ")")
+    fv = (r["props"] or {}).get("fair") or {}
+    if fv.get("n"):
+        out.append(f"Ladder-consistency props (all time): {fv['won']}/{fv['n']} won "
+                   f"({100 * fv['won'] / fv['n']:.1f}%) vs {fv['said_fair']}% fair, {fv['said_price']}% price.")
     if r["props"]["n"]:
         out.append(f"Props {r['props']['won']}/{r['props']['n']} vs {r['props']['said']}% claimed.")
     out.append("")

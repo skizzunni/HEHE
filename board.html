@@ -235,6 +235,8 @@ li.leg:last-child{border-bottom:0}
   border-radius:3px;border:1px solid var(--rule);color:var(--ink-dim)}
 .kind.prop{color:var(--accent);border-color:var(--accent)}
 .res{font:700 10.5px var(--mono);padding:2px 7px;border-radius:3px}
+.edgetag{font:700 10px var(--mono);color:var(--accent);border:1px dashed var(--accent);
+  padding:1px 6px;border-radius:3px}
 .res.won{background:var(--accent);color:var(--ground)}
 .res.lost{background:var(--bad);color:#fff}
 .res.void{border:1px solid var(--rule);color:var(--ink-dim)}
@@ -777,7 +779,9 @@ function legHTML(x, opts){
     : (fdOne(x.fd) ? '<div class="lgw">' + legBtns(null, fdOne(x.fd)) + '</div>' : ''));
   return '<li class="leg"><div class="lgt"><span class="kind ' + kind + '">' + kind + '</span>'
     + '<b>' + esc(x.label) + '</b>' + (x.price ? '<span class="px">' + esc(x.price) + '</span>' : '')
-    + '<span class="ch">' + (100 * x.p).toFixed(0) + '%</span>' + res + '</div>'
+    + '<span class="ch">' + (100 * x.p).toFixed(0) + '%</span>'
+    + (x.edge > 0 ? '<span class="edgetag" title="Priced off this player\'s own main line, this rung is underpriced">+'
+       + x.edge.toFixed(0) + '% vs price</span>' : '') + res + '</div>'
     + '<div class="lgs">' + esc(x.match || '') + ' &middot; ' + esc(x.lg || x.league || '')
     + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>' + where + '</li>';
 }
@@ -966,6 +970,7 @@ function drawProps(){
       + '<th class="num">Chance</th></tr></thead><tbody>'
       + g.props.map(x => '<tr><td>' + esc(x.label)
           + (x.fd ? ' <span class="lgpill">FD</span>' : ' <span class="lgpill">DK</span>')
+          + (x.edge > 0 ? ' <span class="edgetag">+' + x.edge.toFixed(0) + '% vs price</span>' : '')
           + '</td><td class="num">' + esc(x.price)
           + '</td><td class="num">' + (100 * x.p).toFixed(1) + '%</td></tr>').join("")
       + '</tbody></table></details>';

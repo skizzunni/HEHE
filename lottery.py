@@ -144,9 +144,10 @@ def _prop_legs(prop_games, ok_gids):
                 continue
             if not props_ledger.gradable(lg, P["market"]):
                 continue
-            out.append(dict(P, kind="prop", gid=g["id"], league=lg, lg=g["lg"],
+            pf = P.get("p_fair") if P.get("p_fair") and P["p_fair"] > P["p"] else P["p"]
+            out.append(dict(P, p=pf, kind="prop", gid=g["id"], league=lg, lg=g["lg"],
                             match=g["match"], tip=g.get("tip"), dec=round(d, 3),
-                            value=round(P["p"] * d, 4)))
+                            value=round(pf * d, 4)))
     return out
 
 

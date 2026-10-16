@@ -259,6 +259,7 @@ def record(slot, day):
                 book[key] = dict(league=league, gid=L["gid"], aid=L["aid"], name=L["name"],
                                  market=L["market"], line=L["line"], price=L["price"],
                                  imp=L.get("imp"), p=L["p"], label=L["label"], date=day,
+                                 p_fair=L.get("p_fair"), edge=L.get("edge"),
                                  status="open" if gradable(league, L["market"]) else "ungradable")
                 seen += 1
     save(book)

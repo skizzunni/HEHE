@@ -225,6 +225,10 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
             pm = _market_p(P["price"], P["p"] if not str(P.get("line", "")).endswith("+") else None)
             if not pm:
                 continue
+            # a ladder rung priced off the player's own main line (fd_props
+            # consistency): where that says more than the price, use it
+            if P.get("p_fair") and P["p_fair"] > pm:
+                pm = P["p_fair"]
             P = dict(P, p=pm)
             cur = by_gid.get(pg["id"])
             if cur and cur["p"] >= P["p"]:
@@ -235,7 +239,8 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                                     home=m.get("home"), away=m.get("away"),
                                     label=P["label"], p=P["p"], price=P["price"], fd=P["fd"],
                                     where=P.get("where"), name=P["name"], market=P["market"],
-                                    line=P["line"], aid=P.get("aid"))
+                                    line=P["line"], aid=P.get("aid"), edge=P.get("edge"),
+                                    p_fair=P.get("p_fair"))
     picks = list(by_gid.values())
     picks.sort(key=lambda x: -x["p"])
     locks = picks[:n]
@@ -298,7 +303,8 @@ def record(res, day):
                                         price=L.get("price"), where=L.get("where"),
                                         kind=L.get("kind", "game"), name=L.get("name"),
                                         market=L.get("market"), line=L.get("line"),
-                                        aid=L.get("aid")))
+                                        aid=L.get("aid"), edge=L.get("edge"),
+                                        p_fair=L.get("p_fair")))
     save(book)
     # prop locks are settled from box scores by the props ledger
     props = [book["legs"][k] for k in keys if book["legs"][k].get("kind") == "prop"]

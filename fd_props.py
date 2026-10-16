@@ -159,6 +159,7 @@ def parse(markets, league, hold):
                             imp=round(i, 4), p=round(min(i / hold, 0.99), 4), aid=None,
                             label=f"{who}: {ln} {stat}",
                             fd=f"{mid}:{r.get('selectionId')}", where=f"{mn}: {nm}"))
+    consistency(out)
     # one entry per (player, market, line)
     seen, uniq = set(), []
     for o in sorted(out, key=lambda o: -o["p"]):
@@ -167,6 +168,92 @@ def parse(markets, league, hold):
             seen.add(k)
             uniq.append(o)
     return uniq
+
+
+# ------------------------------------------------------- ladder consistency
+# FanDuel's main over/under for a player is two-sided and the most-bet line,
+# so de-vigged it is the sharpest number on the page. The alternate rungs
+# ("50+ Yards", "3+ Made Threes", "25+ Points") are priced on their own. From
+# the main line the player's whole distribution follows -- Poisson for counts,
+# a normal with the stat's usual spread for yards and points -- and every
+# rung can be priced from it. Where a rung pays more than that, it is cheap.
+# p_fair is recorded with each prop and graded, so the daily review measures
+# whether it really wins more often than its price (it is NOT assumed to).
+import math
+
+COUNTS = {"Receptions", "Passing Touchdowns", "Anytime Touchdown Scorer", "Threes Made",
+          "Assists", "Rebounds", "Goals", "Shots on Goal", "Hits", "Home Runs", "RBIs",
+          "Runs", "Strikeouts Thrown", "Goalkeeper Saves"}
+CV = {"Passing Yards": 0.30, "Rushing Yards": 0.55, "Receiving Yards": 0.70,
+      "Rushing + Receiving Yards": 0.50, "Points": 0.32, "Pts + Reb + Ast": 0.25,
+      "Pts + Reb": 0.28, "Pts + Ast": 0.28, "Reb + Ast": 0.35}
+
+
+def _pois_ge(lam, k):
+    """P(X >= k) for X ~ Poisson(lam)."""
+    if k <= 0:
+        return 1.0
+    term, cdf = math.exp(-lam), 0.0
+    for i in range(int(k)):
+        cdf += term
+        term *= lam / (i + 1)
+    return max(0.0, 1 - cdf)
+
+
+def _ncdf(x):
+    return 0.5 * (1 + math.erf(x / math.sqrt(2)))
+
+
+def _solve(f, target, lo, hi):
+    for _ in range(60):
+        mid = (lo + hi) / 2
+        if f(mid) < target:
+            lo = mid
+        else:
+            hi = mid
+    return (lo + hi) / 2
+
+
+def fair_at_least(stat, line, p_over, k):
+    """Chance of k or more, given P(stat > line) = p_over from the main line."""
+    if stat in COUNTS:
+        lam = _solve(lambda l: _pois_ge(l, math.floor(line) + 1), p_over, 1e-4, 60)
+        return _pois_ge(lam, k)
+    cv = CV.get(stat)
+    if not cv:
+        return None
+    # mean m with sd = cv*m such that P(X > line) = p_over
+    m = _solve(lambda m: 1 - _ncdf((line - m) / max(cv * m, 1e-6)), p_over, 0.01, line * 4 + 10)
+    return 1 - _ncdf((k - 0.5 - m) / max(cv * m, 1e-6))
+
+
+def consistency(props):
+    """Give every rung that shares a player and stat with a main over/under
+    its fair chance from that line (p_fair) and the edge at its price."""
+    main = {}
+    for o in props:
+        ln = str(o["line"])
+        if not ln.endswith("+") and not ln.startswith("u"):
+            try:
+                main[(props_ledger.norm_name(o["name"]), o["market"])] = (float(ln), o["p"])
+            except ValueError:
+                pass
+    for o in props:
+        ln = str(o["line"])
+        if not ln.endswith("+"):
+            continue
+        m = main.get((props_ledger.norm_name(o["name"]), o["market"]))
+        if not m:
+            continue
+        try:
+            k = float(ln[:-1])
+        except ValueError:
+            continue
+        f = fair_at_least(o["market"], m[0], m[1], k)
+        if f is None or not 0.01 < f < 0.995:
+            continue
+        o["p_fair"] = round(f, 4)
+        o["edge"] = round(100 * (f / o["imp"] - 1), 1) if o.get("imp") else None
 
 
 def for_game(g, league):
