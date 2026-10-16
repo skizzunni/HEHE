@@ -12,7 +12,7 @@ CORE = "https://sports.core.api.espn.com/v2/sports"
 for key, sport, league in (("nfl", "football", "nfl"), ("mlb", "baseball", "mlb"),
                            ("ncaaf", "football", "college-football")):
     import datetime as dt
-    ds = [(dt.date(2026, 10, 12) - dt.timedelta(days=i)).strftime("%Y%m%d") for i in range(4)]
+    ds = [dt.date(2026, 10, 12) - dt.timedelta(days=i) for i in range(4)]
     games = B.finished_games(key, sport, league, ds)
     print(key, "finished games:", len(games))
     if not games:
