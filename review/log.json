@@ -169,17 +169,17 @@
     "hit": 85.1
    },
    "nfl": {
-    "all_hit": 62.8,
+    "all_hit": 62.0,
     "calls": 26,
     "cutoff": 0.7,
-    "games": 78,
+    "games": 79,
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 58.0,
+    "all_hit": 58.2,
     "calls": 22,
     "cutoff": 0.675,
-    "games": 181,
+    "games": 182,
     "hit": 81.8
    },
    "ufc": {
@@ -224,8 +224,8 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 2,
-   "won": 9
+   "open": 0,
+   "won": 11
   },
   "losses": [
    {
@@ -277,6 +277,14 @@
     "why": "margin 8 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 59%"
    },
    {
+    "against_market": false,
+    "league": "nfl",
+    "pick": "Seattle Seahawks",
+    "price": "-155",
+    "said": 51.4,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 51%"
+   },
+   {
     "against_market": true,
     "league": "nhl",
     "pick": "Philadelphia Flyers",
@@ -315,6 +323,14 @@
     "price": "+120",
     "said": 52.4,
     "why": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 52%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Edmonton Oilers",
+    "price": "-105",
+    "said": 51.7,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 52%"
    },
    {
     "against_market": false,
@@ -364,10 +380,11 @@
      "Texas State Bobcats under 44.5 points",
      "Tampa Bay Lightning under 3.5 goals",
      "New Jersey Devils under 3.5 goals",
-     "Over 7.5 goals"
+     "Over 7.5 goals",
+     "Utah Mammoth under 3.5 goals"
     ],
     "legs": 11,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k",
     "won": 4
@@ -386,11 +403,11 @@
    }
   ],
   "picks": {
-   "hit": 59.0,
-   "lost": 16,
-   "n": 39,
-   "roi": -38.3,
-   "said": 62.2,
+   "hit": 56.1,
+   "lost": 18,
+   "n": 41,
+   "roi": -47.1,
+   "said": 61.7,
    "won": 23
   },
   "picks_by_league": {
@@ -442,12 +459,20 @@
     "said": 60.2,
     "won": 1
    },
+   "nfl": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 51.4,
+    "won": 0
+   },
    "nhl": {
-    "hit": 44.4,
-    "lost": 5,
-    "n": 9,
-    "roi": -30.4,
-    "said": 56.5,
+    "hit": 40.0,
+    "lost": 6,
+    "n": 10,
+    "roi": -37.4,
+    "said": 56.0,
     "won": 4
    },
    "wta": {
@@ -480,10 +505,10 @@
     "won": 25
    },
    "agree": {
-    "hit": 64.9,
-    "lost": 87,
-    "n": 248,
-    "roi": -4.6,
+    "hit": 64.4,
+    "lost": 89,
+    "n": 250,
+    "roi": -5.4,
     "said": 60.3,
     "won": 161
    }
@@ -511,17 +536,17 @@
     "weight": 0.05
    },
    "nfl": {
-    "logloss": 0.6456,
-    "market_only": 0.6496,
-    "model_only": 0.6456,
-    "n": 78,
+    "logloss": 0.6478,
+    "market_only": 0.6525,
+    "model_only": 0.6478,
+    "n": 79,
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6486,
-    "market_only": 0.6486,
-    "model_only": 0.6553,
-    "n": 116,
+    "logloss": 0.649,
+    "market_only": 0.649,
+    "model_only": 0.6557,
+    "n": 117,
     "weight": 0.05
    },
    "wnba": {
