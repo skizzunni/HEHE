@@ -10,7 +10,8 @@ priced games (ledger.json, 2026-10-16) the market's favourite hit:
     chance >= 65%   81.8%   (456 games)
     chance >= 70%   88.0%
 
-So a pick below the cutoff is shown as a lean and left out of the record.
+Every pick is recorded and counted. The cutoff only labels each one "strong"
+or "close" on the board, so it is clear which picks carry the record.
 tools/daily_review.py refits the cutoff per league every day -- the lowest
 one whose own record reaches TARGET with enough games behind it -- and writes
 review/call_min.json; DEFAULT applies where a league has too few games.

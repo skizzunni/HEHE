@@ -545,7 +545,7 @@ function renderView(){
   // Baseball has no such band -- its weakest picks still hit ~55% -- so
   // nothing is hidden there, it is only labelled thin.
   const coins = lg.rows.filter(r => r.hd).length;
-  // calls first (they are what the record counts), leans after
+  // strongest picks first, close games after; every one counts
   const shown = (SHOWCOIN ? lg.rows : lg.rows.filter(r => !r.hd)).slice()
     .sort((a, b) => (a.nc ? 1 : 0) - (b.nc ? 1 : 0));
   if(!shown.length){
@@ -565,8 +565,8 @@ function renderView(){
         const conf = (r.mc === null || r.mc === undefined)
           ? '<td class="num none">&mdash;</td>'
           : '<td class="num">' + r.mc.toFixed(1) + '%'
-            + (r.nc ? '<span class="tier lean" title="Under this league\'s cutoff: shown, not counted in the record">lean</span>'
-               : '<span class="tier call">call</span>')
+            + (r.nc ? '<span class="tier lean" title="Close game: the favourite is under this league\'s cutoff">close</span>'
+               : '<span class="tier call">strong</span>')
             + '</td>';
         const price = r.p
           ? '<td class="mkt"><span class="' + (r.d ? "fade" : "agree") + '">' + r.p + '</span></td>'
