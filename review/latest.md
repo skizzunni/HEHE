@@ -1,8 +1,9 @@
 # Review 2026-10-16
 
-Picks 15-11 (57.7% vs 59.9% claimed).
+Picks 15-12 (55.6% vs 59.8% claimed).
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
 - LOST den AC Horsens at 51.2%: margin 0 · drawn -- a draw loses a moneyline side · called at 51%
+- LOST efl1 Burnley at 57.4%: margin 1 · called at 57%
 - LOST fra Le Mans at 53.3%: margin 3 · called at 53%
 - LOST swe IF Brommapojkarna at 64.1%: margin 2 · called at 64%
 - LOST wta Maria Sakkari at 63.7%: lost 1-2 in sets · took it the distance · called at 64%

@@ -540,6 +540,14 @@
    },
    {
     "against_market": false,
+    "league": "efl1",
+    "pick": "Burnley",
+    "price": null,
+    "said": 57.4,
+    "why": "margin 1 \u00b7 called at 57%"
+   },
+   {
+    "against_market": false,
     "league": "fra",
     "pick": "Le Mans",
     "price": null,
@@ -622,11 +630,11 @@
    }
   ],
   "picks": {
-   "hit": 57.7,
-   "lost": 11,
-   "n": 26,
+   "hit": 55.6,
+   "lost": 12,
+   "n": 27,
    "roi": null,
-   "said": 59.9,
+   "said": 59.8,
    "won": 15
   },
   "picks_by_league": {
@@ -644,6 +652,14 @@
     "n": 1,
     "roi": null,
     "said": 51.2,
+    "won": 0
+   },
+   "efl1": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 57.4,
     "won": 0
    },
    "fra": {
