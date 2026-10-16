@@ -548,6 +548,14 @@
    },
    {
     "against_market": false,
+    "league": "esp",
+    "pick": "Deportivo",
+    "price": null,
+    "said": 51.7,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 52%"
+   },
+   {
+    "against_market": false,
     "league": "fra",
     "pick": "Le Mans",
     "price": null,
@@ -630,11 +638,11 @@
    }
   ],
   "picks": {
-   "hit": 55.6,
-   "lost": 12,
-   "n": 27,
+   "hit": 53.6,
+   "lost": 13,
+   "n": 28,
    "roi": null,
-   "said": 59.8,
+   "said": 59.5,
    "won": 15
   },
   "picks_by_league": {
@@ -660,6 +668,14 @@
     "n": 1,
     "roi": null,
     "said": 57.4,
+    "won": 0
+   },
+   "esp": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 51.7,
     "won": 0
    },
    "fra": {
@@ -734,9 +750,9 @@
     "said_price": null,
     "won": 0
    },
-   "n": 7,
-   "said": 84.9,
-   "won": 6
+   "n": 8,
+   "said": 84.5,
+   "won": 7
   },
   "vs_market_14d": {
    "against": {
