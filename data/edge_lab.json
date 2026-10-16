@@ -1,0 +1,467 @@
+{
+ "run": "2026-10-16",
+ "leagues": {
+  "nhl": {
+   "games": 1376,
+   "test_games": 688,
+   "test_range": [
+    "2026-01-08",
+    "2026-10-14"
+   ],
+   "close_favourite": {
+    "hit": 57.85,
+    "logloss": 0.6723
+   },
+   "open_favourite": {
+    "hit": 55.96,
+    "logloss": 0.6724
+   },
+   "spread_favourite": {
+    "hit": 57.12,
+    "logloss": 0.7521
+   },
+   "drift": {
+    "hit": 58.14,
+    "logloss": 0.677,
+    "weights": [
+     0.035,
+     0.56,
+     0.552
+    ],
+    "picks_changed": 58,
+    "better": false
+   },
+   "spread": {
+    "hit": 58.43,
+    "logloss": 0.6746,
+    "weights": [
+     0.008,
+     0.755,
+     -0.127
+    ],
+    "picks_changed": 166,
+    "better": false
+   },
+   "total": {
+    "hit": 57.56,
+    "logloss": 0.6754,
+    "weights": [
+     0.008,
+     0.606,
+     -0.077
+    ],
+    "picks_changed": 16,
+    "better": false
+   },
+   "all": {
+    "hit": 54.94,
+    "logloss": 0.6762,
+    "weights": [
+     0.034,
+     0.711,
+     0.529,
+     -0.123,
+     -0.134
+    ],
+    "picks_changed": 166,
+    "better": false
+   }
+  },
+  "nfl": {
+   "games": 349,
+   "test_games": 175,
+   "test_range": [
+    "2025-11-23",
+    "2026-10-12"
+   ],
+   "close_favourite": {
+    "hit": 61.14,
+    "logloss": 0.6372
+   },
+   "open_favourite": {
+    "hit": 61.71,
+    "logloss": 0.6462
+   },
+   "spread_favourite": {
+    "hit": 61.14,
+    "logloss": 0.6328
+   },
+   "drift": {
+    "hit": 61.71,
+    "logloss": 0.6425,
+    "weights": [
+     0.042,
+     1.106,
+     -0.55
+    ],
+    "picks_changed": 7,
+    "better": false
+   },
+   "spread": {
+    "hit": 60.0,
+    "logloss": 0.6408,
+    "weights": [
+     0.026,
+     1.067,
+     0.008
+    ],
+    "picks_changed": 2,
+    "better": false
+   },
+   "total": {
+    "hit": 60.0,
+    "logloss": 0.6408,
+    "weights": [
+     0.026,
+     1.066,
+     -0.005
+    ],
+    "picks_changed": 2,
+    "better": false
+   },
+   "all": {
+    "hit": 61.71,
+    "logloss": 0.6426,
+    "weights": [
+     0.042,
+     1.109,
+     -0.551,
+     0.013,
+     0.036
+    ],
+    "picks_changed": 7,
+    "better": false
+   }
+  },
+  "ncaaf": {
+   "games": 1183,
+   "test_games": 592,
+   "test_range": [
+    "2025-11-08",
+    "2026-10-14"
+   ],
+   "close_favourite": {
+    "hit": 78.21,
+    "logloss": 0.4464
+   },
+   "open_favourite": {
+    "hit": 77.7,
+    "logloss": 0.4524
+   },
+   "spread_favourite": {
+    "hit": 78.21,
+    "logloss": 0.4537
+   },
+   "drift": {
+    "hit": 78.89,
+    "logloss": 0.4455,
+    "weights": [
+     0.116,
+     1.028,
+     -0.316
+    ],
+    "picks_changed": 16,
+    "better": true
+   },
+   "spread": {
+    "hit": 78.38,
+    "logloss": 0.4496,
+    "weights": [
+     0.105,
+     1.059,
+     0.964
+    ],
+    "picks_changed": 3,
+    "better": false
+   },
+   "total": {
+    "hit": 79.22,
+    "logloss": 0.4452,
+    "weights": [
+     0.115,
+     1.022,
+     0.075
+    ],
+    "picks_changed": 18,
+    "better": true
+   },
+   "all": {
+    "hit": 78.21,
+    "logloss": 0.451,
+    "weights": [
+     0.106,
+     1.064,
+     -0.289,
+     0.954,
+     0.03
+    ],
+    "picks_changed": 10,
+    "better": false
+   }
+  },
+  "nba": {
+   "games": 1230,
+   "test_games": 615,
+   "test_range": [
+    "2026-01-16",
+    "2026-04-12"
+   ],
+   "close_favourite": {
+    "hit": 73.66,
+    "logloss": 0.5208
+   },
+   "open_favourite": {
+    "hit": 72.52,
+    "logloss": 0.5303
+   },
+   "spread_favourite": {
+    "hit": 73.5,
+    "logloss": 0.5191
+   },
+   "drift": {
+    "hit": 75.12,
+    "logloss": 0.5338,
+    "weights": [
+     0.105,
+     0.813,
+     0.523
+    ],
+    "picks_changed": 37,
+    "better": false
+   },
+   "spread": {
+    "hit": 73.66,
+    "logloss": 0.5303,
+    "weights": [
+     0.085,
+     0.872,
+     -0.233
+    ],
+    "picks_changed": 24,
+    "better": false
+   },
+   "total": {
+    "hit": 73.01,
+    "logloss": 0.5306,
+    "weights": [
+     0.084,
+     0.847,
+     -0.17
+    ],
+    "picks_changed": 18,
+    "better": false
+   },
+   "all": {
+    "hit": 74.8,
+    "logloss": 0.5333,
+    "weights": [
+     0.106,
+     0.841,
+     0.527,
+     -0.257,
+     -0.153
+    ],
+    "picks_changed": 41,
+    "better": false
+   }
+  },
+  "ncaab": {
+   "games": 971,
+   "test_games": 486,
+   "test_range": [
+    "2026-01-19",
+    "2026-03-15"
+   ],
+   "close_favourite": {
+    "hit": 74.07,
+    "logloss": 0.5029
+   },
+   "open_favourite": {
+    "hit": 73.46,
+    "logloss": 0.5016
+   },
+   "spread_favourite": {
+    "hit": 73.87,
+    "logloss": 0.5027
+   },
+   "drift": {
+    "hit": 74.28,
+    "logloss": 0.5028,
+    "weights": [
+     0.118,
+     1.27,
+     -0.171
+    ],
+    "picks_changed": 11,
+    "better": true
+   },
+   "spread": {
+    "hit": 73.87,
+    "logloss": 0.5035,
+    "weights": [
+     0.114,
+     1.189,
+     0.764
+    ],
+    "picks_changed": 1,
+    "better": false
+   },
+   "total": {
+    "hit": 74.28,
+    "logloss": 0.5037,
+    "weights": [
+     0.117,
+     1.264,
+     0.101
+    ],
+    "picks_changed": 13,
+    "better": false
+   },
+   "all": {
+    "hit": 73.87,
+    "logloss": 0.5029,
+    "weights": [
+     0.115,
+     1.195,
+     -0.126,
+     0.759,
+     0.071
+    ],
+    "picks_changed": 1,
+    "better": false
+   }
+  },
+  "wnba": {
+   "games": 282,
+   "test_games": 141,
+   "test_range": [
+    "2026-07-08",
+    "2026-08-30"
+   ],
+   "close_favourite": {
+    "hit": 73.76,
+    "logloss": 0.537
+   },
+   "open_favourite": {
+    "hit": 68.79,
+    "logloss": 0.5515
+   },
+   "spread_favourite": {
+    "hit": 73.05,
+    "logloss": 0.5351
+   },
+   "drift": {
+    "hit": 72.34,
+    "logloss": 0.5494,
+    "weights": [
+     0.005,
+     0.869,
+     -0.366
+    ],
+    "picks_changed": 4,
+    "better": false
+   },
+   "spread": {
+    "hit": 73.05,
+    "logloss": 0.5497,
+    "weights": [
+     0.004,
+     0.745,
+     0.626
+    ],
+    "picks_changed": 1,
+    "better": false
+   },
+   "total": {
+    "hit": 73.05,
+    "logloss": 0.5478,
+    "weights": [
+     0.013,
+     0.834,
+     -0.15
+    ],
+    "picks_changed": 1,
+    "better": false
+   },
+   "all": {
+    "hit": 73.05,
+    "logloss": 0.553,
+    "weights": [
+     -0.005,
+     0.776,
+     -0.383,
+     0.655,
+     -0.164
+    ],
+    "picks_changed": 1,
+    "better": false
+   }
+  },
+  "mlb": {
+   "games": 1500,
+   "test_games": 750,
+   "test_range": [
+    "2026-06-27",
+    "2026-10-13"
+   ],
+   "close_favourite": {
+    "hit": 58.93,
+    "logloss": 0.6695
+   },
+   "open_favourite": {
+    "hit": 58.4,
+    "logloss": 0.6719
+   },
+   "spread_favourite": {
+    "hit": 58.53,
+    "logloss": 0.6848
+   },
+   "drift": {
+    "hit": 57.6,
+    "logloss": 0.6736,
+    "weights": [
+     0.009,
+     0.622,
+     0.463
+    ],
+    "picks_changed": 44,
+    "better": false
+   },
+   "spread": {
+    "hit": 58.4,
+    "logloss": 0.6742,
+    "weights": [
+     -0.029,
+     0.765,
+     -0.244
+    ],
+    "picks_changed": 142,
+    "better": false
+   },
+   "total": {
+    "hit": 58.53,
+    "logloss": 0.6738,
+    "weights": [
+     0.012,
+     0.652,
+     -0.056
+    ],
+    "picks_changed": 21,
+    "better": false
+   },
+   "all": {
+    "hit": 55.6,
+    "logloss": 0.6739,
+    "weights": [
+     -0.031,
+     0.737,
+     0.4,
+     -0.234,
+     -0.112
+    ],
+    "picks_changed": 137,
+    "better": false
+   }
+  }
+ }
+}
