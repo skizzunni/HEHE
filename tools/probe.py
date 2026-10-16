@@ -1,34 +1,32 @@
-"""Feed probe, run on GitHub's runners. Round 16: 11 Europa League "1+ shots"
-props at -900 to -2500 graded as 0 shots. Real zero-shot games, or a misread?
-Print each lost player's ESPN roster entry (every stat) and, for contrast,
-one winner's."""
+"""Feed probe, run on GitHub's runners. Round 17: what does ESPN's per-game
+odds feed carry for finished games -- opening lines? several books? Needed
+for the edge lab (contradictions between markets, and price drift)."""
 import json
 import sys
 import urllib.request
 
-sys.path.insert(0, ".")
-import props_ledger as PL  # noqa: E402
+sys.path.insert(0, "tools")
+import backtest as B  # noqa: E402
 
-book = json.load(open("props.json"))
-want = [e for e in book.values() if e["league"] == "uel" and e["market"].startswith("Shots")
-        and e["status"] in ("lost", "won")]
-seen = set()
-for e in want:
-    eid = e["gid"].split(":", 1)[1]
+CORE = "https://sports.core.api.espn.com/v2/sports"
+for key, sport, league in (("nfl", "football", "nfl"), ("mlb", "baseball", "mlb"),
+                           ("ncaaf", "football", "college-football")):
+    import datetime as dt
+    ds = [(dt.date(2026, 10, 12) - dt.timedelta(days=i)).strftime("%Y%m%d") for i in range(4)]
+    games = B.finished_games(key, sport, league, ds)
+    print(key, "finished games:", len(games))
+    if not games:
+        continue
+    eid = games[0][1]
     d = json.load(urllib.request.urlopen(urllib.request.Request(
-        f"{PL.SITE}/soccer/uefa.europa/summary?event={eid}", headers={"User-Agent": "Mozilla/5.0"}),
-        timeout=25))
-    hit = None
-    for team in d.get("rosters") or []:
-        for pl in team.get("roster") or []:
-            if str((pl.get("athlete") or {}).get("id")) == str(e["aid"]):
-                hit = pl
-    st = {x.get("name"): x.get("value") for x in (hit or {}).get("stats") or []}
-    print(f'{e["status"]:5} {e["name"]:<22} {e["market"]} {e["line"]} {e["price"]}: '
-          f'starter={(hit or {}).get("starter")} subIn={(hit or {}).get("subbedIn")} '
-          f'subOut={(hit or {}).get("subbedOut")} stats={json.dumps(st)[:400]}')
-    if eid not in seen:
-        seen.add(eid)
-        bs = (d.get("boxscore") or {}).get("teams") or []
-        print("   team stats:", [{s.get("name"): s.get("displayValue") for s in t.get("statistics") or []
-                                   if "hot" in (s.get("name") or "")} for t in bs])
+        f"{CORE}/{sport}/leagues/{league}/events/{eid}/competitions/{eid}/odds",
+        headers={"User-Agent": "Mozilla/5.0"}), timeout=25))
+    items = d.get("items") or []
+    print("  providers:", [(it.get("provider") or {}).get("name") for it in items])
+    if items:
+        it = items[0]
+        print("  top-level keys:", sorted(it.keys()))
+        print("  awayTeamOdds:", json.dumps(it.get("awayTeamOdds"))[:1500])
+        for k in ("open", "close", "current"):
+            if k in it:
+                print(f"  {k}:", json.dumps(it[k])[:800])
