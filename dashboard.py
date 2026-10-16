@@ -331,6 +331,12 @@ def _raw_prices(comp, ways):
             if ways == 3:
                 d = o.get("drawOdds") or {}
                 dr = d.get(when, {}).get("odds") if isinstance(d.get(when), dict) else None
+                # Since 2026-10-15 ESPN nests the team prices by open/close
+                # but gives the draw only as a flat current price; without
+                # this every soccer match lost its price (and its market pick).
+                if dr is None and when == "close" and d.get("moneyLine") is not None:
+                    v = int(float(d["moneyLine"]))
+                    dr = f"+{v}" if v > 0 else str(v)
                 if dr is not None:
                     return (a, dr, h)
                 # A three-way market priced as two-way de-vigs the draw's
