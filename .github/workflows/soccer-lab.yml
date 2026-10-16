@@ -1,0 +1,49 @@
+# How often the closing soccer favourite wins, wins-or-draws, by price band
+name: soccer-lab
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '41 10 * * 1'
+  push:
+    branches: [claude/mlb-picks-review-jlx9w1]
+    paths:
+      - 'tools/soccer_lab.py'
+      - '.github/workflows/soccer-lab.yml'
+concurrency:
+  group: soccer-lab
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/mlb-picks-review-jlx9w1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: .cache/bt
+          key: soccerlab-${{ github.run_id }}
+          restore-keys: |
+            soccerlab-
+            edgelab-
+            backtest-
+      - run: python3 tools/soccer_lab.py
+      - name: Commit the results
+        run: |
+          git add -f data/soccer_lab.json
+          if git diff --cached --quiet; then echo "unchanged"; exit 0; fi
+          git config user.name  "board bot"
+          git config user.email "board-bot@users.noreply.github.com"
+          git commit -m "Soccer lab results [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin claude/mlb-picks-review-jlx9w1 \
+              && git push origin HEAD:claude/mlb-picks-review-jlx9w1 && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
