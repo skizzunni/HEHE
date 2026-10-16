@@ -1,6 +1,6 @@
 # Review 2026-10-16
 
-Picks 8-7 (53.3% vs 62.7% claimed).
+Picks 9-7 (56.2% vs 62.5% claimed).
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
 - LOST wta Maria Sakkari at 63.7%: lost 1-2 in sets · took it the distance · called at 64%
 - LOST wta Elina Svitolina at 70.6%: lost 1-2 in sets · took it the distance · called at 71%
