@@ -1,0 +1,50 @@
+# Tests whether anything known before kickoff picks winners better than the
+# closing favourite (tools/edge_lab.py). Runs on GitHub's runners, reusing the
+# backtest's cache of finished games and their odds, and commits the result.
+name: edge-lab
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '29 10 * * 1'
+  push:
+    branches: [claude/mlb-picks-review-jlx9w1]
+    paths:
+      - 'tools/edge_lab.py'
+      - '.github/workflows/edge-lab.yml'
+concurrency:
+  group: edge-lab
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/mlb-picks-review-jlx9w1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: .cache/bt
+          key: edgelab-${{ github.run_id }}
+          restore-keys: |
+            edgelab-
+            backtest-
+      - run: python3 tools/edge_lab.py
+      - name: Commit the results
+        run: |
+          git add -f data/edge_lab.json
+          if git diff --cached --quiet; then echo "unchanged"; exit 0; fi
+          git config user.name  "board bot"
+          git config user.email "board-bot@users.noreply.github.com"
+          git commit -m "Edge lab results [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin claude/mlb-picks-review-jlx9w1 \
+              && git push origin HEAD:claude/mlb-picks-review-jlx9w1 && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
