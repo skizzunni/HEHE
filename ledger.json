@@ -14094,10 +14094,10 @@
   "conf": 56.5,
   "dog": false,
   "league": "nba",
-  "live": "9:34 - 3rd",
+  "live": "7:01 - 3rd",
   "live_score": {
-   "Houston Rockets": 66,
-   "Oklahoma City Thunder": 47
+   "Houston Rockets": 68,
+   "Oklahoma City Thunder": 53
   },
   "logged": "2026-10-14T21:45",
   "market_agrees": null,
@@ -14216,10 +14216,10 @@
   "conf": 63.0,
   "dog": false,
   "league": "nba",
-  "live": "5:14 - 4th",
+  "live": "3:17 - 4th",
   "live_score": {
-   "New York Knicks": 110,
-   "Toronto Raptors": 104
+   "New York Knicks": 112,
+   "Toronto Raptors": 109
   },
   "logged": "2026-10-14T21:45",
   "market_agrees": null,
@@ -20950,7 +20950,7 @@
   "date": "2026-10-15",
   "dog": false,
   "league": "ncaaf",
-  "live": "5:32 - 3rd",
+  "live": "2:41 - 3rd",
   "live_score": {
    "East Carolina Pirates": 14,
    "UAB Blazers": 6
@@ -23033,9 +23033,9 @@
   "date": "2026-10-15",
   "dog": true,
   "league": "ncaaf",
-  "live": "8:03 - 3rd",
+  "live": "4:29 - 3rd",
   "live_score": {
-   "Georgia Southern Eagles": 16,
+   "Georgia Southern Eagles": 22,
    "Old Dominion Monarchs": 7
   },
   "logged": "2026-10-15T19:40",
@@ -25208,7 +25208,7 @@
   "date": "2026-10-15",
   "dog": false,
   "league": "nfl",
-  "live": "13:00 - 3rd",
+  "live": "12:07 - 3rd",
   "live_score": {
    "Denver Broncos": 14,
    "Seattle Seahawks": 3
@@ -28783,7 +28783,7 @@
   "date": "2026-10-15",
   "dog": true,
   "league": "nhl",
-  "live": "8:05 - 3rd",
+  "live": "5:15 - 3rd",
   "live_score": {
    "Detroit Red Wings": 1,
    "Philadelphia Flyers": 1
@@ -28802,19 +28802,21 @@
   "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "live": "End of OT",
-  "live_score": {
-   "Seattle Kraken": 3,
-   "Tampa Bay Lightning": 4
-  },
   "logged": "2026-10-15T19:09",
   "market_agrees": true,
   "matchup": "SEA @ TB",
   "pick": "Tampa Bay Lightning",
+  "played": "2026-10-15",
   "price": "-278",
-  "status": "open",
+  "scores": {
+   "Seattle Kraken": 3,
+   "Tampa Bay Lightning": 4
+  },
+  "settled": "2026-10-15T21:59",
+  "status": "won",
   "tip": "7:00 PM",
-  "why": "rating +0.21 v -0.18 (0.39 goals) \u00b7 last 6: 4-2 \u00b7 at home"
+  "why": "rating +0.21 v -0.18 (0.39 goals) \u00b7 last 6: 4-2 \u00b7 at home",
+  "winner": "Tampa Bay Lightning"
  },
  "nhl:401892510": {
   "conf": 60.9,
@@ -28883,7 +28885,7 @@
   "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "live": "End of 2nd",
+  "live": "20:00 - 3rd",
   "live_score": {
    "Nashville Predators": 0,
    "San Jose Sharks": 1
@@ -28921,7 +28923,7 @@
   "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "live": "20:00 - 2nd",
+  "live": "18:13 - 2nd",
   "live_score": {
    "Edmonton Oilers": 0,
    "Utah Mammoth": 1
@@ -28936,21 +28938,21 @@
   "why": "rating +0.27 v +0.16 (0.11 goals) \u00b7 at home"
  },
  "nhl:401892516": {
-  "conf": 70.7,
+  "conf": 70.8,
   "date": "2026-10-15",
   "dog": false,
   "league": "nhl",
-  "logged": "2026-10-15T21:54",
+  "logged": "2026-10-15T21:59",
   "market_agrees": true,
   "matchup": "CGY @ VGK",
   "myside": "home",
   "p_market_away": 0.2904564315352697,
-  "p_model_away": 0.3353341704546675,
+  "p_model_away": 0.3318875407302172,
   "pick": "Vegas Golden Knights",
   "price": "-285",
   "status": "open",
   "tip": "10:00 PM",
-  "why": "rating +0.52 v -0.58 (1.10 goals) \u00b7 last 6: 5-1 \u00b7 at home"
+  "why": "rating +0.47 v -0.63 (1.10 goals) \u00b7 last 5: 4-1 \u00b7 at home"
  },
  "nhl:401892517": {
   "conf": 65.3,
@@ -34833,7 +34835,7 @@
   "date": "2026-10-15",
   "dog": false,
   "league": "wta",
-  "logged": "2026-10-15T21:54",
+  "logged": "2026-10-15T21:59",
   "market_agrees": null,
   "matchup": "Jelena Ostapenko @ Diana Shnaider",
   "myside": "home",

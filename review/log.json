@@ -165,11 +165,11 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 58.0,
-    "calls": 21,
+    "all_hit": 58.2,
+    "calls": 22,
     "cutoff": 0.675,
-    "games": 176,
-    "hit": 81.0
+    "games": 177,
+    "hit": 81.8
    },
    "ufc": {
     "all_hit": 65.3,
@@ -309,12 +309,12 @@
    }
   ],
   "picks": {
-   "hit": 69.0,
+   "hit": 70.0,
    "lost": 9,
-   "n": 29,
-   "roi": 22.6,
-   "said": 63.9,
-   "won": 20
+   "n": 30,
+   "roi": 25.3,
+   "said": 63.6,
+   "won": 21
   },
   "picks_by_league": {
    "arg": {
@@ -350,12 +350,12 @@
     "won": 2
    },
    "nhl": {
-    "hit": 75.0,
+    "hit": 80.0,
     "lost": 1,
-    "n": 4,
-    "roi": 22.6,
-    "said": 59.2,
-    "won": 3
+    "n": 5,
+    "roi": 25.3,
+    "said": 58.6,
+    "won": 4
    },
    "wta": {
     "hit": 72.2,
@@ -381,12 +381,12 @@
     "won": 25
    },
    "agree": {
-    "hit": 65.4,
+    "hit": 65.6,
     "lost": 84,
-    "n": 243,
-    "roi": -3.7,
+    "n": 244,
+    "roi": -3.5,
     "said": 60.4,
-    "won": 159
+    "won": 160
    }
   },
   "weights": {
@@ -419,10 +419,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6501,
-    "market_only": 0.6501,
-    "model_only": 0.6552,
-    "n": 111,
+    "logloss": 0.6474,
+    "market_only": 0.6474,
+    "model_only": 0.6531,
+    "n": 112,
     "weight": 0.05
    },
    "wnba": {
