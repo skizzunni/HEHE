@@ -150,7 +150,18 @@ def record(state=None):
                     entry["date"] = f"{day[:4]}-{day[4:6]}-{day[6:]}"
                 if key not in book:
                     added += 1
-                book[key] = {**book.get(key, {}), **entry}
+                # Closing line value: the price when the call was first made
+                # stays; `price` keeps updating to the last one before the
+                # game (the close). Beating the close is the sharp bettor's
+                # proof of skill; tools/daily_review.py reports it.
+                prev = book.get(key, {})
+                if prev.get("pick") == entry["pick"] and prev.get("first_price"):
+                    entry["first_price"] = prev["first_price"]
+                    entry["first_logged"] = prev.get("first_logged")
+                else:
+                    entry["first_price"] = entry.get("price")
+                    entry["first_logged"] = entry["logged"]
+                book[key] = {**prev, **entry}
     save(book)
     return added, len(book)
 

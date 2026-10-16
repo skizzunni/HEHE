@@ -160,6 +160,18 @@ def fit_calls(graded):
     return cuts, detail
 
 
+def clv(rs):
+    """Closing line value: how much better the first price was than the
+    close, in percentage points of win chance (positive = we beat the close)."""
+    xs = []
+    for e in rs:
+        a, b = implied(e.get("first_price")), implied(e.get("price"))
+        if a and b:
+            xs.append(100 * (b - a))
+    return dict(n=len(xs), avg=round(sum(xs) / len(xs), 2) if xs else None,
+                beat=round(100 * sum(x > 0 for x in xs) / len(xs), 1) if xs else None)
+
+
 def summarize(rs):
     n = len(rs)
     if not n:
@@ -212,7 +224,7 @@ def review_day(day, ledger, locks, lottery, props):
     pr = [e for e in props.values() if e.get("date") == day and e.get("status") in ("won", "lost")]
     pr_view = dict(n=len(pr), won=sum(e["status"] == "won" for e in pr),
                    said=round(100 * sum(e.get("p") or 0 for e in pr) / len(pr), 1) if pr else None)
-    return dict(day=day, picks=summarize(todays),
+    return dict(day=day, picks=summarize(todays), clv=clv([e for e in todays if e.get("first_price")]),
                 picks_by_league={k: summarize(v) for k, v in leagues.items()},
                 losses=losses, leaks_14d=leaks, vs_market_14d=vs_mkt,
                 locks=lk_view, lottery=lt_view, props=pr_view)
@@ -226,6 +238,9 @@ def words(r, fit):
                    + (f", ROI {p['roi']:+}%" if p.get("roi") is not None else "") + ").")
     else:
         out.append("No picks settled yet.")
+    c = r.get("clv") or {}
+    if c.get("n"):
+        out.append(f"Closing line value: {c['avg']:+} points on {c['n']} picks; beat the close on {c['beat']}%.")
     for L in r["losses"]:
         out.append(f"- LOST {L['league']} {L['pick']} at {L['said']}%"
                    + (" (against the market)" if L["against_market"] else "") + f": {L['why']}")
