@@ -1,6 +1,6 @@
 # Review 2026-10-16
 
-Picks 13-10 (56.5% vs 60.6% claimed).
+Picks 14-10 (58.3% vs 60.5% claimed).
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
 - LOST den AC Horsens at 51.2%: margin 0 · drawn -- a draw loses a moneyline side · called at 51%
 - LOST swe IF Brommapojkarna at 64.1%: margin 2 · called at 64%
