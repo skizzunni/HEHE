@@ -2,10 +2,9 @@
  "cutoffs": {
   "atp": 0.6,
   "mlb": 0.7,
-  "nba": 0.625,
   "ncaaf": 0.55,
   "nfl": 0.7,
-  "nhl": 0.675,
+  "nhl": 0.625,
   "ufc": 0.75,
   "wnba": 0.625,
   "wta": 0.575
@@ -25,13 +24,6 @@
    "games": 372,
    "hit": 86.7
   },
-  "nba": {
-   "all_hit": 58.2,
-   "calls": 28,
-   "cutoff": 0.625,
-   "games": 55,
-   "hit": 71.4
-  },
   "ncaaf": {
    "all_hit": 82.8,
    "calls": 409,
@@ -47,11 +39,11 @@
    "hit": 73.1
   },
   "nhl": {
-   "all_hit": 58.5,
-   "calls": 23,
-   "cutoff": 0.675,
-   "games": 183,
-   "hit": 82.6
+   "all_hit": 65.3,
+   "calls": 15,
+   "cutoff": 0.625,
+   "games": 75,
+   "hit": 80.0
   },
   "ufc": {
    "all_hit": 65.3,
@@ -76,5 +68,5 @@
   }
  },
  "target": 0.75,
- "updated": "2026-10-16T16:05-04:00"
+ "updated": "2026-10-16T16:11-04:00"
 }

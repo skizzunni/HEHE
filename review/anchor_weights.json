@@ -8,13 +8,6 @@
    "n": 372,
    "weight": 0.05
   },
-  "nba": {
-   "logloss": 0.6562,
-   "market_only": 0.6562,
-   "model_only": 0.717,
-   "n": 49,
-   "weight": 0.05
-  },
   "ncaaf": {
    "logloss": 0.4269,
    "market_only": 0.4269,
@@ -30,10 +23,10 @@
    "weight": 0.4
   },
   "nhl": {
-   "logloss": 0.6464,
-   "market_only": 0.6464,
-   "model_only": 0.6533,
-   "n": 118,
+   "logloss": 0.6384,
+   "market_only": 0.6384,
+   "model_only": 0.6457,
+   "n": 75,
    "weight": 0.05
   },
   "wnba": {
@@ -44,10 +37,9 @@
    "weight": 0.3
   }
  },
- "updated": "2026-10-16T16:05-04:00",
+ "updated": "2026-10-16T16:11-04:00",
  "weights": {
   "mlb": 0.05,
-  "nba": 0.05,
   "ncaaf": 0.05,
   "nfl": 0.4,
   "nhl": 0.05,
