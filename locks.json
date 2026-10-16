@@ -12,6 +12,13 @@
    "nhl:401892509|Over 2.5 goals",
    "nhl:401892506|Under 11.5 goals",
    "mlb:401908033|Under 16.5 runs"
+  ],
+  "2026-10-16": [
+   "ncaaf:401858493|Under 61.5 points",
+   "mlb:401908026|Cleveland Guardians +2.5",
+   "ncaaf:401862801|Under 67.5 points",
+   "nhl:401892517|Under 8.5 goals",
+   "nhl:401892518|Under 7.5 goals"
   ]
  },
  "legs": {
@@ -37,6 +44,34 @@
    "tip": "1:00 PM",
    "where": "Alternate Run Lines: Cleveland Guardians +6.5"
   },
+  "mlb:401908026|Cleveland Guardians +2.5": {
+   "aid": null,
+   "away": "Tampa Bay Rays",
+   "date": "2026-10-16",
+   "edge": null,
+   "fd": "736.191680846:44038138",
+   "gid": "mlb:401908026",
+   "home": "Cleveland Guardians",
+   "kind": "game",
+   "label": "Cleveland Guardians +2.5",
+   "league": "mlb",
+   "lg": "MLB",
+   "line": null,
+   "market": null,
+   "match": "Tampa Bay Rays at Cleveland Guardians",
+   "name": null,
+   "p": 0.7728,
+   "p_fair": null,
+   "price": "-400",
+   "spec": {
+    "line": 2.5,
+    "t": "spread",
+    "team": "Cleveland Guardians"
+   },
+   "status": "open",
+   "tip": "8:00 PM",
+   "where": "Alternate Run Lines: Cleveland Guardians +2.5"
+  },
   "mlb:401908033|Under 16.5 runs": {
    "away": "Milwaukee Brewers",
    "date": "2026-10-15",
@@ -57,6 +92,33 @@
    "status": "won",
    "tip": "8:00 PM",
    "where": "Alternate Total Runs: Under 16.5"
+  },
+  "ncaaf:401858493|Under 61.5 points": {
+   "aid": null,
+   "away": "Washington Huskies",
+   "date": "2026-10-16",
+   "edge": null,
+   "fd": "736.191035214:12197194",
+   "gid": "ncaaf:401858493",
+   "home": "Purdue Boilermakers",
+   "kind": "game",
+   "label": "Under 61.5 points",
+   "league": "ncaaf",
+   "lg": "NCAA FB",
+   "line": null,
+   "market": null,
+   "match": "Washington Huskies at Purdue Boilermakers",
+   "name": null,
+   "p": 0.8128000000000001,
+   "p_fair": null,
+   "price": "-400",
+   "spec": {
+    "line": 61.5,
+    "t": "under"
+   },
+   "status": "open",
+   "tip": "8:00 PM",
+   "where": "Alternate Total Points: Under (61.5)"
   },
   "ncaaf:401860923|Over 43.5 points": {
    "away": "Colorado State Rams",
@@ -100,6 +162,33 @@
    "status": "won",
    "tip": "7:30 PM",
    "where": "UAB Alternate Total: Under (41.5)"
+  },
+  "ncaaf:401862801|Under 67.5 points": {
+   "aid": null,
+   "away": "Memphis Tigers",
+   "date": "2026-10-16",
+   "edge": null,
+   "fd": "736.191034721:12197206",
+   "gid": "ncaaf:401862801",
+   "home": "Tulane Green Wave",
+   "kind": "game",
+   "label": "Under 67.5 points",
+   "league": "ncaaf",
+   "lg": "NCAA FB",
+   "line": null,
+   "market": null,
+   "match": "Memphis Tigers at Tulane Green Wave",
+   "name": null,
+   "p": 0.7728,
+   "p_fair": null,
+   "price": "-400",
+   "spec": {
+    "line": 67.5,
+    "t": "under"
+   },
+   "status": "open",
+   "tip": "7:30 PM",
+   "where": "Alternate Total Points: Under (67.5)"
   },
   "ncaaf:401869950|Old Dominion Monarchs over 1.5 points": {
    "away": "Georgia Southern Eagles",
@@ -251,6 +340,60 @@
    "status": "won",
    "tip": "9:00 PM",
    "where": "Alternate Total Goals: Over 2.5"
+  },
+  "nhl:401892517|Under 8.5 goals": {
+   "aid": null,
+   "away": "Pittsburgh Penguins",
+   "date": "2026-10-16",
+   "edge": null,
+   "fd": "736.191803068:8359782",
+   "gid": "nhl:401892517",
+   "home": "Colorado Avalanche",
+   "kind": "game",
+   "label": "Under 8.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "line": null,
+   "market": null,
+   "match": "Pittsburgh Penguins at Colorado Avalanche",
+   "name": null,
+   "p": 0.7728,
+   "p_fair": null,
+   "price": "-400",
+   "spec": {
+    "line": 8.5,
+    "t": "under"
+   },
+   "status": "open",
+   "tip": "9:00 PM",
+   "where": "Alternate Total Goals: Under 8.5"
+  },
+  "nhl:401892518|Under 7.5 goals": {
+   "aid": null,
+   "away": "Boston Bruins",
+   "date": "2026-10-16",
+   "edge": null,
+   "fd": "736.191803563:8359780",
+   "gid": "nhl:401892518",
+   "home": "Anaheim Ducks",
+   "kind": "game",
+   "label": "Under 7.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "line": null,
+   "market": null,
+   "match": "Boston Bruins at Anaheim Ducks",
+   "name": null,
+   "p": 0.7464,
+   "p_fair": null,
+   "price": "-340",
+   "spec": {
+    "line": 7.5,
+    "t": "under"
+   },
+   "status": "open",
+   "tip": "10:00 PM",
+   "where": "Alternate Total Goals: Under 7.5"
   }
  }
 }
