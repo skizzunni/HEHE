@@ -518,11 +518,11 @@
     "hit": 77.4
    },
    "wta": {
-    "all_hit": 72.2,
-    "calls": 124,
-    "cutoff": 0.55,
-    "games": 144,
-    "hit": 75.0
+    "all_hit": 71.7,
+    "calls": 114,
+    "cutoff": 0.575,
+    "games": 145,
+    "hit": 76.3
    }
   },
   "clv": {
@@ -540,6 +540,15 @@
     "roi": -26.7,
     "said": 68.5,
     "won": 26
+   },
+   {
+    "hit": 57.1,
+    "league": "wta",
+    "lost": 12,
+    "n": 28,
+    "roi": null,
+    "said": 67.0,
+    "won": 16
    }
   ],
   "locks": {
@@ -596,15 +605,23 @@
     "price": null,
     "said": 69.4,
     "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 69%"
+   },
+   {
+    "against_market": false,
+    "league": "wta",
+    "pick": "Elizara Yaneva",
+    "price": null,
+    "said": 70.8,
+    "why": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 71%"
    }
   ],
   "lottery": [],
   "picks": {
-   "hit": 40.0,
-   "lost": 6,
-   "n": 10,
+   "hit": 36.4,
+   "lost": 7,
+   "n": 11,
    "roi": null,
-   "said": 62.9,
+   "said": 63.6,
    "won": 4
   },
   "picks_by_league": {
@@ -617,11 +634,11 @@
     "won": 1
    },
    "wta": {
-    "hit": 37.5,
-    "lost": 5,
-    "n": 8,
+    "hit": 33.3,
+    "lost": 6,
+    "n": 9,
     "roi": null,
-    "said": 64.4,
+    "said": 65.1,
     "won": 3
    }
   },
