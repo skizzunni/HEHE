@@ -19,5 +19,5 @@ Locks 0/5 won, 5 open.
 Lottery 100: open (0/5 legs won)
 Props 7/8 vs 84.5% claimed.
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 60% -> 75.7% on 74 of 103, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 85.1% on 409 of 447, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 80.0% on 15 of 75, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 57% -> 76.1% on 117 of 152
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.4% on 59 of 103, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 85.1% on 409 of 447, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 80.0% on 15 of 75, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 68% -> 84.0% on 75 of 152
 Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=370), nfl 0.40 (n=79), nhl 0.05 (n=75), wnba 0.30 (n=46)
