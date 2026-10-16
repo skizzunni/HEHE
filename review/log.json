@@ -524,6 +524,14 @@
   "losses": [
    {
     "against_market": false,
+    "league": "arg",
+    "pick": "Defensa y Justicia",
+    "price": null,
+    "said": 55.6,
+    "why": "margin 1 \u00b7 called at 56%"
+   },
+   {
+    "against_market": false,
     "league": "atp",
     "pick": "Tommy Paul",
     "price": null,
@@ -638,14 +646,22 @@
    }
   ],
   "picks": {
-   "hit": 56.7,
-   "lost": 13,
-   "n": 30,
+   "hit": 54.8,
+   "lost": 14,
+   "n": 31,
    "roi": null,
-   "said": 59.0,
+   "said": 58.9,
    "won": 17
   },
   "picks_by_league": {
+   "arg": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 55.6,
+    "won": 0
+   },
    "atp": {
     "hit": 50.0,
     "lost": 1,
