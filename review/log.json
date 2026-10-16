@@ -162,11 +162,11 @@
     "hit": 71.4
    },
    "ncaaf": {
-    "all_hit": 82.7,
-    "calls": 408,
+    "all_hit": 82.8,
+    "calls": 409,
     "cutoff": 0.55,
-    "games": 446,
-    "hit": 85.0
+    "games": 447,
+    "hit": 85.1
    },
    "nfl": {
     "all_hit": 62.8,
@@ -224,8 +224,8 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 3,
-   "won": 8
+   "open": 2,
+   "won": 9
   },
   "losses": [
    {
@@ -361,35 +361,37 @@
    {
     "killed_by": [
      "Old Dominion Monarchs -7.5",
+     "Texas State Bobcats under 44.5 points",
      "Tampa Bay Lightning under 3.5 goals",
      "New Jersey Devils under 3.5 goals",
      "Over 7.5 goals"
     ],
     "legs": 11,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 4
    },
    {
     "killed_by": [
+     "Under 81.5 points",
      "Georgia Southern Eagles -8.5",
      "New York Rangers +1.5"
     ],
     "legs": 10,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 6
    }
   ],
   "picks": {
-   "hit": 57.9,
+   "hit": 59.0,
    "lost": 16,
-   "n": 38,
-   "roi": -43.0,
-   "said": 62.0,
-   "won": 22
+   "n": 39,
+   "roi": -38.3,
+   "said": 62.2,
+   "won": 23
   },
   "picks_by_league": {
    "arg": {
@@ -433,12 +435,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 0.0,
+    "hit": 33.3,
     "lost": 2,
-    "n": 2,
-    "roi": -100.0,
-    "said": 56.5,
-    "won": 0
+    "n": 3,
+    "roi": -61.9,
+    "said": 60.2,
+    "won": 1
    },
    "nhl": {
     "hit": 44.4,
@@ -478,12 +480,12 @@
     "won": 25
    },
    "agree": {
-    "hit": 64.8,
+    "hit": 64.9,
     "lost": 87,
-    "n": 247,
-    "roi": -4.7,
+    "n": 248,
+    "roi": -4.6,
     "said": 60.3,
-    "won": 160
+    "won": 161
    }
   },
   "weights": {
@@ -502,10 +504,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4276,
-    "market_only": 0.4276,
-    "model_only": 0.4616,
-    "n": 369,
+    "logloss": 0.4269,
+    "market_only": 0.4269,
+    "model_only": 0.461,
+    "n": 370,
     "weight": 0.05
    },
    "nfl": {
