@@ -1,7 +1,8 @@
 # Review 2026-10-16
 
-Picks 10-8 (55.6% vs 62.1% claimed).
+Picks 11-9 (55.0% vs 61.1% claimed).
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
+- LOST den AC Horsens at 51.2%: margin 0 · drawn -- a draw loses a moneyline side · called at 51%
 - LOST wta Maria Sakkari at 63.7%: lost 1-2 in sets · took it the distance · called at 64%
 - LOST wta Elina Svitolina at 70.6%: lost 1-2 in sets · took it the distance · called at 71%
 - LOST wta Fiona Ferro at 53.1%: lost 0-2 in sets · never won a set · called at 53%
