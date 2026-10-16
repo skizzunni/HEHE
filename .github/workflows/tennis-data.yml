@@ -1,0 +1,44 @@
+# Keeps data/matches_2026.json (the tennis ratings' match history) current:
+# every morning, before the 8 AM locks, it adds yesterday's finished ATP/WTA
+# singles results from ESPN and commits the file.
+name: tennis-data
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '7 9 * * *'
+  push:
+    branches: [claude/mlb-picks-review-jlx9w1]
+    paths:
+      - 'collect_tennis.py'
+      - '.github/workflows/tennis-data.yml'
+concurrency:
+  group: tennis-data
+  cancel-in-progress: false
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/mlb-picks-review-jlx9w1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 collect_tennis.py --update
+      - run: python3 -c "import json; m=json.load(open('data/matches_2026.json')); print(len(m), 'matches, last', max(x['date'] for x in m))"
+      - name: Commit the results
+        run: |
+          git add -f data/matches_2026.json
+          if git diff --cached --quiet; then echo "unchanged"; exit 0; fi
+          git config user.name  "board bot"
+          git config user.email "board-bot@users.noreply.github.com"
+          git commit -m "Tennis results through yesterday [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin claude/mlb-picks-review-jlx9w1 \
+              && git push origin HEAD:claude/mlb-picks-review-jlx9w1 && exit 0
+            sleep $((i * 5))
+          done
+          exit 1

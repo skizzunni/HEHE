@@ -24,8 +24,10 @@ GRASS = ["wimbledon", "queen", "halle", "stuttgart", "s-hertogenbosch", "hertoge
 
 def surface(name, date):
     n = (name or "").lower()
+    # grass names only count in grass season: Mallorca and Berlin also host
+    # autumn hard-court events
     for k in GRASS:
-        if k in n:
+        if k in n and 6 <= date.month <= 7:
             return "grass"
     for k in CLAY:
         if k in n:
@@ -53,9 +55,9 @@ def level(name, major, rnd):
     return "tour"
 
 
-def get(url, key):
+def get(url, key, fresh=False):
     p = os.path.join(CACHE, key + ".json")
-    if os.path.exists(p):
+    if os.path.exists(p) and not fresh:
         try:
             with open(p) as f:
                 return json.load(f)
@@ -77,15 +79,29 @@ def get(url, key):
 
 
 def main():
-    start = dt.date.fromisoformat(sys.argv[1])
-    end = dt.date.fromisoformat(sys.argv[2])
+    # --update: extend the existing file from a few days before its last match
+    # through yesterday. The tennis ratings are built from this file, and it
+    # had sat at 2026-09-03 for six weeks -- every September and October
+    # result was invisible to the model.
+    old = []
+    if sys.argv[1:2] == ["--update"]:
+        with open(OUT) as f:
+            old = json.load(f)
+        last = max(dt.date.fromisoformat(m["date"]) for m in old)
+        start = last - dt.timedelta(days=3)
+        end = dt.date.today() - dt.timedelta(days=1)
+    else:
+        start = dt.date.fromisoformat(sys.argv[1])
+        end = dt.date.fromisoformat(sys.argv[2])
+    recent = dt.date.today() - dt.timedelta(days=4)
     out, seen = [], set()
     d = start
     n_days = 0
     while d <= end:
         ds = d.strftime("%Y%m%d")
         for tour in ("atp", "wta"):
-            js = get("%s/%s/scoreboard?dates=%s" % (ESPN, tour, ds), "%s_%s" % (tour, ds))
+            js = get("%s/%s/scoreboard?dates=%s" % (ESPN, tour, ds), "%s_%s" % (tour, ds),
+                     fresh=d >= recent)
             if not js:
                 continue
             for ev in js.get("events", []):
@@ -133,6 +149,9 @@ def main():
             sys.stderr.write("%s ... %d matches\n" % (d, len(out)))
             sys.stderr.flush()
         d += dt.timedelta(days=1)
+    if old:
+        have = {m["id"] for m in out}
+        out = [m for m in old if m["id"] not in have] + out
     out.sort(key=lambda m: (m["date"], m["id"]))
     with open(OUT, "w") as f:
         json.dump(out, f)
