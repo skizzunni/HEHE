@@ -315,11 +315,12 @@
      "Texas State Bobcats under 44.5 points",
      "Tampa Bay Lightning under 3.5 goals",
      "New Jersey Devils under 3.5 goals",
+     "Calgary Flames over 2.5 goals",
      "Over 7.5 goals",
      "Utah Mammoth under 3.5 goals"
     ],
     "legs": 11,
-    "lost": 6,
+    "lost": 7,
     "status": "lost",
     "tier": "10k",
     "won": 4
@@ -327,23 +328,24 @@
    {
     "killed_by": [
      "Under 81.5 points",
+     "Calgary Flames +2.5",
      "Georgia Southern Eagles -8.5",
      "New York Rangers +1.5"
     ],
     "legs": 10,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "100",
     "won": 6
    }
   ],
   "picks": {
-   "hit": 56.1,
+   "hit": 57.1,
    "lost": 18,
-   "n": 41,
-   "roi": -47.1,
-   "said": 61.7,
-   "won": 23
+   "n": 42,
+   "roi": -41.6,
+   "said": 61.9,
+   "won": 24
   },
   "picks_by_league": {
    "arg": {
@@ -403,12 +405,12 @@
     "won": 0
    },
    "nhl": {
-    "hit": 40.0,
+    "hit": 45.5,
     "lost": 6,
-    "n": 10,
-    "roi": -37.4,
-    "said": 56.0,
-    "won": 4
+    "n": 11,
+    "roi": -30.8,
+    "said": 57.4,
+    "won": 5
    },
    "wta": {
     "hit": 72.2,
@@ -440,12 +442,12 @@
     "won": 25
    },
    "agree": {
-    "hit": 64.4,
+    "hit": 64.5,
     "lost": 89,
-    "n": 250,
-    "roi": -5.4,
+    "n": 251,
+    "roi": -5.2,
     "said": 60.3,
-    "won": 161
+    "won": 162
    }
   }
  },
@@ -487,11 +489,11 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 58.2,
-    "calls": 22,
+    "all_hit": 58.5,
+    "calls": 23,
     "cutoff": 0.675,
-    "games": 182,
-    "hit": 81.8
+    "games": 183,
+    "hit": 82.6
    },
    "ufc": {
     "all_hit": 65.3,
@@ -565,12 +567,12 @@
     "won": 24
    },
    "agree": {
-    "hit": 64.7,
+    "hit": 64.9,
     "lost": 85,
-    "n": 241,
-    "roi": -5.0,
+    "n": 242,
+    "roi": -4.9,
     "said": 60.6,
-    "won": 156
+    "won": 157
    }
   },
   "weights": {
@@ -603,10 +605,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.649,
-    "market_only": 0.649,
-    "model_only": 0.6557,
-    "n": 117,
+    "logloss": 0.6464,
+    "market_only": 0.6464,
+    "model_only": 0.6533,
+    "n": 118,
     "weight": 0.05
    },
    "wnba": {
