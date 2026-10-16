@@ -1,0 +1,56 @@
+{
+ "default": 0.2,
+ "detail": {
+  "mlb": {
+   "logloss": 0.6639,
+   "market_only": 0.6639,
+   "model_only": 0.6656,
+   "n": 372,
+   "weight": 0.05
+  },
+  "nba": {
+   "logloss": 0.6562,
+   "market_only": 0.6562,
+   "model_only": 0.717,
+   "n": 49,
+   "weight": 0.05
+  },
+  "ncaaf": {
+   "logloss": 0.4256,
+   "market_only": 0.4256,
+   "model_only": 0.4598,
+   "n": 367,
+   "weight": 0.05
+  },
+  "nfl": {
+   "logloss": 0.6456,
+   "market_only": 0.6496,
+   "model_only": 0.6456,
+   "n": 78,
+   "weight": 0.4
+  },
+  "nhl": {
+   "logloss": 0.6542,
+   "market_only": 0.6542,
+   "model_only": 0.6585,
+   "n": 107,
+   "weight": 0.05
+  },
+  "wnba": {
+   "logloss": 0.5247,
+   "market_only": 0.5258,
+   "model_only": 0.525,
+   "n": 46,
+   "weight": 0.3
+  }
+ },
+ "updated": "2026-10-15T21:20-04:00",
+ "weights": {
+  "mlb": 0.05,
+  "nba": 0.05,
+  "ncaaf": 0.05,
+  "nfl": 0.4,
+  "nhl": 0.05,
+  "wnba": 0.3
+ }
+}

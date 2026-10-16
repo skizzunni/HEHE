@@ -1,27 +1,34 @@
-"""Feed probe, run on GitHub's runners. Round 15: does each locks leg's
-FanDuel id (marketId:selectionId) really name the line the card shows?"""
+"""Feed probe, run on GitHub's runners. Round 16: 11 Europa League "1+ shots"
+props at -900 to -2500 graded as 0 shots. Real zero-shot games, or a misread?
+Print each lost player's ESPN roster entry (every stat) and, for contrast,
+one winner's."""
 import json
 import sys
-import time
 import urllib.request
 
 sys.path.insert(0, ".")
-import fanduel  # noqa: E402
+import props_ledger as PL  # noqa: E402
 
-book = json.load(open("locks.json"))
-want = {book["legs"][k]["fd"]: book["legs"][k] for k in book["days"]["2026-10-15"]}
-FD = fanduel.load()
-seen = {}
-for lg, games in FD.items():
-    for g in games:
-        d = fanduel._get(f"{fanduel.BASE}/event-page?_ak={fanduel.AK}&eventId={g['id']}&tab=popular"
-                         "&useCombinedTouchdownsVirtualMarket=true&usePulse=true&useQuickBets=true")
-        for m in (((d or {}).get("attachments") or {}).get("markets") or {}).values():
-            for r in m.get("runners") or []:
-                ref = f'{m.get("marketId")}:{r.get("selectionId")}'
-                if ref in want:
-                    seen[ref] = (m.get("marketType"), m.get("marketName"), r.get("runnerName"), r.get("handicap"),
-                                 ((r.get("winRunnerOdds") or {}).get("americanDisplayOdds") or {}).get("americanOdds"))
-        time.sleep(0.2)
-for ref, L in want.items():
-    print(f'{L["label"]:<38} card {L.get("price")!s:>7} | FanDuel says: {seen.get(ref, "NOT FOUND")}')
+book = json.load(open("props.json"))
+want = [e for e in book.values() if e["league"] == "uel" and e["market"].startswith("Shots")
+        and e["status"] in ("lost", "won")]
+seen = set()
+for e in want:
+    eid = e["gid"].split(":", 1)[1]
+    d = json.load(urllib.request.urlopen(urllib.request.Request(
+        f"{PL.SITE}/soccer/uefa.europa/summary?event={eid}", headers={"User-Agent": "Mozilla/5.0"}),
+        timeout=25))
+    hit = None
+    for team in d.get("rosters") or []:
+        for pl in team.get("roster") or []:
+            if str((pl.get("athlete") or {}).get("id")) == str(e["aid"]):
+                hit = pl
+    st = {x.get("name"): x.get("value") for x in (hit or {}).get("stats") or []}
+    print(f'{e["status"]:5} {e["name"]:<22} {e["market"]} {e["line"]} {e["price"]}: '
+          f'starter={(hit or {}).get("starter")} subIn={(hit or {}).get("subbedIn")} '
+          f'subOut={(hit or {}).get("subbedOut")} stats={json.dumps(st)[:400]}')
+    if eid not in seen:
+        seen.add(eid)
+        bs = (d.get("boxscore") or {}).get("teams") or []
+        print("   team stats:", [{s.get("name"): s.get("displayValue") for s in t.get("statistics") or []
+                                   if "hot" in (s.get("name") or "")} for t in bs])

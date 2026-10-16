@@ -1,0 +1,227 @@
+"""The daily review: what lost, why, and what to change for tomorrow.
+
+    python3 tools/daily_review.py        # run by every board rebuild
+
+Runs after each rebuild, so it updates as games finish. It reads everything
+the site records -- picks (ledger.json), locks (locks.json), the lottery
+(lottery.json), props (props.json) -- and writes:
+
+  review/log.json            one entry per day, kept forever (the history the
+                             page no longer shows)
+  review/latest.md           the newest day in words
+  review/anchor_weights.json the model's share of the say against the price,
+                             per league, refitted on every graded pick
+
+The refit is the self-improvement step. A pick blends the model with the
+de-vigged price (dashboard.ANCHOR_W). Each day the weight that would have
+predicted every graded pick best (log-loss) is found per league and used for
+the next day's picks, within bounds and only with enough games behind it.
+"""
+import datetime as dt
+import json
+import math
+import os
+from collections import defaultdict
+from zoneinfo import ZoneInfo
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+ROOT = os.path.dirname(HERE)
+OUT = os.path.join(ROOT, "review")
+ET = ZoneInfo("America/New_York")
+MIN_FIT = 40                 # graded picks a league needs before its own weight
+W_GRID = [i / 20 for i in range(1, 9)]        # 0.05 .. 0.40: the model always breaks ties
+W_DEFAULT = 0.20
+
+
+def load(name, default):
+    try:
+        with open(os.path.join(ROOT, name)) as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return default
+
+
+def implied(price):
+    try:
+        v = float(str(price).replace("+", ""))
+    except (TypeError, ValueError):
+        return None
+    if -100 < v < 100:
+        return None
+    return 100 / (v + 100) if v > 0 else -v / (-v + 100)
+
+
+def dec(price):
+    q = implied(price)
+    return 1 / q if q else None
+
+
+def day_of(e):
+    return (e.get("played") or e.get("date") or (e.get("settled") or "")[:10]
+            or (e.get("logged") or "")[:10])
+
+
+def lg_(x):
+    x = min(max(x, 1e-6), 1 - 1e-6)
+    return math.log(x / (1 - x))
+
+
+def picks_view(e):
+    """(model p, market p) for the side picked, or None."""
+    pa, qa = e.get("p_model_away"), e.get("p_market_away")
+    if pa is not None and qa is not None and e.get("myside") in ("away", "home"):
+        if e["myside"] == "away":
+            return pa, qa
+        return 1 - pa, 1 - qa
+    q = implied(e.get("price"))
+    if q is None or not e.get("conf"):
+        return None
+    return e["conf"] / 100, min(q / 1.03, 0.99)   # older entries: one side, rough de-vig
+
+
+def refit(graded):
+    by = defaultdict(list)
+    for e in graded:
+        v = picks_view(e)
+        if v:
+            by[e["league"]].append((v[0], v[1], e["status"] == "won"))
+    out, detail = {}, {}
+    for lg, rs in by.items():
+        if len(rs) < MIN_FIT:
+            continue
+        scores = []
+        for w in W_GRID:
+            ll = 0.0
+            for pm, q, won in rs:
+                p = 1 / (1 + math.exp(-((1 - w) * lg_(q) + w * lg_(pm))))
+                ll -= math.log(p if won else 1 - p)
+            scores.append((ll / len(rs), w))
+        best = min(scores)
+        out[lg] = best[1]
+        detail[lg] = dict(n=len(rs), weight=best[1], logloss=round(best[0], 4),
+                          model_only=round(scores[-1][0], 4), market_only=round(scores[0][0], 4))
+    return out, detail
+
+
+def summarize(rs):
+    n = len(rs)
+    if not n:
+        return dict(n=0)
+    w = sum(e["status"] == "won" for e in rs)
+    pr = [e for e in rs if dec(e.get("price"))]
+    roi = (sum((dec(e["price"]) - 1) if e["status"] == "won" else -1 for e in pr) / len(pr) * 100
+           if pr else None)
+    return dict(n=n, won=w, lost=n - w, hit=round(100 * w / n, 1),
+                said=round(sum(e.get("conf") or 0 for e in rs) / n, 1),
+                roi=round(roi, 1) if roi is not None else None)
+
+
+def review_day(day, ledger, locks, lottery, props):
+    graded = [e for e in ledger.values() if e.get("status") in ("won", "lost")]
+    todays = [e for e in graded if day_of(e) == day]
+    leagues = defaultdict(list)
+    for e in todays:
+        leagues[e["league"]].append(e)
+    losses = [dict(league=e["league"], pick=e["pick"], said=e.get("conf"), price=e.get("price"),
+                   against_market=e.get("market_agrees") is False, why=e.get("diagnosis") or "")
+              for e in todays if e["status"] == "lost"]
+    # the last 14 days, to tell a bad night from a leak
+    since = (dt.date.fromisoformat(day) - dt.timedelta(days=14)).isoformat()
+    recent = [e for e in graded if since <= day_of(e) <= day]
+    by_lg = defaultdict(list)
+    for e in recent:
+        by_lg[e["league"]].append(e)
+    leaks = []
+    for lg, rs in by_lg.items():
+        s = summarize(rs)
+        # a leak: 20+ calls hitting 8+ points under what they claimed
+        if s["n"] >= 20 and s["hit"] < s["said"] - 8:
+            leaks.append(dict(league=lg, **s))
+    vs_mkt = dict(agree=summarize([e for e in recent if e.get("market_agrees") is True]),
+                  against=summarize([e for e in recent if e.get("market_agrees") is False]))
+
+    lk_keys = (locks.get("days") or {}).get(day, [])
+    lk = [locks["legs"][k] for k in lk_keys if k in locks.get("legs", {})]
+    lk_view = dict(n=len(lk), won=sum(L["status"] == "won" for L in lk),
+                   lost=[f'{L["label"]} ({L["match"]}) {L.get("score", "")}'.strip()
+                         for L in lk if L["status"] == "lost"],
+                   open=sum(L["status"] == "open" for L in lk))
+    lt = ((lottery.get("days") or {}).get(day) or {}).get("tickets", [])
+    lt_view = [dict(tier=t.get("tier") or "10k", status=t.get("status", "open"),
+                    legs=len(t["legs"]), won=sum(L["status"] == "won" for L in t["legs"]),
+                    lost=sum(L["status"] == "lost" for L in t["legs"]),
+                    killed_by=[L["label"] for L in t["legs"] if L["status"] == "lost"])
+               for t in lt]
+    pr = [e for e in props.values() if e.get("date") == day and e.get("status") in ("won", "lost")]
+    pr_view = dict(n=len(pr), won=sum(e["status"] == "won" for e in pr),
+                   said=round(100 * sum(e.get("p") or 0 for e in pr) / len(pr), 1) if pr else None)
+    return dict(day=day, picks=summarize(todays),
+                picks_by_league={k: summarize(v) for k, v in leagues.items()},
+                losses=losses, leaks_14d=leaks, vs_market_14d=vs_mkt,
+                locks=lk_view, lottery=lt_view, props=pr_view)
+
+
+def words(r, fit):
+    p = r["picks"]
+    out = [f"# Review {r['day']}", ""]
+    if p.get("n"):
+        out.append(f"Picks {p['won']}-{p['lost']} ({p['hit']}% vs {p['said']}% claimed"
+                   + (f", ROI {p['roi']:+}%" if p.get("roi") is not None else "") + ").")
+    else:
+        out.append("No picks settled yet.")
+    for L in r["losses"]:
+        out.append(f"- LOST {L['league']} {L['pick']} at {L['said']}%"
+                   + (" (against the market)" if L["against_market"] else "") + f": {L['why']}")
+    for k in r["leaks_14d"]:
+        out.append(f"LEAK {k['league']}: {k['hit']}% hit vs {k['said']}% claimed on {k['n']} calls (14 days)")
+    a, b = r["vs_market_14d"]["agree"], r["vs_market_14d"]["against"]
+    if a.get("n") and b.get("n"):
+        out.append(f"With the market {a['hit']}% ({a['n']}); against it {b['hit']}% ({b['n']}).")
+    lk = r["locks"]
+    if lk["n"]:
+        out.append(f"Locks {lk['won']}/{lk['n']} won, {lk['open']} open"
+                   + ("; lost: " + "; ".join(lk["lost"]) if lk["lost"] else "") + ".")
+    for t in r["lottery"]:
+        out.append(f"Lottery {t['tier']}: {t['status']} ({t['won']}/{t['legs']} legs won"
+                   + (", killed by " + ", ".join(t["killed_by"]) if t["killed_by"] else "") + ")")
+    if r["props"]["n"]:
+        out.append(f"Props {r['props']['won']}/{r['props']['n']} vs {r['props']['said']}% claimed.")
+    out.append("")
+    out.append("Weights for tomorrow (model's share vs the price): "
+               + ", ".join(f"{k} {v['weight']:.2f} (n={v['n']})" for k, v in sorted(fit.items())))
+    return "\n".join(out) + "\n"
+
+
+def main():
+    ledger = load("ledger.json", {})
+    locks = load("locks.json", {"days": {}, "legs": {}})
+    lottery = load("lottery.json", {"days": {}})
+    props = load("props.json", {})
+    os.makedirs(OUT, exist_ok=True)
+    log_path = os.path.join(OUT, "log.json")
+    try:
+        with open(log_path) as fh:
+            log = json.load(fh)
+    except (OSError, ValueError):
+        log = {}
+    today = dt.datetime.now(ET).date()
+    # today (games still finishing) and yesterday (late games settle overnight)
+    for d in (today - dt.timedelta(days=1), today):
+        log[d.isoformat()] = review_day(d.isoformat(), ledger, locks, lottery, props)
+    graded = [e for e in ledger.values() if e.get("status") in ("won", "lost")]
+    weights, detail = refit(graded)
+    with open(os.path.join(OUT, "anchor_weights.json"), "w") as fh:
+        json.dump(dict(updated=dt.datetime.now(ET).isoformat(timespec="minutes"),
+                       default=W_DEFAULT, weights=weights, detail=detail), fh, indent=1,
+                  sort_keys=True)
+    log[today.isoformat()]["weights"] = detail
+    with open(log_path, "w") as fh:
+        json.dump(log, fh, indent=1, sort_keys=True)
+    latest = max(k for k, v in log.items() if v["picks"].get("n") or k == today.isoformat())
+    with open(os.path.join(OUT, "latest.md"), "w") as fh:
+        fh.write(words(log[latest], detail))
+    print(words(log[latest], detail))
+
+
+if __name__ == "__main__":
+    main()

@@ -138,6 +138,9 @@ def record(state=None):
                              # against it labelled every favourite a market fade.
                              market_agrees=(None if not leg or not leg.get("price")
                                             else not leg.get("dog")),
+                             p_model_away=r.get("p_model_away"),
+                             p_market_away=r.get("p_market_away"),
+                             myside=r.get("myside"),
                              status="open", logged=dt.datetime.now(ET).isoformat()[:16])
                 # The game's own ET date, so the grader knows where to look.
                 # Without it the grader only searched the last three days, and
@@ -490,6 +493,22 @@ def board_payload(limit=40):
                  when=(e.get("played") or e.get("settled") or e.get("logged") or "")[:10])
             for e in done[:limit]]
 
+    # The page shows TODAY only (Eastern): the day's settled calls and its
+    # record. Every earlier result stays in ledger.json and in the daily
+    # review log (review/log.json); the page just does not show history.
+    today = dt.datetime.now(ET).date().isoformat()
+    day_of = lambda e: (e.get("played") or e.get("date") or (e.get("settled") or "")[:10]
+                        or (e.get("logged") or "")[:10])
+    todays = [e for e in done if day_of(e) == today]
+    feed_today = [dict(league=e["league"], pick=e["pick"], status=e["status"],
+                       conf=e.get("conf"), price=e.get("price"), dog=e.get("dog"),
+                       score=e.get("scores") or {},
+                       why=(e.get("diagnosis") if e["status"] == "lost" else e.get("why") or ""),
+                       when=today)
+                  for e in todays]
+    open_today = sum(1 for e in book.values()
+                     if e.get("status") == "open" and (e.get("date") or "") == today)
+
     gate = recs or []
     # epoch ms of this capture, so the page can show its own age at render
     # time. The page cannot fetch, so honesty about staleness is the only
@@ -507,7 +526,10 @@ def board_payload(limit=40):
                                   actual=round(c["actual"], 1),
                                   gap=round(c["gap"], 1), thin=c["n"] < 30)
                              for b, c in sorted(r.get("calibration", {}).items())],
-                live=live, feed=feed, gate=gate)
+                live=live, feed=feed, gate=gate,
+                today=today, today_won=sum(e["status"] == "won" for e in todays),
+                today_lost=sum(e["status"] == "lost" for e in todays),
+                today_open=open_today, feed_today=feed_today)
 
 
 def main():

@@ -78,6 +78,15 @@ def mlb_anchor(p_model, p_market):
     z = (1 - MLB_MKT_W) * _l(p_market) + MLB_MKT_W * _l(p_model)
     return 1 / (1 + math.exp(-max(min(z, 30), -30)))
 
+def anchor(p_model, p_market, w):
+    """Blend a model probability into a de-vigged price with model weight w."""
+    def _l(x):
+        x = min(max(x, 1e-6), 1 - 1e-6)
+        return math.log(x / (1 - x))
+    z = (1 - w) * _l(p_market) + w * _l(p_model)
+    return 1 / (1 + math.exp(-max(min(z, 30), -30)))
+
+
 _CTX = ssl.create_default_context()
 try:
     _CTX.load_verify_locations("/root/.ccr/ca-bundle.crt")

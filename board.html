@@ -1264,8 +1264,8 @@ function drawCard(slot){
   b.setAttribute("aria-pressed", String(s === slot));
   const R = D.results || {};
   if(s === "results"){
-    b.innerHTML = "Results" + '<span class="dnum">'
-      + (R.graded ? R.won + "-" + R.lost : "0-0") + '</span>';
+    b.innerHTML = "Results" + '<span class="dnum">today '
+      + (R.today_won || 0) + "-" + (R.today_lost || 0) + '</span>';
   } else if(s === "locks"){
     const L = ((D.locks || {}).today || {}).locks || [];
     b.innerHTML = "Locks" + '<span class="dnum">' + L.length + ' FanDuel</span>';
@@ -1461,41 +1461,33 @@ function scoreboardHTML(){
       + 'Thin leagues barely move until their record supports it.</p>';
   }
   function renderResults(){
+  // Today only (Eastern). History is kept in the ledger and the daily review
+  // log, not shown here.
   const R = D.results || {};
-  const live = R.live || [], feed = R.feed || [], cal = R.calibration || [];
+  const live = R.live || [], feed = R.feed_today || [];
+  const w = R.today_won || 0, l = R.today_lost || 0;
   let h = '<div class="rhead">'
-    + (R.graded
-        ? '<div class="rbig">' + R.won + '&ndash;' + R.lost + '</div>'
-          + '<div class="rsub">' + R.hit.toFixed(1) + '% on ' + R.graded
-          + ' graded call' + (R.graded === 1 ? '' : 's') + '</div>'
+    + (w + l
+        ? '<div class="rbig">' + w + '&ndash;' + l + '</div>'
+          + '<div class="rsub">today' + (R.today ? ' (' + esc(R.today) + ')' : '') + ' &middot; '
+          + (100 * w / (w + l)).toFixed(0) + '% of ' + (w + l) + ' finished</div>'
         : '<div class="rbig">&mdash;</div>'
-          + '<div class="rsub">no call has finished yet</div>')
-    + '<div class="rsub">' + live.length + ' in play &middot; ' + (R.open || 0)
-    + ' not finished</div></div>'
-      + '<div class="sbh">Record vs claim</div>' + scoreboardHTML() + tuningHTML()
-    // a headline percentage off a handful of calls is noise wearing a number
-    + (R.graded && R.graded < 30
-        ? '<p class="note" style="margin:10px 0 0">' + R.graded + ' graded call'
-          + (R.graded === 1 ? '' : 's') + ' is far too few to read as a hit rate. '
-          + 'The record below is a log, not a verdict.</p>'
-        : '');
+          + '<div class="rsub">no call has finished yet today</div>')
+    + '<div class="rsub">' + live.length + ' in play &middot; ' + (R.today_open || 0)
+    + ' still to finish</div></div>';
 
   // The page has no network access, so these scores are a snapshot, not a
-  // feed. Measure its age against the viewer's clock and say so plainly --
-  // a stale score presented as live is worse than no score.
+  // feed. Measure its age against the viewer's clock and say so plainly.
   const mins = R.captured
     ? Math.max(0, Math.round((Date.now() - R.captured) / 60000)) : null;
   const stale = mins !== null && mins >= 15;
   if(live.length){
-    h += '<div class="sect"><h2>Where my picks stood</h2>'
-      + '<p class="note">the side I have, and the last score I was able to read</p>'
+    h += '<div class="sect"><h2>In play</h2>'
       + (mins === null ? '' :
          '<p class="age' + (stale ? ' stale' : '') + '">Snapshot taken <b>'
          + (mins < 1 ? 'moments ago' : mins + ' minute' + (mins === 1 ? '' : 's') + ' ago')
          + '</b>. The site is rebuilt every 5 minutes and this page reloads itself '
-         + 'when a newer one is out; scores below update live from ESPN in between.'
-         + (stale ? ' Some of these are likely finished by now; check the book for '
-                  + 'anything you are acting on.' : '') + '</p>')
+         + 'when a newer one is out.</p>')
       + live.map(x =>
           '<div class="livecard"><div><span class="lgpill">' + esc(x.league)
           + '</span><span class="who">' + esc(x.pick) + '</span></div>'
@@ -1504,38 +1496,9 @@ function scoreboardHTML(){
       + '</div>';
   }
 
-  if((R.by_league || []).length){
-    h += '<div class="sect"><h2>By league</h2>'
-      + '<table><thead><tr><th>League</th><th class="num">Calls</th>'
-      + '<th class="num">W&ndash;L</th><th class="num">Hit</th></tr></thead><tbody>'
-      + R.by_league.map(v =>
-          '<tr><td>' + esc(v.lg.toUpperCase()) + '</td><td class="num">' + v.n
-          + '</td><td class="num">' + v.won + '&ndash;' + (v.n - v.won)
-          + '</td><td class="num">' + v.hit.toFixed(1) + '%</td></tr>').join("")
-      + '</tbody></table></div>';
-  }
-
-  if(cal.length){
-    h += '<div class="sect"><h2>Calibration</h2>'
-      + '<p class="note">what I said would happen against what did. '
-      + 'Under 30 calls a band is marked thin and means nothing yet.</p>'
-      + '<table><thead><tr><th>Band</th><th class="num">Calls</th>'
-      + '<th class="num">I said</th><th class="num">Actual</th>'
-      + '<th class="num">Gap</th></tr></thead><tbody>'
-      + cal.map(c =>
-          '<tr' + (c.thin ? ' class="thin"' : '') + '><td class="' + (c.thin ? 'thin' : '')
-          + '">' + c.band + '&ndash;' + (c.band + 5) + '%'
-          + (c.thin ? ' <span class="lgpill">thin</span>' : '')
-          + '</td><td class="num">' + c.n + '</td><td class="num">' + c.said.toFixed(1)
-          + '%</td><td class="num">' + c.actual.toFixed(1) + '%</td>'
-          + '<td class="num ' + (c.gap < 0 ? 'bad' : 'ok') + '">'
-          + (c.gap > 0 ? '+' : '') + c.gap.toFixed(1) + '</td></tr>').join("")
-      + '</tbody></table></div>';
-  }
-
   if(feed.length){
-    h += '<div class="sect"><h2>Every graded call</h2>'
-      + '<p class="note">newest first &middot; each loss carries its own post-mortem</p>'
+    h += '<div class="sect"><h2>Today&rsquo;s finished calls</h2>'
+      + '<p class="note">each loss carries its own post-mortem</p>'
       + '<table><thead><tr><th>Result</th><th>Pick</th><th>Score</th>'
       + '<th class="num">Said</th><th class="diag">What happened</th>'
       + '</tr></thead><tbody>'
@@ -1546,23 +1509,13 @@ function scoreboardHTML(){
           + esc(f.pick) + (f.dog ? '<span class="dogtag">DOG</span>' : '') + '</td>'
           + '<td class="mkt">' + (scoreLine(f.score) || '&mdash;') + '</td>'
           + '<td class="num">' + (f.conf ? f.conf.toFixed(0) + '%' : '&mdash;') + '</td>'
-          + '<td class="diag">' + esc(f.why || (f.status === "won" ? "" : "")) + '</td>'
+          + '<td class="diag">' + esc(f.why || '') + '</td>'
           + '</tr>').join("")
       + '</tbody></table></div>';
   }
-
-  h += '<div class="sect"><h2>Upgrade gate</h2>' + ((R.gate || []).length
-    ? '<div class="gate"><p>A pattern has cleared the bar:</p>'
-      + R.gate.map(g => '<p><b>' + esc(g) + '</b></p>').join("") + '</div>'
-    : '<div class="gate"><p>No band yet has both <b>100+ graded calls</b> and a gap '
-      + 'wider than <b>two standard errors</b>, so nothing here justifies changing '
-      + 'a parameter.</p><p>Losses are diagnosed the moment they settle &mdash; that '
-      + 'is above, and it is safe at any sample size. Retuning is not. A 57% process '
-      + 'over 14 games swings 1.9 games either way, so six wins and ten wins are the '
-      + 'same model. Fitting the curve to a bad night is how this project already '
-      + 'made itself worse once: an in-sample correction pushed held-out Brier from '
-      + '0.2449 to 0.2455.</p></div>') + '</div>';
-
+  h += '<p class="note">Every day is reviewed automatically as its games finish &mdash; losses '
+    + 'diagnosed, each league checked against the market, and the weights retuned for the '
+    + 'next day. Earlier days are kept on record, not shown here.</p>';
   panel.innerHTML = h;
 }
 // ---------------------------------------------------------------- bet slip

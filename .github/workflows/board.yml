@@ -73,9 +73,14 @@ jobs:
       - name: Rebuild the board
         run: python3 rebuild_board.py
 
+      # what lost and why, every day, and the weights for the next picks
+      - name: Review the day
+        run: python3 tools/daily_review.py || echo "review failed -- board unaffected"
+
       - name: Commit the ledger
         run: |
           git add ledger.json stacks.json
+          git add -f review/ 2>/dev/null || true
           if [ -f props.json ]; then git add props.json; fi
           if [ -f locks.json ]; then git add locks.json; fi
           if [ -f lottery.json ]; then git add lottery.json; fi

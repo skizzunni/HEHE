@@ -118,6 +118,21 @@ LEAGUES += EXTRA_SOCCER
 THREE_WAY = {k for k, p, _ in LEAGUES if p.startswith("soccer/")}
 PRESEASON_LEAGUES = {"mlb", "wnba", "nfl", "ncaaf", "nba", "nhl", "ncaab"}
 # Leagues whose pick is the market's favourite rather than a model's.
+# The model's share of the say against a de-vigged price, per league (log-
+# odds blend). Fitted on the graded ledger 2026-10-16: the best weight was
+# 0.0 everywhere except NFL (0.4) and WNBA (0.3); a fifth is kept as a
+# tie-breaker, as MLB's own backtest chose.
+ANCHOR_W_DEFAULT = 0.20
+ANCHOR_W = {"nfl": 0.30, "wnba": 0.30}
+# tools/daily_review.py refits these every day from the graded picks and
+# writes review/anchor_weights.json; its numbers win where it has them.
+try:
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "review",
+                           "anchor_weights.json")) as _fh:
+        _aw = json.load(_fh)
+    ANCHOR_W.update({k: float(v) for k, v in (_aw.get("weights") or {}).items()})
+except (OSError, ValueError, TypeError):
+    pass
 MARKET_PICK = {"ucl", "uel", "uecl"} | {k for k, _, _ in EXTRA_SOCCER}
 
 # Measured on 4,090 real sides of 2,045 completed 2026 MLB games with closing
@@ -578,10 +593,26 @@ def collect(key, path, day, mlbctx, mybook=None):
                 # games, so it nudges the price rather than overruling it, and
                 # the side comes from the blend. This is what stops the board
                 # taking a stand the numbers cannot pay for.
-                if key == "mlb" and mine.get("p_away") is not None:
+                #
+                # Every other league now does the same (2026-10-16). On 1,222
+                # graded picks the de-vigged price alone out-predicted the
+                # model in every league with a sample (log-loss: college
+                # football 0.42 vs 0.61, NBA 0.65 vs 0.86), and the 272 picks
+                # that went against the market's favourite hit 34.9% while
+                # claiming 55.4% (ROI -12.3%). So the price leads everywhere and
+                # the model gets ANCHOR_W of the say -- enough to break near
+                # coin flips, never enough to fade a real favourite.
+                p_away = mine.get("p_away")
+                if p_away is None and mine.get("conf") and mine.get("side") in ("away", "home"):
+                    p_away = mine["conf"] if mine["side"] == "away" else 1 - mine["conf"]
+                two_way = legs and not any(L["side"] == "draw" for L in legs)
+                if two_way and p_away is not None:
                     mq = next((L["prob"] for L in legs if L["side"] == "away"), None)
+                    # both opinions, kept for the daily review's refit
+                    mine = dict(mine, p_model_away=p_away, p_market_away=mq)
                     if mq is not None and 0.0 < mq < 1.0:
-                        pa = P.mlb_anchor(mine["p_away"], mq)
+                        pa = P.anchor(p_away, mq, ANCHOR_W.get(
+                            key, P.MLB_MKT_W if key == "mlb" else ANCHOR_W_DEFAULT))
                         away = pa > 0.5
                         side_ = "away" if away else "home"
                         who = names.get(side_)
@@ -604,6 +635,8 @@ def collect(key, path, day, mlbctx, mybook=None):
                              tip=t.strftime("%-I:%M %p"), legs=legs, note=note,
                              mypick=mine.get("pick", ""), myconf=mine.get("conf"),
                              why=mine.get("why", ""), myside=mine.get("side"),
+                             p_model_away=mine.get("p_model_away"),
+                             p_market_away=mine.get("p_market_away"),
                              pick=(best["who"] if best else ""),
                              price=(best["price"] if best else ""),
                              conf=(best["prob"] if best else None)))
