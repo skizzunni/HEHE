@@ -162,11 +162,11 @@
     "hit": 71.4
    },
    "ncaaf": {
-    "all_hit": 82.9,
-    "calls": 407,
+    "all_hit": 82.7,
+    "calls": 408,
     "cutoff": 0.55,
-    "games": 445,
-    "hit": 85.3
+    "games": 446,
+    "hit": 85.0
    },
    "nfl": {
     "all_hit": 62.8,
@@ -224,8 +224,8 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 4,
-   "won": 7
+   "open": 3,
+   "won": 8
   },
   "losses": [
    {
@@ -259,6 +259,14 @@
     "price": null,
     "said": 56.5,
     "why": "margin 27 \u00b7 called at 56%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "East Carolina Pirates",
+    "price": "-198",
+    "said": 53.6,
+    "why": "margin 13 \u00b7 the book had my side favoured too \u00b7 called at 54%"
    },
    {
     "against_market": true,
@@ -361,7 +369,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "10k",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -372,15 +380,15 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 5
+    "won": 6
    }
   ],
   "picks": {
-   "hit": 59.5,
-   "lost": 15,
-   "n": 37,
-   "roi": -37.4,
-   "said": 62.3,
+   "hit": 57.9,
+   "lost": 16,
+   "n": 38,
+   "roi": -43.0,
+   "said": 62.0,
    "won": 22
   },
   "picks_by_league": {
@@ -426,10 +434,10 @@
    },
    "ncaaf": {
     "hit": 0.0,
-    "lost": 1,
-    "n": 1,
+    "lost": 2,
+    "n": 2,
     "roi": -100.0,
-    "said": 59.4,
+    "said": 56.5,
     "won": 0
    },
    "nhl": {
@@ -470,10 +478,10 @@
     "won": 25
    },
    "agree": {
-    "hit": 65.0,
-    "lost": 86,
-    "n": 246,
-    "roi": -4.3,
+    "hit": 64.8,
+    "lost": 87,
+    "n": 247,
+    "roi": -4.7,
     "said": 60.3,
     "won": 160
    }
@@ -494,10 +502,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.426,
-    "market_only": 0.426,
-    "model_only": 0.4604,
-    "n": 368,
+    "logloss": 0.4276,
+    "market_only": 0.4276,
+    "model_only": 0.4616,
+    "n": 369,
     "weight": 0.05
    },
    "nfl": {
