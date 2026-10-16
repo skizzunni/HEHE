@@ -29,7 +29,9 @@
      0.552
     ],
     "picks_changed": 58,
-    "better": false
+    "extra_wins": 2,
+    "better": false,
+    "significant": false
    },
    "spread": {
     "hit": 58.43,
@@ -40,7 +42,9 @@
      -0.127
     ],
     "picks_changed": 166,
-    "better": false
+    "extra_wins": 4,
+    "better": false,
+    "significant": false
    },
    "total": {
     "hit": 57.56,
@@ -51,20 +55,56 @@
      -0.077
     ],
     "picks_changed": 16,
-    "better": false
+    "extra_wins": -2,
+    "better": false,
+    "significant": false
+   },
+   "rest": {
+    "hit": 54.65,
+    "logloss": 0.6868,
+    "weights": [
+     0.052,
+     0.547,
+     -0.144,
+     -0.524,
+     -0.042
+    ],
+    "picks_changed": 116,
+    "extra_wins": -22,
+    "better": false,
+    "significant": false
+   },
+   "form": {
+    "hit": 57.56,
+    "logloss": 0.6754,
+    "weights": [
+     0.008,
+     0.604,
+     -0.004
+    ],
+    "picks_changed": 16,
+    "extra_wins": -2,
+    "better": false,
+    "significant": false
    },
    "all": {
-    "hit": 54.94,
-    "logloss": 0.6762,
+    "hit": 54.36,
+    "logloss": 0.6872,
     "weights": [
-     0.034,
-     0.711,
-     0.529,
-     -0.123,
-     -0.134
+     0.074,
+     0.66,
+     -0.008,
+     -0.141,
+     -0.513,
+     -0.041,
+     0.46,
+     -0.122,
+     -0.173
     ],
-    "picks_changed": 166,
-    "better": false
+    "picks_changed": 194,
+    "extra_wins": -24,
+    "better": false,
+    "significant": false
    }
   },
   "nfl": {
@@ -95,7 +135,9 @@
      -0.55
     ],
     "picks_changed": 7,
-    "better": false
+    "extra_wins": 1,
+    "better": false,
+    "significant": false
    },
    "spread": {
     "hit": 60.0,
@@ -106,7 +148,9 @@
      0.008
     ],
     "picks_changed": 2,
-    "better": false
+    "extra_wins": -2,
+    "better": false,
+    "significant": false
    },
    "total": {
     "hit": 60.0,
@@ -117,20 +161,56 @@
      -0.005
     ],
     "picks_changed": 2,
-    "better": false
+    "extra_wins": -2,
+    "better": false,
+    "significant": false
    },
-   "all": {
+   "rest": {
     "hit": 61.71,
-    "logloss": 0.6426,
+    "logloss": 0.6415,
     "weights": [
-     0.042,
-     1.109,
-     -0.551,
-     0.013,
-     0.036
+     0.084,
+     1.064,
+     0.0,
+     0.0,
+     -0.213
     ],
     "picks_changed": 7,
-    "better": false
+    "extra_wins": 1,
+    "better": false,
+    "significant": false
+   },
+   "form": {
+    "hit": 60.0,
+    "logloss": 0.6397,
+    "weights": [
+     0.03,
+     1.053,
+     0.081
+    ],
+    "picks_changed": 2,
+    "extra_wins": -2,
+    "better": false,
+    "significant": false
+   },
+   "all": {
+    "hit": 60.57,
+    "logloss": 0.6423,
+    "weights": [
+     0.101,
+     1.095,
+     0.058,
+     0.0,
+     0.0,
+     -0.206,
+     -0.538,
+     0.003,
+     0.056
+    ],
+    "picks_changed": 9,
+    "extra_wins": -1,
+    "better": false,
+    "significant": false
    }
   },
   "ncaaf": {
@@ -161,7 +241,9 @@
      -0.316
     ],
     "picks_changed": 16,
-    "better": true
+    "extra_wins": 4,
+    "better": true,
+    "significant": false
    },
    "spread": {
     "hit": 78.38,
@@ -172,7 +254,9 @@
      0.964
     ],
     "picks_changed": 3,
-    "better": false
+    "extra_wins": 1,
+    "better": false,
+    "significant": false
    },
    "total": {
     "hit": 79.22,
@@ -183,20 +267,56 @@
      0.075
     ],
     "picks_changed": 18,
-    "better": true
+    "extra_wins": 6,
+    "better": true,
+    "significant": true
+   },
+   "rest": {
+    "hit": 78.72,
+    "logloss": 0.4459,
+    "weights": [
+     0.136,
+     1.023,
+     0.0,
+     0.0,
+     -0.087
+    ],
+    "picks_changed": 17,
+    "extra_wins": 3,
+    "better": true,
+    "significant": false
+   },
+   "form": {
+    "hit": 79.39,
+    "logloss": 0.4452,
+    "weights": [
+     0.131,
+     1.005,
+     0.485
+    ],
+    "picks_changed": 17,
+    "extra_wins": 7,
+    "better": true,
+    "significant": true
    },
    "all": {
     "hit": 78.21,
-    "logloss": 0.451,
+    "logloss": 0.4526,
     "weights": [
-     0.106,
-     1.064,
-     -0.289,
-     0.954,
-     0.03
+     0.148,
+     1.048,
+     0.508,
+     0.0,
+     0.0,
+     -0.115,
+     -0.2,
+     1.048,
+     0.009
     ],
-    "picks_changed": 10,
-    "better": false
+    "picks_changed": 12,
+    "extra_wins": 0,
+    "better": false,
+    "significant": false
    }
   },
   "nba": {
@@ -227,7 +347,9 @@
      0.523
     ],
     "picks_changed": 37,
-    "better": false
+    "extra_wins": 9,
+    "better": false,
+    "significant": false
    },
    "spread": {
     "hit": 73.66,
@@ -238,7 +360,9 @@
      -0.233
     ],
     "picks_changed": 24,
-    "better": false
+    "extra_wins": 0,
+    "better": false,
+    "significant": false
    },
    "total": {
     "hit": 73.01,
@@ -249,20 +373,56 @@
      -0.17
     ],
     "picks_changed": 18,
-    "better": false
+    "extra_wins": -4,
+    "better": false,
+    "significant": false
+   },
+   "rest": {
+    "hit": 73.82,
+    "logloss": 0.531,
+    "weights": [
+     0.142,
+     0.86,
+     -0.097,
+     0.004,
+     -0.063
+    ],
+    "picks_changed": 21,
+    "extra_wins": 1,
+    "better": false,
+    "significant": false
+   },
+   "form": {
+    "hit": 73.01,
+    "logloss": 0.5316,
+    "weights": [
+     0.084,
+     0.841,
+     0.194
+    ],
+    "picks_changed": 14,
+    "extra_wins": -4,
+    "better": false,
+    "significant": false
    },
    "all": {
-    "hit": 74.8,
-    "logloss": 0.5333,
+    "hit": 74.31,
+    "logloss": 0.5357,
     "weights": [
-     0.106,
-     0.841,
-     0.527,
-     -0.257,
-     -0.153
+     0.182,
+     0.838,
+     0.226,
+     -0.109,
+     0.01,
+     -0.079,
+     0.61,
+     -0.194,
+     -0.155
     ],
-    "picks_changed": 41,
-    "better": false
+    "picks_changed": 44,
+    "extra_wins": 4,
+    "better": false,
+    "significant": false
    }
   },
   "ncaab": {
@@ -293,7 +453,9 @@
      -0.171
     ],
     "picks_changed": 11,
-    "better": true
+    "extra_wins": 1,
+    "better": true,
+    "significant": false
    },
    "spread": {
     "hit": 73.87,
@@ -304,7 +466,9 @@
      0.764
     ],
     "picks_changed": 1,
-    "better": false
+    "extra_wins": -1,
+    "better": false,
+    "significant": false
    },
    "total": {
     "hit": 74.28,
@@ -315,20 +479,56 @@
      0.101
     ],
     "picks_changed": 13,
-    "better": false
+    "extra_wins": 1,
+    "better": false,
+    "significant": false
+   },
+   "rest": {
+    "hit": 74.49,
+    "logloss": 0.5038,
+    "weights": [
+     0.201,
+     1.248,
+     -0.227,
+     -0.213,
+     -0.156
+    ],
+    "picks_changed": 20,
+    "extra_wins": 2,
+    "better": false,
+    "significant": false
+   },
+   "form": {
+    "hit": 74.28,
+    "logloss": 0.504,
+    "weights": [
+     0.122,
+     1.26,
+     0.099
+    ],
+    "picks_changed": 13,
+    "extra_wins": 1,
+    "better": false,
+    "significant": false
    },
    "all": {
-    "hit": 73.87,
-    "logloss": 0.5029,
+    "hit": 74.69,
+    "logloss": 0.5036,
     "weights": [
-     0.115,
-     1.195,
-     -0.126,
-     0.759,
-     0.071
+     0.207,
+     1.176,
+     0.136,
+     -0.209,
+     -0.186,
+     -0.159,
+     -0.088,
+     0.722,
+     0.088
     ],
-    "picks_changed": 1,
-    "better": false
+    "picks_changed": 11,
+    "extra_wins": 3,
+    "better": false,
+    "significant": false
    }
   },
   "wnba": {
@@ -359,7 +559,9 @@
      -0.366
     ],
     "picks_changed": 4,
-    "better": false
+    "extra_wins": -2,
+    "better": false,
+    "significant": false
    },
    "spread": {
     "hit": 73.05,
@@ -370,7 +572,9 @@
      0.626
     ],
     "picks_changed": 1,
-    "better": false
+    "extra_wins": -1,
+    "better": false,
+    "significant": false
    },
    "total": {
     "hit": 73.05,
@@ -381,20 +585,56 @@
      -0.15
     ],
     "picks_changed": 1,
-    "better": false
+    "extra_wins": -1,
+    "better": false,
+    "significant": false
+   },
+   "rest": {
+    "hit": 70.92,
+    "logloss": 0.5653,
+    "weights": [
+     0.093,
+     0.884,
+     0.142,
+     -0.796,
+     -0.144
+    ],
+    "picks_changed": 16,
+    "extra_wins": -4,
+    "better": false,
+    "significant": false
+   },
+   "form": {
+    "hit": 73.05,
+    "logloss": 0.5475,
+    "weights": [
+     -0.003,
+     0.845,
+     -0.348
+    ],
+    "picks_changed": 3,
+    "extra_wins": -1,
+    "better": false,
+    "significant": false
    },
    "all": {
-    "hit": 73.05,
-    "logloss": 0.553,
+    "hit": 70.92,
+    "logloss": 0.5705,
     "weights": [
-     -0.005,
-     0.776,
-     -0.383,
-     0.655,
-     -0.164
+     0.058,
+     0.837,
+     -0.267,
+     0.144,
+     -0.844,
+     -0.139,
+     -0.404,
+     0.647,
+     -0.175
     ],
-    "picks_changed": 1,
-    "better": false
+    "picks_changed": 14,
+    "extra_wins": -4,
+    "better": false,
+    "significant": false
    }
   },
   "mlb": {
@@ -425,7 +665,9 @@
      0.463
     ],
     "picks_changed": 44,
-    "better": false
+    "extra_wins": -10,
+    "better": false,
+    "significant": false
    },
    "spread": {
     "hit": 58.4,
@@ -436,7 +678,9 @@
      -0.244
     ],
     "picks_changed": 142,
-    "better": false
+    "extra_wins": -4,
+    "better": false,
+    "significant": false
    },
    "total": {
     "hit": 58.53,
@@ -447,20 +691,56 @@
      -0.056
     ],
     "picks_changed": 21,
-    "better": false
+    "extra_wins": -3,
+    "better": false,
+    "significant": false
+   },
+   "rest": {
+    "hit": 57.07,
+    "logloss": 0.6762,
+    "weights": [
+     -0.126,
+     0.636,
+     0.745,
+     0.177,
+     0.051
+    ],
+    "picks_changed": 118,
+    "extra_wins": -14,
+    "better": false,
+    "significant": false
+   },
+   "form": {
+    "hit": 58.53,
+    "logloss": 0.6738,
+    "weights": [
+     0.012,
+     0.651,
+     -0.009
+    ],
+    "picks_changed": 21,
+    "extra_wins": -3,
+    "better": false,
+    "significant": false
    },
    "all": {
-    "hit": 55.6,
-    "logloss": 0.6739,
+    "hit": 56.8,
+    "logloss": 0.6758,
     "weights": [
-     -0.031,
-     0.737,
-     0.4,
-     -0.234,
-     -0.112
+     -0.161,
+     0.725,
+     -0.025,
+     0.732,
+     0.179,
+     0.05,
+     0.263,
+     -0.218,
+     -0.127
     ],
-    "picks_changed": 137,
-    "better": false
+    "picks_changed": 170,
+    "extra_wins": -16,
+    "better": false,
+    "significant": false
    }
   }
  }
