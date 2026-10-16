@@ -119,6 +119,37 @@ def load():
     return out
 
 
+def tennis_prices():
+    """{normalised player name: Kalshi mid chance to win} for open ATP and WTA
+    matches, where the spread is tight enough to mean something. ESPN carries
+    no tennis odds, so this is the only market price tennis picks can lean on."""
+    f = os.path.join(os.path.dirname(CACHE), "kalshi_tennis.json")
+    try:
+        if time.time() - os.path.getmtime(f) < TTL:
+            with open(f) as fh:
+                return json.load(fh)
+    except (OSError, ValueError):
+        pass
+    out = {}
+    for ser in ("KXATPMATCH", "KXWTAMATCH"):
+        for ev in _series(ser):
+            for m in ev.get("markets") or []:
+                y, n = _price(m, "yes"), _price(m, "no")
+                who = _norm(m.get("yes_sub_title"))
+                if not who or not y or not n:
+                    continue
+                if not 0 <= y - (1 - n) <= 0.08:
+                    continue                       # wide or crossed: no real price
+                out[who] = round((y + 1 - n) / 2, 4)
+    try:
+        os.makedirs(os.path.dirname(f), exist_ok=True)
+        with open(f, "w") as fh:
+            json.dump(out, fh)
+    except OSError:
+        pass
+    return out
+
+
 def _date_of(tail):
     m = re.match(r"(\d\d)([A-Z]{3})(\d\d)", tail or "")
     if not m or m.group(2) not in MONTHS:
@@ -135,7 +166,10 @@ def _et_date(start):
 
 
 def _norm(x):
-    return re.sub(r"[^a-z0-9 ]", "", (x or "").lower()).strip()
+    # accents folded, not dropped: "Świątek" -> "swiatek", matching Kalshi
+    import unicodedata
+    x = unicodedata.normalize("NFKD", x or "").encode("ascii", "ignore").decode()
+    return re.sub(r"[^a-z0-9 ]", "", x.lower()).strip()
 
 
 def find(book, league, mkt):

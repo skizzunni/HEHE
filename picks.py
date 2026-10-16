@@ -448,6 +448,9 @@ def _mml(american):
 
 
 # ------------------------------------------------------------- tennis
+_tp_cache = {}
+
+
 def tennis_picks(day, tour=None):
     """Ranking-points model over the day's singles matches.
 
@@ -551,6 +554,24 @@ def tennis_picks(day, tour=None):
                     else:
                         lp = math.log(pts(ps[0])) - math.log(pts(ps[1]))
                         p1 = 1 / (1 + math.exp(-lp * 1.02))
+                    # Kalshi's traders, where they price the match: the market
+                    # leads and the model gets a fifth of the say, the rule that
+                    # lifted every other sport (dashboard.ANCHOR_W)
+                    mk = None
+                    try:
+                        import kalshi as _K
+                        _tp = _tp_cache.setdefault("p", _K.tennis_prices())
+                        a, b = _tp.get(_K._norm(ps[0])), _tp.get(_K._norm(ps[1]))
+                        if a is not None and b is not None and 0.02 < a + b:
+                            mk = a / (a + b)
+                        elif a is not None:
+                            mk = a
+                        elif b is not None:
+                            mk = 1 - b
+                    except Exception:
+                        mk = None
+                    if mk is not None and 0.01 < mk < 0.99:
+                        p1 = anchor(p1, mk, 0.2)
                     pick = ps[0] if p1 >= 0.5 else ps[1]
                     r1 = (rank.get(norm(ps[0])) or {}).get("rank")
                     r2 = (rank.get(norm(ps[1])) or {}).get("rank")
@@ -559,5 +580,7 @@ def tennis_picks(day, tour=None):
                     mine, theirs = (r1, r2) if pick == ps[0] else (r2, r1)
                     out[(ps[0], ps[1])] = dict(
                         pick=pick, conf=max(p1, 1 - p1),
-                        why=f'rank {mine or "NR"} vs {theirs or "NR"}')
+                        why=f'rank {mine or "NR"} vs {theirs or "NR"}'
+                            + (f' · Kalshi {round(100 * (mk if pick == ps[0] else 1 - mk))}%'
+                               if mk is not None else ' · no market price'))
     return out
