@@ -217,30 +217,6 @@ def snapshot():
         import traceback
         sys.stderr.write("stacks failed -- board still rebuilt:\n")
         traceback.print_exc()
-    # The day's locks: the 11 likeliest bets FanDuel lists, one per game
-    try:
-        days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
-        out["locks"] = {s_: locks.build(d._STATE["slots"].get(s_), SOCCER, labels, FD,
-                                        day=days_[s_])
-                        for s_ in ("today", "tomorrow")}
-        locks.grade(ledger._final)
-        if locks.card_time():
-            # from 8:00 AM Eastern the day's card is set and shown as recorded
-            locks.record(out["locks"]["today"], d._STATE["dates"][0])
-            out["locks"]["today"] = locks.frozen(d._STATE["dates"][0])
-        else:
-            out["locks"]["today"]["preview"] = True
-        out["locks_record"] = locks.report()
-        lk = out["locks"]["today"]
-        print(f'locks: {len(lk["locks"])} of {lk["available"]} FanDuel games, '
-              f'all-hit chance {100 * lk["prob"]:.1f}%', file=sys.stderr)
-        for L_ in lk["locks"]:
-            print(f'   lock {100 * L_["p"]:5.1f}%  {L_["label"]:<40} {str(L_.get("price") or ""):>7}  '
-                  f'{L_.get("lg") or L_.get("league")}  {L_["match"]}', file=sys.stderr)
-    except Exception:
-        import traceback
-        sys.stderr.write("locks failed -- board still rebuilt:\n")
-        traceback.print_exc()
     try:
         out["markets"] = stacks.markets(d._STATE["slots"], SOCCER, labels)
     except Exception:
@@ -270,6 +246,32 @@ def snapshot():
     except Exception:
         import traceback
         sys.stderr.write("props failed -- board still rebuilt:\n")
+        traceback.print_exc()
+    # The day's locks: the 11 likeliest bets FanDuel lists (game lines and player
+    # props), one per game. After the props, which they draw on.
+    try:
+        days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
+        out["locks"] = {s_: locks.build(d._STATE["slots"].get(s_), SOCCER, labels, FD,
+                                        day=days_[s_],
+                                        prop_games=((out.get("props") or {}).get(s_) or {}).get("games"))
+                        for s_ in ("today", "tomorrow")}
+        locks.grade(ledger._final)
+        if locks.card_time():
+            # from 8:00 AM Eastern the day's card is set and shown as recorded
+            locks.record(out["locks"]["today"], d._STATE["dates"][0])
+            out["locks"]["today"] = locks.frozen(d._STATE["dates"][0])
+        else:
+            out["locks"]["today"]["preview"] = True
+        out["locks_record"] = locks.report()
+        lk = out["locks"]["today"]
+        print(f'locks: {len(lk["locks"])} of {lk["available"]} FanDuel games, '
+              f'all-hit chance {100 * lk["prob"]:.1f}%', file=sys.stderr)
+        for L_ in lk["locks"]:
+            print(f'   lock {100 * L_["p"]:5.1f}%  {L_["label"]:<40} {str(L_.get("price") or ""):>7}  '
+                  f'{L_.get("lg") or L_.get("league")}  {L_["match"]}', file=sys.stderr)
+    except Exception:
+        import traceback
+        sys.stderr.write("locks failed -- board still rebuilt:\n")
         traceback.print_exc()
     # The lottery: $1 tickets built to pay ~$10,000, from game lines and props
     try:

@@ -132,7 +132,7 @@ def _eligible(row, day, now):
     return t >= now + START_BUFFER
 
 
-def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None):
+def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=None):
     now = dt.datetime.now(dt.timezone.utc)
     rows = {lg: [r for r in rs if _eligible(r, day, now)]
             for lg, rs in (slot_rows or {}).items() if lg in fanduel.PAGES}
@@ -175,6 +175,29 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None):
                               label=best["label"], spec=best["spec"], p=best["p"],
                               p_model=best["p_model"], fd=best["fd"], price=best["price"],
                               where=best["where"]))
+    # FanDuel player props compete with the game lines: per game, the lock is
+    # the likeliest of all of them. A prop's chance is FanDuel's own price,
+    # de-vigged across both sides where it lists both (fd_props.py).
+    ok = {r["id"]: r for rs in rows.values() for r in rs}
+    by_gid = {x["gid"]: x for x in picks}
+    for pg in prop_games or []:
+        row = ok.get(pg.get("id"))
+        if not row:
+            continue                            # not eligible by start time
+        for P in pg.get("props") or []:
+            if not P.get("fd") or not LOCK_MIN <= P["p"] <= LOCK_MAX:
+                continue
+            cur = by_gid.get(pg["id"])
+            if cur and cur["p"] >= P["p"]:
+                continue
+            m = row.get("mkt") or {}
+            by_gid[pg["id"]] = dict(kind="prop", gid=pg["id"], league=pg["id"].split(":", 1)[0],
+                                    lg=pg.get("lg"), match=pg.get("match"), tip=pg.get("tip"),
+                                    home=m.get("home"), away=m.get("away"),
+                                    label=P["label"], p=P["p"], price=P["price"], fd=P["fd"],
+                                    where=P.get("where"), name=P["name"], market=P["market"],
+                                    line=P["line"], aid=P.get("aid"))
+    picks = list(by_gid.values())
     picks.sort(key=lambda x: -x["p"])
     locks = picks[:n]
     prob = 1.0
@@ -214,11 +237,19 @@ def record(res, day):
             continue
         keys.append(k)
         book["legs"].setdefault(k, dict(league=L["league"], match=L["match"], label=L["label"],
-                                        spec=L["spec"], home=L["home"], away=L["away"],
+                                        spec=L.get("spec"), home=L.get("home"), away=L.get("away"),
                                         p=L["p"], status="open", date=day, gid=L["gid"],
                                         lg=L.get("lg"), tip=L.get("tip"), fd=L.get("fd"),
-                                        price=L.get("price"), where=L.get("where")))
+                                        price=L.get("price"), where=L.get("where"),
+                                        kind=L.get("kind", "game"), name=L.get("name"),
+                                        market=L.get("market"), line=L.get("line"),
+                                        aid=L.get("aid")))
     save(book)
+    # prop locks are settled from box scores by the props ledger
+    props = [book["legs"][k] for k in keys if book["legs"][k].get("kind") == "prop"]
+    if props:
+        import props_ledger
+        props_ledger.record({"tickets": {"locks": [{"legs": props}]}}, day)
 
 
 def card_time(now=None):
@@ -244,7 +275,17 @@ def frozen(day):
 def grade(final):
     """Settle open locks with the same final-score feed as the picks."""
     book = load()
+    import props_ledger
+    pl = props_ledger.load()
     for L in book["legs"].values():
+        if L.get("kind") == "prop":
+            if L.get("status") == "open":
+                e = pl.get(props_ledger.prop_key(L))
+                if e and e["status"] != "open":
+                    L["status"] = "void" if e["status"] == "ungradable" else e["status"]
+                    if e.get("value") is not None:
+                        L["score"] = f'{e["value"]:g}'
+            continue
         settle(L, final)
     save(book)
 

@@ -214,6 +214,32 @@ aside .fig{font-family:var(--mono);color:var(--accent);font-weight:600}
   margin:2px 2px 2px 0;cursor:pointer}
 .parlays button:hover{color:var(--ink);border-color:var(--ink-dim)}
 .parlays button[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
+/* sections: header with day pills, a summary strip, one leg per line */
+.sechead{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.sechead h3{margin:0}
+.pills{display:inline-flex;gap:4px}
+.strip{display:flex;flex-wrap:wrap;gap:6px 18px;padding:10px 12px;margin:10px 0;
+  border:1px solid var(--rule);border-radius:6px;background:var(--panel)}
+.strip div{display:flex;flex-direction:column;min-width:56px}
+.strip span{font:600 10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim)}
+.strip b{font-family:var(--display);font-size:17px}
+ul.legs{list-style:none;margin:6px 0;padding:0}
+.parlays li.leg,.ptk li.leg,li.leg{display:block!important;padding:9px 2px;border-bottom:1px solid var(--rule)}
+li.leg:last-child{border-bottom:0}
+.lgt{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
+.lgt .px{font:600 13px var(--mono)}
+.lgt .ch{font:12px var(--mono);color:var(--ink-dim)}
+.lgs{font-size:12.5px;color:var(--ink-dim);margin-top:2px}
+.lgw{font-size:12.5px;margin-top:3px;color:var(--ink-dim)}
+.kind{font:700 9px var(--mono);letter-spacing:.08em;text-transform:uppercase;padding:2px 6px;
+  border-radius:3px;border:1px solid var(--rule);color:var(--ink-dim)}
+.kind.prop{color:var(--accent);border-color:var(--accent)}
+.res{font:700 10.5px var(--mono);padding:2px 7px;border-radius:3px}
+.res.won{background:var(--accent);color:var(--ground)}
+.res.lost{background:var(--bad);color:#fff}
+.res.void{border:1px solid var(--rule);color:var(--ink-dim)}
+.tier-h{margin:18px 0 4px}
+.boost{display:flex;flex-wrap:wrap;align-items:center;gap:4px;font-size:13.5px}
 details.explain{margin:4px 0 12px;border:1px solid var(--rule);border-radius:4px;
   background:var(--panel);padding:0 12px}
 details.explain summary{cursor:pointer;padding:9px 0;font-family:var(--mono);font-size:12px;
@@ -740,6 +766,30 @@ let PRDAY = null, PRQ = "";
 // alternate lines (x.where) are shown as text, because FanDuel's
 // addToBetslip link resolves their ids to a different line of the game.
 let LKDAY = null;
+// one leg, the same everywhere: what to bet, its price and chance, where it
+// is, and how it settled
+function legHTML(x, opts){
+  const done = x.status && x.status !== "open";
+  const res = done ? '<span class="res ' + (x.status === "won" ? "won" : x.status === "lost" ? "lost" : "void")
+    + '">' + esc(x.status.toUpperCase()) + (x.score ? ' &middot; ' + esc(x.score) : '') + '</span>' : '';
+  const kind = x.kind === "prop" || x.name ? "prop" : "game";
+  const where = done ? '' : (x.where ? '<div class="lgw">On FanDuel: <b>' + esc(x.where) + '</b></div>'
+    : (fdOne(x.fd) ? '<div class="lgw">' + legBtns(null, fdOne(x.fd)) + '</div>' : ''));
+  return '<li class="leg"><div class="lgt"><span class="kind ' + kind + '">' + kind + '</span>'
+    + '<b>' + esc(x.label) + '</b>' + (x.price ? '<span class="px">' + esc(x.price) + '</span>' : '')
+    + '<span class="ch">' + (100 * x.p).toFixed(0) + '%</span>' + res + '</div>'
+    + '<div class="lgs">' + esc(x.match || '') + ' &middot; ' + esc(x.lg || x.league || '')
+    + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>' + where + '</li>';
+}
+function dayPills(attr, day){
+  return '<span class="pills"><button type="button" data-' + attr + '="today" aria-pressed="'
+    + (day === "today") + '">Today</button><button type="button" data-' + attr + '="tomorrow" aria-pressed="'
+    + (day === "tomorrow") + '">Tomorrow</button></span>';
+}
+function strip(items){
+  return '<div class="strip">' + items.map(([k, v]) => '<div><span>' + k + '</span><b>' + v + '</b></div>').join("")
+    + '</div>';
+}
 function drawLocks(){
   const K = D.locks || {};
   const has = d => (((K[d] || {}).locks) || []).length;
@@ -747,62 +797,40 @@ function drawLocks(){
   const X = K[day] || {};
   const L = X.locks || [];
   const R = D.locks_record || {};
-  let h = '<div class="parlays"><h3>Locks &mdash; ' + day + '</h3>'
-    + '<p><button type="button" data-lkday="today" aria-pressed="' + (day === "today") + '">Today</button> '
-    + '<button type="button" data-lkday="tomorrow" aria-pressed="' + (day === "tomorrow") + '">Tomorrow</button></p>'
-    + '<details class="explain"><summary>What the locks are</summary>'
-    + '<p>The ' + (L.length || 11) + ' likeliest bets on the board that FanDuel (New York) lists right '
-    + 'now &mdash; moneylines, posted spreads and totals &mdash; one per game, from games that '
-    + 'have not started. Each chance is the same backtested, self-tuning model as the stacks.</p></details>';
+  let h = '<div class="parlays"><div class="sechead"><h3>Locks</h3>' + dayPills("lkday", day) + '</div>';
   if(!L.length){
     panel.innerHTML = h + '<p class="empty">No FanDuel games left ' + day + '.</p></div>';
     return;
   }
-  if(X.preview) h += '<p class="note"><b>Preview.</b> Today&rsquo;s card is set at 8:00 AM '
-    + 'Eastern and then stays the same all day; until then this shows what it would be now.</p>';
-  if(X.set) h += '<p class="note">Card set at 8:00 AM Eastern for ' + esc(X.day)
-    + '. Results fill in as games finish.</p>';
-  if(L.length < 11) h += '<p class="note">Only ' + L.length + ' FanDuel games qualify '
-    + day + ', so ' + L.length + ' legs, not 11.</p>';
-  h += '<div class="ptk"><div class="hd"><span>' + L.length + ' legs</span>'
-    + '<span>all hit ' + (100 * X.prob).toFixed(1) + '%</span>'
-    + '<span>fair ' + X.fair.toFixed(2) + 'x</span></div><ol>'
-    + L.map(x => '<li><b>' + esc(x.label) + '</b> <span style="color:var(--ink-dim)">'
-        + esc(x.match) + ' &middot; ' + esc(x.lg || x.league) + (x.tip ? ' &middot; ' + esc(x.tip) : '')
-        + ' &middot; ' + (100 * x.p).toFixed(1) + '%</span>'
-        + (x.price ? ' <b>' + esc(x.price) + '</b>' : '')
-        + (x.status && x.status !== "open"
-            ? ' <b class="' + (x.status === "won" ? "agree" : "fade") + '">' + esc(x.status.toUpperCase())
-              + (x.score ? ' (' + esc(x.score) + ')' : '') + '</b>'
-            : x.where ? '<br><span class="note">On FanDuel: open the game, find <b>'
-                + esc(x.where) + '</b></span>' : legBtns(null, fdOne(x.fd)))
-        + '</li>').join("")
-    + '</ol><button type="button" data-lkcopy="' + day + '">Copy all legs</button></div>'
-    + '<p class="note">Alternate lines have no one-tap button: FanDuel&rsquo;s add-to-slip link '
-    + 'puts a <i>different</i> line of the same game on the slip (Over 2.5 came up as Over 6.5). '
-    + 'Open each game on FanDuel and pick the exact market and line shown, check the slip matches '
-    + 'the card (line and price), then choose <b>Parlay</b>. Every leg is likely; all ' + L.length + ' together hit '
-    + (100 * X.prob).toFixed(0) + '% of the time &mdash; a lock each, not a lock together. '
-    + 'Fewer legs hit far more often: the top 3 alone hit '
-    + (100 * L.slice(0, 3).reduce((a, x) => a * x.p, 1)).toFixed(0) + '%.</p>';
-  if(R.legs){
-    h += '<h3>How locks have done</h3><p>' + R.won + ' of ' + R.legs + ' graded locks won ('
-      + (100 * R.won / R.legs).toFixed(1) + '%) against ' + R.said + '% promised.</p>'
-      + '<table class="mk"><thead><tr><th>Day</th><th class="num">Won</th><th class="num">Lost</th>'
-      + '<th class="num">Open</th><th>All hit?</th></tr></thead><tbody>'
-      + (R.days || []).map(d => '<tr><td>' + esc(d.day) + '</td><td class="num">' + d.won
-        + '</td><td class="num">' + d.lost + '</td><td class="num">' + (d.open + d.void)
-        + '</td><td>' + (d.open ? 'pending' : (d.all_hit ? 'yes' : 'no')) + '</td></tr>').join("")
-      + '</tbody></table>';
-  } else {
-    h += '<p class="note">Every day&rsquo;s locks are recorded and graded; the record shows '
-      + 'here once the first games finish.</p>';
-  }
+  const won = L.filter(x => x.status === "won").length, lost = L.filter(x => x.status === "lost").length;
+  h += strip([["legs", L.length], ["all hit", (100 * X.prob).toFixed(0) + "%"],
+              ["pays", (X.fair || 0).toFixed(2) + "x"],
+              ["so far", won + "&ndash;" + lost],
+              ["card", X.preview ? "preview" : "set 8 AM"]])
+    + '<ul class="legs">' + L.map(x => legHTML(x)).join("") + '</ul>'
+    + '<p><button type="button" data-lkcopy="' + day + '">Copy all legs</button></p>'
+    + '<details class="explain"><summary>What the locks are &amp; how to place them</summary>'
+    + '<p>The likeliest bets FanDuel (New York) lists &mdash; game lines <i>and</i> player props &mdash; '
+    + 'one per game, from games that start after 8:00 AM and have not begun. The card is set at '
+    + '8:00 AM Eastern and stays the same all day. Each is likely; all ' + L.length + ' together hit '
+    + (100 * X.prob).toFixed(0) + '% of the time, the top 3 alone '
+    + (100 * L.slice(0, 3).reduce((a, x) => a * x.p, 1)).toFixed(0) + '%.</p>'
+    + '<p>Alternate lines and props have no one-tap button (FanDuel&rsquo;s add-to-slip link puts a '
+    + 'different line on the slip): open the game, pick the exact market shown, check line and '
+    + 'price match, then choose Parlay.</p></details>'
+    + (R.legs ? '<details class="explain"><summary>Record: ' + R.won + ' of ' + R.legs + ' won ('
+        + (100 * R.won / R.legs).toFixed(1) + '%, ' + R.said + '% promised)</summary>'
+        + '<table class="mk"><thead><tr><th>Day</th><th class="num">Won</th><th class="num">Lost</th>'
+        + '<th class="num">Open</th><th>All hit?</th></tr></thead><tbody>'
+        + (R.days || []).map(d => '<tr><td>' + esc(d.day) + '</td><td class="num">' + d.won
+          + '</td><td class="num">' + d.lost + '</td><td class="num">' + (d.open + d.void)
+          + '</td><td>' + (d.open ? 'pending' : (d.all_hit ? 'yes' : 'no')) + '</td></tr>').join("")
+        + '</tbody></table></details>' : '');
   panel.innerHTML = h + '</div>';
 }
 // ------------------------------------------------------------ lottery view
 // $1 tickets built to pay about $10,000 (lottery.py): the most efficient
-// plus-money legs, one per game, one book per ticket, with the honest chance.
+// legs (game lines and props), one per game, one book per ticket.
 let LTDAY = null;
 let LTBOOST = 0;
 try { LTBOOST = +(localStorage.getItem("ltboost") || 0) || 0; } catch (e) {}
@@ -813,125 +841,59 @@ function drawLottery(){
   const X = K[day] || {};
   const T = X.tickets || [];
   const R = D.lottery_record || {};
-  let h = '<div class="parlays"><h3>Lottery &mdash; ' + day + '</h3>'
-    + '<p><button type="button" data-ltday="today" aria-pressed="' + (day === "today") + '">Today</button> '
-    + '<button type="button" data-ltday="tomorrow" aria-pressed="' + (day === "tomorrow") + '">Tomorrow</button></p>'
-    + '<details class="explain"><summary>How the lottery works</summary>'
-    + '<p>Two kinds of $1 ticket. <b>1 in 100</b>: the biggest payout we can find at a 1% '
-    + 'chance. <b>$10,000</b>: the best chance we can find at a 10,000x payout. You cannot '
-    + 'have both &mdash; a ticket that hits 1 time in 100 is worth at most about $100 before the '
-    + 'book takes its cut, so a $10,000 payout is always around a 1-in-20,000 shot.</p>'
-    + '<p>Every game line FanDuel posts (alternates included) and every priced player prop is '
-    + 'scanned; one leg per game, from games that have not started. Game legs are FanDuel '
-    + 'prices; prop tickets are DraftKings prices. The 1-in-N is the honest chance from the market&rsquo;s prices, corrected by what past prices really returned.</p>'
-    + '</details>';
-  if(X.preview) h += '<p class="note"><b>Preview.</b> Today&rsquo;s tickets are set at 8:00 AM '
-    + 'Eastern and then stay the same all day.</p>';
-  if(X.set) h += '<p class="note">Tickets set at 8:00 AM Eastern for ' + esc(X.day)
-    + '. Results fill in as games finish.</p>';
+  const B = LTBOOST;
+  let h = '<div class="parlays"><div class="sechead"><h3>Lottery</h3>' + dayPills("ltday", day) + '</div>'
+    + '<p class="boost">Parlay profit boost today? ' + [0, 25, 50, 100].map(b =>
+      '<button type="button" data-ltboost="' + b + '" aria-pressed="' + (b === B) + '">'
+      + (b ? '+' + b + '%' : 'None') + '</button>').join("") + '</p>';
   if(!T.length){
-    panel.innerHTML = h + '<p class="empty">Not enough games left ' + day
-      + ' to build a ticket.</p></div>';
+    panel.innerHTML = h + '<p class="empty">Not enough games left ' + day + ' to build a ticket.</p></div>';
     return;
   }
-  // the profit boost the viewer has today on FanDuel / DraftKings
-  const B = LTBOOST;
   const boostTier = B ? "10k+" + B : "10k";
   const hasBoost = T.some(t => t.tier === boostTier);
-  h += '<p><b>Got a parlay profit boost today?</b> ' + [0, 25, 50, 100].map(b =>
-      '<button type="button" data-ltboost="' + b + '" aria-pressed="' + (b === B) + '">'
-      + (b ? '+' + b + '%' : 'None') + '</button>').join(" ")
-    + '<br><span class="note">FanDuel and DraftKings give these out most days (check Promos in '
-    + 'the app). A boost is the one real edge a $1 parlay can get: with +100% the legs only need '
-    + 'to reach 5,000x for $10,000, so the ticket needs fewer legs and hits about twice as often.'
-    + '</span></p>';
-  const shown = T.map((t, i) => [t, i]).filter(([t]) => {
-    const tr = t.tier || "10k";
-    return tr === "100" || tr === (hasBoost ? boostTier : "10k");
-  });
-  let lastTier = null;
-  const order = t => (t.tier || "10k") === "100" ? 0 : 1;
   const withBoost = p => Math.round(1 + (p - 1) * (1 + B / 100));
-  shown.sort((a, b) => order(a[0]) - order(b[0]) || a[1] - b[1]).forEach(([t0, i]) => {
-    const tier = t0.tier || "10k";
-    // the 1-in-100 tickets get the boost on top; a boosted $10k ticket was
-    // built for it already
+  const pick = tr => T.map((t, i) => [t, i]).filter(([t]) => (t.tier || "10k") === tr);
+  const card = (t0, i, tier) => {
     const t = tier === "100" && B ? Object.assign({}, t0, {pays: withBoost(t0.pays)}) : t0;
-    if(tier !== lastTier){
-      lastTier = tier;
-      const ones = shown.filter(([x]) => (x.tier || "10k") === "100");
-      h += '<h3>' + (tier === "100" ? '1 in 100 &mdash; $1 pays about $' + Math.round(
-          ones.reduce((a, [x]) => a + (B ? withBoost(x.pays) : x.pays), 0) / Math.max(1, ones.length))
-          + (B ? ' with your +' + B + '% boost' : '')
-        : '$1 &rarr; $10,000 &mdash; long shot' + (B && hasBoost ? ', built for your +' + B + '% boost' : '')
-          + (B && !hasBoost ? ' (no boosted ticket today; showing the regular one)' : '')) + '</h3>';
-    }
-    if(t.boost) h += '<p class="note">Before the boost the legs pay $' + (t.base || 0).toLocaleString()
-      + '; apply your +' + Math.round(100 * t.boost) + '% profit boost to the parlay to get $'
-      + t.pays.toLocaleString() + '.</p>';
     const st = t.status && t.status !== "open"
-      ? ' <b class="' + (t.status === "won" ? "agree" : "fade") + '">' + esc(t.status.toUpperCase()) + '</b>' : '';
-    h += '<div class="ptk"><div class="hd"><span>' + esc(t.book) + ' &middot; ' + t.legs.length + ' legs'
-      + st + '</span><span>$1 pays $' + t.pays.toLocaleString() + '</span>'
-      + '<span>1 in ' + (t.odds || 0).toLocaleString() + '</span></div><ol>'
-      + t.legs.map(x => '<li><b>' + esc(x.label) + '</b> <b>' + esc(x.price) + '</b> '
-        + '<span style="color:var(--ink-dim)">' + esc(x.match) + ' &middot; ' + esc(x.lg || x.league)
-        + (x.tip ? ' &middot; ' + esc(x.tip) : '') + ' &middot; ' + (100 * x.p).toFixed(0) + '%</span>'
-        + (x.status && x.status !== "open"
-            ? ' <b class="' + (x.status === "won" ? "agree" : "fade") + '">' + esc(x.status.toUpperCase())
-              + (x.score ? ' (' + esc(x.score) + ')' : '') + '</b>'
-            : x.kind === "prop" ? (x.where ? '<br><span class="note">On FanDuel: ' + esc(x.where) + '</span>' : '')
-            : x.where ? '<br><span class="note">On FanDuel: open the game, find <b>' + esc(x.where) + '</b></span>'
-            : legBtns(null, fdOne(x.fd)))
-        + '</li>').join("")
-      + '</ol><button type="button" data-ltcopy="' + day + '|' + i + '">Copy ticket</button></div>';
-  });
+      ? '<span class="res ' + (t.status === "won" ? "won" : "lost") + '">' + esc(t.status.toUpperCase()) + '</span>' : '';
+    return '<div class="ptk">' + strip([["book", esc(t.book)], ["legs", t.legs.length],
+             ["$1 pays", "$" + t.pays.toLocaleString()], ["chance", "1 in " + (t.odds || 0).toLocaleString()]])
+      + (t.boost ? '<p class="note">Legs pay $' + (t.base || 0).toLocaleString() + ' before your +'
+         + Math.round(100 * t.boost) + '% boost.</p>' : '') + st
+      + '<ul class="legs">' + t.legs.map(x => legHTML(x)).join("") + '</ul>'
+      + '<p><button type="button" data-ltcopy="' + day + '|' + i + '">Copy ticket</button></p></div>';
+  };
+  const ones = pick("100");
+  if(ones.length) h += '<h3 class="tier-h">1 in 100</h3>' + ones.map(([t, i]) => card(t, i, "100")).join("");
+  const big = pick(hasBoost ? boostTier : "10k");
+  if(big.length) h += '<h3 class="tier-h">$1 &rarr; $10,000' + (B && hasBoost ? ' &middot; built for +' + B + '%' : '')
+    + '</h3>' + big.map(([t, i]) => card(t, i, "10k")).join("");
+  h += '<details class="explain"><summary>How the lottery works</summary>'
+    + '<p><b>1 in 100</b>: the biggest payout at a 1% chance. <b>$10,000</b>: the best chance at a '
+    + '10,000x payout &mdash; about 1 in 15,000&ndash;25,000, or roughly half that with a +100% profit '
+    + 'boost (FanDuel and DraftKings hand these out most days under Promos). Legs are game lines and '
+    + 'player props, one per game, one book per ticket; each chance is the market&rsquo;s own, corrected '
+    + 'for the long-shot bias 16,000 past legs showed. Check every leg on the slip matches the line and '
+    + 'price here before placing.</p></details>';
   const E = X.edges || [];
-  const P = X.pool || {};
-  h += '<h3>Where FanDuel pays more than the chance says</h3>'
-    + '<details class="explain"><summary>Why these and not the model&rsquo;s picks</summary>'
-    + '<p>A backtest on 16,000 past Kalshi legs (every NFL, college football, NHL, NBA and EPL '
-    + 'game Kalshi listed, priced an hour before kickoff) settled what works: where the model '
-    + 'disagreed with the market, the <b>market was right</b> &mdash; the model&rsquo;s &ldquo;value&rdquo; '
-    + 'legs lost 8&ndash;20%. So every chance here is the market&rsquo;s own, corrected for the one bias '
-    + 'the past did show: long shots (+400 and longer) lose about 6% more than their price says, short '
-    + 'favourites a little less. A real edge is only where Kalshi&rsquo;s traders price a line '
-    + 'shorter than FanDuel pays for it. '
-    + (P.checked != null ? P.checked + ' FanDuel lines had a Kalshi price; ' + (P.edges || 0)
-       + ' are priced longer on FanDuel than on Kalshi.' : '') + '</p></details>';
-  if(E.length){
-    h += '<table class="mk"><thead><tr><th>Leg</th><th class="num">FanDuel</th>'
-      + '<th class="num">Kalshi</th><th class="num">Chance</th><th class="num">Edge</th></tr></thead><tbody>'
-      + E.map(e => '<tr><td>' + esc(e.label) + '<br><span style="color:var(--ink-dim)">' + esc(e.match)
-        + ' &middot; ' + esc(e.lg) + '</span></td><td class="num">' + esc(e.price) + '</td><td class="num">'
-        + (e.p_kalshi != null ? (100 * e.p_kalshi).toFixed(0) + '%' : '&ndash;') + '</td><td class="num">'
-        + (100 * e.p).toFixed(0) + '%</td><td class="num edge pos">+' + e.edge.toFixed(1) + '%</td></tr>').join("")
-      + '</tbody></table>';
-  } else {
-    h += '<p class="empty">No FanDuel line is priced longer than Kalshi&rsquo;s traders price it right now.</p>';
-  }
-  if(R.edge_legs) h += '<p class="note">Edge legs so far: ' + R.edge_won + ' of ' + R.edge_legs
-    + ' won (' + (100 * R.edge_won / R.edge_legs).toFixed(1) + '%, ' + R.edge_said + '% expected), '
-    + 'returning ' + (R.edge_roi > 0 ? '+' : '') + R.edge_roi + '% at FanDuel&rsquo;s prices. '
-    + 'This is the number that says whether the edge is real.</p>';
-  h += '<p class="note">Before placing, check every leg on the slip matches the line and price '
-    + 'here &mdash; a different line changes the ticket. The book takes its margin on every leg, '
-    + 'so a long parlay returns less than $1 per $1 on average; the 1-in-N is how often it '
-    + 'pays, not a promise.</p>';
-  if(R.legs){
-    h += '<h3>How the lottery has done</h3><p>' + R.hits + ' of ' + R.tickets + ' settled tickets hit. '
-      + 'Legs: ' + R.won + ' of ' + R.legs + ' won (' + (100 * R.won / R.legs).toFixed(1)
-      + '%) against ' + R.said + '% promised.</p>'
-      + '<table class="mk"><thead><tr><th>Day</th><th class="num">Tickets</th><th class="num">Hit</th>'
-      + '<th class="num">Most legs won</th><th class="num">Open</th></tr></thead><tbody>'
-      + (R.days || []).map(d => '<tr><td>' + esc(d.day) + '</td><td class="num">' + d.n
-        + '</td><td class="num">' + d.won + '</td><td class="num">' + d.best
-        + '</td><td class="num">' + d.open + '</td></tr>').join("")
-      + '</tbody></table>';
-  } else {
-    h += '<p class="note">Every day&rsquo;s tickets are recorded and graded; the record shows here '
-      + 'once the first games finish.</p>';
-  }
+  if(E.length) h += '<details class="explain"><summary>' + E.length + ' FanDuel lines priced longer than '
+    + 'Kalshi&rsquo;s traders</summary><table class="mk"><thead><tr><th>Leg</th><th class="num">FanDuel</th>'
+    + '<th class="num">Kalshi</th><th class="num">Edge</th></tr></thead><tbody>'
+    + E.map(e => '<tr><td>' + esc(e.label) + '<br><span style="color:var(--ink-dim)">' + esc(e.match)
+      + '</span></td><td class="num">' + esc(e.price) + '</td><td class="num">'
+      + (e.p_kalshi != null ? (100 * e.p_kalshi).toFixed(0) + '%' : '&ndash;')
+      + '</td><td class="num edge pos">+' + e.edge.toFixed(1) + '%</td></tr>').join("")
+    + '</tbody></table></details>';
+  if(R.legs) h += '<details class="explain"><summary>Record: ' + R.hits + ' of ' + R.tickets
+    + ' tickets hit &middot; legs ' + R.won + '/' + R.legs + ' (' + (100 * R.won / R.legs).toFixed(0)
+    + '% vs ' + R.said + '% promised)</summary><table class="mk"><thead><tr><th>Day</th>'
+    + '<th class="num">Tickets</th><th class="num">Hit</th><th class="num">Most legs won</th>'
+    + '<th class="num">Open</th></tr></thead><tbody>'
+    + (R.days || []).map(d => '<tr><td>' + esc(d.day) + '</td><td class="num">' + d.n + '</td><td class="num">'
+      + d.won + '</td><td class="num">' + d.best + '</td><td class="num">' + d.open + '</td></tr>').join("")
+    + '</tbody></table></details>';
   panel.innerHTML = h + '</div>';
 }
 function propTuningHTML(){
@@ -1203,6 +1165,19 @@ function readHash(){
   [...days.children].forEach(x => x.setAttribute("aria-pressed", "false"));
   return true;
 }
+// the strongest player prop per game for the card's day, alongside the picks
+function cardProps(slot){
+  const games = ((D.props || {})[slot] || {}).games || [];
+  const best = games.map(g => {
+    const p = (g.props || []).filter(x => x.p >= 0.70).sort((a, b) => b.p - a.p)[0];
+    return p ? Object.assign({match: g.match, lg: g.lg, tip: g.tip, kind: "prop"}, p) : null;
+  }).filter(Boolean).sort((a, b) => b.p - a.p).slice(0, 12);
+  if(!best.length) return '';
+  return '<div class="parlays"><h3>Player props on the card</h3>'
+    + '<p class="note">The likeliest prop in each game (70%+), from the Props tab. Graded from the '
+    + 'box score like everything else.</p><ul class="legs">' + best.map(x => legHTML(x)).join("")
+    + '</ul></div>';
+}
 function drawCard(slot){
   const panel = document.getElementById("panel");
   const lgs = D.slots[slot] || {};
@@ -1297,7 +1272,7 @@ function drawCard(slot){
                    + (r.ev > 0 ? "+" : "") + r.ev.toFixed(1) + '%</td>')
              + '</tr>';
       }).join("")
-    + '</tbody></table>';
+    + '</tbody></table>' + cardProps(slot);
 }
 
 ["today","tomorrow","locks","lottery","props","results","|","card","stacks","markets","bot"].forEach(s => {
