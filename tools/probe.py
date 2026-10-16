@@ -1,41 +1,65 @@
-"""Feed probe, run on GitHub's runners. Round 20: tennis prices. ESPN carries
-no tennis odds, so tennis picks are the model's alone. Does FanDuel list
-ATP/WTA matches (which page id, which market type), and does Kalshi?"""
+"""Feed probe, run on GitHub's runners. Round 21: why did today's WTA picks
+carry no Kalshi price? For every open KXATPMATCH / KXWTAMATCH market: the
+spread (wide ones are dropped), and which of ESPN's scheduled singles players
+for today and tomorrow match a Kalshi name and which do not."""
+import datetime as dt
 import json
 import sys
 from collections import Counter
 
 sys.path.insert(0, ".")
-import fanduel as F  # noqa: E402
+import kalshi as K  # noqa: E402
+import picks as P  # noqa: E402
 
-for page in ("tennis", "atp", "wta", "tennis-atp", "tennis-wta"):
-    d = F._get(f"{F.BASE}/content-managed-page?page=CUSTOM&customPageId={page}"
-               f"&_ak={F.AK}&timezone=America%2FNew_York")
-    att = (d or {}).get("attachments") or {}
-    ev, mk = att.get("events") or {}, att.get("markets") or {}
-    print(f"fanduel page {page}: events {len(ev)} markets {len(mk)}")
-    if ev:
-        print("  types:", Counter(m.get("marketType") for m in mk.values()).most_common(8))
-        for e in list(ev.values())[:4]:
-            print("  event:", e.get("name"), e.get("openDate"), e.get("competitionId"))
-        for m in list(mk.values())[:4]:
-            print("  market:", m.get("marketType"), m.get("marketName"),
-                  [(r.get("runnerName"), ((r.get("winRunnerOdds") or {}).get("americanDisplayOdds") or {}).get("americanOdds"))
-                   for r in m.get("runners") or []])
+names, spreads = {}, Counter()
+for ser in ("KXATPMATCH", "KXWTAMATCH"):
+    evs = K._series(ser)
+    print(f"{ser}: {len(evs)} open events")
+    for ev in evs:
+        for m in ev.get("markets") or []:
+            y, n = K._price(m, "yes"), K._price(m, "no")
+            who = K._norm(m.get("yes_sub_title"))
+            if not who:
+                continue
+            sp = None if not y or not n else round(y - (1 - n), 3)
+            names[who] = (ser, sp, y, n, m.get("last_price_dollars") or m.get("last_price"),
+                          ev.get("title"))
+            spreads[("none" if sp is None else "<=.08" if 0 <= sp <= 0.08
+                      else "<=.15" if 0 <= sp <= 0.15 else ">.15")] += 1
+print("spread buckets:", dict(spreads))
+for i, (k, v) in enumerate(names.items()):
+    if i < 12:
+        print("  ", k, v)
 
-import urllib.request
-K = "https://api.elections.kalshi.com/trade-api/v2"
-for ser in ("KXATPMATCH", "KXWTAMATCH", "KXATPGAME", "KXWTAGAME", "KXTENNISMATCH"):
-    try:
-        d = json.load(urllib.request.urlopen(urllib.request.Request(
-            f"{K}/events?series_ticker={ser}&status=open&with_nested_markets=true&limit=5",
-            headers={"User-Agent": "Mozilla/5.0"}), timeout=20))
-    except Exception as e:
-        print("kalshi", ser, "error", e)
-        continue
-    evs = d.get("events") or []
-    print(f"kalshi {ser}: {len(evs)} open events")
-    for ev in evs[:3]:
-        print("  ", ev.get("event_ticker"), ev.get("title"),
-              [(m.get("yes_sub_title"), m.get("yes_ask_dollars") or m.get("yes_ask"),
-                m.get("no_ask_dollars") or m.get("no_ask")) for m in ev.get("markets") or []])
+today = dt.datetime.now(P.ET).date() if hasattr(P, "ET") else dt.date.today()
+for d in (today, today + dt.timedelta(days=1)):
+    tag = d.strftime("%Y%m%d")
+    for tour in ("atp", "wta"):
+        sb = P.get(f"{P.ESPN}/tennis/{tour}/scoreboard?dates={tag}")
+        hit, miss = [], []
+        for ev in sb.get("events", []):
+            for grp in ev.get("groupings") or []:
+                gname = (grp.get("grouping") or {}).get("displayName", "")
+                if "Singles" not in gname:
+                    continue
+                for c in grp.get("competitions") or []:
+                    st = ((c.get("status") or {}).get("type") or {})
+                    if st.get("completed"):
+                        continue
+                    for x in c.get("competitors") or []:
+                        nm = (x.get("athlete") or {}).get("displayName")
+                        if not nm:
+                            continue
+                        (hit if K._norm(nm) in names else miss).append(
+                            (nm, ev.get("name"), names.get(K._norm(nm), (None, None))[1]))
+        print(f"{tag} {tour}: matched {len(hit)} unmatched {len(miss)}")
+        for h in hit[:8]:
+            print("   hit ", h)
+        tour_names = Counter(e for _, e, _ in miss)
+        print("   unmatched by event:", tour_names.most_common(6))
+        for m in miss[:15]:
+            print("   miss", m)
+# names on Kalshi that look like a surname match but differ
+espn_last = {}
+print("kalshi sample by series:", Counter(v[0] for v in names.values()))
+print(json.dumps(sorted(names)[:60]))
