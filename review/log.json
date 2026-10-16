@@ -168,7 +168,7 @@
     "all_hit": 58.0,
     "calls": 21,
     "cutoff": 0.675,
-    "games": 174,
+    "games": 176,
     "hit": 81.0
    },
    "ufc": {
@@ -208,8 +208,8 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
-   "won": 1
+   "open": 8,
+   "won": 3
   },
   "losses": [
    {
@@ -288,13 +288,14 @@
   "lottery": [
    {
     "killed_by": [
+     "Tampa Bay Lightning under 3.5 goals",
      "New Jersey Devils under 3.5 goals"
     ],
     "legs": 11,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 1
+    "won": 3
    },
    {
     "killed_by": [
@@ -304,16 +305,16 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 1
+    "won": 3
    }
   ],
   "picks": {
-   "hit": 66.7,
+   "hit": 69.0,
    "lost": 9,
-   "n": 27,
-   "roi": -33.2,
-   "said": 64.3,
-   "won": 18
+   "n": 29,
+   "roi": 22.6,
+   "said": 63.9,
+   "won": 20
   },
   "picks_by_league": {
    "arg": {
@@ -349,12 +350,12 @@
     "won": 2
    },
    "nhl": {
-    "hit": 50.0,
+    "hit": 75.0,
     "lost": 1,
-    "n": 2,
-    "roi": -33.2,
-    "said": 60.2,
-    "won": 1
+    "n": 4,
+    "roi": 22.6,
+    "said": 59.2,
+    "won": 3
    },
    "wta": {
     "hit": 72.2,
@@ -380,12 +381,12 @@
     "won": 25
    },
    "agree": {
-    "hit": 65.1,
+    "hit": 65.4,
     "lost": 84,
-    "n": 241,
-    "roi": -4.4,
+    "n": 243,
+    "roi": -3.7,
     "said": 60.4,
-    "won": 157
+    "won": 159
    }
   },
   "weights": {
@@ -418,10 +419,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.651,
-    "market_only": 0.651,
-    "model_only": 0.6566,
-    "n": 109,
+    "logloss": 0.6501,
+    "market_only": 0.6501,
+    "model_only": 0.6552,
+    "n": 111,
     "weight": 0.05
    },
    "wnba": {

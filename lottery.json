@@ -116,12 +116,13 @@
        "match": "Seattle Kraken at Tampa Bay Lightning",
        "p": 0.457,
        "price": "+122",
+       "score": "Seattle Kraken 3 - Tampa Bay Lightning 4",
        "spec": {
         "line": 3.5,
         "t": "teamunder",
         "team": "Tampa Bay Lightning"
        },
-       "status": "open",
+       "status": "lost",
        "tip": "7:00 PM",
        "value": 1.0145,
        "where": "Tampa Bay Lightning Alt Total Goals: Under 3.5"
@@ -140,12 +141,13 @@
        "match": "New York Islanders at Ottawa Senators",
        "p": 0.5864,
        "price": "-146",
+       "score": "New York Islanders 1 - Ottawa Senators 2",
        "spec": {
         "line": 3.5,
         "t": "teamunder",
         "team": "Ottawa Senators"
        },
-       "status": "open",
+       "status": "won",
        "tip": "7:00 PM",
        "value": 0.988,
        "where": "Ottawa Senators Alt Total Goals: Under 3.5"
@@ -260,11 +262,12 @@
        "match": "Buffalo Sabres at Toronto Maple Leafs",
        "p": 0.326,
        "price": "+182",
+       "score": "Buffalo Sabres 5 - Toronto Maple Leafs 4",
        "spec": {
         "line": 7.5,
         "t": "over"
        },
-       "status": "open",
+       "status": "won",
        "tip": "7:00 PM",
        "value": 0.9193,
        "where": "Alternate Total Goals: Over 7.5"
@@ -292,12 +295,13 @@
        "match": "New York Islanders at Ottawa Senators",
        "p": 0.7952,
        "price": "-300",
+       "score": "New York Islanders 1 - Ottawa Senators 2",
        "spec": {
         "line": 2.5,
         "t": "spread",
         "team": "New York Islanders"
        },
-       "status": "open",
+       "status": "won",
        "tip": "7:00 PM",
        "value": 1.0603,
        "where": "Alternate Puck Line: New York Islanders +2.5"
@@ -316,12 +320,13 @@
        "match": "Seattle Kraken at Tampa Bay Lightning",
        "p": 0.6962,
        "price": "-174",
+       "score": "Seattle Kraken 3 - Tampa Bay Lightning 4",
        "spec": {
         "line": 2.5,
         "t": "spread",
         "team": "Seattle Kraken"
        },
-       "status": "open",
+       "status": "won",
        "tip": "7:00 PM",
        "value": 1.0963,
        "where": "Alternate Puck Line: Seattle Kraken +2.5"
