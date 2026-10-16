@@ -17,6 +17,10 @@ ESPN's odds feed:
             disagree, does one know more?
   total     high-scoring games give underdogs more chances; does the
             moneyline under-price that?
+  rest      days since each side last played, back-to-backs, and how long
+            the away side has been on the road (from the full schedule).
+  form      each side's results against its own prices over its last 8
+            games: does the market catch up with hot and cold teams late?
 
 Method: per league, games in date order; a logistic model on
 [close log-odds, drift, spread signal, close x total] is fitted on the older
@@ -96,7 +100,7 @@ def row_for(key, sport, league, g):
         po = ho / (ho + ao) if None not in (ho, ao) else pc
         sp = pick(h, "close", "spread")                 # home's spread, e.g. -7.5
         tot = num(((it.get("close") or {}).get("total") or {}).get("american")) or num(it.get("overUnder"))
-        return dict(date=d.isoformat(), home_won=int(hs > as_), pc=pc, po=po,
+        return dict(date=d.isoformat(), home=home, away=away, home_won=int(hs > as_), pc=pc, po=po,
                     ps=ncdf(-sp / SIGMA[key]) if sp is not None else pc, total=tot or 0.0)
     return None
 
@@ -134,9 +138,54 @@ def fit_logit(X, y, l2=1.0, iters=60):
     return w
 
 
+def add_rest(rows, all_games):
+    """Days since each side's previous game and whether it is the second
+    of a back-to-back, from the FULL schedule (not the sampled games), plus
+    how many road games in a row the away side has played."""
+    seen = {}
+    for g in sorted(all_games, key=lambda g: g[0]):
+        d, _, home, away = g[0], g[1], g[2], g[3]
+        for t, at_home in ((home, True), (away, False)):
+            seen.setdefault(t, []).append((d, at_home))
+    def rest(team, day):
+        ds = [x for x in seen.get(team, []) if x[0] < day]
+        if not ds:
+            return 7, 0
+        gap = (day - ds[-1][0]).days
+        road = 0
+        for d_, h_ in reversed(ds):
+            if h_:
+                break
+            road += 1
+        return min(gap, 7), road
+    for r in rows:
+        day = dt.date.fromisoformat(r["date"])
+        r["rest_h"], _ = rest(r["home"], day)
+        r["rest_a"], r["road_a"] = rest(r["away"], day)
+
+
+def add_form(rows, n=8):
+    """Each side's average (result - market chance) over its previous n games:
+    is a team beating its prices, and does the market catch up too slowly?"""
+    hist = {}
+    for r in rows:                                  # rows are in date order
+        fh = hist.get(r["home"], [])[-n:]
+        fa = hist.get(r["away"], [])[-n:]
+        r["form_h"] = sum(fh) / len(fh) if fh else 0.0
+        r["form_a"] = sum(fa) / len(fa) if fa else 0.0
+        hist.setdefault(r["home"], []).append(r["home_won"] - r["pc"])
+        hist.setdefault(r["away"], []).append((1 - r["home_won"]) - (1 - r["pc"]))
+
+
 def feats(r, mean_total, use):
     zc = lg(r["pc"])
     x = [1.0, zc]
+    if "form" in use:
+        x.append(r.get("form_h", 0.0) - r.get("form_a", 0.0))
+    if "rest" in use:
+        x.append(min(r.get("rest_h", 3), 4) - min(r.get("rest_a", 3), 4))
+        x.append((r.get("rest_h", 3) <= 1) - (r.get("rest_a", 3) <= 1))
+        x.append(min(r.get("road_a", 0), 6))
     if "drift" in use:
         x.append(zc - lg(r["po"]))
     if "spread" in use:
@@ -160,12 +209,15 @@ def main():
             continue
         ds = B.dates(wins)
         games = B.finished_games(key, sport, league, ds)
+        all_games = list(games)
         if len(games) > MAX_GAMES:
             step = len(games) / MAX_GAMES
             games = [games[int(i * step)] for i in range(MAX_GAMES)]
         with ThreadPoolExecutor(max_workers=8) as ex:
             rows = [r for r in ex.map(lambda g: row_for(key, sport, league, g), games) if r]
         rows.sort(key=lambda r: r["date"])
+        add_rest(rows, all_games)
+        add_form(rows)
         if len(rows) < 150:
             report[key] = dict(games=len(rows), note="too few games")
             print(key, report[key], flush=True)
@@ -180,15 +232,21 @@ def main():
                    open_favourite=dict(zip(("hit", "logloss"), score(test, [r["po"] for r in test]))),
                    spread_favourite=dict(zip(("hit", "logloss"), score(test, [r["ps"] for r in test]))))
         for name, use in (("drift", {"drift"}), ("spread", {"spread"}), ("total", {"total"}),
-                          ("all", {"drift", "spread", "total"})):
+                          ("rest", {"rest"}), ("form", {"form"}),
+                          ("all", {"drift", "spread", "total", "rest", "form"})):
             w = fit_logit([feats(r, mt, use) for r in fit], [r["home_won"] for r in fit])
             probs = [1 / (1 + math.exp(-sum(a * b for a, b in zip(w, feats(r, mt, use)))))
                      for r in test]
             h, l = score(test, probs)
             flips = sum((p > 0.5) != (r["pc"] > 0.5) for r, p in zip(test, probs))
+            # a change counts only if it is bigger than luck: the extra wins
+            # among the flipped picks must clear two standard errors
+            gained = round((h - base[0]) * len(test) / 100)
             res[name] = dict(hit=h, logloss=l, weights=[round(x, 3) for x in w],
-                             picks_changed=flips,
-                             better=bool(l < base[1] and h >= base[0]))
+                             picks_changed=flips, extra_wins=gained,
+                             better=bool(l < base[1] and h >= base[0]),
+                             significant=bool(flips and gained > 2 * math.sqrt(flips) / 2
+                                              and l < base[1]))
         report[key] = res
         print(key, json.dumps(res), flush=True)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
