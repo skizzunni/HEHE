@@ -1,13 +1,14 @@
 # Review 2026-10-16
 
-Picks 2-4 (33.3% vs 61.2% claimed).
+Picks 2-5 (28.6% vs 63.2% claimed).
 - LOST wta Maria Sakkari at 63.7%: lost 1-2 in sets · took it the distance · called at 64%
 - LOST wta Elina Svitolina at 70.6%: lost 1-2 in sets · took it the distance · called at 71%
 - LOST wta Fiona Ferro at 53.1%: lost 0-2 in sets · never won a set · called at 53%
+- LOST wta Francesca Jones at 75.2%: lost 0-2 in sets · never won a set · called at 75%
 - LOST wta Julia Grabher at 69.4%: lost 0-2 in sets · never won a set · called at 69%
 LEAK nba: 47.3% hit vs 68.5% claimed on 55 calls (14 days)
-LEAK wta: 58.3% hit vs 66.6% claimed on 24 calls (14 days)
+LEAK wta: 56.0% hit vs 67.0% claimed on 25 calls (14 days)
 With the market 64.9% (242); against it 38.1% (63).
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 60% -> 75.7% on 74 of 102, mlb 70% -> 86.7% on 15 of 372, nba 62% -> 71.4% on 28 of 55, ncaaf 55% -> 85.1% on 409 of 447, nfl 70% -> 73.1% on 26 of 79, nhl 68% -> 82.6% on 23 of 183, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 55% -> 75.4% on 122 of 141
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 60% -> 75.7% on 74 of 102, mlb 70% -> 86.7% on 15 of 372, nba 62% -> 71.4% on 28 of 55, ncaaf 55% -> 85.1% on 409 of 447, nfl 70% -> 73.1% on 26 of 79, nhl 68% -> 82.6% on 23 of 183, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 57% -> 76.8% on 112 of 142
 Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), nba 0.05 (n=49), ncaaf 0.05 (n=370), nfl 0.40 (n=79), nhl 0.05 (n=118), wnba 0.30 (n=46)
