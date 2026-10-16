@@ -172,6 +172,33 @@ def fit_calls(graded):
     return cuts, detail
 
 
+def holdout(graded):
+    """The strong-call cut-offs, tested honestly: fitted on the older half of
+    graded picks, scored on the newer half they never saw. This is the number
+    the board shows next to "strong" -- never the in-sample one."""
+    g = sorted(graded, key=lambda e: day_of(e) or "")
+    h = len(g) // 2
+    if h < 100:
+        return None
+    cuts, _ = fit_calls(g[:h])
+    strong = alln = 0
+    sw = aw = 0
+    for e in g[h:]:
+        x = chance_and_result(e)
+        if not x:
+            continue
+        alln += 1
+        aw += x[1]
+        c = cuts.get(e["league"])
+        if c is not None and x[0] >= c:
+            strong += 1
+            sw += x[1]
+    if not strong:
+        return None
+    return dict(n=strong, hit=round(100 * sw / strong, 1), all_n=alln,
+                all_hit=round(100 * aw / alln, 1), since=day_of(g[h]), until=day_of(g[-1]))
+
+
 def clv(rs):
     """Closing line value: how much better the first price was than the
     close, in percentage points of win chance (positive = we beat the close)."""
@@ -321,7 +348,8 @@ def main():
     cuts, cdetail = fit_calls(graded)
     with open(os.path.join(OUT, "call_min.json"), "w") as fh:
         json.dump(dict(updated=dt.datetime.now(ET).isoformat(timespec="minutes"),
-                       target=CALL_TARGET, cutoffs=cuts, detail=cdetail), fh, indent=1,
+                       target=CALL_TARGET, cutoffs=cuts, detail=cdetail,
+                       holdout=holdout(graded)), fh, indent=1,
                   sort_keys=True)
     log[today.isoformat()]["calls"] = cdetail
     with open(log_path, "w") as fh:

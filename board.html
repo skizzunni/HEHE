@@ -425,6 +425,16 @@ td.num.ok{color:var(--dog)}
 </aside>
 </div>
 <script>
+let STRONGONLY = false;
+try { STRONGONLY = localStorage.getItem("strongonly") === "1"; } catch (e) {}
+function strongBar(n){
+  const S = D.strong;
+  const rec = S ? ' Strong calls hit <b>' + S.hit + '%</b> on ' + S.n + ' picks the cut-offs never saw '
+    + '(all picks ' + S.all_hit + '%).' : '';
+  return '<p class="coinbar">' + (STRONGONLY ? 'Showing strong calls only' + (n ? ' (' + n + ' close games hidden).' : '.')
+    : 'Strong and close games shown.') + rec
+    + ' <button type="button" id="strongToggle">' + (STRONGONLY ? 'Show all' : 'Strong only') + '</button></p>';
+}
 let SHOWCOIN = false;
 try { SHOWCOIN = localStorage.getItem("showcoin") === "1"; } catch (e) {}
 // How the Card is ordered: by the hit rate a leg's band has actually
@@ -574,14 +584,20 @@ function renderView(){
   // nothing is hidden there, it is only labelled thin.
   const coins = lg.rows.filter(r => r.hd).length;
   // strongest picks first, close games after; every one counts
-  const shown = (SHOWCOIN ? lg.rows : lg.rows.filter(r => !r.hd)).slice()
+  const closeN = lg.rows.filter(r => r.nc && !r.hd).length;
+  const shown = (SHOWCOIN ? lg.rows : lg.rows.filter(r => !r.hd))
+    .filter(r => !STRONGONLY || !r.nc).slice()
     .sort((a, b) => (a.nc ? 1 : 0) - (b.nc ? 1 : 0));
+  if(!shown.length && STRONGONLY && closeN){
+    panel.innerHTML = strongBar(closeN) + '<p class="empty">No strong calls here &mdash; only close games.</p>';
+    return;
+  }
   if(!shown.length){
     panel.innerHTML = '<p class="empty">Every pick here is a coin flip '
       + '(' + coins + ' of them). Nothing worth a leg.</p>' + coinBar(coins);
     return;
   }
-  panel.innerHTML = coinBar(coins)
+  panel.innerHTML = strongBar(closeN) + coinBar(coins)
     + '<table><thead><tr><th>I have winning</th><th>Start</th>'
     + '<th class="num">Conf</th><th class="why">Why</th><th>Price</th>'
     + '</tr></thead><tbody>'
@@ -1671,6 +1687,12 @@ document.addEventListener("click", e => {
   const rk = e.target.closest("[data-rank]");
   if(rk){
     setRank(rk.getAttribute("data-rank"));
+    return;
+  }
+  if(e.target.id === "strongToggle"){
+    STRONGONLY = !STRONGONLY;
+    try { localStorage.setItem("strongonly", STRONGONLY ? "1" : "0"); } catch (err) {}
+    render();
     return;
   }
   if(e.target.id === "coinToggle"){

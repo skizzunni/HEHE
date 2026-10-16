@@ -163,6 +163,13 @@ def snapshot():
         lg["soccer"] = {"label": "Soccer", "rows": soccer_rows}
         out["slots"][slot] = lg
     out["results"] = ledger.board_payload()
+    # strong calls' record on picks the cut-offs never saw (tools/daily_review)
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                               "review", "call_min.json")) as fh_:
+            out["strong"] = json.load(fh_).get("holdout")
+    except (OSError, ValueError):
+        out["strong"] = None
     out["parlays"] = parlays.build_all(out)
     # Stacks: long tickets of high-probability legs (alt totals, "won't win
     # by N"), priced from each game's moneyline, spread and total. Kept apart
