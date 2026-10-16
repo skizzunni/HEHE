@@ -144,11 +144,11 @@
     "hit": 86.7
    },
    "nba": {
-    "all_hit": 58.5,
-    "calls": 27,
+    "all_hit": 59.3,
+    "calls": 28,
     "cutoff": 0.625,
-    "games": 53,
-    "hit": 70.4
+    "games": 54,
+    "hit": 71.4
    },
    "ncaaf": {
     "all_hit": 82.9,
@@ -165,10 +165,10 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 58.2,
+    "all_hit": 58.4,
     "calls": 22,
     "cutoff": 0.675,
-    "games": 177,
+    "games": 178,
     "hit": 81.8
    },
    "ufc": {
@@ -196,13 +196,13 @@
   "day": "2026-10-15",
   "leaks_14d": [
    {
-    "hit": 47.2,
+    "hit": 48.1,
     "league": "nba",
     "lost": 28,
-    "n": 53,
+    "n": 54,
     "roi": -26.7,
-    "said": 68.8,
-    "won": 25
+    "said": 68.7,
+    "won": 26
    }
   ],
   "locks": {
@@ -235,6 +235,14 @@
     "price": null,
     "said": 51.1,
     "why": "margin 1 \u00b7 called at 51%"
+   },
+   {
+    "against_market": true,
+    "league": "nhl",
+    "pick": "Philadelphia Flyers",
+    "price": "+124",
+    "said": 51.5,
+    "why": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 52%"
    },
    {
     "against_market": true,
@@ -289,10 +297,11 @@
    {
     "killed_by": [
      "Tampa Bay Lightning under 3.5 goals",
-     "New Jersey Devils under 3.5 goals"
+     "New Jersey Devils under 3.5 goals",
+     "Over 7.5 goals"
     ],
     "legs": 11,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 3
@@ -309,12 +318,12 @@
    }
   ],
   "picks": {
-   "hit": 70.0,
-   "lost": 9,
-   "n": 30,
-   "roi": 25.3,
-   "said": 63.6,
-   "won": 21
+   "hit": 68.8,
+   "lost": 10,
+   "n": 32,
+   "roi": 4.4,
+   "said": 63.2,
+   "won": 22
   },
   "picks_by_league": {
    "arg": {
@@ -349,12 +358,20 @@
     "said": 54.6,
     "won": 2
    },
+   "nba": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 63.0,
+    "won": 1
+   },
    "nhl": {
-    "hit": 80.0,
-    "lost": 1,
-    "n": 5,
-    "roi": 25.3,
-    "said": 58.6,
+    "hit": 66.7,
+    "lost": 2,
+    "n": 6,
+    "roi": 4.4,
+    "said": 57.4,
     "won": 4
    },
    "wta": {
@@ -373,11 +390,11 @@
   },
   "vs_market_14d": {
    "against": {
-    "hit": 39.7,
-    "lost": 38,
-    "n": 63,
-    "roi": 1.0,
-    "said": 54.8,
+    "hit": 39.1,
+    "lost": 39,
+    "n": 64,
+    "roi": -0.6,
+    "said": 54.7,
     "won": 25
    },
    "agree": {
@@ -419,10 +436,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6474,
-    "market_only": 0.6474,
-    "model_only": 0.6531,
-    "n": 112,
+    "logloss": 0.6467,
+    "market_only": 0.6467,
+    "model_only": 0.6529,
+    "n": 113,
     "weight": 0.05
    },
    "wnba": {

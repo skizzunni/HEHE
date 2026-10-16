@@ -179,12 +179,13 @@
    "match": "Philadelphia Flyers at Detroit Red Wings",
    "p": 0.8544,
    "p_model": 0.888,
+   "score": "Philadelphia Flyers 1 - Detroit Red Wings 2",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Philadelphia Flyers"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892508|Under 9.5 goals": {
    "away": "Philadelphia Flyers",
@@ -196,11 +197,12 @@
    "match": "Philadelphia Flyers at Detroit Red Wings",
    "p": 0.9069,
    "p_model": 0.9284,
+   "score": "Philadelphia Flyers 1 - Detroit Red Wings 2",
    "spec": {
     "line": 9.5,
     "t": "under"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892509|No \u00b7 Seattle Kraken wins by over 2.5 goals": {
    "away": "Seattle Kraken",
@@ -650,7 +652,7 @@
    "logged": "2026-10-15T00:28",
    "n": 2,
    "prob": 0.8254,
-   "status": "open"
+   "status": "won"
   },
   "20261015:2:2": {
    "fair": 1.28,
