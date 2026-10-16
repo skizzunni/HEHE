@@ -31,6 +31,18 @@
    "calmest_quarter": {
     "under_hit": 43.8,
     "under_price": 49.8
+   },
+   "wind_rule": {
+    "windy_at": 7.9,
+    "calm_at": 3.3,
+    "fit": {
+     "n": 68,
+     "hit": 54.4
+    },
+    "test": {
+     "n": 67,
+     "hit": 55.2
+    }
    }
   },
   "ncaaf": {
@@ -63,6 +75,18 @@
    "calmest_quarter": {
     "under_hit": 45.1,
     "under_price": 50.1
+   },
+   "wind_rule": {
+    "windy_at": 7.5,
+    "calm_at": 3.3,
+    "fit": {
+     "n": 336,
+     "hit": 53.6
+    },
+    "test": {
+     "n": 332,
+     "hit": 54.5
+    }
    }
   },
   "mlb": {
@@ -95,6 +119,18 @@
    "calmest_quarter": {
     "under_hit": 50.8,
     "under_price": 50.1
+   },
+   "wind_rule": {
+    "windy_at": 9.9,
+    "calm_at": 4.9,
+    "fit": {
+     "n": 262,
+     "hit": 47.7
+    },
+    "test": {
+     "n": 255,
+     "hit": 51.0
+    }
    }
   }
  }
