@@ -803,15 +803,25 @@ function drawLocks(){
     return;
   }
   const won = L.filter(x => x.status === "won").length, lost = L.filter(x => x.status === "lost").length;
+  const SZ = X.sizes || [];
+  const full = SZ.length ? SZ[SZ.length - 1] : null;
   h += strip([["legs", L.length], ["all hit", (100 * X.prob).toFixed(0) + "%"],
-              ["pays", (X.fair || 0).toFixed(2) + "x"],
+              ["$10 pays", full ? "$" + Math.round(10 * full.pays).toLocaleString() : "&mdash;"],
               ["so far", won + "&ndash;" + lost],
               ["card", X.preview ? "preview" : "set 8 AM"]])
     + '<ul class="legs">' + L.map(x => legHTML(x)).join("") + '</ul>'
     + '<p><button type="button" data-lkcopy="' + day + '">Copy all legs</button></p>'
+    + (SZ.length ? '<h3 class="tier-h">How to play it</h3><p class="note">Take the top legs in order. '
+        + 'Payout is FanDuel&rsquo;s own prices multiplied; chance is how often they all hit.</p>'
+        + '<table class="mk"><thead><tr><th>Top legs</th><th class="num">Odds</th>'
+        + '<th class="num">$10 pays</th><th class="num">All hit</th></tr></thead><tbody>'
+        + SZ.map(z => '<tr><td>' + z.n + '</td><td class="num">' + esc(z.american) + '</td><td class="num">$'
+          + Math.round(10 * z.pays).toLocaleString() + '</td><td class="num">' + (100 * z.prob).toFixed(0)
+          + '%</td></tr>').join("") + '</tbody></table>' : '')
     + '<details class="explain"><summary>What the locks are &amp; how to place them</summary>'
-    + '<p>The likeliest bets FanDuel (New York) lists &mdash; game lines <i>and</i> player props &mdash; '
-    + 'one per game, from games that start after 8:00 AM and have not begun. The card is set at '
+    + '<p>The likeliest bets FanDuel (New York) lists at <b>normal odds</b> (-400 to -120) &mdash; game '
+    + 'lines <i>and</i> player props &mdash; one per game, from games that start after 8:00 AM and have '
+    + 'not begun. Each chance is the market&rsquo;s own price with its margin taken out. The card is set at '
     + '8:00 AM Eastern and stays the same all day. Each is likely; all ' + L.length + ' together hit '
     + (100 * X.prob).toFixed(0) + '% of the time, the top 3 alone '
     + (100 * L.slice(0, 3).reduce((a, x) => a * x.p, 1)).toFixed(0) + '%.</p>'

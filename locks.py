@@ -35,7 +35,36 @@ import stacks
 HERE = os.path.dirname(os.path.abspath(__file__))
 LEDGER = os.path.join(HERE, "locks.json")
 N_LOCKS = 11
-LOCK_MIN, LOCK_MAX = 0.75, 0.97
+LOCK_MIN, LOCK_MAX = 0.55, 0.92        # model pre-filter only; the price decides
+# Normal odds only (2026-10-16). Legs at -6000 made 11 locks pay 1.35x --
+# a whole day's risk for almost nothing. A lock must be priced between -400
+# and -120, and its chance is the MARKET's (FanDuel's price less its margin,
+# corrected for the price-band bias the 16,000-leg backtest measured), the
+# same honest rule as the lottery -- never the model's, which lost to the
+# market on unseen games.
+DEC_MIN, DEC_MAX = 1.25, 1.834         # -400 .. -120
+
+
+def _dec(price):
+    try:
+        v = float(str(price).replace("+", ""))
+    except (TypeError, ValueError):
+        return None
+    if -100 < v < 100:
+        return None
+    return 1 + (v / 100 if v > 0 else 100 / -v)
+
+
+def _market_p(price, two_sided_p=None):
+    """The leg's chance from the market: an exactly de-vigged two-sided
+    price where there is one, else FanDuel's price less its margin; then the
+    backtest's price-band correction."""
+    import lottery
+    d = _dec(price)
+    if not d:
+        return None
+    p = two_sided_p if two_sided_p else (1 / d) / lottery.FD_HOLD
+    return round(lottery.market_chance(p), 4)
 # The day's card is set at 8:00 AM Eastern and then stands: the tab shows the
 # same legs all day, each with its result, instead of drifting with the odds.
 # Before 8 the tab shows a preview of what the card would be right now.
@@ -167,8 +196,12 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
         for L in g["legs"]:
             ref, price, where = refs.get((g["gid"], json.dumps(L["spec"], sort_keys=True)),
                                          (None, None, None))
-            if ref and (best is None or L["p"] > best["p"]):
-                best = dict(L, fd=ref, price=price, where=where)
+            d = _dec(price)
+            if not ref or not d or not DEC_MIN <= d <= DEC_MAX:
+                continue
+            pm = _market_p(price)
+            if pm and (best is None or pm > best["p"]):
+                best = dict(L, fd=ref, price=price, where=where, p=pm)
         if best:
             picks.append(dict(gid=g["gid"], league=g["league"], lg=g["lg"], match=g["match"],
                               home=g["home"], away=g["away"], tip=g.get("tip"),
@@ -185,8 +218,14 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
         if not row:
             continue                            # not eligible by start time
         for P in pg.get("props") or []:
-            if not P.get("fd") or not LOCK_MIN <= P["p"] <= LOCK_MAX:
+            d = _dec(P.get("price"))
+            if not P.get("fd") or not d or not DEC_MIN <= d <= DEC_MAX:
                 continue
+            # an over/under prop's p is already de-vigged across both sides
+            pm = _market_p(P["price"], P["p"] if not str(P.get("line", "")).endswith("+") else None)
+            if not pm:
+                continue
+            P = dict(P, p=pm)
             cur = by_gid.get(pg["id"])
             if cur and cur["p"] >= P["p"]:
                 continue
@@ -204,7 +243,23 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
     for L in locks:
         prob *= L["p"]
     return dict(locks=locks, available=len(picks), prob=round(prob, 4),
-                fair=round(1 / prob, 2) if prob else None)
+                fair=round(1 / prob, 2) if prob else None, sizes=sizes(locks))
+
+
+def sizes(legs):
+    """What the top 2, 3, 4, 5 ... legs pay at FanDuel's prices and how often
+    they all hit, so the card can be played at the size you want."""
+    out, pay, prob = [], 1.0, 1.0
+    for i, L in enumerate(legs, 1):
+        d = _dec(L.get("price"))
+        if not d:
+            break
+        pay *= d
+        prob *= L["p"]
+        if i >= 2:
+            out.append(dict(n=i, pays=round(pay, 2), prob=round(prob, 4),
+                            american=f"+{round((pay - 1) * 100)}"))
+    return out
 
 
 # ------------------------------------------------------------------ record
@@ -269,7 +324,8 @@ def frozen(day):
     for L in legs:
         prob *= L["p"]
     return dict(locks=legs, available=len(legs), prob=round(prob, 4),
-                fair=round(1 / prob, 2) if legs else None, set=True, day=day)
+                fair=round(1 / prob, 2) if legs else None, set=True, day=day,
+                sizes=sizes(legs))
 
 
 def grade(final):
