@@ -32,6 +32,7 @@ import kalshi                  # noqa: E402
 import player_props            # noqa: E402
 import props_ledger             # noqa: E402
 import locks                    # noqa: E402
+import calls                    # noqa: E402
 import lottery                  # noqa: E402
 
 
@@ -123,6 +124,8 @@ def snapshot():
                                  bool(leg and leg.get("dog")))
                 rows.append({"mp": r["mypick"], "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
+                             # below the league's cutoff: a lean, not a call
+                             "nc": not calls.is_call(k, mc),
                              "pk": pk, "pl": pl, "ek": ek, "el": el,
                              # fair price and edge come from the SAME rounded
                              # rate the row displays, so the three never

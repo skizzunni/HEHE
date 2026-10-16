@@ -121,6 +121,11 @@ def record(state=None):
                 # ledger and all 10 that had settled were losses.
                 if r["mypick"].strip().upper() == "TBD":
                     continue
+                # only calls are recorded; a lean (chance under the league's
+                # cutoff, calls.py) stays on the board but out of the record
+                import calls as _calls
+                if not _calls.is_call(lg, r.get("myconf")):
+                    continue
                 key = r["id"]                     # league:espn_competition_id
                 if key in book and book[key].get("status") != "open":
                     continue                      # already settled, never rewrite

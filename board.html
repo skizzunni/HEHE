@@ -120,6 +120,8 @@ td.mkt{font-family:var(--mono);font-size:12px;color:var(--ink-dim);white-space:n
   letter-spacing:.08em;text-transform:uppercase;border-radius:2px;padding:1px 4px;
   border:1px solid currentColor;vertical-align:1.5px}
 .tier.coin{color:var(--ink-dim);opacity:.75}
+.tier.call{color:var(--accent);border-color:var(--accent)}
+.tier.lean{color:var(--ink-dim);opacity:.6;border-style:dashed}
 .tier.thin{color:var(--ink-dim);opacity:.75}
 .taxtag{font:600 9.5px var(--mono);letter-spacing:.09em;color:var(--bad);
   border:1px solid var(--bad);border-radius:2px;padding:1px 4px;margin-left:7px;
@@ -543,7 +545,9 @@ function renderView(){
   // Baseball has no such band -- its weakest picks still hit ~55% -- so
   // nothing is hidden there, it is only labelled thin.
   const coins = lg.rows.filter(r => r.hd).length;
-  const shown = SHOWCOIN ? lg.rows : lg.rows.filter(r => !r.hd);
+  // calls first (they are what the record counts), leans after
+  const shown = (SHOWCOIN ? lg.rows : lg.rows.filter(r => !r.hd)).slice()
+    .sort((a, b) => (a.nc ? 1 : 0) - (b.nc ? 1 : 0));
   if(!shown.length){
     panel.innerHTML = '<p class="empty">Every pick here is a coin flip '
       + '(' + coins + ' of them). Nothing worth a leg.</p>' + coinBar(coins);
@@ -561,7 +565,8 @@ function renderView(){
         const conf = (r.mc === null || r.mc === undefined)
           ? '<td class="num none">&mdash;</td>'
           : '<td class="num">' + r.mc.toFixed(1) + '%'
-            + (r.tk ? '<span class="tier ' + r.tk + '">' + r.tl + '</span>' : '')
+            + (r.nc ? '<span class="tier lean" title="Under this league\'s cutoff: shown, not counted in the record">lean</span>'
+               : '<span class="tier call">call</span>')
             + '</td>';
         const price = r.p
           ? '<td class="mkt"><span class="' + (r.d ? "fade" : "agree") + '">' + r.p + '</span></td>'

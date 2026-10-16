@@ -103,6 +103,63 @@ def refit(graded):
     return out, detail
 
 
+TWO_WAY = {"mlb", "nba", "nfl", "ncaaf", "nhl", "wnba", "ncaab"}
+CUTS = [0.55 + 0.025 * i for i in range(11)]          # 0.55 .. 0.80
+CALL_TARGET = 0.75
+CALL_MIN_N = 25
+
+
+def chance_and_result(e):
+    """(chance of the side the board now calls, did it win) for a graded pick.
+
+    The board follows the market's favourite in two-way sports, so an old
+    pick against the favourite is re-scored as the favourite. Leagues with no
+    price fall back to the pick's own stated chance."""
+    won = e["status"] == "won"
+    qa = e.get("p_market_away")
+    if qa is not None and e.get("myside") in ("away", "home"):
+        q = qa if e["myside"] == "away" else 1 - qa
+        return (q, won) if q >= 0.5 else (1 - q, not won)
+    q = implied(e.get("price"))
+    if q is not None:
+        q = min(q / 1.03, 0.99)
+        if e["league"] in TWO_WAY and q < 0.5:
+            return 1 - q, not won
+        return q, won
+    if e.get("conf"):
+        return e["conf"] / 100, won
+    return None
+
+
+def fit_calls(graded):
+    """Per league, the lowest cutoff whose own record reaches CALL_TARGET on
+    CALL_MIN_N+ games; if none does, the cutoff with the best record on 15+."""
+    by = defaultdict(list)
+    for e in graded:
+        x = chance_and_result(e)
+        if x:
+            by[e["league"]].append(x)
+    cuts, detail = {}, {}
+    for lg, rs in by.items():
+        table = []
+        for c in CUTS:
+            sel = [w for q, w in rs if q >= c]
+            if sel:
+                table.append((c, len(sel), sum(sel) / len(sel)))
+        ok = [t for t in table if t[1] >= CALL_MIN_N and t[2] >= CALL_TARGET]
+        if ok:
+            pick = ok[0]
+        else:
+            fall = [t for t in table if t[1] >= 15]
+            if not fall:
+                continue
+            pick = max(fall, key=lambda t: t[2])
+        cuts[lg] = round(pick[0], 3)
+        detail[lg] = dict(cutoff=round(pick[0], 3), calls=pick[1], hit=round(100 * pick[2], 1),
+                          games=len(rs), all_hit=round(100 * sum(w for _, w in rs) / len(rs), 1))
+    return cuts, detail
+
+
 def summarize(rs):
     n = len(rs)
     if not n:
@@ -187,6 +244,10 @@ def words(r, fit):
     if r["props"]["n"]:
         out.append(f"Props {r['props']['won']}/{r['props']['n']} vs {r['props']['said']}% claimed.")
     out.append("")
+    if r.get("calls"):
+        out.append("Call cutoffs for tomorrow (games under them are leans, not counted): "
+                   + ", ".join(f"{k} {v['cutoff']:.0%} -> {v['hit']}% on {v['calls']} of {v['games']}"
+                               for k, v in sorted(r["calls"].items())))
     out.append("Weights for tomorrow (model's share vs the price): "
                + ", ".join(f"{k} {v['weight']:.2f} (n={v['n']})" for k, v in sorted(fit.items())))
     return "\n".join(out) + "\n"
@@ -215,6 +276,12 @@ def main():
                        default=W_DEFAULT, weights=weights, detail=detail), fh, indent=1,
                   sort_keys=True)
     log[today.isoformat()]["weights"] = detail
+    cuts, cdetail = fit_calls(graded)
+    with open(os.path.join(OUT, "call_min.json"), "w") as fh:
+        json.dump(dict(updated=dt.datetime.now(ET).isoformat(timespec="minutes"),
+                       target=CALL_TARGET, cutoffs=cuts, detail=cdetail), fh, indent=1,
+                  sort_keys=True)
+    log[today.isoformat()]["calls"] = cdetail
     with open(log_path, "w") as fh:
         json.dump(log, fh, indent=1, sort_keys=True)
     latest = max(k for k, v in log.items() if v["picks"].get("n") or k == today.isoformat())
