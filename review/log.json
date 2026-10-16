@@ -163,10 +163,10 @@
    },
    "ncaaf": {
     "all_hit": 82.9,
-    "calls": 406,
+    "calls": 407,
     "cutoff": 0.55,
-    "games": 444,
-    "hit": 85.2
+    "games": 445,
+    "hit": 85.3
    },
    "nfl": {
     "all_hit": 62.8,
@@ -224,8 +224,8 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 6,
-   "won": 5
+   "open": 4,
+   "won": 7
   },
   "losses": [
    {
@@ -259,6 +259,14 @@
     "price": null,
     "said": 56.5,
     "why": "margin 27 \u00b7 called at 56%"
+   },
+   {
+    "against_market": true,
+    "league": "ncaaf",
+    "pick": "Old Dominion Monarchs",
+    "price": "+130",
+    "said": 59.4,
+    "why": "margin 8 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 59%"
    },
    {
     "against_market": true,
@@ -344,32 +352,34 @@
   "lottery": [
    {
     "killed_by": [
+     "Old Dominion Monarchs -7.5",
      "Tampa Bay Lightning under 3.5 goals",
      "New Jersey Devils under 3.5 goals",
      "Over 7.5 goals"
     ],
     "legs": 11,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 3
    },
    {
     "killed_by": [
+     "Georgia Southern Eagles -8.5",
      "New York Rangers +1.5"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "100",
     "won": 5
    }
   ],
   "picks": {
-   "hit": 61.1,
-   "lost": 14,
-   "n": 36,
-   "roi": -30.4,
+   "hit": 59.5,
+   "lost": 15,
+   "n": 37,
+   "roi": -37.4,
    "said": 62.3,
    "won": 22
   },
@@ -414,6 +424,14 @@
     "said": 59.8,
     "won": 1
    },
+   "ncaaf": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 59.4,
+    "won": 0
+   },
    "nhl": {
     "hit": 44.4,
     "lost": 5,
@@ -444,11 +462,11 @@
   },
   "vs_market_14d": {
    "against": {
-    "hit": 38.5,
-    "lost": 40,
-    "n": 65,
-    "roi": -2.2,
-    "said": 54.7,
+    "hit": 37.9,
+    "lost": 41,
+    "n": 66,
+    "roi": -3.6,
+    "said": 54.8,
     "won": 25
    },
    "agree": {
@@ -476,10 +494,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4256,
-    "market_only": 0.4256,
-    "model_only": 0.4598,
-    "n": 367,
+    "logloss": 0.426,
+    "market_only": 0.426,
+    "model_only": 0.4604,
+    "n": 368,
     "weight": 0.05
    },
    "nfl": {
