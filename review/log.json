@@ -540,6 +540,14 @@
    },
    {
     "against_market": false,
+    "league": "fra",
+    "pick": "Le Mans",
+    "price": null,
+    "said": 53.3,
+    "why": "margin 3 \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
     "league": "swe",
     "pick": "IF Brommapojkarna",
     "price": null,
@@ -614,12 +622,12 @@
    }
   ],
   "picks": {
-   "hit": 58.3,
-   "lost": 10,
-   "n": 24,
+   "hit": 57.7,
+   "lost": 11,
+   "n": 26,
    "roi": null,
-   "said": 60.5,
-   "won": 14
+   "said": 59.9,
+   "won": 15
   },
   "picks_by_league": {
    "atp": {
@@ -637,6 +645,22 @@
     "roi": null,
     "said": 51.2,
     "won": 0
+   },
+   "fra": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 53.3,
+    "won": 0
+   },
+   "ita": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 52.9,
+    "won": 1
    },
    "ksa": {
     "hit": 100.0,
@@ -694,9 +718,9 @@
     "said_price": null,
     "won": 0
    },
-   "n": 1,
-   "said": 86.3,
-   "won": 1
+   "n": 7,
+   "said": 84.9,
+   "won": 6
   },
   "vs_market_14d": {
    "against": {
