@@ -147,6 +147,16 @@ def main():
         rate = lambda rs: round(100 * sum(r["under"] for r in rs) / len(rs), 1)
         price = lambda rs: round(100 * sum(r["p_under"] for r in rs) / len(rs), 1)
         gained = round((h - base[0]) * len(test) / 100)
+        # the simple rule, both halves: wind cut-offs from the FIT half's
+        # quartiles; under when windy, over when calm
+        ws = sorted(r["wind"] or 0 for r in fit)
+        hi_w, lo_w = ws[3 * len(ws) // 4], ws[len(ws) // 4]
+        def rule(rs):
+            pk = [(r, r["under"]) for r in rs if (r["wind"] or 0) >= hi_w] + \
+                 [(r, 1 - r["under"]) for r in rs if (r["wind"] or 0) <= lo_w]
+            n = len(pk)
+            return dict(n=n, hit=round(100 * sum(w for _, w in pk) / n, 1) if n else None)
+        simple = dict(windy_at=hi_w, calm_at=lo_w, fit=rule(fit), test=rule(test))
         report[key] = dict(games=len(rows), test_games=len(test),
                            close=dict(hit=base[0], logloss=base[1]),
                            weather=dict(hit=h, logloss=l, weights=[round(x, 3) for x in w],
@@ -155,7 +165,8 @@ def main():
                                                          and l < base[1])),
                            windiest_quarter=dict(under_hit=rate(windy), under_price=price(windy),
                                                  min_wind=windy[-1]["wind"]),
-                           calmest_quarter=dict(under_hit=rate(calm), under_price=price(calm)))
+                           calmest_quarter=dict(under_hit=rate(calm), under_price=price(calm)),
+                           wind_rule=simple)
         print(key, json.dumps(report[key]), flush=True)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w") as fh:
