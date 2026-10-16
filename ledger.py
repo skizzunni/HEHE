@@ -516,6 +516,7 @@ def board_payload(limit=40):
                         or (e.get("logged") or "")[:10])
     todays = [e for e in done if day_of(e) == today]
     feed_today = [dict(league=e["league"], pick=e["pick"] + (" or draw" if e.get("dc") else ""), status=e["status"],
+                       strong=_strong(e),
                        conf=e.get("conf"), price=e.get("price"), dog=e.get("dog"),
                        score=e.get("scores") or {},
                        why=(e.get("diagnosis") if e["status"] == "lost" else e.get("why") or ""),
@@ -544,7 +545,15 @@ def board_payload(limit=40):
                 live=live, feed=feed, gate=gate,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today)
+                today_open=open_today, feed_today=feed_today,
+                # the same split the pick tabs use: strong calls vs close games
+                today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
+                today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))
+
+
+def _strong(e):
+    import calls
+    return calls.is_call(e.get("league"), e.get("conf"))
 
 
 def main():

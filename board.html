@@ -1543,6 +1543,10 @@ function scoreboardHTML(){
           + (100 * w / (w + l)).toFixed(0) + '% of ' + (w + l) + ' finished</div>'
         : '<div class="rbig">&mdash;</div>'
           + '<div class="rsub">no call has finished yet today</div>')
+    + (R.today_strong_won + R.today_strong_lost
+        ? '<div class="rsub"><b>Strong calls ' + R.today_strong_won + '&ndash;' + R.today_strong_lost
+          + '</b> &middot; close games ' + (w - R.today_strong_won) + '&ndash;' + (l - R.today_strong_lost) + '</div>'
+        : '')
     + '<div class="rsub">' + live.length + ' in play &middot; ' + (R.today_open || 0)
     + ' still to finish</div></div>';
 
@@ -1578,7 +1582,9 @@ function scoreboardHTML(){
           + '<td class="mine"><span class="lgpill">' + esc(f.league) + '</span>'
           + esc(f.pick) + (f.dog ? '<span class="dogtag">DOG</span>' : '') + '</td>'
           + '<td class="mkt">' + (scoreLine(f.score) || '&mdash;') + '</td>'
-          + '<td class="num">' + (f.conf ? f.conf.toFixed(0) + '%' : '&mdash;') + '</td>'
+          + '<td class="num">' + (f.conf ? f.conf.toFixed(0) + '%' : '&mdash;')
+          + (f.strong === undefined ? '' : f.strong ? '<span class="tier call">strong</span>'
+             : '<span class="tier lean">close</span>') + '</td>'
           + '<td class="diag">' + esc(f.why || '') + '</td>'
           + '</tr>').join("")
       + '</tbody></table></div>';

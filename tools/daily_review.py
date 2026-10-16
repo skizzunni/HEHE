@@ -119,6 +119,9 @@ TWO_WAY = {"mlb", "nba", "nfl", "ncaaf", "nhl", "wnba", "ncaab"}
 CUTS = [0.55 + 0.025 * i for i in range(11)]          # 0.55 .. 0.80
 CALL_TARGET = 0.75
 CALL_MIN_N = 25
+# Tennis strong calls start at 65%: on 1,386 Sept-Oct matches the model never
+# saw, its 60-70% band won 66.7%; ledger tennis picks at 65%+ won 81.8% (143).
+CALL_FLOOR = {"atp": 0.65, "wta": 0.65}
 
 
 def chance_and_result(e):
@@ -147,7 +150,7 @@ def fit_calls(graded):
     """Per league, the lowest cutoff whose own record reaches CALL_TARGET on
     CALL_MIN_N+ games; if none does, the cutoff with the best record on 15+."""
     by = defaultdict(list)
-    for e in graded:
+    for e in sorted(graded, key=lambda e: day_of(e) or ""):     # halves by date
         x = chance_and_result(e)
         if x:
             by[e["league"]].append(x)
@@ -158,11 +161,22 @@ def fit_calls(graded):
             sel = [w for q, w in rs if q >= c]
             if sel:
                 table.append((c, len(sel), sum(sel) / len(sel)))
-        ok = [t for t in table if t[1] >= CALL_MIN_N and t[2] >= CALL_TARGET]
+        # a cut-off counts only if it held in BOTH the older and the newer
+        # half of the league's picks -- the lowest one that reached the target
+        # once was often a lucky streak (WTA's 55% scored 60.7% on picks it
+        # never saw; this rule took the strong calls from 78.4% to 79.9%)
+        m = len(rs) // 2
+        def holds(c):
+            a = [w for q, w in rs[:m] if q >= c]
+            b = [w for q, w in rs[m:] if q >= c]
+            return (len(a) >= CALL_MIN_N // 2 and len(b) >= CALL_MIN_N // 2
+                    and sum(a) / len(a) >= CALL_TARGET and sum(b) / len(b) >= CALL_TARGET)
+        ok = [t for t in table if t[1] >= CALL_MIN_N and t[2] >= CALL_TARGET and holds(t[0])
+              and t[0] >= CALL_FLOOR.get(lg, 0)]
         if ok:
             pick = ok[0]
         else:
-            fall = [t for t in table if t[1] >= 15]
+            fall = [t for t in table if t[1] >= 15 and t[0] >= CALL_FLOOR.get(lg, 0)]
             if not fall:
                 continue
             pick = max(fall, key=lambda t: t[2])
