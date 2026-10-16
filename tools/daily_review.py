@@ -41,6 +41,18 @@ def load(name, default):
         return default
 
 
+# First regular-season day per league; graded picks before it were
+# exhibitions (picked before dashboard skipped ESPN's preseason flag).
+REGULAR_START = {"nba": "2026-10-16", "nhl": "2026-10-06", "nfl": "2026-09-09",
+                 "ncaab": "2026-11-02"}
+
+
+def exhibition(e):
+    start = REGULAR_START.get(e.get("league"))
+    played = e.get("played") or e.get("date") or ""
+    return bool(start and played and played < start)
+
+
 def implied(price):
     try:
         v = float(str(price).replace("+", ""))
@@ -196,7 +208,7 @@ def review_day(day, ledger, locks, lottery, props):
               for e in todays if e["status"] == "lost"]
     # the last 14 days, to tell a bad night from a leak
     since = (dt.date.fromisoformat(day) - dt.timedelta(days=14)).isoformat()
-    recent = [e for e in graded if since <= day_of(e) <= day]
+    recent = [e for e in graded if since <= day_of(e) <= day and not exhibition(e)]
     by_lg = defaultdict(list)
     for e in recent:
         by_lg[e["league"]].append(e)
@@ -294,7 +306,12 @@ def main():
     # today (games still finishing) and yesterday (late games settle overnight)
     for d in (today - dt.timedelta(days=1), today):
         log[d.isoformat()] = review_day(d.isoformat(), ledger, locks, lottery, props)
-    graded = [e for e in ledger.values() if e.get("status") in ("won", "lost")]
+    # Fits learn from real games only. Exhibition games were picked until
+    # 2026-10-15 (all 55 graded NBA picks were preseason: 47.3% vs 68.5%
+    # claimed), and letting them set the NBA weight and cut-off would carry
+    # starters-resting noise into the regular season.
+    graded = [e for e in ledger.values() if e.get("status") in ("won", "lost")
+              and not exhibition(e)]
     weights, detail = refit(graded)
     with open(os.path.join(OUT, "anchor_weights.json"), "w") as fh:
         json.dump(dict(updated=dt.datetime.now(ET).isoformat(timespec="minutes"),
