@@ -26,6 +26,7 @@ import datetime as dt
 import html
 import hashlib
 import json
+import math
 import os
 import sys
 import re
@@ -122,6 +123,21 @@ PRESEASON_LEAGUES = {"mlb", "wnba", "nfl", "ncaaf", "nba", "nhl", "ncaab"}
 # odds blend). Fitted on the graded ledger 2026-10-16: the best weight was
 # 0.0 everywhere except NFL (0.4) and WNBA (0.3); a fifth is kept as a
 # tie-breaker, as MLB's own backtest chose.
+# Home-side adjustments (log-odds) that beat the closing favourite on the
+# unseen half of past seasons in tools/edge_lab.py, and only those flagged
+# significant. College football, 2026-10-16: +6 wins on 592 unseen games
+# (78.2% -> 79.2%), weight 0.115. Re-read every rebuild from data/edge_lab.json,
+# so a league gains or loses it as the weekly lab re-runs.
+HOME_EDGE = {}
+try:
+    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data",
+                           "edge_lab.json")) as _fh:
+        for _k, _v in (json.load(_fh).get("leagues") or {}).items():
+            _h = _v.get("home") or {}
+            if _h.get("significant") and _h.get("weights"):
+                HOME_EDGE[_k] = float(_h["weights"][0])
+except (OSError, ValueError, TypeError):
+    pass
 ANCHOR_W_DEFAULT = 0.20
 ANCHOR_W = {"nfl": 0.30, "wnba": 0.30}
 # tools/daily_review.py refits these every day from the graded picks and
@@ -613,6 +629,12 @@ def collect(key, path, day, mlbctx, mybook=None):
                     if mq is not None and 0.0 < mq < 1.0:
                         pa = P.anchor(p_away, mq, ANCHOR_W.get(
                             key, P.MLB_MKT_W if key == "mlb" else ANCHOR_W_DEFAULT))
+                        # the one edge the edge lab confirmed on unseen games:
+                        # the close underrates home sides in some leagues
+                        h = HOME_EDGE.get(key)
+                        if h:
+                            z = math.log(pa / (1 - pa)) - h      # pa is the AWAY chance
+                            pa = 1 / (1 + math.exp(-z))
                         away = pa > 0.5
                         side_ = "away" if away else "home"
                         who = names.get(side_)
