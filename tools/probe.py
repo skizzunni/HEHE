@@ -1,32 +1,37 @@
-"""Feed probe, run on GitHub's runners. Round 17: what does ESPN's per-game
-odds feed carry for finished games -- opening lines? several books? Needed
-for the edge lab (contradictions between markets, and price drift)."""
-import json
+"""Feed probe, run on GitHub's runners. Round 18: FanDuel UFC -- which page id
+lists the fights, and which markets each fight's own page carries (method of
+victory, goes the distance, round betting, total rounds), with runner names
+and prices, so the parser can be written against the real shapes."""
 import sys
-import urllib.request
+from collections import Counter
 
-sys.path.insert(0, "tools")
-import backtest as B  # noqa: E402
+sys.path.insert(0, ".")
+import fanduel as F  # noqa: E402
 
-CORE = "https://sports.core.api.espn.com/v2/sports"
-for key, sport, league in (("nfl", "football", "nfl"), ("mlb", "baseball", "mlb"),
-                           ("ncaaf", "football", "college-football")):
-    import datetime as dt
-    ds = [dt.date(2026, 10, 12) - dt.timedelta(days=i) for i in range(4)]
-    games = B.finished_games(key, sport, league, ds)
-    print(key, "finished games:", len(games))
-    if not games:
+for page in ("ufc", "mma", "ufc-mma"):
+    d = F._get(f"{F.BASE}/content-managed-page?page=CUSTOM&customPageId={page}"
+               f"&_ak={F.AK}&timezone=America%2FNew_York")
+    att = (d or {}).get("attachments") or {}
+    ev = att.get("events") or {}
+    mk = att.get("markets") or {}
+    print(f"page {page}: events {len(ev)} markets {len(mk)}")
+    if not ev:
         continue
-    eid = games[0][1]
-    d = json.load(urllib.request.urlopen(urllib.request.Request(
-        f"{CORE}/{sport}/leagues/{league}/events/{eid}/competitions/{eid}/odds",
-        headers={"User-Agent": "Mozilla/5.0"}), timeout=25))
-    items = d.get("items") or []
-    print("  providers:", [(it.get("provider") or {}).get("name") for it in items])
-    if items:
-        it = items[0]
-        print("  top-level keys:", sorted(it.keys()))
-        print("  awayTeamOdds:", json.dumps(it.get("awayTeamOdds"))[:1500])
-        for k in ("open", "close", "current"):
-            if k in it:
-                print(f"  {k}:", json.dumps(it[k])[:800])
+    print("  market types:", Counter(m.get("marketType") for m in mk.values()).most_common(12))
+    fights = list(ev.values())
+    for e in fights[:2]:
+        print("  event:", e.get("eventId"), e.get("name"), e.get("openDate"))
+        for tab in ("popular", "method-of-victory", "rounds", "fight-props", None):
+            q = f"&tab={tab}" if tab else ""
+            p = F._get(f"{F.BASE}/event-page?_ak={F.AK}&eventId={e.get('eventId')}{q}"
+                       "&useCombinedTouchdownsVirtualMarket=true&usePulse=true&useQuickBets=true")
+            ms = ((p or {}).get("attachments") or {}).get("markets") or {}
+            print(f"    tab={tab}: {len(ms)} markets")
+            for m in list(ms.values())[:30]:
+                rs = [(r.get("runnerName"), r.get("handicap"),
+                       ((r.get("winRunnerOdds") or {}).get("americanDisplayOdds") or {}).get("americanOdds"))
+                      for r in (m.get("runners") or [])[:6]]
+                print(f"      {m.get('marketType')} | {m.get('marketName')} | {rs}")
+            if ms:
+                break
+    break
