@@ -176,10 +176,10 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 58.4,
+    "all_hit": 58.1,
     "calls": 22,
     "cutoff": 0.675,
-    "games": 178,
+    "games": 179,
     "hit": 81.8
    },
    "ufc": {
@@ -224,8 +224,8 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 8,
-   "won": 3
+   "open": 7,
+   "won": 4
   },
   "losses": [
    {
@@ -275,6 +275,14 @@
     "price": "+110",
     "said": 59.6,
     "why": "margin 6 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 60%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Winnipeg Jets",
+    "price": "-125",
+    "said": 55.3,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 55%"
    },
    {
     "against_market": false,
@@ -338,15 +346,15 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 3
+    "won": 4
    }
   ],
   "picks": {
-   "hit": 66.7,
-   "lost": 11,
-   "n": 33,
-   "roi": 4.4,
-   "said": 63.0,
+   "hit": 64.7,
+   "lost": 12,
+   "n": 34,
+   "roi": -10.5,
+   "said": 62.8,
    "won": 22
   },
   "picks_by_league": {
@@ -391,11 +399,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 66.7,
-    "lost": 2,
-    "n": 6,
-    "roi": 4.4,
-    "said": 57.4,
+    "hit": 57.1,
+    "lost": 3,
+    "n": 7,
+    "roi": -10.5,
+    "said": 57.1,
     "won": 4
    },
    "wta": {
@@ -428,11 +436,11 @@
     "won": 25
    },
    "agree": {
-    "hit": 65.6,
-    "lost": 84,
-    "n": 244,
-    "roi": -3.5,
-    "said": 60.4,
+    "hit": 65.3,
+    "lost": 85,
+    "n": 245,
+    "roi": -3.9,
+    "said": 60.3,
     "won": 160
    }
   },
@@ -466,10 +474,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6467,
-    "market_only": 0.6467,
-    "model_only": 0.6529,
-    "n": 113,
+    "logloss": 0.6479,
+    "market_only": 0.6479,
+    "model_only": 0.6541,
+    "n": 114,
     "weight": 0.05
    },
    "wnba": {
