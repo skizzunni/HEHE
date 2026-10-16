@@ -38,14 +38,17 @@
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);
   font-size:15px;line-height:1.55;-webkit-font-smoothing:antialiased}
 .wrap{max-width:940px;margin:0 auto;padding:0 20px 72px}
-header{padding:34px 0 18px;border-bottom:2px solid var(--ink)}
+header{padding:22px 0 12px}
 .eyebrow{font-family:var(--mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
   color:var(--accent);margin-bottom:10px}
-h1{font-family:var(--display);font-weight:800;font-size:clamp(30px,5.6vw,44px);
+h1{font-family:var(--display);font-weight:800;font-size:clamp(26px,5vw,40px);
   line-height:1.02;margin:0;letter-spacing:-.02em;text-wrap:balance}
 .stamp{font-family:var(--mono);font-size:12px;color:var(--ink-dim);margin-top:12px}
-nav{display:flex;gap:0;flex-wrap:wrap;margin:0;padding:14px 0 0;
-  border-bottom:1px solid var(--rule);position:sticky;top:0;background:var(--ground);z-index:9}
+nav{display:flex;gap:0;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;margin:0;
+  padding:6px 0 0;border-bottom:1px solid var(--rule);position:sticky;top:53px;
+  background:var(--ground);z-index:9}
+nav::-webkit-scrollbar{display:none}
+nav button{flex:0 0 auto;white-space:nowrap}
 nav button{font-family:var(--display);font-weight:600;font-size:13px;letter-spacing:.01em;
   background:none;border:0;border-bottom:2px solid transparent;color:var(--ink-dim);
   padding:9px 13px;cursor:pointer;margin-bottom:-1px}
@@ -186,13 +189,25 @@ aside .fig{font-family:var(--mono);color:var(--accent);font-weight:600}
 /* Four slot buttons need 466px and a phone gives 390, so without wrapping the
    whole page scrolls sideways by exactly the difference. The tables were never
    the problem -- they already scroll inside .scroll. */
-.days{display:flex;gap:8px;margin-top:15px;flex-wrap:wrap}
-.days button{display:flex;align-items:baseline;gap:8px;font-family:var(--display);
-  font-weight:600;font-size:13px;background:none;color:var(--ink-dim);
-  border:1px solid var(--rule);border-radius:2px;padding:7px 15px;cursor:pointer}
+.days{display:flex;gap:6px;flex-wrap:nowrap;overflow-x:auto;position:sticky;top:0;z-index:12;
+  background:var(--ground);margin:0;padding:10px 0;border-bottom:1px solid var(--rule);
+  scrollbar-width:none;-webkit-overflow-scrolling:touch;scroll-snap-type:x proximity}
+.days::-webkit-scrollbar{display:none}
+.days button{flex:0 0 auto;display:flex;align-items:baseline;gap:7px;font-family:var(--display);
+  font-weight:600;font-size:14px;background:none;color:var(--ink-dim);white-space:nowrap;
+  border:1px solid var(--rule);border-radius:999px;padding:7px 14px;cursor:pointer;
+  scroll-snap-align:start}
 .days button:hover{color:var(--ink)}
 .days button[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
 .days button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.days .sep{flex:0 0 1px;background:var(--rule);margin:4px 2px}
+details.explain{margin:4px 0 12px;border:1px solid var(--rule);border-radius:4px;
+  background:var(--panel);padding:0 12px}
+details.explain summary{cursor:pointer;padding:9px 0;font-family:var(--mono);font-size:12px;
+  color:var(--ink-dim);list-style:none}
+details.explain summary::before{content:"\25B8  "}
+details.explain[open] summary::before{content:"\25BE  "}
+details.explain summary::-webkit-details-marker{display:none}
 .dnum{font-family:var(--mono);font-size:11px;font-weight:400;opacity:.7;
   font-variant-numeric:tabular-nums}
 tbody tr[data-pick]{cursor:pointer}
@@ -257,7 +272,8 @@ tbody tr.on td.mine::after{content:"\2713";color:var(--accent);font-weight:800;m
   .sweeptab td{flex:1 0 25%;border-bottom:1px solid var(--rule)}
   .sweeptab span{font-size:14px}
   #panel table.mk td,#panel table.mk th{padding:5px 6px}
-  #days button{min-height:44px;display:inline-flex;align-items:center;gap:6px}
+  #days button{min-height:40px;display:inline-flex;align-items:center;gap:6px}
+  #days .dnum{display:none}
   #panel tr[data-pick]{cursor:pointer}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
@@ -309,8 +325,8 @@ td.num.ok{color:var(--dog)}
   <div class="eyebrow">Winners only &middot; one line per game</div>
   <h1>My Card</h1>
   <div class="stamp" id="stamp"></div>
-  <div class="days" id="days"></div>
 </header>
+<div class="days" id="days" role="tablist" aria-label="Sections"></div>
 <nav id="tabs" role="tablist"></nav>
 <div class="scroll"><div id="panel" role="tabpanel"></div></div>
 <button id="fab" hidden></button>
@@ -718,9 +734,10 @@ function drawLocks(){
   let h = '<div class="parlays"><h3>Locks &mdash; ' + day + '</h3>'
     + '<p><button type="button" data-lkday="today">Today</button> '
     + '<button type="button" data-lkday="tomorrow">Tomorrow</button></p>'
+    + '<details class="explain"><summary>What the locks are</summary>'
     + '<p>The ' + (L.length || 11) + ' likeliest bets on the board that FanDuel (New York) lists right '
     + 'now &mdash; moneylines, posted spreads and totals &mdash; one per game, from games that '
-    + 'have not started. Each chance is the same backtested, self-tuning model as the stacks.</p>';
+    + 'have not started. Each chance is the same backtested, self-tuning model as the stacks.</p></details>';
   if(!L.length){
     panel.innerHTML = h + '<p class="empty">No FanDuel games left ' + day + '.</p></div>';
     return;
@@ -783,13 +800,15 @@ function drawLottery(){
   let h = '<div class="parlays"><h3>Lottery &mdash; ' + day + '</h3>'
     + '<p><button type="button" data-ltday="today">Today</button> '
     + '<button type="button" data-ltday="tomorrow">Tomorrow</button></p>'
+    + '<details class="explain"><summary>How the lottery works</summary>'
     + '<p>Two kinds of $1 ticket. <b>1 in 100</b>: the biggest payout we can find at a 1% '
     + 'chance. <b>$10,000</b>: the best chance we can find at a 10,000x payout. You cannot '
     + 'have both &mdash; a ticket that hits 1 time in 100 is worth at most about $100 before the '
     + 'book takes its cut, so a $10,000 payout is always around a 1-in-20,000 shot.</p>'
     + '<p>Every game line FanDuel posts (alternates included) and every priced player prop is '
     + 'scanned; one leg per game, from games that have not started. Game legs are FanDuel '
-    + 'prices; prop tickets are DraftKings prices. The 1-in-N is the honest chance from the market&rsquo;s prices, corrected by what past prices really returned.</p>';
+    + 'prices; prop tickets are DraftKings prices. The 1-in-N is the honest chance from the market&rsquo;s prices, corrected by what past prices really returned.</p>'
+    + '</details>';
   if(X.preview) h += '<p class="note"><b>Preview.</b> Today&rsquo;s tickets are set at 8:00 AM '
     + 'Eastern and then stay the same all day.</p>';
   if(X.set) h += '<p class="note">Tickets set at 8:00 AM Eastern for ' + esc(X.day)
@@ -854,6 +873,7 @@ function drawLottery(){
   const E = X.edges || [];
   const P = X.pool || {};
   h += '<h3>Where FanDuel pays more than the chance says</h3>'
+    + '<details class="explain"><summary>Why these and not the model&rsquo;s picks</summary>'
     + '<p>A backtest on 16,000 past Kalshi legs (every NFL, college football, NHL, NBA and EPL '
     + 'game Kalshi listed, priced an hour before kickoff) settled what works: where the model '
     + 'disagreed with the market, the <b>market was right</b> &mdash; the model&rsquo;s &ldquo;value&rdquo; '
@@ -862,7 +882,7 @@ function drawLottery(){
     + 'favourites a little less. A real edge is only where Kalshi&rsquo;s traders price a line '
     + 'shorter than FanDuel pays for it. '
     + (P.checked != null ? P.checked + ' FanDuel lines had a Kalshi price; ' + (P.edges || 0)
-       + ' are priced longer on FanDuel than on Kalshi.' : '') + '</p>';
+       + ' are priced longer on FanDuel than on Kalshi.' : '') + '</p></details>';
   if(E.length){
     h += '<table class="mk"><thead><tr><th>Leg</th><th class="num">FanDuel</th>'
       + '<th class="num">Kalshi</th><th class="num">Chance</th><th class="num">Edge</th></tr></thead><tbody>'
@@ -1259,7 +1279,8 @@ function drawCard(slot){
     + '</tbody></table>';
 }
 
-["today","tomorrow","locks","lottery","card","stacks","markets","props","results","bot"].forEach(s => {
+["today","tomorrow","locks","lottery","props","results","|","card","stacks","markets","bot"].forEach(s => {
+  if(s === "|"){ const d = document.createElement("span"); d.className = "sep"; days.appendChild(d); return; }
   const b = document.createElement("button");
   b.setAttribute("aria-pressed", String(s === slot));
   const R = D.results || {};
@@ -1297,10 +1318,15 @@ function drawCard(slot){
     b.innerHTML = (s === "today" ? "Today" : "Tomorrow")
       + '<span class="dnum">' + pretty(D.dates[s]) + '</span>';
   }
+  b.dataset.slot = s;
   b.onclick = () => {
     slot = s;
-    [...days.children].forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    [...days.children].forEach(x => x.setAttribute && x.setAttribute("aria-pressed", String(x === b)));
     buildTabs(); render();
+    // keep the chosen tab in view and start the section at its top
+    b.scrollIntoView({inline: "center", block: "nearest", behavior: "smooth"});
+    const top = days.getBoundingClientRect().top + window.scrollY;
+    if(window.scrollY > top) window.scrollTo({top, behavior: "smooth"});
   };
   days.appendChild(b);
 });
