@@ -202,7 +202,8 @@ def for_slot(board_slot, labels=None, max_games=40):
     for (league, eid, row), items in zip(jobs, raws):
         # keep the page small: the 60 likeliest props worth stacking per game
         props = [dict(p, gid=row["id"])
-                 for p in parse(items, who, props_ledger.hold(league)) if 0.30 <= p["p"] <= 0.97][:60]
+                 for p in parse(items, who, props_ledger.hold(league))
+                 if 0.30 <= p["p"] <= 0.97 and props_ledger.offered(league, p["market"])][:60]
         if props:
             out.append(dict(id=row["id"], lg=(labels or {}).get(league, league),
                             match=row.get("label", ""), tip=row.get("tip"),
