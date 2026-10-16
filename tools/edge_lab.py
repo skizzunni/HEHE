@@ -231,7 +231,8 @@ def main():
                    close_favourite=dict(hit=base[0], logloss=base[1]),
                    open_favourite=dict(zip(("hit", "logloss"), score(test, [r["po"] for r in test]))),
                    spread_favourite=dict(zip(("hit", "logloss"), score(test, [r["ps"] for r in test]))))
-        for name, use in (("drift", {"drift"}), ("spread", {"spread"}), ("total", {"total"}),
+        # "home": only a home-side adjustment on top of the close (intercept)
+        for name, use in (("home", set()), ("drift", {"drift"}), ("spread", {"spread"}), ("total", {"total"}),
                           ("rest", {"rest"}), ("form", {"form"}),
                           ("all", {"drift", "spread", "total", "rest", "form"})):
             w = fit_logit([feats(r, mt, use) for r in fit], [r["home_won"] for r in fit])
