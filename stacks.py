@@ -66,11 +66,13 @@ MISS_INFLATE = 1.30          # see "why the probabilities are haircut"
 LEG_MIN, LEG_MAX = 0.82, 0.94
 TARGET = 0.90
 TIERS = (2, 3, 4, 6, 8, 10, 15, 20)
-# Per-size leg aim, where a backtest says another one wins more often. The
-# 10-leg ticket built from legs aimed at 94% (band up to 97.5%) won 48.3% of
-# 325 tickets on unseen days, against 42.0% of 314 aimed at 90% -- for a
-# smaller payout (~2.4x fair vs ~3.1x). tools/backtest.py, ten_leg_trials.
-TIER_AIM = {10: (0.94, 0.975)}
+# Per-size leg aim, from tools/backtest.py's aim_trials: every ticket size
+# built three ways on unseen days (legs aimed at 90 / 94 / 96%). Stronger legs
+# won more at every size -- 6 legs 56% -> 71%, 10 legs 42% -> 51%, 15 legs
+# 23% -> 42%, 20 legs 21% -> 36% -- for a smaller payout. The 4-leg ticket
+# takes 94% (77%, ~1.35x) so it still pays something; 2 and 3 legs untested.
+TIER_AIM = {4: (0.94, 0.975), 6: (0.96, 0.985), 8: (0.96, 0.985),
+            10: (0.96, 0.985), 15: (0.96, 0.985), 20: (0.96, 0.985)}
 VARIANTS = 3                 # different tickets per size
 
 # Standard deviation of (final margin - spread) and (final total - posted
@@ -794,11 +796,12 @@ def build(slots, soccer_keys, labels=None, extra=None, keep=None):
         games = candidates(slots.get(slot), soccer_keys, labels, extra, keep)
         tickets = build_tickets(games, tiers=tuple(n for n in TIERS if n not in TIER_AIM))
         base = (TARGET, LEG_MAX)
-        for n, (aim, top) in TIER_AIM.items():
+        for (aim, top) in sorted(set(TIER_AIM.values())):
+            sizes = tuple(n for n, a in TIER_AIM.items() if a == (aim, top))
             TARGET, LEG_MAX = aim, top
             try:
                 g2 = candidates(slots.get(slot), soccer_keys, labels, extra, keep)
-                tickets.update(build_tickets(g2, tiers=(n,)))
+                tickets.update(build_tickets(g2, tiers=sizes))
             finally:
                 TARGET, LEG_MAX = base
         tickets = {n: tickets.get(n, []) for n in TIERS}
