@@ -176,10 +176,10 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 58.1,
+    "all_hit": 58.0,
     "calls": 22,
     "cutoff": 0.675,
-    "games": 179,
+    "games": 181,
     "hit": 81.8
    },
    "ufc": {
@@ -224,8 +224,8 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 7,
-   "won": 4
+   "open": 6,
+   "won": 5
   },
   "losses": [
    {
@@ -283,6 +283,22 @@
     "price": "-125",
     "said": 55.3,
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 55%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Nashville Predators",
+    "price": "-130",
+    "said": 56.4,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 56%"
+   },
+   {
+    "against_market": true,
+    "league": "nhl",
+    "pick": "St. Louis Blues",
+    "price": "+120",
+    "said": 52.4,
+    "why": "margin 1 \u00b7 I took the side the book had as less likely \u00b7 I took the underdog \u00b7 called at 52%"
    },
    {
     "against_market": false,
@@ -346,15 +362,15 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 4
+    "won": 5
    }
   ],
   "picks": {
-   "hit": 64.7,
-   "lost": 12,
-   "n": 34,
-   "roi": -10.5,
-   "said": 62.8,
+   "hit": 61.1,
+   "lost": 14,
+   "n": 36,
+   "roi": -30.4,
+   "said": 62.3,
    "won": 22
   },
   "picks_by_league": {
@@ -399,11 +415,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 57.1,
-    "lost": 3,
-    "n": 7,
-    "roi": -10.5,
-    "said": 57.1,
+    "hit": 44.4,
+    "lost": 5,
+    "n": 9,
+    "roi": -30.4,
+    "said": 56.5,
     "won": 4
    },
    "wta": {
@@ -428,18 +444,18 @@
   },
   "vs_market_14d": {
    "against": {
-    "hit": 39.1,
-    "lost": 39,
-    "n": 64,
-    "roi": -0.6,
+    "hit": 38.5,
+    "lost": 40,
+    "n": 65,
+    "roi": -2.2,
     "said": 54.7,
     "won": 25
    },
    "agree": {
-    "hit": 65.3,
-    "lost": 85,
-    "n": 245,
-    "roi": -3.9,
+    "hit": 65.0,
+    "lost": 86,
+    "n": 246,
+    "roi": -4.3,
     "said": 60.3,
     "won": 160
    }
@@ -474,10 +490,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6479,
-    "market_only": 0.6479,
-    "model_only": 0.6541,
-    "n": 114,
+    "logloss": 0.6486,
+    "market_only": 0.6486,
+    "model_only": 0.6553,
+    "n": 116,
     "weight": 0.05
    },
    "wnba": {
