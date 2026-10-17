@@ -1,6 +1,6 @@
 # Review 2026-10-17
 
-Picks 155-59 (72.4% vs 71.2% claimed, ROI +6.0%).
+Picks 155-60 (72.1% vs 71.2% claimed, ROI +6.0%).
 TRAILING props uel Shots: 40.0% hit vs 84.3% stated on 20
 Strong calls 90-24 (78.9% vs 76.8% claimed).
 Closing line value: -0.38 points on 55 picks; beat the close on 40.0%.
@@ -11,6 +11,7 @@ Closing line value: -0.38 points on 55 picks; beat the close on 40.0%.
 - LOST atp Harry Wendelken at 52.1%: lost 1-2 in sets · took it the distance · called at 52%
 - LOST atp Giovanni Mpetshi Perricard at 62.0%: lost 1-2 in sets · took it the distance · called at 62%
 - LOST atp Kimmer Coppejans at 52.3%: lost 0-2 in sets · never won a set · called at 52%
+- LOST bra2 Operário PR at 65.6%: margin 1 · called at 66%
 - LOST ecu Independiente del Valle at 79.9%: margin 1 · called at 80%
 - LOST efl1 Southampton at 66.3%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST efl1 Norwich City at 78.4%: margin 1 · called at 78%
