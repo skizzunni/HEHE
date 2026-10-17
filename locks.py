@@ -280,13 +280,33 @@ def _best_per_game(pool):
     return sorted(best.values(), key=lambda x: -x["p"])
 
 
+MAX_SAME = 4      # legs of one kind (league + over/under/side/prop) on a card
+
+
+def _kind(L):
+    t = (L.get("spec") or {}).get("t") or ""
+    k = ("prop" if L.get("kind") == "prop" else "under" if "under" in t
+         else "over" if "over" in t else "side")
+    return (L.get("league"), k)
+
+
 def choose(pool, n):
-    """The likeliest leg from each game first -- the card is spread across as
-    many games as there are. Only when that leaves it short of n (a light
-    Friday: five FanDuel games after 8 AM) does a game give a second or third
-    leg, the next likeliest on a different question (a player prop beside a
-    total), never a contradiction of a leg already taken."""
-    out = _best_per_game(pool)[:n]
+    """The likeliest leg from each game first, but no more than MAX_SAME legs
+    of one kind: same-day college unders missed together 2.6 times more than
+    independent legs would (16,000-leg backtest, a high-scoring day sinks them
+    all at once), so a card of nine of them is riskier than its legs say.
+    Only when the card is still short does a game give a second or third leg
+    (a light Friday), never a contradiction of a leg already taken."""
+    out, used_g, kinds = [], set(), {}
+    for cap in (MAX_SAME, n):                  # diversified first, then fill
+        for L in sorted(pool, key=lambda x: -x["p"]):
+            if len(out) >= n:
+                break
+            if L["gid"] in used_g or kinds.get(_kind(L), 0) >= cap:
+                continue
+            out.append(L)
+            used_g.add(L["gid"])
+            kinds[_kind(L)] = kinds.get(_kind(L), 0) + 1
     if len(out) >= n:
         return out
     used = {(L["gid"], _slot(L)) for L in out}
