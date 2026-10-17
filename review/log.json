@@ -981,10 +981,10 @@
     "hit": 77.4
    },
    "wta": {
-    "all_hit": 72.3,
+    "all_hit": 71.9,
     "calls": 58,
     "cutoff": 0.725,
-    "games": 159,
+    "games": 160,
     "hit": 86.2
    }
   },
@@ -1001,12 +1001,35 @@
    "open": 0,
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "wta",
+    "pick": "Tyra Caterina Grant",
+    "price": null,
+    "said": 53.2,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 53%"
+   }
+  ],
   "lottery": [],
   "picks": {
-   "n": 0
+   "hit": 0.0,
+   "lost": 1,
+   "n": 1,
+   "roi": null,
+   "said": 53.2,
+   "won": 0
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "wta": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 53.2,
+    "won": 0
+   }
+  },
   "props": {
    "fair": {
     "n": 0,
