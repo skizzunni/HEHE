@@ -100,7 +100,7 @@ def row_for(key, sport, league, g):
         po = ho / (ho + ao) if None not in (ho, ao) else pc
         sp = pick(h, "close", "spread")                 # home's spread, e.g. -7.5
         tot = num(((it.get("close") or {}).get("total") or {}).get("american")) or num(it.get("overUnder"))
-        return dict(date=d.isoformat(), home=home, away=away, home_won=int(hs > as_), pc=pc, po=po,
+        return dict(date=d.isoformat(), eid=str(eid), home=home, away=away, home_won=int(hs > as_), pc=pc, po=po,
                     ps=ncdf(-sp / SIGMA[key]) if sp is not None else pc, total=tot or 0.0)
     return None
 
@@ -164,6 +164,46 @@ def add_rest(rows, all_games):
         r["rest_a"], r["road_a"] = rest(r["away"], day)
 
 
+def add_travel(rows, key, sport, league, wins):
+    """How far the road side came and across how many time zones, from each
+    team's usual home venue (its most frequent home city) to this venue, and
+    the kickoff hour on the road side's body clock. Venues and cities come
+    from the cached scoreboards and Open-Meteo's geocoder (weather_lab)."""
+    import weather_lab as W
+    ven = W.venues(key, sport, league, B.dates(wins))
+    homes = {}
+    for r in rows:
+        v = ven.get(r["eid"])
+        if v and v[0]:
+            homes.setdefault(r["home"], []).append((v[0], v[1]))
+    loc = {}
+    def where(city, state):
+        k = (city, state)
+        if k not in loc:
+            loc[k] = W.geo(city, state)
+        return loc[k]
+    base = {}
+    for team, cs in homes.items():
+        c = max(set(cs), key=cs.count)
+        base[team] = where(*c)
+    for r in rows:
+        v = ven.get(r["eid"])
+        here = where(v[0], v[1]) if v and v[0] else None
+        a = base.get(r["away"])
+        if not here or not a:
+            r["km"], r["tz_east"], r["body"] = 0.0, 0.0, 13.0
+            continue
+        la1, lo1, la2, lo2 = map(math.radians, (a[0], a[1], here[0], here[1]))
+        h = math.sin((la2 - la1) / 2) ** 2 + math.cos(la1) * math.cos(la2) * math.sin((lo2 - lo1) / 2) ** 2
+        r["km"] = 6371 * 2 * math.asin(math.sqrt(h))
+        r["tz_east"] = (here[1] - a[1]) / 15.0          # hours moved east
+        try:
+            t = dt.datetime.fromisoformat(v[3].replace("Z", "+00:00"))
+            r["body"] = (t.hour + t.minute / 60 + a[1] / 15.0) % 24   # road side's clock
+        except (TypeError, ValueError):
+            r["body"] = 13.0
+
+
 def add_form(rows, n=8):
     """Each side's average (result - market chance) over its previous n games:
     is a team beating its prices, and does the market catch up too slowly?"""
@@ -190,6 +230,11 @@ def feats(r, mean_total, use):
         x.append(zc - lg(r["po"]))
     if "spread" in use:
         x.append(lg(r["ps"]) - zc)
+    if "travel" in use:
+        km = r.get("km", 0.0) / 1000
+        x.append(km)
+        x.append(max(0.0, r.get("tz_east", 0.0)))           # flew east: body clock behind
+        x.append(max(0.0, 12.0 - r.get("body", 13.0)) / 3)  # kicked off before noon, body time
     if "total" in use:
         x.append(zc * ((r["total"] - mean_total) / (mean_total or 1)))
     return x
@@ -218,6 +263,10 @@ def main():
         rows.sort(key=lambda r: r["date"])
         add_rest(rows, all_games)
         add_form(rows)
+        try:
+            add_travel(rows, key, sport, league, wins)
+        except Exception as ex:                      # travel is optional
+            print(key, "travel failed:", ex, flush=True)
         if len(rows) < 150:
             report[key] = dict(games=len(rows), note="too few games")
             print(key, report[key], flush=True)
@@ -233,7 +282,7 @@ def main():
                    spread_favourite=dict(zip(("hit", "logloss"), score(test, [r["ps"] for r in test]))))
         # "home": only a home-side adjustment on top of the close (intercept)
         for name, use in (("home", set()), ("drift", {"drift"}), ("spread", {"spread"}), ("total", {"total"}),
-                          ("rest", {"rest"}), ("form", {"form"}),
+                          ("rest", {"rest"}), ("form", {"form"}), ("travel", {"travel"}),
                           ("all", {"drift", "spread", "total", "rest", "form"})):
             w = fit_logit([feats(r, mt, use) for r in fit], [r["home_won"] for r in fit])
             probs = [1 / (1 + math.exp(-sum(a * b for a, b in zip(w, feats(r, mt, use)))))
