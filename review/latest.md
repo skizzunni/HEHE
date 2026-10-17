@@ -1,8 +1,8 @@
 # Review 2026-10-16
 
-Picks 21-20 (51.2% vs 60.1% claimed, ROI -100.0%).
+Picks 21-21 (50.0% vs 59.9% claimed, ROI -100.0%).
 Strong calls 4-6 (40.0% vs 74.5% claimed).
-Closing line value: -0.91 points on 1 picks; beat the close on 0.0%.
+Closing line value: +0.71 points on 2 picks; beat the close on 50.0%.
 - LOST arg Defensa y Justicia at 55.6%: margin 1 · called at 56%
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
 - LOST bra2 Atlético Goianiense at 52.5%: margin 0 · drawn -- a draw loses a moneyline side · called at 52%
@@ -14,6 +14,7 @@ Closing line value: -0.91 points on 1 picks; beat the close on 0.0%.
 - LOST mex2 Correcaminos UAT at 77.5%: margin 1 · called at 78%
 - LOST mex Necaxa at 61.2%: margin 2 · called at 61%
 - LOST ncaaf Memphis Tigers at 65.6%: margin 14 · the book had my side favoured too · called at 66%
+- LOST ncaaf Coastal Carolina Chanticleers at 53.4%: margin 3 · the book had my side favoured too · called at 53%
 - LOST swe IF Brommapojkarna at 64.1%: margin 2 · called at 64%
 - LOST uru Cerro at 52.7%: margin 0 · drawn -- a draw loses a moneyline side · called at 53%
 - LOST wta Maria Sakkari at 63.7%: lost 1-2 in sets · took it the distance · called at 64%
@@ -23,10 +24,10 @@ Closing line value: -0.91 points on 1 picks; beat the close on 0.0%.
 - LOST wta Jil Teichmann at 62.9%: lost 0-2 in sets · never won a set · called at 63%
 - LOST wta Julia Grabher at 69.4%: lost 0-2 in sets · never won a set · called at 69%
 - LOST wta Elizara Yaneva at 70.8%: lost 1-2 in sets · took it the distance · called at 71%
-With the market 67.6% (182); against it 39.6% (48).
+With the market 67.2% (183); against it 39.6% (48).
 Locks 1/5 won, 3 open.
 Lottery 100: lost (0/5 legs won, killed by Over 61.5 points)
 Props 7/8 vs 84.5% claimed.
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.4% on 59 of 103, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.9% on 410 of 448, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 80.0% on 15 of 75, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 68% -> 84.0% on 75 of 152
-Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=371), nfl 0.40 (n=79), nhl 0.05 (n=75), wnba 0.30 (n=46)
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.4% on 59 of 103, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.9% on 410 of 449, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 80.0% on 15 of 75, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 68% -> 84.0% on 75 of 152
+Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=372), nfl 0.40 (n=79), nhl 0.05 (n=75), wnba 0.30 (n=46)
