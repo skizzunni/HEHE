@@ -991,10 +991,10 @@
    },
    "ncaaf": {
     "all_hit": 81.4,
-    "calls": 436,
+    "calls": 437,
     "cutoff": 0.55,
-    "games": 478,
-    "hit": 83.7
+    "games": 479,
+    "hit": 83.8
    },
    "nfl": {
     "all_hit": 62.0,
@@ -1033,9 +1033,9 @@
    }
   },
   "clv": {
-   "avg": -0.38,
-   "beat": 40.0,
-   "n": 55
+   "avg": -0.36,
+   "beat": 41.1,
+   "n": 56
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1542,7 +1542,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "100",
-    "won": 5
+    "won": 6
    },
    {
     "killed_by": [
@@ -1590,11 +1590,12 @@
    {
     "killed_by": [
      "Under 48.5 points",
+     "Under 39.5 points",
      "Under 48.5 points",
      "Cody Chovancek to win"
     ],
     "legs": 9,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 3
@@ -1642,12 +1643,12 @@
    }
   ],
   "picks": {
-   "hit": 72.4,
+   "hit": 72.5,
    "lost": 60,
-   "n": 217,
-   "roi": 6.0,
+   "n": 218,
+   "roi": 6.8,
    "said": 71.2,
-   "won": 157
+   "won": 158
   },
   "picks_by_league": {
    "arg": {
@@ -1867,12 +1868,12 @@
     "won": 0
    },
    "ncaaf": {
-    "hit": 71.4,
+    "hit": 72.4,
     "lost": 8,
-    "n": 28,
-    "roi": 0.2,
-    "said": 70.7,
-    "won": 20
+    "n": 29,
+    "roi": 2.1,
+    "said": 70.4,
+    "won": 21
    },
    "ned": {
     "hit": 66.7,
@@ -2023,12 +2024,12 @@
    "won": 29
   },
   "strong": {
-   "hit": 79.1,
+   "hit": 79.3,
    "lost": 24,
-   "n": 115,
-   "roi": -5.0,
-   "said": 76.8,
-   "won": 91
+   "n": 116,
+   "roi": -3.4,
+   "said": 76.7,
+   "won": 92
   },
   "vs_market_14d": {
    "against": {
@@ -2040,12 +2041,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.5,
+    "hit": 68.6,
     "lost": 76,
-    "n": 241,
-    "roi": -1.1,
+    "n": 242,
+    "roi": -0.9,
     "said": 61.9,
-    "won": 165
+    "won": 166
    }
   },
   "weights": {
@@ -2059,8 +2060,8 @@
    "ncaaf": {
     "logloss": 0.4502,
     "market_only": 0.4502,
-    "model_only": 0.4796,
-    "n": 399,
+    "model_only": 0.4798,
+    "n": 400,
     "weight": 0.05
    },
    "nfl": {
