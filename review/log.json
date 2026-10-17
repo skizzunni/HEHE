@@ -1286,6 +1286,14 @@
    },
    {
     "against_market": false,
+    "league": "par",
+    "pick": "Guaran\u00ed",
+    "price": null,
+    "said": 63.6,
+    "why": "margin 2 \u00b7 called at 64%"
+   },
+   {
+    "against_market": false,
     "league": "rsa",
     "pick": "Golden Arrows",
     "price": null,
@@ -1546,12 +1554,12 @@
    }
   ],
   "picks": {
-   "hit": 72.1,
-   "lost": 53,
-   "n": 190,
+   "hit": 71.9,
+   "lost": 54,
+   "n": 192,
    "roi": 0.1,
    "said": 71.3,
-   "won": 137
+   "won": 138
   },
   "picks_by_league": {
    "arg": {
@@ -1601,6 +1609,14 @@
     "roi": 25.0,
     "said": 77.6,
     "won": 4
+   },
+   "col": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 80.0,
+    "won": 1
    },
    "ecu": {
     "hit": 50.0,
@@ -1802,6 +1818,14 @@
     "said": 65.7,
     "won": 0
    },
+   "par": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 63.6,
+    "won": 0
+   },
    "rsa": {
     "hit": 33.3,
     "lost": 2,
@@ -1895,12 +1919,12 @@
    "won": 5
   },
   "strong": {
-   "hit": 78.8,
+   "hit": 79.0,
    "lost": 21,
-   "n": 99,
+   "n": 100,
    "roi": -9.3,
    "said": 77.0,
-   "won": 78
+   "won": 79
   },
   "vs_market_14d": {
    "against": {

@@ -1,7 +1,7 @@
 # Review 2026-10-17
 
-Picks 137-53 (72.1% vs 71.3% claimed, ROI +0.1%).
-Strong calls 78-21 (78.8% vs 77.0% claimed).
+Picks 138-54 (71.9% vs 71.3% claimed, ROI +0.1%).
+Strong calls 79-21 (79.0% vs 77.0% claimed).
 Closing line value: -0.61 points on 37 picks; beat the close on 37.8%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
@@ -37,6 +37,7 @@ Closing line value: -0.61 points on 37 picks; beat the close on 37.8%.
 - LOST ned PSV Eindhoven at 62.4%: margin 1 · called at 62%
 - LOST nor Kristiansund BK at 63.0%: margin 3 · called at 63%
 - LOST nwsl Gotham FC at 65.7%: margin 1 · called at 66%
+- LOST par Guaraní at 63.6%: margin 2 · called at 64%
 - LOST rsa Golden Arrows at 73.5%: margin 1 · called at 74%
 - LOST rsa Chippa United at 72.0%: margin 1 · called at 72%
 - LOST sco Motherwell at 66.7%: margin 1 · called at 67%
