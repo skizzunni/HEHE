@@ -204,8 +204,8 @@ def fit_miss(rows):
 
 
 BASE_TARGET = (S.TARGET, S.LEG_MAX)
-TARGET_TRIALS = [(0.90, 0.94), (0.94, 0.975), (0.96, 0.985)]
-TRIAL_SIZES = (4, 6, 8, 10, 15, 20)
+TARGET_TRIALS = [(0.90, 0.94), (0.94, 0.975), (0.96, 0.985), (0.97, 0.99)]
+TRIAL_SIZES = (2, 3, 4, 6, 8, 10, 15, 20)
 
 
 def main():
