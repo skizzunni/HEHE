@@ -233,8 +233,10 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                 continue
             # a ladder rung priced off the player's own main line (fd_props
             # consistency): where that says more than the price, use it
-            if P.get("p_fair") and P["p_fair"] > pm:
-                pm = P["p_fair"]
+            # the ladder model's p_fair no longer overrides the price: when it
+            # raised a chance, props won 6 of 8 (75%) against 83% shown, and
+            # it made a -395 leg (Kayla Thornton 5+ points, scored 0) the top
+            # lock at 89%. The market's number leads, as everywhere else.
             P = dict(P, p=pm)
             m = row.get("mkt") or {}
             pool.append(dict(kind="prop", gid=pg["id"], league=pg["id"].split(":", 1)[0],

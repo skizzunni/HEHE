@@ -307,7 +307,7 @@ def mega_ticket(games, n=25, dec_lo=1.25, dec_hi=1.834, per_game=2):
             d = _dec(P.get("price"))
             if not P.get("fd") or not d or not dec_lo <= d <= dec_hi:
                 continue
-            p = P["p_fair"] if P.get("p_fair") and P["p_fair"] > P["p"] else P["p"]
+            p = P["p"]                     # the price, not the ladder model (see locks.py)
             pool.append(dict(P, p=round(p, 4), dec=d, match=g["match"], lg=g["lg"],
                              tip=g.get("tip"), gid=g["id"]))
     pool.sort(key=lambda P: -P["p"])

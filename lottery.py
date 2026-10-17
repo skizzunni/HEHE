@@ -149,7 +149,7 @@ def _prop_legs(prop_games, ok_gids):
                 continue
             if not props_ledger.gradable(lg, P["market"]):
                 continue
-            pf = P.get("p_fair") if P.get("p_fair") and P["p_fair"] > P["p"] else P["p"]
+            pf = P["p"]                    # the price, not the ladder model (see locks.py)
             out.append(dict(P, p=pf, kind="prop", gid=g["id"], league=lg, lg=g["lg"],
                             match=g["match"], tip=g.get("tip"), dec=round(d, 3),
                             value=round(pf * d, 4)))

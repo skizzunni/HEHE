@@ -222,25 +222,29 @@ def _scoreboard(day):
 
 def result(comp):
     """{winner, method, minutes, rounds} for a finished fight, or None when it
-    is not final or ended in a draw / no contest / DQ (every market voids)."""
+    is not final or has no winner (draw / no contest: every market voids).
+    `method` is None when ESPN has not posted the result line yet -- seen
+    live: a fight's details read only "Fight Over, Round End, ..." -- so the
+    markets that need it wait instead of being voided."""
     st = (comp.get("status") or {}).get("type") or {}
     if not st.get("completed"):
         return None
     winner = next(((x.get("athlete") or {}).get("displayName") for x in comp.get("competitors") or []
                    if x.get("winner")), None)
-    text = " ".join(((d.get("type") or {}).get("text") or "") for d in (comp.get("details") or [])[:3])
-    how = None
-    m = re.search(r"winner\s+(\w+)", text, re.I)
-    if m:
-        how = _method(m.group(1).replace("kotko", "ko"))
-    if not winner or not how:
+    if not winner:
         return None
+    how = None
+    for d in comp.get("details") or []:
+        m = re.search(r"winner\s+(\w+)", (d.get("type") or {}).get("text") or "", re.I)
+        if m:
+            how = _method(m.group(1).replace("kotko", "ko"))
+            break
     s = comp.get("status") or {}
     try:
         mm, ss = (s.get("displayClock") or "0:00").split(":")
         minutes = (int(s.get("period") or 1) - 1) * ROUND_MIN + int(mm) + int(ss) / 60
     except ValueError:
-        return None
+        minutes = None
     rounds = ((comp.get("format") or {}).get("regulation") or {}).get("periods")
     return dict(winner=winner, method=how, minutes=minutes, rounds=rounds)
 
@@ -248,6 +252,10 @@ def result(comp):
 def settle(e, res):
     """'won' / 'lost' for one recorded UFC leg given the fight's result."""
     mk, line = e["market"], str(e["line"])
+    if mk in ("Method", "Ends by", "Goes the distance") and res.get("method") is None:
+        return None                     # result line not posted yet: wait
+    if mk == "Total Rounds" and res.get("minutes") is None:
+        return None
     if mk == "Winner":
         ok = _norm(res["winner"]) == _norm(e["name"])
     elif mk == "Method":
@@ -291,5 +299,11 @@ def grade(entries):
                 e["status"] = "void"
                 continue
             s = settle(e, res)
-            e["status"] = s or "ungradable"
-            e["value"] = round(res["minutes"], 2)
+            if s is None:
+                # waiting on ESPN's result line; give up after three days
+                if (dt.date.today() - dt.date.fromisoformat(e["date"])).days > 3:
+                    e["status"] = "void"
+                continue
+            e["status"] = s
+            if res.get("minutes") is not None:
+                e["value"] = round(res["minutes"], 2)
