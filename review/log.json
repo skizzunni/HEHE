@@ -981,10 +981,10 @@
     "hit": 77.4
    },
    "wta": {
-    "all_hit": 72.3,
+    "all_hit": 71.8,
     "calls": 89,
     "cutoff": 0.675,
-    "games": 173,
+    "games": 174,
     "hit": 84.3
    }
   },
@@ -1002,6 +1002,14 @@
    "won": 0
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "wta",
+    "pick": "Francesca Curmi",
+    "price": null,
+    "said": 50.5,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 50%"
+   },
    {
     "against_market": false,
     "league": "wta",
@@ -1037,11 +1045,11 @@
   ],
   "lottery": [],
   "picks": {
-   "hit": 85.2,
-   "lost": 4,
-   "n": 27,
+   "hit": 82.1,
+   "lost": 5,
+   "n": 28,
    "roi": 37.0,
-   "said": 74.7,
+   "said": 73.9,
    "won": 23
   },
   "picks_by_league": {
@@ -1070,11 +1078,11 @@
     "won": 7
    },
    "wta": {
-    "hit": 71.4,
-    "lost": 4,
-    "n": 14,
+    "hit": 66.7,
+    "lost": 5,
+    "n": 15,
     "roi": null,
-    "said": 75.9,
+    "said": 74.2,
     "won": 10
    }
   },
