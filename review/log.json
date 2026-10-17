@@ -989,9 +989,9 @@
    }
   },
   "clv": {
-   "avg": 3.58,
-   "beat": 66.7,
-   "n": 3
+   "avg": 2.12,
+   "beat": 50.0,
+   "n": 4
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1049,6 +1049,14 @@
     "price": null,
     "said": 71.0,
     "why": "margin 1 \u00b7 called at 71%"
+   },
+   {
+    "against_market": false,
+    "league": "fra2",
+    "pick": "Nantes",
+    "price": null,
+    "said": 82.0,
+    "why": "margin 1 \u00b7 called at 82%"
    },
    {
     "against_market": false,
@@ -1206,12 +1214,12 @@
    }
   ],
   "picks": {
-   "hit": 75.0,
-   "lost": 16,
-   "n": 64,
-   "roi": -12.7,
-   "said": 72.2,
-   "won": 48
+   "hit": 75.4,
+   "lost": 17,
+   "n": 69,
+   "roi": -2.7,
+   "said": 72.6,
+   "won": 52
   },
   "picks_by_league": {
    "atp": {
@@ -1270,6 +1278,30 @@
     "said": 66.6,
     "won": 1
    },
+   "esp": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 81.0,
+    "won": 1
+   },
+   "esp2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 74.9,
+    "won": 1
+   },
+   "fra2": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": null,
+    "said": 78.8,
+    "won": 1
+   },
    "ger2": {
     "hit": 100.0,
     "lost": 0,
@@ -1293,6 +1325,14 @@
     "roi": 37.0,
     "said": 74.4,
     "won": 7
+   },
+   "nor": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 27.0,
+    "said": 73.9,
+    "won": 1
    },
    "tur": {
     "hit": 100.0,
@@ -1331,12 +1371,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 85.7,
+   "hit": 86.1,
    "lost": 5,
-   "n": 35,
+   "n": 36,
    "roi": -37.5,
-   "said": 80.1,
-   "won": 30
+   "said": 80.9,
+   "won": 31
   },
   "vs_market_14d": {
    "against": {
@@ -1348,12 +1388,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 66.7,
+    "hit": 66.8,
     "lost": 63,
-    "n": 189,
-    "roi": -3.3,
-    "said": 59.8,
-    "won": 126
+    "n": 190,
+    "roi": -3.2,
+    "said": 59.9,
+    "won": 127
    }
   },
   "weights": {
