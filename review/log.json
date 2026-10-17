@@ -954,9 +954,9 @@
    },
    "ncaaf": {
     "all_hit": 82.0,
-    "calls": 420,
+    "calls": 421,
     "cutoff": 0.55,
-    "games": 461,
+    "games": 462,
     "hit": 84.3
    },
    "nfl": {
@@ -996,9 +996,9 @@
    }
   },
   "clv": {
-   "avg": -0.63,
-   "beat": 37.0,
-   "n": 27
+   "avg": -0.81,
+   "beat": 35.7,
+   "n": 28
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1007,8 +1007,8 @@
     "Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49"
    ],
    "n": 11,
-   "open": 7,
-   "won": 3
+   "open": 6,
+   "won": 4
   },
   "losses": [
    {
@@ -1411,7 +1411,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -1443,7 +1443,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+25",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -1454,7 +1454,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+50",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -1465,16 +1465,16 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+100",
-    "won": 2
+    "won": 3
    }
   ],
   "picks": {
-   "hit": 72.7,
+   "hit": 72.9,
    "lost": 45,
-   "n": 165,
-   "roi": 9.3,
-   "said": 71.5,
-   "won": 120
+   "n": 166,
+   "roi": 11.5,
+   "said": 71.4,
+   "won": 121
   },
   "picks_by_league": {
    "atp": {
@@ -1646,12 +1646,12 @@
     "won": 0
    },
    "ncaaf": {
-    "hit": 72.7,
+    "hit": 75.0,
     "lost": 3,
-    "n": 11,
-    "roi": 3.1,
-    "said": 69.2,
-    "won": 8
+    "n": 12,
+    "roi": 9.2,
+    "said": 67.8,
+    "won": 9
    },
    "ned": {
     "hit": 0.0,
@@ -1787,12 +1787,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.1,
+    "hit": 68.2,
     "lost": 68,
-    "n": 213,
-    "roi": -1.6,
-    "said": 60.9,
-    "won": 145
+    "n": 214,
+    "roi": -1.3,
+    "said": 60.8,
+    "won": 146
    }
   },
   "weights": {
@@ -1804,10 +1804,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.437,
-    "market_only": 0.437,
-    "model_only": 0.4689,
-    "n": 383,
+    "logloss": 0.4374,
+    "market_only": 0.4374,
+    "model_only": 0.4694,
+    "n": 384,
     "weight": 0.05
    },
    "nfl": {

@@ -1,8 +1,8 @@
 # Review 2026-10-17
 
-Picks 120-45 (72.7% vs 71.5% claimed, ROI +9.3%).
+Picks 121-45 (72.9% vs 71.4% claimed, ROI +11.5%).
 Strong calls 71-17 (80.7% vs 77.1% claimed).
-Closing line value: -0.63 points on 27 picks; beat the close on 37.0%.
+Closing line value: -0.81 points on 28 picks; beat the close on 35.7%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
 - LOST atp Luka Pavlovic at 63.3%: lost 1-2 in sets · took it the distance · called at 63%
@@ -48,18 +48,18 @@ Closing line value: -0.63 points on 27 picks; beat the close on 37.0%.
 - LOST wta Jeline Vandromme at 63.7%: lost 1-1 in sets · took it the distance · called at 64%
 - LOST wta Magdalena Frech at 65.4%: lost 1-1 in sets · took it the distance · called at 65%
 - LOST wta Mananchaya Sawangkaew at 57.4%: lost 0-2 in sets · never won a set · called at 57%
-With the market 68.1% (213); against it 37.8% (45).
-Locks 3/11 won, 7 open; lost: Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49.
+With the market 68.2% (214); against it 37.8% (45).
+Locks 4/11 won, 6 open; lost: Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49.
 Lottery 100: lost (2/12 legs won, killed by Under 75.5 points)
 Lottery 100: lost (0/6 legs won, killed by Under 35.5 points, Under 50.5 points)
 Lottery 100: open (1/6 legs won)
-Lottery 10k: lost (2/12 legs won, killed by Under 65.5 points, Under 38.5 points)
+Lottery 10k: lost (3/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 10k: lost (0/9 legs won, killed by Under 35.5 points, Under 50.5 points)
 Lottery 10k: lost (2/9 legs won, killed by Under 48.5 points)
-Lottery 10k+25: lost (2/12 legs won, killed by Under 65.5 points, Under 38.5 points)
-Lottery 10k+50: lost (2/12 legs won, killed by Under 65.5 points, Under 38.5 points)
-Lottery 10k+100: lost (2/12 legs won, killed by Under 65.5 points, Under 38.5 points)
+Lottery 10k+25: lost (3/12 legs won, killed by Under 65.5 points, Under 38.5 points)
+Lottery 10k+50: lost (3/12 legs won, killed by Under 65.5 points, Under 38.5 points)
+Lottery 10k+100: lost (3/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Props 4/6 vs 80.7% claimed.
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.3% on 420 of 461, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 78, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 65% -> 81.4% on 102 of 184
-Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=383), nfl 0.40 (n=79), nhl 0.05 (n=78), wnba 0.30 (n=46)
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.3% on 421 of 462, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 78, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 65% -> 81.4% on 102 of 184
+Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=384), nfl 0.40 (n=79), nhl 0.05 (n=78), wnba 0.30 (n=46)
