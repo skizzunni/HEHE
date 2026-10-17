@@ -973,15 +973,16 @@ function drawProps(){
   const T = (P[day] || {}).tickets || {};
   const M = (P[day] || {}).mega;
   if(M){
-    html += '<h3 class="tier-h">25-leg props &mdash; the likeliest across every sport</h3>'
+    html += '<h3 class="tier-h">' + M.n + '-leg props &mdash; the likeliest across every sport</h3>'
       + strip([["legs", M.n], ["all hit", (100 * M.prob < 1 ? (100 * M.prob).toFixed(2)
                 : (100 * M.prob).toFixed(1)) + "%"],
                ["$10 pays", "$" + Math.round(10 * M.pays).toLocaleString()],
                ["book", "FanDuel"]])
       + '<p class="note">Normal odds only (-400 to -120), likeliest first &mdash; rungs the player&rsquo;s '
       + 'own main line says are underpriced count at that fair chance &mdash; one prop per player, at '
-      + 'most two per game (FanDuel takes those as SGP+). Each leg is likely; 25 together rarely all '
-      + 'land, so the payout is big and the chance small.</p>'
+      + 'most two per game (up to four when FanDuel has posted props for only a few games; FanDuel '
+      + 'takes those as SGP+). Up to 25 legs' + (M.n < 25 ? ' &mdash; only ' + M.n + ' qualify right now; '
+      + 'it fills as FanDuel posts more props' : '') + '. Each leg is likely; together they rarely all land.</p>'
       + '<ul class="legs">' + M.legs.map(x => legHTML(Object.assign({kind: "prop"}, x))).join("") + '</ul>';
   }
   const sizes = Object.keys(T).map(Number).filter(n => n !== 25).sort((a, b) => a - b);

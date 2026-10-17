@@ -291,6 +291,9 @@ def _dec(price):
     return 1 + (v / 100 if v > 0 else 100 / -v)
 
 
+FILL_PER_GAME = 4
+
+
 def mega_ticket(games, n=25, dec_lo=1.25, dec_hi=1.834, per_game=2):
     """The 25 likeliest FanDuel player props of the day, every sport together.
 
@@ -309,15 +312,18 @@ def mega_ticket(games, n=25, dec_lo=1.25, dec_hi=1.834, per_game=2):
                              tip=g.get("tip"), gid=g["id"]))
     pool.sort(key=lambda P: -P["p"])
     legs, players, per = [], set(), {}
-    for P in pool:
-        who = props_ledger.norm_name(P["name"])
-        if who in players or per.get(P["gid"], 0) >= per_game:
-            continue
-        legs.append(P)
-        players.add(who)
-        per[P["gid"]] = per.get(P["gid"], 0) + 1
-        if len(legs) >= n:
-            break
+    # per_game first; on a light slate (FanDuel posting props for only a few
+    # games) a second pass lets a game give up to FILL_PER_GAME players
+    for cap in (per_game, FILL_PER_GAME):
+        for P in pool:
+            if len(legs) >= n:
+                break
+            who = props_ledger.norm_name(P["name"])
+            if who in players or per.get(P["gid"], 0) >= cap:
+                continue
+            legs.append(P)
+            players.add(who)
+            per[P["gid"]] = per.get(P["gid"], 0) + 1
     if not legs:
         return None
     prob, pay = 1.0, 1.0
