@@ -1,9 +1,10 @@
 # Review 2026-10-17
 
-Picks 30-7 (81.1% vs 71.8% claimed, ROI +37.0%).
-Strong calls 18-2 (90.0% vs 81.2% claimed).
+Picks 30-8 (78.9% vs 72.0% claimed, ROI +37.0%).
+Strong calls 18-3 (85.7% vs 81.1% claimed).
 Closing line value: -0.36 points on 1 picks; beat the close on 0.0%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
+- LOST jpn Kashiwa Reysol at 80.2%: margin 2 · called at 80%
 - LOST wta Jelena Ostapenko at 60.6%: lost 0-2 in sets · never won a set · called at 61%
 - LOST wta Francesca Curmi at 50.5%: lost 0-2 in sets · never won a set · called at 50%
 - LOST wta Tyra Caterina Grant at 53.2%: lost 0-2 in sets · never won a set · called at 53%
