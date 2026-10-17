@@ -459,9 +459,9 @@
  },
  "2026-10-16": {
   "clv": {
-   "avg": -0.52,
-   "beat": 25.0,
-   "n": 4
+   "avg": -0.42,
+   "beat": 20.0,
+   "n": 5
   },
   "day": "2026-10-16",
   "leaks_14d": [],
@@ -470,8 +470,8 @@
     "Under 61.5 points (Washington Huskies at Purdue Boilermakers) Washington Huskies 38 - Purdue Boilermakers 26"
    ],
    "n": 5,
-   "open": 1,
-   "won": 2
+   "open": 0,
+   "won": 3
   },
   "losses": [
    {
@@ -678,16 +678,16 @@
     "lost": 3,
     "status": "lost",
     "tier": "100",
-    "won": 0
+    "won": 1
    }
   ],
   "picks": {
-   "hit": 51.0,
+   "hit": 52.9,
    "lost": 24,
-   "n": 49,
-   "roi": -62.8,
-   "said": 62.1,
-   "won": 25
+   "n": 51,
+   "roi": -32.4,
+   "said": 61.8,
+   "won": 27
   },
   "picks_by_league": {
    "arg": {
@@ -813,10 +813,10 @@
    "nhl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 48.8,
-    "said": 64.1,
-    "won": 1
+    "n": 2,
+    "roi": 69.0,
+    "said": 57.3,
+    "won": 2
    },
    "nwsl": {
     "hit": 100.0,
@@ -867,12 +867,12 @@
     "won": 0
    },
    "wta": {
-    "hit": 57.1,
+    "hit": 59.1,
     "lost": 9,
-    "n": 21,
+    "n": 22,
     "roi": null,
-    "said": 66.6,
-    "won": 12
+    "said": 66.3,
+    "won": 13
    }
   },
   "props": {
@@ -882,9 +882,9 @@
     "said_price": null,
     "won": 0
    },
-   "n": 20,
-   "said": 81.7,
-   "won": 18
+   "n": 29,
+   "said": 79.4,
+   "won": 24
   },
   "strong": {
    "hit": 53.8,
@@ -904,12 +904,12 @@
     "won": 19
    },
    "agree": {
-    "hit": 67.0,
+    "hit": 67.2,
     "lost": 61,
-    "n": 185,
-    "roi": -3.0,
-    "said": 59.6,
-    "won": 124
+    "n": 186,
+    "roi": -2.5,
+    "said": 59.5,
+    "won": 125
    }
   }
  },
@@ -944,10 +944,10 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 65.8,
+    "all_hit": 66.2,
     "calls": 16,
     "cutoff": 0.625,
-    "games": 76,
+    "games": 77,
     "hit": 81.2
    },
    "ufc": {
@@ -965,10 +965,10 @@
     "hit": 77.4
    },
    "wta": {
-    "all_hit": 72.0,
+    "all_hit": 72.2,
     "calls": 57,
     "cutoff": 0.725,
-    "games": 157,
+    "games": 158,
     "hit": 86.0
    }
   },
@@ -1015,12 +1015,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 66.8,
+    "hit": 67.0,
     "lost": 61,
-    "n": 184,
-    "roi": -3.2,
-    "said": 59.6,
-    "won": 123
+    "n": 185,
+    "roi": -2.7,
+    "said": 59.5,
+    "won": 124
    }
   },
   "weights": {
@@ -1046,10 +1046,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6358,
-    "market_only": 0.6358,
-    "model_only": 0.6436,
-    "n": 76,
+    "logloss": 0.6364,
+    "market_only": 0.6364,
+    "model_only": 0.6439,
+    "n": 77,
     "weight": 0.05
    },
    "wnba": {
