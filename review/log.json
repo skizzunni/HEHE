@@ -953,11 +953,11 @@
     "hit": 86.7
    },
    "ncaaf": {
-    "all_hit": 82.1,
-    "calls": 418,
+    "all_hit": 82.0,
+    "calls": 420,
     "cutoff": 0.55,
-    "games": 458,
-    "hit": 84.4
+    "games": 461,
+    "hit": 84.3
    },
    "nfl": {
     "all_hit": 62.0,
@@ -996,17 +996,19 @@
    }
   },
   "clv": {
-   "avg": -0.56,
-   "beat": 41.7,
-   "n": 24
+   "avg": -0.63,
+   "beat": 37.0,
+   "n": 27
   },
   "day": "2026-10-17",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49"
+   ],
    "n": 11,
-   "open": 9,
-   "won": 2
+   "open": 7,
+   "won": 3
   },
   "losses": [
    {
@@ -1204,6 +1206,14 @@
    {
     "against_market": false,
     "league": "ncaaf",
+    "pick": "Pittsburgh Panthers",
+    "price": "-225",
+    "said": 63.3,
+    "why": "margin 6 \u00b7 the book had my side favoured too \u00b7 called at 63%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
     "pick": "Bowling Green Falcons",
     "price": "-238",
     "said": 69.8,
@@ -1364,18 +1374,23 @@
   ],
   "lottery": [
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 75.5 points"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 35.5 points",
+     "Under 50.5 points"
+    ],
     "legs": 6,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "100",
     "won": 0
    },
@@ -1389,19 +1404,23 @@
    },
    {
     "killed_by": [
+     "Under 65.5 points",
      "Under 38.5 points"
     ],
     "legs": 12,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
     "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 35.5 points",
+     "Under 50.5 points"
+    ],
     "legs": 9,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
@@ -1417,42 +1436,45 @@
    },
    {
     "killed_by": [
+     "Under 65.5 points",
      "Under 38.5 points"
     ],
     "legs": 12,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+25",
     "won": 2
    },
    {
     "killed_by": [
+     "Under 65.5 points",
      "Under 38.5 points"
     ],
     "legs": 12,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+50",
     "won": 2
    },
    {
     "killed_by": [
+     "Under 65.5 points",
      "Under 38.5 points"
     ],
     "legs": 12,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+100",
     "won": 2
    }
   ],
   "picks": {
-   "hit": 72.8,
-   "lost": 44,
-   "n": 162,
-   "roi": 10.1,
-   "said": 71.6,
-   "won": 118
+   "hit": 72.7,
+   "lost": 45,
+   "n": 165,
+   "roi": 9.3,
+   "said": 71.5,
+   "won": 120
   },
   "picks_by_league": {
    "atp": {
@@ -1624,12 +1646,12 @@
     "won": 0
    },
    "ncaaf": {
-    "hit": 75.0,
-    "lost": 2,
-    "n": 8,
-    "roi": 2.9,
-    "said": 70.7,
-    "won": 6
+    "hit": 72.7,
+    "lost": 3,
+    "n": 11,
+    "roi": 3.1,
+    "said": 69.2,
+    "won": 8
    },
    "ned": {
     "hit": 0.0,
@@ -1748,12 +1770,12 @@
    "won": 4
   },
   "strong": {
-   "hit": 81.2,
-   "lost": 16,
-   "n": 85,
-   "roi": 2.4,
-   "said": 77.5,
-   "won": 69
+   "hit": 80.7,
+   "lost": 17,
+   "n": 88,
+   "roi": 2.6,
+   "said": 77.1,
+   "won": 71
   },
   "vs_market_14d": {
    "against": {
@@ -1766,11 +1788,11 @@
    },
    "agree": {
     "hit": 68.1,
-    "lost": 67,
-    "n": 210,
-    "roi": -1.7,
-    "said": 60.8,
-    "won": 143
+    "lost": 68,
+    "n": 213,
+    "roi": -1.6,
+    "said": 60.9,
+    "won": 145
    }
   },
   "weights": {
@@ -1782,10 +1804,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4352,
-    "market_only": 0.4352,
-    "model_only": 0.4675,
-    "n": 380,
+    "logloss": 0.437,
+    "market_only": 0.437,
+    "model_only": 0.4689,
+    "n": 383,
     "weight": 0.05
    },
    "nfl": {
