@@ -893,10 +893,10 @@
   },
   "props": {
    "fair": {
-    "n": 0,
-    "said_fair": null,
-    "said_price": null,
-    "won": 0
+    "n": 12,
+    "said_fair": 84.7,
+    "said_price": 83.5,
+    "won": 10
    },
    "n": 29,
    "said": 79.4,
@@ -974,10 +974,10 @@
     "hit": 82.4
    },
    "ufc": {
-    "all_hit": 64.1,
+    "all_hit": 64.6,
     "calls": 21,
     "cutoff": 0.75,
-    "games": 78,
+    "games": 79,
     "hit": 81.0
    },
    "wnba": {
@@ -996,19 +996,20 @@
    }
   },
   "clv": {
-   "avg": -0.32,
-   "beat": 41.0,
-   "n": 39
+   "avg": -0.36,
+   "beat": 40.0,
+   "n": 40
   },
   "day": "2026-10-17",
   "leaks_14d": [],
   "locks": {
    "lost": [
+    "Kayla Thornton: 5+ Points (ATL @ GS) 0",
     "Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49",
     "Under 56.5 points (Charlotte 49ers at Temple Owls) Charlotte 49ers 38 - Temple Owls 31"
    ],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "won": 7
   },
   "losses": [
@@ -1227,6 +1228,14 @@
     "price": null,
     "said": 53.2,
     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
+    "pick": "St. Louis CITY SC",
+    "price": null,
+    "said": 60.9,
+    "why": "margin 1 \u00b7 called at 61%"
    },
    {
     "against_market": false,
@@ -1456,11 +1465,12 @@
   "lottery": [
    {
     "killed_by": [
+     "Kayla Thornton: 5+ Points",
      "Under 75.5 points",
      "Under 65.5 points"
     ],
     "legs": 12,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 4
@@ -1562,12 +1572,12 @@
    }
   ],
   "picks": {
-   "hit": 72.1,
-   "lost": 55,
-   "n": 197,
-   "roi": 2.8,
-   "said": 71.2,
-   "won": 142
+   "hit": 71.9,
+   "lost": 56,
+   "n": 199,
+   "roi": 3.8,
+   "said": 71.1,
+   "won": 143
   },
   "picks_by_league": {
    "arg": {
@@ -1772,10 +1782,10 @@
    },
    "mls": {
     "hit": 0.0,
-    "lost": 1,
-    "n": 1,
+    "lost": 2,
+    "n": 2,
     "roi": null,
-    "said": 53.2,
+    "said": 57.0,
     "won": 0
    },
    "ncaaf": {
@@ -1883,12 +1893,12 @@
     "won": 4
    },
    "ufc": {
-    "hit": 33.3,
+    "hit": 50.0,
     "lost": 2,
-    "n": 3,
-    "roi": -48.6,
-    "said": 63.7,
-    "won": 1
+    "n": 4,
+    "roi": -25.4,
+    "said": 64.3,
+    "won": 2
    },
    "uru": {
     "hit": 66.7,
@@ -1925,14 +1935,14 @@
   },
   "props": {
    "fair": {
-    "n": 0,
-    "said_fair": null,
-    "said_price": null,
-    "won": 0
+    "n": 12,
+    "said_fair": 84.7,
+    "said_price": 83.5,
+    "won": 10
    },
-   "n": 14,
-   "said": 74.9,
-   "won": 10
+   "n": 27,
+   "said": 78.0,
+   "won": 21
   },
   "strong": {
    "hit": 79.4,
@@ -1952,12 +1962,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.6,
+    "hit": 67.7,
     "lost": 73,
-    "n": 225,
-    "roi": -2.2,
+    "n": 226,
+    "roi": -2.0,
     "said": 61.2,
-    "won": 152
+    "won": 153
    }
   },
   "weights": {
