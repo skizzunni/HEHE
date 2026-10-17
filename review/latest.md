@@ -1,6 +1,6 @@
 # Review 2026-10-17
 
-Picks 103-39 (72.5% vs 72.0% claimed, ROI +5.2%).
+Picks 103-40 (72.0% vs 71.9% claimed, ROI +5.2%).
 Strong calls 59-14 (80.8% vs 78.3% claimed).
 Closing line value: -0.15 points on 14 picks; beat the close on 50.0%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
@@ -31,6 +31,7 @@ Closing line value: -0.15 points on 14 picks; beat the close on 50.0%.
 - LOST rsa Chippa United at 72.0%: margin 1 · called at 72%
 - LOST sco Motherwell at 66.7%: margin 1 · called at 67%
 - LOST sco Hibernian at 79.4%: margin 1 · called at 79%
+- LOST swe AIK at 56.0%: margin 0 · drawn -- a draw loses a moneyline side · called at 56%
 - LOST uru Juventud at 70.6%: margin 2 · called at 71%
 - LOST wsl Arsenal at 87.1%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 87%
 - LOST wta Iga Swiatek at 83.2%: lost 0-2 in sets · never won a set · called at 83%

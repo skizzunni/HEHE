@@ -1235,6 +1235,14 @@
    },
    {
     "against_market": false,
+    "league": "swe",
+    "pick": "AIK",
+    "price": null,
+    "said": 56.0,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 56%"
+   },
+   {
+    "against_market": false,
     "league": "uru",
     "pick": "Juventud",
     "price": null,
@@ -1397,11 +1405,11 @@
    }
   ],
   "picks": {
-   "hit": 72.5,
-   "lost": 39,
-   "n": 142,
+   "hit": 72.0,
+   "lost": 40,
+   "n": 143,
    "roi": 5.2,
-   "said": 72.0,
+   "said": 71.9,
    "won": 103
   },
   "picks_by_league": {
@@ -1612,6 +1620,14 @@
     "roi": null,
     "said": 73.4,
     "won": 4
+   },
+   "swe": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 56.0,
+    "won": 0
    },
    "tur": {
     "hit": 100.0,
