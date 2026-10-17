@@ -9,9 +9,16 @@ sys.path.insert(0, ".")
 import fanduel as F  # noqa: E402
 
 found = None
-for page in ("ufc", "mma", "ufc-mma", "mixed-martial-arts"):
-    d = F._get(f"{F.BASE}/content-managed-page?page=CUSTOM&customPageId={page}"
-               f"&_ak={F.AK}&timezone=America%2FNew_York")
+URLS = {p: f"{F.BASE}/content-managed-page?page=CUSTOM&customPageId={p}&_ak={F.AK}&timezone=America%2FNew_York"
+        for p in ("ufc", "mma")}
+# FanDuel's sport pages are keyed by eventTypeId; 26420387 is MMA on Betfair-
+# family exchanges, which FanDuel's sbapi shares
+for et in ("26420387", "7524"):
+    URLS[f"sport-{et}"] = (f"{F.BASE}/content-managed-page?page=SPORT&eventTypeId={et}"
+                           f"&_ak={F.AK}&timezone=America%2FNew_York")
+URLS["search-ufc"] = f"{F.BASE}/search?query=ufc&_ak={F.AK}"
+for page, url in URLS.items():
+    d = F._get(url)
     att = (d or {}).get("attachments") or {}
     ev, mk = att.get("events") or {}, att.get("markets") or {}
     print(f"page {page}: events {len(ev)} markets {len(mk)}")
