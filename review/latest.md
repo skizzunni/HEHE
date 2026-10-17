@@ -65,6 +65,7 @@ Lottery 10k: lost (2/9 legs won, killed by Under 48.5 points, Under 48.5 points)
 Lottery 10k+25: lost (5/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 10k+50: lost (5/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 10k+100: lost (5/12 legs won, killed by Under 65.5 points, Under 38.5 points)
+Lottery 100: open (0/5 legs won)
 Props 4/6 vs 80.7% claimed.
 
 Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.0% on 426 of 467, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 78, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 65% -> 81.4% on 102 of 184
