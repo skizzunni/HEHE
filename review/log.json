@@ -989,9 +989,9 @@
    }
   },
   "clv": {
-   "avg": -0.36,
-   "beat": 0.0,
-   "n": 1
+   "avg": 4.97,
+   "beat": 50.0,
+   "n": 2
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1041,6 +1041,14 @@
     "price": null,
     "said": 72.0,
     "why": "margin 1 \u00b7 called at 72%"
+   },
+   {
+    "against_market": false,
+    "league": "efl3",
+    "pick": "Bristol Rovers",
+    "price": null,
+    "said": 71.0,
+    "why": "margin 1 \u00b7 called at 71%"
    },
    {
     "against_market": false,
@@ -1182,12 +1190,12 @@
    }
   ],
   "picks": {
-   "hit": 75.9,
-   "lost": 13,
-   "n": 54,
-   "roi": 37.0,
-   "said": 71.3,
-   "won": 41
+   "hit": 76.7,
+   "lost": 14,
+   "n": 60,
+   "roi": 31.0,
+   "said": 71.8,
+   "won": 46
   },
   "picks_by_league": {
    "atp": {
@@ -1209,33 +1217,33 @@
    "chn": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": null,
-    "said": 81.9,
-    "won": 1
+    "n": 3,
+    "roi": 25.0,
+    "said": 77.8,
+    "won": 3
    },
    "efl1": {
     "hit": 100.0,
     "lost": 0,
-    "n": 2,
+    "n": 3,
     "roi": null,
-    "said": 75.1,
-    "won": 2
+    "said": 76.7,
+    "won": 3
    },
    "efl2": {
-    "hit": 0.0,
+    "hit": 50.0,
     "lost": 1,
-    "n": 1,
+    "n": 2,
     "roi": null,
-    "said": 72.0,
-    "won": 0
+    "said": 74.0,
+    "won": 1
    },
    "efl3": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
     "roi": null,
-    "said": 74.4,
+    "said": 72.7,
     "won": 1
    },
    "ger2": {
@@ -1245,6 +1253,14 @@
     "roi": null,
     "said": 72.6,
     "won": 3
+   },
+   "ind": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 81.1,
+    "won": 1
    },
    "jpn": {
     "hit": 87.5,
@@ -1283,12 +1299,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 88.9,
+   "hit": 90.6,
    "lost": 3,
-   "n": 27,
-   "roi": null,
-   "said": 80.3,
-   "won": 24
+   "n": 32,
+   "roi": 25.0,
+   "said": 79.9,
+   "won": 29
   },
   "vs_market_14d": {
    "against": {
@@ -1300,12 +1316,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 66.8,
+    "hit": 67.0,
     "lost": 62,
-    "n": 187,
-    "roi": -3.0,
-    "said": 59.6,
-    "won": 125
+    "n": 188,
+    "roi": -2.8,
+    "said": 59.7,
+    "won": 126
    }
   },
   "weights": {
