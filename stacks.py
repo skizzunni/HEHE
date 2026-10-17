@@ -73,6 +73,40 @@ TIERS = (2, 3, 4, 6, 8, 10, 15, 20)
 # takes 94% (77%, ~1.35x) so it still pays something; 2 and 3 legs untested.
 TIER_AIM = {4: (0.94, 0.975), 6: (0.96, 0.985), 8: (0.96, 0.985),
             10: (0.96, 0.985), 15: (0.96, 0.985), 20: (0.96, 0.985)}
+# The weekly backtest re-runs those trials on new games. Each size then takes
+# the aim that won most often on unseen days -- among aims whose ticket still
+# pays at least AIM_MIN_PAY (fair), so a size never collapses into a -400
+# "sure thing" with nothing to win -- and only with AIM_MIN_N tickets behind it.
+AIM_MIN_PAY = 1.25
+AIM_MIN_N = 60
+
+
+def _tune_aims():
+    try:
+        with open(os.path.join(HERE, "data", "backtest_stacks.json")) as fh:
+            bt = json.load(fh)
+    except (OSError, ValueError):
+        return
+    pooled = defaultdict(lambda: [0, 0, 0.0])
+    for v in (bt.get("sports") or {}).values():
+        for t in v.get("aim_trials") or []:
+            x = pooled[(t["size"], t["target"], t["leg_max"])]
+            x[0] += t["played"]
+            x[1] += t["won"]
+            x[2] += (t.get("avg_fair") or 0) * t["played"]
+    best = {}
+    for (n, aim, top), (played, won, pay) in pooled.items():
+        if played < AIM_MIN_N or pay / played < AIM_MIN_PAY:
+            continue
+        rate = won / played
+        if n not in best or rate > best[n][0]:
+            best[n] = (rate, aim, top)
+    for n, (_, aim, top) in best.items():
+        if n in TIERS:
+            TIER_AIM[n] = (aim, top)
+
+
+_tune_aims()
 VARIANTS = 3                 # different tickets per size
 
 # Standard deviation of (final margin - spread) and (final total - posted
