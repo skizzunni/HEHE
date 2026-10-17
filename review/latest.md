@@ -1,6 +1,6 @@
 # Review 2026-10-17
 
-Picks 14-3 (82.4% vs 76.2% claimed, ROI +37.0%).
+Picks 15-3 (83.3% vs 76.1% claimed, ROI +37.0%).
 Strong calls 10-0 (100.0% vs 84.8% claimed).
 Closing line value: -0.36 points on 1 picks; beat the close on 0.0%.
 - LOST wta Tyra Caterina Grant at 53.2%: lost 0-2 in sets · never won a set · called at 53%
