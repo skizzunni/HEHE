@@ -1152,7 +1152,8 @@
   "p": 0.7355,
   "p_fair": null,
   "price": "-360",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892520|n:cole perfetti|Shots on Goal|1+": {
   "aid": null,
@@ -1168,7 +1169,8 @@
   "p": 0.8354,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892520|n:jackson blake|Shots on Goal|2+": {
   "aid": null,
@@ -1184,7 +1186,8 @@
   "p": 0.7019,
   "p_fair": null,
   "price": "-295",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892520|n:logan stankoven|Shots on Goal|1+": {
   "aid": null,
@@ -1200,7 +1203,8 @@
   "p": 0.8811,
   "p_fair": null,
   "price": "-1500",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892520|n:mark scheifele|Shots on Goal|1+": {
   "aid": null,
@@ -1216,7 +1220,8 @@
   "p": 0.8178,
   "p_fair": null,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892520|n:sebastian aho car|Shots on Goal|2+": {
   "aid": null,
@@ -1232,7 +1237,7 @@
   "p": 0.7078,
   "p_fair": null,
   "price": "-305",
-  "status": "open"
+  "status": "void"
  },
  "nhl:401892521|n:anthony cirelli|Shots on Goal|1+": {
   "aid": null,
@@ -1554,6 +1559,22 @@
   "price": "-1000",
   "status": "open"
  },
+ "nhl:401892525|n:michael brandsegg nygard|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "nhl:401892525",
+  "imp": 0.9,
+  "label": "Michael Brandsegg-Nygard: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Michael Brandsegg-Nygard",
+  "p": 0.8467,
+  "p_fair": null,
+  "price": "-900",
+  "status": "open"
+ },
  "nhl:401892525|n:moritz seider|Shots on Goal|1+": {
   "aid": null,
   "date": "2026-10-17",
@@ -1794,6 +1815,22 @@
   "price": "-950",
   "status": "open"
  },
+ "nhl:401892529|n:adam jiricek|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "nhl:401892529",
+  "imp": 0.8889,
+  "label": "Adam Jiricek: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Adam Jiricek",
+  "p": 0.8362,
+  "p_fair": null,
+  "price": "-800",
+  "status": "open"
+ },
  "nhl:401892529|n:dylan holloway|Shots on Goal|2+": {
   "aid": null,
   "date": "2026-10-17",
@@ -1872,6 +1909,22 @@
   "p": 0.8448,
   "p_fair": null,
   "price": "-950",
+  "status": "open"
+ },
+ "nhl:401892530|n:quinton byfield|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "nhl:401892530",
+  "imp": 0.7059,
+  "label": "Quinton Byfield: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Quinton Byfield",
+  "p": 0.664,
+  "p_fair": null,
+  "price": "-240",
   "status": "open"
  },
  "nhl:401892531|n:clayton keller|Shots on Goal|2+": {
@@ -3043,7 +3096,7 @@
   "p": 0.6055,
   "p_fair": null,
   "price": "-168",
-  "status": "open"
+  "status": "void"
  },
  "ufc:401919643|n:cody chovancek|Winner|win": {
   "aid": null,

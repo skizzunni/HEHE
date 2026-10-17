@@ -967,11 +967,11 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 66.7,
-    "calls": 16,
+    "all_hit": 67.1,
+    "calls": 17,
     "cutoff": 0.625,
-    "games": 78,
-    "hit": 81.2
+    "games": 79,
+    "hit": 82.4
    },
    "ufc": {
     "all_hit": 64.1,
@@ -996,9 +996,9 @@
    }
   },
   "clv": {
-   "avg": -0.53,
-   "beat": 39.5,
-   "n": 38
+   "avg": -0.32,
+   "beat": 41.0,
+   "n": 39
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1012,6 +1012,14 @@
    "won": 7
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "arg",
+    "pick": "Platense",
+    "price": null,
+    "said": 65.5,
+    "why": "margin 1 \u00b7 called at 66%"
+   },
    {
     "against_market": false,
     "league": "atp",
@@ -1474,7 +1482,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -1554,20 +1562,20 @@
    }
   ],
   "picks": {
-   "hit": 72.2,
-   "lost": 54,
-   "n": 194,
-   "roi": 1.5,
+   "hit": 71.9,
+   "lost": 55,
+   "n": 196,
+   "roi": 2.8,
    "said": 71.2,
-   "won": 140
+   "won": 141
   },
   "picks_by_league": {
    "arg": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
     "roi": null,
-    "said": 73.3,
+    "said": 69.4,
     "won": 1
    },
    "atp": {
@@ -1797,10 +1805,10 @@
    "nhl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 84.7,
-    "said": 51.8,
-    "won": 1
+    "n": 2,
+    "roi": 66.8,
+    "said": 58.2,
+    "won": 2
    },
    "nor": {
     "hit": 66.7,
@@ -1922,17 +1930,17 @@
     "said_price": null,
     "won": 0
    },
-   "n": 9,
-   "said": 72.4,
-   "won": 5
+   "n": 14,
+   "said": 74.9,
+   "won": 10
   },
   "strong": {
-   "hit": 79.0,
+   "hit": 79.2,
    "lost": 21,
-   "n": 100,
-   "roi": -9.3,
-   "said": 77.0,
-   "won": 79
+   "n": 101,
+   "roi": -6.5,
+   "said": 76.9,
+   "won": 80
   },
   "vs_market_14d": {
    "against": {
@@ -1944,12 +1952,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.4,
+    "hit": 67.6,
     "lost": 73,
-    "n": 224,
-    "roi": -2.4,
+    "n": 225,
+    "roi": -2.2,
     "said": 61.2,
-    "won": 151
+    "won": 152
    }
   },
   "weights": {
@@ -1975,10 +1983,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6367,
-    "market_only": 0.6367,
-    "model_only": 0.6439,
-    "n": 78,
+    "logloss": 0.6342,
+    "market_only": 0.6342,
+    "model_only": 0.6411,
+    "n": 79,
     "weight": 0.05
    },
    "wnba": {
