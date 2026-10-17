@@ -1,6 +1,6 @@
 # Review 2026-10-17
 
-Picks 93-36 (72.1% vs 72.3% claimed, ROI -8.7%).
+Picks 94-36 (72.3% vs 72.3% claimed, ROI -8.7%).
 Strong calls 56-14 (80.0% vs 78.4% claimed).
 Closing line value: +1.06 points on 10 picks; beat the close on 60.0%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
