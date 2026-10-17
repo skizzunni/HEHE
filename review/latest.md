@@ -1,7 +1,7 @@
 # Review 2026-10-17
 
-Picks 135-50 (73.0% vs 71.4% claimed, ROI +3.8%).
-Strong calls 78-19 (80.4% vs 77.0% claimed).
+Picks 135-51 (72.6% vs 71.5% claimed, ROI +3.8%).
+Strong calls 78-20 (79.6% vs 77.0% claimed).
 Closing line value: -0.63 points on 34 picks; beat the close on 38.2%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
@@ -9,6 +9,7 @@ Closing line value: -0.63 points on 34 picks; beat the close on 38.2%.
 - LOST atp Harry Wendelken at 52.1%: lost 1-2 in sets · took it the distance · called at 52%
 - LOST atp Giovanni Mpetshi Perricard at 62.0%: lost 1-2 in sets · took it the distance · called at 62%
 - LOST atp Kimmer Coppejans at 52.3%: lost 0-2 in sets · never won a set · called at 52%
+- LOST ecu Independiente del Valle at 79.9%: margin 1 · called at 80%
 - LOST efl1 Southampton at 66.3%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST efl1 Norwich City at 78.4%: margin 1 · called at 78%
 - LOST efl1 Bristol City at 74.3%: margin 1 · called at 74%
