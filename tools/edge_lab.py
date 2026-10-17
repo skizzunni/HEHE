@@ -205,6 +205,18 @@ def add_travel(rows, key, sport, league, wins):
             r["body"] = 13.0
 
 
+def add_bias(rows, k=10.0):
+    """Each side's season-long (result - market chance), shrunk toward zero by
+    k phantom games: does the market keep mispricing the same teams?"""
+    hist = {}
+    for r in rows:                                  # rows are in date order
+        for side in ("home", "away"):
+            h = hist.get(r[side], [])
+            r["bias_" + side[0]] = sum(h) / (len(h) + k)
+        hist.setdefault(r["home"], []).append(r["home_won"] - r["pc"])
+        hist.setdefault(r["away"], []).append((1 - r["home_won"]) - (1 - r["pc"]))
+
+
 def add_form(rows, n=8):
     """Each side's average (result - market chance) over its previous n games:
     is a team beating its prices, and does the market catch up too slowly?"""
@@ -231,6 +243,8 @@ def feats(r, mean_total, use):
         x.append(zc - lg(r["po"]))
     if "spread" in use:
         x.append(lg(r["ps"]) - zc)
+    if "bias" in use:
+        x.append(r.get("bias_h", 0.0) - r.get("bias_a", 0.0))
     if "travel" in use:
         km = r.get("km", 0.0) / 1000
         x.append(km)
@@ -309,6 +323,7 @@ def main():
         rows.sort(key=lambda r: r["date"])
         add_rest(rows, all_games)
         add_form(rows)
+        add_bias(rows)
         try:
             add_travel(rows, key, sport, league, wins)
         except Exception as ex:                      # travel is optional
@@ -329,6 +344,7 @@ def main():
         # "home": only a home-side adjustment on top of the close (intercept)
         for name, use in (("home", set()), ("drift", {"drift"}), ("spread", {"spread"}), ("total", {"total"}),
                           ("rest", {"rest"}), ("form", {"form"}), ("travel", {"travel"}),
+                          ("bias", {"bias"}),
                           ("all", {"drift", "spread", "total", "rest", "form"})):
             w = fit_logit([feats(r, mt, use) for r in fit], [r["home_won"] for r in fit])
             probs = [1 / (1 + math.exp(-sum(a * b for a, b in zip(w, feats(r, mt, use)))))
@@ -354,6 +370,13 @@ def main():
                 h, l = score(rs, pr)
                 dv.setdefault(name, {})[part] = dict(logloss=l, bands=bands(rs, pr))
         res["devig"] = dv
+        pw = lambda r: dv_power(r["ih"], r["ia"])
+        w = fit_logit([[1.0, lg(pw(r))] for r in fit], [r["home_won"] for r in fit])
+        pr = [1 / (1 + math.exp(-(w[0] + w[1] * lg(pw(r))))) for r in test]
+        h, l = score(test, pr)
+        res["power_stretch"] = dict(weights=[round(x, 3) for x in w], test_logloss=l,
+                                    power_logloss=dv["power"]["test"]["logloss"],
+                                    bands=bands(test, pr))
         report[key] = res
         print(key, json.dumps(res), flush=True)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
