@@ -974,10 +974,10 @@
     "hit": 81.2
    },
    "ufc": {
-    "all_hit": 65.3,
+    "all_hit": 64.5,
     "calls": 20,
     "cutoff": 0.75,
-    "games": 75,
+    "games": 76,
     "hit": 85.0
    },
    "wnba": {
@@ -996,9 +996,9 @@
    }
   },
   "clv": {
-   "avg": -0.63,
-   "beat": 38.2,
-   "n": 34
+   "avg": -0.64,
+   "beat": 37.1,
+   "n": 35
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1334,6 +1334,14 @@
    },
    {
     "against_market": false,
+    "league": "ufc",
+    "pick": "Cody Chovancek",
+    "price": "-125",
+    "said": 53.2,
+    "why": "the book had my side favoured too \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
     "league": "uru",
     "pick": "Juventud",
     "price": null,
@@ -1478,10 +1486,11 @@
    {
     "killed_by": [
      "Under 48.5 points",
-     "Under 48.5 points"
+     "Under 48.5 points",
+     "Cody Chovancek to win"
     ],
     "legs": 9,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 2
@@ -1529,11 +1538,11 @@
    }
   ],
   "picks": {
-   "hit": 72.6,
-   "lost": 51,
-   "n": 186,
-   "roi": 3.8,
-   "said": 71.5,
+   "hit": 72.2,
+   "lost": 52,
+   "n": 187,
+   "roi": 0.9,
+   "said": 71.4,
    "won": 135
   },
   "picks_by_league": {
@@ -1817,6 +1826,14 @@
     "said": 77.0,
     "won": 4
    },
+   "ufc": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 53.2,
+    "won": 0
+   },
    "uru": {
     "hit": 66.7,
     "lost": 1,
@@ -1849,8 +1866,8 @@
     "said_price": null,
     "won": 0
    },
-   "n": 6,
-   "said": 80.7,
+   "n": 7,
+   "said": 76.9,
    "won": 4
   },
   "strong": {
@@ -1871,10 +1888,10 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.7,
-    "lost": 71,
-    "n": 220,
-    "roi": -2.1,
+    "hit": 67.4,
+    "lost": 72,
+    "n": 221,
+    "roi": -2.6,
     "said": 61.1,
     "won": 149
    }
