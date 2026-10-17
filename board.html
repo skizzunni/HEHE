@@ -1809,7 +1809,45 @@ buildTabs(); render(); drawSlip();
   // so no cache can hand back the old copy. iOS freezes timers in background
   // tabs, so also check the moment the tab is shown again.
   var built = (typeof D === "object" && D.results && D.results.captured) || null;
-  var tried = null;
+  var tried = null, pendingBuild = null, lastTouch = Date.now(), IDLE_MS = 180000;
+  ["click", "touchstart", "scroll", "keydown"].forEach(function (ev) {
+    window.addEventListener(ev, function () { lastTouch = Date.now(); }, { passive: true });
+  });
+  function go() {
+    var t = pendingBuild;
+    if (!t || tried === t) return;
+    tried = t;
+    // remember where the reader was, so the new page opens on the same view
+    try {
+      sessionStorage.setItem("view", JSON.stringify({
+        slot: typeof slot !== "undefined" ? slot : null,
+        league: typeof league !== "undefined" ? league : null,
+        y: window.scrollY, at: Date.now() }));
+    } catch (e) {}
+    location.replace(location.pathname + "?v=" + encodeURIComponent(t) + location.hash);
+  }
+  function offer() {
+    if (document.getElementById("newBuild")) return;
+    var b = document.createElement("button");
+    b.id = "newBuild"; b.type = "button";
+    b.textContent = "New update \u2014 tap to refresh";
+    b.style.cssText = "position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:50;"
+      + "padding:10px 16px;border-radius:20px;border:0;font:inherit;font-weight:600;"
+      + "background:var(--ink,#111);color:var(--bg,#fff);box-shadow:0 2px 10px rgba(0,0,0,.25)";
+    b.onclick = go;
+    document.body.appendChild(b);
+  }
+  // reopen the view the reader had before an update reload
+  try {
+    var v = JSON.parse(sessionStorage.getItem("view") || "null");
+    sessionStorage.removeItem("view");
+    if (v && Date.now() - v.at < 120000 && v.slot) {
+      if (v.league && typeof league !== "undefined") league = v.league;
+      var btn = document.querySelector('.days [data-slot="' + v.slot + '"]');
+      if (btn) btn.click();
+      setTimeout(function () { window.scrollTo(0, v.y || 0); }, 50);
+    }
+  } catch (e) {}
   function check() {
     fetch("build.txt?" + Date.now(), { cache: "no-store" })
       .then(function (r) { return r.ok ? r.text() : null; })
@@ -1822,9 +1860,12 @@ buildTabs(); render(); drawSlip();
         // copy, stop rather than loop
         var already = location.search.indexOf("v=" + encodeURIComponent(t)) >= 0;
         if (latest - built > 120000 && tried !== t && !already) {
-          tried = t;
-          var u = location.pathname + "?v=" + encodeURIComponent(t) + location.hash;
-          location.replace(u);
+          pendingBuild = t;
+          // Reload only when nobody is looking at the page (hidden tab, or no
+          // touch, click or scroll for IDLE_MS). Otherwise offer a button:
+          // reloading under someone's finger reset the tab they were reading.
+          if (document.visibilityState === "hidden" || Date.now() - lastTouch > IDLE_MS) go();
+          else offer();
         }
       })
       .catch(function () { /* offline, or not served from Pages */ });
@@ -1916,7 +1957,10 @@ buildTabs(); render(); drawSlip();
         })
         .catch(function () { /* transient: try again next tick */ })
         .then(function () {
-          if (--pending === 0 && touched && typeof renderResults === "function") {
+          // only when Results is the open tab: this used to paint Results over
+          // whatever was on screen (Locks, props) once a minute
+          if (--pending === 0 && touched && typeof renderResults === "function"
+              && typeof slot !== "undefined" && slot === "results") {
             try { renderResults(); } catch (err) { /* leave the last good render */ }
           }
         });
