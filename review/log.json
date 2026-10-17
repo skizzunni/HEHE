@@ -953,11 +953,11 @@
     "hit": 86.7
    },
    "ncaaf": {
-    "all_hit": 82.1,
-    "calls": 422,
+    "all_hit": 81.9,
+    "calls": 423,
     "cutoff": 0.55,
-    "games": 463,
-    "hit": 84.4
+    "games": 464,
+    "hit": 84.2
    },
    "nfl": {
     "all_hit": 62.0,
@@ -996,9 +996,9 @@
    }
   },
   "clv": {
-   "avg": -0.76,
-   "beat": 37.9,
-   "n": 29
+   "avg": -0.66,
+   "beat": 40.0,
+   "n": 30
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1007,8 +1007,8 @@
     "Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49"
    ],
    "n": 11,
-   "open": 5,
-   "won": 5
+   "open": 4,
+   "won": 6
   },
   "losses": [
    {
@@ -1222,6 +1222,14 @@
    {
     "against_market": false,
     "league": "ncaaf",
+    "pick": "Maryland Terrapins",
+    "price": "-218",
+    "said": 68.0,
+    "why": "margin 7 \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
     "pick": "Bowling Green Falcons",
     "price": "-238",
     "said": 69.8,
@@ -1383,10 +1391,11 @@
   "lottery": [
    {
     "killed_by": [
-     "Under 75.5 points"
+     "Under 75.5 points",
+     "Under 65.5 points"
     ],
     "legs": 12,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "100",
     "won": 3
@@ -1434,10 +1443,11 @@
    },
    {
     "killed_by": [
+     "Under 48.5 points",
      "Under 48.5 points"
     ],
     "legs": 9,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
     "won": 2
@@ -1477,10 +1487,10 @@
    }
   ],
   "picks": {
-   "hit": 73.1,
-   "lost": 46,
-   "n": 171,
-   "roi": 12.3,
+   "hit": 72.7,
+   "lost": 47,
+   "n": 172,
+   "roi": 8.5,
    "said": 71.4,
    "won": 125
   },
@@ -1670,10 +1680,10 @@
     "won": 0
    },
    "ncaaf": {
-    "hit": 76.9,
-    "lost": 3,
-    "n": 13,
-    "roi": 9.2,
+    "hit": 71.4,
+    "lost": 4,
+    "n": 14,
+    "roi": 0.1,
     "said": 67.8,
     "won": 10
    },
@@ -1794,10 +1804,10 @@
    "won": 4
   },
   "strong": {
-   "hit": 81.1,
-   "lost": 17,
-   "n": 90,
-   "roi": 2.6,
+   "hit": 80.2,
+   "lost": 18,
+   "n": 91,
+   "roi": -3.8,
    "said": 76.9,
    "won": 73
   },
@@ -1811,10 +1821,10 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.4,
-    "lost": 68,
-    "n": 215,
-    "roi": -1.1,
+    "hit": 68.1,
+    "lost": 69,
+    "n": 216,
+    "roi": -1.6,
     "said": 60.9,
     "won": 147
    }
@@ -1828,10 +1838,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4374,
-    "market_only": 0.4374,
-    "model_only": 0.4694,
-    "n": 384,
+    "logloss": 0.439,
+    "market_only": 0.439,
+    "model_only": 0.4708,
+    "n": 385,
     "weight": 0.05
    },
    "nfl": {
