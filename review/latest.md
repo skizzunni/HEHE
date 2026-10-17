@@ -1,8 +1,8 @@
 # Review 2026-10-17
 
-Picks 130-49 (72.6% vs 71.4% claimed, ROI +6.1%).
-Strong calls 76-19 (80.0% vs 77.0% claimed).
-Closing line value: -0.72 points on 32 picks; beat the close on 37.5%.
+Picks 131-49 (72.8% vs 71.4% claimed, ROI +7.0%).
+Strong calls 77-19 (80.2% vs 76.9% claimed).
+Closing line value: -0.63 points on 33 picks; beat the close on 39.4%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
 - LOST atp Luka Pavlovic at 63.3%: lost 1-2 in sets · took it the distance · called at 63%
@@ -52,7 +52,7 @@ Closing line value: -0.72 points on 32 picks; beat the close on 37.5%.
 - LOST wta Jeline Vandromme at 63.7%: lost 1-1 in sets · took it the distance · called at 64%
 - LOST wta Magdalena Frech at 65.4%: lost 1-1 in sets · took it the distance · called at 65%
 - LOST wta Mananchaya Sawangkaew at 57.4%: lost 0-2 in sets · never won a set · called at 57%
-With the market 67.9% (218); against it 37.8% (45).
+With the market 68.0% (219); against it 37.8% (45).
 Locks 7/11 won, 2 open; lost: Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49; Under 56.5 points (Charlotte 49ers at Temple Owls) Charlotte 49ers 38 - Temple Owls 31.
 Lottery 100: lost (4/12 legs won, killed by Under 75.5 points, Under 65.5 points)
 Lottery 100: lost (0/6 legs won, killed by Under 35.5 points, Under 50.5 points)
@@ -65,5 +65,5 @@ Lottery 10k+50: lost (5/12 legs won, killed by Under 65.5 points, Under 38.5 poi
 Lottery 10k+100: lost (5/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Props 4/6 vs 80.7% claimed.
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.0% on 425 of 466, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 78, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 65% -> 81.4% on 102 of 184
-Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=387), nfl 0.40 (n=79), nhl 0.05 (n=78), wnba 0.30 (n=46)
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.0% on 426 of 467, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 78, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 65% -> 81.4% on 102 of 184
+Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=388), nfl 0.40 (n=79), nhl 0.05 (n=78), wnba 0.30 (n=46)
