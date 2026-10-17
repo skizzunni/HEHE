@@ -215,7 +215,10 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
     # FanDuel player props compete with the game lines: per game, the lock is
     # the likeliest of all of them. A prop's chance is FanDuel's own price,
     # de-vigged across both sides where it lists both (fd_props.py).
-    ok = {r["id"]: r for rs in rows.values() for r in rs}
+    # props may come from any league FanDuel prices (UFC fights included),
+    # not only the ones whose game lines it lists on a page
+    ok = {r["id"]: r for lg, rs in (slot_rows or {}).items() for r in rs
+          if _eligible(r, day, now)}
     for pg in prop_games or []:
         row = ok.get(pg.get("id"))
         if not row:

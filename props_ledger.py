@@ -38,6 +38,7 @@ import json
 import os
 import re
 import time
+import sys
 import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -200,6 +201,9 @@ def offered(league, market):
 
 
 def gradable(league, market):
+    if league == "ufc":
+        import ufc_props
+        return market in ufc_props.MARKETS
     return market in (MARKETS.get(league) or {})
 
 
@@ -345,6 +349,14 @@ def box_stats(sm):
 
 def grade():
     book = load()
+    # UFC fights grade from ESPN's MMA results, not a box score
+    ufc = [e for e in book.values() if e["status"] == "open" and e.get("league") == "ufc"]
+    if ufc:
+        try:
+            import ufc_props
+            ufc_props.grade(ufc)
+        except Exception as ex:                            # never block the rest
+            print(f"props: ufc grading failed: {ex}", file=sys.stderr)
     by_game = {}
     for k, e in book.items():
         if e["status"] == "open":

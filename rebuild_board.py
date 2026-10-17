@@ -249,6 +249,11 @@ def snapshot():
         out["props"] = {}
         for slot in ("today", "tomorrow"):
             games = player_props.for_slot(d._STATE["slots"][slot], labels)
+            try:
+                import ufc_props
+                games += ufc_props.for_slot(d._STATE["slots"][slot], labels)
+            except Exception as ex:
+                print(f"props: ufc failed: {ex}", file=sys.stderr)
             out["props"][slot] = dict(games=games,
                                       tickets=player_props.prop_tickets(games))
             mega = player_props.mega_ticket(games)
