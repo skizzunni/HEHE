@@ -1,6 +1,6 @@
 # Review 2026-10-17
 
-Picks 98-38 (72.1% vs 71.9% claimed, ROI +0.2%).
+Picks 98-39 (71.5% vs 71.9% claimed, ROI +0.2%).
 Strong calls 57-14 (80.3% vs 78.2% claimed).
 Closing line value: +0.45 points on 12 picks; beat the close on 50.0%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
@@ -24,6 +24,7 @@ Closing line value: +0.45 points on 12 picks; beat the close on 50.0%.
 - LOST ita2 Modena at 77.6%: margin 1 · called at 78%
 - LOST ita Napoli at 77.4%: margin 1 · called at 77%
 - LOST jpn Kashiwa Reysol at 80.2%: margin 2 · called at 80%
+- LOST ksa Neom SC at 74.1%: margin 1 · called at 74%
 - LOST ned PSV Eindhoven at 62.4%: margin 1 · called at 62%
 - LOST nor Kristiansund BK at 63.0%: margin 3 · called at 63%
 - LOST rsa Golden Arrows at 73.5%: margin 1 · called at 74%
