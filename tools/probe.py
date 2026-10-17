@@ -1,16 +1,19 @@
-"""Feed probe, run on GitHub's runners. Round 28: the full shape of a past
-NFL 'Anytime Touchdown Scorer' prop item, so td_lab reads its price."""
+"""Feed probe, run on GitHub's runners. Round 29: tonight's finished UFC
+fights as ESPN reports them -- why did 'Steven Koslow to win' grade void?"""
 import json
 import sys
 
 sys.path.insert(0, ".")
-import player_props as PP  # noqa: E402
-import dashboard as D  # noqa: E402
+import ufc_props as U  # noqa: E402
 
-sb = D.get(f"{D.ESPN}/football/nfl/scoreboard?dates=20261012")
-eid = sb["events"][0]["id"]
-items = PP.raw_items("nfl", eid)
-td = [it for it in items if "Anytime Touchdown" in ((it.get("type") or {}).get("name") or "")]
-print(eid, len(items), "anytime td items", len(td))
-for it in td[:2]:
-    print(json.dumps(it)[:1500])
+for day in ("20261017", "20261018"):
+    sb = U._scoreboard(day)
+    for ev in sb.get("events") or []:
+        for c in ev.get("competitions") or []:
+            st = (c.get("status") or {}).get("type") or {}
+            if not st.get("completed"):
+                continue
+            who = [((x.get("athlete") or {}).get("displayName"), x.get("winner")) for x in c.get("competitors") or []]
+            det = [((d.get("type") or {}).get("text")) for d in (c.get("details") or [])[:4]]
+            print(day, c.get("id"), who, "| details:", det, "| period", (c.get("status") or {}).get("period"),
+                  (c.get("status") or {}).get("displayClock"), "| result():", U.result(c))
