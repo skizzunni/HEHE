@@ -1,0 +1,48 @@
+# Backtests anytime-TD chances against NFL box scores (tools/td_lab.py)
+name: td-lab
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '47 10 * * 2'
+  push:
+    branches: [claude/mlb-picks-review-jlx9w1]
+    paths:
+      - 'tools/td_lab.py'
+      - '.github/workflows/td-lab.yml'
+concurrency:
+  group: td-lab
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/mlb-picks-review-jlx9w1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: .cache/bt
+          key: tdlab-${{ github.run_id }}
+          restore-keys: |
+            edgelab-
+            backtest-
+      - run: python3 tools/td_lab.py
+      - name: Commit the results
+        run: |
+          git add -f data/td_lab.json
+          if git diff --cached --quiet; then echo "unchanged"; exit 0; fi
+          git config user.name  "board bot"
+          git config user.email "board-bot@users.noreply.github.com"
+          git commit -m "TD lab results [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin claude/mlb-picks-review-jlx9w1 \
+              && git push origin HEAD:claude/mlb-picks-review-jlx9w1 && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
