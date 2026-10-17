@@ -974,17 +974,17 @@
     "hit": 81.2
    },
    "ufc": {
-    "all_hit": 64.5,
-    "calls": 20,
+    "all_hit": 63.6,
+    "calls": 21,
     "cutoff": 0.75,
-    "games": 76,
-    "hit": 85.0
+    "games": 77,
+    "hit": 81.0
    },
    "wnba": {
-    "all_hit": 73.9,
+    "all_hit": 74.5,
     "calls": 31,
     "cutoff": 0.625,
-    "games": 46,
+    "games": 47,
     "hit": 77.4
    },
    "wta": {
@@ -996,9 +996,9 @@
    }
   },
   "clv": {
-   "avg": -0.64,
-   "beat": 37.1,
-   "n": 35
+   "avg": -0.61,
+   "beat": 37.8,
+   "n": 37
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1335,6 +1335,14 @@
    {
     "against_market": false,
     "league": "ufc",
+    "pick": "Melissa Croden",
+    "price": "-360",
+    "said": 75.6,
+    "why": "the book had my side favoured too \u00b7 called at 76%"
+   },
+   {
+    "against_market": false,
+    "league": "ufc",
     "pick": "Cody Chovancek",
     "price": "-125",
     "said": 53.2,
@@ -1538,12 +1546,12 @@
    }
   ],
   "picks": {
-   "hit": 72.3,
-   "lost": 52,
-   "n": 188,
-   "roi": 0.9,
-   "said": 71.4,
-   "won": 136
+   "hit": 72.1,
+   "lost": 53,
+   "n": 190,
+   "roi": 0.1,
+   "said": 71.3,
+   "won": 137
   },
   "picks_by_league": {
    "arg": {
@@ -1836,10 +1844,10 @@
    },
    "ufc": {
     "hit": 0.0,
-    "lost": 1,
-    "n": 1,
+    "lost": 2,
+    "n": 2,
     "roi": -100.0,
-    "said": 53.2,
+    "said": 64.4,
     "won": 0
    },
    "uru": {
@@ -1849,6 +1857,14 @@
     "roi": null,
     "said": 70.9,
     "won": 2
+   },
+   "wnba": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 74.1,
+    "said": 55.6,
+    "won": 1
    },
    "wsl": {
     "hit": 0.0,
@@ -1879,10 +1895,10 @@
    "won": 5
   },
   "strong": {
-   "hit": 79.6,
-   "lost": 20,
-   "n": 98,
-   "roi": -4.5,
+   "hit": 78.8,
+   "lost": 21,
+   "n": 99,
+   "roi": -9.3,
    "said": 77.0,
    "won": 78
   },
@@ -1896,12 +1912,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.4,
-    "lost": 72,
-    "n": 221,
+    "hit": 67.3,
+    "lost": 73,
+    "n": 223,
     "roi": -2.6,
     "said": 61.1,
-    "won": 149
+    "won": 150
    }
   },
   "weights": {
@@ -1934,10 +1950,10 @@
     "weight": 0.05
    },
    "wnba": {
-    "logloss": 0.5247,
-    "market_only": 0.5258,
-    "model_only": 0.525,
-    "n": 46,
+    "logloss": 0.526,
+    "market_only": 0.5273,
+    "model_only": 0.5262,
+    "n": 47,
     "weight": 0.3
    }
   }
