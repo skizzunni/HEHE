@@ -1,8 +1,8 @@
 # Review 2026-10-17
 
-Picks 98-39 (71.5% vs 71.9% claimed, ROI +0.2%).
-Strong calls 57-14 (80.3% vs 78.2% claimed).
-Closing line value: +0.45 points on 12 picks; beat the close on 50.0%.
+Picks 103-39 (72.5% vs 72.0% claimed, ROI +5.2%).
+Strong calls 59-14 (80.8% vs 78.3% claimed).
+Closing line value: -0.15 points on 14 picks; beat the close on 50.0%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
 - LOST atp Luka Pavlovic at 63.3%: lost 1-2 in sets · took it the distance · called at 63%
@@ -42,7 +42,7 @@ Closing line value: +0.45 points on 12 picks; beat the close on 50.0%.
 - LOST wta Jeline Vandromme at 63.7%: lost 1-1 in sets · took it the distance · called at 64%
 - LOST wta Magdalena Frech at 65.4%: lost 1-1 in sets · took it the distance · called at 65%
 - LOST wta Mananchaya Sawangkaew at 57.4%: lost 0-2 in sets · never won a set · called at 57%
-With the market 67.2% (198); against it 37.8% (45).
+With the market 67.5% (200); against it 37.8% (45).
 Locks 0/11 won, 11 open.
 Lottery 100: open (0/12 legs won)
 Lottery 100: open (0/6 legs won)
