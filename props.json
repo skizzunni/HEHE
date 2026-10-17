@@ -439,6 +439,22 @@
   "price": "-575",
   "status": "open"
  },
+ "mls:761878|225567|Tackles|1+": {
+  "aid": "225567",
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "mls:761878",
+  "imp": 0.9333,
+  "label": "Niklas Dorsch: 1+ Tackles",
+  "league": "mls",
+  "line": "1+",
+  "market": "Tackles",
+  "name": "Niklas Dorsch",
+  "p": 0.8723,
+  "p_fair": null,
+  "price": "-1400",
+  "status": "ungradable"
+ },
  "mls:761879|125824|Anytime Goalscorer|": {
   "aid": "125824",
   "date": "2026-10-17",
@@ -517,6 +533,54 @@
   "p": 0.8956,
   "p_fair": null,
   "price": "-2300",
+  "status": "ungradable"
+ },
+ "mls:761882|n:vancouver whitecaps|Team Total Goals|0.5": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "mls:761882",
+  "imp": 0.9296,
+  "label": "Vancouver Whitecaps: 0.5 Team Total Goals",
+  "league": "mls",
+  "line": "0.5",
+  "market": "Team Total Goals",
+  "name": "Vancouver Whitecaps",
+  "p": 0.8688,
+  "p_fair": null,
+  "price": "-1320",
+  "status": "ungradable"
+ },
+ "mls:761883|219270|Tackles|1+": {
+  "aid": "219270",
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "mls:761883",
+  "imp": 0.8462,
+  "label": "Marcelo Saracchi: 1+ Tackles",
+  "league": "mls",
+  "line": "1+",
+  "market": "Tackles",
+  "name": "Marcelo Saracchi",
+  "p": 0.7908,
+  "p_fair": null,
+  "price": "-550",
+  "status": "ungradable"
+ },
+ "mls:761884|274906|Tackles|1+": {
+  "aid": "274906",
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "mls:761884",
+  "imp": 0.8824,
+  "label": "Emir Karic: 1+ Tackles",
+  "league": "mls",
+  "line": "1+",
+  "market": "Tackles",
+  "name": "Emir Karic",
+  "p": 0.8246,
+  "p_fair": null,
+  "price": "-750",
   "status": "ungradable"
  },
  "mls:761885|216617|Tackles|1+": {
@@ -1963,6 +2027,22 @@
   "price": "-1200",
   "status": "open"
  },
+ "nhl:401892529|n:mason mctavish|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "nhl:401892529",
+  "imp": 0.7436,
+  "label": "Mason McTavish: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Mason McTavish",
+  "p": 0.7068,
+  "p_fair": null,
+  "price": "-290",
+  "status": "open"
+ },
  "nhl:401892529|n:ryan oreilly|Shots on Goal|1+": {
   "aid": null,
   "date": "2026-10-17",
@@ -1977,6 +2057,22 @@
   "p": 0.8426,
   "p_fair": null,
   "price": "-780",
+  "status": "open"
+ },
+ "nhl:401892529|n:steven stamkos|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "nhl:401892529",
+  "imp": 0.7368,
+  "label": "Steven Stamkos: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Steven Stamkos",
+  "p": 0.7004,
+  "p_fair": null,
+  "price": "-280",
   "status": "open"
  },
  "nhl:401892530|n:alex laferriere|Shots on Goal|2+": {
@@ -2153,6 +2249,22 @@
   "p": 0.8735,
   "p_fair": null,
   "price": "-1450",
+  "status": "open"
+ },
+ "nhl:401892531|n:nick schmaltz|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "nhl:401892531",
+  "imp": 0.7183,
+  "label": "Nick Schmaltz: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Nick Schmaltz",
+  "p": 0.6828,
+  "p_fair": null,
+  "price": "-255",
   "status": "open"
  },
  "nhl:401892531|n:vasily podkolzin|Shots on Goal|1+": {
@@ -3196,7 +3308,8 @@
   "p": 0.8448,
   "p_fair": null,
   "price": "-720",
-  "status": "open"
+  "status": "won",
+  "value": 1.43
  },
  "ufc:401911807|n:nick galanti|Method|Submission": {
   "aid": null,
@@ -3212,7 +3325,8 @@
   "p": 0.4899,
   "p_fair": null,
   "price": "-135",
-  "status": "open"
+  "status": "won",
+  "value": 1.43
  },
  "ufc:401911807|n:nick galanti|Winner|win": {
   "aid": null,
@@ -3228,7 +3342,8 @@
   "p": 0.8505,
   "p_fair": null,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 1.43
  },
  "ufc:401914039|n:steven koslow|Winner|win": {
   "aid": null,

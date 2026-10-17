@@ -954,10 +954,10 @@
    },
    "ncaaf": {
     "all_hit": 81.6,
-    "calls": 431,
+    "calls": 435,
     "cutoff": 0.55,
-    "games": 473,
-    "hit": 84.0
+    "games": 477,
+    "hit": 83.9
    },
    "nfl": {
     "all_hit": 62.0,
@@ -974,11 +974,11 @@
     "hit": 83.3
    },
    "ufc": {
-    "all_hit": 65.0,
-    "calls": 21,
+    "all_hit": 65.4,
+    "calls": 22,
     "cutoff": 0.75,
-    "games": 80,
-    "hit": 81.0
+    "games": 81,
+    "hit": 81.8
    },
    "wnba": {
     "all_hit": 74.5,
@@ -996,9 +996,9 @@
    }
   },
   "clv": {
-   "avg": -0.48,
-   "beat": 38.8,
-   "n": 49
+   "avg": -0.35,
+   "beat": 40.7,
+   "n": 54
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1256,6 +1256,14 @@
    {
     "against_market": false,
     "league": "ncaaf",
+    "pick": "Duke Blue Devils",
+    "price": "-155",
+    "said": 62.3,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 62%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
     "pick": "Pittsburgh Panthers",
     "price": "-225",
     "said": 63.3,
@@ -1500,7 +1508,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -1516,11 +1524,12 @@
    {
     "killed_by": [
      "Under 39.5 points",
+     "Under 38.5 points",
      "Under 35.5 points",
      "Under 50.5 points"
     ],
     "legs": 9,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 0
@@ -1535,7 +1544,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -1580,12 +1589,12 @@
    }
   ],
   "picks": {
-   "hit": 72.6,
-   "lost": 57,
-   "n": 208,
-   "roi": 8.8,
-   "said": 71.1,
-   "won": 151
+   "hit": 72.8,
+   "lost": 58,
+   "n": 213,
+   "roi": 8.0,
+   "said": 71.2,
+   "won": 155
   },
   "picks_by_league": {
    "arg": {
@@ -1805,12 +1814,12 @@
     "won": 0
    },
    "ncaaf": {
-    "hit": 73.9,
-    "lost": 6,
-    "n": 23,
-    "roi": 5.5,
-    "said": 70.4,
-    "won": 17
+    "hit": 74.1,
+    "lost": 7,
+    "n": 27,
+    "roi": 4.2,
+    "said": 70.7,
+    "won": 20
    },
    "ned": {
     "hit": 66.7,
@@ -1909,12 +1918,12 @@
     "won": 4
    },
    "ufc": {
-    "hit": 60.0,
+    "hit": 66.7,
     "lost": 2,
-    "n": 5,
-    "roi": -4.9,
-    "said": 62.3,
-    "won": 3
+    "n": 6,
+    "roi": -2.1,
+    "said": 66.2,
+    "won": 4
    },
    "uru": {
     "hit": 66.7,
@@ -1956,17 +1965,17 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 33,
-   "said": 76.8,
-   "won": 26
+   "n": 36,
+   "said": 76.5,
+   "won": 29
   },
   "strong": {
    "hit": 79.6,
-   "lost": 22,
-   "n": 108,
-   "roi": -2.5,
-   "said": 76.9,
-   "won": 86
+   "lost": 23,
+   "n": 113,
+   "roi": -2.0,
+   "said": 76.8,
+   "won": 90
   },
   "vs_market_14d": {
    "against": {
@@ -1978,12 +1987,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.5,
-    "lost": 74,
-    "n": 235,
+    "hit": 68.8,
+    "lost": 75,
+    "n": 240,
     "roi": -0.7,
-    "said": 61.6,
-    "won": 161
+    "said": 61.9,
+    "won": 165
    }
   },
   "weights": {
@@ -1995,10 +2004,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4481,
-    "market_only": 0.4481,
-    "model_only": 0.4779,
-    "n": 394,
+    "logloss": 0.448,
+    "market_only": 0.448,
+    "model_only": 0.4782,
+    "n": 398,
     "weight": 0.05
    },
    "nfl": {
