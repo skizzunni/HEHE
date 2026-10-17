@@ -16,7 +16,9 @@ That removes the margin in one consistent step and ties every player's number
 to how much scoring the game is expected to have. Picks are recorded in the
 props ledger and graded from the box score like every other prop.
 """
+import json
 import math
+import os
 
 import fanduel
 import fd_props
@@ -57,7 +59,7 @@ def for_game(row, league, FD):
     out.sort(key=lambda x: -x["p"])
     return dict(id=row["id"], lg=league.upper() if league == "nfl" else "NCAA FB",
                 match=row.get("label", ""), tip=row.get("tip"), total=total, basis=basis,
-                players=out[:SHOW])
+                players=out[:SHOW], everyone=out)
 
 
 def for_slot(board_slot):
@@ -77,6 +79,63 @@ def for_slot(board_slot):
     # NFL first, then by start time
     games.sort(key=lambda g: (g["lg"] != "NFL", g.get("tip") or ""))
     return games
+
+
+HISTORY = os.path.join(os.path.dirname(os.path.abspath(__file__)), "data", "td_history.json")
+
+
+def _load():
+    try:
+        with open(HISTORY) as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return {}
+
+
+def log(games, day):
+    """Every listed player's chance, every game, at the latest price before
+    kickoff -- ESPN wipes prop prices once a game is over, so this is the only
+    way to build a touchdown history to test methods and player form on."""
+    book = _load()
+    day = str(day)
+    if len(day) == 8:
+        day = f"{day[:4]}-{day[4:6]}-{day[6:]}"
+    for g in games:
+        for p in g.get("everyone") or []:
+            k = f'{g["id"]}|{p["name"]}'
+            e = book.get(k)
+            if e and e.get("status") != "open":
+                continue
+            book[k] = dict(gid=g["id"], name=p["name"], date=day, imp=p["imp"], p=p["p"],
+                           price=p["price"], total=g.get("total"), status="open")
+    with open(HISTORY, "w") as fh:
+        json.dump(book, fh, indent=0, sort_keys=True)
+
+
+def grade():
+    """Settle logged touchdown chances from ESPN box scores."""
+    import props_ledger as PL
+    book = _load()
+    open_by = {}
+    for k, e in book.items():
+        if e["status"] == "open":
+            open_by.setdefault(e["gid"], []).append(e)
+    for gid, es in list(open_by.items())[:40]:
+        league, eid = gid.split(":", 1)
+        sm = PL.summary(league, eid)
+        if not sm or not sm.get("completed"):
+            continue
+        st = PL.box_stats(sm)
+        fn = PL.MARKETS[league][MARKET]
+        for e in es:
+            s_ = st.get("name:" + PL.norm_name(e["name"]))
+            if s_ is None:
+                e["status"] = "void"
+                continue
+            v = fn(s_)
+            e["status"] = "ungradable" if v is None else ("won" if v >= 1 else "lost")
+    with open(HISTORY, "w") as fh:
+        json.dump(book, fh, indent=0, sort_keys=True)
 
 
 def record(games, day):

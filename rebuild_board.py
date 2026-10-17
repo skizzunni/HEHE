@@ -265,6 +265,12 @@ def snapshot():
             import td_scorers
             out["td"] = {s_: td_scorers.for_slot(d._STATE["slots"][s_]) for s_ in ("today", "tomorrow")}
             td_scorers.record(out["td"]["today"], d._STATE["dates"][0])
+            td_scorers.log(out["td"]["today"], d._STATE["dates"][0])
+            td_scorers.log(out["td"]["tomorrow"], d._STATE["dates"][1])
+            td_scorers.grade()
+            for s_ in out["td"]:
+                for g_ in out["td"][s_]:
+                    g_.pop("everyone", None)      # keep the page small
             print("td scorers: " + ", ".join(f"{s_} {len(v)} games" for s_, v in out["td"].items()),
                   file=sys.stderr)
         except Exception as ex:
