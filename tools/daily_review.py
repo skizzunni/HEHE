@@ -283,6 +283,9 @@ def review_day(day, ledger, locks, lottery, props):
                      said_price=round(100 * sum(e.get("imp") or 0 for e in fair) / len(fair), 1) if fair else None)
     pr_view = dict(fair=fair_view, n=len(pr), won=sum(e["status"] == "won" for e in pr),
                    said=round(100 * sum(e.get("p") or 0 for e in pr) / len(pr), 1) if pr else None)
+    import sys
+    if ROOT not in sys.path:
+        sys.path.insert(0, ROOT)
     import calls
     strong = [e for e in todays if calls.is_call(e.get("league"), e.get("conf"))]
     return dict(day=day, picks=summarize(todays), strong=summarize(strong), clv=clv([e for e in todays if e.get("first_price")]),
