@@ -1,6 +1,6 @@
 # Review 2026-10-17
 
-Picks 1-1 (50.0% vs 73.1% claimed).
+Picks 3-1 (75.0% vs 69.5% claimed).
 Strong calls 1-0 (100.0% vs 92.9% claimed).
 - LOST wta Tyra Caterina Grant at 53.2%: lost 0-2 in sets · never won a set · called at 53%
 With the market 66.7% (186); against it 37.8% (45).
