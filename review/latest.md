@@ -1,6 +1,6 @@
 # Review 2026-10-16
 
-Picks 21-18 (53.8% vs 59.9% claimed).
+Picks 21-19 (52.5% vs 60.0% claimed).
 Strong calls 4-5 (44.4% vs 75.5% claimed).
 - LOST arg Defensa y Justicia at 55.6%: margin 1 · called at 56%
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
@@ -11,6 +11,7 @@ Strong calls 4-5 (44.4% vs 75.5% claimed).
 - LOST esp Deportivo at 51.7%: margin 0 · drawn -- a draw loses a moneyline side · called at 52%
 - LOST fra Le Mans at 53.3%: margin 3 · called at 53%
 - LOST mex2 Correcaminos UAT at 77.5%: margin 1 · called at 78%
+- LOST mex Necaxa at 61.2%: margin 2 · called at 61%
 - LOST swe IF Brommapojkarna at 64.1%: margin 2 · called at 64%
 - LOST uru Cerro at 52.7%: margin 0 · drawn -- a draw loses a moneyline side · called at 53%
 - LOST wta Maria Sakkari at 63.7%: lost 1-2 in sets · took it the distance · called at 64%
