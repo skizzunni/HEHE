@@ -1,7 +1,7 @@
 # Review 2026-10-16
 
-Picks 21-21 (50.0% vs 59.9% claimed, ROI -100.0%).
-Strong calls 4-6 (40.0% vs 74.5% claimed).
+Picks 21-22 (48.8% vs 60.4% claimed, ROI -100.0%).
+Strong calls 4-7 (36.4% vs 75.1% claimed).
 Closing line value: +0.71 points on 2 picks; beat the close on 50.0%.
 - LOST arg Defensa y Justicia at 55.6%: margin 1 · called at 56%
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
@@ -24,10 +24,11 @@ Closing line value: +0.71 points on 2 picks; beat the close on 50.0%.
 - LOST wta Jil Teichmann at 62.9%: lost 0-2 in sets · never won a set · called at 63%
 - LOST wta Julia Grabher at 69.4%: lost 0-2 in sets · never won a set · called at 69%
 - LOST wta Elizara Yaneva at 70.8%: lost 1-2 in sets · took it the distance · called at 71%
+- LOST wta Elina Avanesyan at 80.1%: lost 0-2 in sets · never won a set · called at 80%
 With the market 67.2% (183); against it 39.6% (48).
 Locks 1/5 won, 3 open.
 Lottery 100: lost (0/5 legs won, killed by Over 61.5 points)
 Props 7/8 vs 84.5% claimed.
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.4% on 59 of 103, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.9% on 410 of 449, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 80.0% on 15 of 75, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 68% -> 84.0% on 75 of 152
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.4% on 59 of 103, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.9% on 410 of 449, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 80.0% on 15 of 75, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 72% -> 87.0% on 54 of 153
 Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=372), nfl 0.40 (n=79), nhl 0.05 (n=75), wnba 0.30 (n=46)
