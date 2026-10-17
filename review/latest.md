@@ -1,7 +1,7 @@
 # Review 2026-10-17
 
-Picks 58-23 (71.6% vs 72.1% claimed, ROI +4.5%).
-Strong calls 35-8 (81.4% vs 79.8% claimed).
+Picks 61-24 (71.8% vs 72.2% claimed, ROI +4.5%).
+Strong calls 37-8 (82.2% vs 79.9% claimed).
 Closing line value: +2.18 points on 5 picks; beat the close on 60.0%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
@@ -15,6 +15,7 @@ Closing line value: +2.18 points on 5 picks; beat the close on 60.0%.
 - LOST ita2 Modena at 77.6%: margin 1 · called at 78%
 - LOST ita Napoli at 77.4%: margin 1 · called at 77%
 - LOST jpn Kashiwa Reysol at 80.2%: margin 2 · called at 80%
+- LOST rsa Golden Arrows at 73.5%: margin 1 · called at 74%
 - LOST uru Juventud at 70.6%: margin 2 · called at 71%
 - LOST wsl Arsenal at 87.1%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 87%
 - LOST wta Iga Swiatek at 83.2%: lost 0-2 in sets · never won a set · called at 83%
