@@ -1,6 +1,6 @@
 # Review 2026-10-17
 
-Picks 58-22 (72.5% vs 72.3% claimed, ROI +4.5%).
+Picks 58-23 (71.6% vs 72.1% claimed, ROI +4.5%).
 Strong calls 34-7 (82.9% vs 80.5% claimed).
 Closing line value: +2.18 points on 5 picks; beat the close on 60.0%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
@@ -19,6 +19,7 @@ Closing line value: +2.18 points on 5 picks; beat the close on 60.0%.
 - LOST wsl Arsenal at 87.1%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 87%
 - LOST wta Iga Swiatek at 83.2%: lost 0-2 in sets · never won a set · called at 83%
 - LOST wta Jelena Ostapenko at 60.6%: lost 0-2 in sets · never won a set · called at 61%
+- LOST wta Lucie Havlickova at 51.7%: lost 0-2 in sets · never won a set · called at 52%
 - LOST wta Martyna Kubka at 56.9%: lost 1-2 in sets · took it the distance · called at 57%
 - LOST wta Francesca Curmi at 50.5%: lost 0-2 in sets · never won a set · called at 50%
 - LOST wta Tyra Caterina Grant at 53.2%: lost 0-2 in sets · never won a set · called at 53%
@@ -37,5 +38,5 @@ Lottery 10k+25: open (0/12 legs won)
 Lottery 10k+50: open (0/12 legs won)
 Lottery 10k+100: open (0/12 legs won)
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.8% on 66 of 117, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.7% on 411 of 450, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 77, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 68% -> 83.5% on 91 of 183
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.8% on 66 of 117, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.7% on 411 of 450, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 77, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 65% -> 81.4% on 102 of 184
 Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=373), nfl 0.40 (n=79), nhl 0.05 (n=77), wnba 0.30 (n=46)
