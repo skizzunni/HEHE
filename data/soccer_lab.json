@@ -1,5 +1,5 @@
 {
- "run": "2026-10-16",
+ "run": "2026-10-17",
  "matches": 2229,
  "leagues": {
   "epl": {
@@ -152,5 +152,97 @@
    "win_or_draw": 97.7,
    "wod_said": 92.6
   }
- ]
+ ],
+ "power": {
+  "fit": [
+   {
+    "band": "0-45",
+    "n": 390,
+    "win": 44.6,
+    "win_said": 39.9,
+    "win_or_draw": 71.3,
+    "wod_said": 69.1
+   },
+   {
+    "band": "45-55",
+    "n": 309,
+    "win": 44.3,
+    "win_said": 49.7,
+    "win_or_draw": 78.3,
+    "wod_said": 76.4
+   },
+   {
+    "band": "55-65",
+    "n": 210,
+    "win": 62.9,
+    "win_said": 59.5,
+    "win_or_draw": 84.3,
+    "wod_said": 82.7
+   },
+   {
+    "band": "65-75",
+    "n": 123,
+    "win": 77.2,
+    "win_said": 69.5,
+    "win_or_draw": 92.7,
+    "wod_said": 88.1
+   },
+   {
+    "band": "75-100",
+    "n": 82,
+    "win": 80.5,
+    "win_said": 81.5,
+    "win_or_draw": 93.9,
+    "wod_said": 93.4
+   }
+  ],
+  "test": [
+   {
+    "band": "0-45",
+    "n": 410,
+    "win": 38.0,
+    "win_said": 40.6,
+    "win_or_draw": 69.3,
+    "wod_said": 68.1
+   },
+   {
+    "band": "45-55",
+    "n": 306,
+    "win": 53.9,
+    "win_said": 49.9,
+    "win_or_draw": 81.4,
+    "wod_said": 75.1
+   },
+   {
+    "band": "55-65",
+    "n": 226,
+    "win": 56.2,
+    "win_said": 59.6,
+    "win_or_draw": 77.0,
+    "wod_said": 81.7
+   },
+   {
+    "band": "65-75",
+    "n": 117,
+    "win": 70.1,
+    "win_said": 69.5,
+    "win_or_draw": 86.3,
+    "wod_said": 87.6
+   },
+   {
+    "band": "75-100",
+    "n": 56,
+    "win": 75.0,
+    "win_said": 79.8,
+    "win_or_draw": 92.9,
+    "wod_said": 92.6
+   }
+  ],
+  "logloss": {
+   "prop_fit": 0.6533,
+   "prop_test": 0.6675,
+   "power_fit": 0.6513,
+   "power_test": 0.6675
+  }
+ }
 }
