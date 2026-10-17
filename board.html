@@ -988,6 +988,20 @@ function drawProps(){
     + '<button type="button" data-pday="tomorrow" aria-pressed="' + (day === "tomorrow") + '">Tomorrow</button> '
     + '<input id="prq" placeholder="Filter player, team or market" value="' + esc(PRQ)
     + '" style="font:inherit;padding:4px 8px;max-width:100%"></p>';
+  // Touchdown scorers: every NFL (then college) game, likeliest first
+  const TD = ((D.td || {})[day] || []).filter(g => !q
+    || (g.match + " " + g.players.map(x => x.name).join(" ")).toLowerCase().includes(q));
+  if(TD.length){
+    html += '<h3 class="tier-h">Touchdown scorers &mdash; every game</h3>'
+      + '<p class="note">FanDuel&rsquo;s anytime-TD prices (they already carry red-zone role, injuries, '
+      + 'matchup and game script), with the margin taken out by scaling each game to the touchdowns '
+      + 'its total says to expect. Top two per game are recorded and graded from the box score.</p>'
+      + TD.map(g => '<div class="ptk"><div class="hd"><span>' + esc(g.match) + '</span><span>'
+          + esc(g.lg) + (g.tip ? ' &middot; ' + esc(g.tip) : '') + (g.total ? ' &middot; total ' + g.total : '')
+          + '</span></div><ul class="legs">'
+          + g.players.map(x => legHTML(Object.assign({kind: "prop", match: g.match, lg: g.lg}, x))).join("")
+          + '</ul></div>').join("");
+  }
   const T = (P[day] || {}).tickets || {};
   const M = (P[day] || {}).mega;
   if(M){

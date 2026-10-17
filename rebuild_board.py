@@ -261,6 +261,14 @@ def snapshot():
                 out["props"][slot]["mega"] = mega
                 # recorded with the stacks so every leg is graded
                 out["props"][slot]["tickets"]["25"] = [mega]
+        try:
+            import td_scorers
+            out["td"] = {s_: td_scorers.for_slot(d._STATE["slots"][s_]) for s_ in ("today", "tomorrow")}
+            td_scorers.record(out["td"]["today"], d._STATE["dates"][0])
+            print("td scorers: " + ", ".join(f"{s_} {len(v)} games" for s_, v in out["td"].items()),
+                  file=sys.stderr)
+        except Exception as ex:
+            print(f"td scorers failed: {ex}", file=sys.stderr)
         n = props_ledger.record(out["props"].get("today"), d._STATE["dates"][0])
         out["props_tuning"] = props_ledger.TUNING
         print(f"props: recorded {n} new legs; tuning {props_ledger.TUNING}", file=sys.stderr)
