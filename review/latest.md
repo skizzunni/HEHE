@@ -1,7 +1,7 @@
 # Review 2026-10-16
 
 Picks 21-22 (48.8% vs 60.4% claimed, ROI -100.0%).
-Strong calls 4-7 (36.4% vs 75.1% claimed).
+Strong calls 4-4 (50.0% vs 76.8% claimed).
 Closing line value: +0.71 points on 2 picks; beat the close on 50.0%.
 - LOST arg Defensa y Justicia at 55.6%: margin 1 · called at 56%
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
