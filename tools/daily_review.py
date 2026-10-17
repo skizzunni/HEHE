@@ -283,7 +283,9 @@ def review_day(day, ledger, locks, lottery, props):
                      said_price=round(100 * sum(e.get("imp") or 0 for e in fair) / len(fair), 1) if fair else None)
     pr_view = dict(fair=fair_view, n=len(pr), won=sum(e["status"] == "won" for e in pr),
                    said=round(100 * sum(e.get("p") or 0 for e in pr) / len(pr), 1) if pr else None)
-    return dict(day=day, picks=summarize(todays), clv=clv([e for e in todays if e.get("first_price")]),
+    import calls
+    strong = [e for e in todays if calls.is_call(e.get("league"), e.get("conf"))]
+    return dict(day=day, picks=summarize(todays), strong=summarize(strong), clv=clv([e for e in todays if e.get("first_price")]),
                 picks_by_league={k: summarize(v) for k, v in leagues.items()},
                 losses=losses, leaks_14d=leaks, vs_market_14d=vs_mkt,
                 locks=lk_view, lottery=lt_view, props=pr_view)
@@ -297,6 +299,9 @@ def words(r, fit):
                    + (f", ROI {p['roi']:+}%" if p.get("roi") is not None else "") + ").")
     else:
         out.append("No picks settled yet.")
+    sc = r.get("strong") or {}
+    if sc.get("n"):
+        out.append(f"Strong calls {sc['won']}-{sc['lost']} ({sc['hit']}% vs {sc['said']}% claimed).")
     c = r.get("clv") or {}
     if c.get("n"):
         out.append(f"Closing line value: {c['avg']:+} points on {c['n']} picks; beat the close on {c['beat']}%.")
