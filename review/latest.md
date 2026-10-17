@@ -1,6 +1,6 @@
 # Review 2026-10-17
 
-Picks 52-17 (75.4% vs 72.6% claimed, ROI -2.7%).
+Picks 53-17 (75.7% vs 72.5% claimed, ROI -2.7%).
 Strong calls 31-5 (86.1% vs 80.9% claimed).
 Closing line value: +2.12 points on 4 picks; beat the close on 50.0%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
@@ -32,5 +32,5 @@ Lottery 10k+25: open (0/12 legs won)
 Lottery 10k+50: open (0/12 legs won)
 Lottery 10k+100: open (0/12 legs won)
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.8% on 66 of 114, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.7% on 411 of 450, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 77, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 68% -> 83.5% on 91 of 183
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.8% on 66 of 115, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.7% on 411 of 450, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 77, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 68% -> 83.5% on 91 of 183
 Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=373), nfl 0.40 (n=79), nhl 0.05 (n=77), wnba 0.30 (n=46)
