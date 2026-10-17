@@ -953,11 +953,11 @@
     "hit": 86.7
    },
    "ncaaf": {
-    "all_hit": 81.8,
-    "calls": 430,
+    "all_hit": 81.6,
+    "calls": 431,
     "cutoff": 0.55,
-    "games": 472,
-    "hit": 84.2
+    "games": 473,
+    "hit": 84.0
    },
    "nfl": {
     "all_hit": 62.0,
@@ -974,10 +974,10 @@
     "hit": 83.3
    },
    "ufc": {
-    "all_hit": 64.6,
+    "all_hit": 65.0,
     "calls": 21,
     "cutoff": 0.75,
-    "games": 79,
+    "games": 80,
     "hit": 81.0
    },
    "wnba": {
@@ -996,9 +996,9 @@
    }
   },
   "clv": {
-   "avg": -0.54,
-   "beat": 36.2,
-   "n": 47
+   "avg": -0.48,
+   "beat": 38.8,
+   "n": 49
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1240,6 +1240,14 @@
    {
     "against_market": false,
     "league": "ncaaf",
+    "pick": "Georgia Bulldogs",
+    "price": "-1450",
+    "said": 92.9,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 93%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
     "pick": "Texas Longhorns",
     "price": "-535",
     "said": 82.0,
@@ -1473,7 +1481,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "100",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -1503,7 +1511,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 6
+    "won": 7
    },
    {
     "killed_by": [
@@ -1538,7 +1546,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+25",
-    "won": 5
+    "won": 6
    },
    {
     "killed_by": [
@@ -1549,7 +1557,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+50",
-    "won": 5
+    "won": 6
    },
    {
     "killed_by": [
@@ -1560,7 +1568,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+100",
-    "won": 5
+    "won": 6
    },
    {
     "killed_by": [],
@@ -1572,12 +1580,12 @@
    }
   ],
   "picks": {
-   "hit": 72.8,
-   "lost": 56,
-   "n": 206,
-   "roi": 9.6,
+   "hit": 72.6,
+   "lost": 57,
+   "n": 208,
+   "roi": 8.8,
    "said": 71.1,
-   "won": 150
+   "won": 151
   },
   "picks_by_league": {
    "arg": {
@@ -1797,11 +1805,11 @@
     "won": 0
    },
    "ncaaf": {
-    "hit": 77.3,
-    "lost": 5,
-    "n": 22,
-    "roi": 10.8,
-    "said": 69.4,
+    "hit": 73.9,
+    "lost": 6,
+    "n": 23,
+    "roi": 5.5,
+    "said": 70.4,
     "won": 17
    },
    "ned": {
@@ -1901,12 +1909,12 @@
     "won": 4
    },
    "ufc": {
-    "hit": 50.0,
+    "hit": 60.0,
     "lost": 2,
-    "n": 4,
-    "roi": -25.4,
-    "said": 64.3,
-    "won": 2
+    "n": 5,
+    "roi": -4.9,
+    "said": 62.3,
+    "won": 3
    },
    "uru": {
     "hit": 66.7,
@@ -1948,16 +1956,16 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 32,
-   "said": 77.5,
-   "won": 25
+   "n": 33,
+   "said": 76.8,
+   "won": 26
   },
   "strong": {
-   "hit": 80.4,
-   "lost": 21,
-   "n": 107,
-   "roi": 1.3,
-   "said": 76.8,
+   "hit": 79.6,
+   "lost": 22,
+   "n": 108,
+   "roi": -2.5,
+   "said": 76.9,
    "won": 86
   },
   "vs_market_14d": {
@@ -1970,12 +1978,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.7,
-    "lost": 73,
-    "n": 233,
-    "roi": -0.6,
-    "said": 61.5,
-    "won": 160
+    "hit": 68.5,
+    "lost": 74,
+    "n": 235,
+    "roi": -0.7,
+    "said": 61.6,
+    "won": 161
    }
   },
   "weights": {
@@ -1987,10 +1995,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4428,
-    "market_only": 0.4428,
-    "model_only": 0.4739,
-    "n": 393,
+    "logloss": 0.4481,
+    "market_only": 0.4481,
+    "model_only": 0.4779,
+    "n": 394,
     "weight": 0.05
    },
    "nfl": {
