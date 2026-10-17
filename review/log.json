@@ -953,11 +953,11 @@
     "hit": 86.7
    },
    "ncaaf": {
-    "all_hit": 82.2,
-    "calls": 411,
+    "all_hit": 82.3,
+    "calls": 414,
     "cutoff": 0.55,
-    "games": 450,
-    "hit": 84.7
+    "games": 453,
+    "hit": 84.8
    },
    "nfl": {
     "all_hit": 62.0,
@@ -996,17 +996,17 @@
    }
   },
   "clv": {
-   "avg": -0.19,
-   "beat": 43.8,
-   "n": 16
+   "avg": -0.24,
+   "beat": 44.4,
+   "n": 18
   },
   "day": "2026-10-17",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
-   "won": 0
+   "open": 10,
+   "won": 1
   },
   "losses": [
    {
@@ -1353,7 +1353,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -1369,7 +1369,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -1377,7 +1377,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -1393,40 +1393,46 @@
     "lost": 0,
     "status": "open",
     "tier": "10k",
-    "won": 0
+    "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 38.5 points"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+25",
-    "won": 0
+    "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 38.5 points"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+50",
-    "won": 0
+    "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 38.5 points"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+100",
-    "won": 0
+    "won": 1
    }
   ],
   "picks": {
-   "hit": 72.2,
+   "hit": 72.7,
    "lost": 42,
-   "n": 151,
-   "roi": 8.5,
+   "n": 154,
+   "roi": 11.2,
    "said": 71.8,
-   "won": 109
+   "won": 112
   },
   "picks_by_league": {
    "atp": {
@@ -1597,6 +1603,14 @@
     "said": 74.1,
     "won": 0
    },
+   "ncaaf": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 3,
+    "roi": 32.8,
+    "said": 69.6,
+    "won": 3
+   },
    "ned": {
     "hit": 0.0,
     "lost": 1,
@@ -1706,12 +1720,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 81.6,
+   "hit": 82.3,
    "lost": 14,
-   "n": 76,
-   "roi": 1.8,
-   "said": 78.2,
-   "won": 62
+   "n": 79,
+   "roi": 10.6,
+   "said": 77.9,
+   "won": 65
   },
   "vs_market_14d": {
    "against": {
@@ -1723,12 +1737,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.8,
+    "hit": 68.1,
     "lost": 65,
-    "n": 202,
-    "roi": -2.3,
-    "said": 60.5,
-    "won": 137
+    "n": 204,
+    "roi": -1.9,
+    "said": 60.6,
+    "won": 139
    }
   },
   "weights": {
@@ -1740,10 +1754,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4307,
-    "market_only": 0.4307,
-    "model_only": 0.4639,
-    "n": 373,
+    "logloss": 0.4302,
+    "market_only": 0.4302,
+    "model_only": 0.4635,
+    "n": 375,
     "weight": 0.05
    },
    "nfl": {
