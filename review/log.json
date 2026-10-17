@@ -932,10 +932,10 @@
  "2026-10-17": {
   "calls": {
    "atp": {
-    "all_hit": 70.7,
+    "all_hit": 70.1,
     "calls": 66,
     "cutoff": 0.65,
-    "games": 116,
+    "games": 117,
     "hit": 81.8
    },
    "mlb": {
@@ -989,9 +989,9 @@
    }
   },
   "clv": {
-   "avg": 2.12,
-   "beat": 50.0,
-   "n": 4
+   "avg": 2.18,
+   "beat": 60.0,
+   "n": 5
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1036,6 +1036,14 @@
    },
    {
     "against_market": false,
+    "league": "atp",
+    "pick": "Giovanni Mpetshi Perricard",
+    "price": null,
+    "said": 62.0,
+    "why": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 62%"
+   },
+   {
+    "against_market": false,
     "league": "efl2",
     "pick": "Luton Town",
     "price": null,
@@ -1060,11 +1068,43 @@
    },
    {
     "against_market": false,
+    "league": "ita2",
+    "pick": "Padova",
+    "price": null,
+    "said": 67.8,
+    "why": "margin 1 \u00b7 called at 68%"
+   },
+   {
+    "against_market": false,
+    "league": "ita2",
+    "pick": "Modena",
+    "price": null,
+    "said": 77.6,
+    "why": "margin 1 \u00b7 called at 78%"
+   },
+   {
+    "against_market": false,
+    "league": "ita",
+    "pick": "Napoli",
+    "price": null,
+    "said": 77.4,
+    "why": "margin 1 \u00b7 called at 77%"
+   },
+   {
+    "against_market": false,
     "league": "jpn",
     "pick": "Kashiwa Reysol",
     "price": null,
     "said": 80.2,
     "why": "margin 2 \u00b7 called at 80%"
+   },
+   {
+    "against_market": false,
+    "league": "uru",
+    "pick": "Juventud",
+    "price": null,
+    "said": 70.6,
+    "why": "margin 2 \u00b7 called at 71%"
    },
    {
     "against_market": false,
@@ -1214,20 +1254,20 @@
    }
   ],
   "picks": {
-   "hit": 76.1,
-   "lost": 17,
-   "n": 71,
-   "roi": -2.7,
-   "said": 72.2,
-   "won": 54
+   "hit": 72.5,
+   "lost": 22,
+   "n": 80,
+   "roi": 4.5,
+   "said": 72.3,
+   "won": 58
   },
   "picks_by_league": {
    "atp": {
-    "hit": 69.2,
-    "lost": 4,
-    "n": 13,
+    "hit": 64.3,
+    "lost": 5,
+    "n": 14,
     "roi": null,
-    "said": 68.5,
+    "said": 68.0,
     "won": 9
    },
    "aus": {
@@ -1318,6 +1358,22 @@
     "said": 81.1,
     "won": 1
    },
+   "ita": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 77.4,
+    "won": 0
+   },
+   "ita2": {
+    "hit": 50.0,
+    "lost": 2,
+    "n": 4,
+    "roi": null,
+    "said": 75.9,
+    "won": 2
+   },
    "jpn": {
     "hit": 87.5,
     "lost": 1,
@@ -1337,10 +1393,18 @@
    "tur": {
     "hit": 100.0,
     "lost": 0,
+    "n": 3,
+    "roi": 33.3,
+    "said": 78.1,
+    "won": 3
+   },
+   "uru": {
+    "hit": 0.0,
+    "lost": 1,
     "n": 1,
     "roi": null,
-    "said": 86.5,
-    "won": 1
+    "said": 70.6,
+    "won": 0
    },
    "wsl": {
     "hit": 0.0,
@@ -1371,12 +1435,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 86.1,
-   "lost": 5,
-   "n": 36,
+   "hit": 82.9,
+   "lost": 7,
+   "n": 41,
    "roi": -37.5,
-   "said": 80.9,
-   "won": 31
+   "said": 80.5,
+   "won": 34
   },
   "vs_market_14d": {
    "against": {
@@ -1388,12 +1452,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 66.8,
+    "hit": 67.0,
     "lost": 63,
-    "n": 190,
-    "roi": -3.2,
-    "said": 59.9,
-    "won": 127
+    "n": 191,
+    "roi": -3.0,
+    "said": 60.0,
+    "won": 128
    }
   },
   "weights": {
