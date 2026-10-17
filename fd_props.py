@@ -63,8 +63,8 @@ STATS = {
                (r"points", "Points")],
     "baseball": [(r"strikeouts", "Strikeouts Thrown"),
                  (r"home run", "Home Runs"),
-                 (r"\brbis?\b", "RBIs"),
                  (r"hits \+ runs \+ rbis", "Hits + Runs + RBIs"),
+                 (r"\brbis?\b", "RBIs"),
                  (r"\bhits?\b", "Hits"),
                  (r"\bruns?\b", "Runs")],
 }
@@ -92,6 +92,10 @@ def _stat(sport, text):
     t = text.lower()
     for pat, name in STATS.get(sport, []):
         if re.search(pat, t):
+            # a combined market ("Hits + Runs + RBIs") must never be read as
+            # one of its parts: it would be graded on that part alone
+            if " + " in t and "+" not in name:
+                return None
             return name
     return None
 
