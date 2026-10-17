@@ -31,8 +31,24 @@ except (OSError, ValueError, TypeError):
     _MIN = {}
 
 
+# Soccer picks follow the de-vigged price, which tools/soccer_lab.py found
+# honest on 1,115 unseen matches -- so a strong soccer call is one the market
+# itself puts at TARGET or better (mostly "X or draw").
+SOCCER_MIN = TARGET
+
+
+def _soccer(league):
+    try:
+        import ledger
+        return league in ledger.SOCCER
+    except Exception:
+        return False
+
+
 def call_min(league):
-    return _MIN.get(league, DEFAULT)
+    if league in _MIN:
+        return _MIN[league]
+    return SOCCER_MIN if _soccer(league) else DEFAULT
 
 
 def is_call(league, conf):
