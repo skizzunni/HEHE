@@ -1,6 +1,6 @@
 # Review 2026-10-16
 
-Picks 18-16 (52.9% vs 58.4% claimed).
+Picks 19-16 (54.3% vs 58.2% claimed).
 Strong calls 2-4 (33.3% vs 73.0% claimed).
 - LOST arg Defensa y Justicia at 55.6%: margin 1 · called at 56%
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
@@ -19,7 +19,7 @@ Strong calls 2-4 (33.3% vs 73.0% claimed).
 - LOST wta Julia Grabher at 69.4%: lost 0-2 in sets · never won a set · called at 69%
 - LOST wta Elizara Yaneva at 70.8%: lost 1-2 in sets · took it the distance · called at 71%
 With the market 68.0% (181); against it 39.6% (48).
-Locks 0/5 won, 5 open.
+Locks 0/5 won, 4 open.
 Lottery 100: open (0/5 legs won)
 Props 7/8 vs 84.5% claimed.
 
