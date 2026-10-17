@@ -114,6 +114,19 @@
     "better": false,
     "significant": false
    },
+   "bias": {
+    "hit": 57.04,
+    "logloss": 0.6761,
+    "weights": [
+     0.01,
+     0.606,
+     -0.408
+    ],
+    "picks_changed": 36,
+    "extra_wins": -6,
+    "better": false,
+    "significant": false
+   },
    "all": {
     "hit": 54.28,
     "logloss": 0.6873,
@@ -290,6 +303,28 @@
       ]
      }
     }
+   },
+   "power_stretch": {
+    "weights": [
+     0.009,
+     0.574
+    ],
+    "test_logloss": 0.6752,
+    "power_logloss": 0.6722,
+    "bands": [
+     {
+      "band": "50-60",
+      "n": 607,
+      "said": 54.1,
+      "won": 55.8
+     },
+     {
+      "band": "60-70",
+      "n": 82,
+      "said": 63.0,
+      "won": 70.7
+     }
+    ]
    }
   },
   "nfl": {
@@ -402,6 +437,19 @@
     ],
     "picks_changed": 3,
     "extra_wins": 1,
+    "better": false,
+    "significant": false
+   },
+   "bias": {
+    "hit": 60.0,
+    "logloss": 0.6414,
+    "weights": [
+     0.025,
+     1.07,
+     -0.101
+    ],
+    "picks_changed": 2,
+    "extra_wins": -2,
     "better": false,
     "significant": false
    },
@@ -635,6 +683,46 @@
       ]
      }
     }
+   },
+   "power_stretch": {
+    "weights": [
+     0.024,
+     0.974
+    ],
+    "test_logloss": 0.6389,
+    "power_logloss": 0.6391,
+    "bands": [
+     {
+      "band": "50-60",
+      "n": 50,
+      "said": 55.7,
+      "won": 48.0
+     },
+     {
+      "band": "60-70",
+      "n": 53,
+      "said": 64.4,
+      "won": 52.8
+     },
+     {
+      "band": "70-80",
+      "n": 43,
+      "said": 75.2,
+      "won": 62.8
+     },
+     {
+      "band": "80-90",
+      "n": 23,
+      "said": 84.9,
+      "won": 87.0
+     },
+     {
+      "band": "90-100",
+      "n": 6,
+      "said": 91.7,
+      "won": 100.0
+     }
+    ]
    }
   },
   "ncaaf": {
@@ -749,6 +837,19 @@
     "extra_wins": 5,
     "better": true,
     "significant": true
+   },
+   "bias": {
+    "hit": 78.41,
+    "logloss": 0.4469,
+    "weights": [
+     0.136,
+     1.005,
+     0.726
+    ],
+    "picks_changed": 18,
+    "extra_wins": 2,
+    "better": true,
+    "significant": false
    },
    "all": {
     "hit": 77.91,
@@ -986,6 +1087,46 @@
       ]
      }
     }
+   },
+   "power_stretch": {
+    "weights": [
+     0.125,
+     0.873
+    ],
+    "test_logloss": 0.4472,
+    "power_logloss": 0.4411,
+    "bands": [
+     {
+      "band": "50-60",
+      "n": 124,
+      "said": 55.2,
+      "won": 60.5
+     },
+     {
+      "band": "60-70",
+      "n": 119,
+      "said": 64.6,
+      "won": 67.2
+     },
+     {
+      "band": "70-80",
+      "n": 120,
+      "said": 74.9,
+      "won": 76.7
+     },
+     {
+      "band": "80-90",
+      "n": 88,
+      "said": 84.8,
+      "won": 94.3
+     },
+     {
+      "band": "90-100",
+      "n": 142,
+      "said": 95.2,
+      "won": 97.2
+     }
+    ]
    }
   },
   "nba": {
@@ -1097,6 +1238,19 @@
      -0.327
     ],
     "picks_changed": 19,
+    "extra_wins": -1,
+    "better": false,
+    "significant": false
+   },
+   "bias": {
+    "hit": 73.5,
+    "logloss": 0.5309,
+    "weights": [
+     0.085,
+     0.841,
+     0.16
+    ],
+    "picks_changed": 21,
     "extra_wins": -1,
     "better": false,
     "significant": false
@@ -1337,6 +1491,46 @@
       ]
      }
     }
+   },
+   "power_stretch": {
+    "weights": [
+     0.082,
+     0.772
+    ],
+    "test_logloss": 0.5298,
+    "power_logloss": 0.5166,
+    "bands": [
+     {
+      "band": "50-60",
+      "n": 187,
+      "said": 54.9,
+      "won": 52.4
+     },
+     {
+      "band": "60-70",
+      "n": 169,
+      "said": 64.7,
+      "won": 75.7
+     },
+     {
+      "band": "70-80",
+      "n": 133,
+      "said": 74.9,
+      "won": 78.2
+     },
+     {
+      "band": "80-90",
+      "n": 107,
+      "said": 84.8,
+      "won": 93.5
+     },
+     {
+      "band": "90-100",
+      "n": 19,
+      "said": 92.0,
+      "won": 100.0
+     }
+    ]
    }
   },
   "ncaab": {
@@ -1449,6 +1643,19 @@
     ],
     "picks_changed": 19,
     "extra_wins": 5,
+    "better": false,
+    "significant": false
+   },
+   "bias": {
+    "hit": 74.28,
+    "logloss": 0.5041,
+    "weights": [
+     0.12,
+     1.259,
+     0.351
+    ],
+    "picks_changed": 13,
+    "extra_wins": 1,
     "better": false,
     "significant": false
    },
@@ -1688,6 +1895,46 @@
       ]
      }
     }
+   },
+   "power_stretch": {
+    "weights": [
+     0.109,
+     1.111
+    ],
+    "test_logloss": 0.5022,
+    "power_logloss": 0.5001,
+    "bands": [
+     {
+      "band": "50-60",
+      "n": 87,
+      "said": 54.7,
+      "won": 52.9
+     },
+     {
+      "band": "60-70",
+      "n": 81,
+      "said": 64.3,
+      "won": 61.7
+     },
+     {
+      "band": "70-80",
+      "n": 92,
+      "said": 75.0,
+      "won": 69.6
+     },
+     {
+      "band": "80-90",
+      "n": 103,
+      "said": 84.7,
+      "won": 81.6
+     },
+     {
+      "band": "90-100",
+      "n": 123,
+      "said": 95.0,
+      "won": 95.1
+     }
+    ]
    }
   },
   "wnba": {
@@ -1800,6 +2047,19 @@
     ],
     "picks_changed": 15,
     "extra_wins": -3,
+    "better": false,
+    "significant": false
+   },
+   "bias": {
+    "hit": 73.05,
+    "logloss": 0.5478,
+    "weights": [
+     0.011,
+     0.837,
+     -0.163
+    ],
+    "picks_changed": 1,
+    "extra_wins": -1,
     "better": false,
     "significant": false
    },
@@ -2033,6 +2293,46 @@
       ]
      }
     }
+   },
+   "power_stretch": {
+    "weights": [
+     0.013,
+     0.766
+    ],
+    "test_logloss": 0.5469,
+    "power_logloss": 0.5336,
+    "bands": [
+     {
+      "band": "50-60",
+      "n": 46,
+      "said": 54.4,
+      "won": 56.5
+     },
+     {
+      "band": "60-70",
+      "n": 38,
+      "said": 64.3,
+      "won": 63.2
+     },
+     {
+      "band": "70-80",
+      "n": 37,
+      "said": 74.2,
+      "won": 97.3
+     },
+     {
+      "band": "80-90",
+      "n": 19,
+      "said": 83.8,
+      "won": 84.2
+     },
+     {
+      "band": "90-100",
+      "n": 1,
+      "said": 91.0,
+      "won": 100.0
+     }
+    ]
    }
   },
   "mlb": {
@@ -2145,6 +2445,19 @@
     ],
     "picks_changed": 57,
     "extra_wins": -15,
+    "better": false,
+    "significant": false
+   },
+   "bias": {
+    "hit": 59.2,
+    "logloss": 0.6738,
+    "weights": [
+     0.008,
+     0.678,
+     -0.583
+    ],
+    "picks_changed": 38,
+    "extra_wins": 2,
     "better": false,
     "significant": false
    },
@@ -2318,6 +2631,28 @@
       ]
      }
     }
+   },
+   "power_stretch": {
+    "weights": [
+     0.012,
+     0.612
+    ],
+    "test_logloss": 0.6739,
+    "power_logloss": 0.669,
+    "bands": [
+     {
+      "band": "50-60",
+      "n": 686,
+      "said": 54.1,
+      "won": 57.1
+     },
+     {
+      "band": "60-70",
+      "n": 64,
+      "said": 62.7,
+      "won": 73.4
+     }
+    ]
    }
   }
  }
