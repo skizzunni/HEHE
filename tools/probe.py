@@ -1,41 +1,33 @@
-"""Feed probe, run on GitHub's runners. Round 22: soccer picks have carried
-no price since 2026-10-15 (95% did in September). What does ESPN's soccer
-scoreboard odds block look like now, and does dashboard.raw_prices read it?"""
-import datetime as dt
-import json
+"""Feed probe, run on GitHub's runners. Round 23: tomorrow's 35 college
+football games yield no FanDuel props for the 25-leg ticket. Does FanDuel's
+NCAAF event page have prop tabs at all, which titles, and what does
+fd_props.parse make of them?"""
 import sys
+from collections import Counter
 
 sys.path.insert(0, ".")
-import dashboard as D  # noqa: E402
+import fanduel as F  # noqa: E402
+import fd_props as P  # noqa: E402
 
-day = dt.date.today()
-for lg in ("eng.1", "esp.1", "ger.1", "usa.1", "arg.1", "eng.2"):
-    for d in (day, day + dt.timedelta(days=1)):
-        sb = D.get(f"{D.ESPN}/soccer/{lg}/scoreboard?dates={d.strftime('%Y%m%d')}")
-        evs = sb.get("events") or []
-        n = priced = 0
-        sample = None
-        for ev in evs:
-            for c in ev.get("competitions") or []:
-                n += 1
-                pr = D.raw_prices(c, 3)
-                priced += bool(pr)
-                if sample is None:
-                    sample = c.get("odds")
-        print(f"{lg} {d}: {n} matches, raw_prices ok on {priced}")
-        if sample is not None and lg in ("eng.1", "usa.1"):
-            print("   odds block:", json.dumps(sample)[:1500])
-        elif n and sample is None:
-            print("   no 'odds' key on competitions; keys:",
-                  sorted((evs[0].get("competitions") or [{}])[0].keys()))
-# the per-event core odds endpoint, which the backtest reads
-sb = D.get(f"{D.ESPN}/soccer/eng.1/scoreboard?dates={(day + dt.timedelta(days=1)).strftime('%Y%m%d')}")
-for ev in (sb.get("events") or [])[:1]:
-    eid = ev["id"]
-    core = D.get(f"https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/events/{eid}/competitions/{eid}/odds")
-    print("core odds items:", len((core or {}).get("items") or []))
-    for it in ((core or {}).get("items") or [])[:2]:
-        print("   ", (it.get("provider") or {}).get("name"),
-              (it.get("awayTeamOdds") or {}).get("moneyLine"),
-              (it.get("drawOdds") or {}).get("moneyLine"),
-              (it.get("homeTeamOdds") or {}).get("moneyLine"))
+FD = F.load()
+games = FD.get("ncaaf") or []
+print("ncaaf games on FanDuel:", len(games))
+for g in games[:4]:
+    base = (f"{F.BASE}/event-page?_ak={F.AK}&eventId={g['id']}"
+            "&useCombinedTouchdownsVirtualMarket=true&usePulse=true&useQuickBets=true")
+    d = F._get(base)
+    tabs = ((d or {}).get("layout") or {}).get("tabs") or {}
+    titles = [t.get("title") or "" for t in (tabs.values() if isinstance(tabs, dict) else tabs)]
+    print(g.get("away"), "@", g.get("home"), "tabs:", titles)
+    mk = ((d or {}).get("attachments") or {}).get("markets") or {}
+    print("   main-page market names:", Counter(m.get("marketName", "")[:40] for m in mk.values()).most_common(12))
+    for t in titles:
+        tl = t.lower()
+        if any(w in tl for w in ("player", "td", "touchdown", "passing", "rushing", "receiving")):
+            p = F._get(base + "&tab=" + tl.replace(" ", "-"))
+            m2 = ((p or {}).get("attachments") or {}).get("markets") or {}
+            print(f"   tab {t!r}: {len(m2)} markets;",
+                  Counter(m.get('marketName', '')[:40] for m in m2.values()).most_common(8))
+    props = P.for_game(g, "ncaaf")
+    print("   parsed props:", len(props), Counter(x["market"] for x in props).most_common(6))
+print("SKIP_TAB", P.SKIP_TAB, "TAB_WORDS", P.TAB_WORDS)
