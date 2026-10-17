@@ -161,7 +161,8 @@ def parse(markets, league, hold):
             if not ln or " or " in who or who.lower().startswith("no "):
                 continue
             out.append(dict(name=who, market=stat, line=ln, price=f"+{o}" if o > 0 else str(o),
-                            imp=round(i, 4), p=round(min(i / hold, 0.99), 4), aid=None,
+                            imp=round(i, 4), p=round(min(i / props_ledger.hold(league, stat), 0.99), 4),
+                            aid=None,
                             label=f"{who}: {ln} {stat}",
                             fd=f"{mid}:{r.get('selectionId')}", where=f"{mn}: {nm}"))
     consistency(out)

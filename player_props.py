@@ -142,7 +142,7 @@ def american_prob(a):
     return 100 / (v + 100) if v > 0 else -v / (-v + 100)
 
 
-def parse(items, who, hold=ONE_SIDED_HOLD):
+def parse(items, who, hold=ONE_SIDED_HOLD, league=None):
     """Priced, full-game props -> [dict(name, market, line, price, p)]."""
     out = []
     for x in items:
@@ -170,7 +170,8 @@ def parse(items, who, hold=ONE_SIDED_HOLD):
         # the margin is re-fitted per league from graded props (props_ledger)
         out.append(dict(name=name, market=market, line=line, price=str(price),
                         imp=round(imp, 4), aid=aid.group(1) if aid else None,
-                        p=round(min(imp / hold, 0.99), 4), label=label.strip()))
+                        p=round(min(imp / (props_ledger.hold(league, market) if league else hold),
+                                    0.99), 4), label=label.strip()))
     # one entry per (player, market, line): the feed repeats some
     seen, uniq = set(), []
     for o in out:
@@ -228,7 +229,7 @@ def for_slot(board_slot, labels=None, max_games=40):
         # keep the page small: the 60 likeliest props worth stacking per game
         merged, seen = [], set()
         # FanDuel first: the same book the locks and lottery use
-        for p in list(fd_by_row.get(row["id"]) or []) + parse(items, who, props_ledger.hold(league)):
+        for p in list(fd_by_row.get(row["id"]) or []) + parse(items, who, props_ledger.hold(league), league):
             k = (props_ledger.norm_name(p["name"]), p["market"], str(p["line"]))
             if k in seen:
                 continue

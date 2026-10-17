@@ -48,6 +48,8 @@ SITE = "https://site.api.espn.com/apis/site/v2/sports"
 
 ASSUMED_HOLD = 1.07
 PRIOR_PROPS = 150          # pseudo-props at the assumed margin
+PRIOR_MARKET = 40          # pseudo-props at the league's margin, per market
+MARKET_HOLD = {}           # (league, market) -> fitted margin
 HOLD_BOUNDS = (0.90, 1.60)
 VOID_AFTER_DAYS = 5
 MAX_EVENTS_PER_RUN = 30
@@ -419,9 +421,26 @@ def tune():
         HOLD[lg] = round(k, 3)
         TUNING[lg] = dict(graded=n, won=w, hit=round(100 * w / n, 1),
                           said=round(100 * said / n, 1), hold=HOLD[lg])
+    # and per market within a league, shrunk toward that league's margin: one
+    # sport's props are not one market (NHL "shots on goal" vs "points")
+    MARKET_HOLD.clear()
+    per = {}
+    for e in load().values():
+        if e["status"] not in ("won", "lost") or not e.get("imp"):
+            continue
+        a = per.setdefault((e["league"], e["market"]), [0, 0, 0.0])
+        a[0] += 1
+        a[1] += e["status"] == "won"
+        a[2] += e["imp"]
+    for (lg, mk), (n, w, imp) in per.items():
+        base = HOLD.get(lg, ASSUMED_HOLD)
+        k = (n * (imp / max(w, 1)) + PRIOR_MARKET * base) / (n + PRIOR_MARKET)
+        MARKET_HOLD[(lg, mk)] = round(min(max(k, HOLD_BOUNDS[0]), HOLD_BOUNDS[1]), 3)
 
 
-def hold(league):
+def hold(league, market=None):
+    if market is not None and (league, market) in MARKET_HOLD:
+        return MARKET_HOLD[(league, market)]
     return HOLD.get(league, ASSUMED_HOLD)
 
 

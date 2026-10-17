@@ -45,7 +45,7 @@ def for_game(row, league, FD):
         total = None
     # never scale a chance up: a short player list would otherwise inflate
     # everyone to cover touchdowns scored by players FanDuel does not list
-    k = 1 / fd_props.props_ledger.hold(league)
+    k = 1 / fd_props.props_ledger.hold(league, MARKET)
     basis = "FanDuel margin removed"
     if total:
         target = LEAGUES[league] * total * (1 - NON_OFFENSE)

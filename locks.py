@@ -228,7 +228,10 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
             if not P.get("fd") or not d or not DEC_MIN <= d <= DEC_MAX:
                 continue
             # an over/under prop's p is already de-vigged across both sides
-            pm = _market_p(P["price"], P["p"] if not str(P.get("line", "")).endswith("+") else None)
+            # every prop's p already carries its market's tuned margin
+            # (props_ledger.hold per league and market) -- ladders included;
+            # they used to be re-priced with a fixed 4.5%
+            pm = _market_p(P["price"], P["p"])
             if not pm:
                 continue
             # a ladder rung priced off the player's own main line (fd_props
