@@ -1,8 +1,8 @@
 # Review 2026-10-17
 
-Picks 46-14 (76.7% vs 71.8% claimed, ROI +31.0%).
-Strong calls 29-3 (90.6% vs 79.9% claimed).
-Closing line value: +4.97 points on 2 picks; beat the close on 50.0%.
+Picks 47-15 (75.8% vs 72.0% claimed, ROI -12.7%).
+Strong calls 29-4 (87.9% vs 80.1% claimed).
+Closing line value: +3.58 points on 3 picks; beat the close on 66.7%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
 - LOST atp Luka Pavlovic at 63.3%: lost 1-2 in sets · took it the distance · called at 63%
@@ -10,6 +10,7 @@ Closing line value: +4.97 points on 2 picks; beat the close on 50.0%.
 - LOST efl2 Luton Town at 72.0%: margin 1 · called at 72%
 - LOST efl3 Bristol Rovers at 71.0%: margin 1 · called at 71%
 - LOST jpn Kashiwa Reysol at 80.2%: margin 2 · called at 80%
+- LOST wsl Arsenal at 87.1%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 87%
 - LOST wta Jelena Ostapenko at 60.6%: lost 0-2 in sets · never won a set · called at 61%
 - LOST wta Martyna Kubka at 56.9%: lost 1-2 in sets · took it the distance · called at 57%
 - LOST wta Francesca Curmi at 50.5%: lost 0-2 in sets · never won a set · called at 50%
@@ -17,7 +18,7 @@ Closing line value: +4.97 points on 2 picks; beat the close on 50.0%.
 - LOST wta Jeline Vandromme at 63.7%: lost 1-1 in sets · took it the distance · called at 64%
 - LOST wta Magdalena Frech at 65.4%: lost 1-1 in sets · took it the distance · called at 65%
 - LOST wta Mananchaya Sawangkaew at 57.4%: lost 0-2 in sets · never won a set · called at 57%
-With the market 67.0% (188); against it 37.8% (45).
+With the market 66.7% (189); against it 37.8% (45).
 Locks 0/11 won, 11 open.
 Lottery 100: open (0/12 legs won)
 Lottery 100: open (0/6 legs won)

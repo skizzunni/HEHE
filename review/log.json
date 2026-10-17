@@ -989,9 +989,9 @@
    }
   },
   "clv": {
-   "avg": 4.97,
-   "beat": 50.0,
-   "n": 2
+   "avg": 3.58,
+   "beat": 66.7,
+   "n": 3
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1057,6 +1057,14 @@
     "price": null,
     "said": 80.2,
     "why": "margin 2 \u00b7 called at 80%"
+   },
+   {
+    "against_market": false,
+    "league": "wsl",
+    "pick": "Arsenal",
+    "price": "-1600",
+    "said": 87.1,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 87%"
    },
    {
     "against_market": false,
@@ -1190,12 +1198,12 @@
    }
   ],
   "picks": {
-   "hit": 76.7,
-   "lost": 14,
-   "n": 60,
-   "roi": 31.0,
-   "said": 71.8,
-   "won": 46
+   "hit": 75.8,
+   "lost": 15,
+   "n": 62,
+   "roi": -12.7,
+   "said": 72.0,
+   "won": 47
   },
   "picks_by_league": {
    "atp": {
@@ -1246,6 +1254,14 @@
     "said": 72.7,
     "won": 1
    },
+   "epl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 66.6,
+    "won": 1
+   },
    "ger2": {
     "hit": 100.0,
     "lost": 0,
@@ -1278,6 +1294,14 @@
     "said": 86.5,
     "won": 1
    },
+   "wsl": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 87.1,
+    "won": 0
+   },
    "wta": {
     "hit": 69.6,
     "lost": 7,
@@ -1299,11 +1323,11 @@
    "won": 0
   },
   "strong": {
-   "hit": 90.6,
-   "lost": 3,
-   "n": 32,
-   "roi": 25.0,
-   "said": 79.9,
+   "hit": 87.9,
+   "lost": 4,
+   "n": 33,
+   "roi": -37.5,
+   "said": 80.1,
    "won": 29
   },
   "vs_market_14d": {
@@ -1316,11 +1340,11 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.0,
-    "lost": 62,
-    "n": 188,
-    "roi": -2.8,
-    "said": 59.7,
+    "hit": 66.7,
+    "lost": 63,
+    "n": 189,
+    "roi": -3.3,
+    "said": 59.8,
     "won": 126
    }
   },
