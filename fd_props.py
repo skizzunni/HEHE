@@ -31,7 +31,8 @@ TTL = 600
 # tabs worth opening, by words in their titles
 TAB_WORDS = ("player", "passing", "receiving", "rushing", "td scorer", "touchdown",
              "goalscorer", "goal scorer", "shots", "points", "rebounds", "assists",
-             "threes", "combos", "batter", "pitcher", "hits", "strikeouts", "props")
+             "threes", "combos", "batter", "pitcher", "hits", "strikeouts", "props",
+             "scoring")          # football: anytime TD scorers live under "Scoring"
 SKIP_TAB = ("live", "quarter", "half", "period", "inning", "1st", "2nd", "3rd", "4th",
             "parlay", "same game", "team", "game props", "specials", "quick")
 SKIP_MARKET = re.compile(r"quarter|half|period|inning|1st|2nd|3rd|4th|first|last|most |"
