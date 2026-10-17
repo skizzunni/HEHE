@@ -1,7 +1,7 @@
 # Review 2026-10-17
 
-Picks 141-55 (71.9% vs 71.2% claimed, ROI +2.8%).
-Strong calls 80-21 (79.2% vs 76.9% claimed).
+Picks 142-55 (72.1% vs 71.2% claimed, ROI +2.8%).
+Strong calls 81-21 (79.4% vs 76.9% claimed).
 Closing line value: -0.32 points on 39 picks; beat the close on 41.0%.
 - LOST arg Platense at 65.5%: margin 1 · called at 66%
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
