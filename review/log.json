@@ -459,9 +459,9 @@
  },
  "2026-10-16": {
   "clv": {
-   "avg": -0.42,
-   "beat": 20.0,
-   "n": 5
+   "avg": -0.35,
+   "beat": 16.7,
+   "n": 6
   },
   "day": "2026-10-16",
   "leaks_14d": [],
@@ -541,10 +541,26 @@
    {
     "against_market": false,
     "league": "mex2",
+    "pick": "Club Atl\u00e9tico La Paz",
+    "price": "-265",
+    "said": 66.4,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
+    "league": "mex2",
     "pick": "Correcaminos UAT",
     "price": null,
     "said": 77.5,
     "why": "margin 1 \u00b7 called at 78%"
+   },
+   {
+    "against_market": false,
+    "league": "mex",
+    "pick": "Atlante",
+    "price": null,
+    "said": 63.5,
+    "why": "margin 1 \u00b7 called at 64%"
    },
    {
     "against_market": false,
@@ -682,12 +698,12 @@
    }
   ],
   "picks": {
-   "hit": 53.8,
-   "lost": 24,
-   "n": 52,
-   "roi": -32.4,
-   "said": 62.5,
-   "won": 28
+   "hit": 52.7,
+   "lost": 26,
+   "n": 55,
+   "roi": -43.7,
+   "said": 62.9,
+   "won": 29
   },
   "picks_by_league": {
    "arg": {
@@ -779,19 +795,19 @@
     "won": 1
    },
    "mex": {
-    "hit": 0.0,
-    "lost": 1,
-    "n": 1,
+    "hit": 33.3,
+    "lost": 2,
+    "n": 3,
     "roi": null,
-    "said": 61.2,
-    "won": 0
+    "said": 68.4,
+    "won": 1
    },
    "mex2": {
     "hit": 0.0,
-    "lost": 1,
-    "n": 1,
-    "roi": null,
-    "said": 77.5,
+    "lost": 2,
+    "n": 2,
+    "roi": -100.0,
+    "said": 72.0,
     "won": 0
    },
    "ncaaf": {
@@ -887,12 +903,12 @@
    "won": 24
   },
   "strong": {
-   "hit": 57.1,
+   "hit": 60.0,
    "lost": 6,
-   "n": 14,
+   "n": 15,
    "roi": -50.4,
-   "said": 77.8,
-   "won": 8
+   "said": 78.0,
+   "won": 9
   },
   "vs_market_14d": {
    "against": {
@@ -904,11 +920,11 @@
     "won": 19
    },
    "agree": {
-    "hit": 67.2,
-    "lost": 61,
-    "n": 186,
-    "roi": -2.5,
-    "said": 59.5,
+    "hit": 66.8,
+    "lost": 62,
+    "n": 187,
+    "roi": -3.0,
+    "said": 59.6,
     "won": 125
    }
   }
@@ -1015,10 +1031,10 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.0,
-    "lost": 61,
-    "n": 185,
-    "roi": -2.7,
+    "hit": 66.7,
+    "lost": 62,
+    "n": 186,
+    "roi": -3.2,
     "said": 59.5,
     "won": 124
    }
