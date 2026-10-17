@@ -932,10 +932,10 @@
  "2026-10-17": {
   "calls": {
    "atp": {
-    "all_hit": 71.4,
+    "all_hit": 70.8,
     "calls": 66,
     "cutoff": 0.65,
-    "games": 112,
+    "games": 113,
     "hit": 81.8
    },
    "mlb": {
@@ -1009,6 +1009,14 @@
     "price": null,
     "said": 78.4,
     "why": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 78%"
+   },
+   {
+    "against_market": false,
+    "league": "atp",
+    "pick": "Daniil Medvedev",
+    "price": null,
+    "said": 64.0,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 64%"
    },
    {
     "against_market": false,
@@ -1150,20 +1158,20 @@
    }
   ],
   "picks": {
-   "hit": 79.5,
-   "lost": 9,
-   "n": 44,
+   "hit": 78.7,
+   "lost": 10,
+   "n": 47,
    "roi": 37.0,
    "said": 72.0,
-   "won": 35
+   "won": 37
   },
   "picks_by_league": {
    "atp": {
-    "hit": 77.8,
-    "lost": 2,
-    "n": 9,
+    "hit": 70.0,
+    "lost": 3,
+    "n": 10,
     "roi": null,
-    "said": 73.3,
+    "said": 72.4,
     "won": 7
    },
    "aus": {
@@ -1174,13 +1182,21 @@
     "said": 72.9,
     "won": 3
    },
+   "chn": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 81.9,
+    "won": 1
+   },
    "ger2": {
     "hit": 100.0,
     "lost": 0,
-    "n": 2,
+    "n": 3,
     "roi": null,
-    "said": 75.0,
-    "won": 2
+    "said": 72.6,
+    "won": 3
    },
    "jpn": {
     "hit": 87.5,
@@ -1219,12 +1235,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 88.0,
+   "hit": 88.5,
    "lost": 3,
-   "n": 25,
+   "n": 26,
    "roi": null,
    "said": 80.2,
-   "won": 22
+   "won": 23
   },
   "vs_market_14d": {
    "against": {
