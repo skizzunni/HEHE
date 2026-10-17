@@ -1,7 +1,7 @@
 # Review 2026-10-17
 
 Picks 28-7 (80.0% vs 72.9% claimed, ROI +37.0%).
-Strong calls 17-1 (94.4% vs 82.9% claimed).
+Strong calls 18-2 (90.0% vs 81.2% claimed).
 Closing line value: -0.36 points on 1 picks; beat the close on 0.0%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST wta Jelena Ostapenko at 60.6%: lost 0-2 in sets · never won a set · called at 61%
