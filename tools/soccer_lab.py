@@ -51,11 +51,24 @@ def rows_for(key, sport, league, wins):
         if None in (ph, pd, pa):
             return None
         s = ph + pd + pa
+        rh, rd, ra = ph, pd, pa
         ph, pd, pa = ph / s, pd / s, pa / s
+        # power method: one exponent k so the three implied chances sum to 1
+        lo, hi = 1.0, 3.0
+        for _ in range(60):
+            k = (lo + hi) / 2
+            if rh ** k + rd ** k + ra ** k > 1:
+                lo = k
+            else:
+                hi = k
+        qh, qd, qa = rh ** k, rd ** k, ra ** k
+        t = qh + qd + qa
+        qh, qd, qa = qh / t, qd / t, qa / t
         fav_home = ph >= pa
         res = "home" if hs > as_ else "away" if as_ > hs else "draw"
         fav = "home" if fav_home else "away"
         return dict(date=d.isoformat(), p_fav=max(ph, pa), p_draw=pd,
+                    pw_fav=qh if fav_home else qa, pw_draw=qd,
                     fav_won=int(res == fav), fav_or_draw=int(res in (fav, "draw")),
                     draw=int(res == "draw"), fav_home=int(fav_home),
                     vig=round(s - 1, 4))
@@ -90,8 +103,16 @@ def main():
     allrows.sort(key=lambda r: r["date"])
     half = len(allrows) // 2
     fit, test = allrows[:half], allrows[half:]
+    import math
+    def ll(rs, key):
+        return round(-sum(math.log(max(1e-4, r[key] if r["fav_won"] else 1 - r[key]))
+                          for r in rs) / len(rs), 4)
+    pw = lambda rs: [dict(r, p_fav=r["pw_fav"], p_draw=r["pw_draw"]) for r in rs]
     rep = dict(run=dt.date.today().isoformat(), matches=len(allrows), leagues=per,
-               fit=table(fit), test=table(test), all=table(allrows))
+               fit=table(fit), test=table(test), all=table(allrows),
+               power=dict(fit=table(pw(fit)), test=table(pw(test)),
+                          logloss=dict(prop_fit=ll(fit, "p_fav"), prop_test=ll(test, "p_fav"),
+                                       power_fit=ll(fit, "pw_fav"), power_test=ll(test, "pw_fav"))))
     print(json.dumps(rep, indent=1), flush=True)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w") as fh:
