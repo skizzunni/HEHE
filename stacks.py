@@ -115,7 +115,13 @@ VARIANTS = 3                 # different tickets per size
 # purpose: a wider spread makes far-off alternate lines LESS likely, which errs
 # toward caution.
 SD_MARGIN = {"nfl": 13.5, "ncaaf": 16.5, "nba": 12.0, "ncaab": 11.0, "wnba": 11.0}
-SD_TOTAL = {"nfl": 10.5, "ncaaf": 14.5, "nba": 18.0, "ncaab": 16.0, "wnba": 15.0}
+SD_TOTAL = {"nfl": 13.2, "ncaaf": 14.5, "nba": 18.0, "ncaab": 16.0, "wnba": 15.0}
+# NFL finals are skewed: blowout shootouts make the miss above the posted
+# total wider than the miss below it. (below, above) the median, fitted on the
+# 2025 season (tools/totals_lab.py); on 2026, which the fit never saw, far
+# unders had run 8-12 points under their stated chance with one symmetric 10.5
+# and the mean squared calibration error over the alt lines fell 56.6 -> 14.5.
+SPLIT_TOTAL = {"nfl": (12.0, 14.5)}
 POISSON = {"nhl"}            # plus every soccer league (passed in)
 # Baseball runs are far more spread out than a Poisson allows (a team's runs
 # vary about twice as much as their mean), so MLB uses a negative binomial:
@@ -259,7 +265,14 @@ class Game:
             # a juiced total means the book's median is off the line
             self.mu_t = (total + self.SD_SHIFT(sport, p_over)) if total else None
             self.sd_t = SD_TOTAL[sport]
+            self.sd_lo, self.sd_hi = SPLIT_TOTAL.get(sport, (self.sd_t, self.sd_t))
             self.mu_total = total
+
+    def _tcdf(self, x):
+        """P(total < x) on the split normal: one spread below the median,
+        another above, each half carrying half the mass."""
+        z = x - self.mu_t
+        return ncdf(z / (self.sd_hi if z > 0 else self.sd_lo))
 
     def prob_specs(self, specs):
         """Probability that every spec holds. One spec on a normal model has a
@@ -270,9 +283,9 @@ class Game:
             m, sm, T, st = self.mu_m, self.sd_m, self.mu_t, self.sd_t
             up = lambda mu, sd, L: 1 - ncdf((L - mu) / sd)       # P(X > L)
             if t == "over":
-                return up(T, st, sp["line"])
+                return 1 - self._tcdf(sp["line"])
             if t == "under":
-                return 1 - up(T, st, sp["line"])
+                return self._tcdf(sp["line"])
             if t == "win":
                 return up(m, sm, 0) if home else 1 - up(m, sm, 0)
             if t == "spread":
@@ -329,8 +342,8 @@ class Game:
                 lo, hi = max(lo, a_), min(hi, b_)
             if not ok or lo >= hi:
                 continue
-            pt = (ncdf((hi - self.mu_t) / self.sd_t) if hi != float("inf") else 1.0) - \
-                 (ncdf((lo - self.mu_t) / self.sd_t) if lo != -float("inf") else 0.0)
+            pt = (self._tcdf(hi) if hi != float("inf") else 1.0) - \
+                 (self._tcdf(lo) if lo != -float("inf") else 0.0)
             tot += w * pt
         return tot / wsum
 
@@ -361,7 +374,7 @@ class Game:
         for zm, wm in zip(zs, ws):
             m = self.mu_m + zm * self.sd_m
             for zt, wt in zip(zs, ws):
-                t = self.mu_t + zt * self.sd_t
+                t = self.mu_t + zt * (self.sd_hi if zt > 0 else self.sd_lo)
                 h, a = (t + m) / 2, (t - m) / 2
                 if all(f(h, a) for f in preds):
                     tot += wm * wt
