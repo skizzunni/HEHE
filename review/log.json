@@ -953,11 +953,11 @@
     "hit": 86.7
    },
    "ncaaf": {
-    "all_hit": 82.0,
-    "calls": 421,
+    "all_hit": 82.1,
+    "calls": 422,
     "cutoff": 0.55,
-    "games": 462,
-    "hit": 84.3
+    "games": 463,
+    "hit": 84.4
    },
    "nfl": {
     "all_hit": 62.0,
@@ -996,9 +996,9 @@
    }
   },
   "clv": {
-   "avg": -0.81,
-   "beat": 35.7,
-   "n": 28
+   "avg": -0.76,
+   "beat": 37.9,
+   "n": 29
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1007,8 +1007,8 @@
     "Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49"
    ],
    "n": 11,
-   "open": 6,
-   "won": 4
+   "open": 5,
+   "won": 5
   },
   "losses": [
    {
@@ -1197,6 +1197,14 @@
    },
    {
     "against_market": false,
+    "league": "mex2",
+    "pick": "Mineros de Zacatecas",
+    "price": null,
+    "said": 66.4,
+    "why": "margin 1 \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
     "league": "ncaaf",
     "pick": "Texas Longhorns",
     "price": "-535",
@@ -1381,7 +1389,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -1411,7 +1419,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -1443,7 +1451,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+25",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -1454,7 +1462,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+50",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -1465,16 +1473,16 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+100",
-    "won": 3
+    "won": 4
    }
   ],
   "picks": {
    "hit": 73.1,
-   "lost": 45,
-   "n": 167,
-   "roi": 11.5,
+   "lost": 46,
+   "n": 171,
+   "roi": 12.3,
    "said": 71.4,
-   "won": 122
+   "won": 125
   },
   "picks_by_league": {
    "arg": {
@@ -1646,28 +1654,36 @@
     "won": 7
    },
    "ksa": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": null,
+    "said": 74.9,
+    "won": 1
+   },
+   "mex2": {
     "hit": 0.0,
     "lost": 1,
     "n": 1,
     "roi": null,
-    "said": 74.1,
+    "said": 66.4,
     "won": 0
    },
    "ncaaf": {
-    "hit": 75.0,
+    "hit": 76.9,
     "lost": 3,
-    "n": 12,
+    "n": 13,
     "roi": 9.2,
     "said": 67.8,
-    "won": 9
+    "won": 10
    },
    "ned": {
-    "hit": 0.0,
+    "hit": 50.0,
     "lost": 1,
-    "n": 1,
-    "roi": null,
-    "said": 62.4,
-    "won": 0
+    "n": 2,
+    "roi": 33.9,
+    "said": 66.3,
+    "won": 1
    },
    "ned2": {
     "hit": 100.0,
@@ -1778,12 +1794,12 @@
    "won": 4
   },
   "strong": {
-   "hit": 80.7,
+   "hit": 81.1,
    "lost": 17,
-   "n": 88,
+   "n": 90,
    "roi": 2.6,
-   "said": 77.1,
-   "won": 71
+   "said": 76.9,
+   "won": 73
   },
   "vs_market_14d": {
    "against": {
@@ -1795,12 +1811,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.2,
+    "hit": 68.4,
     "lost": 68,
-    "n": 214,
-    "roi": -1.3,
-    "said": 60.8,
-    "won": 146
+    "n": 215,
+    "roi": -1.1,
+    "said": 60.9,
+    "won": 147
    }
   },
   "weights": {
