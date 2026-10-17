@@ -1,8 +1,8 @@
 # Review 2026-10-17
 
-Picks 88-33 (72.7% vs 72.3% claimed, ROI -1.3%).
-Strong calls 47-11 (81.0% vs 79.8% claimed).
-Closing line value: +1.14 points on 8 picks; beat the close on 50.0%.
+Picks 90-35 (72.0% vs 72.5% claimed, ROI +1.4%).
+Strong calls 49-12 (80.3% vs 79.7% claimed).
+Closing line value: +1.12 points on 9 picks; beat the close on 55.6%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
 - LOST atp Luka Pavlovic at 63.3%: lost 1-2 in sets · took it the distance · called at 63%
@@ -10,11 +10,13 @@ Closing line value: +1.14 points on 8 picks; beat the close on 50.0%.
 - LOST atp Giovanni Mpetshi Perricard at 62.0%: lost 1-2 in sets · took it the distance · called at 62%
 - LOST efl1 Southampton at 66.3%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST efl1 Norwich City at 78.4%: margin 1 · called at 78%
+- LOST efl1 Bristol City at 74.3%: margin 1 · called at 74%
 - LOST efl2 Reading at 77.0%: margin 1 · called at 77%
 - LOST efl2 Plymouth Argyle at 67.3%: margin 2 · called at 67%
 - LOST efl2 Luton Town at 72.0%: margin 1 · called at 72%
 - LOST efl3 Bristol Rovers at 71.0%: margin 1 · called at 71%
 - LOST efl3 Chesterfield at 69.0%: margin 1 · called at 69%
+- LOST efl3 Grimsby Town at 78.1%: margin 2 · called at 78%
 - LOST fra2 Nantes at 82.0%: margin 1 · called at 82%
 - LOST ita2 Padova at 67.8%: margin 1 · called at 68%
 - LOST ita2 Modena at 77.6%: margin 1 · called at 78%
@@ -36,7 +38,7 @@ Closing line value: +1.14 points on 8 picks; beat the close on 50.0%.
 - LOST wta Jeline Vandromme at 63.7%: lost 1-1 in sets · took it the distance · called at 64%
 - LOST wta Magdalena Frech at 65.4%: lost 1-1 in sets · took it the distance · called at 65%
 - LOST wta Mananchaya Sawangkaew at 57.4%: lost 0-2 in sets · never won a set · called at 57%
-With the market 67.0% (194); against it 37.8% (45).
+With the market 67.2% (195); against it 37.8% (45).
 Locks 0/11 won, 11 open.
 Lottery 100: open (0/12 legs won)
 Lottery 100: open (0/6 legs won)
