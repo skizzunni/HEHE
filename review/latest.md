@@ -1,8 +1,8 @@
 # Review 2026-10-17
 
-Picks 131-49 (72.8% vs 71.4% claimed, ROI +7.0%).
-Strong calls 77-19 (80.2% vs 76.9% claimed).
-Closing line value: -0.63 points on 33 picks; beat the close on 39.4%.
+Picks 135-50 (73.0% vs 71.4% claimed, ROI +3.8%).
+Strong calls 78-19 (80.4% vs 77.0% claimed).
+Closing line value: -0.63 points on 34 picks; beat the close on 38.2%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
 - LOST atp Luka Pavlovic at 63.3%: lost 1-2 in sets · took it the distance · called at 63%
@@ -40,6 +40,7 @@ Closing line value: -0.63 points on 33 picks; beat the close on 39.4%.
 - LOST rsa Chippa United at 72.0%: margin 1 · called at 72%
 - LOST sco Motherwell at 66.7%: margin 1 · called at 67%
 - LOST sco Hibernian at 79.4%: margin 1 · called at 79%
+- LOST sco Rangers at 67.7%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 68%
 - LOST swe AIK at 56.0%: margin 0 · drawn -- a draw loses a moneyline side · called at 56%
 - LOST uru Juventud at 70.6%: margin 2 · called at 71%
 - LOST wsl Arsenal at 87.1%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 87%
@@ -52,7 +53,7 @@ Closing line value: -0.63 points on 33 picks; beat the close on 39.4%.
 - LOST wta Jeline Vandromme at 63.7%: lost 1-1 in sets · took it the distance · called at 64%
 - LOST wta Magdalena Frech at 65.4%: lost 1-1 in sets · took it the distance · called at 65%
 - LOST wta Mananchaya Sawangkaew at 57.4%: lost 0-2 in sets · never won a set · called at 57%
-With the market 68.0% (219); against it 37.8% (45).
+With the market 67.7% (220); against it 37.8% (45).
 Locks 7/11 won, 2 open; lost: Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49; Under 56.5 points (Charlotte 49ers at Temple Owls) Charlotte 49ers 38 - Temple Owls 31.
 Lottery 100: lost (4/12 legs won, killed by Under 75.5 points, Under 65.5 points)
 Lottery 100: lost (0/6 legs won, killed by Under 35.5 points, Under 50.5 points)
