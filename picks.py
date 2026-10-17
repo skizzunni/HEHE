@@ -454,6 +454,7 @@ def _mml(american):
 
 # ------------------------------------------------------------- tennis
 _tp_cache = {}
+TENNIS_MKT_W = 0.05
 
 
 def tennis_picks(day, tour=None):
@@ -576,7 +577,11 @@ def tennis_picks(day, tour=None):
                     except Exception:
                         mk = None
                     if mk is not None and 0.01 < mk < 0.99:
-                        p1 = anchor(p1, mk, 0.2)
+                        # 0.05, the share the daily refit settles on in every
+                        # sport it can measure: against the price, picks hit
+                        # 39.6% (48) vs 68.0% with it (181). At 0.2 a model
+                        # 70% could still flip a 52% Kalshi favourite.
+                        p1 = anchor(p1, mk, TENNIS_MKT_W)
                     pick = ps[0] if p1 >= 0.5 else ps[1]
                     r1 = (rank.get(norm(ps[0])) or {}).get("rank")
                     r2 = (rank.get(norm(ps[1])) or {}).get("rank")
