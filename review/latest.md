@@ -1,8 +1,8 @@
 # Review 2026-10-16
 
-Picks 21-23 (47.7% vs 60.4% claimed, ROI -100.0%).
-Strong calls 4-5 (44.4% vs 75.0% claimed).
-Closing line value: -0.25 points on 3 picks; beat the close on 33.3%.
+Picks 22-23 (48.9% vs 60.5% claimed, ROI -62.8%).
+Strong calls 5-5 (50.0% vs 74.0% claimed).
+Closing line value: -0.52 points on 4 picks; beat the close on 25.0%.
 - LOST arg Defensa y Justicia at 55.6%: margin 1 · called at 56%
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
 - LOST bra2 Atlético Goianiense at 52.5%: margin 0 · drawn -- a draw loses a moneyline side · called at 52%
@@ -26,10 +26,10 @@ Closing line value: -0.25 points on 3 picks; beat the close on 33.3%.
 - LOST wta Julia Grabher at 69.4%: lost 0-2 in sets · never won a set · called at 69%
 - LOST wta Elizara Yaneva at 70.8%: lost 1-2 in sets · took it the distance · called at 71%
 - LOST wta Elina Avanesyan at 80.1%: lost 0-2 in sets · never won a set · called at 80%
-With the market 66.8% (184); against it 39.6% (48).
+With the market 67.0% (185); against it 39.6% (48).
 Locks 2/5 won, 1 open; lost: Under 61.5 points (Washington Huskies at Purdue Boilermakers) Washington Huskies 38 - Purdue Boilermakers 26.
 Lottery 100: lost (0/5 legs won, killed by Under 52.5 points, Over 61.5 points, Pittsburgh Penguins over 3.5 goals)
 Props 18/20 vs 81.7% claimed.
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.4% on 59 of 103, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.7% on 411 of 450, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 80.0% on 15 of 75, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 72% -> 87.0% on 54 of 153
-Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=373), nfl 0.40 (n=79), nhl 0.05 (n=75), wnba 0.30 (n=46)
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 81.4% on 59 of 103, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.7% on 411 of 450, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 76, ufc 75% -> 85.0% on 20 of 75, wnba 62% -> 77.4% on 31 of 46, wta 72% -> 87.0% on 54 of 153
+Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=373), nfl 0.40 (n=79), nhl 0.05 (n=76), wnba 0.30 (n=46)
