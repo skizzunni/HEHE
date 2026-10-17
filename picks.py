@@ -436,6 +436,11 @@ def ufc_picks(day):
             # for MMA -- not by the odds-payload order, which differs.
             out[(order[0], order[1])] = dict(
                 pick=byid[top], conf=nv[top],
+                # both fighters' prices, so the board can show the line and
+                # the ledger can grade it against the price (it never could)
+                prices={byid[i]: (f"+{int(ml[i])}" if float(ml[i]) > 0 else str(int(ml[i])))
+                        for i in ids},
+                fair={byid[i]: nv[i] for i in ids},
                 why=f"market {('+' if price > 0 else '')}{price} de-vigged, "
                     f"no fighter model -- see ufc_picks()",
                 model="market price (no model)")

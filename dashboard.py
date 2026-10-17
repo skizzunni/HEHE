@@ -688,6 +688,16 @@ def collect(key, path, day, mlbctx, mybook=None):
                                          + (f", {round(100 * conf)}% to win or draw"
                                             if dc else "")
                                          + (" · " + mine["why"] if mine.get("why") else "")))
+            # MMA: ESPN's scoreboard carries no odds block, but ufc_picks read
+            # both fighters' prices from the core feed -- use them as the legs
+            if not legs and mine.get("prices") and mybook:
+                for side_, who in zip(("away", "home"), ordered):
+                    pr_ = mine["prices"].get(who)
+                    if pr_ is None:
+                        continue
+                    legs.append(dict(who=who, side=side_, prob=(mine.get("fair") or {}).get(who),
+                                     price=pr_, dk=None, dog=pr_.startswith("+"),
+                                     roi=None, gap=None))
             if key in MARKET_PICK and not mine.get("pick") and legs:
                 fav = max((L for L in legs if L["side"] != "draw"),
                           key=lambda L: L["prob"], default=None)
