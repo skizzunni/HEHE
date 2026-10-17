@@ -823,21 +823,38 @@ def build_tickets(games, tiers=TIERS, variants=VARIANTS):
     return out
 
 
+def _reaim(games, aim, top):
+    """The same priced games, re-filtered to legs up to `top` and ordered by
+    nearness to `aim` -- what candidates() would return under those globals,
+    without pricing every leg again."""
+    out = []
+    for G in games:
+        legs = [L for L in G["legs"] if LEG_MIN <= L["p"] <= top]
+        if not legs:
+            continue
+        legs.sort(key=lambda L: abs(L["p"] - aim))
+        out.append(dict(G, legs=legs))
+    return out
+
+
 def build(slots, soccer_keys, labels=None, extra=None, keep=None):
-    global TARGET, LEG_MAX
+    global TARGET
     res = {}
+    widest = max([LEG_MAX] + [t for _, t in TIER_AIM.values()])
     for slot in ("today", "tomorrow"):
-        games = candidates(slots.get(slot), soccer_keys, labels, extra, keep)
+        # price every game once over the widest band any size uses
+        priced = candidates(slots.get(slot), soccer_keys, labels, extra, keep,
+                            band=(LEG_MIN, widest))
+        games = _reaim(priced, TARGET, LEG_MAX)
         tickets = build_tickets(games, tiers=tuple(n for n in TIERS if n not in TIER_AIM))
-        base = (TARGET, LEG_MAX)
+        base = TARGET
         for (aim, top) in sorted(set(TIER_AIM.values())):
             sizes = tuple(n for n, a in TIER_AIM.items() if a == (aim, top))
-            TARGET, LEG_MAX = aim, top
+            TARGET = aim            # build_tickets orders games by nearness to TARGET
             try:
-                g2 = candidates(slots.get(slot), soccer_keys, labels, extra, keep)
-                tickets.update(build_tickets(g2, tiers=sizes))
+                tickets.update(build_tickets(_reaim(priced, aim, top), tiers=sizes))
             finally:
-                TARGET, LEG_MAX = base
+                TARGET = base
         tickets = {n: tickets.get(n, []) for n in TIERS}
         res[slot] = dict(games=len(games), tickets=tickets)
     return res
