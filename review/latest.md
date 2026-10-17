@@ -60,14 +60,14 @@ Locks 7/11 won, 2 open; lost: Under 69.5 points (Georgia State Panthers at James
 Lottery 100: lost (4/12 legs won, killed by Under 75.5 points, Under 65.5 points)
 Lottery 100: lost (0/6 legs won, killed by Under 35.5 points, Under 50.5 points)
 Lottery 100: open (1/6 legs won)
-Lottery 10k: lost (5/12 legs won, killed by Under 65.5 points, Under 38.5 points)
+Lottery 10k: lost (6/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 10k: lost (0/9 legs won, killed by Under 39.5 points, Under 35.5 points, Under 50.5 points)
 Lottery 10k: lost (2/9 legs won, killed by Under 48.5 points, Under 48.5 points, Cody Chovancek to win)
 Lottery 10k+25: lost (5/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 10k+50: lost (5/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 10k+100: lost (5/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 100: open (0/5 legs won)
-Props 4/7 vs 76.9% claimed.
+Props 5/9 vs 72.4% claimed.
 
 Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 84.0% on 426 of 467, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 81.2% on 16 of 78, ufc 75% -> 85.0% on 20 of 76, wnba 62% -> 77.4% on 31 of 46, wta 65% -> 81.4% on 102 of 184
 Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=388), nfl 0.40 (n=79), nhl 0.05 (n=78), wnba 0.30 (n=46)
