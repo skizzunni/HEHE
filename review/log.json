@@ -1008,8 +1008,8 @@
     "Under 56.5 points (Charlotte 49ers at Temple Owls) Charlotte 49ers 38 - Temple Owls 31"
    ],
    "n": 11,
-   "open": 3,
-   "won": 6
+   "open": 2,
+   "won": 7
   },
   "losses": [
    {
@@ -1203,6 +1203,14 @@
     "price": null,
     "said": 66.4,
     "why": "margin 1 \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
+    "pick": "Philadelphia Union",
+    "price": null,
+    "said": 53.2,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 53%"
    },
    {
     "against_market": false,
@@ -1407,7 +1415,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -1437,7 +1445,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -1471,7 +1479,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+25",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -1482,7 +1490,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+50",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -1493,16 +1501,16 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+100",
-    "won": 4
+    "won": 5
    }
   ],
   "picks": {
-   "hit": 72.9,
-   "lost": 48,
-   "n": 177,
+   "hit": 72.6,
+   "lost": 49,
+   "n": 179,
    "roi": 6.1,
-   "said": 71.5,
-   "won": 129
+   "said": 71.4,
+   "won": 130
   },
   "picks_by_league": {
    "arg": {
@@ -1604,10 +1612,10 @@
    "fra": {
     "hit": 100.0,
     "lost": 0,
-    "n": 2,
+    "n": 3,
     "roi": 44.4,
-    "said": 69.0,
-    "won": 2
+    "said": 71.9,
+    "won": 3
    },
    "fra2": {
     "hit": 50.0,
@@ -1687,6 +1695,14 @@
     "n": 1,
     "roi": null,
     "said": 66.4,
+    "won": 0
+   },
+   "mls": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 53.2,
     "won": 0
    },
    "ncaaf": {
@@ -1814,12 +1830,12 @@
    "won": 4
   },
   "strong": {
-   "hit": 79.8,
+   "hit": 80.0,
    "lost": 19,
-   "n": 94,
+   "n": 95,
    "roi": -6.7,
    "said": 77.0,
-   "won": 75
+   "won": 76
   },
   "vs_market_14d": {
    "against": {
