@@ -425,15 +425,19 @@ td.num.ok{color:var(--dog)}
 </aside>
 </div>
 <script>
-let STRONGONLY = false;
-try { STRONGONLY = localStorage.getItem("strongonly") === "1"; } catch (e) {}
+let STRONGONLY = false, COMBOONLY = false;
+try { STRONGONLY = localStorage.getItem("strongonly") === "1";
+      COMBOONLY = localStorage.getItem("comboonly") === "1"; } catch (e) {}
 function strongBar(n){
   const S = D.strong;
   const rec = S ? ' Strong calls hit <b>' + S.hit + '%</b> on ' + S.n + ' picks the cut-offs never saw '
     + '(all picks ' + S.all_hit + '%).' : '';
   return '<p class="coinbar">' + (STRONGONLY ? 'Showing strong calls only' + (n ? ' (' + n + ' close games hidden).' : '.')
     : 'Strong and close games shown.') + rec
-    + ' <button type="button" id="strongToggle">' + (STRONGONLY ? 'Show all' : 'Strong only') + '</button></p>';
+    + ' <button type="button" id="strongToggle">' + (STRONGONLY ? 'Show all' : 'Strong only') + '</button>'
+    + ' <button type="button" id="comboToggle">' + (COMBOONLY ? 'Show all' : 'Combo-safe only (90%+)') + '</button></p>'
+    + (COMBOONLY ? '<p class="note">Building a long combo (Kalshi, FanDuel)? Use only these. A 58% leg like Purdue loses '
+      + '4 times in 10 and sinks the whole ticket; 90%+ picks won 97% of 110 graded college football picks.</p>' : '');
 }
 let SHOWCOIN = false;
 try { SHOWCOIN = localStorage.getItem("showcoin") === "1"; } catch (e) {}
@@ -586,8 +590,13 @@ function renderView(){
   // strongest picks first, close games after; every one counts
   const closeN = lg.rows.filter(r => r.nc && !r.hd).length;
   const shown = (SHOWCOIN ? lg.rows : lg.rows.filter(r => !r.hd))
-    .filter(r => !STRONGONLY || !r.nc).slice()
+    .filter(r => !STRONGONLY || !r.nc)
+    .filter(r => !COMBOONLY || (r.mc !== null && r.mc >= 90)).slice()
     .sort((a, b) => (a.nc ? 1 : 0) - (b.nc ? 1 : 0));
+  if(!shown.length && COMBOONLY){
+    panel.innerHTML = strongBar(closeN) + '<p class="empty">No 90%+ picks in this league right now.</p>';
+    return;
+  }
   if(!shown.length && STRONGONLY && closeN){
     panel.innerHTML = strongBar(closeN) + '<p class="empty">No strong calls here &mdash; only close games.</p>';
     return;
@@ -611,6 +620,7 @@ function renderView(){
           : '<td class="num">' + r.mc.toFixed(1) + '%'
             + (r.nc ? '<span class="tier lean" title="Close game: the favourite is under this league\'s cutoff">close</span>'
                : '<span class="tier call">strong</span>')
+            + (r.mc >= 90 ? '<span class="tier call" title="90%+ picks won 97% of 110 graded college football picks: the only ones that belong in a long combo">combo-safe</span>' : '')
             + '</td>';
         const price = r.p
           ? '<td class="mkt"><span class="' + (r.d ? "fade" : "agree") + '">' + r.p + '</span></td>'
@@ -1708,6 +1718,12 @@ document.addEventListener("click", e => {
   const rk = e.target.closest("[data-rank]");
   if(rk){
     setRank(rk.getAttribute("data-rank"));
+    return;
+  }
+  if(e.target.id === "comboToggle"){
+    COMBOONLY = !COMBOONLY;
+    try { localStorage.setItem("comboonly", COMBOONLY ? "1" : "0"); } catch (err) {}
+    render();
     return;
   }
   if(e.target.id === "strongToggle"){
