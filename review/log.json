@@ -989,9 +989,9 @@
    }
   },
   "clv": {
-   "avg": 2.18,
-   "beat": 60.0,
-   "n": 5
+   "avg": 1.59,
+   "beat": 50.0,
+   "n": 6
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1041,6 +1041,14 @@
     "price": null,
     "said": 62.0,
     "why": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 62%"
+   },
+   {
+    "against_market": false,
+    "league": "efl2",
+    "pick": "Reading",
+    "price": null,
+    "said": 77.0,
+    "why": "margin 1 \u00b7 called at 77%"
    },
    {
     "against_market": false,
@@ -1113,6 +1121,14 @@
     "price": null,
     "said": 72.0,
     "why": "margin 1 \u00b7 called at 72%"
+   },
+   {
+    "against_market": false,
+    "league": "sco",
+    "pick": "Hibernian",
+    "price": null,
+    "said": 79.4,
+    "why": "margin 1 \u00b7 called at 79%"
    },
    {
     "against_market": false,
@@ -1278,12 +1294,12 @@
    }
   ],
   "picks": {
-   "hit": 71.3,
-   "lost": 25,
-   "n": 87,
-   "roi": 4.5,
-   "said": 72.1,
-   "won": 62
+   "hit": 72.7,
+   "lost": 27,
+   "n": 99,
+   "roi": 8.4,
+   "said": 72.5,
+   "won": 72
   },
   "picks_by_league": {
    "atp": {
@@ -1319,20 +1335,20 @@
     "won": 3
    },
    "efl2": {
-    "hit": 50.0,
-    "lost": 1,
-    "n": 2,
-    "roi": null,
-    "said": 74.0,
-    "won": 1
+    "hit": 60.0,
+    "lost": 2,
+    "n": 5,
+    "roi": 27.8,
+    "said": 76.0,
+    "won": 3
    },
    "efl3": {
-    "hit": 50.0,
+    "hit": 80.0,
     "lost": 1,
-    "n": 2,
+    "n": 5,
     "roi": null,
-    "said": 72.7,
-    "won": 1
+    "said": 73.2,
+    "won": 4
    },
    "epl": {
     "hit": 100.0,
@@ -1430,6 +1446,22 @@
     "said": 72.8,
     "won": 0
    },
+   "sco": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": null,
+    "said": 79.0,
+    "won": 1
+   },
+   "sco2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 4,
+    "roi": null,
+    "said": 73.4,
+    "won": 4
+   },
    "tur": {
     "hit": 100.0,
     "lost": 0,
@@ -1475,12 +1507,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 82.2,
-   "lost": 8,
-   "n": 45,
+   "hit": 80.4,
+   "lost": 10,
+   "n": 51,
    "roi": -37.5,
    "said": 79.9,
-   "won": 37
+   "won": 41
   },
   "vs_market_14d": {
    "against": {
@@ -1492,12 +1524,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.0,
+    "hit": 67.2,
     "lost": 63,
-    "n": 191,
-    "roi": -3.0,
+    "n": 192,
+    "roi": -2.8,
     "said": 60.0,
-    "won": 128
+    "won": 129
    }
   },
   "weights": {
