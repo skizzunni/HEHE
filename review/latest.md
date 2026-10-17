@@ -1,8 +1,8 @@
 # Review 2026-10-17
 
-Picks 106-41 (72.1% vs 72.0% claimed, ROI +6.3%).
-Strong calls 61-14 (81.3% vs 78.3% claimed).
-Closing line value: -0.14 points on 15 picks; beat the close on 46.7%.
+Picks 108-42 (72.0% vs 71.9% claimed, ROI +8.5%).
+Strong calls 62-14 (81.6% vs 78.2% claimed).
+Closing line value: -0.19 points on 16 picks; beat the close on 43.8%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
 - LOST atp Luka Pavlovic at 63.3%: lost 1-2 in sets · took it the distance · called at 63%
@@ -28,6 +28,7 @@ Closing line value: -0.14 points on 15 picks; beat the close on 46.7%.
 - LOST ksa Neom SC at 74.1%: margin 1 · called at 74%
 - LOST ned PSV Eindhoven at 62.4%: margin 1 · called at 62%
 - LOST nor Kristiansund BK at 63.0%: margin 3 · called at 63%
+- LOST nwsl Gotham FC at 65.7%: margin 1 · called at 66%
 - LOST rsa Golden Arrows at 73.5%: margin 1 · called at 74%
 - LOST rsa Chippa United at 72.0%: margin 1 · called at 72%
 - LOST sco Motherwell at 66.7%: margin 1 · called at 67%
@@ -44,7 +45,7 @@ Closing line value: -0.14 points on 15 picks; beat the close on 46.7%.
 - LOST wta Jeline Vandromme at 63.7%: lost 1-1 in sets · took it the distance · called at 64%
 - LOST wta Magdalena Frech at 65.4%: lost 1-1 in sets · took it the distance · called at 65%
 - LOST wta Mananchaya Sawangkaew at 57.4%: lost 0-2 in sets · never won a set · called at 57%
-With the market 67.7% (201); against it 37.8% (45).
+With the market 67.8% (202); against it 37.8% (45).
 Locks 0/11 won, 11 open.
 Lottery 100: open (0/12 legs won)
 Lottery 100: open (0/6 legs won)
