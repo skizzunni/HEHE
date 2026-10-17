@@ -101,6 +101,7 @@ def row_for(key, sport, league, g):
         sp = pick(h, "close", "spread")                 # home's spread, e.g. -7.5
         tot = num(((it.get("close") or {}).get("total") or {}).get("american")) or num(it.get("overUnder"))
         return dict(date=d.isoformat(), eid=str(eid), home=home, away=away, home_won=int(hs > as_), pc=pc, po=po,
+                    ih=hc, ia=ac,
                     ps=ncdf(-sp / SIGMA[key]) if sp is not None else pc, total=tot or 0.0)
     return None
 
@@ -240,6 +241,51 @@ def feats(r, mean_total, use):
     return x
 
 
+# ---------------------------------------------------- margin removal methods
+def dv_power(ih, ia):
+    """Power method: raise both implied chances to k so they sum to 1. Puts
+    more of the margin on the underdog, as books do."""
+    lo, hi = 0.5, 3.0
+    for _ in range(60):
+        k = (lo + hi) / 2
+        if ih ** k + ia ** k > 1:
+            lo = k
+        else:
+            hi = k
+    k = (lo + hi) / 2
+    return ih ** k
+
+
+def dv_shin(ih, ia):
+    """Shin's method for two outcomes (insider-trading model of the margin)."""
+    s = ih + ia
+    best, bz = None, 0.0
+    for i in range(1, 400):
+        z = i / 2000
+        def q(pi):
+            return (math.sqrt(z * z + 4 * (1 - z) * pi * pi / s) - z) / (2 * (1 - z))
+        tot = q(ih) + q(ia)
+        if best is None or abs(tot - 1) < best:
+            best, bz = abs(tot - 1), z
+    z = bz
+    qh = (math.sqrt(z * z + 4 * (1 - z) * ih * ih / s) - z) / (2 * (1 - z))
+    qa = (math.sqrt(z * z + 4 * (1 - z) * ia * ia / s) - z) / (2 * (1 - z))
+    return qh / (qh + qa)
+
+
+def bands(rows, probs):
+    """Favourite's stated chance vs how often it won, in bands."""
+    out = []
+    for lo, hi in ((0.5, 0.6), (0.6, 0.7), (0.7, 0.8), (0.8, 0.9), (0.9, 1.01)):
+        b = [(max(p, 1 - p), int((p >= 0.5) == bool(r["home_won"]))) for r, p in zip(rows, probs)
+             if lo <= max(p, 1 - p) < hi]
+        if b:
+            out.append(dict(band=f"{int(lo*100)}-{min(int(hi*100), 100)}", n=len(b),
+                            said=round(100 * sum(x for x, _ in b) / len(b), 1),
+                            won=round(100 * sum(w for _, w in b) / len(b), 1)))
+    return out
+
+
 def score(rows, probs):
     n = len(rows)
     hit = sum((p > 0.5) == bool(r["home_won"]) for r, p in zip(rows, probs)) / n
@@ -297,6 +343,17 @@ def main():
                              better=bool(l < base[1] and h >= base[0]),
                              significant=bool(flips and gained > 2 * math.sqrt(flips) / 2
                                               and l < base[1]))
+        # which way of removing the book's margin matches results best, on
+        # games the comparison never tuned on (the test half; nothing is fit)
+        dv = {}
+        for name, f in (("proportional", lambda r: r["pc"]),
+                        ("power", lambda r: dv_power(r["ih"], r["ia"])),
+                        ("shin", lambda r: dv_shin(r["ih"], r["ia"]))):
+            for part, rs in (("fit", fit), ("test", test)):
+                pr = [f(r) for r in rs]
+                h, l = score(rs, pr)
+                dv.setdefault(name, {})[part] = dict(logloss=l, bands=bands(rs, pr))
+        res["devig"] = dv
         report[key] = res
         print(key, json.dumps(res), flush=True)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
