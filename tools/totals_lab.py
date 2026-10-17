@@ -27,6 +27,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
 sys.path.insert(0, HERE)
 import backtest as B                                          # noqa: E402
+import stacks as S                                            # noqa: E402
 
 OUT = os.path.join(ROOT, "data", "totals_lab.json")
 LEAGUES = {"nfl": (3, 7, 10, 14), "ncaaf": (3, 7, 10, 14, 17), "nba": (5, 10, 15),
@@ -49,8 +50,22 @@ def rows_for(key, sport, league, wins):
                 return None
             if t <= 0:
                 return None
-            return dict(season=w[0][:4], date=d.isoformat(), close=t, final=hs + as_,
-                        early=int((d - start).days < EARLY_DAYS))
+            r = dict(season=w[0][:4], date=d.isoformat(), close=t, final=hs + as_,
+                     early=int((d - start).days < EARLY_DAYS), model={})
+            # what OUR stacks model says for each alternate line, from the close
+            try:
+                row, soccer = B.build(key, g, o)
+                G = S.game_from_row(row, key, soccer)
+            except Exception:
+                G = None
+            if G is not None:
+                for dd in LEAGUES[key]:
+                    for side, line in (("under", t + dd), ("over", t - dd)):
+                        try:
+                            r["model"][f"{side}{dd}"] = round(G.prob_specs([dict(t=side, line=line)]), 4)
+                        except Exception:
+                            pass
+            return r
         with ThreadPoolExecutor(max_workers=24) as ex:
             out += [r for r in ex.map(one, games) if r]
     return out
@@ -75,6 +90,24 @@ def summary(rs, offsets):
     return out
 
 
+def model_check(rs, offsets):
+    """Our model's stated chance vs the hit rate, unders and overs apart."""
+    out = {}
+    for side in ("under", "over"):
+        for d in offsets:
+            k = f"{side}{d}"
+            b = [(r["model"][k], (r["final"] < r["close"] + d) if side == "under"
+                  else (r["final"] > r["close"] - d)) for r in rs if k in r.get("model", {})]
+            if len(b) < 30:
+                continue
+            n = len(b)
+            said = sum(p for p, _ in b) / n
+            hit = sum(h for _, h in b) / n
+            out[k] = dict(n=n, said=round(100 * said, 1), hit=round(100 * hit, 1),
+                          se=round(100 * math.sqrt(said * (1 - said) / n), 1))
+    return out
+
+
 def main():
     rep = dict(run=dt.date.today().isoformat(), leagues={})
     for key, sport, league, wins in B.WINDOWS:
@@ -87,6 +120,8 @@ def main():
         for s in sorted({r["season"] for r in rs}):
             L["seasons"][s] = summary([r for r in rs if r["season"] == s], offs)
             L["seasons"][s + " early"] = summary([r for r in rs if r["season"] == s and r["early"]], offs)
+        L["model"] = {s: model_check([r for r in rs if r["season"] == s], offs)
+                      for s in sorted({r["season"] for r in rs})}
         rep["leagues"][key] = L
         print(key, json.dumps(L), flush=True)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
