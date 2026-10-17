@@ -1,6 +1,6 @@
 # Review 2026-10-16
 
-Picks 17-15 (53.1% vs 58.7% claimed).
+Picks 18-15 (54.5% vs 58.5% claimed).
 - LOST arg Defensa y Justicia at 55.6%: margin 1 · called at 56%
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
 - LOST den AC Horsens at 51.2%: margin 0 · drawn -- a draw loses a moneyline side · called at 51%
