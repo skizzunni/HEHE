@@ -996,9 +996,9 @@
    }
   },
   "clv": {
-   "avg": 1.12,
-   "beat": 55.6,
-   "n": 9
+   "avg": 1.06,
+   "beat": 60.0,
+   "n": 10
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1120,6 +1120,14 @@
     "price": null,
     "said": 78.1,
     "why": "margin 2 \u00b7 called at 78%"
+   },
+   {
+    "against_market": false,
+    "league": "esp",
+    "pick": "Villarreal",
+    "price": "-230",
+    "said": 66.3,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 66%"
    },
    {
     "against_market": false,
@@ -1365,12 +1373,12 @@
    }
   ],
   "picks": {
-   "hit": 72.4,
-   "lost": 35,
-   "n": 127,
-   "roi": 1.4,
-   "said": 72.4,
-   "won": 92
+   "hit": 72.1,
+   "lost": 36,
+   "n": 129,
+   "roi": -8.7,
+   "said": 72.3,
+   "won": 93
   },
   "picks_by_league": {
    "atp": {
@@ -1430,20 +1438,20 @@
     "won": 4
    },
    "esp": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": null,
-    "said": 81.0,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -100.0,
+    "said": 73.7,
     "won": 1
    },
    "esp2": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
+    "n": 2,
     "roi": null,
-    "said": 74.9,
-    "won": 1
+    "said": 71.2,
+    "won": 2
    },
    "fra2": {
     "hit": 50.0,
@@ -1603,10 +1611,10 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.2,
-    "lost": 64,
-    "n": 195,
-    "roi": -3.0,
+    "hit": 66.8,
+    "lost": 65,
+    "n": 196,
+    "roi": -3.5,
     "said": 60.2,
     "won": 131
    }

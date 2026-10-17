@@ -1,8 +1,8 @@
 # Review 2026-10-17
 
-Picks 92-35 (72.4% vs 72.4% claimed, ROI +1.4%).
+Picks 93-36 (72.1% vs 72.3% claimed, ROI -8.7%).
 Strong calls 56-14 (80.0% vs 78.4% claimed).
-Closing line value: +1.12 points on 9 picks; beat the close on 55.6%.
+Closing line value: +1.06 points on 10 picks; beat the close on 60.0%.
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
 - LOST atp Luka Pavlovic at 63.3%: lost 1-2 in sets · took it the distance · called at 63%
@@ -17,6 +17,7 @@ Closing line value: +1.12 points on 9 picks; beat the close on 55.6%.
 - LOST efl3 Bristol Rovers at 71.0%: margin 1 · called at 71%
 - LOST efl3 Chesterfield at 69.0%: margin 1 · called at 69%
 - LOST efl3 Grimsby Town at 78.1%: margin 2 · called at 78%
+- LOST esp Villarreal at 66.3%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST fra2 Nantes at 82.0%: margin 1 · called at 82%
 - LOST ita2 Padova at 67.8%: margin 1 · called at 68%
 - LOST ita2 Modena at 77.6%: margin 1 · called at 78%
@@ -38,7 +39,7 @@ Closing line value: +1.12 points on 9 picks; beat the close on 55.6%.
 - LOST wta Jeline Vandromme at 63.7%: lost 1-1 in sets · took it the distance · called at 64%
 - LOST wta Magdalena Frech at 65.4%: lost 1-1 in sets · took it the distance · called at 65%
 - LOST wta Mananchaya Sawangkaew at 57.4%: lost 0-2 in sets · never won a set · called at 57%
-With the market 67.2% (195); against it 37.8% (45).
+With the market 66.8% (196); against it 37.8% (45).
 Locks 0/11 won, 11 open.
 Lottery 100: open (0/12 legs won)
 Lottery 100: open (0/6 legs won)
