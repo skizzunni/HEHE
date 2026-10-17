@@ -614,7 +614,9 @@ function renderView(){
             + '</td>';
         const price = r.p
           ? '<td class="mkt"><span class="' + (r.d ? "fade" : "agree") + '">' + r.p + '</span></td>'
-          : '<td class="mkt none">no line</td>';
+          : (r.fv && / or draw$/.test(r.mp)
+             ? '<td class="mkt" title="Double chance is its own market on FanDuel: take it if offered at this price or better">fair ' + esc(r.fv) + '</td>'
+             : '<td class="mkt none">no line</td>');
         const id = league + "|" + r.mp;
         const on = SLIP.some(x => x.id === id) ? " class=\"on\"" : "";
         return '<tr data-pick="' + esc(id) + '"' + on + '><td class="mine">'
