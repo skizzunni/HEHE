@@ -1,7 +1,7 @@
 # Review 2026-10-16
 
-Picks 19-17 (52.8% vs 58.2% claimed).
-Strong calls 2-4 (33.3% vs 73.0% claimed).
+Picks 20-17 (54.1% vs 59.0% claimed).
+Strong calls 3-4 (42.9% vs 75.1% claimed).
 - LOST arg Defensa y Justicia at 55.6%: margin 1 · called at 56%
 - LOST atp Tommy Paul at 56.8%: lost 1-2 in sets · took it the distance · called at 57%
 - LOST bra2 Atlético Goianiense at 52.5%: margin 0 · drawn -- a draw loses a moneyline side · called at 52%
