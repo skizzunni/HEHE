@@ -16,6 +16,7 @@ Methods compared on the newer half:
             games in the data (logistic, fitted on the older half)
 
 Also: how often the board's published picks -- the top two per game -- scored.
+Data: data/td_history.json, the board's own log (ESPN keeps no past prices).
 Writes data/td_lab.json.
 """
 import datetime as dt
@@ -95,14 +96,19 @@ def bands(ps, ys):
 
 
 def main():
+    # ESPN wipes prop prices once a game is over, so the data is the board's
+    # own log (td_scorers.log): every listed player's last pre-game price
+    with open(os.path.join(ROOT, "data", "td_history.json")) as fh:
+        book = json.load(fh)
     rows = []
-    for key, sport, league, wins in B.WINDOWS:
-        if key != "nfl":
+    for e in book.values():
+        if e.get("status") not in ("won", "lost"):
             continue
-        games = B.finished_games(key, sport, league, B.dates(wins))
-        with ThreadPoolExecutor(max_workers=8) as ex:
-            for rs in ex.map(game_rows, games):
-                rows.extend(rs)
+        rows.append(dict(date=e["date"], eid=e["gid"], aid=e["name"], imp=e["imp"],
+                         total=e.get("total"), td=int(e["status"] == "won")))
+    if len({r["eid"] for r in rows}) < 20:
+        print("not enough graded games yet:", len({r["eid"] for r in rows}))
+        return
     rows.sort(key=lambda r: (r["date"], r["eid"]))
     print("player-games", len(rows), "games", len({r['eid'] for r in rows}), flush=True)
     # each player's touchdown rate over his earlier games in the data

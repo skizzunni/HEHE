@@ -8,6 +8,7 @@ on:
     branches: [claude/mlb-picks-review-jlx9w1]
     paths:
       - 'tools/td_lab.py'
+      - 'data/td_history.json.never'
       - '.github/workflows/td-lab.yml'
 concurrency:
   group: td-lab
