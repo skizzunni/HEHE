@@ -989,9 +989,9 @@
    }
   },
   "clv": {
-   "avg": 1.59,
+   "avg": 1.14,
    "beat": 50.0,
-   "n": 6
+   "n": 8
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1044,11 +1044,35 @@
    },
    {
     "against_market": false,
+    "league": "efl1",
+    "pick": "Southampton",
+    "price": "-230",
+    "said": 66.3,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
+    "league": "efl1",
+    "pick": "Norwich City",
+    "price": null,
+    "said": 78.4,
+    "why": "margin 1 \u00b7 called at 78%"
+   },
+   {
+    "against_market": false,
     "league": "efl2",
     "pick": "Reading",
     "price": null,
     "said": 77.0,
     "why": "margin 1 \u00b7 called at 77%"
+   },
+   {
+    "against_market": false,
+    "league": "efl2",
+    "pick": "Plymouth Argyle",
+    "price": null,
+    "said": 67.3,
+    "why": "margin 2 \u00b7 called at 67%"
    },
    {
     "against_market": false,
@@ -1065,6 +1089,14 @@
     "price": null,
     "said": 71.0,
     "why": "margin 1 \u00b7 called at 71%"
+   },
+   {
+    "against_market": false,
+    "league": "efl3",
+    "pick": "Chesterfield",
+    "price": null,
+    "said": 69.0,
+    "why": "margin 1 \u00b7 called at 69%"
    },
    {
     "against_market": false,
@@ -1108,6 +1140,14 @@
    },
    {
     "against_market": false,
+    "league": "nor",
+    "pick": "Kristiansund BK",
+    "price": null,
+    "said": 63.0,
+    "why": "margin 3 \u00b7 called at 63%"
+   },
+   {
+    "against_market": false,
     "league": "rsa",
     "pick": "Golden Arrows",
     "price": null,
@@ -1121,6 +1161,14 @@
     "price": null,
     "said": 72.0,
     "why": "margin 1 \u00b7 called at 72%"
+   },
+   {
+    "against_market": false,
+    "league": "sco",
+    "pick": "Motherwell",
+    "price": null,
+    "said": 66.7,
+    "why": "margin 1 \u00b7 called at 67%"
    },
    {
     "against_market": false,
@@ -1295,11 +1343,11 @@
   ],
   "picks": {
    "hit": 72.7,
-   "lost": 27,
-   "n": 99,
-   "roi": 8.4,
-   "said": 72.5,
-   "won": 72
+   "lost": 33,
+   "n": 121,
+   "roi": -1.3,
+   "said": 72.3,
+   "won": 88
   },
   "picks_by_league": {
    "atp": {
@@ -1327,36 +1375,36 @@
     "won": 4
    },
    "efl1": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": null,
-    "said": 76.7,
-    "won": 3
+    "hit": 80.0,
+    "lost": 2,
+    "n": 10,
+    "roi": -100.0,
+    "said": 74.7,
+    "won": 8
    },
    "efl2": {
-    "hit": 60.0,
-    "lost": 2,
-    "n": 5,
+    "hit": 70.0,
+    "lost": 3,
+    "n": 10,
     "roi": 27.8,
-    "said": 76.0,
-    "won": 3
+    "said": 73.6,
+    "won": 7
    },
    "efl3": {
     "hit": 80.0,
-    "lost": 1,
-    "n": 5,
-    "roi": null,
-    "said": 73.2,
-    "won": 4
+    "lost": 2,
+    "n": 10,
+    "roi": 39.2,
+    "said": 71.4,
+    "won": 8
    },
    "epl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
+    "n": 2,
     "roi": null,
-    "said": 66.6,
-    "won": 1
+    "said": 74.2,
+    "won": 2
    },
    "esp": {
     "hit": 100.0,
@@ -1398,6 +1446,14 @@
     "said": 72.6,
     "won": 3
    },
+   "gre": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 70.5,
+    "won": 1
+   },
    "ind": {
     "hit": 100.0,
     "lost": 0,
@@ -1431,11 +1487,11 @@
     "won": 7
    },
    "nor": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
     "roi": 27.0,
-    "said": 73.9,
+    "said": 68.5,
     "won": 1
    },
    "rsa": {
@@ -1448,11 +1504,11 @@
    },
    "sco": {
     "hit": 50.0,
-    "lost": 1,
-    "n": 2,
+    "lost": 2,
+    "n": 4,
     "roi": null,
-    "said": 79.0,
-    "won": 1
+    "said": 72.9,
+    "won": 2
    },
    "sco2": {
     "hit": 100.0,
@@ -1507,12 +1563,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 80.4,
-   "lost": 10,
-   "n": 51,
+   "hit": 81.0,
+   "lost": 11,
+   "n": 58,
    "roi": -37.5,
-   "said": 79.9,
-   "won": 41
+   "said": 79.8,
+   "won": 47
   },
   "vs_market_14d": {
    "against": {
@@ -1524,12 +1580,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.2,
-    "lost": 63,
-    "n": 192,
-    "roi": -2.8,
-    "said": 60.0,
-    "won": 129
+    "hit": 67.0,
+    "lost": 64,
+    "n": 194,
+    "roi": -3.1,
+    "said": 60.1,
+    "won": 130
    }
   },
   "weights": {
