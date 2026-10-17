@@ -474,11 +474,11 @@
     "hit": 86.7
    },
    "ncaaf": {
-    "all_hit": 82.4,
-    "calls": 410,
+    "all_hit": 82.2,
+    "calls": 411,
     "cutoff": 0.55,
-    "games": 449,
-    "hit": 84.9
+    "games": 450,
+    "hit": 84.7
    },
    "nfl": {
     "all_hit": 62.0,
@@ -517,17 +517,19 @@
    }
   },
   "clv": {
-   "avg": 0.71,
-   "beat": 50.0,
-   "n": 2
+   "avg": -0.25,
+   "beat": 33.3,
+   "n": 3
   },
   "day": "2026-10-16",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Under 61.5 points (Washington Huskies at Purdue Boilermakers) Washington Huskies 38 - Purdue Boilermakers 26"
+   ],
    "n": 5,
-   "open": 3,
-   "won": 1
+   "open": 1,
+   "won": 2
   },
   "losses": [
    {
@@ -609,6 +611,14 @@
     "price": null,
     "said": 61.2,
     "why": "margin 2 \u00b7 called at 61%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "Purdue Boilermakers",
+    "price": "-155",
+    "said": 60.6,
+    "why": "margin 12 \u00b7 the book had my side favoured too \u00b7 called at 61%"
    },
    {
     "against_market": false,
@@ -710,19 +720,21 @@
   "lottery": [
    {
     "killed_by": [
-     "Over 61.5 points"
+     "Under 52.5 points",
+     "Over 61.5 points",
+     "Pittsburgh Penguins over 3.5 goals"
     ],
     "legs": 5,
-    "lost": 1,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 0
    }
   ],
   "picks": {
-   "hit": 48.8,
-   "lost": 22,
-   "n": 43,
+   "hit": 47.7,
+   "lost": 23,
+   "n": 44,
    "roi": -100.0,
    "said": 60.4,
    "won": 21
@@ -834,10 +846,10 @@
    },
    "ncaaf": {
     "hit": 0.0,
-    "lost": 2,
-    "n": 2,
+    "lost": 3,
+    "n": 3,
     "roi": -100.0,
-    "said": 59.5,
+    "said": 59.9,
     "won": 0
    },
    "ned": {
@@ -912,16 +924,16 @@
     "said_price": null,
     "won": 0
    },
-   "n": 8,
-   "said": 84.5,
-   "won": 7
+   "n": 20,
+   "said": 81.7,
+   "won": 18
   },
   "strong": {
-   "hit": 50.0,
-   "lost": 4,
-   "n": 8,
+   "hit": 44.4,
+   "lost": 5,
+   "n": 9,
    "roi": -100.0,
-   "said": 76.8,
+   "said": 75.0,
    "won": 4
   },
   "vs_market_14d": {
@@ -934,10 +946,10 @@
     "won": 19
    },
    "agree": {
-    "hit": 67.2,
-    "lost": 60,
-    "n": 183,
-    "roi": -2.8,
+    "hit": 66.8,
+    "lost": 61,
+    "n": 184,
+    "roi": -3.3,
     "said": 59.6,
     "won": 123
    }
@@ -951,10 +963,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4296,
-    "market_only": 0.4296,
-    "model_only": 0.463,
-    "n": 372,
+    "logloss": 0.4307,
+    "market_only": 0.4307,
+    "model_only": 0.4639,
+    "n": 373,
     "weight": 0.05
    },
    "nfl": {
