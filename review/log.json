@@ -596,6 +596,14 @@
    },
    {
     "against_market": false,
+    "league": "mex2",
+    "pick": "Correcaminos UAT",
+    "price": null,
+    "said": 77.5,
+    "why": "margin 1 \u00b7 called at 78%"
+   },
+   {
+    "against_market": false,
     "league": "swe",
     "pick": "IF Brommapojkarna",
     "price": null,
@@ -678,12 +686,12 @@
    }
   ],
   "picks": {
-   "hit": 54.1,
-   "lost": 17,
-   "n": 37,
+   "hit": 53.8,
+   "lost": 18,
+   "n": 39,
    "roi": null,
-   "said": 59.0,
-   "won": 20
+   "said": 59.9,
+   "won": 21
   },
   "picks_by_league": {
    "arg": {
@@ -774,12 +782,28 @@
     "said": 58.1,
     "won": 1
    },
+   "mex2": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 77.5,
+    "won": 0
+   },
    "ned": {
     "hit": 100.0,
     "lost": 0,
     "n": 1,
     "roi": null,
     "said": 54.6,
+    "won": 1
+   },
+   "nwsl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 76.5,
     "won": 1
    },
    "par": {
@@ -843,12 +867,12 @@
    "won": 7
   },
   "strong": {
-   "hit": 42.9,
-   "lost": 4,
-   "n": 7,
+   "hit": 44.4,
+   "lost": 5,
+   "n": 9,
    "roi": null,
-   "said": 75.1,
-   "won": 3
+   "said": 75.5,
+   "won": 4
   },
   "vs_market_14d": {
    "against": {
