@@ -186,6 +186,43 @@ def fit_calls(graded):
     return cuts, detail
 
 
+def audit(graded, props, locks):
+    """Running checks on every split that can drift: each line is hit vs
+    stated, flagged when it trails by more than two standard errors."""
+    out = []
+
+    def line(name, rs, p_of, won_of):
+        rs = [r for r in rs if p_of(r) is not None]
+        if len(rs) < 10:
+            return
+        n = len(rs)
+        hit = sum(won_of(r) for r in rs) / n
+        said = sum(p_of(r) for r in rs) / n
+        se = math.sqrt(max(said * (1 - said), 1e-6) / n)
+        flag = " <- trailing" if hit < said - 2 * se else ""
+        out.append(dict(name=name, n=n, hit=round(100 * hit, 1), said=round(100 * said, 1),
+                        flag=bool(flag)))
+
+    tennis = [e for e in graded if e.get("league") in ("atp", "wta")]
+    for src, f in (("Kalshi-priced", lambda e: "Kalshi" in (e.get("why") or "")),
+                   ("no market", lambda e: "no market" in (e.get("why") or ""))):
+        line(f"tennis {src}", [e for e in tennis if f(e)], lambda e: (e.get("conf") or 0) / 100,
+             lambda e: e["status"] == "won")
+    pg = [e for e in props.values() if isinstance(e, dict) and e.get("status") in ("won", "lost")]
+    for key in sorted({(e["league"], e["market"]) for e in pg}):
+        line(f"props {key[0]} {key[1]}", [e for e in pg if (e["league"], e["market"]) == key],
+             lambda e: e.get("p"), lambda e: e["status"] == "won")
+    lg = [v for v in (locks.get("legs") or {}).values() if v.get("status") in ("won", "lost")]
+    kinds = {}
+    for v in lg:
+        t = (v.get("spec") or {}).get("t") or ""
+        k = "prop" if v.get("kind") == "prop" else "under" if "under" in t else "over" if "over" in t else "side"
+        kinds.setdefault(f'locks {v.get("league")} {k}', []).append(v)
+    for k, vs in sorted(kinds.items()):
+        line(k, vs, lambda v: v.get("p"), lambda v: v["status"] == "won")
+    return out
+
+
 def holdout(graded):
     """The strong-call cut-offs, tested honestly: fitted on the older half of
     graded picks, scored on the newer half they never saw. This is the number
@@ -302,6 +339,8 @@ def words(r, fit):
                    + (f", ROI {p['roi']:+}%" if p.get("roi") is not None else "") + ").")
     else:
         out.append("No picks settled yet.")
+    for a in [a for a in (r.get("audit") or []) if a["flag"]]:
+        out.append(f"TRAILING {a['name']}: {a['hit']}% hit vs {a['said']}% stated on {a['n']}")
     sc = r.get("strong") or {}
     if sc.get("n"):
         out.append(f"Strong calls {sc['won']}-{sc['lost']} ({sc['hit']}% vs {sc['said']}% claimed).")
@@ -374,6 +413,7 @@ def main():
                        holdout=holdout(graded)), fh, indent=1,
                   sort_keys=True)
     log[today.isoformat()]["calls"] = cdetail
+    log[today.isoformat()]["audit"] = audit(graded, props, locks)
     with open(log_path, "w") as fh:
         json.dump(log, fh, indent=1, sort_keys=True)
     latest = max(k for k, v in log.items() if v["picks"].get("n") or k == today.isoformat())
