@@ -932,10 +932,10 @@
  "2026-10-17": {
   "calls": {
    "atp": {
-    "all_hit": 70.3,
+    "all_hit": 69.7,
     "calls": 67,
     "cutoff": 0.65,
-    "games": 118,
+    "games": 119,
     "hit": 82.1
    },
    "efl3": {
@@ -996,9 +996,9 @@
    }
   },
   "clv": {
-   "avg": 0.69,
-   "beat": 54.5,
-   "n": 11
+   "avg": 0.45,
+   "beat": 50.0,
+   "n": 12
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1048,6 +1048,14 @@
     "price": null,
     "said": 62.0,
     "why": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 62%"
+   },
+   {
+    "against_market": false,
+    "league": "atp",
+    "pick": "Kimmer Coppejans",
+    "price": null,
+    "said": 52.3,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 52%"
    },
    {
     "against_market": false,
@@ -1381,20 +1389,20 @@
    }
   ],
   "picks": {
-   "hit": 72.2,
-   "lost": 37,
-   "n": 133,
-   "roi": -3.9,
-   "said": 72.1,
-   "won": 96
+   "hit": 72.1,
+   "lost": 38,
+   "n": 136,
+   "roi": 0.2,
+   "said": 71.9,
+   "won": 98
   },
   "picks_by_league": {
    "atp": {
-    "hit": 66.7,
-    "lost": 5,
-    "n": 15,
+    "hit": 62.5,
+    "lost": 6,
+    "n": 16,
     "roi": null,
-    "said": 68.0,
+    "said": 67.0,
     "won": 10
    },
    "aus": {
@@ -1469,6 +1477,14 @@
     "said": 71.2,
     "won": 2
    },
+   "fra": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 44.4,
+    "said": 66.0,
+    "won": 1
+   },
    "fra2": {
     "hit": 50.0,
     "lost": 1,
@@ -1518,12 +1534,12 @@
     "won": 0
    },
    "ita2": {
-    "hit": 50.0,
+    "hit": 60.0,
     "lost": 2,
-    "n": 4,
+    "n": 5,
     "roi": null,
-    "said": 75.9,
-    "won": 2
+    "said": 75.1,
+    "won": 3
    },
    "jpn": {
     "hit": 87.5,
@@ -1643,12 +1659,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 67.0,
+    "hit": 67.2,
     "lost": 65,
-    "n": 197,
-    "roi": -3.2,
-    "said": 60.2,
-    "won": 132
+    "n": 198,
+    "roi": -3.0,
+    "said": 60.3,
+    "won": 133
    }
   },
   "weights": {
