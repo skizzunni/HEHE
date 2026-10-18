@@ -951,6 +951,13 @@
    ],
    "n": 11,
    "open": 0,
+   "plays": {
+    "best": [
+     3,
+     0.5878,
+     "lost"
+    ]
+   },
    "won": 8
   },
   "losses": [
@@ -1241,6 +1248,30 @@
     "price": null,
     "said": 59.3,
     "why": "margin 2 \u00b7 called at 59%"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
+    "pick": "Seattle Sounders FC",
+    "price": null,
+    "said": 58.0,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 58%"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
+    "pick": "Nashville SC",
+    "price": null,
+    "said": 62.8,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 63%"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
+    "pick": "Portland Timbers",
+    "price": null,
+    "said": 55.3,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 55%"
    },
    {
     "against_market": false,
@@ -1625,6 +1656,14 @@
     "price": null,
     "said": 81.1,
     "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 81%"
+   },
+   {
+    "against_market": false,
+    "league": "wta",
+    "pick": "Anastasia Zakharova",
+    "price": null,
+    "said": 53.9,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 54%"
    }
   ],
   "lottery": [
@@ -1735,22 +1774,24 @@
    },
    {
     "killed_by": [
+     "Vincent Janssen: Anytime Goalscorer",
      "Lionel Messi: 1+ Assists",
-     "Robert Lewandowski: Anytime Goalscorer"
+     "Robert Lewandowski: Anytime Goalscorer",
+     "Angus Gunn: 4+ Goalkeeper Saves"
     ],
     "legs": 5,
-    "lost": 2,
+    "lost": 4,
     "status": "lost",
     "tier": "100",
     "won": 0
    }
   ],
   "picks": {
-   "hit": 71.3,
-   "lost": 84,
-   "n": 293,
+   "hit": 70.4,
+   "lost": 88,
+   "n": 297,
    "roi": 0.6,
-   "said": 70.8,
+   "said": 70.7,
    "won": 209
   },
   "picks_by_league": {
@@ -1971,11 +2012,11 @@
     "won": 2
    },
    "mls": {
-    "hit": 50.0,
-    "lost": 5,
-    "n": 10,
+    "hit": 38.5,
+    "lost": 8,
+    "n": 13,
     "roi": null,
-    "said": 64.6,
+    "said": 63.3,
     "won": 5
    },
    "ncaaf": {
@@ -2123,11 +2164,11 @@
     "won": 0
    },
    "wta": {
-    "hit": 64.3,
-    "lost": 10,
-    "n": 28,
+    "hit": 62.1,
+    "lost": 11,
+    "n": 29,
     "roi": null,
-    "said": 68.5,
+    "said": 68.0,
     "won": 18
    }
   },
@@ -2138,14 +2179,26 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 103,
-   "said": 75.9,
-   "won": 78
+   "n": 106,
+   "said": 75.4,
+   "won": 79
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
    "open": 11,
+   "plays": {
+    "best": [
+     10,
+     0.5442,
+     "open"
+    ],
+    "winners": [
+     4,
+     0.801,
+     "open"
+    ]
+   },
    "won": 0
   },
   "strong": {
@@ -2179,10 +2232,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 64.5,
-    "n": 31,
+    "hit": 62.5,
+    "n": 32,
     "name": "tennis Kalshi-priced",
-    "said": 74.1
+    "said": 73.5
    },
    {
     "flag": false,
@@ -2235,6 +2288,13 @@
     "games": 372,
     "hit": 86.7
    },
+   "mls": {
+    "all_hit": 40.7,
+    "calls": 16,
+    "cutoff": 0.55,
+    "games": 27,
+    "hit": 43.8
+   },
    "ncaaf": {
     "all_hit": 81.2,
     "calls": 452,
@@ -2271,10 +2331,10 @@
     "hit": 77.4
    },
    "wta": {
-    "all_hit": 71.1,
+    "all_hit": 70.7,
     "calls": 93,
     "cutoff": 0.675,
-    "games": 187,
+    "games": 188,
     "hit": 82.8
    }
   },
@@ -2299,6 +2359,7 @@
    "lost": [],
    "n": 0,
    "open": 0,
+   "plays": {},
    "won": 0
   },
   "losses": [],
@@ -2322,6 +2383,7 @@
    "lost": [],
    "n": 0,
    "open": 0,
+   "plays": {},
    "won": 0
   },
   "strong": {
