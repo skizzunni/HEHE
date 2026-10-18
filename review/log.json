@@ -2517,9 +2517,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "mls": {
-    "all_hit": 39.3,
+    "all_hit": 37.9,
     "cutoff": null,
-    "games": 28,
+    "games": 29,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ncaaf": {
@@ -2881,6 +2881,14 @@
    },
    {
     "against_market": false,
+    "league": "mls",
+    "pick": "FC Cincinnati",
+    "price": null,
+    "said": 66.5,
+    "why": "margin 2 \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
     "league": "ned",
     "pick": "AZ Alkmaar",
     "price": "-225",
@@ -3090,7 +3098,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -3117,6 +3125,33 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k",
+    "won": 3
+   },
+   {
+    "killed_by": [
+     "Under 31.5 points",
+     "Under 42.5 points",
+     "New Orleans Saints -7.5"
+    ],
+    "legs": 10,
+    "lost": 3,
+    "status": "lost",
+    "tier": "10k+25",
+    "won": 4
+   },
+   {
+    "killed_by": [
+     "Cameron Archer: Anytime Goalscorer",
+     "Antonio Sivera: 4+ Goalkeeper Saves",
+     "Neal Maupay: Anytime Goalscorer",
+     "Matz Sels: 4+ Goalkeeper Saves",
+     "Marco Carnesecchi: 4+ Goalkeeper Saves",
+     "Yehvann Diouf: 4+ Goalkeeper Saves"
+    ],
+    "legs": 11,
+    "lost": 6,
+    "status": "lost",
+    "tier": "10k+25",
     "won": 2
    },
    {
@@ -3128,33 +3163,6 @@
     "legs": 10,
     "lost": 3,
     "status": "lost",
-    "tier": "10k+25",
-    "won": 4
-   },
-   {
-    "killed_by": [
-     "Cameron Archer: Anytime Goalscorer",
-     "Antonio Sivera: 4+ Goalkeeper Saves",
-     "Neal Maupay: Anytime Goalscorer",
-     "Matz Sels: 4+ Goalkeeper Saves",
-     "Marco Carnesecchi: 4+ Goalkeeper Saves",
-     "Yehvann Diouf: 4+ Goalkeeper Saves"
-    ],
-    "legs": 11,
-    "lost": 6,
-    "status": "lost",
-    "tier": "10k+25",
-    "won": 1
-   },
-   {
-    "killed_by": [
-     "Under 31.5 points",
-     "Under 42.5 points",
-     "New Orleans Saints -7.5"
-    ],
-    "legs": 10,
-    "lost": 3,
-    "status": "lost",
     "tier": "10k+50",
     "won": 4
    },
@@ -3171,7 +3179,7 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k+50",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -3199,13 +3207,13 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k+100",
-    "won": 1
+    "won": 2
    }
   ],
   "picks": {
-   "hit": 66.2,
-   "lost": 46,
-   "n": 136,
+   "hit": 65.7,
+   "lost": 47,
+   "n": 137,
    "roi": -7.1,
    "said": 69.5,
    "won": 90
@@ -3387,6 +3395,14 @@
     "said": 84.6,
     "won": 0
    },
+   "mls": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 66.5,
+    "won": 0
+   },
    "ned": {
     "hit": 40.0,
     "lost": 3,
@@ -3515,9 +3531,9 @@
     "said_price": 85.5,
     "won": 78
    },
-   "n": 117,
-   "said": 71.6,
-   "won": 83
+   "n": 119,
+   "said": 71.3,
+   "won": 85
   },
   "safe_locks": {
    "lost": [],
