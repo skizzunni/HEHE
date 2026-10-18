@@ -68,9 +68,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "den": {
-   "all_hit": 66.7,
+   "all_hit": 75.0,
    "cutoff": null,
-   "games": 3,
+   "games": 4,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "ecu": {
@@ -273,9 +273,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "swe": {
-   "all_hit": 33.3,
+   "all_hit": 40.0,
    "cutoff": null,
-   "games": 9,
+   "games": 10,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "tur": {
@@ -325,14 +325,14 @@
  },
  "holdout": {
   "all_hit": 67.2,
-  "all_n": 1036,
+  "all_n": 1038,
   "basis": "as published",
   "days": 18,
   "hit": 75.5,
   "n": 286,
   "simulated": {
-   "hit": 69.3,
-   "n": 1036,
+   "hit": 69.4,
+   "n": 1038,
    "what": "old picks re-scored as the market favourite"
   },
   "since": "2026-09-19",
@@ -389,5 +389,5 @@
   "usl",
   "wsl"
  ],
- "updated": "2026-10-18T09:55-04:00"
+ "updated": "2026-10-18T10:00-04:00"
 }
