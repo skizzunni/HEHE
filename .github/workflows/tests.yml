@@ -21,3 +21,5 @@ jobs:
       - run: python3 -W ignore -m unittest discover -s tests -v
       # the page itself, in a real browser: stale banner, Safe Locks, Winners parlay
       - run: CHROME=$(which google-chrome) python3 tests/ui_check.py
+      # every protected rule broken on purpose must make the checks fail
+      - run: CHROME=$(which google-chrome) python3 -B tests/mutation_check.py

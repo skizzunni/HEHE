@@ -34,13 +34,18 @@ what is missing and the next step. Updated 2026-10-18.
 
 ## Regression tests
 
-`tests/test_core.py`, 16 tests, run by `.github/workflows/tests.yml` on every code push
-(standard library, no network). Covers: Locks -400..-120 and Safe -2000..-500 windows,
-one leg per game and the kind cap, soccer limited to validated kinds, soccer grading
-(draw / void / live), soccer name matching and the reversed-fixture guard, NFL upper
-tail, wind scaling, ungradable props kept off tickets, every FanDuel prop name gradable.
-Mutation check 2026-10-18: breaking the soccer kind filter, the reversed-fixture guard
-or the NFL split each failed exactly its own test.
+Run by `.github/workflows/tests.yml` on every code or page push:
+
+* `tests/test_core.py` -- 17 unit tests (standard library, no network): Locks -400..-120 and
+  Safe -2000..-500 windows, one leg per game and the kind cap, soccer limited to validated
+  kinds, soccer grading (draw / void / live), soccer name matching and the reversed-fixture
+  guard, NFL upper tail, wind scaling, ungradable props kept off tickets, every FanDuel prop
+  name gradable, Kalshi bot refuses tickets without a provably fresh build time, bot in practice mode.
+* `tests/ui_check.py` -- the real page in headless Chrome: stale banner on every tab when 20+
+  minutes old and absent when fresh; Locks -> Safe Locks renders 11 legs, the Winners parlay
+  (top 4, 80%) and Best play (top 10, 54%).
+* `tests/mutation_check.py` -- breaks 7 protected rules one at a time (bytecode cache off) and
+  requires each to be caught; 7/7 caught 2026-10-18.
 
 ## Out of scope
 
@@ -66,3 +71,6 @@ drift/form/rest/travel/team bias, Kalshi+book average.
 | 10-18 | ladder-lab workflow failed | lab exited without writing its result; commit step had nothing to add | labs always write a result (ladder, TD) |
 | 10-18 | first soccer run found no FanDuel games | FanDuel cache (10 min) written by the old code | next run refetched; soccer present |
 | 10-18 | derby test matched reversed fixture | 0.5/0.5 token scores both ways | swap guard rejects reversed fixtures |
+| 10-18 | NFL test failed after an unrelated change | stale .pyc: a same-length mutation restored within the same second kept running | mutation checks run with -B / PYTHONDONTWRITEBYTECODE; cache never committed |
+| 10-18 | page gave no warning when out of date outside Results | staleness shown only in the in-play list | page-wide banner at 20+ minutes, browser-tested |
+| 10-18 | Kalshi bot would use tickets with no build time | age check skipped when `built` missing; bad timestamp would crash | `board_age()` treats missing/unreadable as stale; unit-tested |

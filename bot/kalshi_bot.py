@@ -84,6 +84,18 @@ BOT_LEDGER = os.path.join(STATE_DIR or ROOT, "bot_trades.json")
 RFQ_DIR = os.path.join(STATE_DIR or os.path.join(ROOT, ".cache"), "bot_rfqs.json")  # one per ticket per day
 RETRY_UNQUOTED = 2 * 3600   # a ticket nobody quoted may be asked again after this
 BOARD_MAX_AGE = 30 * 60      # seconds; older tickets may include games already under way
+
+
+def board_age(board):
+    """Seconds since the board snapshot was built, or None when its build time
+    is missing or unreadable (the caller then treats it as stale)."""
+    try:
+        built = dt.datetime.fromisoformat(str(board["built"]).replace("Z", "+00:00"))
+    except (KeyError, TypeError, ValueError):
+        return None
+    if built.tzinfo is None:
+        return None
+    return time.time() - built.timestamp()
 RFQ_WAIT = 8.0             # seconds to collect quotes; most answer in under one, a few take ~4
 
 
@@ -713,12 +725,14 @@ def run():
     except (OSError, ValueError):
         log("no board snapshot; buying skipped")
         board = None
-    built = (board or {}).get("built")
-    if board and built:
-        age = time.time() - dt.datetime.fromisoformat(built.replace("Z", "+00:00")).timestamp()
-        if age > BOARD_MAX_AGE:
-            log(f"board is {age / 60:.0f} minutes old; buying skipped until a fresh one")
-            STATUS["error"] = f"the tickets are {age / 60:.0f} minutes old -- is the board still rebuilding?"
+    if board:
+        age = board_age(board)
+        if age is None or age > BOARD_MAX_AGE:
+            # a snapshot with no readable build time is never assumed fresh
+            why = ("has no readable build time" if age is None
+                   else f"is {age / 60:.0f} minutes old")
+            log(f"board {why}; buying skipped until a fresh one")
+            STATUS["error"] = f"the tickets {why} -- is the board still rebuilding?"
             board = None
     if board:
         buy_tickets(board, allowed_sports(), left, open_n, held, history)

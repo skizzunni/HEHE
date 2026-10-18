@@ -191,5 +191,20 @@ class Props(unittest.TestCase):
                 self.assertTrue(props_ledger.gradable(lg, name), (lg, name))
 
 
+class BotFreshness(unittest.TestCase):
+    """The Kalshi bot never buys from tickets it cannot prove are fresh."""
+
+    def test_board_age(self):
+        sys.path.insert(0, os.path.join(ROOT, "bot"))
+        import kalshi_bot as K
+        now = dt.datetime.now(dt.timezone.utc)
+        self.assertLess(K.board_age({"built": now.isoformat()}), 60)
+        self.assertGreater(K.board_age({"built": (now - dt.timedelta(minutes=45)).isoformat()}),
+                           K.BOARD_MAX_AGE)
+        for bad in ({}, {"built": None}, {"built": "garbage"}, {"built": "2026-10-18T03:00:00"}):
+            self.assertIsNone(K.board_age(bad), bad)      # treated as stale by the caller
+        self.assertFalse(K.LIVE)                          # practice until the owner switches it
+
+
 if __name__ == "__main__":
     unittest.main()
