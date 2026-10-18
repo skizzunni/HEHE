@@ -2259,10 +2259,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 58.0,
-    "n": 50,
+    "hit": 58.8,
+    "n": 51,
     "name": "tennis Kalshi-priced",
-    "said": 69.2
+    "said": 69.4
    },
    {
     "flag": false,
@@ -2301,11 +2301,11 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "atp": {
-    "all_hit": 68.7,
-    "calls": 70,
+    "all_hit": 68.9,
+    "calls": 71,
     "cutoff": 0.65,
-    "games": 131,
-    "hit": 81.4
+    "games": 132,
+    "hit": 81.7
    },
    "aus": {
     "all_hit": 75.0,
@@ -2386,9 +2386,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "epl": {
-    "all_hit": 87.5,
+    "all_hit": 88.9,
     "cutoff": null,
-    "games": 8,
+    "games": 9,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "esp": {
@@ -2579,9 +2579,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "uru": {
-    "all_hit": 54.5,
+    "all_hit": 50.0,
     "cutoff": null,
-    "games": 11,
+    "games": 12,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "usl": {
@@ -2737,6 +2737,14 @@
     "price": null,
     "said": 51.1,
     "why": "margin 1 \u00b7 called at 51%"
+   },
+   {
+    "against_market": false,
+    "league": "uru",
+    "pick": "Montevideo City Torque",
+    "price": null,
+    "said": 73.7,
+    "why": "margin 1 \u00b7 called at 74%"
    },
    {
     "against_market": false,
@@ -2896,21 +2904,21 @@
    }
   ],
   "picks": {
-   "hit": 65.4,
-   "lost": 18,
-   "n": 52,
+   "hit": 65.5,
+   "lost": 19,
+   "n": 55,
    "roi": 10.9,
-   "said": 66.6,
-   "won": 34
+   "said": 67.1,
+   "won": 36
   },
   "picks_by_league": {
    "atp": {
-    "hit": 50.0,
+    "hit": 54.5,
     "lost": 5,
-    "n": 10,
+    "n": 11,
     "roi": null,
-    "said": 60.2,
-    "won": 5
+    "said": 62.0,
+    "won": 6
    },
    "aut": {
     "hit": 100.0,
@@ -2939,10 +2947,10 @@
    "epl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 2,
+    "n": 3,
     "roi": 42.6,
-    "said": 66.8,
-    "won": 2
+    "said": 69.7,
+    "won": 3
    },
    "esp": {
     "hit": 100.0,
@@ -3040,6 +3048,14 @@
     "said": 51.9,
     "won": 1
    },
+   "uru": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 73.7,
+    "won": 0
+   },
    "wsl": {
     "hit": 80.0,
     "lost": 1,
@@ -3087,12 +3103,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 70.0,
+   "hit": 75.0,
    "lost": 3,
-   "n": 10,
+   "n": 12,
    "roi": 15.8,
-   "said": 76.5,
-   "won": 7
+   "said": 76.7,
+   "won": 9
   },
   "stuck": [],
   "vs_market_14d": {
