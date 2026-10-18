@@ -377,7 +377,7 @@
    }
   ],
   "league": "arg",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "BAR @ SARM",
   "myside": "home",
@@ -448,10 +448,10 @@
    }
   ],
   "league": "arg",
-  "live": "26'",
+  "live": "31'",
   "live_score": {
    "Independiente": 0,
-   "Racing Club": 0
+   "Racing Club": 1
   },
   "logged": "2026-10-18T13:40",
   "market_agrees": null,
@@ -522,7 +522,7 @@
    }
   ],
   "league": "arg",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "CTR @ NOB",
   "myside": "home",
@@ -622,7 +622,7 @@
    }
   ],
   "league": "arg",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "SLO @ EST",
   "myside": "home",
@@ -683,7 +683,7 @@
    }
   ],
   "league": "arg",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "ALDO @ AAE",
   "myside": "away",
@@ -724,7 +724,7 @@
    }
   ],
   "league": "arg",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "USF @ RIE",
   "myside": "home",
@@ -830,7 +830,7 @@
    }
   ],
   "league": "arg",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "RIV @ BEL",
   "myside": "away",
@@ -3170,7 +3170,7 @@
    }
   ],
   "league": "atp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Aleksandar Vukic @ Adrian Mannarino",
   "myside": "home",
@@ -3482,7 +3482,7 @@
    }
   ],
   "league": "atp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Facundo Diaz Acosta @ Thiago Agustin Tirante",
   "myside": "home",
@@ -3785,7 +3785,7 @@
    }
   ],
   "league": "atp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Nikoloz Basilashvili @ Marin Cilic",
   "myside": "away",
@@ -4109,7 +4109,7 @@
    }
   ],
   "league": "atp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Stefanos Sakellaridis @ Mikhail Kukushkin",
   "myside": "away",
@@ -4441,7 +4441,7 @@
    }
   ],
   "league": "atp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "James Duckworth @ Miomir Kecmanovic",
   "myside": "home",
@@ -5931,7 +5931,7 @@
    }
   ],
   "league": "atp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Moise Kouame @ Lorenzo Sonego",
   "myside": "home",
@@ -6102,7 +6102,7 @@
    }
   ],
   "league": "atp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Lorenzo Musetti @ Matteo Arnaldi",
   "myside": "away",
@@ -6666,7 +6666,7 @@
    }
   ],
   "league": "atp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Felix Balshaw @ Jaime Faria",
   "myside": "home",
@@ -7963,6 +7963,7 @@
   "conf": 71.2,
   "date": "2026-10-18",
   "dc": false,
+  "diagnosis": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 71%",
   "dog": false,
   "first": {
    "conf": 70.4,
@@ -8014,11 +8015,18 @@
   "p_market_away": null,
   "p_model_away": null,
   "pick": "Martin Damm",
+  "played": "2026-10-18",
   "price": null,
-  "status": "open",
+  "scores": {
+   "Andrea Guerrieri": "7(8) 6(5) 6",
+   "Martin Damm": "6(6) 7(7) 3"
+  },
+  "settled": "2026-10-18T14:15",
+  "status": "lost",
   "strong": true,
   "tip": "10:00 AM",
-  "why": "rank 104 vs NR \u00b7 Kalshi 72%"
+  "why": "rank 104 vs NR \u00b7 Kalshi 72%",
+  "winner": "Andrea Guerrieri"
  },
  "atp:186990": {
   "conf": 55.6,
@@ -8721,7 +8729,7 @@
   "winner": "Kyrian Jacquet"
  },
  "atp:186998": {
-  "conf": 56.0,
+  "conf": 55.3,
   "date": "2026-10-19",
   "dc": false,
   "dog": false,
@@ -8777,10 +8785,20 @@
     "t": "2026-10-18T14:10",
     "version": "ef68e0f",
     "why": "rank 150 vs NR \u00b7 Kalshi 57%"
+   },
+   {
+    "conf": 55.3,
+    "dc": false,
+    "pick": "Borna Gojo",
+    "price": null,
+    "strong": false,
+    "t": "2026-10-18T14:15",
+    "version": "aadf007",
+    "why": "rank 150 vs NR \u00b7 Kalshi 56%"
    }
   ],
   "league": "atp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Borna Gojo @ Vitaliy Sachko",
   "myside": "away",
@@ -8791,7 +8809,7 @@
   "status": "open",
   "strong": false,
   "tip": "6:00 AM",
-  "why": "rank 150 vs NR \u00b7 Kalshi 57%"
+  "why": "rank 150 vs NR \u00b7 Kalshi 56%"
  },
  "atp:186999": {
   "conf": 59.0,
@@ -8853,7 +8871,7 @@
    }
   ],
   "league": "atp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Maxim Mrva @ Pierre-Hugues Herbert",
   "myside": "home",
@@ -9694,7 +9712,7 @@
    }
   ],
   "league": "bra2",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "BFC @ CRB",
   "myside": "home",
@@ -9745,7 +9763,7 @@
    }
   ],
   "league": "bra2",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "ACMG @ AVA",
   "myside": "home",
@@ -9834,7 +9852,7 @@
    }
   ],
   "league": "bra2",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "NOV @ VIL",
   "myside": "away",
@@ -9961,7 +9979,7 @@
    }
   ],
   "league": "bra2",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "CRI @ BER",
   "myside": "away",
@@ -10002,7 +10020,7 @@
    }
   ],
   "league": "bra2",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "NAU @ GOI",
   "myside": "home",
@@ -10255,7 +10273,7 @@
    }
   ],
   "league": "bra",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "FLA @ BAH",
   "myside": "away",
@@ -10350,7 +10368,7 @@
    }
   ],
   "league": "bra",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "VIT @ COR",
   "myside": "home",
@@ -10428,7 +10446,7 @@
    }
   ],
   "league": "bra",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "BRA @ REMO",
   "myside": "away",
@@ -10556,7 +10574,7 @@
    }
   ],
   "league": "bra",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "CRU @ GRE",
   "myside": "away",
@@ -10657,7 +10675,7 @@
    }
   ],
   "league": "bra",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "SAN @ FLU",
   "myside": "home",
@@ -11313,7 +11331,7 @@
    }
   ],
   "league": "col",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "TOL @ AGD",
   "myside": "away",
@@ -11374,7 +11392,7 @@
    }
   ],
   "league": "col",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "SFE @ LLA",
   "myside": "away",
@@ -11599,7 +11617,7 @@
    }
   ],
   "league": "col",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "JUN @ DCI",
   "myside": "home",
@@ -11661,7 +11679,7 @@
    }
   ],
   "league": "col",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "AFC @ PAS",
   "myside": "home",
@@ -11807,7 +11825,7 @@
    }
   ],
   "league": "col",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "AME @ BUC",
   "myside": "away",
@@ -11888,7 +11906,7 @@
    }
   ],
   "league": "den",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "MID @ VIB",
   "myside": "home",
@@ -12568,7 +12586,7 @@
    }
   ],
   "league": "ecu",
-  "live": "77'",
+  "live": "82'",
   "live_score": {
    "Delf\u00edn": 3,
    "Manta F.C.": 2
@@ -12614,7 +12632,7 @@
    }
   ],
   "league": "ecu",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "ORS @ MUS",
   "myside": "home",
@@ -12682,7 +12700,7 @@
    }
   ],
   "league": "ecu",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "UCA @ BAR",
   "myside": "home",
@@ -12781,7 +12799,7 @@
    }
   ],
   "league": "ecu",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "EME @ LEON",
   "myside": "home",
@@ -14819,7 +14837,7 @@
    }
   ],
   "league": "epl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "COV @ TOT",
   "myside": "home",
@@ -15293,10 +15311,10 @@
    }
   ],
   "league": "esp2",
-  "live": "78'",
+  "live": "83'",
   "live_score": {
    "Eldense": 2,
-   "Real Valladolid": 1
+   "Real Valladolid": 2
   },
   "logged": "2026-10-18T12:28",
   "market_agrees": null,
@@ -15481,7 +15499,7 @@
    }
   ],
   "league": "esp2",
-  "live": "80'",
+  "live": "85'",
   "live_score": {
    "FC Andorra": 0,
    "Girona": 2
@@ -15652,7 +15670,7 @@
    }
   ],
   "league": "esp2",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "CDS @ BUR",
   "myside": "home",
@@ -15798,7 +15816,7 @@
    }
   ],
   "league": "esp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "SEV @ RMA",
   "myside": "home",
@@ -15967,7 +15985,7 @@
    }
   ],
   "league": "esp",
-  "live": "83'",
+  "live": "88'",
   "live_score": {
    "M\u00e1laga": 2,
    "Real Sociedad": 5
@@ -16013,7 +16031,7 @@
    }
   ],
   "league": "esp",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "RAY @ GET",
   "myside": "away",
@@ -16219,7 +16237,7 @@
   "winner": "Draw"
  },
  "fra2:401876719": {
-  "conf": 67.3,
+  "conf": 68.2,
   "date": "2026-10-19",
   "dc": true,
   "dog": false,
@@ -16243,10 +16261,20 @@
     "t": "2026-10-18T04:19",
     "version": "67dfced",
     "why": "market 37% to win, 67% to win or draw"
+   },
+   {
+    "conf": 68.2,
+    "dc": true,
+    "pick": "Montpellier",
+    "price": null,
+    "strong": false,
+    "t": "2026-10-18T14:15",
+    "version": "aadf007",
+    "why": "market 38% to win, 68% to win or draw"
    }
   ],
   "league": "fra2",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "MON @ AVE",
   "myside": "away",
@@ -16257,7 +16285,7 @@
   "status": "open",
   "strong": false,
   "tip": "2:45 PM",
-  "why": "market 37% to win, 67% to win or draw"
+  "why": "market 38% to win, 68% to win or draw"
  },
  "fra2:401876722": {
   "conf": 82.0,
@@ -16494,7 +16522,7 @@
    }
   ],
   "league": "fra",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "NICE @ LYON",
   "myside": "home",
@@ -17614,10 +17642,10 @@
    }
   ],
   "league": "gre",
-  "live": "48'",
+  "live": "54'",
   "live_score": {
    "Aris": 1,
-   "Kifisia": 0
+   "Kifisia": 1
   },
   "logged": "2026-10-18T12:58",
   "market_agrees": null,
@@ -17700,7 +17728,7 @@
    }
   ],
   "league": "gre",
-  "live": "9'",
+  "live": "15'",
   "live_score": {
    "Iraklis": 0,
    "PAOK": 0
@@ -17827,7 +17855,7 @@
    }
   ],
   "league": "ind",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "MCFC @ PFC",
   "myside": "home",
@@ -17993,7 +18021,7 @@
    }
   ],
   "league": "ita2",
-  "live": "38'",
+  "live": "43'",
   "live_score": {
    "Arezzo": 1,
    "Sampdoria": 1
@@ -18377,7 +18405,7 @@
    }
   ],
   "league": "ita",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "CAG @ MON",
   "myside": "home",
@@ -18448,7 +18476,7 @@
    }
   ],
   "league": "ita",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "LAZ @ JUV",
   "myside": "home",
@@ -18636,7 +18664,7 @@
    }
   ],
   "league": "ita",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "TOR @ PAR",
   "myside": "away",
@@ -19654,7 +19682,7 @@
    }
   ],
   "league": "ksa",
-  "live": "11'",
+  "live": "16'",
   "live_score": {
    "Al Fateh": 0,
    "Al Khaleej": 0
@@ -19721,7 +19749,7 @@
   "winner": "Al Faisaly"
  },
  "ksa:401900895": {
-  "conf": 81.3,
+  "conf": 81.1,
   "date": "2026-10-19",
   "dc": true,
   "dog": false,
@@ -19745,10 +19773,20 @@
     "t": "2026-10-18T04:19",
     "version": "67dfced",
     "why": "market 60% to win, 81% to win or draw \u00b7 rating 1489 v 1482 (+6.43) \u00b7 at home"
+   },
+   {
+    "conf": 81.1,
+    "dc": true,
+    "pick": "Al Shabab",
+    "price": null,
+    "strong": true,
+    "t": "2026-10-18T14:15",
+    "version": "aadf007",
+    "why": "market 60% to win, 81% to win or draw \u00b7 rating 1489 v 1482 (+6.43) \u00b7 at home"
    }
   ],
   "league": "ksa",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "ALF @ SHA",
   "myside": "home",
@@ -19762,7 +19800,7 @@
   "why": "market 60% to win, 81% to win or draw \u00b7 rating 1489 v 1482 (+6.43) \u00b7 at home"
  },
  "ksa:401900896": {
-  "conf": 88.7,
+  "conf": 89.6,
   "date": "2026-10-19",
   "dc": false,
   "dog": false,
@@ -19806,21 +19844,31 @@
     "t": "2026-10-18T12:12",
     "version": "b73fbbb",
     "why": "market 89% to win \u00b7 rating 1539 v 1489 (+49.69) \u00b7 last 8: 7-1 \u00b7 at home"
+   },
+   {
+    "conf": 89.6,
+    "dc": false,
+    "pick": "Al Hilal",
+    "price": "-1800",
+    "strong": true,
+    "t": "2026-10-18T14:15",
+    "version": "aadf007",
+    "why": "market 90% to win \u00b7 rating 1539 v 1489 (+49.69) \u00b7 last 8: 7-1 \u00b7 at home"
    }
   ],
   "league": "ksa",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "HAZ @ HIL",
   "myside": "home",
   "p_market_away": null,
   "p_model_away": null,
   "pick": "Al Hilal",
-  "price": "-2000",
+  "price": "-1800",
   "status": "open",
   "strong": true,
   "tip": "2:00 PM",
-  "why": "market 89% to win \u00b7 rating 1539 v 1489 (+49.69) \u00b7 last 8: 7-1 \u00b7 at home"
+  "why": "market 90% to win \u00b7 rating 1539 v 1489 (+49.69) \u00b7 last 8: 7-1 \u00b7 at home"
  },
  "ksa:401900897": {
   "conf": 70.1,
@@ -19870,7 +19918,7 @@
    }
   ],
   "league": "ksa",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "AHL @ FAY",
   "myside": "away",
@@ -20247,10 +20295,10 @@
    }
   ],
   "league": "mex2",
-  "live": "9'",
+  "live": "15'",
   "live_score": {
    "Alebrijes de Oaxaca": 0,
-   "Leones Negros": 0
+   "Leones Negros": 1
   },
   "logged": "2026-10-18T13:55",
   "market_agrees": null,
@@ -20358,7 +20406,7 @@
    }
   ],
   "league": "mex",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "PAC @ MTY",
   "myside": "home",
@@ -29057,7 +29105,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "CLB @ CIN",
   "myside": "home",
@@ -40756,7 +40804,7 @@
   "winner": "Louisiana Tech Bulldogs"
  },
  "ned2:401875885": {
-  "conf": 68.0,
+  "conf": 68.6,
   "date": "2026-10-19",
   "dc": true,
   "dog": false,
@@ -40780,10 +40828,20 @@
     "t": "2026-10-18T04:19",
     "version": "67dfced",
     "why": "market 43% to win, 68% to win or draw"
+   },
+   {
+    "conf": 68.6,
+    "dc": true,
+    "pick": "Jong PSV",
+    "price": null,
+    "strong": false,
+    "t": "2026-10-18T14:15",
+    "version": "aadf007",
+    "why": "market 45% to win, 69% to win or draw"
    }
   ],
   "league": "ned2",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "DOR @ JPS",
   "myside": "home",
@@ -40794,10 +40852,10 @@
   "status": "open",
   "strong": false,
   "tip": "2:00 PM",
-  "why": "market 43% to win, 68% to win or draw"
+  "why": "market 45% to win, 69% to win or draw"
  },
  "ned2:401875886": {
-  "conf": 73.6,
+  "conf": 74.1,
   "date": "2026-10-19",
   "dc": true,
   "dog": false,
@@ -40821,10 +40879,20 @@
     "t": "2026-10-18T04:19",
     "version": "67dfced",
     "why": "market 49% to win, 74% to win or draw"
+   },
+   {
+    "conf": 74.1,
+    "dc": true,
+    "pick": "Roda JC Kerkrade",
+    "price": null,
+    "strong": false,
+    "t": "2026-10-18T14:15",
+    "version": "aadf007",
+    "why": "market 50% to win, 74% to win or draw"
    }
   ],
   "league": "ned2",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "RJC @ JUT",
   "myside": "away",
@@ -40835,10 +40903,10 @@
   "status": "open",
   "strong": false,
   "tip": "2:00 PM",
-  "why": "market 49% to win, 74% to win or draw"
+  "why": "market 50% to win, 74% to win or draw"
  },
  "ned2:401875887": {
-  "conf": 63.5,
+  "conf": 63.8,
   "date": "2026-10-19",
   "dc": true,
   "dog": false,
@@ -40862,10 +40930,20 @@
     "t": "2026-10-18T04:19",
     "version": "67dfced",
     "why": "market 41% to win, 64% to win or draw"
+   },
+   {
+    "conf": 63.8,
+    "dc": true,
+    "pick": "De Graafschap",
+    "price": null,
+    "strong": false,
+    "t": "2026-10-18T14:15",
+    "version": "aadf007",
+    "why": "market 42% to win, 64% to win or draw"
    }
   ],
   "league": "ned2",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "GRA @ JAJ",
   "myside": "away",
@@ -40876,7 +40954,7 @@
   "status": "open",
   "strong": false,
   "tip": "2:00 PM",
-  "why": "market 41% to win, 64% to win or draw"
+  "why": "market 42% to win, 64% to win or draw"
  },
  "ned2:401875888": {
   "conf": 65.7,
@@ -41256,7 +41334,7 @@
    }
   ],
   "league": "ned",
-  "live": "10'",
+  "live": "15'",
   "live_score": {
    "FC Twente": 0,
    "FC Utrecht": 0
@@ -41475,7 +41553,7 @@
    }
   ],
   "league": "ned",
-  "live": "10'",
+  "live": "15'",
   "live_score": {
    "Fortuna Sittard": 0,
    "NEC Nijmegen": 0
@@ -43329,7 +43407,7 @@
    }
   ],
   "league": "nfl",
-  "live": "2:00 - 2nd",
+  "live": "1:25 - 2nd",
   "live_score": {
    "Baltimore Ravens": 10,
    "Cleveland Browns": 0
@@ -43425,9 +43503,9 @@
    }
   ],
   "league": "nfl",
-  "live": "8:46 - 2nd",
+  "live": "8:08 - 2nd",
   "live_score": {
-   "Carolina Panthers": 3,
+   "Carolina Panthers": 10,
    "Philadelphia Eagles": 0
   },
   "logged": "2026-10-18T12:58",
@@ -43511,7 +43589,7 @@
    }
   ],
   "league": "nfl",
-  "live": "3:55 - 2nd",
+  "live": "2:00 - 2nd",
   "live_score": {
    "Atlanta Falcons": 7,
    "Chicago Bears": 14
@@ -43587,7 +43665,7 @@
    }
   ],
   "league": "nfl",
-  "live": "2:27 - 2nd",
+  "live": "1:35 - 2nd",
   "live_score": {
    "New Orleans Saints": 0,
    "New York Giants": 10
@@ -43653,9 +43731,9 @@
    }
   ],
   "league": "nfl",
-  "live": "2:00 - 2nd",
+  "live": "1:46 - 2nd",
   "live_score": {
-   "New England Patriots": 7,
+   "New England Patriots": 10,
    "New York Jets": 3
   },
   "logged": "2026-10-18T12:58",
@@ -43759,10 +43837,10 @@
    }
   ],
   "league": "nfl",
-  "live": "4:17 - 2nd",
+  "live": "2:41 - 2nd",
   "live_score": {
    "Pittsburgh Steelers": 0,
-   "Tampa Bay Buccaneers": 10
+   "Tampa Bay Buccaneers": 13
   },
   "logged": "2026-10-18T12:58",
   "market_agrees": true,
@@ -43895,7 +43973,7 @@
    }
   ],
   "league": "nfl",
-  "live": "2:00 - 2nd",
+  "live": "0:24 - 2nd",
   "live_score": {
    "Indianapolis Colts": 10,
    "Tennessee Titans": 0
@@ -43961,7 +44039,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "ARI @ LAR",
   "myside": "home",
@@ -44022,7 +44100,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "BUF @ LV",
   "myside": "away",
@@ -44103,7 +44181,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "LAC @ KC",
   "myside": "home",
@@ -44154,7 +44232,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "DAL @ GB",
   "myside": "home",
@@ -44215,7 +44293,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "WSH @ SF",
   "myside": "home",
@@ -48467,7 +48545,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "CBJ @ MIN",
   "myside": "home",
@@ -48518,7 +48596,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "CAR @ CGY",
   "myside": "away",
@@ -48569,7 +48647,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "ANA @ NYR",
   "myside": "home",
@@ -48620,7 +48698,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "COL @ PHI",
   "myside": "away",
@@ -48671,7 +48749,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "SJ @ TOR",
   "myside": "home",
@@ -48722,7 +48800,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "PIT @ UTA",
   "myside": "home",
@@ -49567,7 +49645,7 @@
    }
   ],
   "league": "nwsl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "POR @ BAY",
   "myside": "away",
@@ -49618,7 +49696,7 @@
    }
   ],
   "league": "nwsl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "SEA @ CHI",
   "myside": "away",
@@ -49714,7 +49792,7 @@
    }
   ],
   "league": "par",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "SSL @ LUQ",
   "myside": "home",
@@ -49775,7 +49853,7 @@
    }
   ],
   "league": "par",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "LIB @ CST",
   "myside": "away",
@@ -49928,7 +50006,7 @@
    }
   ],
   "league": "par",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "CSA @ CPT",
   "myside": "home",
@@ -50325,7 +50403,7 @@
    }
   ],
   "league": "per",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "UNI @ AAT",
   "myside": "away",
@@ -50393,7 +50471,7 @@
    }
   ],
   "league": "per",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "UTC @ CIE",
   "myside": "home",
@@ -50827,7 +50905,7 @@
    }
   ],
   "league": "por",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "GVFC @ SCB",
   "myside": "home",
@@ -51849,7 +51927,7 @@
    }
   ],
   "league": "swe",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "KFF @ DEG",
   "myside": "away",
@@ -52405,7 +52483,7 @@
    }
   ],
   "league": "tur",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "BES @ TRAB",
   "myside": "away",
@@ -54525,7 +54603,7 @@
    }
   ],
   "league": "uru",
-  "live": "10'",
+  "live": "16'",
   "live_score": {
    "Central Espa\u00f1ol F\u00fatbol Club": 0,
    "Danubio": 0
@@ -54705,7 +54783,7 @@
    }
   ],
   "league": "uru",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "MAL @ NAC",
   "myside": "home",
@@ -54793,7 +54871,7 @@
    }
   ],
   "league": "uru",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "PEN @ LIV",
   "myside": "away",
@@ -55191,7 +55269,7 @@
    }
   ],
   "league": "usl",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "LOU @ BRM",
   "myside": "home",
@@ -56229,7 +56307,7 @@
    }
   ],
   "league": "wnba",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": true,
   "matchup": "ATL @ GS",
   "myside": "home",
@@ -60267,7 +60345,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Leylah Fernandez @ Elise Mertens",
   "myside": "home",
@@ -60590,7 +60668,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Aliaksandra Sasnovich @ Daria Kasatkina",
   "myside": "away",
@@ -60882,7 +60960,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Diane Parry @ Alexandra Eala",
   "myside": "home",
@@ -61035,7 +61113,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Shi Han @ Sorana Cirstea",
   "myside": "home",
@@ -61279,7 +61357,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Marie Bouzkova @ Kamilla Rakhimova",
   "myside": "away",
@@ -61460,7 +61538,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Sinja Kraus @ Catherine McNally",
   "myside": "home",
@@ -61691,7 +61769,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Kaitlin Quevedo @ Lanlana Tararudee",
   "myside": "home",
@@ -61812,7 +61890,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Janice Tjen @ Ashlyn Krueger",
   "myside": "home",
@@ -61943,7 +62021,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Himeno Sakatsume @ Katie Boulter",
   "myside": "home",
@@ -62294,7 +62372,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Liudmila Samsonova @ Lilli Tagger",
   "myside": "away",
@@ -62308,7 +62386,7 @@
   "why": "rank 43 vs 55 \u00b7 Kalshi 58%"
  },
  "wta:185576": {
-  "conf": 55.1,
+  "conf": 55.4,
   "date": "2026-10-19",
   "dc": false,
   "dog": false,
@@ -62572,10 +62650,20 @@
     "t": "2026-10-18T13:34",
     "version": "ea59e53",
     "why": "rank 41 vs 113 \u00b7 Kalshi 55%"
+   },
+   {
+    "conf": 55.4,
+    "dc": false,
+    "pick": "Talia Gibson",
+    "price": null,
+    "strong": false,
+    "t": "2026-10-18T14:15",
+    "version": "aadf007",
+    "why": "rank 41 vs 113 \u00b7 Kalshi 55%"
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Harriet Dart @ Talia Gibson",
   "myside": "home",
@@ -62746,7 +62834,7 @@
    }
   ],
   "league": "wta",
-  "logged": "2026-10-18T14:10",
+  "logged": "2026-10-18T14:15",
   "market_agrees": null,
   "matchup": "Mai Hontama @ Viktorija Golubic",
   "myside": "home",
