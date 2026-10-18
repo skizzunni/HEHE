@@ -2360,9 +2360,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "bra2": {
-    "all_hit": 55.6,
+    "all_hit": 57.9,
     "cutoff": null,
-    "games": 18,
+    "games": 19,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "chi": {
@@ -2535,9 +2535,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nfl": {
-    "all_hit": 57.5,
+    "all_hit": 56.8,
     "cutoff": null,
-    "games": 87,
+    "games": 88,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nhl": {
@@ -2553,9 +2553,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nwsl": {
-    "all_hit": 50.0,
+    "all_hit": 57.1,
     "cutoff": null,
-    "games": 6,
+    "games": 7,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "par": {
@@ -2613,9 +2613,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "usl": {
-    "all_hit": 81.8,
+    "all_hit": 83.3,
     "cutoff": null,
-    "games": 11,
+    "games": 12,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "wnba": {
@@ -2640,9 +2640,9 @@
    }
   },
   "clv": {
-   "avg": 0.02,
-   "beat": 40.0,
-   "n": 25
+   "avg": -0.03,
+   "beat": 38.5,
+   "n": 26
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2661,7 +2661,7 @@
     "Indianapolis Colts +1.5 (Tennessee Titans at Indianapolis Colts) Tennessee Titans 26 - Indianapolis Colts 20"
    ],
    "n": 11,
-   "open": 4,
+   "open": 3,
    "plays": {
     "best": [
      2,
@@ -2669,7 +2669,7 @@
      "won"
     ]
    },
-   "won": 6
+   "won": 7
   },
   "losses": [
    {
@@ -2938,6 +2938,14 @@
    },
    {
     "against_market": false,
+    "league": "nfl",
+    "pick": "Los Angeles Rams",
+    "price": "-700",
+    "said": 79.9,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 80%"
+   },
+   {
+    "against_market": false,
     "league": "nor",
     "pick": "Sarpsborg FK",
     "price": null,
@@ -3043,7 +3051,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -3087,7 +3095,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3114,7 +3122,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+25",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3141,7 +3149,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+50",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3188,12 +3196,12 @@
    }
   ],
   "picks": {
-   "hit": 65.9,
-   "lost": 45,
-   "n": 132,
-   "roi": -3.4,
+   "hit": 66.2,
+   "lost": 46,
+   "n": 136,
+   "roi": -7.1,
    "said": 69.5,
-   "won": 87
+   "won": 90
   },
   "picks_by_league": {
    "arg": {
@@ -3229,12 +3237,12 @@
     "won": 1
    },
    "bra2": {
-    "hit": 66.7,
+    "hit": 75.0,
     "lost": 1,
-    "n": 3,
+    "n": 4,
     "roi": null,
-    "said": 78.6,
-    "won": 2
+    "said": 75.7,
+    "won": 3
    },
    "chn": {
     "hit": 100.0,
@@ -3389,11 +3397,11 @@
     "won": 2
    },
    "nfl": {
-    "hit": 37.5,
-    "lost": 5,
-    "n": 8,
-    "roi": -42.0,
-    "said": 58.8,
+    "hit": 33.3,
+    "lost": 6,
+    "n": 9,
+    "roi": -48.5,
+    "said": 61.1,
     "won": 3
    },
    "nor": {
@@ -3407,10 +3415,10 @@
    "nwsl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
+    "n": 2,
     "roi": null,
-    "said": 66.8,
-    "won": 1
+    "said": 66.7,
+    "won": 2
    },
    "par": {
     "hit": 100.0,
@@ -3468,6 +3476,14 @@
     "said": 65.0,
     "won": 1
    },
+   "usl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 71.6,
+    "won": 1
+   },
    "wsl": {
     "hit": 83.3,
     "lost": 1,
@@ -3499,7 +3515,7 @@
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 6,
+   "open": 5,
    "plays": {
     "best": [
      7,
@@ -3512,7 +3528,7 @@
      "open"
     ]
    },
-   "won": 5
+   "won": 6
   },
   "strong": {
    "hit": 65.9,
@@ -3533,10 +3549,10 @@
     "won": 13
    },
    "agree": {
-    "hit": 67.3,
-    "lost": 89,
-    "n": 272,
-    "roi": -2.1,
+    "hit": 67.0,
+    "lost": 90,
+    "n": 273,
+    "roi": -2.4,
     "said": 63.7,
     "won": 183
    }
