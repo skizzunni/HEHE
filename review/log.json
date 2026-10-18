@@ -937,9 +937,9 @@
  },
  "2026-10-17": {
   "clv": {
-   "avg": -0.16,
-   "beat": 39.4,
-   "n": 94
+   "avg": -0.15,
+   "beat": 39.6,
+   "n": 96
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1268,6 +1268,14 @@
    {
     "against_market": false,
     "league": "mls",
+    "pick": "LA Galaxy",
+    "price": null,
+    "said": 51.9,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 52%"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
     "pick": "Portland Timbers",
     "price": null,
     "said": 55.3,
@@ -1408,6 +1416,14 @@
     "price": "-155",
     "said": 57.5,
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 58%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Utah Mammoth",
+    "price": "-148",
+    "said": 56.8,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 57%"
    },
    {
     "against_market": false,
@@ -1682,10 +1698,11 @@
    {
     "killed_by": [
      "Under 35.5 points",
-     "Under 50.5 points"
+     "Under 50.5 points",
+     "Pittsburgh Penguins +2.5"
     ],
     "legs": 6,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 1
@@ -1787,12 +1804,12 @@
    }
   ],
   "picks": {
-   "hit": 70.4,
-   "lost": 88,
-   "n": 297,
-   "roi": 0.6,
-   "said": 70.7,
-   "won": 209
+   "hit": 70.0,
+   "lost": 90,
+   "n": 300,
+   "roi": -0.0,
+   "said": 70.5,
+   "won": 210
   },
   "picks_by_league": {
    "arg": {
@@ -2012,11 +2029,11 @@
     "won": 2
    },
    "mls": {
-    "hit": 38.5,
-    "lost": 8,
-    "n": 13,
+    "hit": 35.7,
+    "lost": 9,
+    "n": 14,
     "roi": null,
-    "said": 63.3,
+    "said": 62.5,
     "won": 5
    },
    "ncaaf": {
@@ -2044,12 +2061,12 @@
     "won": 1
    },
    "nhl": {
-    "hit": 66.7,
-    "lost": 4,
-    "n": 12,
-    "roi": 5.9,
-    "said": 59.2,
-    "won": 8
+    "hit": 64.3,
+    "lost": 5,
+    "n": 14,
+    "roi": 1.2,
+    "said": 59.4,
+    "won": 9
    },
    "nor": {
     "hit": 66.7,
@@ -2179,9 +2196,9 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 106,
-   "said": 75.4,
-   "won": 79
+   "n": 130,
+   "said": 76.1,
+   "won": 96
   },
   "safe_locks": {
    "lost": [],
@@ -2202,12 +2219,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 78.8,
-   "lost": 31,
-   "n": 146,
-   "roi": -0.3,
-   "said": 76.8,
-   "won": 115
+   "hit": 76.4,
+   "lost": 37,
+   "n": 157,
+   "roi": 0.6,
+   "said": 75.8,
+   "won": 120
   },
   "vs_market_14d": {
    "against": {
@@ -2219,12 +2236,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.2,
-    "lost": 89,
-    "n": 280,
-    "roi": -1.9,
-    "said": 62.9,
-    "won": 191
+    "hit": 68.1,
+    "lost": 90,
+    "n": 282,
+    "roi": -2.1,
+    "said": 62.8,
+    "won": 192
    }
   }
  },
@@ -2246,10 +2263,10 @@
    },
    {
     "flag": false,
-    "hit": 78.4,
-    "n": 88,
+    "hit": 76.8,
+    "n": 112,
     "name": "props nhl Shots on Goal",
-    "said": 78.0
+    "said": 78.3
    },
    {
     "flag": false,
@@ -2289,10 +2306,10 @@
     "hit": 86.7
    },
    "mls": {
-    "all_hit": 40.7,
+    "all_hit": 39.3,
     "calls": 16,
     "cutoff": 0.55,
-    "games": 27,
+    "games": 28,
     "hit": 43.8
    },
    "ncaaf": {
@@ -2310,11 +2327,11 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 66.3,
-    "calls": 19,
-    "cutoff": 0.625,
-    "games": 89,
-    "hit": 84.2
+    "all_hit": 65.9,
+    "calls": 38,
+    "cutoff": 0.6,
+    "games": 91,
+    "hit": 76.3
    },
    "ufc": {
     "all_hit": 63.6,
@@ -2400,12 +2417,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 66.5,
-    "lost": 80,
-    "n": 239,
-    "roi": -1.8,
+    "hit": 66.4,
+    "lost": 81,
+    "n": 241,
+    "roi": -2.0,
     "said": 62.9,
-    "won": 159
+    "won": 160
    }
   },
   "weights": {
@@ -2433,8 +2450,8 @@
    "nhl": {
     "logloss": 0.6324,
     "market_only": 0.6324,
-    "model_only": 0.6395,
-    "n": 89,
+    "model_only": 0.6391,
+    "n": 91,
     "weight": 0.05
    },
    "wnba": {

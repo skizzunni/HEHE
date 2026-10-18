@@ -891,7 +891,7 @@
   "p": 0.8496,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "void"
  },
  "mls:761887|265874|Goalkeeper Saves|5+": {
   "aid": "265874",
@@ -907,7 +907,7 @@
   "p": 0.3223,
   "p_fair": null,
   "price": "+190",
-  "status": "open"
+  "status": "void"
  },
  "mls:761887|n:la galaxy|Team Total Goals|0.5": {
   "aid": null,
@@ -988,6 +988,22 @@
   "p": 0.3196,
   "p_fair": null,
   "price": "+150",
+  "status": "open"
+ },
+ "nfl:401872996|n:brenton strange|Receptions|3+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -4.3,
+  "gid": "nfl:401872996",
+  "imp": 0.8,
+  "label": "Brenton Strange: 3+ Receptions",
+  "league": "nfl",
+  "line": "3+",
+  "market": "Receptions",
+  "name": "Brenton Strange",
+  "p": 0.7477,
+  "p_fair": 0.7658,
+  "price": "-400",
   "status": "open"
  },
  "nfl:401872996|n:brian thomas|Receiving Yards|5+": {
@@ -3572,7 +3588,8 @@
   "p": 0.8439,
   "p_fair": null,
   "price": "-660",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892531|n:clayton keller|Shots on Goal|2+": {
   "aid": null,
@@ -3588,7 +3605,8 @@
   "p": 0.7161,
   "p_fair": null,
   "price": "-320",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892531|n:connor mcdavid|Shots on Goal|2+": {
   "aid": null,
@@ -3604,7 +3622,8 @@
   "p": 0.8456,
   "p_fair": null,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892531|n:dylan guenther|Shots on Goal|2+": {
   "aid": null,
@@ -3620,7 +3639,8 @@
   "p": 0.7392,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892531|n:evan bouchard|Shots on Goal|2+": {
   "aid": null,
@@ -3636,7 +3656,8 @@
   "p": 0.7213,
   "p_fair": null,
   "price": "-330",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892531|n:logan cooley|Shots on Goal|1+": {
   "aid": null,
@@ -3652,7 +3673,8 @@
   "p": 0.8224,
   "p_fair": null,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892531|n:mikhail sergachev|Shots on Goal|1+": {
   "aid": null,
@@ -3668,7 +3690,8 @@
   "p": 0.8224,
   "p_fair": null,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892531|n:nick schmaltz|Shots on Goal|1+": {
   "aid": null,
@@ -3684,7 +3707,8 @@
   "p": 0.8735,
   "p_fair": null,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892531|n:nick schmaltz|Shots on Goal|2+": {
   "aid": null,
@@ -3700,7 +3724,8 @@
   "p": 0.6828,
   "p_fair": null,
   "price": "-255",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892531|n:vasily podkolzin|Shots on Goal|1+": {
   "aid": null,
@@ -3716,7 +3741,8 @@
   "p": 0.8792,
   "p_fair": null,
   "price": "-1450",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892531|n:zach hyman|Shots on Goal|2+": {
   "aid": null,
@@ -3732,7 +3758,8 @@
   "p": 0.7161,
   "p_fair": null,
   "price": "-320",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892532|n:ben kindel|Shots on Goal|1+": {
   "aid": null,
@@ -3748,7 +3775,8 @@
   "p": 0.8368,
   "p_fair": null,
   "price": "-620",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892532|n:bryan rust|Shots on Goal|1+": {
   "aid": null,
@@ -3764,7 +3792,8 @@
   "p": 0.8615,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892532|n:erik karlsson|Shots on Goal|1+": {
   "aid": null,
@@ -3780,7 +3809,8 @@
   "p": 0.8581,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892532|n:evgeni malkin|Shots on Goal|1+": {
   "aid": null,
@@ -3796,7 +3826,8 @@
   "p": 0.845,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892532|n:ivan barbashev|Shots on Goal|1+": {
   "aid": null,
@@ -3812,7 +3843,8 @@
   "p": 0.8614,
   "p_fair": null,
   "price": "-780",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892532|n:mark stone|Shots on Goal|2+": {
   "aid": null,
@@ -3828,7 +3860,8 @@
   "p": 0.6488,
   "p_fair": null,
   "price": "-215",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892532|n:mitchell marner|Shots on Goal|2+": {
   "aid": null,
@@ -3844,7 +3877,7 @@
   "p": 0.6625,
   "p_fair": null,
   "price": "-230",
-  "status": "open"
+  "status": "void"
  },
  "nhl:401892532|n:rasmus andersson|Shots on Goal|1+": {
   "aid": null,
@@ -3860,7 +3893,8 @@
   "p": 0.8439,
   "p_fair": null,
   "price": "-660",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892532|n:rickard rakell|Shots on Goal|2+": {
   "aid": null,
@@ -3876,7 +3910,8 @@
   "p": 0.6788,
   "p_fair": null,
   "price": "-260",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892532|n:shea theodore|Shots on Goal|1+": {
   "aid": null,
@@ -3892,7 +3927,8 @@
   "p": 0.8368,
   "p_fair": null,
   "price": "-620",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892532|n:sidney crosby|Shots on Goal|2+": {
   "aid": null,
@@ -3908,7 +3944,8 @@
   "p": 0.6773,
   "p_fair": null,
   "price": "-230",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892532|n:tomas hertl|Shots on Goal|2+": {
   "aid": null,
@@ -3924,7 +3961,8 @@
   "p": 0.7161,
   "p_fair": null,
   "price": "-320",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892532|n:trevor connelly|Shots on Goal|1+": {
   "aid": null,
@@ -3940,7 +3978,8 @@
   "p": 0.8589,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892532|n:william karlsson|Shots on Goal|1+": {
   "aid": null,
@@ -3956,7 +3995,8 @@
   "p": 0.8503,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892533|n:adam fantilli|Shots on Goal|2+": {
   "aid": null,
@@ -4020,6 +4060,22 @@
   "p": 0.8433,
   "p_fair": null,
   "price": "-850",
+  "status": "open"
+ },
+ "nhl:401892534|n:matt coronato|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": null,
+  "gid": "nhl:401892534",
+  "imp": 0.9286,
+  "label": "Matt Coronato: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Matt Coronato",
+  "p": 0.859,
+  "p_fair": null,
+  "price": "-1300",
   "status": "open"
  },
  "uel:401915550|178760|Shots|1+": {
