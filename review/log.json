@@ -2308,6 +2308,13 @@
     "games": 24,
     "hit": 66.7
    },
+   "jpn": {
+    "all_hit": 55.2,
+    "calls": 15,
+    "cutoff": 0.55,
+    "games": 29,
+    "hit": 66.7
+   },
    "mlb": {
     "all_hit": 58.9,
     "calls": 15,
@@ -2392,6 +2399,14 @@
   "losses": [
    {
     "against_market": false,
+    "league": "jpn",
+    "pick": "Fagiano Okayama",
+    "price": null,
+    "said": 62.3,
+    "why": "margin 3 \u00b7 called at 62%"
+   },
+   {
+    "against_market": false,
     "league": "wta",
     "pick": "Sofia Kenin",
     "price": null,
@@ -2401,14 +2416,22 @@
   ],
   "lottery": [],
   "picks": {
-   "hit": 66.7,
-   "lost": 1,
-   "n": 3,
+   "hit": 50.0,
+   "lost": 2,
+   "n": 4,
    "roi": null,
-   "said": 62.5,
+   "said": 62.4,
    "won": 2
   },
   "picks_by_league": {
+   "jpn": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 62.3,
+    "won": 0
+   },
    "wta": {
     "hit": 66.7,
     "lost": 1,
