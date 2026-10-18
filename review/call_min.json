@@ -134,9 +134,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "ger2": {
-   "all_hit": 100.0,
+   "all_hit": 85.7,
    "cutoff": null,
-   "games": 4,
+   "games": 7,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "gre": {
@@ -316,23 +316,23 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "wta": {
-   "all_hit": 70.2,
+   "all_hit": 69.8,
    "calls": 69,
    "cutoff": 0.725,
-   "games": 198,
+   "games": 199,
    "hit": 85.5
   }
  },
  "holdout": {
   "all_hit": 67.1,
-  "all_n": 1028,
+  "all_n": 1032,
   "basis": "as published",
   "days": 18,
   "hit": 75.5,
   "n": 286,
   "simulated": {
-   "hit": 69.3,
-   "n": 1028,
+   "hit": 69.2,
+   "n": 1032,
    "what": "old picks re-scored as the market favourite"
   },
   "since": "2026-09-19",
@@ -389,5 +389,5 @@
   "usl",
   "wsl"
  ],
- "updated": "2026-10-18T09:23-04:00"
+ "updated": "2026-10-18T09:29-04:00"
 }

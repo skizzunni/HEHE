@@ -2259,10 +2259,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 59.2,
-    "n": 49,
+    "hit": 58.0,
+    "n": 50,
     "name": "tennis Kalshi-priced",
-    "said": 69.4
+    "said": 69.2
    },
    {
     "flag": false,
@@ -2422,9 +2422,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ger2": {
-    "all_hit": 100.0,
+    "all_hit": 85.7,
     "cutoff": null,
-    "games": 4,
+    "games": 7,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "gre": {
@@ -2604,10 +2604,10 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "wta": {
-    "all_hit": 70.2,
+    "all_hit": 69.8,
     "calls": 69,
     "cutoff": 0.725,
-    "games": 198,
+    "games": 199,
     "hit": 85.5
    }
   },
@@ -2684,6 +2684,14 @@
    },
    {
     "against_market": false,
+    "league": "ger2",
+    "pick": "1. FC Magdeburg",
+    "price": null,
+    "said": 64.4,
+    "why": "margin 2 \u00b7 called at 64%"
+   },
+   {
+    "against_market": false,
     "league": "ita",
     "pick": "Udinese",
     "price": null,
@@ -2705,6 +2713,14 @@
     "price": null,
     "said": 74.5,
     "why": "margin 3 \u00b7 called at 74%"
+   },
+   {
+    "against_market": false,
+    "league": "wta",
+    "pick": "Sonay Kartal",
+    "price": null,
+    "said": 57.8,
+    "why": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 58%"
    },
    {
     "against_market": false,
@@ -2838,12 +2854,12 @@
    }
   ],
   "picks": {
-   "hit": 57.1,
-   "lost": 12,
-   "n": 28,
+   "hit": 56.2,
+   "lost": 14,
+   "n": 32,
    "roi": 29.6,
-   "said": 64.4,
-   "won": 16
+   "said": 64.6,
+   "won": 18
   },
   "picks_by_league": {
    "atp": {
@@ -2860,6 +2876,14 @@
     "n": 2,
     "roi": 35.7,
     "said": 71.3,
+    "won": 2
+   },
+   "ger2": {
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": null,
+    "said": 68.5,
     "won": 2
    },
    "ita": {
@@ -2911,11 +2935,11 @@
     "won": 2
    },
    "wta": {
-    "hit": 50.0,
-    "lost": 4,
-    "n": 8,
+    "hit": 44.4,
+    "lost": 5,
+    "n": 9,
     "roi": null,
-    "said": 63.1,
+    "said": 62.5,
     "won": 4
    }
   },
@@ -2949,12 +2973,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 33.3,
+   "hit": 50.0,
    "lost": 2,
-   "n": 3,
+   "n": 4,
    "roi": null,
-   "said": 73.8,
-   "won": 1
+   "said": 74.1,
+   "won": 2
   },
   "stuck": [],
   "vs_market_14d": {
