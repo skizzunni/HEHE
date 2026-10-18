@@ -184,7 +184,8 @@
   "p": 0.3759,
   "p_fair": null,
   "price": "+150",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "esp:401882845|274272|Goalkeeper Saves|1+": {
   "aid": "274272",
@@ -200,7 +201,8 @@
   "p": 0.8846,
   "p_fair": null,
   "price": "-1600",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "fra:401876433|122280|Goalkeeper Saves|1+": {
   "aid": "122280",
@@ -2150,6 +2152,22 @@
   "price": "-110",
   "status": "open"
  },
+ "nfl:401873000|n:cam skattebo|Rushing Yards|15+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -3.4,
+  "gid": "nfl:401873000",
+  "imp": 0.9091,
+  "label": "Cam Skattebo: 15+ Rushing Yards",
+  "league": "nfl",
+  "line": "15+",
+  "market": "Rushing Yards",
+  "name": "Cam Skattebo",
+  "p": 0.8496,
+  "p_fair": 0.8784,
+  "price": "-1000",
+  "status": "open"
+ },
  "nfl:401873000|n:cam skattebo|Rushing Yards|25+": {
   "aid": null,
   "date": "2026-10-18",
@@ -3284,6 +3302,22 @@
   "p": 0.458,
   "p_fair": null,
   "price": "-150",
+  "status": "open"
+ },
+ "nfl:401873007|n:matthew golden|Receptions|3+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -3.8,
+  "gid": "nfl:401873007",
+  "imp": 0.9091,
+  "label": "Matthew Golden: 3+ Receptions",
+  "league": "nfl",
+  "line": "3+",
+  "market": "Receptions",
+  "name": "Matthew Golden",
+  "p": 0.8496,
+  "p_fair": 0.8749,
+  "price": "-1000",
   "status": "open"
  },
  "nfl:401873007|n:tucker kraft|Receiving Yards|30+": {
