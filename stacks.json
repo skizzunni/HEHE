@@ -35,6 +35,23 @@
    },
    "status": "won"
   },
+  "arg:401841618|No \u00b7 Independiente wins by over 2.5 goals": {
+   "away": "Independiente",
+   "date": "2026-10-18",
+   "home": "Racing Club",
+   "label": "No \u00b7 Independiente wins by over 2.5 goals",
+   "league": "arg",
+   "logged": "2026-10-18T00:02",
+   "match": "Independiente at Racing Club",
+   "p": 0.9701,
+   "p_model": 0.9712,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Independiente"
+   },
+   "status": "open"
+  },
   "arg:401841619|No \u00b7 Platense wins by over 2.5 goals": {
    "away": "Lan\u00fas",
    "date": "2026-10-17",
@@ -52,6 +69,40 @@
     "team": "Platense"
    },
    "status": "won"
+  },
+  "arg:401841624|No \u00b7 Aldosivi wins by over 2.5 goals": {
+   "away": "Aldosivi",
+   "date": "2026-10-18",
+   "home": "Estudiantes de R\u00edo Cuarto",
+   "label": "No \u00b7 Aldosivi wins by over 2.5 goals",
+   "league": "arg",
+   "logged": "2026-10-18T00:02",
+   "match": "Aldosivi at Estudiantes de R\u00edo Cuarto",
+   "p": 0.9603,
+   "p_model": 0.9618,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Aldosivi"
+   },
+   "status": "open"
+  },
+  "arg:401841624|No \u00b7 Estudiantes de R\u00edo Cuarto wins by over 2.5 goals": {
+   "away": "Aldosivi",
+   "date": "2026-10-18",
+   "home": "Estudiantes de R\u00edo Cuarto",
+   "label": "No \u00b7 Estudiantes de R\u00edo Cuarto wins by over 2.5 goals",
+   "league": "arg",
+   "logged": "2026-10-18T00:02",
+   "match": "Aldosivi at Estudiantes de R\u00edo Cuarto",
+   "p": 0.9678,
+   "p_model": 0.969,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Estudiantes de R\u00edo Cuarto"
+   },
+   "status": "open"
   },
   "arg:401841627|No \u00b7 Boca Juniors wins by over 3.5 goals": {
    "away": "Talleres (C\u00f3rdoba)",
@@ -87,6 +138,23 @@
     "t": "under"
    },
    "status": "won"
+  },
+  "arg:401841628|No \u00b7 Belgrano (C\u00f3rdoba) wins by over 2.5 goals": {
+   "away": "River Plate",
+   "date": "2026-10-18",
+   "home": "Belgrano (C\u00f3rdoba)",
+   "label": "No \u00b7 Belgrano (C\u00f3rdoba) wins by over 2.5 goals",
+   "league": "arg",
+   "logged": "2026-10-18T00:02",
+   "match": "River Plate at Belgrano (C\u00f3rdoba)",
+   "p": 0.9728,
+   "p_model": 0.9739,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Belgrano (C\u00f3rdoba)"
+   },
+   "status": "open"
   },
   "aus:401892158|No \u00b7 Melbourne Victory wins by over 3.5 goals": {
    "away": "Melbourne Victory",
@@ -159,6 +227,39 @@
    },
    "status": "won"
   },
+  "aut:401881772|Over 0.5 goals": {
+   "away": "SC Rheindorf Altach",
+   "date": "2026-10-18",
+   "home": "RB Salzburg",
+   "label": "Over 0.5 goals",
+   "league": "aut",
+   "logged": "2026-10-18T00:02",
+   "match": "SC Rheindorf Altach at RB Salzburg",
+   "p": 0.9607,
+   "p_model": 0.9622,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "aut:401881773|No \u00b7 Grazer AK wins by over 2.5 goals": {
+   "away": "Grazer AK",
+   "date": "2026-10-18",
+   "home": "SK Sturm Graz",
+   "label": "No \u00b7 Grazer AK wins by over 2.5 goals",
+   "league": "aut",
+   "logged": "2026-10-18T00:02",
+   "match": "Grazer AK at SK Sturm Graz",
+   "p": 0.9688,
+   "p_model": 0.97,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Grazer AK"
+   },
+   "status": "open"
+  },
   "bra2:401860392|No \u00b7 Cear\u00e1 wins by over 2.5 goals": {
    "away": "Juventude",
    "date": "2026-10-17",
@@ -176,6 +277,22 @@
     "team": "Cear\u00e1"
    },
    "status": "won"
+  },
+  "bra2:401860394|Under 5.5 goals": {
+   "away": "Athletic",
+   "date": "2026-10-18",
+   "home": "Ava\u00ed",
+   "label": "Under 5.5 goals",
+   "league": "bra2",
+   "logged": "2026-10-18T00:02",
+   "match": "Athletic at Ava\u00ed",
+   "p": 0.9712,
+   "p_model": 0.9723,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "bra2:401860395|No \u00b7 Am\u00e9rica Mineiro wins by over 2.5 goals": {
    "away": "Oper\u00e1rio PR",
@@ -195,6 +312,71 @@
    },
    "status": "won"
   },
+  "bra2:401860396|Under 4.5 goals": {
+   "away": "Novorizontino",
+   "date": "2026-10-18",
+   "home": "Vila Nova",
+   "label": "Under 4.5 goals",
+   "league": "bra2",
+   "logged": "2026-10-18T00:02",
+   "match": "Novorizontino at Vila Nova",
+   "p": 0.8995,
+   "p_model": 0.9033,
+   "spec": {
+    "line": 4.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "bra2:401860396|Under 5.5 goals": {
+   "away": "Novorizontino",
+   "date": "2026-10-18",
+   "home": "Vila Nova",
+   "label": "Under 5.5 goals",
+   "league": "bra2",
+   "logged": "2026-10-18T00:02",
+   "match": "Novorizontino at Vila Nova",
+   "p": 0.9625,
+   "p_model": 0.9639,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "bra2:401860400|No \u00b7 S\u00e3o Bernardo wins by over 2.5 goals": {
+   "away": "Crici\u00fama",
+   "date": "2026-10-18",
+   "home": "S\u00e3o Bernardo",
+   "label": "No \u00b7 S\u00e3o Bernardo wins by over 2.5 goals",
+   "league": "bra2",
+   "logged": "2026-10-18T00:02",
+   "match": "Crici\u00fama at S\u00e3o Bernardo",
+   "p": 0.966,
+   "p_model": 0.9673,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "S\u00e3o Bernardo"
+   },
+   "status": "open"
+  },
+  "bra2:401860400|Under 5.5 goals": {
+   "away": "Crici\u00fama",
+   "date": "2026-10-18",
+   "home": "S\u00e3o Bernardo",
+   "label": "Under 5.5 goals",
+   "league": "bra2",
+   "logged": "2026-10-18T00:02",
+   "match": "Crici\u00fama at S\u00e3o Bernardo",
+   "p": 0.9732,
+   "p_model": 0.9742,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "bra:401841268|Over 0.5 goals": {
    "away": "Chapecoense",
    "date": "2026-10-17",
@@ -211,6 +393,106 @@
     "t": "over"
    },
    "status": "won"
+  },
+  "bra:401841269|No \u00b7 Flamengo wins by over 3.5 goals": {
+   "away": "Flamengo",
+   "date": "2026-10-18",
+   "home": "Bahia",
+   "label": "No \u00b7 Flamengo wins by over 3.5 goals",
+   "league": "bra",
+   "logged": "2026-10-18T00:02",
+   "match": "Flamengo at Bahia",
+   "p": 0.9645,
+   "p_model": 0.9658,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Flamengo"
+   },
+   "status": "open"
+  },
+  "bra:401841274|No \u00b7 Remo wins by over 2.5 goals": {
+   "away": "Red Bull Bragantino",
+   "date": "2026-10-18",
+   "home": "Remo",
+   "label": "No \u00b7 Remo wins by over 2.5 goals",
+   "league": "bra",
+   "logged": "2026-10-18T00:02",
+   "match": "Red Bull Bragantino at Remo",
+   "p": 0.9575,
+   "p_model": 0.9592,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Remo"
+   },
+   "status": "open"
+  },
+  "chn:401861480|No \u00b7 Shanghai Shenhua wins by over 3.5 goals": {
+   "away": "Shanghai Shenhua",
+   "date": "2026-10-18",
+   "home": "Wuhan Three Towns",
+   "label": "No \u00b7 Shanghai Shenhua wins by over 3.5 goals",
+   "league": "chn",
+   "logged": "2026-10-18T00:02",
+   "match": "Shanghai Shenhua at Wuhan Three Towns",
+   "p": 0.9581,
+   "p_model": 0.9597,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Shanghai Shenhua"
+   },
+   "status": "open"
+  },
+  "chn:401861480|No \u00b7 Wuhan Three Towns wins by over 3.5 goals": {
+   "away": "Shanghai Shenhua",
+   "date": "2026-10-18",
+   "home": "Wuhan Three Towns",
+   "label": "No \u00b7 Wuhan Three Towns wins by over 3.5 goals",
+   "league": "chn",
+   "logged": "2026-10-18T00:02",
+   "match": "Shanghai Shenhua at Wuhan Three Towns",
+   "p": 0.9706,
+   "p_model": 0.9717,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Wuhan Three Towns"
+   },
+   "status": "open"
+  },
+  "chn:401861481|Over 0.5 goals": {
+   "away": "Qingdao West Coast",
+   "date": "2026-10-18",
+   "home": "Beijing Guoan",
+   "label": "Over 0.5 goals",
+   "league": "chn",
+   "logged": "2026-10-18T00:02",
+   "match": "Qingdao West Coast at Beijing Guoan",
+   "p": 0.9674,
+   "p_model": 0.9686,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "chn:401861482|Over 0.5 goals": {
+   "away": "Chengdu Rongcheng",
+   "date": "2026-10-18",
+   "home": "Shanghai Port",
+   "label": "Over 0.5 goals",
+   "league": "chn",
+   "logged": "2026-10-18T00:02",
+   "match": "Chengdu Rongcheng at Shanghai Port",
+   "p": 0.9621,
+   "p_model": 0.9636,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "chn:401861511|Over 0.5 goals": {
    "away": "Chongqing Tonglianglong",
@@ -229,6 +511,105 @@
    },
    "status": "won"
   },
+  "col:401877774|Under 4.5 goals": {
+   "away": "Deportes Tolima",
+   "date": "2026-10-18",
+   "home": "\u00c1guilas Doradas",
+   "label": "Under 4.5 goals",
+   "league": "col",
+   "logged": "2026-10-18T00:02",
+   "match": "Deportes Tolima at \u00c1guilas Doradas",
+   "p": 0.8995,
+   "p_model": 0.9033,
+   "spec": {
+    "line": 4.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "col:401877774|Under 5.5 goals": {
+   "away": "Deportes Tolima",
+   "date": "2026-10-18",
+   "home": "\u00c1guilas Doradas",
+   "label": "Under 5.5 goals",
+   "league": "col",
+   "logged": "2026-10-18T00:02",
+   "match": "Deportes Tolima at \u00c1guilas Doradas",
+   "p": 0.9625,
+   "p_model": 0.9639,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "col:401877840|No \u00b7 Llaneros FC wins by over 2.5 goals": {
+   "away": "Independiente Santa Fe",
+   "date": "2026-10-18",
+   "home": "Llaneros FC",
+   "label": "No \u00b7 Llaneros FC wins by over 2.5 goals",
+   "league": "col",
+   "logged": "2026-10-18T00:02",
+   "match": "Independiente Santa Fe at Llaneros FC",
+   "p": 0.9558,
+   "p_model": 0.9575,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Llaneros FC"
+   },
+   "status": "open"
+  },
+  "col:401877840|Over 0.5 goals": {
+   "away": "Independiente Santa Fe",
+   "date": "2026-10-18",
+   "home": "Llaneros FC",
+   "label": "Over 0.5 goals",
+   "league": "col",
+   "logged": "2026-10-18T00:02",
+   "match": "Independiente Santa Fe at Llaneros FC",
+   "p": 0.9008,
+   "p_model": 0.9046,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "col:401877905|No \u00b7 Atl\u00e9tico Junior wins by over 2.5 goals": {
+   "away": "Atl\u00e9tico Junior",
+   "date": "2026-10-18",
+   "home": "Deportivo Cali",
+   "label": "No \u00b7 Atl\u00e9tico Junior wins by over 2.5 goals",
+   "league": "col",
+   "logged": "2026-10-18T00:02",
+   "match": "Atl\u00e9tico Junior at Deportivo Cali",
+   "p": 0.9704,
+   "p_model": 0.9715,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Atl\u00e9tico Junior"
+   },
+   "status": "open"
+  },
+  "col:401877905|No \u00b7 Deportivo Cali wins by over 3.5 goals": {
+   "away": "Atl\u00e9tico Junior",
+   "date": "2026-10-18",
+   "home": "Deportivo Cali",
+   "label": "No \u00b7 Deportivo Cali wins by over 3.5 goals",
+   "league": "col",
+   "logged": "2026-10-18T00:02",
+   "match": "Atl\u00e9tico Junior at Deportivo Cali",
+   "p": 0.9658,
+   "p_model": 0.9671,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Deportivo Cali"
+   },
+   "status": "open"
+  },
   "col:401878048|Over 0.5 goals": {
    "away": "Jaguares de C\u00f3rdoba",
    "date": "2026-10-17",
@@ -245,6 +626,122 @@
     "t": "over"
    },
    "status": "won"
+  },
+  "col:401878059|Over 0.5 goals": {
+   "away": "Am\u00e9rica de Cali",
+   "date": "2026-10-18",
+   "home": "Atl\u00e9tico Bucaramanga",
+   "label": "Over 0.5 goals",
+   "league": "col",
+   "logged": "2026-10-18T00:02",
+   "match": "Am\u00e9rica de Cali at Atl\u00e9tico Bucaramanga",
+   "p": 0.8989,
+   "p_model": 0.9028,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "col:401878059|Under 5.5 goals": {
+   "away": "Am\u00e9rica de Cali",
+   "date": "2026-10-18",
+   "home": "Atl\u00e9tico Bucaramanga",
+   "label": "Under 5.5 goals",
+   "league": "col",
+   "logged": "2026-10-18T00:02",
+   "match": "Am\u00e9rica de Cali at Atl\u00e9tico Bucaramanga",
+   "p": 0.967,
+   "p_model": 0.9683,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "den:401874542|No \u00b7 Lyngby Boldklub wins by over 2.5 goals": {
+   "away": "FC Nordsj\u00e6lland",
+   "date": "2026-10-18",
+   "home": "Lyngby Boldklub",
+   "label": "No \u00b7 Lyngby Boldklub wins by over 2.5 goals",
+   "league": "den",
+   "logged": "2026-10-18T00:02",
+   "match": "FC Nordsj\u00e6lland at Lyngby Boldklub",
+   "p": 0.9597,
+   "p_model": 0.9612,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Lyngby Boldklub"
+   },
+   "status": "open"
+  },
+  "den:401874548|No \u00b7 Br\u00f8ndby IF wins by over 2.5 goals": {
+   "away": "Br\u00f8ndby IF",
+   "date": "2026-10-18",
+   "home": "Odense Boldklub",
+   "label": "No \u00b7 Br\u00f8ndby IF wins by over 2.5 goals",
+   "league": "den",
+   "logged": "2026-10-18T00:02",
+   "match": "Br\u00f8ndby IF at Odense Boldklub",
+   "p": 0.9012,
+   "p_model": 0.905,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Br\u00f8ndby IF"
+   },
+   "status": "open"
+  },
+  "den:401874548|No \u00b7 Br\u00f8ndby IF wins by over 3.5 goals": {
+   "away": "Br\u00f8ndby IF",
+   "date": "2026-10-18",
+   "home": "Odense Boldklub",
+   "label": "No \u00b7 Br\u00f8ndby IF wins by over 3.5 goals",
+   "league": "den",
+   "logged": "2026-10-18T00:02",
+   "match": "Br\u00f8ndby IF at Odense Boldklub",
+   "p": 0.9658,
+   "p_model": 0.9672,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Br\u00f8ndby IF"
+   },
+   "status": "open"
+  },
+  "ecu:401921336|No \u00b7 Manta F.C. wins by over 2.5 goals": {
+   "away": "Manta F.C.",
+   "date": "2026-10-18",
+   "home": "Delf\u00edn",
+   "label": "No \u00b7 Manta F.C. wins by over 2.5 goals",
+   "league": "ecu",
+   "logged": "2026-10-18T00:02",
+   "match": "Manta F.C. at Delf\u00edn",
+   "p": 0.9557,
+   "p_model": 0.9574,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Manta F.C."
+   },
+   "status": "open"
+  },
+  "ecu:401921336|Under 5.5 goals": {
+   "away": "Manta F.C.",
+   "date": "2026-10-18",
+   "home": "Delf\u00edn",
+   "label": "Under 5.5 goals",
+   "league": "ecu",
+   "logged": "2026-10-18T00:02",
+   "match": "Manta F.C. at Delf\u00edn",
+   "p": 0.9681,
+   "p_model": 0.9693,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "ecu:401921347|No \u00b7 Aucas wins by over 2.5 goals": {
    "away": "Liga de Quito",
@@ -263,6 +760,23 @@
     "team": "Aucas"
    },
    "status": "won"
+  },
+  "ecu:401921348|No \u00b7 Universidad Cat\u00f3lica (Quito) wins by over 2.5 goals": {
+   "away": "Universidad Cat\u00f3lica (Quito)",
+   "date": "2026-10-18",
+   "home": "Barcelona SC",
+   "label": "No \u00b7 Universidad Cat\u00f3lica (Quito) wins by over 2.5 goals",
+   "league": "ecu",
+   "logged": "2026-10-18T00:02",
+   "match": "Universidad Cat\u00f3lica (Quito) at Barcelona SC",
+   "p": 0.9537,
+   "p_model": 0.9555,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Universidad Cat\u00f3lica (Quito)"
+   },
+   "status": "open"
   },
   "ecu:401921379|Under 5.5 goals": {
    "away": "Guayaquil City FC",
@@ -513,6 +1027,90 @@
    },
    "status": "won"
   },
+  "epl:401879260|No \u00b7 Leeds United wins by over 3.5 goals": {
+   "away": "Manchester United",
+   "date": "2026-10-18",
+   "home": "Leeds United",
+   "label": "No \u00b7 Leeds United wins by over 3.5 goals",
+   "league": "epl",
+   "logged": "2026-10-18T00:02",
+   "match": "Manchester United at Leeds United",
+   "p": 0.9736,
+   "p_model": 0.9746,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Leeds United"
+   },
+   "status": "open"
+  },
+  "epl:401879261|No \u00b7 Brighton & Hove Albion wins by over 3.5 goals": {
+   "away": "Crystal Palace",
+   "date": "2026-10-18",
+   "home": "Brighton & Hove Albion",
+   "label": "No \u00b7 Brighton & Hove Albion wins by over 3.5 goals",
+   "league": "epl",
+   "logged": "2026-10-18T00:02",
+   "match": "Crystal Palace at Brighton & Hove Albion",
+   "p": 0.9012,
+   "p_model": 0.905,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Brighton & Hove Albion"
+   },
+   "status": "open"
+  },
+  "epl:401879261|Over 0.5 goals": {
+   "away": "Crystal Palace",
+   "date": "2026-10-18",
+   "home": "Brighton & Hove Albion",
+   "label": "Over 0.5 goals",
+   "league": "epl",
+   "logged": "2026-10-18T00:02",
+   "match": "Crystal Palace at Brighton & Hove Albion",
+   "p": 0.9584,
+   "p_model": 0.96,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "epl:401879263|No \u00b7 AFC Bournemouth wins by over 3.5 goals": {
+   "away": "Sunderland",
+   "date": "2026-10-18",
+   "home": "AFC Bournemouth",
+   "label": "No \u00b7 AFC Bournemouth wins by over 3.5 goals",
+   "league": "epl",
+   "logged": "2026-10-18T00:02",
+   "match": "Sunderland at AFC Bournemouth",
+   "p": 0.9712,
+   "p_model": 0.9723,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "AFC Bournemouth"
+   },
+   "status": "open"
+  },
+  "epl:401879263|No \u00b7 Sunderland wins by over 2.5 goals": {
+   "away": "Sunderland",
+   "date": "2026-10-18",
+   "home": "AFC Bournemouth",
+   "label": "No \u00b7 Sunderland wins by over 2.5 goals",
+   "league": "epl",
+   "logged": "2026-10-18T00:02",
+   "match": "Sunderland at AFC Bournemouth",
+   "p": 0.9601,
+   "p_model": 0.9617,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Sunderland"
+   },
+   "status": "open"
+  },
   "esp2:401883133|No \u00b7 Almer\u00eda wins by over 3.5 goals": {
    "away": "Almer\u00eda",
    "date": "2026-10-17",
@@ -530,6 +1128,72 @@
     "team": "Almer\u00eda"
    },
    "status": "won"
+  },
+  "esp2:401883154|No \u00b7 Eldense wins by over 2.5 goals": {
+   "away": "Eldense",
+   "date": "2026-10-18",
+   "home": "Real Valladolid",
+   "label": "No \u00b7 Eldense wins by over 2.5 goals",
+   "league": "esp2",
+   "logged": "2026-10-18T00:02",
+   "match": "Eldense at Real Valladolid",
+   "p": 0.9683,
+   "p_model": 0.9696,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Eldense"
+   },
+   "status": "open"
+  },
+  "esp2:401883154|Under 5.5 goals": {
+   "away": "Eldense",
+   "date": "2026-10-18",
+   "home": "Real Valladolid",
+   "label": "Under 5.5 goals",
+   "league": "esp2",
+   "logged": "2026-10-18T00:02",
+   "match": "Eldense at Real Valladolid",
+   "p": 0.9576,
+   "p_model": 0.9592,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "esp2:401883156|No \u00b7 Granada wins by over 3.5 goals": {
+   "away": "C\u00e1diz",
+   "date": "2026-10-18",
+   "home": "Granada",
+   "label": "No \u00b7 Granada wins by over 3.5 goals",
+   "league": "esp2",
+   "logged": "2026-10-18T00:02",
+   "match": "C\u00e1diz at Granada",
+   "p": 0.9707,
+   "p_model": 0.9718,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Granada"
+   },
+   "status": "open"
+  },
+  "esp2:401883156|Under 5.5 goals": {
+   "away": "C\u00e1diz",
+   "date": "2026-10-18",
+   "home": "Granada",
+   "label": "Under 5.5 goals",
+   "league": "esp2",
+   "logged": "2026-10-18T00:02",
+   "match": "C\u00e1diz at Granada",
+   "p": 0.9589,
+   "p_model": 0.9604,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "esp2:401883157|No \u00b7 Las Palmas wins by over 2.5 goals": {
    "away": "Castell\u00f3n",
@@ -549,6 +1213,57 @@
    },
    "status": "won"
   },
+  "esp2:401883177|No \u00b7 FC Andorra wins by over 2.5 goals": {
+   "away": "FC Andorra",
+   "date": "2026-10-18",
+   "home": "Girona",
+   "label": "No \u00b7 FC Andorra wins by over 2.5 goals",
+   "league": "esp2",
+   "logged": "2026-10-18T00:02",
+   "match": "FC Andorra at Girona",
+   "p": 0.9721,
+   "p_model": 0.9732,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "FC Andorra"
+   },
+   "status": "open"
+  },
+  "esp2:401883179|No \u00b7 Ceuta wins by over 2.5 goals": {
+   "away": "Real Oviedo",
+   "date": "2026-10-18",
+   "home": "Ceuta",
+   "label": "No \u00b7 Ceuta wins by over 2.5 goals",
+   "league": "esp2",
+   "logged": "2026-10-18T00:02",
+   "match": "Real Oviedo at Ceuta",
+   "p": 0.9615,
+   "p_model": 0.9629,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Ceuta"
+   },
+   "status": "open"
+  },
+  "esp2:401883180|No \u00b7 Burgos wins by over 2.5 goals": {
+   "away": "CD Sabadell",
+   "date": "2026-10-18",
+   "home": "Burgos",
+   "label": "No \u00b7 Burgos wins by over 2.5 goals",
+   "league": "esp2",
+   "logged": "2026-10-18T00:02",
+   "match": "CD Sabadell at Burgos",
+   "p": 0.9608,
+   "p_model": 0.9624,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Burgos"
+   },
+   "status": "open"
+  },
   "esp:401882838|Under 5.5 goals": {
    "away": "Athletic Club",
    "date": "2026-10-17",
@@ -565,6 +1280,190 @@
     "t": "under"
    },
    "status": "won"
+  },
+  "esp:401882839|Over 0.5 goals": {
+   "away": "Sevilla",
+   "date": "2026-10-18",
+   "home": "Real Madrid",
+   "label": "Over 0.5 goals",
+   "league": "esp",
+   "logged": "2026-10-18T00:02",
+   "match": "Sevilla at Real Madrid",
+   "p": 0.9686,
+   "p_model": 0.9698,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "esp:401882840|No \u00b7 Osasuna wins by over 3.5 goals": {
+   "away": "Racing Santander",
+   "date": "2026-10-18",
+   "home": "Osasuna",
+   "label": "No \u00b7 Osasuna wins by over 3.5 goals",
+   "league": "esp",
+   "logged": "2026-10-18T00:02",
+   "match": "Racing Santander at Osasuna",
+   "p": 0.9583,
+   "p_model": 0.9599,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Osasuna"
+   },
+   "status": "open"
+  },
+  "esp:401882841|No \u00b7 M\u00e1laga wins by over 2.5 goals": {
+   "away": "Real Sociedad",
+   "date": "2026-10-18",
+   "home": "M\u00e1laga",
+   "label": "No \u00b7 M\u00e1laga wins by over 2.5 goals",
+   "league": "esp",
+   "logged": "2026-10-18T00:02",
+   "match": "Real Sociedad at M\u00e1laga",
+   "p": 0.9616,
+   "p_model": 0.963,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "M\u00e1laga"
+   },
+   "status": "open"
+  },
+  "esp:401882845|No \u00b7 Alav\u00e9s wins by over 2.5 goals": {
+   "away": "Alav\u00e9s",
+   "date": "2026-10-18",
+   "home": "Celta Vigo",
+   "label": "No \u00b7 Alav\u00e9s wins by over 2.5 goals",
+   "league": "esp",
+   "logged": "2026-10-18T00:02",
+   "match": "Alav\u00e9s at Celta Vigo",
+   "p": 0.9662,
+   "p_model": 0.9675,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Alav\u00e9s"
+   },
+   "status": "open"
+  },
+  "esp:401882845|Under 4.5 goals": {
+   "away": "Alav\u00e9s",
+   "date": "2026-10-18",
+   "home": "Celta Vigo",
+   "label": "Under 4.5 goals",
+   "league": "esp",
+   "logged": "2026-10-18T00:02",
+   "match": "Alav\u00e9s at Celta Vigo",
+   "p": 0.9019,
+   "p_model": 0.9057,
+   "spec": {
+    "line": 4.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "esp:401882845|Under 5.5 goals": {
+   "away": "Alav\u00e9s",
+   "date": "2026-10-18",
+   "home": "Celta Vigo",
+   "label": "Under 5.5 goals",
+   "league": "esp",
+   "logged": "2026-10-18T00:02",
+   "match": "Alav\u00e9s at Celta Vigo",
+   "p": 0.9637,
+   "p_model": 0.9651,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "fra:401876433|No \u00b7 Paris FC wins by over 3.5 goals": {
+   "away": "Stade Rennais",
+   "date": "2026-10-18",
+   "home": "Paris FC",
+   "label": "No \u00b7 Paris FC wins by over 3.5 goals",
+   "league": "fra",
+   "logged": "2026-10-18T00:02",
+   "match": "Stade Rennais at Paris FC",
+   "p": 0.9722,
+   "p_model": 0.9733,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Paris FC"
+   },
+   "status": "open"
+  },
+  "fra:401876434|No \u00b7 Nice wins by over 2.5 goals": {
+   "away": "Nice",
+   "date": "2026-10-18",
+   "home": "Lyon",
+   "label": "No \u00b7 Nice wins by over 2.5 goals",
+   "league": "fra",
+   "logged": "2026-10-18T00:02",
+   "match": "Nice at Lyon",
+   "p": 0.9704,
+   "p_model": 0.9715,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Nice"
+   },
+   "status": "open"
+  },
+  "fra:401876435|No \u00b7 AS Monaco wins by over 2.5 goals": {
+   "away": "AS Monaco",
+   "date": "2026-10-18",
+   "home": "Lorient",
+   "label": "No \u00b7 AS Monaco wins by over 2.5 goals",
+   "league": "fra",
+   "logged": "2026-10-18T00:02",
+   "match": "AS Monaco at Lorient",
+   "p": 0.8988,
+   "p_model": 0.9027,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "AS Monaco"
+   },
+   "status": "open"
+  },
+  "fra:401876435|No \u00b7 AS Monaco wins by over 3.5 goals": {
+   "away": "AS Monaco",
+   "date": "2026-10-18",
+   "home": "Lorient",
+   "label": "No \u00b7 AS Monaco wins by over 3.5 goals",
+   "league": "fra",
+   "logged": "2026-10-18T00:02",
+   "match": "AS Monaco at Lorient",
+   "p": 0.9668,
+   "p_model": 0.9681,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "AS Monaco"
+   },
+   "status": "open"
+  },
+  "fra:401876435|No \u00b7 Lorient wins by over 2.5 goals": {
+   "away": "AS Monaco",
+   "date": "2026-10-18",
+   "home": "Lorient",
+   "label": "No \u00b7 Lorient wins by over 2.5 goals",
+   "league": "fra",
+   "logged": "2026-10-18T00:02",
+   "match": "AS Monaco at Lorient",
+   "p": 0.9694,
+   "p_model": 0.9706,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Lorient"
+   },
+   "status": "open"
   },
   "fra:401876436|No \u00b7 Lille wins by over 3.5 goals": {
    "away": "Brest",
@@ -584,6 +1483,23 @@
    },
    "status": "won"
   },
+  "fra:401876439|No \u00b7 Angers wins by over 2.5 goals": {
+   "away": "Marseille",
+   "date": "2026-10-18",
+   "home": "Angers",
+   "label": "No \u00b7 Angers wins by over 2.5 goals",
+   "league": "fra",
+   "logged": "2026-10-18T00:02",
+   "match": "Marseille at Angers",
+   "p": 0.9611,
+   "p_model": 0.9626,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Angers"
+   },
+   "status": "open"
+  },
   "ger2:401885085|No \u00b7 SpVgg Greuther F\u00fcrth wins by over 3.5 goals": {
    "away": "TSV Eintracht Braunschweig",
    "date": "2026-10-17",
@@ -601,6 +1517,90 @@
     "team": "SpVgg Greuther F\u00fcrth"
    },
    "status": "won"
+  },
+  "ger2:401885086|No \u00b7 VfL Osnabruck wins by over 2.5 goals": {
+   "away": "VfL Osnabruck",
+   "date": "2026-10-18",
+   "home": "Arminia Bielefeld",
+   "label": "No \u00b7 VfL Osnabruck wins by over 2.5 goals",
+   "league": "ger2",
+   "logged": "2026-10-18T00:02",
+   "match": "VfL Osnabruck at Arminia Bielefeld",
+   "p": 0.969,
+   "p_model": 0.9702,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "VfL Osnabruck"
+   },
+   "status": "open"
+  },
+  "ger2:401885088|No \u00b7 1. FC Magdeburg wins by over 3.5 goals": {
+   "away": "1. FC Magdeburg",
+   "date": "2026-10-18",
+   "home": "Dynamo Dresden",
+   "label": "No \u00b7 1. FC Magdeburg wins by over 3.5 goals",
+   "league": "ger2",
+   "logged": "2026-10-18T00:02",
+   "match": "1. FC Magdeburg at Dynamo Dresden",
+   "p": 0.9718,
+   "p_model": 0.9729,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "1. FC Magdeburg"
+   },
+   "status": "open"
+  },
+  "ger2:401885088|Over 0.5 goals": {
+   "away": "1. FC Magdeburg",
+   "date": "2026-10-18",
+   "home": "Dynamo Dresden",
+   "label": "Over 0.5 goals",
+   "league": "ger2",
+   "logged": "2026-10-18T00:02",
+   "match": "1. FC Magdeburg at Dynamo Dresden",
+   "p": 0.9576,
+   "p_model": 0.9592,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "ger2:401885089|No \u00b7 Karlsruher SC wins by over 2.5 goals": {
+   "away": "SV Darmstadt 98",
+   "date": "2026-10-18",
+   "home": "Karlsruher SC",
+   "label": "No \u00b7 Karlsruher SC wins by over 2.5 goals",
+   "league": "ger2",
+   "logged": "2026-10-18T00:02",
+   "match": "SV Darmstadt 98 at Karlsruher SC",
+   "p": 0.8996,
+   "p_model": 0.9035,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Karlsruher SC"
+   },
+   "status": "open"
+  },
+  "ger2:401885089|No \u00b7 Karlsruher SC wins by over 3.5 goals": {
+   "away": "SV Darmstadt 98",
+   "date": "2026-10-18",
+   "home": "Karlsruher SC",
+   "label": "No \u00b7 Karlsruher SC wins by over 3.5 goals",
+   "league": "ger2",
+   "logged": "2026-10-18T00:02",
+   "match": "SV Darmstadt 98 at Karlsruher SC",
+   "p": 0.9637,
+   "p_model": 0.9651,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Karlsruher SC"
+   },
+   "status": "open"
   },
   "ger2:401885090|No \u00b7 Kaiserslautern wins by over 3.5 goals": {
    "away": "VfL Bochum",
@@ -673,6 +1673,22 @@
    },
    "status": "won"
   },
+  "ger:401884768|Over 0.5 goals": {
+   "away": "TSG Hoffenheim",
+   "date": "2026-10-18",
+   "home": "Borussia M\u00f6nchengladbach",
+   "label": "Over 0.5 goals",
+   "league": "ger",
+   "logged": "2026-10-18T00:02",
+   "match": "TSG Hoffenheim at Borussia M\u00f6nchengladbach",
+   "p": 0.9703,
+   "p_model": 0.9715,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "ger:401884769|Over 0.5 goals": {
    "away": "Borussia Dortmund",
    "date": "2026-10-17",
@@ -689,6 +1705,72 @@
     "t": "over"
    },
    "status": "lost"
+  },
+  "ger:401884771|No \u00b7 SC Freiburg wins by over 2.5 goals": {
+   "away": "SC Freiburg",
+   "date": "2026-10-18",
+   "home": "Bayer Leverkusen",
+   "label": "No \u00b7 SC Freiburg wins by over 2.5 goals",
+   "league": "ger",
+   "logged": "2026-10-18T00:02",
+   "match": "SC Freiburg at Bayer Leverkusen",
+   "p": 0.9678,
+   "p_model": 0.9691,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "SC Freiburg"
+   },
+   "status": "open"
+  },
+  "ger:401884771|Over 0.5 goals": {
+   "away": "SC Freiburg",
+   "date": "2026-10-18",
+   "home": "Bayer Leverkusen",
+   "label": "Over 0.5 goals",
+   "league": "ger",
+   "logged": "2026-10-18T00:02",
+   "match": "SC Freiburg at Bayer Leverkusen",
+   "p": 0.9642,
+   "p_model": 0.9656,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "gre:401896748|No \u00b7 Kifisia wins by over 2.5 goals": {
+   "away": "Aris",
+   "date": "2026-10-18",
+   "home": "Kifisia",
+   "label": "No \u00b7 Kifisia wins by over 2.5 goals",
+   "league": "gre",
+   "logged": "2026-10-18T00:02",
+   "match": "Aris at Kifisia",
+   "p": 0.9598,
+   "p_model": 0.9614,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Kifisia"
+   },
+   "status": "open"
+  },
+  "gre:401896817|Under 5.5 goals": {
+   "away": "OFI Crete",
+   "date": "2026-10-18",
+   "home": "Kalamata",
+   "label": "Under 5.5 goals",
+   "league": "gre",
+   "logged": "2026-10-18T00:02",
+   "match": "OFI Crete at Kalamata",
+   "p": 0.9563,
+   "p_model": 0.958,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "ind:401925433|No \u00b7 Odisha FC wins by over 2.5 goals": {
    "away": "Odisha FC",
@@ -707,6 +1789,23 @@
     "team": "Odisha FC"
    },
    "status": "won"
+  },
+  "ita2:401899590|No \u00b7 Sampdoria wins by over 3.5 goals": {
+   "away": "Arezzo",
+   "date": "2026-10-18",
+   "home": "Sampdoria",
+   "label": "No \u00b7 Sampdoria wins by over 3.5 goals",
+   "league": "ita2",
+   "logged": "2026-10-18T00:02",
+   "match": "Arezzo at Sampdoria",
+   "p": 0.962,
+   "p_model": 0.9635,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Sampdoria"
+   },
+   "status": "open"
   },
   "ita2:401899591|Under 5.5 goals": {
    "away": "Cremonese",
@@ -760,6 +1859,22 @@
    },
    "status": "won"
   },
+  "ita2:401899594|Under 5.5 goals": {
+   "away": "Sudtirol",
+   "date": "2026-10-18",
+   "home": "Juve Stabia",
+   "label": "Under 5.5 goals",
+   "league": "ita2",
+   "logged": "2026-10-18T00:02",
+   "match": "Sudtirol at Juve Stabia",
+   "p": 0.9589,
+   "p_model": 0.9604,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "ita2:401899599|No \u00b7 Ascoli wins by over 3.5 goals": {
    "away": "Empoli",
    "date": "2026-10-17",
@@ -778,6 +1893,73 @@
    },
    "status": "won"
   },
+  "ita:401874771|No \u00b7 Udinese wins by over 3.5 goals": {
+   "away": "Lecce",
+   "date": "2026-10-18",
+   "home": "Udinese",
+   "label": "No \u00b7 Udinese wins by over 3.5 goals",
+   "league": "ita",
+   "logged": "2026-10-18T00:02",
+   "match": "Lecce at Udinese",
+   "p": 0.9595,
+   "p_model": 0.9611,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Udinese"
+   },
+   "status": "open"
+  },
+  "ita:401874774|No \u00b7 Como wins by over 3.5 goals": {
+   "away": "Como",
+   "date": "2026-10-18",
+   "home": "Fiorentina",
+   "label": "No \u00b7 Como wins by over 3.5 goals",
+   "league": "ita",
+   "logged": "2026-10-18T00:02",
+   "match": "Como at Fiorentina",
+   "p": 0.9621,
+   "p_model": 0.9636,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Como"
+   },
+   "status": "open"
+  },
+  "ita:401874978|No \u00b7 Atalanta wins by over 2.5 goals": {
+   "away": "Atalanta",
+   "date": "2026-10-18",
+   "home": "AC Milan",
+   "label": "No \u00b7 Atalanta wins by over 2.5 goals",
+   "league": "ita",
+   "logged": "2026-10-18T00:02",
+   "match": "Atalanta at AC Milan",
+   "p": 0.9716,
+   "p_model": 0.9727,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Atalanta"
+   },
+   "status": "open"
+  },
+  "jpn:401877598|Under 5.5 goals": {
+   "away": "Vissel Kobe",
+   "date": "2026-10-18",
+   "home": "Fagiano Okayama",
+   "label": "Under 5.5 goals",
+   "league": "jpn",
+   "logged": "2026-10-18T00:02",
+   "match": "Vissel Kobe at Fagiano Okayama",
+   "p": 0.9648,
+   "p_model": 0.9662,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "jpn:401877599|No \u00b7 Kawasaki Frontale wins by over 3.5 goals": {
    "away": "Kawasaki Frontale",
    "date": "2026-10-17",
@@ -795,6 +1977,22 @@
     "team": "Kawasaki Frontale"
    },
    "status": "won"
+  },
+  "jpn:401877601|Under 5.5 goals": {
+   "away": "Avispa Fukuoka",
+   "date": "2026-10-18",
+   "home": "Machida Zelvia",
+   "label": "Under 5.5 goals",
+   "league": "jpn",
+   "logged": "2026-10-18T00:02",
+   "match": "Avispa Fukuoka at Machida Zelvia",
+   "p": 0.9576,
+   "p_model": 0.9592,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "jpn:401877603|No \u00b7 Mito Hollyhock wins by over 2.5 goals": {
    "away": "Urawa Red Diamonds",
@@ -901,6 +2099,22 @@
     "t": "over"
    },
    "status": "won"
+  },
+  "mex2:401886341|Over 0.5 goals": {
+   "away": "Alebrijes de Oaxaca",
+   "date": "2026-10-18",
+   "home": "Leones Negros",
+   "label": "Over 0.5 goals",
+   "league": "mex2",
+   "logged": "2026-10-18T00:02",
+   "match": "Alebrijes de Oaxaca at Leones Negros",
+   "p": 0.9614,
+   "p_model": 0.9629,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "mex2:401886342|No \u00b7 Correcaminos UAT wins by over 3.5 goals": {
    "away": "Dorados de Sinaloa",
@@ -1302,6 +2516,40 @@
    },
    "status": "open"
   },
+  "mls:761889|No \u00b7 Columbus Crew wins by over 3.5 goals": {
+   "away": "Columbus Crew",
+   "date": "2026-10-18",
+   "home": "FC Cincinnati",
+   "label": "No \u00b7 Columbus Crew wins by over 3.5 goals",
+   "league": "mls",
+   "logged": "2026-10-18T00:02",
+   "match": "Columbus Crew at FC Cincinnati",
+   "p": 0.969,
+   "p_model": 0.9702,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Columbus Crew"
+   },
+   "status": "open"
+  },
+  "mls:761889|No \u00b7 FC Cincinnati wins by over 3.5 goals": {
+   "away": "Columbus Crew",
+   "date": "2026-10-18",
+   "home": "FC Cincinnati",
+   "label": "No \u00b7 FC Cincinnati wins by over 3.5 goals",
+   "league": "mls",
+   "logged": "2026-10-18T00:02",
+   "match": "Columbus Crew at FC Cincinnati",
+   "p": 0.9616,
+   "p_model": 0.9631,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "FC Cincinnati"
+   },
+   "status": "open"
+  },
   "ncaaf:401858263|No \u00b7 Florida State Seminoles wins by over 10.5 points": {
    "away": "Florida State Seminoles",
    "date": "2026-10-17",
@@ -1601,6 +2849,38 @@
    },
    "status": "won"
   },
+  "ned2:401875888|Over 0.5 goals": {
+   "away": "Heracles Almelo",
+   "date": "2026-10-18",
+   "home": "MVV Maastricht",
+   "label": "Over 0.5 goals",
+   "league": "ned2",
+   "logged": "2026-10-18T00:02",
+   "match": "Heracles Almelo at MVV Maastricht",
+   "p": 0.9686,
+   "p_model": 0.9698,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "ned2:401875889|Over 0.5 goals": {
+   "away": "FC Volendam",
+   "date": "2026-10-18",
+   "home": "RKC Waalwijk",
+   "label": "Over 0.5 goals",
+   "league": "ned2",
+   "logged": "2026-10-18T00:02",
+   "match": "FC Volendam at RKC Waalwijk",
+   "p": 0.968,
+   "p_model": 0.9692,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "ned2:401875890|No \u00b7 FC Emmen wins by over 2.5 goals": {
    "away": "Almere City",
    "date": "2026-10-17",
@@ -1636,6 +2916,55 @@
    },
    "status": "won"
   },
+  "ned:401875575|Over 0.5 goals": {
+   "away": "Ajax Amsterdam",
+   "date": "2026-10-18",
+   "home": "FC Groningen",
+   "label": "Over 0.5 goals",
+   "league": "ned",
+   "logged": "2026-10-18T00:02",
+   "match": "Ajax Amsterdam at FC Groningen",
+   "p": 0.9714,
+   "p_model": 0.9725,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "ned:401875576|Over 0.5 goals": {
+   "away": "AZ Alkmaar",
+   "date": "2026-10-18",
+   "home": "SC Cambuur",
+   "label": "Over 0.5 goals",
+   "league": "ned",
+   "logged": "2026-10-18T00:02",
+   "match": "AZ Alkmaar at SC Cambuur",
+   "p": 0.9703,
+   "p_model": 0.9715,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "ned:401875578|No \u00b7 PEC Zwolle wins by over 2.5 goals": {
+   "away": "Go Ahead Eagles",
+   "date": "2026-10-18",
+   "home": "PEC Zwolle",
+   "label": "No \u00b7 PEC Zwolle wins by over 2.5 goals",
+   "league": "ned",
+   "logged": "2026-10-18T00:02",
+   "match": "Go Ahead Eagles at PEC Zwolle",
+   "p": 0.9571,
+   "p_model": 0.9588,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "PEC Zwolle"
+   },
+   "status": "open"
+  },
   "ned:401875579|No \u00b7 Willem II wins by over 2.5 goals": {
    "away": "Willem II",
    "date": "2026-10-17",
@@ -1654,6 +2983,39 @@
    },
    "status": "won"
   },
+  "ned:401875581|No \u00b7 Fortuna Sittard wins by over 2.5 goals": {
+   "away": "Fortuna Sittard",
+   "date": "2026-10-18",
+   "home": "NEC Nijmegen",
+   "label": "No \u00b7 Fortuna Sittard wins by over 2.5 goals",
+   "league": "ned",
+   "logged": "2026-10-18T00:02",
+   "match": "Fortuna Sittard at NEC Nijmegen",
+   "p": 0.9659,
+   "p_model": 0.9672,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Fortuna Sittard"
+   },
+   "status": "open"
+  },
+  "ned:401875581|Over 0.5 goals": {
+   "away": "Fortuna Sittard",
+   "date": "2026-10-18",
+   "home": "NEC Nijmegen",
+   "label": "Over 0.5 goals",
+   "league": "ned",
+   "logged": "2026-10-18T00:02",
+   "match": "Fortuna Sittard at NEC Nijmegen",
+   "p": 0.9703,
+   "p_model": 0.9715,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "nfl:401872995|Over 26.5 points": {
    "away": "Seattle Seahawks",
    "date": "2026-10-15",
@@ -1670,6 +3032,23 @@
     "t": "over"
    },
    "status": "won"
+  },
+  "nfl:401873004|No \u00b7 Arizona Cardinals wins by over 10.5 points": {
+   "away": "Arizona Cardinals",
+   "date": "2026-10-18",
+   "home": "Los Angeles Rams",
+   "label": "No \u00b7 Arizona Cardinals wins by over 10.5 points",
+   "league": "nfl",
+   "logged": "2026-10-18T00:02",
+   "match": "Arizona Cardinals at Los Angeles Rams",
+   "p": 0.9558,
+   "p_model": 0.9558,
+   "spec": {
+    "line": 10.5,
+    "t": "nomargin",
+    "team": "Arizona Cardinals"
+   },
+   "status": "open"
   },
   "nhl:401892506|Over 3.5 goals": {
    "away": "Buffalo Sabres",
@@ -2307,6 +3686,88 @@
    },
    "status": "open"
   },
+  "nhl:401892533|Over 2.5 goals": {
+   "away": "Columbus Blue Jackets",
+   "date": "2026-10-18",
+   "home": "Minnesota Wild",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-18T00:02",
+   "match": "Columbus Blue Jackets at Minnesota Wild",
+   "p": 0.9652,
+   "p_model": 0.9652,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892534|Over 2.5 goals": {
+   "away": "Carolina Hurricanes",
+   "date": "2026-10-18",
+   "home": "Calgary Flames",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-18T00:02",
+   "match": "Carolina Hurricanes at Calgary Flames",
+   "p": 0.9626,
+   "p_model": 0.9626,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nor:401843461|No \u00b7 Sarpsborg FK wins by over 3.5 goals": {
+   "away": "Rosenborg",
+   "date": "2026-10-18",
+   "home": "Sarpsborg FK",
+   "label": "No \u00b7 Sarpsborg FK wins by over 3.5 goals",
+   "league": "nor",
+   "logged": "2026-10-18T00:02",
+   "match": "Rosenborg at Sarpsborg FK",
+   "p": 0.9686,
+   "p_model": 0.9699,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Sarpsborg FK"
+   },
+   "status": "open"
+  },
+  "nor:401843461|Over 0.5 goals": {
+   "away": "Rosenborg",
+   "date": "2026-10-18",
+   "home": "Sarpsborg FK",
+   "label": "Over 0.5 goals",
+   "league": "nor",
+   "logged": "2026-10-18T00:02",
+   "match": "Rosenborg at Sarpsborg FK",
+   "p": 0.9621,
+   "p_model": 0.9636,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nor:401843462|No \u00b7 Lillestrom wins by over 3.5 goals": {
+   "away": "Lillestrom",
+   "date": "2026-10-18",
+   "home": "Sandefjord",
+   "label": "No \u00b7 Lillestrom wins by over 3.5 goals",
+   "league": "nor",
+   "logged": "2026-10-18T00:02",
+   "match": "Lillestrom at Sandefjord",
+   "p": 0.9734,
+   "p_model": 0.9744,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Lillestrom"
+   },
+   "status": "open"
+  },
   "nor:401843464|Over 0.5 goals": {
    "away": "Aalesund",
    "date": "2026-10-17",
@@ -2323,6 +3784,39 @@
     "t": "over"
    },
    "status": "won"
+  },
+  "nor:401843466|No \u00b7 V\u00e5lerenga wins by over 3.5 goals": {
+   "away": "SK Brann",
+   "date": "2026-10-18",
+   "home": "V\u00e5lerenga",
+   "label": "No \u00b7 V\u00e5lerenga wins by over 3.5 goals",
+   "league": "nor",
+   "logged": "2026-10-18T00:02",
+   "match": "SK Brann at V\u00e5lerenga",
+   "p": 0.9671,
+   "p_model": 0.9684,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "V\u00e5lerenga"
+   },
+   "status": "open"
+  },
+  "nor:401843466|Over 0.5 goals": {
+   "away": "SK Brann",
+   "date": "2026-10-18",
+   "home": "V\u00e5lerenga",
+   "label": "Over 0.5 goals",
+   "league": "nor",
+   "logged": "2026-10-18T00:02",
+   "match": "SK Brann at V\u00e5lerenga",
+   "p": 0.9709,
+   "p_model": 0.972,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "nwsl:401854022|No \u00b7 Utah Royals wins by over 2.5 goals": {
    "away": "Kansas City Current",
@@ -2342,6 +3836,56 @@
    },
    "status": "won"
   },
+  "nwsl:401854024|No \u00b7 Orlando Pride wins by over 3.5 goals": {
+   "away": "Orlando Pride",
+   "date": "2026-10-18",
+   "home": "Houston Dash",
+   "label": "No \u00b7 Orlando Pride wins by over 3.5 goals",
+   "league": "nwsl",
+   "logged": "2026-10-18T00:02",
+   "match": "Orlando Pride at Houston Dash",
+   "p": 0.9711,
+   "p_model": 0.9723,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Orlando Pride"
+   },
+   "status": "open"
+  },
+  "nwsl:401854025|No \u00b7 Portland Thorns FC wins by over 3.5 goals": {
+   "away": "Portland Thorns FC",
+   "date": "2026-10-18",
+   "home": "Bay FC",
+   "label": "No \u00b7 Portland Thorns FC wins by over 3.5 goals",
+   "league": "nwsl",
+   "logged": "2026-10-18T00:02",
+   "match": "Portland Thorns FC at Bay FC",
+   "p": 0.9727,
+   "p_model": 0.9737,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Portland Thorns FC"
+   },
+   "status": "open"
+  },
+  "nwsl:401854025|Over 0.5 goals": {
+   "away": "Portland Thorns FC",
+   "date": "2026-10-18",
+   "home": "Bay FC",
+   "label": "Over 0.5 goals",
+   "league": "nwsl",
+   "logged": "2026-10-18T00:02",
+   "match": "Portland Thorns FC at Bay FC",
+   "p": 0.9531,
+   "p_model": 0.955,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "nwsl:401854091|No \u00b7 Boston Legacy FC wins by over 3.5 goals": {
    "away": "Racing Louisville FC",
    "date": "2026-10-16",
@@ -2360,6 +3904,40 @@
    },
    "status": "won"
   },
+  "par:401888579|No \u00b7 Sportivo Luque\u00f1o wins by over 3.5 goals": {
+   "away": "Sportivo San Lorenzo",
+   "date": "2026-10-18",
+   "home": "Sportivo Luque\u00f1o",
+   "label": "No \u00b7 Sportivo Luque\u00f1o wins by over 3.5 goals",
+   "league": "par",
+   "logged": "2026-10-18T00:02",
+   "match": "Sportivo San Lorenzo at Sportivo Luque\u00f1o",
+   "p": 0.9637,
+   "p_model": 0.9651,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Sportivo Luque\u00f1o"
+   },
+   "status": "open"
+  },
+  "par:401888580|No \u00b7 Sportivo Trinidense wins by over 2.5 goals": {
+   "away": "Libertad",
+   "date": "2026-10-18",
+   "home": "Sportivo Trinidense",
+   "label": "No \u00b7 Sportivo Trinidense wins by over 2.5 goals",
+   "league": "par",
+   "logged": "2026-10-18T00:02",
+   "match": "Libertad at Sportivo Trinidense",
+   "p": 0.9574,
+   "p_model": 0.959,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Sportivo Trinidense"
+   },
+   "status": "open"
+  },
   "par:401888581|Under 5.5 goals": {
    "away": "Nacional Asunci\u00f3n",
    "date": "2026-10-17",
@@ -2376,6 +3954,22 @@
     "t": "under"
    },
    "status": "won"
+  },
+  "per:401886165|Under 5.5 goals": {
+   "away": "Universitario",
+   "date": "2026-10-18",
+   "home": "Alianza Atl\u00e9tico",
+   "label": "Under 5.5 goals",
+   "league": "per",
+   "logged": "2026-10-18T00:02",
+   "match": "Universitario at Alianza Atl\u00e9tico",
+   "p": 0.9589,
+   "p_model": 0.9604,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "per:401886166|No \u00b7 Alianza Lima wins by over 3.5 goals": {
    "away": "Atl\u00e9tico Grau",
@@ -2394,6 +3988,39 @@
     "team": "Alianza Lima"
    },
    "status": "won"
+  },
+  "per:401886176|Over 0.5 goals": {
+   "away": "Comerciantes Unidos",
+   "date": "2026-10-18",
+   "home": "Sporting Cristal",
+   "label": "Over 0.5 goals",
+   "league": "per",
+   "logged": "2026-10-18T00:02",
+   "match": "Comerciantes Unidos at Sporting Cristal",
+   "p": 0.9607,
+   "p_model": 0.9622,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "rsa:401902026|No \u00b7 Polokwane City FC wins by over 2.5 goals": {
+   "away": "Polokwane City FC",
+   "date": "2026-10-18",
+   "home": "Siwelele",
+   "label": "No \u00b7 Polokwane City FC wins by over 2.5 goals",
+   "league": "rsa",
+   "logged": "2026-10-18T00:02",
+   "match": "Polokwane City FC at Siwelele",
+   "p": 0.9704,
+   "p_model": 0.9715,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Polokwane City FC"
+   },
+   "status": "open"
   },
   "rsa:401902028|No \u00b7 Sekhukhune United FC wins by over 3.5 goals": {
    "away": "Marumo Gallants",
@@ -2448,6 +4075,22 @@
    },
    "status": "won"
   },
+  "sco:401878367|Over 0.5 goals": {
+   "away": "Heart of Midlothian",
+   "date": "2026-10-18",
+   "home": "Celtic",
+   "label": "Over 0.5 goals",
+   "league": "sco",
+   "logged": "2026-10-18T00:02",
+   "match": "Heart of Midlothian at Celtic",
+   "p": 0.9621,
+   "p_model": 0.9636,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "sco:401878368|No \u00b7 St Mirren wins by over 2.5 goals": {
    "away": "St Mirren",
    "date": "2026-10-17",
@@ -2465,6 +4108,72 @@
     "team": "St Mirren"
    },
    "status": "won"
+  },
+  "swe:401842843|No \u00b7 IK Sirius wins by over 3.5 goals": {
+   "away": "IF Elfsborg",
+   "date": "2026-10-18",
+   "home": "IK Sirius",
+   "label": "No \u00b7 IK Sirius wins by over 3.5 goals",
+   "league": "swe",
+   "logged": "2026-10-18T00:02",
+   "match": "IF Elfsborg at IK Sirius",
+   "p": 0.9698,
+   "p_model": 0.9709,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "IK Sirius"
+   },
+   "status": "open"
+  },
+  "swe:401842844|No \u00b7 BK H\u00e4cken wins by over 3.5 goals": {
+   "away": "BK H\u00e4cken",
+   "date": "2026-10-18",
+   "home": "Malm\u00f6 FF",
+   "label": "No \u00b7 BK H\u00e4cken wins by over 3.5 goals",
+   "league": "swe",
+   "logged": "2026-10-18T00:02",
+   "match": "BK H\u00e4cken at Malm\u00f6 FF",
+   "p": 0.9705,
+   "p_model": 0.9717,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "BK H\u00e4cken"
+   },
+   "status": "open"
+  },
+  "swe:401842844|Over 0.5 goals": {
+   "away": "BK H\u00e4cken",
+   "date": "2026-10-18",
+   "home": "Malm\u00f6 FF",
+   "label": "Over 0.5 goals",
+   "league": "swe",
+   "logged": "2026-10-18T00:02",
+   "match": "BK H\u00e4cken at Malm\u00f6 FF",
+   "p": 0.956,
+   "p_model": 0.9577,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "swe:401842845|Over 0.5 goals": {
+   "away": "Hammarby IF",
+   "date": "2026-10-18",
+   "home": "Halmstads BK",
+   "label": "Over 0.5 goals",
+   "league": "swe",
+   "logged": "2026-10-18T00:02",
+   "match": "Hammarby IF at Halmstads BK",
+   "p": 0.968,
+   "p_model": 0.9692,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "tur:401888271|Under 5.5 goals": {
    "away": "Eyupspor",
@@ -2499,6 +4208,22 @@
     "t": "over"
    },
    "status": "won"
+  },
+  "tur:401888275|Over 0.5 goals": {
+   "away": "Gaziantep FK",
+   "date": "2026-10-18",
+   "home": "Istanbul Basaksehir",
+   "label": "Over 0.5 goals",
+   "league": "tur",
+   "logged": "2026-10-18T00:02",
+   "match": "Gaziantep FK at Istanbul Basaksehir",
+   "p": 0.9531,
+   "p_model": 0.955,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "tur:401888378|No \u00b7 Amed SFK wins by over 3.5 goals": {
    "away": "Konyaspor",
@@ -2553,6 +4278,40 @@
    },
    "status": "won"
   },
+  "uru:401929244|No \u00b7 Albion FC wins by over 2.5 goals": {
+   "away": "Montevideo City Torque",
+   "date": "2026-10-18",
+   "home": "Albion FC",
+   "label": "No \u00b7 Albion FC wins by over 2.5 goals",
+   "league": "uru",
+   "logged": "2026-10-18T00:02",
+   "match": "Montevideo City Torque at Albion FC",
+   "p": 0.9666,
+   "p_model": 0.9679,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Albion FC"
+   },
+   "status": "open"
+  },
+  "uru:401929244|No \u00b7 Montevideo City Torque wins by over 3.5 goals": {
+   "away": "Montevideo City Torque",
+   "date": "2026-10-18",
+   "home": "Albion FC",
+   "label": "No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+   "league": "uru",
+   "logged": "2026-10-18T00:02",
+   "match": "Montevideo City Torque at Albion FC",
+   "p": 0.9701,
+   "p_model": 0.9712,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Montevideo City Torque"
+   },
+   "status": "open"
+  },
   "uru:401929258|Under 4.5 goals": {
    "away": "Defensor Sporting",
    "date": "2026-10-17",
@@ -2586,6 +4345,39 @@
     "t": "under"
    },
    "status": "won"
+  },
+  "uru:401929259|No \u00b7 Liverpool wins by over 2.5 goals": {
+   "away": "Pe\u00f1arol",
+   "date": "2026-10-18",
+   "home": "Liverpool",
+   "label": "No \u00b7 Liverpool wins by over 2.5 goals",
+   "league": "uru",
+   "logged": "2026-10-18T00:02",
+   "match": "Pe\u00f1arol at Liverpool",
+   "p": 0.9692,
+   "p_model": 0.9703,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Liverpool"
+   },
+   "status": "open"
+  },
+  "uru:401929259|Under 5.5 goals": {
+   "away": "Pe\u00f1arol",
+   "date": "2026-10-18",
+   "home": "Liverpool",
+   "label": "Under 5.5 goals",
+   "league": "uru",
+   "logged": "2026-10-18T00:02",
+   "match": "Pe\u00f1arol at Liverpool",
+   "p": 0.9637,
+   "p_model": 0.9651,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "uru:401929260|No \u00b7 Juventud wins by over 3.5 goals": {
    "away": "Juventud",
@@ -2687,12 +4479,13 @@
    "match": "Colorado Springs Switchbacks FC at Monterey Bay",
    "p": 0.9701,
    "p_model": 0.9712,
+   "score": "Colorado Springs Switchbacks FC 1 - Monterey Bay 0",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Monterey Bay"
    },
-   "status": "open"
+   "status": "won"
   },
   "usl:401842295|No \u00b7 Phoenix Rising FC wins by over 2.5 goals": {
    "away": "Phoenix Rising FC",
@@ -2746,6 +4539,72 @@
     "team": "Charleston Battery"
    },
    "status": "won"
+  },
+  "usl:401842299|Over 0.5 goals": {
+   "away": "Loudoun United FC",
+   "date": "2026-10-18",
+   "home": "Birmingham Legion FC",
+   "label": "Over 0.5 goals",
+   "league": "usl",
+   "logged": "2026-10-18T00:02",
+   "match": "Loudoun United FC at Birmingham Legion FC",
+   "p": 0.9649,
+   "p_model": 0.9662,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "wsl:401902889|No \u00b7 West Ham United wins by over 3.5 goals": {
+   "away": "West Ham United",
+   "date": "2026-10-18",
+   "home": "Crystal Palace",
+   "label": "No \u00b7 West Ham United wins by over 3.5 goals",
+   "league": "wsl",
+   "logged": "2026-10-18T00:02",
+   "match": "West Ham United at Crystal Palace",
+   "p": 0.9685,
+   "p_model": 0.9697,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "West Ham United"
+   },
+   "status": "open"
+  },
+  "wsl:401902890|Over 0.5 goals": {
+   "away": "Tottenham Hotspur",
+   "date": "2026-10-18",
+   "home": "Chelsea",
+   "label": "Over 0.5 goals",
+   "league": "wsl",
+   "logged": "2026-10-18T00:02",
+   "match": "Tottenham Hotspur at Chelsea",
+   "p": 0.9692,
+   "p_model": 0.9704,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "wsl:401902893|No \u00b7 Liverpool wins by over 3.5 goals": {
+   "away": "Liverpool",
+   "date": "2026-10-18",
+   "home": "Aston Villa",
+   "label": "No \u00b7 Liverpool wins by over 3.5 goals",
+   "league": "wsl",
+   "logged": "2026-10-18T00:02",
+   "match": "Liverpool at Aston Villa",
+   "p": 0.9592,
+   "p_model": 0.9607,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Liverpool"
+   },
+   "status": "open"
   }
  },
  "tickets": {
@@ -3721,7 +5580,7 @@
    "logged": "2026-10-17T00:05",
    "n": 4,
    "prob": 0.8853,
-   "status": "open"
+   "status": "won"
   },
   "20261017:4:1": {
    "fair": 1.13,
@@ -3762,7 +5621,7 @@
    "logged": "2026-10-17T00:05",
    "n": 6,
    "prob": 0.8325,
-   "status": "open"
+   "status": "won"
   },
   "20261017:6:1": {
    "fair": 1.2,
@@ -3809,7 +5668,7 @@
    "logged": "2026-10-17T00:05",
    "n": 8,
    "prob": 0.7838,
-   "status": "open"
+   "status": "won"
   },
   "20261017:8:1": {
    "fair": 1.27,
@@ -3844,6 +5703,426 @@
    "n": 8,
    "prob": 0.7834,
    "status": "won"
+  },
+  "20261018:10:0": {
+   "fair": 1.35,
+   "legs": [
+    "arg:401841618|No \u00b7 Independiente wins by over 2.5 goals",
+    "uru:401929244|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "swe:401842843|No \u00b7 IK Sirius wins by over 3.5 goals",
+    "ger:401884768|Over 0.5 goals",
+    "ned:401875581|Over 0.5 goals",
+    "ned:401875576|Over 0.5 goals",
+    "fra:401876434|No \u00b7 Nice wins by over 2.5 goals",
+    "col:401877905|No \u00b7 Atl\u00e9tico Junior wins by over 2.5 goals",
+    "rsa:401902026|No \u00b7 Polokwane City FC wins by over 2.5 goals",
+    "swe:401842844|No \u00b7 BK H\u00e4cken wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 10,
+   "prob": 0.7394,
+   "status": "open"
+  },
+  "20261018:10:1": {
+   "fair": 1.36,
+   "legs": [
+    "fra:401876435|No \u00b7 Lorient wins by over 2.5 goals",
+    "chn:401861480|No \u00b7 Wuhan Three Towns wins by over 3.5 goals",
+    "esp2:401883156|No \u00b7 Granada wins by over 3.5 goals",
+    "uru:401929259|No \u00b7 Liverpool wins by over 2.5 goals",
+    "wsl:401902890|Over 0.5 goals",
+    "nor:401843466|Over 0.5 goals",
+    "mls:761889|No \u00b7 Columbus Crew wins by over 3.5 goals",
+    "ger2:401885086|No \u00b7 VfL Osnabruck wins by over 2.5 goals",
+    "nwsl:401854024|No \u00b7 Orlando Pride wins by over 3.5 goals",
+    "epl:401879263|No \u00b7 AFC Bournemouth wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 10,
+   "prob": 0.7376,
+   "status": "open"
+  },
+  "20261018:10:2": {
+   "fair": 1.36,
+   "legs": [
+    "aut:401881773|No \u00b7 Grazer AK wins by over 2.5 goals",
+    "bra2:401860394|Under 5.5 goals",
+    "esp:401882839|Over 0.5 goals",
+    "nor:401843461|No \u00b7 Sarpsborg FK wins by over 3.5 goals",
+    "ned2:401875888|Over 0.5 goals",
+    "ned:401875575|Over 0.5 goals",
+    "wsl:401902889|No \u00b7 West Ham United wins by over 3.5 goals",
+    "ita:401874978|No \u00b7 Atalanta wins by over 2.5 goals",
+    "esp2:401883154|No \u00b7 Eldense wins by over 2.5 goals",
+    "ger2:401885088|No \u00b7 1. FC Magdeburg wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 10,
+   "prob": 0.7354,
+   "status": "open"
+  },
+  "20261018:15:0": {
+   "fair": 1.58,
+   "legs": [
+    "arg:401841618|No \u00b7 Independiente wins by over 2.5 goals",
+    "uru:401929244|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "swe:401842843|No \u00b7 IK Sirius wins by over 3.5 goals",
+    "ger:401884768|Over 0.5 goals",
+    "ned:401875581|Over 0.5 goals",
+    "ned:401875576|Over 0.5 goals",
+    "fra:401876434|No \u00b7 Nice wins by over 2.5 goals",
+    "col:401877905|No \u00b7 Atl\u00e9tico Junior wins by over 2.5 goals",
+    "rsa:401902026|No \u00b7 Polokwane City FC wins by over 2.5 goals",
+    "swe:401842844|No \u00b7 BK H\u00e4cken wins by over 3.5 goals",
+    "fra:401876435|No \u00b7 Lorient wins by over 2.5 goals",
+    "chn:401861480|No \u00b7 Wuhan Three Towns wins by over 3.5 goals",
+    "esp2:401883156|No \u00b7 Granada wins by over 3.5 goals",
+    "uru:401929259|No \u00b7 Liverpool wins by over 2.5 goals",
+    "wsl:401902890|Over 0.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 15,
+   "prob": 0.6344,
+   "status": "open"
+  },
+  "20261018:15:1": {
+   "fair": 1.58,
+   "legs": [
+    "nor:401843466|Over 0.5 goals",
+    "mls:761889|No \u00b7 Columbus Crew wins by over 3.5 goals",
+    "ger2:401885086|No \u00b7 VfL Osnabruck wins by over 2.5 goals",
+    "nwsl:401854024|No \u00b7 Orlando Pride wins by over 3.5 goals",
+    "epl:401879263|No \u00b7 AFC Bournemouth wins by over 3.5 goals",
+    "aut:401881773|No \u00b7 Grazer AK wins by over 2.5 goals",
+    "bra2:401860394|Under 5.5 goals",
+    "esp:401882839|Over 0.5 goals",
+    "nor:401843461|No \u00b7 Sarpsborg FK wins by over 3.5 goals",
+    "ned2:401875888|Over 0.5 goals",
+    "ned:401875575|Over 0.5 goals",
+    "wsl:401902889|No \u00b7 West Ham United wins by over 3.5 goals",
+    "ita:401874978|No \u00b7 Atalanta wins by over 2.5 goals",
+    "esp2:401883154|No \u00b7 Eldense wins by over 2.5 goals",
+    "ger2:401885088|No \u00b7 1. FC Magdeburg wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 15,
+   "prob": 0.6322,
+   "status": "open"
+  },
+  "20261018:15:2": {
+   "fair": 1.58,
+   "legs": [
+    "ecu:401921336|Under 5.5 goals",
+    "swe:401842845|Over 0.5 goals",
+    "ned2:401875889|Over 0.5 goals",
+    "esp2:401883177|No \u00b7 FC Andorra wins by over 2.5 goals",
+    "ger:401884771|No \u00b7 SC Freiburg wins by over 2.5 goals",
+    "fra:401876433|No \u00b7 Paris FC wins by over 3.5 goals",
+    "arg:401841624|No \u00b7 Estudiantes de R\u00edo Cuarto wins by over 2.5 goals",
+    "chn:401861481|Over 0.5 goals",
+    "nwsl:401854025|No \u00b7 Portland Thorns FC wins by over 3.5 goals",
+    "arg:401841628|No \u00b7 Belgrano (C\u00f3rdoba) wins by over 2.5 goals",
+    "col:401878059|Under 5.5 goals",
+    "bra2:401860400|Under 5.5 goals",
+    "nor:401843462|No \u00b7 Lillestrom wins by over 3.5 goals",
+    "epl:401879260|No \u00b7 Leeds United wins by over 3.5 goals",
+    "esp:401882845|No \u00b7 Alav\u00e9s wins by over 2.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 15,
+   "prob": 0.6335,
+   "status": "open"
+  },
+  "20261018:20:0": {
+   "fair": 2.26,
+   "legs": [
+    "epl:401879263|No \u00b7 Sunderland wins by over 2.5 goals",
+    "gre:401896748|No \u00b7 Kifisia wins by over 2.5 goals",
+    "den:401874542|No \u00b7 Lyngby Boldklub wins by over 2.5 goals",
+    "arg:401841624|No \u00b7 Aldosivi wins by over 2.5 goals",
+    "ita:401874771|No \u00b7 Udinese wins by over 3.5 goals",
+    "aut:401881772|Over 0.5 goals",
+    "per:401886176|Over 0.5 goals",
+    "wsl:401902893|No \u00b7 Liverpool wins by over 3.5 goals",
+    "esp2:401883180|No \u00b7 Burgos wins by over 2.5 goals",
+    "fra:401876439|No \u00b7 Angers wins by over 2.5 goals",
+    "per:401886165|Under 5.5 goals",
+    "esp2:401883156|Under 5.5 goals",
+    "ita2:401899594|Under 5.5 goals",
+    "mex2:401886341|Over 0.5 goals",
+    "esp2:401883179|No \u00b7 Ceuta wins by over 2.5 goals",
+    "epl:401879261|Over 0.5 goals",
+    "mls:761889|No \u00b7 FC Cincinnati wins by over 3.5 goals",
+    "esp:401882841|No \u00b7 M\u00e1laga wins by over 2.5 goals",
+    "esp:401882840|No \u00b7 Osasuna wins by over 3.5 goals",
+    "chn:401861480|No \u00b7 Shanghai Shenhua wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 20,
+   "prob": 0.4418,
+   "status": "open"
+  },
+  "20261018:20:1": {
+   "fair": 2.24,
+   "legs": [
+    "ita2:401899590|No \u00b7 Sampdoria wins by over 3.5 goals",
+    "ita:401874774|No \u00b7 Como wins by over 3.5 goals",
+    "sco:401878367|Over 0.5 goals",
+    "nor:401843461|Over 0.5 goals",
+    "chn:401861482|Over 0.5 goals",
+    "jpn:401877601|Under 5.5 goals",
+    "ger2:401885088|Over 0.5 goals",
+    "esp2:401883154|Under 5.5 goals",
+    "bra:401841274|No \u00b7 Remo wins by over 2.5 goals",
+    "bra2:401860396|Under 5.5 goals",
+    "col:401877774|Under 5.5 goals",
+    "par:401888580|No \u00b7 Sportivo Trinidense wins by over 2.5 goals",
+    "nhl:401892534|Over 2.5 goals",
+    "ned:401875578|No \u00b7 PEC Zwolle wins by over 2.5 goals",
+    "gre:401896817|Under 5.5 goals",
+    "esp:401882845|Under 5.5 goals",
+    "par:401888579|No \u00b7 Sportivo Luque\u00f1o wins by over 3.5 goals",
+    "uru:401929259|Under 5.5 goals",
+    "ger2:401885089|No \u00b7 Karlsruher SC wins by over 3.5 goals",
+    "swe:401842844|Over 0.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 20,
+   "prob": 0.4465,
+   "status": "open"
+  },
+  "20261018:20:2": {
+   "fair": 2.15,
+   "legs": [
+    "nfl:401873004|No \u00b7 Arizona Cardinals wins by over 10.5 points",
+    "ger:401884771|Over 0.5 goals",
+    "col:401877840|No \u00b7 Llaneros FC wins by over 2.5 goals",
+    "ecu:401921336|No \u00b7 Manta F.C. wins by over 2.5 goals",
+    "bra:401841269|No \u00b7 Flamengo wins by over 3.5 goals",
+    "jpn:401877598|Under 5.5 goals",
+    "usl:401842299|Over 0.5 goals",
+    "nhl:401892533|Over 2.5 goals",
+    "den:401874548|No \u00b7 Br\u00f8ndby IF wins by over 3.5 goals",
+    "col:401877905|No \u00b7 Deportivo Cali wins by over 3.5 goals",
+    "ned:401875581|No \u00b7 Fortuna Sittard wins by over 2.5 goals",
+    "bra2:401860400|No \u00b7 S\u00e3o Bernardo wins by over 2.5 goals",
+    "ecu:401921348|No \u00b7 Universidad Cat\u00f3lica (Quito) wins by over 2.5 goals",
+    "uru:401929244|No \u00b7 Albion FC wins by over 2.5 goals",
+    "fra:401876435|No \u00b7 AS Monaco wins by over 3.5 goals",
+    "tur:401888275|Over 0.5 goals",
+    "nwsl:401854025|Over 0.5 goals",
+    "col:401878059|Under 5.5 goals",
+    "nor:401843466|No \u00b7 V\u00e5lerenga wins by over 3.5 goals",
+    "chn:401861481|Over 0.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 20,
+   "prob": 0.4651,
+   "status": "open"
+  },
+  "20261018:2:0": {
+   "fair": 1.24,
+   "legs": [
+    "ger2:401885089|No \u00b7 Karlsruher SC wins by over 2.5 goals",
+    "bra2:401860396|Under 4.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 2,
+   "prob": 0.8092,
+   "status": "open"
+  },
+  "20261018:2:1": {
+   "fair": 1.23,
+   "legs": [
+    "col:401877774|Under 4.5 goals",
+    "col:401877840|Over 0.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 2,
+   "prob": 0.8103,
+   "status": "open"
+  },
+  "20261018:2:2": {
+   "fair": 1.23,
+   "legs": [
+    "col:401878059|Over 0.5 goals",
+    "epl:401879261|No \u00b7 Brighton & Hove Albion wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 2,
+   "prob": 0.8101,
+   "status": "open"
+  },
+  "20261018:3:0": {
+   "fair": 1.37,
+   "legs": [
+    "ger2:401885089|No \u00b7 Karlsruher SC wins by over 2.5 goals",
+    "bra2:401860396|Under 4.5 goals",
+    "col:401877774|Under 4.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 3,
+   "prob": 0.7279,
+   "status": "open"
+  },
+  "20261018:3:1": {
+   "fair": 1.37,
+   "legs": [
+    "col:401877840|Over 0.5 goals",
+    "col:401878059|Over 0.5 goals",
+    "epl:401879261|No \u00b7 Brighton & Hove Albion wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 3,
+   "prob": 0.7297,
+   "status": "open"
+  },
+  "20261018:3:2": {
+   "fair": 1.37,
+   "legs": [
+    "fra:401876435|No \u00b7 AS Monaco wins by over 2.5 goals",
+    "den:401874548|No \u00b7 Br\u00f8ndby IF wins by over 2.5 goals",
+    "esp:401882845|Under 4.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 3,
+   "prob": 0.7305,
+   "status": "open"
+  },
+  "20261018:4:0": {
+   "fair": 1.13,
+   "legs": [
+    "arg:401841618|No \u00b7 Independiente wins by over 2.5 goals",
+    "uru:401929244|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "swe:401842843|No \u00b7 IK Sirius wins by over 3.5 goals",
+    "ger:401884768|Over 0.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 4,
+   "prob": 0.8856,
+   "status": "open"
+  },
+  "20261018:4:1": {
+   "fair": 1.13,
+   "legs": [
+    "ned:401875581|Over 0.5 goals",
+    "ned:401875576|Over 0.5 goals",
+    "fra:401876434|No \u00b7 Nice wins by over 2.5 goals",
+    "col:401877905|No \u00b7 Atl\u00e9tico Junior wins by over 2.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 4,
+   "prob": 0.8866,
+   "status": "open"
+  },
+  "20261018:4:2": {
+   "fair": 1.13,
+   "legs": [
+    "rsa:401902026|No \u00b7 Polokwane City FC wins by over 2.5 goals",
+    "swe:401842844|No \u00b7 BK H\u00e4cken wins by over 3.5 goals",
+    "fra:401876435|No \u00b7 Lorient wins by over 2.5 goals",
+    "chn:401861480|No \u00b7 Wuhan Three Towns wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 4,
+   "prob": 0.8861,
+   "status": "open"
+  },
+  "20261018:6:0": {
+   "fair": 1.2,
+   "legs": [
+    "arg:401841618|No \u00b7 Independiente wins by over 2.5 goals",
+    "uru:401929244|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "swe:401842843|No \u00b7 IK Sirius wins by over 3.5 goals",
+    "ger:401884768|Over 0.5 goals",
+    "ned:401875581|Over 0.5 goals",
+    "ned:401875576|Over 0.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 6,
+   "prob": 0.8337,
+   "status": "open"
+  },
+  "20261018:6:1": {
+   "fair": 1.2,
+   "legs": [
+    "fra:401876434|No \u00b7 Nice wins by over 2.5 goals",
+    "col:401877905|No \u00b7 Atl\u00e9tico Junior wins by over 2.5 goals",
+    "rsa:401902026|No \u00b7 Polokwane City FC wins by over 2.5 goals",
+    "swe:401842844|No \u00b7 BK H\u00e4cken wins by over 3.5 goals",
+    "fra:401876435|No \u00b7 Lorient wins by over 2.5 goals",
+    "chn:401861480|No \u00b7 Wuhan Three Towns wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 6,
+   "prob": 0.8345,
+   "status": "open"
+  },
+  "20261018:6:2": {
+   "fair": 1.2,
+   "legs": [
+    "esp2:401883156|No \u00b7 Granada wins by over 3.5 goals",
+    "uru:401929259|No \u00b7 Liverpool wins by over 2.5 goals",
+    "wsl:401902890|Over 0.5 goals",
+    "nor:401843466|Over 0.5 goals",
+    "mls:761889|No \u00b7 Columbus Crew wins by over 3.5 goals",
+    "ger2:401885086|No \u00b7 VfL Osnabruck wins by over 2.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 6,
+   "prob": 0.8312,
+   "status": "open"
+  },
+  "20261018:8:0": {
+   "fair": 1.27,
+   "legs": [
+    "arg:401841618|No \u00b7 Independiente wins by over 2.5 goals",
+    "uru:401929244|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "swe:401842843|No \u00b7 IK Sirius wins by over 3.5 goals",
+    "ger:401884768|Over 0.5 goals",
+    "ned:401875581|Over 0.5 goals",
+    "ned:401875576|Over 0.5 goals",
+    "fra:401876434|No \u00b7 Nice wins by over 2.5 goals",
+    "col:401877905|No \u00b7 Atl\u00e9tico Junior wins by over 2.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 8,
+   "prob": 0.7852,
+   "status": "open"
+  },
+  "20261018:8:1": {
+   "fair": 1.27,
+   "legs": [
+    "rsa:401902026|No \u00b7 Polokwane City FC wins by over 2.5 goals",
+    "swe:401842844|No \u00b7 BK H\u00e4cken wins by over 3.5 goals",
+    "fra:401876435|No \u00b7 Lorient wins by over 2.5 goals",
+    "chn:401861480|No \u00b7 Wuhan Three Towns wins by over 3.5 goals",
+    "esp2:401883156|No \u00b7 Granada wins by over 3.5 goals",
+    "uru:401929259|No \u00b7 Liverpool wins by over 2.5 goals",
+    "wsl:401902890|Over 0.5 goals",
+    "nor:401843466|Over 0.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 8,
+   "prob": 0.7844,
+   "status": "open"
+  },
+  "20261018:8:2": {
+   "fair": 1.28,
+   "legs": [
+    "mls:761889|No \u00b7 Columbus Crew wins by over 3.5 goals",
+    "ger2:401885086|No \u00b7 VfL Osnabruck wins by over 2.5 goals",
+    "nwsl:401854024|No \u00b7 Orlando Pride wins by over 3.5 goals",
+    "epl:401879263|No \u00b7 AFC Bournemouth wins by over 3.5 goals",
+    "aut:401881773|No \u00b7 Grazer AK wins by over 2.5 goals",
+    "bra2:401860394|Under 5.5 goals",
+    "esp:401882839|Over 0.5 goals",
+    "nor:401843461|No \u00b7 Sarpsborg FK wins by over 3.5 goals"
+   ],
+   "logged": "2026-10-18T00:02",
+   "n": 8,
+   "prob": 0.7816,
+   "status": "open"
   }
  }
 }

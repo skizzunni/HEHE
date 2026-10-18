@@ -936,115 +936,6 @@
   }
  },
  "2026-10-17": {
-  "audit": [
-   {
-    "flag": false,
-    "hit": 63.3,
-    "n": 30,
-    "name": "tennis Kalshi-priced",
-    "said": 74.1
-   },
-   {
-    "flag": false,
-    "hit": 70.4,
-    "n": 27,
-    "name": "tennis no market",
-    "said": 62.1
-   },
-   {
-    "flag": false,
-    "hit": 78.4,
-    "n": 88,
-    "name": "props nhl Shots on Goal",
-    "said": 78.0
-   },
-   {
-    "flag": true,
-    "hit": 40.0,
-    "n": 20,
-    "name": "props uel Shots",
-    "said": 84.3
-   },
-   {
-    "flag": false,
-    "hit": 53.8,
-    "n": 13,
-    "name": "props ufc Winner",
-    "said": 67.0
-   },
-   {
-    "flag": false,
-    "hit": 76.9,
-    "n": 13,
-    "name": "locks ncaaf under",
-    "said": 82.2
-   }
-  ],
-  "calls": {
-   "atp": {
-    "all_hit": 70.2,
-    "calls": 68,
-    "cutoff": 0.65,
-    "games": 121,
-    "hit": 82.4
-   },
-   "efl3": {
-    "all_hit": 50.0,
-    "calls": 15,
-    "cutoff": 0.55,
-    "games": 24,
-    "hit": 66.7
-   },
-   "mlb": {
-    "all_hit": 58.9,
-    "calls": 15,
-    "cutoff": 0.7,
-    "games": 372,
-    "hit": 86.7
-   },
-   "ncaaf": {
-    "all_hit": 81.2,
-    "calls": 451,
-    "cutoff": 0.55,
-    "games": 495,
-    "hit": 83.4
-   },
-   "nfl": {
-    "all_hit": 62.0,
-    "calls": 26,
-    "cutoff": 0.7,
-    "games": 79,
-    "hit": 73.1
-   },
-   "nhl": {
-    "all_hit": 66.3,
-    "calls": 19,
-    "cutoff": 0.625,
-    "games": 89,
-    "hit": 84.2
-   },
-   "ufc": {
-    "all_hit": 63.6,
-    "calls": 24,
-    "cutoff": 0.75,
-    "games": 88,
-    "hit": 79.2
-   },
-   "wnba": {
-    "all_hit": 74.5,
-    "calls": 31,
-    "cutoff": 0.625,
-    "games": 47,
-    "hit": 77.4
-   },
-   "wta": {
-    "all_hit": 71.0,
-    "calls": 67,
-    "cutoff": 0.725,
-    "games": 186,
-    "hit": 85.1
-   }
-  },
   "clv": {
    "avg": -0.16,
    "beat": 39.8,
@@ -1855,12 +1746,12 @@
    }
   ],
   "picks": {
-   "hit": 70.8,
+   "hit": 70.9,
    "lost": 84,
-   "n": 288,
+   "n": 289,
    "roi": 0.2,
-   "said": 70.8,
-   "won": 204
+   "said": 70.9,
+   "won": 205
   },
   "picks_by_league": {
    "arg": {
@@ -2208,12 +2099,12 @@
     "won": 2
    },
    "usl": {
-    "hit": 75.0,
+    "hit": 77.8,
     "lost": 2,
-    "n": 8,
+    "n": 9,
     "roi": null,
-    "said": 76.0,
-    "won": 6
+    "said": 76.4,
+    "won": 7
    },
    "wnba": {
     "hit": 100.0,
@@ -2258,12 +2149,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 77.9,
-   "lost": 32,
-   "n": 145,
+   "hit": 78.2,
+   "lost": 31,
+   "n": 142,
    "roi": -1.0,
-   "said": 76.7,
-   "won": 113
+   "said": 77.0,
+   "won": 111
   },
   "vs_market_14d": {
    "against": {
@@ -2281,6 +2172,184 @@
     "roi": -2.1,
     "said": 62.8,
     "won": 190
+   }
+  }
+ },
+ "2026-10-18": {
+  "audit": [
+   {
+    "flag": false,
+    "hit": 63.3,
+    "n": 30,
+    "name": "tennis Kalshi-priced",
+    "said": 74.1
+   },
+   {
+    "flag": false,
+    "hit": 70.4,
+    "n": 27,
+    "name": "tennis no market",
+    "said": 62.1
+   },
+   {
+    "flag": false,
+    "hit": 78.4,
+    "n": 88,
+    "name": "props nhl Shots on Goal",
+    "said": 78.0
+   },
+   {
+    "flag": true,
+    "hit": 40.0,
+    "n": 20,
+    "name": "props uel Shots",
+    "said": 84.3
+   },
+   {
+    "flag": false,
+    "hit": 53.8,
+    "n": 13,
+    "name": "props ufc Winner",
+    "said": 67.0
+   },
+   {
+    "flag": false,
+    "hit": 76.9,
+    "n": 13,
+    "name": "locks ncaaf under",
+    "said": 82.2
+   }
+  ],
+  "calls": {
+   "atp": {
+    "all_hit": 70.2,
+    "calls": 68,
+    "cutoff": 0.65,
+    "games": 121,
+    "hit": 82.4
+   },
+   "efl3": {
+    "all_hit": 50.0,
+    "calls": 15,
+    "cutoff": 0.55,
+    "games": 24,
+    "hit": 66.7
+   },
+   "mlb": {
+    "all_hit": 58.9,
+    "calls": 15,
+    "cutoff": 0.7,
+    "games": 372,
+    "hit": 86.7
+   },
+   "ncaaf": {
+    "all_hit": 81.2,
+    "calls": 451,
+    "cutoff": 0.55,
+    "games": 495,
+    "hit": 83.4
+   },
+   "nfl": {
+    "all_hit": 62.0,
+    "calls": 26,
+    "cutoff": 0.7,
+    "games": 79,
+    "hit": 73.1
+   },
+   "nhl": {
+    "all_hit": 66.3,
+    "calls": 19,
+    "cutoff": 0.625,
+    "games": 89,
+    "hit": 84.2
+   },
+   "ufc": {
+    "all_hit": 63.6,
+    "calls": 24,
+    "cutoff": 0.75,
+    "games": 88,
+    "hit": 79.2
+   },
+   "wnba": {
+    "all_hit": 74.5,
+    "calls": 31,
+    "cutoff": 0.625,
+    "games": 47,
+    "hit": 77.4
+   },
+   "wta": {
+    "all_hit": 71.0,
+    "calls": 67,
+    "cutoff": 0.725,
+    "games": 186,
+    "hit": 85.1
+   }
+  },
+  "clv": {
+   "avg": null,
+   "beat": null,
+   "n": 0
+  },
+  "day": "2026-10-18",
+  "leaks_14d": [
+   {
+    "hit": 52.0,
+    "league": "ufc",
+    "lost": 12,
+    "n": 25,
+    "roi": -21.7,
+    "said": 64.6,
+    "won": 13
+   }
+  ],
+  "locks": {
+   "lost": [],
+   "n": 0,
+   "open": 0,
+   "won": 0
+  },
+  "losses": [],
+  "lottery": [],
+  "picks": {
+   "n": 0
+  },
+  "picks_by_league": {},
+  "props": {
+   "fair": {
+    "n": 12,
+    "said_fair": 84.7,
+    "said_price": 83.5,
+    "won": 10
+   },
+   "n": 0,
+   "said": null,
+   "won": 0
+  },
+  "safe_locks": {
+   "lost": [],
+   "n": 0,
+   "open": 0,
+   "won": 0
+  },
+  "strong": {
+   "n": 0
+  },
+  "vs_market_14d": {
+   "against": {
+    "hit": 38.2,
+    "lost": 21,
+    "n": 34,
+    "roi": 0.4,
+    "said": 53.7,
+    "won": 13
+   },
+   "agree": {
+    "hit": 66.4,
+    "lost": 80,
+    "n": 238,
+    "roi": -2.0,
+    "said": 62.9,
+    "won": 158
    }
   },
   "weights": {
