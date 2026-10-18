@@ -947,10 +947,10 @@
    },
    {
     "flag": false,
-    "hit": 80.8,
-    "n": 52,
+    "hit": 81.0,
+    "n": 58,
     "name": "props nhl Shots on Goal",
-    "said": 78.6
+    "said": 78.8
    },
    {
     "flag": true,
@@ -998,9 +998,9 @@
    },
    "ncaaf": {
     "all_hit": 81.5,
-    "calls": 438,
+    "calls": 439,
     "cutoff": 0.55,
-    "games": 480,
+    "games": 481,
     "hit": 83.8
    },
    "nfl": {
@@ -1011,10 +1011,10 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 67.5,
+    "all_hit": 67.9,
     "calls": 37,
     "cutoff": 0.6,
-    "games": 83,
+    "games": 84,
     "hit": 75.7
    },
    "ufc": {
@@ -1040,9 +1040,9 @@
    }
   },
   "clv": {
-   "avg": -0.26,
-   "beat": 39.7,
-   "n": 68
+   "avg": -0.24,
+   "beat": 40.0,
+   "n": 70
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1711,12 +1711,12 @@
    }
   ],
   "picks": {
-   "hit": 72.9,
+   "hit": 73.1,
    "lost": 67,
-   "n": 247,
-   "roi": 4.4,
+   "n": 249,
+   "roi": 5.4,
    "said": 71.1,
-   "won": 180
+   "won": 182
   },
   "picks_by_league": {
    "arg": {
@@ -1944,12 +1944,12 @@
     "won": 4
    },
    "ncaaf": {
-    "hit": 73.3,
+    "hit": 74.2,
     "lost": 8,
-    "n": 30,
-    "roi": 4.4,
-    "said": 70.0,
-    "won": 22
+    "n": 31,
+    "roi": 4.6,
+    "said": 70.7,
+    "won": 23
    },
    "ned": {
     "hit": 66.7,
@@ -1968,12 +1968,12 @@
     "won": 1
    },
    "nhl": {
-    "hit": 83.3,
+    "hit": 85.7,
     "lost": 1,
-    "n": 6,
-    "roi": 26.5,
-    "said": 62.3,
-    "won": 5
+    "n": 7,
+    "roi": 32.7,
+    "said": 61.4,
+    "won": 6
    },
    "nor": {
     "hit": 66.7,
@@ -2103,17 +2103,17 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 62,
-   "said": 75.5,
-   "won": 47
+   "n": 68,
+   "said": 76.0,
+   "won": 52
   },
   "strong": {
-   "hit": 79.7,
+   "hit": 79.8,
    "lost": 26,
-   "n": 128,
-   "roi": 1.8,
-   "said": 76.6,
-   "won": 102
+   "n": 129,
+   "roi": 2.0,
+   "said": 76.7,
+   "won": 103
   },
   "vs_market_14d": {
    "against": {
@@ -2125,12 +2125,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.5,
+    "hit": 68.8,
     "lost": 80,
-    "n": 254,
-    "roi": -1.2,
-    "said": 62.1,
-    "won": 174
+    "n": 256,
+    "roi": -0.8,
+    "said": 62.2,
+    "won": 176
    }
   },
   "weights": {
@@ -2142,10 +2142,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4504,
-    "market_only": 0.4504,
-    "model_only": 0.48,
-    "n": 401,
+    "logloss": 0.4496,
+    "market_only": 0.4496,
+    "model_only": 0.4794,
+    "n": 402,
     "weight": 0.05
    },
    "nfl": {
@@ -2156,10 +2156,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6271,
-    "market_only": 0.6271,
-    "model_only": 0.6346,
-    "n": 83,
+    "logloss": 0.6266,
+    "market_only": 0.6266,
+    "model_only": 0.6345,
+    "n": 84,
     "weight": 0.05
    },
    "wnba": {
