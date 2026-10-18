@@ -460,7 +460,8 @@ def grade(final, path=None):
     for L in book["legs"].values():
         stacks.repush(L)
         if L.get("kind") == "prop":
-            if L.get("status") == "open":
+            # open, or voided from a prop record the fixed grader has since settled
+            if L.get("status") == "open" or (L.get("status") == "void" and not L.get("push")):
                 e = pl.get(props_ledger.prop_key(L))
                 if e and e["status"] != "open":
                     L["status"] = "void" if e["status"] == "ungradable" else e["status"]

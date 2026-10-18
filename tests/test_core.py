@@ -258,6 +258,47 @@ class NamedPlays(unittest.TestCase):
         self.assertEqual(locks.plays(card)["best"][2], "open")
 
 
+class PropIdentity(unittest.TestCase):
+    """A player whose name is spelled differently by FanDuel and ESPN is
+    graded, not voided as a DNP (2026-10-18: Aho (CAR), Stützle, Marner), and
+    MLB batting props read ESPN's group from "type" (eight were ungradable)."""
+
+    @staticmethod
+    def box():
+        def grp(abbr, players, keys, name=None, typ=None):
+            return dict(team=dict(abbreviation=abbr), statistics=[dict(
+                name=name, type=typ, keys=keys,
+                athletes=[dict(athlete=dict(id=str(i), displayName=n), stats=v) for i, n, v in players])])
+        return dict(boxscore=dict(players=[
+            grp("CAR", [(1, "Sebastian Aho", ["0"]), (2, "Mitch Marner", ["1"])], ["shotsTotal"], name="forwards"),
+            grp("NYI", [(3, "Sebastian Aho", ["4"]), (4, "Tim Stutzle", ["1"]),
+                        (5, "John Smith", ["2"]), (6, "Jake Smith", ["3"])], ["shotsTotal"], name="forwards"),
+            grp("TB", [(7, "Chandler Simpson", ["0-3", "0", "1"])], ["hits-atBats", "runs", "RBIs"],
+                typ="batting")]))
+
+    def test_names(self):
+        import props_ledger as PL
+        st = PL.box_stats(self.box())
+        get = lambda n: PL.resolve(st, dict(name=n))
+        self.assertEqual(get("Sebastian Aho (CAR)")[0]["shotsTotal"], 0)    # the CAR one, not NYI's 4
+        self.assertEqual(get("Tim Stützle")[0]["shotsTotal"], 1)
+        self.assertEqual(get("Mitchell Marner"), (st["2"], "fuzzy"))
+        self.assertEqual(get("Sebastian Aho"), (None, "unresolved"))        # two of them, no hint
+        self.assertEqual(get("J Smith")[1], "unresolved")
+        self.assertEqual(get("Connor McDavid"), (None, "absent"))
+
+    def test_mlb_group_from_type(self):
+        import props_ledger as PL
+        st, _ = PL.resolve(PL.box_stats(self.box()), dict(name="Chandler Simpson"))
+        self.assertEqual(PL.MARKETS["mlb"]["Hits + Runs + RBIs"](st), 1)
+        self.assertEqual(PL.MARKETS["mlb"]["Hits"](st), 0)
+
+    def test_record_keys_unchanged(self):
+        import props_ledger as PL
+        self.assertEqual(PL.prop_key(dict(gid="nhl:1", name="Tim Stützle", market="Shots on Goal", line="1+")),
+                         "nhl:1|n:tim sttzle|Shots on Goal|1+")
+
+
 class StuckSweep(unittest.TestCase):
     """Anything still open a week after its game is reported, not left silent."""
 

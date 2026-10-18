@@ -180,7 +180,8 @@ def snapshot():
         _r = _log[_day]
         out["health"] = dict(day=_day, trailing=[a_ for a_ in (_r.get("audit") or [])
                                                  if a_.get("flag") and _still_offered(a_.get("name"))],
-                             stuck=[" ".join(map(str, x)) for x in (_r.get("stuck") or [])][:10],
+                             stuck=([" ".join(map(str, x)) for x in (_r.get("stuck") or [])]
+                                    + _unmatched_players())[:10],
                              checked=len(_r.get("audit") or []))
     except (OSError, ValueError, KeyError):
         out["health"] = None
@@ -999,6 +1000,20 @@ def changes(new):
         if prev.get("mc") and r.get("mc") and abs(prev["mc"] - r["mc"]) >= 3.0:
             out.append(f'{game}: confidence {prev["mc"]:.1f}% → {r["mc"]:.1f}%')
     return out
+
+
+def _unmatched_players(days=14):
+    """Props set aside because the player's name could not be matched to the
+    box score uniquely: listed for review rather than silently dropped."""
+    try:
+        import datetime as dt
+        import props_ledger
+        cut = (dt.date.today() - dt.timedelta(days=days)).isoformat()
+        return [f'unmatched player: {e.get("name")} ({e.get("gid")}, {e.get("market")})'
+                for e in props_ledger.load().values()
+                if e.get("void_why") == "identity_unresolved" and (e.get("date") or "") >= cut]
+    except Exception:
+        return []
 
 
 def _still_offered(name):

@@ -312,7 +312,8 @@ def grade(final):
             for L in t["legs"]:
                 if L["kind"] == "game":
                     stacks.repush(L)
-                if L["status"] != "open":
+                # a prop leg voided from a record the fixed grader has since settled re-syncs
+                if L["status"] != "open" and not (L["kind"] != "game" and L["status"] == "void"):
                     continue
                 if L["kind"] == "game":
                     locks.settle(L, final)

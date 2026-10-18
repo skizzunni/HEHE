@@ -37,6 +37,7 @@ import datetime as dt
 import json
 import os
 import re
+import unicodedata
 import time
 import sys
 import urllib.request
@@ -244,8 +245,16 @@ def save(book):
         json.dump(book, fh, indent=1, sort_keys=True)
 
 
+def _key_name(n):
+    """The name part of a record key. Frozen at the original normalisation so
+    keys already written (and the Locks / Lottery legs that look them up)
+    stay valid; matching players to box scores uses norm_name()."""
+    n = re.sub(r"[^a-z ]", "", (n or "").lower().replace("-", " "))
+    return " ".join(w for w in n.split() if w not in ("jr", "sr", "ii", "iii", "iv"))
+
+
 def prop_key(L):
-    who = L.get("aid") or "n:" + norm_name(L.get("name"))
+    who = L.get("aid") or "n:" + _key_name(L.get("name"))
     return f'{L["gid"]}|{who}|{L["market"]}|{L["line"]}'
 
 
@@ -304,8 +313,68 @@ def summary(league, eid):
 
 
 def norm_name(n):
-    n = re.sub(r"[^a-z ]", "", (n or "").lower().replace("-", " "))
+    """'Tim Stützle' -> 'tim stutzle'; 'Sebastian Aho (CAR)' -> 'sebastian aho'.
+    Accents are folded, not dropped: dropping them turned Stützle into
+    'sttzle', which matched nobody, and the prop was voided as a DNP."""
+    n = re.sub(r"\([^)]*\)", " ", n or "")
+    n = unicodedata.normalize("NFKD", n.replace("ø", "o").replace("Ø", "O")
+                              .replace("ł", "l").replace("đ", "d"))
+    n = n.encode("ascii", "ignore").decode().lower().replace("-", " ").replace(".", " ")
+    n = re.sub(r"[^a-z ]", "", n)
     return " ".join(w for w in n.split() if w not in ("jr", "sr", "ii", "iii", "iv"))
+
+
+def team_hint(n):
+    """'Sebastian Aho (CAR)' -> 'car': FanDuel's tag for players who share a name."""
+    m = re.search(r"\(([A-Za-z]{2,4})\)", n or "")
+    return m.group(1).lower() if m else None
+
+
+# Reviewed spellings that differ between FanDuel and ESPN beyond accents and
+# short first names. Keys and values are norm_name() forms.
+ALIASES = {}
+
+
+def _first_ok(a, b):
+    """First names that can be the same person: equal, or one a short form
+    of the other ('mitch' / 'mitchell', 'alex' / 'alexander')."""
+    return a == b or (min(len(a), len(b)) >= 3 and (a.startswith(b) or b.startswith(a)))
+
+
+def resolve(stats, e):
+    """(stats, how) for one prop's player in a box score, where how is 'id',
+    'name', 'fuzzy' or 'alias'; (None, 'absent') when no player in the box
+    shares the surname (did not dress / did not play); (None, 'unresolved')
+    when someone could be the player but not uniquely -- that must be
+    retried or reviewed, never graded as a DNP."""
+    if e.get("aid") and str(e["aid"]) in stats:
+        return stats[str(e["aid"])], "id"
+    nm = norm_name(e.get("name"))
+    hint = team_hint(e.get("name"))
+    people = stats.get("_people") or []           # [(norm name, team abbr, stats)]
+
+    def pick(cands, how):
+        if hint and len(cands) > 1:
+            cands = [c for c in cands if c[1] == hint]
+        return (cands[0][2], how) if len(cands) == 1 else None
+
+    got = pick([c for c in people if c[0] == nm], "name")
+    if got:
+        return got
+    if nm in ALIASES:
+        got = pick([c for c in people if c[0] == ALIASES[nm]], "alias")
+        if got:
+            return got
+    w = nm.split()
+    if not w:
+        return None, "unresolved"
+    same_last = [c for c in people if c[0].split()[-1:] == w[-1:]]
+    got = pick([c for c in same_last if _first_ok(c[0].split()[0], w[0])], "fuzzy")
+    if got:
+        return got
+    if not people and "name:" + nm in stats:      # older callers: name keys only
+        return stats["name:" + nm], "name"
+    return (None, "unresolved") if same_last else (None, "absent")
 
 
 def box_stats(sm):
@@ -324,18 +393,26 @@ def box_stats(sm):
                 nm = norm_name((pl.get("athlete") or {}).get("displayName"))
                 if nm:
                     out["name:" + nm] = st
+                    out.setdefault("_people", []).append(
+                        (nm, ((team.get("team") or {}).get("abbreviation") or "").lower(), st))
     for team in ((sm or {}).get("boxscore") or {}).get("players") or []:
+        abbr = ((team.get("team") or {}).get("abbreviation") or "").lower()
         for grp in team.get("statistics") or []:
-            g = grp.get("name") or ""
+            # MLB groups carry their name in "type" ("batting") with name
+            # null: keyed "" before 2026-10-18, every batting prop ungradable
+            g = grp.get("name") or grp.get("type") or ""
             keys = grp.get("keys") or []
             for a in grp.get("athletes") or []:
                 aid = str((a.get("athlete") or {}).get("id") or "")
                 if not aid:
                     continue
+                fresh = aid not in out
                 st = out.setdefault(aid, {})
                 nm = norm_name((a.get("athlete") or {}).get("displayName"))
                 if nm:
                     out.setdefault("name:" + nm, st)
+                    if fresh:
+                        out.setdefault("_people", []).append((nm, abbr, st))
                 for k, v in zip(keys, a.get("stats") or []):
                     # "hits-atBats" = "1-3", "completions/passingAttempts" =
                     # "12/19": one stat per part
@@ -362,6 +439,13 @@ def grade():
             ufc_props.grade(ufc)
         except Exception as ex:                            # never block the rest
             print(f"props: ufc grading failed: {ex}", file=sys.stderr)
+    # once: records voided or set aside before 2026-10-18 by the name /
+    # MLB-group bugs are re-checked by the fixed grader (idempotent)
+    for e in book.values():
+        if e["status"] in ("void", "ungradable") and e.get("league") in SPORT \
+                and not e.get("rechecked"):
+            e["rechecked"] = e["status"]
+            e["status"] = "open"
     by_game = {}
     for k, e in book.items():
         if e["status"] == "open":
@@ -380,14 +464,29 @@ def grade():
             continue
         stats = box_stats(sm)
         for e in es:
-            st = (stats.get(str(e["aid"])) if e.get("aid")
-                  else stats.get("name:" + norm_name(e.get("name"))))
-            if st is None:
-                e["status"] = "void"            # did not play: books void these
+            st, how = resolve(stats, e)
+            if how == "absent":
+                e["status"], e["void_why"] = "void", "not in box score"   # did not play
                 continue
-            v = MARKETS[league][e["market"]](st)
+            if st is None:
+                # a name that could be someone in the box: never a DNP. Kept
+                # open and retried; after VOID_AFTER_DAYS it is set aside for
+                # review, out of every record (2026-10-18: Aho (CAR), Stützle
+                # and Marner were voided this way although all three played)
+                e["unresolved"] = True
+                if (today - dt.date.fromisoformat(e["date"])).days > VOID_AFTER_DAYS:
+                    e["status"], e["void_why"] = "ungradable", "identity_unresolved"
+                continue
+            e.pop("unresolved", None)
+            if how != "id":
+                e["matched"] = how
+            f = (MARKETS.get(league) or {}).get(e["market"])
+            if f is None:                       # no reader for it: never crash the run
+                e["status"], e["void_why"] = "ungradable", "no grader for market"
+                continue
+            v = f(st)
             if v is None:
-                e["status"] = "ungradable"
+                e["status"], e["void_why"] = "ungradable", "schema_error"
                 continue
             ok = won(league, e["market"], e["line"], v)
             if ok is None:
