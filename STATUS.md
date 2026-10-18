@@ -104,6 +104,14 @@ contracts that settle differently from a sportsbook line (Kalshi lines in the da
 so no case exists yet); props de-vig uses each market's tuned margin rather than a paired opposite where
 FanDuel lists only one side.
 
+## Sunday 2026-10-18 8 AM cards (checked 12:20 UTC)
+
+* Both cards set at 12:02 UTC (8:02 AM ET), the first under the one-leg-per-game rule: Locks 11 legs / 11
+  games, all -360..-400; Safe Locks 11 / 11, all -1800..-2000, one soccer leg ("Real Madrid or draw", dc).
+  Earliest start 9:30 AM ET (Jaguars, London). Kind cap held (4 NFL unders each).
+* Decision-time pools saved; the chooser re-run on them gives both cards exactly (replay True).
+* 30 NFL touchdown props recorded across 12 games. Tests green on the latest code (run 20, 95638d7).
+
 ## First live Safe Locks card (2026-10-17), graded 2026-10-18 07:15 UTC
 
 * **11/11 won, all hit** (stated 49.8%). Winners parlay top 4 (80%) hit; Best play top 10 (54%) hit.
