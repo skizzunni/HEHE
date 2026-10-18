@@ -59,17 +59,22 @@ PROBE = """<script>setTimeout(function(){
       out.heading = (document.querySelector(".parlays h3") || {}).textContent || "";
       out.legs = document.querySelectorAll(".parlays .legs li").length;
       out.bars = [].slice.call(document.querySelectorAll(".coinbar")).map(function(e){return e.textContent});
-      document.title = "UICHECK " + JSON.stringify(out);
+      var r = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Results/.test(x.textContent)})[0];
+      if (r) r.click();
+      setTimeout(function(){
+        out.health = ((document.getElementById("health") || {}).textContent || "");
+        document.title = "UICHECK " + JSON.stringify(out);
+      }, 300);
     }, 300);
   }, 300);
 }, 500);</script>"""
 
 
-def render(captured_ms):
+def render(captured_ms, health=None):
     s = open(os.path.join(ROOT, "board.html")).read()
     s = re.sub(r'"captured":\d+', f'"captured":{captured_ms}', s, count=1)
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
-                  + ',"safe_locks_record":{},', 1)
+                  + ',"safe_locks_record":{},"health":' + json.dumps(health) + ',', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -88,8 +93,10 @@ def render(captured_ms):
 def main():
     fails = []
     now = int(time.time() * 1000)
-    old = render(now - 45 * 60000)
-    new = render(now)
+    sick = dict(day="2026-10-18", checked=5, stuck=["props mlb:1|x|RBIs|1+"],
+                trailing=[dict(name="props uel Shots", hit=40.0, said=84.3, n=20, flag=True)])
+    old = render(now - 45 * 60000, sick)
+    new = render(now, dict(day="2026-10-18", checked=5, stuck=[], trailing=[]))
     print("stale copy:", old)
     print("fresh copy:", new)
     if not (old["banner"] and old["bannerOnLocks"]):
@@ -103,6 +110,11 @@ def main():
         fails.append("Winners parlay line missing or wrong: " + bars)
     if "Best play: the top 10 legs" not in bars or "54% to all hit" not in bars:
         fails.append("Best play line missing or wrong: " + bars)
+    if "2 problems found" not in old["health"] or "props uel Shots" not in old["health"] \
+            or "Never settled" not in old["health"]:
+        fails.append("health box must list the trailing split and the stuck record: " + old["health"])
+    if "All checks passing" not in new["health"]:
+        fails.append("clean review must read 'All checks passing': " + new["health"])
     for f in fails:
         print("FAIL:", f)
     print("OK" if not fails else f"{len(fails)} failure(s)")

@@ -170,6 +170,19 @@ def snapshot():
             out["strong"] = json.load(fh_).get("holdout")
     except (OSError, ValueError):
         out["strong"] = None
+    # The review's own alarms, for the Results tab: a split trailing its
+    # stated chance by 2+ standard errors, or records grading never settled.
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                               "review", "log.json")) as fh_:
+            _log = json.load(fh_)
+        _day = max(_log)
+        _r = _log[_day]
+        out["health"] = dict(day=_day, trailing=[a_ for a_ in (_r.get("audit") or []) if a_.get("flag")],
+                             stuck=[" ".join(map(str, x)) for x in (_r.get("stuck") or [])][:10],
+                             checked=len(_r.get("audit") or []))
+    except (OSError, ValueError, KeyError):
+        out["health"] = None
     out["parlays"] = parlays.build_all(out)
     # Stacks: long tickets of high-probability legs (alt totals, "won't win
     # by N"), priced from each game's moneyline, spread and total. Kept apart
