@@ -75,6 +75,12 @@ drift/form/rest/travel/team bias, Kalshi+book average.
 * Props: 2,005 across 35 games; 94 ticket legs, 0 ungradable. 24 NFL TD picks (2 x 12 games) and 59 NFL props recorded in props.json, 0 ungradable.
 * 10-leg stack: all soccer legs at 97%; backtest 95-100% soccer stack legs said ~97.4, hit 97.1-98.8 (3,100+ legs). Watch: Ligue 1 legs 95.2 vs 97.4 on 393.
 
+## Checked and left alone (2026-10-18)
+
+* Props at Locks prices: 155 graded; 70-80% band hit 74.4 vs 73.4 said; 80-90% band 78.4 vs 84.7, but the
+  whole gap is soccer "Shots" (uel 8/20 vs 84%), already off. Without it the band hits ~90 vs ~85 (NHL shots
+  on goal 41/47 vs 84.8). No change to prop chances.
+
 ## Waiting on data
 
 * NCAAB unders lean (one season only) -> recheck November.
