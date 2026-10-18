@@ -902,6 +902,12 @@
    "said": 79.4,
    "won": 24
   },
+  "safe_locks": {
+   "lost": [],
+   "n": 0,
+   "open": 0,
+   "won": 0
+  },
   "strong": {
    "hit": 52.6,
    "lost": 9,
@@ -947,10 +953,10 @@
    },
    {
     "flag": false,
-    "hit": 82.3,
-    "n": 62,
+    "hit": 78.9,
+    "n": 71,
     "name": "props nhl Shots on Goal",
-    "said": 78.7
+    "said": 78.4
    },
    {
     "flag": true,
@@ -1011,11 +1017,11 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 67.1,
-    "calls": 37,
-    "cutoff": 0.6,
-    "games": 85,
-    "hit": 75.7
+    "all_hit": 67.8,
+    "calls": 19,
+    "cutoff": 0.625,
+    "games": 87,
+    "hit": 84.2
    },
    "ufc": {
     "all_hit": 64.0,
@@ -1041,8 +1047,8 @@
   },
   "clv": {
    "avg": -0.15,
-   "beat": 40.8,
-   "n": 71
+   "beat": 41.1,
+   "n": 73
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1719,12 +1725,12 @@
    }
   ],
   "picks": {
-   "hit": 72.8,
+   "hit": 73.0,
    "lost": 68,
-   "n": 250,
-   "roi": 4.0,
-   "said": 71.1,
-   "won": 182
+   "n": 252,
+   "roi": 5.8,
+   "said": 71.0,
+   "won": 184
   },
   "picks_by_league": {
    "arg": {
@@ -1976,12 +1982,12 @@
     "won": 1
    },
    "nhl": {
-    "hit": 75.0,
+    "hit": 80.0,
     "lost": 2,
-    "n": 8,
-    "roi": 16.1,
-    "said": 61.2,
-    "won": 6
+    "n": 10,
+    "roi": 27.1,
+    "said": 60.1,
+    "won": 8
    },
    "nor": {
     "hit": 66.7,
@@ -2111,9 +2117,15 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 72,
+   "n": 81,
    "said": 76.1,
-   "won": 56
+   "won": 61
+  },
+  "safe_locks": {
+   "lost": [],
+   "n": 10,
+   "open": 10,
+   "won": 0
   },
   "strong": {
    "hit": 79.8,
@@ -2133,12 +2145,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.5,
+    "hit": 68.7,
     "lost": 81,
-    "n": 257,
-    "roi": -1.2,
-    "said": 62.2,
-    "won": 176
+    "n": 259,
+    "roi": -0.7,
+    "said": 62.1,
+    "won": 178
    }
   },
   "weights": {
@@ -2164,10 +2176,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6299,
-    "market_only": 0.6299,
-    "model_only": 0.6375,
-    "n": 85,
+    "logloss": 0.6288,
+    "market_only": 0.6288,
+    "model_only": 0.6373,
+    "n": 87,
     "weight": 0.05
    },
    "wnba": {
