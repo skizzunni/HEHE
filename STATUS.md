@@ -2,7 +2,7 @@
 
 Every requirement from the conversation, its state, and the evidence. A line
 is **done** only with evidence that can be re-checked; **open** lines name
-what is missing and the next step. Updated 2026-10-18.
+what is missing and the next step. Updated 2026-10-18 (after the external review).
 
 ## Standing rules (never change without the owner)
 
@@ -36,7 +36,7 @@ what is missing and the next step. Updated 2026-10-18.
 
 Run by `.github/workflows/tests.yml` on every code or page push:
 
-* `tests/test_core.py` -- 26 unit tests (standard library, no network): Locks -400..-120 and
+* `tests/test_core.py` -- 40 unit tests (standard library, no network): Locks -400..-120 and
   Safe -2000..-500 windows, one leg per game and the kind cap, soccer limited to validated
   kinds, soccer grading (draw / void / live), soccer name matching and the reversed-fixture
   guard, NFL upper tail, wind scaling, ungradable props kept off tickets, every FanDuel prop
@@ -47,8 +47,8 @@ Run by `.github/workflows/tests.yml` on every code or page push:
   minutes old and absent when fresh; Locks -> Safe Locks renders 11 legs, the Winners parlay
   (top 4, 80%) and Best play (top 10, 54%); Results health box lists a trailing split, a
   never-settled record and bad data, and reads "All checks passing" when clean.
-* `tests/mutation_check.py` -- breaks 16 protected rules one at a time (bytecode cache off) and
-  requires each to be caught; 16/16 caught 2026-10-18.
+* `tests/mutation_check.py` -- breaks 30 protected rules one at a time (bytecode cache off) and
+  requires each to be caught; 30/30 caught 2026-10-18.
 
 ## Monitoring (on the site, every build)
 
@@ -80,6 +80,29 @@ drift/form/rest/travel/team bias, Kalshi+book average.
 * Props at Locks prices: 155 graded; 70-80% band hit 74.4 vs 73.4 said; 80-90% band 78.4 vs 84.7, but the
   whole gap is soccer "Shots" (uel 8/20 vs 84%), already off. Without it the band hits ~90 vs ~85 (NHL shots
   on goal 41/47 vs 84.8). No change to prop chances.
+
+## External review 2026-10-18 (snapshot 34ff1f3): findings and what was done
+
+| # | Finding | State | Evidence |
+|---|---------|-------|----------|
+| 1 | Props voided / ungradable by name and MLB-group bugs | **fixed + reconciled** | Accents folded, FanDuel team tag used as a hint, surname + compatible first name (Mitchell/Mitch); an unmatched name stays open for retry (`unresolved`) and is never graded as a DNP; MLB groups read from `type`. Regraded against ESPN: Aho (CAR) 0 shots **lost**, Stützle 1 **won**, Marner 1 **lost**; the 8 MLB props **6 won, 2 lost** -- exactly the review's figures, confirmed in the live ledger after the pipeline re-checked all 65 past void/ungradable records once |
+| 2 | Integer-line pushes graded as losses | **fixed** | `stacks.settle_score` -> won/lost/push; Under/Over 44 at 24-20 and Home -3 at 24-21 push; a push leaves the slip (stored as void + `push`); used by Locks, Safe Locks, Stacks, Lottery and the backtest. Past ledgers scanned: 0 such losses (nearly every line was a half point) |
+| 3 | Recommendations overwritten; ML price kept on a double-chance call | **fixed** | Append-only `history` per pick (time, pick, market, price, chance, reason, strong label, commit); `first` = call as first published; team+market is the bet identity; no revision after the scheduled start; 3 contaminated first prices cleared (kept as `first_price_cleared`) |
+| 4 | Same-game legs multiplied as independent | **fixed (owner's rule)** | Owner chose: at most one leg per game per ticket, up to 11; light days show fewer at the same standards; other same-game ideas listed apart and excluded from chance, payout, Winners parlay, Best play; never recorded. Also Stacks (no same-game fill) and the 25-leg props ticket. Live 08:26 UTC: tomorrow's Locks 6 legs / 6 games (was 10 / 6), Safe 3 / 3 (was 7 / 3) |
+| 5 | Objective implicit; "best" not best value | **partly** | Each card states it maximises the chance of winning, not value, and shows the estimated return (chance x payout - 1) for the Winners parlay, Best play and full card; no Winners parlay named when nothing reaches 80%. A separate value mode is not built (no validated edge exists to build it on) |
+| 6 | Price-band calibration jumps, breaks complements | **fixed** | Tested by date halves on the Kalshi legs (204 games, 32 dates, no game in both halves): the band factor (even in-sample) and a smooth logit stretch both failed to beat the plain price out of sample (stretch b 0.91 vs 1.20; gain CI -0.006..-0.002). Chances are now the de-vigged price: monotone and complement-preserving by construction; unit-tested |
+| 7 | Single-side 1.045 de-vig on game lines | **fixed** | `locks.two_sided`: FanDuel's price de-vigged against its own opposite side (over/under, spread +/-, team totals, dc vs win, 2-way ML); fallback marked `assumed margin`. Live: 10/11, 6/6, 11/11, 2/3 legs two-sided. Nested alternate lines pooled into order (PAV) |
+| 8 | Strong-call record measured a re-scored policy; fallback cut-offs | **fixed** | Cut-offs fitted on published chances; no fallback (unqualified leagues get no strong calls); label frozen at publication; holdout on published picks with a date-boundary split: 75.6% on 283 calls over 18 days (simulated market-favourite version kept apart, 69.5% of all) |
+| 9 | Stacks aim chosen on the "unseen" half | **fixed** | Holdout days split again: aims chosen on `select` days only, `test` days reported. Until the next weekly backtest the fixed default aims apply |
+| 10 | Weight fit on legacy rows; no true market-only | **fixed** | Fit only on rows with the saved raw model/market pair (NCAAF 52, NHL 17; MLB/NFL had 0); grid includes 0; a weight above 0 needs a gain on the newer half it was not fitted on. Result today: NCAAF fitted 0.35 but did not hold -> 0 (market only) |
+| 11 | Rows treated as independent; ROI interval mismatched | **fixed** | `tools/resample.py`: stake-weighted ROI with a bootstrap over whole games; Kalshi backtest splits by date. Lottery legs ROI -11.8%, CI -44..+22 on 71 games (honestly wide) |
+| 12 | Freshness, fixture matching, Card consistency | **fixed** | FanDuel match by teams + nearest start within 3 h (doubleheaders), ambiguous -> no match; `dashboard.pregame` drops anything past its start whatever a cached status says; old scoreboards listed in Checks; Card sweep/top-3 follow the table's order; soccer marked "market est."; "floor" wording removed, every chance labelled est. |
+| -- | Replay = live chooser | **done (Locks)** | The pool each card was chosen from is saved; each build re-runs `choose()` on it and flags any mismatch. Stacks' backtest already calls the live `candidates`/`build_tickets` |
+
+Still open from the review: a value mode with a margin for error; per-market venue rules for Kalshi
+contracts that settle differently from a sportsbook line (Kalshi lines in the data are half points,
+so no case exists yet); props de-vig uses each market's tuned margin rather than a paired opposite where
+FanDuel lists only one side.
 
 ## First live Safe Locks card (2026-10-17), graded 2026-10-18 07:15 UTC
 
