@@ -88,6 +88,9 @@ def _unit(g, league):
     return "points"
 
 
+SOCCER_KINDS = {"dc"}
+
+
 def fd_specs(FD, refs):
     """For stacks.candidates: every line FanDuel posts for the game -- main
     lines from the league feed plus alternate spreads, totals and team totals
@@ -130,6 +133,12 @@ def fd_specs(FD, refs):
                 L = float(v[0])
                 add("Total", f"{side.title()} {L:g} {unit}", dict(t=side, line=L), v[1])
         for kind, team, side, L, ref, price, where in fanduel.load_alts(gm):
+            # soccer: only what tools/soccer_lab.py has checked against the
+            # market on unseen matches -- the result and double chance (heavy
+            # favourites beat their price in both halves). Totals, team totals
+            # and handicaps wait for their own test.
+            if gm.get("soccer") and kind not in SOCCER_KINDS:
+                continue
             if kind == "total":
                 add("Total", f"{side.title()} {L:g} {unit}", dict(t=side, line=L), ref, price, where)
             elif kind == "spread":
