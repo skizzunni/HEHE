@@ -2168,11 +2168,12 @@
    "match": "Seattle Kraken at Florida Panthers",
    "p": 0.9627,
    "p_model": 0.9644,
+   "score": "Seattle Kraken 3 - Florida Panthers 8",
    "spec": {
     "line": 2.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892522|Under 9.5 goals": {
    "away": "Seattle Kraken",
@@ -2184,11 +2185,12 @@
    "match": "Seattle Kraken at Florida Panthers",
    "p": 0.9001,
    "p_model": 0.9049,
+   "score": "Seattle Kraken 3 - Florida Panthers 8",
    "spec": {
     "line": 9.5,
     "t": "under"
    },
-   "status": "open"
+   "status": "lost"
   },
   "nhl:401892527|Over 2.5 goals": {
    "away": "New York Rangers",
@@ -3634,7 +3636,7 @@
    "logged": "2026-10-17T00:05",
    "n": 2,
    "prob": 0.8102,
-   "status": "open"
+   "status": "lost"
   },
   "20261017:2:2": {
    "fair": 1.23,
@@ -3669,7 +3671,7 @@
    "logged": "2026-10-17T00:05",
    "n": 3,
    "prob": 0.7292,
-   "status": "open"
+   "status": "lost"
   },
   "20261017:3:2": {
    "fair": 1.37,

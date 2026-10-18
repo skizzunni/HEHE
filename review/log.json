@@ -947,8 +947,8 @@
    },
    {
     "flag": false,
-    "hit": 80.6,
-    "n": 36,
+    "hit": 83.3,
+    "n": 42,
     "name": "props nhl Shots on Goal",
     "said": 78.4
    },
@@ -1004,10 +1004,10 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 67.5,
+    "all_hit": 67.9,
     "calls": 18,
     "cutoff": 0.625,
-    "games": 80,
+    "games": 81,
     "hit": 83.3
    },
    "ufc": {
@@ -1033,9 +1033,9 @@
    }
   },
   "clv": {
-   "avg": -0.33,
-   "beat": 40.0,
-   "n": 60
+   "avg": -0.32,
+   "beat": 39.3,
+   "n": 61
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1564,10 +1564,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Seattle Kraken +2.5"
+    ],
     "legs": 6,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 5
    },
@@ -1651,12 +1653,12 @@
    }
   ],
   "picks": {
-   "hit": 72.8,
+   "hit": 72.9,
    "lost": 61,
-   "n": 224,
-   "roi": 7.1,
+   "n": 225,
+   "roi": 7.8,
    "said": 71.1,
-   "won": 163
+   "won": 164
   },
   "picks_by_league": {
    "arg": {
@@ -1902,10 +1904,10 @@
    "nhl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 3,
-    "roi": 52.9,
-    "said": 64.2,
-    "won": 3
+    "n": 4,
+    "roi": 53.2,
+    "said": 63.5,
+    "won": 4
    },
    "nor": {
     "hit": 66.7,
@@ -2027,9 +2029,9 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 38,
-   "said": 76.1,
-   "won": 30
+   "n": 44,
+   "said": 76.4,
+   "won": 36
   },
   "strong": {
    "hit": 79.5,
@@ -2049,12 +2051,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.7,
+    "hit": 68.8,
     "lost": 77,
-    "n": 246,
-    "roi": -0.7,
+    "n": 247,
+    "roi": -0.5,
     "said": 62.0,
-    "won": 169
+    "won": 170
    }
   },
   "weights": {
@@ -2080,10 +2082,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6297,
-    "market_only": 0.6297,
-    "model_only": 0.6372,
-    "n": 80,
+    "logloss": 0.6278,
+    "market_only": 0.6278,
+    "model_only": 0.636,
+    "n": 81,
     "weight": 0.05
    },
    "wnba": {
