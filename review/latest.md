@@ -1,6 +1,6 @@
 # Review 2026-10-17
 
-Picks 192-77 (71.4% vs 70.7% claimed, ROI +1.7%).
+Picks 193-77 (71.5% vs 70.6% claimed, ROI +1.7%).
 TRAILING props uel Shots: 40.0% hit vs 84.3% stated on 20
 Strong calls 106-29 (78.5% vs 76.6% claimed).
 Closing line value: -0.21 points on 83 picks; beat the close on 39.8%.
@@ -97,5 +97,5 @@ Lottery 100: lost (0/5 legs won, killed by Lionel Messi: 1+ Assists, Robert Lewa
 Ladder-consistency props (all time): 10/12 won (83.3%) vs 84.7% fair, 83.5% price.
 Props 70/92 vs 75.8% claimed.
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 83.4% on 445 of 488, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 84.2% on 19 of 88, ufc 75% -> 79.2% on 24 of 88, wnba 62% -> 77.4% on 31 of 47, wta 65% -> 81.4% on 102 of 184
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 83.4% on 445 of 489, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 84.2% on 19 of 88, ufc 75% -> 79.2% on 24 of 88, wnba 62% -> 77.4% on 31 of 47, wta 65% -> 81.4% on 102 of 184
 Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=409), nfl 0.40 (n=79), nhl 0.05 (n=88), wnba 0.30 (n=47)
