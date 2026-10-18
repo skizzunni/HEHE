@@ -1003,11 +1003,11 @@
     "hit": 86.7
    },
    "ncaaf": {
-    "all_hit": 81.5,
-    "calls": 440,
+    "all_hit": 81.4,
+    "calls": 441,
     "cutoff": 0.55,
-    "games": 482,
-    "hit": 83.9
+    "games": 483,
+    "hit": 83.7
    },
    "nfl": {
     "all_hit": 62.0,
@@ -1047,8 +1047,8 @@
   },
   "clv": {
    "avg": -0.2,
-   "beat": 40.0,
-   "n": 75
+   "beat": 39.5,
+   "n": 76
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1326,6 +1326,14 @@
     "price": "-535",
     "said": 82.0,
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 82%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "Vanderbilt Commodores",
+    "price": "-225",
+    "said": 70.2,
+    "why": "margin 10 \u00b7 the book had my side favoured too \u00b7 called at 70%"
    },
    {
     "against_market": false,
@@ -1741,10 +1749,10 @@
    }
   ],
   "picks": {
-   "hit": 72.7,
-   "lost": 70,
-   "n": 256,
-   "roi": 4.9,
+   "hit": 72.4,
+   "lost": 71,
+   "n": 257,
+   "roi": 3.5,
    "said": 70.9,
    "won": 186
   },
@@ -1974,10 +1982,10 @@
     "won": 4
    },
    "ncaaf": {
-    "hit": 75.0,
-    "lost": 8,
-    "n": 32,
-    "roi": 6.0,
+    "hit": 72.7,
+    "lost": 9,
+    "n": 33,
+    "roi": 2.6,
     "said": 70.4,
     "won": 24
    },
@@ -2139,16 +2147,16 @@
   },
   "safe_locks": {
    "lost": [],
-   "n": 10,
-   "open": 10,
+   "n": 11,
+   "open": 11,
    "won": 0
   },
   "strong": {
-   "hit": 79.8,
-   "lost": 26,
-   "n": 129,
-   "roi": 1.8,
-   "said": 76.7,
+   "hit": 79.2,
+   "lost": 27,
+   "n": 130,
+   "roi": -0.8,
+   "said": 76.6,
    "won": 103
   },
   "vs_market_14d": {
@@ -2161,10 +2169,10 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.6,
-    "lost": 82,
-    "n": 261,
-    "roi": -0.9,
+    "hit": 68.3,
+    "lost": 83,
+    "n": 262,
+    "roi": -1.2,
     "said": 62.2,
     "won": 179
    }
@@ -2178,10 +2186,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4495,
-    "market_only": 0.4495,
-    "model_only": 0.4795,
-    "n": 403,
+    "logloss": 0.4512,
+    "market_only": 0.4512,
+    "model_only": 0.4812,
+    "n": 404,
     "weight": 0.05
    },
    "nfl": {

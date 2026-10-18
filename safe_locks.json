@@ -10,10 +10,38 @@
    "ncaaf:401864521|New Mexico Lobos over 16.5 points",
    "ncaaf:401856833|Utah Utes over 17.5 points",
    "ncaaf:401860904|Fresno State Bulldogs under 41.5 points",
-   "ncaaf:401858492|Nebraska Cornhuskers +27.5"
+   "ncaaf:401858492|Nebraska Cornhuskers +27.5",
+   "mex:401876939|Cruz Azul or draw"
   ]
  },
  "legs": {
+  "mex:401876939|Cruz Azul or draw": {
+   "aid": null,
+   "away": "FC Ju\u00e1rez",
+   "date": "2026-10-17",
+   "edge": null,
+   "fd": "736.190961773:13736698",
+   "gid": "mex:401876939",
+   "home": "Cruz Azul",
+   "kind": "game",
+   "label": "Cruz Azul or draw",
+   "league": "mex",
+   "lg": "Liga MX",
+   "line": null,
+   "market": null,
+   "match": "FC Ju\u00e1rez at Cruz Azul",
+   "name": null,
+   "p": 0.9148,
+   "p_fair": null,
+   "price": "-1500",
+   "spec": {
+    "t": "dc",
+    "team": "Cruz Azul"
+   },
+   "status": "open",
+   "tip": "11:10 PM",
+   "where": "Double Chance: Cruz Azul And Draw"
+  },
   "ncaaf:401856833|Under 70.5 points": {
    "aid": null,
    "away": "Utah Utes",
