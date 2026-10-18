@@ -10671,6 +10671,9 @@
 "away": "Dallas Cowboys",
 "home": "Green Bay Packers",
 "ladder": {
+"26.5": {
+"under": "+2000"
+},
 "27.5": {
 "under": "+1700"
 },
@@ -10693,15 +10696,16 @@
 "under": "+900"
 },
 "34.5": {
-"under": "+870"
+"over": "-2000",
+"under": "+830"
 },
 "35.5": {
-"over": "-1800",
-"under": "+800"
+"over": "-1600",
+"under": "+750"
 },
 "36.5": {
-"over": "-1400",
-"under": "+680"
+"over": "-1200",
+"under": "+630"
 },
 "37.5": {
 "over": "-1000",
@@ -10713,7 +10717,7 @@
 },
 "39.5": {
 "over": "-720",
-"under": "+450"
+"under": "+440"
 },
 "40.5": {
 "over": "-620",
@@ -10736,40 +10740,40 @@
 "under": "+240"
 },
 "45.5": {
-"over": "-295",
-"under": "+220"
+"over": "-290",
+"under": "+215"
 },
 "46.5": {
 "over": "-265",
 "under": "+200"
 },
 "47.5": {
-"over": "-225",
-"under": "+172"
+"over": "-220",
+"under": "+168"
 },
 "48.5": {
-"over": "-196",
-"under": "+152"
+"over": "-194",
+"under": "+148"
 },
 "49.5": {
-"over": "-178",
-"under": "+138"
+"over": "-174",
+"under": "+136"
 },
 "50.5": {
-"over": "-158",
-"under": "+124"
+"over": "-156",
+"under": "+122"
 },
 "51.5": {
-"over": "-132",
-"under": "+104"
+"over": "-130",
+"under": "+102"
 },
 "52.5": {
-"over": "-120",
-"under": "-106"
+"over": "-115",
+"under": "-111"
 },
 "53.5": {
-"over": "-106",
-"under": "-120"
+"over": "-104",
+"under": "-122"
 },
 "54.5": {
 "over": "+106",
@@ -10844,8 +10848,8 @@
 "under": "-1600"
 },
 "72.5": {
-"over": "+830",
-"under": "-2000"
+"over": "+800",
+"under": "-1800"
 },
 "73.5": {
 "over": "+900"
@@ -10875,11 +10879,11 @@
 "over": "+1700"
 },
 "82.5": {
-"over": "+2000"
+"over": "+1800"
 }
 },
 "league": "nfl",
-"logged": "2026-10-18T00:43+00:00",
+"logged": "2026-10-18T06:11+00:00",
 "spreads": [
 [
 "Dallas Cowboys",
@@ -10889,7 +10893,7 @@
 [
 "Dallas Cowboys",
 -24.5,
-"+1800"
+"+1700"
 ],
 [
 "Dallas Cowboys",
@@ -10959,12 +10963,12 @@
 [
 "Dallas Cowboys",
 -10.5,
-"+440"
+"+430"
 ],
 [
 "Dallas Cowboys",
 -9.5,
-"+370"
+"+360"
 ],
 [
 "Dallas Cowboys",
@@ -10974,52 +10978,52 @@
 [
 "Dallas Cowboys",
 -7.5,
-"+320"
+"+310"
 ],
 [
 "Dallas Cowboys",
 -6.5,
-"+240"
+"+235"
 ],
 [
 "Dallas Cowboys",
 -5.5,
-"+210"
+"+200"
 ],
 [
 "Dallas Cowboys",
 -4.5,
-"+190"
+"+186"
 ],
 [
 "Dallas Cowboys",
 -3.5,
-"+164"
+"+162"
 ],
 [
 "Dallas Cowboys",
 -2.5,
-"+120"
+"+118"
 ],
 [
 "Dallas Cowboys",
 -1.5,
-"+110"
+"+106"
 ],
 [
 "Dallas Cowboys",
 1.5,
-"-118"
+"-120"
 ],
 [
 "Dallas Cowboys",
 2.5,
-"-130"
+"-132"
 ],
 [
 "Dallas Cowboys",
 3.5,
-"-184"
+"-186"
 ],
 [
 "Dallas Cowboys",
@@ -11034,7 +11038,7 @@
 [
 "Dallas Cowboys",
 6.5,
-"-280"
+"-290"
 ],
 [
 "Dallas Cowboys",
@@ -11049,27 +11053,27 @@
 [
 "Dallas Cowboys",
 9.5,
-"-460"
+"-480"
 ],
 [
 "Dallas Cowboys",
 10.5,
-"-590"
+"-620"
 ],
 [
 "Dallas Cowboys",
 11.5,
-"-650"
+"-670"
 ],
 [
 "Dallas Cowboys",
 12.5,
-"-720"
+"-750"
 ],
 [
 "Dallas Cowboys",
 13.5,
-"-850"
+"-900"
 ],
 [
 "Dallas Cowboys",
@@ -11079,57 +11083,52 @@
 [
 "Dallas Cowboys",
 15.5,
-"-1200"
-],
-[
-"Dallas Cowboys",
-16.5,
 "-1400"
 ],
 [
 "Dallas Cowboys",
-17.5,
-"-2000"
+16.5,
+"-1600"
 ],
 [
 "Green Bay Packers",
 -26.5,
-"+1800"
+"+2000"
 ],
 [
 "Green Bay Packers",
 -25.5,
-"+1700"
+"+1800"
 ],
 [
 "Green Bay Packers",
 -24.5,
-"+1500"
+"+1700"
 ],
 [
 "Green Bay Packers",
 -23.5,
-"+1400"
+"+1500"
 ],
 [
 "Green Bay Packers",
 -22.5,
-"+1300"
+"+1400"
 ],
 [
 "Green Bay Packers",
 -21.5,
-"+1200"
+"+1300"
 ],
 [
 "Green Bay Packers",
 -20.5,
-"+1060"
+"+1100"
 ],
 [
 "Green Bay Packers",
 -19.5,
-"+1000"
+"+1060"
 ],
 [
 "Green Bay Packers",
@@ -11139,17 +11138,17 @@
 [
 "Green Bay Packers",
 -17.5,
-"+830"
+"+870"
 ],
 [
 "Green Bay Packers",
 -16.5,
-"+700"
+"+750"
 ],
 [
 "Green Bay Packers",
 -15.5,
-"+630"
+"+680"
 ],
 [
 "Green Bay Packers",
@@ -11159,27 +11158,27 @@
 [
 "Green Bay Packers",
 -13.5,
-"+500"
+"+520"
 ],
 [
 "Green Bay Packers",
 -12.5,
-"+450"
+"+460"
 ],
 [
 "Green Bay Packers",
 -11.5,
-"+420"
+"+430"
 ],
 [
 "Green Bay Packers",
 -10.5,
-"+390"
+"+400"
 ],
 [
 "Green Bay Packers",
 -9.5,
-"+320"
+"+330"
 ],
 [
 "Green Bay Packers",
@@ -11194,12 +11193,12 @@
 [
 "Green Bay Packers",
 -6.5,
-"+210"
+"+215"
 ],
 [
 "Green Bay Packers",
 -5.5,
-"+180"
+"+182"
 ],
 [
 "Green Bay Packers",
@@ -11209,52 +11208,52 @@
 [
 "Green Bay Packers",
 -3.5,
-"+142"
+"+144"
 ],
 [
 "Green Bay Packers",
 -2.5,
-"+102"
+"+104"
 ],
 [
 "Green Bay Packers",
 -1.5,
-"-108"
+"-106"
 ],
 [
 "Green Bay Packers",
 1.5,
-"-140"
+"-136"
 ],
 [
 "Green Bay Packers",
 2.5,
-"-154"
+"-150"
 ],
 [
 "Green Bay Packers",
 3.5,
-"-215"
+"-210"
 ],
 [
 "Green Bay Packers",
 4.5,
-"-250"
+"-245"
 ],
 [
 "Green Bay Packers",
 5.5,
-"-280"
+"-265"
 ],
 [
 "Green Bay Packers",
 6.5,
-"-330"
+"-320"
 ],
 [
 "Green Bay Packers",
 7.5,
-"-460"
+"-440"
 ],
 [
 "Green Bay Packers",
@@ -11264,12 +11263,12 @@
 [
 "Green Bay Packers",
 9.5,
-"-560"
+"-530"
 ],
 [
 "Green Bay Packers",
 10.5,
-"-700"
+"-670"
 ],
 [
 "Green Bay Packers",

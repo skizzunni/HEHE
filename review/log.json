@@ -938,8 +938,8 @@
  "2026-10-17": {
   "clv": {
    "avg": -0.12,
-   "beat": 40.4,
-   "n": 99
+   "beat": 40.0,
+   "n": 100
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1714,7 +1714,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -1750,7 +1750,7 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -1814,12 +1814,12 @@
    }
   ],
   "picks": {
-   "hit": 70.4,
+   "hit": 70.5,
    "lost": 91,
-   "n": 307,
-   "roi": -0.7,
+   "n": 308,
+   "roi": -0.5,
    "said": 70.6,
-   "won": 216
+   "won": 217
   },
   "picks_by_league": {
    "arg": {
@@ -2047,12 +2047,12 @@
     "won": 5
    },
    "ncaaf": {
-    "hit": 73.5,
+    "hit": 74.0,
     "lost": 13,
-    "n": 49,
-    "roi": -0.1,
-    "said": 71.8,
-    "won": 36
+    "n": 50,
+    "roi": 0.2,
+    "said": 72.0,
+    "won": 37
    },
    "ned": {
     "hit": 66.7,
@@ -2213,7 +2213,7 @@
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 6,
+   "open": 2,
    "plays": {
     "best": [
      10,
@@ -2223,18 +2223,18 @@
     "winners": [
      4,
      0.801,
-     "open"
+     "won"
     ]
    },
-   "won": 5
+   "won": 9
   },
   "strong": {
-   "hit": 76.7,
+   "hit": 76.8,
    "lost": 38,
-   "n": 163,
-   "roi": 0.4,
+   "n": 164,
+   "roi": 0.6,
    "said": 75.8,
-   "won": 125
+   "won": 126
   },
   "vs_market_14d": {
    "against": {
@@ -2246,12 +2246,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.1,
+    "hit": 68.2,
     "lost": 91,
-    "n": 285,
+    "n": 286,
     "roi": -2.3,
-    "said": 63.0,
-    "won": 194
+    "said": 63.1,
+    "won": 195
    }
   }
  },
@@ -2324,9 +2324,9 @@
    },
    "ncaaf": {
     "all_hit": 81.2,
-    "calls": 455,
+    "calls": 456,
     "cutoff": 0.55,
-    "games": 499,
+    "games": 500,
     "hit": 83.3
    },
    "nfl": {
@@ -2446,12 +2446,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 66.4,
+    "hit": 66.5,
     "lost": 82,
-    "n": 244,
-    "roi": -2.3,
-    "said": 63.0,
-    "won": 162
+    "n": 245,
+    "roi": -2.2,
+    "said": 63.1,
+    "won": 163
    }
   },
   "weights": {
@@ -2463,10 +2463,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4537,
-    "market_only": 0.4537,
-    "model_only": 0.4824,
-    "n": 419,
+    "logloss": 0.453,
+    "market_only": 0.453,
+    "model_only": 0.4819,
+    "n": 420,
     "weight": 0.05
    },
    "nfl": {
