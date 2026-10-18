@@ -275,6 +275,12 @@ def snapshot():
                   file=sys.stderr)
         except Exception as ex:
             print(f"td scorers failed: {ex}", file=sys.stderr)
+        try:
+            import ladders
+            n_ = ladders.log([d._STATE["slots"][s_] for s_ in ("today", "tomorrow")])
+            print(f"ladders: {n_} football games logged", file=sys.stderr)
+        except Exception as ex:
+            print(f"ladders failed: {ex}", file=sys.stderr)
         n = props_ledger.record(out["props"].get("today"), d._STATE["dates"][0])
         out["props_tuning"] = props_ledger.TUNING
         print(f"props: recorded {n} new legs; tuning {props_ledger.TUNING}", file=sys.stderr)

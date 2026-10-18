@@ -1,0 +1,49 @@
+# FanDuel alt-total ladders graded on final scores: over vs under at the same price
+name: ladder-lab
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '23 11 * * 2'
+  push:
+    branches: [claude/mlb-picks-review-jlx9w1]
+    paths:
+      - 'tools/ladder_lab.py'
+      - '.github/workflows/ladder-lab.yml'
+concurrency:
+  group: ladder-lab
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/mlb-picks-review-jlx9w1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: .cache/bt
+          key: ladderlab-${{ github.run_id }}
+          restore-keys: |
+            ladderlab-
+            edgelab-
+            backtest-
+      - run: python3 tools/ladder_lab.py
+      - name: Commit the results
+        run: |
+          git add -f data/ladder_lab.json
+          if git diff --cached --quiet; then echo "unchanged"; exit 0; fi
+          git config user.name  "board bot"
+          git config user.email "board-bot@users.noreply.github.com"
+          git commit -m "Ladder lab results [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin claude/mlb-picks-review-jlx9w1 \
+              && git push origin HEAD:claude/mlb-picks-review-jlx9w1 && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
