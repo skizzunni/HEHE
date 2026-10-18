@@ -160,5 +160,16 @@ jobs:
           start=${STARTED:-$now}
           wait=$(( 300 - (now - start) ))
           if [ "$wait" -gt 0 ]; then sleep "$wait"; fi
-          gh workflow run board.yml --repo "$GITHUB_REPOSITORY" \
-            --ref claude/mlb-picks-review-jlx9w1
+          # The chain is the board's heartbeat: the cron backstop is throttled
+          # to gaps of 100-270 minutes, so one failed hand-off would leave the
+          # site stale for hours. Retry with backoff before giving up.
+          for i in 1 2 3 4 5 6; do
+            if gh workflow run board.yml --repo "$GITHUB_REPOSITORY" \
+                 --ref claude/mlb-picks-review-jlx9w1; then
+              exit 0
+            fi
+            echo "hand-off attempt $i failed; retrying" >&2
+            sleep $((i * 10))
+          done
+          echo "could not start the next rebuild after 6 tries" >&2
+          exit 1
