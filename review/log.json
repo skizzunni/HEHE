@@ -2259,10 +2259,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 58.7,
-    "n": 46,
+    "hit": 57.4,
+    "n": 47,
     "name": "tennis Kalshi-priced",
-    "said": 70.1
+    "said": 69.8
    },
    {
     "flag": false,
@@ -2301,10 +2301,10 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "atp": {
-    "all_hit": 68.8,
+    "all_hit": 68.2,
     "calls": 70,
     "cutoff": 0.65,
-    "games": 128,
+    "games": 129,
     "hit": 81.4
    },
    "aus": {
@@ -2346,7 +2346,7 @@
    "chn": {
     "all_hit": 100.0,
     "cutoff": null,
-    "games": 5,
+    "games": 6,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "col": {
@@ -2612,9 +2612,9 @@
    }
   },
   "clv": {
-   "avg": -0.87,
-   "beat": 0.0,
-   "n": 1
+   "avg": 0.9,
+   "beat": 50.0,
+   "n": 2
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2657,6 +2657,14 @@
     "price": null,
     "said": 62.0,
     "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 62%"
+   },
+   {
+    "against_market": false,
+    "league": "atp",
+    "pick": "Dusan Lajovic",
+    "price": null,
+    "said": 55.6,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 56%"
    },
    {
     "against_market": false,
@@ -2830,29 +2838,29 @@
    }
   ],
   "picks": {
-   "hit": 54.2,
-   "lost": 11,
-   "n": 24,
-   "roi": 23.5,
-   "said": 64.8,
-   "won": 13
+   "hit": 53.8,
+   "lost": 12,
+   "n": 26,
+   "roi": 29.6,
+   "said": 64.7,
+   "won": 14
   },
   "picks_by_league": {
    "atp": {
-    "hit": 42.9,
-    "lost": 4,
-    "n": 7,
+    "hit": 37.5,
+    "lost": 5,
+    "n": 8,
     "roi": null,
-    "said": 60.8,
+    "said": 60.1,
     "won": 3
    },
    "chn": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": null,
-    "said": 72.6,
-    "won": 1
+    "n": 2,
+    "roi": 35.7,
+    "said": 71.3,
+    "won": 2
    },
    "ita": {
     "hit": 0.0,
@@ -2959,12 +2967,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 66.9,
+    "hit": 67.1,
     "lost": 82,
-    "n": 248,
-    "roi": -1.8,
+    "n": 249,
+    "roi": -1.7,
     "said": 63.3,
-    "won": 166
+    "won": 167
    }
   },
   "weights": {
