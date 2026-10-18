@@ -1240,11 +1240,12 @@
    "match": "Vancouver Whitecaps at Austin FC",
    "p": 0.9621,
    "p_model": 0.9636,
+   "score": "Vancouver Whitecaps 2 - Austin FC 1",
    "spec": {
     "line": 0.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761884|No \u00b7 Real Salt Lake wins by over 3.5 goals": {
    "away": "Real Salt Lake",
@@ -1256,12 +1257,13 @@
    "match": "Real Salt Lake at Sporting Kansas City",
    "p": 0.9595,
    "p_model": 0.961,
+   "score": "Real Salt Lake 3 - Sporting Kansas City 1",
    "spec": {
     "line": 3.5,
     "t": "nomargin",
     "team": "Real Salt Lake"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761886|No \u00b7 San Jose Earthquakes wins by over 2.5 goals": {
    "away": "Nashville SC",
@@ -2261,11 +2263,12 @@
    "match": "St. Louis Blues at Nashville Predators",
    "p": 0.9574,
    "p_model": 0.9594,
+   "score": "St. Louis Blues 2 - Nashville Predators 5",
    "spec": {
     "line": 2.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892531|Over 2.5 goals": {
    "away": "Edmonton Oilers",

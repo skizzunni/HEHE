@@ -953,10 +953,10 @@
    },
    {
     "flag": false,
-    "hit": 78.9,
-    "n": 71,
+    "hit": 79.5,
+    "n": 78,
     "name": "props nhl Shots on Goal",
-    "said": 78.4
+    "said": 78.3
    },
    {
     "flag": true,
@@ -1017,10 +1017,10 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 67.8,
+    "all_hit": 67.0,
     "calls": 19,
     "cutoff": 0.625,
-    "games": 87,
+    "games": 88,
     "hit": 84.2
    },
    "ufc": {
@@ -1046,9 +1046,9 @@
    }
   },
   "clv": {
-   "avg": -0.19,
-   "beat": 38.5,
-   "n": 78
+   "avg": -0.18,
+   "beat": 39.2,
+   "n": 79
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1401,6 +1401,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "St. Louis Blues",
+    "price": "-115",
+    "said": 51.3,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 51%"
+   },
+   {
+    "against_market": false,
     "league": "nor",
     "pick": "Kristiansund BK",
     "price": null,
@@ -1749,12 +1757,12 @@
    }
   ],
   "picks": {
-   "hit": 72.6,
-   "lost": 71,
-   "n": 259,
-   "roi": 3.7,
-   "said": 71.0,
-   "won": 188
+   "hit": 72.4,
+   "lost": 72,
+   "n": 261,
+   "roi": 2.4,
+   "said": 70.9,
+   "won": 189
   },
   "picks_by_league": {
    "arg": {
@@ -1974,12 +1982,12 @@
     "won": 0
    },
    "mls": {
-    "hit": 57.1,
+    "hit": 62.5,
     "lost": 3,
-    "n": 7,
+    "n": 8,
     "roi": null,
-    "said": 66.7,
-    "won": 4
+    "said": 66.2,
+    "won": 5
    },
    "ncaaf": {
     "hit": 74.3,
@@ -2006,11 +2014,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 80.0,
-    "lost": 2,
-    "n": 10,
-    "roi": 27.1,
-    "said": 60.1,
+    "hit": 72.7,
+    "lost": 3,
+    "n": 11,
+    "roi": 15.5,
+    "said": 59.3,
     "won": 8
    },
    "nor": {
@@ -2141,9 +2149,9 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 83,
+   "n": 90,
    "said": 76.1,
-   "won": 62
+   "won": 68
   },
   "safe_locks": {
    "lost": [],
@@ -2169,10 +2177,10 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.6,
-    "lost": 83,
-    "n": 264,
-    "roi": -1.2,
+    "hit": 68.3,
+    "lost": 84,
+    "n": 265,
+    "roi": -1.5,
     "said": 62.4,
     "won": 181
    }
@@ -2200,10 +2208,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6288,
-    "market_only": 0.6288,
-    "model_only": 0.6373,
-    "n": 87,
+    "logloss": 0.6299,
+    "market_only": 0.6299,
+    "model_only": 0.6385,
+    "n": 88,
     "weight": 0.05
    },
    "wnba": {
