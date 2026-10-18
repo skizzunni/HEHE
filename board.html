@@ -879,13 +879,20 @@ function drawLocks(){
         // time, then the biggest that still lands at least half the time
         const safe = SZ.filter(z => z.prob >= 0.8).pop();
         const best = SZ.filter(z => z.prob >= 0.5).pop();
+        // expected return at FanDuel's prices under the card's own estimates:
+        // chance x payout - 1. A likely ticket can still lose money on average.
+        const er = z => (100 * (z.prob * z.pays - 1)).toFixed(0);
         const line = (z, tag) => '<p class="coinbar"><b>' + tag + ': the top ' + z.n + ' legs</b> &mdash; '
           + 'est. ' + (100 * z.prob).toFixed(0) + '% to all hit, pays ' + esc(z.american)
-          + ' ($10 &rarr; $' + Math.round(10 * z.pays) + ').</p>';
-        return (safe ? line(safe, 'Winners parlay') : '')
+          + ' ($10 &rarr; $' + Math.round(10 * z.pays) + '); estimated return ' + er(z) + '% per $1.</p>';
+        return '<p class="note"><b>What this card is for:</b> the likeliest bets in its price range, so '
+          + 'the chance of winning is as high as the legs allow. It does not look for value: at these '
+          + 'prices the estimated return is usually below zero (the book&rsquo;s margin), shown on each line.</p>'
+          + (safe ? line(safe, 'Winners parlay') : '<p class="note">No slice of this card reaches 80% '
+             + 'to all hit today, so there is no Winners parlay.</p>')
           + (best && (!safe || best.n > safe.n) ? line(best, 'Best play') : '')
-          + (best || safe ? '<p class="note">All ' + L.length + ' together: an estimated '
-             + (100 * X.prob).toFixed(0) + '% to all hit.</p>' : '');
+          + (full ? '<p class="note">All ' + L.length + ' together: an estimated '
+             + (100 * X.prob).toFixed(0) + '% to all hit; estimated return ' + er(full) + '% per $1.</p>' : '');
       })()
     + (SZ.length ? '<h3 class="tier-h">How to play it</h3><p class="note">Take the top legs in order. '
         + 'Payout is FanDuel&rsquo;s own prices multiplied; chance is how often they all hit.</p>'
@@ -896,7 +903,7 @@ function drawLocks(){
           + '%</td></tr>').join("") + '</tbody></table>' : '')
     + '<details class="explain"><summary>What the locks are &amp; how to place them</summary>'
     + '<p>The likeliest bets FanDuel (New York) lists at <b>' + (SAFE ? 'heavy-favourite odds</b> (-2000 to -500)' : 'normal odds</b> (-400 to -120)') + ' &mdash; game '
-    + 'lines <i>and</i> player props &mdash; one per game (more only on light days), from games that start after 8:00 AM and have '
+    + 'lines <i>and</i> player props &mdash; one per game and never more (a light day gives a shorter card), from games that start after 8:00 AM and have '
     + 'not begun. Each chance is the market&rsquo;s own price with its margin taken out. The card is set at '
     + '8:00 AM Eastern and stays the same all day. Each is likely; all ' + L.length + ' together are estimated to hit '
     + (100 * X.prob).toFixed(0) + '% of the time, the top 3 alone '
@@ -1678,7 +1685,7 @@ function scoreboardHTML(){
   const HL = D.health;
   if(HL){
     const bad = (HL.trailing || []).length + (HL.stuck || []).length + (HL.integrity || []).length
-      + (HL.stale_inputs || []).length;
+      + (HL.stale_inputs || []).length + (HL.replay_bad || []).length;
     h += '<div class="sect" id="health"><h2>Checks</h2>'
       + (bad ? '<p class="age stale"><b>' + bad + ' problem' + (bad === 1 ? '' : 's') + ' found</b> in the '
           + esc(HL.day) + ' review:</p><ul class="legs">'
@@ -1688,7 +1695,9 @@ function scoreboardHTML(){
           + (HL.integrity || []).map(x => '<li>Bad data: ' + esc(x[1]) + ' at ' + esc(x[0])
               + ' (' + esc(x[2]) + ')</li>').join("")
           + (HL.stale_inputs || []).map(x => '<li>Old input: ' + esc(x[0]) + ' scoreboard served from a copy '
-              + x[1] + ' min old (ESPN did not answer this build)</li>').join("") + '</ul>'
+              + x[1] + ' min old (ESPN did not answer this build)</li>').join("")
+          + (HL.replay_bad || []).map(x => '<li>Replay mismatch: the chooser re-run on the saved inputs of '
+              + esc(x) + ' does not give the card that was set</li>').join("") + '</ul>'
         : '<p class="age"><b>All checks passing</b> &mdash; ' + (HL.checked || 0)
           + ' splits within their stated chance, nothing stuck unsettled (' + esc(HL.day) + ' review).</p>')
       + '</div>';

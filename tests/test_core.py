@@ -117,6 +117,30 @@ class LocksRules(unittest.TestCase):
             props_ledger.LEDGER = real
         self.assertEqual(len(locks.load(book_path)["days"]["2026-10-18"]), 3)   # extras never recorded
 
+    def test_replay_gives_the_same_card(self):
+        """The chooser re-run on the saved decision-time pool gives exactly
+        the card that was set; a changed input shows as a mismatch."""
+        pool = [dict(gid=f"nfl:{g}", league="nfl", p=0.9 - g * 0.013 - k * 0.002, kind=None, match="m",
+                     spec=dict(t=t, line=44.5), label=f"{g}{t}", price="-300")
+                for g in range(14) for k, t in enumerate(("under", "win"))]
+        card = sorted(locks.choose(pool, 11), key=lambda x: -x["p"])
+        tmp = tempfile.mkdtemp()
+        path = os.path.join(tmp, "l.json")
+        real = props_ledger.LEDGER
+        props_ledger.LEDGER = os.path.join(tmp, "props.json")
+        try:
+            locks.record(dict(locks=card, n=11, pool=[{k: L.get(k) for k in locks.POOL_KEYS} for L in pool]),
+                         "2026-10-18", path)
+        finally:
+            props_ledger.LEDGER = real
+        ok, got, rec = locks.replay("2026-10-18", path)
+        self.assertTrue(ok)
+        self.assertEqual(len(rec), 11)
+        book = locks.load(path)
+        book["pools"]["2026-10-18"]["legs"][0]["p"] = 0.1            # tamper with an input
+        locks.save(book, path)
+        self.assertFalse(locks.replay("2026-10-18", path)[0])
+
     def test_two_sided_devig(self):
         """A line's chance comes from its own price and its opposite's."""
         key = lambda sp: ("g", json.dumps(sp, sort_keys=True))

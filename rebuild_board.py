@@ -195,6 +195,15 @@ def snapshot():
     if isinstance(out.get("health"), dict):
         out["health"]["stale_inputs"] = [
             [re.sub(r"^.*/sports/|/scoreboard.*$", "", u), round(a / 60)] for u, a in old_in[:8]]
+    # the live chooser re-run on each set card's saved pool must give that card
+    if isinstance(out.get("health"), dict):
+        rb = []
+        for nm, path_ in (("Locks", None), ("Safe Locks", locks.SAFE_LEDGER)):
+            for day_ in sorted((locks.load(path_).get("pools") or {}))[-3:]:
+                r_ = locks.replay(day_, path_)
+                if r_ and not r_[0]:
+                    rb.append(f"{nm} {day_}")
+        out["health"]["replay_bad"] = rb
     out["parlays"] = parlays.build_all(out)
     # Stacks: long tickets of high-probability legs (alt totals, "won't win
     # by N"), priced from each game's moneyline, spread and total. Kept apart
@@ -332,6 +341,8 @@ def snapshot():
                                                        locks.frozen(d._STATE["dates"][0]))
         else:
             out["locks"]["today"]["preview"] = True
+        for v_ in out["locks"].values():
+            v_.pop("pool", None)                # saved in the ledger, not published
         out["locks_record"] = locks.report()
         lk = out["locks"]["today"]
         print(f'locks: {len(lk["locks"])} of {lk["available"]} FanDuel games, '
@@ -358,6 +369,8 @@ def snapshot():
                 out["safe_locks"]["today"], locks.frozen(d._STATE["dates"][0], locks.SAFE_LEDGER))
         else:
             out["safe_locks"]["today"]["preview"] = True
+        for v_ in out["safe_locks"].values():
+            v_.pop("pool", None)
         out["safe_locks_record"] = locks.report(locks.SAFE_LEDGER)
         sk = out["safe_locks"]["today"]
         print(f'safe locks: {len(sk["locks"])} of {sk["available"]} games, '

@@ -373,9 +373,13 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
         prob *= L["p"]
     return dict(locks=locks, available=len(picks), prob=round(prob, 4),
                 fair=round(1 / prob, 2) if prob else None, sizes=sizes(locks),
-                extras=extras(pool, locks))
+                extras=extras(pool, locks), n=n,
+                # what the chooser saw, saved with the card so it can be replayed
+                pool=[{k: L.get(k) for k in POOL_KEYS} for L in pool])
 
 
+POOL_KEYS = ("gid", "label", "p", "kind", "league", "spec", "name", "price", "devig")
+POOLS_KEPT = 14       # days of decision-time pools kept in a ledger
 PER_GAME = 1          # legs from one game on a ticket (was 3 on light days: see choose)
 EXTRA_PER_GAME = 2    # same-game ideas shown beside the card, never on it
 
@@ -498,6 +502,7 @@ def record(res, day, path=None, tag="locks"):
     if len(day) == 8:
         day = f"{day[:4]}-{day[4:6]}-{day[6:]}"
     keys = book["days"].setdefault(day, [])
+    first = not keys
     for L in res["locks"]:
         if len(keys) >= N_LOCKS:
             break
@@ -518,6 +523,14 @@ def record(res, day, path=None, tag="locks"):
                                         market=L.get("market"), line=L.get("line"),
                                         aid=L.get("aid"), edge=L.get("edge"),
                                         p_fair=L.get("p_fair")))
+    if first and keys and res.get("pool") is not None:
+        # the decision-time snapshot: the pool the card was chosen from and
+        # the card as first set, so replay() can re-run the same chooser
+        pools = book.setdefault("pools", {})
+        pools[day] = dict(n=res.get("n") or N_LOCKS, legs=res["pool"], card=list(keys),
+                          t=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"))
+        for old_day in sorted(pools)[:-POOLS_KEPT]:
+            del pools[old_day]
     save(book, path)
     # prop locks are settled from box scores by the props ledger
     props = [book["legs"][k] for k in keys if book["legs"][k].get("kind") == "prop"]
@@ -530,6 +543,17 @@ def card_time(now=None):
     """True once today's card should be set (8:00 AM Eastern)."""
     now = now or dt.datetime.now(ET)
     return now.hour >= CARD_HOUR
+
+
+def replay(day, path=None):
+    """(ok, replayed keys, recorded keys) for a day with a saved pool: the
+    live chooser, re-run on exactly what it saw, must give the card it set."""
+    book = load(path)
+    snap = (book.get("pools") or {}).get(day)
+    if not snap:
+        return None
+    got = [f'{L["gid"]}|{L["label"]}' for L in sorted(choose(snap["legs"], snap["n"]), key=lambda x: -x["p"])]
+    return got == snap["card"], got, snap["card"]
 
 
 def frozen(day, path=None):
