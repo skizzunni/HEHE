@@ -78,7 +78,7 @@ Lottery 10k+50: lost (6/12 legs won, killed by Under 65.5 points, Under 38.5 poi
 Lottery 10k+100: lost (6/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 100: open (0/5 legs won)
 Ladder-consistency props (all time): 10/12 won (83.3%) vs 84.7% fair, 83.5% price.
-Props 29/37 vs 76.2% claimed.
+Props 30/38 vs 76.1% claimed.
 
 Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 83.8% on 438 of 480, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 83.3% on 18 of 80, ufc 75% -> 81.8% on 22 of 82, wnba 62% -> 77.4% on 31 of 47, wta 65% -> 81.4% on 102 of 184
 Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=401), nfl 0.40 (n=79), nhl 0.05 (n=80), wnba 0.30 (n=47)
