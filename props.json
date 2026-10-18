@@ -469,7 +469,8 @@
   "p": 0.3977,
   "p_fair": null,
   "price": "+135",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "mls:761879|303794|Goalkeeper Saves|2+": {
   "aid": "303794",
@@ -485,7 +486,8 @@
   "p": 0.81,
   "p_fair": null,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "mls:761880|45843|Assists|1+": {
   "aid": "45843",
@@ -2529,6 +2531,22 @@
   "price": "-800",
   "status": "open"
  },
+ "nhl:401892532|n:ivan barbashev|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "nhl:401892532",
+  "imp": 0.8864,
+  "label": "Ivan Barbashev: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Ivan Barbashev",
+  "p": 0.8614,
+  "p_fair": null,
+  "price": "-780",
+  "status": "open"
+ },
  "nhl:401892532|n:mark stone|Shots on Goal|2+": {
   "aid": null,
   "date": "2026-10-17",
@@ -2607,6 +2625,22 @@
   "p": 0.8368,
   "p_fair": null,
   "price": "-620",
+  "status": "open"
+ },
+ "nhl:401892532|n:sidney crosby|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "nhl:401892532",
+  "imp": 0.697,
+  "label": "Sidney Crosby: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Sidney Crosby",
+  "p": 0.6773,
+  "p_fair": null,
+  "price": "-230",
   "status": "open"
  },
  "nhl:401892532|n:tomas hertl|Shots on Goal|2+": {

@@ -1,8 +1,8 @@
 # Review 2026-10-17
 
-Picks 172-65 (72.6% vs 71.1% claimed, ROI +5.0%).
+Picks 174-65 (72.8% vs 71.2% claimed, ROI +5.0%).
 TRAILING props uel Shots: 40.0% hit vs 84.3% stated on 20
-Strong calls 97-25 (79.5% vs 76.7% claimed).
+Strong calls 99-25 (79.8% vs 76.8% claimed).
 Closing line value: -0.29 points on 65 picks; beat the close on 38.5%.
 - LOST arg Platense at 65.5%: margin 1 · called at 66%
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
@@ -80,9 +80,9 @@ Lottery 10k: lost (4/9 legs won, killed by Under 48.5 points, Under 39.5 points,
 Lottery 10k+25: lost (6/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 10k+50: lost (6/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 10k+100: lost (6/12 legs won, killed by Under 65.5 points, Under 38.5 points)
-Lottery 100: open (0/5 legs won)
+Lottery 100: lost (0/5 legs won, killed by Robert Lewandowski: Anytime Goalscorer)
 Ladder-consistency props (all time): 10/12 won (83.3%) vs 84.7% fair, 83.5% price.
-Props 36/46 vs 75.9% claimed.
+Props 37/48 vs 75.2% claimed.
 
 Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 83.8% on 438 of 480, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 83.3% on 18 of 81, ufc 75% -> 81.8% on 22 of 85, wnba 62% -> 77.4% on 31 of 47, wta 65% -> 81.4% on 102 of 184
 Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=401), nfl 0.40 (n=79), nhl 0.05 (n=81), wnba 0.30 (n=47)
