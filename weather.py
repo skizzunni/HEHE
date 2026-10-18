@@ -16,6 +16,7 @@ re-read each rebuild, so the cut-offs follow the weekly re-run.
 """
 import datetime as dt
 import json
+import math
 import os
 import time
 import urllib.parse
@@ -88,16 +89,29 @@ def kickoff_wind(mkt):
     return float(v) if v is not None else None
 
 
-def adjust(league, mkt, side):
-    """Change in chance for an 'over'/'under' leg of this game (0 if none)."""
+def _scale(p):
+    """How much a shift in the expected total moves a line priced at p,
+    relative to the main line the lab measured at (~50%): on a normal score
+    phi(z) / phi(0). An alternate line at 77% moves about three quarters as
+    much; one at 95% about a fifth. A flat EDGE overstated far lines."""
+    from statistics import NormalDist
+    p = min(max(p, 0.01), 0.99)
+    z = NormalDist().inv_cdf(p)
+    return math.exp(-z * z / 2)
+
+
+def adjust(league, mkt, side, p=0.5):
+    """Change in chance for an 'over'/'under' leg of this game (0 if none),
+    `p` being the leg's chance before the wind."""
     if league not in CUTS or side not in ("over", "under"):
         return 0.0
     w = kickoff_wind(mkt or {})
     if w is None:
         return 0.0
     windy, calm = CUTS[league]
+    e = EDGE * _scale(p)
     if w >= windy:
-        return EDGE if side == "under" else -EDGE
+        return e if side == "under" else -e
     if w <= calm:
-        return EDGE if side == "over" else -EDGE
+        return e if side == "over" else -e
     return 0.0

@@ -204,7 +204,7 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                 import weather
                 row_ = next((r for rs in rows.values() for r in rs if r["id"] == g["gid"]), {})
                 pm = min(0.99, max(0.01, pm + weather.adjust(g["league"], row_.get("mkt") or {},
-                                                             L["spec"]["t"])))
+                                                             L["spec"]["t"], pm)))
             if pm:
                 c = dict(L, fd=ref, price=price, where=where, p=pm)
                 pool.append(dict(gid=g["gid"], league=g["league"], lg=g["lg"], match=g["match"],

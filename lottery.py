@@ -126,7 +126,7 @@ def _game_legs(rows, soccer_keys, labels, FD, KB=None):
             if L["spec"].get("t") in ("over", "under"):
                 import weather
                 p += weather.adjust(g["league"], (by_id.get(g["gid"]) or {}).get("mkt") or {},
-                                    L["spec"]["t"])
+                                    L["spec"]["t"], p)
             p = round(min(0.99, max(0.01, p)), 4)
             out.append(dict(kind="game", gid=g["gid"], league=g["league"], lg=g["lg"],
                             match=g["match"], home=g["home"], away=g["away"], tip=g.get("tip"),
