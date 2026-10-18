@@ -51,6 +51,7 @@ MUTATIONS = [
     ("locks.py", 'return a / (a + b), "two-sided"', 'return (1 / d) / lottery.FD_HOLD, "two-sided"',
      "test_two_sided_devig"),
     ("locks.py", "while len(blocks) > 1 and blocks", "while False and blocks", "test_alternate_lines_in_order"),
+    ("ledger.py", 'and bool(prev.get("dc")) == entry["dc"])', ')', "test_history"),
     ("integrity.py", "not 0 <= v <= 1:", "False:", "test_catches_bad_values"),
     ("board.html", "z.prob >= 0.8", "z.prob >= 0.95", "Winners parlay"),
     ("board.html", "if (mins < 20) { if (el) el.remove(); return; }", "return;",

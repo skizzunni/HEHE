@@ -362,6 +362,40 @@ class Coherence(unittest.TestCase):
         self.assertTrue(all(abs(f(x) + f(1 - x) - 1) < 1e-9 for x in xs if 0.011 <= x <= 0.989))
 
 
+class RecommendationHistory(unittest.TestCase):
+    """Every published version of a call is kept; a change of market is a new
+    bet with its own entry price; nothing is revised after the start."""
+
+    def run_record(self, path, pick, dc, price, conf, start):
+        import ledger
+        row = dict(id="efl1:1", mypick=pick, myside="home", dc=dc, myconf=conf, label="A @ B",
+                   legs=[dict(side="home", price=price)], mkt=dict(start=start))
+        state = dict(dates=("20261018", "20261019"), slots=dict(today={"efl1": [row]}, tomorrow={}))
+        real = ledger.LEDGER
+        ledger.LEDGER = path
+        try:
+            ledger.record(state)
+            return ledger.load()["efl1:1"]
+        finally:
+            ledger.LEDGER = real
+
+    def test_history(self):
+        path = os.path.join(tempfile.mkdtemp(), "ledger.json")
+        later = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=5)).isoformat()
+        e = self.run_record(path, "Middlesbrough", False, "-210", 0.6, later)
+        self.assertEqual((e["first_price"], len(e["history"])), ("-210", 1))
+        e = self.run_record(path, "Middlesbrough", False, "-210", 0.6, later)
+        self.assertEqual(len(e["history"]), 1)                      # unchanged: no new version
+        e = self.run_record(path, "Middlesbrough", True, "-210", 0.8, later)
+        self.assertIsNone(e["first_price"])                          # double chance: not the -210 bet
+        self.assertEqual([h["dc"] for h in e["history"]], [False, True])
+        self.assertEqual(e["first"]["pick"], "Middlesbrough")
+        self.assertFalse(e["first"]["dc"])                           # what was first published stays
+        past = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(minutes=5)).isoformat()
+        e = self.run_record(path, "Other", False, "+150", 0.4, past)
+        self.assertEqual(e["pick"], "Middlesbrough")                 # frozen once started
+
+
 class StuckSweep(unittest.TestCase):
     """Anything still open a week after its game is reported, not left silent."""
 

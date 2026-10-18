@@ -93,6 +93,31 @@ def save(d):
 
 
 # ------------------------------------------------------------------ record
+# which code made a call: the commit the rebuild runs on (GitHub Actions)
+POLICY = (os.environ.get("GITHUB_SHA") or "")[:7] or None
+
+
+def _started(r):
+    """True once the row's scheduled start has passed."""
+    st = (r.get("mkt") or {}).get("start") or r.get("start")
+    try:
+        t = dt.datetime.fromisoformat(str(st).replace("Z", "+00:00"))
+    except (TypeError, ValueError):
+        return False
+    if t.tzinfo is None:
+        t = t.replace(tzinfo=dt.timezone.utc)
+    return t <= dt.datetime.now(dt.timezone.utc)
+
+
+def _fix_first_prices(book):
+    """Once: a double-chance call has no straight price, so a first_price on
+    one was carried over from an earlier straight-win call on the same team
+    (the bet changed, the entry price did not). Cleared, and marked."""
+    for e in book.values():
+        if e.get("dc") and e.get("first_price") and not e.get("first_price_cleared"):
+            e["first_price_cleared"] = e.pop("first_price")
+
+
 def record(state=None):
     """Snapshot the current board's picks. Safe to run repeatedly.
 
@@ -106,6 +131,7 @@ def record(state=None):
         D.refresh()
         state = D._STATE
     book = load()
+    _fix_first_prices(book)
     added = 0
     dates = dict(zip(("today", "tomorrow"), state.get("dates") or ()))
     for slot in ("today", "tomorrow"):
@@ -125,6 +151,8 @@ def record(state=None):
                 key = r["id"]                     # league:espn_competition_id
                 if key in book and book[key].get("status") != "open":
                     continue                      # already settled, never rewrite
+                if key in book and _started(r):
+                    continue                      # the pregame call stands once play begins
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 if r.get("dc"):
@@ -157,13 +185,31 @@ def record(state=None):
                 # stays; `price` keeps updating to the last one before the
                 # game (the close). Beating the close is the sharp bettor's
                 # proof of skill; tools/daily_review.py reports it.
+                # A bet is the team AND the market: "Middlesbrough" to win at
+                # -210 and "Middlesbrough or draw" are different bets, and the
+                # first kept the -210 when the call moved to double chance.
                 prev = book.get(key, {})
-                if prev.get("pick") == entry["pick"] and prev.get("first_price"):
-                    entry["first_price"] = prev["first_price"]
+                same_bet = (prev.get("pick") == entry["pick"]
+                            and bool(prev.get("dc")) == entry["dc"])
+                if same_bet and "first_logged" in prev:
+                    entry["first_price"] = prev.get("first_price")
                     entry["first_logged"] = prev.get("first_logged")
                 else:
                     entry["first_price"] = entry.get("price")
                     entry["first_logged"] = entry["logged"]
+                # append-only history: every published version of the call,
+                # so a record can be judged on what was shown when, not only
+                # on the last version before the game
+                hist = list(prev.get("history") or [])
+                snap = dict(t=entry["logged"], pick=entry["pick"], dc=entry["dc"],
+                            price=entry.get("price"), conf=entry["conf"], why=entry["why"],
+                            version=POLICY)
+                if not hist or {k: hist[-1].get(k) for k in ("pick", "dc", "price", "conf")} != \
+                        {k: snap[k] for k in ("pick", "dc", "price", "conf")}:
+                    hist.append(snap)
+                entry["history"] = hist
+                if "first" not in prev:
+                    entry["first"] = hist[0] if hist else snap       # the call as first published
                 book[key] = {**prev, **entry}
     save(book)
     return added, len(book)
