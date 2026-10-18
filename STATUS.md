@@ -58,6 +58,13 @@ UFC power de-vig / stretch (no gain on unseen fights), NFL weight shrink
 (halves disagree), NCAAF under correction (not significant, symmetric in 2025),
 drift/form/rest/travel/team bias, Kalshi+book average.
 
+## Pre-game verification of Sunday 2026-10-18 (read from the live site, 12:01 AM ET build)
+
+* Regular Locks preview: 11 legs from 41 available games, all -370..-400, 4 NFL unders (cap), soccer leg "Monaco or draw"; all-hit 6.6%.
+* Safe Locks preview: 11 legs from 24 games, all -1800..-2000, 4 NFL unders (cap), "Real Madrid or draw"; all-hit 52.8%, Winners parlay top 4 at 81%.
+* Props: 2,005 across 35 games; 94 ticket legs, 0 ungradable. 24 NFL TD picks (2 x 12 games) and 59 NFL props recorded in props.json, 0 ungradable.
+* 10-leg stack: all soccer legs at 97%; backtest 95-100% soccer stack legs said ~97.4, hit 97.1-98.8 (3,100+ legs). Watch: Ligue 1 legs 95.2 vs 97.4 on 393.
+
 ## Waiting on data
 
 * NCAAB unders lean (one season only) -> recheck November.
@@ -73,4 +80,5 @@ drift/form/rest/travel/team bias, Kalshi+book average.
 | 10-18 | derby test matched reversed fixture | 0.5/0.5 token scores both ways | swap guard rejects reversed fixtures |
 | 10-18 | NFL test failed after an unrelated change | stale .pyc: a same-length mutation restored within the same second kept running | mutation checks run with -B / PYTHONDONTWRITEBYTECODE; cache never committed |
 | 10-18 | page gave no warning when out of date outside Results | staleness shown only in the in-play list | page-wide banner at 20+ minutes, browser-tested |
+| 10-18 | UFC "goes the distance" prop (-1200) stuck open, would void after 3 days | grader waited for ESPN's result line, which arrives late or never | settles from final round + clock when the line is missing; live: settled **won** (ended 5.78 min); unit + mutation tested |
 | 10-18 | Kalshi bot would use tickets with no build time | age check skipped when `built` missing; bad timestamp would crash | `board_age()` treats missing/unreadable as stale; unit-tested |
