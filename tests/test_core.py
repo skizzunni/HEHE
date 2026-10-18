@@ -107,8 +107,14 @@ class LocksRules(unittest.TestCase):
         self.assertTrue(ex and all(x["gid"] in {"g0", "g1", "g2"} and x["extra"] for x in ex))
         self.assertFalse({id(x) for x in out} & {id(x) for x in ex})
         self.assertTrue(all(sum(x["gid"] == g for x in ex) <= locks.EXTRA_PER_GAME for g in ("g0",)))
-        book_path = os.path.join(tempfile.mkdtemp(), "l.json")
-        locks.record(dict(locks=out + ex), "2026-10-18", book_path)
+        tmp = tempfile.mkdtemp()
+        book_path = os.path.join(tmp, "l.json")
+        real = props_ledger.LEDGER
+        props_ledger.LEDGER = os.path.join(tmp, "props.json")     # never the real ledger
+        try:
+            locks.record(dict(locks=out + ex), "2026-10-18", book_path)
+        finally:
+            props_ledger.LEDGER = real
         self.assertEqual(len(locks.load(book_path)["days"]["2026-10-18"]), 3)   # extras never recorded
 
     def test_two_sided_devig(self):
