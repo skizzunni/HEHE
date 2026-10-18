@@ -62,7 +62,9 @@
   "p": 0.8496,
   "p_fair": null,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "ungradable",
+  "void_why": "no grader for market"
  },
  "esp:401882844|340744|Goalkeeper Saves|2+": {
   "aid": "340744",
@@ -78,7 +80,9 @@
   "p": 0.81,
   "p_fair": null,
   "price": "-650",
-  "status": "void"
+  "rechecked": "void",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "fra:401876434|241029|Goalkeeper Saves|2+": {
   "aid": "241029",
@@ -194,7 +198,9 @@
   "p": 0.8496,
   "p_fair": null,
   "price": "-1000",
-  "status": "void"
+  "rechecked": "void",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "ger:401884770|122396|Goalkeeper Saves|2+": {
   "aid": "122396",
@@ -210,7 +216,9 @@
   "p": 0.8307,
   "p_fair": null,
   "price": "-800",
-  "status": "void"
+  "rechecked": "void",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "ger:401884770|321064|Goalkeeper Saves|2+": {
   "aid": "321064",
@@ -243,7 +251,9 @@
   "p": 0.7566,
   "p_fair": null,
   "price": "-425",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "ger:401884770|n:eintracht frankfurt|Team Total Goals|0.5": {
   "aid": null,
@@ -259,7 +269,9 @@
   "p": 0.8809,
   "p_fair": null,
   "price": "-1640",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "ger:401884771|224246|Goalkeeper Saves|2+": {
   "aid": "224246",
@@ -339,7 +351,9 @@
   "p": 0.8567,
   "p_fair": null,
   "price": "-1100",
-  "status": "void"
+  "rechecked": "void",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "ita:401874959|259838|Goalkeeper Saves|2+": {
   "aid": "259838",
@@ -433,11 +447,14 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Chandler Simpson",
   "p": 0.7121,
   "p_fair": null,
   "price": "-320",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "won",
+  "value": 1.0
  },
  "mlb:401908027|n:chandler simpson|Hits|1+": {
   "aid": null,
@@ -449,11 +466,14 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits",
+  "matched": "name",
   "name": "Chandler Simpson",
   "p": 0.7066,
   "p_fair": null,
   "price": "-310",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "lost",
+  "value": 0.0
  },
  "mlb:401908027|n:chase delauter|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -465,11 +485,14 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Chase DeLauter",
   "p": 0.682,
   "p_fair": null,
   "price": "-270",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "won",
+  "value": 2.0
  },
  "mlb:401908027|n:jonathan aranda|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -481,11 +504,14 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Jonathan Aranda",
   "p": 0.682,
   "p_fair": null,
   "price": "-270",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "won",
+  "value": 7.0
  },
  "mlb:401908027|n:jose ramirez|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -497,11 +523,14 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Jose Ramirez",
   "p": 0.682,
   "p_fair": null,
   "price": "-270",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "lost",
+  "value": 0.0
  },
  "mlb:401908027|n:junior caminero|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -513,11 +542,14 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Junior Caminero",
   "p": 0.682,
   "p_fair": null,
   "price": "-270",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "won",
+  "value": 2.0
  },
  "mlb:401908027|n:steven kwan|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -529,11 +561,14 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Steven Kwan",
   "p": 0.6949,
   "p_fair": null,
   "price": "-290",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "won",
+  "value": 2.0
  },
  "mlb:401908027|n:yandy diaz|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -545,11 +580,30 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Yandy Diaz",
   "p": 0.7066,
   "p_fair": null,
   "price": "-310",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "won",
+  "value": 6.0
+ },
+ "mlb:401930515|n:chandler simpson|Hits + Runs + RBIs|1+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": null,
+  "gid": "mlb:401930515",
+  "imp": 0.7674,
+  "label": "Chandler Simpson: 1+ Hits + Runs + RBIs",
+  "league": "mlb",
+  "line": "1+",
+  "market": "Hits + Runs + RBIs",
+  "name": "Chandler Simpson",
+  "p": 0.7408,
+  "p_fair": null,
+  "price": "-330",
+  "status": "open"
  },
  "mlb:401930515|n:drew rasmussen|Strikeouts Thrown|4+": {
   "aid": null,
@@ -613,7 +667,9 @@
   "p": 0.91,
   "p_fair": null,
   "price": "-3700",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761877|252974|Goalkeeper Saves|2+": {
   "aid": "252974",
@@ -646,7 +702,9 @@
   "p": 0.8723,
   "p_fair": null,
   "price": "-1400",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "ungradable",
+  "void_why": "no grader for market"
  },
  "mls:761879|125824|Anytime Goalscorer|": {
   "aid": "125824",
@@ -713,7 +771,9 @@
   "p": 0.8789,
   "p_fair": null,
   "price": "-1580",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761881|n:orlando city sc|Team Total Goals|0.5": {
   "aid": null,
@@ -729,7 +789,9 @@
   "p": 0.8956,
   "p_fair": null,
   "price": "-2300",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761882|322100|Tackles|1+": {
   "aid": "322100",
@@ -745,7 +807,9 @@
   "p": 0.81,
   "p_fair": null,
   "price": "-650",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761882|n:vancouver whitecaps|Team Total Goals|0.5": {
   "aid": null,
@@ -761,7 +825,9 @@
   "p": 0.8688,
   "p_fair": null,
   "price": "-1320",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761883|219270|Tackles|1+": {
   "aid": "219270",
@@ -777,7 +843,9 @@
   "p": 0.7908,
   "p_fair": null,
   "price": "-550",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761883|n:houston dynamo fc|Team Total Goals|0.5": {
   "aid": null,
@@ -793,7 +861,9 @@
   "p": 0.7938,
   "p_fair": null,
   "price": "-564",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761884|274906|Tackles|1+": {
   "aid": "274906",
@@ -809,7 +879,9 @@
   "p": 0.8246,
   "p_fair": null,
   "price": "-750",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "ungradable",
+  "void_why": "no grader for market"
  },
  "mls:761884|n:real salt lake|Team Total Goals|0.5": {
   "aid": null,
@@ -825,7 +897,9 @@
   "p": 0.8206,
   "p_fair": null,
   "price": "-720",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761885|216617|Tackles|1+": {
   "aid": "216617",
@@ -841,7 +915,9 @@
   "p": 0.8411,
   "p_fair": null,
   "price": "-900",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "ungradable",
+  "void_why": "no grader for market"
  },
  "mls:761885|n:seattle sounders fc|Double Chance|": {
   "aid": null,
@@ -857,7 +933,9 @@
   "p": 0.8496,
   "p_fair": null,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761886|181299|Goalkeeper Saves|2+": {
   "aid": "181299",
@@ -907,7 +985,9 @@
   "p": 0.8456,
   "p_fair": null,
   "price": "-950",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761887|265874|Goalkeeper Saves|2+": {
   "aid": "265874",
@@ -923,7 +1003,9 @@
   "p": 0.8496,
   "p_fair": null,
   "price": "-1000",
-  "status": "void"
+  "rechecked": "void",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761887|265874|Goalkeeper Saves|5+": {
   "aid": "265874",
@@ -939,7 +1021,9 @@
   "p": 0.3223,
   "p_fair": null,
   "price": "+190",
-  "status": "void"
+  "rechecked": "void",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761887|n:la galaxy|Team Total Goals|0.5": {
   "aid": null,
@@ -955,7 +1039,9 @@
   "p": 0.8496,
   "p_fair": null,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761888|188402|Anytime Goalscorer|": {
   "aid": "188402",
@@ -988,7 +1074,9 @@
   "p": 0.8272,
   "p_fair": null,
   "price": "-770",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "mls:761889|275080|Goalkeeper Saves|2+": {
   "aid": "275080",
@@ -2288,7 +2376,8 @@
   "p": 0.8567,
   "p_fair": null,
   "price": "-1100",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "nhl:401892517|n:erik karlsson|Shots on Goal|1+": {
   "aid": null,
@@ -2780,7 +2869,8 @@
   "p": 0.7078,
   "p_fair": null,
   "price": "-305",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "nhl:401892521|n:anthony cirelli|Shots on Goal|1+": {
   "aid": null,
@@ -2864,7 +2954,8 @@
   "p": 0.75,
   "p_fair": null,
   "price": "-395",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "nhl:401892522|n:anton lundell|Shots on Goal|1+": {
   "aid": null,
@@ -3339,7 +3430,8 @@
   "p": 0.8619,
   "p_fair": null,
   "price": "-1200",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "nhl:401892527|n:alexis lafreniere|Shots on Goal|2+": {
   "aid": null,
@@ -4069,7 +4161,8 @@
   "p": 0.6625,
   "p_fair": null,
   "price": "-230",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "nhl:401892532|n:rasmus andersson|Shots on Goal|1+": {
   "aid": null,
@@ -4357,7 +4450,8 @@
   "name": "Bruno Onyemaechi",
   "p": 0.8567,
   "price": "-1100",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915560|204082|Goalkeeper Saves|1+": {
   "aid": "204082",
@@ -4386,7 +4480,8 @@
   "name": "Weston McKennie",
   "p": 0.8496,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915560|274272|Goalkeeper Saves|1+": {
   "aid": "274272",
@@ -4400,7 +4495,8 @@
   "name": "Altay Bayindir",
   "p": 0.8519,
   "price": "-3000",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915560|297337|Tackles|1+": {
   "aid": "297337",
@@ -4414,7 +4510,8 @@
   "name": "Pape Matar Sarr",
   "p": 0.8496,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915560|322652|Shots|1+": {
   "aid": "322652",
@@ -4488,7 +4585,8 @@
   "name": "Rafa Silva",
   "p": 0.8496,
   "price": "-1000",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915562|229443|Shots|2+": {
   "aid": "229443",
@@ -4517,7 +4615,8 @@
   "name": "Alexander Bah",
   "p": 0.8496,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915562|271854|Shots|1+": {
   "aid": "271854",
@@ -4531,7 +4630,8 @@
   "name": "Leandro Barreiro",
   "p": 0.8496,
   "price": "-1000",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915562|274522|Shots|1+": {
   "aid": "274522",
@@ -4575,7 +4675,8 @@
   "name": "Callum McGregor",
   "p": 0.8496,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915563|138213|Goalkeeper Saves|1+": {
   "aid": "138213",
@@ -4619,7 +4720,8 @@
   "name": "Ernest Poku",
   "p": 0.8411,
   "price": "-900",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915563|319985|Shots|1+": {
   "aid": "319985",
@@ -4663,7 +4765,8 @@
   "name": "Leon Avdullahu",
   "p": 0.8496,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915563|372035|Shots|1+": {
   "aid": "372035",
@@ -4677,7 +4780,8 @@
   "name": "Max Moerstedt",
   "p": 0.8464,
   "price": "-2500",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915563|372035|Tackles|1+": {
   "aid": "372035",
@@ -4691,7 +4795,8 @@
   "name": "Max Moerstedt",
   "p": 0.8496,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915565|219536|Tackles|1+": {
   "aid": "219536",
@@ -4705,7 +4810,8 @@
   "name": "Marko Grujic",
   "p": 0.8627,
   "price": "-1200",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915565|227441|Shots|1+": {
   "aid": "227441",
@@ -4719,7 +4825,8 @@
   "name": "Jamiro Monteiro",
   "p": 0.81,
   "price": "-650",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915565|380942|Shots|1+": {
   "aid": "380942",
@@ -4733,7 +4840,8 @@
   "name": "Ayodele Thomas",
   "p": 0.8723,
   "price": "-1400",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915566|205981|Goalkeeper Saves|2+": {
   "aid": "205981",
@@ -4747,7 +4855,8 @@
   "name": "Remi Matthews",
   "p": 0.8411,
   "price": "-900",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915566|259486|Shots|1+": {
   "aid": "259486",
@@ -4776,7 +4885,8 @@
   "name": "Chris Richards",
   "p": 0.8496,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915566|388605|Tackles|1+": {
   "aid": "388605",
@@ -4790,7 +4900,8 @@
   "name": "Honest Ahanor",
   "p": 0.8496,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915566|408345|Shots|1+": {
   "aid": "408345",
@@ -4819,7 +4930,8 @@
   "name": "Dominik Schmid",
   "p": 0.8411,
   "price": "-900",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915568|291669|Shots|1+": {
   "aid": "291669",
@@ -4848,7 +4960,8 @@
   "name": "Omari Hutchinson",
   "p": 0.8567,
   "price": "-1100",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915571|243364|Shots|2+": {
   "aid": "243364",
@@ -4877,7 +4990,8 @@
   "name": "James Hill",
   "p": 0.8411,
   "price": "-900",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915571|72487|Shots|2+": {
   "aid": "72487",
@@ -4891,7 +5005,8 @@
   "name": "David Brooks",
   "p": 0.8496,
   "price": "-1000",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915571|93435|Shots|2+": {
   "aid": "93435",
@@ -4920,7 +5035,8 @@
   "name": "Jeroen Zoet",
   "p": 0.8496,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915573|312660|Shots|1+": {
   "aid": "312660",
@@ -4934,7 +5050,8 @@
   "name": "Yonas Malede",
   "p": 0.8178,
   "price": "-700",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915573|332465|Shots|3+": {
   "aid": "332465",
@@ -4963,7 +5080,8 @@
   "name": "Mateo Ch\u00e1vez",
   "p": 0.8496,
   "price": "-1000",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915575|166473|Tackles|1+": {
   "aid": "166473",
@@ -4977,7 +5095,8 @@
   "name": "Thomas Meunier",
   "p": 0.8411,
   "price": "-900",
-  "status": "ungradable"
+  "rechecked": "ungradable",
+  "status": "open"
  },
  "uel:401915575|265915|Shots|2+": {
   "aid": "265915",
@@ -4991,7 +5110,8 @@
   "name": "Wilson Isidor",
   "p": 0.8411,
   "price": "-900",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "uel:401915575|324991|Shots|1+": {
   "aid": "324991",
@@ -5005,7 +5125,8 @@
   "name": "Habib Diarra",
   "p": 0.8411,
   "price": "-900",
-  "status": "void"
+  "rechecked": "void",
+  "status": "open"
  },
  "ufc:401897388|n:fight|Goes the distance|No": {
   "aid": null,
