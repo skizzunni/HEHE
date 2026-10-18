@@ -1,7 +1,7 @@
 # Review 2026-10-18
 
 Picks 2-2 (50.0% vs 62.4% claimed).
-Strong calls 1-0 (100.0% vs 70.2% claimed).
+Strong calls 1-1 (50.0% vs 66.2% claimed).
 - LOST jpn Fagiano Okayama at 62.3%: margin 3 · called at 62%
 - LOST wta Sofia Kenin at 58.4%: lost 0-2 in sets · never won a set · called at 58%
 LEAK ufc: 52.0% hit vs 64.6% claimed on 25 calls (14 days)
