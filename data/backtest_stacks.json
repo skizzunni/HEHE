@@ -566,39 +566,39 @@
    "tickets": [
     {
      "size": 2,
-     "played": 212,
-     "won": 182,
-     "expected": 172.4
+     "played": 204,
+     "won": 176,
+     "expected": 166.0
     },
     {
      "size": 3,
-     "played": 189,
-     "won": 152,
-     "expected": 138.9
+     "played": 178,
+     "won": 144,
+     "expected": 130.9
     },
     {
      "size": 4,
-     "played": 166,
-     "won": 121,
-     "expected": 109.9
+     "played": 147,
+     "won": 111,
+     "expected": 97.4
     },
     {
      "size": 6,
-     "played": 126,
-     "won": 83,
-     "expected": 67.8
+     "played": 98,
+     "won": 68,
+     "expected": 52.7
     },
     {
      "size": 8,
-     "played": 85,
-     "won": 47,
-     "expected": 36.7
+     "played": 47,
+     "won": 30,
+     "expected": 20.6
     },
     {
      "size": 10,
-     "played": 43,
-     "won": 20,
-     "expected": 14.8
+     "played": 5,
+     "won": 3,
+     "expected": 1.8
     }
    ],
    "aim_trials": [
@@ -606,289 +606,217 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 212,
-     "won": 182,
-     "expected": 172.4,
+     "played": 204,
+     "won": 176,
+     "expected": 166.0,
      "avg_fair": 1.23
     },
     {
      "size": 2,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 212,
-     "won": 190,
-     "expected": 190.9,
+     "played": 204,
+     "won": 184,
+     "expected": 184.1,
      "avg_fair": 1.11
     },
     {
      "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 212,
-     "won": 195,
-     "expected": 195.8,
+     "played": 204,
+     "won": 189,
+     "expected": 189.0,
      "avg_fair": 1.08
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 212,
-     "won": 194,
-     "expected": 196.7,
-     "avg_fair": 1.08
+     "played": 204,
+     "won": 188,
+     "expected": 189.9,
+     "avg_fair": 1.07
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 189,
-     "won": 152,
-     "expected": 138.9,
+     "played": 178,
+     "won": 144,
+     "expected": 130.9,
      "avg_fair": 1.36
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 189,
-     "won": 164,
-     "expected": 161.5,
+     "played": 178,
+     "won": 154,
+     "expected": 152.5,
      "avg_fair": 1.17
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 189,
-     "won": 170,
-     "expected": 168.4,
+     "played": 178,
+     "won": 159,
+     "expected": 159.2,
      "avg_fair": 1.12
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 189,
-     "won": 169,
-     "expected": 168.9,
-     "avg_fair": 1.12
+     "played": 178,
+     "won": 160,
+     "expected": 159.8,
+     "avg_fair": 1.11
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 166,
-     "won": 121,
-     "expected": 109.9,
+     "played": 147,
+     "won": 111,
+     "expected": 97.4,
      "avg_fair": 1.51
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 167,
-     "won": 134,
-     "expected": 134.4,
+     "played": 147,
+     "won": 121,
+     "expected": 119.6,
+     "avg_fair": 1.23
+    },
+    {
+     "size": 4,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 147,
+     "won": 129,
+     "expected": 126.7,
+     "avg_fair": 1.16
+    },
+    {
+     "size": 4,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 147,
+     "won": 129,
+     "expected": 127.3,
+     "avg_fair": 1.15
+    },
+    {
+     "size": 6,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 98,
+     "won": 68,
+     "expected": 52.7,
+     "avg_fair": 1.86
+    },
+    {
+     "size": 6,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 98,
+     "won": 80,
+     "expected": 71.9,
+     "avg_fair": 1.37
+    },
+    {
+     "size": 6,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 98,
+     "won": 84,
+     "expected": 78.5,
      "avg_fair": 1.25
     },
     {
-     "size": 4,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 167,
-     "won": 141,
-     "expected": 141.8,
-     "avg_fair": 1.18
-    },
-    {
-     "size": 4,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 167,
-     "won": 140,
-     "expected": 142.4,
-     "avg_fair": 1.18
-    },
-    {
-     "size": 6,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 126,
-     "won": 83,
-     "expected": 67.8,
-     "avg_fair": 1.86
-    },
-    {
-     "size": 6,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 127,
-     "won": 94,
-     "expected": 90.7,
-     "avg_fair": 1.41
-    },
-    {
-     "size": 6,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 127,
-     "won": 97,
-     "expected": 98.1,
-     "avg_fair": 1.3
-    },
-    {
      "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 127,
-     "won": 99,
-     "expected": 98.6,
-     "avg_fair": 1.3
+     "played": 98,
+     "won": 86,
+     "expected": 79.0,
+     "avg_fair": 1.24
     },
     {
      "size": 8,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 85,
-     "won": 47,
-     "expected": 36.7,
-     "avg_fair": 2.32
+     "played": 47,
+     "won": 30,
+     "expected": 20.6,
+     "avg_fair": 2.29
     },
     {
      "size": 8,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 88,
-     "won": 59,
-     "expected": 54.3,
-     "avg_fair": 1.64
+     "played": 47,
+     "won": 35,
+     "expected": 30.5,
+     "avg_fair": 1.54
     },
     {
      "size": 8,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 88,
-     "won": 61,
-     "expected": 59.5,
-     "avg_fair": 1.5
+     "played": 47,
+     "won": 39,
+     "expected": 35.0,
+     "avg_fair": 1.34
     },
     {
      "size": 8,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 88,
-     "won": 57,
-     "expected": 59.9,
-     "avg_fair": 1.5
+     "played": 47,
+     "won": 38,
+     "expected": 35.5,
+     "avg_fair": 1.33
     },
     {
      "size": 10,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 43,
-     "won": 20,
-     "expected": 14.8,
-     "avg_fair": 2.92
-    },
-    {
-     "size": 10,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 46,
-     "won": 28,
-     "expected": 23.8,
-     "avg_fair": 1.97
-    },
-    {
-     "size": 10,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 46,
-     "won": 27,
-     "expected": 25.5,
-     "avg_fair": 1.86
-    },
-    {
-     "size": 10,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 46,
-     "won": 27,
-     "expected": 25.3,
-     "avg_fair": 1.87
-    },
-    {
-     "size": 15,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 18,
+     "played": 5,
      "won": 3,
-     "expected": 3.6,
-     "avg_fair": 5.04
-    },
-    {
-     "size": 15,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 19,
-     "won": 9,
-     "expected": 6.2,
-     "avg_fair": 3.09
-    },
-    {
-     "size": 15,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 19,
-     "won": 7,
-     "expected": 6.8,
+     "expected": 1.8,
      "avg_fair": 2.84
     },
     {
-     "size": 15,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 19,
-     "won": 6,
-     "expected": 6.6,
-     "avg_fair": 2.9
-    },
-    {
-     "size": 20,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 5,
-     "won": 0,
-     "expected": 0.6,
-     "avg_fair": 8.96
-    },
-    {
-     "size": 20,
+     "size": 10,
      "target": 0.94,
      "leg_max": 0.975,
      "played": 5,
-     "won": 0,
-     "expected": 0.9,
-     "avg_fair": 5.71
+     "won": 4,
+     "expected": 3.0,
+     "avg_fair": 1.67
     },
     {
-     "size": 20,
+     "size": 10,
      "target": 0.96,
      "leg_max": 0.985,
      "played": 5,
-     "won": 0,
-     "expected": 1.0,
-     "avg_fair": 5.21
+     "won": 4,
+     "expected": 3.5,
+     "avg_fair": 1.43
     },
     {
-     "size": 20,
+     "size": 10,
      "target": 0.97,
      "leg_max": 0.99,
      "played": 5,
-     "won": 0,
-     "expected": 1.0,
-     "avg_fair": 5.21
+     "won": 4,
+     "expected": 3.5,
+     "avg_fair": 1.43
     }
    ]
   },
@@ -1303,27 +1231,27 @@
    "tickets": [
     {
      "size": 2,
-     "played": 63,
-     "won": 52,
-     "expected": 49.5
+     "played": 39,
+     "won": 34,
+     "expected": 31.1
     },
     {
      "size": 3,
-     "played": 37,
-     "won": 30,
-     "expected": 26.0
+     "played": 34,
+     "won": 28,
+     "expected": 24.0
     },
     {
      "size": 4,
-     "played": 37,
-     "won": 29,
-     "expected": 22.8
+     "played": 33,
+     "won": 27,
+     "expected": 20.4
     },
     {
      "size": 6,
-     "played": 32,
+     "played": 31,
      "won": 22,
-     "expected": 15.6
+     "expected": 15.2
     },
     {
      "size": 8,
@@ -1343,144 +1271,144 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 63,
-     "won": 52,
-     "expected": 49.5,
-     "avg_fair": 1.27
-    },
-    {
-     "size": 2,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 63,
-     "won": 53,
-     "expected": 50.7,
+     "played": 39,
+     "won": 34,
+     "expected": 31.1,
      "avg_fair": 1.25
     },
     {
      "size": 2,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 39,
+     "won": 34,
+     "expected": 32.3,
+     "avg_fair": 1.21
+    },
+    {
+     "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 63,
-     "won": 53,
-     "expected": 51.1,
-     "avg_fair": 1.24
+     "played": 39,
+     "won": 34,
+     "expected": 32.6,
+     "avg_fair": 1.2
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 63,
-     "won": 53,
-     "expected": 51.1,
-     "avg_fair": 1.24
+     "played": 39,
+     "won": 34,
+     "expected": 32.7,
+     "avg_fair": 1.2
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 37,
-     "won": 30,
-     "expected": 26.0,
-     "avg_fair": 1.43
+     "played": 34,
+     "won": 28,
+     "expected": 24.0,
+     "avg_fair": 1.42
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 37,
-     "won": 30,
-     "expected": 27.1,
-     "avg_fair": 1.37
+     "played": 34,
+     "won": 28,
+     "expected": 25.1,
+     "avg_fair": 1.36
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 37,
-     "won": 30,
-     "expected": 27.4,
-     "avg_fair": 1.36
+     "played": 34,
+     "won": 28,
+     "expected": 25.3,
+     "avg_fair": 1.35
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 37,
-     "won": 30,
-     "expected": 27.4,
-     "avg_fair": 1.36
+     "played": 34,
+     "won": 28,
+     "expected": 25.4,
+     "avg_fair": 1.35
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 37,
-     "won": 29,
-     "expected": 22.8,
-     "avg_fair": 1.63
+     "played": 33,
+     "won": 27,
+     "expected": 20.4,
+     "avg_fair": 1.62
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 37,
-     "won": 29,
-     "expected": 23.9,
-     "avg_fair": 1.56
+     "played": 33,
+     "won": 27,
+     "expected": 21.5,
+     "avg_fair": 1.55
     },
     {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 37,
-     "won": 29,
-     "expected": 24.1,
-     "avg_fair": 1.55
+     "played": 33,
+     "won": 27,
+     "expected": 21.7,
+     "avg_fair": 1.54
     },
     {
      "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 37,
-     "won": 29,
-     "expected": 24.2,
-     "avg_fair": 1.55
+     "played": 33,
+     "won": 27,
+     "expected": 21.7,
+     "avg_fair": 1.54
     },
     {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 32,
+     "played": 31,
      "won": 22,
-     "expected": 15.6,
+     "expected": 15.2,
      "avg_fair": 2.05
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 32,
+     "played": 31,
      "won": 21,
-     "expected": 16.9,
+     "expected": 16.4,
      "avg_fair": 1.91
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 32,
+     "played": 31,
      "won": 21,
-     "expected": 17.3,
+     "expected": 16.8,
      "avg_fair": 1.88
     },
     {
      "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 32,
+     "played": 31,
      "won": 21,
-     "expected": 17.3,
+     "expected": 16.8,
      "avg_fair": 1.88
     },
     {
@@ -1554,78 +1482,6 @@
      "won": 16,
      "expected": 10.1,
      "avg_fair": 2.92
-    },
-    {
-     "size": 15,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 11,
-     "won": 5,
-     "expected": 1.7,
-     "avg_fair": 6.31
-    },
-    {
-     "size": 15,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 11,
-     "won": 4,
-     "expected": 2.0,
-     "avg_fair": 5.6
-    },
-    {
-     "size": 15,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 11,
-     "won": 4,
-     "expected": 2.1,
-     "avg_fair": 5.46
-    },
-    {
-     "size": 15,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 11,
-     "won": 4,
-     "expected": 2.1,
-     "avg_fair": 5.46
-    },
-    {
-     "size": 20,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 11,
-     "won": 3,
-     "expected": 0.9,
-     "avg_fair": 12.86
-    },
-    {
-     "size": 20,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 11,
-     "won": 3,
-     "expected": 1.0,
-     "avg_fair": 11.39
-    },
-    {
-     "size": 20,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 11,
-     "won": 3,
-     "expected": 1.0,
-     "avg_fair": 11.12
-    },
-    {
-     "size": 20,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 11,
-     "won": 3,
-     "expected": 1.0,
-     "avg_fair": 11.11
     }
    ]
   },
@@ -2117,39 +1973,39 @@
    "tickets": [
     {
      "size": 2,
-     "played": 82,
-     "won": 71,
-     "expected": 65.0
+     "played": 68,
+     "won": 58,
+     "expected": 54.3
     },
     {
      "size": 3,
-     "played": 60,
-     "won": 52,
-     "expected": 42.9
+     "played": 51,
+     "won": 44,
+     "expected": 36.6
     },
     {
      "size": 4,
-     "played": 57,
-     "won": 44,
-     "expected": 36.2
+     "played": 44,
+     "won": 36,
+     "expected": 28.3
     },
     {
      "size": 6,
-     "played": 44,
-     "won": 29,
-     "expected": 22.1
+     "played": 37,
+     "won": 24,
+     "expected": 18.9
     },
     {
      "size": 8,
-     "played": 36,
-     "won": 19,
-     "expected": 14.4
+     "played": 32,
+     "won": 16,
+     "expected": 12.9
     },
     {
      "size": 10,
-     "played": 35,
-     "won": 16,
-     "expected": 11.0
+     "played": 30,
+     "won": 13,
+     "expected": 9.5
     }
    ],
    "aim_trials": [
@@ -2157,289 +2013,289 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 82,
-     "won": 71,
-     "expected": 65.0,
-     "avg_fair": 1.26
-    },
-    {
-     "size": 2,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 82,
-     "won": 71,
-     "expected": 68.2,
-     "avg_fair": 1.21
-    },
-    {
-     "size": 2,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 82,
-     "won": 73,
-     "expected": 69.7,
-     "avg_fair": 1.18
-    },
-    {
-     "size": 2,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 82,
-     "won": 72,
-     "expected": 70.6,
-     "avg_fair": 1.17
-    },
-    {
-     "size": 3,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 60,
-     "won": 52,
-     "expected": 42.9,
-     "avg_fair": 1.4
-    },
-    {
-     "size": 3,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 60,
-     "won": 52,
-     "expected": 46.7,
-     "avg_fair": 1.29
-    },
-    {
-     "size": 3,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 60,
-     "won": 52,
-     "expected": 48.6,
+     "played": 68,
+     "won": 58,
+     "expected": 54.3,
      "avg_fair": 1.25
     },
     {
+     "size": 2,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 68,
+     "won": 58,
+     "expected": 57.4,
+     "avg_fair": 1.19
+    },
+    {
+     "size": 2,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 68,
+     "won": 60,
+     "expected": 58.9,
+     "avg_fair": 1.16
+    },
+    {
+     "size": 2,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 68,
+     "won": 59,
+     "expected": 59.7,
+     "avg_fair": 1.15
+    },
+    {
+     "size": 3,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 51,
+     "won": 44,
+     "expected": 36.6,
+     "avg_fair": 1.39
+    },
+    {
+     "size": 3,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 51,
+     "won": 44,
+     "expected": 40.3,
+     "avg_fair": 1.27
+    },
+    {
+     "size": 3,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 51,
+     "won": 44,
+     "expected": 42.0,
+     "avg_fair": 1.22
+    },
+    {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 60,
-     "won": 51,
-     "expected": 49.7,
-     "avg_fair": 1.22
+     "played": 51,
+     "won": 43,
+     "expected": 43.2,
+     "avg_fair": 1.19
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 57,
-     "won": 44,
-     "expected": 36.2,
-     "avg_fair": 1.58
+     "played": 44,
+     "won": 36,
+     "expected": 28.3,
+     "avg_fair": 1.55
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 57,
-     "won": 44,
-     "expected": 40.5,
-     "avg_fair": 1.42
-    },
-    {
-     "size": 4,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 57,
-     "won": 45,
-     "expected": 42.6,
+     "played": 44,
+     "won": 36,
+     "expected": 32.5,
      "avg_fair": 1.36
     },
     {
      "size": 4,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 44,
+     "won": 37,
+     "expected": 34.5,
+     "avg_fair": 1.29
+    },
+    {
+     "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 57,
-     "won": 44,
-     "expected": 43.8,
-     "avg_fair": 1.33
+     "played": 44,
+     "won": 36,
+     "expected": 35.7,
+     "avg_fair": 1.25
     },
     {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 44,
-     "won": 29,
-     "expected": 22.1,
-     "avg_fair": 2.0
+     "played": 37,
+     "won": 24,
+     "expected": 18.9,
+     "avg_fair": 1.96
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 44,
-     "won": 33,
-     "expected": 27.4,
-     "avg_fair": 1.64
-    },
-    {
-     "size": 6,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 44,
-     "won": 34,
-     "expected": 29.3,
+     "played": 37,
+     "won": 28,
+     "expected": 24.0,
      "avg_fair": 1.56
     },
     {
      "size": 6,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 44,
-     "won": 34,
-     "expected": 30.4,
-     "avg_fair": 1.51
-    },
-    {
-     "size": 8,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 36,
-     "won": 19,
-     "expected": 14.4,
-     "avg_fair": 2.51
-    },
-    {
-     "size": 8,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 36,
-     "won": 24,
-     "expected": 19.4,
-     "avg_fair": 1.93
-    },
-    {
-     "size": 8,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 36,
-     "won": 26,
-     "expected": 21.2,
-     "avg_fair": 1.8
+     "played": 37,
+     "won": 29,
+     "expected": 25.8,
+     "avg_fair": 1.46
+    },
+    {
+     "size": 6,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 37,
+     "won": 29,
+     "expected": 26.9,
+     "avg_fair": 1.41
     },
     {
      "size": 8,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 36,
-     "won": 26,
-     "expected": 22.3,
-     "avg_fair": 1.74
-    },
-    {
-     "size": 10,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 35,
+     "played": 32,
      "won": 16,
-     "expected": 11.0,
-     "avg_fair": 3.22
+     "expected": 12.9,
+     "avg_fair": 2.48
+    },
+    {
+     "size": 8,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 32,
+     "won": 21,
+     "expected": 17.8,
+     "avg_fair": 1.85
+    },
+    {
+     "size": 8,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 32,
+     "won": 23,
+     "expected": 19.6,
+     "avg_fair": 1.72
+    },
+    {
+     "size": 8,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 32,
+     "won": 23,
+     "expected": 20.5,
+     "avg_fair": 1.66
+    },
+    {
+     "size": 10,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 30,
+     "won": 13,
+     "expected": 9.5,
+     "avg_fair": 3.16
     },
     {
      "size": 10,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 35,
-     "won": 22,
-     "expected": 15.1,
-     "avg_fair": 2.46
+     "played": 30,
+     "won": 19,
+     "expected": 13.5,
+     "avg_fair": 2.37
     },
     {
      "size": 10,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 35,
-     "won": 23,
-     "expected": 16.9,
-     "avg_fair": 2.28
+     "played": 30,
+     "won": 20,
+     "expected": 15.2,
+     "avg_fair": 2.17
     },
     {
      "size": 10,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 35,
-     "won": 23,
-     "expected": 18.1,
-     "avg_fair": 2.18
+     "played": 30,
+     "won": 20,
+     "expected": 16.3,
+     "avg_fair": 2.08
     },
     {
      "size": 15,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 31,
+     "played": 29,
      "won": 8,
-     "expected": 5.4,
-     "avg_fair": 5.78
+     "expected": 5.1,
+     "avg_fair": 5.71
     },
     {
      "size": 15,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 31,
-     "won": 14,
-     "expected": 8.5,
-     "avg_fair": 4.11
+     "played": 29,
+     "won": 13,
+     "expected": 8.1,
+     "avg_fair": 4.02
     },
     {
      "size": 15,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 31,
-     "won": 15,
-     "expected": 10.1,
-     "avg_fair": 3.73
+     "played": 29,
+     "won": 14,
+     "expected": 9.8,
+     "avg_fair": 3.62
     },
     {
      "size": 15,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 31,
-     "won": 15,
-     "expected": 11.2,
-     "avg_fair": 3.52
+     "played": 29,
+     "won": 14,
+     "expected": 10.8,
+     "avg_fair": 3.42
     },
     {
      "size": 20,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 28,
+     "played": 27,
      "won": 5,
-     "expected": 2.8,
-     "avg_fair": 10.18
+     "expected": 2.7,
+     "avg_fair": 10.17
     },
     {
      "size": 20,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 28,
+     "played": 27,
      "won": 10,
-     "expected": 5.3,
-     "avg_fair": 6.15
+     "expected": 5.2,
+     "avg_fair": 6.07
     },
     {
      "size": 20,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 28,
+     "played": 27,
      "won": 13,
-     "expected": 6.5,
-     "avg_fair": 5.28
+     "expected": 6.4,
+     "avg_fair": 5.18
     },
     {
      "size": 20,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 28,
+     "played": 27,
      "won": 13,
-     "expected": 7.4,
-     "avg_fair": 4.86
+     "expected": 7.3,
+     "avg_fair": 4.76
     }
    ]
   },
@@ -3568,39 +3424,39 @@
    "tickets": [
     {
      "size": 2,
-     "played": 122,
-     "won": 99,
-     "expected": 99.3
+     "played": 109,
+     "won": 87,
+     "expected": 89.3
     },
     {
      "size": 3,
-     "played": 99,
-     "won": 73,
-     "expected": 73.2
+     "played": 89,
+     "won": 66,
+     "expected": 66.2
     },
     {
      "size": 4,
-     "played": 93,
-     "won": 57,
-     "expected": 62.1
+     "played": 78,
+     "won": 48,
+     "expected": 53.0
     },
     {
      "size": 6,
-     "played": 73,
-     "won": 39,
-     "expected": 39.9
+     "played": 63,
+     "won": 33,
+     "expected": 35.1
     },
     {
      "size": 8,
-     "played": 62,
-     "won": 31,
-     "expected": 27.9
+     "played": 53,
+     "won": 29,
+     "expected": 24.4
     },
     {
      "size": 10,
-     "played": 52,
-     "won": 25,
-     "expected": 18.9
+     "played": 40,
+     "won": 22,
+     "expected": 15.1
     }
    ],
    "aim_trials": [
@@ -3608,289 +3464,289 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 122,
-     "won": 99,
-     "expected": 99.3,
-     "avg_fair": 1.23
-    },
-    {
-     "size": 2,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 122,
-     "won": 111,
-     "expected": 105.9,
-     "avg_fair": 1.15
-    },
-    {
-     "size": 2,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 122,
-     "won": 113,
-     "expected": 110.4,
-     "avg_fair": 1.11
-    },
-    {
-     "size": 2,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 122,
-     "won": 113,
-     "expected": 112.2,
-     "avg_fair": 1.09
-    },
-    {
-     "size": 3,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 99,
-     "won": 73,
-     "expected": 73.2,
-     "avg_fair": 1.35
-    },
-    {
-     "size": 3,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 99,
-     "won": 85,
-     "expected": 80.3,
-     "avg_fair": 1.23
-    },
-    {
-     "size": 3,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 99,
-     "won": 86,
-     "expected": 85.6,
-     "avg_fair": 1.16
-    },
-    {
-     "size": 3,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 99,
-     "won": 86,
-     "expected": 87.6,
-     "avg_fair": 1.13
-    },
-    {
-     "size": 4,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 93,
-     "won": 57,
-     "expected": 62.1,
-     "avg_fair": 1.5
-    },
-    {
-     "size": 4,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 93,
-     "won": 74,
-     "expected": 69.4,
-     "avg_fair": 1.35
-    },
-    {
-     "size": 4,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 93,
-     "won": 78,
-     "expected": 75.1,
-     "avg_fair": 1.25
-    },
-    {
-     "size": 4,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 93,
-     "won": 78,
-     "expected": 77.2,
+     "played": 109,
+     "won": 87,
+     "expected": 89.3,
      "avg_fair": 1.22
     },
     {
+     "size": 2,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 109,
+     "won": 99,
+     "expected": 95.7,
+     "avg_fair": 1.14
+    },
+    {
+     "size": 2,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 109,
+     "won": 101,
+     "expected": 100.0,
+     "avg_fair": 1.09
+    },
+    {
+     "size": 2,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 109,
+     "won": 101,
+     "expected": 101.7,
+     "avg_fair": 1.07
+    },
+    {
+     "size": 3,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 89,
+     "won": 66,
+     "expected": 66.2,
+     "avg_fair": 1.35
+    },
+    {
+     "size": 3,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 89,
+     "won": 78,
+     "expected": 73.0,
+     "avg_fair": 1.22
+    },
+    {
+     "size": 3,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 89,
+     "won": 78,
+     "expected": 78.0,
+     "avg_fair": 1.14
+    },
+    {
+     "size": 3,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 89,
+     "won": 78,
+     "expected": 79.9,
+     "avg_fair": 1.12
+    },
+    {
+     "size": 4,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 78,
+     "won": 48,
+     "expected": 53.0,
+     "avg_fair": 1.47
+    },
+    {
+     "size": 4,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 78,
+     "won": 65,
+     "expected": 59.7,
+     "avg_fair": 1.31
+    },
+    {
+     "size": 4,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 78,
+     "won": 66,
+     "expected": 65.0,
+     "avg_fair": 1.2
+    },
+    {
+     "size": 4,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 78,
+     "won": 66,
+     "expected": 66.9,
+     "avg_fair": 1.17
+    },
+    {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 73,
-     "won": 39,
-     "expected": 39.9,
-     "avg_fair": 1.84
+     "played": 63,
+     "won": 33,
+     "expected": 35.1,
+     "avg_fair": 1.8
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 73,
-     "won": 51,
-     "expected": 47.5,
-     "avg_fair": 1.55
+     "played": 63,
+     "won": 45,
+     "expected": 42.2,
+     "avg_fair": 1.5
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 73,
-     "won": 53,
-     "expected": 53.1,
-     "avg_fair": 1.39
-    },
-    {
-     "size": 6,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 73,
-     "won": 52,
-     "expected": 55.5,
+     "played": 63,
+     "won": 44,
+     "expected": 47.2,
      "avg_fair": 1.34
     },
     {
+     "size": 6,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 63,
+     "won": 43,
+     "expected": 49.5,
+     "avg_fair": 1.28
+    },
+    {
      "size": 8,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 62,
-     "won": 31,
-     "expected": 27.9,
-     "avg_fair": 2.24
+     "played": 53,
+     "won": 29,
+     "expected": 24.4,
+     "avg_fair": 2.18
     },
     {
      "size": 8,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 62,
-     "won": 35,
-     "expected": 34.8,
-     "avg_fair": 1.8
+     "played": 53,
+     "won": 32,
+     "expected": 30.9,
+     "avg_fair": 1.72
     },
     {
      "size": 8,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 62,
-     "won": 38,
-     "expected": 40.5,
-     "avg_fair": 1.56
-    },
-    {
-     "size": 8,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 62,
-     "won": 36,
-     "expected": 42.9,
+     "played": 53,
+     "won": 32,
+     "expected": 36.0,
      "avg_fair": 1.48
     },
     {
-     "size": 10,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 52,
-     "won": 25,
-     "expected": 18.9,
-     "avg_fair": 2.78
+     "size": 8,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 53,
+     "won": 32,
+     "expected": 38.2,
+     "avg_fair": 1.4
     },
     {
      "size": 10,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 52,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 40,
      "won": 22,
-     "expected": 24.9,
-     "avg_fair": 2.13
+     "expected": 15.1,
+     "avg_fair": 2.67
+    },
+    {
+     "size": 10,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 40,
+     "won": 17,
+     "expected": 20.4,
+     "avg_fair": 1.97
     },
     {
      "size": 10,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 52,
-     "won": 26,
-     "expected": 29.8,
-     "avg_fair": 1.8
+     "played": 40,
+     "won": 22,
+     "expected": 24.4,
+     "avg_fair": 1.65
     },
     {
      "size": 10,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 52,
-     "won": 24,
-     "expected": 31.9,
-     "avg_fair": 1.7
+     "played": 40,
+     "won": 20,
+     "expected": 26.3,
+     "avg_fair": 1.54
     },
     {
      "size": 15,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 30,
-     "won": 6,
-     "expected": 6.1,
-     "avg_fair": 5.12
+     "played": 17,
+     "won": 3,
+     "expected": 3.9,
+     "avg_fair": 4.42
     },
     {
      "size": 15,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 30,
-     "won": 8,
-     "expected": 9.0,
-     "avg_fair": 3.6
+     "played": 17,
+     "won": 5,
+     "expected": 6.0,
+     "avg_fair": 2.84
     },
     {
      "size": 15,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 30,
-     "won": 9,
-     "expected": 11.2,
-     "avg_fair": 2.98
+     "played": 17,
+     "won": 8,
+     "expected": 7.6,
+     "avg_fair": 2.3
     },
     {
      "size": 15,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 30,
-     "won": 8,
-     "expected": 12.2,
-     "avg_fair": 2.78
+     "played": 17,
+     "won": 7,
+     "expected": 8.4,
+     "avg_fair": 2.15
     },
     {
      "size": 20,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 22,
-     "won": 4,
-     "expected": 2.5,
-     "avg_fair": 9.34
-    },
-    {
-     "size": 20,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 22,
+     "played": 12,
      "won": 2,
-     "expected": 4.4,
-     "avg_fair": 5.9
+     "expected": 1.6,
+     "avg_fair": 7.55
+    },
+    {
+     "size": 20,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 12,
+     "won": 2,
+     "expected": 3.1,
+     "avg_fair": 3.9
     },
     {
      "size": 20,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 22,
-     "won": 9,
-     "expected": 5.6,
-     "avg_fair": 4.71
+     "played": 12,
+     "won": 7,
+     "expected": 4.0,
+     "avg_fair": 3.17
     },
     {
      "size": 20,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 22,
-     "won": 6,
-     "expected": 6.4,
-     "avg_fair": 4.33
+     "played": 12,
+     "won": 5,
+     "expected": 4.6,
+     "avg_fair": 2.9
     }
    ]
   },
@@ -5089,39 +4945,27 @@
    "tickets": [
     {
      "size": 2,
-     "played": 258,
-     "won": 205,
-     "expected": 204.6
+     "played": 248,
+     "won": 196,
+     "expected": 196.9
     },
     {
      "size": 3,
-     "played": 214,
-     "won": 155,
-     "expected": 151.9
+     "played": 211,
+     "won": 154,
+     "expected": 149.9
     },
     {
      "size": 4,
-     "played": 219,
-     "won": 140,
-     "expected": 137.9
+     "played": 208,
+     "won": 136,
+     "expected": 131.5
     },
     {
      "size": 6,
-     "played": 88,
-     "won": 42,
-     "expected": 42.0
-    },
-    {
-     "size": 8,
-     "played": 78,
-     "won": 26,
-     "expected": 27.1
-    },
-    {
-     "size": 10,
-     "played": 60,
-     "won": 15,
-     "expected": 15.1
+     "played": 34,
+     "won": 18,
+     "expected": 16.9
     }
    ],
    "aim_trials": [
@@ -5129,217 +4973,145 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 258,
-     "won": 205,
-     "expected": 204.6,
+     "played": 248,
+     "won": 196,
+     "expected": 196.9,
      "avg_fair": 1.26
     },
     {
      "size": 2,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 258,
-     "won": 210,
-     "expected": 208.8,
+     "played": 248,
+     "won": 200,
+     "expected": 201.0,
      "avg_fair": 1.24
     },
     {
      "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 258,
-     "won": 210,
-     "expected": 208.9,
+     "played": 248,
+     "won": 200,
+     "expected": 201.1,
      "avg_fair": 1.24
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 258,
-     "won": 210,
-     "expected": 209.0,
+     "played": 248,
+     "won": 200,
+     "expected": 201.1,
      "avg_fair": 1.24
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 214,
-     "won": 155,
-     "expected": 151.9,
+     "played": 211,
+     "won": 154,
+     "expected": 149.9,
      "avg_fair": 1.41
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 214,
-     "won": 161,
-     "expected": 156.1,
+     "played": 211,
+     "won": 160,
+     "expected": 154.1,
      "avg_fair": 1.37
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 214,
-     "won": 161,
-     "expected": 156.2,
+     "played": 211,
+     "won": 160,
+     "expected": 154.2,
      "avg_fair": 1.37
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 214,
-     "won": 161,
-     "expected": 156.3,
+     "played": 211,
+     "won": 160,
+     "expected": 154.2,
      "avg_fair": 1.37
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 219,
-     "won": 140,
-     "expected": 137.9,
-     "avg_fair": 1.59
+     "played": 208,
+     "won": 136,
+     "expected": 131.5,
+     "avg_fair": 1.58
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 219,
-     "won": 142,
-     "expected": 143.1,
-     "avg_fair": 1.54
+     "played": 208,
+     "won": 138,
+     "expected": 136.5,
+     "avg_fair": 1.53
     },
     {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 219,
-     "won": 142,
-     "expected": 143.2,
-     "avg_fair": 1.54
+     "played": 208,
+     "won": 138,
+     "expected": 136.5,
+     "avg_fair": 1.53
     },
     {
      "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 219,
-     "won": 142,
-     "expected": 143.2,
+     "played": 208,
+     "won": 138,
+     "expected": 136.6,
      "avg_fair": 1.53
     },
     {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 88,
-     "won": 42,
-     "expected": 42.0,
-     "avg_fair": 2.11
+     "played": 34,
+     "won": 18,
+     "expected": 16.9,
+     "avg_fair": 2.02
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 88,
-     "won": 46,
-     "expected": 43.9,
-     "avg_fair": 2.02
+     "played": 34,
+     "won": 19,
+     "expected": 17.9,
+     "avg_fair": 1.91
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 88,
-     "won": 45,
-     "expected": 43.9,
-     "avg_fair": 2.02
+     "played": 34,
+     "won": 19,
+     "expected": 17.9,
+     "avg_fair": 1.91
     },
     {
      "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 88,
-     "won": 45,
-     "expected": 43.9,
-     "avg_fair": 2.02
-    },
-    {
-     "size": 8,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 78,
-     "won": 26,
-     "expected": 27.1,
-     "avg_fair": 2.89
-    },
-    {
-     "size": 8,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 78,
-     "won": 28,
-     "expected": 28.4,
-     "avg_fair": 2.77
-    },
-    {
-     "size": 8,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 78,
-     "won": 28,
-     "expected": 28.4,
-     "avg_fair": 2.77
-    },
-    {
-     "size": 8,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 78,
-     "won": 28,
-     "expected": 28.4,
-     "avg_fair": 2.77
-    },
-    {
-     "size": 10,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 60,
-     "won": 15,
-     "expected": 15.1,
-     "avg_fair": 4.0
-    },
-    {
-     "size": 10,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 60,
-     "won": 15,
-     "expected": 15.8,
-     "avg_fair": 3.85
-    },
-    {
-     "size": 10,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 60,
-     "won": 15,
-     "expected": 15.8,
-     "avg_fair": 3.85
-    },
-    {
-     "size": 10,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 60,
-     "won": 15,
-     "expected": 15.8,
-     "avg_fair": 3.85
+     "played": 34,
+     "won": 19,
+     "expected": 17.9,
+     "avg_fair": 1.91
     }
    ]
   },
@@ -6247,39 +6019,39 @@
    "tickets": [
     {
      "size": 2,
-     "played": 133,
-     "won": 114,
-     "expected": 109.3
+     "played": 107,
+     "won": 94,
+     "expected": 87.6
     },
     {
      "size": 3,
-     "played": 111,
-     "won": 92,
-     "expected": 82.2
+     "played": 105,
+     "won": 88,
+     "expected": 77.8
     },
     {
      "size": 4,
-     "played": 81,
-     "won": 62,
-     "expected": 54.3
+     "played": 70,
+     "won": 55,
+     "expected": 46.9
     },
     {
      "size": 6,
-     "played": 46,
-     "won": 31,
-     "expected": 25.8
+     "played": 14,
+     "won": 10,
+     "expected": 7.5
     },
     {
      "size": 8,
-     "played": 35,
-     "won": 24,
-     "expected": 16.7
+     "played": 3,
+     "won": 3,
+     "expected": 1.2
     },
     {
      "size": 10,
-     "played": 16,
-     "won": 11,
-     "expected": 6.2
+     "played": 1,
+     "won": 1,
+     "expected": 0.3
     }
    ],
    "aim_trials": [
@@ -6287,289 +6059,217 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 133,
-     "won": 114,
-     "expected": 109.3,
+     "played": 107,
+     "won": 94,
+     "expected": 87.6,
      "avg_fair": 1.22
     },
     {
      "size": 2,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 135,
-     "won": 121,
-     "expected": 120.2,
+     "played": 107,
+     "won": 99,
+     "expected": 95.4,
      "avg_fair": 1.12
     },
     {
      "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 135,
-     "won": 124,
-     "expected": 123.3,
-     "avg_fair": 1.1
+     "played": 107,
+     "won": 99,
+     "expected": 98.0,
+     "avg_fair": 1.09
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 135,
-     "won": 129,
-     "expected": 126.4,
-     "avg_fair": 1.07
+     "played": 107,
+     "won": 103,
+     "expected": 100.9,
+     "avg_fair": 1.06
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 111,
-     "won": 92,
-     "expected": 82.2,
+     "played": 105,
+     "won": 88,
+     "expected": 77.8,
      "avg_fair": 1.35
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 111,
-     "won": 98,
-     "expected": 93.4,
+     "played": 105,
+     "won": 92,
+     "expected": 88.4,
      "avg_fair": 1.19
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 111,
-     "won": 96,
-     "expected": 97.2,
+     "played": 105,
+     "won": 91,
+     "expected": 92.0,
      "avg_fair": 1.14
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 111,
-     "won": 108,
-     "expected": 101.5,
+     "played": 105,
+     "won": 102,
+     "expected": 96.2,
      "avg_fair": 1.09
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 81,
-     "won": 62,
-     "expected": 54.3,
-     "avg_fair": 1.49
+     "played": 70,
+     "won": 55,
+     "expected": 46.9,
+     "avg_fair": 1.5
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 81,
-     "won": 64,
-     "expected": 64.2,
+     "played": 70,
+     "won": 54,
+     "expected": 55.5,
      "avg_fair": 1.26
     },
     {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 81,
-     "won": 69,
-     "expected": 67.6,
-     "avg_fair": 1.2
+     "played": 70,
+     "won": 60,
+     "expected": 58.7,
+     "avg_fair": 1.19
     },
     {
      "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 81,
-     "won": 77,
-     "expected": 71.6,
+     "played": 70,
+     "won": 67,
+     "expected": 62.2,
      "avg_fair": 1.13
     },
     {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 46,
-     "won": 31,
-     "expected": 25.8,
-     "avg_fair": 1.79
+     "played": 14,
+     "won": 10,
+     "expected": 7.5,
+     "avg_fair": 1.88
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 47,
-     "won": 34,
-     "expected": 33.4,
+     "played": 14,
+     "won": 10,
+     "expected": 9.9,
      "avg_fair": 1.41
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 47,
-     "won": 34,
-     "expected": 35.9,
-     "avg_fair": 1.31
+     "played": 14,
+     "won": 9,
+     "expected": 10.8,
+     "avg_fair": 1.29
     },
     {
      "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 47,
-     "won": 39,
-     "expected": 38.5,
-     "avg_fair": 1.22
+     "played": 14,
+     "won": 12,
+     "expected": 11.6,
+     "avg_fair": 1.2
     },
     {
      "size": 8,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 35,
-     "won": 24,
-     "expected": 16.7,
-     "avg_fair": 2.11
+     "played": 3,
+     "won": 3,
+     "expected": 1.2,
+     "avg_fair": 2.47
     },
     {
      "size": 8,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 36,
-     "won": 24,
-     "expected": 22.8,
-     "avg_fair": 1.58
+     "played": 3,
+     "won": 3,
+     "expected": 1.9,
+     "avg_fair": 1.6
     },
     {
      "size": 8,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 36,
-     "won": 23,
-     "expected": 24.5,
-     "avg_fair": 1.47
-    },
-    {
-     "size": 8,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 36,
-     "won": 27,
-     "expected": 27.0,
-     "avg_fair": 1.33
-    },
-    {
-     "size": 10,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 16,
-     "won": 11,
-     "expected": 6.2,
-     "avg_fair": 2.6
-    },
-    {
-     "size": 10,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 17,
-     "won": 9,
-     "expected": 9.5,
-     "avg_fair": 1.8
-    },
-    {
-     "size": 10,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 17,
-     "won": 9,
-     "expected": 10.4,
-     "avg_fair": 1.65
-    },
-    {
-     "size": 10,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 17,
-     "won": 10,
-     "expected": 11.2,
-     "avg_fair": 1.52
-    },
-    {
-     "size": 15,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 1,
-     "won": 1,
-     "expected": 0.2,
-     "avg_fair": 4.62
-    },
-    {
-     "size": 15,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 1,
-     "won": 1,
-     "expected": 0.4,
-     "avg_fair": 2.27
-    },
-    {
-     "size": 15,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 1,
+     "played": 3,
      "won": 0,
-     "expected": 0.5,
-     "avg_fair": 1.87
+     "expected": 2.2,
+     "avg_fair": 1.39
     },
     {
-     "size": 15,
+     "size": 8,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 1,
-     "won": 0,
-     "expected": 0.6,
-     "avg_fair": 1.63
+     "played": 3,
+     "won": 3,
+     "expected": 2.4,
+     "avg_fair": 1.26
     },
     {
-     "size": 20,
+     "size": 10,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 1,
-     "won": 1,
-     "expected": 0.1,
-     "avg_fair": 7.41
-    },
-    {
-     "size": 20,
-     "target": 0.94,
-     "leg_max": 0.975,
      "played": 1,
      "won": 1,
      "expected": 0.3,
-     "avg_fair": 3.01
+     "avg_fair": 3.16
     },
     {
-     "size": 20,
+     "size": 10,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 1,
+     "won": 1,
+     "expected": 0.6,
+     "avg_fair": 1.79
+    },
+    {
+     "size": 10,
      "target": 0.96,
      "leg_max": 0.985,
      "played": 1,
      "won": 0,
-     "expected": 0.4,
-     "avg_fair": 2.33
+     "expected": 0.7,
+     "avg_fair": 1.52
     },
     {
-     "size": 20,
+     "size": 10,
      "target": 0.97,
      "leg_max": 0.99,
      "played": 1,
-     "won": 0,
-     "expected": 0.5,
-     "avg_fair": 2.18
+     "won": 1,
+     "expected": 0.7,
+     "avg_fair": 1.34
     }
    ]
   },
@@ -7477,39 +7177,39 @@
    "tickets": [
     {
      "size": 2,
-     "played": 109,
-     "won": 98,
-     "expected": 88.5
+     "played": 83,
+     "won": 74,
+     "expected": 67.3
     },
     {
      "size": 3,
-     "played": 104,
-     "won": 88,
-     "expected": 75.8
+     "played": 103,
+     "won": 87,
+     "expected": 75.1
     },
     {
      "size": 4,
-     "played": 46,
-     "won": 38,
-     "expected": 30.3
+     "played": 41,
+     "won": 34,
+     "expected": 26.9
     },
     {
      "size": 6,
-     "played": 38,
-     "won": 30,
-     "expected": 20.7
+     "played": 6,
+     "won": 5,
+     "expected": 3.1
     },
     {
      "size": 8,
-     "played": 18,
-     "won": 11,
-     "expected": 8.3
+     "played": 6,
+     "won": 4,
+     "expected": 2.5
     },
     {
      "size": 10,
-     "played": 2,
-     "won": 1,
-     "expected": 0.7
+     "played": 1,
+     "won": 0,
+     "expected": 0.3
     }
    ],
    "aim_trials": [
@@ -7517,280 +7217,217 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 109,
-     "won": 98,
-     "expected": 88.5,
+     "played": 83,
+     "won": 74,
+     "expected": 67.3,
      "avg_fair": 1.23
     },
     {
      "size": 2,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 114,
-     "won": 106,
-     "expected": 101.3,
+     "played": 83,
+     "won": 77,
+     "expected": 73.7,
      "avg_fair": 1.13
     },
     {
      "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 114,
-     "won": 108,
-     "expected": 104.8,
+     "played": 83,
+     "won": 78,
+     "expected": 76.5,
      "avg_fair": 1.09
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 114,
-     "won": 109,
-     "expected": 107.3,
+     "played": 83,
+     "won": 80,
+     "expected": 78.3,
      "avg_fair": 1.06
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 104,
-     "won": 88,
-     "expected": 75.8,
+     "played": 103,
+     "won": 87,
+     "expected": 75.1,
      "avg_fair": 1.37
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 104,
-     "won": 91,
-     "expected": 87.1,
+     "played": 103,
+     "won": 90,
+     "expected": 86.3,
      "avg_fair": 1.19
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 104,
-     "won": 94,
-     "expected": 91.8,
+     "played": 103,
+     "won": 93,
+     "expected": 91.0,
      "avg_fair": 1.13
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 104,
-     "won": 97,
-     "expected": 95.2,
+     "played": 103,
+     "won": 96,
+     "expected": 94.3,
      "avg_fair": 1.09
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 46,
-     "won": 38,
-     "expected": 30.3,
-     "avg_fair": 1.52
+     "played": 41,
+     "won": 34,
+     "expected": 26.9,
+     "avg_fair": 1.53
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 46,
-     "won": 41,
-     "expected": 36.3,
+     "played": 41,
+     "won": 37,
+     "expected": 32.4,
      "avg_fair": 1.27
     },
     {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 46,
-     "won": 40,
-     "expected": 38.9,
-     "avg_fair": 1.19
+     "played": 41,
+     "won": 35,
+     "expected": 34.7,
+     "avg_fair": 1.18
     },
     {
      "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 46,
-     "won": 42,
-     "expected": 40.6,
-     "avg_fair": 1.13
+     "played": 41,
+     "won": 37,
+     "expected": 36.5,
+     "avg_fair": 1.12
     },
     {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 38,
-     "won": 30,
-     "expected": 20.7,
-     "avg_fair": 1.84
+     "played": 6,
+     "won": 5,
+     "expected": 3.1,
+     "avg_fair": 1.91
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 40,
-     "won": 32,
-     "expected": 28.6,
-     "avg_fair": 1.4
+     "played": 6,
+     "won": 6,
+     "expected": 4.3,
+     "avg_fair": 1.42
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 40,
-     "won": 35,
-     "expected": 31.3,
+     "played": 6,
+     "won": 6,
+     "expected": 4.7,
      "avg_fair": 1.28
     },
     {
      "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 40,
-     "won": 36,
-     "expected": 32.6,
-     "avg_fair": 1.23
+     "played": 6,
+     "won": 6,
+     "expected": 5.0,
+     "avg_fair": 1.2
     },
     {
      "size": 8,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 18,
-     "won": 11,
-     "expected": 8.3,
-     "avg_fair": 2.19
+     "played": 6,
+     "won": 4,
+     "expected": 2.5,
+     "avg_fair": 2.37
     },
     {
      "size": 8,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 35,
-     "won": 27,
-     "expected": 22.0,
-     "avg_fair": 1.6
-    },
-    {
-     "size": 8,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 35,
-     "won": 30,
-     "expected": 24.6,
-     "avg_fair": 1.43
-    },
-    {
-     "size": 8,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 35,
-     "won": 32,
-     "expected": 26.0,
-     "avg_fair": 1.35
-    },
-    {
-     "size": 10,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 2,
-     "won": 1,
-     "expected": 0.7,
-     "avg_fair": 2.99
-    },
-    {
-     "size": 10,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 4,
-     "won": 2,
-     "expected": 2.3,
-     "avg_fair": 1.76
-    },
-    {
-     "size": 10,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 4,
-     "won": 2,
-     "expected": 2.7,
-     "avg_fair": 1.51
-    },
-    {
-     "size": 10,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 4,
-     "won": 2,
-     "expected": 2.9,
-     "avg_fair": 1.39
-    },
-    {
-     "size": 15,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 2,
-     "won": 1,
-     "expected": 0.4,
-     "avg_fair": 4.56
-    },
-    {
-     "size": 15,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 2,
-     "won": 1,
-     "expected": 0.9,
-     "avg_fair": 2.31
-    },
-    {
-     "size": 15,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 2,
-     "won": 2,
-     "expected": 1.1,
-     "avg_fair": 1.84
-    },
-    {
-     "size": 15,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 2,
-     "won": 2,
-     "expected": 1.2,
+     "played": 6,
+     "won": 6,
+     "expected": 3.7,
      "avg_fair": 1.62
     },
     {
-     "size": 20,
-     "target": 0.94,
-     "leg_max": 0.975,
+     "size": 8,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 6,
+     "won": 6,
+     "expected": 4.3,
+     "avg_fair": 1.38
+    },
+    {
+     "size": 8,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 6,
+     "won": 6,
+     "expected": 4.7,
+     "avg_fair": 1.28
+    },
+    {
+     "size": 10,
+     "target": 0.9,
+     "leg_max": 0.94,
      "played": 1,
      "won": 0,
      "expected": 0.3,
-     "avg_fair": 3.65
+     "avg_fair": 3.1
     },
     {
-     "size": 20,
+     "size": 10,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 1,
+     "won": 1,
+     "expected": 0.5,
+     "avg_fair": 2.0
+    },
+    {
+     "size": 10,
      "target": 0.96,
      "leg_max": 0.985,
      "played": 1,
-     "won": 0,
-     "expected": 0.4,
-     "avg_fair": 2.57
+     "won": 1,
+     "expected": 0.7,
+     "avg_fair": 1.47
     },
     {
-     "size": 20,
+     "size": 10,
      "target": 0.97,
      "leg_max": 0.99,
      "played": 1,
-     "won": 0,
-     "expected": 0.5,
-     "avg_fair": 1.93
+     "won": 1,
+     "expected": 0.8,
+     "avg_fair": 1.33
     }
    ]
   },
@@ -8663,39 +8300,33 @@
    "tickets": [
     {
      "size": 2,
-     "played": 95,
-     "won": 83,
-     "expected": 77.0
+     "played": 83,
+     "won": 73,
+     "expected": 67.1
     },
     {
      "size": 3,
-     "played": 61,
-     "won": 50,
-     "expected": 44.4
+     "played": 52,
+     "won": 44,
+     "expected": 37.9
     },
     {
      "size": 4,
-     "played": 64,
-     "won": 50,
-     "expected": 42.1
+     "played": 49,
+     "won": 40,
+     "expected": 32.1
     },
     {
      "size": 6,
-     "played": 27,
-     "won": 19,
-     "expected": 14.5
+     "played": 13,
+     "won": 10,
+     "expected": 7.0
     },
     {
      "size": 8,
-     "played": 19,
-     "won": 11,
-     "expected": 8.3
-    },
-    {
-     "size": 10,
-     "played": 14,
-     "won": 9,
-     "expected": 4.8
+     "played": 3,
+     "won": 0,
+     "expected": 1.4
     }
    ],
    "aim_trials": [
@@ -8703,253 +8334,181 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 95,
-     "won": 83,
-     "expected": 77.0,
+     "played": 83,
+     "won": 73,
+     "expected": 67.1,
      "avg_fair": 1.24
     },
     {
      "size": 2,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 96,
-     "won": 91,
-     "expected": 85.9,
+     "played": 83,
+     "won": 80,
+     "expected": 74.3,
      "avg_fair": 1.12
     },
     {
      "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 96,
-     "won": 95,
-     "expected": 88.8,
+     "played": 83,
+     "won": 82,
+     "expected": 76.9,
      "avg_fair": 1.08
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 96,
-     "won": 96,
-     "expected": 90.3,
+     "played": 83,
+     "won": 83,
+     "expected": 78.2,
      "avg_fair": 1.06
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 61,
-     "won": 50,
-     "expected": 44.4,
+     "played": 52,
+     "won": 44,
+     "expected": 37.9,
      "avg_fair": 1.37
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 61,
-     "won": 53,
-     "expected": 51.6,
+     "played": 52,
+     "won": 45,
+     "expected": 44.0,
      "avg_fair": 1.18
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 61,
-     "won": 59,
-     "expected": 54.3,
+     "played": 52,
+     "won": 51,
+     "expected": 46.4,
      "avg_fair": 1.12
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 61,
-     "won": 61,
-     "expected": 55.7,
-     "avg_fair": 1.1
+     "played": 52,
+     "won": 52,
+     "expected": 47.6,
+     "avg_fair": 1.09
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 64,
-     "won": 50,
-     "expected": 42.1,
+     "played": 49,
+     "won": 40,
+     "expected": 32.1,
      "avg_fair": 1.53
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 64,
-     "won": 56,
-     "expected": 51.1,
+     "played": 49,
+     "won": 42,
+     "expected": 39.1,
      "avg_fair": 1.25
     },
     {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 64,
-     "won": 62,
-     "expected": 54.8,
+     "played": 49,
+     "won": 48,
+     "expected": 42.1,
      "avg_fair": 1.17
     },
     {
      "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 65,
-     "won": 65,
-     "expected": 57.5,
-     "avg_fair": 1.13
+     "played": 49,
+     "won": 49,
+     "expected": 43.6,
+     "avg_fair": 1.12
     },
     {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 27,
-     "won": 19,
-     "expected": 14.5,
-     "avg_fair": 1.87
+     "played": 13,
+     "won": 10,
+     "expected": 7.0,
+     "avg_fair": 1.85
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 28,
-     "won": 22,
-     "expected": 19.8,
+     "played": 13,
+     "won": 11,
+     "expected": 9.2,
      "avg_fair": 1.41
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 28,
-     "won": 26,
-     "expected": 22.1,
-     "avg_fair": 1.27
+     "played": 13,
+     "won": 11,
+     "expected": 10.3,
+     "avg_fair": 1.26
     },
     {
      "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 29,
-     "won": 29,
-     "expected": 23.8,
-     "avg_fair": 1.22
+     "played": 13,
+     "won": 13,
+     "expected": 10.8,
+     "avg_fair": 1.2
     },
     {
      "size": 8,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 19,
-     "won": 11,
-     "expected": 8.3,
-     "avg_fair": 2.31
+     "played": 3,
+     "won": 0,
+     "expected": 1.4,
+     "avg_fair": 2.23
     },
     {
      "size": 8,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 19,
-     "won": 13,
-     "expected": 11.9,
+     "played": 3,
+     "won": 1,
+     "expected": 1.9,
      "avg_fair": 1.6
     },
     {
      "size": 8,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 19,
-     "won": 14,
-     "expected": 13.8,
-     "avg_fair": 1.38
+     "played": 3,
+     "won": 0,
+     "expected": 2.2,
+     "avg_fair": 1.37
     },
     {
      "size": 8,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 19,
-     "won": 17,
-     "expected": 14.5,
-     "avg_fair": 1.31
-    },
-    {
-     "size": 10,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 14,
-     "won": 9,
-     "expected": 4.8,
-     "avg_fair": 2.93
-    },
-    {
-     "size": 10,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 14,
-     "won": 10,
-     "expected": 7.8,
-     "avg_fair": 1.81
-    },
-    {
-     "size": 10,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 14,
-     "won": 11,
-     "expected": 9.1,
-     "avg_fair": 1.55
-    },
-    {
-     "size": 10,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 15,
-     "won": 14,
-     "expected": 10.4,
-     "avg_fair": 1.45
-    },
-    {
-     "size": 15,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 1,
-     "won": 0,
-     "expected": 0.2,
-     "avg_fair": 5.65
-    },
-    {
-     "size": 15,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 1,
-     "won": 0,
-     "expected": 0.4,
-     "avg_fair": 2.4
-    },
-    {
-     "size": 15,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 1,
-     "won": 0,
-     "expected": 0.6,
-     "avg_fair": 1.8
-    },
-    {
-     "size": 15,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 1,
-     "won": 0,
-     "expected": 0.6,
-     "avg_fair": 1.65
+     "played": 3,
+     "won": 3,
+     "expected": 2.3,
+     "avg_fair": 1.28
     }
    ]
   },
@@ -9752,39 +9311,39 @@
    "tickets": [
     {
      "size": 2,
-     "played": 121,
-     "won": 95,
-     "expected": 97.8
+     "played": 104,
+     "won": 85,
+     "expected": 83.7
     },
     {
      "size": 3,
-     "played": 84,
-     "won": 60,
-     "expected": 60.8
+     "played": 72,
+     "won": 53,
+     "expected": 52.0
     },
     {
      "size": 4,
-     "played": 60,
-     "won": 40,
-     "expected": 39.5
+     "played": 35,
+     "won": 22,
+     "expected": 22.7
     },
     {
      "size": 6,
-     "played": 34,
-     "won": 20,
-     "expected": 19.0
+     "played": 6,
+     "won": 4,
+     "expected": 3.4
     },
     {
      "size": 8,
-     "played": 13,
-     "won": 7,
-     "expected": 6.0
+     "played": 3,
+     "won": 1,
+     "expected": 1.3
     },
     {
      "size": 10,
-     "played": 5,
-     "won": 2,
-     "expected": 2.0
+     "played": 1,
+     "won": 0,
+     "expected": 0.4
     }
    ],
    "aim_trials": [
@@ -9792,280 +9351,217 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 121,
-     "won": 95,
-     "expected": 97.8,
+     "played": 104,
+     "won": 85,
+     "expected": 83.7,
      "avg_fair": 1.24
     },
     {
      "size": 2,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 128,
-     "won": 110,
-     "expected": 114.1,
+     "played": 104,
+     "won": 91,
+     "expected": 92.6,
      "avg_fair": 1.12
     },
     {
      "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 128,
-     "won": 117,
-     "expected": 117.2,
+     "played": 104,
+     "won": 96,
+     "expected": 95.2,
      "avg_fair": 1.09
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 128,
-     "won": 123,
-     "expected": 119.6,
+     "played": 104,
+     "won": 101,
+     "expected": 97.3,
      "avg_fair": 1.07
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 84,
-     "won": 60,
-     "expected": 60.8,
-     "avg_fair": 1.38
+     "played": 72,
+     "won": 53,
+     "expected": 52.0,
+     "avg_fair": 1.39
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 85,
-     "won": 70,
-     "expected": 71.5,
+     "played": 72,
+     "won": 62,
+     "expected": 60.6,
      "avg_fair": 1.19
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 85,
-     "won": 77,
-     "expected": 74.3,
+     "played": 72,
+     "won": 69,
+     "expected": 63.0,
      "avg_fair": 1.14
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 85,
-     "won": 80,
-     "expected": 76.6,
+     "played": 72,
+     "won": 69,
+     "expected": 64.9,
      "avg_fair": 1.11
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 60,
-     "won": 40,
-     "expected": 39.5,
-     "avg_fair": 1.52
+     "played": 35,
+     "won": 22,
+     "expected": 22.7,
+     "avg_fair": 1.55
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 62,
-     "won": 50,
-     "expected": 49.1,
-     "avg_fair": 1.26
+     "played": 35,
+     "won": 33,
+     "expected": 27.7,
+     "avg_fair": 1.27
     },
     {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 62,
-     "won": 53,
-     "expected": 51.8,
+     "played": 35,
+     "won": 35,
+     "expected": 29.3,
      "avg_fair": 1.2
     },
     {
      "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 62,
-     "won": 58,
-     "expected": 53.9,
+     "played": 35,
+     "won": 34,
+     "expected": 30.5,
      "avg_fair": 1.15
     },
     {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 34,
-     "won": 20,
-     "expected": 19.0,
-     "avg_fair": 1.79
-    },
-    {
-     "size": 6,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 38,
-     "won": 29,
-     "expected": 26.6,
-     "avg_fair": 1.43
-    },
-    {
-     "size": 6,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 38,
-     "won": 34,
-     "expected": 28.8,
-     "avg_fair": 1.33
-    },
-    {
-     "size": 6,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 38,
-     "won": 32,
-     "expected": 30.3,
-     "avg_fair": 1.26
-    },
-    {
-     "size": 8,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 13,
-     "won": 7,
-     "expected": 6.0,
-     "avg_fair": 2.18
-    },
-    {
-     "size": 8,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 21,
-     "won": 16,
-     "expected": 13.0,
-     "avg_fair": 1.62
-    },
-    {
-     "size": 8,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 21,
-     "won": 17,
-     "expected": 14.2,
-     "avg_fair": 1.49
-    },
-    {
-     "size": 8,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 21,
-     "won": 18,
-     "expected": 15.1,
-     "avg_fair": 1.4
-    },
-    {
-     "size": 10,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 5,
-     "won": 2,
-     "expected": 2.0,
-     "avg_fair": 2.5
-    },
-    {
-     "size": 10,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 8,
-     "won": 6,
-     "expected": 4.5,
+     "played": 6,
+     "won": 4,
+     "expected": 3.4,
      "avg_fair": 1.78
     },
     {
+     "size": 6,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 6,
+     "won": 6,
+     "expected": 4.2,
+     "avg_fair": 1.42
+    },
+    {
+     "size": 6,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 6,
+     "won": 6,
+     "expected": 4.4,
+     "avg_fair": 1.35
+    },
+    {
+     "size": 6,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 6,
+     "won": 6,
+     "expected": 4.9,
+     "avg_fair": 1.22
+    },
+    {
+     "size": 8,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 3,
+     "won": 1,
+     "expected": 1.3,
+     "avg_fair": 2.29
+    },
+    {
+     "size": 8,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 3,
+     "won": 3,
+     "expected": 1.9,
+     "avg_fair": 1.57
+    },
+    {
+     "size": 8,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 3,
+     "won": 3,
+     "expected": 2.1,
+     "avg_fair": 1.44
+    },
+    {
+     "size": 8,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 3,
+     "won": 3,
+     "expected": 2.2,
+     "avg_fair": 1.36
+    },
+    {
+     "size": 10,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 1,
+     "won": 0,
+     "expected": 0.4,
+     "avg_fair": 2.82
+    },
+    {
+     "size": 10,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 1,
+     "won": 1,
+     "expected": 0.6,
+     "avg_fair": 1.75
+    },
+    {
      "size": 10,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 8,
-     "won": 6,
-     "expected": 5.1,
+     "played": 1,
+     "won": 1,
+     "expected": 0.6,
      "avg_fair": 1.58
     },
     {
      "size": 10,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 8,
-     "won": 6,
-     "expected": 5.6,
-     "avg_fair": 1.45
-    },
-    {
-     "size": 15,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 1,
-     "won": 0,
-     "expected": 0.2,
-     "avg_fair": 4.41
-    },
-    {
-     "size": 15,
-     "target": 0.94,
-     "leg_max": 0.975,
      "played": 1,
      "won": 1,
-     "expected": 0.4,
-     "avg_fair": 2.29
-    },
-    {
-     "size": 15,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 1,
-     "won": 1,
-     "expected": 0.5,
-     "avg_fair": 2.2
-    },
-    {
-     "size": 15,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 1,
-     "won": 1,
-     "expected": 0.5,
-     "avg_fair": 2.0
-    },
-    {
-     "size": 20,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 1,
-     "won": 1,
-     "expected": 0.3,
-     "avg_fair": 3.66
-    },
-    {
-     "size": 20,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 1,
-     "won": 1,
-     "expected": 0.3,
-     "avg_fair": 3.22
-    },
-    {
-     "size": 20,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 1,
-     "won": 1,
-     "expected": 0.3,
-     "avg_fair": 2.98
+     "expected": 0.7,
+     "avg_fair": 1.48
     }
    ]
   },
@@ -10938,39 +10434,33 @@
    "tickets": [
     {
      "size": 2,
-     "played": 105,
-     "won": 92,
-     "expected": 85.6
+     "played": 94,
+     "won": 83,
+     "expected": 76.5
     },
     {
      "size": 3,
-     "played": 70,
-     "won": 59,
-     "expected": 51.6
+     "played": 65,
+     "won": 54,
+     "expected": 47.9
     },
     {
      "size": 4,
-     "played": 60,
-     "won": 48,
-     "expected": 40.1
+     "played": 42,
+     "won": 33,
+     "expected": 28.0
     },
     {
      "size": 6,
-     "played": 33,
-     "won": 20,
-     "expected": 18.5
+     "played": 3,
+     "won": 0,
+     "expected": 1.7
     },
     {
      "size": 8,
-     "played": 16,
-     "won": 9,
-     "expected": 7.3
-    },
-    {
-     "size": 10,
-     "played": 10,
-     "won": 4,
-     "expected": 3.8
+     "played": 1,
+     "won": 0,
+     "expected": 0.5
     }
    ],
    "aim_trials": [
@@ -10978,253 +10468,181 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 105,
-     "won": 92,
-     "expected": 85.6,
+     "played": 94,
+     "won": 83,
+     "expected": 76.5,
      "avg_fair": 1.23
     },
     {
      "size": 2,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 105,
-     "won": 88,
-     "expected": 92.8,
+     "played": 94,
+     "won": 77,
+     "expected": 83.5,
      "avg_fair": 1.13
     },
     {
      "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 105,
-     "won": 88,
-     "expected": 96.4,
-     "avg_fair": 1.09
+     "played": 94,
+     "won": 77,
+     "expected": 86.8,
+     "avg_fair": 1.08
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 105,
-     "won": 99,
-     "expected": 98.5,
-     "avg_fair": 1.07
+     "played": 94,
+     "won": 88,
+     "expected": 88.7,
+     "avg_fair": 1.06
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 70,
-     "won": 59,
-     "expected": 51.6,
+     "played": 65,
+     "won": 54,
+     "expected": 47.9,
      "avg_fair": 1.36
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 70,
-     "won": 55,
-     "expected": 58.4,
+     "played": 65,
+     "won": 50,
+     "expected": 54.3,
      "avg_fair": 1.2
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 70,
-     "won": 50,
-     "expected": 61.9,
+     "played": 65,
+     "won": 46,
+     "expected": 57.6,
      "avg_fair": 1.13
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 70,
-     "won": 62,
-     "expected": 64.0,
+     "played": 65,
+     "won": 58,
+     "expected": 59.6,
      "avg_fair": 1.09
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 60,
-     "won": 48,
-     "expected": 40.1,
+     "played": 42,
+     "won": 33,
+     "expected": 28.0,
      "avg_fair": 1.5
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 60,
-     "won": 45,
-     "expected": 47.2,
+     "played": 42,
+     "won": 34,
+     "expected": 33.1,
      "avg_fair": 1.27
     },
     {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 60,
-     "won": 42,
-     "expected": 50.6,
-     "avg_fair": 1.19
+     "played": 42,
+     "won": 29,
+     "expected": 35.7,
+     "avg_fair": 1.18
     },
     {
      "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 60,
-     "won": 49,
-     "expected": 52.9,
-     "avg_fair": 1.14
+     "played": 42,
+     "won": 34,
+     "expected": 37.3,
+     "avg_fair": 1.13
     },
     {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 33,
-     "won": 20,
-     "expected": 18.5,
-     "avg_fair": 1.79
+     "played": 3,
+     "won": 0,
+     "expected": 1.7,
+     "avg_fair": 1.78
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 33,
-     "won": 18,
-     "expected": 23.0,
-     "avg_fair": 1.44
+     "played": 3,
+     "won": 1,
+     "expected": 2.1,
+     "avg_fair": 1.45
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 33,
-     "won": 16,
-     "expected": 25.2,
-     "avg_fair": 1.31
+     "played": 3,
+     "won": 0,
+     "expected": 2.5,
+     "avg_fair": 1.21
     },
     {
      "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 33,
-     "won": 21,
-     "expected": 26.5,
+     "played": 3,
+     "won": 0,
+     "expected": 2.5,
+     "avg_fair": 1.19
+    },
+    {
+     "size": 8,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 1,
+     "won": 0,
+     "expected": 0.5,
+     "avg_fair": 2.13
+    },
+    {
+     "size": 8,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 1,
+     "won": 0,
+     "expected": 0.6,
+     "avg_fair": 1.65
+    },
+    {
+     "size": 8,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 1,
+     "won": 0,
+     "expected": 0.8,
+     "avg_fair": 1.29
+    },
+    {
+     "size": 8,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 1,
+     "won": 0,
+     "expected": 0.8,
      "avg_fair": 1.25
-    },
-    {
-     "size": 8,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 16,
-     "won": 9,
-     "expected": 7.3,
-     "avg_fair": 2.2
-    },
-    {
-     "size": 8,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 17,
-     "won": 10,
-     "expected": 10.7,
-     "avg_fair": 1.61
-    },
-    {
-     "size": 8,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 17,
-     "won": 9,
-     "expected": 11.9,
-     "avg_fair": 1.44
-    },
-    {
-     "size": 8,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 17,
-     "won": 10,
-     "expected": 12.6,
-     "avg_fair": 1.35
-    },
-    {
-     "size": 10,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 10,
-     "won": 4,
-     "expected": 3.8,
-     "avg_fair": 2.65
-    },
-    {
-     "size": 10,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 12,
-     "won": 5,
-     "expected": 6.6,
-     "avg_fair": 1.82
-    },
-    {
-     "size": 10,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 12,
-     "won": 5,
-     "expected": 7.5,
-     "avg_fair": 1.62
-    },
-    {
-     "size": 10,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 12,
-     "won": 5,
-     "expected": 7.9,
-     "avg_fair": 1.52
-    },
-    {
-     "size": 15,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 1,
-     "won": 0,
-     "expected": 0.2,
-     "avg_fair": 4.53
-    },
-    {
-     "size": 15,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 1,
-     "won": 0,
-     "expected": 0.4,
-     "avg_fair": 2.43
-    },
-    {
-     "size": 15,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 1,
-     "won": 0,
-     "expected": 0.5,
-     "avg_fair": 1.9
-    },
-    {
-     "size": 15,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 1,
-     "won": 0,
-     "expected": 0.5,
-     "avg_fair": 1.84
     }
    ]
   },
@@ -12090,33 +11508,33 @@
    "tickets": [
     {
      "size": 2,
-     "played": 66,
-     "won": 56,
-     "expected": 53.3
+     "played": 53,
+     "won": 44,
+     "expected": 42.9
     },
     {
      "size": 3,
-     "played": 50,
-     "won": 38,
-     "expected": 36.6
+     "played": 47,
+     "won": 37,
+     "expected": 34.3
     },
     {
      "size": 4,
-     "played": 48,
-     "won": 32,
-     "expected": 31.7
+     "played": 43,
+     "won": 31,
+     "expected": 28.3
     },
     {
      "size": 6,
-     "played": 44,
-     "won": 24,
-     "expected": 23.2
+     "played": 41,
+     "won": 23,
+     "expected": 21.7
     },
     {
      "size": 8,
-     "played": 43,
-     "won": 22,
-     "expected": 18.5
+     "played": 42,
+     "won": 21,
+     "expected": 18.0
     },
     {
      "size": 10,
@@ -12130,180 +11548,180 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 66,
-     "won": 56,
-     "expected": 53.3,
+     "played": 53,
+     "won": 44,
+     "expected": 42.9,
      "avg_fair": 1.24
     },
     {
      "size": 2,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 66,
-     "won": 62,
-     "expected": 58.5,
+     "played": 53,
+     "won": 51,
+     "expected": 47.0,
      "avg_fair": 1.13
     },
     {
      "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 66,
-     "won": 56,
-     "expected": 60.9,
+     "played": 53,
+     "won": 44,
+     "expected": 48.9,
      "avg_fair": 1.08
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 66,
-     "won": 65,
-     "expected": 62.0,
+     "played": 53,
+     "won": 53,
+     "expected": 49.9,
      "avg_fair": 1.06
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 50,
-     "won": 38,
-     "expected": 36.6,
+     "played": 47,
+     "won": 37,
+     "expected": 34.3,
      "avg_fair": 1.37
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 50,
-     "won": 46,
-     "expected": 41.6,
+     "played": 47,
+     "won": 43,
+     "expected": 39.1,
      "avg_fair": 1.2
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 50,
-     "won": 42,
-     "expected": 44.3,
+     "played": 47,
+     "won": 39,
+     "expected": 41.7,
      "avg_fair": 1.13
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 50,
-     "won": 50,
-     "expected": 45.5,
+     "played": 47,
+     "won": 47,
+     "expected": 42.9,
      "avg_fair": 1.1
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 48,
-     "won": 32,
-     "expected": 31.7,
+     "played": 43,
+     "won": 31,
+     "expected": 28.3,
      "avg_fair": 1.52
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 48,
-     "won": 41,
-     "expected": 37.6,
+     "played": 43,
+     "won": 37,
+     "expected": 33.5,
      "avg_fair": 1.28
     },
     {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 48,
-     "won": 40,
-     "expected": 40.8,
+     "played": 43,
+     "won": 37,
+     "expected": 36.5,
      "avg_fair": 1.18
     },
     {
      "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 48,
-     "won": 46,
-     "expected": 42.3,
+     "played": 43,
+     "won": 42,
+     "expected": 38.0,
      "avg_fair": 1.13
     },
     {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 44,
-     "won": 24,
-     "expected": 23.2,
-     "avg_fair": 1.9
+     "played": 41,
+     "won": 23,
+     "expected": 21.7,
+     "avg_fair": 1.89
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 44,
-     "won": 33,
-     "expected": 30.4,
+     "played": 41,
+     "won": 31,
+     "expected": 28.3,
      "avg_fair": 1.45
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 44,
-     "won": 32,
-     "expected": 34.4,
+     "played": 41,
+     "won": 31,
+     "expected": 32.1,
      "avg_fair": 1.28
     },
     {
      "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 44,
-     "won": 42,
-     "expected": 36.4,
-     "avg_fair": 1.21
+     "played": 41,
+     "won": 40,
+     "expected": 34.1,
+     "avg_fair": 1.2
     },
     {
      "size": 8,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 43,
-     "won": 22,
-     "expected": 18.5,
+     "played": 42,
+     "won": 21,
+     "expected": 18.0,
      "avg_fair": 2.33
     },
     {
      "size": 8,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 43,
-     "won": 29,
-     "expected": 26.2,
+     "played": 42,
+     "won": 28,
+     "expected": 25.6,
      "avg_fair": 1.64
     },
     {
      "size": 8,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 43,
-     "won": 31,
-     "expected": 31.1,
+     "played": 42,
+     "won": 30,
+     "expected": 30.3,
      "avg_fair": 1.38
     },
     {
      "size": 8,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 43,
-     "won": 41,
-     "expected": 33.6,
+     "played": 42,
+     "won": 40,
+     "expected": 32.8,
      "avg_fair": 1.28
     },
     {
@@ -12346,73 +11764,37 @@
      "size": 15,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 14,
-     "won": 4,
-     "expected": 2.9,
-     "avg_fair": 4.92
+     "played": 3,
+     "won": 1,
+     "expected": 0.6,
+     "avg_fair": 4.86
     },
     {
      "size": 15,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 14,
-     "won": 7,
-     "expected": 5.7,
-     "avg_fair": 2.46
+     "played": 3,
+     "won": 1,
+     "expected": 1.2,
+     "avg_fair": 2.54
     },
     {
      "size": 15,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 14,
-     "won": 8,
-     "expected": 7.6,
-     "avg_fair": 1.84
-    },
-    {
-     "size": 15,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 14,
-     "won": 11,
-     "expected": 8.7,
-     "avg_fair": 1.61
-    },
-    {
-     "size": 20,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 14,
+     "played": 3,
      "won": 2,
-     "expected": 1.7,
-     "avg_fair": 8.41
+     "expected": 1.6,
+     "avg_fair": 1.93
     },
     {
-     "size": 20,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 14,
-     "won": 6,
-     "expected": 4.3,
-     "avg_fair": 3.24
-    },
-    {
-     "size": 20,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 14,
-     "won": 7,
-     "expected": 6.3,
-     "avg_fair": 2.22
-    },
-    {
-     "size": 20,
+     "size": 15,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 14,
-     "won": 8,
-     "expected": 7.2,
-     "avg_fair": 1.94
+     "played": 3,
+     "won": 3,
+     "expected": 1.9,
+     "avg_fair": 1.58
     }
    ]
   }
