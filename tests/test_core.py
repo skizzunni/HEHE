@@ -240,6 +240,22 @@ class BotFreshness(unittest.TestCase):
             self.assertIsNone(K.board_age(bad), bad)      # treated as stale by the caller
         self.assertFalse(K.LIVE)                          # practice until the owner switches it
 
+    def test_practice_tickets_never_block_forever(self):
+        import kalshi_bot as K
+        now = dt.datetime(2026, 10, 18, 4, 30, tzinfo=dt.timezone.utc)
+
+        def settle(m, ts="2026-10-16T18:00:28+00:00"):
+            h = dict(ts=ts, count=2, ask=0.638)
+            K.settle_practice(h, m, now)
+            return h.get("result"), h.get("profit")
+        self.assertEqual(settle({"result": "yes"}), ("won", 0.72))
+        self.assertEqual(settle({"result": "", "status": "settled", "settlement_value": 85}), ("settled", 0.42))
+        self.assertEqual(settle({"result": "", "status": "closed"}), (None, None))
+        self.assertEqual(settle({"result": "", "status": "closed"}, ts="2026-10-10T18:00:00+00:00"),
+                         ("expired", None))
+        s = K.summary([dict(profit=1.0, count=2, ask=.5), dict(result="expired", count=2, ask=.6)])
+        self.assertEqual((s["settled"], s["profit"]), (1, 1.0))      # expired kept out of the record
+
 
 if __name__ == "__main__":
     unittest.main()

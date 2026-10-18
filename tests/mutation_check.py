@@ -30,6 +30,7 @@ MUTATIONS = [
      "test_board_age"),
     ("ufc_props.py", "    return m >= r * ROUND_MIN - 0.01\n", "    return None\n", "test_clock_fallback"),
     ("tools/daily_review.py", "STUCK_DAYS = 6 ", "STUCK_DAYS = 99 ", "test_stuck"),
+    ("bot/kalshi_bot.py", 'h["result"] = "expired"', "pass", "test_practice_tickets_never_block_forever"),
     ("board.html", "z.prob >= 0.8", "z.prob >= 0.95", "Winners parlay"),
     ("board.html", "if (mins < 20) { if (el) el.remove(); return; }", "return;",
      "stale copy must show the banner"),

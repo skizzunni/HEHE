@@ -636,6 +636,37 @@ def live_record(mine):
     return out
 
 
+PRACTICE_EXPIRE_DAYS = 4
+
+
+def settle_practice(h, m, now=None):
+    """Settle one practice ticket from Kalshi's market record, in place.
+
+    yes/no as usual. A combo whose leg was cancelled (a postponed game) can
+    settle at a partial value instead of yes/no; take that value. One still
+    unresolved a week after purchase is marked expired: it is practice, no
+    money is held, and left open it took one of MAX_OPEN slots for good (an
+    Oct 16 ticket with a never-finished MLB game stopped all practice buying)."""
+    if m.get("result") in ("yes", "no"):
+        h["result"] = "won" if m["result"] == "yes" else "lost"
+        h["profit"] = round(h["count"] * ((1 if h["result"] == "won" else 0) - h["ask"]), 2)
+        return
+    val = m.get("settlement_value_dollars")
+    if val is None and m.get("settlement_value") is not None:
+        val = m["settlement_value"] / 100
+    if m.get("status") in ("settled", "finalized") and val is not None:
+        h["result"] = "settled"
+        h["profit"] = round(h["count"] * (float(val) - h["ask"]), 2)
+        return
+    now = now or dt.datetime.now(dt.timezone.utc)
+    try:
+        bought = dt.datetime.fromisoformat(h["ts"].replace("Z", "+00:00"))
+    except (KeyError, TypeError, ValueError):
+        return
+    if (now - bought).days >= PRACTICE_EXPIRE_DAYS:
+        h["result"] = "expired"                 # no profit: excluded from the record
+
+
 def grade_practice(history, budget=25):
     """Settle practice tickets against Kalshi's result for the same combo."""
     for h in history:
@@ -643,10 +674,7 @@ def grade_practice(history, budget=25):
             continue
         budget -= 1
         st, d = api("GET", f"/markets/{h['ticker']}", auth=False)
-        m = (d or {}).get("market") or {}
-        if m.get("result") in ("yes", "no"):
-            h["result"] = "won" if m["result"] == "yes" else "lost"
-            h["profit"] = round(h["count"] * ((1 if h["result"] == "won" else 0) - h["ask"]), 2)
+        settle_practice(h, (d or {}).get("market") or {})
 
 
 def summary(rows):
