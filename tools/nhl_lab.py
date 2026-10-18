@@ -29,7 +29,7 @@ import backtest as B                                          # noqa: E402
 import stacks as S                                            # noqa: E402
 
 OUT = os.path.join(ROOT, "data", "nhl_lab.json")
-GRID = [(e1, e2) for e1 in (0.0, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4) for e2 in (0.0, 0.1, 0.2)]
+GRID = [(e1, 0.0) for e1 in (0.0, 0.1, 0.2, 0.3)]
 
 
 def games():
@@ -79,7 +79,16 @@ def score(rows, priced):
         yl += [r["hs"] - r["as_"] >= 2, r["as_"] - r["hs"] >= 2]
         po.append(q[2])
         yo.append(r["hs"] + r["as_"] > r["total"])
-    return dict(n=len(po), ll_puck=round(ll(pl, yl), 4), ll_total=round(ll(po, yo), 4),
+    # favourite and underdog apart: the backtest's miss was underdogs
+    # winning by two or more far more often than said
+    fav = [(max(q[0], q[1]), (r["hs"] - r["as_"] >= 2) if q[0] >= q[1] else (r["as_"] - r["hs"] >= 2),
+            min(q[0], q[1]), (r["as_"] - r["hs"] >= 2) if q[0] >= q[1] else (r["hs"] - r["as_"] >= 2))
+           for r, q in zip(rows, priced) if q is not None]
+    nf = max(1, len(fav))
+    split = dict(fav_said=round(100 * sum(x[0] for x in fav) / nf, 1), fav_hit=round(100 * sum(x[1] for x in fav) / nf, 1),
+                 dog_said=round(100 * sum(x[2] for x in fav) / nf, 1), dog_hit=round(100 * sum(x[3] for x in fav) / nf, 1),
+                 one_goal=round(100 * sum(abs(r["hs"] - r["as_"]) == 1 for r in rows) / max(1, len(rows)), 1))
+    return dict(split, n=len(po), ll_puck=round(ll(pl, yl), 4), ll_total=round(ll(po, yo), 4),
                 said_minus=round(100 * sum(pl) / len(pl), 1), hit_minus=round(100 * sum(yl) / len(yl), 1),
                 said_over=round(100 * sum(po) / len(po), 1), hit_over=round(100 * sum(yo) / len(yo), 1))
 
