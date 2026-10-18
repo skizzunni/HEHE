@@ -1,5 +1,5 @@
 {
- "default": 0.09,
+ "default": 0.089,
  "detail": {
   "mlb": {
    "logloss": 0.6639,
@@ -9,10 +9,10 @@
    "weight": 0.05
   },
   "ncaaf": {
-   "logloss": 0.4523,
-   "market_only": 0.4523,
-   "model_only": 0.4817,
-   "n": 410,
+   "logloss": 0.4516,
+   "market_only": 0.4516,
+   "model_only": 0.4811,
+   "n": 412,
    "weight": 0.05
   },
   "nfl": {
@@ -37,7 +37,7 @@
    "weight": 0.3
   }
  },
- "updated": "2026-10-17T23:01-04:00",
+ "updated": "2026-10-17T23:07-04:00",
  "weights": {
   "mlb": 0.05,
   "ncaaf": 0.05,

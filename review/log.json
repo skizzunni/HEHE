@@ -1003,11 +1003,11 @@
     "hit": 86.7
    },
    "ncaaf": {
-    "all_hit": 81.2,
-    "calls": 446,
+    "all_hit": 81.3,
+    "calls": 448,
     "cutoff": 0.55,
-    "games": 490,
-    "hit": 83.4
+    "games": 492,
+    "hit": 83.5
    },
    "nfl": {
     "all_hit": 62.0,
@@ -1046,9 +1046,9 @@
    }
   },
   "clv": {
-   "avg": -0.19,
-   "beat": 39.5,
-   "n": 86
+   "avg": -0.23,
+   "beat": 38.6,
+   "n": 88
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1126,6 +1126,14 @@
     "price": null,
     "said": 65.6,
     "why": "margin 1 \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
+    "league": "col",
+    "pick": "Independiente Medell\u00edn",
+    "price": null,
+    "said": 72.5,
+    "why": "margin 2 \u00b7 called at 72%"
    },
    {
     "against_market": false,
@@ -1270,6 +1278,14 @@
     "price": null,
     "said": 74.1,
     "why": "margin 1 \u00b7 called at 74%"
+   },
+   {
+    "against_market": false,
+    "league": "mex2",
+    "pick": "Club Atl\u00e9tico Morelia",
+    "price": null,
+    "said": 83.9,
+    "why": "margin 1 \u00b7 called at 84%"
    },
    {
     "against_market": false,
@@ -1710,7 +1726,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -1744,7 +1760,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "10k",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -1769,7 +1785,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+25",
-    "won": 9
+    "won": 10
    },
    {
     "killed_by": [
@@ -1780,7 +1796,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+50",
-    "won": 9
+    "won": 10
    },
    {
     "killed_by": [
@@ -1791,7 +1807,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+100",
-    "won": 9
+    "won": 10
    },
    {
     "killed_by": [
@@ -1806,12 +1822,12 @@
    }
   ],
   "picks": {
-   "hit": 71.5,
-   "lost": 78,
-   "n": 274,
-   "roi": 0.7,
+   "hit": 71.3,
+   "lost": 80,
+   "n": 279,
+   "roi": 1.5,
    "said": 70.8,
-   "won": 196
+   "won": 199
   },
   "picks_by_league": {
    "arg": {
@@ -1871,11 +1887,11 @@
     "won": 4
    },
    "col": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
     "roi": 14.3,
-    "said": 80.2,
+    "said": 77.6,
     "won": 2
    },
    "ecu": {
@@ -2023,11 +2039,11 @@
     "won": 2
    },
    "mex2": {
-    "hit": 66.7,
-    "lost": 1,
-    "n": 3,
+    "hit": 50.0,
+    "lost": 2,
+    "n": 4,
     "roi": 15.4,
-    "said": 73.5,
+    "said": 76.1,
     "won": 2
    },
    "mls": {
@@ -2039,12 +2055,12 @@
     "won": 5
    },
    "ncaaf": {
-    "hit": 72.5,
+    "hit": 73.8,
     "lost": 11,
-    "n": 40,
-    "roi": -0.3,
-    "said": 71.1,
-    "won": 29
+    "n": 42,
+    "roi": 1.6,
+    "said": 71.3,
+    "won": 31
    },
    "ned": {
     "hit": 66.7,
@@ -2159,12 +2175,12 @@
     "won": 2
    },
    "usl": {
-    "hit": 71.4,
+    "hit": 75.0,
     "lost": 2,
-    "n": 7,
+    "n": 8,
     "roi": null,
-    "said": 77.2,
-    "won": 5
+    "said": 76.0,
+    "won": 6
    },
    "wnba": {
     "hit": 100.0,
@@ -2209,12 +2225,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 78.8,
-   "lost": 29,
-   "n": 137,
-   "roi": -2.3,
+   "hit": 78.6,
+   "lost": 30,
+   "n": 140,
+   "roi": -0.7,
    "said": 76.7,
-   "won": 108
+   "won": 110
   },
   "vs_market_14d": {
    "against": {
@@ -2226,12 +2242,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.0,
+    "hit": 68.2,
     "lost": 87,
-    "n": 272,
-    "roi": -2.0,
-    "said": 62.6,
-    "won": 185
+    "n": 274,
+    "roi": -1.7,
+    "said": 62.7,
+    "won": 187
    }
   },
   "weights": {
@@ -2243,10 +2259,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4523,
-    "market_only": 0.4523,
-    "model_only": 0.4817,
-    "n": 410,
+    "logloss": 0.4516,
+    "market_only": 0.4516,
+    "model_only": 0.4811,
+    "n": 412,
     "weight": 0.05
    },
    "nfl": {
