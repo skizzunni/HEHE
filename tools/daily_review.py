@@ -327,10 +327,16 @@ def review_day(day, ledger, locks, lottery, props):
     vs_mkt = dict(agree=summarize([e for e in recent if e.get("market_agrees") is True]),
                   against=summarize([e for e in recent if e.get("market_agrees") is False]))
 
+    import sys
+    if ROOT not in sys.path:
+        sys.path.insert(0, ROOT)
+
     def card(book):
         keys = (book.get("days") or {}).get(day, [])
         legs = [book["legs"][k] for k in keys if k in book.get("legs", {})]
-        return dict(n=len(legs), won=sum(L["status"] == "won" for L in legs),
+        import locks as _lk
+        return dict(plays={k: list(v) for k, v in _lk.plays(legs).items()},
+                    n=len(legs), won=sum(L["status"] == "won" for L in legs),
                     lost=[f'{L["label"]} ({L["match"]}) {L.get("score", "")}'.strip()
                           for L in legs if L["status"] == "lost"],
                     open=sum(L["status"] == "open" for L in legs))
@@ -390,13 +396,17 @@ def words(r, fit):
     a, b = r["vs_market_14d"]["agree"], r["vs_market_14d"]["against"]
     if a.get("n") and b.get("n"):
         out.append(f"With the market {a['hit']}% ({a['n']}); against it {b['hit']}% ({b['n']}).")
+    def named(v):
+        tags = (("winners", "Winners parlay"), ("best", "Best play"))
+        return "".join(f"; {t} top {v['plays'][k][0]} ({round(100 * v['plays'][k][1])}%) {v['plays'][k][2]}"
+                       for k, t in tags if k in (v.get("plays") or {}))
     lk = r["locks"]
     if lk["n"]:
-        out.append(f"Locks {lk['won']}/{lk['n']} won, {lk['open']} open"
+        out.append(f"Locks {lk['won']}/{lk['n']} won, {lk['open']} open" + named(lk)
                    + ("; lost: " + "; ".join(lk["lost"]) if lk["lost"] else "") + ".")
     sk = r.get("safe_locks") or {}
     if sk.get("n"):
-        out.append(f"Safe Locks {sk['won']}/{sk['n']} won, {sk['open']} open"
+        out.append(f"Safe Locks {sk['won']}/{sk['n']} won, {sk['open']} open" + named(sk)
                    + ("; lost: " + "; ".join(sk["lost"]) if sk["lost"] else "") + ".")
     for t in r["lottery"]:
         out.append(f"Lottery {t['tier']}: {t['status']} ({t['won']}/{t['legs']} legs won"
