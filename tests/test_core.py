@@ -214,6 +214,18 @@ class UfcGrading(unittest.TestCase):
                                            dict(method=None, minutes=3.0, rounds=3, winner="X")))
 
 
+class StuckSweep(unittest.TestCase):
+    """Anything still open a week after its game is reported, not left silent."""
+
+    def test_stuck(self):
+        import daily_review as R
+        led = {"a": dict(status="open", played="2026-10-01"), "b": dict(status="open", played="2026-10-17"),
+               "c": dict(status="won", played="2026-10-01")}
+        props = {"p": dict(status="open", date="2026-10-10"), "q": dict(status="open", date="2026-10-15")}
+        got = R.stuck(led, props, {"legs": {}}, {"days": {}}, dt.date(2026, 10, 18))
+        self.assertEqual(sorted(got), [("picks", "a"), ("props", "p")])
+
+
 class BotFreshness(unittest.TestCase):
     """The Kalshi bot never buys from tickets it cannot prove are fresh."""
 

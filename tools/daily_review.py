@@ -186,6 +186,30 @@ def fit_calls(graded):
     return cuts, detail
 
 
+STUCK_DAYS = 6          # every grader voids an unplayed game after 5 days
+
+
+def stuck(ledger, props, locks, lottery, today):
+    """Records still open a week after their game: by then every grader has
+    settled or voided them, so anything left means grading broke somewhere
+    (2026-10-18: a UFC prop waited on a result line ESPN never posted)."""
+    def old(d):
+        try:
+            return (today - dt.date.fromisoformat(str(d)[:10])).days >= STUCK_DAYS
+        except ValueError:
+            return False
+    out = [("picks", k) for k, e in ledger.items()
+           if e.get("status") == "open" and old(e.get("played") or e.get("date") or "")]
+    out += [("props", k) for k, e in props.items() if e.get("status") == "open" and old(e.get("date") or "")]
+    for name, book in (("locks", locks), ("safe locks", load("safe_locks.json", {"legs": {}}))):
+        out += [(name, k) for k, e in (book.get("legs") or {}).items()
+                if e.get("status") == "open" and old(e.get("date") or "")]
+    for d, v in (lottery.get("days") or {}).items():
+        out += [("lottery", f'{d} {L.get("label")}') for t in v.get("tickets") or []
+                for L in t["legs"] if L.get("status") == "open" and old(d)]
+    return out
+
+
 def audit(graded, props, locks):
     """Running checks on every split that can drift: each line is hit vs
     stated, flagged when it trails by more than two standard errors."""
@@ -342,6 +366,10 @@ def words(r, fit):
                    + (f", ROI {p['roi']:+}%" if p.get("roi") is not None else "") + ").")
     else:
         out.append("No picks settled yet.")
+    st = r.get("stuck") or []
+    if st:
+        out.append(f"STUCK {len(st)} record(s) open a week after their game -- grading is broken: "
+                   + "; ".join(f"{a} {b}" for a, b in st[:5]))
     for a in [a for a in (r.get("audit") or []) if a["flag"]]:
         out.append(f"TRAILING {a['name']}: {a['hit']}% hit vs {a['said']}% stated on {a['n']}")
     sc = r.get("strong") or {}
@@ -427,6 +455,7 @@ def main():
                   sort_keys=True)
     log[today.isoformat()]["calls"] = cdetail
     log[today.isoformat()]["audit"] = audit(graded, props, locks)
+    log[today.isoformat()]["stuck"] = stuck(ledger, props, locks, lottery, today)
     with open(log_path, "w") as fh:
         json.dump(log, fh, indent=1, sort_keys=True)
     latest = max(k for k, v in log.items() if v["picks"].get("n") or k == today.isoformat())
