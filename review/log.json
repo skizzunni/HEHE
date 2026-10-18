@@ -2323,9 +2323,9 @@
   ],
   "calls": {
    "arg": {
-    "all_hit": 59.1,
+    "all_hit": 58.3,
     "cutoff": null,
-    "games": 22,
+    "games": 24,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "atp": {
@@ -2378,9 +2378,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "col": {
-    "all_hit": 42.9,
+    "all_hit": 46.7,
     "cutoff": null,
-    "games": 14,
+    "games": 15,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "den": {
@@ -2672,6 +2672,14 @@
    "won": 6
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "arg",
+    "pick": "Estudiantes de La Plata",
+    "price": null,
+    "said": 75.5,
+    "why": "margin 1 \u00b7 called at 76%"
+   },
    {
     "against_market": false,
     "league": "atp",
@@ -3181,20 +3189,20 @@
   ],
   "picks": {
    "hit": 65.9,
-   "lost": 44,
-   "n": 129,
+   "lost": 45,
+   "n": 132,
    "roi": -3.4,
    "said": 69.5,
-   "won": 85
+   "won": 87
   },
   "picks_by_league": {
    "arg": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
     "roi": null,
-    "said": 70.4,
-    "won": 1
+    "said": 71.3,
+    "won": 2
    },
    "atp": {
     "hit": 58.8,
@@ -3237,12 +3245,12 @@
     "won": 3
    },
    "col": {
-    "hit": 0.0,
+    "hit": 50.0,
     "lost": 1,
-    "n": 1,
+    "n": 2,
     "roi": null,
-    "said": 67.0,
-    "won": 0
+    "said": 66.8,
+    "won": 1
    },
    "den": {
     "hit": 75.0,
@@ -3507,11 +3515,11 @@
    "won": 5
   },
   "strong": {
-   "hit": 67.5,
-   "lost": 13,
-   "n": 40,
+   "hit": 65.9,
+   "lost": 14,
+   "n": 41,
    "roi": 19.5,
-   "said": 78.0,
+   "said": 77.9,
    "won": 27
   },
   "stuck": [],
