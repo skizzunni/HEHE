@@ -846,7 +846,9 @@ function drawLocks(){
     + '">Safe Locks &middot; -2000 to -500</button></span></p>'
     + (SAFE ? '<p class="note">Heavy favourites only: each leg wins far more often, so all of them '
       + 'hitting together is far likelier than on the regular card &mdash; and it pays much less. '
-      + 'The regular Locks and their rules are unchanged.</p>' : '');
+      + 'The regular Locks and their rules are unchanged. Replayed on 11 past days, cards like this all hit '
+      + 'at least as often as the chance shown (misses bunch up on a few bad days rather than spreading out), '
+      + 'so treat the all-hit number as a floor, not a promise.</p>' : '');
   if(!L.length){
     panel.innerHTML = h + '<p class="empty">No FanDuel games left ' + day + '.</p></div>';
     return;
