@@ -250,11 +250,11 @@ def prop_tickets(games, tiers=(2, 3, 4, 6, 8), lo=0.75, hi=0.93, variants=3):
     and are independent. Props near 85% preferred."""
     pool = []
     for g in games:
-        best = [p for p in g["props"] if lo <= p["p"] <= hi]
-        # props the box score can settle first: they build the record that
-        # re-fits the margin (props_ledger); among them, nearest 85%
+        # only props the box score can settle: an ungradable leg leaves the
+        # ticket open forever and its market's margin is never re-fitted
         lg = g["id"].split(":", 1)[0]
-        best.sort(key=lambda p: (not props_ledger.gradable(lg, p["market"]), abs(p["p"] - 0.85)))
+        best = [p for p in g["props"] if lo <= p["p"] <= hi and props_ledger.gradable(lg, p["market"])]
+        best.sort(key=lambda p: abs(p["p"] - 0.85))
         if best:
             pool.append((g, best))
     out = {}
@@ -307,6 +307,8 @@ def mega_ticket(games, n=25, dec_lo=1.25, dec_hi=1.834, per_game=2):
         for P in g.get("props") or []:
             d = _dec(P.get("price"))
             if not P.get("fd") or not d or not dec_lo <= d <= dec_hi:
+                continue
+            if not props_ledger.gradable(g["id"].split(":", 1)[0], P["market"]):
                 continue
             p = P["p"]                     # the price, not the ladder model (see locks.py)
             pool.append(dict(P, p=round(p, 4), dec=d, match=g["match"], lg=g["lg"],

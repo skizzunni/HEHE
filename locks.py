@@ -30,6 +30,7 @@ import os
 from zoneinfo import ZoneInfo
 
 import fanduel
+import props_ledger
 import stacks
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -226,6 +227,10 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
         for P in pg.get("props") or []:
             d = _dec(P.get("price"))
             if not P.get("fd") or not d or not DEC_MIN <= d <= DEC_MAX:
+                continue
+            # only markets the box score can settle: anything else would sit
+            # open on the card forever and its margin is never tuned
+            if not props_ledger.gradable(pg["id"].split(":", 1)[0], P["market"]):
                 continue
             # an over/under prop's p is already de-vigged across both sides
             # every prop's p already carries its market's tuned margin
