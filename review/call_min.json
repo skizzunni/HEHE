@@ -116,9 +116,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "fra": {
-   "all_hit": 55.6,
+   "all_hit": 60.0,
    "cutoff": null,
-   "games": 9,
+   "games": 10,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "fra2": {
@@ -219,9 +219,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "nfl": {
-   "all_hit": 57.0,
+   "all_hit": 57.5,
    "cutoff": null,
-   "games": 86,
+   "games": 87,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "nhl": {
@@ -324,15 +324,15 @@
   }
  },
  "holdout": {
-  "all_hit": 66.1,
-  "all_n": 1015,
+  "all_hit": 66.2,
+  "all_n": 1017,
   "basis": "as published",
   "days": 17,
   "hit": 73.0,
   "n": 233,
   "simulated": {
    "hit": 68.2,
-   "n": 1015,
+   "n": 1017,
    "what": "old picks re-scored as the market favourite"
   },
   "since": "2026-09-20",
@@ -389,5 +389,5 @@
   "usl",
   "wsl"
  ],
- "updated": "2026-10-18T16:40-04:00"
+ "updated": "2026-10-18T16:45-04:00"
 }

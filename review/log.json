@@ -2201,10 +2201,10 @@
   },
   "props": {
    "fair": {
-    "n": 80,
-    "said_fair": 83.0,
-    "said_price": 85.3,
-    "won": 65
+    "n": 87,
+    "said_fair": 82.9,
+    "said_price": 85.4,
+    "won": 72
    },
    "n": 141,
    "said": 75.7,
@@ -2273,31 +2273,31 @@
    },
    {
     "flag": false,
-    "hit": 42.9,
-    "n": 14,
+    "hit": 37.5,
+    "n": 16,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 40.0
+    "said": 39.2
+   },
+   {
+    "flag": false,
+    "hit": 82.4,
+    "n": 17,
+    "name": "props nfl Receiving Yards",
+    "said": 78.9
+   },
+   {
+    "flag": false,
+    "hit": 87.1,
+    "n": 31,
+    "name": "props nfl Receptions",
+    "said": 80.6
    },
    {
     "flag": false,
     "hit": 80.0,
     "n": 15,
-    "name": "props nfl Receiving Yards",
-    "said": 79.4
-   },
-   {
-    "flag": false,
-    "hit": 85.7,
-    "n": 28,
-    "name": "props nfl Receptions",
-    "said": 80.4
-   },
-   {
-    "flag": false,
-    "hit": 78.6,
-    "n": 14,
     "name": "props nfl Rushing Yards",
-    "said": 79.2
+    "said": 79.6
    },
    {
     "flag": false,
@@ -2432,9 +2432,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "fra": {
-    "all_hit": 55.6,
+    "all_hit": 60.0,
     "cutoff": null,
-    "games": 9,
+    "games": 10,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "fra2": {
@@ -2535,9 +2535,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nfl": {
-    "all_hit": 57.0,
+    "all_hit": 57.5,
     "cutoff": null,
-    "games": 86,
+    "games": 87,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nhl": {
@@ -2640,9 +2640,9 @@
    }
   },
   "clv": {
-   "avg": 0.07,
-   "beat": 43.5,
-   "n": 23
+   "avg": 0.02,
+   "beat": 41.7,
+   "n": 24
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2661,15 +2661,15 @@
     "Indianapolis Colts +1.5 (Tennessee Titans at Indianapolis Colts) Tennessee Titans 26 - Indianapolis Colts 20"
    ],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      2,
      0.6185,
-     "open"
+     "won"
     ]
    },
-   "won": 5
+   "won": 6
   },
   "losses": [
    {
@@ -2988,10 +2988,11 @@
   "lottery": [
    {
     "killed_by": [
-     "Under 42.5 points"
+     "Under 42.5 points",
+     "Under 39.5 points"
     ],
     "legs": 7,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "100",
     "won": 1
@@ -3030,11 +3031,12 @@
    },
    {
     "killed_by": [
+     "Under 31.5 points",
      "Under 42.5 points",
      "New Orleans Saints -7.5"
     ],
     "legs": 10,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 3
@@ -3045,21 +3047,23 @@
      "Antonio Sivera: 4+ Goalkeeper Saves",
      "Neal Maupay: Anytime Goalscorer",
      "Matz Sels: 4+ Goalkeeper Saves",
-     "Marco Carnesecchi: 4+ Goalkeeper Saves"
+     "Marco Carnesecchi: 4+ Goalkeeper Saves",
+     "Yehvann Diouf: 4+ Goalkeeper Saves"
     ],
     "legs": 12,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k",
     "won": 2
    },
    {
     "killed_by": [
+     "Under 31.5 points",
      "Under 42.5 points",
      "New Orleans Saints -7.5"
     ],
     "legs": 10,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+25",
     "won": 3
@@ -3070,21 +3074,23 @@
      "Antonio Sivera: 4+ Goalkeeper Saves",
      "Neal Maupay: Anytime Goalscorer",
      "Matz Sels: 4+ Goalkeeper Saves",
-     "Marco Carnesecchi: 4+ Goalkeeper Saves"
+     "Marco Carnesecchi: 4+ Goalkeeper Saves",
+     "Yehvann Diouf: 4+ Goalkeeper Saves"
     ],
     "legs": 11,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+25",
     "won": 1
    },
    {
     "killed_by": [
+     "Under 31.5 points",
      "Under 42.5 points",
      "New Orleans Saints -7.5"
     ],
     "legs": 10,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+50",
     "won": 3
@@ -3095,22 +3101,24 @@
      "Antonio Sivera: 4+ Goalkeeper Saves",
      "Neal Maupay: Anytime Goalscorer",
      "Matz Sels: 4+ Goalkeeper Saves",
-     "Marco Carnesecchi: 4+ Goalkeeper Saves"
+     "Marco Carnesecchi: 4+ Goalkeeper Saves",
+     "Yehvann Diouf: 4+ Goalkeeper Saves"
     ],
     "legs": 11,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+50",
     "won": 1
    },
    {
     "killed_by": [
+     "Under 31.5 points",
      "Under 42.5 points",
      "New Orleans Saints -7.5",
      "Philadelphia Eagles -1.5"
     ],
     "legs": 9,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+100",
     "won": 2
@@ -3121,22 +3129,23 @@
      "Antonio Sivera: 4+ Goalkeeper Saves",
      "Neal Maupay: Anytime Goalscorer",
      "Matz Sels: 4+ Goalkeeper Saves",
-     "Marco Carnesecchi: 4+ Goalkeeper Saves"
+     "Marco Carnesecchi: 4+ Goalkeeper Saves",
+     "Yehvann Diouf: 4+ Goalkeeper Saves"
     ],
     "legs": 11,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+100",
     "won": 1
    }
   ],
   "picks": {
-   "hit": 66.4,
+   "hit": 66.9,
    "lost": 39,
-   "n": 116,
-   "roi": -7.8,
-   "said": 69.1,
-   "won": 77
+   "n": 118,
+   "roi": -4.5,
+   "said": 69.0,
+   "won": 79
   },
   "picks_by_league": {
    "arg": {
@@ -3212,12 +3221,12 @@
     "won": 3
    },
    "fra": {
-    "hit": 50.0,
+    "hit": 60.0,
     "lost": 2,
-    "n": 4,
+    "n": 5,
     "roi": null,
-    "said": 73.1,
-    "won": 2
+    "said": 73.3,
+    "won": 3
    },
    "ger": {
     "hit": 100.0,
@@ -3308,12 +3317,12 @@
     "won": 2
    },
    "nfl": {
-    "hit": 28.6,
+    "hit": 37.5,
     "lost": 5,
-    "n": 7,
-    "roi": -58.1,
-    "said": 59.5,
-    "won": 2
+    "n": 8,
+    "roi": -42.0,
+    "said": 58.8,
+    "won": 3
    },
    "nor": {
     "hit": 60.0,
@@ -3398,19 +3407,19 @@
   },
   "props": {
    "fair": {
-    "n": 80,
-    "said_fair": 83.0,
-    "said_price": 85.3,
-    "won": 65
+    "n": 87,
+    "said_fair": 82.9,
+    "said_price": 85.4,
+    "won": 72
    },
-   "n": 97,
-   "said": 71.5,
-   "won": 68
+   "n": 108,
+   "said": 71.3,
+   "won": 76
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      7,
@@ -3423,7 +3432,7 @@
      "open"
     ]
    },
-   "won": 3
+   "won": 4
   },
   "strong": {
    "hit": 68.6,
@@ -3444,12 +3453,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 67.0,
+    "hit": 67.2,
     "lost": 89,
-    "n": 270,
-    "roi": -2.4,
+    "n": 271,
+    "roi": -2.2,
     "said": 63.6,
-    "won": 181
+    "won": 182
    }
   },
   "weights": {
