@@ -1,9 +1,9 @@
 # Review 2026-10-17
 
-Picks 202-81 (71.4% vs 70.8% claimed, ROI +0.5%).
+Picks 203-81 (71.5% vs 70.8% claimed, ROI +0.8%).
 TRAILING props uel Shots: 40.0% hit vs 84.3% stated on 20
-Strong calls 111-31 (78.2% vs 76.8% claimed).
-Closing line value: -0.22 points on 90 picks; beat the close on 38.9%.
+Strong calls 112-31 (78.3% vs 76.7% claimed).
+Closing line value: -0.15 points on 91 picks; beat the close on 39.6%.
 - LOST arg Platense at 65.5%: margin 1 · called at 66%
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
@@ -85,7 +85,7 @@ Closing line value: -0.22 points on 90 picks; beat the close on 38.9%.
 - LOST wta Jeline Vandromme at 63.7%: lost 1-1 in sets · took it the distance · called at 64%
 - LOST wta Magdalena Frech at 65.4%: lost 1-1 in sets · took it the distance · called at 65%
 - LOST wta Mananchaya Sawangkaew at 57.4%: lost 0-2 in sets · never won a set · called at 57%
-With the market 68.1% (276); against it 37.8% (45).
+With the market 68.2% (277); against it 37.8% (45).
 Locks 8/11 won, 0 open; lost: Kayla Thornton: 5+ Points (ATL @ GS) 0; Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49; Under 56.5 points (Charlotte 49ers at Temple Owls) Charlotte 49ers 38 - Temple Owls 31.
 Safe Locks 0/11 won, 11 open.
 Lottery 100: lost (9/12 legs won, killed by Kayla Thornton: 5+ Points, Under 75.5 points, Under 65.5 points)
