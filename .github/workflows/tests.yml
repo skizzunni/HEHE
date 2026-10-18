@@ -1,0 +1,20 @@
+# The board's rule tests (tests/test_core.py) on every code change. A red run
+# here means a rule the owner set, or a fix already made once, has broken.
+name: tests
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/mlb-picks-review-jlx9w1]
+    paths:
+      - '**.py'
+      - '.github/workflows/tests.yml'
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python3 -W ignore -m unittest discover -s tests -v
