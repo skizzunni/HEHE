@@ -17,6 +17,7 @@ import fanduel
 HERE = os.path.dirname(os.path.abspath(__file__))
 HISTORY = os.path.join(HERE, "data", "ladder_history.json")
 LEAGUES = ("nfl", "ncaaf")
+MAX_ODDS = 2000
 
 
 def _load():
@@ -55,7 +56,10 @@ def log(slots, now=None):
                 main = (g.get("total") or {}).get("over") or [None, None]
                 rungs, spreads = {}, []
                 for kind, team, side, L, ref, price, where in fanduel.load_alts(g):
-                    if not price:
+                    try:
+                        if not price or abs(float(str(price).replace("+", ""))) > MAX_ODDS:
+                            continue             # -50000 / +3000 rungs say nothing
+                    except ValueError:
                         continue
                     if kind == "total":
                         rungs.setdefault(str(float(L)), {})[side] = price
