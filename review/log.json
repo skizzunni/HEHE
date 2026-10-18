@@ -2259,10 +2259,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 64.3,
-    "n": 42,
+    "hit": 62.8,
+    "n": 43,
     "name": "tennis Kalshi-priced",
-    "said": 71.1
+    "said": 71.0
    },
    {
     "flag": false,
@@ -2301,11 +2301,11 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "atp": {
-    "all_hit": 71.0,
-    "calls": 69,
+    "all_hit": 70.4,
+    "calls": 70,
     "cutoff": 0.65,
-    "games": 124,
-    "hit": 82.6
+    "games": 125,
+    "hit": 81.4
    },
    "aus": {
     "all_hit": 75.0,
@@ -2638,6 +2638,14 @@
   "losses": [
    {
     "against_market": false,
+    "league": "atp",
+    "pick": "Otto Virtanen",
+    "price": null,
+    "said": 67.4,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 67%"
+   },
+   {
+    "against_market": false,
     "league": "jpn",
     "pick": "Fagiano Okayama",
     "price": null,
@@ -2679,20 +2687,20 @@
   ],
   "lottery": [],
   "picks": {
-   "hit": 58.3,
-   "lost": 5,
-   "n": 12,
+   "hit": 53.8,
+   "lost": 6,
+   "n": 13,
    "roi": null,
-   "said": 62.4,
+   "said": 62.8,
    "won": 7
   },
   "picks_by_league": {
    "atp": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
+    "hit": 75.0,
+    "lost": 1,
+    "n": 4,
     "roi": null,
-    "said": 62.4,
+    "said": 63.6,
     "won": 3
    },
    "jpn": {
@@ -2731,11 +2739,11 @@
    "won": 0
   },
   "strong": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 1,
+   "hit": 50.0,
+   "lost": 1,
+   "n": 2,
    "roi": null,
-   "said": 75.0,
+   "said": 71.2,
    "won": 1
   },
   "stuck": [],
