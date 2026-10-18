@@ -22,7 +22,7 @@ what is missing and the next step. Updated 2026-10-18.
 | O1 | Higher win % without faking | ongoing | picks 185-70 (72.5% vs 70.9% said), strong calls 102-26 (79.7%) on 2026-10-17 review | weekly labs; act only on both-halves results |
 | O2 | Better 10-leg tickets | done (backtest) | NFL totals split normal: backtest NFL 10-leg 7/29 -> 18/29; all NFL markets within 2 SE | confirm on live NFL Sundays (scheduled review 2026-10-19 05:30 UTC) |
 | O3 | Locks that "all win" | partly | regular card is ~8% all-hit by arithmetic (replay 7.7% vs 7.2%); **Safe Locks** (-2000 to -500) added: 90-100c legs won 92.0% vs 93.1c; replays show all-hit at or above stated | first live Safe Locks results (scheduled review) |
-| O3b | "Winners I can parlay together and still win" (added 2026-10-18) | done (display) | Safe Locks legs 93-95% each, backed by 92-95c legs winning 93.2% and 95-98c winning 96.7%; the card now names the **Winners parlay** (largest top-N slice at 80%+ all-hit) and the Best play (50%+) | live check: Winners parlay hit rate vs its stated chance, tracked from the Safe Locks record |
+| O3b | "Winners I can parlay together and still win" (added 2026-10-18) | done (display) | Safe Locks legs 93-95% each, backed by 92-95c legs winning 93.2% and 95-98c winning 96.7%; the card now names the **Winners parlay** (largest top-N slice at 80%+ all-hit) and the Best play (50%+) | **tracked** (2026-10-18): each card's Winners parlay and Best play are graded as the exact slice shown (`locks.plays`, voids drop off as at FanDuel) and the record shows hit rate vs promised. Regular Locks so far: Winners parlay 1/1 (80% promised), Best play 1/3 (64%) -- far too few days to judge | compare at 20+ settled days per card |
 | O4 | Bigger, better leg pool | done | soccer added to Locks/Safe Locks from FanDuel's soccer page, limited to the result and double chance (the two the soccer lab validated). Live run 2026-10-18 02:36 UTC matched every listed game in EPL 4/4, La Liga 4/4, Ligue 1 5/5, Bundesliga 2/2, Austria 3/3, Scotland, MLS, South Africa; Safe Locks took "Cruz Azul or draw" -1500. Grading tested offline: draw, away double chance, void, live | first soccer legs settle Sunday; unmatched rows are games FanDuel does not list (Colombia, Uruguay, NWSL) |
 | O5 | Props fixed | done | ungradable markets removed from locks/tickets/mega; every FanDuel prop name gradable (checked NFL/NBA/WNBA/NHL/MLB) | first NFL props grade Sunday |
 | O6 | NFL TD scorers, every game, realistic | done (NFL) | 12 games logged; chances sum to the total's expected TDs | TD lab at 20 graded games |
@@ -36,7 +36,7 @@ what is missing and the next step. Updated 2026-10-18.
 
 Run by `.github/workflows/tests.yml` on every code or page push:
 
-* `tests/test_core.py` -- 25 unit tests (standard library, no network): Locks -400..-120 and
+* `tests/test_core.py` -- 26 unit tests (standard library, no network): Locks -400..-120 and
   Safe -2000..-500 windows, one leg per game and the kind cap, soccer limited to validated
   kinds, soccer grading (draw / void / live), soccer name matching and the reversed-fixture
   guard, NFL upper tail, wind scaling, ungradable props kept off tickets, every FanDuel prop
@@ -47,8 +47,8 @@ Run by `.github/workflows/tests.yml` on every code or page push:
   minutes old and absent when fresh; Locks -> Safe Locks renders 11 legs, the Winners parlay
   (top 4, 80%) and Best play (top 10, 54%); Results health box lists a trailing split, a
   never-settled record and bad data, and reads "All checks passing" when clean.
-* `tests/mutation_check.py` -- breaks 14 protected rules one at a time (bytecode cache off) and
-  requires each to be caught; 14/14 caught 2026-10-18.
+* `tests/mutation_check.py` -- breaks 16 protected rules one at a time (bytecode cache off) and
+  requires each to be caught; 16/16 caught 2026-10-18.
 
 ## Monitoring (on the site, every build)
 
@@ -93,5 +93,6 @@ drift/form/rest/travel/team bias, Kalshi+book average.
 | 10-18 | UFC "goes the distance" prop (-1200) stuck open, would void after 3 days | grader waited for ESPN's result line, which arrives late or never | settles from final round + clock when the line is missing; live: settled **won** (ended 5.78 min); unit + mutation tested |
 | 10-18 | bot reported "open-position limit reached" | an Oct 16 practice ticket on a never-finished MLB game held a slot forever | partial settlement read; practice tickets expire after 4 days; unit + mutation tested |
 | 10-18 | health box flagged "props uel Shots" trailing | audit counted a market already switched off | audit ignores markets no longer offered, and the build drops such alarms at once (review log is daily); shots off in every soccer league |
+| 10-18 | the Winners parlay the page tells you to play had no record | record graded only legs and all-11 days | `locks.plays` grades the named slices; record table + summary on the page; unit, browser and mutation tested |
 | 10-18 | integrity check first flagged 253 prices | Kalshi prices are dollars (0-1), not American odds | `.kalshi.` paths checked as 0-1; live payload clean |
 | 10-18 | Kalshi bot would use tickets with no build time | age check skipped when `built` missing; bad timestamp would crash | `board_age()` treats missing/unreadable as stale; unit-tested |

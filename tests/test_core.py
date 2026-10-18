@@ -225,6 +225,23 @@ class UfcGrading(unittest.TestCase):
                                            dict(method=None, minutes=3.0, rounds=3, winner="X")))
 
 
+class NamedPlays(unittest.TestCase):
+    """The Winners parlay (top N at 80%+) and Best play (50%+) are graded as
+    the slices the page showed, not only the full card."""
+
+    def test_plays_graded(self):
+        card = [dict(p=0.95, price="-2000", status=s) for s in
+                ("won", "won", "void", "won", "lost", "won", "open", "won", "won", "won", "won")]
+        got = locks.plays(card)
+        n, prob, res = got["winners"]
+        self.assertEqual(n, 4)                  # .95^4 = .815; .95^5 = .774
+        self.assertEqual(res, "won")            # the void drops off the slip
+        n, prob, res = got["best"]
+        self.assertEqual((n, res), (11, "lost"))
+        card[4]["status"] = "open"
+        self.assertEqual(locks.plays(card)["best"][2], "open")
+
+
 class StuckSweep(unittest.TestCase):
     """Anything still open a week after its game is reported, not left silent."""
 

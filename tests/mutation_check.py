@@ -36,6 +36,8 @@ MUTATIONS = [
      "test_soccer_shots_off_in_every_soccer_league"),
     ("rebuild_board.py", "return props_ledger.offered(w[1], w[2])", "return True",
      "test_alarm_dropped_once_market_is_off"),
+    ("locks.py", 'res = "lost" if "lost" in st else', 'res = "won" if "lost" in st else', "test_plays_graded"),
+    ("board.html", "+ playsLine(R.plays)", "", "Winners parlay's own record"),
     ("integrity.py", "not 0 <= v <= 1:", "False:", "test_catches_bad_values"),
     ("board.html", "z.prob >= 0.8", "z.prob >= 0.95", "Winners parlay"),
     ("board.html", "if (mins < 20) { if (el) el.remove(); return; }", "return;",

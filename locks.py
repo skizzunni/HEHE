@@ -494,16 +494,52 @@ def settle(L, final):
     L["score"] = f"{L['away']} {a} - {L['home']} {h}"
 
 
+# the card's two named plays (board.html): the biggest top-N slice that all
+# hits at least this often
+PLAYS = (("winners", 0.8), ("best", 0.5))
+
+
+def plays(legs):
+    """{name: (n, chance, result)} for the Winners parlay and Best play of a
+    recorded card -- the same slice the page showed, from the same sizes().
+    result is 'won', 'lost' or 'open'; a void leg drops off the slip, as at
+    FanDuel. Without this the record could only say whether all 11 hit, so
+    the parlay the page tells you to play was never checked."""
+    sz = sizes(legs)
+    out = {}
+    for name, floor in PLAYS:
+        z = [x for x in sz if x["prob"] >= floor]
+        if not z:
+            continue
+        n, prob = z[-1]["n"], z[-1]["prob"]
+        st = [L.get("status", "open") for L in legs[:n]]
+        res = "lost" if "lost" in st else "open" if "open" in st else "won" if "won" in st else "void"
+        out[name] = (n, prob, res)
+    return out
+
+
 def report(path=None):
     book = load(path)
     legs = [L for L in book["legs"].values() if L["status"] in ("won", "lost")]
-    days = []
-    for day, keys in sorted(book["days"].items(), reverse=True)[:14]:
-        st = [book["legs"].get(k, {}).get("status", "open") for k in keys]
-        days.append(dict(day=day, n=len(keys), won=st.count("won"), lost=st.count("lost"),
-                         void=st.count("void"), open=st.count("open"),
-                         all_hit=bool(keys) and "lost" not in st and "open" not in st
-                         and st.count("won") > 0))
+    days, tally = [], {name: [0, 0, 0.0] for name, _ in PLAYS}
+    for day, keys in sorted(book["days"].items(), reverse=True):
+        card = [book["legs"].get(k, {}) for k in keys]
+        st = [L.get("status", "open") for L in card]
+        pl = plays(card)
+        for name, (n, prob, res) in pl.items():
+            if res in ("won", "lost"):
+                t = tally[name]
+                t[0] += 1
+                t[1] += res == "won"
+                t[2] += prob
+        if len(days) < 14:
+            days.append(dict(day=day, n=len(keys), won=st.count("won"), lost=st.count("lost"),
+                             void=st.count("void"), open=st.count("open"),
+                             all_hit=bool(keys) and "lost" not in st and "open" not in st
+                             and st.count("won") > 0,
+                             plays={k: dict(n=v[0], prob=v[1], result=v[2]) for k, v in pl.items()}))
     return dict(legs=len(legs), won=sum(1 for L in legs if L["status"] == "won"),
                 said=round(100 * sum(L["p"] for L in legs) / len(legs), 1) if legs else None,
-                days=days)
+                days=days,
+                plays={k: dict(days=t[0], hit=t[1], said=round(100 * t[2] / t[0], 1) if t[0] else None)
+                       for k, t in tally.items()})

@@ -9,7 +9,8 @@ read back. Checks:
   1. a copy 20+ minutes old shows the stale banner on every tab;
   2. a fresh copy shows no banner;
   3. Locks -> Safe Locks renders the card, the Winners parlay (top N at 80%+)
-     and the Best play (50%+), with the numbers the card's own sizes imply.
+     and the Best play (50%+), with the numbers the card's own sizes imply;
+  4. the record lists the Winners parlay's own hit rate and each day's result.
 """
 import json
 import os
@@ -48,6 +49,11 @@ def safe_card():
                 tomorrow=dict(locks=[]))
 
 
+RECORD = dict(legs=11, won=11, said=94.0, plays=dict(winners=dict(days=3, hit=3, said=81.0),
+                                                     best=dict(days=3, hit=2, said=55.0)),
+              days=[dict(day="2026-10-17", n=11, won=11, lost=0, void=0, open=0, all_hit=True,
+                         plays=dict(winners=dict(n=4, prob=0.81, result="won")))])
+
 PROBE = """<script>setTimeout(function(){
   var out = {banner: !!document.getElementById("stalebar")};
   var b = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Locks/.test(x.textContent)})[0];
@@ -58,6 +64,7 @@ PROBE = """<script>setTimeout(function(){
       out.bannerOnLocks = !!document.getElementById("stalebar");
       out.heading = (document.querySelector(".parlays h3") || {}).textContent || "";
       out.legs = document.querySelectorAll(".parlays .legs li").length;
+      out.record = [].slice.call(document.querySelectorAll(".parlays details")).map(function(e){return e.textContent}).join(" | ");
       out.bars = [].slice.call(document.querySelectorAll(".coinbar")).map(function(e){return e.textContent});
       var r = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Results/.test(x.textContent)})[0];
       if (r) r.click();
@@ -74,7 +81,7 @@ def render(captured_ms, health=None):
     s = open(os.path.join(ROOT, "board.html")).read()
     s = re.sub(r'"captured":\d+', f'"captured":{captured_ms}', s, count=1)
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
-                  + ',"safe_locks_record":{},"health":' + json.dumps(health) + ',', 1)
+                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"health":' + json.dumps(health) + ',', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -111,6 +118,9 @@ def main():
         fails.append("Winners parlay line missing or wrong: " + bars)
     if "Best play: the top 10 legs" not in bars or "54% to all hit" not in bars:
         fails.append("Best play line missing or wrong: " + bars)
+    if "Winners parlay hit 3 of 3 days (81% promised)" not in new["record"] \
+            or "top 4 (81%): hit" not in new["record"]:
+        fails.append("Safe Locks record must show the Winners parlay's own record: " + new["record"][-300:])
     if "3 problems found" not in old["health"] or "props uel Shots" not in old["health"] \
             or "Never settled" not in old["health"] or "Bad data: chance outside 0-1" not in old["health"]:
         fails.append("health box must list the trailing split and the stuck record: " + old["health"])

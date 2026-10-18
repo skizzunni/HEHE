@@ -897,13 +897,28 @@ function drawLocks(){
     + 'price match, then choose Parlay.</p></details>'
     + (R.legs ? '<details class="explain"><summary>Record: ' + R.won + ' of ' + R.legs + ' won ('
         + (100 * R.won / R.legs).toFixed(1) + '%, ' + R.said + '% promised)</summary>'
+        + playsLine(R.plays)
         + '<table class="mk"><thead><tr><th>Day</th><th class="num">Won</th><th class="num">Lost</th>'
-        + '<th class="num">Open</th><th>All hit?</th></tr></thead><tbody>'
+        + '<th class="num">Open</th><th>All hit?</th><th>Winners parlay</th></tr></thead><tbody>'
         + (R.days || []).map(d => '<tr><td>' + esc(d.day) + '</td><td class="num">' + d.won
           + '</td><td class="num">' + d.lost + '</td><td class="num">' + (d.open + d.void)
-          + '</td><td>' + (d.open ? 'pending' : (d.all_hit ? 'yes' : 'no')) + '</td></tr>').join("")
+          + '</td><td>' + (d.open ? 'pending' : (d.all_hit ? 'yes' : 'no')) + '</td><td>'
+          + playCell((d.plays || {}).winners) + '</td></tr>').join("")
         + '</tbody></table></details>' : '');
   panel.innerHTML = h + '</div>';
+}
+// the record of the two plays the card names, so the Winners parlay is
+// checked against what it promised, not only whether all legs hit
+function playsLine(P){
+  P = P || {};
+  const one = (k, tag) => { const x = P[k] || {}; return x.days ? tag + ' hit ' + x.hit + ' of ' + x.days
+    + ' days (' + x.said + '% promised)' : tag + ': no settled days yet'; };
+  return '<p class="note">' + one("winners", "Winners parlay") + ' &middot; ' + one("best", "Best play") + '.</p>';
+}
+function playCell(z){
+  if (!z) return '&mdash;';
+  return 'top ' + z.n + ' (' + (100 * z.prob).toFixed(0) + '%): '
+    + (z.result === 'open' ? 'pending' : z.result === 'won' ? 'hit' : z.result === 'lost' ? 'missed' : 'void');
 }
 // ------------------------------------------------------------ lottery view
 // $1 tickets built to pay about $10,000 (lottery.py): the most efficient
