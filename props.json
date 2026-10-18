@@ -1179,6 +1179,38 @@
   "price": "-400",
   "status": "open"
  },
+ "nfl:401872998|n:jalen coker|Receptions|3+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -3.3,
+  "gid": "nfl:401872998",
+  "imp": 0.9091,
+  "label": "Jalen Coker: 3+ Receptions",
+  "league": "nfl",
+  "line": "3+",
+  "market": "Receptions",
+  "name": "Jalen Coker",
+  "p": 0.8496,
+  "p_fair": 0.8789,
+  "price": "-1000",
+  "status": "open"
+ },
+ "nfl:401872998|n:tanner mckee|Passing Yards|150+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": 0.4,
+  "gid": "nfl:401872998",
+  "imp": 0.7917,
+  "label": "Tanner McKee: 150+ Passing Yards",
+  "league": "nfl",
+  "line": "150+",
+  "market": "Passing Yards",
+  "name": "Tanner McKee",
+  "p": 0.7399,
+  "p_fair": 0.7947,
+  "price": "-380",
+  "status": "open"
+ },
  "nfl:401872998|n:tetairoa mcmillan|Receptions|4+": {
   "aid": null,
   "date": "2026-10-18",
@@ -1515,6 +1547,22 @@
   "price": "-1100",
   "status": "open"
  },
+ "nfl:401873003|n:cam ward|Rushing Yards|5+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": 8.2,
+  "gid": "nfl:401873003",
+  "imp": 0.8,
+  "label": "Cam Ward: 5+ Rushing Yards",
+  "league": "nfl",
+  "line": "5+",
+  "market": "Rushing Yards",
+  "name": "Cam Ward",
+  "p": 0.7477,
+  "p_fair": 0.8658,
+  "price": "-400",
+  "status": "open"
+ },
  "nfl:401873003|n:jonathan taylor|Anytime Touchdown Scorer|1+": {
   "aid": null,
   "date": "2026-10-18",
@@ -1673,6 +1721,38 @@
   "p": 0.4702,
   "p_fair": null,
   "price": "-155",
+  "status": "open"
+ },
+ "nfl:401873005|n:brock bowers|Receiving Yards|40+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -16.0,
+  "gid": "nfl:401873005",
+  "imp": 0.9091,
+  "label": "Brock Bowers: 40+ Receiving Yards",
+  "league": "nfl",
+  "line": "40+",
+  "market": "Receiving Yards",
+  "name": "Brock Bowers",
+  "p": 0.8496,
+  "p_fair": 0.7639,
+  "price": "-1000",
+  "status": "open"
+ },
+ "nfl:401873005|n:dalton kincaid|Receiving Yards|30+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -9.5,
+  "gid": "nfl:401873005",
+  "imp": 0.8,
+  "label": "Dalton Kincaid: 30+ Receiving Yards",
+  "league": "nfl",
+  "line": "30+",
+  "market": "Receiving Yards",
+  "name": "Dalton Kincaid",
+  "p": 0.7477,
+  "p_fair": 0.7238,
+  "price": "-400",
   "status": "open"
  },
  "nfl:401873005|n:james cook|Anytime Touchdown Scorer|1+": {
@@ -4742,7 +4822,8 @@
   "p": 0.888,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 5.78
  },
  "ufc:401905374|n:mandel nallo|Winner|win": {
   "aid": null,
