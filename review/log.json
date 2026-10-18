@@ -2259,10 +2259,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 66.7,
-    "n": 36,
+    "hit": 64.9,
+    "n": 37,
     "name": "tennis Kalshi-priced",
-    "said": 72.7
+    "said": 72.3
    },
    {
     "flag": false,
@@ -2358,10 +2358,10 @@
     "hit": 77.4
    },
    "wta": {
-    "all_hit": 71.4,
+    "all_hit": 71.0,
     "calls": 95,
     "cutoff": 0.675,
-    "games": 192,
+    "games": 193,
     "hit": 83.2
    }
   },
@@ -2389,23 +2389,32 @@
    "plays": {},
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "wta",
+    "pick": "Sofia Kenin",
+    "price": null,
+    "said": 58.4,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 58%"
+   }
+  ],
   "lottery": [],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 2,
+   "hit": 66.7,
+   "lost": 1,
+   "n": 3,
    "roi": null,
-   "said": 64.5,
+   "said": 62.5,
    "won": 2
   },
   "picks_by_league": {
    "wta": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
     "roi": null,
-    "said": 64.5,
+    "said": 62.5,
     "won": 2
    }
   },
