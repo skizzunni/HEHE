@@ -205,6 +205,8 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
     print(f"locks [{day}] board/eligible/onFanDuel/FDfeed: {diag}", file=sys.stderr)
     if any(v[1] and not v[2] for v in diag.values()):
         for lg, rs in rows.items():
+            if not (diag.get(lg) and diag[lg][1] > diag[lg][2]):
+                continue                        # every eligible game matched
             for r in rs[:2]:
                 m = r.get("mkt") or {}
                 print(f"   unmatched? {lg}: board {m.get('away')!r} @ {m.get('home')!r}; "

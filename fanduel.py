@@ -172,7 +172,11 @@ def find(book, league, away, home, start=None):
 # game's prices on another, so anything doubtful is left unmatched.
 _ALIAS = {"man": "manchester", "utd": "united", "st": "saint", "nottm": "nottingham",
           "wolves": "wolverhampton", "spurs": "tottenham", "psg": "paris", "inter": "internazionale",
-          "atl": "atletico", "dep": "deportivo", "ath": "athletic"}
+          "atl": "atletico", "dep": "deportivo", "ath": "athletic",
+          # spellings that share no prefix (live misses, 2026-10-18)
+          "mgladbach": "monchengladbach", "gladbach": "monchengladbach",
+          "kobenhavn": "copenhagen", "koln": "cologne", "munchen": "munich",
+          "wac": "wolfsberger", "praha": "prague", "lisboa": "lisbon", "bodo": "bodoglimt"}
 _STOP = {"fc", "cf", "sc", "ac", "afc", "club", "de", "the", "cd", "fk", "sk", "as", "ss",
          "us", "calcio", "and", "of", "1", "04", "05", "ca", "sv", "vfb", "vfl", "tsg", "rc"}
 
