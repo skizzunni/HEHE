@@ -1,0 +1,52 @@
+# Master checklist
+
+Every requirement from the conversation, its state, and the evidence. A line
+is **done** only with evidence that can be re-checked; **open** lines name
+what is missing and the next step. Updated 2026-10-18.
+
+## Standing rules (never change without the owner)
+
+| # | Rule | State | Evidence / where enforced |
+|---|------|-------|---------------------------|
+| S1 | Website is the deliverable; no daily reports in chat | done | `board.yml` rebuilds every 5 min; daily review is written to `review/` and shown on the site |
+| S2 | Never fabricate numbers; every chance is the market's or a tested model's | done | `locks._market_p`, `lottery.market_chance`, labs score on unseen halves |
+| S3 | Locks: 11 FanDuel legs, card set 8 AM ET, games after 8 AM, -400 to -120 | done | `locks.py` `DEC_MIN/DEC_MAX`, `CARD_HOUR`, `_eligible`; unchanged by Safe Locks |
+| S4 | Keys never in chat; bot stays in practice mode until owner runs `touch ~/.hehe-bot/LIVE` | done | bot code unchanged; nothing remote can switch it |
+| S5 | No geo workarounds for Kalshi | done | bot runs only on the owner's Mac |
+
+## Objectives
+
+| # | Objective | State | Evidence | Next step |
+|---|-----------|-------|----------|-----------|
+| O1 | Higher win % without faking | ongoing | picks 185-70 (72.5% vs 70.9% said), strong calls 102-26 (79.7%) on 2026-10-17 review | weekly labs; act only on both-halves results |
+| O2 | Better 10-leg tickets | done (backtest) | NFL totals split normal: backtest NFL 10-leg 7/29 -> 18/29; all NFL markets within 2 SE | confirm on live NFL Sundays (scheduled review 2026-10-19 05:30 UTC) |
+| O3 | Locks that "all win" | partly | regular card is ~8% all-hit by arithmetic (replay 7.7% vs 7.2%); **Safe Locks** (-2000 to -500) added: 90-100c legs won 92.0% vs 93.1c; replays show all-hit at or above stated | first live Safe Locks results (scheduled review) |
+| O4 | Bigger, better leg pool | done | soccer added to Locks/Safe Locks from FanDuel's soccer page; live run matched EPL 4/4, La Liga 4/4, Ligue 1 5/5, Serie A 3/3; grading tested (draws, voids, live) | watch first soccer legs settle |
+| O5 | Props fixed | done | ungradable markets removed from locks/tickets/mega; every FanDuel prop name gradable (checked NFL/NBA/WNBA/NHL/MLB) | first NFL props grade Sunday |
+| O6 | NFL TD scorers, every game, realistic | done (NFL) | 12 games logged; chances sum to the total's expected TDs | TD lab at 20 graded games |
+| O6b | College TD scorers | **open** | none appear: FanDuel pulls TD markets once games go live, so the probe saw only live games | probe a college game before kickoff (next weekday game) |
+| O7 | UFC fixed | done | UFC lab, 613 fights: market price calibrated (67.6/67.8% favourites won), no method beat it on unseen fights | weekly lab |
+| O8 | No bad combo legs (Purdue) | done | combo-safe filter (>=90%) on the page | - |
+| O9 | Site lag | done | no reload while in use; view restored | - |
+| O10 | Every split studied | ongoing | labs: totals, NHL, UFC, soccer, TD, ladder, edge, backtest, weather; daily audit flags splits >2 SE behind | ladder lab needs ~30 graded games |
+
+## Tested and rejected (do not retry without new data)
+
+Hockey empty-net shift (halves disagree), tennis stretch (older-half streak),
+UFC power de-vig / stretch (no gain on unseen fights), NFL weight shrink
+(halves disagree), NCAAF under correction (not significant, symmetric in 2025),
+drift/form/rest/travel/team bias, Kalshi+book average.
+
+## Waiting on data
+
+* NCAAB unders lean (one season only) -> recheck November.
+* NFL far overs vs far unders at the same FanDuel price -> `ladder_lab` (logging since 2026-10-18).
+* Soccer totals / team totals / handicaps -> not on any card until tested.
+
+## Failures and fixes
+
+| When | What failed | Root cause | Fix |
+|------|-------------|------------|-----|
+| 10-18 | ladder-lab workflow failed | lab exited without writing its result; commit step had nothing to add | labs always write a result (ladder, TD) |
+| 10-18 | first soccer run found no FanDuel games | FanDuel cache (10 min) written by the old code | next run refetched; soccer present |
+| 10-18 | derby test matched reversed fixture | 0.5/0.5 token scores both ways | swap guard rejects reversed fixtures |
