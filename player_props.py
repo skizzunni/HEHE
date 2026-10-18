@@ -292,16 +292,15 @@ def _dec(price):
     return 1 + (v / 100 if v > 0 else 100 / -v)
 
 
-FILL_PER_GAME = 4
-
-
-def mega_ticket(games, n=25, dec_lo=1.25, dec_hi=1.834, per_game=2):
+def mega_ticket(games, n=25, dec_lo=1.25, dec_hi=1.834, per_game=1):
     """The 25 likeliest FanDuel player props of the day, every sport together.
 
     Same rule as the locks: normal odds only (-400 to -120), likeliest first
     (a ladder rung's main-line fair chance where it beats the price), one
-    prop per player, at most `per_game` from any game (FanDuel takes the
-    same-game ones as SGP+). Recorded and graded like every prop."""
+    prop per player and one per game: the ticket's chance multiplies its legs,
+    which is only fair for legs from different games (it took up to 4 players
+    from a game on a light slate until 2026-10-18). A light slate gives a
+    shorter ticket. Recorded and graded like every prop."""
     pool = []
     for g in games or []:
         for P in g.get("props") or []:
@@ -315,9 +314,7 @@ def mega_ticket(games, n=25, dec_lo=1.25, dec_hi=1.834, per_game=2):
                              tip=g.get("tip"), gid=g["id"]))
     pool.sort(key=lambda P: -P["p"])
     legs, players, per = [], set(), {}
-    # per_game first; on a light slate (FanDuel posting props for only a few
-    # games) a second pass lets a game give up to FILL_PER_GAME players
-    for cap in (per_game, FILL_PER_GAME):
+    for cap in (per_game,):
         for P in pool:
             if len(legs) >= n:
                 break

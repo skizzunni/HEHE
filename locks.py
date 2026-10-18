@@ -65,6 +65,85 @@ def _dec(price):
     return 1 + (v / 100 if v > 0 else 100 / -v)
 
 
+def opposite(spec, home, away):
+    """The spec that loses exactly when `spec` wins (ignoring pushes), so the
+    pair's two FanDuel prices can be de-vigged against each other. None when
+    the market has no single opposite listed (a 3-way result has two)."""
+    t, L = spec.get("t"), spec.get("line")
+    other = away if spec.get("team") == home else home
+    if t == "over":
+        return dict(t="under", line=L)
+    if t == "under":
+        return dict(t="over", line=L)
+    if t == "teamover":
+        return dict(t="teamunder", team=spec["team"], line=L)
+    if t == "teamunder":
+        return dict(t="teamover", team=spec["team"], line=L)
+    if t == "spread" and L is not None:
+        return dict(t="spread", team=other, line=-L if L else 0.0)
+    if t == "dc":                                # this team or draw <-> the other team wins
+        return dict(t="win", team=other)
+    return None
+
+
+def two_sided(refs, gid, spec, home, away, price, soccer=False):
+    """(chance, how): FanDuel's price de-vigged against the opposite side's
+    own price where FanDuel lists it ('two-sided'), else the price less an
+    assumed 4.5% margin ('assumed margin'), which is an estimate only.
+    Until 2026-10-18 every game line used the assumed margin, so legs from
+    markets with different margins were compared on an uneven footing."""
+    import lottery
+    d = _dec(price)
+    if not d:
+        return None, None
+    o = opposite(spec, home, away)
+    if spec.get("t") == "win":
+        # a 2-way moneyline's opposite is the other side; soccer's is "or draw"
+        o = dict(t="dc" if soccer else "win", team=away if spec.get("team") == home else home)
+    if o:
+        _, op, _ = refs.get((gid, json.dumps(o, sort_keys=True)), (None, None, None))
+        do = _dec(op)
+        if do:
+            a, b = 1 / d, 1 / do
+            if 1.0 <= a + b <= 1.25:                 # a sane two-way book
+                return a / (a + b), "two-sided"
+    return (1 / d) / lottery.FD_HOLD, "assumed margin"
+
+
+# how a leg's chance moves as its line rises: an over gets harder, an under
+# or a spread's cushion easier
+_LADDER = {"over": -1, "teamover": -1, "under": 1, "teamunder": 1, "spread": 1}
+
+
+def monotone(pool):
+    """Nested alternate lines in order: within one game, market and team, a
+    higher Over line never gets a higher chance than a lower one (and the
+    reverse for unders and spread cushions). Each price is de-vigged on its
+    own, so two out-of-order prices could rank the harder line likelier;
+    violators are pooled to their average (pool-adjacent-violators)."""
+    groups = {}
+    for L in pool:
+        sp = L.get("spec") or {}
+        if L.get("kind") != "prop" and sp.get("t") in _LADDER and sp.get("line") is not None:
+            groups.setdefault((L["gid"], sp["t"], sp.get("team")), []).append(L)
+    for (_, t, _), legs in groups.items():
+        legs.sort(key=lambda L: _LADDER[t] * L["spec"]["line"])     # chance should rise along this
+        blocks = []                                   # [sum, count, legs]
+        for L in legs:
+            blocks.append([L["p"], 1, [L]])
+            while len(blocks) > 1 and blocks[-2][0] / blocks[-2][1] > blocks[-1][0] / blocks[-1][1]:
+                b = blocks.pop()
+                blocks[-1][0] += b[0]
+                blocks[-1][1] += b[1]
+                blocks[-1][2] += b[2]
+        for tot, n, ls in blocks:
+            if n > 1:
+                for L in ls:
+                    L["p"] = round(tot / n, 4)
+                    L["ladder_fixed"] = True
+    return pool
+
+
 def _market_p(price, two_sided_p=None):
     """The leg's chance from the market: an exactly de-vigged two-sided
     price where there is one, else FanDuel's price less its margin; then the
@@ -229,7 +308,9 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
             d = _dec(price)
             if not ref or not d or not dmin <= d <= dmax:
                 continue
-            pm = _market_p(price)
+            p2, how = two_sided(refs, g["gid"], L["spec"], g["home"], g["away"], price,
+                                g["league"] in fanduel.SOCCER)
+            pm = _market_p(price, p2)
             if pm and L["spec"].get("t") in ("over", "under"):
                 # kickoff wind on football totals (weather.py, tested both halves)
                 import weather
@@ -242,7 +323,8 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                                  home=g["home"], away=g["away"], tip=g.get("tip"),
                                  label=c["label"], spec=c["spec"], p=c["p"],
                                  p_model=c["p_model"], fd=c["fd"], price=c["price"],
-                                 where=c["where"]))
+                                 where=c["where"], devig=how))
+    monotone(pool)
     # FanDuel player props compete with the game lines: per game, the lock is
     # the likeliest of all of them. A prop's chance is FanDuel's own price,
     # de-vigged across both sides where it lists both (fd_props.py).
@@ -290,10 +372,12 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
     for L in locks:
         prob *= L["p"]
     return dict(locks=locks, available=len(picks), prob=round(prob, 4),
-                fair=round(1 / prob, 2) if prob else None, sizes=sizes(locks))
+                fair=round(1 / prob, 2) if prob else None, sizes=sizes(locks),
+                extras=extras(pool, locks))
 
 
-PER_GAME = 3          # legs from one game, only when games run short of n
+PER_GAME = 1          # legs from one game on a ticket (was 3 on light days: see choose)
+EXTRA_PER_GAME = 2    # same-game ideas shown beside the card, never on it
 
 
 def _slot(L):
@@ -330,8 +414,13 @@ def choose(pool, n):
     of one kind: same-day college unders missed together 2.6 times more than
     independent legs would (16,000-leg backtest, a high-scoring day sinks them
     all at once), so a card of nine of them is riskier than its legs say.
-    Only when the card is still short does a game give a second or third leg
-    (a light Friday), never a contradiction of a leg already taken."""
+
+    Never more than one leg from a game. Until 2026-10-18 a light day filled
+    the card with a second and third leg from the same game and multiplied
+    their chances as if unrelated (a game's under, a player's threes and
+    another player's points); same-game legs move together, so neither the
+    all-hit chance nor the payout -- FanDuel prices a Same Game Parlay itself
+    -- was real. A light day now shows fewer legs; standards do not drop."""
     out, used_g, kinds = [], set(), {}
     for cap in (MAX_SAME, n):                  # diversified first, then fill
         for L in sorted(pool, key=lambda x: -x["p"]):
@@ -342,22 +431,33 @@ def choose(pool, n):
             out.append(L)
             used_g.add(L["gid"])
             kinds[_kind(L)] = kinds.get(_kind(L), 0) + 1
-    if len(out) >= n:
-        return out
-    used = {(L["gid"], _slot(L)) for L in out}
-    count = {}
-    for L in out:
-        count[L["gid"]] = count.get(L["gid"], 0) + 1
+    return out
+
+
+def extras(pool, card):
+    """Other strong legs from games already on the card, for a same-game
+    parlay the bettor prices at FanDuel. Not part of the card: never in its
+    chance, payout, Winners parlay or Best play, and no all-hit number is
+    claimed for them (there is no validated joint chance for same-game legs)."""
+    on = {L["gid"] for L in card}
+    used = {(L["gid"], _slot(L)) for L in card}
+    count, out = {}, []
     for L in sorted(pool, key=lambda x: -x["p"]):
-        if len(out) >= n:
-            break
         k = (L["gid"], _slot(L))
-        if k in used or count.get(L["gid"], 0) >= PER_GAME:
+        if L["gid"] not in on or k in used or count.get(L["gid"], 0) >= EXTRA_PER_GAME:
             continue
         used.add(k)
         count[L["gid"]] = count.get(L["gid"], 0) + 1
-        out.append(L)
+        out.append(dict(L, extra=True))
     return out
+
+
+def carry_extras(live, card):
+    """Same-game ideas for a set card, from this build's live pool (the
+    card's legs plus the ideas beside them), against the legs it stands on."""
+    pool = [dict(L, extra=False) for L in (live.get("locks") or []) + (live.get("extras") or [])]
+    card["extras"] = extras(pool, card.get("locks") or [])
+    return card
 
 
 def sizes(legs):
@@ -398,20 +498,15 @@ def record(res, day, path=None, tag="locks"):
     if len(day) == 8:
         day = f"{day[:4]}-{day[4:6]}-{day[6:]}"
     keys = book["days"].setdefault(day, [])
-    first = not keys
     for L in res["locks"]:
         if len(keys) >= N_LOCKS:
             break
         k = f'{L["gid"]}|{L["label"]}'
         if k in keys:
             continue
-        # a moved line must not add a second leg on the same question
-        same = [book["legs"][x] for x in keys if x.split("|", 1)[0] == L["gid"]]
-        if (any(_slot(x) == _slot(L) for x in same) or len(same) >= PER_GAME):
-            continue
-        # extra legs from one game belong to the 8 AM card only; later
-        # rebuilds may add a late game, never a second leg to a set card
-        if same and not first:
+        # one leg per game: a moved line or a second idea from the same game
+        # never joins the card (same-game legs are not independent)
+        if any(x.split("|", 1)[0] == L["gid"] for x in keys):
             continue
         keys.append(k)
         book["legs"].setdefault(k, dict(league=L["league"], match=L["match"], label=L["label"],

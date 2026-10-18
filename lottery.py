@@ -30,6 +30,7 @@ import json
 import math
 import os
 
+import fanduel
 import kalshi
 import locks
 import props_ledger
@@ -133,8 +134,10 @@ def _game_legs(rows, soccer_keys, labels, FD, KB=None):
                     k = None
             pk = (k or {}).get("mid")
             # Kalshi's traders where they price the line; otherwise FanDuel's
-            # own price less its margin. Either way, corrected by price band.
-            p_mkt = pk if pk and 0.01 < pk < 0.99 else (1 / d) / FD_HOLD
+            # price de-vigged against its own opposite side (locks.two_sided)
+            p_fd, how = locks.two_sided(refs, g["gid"], L["spec"], g["home"], g["away"], price,
+                                        g["league"] in fanduel.SOCCER)
+            p_mkt = pk if pk and 0.01 < pk < 0.99 else p_fd
             p = market_chance(p_mkt)
             if L["spec"].get("t") in ("over", "under"):
                 import weather
@@ -144,7 +147,7 @@ def _game_legs(rows, soccer_keys, labels, FD, KB=None):
             out.append(dict(kind="game", gid=g["gid"], league=g["league"], lg=g["lg"],
                             match=g["match"], home=g["home"], away=g["away"], tip=g.get("tip"),
                             label=L["label"], spec=L["spec"], p=p, p_model=L["p"], p_kalshi=pk,
-                            p_market=round(p_mkt, 4),
+                            p_market=round(p_mkt, 4), devig="kalshi" if p_mkt == pk else how,
                             price=price, dec=round(d, 3), fd=ref, where=where,
                             value=round(p * d, 4)))
     return out

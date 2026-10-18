@@ -318,7 +318,8 @@ def snapshot():
         if locks.card_time():
             # from 8:00 AM Eastern the day's card is set and shown as recorded
             locks.record(out["locks"]["today"], d._STATE["dates"][0])
-            out["locks"]["today"] = locks.frozen(d._STATE["dates"][0])
+            out["locks"]["today"] = locks.carry_extras(out["locks"]["today"],
+                                                       locks.frozen(d._STATE["dates"][0]))
         else:
             out["locks"]["today"]["preview"] = True
         out["locks_record"] = locks.report()
@@ -343,7 +344,8 @@ def snapshot():
         locks.grade(ledger._final, locks.SAFE_LEDGER)
         if locks.card_time():
             locks.record(out["safe_locks"]["today"], d._STATE["dates"][0], locks.SAFE_LEDGER, "safe")
-            out["safe_locks"]["today"] = locks.frozen(d._STATE["dates"][0], locks.SAFE_LEDGER)
+            out["safe_locks"]["today"] = locks.carry_extras(
+                out["safe_locks"]["today"], locks.frozen(d._STATE["dates"][0], locks.SAFE_LEDGER))
         else:
             out["safe_locks"]["today"]["preview"] = True
         out["safe_locks_record"] = locks.report(locks.SAFE_LEDGER)

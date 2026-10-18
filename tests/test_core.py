@@ -8,6 +8,8 @@ means a rule the owner set (or a fix already made once) has been broken.
 """
 import datetime as dt
 import os
+import json
+import tempfile
 import sys
 import unittest
 
@@ -91,6 +93,47 @@ class LocksRules(unittest.TestCase):
         self.assertEqual(len({L["gid"] for L in out}), 11)        # one leg per game
         for lg in ("ncaaf", "nfl", "nhl"):
             self.assertLessEqual(sum(L["league"] == lg for L in out), locks.MAX_SAME)
+
+    def test_one_leg_per_game_and_extras_apart(self):
+        """A light day gives a short card, never a second leg from one game;
+        other same-game ideas are listed apart and kept out of the ticket."""
+        pool = [dict(gid=f"g{g}", league="nfl", p=0.9 - g * 0.01 - k * 0.001, kind=None, match="m",
+                     spec=dict(t=t, line=44.5), label=f"g{g}{t}") for g in range(3)
+                for k, t in enumerate(("under", "win", "over"))]
+        pool += [dict(gid="g0", league="nfl", p=0.88, kind="prop", name="P", label="P 1+", match="m")]
+        out = locks.choose(pool, 11)
+        self.assertEqual(sorted(L["gid"] for L in out), ["g0", "g1", "g2"])
+        ex = locks.extras(pool, out)
+        self.assertTrue(ex and all(x["gid"] in {"g0", "g1", "g2"} and x["extra"] for x in ex))
+        self.assertFalse({id(x) for x in out} & {id(x) for x in ex})
+        self.assertTrue(all(sum(x["gid"] == g for x in ex) <= locks.EXTRA_PER_GAME for g in ("g0",)))
+        book_path = os.path.join(tempfile.mkdtemp(), "l.json")
+        locks.record(dict(locks=out + ex), "2026-10-18", book_path)
+        self.assertEqual(len(locks.load(book_path)["days"]["2026-10-18"]), 3)   # extras never recorded
+
+    def test_two_sided_devig(self):
+        """A line's chance comes from its own price and its opposite's."""
+        key = lambda sp: ("g", json.dumps(sp, sort_keys=True))
+        refs = {key(dict(t="under", line=44.5)): ("r", "-150", None),
+                key(dict(t="over", line=44.5)): ("r", "+120", None)}
+        p, how = locks.two_sided(refs, "g", dict(t="over", line=44.5), H, A, "+120")
+        self.assertEqual(how, "two-sided")
+        a, b = 100 / 220, 150 / 250
+        self.assertAlmostEqual(p, a / (a + b))
+        p, how = locks.two_sided(refs, "g", dict(t="over", line=47.5), H, A, "+150")
+        self.assertEqual(how, "assumed margin")
+        self.assertEqual(locks.opposite(dict(t="spread", team=H, line=-3.5), H, A),
+                         dict(t="spread", team=A, line=3.5))
+        self.assertEqual(locks.opposite(dict(t="dc", team=H), H, A), dict(t="win", team=A))
+
+    def test_alternate_lines_in_order(self):
+        """Raising an Over line never raises its chance."""
+        pool = [dict(gid="g", p=p, spec=dict(t="over", line=L)) for L, p in
+                ((40.5, 0.80), (43.5, 0.83), (46.5, 0.70))]
+        locks.monotone(pool)
+        ps = [L["p"] for L in sorted(pool, key=lambda L: L["spec"]["line"])]
+        self.assertTrue(all(a >= b for a, b in zip(ps, ps[1:])), ps)
+        self.assertAlmostEqual(ps[0], 0.815)
 
     def test_fill_when_every_kind_is_capped(self):
         """With only two kinds on the slate the card still reaches 11 legs."""

@@ -45,7 +45,9 @@ def safe_card():
         D *= 1 + 100 / -int(L["price"])
         if i >= 2:
             sizes.append(dict(n=i, pays=round(D, 2), prob=round(P, 4), american=f"+{round((D - 1) * 100)}"))
-    return dict(today=dict(locks=legs, available=11, prob=round(P, 4), sizes=sizes, preview=True),
+    extra = dict(legs[0], label="Same-game idea", extra=True, gid="ncaaf:0")
+    return dict(today=dict(locks=legs, available=11, prob=round(P, 4), sizes=sizes, preview=True,
+                           extras=[extra]),
                 tomorrow=dict(locks=[]))
 
 
@@ -63,7 +65,7 @@ PROBE = """<script>setTimeout(function(){
     setTimeout(function(){
       out.bannerOnLocks = !!document.getElementById("stalebar");
       out.heading = (document.querySelector(".parlays h3") || {}).textContent || "";
-      out.legs = document.querySelectorAll(".parlays .legs li").length;
+      out.legs = ((document.querySelector(".parlays ul.legs") || {}).children || []).length;
       out.record = [].slice.call(document.querySelectorAll(".parlays details")).map(function(e){return e.textContent}).join(" | ");
       out.bars = [].slice.call(document.querySelectorAll(".coinbar")).map(function(e){return e.textContent});
       var r = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Results/.test(x.textContent)})[0];
@@ -114,13 +116,15 @@ def main():
     if new["heading"].strip() != "Safe Locks" or new["legs"] != 11:
         fails.append(f"Safe Locks card not rendered: {new['heading']!r}, {new['legs']} legs")
     bars = " | ".join(new["bars"])
-    if "Winners parlay: the top 4 legs" not in bars or "80% to all hit" not in bars:
+    if "Winners parlay: the top 4 legs" not in bars or "est. 80% to all hit" not in bars:
         fails.append("Winners parlay line missing or wrong: " + bars)
-    if "Best play: the top 10 legs" not in bars or "54% to all hit" not in bars:
+    if "Best play: the top 10 legs" not in bars or "est. 54% to all hit" not in bars:
         fails.append("Best play line missing or wrong: " + bars)
     if "Winners parlay hit 3 of 3 days (81% promised)" not in new["record"] \
             or "top 4 (81%): hit" not in new["record"]:
         fails.append("Safe Locks record must show the Winners parlay's own record: " + new["record"][-300:])
+    if "Same-game ideas (1)" not in new["record"] or new["legs"] != 11:
+        fails.append("same-game ideas must be listed apart from the card's 11 legs: " + new["record"][:200])
     if "3 problems found" not in old["health"] or "props uel Shots" not in old["health"] \
             or "Never settled" not in old["health"] or "Bad data: chance outside 0-1" not in old["health"]:
         fails.append("health box must list the trailing split and the stuck record: " + old["health"])

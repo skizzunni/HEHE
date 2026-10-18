@@ -815,7 +815,7 @@ function legHTML(x, opts){
     : (fdOne(x.fd) ? '<div class="lgw">' + legBtns(null, fdOne(x.fd)) + '</div>' : ''));
   return '<li class="leg"><div class="lgt"><span class="kind ' + kind + '">' + kind + '</span>'
     + '<b>' + esc(x.label) + '</b>' + (x.price ? '<span class="px">' + esc(x.price) + '</span>' : '')
-    + '<span class="ch">' + (100 * x.p).toFixed(0) + '%</span>'
+    + '<span class="ch" title="estimated from the market price">' + (100 * x.p).toFixed(0) + '% est.</span>'
     + (opts && opts.sgp ? '<span class="edgetag">same game</span>' : '')
     + (x.edge > 0 ? '<span class="edgetag" title="Priced off this player\'s own main line, this rung is underpriced">+'
        + x.edge.toFixed(0) + '% vs price</span>' : '') + res + '</div>'
@@ -856,14 +856,22 @@ function drawLocks(){
   const won = L.filter(x => x.status === "won").length, lost = L.filter(x => x.status === "lost").length;
   const SZ = X.sizes || [];
   const full = SZ.length ? SZ[SZ.length - 1] : null;
-  h += strip([["legs", L.length], ["all hit", (100 * X.prob).toFixed(0) + "%"],
+  h += strip([["legs", L.length], ["all hit (est.)", (100 * X.prob).toFixed(0) + "%"],
               ["$10 pays", full ? "$" + Math.round(10 * full.pays).toLocaleString() : "&mdash;"],
               ["so far", won + "&ndash;" + lost],
               ["card", X.preview ? "preview" : "set 8 AM"]])
     + '<ul class="legs">' + L.map(x => legHTML(x, {sgp: L.filter(y => y.gid && y.gid === x.gid).length > 1})).join("") + '</ul>'
     + (L.some(x => L.filter(y => y.gid && y.gid === x.gid).length > 1)
-        ? '<p class="note">Few games today, so some games give two or three legs (marked <b>same game</b>). '
-          + 'On FanDuel, add those together as a Same Game Parlay inside the parlay.</p>' : '')
+        ? '<p class="note">This card was set before same-game legs were taken off cards (2026-10-18): legs '
+          + 'marked <b>same game</b> are not independent, so the all-hit estimate overstates it.</p>' : '')
+    + (L.length < 11 ? '<p class="note">Only ' + L.length + ' games qualify today. The card takes one leg per '
+        + 'game and does not lower its standards to reach 11.</p>' : '')
+    + ((X.extras || []).length ? '<details class="explain"><summary>Same-game ideas (' + X.extras.length
+        + ') &mdash; not part of this card</summary><p class="note">Other strong lines from games already on the '
+        + 'card. Legs from one game move together, so their chances cannot be multiplied and no all-hit estimate '
+        + 'is given; they are left out of the card&rsquo;s chance, payout, Winners parlay and Best play. Price any '
+        + 'combination as a Same Game Parlay on FanDuel.</p><ul class="legs">'
+        + X.extras.map(x => legHTML(x, {})).join("") + '</ul></details>' : '')
     + '<p><button type="button" data-lkcopy="' + day + '">Copy all legs</button></p>'
     + (function(){
         // a parlay meant to WIN: the biggest slice that hits 80%+ of the
@@ -871,7 +879,7 @@ function drawLocks(){
         const safe = SZ.filter(z => z.prob >= 0.8).pop();
         const best = SZ.filter(z => z.prob >= 0.5).pop();
         const line = (z, tag) => '<p class="coinbar"><b>' + tag + ': the top ' + z.n + ' legs</b> &mdash; '
-          + (100 * z.prob).toFixed(0) + '% to all hit, pays ' + esc(z.american)
+          + 'est. ' + (100 * z.prob).toFixed(0) + '% to all hit, pays ' + esc(z.american)
           + ' ($10 &rarr; $' + Math.round(10 * z.pays) + ').</p>';
         return (safe ? line(safe, 'Winners parlay') : '')
           + (best && (!safe || best.n > safe.n) ? line(best, 'Best play') : '')

@@ -873,8 +873,10 @@ def pick_for_game(game, n_legs):
 
 
 def build_tickets(games, tiers=TIERS, variants=VARIANTS):
-    """{size: [ticket, ...]}. One leg per game first; a second leg from the
-    same game (priced jointly) only when there are fewer games than legs."""
+    """{size: [ticket, ...]}, one leg per game. A size needs that many games:
+    until 2026-10-18 a short slate filled with a second leg from one game,
+    priced jointly by the game model -- but FanDuel quotes a same-game parlay
+    itself, and the ticket showed a payout no book offered for it."""
     out = {}
     for n in tiers:
         made, used = [], {}
@@ -884,15 +886,8 @@ def build_tickets(games, tiers=TIERS, variants=VARIANTS):
             order = sorted(games, key=lambda G: (used.get(G["gid"], 0),
                                                  abs(G["legs"][0]["p"] - TARGET)))
             per = {G["gid"]: 1 for G in order[:n]}
-            extra = n - len(per)
-            for G in order[:n]:
-                if extra <= 0:
-                    break
-                if len({L["group"] for L in G["legs"]}) >= 2:
-                    per[G["gid"]] = 2
-                    extra -= 1
-            if extra > 0:
-                break                          # not enough legs on the slate
+            if len(per) < n:
+                break                          # not enough games on the slate
             legs, joint = [], 1.0
             for G in order[:n]:
                 chosen, pj = pick_for_game(G, per[G["gid"]])
