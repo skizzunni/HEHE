@@ -2201,10 +2201,10 @@
   },
   "props": {
    "fair": {
-    "n": 49,
-    "said_fair": 83.4,
-    "said_price": 85.2,
-    "won": 41
+    "n": 61,
+    "said_fair": 83.2,
+    "said_price": 85.6,
+    "won": 52
    },
    "n": 141,
    "said": 75.7,
@@ -2273,17 +2273,24 @@
    },
    {
     "flag": false,
-    "hit": 80.0,
-    "n": 10,
-    "name": "props nfl Receiving Yards",
-    "said": 80.8
+    "hit": 27.3,
+    "n": 11,
+    "name": "props nfl Anytime Touchdown Scorer",
+    "said": 41.1
    },
    {
     "flag": false,
-    "hit": 82.4,
-    "n": 17,
+    "hit": 83.3,
+    "n": 12,
+    "name": "props nfl Receiving Yards",
+    "said": 80.6
+   },
+   {
+    "flag": false,
+    "hit": 86.4,
+    "n": 22,
     "name": "props nfl Receptions",
-    "said": 79.1
+    "said": 80.0
    },
    {
     "flag": false,
@@ -2521,9 +2528,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nfl": {
-    "all_hit": 57.8,
+    "all_hit": 57.1,
     "cutoff": null,
-    "games": 83,
+    "games": 84,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nhl": {
@@ -2626,9 +2633,9 @@
    }
   },
   "clv": {
-   "avg": 0.14,
-   "beat": 45.0,
-   "n": 20
+   "avg": 0.13,
+   "beat": 42.9,
+   "n": 21
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2845,6 +2852,14 @@
    {
     "against_market": false,
     "league": "nfl",
+    "pick": "Atlanta Falcons",
+    "price": "-102",
+    "said": 50.7,
+    "why": "margin 8 \u00b7 the book had my side favoured too \u00b7 called at 51%"
+   },
+   {
+    "against_market": false,
+    "league": "nfl",
     "pick": "Indianapolis Colts",
     "price": "-298",
     "said": 70.3,
@@ -2964,7 +2979,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -2996,7 +3011,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -3020,7 +3035,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+25",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -3044,7 +3059,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+50",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -3086,11 +3101,11 @@
    }
   ],
   "picks": {
-   "hit": 67.9,
-   "lost": 36,
-   "n": 112,
-   "roi": -2.2,
-   "said": 69.4,
+   "hit": 67.3,
+   "lost": 37,
+   "n": 113,
+   "roi": -6.8,
+   "said": 69.3,
    "won": 76
   },
   "picks_by_league": {
@@ -3263,11 +3278,11 @@
     "won": 2
    },
    "nfl": {
-    "hit": 25.0,
-    "lost": 3,
-    "n": 4,
-    "roi": -67.8,
-    "said": 64.8,
+    "hit": 20.0,
+    "lost": 4,
+    "n": 5,
+    "roi": -74.2,
+    "said": 62.0,
     "won": 1
    },
    "nor": {
@@ -3353,19 +3368,19 @@
   },
   "props": {
    "fair": {
-    "n": 49,
-    "said_fair": 83.4,
-    "said_price": 85.2,
-    "won": 41
+    "n": 61,
+    "said_fair": 83.2,
+    "said_price": 85.6,
+    "won": 52
    },
-   "n": 60,
-   "said": 69.1,
-   "won": 40
+   "n": 74,
+   "said": 70.8,
+   "won": 52
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 9,
+   "open": 8,
    "plays": {
     "best": [
      7,
@@ -3378,7 +3393,7 @@
      "open"
     ]
    },
-   "won": 2
+   "won": 3
   },
   "strong": {
    "hit": 70.6,
@@ -3399,11 +3414,11 @@
     "won": 13
    },
    "agree": {
-    "hit": 67.4,
-    "lost": 87,
-    "n": 267,
-    "roi": -2.0,
-    "said": 63.8,
+    "hit": 67.2,
+    "lost": 88,
+    "n": 268,
+    "roi": -2.3,
+    "said": 63.7,
     "won": 180
    }
   },
