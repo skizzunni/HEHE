@@ -1,611 +1,604 @@
 {
- "run": "2026-10-17",
+ "run": "2026-10-18",
  "sports": {
   "nhl": {
    "games": 900,
    "priced": 900,
    "errors": 0,
-   "fitted_miss_factor": 1.05,
+   "fitted_miss_factor": 1.0,
    "stack_legs": {
-    "fit": 3147,
-    "test": 3083,
+    "fit": 3160,
+    "test": 3106,
     "raw": [
      {
       "band": "75-80%",
-      "n": 677,
-      "said": 77.7,
-      "hit": 78.0,
+      "n": 701,
+      "said": 77.6,
+      "hit": 78.5,
       "se": 1.6
      },
      {
       "band": "80-85%",
-      "n": 741,
+      "n": 749,
       "said": 82.6,
-      "hit": 80.7,
+      "hit": 80.5,
       "se": 1.4
      },
      {
       "band": "85-90%",
-      "n": 765,
+      "n": 745,
       "said": 87.4,
-      "hit": 86.9,
+      "hit": 85.5,
       "se": 1.2
      },
      {
       "band": "90-95%",
-      "n": 461,
+      "n": 471,
       "said": 91.7,
-      "hit": 93.9,
+      "hit": 93.8,
       "se": 1.3
      },
      {
       "band": "95-100%",
-      "n": 439,
-      "said": 96.5,
-      "hit": 97.0,
+      "n": 440,
+      "said": 96.4,
+      "hit": 96.8,
       "se": 0.9
      }
     ],
-    "raw_brier": 0.1159,
+    "raw_brier": 0.119,
     "haircut": [
      {
-      "band": "70-75%",
-      "n": 161,
-      "said": 74.5,
-      "hit": 76.4,
-      "se": 3.4
-     },
-     {
       "band": "75-80%",
-      "n": 664,
-      "said": 77.7,
-      "hit": 79.5,
+      "n": 701,
+      "said": 77.6,
+      "hit": 78.5,
       "se": 1.6
      },
      {
       "band": "80-85%",
-      "n": 735,
-      "said": 82.7,
-      "hit": 81.0,
+      "n": 749,
+      "said": 82.6,
+      "hit": 80.5,
       "se": 1.4
      },
      {
       "band": "85-90%",
-      "n": 708,
-      "said": 87.5,
-      "hit": 88.0,
+      "n": 745,
+      "said": 87.4,
+      "hit": 85.5,
       "se": 1.2
      },
      {
       "band": "90-95%",
-      "n": 392,
+      "n": 471,
       "said": 91.7,
-      "hit": 94.6,
-      "se": 1.4
+      "hit": 93.8,
+      "se": 1.3
      },
      {
       "band": "95-100%",
-      "n": 423,
-      "said": 96.3,
-      "hit": 96.9,
+      "n": 440,
+      "said": 96.4,
+      "hit": 96.8,
       "se": 0.9
      }
     ],
-    "haircut_brier": 0.1159
+    "haircut_brier": 0.119
    },
    "markets": {
     "Winner": {
      "calibration": [
       {
        "band": "20-25%",
-       "n": 8,
-       "said": 24.0,
-       "hit": 0.0,
-       "se": 15.1
+       "n": 11,
+       "said": 23.5,
+       "hit": 9.1,
+       "se": 12.8
       },
       {
        "band": "25-30%",
-       "n": 38,
-       "said": 27.9,
-       "hit": 23.7,
-       "se": 7.3
+       "n": 32,
+       "said": 28.2,
+       "hit": 18.8,
+       "se": 8.0
       },
       {
        "band": "30-35%",
        "n": 56,
-       "said": 33.2,
+       "said": 33.0,
        "hit": 33.9,
        "se": 6.3
       },
       {
        "band": "35-40%",
-       "n": 180,
-       "said": 37.7,
-       "hit": 43.3,
-       "se": 3.6
+       "n": 169,
+       "said": 37.9,
+       "hit": 36.1,
+       "se": 3.7
       },
       {
        "band": "40-45%",
-       "n": 276,
+       "n": 278,
        "said": 42.5,
-       "hit": 46.7,
+       "hit": 46.4,
        "se": 3.0
       },
       {
        "band": "45-50%",
-       "n": 377,
-       "said": 47.7,
-       "hit": 48.8,
-       "se": 2.6
+       "n": 388,
+       "said": 47.6,
+       "hit": 46.9,
+       "se": 2.5
       },
       {
        "band": "50-55%",
-       "n": 307,
-       "said": 52.8,
-       "hit": 51.5,
+       "n": 320,
+       "said": 52.9,
+       "hit": 53.8,
        "se": 2.8
       },
       {
        "band": "55-60%",
-       "n": 276,
+       "n": 278,
        "said": 57.5,
-       "hit": 53.3,
+       "hit": 53.6,
        "se": 3.0
       },
       {
        "band": "60-65%",
-       "n": 180,
-       "said": 62.3,
-       "hit": 56.7,
-       "se": 3.6
+       "n": 169,
+       "said": 62.1,
+       "hit": 63.9,
+       "se": 3.7
       },
       {
        "band": "65-70%",
        "n": 56,
-       "said": 66.8,
+       "said": 67.0,
        "hit": 66.1,
        "se": 6.3
       },
       {
        "band": "70-75%",
-       "n": 38,
-       "said": 72.1,
-       "hit": 76.3,
-       "se": 7.3
+       "n": 32,
+       "said": 71.8,
+       "hit": 81.2,
+       "se": 8.0
       },
       {
        "band": "75-80%",
-       "n": 8,
-       "said": 76.0,
-       "hit": 100.0,
-       "se": 15.1
+       "n": 11,
+       "said": 76.5,
+       "hit": 90.9,
+       "se": 12.8
       }
      ],
-     "brier": 0.2444
+     "brier": 0.2401
     },
     "Total": {
      "calibration": [
       {
        "band": "5-10%",
-       "n": 34,
+       "n": 35,
        "said": 9.3,
-       "hit": 5.9,
-       "se": 5.0
+       "hit": 5.7,
+       "se": 4.9
       },
       {
        "band": "10-15%",
-       "n": 500,
+       "n": 483,
        "said": 13.1,
-       "hit": 12.6,
+       "hit": 11.2,
        "se": 1.5
       },
       {
        "band": "15-20%",
-       "n": 547,
-       "said": 17.2,
-       "hit": 17.2,
+       "n": 559,
+       "said": 17.1,
+       "hit": 15.9,
        "se": 1.6
       },
       {
        "band": "20-25%",
-       "n": 808,
-       "said": 22.7,
-       "hit": 21.4,
+       "n": 826,
+       "said": 22.8,
+       "hit": 21.2,
        "se": 1.5
       },
       {
        "band": "25-30%",
-       "n": 617,
+       "n": 601,
        "said": 27.1,
-       "hit": 24.3,
+       "hit": 24.1,
        "se": 1.8
       },
       {
        "band": "30-35%",
-       "n": 199,
-       "said": 32.2,
-       "hit": 25.1,
+       "n": 203,
+       "said": 32.1,
+       "hit": 30.0,
        "se": 3.3
       },
       {
        "band": "35-40%",
-       "n": 255,
-       "said": 37.7,
-       "hit": 40.4,
+       "n": 257,
+       "said": 37.8,
+       "hit": 36.2,
        "se": 3.0
       },
       {
        "band": "40-45%",
-       "n": 747,
-       "said": 42.6,
-       "hit": 43.8,
+       "n": 729,
+       "said": 42.5,
+       "hit": 43.5,
        "se": 1.8
       },
       {
        "band": "45-50%",
-       "n": 793,
-       "said": 47.3,
-       "hit": 47.0,
+       "n": 807,
+       "said": 47.2,
+       "hit": 46.0,
        "se": 1.8
       },
       {
        "band": "50-55%",
-       "n": 793,
-       "said": 52.7,
-       "hit": 53.0,
+       "n": 807,
+       "said": 52.8,
+       "hit": 54.0,
        "se": 1.8
       },
       {
        "band": "55-60%",
-       "n": 747,
-       "said": 57.4,
-       "hit": 56.2,
+       "n": 729,
+       "said": 57.5,
+       "hit": 56.5,
        "se": 1.8
       },
       {
        "band": "60-65%",
-       "n": 255,
-       "said": 62.3,
-       "hit": 59.6,
+       "n": 257,
+       "said": 62.2,
+       "hit": 63.8,
        "se": 3.0
       },
       {
        "band": "65-70%",
-       "n": 199,
-       "said": 67.8,
-       "hit": 74.9,
+       "n": 203,
+       "said": 67.9,
+       "hit": 70.0,
        "se": 3.3
       },
       {
        "band": "70-75%",
-       "n": 617,
+       "n": 601,
        "said": 72.9,
-       "hit": 75.7,
+       "hit": 75.9,
        "se": 1.8
       },
       {
        "band": "75-80%",
-       "n": 808,
-       "said": 77.3,
-       "hit": 78.6,
+       "n": 826,
+       "said": 77.2,
+       "hit": 78.8,
        "se": 1.5
       },
       {
        "band": "80-85%",
-       "n": 547,
-       "said": 82.8,
-       "hit": 82.8,
+       "n": 559,
+       "said": 82.9,
+       "hit": 84.1,
        "se": 1.6
       },
       {
        "band": "85-90%",
-       "n": 500,
+       "n": 483,
        "said": 86.9,
-       "hit": 87.4,
+       "hit": 88.8,
        "se": 1.5
       },
       {
        "band": "90-95%",
-       "n": 34,
+       "n": 35,
        "said": 90.7,
-       "hit": 94.1,
-       "se": 5.0
+       "hit": 94.3,
+       "se": 4.9
       }
      ],
-     "brier": 0.1924
+     "brier": 0.1901
     },
     "Team total": {
      "calibration": [
       {
        "band": "20-25%",
-       "n": 53,
-       "said": 23.3,
-       "hit": 20.8,
-       "se": 5.8
+       "n": 50,
+       "said": 23.2,
+       "hit": 20.0,
+       "se": 6.0
       },
       {
        "band": "25-30%",
-       "n": 141,
-       "said": 28.2,
-       "hit": 29.8,
-       "se": 3.8
+       "n": 148,
+       "said": 28.0,
+       "hit": 26.4,
+       "se": 3.7
       },
       {
        "band": "30-35%",
-       "n": 405,
+       "n": 381,
        "said": 32.7,
-       "hit": 37.8,
-       "se": 2.3
+       "hit": 36.0,
+       "se": 2.4
       },
       {
        "band": "35-40%",
-       "n": 446,
-       "said": 37.6,
-       "hit": 35.2,
-       "se": 2.3
+       "n": 475,
+       "said": 37.5,
+       "hit": 37.1,
+       "se": 2.2
       },
       {
        "band": "40-45%",
-       "n": 443,
+       "n": 446,
        "said": 42.4,
-       "hit": 41.5,
+       "hit": 43.3,
        "se": 2.3
       },
       {
        "band": "45-50%",
-       "n": 295,
+       "n": 291,
        "said": 47.4,
-       "hit": 50.2,
+       "hit": 49.1,
        "se": 2.9
       },
       {
        "band": "50-55%",
-       "n": 372,
+       "n": 360,
        "said": 52.7,
-       "hit": 52.4,
+       "hit": 53.9,
        "se": 2.6
       },
       {
        "band": "55-60%",
-       "n": 458,
-       "said": 57.5,
-       "hit": 58.7,
+       "n": 466,
+       "said": 57.6,
+       "hit": 58.6,
        "se": 2.3
       },
       {
        "band": "60-65%",
-       "n": 483,
-       "said": 62.4,
-       "hit": 58.6,
+       "n": 488,
+       "said": 62.5,
+       "hit": 59.8,
        "se": 2.2
       },
       {
        "band": "65-70%",
-       "n": 354,
-       "said": 67.3,
-       "hit": 71.5,
+       "n": 355,
+       "said": 67.2,
+       "hit": 73.5,
        "se": 2.5
       },
       {
        "band": "70-75%",
        "n": 270,
-       "said": 72.5,
-       "hit": 71.1,
+       "said": 72.6,
+       "hit": 71.5,
        "se": 2.7
       },
       {
        "band": "75-80%",
-       "n": 556,
+       "n": 543,
        "said": 77.8,
-       "hit": 79.3,
+       "hit": 78.3,
        "se": 1.8
       },
       {
        "band": "80-85%",
-       "n": 720,
+       "n": 745,
        "said": 82.5,
-       "hit": 81.0,
+       "hit": 81.1,
        "se": 1.4
       },
       {
        "band": "85-90%",
-       "n": 362,
+       "n": 341,
        "said": 86.9,
-       "hit": 84.8,
+       "hit": 88.3,
        "se": 1.8
       },
       {
        "band": "90-95%",
-       "n": 42,
-       "said": 91.2,
-       "hit": 92.9,
+       "n": 41,
+       "said": 91.1,
+       "hit": 92.7,
        "se": 4.4
       }
      ],
-     "brier": 0.2074
+     "brier": 0.2054
     },
     "Spread": {
      "calibration": [
       {
        "band": "0-5%",
-       "n": 13,
-       "said": 4.6,
-       "hit": 7.7,
-       "se": 5.8
+       "n": 14,
+       "said": 4.5,
+       "hit": 7.1,
+       "se": 5.5
       },
       {
        "band": "5-10%",
-       "n": 268,
+       "n": 255,
        "said": 8.4,
-       "hit": 9.7,
+       "hit": 7.1,
        "se": 1.7
       },
       {
        "band": "10-15%",
-       "n": 688,
+       "n": 707,
        "said": 12.5,
-       "hit": 18.6,
-       "se": 1.3
+       "hit": 18.1,
+       "se": 1.2
       },
       {
        "band": "15-20%",
-       "n": 786,
-       "said": 17.5,
-       "hit": 18.6,
+       "n": 784,
+       "said": 17.6,
+       "hit": 19.5,
        "se": 1.4
       },
       {
        "band": "20-25%",
-       "n": 706,
+       "n": 719,
        "said": 22.4,
-       "hit": 26.9,
+       "hit": 25.6,
        "se": 1.6
       },
       {
        "band": "25-30%",
-       "n": 489,
-       "said": 27.4,
-       "hit": 29.9,
-       "se": 2.0
+       "n": 469,
+       "said": 27.5,
+       "hit": 30.3,
+       "se": 2.1
       },
       {
        "band": "30-35%",
-       "n": 353,
+       "n": 372,
        "said": 32.2,
-       "hit": 31.2,
-       "se": 2.5
+       "hit": 30.6,
+       "se": 2.4
       },
       {
        "band": "35-40%",
-       "n": 195,
+       "n": 186,
        "said": 37.0,
-       "hit": 37.4,
+       "hit": 39.2,
        "se": 3.5
       },
       {
        "band": "40-45%",
-       "n": 61,
-       "said": 41.9,
-       "hit": 55.7,
-       "se": 6.3
+       "n": 55,
+       "said": 42.2,
+       "hit": 50.9,
+       "se": 6.7
       },
       {
        "band": "45-50%",
-       "n": 41,
-       "said": 47.5,
-       "hit": 39.0,
-       "se": 7.8
+       "n": 39,
+       "said": 47.3,
+       "hit": 30.8,
+       "se": 8.0
       },
       {
        "band": "50-55%",
-       "n": 41,
-       "said": 52.5,
-       "hit": 61.0,
-       "se": 7.8
+       "n": 39,
+       "said": 52.7,
+       "hit": 69.2,
+       "se": 8.0
       },
       {
        "band": "55-60%",
-       "n": 61,
-       "said": 58.1,
-       "hit": 44.3,
-       "se": 6.3
+       "n": 55,
+       "said": 57.8,
+       "hit": 49.1,
+       "se": 6.7
       },
       {
        "band": "60-65%",
-       "n": 195,
+       "n": 186,
        "said": 63.0,
-       "hit": 62.6,
+       "hit": 60.8,
        "se": 3.5
       },
       {
        "band": "65-70%",
-       "n": 353,
+       "n": 372,
        "said": 67.8,
-       "hit": 68.8,
-       "se": 2.5
+       "hit": 69.4,
+       "se": 2.4
       },
       {
        "band": "70-75%",
-       "n": 489,
-       "said": 72.6,
-       "hit": 70.1,
-       "se": 2.0
+       "n": 469,
+       "said": 72.5,
+       "hit": 69.7,
+       "se": 2.1
       },
       {
        "band": "75-80%",
-       "n": 706,
+       "n": 719,
        "said": 77.6,
-       "hit": 73.1,
+       "hit": 74.4,
        "se": 1.6
       },
       {
        "band": "80-85%",
-       "n": 786,
-       "said": 82.5,
-       "hit": 81.4,
+       "n": 784,
+       "said": 82.4,
+       "hit": 80.5,
        "se": 1.4
       },
       {
        "band": "85-90%",
-       "n": 688,
+       "n": 707,
        "said": 87.5,
-       "hit": 81.4,
-       "se": 1.3
+       "hit": 81.9,
+       "se": 1.2
       },
       {
        "band": "90-95%",
-       "n": 268,
+       "n": 255,
        "said": 91.6,
-       "hit": 90.3,
+       "hit": 92.9,
        "se": 1.7
       },
       {
        "band": "95-100%",
-       "n": 13,
-       "said": 95.4,
-       "hit": 92.3,
-       "se": 5.8
+       "n": 14,
+       "said": 95.5,
+       "hit": 92.9,
+       "se": 5.5
       }
      ],
-     "brier": 0.1779
+     "brier": 0.1757
     }
    },
    "tickets": [
     {
      "size": 2,
-     "played": 214,
-     "won": 181,
-     "expected": 173.0
+     "played": 212,
+     "won": 182,
+     "expected": 172.4
     },
     {
      "size": 3,
-     "played": 188,
-     "won": 145,
-     "expected": 136.5
+     "played": 189,
+     "won": 152,
+     "expected": 138.9
     },
     {
      "size": 4,
-     "played": 170,
-     "won": 125,
-     "expected": 110.9
+     "played": 166,
+     "won": 121,
+     "expected": 109.9
     },
     {
      "size": 6,
-     "played": 122,
-     "won": 78,
-     "expected": 64.2
+     "played": 126,
+     "won": 83,
+     "expected": 67.8
     },
     {
      "size": 8,
-     "played": 87,
-     "won": 48,
+     "played": 85,
+     "won": 47,
      "expected": 36.7
     },
     {
      "size": 10,
-     "played": 45,
+     "played": 43,
      "won": 20,
-     "expected": 14.9
+     "expected": 14.8
     }
    ],
    "aim_trials": [
@@ -613,253 +606,253 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 214,
-     "won": 181,
-     "expected": 173.0,
-     "avg_fair": 1.24
-    },
-    {
-     "size": 2,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 214,
-     "won": 194,
-     "expected": 194.4,
-     "avg_fair": 1.1
-    },
-    {
-     "size": 2,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 214,
-     "won": 198,
-     "expected": 197.4,
-     "avg_fair": 1.08
-    },
-    {
-     "size": 2,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 214,
-     "won": 200,
-     "expected": 198.2,
-     "avg_fair": 1.08
-    },
-    {
-     "size": 3,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 188,
-     "won": 145,
-     "expected": 136.5,
-     "avg_fair": 1.38
-    },
-    {
-     "size": 3,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 188,
-     "won": 167,
-     "expected": 162.5,
-     "avg_fair": 1.16
-    },
-    {
-     "size": 3,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 188,
-     "won": 171,
-     "expected": 166.5,
-     "avg_fair": 1.13
-    },
-    {
-     "size": 3,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 188,
-     "won": 170,
-     "expected": 166.9,
-     "avg_fair": 1.13
-    },
-    {
-     "size": 4,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 170,
-     "won": 125,
-     "expected": 110.9,
-     "avg_fair": 1.53
-    },
-    {
-     "size": 4,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 171,
-     "won": 145,
-     "expected": 139.8,
+     "played": 212,
+     "won": 182,
+     "expected": 172.4,
      "avg_fair": 1.23
     },
     {
+     "size": 2,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 212,
+     "won": 190,
+     "expected": 190.9,
+     "avg_fair": 1.11
+    },
+    {
+     "size": 2,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 212,
+     "won": 195,
+     "expected": 195.8,
+     "avg_fair": 1.08
+    },
+    {
+     "size": 2,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 212,
+     "won": 194,
+     "expected": 196.7,
+     "avg_fair": 1.08
+    },
+    {
+     "size": 3,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 189,
+     "won": 152,
+     "expected": 138.9,
+     "avg_fair": 1.36
+    },
+    {
+     "size": 3,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 189,
+     "won": 164,
+     "expected": 161.5,
+     "avg_fair": 1.17
+    },
+    {
+     "size": 3,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 189,
+     "won": 170,
+     "expected": 168.4,
+     "avg_fair": 1.12
+    },
+    {
+     "size": 3,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 189,
+     "won": 169,
+     "expected": 168.9,
+     "avg_fair": 1.12
+    },
+    {
+     "size": 4,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 166,
+     "won": 121,
+     "expected": 109.9,
+     "avg_fair": 1.51
+    },
+    {
+     "size": 4,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 167,
+     "won": 134,
+     "expected": 134.4,
+     "avg_fair": 1.25
+    },
+    {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 171,
-     "won": 147,
-     "expected": 144.0,
-     "avg_fair": 1.19
+     "played": 167,
+     "won": 141,
+     "expected": 141.8,
+     "avg_fair": 1.18
     },
     {
      "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 171,
-     "won": 148,
-     "expected": 144.6,
-     "avg_fair": 1.19
+     "played": 167,
+     "won": 140,
+     "expected": 142.4,
+     "avg_fair": 1.18
     },
     {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 122,
-     "won": 78,
-     "expected": 64.2,
-     "avg_fair": 1.9
+     "played": 126,
+     "won": 83,
+     "expected": 67.8,
+     "avg_fair": 1.86
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 125,
-     "won": 93,
-     "expected": 91.4,
-     "avg_fair": 1.38
+     "played": 127,
+     "won": 94,
+     "expected": 90.7,
+     "avg_fair": 1.41
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 125,
-     "won": 96,
-     "expected": 95.2,
-     "avg_fair": 1.32
+     "played": 127,
+     "won": 97,
+     "expected": 98.1,
+     "avg_fair": 1.3
     },
     {
      "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 125,
-     "won": 98,
-     "expected": 95.7,
-     "avg_fair": 1.32
+     "played": 127,
+     "won": 99,
+     "expected": 98.6,
+     "avg_fair": 1.3
     },
     {
      "size": 8,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 87,
-     "won": 48,
+     "played": 85,
+     "won": 47,
      "expected": 36.7,
-     "avg_fair": 2.37
+     "avg_fair": 2.32
     },
     {
      "size": 8,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 89,
-     "won": 58,
-     "expected": 57.1,
-     "avg_fair": 1.58
-    },
-    {
-     "size": 8,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 89,
-     "won": 60,
-     "expected": 59.5,
-     "avg_fair": 1.52
-    },
-    {
-     "size": 8,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 89,
+     "played": 88,
      "won": 59,
-     "expected": 59.7,
-     "avg_fair": 1.52
+     "expected": 54.3,
+     "avg_fair": 1.64
+    },
+    {
+     "size": 8,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 88,
+     "won": 61,
+     "expected": 59.5,
+     "avg_fair": 1.5
+    },
+    {
+     "size": 8,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 88,
+     "won": 57,
+     "expected": 59.9,
+     "avg_fair": 1.5
     },
     {
      "size": 10,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 45,
+     "played": 43,
      "won": 20,
-     "expected": 14.9,
-     "avg_fair": 3.03
+     "expected": 14.8,
+     "avg_fair": 2.92
     },
     {
      "size": 10,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 47,
-     "won": 29,
-     "expected": 24.4,
-     "avg_fair": 1.98
+     "played": 46,
+     "won": 28,
+     "expected": 23.8,
+     "avg_fair": 1.97
     },
     {
      "size": 10,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 47,
-     "won": 28,
-     "expected": 25.1,
-     "avg_fair": 1.93
+     "played": 46,
+     "won": 27,
+     "expected": 25.5,
+     "avg_fair": 1.86
     },
     {
      "size": 10,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 47,
-     "won": 25,
-     "expected": 25.0,
-     "avg_fair": 1.94
+     "played": 46,
+     "won": 27,
+     "expected": 25.3,
+     "avg_fair": 1.87
     },
     {
      "size": 15,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 19,
-     "won": 4,
+     "played": 18,
+     "won": 3,
      "expected": 3.6,
-     "avg_fair": 5.37
+     "avg_fair": 5.04
     },
     {
      "size": 15,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 19,
-     "won": 8,
-     "expected": 6.1,
-     "avg_fair": 3.18
-    },
-    {
-     "size": 15,
-     "target": 0.96,
-     "leg_max": 0.985,
      "played": 19,
      "won": 9,
-     "expected": 6.3,
-     "avg_fair": 3.06
+     "expected": 6.2,
+     "avg_fair": 3.09
+    },
+    {
+     "size": 15,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 19,
+     "won": 7,
+     "expected": 6.8,
+     "avg_fair": 2.84
     },
     {
      "size": 15,
      "target": 0.97,
      "leg_max": 0.99,
      "played": 19,
-     "won": 7,
-     "expected": 6.2,
-     "avg_fair": 3.12
+     "won": 6,
+     "expected": 6.6,
+     "avg_fair": 2.9
     },
     {
      "size": 20,
@@ -867,8 +860,8 @@
      "leg_max": 0.94,
      "played": 5,
      "won": 0,
-     "expected": 0.5,
-     "avg_fair": 10.2
+     "expected": 0.6,
+     "avg_fair": 8.96
     },
     {
      "size": 20,
@@ -876,8 +869,8 @@
      "leg_max": 0.975,
      "played": 5,
      "won": 0,
-     "expected": 0.8,
-     "avg_fair": 5.97
+     "expected": 0.9,
+     "avg_fair": 5.71
     },
     {
      "size": 20,
@@ -885,8 +878,8 @@
      "leg_max": 0.985,
      "played": 5,
      "won": 0,
-     "expected": 0.9,
-     "avg_fair": 5.77
+     "expected": 1.0,
+     "avg_fair": 5.21
     },
     {
      "size": 20,
@@ -894,8 +887,8 @@
      "leg_max": 0.99,
      "played": 5,
      "won": 0,
-     "expected": 0.9,
-     "avg_fair": 5.77
+     "expected": 1.0,
+     "avg_fair": 5.21
     }
    ]
   },
@@ -1637,96 +1630,96 @@
    ]
   },
   "ncaaf": {
-   "games": 897,
-   "priced": 897,
+   "games": 898,
+   "priced": 898,
    "errors": 0,
    "fitted_miss_factor": 1.0,
    "stack_legs": {
-    "fit": 4616,
-    "test": 4626,
+    "fit": 4595,
+    "test": 4613,
     "raw": [
      {
       "band": "75-80%",
-      "n": 860,
+      "n": 850,
       "said": 76.1,
-      "hit": 77.4,
+      "hit": 78.4,
       "se": 1.5
      },
      {
       "band": "80-85%",
-      "n": 1986,
+      "n": 1951,
       "said": 82.9,
-      "hit": 82.8,
-      "se": 0.8
+      "hit": 82.6,
+      "se": 0.9
      },
      {
       "band": "85-90%",
-      "n": 1200,
-      "said": 87.8,
-      "hit": 89.2,
+      "n": 1224,
+      "said": 87.7,
+      "hit": 89.1,
       "se": 0.9
      },
      {
       "band": "90-95%",
-      "n": 227,
-      "said": 92.7,
-      "hit": 96.5,
-      "se": 1.7
+      "n": 212,
+      "said": 92.6,
+      "hit": 96.2,
+      "se": 1.8
      },
      {
       "band": "95-100%",
-      "n": 353,
+      "n": 376,
       "said": 97.7,
       "hit": 99.2,
       "se": 0.8
      }
     ],
-    "raw_brier": 0.121,
+    "raw_brier": 0.1202,
     "haircut": [
      {
       "band": "75-80%",
-      "n": 860,
+      "n": 850,
       "said": 76.1,
-      "hit": 77.4,
+      "hit": 78.4,
       "se": 1.5
      },
      {
       "band": "80-85%",
-      "n": 1986,
+      "n": 1951,
       "said": 82.9,
-      "hit": 82.8,
-      "se": 0.8
+      "hit": 82.6,
+      "se": 0.9
      },
      {
       "band": "85-90%",
-      "n": 1200,
-      "said": 87.8,
-      "hit": 89.2,
+      "n": 1224,
+      "said": 87.7,
+      "hit": 89.1,
       "se": 0.9
      },
      {
       "band": "90-95%",
-      "n": 227,
-      "said": 92.7,
-      "hit": 96.5,
-      "se": 1.7
+      "n": 212,
+      "said": 92.6,
+      "hit": 96.2,
+      "se": 1.8
      },
      {
       "band": "95-100%",
-      "n": 353,
+      "n": 376,
       "said": 97.7,
       "hit": 99.2,
       "se": 0.8
      }
     ],
-    "haircut_brier": 0.121
+    "haircut_brier": 0.1202
    },
    "markets": {
     "Winner": {
      "calibration": [
       {
        "band": "0-5%",
-       "n": 172,
+       "n": 173,
        "said": 1.9,
        "hit": 0.0,
        "se": 1.0
@@ -1734,153 +1727,153 @@
       {
        "band": "5-10%",
        "n": 70,
-       "said": 7.7,
+       "said": 7.5,
        "hit": 4.3,
        "se": 3.2
       },
       {
        "band": "10-15%",
-       "n": 68,
-       "said": 12.4,
-       "hit": 7.4,
-       "se": 4.0
+       "n": 71,
+       "said": 12.6,
+       "hit": 9.9,
+       "se": 3.9
       },
       {
        "band": "15-20%",
-       "n": 57,
-       "said": 17.6,
-       "hit": 10.5,
-       "se": 5.0
+       "n": 53,
+       "said": 17.7,
+       "hit": 15.1,
+       "se": 5.2
       },
       {
        "band": "20-25%",
-       "n": 74,
+       "n": 67,
        "said": 22.0,
-       "hit": 8.1,
-       "se": 4.8
+       "hit": 10.4,
+       "se": 5.1
       },
       {
        "band": "25-30%",
-       "n": 57,
-       "said": 27.1,
-       "hit": 19.3,
-       "se": 5.9
+       "n": 64,
+       "said": 27.2,
+       "hit": 25.0,
+       "se": 5.6
       },
       {
        "band": "30-35%",
-       "n": 119,
+       "n": 120,
        "said": 33.0,
-       "hit": 24.4,
+       "hit": 28.3,
        "se": 4.3
       },
       {
        "band": "35-40%",
-       "n": 69,
-       "said": 38.0,
-       "hit": 43.5,
-       "se": 5.8
+       "n": 75,
+       "said": 38.1,
+       "hit": 38.7,
+       "se": 5.6
       },
       {
        "band": "40-45%",
-       "n": 159,
+       "n": 156,
        "said": 42.8,
-       "hit": 36.5,
-       "se": 3.9
+       "hit": 38.5,
+       "se": 4.0
       },
       {
        "band": "45-50%",
-       "n": 48,
+       "n": 42,
        "said": 46.4,
-       "hit": 37.5,
-       "se": 7.2
+       "hit": 38.1,
+       "se": 7.7
       },
       {
        "band": "50-55%",
-       "n": 48,
+       "n": 42,
        "said": 53.6,
-       "hit": 62.5,
-       "se": 7.2
+       "hit": 61.9,
+       "se": 7.7
       },
       {
        "band": "55-60%",
-       "n": 159,
+       "n": 156,
        "said": 57.2,
-       "hit": 63.5,
-       "se": 3.9
+       "hit": 61.5,
+       "se": 4.0
       },
       {
        "band": "60-65%",
-       "n": 69,
-       "said": 62.0,
-       "hit": 56.5,
-       "se": 5.8
+       "n": 75,
+       "said": 61.9,
+       "hit": 61.3,
+       "se": 5.6
       },
       {
        "band": "65-70%",
-       "n": 119,
+       "n": 120,
        "said": 67.0,
-       "hit": 75.6,
+       "hit": 71.7,
        "se": 4.3
       },
       {
        "band": "70-75%",
-       "n": 57,
-       "said": 72.9,
-       "hit": 80.7,
-       "se": 5.9
+       "n": 64,
+       "said": 72.8,
+       "hit": 75.0,
+       "se": 5.6
       },
       {
        "band": "75-80%",
-       "n": 74,
+       "n": 67,
        "said": 78.0,
-       "hit": 91.9,
-       "se": 4.8
+       "hit": 89.6,
+       "se": 5.1
       },
       {
        "band": "80-85%",
-       "n": 57,
-       "said": 82.4,
-       "hit": 89.5,
-       "se": 5.0
+       "n": 53,
+       "said": 82.3,
+       "hit": 84.9,
+       "se": 5.2
       },
       {
        "band": "85-90%",
-       "n": 68,
-       "said": 87.6,
-       "hit": 92.6,
-       "se": 4.0
+       "n": 71,
+       "said": 87.4,
+       "hit": 90.1,
+       "se": 3.9
       },
       {
        "band": "90-95%",
        "n": 70,
-       "said": 92.3,
+       "said": 92.5,
        "hit": 95.7,
        "se": 3.2
       },
       {
        "band": "95-100%",
-       "n": 172,
+       "n": 173,
        "said": 98.1,
        "hit": 100.0,
        "se": 1.0
       }
      ],
-     "brier": 0.1325
+     "brier": 0.14
     },
     "Spread": {
      "calibration": [
       {
        "band": "30-35%",
-       "n": 1453,
+       "n": 1448,
        "said": 33.6,
-       "hit": 31.7,
+       "hit": 33.4,
        "se": 1.2
       },
       {
        "band": "40-45%",
-       "n": 1648,
+       "n": 1644,
        "said": 42.8,
-       "hit": 40.8,
+       "hit": 41.7,
        "se": 1.2
       },
       {
@@ -1892,271 +1885,271 @@
       },
       {
        "band": "50-55%",
-       "n": 1784,
+       "n": 1780,
        "said": 50.0,
-       "hit": 49.7,
+       "hit": 49.5,
        "se": 1.2
       },
       {
        "band": "55-60%",
-       "n": 1648,
+       "n": 1644,
        "said": 57.2,
-       "hit": 59.0,
+       "hit": 58.2,
        "se": 1.2
       },
       {
        "band": "65-70%",
-       "n": 1453,
+       "n": 1448,
        "said": 66.4,
-       "hit": 68.1,
+       "hit": 66.5,
        "se": 1.2
       }
      ],
-     "brier": 0.2348
+     "brier": 0.2372
     },
     "Total": {
      "calibration": [
       {
        "band": "5-10%",
        "n": 1,
-       "said": 9.0,
+       "said": 10.0,
        "hit": 0.0,
-       "se": 28.6
+       "se": 29.9
       },
       {
        "band": "10-15%",
-       "n": 3,
-       "said": 14.4,
-       "hit": 33.3,
-       "se": 20.3
+       "n": 4,
+       "said": 13.7,
+       "hit": 25.0,
+       "se": 17.2
       },
       {
        "band": "15-20%",
-       "n": 1783,
+       "n": 1777,
        "said": 16.7,
-       "hit": 17.8,
+       "hit": 18.0,
        "se": 0.9
       },
       {
        "band": "20-25%",
-       "n": 1275,
+       "n": 1260,
        "said": 24.1,
-       "hit": 25.0,
+       "hit": 24.3,
        "se": 1.2
       },
       {
        "band": "25-30%",
-       "n": 618,
-       "said": 26.3,
-       "hit": 29.0,
-       "se": 1.8
+       "n": 650,
+       "said": 26.4,
+       "hit": 29.2,
+       "se": 1.7
       },
       {
        "band": "30-35%",
-       "n": 1676,
+       "n": 1652,
        "said": 31.6,
-       "hit": 31.7,
+       "hit": 32.1,
        "se": 1.1
       },
       {
        "band": "35-40%",
-       "n": 91,
+       "n": 104,
        "said": 39.5,
-       "hit": 44.0,
-       "se": 5.1
+       "hit": 38.5,
+       "se": 4.8
       },
       {
        "band": "40-45%",
-       "n": 1695,
+       "n": 1677,
        "said": 41.9,
-       "hit": 42.7,
+       "hit": 42.5,
        "se": 1.2
       },
       {
        "band": "45-50%",
-       "n": 647,
-       "said": 48.9,
-       "hit": 48.5,
+       "n": 654,
+       "said": 48.8,
+       "hit": 48.2,
        "se": 2.0
       },
       {
        "band": "50-55%",
-       "n": 1143,
-       "said": 50.6,
-       "hit": 50.8,
+       "n": 1134,
+       "said": 50.7,
+       "hit": 51.1,
        "se": 1.5
       },
       {
        "band": "55-60%",
-       "n": 1695,
+       "n": 1677,
        "said": 58.1,
-       "hit": 57.3,
+       "hit": 57.5,
        "se": 1.2
       },
       {
        "band": "60-65%",
-       "n": 91,
+       "n": 104,
        "said": 60.5,
-       "hit": 56.0,
-       "se": 5.1
+       "hit": 61.5,
+       "se": 4.8
       },
       {
        "band": "65-70%",
-       "n": 1676,
+       "n": 1652,
        "said": 68.4,
-       "hit": 68.3,
+       "hit": 67.9,
        "se": 1.1
       },
       {
        "band": "70-75%",
-       "n": 618,
-       "said": 73.7,
-       "hit": 71.0,
-       "se": 1.8
+       "n": 650,
+       "said": 73.6,
+       "hit": 70.8,
+       "se": 1.7
       },
       {
        "band": "75-80%",
-       "n": 1275,
+       "n": 1260,
        "said": 75.9,
-       "hit": 75.0,
+       "hit": 75.7,
        "se": 1.2
       },
       {
        "band": "80-85%",
-       "n": 1783,
+       "n": 1777,
        "said": 83.3,
-       "hit": 82.2,
+       "hit": 82.0,
        "se": 0.9
       },
       {
        "band": "85-90%",
-       "n": 3,
-       "said": 85.6,
-       "hit": 66.7,
-       "se": 20.3
+       "n": 4,
+       "said": 86.3,
+       "hit": 75.0,
+       "se": 17.2
       },
       {
        "band": "90-95%",
        "n": 1,
-       "said": 91.0,
+       "said": 90.0,
        "hit": 100.0,
-       "se": 28.6
+       "se": 29.9
       }
      ],
-     "brier": 0.2056
+     "brier": 0.2054
     },
     "Team total": {
      "calibration": [
       {
        "band": "20-25%",
-       "n": 302,
+       "n": 289,
        "said": 24.8,
-       "hit": 24.8,
+       "hit": 24.2,
        "se": 2.5
       },
       {
        "band": "25-30%",
-       "n": 1484,
+       "n": 1493,
        "said": 26.3,
-       "hit": 24.8,
+       "hit": 23.9,
        "se": 1.1
       },
       {
        "band": "35-40%",
-       "n": 1421,
+       "n": 1407,
        "said": 38.7,
-       "hit": 38.1,
+       "hit": 35.5,
        "se": 1.3
       },
       {
        "band": "40-45%",
-       "n": 365,
+       "n": 375,
        "said": 40.4,
-       "hit": 37.0,
-       "se": 2.6
+       "hit": 38.9,
+       "se": 2.5
       },
       {
        "band": "45-50%",
-       "n": 895,
+       "n": 885,
        "said": 48.9,
-       "hit": 47.9,
+       "hit": 46.2,
        "se": 1.7
       },
       {
        "band": "50-55%",
-       "n": 891,
+       "n": 897,
        "said": 50.7,
-       "hit": 48.6,
+       "hit": 51.1,
        "se": 1.7
       },
       {
        "band": "55-60%",
-       "n": 555,
+       "n": 548,
        "said": 59.3,
-       "hit": 58.4,
+       "hit": 56.9,
        "se": 2.1
       },
       {
        "band": "60-65%",
-       "n": 1231,
+       "n": 1234,
        "said": 61.1,
-       "hit": 60.5,
+       "hit": 62.1,
        "se": 1.4
       },
       {
        "band": "70-75%",
-       "n": 1712,
-       "said": 73.5,
-       "hit": 75.0,
+       "n": 1710,
+       "said": 73.6,
+       "hit": 75.4,
        "se": 1.1
       },
       {
        "band": "75-80%",
-       "n": 74,
+       "n": 72,
        "said": 75.1,
-       "hit": 68.9,
-       "se": 5.0
+       "hit": 73.6,
+       "se": 5.1
       }
      ],
-     "brier": 0.2203
+     "brier": 0.2176
     }
    },
    "tickets": [
     {
      "size": 2,
-     "played": 79,
-     "won": 69,
-     "expected": 62.6
+     "played": 82,
+     "won": 71,
+     "expected": 65.0
     },
     {
      "size": 3,
-     "played": 56,
-     "won": 45,
-     "expected": 40.0
+     "played": 60,
+     "won": 52,
+     "expected": 42.9
     },
     {
      "size": 4,
-     "played": 52,
-     "won": 40,
-     "expected": 33.1
+     "played": 57,
+     "won": 44,
+     "expected": 36.2
     },
     {
      "size": 6,
-     "played": 43,
-     "won": 27,
-     "expected": 21.7
+     "played": 44,
+     "won": 29,
+     "expected": 22.1
     },
     {
      "size": 8,
-     "played": 34,
-     "won": 20,
-     "expected": 13.7
+     "played": 36,
+     "won": 19,
+     "expected": 14.4
     },
     {
      "size": 10,
-     "played": 34,
-     "won": 19,
-     "expected": 10.7
+     "played": 35,
+     "won": 16,
+     "expected": 11.0
     }
    ],
    "aim_trials": [
@@ -2164,226 +2157,226 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 79,
-     "won": 69,
-     "expected": 62.6,
+     "played": 82,
+     "won": 71,
+     "expected": 65.0,
      "avg_fair": 1.26
     },
     {
      "size": 2,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 79,
+     "played": 82,
      "won": 71,
-     "expected": 65.9,
-     "avg_fair": 1.2
+     "expected": 68.2,
+     "avg_fair": 1.21
     },
     {
      "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 79,
+     "played": 82,
      "won": 73,
-     "expected": 67.5,
+     "expected": 69.7,
      "avg_fair": 1.18
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 79,
-     "won": 73,
-     "expected": 68.3,
-     "avg_fair": 1.16
+     "played": 82,
+     "won": 72,
+     "expected": 70.6,
+     "avg_fair": 1.17
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 56,
-     "won": 45,
-     "expected": 40.0,
+     "played": 60,
+     "won": 52,
+     "expected": 42.9,
      "avg_fair": 1.4
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 56,
-     "won": 45,
-     "expected": 43.9,
-     "avg_fair": 1.28
+     "played": 60,
+     "won": 52,
+     "expected": 46.7,
+     "avg_fair": 1.29
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 56,
-     "won": 48,
-     "expected": 45.9,
-     "avg_fair": 1.23
+     "played": 60,
+     "won": 52,
+     "expected": 48.6,
+     "avg_fair": 1.25
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 56,
-     "won": 47,
-     "expected": 47.0,
-     "avg_fair": 1.21
+     "played": 60,
+     "won": 51,
+     "expected": 49.7,
+     "avg_fair": 1.22
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 52,
-     "won": 40,
-     "expected": 33.1,
-     "avg_fair": 1.57
+     "played": 57,
+     "won": 44,
+     "expected": 36.2,
+     "avg_fair": 1.58
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 52,
-     "won": 42,
-     "expected": 37.5,
-     "avg_fair": 1.4
+     "played": 57,
+     "won": 44,
+     "expected": 40.5,
+     "avg_fair": 1.42
     },
     {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 52,
-     "won": 43,
-     "expected": 39.7,
+     "played": 57,
+     "won": 45,
+     "expected": 42.6,
+     "avg_fair": 1.36
+    },
+    {
+     "size": 4,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 57,
+     "won": 44,
+     "expected": 43.8,
      "avg_fair": 1.33
     },
     {
-     "size": 4,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 52,
-     "won": 42,
-     "expected": 40.9,
-     "avg_fair": 1.3
-    },
-    {
      "size": 6,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 43,
-     "won": 27,
-     "expected": 21.7,
-     "avg_fair": 1.99
+     "played": 44,
+     "won": 29,
+     "expected": 22.1,
+     "avg_fair": 2.0
     },
     {
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 43,
+     "played": 44,
      "won": 33,
-     "expected": 26.9,
-     "avg_fair": 1.63
+     "expected": 27.4,
+     "avg_fair": 1.64
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 43,
-     "won": 35,
-     "expected": 29.1,
-     "avg_fair": 1.52
-    },
-    {
-     "size": 6,
-     "target": 0.97,
-     "leg_max": 0.99,
-     "played": 43,
+     "played": 44,
      "won": 34,
-     "expected": 30.2,
-     "avg_fair": 1.48
+     "expected": 29.3,
+     "avg_fair": 1.56
     },
     {
-     "size": 8,
-     "target": 0.9,
-     "leg_max": 0.94,
-     "played": 34,
-     "won": 20,
-     "expected": 13.7,
-     "avg_fair": 2.5
-    },
-    {
-     "size": 8,
-     "target": 0.94,
-     "leg_max": 0.975,
-     "played": 34,
-     "won": 25,
-     "expected": 18.3,
-     "avg_fair": 1.92
-    },
-    {
-     "size": 8,
-     "target": 0.96,
-     "leg_max": 0.985,
-     "played": 34,
-     "won": 25,
-     "expected": 20.4,
-     "avg_fair": 1.77
-    },
-    {
-     "size": 8,
+     "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 34,
-     "won": 25,
-     "expected": 21.5,
-     "avg_fair": 1.7
+     "played": 44,
+     "won": 34,
+     "expected": 30.4,
+     "avg_fair": 1.51
     },
     {
-     "size": 10,
+     "size": 8,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 34,
+     "played": 36,
      "won": 19,
-     "expected": 10.7,
-     "avg_fair": 3.19
+     "expected": 14.4,
+     "avg_fair": 2.51
+    },
+    {
+     "size": 8,
+     "target": 0.94,
+     "leg_max": 0.975,
+     "played": 36,
+     "won": 24,
+     "expected": 19.4,
+     "avg_fair": 1.93
+    },
+    {
+     "size": 8,
+     "target": 0.96,
+     "leg_max": 0.985,
+     "played": 36,
+     "won": 26,
+     "expected": 21.2,
+     "avg_fair": 1.8
+    },
+    {
+     "size": 8,
+     "target": 0.97,
+     "leg_max": 0.99,
+     "played": 36,
+     "won": 26,
+     "expected": 22.3,
+     "avg_fair": 1.74
+    },
+    {
+     "size": 10,
+     "target": 0.9,
+     "leg_max": 0.94,
+     "played": 35,
+     "won": 16,
+     "expected": 11.0,
+     "avg_fair": 3.22
     },
     {
      "size": 10,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 34,
+     "played": 35,
      "won": 22,
-     "expected": 14.9,
-     "avg_fair": 2.42
+     "expected": 15.1,
+     "avg_fair": 2.46
     },
     {
      "size": 10,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 34,
+     "played": 35,
      "won": 23,
-     "expected": 16.8,
-     "avg_fair": 2.24
+     "expected": 16.9,
+     "avg_fair": 2.28
     },
     {
      "size": 10,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 34,
+     "played": 35,
      "won": 23,
-     "expected": 17.9,
-     "avg_fair": 2.13
+     "expected": 18.1,
+     "avg_fair": 2.18
     },
     {
      "size": 15,
      "target": 0.9,
      "leg_max": 0.94,
      "played": 31,
-     "won": 9,
-     "expected": 5.5,
-     "avg_fair": 5.75
+     "won": 8,
+     "expected": 5.4,
+     "avg_fair": 5.78
     },
     {
      "size": 15,
@@ -2391,35 +2384,35 @@
      "leg_max": 0.975,
      "played": 31,
      "won": 14,
-     "expected": 8.4,
-     "avg_fair": 4.17
+     "expected": 8.5,
+     "avg_fair": 4.11
     },
     {
      "size": 15,
      "target": 0.96,
      "leg_max": 0.985,
      "played": 31,
-     "won": 16,
+     "won": 15,
      "expected": 10.1,
-     "avg_fair": 3.79
+     "avg_fair": 3.73
     },
     {
      "size": 15,
      "target": 0.97,
      "leg_max": 0.99,
      "played": 31,
-     "won": 16,
-     "expected": 11.0,
-     "avg_fair": 3.6
+     "won": 15,
+     "expected": 11.2,
+     "avg_fair": 3.52
     },
     {
      "size": 20,
      "target": 0.9,
      "leg_max": 0.94,
      "played": 28,
-     "won": 9,
+     "won": 5,
      "expected": 2.8,
-     "avg_fair": 10.11
+     "avg_fair": 10.18
     },
     {
      "size": 20,
@@ -2427,26 +2420,26 @@
      "leg_max": 0.975,
      "played": 28,
      "won": 10,
-     "expected": 5.1,
-     "avg_fair": 6.26
+     "expected": 5.3,
+     "avg_fair": 6.15
     },
     {
      "size": 20,
      "target": 0.96,
      "leg_max": 0.985,
      "played": 28,
-     "won": 12,
+     "won": 13,
      "expected": 6.5,
-     "avg_fair": 5.36
+     "avg_fair": 5.28
     },
     {
      "size": 20,
      "target": 0.97,
      "leg_max": 0.99,
      "played": 28,
-     "won": 12,
-     "expected": 7.3,
-     "avg_fair": 4.92
+     "won": 13,
+     "expected": 7.4,
+     "avg_fair": 4.86
     }
    ]
   },
@@ -5351,89 +5344,89 @@
    ]
   },
   "epl": {
-   "games": 440,
-   "priced": 440,
+   "games": 445,
+   "priced": 445,
    "errors": 0,
    "fitted_miss_factor": 1.0,
    "stack_legs": {
-    "fit": 1599,
-    "test": 1610,
+    "fit": 1615,
+    "test": 1631,
     "raw": [
      {
       "band": "75-80%",
-      "n": 157,
+      "n": 161,
       "said": 77.5,
-      "hit": 77.7,
+      "hit": 78.9,
       "se": 3.3
      },
      {
       "band": "80-85%",
-      "n": 208,
-      "said": 82.3,
+      "n": 214,
+      "said": 82.4,
       "hit": 84.1,
       "se": 2.6
      },
      {
       "band": "85-90%",
-      "n": 217,
-      "said": 87.4,
-      "hit": 91.7,
+      "n": 220,
+      "said": 87.5,
+      "hit": 91.8,
       "se": 2.2
      },
      {
       "band": "90-95%",
-      "n": 470,
+      "n": 475,
       "said": 93.0,
       "hit": 94.7,
       "se": 1.2
      },
      {
       "band": "95-100%",
-      "n": 558,
+      "n": 561,
       "said": 97.3,
       "hit": 97.1,
       "se": 0.7
      }
     ],
-    "raw_brier": 0.0688,
+    "raw_brier": 0.0683,
     "haircut": [
      {
       "band": "75-80%",
-      "n": 157,
+      "n": 161,
       "said": 77.5,
-      "hit": 77.7,
+      "hit": 78.9,
       "se": 3.3
      },
      {
       "band": "80-85%",
-      "n": 208,
-      "said": 82.3,
+      "n": 214,
+      "said": 82.4,
       "hit": 84.1,
       "se": 2.6
      },
      {
       "band": "85-90%",
-      "n": 217,
-      "said": 87.4,
-      "hit": 91.7,
+      "n": 220,
+      "said": 87.5,
+      "hit": 91.8,
       "se": 2.2
      },
      {
       "band": "90-95%",
-      "n": 470,
+      "n": 475,
       "said": 93.0,
       "hit": 94.7,
       "se": 1.2
      },
      {
       "band": "95-100%",
-      "n": 558,
+      "n": 561,
       "said": 97.3,
       "hit": 97.1,
       "se": 0.7
      }
     ],
-    "haircut_brier": 0.0688
+    "haircut_brier": 0.0683
    },
    "markets": {
     "Winner": {
@@ -5447,30 +5440,30 @@
       },
       {
        "band": "5-10%",
-       "n": 17,
-       "said": 7.9,
+       "n": 18,
+       "said": 8.0,
        "hit": 0.0,
-       "se": 6.5
+       "se": 6.4
       },
       {
        "band": "10-15%",
-       "n": 56,
+       "n": 57,
        "said": 13.2,
-       "hit": 12.5,
+       "hit": 12.3,
        "se": 4.5
       },
       {
        "band": "15-20%",
-       "n": 117,
+       "n": 118,
        "said": 17.9,
-       "hit": 21.4,
+       "hit": 21.2,
        "se": 3.5
       },
       {
        "band": "20-25%",
-       "n": 314,
+       "n": 318,
        "said": 22.8,
-       "hit": 27.4,
+       "hit": 27.0,
        "se": 2.4
       },
       {
@@ -5482,8 +5475,8 @@
       },
       {
        "band": "30-35%",
-       "n": 107,
-       "said": 32.4,
+       "n": 110,
+       "said": 32.5,
        "hit": 35.5,
        "se": 4.5
       },
@@ -5496,10 +5489,10 @@
       },
       {
        "band": "40-45%",
-       "n": 91,
+       "n": 94,
        "said": 42.3,
-       "hit": 38.5,
-       "se": 5.2
+       "hit": 39.4,
+       "se": 5.1
       },
       {
        "band": "45-50%",
@@ -5517,9 +5510,9 @@
       },
       {
        "band": "55-60%",
-       "n": 59,
+       "n": 60,
        "said": 57.6,
-       "hit": 49.2,
+       "hit": 50.0,
        "se": 6.4
       },
       {
@@ -5545,10 +5538,10 @@
       },
       {
        "band": "75-80%",
-       "n": 12,
+       "n": 13,
        "said": 77.4,
-       "hit": 66.7,
-       "se": 12.1
+       "hit": 69.2,
+       "se": 11.6
       },
       {
        "band": "80-85%",
@@ -5565,7 +5558,7 @@
        "se": 24.5
       }
      ],
-     "brier": 0.204
+     "brier": 0.2033
     },
     "Double chance": {
      "calibration": [
@@ -5585,10 +5578,10 @@
       },
       {
        "band": "20-25%",
-       "n": 12,
+       "n": 13,
        "said": 22.6,
-       "hit": 33.3,
-       "se": 12.1
+       "hit": 30.8,
+       "se": 11.6
       },
       {
        "band": "25-30%",
@@ -5613,9 +5606,9 @@
       },
       {
        "band": "40-45%",
-       "n": 59,
+       "n": 60,
        "said": 42.4,
-       "hit": 50.8,
+       "hit": 50.0,
        "se": 6.4
       },
       {
@@ -5634,10 +5627,10 @@
       },
       {
        "band": "55-60%",
-       "n": 90,
+       "n": 93,
        "said": 57.7,
-       "hit": 62.2,
-       "se": 5.2
+       "hit": 61.3,
+       "se": 5.1
       },
       {
        "band": "60-65%",
@@ -5648,8 +5641,8 @@
       },
       {
        "band": "65-70%",
-       "n": 106,
-       "said": 67.6,
+       "n": 109,
+       "said": 67.5,
        "hit": 64.2,
        "se": 4.5
       },
@@ -5669,9 +5662,9 @@
       },
       {
        "band": "80-85%",
-       "n": 68,
+       "n": 69,
        "said": 82.2,
-       "hit": 83.8,
+       "hit": 84.1,
        "se": 4.6
       },
       {
@@ -5683,10 +5676,10 @@
       },
       {
        "band": "90-95%",
-       "n": 16,
-       "said": 92.2,
+       "n": 17,
+       "said": 92.1,
        "hit": 100.0,
-       "se": 6.7
+       "se": 6.5
       },
       {
        "band": "95-100%",
@@ -5696,7 +5689,7 @@
        "se": 10.1
       }
      ],
-     "brier": 0.2045
+     "brier": 0.2043
     },
     "Both teams to score": {
      "calibration": [
@@ -5737,45 +5730,45 @@
       },
       {
        "band": "35-40%",
-       "n": 54,
-       "said": 38.0,
-       "hit": 37.0,
-       "se": 6.6
+       "n": 56,
+       "said": 37.9,
+       "hit": 37.5,
+       "se": 6.5
       },
       {
        "band": "40-45%",
-       "n": 126,
+       "n": 128,
        "said": 42.7,
-       "hit": 36.5,
+       "hit": 36.7,
        "se": 4.4
       },
       {
        "band": "45-50%",
-       "n": 247,
+       "n": 248,
        "said": 47.7,
-       "hit": 50.2,
+       "hit": 50.4,
        "se": 3.2
       },
       {
        "band": "50-55%",
-       "n": 247,
+       "n": 248,
        "said": 52.3,
-       "hit": 49.8,
+       "hit": 49.6,
        "se": 3.2
       },
       {
        "band": "55-60%",
-       "n": 126,
+       "n": 128,
        "said": 57.3,
-       "hit": 63.5,
+       "hit": 63.3,
        "se": 4.4
       },
       {
        "band": "60-65%",
-       "n": 54,
-       "said": 62.0,
-       "hit": 63.0,
-       "se": 6.6
+       "n": 56,
+       "said": 62.1,
+       "hit": 62.5,
+       "se": 6.5
       },
       {
        "band": "65-70%",
@@ -5813,148 +5806,148 @@
        "se": 17.3
       }
      ],
-     "brier": 0.2448
+     "brier": 0.2451
     },
     "Total": {
      "calibration": [
       {
        "band": "0-5%",
-       "n": 141,
-       "said": 4.0,
-       "hit": 5.7,
+       "n": 144,
+       "said": 3.9,
+       "hit": 5.6,
        "se": 1.6
       },
       {
        "band": "5-10%",
-       "n": 320,
+       "n": 322,
        "said": 6.9,
-       "hit": 9.4,
+       "hit": 9.3,
        "se": 1.4
       },
       {
        "band": "10-15%",
-       "n": 216,
+       "n": 217,
        "said": 12.8,
-       "hit": 10.2,
+       "hit": 10.1,
        "se": 2.3
       },
       {
        "band": "15-20%",
-       "n": 265,
-       "said": 17.8,
-       "hit": 15.8,
+       "n": 269,
+       "said": 17.7,
+       "hit": 16.0,
        "se": 2.3
       },
       {
        "band": "20-25%",
-       "n": 265,
+       "n": 269,
        "said": 22.7,
        "hit": 21.9,
        "se": 2.6
       },
       {
        "band": "25-30%",
-       "n": 277,
+       "n": 278,
        "said": 27.5,
-       "hit": 26.0,
+       "hit": 25.9,
        "se": 2.7
       },
       {
        "band": "30-35%",
-       "n": 167,
+       "n": 170,
        "said": 32.6,
-       "hit": 31.1,
+       "hit": 31.2,
        "se": 3.6
       },
       {
        "band": "35-40%",
-       "n": 126,
+       "n": 129,
        "said": 37.0,
-       "hit": 38.9,
+       "hit": 38.8,
        "se": 4.3
       },
       {
        "band": "40-45%",
-       "n": 197,
+       "n": 198,
        "said": 42.4,
-       "hit": 35.5,
+       "hit": 35.4,
        "se": 3.5
       },
       {
        "band": "45-50%",
-       "n": 221,
+       "n": 224,
        "said": 47.8,
-       "hit": 49.8,
-       "se": 3.4
+       "hit": 50.0,
+       "se": 3.3
       },
       {
        "band": "50-55%",
-       "n": 221,
+       "n": 224,
        "said": 52.2,
-       "hit": 50.2,
-       "se": 3.4
+       "hit": 50.0,
+       "se": 3.3
       },
       {
        "band": "55-60%",
-       "n": 197,
+       "n": 198,
        "said": 57.6,
-       "hit": 64.5,
+       "hit": 64.6,
        "se": 3.5
       },
       {
        "band": "60-65%",
-       "n": 126,
+       "n": 129,
        "said": 63.0,
-       "hit": 61.1,
+       "hit": 61.2,
        "se": 4.3
       },
       {
        "band": "65-70%",
-       "n": 167,
+       "n": 170,
        "said": 67.4,
-       "hit": 68.9,
+       "hit": 68.8,
        "se": 3.6
       },
       {
        "band": "70-75%",
-       "n": 277,
+       "n": 278,
        "said": 72.5,
-       "hit": 74.0,
+       "hit": 74.1,
        "se": 2.7
       },
       {
        "band": "75-80%",
-       "n": 265,
+       "n": 269,
        "said": 77.3,
        "hit": 78.1,
        "se": 2.6
       },
       {
        "band": "80-85%",
-       "n": 265,
-       "said": 82.2,
-       "hit": 84.2,
+       "n": 269,
+       "said": 82.3,
+       "hit": 84.0,
        "se": 2.3
       },
       {
        "band": "85-90%",
-       "n": 216,
+       "n": 217,
        "said": 87.2,
-       "hit": 89.8,
+       "hit": 89.9,
        "se": 2.3
       },
       {
        "band": "90-95%",
-       "n": 320,
+       "n": 322,
        "said": 93.1,
-       "hit": 90.6,
+       "hit": 90.7,
        "se": 1.4
       },
       {
        "band": "95-100%",
-       "n": 141,
-       "said": 96.0,
-       "hit": 94.3,
+       "n": 144,
+       "said": 96.1,
+       "hit": 94.4,
        "se": 1.6
       }
      ],
@@ -5971,9 +5964,9 @@
       },
       {
        "band": "5-10%",
-       "n": 175,
+       "n": 177,
        "said": 7.7,
-       "hit": 10.9,
+       "hit": 10.7,
        "se": 2.0
       },
       {
@@ -5985,23 +5978,23 @@
       },
       {
        "band": "15-20%",
-       "n": 193,
+       "n": 196,
        "said": 17.6,
-       "hit": 15.0,
+       "hit": 14.8,
        "se": 2.7
       },
       {
        "band": "20-25%",
-       "n": 155,
+       "n": 158,
        "said": 22.6,
-       "hit": 26.5,
-       "se": 3.4
+       "hit": 26.6,
+       "se": 3.3
       },
       {
        "band": "25-30%",
-       "n": 181,
+       "n": 184,
        "said": 27.2,
-       "hit": 23.8,
+       "hit": 23.4,
        "se": 3.3
       },
       {
@@ -6013,44 +6006,44 @@
       },
       {
        "band": "35-40%",
-       "n": 161,
+       "n": 162,
        "said": 37.4,
-       "hit": 39.1,
+       "hit": 38.9,
        "se": 3.8
       },
       {
        "band": "40-45%",
-       "n": 133,
+       "n": 135,
        "said": 42.5,
-       "hit": 42.9,
+       "hit": 42.2,
        "se": 4.3
       },
       {
        "band": "45-50%",
-       "n": 95,
+       "n": 97,
        "said": 47.7,
-       "hit": 49.5,
+       "hit": 50.5,
        "se": 5.1
       },
       {
        "band": "50-55%",
-       "n": 115,
+       "n": 117,
        "said": 52.8,
-       "hit": 44.3,
-       "se": 4.7
+       "hit": 44.4,
+       "se": 4.6
       },
       {
        "band": "55-60%",
-       "n": 103,
+       "n": 105,
        "said": 57.8,
-       "hit": 59.2,
-       "se": 4.9
+       "hit": 59.0,
+       "se": 4.8
       },
       {
        "band": "60-65%",
-       "n": 144,
+       "n": 145,
        "said": 62.7,
-       "hit": 67.4,
+       "hit": 66.9,
        "se": 4.0
       },
       {
@@ -6062,23 +6055,23 @@
       },
       {
        "band": "70-75%",
-       "n": 178,
+       "n": 179,
        "said": 72.5,
-       "hit": 71.3,
+       "hit": 70.9,
        "se": 3.3
       },
       {
        "band": "75-80%",
-       "n": 154,
+       "n": 158,
        "said": 77.3,
-       "hit": 78.6,
-       "se": 3.4
+       "hit": 79.1,
+       "se": 3.3
       },
       {
        "band": "80-85%",
-       "n": 133,
+       "n": 136,
        "said": 82.3,
-       "hit": 78.2,
+       "hit": 77.9,
        "se": 3.3
       },
       {
@@ -6090,10 +6083,10 @@
       },
       {
        "band": "90-95%",
-       "n": 33,
-       "said": 92.1,
+       "n": 34,
+       "said": 92.2,
        "hit": 100.0,
-       "se": 4.7
+       "se": 4.6
       },
       {
        "band": "95-100%",
@@ -6103,44 +6096,44 @@
        "se": 21.1
       }
      ],
-     "brier": 0.1813
+     "brier": 0.1811
     },
     "Spread": {
      "calibration": [
       {
        "band": "0-5%",
-       "n": 455,
+       "n": 458,
        "said": 2.8,
        "hit": 3.1,
        "se": 0.8
       },
       {
        "band": "5-10%",
-       "n": 375,
+       "n": 381,
        "said": 7.4,
-       "hit": 6.4,
+       "hit": 6.3,
        "se": 1.3
       },
       {
        "band": "10-15%",
-       "n": 295,
+       "n": 297,
        "said": 12.3,
-       "hit": 10.5,
+       "hit": 10.4,
        "se": 1.9
       },
       {
        "band": "15-20%",
-       "n": 202,
+       "n": 205,
        "said": 17.5,
-       "hit": 18.3,
+       "hit": 18.0,
        "se": 2.7
       },
       {
        "band": "20-25%",
-       "n": 145,
+       "n": 148,
        "said": 22.4,
-       "hit": 15.9,
-       "se": 3.5
+       "hit": 16.2,
+       "se": 3.4
       },
       {
        "band": "25-30%",
@@ -6151,24 +6144,24 @@
       },
       {
        "band": "30-35%",
-       "n": 68,
+       "n": 69,
        "said": 32.5,
-       "hit": 30.9,
-       "se": 5.7
+       "hit": 30.4,
+       "se": 5.6
       },
       {
        "band": "35-40%",
-       "n": 56,
+       "n": 57,
        "said": 37.3,
-       "hit": 39.3,
-       "se": 6.5
+       "hit": 38.6,
+       "se": 6.4
       },
       {
        "band": "40-45%",
-       "n": 43,
+       "n": 44,
        "said": 42.3,
-       "hit": 37.2,
-       "se": 7.5
+       "hit": 38.6,
+       "se": 7.4
       },
       {
        "band": "45-50%",
@@ -6186,24 +6179,24 @@
       },
       {
        "band": "55-60%",
-       "n": 43,
+       "n": 44,
        "said": 57.7,
-       "hit": 62.8,
-       "se": 7.5
+       "hit": 61.4,
+       "se": 7.4
       },
       {
        "band": "60-65%",
-       "n": 56,
+       "n": 57,
        "said": 62.7,
-       "hit": 60.7,
-       "se": 6.5
+       "hit": 61.4,
+       "se": 6.4
       },
       {
        "band": "65-70%",
-       "n": 68,
+       "n": 69,
        "said": 67.5,
-       "hit": 69.1,
-       "se": 5.7
+       "hit": 69.6,
+       "se": 5.6
       },
       {
        "band": "70-75%",
@@ -6214,61 +6207,61 @@
       },
       {
        "band": "75-80%",
-       "n": 145,
+       "n": 148,
        "said": 77.6,
-       "hit": 84.1,
-       "se": 3.5
+       "hit": 83.8,
+       "se": 3.4
       },
       {
        "band": "80-85%",
-       "n": 202,
+       "n": 205,
        "said": 82.5,
-       "hit": 81.7,
+       "hit": 82.0,
        "se": 2.7
       },
       {
        "band": "85-90%",
-       "n": 295,
+       "n": 297,
        "said": 87.7,
-       "hit": 89.5,
+       "hit": 89.6,
        "se": 1.9
       },
       {
        "band": "90-95%",
-       "n": 375,
+       "n": 381,
        "said": 92.6,
-       "hit": 93.6,
+       "hit": 93.7,
        "se": 1.3
       },
       {
        "band": "95-100%",
-       "n": 455,
+       "n": 458,
        "said": 97.2,
        "hit": 96.9,
        "se": 0.8
       }
      ],
-     "brier": 0.1
+     "brier": 0.0996
     }
    },
    "tickets": [
     {
      "size": 2,
-     "played": 130,
-     "won": 111,
-     "expected": 106.8
+     "played": 133,
+     "won": 114,
+     "expected": 109.3
     },
     {
      "size": 3,
-     "played": 110,
-     "won": 91,
-     "expected": 81.4
+     "played": 111,
+     "won": 92,
+     "expected": 82.2
     },
     {
      "size": 4,
-     "played": 80,
-     "won": 61,
-     "expected": 53.6
+     "played": 81,
+     "won": 62,
+     "expected": 54.3
     },
     {
      "size": 6,
@@ -6294,108 +6287,108 @@
      "size": 2,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 130,
-     "won": 111,
-     "expected": 106.8,
+     "played": 133,
+     "won": 114,
+     "expected": 109.3,
      "avg_fair": 1.22
     },
     {
      "size": 2,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 132,
-     "won": 118,
-     "expected": 117.6,
+     "played": 135,
+     "won": 121,
+     "expected": 120.2,
      "avg_fair": 1.12
     },
     {
      "size": 2,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 132,
-     "won": 121,
-     "expected": 120.5,
+     "played": 135,
+     "won": 124,
+     "expected": 123.3,
      "avg_fair": 1.1
     },
     {
      "size": 2,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 132,
-     "won": 126,
-     "expected": 123.5,
+     "played": 135,
+     "won": 129,
+     "expected": 126.4,
      "avg_fair": 1.07
     },
     {
      "size": 3,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 110,
-     "won": 91,
-     "expected": 81.4,
+     "played": 111,
+     "won": 92,
+     "expected": 82.2,
      "avg_fair": 1.35
     },
     {
      "size": 3,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 110,
-     "won": 97,
-     "expected": 92.7,
+     "played": 111,
+     "won": 98,
+     "expected": 93.4,
      "avg_fair": 1.19
     },
     {
      "size": 3,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 110,
-     "won": 95,
-     "expected": 96.4,
+     "played": 111,
+     "won": 96,
+     "expected": 97.2,
      "avg_fair": 1.14
     },
     {
      "size": 3,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 110,
-     "won": 107,
-     "expected": 100.6,
+     "played": 111,
+     "won": 108,
+     "expected": 101.5,
      "avg_fair": 1.09
     },
     {
      "size": 4,
      "target": 0.9,
      "leg_max": 0.94,
-     "played": 80,
-     "won": 61,
-     "expected": 53.6,
-     "avg_fair": 1.5
+     "played": 81,
+     "won": 62,
+     "expected": 54.3,
+     "avg_fair": 1.49
     },
     {
      "size": 4,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 80,
-     "won": 63,
-     "expected": 63.5,
+     "played": 81,
+     "won": 64,
+     "expected": 64.2,
      "avg_fair": 1.26
     },
     {
      "size": 4,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 80,
-     "won": 68,
-     "expected": 66.8,
+     "played": 81,
+     "won": 69,
+     "expected": 67.6,
      "avg_fair": 1.2
     },
     {
      "size": 4,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 80,
-     "won": 76,
-     "expected": 70.6,
+     "played": 81,
+     "won": 77,
+     "expected": 71.6,
      "avg_fair": 1.13
     },
     {
@@ -6411,27 +6404,27 @@
      "size": 6,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 46,
-     "won": 33,
-     "expected": 32.8,
-     "avg_fair": 1.4
+     "played": 47,
+     "won": 34,
+     "expected": 33.4,
+     "avg_fair": 1.41
     },
     {
      "size": 6,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 46,
-     "won": 33,
-     "expected": 35.2,
+     "played": 47,
+     "won": 34,
+     "expected": 35.9,
      "avg_fair": 1.31
     },
     {
      "size": 6,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 46,
-     "won": 38,
-     "expected": 37.8,
+     "played": 47,
+     "won": 39,
+     "expected": 38.5,
      "avg_fair": 1.22
     },
     {
@@ -6449,7 +6442,7 @@
      "leg_max": 0.975,
      "played": 36,
      "won": 24,
-     "expected": 22.9,
+     "expected": 22.8,
      "avg_fair": 1.58
     },
     {
@@ -6458,8 +6451,8 @@
      "leg_max": 0.985,
      "played": 36,
      "won": 23,
-     "expected": 24.4,
-     "avg_fair": 1.48
+     "expected": 24.5,
+     "avg_fair": 1.47
     },
     {
      "size": 8,
@@ -6483,28 +6476,28 @@
      "size": 10,
      "target": 0.94,
      "leg_max": 0.975,
-     "played": 18,
-     "won": 10,
-     "expected": 10.0,
+     "played": 17,
+     "won": 9,
+     "expected": 9.5,
      "avg_fair": 1.8
     },
     {
      "size": 10,
      "target": 0.96,
      "leg_max": 0.985,
-     "played": 18,
-     "won": 10,
-     "expected": 10.9,
-     "avg_fair": 1.66
+     "played": 17,
+     "won": 9,
+     "expected": 10.4,
+     "avg_fair": 1.65
     },
     {
      "size": 10,
      "target": 0.97,
      "leg_max": 0.99,
-     "played": 18,
-     "won": 11,
-     "expected": 11.8,
-     "avg_fair": 1.53
+     "played": 17,
+     "won": 10,
+     "expected": 11.2,
+     "avg_fair": 1.52
     },
     {
      "size": 15,
