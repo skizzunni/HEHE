@@ -196,6 +196,13 @@ def summarise(rows):
     return cal, (round(brier / len(rows), 4) if rows else None)
 
 
+def ticket_won(t, score):
+    """A ticket wins when no leg loses: a pushed leg drops off the slip, as
+    at FanDuel (counted as a loss before 2026-10-18)."""
+    return all(S.settle_score(L["spec"], L["home"], L["away"], *score[L["gid"]]) != "lost"
+               for L in t["legs"])
+
+
 def fit_miss(rows):
     """Miss factor k so that 1-(1-p)k matches: actual misses / predicted."""
     pred = sum(1 - p for p, _ in rows)
@@ -241,8 +248,10 @@ def main():
                 p = g.prob_specs([spec])
                 if p is None:
                     continue
-                hit = int(S.predicate(spec, g.home, g.away)(hs, as_))
-                markets.append((group, p, hit))
+                r = S.settle_score(spec, g.home, g.away, hs, as_)
+                if r == "push":
+                    continue                # stake returned: neither a hit nor a miss
+                markets.append((group, p, int(r == "won")))
             # the same favourite rule as the live board (stacks.candidates);
             # ">= 0.5" picked the other side in soccer, where a draw exists
             fav_home = g.prob_specs([dict(t="win", team=g.home)]) >= \
@@ -251,7 +260,10 @@ def main():
                 p = g.prob_specs([spec])
                 if p is None or not 0.75 <= p <= 0.995:
                     continue
-                hit = int(S.predicate(spec, g.home, g.away)(hs, as_))
+                r = S.settle_score(spec, g.home, g.away, hs, as_)
+                if r == "push":
+                    continue
+                hit = int(r == "won")
                 (legs_fit if i < half else legs_test).append((p, hit, label.split(" ")[0]))
             if i >= half:
                 per_day[d].append((row, hs, as_))
@@ -282,8 +294,7 @@ def main():
                                   or key in S.NEGBIN else {key})
                 for size, tks in S.build_tickets(c2, tiers=TRIAL_SIZES).items():
                     for t in tks:
-                        ok = all(S.predicate(L["spec"], L["home"], L["away"])(*score[L["gid"]])
-                                 for L in t["legs"])
+                        ok = ticket_won(t, score)
                         x = trials[(size, tgt, top)]
                         x[0] += 1
                         x[1] += ok
@@ -292,8 +303,7 @@ def main():
             S.TARGET, S.LEG_MAX = BASE_TARGET
             for n, tickets in S.build_tickets(cands, tiers=(2, 3, 4, 6, 8, 10)).items():
                 for t in tickets:
-                    ok = all(S.predicate(L["spec"], L["home"], L["away"])(*score[L["gid"]])
-                             for L in t["legs"])
+                    ok = ticket_won(t, score)
                     x = tk[n]
                     x[0] += 1
                     x[1] += ok

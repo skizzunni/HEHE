@@ -38,6 +38,7 @@ MUTATIONS = [
      "test_alarm_dropped_once_market_is_off"),
     ("locks.py", 'res = "lost" if "lost" in st else', 'res = "won" if "lost" in st else', "test_plays_graded"),
     ("board.html", "+ playsLine(R.plays)", "", "Winners parlay's own record"),
+    ("stacks.py", '    if push and push(h, a):\n        return "push"\n', "", "test_integer_lines_push"),
     ("integrity.py", "not 0 <= v <= 1:", "False:", "test_catches_bad_values"),
     ("board.html", "z.prob >= 0.8", "z.prob >= 0.95", "Winners parlay"),
     ("board.html", "if (mins < 20) { if (el) el.remove(); return; }", "return;",

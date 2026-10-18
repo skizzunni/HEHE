@@ -51,6 +51,7 @@ import datetime as dt
 from collections import defaultdict
 import json
 import math
+import re
 import os
 import sys
 
@@ -613,6 +614,52 @@ def predicate(spec, home, away):
     raise ValueError(t)
 
 
+def _push_line(spec, home):
+    """The final score (as h, a) test for an exact landing on the line, or
+    None when the market cannot push (a half-point line, a result market)."""
+    t, L = spec["t"], spec.get("line")
+    if L is None or float(L) != int(float(L)):
+        return None
+    if t in ("over", "under"):
+        return lambda h, a: h + a == L
+    is_home = spec.get("team") == home
+    if t == "spread":
+        return (lambda h, a: h - a + L == 0) if is_home else (lambda h, a: a - h + L == 0)
+    if t in ("teamover", "teamunder"):
+        return (lambda h, a: h == L) if is_home else (lambda h, a: a == L)
+    return None
+
+
+def settle_score(spec, home, away, h, a):
+    """'won', 'lost' or 'push' for one sportsbook leg at a final score.
+
+    predicate() is a yes/no question and stays that way for pricing; at a
+    sportsbook an integer line that lands exactly is neither (Under 44 at
+    24-20, Home -3 at 24-21): FanDuel NY returns the stake and drops the leg
+    from a parlay. Graded as a loss before 2026-10-18. ("nomargin", the
+    "won't win by N" alt, is a strict yes/no market and cannot push.)"""
+    push = _push_line(spec, home) if spec["t"] != "nomargin" else None
+    if push and push(h, a):
+        return "push"
+    return "won" if predicate(spec, home, away)(h, a) else "lost"
+
+
+def repush(L):
+    """Re-grade a leg settled 'lost' before pushes were recognised, from its
+    stored score ("Away a - Home h"). True when it changed. Idempotent."""
+    if L.get("status") != "lost" or not L.get("spec") or not L.get("score"):
+        return False
+    m = re.fullmatch(re.escape(str(L.get("away"))) + r" (\d+) - " + re.escape(str(L.get("home")))
+                     + r" (\d+)", L["score"])
+    if not m:
+        return False
+    a, h = int(m.group(1)), int(m.group(2))
+    if settle_score(L["spec"], L["home"], L["away"], h, a) != "push":
+        return False
+    L.update(status="void", push=True, regraded="lost -> push: line landed exactly")
+    return True
+
+
 # ----------------------------------------------------------------- inputs
 def _ml_prob(price):
     if str(price).strip().upper() == "EVEN":
@@ -949,6 +996,10 @@ def grade(final):
     """`final(league, comp_id, entry)` is ledger._final. Settles legs, then
     tickets whose legs are all settled."""
     book = load()
+    fixed = {k for k, L in book["legs"].items() if repush(L)}
+    for t in book["tickets"].values():
+        if fixed & set(t["legs"]):
+            t["status"] = "open"            # recomputed below from its legs
     for key, L in book["legs"].items():
         if L["status"] != "open":
             continue
@@ -971,8 +1022,10 @@ def grade(final):
         h, a = sc.get(L["home"]), sc.get(L["away"])
         if not isinstance(h, int) or not isinstance(a, int):
             continue
-        ok = predicate(L["spec"], L["home"], L["away"])(h, a)
-        L["status"] = "won" if ok else "lost"
+        r = settle_score(L["spec"], L["home"], L["away"], h, a)
+        L["status"] = "void" if r == "push" else r
+        if r == "push":
+            L["push"] = True
         L["score"] = f"{L['away']} {a} - {L['home']} {h}"
     for t in book["tickets"].values():
         if t["status"] != "open":

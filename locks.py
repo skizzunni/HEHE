@@ -458,6 +458,7 @@ def grade(final, path=None):
     import props_ledger
     pl = props_ledger.load()
     for L in book["legs"].values():
+        stacks.repush(L)
         if L.get("kind") == "prop":
             if L.get("status") == "open":
                 e = pl.get(props_ledger.prop_key(L))
@@ -490,7 +491,10 @@ def settle(L, final):
     h, a = sc.get(L["home"]), sc.get(L["away"])
     if not isinstance(h, int) or not isinstance(a, int):
         return
-    L["status"] = "won" if stacks.predicate(L["spec"], L["home"], L["away"])(h, a) else "lost"
+    r = stacks.settle_score(L["spec"], L["home"], L["away"], h, a)
+    L["status"] = "void" if r == "push" else r       # a push leaves the slip, as at FanDuel
+    if r == "push":
+        L["push"] = True
     L["score"] = f"{L['away']} {a} - {L['home']} {h}"
 
 

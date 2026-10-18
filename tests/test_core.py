@@ -117,6 +117,22 @@ class Grading(unittest.TestCase):
     def test_win_loses_on_draw(self):
         self.assertEqual(self.settle(dict(t="win", team=H), 1, 1), "lost")
 
+    def test_integer_lines_push(self):
+        """Under/Over 44 at 24-20 and Home -3 at 24-21 push (FanDuel NY drops
+        the leg); half-point lines never push; a stored loss is re-graded."""
+        for spec, h, a in ((dict(t="under", line=44), 24, 20), (dict(t="over", line=44), 24, 20),
+                           (dict(t="spread", team=H, line=-3), 24, 21),
+                           (dict(t="spread", team=A, line=3), 24, 21),
+                           (dict(t="teamover", team=H, line=24), 24, 21)):
+            self.assertEqual(stacks.settle_score(spec, H, A, h, a), "push", spec)
+            self.assertEqual(self.settle(spec, h, a), "void")
+        self.assertEqual(stacks.settle_score(dict(t="under", line=44.5), H, A, 24, 20), "won")
+        self.assertEqual(stacks.settle_score(dict(t="nomargin", team=H, line=3), H, A, 24, 21), "lost")
+        old = dict(status="lost", spec=dict(t="under", line=44), home=H, away=A, score=f"{A} 20 - {H} 24")
+        self.assertTrue(stacks.repush(old))
+        self.assertEqual((old["status"], old["push"]), ("void", True))
+        self.assertFalse(stacks.repush(old))
+
     def test_void_and_live(self):
         self.assertEqual(self.settle(dict(t="dc", team=H), 0, 0, void=True), "void")
         self.assertEqual(self.settle(dict(t="dc", team=H), 0, 0, live=True), "open")

@@ -310,6 +310,8 @@ def grade(final):
     for d in book["days"].values():
         for t in d["tickets"]:
             for L in t["legs"]:
+                if L["kind"] == "game":
+                    stacks.repush(L)
                 if L["status"] != "open":
                     continue
                 if L["kind"] == "game":
