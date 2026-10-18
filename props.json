@@ -535,6 +535,22 @@
   "price": "-2300",
   "status": "ungradable"
  },
+ "mls:761882|322100|Tackles|1+": {
+  "aid": "322100",
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "mls:761882",
+  "imp": 0.8667,
+  "label": "Rui Modesto: 1+ Tackles",
+  "league": "mls",
+  "line": "1+",
+  "market": "Tackles",
+  "name": "Rui Modesto",
+  "p": 0.81,
+  "p_fair": null,
+  "price": "-650",
+  "status": "ungradable"
+ },
  "mls:761882|n:vancouver whitecaps|Team Total Goals|0.5": {
   "aid": null,
   "date": "2026-10-17",
@@ -3322,7 +3338,8 @@
   "p": 0.6691,
   "p_fair": null,
   "price": "-225",
-  "status": "open"
+  "status": "lost",
+  "value": 14.43
  },
  "ufc:401908372|n:kyle daukaus|Winner|win": {
   "aid": null,

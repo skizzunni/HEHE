@@ -1,9 +1,9 @@
 # Review 2026-10-17
 
-Picks 158-60 (72.5% vs 71.2% claimed, ROI +6.8%).
+Picks 158-61 (72.1% vs 71.2% claimed, ROI +5.0%).
 TRAILING props uel Shots: 40.0% hit vs 84.3% stated on 20
 Strong calls 92-24 (79.3% vs 76.7% claimed).
-Closing line value: -0.36 points on 56 picks; beat the close on 41.1%.
+Closing line value: -0.35 points on 57 picks; beat the close on 40.4%.
 - LOST arg Platense at 65.5%: margin 1 · called at 66%
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
 - LOST atp Daniil Medvedev at 64.0%: lost 0-2 in sets · never won a set · called at 64%
@@ -51,6 +51,7 @@ Closing line value: -0.36 points on 56 picks; beat the close on 41.1%.
 - LOST sco Hibernian at 79.4%: margin 1 · called at 79%
 - LOST sco Rangers at 67.7%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 68%
 - LOST swe AIK at 56.0%: margin 0 · drawn -- a draw loses a moneyline side · called at 56%
+- LOST ufc Jhonata Diniz at 65.7%: the book had my side favoured too · called at 66%
 - LOST ufc Melissa Croden at 75.6%: the book had my side favoured too · called at 76%
 - LOST ufc Cody Chovancek at 53.2%: the book had my side favoured too · called at 53%
 - LOST uru Juventud at 70.6%: margin 2 · called at 71%
@@ -64,7 +65,7 @@ Closing line value: -0.36 points on 56 picks; beat the close on 41.1%.
 - LOST wta Jeline Vandromme at 63.7%: lost 1-1 in sets · took it the distance · called at 64%
 - LOST wta Magdalena Frech at 65.4%: lost 1-1 in sets · took it the distance · called at 65%
 - LOST wta Mananchaya Sawangkaew at 57.4%: lost 0-2 in sets · never won a set · called at 57%
-With the market 68.6% (242); against it 37.8% (45).
+With the market 68.3% (243); against it 37.8% (45).
 Locks 8/11 won, 0 open; lost: Kayla Thornton: 5+ Points (ATL @ GS) 0; Under 69.5 points (Georgia State Panthers at James Madison Dukes) Georgia State Panthers 22 - James Madison Dukes 49; Under 56.5 points (Charlotte 49ers at Temple Owls) Charlotte 49ers 38 - Temple Owls 31.
 Lottery 100: lost (6/12 legs won, killed by Kayla Thornton: 5+ Points, Under 75.5 points, Under 65.5 points)
 Lottery 100: lost (0/6 legs won, killed by Under 35.5 points, Under 50.5 points)
@@ -77,7 +78,7 @@ Lottery 10k+50: lost (6/12 legs won, killed by Under 65.5 points, Under 38.5 poi
 Lottery 10k+100: lost (6/12 legs won, killed by Under 65.5 points, Under 38.5 points)
 Lottery 100: open (0/5 legs won)
 Ladder-consistency props (all time): 10/12 won (83.3%) vs 84.7% fair, 83.5% price.
-Props 29/36 vs 76.5% claimed.
+Props 29/37 vs 76.2% claimed.
 
-Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 83.8% on 437 of 479, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 83.3% on 18 of 80, ufc 75% -> 81.8% on 22 of 81, wnba 62% -> 77.4% on 31 of 47, wta 65% -> 81.4% on 102 of 184
+Call cutoffs for tomorrow (games under them are leans, not counted): atp 65% -> 82.4% on 68 of 121, efl3 55% -> 66.7% on 15 of 24, mlb 70% -> 86.7% on 15 of 372, ncaaf 55% -> 83.8% on 437 of 479, nfl 70% -> 73.1% on 26 of 79, nhl 62% -> 83.3% on 18 of 80, ufc 75% -> 81.8% on 22 of 82, wnba 62% -> 77.4% on 31 of 47, wta 65% -> 81.4% on 102 of 184
 Weights for tomorrow (model's share vs the price): mlb 0.05 (n=372), ncaaf 0.05 (n=400), nfl 0.40 (n=79), nhl 0.05 (n=80), wnba 0.30 (n=47)
