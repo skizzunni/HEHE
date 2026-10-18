@@ -9,6 +9,7 @@ what is missing and the next step. Updated 2026-10-18.
 | # | Rule | State | Evidence / where enforced |
 |---|------|-------|---------------------------|
 | S1 | Website is the deliverable; no daily reports in chat | done | `board.yml` rebuilds every 5 min; daily review is written to `review/` and shown on the site |
+| S1b | Rebuild chain survives a failed hand-off | done | 100-run audit 2026-10-18: 68 successes in 6 h, longest gap 5.2 min, 0 failed builds. Hand-off now retries 6x with backoff (cron backstop is throttled to 100-270 min); run 1287 on the change handed off to 1288 at exactly +5:07 |
 | S2 | Never fabricate numbers; every chance is the market's or a tested model's | done | `locks._market_p`, `lottery.market_chance`, labs score on unseen halves |
 | S3 | Locks: 11 FanDuel legs, card set 8 AM ET, games after 8 AM, -400 to -120 | done | `locks.py` `DEC_MIN/DEC_MAX`, `CARD_HOUR`, `_eligible`; unchanged by Safe Locks |
 | S4 | Keys never in chat; bot stays in practice mode until owner runs `touch ~/.hehe-bot/LIVE` | done | bot code unchanged; nothing remote can switch it |
@@ -30,6 +31,10 @@ what is missing and the next step. Updated 2026-10-18.
 | O8 | No bad combo legs (Purdue) | done | combo-safe filter (>=90%) on the page | - |
 | O9 | Site lag | done | no reload while in use; view restored | - |
 | O10 | Every split studied | ongoing | labs: totals, NHL, UFC, soccer, TD, ladder, edge, backtest, weather; daily audit flags splits >2 SE behind | ladder lab needs ~30 graded games |
+
+## Out of scope
+
+* A "job-search and application system" was described in one message (2026-10-18). No such system exists in this repository or conversation; nothing was built or claimed for it.
 
 ## Tested and rejected (do not retry without new data)
 
