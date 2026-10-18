@@ -2446,9 +2446,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ita2": {
-    "all_hit": 75.0,
+    "all_hit": 66.7,
     "cutoff": null,
-    "games": 8,
+    "games": 9,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "jpn": {
@@ -2748,6 +2748,14 @@
    },
    {
     "against_market": false,
+    "league": "ita2",
+    "pick": "Sampdoria",
+    "price": null,
+    "said": 78.5,
+    "why": "margin 1 \u00b7 called at 78%"
+   },
+   {
+    "against_market": false,
     "league": "ita",
     "pick": "Udinese",
     "price": null,
@@ -3014,11 +3022,11 @@
    }
   ],
   "picks": {
-   "hit": 71.0,
-   "lost": 29,
-   "n": 100,
+   "hit": 70.3,
+   "lost": 30,
+   "n": 101,
    "roi": 12.9,
-   "said": 69.2,
+   "said": 69.3,
    "won": 71
   },
   "picks_by_league": {
@@ -3135,11 +3143,11 @@
     "won": 2
    },
    "ita2": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
     "roi": null,
-    "said": 71.2,
+    "said": 73.7,
     "won": 2
    },
    "jpn": {
@@ -3285,11 +3293,11 @@
    "won": 0
   },
   "strong": {
-   "hit": 76.7,
-   "lost": 7,
-   "n": 30,
+   "hit": 74.2,
+   "lost": 8,
+   "n": 31,
    "roi": 18.4,
-   "said": 77.4,
+   "said": 77.5,
    "won": 23
   },
   "stuck": [],
