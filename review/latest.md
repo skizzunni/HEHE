@@ -1,7 +1,7 @@
 # Review 2026-10-18
 
 Picks 3-3 (50.0% vs 63.1% claimed).
-Strong calls 1-2 (33.3% vs 67.2% claimed).
+Strong calls 0-1 (0.0% vs 62.3% claimed).
 - LOST jpn Fagiano Okayama at 62.3%: margin 3 · called at 62%
 - LOST wta Sofia Kenin at 58.4%: lost 0-2 in sets · never won a set · called at 58%
 - LOST wta Alina Korneeva at 69.2%: lost 0-2 in sets · never won a set · called at 69%
