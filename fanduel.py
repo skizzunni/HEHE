@@ -17,6 +17,7 @@ multi-leg slip; an indexed multi-selection version was tried here and did
 not add the legs, so the page offers one add-leg link per leg instead.
 """
 import json
+import datetime as dt
 import os
 import re
 import time
@@ -30,6 +31,30 @@ BASE = f"https://sbapi.{STATE}.sportsbook.fanduel.com/api"
 TTL = 600
 PAGES = {"nfl": "nfl", "nhl": "nhl", "nba": "nba", "ncaaf": "ncaaf",
          "mlb": "mlb", "wnba": "wnba", "ncaab": "ncaab"}
+# Soccer lives on FanDuel's soccer sport page (eventTypeId 1), not a custom
+# page; its competitions, by FanDuel's name, mapped to the board's leagues
+# (probe rounds 32-33, 2026-10-18). Fixtures read "Home v Away".
+SOCCER_EVENT_TYPE = "1"
+SOCCER_COMP = {
+    "English Premier League": "epl", "Spanish La Liga": "esp", "German Bundesliga": "ger",
+    "German Bundesliga 2": "ger2", "Italian Serie A": "ita", "French Ligue 1": "fra",
+    "US MLS": "mls", "UEFA Champions League": "ucl", "UEFA Europa League": "uel",
+    "UEFA Conference League": "uecl", "English Sky Bet Championship": "efl1",
+    "Scottish Premiership": "sco", "Austrian Bundesliga": "aut", "Swiss Super League": "sui",
+    "Danish Superliga": "den", "Norwegian Eliteserien": "nor", "Japanese J1 League": "jpn",
+    "Argentinian Primera Division": "arg", "Chile - Primera Division": "chi",
+    "Ecuador Serie A": "ecu", "Uruguayan Primera Division": "uru", "Colombian Primera A": "col",
+    "Mexican Liga MX": "mex", "South Africa - Premier Division": "rsa",
+    "Australian A-League Men's": "aus", "US National Women Soccer League": "nwsl",
+    "German DFB Pokal": "dfb", "Brazilian Serie A": "bra",
+    "UEFA Nations League A": "unl", "UEFA Nations League B": "unl", "UEFA Nations League C": "unl",
+}
+SOCCER = set(SOCCER_COMP.values())
+
+
+def covered(league):
+    """Does the board read FanDuel's lines for this league?"""
+    return league in PAGES or league in SOCCER
 UA = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 "
                     "(KHTML, like Gecko) Chrome/124.0 Safari/537.36",
       "Accept": "application/json"}
@@ -119,6 +144,10 @@ def load():
                     g["total"][name.split()[0].lower()] = [hc, ref]
         out[league] = list(games.values())
     try:
+        _load_soccer(out)
+    except Exception:
+        pass                                  # soccer never blocks the other sports
+    try:
         os.makedirs(os.path.dirname(CACHE), exist_ok=True)
         with open(CACHE, "w") as fh:
             json.dump(out, fh)
@@ -127,11 +156,108 @@ def load():
     return out
 
 
-def find(book, league, away, home):
+def find(book, league, away, home, start=None):
+    if league in SOCCER:
+        return find_soccer(book, league, away, home, start)
     for g in book.get(league) or []:
         if same_team(g["away"], away) and same_team(g["home"], home):
             return g
     return None
+
+
+# ------------------------------------------------------------------ soccer
+# FanDuel shortens club names ("Nottm Forest", "Man Utd", "Paris St-G") where
+# ESPN spells them out, so a soccer match is found by its kickoff first and
+# then by BOTH teams' names, token by token -- a wrong match would put one
+# game's prices on another, so anything doubtful is left unmatched.
+_ALIAS = {"man": "manchester", "utd": "united", "st": "saint", "nottm": "nottingham",
+          "wolves": "wolverhampton", "spurs": "tottenham", "psg": "paris", "inter": "internazionale",
+          "atl": "atletico", "dep": "deportivo", "ath": "athletic"}
+_STOP = {"fc", "cf", "sc", "ac", "afc", "club", "de", "the", "cd", "fk", "sk", "as", "ss",
+         "us", "calcio", "and", "of", "1", "04", "05", "ca", "sv", "vfb", "vfl", "tsg", "rc"}
+
+
+def _toks(name):
+    import unicodedata
+    name = (name or "").translate(str.maketrans({"ø": "o", "Ø": "O", "æ": "ae", "ß": "ss", "ł": "l"}))
+    name = unicodedata.normalize("NFKD", name).encode("ascii", "ignore").decode()
+    out = []
+    for w in norm(name.replace("-", " ").replace(".", " ")).split():
+        w = _ALIAS.get(w, w)
+        if w not in _STOP and len(w) > 1:
+            out.append(w)
+    return out
+
+
+def _tok_eq(a, b):
+    if a == b:
+        return True
+    n = 0
+    for x, y in zip(a, b):
+        if x != y:
+            break
+        n += 1
+    return n >= 4
+
+
+def _team_score(fd, espn):
+    """Share of one name's tokens found in the other, the better direction."""
+    a, b = _toks(fd), _toks(espn)
+    if not a or not b:
+        return 0.0
+    share = lambda u, v: sum(any(_tok_eq(x, y) for y in v) for x in u) / len(u)
+    return max(share(a, b), share(b, a))
+
+
+def _ts(v):
+    try:
+        return dt.datetime.fromisoformat(str(v).replace("Z", "+00:00").replace(".000+", "+"))
+    except (TypeError, ValueError):
+        return None
+
+
+def find_soccer(book, league, away, home, start=None, slack_min=20):
+    t0 = _ts(start)
+    best, best_s = None, 0.0
+    for g in book.get(league) or []:
+        if t0 and _ts(g.get("start")) and abs((_ts(g["start"]) - t0).total_seconds()) > slack_min * 60:
+            continue
+        s = min(_team_score(g["home"], home), _team_score(g["away"], away))
+        # the teams the other way round fit better: a reversed fixture
+        # (Man City v Man Utd is not Man Utd v Man City), never this one
+        if min(_team_score(g["home"], away), _team_score(g["away"], home)) > s:
+            continue
+        if s > best_s:
+            best, best_s = g, s
+    return best if best_s >= 0.5 else None
+
+
+def _load_soccer(out):
+    d = _get(f"{BASE}/content-managed-page?page=SPORT&eventTypeId={SOCCER_EVENT_TYPE}"
+             f"&_ak={AK}&timezone=America%2FNew_York")
+    att = (d or {}).get("attachments") or {}
+    comps = {str(c.get("competitionId")): c.get("name") for c in (att.get("competitions") or {}).values()}
+    games = {}
+    for e in (att.get("events") or {}).values():
+        nm = e.get("name") or ""
+        lg = SOCCER_COMP.get(comps.get(str(e.get("competitionId"))) or "")
+        if not lg or " v " not in nm:
+            continue
+        home, away = nm.split(" v ", 1)
+        games[str(e.get("eventId"))] = (lg, dict(away=away, home=home, ml={}, spread={}, total={}, px={},
+                                                 id=str(e.get("eventId")), start=e.get("openDate"),
+                                                 soccer=True))
+    for m in (att.get("markets") or {}).values():
+        x = games.get(str(m.get("eventId")))
+        if not x or m.get("marketType") != "WIN-DRAW-WIN":
+            continue
+        g = x[1]
+        for r in m.get("runners") or []:
+            ref = f'{m.get("marketId")}:{r.get("selectionId")}'
+            g["ml"][r.get("runnerName") or ""] = ref
+            g["px"][ref] = _odds(r)
+    for lg, g in games.values():
+        out.setdefault(lg, []).append(g)
 
 
 def _runner(table, team):
@@ -219,6 +345,43 @@ def parse_alts(markets, g):
     return out
 
 
+_SOC_TOT = re.compile(r"^OVER_UNDER_(\d)5$")
+_SOC_TEAM = re.compile(r"^(HOME|AWAY)_TEAM_OVER/UNDER_(\d+\.5)$")
+_SOC_HCP = re.compile(r"^(HOME|AWAY)_TEAM_-1\.5_GOALS$")
+_GOALS = re.compile(r"^\s*(.+?)\s+([+-]\d+(?:\.\d+)?)\s+Goals?\s*$", re.I)
+
+
+def parse_soccer(markets, g):
+    """Soccer alternates in parse_alts' shape: double chance ("X And Draw"),
+    full-match totals, team totals and the +-1.5 goal handicaps."""
+    out = []
+    for m in (markets or {}).values():
+        t = m.get("marketType") or ""
+        mid = m.get("marketId")
+        for r in m.get("runners") or []:
+            name = r.get("runnerName") or ""
+            ref = f'{mid}:{r.get("selectionId")}'
+            price = _odds(r)
+            where = f'{m.get("marketName") or t}: {name}'
+            if t == "DOUBLE_CHANCE":
+                if name.lower().endswith(" and draw"):
+                    out.append(("dc", name[:-len(" and draw")].strip(), None, None, ref, price, where))
+            elif _SOC_TOT.match(t):
+                mt = re.match(r"^\s*(Over|Under)\s+(\d+\.5)", name, re.I)
+                if mt:
+                    out.append(("total", None, mt.group(1).lower(), float(mt.group(2)), ref, price, where))
+            elif _SOC_TEAM.match(t):
+                side_team = g["home"] if t.startswith("HOME") else g["away"]
+                if name.lower() in ("over", "under"):
+                    out.append(("teamtotal", side_team, name.lower(), float(_SOC_TEAM.match(t).group(2)),
+                                ref, price, where))
+            elif _SOC_HCP.match(t):
+                mh = _GOALS.match(name)
+                if mh:
+                    out.append(("spread", mh.group(1), None, float(mh.group(2)), ref, price, where))
+    return out
+
+
 def load_alts(g):
     """Alternate lines for one FanDuel game, cached EVENT_TTL seconds."""
     if not g.get("id"):
@@ -232,9 +395,16 @@ def load_alts(g):
                     return alts
     except (OSError, ValueError):
         pass
-    d = _get(f"{BASE}/event-page?_ak={AK}&eventId={g['id']}&tab=popular"
-             "&useCombinedTouchdownsVirtualMarket=true&usePulse=true&useQuickBets=true")
-    alts = parse_alts(((d or {}).get("attachments") or {}).get("markets"), g)
+    base = (f"{BASE}/event-page?_ak={AK}&eventId={g['id']}"
+            "&useCombinedTouchdownsVirtualMarket=true&usePulse=true&useQuickBets=true")
+    if g.get("soccer"):
+        mk = {}
+        for tab in ("popular", "goals"):
+            mk.update((((_get(base + "&tab=" + tab) or {}).get("attachments") or {}).get("markets")) or {})
+        alts = parse_soccer(mk, g)
+    else:
+        d = _get(base + "&tab=popular")
+        alts = parse_alts(((d or {}).get("attachments") or {}).get("markets"), g)
     try:
         os.makedirs(os.path.dirname(f), exist_ok=True)
         with open(f, "w") as fh:

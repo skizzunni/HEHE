@@ -94,7 +94,7 @@ def fd_specs(FD, refs):
     from the game's own page. `refs` collects (gid, spec) -> (ref, price, where); `where` is set
     only for alternate lines, which FanDuel's add-to-slip link gets wrong."""
     def fn(league, row, g):
-        gm = fanduel.find(FD, league, g.away, g.home)
+        gm = fanduel.find(FD, league, g.away, g.home, (row.get("mkt") or {}).get("start"))
         if not gm:
             return []
         out = []
@@ -105,6 +105,9 @@ def fd_specs(FD, refs):
             refs[(row["id"], json.dumps(spec, sort_keys=True))] = (ref, price, where)
 
         def team_of(name):
+            # soccer: FanDuel's own spelling of the matched fixture's teams
+            if gm.get("soccer"):
+                return g.home if name == gm["home"] else g.away if name == gm["away"] else None
             if fanduel.same_team(name, g.home) or fanduel.same_team(g.home, name):
                 return g.home
             if fanduel.same_team(name, g.away) or fanduel.same_team(g.away, name):
@@ -113,7 +116,8 @@ def fd_specs(FD, refs):
 
         unit = _unit(g, league)
         for team in (g.home, g.away):
-            ref = fanduel._runner(gm["ml"], team)
+            ref = (gm["ml"].get(gm["home"] if team == g.home else gm["away"]) if gm.get("soccer")
+                   else fanduel._runner(gm["ml"], team))
             if ref:
                 add("Winner", f"{team} to win", dict(t="win", team=team), ref)
             v = fanduel._runner(gm["spread"], team)
@@ -132,6 +136,10 @@ def fd_specs(FD, refs):
                 tm = team_of(team)
                 if tm:
                     add("Spread", f"{tm} {L:+g}", dict(t="spread", team=tm, line=L), ref, price, where)
+            elif kind == "dc":
+                tm = team_of(team)
+                if tm:
+                    add("Double chance", f"{tm} or draw", dict(t="dc", team=tm), ref, price, where)
             elif kind == "teamtotal":
                 tm = team_of(team)
                 if tm:
@@ -176,7 +184,7 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
     dmin, dmax = dec or (DEC_MIN, DEC_MAX)
     now = dt.datetime.now(dt.timezone.utc)
     rows = {lg: [r for r in rs if _eligible(r, day, now)]
-            for lg, rs in (slot_rows or {}).items() if lg in fanduel.PAGES}
+            for lg, rs in (slot_rows or {}).items() if fanduel.covered(lg)}
     refs = {}
     games = stacks.candidates(rows, soccer_keys, labels, extra=fd_specs(FD, refs),
                               band=band or (LOCK_MIN, LOCK_MAX))
@@ -185,13 +193,13 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
     import sys
     diag = {}
     for lg, rs in (slot_rows or {}).items():
-        if lg not in fanduel.PAGES:
+        if not fanduel.covered(lg):
             continue
         el = rows.get(lg) or []
         found = 0
         for r in el:
             m = r.get("mkt") or {}
-            if fanduel.find(FD, lg, m.get("away"), m.get("home")):
+            if fanduel.find(FD, lg, m.get("away"), m.get("home"), m.get("start")):
                 found += 1
         diag[lg] = [len(rs), len(el), found, len(FD.get(lg) or [])]
     print(f"locks [{day}] board/eligible/onFanDuel/FDfeed: {diag}", file=sys.stderr)
