@@ -8,7 +8,7 @@
   "nhl": 0.625,
   "ufc": 0.75,
   "wnba": 0.625,
-  "wta": 0.65
+  "wta": 0.725
  },
  "detail": {
   "atp": {
@@ -47,10 +47,10 @@
    "hit": 73.1
   },
   "nhl": {
-   "all_hit": 67.0,
+   "all_hit": 66.3,
    "calls": 19,
    "cutoff": 0.625,
-   "games": 88,
+   "games": 89,
    "hit": 84.2
   },
   "ufc": {
@@ -68,21 +68,21 @@
    "hit": 77.4
   },
   "wta": {
-   "all_hit": 71.4,
-   "calls": 102,
-   "cutoff": 0.65,
-   "games": 185,
-   "hit": 81.4
+   "all_hit": 71.0,
+   "calls": 67,
+   "cutoff": 0.725,
+   "games": 186,
+   "hit": 85.1
   }
  },
  "holdout": {
-  "all_hit": 69.5,
-  "all_n": 942,
-  "hit": 77.1,
+  "all_hit": 69.3,
+  "all_n": 944,
+  "hit": 76.8,
   "n": 349,
   "since": "2026-09-19",
   "until": "2026-10-17"
  },
  "target": 0.75,
- "updated": "2026-10-17T23:52-04:00"
+ "updated": "2026-10-17T23:57-04:00"
 }
