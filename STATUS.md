@@ -32,9 +32,19 @@ what is missing and the next step. Updated 2026-10-18.
 | O9 | Site lag | done | no reload while in use; view restored | - |
 | O10 | Every split studied | ongoing | labs: totals, NHL, UFC, soccer, TD, ladder, edge, backtest, weather; daily audit flags splits >2 SE behind | ladder lab needs ~30 graded games |
 
+## Regression tests
+
+`tests/test_core.py`, 16 tests, run by `.github/workflows/tests.yml` on every code push
+(standard library, no network). Covers: Locks -400..-120 and Safe -2000..-500 windows,
+one leg per game and the kind cap, soccer limited to validated kinds, soccer grading
+(draw / void / live), soccer name matching and the reversed-fixture guard, NFL upper
+tail, wind scaling, ungradable props kept off tickets, every FanDuel prop name gradable.
+Mutation check 2026-10-18: breaking the soccer kind filter, the reversed-fixture guard
+or the NFL split each failed exactly its own test.
+
 ## Out of scope
 
-* A "job-search and application system" was described in one message (2026-10-18). No such system exists in this repository or conversation; nothing was built or claimed for it.
+* A "job-search and application system" was described in two messages (2026-10-18). No such system exists in this repository or conversation; nothing was built or claimed for it. **Blocked on the owner**: needs the owner's background (resume / history / target pay), which application accounts may be used, and where the project should live.
 
 ## Tested and rejected (do not retry without new data)
 
