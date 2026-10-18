@@ -130,7 +130,7 @@
   "ger": {
    "all_hit": 100.0,
    "cutoff": null,
-   "games": 5,
+   "games": 6,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "ger2": {
@@ -255,9 +255,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "rsa": {
-   "all_hit": 50.0,
+   "all_hit": 57.1,
    "cutoff": null,
-   "games": 6,
+   "games": 7,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "sco": {
@@ -310,9 +310,9 @@
    "hit": 83.3
   },
   "wsl": {
-   "all_hit": 66.7,
+   "all_hit": 71.4,
    "cutoff": null,
-   "games": 6,
+   "games": 7,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "wta": {
@@ -324,15 +324,15 @@
   }
  },
  "holdout": {
-  "all_hit": 67.3,
-  "all_n": 1057,
+  "all_hit": 67.4,
+  "all_n": 1060,
   "basis": "as published",
   "days": 18,
   "hit": 75.6,
   "n": 287,
   "simulated": {
-   "hit": 69.3,
-   "n": 1057,
+   "hit": 69.4,
+   "n": 1060,
    "what": "old picks re-scored as the market favourite"
   },
   "since": "2026-09-19",
@@ -389,5 +389,5 @@
   "usl",
   "wsl"
  ],
- "updated": "2026-10-18T11:22-04:00"
+ "updated": "2026-10-18T11:27-04:00"
 }

@@ -2418,7 +2418,7 @@
    "ger": {
     "all_hit": 100.0,
     "cutoff": null,
-    "games": 5,
+    "games": 6,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ger2": {
@@ -2543,9 +2543,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "rsa": {
-    "all_hit": 50.0,
+    "all_hit": 57.1,
     "cutoff": null,
-    "games": 6,
+    "games": 7,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "sco": {
@@ -2598,9 +2598,9 @@
     "hit": 83.3
    },
    "wsl": {
-    "all_hit": 66.7,
+    "all_hit": 71.4,
     "cutoff": null,
-    "games": 6,
+    "games": 7,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "wta": {
@@ -2612,9 +2612,9 @@
    }
   },
   "clv": {
-   "avg": 2.88,
-   "beat": 57.1,
-   "n": 7
+   "avg": 2.59,
+   "beat": 62.5,
+   "n": 8
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2912,12 +2912,12 @@
    }
   ],
   "picks": {
-   "hit": 64.9,
+   "hit": 66.7,
    "lost": 20,
-   "n": 57,
-   "roi": 10.9,
-   "said": 67.1,
-   "won": 37
+   "n": 60,
+   "roi": 13.5,
+   "said": 67.4,
+   "won": 40
   },
   "picks_by_league": {
    "atp": {
@@ -2984,6 +2984,14 @@
     "said": 76.7,
     "won": 1
    },
+   "ger": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 79.9,
+    "won": 1
+   },
    "ger2": {
     "hit": 66.7,
     "lost": 1,
@@ -3048,6 +3056,14 @@
     "said": 64.4,
     "won": 0
    },
+   "rsa": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 71.1,
+    "won": 1
+   },
    "swe": {
     "hit": 100.0,
     "lost": 0,
@@ -3073,12 +3089,12 @@
     "won": 0
    },
    "wsl": {
-    "hit": 80.0,
+    "hit": 83.3,
     "lost": 1,
-    "n": 5,
-    "roi": 18.4,
-    "said": 77.5,
-    "won": 4
+    "n": 6,
+    "roi": 21.9,
+    "said": 76.2,
+    "won": 5
    },
    "wta": {
     "hit": 50.0,
@@ -3119,12 +3135,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 75.0,
+   "hit": 76.9,
    "lost": 3,
-   "n": 12,
+   "n": 13,
    "roi": 15.8,
-   "said": 76.7,
-   "won": 9
+   "said": 77.0,
+   "won": 10
   },
   "stuck": [],
   "vs_market_14d": {
@@ -3137,12 +3153,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 67.3,
+    "hit": 67.5,
     "lost": 83,
-    "n": 254,
-    "roi": -1.6,
+    "n": 255,
+    "roi": -1.5,
     "said": 63.5,
-    "won": 171
+    "won": 172
    }
   },
   "weights": {
