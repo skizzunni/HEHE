@@ -584,6 +584,7 @@
   "p": 0.8607,
   "p_fair": null,
   "price": "-1100",
+  "rechecked": "void",
   "status": "void",
   "void_why": "not in box score"
  },
@@ -601,6 +602,7 @@
   "p": 0.3833,
   "p_fair": null,
   "price": "+145",
+  "rechecked": "void",
   "status": "void",
   "void_why": "not in box score"
  },
@@ -2276,6 +2278,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nfl:401873001|n:aj brown|Receiving Yards|20+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -10.0,
+  "gid": "nfl:401873001",
+  "imp": 0.9091,
+  "label": "A.J. Brown: 20+ Receiving Yards",
+  "league": "nfl",
+  "line": "20+",
+  "market": "Receiving Yards",
+  "name": "A.J. Brown",
+  "p": 0.8496,
+  "p_fair": 0.818,
+  "price": "-1000",
+  "status": "open"
+ },
  "nfl:401873001|n:aj brown|Receptions|3+": {
   "aid": null,
   "date": "2026-10-18",
@@ -2578,6 +2596,22 @@
   "p": 0.7477,
   "p_fair": 0.8658,
   "price": "-400",
+  "status": "open"
+ },
+ "nfl:401873003|n:daniel jones|Passing Yards|150+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -4.6,
+  "gid": "nfl:401873003",
+  "imp": 0.9091,
+  "label": "Daniel Jones: 150+ Passing Yards",
+  "league": "nfl",
+  "line": "150+",
+  "market": "Passing Yards",
+  "name": "Daniel Jones",
+  "p": 0.8496,
+  "p_fair": 0.8673,
+  "price": "-1000",
   "status": "open"
  },
  "nfl:401873003|n:jonathan taylor|Anytime Touchdown Scorer|1+": {
