@@ -1003,11 +1003,11 @@
     "hit": 86.7
    },
    "ncaaf": {
-    "all_hit": 81.3,
-    "calls": 449,
+    "all_hit": 81.2,
+    "calls": 450,
     "cutoff": 0.55,
-    "games": 493,
-    "hit": 83.5
+    "games": 494,
+    "hit": 83.3
    },
    "nfl": {
     "all_hit": 62.0,
@@ -1046,9 +1046,9 @@
    }
   },
   "clv": {
-   "avg": -0.23,
-   "beat": 38.2,
-   "n": 89
+   "avg": -0.22,
+   "beat": 38.9,
+   "n": 90
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1382,6 +1382,14 @@
     "price": "-225",
     "said": 70.2,
     "why": "margin 10 \u00b7 the book had my side favoured too \u00b7 called at 70%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "Notre Dame Fighting Irish",
+    "price": "-410",
+    "said": 75.4,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 75%"
    },
    {
     "against_market": false,
@@ -1753,11 +1761,12 @@
     "killed_by": [
      "Under 39.5 points",
      "Under 38.5 points",
+     "Over 55.5 points",
      "Under 35.5 points",
      "Under 50.5 points"
     ],
     "legs": 9,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 2
@@ -1822,10 +1831,10 @@
    }
   ],
   "picks": {
-   "hit": 71.6,
-   "lost": 80,
-   "n": 282,
-   "roi": 1.7,
+   "hit": 71.4,
+   "lost": 81,
+   "n": 283,
+   "roi": 0.5,
    "said": 70.8,
    "won": 202
   },
@@ -2055,11 +2064,11 @@
     "won": 5
    },
    "ncaaf": {
-    "hit": 74.4,
-    "lost": 11,
-    "n": 43,
-    "roi": 1.9,
-    "said": 71.5,
+    "hit": 72.7,
+    "lost": 12,
+    "n": 44,
+    "roi": -0.6,
+    "said": 71.6,
     "won": 32
    },
    "ned": {
@@ -2225,10 +2234,10 @@
    "won": 0
   },
   "strong": {
-   "hit": 78.7,
-   "lost": 30,
-   "n": 141,
-   "roi": -0.4,
+   "hit": 78.2,
+   "lost": 31,
+   "n": 142,
+   "roi": -2.3,
    "said": 76.8,
    "won": 111
   },
@@ -2242,11 +2251,11 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.4,
-    "lost": 87,
-    "n": 275,
-    "roi": -1.6,
-    "said": 62.7,
+    "hit": 68.1,
+    "lost": 88,
+    "n": 276,
+    "roi": -2.0,
+    "said": 62.8,
     "won": 188
    }
   },
@@ -2259,10 +2268,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4509,
-    "market_only": 0.4509,
-    "model_only": 0.4806,
-    "n": 413,
+    "logloss": 0.4535,
+    "market_only": 0.4535,
+    "model_only": 0.4821,
+    "n": 414,
     "weight": 0.05
    },
    "nfl": {
