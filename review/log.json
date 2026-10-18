@@ -2561,9 +2561,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "swe": {
-    "all_hit": 50.0,
+    "all_hit": 46.2,
     "cutoff": null,
-    "games": 12,
+    "games": 13,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "tur": {
@@ -2748,6 +2748,14 @@
    },
    {
     "against_market": false,
+    "league": "swe",
+    "pick": "GAIS",
+    "price": null,
+    "said": 82.8,
+    "why": "margin 2 \u00b7 called at 83%"
+   },
+   {
+    "against_market": false,
     "league": "tur",
     "pick": "Kocaelispor",
     "price": null,
@@ -2925,11 +2933,11 @@
    }
   ],
   "picks": {
-   "hit": 70.0,
-   "lost": 21,
-   "n": 70,
+   "hit": 69.0,
+   "lost": 22,
+   "n": 71,
    "roi": 16.3,
-   "said": 68.2,
+   "said": 68.4,
    "won": 49
   },
   "picks_by_league": {
@@ -3094,11 +3102,11 @@
     "won": 1
    },
    "swe": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 4,
+    "hit": 80.0,
+    "lost": 1,
+    "n": 5,
     "roi": 21.1,
-    "said": 70.5,
+    "said": 73.0,
     "won": 4
    },
    "tur": {
@@ -3164,11 +3172,11 @@
    "won": 0
   },
   "strong": {
-   "hit": 83.3,
-   "lost": 3,
-   "n": 18,
+   "hit": 78.9,
+   "lost": 4,
+   "n": 19,
    "roi": 17.6,
-   "said": 76.4,
+   "said": 76.7,
    "won": 15
   },
   "stuck": [],
