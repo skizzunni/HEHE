@@ -2377,7 +2377,8 @@
   "p_fair": null,
   "price": "-1100",
   "rechecked": "void",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nhl:401892517|n:erik karlsson|Shots on Goal|1+": {
   "aid": null,
@@ -2865,12 +2866,14 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Sebastian Aho (CAR)",
   "p": 0.7078,
   "p_fair": null,
   "price": "-305",
   "rechecked": "void",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892521|n:anthony cirelli|Shots on Goal|1+": {
   "aid": null,
@@ -2955,7 +2958,8 @@
   "p_fair": null,
   "price": "-395",
   "rechecked": "void",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nhl:401892522|n:anton lundell|Shots on Goal|1+": {
   "aid": null,
@@ -3426,12 +3430,14 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Tim St\u00fctzle",
   "p": 0.8619,
   "p_fair": null,
   "price": "-1200",
   "rechecked": "void",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892527|n:alexis lafreniere|Shots on Goal|2+": {
   "aid": null,
@@ -4157,12 +4163,14 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "fuzzy",
   "name": "Mitchell Marner",
   "p": 0.6625,
   "p_fair": null,
   "price": "-230",
   "rechecked": "void",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892532|n:rasmus andersson|Shots on Goal|1+": {
   "aid": null,
