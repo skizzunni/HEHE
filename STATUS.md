@@ -49,7 +49,7 @@ Run by `.github/workflows/tests.yml` on every code or page push:
 
 ## Out of scope
 
-* A "job-search and application system" was described in two messages (2026-10-18). No such system exists in this repository or conversation; nothing was built or claimed for it. **Blocked on the owner**: needs the owner's background (resume / history / target pay), which application accounts may be used, and where the project should live.
+* Job-search system: dropped by the owner (2026-10-18). Not part of this project.
 
 ## Tested and rejected (do not retry without new data)
 
