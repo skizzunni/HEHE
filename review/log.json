@@ -2404,9 +2404,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "fra": {
-    "all_hit": 66.7,
+    "all_hit": 50.0,
     "cutoff": null,
-    "games": 6,
+    "games": 8,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "fra2": {
@@ -2700,6 +2700,22 @@
    },
    {
     "against_market": false,
+    "league": "fra",
+    "pick": "AS Monaco",
+    "price": null,
+    "said": 75.4,
+    "why": "margin 1 \u00b7 called at 75%"
+   },
+   {
+    "against_market": false,
+    "league": "fra",
+    "pick": "Le Havre AC",
+    "price": null,
+    "said": 68.6,
+    "why": "margin 2 \u00b7 called at 69%"
+   },
+   {
+    "against_market": false,
     "league": "ger2",
     "pick": "1. FC Magdeburg",
     "price": null,
@@ -2864,11 +2880,12 @@
    },
    {
     "killed_by": [
+     "Josh Maja: Anytime Goalscorer",
      "Antonio Sivera: 4+ Goalkeeper Saves",
      "Neal Maupay: Anytime Goalscorer"
     ],
     "legs": 5,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 0
@@ -2893,11 +2910,12 @@
    },
    {
     "killed_by": [
+     "Cameron Archer: Anytime Goalscorer",
      "Antonio Sivera: 4+ Goalkeeper Saves",
      "Neal Maupay: Anytime Goalscorer"
     ],
     "legs": 12,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 1
@@ -2914,11 +2932,12 @@
    },
    {
     "killed_by": [
+     "Cameron Archer: Anytime Goalscorer",
      "Antonio Sivera: 4+ Goalkeeper Saves",
      "Neal Maupay: Anytime Goalscorer"
     ],
     "legs": 11,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+25",
     "won": 1
@@ -2935,11 +2954,12 @@
    },
    {
     "killed_by": [
+     "Cameron Archer: Anytime Goalscorer",
      "Antonio Sivera: 4+ Goalkeeper Saves",
      "Neal Maupay: Anytime Goalscorer"
     ],
     "legs": 11,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+50",
     "won": 1
@@ -2956,22 +2976,23 @@
    },
    {
     "killed_by": [
+     "Cameron Archer: Anytime Goalscorer",
      "Antonio Sivera: 4+ Goalkeeper Saves",
      "Neal Maupay: Anytime Goalscorer"
     ],
     "legs": 11,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+100",
     "won": 1
    }
   ],
   "picks": {
-   "hit": 68.8,
-   "lost": 25,
-   "n": 80,
+   "hit": 67.1,
+   "lost": 27,
+   "n": 82,
    "roi": 11.6,
-   "said": 68.2,
+   "said": 68.3,
    "won": 55
   },
   "picks_by_league": {
@@ -3032,11 +3053,11 @@
     "won": 2
    },
    "fra": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
+    "hit": 33.3,
+    "lost": 2,
+    "n": 3,
     "roi": null,
-    "said": 76.7,
+    "said": 73.6,
     "won": 1
    },
    "ger": {
@@ -3191,8 +3212,8 @@
     "said_price": 84.3,
     "won": 17
    },
-   "n": 15,
-   "said": 66.0,
+   "n": 17,
+   "said": 62.0,
    "won": 11
   },
   "safe_locks": {
@@ -3214,11 +3235,11 @@
    "won": 0
   },
   "strong": {
-   "hit": 81.0,
-   "lost": 4,
-   "n": 21,
+   "hit": 77.3,
+   "lost": 5,
+   "n": 22,
    "roi": 18.4,
-   "said": 76.7,
+   "said": 76.6,
    "won": 17
   },
   "stuck": [],

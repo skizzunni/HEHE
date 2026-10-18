@@ -116,9 +116,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "fra": {
-   "all_hit": 66.7,
+   "all_hit": 50.0,
    "cutoff": null,
-   "games": 6,
+   "games": 8,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "fra2": {
@@ -324,15 +324,15 @@
   }
  },
  "holdout": {
-  "all_hit": 67.5,
-  "all_n": 1080,
+  "all_hit": 67.4,
+  "all_n": 1082,
   "basis": "as published",
   "days": 18,
   "hit": 75.8,
   "n": 289,
   "simulated": {
-   "hit": 69.5,
-   "n": 1080,
+   "hit": 69.4,
+   "n": 1082,
    "what": "old picks re-scored as the market favourite"
   },
   "since": "2026-09-19",
@@ -389,5 +389,5 @@
   "usl",
   "wsl"
  ],
- "updated": "2026-10-18T13:05-04:00"
+ "updated": "2026-10-18T13:10-04:00"
 }

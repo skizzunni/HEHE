@@ -331,7 +331,8 @@
   "p": 0.8961,
   "p_fair": null,
   "price": "-3500",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "fra:401876435|139363|Goalkeeper Saves|4+": {
   "aid": "139363",
@@ -347,7 +348,8 @@
   "p": 0.3762,
   "p_fair": null,
   "price": "+145",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "fra:401876437|233308|Goalkeeper Saves|1+": {
   "aid": "233308",
@@ -431,7 +433,8 @@
   "p": 0.3214,
   "p_fair": null,
   "price": "+190",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "fra:401876438|293347|Anytime Goalscorer|": {
   "aid": "293347",
@@ -447,7 +450,8 @@
   "p": 0.3056,
   "p_fair": null,
   "price": "+205",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "fra:401876439|178760|Anytime Goalscorer|": {
   "aid": "178760",
