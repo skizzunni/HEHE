@@ -186,6 +186,33 @@ def grid(lh, la, kmax=15, r=None):
     return {(h, a): ph[h] * pa[a] for h in range(kmax + 1) for a in range(kmax + 1)}
 
 
+# Empty-net goals. A team down one late pulls its goalie, and often the
+# leader scores into the empty net: independent Poisson scoring cannot know
+# that, so it puts too many games on a one-goal margin. On 1,312 NHL games of
+# 2025 "+1.5" legs said 87.5% and hit 81.4%. (one-goal share, two-goal share)
+# of regulation results that gain a goal for the leader; fitted by
+# tools/nhl_lab.py on the older half, scored on games it never saw.
+HOCKEY_EN = (0.0, 0.0)
+
+
+def en_shift(g, en=None):
+    """Move part of each one- and two-goal regulation result to the leader
+    winning by one more."""
+    e1, e2 = en if en is not None else HOCKEY_EN
+    if not (e1 or e2):
+        return g
+    out = dict(g)
+    for (h, a), p in g.items():
+        d = h - a
+        e = e1 if abs(d) == 1 else e2 if abs(d) == 2 else 0.0
+        if not e:
+            continue
+        out[(h, a)] -= p * e
+        k = (h + 1, a) if d > 0 else (h, a + 1)
+        out[k] = out.get(k, 0.0) + p * e
+    return out
+
+
 def _pwin(g, ot):
     """P(home wins). In hockey a level score goes to OT/shootout, split by
     the scoring rates; in soccer a draw is not a win."""
@@ -209,6 +236,8 @@ def fit_poisson(p_home, total, p_draw=None, hockey=False, p_over=0.5, r=None):
     def err(mu, s):
         lh, la = mu * s, mu * (1 - s)
         g = grid(lh, la, kmax, r)
+        if hockey and not r:
+            g = en_shift(g)
         e = (_pwin(g, s if hockey else None) - p_home) ** 2
         if p_draw is not None:
             e += (sum(p for (h, a), p in g.items() if h == a) - p_draw) ** 2
@@ -251,6 +280,8 @@ class Game:
             lh, la = fit_poisson(p_home, total, p_draw if soccer else None,
                                  hockey=not soccer, p_over=p_over, r=r)
             self.g = grid(lh, la, 25 if r else 15, r)
+            if not soccer and not r:
+                self.g = en_shift(self.g)
             self.ot = None if soccer else lh / (lh + la)
             self.mu_total = lh + la
         else:
