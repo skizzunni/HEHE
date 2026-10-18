@@ -2440,9 +2440,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ita": {
-    "all_hit": 75.0,
+    "all_hit": 60.0,
     "cutoff": null,
-    "games": 4,
+    "games": 5,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ita2": {
@@ -2569,7 +2569,7 @@
    "tur": {
     "all_hit": 100.0,
     "cutoff": null,
-    "games": 5,
+    "games": 6,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ufc": {
@@ -2673,6 +2673,14 @@
     "price": null,
     "said": 67.4,
     "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 67%"
+   },
+   {
+    "against_market": false,
+    "league": "ita",
+    "pick": "Udinese",
+    "price": null,
+    "said": 79.1,
+    "why": "margin 3 \u00b7 called at 79%"
    },
    {
     "against_market": false,
@@ -2823,11 +2831,11 @@
   ],
   "picks": {
    "hit": 50.0,
-   "lost": 10,
-   "n": 20,
+   "lost": 11,
+   "n": 22,
    "roi": null,
-   "said": 63.8,
-   "won": 10
+   "said": 64.0,
+   "won": 11
   },
   "picks_by_league": {
    "atp": {
@@ -2845,6 +2853,14 @@
     "roi": null,
     "said": 72.6,
     "won": 1
+   },
+   "ita": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 79.1,
+    "won": 0
    },
    "jpn": {
     "hit": 50.0,
@@ -2870,6 +2886,14 @@
     "said": 73.7,
     "won": 1
    },
+   "tur": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 52.6,
+    "won": 1
+   },
    "wta": {
     "hit": 50.0,
     "lost": 4,
@@ -2886,9 +2910,9 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 0,
-   "said": null,
-   "won": 0
+   "n": 1,
+   "said": 84.8,
+   "won": 1
   },
   "safe_locks": {
    "lost": [],
@@ -2909,11 +2933,11 @@
    "won": 0
   },
   "strong": {
-   "hit": 50.0,
-   "lost": 1,
-   "n": 2,
+   "hit": 33.3,
+   "lost": 2,
+   "n": 3,
    "roi": null,
-   "said": 71.2,
+   "said": 73.8,
    "won": 1
   },
   "stuck": [],

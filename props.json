@@ -527,7 +527,8 @@
   "p": 0.8483,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "ita:401874774|108482|Goalkeeper Saves|2+": {
   "aid": "108482",
@@ -1443,6 +1444,22 @@
   "name": "Dalton Schultz",
   "p": 0.8496,
   "p_fair": 0.8373,
+  "price": "-1000",
+  "status": "open"
+ },
+ "nfl:401872996|n:jakobi meyers|Receiving Yards|10+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -6.5,
+  "gid": "nfl:401872996",
+  "imp": 0.9091,
+  "label": "Jakobi Meyers: 10+ Receiving Yards",
+  "league": "nfl",
+  "line": "10+",
+  "market": "Receiving Yards",
+  "name": "Jakobi Meyers",
+  "p": 0.8496,
+  "p_fair": 0.8497,
   "price": "-1000",
   "status": "open"
  },
