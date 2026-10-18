@@ -1805,11 +1805,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Audric Estime",
   "p": 0.7477,
   "p_fair": 0.8449,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nfl:401872997|n:audric estime|Rushing Yards|5+": {
   "aid": null,
@@ -1821,11 +1823,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Audric Estime",
   "p": 0.8567,
   "p_fair": 0.9247,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nfl:401872997|n:denzel boston|Receptions|2+": {
   "aid": null,
@@ -1837,11 +1841,13 @@
   "league": "nfl",
   "line": "2+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Denzel Boston",
   "p": 0.8496,
   "p_fair": 0.8748,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nfl:401872997|n:derrick henry|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -1853,11 +1859,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Derrick Henry",
   "p": 0.481,
   "p_fair": null,
   "price": "-165",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401872997|n:deshaun watson|Passing Touchdowns|1+": {
   "aid": null,
@@ -1869,11 +1877,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Passing Touchdowns",
+  "matched": "name",
   "name": "Deshaun Watson",
   "p": 0.7399,
   "p_fair": 0.7203,
   "price": "-380",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401872997|n:jakobi lane|Receptions|1+": {
   "aid": null,
@@ -1885,11 +1895,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Ja'Kobi Lane",
   "p": 0.758,
   "p_fair": 0.7597,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nfl:401872997|n:jaleel mclaughlin|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -1901,11 +1913,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Jaleel McLaughlin",
   "p": 0.2731,
   "p_fair": null,
   "price": "+165",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401872997|n:jaleel mclaughlin|Rushing Yards|10+": {
   "aid": null,
@@ -1917,11 +1931,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Jaleel McLaughlin",
   "p": 0.8496,
   "p_fair": 0.9036,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 41.0
  },
  "nfl:401872997|n:mark andrews|Receiving Yards|15+": {
   "aid": null,
@@ -1933,11 +1949,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Mark Andrews",
   "p": 0.7399,
   "p_fair": 0.7503,
   "price": "-380",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nfl:401872997|n:mark andrews|Receptions|2+": {
   "aid": null,
@@ -1949,11 +1967,13 @@
   "league": "nfl",
   "line": "2+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Mark Andrews",
   "p": 0.8521,
   "p_fair": 0.8748,
   "price": "-850",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nfl:401872997|n:quinshon judkins|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -1969,7 +1989,8 @@
   "p": 0.2873,
   "p_fair": null,
   "price": "+170",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401872997|n:quinshon judkins|Receptions|2+": {
   "aid": null,
@@ -1985,7 +2006,8 @@
   "p": 0.7477,
   "p_fair": 0.777,
   "price": "-400",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401872997|n:zay flowers|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -1997,11 +2019,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Zay Flowers",
   "p": 0.2512,
   "p_fair": null,
   "price": "+210",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401872997|n:zay flowers|Receptions|3+": {
   "aid": null,
@@ -2013,11 +2037,13 @@
   "league": "nfl",
   "line": "3+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Zay Flowers",
   "p": 0.8496,
   "p_fair": 0.9119,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nfl:401872997|n:zay flowers|Receptions|4+": {
   "aid": null,
@@ -2029,11 +2055,13 @@
   "league": "nfl",
   "line": "4+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Zay Flowers",
   "p": 0.7477,
   "p_fair": 0.7988,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nfl:401872998|n:chuba hubbard|Anytime Touchdown Scorer|1+": {
   "aid": null,

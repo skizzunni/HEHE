@@ -2201,10 +2201,10 @@
   },
   "props": {
    "fair": {
-    "n": 20,
-    "said_fair": 84.1,
-    "said_price": 84.3,
-    "won": 17
+    "n": 30,
+    "said_fair": 83.9,
+    "said_price": 84.6,
+    "won": 23
    },
    "n": 141,
    "said": 75.7,
@@ -2428,9 +2428,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "gre": {
-    "all_hit": 80.0,
+    "all_hit": 83.3,
     "cutoff": null,
-    "games": 5,
+    "games": 6,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ind": {
@@ -2458,9 +2458,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ksa": {
-    "all_hit": 60.0,
+    "all_hit": 54.5,
     "cutoff": null,
-    "games": 10,
+    "games": 11,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "mex": {
@@ -2470,9 +2470,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "mex2": {
-    "all_hit": 42.9,
+    "all_hit": 37.5,
     "cutoff": null,
-    "games": 7,
+    "games": 8,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "mlb": {
@@ -2495,9 +2495,9 @@
     "hit": 83.1
    },
    "ned": {
-    "all_hit": 57.1,
+    "all_hit": 55.6,
     "cutoff": null,
-    "games": 7,
+    "games": 9,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ned2": {
@@ -2507,9 +2507,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nfl": {
-    "all_hit": 58.8,
+    "all_hit": 58.0,
     "cutoff": null,
-    "games": 80,
+    "games": 81,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nhl": {
@@ -2579,9 +2579,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "uru": {
-    "all_hit": 50.0,
+    "all_hit": 53.8,
     "cutoff": null,
-    "games": 12,
+    "games": 13,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "usl": {
@@ -2612,9 +2612,9 @@
    }
   },
   "clv": {
-   "avg": 0.83,
-   "beat": 46.7,
-   "n": 15
+   "avg": 0.27,
+   "beat": 44.4,
+   "n": 18
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2631,7 +2631,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      2,
@@ -2639,7 +2639,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "losses": [
    {
@@ -2772,11 +2772,35 @@
    },
    {
     "against_market": false,
+    "league": "ksa",
+    "pick": "Al Fateh",
+    "price": null,
+    "said": 74.0,
+    "why": "margin 1 \u00b7 called at 74%"
+   },
+   {
+    "against_market": false,
+    "league": "mex2",
+    "pick": "Leones Negros",
+    "price": null,
+    "said": 84.6,
+    "why": "margin 1 \u00b7 called at 85%"
+   },
+   {
+    "against_market": false,
     "league": "ned",
     "pick": "AZ Alkmaar",
     "price": "-225",
     "said": 65.1,
     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 65%"
+   },
+   {
+    "against_market": false,
+    "league": "ned",
+    "pick": "FC Twente",
+    "price": "-280",
+    "said": 69.5,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70%"
    },
    {
     "against_market": false,
@@ -2793,6 +2817,14 @@
     "price": "-142",
     "said": 58.7,
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 59%"
+   },
+   {
+    "against_market": false,
+    "league": "nfl",
+    "pick": "Baltimore Ravens",
+    "price": "-170",
+    "said": 57.7,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 58%"
    },
    {
     "against_market": false,
@@ -2892,7 +2924,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -2932,7 +2964,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -2956,7 +2988,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+25",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -2980,7 +3012,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+50",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -3004,7 +3036,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -3022,12 +3054,12 @@
    }
   ],
   "picks": {
-   "hit": 70.6,
-   "lost": 30,
-   "n": 102,
-   "roi": 12.9,
+   "hit": 68.8,
+   "lost": 34,
+   "n": 109,
+   "roi": 1.5,
    "said": 69.3,
-   "won": 72
+   "won": 75
   },
   "picks_by_league": {
    "arg": {
@@ -3127,12 +3159,12 @@
     "won": 2
    },
    "gre": {
-    "hit": 75.0,
+    "hit": 80.0,
     "lost": 1,
-    "n": 4,
-    "roi": 27.2,
-    "said": 70.5,
-    "won": 3
+    "n": 5,
+    "roi": 29.4,
+    "said": 70.4,
+    "won": 4
    },
    "ind": {
     "hit": 100.0,
@@ -3166,13 +3198,29 @@
     "said": 62.7,
     "won": 1
    },
+   "ksa": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 74.0,
+    "won": 0
+   },
+   "mex2": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 84.6,
+    "won": 0
+   },
    "ned": {
-    "hit": 33.3,
-    "lost": 2,
-    "n": 3,
+    "hit": 40.0,
+    "lost": 3,
+    "n": 5,
     "roi": -100.0,
-    "said": 70.5,
-    "won": 1
+    "said": 71.8,
+    "won": 2
    },
    "ned2": {
     "hit": 100.0,
@@ -3184,10 +3232,10 @@
    },
    "nfl": {
     "hit": 0.0,
-    "lost": 1,
-    "n": 1,
+    "lost": 2,
+    "n": 2,
     "roi": -100.0,
-    "said": 58.7,
+    "said": 58.2,
     "won": 0
    },
    "nor": {
@@ -3247,12 +3295,12 @@
     "won": 2
    },
    "uru": {
-    "hit": 0.0,
+    "hit": 50.0,
     "lost": 1,
-    "n": 1,
+    "n": 2,
     "roi": null,
-    "said": 73.7,
-    "won": 0
+    "said": 65.0,
+    "won": 1
    },
    "wsl": {
     "hit": 83.3,
@@ -3273,14 +3321,14 @@
   },
   "props": {
    "fair": {
-    "n": 20,
-    "said_fair": 84.1,
-    "said_price": 84.3,
-    "won": 17
+    "n": 30,
+    "said_fair": 83.9,
+    "said_price": 84.6,
+    "won": 23
    },
-   "n": 24,
-   "said": 64.2,
-   "won": 15
+   "n": 37,
+   "said": 66.0,
+   "won": 21
   },
   "safe_locks": {
    "lost": [],
@@ -3301,12 +3349,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 74.2,
-   "lost": 8,
-   "n": 31,
+   "hit": 72.7,
+   "lost": 9,
+   "n": 33,
    "roi": 18.4,
-   "said": 77.5,
-   "won": 23
+   "said": 77.7,
+   "won": 24
   },
   "stuck": [],
   "vs_market_14d": {
@@ -3319,12 +3367,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 67.9,
-    "lost": 84,
-    "n": 262,
-    "roi": -1.1,
+    "hit": 67.5,
+    "lost": 86,
+    "n": 265,
+    "roi": -1.7,
     "said": 63.7,
-    "won": 178
+    "won": 179
    }
   },
   "weights": {
