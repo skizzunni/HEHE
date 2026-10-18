@@ -2201,10 +2201,10 @@
   },
   "props": {
    "fair": {
-    "n": 12,
-    "said_fair": 84.7,
-    "said_price": 83.5,
-    "won": 10
+    "n": 20,
+    "said_fair": 84.1,
+    "said_price": 84.3,
+    "won": 17
    },
    "n": 141,
    "said": 75.7,
@@ -2259,10 +2259,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 60.4,
-    "n": 53,
+    "hit": 59.3,
+    "n": 54,
     "name": "tennis Kalshi-priced",
-    "said": 69.4
+    "said": 69.2
    },
    {
     "flag": false,
@@ -2301,10 +2301,10 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "atp": {
-    "all_hit": 69.4,
+    "all_hit": 68.9,
     "calls": 73,
     "cutoff": 0.65,
-    "games": 134,
+    "games": 135,
     "hit": 82.2
    },
    "aus": {
@@ -2507,9 +2507,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nfl": {
-    "all_hit": 59.5,
+    "all_hit": 58.8,
     "cutoff": null,
-    "games": 79,
+    "games": 80,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nhl": {
@@ -2519,9 +2519,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nor": {
-    "all_hit": 58.3,
+    "all_hit": 61.5,
     "cutoff": null,
-    "games": 12,
+    "games": 13,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nwsl": {
@@ -2612,9 +2612,9 @@
    }
   },
   "clv": {
-   "avg": 1.78,
-   "beat": 58.3,
-   "n": 12
+   "avg": 1.3,
+   "beat": 50.0,
+   "n": 14
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2631,7 +2631,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      2,
@@ -2639,7 +2639,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "losses": [
    {
@@ -2681,6 +2681,14 @@
     "price": null,
     "said": 67.4,
     "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 67%"
+   },
+   {
+    "against_market": false,
+    "league": "atp",
+    "pick": "Valentin Royer",
+    "price": null,
+    "said": 58.7,
+    "why": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 59%"
    },
    {
     "against_market": false,
@@ -2737,6 +2745,14 @@
     "price": null,
     "said": 74.5,
     "why": "margin 3 \u00b7 called at 74%"
+   },
+   {
+    "against_market": false,
+    "league": "nfl",
+    "pick": "Jacksonville Jaguars",
+    "price": "-142",
+    "said": 58.7,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 59%"
    },
    {
     "against_market": false,
@@ -2943,20 +2959,20 @@
    }
   ],
   "picks": {
-   "hit": 70.3,
-   "lost": 22,
-   "n": 74,
-   "roi": 18.9,
-   "said": 68.5,
-   "won": 52
+   "hit": 68.8,
+   "lost": 24,
+   "n": 77,
+   "roi": 11.6,
+   "said": 68.3,
+   "won": 53
   },
   "picks_by_league": {
    "atp": {
-    "hit": 61.5,
-    "lost": 5,
-    "n": 13,
+    "hit": 57.1,
+    "lost": 6,
+    "n": 14,
     "roi": null,
-    "said": 63.2,
+    "said": 62.8,
     "won": 8
    },
    "aut": {
@@ -3087,13 +3103,21 @@
     "said": 69.7,
     "won": 2
    },
-   "nor": {
+   "nfl": {
     "hit": 0.0,
     "lost": 1,
     "n": 1,
-    "roi": null,
-    "said": 64.4,
+    "roi": -100.0,
+    "said": 58.7,
     "won": 0
+   },
+   "nor": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": 36.4,
+    "said": 66.8,
+    "won": 1
    },
    "rsa": {
     "hit": 100.0,
@@ -3154,14 +3178,14 @@
   },
   "props": {
    "fair": {
-    "n": 12,
-    "said_fair": 84.7,
-    "said_price": 83.5,
-    "won": 10
+    "n": 20,
+    "said_fair": 84.1,
+    "said_price": 84.3,
+    "won": 17
    },
-   "n": 5,
-   "said": 57.0,
-   "won": 3
+   "n": 15,
+   "said": 66.0,
+   "won": 11
   },
   "safe_locks": {
    "lost": [],
@@ -3200,12 +3224,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 68.0,
-    "lost": 83,
-    "n": 259,
-    "roi": -1.0,
+    "hit": 67.8,
+    "lost": 84,
+    "n": 261,
+    "roi": -1.2,
     "said": 63.7,
-    "won": 176
+    "won": 177
    }
   },
   "weights": {

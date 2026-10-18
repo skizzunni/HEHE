@@ -13,10 +13,10 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "atp": {
-   "all_hit": 69.4,
+   "all_hit": 68.9,
    "calls": 73,
    "cutoff": 0.65,
-   "games": 134,
+   "games": 135,
    "hit": 82.2
   },
   "aus": {
@@ -219,9 +219,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "nfl": {
-   "all_hit": 59.5,
+   "all_hit": 58.8,
    "cutoff": null,
-   "games": 79,
+   "games": 80,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "nhl": {
@@ -231,9 +231,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "nor": {
-   "all_hit": 58.3,
+   "all_hit": 61.5,
    "cutoff": null,
-   "games": 12,
+   "games": 13,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "nwsl": {
@@ -324,15 +324,15 @@
   }
  },
  "holdout": {
-  "all_hit": 67.6,
-  "all_n": 1074,
+  "all_hit": 67.5,
+  "all_n": 1077,
   "basis": "as published",
   "days": 18,
   "hit": 75.8,
   "n": 289,
   "simulated": {
-   "hit": 69.6,
-   "n": 1074,
+   "hit": 69.5,
+   "n": 1077,
    "what": "old picks re-scored as the market favourite"
   },
   "since": "2026-09-19",
@@ -389,5 +389,5 @@
   "usl",
   "wsl"
  ],
- "updated": "2026-10-18T12:49-04:00"
+ "updated": "2026-10-18T12:54-04:00"
 }
