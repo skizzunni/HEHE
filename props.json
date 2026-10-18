@@ -437,7 +437,8 @@
   "p": 0.7961,
   "p_fair": null,
   "price": "-575",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "mls:761878|225567|Tackles|1+": {
   "aid": "225567",
@@ -1569,7 +1570,8 @@
   "p": 0.8676,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892523|n:brayden schenn|Shots on Goal|1+": {
   "aid": null,
@@ -1585,7 +1587,8 @@
   "p": 0.8387,
   "p_fair": null,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892523|n:darren raddysh|Shots on Goal|2+": {
   "aid": null,
@@ -1601,7 +1604,8 @@
   "p": 0.7238,
   "p_fair": null,
   "price": "-335",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892523|n:kirill marchenko|Shots on Goal|2+": {
   "aid": null,
@@ -1617,7 +1621,8 @@
   "p": 0.7461,
   "p_fair": null,
   "price": "-385",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892523|n:kyle palmieri|Shots on Goal|1+": {
   "aid": null,
@@ -1633,7 +1638,8 @@
   "p": 0.8615,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892524|n:cole caufield|Shots on Goal|2+": {
   "aid": null,
@@ -2481,6 +2487,22 @@
   "p": 0.7161,
   "p_fair": null,
   "price": "-320",
+  "status": "open"
+ },
+ "nhl:401892532|n:ben kindel|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "nhl:401892532",
+  "imp": 0.8611,
+  "label": "Ben Kindel: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Ben Kindel",
+  "p": 0.8368,
+  "p_fair": null,
+  "price": "-620",
   "status": "open"
  },
  "nhl:401892532|n:bryan rust|Shots on Goal|1+": {
@@ -3412,6 +3434,22 @@
   "price": "-900",
   "status": "void"
  },
+ "ufc:401897388|n:fight|Goes the distance|No": {
+  "aid": null,
+  "date": "2026-10-17",
+  "edge": null,
+  "gid": "ufc:401897388",
+  "imp": 0.6528,
+  "label": "Fight does not go the distance",
+  "league": "ufc",
+  "line": "No",
+  "market": "Goes the distance",
+  "name": "Fight",
+  "p": 0.6191,
+  "p_fair": null,
+  "price": "-188",
+  "status": "open"
+ },
  "ufc:401897388|n:mike malott|Winner|win": {
   "aid": null,
   "date": "2026-10-17",
@@ -3677,7 +3715,8 @@
   "p": 0.7638,
   "p_fair": null,
   "price": "-370",
-  "status": "open"
+  "status": "won",
+  "value": 0.45
  },
  "ufc:401923630|n:fight|Goes the distance|No": {
   "aid": null,
@@ -3693,7 +3732,8 @@
   "p": 0.8232,
   "p_fair": null,
   "price": "-590",
-  "status": "open"
+  "status": "won",
+  "value": 0.45
  },
  "ufc:401929675|n:katlyn cerminara|Winner|win": {
   "aid": null,

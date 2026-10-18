@@ -5,7 +5,7 @@
   "mlb": 0.7,
   "ncaaf": 0.55,
   "nfl": 0.7,
-  "nhl": 0.625,
+  "nhl": 0.6,
   "ufc": 0.75,
   "wnba": 0.625,
   "wta": 0.65
@@ -47,18 +47,18 @@
    "hit": 73.1
   },
   "nhl": {
-   "all_hit": 67.9,
-   "calls": 18,
-   "cutoff": 0.625,
-   "games": 81,
-   "hit": 83.3
+   "all_hit": 67.1,
+   "calls": 36,
+   "cutoff": 0.6,
+   "games": 82,
+   "hit": 75.0
   },
   "ufc": {
-   "all_hit": 63.5,
-   "calls": 22,
+   "all_hit": 64.0,
+   "calls": 23,
    "cutoff": 0.75,
-   "games": 85,
-   "hit": 81.8
+   "games": 86,
+   "hit": 82.6
   },
   "wnba": {
    "all_hit": 74.5,
@@ -77,12 +77,12 @@
  },
  "holdout": {
   "all_hit": 70.0,
-  "all_n": 919,
-  "hit": 77.8,
-  "n": 352,
+  "all_n": 922,
+  "hit": 77.9,
+  "n": 353,
   "since": "2026-09-19",
   "until": "2026-10-17"
  },
  "target": 0.75,
- "updated": "2026-10-17T21:34-04:00"
+ "updated": "2026-10-17T21:39-04:00"
 }

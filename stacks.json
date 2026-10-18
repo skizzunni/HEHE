@@ -1204,12 +1204,13 @@
    "match": "Chicago Fire FC at New England Revolution",
    "p": 0.969,
    "p_model": 0.9702,
+   "score": "Chicago Fire FC 0 - New England Revolution 1",
    "spec": {
     "line": 3.5,
     "t": "nomargin",
     "team": "New England Revolution"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761881|No \u00b7 D.C. United wins by over 2.5 goals": {
    "away": "D.C. United",
@@ -1221,12 +1222,13 @@
    "match": "D.C. United at Orlando City SC",
    "p": 0.9594,
    "p_model": 0.961,
+   "score": "D.C. United 1 - Orlando City SC 4",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "D.C. United"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761882|Over 0.5 goals": {
    "away": "Vancouver Whitecaps",
@@ -2237,11 +2239,12 @@
    "match": "Dallas Stars at Chicago Blackhawks",
    "p": 0.9589,
    "p_model": 0.9609,
+   "score": "Dallas Stars 4 - Chicago Blackhawks 0",
    "spec": {
     "line": 2.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892529|Over 2.5 goals": {
    "away": "St. Louis Blues",
