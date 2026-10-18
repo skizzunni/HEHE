@@ -85,8 +85,8 @@ def main():
         with open(os.path.join(ROOT, "data", "ladder_history.json")) as fh:
             book = json.load(fh)
     except (OSError, ValueError):
+        book = {}                                # nothing logged yet: still write a result
         print("no ladder history yet")
-        return
     fin = finals(book)
     rows = rows_for(book, fin)
     games = sorted({r["gid"] for r in rows}, key=lambda g: book[g]["start"])

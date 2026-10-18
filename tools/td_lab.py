@@ -107,7 +107,12 @@ def main():
         rows.append(dict(date=e["date"], eid=e["gid"], aid=e["name"], imp=e["imp"],
                          total=e.get("total"), td=int(e["status"] == "won")))
     if len({r["eid"] for r in rows}) < 20:
-        print("not enough graded games yet:", len({r["eid"] for r in rows}))
+        n = len({r["eid"] for r in rows})
+        print("not enough graded games yet:", n)
+        # still write a result, or the workflow's commit step has nothing to add
+        os.makedirs(os.path.dirname(OUT), exist_ok=True)
+        with open(OUT, "w") as fh:
+            json.dump(dict(run=dt.date.today().isoformat(), graded_games=n, needed=20), fh, indent=1)
         return
     rows.sort(key=lambda r: (r["date"], r["eid"]))
     print("player-games", len(rows), "games", len({r['eid'] for r in rows}), flush=True)
