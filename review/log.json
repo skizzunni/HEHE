@@ -2354,15 +2354,15 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "bra": {
-    "all_hit": 66.7,
+    "all_hit": 64.7,
     "cutoff": null,
-    "games": 15,
+    "games": 17,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "bra2": {
-    "all_hit": 53.3,
+    "all_hit": 58.8,
     "cutoff": null,
-    "games": 15,
+    "games": 17,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "chi": {
@@ -2378,9 +2378,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "col": {
-    "all_hit": 46.2,
+    "all_hit": 42.9,
     "cutoff": null,
-    "games": 13,
+    "games": 14,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "den": {
@@ -2390,9 +2390,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ecu": {
-    "all_hit": 55.6,
+    "all_hit": 52.6,
     "cutoff": null,
-    "games": 18,
+    "games": 19,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "efl1": {
@@ -2420,9 +2420,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "esp": {
-    "all_hit": 66.7,
+    "all_hit": 70.0,
     "cutoff": null,
-    "games": 9,
+    "games": 10,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "esp2": {
@@ -2641,8 +2641,8 @@
   },
   "clv": {
    "avg": 0.02,
-   "beat": 41.7,
-   "n": 24
+   "beat": 40.0,
+   "n": 25
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2730,11 +2730,35 @@
    },
    {
     "against_market": false,
+    "league": "bra",
+    "pick": "Fluminense",
+    "price": null,
+    "said": 70.6,
+    "why": "margin 1 \u00b7 called at 71%"
+   },
+   {
+    "against_market": false,
+    "league": "col",
+    "pick": "Deportes Tolima",
+    "price": null,
+    "said": 67.0,
+    "why": "margin 1 \u00b7 called at 67%"
+   },
+   {
+    "against_market": false,
     "league": "den",
     "pick": "Br\u00f8ndby IF",
     "price": null,
     "said": 69.0,
     "why": "margin 1 \u00b7 called at 69%"
+   },
+   {
+    "against_market": false,
+    "league": "ecu",
+    "pick": "Leones",
+    "price": null,
+    "said": 76.0,
+    "why": "margin 2 \u00b7 called at 76%"
    },
    {
     "against_market": false,
@@ -3148,12 +3172,12 @@
    }
   ],
   "picks": {
-   "hit": 66.4,
-   "lost": 40,
-   "n": 119,
-   "roi": -4.5,
-   "said": 69.0,
-   "won": 79
+   "hit": 65.9,
+   "lost": 43,
+   "n": 126,
+   "roi": -3.4,
+   "said": 69.2,
+   "won": 83
   },
   "picks_by_league": {
    "arg": {
@@ -3180,6 +3204,22 @@
     "said": 69.7,
     "won": 3
    },
+   "bra": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": null,
+    "said": 70.4,
+    "won": 1
+   },
+   "bra2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 2,
+    "roi": null,
+    "said": 75.2,
+    "won": 2
+   },
    "chn": {
     "hit": 100.0,
     "lost": 0,
@@ -3187,6 +3227,14 @@
     "roi": 35.7,
     "said": 73.0,
     "won": 3
+   },
+   "col": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 67.0,
+    "won": 0
    },
    "den": {
     "hit": 75.0,
@@ -3197,11 +3245,11 @@
     "won": 3
    },
    "ecu": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
     "roi": null,
-    "said": 73.2,
+    "said": 74.6,
     "won": 1
    },
    "epl": {
@@ -3215,10 +3263,10 @@
    "esp": {
     "hit": 100.0,
     "lost": 0,
-    "n": 3,
-    "roi": null,
-    "said": 73.3,
-    "won": 3
+    "n": 4,
+    "roi": 23.5,
+    "said": 74.1,
+    "won": 4
    },
    "esp2": {
     "hit": 60.0,
@@ -3420,14 +3468,14 @@
     "said_price": 85.4,
     "won": 72
    },
-   "n": 108,
-   "said": 71.3,
-   "won": 76
+   "n": 109,
+   "said": 71.4,
+   "won": 77
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 7,
+   "open": 6,
    "plays": {
     "best": [
      7,
@@ -3440,15 +3488,15 @@
      "open"
     ]
    },
-   "won": 4
+   "won": 5
   },
   "strong": {
-   "hit": 68.6,
-   "lost": 11,
-   "n": 35,
-   "roi": 18.4,
-   "said": 77.8,
-   "won": 24
+   "hit": 68.4,
+   "lost": 12,
+   "n": 38,
+   "roi": 19.5,
+   "said": 77.7,
+   "won": 26
   },
   "stuck": [],
   "vs_market_14d": {
@@ -3461,12 +3509,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 67.2,
+    "hit": 67.3,
     "lost": 89,
-    "n": 271,
-    "roi": -2.2,
-    "said": 63.6,
-    "won": 182
+    "n": 272,
+    "roi": -2.1,
+    "said": 63.7,
+    "won": 183
    }
   },
   "weights": {
