@@ -2630,9 +2630,15 @@
   ],
   "locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     2,
+     0.6185,
+     "open"
+    ]
+   },
    "won": 0
   },
   "losses": [
@@ -2709,7 +2715,104 @@
     "why": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 58%"
    }
   ],
-  "lottery": [],
+  "lottery": [
+   {
+    "killed_by": [],
+    "legs": 7,
+    "lost": 0,
+    "status": "open",
+    "tier": "100",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 7,
+    "lost": 0,
+    "status": "open",
+    "tier": "100",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 5,
+    "lost": 0,
+    "status": "open",
+    "tier": "100",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 6,
+    "lost": 0,
+    "status": "open",
+    "tier": "100",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 10,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 12,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 10,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+25",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 11,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+25",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 10,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+50",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 11,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+50",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 9,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+100",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 11,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+100",
+    "won": 0
+   }
+  ],
   "picks": {
    "hit": 50.0,
    "lost": 9,
@@ -2765,9 +2868,20 @@
   },
   "safe_locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     7,
+     0.5375,
+     "open"
+    ],
+    "winners": [
+     2,
+     0.8426,
+     "open"
+    ]
+   },
    "won": 0
   },
   "strong": {
