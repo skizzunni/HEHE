@@ -81,6 +81,14 @@ drift/form/rest/travel/team bias, Kalshi+book average.
   whole gap is soccer "Shots" (uel 8/20 vs 84%), already off. Without it the band hits ~90 vs ~85 (NHL shots
   on goal 41/47 vs 84.8). No change to prop chances.
 
+## First live Safe Locks card (2026-10-17), graded 2026-10-18 07:15 UTC
+
+* **11/11 won, all hit** (stated 49.8%). Winners parlay top 4 (80%) hit; Best play top 10 (54%) hit.
+* Every leg checked by hand against its final score, and the scores agree with ledger.json's own pick
+  results (Utah 27-24, Oregon 17-14, Fresno State 23-26 loss, New Mexico 21-10, Wake Forest 41-7, Cruz Azul 5-0).
+  None stuck open. Chain: 12 commits in the hour before the check, last build 07:13 UTC.
+* One card is one draw from a ~50% event: it shows the grading works, not that the stated chance is too low.
+
 ## Waiting on data
 
 * NCAAB unders lean (one season only) -> recheck November.
