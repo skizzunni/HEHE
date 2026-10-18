@@ -428,6 +428,32 @@ class HonestRecords(unittest.TestCase):
         self.assertEqual(w["nfl"], 0.0)
 
 
+class Freshness(unittest.TestCase):
+    """Prices go to the right game, and nothing past its start is offered."""
+
+    def test_doubleheader_by_start(self):
+        book = {"mlb": [dict(away="Cleveland Guardians", home="Tampa Bay Rays", id="g1",
+                             start="2026-10-18T17:10:00Z"),
+                        dict(away="Cleveland Guardians", home="Tampa Bay Rays", id="g2",
+                             start="2026-10-18T21:40:00Z")]}
+        f = lambda t: (fanduel.find(book, "mlb", "Cleveland Guardians", "Tampa Bay Rays", t) or {}).get("id")
+        self.assertEqual(f("2026-10-18T21:40Z"), "g2")
+        self.assertEqual(f("2026-10-18T17:10Z"), "g1")
+        self.assertIsNone(f("2026-10-19T17:10Z"))          # a different day's game: no match
+        self.assertIsNone(f(None))                          # two candidates, no time: refuse to guess
+        one = {"mlb": book["mlb"][:1]}
+        self.assertEqual(fanduel.find(one, "mlb", "Cleveland Guardians", "Tampa Bay Rays", None)["id"], "g1")
+
+    def test_stale_pregame_after_kickoff(self):
+        import dashboard
+        now = dt.datetime(2026, 10, 18, 13, 5, tzinfo=dashboard.ET)
+        c = dict(date="2026-10-18T17:00Z", status=dict(type=dict(state="pre")))   # 1:00 PM ET
+        self.assertFalse(dashboard.pregame(c, "20261018", now))   # cached "pre", but it has started
+        self.assertTrue(dashboard.pregame(c, "20261018", now - dt.timedelta(hours=1)))
+        c["status"]["type"]["state"] = "in"
+        self.assertFalse(dashboard.pregame(c, "20261018", now - dt.timedelta(hours=1)))
+
+
 class StuckSweep(unittest.TestCase):
     """Anything still open a week after its game is reported, not left silent."""
 

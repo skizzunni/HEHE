@@ -1325,8 +1325,10 @@ function drawCard(slot){
     all.sort((a, b) => (b.hit || 0) - (a.hit || 0) || (b.mc || 0) - (a.mc || 0));
   }
   if(!all.length){ panel.innerHTML = '<p class="empty">Nothing on the card.</p>'; return; }
-  const rated = all.filter(r => r.hit)
-    .slice().sort((a, b) => (b.hit || 0) - (a.hit || 0) || (b.mc || 0) - (a.mc || 0));
+  // the sweep and "top three" use the legs in the order the table shows
+  // them, so every number on the screen is about the same selection (they
+  // were re-sorted by hit rate even when the table was ordered by edge)
+  const rated = all.filter(r => r.hit);
   let run = 1, marks = [];
   rated.forEach((r, i) => { run *= r.hit; if(i + 1 <= 30) marks.push(run); });
   const at = n => marks[n - 1] ? (100 * marks[n - 1]).toFixed(2) + "%" : "\u2014";
@@ -1357,8 +1359,8 @@ function drawCard(slot){
     + 'no odds feed, so there compare Fair against your own book by hand.</p>'
     + '<p class="coinbar">Every leg, ranked by the hit rate its own sport\u2019s '
     + 'backtest measured for that band \u2014 tennis and baseball confidence are '
-    + 'not the same scale. Soccer has no per-band study, so it is listed '
-    + 'without a rate.</p>'
+    + 'not the same scale. Soccer has no per-band study: its column shows the '
+    + 'market&rsquo;s own de-vigged chance, marked <b>market est.</b>, not a measured rate.</p>'
     + '<p class="coinbar"><b>Taking the top legs in order:</b> '
     + '1 \u2192 ' + at(1) + ' &middot; 2 \u2192 ' + at(2)
     + ' &middot; 3 \u2192 ' + at(3) + ' &middot; 4 \u2192 ' + at(4)
@@ -1377,7 +1379,8 @@ function drawCard(slot){
         const id = r.lgk + "|" + r.mp;
         const on = SLIP.some(x => x.id === id) ? " class=\"on\"" : "";
         const hit = r.hit ? '<td class="num">' + (100 * r.hit).toFixed(1) + '%'
-                    + (r.hn ? '<span class="ev">' + r.hn + '</span>' : '') + '</td>'
+                    + (r.hs === "market" ? '<span class="ev">market est.</span>'
+                       : r.hn ? '<span class="ev">' + r.hn + '</span>' : '') + '</td>'
                           : '<td class="num none">&mdash;</td>';
         const tier = r.tk ? '<span class="tier ' + r.tk + '">' + r.tl + '</span>' : "";
     const ev = r.ek ? '<span class="tier ' + r.ek + '">' + r.el + '</span>' : "";
@@ -1674,7 +1677,8 @@ function scoreboardHTML(){
   // the review's alarms: what is trailing its stated chance, what never settled
   const HL = D.health;
   if(HL){
-    const bad = (HL.trailing || []).length + (HL.stuck || []).length + (HL.integrity || []).length;
+    const bad = (HL.trailing || []).length + (HL.stuck || []).length + (HL.integrity || []).length
+      + (HL.stale_inputs || []).length;
     h += '<div class="sect" id="health"><h2>Checks</h2>'
       + (bad ? '<p class="age stale"><b>' + bad + ' problem' + (bad === 1 ? '' : 's') + ' found</b> in the '
           + esc(HL.day) + ' review:</p><ul class="legs">'
@@ -1682,7 +1686,9 @@ function scoreboardHTML(){
               + '% against ' + a.said + '% stated (' + a.n + ' graded)</li>').join("")
           + (HL.stuck || []).map(x => '<li>Never settled: ' + esc(x) + '</li>').join("")
           + (HL.integrity || []).map(x => '<li>Bad data: ' + esc(x[1]) + ' at ' + esc(x[0])
-              + ' (' + esc(x[2]) + ')</li>').join("") + '</ul>'
+              + ' (' + esc(x[2]) + ')</li>').join("")
+          + (HL.stale_inputs || []).map(x => '<li>Old input: ' + esc(x[0]) + ' scoreboard served from a copy '
+              + x[1] + ' min old (ESPN did not answer this build)</li>').join("") + '</ul>'
         : '<p class="age"><b>All checks passing</b> &mdash; ' + (HL.checked || 0)
           + ' splits within their stated chance, nothing stuck unsettled (' + esc(HL.day) + ' review).</p>')
       + '</div>';

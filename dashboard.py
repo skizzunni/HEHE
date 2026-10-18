@@ -198,6 +198,9 @@ _PREV = {}          # game id -> last seen snapshot, for diffing
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 _GET_CACHE = os.path.join(HERE, ".cache", "http")
+# url -> seconds old the data served for it was, when it came from the cache
+# fallback after the network failed: what "fresh build" cannot tell you
+SERVED_STALE = {}
 
 
 def _ckey(url):
@@ -253,6 +256,7 @@ def get(url, tries=6, fresh=900, stale=21600):
                 d = json.load(fh)
             sys.stderr.write("get: serving %ds-old cache for %s\n"
                              % (int(now - os.path.getmtime(path)), url[:90]))
+            SERVED_STALE[url] = int(now - os.path.getmtime(path))
             return d
         except Exception:
             pass
@@ -456,6 +460,20 @@ def start_et(comp):
     return None
 
 
+def pregame(c, day, now=None):
+    """A competition still open for a pregame pick on `day`: not marked
+    started or final AND scheduled to start in the future. The status can come
+    from a cached copy up to hours old (get), so the scheduled start decides
+    on its own too -- a game past its start is never offered pregame."""
+    st = ((c.get("status") or {}).get("type") or {})
+    if st.get("completed") or st.get("state") in ("post", "in"):
+        return False
+    t = start_et(c)
+    if not t or t.strftime("%Y%m%d") != day:
+        return False
+    return t > (now or dt.datetime.now(ET))
+
+
 def mlb_context(day):
     """Probable starters with ERA, and each club's record -- the analysis column."""
     out = {}
@@ -576,12 +594,9 @@ def collect(key, path, day, mlbctx, mybook=None):
             comps.extend(grp.get("competitions") or [])
         many = len(comps) > 1
         for c in comps:
-            st = ((c.get("status") or {}).get("type") or {})
-            if st.get("completed") or st.get("state") in ("post", "in"):
-                continue                       # upcoming only
-            t = start_et(c)
-            if not t or t.strftime("%Y%m%d") != day:
+            if not pregame(c, day):
                 continue
+            t = start_et(c)
             n = sides(c)
             if "away" in n and "home" in n:
                 label = f"{n['away']} @ {n['home']}"

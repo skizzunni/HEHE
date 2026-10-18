@@ -125,7 +125,8 @@ def load():
                 continue
             away, home = nm.split(" @ ", 1)
             games[str(e.get("eventId"))] = dict(away=away, home=home, ml={}, spread={},
-                                                total={}, px={}, id=str(e.get("eventId")))
+                                                total={}, px={}, id=str(e.get("eventId")),
+                                                start=e.get("openDate"))
         for m in (att.get("markets") or {}).values():
             g = games.get(str(m.get("eventId")))
             if not g:
@@ -156,13 +157,33 @@ def load():
     return out
 
 
+START_SLACK_H = 3      # a doubleheader's second game starts 3+ hours after the first
+
+
 def find(book, league, away, home, start=None):
+    """FanDuel's game for this fixture. Teams must match, and where both
+    sides carry a start time the nearest start within START_SLACK_H wins.
+    Until 2026-10-18 the first team match was taken whatever its start, so a
+    doubleheader or a repeated fixture could lend one game's prices to
+    another. Two same-team games that cannot be told apart match nothing."""
     if league in SOCCER:
         return find_soccer(book, league, away, home, start)
-    for g in book.get(league) or []:
-        if same_team(g["away"], away) and same_team(g["home"], home):
-            return g
-    return None
+    cands = [g for g in book.get(league) or []
+             if same_team(g["away"], away) and same_team(g["home"], home)]
+    t0 = _ts(start)
+    if t0 and t0.tzinfo is None:
+        t0 = t0.replace(tzinfo=dt.timezone.utc)
+    timed = []
+    for g in cands:
+        t = _ts(g.get("start"))
+        if t and t0:
+            if t.tzinfo is None:
+                t = t.replace(tzinfo=dt.timezone.utc)
+            timed.append((abs((t - t0).total_seconds()), g))
+    if timed:
+        gap, g = min(timed, key=lambda x: x[0])
+        return g if gap <= START_SLACK_H * 3600 else None
+    return cands[0] if len(cands) == 1 else None
 
 
 # ------------------------------------------------------------------ soccer

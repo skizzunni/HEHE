@@ -139,6 +139,9 @@ def snapshot():
                              # disagree by a rounding step on screen
                              "hit": round(hit, 4) if hit is not None else None,
                              "hn": hit_n,
+                             # where "hit" comes from: a band's measured record,
+                             # or (soccer) the market's own de-vigged estimate
+                             "hs": "market" if k in SOCCER and mc is not None else "measured",
                              "fv": fair_price(round(hit, 4) if hit is not None else None),
                              "ev": edge_pct(round(hit, 4) if hit is not None else None,
                                             (leg or {}).get("price")),
@@ -185,6 +188,13 @@ def snapshot():
                              checked=len(_r.get("audit") or []))
     except (OSError, ValueError, KeyError):
         out["health"] = None
+    # inputs older than the build: a scoreboard served from the fallback
+    # cache after ESPN refused this run (dashboard.SERVED_STALE)
+    old_in = sorted(((u, a) for u, a in d.SERVED_STALE.items() if "scoreboard" in u and a > 1200),
+                    key=lambda x: -x[1])
+    if isinstance(out.get("health"), dict):
+        out["health"]["stale_inputs"] = [
+            [re.sub(r"^.*/sports/|/scoreboard.*$", "", u), round(a / 60)] for u, a in old_in[:8]]
     out["parlays"] = parlays.build_all(out)
     # Stacks: long tickets of high-probability legs (alt totals, "won't win
     # by N"), priced from each game's moneyline, spread and total. Kept apart

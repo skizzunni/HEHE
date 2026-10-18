@@ -104,7 +104,8 @@ def main():
     now = int(time.time() * 1000)
     sick = dict(day="2026-10-18", checked=5, stuck=["props mlb:1|x|RBIs|1+"],
                 trailing=[dict(name="props uel Shots", hit=40.0, said=84.3, n=20, flag=True)],
-                integrity=[["D.locks.today.locks[0].p", "chance outside 0-1", "1.3"]])
+                integrity=[["D.locks.today.locks[0].p", "chance outside 0-1", "1.3"]],
+                stale_inputs=[["football/nfl", 95]])
     old = render(now - 45 * 60000, sick)
     new = render(now, dict(day="2026-10-18", checked=5, stuck=[], trailing=[]))
     print("stale copy:", old)
@@ -125,7 +126,7 @@ def main():
         fails.append("Safe Locks record must show the Winners parlay's own record: " + new["record"][-300:])
     if "Same-game ideas (1)" not in new["record"] or new["legs"] != 11:
         fails.append("same-game ideas must be listed apart from the card's 11 legs: " + new["record"][:200])
-    if "3 problems found" not in old["health"] or "props uel Shots" not in old["health"] \
+    if "4 problems found" not in old["health"] or "Old input: football/nfl" not in old["health"] or "props uel Shots" not in old["health"] \
             or "Never settled" not in old["health"] or "Bad data: chance outside 0-1" not in old["health"]:
         fails.append("health box must list the trailing split and the stuck record: " + old["health"])
     if "All checks passing" not in new["health"]:
