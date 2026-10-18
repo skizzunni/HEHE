@@ -249,11 +249,27 @@ def result(comp):
     return dict(winner=winner, method=how, minutes=minutes, rounds=rounds)
 
 
+def went_distance(res):
+    """Did the fight reach the final bell? The result line answers it when
+    ESPN has posted one; otherwise the clock does -- a fight stopped before
+    the last round's 5:00 did not go the distance. ESPN's result line has come
+    late or never (a prop was voided for it on 2026-10-17), and voiding a
+    settled question throws away a graded leg. None when neither is known."""
+    if res.get("method") is not None:
+        return res["method"] == "Points"
+    m, r = res.get("minutes"), res.get("rounds")
+    if m is None or not r:
+        return None
+    return m >= r * ROUND_MIN - 0.01
+
+
 def settle(e, res):
     """'won' / 'lost' for one recorded UFC leg given the fight's result."""
     mk, line = e["market"], str(e["line"])
-    if mk in ("Method", "Ends by", "Goes the distance") and res.get("method") is None:
+    if mk in ("Method", "Ends by") and res.get("method") is None:
         return None                     # result line not posted yet: wait
+    if mk == "Goes the distance" and went_distance(res) is None:
+        return None
     if mk == "Total Rounds" and res.get("minutes") is None:
         return None
     if mk == "Winner":
@@ -263,7 +279,7 @@ def settle(e, res):
     elif mk == "Ends by":
         ok = res["method"] == line
     elif mk == "Goes the distance":
-        ok = (res["method"] == "Points") == (line == "Yes")
+        ok = went_distance(res) == (line == "Yes")
     elif mk == "Total Rounds":
         under = line.startswith("u")
         x = float(line.lstrip("u"))

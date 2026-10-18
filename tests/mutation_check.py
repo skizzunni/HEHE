@@ -28,6 +28,7 @@ MUTATIONS = [
      "test_regular_card_price_window"),
     ("bot/kalshi_bot.py", "    if built.tzinfo is None:\n        return None\n", "",
      "test_board_age"),
+    ("ufc_props.py", "    return m >= r * ROUND_MIN - 0.01\n", "    return None\n", "test_clock_fallback"),
     ("board.html", "z.prob >= 0.8", "z.prob >= 0.95", "Winners parlay"),
     ("board.html", "if (mins < 20) { if (el) el.remove(); return; }", "return;",
      "stale copy must show the banner"),

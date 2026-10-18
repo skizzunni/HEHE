@@ -191,6 +191,29 @@ class Props(unittest.TestCase):
                 self.assertTrue(props_ledger.gradable(lg, name), (lg, name))
 
 
+class UfcGrading(unittest.TestCase):
+    """'Goes the distance' settles from the clock when ESPN's result line is
+    missing (a prop was nearly voided for it on 2026-10-17)."""
+
+    def settle(self, line, **res):
+        import ufc_props
+        return ufc_props.settle(dict(market="Goes the distance", line=line, name="Fight"),
+                                dict(res, winner="X"))
+
+    def test_clock_fallback(self):
+        self.assertEqual(self.settle("No", method=None, minutes=3.5, rounds=3), "won")
+        self.assertEqual(self.settle("Yes", method=None, minutes=15.0, rounds=3), "won")
+        self.assertEqual(self.settle("Yes", method=None, minutes=24.9, rounds=5), "lost")
+        self.assertEqual(self.settle("Yes", method="KO/TKO", minutes=15.0, rounds=3), "lost")
+        self.assertIsNone(self.settle("No", method=None, minutes=None, rounds=3))
+        self.assertIsNone(self.settle("No", method=None, minutes=4.0, rounds=None))
+
+    def test_method_still_waits(self):
+        import ufc_props
+        self.assertIsNone(ufc_props.settle(dict(market="Method", line="KO/TKO", name="X"),
+                                           dict(method=None, minutes=3.0, rounds=3, winner="X")))
+
+
 class BotFreshness(unittest.TestCase):
     """The Kalshi bot never buys from tickets it cannot prove are fresh."""
 
