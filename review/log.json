@@ -2314,9 +2314,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "aut": {
-    "all_hit": 83.3,
+    "all_hit": 85.7,
     "cutoff": null,
-    "games": 6,
+    "games": 7,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "bel": {
@@ -2495,9 +2495,9 @@
     "hit": 83.1
    },
    "ned": {
-    "all_hit": 60.0,
+    "all_hit": 50.0,
     "cutoff": null,
-    "games": 5,
+    "games": 6,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ned2": {
@@ -2519,9 +2519,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nor": {
-    "all_hit": 63.6,
+    "all_hit": 58.3,
     "cutoff": null,
-    "games": 11,
+    "games": 12,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nwsl": {
@@ -2612,9 +2612,9 @@
    }
   },
   "clv": {
-   "avg": 0.9,
-   "beat": 50.0,
-   "n": 2
+   "avg": -0.07,
+   "beat": 25.0,
+   "n": 4
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2709,10 +2709,26 @@
    {
     "against_market": false,
     "league": "ned",
+    "pick": "AZ Alkmaar",
+    "price": "-225",
+    "said": 65.1,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 65%"
+   },
+   {
+    "against_market": false,
+    "league": "ned",
     "pick": "Go Ahead Eagles",
     "price": null,
     "said": 74.5,
     "why": "margin 3 \u00b7 called at 74%"
+   },
+   {
+    "against_market": false,
+    "league": "nor",
+    "pick": "Sarpsborg FK",
+    "price": null,
+    "said": 64.4,
+    "why": "margin 3 \u00b7 called at 64%"
    },
    {
     "against_market": false,
@@ -2854,12 +2870,12 @@
    }
   ],
   "picks": {
-   "hit": 65.9,
-   "lost": 14,
-   "n": 41,
-   "roi": 29.6,
+   "hit": 63.6,
+   "lost": 16,
+   "n": 44,
+   "roi": 0.4,
    "said": 65.7,
-   "won": 27
+   "won": 28
   },
   "picks_by_league": {
    "atp": {
@@ -2873,10 +2889,10 @@
    "aut": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": null,
-    "said": 67.5,
-    "won": 1
+    "n": 2,
+    "roi": 42.6,
+    "said": 67.0,
+    "won": 2
    },
    "chn": {
     "hit": 100.0,
@@ -2936,10 +2952,10 @@
    },
    "ned": {
     "hit": 0.0,
-    "lost": 1,
-    "n": 1,
-    "roi": null,
-    "said": 74.5,
+    "lost": 2,
+    "n": 2,
+    "roi": -100.0,
+    "said": 69.8,
     "won": 0
    },
    "ned2": {
@@ -2949,6 +2965,14 @@
     "roi": null,
     "said": 73.7,
     "won": 1
+   },
+   "nor": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 64.4,
+    "won": 0
    },
    "swe": {
     "hit": 100.0,
@@ -3031,12 +3055,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 67.1,
-    "lost": 82,
-    "n": 249,
-    "roi": -1.7,
+    "hit": 66.9,
+    "lost": 83,
+    "n": 251,
+    "roi": -1.9,
     "said": 63.3,
-    "won": 167
+    "won": 168
    }
   },
   "weights": {
