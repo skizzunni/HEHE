@@ -24,7 +24,7 @@ what is missing and the next step. Updated 2026-10-18.
 | O4 | Bigger, better leg pool | done | soccer added to Locks/Safe Locks from FanDuel's soccer page; live run matched EPL 4/4, La Liga 4/4, Ligue 1 5/5, Serie A 3/3; grading tested (draws, voids, live) | watch first soccer legs settle |
 | O5 | Props fixed | done | ungradable markets removed from locks/tickets/mega; every FanDuel prop name gradable (checked NFL/NBA/WNBA/NHL/MLB) | first NFL props grade Sunday |
 | O6 | NFL TD scorers, every game, realistic | done (NFL) | 12 games logged; chances sum to the total's expected TDs | TD lab at 20 graded games |
-| O6b | College TD scorers | **open** | none appear: FanDuel pulls TD markets once games go live, so the probe saw only live games | probe a college game before kickoff (next weekday game) |
+| O6b | College TD scorers | **blocked (regulatory)** | probe 34: Nebraska @ Oregon 15 min before kickoff had no touchdown market on FanDuel NY at all (4 receiving props only). New York bars player props on college games; another state's feed would be geo-routing, which the rules forbid; inventing chances without prices breaks S2 | lifts only if NY allows college player props |
 | O7 | UFC fixed | done | UFC lab, 613 fights: market price calibrated (67.6/67.8% favourites won), no method beat it on unseen fights | weekly lab |
 | O8 | No bad combo legs (Purdue) | done | combo-safe filter (>=90%) on the page | - |
 | O9 | Site lag | done | no reload while in use; view restored | - |
