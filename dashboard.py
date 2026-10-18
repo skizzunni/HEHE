@@ -147,6 +147,8 @@ try:
                            "anchor_weights.json")) as _fh:
         _aw = json.load(_fh)
     ANCHOR_W.update({k: float(v) for k, v in (_aw.get("weights") or {}).items()})
+    if _aw.get("default") is not None:
+        ANCHOR_W_DEFAULT = float(_aw["default"])
 except (OSError, ValueError, TypeError):
     pass
 # a soccer favourite the price gives less than this is called "or draw"

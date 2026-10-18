@@ -401,9 +401,15 @@ def main():
     graded = [e for e in ledger.values() if e.get("status") in ("won", "lost")
               and not exhibition(e)]
     weights, detail = refit(graded)
+    # a league with no fit of its own (NBA in its first week, college
+    # basketball before November) takes what the fitted leagues chose,
+    # weighted by their games -- not a guess. On 2026-10-17 that was 0.09
+    # against the hand-set 0.20.
+    nw = [(v["weight"], v["n"]) for v in detail.values() if v.get("weight") is not None and v.get("n")]
+    w_def = round(sum(w * n for w, n in nw) / sum(n for _, n in nw), 3) if nw else W_DEFAULT
     with open(os.path.join(OUT, "anchor_weights.json"), "w") as fh:
         json.dump(dict(updated=dt.datetime.now(ET).isoformat(timespec="minutes"),
-                       default=W_DEFAULT, weights=weights, detail=detail), fh, indent=1,
+                       default=w_def, weights=weights, detail=detail), fh, indent=1,
                   sort_keys=True)
     log[today.isoformat()]["weights"] = detail
     cuts, cdetail = fit_calls(graded)
