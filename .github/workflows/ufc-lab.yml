@@ -1,0 +1,49 @@
+# UFC favourites: proportional vs power de-vig vs a fitted stretch, older vs newer fights
+name: ufc-lab
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '37 11 * * 1'
+  push:
+    branches: [claude/mlb-picks-review-jlx9w1]
+    paths:
+      - 'tools/ufc_lab.py'
+      - '.github/workflows/ufc-lab.yml'
+concurrency:
+  group: ufc-lab
+  cancel-in-progress: true
+permissions:
+  contents: write
+jobs:
+  lab:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: claude/mlb-picks-review-jlx9w1
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/cache@v4
+        with:
+          path: .cache/bt
+          key: ufclab-${{ github.run_id }}
+          restore-keys: |
+            ufclab-
+            edgelab-
+            backtest-
+      - run: python3 tools/ufc_lab.py
+      - name: Commit the results
+        run: |
+          git add -f data/ufc_lab.json
+          if git diff --cached --quiet; then echo "unchanged"; exit 0; fi
+          git config user.name  "board bot"
+          git config user.email "board-bot@users.noreply.github.com"
+          git commit -m "UFC lab results [skip ci]"
+          for i in 1 2 3 4 5; do
+            git pull --rebase --autostash origin claude/mlb-picks-review-jlx9w1 \
+              && git push origin HEAD:claude/mlb-picks-review-jlx9w1 && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
