@@ -967,10 +967,10 @@
    },
    {
     "flag": false,
-    "hit": 50.0,
-    "n": 12,
+    "hit": 53.8,
+    "n": 13,
     "name": "props ufc Winner",
-    "said": 67.9
+    "said": 67.0
    },
    {
     "flag": false,
@@ -1003,11 +1003,11 @@
     "hit": 86.7
    },
    "ncaaf": {
-    "all_hit": 81.3,
-    "calls": 444,
+    "all_hit": 81.1,
+    "calls": 445,
     "cutoff": 0.55,
-    "games": 486,
-    "hit": 83.6
+    "games": 487,
+    "hit": 83.4
    },
    "nfl": {
     "all_hit": 62.0,
@@ -1024,10 +1024,10 @@
     "hit": 84.2
    },
    "ufc": {
-    "all_hit": 63.2,
+    "all_hit": 63.6,
     "calls": 24,
     "cutoff": 0.75,
-    "games": 87,
+    "games": 88,
     "hit": 79.2
    },
    "wnba": {
@@ -1046,9 +1046,9 @@
    }
   },
   "clv": {
-   "avg": -0.23,
-   "beat": 38.8,
-   "n": 80
+   "avg": -0.16,
+   "beat": 40.2,
+   "n": 82
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1306,6 +1306,14 @@
    {
     "against_market": false,
     "league": "mls",
+    "pick": "Houston Dynamo FC",
+    "price": null,
+    "said": 57.3,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 57%"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
     "pick": "Sporting Kansas City",
     "price": null,
     "said": 59.3,
@@ -1318,6 +1326,14 @@
     "price": "-1450",
     "said": 92.9,
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 93%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "Oklahoma Sooners",
+    "price": "-270",
+    "said": 73.4,
+    "why": "margin 8 \u00b7 the book had my side favoured too \u00b7 called at 73%"
    },
    {
     "against_market": false,
@@ -1446,6 +1462,14 @@
     "price": null,
     "said": 63.8,
     "why": "margin 1 \u00b7 called at 64%"
+   },
+   {
+    "against_market": false,
+    "league": "nwsl",
+    "pick": "Denver Summit FC",
+    "price": null,
+    "said": 65.1,
+    "why": "margin 1 \u00b7 called at 65%"
    },
    {
     "against_market": false,
@@ -1774,12 +1798,12 @@
    }
   ],
   "picks": {
-   "hit": 72.0,
-   "lost": 74,
-   "n": 264,
-   "roi": 1.1,
-   "said": 70.9,
-   "won": 190
+   "hit": 71.3,
+   "lost": 77,
+   "n": 268,
+   "roi": 0.7,
+   "said": 70.7,
+   "won": 191
   },
   "picks_by_league": {
    "arg": {
@@ -1999,18 +2023,18 @@
     "won": 0
    },
    "mls": {
-    "hit": 55.6,
-    "lost": 4,
-    "n": 9,
+    "hit": 50.0,
+    "lost": 5,
+    "n": 10,
     "roi": null,
-    "said": 65.5,
+    "said": 64.6,
     "won": 5
    },
    "ncaaf": {
-    "hit": 72.2,
-    "lost": 10,
-    "n": 36,
-    "roi": 0.0,
+    "hit": 70.3,
+    "lost": 11,
+    "n": 37,
+    "roi": -2.8,
     "said": 71.4,
     "won": 26
    },
@@ -2047,11 +2071,11 @@
     "won": 2
    },
    "nwsl": {
-    "hit": 33.3,
-    "lost": 2,
-    "n": 3,
+    "hit": 25.0,
+    "lost": 3,
+    "n": 4,
     "roi": null,
-    "said": 67.7,
+    "said": 67.0,
     "won": 1
    },
    "par": {
@@ -2111,12 +2135,12 @@
     "won": 4
    },
    "ufc": {
-    "hit": 50.0,
+    "hit": 53.8,
     "lost": 6,
-    "n": 12,
-    "roi": -29.1,
-    "said": 67.0,
-    "won": 6
+    "n": 13,
+    "roi": -21.7,
+    "said": 66.3,
+    "won": 7
    },
    "uru": {
     "hit": 66.7,
@@ -2166,9 +2190,9 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 90,
-   "said": 76.1,
-   "won": 68
+   "n": 92,
+   "said": 75.8,
+   "won": 70
   },
   "safe_locks": {
    "lost": [],
@@ -2177,10 +2201,10 @@
    "won": 0
   },
   "strong": {
-   "hit": 78.9,
-   "lost": 28,
-   "n": 133,
-   "roi": -2.5,
+   "hit": 78.4,
+   "lost": 29,
+   "n": 134,
+   "roi": -4.8,
    "said": 76.7,
    "won": 105
   },
@@ -2194,12 +2218,12 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.0,
-    "lost": 85,
-    "n": 266,
-    "roi": -1.9,
+    "hit": 67.9,
+    "lost": 86,
+    "n": 268,
+    "roi": -2.0,
     "said": 62.4,
-    "won": 181
+    "won": 182
    }
   },
   "weights": {
@@ -2211,10 +2235,10 @@
     "weight": 0.05
    },
    "ncaaf": {
-    "logloss": 0.4508,
-    "market_only": 0.4508,
-    "model_only": 0.4807,
-    "n": 407,
+    "logloss": 0.4527,
+    "market_only": 0.4527,
+    "model_only": 0.4823,
+    "n": 408,
     "weight": 0.05
    },
    "nfl": {
