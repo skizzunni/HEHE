@@ -2495,15 +2495,15 @@
     "hit": 83.1
    },
    "ned": {
-    "all_hit": 75.0,
+    "all_hit": 60.0,
     "cutoff": null,
-    "games": 4,
+    "games": 5,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ned2": {
     "all_hit": 100.0,
     "cutoff": null,
-    "games": 1,
+    "games": 2,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nfl": {
@@ -2684,6 +2684,14 @@
    },
    {
     "against_market": false,
+    "league": "ned",
+    "pick": "Go Ahead Eagles",
+    "price": null,
+    "said": 74.5,
+    "why": "margin 3 \u00b7 called at 74%"
+   },
+   {
+    "against_market": false,
     "league": "wta",
     "pick": "Laura Samson",
     "price": null,
@@ -2815,11 +2823,11 @@
   ],
   "picks": {
    "hit": 50.0,
-   "lost": 9,
-   "n": 18,
+   "lost": 10,
+   "n": 20,
    "roi": null,
-   "said": 62.7,
-   "won": 9
+   "said": 63.8,
+   "won": 10
   },
   "picks_by_league": {
    "atp": {
@@ -2844,6 +2852,22 @@
     "n": 2,
     "roi": null,
     "said": 62.7,
+    "won": 1
+   },
+   "ned": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 74.5,
+    "won": 0
+   },
+   "ned2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 73.7,
     "won": 1
    },
    "wta": {

@@ -207,15 +207,15 @@
    "hit": 83.1
   },
   "ned": {
-   "all_hit": 75.0,
+   "all_hit": 60.0,
    "cutoff": null,
-   "games": 4,
+   "games": 5,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "ned2": {
    "all_hit": 100.0,
    "cutoff": null,
-   "games": 1,
+   "games": 2,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "nfl": {
@@ -325,14 +325,14 @@
  },
  "holdout": {
   "all_hit": 67.1,
-  "all_n": 1018,
+  "all_n": 1020,
   "basis": "as published",
   "days": 18,
   "hit": 75.5,
   "n": 286,
   "simulated": {
-   "hit": 69.3,
-   "n": 1018,
+   "hit": 69.2,
+   "n": 1020,
    "what": "old picks re-scored as the market favourite"
   },
   "since": "2026-09-19",
@@ -389,5 +389,5 @@
   "usl",
   "wsl"
  ],
- "updated": "2026-10-18T08:06-04:00"
+ "updated": "2026-10-18T08:11-04:00"
 }

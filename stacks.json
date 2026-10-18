@@ -2883,11 +2883,12 @@
    "match": "FC Volendam at RKC Waalwijk",
    "p": 0.968,
    "p_model": 0.9692,
+   "score": "FC Volendam 1 - RKC Waalwijk 1",
    "spec": {
     "line": 0.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "ned2:401875890|No \u00b7 FC Emmen wins by over 2.5 goals": {
    "away": "Almere City",
@@ -2966,12 +2967,13 @@
    "match": "Go Ahead Eagles at PEC Zwolle",
    "p": 0.9571,
    "p_model": 0.9588,
+   "score": "Go Ahead Eagles 1 - PEC Zwolle 4",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "PEC Zwolle"
    },
-   "status": "open"
+   "status": "lost"
   },
   "ned:401875579|No \u00b7 Willem II wins by over 2.5 goals": {
    "away": "Willem II",
@@ -5900,7 +5902,7 @@
    "logged": "2026-10-18T00:02",
    "n": 20,
    "prob": 0.4465,
-   "status": "open"
+   "status": "lost"
   },
   "20261018:20:2": {
    "fair": 2.15,
