@@ -866,12 +866,17 @@ function drawLocks(){
           + 'On FanDuel, add those together as a Same Game Parlay inside the parlay.</p>' : '')
     + '<p><button type="button" data-lkcopy="' + day + '">Copy all legs</button></p>'
     + (function(){
-        // the biggest slice of the card that still lands at least half the time
+        // a parlay meant to WIN: the biggest slice that hits 80%+ of the
+        // time, then the biggest that still lands at least half the time
+        const safe = SZ.filter(z => z.prob >= 0.8).pop();
         const best = SZ.filter(z => z.prob >= 0.5).pop();
-        return best ? '<p class="coinbar"><b>Best play: the top ' + best.n + ' legs</b> &mdash; '
-          + (100 * best.prob).toFixed(0) + '% to all hit, pays ' + esc(best.american)
-          + ' ($10 &rarr; $' + Math.round(10 * best.pays) + '). All ' + L.length + ' together hit '
-          + (100 * X.prob).toFixed(0) + '% of the time.</p>' : '';
+        const line = (z, tag) => '<p class="coinbar"><b>' + tag + ': the top ' + z.n + ' legs</b> &mdash; '
+          + (100 * z.prob).toFixed(0) + '% to all hit, pays ' + esc(z.american)
+          + ' ($10 &rarr; $' + Math.round(10 * z.pays) + ').</p>';
+        return (safe ? line(safe, 'Winners parlay') : '')
+          + (best && (!safe || best.n > safe.n) ? line(best, 'Best play') : '')
+          + (best || safe ? '<p class="note">All ' + L.length + ' together hit '
+             + (100 * X.prob).toFixed(0) + '% of the time.</p>' : '');
       })()
     + (SZ.length ? '<h3 class="tier-h">How to play it</h3><p class="note">Take the top legs in order. '
         + 'Payout is FanDuel&rsquo;s own prices multiplied; chance is how often they all hit.</p>'
