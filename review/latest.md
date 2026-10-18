@@ -1,8 +1,8 @@
 # Review 2026-10-17
 
-Picks 184-68 (73.0% vs 71.0% claimed, ROI +5.8%).
+Picks 185-69 (72.8% vs 70.9% claimed, ROI +5.8%).
 TRAILING props uel Shots: 40.0% hit vs 84.3% stated on 20
-Strong calls 103-26 (79.8% vs 76.7% claimed).
+Strong calls 102-26 (79.7% vs 76.8% claimed).
 Closing line value: -0.15 points on 73 picks; beat the close on 41.1%.
 - LOST arg Platense at 65.5%: margin 1 · called at 66%
 - LOST atp Alexander Zverev at 78.4%: lost 1-2 in sets · took it the distance · called at 78%
@@ -61,6 +61,7 @@ Closing line value: -0.15 points on 73 picks; beat the close on 41.1%.
 - LOST ufc Louis Jourdain at 59.3%: the book had my side favoured too · called at 59%
 - LOST ufc Cody Chovancek at 53.2%: the book had my side favoured too · called at 53%
 - LOST uru Juventud at 70.6%: margin 2 · called at 71%
+- LOST usl FC Tulsa at 73.3%: margin 2 · called at 73%
 - LOST usl Hartford Athletic at 84.6%: margin 1 · called at 85%
 - LOST wsl Arsenal at 87.1%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 87%
 - LOST wta Iga Swiatek at 83.2%: lost 0-2 in sets · never won a set · called at 83%
