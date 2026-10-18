@@ -947,10 +947,10 @@
    },
    {
     "flag": false,
-    "hit": 81.0,
-    "n": 58,
+    "hit": 82.3,
+    "n": 62,
     "name": "props nhl Shots on Goal",
-    "said": 78.8
+    "said": 78.7
    },
    {
     "flag": true,
@@ -1011,10 +1011,10 @@
     "hit": 73.1
    },
    "nhl": {
-    "all_hit": 67.9,
+    "all_hit": 67.1,
     "calls": 37,
     "cutoff": 0.6,
-    "games": 84,
+    "games": 85,
     "hit": 75.7
    },
    "ufc": {
@@ -1040,9 +1040,9 @@
    }
   },
   "clv": {
-   "avg": -0.24,
-   "beat": 40.0,
-   "n": 70
+   "avg": -0.15,
+   "beat": 40.8,
+   "n": 71
   },
   "day": "2026-10-17",
   "leaks_14d": [],
@@ -1379,6 +1379,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "Ottawa Senators",
+    "price": "-166",
+    "said": 59.9,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 60%"
+   },
+   {
+    "against_market": false,
     "league": "nor",
     "pick": "Kristiansund BK",
     "price": null,
@@ -1711,10 +1719,10 @@
    }
   ],
   "picks": {
-   "hit": 73.1,
-   "lost": 67,
-   "n": 249,
-   "roi": 5.4,
+   "hit": 72.8,
+   "lost": 68,
+   "n": 250,
+   "roi": 4.0,
    "said": 71.1,
    "won": 182
   },
@@ -1968,11 +1976,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 85.7,
-    "lost": 1,
-    "n": 7,
-    "roi": 32.7,
-    "said": 61.4,
+    "hit": 75.0,
+    "lost": 2,
+    "n": 8,
+    "roi": 16.1,
+    "said": 61.2,
     "won": 6
    },
    "nor": {
@@ -2103,9 +2111,9 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 68,
-   "said": 76.0,
-   "won": 52
+   "n": 72,
+   "said": 76.1,
+   "won": 56
   },
   "strong": {
    "hit": 79.8,
@@ -2125,10 +2133,10 @@
     "won": 17
    },
    "agree": {
-    "hit": 68.8,
-    "lost": 80,
-    "n": 256,
-    "roi": -0.8,
+    "hit": 68.5,
+    "lost": 81,
+    "n": 257,
+    "roi": -1.2,
     "said": 62.2,
     "won": 176
    }
@@ -2156,10 +2164,10 @@
     "weight": 0.4
    },
    "nhl": {
-    "logloss": 0.6266,
-    "market_only": 0.6266,
-    "model_only": 0.6345,
-    "n": 84,
+    "logloss": 0.6299,
+    "market_only": 0.6299,
+    "model_only": 0.6375,
+    "n": 85,
     "weight": 0.05
    },
    "wnba": {
