@@ -7,6 +7,7 @@ on:
     branches: [claude/mlb-picks-review-jlx9w1]
     paths:
       - '**.py'
+      - 'board.html'
       - '.github/workflows/tests.yml'
 jobs:
   test:
@@ -18,3 +19,5 @@ jobs:
         with:
           python-version: '3.11'
       - run: python3 -W ignore -m unittest discover -s tests -v
+      # the page itself, in a real browser: stale banner, Safe Locks, Winners parlay
+      - run: CHROME=$(which google-chrome) python3 tests/ui_check.py
