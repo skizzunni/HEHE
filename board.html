@@ -846,9 +846,9 @@ function drawLocks(){
     + '">Safe Locks &middot; -2000 to -500</button></span></p>'
     + (SAFE ? '<p class="note">Heavy favourites only: each leg wins far more often, so all of them '
       + 'hitting together is far likelier than on the regular card &mdash; and it pays much less. '
-      + 'The regular Locks and their rules are unchanged. Replayed on 11 past days, cards like this all hit '
-      + 'at least as often as the chance shown (misses bunch up on a few bad days rather than spreading out), '
-      + 'so treat the all-hit number as a floor, not a promise.</p>' : '');
+      + 'The regular Locks and their rules are unchanged. The all-hit number is an estimate built from each '
+      + 'leg&rsquo;s market price, not a guarantee: 11 replayed days are far too few to prove it, and misses '
+      + 'bunch up on a few bad days rather than spreading out.</p>' : '');
   if(!L.length){
     panel.innerHTML = h + '<p class="empty">No FanDuel games left ' + day + '.</p></div>';
     return;
@@ -875,8 +875,8 @@ function drawLocks(){
           + ' ($10 &rarr; $' + Math.round(10 * z.pays) + ').</p>';
         return (safe ? line(safe, 'Winners parlay') : '')
           + (best && (!safe || best.n > safe.n) ? line(best, 'Best play') : '')
-          + (best || safe ? '<p class="note">All ' + L.length + ' together hit '
-             + (100 * X.prob).toFixed(0) + '% of the time.</p>' : '');
+          + (best || safe ? '<p class="note">All ' + L.length + ' together: an estimated '
+             + (100 * X.prob).toFixed(0) + '% to all hit.</p>' : '');
       })()
     + (SZ.length ? '<h3 class="tier-h">How to play it</h3><p class="note">Take the top legs in order. '
         + 'Payout is FanDuel&rsquo;s own prices multiplied; chance is how often they all hit.</p>'
@@ -889,7 +889,7 @@ function drawLocks(){
     + '<p>The likeliest bets FanDuel (New York) lists at <b>' + (SAFE ? 'heavy-favourite odds</b> (-2000 to -500)' : 'normal odds</b> (-400 to -120)') + ' &mdash; game '
     + 'lines <i>and</i> player props &mdash; one per game (more only on light days), from games that start after 8:00 AM and have '
     + 'not begun. Each chance is the market&rsquo;s own price with its margin taken out. The card is set at '
-    + '8:00 AM Eastern and stays the same all day. Each is likely; all ' + L.length + ' together hit '
+    + '8:00 AM Eastern and stays the same all day. Each is likely; all ' + L.length + ' together are estimated to hit '
     + (100 * X.prob).toFixed(0) + '% of the time, the top 3 alone '
     + (100 * L.slice(0, 3).reduce((a, x) => a * x.p, 1)).toFixed(0) + '%.</p>'
     + '<p>Alternate lines and props have no one-tap button (FanDuel&rsquo;s add-to-slip link puts a '

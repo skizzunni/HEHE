@@ -44,6 +44,8 @@ MUTATIONS = [
     ("props_ledger.py", 'return (None, "unresolved") if same_last else (None, "absent")',
      'return (None, "absent")', "test_names"),
     ("props_ledger.py", 'n = unicodedata.normalize("NFKD", n', 'n = ("NFKD", n', "test_names"),
+    ("lottery.py", "return min(max(float(price_p), 0.0), 0.99)",
+     "return min(price_p * BAND_VALUE.get(min(int(price_p * 10), 9), 1.0), 0.99)", "test_market_chance"),
     ("integrity.py", "not 0 <= v <= 1:", "False:", "test_catches_bad_values"),
     ("board.html", "z.prob >= 0.8", "z.prob >= 0.95", "Winners parlay"),
     ("board.html", "if (mins < 20) { if (el) el.remove(); return; }", "return;",

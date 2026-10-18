@@ -299,6 +299,20 @@ class PropIdentity(unittest.TestCase):
                          "nhl:1|n:tim sttzle|Shots on Goal|1+")
 
 
+class Coherence(unittest.TestCase):
+    """A leg's chance never drops as its price chance rises, and the two
+    sides of a market still sum to 1 (the old band factor broke both)."""
+
+    def test_market_chance(self):
+        import lottery
+        f = lottery.market_chance
+        self.assertLessEqual(f(0.399999), f(0.4))
+        self.assertAlmostEqual(f(0.5) + f(0.5), 1.0)
+        xs = [i / 1000 for i in range(1, 990)]
+        self.assertTrue(all(f(a) <= f(b) for a, b in zip(xs, xs[1:])))
+        self.assertTrue(all(abs(f(x) + f(1 - x) - 1) < 1e-9 for x in xs if 0.011 <= x <= 0.989))
+
+
 class StuckSweep(unittest.TestCase):
     """Anything still open a week after its game is reported, not left silent."""
 

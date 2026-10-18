@@ -14,8 +14,8 @@ Round-combo and double-chance markets overlap one another, so there is no
 honest way to take the margin out of them; they are left alone.
 
 A leg's chance is FanDuel's price with the margin removed across that
-market's own runners, then the lottery backtest's price-band correction
-(lottery.market_chance) -- the same rule the locks and lottery use.
+market's own runners, used unadjusted (lottery.market_chance) -- the same
+rule the locks and lottery use.
 
 Grading reads ESPN's MMA scoreboard: the winner flag, the result type in
 `details` ("Unofficial Winner Decision" / "Kotko" / "Submission"), and the

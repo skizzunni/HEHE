@@ -61,10 +61,10 @@ def decimal(price):
 #     the model rated as value lost 8% (edge >= 0) and 20% (edge >= 3 points)
 #     on games it had not seen. So a leg's chance is the market's, never the
 #     model's; the model only decides which lines are worth looking at.
-#   * The market itself is biased by price (favourite-longshot): 10-20c legs
-#     lost 13%, 90c+ legs lost 1%. BAND_VALUE carries what each price band
-#     actually returned, shrunk toward the average where the sample is thin,
-#     and a leg's chance is its market price corrected by that.
+#   * By price band, 10-20c legs lost 13% and 90c+ legs lost 1% -- but that
+#     is Kalshi's fee-inclusive return, and a correction built from it did
+#     not beat the plain price on unseen games (see market_chance). BAND_VALUE
+#     is kept for the report only; no chance uses it.
 #   * Ladders (one game's lines priced out of order): 0 in 2,950 pairs.
 BACKTEST = os.path.join(HERE, "data", "backtest_lottery.json")
 FD_HOLD = 1.045             # FanDuel's typical margin on a single alternate line
@@ -90,9 +90,22 @@ BAND_VALUE = _band_values()
 
 
 def market_chance(price_p):
-    """A fair market chance corrected for the bias its price band showed."""
-    f = BAND_VALUE.get(min(int(price_p * 10), 9), 1.0)
-    return min(price_p * f, 0.99)
+    """The chance a leg is given: its de-vigged market price, unchanged.
+
+    Until 2026-10-18 this multiplied by a per-10c-band factor (BAND_VALUE).
+    That jumped at every band edge (39.9999% -> 41.02% but 40.00% -> 39.72%)
+    and pushed both sides of a 50/50 to 50.46%. Tested by date halves on the
+    16,076 settled Kalshi legs (204 games, 32 dates; no game in both halves),
+    scored by log loss on the half not used to fit:
+      * the band factors, even fitted on ALL the data, lost to the plain
+        price on the older half (0.5741 vs 0.5708), won narrowly on the newer;
+      * a smooth, complement-preserving logit stretch q = s(b*logit p) fitted
+        on one half lost on the other in both directions (b 0.91 vs 1.20; the
+        game-bootstrap 90% CI of its gain on the newer half, -0.006..-0.002,
+        is all below zero).
+    Neither held on unseen games, so the market price stands. It is monotone
+    and keeps complementary outcomes summing to 1. The cap at 0.99 is kept."""
+    return min(max(float(price_p), 0.0), 0.99)
 
 
 def _game_legs(rows, soccer_keys, labels, FD, KB=None):
