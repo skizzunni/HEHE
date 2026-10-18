@@ -195,11 +195,14 @@ NEED = {"Anytime Goal Scorer": 1, "To Score": 1, "To Score 2 or More Goals": 2,
 # were substitutes: the price assumes a full game, a late sub still counts as
 # action. Until lineups can be confirmed before pricing, they stay off.
 SOCCER = {"epl", "esp", "ger", "ita", "fra", "mls", "ucl", "uel"}
+# every league that is not soccer: the shots rule must cover ALL soccer
+# leagues (Championship, Conference League, ...), not only the eight above
+NOT_SOCCER = {"nfl", "ncaaf", "nba", "ncaab", "wnba", "mlb", "nhl", "ufc", "atp", "wta", "pga"}
 
 
 def offered(league, market):
-    return not (league in SOCCER and market.lower().startswith(("shots", "total shots",
-                                                                 "player shots")))
+    return not (league not in NOT_SOCCER and market.lower().startswith(("shots", "total shots",
+                                                                        "player shots")))
 
 
 def gradable(league, market):

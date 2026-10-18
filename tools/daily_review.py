@@ -232,7 +232,11 @@ def audit(graded, props, locks):
                    ("no market", lambda e: "no market" in (e.get("why") or ""))):
         line(f"tennis {src}", [e for e in tennis if f(e)], lambda e: (e.get("conf") or 0) / 100,
              lambda e: e["status"] == "won")
-    pg = [e for e in props.values() if isinstance(e, dict) and e.get("status") in ("won", "lost")]
+    # only markets still offered: a market already taken off (soccer shots)
+    # is a closed case, and a permanent alarm for it would hide new ones
+    import props_ledger as _pl
+    pg = [e for e in props.values() if isinstance(e, dict) and e.get("status") in ("won", "lost")
+          and _pl.offered(e.get("league"), e.get("market") or "")]
     for key in sorted({(e["league"], e["market"]) for e in pg}):
         line(f"props {key[0]} {key[1]}", [e for e in pg if (e["league"], e["market"]) == key],
              lambda e: e.get("p"), lambda e: e["status"] == "won")

@@ -181,6 +181,17 @@ class Props(unittest.TestCase):
         self.assertEqual(player_props.prop_tickets([g], tiers=(1,)), {1: []})
         self.assertIsNone(player_props.mega_ticket([g]))
 
+    def test_soccer_shots_off_in_every_soccer_league(self):
+        for lg in ("uel", "efl1", "uecl", "sco", "ned"):
+            self.assertFalse(props_ledger.offered(lg, "Shots"), lg)
+        self.assertTrue(props_ledger.offered("nhl", "Shots on Goal"))
+        self.assertTrue(props_ledger.offered("epl", "Goalkeeper Saves"))
+
+    def test_audit_ignores_markets_taken_off(self):
+        import daily_review as R
+        props = {str(i): dict(league="uel", market="Shots", status="lost", p=0.85) for i in range(30)}
+        self.assertEqual([a for a in R.audit([], props, {"legs": {}}) if "Shots" in a["name"]], [])
+
     def test_fanduel_prop_names_gradable(self):
         import fd_props
         for sport, pats in fd_props.STATS.items():
