@@ -317,6 +317,31 @@ def snapshot():
         import traceback
         sys.stderr.write("locks failed -- board still rebuilt:\n")
         traceback.print_exc()
+    # Safe Locks: the same card from heavy favourites (-2000 .. -500), beside
+    # the regular one, whose rules stay as they are (locks.SAFE_LEDGER)
+    try:
+        days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
+        out["safe_locks"] = {s_: locks.build(d._STATE["slots"].get(s_), SOCCER, labels, FD,
+                                             day=days_[s_], dec=locks.SAFE_DEC, band=locks.SAFE_BAND,
+                                             prop_games=((out.get("props") or {}).get(s_) or {}).get("games"))
+                             for s_ in ("today", "tomorrow")}
+        locks.grade(ledger._final, locks.SAFE_LEDGER)
+        if locks.card_time():
+            locks.record(out["safe_locks"]["today"], d._STATE["dates"][0], locks.SAFE_LEDGER, "safe")
+            out["safe_locks"]["today"] = locks.frozen(d._STATE["dates"][0], locks.SAFE_LEDGER)
+        else:
+            out["safe_locks"]["today"]["preview"] = True
+        out["safe_locks_record"] = locks.report(locks.SAFE_LEDGER)
+        sk = out["safe_locks"]["today"]
+        print(f'safe locks: {len(sk["locks"])} of {sk["available"]} games, '
+              f'all-hit chance {100 * sk["prob"]:.1f}%', file=sys.stderr)
+        for L_ in sk["locks"]:
+            print(f'   safe {100 * L_["p"]:5.1f}%  {L_["label"]:<40} {str(L_.get("price") or ""):>7}  '
+                  f'{L_.get("lg") or L_.get("league")}  {L_["match"]}', file=sys.stderr)
+    except Exception:
+        import traceback
+        sys.stderr.write("safe locks failed -- board still rebuilt:\n")
+        traceback.print_exc()
     # The lottery: $1 tickets built to pay ~$10,000, from game lines and props
     try:
         try:

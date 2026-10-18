@@ -800,6 +800,10 @@ let PRDAY = null, PRQ = "";
 // alternate lines (x.where) are shown as text, because FanDuel's
 // addToBetslip link resolves their ids to a different line of the game.
 let LKDAY = null;
+// two cards on one tab: the regular Locks (-400 .. -120) and Safe Locks,
+// heavy favourites (-2000 .. -500) that all hit far more often and pay less
+let LKMODE = "regular";
+try { LKMODE = sessionStorage.getItem("lkmode") || "regular"; } catch (e) {}
 // one leg, the same everywhere: what to bet, its price and chance, where it
 // is, and how it settled
 function legHTML(x, opts){
@@ -828,13 +832,21 @@ function strip(items){
     + '</div>';
 }
 function drawLocks(){
-  const K = D.locks || {};
+  const SAFE = LKMODE === "safe";
+  const K = (SAFE ? D.safe_locks : D.locks) || {};
   const has = d => (((K[d] || {}).locks) || []).length;
   const day = LKDAY || (has("today") ? "today" : "tomorrow");
   const X = K[day] || {};
   const L = X.locks || [];
-  const R = D.locks_record || {};
-  let h = '<div class="parlays"><div class="sechead"><h3>Locks</h3>' + dayPills("lkday", day) + '</div>';
+  const R = (SAFE ? D.safe_locks_record : D.locks_record) || {};
+  let h = '<div class="parlays"><div class="sechead"><h3>' + (SAFE ? 'Safe Locks' : 'Locks') + '</h3>'
+    + dayPills("lkday", day) + '</div>'
+    + '<p><span class="pills"><button type="button" data-lkmode="regular" aria-pressed="' + !SAFE
+    + '">Locks &middot; -400 to -120</button><button type="button" data-lkmode="safe" aria-pressed="' + SAFE
+    + '">Safe Locks &middot; -2000 to -500</button></span></p>'
+    + (SAFE ? '<p class="note">Heavy favourites only: each leg wins far more often, so all of them '
+      + 'hitting together is far likelier than on the regular card &mdash; and it pays much less. '
+      + 'The regular Locks and their rules are unchanged.</p>' : '');
   if(!L.length){
     panel.innerHTML = h + '<p class="empty">No FanDuel games left ' + day + '.</p></div>';
     return;
@@ -867,7 +879,7 @@ function drawLocks(){
           + Math.round(10 * z.pays).toLocaleString() + '</td><td class="num">' + (100 * z.prob).toFixed(0)
           + '%</td></tr>').join("") + '</tbody></table>' : '')
     + '<details class="explain"><summary>What the locks are &amp; how to place them</summary>'
-    + '<p>The likeliest bets FanDuel (New York) lists at <b>normal odds</b> (-400 to -120) &mdash; game '
+    + '<p>The likeliest bets FanDuel (New York) lists at <b>' + (SAFE ? 'heavy-favourite odds</b> (-2000 to -500)' : 'normal odds</b> (-400 to -120)') + ' &mdash; game '
     + 'lines <i>and</i> player props &mdash; one per game (more only on light days), from games that start after 8:00 AM and have '
     + 'not begun. Each chance is the market&rsquo;s own price with its margin taken out. The card is set at '
     + '8:00 AM Eastern and stays the same all day. Each is likely; all ' + L.length + ' together hit '
@@ -1783,10 +1795,16 @@ document.addEventListener("click", e => {
   }
   const lkd = e.target.closest("[data-lkday]");
   if(lkd){ LKDAY = lkd.getAttribute("data-lkday"); render(); return; }
+  const lkm = e.target.closest("[data-lkmode]");
+  if(lkm){
+    LKMODE = lkm.getAttribute("data-lkmode");
+    try { sessionStorage.setItem("lkmode", LKMODE); } catch (e2) {}
+    render(); return;
+  }
   const lkc = e.target.closest("[data-lkcopy]");
   if(lkc){
-    const L = (((D.locks || {})[lkc.getAttribute("data-lkcopy")] || {}).locks) || [];
-    copyText("Locks\n" + L.map((x, i) => (i + 1) + ". " + x.label + "  (" + x.match + ")"
+    const L = ((((LKMODE === "safe" ? D.safe_locks : D.locks) || {})[lkc.getAttribute("data-lkcopy")] || {}).locks) || [];
+    copyText((LKMODE === "safe" ? "Safe Locks" : "Locks") + "\n" + L.map((x, i) => (i + 1) + ". " + x.label + "  (" + x.match + ")"
       + (x.where ? "  FanDuel: " + x.where : "") + (x.price ? " " + x.price : "")).join("\n"),
              lkc, "Copied");
     return;

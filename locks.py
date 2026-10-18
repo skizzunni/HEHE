@@ -35,6 +35,15 @@ import stacks
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 LEDGER = os.path.join(HERE, "locks.json")
+# Safe Locks: the same card, rules and grading, built from heavy favourites
+# (-2000 .. -500) beside the regular card, which keeps its -400 .. -120 rule.
+# On 16,000 settled Kalshi legs the 90-100c band won 92.0% against 93.1c paid
+# (spread and fee included): the best-priced band there is, so each leg's
+# stated chance holds and eleven of them all hit far more often than eleven
+# legs at -400 (about 8%).
+SAFE_LEDGER = os.path.join(HERE, "safe_locks.json")
+SAFE_DEC = (1.05, 1.20)                 # -2000 .. -500
+SAFE_BAND = (0.75, 0.995)               # model pre-filter only
 N_LOCKS = 11
 LOCK_MIN, LOCK_MAX = 0.55, 0.92        # model pre-filter only; the price decides
 # Normal odds only (2026-10-16). Legs at -6000 made 11 locks pay 1.35x --
@@ -162,13 +171,15 @@ def _eligible(row, day, now):
     return t >= now + START_BUFFER
 
 
-def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=None):
+def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=None,
+          dec=None, band=None):
+    dmin, dmax = dec or (DEC_MIN, DEC_MAX)
     now = dt.datetime.now(dt.timezone.utc)
     rows = {lg: [r for r in rs if _eligible(r, day, now)]
             for lg, rs in (slot_rows or {}).items() if lg in fanduel.PAGES}
     refs = {}
     games = stacks.candidates(rows, soccer_keys, labels, extra=fd_specs(FD, refs),
-                              band=(LOCK_MIN, LOCK_MAX))
+                              band=band or (LOCK_MIN, LOCK_MAX))
     # where games drop out, per league: on the board -> eligible by time ->
     # found in FanDuel's feed -> a FanDuel line in the probability band
     import sys
@@ -197,7 +208,7 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
             ref, price, where = refs.get((g["gid"], json.dumps(L["spec"], sort_keys=True)),
                                          (None, None, None))
             d = _dec(price)
-            if not ref or not d or not DEC_MIN <= d <= DEC_MAX:
+            if not ref or not d or not dmin <= d <= dmax:
                 continue
             pm = _market_p(price)
             if pm and L["spec"].get("t") in ("over", "under"):
@@ -226,7 +237,7 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
             continue                            # not eligible by start time
         for P in pg.get("props") or []:
             d = _dec(P.get("price"))
-            if not P.get("fd") or not d or not DEC_MIN <= d <= DEC_MAX:
+            if not P.get("fd") or not d or not dmin <= d <= dmax:
                 continue
             # only markets the box score can settle: anything else would sit
             # open on the card forever and its margin is never tuned
@@ -347,23 +358,23 @@ def sizes(legs):
 
 
 # ------------------------------------------------------------------ record
-def load():
+def load(path=None):
     try:
-        with open(LEDGER) as fh:
+        with open(path or LEDGER) as fh:
             return json.load(fh)
     except (OSError, ValueError):
         return {"days": {}, "legs": {}}
 
 
-def save(book):
-    with open(LEDGER, "w") as fh:
+def save(book, path=None):
+    with open(path or LEDGER, "w") as fh:
         json.dump(book, fh, indent=1, sort_keys=True)
 
 
-def record(res, day):
+def record(res, day, path=None, tag="locks"):
     """The day's first full card of locks stands; later rebuilds only add
     legs for games that had no lock yet (a late line), up to N_LOCKS."""
-    book = load()
+    book = load(path)
     day = str(day)
     if len(day) == 8:
         day = f"{day[:4]}-{day[4:6]}-{day[6:]}"
@@ -393,12 +404,12 @@ def record(res, day):
                                         market=L.get("market"), line=L.get("line"),
                                         aid=L.get("aid"), edge=L.get("edge"),
                                         p_fair=L.get("p_fair")))
-    save(book)
+    save(book, path)
     # prop locks are settled from box scores by the props ledger
     props = [book["legs"][k] for k in keys if book["legs"][k].get("kind") == "prop"]
     if props:
         import props_ledger
-        props_ledger.record({"tickets": {"locks": [{"legs": props}]}}, day)
+        props_ledger.record({"tickets": {tag: [{"legs": props}]}}, day)
 
 
 def card_time(now=None):
@@ -407,12 +418,12 @@ def card_time(now=None):
     return now.hour >= CARD_HOUR
 
 
-def frozen(day):
+def frozen(day, path=None):
     """The recorded card for `day`, in build()'s shape, with results."""
     day = str(day)
     if len(day) == 8:
         day = f"{day[:4]}-{day[4:6]}-{day[6:]}"
-    book = load()
+    book = load(path)
     legs = [dict(book["legs"][k]) for k in book["days"].get(day, []) if k in book["legs"]]
     prob = 1.0
     for L in legs:
@@ -422,9 +433,9 @@ def frozen(day):
                 sizes=sizes(legs))
 
 
-def grade(final):
+def grade(final, path=None):
     """Settle open locks with the same final-score feed as the picks."""
-    book = load()
+    book = load(path)
     import props_ledger
     pl = props_ledger.load()
     for L in book["legs"].values():
@@ -437,7 +448,7 @@ def grade(final):
                         L["score"] = f'{e["value"]:g}'
             continue
         settle(L, final)
-    save(book)
+    save(book, path)
 
 
 def settle(L, final):
@@ -464,8 +475,8 @@ def settle(L, final):
     L["score"] = f"{L['away']} {a} - {L['home']} {h}"
 
 
-def report():
-    book = load()
+def report(path=None):
+    book = load(path)
     legs = [L for L in book["legs"].values() if L["status"] in ("won", "lost")]
     days = []
     for day, keys in sorted(book["days"].items(), reverse=True)[:14]:
