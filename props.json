@@ -4323,6 +4323,22 @@
   "price": "-900",
   "status": "open"
  },
+ "nhl:401892533|n:quinn hughes|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": null,
+  "gid": "nhl:401892533",
+  "imp": 0.9474,
+  "label": "Quinn Hughes: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Quinn Hughes",
+  "p": 0.866,
+  "p_fair": null,
+  "price": "-1800",
+  "status": "open"
+ },
  "nhl:401892534|n:andrei svechnikov|Shots on Goal|2+": {
   "aid": null,
   "date": "2026-10-18",
@@ -4459,7 +4475,8 @@
   "p": 0.8567,
   "price": "-1100",
   "rechecked": "ungradable",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "no grader for market"
  },
  "uel:401915560|204082|Goalkeeper Saves|1+": {
   "aid": "204082",
@@ -4489,7 +4506,8 @@
   "p": 0.8496,
   "price": "-1000",
   "rechecked": "ungradable",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "no grader for market"
  },
  "uel:401915560|274272|Goalkeeper Saves|1+": {
   "aid": "274272",
@@ -4504,7 +4522,8 @@
   "p": 0.8519,
   "price": "-3000",
   "rechecked": "void",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "uel:401915560|297337|Tackles|1+": {
   "aid": "297337",
@@ -4519,7 +4538,8 @@
   "p": 0.8496,
   "price": "-1000",
   "rechecked": "ungradable",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "no grader for market"
  },
  "uel:401915560|322652|Shots|1+": {
   "aid": "322652",
@@ -4594,7 +4614,8 @@
   "p": 0.8496,
   "price": "-1000",
   "rechecked": "void",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "uel:401915562|229443|Shots|2+": {
   "aid": "229443",
@@ -4624,7 +4645,8 @@
   "p": 0.8496,
   "price": "-1000",
   "rechecked": "ungradable",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "no grader for market"
  },
  "uel:401915562|271854|Shots|1+": {
   "aid": "271854",
@@ -4639,7 +4661,8 @@
   "p": 0.8496,
   "price": "-1000",
   "rechecked": "void",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "uel:401915562|274522|Shots|1+": {
   "aid": "274522",
@@ -4684,7 +4707,8 @@
   "p": 0.8496,
   "price": "-1000",
   "rechecked": "ungradable",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "no grader for market"
  },
  "uel:401915563|138213|Goalkeeper Saves|1+": {
   "aid": "138213",
@@ -4729,7 +4753,8 @@
   "p": 0.8411,
   "price": "-900",
   "rechecked": "void",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "uel:401915563|319985|Shots|1+": {
   "aid": "319985",
@@ -4774,7 +4799,8 @@
   "p": 0.8496,
   "price": "-1000",
   "rechecked": "ungradable",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "no grader for market"
  },
  "uel:401915563|372035|Shots|1+": {
   "aid": "372035",
@@ -4789,7 +4815,8 @@
   "p": 0.8464,
   "price": "-2500",
   "rechecked": "void",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "uel:401915563|372035|Tackles|1+": {
   "aid": "372035",
@@ -4804,7 +4831,8 @@
   "p": 0.8496,
   "price": "-1000",
   "rechecked": "ungradable",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "uel:401915565|219536|Tackles|1+": {
   "aid": "219536",
