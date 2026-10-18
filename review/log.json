@@ -2259,8 +2259,8 @@
   "audit": [
    {
     "flag": false,
-    "hit": 58.8,
-    "n": 51,
+    "hit": 59.6,
+    "n": 52,
     "name": "tennis Kalshi-priced",
     "said": 69.4
    },
@@ -2301,11 +2301,11 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "atp": {
-    "all_hit": 68.9,
-    "calls": 71,
+    "all_hit": 69.2,
+    "calls": 72,
     "cutoff": 0.65,
-    "games": 132,
-    "hit": 81.7
+    "games": 133,
+    "hit": 81.9
    },
    "aus": {
     "all_hit": 75.0,
@@ -2356,9 +2356,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "den": {
-    "all_hit": 80.0,
+    "all_hit": 66.7,
     "cutoff": null,
-    "games": 5,
+    "games": 6,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ecu": {
@@ -2428,9 +2428,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "gre": {
-    "all_hit": 50.0,
+    "all_hit": 66.7,
     "cutoff": null,
-    "games": 2,
+    "games": 3,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ind": {
@@ -2549,9 +2549,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "sco": {
-    "all_hit": 54.5,
+    "all_hit": 58.3,
     "cutoff": null,
-    "games": 11,
+    "games": 12,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "sco2": {
@@ -2612,9 +2612,9 @@
    }
   },
   "clv": {
-   "avg": 2.59,
-   "beat": 62.5,
-   "n": 8
+   "avg": 2.17,
+   "beat": 55.6,
+   "n": 9
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2681,6 +2681,14 @@
     "price": null,
     "said": 67.4,
     "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 67%"
+   },
+   {
+    "against_market": false,
+    "league": "den",
+    "pick": "Br\u00f8ndby IF",
+    "price": null,
+    "said": 69.0,
+    "why": "margin 1 \u00b7 called at 69%"
    },
    {
     "against_market": false,
@@ -2912,21 +2920,21 @@
    }
   ],
   "picks": {
-   "hit": 66.7,
-   "lost": 20,
-   "n": 60,
-   "roi": 13.5,
-   "said": 67.4,
-   "won": 40
+   "hit": 67.2,
+   "lost": 21,
+   "n": 64,
+   "roi": 15.7,
+   "said": 67.7,
+   "won": 43
   },
   "picks_by_league": {
    "atp": {
-    "hit": 54.5,
+    "hit": 58.3,
     "lost": 5,
-    "n": 11,
+    "n": 12,
     "roi": null,
-    "said": 62.0,
-    "won": 6
+    "said": 62.4,
+    "won": 7
    },
    "aut": {
     "hit": 100.0,
@@ -2945,11 +2953,11 @@
     "won": 3
    },
    "den": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
     "roi": null,
-    "said": 72.1,
+    "said": 71.1,
     "won": 2
    },
    "epl": {
@@ -3001,12 +3009,12 @@
     "won": 2
    },
    "gre": {
-    "hit": 0.0,
+    "hit": 50.0,
     "lost": 1,
-    "n": 1,
-    "roi": null,
-    "said": 65.0,
-    "won": 0
+    "n": 2,
+    "roi": 33.3,
+    "said": 67.8,
+    "won": 1
    },
    "ita": {
     "hit": 50.0,
@@ -3062,6 +3070,14 @@
     "n": 1,
     "roi": null,
     "said": 71.1,
+    "won": 1
+   },
+   "sco": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 79.1,
     "won": 1
    },
    "swe": {
@@ -3135,12 +3151,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 76.9,
+   "hit": 80.0,
    "lost": 3,
-   "n": 13,
+   "n": 15,
    "roi": 15.8,
-   "said": 77.0,
-   "won": 10
+   "said": 76.4,
+   "won": 12
   },
   "stuck": [],
   "vs_market_14d": {
@@ -3153,12 +3169,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 67.5,
+    "hit": 67.6,
     "lost": 83,
-    "n": 255,
-    "roi": -1.5,
+    "n": 256,
+    "roi": -1.3,
     "said": 63.5,
-    "won": 172
+    "won": 173
    }
   },
   "weights": {

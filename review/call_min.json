@@ -13,11 +13,11 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "atp": {
-   "all_hit": 68.9,
-   "calls": 71,
+   "all_hit": 69.2,
+   "calls": 72,
    "cutoff": 0.65,
-   "games": 132,
-   "hit": 81.7
+   "games": 133,
+   "hit": 81.9
   },
   "aus": {
    "all_hit": 75.0,
@@ -68,9 +68,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "den": {
-   "all_hit": 80.0,
+   "all_hit": 66.7,
    "cutoff": null,
-   "games": 5,
+   "games": 6,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "ecu": {
@@ -140,9 +140,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "gre": {
-   "all_hit": 50.0,
+   "all_hit": 66.7,
    "cutoff": null,
-   "games": 2,
+   "games": 3,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "ind": {
@@ -261,9 +261,9 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "sco": {
-   "all_hit": 54.5,
+   "all_hit": 58.3,
    "cutoff": null,
-   "games": 11,
+   "games": 12,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "sco2": {
@@ -325,14 +325,14 @@
  },
  "holdout": {
   "all_hit": 67.4,
-  "all_n": 1060,
+  "all_n": 1064,
   "basis": "as published",
   "days": 18,
-  "hit": 75.6,
-  "n": 287,
+  "hit": 75.7,
+  "n": 288,
   "simulated": {
-   "hit": 69.4,
-   "n": 1060,
+   "hit": 69.5,
+   "n": 1064,
    "what": "old picks re-scored as the market favourite"
   },
   "since": "2026-09-19",
@@ -389,5 +389,5 @@
   "usl",
   "wsl"
  ],
- "updated": "2026-10-18T11:53-04:00"
+ "updated": "2026-10-18T11:57-04:00"
 }
