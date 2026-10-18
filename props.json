@@ -2075,11 +2075,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Chuba Hubbard",
   "p": 0.4434,
   "p_fair": null,
   "price": "-115",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401872998|n:dameon pierce|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -2091,11 +2093,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Dameon Pierce",
   "p": 0.3236,
   "p_fair": null,
   "price": "+150",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401872998|n:dameon pierce|Rushing Yards|20+": {
   "aid": null,
@@ -2107,11 +2111,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Dameon Pierce",
   "p": 0.8496,
   "p_fair": 0.8735,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 35.0
  },
  "nfl:401872998|n:dameon pierce|Rushing Yards|30+": {
   "aid": null,
@@ -2123,11 +2129,13 @@
   "league": "nfl",
   "line": "30+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Dameon Pierce",
   "p": 0.7477,
   "p_fair": 0.7871,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 35.0
  },
  "nfl:401872998|n:dontayvion wicks|Receiving Yards|15+": {
   "aid": null,
@@ -2139,11 +2147,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Dontayvion Wicks",
   "p": 0.7477,
   "p_fair": 0.7796,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 24.0
  },
  "nfl:401872998|n:jalen coker|Receptions|3+": {
   "aid": null,
@@ -2155,11 +2165,13 @@
   "league": "nfl",
   "line": "3+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Jalen Coker",
   "p": 0.8496,
   "p_fair": 0.8789,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nfl:401872998|n:jaydon blue|Rushing Yards|10+": {
   "aid": null,
@@ -2175,7 +2187,8 @@
   "p": 0.7477,
   "p_fair": 0.8449,
   "price": "-400",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401872998|n:tanner mckee|Passing Yards|125+": {
   "aid": null,
@@ -2187,11 +2200,13 @@
   "league": "nfl",
   "line": "125+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Tanner McKee",
   "p": 0.8411,
   "p_fair": 0.9004,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 215.0
  },
  "nfl:401872998|n:tanner mckee|Passing Yards|150+": {
   "aid": null,
@@ -2203,11 +2218,13 @@
   "league": "nfl",
   "line": "150+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Tanner McKee",
   "p": 0.7399,
   "p_fair": 0.7947,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 215.0
  },
  "nfl:401872998|n:tetairoa mcmillan|Receiving Yards|40+": {
   "aid": null,
@@ -2219,11 +2236,13 @@
   "league": "nfl",
   "line": "40+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Tetairoa McMillan",
   "p": 0.7477,
   "p_fair": 0.7101,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 86.0
  },
  "nfl:401872998|n:tetairoa mcmillan|Receptions|3+": {
   "aid": null,
@@ -2235,11 +2254,13 @@
   "league": "nfl",
   "line": "3+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Tetairoa McMillan",
   "p": 0.8627,
   "p_fair": 0.8936,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nfl:401872998|n:tetairoa mcmillan|Receptions|4+": {
   "aid": null,
@@ -2251,11 +2272,13 @@
   "league": "nfl",
   "line": "4+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Tetairoa McMillan",
   "p": 0.7477,
   "p_fair": 0.7661,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nfl:401872999|n:bijan robinson|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -2523,7 +2546,8 @@
   "p": 0.413,
   "p_fair": null,
   "price": "-110",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401873000|n:cam skattebo|Rushing Yards|15+": {
   "aid": null,
@@ -2539,7 +2563,8 @@
   "p": 0.8496,
   "p_fair": 0.8784,
   "price": "-1000",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401873000|n:cam skattebo|Rushing Yards|25+": {
   "aid": null,
@@ -2555,7 +2580,8 @@
   "p": 0.7477,
   "p_fair": 0.7718,
   "price": "-400",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401873000|n:chris olave|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -2567,11 +2593,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Chris Olave",
   "p": 0.3209,
   "p_fair": null,
   "price": "+140",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873000|n:chris olave|Receptions|4+": {
   "aid": null,
@@ -2583,11 +2611,13 @@
   "league": "nfl",
   "line": "4+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Chris Olave",
   "p": 0.8496,
   "p_fair": 0.8735,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nfl:401873000|n:chris olave|Receptions|5+": {
   "aid": null,
@@ -2599,11 +2629,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Chris Olave",
   "p": 0.758,
   "p_fair": 0.7529,
   "price": "-390",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nfl:401873000|n:cj donaldson|Rushing Yards|5+": {
   "aid": null,
@@ -2615,11 +2647,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "CJ Donaldson",
   "p": 0.7477,
   "p_fair": 0.8777,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 39.0
  },
  "nfl:401873000|n:jameis winston|Passing Yards|175+": {
   "aid": null,
@@ -2631,11 +2665,13 @@
   "league": "nfl",
   "line": "175+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Jameis Winston",
   "p": 0.7477,
   "p_fair": 0.7566,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 152.0
  },
  "nfl:401873000|n:juwan johnson|Receiving Yards|25+": {
   "aid": null,
@@ -2647,11 +2683,13 @@
   "league": "nfl",
   "line": "25+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Juwan Johnson",
   "p": 0.7438,
   "p_fair": 0.7138,
   "price": "-390",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873000|n:kendre miller|Rushing Yards|20+": {
   "aid": null,
@@ -2663,11 +2701,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Kendre Miller",
   "p": 0.7438,
   "p_fair": 0.7854,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 70.0
  },
  "nfl:401873000|n:malachi fields|Receptions|1+": {
   "aid": null,
@@ -2679,11 +2719,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Malachi Fields",
   "p": 0.8496,
   "p_fair": 0.8727,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873000|n:najee harris|Rushing Yards|10+": {
   "aid": null,
@@ -2695,11 +2737,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Najee Harris",
   "p": 0.8496,
   "p_fair": 0.9062,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nfl:401873000|n:najee harris|Rushing Yards|15+": {
   "aid": null,
@@ -2711,11 +2755,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Najee Harris",
   "p": 0.7477,
   "p_fair": 0.805,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nfl:401873000|n:tyler shough|Passing Yards|150+": {
   "aid": null,
@@ -2727,11 +2773,13 @@
   "league": "nfl",
   "line": "150+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Tyler Shough",
   "p": 0.8567,
   "p_fair": 0.8735,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 144.0
  },
  "nfl:401873001|n:aj brown|Receiving Yards|20+": {
   "aid": null,
@@ -3937,6 +3985,22 @@
   "price": "-1000",
   "status": "open"
  },
+ "nfl:401873007|n:dak prescott|Passing Touchdowns|1+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -6.1,
+  "gid": "nfl:401873007",
+  "imp": 0.9231,
+  "label": "Dak Prescott: 1+ Passing Touchdowns",
+  "league": "nfl",
+  "line": "1+",
+  "market": "Passing Touchdowns",
+  "name": "Dak Prescott",
+  "p": 0.85,
+  "p_fair": 0.867,
+  "price": "-1200",
+  "status": "open"
+ },
  "nfl:401873007|n:dak prescott|Passing Yards|225+": {
   "aid": null,
   "date": "2026-10-18",
@@ -3967,6 +4031,22 @@
   "p": 0.8496,
   "p_fair": 0.7894,
   "price": "-1000",
+  "status": "open"
+ },
+ "nfl:401873007|n:george pickens|Receptions|4+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -4.7,
+  "gid": "nfl:401873007",
+  "imp": 0.7917,
+  "label": "George Pickens: 4+ Receptions",
+  "league": "nfl",
+  "line": "4+",
+  "market": "Receptions",
+  "name": "George Pickens",
+  "p": 0.7605,
+  "p_fair": 0.7548,
+  "price": "-380",
   "status": "open"
  },
  "nfl:401873007|n:javonte williams|Anytime Touchdown Scorer|1+": {

@@ -2201,10 +2201,10 @@
   },
   "props": {
    "fair": {
-    "n": 61,
-    "said_fair": 83.2,
-    "said_price": 85.6,
-    "won": 52
+    "n": 80,
+    "said_fair": 83.0,
+    "said_price": 85.3,
+    "won": 65
    },
    "n": 141,
    "said": 75.7,
@@ -2273,24 +2273,31 @@
    },
    {
     "flag": false,
-    "hit": 27.3,
-    "n": 11,
+    "hit": 42.9,
+    "n": 14,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 41.1
+    "said": 40.0
    },
    {
     "flag": false,
-    "hit": 83.3,
-    "n": 12,
+    "hit": 80.0,
+    "n": 15,
     "name": "props nfl Receiving Yards",
-    "said": 80.6
+    "said": 79.4
    },
    {
     "flag": false,
-    "hit": 86.4,
-    "n": 22,
+    "hit": 85.7,
+    "n": 28,
     "name": "props nfl Receptions",
-    "said": 80.0
+    "said": 80.4
+   },
+   {
+    "flag": false,
+    "hit": 78.6,
+    "n": 14,
+    "name": "props nfl Rushing Yards",
+    "said": 79.2
    },
    {
     "flag": false,
@@ -2528,9 +2535,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nfl": {
-    "all_hit": 57.1,
+    "all_hit": 57.0,
     "cutoff": null,
-    "games": 84,
+    "games": 86,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nhl": {
@@ -2633,9 +2640,9 @@
    }
   },
   "clv": {
-   "avg": 0.13,
-   "beat": 42.9,
-   "n": 21
+   "avg": 0.07,
+   "beat": 43.5,
+   "n": 23
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2654,7 +2661,7 @@
     "Indianapolis Colts +1.5 (Tennessee Titans at Indianapolis Colts) Tennessee Titans 26 - Indianapolis Colts 20"
    ],
    "n": 11,
-   "open": 7,
+   "open": 5,
    "plays": {
     "best": [
      2,
@@ -2662,7 +2669,7 @@
      "open"
     ]
    },
-   "won": 3
+   "won": 5
   },
   "losses": [
    {
@@ -2860,6 +2867,14 @@
    {
     "against_market": false,
     "league": "nfl",
+    "pick": "New York Giants",
+    "price": "-112",
+    "said": 52.7,
+    "why": "margin 7 \u00b7 the book had my side favoured too \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
+    "league": "nfl",
     "pick": "Indianapolis Colts",
     "price": "-298",
     "said": 70.3,
@@ -2974,12 +2989,14 @@
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "New York Giants -4.5"
+    ],
     "legs": 7,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3005,10 +3022,11 @@
    },
    {
     "killed_by": [
-     "Under 42.5 points"
+     "Under 42.5 points",
+     "New Orleans Saints -7.5"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
     "won": 3
@@ -3029,10 +3047,11 @@
    },
    {
     "killed_by": [
-     "Under 42.5 points"
+     "Under 42.5 points",
+     "New Orleans Saints -7.5"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+25",
     "won": 3
@@ -3053,10 +3072,11 @@
    },
    {
     "killed_by": [
-     "Under 42.5 points"
+     "Under 42.5 points",
+     "New Orleans Saints -7.5"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+50",
     "won": 3
@@ -3077,10 +3097,12 @@
    },
    {
     "killed_by": [
-     "Under 42.5 points"
+     "Under 42.5 points",
+     "New Orleans Saints -7.5",
+     "Philadelphia Eagles -1.5"
     ],
     "legs": 9,
-    "lost": 1,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+100",
     "won": 2
@@ -3101,12 +3123,12 @@
    }
   ],
   "picks": {
-   "hit": 67.3,
-   "lost": 37,
-   "n": 113,
-   "roi": -6.8,
-   "said": 69.3,
-   "won": 76
+   "hit": 67.0,
+   "lost": 38,
+   "n": 115,
+   "roi": -7.8,
+   "said": 69.0,
+   "won": 77
   },
   "picks_by_league": {
    "arg": {
@@ -3278,12 +3300,12 @@
     "won": 2
    },
    "nfl": {
-    "hit": 20.0,
-    "lost": 4,
-    "n": 5,
-    "roi": -74.2,
-    "said": 62.0,
-    "won": 1
+    "hit": 28.6,
+    "lost": 5,
+    "n": 7,
+    "roi": -58.1,
+    "said": 59.5,
+    "won": 2
    },
    "nor": {
     "hit": 60.0,
@@ -3368,14 +3390,14 @@
   },
   "props": {
    "fair": {
-    "n": 61,
-    "said_fair": 83.2,
-    "said_price": 85.6,
-    "won": 52
+    "n": 80,
+    "said_fair": 83.0,
+    "said_price": 85.3,
+    "won": 65
    },
-   "n": 74,
-   "said": 70.8,
-   "won": 52
+   "n": 96,
+   "said": 71.4,
+   "won": 68
   },
   "safe_locks": {
    "lost": [],
@@ -3414,12 +3436,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 67.2,
-    "lost": 88,
-    "n": 268,
-    "roi": -2.3,
-    "said": 63.7,
-    "won": 180
+    "hit": 67.0,
+    "lost": 89,
+    "n": 270,
+    "roi": -2.4,
+    "said": 63.6,
+    "won": 181
    }
   },
   "weights": {
