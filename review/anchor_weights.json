@@ -1,48 +1,18 @@
 {
- "default": 0.089,
+ "default": 0.0,
  "detail": {
-  "mlb": {
-   "logloss": 0.6639,
-   "market_only": 0.6639,
-   "model_only": 0.6656,
-   "n": 372,
-   "weight": 0.05
-  },
   "ncaaf": {
-   "logloss": 0.4521,
-   "market_only": 0.4521,
-   "model_only": 0.4812,
-   "n": 422,
-   "weight": 0.05
-  },
-  "nfl": {
-   "logloss": 0.6478,
-   "market_only": 0.6525,
-   "model_only": 0.6478,
-   "n": 79,
-   "weight": 0.4
-  },
-  "nhl": {
-   "logloss": 0.6324,
-   "market_only": 0.6324,
-   "model_only": 0.6391,
-   "n": 91,
-   "weight": 0.05
-  },
-  "wnba": {
-   "logloss": 0.526,
-   "market_only": 0.5273,
-   "model_only": 0.5262,
-   "n": 47,
-   "weight": 0.3
+   "fitted": 0.35,
+   "held_out": false,
+   "logloss": 0.6249,
+   "market_only": 0.634,
+   "model_40": 0.625,
+   "n": 52,
+   "weight": 0.0
   }
  },
- "updated": "2026-10-18T04:31-04:00",
+ "updated": "2026-10-18T04:35-04:00",
  "weights": {
-  "mlb": 0.05,
-  "ncaaf": 0.05,
-  "nfl": 0.4,
-  "nhl": 0.05,
-  "wnba": 0.3
+  "ncaaf": 0.0
  }
 }
