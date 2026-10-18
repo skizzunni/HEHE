@@ -236,6 +236,12 @@ class StuckSweep(unittest.TestCase):
         got = R.stuck(led, props, {"legs": {}}, {"days": {}}, dt.date(2026, 10, 18))
         self.assertEqual(sorted(got), [("picks", "a"), ("props", "p")])
 
+    def test_alarm_dropped_once_market_is_off(self):
+        import rebuild_board as B
+        self.assertFalse(B._still_offered("props uel Shots"))
+        self.assertTrue(B._still_offered("props nfl Receiving Yards"))
+        self.assertTrue(B._still_offered("locks nfl under"))
+
 
 class Integrity(unittest.TestCase):
     """Every build checks its own data before publishing."""

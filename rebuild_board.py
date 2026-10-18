@@ -178,7 +178,8 @@ def snapshot():
             _log = json.load(fh_)
         _day = max(_log)
         _r = _log[_day]
-        out["health"] = dict(day=_day, trailing=[a_ for a_ in (_r.get("audit") or []) if a_.get("flag")],
+        out["health"] = dict(day=_day, trailing=[a_ for a_ in (_r.get("audit") or [])
+                                                 if a_.get("flag") and _still_offered(a_.get("name"))],
                              stuck=[" ".join(map(str, x)) for x in (_r.get("stuck") or [])][:10],
                              checked=len(_r.get("audit") or []))
     except (OSError, ValueError, KeyError):
@@ -998,6 +999,18 @@ def changes(new):
         if prev.get("mc") and r.get("mc") and abs(prev["mc"] - r["mc"]) >= 3.0:
             out.append(f'{game}: confidence {prev["mc"]:.1f}% → {r["mc"]:.1f}%')
     return out
+
+
+def _still_offered(name):
+    """False for an audit line on a prop market already taken off the
+    board: the review log is written once a day, so without this a market
+    switched off at 4 AM kept its alarm on the Results tab until the next
+    morning (seen 2026-10-18, "props uel Shots")."""
+    w = (name or "").split(" ", 2)
+    if len(w) == 3 and w[0] == "props":
+        import props_ledger
+        return props_ledger.offered(w[1], w[2])
+    return True
 
 
 def write(new):
