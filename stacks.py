@@ -91,6 +91,12 @@ def _tune_aims():
     pooled = defaultdict(lambda: [0, 0, 0.0])
     for v in (bt.get("sports") or {}).values():
         for t in v.get("aim_trials") or []:
+            # choose only on the "select" days; the "test" days are kept
+            # untouched to report how the choice does (results written
+            # before phases existed are all unseen-day results and are not
+            # used to choose either)
+            if t.get("phase") != "select":
+                continue
             x = pooled[(t["size"], t["target"], t["leg_max"])]
             x[0] += t["played"]
             x[1] += t["won"]

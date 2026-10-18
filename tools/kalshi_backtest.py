@@ -300,15 +300,12 @@ def roi(rows):
     n = len(rows)
     if not n or not stake:
         return dict(n=n, roi=None)
-    # standard error of the per-bet return, for an honest interval
-    per = [(r["won"] - (r["cost"] + r["fee"])) / (r["cost"] + r["fee"]) for r in rows]
-    mean = sum(per) / n
-    sd = math.sqrt(sum((x - mean) ** 2 for x in per) / max(n - 1, 1))
-    return dict(n=n, hit=round(100 * ret / n, 1),
+    # the interval resamples whole games and recomputes this same ROI
+    import resample
+    rc = resample.roi_ci(rows, lambda r: r["cost"] + r["fee"])
+    return dict(n=n, games=rc["games"], hit=round(100 * ret / n, 1),
                 avg_cost=round(100 * stake / n, 1),
-                roi=round(100 * (ret - stake) / stake, 2),
-                ci95=[round(100 * (mean - 1.96 * sd / math.sqrt(n)), 2),
-                      round(100 * (mean + 1.96 * sd / math.sqrt(n)), 2)])
+                roi=round(100 * (ret - stake) / stake, 2), ci95=rc["ci95"])
 
 
 def calibration(rows, key):
@@ -335,8 +332,10 @@ def main():
     with open(LEGS_OUT, "w") as fh:
         json.dump(allrows, fh, separators=(",", ":"))
     allrows = [r for r in allrows if VALUE_RANGE[0] <= r["p"] <= VALUE_RANGE[1]]
-    half = len(allrows) // 2
-    fit, test = allrows[:half], allrows[half:]
+    # split on a date: a row-count split put one game's lines on both sides
+    dates = sorted({r["date"] for r in allrows})
+    cut = dates[len(dates) // 2] if dates else ""
+    fit, test = [r for r in allrows if r["date"] < cut], [r for r in allrows if r["date"] >= cut]
     edge = lambda r: r["q"] - (r["cost"] + r["fee"])
     thresholds = (0.0, 0.02, 0.04, 0.06, 0.08)
     by_t_fit = {t: roi([r for r in fit if edge(r) >= t]) for t in thresholds}

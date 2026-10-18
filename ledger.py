@@ -174,6 +174,10 @@ def record(state=None):
                              myside=r.get("myside"),
                              dc=bool(r.get("dc")),
                              status="open", logged=dt.datetime.now(ET).isoformat()[:16])
+                # the strong / close label as shown, frozen with the call: a
+                # later refit of the cutoffs must not relabel past picks
+                import calls
+                entry["strong"] = calls.is_call(lg, entry["conf"])
                 # The game's own ET date, so the grader knows where to look.
                 # Without it the grader only searched the last three days, and
                 # any game it missed in that window was never graded.
@@ -203,7 +207,7 @@ def record(state=None):
                 hist = list(prev.get("history") or [])
                 snap = dict(t=entry["logged"], pick=entry["pick"], dc=entry["dc"],
                             price=entry.get("price"), conf=entry["conf"], why=entry["why"],
-                            version=POLICY)
+                            strong=entry["strong"], version=POLICY)
                 if not hist or {k: hist[-1].get(k) for k in ("pick", "dc", "price", "conf")} != \
                         {k: snap[k] for k in ("pick", "dc", "price", "conf")}:
                     hist.append(snap)
@@ -598,6 +602,10 @@ def board_payload(limit=40):
 
 
 def _strong(e):
+    """The label the pick was published with; older entries, recorded
+    before labels were frozen, fall back to today's cutoff."""
+    if "strong" in e:
+        return e["strong"]
     import calls
     return calls.is_call(e.get("league"), e.get("conf"))
 

@@ -39,17 +39,16 @@ def cost(r):
 
 
 def roi(rows):
+    """Stake-weighted ROI; its 95% interval resamples whole games (resample.py)."""
     if not rows:
         return dict(n=0)
+    import resample
     st = sum(cost(r) for r in rows)
-    per = [(r["won"] - cost(r)) / cost(r) for r in rows]
-    m = sum(per) / len(per)
-    sd = math.sqrt(sum((x - m) ** 2 for x in per) / max(len(per) - 1, 1))
-    se = sd / math.sqrt(len(per))
-    return dict(n=len(rows), hit=round(100 * sum(r["won"] for r in rows) / len(rows), 1),
+    rc = resample.roi_ci(rows, cost)
+    return dict(n=len(rows), games=rc["games"],
+                hit=round(100 * sum(r["won"] for r in rows) / len(rows), 1),
                 paid=round(100 * st / len(rows), 1),
-                roi=round(100 * (sum(r["won"] for r in rows) - st) / st, 1),
-                ci95=[round(100 * (m - 1.96 * se), 1), round(100 * (m + 1.96 * se), 1)])
+                roi=round(100 * (sum(r["won"] for r in rows) - st) / st, 1), ci95=rc["ci95"])
 
 
 # ------------------------------------------------------------- strategies

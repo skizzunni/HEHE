@@ -281,7 +281,14 @@ def main():
         S.MISS_BY_SPORT[S.sport_of(key)] = k
         tk = defaultdict(lambda: [0, 0, 0.0])
         trials = defaultdict(lambda: [0, 0, 0.0, 0.0])
+        # the holdout days split again by date: the leg aim is CHOSEN on the
+        # earlier part ("select") and only REPORTED on the later ("test"),
+        # which the choice never saw. Until 2026-10-18 the live builder chose
+        # on the same days the backtest called unseen.
+        hdays = sorted(per_day)
+        test_from = hdays[len(hdays) // 2] if hdays else None
         for d, games_d in sorted(per_day.items()):
+            phase = "test" if test_from and d >= test_from else "select"
             slot = {key: [r for r, _, _ in games_d]}
             score = {r["id"]: (hs, as_) for r, hs, as_ in games_d}
             cands = S.candidates(slot, set() if key in S.SD_MARGIN or key in S.POISSON
@@ -295,7 +302,7 @@ def main():
                 for size, tks in S.build_tickets(c2, tiers=TRIAL_SIZES).items():
                     for t in tks:
                         ok = ticket_won(t, score)
-                        x = trials[(size, tgt, top)]
+                        x = trials[(phase, size, tgt, top)]
                         x[0] += 1
                         x[1] += ok
                         x[2] += t["prob"]
@@ -318,10 +325,11 @@ def main():
                      for grp, v in by_group.items()},
             tickets=[dict(size=n, played=v[0], won=v[1], expected=round(v[2], 1))
                      for n, v in sorted(tk.items())],
-            aim_trials=[dict(size=n, target=t, leg_max=m, played=v[0], won=v[1],
+            aim_trials=[dict(size=n, target=t, leg_max=m, phase=ph, played=v[0], won=v[1],
                              expected=round(v[2], 1),
                              avg_fair=round(v[3] / v[0], 2) if v[0] else None)
-                        for (n, t, m), v in sorted(trials.items())])
+                        for (ph, n, t, m), v in sorted(trials.items())],
+            test_from=test_from)
         r = report["sports"][key]
         print(f"\n===== {key}: {r['games']} games, miss factor fitted {k}")
         print("  stack legs, HOLDOUT, after haircut:")
@@ -332,7 +340,7 @@ def main():
         for t in r["tickets"]:
             print(f"    {t['size']:>2}-leg  won {t['won']}/{t['played']}  expected {t['expected']}")
         for t in r["aim_trials"]:
-            print(f"    {t['size']}-leg aimed {t['target']}: won {t['won']}/{t['played']}  "
+            print(f"    [{t['phase']}] {t['size']}-leg aimed {t['target']}: won {t['won']}/{t['played']}  "
                   f"expected {t['expected']}  pays ~{t['avg_fair']}x")
         sys.stdout.flush()
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

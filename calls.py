@@ -26,9 +26,13 @@ TARGET = 0.75
 
 try:
     with open(PATH) as _fh:
-        _MIN = {k: float(v) for k, v in (json.load(_fh).get("cutoffs") or {}).items()}
+        _J = json.load(_fh)
+    _MIN = {k: float(v) for k, v in (_J.get("cutoffs") or {}).items() if v is not None}
+    # leagues whose record was fitted and no cutoff qualified: no strong
+    # calls there until one does (2026-10-18; before, a fallback cut applied)
+    _NONE = set(_J.get("unqualified") or [])
 except (OSError, ValueError, TypeError):
-    _MIN = {}
+    _MIN, _NONE = {}, set()
 
 
 # Soccer picks follow the de-vigged price, which tools/soccer_lab.py found
@@ -46,14 +50,18 @@ def _soccer(league):
 
 
 def call_min(league):
+    """The cutoff for a strong call, or None where the league's own record
+    has been tested and none qualified."""
     if league in _MIN:
         return _MIN[league]
+    if league in _NONE and not _soccer(league):
+        return None
     return SOCCER_MIN if _soccer(league) else DEFAULT
 
 
 def is_call(league, conf):
     """conf is the pick's chance as a fraction (0.63) or a percent (63.0)."""
-    if conf is None:
+    if conf is None or call_min(league) is None:
         return False
     c = conf / 100 if conf > 1 else conf
     return c >= call_min(league)

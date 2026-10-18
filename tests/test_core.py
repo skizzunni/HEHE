@@ -396,6 +396,38 @@ class RecommendationHistory(unittest.TestCase):
         self.assertEqual(e["pick"], "Middlesbrough")                 # frozen once started
 
 
+class HonestRecords(unittest.TestCase):
+    """Strong-call cut-offs come only from a qualifying record; the fitted
+    model weight needs a held-out gain; market-only (w = 0) is a choice."""
+
+    def picks(self, n, conf, hit_rate, lg="nhl", start=dt.date(2026, 9, 1)):
+        out = []
+        for i in range(n):
+            won = (i * hit_rate) % 1 + hit_rate >= 1          # an even spread of wins
+            out.append(dict(league=lg, conf=conf, status="won" if won else "lost",
+                            played=(start + dt.timedelta(days=i // 5)).isoformat()))
+        return out
+
+    def test_no_fallback_cutoff(self):
+        import daily_review as R
+        cuts, detail = R.fit_calls(self.picks(80, 70.0, 0.6))      # 60% at 70%: never qualifies
+        self.assertNotIn("nhl", cuts)
+        self.assertIsNone(detail["nhl"]["cutoff"])
+        cuts, _ = R.fit_calls(self.picks(80, 70.0, 0.8))
+        self.assertEqual(cuts.get("nhl"), 0.55)          # the lowest cut that selects them
+
+    def test_weights_need_held_out_gain(self):
+        import daily_review as R
+        self.assertEqual(R.W_GRID[0], 0.0)
+        # legacy rows (no raw model/market pair) are never fitted
+        self.assertIsNone(R.picks_view(dict(conf=70, price="-200", status="won")))
+        rows = [dict(league="nfl", myside="home", p_model_away=0.5, p_market_away=0.4,
+                     status="won" if i % 10 < 6 else "lost",
+                     played=(dt.date(2026, 9, 1) + dt.timedelta(days=i)).isoformat()) for i in range(60)]
+        w, d = R.refit(rows)      # the model adds nothing: home wins 60% = the market's 60%
+        self.assertEqual(w["nfl"], 0.0)
+
+
 class StuckSweep(unittest.TestCase):
     """Anything still open a week after its game is reported, not left silent."""
 

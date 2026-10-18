@@ -430,8 +430,9 @@ try { STRONGONLY = localStorage.getItem("strongonly") === "1";
       COMBOONLY = localStorage.getItem("comboonly") === "1"; } catch (e) {}
 function strongBar(n){
   const S = D.strong;
-  const rec = S ? ' Strong calls hit <b>' + S.hit + '%</b> on ' + S.n + ' picks the cut-offs never saw '
-    + '(all picks ' + S.all_hit + '%).' : '';
+  const rec = S ? ' Strong calls, as published, hit <b>' + S.hit + '%</b> on ' + S.n + ' picks'
+    + (S.days ? ' over ' + S.days + ' days' : '') + ' the cut-offs never saw (all picks ' + S.all_hit + '%). '
+    + 'Leagues whose record has not earned a cut-off show no strong calls.' : '';
   return '<p class="coinbar">' + (STRONGONLY ? 'Showing strong calls only' + (n ? ' (' + n + ' close games hidden).' : '.')
     : 'Strong and close games shown.') + rec
     + ' <button type="button" id="strongToggle">' + (STRONGONLY ? 'Show all' : 'Strong only') + '</button>'

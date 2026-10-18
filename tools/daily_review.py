@@ -29,7 +29,10 @@ ROOT = os.path.dirname(HERE)
 OUT = os.path.join(ROOT, "review")
 ET = ZoneInfo("America/New_York")
 MIN_FIT = 40                 # graded picks a league needs before its own weight
-W_GRID = [i / 20 for i in range(1, 9)]        # 0.05 .. 0.40: the model always breaks ties
+# 0 .. 0.40. Zero is in the grid: "market only" must be a real choice, not
+# 5% (until 2026-10-18 the grid started at 0.05 and its first score was
+# mislabelled market-only)
+W_GRID = [i / 20 for i in range(0, 9)]
 W_DEFAULT = 0.20
 
 
@@ -79,21 +82,22 @@ def lg_(x):
 
 
 def picks_view(e):
-    """(model p, market p) for the side picked, or None."""
+    """(model p, market p) for the side picked, from the raw pair saved when
+    the pick was made; None without one. Older entries only have the shown
+    confidence (already a blend) and one side's price -- they measured a
+    blend against a guess, so they are kept for description only, never
+    fitted (until 2026-10-18 all 372 MLB and 79 NFL fitting rows were them)."""
     pa, qa = e.get("p_model_away"), e.get("p_market_away")
-    if pa is not None and qa is not None and e.get("myside") in ("away", "home"):
+    if pa is not None and qa is not None and e.get("myside") in ("away", "home") and 0 < qa < 1:
         if e["myside"] == "away":
             return pa, qa
         return 1 - pa, 1 - qa
-    q = implied(e.get("price"))
-    if q is None or not e.get("conf"):
-        return None
-    return e["conf"] / 100, min(q / 1.03, 0.99)   # older entries: one side, rough de-vig
+    return None
 
 
 def refit(graded):
     by = defaultdict(list)
-    for e in graded:
+    for e in sorted(graded, key=lambda e: day_of(e) or ""):
         v = picks_view(e)
         if v:
             by[e["league"]].append((v[0], v[1], e["status"] == "won"))
@@ -109,9 +113,23 @@ def refit(graded):
                 ll -= math.log(p if won else 1 - p)
             scores.append((ll / len(rs), w))
         best = min(scores)
-        out[lg] = best[1]
-        detail[lg] = dict(n=len(rs), weight=best[1], logloss=round(best[0], 4),
-                          model_only=round(scores[-1][0], 4), market_only=round(scores[0][0], 4))
+        # the model gets a say only if that holds on games it was not fitted
+        # on: weight from the older half by date, scored on the newer half
+        # against market-only. Otherwise market only (w = 0).
+        m = len(rs) // 2
+        def ll(rows, w):
+            t = 0.0
+            for pm, q, won in rows:
+                p = 1 / (1 + math.exp(-((1 - w) * lg_(q) + w * lg_(pm))))
+                t -= math.log(p if won else 1 - p)
+            return t / len(rows)
+        w_old = min(W_GRID, key=lambda w: ll(rs[:m], w))
+        held = ll(rs[m:], w_old) < ll(rs[m:], 0.0)
+        w = best[1] if held else 0.0
+        out[lg] = w
+        detail[lg] = dict(n=len(rs), weight=w, fitted=best[1], held_out=held, logloss=round(best[0], 4),
+                          market_only=round(scores[0][0], 4),          # w = 0
+                          model_40=round(scores[-1][0], 4))            # w = 0.40, the most allowed
     return out, detail
 
 
@@ -146,12 +164,22 @@ def chance_and_result(e):
     return None
 
 
+def published(e):
+    """(chance shown, did it win) for a graded pick, exactly as published."""
+    if not e.get("conf"):
+        return None
+    return e["conf"] / 100, e["status"] == "won"
+
+
 def fit_calls(graded):
     """Per league, the lowest cutoff whose own record reaches CALL_TARGET on
-    CALL_MIN_N+ games; if none does, the cutoff with the best record on 15+."""
+    CALL_MIN_N+ games AND holds in both halves by date, on the chances as
+    published. A league where none qualifies gets no strong calls and is
+    listed as unqualified (until 2026-10-18 it fell back to the best cutoff
+    on 15+ games, so "strong" appeared where nothing had qualified)."""
     by = defaultdict(list)
     for e in sorted(graded, key=lambda e: day_of(e) or ""):     # halves by date
-        x = chance_and_result(e)
+        x = published(e)
         if x:
             by[e["league"]].append(x)
     cuts, detail = {}, {}
@@ -163,8 +191,7 @@ def fit_calls(graded):
                 table.append((c, len(sel), sum(sel) / len(sel)))
         # a cut-off counts only if it held in BOTH the older and the newer
         # half of the league's picks -- the lowest one that reached the target
-        # once was often a lucky streak (WTA's 55% scored 60.7% on picks it
-        # never saw; this rule took the strong calls from 78.4% to 79.9%)
+        # once was often a lucky streak
         m = len(rs) // 2
         def holds(c):
             a = [w for q, w in rs[:m] if q >= c]
@@ -173,13 +200,11 @@ def fit_calls(graded):
                     and sum(a) / len(a) >= CALL_TARGET and sum(b) / len(b) >= CALL_TARGET)
         ok = [t for t in table if t[1] >= CALL_MIN_N and t[2] >= CALL_TARGET and holds(t[0])
               and t[0] >= CALL_FLOOR.get(lg, 0)]
-        if ok:
-            pick = ok[0]
-        else:
-            fall = [t for t in table if t[1] >= 15 and t[0] >= CALL_FLOOR.get(lg, 0)]
-            if not fall:
-                continue
-            pick = max(fall, key=lambda t: t[2])
+        if not ok:
+            detail[lg] = dict(cutoff=None, games=len(rs), note="insufficient evidence: no cutoff qualified",
+                              all_hit=round(100 * sum(w for _, w in rs) / len(rs), 1))
+            continue
+        pick = ok[0]
         cuts[lg] = round(pick[0], 3)
         detail[lg] = dict(cutoff=round(pick[0], 3), calls=pick[1], hit=round(100 * pick[2], 1),
                           games=len(rs), all_hit=round(100 * sum(w for _, w in rs) / len(rs), 1))
@@ -251,19 +276,34 @@ def audit(graded, props, locks):
     return out
 
 
-def holdout(graded):
-    """The strong-call cut-offs, tested honestly: fitted on the older half of
-    graded picks, scored on the newer half they never saw. This is the number
-    the board shows next to "strong" -- never the in-sample one."""
-    g = sorted(graded, key=lambda e: day_of(e) or "")
+def _date_split(g):
+    """Older / newer halves on a date boundary, so one day's games never sit
+    on both sides."""
     h = len(g) // 2
-    if h < 100:
+    if not g:
+        return [], []
+    d = day_of(g[h]) or ""
+    k = next((i for i, e in enumerate(g) if (day_of(e) or "") >= d), h)
+    return g[:k], g[k:]
+
+
+def holdout(graded):
+    """The strong-call record the board shows, tested honestly: cut-offs
+    fitted on the older half by date, scored on the newer half's picks AS
+    PUBLISHED -- the side and chance actually shown, no re-scoring. Until
+    2026-10-18 this re-scored old picks as the market favourite (flipping
+    104 results in the newer half), which measured a different policy; that
+    simulation is kept apart under `simulated`. Each row counts a pick;
+    `days` says how many separate days they came from."""
+    g = sorted(graded, key=lambda e: day_of(e) or "")
+    old, new = _date_split(g)
+    if len(old) < 100 or not new:
         return None
-    cuts, _ = fit_calls(g[:h])
-    strong = alln = 0
-    sw = aw = 0
-    for e in g[h:]:
-        x = chance_and_result(e)
+    cuts, _ = fit_calls(old)
+    strong = alln = sw = aw = 0
+    days = set()
+    for e in new:
+        x = published(e)
         if not x:
             continue
         alln += 1
@@ -272,10 +312,16 @@ def holdout(graded):
         if c is not None and x[0] >= c:
             strong += 1
             sw += x[1]
+            days.add(day_of(e))
     if not strong:
         return None
-    return dict(n=strong, hit=round(100 * sw / strong, 1), all_n=alln,
-                all_hit=round(100 * aw / alln, 1), since=day_of(g[h]), until=day_of(g[-1]))
+    sim = [chance_and_result(e) for e in new]
+    sim = [x for x in sim if x]
+    return dict(n=strong, hit=round(100 * sw / strong, 1), all_n=alln, days=len(days),
+                all_hit=round(100 * aw / alln, 1), since=day_of(new[0]), until=day_of(new[-1]),
+                basis="as published",
+                simulated=dict(what="old picks re-scored as the market favourite", n=len(sim),
+                               hit=round(100 * sum(w for _, w in sim) / len(sim), 1) if sim else None))
 
 
 def clv(rs):
@@ -465,6 +511,7 @@ def main():
     with open(os.path.join(OUT, "call_min.json"), "w") as fh:
         json.dump(dict(updated=dt.datetime.now(ET).isoformat(timespec="minutes"),
                        target=CALL_TARGET, cutoffs=cuts, detail=cdetail,
+                       unqualified=sorted(k for k, v in cdetail.items() if v.get("cutoff") is None),
                        holdout=holdout(graded)), fh, indent=1,
                   sort_keys=True)
     log[today.isoformat()]["calls"] = cdetail
