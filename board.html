@@ -1858,6 +1858,32 @@ buildTabs(); render(); drawSlip();
 // touching it. On the Claude artifact there is no build.txt, the fetch simply
 // fails, and this does nothing.
 (function () {
+  // Every tab, not only Results: if this copy is 20+ minutes old the board has
+  // stopped refreshing (or this is a cached copy), and its cards and prices
+  // may no longer be FanDuel's. Say so above everything, checked each minute.
+  var cap = (typeof D === "object" && D.results && D.results.captured) || null;
+  function staleBanner() {
+    if (!cap) return;
+    var mins = Math.round((Date.now() - cap) / 60000);
+    var el = document.getElementById("stalebar");
+    if (mins < 20) { if (el) el.remove(); return; }
+    if (!el) {
+      el = document.createElement("div");
+      el.id = "stalebar";
+      el.setAttribute("role", "alert");
+      el.style.cssText = "position:sticky;top:0;z-index:50;padding:10px 16px;font-weight:600;"
+        + "background:var(--bad,#b3261e);color:#fff;text-align:center";
+      document.body.insertBefore(el, document.body.firstChild);
+    }
+    var age = mins < 120 ? mins + " minutes" : Math.round(mins / 60) + " hours";
+    el.textContent = "This page is " + age + " old (it normally updates every 5 minutes). "
+      + "Cards, picks and prices may have changed -- check FanDuel before betting.";
+  }
+  staleBanner();
+  setInterval(staleBanner, 60000);
+  document.addEventListener("visibilitychange", staleBanner);
+})();
+(function () {
   // The page knows when it was built (results.captured, ms); build.txt says
   // when the newest page was published. If ours is older -- a phone resuming a
   // background tab, or a cached copy -- reload, with the build in the address
