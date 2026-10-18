@@ -2598,9 +2598,9 @@
     "hit": 83.3
    },
    "wsl": {
-    "all_hit": 66.7,
+    "all_hit": 50.0,
     "cutoff": null,
-    "games": 3,
+    "games": 4,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "wta": {
@@ -2729,6 +2729,14 @@
     "price": null,
     "said": 64.4,
     "why": "margin 3 \u00b7 called at 64%"
+   },
+   {
+    "against_market": false,
+    "league": "wsl",
+    "pick": "Liverpool",
+    "price": null,
+    "said": 79.9,
+    "why": "margin 1 \u00b7 called at 80%"
    },
    {
     "against_market": false,
@@ -2870,11 +2878,11 @@
    }
   ],
   "picks": {
-   "hit": 63.6,
-   "lost": 16,
-   "n": 44,
+   "hit": 62.2,
+   "lost": 17,
+   "n": 45,
    "roi": 0.4,
-   "said": 65.7,
+   "said": 66.0,
    "won": 28
   },
   "picks_by_league": {
@@ -2991,11 +2999,11 @@
     "won": 1
    },
    "wsl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
     "roi": 23.5,
-    "said": 73.9,
+    "said": 75.9,
     "won": 2
    },
    "wta": {
@@ -3037,11 +3045,11 @@
    "won": 0
   },
   "strong": {
-   "hit": 66.7,
-   "lost": 2,
-   "n": 6,
+   "hit": 57.1,
+   "lost": 3,
+   "n": 7,
    "roi": null,
-   "said": 74.8,
+   "said": 75.5,
    "won": 4
   },
   "stuck": [],
