@@ -45,7 +45,8 @@
   "p": 0.8627,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "epl:401879261|248761|Goalkeeper Saves|2+": {
   "aid": "248761",
@@ -61,7 +62,8 @@
   "p": 0.675,
   "p_fair": null,
   "price": "-260",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "epl:401879263|93193|Goalkeeper Saves|1+": {
   "aid": "93193",
@@ -194,6 +196,22 @@
   "p": 0.8846,
   "p_fair": null,
   "price": "-1600",
+  "status": "open"
+ },
+ "fra:401876433|122280|Goalkeeper Saves|1+": {
+  "aid": "122280",
+  "date": "2026-10-18",
+  "edge": null,
+  "gid": "fra:401876433",
+  "imp": 0.9677,
+  "label": "Kevin Trapp: 1+ Goalkeeper Saves",
+  "league": "fra",
+  "line": "1+",
+  "market": "Goalkeeper Saves",
+  "name": "Kevin Trapp",
+  "p": 0.8887,
+  "p_fair": null,
+  "price": "-3000",
   "status": "open"
  },
  "fra:401876433|164126|Goalkeeper Saves|2+": {
@@ -406,7 +424,8 @@
   "p": 0.3328,
   "p_fair": null,
   "price": "+180",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "fra:401876439|297161|Goalkeeper Saves|2+": {
   "aid": "297161",
@@ -422,7 +441,8 @@
   "p": 0.8295,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "void",
+  "void_why": "not in box score"
  },
  "ger:401884768|149297|Goalkeeper Saves|2+": {
   "aid": "149297",

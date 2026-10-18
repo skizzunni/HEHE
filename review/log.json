@@ -2386,9 +2386,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "epl": {
-    "all_hit": 83.3,
+    "all_hit": 87.5,
     "cutoff": null,
-    "games": 6,
+    "games": 8,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "esp": {
@@ -2404,9 +2404,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "fra": {
-    "all_hit": 60.0,
+    "all_hit": 66.7,
     "cutoff": null,
-    "games": 5,
+    "games": 6,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "fra2": {
@@ -2446,9 +2446,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ita2": {
-    "all_hit": 66.7,
+    "all_hit": 71.4,
     "cutoff": null,
-    "games": 6,
+    "games": 7,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "jpn": {
@@ -2567,9 +2567,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "tur": {
-    "all_hit": 100.0,
+    "all_hit": 85.7,
     "cutoff": null,
-    "games": 6,
+    "games": 7,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "ufc": {
@@ -2598,9 +2598,9 @@
     "hit": 83.3
    },
    "wsl": {
-    "all_hit": 50.0,
+    "all_hit": 66.7,
     "cutoff": null,
-    "games": 4,
+    "games": 6,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "wta": {
@@ -2612,9 +2612,9 @@
    }
   },
   "clv": {
-   "avg": -0.07,
-   "beat": 25.0,
-   "n": 4
+   "avg": 2.88,
+   "beat": 57.1,
+   "n": 7
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2732,6 +2732,14 @@
    },
    {
     "against_market": false,
+    "league": "tur",
+    "pick": "Kocaelispor",
+    "price": null,
+    "said": 51.1,
+    "why": "margin 1 \u00b7 called at 51%"
+   },
+   {
+    "against_market": false,
     "league": "wsl",
     "pick": "Liverpool",
     "price": null,
@@ -2797,10 +2805,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Neal Maupay: Anytime Goalscorer"
+    ],
     "legs": 5,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 0
    },
@@ -2821,10 +2831,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Neal Maupay: Anytime Goalscorer"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
@@ -2837,10 +2849,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Neal Maupay: Anytime Goalscorer"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+25",
     "won": 0
    },
@@ -2853,10 +2867,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Neal Maupay: Anytime Goalscorer"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+50",
     "won": 0
    },
@@ -2869,21 +2885,23 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Neal Maupay: Anytime Goalscorer"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+100",
     "won": 0
    }
   ],
   "picks": {
-   "hit": 62.2,
-   "lost": 17,
-   "n": 45,
-   "roi": 0.4,
-   "said": 66.0,
-   "won": 28
+   "hit": 65.4,
+   "lost": 18,
+   "n": 52,
+   "roi": 10.9,
+   "said": 66.6,
+   "won": 34
   },
   "picks_by_league": {
    "atp": {
@@ -2918,6 +2936,14 @@
     "said": 72.1,
     "won": 2
    },
+   "epl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 2,
+    "roi": 42.6,
+    "said": 66.8,
+    "won": 2
+   },
    "esp": {
     "hit": 100.0,
     "lost": 0,
@@ -2932,6 +2958,14 @@
     "n": 1,
     "roi": null,
     "said": 67.0,
+    "won": 1
+   },
+   "fra": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 76.7,
     "won": 1
    },
    "ger2": {
@@ -2949,6 +2983,14 @@
     "roi": null,
     "said": 79.1,
     "won": 0
+   },
+   "ita2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 72.0,
+    "won": 1
    },
    "jpn": {
     "hit": 50.0,
@@ -2991,20 +3033,20 @@
     "won": 2
    },
    "tur": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
     "roi": null,
-    "said": 52.6,
+    "said": 51.9,
     "won": 1
    },
    "wsl": {
-    "hit": 66.7,
+    "hit": 80.0,
     "lost": 1,
-    "n": 3,
-    "roi": 23.5,
-    "said": 75.9,
-    "won": 2
+    "n": 5,
+    "roi": 18.4,
+    "said": 77.5,
+    "won": 4
    },
    "wta": {
     "hit": 50.0,
@@ -3022,8 +3064,8 @@
     "said_price": 83.5,
     "won": 10
    },
-   "n": 1,
-   "said": 84.8,
+   "n": 2,
+   "said": 59.1,
    "won": 1
   },
   "safe_locks": {
@@ -3045,12 +3087,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 57.1,
+   "hit": 70.0,
    "lost": 3,
-   "n": 7,
-   "roi": null,
-   "said": 75.5,
-   "won": 4
+   "n": 10,
+   "roi": 15.8,
+   "said": 76.5,
+   "won": 7
   },
   "stuck": [],
   "vs_market_14d": {
@@ -3063,12 +3105,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 66.9,
+    "hit": 67.3,
     "lost": 83,
-    "n": 251,
-    "roi": -1.9,
-    "said": 63.3,
-    "won": 168
+    "n": 254,
+    "roi": -1.6,
+    "said": 63.5,
+    "won": 171
    }
   },
   "weights": {

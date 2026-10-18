@@ -1043,12 +1043,13 @@
    "match": "Manchester United at Leeds United",
    "p": 0.9736,
    "p_model": 0.9746,
+   "score": "Manchester United 1 - Leeds United 1",
    "spec": {
     "line": 3.5,
     "t": "nomargin",
     "team": "Leeds United"
    },
-   "status": "open"
+   "status": "won"
   },
   "epl:401879261|No \u00b7 Brighton & Hove Albion wins by over 3.5 goals": {
    "away": "Crystal Palace",
@@ -1060,12 +1061,13 @@
    "match": "Crystal Palace at Brighton & Hove Albion",
    "p": 0.9012,
    "p_model": 0.905,
+   "score": "Crystal Palace 0 - Brighton & Hove Albion 5",
    "spec": {
     "line": 3.5,
     "t": "nomargin",
     "team": "Brighton & Hove Albion"
    },
-   "status": "open"
+   "status": "lost"
   },
   "epl:401879261|Over 0.5 goals": {
    "away": "Crystal Palace",
@@ -1077,11 +1079,12 @@
    "match": "Crystal Palace at Brighton & Hove Albion",
    "p": 0.9584,
    "p_model": 0.96,
+   "score": "Crystal Palace 0 - Brighton & Hove Albion 5",
    "spec": {
     "line": 0.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "epl:401879263|No \u00b7 AFC Bournemouth wins by over 3.5 goals": {
    "away": "Sunderland",
@@ -1501,12 +1504,13 @@
    "match": "Marseille at Angers",
    "p": 0.9611,
    "p_model": 0.9626,
+   "score": "Marseille 5 - Angers 2",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Angers"
    },
-   "status": "open"
+   "status": "won"
   },
   "ger2:401885085|No \u00b7 SpVgg Greuther F\u00fcrth wins by over 3.5 goals": {
    "away": "TSV Eintracht Braunschweig",
@@ -1882,11 +1886,12 @@
    "match": "Sudtirol at Juve Stabia",
    "p": 0.9589,
    "p_model": 0.9604,
+   "score": "Sudtirol 0 - Juve Stabia 3",
    "spec": {
     "line": 5.5,
     "t": "under"
    },
-   "status": "open"
+   "status": "won"
   },
   "ita2:401899599|No \u00b7 Ascoli wins by over 3.5 goals": {
    "away": "Empoli",
@@ -5983,7 +5988,7 @@
    "logged": "2026-10-18T00:02",
    "n": 2,
    "prob": 0.8101,
-   "status": "open"
+   "status": "lost"
   },
   "20261018:3:0": {
    "fair": 1.37,
@@ -6007,7 +6012,7 @@
    "logged": "2026-10-18T00:02",
    "n": 3,
    "prob": 0.7297,
-   "status": "open"
+   "status": "lost"
   },
   "20261018:3:2": {
    "fair": 1.37,
