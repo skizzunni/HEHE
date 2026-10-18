@@ -1650,13 +1650,15 @@ function scoreboardHTML(){
   // the review's alarms: what is trailing its stated chance, what never settled
   const HL = D.health;
   if(HL){
-    const bad = (HL.trailing || []).length + (HL.stuck || []).length;
+    const bad = (HL.trailing || []).length + (HL.stuck || []).length + (HL.integrity || []).length;
     h += '<div class="sect" id="health"><h2>Checks</h2>'
       + (bad ? '<p class="age stale"><b>' + bad + ' problem' + (bad === 1 ? '' : 's') + ' found</b> in the '
           + esc(HL.day) + ' review:</p><ul class="legs">'
           + (HL.trailing || []).map(a => '<li>Trailing: <b>' + esc(a.name) + '</b> won ' + a.hit
               + '% against ' + a.said + '% stated (' + a.n + ' graded)</li>').join("")
-          + (HL.stuck || []).map(x => '<li>Never settled: ' + esc(x) + '</li>').join("") + '</ul>'
+          + (HL.stuck || []).map(x => '<li>Never settled: ' + esc(x) + '</li>').join("")
+          + (HL.integrity || []).map(x => '<li>Bad data: ' + esc(x[1]) + ' at ' + esc(x[0])
+              + ' (' + esc(x[2]) + ')</li>').join("") + '</ul>'
         : '<p class="age"><b>All checks passing</b> &mdash; ' + (HL.checked || 0)
           + ' splits within their stated chance, nothing stuck unsettled (' + esc(HL.day) + ' review).</p>')
       + '</div>';

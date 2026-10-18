@@ -94,7 +94,8 @@ def main():
     fails = []
     now = int(time.time() * 1000)
     sick = dict(day="2026-10-18", checked=5, stuck=["props mlb:1|x|RBIs|1+"],
-                trailing=[dict(name="props uel Shots", hit=40.0, said=84.3, n=20, flag=True)])
+                trailing=[dict(name="props uel Shots", hit=40.0, said=84.3, n=20, flag=True)],
+                integrity=[["D.locks.today.locks[0].p", "chance outside 0-1", "1.3"]])
     old = render(now - 45 * 60000, sick)
     new = render(now, dict(day="2026-10-18", checked=5, stuck=[], trailing=[]))
     print("stale copy:", old)
@@ -110,8 +111,8 @@ def main():
         fails.append("Winners parlay line missing or wrong: " + bars)
     if "Best play: the top 10 legs" not in bars or "54% to all hit" not in bars:
         fails.append("Best play line missing or wrong: " + bars)
-    if "2 problems found" not in old["health"] or "props uel Shots" not in old["health"] \
-            or "Never settled" not in old["health"]:
+    if "3 problems found" not in old["health"] or "props uel Shots" not in old["health"] \
+            or "Never settled" not in old["health"] or "Bad data: chance outside 0-1" not in old["health"]:
         fails.append("health box must list the trailing split and the stuck record: " + old["health"])
     if "All checks passing" not in new["health"]:
         fails.append("clean review must read 'All checks passing': " + new["health"])

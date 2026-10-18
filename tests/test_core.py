@@ -237,6 +237,22 @@ class StuckSweep(unittest.TestCase):
         self.assertEqual(sorted(got), [("picks", "a"), ("props", "p")])
 
 
+class Integrity(unittest.TestCase):
+    """Every build checks its own data before publishing."""
+
+    def test_catches_bad_values(self):
+        import integrity
+        bad = {"locks": {"today": {"locks": [
+            dict(p=1.3, price="None", label=None),
+            dict(p=0.8, price="-400", label="ok", kalshi=dict(price="0.97"))]}},
+            "x": dict(note="None is fine in a note", tag="nan")}
+        got = {(p, w) for p, w, _ in integrity.check(bad)}
+        self.assertEqual(got, {("D.locks.today.locks[0].p", "chance outside 0-1"),
+                               ("D.locks.today.locks[0].price", "price does not parse"),
+                               ("D.locks.today.locks[0].label", "missing name"),
+                               ("D.x.tag", "None/nan in text")})
+
+
 class BotFreshness(unittest.TestCase):
     """The Kalshi bot never buys from tickets it cannot prove are fresh."""
 

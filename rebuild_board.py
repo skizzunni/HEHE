@@ -1002,6 +1002,19 @@ def changes(new):
 
 def write(new):
     """Swap the embedded data block in board.html for `new`."""
+    # every build checks its own data before publishing (integrity.py);
+    # problems go to the Results tab's Checks box and the build log
+    try:
+        import integrity
+        bad = integrity.check(new)
+    except Exception as ex:                     # the check must never block a build
+        bad = [("D", "integrity check failed to run", str(ex))]
+    if isinstance(new.get("health"), dict):
+        new["health"]["integrity"] = bad
+    elif bad:
+        new["health"] = dict(day="", trailing=[], stuck=[], checked=0, integrity=bad)
+    for b in bad[:5]:
+        print(f"integrity: {b[1]} at {b[0]}: {b[2]}", file=sys.stderr)
     src = open(BOARD).read()
     blob = json.dumps(new, separators=(",", ":"))
     src2 = re.sub(r"const D = \{.*?\};\n", "const D = " + blob.replace("\\", "\\\\") + ";\n",
