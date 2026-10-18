@@ -2519,9 +2519,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nor": {
-    "all_hit": 61.5,
+    "all_hit": 60.0,
     "cutoff": null,
-    "games": 13,
+    "games": 15,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nwsl": {
@@ -2764,6 +2764,14 @@
    },
    {
     "against_market": false,
+    "league": "nor",
+    "pick": "Sandefjord",
+    "price": null,
+    "said": 65.0,
+    "why": "margin 2 \u00b7 called at 65%"
+   },
+   {
+    "against_market": false,
     "league": "swe",
     "pick": "GAIS",
     "price": null,
@@ -2959,12 +2967,12 @@
    }
   ],
   "picks": {
-   "hit": 68.8,
-   "lost": 24,
-   "n": 77,
+   "hit": 68.4,
+   "lost": 25,
+   "n": 79,
    "roi": 11.6,
-   "said": 68.3,
-   "won": 53
+   "said": 68.2,
+   "won": 54
   },
   "picks_by_league": {
    "atp": {
@@ -3113,11 +3121,11 @@
    },
    "nor": {
     "hit": 50.0,
-    "lost": 1,
-    "n": 2,
+    "lost": 2,
+    "n": 4,
     "roi": 36.4,
-    "said": 66.8,
-    "won": 1
+    "said": 65.5,
+    "won": 2
    },
    "rsa": {
     "hit": 100.0,
