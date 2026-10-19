@@ -1049,11 +1049,13 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Chandler Simpson",
   "p": 0.7408,
   "p_fair": null,
   "price": "-330",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "mlb:401930515|n:drew rasmussen|Strikeouts Thrown|3+": {
   "aid": null,
@@ -1065,11 +1067,13 @@
   "league": "mlb",
   "line": "3+",
   "market": "Strikeouts Thrown",
+  "matched": "name",
   "name": "Drew Rasmussen",
   "p": 0.902,
   "p_fair": 0.8986,
   "price": "-2500",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "mlb:401930515|n:drew rasmussen|Strikeouts Thrown|4+": {
   "aid": null,
@@ -1081,11 +1085,13 @@
   "league": "mlb",
   "line": "4+",
   "market": "Strikeouts Thrown",
+  "matched": "name",
   "name": "Drew Rasmussen",
   "p": 0.8456,
   "p_fair": 0.8314,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "mlb:401930515|n:liam hicks|Hits + Runs + RBIs|2+": {
   "aid": null,
@@ -1097,11 +1103,13 @@
   "league": "mlb",
   "line": "2+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Liam Hicks",
   "p": 0.4107,
   "p_fair": null,
   "price": "+135",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "mlb:401930515|n:parker messick|Strikeouts Thrown|3+": {
   "aid": null,
@@ -1113,11 +1121,13 @@
   "league": "mlb",
   "line": "3+",
   "market": "Strikeouts Thrown",
+  "matched": "name",
   "name": "Parker Messick",
   "p": 0.8496,
   "p_fair": 0.8526,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "mlb:401930515|n:parker messick|Strikeouts Thrown|4+": {
   "aid": null,
@@ -1129,11 +1139,13 @@
   "league": "mlb",
   "line": "4+",
   "market": "Strikeouts Thrown",
+  "matched": "name",
   "name": "Parker Messick",
   "p": 0.7385,
   "p_fair": 0.7215,
   "price": "-370",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "mlb:401930515|n:yandy diaz|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -1145,11 +1157,13 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Yandy Diaz",
   "p": 0.7269,
   "p_fair": null,
   "price": "-350",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "mls:761876|n:st louis city sc|Team Total Goals|3.5": {
   "aid": null,
@@ -4140,6 +4154,22 @@
   "price": "-650",
   "status": "open"
  },
+ "nfl:401873007|n:christian watson|Receiving Yards|50+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -10.9,
+  "gid": "nfl:401873007",
+  "imp": 0.7778,
+  "label": "Christian Watson: 50+ Receiving Yards",
+  "league": "nfl",
+  "line": "50+",
+  "market": "Receiving Yards",
+  "name": "Christian Watson",
+  "p": 0.7603,
+  "p_fair": 0.6929,
+  "price": "-350",
+  "status": "open"
+ },
  "nfl:401873007|n:dak prescott|Passing Touchdowns|1+": {
   "aid": null,
   "date": "2026-10-18",
@@ -4394,6 +4424,22 @@
   "p": 0.8496,
   "p_fair": 0.8067,
   "price": "-1000",
+  "status": "open"
+ },
+ "nfl:401873007|n:tucker kraft|Receiving Yards|25+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": -11.8,
+  "gid": "nfl:401873007",
+  "imp": 0.8667,
+  "label": "Tucker Kraft: 25+ Receiving Yards",
+  "league": "nfl",
+  "line": "25+",
+  "market": "Receiving Yards",
+  "name": "Tucker Kraft",
+  "p": 0.8472,
+  "p_fair": 0.7647,
+  "price": "-650",
   "status": "open"
  },
  "nfl:401873007|n:tucker kraft|Receiving Yards|30+": {
@@ -6519,6 +6565,22 @@
   "p": 0.8705,
   "p_fair": null,
   "price": "-2000",
+  "status": "open"
+ },
+ "nhl:401892534|n:jackson blake|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-10-18",
+  "edge": null,
+  "gid": "nhl:401892534",
+  "imp": 0.7531,
+  "label": "Jackson Blake: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Jackson Blake",
+  "p": 0.6884,
+  "p_fair": null,
+  "price": "-305",
   "status": "open"
  },
  "nhl:401892534|n:joel farabee|Shots on Goal|1+": {
