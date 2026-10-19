@@ -2256,146 +2256,6 @@
   }
  },
  "2026-10-18": {
-  "audit": [
-   {
-    "flag": false,
-    "hit": 58.6,
-    "n": 58,
-    "name": "tennis Kalshi-priced",
-    "said": 68.6
-   },
-   {
-    "flag": false,
-    "hit": 71.0,
-    "n": 31,
-    "name": "tennis no market",
-    "said": 62.2
-   },
-   {
-    "flag": false,
-    "hit": 90.0,
-    "n": 10,
-    "name": "props mlb Hits + Runs + RBIs",
-    "said": 67.2
-   },
-   {
-    "flag": false,
-    "hit": 37.5,
-    "n": 24,
-    "name": "props nfl Anytime Touchdown Scorer",
-    "said": 42.0
-   },
-   {
-    "flag": false,
-    "hit": 87.5,
-    "n": 16,
-    "name": "props nfl Passing Yards",
-    "said": 81.5
-   },
-   {
-    "flag": false,
-    "hit": 91.9,
-    "n": 37,
-    "name": "props nfl Receiving Yards",
-    "said": 80.0
-   },
-   {
-    "flag": false,
-    "hit": 81.8,
-    "n": 44,
-    "name": "props nfl Receptions",
-    "said": 80.7
-   },
-   {
-    "flag": false,
-    "hit": 71.4,
-    "n": 21,
-    "name": "props nfl Rushing Yards",
-    "said": 80.6
-   },
-   {
-    "flag": false,
-    "hit": 77.5,
-    "n": 129,
-    "name": "props nhl Shots on Goal",
-    "said": 78.6
-   },
-   {
-    "flag": false,
-    "hit": 53.8,
-    "n": 13,
-    "name": "props ufc Winner",
-    "said": 67.0
-   },
-   {
-    "flag": false,
-    "hit": 76.9,
-    "n": 13,
-    "name": "locks ncaaf under",
-    "said": 82.2
-   }
-  ],
-  "calls": {
-   "atp": {
-    "all_hit": 68.8,
-    "calls": 74,
-    "cutoff": 0.65,
-    "games": 138,
-    "hit": 81.1
-   },
-   "mlb": {
-    "all_hit": 58.3,
-    "cutoff": null,
-    "games": 372,
-    "note": "insufficient evidence: no cutoff qualified"
-   },
-   "ncaaf": {
-    "all_hit": 74.5,
-    "calls": 314,
-    "cutoff": 0.575,
-    "games": 502,
-    "hit": 83.1
-   },
-   "nfl": {
-    "all_hit": 58.2,
-    "cutoff": null,
-    "games": 91,
-    "note": "insufficient evidence: no cutoff qualified"
-   },
-   "nhl": {
-    "all_hit": 59.1,
-    "cutoff": null,
-    "games": 93,
-    "note": "insufficient evidence: no cutoff qualified"
-   },
-   "soccer": {
-    "all_hit": 60.9,
-    "calls": 227,
-    "cutoff": 0.675,
-    "games": 532,
-    "hit": 76.2
-   },
-   "ufc": {
-    "all_hit": 63.6,
-    "cutoff": null,
-    "games": 88,
-    "note": "insufficient evidence: no cutoff qualified"
-   },
-   "wnba": {
-    "all_hit": 78.7,
-    "calls": 36,
-    "cutoff": 0.55,
-    "games": 47,
-    "hit": 83.3
-   },
-   "wta": {
-    "all_hit": 69.7,
-    "calls": 69,
-    "cutoff": 0.725,
-    "games": 201,
-    "hit": 85.5
-   }
-  },
   "clv": {
    "avg": 0.15,
    "beat": 46.9,
@@ -3002,12 +2862,12 @@
    }
   ],
   "picks": {
-   "hit": 66.5,
+   "hit": 66.7,
    "lost": 52,
-   "n": 155,
+   "n": 156,
    "roi": -1.4,
    "said": 69.5,
-   "won": 103
+   "won": 104
   },
   "picks_by_league": {
    "arg": {
@@ -3323,12 +3183,12 @@
     "won": 5
    },
    "wta": {
-    "hit": 45.5,
+    "hit": 50.0,
     "lost": 6,
-    "n": 11,
+    "n": 12,
     "roi": null,
-    "said": 61.7,
-    "won": 5
+    "said": 62.6,
+    "won": 6
    }
   },
   "props": {
@@ -3368,7 +3228,6 @@
    "said": 74.7,
    "won": 67
   },
-  "stuck": [],
   "vs_market_14d": {
    "against": {
     "hit": 38.2,
@@ -3385,6 +3244,227 @@
     "roi": -1.9,
     "said": 63.7,
     "won": 188
+   }
+  }
+ },
+ "2026-10-19": {
+  "audit": [
+   {
+    "flag": false,
+    "hit": 59.3,
+    "n": 59,
+    "name": "tennis Kalshi-priced",
+    "said": 68.7
+   },
+   {
+    "flag": false,
+    "hit": 71.0,
+    "n": 31,
+    "name": "tennis no market",
+    "said": 62.2
+   },
+   {
+    "flag": false,
+    "hit": 90.0,
+    "n": 10,
+    "name": "props mlb Hits + Runs + RBIs",
+    "said": 67.2
+   },
+   {
+    "flag": false,
+    "hit": 37.5,
+    "n": 24,
+    "name": "props nfl Anytime Touchdown Scorer",
+    "said": 42.0
+   },
+   {
+    "flag": false,
+    "hit": 87.5,
+    "n": 16,
+    "name": "props nfl Passing Yards",
+    "said": 81.5
+   },
+   {
+    "flag": false,
+    "hit": 91.9,
+    "n": 37,
+    "name": "props nfl Receiving Yards",
+    "said": 80.0
+   },
+   {
+    "flag": false,
+    "hit": 81.8,
+    "n": 44,
+    "name": "props nfl Receptions",
+    "said": 80.7
+   },
+   {
+    "flag": false,
+    "hit": 71.4,
+    "n": 21,
+    "name": "props nfl Rushing Yards",
+    "said": 80.6
+   },
+   {
+    "flag": false,
+    "hit": 77.5,
+    "n": 129,
+    "name": "props nhl Shots on Goal",
+    "said": 78.6
+   },
+   {
+    "flag": false,
+    "hit": 53.8,
+    "n": 13,
+    "name": "props ufc Winner",
+    "said": 67.0
+   },
+   {
+    "flag": false,
+    "hit": 76.9,
+    "n": 13,
+    "name": "locks ncaaf under",
+    "said": 82.2
+   }
+  ],
+  "calls": {
+   "atp": {
+    "all_hit": 68.8,
+    "calls": 74,
+    "cutoff": 0.65,
+    "games": 138,
+    "hit": 81.1
+   },
+   "mlb": {
+    "all_hit": 58.3,
+    "cutoff": null,
+    "games": 372,
+    "note": "insufficient evidence: no cutoff qualified"
+   },
+   "ncaaf": {
+    "all_hit": 74.5,
+    "calls": 314,
+    "cutoff": 0.575,
+    "games": 502,
+    "hit": 83.1
+   },
+   "nfl": {
+    "all_hit": 58.2,
+    "cutoff": null,
+    "games": 91,
+    "note": "insufficient evidence: no cutoff qualified"
+   },
+   "nhl": {
+    "all_hit": 59.1,
+    "cutoff": null,
+    "games": 93,
+    "note": "insufficient evidence: no cutoff qualified"
+   },
+   "soccer": {
+    "all_hit": 60.9,
+    "calls": 227,
+    "cutoff": 0.675,
+    "games": 532,
+    "hit": 76.2
+   },
+   "ufc": {
+    "all_hit": 63.6,
+    "cutoff": null,
+    "games": 88,
+    "note": "insufficient evidence: no cutoff qualified"
+   },
+   "wnba": {
+    "all_hit": 78.7,
+    "calls": 36,
+    "cutoff": 0.55,
+    "games": 47,
+    "hit": 83.3
+   },
+   "wta": {
+    "all_hit": 69.8,
+    "calls": 69,
+    "cutoff": 0.725,
+    "games": 202,
+    "hit": 85.5
+   }
+  },
+  "clv": {
+   "avg": null,
+   "beat": null,
+   "n": 0
+  },
+  "day": "2026-10-19",
+  "leaks_14d": [
+   {
+    "hit": 50.0,
+    "league": "nfl",
+    "lost": 14,
+    "n": 28,
+    "roi": -25.3,
+    "said": 58.9,
+    "won": 14
+   },
+   {
+    "hit": 52.0,
+    "league": "ufc",
+    "lost": 12,
+    "n": 25,
+    "roi": -21.7,
+    "said": 64.6,
+    "won": 13
+   }
+  ],
+  "locks": {
+   "lost": [],
+   "n": 0,
+   "open": 0,
+   "plays": {},
+   "won": 0
+  },
+  "losses": [],
+  "lottery": [],
+  "picks": {
+   "n": 0
+  },
+  "picks_by_league": {},
+  "props": {
+   "fair": {
+    "n": 141,
+    "said_fair": 82.0,
+    "said_price": 85.8,
+    "won": 118
+   },
+   "n": 0,
+   "said": null,
+   "won": 0
+  },
+  "safe_locks": {
+   "lost": [],
+   "n": 0,
+   "open": 0,
+   "plays": {},
+   "won": 0
+  },
+  "strong": {
+   "n": 0
+  },
+  "stuck": [],
+  "vs_market_14d": {
+   "against": {
+    "hit": 35.7,
+    "lost": 18,
+    "n": 28,
+    "roi": -3.5,
+    "said": 53.6,
+    "won": 10
+   },
+   "agree": {
+    "hit": 66.9,
+    "lost": 89,
+    "n": 269,
+    "roi": -2.6,
+    "said": 63.7,
+    "won": 180
    }
   },
   "weights": {
