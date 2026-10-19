@@ -217,9 +217,9 @@
    "result": {
     "Locks (-400..-120)": {
      "days": 19,
-     "picks": 77,
-     "old_won": 65,
-     "new_won": 64,
+     "picks": 88,
+     "old_won": 75,
+     "new_won": 74,
      "diff": -1,
      "ci95_diff": [
       -3,
@@ -232,15 +232,15 @@
     },
     "Safe (-2000..-500)": {
      "days": 19,
-     "picks": 77,
-     "old_won": 74,
-     "new_won": 73,
-     "diff": -1,
+     "picks": 88,
+     "old_won": 84,
+     "new_won": 84,
+     "diff": 0,
      "ci95_diff": [
       -3,
-      0
+      3
      ],
-     "new_won_old_missed": 2,
+     "new_won_old_missed": 3,
      "old_won_new_missed": 3,
      "promote": false,
      "untouched_from": "2026-09-26"
