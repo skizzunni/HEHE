@@ -25,9 +25,130 @@
    "nfl:401872999|Atlanta Falcons over 13.5 points",
    "nfl:401873003|Indianapolis Colts +7.5",
    "nfl:401873001|New England Patriots over 13.5 points"
+  ],
+  "2026-10-19": [
+   "nfl:401873008|Mike Evans: 30+ Receiving Yards",
+   "nhl:401892538|Pittsburgh Penguins over 0.5 goals",
+   "nhl:401892537|Under 10.5 goals",
+   "nhl:401892535|Anaheim Ducks under 5.5 goals",
+   "nhl:401892536|Under 9.5 goals",
+   "wnba:401918306|Over 131.5 points",
+   "mlb:401908028|Tampa Bay Rays +4.5",
+   "bra:401841272|Corinthians or draw",
+   "epl:401879257|Tottenham Hotspur or draw",
+   "arg:401841620|Newell's Old Boys or draw",
+   "col:401878019|Deportivo Pasto or draw"
   ]
  },
  "legs": {
+  "arg:401841620|Newell's Old Boys or draw": {
+   "aid": null,
+   "away": "Central C\u00f3rdoba (Santiago del Estero)",
+   "date": "2026-10-19",
+   "edge": null,
+   "fd": "736.189556442:21276303",
+   "gid": "arg:401841620",
+   "home": "Newell's Old Boys",
+   "kind": "game",
+   "label": "Newell's Old Boys or draw",
+   "league": "arg",
+   "lg": "Liga Profesional",
+   "line": null,
+   "market": null,
+   "match": "Central C\u00f3rdoba (Santiago del Estero) at Newell's Old Boys",
+   "name": null,
+   "p": 0.7991,
+   "p_fair": null,
+   "price": "-550",
+   "spec": {
+    "t": "dc",
+    "team": "Newell's Old Boys"
+   },
+   "status": "open",
+   "tip": "6:00 PM",
+   "where": "Double Chance: Newells And Draw"
+  },
+  "bra:401841272|Corinthians or draw": {
+   "aid": null,
+   "away": "Vit\u00f3ria",
+   "date": "2026-10-19",
+   "edge": null,
+   "fd": "736.190596386:13131896",
+   "gid": "bra:401841272",
+   "home": "Corinthians",
+   "kind": "game",
+   "label": "Corinthians or draw",
+   "league": "bra",
+   "lg": "Brasileirao",
+   "line": null,
+   "market": null,
+   "match": "Vit\u00f3ria at Corinthians",
+   "name": null,
+   "p": 0.854,
+   "p_fair": null,
+   "price": "-900",
+   "spec": {
+    "t": "dc",
+    "team": "Corinthians"
+   },
+   "status": "open",
+   "tip": "7:00 PM",
+   "where": "Double Chance: Corinthians And Draw"
+  },
+  "col:401878019|Deportivo Pasto or draw": {
+   "aid": null,
+   "away": "Alianza FC",
+   "date": "2026-10-19",
+   "edge": null,
+   "fd": "736.191103735:13131372",
+   "gid": "col:401878019",
+   "home": "Deportivo Pasto",
+   "kind": "game",
+   "label": "Deportivo Pasto or draw",
+   "league": "col",
+   "lg": "Colombia",
+   "line": null,
+   "market": null,
+   "match": "Alianza FC at Deportivo Pasto",
+   "name": null,
+   "p": 0.7956,
+   "p_fair": null,
+   "price": "-550",
+   "spec": {
+    "t": "dc",
+    "team": "Deportivo Pasto"
+   },
+   "status": "open",
+   "tip": "9:05 PM",
+   "where": "Double Chance: Deportivo Pasto And Draw"
+  },
+  "epl:401879257|Tottenham Hotspur or draw": {
+   "aid": null,
+   "away": "Coventry City",
+   "date": "2026-10-19",
+   "edge": null,
+   "fd": "736.187015589:13473285",
+   "gid": "epl:401879257",
+   "home": "Tottenham Hotspur",
+   "kind": "game",
+   "label": "Tottenham Hotspur or draw",
+   "league": "epl",
+   "lg": "Premier League",
+   "line": null,
+   "market": null,
+   "match": "Coventry City at Tottenham Hotspur",
+   "name": null,
+   "p": 0.833,
+   "p_fair": null,
+   "price": "-700",
+   "spec": {
+    "t": "dc",
+    "team": "Tottenham Hotspur"
+   },
+   "status": "open",
+   "tip": "3:00 PM",
+   "where": "Double Chance: Tottenham And Draw"
+  },
   "esp:401882839|Real Madrid or draw": {
    "aid": null,
    "away": "Sevilla",
@@ -83,6 +204,34 @@
    "status": "won",
    "tip": "11:10 PM",
    "where": "Double Chance: Cruz Azul And Draw"
+  },
+  "mlb:401908028|Tampa Bay Rays +4.5": {
+   "aid": null,
+   "away": "Cleveland Guardians",
+   "date": "2026-10-19",
+   "edge": null,
+   "fd": "736.192271565:7685695",
+   "gid": "mlb:401908028",
+   "home": "Tampa Bay Rays",
+   "kind": "game",
+   "label": "Tampa Bay Rays +4.5",
+   "league": "mlb",
+   "lg": "MLB",
+   "line": null,
+   "market": null,
+   "match": "Cleveland Guardians at Tampa Bay Rays",
+   "name": null,
+   "p": 0.895,
+   "p_fair": null,
+   "price": "-1800",
+   "spec": {
+    "line": 4.5,
+    "t": "spread",
+    "team": "Tampa Bay Rays"
+   },
+   "status": "open",
+   "tip": "8:00 PM",
+   "where": "Alternate Run Lines: Tampa Bay Rays +4.5"
   },
   "mlb:401930515|Over 2.5 runs": {
    "aid": null,
@@ -596,6 +745,30 @@
    "tip": "8:20 PM",
    "where": "Alternate Total Points: Under (72.5)"
   },
+  "nfl:401873008|Mike Evans: 30+ Receiving Yards": {
+   "aid": null,
+   "away": "Washington Commanders",
+   "date": "2026-10-19",
+   "edge": -14.1,
+   "fd": "736.191134460:73619335",
+   "gid": "nfl:401873008",
+   "home": "San Francisco 49ers",
+   "kind": "prop",
+   "label": "Mike Evans: 30+ Receiving Yards",
+   "league": "nfl",
+   "lg": "NFL",
+   "line": "30+",
+   "market": "Receiving Yards",
+   "match": "WSH @ SF",
+   "name": "Mike Evans",
+   "p": 0.9241,
+   "p_fair": 0.8016,
+   "price": "-1400",
+   "spec": null,
+   "status": "open",
+   "tip": "8:15 PM",
+   "where": "Mike Evans - Alt Receiving Yds: Mike Evans 30+ Yards"
+  },
   "nhl:401892533|Minnesota Wild under 6.5 goals": {
    "aid": null,
    "away": "Columbus Blue Jackets",
@@ -653,6 +826,143 @@
    "status": "won",
    "tip": "8:00 PM",
    "where": "Carolina Hurricanes Alt Total Goals: Under 6.5"
+  },
+  "nhl:401892535|Anaheim Ducks under 5.5 goals": {
+   "aid": null,
+   "away": "Anaheim Ducks",
+   "date": "2026-10-19",
+   "edge": null,
+   "fd": "736.192333155:8359775",
+   "gid": "nhl:401892535",
+   "home": "New York Rangers",
+   "kind": "game",
+   "label": "Anaheim Ducks under 5.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "line": null,
+   "market": null,
+   "match": "Anaheim Ducks at New York Rangers",
+   "name": null,
+   "p": 0.9129,
+   "p_fair": null,
+   "price": "-2000",
+   "spec": {
+    "line": 5.5,
+    "t": "teamunder",
+    "team": "Anaheim Ducks"
+   },
+   "status": "open",
+   "tip": "7:00 PM",
+   "where": "Anaheim Ducks Alt Total Goals: Under 5.5"
+  },
+  "nhl:401892536|Under 9.5 goals": {
+   "aid": null,
+   "away": "Colorado Avalanche",
+   "date": "2026-10-19",
+   "edge": null,
+   "fd": "736.192333204:8104850",
+   "gid": "nhl:401892536",
+   "home": "Philadelphia Flyers",
+   "kind": "game",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "line": null,
+   "market": null,
+   "match": "Colorado Avalanche at Philadelphia Flyers",
+   "name": null,
+   "p": 0.9094,
+   "p_fair": null,
+   "price": "-1800",
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open",
+   "tip": "7:00 PM",
+   "where": "Alternate Total Goals: Under 9.5"
+  },
+  "nhl:401892537|Under 10.5 goals": {
+   "aid": null,
+   "away": "San Jose Sharks",
+   "date": "2026-10-19",
+   "edge": null,
+   "fd": "736.192333325:602860",
+   "gid": "nhl:401892537",
+   "home": "Toronto Maple Leafs",
+   "kind": "game",
+   "label": "Under 10.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "line": null,
+   "market": null,
+   "match": "San Jose Sharks at Toronto Maple Leafs",
+   "name": null,
+   "p": 0.9157,
+   "p_fair": null,
+   "price": "-2000",
+   "spec": {
+    "line": 10.5,
+    "t": "under"
+   },
+   "status": "open",
+   "tip": "7:30 PM",
+   "where": "Alternate Total Goals: Under 10.5"
+  },
+  "nhl:401892538|Pittsburgh Penguins over 0.5 goals": {
+   "aid": null,
+   "away": "Pittsburgh Penguins",
+   "date": "2026-10-19",
+   "edge": null,
+   "fd": "736.192333359:9469964",
+   "gid": "nhl:401892538",
+   "home": "Utah Mammoth",
+   "kind": "game",
+   "label": "Pittsburgh Penguins over 0.5 goals",
+   "league": "nhl",
+   "lg": "NHL",
+   "line": null,
+   "market": null,
+   "match": "Pittsburgh Penguins at Utah Mammoth",
+   "name": null,
+   "p": 0.9195,
+   "p_fair": null,
+   "price": "-2000",
+   "spec": {
+    "line": 0.5,
+    "t": "teamover",
+    "team": "Pittsburgh Penguins"
+   },
+   "status": "open",
+   "tip": "9:00 PM",
+   "where": "Pittsburgh Penguins Alt Total Goals: Over 0.5"
+  },
+  "wnba:401918306|Over 131.5 points": {
+   "aid": null,
+   "away": "Atlanta Dream",
+   "date": "2026-10-19",
+   "edge": null,
+   "fd": "736.192091967:6923691",
+   "gid": "wnba:401918306",
+   "home": "Golden State Valkyries",
+   "kind": "game",
+   "label": "Over 131.5 points",
+   "league": "wnba",
+   "lg": "WNBA",
+   "line": null,
+   "market": null,
+   "match": "Atlanta Dream at Golden State Valkyries",
+   "name": null,
+   "p": 0.9032,
+   "p_fair": null,
+   "price": "-2000",
+   "spec": {
+    "line": 131.5,
+    "t": "over"
+   },
+   "status": "open",
+   "tip": "8:00 PM",
+   "where": "Alternate Total Points: Over 131.5"
   }
  },
  "pools": {
@@ -13985,6 +14295,2635 @@
    ],
    "n": 11,
    "t": "2026-10-18T12:02:07+00:00"
+  },
+  "2026-10-19": {
+   "card": [
+    "nfl:401873008|Mike Evans: 30+ Receiving Yards",
+    "nhl:401892538|Pittsburgh Penguins over 0.5 goals",
+    "nhl:401892537|Under 10.5 goals",
+    "nhl:401892535|Anaheim Ducks under 5.5 goals",
+    "nhl:401892536|Under 9.5 goals",
+    "wnba:401918306|Over 131.5 points",
+    "mlb:401908028|Tampa Bay Rays +4.5",
+    "bra:401841272|Corinthians or draw",
+    "epl:401879257|Tottenham Hotspur or draw",
+    "arg:401841620|Newell's Old Boys or draw",
+    "col:401878019|Deportivo Pasto or draw"
+   ],
+   "chooser": "2026-10-19",
+   "legs": [
+    {
+     "devig": "two-sided",
+     "gid": "mlb:401908028",
+     "kind": null,
+     "label": "Under 11.5 runs",
+     "league": "mlb",
+     "name": null,
+     "p": 0.8708,
+     "price": "-1200",
+     "spec": {
+      "line": 11.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "mlb:401908028",
+     "kind": null,
+     "label": "Tampa Bay Rays +4.5",
+     "league": "mlb",
+     "name": null,
+     "p": 0.895,
+     "price": "-1800",
+     "spec": {
+      "line": 4.5,
+      "t": "spread",
+      "team": "Tampa Bay Rays"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "mlb:401908028",
+     "kind": null,
+     "label": "Tampa Bay Rays +3.5",
+     "league": "mlb",
+     "name": null,
+     "p": 0.848,
+     "price": "-900",
+     "spec": {
+      "line": 3.5,
+      "t": "spread",
+      "team": "Tampa Bay Rays"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "mlb:401908028",
+     "kind": null,
+     "label": "Cleveland Guardians +4.5",
+     "league": "mlb",
+     "name": null,
+     "p": 0.8652,
+     "price": "-1100",
+     "spec": {
+      "line": 4.5,
+      "t": "spread",
+      "team": "Cleveland Guardians"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "mlb:401908028",
+     "kind": null,
+     "label": "Under 10.5 runs",
+     "league": "mlb",
+     "name": null,
+     "p": 0.8184,
+     "price": "-650",
+     "spec": {
+      "line": 10.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "mlb:401908028",
+     "kind": null,
+     "label": "Tampa Bay Rays +2.5",
+     "league": "mlb",
+     "name": null,
+     "p": 0.7857,
+     "price": "-500",
+     "spec": {
+      "line": 2.5,
+      "t": "spread",
+      "team": "Tampa Bay Rays"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "mlb:401908028",
+     "kind": null,
+     "label": "Over 3.5 runs",
+     "league": "mlb",
+     "name": null,
+     "p": 0.8115,
+     "price": "-620",
+     "spec": {
+      "line": 3.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "mlb:401908028",
+     "kind": null,
+     "label": "Cleveland Guardians +3.5",
+     "league": "mlb",
+     "name": null,
+     "p": 0.8184,
+     "price": "-650",
+     "spec": {
+      "line": 3.5,
+      "t": "spread",
+      "team": "Cleveland Guardians"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Under 173.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8889,
+     "price": "-1600",
+     "spec": {
+      "line": 173.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Under 174.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8973,
+     "price": "-1900",
+     "spec": {
+      "line": 174.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Under 172.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8744,
+     "price": "-1300",
+     "spec": {
+      "line": 172.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Over 131.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.9032,
+     "price": "-2000",
+     "spec": {
+      "line": 131.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Under 171.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8652,
+     "price": "-1100",
+     "spec": {
+      "line": 171.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Over 132.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8926,
+     "price": "-1700",
+     "spec": {
+      "line": 132.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Under 170.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8527,
+     "price": "-950",
+     "spec": {
+      "line": 170.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Over 133.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8792,
+     "price": "-1400",
+     "spec": {
+      "line": 133.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Under 169.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8375,
+     "price": "-800",
+     "spec": {
+      "line": 169.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Over 134.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8708,
+     "price": "-1200",
+     "spec": {
+      "line": 134.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Under 168.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8218,
+     "price": "-670",
+     "spec": {
+      "line": 168.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Over 135.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8527,
+     "price": "-950",
+     "spec": {
+      "line": 135.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Under 167.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8037,
+     "price": "-580",
+     "spec": {
+      "line": 167.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "wnba:401918306",
+     "kind": null,
+     "label": "Over 136.5 points",
+     "league": "wnba",
+     "name": null,
+     "p": 0.8375,
+     "price": "-800",
+     "spec": {
+      "line": 136.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Over 36.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8708,
+     "price": "-1200",
+     "spec": {
+      "line": 36.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Under 70.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.895,
+     "price": "-1800",
+     "spec": {
+      "line": 70.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders +24.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8792,
+     "price": "-1400",
+     "spec": {
+      "line": 24.5,
+      "t": "spread",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers under 41.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8708,
+     "price": "-1200",
+     "spec": {
+      "line": 41.5,
+      "t": "teamunder",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders over 10.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8571,
+     "price": "-1000",
+     "spec": {
+      "line": 10.5,
+      "t": "teamover",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders +25.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.895,
+     "price": "-1800",
+     "spec": {
+      "line": 25.5,
+      "t": "spread",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Under 69.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8889,
+     "price": "-1600",
+     "spec": {
+      "line": 69.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers under 42.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.895,
+     "price": "-1800",
+     "spec": {
+      "line": 42.5,
+      "t": "teamunder",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Over 35.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8889,
+     "price": "-1600",
+     "spec": {
+      "line": 35.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders under 33.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8889,
+     "price": "-1600",
+     "spec": {
+      "line": 33.5,
+      "t": "teamunder",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Over 37.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8527,
+     "price": "-950",
+     "spec": {
+      "line": 37.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders +23.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8571,
+     "price": "-1000",
+     "spec": {
+      "line": 23.5,
+      "t": "spread",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Under 68.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8708,
+     "price": "-1200",
+     "spec": {
+      "line": 68.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers under 40.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8375,
+     "price": "-800",
+     "spec": {
+      "line": 40.5,
+      "t": "teamunder",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Over 34.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8986,
+     "price": "-2000",
+     "spec": {
+      "line": 34.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders over 11.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8571,
+     "price": "-1000",
+     "spec": {
+      "line": 11.5,
+      "t": "teamover",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Over 38.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8375,
+     "price": "-800",
+     "spec": {
+      "line": 38.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders +22.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.848,
+     "price": "-900",
+     "spec": {
+      "line": 22.5,
+      "t": "spread",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders under 32.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8708,
+     "price": "-1200",
+     "spec": {
+      "line": 32.5,
+      "t": "teamunder",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Under 67.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8571,
+     "price": "-1000",
+     "spec": {
+      "line": 67.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers over 19.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.895,
+     "price": "-1800",
+     "spec": {
+      "line": 19.5,
+      "t": "teamover",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers under 39.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8218,
+     "price": "-670",
+     "spec": {
+      "line": 39.5,
+      "t": "teamunder",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders +21.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8346,
+     "price": "-770",
+     "spec": {
+      "line": 21.5,
+      "t": "spread",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Over 39.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8253,
+     "price": "-700",
+     "spec": {
+      "line": 39.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders over 12.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.843,
+     "price": "-850",
+     "spec": {
+      "line": 12.5,
+      "t": "teamover",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Under 66.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.843,
+     "price": "-850",
+     "spec": {
+      "line": 66.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders under 31.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8571,
+     "price": "-1000",
+     "spec": {
+      "line": 31.5,
+      "t": "teamunder",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers over 20.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8571,
+     "price": "-1000",
+     "spec": {
+      "line": 20.5,
+      "t": "teamover",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders +20.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8115,
+     "price": "-620",
+     "spec": {
+      "line": 20.5,
+      "t": "spread",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers +5.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8889,
+     "price": "-1600",
+     "spec": {
+      "line": 5.5,
+      "t": "spread",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Over 40.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.7995,
+     "price": "-560",
+     "spec": {
+      "line": 40.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Under 65.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8285,
+     "price": "-720",
+     "spec": {
+      "line": 65.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers under 38.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8184,
+     "price": "-650",
+     "spec": {
+      "line": 38.5,
+      "t": "teamunder",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders over 13.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.7947,
+     "price": "-530",
+     "spec": {
+      "line": 13.5,
+      "t": "teamover",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders +19.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.7905,
+     "price": "-520",
+     "spec": {
+      "line": 19.5,
+      "t": "spread",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers +4.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8708,
+     "price": "-1200",
+     "spec": {
+      "line": 4.5,
+      "t": "spread",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders under 30.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8253,
+     "price": "-700",
+     "spec": {
+      "line": 30.5,
+      "t": "teamunder",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Under 64.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8115,
+     "price": "-620",
+     "spec": {
+      "line": 64.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers over 21.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8346,
+     "price": "-770",
+     "spec": {
+      "line": 21.5,
+      "t": "teamover",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers +3.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8571,
+     "price": "-1000",
+     "spec": {
+      "line": 3.5,
+      "t": "spread",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Under 63.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.7905,
+     "price": "-520",
+     "spec": {
+      "line": 63.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "Washington Commanders under 29.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.7947,
+     "price": "-530",
+     "spec": {
+      "line": 29.5,
+      "t": "teamunder",
+      "team": "Washington Commanders"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers over 22.5 points",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8253,
+     "price": "-700",
+     "spec": {
+      "line": 22.5,
+      "t": "teamover",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nfl:401873008",
+     "kind": null,
+     "label": "San Francisco 49ers +2.5",
+     "league": "nfl",
+     "name": null,
+     "p": 0.8115,
+     "price": "-620",
+     "spec": {
+      "line": 2.5,
+      "t": "spread",
+      "team": "San Francisco 49ers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892535",
+     "kind": null,
+     "label": "Anaheim Ducks +3.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.878,
+     "price": "-1200",
+     "spec": {
+      "line": 3.5,
+      "t": "spread",
+      "team": "Anaheim Ducks"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892535",
+     "kind": null,
+     "label": "Under 9.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.9022,
+     "price": "-1600",
+     "spec": {
+      "line": 9.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892535",
+     "kind": null,
+     "label": "New York Rangers +2.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8375,
+     "price": "-800",
+     "spec": {
+      "line": 2.5,
+      "t": "spread",
+      "team": "New York Rangers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892535",
+     "kind": null,
+     "label": "New York Rangers under 5.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8652,
+     "price": "-1100",
+     "spec": {
+      "line": 5.5,
+      "t": "teamunder",
+      "team": "New York Rangers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892535",
+     "kind": null,
+     "label": "Anaheim Ducks under 5.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.9129,
+     "price": "-2000",
+     "spec": {
+      "line": 5.5,
+      "t": "teamunder",
+      "team": "Anaheim Ducks"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892535",
+     "kind": null,
+     "label": "Over 3.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8635,
+     "price": "-1100",
+     "spec": {
+      "line": 3.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892535",
+     "kind": null,
+     "label": "New York Rangers over 1.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8317,
+     "price": "-750",
+     "spec": {
+      "line": 1.5,
+      "t": "teamover",
+      "team": "New York Rangers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892535",
+     "kind": null,
+     "label": "Anaheim Ducks under 4.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8045,
+     "price": "-600",
+     "spec": {
+      "line": 4.5,
+      "t": "teamunder",
+      "team": "Anaheim Ducks"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892535",
+     "kind": null,
+     "label": "Under 8.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8011,
+     "price": "-600",
+     "spec": {
+      "line": 8.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892535",
+     "kind": null,
+     "label": "Over 4.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.7883,
+     "price": "-550",
+     "spec": {
+      "line": 4.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Under 9.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.9094,
+     "price": "-1800",
+     "spec": {
+      "line": 9.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Colorado Avalanche over 1.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8738,
+     "price": "-1200",
+     "spec": {
+      "line": 1.5,
+      "t": "teamover",
+      "team": "Colorado Avalanche"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Philadelphia Flyers over 0.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8917,
+     "price": "-1450",
+     "spec": {
+      "line": 0.5,
+      "t": "teamover",
+      "team": "Philadelphia Flyers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Philadelphia Flyers under 4.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.859,
+     "price": "-1000",
+     "spec": {
+      "line": 4.5,
+      "t": "teamunder",
+      "team": "Philadelphia Flyers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Philadelphia Flyers +4.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.9062,
+     "price": "-1800",
+     "spec": {
+      "line": 4.5,
+      "t": "spread",
+      "team": "Philadelphia Flyers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Colorado Avalanche +2.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8883,
+     "price": "-1450",
+     "spec": {
+      "line": 2.5,
+      "t": "spread",
+      "team": "Colorado Avalanche"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Colorado Avalanche +1.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8184,
+     "price": "-650",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "Colorado Avalanche"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Over 3.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8608,
+     "price": "-1000",
+     "spec": {
+      "line": 3.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Colorado Avalanche under 5.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8291,
+     "price": "-750",
+     "spec": {
+      "line": 5.5,
+      "t": "teamunder",
+      "team": "Colorado Avalanche"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Philadelphia Flyers +3.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8125,
+     "price": "-650",
+     "spec": {
+      "line": 3.5,
+      "t": "spread",
+      "team": "Philadelphia Flyers"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892536",
+     "kind": null,
+     "label": "Under 8.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8125,
+     "price": "-650",
+     "spec": {
+      "line": 8.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892537",
+     "kind": null,
+     "label": "Over 3.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8906,
+     "price": "-1450",
+     "spec": {
+      "line": 3.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892537",
+     "kind": null,
+     "label": "San Jose Sharks under 5.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8906,
+     "price": "-1450",
+     "spec": {
+      "line": 5.5,
+      "t": "teamunder",
+      "team": "San Jose Sharks"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892537",
+     "kind": null,
+     "label": "San Jose Sharks +3.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8608,
+     "price": "-1000",
+     "spec": {
+      "line": 3.5,
+      "t": "spread",
+      "team": "San Jose Sharks"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892537",
+     "kind": null,
+     "label": "Under 10.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.9157,
+     "price": "-2000",
+     "spec": {
+      "line": 10.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892537",
+     "kind": null,
+     "label": "Toronto Maple Leafs +2.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8341,
+     "price": "-750",
+     "spec": {
+      "line": 2.5,
+      "t": "spread",
+      "team": "Toronto Maple Leafs"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892537",
+     "kind": null,
+     "label": "Toronto Maple Leafs over 1.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8608,
+     "price": "-1000",
+     "spec": {
+      "line": 1.5,
+      "t": "teamover",
+      "team": "Toronto Maple Leafs"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892537",
+     "kind": null,
+     "label": "Under 9.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8752,
+     "price": "-1200",
+     "spec": {
+      "line": 9.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892537",
+     "kind": null,
+     "label": "Toronto Maple Leafs under 5.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8375,
+     "price": "-800",
+     "spec": {
+      "line": 5.5,
+      "t": "teamunder",
+      "team": "Toronto Maple Leafs"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892537",
+     "kind": null,
+     "label": "Over 4.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8291,
+     "price": "-750",
+     "spec": {
+      "line": 4.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892537",
+     "kind": null,
+     "label": "San Jose Sharks over 1.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.7956,
+     "price": "-550",
+     "spec": {
+      "line": 1.5,
+      "t": "teamover",
+      "team": "San Jose Sharks"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Utah Mammoth +2.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8668,
+     "price": "-1100",
+     "spec": {
+      "line": 2.5,
+      "t": "spread",
+      "team": "Utah Mammoth"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Over 3.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8938,
+     "price": "-1450",
+     "spec": {
+      "line": 3.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Utah Mammoth over 1.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.878,
+     "price": "-1200",
+     "spec": {
+      "line": 1.5,
+      "t": "teamover",
+      "team": "Utah Mammoth"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Under 10.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.9129,
+     "price": "-2000",
+     "spec": {
+      "line": 10.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Pittsburgh Penguins under 5.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.9143,
+     "price": "-2000",
+     "spec": {
+      "line": 5.5,
+      "t": "teamunder",
+      "team": "Pittsburgh Penguins"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Utah Mammoth under 6.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8994,
+     "price": "-1600",
+     "spec": {
+      "line": 6.5,
+      "t": "teamunder",
+      "team": "Utah Mammoth"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Pittsburgh Penguins +4.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.9045,
+     "price": "-1800",
+     "spec": {
+      "line": 4.5,
+      "t": "spread",
+      "team": "Pittsburgh Penguins"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Under 9.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8684,
+     "price": "-1100",
+     "spec": {
+      "line": 9.5,
+      "t": "under"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Pittsburgh Penguins +3.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8155,
+     "price": "-650",
+     "spec": {
+      "line": 3.5,
+      "t": "spread",
+      "team": "Pittsburgh Penguins"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Pittsburgh Penguins over 0.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.9195,
+     "price": "-2000",
+     "spec": {
+      "line": 0.5,
+      "t": "teamover",
+      "team": "Pittsburgh Penguins"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Over 4.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8317,
+     "price": "-750",
+     "spec": {
+      "line": 4.5,
+      "t": "over"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Utah Mammoth under 5.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8011,
+     "price": "-600",
+     "spec": {
+      "line": 5.5,
+      "t": "teamunder",
+      "team": "Utah Mammoth"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Utah Mammoth +1.5",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8011,
+     "price": "-600",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "Utah Mammoth"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "nhl:401892538",
+     "kind": null,
+     "label": "Pittsburgh Penguins under 4.5 goals",
+     "league": "nhl",
+     "name": null,
+     "p": 0.8094,
+     "price": "-650",
+     "spec": {
+      "line": 4.5,
+      "t": "teamunder",
+      "team": "Pittsburgh Penguins"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "epl:401879257",
+     "kind": null,
+     "label": "Tottenham Hotspur or draw",
+     "league": "epl",
+     "name": null,
+     "p": 0.833,
+     "price": "-700",
+     "spec": {
+      "t": "dc",
+      "team": "Tottenham Hotspur"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "bra:401841272",
+     "kind": null,
+     "label": "Corinthians or draw",
+     "league": "bra",
+     "name": null,
+     "p": 0.854,
+     "price": "-900",
+     "spec": {
+      "t": "dc",
+      "team": "Corinthians"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "arg:401841620",
+     "kind": null,
+     "label": "Newell's Old Boys or draw",
+     "league": "arg",
+     "name": null,
+     "p": 0.7991,
+     "price": "-550",
+     "spec": {
+      "t": "dc",
+      "team": "Newell's Old Boys"
+     }
+    },
+    {
+     "devig": "two-sided",
+     "gid": "col:401878019",
+     "kind": null,
+     "label": "Deportivo Pasto or draw",
+     "league": "col",
+     "name": null,
+     "p": 0.7956,
+     "price": "-550",
+     "spec": {
+      "t": "dc",
+      "team": "Deportivo Pasto"
+     }
+    },
+    {
+     "devig": null,
+     "gid": "mlb:401908028",
+     "kind": "prop",
+     "label": "Freddy Peralta: 3+ Strikeouts Thrown",
+     "league": "mlb",
+     "name": "Freddy Peralta",
+     "p": 0.8033,
+     "price": "-620",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "wnba:401918306",
+     "kind": "prop",
+     "label": "Gabby Williams: 1+ Threes Made",
+     "league": "wnba",
+     "name": "Gabby Williams",
+     "p": 0.8921,
+     "price": "-1600",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "wnba:401918306",
+     "kind": "prop",
+     "label": "Veronica Burton: 5+ Points",
+     "league": "wnba",
+     "name": "Veronica Burton",
+     "p": 0.8735,
+     "price": "-1300",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "wnba:401918306",
+     "kind": "prop",
+     "label": "Tiffany Hayes: 5+ Points",
+     "league": "wnba",
+     "name": "Tiffany Hayes",
+     "p": 0.8467,
+     "price": "-900",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "wnba:401918306",
+     "kind": "prop",
+     "label": "Allisha Gray: 10+ Points",
+     "league": "wnba",
+     "name": "Allisha Gray",
+     "p": 0.8417,
+     "price": "-850",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "wnba:401918306",
+     "kind": "prop",
+     "label": "Rhyne Howard: 2+ Assists",
+     "league": "wnba",
+     "name": "Rhyne Howard",
+     "p": 0.8378,
+     "price": "-800",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "wnba:401918306",
+     "kind": "prop",
+     "label": "Rhyne Howard: 10+ Points",
+     "league": "wnba",
+     "name": "Rhyne Howard",
+     "p": 0.8362,
+     "price": "-800",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "wnba:401918306",
+     "kind": "prop",
+     "label": "Angel Reese: 8+ Rebounds",
+     "league": "wnba",
+     "name": "Angel Reese",
+     "p": 0.8216,
+     "price": "-700",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "wnba:401918306",
+     "kind": "prop",
+     "label": "Gabby Williams: 2+ Assists",
+     "league": "wnba",
+     "name": "Gabby Williams",
+     "p": 0.8079,
+     "price": "-600",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "wnba:401918306",
+     "kind": "prop",
+     "label": "Angel Reese: 10+ Points",
+     "league": "wnba",
+     "name": "Angel Reese",
+     "p": 0.8044,
+     "price": "-590",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "wnba:401918306",
+     "kind": "prop",
+     "label": "Allisha Gray: 1+ Threes Made",
+     "league": "wnba",
+     "name": "Allisha Gray",
+     "p": 0.7899,
+     "price": "-500",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Mike Evans: 30+ Receiving Yards",
+     "league": "nfl",
+     "name": "Mike Evans",
+     "p": 0.9241,
+     "price": "-1400",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Terry McLaurin: 15+ Receiving Yards",
+     "league": "nfl",
+     "name": "Terry McLaurin",
+     "p": 0.9241,
+     "price": "-1400",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Christian McCaffrey: 15+ Receiving Yards",
+     "league": "nfl",
+     "name": "Christian McCaffrey",
+     "p": 0.9076,
+     "price": "-1100",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "George Kittle: 30+ Receiving Yards",
+     "league": "nfl",
+     "name": "George Kittle",
+     "p": 0.9076,
+     "price": "-1100",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Mike Evans: 3+ Receptions",
+     "league": "nfl",
+     "name": "Mike Evans",
+     "p": 0.8971,
+     "price": "-1800",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Jayden Daniels: 125+ Passing Yards",
+     "league": "nfl",
+     "name": "Jayden Daniels",
+     "p": 0.8923,
+     "price": "-1400",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Antonio Williams: 5+ Receiving Yards",
+     "league": "nfl",
+     "name": "Antonio Williams",
+     "p": 0.8911,
+     "price": "-900",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Antonio Williams: 1+ Receptions",
+     "league": "nfl",
+     "name": "Antonio Williams",
+     "p": 0.8859,
+     "price": "-1450",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Terry McLaurin: 2+ Receptions",
+     "league": "nfl",
+     "name": "Terry McLaurin",
+     "p": 0.8859,
+     "price": "-1450",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Rachaad White: 1+ Receptions",
+     "league": "nfl",
+     "name": "Rachaad White",
+     "p": 0.8859,
+     "price": "-1450",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "George Kittle: 3+ Receptions",
+     "league": "nfl",
+     "name": "George Kittle",
+     "p": 0.8859,
+     "price": "-1450",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Terry McLaurin: 20+ Receiving Yards",
+     "league": "nfl",
+     "name": "Terry McLaurin",
+     "p": 0.8736,
+     "price": "-750",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Chigoziem Okonkwo: 10+ Receiving Yards",
+     "league": "nfl",
+     "name": "Chigoziem Okonkwo",
+     "p": 0.8581,
+     "price": "-650",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Brock Purdy: 175+ Passing Yards",
+     "league": "nfl",
+     "name": "Brock Purdy",
+     "p": 0.8498,
+     "price": "-800",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Mike Evans: 40+ Receiving Yards",
+     "league": "nfl",
+     "name": "Mike Evans",
+     "p": 0.8487,
+     "price": "-600",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Jayden Daniels: 15+ Rushing Yards",
+     "league": "nfl",
+     "name": "Jayden Daniels",
+     "p": 0.839,
+     "price": "-1450",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Christian McCaffrey: 20+ Receiving Yards",
+     "league": "nfl",
+     "name": "Christian McCaffrey",
+     "p": 0.8378,
+     "price": "-550",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Rachaad White: 20+ Rushing Yards",
+     "league": "nfl",
+     "name": "Rachaad White",
+     "p": 0.8371,
+     "price": "-1400",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Christian McCaffrey: 3+ Receptions",
+     "league": "nfl",
+     "name": "Christian McCaffrey",
+     "p": 0.8207,
+     "price": "-650",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Christian McCaffrey: 30+ Rushing Yards",
+     "league": "nfl",
+     "name": "Christian McCaffrey",
+     "p": 0.8153,
+     "price": "-1000",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Jayden Daniels: 150+ Passing Yards",
+     "league": "nfl",
+     "name": "Jayden Daniels",
+     "p": 0.8089,
+     "price": "-550",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Chigoziem Okonkwo: 2+ Receptions",
+     "league": "nfl",
+     "name": "Chigoziem Okonkwo",
+     "p": 0.8077,
+     "price": "-580",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Brock Purdy: 5+ Rushing Yards",
+     "league": "nfl",
+     "name": "Brock Purdy",
+     "p": 0.7972,
+     "price": "-800",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Jayden Daniels: 20+ Rushing Yards",
+     "league": "nfl",
+     "name": "Jayden Daniels",
+     "p": 0.7804,
+     "price": "-670",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Rachaad White: 25+ Rushing Yards",
+     "league": "nfl",
+     "name": "Rachaad White",
+     "p": 0.7773,
+     "price": "-650",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nfl:401873008",
+     "kind": "prop",
+     "label": "Kaelon Black: 10+ Rushing Yards",
+     "league": "nfl",
+     "name": "Kaelon Black",
+     "p": 0.765,
+     "price": "-580",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Beckett Sennecke: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Beckett Sennecke",
+     "p": 0.8835,
+     "price": "-2000",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Mika Zibanejad: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Mika Zibanejad",
+     "p": 0.8835,
+     "price": "-2000",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Roger McQueen: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Roger McQueen",
+     "p": 0.8614,
+     "price": "-1300",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Alexis Lafreniere: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Alexis Lafreniere",
+     "p": 0.8563,
+     "price": "-1200",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Leo Carlsson: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Leo Carlsson",
+     "p": 0.847,
+     "price": "-1050",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Alex Killorn: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Alex Killorn",
+     "p": 0.83,
+     "price": "-850",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "J.T. Miller: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "J.T. Miller",
+     "p": 0.83,
+     "price": "-850",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Cutter Gauthier: 2+ Shots on Goal",
+     "league": "nhl",
+     "name": "Cutter Gauthier",
+     "p": 0.83,
+     "price": "-850",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Mikael Granlund: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Mikael Granlund",
+     "p": 0.8222,
+     "price": "-780",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Will Cuylle: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Will Cuylle",
+     "p": 0.8222,
+     "price": "-780",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Gabe Perreault: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Gabe Perreault",
+     "p": 0.8056,
+     "price": "-660",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Adam Fox: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Adam Fox",
+     "p": 0.778,
+     "price": "-520",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892535",
+     "kind": "prop",
+     "label": "Jackson LaCombe: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Jackson LaCombe",
+     "p": 0.773,
+     "price": "-500",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892536",
+     "kind": "prop",
+     "label": "Martin Necas: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Martin Necas",
+     "p": 0.8678,
+     "price": "-1450",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892536",
+     "kind": "prop",
+     "label": "Nathan MacKinnon: 2+ Shots on Goal",
+     "league": "nhl",
+     "name": "Nathan MacKinnon",
+     "p": 0.8614,
+     "price": "-1300",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892536",
+     "kind": "prop",
+     "label": "Matvei Michkov: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Matvei Michkov",
+     "p": 0.8563,
+     "price": "-1200",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892536",
+     "kind": "prop",
+     "label": "Trevor Zegras: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Trevor Zegras",
+     "p": 0.8433,
+     "price": "-1000",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892536",
+     "kind": "prop",
+     "label": "Porter Martone: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Porter Martone",
+     "p": 0.8222,
+     "price": "-780",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892536",
+     "kind": "prop",
+     "label": "Brock Nelson: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Brock Nelson",
+     "p": 0.8185,
+     "price": "-750",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892536",
+     "kind": "prop",
+     "label": "Artturi Lehkonen: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Artturi Lehkonen",
+     "p": 0.8072,
+     "price": "-670",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892537",
+     "kind": "prop",
+     "label": "Macklin Celebrini: 2+ Shots on Goal",
+     "league": "nhl",
+     "name": "Macklin Celebrini",
+     "p": 0.847,
+     "price": "-1050",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892537",
+     "kind": "prop",
+     "label": "Auston Matthews: 2+ Shots on Goal",
+     "league": "nhl",
+     "name": "Auston Matthews",
+     "p": 0.8433,
+     "price": "-1000",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892537",
+     "kind": "prop",
+     "label": "Jack Roslovic: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Jack Roslovic",
+     "p": 0.8393,
+     "price": "-950",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892537",
+     "kind": "prop",
+     "label": "Tyler Toffoli: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Tyler Toffoli",
+     "p": 0.8393,
+     "price": "-950",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892537",
+     "kind": "prop",
+     "label": "Mason Marchment: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Mason Marchment",
+     "p": 0.83,
+     "price": "-850",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892537",
+     "kind": "prop",
+     "label": "Darnell Nurse: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Darnell Nurse",
+     "p": 0.8185,
+     "price": "-750",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892537",
+     "kind": "prop",
+     "label": "Gavin McKenna: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Gavin McKenna",
+     "p": 0.8072,
+     "price": "-670",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892537",
+     "kind": "prop",
+     "label": "Ivar Stenberg: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Ivar Stenberg",
+     "p": 0.7988,
+     "price": "-620",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892537",
+     "kind": "prop",
+     "label": "Jacob Trouba: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Jacob Trouba",
+     "p": 0.7988,
+     "price": "-620",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892537",
+     "kind": "prop",
+     "label": "Kiefer Sherwood: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Kiefer Sherwood",
+     "p": 0.7932,
+     "price": "-590",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Nick Schmaltz: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Nick Schmaltz",
+     "p": 0.8788,
+     "price": "-1800",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Clayton Keller: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Clayton Keller",
+     "p": 0.8788,
+     "price": "-1800",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Rickard Rakell: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Rickard Rakell",
+     "p": 0.8731,
+     "price": "-1600",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Evgeni Malkin: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Evgeni Malkin",
+     "p": 0.8614,
+     "price": "-1300",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Sidney Crosby: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Sidney Crosby",
+     "p": 0.8563,
+     "price": "-1200",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Ben Kindel: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Ben Kindel",
+     "p": 0.8503,
+     "price": "-1100",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Erik Karlsson: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Erik Karlsson",
+     "p": 0.8393,
+     "price": "-950",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Mikhail Sergachev: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Mikhail Sergachev",
+     "p": 0.8349,
+     "price": "-900",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Bryan Rust: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Bryan Rust",
+     "p": 0.8349,
+     "price": "-900",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Logan Cooley: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Logan Cooley",
+     "p": 0.832,
+     "price": "-870",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Kailer Yamamoto: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Kailer Yamamoto",
+     "p": 0.8185,
+     "price": "-750",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Anders Lee: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Anders Lee",
+     "p": 0.8056,
+     "price": "-660",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Nicholas Robertson: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Nicholas Robertson",
+     "p": 0.8056,
+     "price": "-660",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Barrett Hayton: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Barrett Hayton",
+     "p": 0.7912,
+     "price": "-580",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Vincent Trocheck: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Vincent Trocheck",
+     "p": 0.7804,
+     "price": "-530",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "MacKenzie Weegar: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "MacKenzie Weegar",
+     "p": 0.778,
+     "price": "-520",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Lawson Crouse: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Lawson Crouse",
+     "p": 0.778,
+     "price": "-520",
+     "spec": null
+    },
+    {
+     "devig": null,
+     "gid": "nhl:401892538",
+     "kind": "prop",
+     "label": "Kris Letang: 1+ Shots on Goal",
+     "league": "nhl",
+     "name": "Kris Letang",
+     "p": 0.778,
+     "price": "-520",
+     "spec": null
+    }
+   ],
+   "n": 11,
+   "t": "2026-10-19T12:00:16+00:00"
   }
  }
 }

@@ -3251,8 +3251,8 @@
   "audit": [
    {
     "flag": false,
-    "hit": 60.6,
-    "n": 71,
+    "hit": 61.1,
+    "n": 72,
     "name": "tennis Kalshi-priced",
     "said": 67.6
    },
@@ -3381,10 +3381,10 @@
     "hit": 83.3
    },
    "wta": {
-    "all_hit": 69.9,
+    "all_hit": 70.0,
     "calls": 69,
     "cutoff": 0.725,
-    "games": 209,
+    "games": 210,
     "hit": 85.5
    }
   },
@@ -3416,9 +3416,15 @@
   ],
   "locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     2,
+     0.5962,
+     "open"
+    ]
+   },
    "won": 0
   },
   "losses": [
@@ -3455,14 +3461,39 @@
     "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 69%"
    }
   ],
-  "lottery": [],
+  "lottery": [
+   {
+    "killed_by": [],
+    "legs": 7,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+25",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 7,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+50",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 7,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+100",
+    "won": 0
+   }
+  ],
   "picks": {
-   "hit": 63.6,
+   "hit": 66.7,
    "lost": 4,
-   "n": 11,
+   "n": 12,
    "roi": null,
-   "said": 62.4,
-   "won": 7
+   "said": 63.2,
+   "won": 8
   },
   "picks_by_league": {
    "atp": {
@@ -3474,12 +3505,12 @@
     "won": 3
    },
    "wta": {
-    "hit": 66.7,
+    "hit": 71.4,
     "lost": 2,
-    "n": 6,
+    "n": 7,
     "roi": null,
-    "said": 60.1,
-    "won": 4
+    "said": 61.7,
+    "won": 5
    }
   },
   "props": {
@@ -3495,9 +3526,20 @@
   },
   "safe_locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     7,
+     0.5222,
+     "open"
+    ],
+    "winners": [
+     2,
+     0.8497,
+     "open"
+    ]
+   },
    "won": 0
   },
   "strong": {
