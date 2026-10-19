@@ -138,19 +138,9 @@ try:
                 HOME_EDGE[_k] = float(_h["weights"][0])
 except (OSError, ValueError, TypeError):
     pass
-ANCHOR_W_DEFAULT = 0.20
-ANCHOR_W = {"nfl": 0.30, "wnba": 0.30}
-# tools/daily_review.py refits these every day from the graded picks and
-# writes review/anchor_weights.json; its numbers win where it has them.
-try:
-    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "review",
-                           "anchor_weights.json")) as _fh:
-        _aw = json.load(_fh)
-    ANCHOR_W.update({k: float(v) for k, v in (_aw.get("weights") or {}).items()})
-    if _aw.get("default") is not None:
-        ANCHOR_W_DEFAULT = float(_aw["default"])
-except (OSError, ValueError, TypeError):
-    pass
+# the model's share against the price comes only from policy.py (the daily
+# review's tested weights); hand-set per-league numbers used to win here
+import policy as _policy                                    # noqa: E402
 # a soccer favourite the price gives less than this is called "or draw"
 SOCCER_STRAIGHT = 0.65
 MARKET_PICK = {"ucl", "uel", "uecl"} | {k for k, _, _ in EXTRA_SOCCER}
@@ -670,7 +660,7 @@ def collect(key, path, day, mlbctx, mybook=None):
                 # football 0.42 vs 0.61, NBA 0.65 vs 0.86), and the 272 picks
                 # that went against the market's favourite hit 34.9% while
                 # claiming 55.4% (ROI -12.3%). So the price leads everywhere and
-                # the model gets ANCHOR_W of the say -- enough to break near
+                # the model gets policy.model_weight of the say -- enough to break near
                 # coin flips, never enough to fade a real favourite.
                 p_away = mine.get("p_away")
                 if p_away is None and mine.get("conf") and mine.get("side") in ("away", "home"):
@@ -681,8 +671,7 @@ def collect(key, path, day, mlbctx, mybook=None):
                     # both opinions, kept for the daily review's refit
                     mine = dict(mine, p_model_away=p_away, p_market_away=mq)
                     if mq is not None and 0.0 < mq < 1.0:
-                        pa = P.anchor(p_away, mq, ANCHOR_W.get(
-                            key, P.MLB_MKT_W if key == "mlb" else ANCHOR_W_DEFAULT))
+                        pa = P.anchor(p_away, mq, _policy.model_weight(key))
                         # the one edge the edge lab confirmed on unseen games:
                         # the close underrates home sides in some leagues
                         h = HOME_EDGE.get(key)
@@ -712,7 +701,7 @@ def collect(key, path, day, mlbctx, mybook=None):
                     mp = mine.get("conf") if mine.get("side") in ("home", "away") else None
                     if mp is not None and 0 < mp < 1:
                         mine_side = mine["side"]
-                        w = ANCHOR_W.get(key, ANCHOR_W_DEFAULT)
+                        w = _policy.model_weight(key)
                         if mine_side == "home":
                             ph = P.anchor(mp, ph, w)
                         else:

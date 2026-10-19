@@ -33,7 +33,7 @@ MIN_FIT = 40                 # graded picks a league needs before its own weight
 # 5% (until 2026-10-18 the grid started at 0.05 and its first score was
 # mislabelled market-only)
 W_GRID = [i / 20 for i in range(0, 9)]
-W_DEFAULT = 0.20
+W_DEFAULT = 0.0          # no tested weight anywhere: the market alone (the baseline)
 
 
 def load(name, default):

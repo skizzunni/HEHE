@@ -478,6 +478,31 @@ class Freshness(unittest.TestCase):
         self.assertFalse(dashboard.pregame(c, "20261018", now - dt.timedelta(hours=1)))
 
 
+class SelectionPolicy(unittest.TestCase):
+    """One policy source; the regression cases from the 2026-10-18 slate."""
+
+    def test_atlanta_follows_the_tested_policy(self):
+        """CHI @ ATL: the market had Chicago 51.7%, the model Atlanta 56.4%. A
+        hand-set NFL weight of 0.30 published Atlanta 50.7% (lost). With the
+        tested policy (market only) the pick is Chicago."""
+        import picks, policy
+        real = policy._W
+        try:
+            policy._W = {"default": 0.0, "weights": {"ncaaf": 0.0}}
+            p_away = picks.anchor(0.4365, 0.5174, policy.model_weight("nfl"))
+            self.assertGreater(p_away, 0.5)                       # Chicago (away)
+            policy._W = {"default": 0.0, "weights": {"nfl": 0.3}}   # only a tested file may say 0.3
+            self.assertLess(picks.anchor(0.4365, 0.5174, policy.model_weight("nfl")), 0.5)
+        finally:
+            policy._W = real
+
+    def test_no_hand_set_weights_in_live_code(self):
+        import re
+        for f in ("dashboard.py", "picks.py"):
+            src = open(os.path.join(ROOT, f)).read()
+            self.assertIsNone(re.search(r"ANCHOR_W\s*=|MLB_MKT_W\s*=|TENNIS_MKT_W\s*=", src), f)
+
+
 class StuckSweep(unittest.TestCase):
     """Anything still open a week after its game is reported, not left silent."""
 

@@ -67,16 +67,8 @@ MLB_SP_SHRINK = 70.0           # innings at which a starter is trusted by half
 # was the best or joint-best of ten tried across three different feature sets,
 # and it is what turns the model's own top calls from 56.7% into 71.7%: the
 # picks it loses are the ones where it argued hardest with the price.
-MLB_MKT_W = 0.20
-
-
-def mlb_anchor(p_model, p_market):
-    """Blend a model probability into a de-vigged price, in log-odds."""
-    def _l(x):
-        x = min(max(x, 1e-6), 1 - 1e-6)
-        return math.log(x / (1 - x))
-    z = (1 - MLB_MKT_W) * _l(p_market) + MLB_MKT_W * _l(p_model)
-    return 1 / (1 + math.exp(-max(min(z, 30), -30)))
+# The share itself is no longer set here: it comes from policy.model_weight
+# (tested weights only). 0.20 here beat the model alone, never the price alone.
 
 def anchor(p_model, p_market, w):
     """Blend a model probability into a de-vigged price with model weight w."""
@@ -454,7 +446,6 @@ def _mml(american):
 
 # ------------------------------------------------------------- tennis
 _tp_cache = {}
-TENNIS_MKT_W = 0.05
 
 
 def tennis_picks(day, tour=None):
@@ -561,8 +552,7 @@ def tennis_picks(day, tour=None):
                         lp = math.log(pts(ps[0])) - math.log(pts(ps[1]))
                         p1 = 1 / (1 + math.exp(-lp * 1.02))
                     # Kalshi's traders, where they price the match: the market
-                    # leads and the model gets a fifth of the say, the rule that
-                    # lifted every other sport (dashboard.ANCHOR_W)
+                    # leads; the model's share is policy.model_weight
                     mk = None
                     try:
                         import kalshi as _K
@@ -581,7 +571,8 @@ def tennis_picks(day, tour=None):
                         # sport it can measure: against the price, picks hit
                         # 39.6% (48) vs 68.0% with it (181). At 0.2 a model
                         # 70% could still flip a 52% Kalshi favourite.
-                        p1 = anchor(p1, mk, TENNIS_MKT_W)
+                        import policy
+                        p1 = anchor(p1, mk, policy.model_weight(tour or "atp"))
                     pick = ps[0] if p1 >= 0.5 else ps[1]
                     r1 = (rank.get(norm(ps[0])) or {}).get("rank")
                     r2 = (rank.get(norm(ps[1])) or {}).get("rank")

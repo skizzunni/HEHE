@@ -61,6 +61,8 @@ MUTATIONS = [
     ("dashboard.py", "    return t > (now or dt.datetime.now(ET))", "    return True", "test_stale_pregame_after_kickoff"),
     ("locks.py", "legs=res[\"pool\"], card=list(keys),", "legs=res[\"pool\"][1:], card=list(keys),",
      "test_replay_gives_the_same_card"),
+    ("policy.py", 'w = (_W.get("weights") or {}).get(league)', 'w = {"nfl": 0.30}.get(league)',
+     "test_atlanta_follows_the_tested_policy"),
     ("integrity.py", "not 0 <= v <= 1:", "False:", "test_catches_bad_values"),
     ("board.html", "z.prob >= 0.8", "z.prob >= 0.95", "Winners parlay"),
     ("board.html", "if (mins < 20) { if (el) el.remove(); return; }", "return;",
