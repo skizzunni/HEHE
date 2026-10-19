@@ -288,6 +288,12 @@ def snapshot():
                 games += ufc_props.for_slot(d._STATE["slots"][slot], labels)
             except Exception as ex:
                 print(f"props: ufc failed: {ex}", file=sys.stderr)
+            try:
+                import participation
+                participation.annotate(games)       # who is confirmed to play
+            except Exception as ex:
+                print(f"props: participation check failed (no prop recommended): {ex}",
+                      file=sys.stderr)
             out["props"][slot] = dict(games=games,
                                       tickets=player_props.prop_tickets(games))
             mega = player_props.mega_ticket(games)

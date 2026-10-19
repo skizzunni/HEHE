@@ -818,6 +818,8 @@ function legHTML(x, opts){
     + '<b>' + esc(x.label) + '</b>' + (x.price ? '<span class="px">' + esc(x.price) + '</span>' : '')
     + '<span class="ch" title="estimated from the market price">' + (100 * x.p).toFixed(0) + '% est.</span>'
     + (opts && opts.sgp ? '<span class="edgetag">same game</span>' : '')
+    + (x.plays === false ? '<span class="edgetag" title="not recommended until the player is confirmed to play">'
+       + esc(x.play || "not confirmed") + '</span>' : '')
     + (x.edge > 0 ? '<span class="edgetag" title="Priced off this player\'s own main line, this rung is underpriced">+'
        + x.edge.toFixed(0) + '% vs price</span>' : '') + res + '</div>'
     + '<div class="lgs">' + esc(x.match || '') + ' &middot; ' + esc(x.lg || x.league || '')

@@ -33,6 +33,7 @@ import os
 import fanduel
 import kalshi
 import locks
+import participation
 import props_ledger
 import stacks
 
@@ -164,6 +165,10 @@ def _prop_legs(prop_games, ok_gids):
             if not d or not LEG_DEC[0] <= d <= LEG_DEC[1] or not (P.get("aid") or P.get("name")):
                 continue
             if not props_ledger.gradable(lg, P["market"]):
+                continue
+            # a backup keeper's saves look like the best value on the board and
+            # can only void: confirmed participants only (participation.py)
+            if not participation.eligible(P):
                 continue
             pf = P["p"]                    # the price, not the ladder model (see locks.py)
             out.append(dict(P, p=pf, kind="prop", gid=g["id"], league=lg, lg=g["lg"],

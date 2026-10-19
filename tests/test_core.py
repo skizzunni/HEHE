@@ -519,6 +519,44 @@ class SelectionPolicy(unittest.TestCase):
             self.assertIsNone(re.search(r"ANCHOR_W\s*=|MLB_MKT_W\s*=|TENNIS_MKT_W\s*=", src), f)
 
 
+class Participation(unittest.TestCase):
+    """Goalkeeper backups (2026-10-17/18: five on the Lottery's DraftKings
+    tickets, all void) and inactive players are never recommended."""
+
+    def test_goalkeepers_need_a_confirmed_start(self):
+        import participation as PT
+        sm = dict(rosters=[dict(team=dict(abbreviation="SGE"), roster=[
+            dict(athlete=dict(displayName="Noah Atubolu"), starter=True),
+            dict(athlete=dict(displayName="Jens Grahl"), starter=False)])], injuries=[])
+        st = lambda n: PT.status(sm, "ger", n, "Goalkeeper Saves")
+        self.assertEqual(st("Noah Atubolu"), "starting")
+        self.assertEqual(st("Jens Grahl"), "on the bench")
+        self.assertEqual(st("Ron-Robert Zieler"), "not in the squad")
+        self.assertEqual(PT.status(dict(rosters=[], injuries=[]), "ger", "Noah Atubolu",
+                                   "Goalkeeper Saves"), "lineup not out")
+
+    def test_injury_report(self):
+        import participation as PT
+        sm = dict(rosters=[], injuries=[dict(team=dict(abbreviation="DAL"), injuries=[
+            dict(athlete=dict(displayName="KaVontae Turpin"), status="Out"),
+            dict(athlete=dict(displayName="Dee Winters"), status="Questionable")])])
+        self.assertEqual(PT.status(sm, "nfl", "KaVontae Turpin", "Receptions"), "listed out")
+        self.assertEqual(PT.status(sm, "nfl", "Dee Winters", "Tackles"), "listed questionable")
+        self.assertEqual(PT.status(sm, "nfl", "CeeDee Lamb", "Receptions"), "ok")
+
+    def test_backup_keeper_never_reaches_a_ticket(self):
+        """The archived 2026-10-18 DraftKings ticket's Jannik Huth 5+ saves:
+        unconfirmed, so no Lottery leg, prop ticket or 25-leg ticket takes it."""
+        import lottery
+        P = dict(name="Jannik Huth", market="Goalkeeper Saves", line="5+", p=0.6, price="+150",
+                 label="Jannik Huth: 5+ Goalkeeper Saves", play="on the bench", plays=False)
+        games = [dict(id="ger:1", lg="Bundesliga", match="A v B", props=[P])]
+        self.assertEqual(lottery._prop_legs(games, {"ger:1"}), [])
+        self.assertIsNone(player_props.mega_ticket(games))
+        P.update(play="starting", plays=True)
+        self.assertEqual(len(lottery._prop_legs(games, {"ger:1"})), 1)
+
+
 class StuckSweep(unittest.TestCase):
     """Anything still open a week after its game is reported, not left silent."""
 

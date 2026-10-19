@@ -30,6 +30,7 @@ import os
 from zoneinfo import ZoneInfo
 
 import fanduel
+import participation
 import props_ledger
 import stacks
 
@@ -344,6 +345,8 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
             # open on the card forever and its margin is never tuned
             if not props_ledger.gradable(pg["id"].split(":", 1)[0], P["market"]):
                 continue
+            if not participation.eligible(P):
+                continue                        # not confirmed to play (participation.py)
             # an over/under prop's p is already de-vigged across both sides
             # every prop's p already carries its market's tuned margin
             # (props_ledger.hold per league and market) -- ladders included;

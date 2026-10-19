@@ -32,6 +32,7 @@ import time
 import urllib.request
 from concurrent.futures import ThreadPoolExecutor
 
+import participation
 import props_ledger
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -213,7 +214,7 @@ def for_slot(board_slot, labels=None, max_games=40):
             continue
         for row in rows:
             m = row.get("mkt") or {}
-            g = fanduel.find(FD, league, m.get("away"), m.get("home"))
+            g = fanduel.find(FD, league, m.get("away"), m.get("home"), m.get("start"))
             if g:
                 fd_jobs.append((league, row, g))
     fd_jobs = fd_jobs[:max_games]
@@ -253,7 +254,8 @@ def prop_tickets(games, tiers=(2, 3, 4, 6, 8), lo=0.75, hi=0.93, variants=3):
         # only props the box score can settle: an ungradable leg leaves the
         # ticket open forever and its market's margin is never re-fitted
         lg = g["id"].split(":", 1)[0]
-        best = [p for p in g["props"] if lo <= p["p"] <= hi and props_ledger.gradable(lg, p["market"])]
+        best = [p for p in g["props"] if lo <= p["p"] <= hi and props_ledger.gradable(lg, p["market"])
+                and participation.eligible(p)]
         best.sort(key=lambda p: abs(p["p"] - 0.85))
         if best:
             pool.append((g, best))
@@ -309,6 +311,8 @@ def mega_ticket(games, n=25, dec_lo=1.25, dec_hi=1.834, per_game=1):
                 continue
             if not props_ledger.gradable(g["id"].split(":", 1)[0], P["market"]):
                 continue
+            if not participation.eligible(P):
+                continue                   # a player not confirmed to play can only void
             p = P["p"]                     # the price, not the ladder model (see locks.py)
             pool.append(dict(P, p=round(p, 4), dec=d, match=g["match"], lg=g["lg"],
                              tip=g.get("tip"), gid=g["id"]))
