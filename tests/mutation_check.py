@@ -69,6 +69,7 @@ MUTATIONS = [
      "test_goalkeepers_need_a_confirmed_start"),
     ("lottery.py", "            if not participation.eligible(P):\n                continue\n            pf", "            pf",
      "test_backup_keeper_never_reaches_a_ticket"),
+    ("lottery.py", "fin = [x for x in inband if", "fin = [x for x in pool if", "test_finish_with_the_likeliest_line"),
     ("integrity.py", "not 0 <= v <= 1:", "False:", "test_catches_bad_values"),
     ("board.html", "z.prob >= 0.8", "z.prob >= 0.95", "Winners parlay"),
     ("board.html", "if (mins < 20) { if (el) el.remove(); return; }", "return;",

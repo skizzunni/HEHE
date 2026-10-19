@@ -220,7 +220,8 @@ def _tickets(legs, book, tier=TIERS[1]):
     lo, hi = tier["dec"]
     rank = tier["rank"]
     best = {}
-    for L in sorted((L for L in legs if lo <= L["dec"] <= hi), key=lambda L: -rank(L)):
+    inband = [L for L in legs if lo <= L["dec"] <= hi]
+    for L in sorted(inband, key=lambda L: -rank(L)):
         best.setdefault(L["gid"], L)            # one leg per game: its best
     pool = sorted(best.values(), key=lambda L: -rank(L))
     used, made = set(), []
@@ -234,10 +235,15 @@ def _tickets(legs, book, tier=TIERS[1]):
             if tier.get("pay") and pay * L["dec"] >= tier["pay"]:
                 # this leg finishes the ticket: finish it with the likeliest
                 # leg that still reaches the payout, not the next in line,
-                # so the ticket does not overshoot $10,000 at the cost of odds
-                fin = [x for x in pool if x["gid"] not in used and x not in pick
+                # so the ticket does not overshoot $10,000 at the cost of odds.
+                # Any line of any unused game may finish it: until 2026-10-19
+                # only each game's top-ranked line was looked at, so a ticket
+                # needing x1.70 more took a 2.35 leg at 41% (13,846 paid) when
+                # 1.70-1.85 lines at ~55% were on the board.
+                in_pick = {x["gid"] for x in pick}
+                fin = [x for x in inband if x["gid"] not in used and x["gid"] not in in_pick
                        and pay * x["dec"] >= tier["pay"]]
-                L = max(fin, key=lambda x: x["p"])
+                L = max(fin, key=lambda x: (x["p"], -x["dec"]))
             pick.append(L)
             pay *= L["dec"]
             prob *= L["p"]
@@ -273,7 +279,12 @@ def build(slot_rows, soccer_keys, labels, FD, prop_games=None, day=None, KB=None
         tickets += (_tickets(games + [P for P in props if P.get("fd")], "FanDuel", tier)
                     + _tickets([P for P in props if not P.get("fd")], "DraftKings", tier))
     edge = sorted((L for L in games if L["value"] > 1), key=lambda L: -L["value"])
+    keep = ("gid", "label", "p", "dec", "value", "kind", "fd", "price", "devig", "name", "market",
+            "line", "league", "plays")
     return dict(tickets=tickets,
+                # every candidate leg the builder saw, archived with the day's
+                # card so its tickets can be rebuilt exactly (replay)
+                candidates=[{k: L.get(k) for k in keep} for L in games + props],
                 pool=dict(games=len({L["gid"] for L in games}), props=len(props),
                           checked=sum(L["p_kalshi"] is not None for L in games),
                           edges=len(edge),
@@ -318,7 +329,17 @@ def record(res, day):
         tickets.append(dict(t, legs=legs))
     if not tickets:
         return
+    first = day not in book["days"]
     book["days"].setdefault(day, dict(tickets=[]))["tickets"] += tickets
+    if first and res.get("candidates") is not None:
+        import policy
+        pools = book.setdefault("pools", {})
+        pools[day] = dict(t=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+                          policy=policy.version(), legs=res["candidates"],
+                          tickets=[[L["label"] for L in t["legs"]] for t in tickets],
+                          keys=[[t["book"], t.get("tier")] for t in tickets])
+        for old_day in sorted(pools)[:-14]:
+            del pools[old_day]
     save(book)
     props = [L for t in tickets for L in t["legs"] if L["kind"] == "prop"]
     if props:
@@ -347,7 +368,35 @@ def grade(final):
             st = [L["status"] for L in t["legs"]]
             t["status"] = ("lost" if "lost" in st else "open" if "open" in st
                            else "won" if "won" in st else "void")
+            # a void leg leaves the slip: the bet that stands is the rest of
+            # it, at their payout and chance -- kept beside the original
+            live = [L for L in t["legs"] if L["status"] != "void"]
+            if len(live) < len(t["legs"]):
+                pay = prob = 1.0
+                for L in live:
+                    pay *= L.get("dec") or 1.0
+                    prob *= L.get("p") or 1.0
+                t["settled"] = dict(legs=len(live), pays=round(pay, 1), prob=prob,
+                                    voided=[L["label"] for L in t["legs"] if L["status"] == "void"])
     save(book)
+
+
+def replay(day):
+    """True when the builder, re-run on the archived candidates, gives the
+    recorded tickets; None without an archive."""
+    snap = (load().get("pools") or {}).get(_iso(day))
+    if not snap:
+        return None
+    legs = snap["legs"]
+    got = []
+    for tier in TIERS:
+        got += (_tickets([L for L in legs if L.get("kind") == "game" or L.get("fd")], "FanDuel", tier)
+                + _tickets([L for L in legs if L.get("kind") == "prop" and not L.get("fd")], "DraftKings", tier))
+    want = {(b, tr): lab for (b, tr), lab in zip(map(tuple, snap["keys"]), snap["tickets"])}
+    have = {}
+    for t in got:
+        have.setdefault((t["book"], t.get("tier")), []).append([L["label"] for L in t["legs"]])
+    return all(lab in have.get(k, []) for k, lab in want.items())
 
 
 def frozen(day):

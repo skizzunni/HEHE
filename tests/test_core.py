@@ -557,6 +557,43 @@ class Participation(unittest.TestCase):
         self.assertEqual(len(lottery._prop_legs(games, {"ger:1"})), 1)
 
 
+class LotteryFinish(unittest.TestCase):
+    """The leg that completes a $10,000 ticket is the likeliest line of any
+    unused game that reaches the payout (archived 2026-10-18: a 2.35 leg at
+    41% was taken because only each game's top-ranked line was considered)."""
+
+    def test_finish_with_the_likeliest_line(self):
+        import lottery
+        legs = []
+        for g in range(9):                                   # nine legs reaching ~6,000
+            legs.append(dict(gid=f"g{g}", p=0.456, dec=2.63, value=1.2, label=f"L{g}"))
+        # the last game: its top-ranked line is the long one; a shorter line is likelier
+        legs.append(dict(gid="h", p=0.447, dec=2.35, value=1.05, label="Hicks 2+"))
+        legs.append(dict(gid="h", p=0.56, dec=1.78, value=0.9968, label="Short line"))
+        tier = dict(lottery.TIERS[1], n=1)
+        t = lottery._tickets(legs, "FanDuel", tier)[0]
+        self.assertGreaterEqual(t["base"], lottery.TARGET)
+        self.assertEqual(t["legs"][-1]["label"], "Short line")
+
+    def test_archive_replays(self):
+        import lottery
+        legs = [dict(gid=f"g{g}", kind="game", fd="x", p=0.456, dec=2.63, value=1.2, label=f"L{g}",
+                     price="+163") for g in range(12)]
+        res = dict(tickets=lottery._tickets(legs, "FanDuel", dict(lottery.TIERS[1], n=1)), candidates=legs)
+        tmp = tempfile.mkdtemp()
+        real, realp = lottery.LEDGER, props_ledger.LEDGER
+        lottery.LEDGER, props_ledger.LEDGER = os.path.join(tmp, "l.json"), os.path.join(tmp, "p.json")
+        try:
+            lottery.record(res, "2026-10-19")
+            self.assertTrue(lottery.replay("2026-10-19"))
+            b = lottery.load()
+            b["pools"]["2026-10-19"]["legs"][0]["value"] = 0.5      # a changed input changes the ticket
+            lottery.save(b)
+            self.assertFalse(lottery.replay("2026-10-19"))
+        finally:
+            lottery.LEDGER, props_ledger.LEDGER = real, realp
+
+
 class StuckSweep(unittest.TestCase):
     """Anything still open a week after its game is reported, not left silent."""
 

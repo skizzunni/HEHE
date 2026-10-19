@@ -203,6 +203,13 @@ def snapshot():
                 r_ = locks.replay(day_, path_)
                 if r_ and not r_[0]:
                     rb.append(f"{nm} {day_}")
+        try:
+            import lottery as _lot
+            for day_ in sorted((_lot.load().get("pools") or {}))[-3:]:
+                if _lot.replay(day_) is False:
+                    rb.append(f"Lottery {day_}")
+        except Exception as ex_:
+            rb.append(f"Lottery replay failed to run: {ex_}")
         out["health"]["replay_bad"] = rb
     out["parlays"] = parlays.build_all(out)
     # Stacks: long tickets of high-probability legs (alt totals, "won't win
@@ -409,6 +416,8 @@ def snapshot():
                 out["lottery"]["today"] = fz
         else:
             out["lottery"]["today"]["preview"] = True
+        for v_ in out["lottery"].values():
+            v_.pop("candidates", None)          # archived in lottery.json, not published
         out["lottery_record"] = lottery.report()
         pl_ = out["lottery"]["today"].get("pool") or {}
         print(f'lottery pool: {pl_}', file=sys.stderr)
