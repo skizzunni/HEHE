@@ -2300,12 +2300,13 @@
    "match": "Cagliari at Monza",
    "p": 0.9355,
    "p_model": 0.938,
+   "score": "Cagliari 0 - Monza 4",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Monza"
    },
-   "status": "open"
+   "status": "lost"
   },
   "ita:401874762|Under 5.5 goals": {
    "away": "Cagliari",
@@ -2317,11 +2318,12 @@
    "match": "Cagliari at Monza",
    "p": 0.9576,
    "p_model": 0.9592,
+   "score": "Cagliari 0 - Monza 4",
    "spec": {
     "line": 5.5,
     "t": "under"
    },
-   "status": "open"
+   "status": "won"
   },
   "ita:401874771|No \u00b7 Udinese wins by over 3.5 goals": {
    "away": "Lecce",
@@ -7362,7 +7364,7 @@
    "logged": "2026-10-19T00:01",
    "n": 4,
    "prob": 0.7782,
-   "status": "open"
+   "status": "lost"
   },
   "20261019:4:2": {
    "fair": 1.28,
