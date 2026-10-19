@@ -36,7 +36,7 @@ what is missing and the next step. Updated 2026-10-18 (after the external review
 
 Run by `.github/workflows/tests.yml` on every code or page push:
 
-* `tests/test_core.py` -- 50 unit tests (standard library, no network): Locks -400..-120 and
+* `tests/test_core.py` -- 51 unit tests (standard library, no network): Locks -400..-120 and
   Safe -2000..-500 windows, one leg per game and the kind cap, soccer limited to validated
   kinds, soccer grading (draw / void / live), soccer name matching and the reversed-fixture
   guard, NFL upper tail, wind scaling, ungradable props kept off tickets, every FanDuel prop
@@ -47,8 +47,8 @@ Run by `.github/workflows/tests.yml` on every code or page push:
   minutes old and absent when fresh; Locks -> Safe Locks renders 11 legs, the Winners parlay
   (top 4, 80%) and Best play (top 10, 54%); Results health box lists a trailing split, a
   never-settled record and bad data, and reads "All checks passing" when clean.
-* `tests/mutation_check.py` -- breaks 38 protected rules one at a time (bytecode cache off) and
-  requires each to be caught; 38/38 caught 2026-10-18.
+* `tests/mutation_check.py` -- breaks 39 protected rules one at a time (bytecode cache off) and
+  requires each to be caught; 39/39 caught 2026-10-18.
 
 ## Monitoring (on the site, every build)
 
@@ -80,6 +80,22 @@ drift/form/rest/travel/team bias, Kalshi+book average.
 * Props at Locks prices: 155 graded; 70-80% band hit 74.4 vs 73.4 said; 80-90% band 78.4 vs 84.7, but the
   whole gap is soccer "Shots" (uel 8/20 vs 84%), already off. Without it the band hits ~90 vs ~85 (NHL shots
   on goal 41/47 vs 84.8). No change to prop chances.
+
+## Sunday 2026-10-18 review (2026-10-19 05:30 UTC)
+
+* **Safe Locks 11/11 won** (stated all-hit 35.0%; second full card in two days). Regular Locks 9/11
+  (lost: Colts +1.5 by 6, Cowboys +7.5 by 10). Every leg checked against its final score; "Real Madrid
+  or draw" (first soccer leg) settled won 4-1; nothing stuck open.
+* NFL props: 160 recorded, graded under the right market names; receiving yards 34/37 (91.9% vs 80.0%
+  said), receptions 36/44 (81.8 vs 80.7), passing yards 14/16, rushing yards 15/21 (71.4 vs 80.6),
+  anytime TD 9/24 (37.5 vs 42.0). Voids checked on ESPN: Judkins and Warren listed Out, Skattebo
+  not in the box -- correct (the participation gate now keeps listed-Out players off recommendations).
+* Fixed: Josh Cameron (kick returns only) Receiving Yards 5+ was 'ungradable' -> lost at 0; TD history
+  regraded with the shared resolver: 365 graded (was 223), 45 won = 12.3% vs 11.7% stated.
+* NFL stack legs: 2 since the one-leg-per-game rule (1 won, 1 open) -- too few to compare.
+* Ladder history: last pre-game ladders for all 13 NFL games (12 Sunday + Monday night).
+* Workflows: 60 runs in the last 4 h, 45 board successes, 0 failures, longest gap 5.2 min.
+* Daily audit: nothing trailing, nothing stuck.
 
 ## Selection pipeline (2026-10-19)
 
@@ -164,6 +180,8 @@ FanDuel lists only one side.
 | 10-18 | UFC "goes the distance" prop (-1200) stuck open, would void after 3 days | grader waited for ESPN's result line, which arrives late or never | settles from final round + clock when the line is missing; live: settled **won** (ended 5.78 min); unit + mutation tested |
 | 10-18 | bot reported "open-position limit reached" | an Oct 16 practice ticket on a never-finished MLB game held a slot forever | partial settlement read; practice tickets expire after 4 days; unit + mutation tested |
 | 10-18 | health box flagged "props uel Shots" trailing | audit counted a market already switched off | audit ignores markets no longer offered, and the build drops such alarms at once (review log is daily); shots off in every soccer league |
+| 10-19 | a played NFL player's prop 'ungradable' (Cameron, kick returns only) | football box lists only groups a player recorded in; a missing group read as missing data | missing group = 0 for a player in the box; unit + mutation tested; past records re-checked |
+| 10-19 | TD history: 139 of 472 'ungradable', name differences voided | no-line players returned None; exact-name lookup | shared resolver + 0 rule: 365 graded, 12.3% vs 11.7% |
 | 10-18 | the Winners parlay the page tells you to play had no record | record graded only legs and all-11 days | `locks.plays` grades the named slices; record table + summary on the page; unit, browser and mutation tested |
 | 10-18 | integrity check first flagged 253 prices | Kalshi prices are dollars (0-1), not American odds | `.kalshi.` paths checked as 0-1; live payload clean |
 | 10-18 | Kalshi bot would use tickets with no build time | age check skipped when `built` missing; bad timestamp would crash | `board_age()` treats missing/unreadable as stale; unit-tested |
