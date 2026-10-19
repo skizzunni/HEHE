@@ -8,10 +8,10 @@
  },
  "detail": {
   "atp": {
-   "all_hit": 67.8,
+   "all_hit": 67.3,
    "calls": 80,
    "cutoff": 0.65,
-   "games": 152,
+   "games": 153,
    "hit": 80.0
   },
   "mlb": {
@@ -40,11 +40,11 @@
    "note": "insufficient evidence: no cutoff qualified"
   },
   "soccer": {
-   "all_hit": 61.1,
-   "calls": 229,
+   "all_hit": 61.2,
+   "calls": 230,
    "cutoff": 0.675,
-   "games": 535,
-   "hit": 76.4
+   "games": 536,
+   "hit": 76.5
   },
   "ufc": {
    "all_hit": 63.6,
@@ -69,14 +69,14 @@
  },
  "holdout": {
   "all_hit": 66.1,
-  "all_n": 1047,
+  "all_n": 1049,
   "basis": "as published",
   "days": 18,
   "hit": 73.0,
   "n": 244,
   "simulated": {
    "hit": 67.8,
-   "n": 1047,
+   "n": 1049,
    "what": "old picks re-scored as the market favourite"
   },
   "since": "2026-09-21",
@@ -89,5 +89,5 @@
   "nhl",
   "ufc"
  ],
- "updated": "2026-10-19T14:47-04:00"
+ "updated": "2026-10-19T14:52-04:00"
 }

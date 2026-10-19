@@ -3251,10 +3251,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 61.0,
-    "n": 82,
+    "hit": 60.2,
+    "n": 83,
     "name": "tennis Kalshi-priced",
-    "said": 67.3
+    "said": 67.2
    },
    {
     "flag": false,
@@ -3329,10 +3329,10 @@
   ],
   "calls": {
    "atp": {
-    "all_hit": 67.8,
+    "all_hit": 67.3,
     "calls": 80,
     "cutoff": 0.65,
-    "games": 152,
+    "games": 153,
     "hit": 80.0
    },
    "mlb": {
@@ -3361,11 +3361,11 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "soccer": {
-    "all_hit": 61.1,
-    "calls": 229,
+    "all_hit": 61.2,
+    "calls": 230,
     "cutoff": 0.675,
-    "games": 535,
-    "hit": 76.4
+    "games": 536,
+    "hit": 76.5
    },
    "ufc": {
     "all_hit": 63.6,
@@ -3463,6 +3463,14 @@
    {
     "against_market": false,
     "league": "atp",
+    "pick": "Lorenzo Sonego",
+    "price": null,
+    "said": 61.5,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 62%"
+   },
+   {
+    "against_market": false,
+    "league": "atp",
     "pick": "Jaime Faria",
     "price": null,
     "said": 60.8,
@@ -3528,20 +3536,20 @@
    }
   ],
   "picks": {
-   "hit": 68.0,
-   "lost": 8,
-   "n": 25,
+   "hit": 66.7,
+   "lost": 9,
+   "n": 27,
    "roi": 33.9,
    "said": 64.4,
-   "won": 17
+   "won": 18
   },
   "picks_by_league": {
    "atp": {
-    "hit": 57.1,
-    "lost": 6,
-    "n": 14,
+    "hit": 53.3,
+    "lost": 7,
+    "n": 15,
     "roi": null,
-    "said": 64.4,
+    "said": 64.2,
     "won": 8
    },
    "ind": {
@@ -3566,6 +3574,14 @@
     "n": 1,
     "roi": 33.9,
     "said": 70.8,
+    "won": 1
+   },
+   "swe": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 69.0,
     "won": 1
    },
    "wta": {
@@ -3607,12 +3623,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 80.0,
+   "hit": 81.8,
    "lost": 2,
-   "n": 10,
+   "n": 11,
    "roi": 33.9,
-   "said": 72.0,
-   "won": 8
+   "said": 71.7,
+   "won": 9
   },
   "stuck": [],
   "vs_market_14d": {
