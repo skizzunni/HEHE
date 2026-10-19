@@ -171,6 +171,20 @@ def published(e):
     return e["conf"] / 100, e["status"] == "won"
 
 
+def call_group(league):
+    """The group a league's strong calls qualify in: every soccer league
+    picks by the same market rule and has too few games alone, so soccer
+    qualifies as one group -- by the same test as every other league
+    (until 2026-10-19 soccer skipped the test and was given 75%)."""
+    try:
+        import ledger
+        if league in ledger.SOCCER:
+            return "soccer"
+    except Exception:
+        pass
+    return league
+
+
 def fit_calls(graded):
     """Per league, the lowest cutoff whose own record reaches CALL_TARGET on
     CALL_MIN_N+ games AND holds in both halves by date, on the chances as
@@ -181,7 +195,7 @@ def fit_calls(graded):
     for e in sorted(graded, key=lambda e: day_of(e) or ""):     # halves by date
         x = published(e)
         if x:
-            by[e["league"]].append(x)
+            by[call_group(e["league"])].append(x)
     cuts, detail = {}, {}
     for lg, rs in by.items():
         table = []
@@ -308,7 +322,7 @@ def holdout(graded):
             continue
         alln += 1
         aw += x[1]
-        c = cuts.get(e["league"])
+        c = cuts.get(call_group(e["league"]))
         if c is not None and x[0] >= c:
             strong += 1
             sw += x[1]

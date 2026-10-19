@@ -63,6 +63,8 @@ MUTATIONS = [
      "test_replay_gives_the_same_card"),
     ("policy.py", 'w = (_W.get("weights") or {}).get(league)', 'w = {"nfl": 0.30}.get(league)',
      "test_atlanta_follows_the_tested_policy"),
+    ("calls.py", "    return _MIN.get(_group(league))", "    return _MIN.get(_group(league), 0.75 if _group(league) == 'soccer' else 0.60)",
+     "test_strong_calls_only_where_qualified"),
     ("integrity.py", "not 0 <= v <= 1:", "False:", "test_catches_bad_values"),
     ("board.html", "z.prob >= 0.8", "z.prob >= 0.95", "Winners parlay"),
     ("board.html", "if (mins < 20) { if (el) el.remove(); return; }", "return;",

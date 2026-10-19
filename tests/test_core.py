@@ -496,6 +496,22 @@ class SelectionPolicy(unittest.TestCase):
         finally:
             policy._W = real
 
+    def test_strong_calls_only_where_qualified(self):
+        """No league gets strong calls without a qualifying record: not soccer
+        by exception, not a league with no record by default."""
+        import calls
+        real = calls._MIN
+        try:
+            calls._MIN = {"ncaaf": 0.575}
+            self.assertFalse(calls.is_call("epl", 80.0))       # soccer group has not qualified
+            self.assertFalse(calls.is_call("nba", 80.0))       # no record at all
+            self.assertTrue(calls.is_call("ncaaf", 60.0))
+            calls._MIN = {"soccer": 0.70}
+            self.assertTrue(calls.is_call("epl", 72.0))        # qualified as the soccer group
+            self.assertFalse(calls.is_call("epl", 69.0))
+        finally:
+            calls._MIN = real
+
     def test_no_hand_set_weights_in_live_code(self):
         import re
         for f in ("dashboard.py", "picks.py"):
