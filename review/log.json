@@ -3361,11 +3361,11 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "soccer": {
-    "all_hit": 60.9,
-    "calls": 231,
+    "all_hit": 60.8,
+    "calls": 232,
     "cutoff": 0.675,
-    "games": 539,
-    "hit": 76.2
+    "games": 541,
+    "hit": 76.3
    },
    "ufc": {
     "all_hit": 63.6,
@@ -3502,6 +3502,14 @@
    },
    {
     "against_market": false,
+    "league": "ned2",
+    "pick": "De Graafschap",
+    "price": null,
+    "said": 65.2,
+    "why": "margin 1 \u00b7 called at 65%"
+   },
+   {
+    "against_market": false,
     "league": "tur",
     "pick": "Besiktas",
     "price": null,
@@ -3560,12 +3568,12 @@
    }
   ],
   "picks": {
-   "hit": 60.0,
-   "lost": 12,
-   "n": 30,
+   "hit": 59.4,
+   "lost": 13,
+   "n": 32,
    "roi": 33.9,
-   "said": 64.3,
-   "won": 18
+   "said": 64.5,
+   "won": 19
   },
   "picks_by_league": {
    "atp": {
@@ -3609,12 +3617,12 @@
     "won": 1
    },
    "ned2": {
-    "hit": 0.0,
-    "lost": 1,
-    "n": 1,
+    "hit": 33.3,
+    "lost": 2,
+    "n": 3,
     "roi": null,
-    "said": 68.5,
-    "won": 0
+    "said": 68.1,
+    "won": 1
    },
    "swe": {
     "hit": 100.0,
@@ -3671,12 +3679,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 75.0,
+   "hit": 76.9,
    "lost": 3,
-   "n": 12,
+   "n": 13,
    "roi": 33.9,
    "said": 71.4,
-   "won": 9
+   "won": 10
   },
   "stuck": [],
   "vs_market_14d": {
