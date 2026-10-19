@@ -56,6 +56,11 @@ RECORD = dict(legs=11, won=11, said=94.0, plays=dict(winners=dict(days=3, hit=3,
               days=[dict(day="2026-10-17", n=11, won=11, lost=0, void=0, open=0, all_hit=True,
                          plays=dict(winners=dict(n=4, prob=0.81, result="won")))])
 
+PAIRED = dict(run="2026-10-19", rule="promote only if the 95% range is above zero", studies=[dict(
+    name="Model weight off (market-only) vs the published picks", baseline="published", proposal="market",
+    same="one pick per game", promoted=[], result=dict(all=dict(picks=476, old_won=305, new_won=320, diff=15,
+    ci95_diff=[-6, 42], new_won_old_missed=53, old_won_new_missed=38, promote=False)))])
+
 PROBE = """<script>setTimeout(function(){
   var out = {banner: !!document.getElementById("stalebar")};
   var b = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Locks/.test(x.textContent)})[0];
@@ -72,6 +77,7 @@ PROBE = """<script>setTimeout(function(){
       if (r) r.click();
       setTimeout(function(){
         out.health = ((document.getElementById("health") || {}).textContent || "");
+        out.results = ((document.getElementById("panel") || {}).textContent || "");
         document.title = "UICHECK " + JSON.stringify(out);
       }, 300);
     }, 300);
@@ -83,7 +89,7 @@ def render(captured_ms, health=None):
     s = open(os.path.join(ROOT, "board.html")).read()
     s = re.sub(r'"captured":\d+', f'"captured":{captured_ms}', s, count=1)
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
-                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"health":' + json.dumps(health) + ',', 1)
+                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"health":' + json.dumps(health) + ',', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -129,6 +135,9 @@ def main():
     if "4 problems found" not in old["health"] or "Old input: football/nfl" not in old["health"] or "props uel Shots" not in old["health"] \
             or "Never settled" not in old["health"] or "Bad data: chance outside 0-1" not in old["health"]:
         fails.append("health box must list the trailing split and the stuck record: " + old["health"])
+    if "Changes tested" not in new["results"] or "New right, old wrong" not in new["results"] \
+            or "-6 to 42" not in new["results"]:
+        fails.append("Results must list each tested change with both directions: " + new["results"][-300:])
     if "All checks passing" not in new["health"]:
         fails.append("clean review must read 'All checks passing': " + new["health"])
     for f in fails:

@@ -214,6 +214,21 @@ def snapshot():
         except Exception as ex_:
             rb.append(f"Lottery replay failed to run: {ex_}")
         out["health"]["replay_bad"] = rb
+    # what each proposed change did against the current chooser (tools/paired.py)
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data",
+                               "paired_eval.json")) as fh_:
+            _pe = json.load(fh_)
+        out["paired"] = dict(run=_pe.get("run"), rule=_pe.get("rule"), studies=[
+            dict(name=s_["name"], baseline=s_.get("baseline"), proposal=s_.get("proposal"),
+                 same=s_.get("same"), promoted=s_.get("promoted"),
+                 result={k: {x: v.get(x) for x in ("picks", "old_won", "new_won", "diff", "ci95_diff",
+                                                     "new_won_old_missed", "old_won_new_missed",
+                                                     "changed", "net", "promote")}
+                         for k, v in list(s_["result"].items())[:10]})
+            for s_ in _pe.get("studies") or []])
+    except (OSError, ValueError, KeyError, TypeError):
+        out["paired"] = None
     out["parlays"] = parlays.build_all(out)
     # Stacks: long tickets of high-probability legs (alt totals, "won't win
     # by N"), priced from each game's moneyline, spread and total. Kept apart

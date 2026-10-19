@@ -1,0 +1,576 @@
+{
+ "run": "2026-10-19",
+ "rule": "promote only if the day-bootstrap 95% interval of (new wins - old wins) on untouched later days is above zero (lab inputs: net >= 2 SE)",
+ "studies": [
+  {
+   "name": "Model weight off (market-only) vs the published picks",
+   "baseline": "the pick as published (hand-set model weights in NFL/WNBA/MLB/tennis)",
+   "proposal": "the same-time market favourite (tested weight 0)",
+   "same": "one pick per game, same game, same price",
+   "untouched_from": "2026-09-24",
+   "result": {
+    "all": {
+     "days": 25,
+     "picks": 476,
+     "old_won": 305,
+     "new_won": 320,
+     "diff": 15,
+     "ci95_diff": [
+      -6,
+      42
+     ],
+     "new_won_old_missed": 53,
+     "old_won_new_missed": 38,
+     "promote": false,
+     "examples_new": [
+      {
+       "day": "2026-09-24",
+       "new": "opponent of New York Mets",
+       "game": "mlb:401817067",
+       "won": true
+      },
+      {
+       "day": "2026-09-24",
+       "new": "opponent of Coastal Carolina Chanticleers",
+       "game": "ncaaf:401869941",
+       "won": true
+      },
+      {
+       "day": "2026-09-25",
+       "new": "opponent of California Golden Bears",
+       "game": "ncaaf:401858234",
+       "won": true
+      },
+      {
+       "day": "2026-09-25",
+       "new": "opponent of Temple Owls",
+       "game": "ncaaf:401862779",
+       "won": true
+      },
+      {
+       "day": "2026-09-26",
+       "new": "opponent of Washington Nationals",
+       "game": "mlb:401817091",
+       "won": true
+      },
+      {
+       "day": "2026-09-26",
+       "new": "opponent of Minnesota Twins",
+       "game": "mlb:401817097",
+       "won": true
+      },
+      {
+       "day": "2026-09-26",
+       "new": "opponent of Vanderbilt Commodores",
+       "game": "ncaaf:401856698",
+       "won": true
+      },
+      {
+       "day": "2026-09-26",
+       "new": "opponent of Ole Miss Rebels",
+       "game": "ncaaf:401856699",
+       "won": true
+      }
+     ],
+     "examples_old": [
+      {
+       "day": "2026-09-24",
+       "old": "Milwaukee Brewers",
+       "game": "mlb:401817062",
+       "won": true
+      },
+      {
+       "day": "2026-09-24",
+       "old": "Minnesota Lynx",
+       "game": "wnba:401857217",
+       "won": true
+      },
+      {
+       "day": "2026-09-25",
+       "old": "Miami Marlins",
+       "game": "mlb:401817072",
+       "won": true
+      },
+      {
+       "day": "2026-09-25",
+       "old": "Minnesota Twins",
+       "game": "mlb:401817082",
+       "won": true
+      },
+      {
+       "day": "2026-09-25",
+       "old": "Los Angeles Angels",
+       "game": "mlb:401817083",
+       "won": true
+      },
+      {
+       "day": "2026-09-26",
+       "old": "Tampa Bay Rays",
+       "game": "mlb:401817093",
+       "won": true
+      },
+      {
+       "day": "2026-09-26",
+       "old": "Cincinnati Bearcats",
+       "game": "ncaaf:401856814",
+       "won": true
+      },
+      {
+       "day": "2026-09-26",
+       "old": "UCF Knights",
+       "game": "ncaaf:401856815",
+       "won": true
+      }
+     ]
+    },
+    "mlb": {
+     "days": 4,
+     "picks": 56,
+     "old_won": 37,
+     "new_won": 34,
+     "diff": -3,
+     "ci95_diff": [
+      -9,
+      2
+     ],
+     "new_won_old_missed": 3,
+     "old_won_new_missed": 6,
+     "promote": false
+    },
+    "ncaaf": {
+     "days": 16,
+     "picks": 234,
+     "old_won": 153,
+     "new_won": 170,
+     "diff": 17,
+     "ci95_diff": [
+      0,
+      39
+     ],
+     "new_won_old_missed": 32,
+     "old_won_new_missed": 15,
+     "promote": false
+    },
+    "nfl": {
+     "days": 11,
+     "picks": 58,
+     "old_won": 34,
+     "new_won": 33,
+     "diff": -1,
+     "ci95_diff": [
+      -5,
+      3
+     ],
+     "new_won_old_missed": 6,
+     "old_won_new_missed": 7,
+     "promote": false
+    },
+    "nhl": {
+     "days": 13,
+     "picks": 93,
+     "old_won": 55,
+     "new_won": 61,
+     "diff": 6,
+     "ci95_diff": [
+      0,
+      13
+     ],
+     "new_won_old_missed": 12,
+     "old_won_new_missed": 6,
+     "promote": false
+    },
+    "ufc": {
+     "days": 1,
+     "picks": 13,
+     "old_won": 7,
+     "new_won": 7,
+     "diff": 0,
+     "ci95_diff": [
+      0,
+      0
+     ],
+     "new_won_old_missed": 0,
+     "old_won_new_missed": 0,
+     "promote": false
+    },
+    "wnba": {
+     "days": 10,
+     "picks": 22,
+     "old_won": 19,
+     "new_won": 15,
+     "diff": -4,
+     "ci95_diff": [
+      -8,
+      -1
+     ],
+     "new_won_old_missed": 0,
+     "old_won_new_missed": 4,
+     "promote": false
+    }
+   }
+  },
+  {
+   "name": "Locks ranked by chance minus its uncertainty",
+   "baseline": "ranked by chance",
+   "proposal": "ranked by chance - half the bid/ask width",
+   "same": "11 legs a day, one per game, same price window, same quotes",
+   "result": {
+    "Locks (-400..-120)": {
+     "days": 19,
+     "picks": 77,
+     "old_won": 65,
+     "new_won": 64,
+     "diff": -1,
+     "ci95_diff": [
+      -3,
+      0
+     ],
+     "new_won_old_missed": 0,
+     "old_won_new_missed": 1,
+     "promote": false,
+     "untouched_from": "2026-09-26"
+    },
+    "Safe (-2000..-500)": {
+     "days": 19,
+     "picks": 77,
+     "old_won": 74,
+     "new_won": 73,
+     "diff": -1,
+     "ci95_diff": [
+      -3,
+      0
+     ],
+     "new_won_old_missed": 2,
+     "old_won_new_missed": 3,
+     "promote": false,
+     "untouched_from": "2026-09-26"
+    }
+   }
+  },
+  {
+   "name": "Pregame inputs beyond the closing price (edge lab)",
+   "baseline": "closing favourite",
+   "proposal": "close + one input (home, drift, rest, form...)",
+   "same": "every game, untouched half by date",
+   "rule": "net >= 2 x sqrt(changed)",
+   "result": {
+    "nhl home": {
+     "changed": 16,
+     "net": -2,
+     "promote": false
+    },
+    "nhl drift": {
+     "changed": 53,
+     "net": 1,
+     "promote": false
+    },
+    "nhl spread": {
+     "changed": 140,
+     "net": 2,
+     "promote": false
+    },
+    "nhl total": {
+     "changed": 16,
+     "net": -2,
+     "promote": false
+    },
+    "nhl rest": {
+     "changed": 110,
+     "net": -18,
+     "promote": false
+    },
+    "nhl form": {
+     "changed": 24,
+     "net": -2,
+     "promote": false
+    },
+    "nhl travel": {
+     "changed": 84,
+     "net": 12,
+     "promote": false
+    },
+    "nhl bias": {
+     "changed": 32,
+     "net": -2,
+     "promote": false
+    },
+    "nhl all": {
+     "changed": 173,
+     "net": -15,
+     "promote": false
+    },
+    "nfl home": {
+     "changed": 2,
+     "net": -2,
+     "promote": false
+    },
+    "nfl drift": {
+     "changed": 8,
+     "net": 0,
+     "promote": false
+    },
+    "nfl spread": {
+     "changed": 2,
+     "net": -2,
+     "promote": false
+    },
+    "nfl total": {
+     "changed": 2,
+     "net": -2,
+     "promote": false
+    },
+    "nfl rest": {
+     "changed": 7,
+     "net": 1,
+     "promote": false
+    },
+    "nfl form": {
+     "changed": 2,
+     "net": -2,
+     "promote": false
+    },
+    "nfl travel": {
+     "changed": 2,
+     "net": 0,
+     "promote": false
+    },
+    "nfl bias": {
+     "changed": 2,
+     "net": -2,
+     "promote": false
+    },
+    "nfl all": {
+     "changed": 7,
+     "net": -1,
+     "promote": false
+    },
+    "ncaaf home": {
+     "changed": 20,
+     "net": 6,
+     "promote": false
+    },
+    "ncaaf drift": {
+     "changed": 20,
+     "net": 2,
+     "promote": false
+    },
+    "ncaaf spread": {
+     "changed": 5,
+     "net": 1,
+     "promote": false
+    },
+    "ncaaf total": {
+     "changed": 20,
+     "net": 6,
+     "promote": false
+    },
+    "ncaaf rest": {
+     "changed": 17,
+     "net": 1,
+     "promote": false
+    },
+    "ncaaf form": {
+     "changed": 22,
+     "net": 6,
+     "promote": false
+    },
+    "ncaaf travel": {
+     "changed": 23,
+     "net": 5,
+     "promote": false
+    },
+    "ncaaf bias": {
+     "changed": 16,
+     "net": 2,
+     "promote": false
+    },
+    "ncaaf all": {
+     "changed": 17,
+     "net": -1,
+     "promote": false
+    },
+    "nba home": {
+     "changed": 18,
+     "net": -4,
+     "promote": false
+    },
+    "nba drift": {
+     "changed": 37,
+     "net": 9,
+     "promote": false
+    },
+    "nba spread": {
+     "changed": 24,
+     "net": 0,
+     "promote": false
+    },
+    "nba total": {
+     "changed": 18,
+     "net": -4,
+     "promote": false
+    },
+    "nba rest": {
+     "changed": 21,
+     "net": 1,
+     "promote": false
+    },
+    "nba form": {
+     "changed": 14,
+     "net": -4,
+     "promote": false
+    },
+    "nba travel": {
+     "changed": 19,
+     "net": -1,
+     "promote": false
+    },
+    "nba bias": {
+     "changed": 21,
+     "net": -1,
+     "promote": false
+    },
+    "nba all": {
+     "changed": 44,
+     "net": 4,
+     "promote": false
+    },
+    "ncaab home": {
+     "changed": 13,
+     "net": 1,
+     "promote": false
+    },
+    "ncaab drift": {
+     "changed": 11,
+     "net": 1,
+     "promote": false
+    },
+    "ncaab spread": {
+     "changed": 1,
+     "net": -1,
+     "promote": false
+    },
+    "ncaab total": {
+     "changed": 13,
+     "net": 1,
+     "promote": false
+    },
+    "ncaab rest": {
+     "changed": 20,
+     "net": 2,
+     "promote": false
+    },
+    "ncaab form": {
+     "changed": 13,
+     "net": 1,
+     "promote": false
+    },
+    "ncaab travel": {
+     "changed": 21,
+     "net": 5,
+     "promote": false
+    },
+    "ncaab bias": {
+     "changed": 13,
+     "net": 1,
+     "promote": false
+    },
+    "ncaab all": {
+     "changed": 11,
+     "net": 3,
+     "promote": false
+    },
+    "wnba home": {
+     "changed": 1,
+     "net": -1,
+     "promote": false
+    },
+    "wnba drift": {
+     "changed": 4,
+     "net": -2,
+     "promote": false
+    },
+    "wnba spread": {
+     "changed": 1,
+     "net": -1,
+     "promote": false
+    },
+    "wnba total": {
+     "changed": 1,
+     "net": -1,
+     "promote": false
+    },
+    "wnba rest": {
+     "changed": 16,
+     "net": -4,
+     "promote": false
+    },
+    "wnba form": {
+     "changed": 3,
+     "net": -1,
+     "promote": false
+    },
+    "wnba travel": {
+     "changed": 15,
+     "net": -3,
+     "promote": false
+    },
+    "wnba bias": {
+     "changed": 1,
+     "net": -1,
+     "promote": false
+    },
+    "wnba all": {
+     "changed": 14,
+     "net": -4,
+     "promote": false
+    },
+    "mlb home": {
+     "changed": 22,
+     "net": -2,
+     "promote": false
+    },
+    "mlb drift": {
+     "changed": 44,
+     "net": -10,
+     "promote": false
+    },
+    "mlb spread": {
+     "changed": 142,
+     "net": -4,
+     "promote": false
+    },
+    "mlb total": {
+     "changed": 21,
+     "net": -3,
+     "promote": false
+    },
+    "mlb rest": {
+     "changed": 118,
+     "net": -14,
+     "promote": false
+    },
+    "mlb form": {
+     "changed": 21,
+     "net": -3,
+     "promote": false
+    },
+    "mlb travel": {
+     "changed": 57,
+     "net": -15,
+     "promote": false
+    },
+    "mlb bias": {
+     "changed": 38,
+     "net": 2,
+     "promote": false
+    },
+    "mlb all": {
+     "changed": 170,
+     "net": -16,
+     "promote": false
+    }
+   },
+   "promoted": []
+  }
+ ]
+}

@@ -74,6 +74,8 @@ MUTATIONS = [
      "return bool(n and g >= n ** 0.5 and r.get(\"better\"))", "test_pregame_inputs_need_two_standard_errors"),
     ("locks.py", "        if L[\"p\"] - nxt[\"p\"] < max(uncert(L), uncert(nxt)):", "        if False:",
      "test_colts_near_tie"),
+    ("board.html", "<th class=\"num\">New right, old wrong</th><th class=\"num\">Old right, new wrong</th>", "",
+     "Results must list each tested change"),
     ("integrity.py", "not 0 <= v <= 1:", "False:", "test_catches_bad_values"),
     ("board.html", "z.prob >= 0.8", "z.prob >= 0.95", "Winners parlay"),
     ("board.html", "if (mins < 20) { if (el) el.remove(); return; }", "return;",

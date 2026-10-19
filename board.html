@@ -1336,10 +1336,11 @@ function drawCard(slot){
     all.sort((a, b) => (b.hit || 0) - (a.hit || 0) || (b.mc || 0) - (a.mc || 0));
   }
   if(!all.length){ panel.innerHTML = '<p class="empty">Nothing on the card.</p>'; return; }
-  // the sweep and "top three" use the legs in the order the table shows
-  // them, so every number on the screen is about the same selection (they
-  // were re-sorted by hit rate even when the table was ordered by edge)
-  const rated = all.filter(r => r.hit);
+  // The recommended card: only picks whose league has a QUALIFIED record
+  // (r.nc false: a strong call by the tested cut-off). Every other forecast
+  // stays in the table below. Fewer picks, or none, is a valid answer. The
+  // sweep and "top three" are about these picks, in the order shown.
+  const rated = all.filter(r => r.hit && !r.nc);
   let run = 1, marks = [];
   rated.forEach((r, i) => { run *= r.hit; if(i + 1 <= 30) marks.push(run); });
   const at = n => marks[n - 1] ? (100 * marks[n - 1]).toFixed(2) + "%" : "\u2014";
@@ -1349,7 +1350,12 @@ function drawCard(slot){
   const sweep = n => marks[n - 1] ? (100 * marks[n - 1]).toFixed(1) + "%" : "\u2014";
   const pick3 = rated.slice(0, 3).map(r => r.mp).join(" &middot; ");
   panel.innerHTML = parlayHTML(slot)
-    + '<div class="sweep"><h3>Winning the day outright</h3>'
+    + '<div class="sweep"><h3>Recommended: ' + rated.length + ' qualified pick' + (rated.length === 1 ? '' : 's') + '</h3>'
+    + (rated.length ? '<p class="note">Only leagues whose record earned a strong-call cut-off on games it was '
+        + 'not fitted on. Every other game is still forecast in the table below.</p>'
+      : '<p class="note"><b>No pick qualifies today.</b> No league with games today has a qualified '
+        + 'record at these chances, so nothing is recommended; every game&rsquo;s forecast is still listed below.</p>')
+    + '<h3>Winning the day outright</h3>'
     + '<p>Chance every leg comes in, by how many you take:</p>'
     + '<table class="sweeptab"><tbody><tr>'
     + [1,2,3,4,5,6,8].map(n => '<td><b>' + n + '</b><span>' + sweep(n) + '</span></td>').join('')
@@ -1381,6 +1387,7 @@ function drawCard(slot){
     + 'measured above the mid-80s, so every leg you add multiplies that down. '
     + 'Four is where the card crosses a coin flip. That is arithmetic, not '
     + 'caution \u2014 no run of picks fixes it.</p>'
+    + '<h3 class="tier-h">All forecasts (' + all.length + ' games)</h3>'
     + '<table><thead><tr><th>#</th><th>I have winning</th><th>League</th>'
     + '<th class="num">Chance (est.)</th><th class="num">Band&rsquo;s past rate</th>'
     + '<th class="num">Fair</th><th>Offered</th><th class="num">Edge</th>'
@@ -1703,6 +1710,28 @@ function scoreboardHTML(){
         : '<p class="age"><b>All checks passing</b> &mdash; ' + (HL.checked || 0)
           + ' splits within their stated chance, nothing stuck unsettled (' + esc(HL.day) + ' review).</p>')
       + '</div>';
+  }
+  // every proposed change, compared with the chooser it would replace
+  const PE = D.paired;
+  if(PE && PE.studies){
+    h += '<div class="sect"><h2>Changes tested</h2><p class="note">Each proposal against the current chooser: '
+      + 'same games, same number of picks, same prices, scored on later games neither was designed on. '
+      + 'Rule: ' + esc(PE.rule || '') + '.</p>'
+      + PE.studies.map(st => '<details class="explain"><summary><b>' + esc(st.name) + '</b>'
+          + (st.promoted && st.promoted.length ? ' &mdash; promoted: ' + esc(st.promoted.join(', ')) : '')
+          + '</summary><p class="note">Baseline: ' + esc(st.baseline || '') + '. Proposal: ' + esc(st.proposal || '')
+          + '. Held equal: ' + esc(st.same || '') + '.</p><table class="mk"><thead><tr><th></th>'
+          + '<th class="num">Picks</th><th class="num">Old won</th><th class="num">New won</th>'
+          + '<th class="num">New right, old wrong</th><th class="num">Old right, new wrong</th>'
+          + '<th class="num">95% range</th><th>Promote?</th></tr></thead><tbody>'
+          + Object.keys(st.result || {}).map(k => { const v = st.result[k];
+              return '<tr><td>' + esc(k) + '</td><td class="num">' + (v.picks ?? v.changed ?? '') + '</td>'
+                + '<td class="num">' + (v.old_won ?? '') + '</td><td class="num">' + (v.new_won ?? '') + '</td>'
+                + '<td class="num">' + (v.new_won_old_missed ?? '') + '</td><td class="num">'
+                + (v.old_won_new_missed ?? '') + '</td><td class="num">'
+                + (v.ci95_diff ? v.ci95_diff[0] + ' to ' + v.ci95_diff[1] : (v.net !== undefined ? 'net ' + v.net : ''))
+                + '</td><td>' + (v.promote ? 'yes' : 'no') + '</td></tr>'; }).join('')
+          + '</tbody></table></details>').join('') + '</div>';
   }
   h += '<p class="note">Every day is reviewed automatically as its games finish &mdash; losses '
     + 'diagnosed, each league checked against the market, and the weights retuned for the '

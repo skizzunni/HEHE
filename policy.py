@@ -77,13 +77,12 @@ def home_edge(league):
 
 
 def version():
-    """Short fingerprint of the policy files the board is running on."""
-    h = hashlib.sha1()
-    for p in (WEIGHTS, CALLS, LAB):
-        try:
-            with open(p, "rb") as fh:
-                h.update(fh.read())
-        except OSError:
-            h.update(b"-")
-    sha = (os.environ.get("GITHUB_SHA") or "")[:7]
-    return (sha + ":" if sha else "") + h.hexdigest()[:8]
+    """Short fingerprint of what decides picks: the weights, the qualified
+    strong-call cut-offs and the promoted pregame inputs. File timestamps and
+    descriptive fields are left out, so it changes only when a decision rule
+    does (the code's commit is archived separately)."""
+    calls = _load(CALLS)
+    core = dict(weights=_W.get("weights") or {}, default=_W.get("default"),
+                cutoffs=calls.get("cutoffs") or {},
+                home={lg: home_edge(lg) for lg in sorted((_LAB.get("leagues") or {}))})
+    return hashlib.sha1(json.dumps(core, sort_keys=True).encode()).hexdigest()[:8]

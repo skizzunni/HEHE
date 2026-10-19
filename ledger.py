@@ -205,11 +205,19 @@ def record(state=None):
                 # so a record can be judged on what was shown when, not only
                 # on the last version before the game
                 hist = list(prev.get("history") or [])
+                # the inputs behind the call, as they were before play: both
+                # sides' prices, the same-time market and model chances, the
+                # model's share and the policy fingerprint (policy.version)
+                import policy as _pol
                 snap = dict(t=entry["logged"], pick=entry["pick"], dc=entry["dc"],
                             price=entry.get("price"), conf=entry["conf"], why=entry["why"],
-                            strong=entry["strong"], version=POLICY)
-                if not hist or {k: hist[-1].get(k) for k in ("pick", "dc", "price", "conf")} != \
-                        {k: snap[k] for k in ("pick", "dc", "price", "conf")}:
+                            strong=entry["strong"], version=POLICY, policy=_pol.version(),
+                            w=_pol.model_weight(lg), p_market_away=r.get("p_market_away"),
+                            p_model_away=r.get("p_model_away"),
+                            prices={L.get("side"): L.get("price") for L in r.get("legs") or []
+                                    if L.get("side")})
+                if not hist or {k: hist[-1].get(k) for k in ("pick", "dc", "price", "conf", "policy")} != \
+                        {k: snap.get(k) for k in ("pick", "dc", "price", "conf", "policy")}:
                     hist.append(snap)
                 entry["history"] = hist
                 if "first" not in prev:

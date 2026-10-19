@@ -77,6 +77,10 @@ jobs:
       - name: Review the day
         run: python3 tools/daily_review.py || echo "review failed -- board unaffected"
 
+      # every proposed change against the current chooser, on later games
+      - name: Paired comparisons
+        run: python3 tools/paired.py > /dev/null || echo "paired comparisons failed -- board unaffected"
+
       - name: Commit the ledger
         run: |
           git add ledger.json stacks.json
@@ -87,6 +91,7 @@ jobs:
           if [ -f lottery.json ]; then git add lottery.json; fi
           if [ -f data/td_history.json ]; then git add -f data/td_history.json; fi
           if [ -f data/ladder_history.json ]; then git add -f data/ladder_history.json; fi
+          if [ -f data/paired_eval.json ]; then git add -f data/paired_eval.json; fi
           if git diff --cached --quiet; then
             echo "ledger unchanged"
             exit 0
