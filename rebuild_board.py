@@ -118,9 +118,13 @@ def snapshot():
                                          bool(leg and leg.get("dog")),
                                          (leg or {}).get("price"))
                 if k in SOCCER and mc is not None:
-                    # soccer's number is now the de-vigged close itself, which
-                    # tools/soccer_lab.py found honest on 1,115 unseen matches
-                    hit, hit_n = mc / 100, 0
+                    hit, hit_n = None, 0              # no band study for soccer
+                # ONE probability per pick: the chance published (and graded).
+                # The band's past rate is shown beside it as history only --
+                # until 2026-10-19 it drove the Card's fair price, edge, sweep
+                # and order, so the Card priced a 72% pick at 81.7%.
+                hist, p_pub = hit, (mc / 100 if mc is not None else None)
+                hit = p_pub
                 tk, tl, hide = tier_of(k, mc, hit, bool(leg and leg.get("dog")),
                                        (leg or {}).get("price"))
                 pk, pl = price_note(k, k in SOCCER,
@@ -138,10 +142,10 @@ def snapshot():
                              # rate the row displays, so the three never
                              # disagree by a rounding step on screen
                              "hit": round(hit, 4) if hit is not None else None,
+                             "id": r.get("id"),
+                             # the band's past rate (history, not the pick's chance)
+                             "hist": round(hist, 4) if hist is not None else None,
                              "hn": hit_n,
-                             # where "hit" comes from: a band's measured record,
-                             # or (soccer) the market's own de-vigged estimate
-                             "hs": "market" if k in SOCCER and mc is not None else "measured",
                              "fv": fair_price(round(hit, 4) if hit is not None else None),
                              "ev": edge_pct(round(hit, 4) if hit is not None else None,
                                             (leg or {}).get("price")),
@@ -153,8 +157,7 @@ def snapshot():
                                                   (r.get("mkt") or {}).get("home"),
                                                   r["mypick"]),
                              "lg": lab})
-            # rank by what the band has actually hit, not by a raw confidence
-            # that means something different in every sport
+            # ranked by the published chance (the one probability)
             rows.sort(key=lambda x: (x["mc"] is None, -(x["hit"] or 0),
                                      -(x["mc"] or 0)))
             if k in SOCCER:

@@ -1366,10 +1366,9 @@ function drawCard(slot){
     + 'A leg winning 85% of the time is still a losing bet at \u22122000. '
     + '<b>Edge</b> is the return per unit staked at the price shown; tennis has '
     + 'no odds feed, so there compare Fair against your own book by hand.</p>'
-    + '<p class="coinbar">Every leg, ranked by the hit rate its own sport\u2019s '
-    + 'backtest measured for that band \u2014 tennis and baseball confidence are '
-    + 'not the same scale. Soccer has no per-band study: its column shows the '
-    + 'market&rsquo;s own de-vigged chance, marked <b>market est.</b>, not a measured rate.</p>'
+    + '<p class="coinbar">Every pick carries one chance: the one published and graded (est.). '
+    + 'Fair price, edge, order and the sweep all use it. The band&rsquo;s past rate is history '
+    + 'only: how picks in that band did before, with how many were graded.</p>'
     + '<p class="coinbar"><b>Taking the top legs in order:</b> '
     + '1 \u2192 ' + at(1) + ' &middot; 2 \u2192 ' + at(2)
     + ' &middot; 3 \u2192 ' + at(3) + ' &middot; 4 \u2192 ' + at(4)
@@ -1381,15 +1380,14 @@ function drawCard(slot){
     + 'Four is where the card crosses a coin flip. That is arithmetic, not '
     + 'caution \u2014 no run of picks fixes it.</p>'
     + '<table><thead><tr><th>#</th><th>I have winning</th><th>League</th>'
-    + '<th class="num">Conf</th><th class="num">Measured</th>'
+    + '<th class="num">Chance (est.)</th><th class="num">Band&rsquo;s past rate</th>'
     + '<th class="num">Fair</th><th>Offered</th><th class="num">Edge</th>'
     + '</tr></thead><tbody>'
     + all.map((r, i) => {
         const id = r.lgk + "|" + r.mp;
         const on = SLIP.some(x => x.id === id) ? " class=\"on\"" : "";
-        const hit = r.hit ? '<td class="num">' + (100 * r.hit).toFixed(1) + '%'
-                    + (r.hs === "market" ? '<span class="ev">market est.</span>'
-                       : r.hn ? '<span class="ev">' + r.hn + '</span>' : '') + '</td>'
+        const hit = r.hist ? '<td class="num">' + (100 * r.hist).toFixed(1) + '%'
+                    + (r.hn ? '<span class="ev">' + r.hn + '</span>' : '') + '</td>'
                           : '<td class="num none">&mdash;</td>';
         const tier = r.tk ? '<span class="tier ' + r.tk + '">' + r.tl + '</span>' : "";
     const ev = r.ek ? '<span class="tier ' + r.ek + '">' + r.el + '</span>' : "";
