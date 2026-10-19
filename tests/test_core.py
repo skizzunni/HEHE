@@ -141,6 +141,31 @@ class LocksRules(unittest.TestCase):
         locks.save(book, path)
         self.assertFalse(locks.replay("2026-10-18", path)[0])
 
+    def test_colts_near_tie(self):
+        """2026-10-18: Colts +1.5 (75.73%) took the last slot over Under 46.5
+        (75.65%) -- 0.08 points, inside the price's own uncertainty. The card
+        is the same whatever order the feed lists legs in, and the leg is
+        flagged as a tie at the cut, not presented as a preference."""
+        import random
+        base = [dict(gid=f"l{g}:{g}", league=f"l{g}", kind=None, devig="two-sided", match="m",
+                     spec=dict(t="under", line=44.5), label=f"g{g}", p=0.80 - g * 0.002, price="-390")
+                for g in range(10)]                                  # one kind each: no cap applies
+        colts = dict(gid="nfl:colts", league="nfl", kind=None, devig="two-sided", match="m",
+                     spec=dict(t="spread", team="IND", line=1.5), label="Indianapolis Colts +1.5", p=0.7573)
+        under = dict(gid="nfl:bucs", league="nfl", kind=None, devig="two-sided", match="m",
+                     spec=dict(t="spread", team="TB", line=2.5), label="Bucs +2.5", p=0.7565)
+        pool = base + [colts, under]
+        cards = set()
+        for seed in range(5):
+            pp = [dict(x) for x in pool]
+            random.Random(seed).shuffle(pp)
+            c = sorted(locks.choose(pp, 11), key=locks._order)
+            cards.add(tuple(x["label"] for x in c))
+            locks.mark_ties(c, pp)
+            last = [x for x in c if x["label"] == "Indianapolis Colts +1.5"]
+            self.assertTrue(last and last[0].get("tie_at_cut") == 0.7565)
+        self.assertEqual(len(cards), 1)                             # order-independent
+
     def test_two_sided_devig(self):
         """A line's chance comes from its own price and its opposite's."""
         key = lambda sp: ("g", json.dumps(sp, sort_keys=True))

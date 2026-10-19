@@ -370,7 +370,8 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                                     line=P["line"], aid=P.get("aid"), edge=P.get("edge"),
                                     p_fair=P.get("p_fair")))
     locks, picks = choose(pool, n), _best_per_game(pool)
-    locks.sort(key=lambda x: -x["p"])
+    locks.sort(key=_order)
+    mark_ties(locks, pool)
     prob = 1.0
     for L in locks:
         prob *= L["p"]
@@ -416,7 +417,47 @@ def _kind(L):
     return (L.get("league"), k)
 
 
-def choose(pool, n):
+# How far apart two legs' chances must be before their order means anything:
+# one American-odds step near -400 moves a chance ~0.4 points, and a price
+# de-vigged on an assumed margin is less certain still. Documented, used to
+# flag ties -- NOT to rank: ranking by chance minus this (tools/paired.py, the
+# Kalshi legs' untouched days) did no better (-1 on 11-leg cards, CI incl. 0).
+UNCERT = {"two-sided": 0.004}
+UNCERT_DEFAULT = 0.010
+CHOOSER = "2026-10-19"      # tie-break by a fixed order (archived with each card)
+
+
+def uncert(L):
+    return UNCERT.get(L.get("devig"), UNCERT_DEFAULT)
+
+
+def _order(L, legacy=False):
+    """Likeliest first. Ties break by a fixed order -- the better-measured
+    price, then game and label -- not by the order a feed listed them
+    (legacy: the feed order, for cards set before 2026-10-19)."""
+    if legacy:
+        return (-L["p"],)
+    return (-L["p"], uncert(L), str(L.get("gid")), str(L.get("label")))
+
+
+def mark_ties(card, pool):
+    """Flag legs at the bottom of the card whose chance is within its
+    uncertainty of the best leg left out: their place is a tie, not a
+    preference (2026-10-18: Colts +1.5 at 75.73% took the last NFL slot over
+    Under 46.5 at 75.65%, and lost)."""
+    on = {id(L) for L in card}
+    used = {L["gid"] for L in card}
+    rest = [L for L in pool if id(L) not in on and L["gid"] not in used]
+    if not rest or not card:
+        return card
+    nxt = max(rest, key=lambda L: L["p"])
+    for L in card:
+        if L["p"] - nxt["p"] < max(uncert(L), uncert(nxt)):
+            L["tie_at_cut"] = round(nxt["p"], 4)
+    return card
+
+
+def choose(pool, n, legacy=False):
     """The likeliest leg from each game first, but no more than MAX_SAME legs
     of one kind: same-day college unders missed together 2.6 times more than
     independent legs would (16,000-leg backtest, a high-scoring day sinks them
@@ -430,7 +471,7 @@ def choose(pool, n):
     -- was real. A light day now shows fewer legs; standards do not drop."""
     out, used_g, kinds = [], set(), {}
     for cap in (MAX_SAME, n):                  # diversified first, then fill
-        for L in sorted(pool, key=lambda x: -x["p"]):
+        for L in sorted(pool, key=lambda x: _order(x, legacy)):
             if len(out) >= n:
                 break
             if L["gid"] in used_g or kinds.get(_kind(L), 0) >= cap:
@@ -530,7 +571,7 @@ def record(res, day, path=None, tag="locks"):
         # the decision-time snapshot: the pool the card was chosen from and
         # the card as first set, so replay() can re-run the same chooser
         pools = book.setdefault("pools", {})
-        pools[day] = dict(n=res.get("n") or N_LOCKS, legs=res["pool"], card=list(keys),
+        pools[day] = dict(n=res.get("n") or N_LOCKS, legs=res["pool"], card=list(keys), chooser=CHOOSER,
                           t=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"))
         for old_day in sorted(pools)[:-POOLS_KEPT]:
             del pools[old_day]
@@ -555,7 +596,9 @@ def replay(day, path=None):
     snap = (book.get("pools") or {}).get(day)
     if not snap:
         return None
-    got = [f'{L["gid"]}|{L["label"]}' for L in sorted(choose(snap["legs"], snap["n"]), key=lambda x: -x["p"])]
+    legacy = snap.get("chooser") != CHOOSER
+    got = [f'{L["gid"]}|{L["label"]}' for L in sorted(choose(snap["legs"], snap["n"], legacy),
+                                                      key=lambda x: _order(x, legacy))]
     return got == snap["card"], got, snap["card"]
 
 

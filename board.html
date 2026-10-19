@@ -818,6 +818,8 @@ function legHTML(x, opts){
     + '<b>' + esc(x.label) + '</b>' + (x.price ? '<span class="px">' + esc(x.price) + '</span>' : '')
     + '<span class="ch" title="estimated from the market price">' + (100 * x.p).toFixed(0) + '% est.</span>'
     + (opts && opts.sgp ? '<span class="edgetag">same game</span>' : '')
+    + (x.tie_at_cut ? '<span class="edgetag" title="within this price\u2019s uncertainty of the best leg left out ('
+       + (100 * x.tie_at_cut).toFixed(1) + '%): its place on the card is a tie, not a preference">tied at the cut</span>' : '')
     + (x.plays === false ? '<span class="edgetag" title="not recommended until the player is confirmed to play">'
        + esc(x.play || "not confirmed") + '</span>' : '')
     + (x.edge > 0 ? '<span class="edgetag" title="Priced off this player\'s own main line, this rung is underpriced">+'
