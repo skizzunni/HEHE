@@ -3361,10 +3361,10 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "soccer": {
-    "all_hit": 61.2,
+    "all_hit": 61.0,
     "calls": 230,
     "cutoff": 0.675,
-    "games": 536,
+    "games": 538,
     "hit": 76.5
    },
    "ufc": {
@@ -3486,6 +3486,22 @@
    },
    {
     "against_market": false,
+    "league": "den",
+    "pick": "Viborg FF",
+    "price": null,
+    "said": 55.9,
+    "why": "margin 1 \u00b7 called at 56%"
+   },
+   {
+    "against_market": false,
+    "league": "tur",
+    "pick": "Besiktas",
+    "price": null,
+    "said": 63.6,
+    "why": "margin 2 \u00b7 called at 64%"
+   },
+   {
+    "against_market": false,
     "league": "wta",
     "pick": "Elise Mertens",
     "price": null,
@@ -3536,11 +3552,11 @@
    }
   ],
   "picks": {
-   "hit": 66.7,
-   "lost": 9,
-   "n": 27,
+   "hit": 62.1,
+   "lost": 11,
+   "n": 29,
    "roi": 33.9,
-   "said": 64.4,
+   "said": 64.1,
    "won": 18
   },
   "picks_by_league": {
@@ -3551,6 +3567,14 @@
     "roi": null,
     "said": 64.2,
     "won": 8
+   },
+   "den": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 55.9,
+    "won": 0
    },
    "ind": {
     "hit": 100.0,
@@ -3583,6 +3607,14 @@
     "roi": null,
     "said": 69.0,
     "won": 1
+   },
+   "tur": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 63.6,
+    "won": 0
    },
    "wta": {
     "hit": 75.0,
