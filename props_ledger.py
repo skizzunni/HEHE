@@ -77,6 +77,26 @@ def _s(*keys):
     return f
 
 
+def _diff0(a, b):
+    def f(st):
+        if not st:
+            return None
+        return (st.get(a) or 0.0) - (st.get(b) or 0.0)
+    return f
+
+
+def _s0(*keys):
+    """Football: a player's box score lists only the stat groups he recorded
+    something in, so a resolved player with no receiving line caught nothing
+    -- 0, not 'ungradable' (2026-10-18: Josh Cameron played, kick returns only,
+    and his Receiving Yards 5+ was set aside instead of graded lost)."""
+    def f(st):
+        if not st:
+            return None
+        return float(sum(st.get(k) or 0.0 for k in keys))
+    return f
+
+
 def _diff(a, b):
     def f(st):
         if st.get(a) is None or st.get(b) is None:
@@ -90,7 +110,7 @@ _TD = ("rushing.rushingTouchdowns", "receiving.receivingTouchdowns")
 
 def _tds(st):
     base = [st.get(k) for k in _TD]
-    if all(v is None for v in base):
+    if not st:                                  # not in the box score at all
         return None
     extra = ("kickReturns.kickReturnTouchdowns", "puntReturns.puntReturnTouchdowns",
              "interceptions.interceptionTouchdowns")
@@ -98,27 +118,27 @@ def _tds(st):
 
 
 FOOTBALL = {
-    "Receiving Yards": _s("receiving.receivingYards"),
-    "Total Receiving Yards": _s("receiving.receivingYards"),
-    "Receptions": _s("receiving.receptions"),
-    "Total Receptions": _s("receiving.receptions"),
-    "Rushing Yards": _s("rushing.rushingYards"),
-    "Total Rushing Yards": _s("rushing.rushingYards"),
-    "Rushing + Receiving Yards": _s("rushing.rushingYards", "receiving.receivingYards"),
-    "Total Rushing Plus Receiving Yards": _s("rushing.rushingYards", "receiving.receivingYards"),
-    "Passing Yards": _s("passing.passingYards"),
-    "Total Passing Yards": _s("passing.passingYards"),
-    "Passing Touchdowns": _s("passing.passingTouchdowns"),
-    "Total Passing Touchdowns": _s("passing.passingTouchdowns"),
-    "Total Carries": _s("rushing.rushingAttempts"),
-    "Tackles + Assists": _s("defensive.totalTackles"),
-    "Total Tackles Plus Assists": _s("defensive.totalTackles"),
-    "Tackles": _s("defensive.soloTackles"),
-    "Total Tackles": _s("defensive.soloTackles"),
-    "Assists (Football)": _diff("defensive.totalTackles", "defensive.soloTackles"),
-    "Total Assists": _diff("defensive.totalTackles", "defensive.soloTackles"),
-    "Sacks": _s("defensive.sacks"),
-    "Total Sacks": _s("defensive.sacks"),
+    "Receiving Yards": _s0("receiving.receivingYards"),
+    "Total Receiving Yards": _s0("receiving.receivingYards"),
+    "Receptions": _s0("receiving.receptions"),
+    "Total Receptions": _s0("receiving.receptions"),
+    "Rushing Yards": _s0("rushing.rushingYards"),
+    "Total Rushing Yards": _s0("rushing.rushingYards"),
+    "Rushing + Receiving Yards": _s0("rushing.rushingYards", "receiving.receivingYards"),
+    "Total Rushing Plus Receiving Yards": _s0("rushing.rushingYards", "receiving.receivingYards"),
+    "Passing Yards": _s0("passing.passingYards"),
+    "Total Passing Yards": _s0("passing.passingYards"),
+    "Passing Touchdowns": _s0("passing.passingTouchdowns"),
+    "Total Passing Touchdowns": _s0("passing.passingTouchdowns"),
+    "Total Carries": _s0("rushing.rushingAttempts"),
+    "Tackles + Assists": _s0("defensive.totalTackles"),
+    "Total Tackles Plus Assists": _s0("defensive.totalTackles"),
+    "Tackles": _s0("defensive.soloTackles"),
+    "Total Tackles": _s0("defensive.soloTackles"),
+    "Assists (Football)": _diff0("defensive.totalTackles", "defensive.soloTackles"),
+    "Total Assists": _diff0("defensive.totalTackles", "defensive.soloTackles"),
+    "Sacks": _s0("defensive.sacks"),
+    "Total Sacks": _s0("defensive.sacks"),
     "Anytime Touchdown Scorer": _tds,
     "Player to score 2 or more touchdowns": _tds,
     "Player to score 3 or more touchdowns": _tds,
@@ -445,6 +465,13 @@ def grade():
         if e["status"] in ("void", "ungradable") and e.get("league") in SPORT \
                 and not e.get("rechecked"):
             e["rechecked"] = e["status"]
+            e["status"] = "open"
+    # once more for football: records set aside because a played player had
+    # no line in the stat's group are graded at 0 now (_s0)
+    for e in book.values():
+        if e["status"] == "ungradable" and e.get("void_why") == "schema_error" \
+                and e.get("league") in ("nfl", "ncaaf") and not e.get("rechecked_fb"):
+            e["rechecked_fb"] = True
             e["status"] = "open"
     by_game = {}
     for k, e in book.items():

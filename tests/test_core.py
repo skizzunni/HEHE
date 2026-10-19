@@ -385,6 +385,16 @@ class PropIdentity(unittest.TestCase):
         self.assertEqual(get("J Smith")[1], "unresolved")
         self.assertEqual(get("Connor McDavid"), (None, "absent"))
 
+    def test_football_missing_group_is_zero(self):
+        """A player in the box with no receiving line caught nothing: lost,
+        not ungradable (Josh Cameron, 2026-10-18, kick returns only)."""
+        import props_ledger as PL
+        st = {"kickReturns.kickReturnYards": 22.0, "kickReturnYards": 22.0}
+        self.assertEqual(PL.MARKETS["nfl"]["Receiving Yards"](st), 0.0)
+        self.assertEqual(PL.MARKETS["nfl"]["Rushing + Receiving Yards"]({"rushing.rushingYards": 40.0}), 40.0)
+        self.assertEqual(PL.MARKETS["nfl"]["Anytime Touchdown Scorer"](st), 0)
+        self.assertIsNone(PL.MARKETS["nfl"]["Receiving Yards"]({}))
+
     def test_mlb_group_from_type(self):
         import props_ledger as PL
         st, _ = PL.resolve(PL.box_stats(self.box()), dict(name="Chandler Simpson"))

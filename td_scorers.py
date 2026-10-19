@@ -116,6 +116,12 @@ def grade():
     """Settle logged touchdown chances from ESPN box scores."""
     import props_ledger as PL
     book = _load()
+    # once: entries graded before 2026-10-19 by exact name only (a spelling
+    # difference read as a DNP) or with no rushing/receiving line (ungradable)
+    for e in book.values():
+        if e["status"] in ("void", "ungradable") and not e.get("rechecked"):
+            e["rechecked"] = e["status"]
+            e["status"] = "open"
     open_by = {}
     for k, e in book.items():
         if e["status"] == "open":
@@ -128,9 +134,15 @@ def grade():
         st = PL.box_stats(sm)
         fn = PL.MARKETS[league][MARKET]
         for e in es:
-            s_ = st.get("name:" + PL.norm_name(e["name"]))
-            if s_ is None:
+            # the props ledger's resolver: id / name / alias / surname + first
+            # name; only a surname nowhere in the box is a did-not-play
+            s_, how = PL.resolve(st, dict(name=e["name"]))
+            if how == "absent":
                 e["status"] = "void"
+                continue
+            if s_ is None:
+                e["status"] = "ungradable"          # ambiguous name: set aside, not a DNP
+                e["void_why"] = "identity_unresolved"
                 continue
             v = fn(s_)
             e["status"] = "ungradable" if v is None else ("won" if v >= 1 else "lost")
