@@ -36,7 +36,7 @@ what is missing and the next step. Updated 2026-10-18 (after the external review
 
 Run by `.github/workflows/tests.yml` on every code or page push:
 
-* `tests/test_core.py` -- 40 unit tests (standard library, no network): Locks -400..-120 and
+* `tests/test_core.py` -- 52 unit tests (standard library, no network): Locks -400..-120 and
   Safe -2000..-500 windows, one leg per game and the kind cap, soccer limited to validated
   kinds, soccer grading (draw / void / live), soccer name matching and the reversed-fixture
   guard, NFL upper tail, wind scaling, ungradable props kept off tickets, every FanDuel prop
@@ -47,8 +47,8 @@ Run by `.github/workflows/tests.yml` on every code or page push:
   minutes old and absent when fresh; Locks -> Safe Locks renders 11 legs, the Winners parlay
   (top 4, 80%) and Best play (top 10, 54%); Results health box lists a trailing split, a
   never-settled record and bad data, and reads "All checks passing" when clean.
-* `tests/mutation_check.py` -- breaks 30 protected rules one at a time (bytecode cache off) and
-  requires each to be caught; 30/30 caught 2026-10-18.
+* `tests/mutation_check.py` -- breaks 38 protected rules one at a time (bytecode cache off) and
+  requires each to be caught; 38/38 caught 2026-10-18.
 
 ## Monitoring (on the site, every build)
 
@@ -80,6 +80,32 @@ drift/form/rest/travel/team bias, Kalshi+book average.
 * Props at Locks prices: 155 graded; 70-80% band hit 74.4 vs 73.4 said; 80-90% band 78.4 vs 84.7, but the
   whole gap is soccer "Shots" (uel 8/20 vs 84%), already off. Without it the band hits ~90 vs ~85 (NHL shots
   on goal 41/47 vs 84.8). No change to prop chances.
+
+## Selection pipeline (2026-10-19)
+
+One path from candidates to the recommended card, each step tested or plainly marked as a
+correctness fix (not an accuracy claim). Rule for any change to what is picked
+(`tools/paired.py`, run every build, shown on Results -> "Changes tested"): the same candidates,
+the same number of picks, the same price window and pregame inputs, scored on later games
+neither chooser was designed on. It lists both directions (new right / old wrong and the
+reverse) and is promoted only if the day-bootstrap 95% range of the difference is above zero.
+Pregame inputs beyond the price need a net gain of two standard errors on the lab's untouched half.
+
+| Step | What changed | Evidence / regression case |
+|------|--------------|----------------------------|
+| Policy | `policy.py` is the only source of model weights and pregame shifts; hand-set NFL/WNBA 0.30, MLB 0.20, tennis 0.05 and the review's 0.20 fallback removed | Atlanta: market Chicago 51.7%, model Atlanta 56.4%, published Atlanta 50.7% on the hand-set 0.30 (lost); tested policy picks Chicago. Paired, untouched half: market-only 320 vs published 305 wins on 476 games (53 vs 38 discordant), range -6..+42: **not proven better** -- the market is the baseline and the overrides were never promoted. By league: NCAAF +17, NHL +6, MLB -3, NFL -1, WNBA -4 (22 games) |
+| Qualification | strong calls only where a record qualified; soccer qualifies as one group by the same test, no defaults | soccer: 530 graded picks qualify at 70% (184 calls, 76.6%, both halves); NBA / college basketball no longer get 60% without a record |
+| Participation | props recommended only for players confirmed to play (soccer and saves: ESPN lineup lists a starter; others: not on the injury report) | goalkeeper backups: 25 of 57 recorded keeper props voided; the 2026-10-17/18 DraftKings Lottery tickets carried five (Huth, Leroy, Batz, McGill, dos Santos) |
+| One probability | the Card prices, ranks and sweeps on the published chance; the band's past rate is history only; Card rows carry the game id | a 72.2% tennis pick was priced at 81.7% |
+| Pregame inputs | edge lab's significance fixed to 2 SE (it was 1); home edge via `policy.home_edge`; wind nudge needs 2 SE on the untouched half | NCAAF home edge: 12-7 on 19 changed picks (+1 later) -> off; wind: 1.6 SE / 0.9 SE -> off. No input beyond the price is promoted today |
+| Ties | ties break by a fixed order; legs within a price's uncertainty of the first leg left out are tagged "tied at the cut" | Colts +1.5 75.73% vs Under 46.5 75.65% (Colts lost). Ranking by chance minus uncertainty: -1 on 11-leg cards, range incl. 0 -> not used |
+| Lottery | finishing leg = likeliest line of any unused game reaching the payout; candidates + policy archived and replayed each build; voided tickets keep a 'settled' record | archived 10-18 ticket needed x1.70 and took a 2.35 leg at 41% (paid 13,846). Stored tickets never changed after recording (78 revisions checked) |
+| Recommended card | only qualified picks; none is a valid answer; all forecasts still listed | -- |
+| Archive | each pick version stores both prices, market and model chances, the weight, the policy fingerprint and the commit; Locks and Lottery store their full candidate pools | Locks 10-18 replay exact under its own chooser version |
+
+Not promoted / open: no pregame input beats the same-time price yet; the hand-set Card tiers ("lock"
+badges) are descriptive only; the WNBA weight did better on its 22 newer games (+4) but lost on the
+older half -- it must win a fresh paired test before it returns.
 
 ## External review 2026-10-18 (snapshot 34ff1f3): findings and what was done
 
