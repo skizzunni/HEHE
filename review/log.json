@@ -3368,11 +3368,11 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "soccer": {
-    "all_hit": 61.2,
-    "calls": 238,
+    "all_hit": 61.1,
+    "calls": 239,
     "cutoff": 0.675,
-    "games": 547,
-    "hit": 76.9
+    "games": 548,
+    "hit": 76.6
    },
    "ufc": {
     "all_hit": 63.6,
@@ -3517,6 +3517,14 @@
    },
    {
     "against_market": false,
+    "league": "por",
+    "pick": "Braga",
+    "price": null,
+    "said": 80.7,
+    "why": "margin 1 \u00b7 called at 81%"
+   },
+   {
+    "against_market": false,
     "league": "tur",
     "pick": "Besiktas",
     "price": null,
@@ -3583,11 +3591,11 @@
    }
   ],
   "picks": {
-   "hit": 65.8,
-   "lost": 13,
-   "n": 38,
+   "hit": 64.1,
+   "lost": 14,
+   "n": 39,
    "roi": 20.1,
-   "said": 66.4,
+   "said": 66.8,
    "won": 25
   },
   "picks_by_league": {
@@ -3663,6 +3671,14 @@
     "said": 68.1,
     "won": 1
    },
+   "por": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 80.7,
+    "won": 0
+   },
    "swe": {
     "hit": 100.0,
     "lost": 0,
@@ -3718,11 +3734,11 @@
    "won": 1
   },
   "strong": {
-   "hit": 84.2,
-   "lost": 3,
-   "n": 19,
+   "hit": 80.0,
+   "lost": 4,
+   "n": 20,
    "roi": 20.1,
-   "said": 73.1,
+   "said": 73.5,
    "won": 16
   },
   "stuck": [],
