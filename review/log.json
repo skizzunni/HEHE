@@ -3361,11 +3361,11 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "soccer": {
-    "all_hit": 61.0,
-    "calls": 230,
+    "all_hit": 60.9,
+    "calls": 231,
     "cutoff": 0.675,
-    "games": 538,
-    "hit": 76.5
+    "games": 539,
+    "hit": 76.2
    },
    "ufc": {
     "all_hit": 63.6,
@@ -3494,6 +3494,14 @@
    },
    {
     "against_market": false,
+    "league": "ned2",
+    "pick": "Jong PSV",
+    "price": null,
+    "said": 68.5,
+    "why": "margin 1 \u00b7 called at 68%"
+   },
+   {
+    "against_market": false,
     "league": "tur",
     "pick": "Besiktas",
     "price": null,
@@ -3552,11 +3560,11 @@
    }
   ],
   "picks": {
-   "hit": 62.1,
-   "lost": 11,
-   "n": 29,
+   "hit": 60.0,
+   "lost": 12,
+   "n": 30,
    "roi": 33.9,
-   "said": 64.1,
+   "said": 64.3,
    "won": 18
   },
   "picks_by_league": {
@@ -3599,6 +3607,14 @@
     "roi": 33.9,
     "said": 70.8,
     "won": 1
+   },
+   "ned2": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 68.5,
+    "won": 0
    },
    "swe": {
     "hit": 100.0,
@@ -3655,11 +3671,11 @@
    "won": 0
   },
   "strong": {
-   "hit": 81.8,
-   "lost": 2,
-   "n": 11,
+   "hit": 75.0,
+   "lost": 3,
+   "n": 12,
    "roi": 33.9,
-   "said": 71.7,
+   "said": 71.4,
    "won": 9
   },
   "stuck": [],
