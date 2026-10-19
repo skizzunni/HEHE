@@ -3251,10 +3251,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 59.1,
-    "n": 66,
+    "hit": 58.2,
+    "n": 67,
     "name": "tennis Kalshi-priced",
-    "said": 67.8
+    "said": 67.9
    },
    {
     "flag": false,
@@ -3329,11 +3329,11 @@
   ],
   "calls": {
    "atp": {
-    "all_hit": 68.3,
-    "calls": 74,
+    "all_hit": 67.9,
+    "calls": 75,
     "cutoff": 0.65,
-    "games": 139,
-    "hit": 81.1
+    "games": 140,
+    "hit": 80.0
    },
    "mlb": {
     "all_hit": 58.3,
@@ -3425,6 +3425,14 @@
    {
     "against_market": false,
     "league": "atp",
+    "pick": "Thiago Agustin Tirante",
+    "price": null,
+    "said": 73.5,
+    "why": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 74%"
+   },
+   {
+    "against_market": false,
+    "league": "atp",
     "pick": "Miomir Kecmanovic",
     "price": null,
     "said": 60.7,
@@ -3449,20 +3457,20 @@
   ],
   "lottery": [],
   "picks": {
-   "hit": 50.0,
-   "lost": 3,
-   "n": 6,
+   "hit": 42.9,
+   "lost": 4,
+   "n": 7,
    "roi": null,
-   "said": 60.8,
+   "said": 62.6,
    "won": 3
   },
   "picks_by_league": {
    "atp": {
     "hit": 0.0,
-    "lost": 1,
-    "n": 1,
+    "lost": 2,
+    "n": 2,
     "roi": null,
-    "said": 60.7,
+    "said": 67.1,
     "won": 0
    },
    "wta": {
@@ -3493,7 +3501,12 @@
    "won": 0
   },
   "strong": {
-   "n": 0
+   "hit": 0.0,
+   "lost": 1,
+   "n": 1,
+   "roi": null,
+   "said": 73.5,
+   "won": 0
   },
   "stuck": [],
   "vs_market_14d": {
