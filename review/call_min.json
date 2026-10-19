@@ -2,16 +2,11 @@
  "cutoffs": {
   "atp": 0.65,
   "ncaaf": 0.575,
+  "soccer": 0.7,
   "wnba": 0.55,
   "wta": 0.725
  },
  "detail": {
-  "arg": {
-   "all_hit": 60.0,
-   "cutoff": null,
-   "games": 25,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
   "atp": {
    "all_hit": 68.8,
    "calls": 74,
@@ -19,184 +14,10 @@
    "games": 138,
    "hit": 81.1
   },
-  "aus": {
-   "all_hit": 75.0,
-   "cutoff": null,
-   "games": 4,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "aut": {
-   "all_hit": 87.5,
-   "cutoff": null,
-   "games": 8,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "bel": {
-   "all_hit": 100.0,
-   "cutoff": null,
-   "games": 3,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "bra": {
-   "all_hit": 68.4,
-   "cutoff": null,
-   "games": 19,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "bra2": {
-   "all_hit": 57.9,
-   "cutoff": null,
-   "games": 19,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "chi": {
-   "all_hit": 66.7,
-   "cutoff": null,
-   "games": 9,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "chn": {
-   "all_hit": 100.0,
-   "cutoff": null,
-   "games": 7,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "col": {
-   "all_hit": 43.8,
-   "cutoff": null,
-   "games": 16,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "den": {
-   "all_hit": 71.4,
-   "cutoff": null,
-   "games": 7,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "ecu": {
-   "all_hit": 55.0,
-   "cutoff": null,
-   "games": 20,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "efl1": {
-   "all_hit": 42.3,
-   "cutoff": null,
-   "games": 26,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "efl2": {
-   "all_hit": 50.0,
-   "cutoff": null,
-   "games": 24,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "efl3": {
-   "all_hit": 50.0,
-   "cutoff": null,
-   "games": 24,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "epl": {
-   "all_hit": 90.0,
-   "cutoff": null,
-   "games": 10,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "esp": {
-   "all_hit": 70.0,
-   "cutoff": null,
-   "games": 10,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "esp2": {
-   "all_hit": 77.8,
-   "cutoff": null,
-   "games": 9,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "fra": {
-   "all_hit": 60.0,
-   "cutoff": null,
-   "games": 10,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "fra2": {
-   "all_hit": 50.0,
-   "cutoff": null,
-   "games": 2,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "ger": {
-   "all_hit": 100.0,
-   "cutoff": null,
-   "games": 7,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "ger2": {
-   "all_hit": 85.7,
-   "cutoff": null,
-   "games": 7,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "gre": {
-   "all_hit": 83.3,
-   "cutoff": null,
-   "games": 6,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "ind": {
-   "all_hit": 100.0,
-   "cutoff": null,
-   "games": 2,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "ita": {
-   "all_hit": 62.5,
-   "cutoff": null,
-   "games": 8,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "ita2": {
-   "all_hit": 66.7,
-   "cutoff": null,
-   "games": 9,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "jpn": {
-   "all_hit": 56.7,
-   "cutoff": null,
-   "games": 30,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "ksa": {
-   "all_hit": 54.5,
-   "cutoff": null,
-   "games": 11,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "mex": {
-   "all_hit": 46.2,
-   "cutoff": null,
-   "games": 13,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "mex2": {
-   "all_hit": 37.5,
-   "cutoff": null,
-   "games": 8,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
   "mlb": {
    "all_hit": 58.3,
    "cutoff": null,
    "games": 372,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "mls": {
-   "all_hit": 37.9,
-   "cutoff": null,
-   "games": 29,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "ncaaf": {
@@ -205,18 +26,6 @@
    "cutoff": 0.575,
    "games": 502,
    "hit": 83.1
-  },
-  "ned": {
-   "all_hit": 55.6,
-   "cutoff": null,
-   "games": 9,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "ned2": {
-   "all_hit": 100.0,
-   "cutoff": null,
-   "games": 3,
-   "note": "insufficient evidence: no cutoff qualified"
   },
   "nfl": {
    "all_hit": 57.8,
@@ -230,76 +39,17 @@
    "games": 93,
    "note": "insufficient evidence: no cutoff qualified"
   },
-  "nor": {
-   "all_hit": 62.5,
-   "cutoff": null,
-   "games": 16,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "nwsl": {
-   "all_hit": 62.5,
-   "cutoff": null,
-   "games": 8,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "par": {
-   "all_hit": 50.0,
-   "cutoff": null,
-   "games": 16,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "per": {
-   "all_hit": 73.7,
-   "cutoff": null,
-   "games": 19,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "rsa": {
-   "all_hit": 57.1,
-   "cutoff": null,
-   "games": 7,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "sco": {
-   "all_hit": 58.3,
-   "cutoff": null,
-   "games": 12,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "sco2": {
-   "all_hit": 100.0,
-   "cutoff": null,
-   "games": 4,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "swe": {
-   "all_hit": 46.2,
-   "cutoff": null,
-   "games": 13,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "tur": {
-   "all_hit": 87.5,
-   "cutoff": null,
-   "games": 8,
-   "note": "insufficient evidence: no cutoff qualified"
+  "soccer": {
+   "all_hit": 60.8,
+   "calls": 184,
+   "cutoff": 0.7,
+   "games": 530,
+   "hit": 76.6
   },
   "ufc": {
    "all_hit": 63.6,
    "cutoff": null,
    "games": 88,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "uru": {
-   "all_hit": 50.0,
-   "cutoff": null,
-   "games": 14,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
-  "usl": {
-   "all_hit": 83.3,
-   "cutoff": null,
-   "games": 12,
    "note": "insufficient evidence: no cutoff qualified"
   },
   "wnba": {
@@ -308,12 +58,6 @@
    "cutoff": 0.55,
    "games": 47,
    "hit": 83.3
-  },
-  "wsl": {
-   "all_hit": 71.4,
-   "cutoff": null,
-   "games": 7,
-   "note": "insufficient evidence: no cutoff qualified"
   },
   "wta": {
    "all_hit": 70.0,
@@ -340,54 +84,10 @@
  },
  "target": 0.75,
  "unqualified": [
-  "arg",
-  "aus",
-  "aut",
-  "bel",
-  "bra",
-  "bra2",
-  "chi",
-  "chn",
-  "col",
-  "den",
-  "ecu",
-  "efl1",
-  "efl2",
-  "efl3",
-  "epl",
-  "esp",
-  "esp2",
-  "fra",
-  "fra2",
-  "ger",
-  "ger2",
-  "gre",
-  "ind",
-  "ita",
-  "ita2",
-  "jpn",
-  "ksa",
-  "mex",
-  "mex2",
   "mlb",
-  "mls",
-  "ned",
-  "ned2",
   "nfl",
   "nhl",
-  "nor",
-  "nwsl",
-  "par",
-  "per",
-  "rsa",
-  "sco",
-  "sco2",
-  "swe",
-  "tur",
-  "ufc",
-  "uru",
-  "usl",
-  "wsl"
+  "ufc"
  ],
- "updated": "2026-10-18T22:55-04:00"
+ "updated": "2026-10-18T23:00-04:00"
 }
