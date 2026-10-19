@@ -2201,10 +2201,10 @@
   },
   "props": {
    "fair": {
-    "n": 120,
-    "said_fair": 82.5,
-    "said_price": 85.6,
-    "won": 98
+    "n": 141,
+    "said_fair": 82.0,
+    "said_price": 85.8,
+    "won": 118
    },
    "n": 141,
    "said": 75.7,
@@ -2259,10 +2259,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 59.6,
-    "n": 57,
+    "hit": 58.6,
+    "n": 58,
     "name": "tennis Kalshi-priced",
-    "said": 68.8
+    "said": 68.6
    },
    {
     "flag": false,
@@ -2280,38 +2280,38 @@
    },
    {
     "flag": false,
-    "hit": 36.4,
-    "n": 22,
+    "hit": 37.5,
+    "n": 24,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 41.3
+    "said": 42.0
    },
    {
     "flag": false,
-    "hit": 84.6,
-    "n": 13,
+    "hit": 87.5,
+    "n": 16,
     "name": "props nfl Passing Yards",
-    "said": 82.4
+    "said": 81.5
    },
    {
     "flag": false,
-    "hit": 89.3,
-    "n": 28,
-    "name": "props nfl Receiving Yards",
-    "said": 79.0
-   },
-   {
-    "flag": false,
-    "hit": 81.1,
+    "hit": 91.9,
     "n": 37,
-    "name": "props nfl Receptions",
-    "said": 80.5
+    "name": "props nfl Receiving Yards",
+    "said": 80.0
    },
    {
     "flag": false,
-    "hit": 70.0,
-    "n": 20,
+    "hit": 81.8,
+    "n": 44,
+    "name": "props nfl Receptions",
+    "said": 80.7
+   },
+   {
+    "flag": false,
+    "hit": 71.4,
+    "n": 21,
     "name": "props nfl Rushing Yards",
-    "said": 80.5
+    "said": 80.6
    },
    {
     "flag": false,
@@ -2357,9 +2357,9 @@
     "hit": 83.1
    },
    "nfl": {
-    "all_hit": 57.8,
+    "all_hit": 58.2,
     "cutoff": null,
-    "games": 90,
+    "games": 91,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nhl": {
@@ -2389,17 +2389,17 @@
     "hit": 83.3
    },
    "wta": {
-    "all_hit": 70.0,
+    "all_hit": 69.7,
     "calls": 69,
     "cutoff": 0.725,
-    "games": 200,
+    "games": 201,
     "hit": 85.5
    }
   },
   "clv": {
-   "avg": 0.24,
-   "beat": 48.4,
-   "n": 31
+   "avg": 0.15,
+   "beat": 46.9,
+   "n": 32
   },
   "day": "2026-10-18",
   "leaks_14d": [
@@ -2415,10 +2415,11 @@
   ],
   "locks": {
    "lost": [
-    "Indianapolis Colts +1.5 (Tennessee Titans at Indianapolis Colts) Tennessee Titans 26 - Indianapolis Colts 20"
+    "Indianapolis Colts +1.5 (Tennessee Titans at Indianapolis Colts) Tennessee Titans 26 - Indianapolis Colts 20",
+    "Dallas Cowboys +7.5 (Dallas Cowboys at Green Bay Packers) Dallas Cowboys 13 - Green Bay Packers 23"
    ],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      2,
@@ -2816,6 +2817,14 @@
    {
     "against_market": false,
     "league": "wta",
+    "pick": "Liudmila Samsonova",
+    "price": null,
+    "said": 56.2,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 56%"
+   },
+   {
+    "against_market": false,
+    "league": "wta",
     "pick": "Sofia Kenin",
     "price": null,
     "said": 58.4,
@@ -2848,7 +2857,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -2892,7 +2901,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k",
-    "won": 6
+    "won": 7
    },
    {
     "killed_by": [
@@ -2919,7 +2928,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+25",
-    "won": 6
+    "won": 7
    },
    {
     "killed_by": [
@@ -2946,7 +2955,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+50",
-    "won": 6
+    "won": 7
    },
    {
     "killed_by": [
@@ -2974,7 +2983,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "10k+100",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -2993,12 +3002,12 @@
    }
   ],
   "picks": {
-   "hit": 66.7,
-   "lost": 51,
-   "n": 153,
-   "roi": -4.5,
-   "said": 69.7,
-   "won": 102
+   "hit": 66.5,
+   "lost": 52,
+   "n": 155,
+   "roi": -1.4,
+   "said": 69.5,
+   "won": 103
   },
   "picks_by_league": {
    "arg": {
@@ -3210,12 +3219,12 @@
     "won": 2
    },
    "nfl": {
-    "hit": 45.5,
+    "hit": 50.0,
     "lost": 6,
-    "n": 11,
-    "roi": -33.8,
-    "said": 62.4,
-    "won": 5
+    "n": 12,
+    "roi": -23.1,
+    "said": 61.5,
+    "won": 6
    },
    "nhl": {
     "hit": 50.0,
@@ -3314,34 +3323,34 @@
     "won": 5
    },
    "wta": {
-    "hit": 50.0,
-    "lost": 5,
-    "n": 10,
+    "hit": 45.5,
+    "lost": 6,
+    "n": 11,
     "roi": null,
-    "said": 62.3,
+    "said": 61.7,
     "won": 5
    }
   },
   "props": {
    "fair": {
-    "n": 120,
-    "said_fair": 82.5,
-    "said_price": 85.6,
-    "won": 98
+    "n": 141,
+    "said_fair": 82.0,
+    "said_price": 85.8,
+    "won": 118
    },
-   "n": 167,
-   "said": 73.0,
-   "won": 123
+   "n": 190,
+   "said": 73.7,
+   "won": 144
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      7,
      0.5375,
-     "open"
+     "won"
     ],
     "winners": [
      2,
@@ -3349,7 +3358,7 @@
      "won"
     ]
    },
-   "won": 10
+   "won": 11
   },
   "strong": {
    "hit": 74.4,
@@ -3370,12 +3379,12 @@
     "won": 13
    },
    "agree": {
-    "hit": 67.3,
+    "hit": 67.4,
     "lost": 91,
-    "n": 278,
-    "roi": -2.2,
-    "said": 63.8,
-    "won": 187
+    "n": 279,
+    "roi": -1.9,
+    "said": 63.7,
+    "won": 188
    }
   },
   "weights": {
