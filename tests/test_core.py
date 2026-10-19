@@ -512,6 +512,14 @@ class SelectionPolicy(unittest.TestCase):
         finally:
             calls._MIN = real
 
+    def test_pregame_inputs_need_two_standard_errors(self):
+        """NCAAF home edge on the lab's untouched half: 19 picks changed, net
+        +5 (12-7). One SE let it onto the live board; two SE does not."""
+        import policy
+        self.assertFalse(policy.promoted(dict(picks_changed=19, extra_wins=5, better=True)))
+        self.assertTrue(policy.promoted(dict(picks_changed=100, extra_wins=21, better=True)))
+        self.assertFalse(policy.promoted(dict(picks_changed=100, extra_wins=21, better=False)))
+
     def test_no_hand_set_weights_in_live_code(self):
         import re
         for f in ("dashboard.py", "picks.py"):

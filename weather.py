@@ -38,7 +38,14 @@ def _cuts():
     for lg in LEAGUES:
         r = (d.get(lg) or {}).get("wind_rule") or {}
         f, t = r.get("fit") or {}, r.get("test") or {}
-        if (f.get("hit") or 0) > 52.4 and (t.get("hit") or 0) > 52.4:   # held in BOTH halves
+        # held in both halves AND, on the untouched half, beat the 50% the
+        # prices imply by two standard errors -- the bar every pregame input
+        # beyond the price has to clear (policy.promoted). At the 2026-10-16
+        # run neither league does (college 54.5% on 332 = 1.6 SE, NFL 55.2% on
+        # 67 = 0.9 SE), so the wind nudge is off until fresh games carry it.
+        n = t.get("n") or 0
+        bar = 50 + 200 * (0.25 / n) ** 0.5 if n else 101
+        if (f.get("hit") or 0) > 52.4 and (t.get("hit") or 0) >= bar:
             out[lg] = (r["windy_at"], r["calm_at"])
     return out
 

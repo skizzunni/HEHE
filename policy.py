@@ -50,10 +50,36 @@ def model_weight(league):
         return FALLBACK_W
 
 
+LAB = os.path.join(HERE, "data", "edge_lab.json")
+_LAB = _load(LAB)
+
+
+def promoted(r):
+    """A pregame feature beyond the same-time price is used only when, on the
+    lab's untouched half, it won more of the picks it changed than it lost by
+    at least two standard errors (net gain >= 2 x sqrt(changed)) and improved
+    log-loss. Until 2026-10-19 the bar was one standard error (the lab's
+    formula halved its own stated rule), and with ~60 feature x league tests
+    that let a 12-7 split on 19 changed NCAAF picks set a live home edge."""
+    try:
+        n, g = int(r.get("picks_changed") or 0), int(r.get("extra_wins") or 0)
+    except (TypeError, ValueError):
+        return False
+    return bool(n and g >= 2 * n ** 0.5 and r.get("better"))
+
+
+def home_edge(league):
+    """Log-odds shift toward the home side, or 0 unless promoted."""
+    r = ((_LAB.get("leagues") or {}).get(league) or {}).get("home") or {}
+    if promoted(r) and r.get("weights"):
+        return float(r["weights"][0])
+    return 0.0
+
+
 def version():
     """Short fingerprint of the policy files the board is running on."""
     h = hashlib.sha1()
-    for p in (WEIGHTS, CALLS):
+    for p in (WEIGHTS, CALLS, LAB):
         try:
             with open(p, "rb") as fh:
                 h.update(fh.read())

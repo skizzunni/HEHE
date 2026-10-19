@@ -123,21 +123,8 @@ PRESEASON_LEAGUES = {"mlb", "wnba", "nfl", "ncaaf", "nba", "nhl", "ncaab"}
 # odds blend). Fitted on the graded ledger 2026-10-16: the best weight was
 # 0.0 everywhere except NFL (0.4) and WNBA (0.3); a fifth is kept as a
 # tie-breaker, as MLB's own backtest chose.
-# Home-side adjustments (log-odds) that beat the closing favourite on the
-# unseen half of past seasons in tools/edge_lab.py, and only those flagged
-# significant. College football, 2026-10-16: +6 wins on 592 unseen games
-# (78.2% -> 79.2%), weight 0.115. Re-read every rebuild from data/edge_lab.json,
-# so a league gains or loses it as the weekly lab re-runs.
-HOME_EDGE = {}
-try:
-    with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data",
-                           "edge_lab.json")) as _fh:
-        for _k, _v in (json.load(_fh).get("leagues") or {}).items():
-            _h = _v.get("home") or {}
-            if _h.get("significant") and _h.get("weights"):
-                HOME_EDGE[_k] = float(_h["weights"][0])
-except (OSError, ValueError, TypeError):
-    pass
+# Home-side adjustments (log-odds) beyond the closing price: policy.home_edge,
+# only where the edge lab's untouched half clears two standard errors.
 # the model's share against the price comes only from policy.py (the daily
 # review's tested weights); hand-set per-league numbers used to win here
 import policy as _policy                                    # noqa: E402
@@ -672,9 +659,8 @@ def collect(key, path, day, mlbctx, mybook=None):
                     mine = dict(mine, p_model_away=p_away, p_market_away=mq)
                     if mq is not None and 0.0 < mq < 1.0:
                         pa = P.anchor(p_away, mq, _policy.model_weight(key))
-                        # the one edge the edge lab confirmed on unseen games:
-                        # the close underrates home sides in some leagues
-                        h = HOME_EDGE.get(key)
+                        # a home-side shift, only if promoted (policy.home_edge)
+                        h = _policy.home_edge(key)
                         if h:
                             z = math.log(pa / (1 - pa)) - h      # pa is the AWAY chance
                             pa = 1 / (1 + math.exp(-z))

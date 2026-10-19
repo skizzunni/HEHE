@@ -357,7 +357,9 @@ def main():
             res[name] = dict(hit=h, logloss=l, weights=[round(x, 3) for x in w],
                              picks_changed=flips, extra_wins=gained,
                              better=bool(l < base[1] and h >= base[0]),
-                             significant=bool(flips and gained > 2 * math.sqrt(flips) / 2
+                             # two standard errors of the net gain on the
+                             # changed picks (it read sqrt/2 x 2 = one SE)
+                             significant=bool(flips and gained >= 2 * math.sqrt(flips)
                                               and l < base[1]))
         # which way of removing the book's margin matches results best, on
         # games the comparison never tuned on (the test half; nothing is fit)
