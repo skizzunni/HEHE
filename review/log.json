@@ -3368,10 +3368,10 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "soccer": {
-    "all_hit": 61.1,
+    "all_hit": 61.0,
     "calls": 239,
     "cutoff": 0.675,
-    "games": 548,
+    "games": 549,
     "hit": 76.6
    },
    "ufc": {
@@ -3501,6 +3501,14 @@
    },
    {
     "against_market": false,
+    "league": "ecu",
+    "pick": "Mushuc Runa",
+    "price": null,
+    "said": 50.4,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 called at 50%"
+   },
+   {
+    "against_market": false,
     "league": "ned2",
     "pick": "Jong PSV",
     "price": null,
@@ -3591,11 +3599,11 @@
    }
   ],
   "picks": {
-   "hit": 64.1,
-   "lost": 14,
-   "n": 39,
+   "hit": 62.5,
+   "lost": 15,
+   "n": 40,
    "roi": 20.1,
-   "said": 66.8,
+   "said": 66.4,
    "won": 25
   },
   "picks_by_league": {
@@ -3613,6 +3621,14 @@
     "n": 1,
     "roi": null,
     "said": 55.9,
+    "won": 0
+   },
+   "ecu": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 50.4,
     "won": 0
    },
    "epl": {
