@@ -36,7 +36,7 @@ what is missing and the next step. Updated 2026-10-18 (after the external review
 
 Run by `.github/workflows/tests.yml` on every code or page push:
 
-* `tests/test_core.py` -- 52 unit tests (standard library, no network): Locks -400..-120 and
+* `tests/test_core.py` -- 50 unit tests (standard library, no network): Locks -400..-120 and
   Safe -2000..-500 windows, one leg per game and the kind cap, soccer limited to validated
   kinds, soccer grading (draw / void / live), soccer name matching and the reversed-fixture
   guard, NFL upper tail, wind scaling, ungradable props kept off tickets, every FanDuel prop
