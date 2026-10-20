@@ -263,15 +263,14 @@ def am_to_dec(o):
     return None if v == 0 else 1 + (v / 100 if v > 0 else 100 / -v)
 
 
-# Until 2026-10-20 only college football and basketball were de-vigged by the
-# power method (tools/edge_lab.py: college football 0.4411 log-loss vs 0.4473
-# proportional on unseen games) and every other league proportionally. Every
-# market now uses devig.METHOD, chosen on the older half of the same study
-# across all seven leagues (devig.py).
+# College football and basketball are de-vigged by the power method
+# (tools/edge_lab.py: college football 0.4411 log-loss vs 0.4473 proportional
+# on unseen games), every other league proportionally: devig.method_for. Power
+# everywhere was tried on 2026-10-20 and reverted (devig.py, README item 3).
 
 
 def devig(*odds, method=None):
-    """Fair chances from American odds, by devig.METHOD (power) unless told."""
+    """Fair chances from American odds, by devig.METHOD unless told."""
     import devig as _dv
     return _dv.fair_decimal(*[am_to_dec(o) for o in odds], method=method)
 
@@ -595,7 +594,8 @@ def collect(key, path, day, mlbctx, mybook=None):
             dl = deep_links(c)
             pr = raw_prices(c, 3 if key in THREE_WAY else 2)
             book = price_book(c) if pr else None
-            dv = devig(*pr) if pr else None
+            import devig as _dv
+            dv = devig(*pr, method=_dv.method_for(key)) if pr else None
             legs = []
             if dv and len(dv) == len(pr):
                 names = (["away", "draw", "home"] if len(dv) == 3 else ["away", "home"])

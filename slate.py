@@ -95,7 +95,7 @@ def am_to_dec(o):
 
 
 def devig(*odds):
-    """devig.METHOD (power) on an N-way market -> ([probs], hold). None if unusable."""
+    """devig.METHOD on an N-way market -> ([probs], hold). None if unusable."""
     import devig as _dv
     decs = [am_to_dec(o) for o in odds]
     fv = _dv.fair_decimal(*decs)

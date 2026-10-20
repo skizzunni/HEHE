@@ -22,7 +22,7 @@ M = [
 
 
 def devig(a, b):
-    """devig.METHOD (power) on a two-way market -> (pA, pB, hold)."""
+    """devig.METHOD on a two-way market -> (pA, pB, hold)."""
     import devig as _dv
     return _dv.devig(a, b)
 

@@ -44,5 +44,18 @@ class KnownMarket(unittest.TestCase):
         self.assertIsNone(devig.fair_implied(0.6))
 
 
+class Reverted(unittest.TestCase):
+    """Power everywhere did not beat the old method on the untouched window
+    (README item 3), so the board is back to proportional with power for
+    college football and basketball."""
+
+    def test_board_method(self):
+        self.assertEqual(devig.METHOD, "proportional")
+        self.assertEqual(devig.method_for("nhl"), "proportional")
+        self.assertEqual(devig.method_for("ncaaf"), "power")
+        p = dashboard.devig("-200", "+170", method=devig.method_for("nba"))
+        self.assertAlmostEqual(p[0], (2 / 3) / (2 / 3 + 100 / 270), places=9)
+
+
 if __name__ == "__main__":
     unittest.main()

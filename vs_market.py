@@ -118,7 +118,7 @@ def historical_odds(games):
 
 
 def devig(a, h):
-    """devig.METHOD (power) -> (pA, pH)."""
+    """devig.METHOD -> (pA, pH)."""
     import devig as _dv
     return tuple(_dv.fair(a, h))
 

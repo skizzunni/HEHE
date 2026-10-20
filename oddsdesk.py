@@ -37,7 +37,7 @@ def dec_to_am(d):
 
 
 def devig(a, b):
-    """devig.METHOD (power) on a two-way market -> (pA, pB, hold)."""
+    """devig.METHOD on a two-way market -> (pA, pB, hold)."""
     import devig as _dv
     da, db = am_to_dec(a), am_to_dec(b)
     pa, pb = _dv.fair_decimal(da, db)

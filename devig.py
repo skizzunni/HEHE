@@ -20,8 +20,14 @@ tools/edge_lab.py's closing-price study (3,485 games, seven leagues, run
     log-loss, older half    proportional 0.60082   power 0.60044   shin 0.60046
     log-loss, newer half    proportional 0.57521   power 0.57296   shin 0.57368
 
-Until 2026-10-20 proportional was used everywhere except college football and
-basketball (power); README "item 3" has the before/after on the ledger.
+REVERTED 2026-10-20. On the ledger's untouched evaluation window (graded
+picks 2026-10-15..19, N = 426, DraftKings' final prices) power did not
+improve: log-loss 0.5935 vs 0.5925, difference +0.0010 (95% -0.0023 to
++0.0052), Brier tied at 0.2005. By the plan's rule a change that cannot show
+an improvement on untouched data is reverted, so METHOD is back to what the
+board used before: proportional, with power for the leagues in POWER_LEAGUES
+(college football and basketball, where edge_lab found power better on
+unseen games). Power and Shin stay here for the next test.
 
 Run: python3 devig.py   (the demo below)
 """
@@ -30,7 +36,13 @@ import math
 
 from parlay_math import american_to_decimal, decimal_to_american
 
-METHOD = "power"
+METHOD = "proportional"
+POWER_LEAGUES = {"ncaaf", "ncaab"}
+
+
+def method_for(league):
+    """The method the board uses for a league's moneyline."""
+    return "power" if league in POWER_LEAGUES else METHOD
 
 
 def proportional(raw):

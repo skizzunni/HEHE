@@ -2295,3 +2295,18 @@ model's estimate, not a measured rate.
 - Brier: 0.2005 old vs 0.2005 new.
 - Log-loss: 0.5925 old vs 0.5935 new. The difference (new − old) is +0.0010, with a game-resampled 95% interval of −0.0023 to +0.0052.
 - **Verdict:** no improvement on untouched data. The point estimate is slightly worse, and moving favourites up pushed more picks into the 80–90 band, which already trails its stated chance. By the plan's rule this change is reverted; see the next entry.
+
+## Accuracy plan, item 3: revert (2026-10-20)
+
+**The change was reverted.** Power de-vig everywhere did not show an improvement on the untouched window (graded picks 2026-10-15 to 2026-10-19, N = 426):
+- Log-loss: 0.5935 with power vs 0.5925 before. Difference +0.0010, 95% interval −0.0023 to +0.0052.
+- Brier: 0.2005 in both.
+
+**What stays:**
+- `devig.py` as the single place margin is removed, with proportional, power and Shin, and every caller routed through it.
+- The method is back to the board's previous behaviour: `devig.METHOD = "proportional"`, with `devig.method_for` keeping power for college football and basketball (`POWER_LEAGUES`).
+- Published probabilities and band hit rates are therefore exactly as in the "old" columns above.
+
+**Test.** `tests/test_devig.py::Reverted` fails on the power commit and passes now. The Locks two-sided test is back to the proportional identity.
+
+**Next.** A per-league or Shin variant is a candidate only if it wins on a later untouched window.
