@@ -48,7 +48,7 @@ MUTATIONS = [
      "return min(price_p * BAND_VALUE.get(min(int(price_p * 10), 9), 1.0), 0.99)", "test_market_chance"),
     ("locks.py", "        if any(x.split(\"|\", 1)[0] == L[\"gid\"] for x in keys):\n            continue\n", "",
      "test_one_leg_per_game_and_extras_apart"),
-    ("locks.py", 'return a / (a + b), "two-sided"', 'return (1 / d) / lottery.FD_HOLD, "two-sided"',
+    ("locks.py", 'return devig.fair_implied(a, b)[0], "two-sided"', 'return (1 / d) / lottery.FD_HOLD, "two-sided"',
      "test_two_sided_devig"),
     ("locks.py", "while len(blocks) > 1 and blocks", "while False and blocks", "test_alternate_lines_in_order"),
     ("ledger.py", 'and bool(prev.get("dc")) == entry["dc"])', ')', "test_history"),
