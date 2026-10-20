@@ -17,14 +17,12 @@ HOW LEGS ARE CHOSEN -- every rule here is one the ledger paid for
 
 WHAT THE NUMBERS MEAN
 
-  `hit` is the rate the leg's own sport and confidence band has MEASURED,
-  pulled halfway toward the book's de-vigged probability (see MARKET_WEIGHT),
-  not the model's raw confidence. The joint probability multiplies those, which
-  assumes independent games -- true across different games, not within one.
-  `ev` is the expected return per $1 at the posted prices. When no combination
-  is positive the best one is still shown and labelled negative: on a vigged
-  market that is the usual state, and a parlay never turns a -EV leg into a
-  +EV ticket.
+  `hit` is the published Card probability, used without another hidden blend.
+  Every leg must be qualified and clear a 2% estimated-return buffer at its
+  quoted price. That buffer is a screening rule, not evidence of a profitable
+  strategy. When nothing qualifies, no suggested betting ticket is generated.
+  Joint probabilities use an independence approximation across distinct games;
+  one event never appears twice in a suggested ticket.
 """
 import argparse
 import itertools
@@ -35,14 +33,8 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(HERE, ".cache", "last_board.json")
 
-# The board's band rates are not the whole truth. On 904 graded favourites the
-# ledger hit 69.0% against 68.9% implied by the price -- the book was right,
-# the bands were optimistic. So each leg's probability is pulled halfway to the
-# book's de-vigged number. Two-way margin measured at ~4.5%, half per side.
-MARKET_WEIGHT = 0.5
-HALF_VIG = 1.0225
-
 MAX_POOL = 12
+MIN_EV = 0.02  # screening buffer on estimated return, not a confidence bound
 # Legs shorter than -500 add almost nothing to the payout while still able to
 # sink the ticket; a -1450 / -2400 pair priced at -881 is risk without reward.
 MIN_DEC = 1.2          # best legs considered; 12 choose 3 = 220 tickets
@@ -65,20 +57,24 @@ def american(d):
     return f"-{round(100 / (d - 1))}"
 
 
-def eligible(rows):
+def eligible(rows, min_ev=MIN_EV):
     """Legs fit to parlay, best expected return first."""
     out = []
     for lgk, r in rows:
         o = dec(r.get("p"))
         hit = r.get("hit")
-        if o is None or o < MIN_DEC or not hit or r.get("d") or r.get("hd"):
+        if o is None or o < MIN_DEC or not hit or r.get("d") or r.get("hd") or r.get("nc"):
             continue
         if r.get("tk") in BAD_TIERS:
             continue
-        fair = min(1 / o / HALF_VIG, 0.99)
-        p = (1 - MARKET_WEIGHT) * hit + MARKET_WEIGHT * fair
+        # Use the same final probability as the published Card. Re-blending
+        # it with this bet's price makes the recommendation a different model.
+        p = hit
+        if p * o - 1 < min_ev:
+            continue
         out.append(dict(lgk=lgk, pick=r["mp"], league=r.get("lg", lgk),
                         tip=r.get("t"), price=r["p"], dec=o, hit=p,
+                        gid=r.get("id") or (lgk, r["mp"]),
                         implied=1 / o, ev=p * o - 1, dk=r.get("dk"), fd=r.get("fd")))
     out.sort(key=lambda L: (-L["ev"], -L["hit"]))
     return out[:MAX_POOL]
@@ -87,6 +83,8 @@ def eligible(rows):
 def tickets(legs, n):
     out = []
     for combo in itertools.combinations(legs, n):
+        if len({L.get("gid", (L["lgk"], L["pick"])) for L in combo}) != n:
+            continue
         p = 1.0
         o = 1.0
         for L in combo:
@@ -108,7 +106,8 @@ def build(slot_leagues, top=3):
     rows = [(k, r) for k, v in (slot_leagues or {}).items()
             for r in v.get("rows") or []]
     legs = eligible(rows)
-    res = {"pool": len(legs)}
+    res = {"pool": len(legs), "min_ev": MIN_EV,
+           "reason": "No qualified priced picks clear the estimated-return buffer." if not legs else None}
     for n in (2, 3):
         t = tickets(legs, n)
         # best expected value first; among near-ties, the likelier ticket
