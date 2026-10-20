@@ -273,7 +273,9 @@ def fit_frozen(graded, start):
     d0 = dt.date.fromisoformat(start)
     lo, hi = (d0 - dt.timedelta(days=FREEZE_DAYS)).isoformat(), (d0 - dt.timedelta(days=1)).isoformat()
     # Only exact-market priced picks can be calls, including captured DC quotes.
-    rows = [e for e in C.graded(graded) if lo <= C.day_of(e) <= hi]
+    from tennis_eligibility import captured_quote
+    rows = [e for e in C.graded(graded) if lo <= C.day_of(e) <= hi
+            and (e.get("league") not in ("atp", "wta") or captured_quote(e))]
     by = defaultdict(list)
     for e in rows:
         by[call_group(e["league"])].append((e["conf"] / 100, e["status"] == "won"))
@@ -289,7 +291,7 @@ def fit_frozen(graded, start):
             if n < STRONG_MIN_N:
                 break                                  # higher cut-offs only shrink N
             lb, ub = wilson(k, n)
-            if k / n >= CALL_TARGET and lb >= floor:
+            if k / n >= CALL_TARGET and lb >= (CALL_TARGET if lg in ("atp", "wta") else floor):
                 best = (c, n, k, lb, ub)
                 break
         tested = sum(1 for q, w in rs) >= STRONG_MIN_N

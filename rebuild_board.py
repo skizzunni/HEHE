@@ -149,6 +149,9 @@ def snapshot():
                                     bool(leg and leg.get("dog")))
                 ek, el = ev_note(k in SOCCER, mc, (leg or {}).get("price"),
                                  bool(leg and leg.get("dog")))
+                if k in ("atp", "wta") and not calls.is_call(
+                        k, mc, quote=leg, as_of=f"{_dd[:4]}-{_dd[4:6]}-{_dd[6:]}"):
+                    tk, tl = "lean", "lean"
                 st_ = freshness.stale(r, pub)
                 np_ = not freshness.priced(r)
                 if r.get("price_at"):
@@ -158,7 +161,7 @@ def snapshot():
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
                              # below the league's cutoff, priced too long ago,
                              # or no book price at all: a lean, not a call
-                             "nc": st_ or np_ or not calls.is_call(k, mc),
+                             "nc": st_ or np_ or not calls.is_call(k, mc, quote=leg, as_of=f"{_dd[:4]}-{_dd[4:6]}-{_dd[6:]}"),
                              "st": st_, "np": np_,
                              "src": (r.get("src") or "model") if np_ else None,
                              "pa": quote_at(r), "bk": quote_book(r),

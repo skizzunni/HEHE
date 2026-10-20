@@ -50,10 +50,19 @@ def call_min(league):
     return _MIN.get(_group(league))
 
 
-def is_call(league, conf):
+def is_call(league, conf, quote=None, as_of=None, entries=None):
     """conf is the pick's chance as a fraction (0.63) or a percent (63.0)."""
     if conf is None or call_min(league) is None:
         return False
+    if league in ("atp", "wta"):
+        from tennis_eligibility import captured_quote, gate
+        if not quote or not captured_quote(quote):
+            return False
+        if entries is None:
+            import ledger
+            entries = ledger.load().values()
+        if not gate(league, entries, as_of, TARGET)["qualified"]:
+            return False
     c = conf / 100 if conf > 1 else conf
     return c >= call_min(league)
 
@@ -125,7 +134,7 @@ def candidates(rows_by_league, day, now):
                             dc=bool(r.get("dc")), price_market="double_chance" if r.get("dc") else "moneyline",
                             price_ref=leg.get("fd") or leg.get("dk"),
                             price_at=quote_at(r), calib=how,
-                            close=not is_call(lg, pct)))
+                            close=not is_call(lg, pct, quote=leg, as_of=_iso(day))))
     out.sort(key=lambda c: (-c["conf"], c["start"] or ""))
     return out
 

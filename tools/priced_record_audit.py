@@ -34,7 +34,10 @@ def compare(before, after):
 
 
 if __name__ == '__main__':
-    p = argparse.ArgumentParser(); p.add_argument('--before', required=True); p.add_argument('--out', required=True)
+    p = argparse.ArgumentParser(); p.add_argument('--before', required=True); p.add_argument('--out', required=True); p.add_argument('--after', help='Optional separate ledger; default compares the original snapshot with itself under the new rules')
     a = p.parse_args()
     with open(a.before) as f: before = json.load(f)
-    with open(a.out, 'w') as f: json.dump(compare(before, ledger.load()), f, indent=2); f.write('\n')
+    after = before
+    if a.after:
+        with open(a.after) as f: after = json.load(f)
+    with open(a.out, 'w') as f: json.dump(compare(before, after), f, indent=2); f.write('\n')

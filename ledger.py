@@ -192,7 +192,8 @@ def record(state=None):
                 # later refit of the cutoffs must not relabel past picks
                 import calls
                 import policy as _pv
-                entry["strong"] = calls.is_call(lg, entry["conf"])
+                entry["strong"] = calls.is_call(lg, entry["conf"], quote=entry,
+                                                as_of=day and f"{day[:4]}-{day[4:6]}-{day[6:]}")
                 entry["policy_version"] = _pv.version()      # on every pick, as well as each history version
                 # one of the day's calls (calls.update_daily): the record
                 # counts these at the chance the call carries (re-derived only
@@ -652,7 +653,7 @@ def board_payload(limit=40):
         # strong/close by the cut-offs frozen for this window (constant inside
         # it), not the label at set time: 2026-10-20's calls were set minutes
         # before the first freeze and carried the old daily refit's labels
-        todays_calls.append(dict(c, close=not _calls.is_call(c["league"], c["conf"]),
+        todays_calls.append(dict(c, close=not _calls.is_call(c["league"], c["conf"], quote=c, as_of=today),
                                  status=("pulled" if c.get("status") == "pulled" else e.get("status", "open")),
                                  live=e.get("live"),
                                  score=e.get("scores") or e.get("live_score") or {}))
@@ -661,7 +662,9 @@ def board_payload(limit=40):
     # time. The page cannot fetch, so honesty about staleness is the only
     # substitute for freshness.
     captured = int(dt.datetime.now(dt.timezone.utc).timestamp() * 1000)
-    return dict(captured=captured, excluded_unpriced=r["excluded_unpriced"],
+    from tennis_eligibility import report as tennis_report
+    return dict(tennis_record=tennis_report(book.values(), today, _calls.TARGET),
+                captured=captured, excluded_unpriced=r["excluded_unpriced"],
                 graded=r.get("graded", 0), open=r.get("open", 0),
                 won=r.get("won", 0), lost=r.get("lost", 0),
                 hit=round(r["hit"], 1) if r.get("graded") else None,
@@ -698,10 +701,15 @@ def _strong(e):
     before labels were frozen, fall back to today's cutoff."""
     if not record_priced(e):
         return False
+    if e.get("league") in ("atp", "wta"):
+        from tennis_eligibility import captured_quote
+        if not captured_quote(e):
+            return False
     if "strong" in e:
         return e["strong"]
     import calls
-    return calls.is_call(e.get("league"), e.get("conf"))
+    return calls.is_call(e.get("league"), e.get("conf"), quote=e,
+                         as_of=e.get("date"))
 
 
 def main():

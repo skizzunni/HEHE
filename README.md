@@ -2640,3 +2640,40 @@ and no eligible settled strongs, respectively. This fix collects future evidence
 Validation: all 7 new DC regressions failed before the change (4 assertions,
 3 missing-feature errors), then passed. **140 tests passed** in the full suite.
 Existing market-switch history coverage now uses a genuine, distinct DC quote.
+
+## Oct 20 independent audit — fix 3: priced evidence before tennis strongs
+
+`calls.is_call()` now requires a captured **DraftKings or FanDuel** price for
+ATP/WTA, in addition to the normal league cutoff. Tennis strong eligibility stays
+frozen until that tour's prior priced-only record has a **Wilson 95% lower bound
+of at least 75%**, the league target. ATP cannot borrow WTA's evidence or vice
+versa. Same-day/future outcomes, late-graded outcomes unavailable at selection,
+unpriced winners and other sources cannot unlock a strong label.
+
+Both tours currently remain frozen: **zero qualifying priced outcomes**. The
+Results tab separately shows the priced record, excluded unpriced history and
+formerly strong unpriced history. The fixed snapshot has 401 unpriced settled
+tennis picks (275–126, 68.58%); 29 wore strong labels (20–9, 68.97%). None now
+contributes to the priced headline. The browser shows ATP/WTA “strongs frozen”,
+their sample sizes, Wilson bounds and targets. Tennis rows without qualification
+render as leans, including their tier badge, rather than carrying a contradictory
+strong badge beside a lean indicator.
+
+Before/after this fix on the identical windows in fix 1 remains **unchanged**:
+all-time overall 857–535, Oct 7–20 213–128, Oct 20 5–2; priced strong 7–0,
+7–0, and no settled eligible strongs, respectively. Qualifying priced tennis is
+0–0 before and after; **no win percentage is published for an empty sample**.
+Historical tennis wins/losses remain available only as excluded history. The
+ledger-derived studies in the seven saved daily reviews were recomputed using the
+shared price eligibility rule; unrelated ticket/prop history was preserved.
+
+Validation: all 7 initial tennis regressions failed before implementation
+(1 assertion, 6 missing-feature errors), then passed. Three additional checks
+cover late grading, published close-call labels and visible disclosure.
+**150 tests passed** overall. Existing browser assertions also passed using a
+Playwright adapter; an additional browser check verified the exclusion notice,
+20–9 history and both freezes with no JavaScript errors.
+
+These are evidence and eligibility corrections. They do not establish a new
+profitable forecasting strategy or imply that the remaining tiny strong sample
+will maintain its observed rate.
