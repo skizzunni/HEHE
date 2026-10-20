@@ -1920,6 +1920,63 @@
       "start": "2026-10-20T23:00Z",
       "starters": [],
       "t": "2026-10-20T15:09:13+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "NJ",
+        "Nick Bjugstad",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "NJ",
+        "Seamus Casey",
+        "Injured Reserve",
+        "D"
+       ],
+       [
+        "COL",
+        "Logan O'Connor",
+        "Injured Reserve",
+        "RW"
+       ],
+       [
+        "COL",
+        "Zachary L'Heureux",
+        "Out",
+        "LW"
+       ],
+       [
+        "COL",
+        "Nicolas Roy",
+        "Out",
+        "C"
+       ],
+       [
+        "COL",
+        "Georgii Merkulov",
+        "Injured Reserve",
+        "C"
+       ]
+      ],
+      "probables": {
+       "COL": [
+        [
+         "Scott Wedgewood",
+         "probableStartingGoalie"
+        ]
+       ],
+       "NJ": [
+        [
+         "Jake Allen",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-20T23:00Z",
+      "starters": [],
+      "t": "2026-10-20T16:52:43+00:00"
      }
     ],
     "nhl:401892541": [
@@ -50445,6 +50502,89 @@
       ]
      ],
      "t": "2026-10-20T16:37:06+00:00"
+    },
+    {
+     "policy": "d772892d",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Atl\u00e9tico Nacional or draw",
+        "Napoli or draw",
+        "FC Porto or draw",
+        "Wolverhampton Wanderers or draw",
+        "AS Roma to win"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Delaware Blue Hens under 35.5 points",
+        "Marshall Thundering Herd under 41.5 points",
+        "Over 207.5 points",
+        "Colorado Avalanche +4.5"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Over 41.5 points",
+        "Marshall Thundering Herd +11.5",
+        "Over 207.5 points",
+        "Under 246.5 points",
+        "Over 216.5 points"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ]
+     ],
+     "t": "2026-10-20T16:52:38+00:00"
     }
    ]
   }
