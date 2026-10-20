@@ -3758,10 +3758,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 62.0,
-    "n": 92,
+    "hit": 61.3,
+    "n": 93,
     "name": "tennis Kalshi-priced",
-    "said": 67.7
+    "said": 67.6
    },
    {
     "flag": false,
@@ -3850,10 +3850,10 @@
   ],
   "calls": {
    "atp": {
-    "all_hit": 67.3,
+    "all_hit": 66.9,
     "calls": 80,
     "cutoff": 0.65,
-    "games": 153,
+    "games": 154,
     "hit": 80.0
    },
    "mlb": {
@@ -3936,6 +3936,14 @@
   "losses": [
    {
     "against_market": false,
+    "league": "atp",
+    "pick": "Rinky Hijikata",
+    "price": null,
+    "said": 53.7,
+    "why": "lost 0-2 in sets \u00b7 never won a set \u00b7 called at 54%"
+   },
+   {
+    "against_market": false,
     "league": "wta",
     "pick": "Paula Badosa",
     "price": null,
@@ -3945,14 +3953,22 @@
   ],
   "lottery": [],
   "picks": {
-   "hit": 83.3,
-   "lost": 1,
-   "n": 6,
+   "hit": 71.4,
+   "lost": 2,
+   "n": 7,
    "roi": null,
-   "said": 75.2,
+   "said": 72.1,
    "won": 5
   },
   "picks_by_league": {
+   "atp": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": null,
+    "said": 53.7,
+    "won": 0
+   },
    "wta": {
     "hit": 83.3,
     "lost": 1,
