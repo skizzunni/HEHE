@@ -263,37 +263,17 @@ def am_to_dec(o):
     return None if v == 0 else 1 + (v / 100 if v > 0 else 100 / -v)
 
 
-# Leagues whose two-way prices are de-vigged by the POWER method: raise both
-# implied chances to the k that makes them sum to 1, which puts most of the
-# margin on the underdog, as books do. tools/edge_lab.py's devig comparison:
-# college football 0.4411 log-loss vs 0.4473 proportional on unseen games
-# (tied on the older half), where proportional understated favourites -- its
-# 80-90% band won 95.1%, its 90%+ band 96.9% against 94.1% stated; college
-# basketball better on both halves. Elsewhere the two tie or split.
-POWER_DEVIG = {"ncaaf", "ncaab"}
+# Until 2026-10-20 only college football and basketball were de-vigged by the
+# power method (tools/edge_lab.py: college football 0.4411 log-loss vs 0.4473
+# proportional on unseen games) and every other league proportionally. Every
+# market now uses devig.METHOD, chosen on the older half of the same study
+# across all seven leagues (devig.py).
 
 
-def devig(*odds, method="proportional"):
-    decs = [am_to_dec(o) for o in odds]
-    if any(d is None for d in decs):
-        return None
-    raw = [1 / d for d in decs]
-    t = sum(raw)
-    if t <= 0:
-        return None
-    if method == "power" and len(raw) == 2 and t > 1:
-        lo, hi = 1.0, 3.0
-        for _ in range(60):
-            k = (lo + hi) / 2
-            if sum(r ** k for r in raw) > 1:
-                lo = k
-            else:
-                hi = k
-        k = (lo + hi) / 2
-        out = [r ** k for r in raw]
-        s_ = sum(out)
-        return [o / s_ for o in out]
-    return [r / t for r in raw]
+def devig(*odds, method=None):
+    """Fair chances from American odds, by devig.METHOD (power) unless told."""
+    import devig as _dv
+    return _dv.fair_decimal(*[am_to_dec(o) for o in odds], method=method)
 
 
 def deep_links(comp):
@@ -615,8 +595,7 @@ def collect(key, path, day, mlbctx, mybook=None):
             dl = deep_links(c)
             pr = raw_prices(c, 3 if key in THREE_WAY else 2)
             book = price_book(c) if pr else None
-            dv = (devig(*pr, method="power" if key in POWER_DEVIG else "proportional")
-                  if pr else None)
+            dv = devig(*pr) if pr else None
             legs = []
             if dv and len(dv) == len(pr):
                 names = (["away", "draw", "home"] if len(dv) == 3 else ["away", "home"])

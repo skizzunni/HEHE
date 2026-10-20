@@ -698,17 +698,23 @@ def game_from_row(row, league, soccer):
         ph, pa = (pf, 1 - pf) if m["fav"] == "home" else (1 - pf, pf)
     if ph is None or pa is None:
         return None
+    import devig
     if soccer:
         if pdr is None:
             return None
-        s = ph + pa + pdr
-        ph, pa, pdr = ph / s, pa / s, pdr / s
+        fv = devig.fair_implied(ph, pa, pdr)
+        if not fv:
+            return None
+        ph, pa, pdr = fv
     else:
-        s = ph + pa
-        ph, pa = ph / s, pa / s
+        fv = devig.fair_implied(ph, pa)
+        if not fv:
+            return None
+        ph, pa = fv
     total = m.get("total")
     po, pu = _ml_prob(m.get("over")), _ml_prob(m.get("under"))
-    p_over = po / (po + pu) if po and pu else 0.5
+    fo = devig.fair_implied(po, pu) if po and pu else None
+    p_over = fo[0] if fo else 0.5
     spread = None
     if m.get("spread") is not None and m.get("fav") in ("home", "away") \
             and league in SD_MARGIN:

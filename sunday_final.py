@@ -1,11 +1,11 @@
 """Sunday 8/30 final board (10:48p snapshot), with line movement since 7:26p."""
-from parlay_math import american_to_decimal, decimal_to_american
+from parlay_math import decimal_to_american
 from statistics import median
 
 def devig(a, b):
-    pa, pb = 1/american_to_decimal(a), 1/american_to_decimal(b)
-    t = pa+pb
-    return pa/t, pb/t, t-1
+    """devig.METHOD (power) on a two-way market -> (pA, pB, hold)."""
+    import devig as _dv
+    return _dv.devig(a, b)
 
 # away, away_ml, home, home_ml, rl_fav, fav_rl, dog_rl, total, time, prior_ml_pair
 G = [

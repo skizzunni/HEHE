@@ -11,14 +11,13 @@ which side we measure -- otherwise you end up pairing one team's win
 probability with the other team's cover price.
 """
 
-from parlay_math import american_to_decimal
 from statistics import median
 
 
 def devig(a, b):
-    pa, pb = 1 / american_to_decimal(a), 1 / american_to_decimal(b)
-    t = pa + pb
-    return pa / t, pb / t, t - 1
+    """devig.METHOD (power) on a two-way market -> (pA, pB, hold)."""
+    import devig as _dv
+    return _dv.devig(a, b)
 
 
 # away, away_sp, away_ml, home, home_sp, home_ml, rl_fav, fav_rl, dog_rl, total, time

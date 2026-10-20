@@ -14,10 +14,10 @@ from parlay_math import american_to_decimal, decimal_to_american
 CFB_SIGMA = 16.5
 
 
-def devig(odds_a, odds_b):
-    pa, pb = 1 / american_to_decimal(odds_a), 1 / american_to_decimal(odds_b)
-    t = pa + pb
-    return pa / t, pb / t, t - 1
+def devig(a, b):
+    """devig.METHOD (power) on a two-way market -> (pA, pB, hold)."""
+    import devig as _dv
+    return _dv.devig(a, b)
 
 
 def spread_win_prob(favorite_points):

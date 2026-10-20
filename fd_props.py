@@ -127,7 +127,8 @@ def parse(markets, league, hold):
             line = ro.get("handicap")
             if not io or not iu or line is None:
                 continue
-            po = io / (io + iu)
+            import devig
+            po = devig.fair_implied(io, iu)[0]
             for side, r, p, ln in (("Over", ro, po, f"{float(line):g}"),
                                    ("Under", ru, 1 - po, f"u{float(line):g}")):
                 o = _odds(r)

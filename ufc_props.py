@@ -111,8 +111,9 @@ def _devig(runners):
     imps = [_imp(_odds(r)) for r in runners]
     if not runners or any(i is None for i in imps):
         return []
-    s = sum(imps)
-    return [(r, i / s) for r, i in zip(runners, imps)] if s > 0 else []
+    import devig
+    fv = devig.fair_implied(*imps) if len(imps) > 1 else None
+    return list(zip(runners, fv)) if fv else []
 
 
 def _method(text):

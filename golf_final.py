@@ -1,11 +1,10 @@
 """TOUR Championship R4 two-balls: 10:49p board vs the 7:53p open."""
 import math
-from parlay_math import american_to_decimal
 
-def devig(a,b):
-    pa,pb=1/american_to_decimal(a),1/american_to_decimal(b)
-    t=pa+pb
-    return pa/t,pb/t,t-1
+def devig(a, b):
+    """devig.METHOD (power) on a two-way market -> (pA, pB, hold)."""
+    import devig as _dv
+    return _dv.devig(a, b)
 
 def probit(p):
     a=[-3.969683028665376e+01,2.209460984245205e+02,-2.759285104469687e+02,

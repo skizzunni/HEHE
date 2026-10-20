@@ -1,7 +1,6 @@
 """TOUR Championship R4 two-balls: de-vigged, with leaderboard order inferred
 from tee times (final round, leaders go last).
 """
-from parlay_math import american_to_decimal
 
 # tee, playerA, oddsA, playerB, oddsB
 M = [
@@ -23,9 +22,9 @@ M = [
 
 
 def devig(a, b):
-    pa, pb = 1/american_to_decimal(a), 1/american_to_decimal(b)
-    t = pa + pb
-    return pa/t, pb/t, t-1
+    """devig.METHOD (power) on a two-way market -> (pA, pB, hold)."""
+    import devig as _dv
+    return _dv.devig(a, b)
 
 
 rows = []

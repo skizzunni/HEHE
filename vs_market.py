@@ -118,10 +118,9 @@ def historical_odds(games):
 
 
 def devig(a, h):
-    f = lambda x: (-x / (-x + 100)) if x < 0 else (100 / (x + 100))
-    pa, ph = f(a), f(h)
-    t = pa + ph
-    return pa / t, ph / t
+    """devig.METHOD (power) -> (pA, pH)."""
+    import devig as _dv
+    return tuple(_dv.fair(a, h))
 
 
 def decimal(o):

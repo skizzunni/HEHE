@@ -9,6 +9,7 @@ means a rule the owner set (or a fix already made once) has been broken.
 import datetime as dt
 import os
 import json
+import math
 import tempfile
 import sys
 import unittest
@@ -175,7 +176,9 @@ class LocksRules(unittest.TestCase):
         p, how = locks.two_sided(refs, "g", dict(t="over", line=44.5), H, A, "+120")
         self.assertEqual(how, "two-sided")
         a, b = 100 / 220, 150 / 250
-        self.assertAlmostEqual(p, a / (a + b))
+        # power de-vig (devig.METHOD): both chances are a ** k, b ** k for one k
+        self.assertAlmostEqual(math.log(p) / math.log(a), math.log(1 - p) / math.log(b), places=6)
+        self.assertLess(p, a / (a + b))                  # the underdog carries more margin
         p, how = locks.two_sided(refs, "g", dict(t="over", line=47.5), H, A, "+150")
         self.assertEqual(how, "assumed margin")
         self.assertEqual(locks.opposite(dict(t="spread", team=H, line=-3.5), H, A),

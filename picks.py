@@ -417,10 +417,11 @@ def ufc_picks(day):
                 continue
             ids = list(ml)
             ps = {i: _mml(ml[i]) for i in ids}
-            tot = sum(ps.values())
-            if tot <= 0:
+            import devig as _dv
+            fv = _dv.fair_implied(*[ps[i] for i in ids])
+            if not fv:
                 continue
-            nv = {i: ps[i] / tot for i in ids}
+            nv = dict(zip(ids, fv))
             top = max(ids, key=lambda i: nv[i])
             other = [i for i in ids if i != top][0]
             price = ml[top]
@@ -559,7 +560,9 @@ def tennis_picks(day, tour=None):
                         _tp = _tp_cache.setdefault("p", _K.tennis_prices())
                         a, b = _K.tennis_lookup(_tp, ps[0]), _K.tennis_lookup(_tp, ps[1])
                         if a is not None and b is not None and 0.02 < a + b:
-                            mk = a / (a + b)
+                            import devig as _dv
+                            fv = _dv.fair_implied(a, b)
+                            mk = fv[0] if fv else None
                         elif a is not None:
                             mk = a
                         elif b is not None:

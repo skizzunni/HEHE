@@ -37,10 +37,11 @@ def dec_to_am(d):
 
 
 def devig(a, b):
-    """Proportional de-vig of a two-way market -> (pA, pB, hold)."""
-    pa, pb = 1 / am_to_dec(a), 1 / am_to_dec(b)
-    t = pa + pb
-    return pa / t, pb / t, t - 1
+    """devig.METHOD (power) on a two-way market -> (pA, pB, hold)."""
+    import devig as _dv
+    da, db = am_to_dec(a), am_to_dec(b)
+    pa, pb = _dv.fair_decimal(da, db)
+    return pa, pb, 1 / da + 1 / db - 1
 
 
 def spread_to_prob(points, sport):

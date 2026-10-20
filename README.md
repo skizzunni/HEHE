@@ -2244,3 +2244,54 @@ model's estimate, not a measured rate.
 - The 196 removed picks are mostly tennis: 94 WTA and 54 ATP, plus 9 MLS and a handful of other soccer leagues. They were the worst-calibrated group, overstated by 5.3 points.
 - This is a change in what counts, not a better chooser: the same games are picked the same way. The record now covers only picks a bettor could have placed at a stated price.
 - On the live board of 2026-10-20, 46 of 111 rows for tomorrow have no book price and now show as leans.
+
+## Accuracy plan, item 3: de-vig properly (2026-10-20)
+
+**What changed.**
+- `devig.py` is now the only place margin is removed. It has proportional, power and Shin for any number of outcomes, and `METHOD` is used everywhere.
+- Callers now routed through it:
+  - the board (`dashboard.devig`);
+  - Locks two-sided lines;
+  - Stacks' moneyline, three-way and over/under pairs;
+  - FanDuel over/under props;
+  - UFC props;
+  - the tennis Kalshi pair;
+  - UFC fair prices;
+  - the eight one-off scripts (slate, mlb_sunday/verify, golf_r4, golf_final, sunday_final, ncaaf, oddsdesk, vs_market).
+- One-sided prices (a lone prop, FanDuel's assumed margin) can't be de-vigged by any method without the other side. They keep their tuned hold.
+- **The method was chosen without looking at the evaluation window.** It was picked on the older half of `tools/edge_lab.py`'s closing-price study (3,485 games, seven leagues):
+
+  | method | log-loss, older half | log-loss, newer half |
+  |---|---|---|
+  | proportional | 0.60082 | 0.57521 |
+  | power | 0.60044 | 0.57296 |
+  | Shin | 0.60046 | 0.57368 |
+
+  Power was chosen.
+
+**Test.** `tests/test_devig.py` uses the −200 / +170 market (3.70% hold):
+
+| method | favourite |
+|---|---|
+| proportional (old) | 64.29% |
+| power (new) | 65.08% |
+| Shin | 64.81% |
+
+- Three-way markets sum to 1, and the board uses the one method.
+- All 4 tests fail on the previous commit and pass now. The Locks two-sided test was updated to the power identity. The full suite and the UI probe pass.
+
+**Before / after on the evaluation window.** Ledger study, `tools/devig_study.py`, written to `data/devig_study.json`:
+- Graded picks 2026-10-15 to 2026-10-19 with DraftKings' final two-way or three-way prices from ESPN's game summary: N = 426. The other 189 have no price there, mostly tennis.
+- The picked side's published chance moves +0.76 points on average for favourites. The mean absolute move is 0.75 points; the largest is 5.9 points.
+
+| band | old n | old stated | old hit | new n | new stated | new hit |
+|---|---|---|---|---|---|---|
+| 50–60 | 31 | 55.9 | 61.3 | 29 | 55.7 | 65.5 |
+| 60–70 | 130 | 66.8 | 66.2 | 122 | 66.8 | 65.6 |
+| 70–80 | 173 | 74.8 | 76.9 | 169 | 74.9 | 76.3 |
+| 80–90 | 61 | 83.5 | 78.7 | 74 | 83.7 | 78.4 |
+| 90+ | 4 | 92.3 | 50.0 | 6 | 92.6 | 50.0 |
+
+- Brier: 0.2005 old vs 0.2005 new.
+- Log-loss: 0.5925 old vs 0.5935 new. The difference (new − old) is +0.0010, with a game-resampled 95% interval of −0.0023 to +0.0052.
+- **Verdict:** no improvement on untouched data. The point estimate is slightly worse, and moving favourites up pushed more picks into the 80–90 band, which already trails its stated chance. By the plan's rule this change is reverted; see the next entry.

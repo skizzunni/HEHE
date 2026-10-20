@@ -107,7 +107,8 @@ def two_sided(refs, gid, spec, home, away, price, soccer=False):
         if do:
             a, b = 1 / d, 1 / do
             if 1.0 <= a + b <= 1.25:                 # a sane two-way book
-                return a / (a + b), "two-sided"
+                import devig
+                return devig.fair_implied(a, b)[0], "two-sided"
     return (1 / d) / lottery.FD_HOLD, "assumed margin"
 
 

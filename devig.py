@@ -1,19 +1,108 @@
-"""De-vig a two-way moneyline into fair win probabilities.
+"""Remove the book's margin from a market: the one place it is done.
 
-The posted price includes the book's hold. Stripping it proportionally gives
-the market's actual estimate -- the single sharpest public forecast there is.
+A posted price includes the book's hold. Removing it gives the market's own
+estimate. Three ways of removing it, for any number of outcomes:
 
-Run: python3 devig.py
+    proportional   divide every implied chance by their sum. Spreads the
+                   margin evenly, so a favourite keeps too little of it back
+                   and the longshot too much (the favourite-longshot bias).
+    power          raise every implied chance to the k that makes them sum
+                   to 1. Puts more of the margin on the longshot, as books do.
+    shin           Shin's insider-trading model: the margin a book needs
+                   against a share z of informed money. Also loads the
+                   longshot.
+
+METHOD is the one used everywhere (dashboard, locks, stacks, props, tennis
+Kalshi pairs and the old one-off scripts). It was chosen on the OLDER half of
+tools/edge_lab.py's closing-price study (3,485 games, seven leagues, run
+2026-10-19) -- nothing from the ledger's evaluation window was looked at:
+
+    log-loss, older half    proportional 0.60082   power 0.60044   shin 0.60046
+    log-loss, newer half    proportional 0.57521   power 0.57296   shin 0.57368
+
+Until 2026-10-20 proportional was used everywhere except college football and
+basketball (power); README "item 3" has the before/after on the ledger.
+
+Run: python3 devig.py   (the demo below)
 """
+
+import math
 
 from parlay_math import american_to_decimal, decimal_to_american
 
+METHOD = "power"
 
-def devig(odds_a, odds_b):
-    """Proportional (multiplicative) de-vig of a two-way market."""
-    pa, pb = 1 / american_to_decimal(odds_a), 1 / american_to_decimal(odds_b)
-    total = pa + pb
-    return pa / total, pb / total, total - 1
+
+def proportional(raw):
+    t = sum(raw)
+    return [r / t for r in raw]
+
+
+def power(raw):
+    """k with sum(r ** k) = 1; k > 1 when the book is overround."""
+    lo, hi = 0.05, 20.0
+    for _ in range(100):
+        k = (lo + hi) / 2
+        if sum(r ** k for r in raw) > 1:
+            lo = k
+        else:
+            hi = k
+    out = [r ** ((lo + hi) / 2) for r in raw]
+    s = sum(out)
+    return [o / s for o in out]
+
+
+def shin(raw):
+    """Shin (1993), solved for z by bisection; z = 0 when there is no margin."""
+    S = sum(raw)
+    if S <= 1:
+        return proportional(raw)
+
+    def q(z):
+        return [(math.sqrt(z * z + 4 * (1 - z) * r * r / S) - z) / (2 * (1 - z)) for r in raw]
+    lo, hi = 0.0, 0.999
+    for _ in range(100):
+        z = (lo + hi) / 2
+        if sum(q(z)) > 1:
+            lo = z
+        else:
+            hi = z
+    out = q((lo + hi) / 2)
+    s = sum(out)
+    return [o / s for o in out]
+
+
+METHODS = dict(proportional=proportional, power=power, shin=shin)
+
+
+def fair_implied(*raw, method=None):
+    """Fair chances from implied chances (1 / decimal price, or exchange
+    prices), or None when any is missing or out of range."""
+    if len(raw) < 2 or any(r is None or not 0 < r < 1 for r in raw):
+        return None
+    return METHODS[method or METHOD](list(raw))
+
+
+def fair_decimal(*decs, method=None):
+    if any(d is None or d <= 1 for d in decs):
+        return None
+    return fair_implied(*[1 / d for d in decs], method=method)
+
+
+def fair(*american, method=None):
+    """Fair chances from American odds."""
+    try:
+        decs = [american_to_decimal(int(a)) for a in american]
+    except (TypeError, ValueError, ZeroDivisionError):
+        return None
+    return fair_decimal(*decs, method=method)
+
+
+def devig(odds_a, odds_b, method=None):
+    """Two-way market -> (fair a, fair b, hold)."""
+    ia, ib = 1 / american_to_decimal(odds_a), 1 / american_to_decimal(odds_b)
+    pa, pb = fair_implied(ia, ib, method=method)
+    return pa, pb, ia + ib - 1
 
 
 GAMES = [

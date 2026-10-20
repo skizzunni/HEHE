@@ -95,15 +95,13 @@ def am_to_dec(o):
 
 
 def devig(*odds):
-    """Proportional de-vig of an N-way market -> ([probs], hold). None if unusable."""
+    """devig.METHOD (power) on an N-way market -> ([probs], hold). None if unusable."""
+    import devig as _dv
     decs = [am_to_dec(o) for o in odds]
-    if any(d is None for d in decs):
+    fv = _dv.fair_decimal(*decs)
+    if not fv:
         return None
-    raw = [1 / d for d in decs]
-    t = sum(raw)
-    if t <= 0:
-        return None
-    return [r / t for r in raw], t - 1
+    return fv, sum(1 / d for d in decs) - 1
 
 
 def pull_prices(comp, ways):
