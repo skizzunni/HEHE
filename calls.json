@@ -169,7 +169,7 @@
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
      "conf": 72,
-     "fp": "68ba07bb9c92",
+     "fp": "41c95295386d",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed goalies (1 of 2)"
@@ -201,6 +201,11 @@
        "event": "news",
        "t": "2026-10-20T18:18:13+00:00",
        "what": "awaiting confirmed goalies (1 of 2)"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-20T20:47:34+00:00",
+       "what": "awaiting confirmed goalies (1 of 2)"
       }
      ],
      "match": "CAR @ VAN",
@@ -214,10 +219,11 @@
     }
    ],
    "frozen": [
-    "nhl"
+    "nhl",
+    "ucl"
    ],
    "news": {
-    "nhl": "2026-10-20T18:18:13+00:00",
+    "nhl": "2026-10-20T20:47:34+00:00",
     "ucl": "2026-10-20T18:02:48+00:00"
    }
   }
