@@ -199,6 +199,7 @@ def _rank_chance(L):
 # $10,000, which takes fewer legs and roughly doubles the chance. So the $10k
 # tier is also built for each common boost; the tab shows the one you have.
 BOOSTS = (0.25, 0.50, 1.00)
+OPTIMIZER_VERSION = "pareto-polish-v1"
 
 
 def boosted(pay, boost):
@@ -214,7 +215,48 @@ TIERS = (
                pay=1 + (TARGET - 1) / (1 + b), n=1) for b in BOOSTS)
 
 
-def _tickets(legs, book, tier=TIERS[1]):
+def polish_ticket(pick, candidates, target, boost=0, used=()):
+    """Improve cash chance without reducing modeled expected cash return.
+
+    Consider removal and every one-leg replacement, including other lines
+    of a selected game. Preserve payout target, one/event and prior-ticket
+    exclusions. This is a bounded local improvement, not a global optimum
+    or evidence that the supplied probabilities are calibrated.
+    """
+    pick = list(pick)
+    blocked = set(used)
+    candidates = [L for L in candidates if 0 < L.get("p", 0) <= 1
+                  and L.get("dec", 0) > 1 and L.get("gid") not in blocked]
+    for _ in range(2 * len(pick)):
+        p = math.prod(L["p"] for L in pick)
+        d = math.prod(L["dec"] for L in pick)
+        value = p * boosted(d, boost)
+        best = None
+        for i, old in enumerate(pick):
+            rest = pick[:i] + pick[i + 1:]
+            on = {L["gid"] for L in rest} | blocked
+            for new in [None] + [L for L in candidates if L["gid"] not in on]:
+                if new is old or (new is None and not rest):
+                    continue
+                pn = p / old["p"] * (new["p"] if new else 1)
+                dn = d / old["dec"] * (new["dec"] if new else 1)
+                vn = pn * boosted(dn, boost)
+                peps = 1e-12 * max(p, pn, 1e-300)
+                veps = 1e-12 * max(value, vn, 1e-300)
+                if dn + 1e-12 * target < target or pn < p - peps or vn < value - veps:
+                    continue
+                if pn <= p + peps and vn <= value + veps:
+                    continue
+                key = (pn, vn, -dn)
+                if best is None or key > best[0]:
+                    best = key, rest + ([new] if new else [])
+        if best is None:
+            break
+        pick = best[1]
+    return pick
+
+
+def _tickets(legs, book, tier=TIERS[1], legacy=False):
     """Up to N_TICKETS tickets of the most efficient legs for the tier: built
     up to the payout TARGET, or down to the chance (1 in 100)."""
     lo, hi = tier["dec"]
@@ -257,6 +299,10 @@ def _tickets(legs, book, tier=TIERS[1]):
             break
         if tier.get("chance") and not tier["chance"] * 0.9 <= prob <= tier["chance"] * 1.25:
             break
+        if tier.get("pay") and not legacy:
+            pick = polish_ticket(pick, inband, tier["pay"], tier.get("boost", 0), used)
+            pay = math.prod(L["dec"] for L in pick)
+            prob = math.prod(L["p"] for L in pick)
         used.update(L["gid"] for L in pick)
         b = tier.get("boost", 0)
         made.append(dict(book=book, tier=tier["tier"], boost=b, legs=pick,
@@ -335,6 +381,7 @@ def record(res, day):
         import policy
         pools = book.setdefault("pools", {})
         pools[day] = dict(t=dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds"),
+                          optimizer=OPTIMIZER_VERSION,
                           policy=policy.version(), legs=res["candidates"],
                           tickets=[[L["label"] for L in t["legs"]] for t in tickets],
                           keys=[[t["book"], t.get("tier")] for t in tickets])
@@ -388,10 +435,11 @@ def replay(day):
     if not snap:
         return None
     legs = snap["legs"]
+    legacy = snap.get("optimizer") != OPTIMIZER_VERSION
     got = []
     for tier in TIERS:
-        got += (_tickets([L for L in legs if L.get("kind") == "game" or L.get("fd")], "FanDuel", tier)
-                + _tickets([L for L in legs if L.get("kind") == "prop" and not L.get("fd")], "DraftKings", tier))
+        got += (_tickets([L for L in legs if L.get("kind") == "game" or L.get("fd")], "FanDuel", tier, legacy)
+                + _tickets([L for L in legs if L.get("kind") == "prop" and not L.get("fd")], "DraftKings", tier, legacy))
     want = {(b, tr): lab for (b, tr), lab in zip(map(tuple, snap["keys"]), snap["tickets"])}
     have = {}
     for t in got:
