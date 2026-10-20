@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 59.0,
-  "brier_close": 0.2055,
-  "brier_published": 0.206,
+  "beat_close_pct": 58.7,
+  "brier_close": 0.2067,
+  "brier_published": 0.2072,
   "dates": [
    "2026-10-17",
    "2026-10-20"
   ],
-  "logloss_close": 0.6051,
-  "logloss_published": 0.6057,
-  "mean_clv_pts": 0.5,
+  "logloss_close": 0.6076,
+  "logloss_published": 0.6082,
+  "mean_clv_pts": 0.52,
   "n": 300
  },
  "market_is_model": true,
@@ -1447,6 +1447,15 @@
    "published": 0.668,
    "won": 0
   },
+  "efl2:401880784": {
+   "call": false,
+   "close": 0.8203,
+   "clv": 1.13,
+   "day": "2026-10-20",
+   "league": "efl2",
+   "published": 0.809,
+   "won": 1
+  },
   "efl2:401880791": {
    "call": false,
    "close": 0.7747,
@@ -1652,6 +1661,33 @@
    "day": "2026-09-02",
    "league": "efl2",
    "published": 0.556,
+   "won": 0
+  },
+  "efl3:401881301": {
+   "call": false,
+   "close": 0.8202,
+   "clv": 3.42,
+   "day": "2026-10-20",
+   "league": "efl3",
+   "published": 0.786,
+   "won": 1
+  },
+  "efl3:401881302": {
+   "call": false,
+   "close": 0.6424,
+   "clv": -2.36,
+   "day": "2026-10-20",
+   "league": "efl3",
+   "published": 0.666,
+   "won": 0
+  },
+  "efl3:401881305": {
+   "call": false,
+   "close": 0.7266,
+   "clv": 3.16,
+   "day": "2026-10-20",
+   "league": "efl3",
+   "published": 0.695,
    "won": 0
   },
   "efl3:401881313": {
@@ -14732,5 +14768,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-20T20:33+00:00"
+ "updated": "2026-10-20T20:38+00:00"
 }

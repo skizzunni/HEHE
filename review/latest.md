@@ -1,6 +1,6 @@
 # Review 2026-10-20
 
-Picks 26-13 (66.7% vs 66.9% claimed, ROI +2.2%).
+Picks 28-15 (65.1% vs 67.6% claimed, ROI +2.2%).
 Closing line value: +1.69 points on 4 picks; beat the close on 100.0%.
 - LOST atp Roman Safiullin at 84.5%: lost 1-2 in sets · took it the distance · called at 84%
 - LOST atp Rinky Hijikata at 53.7%: lost 0-2 in sets · never won a set · called at 54%
@@ -11,6 +11,8 @@ Closing line value: +1.69 points on 4 picks; beat the close on 100.0%.
 - LOST atp Titouan Droguet at 66.2%: lost 1-2 in sets · took it the distance · called at 66%
 - LOST atp Cameron Norrie at 52.5%: lost 1-2 in sets · took it the distance · called at 52%
 - LOST atp Arthur Fery at 63.5%: lost 0-2 in sets · never won a set · called at 64%
+- LOST efl3 Oldham Athletic at 64%: margin 3 · called at 64%
+- LOST efl3 Northampton Town at 73%: margin 1 · called at 73%
 - LOST ucl Fenerbahce at 68%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 68%
 - LOST wta Cristina Bucsa at 51.5%: lost 0-2 in sets · never won a set · called at 52%
 - LOST wta Daria Snigur at 73.0%: lost 1-2 in sets · took it the distance · called at 73%
