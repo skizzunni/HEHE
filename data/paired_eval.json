@@ -10,14 +10,14 @@
    "untouched_from": "2026-09-25",
    "result": {
     "all": {
-     "days": 25,
-     "picks": 464,
+     "days": 26,
+     "picks": 465,
      "old_won": 298,
      "new_won": 312,
      "diff": 14,
      "ci95_diff": [
       -7,
-      40
+      39
      ],
      "new_won_old_missed": 51,
      "old_won_new_missed": 37,
@@ -135,6 +135,20 @@
      ],
      "new_won_old_missed": 2,
      "old_won_new_missed": 5,
+     "promote": false
+    },
+    "nba": {
+     "days": 1,
+     "picks": 1,
+     "old_won": 0,
+     "new_won": 0,
+     "diff": 0,
+     "ci95_diff": [
+      0,
+      0
+     ],
+     "new_won_old_missed": 0,
+     "old_won_new_missed": 0,
      "promote": false
     },
     "ncaaf": {

@@ -3698,10 +3698,10 @@
   },
   "props": {
    "fair": {
-    "n": 172,
-    "said_fair": 82.1,
-    "said_price": 85.2,
-    "won": 142
+    "n": 187,
+    "said_fair": 82.8,
+    "said_price": 85.6,
+    "won": 156
    },
    "n": 72,
    "said": 78.9,
@@ -3912,9 +3912,9 @@
    }
   },
   "clv": {
-   "avg": 1.42,
-   "beat": 83.3,
-   "n": 6
+   "avg": 1.61,
+   "beat": 85.7,
+   "n": 7
   },
   "day": "2026-10-20",
   "leaks_14d": [
@@ -3931,7 +3931,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      2,
@@ -3939,7 +3939,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "losses": [
    {
@@ -4064,6 +4064,14 @@
    },
    {
     "against_market": false,
+    "league": "nba",
+    "pick": "Boston Celtics",
+    "price": "-125",
+    "said": 53,
+    "why": "margin 8 \u00b7 the book had my side favoured too \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
     "league": "ucl",
     "pick": "FC Porto",
     "price": null,
@@ -4110,7 +4118,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -4118,7 +4126,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -4134,7 +4142,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k+25",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -4142,7 +4150,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k+50",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -4150,15 +4158,15 @@
     "lost": 0,
     "status": "open",
     "tier": "10k+100",
-    "won": 0
+    "won": 1
    }
   ],
   "picks": {
-   "hit": 71.8,
-   "lost": 20,
-   "n": 71,
-   "roi": 5.8,
-   "said": 70.3,
+   "hit": 70.8,
+   "lost": 21,
+   "n": 72,
+   "roi": -9.3,
+   "said": 70.1,
    "won": 51
   },
   "picks_by_league": {
@@ -4202,6 +4210,14 @@
     "said": 71.0,
     "won": 4
    },
+   "nba": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 53.0,
+    "won": 0
+   },
    "sco2": {
     "hit": 100.0,
     "lost": 0,
@@ -4229,19 +4245,19 @@
   },
   "props": {
    "fair": {
-    "n": 172,
-    "said_fair": 82.1,
-    "said_price": 85.2,
-    "won": 142
+    "n": 187,
+    "said_fair": 82.8,
+    "said_price": 85.6,
+    "won": 156
    },
-   "n": 9,
-   "said": 86.0,
-   "won": 8
+   "n": 24,
+   "said": 85.4,
+   "won": 22
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      7,
@@ -4254,7 +4270,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "strong": {
    "n": 0
@@ -4270,11 +4286,11 @@
     "won": 10
    },
    "agree": {
-    "hit": 67.7,
-    "lost": 91,
-    "n": 282,
-    "roi": -1.8,
-    "said": 64.1,
+    "hit": 67.5,
+    "lost": 92,
+    "n": 283,
+    "roi": -2.1,
+    "said": 64.0,
     "won": 191
    }
   },
