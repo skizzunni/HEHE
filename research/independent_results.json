@@ -1,0 +1,530 @@
+{
+  "source_commit": "43681fe751e8f99245ba679b4f79f7ecf7043a30",
+  "external_validation": {
+    "train_n": 9437,
+    "validation_n": 2304,
+    "selected_by": "minimum validation log loss",
+    "chosen": "calibrated",
+    "models": {
+      "proportional": {
+        "forecast": {
+          "n": 2304,
+          "accuracy": 0.5334201388888888,
+          "logloss": 0.9769141767831352,
+          "brier": 0.5820466351144602
+        },
+        "top3": {
+          "n": 288,
+          "days": 96,
+          "wins": 196,
+          "hit": 0.6805555555555556,
+          "mean_odds": 1.4149652777777777,
+          "roi": -0.05194444444444443,
+          "best_named_book_roi": -0.043993055555555535
+        }
+      },
+      "power": {
+        "forecast": {
+          "n": 2304,
+          "accuracy": 0.5334201388888888,
+          "logloss": 0.976340219182527,
+          "brier": 0.5818197760196835
+        },
+        "top3": {
+          "n": 288,
+          "days": 96,
+          "wins": 196,
+          "hit": 0.6805555555555556,
+          "mean_odds": 1.4150347222222224,
+          "roi": -0.05187499999999999,
+          "best_named_book_roi": -0.043993055555555535
+        }
+      },
+      "calibrated": {
+        "forecast": {
+          "n": 2304,
+          "accuracy": 0.5282118055555556,
+          "logloss": 0.9758501200045511,
+          "brier": 0.5815058519128925
+        },
+        "top3": {
+          "n": 288,
+          "days": 96,
+          "wins": 198,
+          "hit": 0.6875,
+          "mean_odds": 1.415138888888889,
+          "roi": -0.0404861111111111,
+          "best_named_book_roi": -0.03229166666666665
+        }
+      },
+      "elo_residual": {
+        "forecast": {
+          "n": 2304,
+          "accuracy": 0.5308159722222222,
+          "logloss": 0.9759189394885956,
+          "brier": 0.5814467708373781
+        },
+        "top3": {
+          "n": 288,
+          "days": 96,
+          "wins": 199,
+          "hit": 0.6909722222222222,
+          "mean_odds": 1.4155555555555555,
+          "roi": -0.03468749999999999,
+          "best_named_book_roi": -0.026666666666666658
+        }
+      }
+    }
+  },
+  "external_final": {
+    "chosen": "calibrated",
+    "test_season": "2526",
+    "report": {
+      "proportional": {
+        "forecast": {
+          "n": 2303,
+          "accuracy": 0.5167173252279635,
+          "logloss": 0.99289356109314,
+          "brier": 0.5932573419624207
+        },
+        "top3": {
+          "n": 312,
+          "days": 104,
+          "wins": 205,
+          "hit": 0.657051282051282,
+          "mean_odds": 1.4584935897435898,
+          "roi": -0.05112179487179487,
+          "best_named_book_roi": -0.035865384615384605
+        }
+      },
+      "calibrated": {
+        "forecast": {
+          "n": 2303,
+          "accuracy": 0.5175857577073383,
+          "logloss": 0.992421899686506,
+          "brier": 0.5931585308478868
+        },
+        "top3": {
+          "n": 312,
+          "days": 104,
+          "wins": 207,
+          "hit": 0.6634615384615384,
+          "mean_odds": 1.4585576923076924,
+          "roi": -0.04009615384615384,
+          "best_named_book_roi": -0.02474358974358974
+        }
+      }
+    },
+    "paired": {
+      "days": 104,
+      "extra_wins": 2,
+      "extra_profit_units": 3.44,
+      "ci95_extra_wins": [
+        -2.0,
+        6.0
+      ],
+      "ci95_extra_profit_units": [
+        -2.4199999999999995,
+        9.880249999999995
+      ]
+    },
+    "limitations": [
+      "recorded close-time quotes, not morning decisions or accepted fills",
+      "European soccer outright markets, not site-specific props or double-chance odds",
+      "best named-book return assumes access to the recorded quotes without slippage"
+    ]
+  },
+  "site_archive": {
+    "rows": 18735,
+    "events": 237,
+    "dates": 38,
+    "validation_from": "2026-09-26",
+    "test_from": "2026-10-08",
+    "studies": {
+      "regular_3": {
+        "chosen_by_validation": "score_model",
+        "validation": {
+          "market": {
+            "days": 5,
+            "n": 15,
+            "wins": 12,
+            "hit": 0.8,
+            "equal_contract_roi": -0.02040816326530612,
+            "equal_cash_roi": -0.021354009836394683
+          },
+          "score_model": {
+            "days": 5,
+            "n": 15,
+            "wins": 12,
+            "hit": 0.8,
+            "equal_contract_roi": -0.005799502899751474,
+            "equal_cash_roi": -0.005936274589151033
+          },
+          "model_value": {
+            "days": 5,
+            "n": 15,
+            "wins": 10,
+            "hit": 0.6666666666666666,
+            "equal_contract_roi": -0.009900990099009866,
+            "equal_cash_roi": -0.014851317880025377
+          },
+          "market_less_spread": {
+            "days": 5,
+            "n": 15,
+            "wins": 12,
+            "hit": 0.8,
+            "equal_contract_roi": -0.02040816326530612,
+            "equal_cash_roi": -0.021354009836394683
+          }
+        },
+        "test_market": {
+          "days": 7,
+          "n": 21,
+          "wins": 16,
+          "hit": 0.7619047619047619,
+          "equal_contract_roi": -0.07030796048808836,
+          "equal_cash_roi": -0.07013091294934115
+        },
+        "test_candidate": {
+          "days": 7,
+          "n": 21,
+          "wins": 14,
+          "hit": 0.6666666666666666,
+          "equal_contract_roi": -0.17792131532589553,
+          "equal_cash_roi": -0.17603719797469586
+        },
+        "paired": {
+          "extra_wins": -2,
+          "extra_profit_equal_cash": -2.2240319855324486,
+          "ci95_extra_wins": [
+            -5.0,
+            2.0
+          ],
+          "ci95_extra_profit": [
+            -6.0215296597410415,
+            2.6070015593724025
+          ]
+        }
+      },
+      "regular_11": {
+        "chosen_by_validation": "market_less_spread",
+        "validation": {
+          "market": {
+            "days": 4,
+            "n": 44,
+            "wins": 38,
+            "hit": 0.8636363636363636,
+            "equal_contract_roi": 0.05555555555555555,
+            "equal_cash_roi": 0.055610303577783224
+          },
+          "score_model": {
+            "days": 4,
+            "n": 44,
+            "wins": 38,
+            "hit": 0.8636363636363636,
+            "equal_contract_roi": 0.07072414764722451,
+            "equal_cash_roi": 0.07145741372190796
+          },
+          "model_value": {
+            "days": 4,
+            "n": 44,
+            "wins": 32,
+            "hit": 0.7272727272727273,
+            "equal_contract_roi": 0.0571522960026429,
+            "equal_cash_roi": 0.07097277337527268
+          },
+          "market_less_spread": {
+            "days": 4,
+            "n": 44,
+            "wins": 39,
+            "hit": 0.8863636363636364,
+            "equal_contract_roi": 0.08544391873086558,
+            "equal_cash_roi": 0.08537954066409346
+          }
+        },
+        "test_market": {
+          "days": 4,
+          "n": 44,
+          "wins": 36,
+          "hit": 0.8181818181818182,
+          "equal_contract_roi": 0.0025062656641602976,
+          "equal_cash_roi": 0.0033006040647287627
+        },
+        "test_candidate": {
+          "days": 4,
+          "n": 44,
+          "wins": 36,
+          "hit": 0.8181818181818182,
+          "equal_contract_roi": 0.003064920590693771,
+          "equal_cash_roi": 0.003984954342574973
+        },
+        "paired": {
+          "extra_wins": 0,
+          "extra_profit_equal_cash": 0.03011141222523328,
+          "ci95_extra_wins": [
+            0.0,
+            0.0
+          ],
+          "ci95_extra_profit": [
+            0.0,
+            0.09033423667569984
+          ]
+        }
+      },
+      "safe_3": {
+        "chosen_by_validation": "score_model",
+        "validation": {
+          "market": {
+            "days": 5,
+            "n": 15,
+            "wins": 15,
+            "hit": 1.0,
+            "equal_contract_roi": 0.043115438108484075,
+            "equal_cash_roi": 0.04312865497076029
+          },
+          "score_model": {
+            "days": 5,
+            "n": 15,
+            "wins": 15,
+            "hit": 1.0,
+            "equal_contract_roi": 0.05115627189908903,
+            "equal_cash_roi": 0.05124785769043978
+          },
+          "model_value": {
+            "days": 5,
+            "n": 15,
+            "wins": 14,
+            "hit": 0.9333333333333333,
+            "equal_contract_roi": 0.05900151285930404,
+            "equal_cash_roi": 0.06078812287350517
+          },
+          "market_less_spread": {
+            "days": 5,
+            "n": 15,
+            "wins": 15,
+            "hit": 1.0,
+            "equal_contract_roi": 0.043115438108484075,
+            "equal_cash_roi": 0.04312865497076029
+          }
+        },
+        "test_market": {
+          "days": 7,
+          "n": 21,
+          "wins": 20,
+          "hit": 0.9523809523809523,
+          "equal_contract_roi": -0.003984063745019836,
+          "equal_cash_roi": -0.00372607049538736
+        },
+        "test_candidate": {
+          "days": 7,
+          "n": 21,
+          "wins": 21,
+          "hit": 1.0,
+          "equal_contract_roi": 0.0484273589615576,
+          "equal_cash_roi": 0.04849890684157204
+        },
+        "paired": {
+          "extra_wins": 1,
+          "extra_profit_equal_cash": 1.0967245240761474,
+          "ci95_extra_wins": [
+            0.0,
+            3.0
+          ],
+          "ci95_extra_profit": [
+            0.010964912280701622,
+            3.2239175065322874
+          ]
+        }
+      },
+      "safe_11": {
+        "chosen_by_validation": "score_model",
+        "validation": {
+          "market": {
+            "days": 4,
+            "n": 44,
+            "wins": 42,
+            "hit": 0.9545454545454546,
+            "equal_contract_roi": -0.0023752969121140478,
+            "equal_cash_roi": -0.0024368828260205285
+          },
+          "score_model": {
+            "days": 4,
+            "n": 44,
+            "wins": 43,
+            "hit": 0.9772727272727273,
+            "equal_contract_roi": 0.029940119760479042,
+            "equal_cash_roi": 0.02983322277428768
+          },
+          "model_value": {
+            "days": 4,
+            "n": 44,
+            "wins": 41,
+            "hit": 0.9318181818181818,
+            "equal_contract_roi": 0.03981739792036521,
+            "equal_cash_roi": 0.03990315529975663
+          },
+          "market_less_spread": {
+            "days": 4,
+            "n": 44,
+            "wins": 42,
+            "hit": 0.9545454545454546,
+            "equal_contract_roi": -0.002138275124732628,
+            "equal_cash_roi": -0.0021876802741864006
+          }
+        },
+        "test_market": {
+          "days": 4,
+          "n": 44,
+          "wins": 42,
+          "hit": 0.9545454545454546,
+          "equal_contract_roi": -0.001901140684410606,
+          "equal_cash_roi": -0.0016839729885642237
+        },
+        "test_candidate": {
+          "days": 4,
+          "n": 44,
+          "wins": 41,
+          "hit": 0.9318181818181818,
+          "equal_contract_roi": -0.01960784313725491,
+          "equal_cash_roi": -0.020548102715397743
+        },
+        "paired": {
+          "extra_wins": -1,
+          "extra_profit_equal_cash": -0.8300217079806749,
+          "ci95_extra_wins": [
+            -3.0,
+            0.0
+          ],
+          "ci95_extra_profit": [
+            -2.958170778696915,
+            0.3575233479239841
+          ]
+        }
+      }
+    },
+    "limitation": "Historical last pre-start hourly quotes plus sportsbook closing features; not a morning execution simulation"
+  },
+  "optimizer_archived_comparison": [
+    {
+      "book": "FanDuel",
+      "tier": "10k",
+      "ticket": 0,
+      "old_p": 6.994510293227872e-05,
+      "new_p": 6.994510293227872e-05,
+      "relative_p_gain": 0.0,
+      "old_payout": 10104.756267144001,
+      "new_payout": 10104.756267144001,
+      "old_EV": -0.29322178278902444,
+      "new_EV": -0.29322178278902444,
+      "seconds": 0.0003532010014168918
+    },
+    {
+      "book": "FanDuel",
+      "tier": "10k+25",
+      "ticket": 0,
+      "old_p": 6.994510293227872e-05,
+      "new_p": 8.873413373045643e-05,
+      "relative_p_gain": 0.26862539349422887,
+      "old_payout": 12630.695333930002,
+      "new_payout": 10052.951388230002,
+      "old_EV": -0.11654471476201356,
+      "new_EV": -0.10796006713102135,
+      "seconds": 0.00037316100497264415
+    },
+    {
+      "book": "FanDuel",
+      "tier": "10k+50",
+      "ticket": 0,
+      "old_p": 6.994510293227872e-05,
+      "new_p": 0.00010396952170956072,
+      "relative_p_gain": 0.4864446165762977,
+      "old_payout": 15156.634400716,
+      "new_payout": 10214.9933221264,
+      "old_EV": 0.06013235326499711,
+      "new_EV": 0.06204796996783846,
+      "seconds": 0.000465796998469159
+    },
+    {
+      "book": "FanDuel",
+      "tier": "10k+100",
+      "ticket": 0,
+      "old_p": 0.00014441096626504214,
+      "new_p": 0.00014441096626504214,
+      "relative_p_gain": 0.0,
+      "old_payout": 10295.486816,
+      "new_payout": 10295.486816,
+      "old_EV": 0.48678119926756214,
+      "new_EV": 0.48678119926756214,
+      "seconds": 0.00033458399411756545
+    }
+  ],
+  "live_gate_check": {
+    "old_tomorrow_suggested_tickets": 8,
+    "old_estimated_EV_range_percent": [
+      -8.1,
+      -4.6
+    ],
+    "new_qualified_tickets": 0,
+    "claim": "removes internally negative-return recommendations; not evidence of a profitable forecasting strategy"
+  },
+  "whole_ticket_replay": {
+    "market": [
+      {
+        "legs": 1,
+        "tickets": 104,
+        "won": 70,
+        "cash_rate": 0.6730769230769231,
+        "mean_estimated_cash_rate": 0.69595607543266,
+        "mean_decimal_payout": 1.3651923076923078,
+        "flat_unit_roi": -0.08374999999999998
+      },
+      {
+        "legs": 2,
+        "tickets": 104,
+        "won": 48,
+        "cash_rate": 0.46153846153846156,
+        "mean_estimated_cash_rate": 0.4544002813007848,
+        "mean_decimal_payout": 2.0083249999999997,
+        "flat_unit_roi": -0.09510384615384618
+      },
+      {
+        "legs": 3,
+        "tickets": 104,
+        "won": 33,
+        "cash_rate": 0.3173076923076923,
+        "mean_estimated_cash_rate": 0.28271936591280694,
+        "mean_decimal_payout": 3.1435164134615383,
+        "flat_unit_roi": -0.04695964423076922
+      }
+    ],
+    "calibrated": [
+      {
+        "legs": 1,
+        "tickets": 104,
+        "won": 71,
+        "cash_rate": 0.6826923076923077,
+        "mean_estimated_cash_rate": 0.7150500427923506,
+        "mean_decimal_payout": 1.3659615384615384,
+        "flat_unit_roi": -0.07048076923076921
+      },
+      {
+        "legs": 2,
+        "tickets": 104,
+        "won": 45,
+        "cash_rate": 0.4326923076923077,
+        "mean_estimated_cash_rate": 0.4793152904512002,
+        "mean_decimal_payout": 2.0097634615384616,
+        "flat_unit_roi": -0.15339807692307694
+      },
+      {
+        "legs": 3,
+        "tickets": 104,
+        "won": 33,
+        "cash_rate": 0.3173076923076923,
+        "mean_estimated_cash_rate": 0.30561028315999494,
+        "mean_decimal_payout": 3.1439114711538463,
+        "flat_unit_roi": -0.04789891346153844
+      }
+    ]
+  }
+}
