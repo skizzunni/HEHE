@@ -1050,7 +1050,24 @@ function drawCalls(){
             + '</td><td>' + st(c) + '</td></tr>').join("")
         + '</tbody></table>'
       : '<p class="empty">Today&rsquo;s calls are set at 8:00 AM Eastern from the games with a fresh price.</p>')
-    + rec + '</div>';
+    + rec + callTickets() + '</div>';
+}
+// Tickets from the day's calls only (call_tickets.py)
+function callTickets(){
+  const T = D.call_tickets || [];
+  if(!T.length) return "";
+  const res = s => s === "won" ? '<span class="wl won">CASHED</span>' : s === "lost" ? '<span class="wl lost">LOST</span>'
+    : s === "void" ? '<span class="wl">VOID LEG</span>' : '<span class="sbn">open</span>';
+  return '<h3 style="margin-top:18px">Tickets from today&rsquo;s calls</h3>'
+    + '<p class="note">Only the day&rsquo;s calls, strongest first, at most 3 legs, never two legs from one game or sharing a team. '
+    + 'The chance is the legs&rsquo; chances multiplied, then cut by a ' + ((1 - T[0].penalty) * 100).toFixed(1)
+    + '% safety margin per added leg; the fair payout is what that chance is worth, beside what the slip actually pays.</p>'
+    + T.map(t => '<div class="parlays" style="margin:8px 0"><b>' + t.legs.length + '-leg ticket</b> ' + res(t.status)
+        + '<ul class="legs">' + t.legs.map(L => '<li>' + esc(L.pick) + ' <b>' + esc(L.price) + '</b> &middot; ' + L.conf + '% '
+            + (L.status && L.status !== "open" ? '<span class="sbn">' + esc(L.status) + '</span>' : '') + '</li>').join("") + '</ul>'
+        + '<div class="note">All legs win: <b>' + (100 * t.joint).toFixed(1) + '%</b> (' + (100 * t.independent).toFixed(1)
+        + '% if independent) &middot; fair payout <b>' + t.fair_payout.toFixed(2) + 'x</b> &middot; actual payout <b>'
+        + t.actual_payout.toFixed(2) + 'x</b> (' + (t.value >= 0 ? '+' : '') + (100 * t.value).toFixed(1) + '% per $1)</div></div>').join("");
 }
 function drawTargets(){
   const F = D.frontier || {};

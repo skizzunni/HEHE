@@ -2555,3 +2555,35 @@ They fail on the previous commit and pass now. The full suite and the UI probe p
 
 - The one mismatch on the first run, VIKING FK against "Viking FK", was the re-grader's own case bug. It was fixed before this commit.
 - No accuracy number changes: this item proves the record is graded right, it does not move it.
+
+## Accuracy plan, item 10: tickets from the day's calls (2026-10-20)
+
+**What changed.** `call_tickets.py` builds the day's tickets from the calls only. They show under the calls on the Calls tab.
+- **Legs.** Calls not pulled and with a price, strongest first. At most 3 legs: a 2-leg and a 3-leg ticket.
+- **Banned.** Two legs from one game, or two legs sharing an outcome driver: a team or player in both, or the same event.
+- **Joint chance.** The product of the legs' published chances × 0.982 for every leg after the first. This is not a fitted correlation:
+  - on 45 days of graded picks before 2026-10-15, same-day picks from different games won together 4.7% more often than their chances' product, after each leg's own calibration;
+  - the 95% range is 0.982 to 1.140, and a ticket gets the lower end, so its chance is never stated above what the record supports.
+- **Payouts.** The fair payout (1 / joint) sits beside the actual payout (the product of the calls' decimal prices), with the value per $1.
+- **Result.** Each leg's status is shown, and the ticket's result: cashed, lost, a void leg, or open.
+
+**Test.** `tests/test_call_tickets.py`, 6 tests:
+- strongest first and never more than 3 legs;
+- the joint chance with its penalty, and the fair and actual payouts;
+- no shared game or team;
+- pulled, unpriced and started calls never ride;
+- too few calls means no ticket;
+- the penalty never raises a chance.
+
+They fail on the previous commit and pass now. The full suite and the UI probe pass.
+
+**Before / after on the window,** built from each day's simulated top 5 calls (item 5's ranking at 8:00 AM, 2026-10-15 to 2026-10-19):
+
+| ticket | N | cashed | stated (penalised) | if independent | fair / actual payout (avg) |
+|---|---|---|---|---|---|
+| 2-leg | 5 | 2 | 62.0% | 63.2% | 1.72x / 1.51x |
+| 3-leg | 5 | 2 | 46.1% | 47.8% | 2.54x / 1.97x |
+
+- Five tickets each is no evidence either way. The tickets inherit the top-5 calls' weak window (14 of 25).
+- Before this item the board's tickets drew on every pick, not on calls.
+- The other ticket products (Card parlays, Stacks, Locks, Safe Locks, Payout targets, Lottery) are unchanged. Restricting them to calls would override the Locks rules set earlier, so that is left for a decision.

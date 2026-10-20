@@ -197,6 +197,20 @@ def snapshot():
         lg["soccer"] = {"label": "Soccer", "rows": soccer_rows, "asof": freshness.as_of(soccer_at)}
         out["slots"][slot] = lg
     out["results"] = ledger.board_payload()
+    # tickets from the day's calls only (call_tickets.py): strongest first,
+    # 2 and 3 legs, the joint chance with its penalty, fair vs actual payout
+    try:
+        import call_tickets
+        out["call_tickets"] = call_tickets.build(out["results"].get("calls") or [])
+        st_ = {c["id"]: c.get("status") for c in out["results"].get("calls") or []}
+        for t_ in out["call_tickets"]:
+            ss = [st_.get(L_["id"]) for L_ in t_["legs"]]
+            for L_ in t_["legs"]:
+                L_["status"] = st_.get(L_["id"])
+            t_["status"] = ("lost" if "lost" in ss else "won" if all(s == "won" for s in ss)
+                            else "void" if any(s in ("void", "push") for s in ss) and "open" not in ss else "open")
+    except Exception as ex_:
+        print(f"call tickets failed: {ex_}", file=sys.stderr)
     # calibration of the chances as published, per league and overall, with
     # any bin trailing its stated chance by more than 2 SE flagged
     try:
