@@ -4016,6 +4016,22 @@
    },
    {
     "against_market": false,
+    "league": "efl2",
+    "pick": "Plymouth Argyle",
+    "price": null,
+    "said": 66,
+    "why": "margin 3 \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
+    "league": "efl2",
+    "pick": "Sheffield Wednesday",
+    "price": null,
+    "said": 73,
+    "why": "margin 2 \u00b7 called at 73%"
+   },
+   {
+    "against_market": false,
     "league": "efl3",
     "pick": "Oldham Athletic",
     "price": null,
@@ -4029,6 +4045,22 @@
     "price": null,
     "said": 73,
     "why": "margin 1 \u00b7 called at 73%"
+   },
+   {
+    "against_market": false,
+    "league": "efl3",
+    "pick": "Fleetwood Town",
+    "price": null,
+    "said": 70,
+    "why": "margin 2 \u00b7 called at 70%"
+   },
+   {
+    "against_market": false,
+    "league": "efl3",
+    "pick": "Barnet",
+    "price": null,
+    "said": 84,
+    "why": "margin 2 \u00b7 called at 84%"
    },
    {
     "against_market": false,
@@ -4114,12 +4146,12 @@
    }
   ],
   "picks": {
-   "hit": 65.1,
-   "lost": 15,
-   "n": 43,
+   "hit": 69.8,
+   "lost": 19,
+   "n": 63,
    "roi": 2.2,
-   "said": 67.6,
-   "won": 28
+   "said": 69.5,
+   "won": 44
   },
   "picks_by_league": {
    "atp": {
@@ -4130,21 +4162,29 @@
     "said": 64.8,
     "won": 10
    },
-   "efl2": {
+   "efl1": {
     "hit": 100.0,
     "lost": 0,
     "n": 1,
     "roi": null,
-    "said": 82.0,
+    "said": 83.0,
     "won": 1
    },
-   "efl3": {
-    "hit": 33.3,
+   "efl2": {
+    "hit": 81.8,
     "lost": 2,
-    "n": 3,
+    "n": 11,
     "roi": null,
-    "said": 73.0,
-    "won": 1
+    "said": 74.8,
+    "won": 9
+   },
+   "efl3": {
+    "hit": 63.6,
+    "lost": 4,
+    "n": 11,
+    "roi": null,
+    "said": 72.5,
+    "won": 7
    },
    "ksa": {
     "hit": 100.0,
@@ -4153,6 +4193,14 @@
     "roi": 40.0,
     "said": 71.0,
     "won": 4
+   },
+   "sco2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": null,
+    "said": 65.0,
+    "won": 1
    },
    "ucl": {
     "hit": 50.0,
