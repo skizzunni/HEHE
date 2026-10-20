@@ -1,7 +1,7 @@
 # Review 2026-10-20
 
-Picks 25-11 (69.4% vs 67.4% claimed, ROI -10.7%).
-Closing line value: +1.66 points on 3 picks; beat the close on 100.0%.
+Picks 26-11 (70.3% vs 67.4% claimed, ROI +2.2%).
+Closing line value: +1.69 points on 4 picks; beat the close on 100.0%.
 - LOST atp Roman Safiullin at 84.5%: lost 1-2 in sets · took it the distance · called at 84%
 - LOST atp Rinky Hijikata at 53.7%: lost 0-2 in sets · never won a set · called at 54%
 - LOST atp Botic Van De Zandschulp at 57.5%: lost 0-2 in sets · never won a set · called at 58%
@@ -14,7 +14,7 @@ Closing line value: +1.66 points on 3 picks; beat the close on 100.0%.
 - LOST wta Daria Snigur at 73.0%: lost 1-2 in sets · took it the distance · called at 73%
 - LOST wta Paula Badosa at 73.5%: lost 1-2 in sets · took it the distance · called at 74%
 LEAK ufc: 52.0% hit vs 64.6% claimed on 25 calls (14 days)
-With the market 67.4% (279); against it 35.7% (28).
+With the market 67.5% (280); against it 35.7% (28).
 Locks 0/11 won, 11 open; Best play top 2 (57%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 2 (84%) open; Best play top 7 (53%) open.
 Lottery 100: open (0/9 legs won)
