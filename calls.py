@@ -231,7 +231,12 @@ def update_daily(state, now=None, path=None, n=None, summary=None):
     # likeliest-first (call_tickets, published) and the payout-target
     # optimizer (tickets.optimize at 2x and 3x). Graded by tools/shadow.py.
     if len(rec["calls"]) >= n and "shadow" not in rec:
-        rec["shadow"] = shadow_tickets(rec["calls"], now)
+        import freshness
+        begun = any((freshness.parse(c.get("start")) or now) <= now for c in rec["calls"])
+        # archived only before any of the day's calls has started; a day that
+        # completed earlier (2026-10-20, before this test existed) is skipped
+        rec["shadow"] = (dict(skipped="a call had already started") if begun
+                         else shadow_tickets(rec["calls"], now))
         changed = True
     if changed:
         save_daily(book, path)

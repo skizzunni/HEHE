@@ -28,7 +28,7 @@ def grade(days, book):
     out = {}
     for day, rec in sorted(days.items()):
         sh = rec.get("shadow")
-        if not sh:
+        if not sh or sh.get("skipped"):
             continue
         price = {c["id"]: CT.dec(c.get("price")) for c in rec.get("calls") or []}
         tickets = dict(sh)
