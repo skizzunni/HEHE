@@ -202,7 +202,13 @@ def for_slot(board_slot, labels=None):
         e = next((e for e in evs if lasts <= {_last(x) for x in re.split(r"\s+v\s+", e["name"])}), None)
         if not e:
             continue
-        props = [dict(p, gid=row["id"]) for p in parse(markets(e["eventId"]), names)
+        try:
+            import datetime as dt
+            q = dt.datetime.fromtimestamp(os.path.getmtime(os.path.join(CACHE, f'{e["eventId"]}.json')),
+                                          dt.timezone.utc).isoformat(timespec="seconds")
+        except OSError:
+            q = None
+        props = [dict(p, gid=row["id"], quoted=q) for p in parse(markets(e["eventId"]), names)
                  if 0.30 <= p["p"] <= 0.97]
         props.sort(key=lambda p: -p["p"])
         if props:

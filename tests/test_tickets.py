@@ -144,7 +144,7 @@ class WagerAndRecord(unittest.TestCase):
 
     def live(self, i, p, price, kind="game", **kw):
         import datetime as dt
-        now = dt.datetime(2026, 10, 20, 15, 0, tzinfo=dt.timezone.utc)
+        now = dt.datetime(2026, 10, 20, 12, 10, tzinfo=dt.timezone.utc)       # 8:10 AM ET
         self.NOW = now
         L = dict(gid=f"nfl:{i}", label=f"leg{i}", p=p, price=price, fd=f"m:{i}", where="Alternate Total",
                  spec=dict(t="under", line=44.5), kind=kind, league="nfl", home="H", away="A",
@@ -165,6 +165,7 @@ class WagerAndRecord(unittest.TestCase):
         self.assertIn("no FanDuel selection id", T.verify(dict(good, dec=1.33, fd=None), self.NOW)[1])
 
     def test_freeze_grade_replay(self):
+        import datetime as dt
         import tempfile
         import props_ledger
         pool = [self.live(i, 0.80 + 0.01 * (i % 3), "-250") for i in range(8)]
@@ -174,16 +175,17 @@ class WagerAndRecord(unittest.TestCase):
         real = props_ledger.LEDGER
         props_ledger.LEDGER = os.path.join(os.path.dirname(path), "p.json")
         try:
-            T.record(front, pool, "2026-10-20", set_card=False, path=path)
-            T.record(front, pool, "2026-10-20", set_card=False, path=path)
+            T.record(front, pool, "2026-10-20", set_card=False, path=path, now=self.NOW)
+            T.record(front, pool, "2026-10-20", set_card=False, path=path, now=self.NOW)
             self.assertEqual(len(T.load(path)["days"]["2026-10-20"]["versions"]), 1)   # unchanged: one version
-            T.record(front, pool, "2026-10-20", set_card=True, path=path)
-            b = T.load(path)
-            b["days"]["2026-10-20"]["set_at"] = self.NOW.isoformat()
-            T.save(b, path)
+            late = self.NOW + dt.timedelta(hours=14)
+            T.record(front, pool, "2026-10-20", set_card=True, path=path, now=late)
+            self.assertNotIn("tickets", T.load(path)["days"]["2026-10-20"])        # 10 PM: no card
+            T.record(front, pool, "2026-10-20", set_card=True, path=path, now=self.NOW)
             self.assertTrue(T.replay("2026-10-20", path))
             frozen = [L["label"] for L in T.load(path)["days"]["2026-10-20"]["tickets"][0]["legs"]]
-            T.record(dict(front, rows=[dict(front["rows"][0], legs=[])]), pool, "2026-10-20", set_card=True, path=path)
+            T.record(dict(front, rows=[dict(front["rows"][0], legs=[])]), pool, "2026-10-20", set_card=True,
+                     path=path, now=self.NOW)
             self.assertEqual([L["label"] for L in T.load(path)["days"]["2026-10-20"]["tickets"][0]["legs"]], frozen)
             # settle: every leg's game ends 20-17 (under 44.5 wins), one game 24-20 on an integer line pushes
             b = T.load(path)

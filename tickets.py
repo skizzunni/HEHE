@@ -487,21 +487,32 @@ def _sig(front):
     return [[r["target"], r["standard"], [L["label"] for L in r.get("legs") or []]] for r in front["rows"]]
 
 
-def record(front, pool, day, set_card=False, path=None):
+def record(front, pool, day, set_card=False, path=None, now=None):
     """Archive before play. Every change of the live frontier is appended
     (time, policy, tickets); at card time the day's tickets are frozen with
     the full candidate pool they were chosen from, and graded later."""
     import datetime as dt
     import policy
     book = load(path)
+    for d_ in book["days"].values():
+        # a card frozen outside the morning window (before this rule existed)
+        # is not a card: drop it. An in-window card whose targets were all
+        # unavailable stays -- that is a real answer.
+        if d_.get("set_at") and not in_card_window(_at(d_["set_at"])):
+            for k in ("tickets", "set_at", "policy", "pool"):
+                d_.pop(k, None)
     d = book["days"].setdefault(day, dict(versions=[]))
-    now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    stamp = (now or dt.datetime.now(dt.timezone.utc)).isoformat(timespec="seconds")
     sig = _sig(front)
     if not d["versions"] or d["versions"][-1]["sig"] != sig:
-        d["versions"].append(dict(t=now, policy=policy.version(), sig=sig))
+        d["versions"].append(dict(t=stamp, policy=policy.version(), sig=sig))
         d["versions"] = d["versions"][-60:]
-    if set_card and "tickets" not in d:
-        d["set_at"], d["policy"] = now, policy.version()
+    # a card is set only in the morning window, from a pool with usable legs:
+    # the first build after 8 AM ET. (First live run, 2026-10-19, came at 10 PM
+    # after every game had started and froze "unavailable" from an empty pool.)
+    usable = sum(1 for L in pool or [] if verify(dict(L, dec=__import__("locks")._dec(L.get("price"))), now)[0])
+    if set_card and "tickets" not in d and usable and in_card_window(now):
+        d["set_at"], d["policy"] = stamp, policy.version()
         d["pool"] = pool
         d["tickets"] = [dict(target=r["target"], standard=r["standard"], prob=r.get("prob"),
                              dec=r.get("dec"), total=r.get("total"), status="open" if r.get("legs") else "none",
@@ -515,6 +526,17 @@ def record(front, pool, day, set_card=False, path=None):
     for old in sorted(book["days"])[:-30]:
         book["days"][old].pop("pool", None)              # keep 30 days of pools
     save(book, path)
+
+
+CARD_WINDOW_MIN = 60          # minutes after 8 AM ET in which a card may be set
+
+
+def in_card_window(now=None):
+    import datetime as dt
+    from zoneinfo import ZoneInfo
+    t = (now or dt.datetime.now(dt.timezone.utc)).astimezone(ZoneInfo("America/New_York"))
+    start = t.replace(hour=8, minute=0, second=0, microsecond=0)
+    return start <= t < start + dt.timedelta(minutes=CARD_WINDOW_MIN)
 
 
 def grade(final, path=None):

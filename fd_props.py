@@ -270,7 +270,7 @@ def for_game(g, league):
     try:
         if time.time() - os.path.getmtime(f) < TTL:
             with open(f) as fh:
-                return json.load(fh)
+                return _stamped(json.load(fh), f)
     except (OSError, ValueError):
         pass
     base = (f"{fanduel.BASE}/event-page?_ak={fanduel.AK}&eventId={g['id']}"
@@ -292,4 +292,14 @@ def for_game(g, league):
             json.dump(props, fh)
     except OSError:
         pass
-    return props
+    return _stamped(props, f)
+
+
+def _stamped(props, f):
+    """Each prop with the time FanDuel's page was read (the cache file's)."""
+    import datetime as dt
+    try:
+        q = dt.datetime.fromtimestamp(os.path.getmtime(f), dt.timezone.utc).isoformat(timespec="seconds")
+    except OSError:
+        q = None
+    return [dict(p, quoted=q) for p in props]
