@@ -36,7 +36,7 @@ what is missing and the next step. Updated 2026-10-18 (after the external review
 
 Run by `.github/workflows/tests.yml` on every code or page push:
 
-* `tests/test_core.py` -- 51 unit tests (standard library, no network): Locks -400..-120 and
+* `tests/test_core.py` -- 75 unit tests (standard library, no network): Locks -400..-120 and
   Safe -2000..-500 windows, one leg per game and the kind cap, soccer limited to validated
   kinds, soccer grading (draw / void / live), soccer name matching and the reversed-fixture
   guard, NFL upper tail, wind scaling, ungradable props kept off tickets, every FanDuel prop
@@ -47,8 +47,8 @@ Run by `.github/workflows/tests.yml` on every code or page push:
   minutes old and absent when fresh; Locks -> Safe Locks renders 11 legs, the Winners parlay
   (top 4, 80%) and Best play (top 10, 54%); Results health box lists a trailing split, a
   never-settled record and bad data, and reads "All checks passing" when clean.
-* `tests/mutation_check.py` -- breaks 39 protected rules one at a time (bytecode cache off) and
-  requires each to be caught; 39/39 caught 2026-10-18.
+* `tests/mutation_check.py` -- breaks 45 protected rules one at a time (bytecode cache off) and
+  requires each to be caught; 45/45 caught 2026-10-18.
 
 ## Monitoring (on the site, every build)
 
@@ -80,6 +80,26 @@ drift/form/rest/travel/team bias, Kalshi+book average.
 * Props at Locks prices: 155 graded; 70-80% band hit 74.4 vs 73.4 said; 80-90% band 78.4 vs 84.7, but the
   whole gap is soccer "Shots" (uel 8/20 vs 84%), already off. Without it the band hits ~90 vs ~85 (NHL shots
   on goal 41/47 vs 84.8). No change to prop chances.
+
+## Payout targets (2026-10-20, from PR #2's handoff)
+
+Objective: strong legs that combine into a worthwhile payout with the best defensible chance of
+cashing, judged as whole tickets.
+
+| # | Requirement | State | Evidence |
+|---|-------------|-------|----------|
+| 1 | Optimize the completed ticket for 2x / 3x / 5x | done | `tickets.optimize`: max product of chances, payout >= target, leg standard, <= 6 legs, one per game, <= 3 of a league+kind, boosts. Exact branch-and-bound (DP seed rounded down, DP bound rounded up); matches brute force on 340 random pools; 45-game pools solve exactly in < 0.1 s; `exact=False` if the node budget is ever hit |
+| 2 | Alternatives per game | done | every non-dominated line of a game competes; only one is chosen (test: a longer line finishes a ticket with fewer legs and a higher chance) |
+| 3 | Ratings earn their meaning | done (display) | per band: legs, games, hit vs stated, game-level 95% range, dates, verdict. Kalshi mid-prices: supported in every band 70-100% (~230 games each). FanDuel props: supported at 70-75, 80-85, 85-90%. FanDuel game lines under the current method: thin (2 days). Ratings are never adjusted |
+| 4 | Exact wager | done | `tickets.verify`: FanDuel selection id, named market, price, quote < 30 min old, not started, prop player confirmed; settlement rules stated; payout labelled an estimate (no combined-quote feed). Independence: whole-ticket backtest claimed ~46% vs 45-50% cashed at 2x, ~29% vs 25-31% at 3x |
+| 5 | Trade-offs shown | done | Targets tab: cash chance, payout, legs, estimated return; 'unavailable' with the ceiling and a labelled lower-standard alternative; the standard is never lowered silently |
+| 6 | Pre-selection inputs archived | done | candidate pool with quote times, starts, FanDuel event, participation; probable starters (MLB/NHL), injury reports, confirmed lineups (`pregame.py`), each appended only when changed |
+| 7 | Whole-parlay backtest before promotion | done -- **not promoted** | `tools/whole_ticket.py`, 38 dates / 226 games: vs the current card method, +3 (2x 70%), +1 (2x 75%), +1 (3x 70%), +2 (3x 75%) cashes; every 95% range includes 0. Frontier shown as estimates; forward record starts at the next 8 AM card |
+| 8 | Optimizer tests | done | brute force (340 pools), payout/boost identities, one per game, standard never lowered, kind cap, unavailable ceiling, verify reasons, freeze/grade (push leaves the slip)/replay, pregame archive; 7 protected mutations (45/45 caught) |
+
+Live check, first build (2026-10-20 02:05 UTC): 540 of 557 legs excluded for "quote time unknown"
+(props had no timestamp) -> fixed; an "unavailable" card frozen at 10 PM from an empty pool -> cards
+are set only 8:00-9:00 AM ET from usable legs.
 
 ## Sunday 2026-10-18 review (2026-10-19 05:30 UTC)
 
@@ -180,6 +200,7 @@ FanDuel lists only one side.
 | 10-18 | UFC "goes the distance" prop (-1200) stuck open, would void after 3 days | grader waited for ESPN's result line, which arrives late or never | settles from final round + clock when the line is missing; live: settled **won** (ended 5.78 min); unit + mutation tested |
 | 10-18 | bot reported "open-position limit reached" | an Oct 16 practice ticket on a never-finished MLB game held a slot forever | partial settlement read; practice tickets expire after 4 days; unit + mutation tested |
 | 10-18 | health box flagged "props uel Shots" trailing | audit counted a market already switched off | audit ignores markets no longer offered, and the build drops such alarms at once (review log is daily); shots off in every soccer league |
+| 10-20 | payout targets: props excluded as 'quote time unknown'; a card frozen at 10 PM | prop pages carried no timestamp; card freeze had no time window | props stamped with their page's read time; freeze only 8-9 AM ET from usable legs; out-of-window freezes dropped |
 | 10-20 | two studies used the Kalshi archive's "p" as the market price | "p" is the Stacks score model's chance from the sportsbook close; Kalshi's price is ask/width | both re-run on the mid-price (ask - width/2): calibration decision unchanged; uncertainty ranking corrected to +3 regular / -1 Safe (not promoted). Found in PR #2's independent review |
 | 10-19 | a played NFL player's prop 'ungradable' (Cameron, kick returns only) | football box lists only groups a player recorded in; a missing group read as missing data | missing group = 0 for a player in the box; unit + mutation tested; past records re-checked |
 | 10-19 | TD history: 139 of 472 'ungradable', name differences voided | no-line players returned None; exact-name lookup | shared resolver + 0 rule: 365 graded, 12.3% vs 11.7% |
