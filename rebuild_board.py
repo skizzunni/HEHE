@@ -213,6 +213,13 @@ def snapshot():
                     rb.append(f"Lottery {day_}")
         except Exception as ex_:
             rb.append(f"Lottery replay failed to run: {ex_}")
+        try:
+            import tickets as _tk
+            for day_ in sorted((_tk.load().get("days") or {}))[-3:]:
+                if _tk.replay(day_) is False:
+                    rb.append(f"Payout targets {day_}")
+        except Exception as ex_:
+            rb.append(f"Payout-target replay failed to run: {ex_}")
         out["health"]["replay_bad"] = rb
     # what each proposed change did against the current chooser (tools/paired.py)
     try:
@@ -412,6 +419,39 @@ def snapshot():
     except Exception:
         import traceback
         sys.stderr.write("safe locks failed -- board still rebuilt:\n")
+        traceback.print_exc()
+    # The payout frontier (tickets.py): for 2x / 3x / 5x total return, the
+    # likeliest ticket at each leg standard, from every FanDuel line that
+    # passes the exact-wager check; with the evidence behind each standard.
+    try:
+        import tickets
+        days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
+        fr = {}
+        for s_ in ("today", "tomorrow"):
+            res_ = locks.build(d._STATE["slots"].get(s_), SOCCER, labels, FD, day=days_[s_],
+                               dec=tickets.POOL_DEC, band=tickets.POOL_BAND,
+                               prop_games=((out.get("props") or {}).get(s_) or {}).get("games"))
+            pool_ = res_.get("pool") or []
+            fr[s_] = {f"{int(100 * b)}": tickets.build_frontier(pool_, boost=b) for b in tickets.BOOST_CHOICES}
+            if s_ == "today":
+                iso = f'{days_[s_][:4]}-{days_[s_][4:6]}-{days_[s_][6:]}'
+                tickets.record(fr[s_]["0"], pool_, iso, set_card=locks.card_time())
+        tickets.grade(ledger._final)
+        fr["record"] = tickets.report()
+        fr["evidence"] = tickets.evidence()
+        try:
+            with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "data",
+                                   "whole_ticket.json")) as fh_:
+                fr["backtest"] = json.load(fh_)
+        except (OSError, ValueError):
+            fr["backtest"] = None
+        out["frontier"] = fr
+        r0 = fr["today"]["0"]
+        print(f'frontier: {r0["candidates"]} legs from {r0["games"]} games ok, {r0["excluded"]} excluded '
+              f'{r0["excluded_why"]}', file=sys.stderr)
+    except Exception:
+        import traceback
+        sys.stderr.write("frontier failed -- board still rebuilt:\n")
         traceback.print_exc()
     # The lottery: $1 tickets built to pay ~$10,000, from game lines and props
     try:

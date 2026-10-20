@@ -92,6 +92,13 @@ class Optimizer(unittest.TestCase):
         # the 0.70 leg is never used to reach the target at an 0.80 standard
         self.assertNotIn("d", {L["gid"] for L in r["legs"]})
 
+    def test_standard_is_never_lowered(self):
+        """A below-standard leg that would give a likelier ticket is still not used."""
+        legs = [leg("a", 0.85, 1.5), leg("b", 0.85, 1.5, t="win"), leg("d", 0.79, 2.1, t="over")]
+        r = T.optimize(legs, 2.0, 0.80)
+        self.assertEqual(sorted(L["gid"] for L in r["legs"]), ["a", "b"])
+        self.assertAlmostEqual(r["prob"], 0.7225)
+
     def test_alternative_line_beats_adding_a_leg(self):
         """A game's likeliest line pays too little; its longer line finishes
         the ticket with fewer legs and a higher chance."""
@@ -132,6 +139,69 @@ class Optimizer(unittest.TestCase):
         self.assertFalse(r["exact"])
 
 
+class WagerAndRecord(unittest.TestCase):
+    NOW = None
+
+    def live(self, i, p, price, kind="game", **kw):
+        import datetime as dt
+        now = dt.datetime(2026, 10, 20, 15, 0, tzinfo=dt.timezone.utc)
+        self.NOW = now
+        L = dict(gid=f"nfl:{i}", label=f"leg{i}", p=p, price=price, fd=f"m:{i}", where="Alternate Total",
+                 spec=dict(t="under", line=44.5), kind=kind, league="nfl", home="H", away="A",
+                 quoted=(now - dt.timedelta(minutes=5)).isoformat(), start=(now + dt.timedelta(hours=3)).isoformat())
+        L.update(kw)
+        return L
+
+    def test_verify_reasons(self):
+        import datetime as dt
+        good = self.live(1, 0.8, "-300")
+        self.assertEqual(T.verify(dict(good, dec=1.33), self.NOW), (True, []))
+        stale = dict(good, dec=1.33, quoted=(self.NOW - dt.timedelta(hours=2)).isoformat())
+        self.assertIn("quote older than 30 min", T.verify(stale, self.NOW)[1])
+        started = dict(good, dec=1.33, start=(self.NOW - dt.timedelta(minutes=1)).isoformat())
+        self.assertIn("game has started", T.verify(started, self.NOW)[1])
+        prop = dict(good, dec=1.33, kind="prop", plays=False, play="lineup not out")
+        self.assertIn("player not confirmed to play (lineup not out)", T.verify(prop, self.NOW)[1])
+        self.assertIn("no FanDuel selection id", T.verify(dict(good, dec=1.33, fd=None), self.NOW)[1])
+
+    def test_freeze_grade_replay(self):
+        import tempfile
+        import props_ledger
+        pool = [self.live(i, 0.80 + 0.01 * (i % 3), "-250") for i in range(8)]
+        front = T.build_frontier(pool, targets=(2.0,), standards=(0.80,), now=self.NOW)
+        self.assertTrue(front["rows"][0]["legs"])
+        path = os.path.join(tempfile.mkdtemp(), "f.json")
+        real = props_ledger.LEDGER
+        props_ledger.LEDGER = os.path.join(os.path.dirname(path), "p.json")
+        try:
+            T.record(front, pool, "2026-10-20", set_card=False, path=path)
+            T.record(front, pool, "2026-10-20", set_card=False, path=path)
+            self.assertEqual(len(T.load(path)["days"]["2026-10-20"]["versions"]), 1)   # unchanged: one version
+            T.record(front, pool, "2026-10-20", set_card=True, path=path)
+            b = T.load(path)
+            b["days"]["2026-10-20"]["set_at"] = self.NOW.isoformat()
+            T.save(b, path)
+            self.assertTrue(T.replay("2026-10-20", path))
+            frozen = [L["label"] for L in T.load(path)["days"]["2026-10-20"]["tickets"][0]["legs"]]
+            T.record(dict(front, rows=[dict(front["rows"][0], legs=[])]), pool, "2026-10-20", set_card=True, path=path)
+            self.assertEqual([L["label"] for L in T.load(path)["days"]["2026-10-20"]["tickets"][0]["legs"]], frozen)
+            # settle: every leg's game ends 20-17 (under 44.5 wins), one game 24-20 on an integer line pushes
+            b = T.load(path)
+            legs = b["days"]["2026-10-20"]["tickets"][0]["legs"]
+            legs[0]["spec"] = dict(t="under", line=44)
+            T.save(b, path)
+            final = lambda lg, c, L: dict(scores={"H": 24, "A": 20}) if L is legs[0] or L["label"] == legs[0]["label"] \
+                else dict(scores={"H": 20, "A": 17})
+            T.grade(final, path)
+            t = T.load(path)["days"]["2026-10-20"]["tickets"][0]
+            self.assertEqual(t["legs"][0]["status"], "void")                    # the push leaves the slip
+            self.assertEqual(t["status"], "won")
+            rep = T.report(path)[0]
+            self.assertEqual((rep["made"], rep["cashed"], rep["settled"]), (1, 1, 1))
+        finally:
+            props_ledger.LEDGER = real
+
+
 class Evidence(unittest.TestCase):
     def test_band_verdicts_never_adjust(self):
         rows = [(0.91, i % 10 != 0, "2026-10-01", f"g{i}") for i in range(100)]      # 90% hit at 91%
@@ -148,6 +218,8 @@ class Evidence(unittest.TestCase):
         one = [(0.91, True, "d", "g") for _ in range(10)] + [(0.91, i % 3 != 0, "d", f"h{i}") for i in range(40)]
         r = [x for x in T._band_rows(one) if x["band"] == "90-95%"][0]
         self.assertEqual(r["games"], 41)
+        w = T.wilson(r["won"], r["n"])
+        self.assertGreater(r["ci95"][1] - r["ci95"][0], w[1] - w[0])           # wider than counting legs
 
 
 if __name__ == "__main__":

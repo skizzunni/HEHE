@@ -169,6 +169,9 @@ def _unit(g, league):
 
 
 SOCCER_KINDS = {"dc"}
+# per game: FanDuel's event id and the game's scheduled start, for the exact
+# wager check (tickets.verify) and the pre-selection archive
+QUOTED = {}
 
 
 def fd_specs(FD, refs):
@@ -180,6 +183,7 @@ def fd_specs(FD, refs):
         gm = fanduel.find(FD, league, g.away, g.home, (row.get("mkt") or {}).get("start"))
         if not gm:
             return []
+        QUOTED[row["id"]] = dict(event=gm.get("id"), start=(row.get("mkt") or {}).get("start"))
         out = []
 
         def add(group, label, spec, ref, price=None, where=None):
@@ -324,7 +328,10 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                                  home=g["home"], away=g["away"], tip=g.get("tip"),
                                  label=c["label"], spec=c["spec"], p=c["p"],
                                  p_model=c["p_model"], fd=c["fd"], price=c["price"],
-                                 where=c["where"], devig=how))
+                                 where=c["where"], devig=how,
+                                 event=(QUOTED.get(g["gid"]) or {}).get("event"),
+                                 start=(QUOTED.get(g["gid"]) or {}).get("start"),
+                                 quoted=fanduel.quote_time(dict(id=(QUOTED.get(g["gid"]) or {}).get("event")))))
     monotone(pool)
     # FanDuel player props compete with the game lines: per game, the lock is
     # the likeliest of all of them. A prop's chance is FanDuel's own price,
@@ -368,7 +375,9 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                                     label=P["label"], p=P["p"], price=P["price"], fd=P["fd"],
                                     where=P.get("where"), name=P["name"], market=P["market"],
                                     line=P["line"], aid=P.get("aid"), edge=P.get("edge"),
-                                    p_fair=P.get("p_fair")))
+                                    p_fair=P.get("p_fair"), play=P.get("play"), plays=P.get("plays"),
+                                    start=m.get("start"), devig="prop market",
+                                    quoted=P.get("quoted")))
     locks, picks = choose(pool, n), _best_per_game(pool)
     locks.sort(key=_order)
     mark_ties(locks, pool)
@@ -382,7 +391,9 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                 pool=[{k: L.get(k) for k in POOL_KEYS} for L in pool])
 
 
-POOL_KEYS = ("gid", "label", "p", "kind", "league", "spec", "name", "price", "devig")
+POOL_KEYS = ("gid", "label", "p", "kind", "league", "spec", "name", "price", "devig",
+             "where", "fd", "match", "tip", "play", "plays", "market", "line", "quoted", "start", "event",
+             "home", "away", "aid", "lg")
 POOLS_KEPT = 14       # days of decision-time pools kept in a ledger
 PER_GAME = 1          # legs from one game on a ticket (was 3 on light days: see choose)
 EXTRA_PER_GAME = 2    # same-game ideas shown beside the card, never on it

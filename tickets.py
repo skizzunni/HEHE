@@ -33,6 +33,9 @@ that against settled history (cash rate vs the product of chances).
 import math
 
 MAX_LEGS = 6
+POOL_DEC = (1.02, 6.0)        # FanDuel prices considered: -5000 .. +500
+POOL_BAND = (0.55, 0.995)     # estimated chances considered
+BOOST_CHOICES = (0.0, 0.25, 0.50, 1.00)
 KIND_CAP = 3
 NODE_BUDGET = 400_000
 EPS = 1e-12
@@ -385,3 +388,206 @@ def evidence(root=None):
         dict(name="FanDuel game lines, before " + METHOD_FROM + " (old band factor)", rows=_band_rows(fd_old)),
         dict(name="FanDuel player props (de-vigged)", rows=_band_rows(props)),
         dict(name="Kalshi mid-prices, game-line contracts (earlier, other book)", rows=_band_rows(kal))])
+
+
+# ------------------------------------------------------- exact wager check
+QUOTE_MAX_AGE_MIN = 30
+SETTLEMENT = ("FanDuel NY rules as graded here: full game including overtime; "
+              "an integer line landing exactly pushes and drops off the slip; "
+              "a game not played, or a player who does not play, voids the leg")
+
+
+def verify(L, now=None):
+    """(ok, reasons): can this exact wager be placed as described right now?"""
+    import datetime as dt
+    now = now or dt.datetime.now(dt.timezone.utc)
+    why = []
+    if not L.get("fd"):
+        why.append("no FanDuel selection id")
+    if not (L.get("where") or L.get("market") or (L.get("spec") or {}).get("t")):
+        why.append("market not identified")
+    if L.get("price") in (None, "") or not L.get("dec"):
+        why.append("no price")
+
+    def ts(x):
+        try:
+            t = dt.datetime.fromisoformat(str(x).replace("Z", "+00:00"))
+            return t if t.tzinfo else t.replace(tzinfo=dt.timezone.utc)
+        except (TypeError, ValueError):
+            return None
+    q = ts(L.get("quoted"))
+    if q is None:
+        why.append("quote time unknown")
+    elif (now - q).total_seconds() > QUOTE_MAX_AGE_MIN * 60:
+        why.append(f"quote older than {QUOTE_MAX_AGE_MIN} min")
+    st = ts(L.get("start"))
+    if st is None:
+        why.append("start time unknown")
+    elif st <= now:
+        why.append("game has started")
+    if L.get("kind") == "prop" and not L.get("plays"):
+        why.append("player not confirmed to play" + (f" ({L.get('play')})" if L.get("play") else ""))
+    return (not why), why
+
+
+def candidates(pool, now=None):
+    """Pool legs with their decimal price, split into usable and excluded
+    (with the reasons), so nothing is dropped silently."""
+    import locks
+    ok, out = [], []
+    for L in pool or []:
+        L = dict(L, dec=locks._dec(L.get("price")))
+        good, why = verify(L, now)
+        (ok if good else out).append(L if good else dict(L, excluded=why))
+    return ok, out
+
+
+def build_frontier(pool, targets=(2.0, 3.0, 5.0), standards=(0.90, 0.85, 0.80, 0.75),
+                   max_legs=MAX_LEGS, boost=0.0, now=None):
+    """The frontier from a live candidate pool, every number labelled."""
+    ok, excluded = candidates(pool, now)
+    rows = frontier(ok, targets, standards, max_legs=max_legs, boost=boost)
+    for r in rows:
+        r["payout_basis"] = "estimated: product of FanDuel's listed prices (FanDuel prices the slip)"
+        if r.get("legs"):
+            r["legs"] = [{k: L.get(k) for k in ("gid", "label", "p", "price", "dec", "where", "match",
+                                                "tip", "league", "kind", "devig", "quoted", "start",
+                                                "fd", "play", "spec", "home", "away", "name",
+                                                "market", "line")} for L in r["legs"]]
+    from collections import Counter
+    return dict(rows=rows, candidates=len(ok), games=len({L["gid"] for L in ok}),
+                excluded=len(excluded),
+                excluded_why=dict(Counter(w for L in excluded for w in L["excluded"]).most_common(6)),
+                settlement=SETTLEMENT, max_legs=max_legs, kind_cap=KIND_CAP, boost=boost)
+
+
+# ------------------------------------------------------------- record
+def _ledger():
+    import os
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), "frontier.json")
+
+
+def load(path=None):
+    import json
+    try:
+        with open(path or _ledger()) as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return {"days": {}}
+
+
+def save(book, path=None):
+    import json
+    with open(path or _ledger(), "w") as fh:
+        json.dump(book, fh, indent=1, sort_keys=True)
+
+
+def _sig(front):
+    # plain lists: the stored copy comes back from JSON as lists
+    return [[r["target"], r["standard"], [L["label"] for L in r.get("legs") or []]] for r in front["rows"]]
+
+
+def record(front, pool, day, set_card=False, path=None):
+    """Archive before play. Every change of the live frontier is appended
+    (time, policy, tickets); at card time the day's tickets are frozen with
+    the full candidate pool they were chosen from, and graded later."""
+    import datetime as dt
+    import policy
+    book = load(path)
+    d = book["days"].setdefault(day, dict(versions=[]))
+    now = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+    sig = _sig(front)
+    if not d["versions"] or d["versions"][-1]["sig"] != sig:
+        d["versions"].append(dict(t=now, policy=policy.version(), sig=sig))
+        d["versions"] = d["versions"][-60:]
+    if set_card and "tickets" not in d:
+        d["set_at"], d["policy"] = now, policy.version()
+        d["pool"] = pool
+        d["tickets"] = [dict(target=r["target"], standard=r["standard"], prob=r.get("prob"),
+                             dec=r.get("dec"), total=r.get("total"), status="open" if r.get("legs") else "none",
+                             legs=[dict(L, status="open") for L in r.get("legs") or []],
+                             ceiling=r.get("ceiling"))
+                        for r in front["rows"]]
+        props = [L for t in d["tickets"] for L in t["legs"] if L.get("kind") == "prop"]
+        if props:
+            import props_ledger
+            props_ledger.record({"tickets": {"frontier": [{"legs": props}]}}, day)
+    for old in sorted(book["days"])[:-30]:
+        book["days"][old].pop("pool", None)              # keep 30 days of pools
+    save(book, path)
+
+
+def grade(final, path=None):
+    """Settle frozen tickets: game legs on final scores (pushes leave the
+    slip), props from the props ledger."""
+    import locks
+    import props_ledger
+    import stacks
+    book = load(path)
+    pl = props_ledger.load()
+    for d in book["days"].values():
+        for t in d.get("tickets") or []:
+            for L in t["legs"]:
+                if L["status"] != "open":
+                    continue
+                if L.get("kind") == "prop":
+                    e = pl.get(props_ledger.prop_key(L))
+                    if e and e["status"] != "open":
+                        L["status"] = "void" if e["status"] == "ungradable" else e["status"]
+                else:
+                    locks.settle(L, final)
+                    stacks.repush(L)
+            st = [L["status"] for L in t["legs"]]
+            if t["status"] == "none":
+                continue
+            t["status"] = ("lost" if "lost" in st else "open" if "open" in st
+                           else "won" if "won" in st else "void")
+    save(book, path)
+
+
+def report(path=None):
+    """Forward record of frozen tickets by target and standard: made, cashed,
+    claimed chance (the product at the time), and how many were unavailable."""
+    book = load(path)
+    agg = {}
+    for day, d in sorted(book["days"].items()):
+        for t in d.get("tickets") or []:
+            k = f'{t["target"]:g}x at {round(100 * t["standard"])}%'
+            a = agg.setdefault(k, dict(target=t["target"], standard=t["standard"], made=0, cashed=0,
+                                       settled=0, claimed=0.0, unavailable=0, days=[]))
+            if t["status"] == "none":
+                a["unavailable"] += 1
+                continue
+            a["made"] += 1
+            if t["status"] in ("won", "lost"):
+                a["settled"] += 1
+                a["cashed"] += t["status"] == "won"
+                a["claimed"] += t.get("prob") or 0
+            a["days"].append(day)
+    for a in agg.values():
+        a["claimed"] = round(100 * a["claimed"] / a["settled"], 1) if a["settled"] else None
+        a["first"] = a["days"][0] if a["days"] else None
+        a["days"] = len(a["days"])
+    return sorted(agg.values(), key=lambda a: (a["target"], -a["standard"]))
+
+
+def replay(day, path=None):
+    """True when the optimizer, re-run on the day's archived pool, gives the
+    tickets frozen at card time; None without an archive."""
+    d = load(path)["days"].get(day) or {}
+    if not d.get("pool") or "tickets" not in d:
+        return None
+    import locks
+    legs = [dict(L, dec=locks._dec(L.get("price"))) for L in d["pool"]]
+    ok = [L for L in legs if verify(L, now=_at(d["set_at"]))[0]]
+    for t in d["tickets"]:
+        r = optimize(ok, t["target"], t["standard"])
+        want = [L["label"] for L in t["legs"]]
+        if [L["label"] for L in r["legs"] or []] != want:
+            return False
+    return True
+
+
+def _at(iso):
+    import datetime as dt
+    return dt.datetime.fromisoformat(iso)

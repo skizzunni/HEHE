@@ -61,6 +61,24 @@ PAIRED = dict(run="2026-10-19", rule="promote only if the 95% range is above zer
     same="one pick per game", promoted=[], result=dict(all=dict(picks=476, old_won=305, new_won=320, diff=15,
     ci95_diff=[-6, 42], new_won_old_missed=53, old_won_new_missed=38, promote=False)))])
 
+def frontier_fixture():
+    def leg(i, p, price):
+        return dict(gid=f"nfl:{i}", label=f"Under {40 + i}.5 points", p=p, price=price,
+                    match=f"Game {i}", lg="NFL", league="nfl", kind="game", spec=dict(t="under"))
+    rows = [dict(target=2.0, standard=0.80, legs=[leg(1, 0.84, "-300"), leg(2, 0.82, "-260"), leg(3, 0.81, "-250")],
+                 prob=0.558, total=2.04, n=3, ev=-0.06, exact=True, payout_basis="estimated: product"),
+            dict(target=3.0, standard=0.80, legs=[leg(i, 0.81, "-250") for i in range(4, 9)],
+                 prob=0.349, total=3.05, n=5, ev=-0.07, exact=True, payout_basis="estimated: product"),
+            dict(target=5.0, standard=0.80, legs=None, ceiling=2.74, exact=True),
+            dict(target=5.0, standard=0.75, legs=[leg(i, 0.76, "-320") for i in range(9, 15)],
+                 prob=0.19, total=5.02, n=6, ev=-0.05, exact=True)]
+    ev = dict(sources=[dict(name="Kalshi mid-prices", rows=[dict(band="80-85%", n=1151, games=237, said=82.5,
+              hit=83.3, ci95=[80.9, 85.8], first="2026-08-29", last="2026-10-18", verdict="supported")])])
+    return dict(today={"0": dict(rows=rows, candidates=120, games=30, excluded=4, excluded_why={"game has started": 4},
+                                 settlement="full game", max_legs=6, kind_cap=3)},
+                evidence=ev, record=[], backtest=None)
+
+
 PROBE = """<script>setTimeout(function(){
   var out = {banner: !!document.getElementById("stalebar")};
   var b = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Locks/.test(x.textContent)})[0];
@@ -78,7 +96,15 @@ PROBE = """<script>setTimeout(function(){
       setTimeout(function(){
         out.health = ((document.getElementById("health") || {}).textContent || "");
         out.results = ((document.getElementById("panel") || {}).textContent || "");
-        document.title = "UICHECK " + JSON.stringify(out);
+        var tg = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Targets/.test(x.textContent)})[0];
+        if (tg) tg.click();
+        setTimeout(function(){
+          var st = document.querySelector('[data-tgstd="0.8"]'); if (st) st.click();
+          setTimeout(function(){
+            out.targets = ((document.getElementById("panel") || {}).textContent || "");
+            document.title = "UICHECK " + JSON.stringify(out);
+          }, 300);
+        }, 300);
       }, 300);
     }, 300);
   }, 300);
@@ -89,7 +115,7 @@ def render(captured_ms, health=None):
     s = open(os.path.join(ROOT, "board.html")).read()
     s = re.sub(r'"captured":\d+', f'"captured":{captured_ms}', s, count=1)
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
-                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"health":' + json.dumps(health) + ',', 1)
+                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"health":' + json.dumps(health) + ',', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -138,6 +164,12 @@ def main():
     if "Changes tested" not in new["results"] or "New right, old wrong" not in new["results"] \
             or "-6 to 42" not in new["results"]:
         fails.append("Results must list each tested change with both directions: " + new["results"][-300:])
+    tg = new["targets"]
+    for want in ("cash chance (est.)", "55.8%", "Unavailable at 80%+ legs", "most a ticket of those legs can pay today is 2.74x",
+                 "at a lower standard (75%+ legs)", "What 80%+ legs have done", "1151", "supported"):
+        if want not in tg:
+            fails.append("Targets tab missing: " + want + " | " + tg[:300])
+            break
     if "All checks passing" not in new["health"]:
         fails.append("clean review must read 'All checks passing': " + new["health"])
     for f in fails:

@@ -481,7 +481,7 @@ const esc = s => String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g,
   .replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#39;");
 
 function buildTabs(){
-  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props" || slot === "shared" || slot === "bot" || slot === "locks" || slot === "lottery"){
+  if(slot === "results" || slot === "card" || slot === "stacks" || slot === "markets" || slot === "props" || slot === "shared" || slot === "bot" || slot === "locks" || slot === "lottery" || slot === "targets"){
     tabs.innerHTML = ""; tabs.hidden = true; return;
   }
   tabs.innerHTML = "";
@@ -561,6 +561,10 @@ function renderView(){
   if(slot === "lottery"){
     tabs.hidden = true; how.hidden = true;
     return drawLottery();
+  }
+  if(slot === "targets"){
+    tabs.hidden = true; how.hidden = true;
+    return drawTargets();
   }
   if(slot === "shared"){
     tabs.hidden = true; how.hidden = true;
@@ -940,6 +944,94 @@ function playCell(z){
   if (!z) return '&mdash;';
   return 'top ' + z.n + ' (' + (100 * z.prob).toFixed(0) + '%): '
     + (z.result === 'open' ? 'pending' : z.result === 'won' ? 'hit' : z.result === 'lost' ? 'missed' : 'void');
+}
+// ------------------------------------------------------------ payout targets
+// tickets.py: for a total return of 2x / 3x / 5x, the likeliest ticket whose
+// every leg meets the chosen standard -- one leg per game, no quota of legs.
+let TGDAY = null, TGBOOST = "0", TGSTD = 0.80;
+try { TGSTD = +(localStorage.getItem("tgstd") || 0.80) || 0.80;
+      TGBOOST = localStorage.getItem("tgboost") || "0"; } catch (e) {}
+function drawTargets(){
+  const F = D.frontier || {};
+  const day = TGDAY || "today";
+  const X = ((F[day] || {})[TGBOOST]) || {};
+  const rows = X.rows || [];
+  const pct = x => (100 * x).toFixed(1) + '%';
+  const pill = (attr, val, cur, txt) => '<button type="button" ' + attr + '="' + val + '" aria-pressed="'
+    + (String(val) === String(cur)) + '">' + txt + '</button>';
+  let h = '<div class="parlays"><div class="sechead"><h3>Payout targets</h3>' + dayPills("tgday", day) + '</div>'
+    + '<p class="note">Pick the leg standard and the payout you want; this finds the combination of legs with the '
+    + 'highest estimated chance that every leg wins and the slip still pays that much. One leg per game, at most '
+    + (X.max_legs || 6) + ' legs, at most ' + (X.kind_cap || 3) + ' of one league and kind. No quota: it stops when '
+    + 'the payout is reached. A ticket of favourites is never &ldquo;safe&rdquo;.</p>'
+    + '<p><span class="pills">' + [0.90, 0.85, 0.80, 0.75].map(v => pill("data-tgstd", v, TGSTD, 'legs ' + (100 * v) + '%+')).join("")
+    + '</span> <span class="pills">' + ["0", "25", "50", "100"].map(v => pill("data-tgboost", v, TGBOOST,
+        v === "0" ? "no boost" : "+" + v + "% boost")).join("") + '</span></p>';
+  if(!rows.length){
+    panel.innerHTML = h + '<p class="empty">No candidate legs for ' + day + ' yet.</p></div>';
+    return;
+  }
+  [2, 3, 5].forEach(T => {
+    const r = rows.find(x => x.target === T && Math.abs(x.standard - TGSTD) < 1e-9) || {};
+    h += '<h3 class="tier-h">' + T + 'x total return' + (TGBOOST !== "0" ? ' with a +' + TGBOOST + '% boost' : '') + '</h3>';
+    if(r.legs && r.legs.length){
+      h += strip([["cash chance (est.)", pct(r.prob)], ["pays (est.)", r.total.toFixed(2) + "x"],
+                  ["legs", r.n], ["est. return", (r.ev >= 0 ? "+" : "") + (100 * r.ev).toFixed(1) + "%"]])
+        + '<ul class="legs">' + r.legs.map(x => legHTML(x, {})).join("") + '</ul>'
+        + (r.exact ? '' : '<p class="note">The search hit its limit: this is the best found, not proven best.</p>');
+    } else {
+      h += '<p class="note"><b>Unavailable at ' + (100 * TGSTD) + '%+ legs.</b> The most a ticket of those legs '
+        + 'can pay today is ' + (r.ceiling || 1).toFixed(2) + 'x. The standard is not lowered for you.</p>';
+      const alts = rows.filter(x => x.target === T && x.standard < TGSTD && x.legs && x.legs.length);
+      if(alts.length){
+        const a = alts.sort((p, q) => q.standard - p.standard)[0];
+        h += '<p class="note">Alternative, <b>at a lower standard (' + (100 * a.standard) + '%+ legs)</b>: '
+          + a.n + ' legs, ' + pct(a.prob) + ' cash chance (est.), pays ' + a.total.toFixed(2) + 'x, est. return '
+          + (100 * a.ev).toFixed(1) + '%.</p>';
+      }
+    }
+  });
+  h += '<p class="note">Payout: ' + esc((rows[0] || {}).payout_basis || '') + '. Settlement: ' + esc(X.settlement || '')
+    + '. ' + (X.candidates || 0) + ' legs from ' + (X.games || 0) + ' games passed the wager check; '
+    + (X.excluded || 0) + ' excluded (' + Object.entries(X.excluded_why || {}).map(([k, v]) => esc(k) + ': ' + v).join('; ')
+    + ').</p>';
+  // what a "%" standard has actually done
+  const E = F.evidence || {};
+  const band = (100 * TGSTD) + '-' + (100 * TGSTD + 5) + '%';
+  h += '<details class="explain" open><summary>What ' + (100 * TGSTD) + '%+ legs have done</summary>'
+    + '<table class="mk"><thead><tr><th>Source</th><th class="num">Legs</th><th class="num">Games</th>'
+    + '<th class="num">Stated</th><th class="num">Hit</th><th class="num">95% range</th><th>Dates</th><th>Verdict</th></tr></thead><tbody>'
+    + (E.sources || []).map(src => { const b = (src.rows || []).find(x => x.band === band) || {};
+        return '<tr><td>' + esc(src.name) + '</td><td class="num">' + (b.n || 0) + '</td><td class="num">' + (b.games || 0)
+          + '</td><td class="num">' + (b.said == null ? '&mdash;' : b.said + '%') + '</td><td class="num">'
+          + (b.hit == null ? '&mdash;' : b.hit + '%') + '</td><td class="num">' + (b.ci95 ? b.ci95[0] + '&ndash;' + b.ci95[1] + '%' : '&mdash;')
+          + '</td><td>' + (b.first ? esc(b.first) + ' to ' + esc(b.last) : '&mdash;') + '</td><td>' + esc(b.verdict || 'no data')
+          + '</td></tr>'; }).join('') + '</tbody></table><p class="note">The band shown is ' + band + '. Ratings are never '
+    + 'raised to make a ticket look stronger; &ldquo;thin&rdquo; means under 30 games.</p></details>';
+  const B = F.backtest;
+  if(B && B.results){
+    h += '<details class="explain"><summary>Whole-ticket backtest: this optimizer vs the current card method</summary>'
+      + '<p class="note">' + B.dates + ' dates, ' + B.games + ' games of settled Kalshi contracts; the same quotes, '
+      + 'standard and payout target for both. Not promoted until a range is wholly above zero.</p>'
+      + '<table class="mk"><thead><tr><th></th><th class="num">Card method</th><th class="num">Optimizer</th>'
+      + '<th class="num">New cashed, old missed</th><th class="num">Old cashed, new missed</th><th class="num">95% range</th></tr></thead><tbody>'
+      + B.results.map(r => '<tr><td>' + r.target + 'x at ' + Math.round(100 * r.standard) + '%</td><td class="num">'
+          + (r.baseline.made ? r.baseline.cashed + '/' + r.baseline.made : 'none') + '</td><td class="num">'
+          + (r.optimizer.made ? r.optimizer.cashed + '/' + r.optimizer.made + ' (claimed ' + r.optimizer.claimed + '%)' : 'none')
+          + '</td><td class="num">' + (r.paired.new_cashed_old_missed ?? '&mdash;') + '</td><td class="num">'
+          + (r.paired.old_cashed_new_missed ?? '&mdash;') + '</td><td class="num">'
+          + (r.paired.ci95 ? r.paired.ci95[0] + ' to ' + r.paired.ci95[1] : '&mdash;') + '</td></tr>').join('')
+      + '</tbody></table></details>';
+  }
+  const R = F.record || [];
+  if(R.length){
+    h += '<details class="explain"><summary>Record of tickets set at 8 AM</summary><table class="mk"><thead><tr><th></th>'
+      + '<th class="num">Set</th><th class="num">Cashed</th><th class="num">Claimed</th><th class="num">Unavailable</th></tr></thead><tbody>'
+      + R.map(a => '<tr><td>' + a.target + 'x at ' + Math.round(100 * a.standard) + '%</td><td class="num">' + a.made
+          + '</td><td class="num">' + a.cashed + '/' + a.settled + '</td><td class="num">' + (a.claimed == null ? '&mdash;' : a.claimed + '%')
+          + '</td><td class="num">' + a.unavailable + '</td></tr>').join('') + '</tbody></table></details>';
+  }
+  panel.innerHTML = h + '</div>';
 }
 // ------------------------------------------------------------ lottery view
 // $1 tickets built to pay about $10,000 (lottery.py): the most efficient
@@ -1425,7 +1517,7 @@ function drawCard(slot){
     + '</tbody></table>' + cardProps(slot);
 }
 
-["today","tomorrow","locks","lottery","props","results","|","card","stacks","markets","bot"].forEach(s => {
+["today","tomorrow","locks","targets","lottery","props","results","|","card","stacks","markets","bot"].forEach(s => {
   if(s === "|"){ const d = document.createElement("span"); d.className = "sep"; days.appendChild(d); return; }
   const b = document.createElement("button");
   b.setAttribute("aria-pressed", String(s === slot));
@@ -1436,6 +1528,8 @@ function drawCard(slot){
   } else if(s === "locks"){
     const L = ((D.locks || {}).today || {}).locks || [];
     b.innerHTML = "Locks" + '<span class="dnum">' + L.length + ' FanDuel</span>';
+  } else if(s === "targets"){
+    b.innerHTML = "Targets" + '<span class="dnum">2x &middot; 3x &middot; 5x</span>';
   } else if(s === "lottery"){
     b.innerHTML = "Lottery" + '<span class="dnum">1 in 100 &middot; $10k</span>';
   } else if(s === "bot"){
@@ -1878,6 +1972,14 @@ document.addEventListener("click", e => {
   }
   const ltd = e.target.closest("[data-ltday]");
   if(ltd){ LTDAY = ltd.getAttribute("data-ltday"); render(); return; }
+  const tgd = e.target.closest("[data-tgday]");
+  if(tgd){ TGDAY = tgd.getAttribute("data-tgday"); render(); return; }
+  const tgs = e.target.closest("[data-tgstd]");
+  if(tgs){ TGSTD = +tgs.getAttribute("data-tgstd");
+           try { localStorage.setItem("tgstd", String(TGSTD)); } catch (x) {} render(); return; }
+  const tgb = e.target.closest("[data-tgboost]");
+  if(tgb){ TGBOOST = tgb.getAttribute("data-tgboost");
+           try { localStorage.setItem("tgboost", TGBOOST); } catch (x) {} render(); return; }
   const ltc = e.target.closest("[data-ltcopy]");
   if(ltc){
     const [dy, i] = ltc.getAttribute("data-ltcopy").split("|");

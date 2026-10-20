@@ -407,6 +407,20 @@ def parse_soccer(markets, g):
     return out
 
 
+def quote_time(g):
+    """ISO UTC time of the OLDEST FanDuel data behind this game's legs: the
+    main feed and the game's own alternate-lines page."""
+    ts = []
+    for f in (CACHE, os.path.join(os.path.dirname(CACHE), "fd_events", f'{(g or {}).get("id")}.json')):
+        try:
+            ts.append(os.path.getmtime(f))
+        except OSError:
+            pass
+    if not ts:
+        return None
+    return dt.datetime.fromtimestamp(min(ts), dt.timezone.utc).isoformat(timespec="seconds")
+
+
 def load_alts(g):
     """Alternate lines for one FanDuel game, cached EVENT_TTL seconds."""
     if not g.get("id"):
