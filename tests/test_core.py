@@ -432,6 +432,8 @@ class RecommendationHistory(unittest.TestCase):
         row = dict(id="efl1:1", mypick=pick, myside="home", dc=dc, myconf=conf, label="A @ B",
                    legs=[dict(side="home", price=price, at=at)], mkt=dict(start=start),
                    price_at=at, price_book="DraftKings")
+        if dc:
+            row["dc_legs"] = [dict(side="home", price=price, book="DraftKings", at=at, market="double_chance")]
         state = dict(dates=("20261018", "20261019"), slots=dict(today={"efl1": [row]}, tomorrow={}))
         real = ledger.LEDGER
         ledger.LEDGER = path
@@ -448,8 +450,8 @@ class RecommendationHistory(unittest.TestCase):
         self.assertEqual((e["first_price"], len(e["history"])), ("-210", 1))
         e = self.run_record(path, "Middlesbrough", False, "-210", 0.6, later)
         self.assertEqual(len(e["history"]), 1)                      # unchanged: no new version
-        e = self.run_record(path, "Middlesbrough", True, "-210", 0.8, later)
-        self.assertIsNone(e["first_price"])                          # double chance: not the -210 bet
+        e = self.run_record(path, "Middlesbrough", True, "-500", 0.8, later)
+        self.assertEqual(e["first_price"], "-500")                   # the actual DC quote, not the -210 bet
         self.assertEqual([h["dc"] for h in e["history"]], [False, True])
         self.assertEqual(e["first"]["pick"], "Middlesbrough")
         self.assertFalse(e["first"]["dc"])                           # what was first published stays

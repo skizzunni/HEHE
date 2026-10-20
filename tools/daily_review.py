@@ -272,8 +272,8 @@ def fit_frozen(graded, start):
     import calibration as C
     d0 = dt.date.fromisoformat(start)
     lo, hi = (d0 - dt.timedelta(days=FREEZE_DAYS)).isoformat(), (d0 - dt.timedelta(days=1)).isoformat()
-    # only picks that could be calls: "or draw" is never a call (calls.py)
-    rows = [e for e in C.graded(graded) if lo <= C.day_of(e) <= hi and not e.get("dc")]
+    # Only exact-market priced picks can be calls, including captured DC quotes.
+    rows = [e for e in C.graded(graded) if lo <= C.day_of(e) <= hi]
     by = defaultdict(list)
     for e in rows:
         by[call_group(e["league"])].append((e["conf"] / 100, e["status"] == "won"))
@@ -322,7 +322,7 @@ def frozen_report(graded, cfg):
     import calibration as C
     lo, hi = cfg.get("frozen_from"), cfg.get("frozen_to")
     cuts = cfg.get("cutoffs") or {}
-    rows = [e for e in C.graded(graded) if lo and lo <= C.day_of(e) <= hi and not e.get("dc")]
+    rows = [e for e in C.graded(graded) if lo and lo <= C.day_of(e) <= hi]
     strong = [e for e in rows if cuts.get(call_group(e["league"])) is not None
               and e["conf"] / 100 >= cuts[call_group(e["league"])]]
     k = sum(e["status"] == "won" for e in strong)

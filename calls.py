@@ -68,8 +68,8 @@ def is_call(league, conf):
 # The set is chosen at the first build from CALL_HOUR (8:00 AM Eastern, with
 # the Locks card) and is then frozen in calls.json: a call is never taken back
 # or replaced. If fewer than TOP_N games qualify at that moment, later builds
-# add the next strongest until there are TOP_N. "Or draw" picks are not calls:
-# the double-chance bet has no quoted price of its own. Every call counts in
+# add the next strongest until there are TOP_N. "Or draw" picks need their own
+# captured double-chance quote; a straight-win quote never qualifies them. Every call counts in
 # the record at the chance it was published with; one under its league's
 # strong cut-off is labelled a close call.
 import datetime as _dt
@@ -107,30 +107,37 @@ def candidates(rows_by_league, day, now):
     out = []
     for lg, rows in (rows_by_league or {}).items():
         for r in rows or []:
-            if not r.get("mypick") or r["mypick"].strip().upper() == "TBD" or r.get("dc"):
+            if not r.get("mypick") or r["mypick"].strip().upper() == "TBD":
                 continue
             if not r.get("myconf") or not freshness.can_call(r, now):
                 continue
             st = freshness.parse((r.get("mkt") or {}).get("start"))
             if st is None or st <= now:
                 continue
-            leg = next((L for L in r.get("legs") or [] if L.get("side") == r.get("myside")), None)
+            from record_eligibility import selection_leg, quote_at, quote_book
+            leg = selection_leg(r)
             if not leg or not leg.get("price"):
                 continue
             pct, how = pub.publish(lg, r["myconf"])
-            out.append(dict(id=r["id"], league=lg, pick=r["mypick"], side=r.get("myside"), match=r.get("label"),
+            out.append(dict(id=r["id"], league=lg, pick=r["mypick"] + (" or draw" if r.get("dc") else ""), side=r.get("myside"), match=r.get("label"),
                             tip=r.get("tip"), start=(r.get("mkt") or {}).get("start"),
-                            conf=pct, price=leg["price"], book=r.get("price_book"),
-                            price_at=r.get("price_at"), calib=how,
+                            conf=pct, price=leg["price"], book=quote_book(r),
+                            dc=bool(r.get("dc")), price_market="double_chance" if r.get("dc") else "moneyline",
+                            price_ref=leg.get("fd") or leg.get("dk"),
+                            price_at=quote_at(r), calib=how,
                             close=not is_call(lg, pct)))
     out.sort(key=lambda c: (-c["conf"], c["start"] or ""))
     return out
 
 
-def _row_chance(r, side):
+def _row_chance(r, side, dc=False):
     """The market's no-vig chance of `side` on a board row, or None."""
     leg = next((L for L in r.get("legs") or [] if L.get("side") == side), None)
-    return leg.get("prob") if leg else None
+    p = leg.get("prob") if leg else None
+    if dc and p is not None:
+        draw = next((L.get("prob") for L in r.get("legs") or [] if L.get("side") == "draw"), None)
+        return p + draw if draw is not None else None
+    return p
 
 
 def watch(rec, rows_by_league, now, summary=None):
@@ -162,12 +169,13 @@ def watch(rec, rows_by_league, now, summary=None):
                          for r in (rows_by_league or {}).get(lg) or [] if r.get("price_at"))}
     rec["frozen"] = sorted(frozen)
     for c, r in live:
-        if c["league"] in frozen or not freshness.can_call(r, now):
+        call_row = dict(r, myside=c.get("side") or r.get("myside"), dc=bool(c.get("dc")))
+        if c["league"] in frozen or not freshness.can_call(call_row, now):
             continue
         # calls set before 2026-10-20 13:30 UTC carry no side: the row's, if
         # the row still picks the same team
         side = c.get("side") or (r.get("myside") if r.get("mypick") == c["pick"] else None)
-        p = _row_chance(r, side)
+        p = _row_chance(r, side, bool(c.get("dc")))
         if p is None or abs(100 * p - c["conf"]) <= news.MOVE_PTS:
             continue
         old = c["conf"]

@@ -48,12 +48,14 @@ def is_fresh(at, now=None):
 
 def priced(r):
     """Does the row carry a sportsbook price at all?"""
-    return bool(r.get("legs"))
+    from record_eligibility import selection_leg
+    return selection_leg(r) is not None
 
 
 def stale(r, now=None):
     """A priced row whose price is too old, or has no capture time."""
-    return priced(r) and not is_fresh(r.get("price_at"), now)
+    from record_eligibility import quote_at
+    return priced(r) and not is_fresh(quote_at(r), now)
 
 
 def can_call(r, now=None):

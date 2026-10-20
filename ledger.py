@@ -24,7 +24,7 @@ So the ledger separates two things:
     calibration gap wider than two standard errors). Below that it says so and
     changes nothing.
 """
-from record_eligibility import record_priced
+from record_eligibility import record_priced, selection_leg, quote_at, quote_book
 import argparse
 import datetime as dt
 import json
@@ -115,7 +115,7 @@ def _fix_first_prices(book):
     one was carried over from an earlier straight-win call on the same team
     (the bet changed, the entry price did not). Cleared, and marked."""
     for e in book.values():
-        if e.get("dc") and e.get("first_price") and not e.get("first_price_cleared"):
+        if e.get("dc") and e.get("price_market") != "double_chance" and e.get("first_price") and not e.get("first_price_cleared"):
             e["first_price_cleared"] = e.pop("first_price")
 
 
@@ -160,10 +160,7 @@ def record(state=None):
                 import freshness
                 if not freshness.can_call(r):
                     continue
-                leg = next((L for L in r["legs"]
-                            if L.get("side") and L["side"] == r.get("myside")), None)
-                if r.get("dc"):
-                    leg = None        # "or draw": the straight price is not this bet's
+                leg = selection_leg(r)
                 # the chance as published: whole percent, through the
                 # walk-forward calibrator (calibration.py); p_raw keeps the
                 # no-vig chance it started from, for the next fit
@@ -175,7 +172,9 @@ def record(state=None):
                              why=r.get("why", ""), tip=r.get("tip"),
                              price=(leg or {}).get("price"),
                              # the book and capture time behind the price
-                             price_book=r.get("price_book"), price_at=r.get("price_at"),
+                             price_book=quote_book(r), price_at=quote_at(r),
+                             price_market="double_chance" if r.get("dc") else "moneyline",
+                             price_ref=(leg or {}).get("fd") or (leg or {}).get("dk"),
                              dog=bool((leg or {}).get("dog")),
                              # Whether the book made my side the favourite. Derive
                              # it from the price, not from the board's `pick`
@@ -237,16 +236,17 @@ def record(state=None):
                 # model's share and the policy fingerprint (policy.version)
                 import policy as _pol
                 snap = dict(t=entry["logged"], pick=entry["pick"], dc=entry["dc"],
-                            price=entry.get("price"), price_at=r.get("price_at"),
-                            price_book=r.get("price_book"),
+                            price=entry.get("price"), price_at=entry.get("price_at"),
+                            price_book=entry.get("price_book"), price_market=entry.get("price_market"),
+                            price_ref=entry.get("price_ref"),
                             conf=entry["conf"], why=entry["why"],
                             strong=entry["strong"], version=POLICY, policy=_pol.version(),
                             w=_pol.model_weight(lg), p_market_away=r.get("p_market_away"),
                             p_model_away=r.get("p_model_away"),
                             prices={L.get("side"): L.get("price") for L in r.get("legs") or []
                                     if L.get("side")})
-                if not hist or {k: hist[-1].get(k) for k in ("pick", "dc", "price", "conf", "policy")} != \
-                        {k: snap.get(k) for k in ("pick", "dc", "price", "conf", "policy")}:
+                if not hist or {k: hist[-1].get(k) for k in ("pick", "dc", "price", "price_market", "price_book", "price_at", "conf", "policy")} != \
+                        {k: snap.get(k) for k in ("pick", "dc", "price", "price_market", "price_book", "price_at", "conf", "policy")}:
                     hist.append(snap)
                 entry["history"] = hist
                 if "first" not in prev:

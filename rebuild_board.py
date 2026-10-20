@@ -124,10 +124,8 @@ def snapshot():
                 if not r.get("mypick") or r["mypick"].strip().upper() == "TBD":
                     continue          # an undetermined competitor is not a pick
                 # join the price to my side; legs are keyed away/home, picks by name
-                leg = next((L for L in r["legs"]
-                            if L.get("side") and L["side"] == r.get("myside")), None)
-                if r.get("dc"):
-                    leg = None        # "or draw": the straight price is not this bet's
+                from record_eligibility import selection_leg, quote_at, quote_book
+                leg = selection_leg(r)
                 # published in whole percent, through calibration.py (the
                 # walk-forward fit is off until it passes an untouched test)
                 _dd = d._STATE["dates"][0 if slot == "today" else 1]
@@ -154,7 +152,7 @@ def snapshot():
                 st_ = freshness.stale(r, pub)
                 np_ = not freshness.priced(r)
                 if r.get("price_at"):
-                    ats.append(r["price_at"])
+                    ats.append(quote_at(r))
                 rows.append({"mp": r["mypick"] + (" or draw" if r.get("dc") else ""),
                              "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
@@ -163,7 +161,8 @@ def snapshot():
                              "nc": st_ or np_ or not calls.is_call(k, mc),
                              "st": st_, "np": np_,
                              "src": (r.get("src") or "model") if np_ else None,
-                             "pa": r.get("price_at"), "bk": r.get("price_book"),
+                             "pa": quote_at(r), "bk": quote_book(r),
+                             "market": "double_chance" if r.get("dc") else "moneyline",
                              "pk": pk, "pl": pl, "ek": ek, "el": el,
                              # fair price and edge come from the SAME rounded
                              # rate the row displays, so the three never
@@ -178,11 +177,11 @@ def snapshot():
                                             (leg or {}).get("price")),
                              "why": r["why"],
                              "p": leg["price"] if leg else None,
-                             "d": bool(leg["dog"]) if leg else False,
+                             "d": bool((leg or {}).get("dog")),
                              "dk": (leg or {}).get("dk"),
-                             "fd": fanduel.ml_ref(FD, k, (r.get("mkt") or {}).get("away"),
+                             "fd": ((leg or {}).get("fd") if r.get("dc") else fanduel.ml_ref(FD, k, (r.get("mkt") or {}).get("away"),
                                                   (r.get("mkt") or {}).get("home"),
-                                                  r["mypick"]),
+                                                  r["mypick"])),
                              "lg": lab})
             # ranked by the published chance (the one probability)
             rows.sort(key=lambda x: (x["mc"] is None, -(x["hit"] or 0),

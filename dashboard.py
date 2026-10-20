@@ -555,6 +555,47 @@ def model_book(day):
     return book
 
 
+def capture_dc(row, league, fdbook):
+    """Capture a real FanDuel full-match team-or-draw quote, never synthesize
+    a price from the three-way probabilities. Keep DC legs separate so raw
+    moneyline consumers cannot mistake one for a straight-win selection.
+    """
+    import fanduel
+    import freshness
+    from record_eligibility import valid_price
+    row["dc_legs"] = []
+    if not row.get("dc"):
+        return
+    m = row.get("mkt") or {}
+    start = freshness.parse(m.get("start"))
+    if not start or not m.get("away") or not m.get("home"):
+        return
+    game = fanduel.find_soccer(fdbook, league, m["away"], m["home"], m["start"])
+    gst = freshness.parse((game or {}).get("start"))
+    if not game or not gst or abs((gst-start).total_seconds()) > 20*60:
+        return
+    alts = fanduel.load_alts(game)
+    captured = fanduel.quote_time(game)
+    if not freshness.parse(captured):
+        return
+    for kind, who, _, _, ref, price, label in alts:
+        if kind != "dc" or not valid_price(price) or not ref:
+            continue
+        # The runner names come from this matched fixture: match exactly to
+        # its own book team names before translating to the ESPN side.
+        side = next((side for side in ("away", "home")
+                     if fanduel.norm(who) == fanduel.norm(game.get(side))), None)
+        if side is None:
+            continue
+        probs = {L.get("side"): L.get("prob") for L in row.get("legs") or []}
+        probability = (probs[side] + probs["draw"]
+                       if probs.get(side) is not None and probs.get("draw") is not None else None)
+        row["dc_legs"].append(dict(side=side, who=m[side], market="double_chance",
+                                   price=str(price), book="FanDuel", at=captured,
+                                   fd=ref, dk=None, dog=float(str(price).replace("+", "")) > 0,
+                                   prob=probability, label=label))
+
+
 def collect(key, path, day, mlbctx, mybook=None):
     url = f"{ESPN}/{path}/scoreboard?dates={day}"
     d = get(url, fresh=SCOREBOARD_FRESH)
@@ -821,6 +862,22 @@ def refresh():
                 rows = []
             slots[slot][k] = rows
             fresh.extend(rows)
+    dc_rows = [(r, k) for slot in slots.values() for k, rows in slot.items()
+               for r in rows if r.get("dc")]
+    if dc_rows:
+        try:
+            import fanduel
+            fdbook = fanduel.load()
+            with ThreadPoolExecutor(max_workers=8) as ex:
+                futures = [ex.submit(capture_dc, r, k, fdbook) for r, k in dc_rows]
+                for f in futures:
+                    try:
+                        f.result()
+                    except Exception:
+                        # A failed quote fetch leaves the exact bet unpriced.
+                        pass
+        except Exception:
+            pass
     stamp = now.strftime("%-I:%M %p")
     changes = diff(fresh, stamp)
     with _LOCK:

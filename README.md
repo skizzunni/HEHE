@@ -2618,3 +2618,25 @@ Validation: all 5 new regression tests failed before the fix and pass after it;
 full suite **133 tests passed**. Includes old settled rows, permanent exclusion,
 DC masquerading as priced, all-price versus quoted-price calibration, and the
 visible Results disclosure. Original outcomes are retained, never deleted.
+
+## Oct 20 independent audit — fix 2: quote the double-chance bet
+
+`dashboard.refresh()` captures actual FanDuel DOUBLE_CHANCE runners from matched
+soccer fixtures, requiring both teams and a known kickoff within 20 minutes.
+Separate `dc_legs` store market, price, book, capture timestamp and selection
+reference so moneyline consumers cannot confuse the wagers. No DC price is
+synthesized from 1X2 odds or probabilities.
+
+The ledger, board and daily top-five calls use the exact market's quote. Missing,
+untimed or stale DC prices cannot borrow fresh moneyline prices. Priced DC calls
+say “or draw”; append-only history retains provenance and genuine DC first prices.
+Historical unpriced rows stay excluded; missing quotes are not backfilled.
+Capture time means pipeline receipt/cache age, not a book-provided update time.
+
+Before/after on the same fixed windows in fix 1 is **unchanged**: overall
+857–535 all-time, 213–128 Oct 7–20, 5–2 Oct 20; priced strong 7–0, 7–0,
+and no eligible settled strongs, respectively. This fix collects future evidence.
+
+Validation: all 7 new DC regressions failed before the change (4 assertions,
+3 missing-feature errors), then passed. **140 tests passed** in the full suite.
+Existing market-switch history coverage now uses a genuine, distinct DC quote.
