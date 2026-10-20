@@ -1,7 +1,6 @@
 # Review 2026-10-20
 
-Picks 16-4 (80.0% vs 68.2% claimed).
-Strong calls 8-2 (80.0% vs 78.7% claimed).
+Picks 17-4 (81.0% vs 67.8% claimed).
 - LOST atp Roman Safiullin at 84.5%: lost 1-2 in sets · took it the distance · called at 84%
 - LOST atp Rinky Hijikata at 53.7%: lost 0-2 in sets · never won a set · called at 54%
 - LOST wta Cristina Bucsa at 51.5%: lost 0-2 in sets · never won a set · called at 52%
