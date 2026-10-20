@@ -2367,3 +2367,49 @@ A price fresh at build time can be hours old by the time the page is read, if Gi
 **Test.** `tests/ui_check.py` check 5 (prices 20 and 5 minutes old read stale and fresh) fails on the previous commit and passes now.
 
 **Numbers.** There is no before/after accuracy number: this changes what the page shows between rebuilds, not any pick or record. If that line is regularly red when you look, collection still has to move off GitHub's schedule (an external cron hitting `repository_dispatch`).
+
+## Accuracy plan, item 5: daily top-5 calls (2026-10-20)
+
+**What changed.**
+- **Which games are calls.** Each day's calls are the 5 highest published chances among today's games that meet three conditions:
+  - a sportsbook price under 15 minutes old (`freshness.can_call`);
+  - not started;
+  - not "or draw" (the double-chance bet has no quoted price of its own).
+- **Order and labels.** Calls are listed strongest first. A call under its league's strong cut-off is labelled a **close call** and published at its own number (58% stays 58%).
+- **When the set is fixed.** The set is taken at the first build from 8:00 AM Eastern and frozen in `calls.json`:
+  - a call is never withdrawn or replaced;
+  - if fewer than 5 games qualify then, later builds add the next strongest until there are 5;
+  - fewer games means fewer calls, and the list is never padded with a softer number.
+- **The dial.** `calls.TOP_N` is the honest dial (3 instead of 5).
+- **The record.**
+  - The ledger flags `call` and `call_rank` on those picks.
+  - Results carries the calls record with N, dates, the Wilson 95% range and the stated average.
+  - Every other priced pick is still archived in the ledger as data, but the calls record is the record.
+- **The page.** A new **Calls** tab opens first. It shows each call's chance, close/strong label, price and book, start and result.
+
+**Test.** `tests/test_daily_calls.py`, 5 tests:
+- the top 5 come strongest first, skipping stale, unpriced, started and double-chance games;
+- nothing is set before 8 AM;
+- calls are frozen, then topped up, and never exceed 5;
+- a 58% call under a 70% cut-off is a close call;
+- the ledger marks calls.
+
+They fail on the previous commit and pass now. The full suite and the UI probe pass.
+
+**Before / after on the same window** (graded book-priced picks 2026-10-15 to 2026-10-19). Each pick is ranked by its chance as published at 8:00 AM, from the ledger's history snapshots. Picks before 2026-10-18 have no snapshots, so their last pre-start chance is used, which is slightly later information.
+
+| record | N | hit | 95% range | stated |
+|---|---|---|---|---|
+| before: every recorded priced pick | 420 | 70.7% | 66.2–74.9 | 71.3% |
+| priced picks eligible as calls (no double chance, start after 8 AM) | 158 | 67.1% | 59.4–73.9 | 67.5% |
+| after: top 5 a day | 25 | 56.0% | 37.1–73.3 | 74.0% |
+| top 3 a day | 15 | 66.7% | 41.7–84.8 | 76.9% |
+
+- Day by day for the top 5:
+  - 10-15: 3–2
+  - 10-16: 1–4
+  - 10-17: 3–2 (two 93% college football favourites split)
+  - 10-18: 3–2
+  - 10-19: 4–1
+- On this window the top 5 ran 18 points under its stated chance. With 25 calls the range is wide (37–73%), so this is a warning, not a verdict.
+- This is a publishing rule, not a model; nothing was tuned on these numbers. The calibration table and its 2-SE flag (item 4) will show whether high-chance calls keep trailing.

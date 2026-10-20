@@ -47,6 +47,13 @@ def snapshot():
     page. Research happens once and both consumers read the same state.
     """
     d.refresh()
+    # the day's calls (calls.update_daily): set from 8:00 AM Eastern, frozen
+    try:
+        calls.update_daily(d._STATE)
+    except Exception:
+        import traceback
+        sys.stderr.write("daily calls not updated:\n")
+        traceback.print_exc()
     # Grading is a separate concern from research. When it throws, the board
     # itself is still perfectly good, so losing the whole rebuild -- and with
     # it the Pages deploy, since the deploy job is skipped when build fails --

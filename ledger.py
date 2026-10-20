@@ -192,6 +192,12 @@ def record(state=None):
                 # later refit of the cutoffs must not relabel past picks
                 import calls
                 entry["strong"] = calls.is_call(lg, entry["conf"])
+                # one of the day's calls (calls.update_daily): the record
+                # counts these; once a call, always a call
+                dc_ = calls.daily_ids(day).get(key) if (day and slot == "today") else None
+                if dc_ or book.get(key, {}).get("call"):
+                    entry["call"] = True
+                    entry["call_rank"] = (dc_ or {}).get("rank") or book.get(key, {}).get("call_rank")
                 # The game's own ET date, so the grader knows where to look.
                 # Without it the grader only searched the last three days, and
                 # any game it missed in that window was never graded.
@@ -599,6 +605,21 @@ def board_payload(limit=40):
     open_today = sum(1 for e in book.values()
                      if e.get("status") == "open" and (e.get("date") or "") == today)
 
+    # the day's calls and their record (calls.update_daily): N, dates, Wilson
+    import calls as _calls
+    cl = [e for e in done if e.get("call")]
+    cw = sum(e["status"] == "won" for e in cl)
+    calls_rec = dict(n=len(cl), won=cw, lost=len(cl) - cw,
+                     hit=round(100 * cw / len(cl), 1) if cl else None,
+                     stated=round(sum(e.get("conf") or 0 for e in cl) / len(cl), 1) if cl else None,
+                     ci95=_wilson(cw, len(cl)),
+                     dates=[min(map(day_of, cl)), max(map(day_of, cl))] if cl else None)
+    todays_calls = []
+    for c in sorted((_calls.load_daily()["days"].get(today) or {}).get("calls") or [],
+                    key=lambda c: -c["conf"]):
+        e = book.get(c["id"]) or {}
+        todays_calls.append(dict(c, status=e.get("status", "open"), live=e.get("live"),
+                                 score=e.get("scores") or e.get("live_score") or {}))
     gate = recs or []
     # epoch ms of this capture, so the page can show its own age at render
     # time. The page cannot fetch, so honesty about staleness is the only
@@ -616,13 +637,24 @@ def board_payload(limit=40):
                                   actual=round(c["actual"], 1),
                                   gap=round(c["gap"], 1), thin=c["n"] < 30)
                              for b, c in sorted(r.get("calibration", {}).items())],
-                live=live, feed=feed, gate=gate,
+                live=live, feed=feed, gate=gate, calls=todays_calls, calls_record=calls_rec,
+                calls_top=_calls.TOP_N,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
                 today_lost=sum(e["status"] == "lost" for e in todays),
                 today_open=open_today, feed_today=feed_today,
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))
+
+
+def _wilson(w, n, z=1.96):
+    if not n:
+        return None
+    p = w / n
+    d = 1 + z * z / n
+    c = p + z * z / (2 * n)
+    h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
+    return [round(100 * (c - h) / d, 1), round(100 * (c + h) / d, 1)]
 
 
 def _strong(e):
