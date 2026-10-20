@@ -1,8 +1,9 @@
 # Review 2026-10-20
 
-Picks 17-4 (81.0% vs 67.8% claimed).
+Picks 17-5 (77.3% vs 67.4% claimed).
 - LOST atp Roman Safiullin at 84.5%: lost 1-2 in sets · took it the distance · called at 84%
 - LOST atp Rinky Hijikata at 53.7%: lost 0-2 in sets · never won a set · called at 54%
+- LOST atp Botic Van De Zandschulp at 57.5%: lost 0-2 in sets · never won a set · called at 58%
 - LOST wta Cristina Bucsa at 51.5%: lost 0-2 in sets · never won a set · called at 52%
 - LOST wta Paula Badosa at 73.5%: lost 1-2 in sets · took it the distance · called at 74%
 LEAK ufc: 52.0% hit vs 64.6% claimed on 25 calls (14 days)
