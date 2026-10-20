@@ -7,10 +7,10 @@
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": false,
      "conf": 86,
-     "fp": "a5c157e549d0",
+     "fp": "3bb2de3b02e6",
      "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
+      "ok": true,
+      "what": "both XIs confirmed"
      },
      "id": "ucl:401915401",
      "league": "ucl",
@@ -34,6 +34,11 @@
        "event": "news",
        "t": "2026-10-20T17:31:48+00:00",
        "what": "awaiting confirmed XIs"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-20T18:02:48+00:00",
+       "what": "both XIs confirmed"
       }
      ],
      "match": "AEK @ MNC",
@@ -50,10 +55,10 @@
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": false,
      "conf": 85,
-     "fp": "b01e31f0ef75",
+     "fp": "a0bb4b3527f0",
      "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
+      "ok": true,
+      "what": "both XIs confirmed"
      },
      "id": "ucl:401915402",
      "league": "ucl",
@@ -77,6 +82,11 @@
        "event": "news",
        "t": "2026-10-20T17:31:48+00:00",
        "what": "awaiting confirmed XIs"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-20T18:02:48+00:00",
+       "what": "both XIs confirmed"
       }
      ],
      "match": "SLB @ ROMA",
@@ -192,12 +202,11 @@
     }
    ],
    "frozen": [
-    "nhl",
     "ucl"
    ],
    "news": {
     "nhl": "2026-10-20T17:31:48+00:00",
-    "ucl": "2026-10-20T17:31:48+00:00"
+    "ucl": "2026-10-20T18:02:48+00:00"
    }
   }
  }
