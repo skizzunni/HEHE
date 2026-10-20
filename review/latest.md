@@ -1,9 +1,10 @@
 # Review 2026-10-20
 
-Picks 18-7 (72.0% vs 67.1% claimed).
+Picks 18-8 (69.2% vs 67.3% claimed).
 - LOST atp Roman Safiullin at 84.5%: lost 1-2 in sets · took it the distance · called at 84%
 - LOST atp Rinky Hijikata at 53.7%: lost 0-2 in sets · never won a set · called at 54%
 - LOST atp Botic Van De Zandschulp at 57.5%: lost 0-2 in sets · never won a set · called at 58%
+- LOST atp Ugo Humbert at 72.5%: lost 1-2 in sets · took it the distance · called at 72%
 - LOST atp Arthur Fery at 63.5%: lost 0-2 in sets · never won a set · called at 64%
 - LOST wta Cristina Bucsa at 51.5%: lost 0-2 in sets · never won a set · called at 52%
 - LOST wta Daria Snigur at 73.0%: lost 1-2 in sets · took it the distance · called at 73%
