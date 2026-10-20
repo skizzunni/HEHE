@@ -127,20 +127,30 @@
  },
  "2026-W43": {
   "all": {
-   "beat_close_pct": 63.3,
-   "brier_close": 0.1744,
-   "brier_published": 0.1742,
+   "beat_close_pct": 62.5,
+   "brier_close": 0.18,
+   "brier_published": 0.1853,
    "dates": [
     "2026-10-19",
     "2026-10-20"
    ],
-   "logloss_close": 0.5318,
-   "logloss_published": 0.53,
-   "mean_clv_pts": 0.35,
-   "n": 30
+   "logloss_close": 0.5434,
+   "logloss_published": 0.5562,
+   "mean_clv_pts": -0.02,
+   "n": 32
   },
   "calls": {
-   "n": 0
+   "beat_close_pct": 100.0,
+   "brier_close": 0.0671,
+   "brier_published": 0.0708,
+   "dates": [
+    "2026-10-20",
+    "2026-10-20"
+   ],
+   "logloss_close": 0.2999,
+   "logloss_published": 0.3092,
+   "mean_clv_pts": 0.69,
+   "n": 1
   }
  }
 }

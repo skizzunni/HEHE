@@ -3912,9 +3912,9 @@
    }
   },
   "clv": {
-   "avg": 2.6,
+   "avg": 1.66,
    "beat": 100.0,
-   "n": 1
+   "n": 3
   },
   "day": "2026-10-20",
   "leaks_14d": [
@@ -4000,6 +4000,14 @@
    },
    {
     "against_market": false,
+    "league": "ucl",
+    "pick": "Fenerbahce",
+    "price": "-240",
+    "said": 68,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   },
+   {
+    "against_market": false,
     "league": "wta",
     "pick": "Cristina Bucsa",
     "price": null,
@@ -4074,12 +4082,12 @@
    }
   ],
   "picks": {
-   "hit": 68.8,
-   "lost": 10,
-   "n": 32,
-   "roi": 39.2,
-   "said": 67.2,
-   "won": 22
+   "hit": 67.6,
+   "lost": 11,
+   "n": 34,
+   "roi": -10.7,
+   "said": 67.4,
+   "won": 23
   },
   "picks_by_league": {
    "atp": {
@@ -4098,6 +4106,14 @@
     "said": 71.0,
     "won": 2
    },
+   "ucl": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -35.7,
+    "said": 71.0,
+    "won": 1
+   },
    "wta": {
     "hit": 78.6,
     "lost": 3,
@@ -4114,14 +4130,14 @@
     "said_price": 85.2,
     "won": 142
    },
-   "n": 0,
-   "said": null,
-   "won": 0
+   "n": 2,
+   "said": 87.1,
+   "won": 2
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      7,
@@ -4134,7 +4150,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "strong": {
    "n": 0
@@ -4150,12 +4166,12 @@
     "won": 10
    },
    "agree": {
-    "hit": 67.5,
-    "lost": 90,
-    "n": 277,
-    "roi": -1.8,
+    "hit": 67.4,
+    "lost": 91,
+    "n": 279,
+    "roi": -2.1,
     "said": 63.9,
-    "won": 187
+    "won": 188
    }
   },
   "weights": {

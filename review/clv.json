@@ -1,20 +1,20 @@
 {
- "beats_close": true,
+ "beats_close": false,
  "enough": true,
  "last": {
   "beat_close_pct": 58.3,
-  "brier_close": 0.2039,
-  "brier_published": 0.2037,
+  "brier_close": 0.2052,
+  "brier_published": 0.2056,
   "dates": [
    "2026-10-17",
    "2026-10-20"
   ],
-  "logloss_close": 0.6017,
-  "logloss_published": 0.6004,
-  "mean_clv_pts": 0.51,
+  "logloss_close": 0.6044,
+  "logloss_published": 0.6046,
+  "mean_clv_pts": 0.47,
   "n": 300
  },
- "market_is_model": false,
+ "market_is_model": true,
  "picks": {
   "arg:401841539": {
    "call": false,
@@ -13984,6 +13984,24 @@
    "published": 0.769,
    "won": 1
   },
+  "ucl:401915403": {
+   "call": false,
+   "close": 0.6792,
+   "clv": -11.68,
+   "day": "2026-10-20",
+   "league": "ucl",
+   "published": 0.796,
+   "won": 0
+  },
+  "ucl:401915404": {
+   "call": true,
+   "close": 0.7409,
+   "clv": 0.69,
+   "day": "2026-10-20",
+   "league": "ucl",
+   "published": 0.734,
+   "won": 1
+  },
   "uru:401914271": {
    "call": false,
    "close": 0.4853,
@@ -14696,5 +14714,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-20T18:34+00:00"
+ "updated": "2026-10-20T18:40+00:00"
 }

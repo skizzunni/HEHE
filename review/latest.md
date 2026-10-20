@@ -1,7 +1,7 @@
 # Review 2026-10-20
 
-Picks 22-10 (68.8% vs 67.2% claimed, ROI +39.2%).
-Closing line value: +2.6 points on 1 picks; beat the close on 100.0%.
+Picks 23-11 (67.6% vs 67.4% claimed, ROI -10.7%).
+Closing line value: +1.66 points on 3 picks; beat the close on 100.0%.
 - LOST atp Roman Safiullin at 84.5%: lost 1-2 in sets · took it the distance · called at 84%
 - LOST atp Rinky Hijikata at 53.7%: lost 0-2 in sets · never won a set · called at 54%
 - LOST atp Botic Van De Zandschulp at 57.5%: lost 0-2 in sets · never won a set · called at 58%
@@ -9,13 +9,14 @@ Closing line value: +2.6 points on 1 picks; beat the close on 100.0%.
 - LOST atp Titouan Droguet at 66.2%: lost 1-2 in sets · took it the distance · called at 66%
 - LOST atp Cameron Norrie at 52.5%: lost 1-2 in sets · took it the distance · called at 52%
 - LOST atp Arthur Fery at 63.5%: lost 0-2 in sets · never won a set · called at 64%
+- LOST ucl Fenerbahce at 68%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 68%
 - LOST wta Cristina Bucsa at 51.5%: lost 0-2 in sets · never won a set · called at 52%
 - LOST wta Daria Snigur at 73.0%: lost 1-2 in sets · took it the distance · called at 73%
 - LOST wta Paula Badosa at 73.5%: lost 1-2 in sets · took it the distance · called at 74%
 LEAK ufc: 52.0% hit vs 64.6% claimed on 25 calls (14 days)
-With the market 67.5% (277); against it 35.7% (28).
+With the market 67.4% (279); against it 35.7% (28).
 Locks 0/11 won, 11 open; Best play top 2 (57%) open.
-Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (53%) open.
+Safe Locks 1/11 won, 10 open; Winners parlay top 2 (84%) open; Best play top 7 (53%) open.
 Lottery 100: open (0/9 legs won)
 Lottery 10k: open (0/9 legs won)
 Lottery 10k: open (0/6 legs won)
@@ -23,6 +24,7 @@ Lottery 10k+25: open (0/8 legs won)
 Lottery 10k+50: open (0/8 legs won)
 Lottery 10k+100: open (0/8 legs won)
 Ladder-consistency props (all time): 142/172 won (82.6%) vs 82.1% fair, 85.2% price.
+Props 2/2 vs 87.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=52)
