@@ -1,6 +1,6 @@
 # Review 2026-10-20
 
-Picks 17-7 (70.8% vs 67.4% claimed).
+Picks 18-7 (72.0% vs 67.1% claimed).
 - LOST atp Roman Safiullin at 84.5%: lost 1-2 in sets · took it the distance · called at 84%
 - LOST atp Rinky Hijikata at 53.7%: lost 0-2 in sets · never won a set · called at 54%
 - LOST atp Botic Van De Zandschulp at 57.5%: lost 0-2 in sets · never won a set · called at 58%
