@@ -52,10 +52,8 @@ def day_of(e):
 
 def book_priced(e):
     """Recorded with a sportsbook price (README item 2)."""
-    h = (e.get("history") or [{}])[-1]
-    if h.get("prices") is not None:
-        return bool(h["prices"])
-    return e.get("price") not in (None, "") or bool(e.get("dc"))
+    from record_eligibility import record_priced
+    return record_priced(e)
 
 
 def raw_pct(e):

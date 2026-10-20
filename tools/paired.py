@@ -66,7 +66,7 @@ def _ledger_days():
     two = {"mlb", "nba", "nfl", "ncaaf", "nhl", "wnba", "ncaab", "atp", "wta", "ufc"}
     days = defaultdict(list)
     for k, e in L.items():
-        if e.get("status") not in ("won", "lost") or R.exhibition(e) or e["league"] not in two:
+        if e.get("status") not in ("won", "lost") or not R.record_priced(e) or R.exhibition(e) or e["league"] not in two:
             continue
         qa = e.get("p_market_away")
         if qa is not None and e.get("myside") in ("away", "home"):

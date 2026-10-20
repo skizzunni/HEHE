@@ -26,6 +26,9 @@ from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
+import sys
+sys.path.insert(0, ROOT)
+from record_eligibility import record_priced
 OUT = os.path.join(ROOT, "review")
 ET = ZoneInfo("America/New_York")
 MIN_FIT = 40                 # graded picks a league needs before its own weight
@@ -97,7 +100,7 @@ def picks_view(e):
 
 def refit(graded):
     by = defaultdict(list)
-    for e in sorted(graded, key=lambda e: day_of(e) or ""):
+    for e in sorted((e for e in graded if record_priced(e)), key=lambda e: day_of(e) or ""):
         v = picks_view(e)
         if v:
             by[e["league"]].append((v[0], v[1], e["status"] == "won"))
@@ -192,7 +195,7 @@ def fit_calls(graded):
     listed as unqualified (until 2026-10-18 it fell back to the best cutoff
     on 15+ games, so "strong" appeared where nothing had qualified)."""
     by = defaultdict(list)
-    for e in sorted(graded, key=lambda e: day_of(e) or ""):     # halves by date
+    for e in sorted((e for e in graded if record_priced(e)), key=lambda e: day_of(e) or ""):     # halves by date
         x = published(e)
         if x:
             by[call_group(e["league"])].append(x)
@@ -490,7 +493,7 @@ def summarize(rs):
 
 
 def review_day(day, ledger, locks, lottery, props):
-    graded = [e for e in ledger.values() if e.get("status") in ("won", "lost")]
+    graded = [e for e in ledger.values() if e.get("status") in ("won", "lost") and record_priced(e)]
     todays = [e for e in graded if day_of(e) == day]
     leagues = defaultdict(list)
     for e in todays:
@@ -500,7 +503,7 @@ def review_day(day, ledger, locks, lottery, props):
               for e in todays if e["status"] == "lost"]
     # the last 14 days, to tell a bad night from a leak
     since = (dt.date.fromisoformat(day) - dt.timedelta(days=14)).isoformat()
-    recent = [e for e in graded if since <= day_of(e) <= day and not exhibition(e)]
+    recent = [e for e in graded if since <= day_of(e) <= day and not exhibition(e) and record_priced(e)]
     by_lg = defaultdict(list)
     for e in recent:
         by_lg[e["league"]].append(e)
@@ -547,7 +550,8 @@ def review_day(day, ledger, locks, lottery, props):
     if ROOT not in sys.path:
         sys.path.insert(0, ROOT)
     import calls
-    strong = [e for e in todays if calls.is_call(e.get("league"), e.get("conf"))]
+    from ledger import _strong
+    strong = [e for e in todays if _strong(e)]
     return dict(day=day, picks=summarize(todays), strong=summarize(strong), clv=clv([e for e in todays if e.get("first_price")]),
                 picks_by_league={k: summarize(v) for k, v in leagues.items()},
                 losses=losses, leaks_14d=leaks, vs_market_14d=vs_mkt,
@@ -636,7 +640,7 @@ def main():
     # claimed), and letting them set the NBA weight and cut-off would carry
     # starters-resting noise into the regular season.
     graded = [e for e in ledger.values() if e.get("status") in ("won", "lost")
-              and not exhibition(e)]
+              and not exhibition(e) and record_priced(e)]
     weights, detail = refit(graded)
     # a league with no fit of its own (NBA in its first week, college
     # basketball before November) takes what the fitted leagues chose,

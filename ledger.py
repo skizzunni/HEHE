@@ -24,6 +24,7 @@ So the ledger separates two things:
     calibration gap wider than two standard errors). Below that it says so and
     changes nothing.
 """
+from record_eligibility import record_priced
 import argparse
 import datetime as dt
 import json
@@ -217,6 +218,8 @@ def record(state=None):
                 # -210 and "Middlesbrough or draw" are different bets, and the
                 # first kept the -210 when the call moved to double chance.
                 prev = book.get(key, {})
+                if prev.get("record_excluded"):
+                    entry["record_excluded"] = prev["record_excluded"]
                 same_bet = (prev.get("pick") == entry["pick"]
                             and bool(prev.get("dc")) == entry["dc"])
                 if same_bet and "first_logged" in prev:
@@ -489,6 +492,8 @@ def _stale(e):
 
 def grade():
     book = load()
+    from record_eligibility import exclude_unpriced
+    exclude_unpriced(book)
     _fix_draws(book)
     settled = []
     for key, e in book.items():
@@ -549,9 +554,11 @@ def _se(n):
 
 def report():
     book = load()
-    done = [e for e in book.values() if e.get("status") in ("won", "lost")]
-    out = {"graded": len(done), "open": sum(1 for e in book.values()
-                                            if e.get("status") == "open")}
+    done = [e for e in book.values() if e.get("status") in ("won", "lost")
+            and record_priced(e)]
+    out = {"excluded_unpriced": sum(not record_priced(e) for e in book.values()),
+           "graded": len(done), "open": sum(1 for e in book.values()
+                                            if record_priced(e) and e.get("status") == "open")}
     if not done:
         return out, []
     out["won"] = sum(1 for e in done if e["status"] == "won")
@@ -597,10 +604,11 @@ def board_payload(limit=40):
                  state=e.get("live", ""), conf=e.get("conf"),
                  score=e.get("live_score") or {})
             for e in book.values()
-            if e.get("status") == "open" and e.get("live")]
+            if record_priced(e) and e.get("status") == "open" and e.get("live")]
     live.sort(key=lambda x: (x["league"], x["pick"]))
 
-    done = [e for e in book.values() if e.get("status") in ("won", "lost")]
+    done = [e for e in book.values() if e.get("status") in ("won", "lost")
+            and record_priced(e)]
     done.sort(key=lambda e: (e.get("played") or (e.get("settled") or "")[:10],
                              e.get("settled") or e.get("logged") or ""), reverse=True)
     feed = [dict(league=e["league"], pick=e["pick"] + (" or draw" if e.get("dc") else ""), status=e["status"],
@@ -626,7 +634,7 @@ def board_payload(limit=40):
                        when=today)
                   for e in todays]
     open_today = sum(1 for e in book.values()
-                     if e.get("status") == "open" and (e.get("date") or "") == today)
+                     if record_priced(e) and e.get("status") == "open" and (e.get("date") or "") == today)
 
     # the day's calls and their record (calls.update_daily): N, dates, Wilson
     import calls as _calls
@@ -653,7 +661,7 @@ def board_payload(limit=40):
     # time. The page cannot fetch, so honesty about staleness is the only
     # substitute for freshness.
     captured = int(dt.datetime.now(dt.timezone.utc).timestamp() * 1000)
-    return dict(captured=captured,
+    return dict(captured=captured, excluded_unpriced=r["excluded_unpriced"],
                 graded=r.get("graded", 0), open=r.get("open", 0),
                 won=r.get("won", 0), lost=r.get("lost", 0),
                 hit=round(r["hit"], 1) if r.get("graded") else None,
@@ -688,6 +696,8 @@ def _wilson(w, n, z=1.96):
 def _strong(e):
     """The label the pick was published with; older entries, recorded
     before labels were frozen, fall back to today's cutoff."""
+    if not record_priced(e):
+        return False
     if "strong" in e:
         return e["strong"]
     import calls

@@ -466,7 +466,7 @@ class HonestRecords(unittest.TestCase):
         out = []
         for i in range(n):
             won = (i * hit_rate) % 1 + hit_rate >= 1          # an even spread of wins
-            out.append(dict(league=lg, conf=conf, status="won" if won else "lost",
+            out.append(dict(league=lg, conf=conf, price="-150", status="won" if won else "lost",
                             played=(start + dt.timedelta(days=i // 5)).isoformat()))
         return out
 
@@ -483,7 +483,7 @@ class HonestRecords(unittest.TestCase):
         self.assertEqual(R.W_GRID[0], 0.0)
         # legacy rows (no raw model/market pair) are never fitted
         self.assertIsNone(R.picks_view(dict(conf=70, price="-200", status="won")))
-        rows = [dict(league="nfl", myside="home", p_model_away=0.5, p_market_away=0.4,
+        rows = [dict(league="nfl", price="-150", myside="home", p_model_away=0.5, p_market_away=0.4,
                      status="won" if i % 10 < 6 else "lost",
                      played=(dt.date(2026, 9, 1) + dt.timedelta(days=i)).isoformat()) for i in range(60)]
         w, d = R.refit(rows)      # the model adds nothing: home wins 60% = the market's 60%

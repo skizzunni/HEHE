@@ -2587,3 +2587,34 @@ They fail on the previous commit and pass now. The full suite and the UI probe p
 - Five tickets each is no evidence either way. The tickets inherit the top-5 calls' weak window (14 of 25).
 - Before this item the board's tickets drew on every pick, not on calls.
 - The other ticket products (Card parlays, Stacks, Locks, Safe Locks, Payout targets, Lottery) are unchanged. Restricting them to calls would override the Locks rules set earlier, so that is left for a decision.
+
+## Oct 20 independent audit — fix 1: retroactive price eligibility
+
+One shared rule now excludes every unpriced ledger entry from the performance
+record, strong record, calibration, live bands, Platt fits, cutoff fits, daily
+reviews and paired ledger studies. Historical DC rows need evidence of an actual
+DC quote; their straight-win price or a history of other markets is insufficient.
+`grade()` permanently marks exclusions while preserving picks, scores and wins/losses.
+Results explicitly shows **N unpriced picks excluded from the record (all dates)**.
+Older straight-win rows retain their numeric captured price even where the old
+schema had no source/timestamp. New captures remain subject to freshness checks.
+
+These comparisons freeze **the same 2,451-row ledger from `15c00c4`**; the day
+was still incomplete in that snapshot. They are not the independent auditor's
+later final-day totals. Percentages are pick accuracy, not betting ROI.
+
+| Window | Overall before | Priced-only after | Strong before | Priced strong after |
+|---|---|---|---|---|
+| All available history | 1528–830, 64.80% (2358) | 857–535, 61.57% (1392) | 63–24, 72.41% (87) | 7–0, 100% (7) |
+| Oct 7–20 inclusive | 573–307, 65.11% (880) | 213–128, 62.46% (341) | 62–24, 72.09% (86) | 7–0, 100% (7) |
+| Oct 20 snapshot | 51–21, 70.83% (72) | 5–2, 71.43% (7) | 10–5, 66.67% (15) | No eligible settled picks |
+
+966 settled rows are excluded, including winners **and** losers. The remaining
+7 strong outcomes are too few to support an accuracy claim. The full before/after
+counts are in `review/priced_record_audit.json`; `tools/priced_record_audit.py`
+reproduces comparisons from an original ledger file without network requests.
+
+Validation: all 5 new regression tests failed before the fix and pass after it;
+full suite **133 tests passed**. Includes old settled rows, permanent exclusion,
+DC masquerading as priced, all-price versus quoted-price calibration, and the
+visible Results disclosure. Original outcomes are retained, never deleted.

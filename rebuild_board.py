@@ -76,7 +76,7 @@ def snapshot():
     CLAIMED = {"mlb": 58.6, "nba": 73.1, "wnba": 70.4, "nhl": 58.0, "tennis": 65.9}
     seen = {}
     for e in ledger.load().values():
-        if e.get("status") not in ("won", "lost"):
+        if e.get("status") not in ("won", "lost") or not ledger.record_priced(e):
             continue
         k = "tennis" if e["league"] in ("atp", "wta") else e["league"]
         v = seen.setdefault(k, [0, 0])
@@ -797,7 +797,7 @@ def live_bands(entries, soccer_keys=()):
     out = {}
     soccer_keys = set(soccer_keys)
     for e in entries:
-        if e.get("status") not in ("won", "lost"):
+        if e.get("status") not in ("won", "lost") or not ledger.record_priced(e):
             continue
         lg = e.get("league")
         is_soc = lg in soccer_keys
@@ -853,7 +853,7 @@ def fit_platt(entries):
     PLATT.clear()
     by = {}
     for e in entries:
-        if e.get("league") in PLATT_LEAGUES and e.get("status") in ("won", "lost") and e.get("conf"):
+        if e.get("league") in PLATT_LEAGUES and e.get("status") in ("won", "lost") and e.get("conf") and ledger.record_priced(e):
             c = min(max(e["conf"] / 100.0, 0.01), 0.99)
             by.setdefault(e["league"], []).append((_logit(c), e["status"] == "won"))
     for lg, data in by.items():
