@@ -4,7 +4,7 @@
   "ncaaf": 0.575,
   "soccer": 0.7,
   "wnba": 0.55,
-  "wta": 0.7
+  "wta": 0.675
  },
  "detail": {
   "atp": {
@@ -60,23 +60,23 @@
    "hit": 83.3
   },
   "wta": {
-   "all_hit": 70.2,
-   "calls": 88,
-   "cutoff": 0.7,
-   "games": 215,
-   "hit": 85.2
+   "all_hit": 70.4,
+   "calls": 106,
+   "cutoff": 0.675,
+   "games": 216,
+   "hit": 83.0
   }
  },
  "holdout": {
   "all_hit": 66.1,
-  "all_n": 1073,
+  "all_n": 1074,
   "basis": "as published",
   "days": 19,
-  "hit": 73.3,
-  "n": 247,
+  "hit": 73.4,
+  "n": 248,
   "simulated": {
    "hit": 67.8,
-   "n": 1073,
+   "n": 1074,
    "what": "old picks re-scored as the market favourite"
   },
   "since": "2026-09-22",
@@ -89,5 +89,5 @@
   "nhl",
   "ufc"
  ],
- "updated": "2026-10-20T02:02-04:00"
+ "updated": "2026-10-20T02:07-04:00"
 }
