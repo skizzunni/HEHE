@@ -2310,3 +2310,50 @@ model's estimate, not a measured rate.
 **Test.** `tests/test_devig.py::Reverted` fails on the power commit and passes now. The Locks two-sided test is back to the proportional identity.
 
 **Next.** A per-league or Shin variant is a candidate only if it wins on a later untouched window.
+
+## Accuracy plan, item 4: walk-forward calibration (2026-10-20)
+
+**What changed.**
+- `calibration.py`: per league, with soccer leagues as one group, a Platt fit runs on the most recent 400 graded book-priced picks from days strictly before the pick's day.
+  - It is shrunk toward "no change" (λ = 50) and needs at least 200 picks; below that the raw no-vig chance is published.
+  - These settings were fixed before any evaluation.
+- Published chances are now whole percent, on the board and in the ledger (`conf`). The ledger also keeps the no-vig chance it started from (`p_raw`), so later fits never train on their own output.
+- The Results tab has a **Calibration** table:
+  - bins 50–60, 60–70, 70–80, 80–90 and 90+, with N, stated and hit;
+  - overall and per league, with the window's dates;
+  - any bin trailing its stated chance by more than 2 SE is flagged.
+
+**Test.** `tests/test_calibration.py`, 6 tests:
+- the fit needs 200 picks and never uses the pick's own day;
+- the window is the most recent 400;
+- unpriced picks never train it;
+- publishing is whole percent;
+- the ledger records `conf` 62 with `p_raw` 61.7;
+- a bin of 85% picks hitting 70% is flagged and a 65%/66% bin is not.
+
+They fail on the previous commit (no module) and pass now; the full suite (95) and the UI probe pass.
+
+**Before / after,** walk-forward over graded book-priced picks 2026-10-15 to 2026-10-19 (`data/calibration_study.json`). Each day's fit used only earlier days. Only college football (367+ picks before the window) and soccer (203+) had 200.
+
+| | N | Brier | log-loss | stated | hit |
+|---|---|---|---|---|---|
+| raw, all picks | 420 | 0.2016 | 0.5943 | 71.3% | 70.7% |
+| calibrated, all picks | 420 | 0.2057 | 0.6054 | 69.0% | 70.7% |
+| raw, fitted leagues | 358 | 0.1948 | 0.5802 | 73.1% | 73.2% |
+| calibrated, fitted leagues | 358 | 0.1996 | 0.5933 | 70.4% | 73.2% |
+
+- Log-loss, calibrated minus raw, on fitted picks: +0.0131 (95% −0.0004 to +0.0260).
+- **Not applied** (`calibration.ENABLED = False`). The raw no-vig chance was already calibrated on these picks (73.1% stated, 73.2% hit), and the fits, trained largely on September picks published with model blending, pulled it down. The mechanism stays, switched off, until a fit wins on a later untouched window.
+- Rounding to whole percent costs nothing measurable: Brier 0.20163 → 0.20168, log-loss 0.59425 → 0.59449 (N = 420).
+
+**Calibration table, same window** (N = 420): no bin is flagged.
+
+| bin | N | stated | hit |
+|---|---|---|---|
+| 50–60 | 43 | 55.1 | 48.8 |
+| 60–70 | 138 | 66.4 | 66.7 |
+| 70–80 | 176 | 74.7 | 76.7 |
+| 80–90 | 59 | 83.2 | 78.0 |
+| 90+ | 4 | 92.3 | 75.0 |
+
+The 80–90 bin trails by 5.2 points, about 1.1 SE. It is the one to watch.

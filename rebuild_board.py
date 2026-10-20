@@ -36,6 +36,7 @@ import locks                    # noqa: E402
 import calls                    # noqa: E402
 import lottery                  # noqa: E402
 import freshness                # noqa: E402
+import calibration              # noqa: E402
 
 
 def snapshot():
@@ -120,7 +121,11 @@ def snapshot():
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 if r.get("dc"):
                     leg = None        # "or draw": the straight price is not this bet's
-                mc = round(r["myconf"] * 100, 1) if r["myconf"] else None
+                # published in whole percent, through calibration.py (the
+                # walk-forward fit is off until it passes an untouched test)
+                _dd = d._STATE["dates"][0 if slot == "today" else 1]
+                mc, cal_ = calibration.publisher(f"{_dd[:4]}-{_dd[4:6]}-{_dd[6:]}").publish(
+                    k, r["myconf"]) if r["myconf"] else (None, None)
                 hit, hit_n = blended_hit(k, k in SOCCER, mc, live, r["why"],
                                          bool(leg and leg.get("dog")),
                                          (leg or {}).get("price"))
@@ -185,6 +190,12 @@ def snapshot():
         lg["soccer"] = {"label": "Soccer", "rows": soccer_rows, "asof": freshness.as_of(soccer_at)}
         out["slots"][slot] = lg
     out["results"] = ledger.board_payload()
+    # calibration of the chances as published, per league and overall, with
+    # any bin trailing its stated chance by more than 2 SE flagged
+    try:
+        out["calib"] = calibration.table(list(ledger.load().values()))
+    except Exception as ex_:
+        print(f"calibration table failed: {ex_}", file=sys.stderr)
     # strong calls' record on picks the cut-offs never saw (tools/daily_review)
     try:
         with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),

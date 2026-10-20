@@ -623,7 +623,7 @@ function renderView(){
                      + '">' + r.pl.toUpperCase() + '</span>' : "";
         const conf = (r.mc === null || r.mc === undefined)
           ? '<td class="num none">&mdash;</td>'
-          : '<td class="num">' + r.mc.toFixed(1) + '%'
+          : '<td class="num">' + r.mc.toFixed(0) + '%'
             + (r.np ? '<span class="tier lean" title="No sportsbook price: a lean only, never a call, not in the record or any ticket">lean</span>'
                : r.st ? '<span class="tier lean" title="Price older than 15 minutes, or with no capture time: not a call, not in the record or any ticket">stale</span>'
                : r.nc ? '<span class="tier lean" title="Close game: the favourite is under this league\'s cutoff">close</span>'
@@ -1507,7 +1507,7 @@ function drawCard(slot){
              + '<td class="mine"><span class="stripe"></span>' + esc(r.mp) + '</td>'
              + '<td class="comp">' + esc(r.lg) + '</td>'
              + '<td class="num">' + (r.mc === null || r.mc === undefined
-                 ? "&mdash;" : r.mc.toFixed(1) + '%') + tier + ev + '</td>'
+                 ? "&mdash;" : r.mc.toFixed(0) + '%') + tier + ev + '</td>'
              + hit
              + '<td class="num fairp">' + (r.fv || "&mdash;") + '</td>'
              + price
@@ -1729,6 +1729,30 @@ function scoreboardHTML(){
       + 'every graded pick, so a league the model under- or over-rates corrects itself. '
       + 'Thin leagues barely move until their record supports it.</p>';
   }
+  // How the published chances have held up: bins 50-60 ... 90+, per league
+  // and overall (calibration.table). A bin more than 2 SE under its stated
+  // chance is flagged.
+  function calibHTML(){
+    const C = D.calib;
+    if(!C || !C.n) return "";
+    const tbl = bins => '<table class="sbt"><tr><th>bin</th><th>N</th><th>stated</th><th>hit</th><th></th></tr>'
+      + bins.map(b => '<tr' + (b.flag ? ' class="sbbad"' : '') + '><td>' + esc(b.bin) + '%</td><td>' + b.n
+          + '</td><td>' + b.stated.toFixed(1) + '%</td><td>' + b.hit.toFixed(1) + '%</td><td>'
+          + (b.flag ? '<b>trailing by more than 2 SE</b>' : (b.n < 30 ? '<span class="sbn">thin</span>' : ''))
+          + '</td></tr>').join("") + '</table>';
+    const flags = [];
+    (C.overall || []).forEach(b => { if(b.flag) flags.push('all leagues ' + b.bin + '%'); });
+    Object.keys(C.leagues || {}).forEach(g => (C.leagues[g].bins || []).forEach(b => {
+      if(b.flag) flags.push(g + ' ' + b.bin + '%'); }));
+    return '<div class="sect" id="calib"><h2>Calibration</h2>'
+      + '<p class="note">Every graded call with a sportsbook price, ' + esc(C.dates[0]) + ' to ' + esc(C.dates[1])
+      + ' (N = ' + C.n + '): what the published chance said against how often it won.</p>'
+      + (flags.length ? '<p class="age stale"><b>Flagged:</b> ' + flags.map(esc).join(", ") + '</p>' : '')
+      + tbl(C.overall || [])
+      + Object.keys(C.leagues || {}).map(g => '<details><summary>' + esc(g) + ' &middot; N = '
+          + C.leagues[g].n + '</summary>' + tbl(C.leagues[g].bins || []) + '</details>').join("")
+      + '</div>';
+  }
   function renderResults(){
   // Today only (Eastern). History is kept in the ledger and the daily review
   // log, not shown here.
@@ -1788,6 +1812,7 @@ function scoreboardHTML(){
           + '</tr>').join("")
       + '</tbody></table></div>';
   }
+  h += calibHTML();
   // the review's alarms: what is trailing its stated chance, what never settled
   const HL = D.health;
   if(HL){

@@ -163,8 +163,14 @@ def record(state=None):
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 if r.get("dc"):
                     leg = None        # "or draw": the straight price is not this bet's
+                # the chance as published: whole percent, through the
+                # walk-forward calibrator (calibration.py); p_raw keeps the
+                # no-vig chance it started from, for the next fit
+                import calibration
+                pub_, cal_ = calibration.publisher(day and f"{day[:4]}-{day[4:6]}-{day[6:]}").publish(
+                    lg, r["myconf"])
                 entry = dict(league=lg, pick=r["mypick"], matchup=r["label"],
-                             conf=round((r["myconf"] or 0) * 100, 1),
+                             conf=pub_ or 0, p_raw=round((r["myconf"] or 0) * 100, 1), calib=cal_,
                              why=r.get("why", ""), tip=r.get("tip"),
                              price=(leg or {}).get("price"),
                              # the book and capture time behind the price
