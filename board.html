@@ -662,14 +662,15 @@ function parlayHTML(slot){
     const list = P[n] || [];
     body += '<p><b>' + n + '-leg</b></p>'
       + (list.length ? list.map((t, i) => one(t, n, i)).join("")
-                     : '<p>Not enough eligible legs yet.</p>');
+                     : '<p>Not enough qualified legs clear the estimated-return buffer.</p>');
   });
   return '<div class="parlays"><h3>Suggested parlays</h3>'
     + '<p>Built only from priced favourites with a measured hit rate, one leg '
     + 'per game, never more than three legs. Underdog calls are excluded: on '
     + '1,144 graded picks they returned \u221215% a bet. ' + P.pool
-    + ' legs qualified. <b>None of these is a lock</b> \u2014 a negative EV '
-    + 'means the book\u2019s price is worse than the measured rate.</p>'
+    + ' legs qualified. Each must clear ' + (100 * (P.min_ev == null ? 0.02 : P.min_ev)).toFixed(0)
+    + '% estimated return at the shown price, using the Card\u2019s probability. '
+    + 'This screening buffer does not establish a profitable edge. No qualifying ticket is a valid result.</p>'
     + body + '</div>';
 }
 function loadParlay(key){
