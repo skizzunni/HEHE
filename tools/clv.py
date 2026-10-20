@@ -90,6 +90,10 @@ def update(entries, book, limit=400, get=None):
     """Adds the closing chance of graded picks not yet logged (at most
     `limit` fetches a run, oldest first, so a backfill spreads over runs)."""
     import calibration as C
+    from record_eligibility import record_priced
+    for key, row in book["picks"].items():
+        if key not in entries or not record_priced(entries[key]):
+            row.setdefault("record_excluded", "unpriced_or_unverifiable")
     todo = sorted((e for k, e in entries.items() if k not in book["picks"]
                    and C.graded([e]) and published(e)),
                   key=C.day_of)
@@ -113,7 +117,7 @@ def update(entries, book, limit=400, get=None):
 
 
 def report(rows):
-    rows = [r for r in rows if r.get("close") is not None and 0 < r["close"] < 1]
+    rows = [r for r in rows if not r.get("record_excluded") and r.get("close") is not None and 0 < r["close"] < 1]
     if not rows:
         return dict(n=0)
     n = len(rows)
@@ -133,7 +137,7 @@ def report(rows):
 
 def rule(book):
     """The hard rule on the last RULE_N graded picks with a closing chance."""
-    rows = sorted((r for r in book["picks"].values() if r.get("close") is not None), key=lambda r: r["day"])
+    rows = sorted((r for r in book["picks"].values() if not r.get("record_excluded") and r.get("close") is not None), key=lambda r: r["day"])
     last = report(rows[-RULE_N:])
     beats = bool(last.get("n") and last["brier_published"] < last["brier_close"])
     return dict(last=last, beats_close=beats, market_is_model=not beats,
@@ -143,6 +147,8 @@ def rule(book):
 def weekly(book):
     by = {}
     for r in book["picks"].values():
+        if r.get("record_excluded"):
+            continue
         y, w, _ = dt.date.fromisoformat(r["day"]).isocalendar()
         by.setdefault(f"{y}-W{w:02d}", []).append(r)
     return {wk: dict(all=report(rs), calls=report([r for r in rs if r.get("call")]))

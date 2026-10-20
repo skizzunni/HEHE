@@ -62,6 +62,8 @@ def side_chance(e, prices, method):
 
 def score(rows, k):
     n = len(rows)
+    if not n:
+        return dict(n=0, brier=None, logloss=None, bands=[])
     br = sum((r[k] - r["won"]) ** 2 for r in rows) / n
     ll = -sum(math.log(r[k] if r["won"] else 1 - r[k]) for r in rows) / n
     bands = []
@@ -75,14 +77,20 @@ def score(rows, k):
     return dict(n=n, brier=round(br, 4), logloss=round(ll, 4), bands=bands)
 
 
+def eligible(entries, lo, hi):
+    from record_eligibility import record_priced
+    return [(k, e) for k, e in sorted(entries.items())
+            if e.get("status") in ("won", "lost") and lo <= (e.get("date") or "") <= hi
+            and record_priced(e)]
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--from", dest="lo", default="2026-10-15")
     ap.add_argument("--to", dest="hi", default="2026-10-19")
     a = ap.parse_args()
     rows, missing = [], 0
-    todo = [(k, e) for k, e in sorted(ledger.load().items())
-            if e.get("status") in ("won", "lost") and a.lo <= (e.get("date") or "") <= a.hi]
+    todo = eligible(ledger.load(), a.lo, a.hi)
     from concurrent.futures import ThreadPoolExecutor
     with ThreadPoolExecutor(max_workers=8) as ex:
         prices = list(ex.map(lambda ke: close_prices(ke[1], ke[0]), todo))
@@ -102,11 +110,11 @@ def main():
     for r in rows:
         r["moved"] = r["new"] - r["old"]
     fav = [r for r in rows if r["old"] >= 0.5]
-    rep = dict(window=[a.lo, a.hi], method=devig.METHOD, matched=len(rows), unmatched=missing,
+    rep = dict(record_scope="captured-price-only-v1", window=[a.lo, a.hi], method=devig.METHOD, matched=len(rows), unmatched=missing,
                dates=[min(r["date"] for r in rows), max(r["date"] for r in rows)] if rows else None,
-               mean_abs_move_pts=round(100 * sum(abs(r["moved"]) for r in rows) / len(rows), 2),
-               mean_move_favourites_pts=round(100 * sum(r["moved"] for r in fav) / len(fav), 2),
-               max_move_pts=round(100 * max(abs(r["moved"]) for r in rows), 2),
+               mean_abs_move_pts=round(100 * sum(abs(r["moved"]) for r in rows) / len(rows), 2) if rows else None,
+               mean_move_favourites_pts=round(100 * sum(r["moved"] for r in fav) / len(fav), 2) if fav else None,
+               max_move_pts=round(100 * max(abs(r["moved"]) for r in rows), 2) if rows else None,
                old=score(rows, "old"), new=score(rows, "new"))
     rep["bootstrap_logloss_diff"] = boot(rows)
     with open(OUT, "w") as fh:
@@ -117,6 +125,8 @@ def main():
 
 def boot(rows, draws=2000, seed=11):
     """Log-loss new - old, game-resampled 95% interval (negative = new better)."""
+    if not rows:
+        return dict(mean=None, ci95=None)
     import random
     rng = random.Random(seed)
 

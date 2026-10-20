@@ -2677,3 +2677,27 @@ Playwright adapter; an additional browser check verified the exclusion notice,
 These are evidence and eligibility corrections. They do not establish a new
 profitable forecasting strategy or imply that the remaining tiny strong sample
 will maintain its observed rate.
+
+### Follow-through: cached research cannot bypass the same rule
+
+A final trace found two additional consumers of old unpriced entries. The
+closing-line cache now permanently flags unverifiable/unpriced ledger keys and
+excludes them from its reports, weekly summaries and the last-300 model decision;
+raw cached observations remain available for audit. The board workflow normalizes
+this evidence **before** selecting picks. The standalone de-vig band study also
+requires a captured original price, rather than treating a later fetched closing
+line as proof the original pick was priced. Empty study windows return no
+estimate instead of dividing by zero.
+
+Three cache regressions failed before the follow-through and pass afterward;
+An additional empty-window check passes; **154 tests pass**. The market-switch fixture uses a stable quote timestamp when
+asserting that a repeated identical quote creates no new history version.
+The fixed-window headline comparison above remains unchanged. This supplementary
+commit closes cached-data paths found while verifying the three main fixes.
+
+Cache verification excluded 289 of 1,668 stored CLV observations. The corrected
+last-300 Brier scores are 0.2195 published versus 0.2078 closing, so the
+market-only rule remains active. Re-running the Oct 15–19 de-vig study found
+136 matched original priced calls (27 unmatched); its log-loss difference
+was -0.00337 with a 95% range of -0.01053 to +0.00251. This does not establish
+a reliable forecasting gain. Original all-price study results remain in git history.

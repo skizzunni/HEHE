@@ -70,6 +70,10 @@ jobs:
           key: board-cache-${{ github.run_id }}
           restore-keys: board-cache-
 
+      # Exclude old unpriced cached evidence before it can influence selection.
+      - name: Normalize cached price evidence
+        run: python3 tools/clv.py --limit 0
+
       - name: Rebuild the board
         run: python3 rebuild_board.py
 

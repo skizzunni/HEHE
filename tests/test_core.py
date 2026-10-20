@@ -429,6 +429,8 @@ class RecommendationHistory(unittest.TestCase):
     def run_record(self, path, pick, dc, price, conf, start):
         import ledger
         at = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
+        at = getattr(self, "_quote_at", at)  # the repeated unchanged quote has the same capture time
+        self._quote_at = at
         row = dict(id="efl1:1", mypick=pick, myside="home", dc=dc, myconf=conf, label="A @ B",
                    legs=[dict(side="home", price=price, at=at)], mkt=dict(start=start),
                    price_at=at, price_book="DraftKings")
