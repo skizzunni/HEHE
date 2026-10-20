@@ -202,6 +202,36 @@ class WagerAndRecord(unittest.TestCase):
             props_ledger.LEDGER = real
 
 
+class PregameArchive(unittest.TestCase):
+    def test_only_before_start_and_only_changes(self):
+        import datetime as dt
+        import tempfile
+        import participation
+        import pregame
+        now = dt.datetime(2026, 10, 20, 1, 0, tzinfo=dt.timezone.utc)
+        rows = {"nhl": [dict(id="nhl:9", mkt=dict(start="2026-10-20T23:00Z"),
+                             comp=dict(competitors=[dict(team=dict(abbreviation="MTL"), probables=[
+                                 dict(athlete=dict(displayName="Jacob Fowler"), name="probableStartingGoalie")])])),
+                        dict(id="nhl:8", mkt=dict(start="2026-10-19T23:00Z"), comp={})]}
+        real = participation._summary
+        participation._summary = lambda lg, eid: dict(rosters=[], injuries=[dict(team=dict(abbreviation="MTL"),
+            injuries=[dict(athlete=dict(displayName="X Y", position=dict(abbreviation="C")), status="Out")])])
+        try:
+            snap = pregame.snapshot(rows, now)
+        finally:
+            participation._summary = real
+        self.assertEqual(list(snap), ["nhl:9"])                                    # started game skipped
+        self.assertEqual(snap["nhl:9"]["probables"], {"MTL": [["Jacob Fowler", "probableStartingGoalie"]]})
+        self.assertEqual(snap["nhl:9"]["injuries"], [["MTL", "X Y", "Out", "C"]])
+        p = os.path.join(tempfile.mkdtemp(), "f.json")
+        pregame.archive(snap, "2026-10-20", p)
+        pregame.archive(snap, "2026-10-20", p)
+        self.assertEqual(len(T.load(p)["days"]["2026-10-20"]["inputs"]["nhl:9"]), 1)
+        snap["nhl:9"]["injuries"] = []
+        pregame.archive(snap, "2026-10-20", p)
+        self.assertEqual(len(T.load(p)["days"]["2026-10-20"]["inputs"]["nhl:9"]), 2)
+
+
 class Evidence(unittest.TestCase):
     def test_band_verdicts_never_adjust(self):
         rows = [(0.91, i % 10 != 0, "2026-10-01", f"g{i}") for i in range(100)]      # 90% hit at 91%

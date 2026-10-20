@@ -436,6 +436,12 @@ def snapshot():
             if s_ == "today":
                 iso = f'{days_[s_][:4]}-{days_[s_][4:6]}-{days_[s_][6:]}'
                 tickets.record(fr[s_]["0"], pool_, iso, set_card=locks.card_time())
+        try:
+            import pregame
+            pregame.archive(pregame.snapshot(d._STATE["slots"].get("today")),
+                            f'{days_["today"][:4]}-{days_["today"][4:6]}-{days_["today"][6:]}')
+        except Exception as ex_:
+            print(f"pregame inputs not archived: {ex_}", file=sys.stderr)
         tickets.grade(ledger._final)
         fr["record"] = tickets.report()
         fr["evidence"] = tickets.evidence()

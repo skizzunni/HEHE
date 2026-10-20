@@ -736,7 +736,14 @@ def collect(key, path, day, mlbctx, mybook=None):
                              p_market_away=mine.get("p_market_away"),
                              pick=(best["who"] if best else ""),
                              price=(best["price"] if best else ""),
-                             conf=(best["prob"] if best else None)))
+                             conf=(best["prob"] if best else None),
+                             # ESPN's probable starters (MLB pitchers, NHL goalies),
+                             # archived before play by pregame.py
+                             comp=dict(competitors=[dict(team=dict(abbreviation=(x.get("team") or {}).get("abbreviation")),
+                                                         probables=[dict(athlete=dict(displayName=(p.get("athlete") or {}).get("displayName")),
+                                                                         name=p.get("name"))
+                                                                    for p in x.get("probables") or []])
+                                                    for x in c.get("competitors") or []])))
     rows.sort(key=lambda r: r["tip"])
     return rows
 
