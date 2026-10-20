@@ -226,9 +226,30 @@ def update_daily(state, now=None, path=None, n=None, summary=None):
         if add:
             watch(rec, today, now, summary)        # each new call's gate and news baseline
             changed = True
+    # forward shadow test: once the day's calls are complete, both ways of
+    # building their tickets are archived side by side, never revised --
+    # likeliest-first (call_tickets, published) and the payout-target
+    # optimizer (tickets.optimize at 2x and 3x). Graded by tools/shadow.py.
+    if len(rec["calls"]) >= n and "shadow" not in rec:
+        rec["shadow"] = shadow_tickets(rec["calls"], now)
+        changed = True
     if changed:
         save_daily(book, path)
     return rec
+
+
+def shadow_tickets(calls_today, now):
+    import call_tickets
+    import tickets as T
+    legs = [dict(gid=c["id"], p=c["conf"] / 100, dec=call_tickets.dec(c.get("price")), league=c["league"],
+                 spec=dict(t="win"), label=c["pick"]) for c in call_tickets.eligible(calls_today)]
+    legs = [L for L in legs if L["dec"]]
+    out = dict(t=now.isoformat(timespec="seconds"),
+               strongest=[[L["id"] for L in t["legs"]] for t in call_tickets.build(calls_today)])
+    for target in (2.0, 3.0):
+        r = T.optimize(legs, target, 0.5, max_legs=call_tickets.MAX_LEGS)
+        out[f"optimizer_{target:.0f}x"] = [L["gid"] for L in r["legs"]] if r.get("legs") else None
+    return out
 
 
 def daily_ids(day, path=None):

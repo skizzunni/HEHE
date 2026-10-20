@@ -2717,3 +2717,21 @@ a reliable forecasting gain. Original all-price study results remain in git hist
 - **Verdict: uncertain.** The optimizer is never worse in 8 paired comparisons across two sources, but no single interval excludes zero, and the comparisons were not pre-registered as one test.
 - It is not promoted. It goes to forward shadow testing beside the current rule.
 - Market check on the same picks: the closing chance is calibrated (50–60%: 54.9% stated, 54.5% hit; 90–95%: 92.9% stated, 92.6% hit; N = 1,378). Ranking by chance is sound; how tickets are assembled is the open question.
+
+## Locks lead with the ticket to bet; forward shadow test of call tickets (2026-10-20)
+
+**Locks.** The tab now opens with **Ticket to bet: doubles your stake**. It is the likeliest combination of the day's verified FanDuel lines that pays 2× (`tickets.optimize`, the Targets tab), shown with:
+- its estimated cash chance, payout and estimated return;
+- a plain note that a negative return is the book's margin and that no ticket here has been shown to beat it.
+
+The card's legs follow as a list of the day's likeliest bets, not as a parlay to bet; all 11 in one parlay hit on 1 of 5 days. The card's rules and record are unchanged.
+
+**Shadow test.** Once a day's calls are complete, `calls.shadow_tickets` archives in `calls.json`, before any game and never revised:
+- the published likeliest-first tickets;
+- the optimizer's 2× and 3× tickets from the same calls.
+
+`tools/shadow.py` grades them into `review/shadow.json` (cashes, ROI, N, dates). The optimizer replaces the published rule only when the forward day-bootstrap 95% interval of its cash difference is above zero. The backtests so far point that way but do not prove it (see "Whole-ticket evidence").
+
+**Test.** `test_daily_calls.test_shadow_tickets_archived_once` (archived once, never revised, graded) and UI probe check 6 (Locks lead with the 2× ticket) both fail on the previous commit and pass now.
+
+**Numbers.** None yet. The shadow record starts with the first day whose calls are complete after this change.

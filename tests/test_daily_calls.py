@@ -64,6 +64,23 @@ class DailyCalls(unittest.TestCase):
         self.assertEqual(self.ids(rec)[2:], ["nhl:3", "nhl:4", "nhl:5"])  # topped up to 5, strongest
         self.assertEqual(len(calls.update_daily(state(rows), later, self.path)["calls"]), calls.TOP_N)
 
+    def test_shadow_tickets_archived_once(self):
+        rows = [row(i, 0.60 + i / 100) for i in range(6)]
+        for r_ in rows:
+            r_["legs"][0]["price"] = "-160"
+        rec = calls.update_daily(state(rows), NINE, self.path)
+        sh = rec["shadow"]
+        self.assertEqual([len(t) for t in sh["strongest"]], [2, 3])
+        self.assertTrue(sh["optimizer_2x"])                                # -160 x2 = 2.62x: 2 legs
+        later = calls.update_daily(state(rows), NINE + dt.timedelta(minutes=30), self.path)
+        self.assertEqual(later["shadow"], sh)                             # never revised
+        import sys as _s
+        _s.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import shadow
+        book = {i: dict(status="won") for t in sh["strongest"] for i in t}
+        g = shadow.report(shadow.grade({"2026-10-20": rec}, book))
+        self.assertEqual(g["strongest_2leg"]["cashed"], 1)
+
     def test_close_call_label(self):
         real = dict(calls._MIN)
         calls._MIN.clear()

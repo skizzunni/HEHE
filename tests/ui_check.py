@@ -90,6 +90,7 @@ PROBE = """<script>setTimeout(function(){
     var s = document.querySelector('[data-lkmode="safe"]'); if (s) s.click();
     setTimeout(function(){
       out.bannerOnLocks = !!document.getElementById("stalebar");
+      out.betFirst = /Ticket to bet: doubles your stake/.test((document.getElementById("panel") || {}).textContent || "");
       out.heading = (document.querySelector(".parlays h3") || {}).textContent || "";
       out.legs = ((document.querySelector(".parlays ul.legs") || {}).children || []).length;
       out.record = [].slice.call(document.querySelectorAll(".parlays details")).map(function(e){return e.textContent}).join(" | ");
@@ -173,6 +174,8 @@ def main():
         if want not in tg:
             fails.append("Targets tab missing: " + want + " | " + tg[:300])
             break
+    if not new.get("betFirst"):
+        fails.append("Locks must lead with the likeliest 2x ticket (betFirst)")
     if new.get("staleNow") != [True, False, True, False]:
         fails.append(f"a price 20 minutes old at viewing time must read stale: {new.get('staleNow')}")
     if "All checks passing" not in new["health"]:

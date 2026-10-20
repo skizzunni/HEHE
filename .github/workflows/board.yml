@@ -91,6 +91,10 @@ jobs:
       - name: Closing line value
         run: python3 tools/clv.py --limit 150 || echo "clv failed -- board unaffected"
 
+      # the forward shadow test of call tickets (calls.shadow_tickets)
+      - name: Shadow tickets
+        run: python3 tools/shadow.py || echo "shadow failed -- board unaffected"
+
       # every proposed change against the current chooser, on later games
       - name: Paired comparisons
         run: python3 tools/paired.py > /dev/null || echo "paired comparisons failed -- board unaffected"

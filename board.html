@@ -223,7 +223,7 @@ aside .fig{font-family:var(--mono);color:var(--accent);font-weight:600}
 .strip div{display:flex;flex-direction:column;min-width:56px}
 .strip span{font:600 10px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim)}
 .strip b{font-family:var(--display);font-size:17px}
-ul.legs{list-style:none;margin:6px 0;padding:0}
+ul.legs,ul.betlegs{list-style:none;margin:6px 0;padding:0}
 .parlays li.leg,.ptk li.leg,li.leg{display:block!important;padding:9px 2px;border-bottom:1px solid var(--rule)}
 li.leg:last-child{border-bottom:0}
 .lgt{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px}
@@ -263,7 +263,7 @@ tbody tr.on td.mine::after{content:"\2713";color:var(--accent);font-weight:800;m
 .sliphead{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px}
 .sliphead h2{font:800 15px var(--display);margin:0}
 .legs{list-style:none;margin:0;padding:0}
-.legs li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;
+.legs li,.betlegs li{display:flex;justify-content:space-between;gap:12px;padding:5px 0;
   border-bottom:1px solid var(--rule-soft);font-size:13.5px}
 .legs .px{font-family:var(--mono);color:var(--ink-dim);font-variant-numeric:tabular-nums}
 .legs button{background:none;border:0;color:var(--ink-dim);cursor:pointer;font-size:15px;
@@ -864,6 +864,23 @@ function strip(items){
   return '<div class="strip">' + items.map(([k, v]) => '<div><span>' + k + '</span><b>' + v + '</b></div>').join("")
     + '</div>';
 }
+// The ticket to bet leads the Locks tab: the likeliest 2x ticket from the
+// same verified FanDuel lines (tickets.optimize, the Targets tab). The card's
+// legs follow as a list -- all of them in one parlay hit 1 of 5 days.
+function betFirst(day){
+  const rows = (((D.frontier || {})[day] || {})["0"] || {}).rows || [];
+  const best = rows.filter(r => r.target === 2 && r.legs && r.legs.length).sort((a, b) => b.prob - a.prob)[0];
+  if(!best) return '';
+  return '<div class="parlays" style="margin:10px 0"><b>Ticket to bet: doubles your stake</b>'
+    + strip([["cash chance (est.)", (100 * best.prob).toFixed(1) + "%"], ["pays (est.)", best.total.toFixed(2) + "x"],
+             ["legs", best.n], ["est. return", (best.ev >= 0 ? "+" : "") + (100 * best.ev).toFixed(1) + "%"]])
+    + '<ul class="betlegs">' + best.legs.map(x => '<li>' + esc(x.label) + ' <b>' + esc(x.price) + '</b> &middot; '
+        + (100 * x.p).toFixed(0) + '% est. &middot; ' + esc(x.match || "") + '</li>').join("") + '</ul>'
+    + '<p class="note">The likeliest combination of today&rsquo;s FanDuel lines (legs ' + (100 * best.standard).toFixed(0)
+    + '%+) that pays 2x. A negative estimated return is the book&rsquo;s margin: no ticket here is shown to beat it, '
+    + 'so stake only what you can lose. The legs below are a list of the day&rsquo;s likeliest bets, not a parlay to bet '
+    + '&mdash; all of them together has hit on few days.</p></div>';
+}
 function drawLocks(){
   const SAFE = LKMODE === "safe";
   const K = (SAFE ? D.safe_locks : D.locks) || {};
@@ -887,6 +904,7 @@ function drawLocks(){
     return;
   }
   const won = L.filter(x => x.status === "won").length, lost = L.filter(x => x.status === "lost").length;
+  h += betFirst(day);
   const SZ = X.sizes || [];
   const full = SZ.length ? SZ[SZ.length - 1] : null;
   h += strip([["legs", L.length], ["all hit (est.)", (100 * X.prob).toFixed(0) + "%"],
