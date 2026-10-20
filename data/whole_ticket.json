@@ -1,0 +1,444 @@
+{
+ "source": "data/backtest_kalshi_legs.json",
+ "dates": 38,
+ "games": 237,
+ "later_from": "2026-09-26",
+ "max_legs": 6,
+ "kind_cap": 3,
+ "results": [
+  {
+   "target": 2.0,
+   "standard": 0.7,
+   "baseline": {
+    "made": 17,
+    "cashed": 7,
+    "cash_rate": 41.2,
+    "claimed": 36.4,
+    "avg_payout": 2.42,
+    "avg_legs": 3.94,
+    "roi": -1.9,
+    "longest_losing_run": 4
+   },
+   "optimizer": {
+    "made": 20,
+    "cashed": 10,
+    "cash_rate": 50.0,
+    "claimed": 46.1,
+    "avg_payout": 2.01,
+    "avg_legs": 3.8,
+    "roi": 0.3,
+    "longest_losing_run": 3
+   },
+   "paired": {
+    "dates": 17,
+    "diff": 3,
+    "new_cashed_old_missed": 4,
+    "old_cashed_new_missed": 1,
+    "ci95": [
+     -1,
+     7
+    ],
+    "promote": false
+   },
+   "later": {
+    "baseline": {
+     "made": 11,
+     "cashed": 5,
+     "cash_rate": 45.5,
+     "claimed": 35.8,
+     "avg_payout": 2.46,
+     "avg_legs": 4.0,
+     "roi": 11.3,
+     "longest_losing_run": 3
+    },
+    "optimizer": {
+     "made": 12,
+     "cashed": 6,
+     "cash_rate": 50.0,
+     "claimed": 46.1,
+     "avg_payout": 2.01,
+     "avg_legs": 3.92,
+     "roi": 0.3,
+     "longest_losing_run": 3
+    },
+    "paired": {
+     "dates": 11,
+     "diff": 1,
+     "new_cashed_old_missed": 2,
+     "old_cashed_new_missed": 1,
+     "ci95": [
+      -2,
+      4
+     ],
+     "promote": false
+    }
+   }
+  },
+  {
+   "target": 2.0,
+   "standard": 0.75,
+   "baseline": {
+    "made": 17,
+    "cashed": 7,
+    "cash_rate": 41.2,
+    "claimed": 36.4,
+    "avg_payout": 2.42,
+    "avg_legs": 3.94,
+    "roi": -1.9,
+    "longest_losing_run": 4
+   },
+   "optimizer": {
+    "made": 20,
+    "cashed": 9,
+    "cash_rate": 45.0,
+    "claimed": 46.0,
+    "avg_payout": 2.01,
+    "avg_legs": 3.95,
+    "roi": -9.7,
+    "longest_losing_run": 3
+   },
+   "paired": {
+    "dates": 17,
+    "diff": 1,
+    "new_cashed_old_missed": 2,
+    "old_cashed_new_missed": 1,
+    "ci95": [
+     -2,
+     5
+    ],
+    "promote": false
+   },
+   "later": {
+    "baseline": {
+     "made": 11,
+     "cashed": 5,
+     "cash_rate": 45.5,
+     "claimed": 35.8,
+     "avg_payout": 2.46,
+     "avg_legs": 4.0,
+     "roi": 11.3,
+     "longest_losing_run": 3
+    },
+    "optimizer": {
+     "made": 12,
+     "cashed": 5,
+     "cash_rate": 41.7,
+     "claimed": 46.1,
+     "avg_payout": 2.01,
+     "avg_legs": 4.08,
+     "roi": -16.3,
+     "longest_losing_run": 3
+    },
+    "paired": {
+     "dates": 11,
+     "diff": 0,
+     "new_cashed_old_missed": 1,
+     "old_cashed_new_missed": 1,
+     "ci95": [
+      -3,
+      3
+     ],
+     "promote": false
+    }
+   }
+  },
+  {
+   "target": 2.0,
+   "standard": 0.8,
+   "baseline": {
+    "made": 0
+   },
+   "optimizer": {
+    "made": 16,
+    "cashed": 8,
+    "cash_rate": 50.0,
+    "claimed": 46.2,
+    "avg_payout": 2.01,
+    "avg_legs": 4.25,
+    "roi": 0.4,
+    "longest_losing_run": 3
+   },
+   "paired": {
+    "dates": 0
+   },
+   "later": {
+    "baseline": {
+     "made": 0
+    },
+    "optimizer": {
+     "made": 11,
+     "cashed": 6,
+     "cash_rate": 54.5,
+     "claimed": 46.1,
+     "avg_payout": 2.01,
+     "avg_legs": 4.27,
+     "roi": 9.5,
+     "longest_losing_run": 2
+    },
+    "paired": {
+     "dates": 0
+    }
+   }
+  },
+  {
+   "target": 3.0,
+   "standard": 0.7,
+   "baseline": {
+    "made": 15,
+    "cashed": 3,
+    "cash_rate": 20.0,
+    "claimed": 27.7,
+    "avg_payout": 3.08,
+    "avg_legs": 5.0,
+    "roi": -39.0,
+    "longest_losing_run": 6
+   },
+   "optimizer": {
+    "made": 16,
+    "cashed": 4,
+    "cash_rate": 25.0,
+    "claimed": 29.3,
+    "avg_payout": 3.0,
+    "avg_legs": 5.25,
+    "roi": -25.0,
+    "longest_losing_run": 4
+   },
+   "paired": {
+    "dates": 15,
+    "diff": 1,
+    "new_cashed_old_missed": 3,
+    "old_cashed_new_missed": 2,
+    "ci95": [
+     -3,
+     5
+    ],
+    "promote": false
+   },
+   "later": {
+    "baseline": {
+     "made": 10,
+     "cashed": 2,
+     "cash_rate": 20.0,
+     "claimed": 27.6,
+     "avg_payout": 3.09,
+     "avg_legs": 5.0,
+     "roi": -39.0,
+     "longest_losing_run": 6
+    },
+    "optimizer": {
+     "made": 11,
+     "cashed": 2,
+     "cash_rate": 18.2,
+     "claimed": 29.2,
+     "avg_payout": 3.0,
+     "avg_legs": 5.27,
+     "roi": -45.4,
+     "longest_losing_run": 4
+    },
+    "paired": {
+     "dates": 10,
+     "diff": 0,
+     "new_cashed_old_missed": 2,
+     "old_cashed_new_missed": 2,
+     "ci95": [
+      -4,
+      4
+     ],
+     "promote": false
+    }
+   }
+  },
+  {
+   "target": 3.0,
+   "standard": 0.75,
+   "baseline": {
+    "made": 14,
+    "cashed": 3,
+    "cash_rate": 21.4,
+    "claimed": 27.8,
+    "avg_payout": 3.06,
+    "avg_legs": 5.0,
+    "roi": -34.6,
+    "longest_losing_run": 5
+   },
+   "optimizer": {
+    "made": 16,
+    "cashed": 5,
+    "cash_rate": 31.2,
+    "claimed": 29.1,
+    "avg_payout": 3.01,
+    "avg_legs": 5.94,
+    "roi": -5.9,
+    "longest_losing_run": 7
+   },
+   "paired": {
+    "dates": 14,
+    "diff": 2,
+    "new_cashed_old_missed": 3,
+    "old_cashed_new_missed": 1,
+    "ci95": [
+     -2,
+     5
+    ],
+    "promote": false
+   },
+   "later": {
+    "baseline": {
+     "made": 9,
+     "cashed": 2,
+     "cash_rate": 22.2,
+     "claimed": 27.8,
+     "avg_payout": 3.07,
+     "avg_legs": 5.0,
+     "roi": -32.2,
+     "longest_losing_run": 5
+    },
+    "optimizer": {
+     "made": 11,
+     "cashed": 3,
+     "cash_rate": 27.3,
+     "claimed": 29.0,
+     "avg_payout": 3.01,
+     "avg_legs": 5.91,
+     "roi": -17.9,
+     "longest_losing_run": 7
+    },
+    "paired": {
+     "dates": 9,
+     "diff": 1,
+     "new_cashed_old_missed": 2,
+     "old_cashed_new_missed": 1,
+     "ci95": [
+      -2,
+      4
+     ],
+     "promote": false
+    }
+   }
+  },
+  {
+   "target": 3.0,
+   "standard": 0.8,
+   "baseline": {
+    "made": 0
+   },
+   "optimizer": {
+    "made": 12,
+    "cashed": 3,
+    "cash_rate": 25.0,
+    "claimed": 27.9,
+    "avg_payout": 3.02,
+    "avg_legs": 6.0,
+    "roi": -24.4,
+    "longest_losing_run": 6
+   },
+   "paired": {
+    "dates": 0
+   },
+   "later": {
+    "baseline": {
+     "made": 0
+    },
+    "optimizer": {
+     "made": 8,
+     "cashed": 3,
+     "cash_rate": 37.5,
+     "claimed": 27.9,
+     "avg_payout": 3.02,
+     "avg_legs": 6.0,
+     "roi": 13.3,
+     "longest_losing_run": 2
+    },
+    "paired": {
+     "dates": 0
+    }
+   }
+  },
+  {
+   "target": 5.0,
+   "standard": 0.7,
+   "baseline": {
+    "made": 0
+   },
+   "optimizer": {
+    "made": 15,
+    "cashed": 1,
+    "cash_rate": 6.7,
+    "claimed": 16.5,
+    "avg_payout": 5.0,
+    "avg_legs": 6.0,
+    "roi": -66.7,
+    "longest_losing_run": 10
+   },
+   "paired": {
+    "dates": 0
+   },
+   "later": {
+    "baseline": {
+     "made": 0
+    },
+    "optimizer": {
+     "made": 10,
+     "cashed": 0,
+     "cash_rate": 0.0,
+     "claimed": 16.5,
+     "avg_payout": 5.0,
+     "avg_legs": 6.0,
+     "roi": -100.0,
+     "longest_losing_run": 10
+    },
+    "paired": {
+     "dates": 0
+    }
+   }
+  },
+  {
+   "target": 5.0,
+   "standard": 0.75,
+   "baseline": {
+    "made": 0
+   },
+   "optimizer": {
+    "made": 0
+   },
+   "paired": {
+    "dates": 0
+   },
+   "later": {
+    "baseline": {
+     "made": 0
+    },
+    "optimizer": {
+     "made": 0
+    },
+    "paired": {
+     "dates": 0
+    }
+   }
+  },
+  {
+   "target": 5.0,
+   "standard": 0.8,
+   "baseline": {
+    "made": 0
+   },
+   "optimizer": {
+    "made": 0
+   },
+   "paired": {
+    "dates": 0
+   },
+   "later": {
+    "baseline": {
+     "made": 0
+    },
+    "optimizer": {
+     "made": 0
+    },
+    "paired": {
+     "dates": 0
+    }
+   }
+  }
+ ]
+}
