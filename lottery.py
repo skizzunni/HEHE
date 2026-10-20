@@ -321,7 +321,10 @@ def build(slot_rows, soccer_keys, labels, FD, prop_games=None, day=None, KB=None
     ok = {r["id"] for rs in rows.values() for r in rs}
     fd_rows = {lg: rs for lg, rs in rows.items() if lg in locks.fanduel.PAGES}
     games = _game_legs(fd_rows, soccer_keys, labels, FD, KB)
-    props = _prop_legs(prop_games, ok)
+    # a prop priced more than freshness.MAX_AGE_MIN ago, or with no quote
+    # time, is never a leg (game lines arrive already filtered: fresh_slots)
+    import freshness
+    props = [P for P in _prop_legs(prop_games, ok) if freshness.is_fresh(P.get("quoted"), now)]
     tickets = []
     for tier in TIERS:
         # a parlay is placed at one book: FanDuel props ride with FanDuel lines

@@ -103,8 +103,10 @@ def tickets(legs, n):
 
 def build(slot_leagues, top=3):
     """{2: [...], 3: [...], "pool": n} for one day's board slot."""
+    # a stale price (freshness.py: older than 15 minutes, or untimed) is
+    # never a leg
     rows = [(k, r) for k, v in (slot_leagues or {}).items()
-            for r in v.get("rows") or []]
+            for r in v.get("rows") or [] if not r.get("st")]
     legs = eligible(rows)
     res = {"pool": len(legs), "min_ev": MIN_EV,
            "reason": "No qualified priced picks clear the estimated-return buffer." if not legs else None}

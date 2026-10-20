@@ -178,6 +178,12 @@ _GET_CACHE = os.path.join(HERE, ".cache", "http")
 # url -> seconds old the data served for it was, when it came from the cache
 # fallback after the network failed: what "fresh build" cannot tell you
 SERVED_STALE = {}
+# url -> epoch seconds the data get() returned was received from the network
+# (the cache file's own time when the cache served it): freshness.py
+CAPTURED = {}
+# scoreboards carry the prices, so their cache may serve at most this old a
+# copy; freshness.MAX_AGE_MIN is the limit at publish time
+SCOREBOARD_FRESH = 240
 
 
 def _ckey(url):
@@ -206,7 +212,9 @@ def get(url, tries=6, fresh=900, stale=21600):
         if age < fresh:
             try:
                 with open(path) as fh:
-                    return json.load(fh)
+                    d = json.load(fh)
+                CAPTURED[url] = os.path.getmtime(path)
+                return d
             except Exception:
                 pass
     delay = 0.8
@@ -222,6 +230,7 @@ def get(url, tries=6, fresh=900, stale=21600):
                 os.replace(tmp, path)
             except Exception:
                 pass
+            CAPTURED[url] = time.time()
             return d
         except Exception:
             if a < tries - 1:
@@ -234,6 +243,7 @@ def get(url, tries=6, fresh=900, stale=21600):
             sys.stderr.write("get: serving %ds-old cache for %s\n"
                              % (int(now - os.path.getmtime(path)), url[:90]))
             SERVED_STALE[url] = int(now - os.path.getmtime(path))
+            CAPTURED[url] = os.path.getmtime(path)
             return d
         except Exception:
             pass
@@ -318,6 +328,22 @@ def deep_links(comp):
 def _even(v):
     """'EVEN' is +100; every price consumer downstream expects a number."""
     return "+100" if str(v).strip().upper() == "EVEN" else v
+
+
+def price_book(comp):
+    """The book behind the scoreboard's moneyline (ESPN names its provider)."""
+    for o in comp.get("odds") or []:
+        if isinstance(o, dict) and (o.get("moneyline") or o.get("awayTeamOdds")):
+            return ((o.get("provider") or {}).get("name") or "ESPN odds").strip()
+    return None
+
+
+def captured_at(url):
+    """ISO UTC capture time of the data get() last returned for url, or None."""
+    t = CAPTURED.get(url)
+    if t is None:
+        return None
+    return dt.datetime.fromtimestamp(t, dt.timezone.utc).isoformat(timespec="seconds")
 
 
 def raw_prices(comp, ways):
@@ -550,7 +576,10 @@ def model_book(day):
 
 
 def collect(key, path, day, mlbctx, mybook=None):
-    d = get(f"{ESPN}/{path}/scoreboard?dates={day}")
+    url = f"{ESPN}/{path}/scoreboard?dates={day}"
+    d = get(url, fresh=SCOREBOARD_FRESH)
+    # every price carries its book and capture time: no timestamp, no price
+    cap = captured_at(url)
     rows = []
     for ev in d.get("events", []):
         # Exhibition games are not picks: starters sit, and the ratings that
@@ -585,6 +614,7 @@ def collect(key, path, day, mlbctx, mybook=None):
                 label = ev.get("shortName") or ev.get("name") or "?"
             dl = deep_links(c)
             pr = raw_prices(c, 3 if key in THREE_WAY else 2)
+            book = price_book(c) if pr else None
             dv = (devig(*pr, method="power" if key in POWER_DEVIG else "proportional")
                   if pr else None)
             legs = []
@@ -596,6 +626,7 @@ def collect(key, path, day, mlbctx, mybook=None):
                     b = bucket(price_)
                     link = dl.get(side_) or {}
                     legs.append(dict(who=who, side=side_, prob=p_, price=str(price_),
+                                     book=book, at=cap,
                                      dk=(f'{link["event"]}:{link["outcome"]}'
                                          if link.get("outcome") else None),
                                      dog=(str(price_).startswith("+") or
@@ -712,8 +743,11 @@ def collect(key, path, day, mlbctx, mybook=None):
                     pr_ = mine["prices"].get(who)
                     if pr_ is None:
                         continue
+                    # read by ufc_picks from ESPN's core feed, which gives no
+                    # capture time: no timestamp, so never fresh
                     legs.append(dict(who=who, side=side_, prob=(mine.get("fair") or {}).get(who),
-                                     price=pr_, dk=None, dog=pr_.startswith("+"),
+                                     price=pr_, book="ESPN core", at=None,
+                                     dk=None, dog=pr_.startswith("+"),
                                      roi=None, gap=None))
             if key in MARKET_PICK and not mine.get("pick") and legs:
                 fav = max((L for L in legs if L["side"] != "draw"),
@@ -729,6 +763,8 @@ def collect(key, path, day, mlbctx, mybook=None):
             rows.append(dict(id=f'{key}:{c.get("id")}', label=label,
                              mkt=market_lines(c),
                              tip=t.strftime("%-I:%M %p"), legs=legs, note=note,
+                             price_at=(legs[0].get("at") if legs else None),
+                             price_book=(legs[0].get("book") if legs else None),
                              mypick=mine.get("pick", ""), myconf=mine.get("conf"),
                              why=mine.get("why", ""), myside=mine.get("side"),
                              dc=bool(mine.get("dc")),

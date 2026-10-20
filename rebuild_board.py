@@ -12,6 +12,7 @@ outbound requests, and none of the available runtime capabilities grant network
 access. The page can only ever hold data baked in at publish time, so keeping it
 current means re-baking and republishing it -- which is what this does.
 """
+import datetime as dt
 import json
 import math
 import os
@@ -34,6 +35,7 @@ import props_ledger             # noqa: E402
 import locks                    # noqa: E402
 import calls                    # noqa: E402
 import lottery                  # noqa: E402
+import freshness                # noqa: E402
 
 
 def snapshot():
@@ -100,11 +102,16 @@ def snapshot():
         FD = fanduel.load()
     except Exception:
         FD = {}
+    # publish time for the freshness gate: a pick priced more than
+    # freshness.MAX_AGE_MIN minutes before this is stale (freshness.py)
+    pub = dt.datetime.now(dt.timezone.utc)
     for slot in ("today", "tomorrow"):
         lg = {}
         soccer_rows = []
+        soccer_at = []
         for k, _, lab in d.LEAGUES:
             rows = []
+            ats = []
             for r in d._STATE["slots"][slot].get(k) or []:
                 if not r.get("mypick") or r["mypick"].strip().upper() == "TBD":
                     continue          # an undetermined competitor is not a pick
@@ -132,11 +139,17 @@ def snapshot():
                                     bool(leg and leg.get("dog")))
                 ek, el = ev_note(k in SOCCER, mc, (leg or {}).get("price"),
                                  bool(leg and leg.get("dog")))
+                st_ = freshness.stale(r, pub)
+                if r.get("price_at"):
+                    ats.append(r["price_at"])
                 rows.append({"mp": r["mypick"] + (" or draw" if r.get("dc") else ""),
                              "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
-                             # below the league's cutoff: a lean, not a call
-                             "nc": not calls.is_call(k, mc),
+                             # below the league's cutoff, or priced too long
+                             # ago: a lean, not a call
+                             "nc": st_ or not calls.is_call(k, mc),
+                             "st": st_,
+                             "pa": r.get("price_at"), "bk": r.get("price_book"),
                              "pk": pk, "pl": pl, "ek": ek, "el": el,
                              # fair price and edge come from the SAME rounded
                              # rate the row displays, so the three never
@@ -162,11 +175,12 @@ def snapshot():
                                      -(x["mc"] or 0)))
             if k in SOCCER:
                 soccer_rows.extend(rows)
+                soccer_at.extend(ats)
             else:
-                lg[k] = {"label": lab, "rows": rows}
+                lg[k] = {"label": lab, "rows": rows, "asof": freshness.as_of(ats)}
         soccer_rows.sort(key=lambda x: (x["mc"] is None, -(x["hit"] or 0),
                                         -(x["mc"] or 0)))
-        lg["soccer"] = {"label": "Soccer", "rows": soccer_rows}
+        lg["soccer"] = {"label": "Soccer", "rows": soccer_rows, "asof": freshness.as_of(soccer_at)}
         out["slots"][slot] = lg
     out["results"] = ledger.board_payload()
     # strong calls' record on picks the cut-offs never saw (tools/daily_review)
@@ -243,8 +257,10 @@ def snapshot():
     # has its own try: one feed or model failing must not take the others, or
     # the board, down with it.
     labels = {k: lab for k, _, lab in d.LEAGUES}
+    # tickets, stacks, Locks pools and the Lottery draw only on fresh prices
+    FRESH = freshness.fresh_days(d._STATE["slots"], pub)
     try:
-        out["stacks"] = stacks.build(d._STATE["slots"], SOCCER, labels)
+        out["stacks"] = stacks.build(FRESH, SOCCER, labels)
         for st_ in out["stacks"].values():
             for tickets in st_["tickets"].values():
                 for t in tickets:
@@ -263,7 +279,7 @@ def snapshot():
                         kalshi.attach(t, KB, by_id)
             # Kalshi-ready stacks: built only from lines Kalshi lists, so
             # every leg of every ticket can be placed in a Kalshi combo
-            out["kalshi_stacks"] = stacks.build(d._STATE["slots"], SOCCER, labels,
+            out["kalshi_stacks"] = stacks.build(FRESH, SOCCER, labels,
                                                 extra=kalshi.extra_specs(KB),
                                                 keep=kalshi.keep_listed(KB))
             for st_ in out["kalshi_stacks"].values():
@@ -326,9 +342,13 @@ def snapshot():
             except Exception as ex:
                 print(f"props: participation check failed (no prop recommended): {ex}",
                       file=sys.stderr)
+            # tickets only from props quoted within freshness.MAX_AGE_MIN
+            fresh_g = [dict(g_, props=[P for P in g_.get("props") or []
+                                       if freshness.is_fresh(P.get("quoted"), pub)])
+                       for g_ in games]
             out["props"][slot] = dict(games=games,
-                                      tickets=player_props.prop_tickets(games))
-            mega = player_props.mega_ticket(games)
+                                      tickets=player_props.prop_tickets(fresh_g))
+            mega = player_props.mega_ticket(fresh_g)
             if mega:
                 out["props"][slot]["mega"] = mega
                 # recorded with the stacks so every leg is graded
@@ -367,7 +387,7 @@ def snapshot():
     # props), one per game. After the props, which they draw on.
     try:
         days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
-        out["locks"] = {s_: locks.build(d._STATE["slots"].get(s_), SOCCER, labels, FD,
+        out["locks"] = {s_: locks.build(FRESH.get(s_), SOCCER, labels, FD,
                                         day=days_[s_],
                                         prop_games=((out.get("props") or {}).get(s_) or {}).get("games"))
                         for s_ in ("today", "tomorrow")}
@@ -396,7 +416,7 @@ def snapshot():
     # the regular one, whose rules stay as they are (locks.SAFE_LEDGER)
     try:
         days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
-        out["safe_locks"] = {s_: locks.build(d._STATE["slots"].get(s_), SOCCER, labels, FD,
+        out["safe_locks"] = {s_: locks.build(FRESH.get(s_), SOCCER, labels, FD,
                                              day=days_[s_], dec=locks.SAFE_DEC, band=locks.SAFE_BAND,
                                              prop_games=((out.get("props") or {}).get(s_) or {}).get("games"))
                              for s_ in ("today", "tomorrow")}
@@ -428,7 +448,7 @@ def snapshot():
         days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
         fr = {}
         for s_ in ("today", "tomorrow"):
-            res_ = locks.build(d._STATE["slots"].get(s_), SOCCER, labels, FD, day=days_[s_],
+            res_ = locks.build(FRESH.get(s_), SOCCER, labels, FD, day=days_[s_],
                                dec=tickets.POOL_DEC, band=tickets.POOL_BAND,
                                prop_games=((out.get("props") or {}).get(s_) or {}).get("games"))
             pool_ = res_.get("pool") or []
@@ -466,7 +486,7 @@ def snapshot():
         except Exception:
             _kb = None
         days_ = {"today": d._STATE["dates"][0], "tomorrow": d._STATE["dates"][1]}
-        out["lottery"] = {s_: lottery.build(d._STATE["slots"].get(s_), SOCCER, labels, FD,
+        out["lottery"] = {s_: lottery.build(FRESH.get(s_), SOCCER, labels, FD,
                                             ((out.get("props") or {}).get(s_) or {}).get("games"),
                                             day=days_[s_], KB=_kb)
                           for s_ in ("today", "tomorrow")}

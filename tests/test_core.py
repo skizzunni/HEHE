@@ -45,12 +45,13 @@ class LocksRules(unittest.TestCase):
     """S3: 11 legs, -400 .. -120 on the regular card; Safe Locks -2000 .. -500."""
 
     def setUp(self):
-        self._alts, self._elig = fanduel.load_alts, locks._eligible
+        self._alts, self._elig, self._qt = fanduel.load_alts, locks._eligible, fanduel.quote_time
         locks._eligible = lambda r, d, n: True
+        fanduel.quote_time = lambda g: dt.datetime.now(dt.timezone.utc).isoformat()
         self.start = (dt.datetime.now(dt.timezone.utc) + dt.timedelta(hours=3)).isoformat()
 
     def tearDown(self):
-        fanduel.load_alts, locks._eligible = self._alts, self._elig
+        fanduel.load_alts, locks._eligible, fanduel.quote_time = self._alts, self._elig, self._qt
 
     def build(self, alts, **kw):
         fanduel.load_alts = lambda g: alts
@@ -427,8 +428,10 @@ class RecommendationHistory(unittest.TestCase):
 
     def run_record(self, path, pick, dc, price, conf, start):
         import ledger
+        at = dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
         row = dict(id="efl1:1", mypick=pick, myside="home", dc=dc, myconf=conf, label="A @ B",
-                   legs=[dict(side="home", price=price)], mkt=dict(start=start))
+                   legs=[dict(side="home", price=price, at=at)], mkt=dict(start=start),
+                   price_at=at, price_book="DraftKings")
         state = dict(dates=("20261018", "20261019"), slots=dict(today={"efl1": [row]}, tomorrow={}))
         real = ledger.LEDGER
         ledger.LEDGER = path

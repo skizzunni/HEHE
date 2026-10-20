@@ -157,7 +157,7 @@ class WagerAndRecord(unittest.TestCase):
         good = self.live(1, 0.8, "-300")
         self.assertEqual(T.verify(dict(good, dec=1.33), self.NOW), (True, []))
         stale = dict(good, dec=1.33, quoted=(self.NOW - dt.timedelta(hours=2)).isoformat())
-        self.assertIn("quote older than 30 min", T.verify(stale, self.NOW)[1])
+        self.assertIn("quote older than 15 min", T.verify(stale, self.NOW)[1])
         started = dict(good, dec=1.33, start=(self.NOW - dt.timedelta(minutes=1)).isoformat())
         self.assertIn("game has started", T.verify(started, self.NOW)[1])
         prop = dict(good, dec=1.33, kind="prop", plays=False, play="lineup not out")

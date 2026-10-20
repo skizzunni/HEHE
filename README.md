@@ -2180,3 +2180,39 @@ model's estimate, not a measured rate.
 - **Share links.** Every ticket and the slip has a Share button. The ticket
   rides in the link itself (`#t=…`) and opens as a Shared ticket view on any
   device.
+
+## Accuracy plan, item 1: price freshness gate (2026-10-20)
+
+**What changed.**
+- Every board price now carries its source book and an ISO capture time.
+  - In `dashboard.collect`, each leg gets `book` (ESPN's named provider, e.g. DraftKings) and `at`.
+  - Each row gets `price_book` and `price_at`.
+- The capture time is when this pipeline received the scoreboard. That is a fresh fetch, or the cache file's own time when the cache served it. It is not the book's quote time, which ESPN does not give.
+- UFC prices read from ESPN's core feed have no capture time, so they are never fresh: no timestamp, no price.
+- The scoreboard cache now serves at most a 4-minute-old copy (it was 15 minutes).
+- `freshness.py` holds one rule: a price is fresh if it was captured at most 15 minutes before publish time.
+- A stale or untimed priced pick:
+  - shows a **stale** badge;
+  - is not a call;
+  - is not recorded in the ledger (an earlier fresh version stands);
+  - is kept out of the Card parlays, Stacks, Kalshi stacks, Locks, Safe Locks, Payout targets and the Lottery.
+- FanDuel game-line and prop quotes are held to the same 15 minutes. The exact-wager check previously allowed 30.
+- ESPN props are stamped with their fetch time.
+- Each league tab prints "Prices as of HH:MM ET", the oldest capture on the tab.
+- The ledger stores `price_book` and `price_at` on each pick and on each history version.
+- Trigger: `board.yml` already accepts `repository_dispatch` (event type `rebuild`) and chains itself every 5 minutes. An external cron hitting the dispatch endpoint is the backstop. Setting it up needs a token, which only the owner creates and stores in the cron service; it never passes through here.
+
+**Test.** `tests/test_freshness.py`, 6 tests: stale and untimed prices are never recorded; fresh ones are recorded with book and time; collect stamps every leg; the Locks pool and Card parlays drop stale prices. All 6 fail on the previous code and pass now; the full suite (81 tests) and the UI probe pass.
+
+**Before / after.**
+- **Before:** 0 of 2,394 ledger entries carry a capture time, so the price age at publish cannot be measured for any past pick.
+- **Build-history proxy,** pipeline commits 2026-10-13 04:07 to 2026-10-20 03:47 UTC (1,392 builds):
+  - Median gap between builds: 5.1 min.
+  - The newest build was over 15 minutes old for 27.3% of the week, with a longest gap of 462 min. All of that came before the self-chaining fix on 10-15.
+  - Since 2026-10-15 02:00 UTC: 0.50% of 120 h, longest gap 38 min.
+  - On top of the build gap, the old cache let a scoreboard copy up to 15 minutes old count as current, and up to 6 h old when ESPN refused a request. A price could therefore be published 15 + gap minutes old, unrecorded.
+- **After,** local build at 2026-10-20 ~04:00 UTC:
+  - All 65 priced rows carry a book and capture time.
+  - Oldest price at publish: 0.5 min; 0 stale.
+  - 46 more rows had no book price at all; those are item 2.
+- **Record on the same window:** graded picks 2026-10-15 to 2026-10-19, N = 615, hit 66.7%. Unchanged by construction: the gate applies only from now on, and past picks cannot be re-gated without capture times. Its effect on the record will show as the share of picks excluded as stale, reported with N and dates once graded picks carry `price_at`.

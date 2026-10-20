@@ -332,6 +332,10 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                                  event=(QUOTED.get(g["gid"]) or {}).get("event"),
                                  start=(QUOTED.get(g["gid"]) or {}).get("start"),
                                  quoted=fanduel.quote_time(dict(id=(QUOTED.get(g["gid"]) or {}).get("event")))))
+    # a FanDuel quote older than freshness.MAX_AGE_MIN, or with no time, is
+    # never in a pool (props are held to the same rule below)
+    import freshness
+    pool = [L for L in pool if freshness.is_fresh(L.get("quoted"), now)]
     monotone(pool)
     # FanDuel player props compete with the game lines: per game, the lock is
     # the likeliest of all of them. A prop's chance is FanDuel's own price,
@@ -354,6 +358,8 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
                 continue
             if not participation.eligible(P):
                 continue                        # not confirmed to play (participation.py)
+            if not freshness.is_fresh(P.get("quoted"), now):
+                continue                        # stale or untimed quote (freshness.py)
             # an over/under prop's p is already de-vigged across both sides
             # every prop's p already carries its market's tuned margin
             # (props_ledger.hold per league and market) -- ladders included;

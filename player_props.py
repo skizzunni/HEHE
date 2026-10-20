@@ -194,6 +194,10 @@ def for_slot(board_slot, labels=None, max_games=40):
             eid = row["id"].split(":", 1)[1]
             jobs.append((league, eid, row))
     jobs = jobs[:max_games]
+    # ESPN's prop prices are fetched live here (no cache): stamped with the
+    # time the fetch began, so a ticket can tell how old they are (freshness.py)
+    import datetime as _dt
+    raw_at = _dt.datetime.now(_dt.timezone.utc).isoformat(timespec="seconds")
     with ThreadPoolExecutor(max_workers=6) as ex:
         raws = list(ex.map(lambda j: raw_items(j[0], j[1]), jobs))
     refs = [((x.get("athlete") or x.get("team") or {}).get("$ref"))
@@ -230,7 +234,8 @@ def for_slot(board_slot, labels=None, max_games=40):
         # keep the page small: the 60 likeliest props worth stacking per game
         merged, seen = [], set()
         # FanDuel first: the same book the locks and lottery use
-        for p in list(fd_by_row.get(row["id"]) or []) + parse(items, who, props_ledger.hold(league), league):
+        for p in list(fd_by_row.get(row["id"]) or []) + [dict(q, quoted=raw_at) for q in
+                                                             parse(items, who, props_ledger.hold(league), league)]:
             k = (props_ledger.norm_name(p["name"]), p["market"], str(p["line"]))
             if k in seen:
                 continue

@@ -391,7 +391,7 @@ def evidence(root=None):
 
 
 # ------------------------------------------------------- exact wager check
-QUOTE_MAX_AGE_MIN = 30
+QUOTE_MAX_AGE_MIN = 15          # freshness.MAX_AGE_MIN: one rule for every price
 SETTLEMENT = ("FanDuel NY rules as graded here: full game including overtime; "
               "an integer line landing exactly pushes and drops off the slip; "
               "a game not played, or a player who does not play, voids the leg")

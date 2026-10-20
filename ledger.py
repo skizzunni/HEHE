@@ -153,6 +153,11 @@ def record(state=None):
                     continue                      # already settled, never rewrite
                 if key in book and _started(r):
                     continue                      # the pregame call stands once play begins
+                # a price older than freshness.MAX_AGE_MIN, or with no capture
+                # time, is never recorded: an earlier fresh version stands
+                import freshness
+                if freshness.stale(r):
+                    continue
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)
                 if r.get("dc"):
@@ -161,6 +166,8 @@ def record(state=None):
                              conf=round((r["myconf"] or 0) * 100, 1),
                              why=r.get("why", ""), tip=r.get("tip"),
                              price=(leg or {}).get("price"),
+                             # the book and capture time behind the price
+                             price_book=r.get("price_book"), price_at=r.get("price_at"),
                              dog=bool((leg or {}).get("dog")),
                              # Whether the book made my side the favourite. Derive
                              # it from the price, not from the board's `pick`
@@ -210,7 +217,9 @@ def record(state=None):
                 # model's share and the policy fingerprint (policy.version)
                 import policy as _pol
                 snap = dict(t=entry["logged"], pick=entry["pick"], dc=entry["dc"],
-                            price=entry.get("price"), conf=entry["conf"], why=entry["why"],
+                            price=entry.get("price"), price_at=r.get("price_at"),
+                            price_book=r.get("price_book"),
+                            conf=entry["conf"], why=entry["why"],
                             strong=entry["strong"], version=POLICY, policy=_pol.version(),
                             w=_pol.model_weight(lg), p_market_away=r.get("p_market_away"),
                             p_model_away=r.get("p_model_away"),

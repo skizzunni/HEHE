@@ -612,6 +612,7 @@ function renderView(){
     return;
   }
   panel.innerHTML = strongBar(closeN) + coinBar(coins)
+    + (lg.asof ? '<p class="coinbar">Prices as of ' + esc(lg.asof) + ' (oldest on this tab).</p>' : '')
     + '<table><thead><tr><th>I have winning</th><th>Start</th>'
     + '<th class="num">Conf</th><th class="why">Why</th><th>Price</th>'
     + '</tr></thead><tbody>'
@@ -623,7 +624,8 @@ function renderView(){
         const conf = (r.mc === null || r.mc === undefined)
           ? '<td class="num none">&mdash;</td>'
           : '<td class="num">' + r.mc.toFixed(1) + '%'
-            + (r.nc ? '<span class="tier lean" title="Close game: the favourite is under this league\'s cutoff">close</span>'
+            + (r.st ? '<span class="tier lean" title="Price older than 15 minutes, or with no capture time: not a call, not in the record or any ticket">stale</span>'
+               : r.nc ? '<span class="tier lean" title="Close game: the favourite is under this league\'s cutoff">close</span>'
                : '<span class="tier call">strong</span>')
             + (r.mc >= 90 ? '<span class="tier call" title="90%+ picks won 97% of 110 graded college football picks: the only ones that belong in a long combo">combo-safe</span>' : '')
             + '</td>';
