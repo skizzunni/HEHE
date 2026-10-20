@@ -3193,10 +3193,10 @@
   },
   "props": {
    "fair": {
-    "n": 152,
-    "said_fair": 82.2,
-    "said_price": 85.7,
-    "won": 125
+    "n": 172,
+    "said_fair": 82.1,
+    "said_price": 85.2,
+    "won": 142
    },
    "n": 191,
    "said": 73.7,
@@ -3279,38 +3279,38 @@
    },
    {
     "flag": false,
-    "hit": 37.5,
-    "n": 24,
+    "hit": 38.5,
+    "n": 26,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 42.0
+    "said": 42.7
    },
    {
     "flag": false,
-    "hit": 87.5,
-    "n": 16,
+    "hit": 88.9,
+    "n": 18,
     "name": "props nfl Passing Yards",
-    "said": 81.5
+    "said": 81.4
    },
    {
     "flag": false,
-    "hit": 89.5,
-    "n": 38,
+    "hit": 88.0,
+    "n": 50,
     "name": "props nfl Receiving Yards",
-    "said": 79.8
+    "said": 80.3
    },
    {
     "flag": false,
-    "hit": 81.8,
-    "n": 44,
+    "hit": 82.6,
+    "n": 46,
     "name": "props nfl Receptions",
-    "said": 80.7
+    "said": 80.8
    },
    {
     "flag": false,
-    "hit": 71.4,
-    "n": 21,
+    "hit": 72.0,
+    "n": 25,
     "name": "props nfl Rushing Yards",
-    "said": 80.6
+    "said": 81.3
    },
    {
     "flag": false,
@@ -3363,9 +3363,9 @@
     "hit": 83.1
    },
    "nfl": {
-    "all_hit": 58.2,
+    "all_hit": 58.7,
     "cutoff": null,
-    "games": 91,
+    "games": 92,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nhl": {
@@ -3403,21 +3403,12 @@
    }
   },
   "clv": {
-   "avg": -0.31,
+   "avg": -0.78,
    "beat": 0.0,
-   "n": 4
+   "n": 5
   },
   "day": "2026-10-19",
   "leaks_14d": [
-   {
-    "hit": 50.0,
-    "league": "nfl",
-    "lost": 14,
-    "n": 28,
-    "roi": -25.3,
-    "said": 58.9,
-    "won": 14
-   },
    {
     "hit": 52.0,
     "league": "ufc",
@@ -3431,15 +3422,15 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      2,
      0.5962,
-     "open"
+     "won"
     ]
    },
-   "won": 9
+   "won": 10
   },
   "losses": [
    {
@@ -3590,19 +3581,21 @@
   "lottery": [
    {
     "killed_by": [
+     "Washington Commanders +4.5",
      "Travis Bazzana: 2+ Hits + Runs + RBIs",
      "New York Rangers under 1.5 goals",
      "Colorado Avalanche over 5.5 goals",
      "San Jose Sharks over 4.5 goals"
     ],
     "legs": 7,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+25",
     "won": 1
    },
    {
     "killed_by": [
+     "Washington Commanders +4.5",
      "Travis Bazzana: 2+ Hits + Runs + RBIs",
      "New York Rangers under 1.5 goals",
      "Colorado Avalanche over 5.5 goals",
@@ -3610,13 +3603,14 @@
      "Over 149.5 points"
     ],
     "legs": 7,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+50",
     "won": 0
    },
    {
     "killed_by": [
+     "Washington Commanders +4.5",
      "Travis Bazzana: 2+ Hits + Runs + RBIs",
      "New York Rangers under 1.5 goals",
      "Colorado Avalanche over 5.5 goals",
@@ -3624,18 +3618,19 @@
      "Over 149.5 points"
     ],
     "legs": 7,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+100",
     "won": 0
    },
    {
     "killed_by": [
+     "Washington Commanders +4.5",
      "Travis Bazzana: 2+ Hits + Runs + RBIs",
      "Over 6.5 goals"
     ],
     "legs": 7,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 3
@@ -3645,22 +3640,23 @@
      "Victor Mesa Jr.: 2+ Hits + Runs + RBIs",
      "Anaheim Ducks -1.5",
      "Colorado Avalanche over 5.5 goals",
+     "Over 66.5 points",
      "Angel Reese: Under 11.5 Rebounds"
     ],
     "legs": 7,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 1
    }
   ],
   "picks": {
-   "hit": 64.7,
+   "hit": 65.4,
    "lost": 18,
-   "n": 51,
-   "roi": -4.2,
-   "said": 67.6,
-   "won": 33
+   "n": 52,
+   "roi": 0.1,
+   "said": 67.7,
+   "won": 34
   },
   "picks_by_league": {
    "arg": {
@@ -3775,6 +3771,14 @@
     "said": 68.1,
     "won": 1
    },
+   "nfl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 25.3,
+    "said": 76.6,
+    "won": 1
+   },
    "nhl": {
     "hit": 66.7,
     "lost": 1,
@@ -3834,21 +3838,21 @@
   },
   "props": {
    "fair": {
-    "n": 152,
-    "said_fair": 82.2,
-    "said_price": 85.7,
-    "won": 125
+    "n": 172,
+    "said_fair": 82.1,
+    "said_price": 85.2,
+    "won": 142
    },
-   "n": 39,
-   "said": 77.8,
-   "won": 28
+   "n": 61,
+   "said": 78.5,
+   "won": 46
   },
   "safe_locks": {
    "lost": [
     "Deportivo Pasto or draw (Alianza FC at Deportivo Pasto) Alianza FC 1 - Deportivo Pasto 0"
    ],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      7,
@@ -3861,7 +3865,7 @@
      "open"
     ]
    },
-   "won": 8
+   "won": 9
   },
   "strong": {
    "hit": 81.8,
@@ -3882,12 +3886,12 @@
     "won": 10
    },
    "agree": {
-    "hit": 66.9,
+    "hit": 67.0,
     "lost": 91,
-    "n": 275,
-    "roi": -2.6,
+    "n": 276,
+    "roi": -2.5,
     "said": 63.8,
-    "won": 184
+    "won": 185
    }
   },
   "weights": {
