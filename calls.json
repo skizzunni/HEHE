@@ -94,10 +94,10 @@
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": false,
      "conf": 73,
-     "fp": "54a192e74182",
+     "fp": "05286ef0f3c7",
      "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
+      "ok": true,
+      "what": "both XIs confirmed"
      },
      "id": "ucl:401915404",
      "league": "ucl",
@@ -111,6 +111,11 @@
        "event": "news",
        "t": "2026-10-20T14:26:43+00:00",
        "what": "awaiting confirmed XIs"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-20T15:59:39+00:00",
+       "what": "both XIs confirmed"
       }
      ],
      "match": "DOR @ SAB",
@@ -157,12 +162,11 @@
     }
    ],
    "frozen": [
-    "nhl",
     "ucl"
    ],
    "news": {
     "nhl": "2026-10-20T14:26:43+00:00",
-    "ucl": "2026-10-20T14:26:43+00:00"
+    "ucl": "2026-10-20T15:59:39+00:00"
    }
   }
  }
