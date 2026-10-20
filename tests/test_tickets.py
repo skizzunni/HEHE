@@ -1,0 +1,136 @@
+"""The whole-ticket optimizer against brute force, and its contract."""
+import itertools
+import math
+import os
+import random
+import sys
+import unittest
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, ROOT)
+import tickets as T  # noqa: E402
+
+
+def leg(g, p, dec, lg="nfl", t="under", label=None):
+    return dict(gid=g, p=p, dec=dec, league=lg, spec=dict(t=t), label=label or f"{g}:{p}:{dec}")
+
+
+def brute(legs, target, min_p, max_legs, boost=0.0, kind_cap=T.KIND_CAP):
+    """Every combination of at most one line per game: the true optimum."""
+    need = T.needed_price(target, boost)
+    by = {}
+    for L in legs:
+        if L["p"] >= min_p:
+            by.setdefault(L["gid"], []).append(L)
+    best = None
+    games = list(by)
+    for n in range(1, max_legs + 1):
+        for gs in itertools.combinations(games, n):
+            for pick in itertools.product(*(by[g] for g in gs)):
+                ks = {}
+                for L in pick:
+                    ks[T.kind(L)] = ks.get(T.kind(L), 0) + 1
+                if max(ks.values()) > kind_cap:
+                    continue
+                d = math.prod(L["dec"] for L in pick)
+                if d < need - 1e-12:
+                    continue
+                p = math.prod(L["p"] for L in pick)
+                if best is None or p > best[0] + 1e-12 or (abs(p - best[0]) <= 1e-12 and d > best[1]):
+                    best = (p, d)
+    return best
+
+
+class Optimizer(unittest.TestCase):
+    def test_matches_brute_force_on_random_small_pools(self):
+        rng = random.Random(7)
+        for case in range(300):
+            legs = []
+            for g in range(rng.randint(2, 7)):
+                for _ in range(rng.randint(1, 4)):
+                    p = rng.uniform(0.55, 0.97)
+                    dec = max(1.01, (1 / p) * rng.uniform(0.85, 1.02))   # priced near the chance
+                    legs.append(leg(f"g{g}", round(p, 4), round(dec, 4),
+                                    t=rng.choice(["under", "over", "win"])))
+            target, min_p = rng.choice([1.5, 2, 3, 5]), rng.choice([0.6, 0.7, 0.8])
+            K, boost = rng.randint(1, 5), rng.choice([0, 0.25, 0.5])
+            want = brute(legs, target, min_p, K, boost)
+            got = T.optimize(legs, target, min_p, max_legs=K, boost=boost)
+            self.assertTrue(got["exact"])
+            if want is None:
+                self.assertIsNone(got["legs"], case)
+            else:
+                self.assertIsNotNone(got["legs"], case)
+                self.assertAlmostEqual(got["prob"], want[0], places=10, msg=case)
+
+    def test_matches_brute_force_on_larger_pools(self):
+        rng = random.Random(21)
+        for case in range(40):
+            legs = []
+            for g in range(9):
+                for _ in range(3):
+                    p = rng.uniform(0.7, 0.97)
+                    legs.append(leg(f"g{g}", round(p, 4), round(max(1.01, (1 / p) * rng.uniform(0.88, 1.0)), 4),
+                                    lg=rng.choice(["nfl", "ncaaf"]), t=rng.choice(["under", "over", "win"])))
+            target = rng.choice([2, 3])
+            want = brute(legs, target, 0.75, 5)
+            got = T.optimize(legs, target, 0.75, max_legs=5)
+            self.assertTrue(got["exact"])
+            self.assertEqual(got["legs"] is None, want is None, case)
+            if want:
+                self.assertAlmostEqual(got["prob"], want[0], places=10, msg=case)
+
+    def test_contract(self):
+        legs = [leg("a", 0.92, 1.10), leg("a", 0.85, 1.30, t="over"), leg("b", 0.90, 1.25),
+                leg("c", 0.88, 1.35, t="win"), leg("d", 0.70, 1.45, t="win")]
+        r = T.optimize(legs, 2.0, 0.80)
+        self.assertIsNotNone(r["legs"])
+        self.assertGreaterEqual(r["dec"], 2.0 - 1e-12)                     # payout reached
+        self.assertTrue(all(L["p"] >= 0.80 for L in r["legs"]))              # standard kept
+        self.assertEqual(len({L["gid"] for L in r["legs"]}), len(r["legs"]))  # one per game
+        self.assertLessEqual(len(r["legs"]), T.MAX_LEGS)
+        # the 0.70 leg is never used to reach the target at an 0.80 standard
+        self.assertNotIn("d", {L["gid"] for L in r["legs"]})
+
+    def test_alternative_line_beats_adding_a_leg(self):
+        """A game's likeliest line pays too little; its longer line finishes
+        the ticket with fewer legs and a higher chance."""
+        legs = [leg("a", 0.95, 1.40), leg("a", 0.86, 1.62, t="over"),
+                leg("b", 0.95, 1.40, t="win"), leg("c", 0.90, 1.12, t="side")]
+        r = T.optimize(legs, 2.2, 0.80)
+        self.assertEqual(sorted(L["label"] for L in r["legs"]),
+                         sorted([legs[1]["label"], legs[2]["label"]]))
+        self.assertAlmostEqual(r["prob"], 0.86 * 0.95)
+
+    def test_unavailable_is_said_not_weakened(self):
+        legs = [leg(f"g{i}", 0.91, 1.08, t=["under", "over", "win"][i % 3], lg=f"l{i}") for i in range(6)]
+        r = T.optimize(legs, 3.0, 0.90)
+        self.assertIsNone(r["legs"])
+        c = T.ceiling(legs, 0.90)
+        self.assertLess(c["total"], 3.0)
+        row = [x for x in T.frontier(legs, targets=(3.0,), standards=(0.90,))][0]
+        self.assertIsNone(row["legs"])
+        self.assertAlmostEqual(row["ceiling"], round(1.08 ** 6, 3))
+
+    def test_boost_lowers_the_price_needed(self):
+        self.assertAlmostEqual(T.needed_price(5.0, 0.0), 5.0)
+        self.assertAlmostEqual(T.needed_price(5.0, 1.0), 3.0)                 # +100% on winnings
+        self.assertAlmostEqual(T.total_return(3.0, 1.0), 5.0)
+
+    def test_kind_cap(self):
+        legs = [leg(f"g{i}", 0.95, 1.35) for i in range(6)]                   # six NFL unders
+        r = T.optimize(legs, 3.0, 0.80)
+        self.assertIsNone(r["legs"])                                           # 1.35^3 < 3, cap 3
+        r = T.optimize(legs, 2.4, 0.80)
+        self.assertEqual(len(r["legs"]), 3)
+
+    def test_budget_reports_approximation(self):
+        rng = random.Random(1)
+        legs = [leg(f"g{g}", round(rng.uniform(0.8, 0.95), 4), round(rng.uniform(1.15, 1.6), 4),
+                    lg=f"l{g}") for g in range(40)]
+        r = T.optimize(legs, 3.0, 0.8, max_legs=6, budget=3)
+        self.assertFalse(r["exact"])
+
+
+if __name__ == "__main__":
+    unittest.main()
