@@ -2481,3 +2481,40 @@ They fail on the previous commit and pass now. The full suite passes; the Atlant
 - **Verdict:** the published chances do not beat the close on Brier (0.2041 vs 0.2039 over the last 300). **The market is the model:** every weight is 0, which matches the weights already in use (all 0).
 - Mean CLV is positive while Brier loses. Called favourites tend to firm into the close, but the closing number is still the better forecast, so beating the close by count is not shown to be skill here.
 - While the board followed a model (to mid-October), the published chances trailed the close by 0.035 Brier.
+
+## Accuracy plan, item 8: news and lineup gates, the 3-point move rule (2026-10-20)
+
+**What changed.**
+- **Gates.** `news.py` reads, for each called game, ESPN's scoreboard probables (with their status) and the game summary (rosters with starters, the injury report). The gates:
+
+  | league | gate |
+  |---|---|
+  | NHL | both goalies **confirmed** (ESPN's "Expected" or "Probable" doesn't count) |
+  | MLB | both starting pitchers confirmed and both lineups posted |
+  | NBA, WNBA | the latest injury report, checked this build |
+  | soccer | both XIs posted (about an hour out) |
+  | tennis | never a call (item 2) |
+
+- **News.** Any change to what a gate reads, or to the injury list, is news for that league. Its calls freeze, with no top-up and no change, until a price captured after the news is in.
+- **The move rule** (every build, up to the start). A call whose market chance moved more than 3 points from its published chance is:
+  - re-derived at the new chance; or
+  - pulled if its side is no longer the favourite. The slot is left empty.
+- Every news event, re-derivation and pull is logged on the call in `calls.json`.
+- A pulled call does not count in the record (`call_pulled` in the ledger). A call counts at the chance it carries (`call_conf`).
+- The Calls tab shows each call's gate (✓ confirmed / ⌛ awaiting) and its log.
+
+**Test.** `tests/test_news.py`, 6 tests:
+- NHL "expected" or "probable" goalies don't pass, confirmed ones do;
+- soccer needs both XIs; MLB needs confirmed starters and lineups;
+- news changes the fingerprint;
+- a confirmed goalie freezes the league while its price predates the news, then the next price re-derives 70% → 76%, a 2-point move changes nothing, and a fall to 45% pulls the call and leaves the slot empty;
+- a pulled call is not counted.
+
+They fail on the previous commit and pass now. The full suite and the UI probe pass.
+
+**Before / after on the window** (non-double-chance book-priced picks 2026-10-15 to 2026-10-19, N = 150). The closing chance stands in for the price after the news. Live, a call is re-derived at the first price that moves more than 3 points, usually before the close, so these numbers are an upper bound on the effect.
+- 46 of 150 moved more than 3 points between first publish and the close.
+- **Pulled** (close under 50%): 8 picks, published at 55.1% on average. They went 3–8, 37.5% (Wilson 13.7–69.4).
+- **Re-derived:** 38 picks. Stated 65.2% → 68.5%, hit 63.2%; Brier 0.2353 → 0.2295.
+- **Record:** 150 at 68.7% (60.9–75.5) before → 142 at 70.4% (62.5–77.3) after. Brier 0.2061 → 0.2010.
+- The gates themselves have no history to test on: confirmations are archived from today (`pregame.py`, `calls.json`).

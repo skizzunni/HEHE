@@ -31,6 +31,12 @@ def state(rows):
 class DailyCalls(unittest.TestCase):
     def setUp(self):
         self.path = os.path.join(tempfile.mkdtemp(), "calls.json")
+        import news
+        self._sum, news.summary = news.summary, lambda lg, gid: None        # no network
+
+    def tearDown(self):
+        import news
+        news.summary = self._sum
 
     def ids(self, rec):
         return [c["id"] for c in rec["calls"]]

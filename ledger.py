@@ -193,11 +193,13 @@ def record(state=None):
                 import calls
                 entry["strong"] = calls.is_call(lg, entry["conf"])
                 # one of the day's calls (calls.update_daily): the record
-                # counts these; once a call, always a call
+                # counts these at the chance the call carries (re-derived only
+                # by the move rule); a call pulled before its start does not count
                 dc_ = calls.daily_ids(day).get(key) if (day and slot == "today") else None
-                if dc_ or book.get(key, {}).get("call"):
-                    entry["call"] = True
-                    entry["call_rank"] = (dc_ or {}).get("rank") or book.get(key, {}).get("call_rank")
+                if dc_:
+                    entry["call"] = dc_.get("status") != "pulled"
+                    entry["call_pulled"] = dc_.get("status") == "pulled"
+                    entry["call_rank"], entry["call_conf"] = dc_.get("rank"), dc_.get("conf")
                 # The game's own ET date, so the grader knows where to look.
                 # Without it the grader only searched the last three days, and
                 # any game it missed in that window was never graded.
@@ -611,7 +613,7 @@ def board_payload(limit=40):
     cw = sum(e["status"] == "won" for e in cl)
     calls_rec = dict(n=len(cl), won=cw, lost=len(cl) - cw,
                      hit=round(100 * cw / len(cl), 1) if cl else None,
-                     stated=round(sum(e.get("conf") or 0 for e in cl) / len(cl), 1) if cl else None,
+                     stated=round(sum(e.get("call_conf") or e.get("conf") or 0 for e in cl) / len(cl), 1) if cl else None,
                      ci95=_wilson(cw, len(cl)),
                      dates=[min(map(day_of, cl)), max(map(day_of, cl))] if cl else None)
     todays_calls = []
@@ -622,7 +624,8 @@ def board_payload(limit=40):
         # it), not the label at set time: 2026-10-20's calls were set minutes
         # before the first freeze and carried the old daily refit's labels
         todays_calls.append(dict(c, close=not _calls.is_call(c["league"], c["conf"]),
-                                 status=e.get("status", "open"), live=e.get("live"),
+                                 status=("pulled" if c.get("status") == "pulled" else e.get("status", "open")),
+                                 live=e.get("live"),
                                  score=e.get("scores") or e.get("live_score") or {}))
     gate = recs or []
     # epoch ms of this capture, so the page can show its own age at render

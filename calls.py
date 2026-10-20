@@ -118,7 +118,7 @@ def candidates(rows_by_league, day, now):
             if not leg or not leg.get("price"):
                 continue
             pct, how = pub.publish(lg, r["myconf"])
-            out.append(dict(id=r["id"], league=lg, pick=r["mypick"], match=r.get("label"),
+            out.append(dict(id=r["id"], league=lg, pick=r["mypick"], side=r.get("myside"), match=r.get("label"),
                             tip=r.get("tip"), start=(r.get("mkt") or {}).get("start"),
                             conf=pct, price=leg["price"], book=r.get("price_book"),
                             price_at=r.get("price_at"), calib=how,
@@ -127,8 +127,65 @@ def candidates(rows_by_league, day, now):
     return out
 
 
-def update_daily(state, now=None, path=None, n=None):
-    """Set (or top up) today's calls; returns today's record of them."""
+def _row_chance(r, side):
+    """The market's no-vig chance of `side` on a board row, or None."""
+    leg = next((L for L in r.get("legs") or [] if L.get("side") == side), None)
+    return leg.get("prob") if leg else None
+
+
+def watch(rec, rows_by_league, now, summary=None):
+    """News gates and the move rule on the day's calls (news.py). Returns
+    True if anything changed. A call is never changed after its start."""
+    import freshness
+    import news
+    summary = summary or news.summary
+    rows = {r["id"]: (lg, r) for lg, rs in (rows_by_league or {}).items() for r in rs or []}
+    t = now.isoformat(timespec="seconds")
+    changed = False
+    live = []
+    for c in rec["calls"]:
+        st = freshness.parse(c.get("start"))
+        if c.get("status") == "pulled" or (st is not None and st <= now) or c["id"] not in rows:
+            continue
+        lg, r = rows[c["id"]]
+        ok, what, fp = news.status(c["league"], r, summary(c["league"], c["id"]))
+        if c.get("fp") and fp != c["fp"]:
+            rec.setdefault("news", {})[c["league"]] = t
+            c.setdefault("log", []).append(dict(t=t, event="news", what=what))
+        if c.get("fp") != fp or (c.get("gate") or {}).get("what") != what:
+            c["fp"], c["gate"] = fp, dict(ok=ok, what=what)
+            changed = True
+        live.append((c, r))
+    # a league with news since its newest price waits for a re-pull
+    frozen = {lg for lg, tn in (rec.get("news") or {}).items()
+              if not any((freshness.parse(r.get("price_at")) or now) > freshness.parse(tn)
+                         for r in (rows_by_league or {}).get(lg) or [] if r.get("price_at"))}
+    rec["frozen"] = sorted(frozen)
+    for c, r in live:
+        if c["league"] in frozen or not freshness.can_call(r, now):
+            continue
+        # calls set before 2026-10-20 13:30 UTC carry no side: the row's, if
+        # the row still picks the same team
+        side = c.get("side") or (r.get("myside") if r.get("mypick") == c["pick"] else None)
+        p = _row_chance(r, side)
+        if p is None or abs(100 * p - c["conf"]) <= news.MOVE_PTS:
+            continue
+        old = c["conf"]
+        if p < 0.5:
+            c["status"] = "pulled"
+            c.setdefault("log", []).append(dict(t=t, event="pulled", from_=old, market=round(100 * p, 1),
+                                                why=f"moved {100 * p - old:+.1f} pts; side no longer the favourite"))
+        else:
+            c["conf"] = int(round(100 * p))
+            c.setdefault("log", []).append(dict(t=t, event="re-derived", from_=old, to=c["conf"],
+                                                why=f"moved {100 * p - old:+.1f} pts since published"))
+        changed = True
+    return changed
+
+
+def update_daily(state, now=None, path=None, n=None, summary=None):
+    """Set (or top up) today's calls, then apply the news gates and the move
+    rule (watch); returns today's record of them."""
     now = now or _dt.datetime.now(_dt.timezone.utc)
     n = n or TOP_N
     day = (state.get("dates") or [None])[0]
@@ -137,15 +194,22 @@ def update_daily(state, now=None, path=None, n=None):
     iso = _iso(day)
     book = load_daily(path)
     rec = book["days"].setdefault(iso, dict(calls=[]))
-    if now.astimezone(_ET).hour < CALL_HOUR or len(rec["calls"]) >= n:
+    if now.astimezone(_ET).hour < CALL_HOUR:
         return rec
-    have = {c["id"] for c in rec["calls"]}
-    add = [c for c in candidates((state.get("slots") or {}).get("today"), day, now)
-           if c["id"] not in have][:n - len(rec["calls"])]
-    if add:
+    today = (state.get("slots") or {}).get("today")
+    changed = watch(rec, today, now, summary) if rec["calls"] else False
+    if len(rec["calls"]) < n:
+        have = {c["id"] for c in rec["calls"]}
+        frozen = set(rec.get("frozen") or [])
+        add = [c for c in candidates(today, day, now)
+               if c["id"] not in have and c["league"] not in frozen][:n - len(rec["calls"])]
         t = now.isoformat(timespec="seconds")
         for c in add:
-            rec["calls"].append(dict(c, set_at=t, rank=len(rec["calls"]) + 1))
+            rec["calls"].append(dict(c, set_at=t, rank=len(rec["calls"]) + 1, conf_first=c["conf"]))
+        if add:
+            watch(rec, today, now, summary)        # each new call's gate and news baseline
+            changed = True
+    if changed:
         save_daily(book, path)
     return rec
 

@@ -1009,6 +1009,7 @@ function drawCalls(){
   const st = c => c.status === "won" ? '<span class="wl won">WON</span>'
     : c.status === "lost" ? '<span class="wl lost">LOST</span>'
     : c.status === "push" ? '<span class="wl">PUSH</span>'
+    : c.status === "pulled" ? '<span class="wl">PULLED</span>'
     : (c.live ? '<span class="sbn">' + esc(c.live) + '</span>' : '<span class="sbn">' + esc(c.tip || "") + '</span>');
   const rec = K.n
     ? '<p class="note">Every call so far: <b>' + K.won + '&ndash;' + K.lost + '</b> (' + K.hit.toFixed(1)
@@ -1018,11 +1019,17 @@ function drawCalls(){
   panel.innerHTML = marketBanner() + '<div class="parlays"><h3>Today&rsquo;s calls</h3>'
     + '<p class="note">The ' + n + ' highest chances among today&rsquo;s games with a sportsbook price under 15 minutes old, '
     + 'strongest first, set at 8:00 AM Eastern. Each is published at its honest chance and counts in the record; '
-    + 'one under its league&rsquo;s strong cut-off is a <b>close call</b>. Fewer games, fewer calls &mdash; never a softer number.</p>'
+    + 'one under its league&rsquo;s strong cut-off is a <b>close call</b>. Fewer games, fewer calls &mdash; never a softer number. '
+    + 'Lineup news (confirmed goalies, starters, XIs, the injury report) freezes a league&rsquo;s calls until a new price is in; '
+    + 'a call whose market chance then moved more than 3 points is re-derived at the new chance, or pulled if its side is no longer the favourite.</p>'
     + (C.length
       ? '<table><thead><tr><th>#</th><th>Call</th><th>Start</th><th class="num">Chance</th><th>Price</th><th>Result</th></tr></thead><tbody>'
         + C.map((c, i) => '<tr><td class="state">' + (i + 1) + '</td><td class="mine"><span class="lgpill">' + esc(c.league)
-            + '</span>' + esc(c.pick) + '<div class="sbn">' + esc(c.match || "") + '</div></td><td class="state">' + esc(c.tip || "")
+            + '</span>' + esc(c.pick) + '<div class="sbn">' + esc(c.match || "") + '</div>'
+            + (c.gate ? '<div class="sbn">' + (c.gate.ok ? '&#10003; ' : '&#8987; ') + esc(c.gate.what) + '</div>' : '')
+            + (c.log || []).map(x => '<div class="sbn">' + esc(x.t.slice(11, 16)) + ' UTC ' + esc(x.event)
+                + (x.to ? ' ' + x.from_ + '% &rarr; ' + x.to + '%' : '') + (x.why ? ': ' + esc(x.why) : (x.what ? ': ' + esc(x.what) : '')) + '</div>').join("")
+            + '</td><td class="state">' + esc(c.tip || "")
             + '</td><td class="num">' + c.conf + '%' + (c.close ? '<span class="tier lean">close call</span>' : '<span class="tier call">strong</span>')
             + '</td><td class="mkt">' + esc(c.price) + (c.book ? ' <span class="sbn">' + esc(c.book) + '</span>' : '')
             + '</td><td>' + st(c) + '</td></tr>').join("")

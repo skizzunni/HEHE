@@ -759,7 +759,9 @@ def collect(key, path, day, mlbctx, mybook=None):
                              # archived before play by pregame.py
                              comp=dict(competitors=[dict(team=dict(abbreviation=(x.get("team") or {}).get("abbreviation")),
                                                          probables=[dict(athlete=dict(displayName=(p.get("athlete") or {}).get("displayName")),
-                                                                         name=p.get("name"))
+                                                                         name=p.get("name"),
+                                                         # "expected" vs "confirmed": news.py
+                                                         status=dict(type=((p.get("status") or {}).get("type"))))
                                                                     for p in x.get("probables") or []])
                                                     for x in c.get("competitors") or []])))
     rows.sort(key=lambda r: r["tip"])
