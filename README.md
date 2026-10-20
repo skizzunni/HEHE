@@ -2518,3 +2518,40 @@ They fail on the previous commit and pass now. The full suite and the UI probe p
 - **Re-derived:** 38 picks. Stated 65.2% → 68.5%, hit 63.2%; Brier 0.2353 → 0.2295.
 - **Record:** 150 at 68.7% (60.9–75.5) before → 142 at 70.4% (62.5–77.3) after. Brier 0.2061 → 0.2010.
 - The gates themselves have no history to test on: confirmations are archived from today (`pregame.py`, `calls.json`).
+
+## Accuracy plan, item 9: grading integrity (2026-10-20)
+
+**What changed.**
+- **Nightly independent re-grade** (`tools/regrade.py`). Each night, from 3:00 AM Eastern, every pick settled in the last 3 days is graded again from a different feed: ESPN's game summary, not the scoreboard `ledger.grade` reads. It uses its own code:
+  - the winner comes from the scores alone (the feed's winner flag is never trusted);
+  - names are compared case-insensitively;
+  - soccer settles on 90 minutes, and a level score is a draw;
+  - the same betting rules apply ("or draw" wins on a draw, a three-way moneyline loses on one, a two-way tie pushes).
+
+  Mismatches with `ledger.json` go to `review/regrade.json` and are listed on Results, never silently changed.
+- **Explicit states.** Every settled pick now carries `state`: won, lost, push, void, postponed, cancelled, walkover (tennis W/O or a forfeit), abandoned, no_result. Props carry `dnp` when the player is not in the box score.
+  - `status` keeps its settlement meaning (won / lost / push / void) for every ticket and pool that reads it.
+  - A tennis walkover is now void (no match was played), whatever winner the feed lists.
+- **Policy version.** The ledger stays append-only. Every pick carries `policy_version` (`policy.version()`) at the top level, as well as on each history version.
+
+**Test.** `tests/test_regrade.py`, 7 tests:
+- agreement and disagreement;
+- a wrong winner flag and upper-case names are ignored;
+- soccer draws for straight and "or draw" picks, and an extra-time game settled on 90 minutes;
+- postponed games;
+- the ledger's explicit states and void kinds;
+- the policy version on every pick.
+
+They fail on the previous commit and pass now. The full suite and the UI probe pass.
+
+**Before / after.**
+- **Before:** nothing re-checked the grader; a void was a void with no kind.
+- **After:** the first re-grade covered every settled pick 2026-08-30 to 2026-10-19:
+
+| range | checked | mismatches | not checkable |
+|---|---|---|---|
+| 2026-10-15 to 10-19 (evaluation window) | 459 | 0 | 165 (mostly tennis, whose summary carries no game score) |
+| 2026-08-30 to 10-14 | 1,373 | 0 | 292 |
+
+- The one mismatch on the first run, VIKING FK against "Viking FK", was the re-grader's own case bug. It was fixed before this commit.
+- No accuracy number changes: this item proves the record is graded right, it does not move it.

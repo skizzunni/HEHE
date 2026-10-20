@@ -79,6 +79,11 @@ jobs:
 
       # closing line value for every graded pick, and the hard rule: no
       # beating the close on Brier over 300 picks, no model (policy.py)
+      # the nightly independent re-grade (game summaries, not the scoreboard
+      # the grader reads); mismatches are listed on Results
+      - name: Re-grade last nights
+        run: python3 tools/regrade.py || echo "regrade failed -- board unaffected"
+
       - name: Closing line value
         run: python3 tools/clv.py --limit 150 || echo "clv failed -- board unaffected"
 

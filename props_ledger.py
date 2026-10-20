@@ -494,6 +494,7 @@ def grade():
             st, how = resolve(stats, e)
             if how == "absent":
                 e["status"], e["void_why"] = "void", "not in box score"   # did not play
+                e["state"] = "dnp"                                         # explicit: a DNP void
                 continue
             if st is None:
                 # a name that could be someone in the box: never a DNP. Kept

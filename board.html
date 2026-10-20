@@ -987,6 +987,21 @@ function marketBanner(){
       : 'No pick has a closing line logged yet, so the sportsbook&rsquo;s own chance is used until the model beats it.')
     + '</p>';
 }
+// The nightly independent re-grade (tools/regrade.py): every mismatch with
+// the ledger is listed until it is resolved.
+function regradeHTML(){
+  const G = D.regrade;
+  if(!G || !G.checked) return "";
+  const M = G.mismatches || [];
+  return '<div class="sect" id="regrade"><h2>Independent re-grade</h2>'
+    + '<p class="' + (M.length ? 'age stale' : 'note') + '">Last night every pick settled ' + esc(G.window[0]) + ' to ' + esc(G.window[1])
+    + ' was graded again from a second ESPN feed: <b>' + G.checked + ' checked, ' + M.length + ' mismatch' + (M.length === 1 ? '' : 'es') + '</b>'
+    + (G.unchecked ? ' (' + G.unchecked + ' could not be checked, mostly tennis)' : '') + '.</p>'
+    + (M.length ? '<ul class="legs">' + M.map(m => '<li>' + esc(m.league) + ' ' + esc(m.pick) + (m.dc ? ' or draw' : '') + ' (' + esc(m.day)
+        + '): ledger <b>' + esc(m.ledger) + '</b>, re-grade <b>' + esc(m.regrade) + '</b>'
+        + (m.score ? ' &middot; ' + esc(Object.entries(m.score).map(x => x[0] + ' ' + x[1]).join(", ")) : '') + '</li>').join("") + '</ul>' : '')
+    + '</div>';
+}
 function clvHTML(){
   const V = D.clv || {}, L = V.last || {}, W = V.weeks || {};
   if(!L.n) return "";
@@ -1898,7 +1913,7 @@ function scoreboardHTML(){
           + '</tr>').join("")
       + '</tbody></table></div>';
   }
-  h += marketBanner() + clvHTML() + calibHTML();
+  h += marketBanner() + regradeHTML() + clvHTML() + calibHTML();
   // the review's alarms: what is trailing its stated chance, what never settled
   const HL = D.health;
   if(HL){

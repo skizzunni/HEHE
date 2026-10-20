@@ -203,6 +203,13 @@ def snapshot():
         out["calib"] = calibration.table(list(ledger.load().values()))
     except Exception as ex_:
         print(f"calibration table failed: {ex_}", file=sys.stderr)
+    # the nightly independent re-grade (tools/regrade.py)
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "review", "regrade.json")) as fh_:
+            _rg = json.load(fh_)
+        out["regrade"] = {k: _rg.get(k) for k in ("window", "checked", "unchecked", "mismatches", "ran")}
+    except (OSError, ValueError):
+        out["regrade"] = None
     # closing line value, the primary scoreboard, and the hard rule
     # (tools/clv.py, policy.market_is_model)
     try:

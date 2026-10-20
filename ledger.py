@@ -191,7 +191,9 @@ def record(state=None):
                 # the strong / close label as shown, frozen with the call: a
                 # later refit of the cutoffs must not relabel past picks
                 import calls
+                import policy as _pv
                 entry["strong"] = calls.is_call(lg, entry["conf"])
+                entry["policy_version"] = _pv.version()      # on every pick, as well as each history version
                 # one of the day's calls (calls.update_daily): the record
                 # counts these at the chance the call carries (re-derived only
                 # by the move rule); a call pulled before its start does not count
@@ -328,7 +330,14 @@ def _final(lg, comp_id, e=None):
                                               "STATUS_CANCELLED", "STATUS_FORFEIT",
                                               "STATUS_ABANDONED"):
                     return dict(live=False, void=True, scores=scores,
-                                state=st.get("shortDetail", ""))
+                                state=st.get("shortDetail", ""), kind=_void_kind(st))
+                # a tennis walkover: no match was played, so the bet is void
+                # (FanDuel NY), whatever winner the feed lists
+                if "WALKOVER" in (st.get("name") or "").upper() or \
+                        "W/O" in (st.get("shortDetail") or "").upper() or \
+                        "WALKOVER" in (st.get("shortDetail") or "").upper():
+                    return dict(live=False, void=True, scores=scores, kind="walkover",
+                                state=st.get("shortDetail", "") or "walkover")
                 if not st.get("completed"):
                     # "pre" is a game that has not started -- not live, and
                     # nothing to show. Only state "in" is actually underway.
@@ -381,6 +390,15 @@ def _final(lg, comp_id, e=None):
 
 
 DRAW = "Draw"
+# A settled pick's explicit state. `status` keeps the settlement meaning every
+# consumer reads (won / lost / push / void); `state` says which kind of void.
+STATES = ("won", "lost", "push", "void", "postponed", "cancelled", "walkover", "abandoned", "no_result")
+
+
+def _void_kind(st):
+    n = (st.get("name") or "").upper()
+    return ("postponed" if "POSTPONED" in n else "cancelled" if "CANCEL" in n
+            else "walkover" if "FORFEIT" in n else "abandoned" if "ABANDON" in n else "void")
 
 
 def _settle(e, win):
@@ -482,8 +500,9 @@ def grade():
             e.pop("live", None)
             e.pop("live_score", None)
             e["status"] = "void"
+            e["state"] = res.get("kind") or "void"
             e["settled"] = dt.datetime.now(ET).isoformat()[:16]
-            e["diagnosis"] = f'void: {res.get("state") or "game not played"}'
+            e["diagnosis"] = f'{e["state"]}: {res.get("state") or "game not played"}'
             settled.append((key, e))
             continue
         if not res or res.get("missing"):
@@ -491,6 +510,7 @@ def grade():
             e.pop("live_score", None)
             if res and _stale(e):
                 e["status"] = "void"
+                e["state"] = "no_result"
                 e["settled"] = dt.datetime.now(ET).isoformat()[:16]
                 e["diagnosis"] = (f"void: no final result found within "
                                   f"{VOID_AFTER_DAYS} days of the game date")
@@ -508,6 +528,7 @@ def grade():
         e["winner"] = win
         e["scores"] = res.get("scores")
         e["status"] = _settle(e, win)
+        e["state"] = e["status"]
         e["settled"] = dt.datetime.now(ET).isoformat()[:16]
         # `settled` is when the grader ran; `played` is when the game was.
         # They diverge whenever grading lags -- when the league map was fixed,
