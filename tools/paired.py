@@ -112,8 +112,12 @@ def study_locks_uncertainty():
         days = defaultdict(list)
         for r in rows:
             if lo <= r["cost"] <= hi:
-                days[r["date"]].append(dict(gid=r["game"], label=r["ticker"] + r["side"], p=r["p"],
-                                            width=r.get("width") or 0, won=r["won"]))
+                # Kalshi's own mid-price: the ask less half the spread. (r["p"] is
+                # the Stacks score model's chance from the sportsbook close, not a
+                # market price -- used here by mistake until 2026-10-20.)
+                w = r.get("width") or 0
+                days[r["date"]].append(dict(gid=r["game"], label=r["ticker"] + r["side"],
+                                            p=r["cost"] - w / 2, width=w, won=r["won"]))
 
         def pick(key):
             def f(rs, k):

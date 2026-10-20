@@ -96,15 +96,18 @@ def market_chance(price_p):
 
     Until 2026-10-18 this multiplied by a per-10c-band factor (BAND_VALUE).
     That jumped at every band edge (39.9999% -> 41.02% but 40.00% -> 39.72%)
-    and pushed both sides of a 50/50 to 50.46%. Tested by date halves on the
-    16,076 settled Kalshi legs (204 games, 32 dates; no game in both halves),
-    scored by log loss on the half not used to fit:
-      * the band factors, even fitted on ALL the data, lost to the plain
-        price on the older half (0.5741 vs 0.5708), won narrowly on the newer;
+    and pushed both sides of a 50/50 to 50.46%. Tested by date halves on
+    Kalshi's own mid-prices (ask less half the spread) for 17,766 settled legs
+    (226 games, 38 dates; no game in both halves), scored by log loss on the
+    half not used to fit:
+      * the band factors lost to the plain price on the older half (0.5466 vs
+        0.5440) and won by a hair on the newer (0.5241 vs 0.5246);
       * a smooth, complement-preserving logit stretch q = s(b*logit p) fitted
-        on one half lost on the other in both directions (b 0.91 vs 1.20; the
-        game-bootstrap 90% CI of its gain on the newer half, -0.006..-0.002,
-        is all below zero).
+        on one half lost on the other in both directions (b 0.96 vs 1.06; the
+        game-bootstrap 90% CI of its gain, -0.0015..+0.0004, includes zero).
+    (The first version of this test, 2026-10-18, scored the archive's "p" --
+    the Stacks score model's chance, not a market price -- by mistake; found in
+    PR #2's independent review. The conclusion did not change.)
     Neither held on unseen games, so the market price stands. It is monotone
     and keeps complementary outcomes summing to 1. The cap at 0.99 is kept."""
     return min(max(float(price_p), 0.0), 0.99)

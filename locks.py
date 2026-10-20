@@ -420,8 +420,10 @@ def _kind(L):
 # How far apart two legs' chances must be before their order means anything:
 # one American-odds step near -400 moves a chance ~0.4 points, and a price
 # de-vigged on an assumed margin is less certain still. Documented, used to
-# flag ties -- NOT to rank: ranking by chance minus this (tools/paired.py, the
-# Kalshi legs' untouched days) did no better (-1 on 11-leg cards, CI incl. 0).
+# flag ties -- NOT to rank: ranking by mid-price minus half the spread
+# (tools/paired.py, the Kalshi legs' untouched days) won +3 on the regular
+# window (8 vs 5 where they differed; range 0..+6) and -1 on Safe -- short of
+# promotion. (First run, 2026-10-19, ranked the score model by mistake.)
 UNCERT = {"two-sided": 0.004}
 UNCERT_DEFAULT = 0.010
 CHOOSER = "2026-10-19"      # tie-break by a fixed order (archived with each card)
