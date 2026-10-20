@@ -77,6 +77,11 @@ jobs:
       - name: Review the day
         run: python3 tools/daily_review.py || echo "review failed -- board unaffected"
 
+      # closing line value for every graded pick, and the hard rule: no
+      # beating the close on Brier over 300 picks, no model (policy.py)
+      - name: Closing line value
+        run: python3 tools/clv.py --limit 150 || echo "clv failed -- board unaffected"
+
       # every proposed change against the current chooser, on later games
       - name: Paired comparisons
         run: python3 tools/paired.py > /dev/null || echo "paired comparisons failed -- board unaffected"

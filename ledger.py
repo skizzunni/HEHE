@@ -618,7 +618,11 @@ def board_payload(limit=40):
     for c in sorted((_calls.load_daily()["days"].get(today) or {}).get("calls") or [],
                     key=lambda c: -c["conf"]):
         e = book.get(c["id"]) or {}
-        todays_calls.append(dict(c, status=e.get("status", "open"), live=e.get("live"),
+        # strong/close by the cut-offs frozen for this window (constant inside
+        # it), not the label at set time: 2026-10-20's calls were set minutes
+        # before the first freeze and carried the old daily refit's labels
+        todays_calls.append(dict(c, close=not _calls.is_call(c["league"], c["conf"]),
+                                 status=e.get("status", "open"), live=e.get("live"),
                                  score=e.get("scores") or e.get("live_score") or {}))
     gate = recs or []
     # epoch ms of this capture, so the page can show its own age at render

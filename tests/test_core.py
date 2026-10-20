@@ -524,15 +524,16 @@ class SelectionPolicy(unittest.TestCase):
         hand-set NFL weight of 0.30 published Atlanta 50.7% (lost). With the
         tested policy (market only) the pick is Chicago."""
         import picks, policy
-        real = policy._W
+        real, real_m = policy._W, policy.market_is_model
         try:
+            policy.market_is_model = lambda: False                 # the CLV rule allows a model
             policy._W = {"default": 0.0, "weights": {"ncaaf": 0.0}}
             p_away = picks.anchor(0.4365, 0.5174, policy.model_weight("nfl"))
             self.assertGreater(p_away, 0.5)                       # Chicago (away)
             policy._W = {"default": 0.0, "weights": {"nfl": 0.3}}   # only a tested file may say 0.3
             self.assertLess(picks.anchor(0.4365, 0.5174, policy.model_weight("nfl")), 0.5)
         finally:
-            policy._W = real
+            policy._W, policy.market_is_model = real, real_m
 
     def test_strong_calls_only_where_qualified(self):
         """No league gets strong calls without a qualifying record: not soccer

@@ -5,6 +5,7 @@ review writes after testing them on games they were not fitted on:
 
     review/anchor_weights.json   the model's share against the same-time price
     review/call_min.json         which leagues have earned strong calls
+    review/clv.json              the hard rule: no beating the close, no model
 
 Nothing here is hand-set. Until 2026-10-19 the board carried its own numbers
 that won over those files wherever a league had no fit of its own -- NFL and
@@ -37,10 +38,22 @@ def _load(path):
 
 
 _W = _load(WEIGHTS)
+CLV = os.path.join(HERE, "review", "clv.json")
+
+
+def market_is_model():
+    """The hard rule (tools/clv.py): when the published chances do not beat
+    the closing chances on Brier over the last 300 graded picks, every model
+    weight is 0 and the market alone decides. Also True while the rule has
+    no verdict yet -- the market is the baseline until something beats it."""
+    v = _load(CLV).get("market_is_model")
+    return True if v is None else bool(v)
 
 
 def model_weight(league):
     """The model's share (0..1) in the log-odds blend with the same-time price."""
+    if market_is_model():
+        return 0.0
     w = (_W.get("weights") or {}).get(league)
     if w is None:
         w = _W.get("default")
@@ -70,6 +83,8 @@ def promoted(r):
 
 def home_edge(league):
     """Log-odds shift toward the home side, or 0 unless promoted."""
+    if market_is_model():
+        return 0.0
     r = ((_LAB.get("leagues") or {}).get(league) or {}).get("home") or {}
     if promoted(r) and r.get("weights"):
         return float(r["weights"][0])
@@ -83,6 +98,7 @@ def version():
     does (the code's commit is archived separately)."""
     calls = _load(CALLS)
     core = dict(weights=_W.get("weights") or {}, default=_W.get("default"),
+                market_is_model=market_is_model(),
                 cutoffs=calls.get("cutoffs") or {},
                 home={lg: home_edge(lg) for lg in sorted((_LAB.get("leagues") or {}))})
     return hashlib.sha1(json.dumps(core, sort_keys=True).encode()).hexdigest()[:8]

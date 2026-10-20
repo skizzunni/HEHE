@@ -203,6 +203,17 @@ def snapshot():
         out["calib"] = calibration.table(list(ledger.load().values()))
     except Exception as ex_:
         print(f"calibration table failed: {ex_}", file=sys.stderr)
+    # closing line value, the primary scoreboard, and the hard rule
+    # (tools/clv.py, policy.market_is_model)
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "review", "clv.json")) as fh_:
+            _c = json.load(fh_)
+        with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "review", "clv_weekly.json")) as fh_:
+            _wk = json.load(fh_)
+        out["clv"] = dict(last=_c.get("last"), market_is_model=_c.get("market_is_model"),
+                          beats_close=_c.get("beats_close"), weeks=dict(list(_wk.items())[-4:]))
+    except (OSError, ValueError):
+        out["clv"] = dict(market_is_model=True)
     # strong calls' record on picks the cut-offs never saw (tools/daily_review)
     try:
         with open(os.path.join(os.path.dirname(os.path.abspath(__file__)),

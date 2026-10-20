@@ -2442,3 +2442,42 @@ They fail on the previous commit and pass now; the full suite passes.
 - **Strong calls on the window:** 0. Every call would have been a close call.
 - **The freeze that starts today** (2026-10-20 to 2026-11-02, fitted on 2026-10-06 to 2026-10-19) also qualifies nobody. College football has 114 picks, soccer straight-win 46, NHL 97. Soccer would qualify at 67.5% (303 picks, 77.9%, Wilson 72.3–82.7) only by counting "or draw" picks, which are never calls, so they are excluded.
 - No strong label is shown until a league earns one on 150+ picks.
+
+## Accuracy plan, item 7: CLV is the primary scoreboard (2026-10-20)
+
+**What changed.**
+- `tools/clv.py` runs every build, after the review.
+  - For every graded book-priced pick it logs the closing no-vig chance of the side called, from DraftKings' final moneylines in ESPN's game summary, de-vigged as the board de-vigs that league.
+  - It also logs CLV = closing chance − published chance (as first published), in points.
+  - All of this goes to `review/clv.json`, append-only. A failed fetch is retried next run.
+  - Old picks recorded without a side get it from the summary's team names.
+- `review/clv_weekly.json` reports, per ISO week, for all picks and for calls: % beating the close, mean CLV, and Brier and log-loss of published vs closing chances on the same games, with N and dates.
+- **The hard rule.** If the published chances do not beat the closing chances on Brier over the last 300 graded picks:
+  - `policy.market_is_model()` makes `model_weight` and `home_edge` return 0 for every league;
+  - the Calls and Results tabs print **"The market is the model"** with the numbers.
+  - With no verdict at all, the market is also the model.
+  - The rule is part of `policy.version()`.
+- Results gains an "Against the closing line" table.
+
+**Test.** `tests/test_clv.py`, 5 tests:
+- the closing chance and CLV on a known −180/+150 close;
+- unpriced picks are never logged;
+- the report and the ISO-week grouping;
+- the rule fires when the close is the better forecast and not otherwise;
+- weights go to 0 when it fires, and with no verdict.
+
+They fail on the previous commit and pass now. The full suite passes; the Atlanta policy test now states the rule it assumes.
+
+**Before / after.**
+- **Before:** no pick had a closing chance logged and nothing compared the board with the close.
+- **After:** 1,628 of 1,629 graded book-priced picks have one (2026-08-31 to 2026-10-19):
+
+| window | N | beat close | mean CLV | Brier pub / close | log-loss pub / close |
+|---|---|---|---|---|---|
+| 2026-10-15 to 10-19 (evaluation window) | 407 | 55.8% | +0.44 pts | 0.2002 / 0.1987 | 0.5914 / 0.5886 |
+| before it (08-31 to 10-14, model blending) | 1,221 | 55.6% | +1.72 pts | 0.2348 / 0.2003 | 0.6633 / 0.5786 |
+| last 300 (rule window, 10-17 to 10-19) | 300 | 58.3% | +0.59 pts | 0.2041 / 0.2039 | 0.6014 / 0.6017 |
+
+- **Verdict:** the published chances do not beat the close on Brier (0.2041 vs 0.2039 over the last 300). **The market is the model:** every weight is 0, which matches the weights already in use (all 0).
+- Mean CLV is positive while Brier loses. Called favourites tend to firm into the close, but the closing number is still the better forecast, so beating the close by count is not shown to be skill here.
+- While the board followed a model (to mid-October), the published chances trailed the close by 0.035 Brier.

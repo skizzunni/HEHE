@@ -313,7 +313,8 @@ def price_book(comp):
     """The book behind the scoreboard's moneyline (ESPN names its provider)."""
     for o in comp.get("odds") or []:
         if isinstance(o, dict) and (o.get("moneyline") or o.get("awayTeamOdds")):
-            return ((o.get("provider") or {}).get("name") or "ESPN odds").strip()
+            nm = ((o.get("provider") or {}).get("name") or "ESPN odds").strip()
+            return "DraftKings" if nm.replace(" ", "").lower() == "draftkings" else nm
     return None
 
 

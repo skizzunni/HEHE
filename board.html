@@ -974,6 +974,33 @@ function playCell(z){
 let TGDAY = null, TGBOOST = "0", TGSTD = 0.80;
 try { TGSTD = +(localStorage.getItem("tgstd") || 0.80) || 0.80;
       TGBOOST = localStorage.getItem("tgboost") || "0"; } catch (e) {}
+// The hard rule (tools/clv.py): no beating the close on Brier over the last
+// 300 graded picks, no model -- the board says so where the calls are.
+function marketBanner(){
+  const V = D.clv || {};
+  if(!V.market_is_model) return "";
+  const L = V.last || {};
+  return '<p class="age stale"><b>The market is the model.</b> '
+    + (L.n ? 'Over the last ' + L.n + ' graded picks (' + esc(L.dates[0]) + ' to ' + esc(L.dates[1]) + ') the published chances scored Brier '
+        + L.brier_published.toFixed(4) + ' against the closing line&rsquo;s ' + L.brier_close.toFixed(4)
+        + ', so every model weight is 0 and each chance is the sportsbook&rsquo;s own, margin removed.'
+      : 'No pick has a closing line logged yet, so the sportsbook&rsquo;s own chance is used until the model beats it.')
+    + '</p>';
+}
+function clvHTML(){
+  const V = D.clv || {}, L = V.last || {}, W = V.weeks || {};
+  if(!L.n) return "";
+  const row = (k, r) => r && r.n ? '<tr><td>' + esc(k) + '</td><td>' + r.n + '</td><td>' + r.beat_close_pct.toFixed(1) + '%</td><td>'
+    + (r.mean_clv_pts >= 0 ? '+' : '') + r.mean_clv_pts.toFixed(2) + '</td><td>' + r.brier_published.toFixed(4) + ' / ' + r.brier_close.toFixed(4)
+    + '</td><td>' + r.logloss_published.toFixed(4) + ' / ' + r.logloss_close.toFixed(4) + '</td></tr>' : '';
+  return '<div class="sect" id="clv"><h2>Against the closing line</h2>'
+    + '<p class="note">For every graded pick: the chance published against the sportsbook&rsquo;s closing chance on the same game. '
+    + 'Beating the close is the proof a pick knew something the price did not.</p>'
+    + '<table class="sbt"><tr><th>window</th><th>N</th><th>beat close</th><th>mean CLV (pts)</th><th>Brier pub / close</th><th>log-loss pub / close</th></tr>'
+    + row('last ' + L.n + ' (' + L.dates[0] + ' to ' + L.dates[1] + ')', L)
+    + Object.keys(W).reverse().map(k => row(k, W[k].all) + row(k + ' calls', W[k].calls)).join("")
+    + '</table></div>';
+}
 // Today's calls (calls.update_daily): the strongest published chances from
 // fresh sportsbook prices, set at 8:00 AM Eastern and never taken back.
 function drawCalls(){
@@ -988,7 +1015,7 @@ function drawCalls(){
       + '%, 95% range ' + K.ci95[0].toFixed(1) + '&ndash;' + K.ci95[1].toFixed(1) + '%) against '
       + K.stated.toFixed(1) + '% stated, N = ' + K.n + ', ' + esc(K.dates[0]) + ' to ' + esc(K.dates[1]) + '.</p>'
     : '<p class="note">No call has been graded yet.</p>';
-  panel.innerHTML = '<div class="parlays"><h3>Today&rsquo;s calls</h3>'
+  panel.innerHTML = marketBanner() + '<div class="parlays"><h3>Today&rsquo;s calls</h3>'
     + '<p class="note">The ' + n + ' highest chances among today&rsquo;s games with a sportsbook price under 15 minutes old, '
     + 'strongest first, set at 8:00 AM Eastern. Each is published at its honest chance and counts in the record; '
     + 'one under its league&rsquo;s strong cut-off is a <b>close call</b>. Fewer games, fewer calls &mdash; never a softer number.</p>'
@@ -1864,7 +1891,7 @@ function scoreboardHTML(){
           + '</tr>').join("")
       + '</tbody></table></div>';
   }
-  h += calibHTML();
+  h += marketBanner() + clvHTML() + calibHTML();
   // the review's alarms: what is trailing its stated chance, what never settled
   const HL = D.health;
   if(HL){
