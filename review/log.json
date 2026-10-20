@@ -3314,10 +3314,10 @@
    },
    {
     "flag": false,
-    "hit": 77.6,
-    "n": 147,
+    "hit": 78.5,
+    "n": 158,
     "name": "props nhl Shots on Goal",
-    "said": 78.8
+    "said": 78.9
    },
    {
     "flag": false,
@@ -3369,9 +3369,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nhl": {
-    "all_hit": 59.4,
+    "all_hit": 59.8,
     "cutoff": null,
-    "games": 96,
+    "games": 97,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "soccer": {
@@ -3420,9 +3420,11 @@
    }
   ],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Under 8.5 goals (Pittsburgh Penguins at Utah Mammoth) Pittsburgh Penguins 4 - Utah Mammoth 5"
+   ],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      2,
@@ -3585,10 +3587,11 @@
      "Travis Bazzana: 2+ Hits + Runs + RBIs",
      "New York Rangers under 1.5 goals",
      "Colorado Avalanche over 5.5 goals",
-     "San Jose Sharks over 4.5 goals"
+     "San Jose Sharks over 4.5 goals",
+     "Pittsburgh Penguins over 4.5 goals"
     ],
     "legs": 7,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+25",
     "won": 1
@@ -3600,10 +3603,11 @@
      "New York Rangers under 1.5 goals",
      "Colorado Avalanche over 5.5 goals",
      "San Jose Sharks over 4.5 goals",
+     "Pittsburgh Penguins over 4.5 goals",
      "Over 149.5 points"
     ],
     "legs": 7,
-    "lost": 6,
+    "lost": 7,
     "status": "lost",
     "tier": "10k+50",
     "won": 0
@@ -3615,10 +3619,11 @@
      "New York Rangers under 1.5 goals",
      "Colorado Avalanche over 5.5 goals",
      "San Jose Sharks over 4.5 goals",
+     "Pittsburgh Penguins over 4.5 goals",
      "Over 149.5 points"
     ],
     "legs": 7,
-    "lost": 6,
+    "lost": 7,
     "status": "lost",
     "tier": "10k+100",
     "won": 0
@@ -3633,7 +3638,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "100",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3641,22 +3646,23 @@
      "Anaheim Ducks -1.5",
      "Colorado Avalanche over 5.5 goals",
      "Over 66.5 points",
+     "Pittsburgh Penguins over 4.5 goals",
      "Angel Reese: Under 11.5 Rebounds"
     ],
     "legs": 7,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k",
     "won": 1
    }
   ],
   "picks": {
-   "hit": 65.4,
+   "hit": 66.0,
    "lost": 18,
-   "n": 52,
-   "roi": 0.1,
-   "said": 67.7,
-   "won": 34
+   "n": 53,
+   "roi": 6.8,
+   "said": 67.6,
+   "won": 35
   },
   "picks_by_league": {
    "arg": {
@@ -3780,12 +3786,12 @@
     "won": 1
    },
    "nhl": {
-    "hit": 66.7,
+    "hit": 75.0,
     "lost": 1,
-    "n": 3,
-    "roi": 11.6,
-    "said": 61.0,
-    "won": 2
+    "n": 4,
+    "roi": 22.2,
+    "said": 61.3,
+    "won": 3
    },
    "por": {
     "hit": 0.0,
@@ -3843,29 +3849,29 @@
     "said_price": 85.2,
     "won": 142
    },
-   "n": 61,
-   "said": 78.5,
-   "won": 46
+   "n": 72,
+   "said": 78.9,
+   "won": 56
   },
   "safe_locks": {
    "lost": [
     "Deportivo Pasto or draw (Alianza FC at Deportivo Pasto) Alianza FC 1 - Deportivo Pasto 0"
    ],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      7,
      0.5222,
-     "open"
+     "won"
     ],
     "winners": [
      2,
      0.8497,
-     "open"
+     "won"
     ]
    },
-   "won": 9
+   "won": 10
   },
   "strong": {
    "hit": 81.8,
@@ -3886,12 +3892,12 @@
     "won": 10
    },
    "agree": {
-    "hit": 67.0,
+    "hit": 67.1,
     "lost": 91,
-    "n": 276,
-    "roi": -2.5,
+    "n": 277,
+    "roi": -2.3,
     "said": 63.8,
-    "won": 185
+    "won": 186
    }
   },
   "weights": {
