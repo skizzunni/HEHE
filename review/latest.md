@@ -1,11 +1,13 @@
 # Review 2026-10-20
 
-Picks 26-11 (70.3% vs 67.4% claimed, ROI +2.2%).
+Picks 26-13 (66.7% vs 66.9% claimed, ROI +2.2%).
 Closing line value: +1.69 points on 4 picks; beat the close on 100.0%.
 - LOST atp Roman Safiullin at 84.5%: lost 1-2 in sets · took it the distance · called at 84%
 - LOST atp Rinky Hijikata at 53.7%: lost 0-2 in sets · never won a set · called at 54%
+- LOST atp Nishesh Basavareddy at 57.1%: lost 1-2 in sets · took it the distance · called at 57%
 - LOST atp Botic Van De Zandschulp at 57.5%: lost 0-2 in sets · never won a set · called at 58%
 - LOST atp Ugo Humbert at 72.5%: lost 1-2 in sets · took it the distance · called at 72%
+- LOST atp Matteo Berrettini at 55.9%: lost 0-2 in sets · never won a set · called at 56%
 - LOST atp Titouan Droguet at 66.2%: lost 1-2 in sets · took it the distance · called at 66%
 - LOST atp Cameron Norrie at 52.5%: lost 1-2 in sets · took it the distance · called at 52%
 - LOST atp Arthur Fery at 63.5%: lost 0-2 in sets · never won a set · called at 64%
