@@ -7,34 +7,22 @@
    "baseline": "the pick as published (hand-set model weights in NFL/WNBA/MLB/tennis)",
    "proposal": "the same-time market favourite (tested weight 0)",
    "same": "one pick per game, same game, same price",
-   "untouched_from": "2026-09-24",
+   "untouched_from": "2026-09-25",
    "result": {
     "all": {
      "days": 25,
-     "picks": 477,
-     "old_won": 306,
-     "new_won": 320,
+     "picks": 459,
+     "old_won": 295,
+     "new_won": 309,
      "diff": 14,
      "ci95_diff": [
       -7,
-      41
+      40
      ],
-     "new_won_old_missed": 53,
-     "old_won_new_missed": 39,
+     "new_won_old_missed": 51,
+     "old_won_new_missed": 37,
      "promote": false,
      "examples_new": [
-      {
-       "day": "2026-09-24",
-       "new": "opponent of New York Mets",
-       "game": "mlb:401817067",
-       "won": true
-      },
-      {
-       "day": "2026-09-24",
-       "new": "opponent of Coastal Carolina Chanticleers",
-       "game": "ncaaf:401869941",
-       "won": true
-      },
       {
        "day": "2026-09-25",
        "new": "opponent of California Golden Bears",
@@ -70,21 +58,21 @@
        "new": "opponent of Ole Miss Rebels",
        "game": "ncaaf:401856699",
        "won": true
+      },
+      {
+       "day": "2026-09-26",
+       "new": "opponent of Tennessee Volunteers",
+       "game": "ncaaf:401856704",
+       "won": true
+      },
+      {
+       "day": "2026-09-26",
+       "new": "opponent of Washington State Cougars",
+       "game": "ncaaf:401856804",
+       "won": true
       }
      ],
      "examples_old": [
-      {
-       "day": "2026-09-24",
-       "old": "Milwaukee Brewers",
-       "game": "mlb:401817062",
-       "won": true
-      },
-      {
-       "day": "2026-09-24",
-       "old": "Minnesota Lynx",
-       "game": "wnba:401857217",
-       "won": true
-      },
       {
        "day": "2026-09-25",
        "old": "Miami Marlins",
@@ -120,40 +108,52 @@
        "old": "UCF Knights",
        "game": "ncaaf:401856815",
        "won": true
+      },
+      {
+       "day": "2026-09-27",
+       "old": "Minnesota Twins",
+       "game": "mlb:401817112",
+       "won": true
+      },
+      {
+       "day": "2026-09-27",
+       "old": "Cleveland Browns",
+       "game": "nfl:401872949",
+       "won": true
       }
      ]
     },
     "mlb": {
-     "days": 4,
-     "picks": 56,
-     "old_won": 37,
-     "new_won": 34,
+     "days": 3,
+     "picks": 44,
+     "old_won": 30,
+     "new_won": 27,
      "diff": -3,
      "ci95_diff": [
       -9,
-      2
+      3
      ],
-     "new_won_old_missed": 3,
-     "old_won_new_missed": 6,
+     "new_won_old_missed": 2,
+     "old_won_new_missed": 5,
      "promote": false
     },
     "ncaaf": {
-     "days": 16,
-     "picks": 234,
+     "days": 15,
+     "picks": 233,
      "old_won": 153,
-     "new_won": 170,
-     "diff": 17,
+     "new_won": 169,
+     "diff": 16,
      "ci95_diff": [
-      0,
-      39
+      -1,
+      37
      ],
-     "new_won_old_missed": 32,
+     "new_won_old_missed": 31,
      "old_won_new_missed": 15,
      "promote": false
     },
     "nfl": {
-     "days": 11,
-     "picks": 59,
+     "days": 10,
+     "picks": 58,
      "old_won": 35,
      "new_won": 33,
      "diff": -2,
@@ -166,14 +166,14 @@
      "promote": false
     },
     "nhl": {
-     "days": 13,
-     "picks": 93,
-     "old_won": 55,
-     "new_won": 61,
+     "days": 14,
+     "picks": 94,
+     "old_won": 56,
+     "new_won": 62,
      "diff": 6,
      "ci95_diff": [
       0,
-      13
+      14
      ],
      "new_won_old_missed": 12,
      "old_won_new_missed": 6,
@@ -194,17 +194,17 @@
      "promote": false
     },
     "wnba": {
-     "days": 10,
-     "picks": 22,
-     "old_won": 19,
-     "new_won": 15,
-     "diff": -4,
+     "days": 9,
+     "picks": 17,
+     "old_won": 14,
+     "new_won": 11,
+     "diff": -3,
      "ci95_diff": [
-      -8,
-      -1
+      -7,
+      0
      ],
      "new_won_old_missed": 0,
-     "old_won_new_missed": 4,
+     "old_won_new_missed": 3,
      "promote": false
     }
    }

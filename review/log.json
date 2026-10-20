@@ -3314,8 +3314,8 @@
    },
    {
     "flag": false,
-    "hit": 77.5,
-    "n": 129,
+    "hit": 77.6,
+    "n": 134,
     "name": "props nhl Shots on Goal",
     "said": 78.6
    },
@@ -3362,9 +3362,9 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "nhl": {
-    "all_hit": 59.1,
+    "all_hit": 59.6,
     "cutoff": null,
-    "games": 93,
+    "games": 94,
     "note": "insufficient evidence: no cutoff qualified"
    },
    "soccer": {
@@ -3424,7 +3424,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 8,
+   "open": 6,
    "plays": {
     "best": [
      2,
@@ -3432,7 +3432,7 @@
      "open"
     ]
    },
-   "won": 3
+   "won": 5
   },
   "losses": [
    {
@@ -3558,26 +3558,35 @@
   ],
   "lottery": [
    {
-    "killed_by": [],
+    "killed_by": [
+     "New York Rangers under 1.5 goals",
+     "Colorado Avalanche over 5.5 goals"
+    ],
     "legs": 7,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k+25",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "New York Rangers under 1.5 goals",
+     "Colorado Avalanche over 5.5 goals"
+    ],
     "legs": 7,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k+50",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "New York Rangers under 1.5 goals",
+     "Colorado Avalanche over 5.5 goals"
+    ],
     "legs": 7,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k+100",
     "won": 0
    },
@@ -3587,24 +3596,27 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 0
+    "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Anaheim Ducks -1.5",
+     "Colorado Avalanche over 5.5 goals"
+    ],
     "legs": 7,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    }
   ],
   "picks": {
-   "hit": 66.7,
+   "hit": 67.4,
    "lost": 15,
-   "n": 45,
-   "roi": 20.1,
-   "said": 67.8,
-   "won": 30
+   "n": 46,
+   "roi": 34.9,
+   "said": 67.6,
+   "won": 31
   },
   "picks_by_league": {
    "arg": {
@@ -3711,6 +3723,14 @@
     "said": 68.1,
     "won": 1
    },
+   "nhl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 64.5,
+    "said": 58.3,
+    "won": 1
+   },
    "por": {
     "hit": 0.0,
     "lost": 1,
@@ -3759,14 +3779,14 @@
     "said_price": 85.7,
     "won": 118
    },
-   "n": 4,
-   "said": 85.9,
-   "won": 3
+   "n": 9,
+   "said": 81.3,
+   "won": 7
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 8,
+   "open": 6,
    "plays": {
     "best": [
      7,
@@ -3779,7 +3799,7 @@
      "open"
     ]
    },
-   "won": 3
+   "won": 5
   },
   "strong": {
    "hit": 84.0,
@@ -3800,12 +3820,12 @@
     "won": 10
    },
    "agree": {
-    "hit": 67.2,
+    "hit": 67.3,
     "lost": 89,
-    "n": 271,
-    "roi": -2.4,
+    "n": 272,
+    "roi": -2.2,
     "said": 63.8,
-    "won": 182
+    "won": 183
    }
   },
   "weights": {
