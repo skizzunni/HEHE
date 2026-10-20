@@ -7,6 +7,11 @@
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": false,
      "conf": 86,
+     "fp": "a5c157e549d0",
+     "gate": {
+      "ok": false,
+      "what": "awaiting confirmed XIs"
+     },
      "id": "ucl:401915401",
      "league": "ucl",
      "match": "AEK @ MNC",
@@ -23,6 +28,11 @@
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": false,
      "conf": 85,
+     "fp": "b01e31f0ef75",
+     "gate": {
+      "ok": false,
+      "what": "awaiting confirmed XIs"
+     },
      "id": "ucl:401915402",
      "league": "ucl",
      "match": "SLB @ ROMA",
@@ -39,6 +49,11 @@
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": false,
      "conf": 78,
+     "fp": "6acf459eb5a7",
+     "gate": {
+      "ok": true,
+      "what": "no lineup gate for this league"
+     },
      "id": "ncaaf:401871055",
      "league": "ncaaf",
      "match": "MTSU @ FIU",
@@ -55,6 +70,11 @@
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": false,
      "conf": 73,
+     "fp": "54a192e74182",
+     "gate": {
+      "ok": false,
+      "what": "awaiting confirmed XIs"
+     },
      "id": "ucl:401915404",
      "league": "ucl",
      "match": "DOR @ SAB",
@@ -71,6 +91,11 @@
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
      "conf": 72,
+     "fp": "eda184e686f6",
+     "gate": {
+      "ok": false,
+      "what": "awaiting confirmed goalies (0 of 2)"
+     },
      "id": "nhl:401892548",
      "league": "nhl",
      "match": "CAR @ VAN",
@@ -82,7 +107,8 @@
      "start": "2026-10-21T02:00Z",
      "tip": "10:00 PM"
     }
-   ]
+   ],
+   "frozen": []
   }
  }
 }
