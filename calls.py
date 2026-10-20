@@ -12,8 +12,9 @@ priced games (ledger.json, 2026-10-16) the market's favourite hit:
 
 Every pick is recorded and counted. The cutoff only labels each one "strong"
 or "close" on the board, so it is clear which picks carry the record.
-tools/daily_review.py refits the cutoff per league every day -- the lowest
-one whose own record reaches TARGET with enough games behind it -- and writes
+tools/daily_review.py freezes each league's cutoff for 14 days (fit_frozen):
+the lowest one whose prior-window record reaches TARGET on 150+ picks with a
+Wilson lower bound of TARGET - 3 points, Holm-corrected across leagues, in
 review/call_min.json. A league with no qualifying record gets no strong
 calls (soccer qualifies as one group).
 """

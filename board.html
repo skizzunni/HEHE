@@ -438,9 +438,13 @@ function staleNow(r){
 }
 function strongBar(n){
   const S = D.strong;
-  const rec = S ? ' Strong calls, as published, hit <b>' + S.hit + '%</b> on ' + S.n + ' picks'
-    + (S.days ? ' over ' + S.days + ' days' : '') + ' the cut-offs never saw (all picks ' + S.all_hit + '%). '
-    + 'Leagues whose record has not earned a cut-off show no strong calls.' : '';
+  // strong-call cut-offs are frozen for 14 days (tools/daily_review.fit_frozen)
+  const win = S && S.window ? ' (cut-offs frozen ' + esc(S.window[0]) + ' to ' + esc(S.window[1]) + ')' : '';
+  const rec = !S ? '' : (S.n
+    ? ' Strong calls in this window hit <b>' + S.hit + '%</b> on N = ' + S.n
+      + (S.wilson95 ? ' (95% range ' + S.wilson95[0] + '&ndash;' + S.wilson95[1] + '%)' : '') + win + '. '
+    : ' No league has earned strong calls' + win + ': a league needs 150+ graded picks at 75%+ with a Wilson lower bound of 72%+, Holm-corrected across leagues. ')
+    + 'Every other call is a close call.';
   return '<p class="coinbar">' + (STRONGONLY ? 'Showing strong calls only' + (n ? ' (' + n + ' close games hidden).' : '.')
     : 'Strong and close games shown.') + rec
     + ' <button type="button" id="strongToggle">' + (STRONGONLY ? 'Show all' : 'Strong only') + '</button>'

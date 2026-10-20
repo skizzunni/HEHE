@@ -2413,3 +2413,32 @@ They fail on the previous commit and pass now. The full suite and the UI probe p
   - 10-19: 4–1
 - On this window the top 5 ran 18 points under its stated chance. With 25 calls the range is wide (37–73%), so this is a warning, not a verdict.
 - This is a publishing rule, not a model; nothing was tuned on these numbers. The calibration table and its 2-SE flag (item 4) will show whether high-chance calls keep trailing.
+
+## Accuracy plan, item 6: frozen strong-call cut-offs (2026-10-20)
+
+**What changed.**
+- Cut-offs are no longer refitted daily. `tools/daily_review.frozen_cutoffs` freezes them in `review/call_min.json` for 14 days (`frozen_from` / `frozen_to`) and refreezes only when the window ends.
+- At each freeze, a league (soccer leagues as one group) earns strong calls only if, in the prior 14 days, its graded book-priced picks that could be calls (no "or draw") meet all of these at the lowest qualifying cut-off on the 55–80% grid:
+  - N ≥ 150;
+  - hit ≥ 75%;
+  - Wilson 95% lower bound ≥ 72%;
+  - a one-sided exact binomial test against 72% that survives a Holm correction across every league tested (family α = 0.025).
+- Strong calls are the day's calls at or above the frozen cut-off; every other call is a close call.
+- The board reports strong calls in the current window with N, the window's dates and the Wilson range.
+
+**Test.** `tests/test_frozen_cutoffs.py`, 4 tests:
+- 200 picks at 84% qualify; 149 picks don't, and neither do 200 at 76% (Wilson bound under 72%);
+- only the prior 14 days count;
+- Holm rejects a league that passes its own Wilson bound (127 of 160, p = 0.021) once three leagues share α;
+- the cut-off holds unchanged through its 14 days while the record collapses, then refreezes.
+
+They fail on the previous commit and pass now; the full suite passes.
+
+**Before / after,** same window (graded book-priced picks 2026-10-15 to 2026-10-19):
+- **Before:** the daily refit labelled 58 of those picks strong (all soccer). They hit 74.1%, Wilson 61.6–83.7, a lower bound 10 points under the new bar.
+- **After:** frozen on 2026-10-15 from 2026-10-01 to 2026-10-14, no league qualifies:
+  - college football 116 picks, NHL 99, NBA 49, NFL 30, WNBA 8, all under 150;
+  - soccer's straight-win picks were not yet priced in that window.
+- **Strong calls on the window:** 0. Every call would have been a close call.
+- **The freeze that starts today** (2026-10-20 to 2026-11-02, fitted on 2026-10-06 to 2026-10-19) also qualifies nobody. College football has 114 picks, soccer straight-win 46, NHL 97. Soccer would qualify at 67.5% (303 picks, 77.9%, Wilson 72.3–82.7) only by counting "or draw" picks, which are never calls, so they are excluded.
+- No strong label is shown until a league earns one on 150+ picks.

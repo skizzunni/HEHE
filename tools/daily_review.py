@@ -225,6 +225,132 @@ def fit_calls(graded):
     return cuts, detail
 
 
+# ------------------------------------------- frozen strong-call cut-offs
+# Since 2026-10-20 the cut-offs are not refitted daily. Each league's cut-off
+# is frozen for FREEZE_DAYS; when the window ends it is refrozen from the
+# FREEZE_DAYS before it. A league (soccer as one group) earns strong calls
+# only if, in that prior window, its graded book-priced picks at or above the
+# cut-off number at least STRONG_MIN_N, hit at least CALL_TARGET, have a Wilson
+# 95% lower bound of at least CALL_TARGET - LB_MARGIN, and pass a one-sided
+# exact binomial test against CALL_TARGET - LB_MARGIN after a Holm correction
+# across every league tested (family-wise one-sided alpha HOLM_ALPHA). The
+# lowest qualifying cut-off on the CUTS grid is the candidate; strong calls
+# are the day's calls at or above it.
+FREEZE_DAYS = 14
+STRONG_MIN_N = 150
+LB_MARGIN = 0.03
+HOLM_ALPHA = 0.025
+
+
+def wilson(w, n, z=1.96):
+    if not n:
+        return None
+    p = w / n
+    d = 1 + z * z / n
+    c = p + z * z / (2 * n)
+    h = z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))
+    return (c - h) / d, (c + h) / d
+
+
+def binom_sf(k, n, p):
+    """P(X >= k) for X ~ Binomial(n, p)."""
+    if k <= 0:
+        return 1.0
+    lp, lq = math.log(p), math.log(1 - p)
+    tot = 0.0
+    for i in range(k, n + 1):
+        tot += math.exp(math.lgamma(n + 1) - math.lgamma(i + 1) - math.lgamma(n - i + 1) + i * lp + (n - i) * lq)
+    return min(tot, 1.0)
+
+
+def fit_frozen(graded, start):
+    """Cut-offs frozen from `start` (ISO date) for FREEZE_DAYS, fitted on the
+    FREEZE_DAYS before it. -> (cutoffs, detail)."""
+    import calibration as C
+    d0 = dt.date.fromisoformat(start)
+    lo, hi = (d0 - dt.timedelta(days=FREEZE_DAYS)).isoformat(), (d0 - dt.timedelta(days=1)).isoformat()
+    # only picks that could be calls: "or draw" is never a call (calls.py)
+    rows = [e for e in C.graded(graded) if lo <= C.day_of(e) <= hi and not e.get("dc")]
+    by = defaultdict(list)
+    for e in rows:
+        by[call_group(e["league"])].append((e["conf"] / 100, e["status"] == "won"))
+    floor = CALL_TARGET - LB_MARGIN
+    detail, cand = {}, {}
+    for lg, rs in sorted(by.items()):
+        best = None
+        for c in CUTS:
+            if c < CALL_FLOOR.get(lg, 0):
+                continue
+            sel = [w for q, w in rs if q >= c]
+            n, k = len(sel), sum(sel)
+            if n < STRONG_MIN_N:
+                break                                  # higher cut-offs only shrink N
+            lb, ub = wilson(k, n)
+            if k / n >= CALL_TARGET and lb >= floor:
+                best = (c, n, k, lb, ub)
+                break
+        tested = sum(1 for q, w in rs) >= STRONG_MIN_N
+        detail[lg] = dict(window=[lo, hi], games=len(rs), tested=tested, cutoff=None,
+                          all_hit=round(100 * sum(w for _, w in rs) / len(rs), 1) if rs else None)
+        if best:
+            c, n, k, lb, ub = best
+            cand[lg] = binom_sf(k, n, floor)
+            detail[lg].update(candidate=round(c, 3), calls=n, hit=round(100 * k / n, 1),
+                              wilson95=[round(100 * lb, 1), round(100 * ub, 1)], p=cand[lg])
+        elif tested:
+            detail[lg]["note"] = "no cut-off reached the target with its Wilson bound"
+        else:
+            detail[lg]["note"] = f"fewer than {STRONG_MIN_N} graded picks in the window"
+    m = sum(1 for v in detail.values() if v["tested"])
+    cuts = {}
+    for i, (lg, pv) in enumerate(sorted(cand.items(), key=lambda x: x[1])):
+        thr = HOLM_ALPHA / (m - i)
+        detail[lg]["holm_threshold"] = thr
+        if pv > thr:
+            detail[lg]["note"] = "failed the Holm-corrected test"
+            break                                      # Holm stops at the first failure
+        cuts[lg] = detail[lg]["candidate"]
+        detail[lg]["cutoff"] = cuts[lg]
+    return cuts, detail
+
+
+def frozen_report(graded, cfg):
+    """How the frozen strong calls are doing in their window: N, dates, Wilson."""
+    import calibration as C
+    lo, hi = cfg.get("frozen_from"), cfg.get("frozen_to")
+    cuts = cfg.get("cutoffs") or {}
+    rows = [e for e in C.graded(graded) if lo and lo <= C.day_of(e) <= hi and not e.get("dc")]
+    strong = [e for e in rows if cuts.get(call_group(e["league"])) is not None
+              and e["conf"] / 100 >= cuts[call_group(e["league"])]]
+    k = sum(e["status"] == "won" for e in strong)
+    ak = sum(e["status"] == "won" for e in rows)
+    w = wilson(k, len(strong))
+    return dict(window=[lo, hi], n=len(strong), won=k, hit=round(100 * k / len(strong), 1) if strong else None,
+                wilson95=[round(100 * w[0], 1), round(100 * w[1], 1)] if w else None,
+                days=len({C.day_of(e) for e in strong}), all_n=len(rows),
+                all_hit=round(100 * ak / len(rows), 1) if rows else None)
+
+
+def frozen_cutoffs(graded, today, path):
+    """The cut-off file for `today`: kept while its window runs, refrozen
+    when it has ended (or was never frozen)."""
+    try:
+        with open(path) as fh:
+            cfg = json.load(fh)
+    except (OSError, ValueError):
+        cfg = {}
+    t = today.isoformat()
+    if not cfg.get("frozen_to") or t > cfg["frozen_to"]:
+        cuts, detail = fit_frozen(graded, t)
+        cfg = dict(frozen_from=t, frozen_to=(today + dt.timedelta(days=FREEZE_DAYS - 1)).isoformat(),
+                   target=CALL_TARGET, min_n=STRONG_MIN_N, lb_margin=LB_MARGIN, holm_alpha=HOLM_ALPHA,
+                   cutoffs=cuts, detail=detail,
+                   unqualified=sorted(k for k, v in detail.items() if v.get("cutoff") is None))
+    cfg["holdout"] = frozen_report(graded, cfg)
+    cfg["updated"] = dt.datetime.now(ET).isoformat(timespec="minutes")
+    return cfg
+
+
 STUCK_DAYS = 6          # every grader voids an unplayed game after 5 days
 
 
@@ -479,9 +605,11 @@ def words(r, fit):
         out.append(f"Props {r['props']['won']}/{r['props']['n']} vs {r['props']['said']}% claimed.")
     out.append("")
     if r.get("calls"):
-        out.append("Call cutoffs for tomorrow (games under them are leans, not counted): "
-                   + ", ".join(f"{k} {v['cutoff']:.0%} -> {v['hit']}% on {v['calls']} of {v['games']}"
-                               for k, v in sorted(r["calls"].items())))
+        out.append("Strong-call cut-offs (frozen; under them a call is a close call): "
+                   + (", ".join(f"{k} {v['cutoff']:.1%} -> {v['hit']}% on {v['calls']} "
+                                f"(Wilson {v['wilson95'][0]}-{v['wilson95'][1]}, {v['window'][0]}..{v['window'][1]})"
+                                for k, v in sorted(r["calls"].items()) if v.get("cutoff") is not None)
+                      or "none qualified"))
     out.append("Weights for tomorrow (model's share vs the price): "
                + ", ".join(f"{k} {v['weight']:.2f} (n={v['n']})" for k, v in sorted(fit.items())))
     return "\n".join(out) + "\n"
@@ -521,14 +649,12 @@ def main():
                        default=w_def, weights=weights, detail=detail), fh, indent=1,
                   sort_keys=True)
     log[today.isoformat()]["weights"] = detail
-    cuts, cdetail = fit_calls(graded)
-    with open(os.path.join(OUT, "call_min.json"), "w") as fh:
-        json.dump(dict(updated=dt.datetime.now(ET).isoformat(timespec="minutes"),
-                       target=CALL_TARGET, cutoffs=cuts, detail=cdetail,
-                       unqualified=sorted(k for k, v in cdetail.items() if v.get("cutoff") is None),
-                       holdout=holdout(graded)), fh, indent=1,
-                  sort_keys=True)
-    log[today.isoformat()]["calls"] = cdetail
+    # strong-call cut-offs: frozen for FREEZE_DAYS, never refitted daily
+    cpath = os.path.join(OUT, "call_min.json")
+    cfg = frozen_cutoffs(graded, today, cpath)
+    with open(cpath, "w") as fh:
+        json.dump(cfg, fh, indent=1, sort_keys=True)
+    log[today.isoformat()]["calls"] = cfg["detail"]
     log[today.isoformat()]["audit"] = audit(graded, props, locks)
     log[today.isoformat()]["stuck"] = stuck(ledger, props, locks, lottery, today)
     with open(log_path, "w") as fh:
