@@ -6,7 +6,7 @@
      "book": "DraftKings",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": false,
-     "conf": 86,
+     "conf": 83,
      "fp": "3bb2de3b02e6",
      "gate": {
       "ok": true,
@@ -39,6 +39,13 @@
        "event": "news",
        "t": "2026-10-20T18:02:48+00:00",
        "what": "both XIs confirmed"
+      },
+      {
+       "event": "re-derived",
+       "from_": 86,
+       "t": "2026-10-20T18:07:50+00:00",
+       "to": 83,
+       "why": "moved -3.2 pts since published"
       }
      ],
      "match": "AEK @ MNC",
@@ -201,9 +208,7 @@
      "tip": "10:00 PM"
     }
    ],
-   "frozen": [
-    "ucl"
-   ],
+   "frozen": [],
    "news": {
     "nhl": "2026-10-20T17:31:48+00:00",
     "ucl": "2026-10-20T18:02:48+00:00"
