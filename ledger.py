@@ -153,10 +153,11 @@ def record(state=None):
                     continue                      # already settled, never rewrite
                 if key in book and _started(r):
                     continue                      # the pregame call stands once play begins
-                # a price older than freshness.MAX_AGE_MIN, or with no capture
-                # time, is never recorded: an earlier fresh version stands
+                # no book price (a Kalshi or model number alone is a lean), or
+                # one older than freshness.MAX_AGE_MIN or untimed: never
+                # recorded; an earlier fresh version stands
                 import freshness
-                if freshness.stale(r):
+                if not freshness.can_call(r):
                     continue
                 leg = next((L for L in r["legs"]
                             if L.get("side") and L["side"] == r.get("myside")), None)

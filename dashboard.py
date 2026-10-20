@@ -767,6 +767,8 @@ def collect(key, path, day, mlbctx, mybook=None):
                              price_book=(legs[0].get("book") if legs else None),
                              mypick=mine.get("pick", ""), myconf=mine.get("conf"),
                              why=mine.get("why", ""), myside=mine.get("side"),
+                             # the non-book source behind the number, if any
+                             src=mine.get("src"),
                              dc=bool(mine.get("dc")),
                              p_model_away=mine.get("p_model_away"),
                              p_market_away=mine.get("p_market_away"),

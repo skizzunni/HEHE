@@ -47,7 +47,7 @@ def is_fresh(at, now=None):
 
 
 def priced(r):
-    """Does the row carry a book price at all? (Unpriced rows: item 2.)"""
+    """Does the row carry a sportsbook price at all?"""
     return bool(r.get("legs"))
 
 
@@ -56,10 +56,17 @@ def stale(r, now=None):
     return priced(r) and not is_fresh(r.get("price_at"), now)
 
 
+def can_call(r, now=None):
+    """May the row be a call, be recorded and feed a ticket? Only with a
+    verifiable book price (no price, no call: a Kalshi or model number alone
+    makes a lean) that is fresh."""
+    return priced(r) and not stale(r, now)
+
+
 def fresh_slots(rows_by_league, now=None):
-    """{league: rows} without the stale rows: what tickets, stacks, Locks
-    pools and the Lottery may draw on."""
-    return {lg: [r for r in rs or [] if not stale(r, now)]
+    """{league: rows} with a fresh book price only: what tickets, stacks,
+    Locks pools and the Lottery may draw on."""
+    return {lg: [r for r in rs or [] if can_call(r, now)]
             for lg, rs in (rows_by_league or {}).items()}
 
 

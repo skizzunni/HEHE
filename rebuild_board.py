@@ -140,15 +140,17 @@ def snapshot():
                 ek, el = ev_note(k in SOCCER, mc, (leg or {}).get("price"),
                                  bool(leg and leg.get("dog")))
                 st_ = freshness.stale(r, pub)
+                np_ = not freshness.priced(r)
                 if r.get("price_at"):
                     ats.append(r["price_at"])
                 rows.append({"mp": r["mypick"] + (" or draw" if r.get("dc") else ""),
                              "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
-                             # below the league's cutoff, or priced too long
-                             # ago: a lean, not a call
-                             "nc": st_ or not calls.is_call(k, mc),
-                             "st": st_,
+                             # below the league's cutoff, priced too long ago,
+                             # or no book price at all: a lean, not a call
+                             "nc": st_ or np_ or not calls.is_call(k, mc),
+                             "st": st_, "np": np_,
+                             "src": (r.get("src") or "model") if np_ else None,
                              "pa": r.get("price_at"), "bk": r.get("price_book"),
                              "pk": pk, "pl": pl, "ek": ek, "el": el,
                              # fair price and edge come from the SAME rounded

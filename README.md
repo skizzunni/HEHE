@@ -2216,3 +2216,31 @@ model's estimate, not a measured rate.
   - Oldest price at publish: 0.5 min; 0 stale.
   - 46 more rows had no book price at all; those are item 2.
 - **Record on the same window:** graded picks 2026-10-15 to 2026-10-19, N = 615, hit 66.7%. Unchanged by construction: the gate applies only from now on, and past picks cannot be re-gated without capture times. Its effect on the record will show as the share of picks excluded as stale, reported with N and dates once graded picks carry `price_at`.
+
+## Accuracy plan, item 2: no price, no call (2026-10-20)
+
+**What changed.**
+- A pick with no verifiable sportsbook price is a **lean** only. Examples: a tennis row showing "Kalshi 94%" and "no line", or a soccer match ESPN gives no odds for.
+- A lean is:
+  - never a call;
+  - never recorded in the ledger;
+  - never in a ticket, stack or pool (`freshness.can_call` requires a fresh book price);
+  - not addable to the slip.
+- The row shows a **lean** badge, and its price cell names what informs the number: "no line · Kalshi only" or "no line · model only". `picks.tennis_picks` tags its source and `dashboard.collect` carries it as `src`.
+- Kalshi still informs the lean's side, labelled as its source.
+
+**Test.** `tests/test_no_price.py`, 3 tests: a Kalshi-only tennis pick is never recorded and never reaches a ticket pool, and its source is carried and labelled. All 3 fail on the previous commit and pass now; the full suite and the UI probe pass.
+
+**Before / after,** same window as item 1: graded ledger picks 2026-10-15 to 2026-10-19, Wilson 95% intervals.
+
+| | N | hit | 95% CI | stated | stated − hit |
+|---|---|---|---|---|---|
+| Before: every recorded pick | 615 | 66.7% | 62.8–70.3 | 68.8% | 2.1 pts |
+| After: book-priced picks only | 419 | 70.6% | 66.1–74.8 | 71.3% | 0.7 pts |
+| Removed: no book price | 196 | 58.2% | 51.2–64.8 | 63.5% | 5.3 pts |
+| Strong calls before | 70 | 72.9% | 61.5–81.9 | | |
+| Strong calls after | 58 | 74.1% | 61.6–83.7 | | |
+
+- The 196 removed picks are mostly tennis: 94 WTA and 54 ATP, plus 9 MLS and a handful of other soccer leagues. They were the worst-calibrated group, overstated by 5.3 points.
+- This is a change in what counts, not a better chooser: the same games are picked the same way. The record now covers only picks a bettor could have placed at a stated price.
+- On the live board of 2026-10-20, 46 of 111 rows for tomorrow have no book price and now show as leans.

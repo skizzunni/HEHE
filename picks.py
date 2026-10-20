@@ -581,6 +581,8 @@ def tennis_picks(day, tour=None):
                     mine, theirs = (r1, r2) if pick == ps[0] else (r2, r1)
                     out[(ps[0], ps[1])] = dict(
                         pick=pick, conf=max(p1, 1 - p1),
+                        # what informs the number: never a sportsbook price
+                        src="Kalshi" if mk is not None else "model",
                         why=f'rank {mine or "NR"} vs {theirs or "NR"}'
                             + (f' · Kalshi {round(100 * (mk if pick == ps[0] else 1 - mk))}%'
                                if mk is not None else ' · no market price'))

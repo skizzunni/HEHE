@@ -624,7 +624,8 @@ function renderView(){
         const conf = (r.mc === null || r.mc === undefined)
           ? '<td class="num none">&mdash;</td>'
           : '<td class="num">' + r.mc.toFixed(1) + '%'
-            + (r.st ? '<span class="tier lean" title="Price older than 15 minutes, or with no capture time: not a call, not in the record or any ticket">stale</span>'
+            + (r.np ? '<span class="tier lean" title="No sportsbook price: a lean only, never a call, not in the record or any ticket">lean</span>'
+               : r.st ? '<span class="tier lean" title="Price older than 15 minutes, or with no capture time: not a call, not in the record or any ticket">stale</span>'
                : r.nc ? '<span class="tier lean" title="Close game: the favourite is under this league\'s cutoff">close</span>'
                : '<span class="tier call">strong</span>')
             + (r.mc >= 90 ? '<span class="tier call" title="90%+ picks won 97% of 110 graded college football picks: the only ones that belong in a long combo">combo-safe</span>' : '')
@@ -633,10 +634,10 @@ function renderView(){
           ? '<td class="mkt"><span class="' + (r.d ? "fade" : "agree") + '">' + r.p + '</span></td>'
           : (r.fv && / or draw$/.test(r.mp)
              ? '<td class="mkt" title="Double chance is its own market on FanDuel: take it if offered at this price or better">fair ' + esc(r.fv) + '</td>'
-             : '<td class="mkt none">no line</td>');
+             : '<td class="mkt none">no line' + (r.src ? ' &middot; ' + esc(r.src) + ' only' : '') + '</td>');
         const id = league + "|" + r.mp;
         const on = SLIP.some(x => x.id === id) ? " class=\"on\"" : "";
-        return '<tr data-pick="' + esc(id) + '"' + on + '><td class="mine">'
+        return (r.st || r.np ? '<tr>' : '<tr data-pick="' + esc(id) + '"' + on + '>') + '<td class="mine">'
              + '<span class="stripe"></span>' + esc(r.mp) + dog + val + '</td>'
              + (mixed ? '<td class="comp">' + esc(r.lg) + '</td>' : '')
              + '<td class="state">' + esc(r.t) + '</td>' + conf
@@ -1501,7 +1502,7 @@ function drawCard(slot){
           ? '<td class="mkt"><span class="' + (r.d ? "fade" : "agree") + '">'
             + r.p + '</span>' + chip + '</td>'
           : '<td class="mkt none">no line</td>';
-        return '<tr data-pick="' + esc(id) + '"' + on + '>'
+        return (r.st || r.np ? '<tr>' : '<tr data-pick="' + esc(id) + '"' + on + '>')
              + '<td class="state">' + (i + 1) + '</td>'
              + '<td class="mine"><span class="stripe"></span>' + esc(r.mp) + '</td>'
              + '<td class="comp">' + esc(r.lg) + '</td>'
