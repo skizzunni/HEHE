@@ -1197,6 +1197,44 @@
       "start": "2026-10-20T23:00Z",
       "starters": [],
       "t": "2026-10-20T17:32:42+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "PHI",
+        "Dean Wade",
+        "Out",
+        "F"
+       ],
+       [
+        "PHI",
+        "Anfernee Simons",
+        "Day-To-Day",
+        "G"
+       ],
+       [
+        "PHI",
+        "Tacko Fall",
+        "Out",
+        "C"
+       ],
+       [
+        "PHI",
+        "Dominick Barlow",
+        "Out",
+        "F"
+       ],
+       [
+        "PHI",
+        "Ariel Hukporti",
+        "Out",
+        "C"
+       ]
+      ],
+      "probables": {},
+      "start": "2026-10-20T23:00Z",
+      "starters": [],
+      "t": "2026-10-20T22:52:03+00:00"
      }
     ],
     "nba:401909090": [
@@ -2812,6 +2850,75 @@
       "start": "2026-10-20T23:00Z",
       "starters": [],
       "t": "2026-10-20T17:32:42+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "NYI",
+        "Calum Ritchie",
+        "Out",
+        "C"
+       ],
+       [
+        "NYI",
+        "Matias Maccelli",
+        "Out",
+        "LW"
+       ],
+       [
+        "NYI",
+        "Alexander Romanov",
+        "Injured Reserve",
+        "D"
+       ],
+       [
+        "NYI",
+        "Mathew Barzal",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "ANA",
+        "Judd Caulfield",
+        "Out",
+        "RW"
+       ],
+       [
+        "ANA",
+        "Ian Moore",
+        "Injured Reserve",
+        "D"
+       ],
+       [
+        "ANA",
+        "Ryan Poehling",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "ANA",
+        "Troy Terry",
+        "Injured Reserve",
+        "RW"
+       ]
+      ],
+      "probables": {
+       "ANA": [
+        [
+         "Lukas Dostal",
+         "probableStartingGoalie"
+        ]
+       ],
+       "NYI": [
+        [
+         "Ilya Sorokin",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-20T23:00Z",
+      "starters": [],
+      "t": "2026-10-20T22:52:03+00:00"
      }
     ],
     "nhl:401892542": [
@@ -47905,89 +48012,6 @@
        0.8,
        [
         "Millonarios or draw",
-        "Atl\u00e9tico Nacional or draw",
-        "Wolverhampton Wanderers or draw",
-        "FC Porto or draw",
-        "AS Roma to win"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Delaware Blue Hens over 20.5 points",
-        "Marshall Thundering Herd +13.5",
-        "Over 207.5 points",
-        "Over 2.5 goals"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Over 41.5 points",
-        "Over 52.5 points",
-        "Over 207.5 points",
-        "Under 246.5 points",
-        "Over 218.5 points"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ]
-     ],
-     "t": "2026-10-20T12:34:11+00:00"
-    },
-    {
-     "policy": "25fd2ce3",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Millonarios or draw",
         "Fenerbahce or draw",
         "Wolverhampton Wanderers or draw",
         "AS Roma to win",
@@ -52866,6 +52890,89 @@
       ]
      ],
      "t": "2026-10-20T22:41:27+00:00"
+    },
+    {
+     "policy": "d772892d",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Guadalajara or draw",
+        "Over 4.5 goals",
+        "Detroit Red Wings over 1.5 goals",
+        "Marshall Thundering Herd over 22.5 points",
+        "Julian Champagnie: 5+ Points"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Marshall Thundering Herd +10.5",
+        "St. Louis Blues +1.5",
+        "Detroit Red Wings under 4.5 goals",
+        "Vegas Golden Knights under 6.5 goals"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Marshall Thundering Herd +10.5",
+        "Vancouver Canucks under 3.5 goals",
+        "St. Louis Blues +1.5",
+        "Detroit Red Wings under 4.5 goals",
+        "Over 216.5 points"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ]
+     ],
+     "t": "2026-10-20T22:51:56+00:00"
     }
    ]
   }
