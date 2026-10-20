@@ -2701,3 +2701,19 @@ market-only rule remains active. Re-running the Oct 15–19 de-vig study found
 136 matched original priced calls (27 unmatched); its log-loss difference
 was -0.00337 with a 95% range of -0.01053 to +0.00251. This does not establish
 a reliable forecasting gain. Original all-price study results remain in git history.
+
+## Whole-ticket evidence: what is wrong, and what is not proven (2026-10-20)
+
+`tools/ticket_backtest.py` → `data/ticket_backtest.json`. Source: 1,037 graded straight-win favourite picks, 2026-08-31 to 2026-10-20 (50 days), each with DraftKings' closing no-vig chance and the board's last executable price. Both strategies select at the same moment, from the same legs and prices, with the same standard and at most 6 legs. Nothing is fitted.
+
+| target @ standard | strongest-first (calls rule) | optimizer (`tickets.optimize`) | paired days | optimizer − strongest cashes (95%) |
+|---|---|---|---|---|
+| 2× @60% | 14/38, 36.8% vs 36.8% claimed, ROI −15.8%, drawdown 11.1 | 22/47, 46.8% vs 45.7%, ROI −3.4%, drawdown 6.9 | 38 | +4 (−1 to +9) |
+| 2× @70% | 4/10, ROI −6.2% | 10/18, ROI +13.3% | 10 | +1 (0 to +3) |
+| 3× @60% | 9/30, 30.0% vs 24.2%, ROI +2.8% | 17/40, 42.5% vs 29.7%, ROI +29.9% | 29 | +3 (0 to +7) |
+| 5× @60% | 3/14, ROI +23.3% | 7/27, ROI +31.0% | 9 | +1 (−2 to +4) |
+
+- The independent Kalshi study (`data/whole_ticket.json`, 38 dates, 237 games) points the same way: +3, +1, +1, +2.
+- **Verdict: uncertain.** The optimizer is never worse in 8 paired comparisons across two sources, but no single interval excludes zero, and the comparisons were not pre-registered as one test.
+- It is not promoted. It goes to forward shadow testing beside the current rule.
+- Market check on the same picks: the closing chance is calibrated (50–60%: 54.9% stated, 54.5% hit; 90–95%: 92.9% stated, 92.6% hit; N = 1,378). Ranking by chance is sound; how tickets are assembled is the open question.
