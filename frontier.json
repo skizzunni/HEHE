@@ -379,6 +379,11 @@
       "probables": {},
       "start": "2026-10-20T15:25Z",
       "t": "2026-10-20T15:03:59+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-20T15:15Z",
+      "t": "2026-10-20T15:14:01+00:00"
      }
     ],
     "atp:185087": [
@@ -1498,6 +1503,75 @@
       "start": "2026-10-20T23:00Z",
       "starters": [],
       "t": "2026-10-20T14:27:57+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "MTL",
+        "Mike Matheson",
+        "Day-To-Day",
+        "D"
+       ],
+       [
+        "MTL",
+        "Florian Xhekaj",
+        "Injured Reserve",
+        "LW"
+       ],
+       [
+        "MTL",
+        "Sam Montembeault",
+        "Injured Reserve",
+        "G"
+       ],
+       [
+        "MTL",
+        "Ivan Demidov",
+        "Injured Reserve",
+        "RW"
+       ],
+       [
+        "MTL",
+        "Bryce Pickford",
+        "Injured Reserve",
+        "D"
+       ],
+       [
+        "SJ",
+        "Alexander Wennberg",
+        "Day-To-Day",
+        "C"
+       ],
+       [
+        "SJ",
+        "Quentin Musty",
+        "Injured Reserve",
+        "LW"
+       ],
+       [
+        "SJ",
+        "Kyle Keyser",
+        "Injured Reserve",
+        "G"
+       ]
+      ],
+      "probables": {
+       "MTL": [
+        [
+         "Jakub Dobes",
+         "probableStartingGoalie"
+        ]
+       ],
+       "SJ": [
+        [
+         "Alex Nedeljkovic",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-20T23:00Z",
+      "starters": [],
+      "t": "2026-10-20T15:14:01+00:00"
      }
     ],
     "nhl:401892540": [
@@ -49108,6 +49182,89 @@
       ]
      ],
      "t": "2026-10-20T14:53:25+00:00"
+    },
+    {
+     "policy": "d772892d",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Atl\u00e9tico Nacional or draw",
+        "Fenerbahce or draw",
+        "FC Porto or draw",
+        "AS Roma to win",
+        "Under 8.5 goals"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Missouri State Bears +12.5",
+        "Over 53.5 points",
+        "Under 246.5 points",
+        "Tampa Bay Lightning under 6.5 goals"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Missouri State Bears +12.5",
+        "Marshall Thundering Herd +13.5",
+        "Under 246.5 points",
+        "Over 217.5 points",
+        "Seattle Kraken under 4.5 goals"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ]
+     ],
+     "t": "2026-10-20T15:13:52+00:00"
     }
    ]
   }
