@@ -1,93 +1,99 @@
 {
- "cutoffs": {
-  "atp": 0.65,
-  "ncaaf": 0.575,
-  "soccer": 0.7,
-  "wnba": 0.55,
-  "wta": 0.7
- },
+ "cutoffs": {},
  "detail": {
-  "atp": {
-   "all_hit": 67.5,
-   "calls": 84,
-   "cutoff": 0.65,
-   "games": 160,
-   "hit": 79.8
-  },
-  "mlb": {
-   "all_hit": 58.3,
-   "cutoff": null,
-   "games": 372,
-   "note": "insufficient evidence: no cutoff qualified"
-  },
   "ncaaf": {
-   "all_hit": 74.5,
-   "calls": 314,
-   "cutoff": 0.575,
-   "games": 502,
-   "hit": 83.1
+   "all_hit": 64.0,
+   "cutoff": null,
+   "games": 114,
+   "note": "fewer than 150 graded picks in the window",
+   "tested": false,
+   "window": [
+    "2026-10-06",
+    "2026-10-19"
+   ]
   },
   "nfl": {
-   "all_hit": 58.7,
+   "all_hit": 53.6,
    "cutoff": null,
-   "games": 92,
-   "note": "insufficient evidence: no cutoff qualified"
+   "games": 28,
+   "note": "fewer than 150 graded picks in the window",
+   "tested": false,
+   "window": [
+    "2026-10-06",
+    "2026-10-19"
+   ]
   },
   "nhl": {
    "all_hit": 59.8,
    "cutoff": null,
    "games": 97,
-   "note": "insufficient evidence: no cutoff qualified"
+   "note": "fewer than 150 graded picks in the window",
+   "tested": false,
+   "window": [
+    "2026-10-06",
+    "2026-10-19"
+   ]
   },
   "soccer": {
-   "all_hit": 61.3,
-   "calls": 200,
-   "cutoff": 0.7,
-   "games": 556,
-   "hit": 77.5
+   "all_hit": 82.6,
+   "cutoff": null,
+   "games": 46,
+   "note": "fewer than 150 graded picks in the window",
+   "tested": false,
+   "window": [
+    "2026-10-06",
+    "2026-10-19"
+   ]
   },
   "ufc": {
-   "all_hit": 63.6,
+   "all_hit": 53.8,
    "cutoff": null,
-   "games": 88,
-   "note": "insufficient evidence: no cutoff qualified"
+   "games": 13,
+   "note": "fewer than 150 graded picks in the window",
+   "tested": false,
+   "window": [
+    "2026-10-06",
+    "2026-10-19"
+   ]
   },
   "wnba": {
-   "all_hit": 77.1,
-   "calls": 36,
-   "cutoff": 0.55,
-   "games": 48,
-   "hit": 83.3
-  },
-  "wta": {
-   "all_hit": 70.8,
-   "calls": 92,
-   "cutoff": 0.7,
-   "games": 226,
-   "hit": 84.8
+   "all_hit": 83.3,
+   "cutoff": null,
+   "games": 6,
+   "note": "fewer than 150 graded picks in the window",
+   "tested": false,
+   "window": [
+    "2026-10-06",
+    "2026-10-19"
+   ]
   }
  },
+ "frozen_from": "2026-10-20",
+ "frozen_to": "2026-11-02",
  "holdout": {
-  "all_hit": 66.7,
-  "all_n": 1071,
-  "basis": "as published",
-  "days": 19,
-  "hit": 73.4,
-  "n": 256,
-  "simulated": {
-   "hit": 68.2,
-   "n": 1071,
-   "what": "old picks re-scored as the market favourite"
-  },
-  "since": "2026-09-23",
-  "until": "2026-10-20"
+  "all_hit": null,
+  "all_n": 0,
+  "days": 0,
+  "hit": null,
+  "n": 0,
+  "wilson95": null,
+  "window": [
+   "2026-10-20",
+   "2026-11-02"
+  ],
+  "won": 0
  },
+ "holm_alpha": 0.025,
+ "lb_margin": 0.03,
+ "min_n": 150,
  "target": 0.75,
  "unqualified": [
-  "mlb",
+  "ncaaf",
   "nfl",
   "nhl",
-  "ufc"
+  "soccer",
+  "ufc",
+  "wnba"
  ],
- "updated": "2026-10-20T09:10-04:00"
+ "updated": "2026-10-20T09:15-04:00"
 }

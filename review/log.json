@@ -3758,10 +3758,10 @@
   "audit": [
    {
     "flag": false,
-    "hit": 63.5,
-    "n": 104,
+    "hit": 63.8,
+    "n": 105,
     "name": "tennis Kalshi-priced",
-    "said": 67.4
+    "said": 67.5
    },
    {
     "flag": false,
@@ -3849,64 +3849,71 @@
    }
   ],
   "calls": {
-   "atp": {
-    "all_hit": 67.5,
-    "calls": 84,
-    "cutoff": 0.65,
-    "games": 160,
-    "hit": 79.8
-   },
-   "mlb": {
-    "all_hit": 58.3,
-    "cutoff": null,
-    "games": 372,
-    "note": "insufficient evidence: no cutoff qualified"
-   },
    "ncaaf": {
-    "all_hit": 74.5,
-    "calls": 314,
-    "cutoff": 0.575,
-    "games": 502,
-    "hit": 83.1
+    "all_hit": 64.0,
+    "cutoff": null,
+    "games": 114,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
    },
    "nfl": {
-    "all_hit": 58.7,
+    "all_hit": 53.6,
     "cutoff": null,
-    "games": 92,
-    "note": "insufficient evidence: no cutoff qualified"
+    "games": 28,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
    },
    "nhl": {
     "all_hit": 59.8,
     "cutoff": null,
     "games": 97,
-    "note": "insufficient evidence: no cutoff qualified"
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
    },
    "soccer": {
-    "all_hit": 61.3,
-    "calls": 200,
-    "cutoff": 0.7,
-    "games": 556,
-    "hit": 77.5
+    "all_hit": 82.6,
+    "cutoff": null,
+    "games": 46,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
    },
    "ufc": {
-    "all_hit": 63.6,
+    "all_hit": 53.8,
     "cutoff": null,
-    "games": 88,
-    "note": "insufficient evidence: no cutoff qualified"
+    "games": 13,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
    },
    "wnba": {
-    "all_hit": 77.1,
-    "calls": 36,
-    "cutoff": 0.55,
-    "games": 48,
-    "hit": 83.3
-   },
-   "wta": {
-    "all_hit": 70.8,
-    "calls": 92,
-    "cutoff": 0.7,
-    "games": 226,
-    "hit": 84.8
+    "all_hit": 83.3,
+    "cutoff": null,
+    "games": 6,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
    }
   },
   "clv": {
@@ -4024,12 +4031,12 @@
    }
   ],
   "picks": {
-   "hit": 78.9,
+   "hit": 80.0,
    "lost": 4,
-   "n": 19,
+   "n": 20,
    "roi": null,
-   "said": 67.7,
-   "won": 15
+   "said": 68.2,
+   "won": 16
   },
   "picks_by_league": {
    "atp": {
@@ -4041,12 +4048,12 @@
     "won": 5
    },
    "wta": {
-    "hit": 83.3,
+    "hit": 84.6,
     "lost": 2,
-    "n": 12,
+    "n": 13,
     "roi": null,
-    "said": 66.6,
-    "won": 10
+    "said": 67.5,
+    "won": 11
    }
   },
   "props": {
@@ -4079,12 +4086,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 77.8,
+   "hit": 80.0,
    "lost": 2,
-   "n": 9,
+   "n": 10,
    "roi": null,
-   "said": 78.6,
-   "won": 7
+   "said": 78.7,
+   "won": 8
   },
   "stuck": [],
   "vs_market_14d": {
