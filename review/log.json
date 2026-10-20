@@ -3758,8 +3758,8 @@
   "audit": [
    {
     "flag": false,
-    "hit": 61.4,
-    "n": 88,
+    "hit": 60.7,
+    "n": 89,
     "name": "tennis Kalshi-priced",
     "said": 67.6
    },
@@ -3902,11 +3902,11 @@
     "hit": 83.3
    },
    "wta": {
-    "all_hit": 70.4,
-    "calls": 106,
-    "cutoff": 0.675,
-    "games": 216,
-    "hit": 83.0
+    "all_hit": 70.0,
+    "calls": 72,
+    "cutoff": 0.725,
+    "games": 217,
+    "hit": 84.7
    }
   },
   "clv": {
@@ -3933,23 +3933,32 @@
    "plays": {},
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "wta",
+    "pick": "Paula Badosa",
+    "price": null,
+    "said": 73.5,
+    "why": "lost 1-2 in sets \u00b7 took it the distance \u00b7 called at 74%"
+   }
+  ],
   "lottery": [],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 2,
+   "hit": 66.7,
+   "lost": 1,
+   "n": 3,
    "roi": null,
-   "said": 82.2,
+   "said": 79.3,
    "won": 2
   },
   "picks_by_league": {
    "wta": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
     "roi": null,
-    "said": 82.2,
+    "said": 79.3,
     "won": 2
    }
   },
@@ -3972,11 +3981,11 @@
    "won": 0
   },
   "strong": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 2,
+   "hit": 66.7,
+   "lost": 1,
+   "n": 3,
    "roi": null,
-   "said": 82.2,
+   "said": 79.3,
    "won": 2
   },
   "stuck": [],
