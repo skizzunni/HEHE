@@ -1,6 +1,6 @@
 # Review 2026-10-20
 
-Picks 23-11 (67.6% vs 67.4% claimed, ROI -10.7%).
+Picks 24-11 (68.6% vs 67.2% claimed, ROI -10.7%).
 Closing line value: +1.66 points on 3 picks; beat the close on 100.0%.
 - LOST atp Roman Safiullin at 84.5%: lost 1-2 in sets · took it the distance · called at 84%
 - LOST atp Rinky Hijikata at 53.7%: lost 0-2 in sets · never won a set · called at 54%
