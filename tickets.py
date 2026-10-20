@@ -290,3 +290,98 @@ def frontier(legs, targets=(2.0, 3.0, 5.0), standards=(0.90, 0.85, 0.80, 0.75),
                 row.update(legs=None, ceiling=round(c["total"], 3), ceiling_n=len(c["legs"]))
             out.append(row)
     return out
+
+
+# ------------------------------------------------------------- evidence
+BANDS = ((0.70, 0.75), (0.75, 0.80), (0.80, 0.85), (0.85, 0.90), (0.90, 0.95), (0.95, 1.0))
+METHOD_FROM = "2026-10-18"     # chances are the de-vigged price, unadjusted, from this date
+
+
+def wilson(k, n, z=1.96):
+    if not n:
+        return None
+    ph = k / n
+    den = 1 + z * z / n
+    c = (ph + z * z / (2 * n)) / den
+    h = z * math.sqrt(ph * (1 - ph) / n + z * z / (4 * n * n)) / den
+    return [round(100 * (c - h), 1), round(100 * (c + h), 1)]
+
+
+def _cluster_ci(rs, draws=1000, seed=3):
+    """95% range of the hit rate, resampling whole games: one game's many
+    alternate lines settle on one score and are not separate trials."""
+    import random
+    by = {}
+    for r in rs:
+        by.setdefault(r[3], []).append(r[1])
+    g = list(by.values())
+    rng = random.Random(seed)
+    vals = []
+    for _ in range(draws):
+        smp = [rng.choice(g) for _ in g]
+        n = sum(len(x) for x in smp)
+        vals.append(100 * sum(sum(x) for x in smp) / n)
+    vals.sort()
+    return [round(vals[int(0.025 * draws)], 1), round(vals[int(0.975 * draws) - 1], 1)]
+
+
+def _band_rows(rows):
+    """rows: (p, won, date, game). Per band: legs, games, won, hit, said, 95%
+    range (by game), dates and a verdict -- supported / thin / contradicted --
+    never an adjustment. 'thin' under 30 games."""
+    out = []
+    for lo, hi in BANDS:
+        rs = [r for r in rows if lo <= r[0] < hi]
+        n = len(rs)
+        if not n:
+            out.append(dict(band=f"{int(100 * lo)}-{int(100 * hi)}%", n=0, games=0))
+            continue
+        k = sum(r[1] for r in rs)
+        games = len({r[3] for r in rs})
+        said = 100 * sum(r[0] for r in rs) / n
+        ci = _cluster_ci(rs) if games < n and games >= 30 else wilson(k, n)
+        verdict = ("thin" if games < 30 else "contradicted" if ci[1] < said else "supported")
+        out.append(dict(band=f"{int(100 * lo)}-{int(100 * hi)}%", n=n, games=games, won=k,
+                        hit=round(100 * k / n, 1), said=round(said, 1), ci95=ci,
+                        first=min(r[2] for r in rs), last=max(r[2] for r in rs), verdict=verdict))
+    return out
+
+
+def evidence(root=None):
+    """How the estimated chances behind each leg standard have done on
+    comparable settled legs, by source. Sample size, dates and a 95% range
+    are always shown; nothing here changes a rating."""
+    import json
+    import os
+    root = root or os.path.dirname(os.path.abspath(__file__))
+
+    def load(name, default):
+        try:
+            with open(os.path.join(root, name)) as fh:
+                return json.load(fh)
+        except (OSError, ValueError):
+            return default
+    fd_new, fd_old, props = [], [], []
+    for book in (load("locks.json", {}), load("safe_locks.json", {})):
+        for L in (book.get("legs") or {}).values():
+            if L.get("status") in ("won", "lost") and L.get("p") and L.get("date"):
+                (fd_new if L["date"] >= METHOD_FROM else fd_old).append(
+                    (L["p"], L["status"] == "won", L["date"], L.get("gid")))
+    for d, v in (load("lottery.json", {}).get("days") or {}).items():
+        for t in v.get("tickets") or []:
+            for L in t["legs"]:
+                if L.get("kind") == "game" and L.get("status") in ("won", "lost") and L.get("p"):
+                    (fd_new if d >= METHOD_FROM else fd_old).append((L["p"], L["status"] == "won", d,
+                                                                     L.get("gid")))
+    for e in load("props.json", {}).values():
+        if isinstance(e, dict) and e.get("status") in ("won", "lost") and e.get("p") and e.get("date"):
+            props.append((e["p"], e["status"] == "won", e["date"], e.get("gid")))
+    kal = []
+    for r in load(os.path.join("data", "backtest_kalshi_legs.json"), []):
+        mid = r["cost"] - (r.get("width") or 0) / 2
+        kal.append((mid, bool(r["won"]), r["date"], r["game"]))
+    return dict(method_from=METHOD_FROM, sources=[
+        dict(name="FanDuel game lines, current method", rows=_band_rows(fd_new)),
+        dict(name="FanDuel game lines, before " + METHOD_FROM + " (old band factor)", rows=_band_rows(fd_old)),
+        dict(name="FanDuel player props (de-vigged)", rows=_band_rows(props)),
+        dict(name="Kalshi mid-prices, game-line contracts (earlier, other book)", rows=_band_rows(kal))])

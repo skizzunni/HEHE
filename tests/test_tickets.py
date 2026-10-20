@@ -132,5 +132,23 @@ class Optimizer(unittest.TestCase):
         self.assertFalse(r["exact"])
 
 
+class Evidence(unittest.TestCase):
+    def test_band_verdicts_never_adjust(self):
+        rows = [(0.91, i % 10 != 0, "2026-10-01", f"g{i}") for i in range(100)]      # 90% hit at 91%
+        r = [x for x in T._band_rows(rows) if x["band"] == "90-95%"][0]
+        self.assertEqual((r["n"], r["games"], r["won"]), (100, 100, 90))
+        self.assertEqual(r["verdict"], "supported")
+        thin = [x for x in T._band_rows(rows[:10]) if x["band"] == "90-95%"][0]
+        self.assertEqual(thin["verdict"], "thin")
+        bad = [(0.91, i % 2 == 0, "2026-10-01", f"g{i}") for i in range(100)]          # 50% at 91%
+        self.assertEqual([x for x in T._band_rows(bad) if x["band"] == "90-95%"][0]["verdict"], "contradicted")
+
+    def test_clustered_legs_widen_the_range(self):
+        """Ten lines of one game are one trial, not ten."""
+        one = [(0.91, True, "d", "g") for _ in range(10)] + [(0.91, i % 3 != 0, "d", f"h{i}") for i in range(40)]
+        r = [x for x in T._band_rows(one) if x["band"] == "90-95%"][0]
+        self.assertEqual(r["games"], 41)
+
+
 if __name__ == "__main__":
     unittest.main()
