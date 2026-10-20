@@ -360,6 +360,7 @@ td.num.ok{color:var(--dog)}
 .age.stale{border-left-color:var(--bad);color:var(--bad)}
 .age b{color:var(--ink);font-weight:600}
 .age.stale b{color:var(--bad)}
+.coinbar.stale{color:var(--bad)}
 </style>
 <div class="wrap">
 <header>
@@ -428,6 +429,13 @@ td.num.ok{color:var(--dog)}
 let STRONGONLY = false, COMBOONLY = false;
 try { STRONGONLY = localStorage.getItem("strongonly") === "1";
       COMBOONLY = localStorage.getItem("comboonly") === "1"; } catch (e) {}
+// Stale at VIEWING time too: the build proves a price was fresh when it was
+// published, not when the page is read between rebuilds (freshness.py).
+function staleNow(r){
+  if(r.st) return true;
+  const t = r.pa ? Date.parse(r.pa) : NaN;
+  return !isNaN(t) && (Date.now() - t) > 15 * 60000;
+}
 function strongBar(n){
   const S = D.strong;
   const rec = S ? ' Strong calls, as published, hit <b>' + S.hit + '%</b> on ' + S.n + ' picks'
@@ -612,7 +620,11 @@ function renderView(){
     return;
   }
   panel.innerHTML = strongBar(closeN) + coinBar(coins)
-    + (lg.asof ? '<p class="coinbar">Prices as of ' + esc(lg.asof) + ' (oldest on this tab).</p>' : '')
+    + (lg.asof ? (function(){
+        const old = lg.rows.filter(r => r.pa && !r.np).some(staleNow);
+        return '<p class="coinbar' + (old ? ' stale' : '') + '">Prices as of ' + esc(lg.asof) + ' (oldest on this tab)'
+          + (old ? ' &mdash; <b>older than 15 minutes now</b>: those picks are shown stale until the next rebuild.' : '.') + '</p>';
+      })() : '')
     + '<table><thead><tr><th>I have winning</th><th>Start</th>'
     + '<th class="num">Conf</th><th class="why">Why</th><th>Price</th>'
     + '</tr></thead><tbody>'
@@ -625,7 +637,7 @@ function renderView(){
           ? '<td class="num none">&mdash;</td>'
           : '<td class="num">' + r.mc.toFixed(0) + '%'
             + (r.np ? '<span class="tier lean" title="No sportsbook price: a lean only, never a call, not in the record or any ticket">lean</span>'
-               : r.st ? '<span class="tier lean" title="Price older than 15 minutes, or with no capture time: not a call, not in the record or any ticket">stale</span>'
+               : staleNow(r) ? '<span class="tier lean" title="Price older than 15 minutes, or with no capture time: not a call, not in the record or any ticket">stale</span>'
                : r.nc ? '<span class="tier lean" title="Close game: the favourite is under this league\'s cutoff">close</span>'
                : '<span class="tier call">strong</span>')
             + (r.mc >= 90 ? '<span class="tier call" title="90%+ picks won 97% of 110 graded college football picks: the only ones that belong in a long combo">combo-safe</span>' : '')
@@ -637,7 +649,7 @@ function renderView(){
              : '<td class="mkt none">no line' + (r.src ? ' &middot; ' + esc(r.src) + ' only' : '') + '</td>');
         const id = league + "|" + r.mp;
         const on = SLIP.some(x => x.id === id) ? " class=\"on\"" : "";
-        return (r.st || r.np ? '<tr>' : '<tr data-pick="' + esc(id) + '"' + on + '>') + '<td class="mine">'
+        return (staleNow(r) || r.np ? '<tr>' : '<tr data-pick="' + esc(id) + '"' + on + '>') + '<td class="mine">'
              + '<span class="stripe"></span>' + esc(r.mp) + dog + val + '</td>'
              + (mixed ? '<td class="comp">' + esc(r.lg) + '</td>' : '')
              + '<td class="state">' + esc(r.t) + '</td>' + conf
@@ -1502,7 +1514,7 @@ function drawCard(slot){
           ? '<td class="mkt"><span class="' + (r.d ? "fade" : "agree") + '">'
             + r.p + '</span>' + chip + '</td>'
           : '<td class="mkt none">no line</td>';
-        return (r.st || r.np ? '<tr>' : '<tr data-pick="' + esc(id) + '"' + on + '>')
+        return (staleNow(r) || r.np ? '<tr>' : '<tr data-pick="' + esc(id) + '"' + on + '>')
              + '<td class="state">' + (i + 1) + '</td>'
              + '<td class="mine"><span class="stripe"></span>' + esc(r.mp) + '</td>'
              + '<td class="comp">' + esc(r.lg) + '</td>'

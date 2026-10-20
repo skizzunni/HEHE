@@ -2357,3 +2357,13 @@ They fail on the previous commit (no module) and pass now; the full suite (95) a
 | 90+ | 4 | 92.3 | 75.0 |
 
 The 80–90 bin trails by 5.2 points, about 1.1 SE. It is the one to watch.
+
+## Item 1 follow-up: stale at viewing time (2026-10-20)
+
+A price fresh at build time can be hours old by the time the page is read, if GitHub's throttled rebuilds stall. The page now checks each price's capture time against the viewer's clock as well:
+- a pick whose price is over 15 minutes old as you read it shows **stale** and can't be added to the slip;
+- the league's "Prices as of" line turns red and says so.
+
+**Test.** `tests/ui_check.py` check 5 (prices 20 and 5 minutes old read stale and fresh) fails on the previous commit and passes now.
+
+**Numbers.** There is no before/after accuracy number: this changes what the page shows between rebuilds, not any pick or record. If that line is regularly red when you look, collection still has to move off GitHub's schedule (an external cron hitting `repository_dispatch`).

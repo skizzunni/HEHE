@@ -10,7 +10,8 @@ read back. Checks:
   2. a fresh copy shows no banner;
   3. Locks -> Safe Locks renders the card, the Winners parlay (top N at 80%+)
      and the Best play (50%+), with the numbers the card's own sizes imply;
-  4. the record lists the Winners parlay's own hit rate and each day's result.
+  4. the record lists the Winners parlay's own hit rate and each day's result;
+  5. a price older than 15 minutes on the viewer's clock reads stale.
 """
 import json
 import os
@@ -81,6 +82,8 @@ def frontier_fixture():
 
 PROBE = """<script>setTimeout(function(){
   var out = {banner: !!document.getElementById("stalebar")};
+  var iso = function(m){ return new Date(Date.now() - m * 60000).toISOString(); };
+  out.staleNow = [staleNow({pa: iso(20)}), staleNow({pa: iso(5)}), staleNow({st: true}), staleNow({})];
   var b = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Locks/.test(x.textContent)})[0];
   if (b) b.click();
   setTimeout(function(){
@@ -170,6 +173,8 @@ def main():
         if want not in tg:
             fails.append("Targets tab missing: " + want + " | " + tg[:300])
             break
+    if new.get("staleNow") != [True, False, True, False]:
+        fails.append(f"a price 20 minutes old at viewing time must read stale: {new.get('staleNow')}")
     if "All checks passing" not in new["health"]:
         fails.append("clean review must read 'All checks passing': " + new["health"])
     for f in fails:
