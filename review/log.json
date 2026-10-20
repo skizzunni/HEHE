@@ -3193,10 +3193,10 @@
   },
   "props": {
    "fair": {
-    "n": 142,
-    "said_fair": 82.0,
+    "n": 151,
+    "said_fair": 82.2,
     "said_price": 85.7,
-    "won": 118
+    "won": 124
    },
    "n": 191,
    "said": 73.7,
@@ -3328,6 +3328,13 @@
    },
    {
     "flag": false,
+    "hit": 73.3,
+    "n": 15,
+    "name": "props wnba Points",
+    "said": 81.9
+   },
+   {
+    "flag": false,
     "hit": 76.9,
     "n": 13,
     "name": "locks ncaaf under",
@@ -3381,10 +3388,10 @@
     "note": "insufficient evidence: no cutoff qualified"
    },
    "wnba": {
-    "all_hit": 78.7,
+    "all_hit": 77.1,
     "calls": 36,
     "cutoff": 0.55,
-    "games": 47,
+    "games": 48,
     "hit": 83.3
    },
    "wta": {
@@ -3396,9 +3403,9 @@
    }
   },
   "clv": {
-   "avg": -0.11,
+   "avg": -0.31,
    "beat": 0.0,
-   "n": 3
+   "n": 4
   },
   "day": "2026-10-19",
   "leaks_14d": [
@@ -3424,7 +3431,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 4,
+   "open": 3,
    "plays": {
     "best": [
      2,
@@ -3432,7 +3439,7 @@
      "open"
     ]
    },
-   "won": 7
+   "won": 8
   },
   "losses": [
    {
@@ -3549,6 +3556,14 @@
    },
    {
     "against_market": false,
+    "league": "wnba",
+    "pick": "Golden State Valkyries",
+    "price": "-130",
+    "said": 54.3,
+    "why": "margin 14 \u00b7 the book had my side favoured too \u00b7 called at 54%"
+   },
+   {
+    "against_market": false,
     "league": "wta",
     "pick": "Elise Mertens",
     "price": null,
@@ -3575,16 +3590,17 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+25",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
      "New York Rangers under 1.5 goals",
      "Colorado Avalanche over 5.5 goals",
-     "San Jose Sharks over 4.5 goals"
+     "San Jose Sharks over 4.5 goals",
+     "Over 149.5 points"
     ],
     "legs": 7,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+50",
     "won": 0
@@ -3593,10 +3609,11 @@
     "killed_by": [
      "New York Rangers under 1.5 goals",
      "Colorado Avalanche over 5.5 goals",
-     "San Jose Sharks over 4.5 goals"
+     "San Jose Sharks over 4.5 goals",
+     "Over 149.5 points"
     ],
     "legs": 7,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+100",
     "won": 0
@@ -3609,26 +3626,27 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
      "Anaheim Ducks -1.5",
-     "Colorado Avalanche over 5.5 goals"
+     "Colorado Avalanche over 5.5 goals",
+     "Angel Reese: Under 11.5 Rebounds"
     ],
     "legs": 7,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 1
    }
   ],
   "picks": {
-   "hit": 67.3,
-   "lost": 16,
-   "n": 49,
-   "roi": 15.0,
-   "said": 67.5,
+   "hit": 66.0,
+   "lost": 17,
+   "n": 50,
+   "roi": -4.2,
+   "said": 67.3,
    "won": 33
   },
   "picks_by_league": {
@@ -3776,6 +3794,14 @@
     "said": 77.4,
     "won": 1
    },
+   "wnba": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 54.3,
+    "won": 0
+   },
    "wta": {
     "hit": 75.0,
     "lost": 2,
@@ -3787,19 +3813,19 @@
   },
   "props": {
    "fair": {
-    "n": 142,
-    "said_fair": 82.0,
+    "n": 151,
+    "said_fair": 82.2,
     "said_price": 85.7,
-    "won": 118
+    "won": 124
    },
-   "n": 22,
-   "said": 81.0,
-   "won": 17
+   "n": 33,
+   "said": 80.1,
+   "won": 24
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      7,
@@ -3812,7 +3838,7 @@
      "open"
     ]
    },
-   "won": 6
+   "won": 7
   },
   "strong": {
    "hit": 84.6,
@@ -3833,10 +3859,10 @@
     "won": 10
    },
    "agree": {
-    "hit": 67.2,
-    "lost": 90,
-    "n": 274,
-    "roi": -2.3,
+    "hit": 66.9,
+    "lost": 91,
+    "n": 275,
+    "roi": -2.6,
     "said": 63.8,
     "won": 184
    }
