@@ -2205,26 +2205,37 @@
    }
   },
   "clv": {
-   "avg": -1.02,
-   "beat": 66.7,
-   "n": 3
+   "avg": -3.08,
+   "beat": 50.0,
+   "n": 4
   },
   "day": "2026-10-21",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Sporting CP to win (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2"
+   ],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      2,
      0.5717,
-     "open"
+     "lost"
     ]
    },
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "ucl",
+    "pick": "Sporting CP",
+    "price": "-275",
+    "said": 70,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70%"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -2269,31 +2280,32 @@
    {
     "killed_by": [
      "Ross Barkley: 1+ Assists",
+     "Nestory Irankunda: Anytime Goalscorer",
      "Troy Parrott: Anytime Goalscorer",
      "Dmytro Riznyk: 5+ Goalkeeper Saves"
     ],
     "legs": 6,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "100",
     "won": 2
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 3,
-   "roi": 24.1,
-   "said": 77.0,
+   "hit": 75.0,
+   "lost": 1,
+   "n": 4,
+   "roi": -6.9,
+   "said": 75.2,
    "won": 3
   },
   "picks_by_league": {
    "ucl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": 24.1,
-    "said": 77.0,
+    "hit": 75.0,
+    "lost": 1,
+    "n": 4,
+    "roi": -6.9,
+    "said": 75.2,
     "won": 3
    }
   },
@@ -2304,19 +2316,21 @@
     "said_price": 86.3,
     "won": 178
    },
-   "n": 14,
-   "said": 72.7,
+   "n": 15,
+   "said": 70.5,
    "won": 11
   },
   "safe_locks": {
-   "lost": [],
+   "lost": [
+    "Sporting CP or draw (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2"
+   ],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      7,
      0.5271,
-     "open"
+     "lost"
     ],
     "winners": [
      2,
@@ -2340,10 +2354,10 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.6,
-    "lost": 99,
-    "n": 296,
-    "roi": -3.6,
+    "hit": 66.3,
+    "lost": 100,
+    "n": 297,
+    "roi": -3.9,
     "said": 64.2,
     "won": 197
    }
