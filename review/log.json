@@ -1797,10 +1797,10 @@
    },
    {
     "flag": false,
-    "hit": 78.9,
-    "n": 180,
+    "hit": 78.8,
+    "n": 189,
     "name": "props nhl Shots on Goal",
-    "said": 79.1
+    "said": 79.3
    },
    {
     "flag": false,
@@ -1931,6 +1931,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "Columbus Blue Jackets",
+    "price": "-166",
+    "said": 60,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 60%"
+   },
+   {
+    "against_market": false,
     "league": "ucl",
     "pick": "Fenerbahce",
     "price": "-240",
@@ -1945,7 +1953,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -1966,7 +1974,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -2000,11 +2008,11 @@
    }
   ],
   "picks": {
-   "hit": 70.0,
-   "lost": 3,
-   "n": 10,
-   "roi": -1.4,
-   "said": 66.6,
+   "hit": 63.6,
+   "lost": 4,
+   "n": 11,
+   "roi": -10.4,
+   "said": 66.0,
    "won": 7
   },
   "picks_by_league": {
@@ -2025,11 +2033,11 @@
     "won": 0
    },
    "nhl": {
-    "hit": 66.7,
-    "lost": 1,
-    "n": 3,
-    "roi": 17.0,
-    "said": 56.0,
+    "hit": 50.0,
+    "lost": 2,
+    "n": 4,
+    "roi": -12.3,
+    "said": 57.0,
     "won": 2
    },
    "ucl": {
@@ -2048,24 +2056,26 @@
     "said_price": 85.6,
     "won": 156
    },
-   "n": 46,
-   "said": 83.0,
-   "won": 40
+   "n": 55,
+   "said": 83.1,
+   "won": 47
   },
   "safe_locks": {
-   "lost": [],
+   "lost": [
+    "Toronto Maple Leafs under 5.5 goals (Toronto Maple Leafs at Columbus Blue Jackets) Toronto Maple Leafs 6 - Columbus Blue Jackets 2"
+   ],
    "n": 11,
-   "open": 6,
+   "open": 5,
    "plays": {
     "best": [
      7,
      0.53,
-     "open"
+     "lost"
     ],
     "winners": [
      2,
      0.8433,
-     "open"
+     "lost"
     ]
    },
    "won": 5
@@ -2084,10 +2094,10 @@
     "won": 10
    },
    "agree": {
-    "hit": 67.5,
-    "lost": 93,
-    "n": 286,
-    "roi": -1.9,
+    "hit": 67.2,
+    "lost": 94,
+    "n": 287,
+    "roi": -2.3,
     "said": 63.9,
     "won": 193
    }
