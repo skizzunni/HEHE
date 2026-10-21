@@ -2102,10 +2102,10 @@
    },
    {
     "flag": false,
-    "hit": 90.9,
-    "n": 11,
+    "hit": 90.0,
+    "n": 20,
     "name": "props ucl Goalkeeper Saves",
-    "said": 85.5
+    "said": 81.2
    },
    {
     "flag": false,
@@ -2205,9 +2205,9 @@
    }
   },
   "clv": {
-   "avg": null,
-   "beat": null,
-   "n": 0
+   "avg": -1.02,
+   "beat": 66.7,
+   "n": 3
   },
   "day": "2026-10-21",
   "leaks_14d": [],
@@ -2267,18 +2267,36 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Ross Barkley: 1+ Assists",
+     "Troy Parrott: Anytime Goalscorer",
+     "Dmytro Riznyk: 5+ Goalkeeper Saves"
+    ],
     "legs": 6,
-    "lost": 0,
-    "status": "open",
+    "lost": 3,
+    "status": "lost",
     "tier": "100",
-    "won": 0
+    "won": 2
    }
   ],
   "picks": {
-   "n": 0
+   "hit": 100.0,
+   "lost": 0,
+   "n": 3,
+   "roi": 24.1,
+   "said": 77.0,
+   "won": 3
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "ucl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 3,
+    "roi": 24.1,
+    "said": 77.0,
+    "won": 3
+   }
+  },
   "props": {
    "fair": {
     "n": 215,
@@ -2286,14 +2304,14 @@
     "said_price": 86.3,
     "won": 178
    },
-   "n": 3,
-   "said": 85.6,
-   "won": 3
+   "n": 14,
+   "said": 72.7,
+   "won": 11
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 8,
    "plays": {
     "best": [
      7,
@@ -2306,7 +2324,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 3
   },
   "strong": {
    "n": 0
@@ -2322,12 +2340,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.2,
+    "hit": 66.6,
     "lost": 99,
-    "n": 293,
-    "roi": -3.9,
-    "said": 64.0,
-    "won": 194
+    "n": 296,
+    "roi": -3.6,
+    "said": 64.2,
+    "won": 197
    }
   },
   "weights": {
