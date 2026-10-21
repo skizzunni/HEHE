@@ -1797,10 +1797,10 @@
    },
    {
     "flag": false,
-    "hit": 78.5,
-    "n": 158,
+    "hit": 78.9,
+    "n": 180,
     "name": "props nhl Shots on Goal",
-    "said": 78.9
+    "said": 79.1
    },
    {
     "flag": false,
@@ -1893,16 +1893,16 @@
    }
   },
   "clv": {
-   "avg": 1.61,
-   "beat": 85.7,
-   "n": 7
+   "avg": 1.07,
+   "beat": 75.0,
+   "n": 8
   },
   "day": "2026-10-20",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
+   "open": 8,
    "plays": {
     "best": [
      2,
@@ -1910,7 +1910,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 3
   },
   "losses": [
    {
@@ -1920,6 +1920,14 @@
     "price": "-125",
     "said": 53,
     "why": "margin 8 \u00b7 the book had my side favoured too \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Washington Capitals",
+    "price": "-162",
+    "said": 59,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 59%"
    },
    {
     "against_market": false,
@@ -1940,53 +1948,64 @@
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 8.5 goals"
+    ],
     "legs": 9,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "New York Islanders under 1.5 goals",
+     "New Jersey Devils under 1.5 goals"
+    ],
     "legs": 6,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 8.5 goals"
+    ],
     "legs": 8,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+25",
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 8.5 goals"
+    ],
     "legs": 8,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+50",
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 8.5 goals"
+    ],
     "legs": 8,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+100",
     "won": 1
    }
   ],
   "picks": {
-   "hit": 71.4,
-   "lost": 2,
-   "n": 7,
-   "roi": -9.3,
-   "said": 71.1,
-   "won": 5
+   "hit": 66.7,
+   "lost": 3,
+   "n": 9,
+   "roi": -10.8,
+   "said": 68.2,
+   "won": 6
   },
   "picks_by_league": {
    "ksa": {
@@ -2005,6 +2024,14 @@
     "said": 53.0,
     "won": 0
    },
+   "nhl": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -16.2,
+    "said": 58.0,
+    "won": 1
+   },
    "ucl": {
     "hit": 75.0,
     "lost": 1,
@@ -2021,14 +2048,14 @@
     "said_price": 85.6,
     "won": 156
    },
-   "n": 24,
-   "said": 85.4,
-   "won": 22
+   "n": 46,
+   "said": 83.0,
+   "won": 40
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 9,
+   "open": 6,
    "plays": {
     "best": [
      7,
@@ -2041,7 +2068,7 @@
      "open"
     ]
    },
-   "won": 2
+   "won": 5
   },
   "strong": {
    "n": 0
@@ -2057,12 +2084,12 @@
     "won": 10
    },
    "agree": {
-    "hit": 67.5,
-    "lost": 92,
-    "n": 283,
-    "roi": -2.1,
+    "hit": 67.4,
+    "lost": 93,
+    "n": 285,
+    "roi": -2.2,
     "said": 64.0,
-    "won": 191
+    "won": 192
    }
   },
   "weights": {

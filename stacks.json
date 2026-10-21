@@ -5467,11 +5467,12 @@
    "match": "Anaheim Ducks at New York Islanders",
    "p": 0.9611,
    "p_model": 0.9611,
+   "score": "Anaheim Ducks 2 - New York Islanders 3",
    "spec": {
     "line": 2.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892542|No \u00b7 Los Angeles Kings wins by over 2.5 goals": {
    "away": "Los Angeles Kings",
@@ -5483,12 +5484,13 @@
    "match": "Los Angeles Kings at Washington Capitals",
    "p": 0.9024,
    "p_model": 0.9024,
+   "score": "Los Angeles Kings 5 - Washington Capitals 2",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Los Angeles Kings"
    },
-   "status": "open"
+   "status": "lost"
   },
   "nhl:401892542|Over 2.5 goals": {
    "away": "Los Angeles Kings",
@@ -5500,11 +5502,12 @@
    "match": "Los Angeles Kings at Washington Capitals",
    "p": 0.9541,
    "p_model": 0.9541,
+   "score": "Los Angeles Kings 5 - Washington Capitals 2",
    "spec": {
     "line": 2.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892543|Over 2.5 goals": {
    "away": "Toronto Maple Leafs",
@@ -8884,7 +8887,7 @@
    "logged": "2026-10-20T00:03",
    "n": 10,
    "prob": 0.6653,
-   "status": "open"
+   "status": "won"
   },
   "20261020:10:1": {
    "fair": 1.5,
@@ -8946,7 +8949,7 @@
    "logged": "2026-10-20T00:03",
    "n": 15,
    "prob": 0.5413,
-   "status": "open"
+   "status": "won"
   },
   "20261020:15:1": {
    "fair": 1.8,
@@ -9150,7 +9153,7 @@
    "logged": "2026-10-20T00:03",
    "n": 3,
    "prob": 0.7276,
-   "status": "open"
+   "status": "lost"
   },
   "20261020:4:0": {
    "fair": 1.28,
@@ -9219,7 +9222,7 @@
    "logged": "2026-10-20T00:03",
    "n": 6,
    "prob": 0.7799,
-   "status": "open"
+   "status": "won"
   },
   "20261020:6:2": {
    "fair": 1.28,
@@ -9251,7 +9254,7 @@
    "logged": "2026-10-20T00:03",
    "n": 8,
    "prob": 0.7237,
-   "status": "open"
+   "status": "won"
   },
   "20261020:8:1": {
    "fair": 1.39,
