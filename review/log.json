@@ -1832,6 +1832,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "Vegas Golden Knights",
+    "price": "-110",
+    "said": 50,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 50%"
+   },
+   {
+    "against_market": false,
     "league": "ucl",
     "pick": "Fenerbahce",
     "price": "-240",
@@ -1844,10 +1852,11 @@
     "killed_by": [
      "Vancouver Canucks +2.5",
      "Over 224.5 points",
-     "Under 46.5 points"
+     "Under 46.5 points",
+     "Vegas Golden Knights +1.5"
     ],
     "legs": 9,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "100",
     "won": 5
@@ -1856,11 +1865,12 @@
     "killed_by": [
      "Over 8.5 goals",
      "Over 8.5 goals",
+     "Over 8.5 goals",
      "Over 63.5 points",
      "Under 50.5 points"
     ],
     "legs": 9,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 4
@@ -1883,10 +1893,11 @@
     "killed_by": [
      "Over 8.5 goals",
      "Over 8.5 goals",
-     "Under 46.5 points"
+     "Under 46.5 points",
+     "Over 8.5 goals"
     ],
     "legs": 8,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+25",
     "won": 4
@@ -1896,10 +1907,11 @@
      "Over 8.5 goals",
      "Over 8.5 goals",
      "Under 46.5 points",
+     "Over 8.5 goals",
      "South Alabama Jaguars to win"
     ],
     "legs": 8,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+50",
     "won": 3
@@ -1908,21 +1920,22 @@
     "killed_by": [
      "Over 8.5 goals",
      "Over 8.5 goals",
+     "Over 8.5 goals",
      "Under 6.5 goals"
     ],
     "legs": 8,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+100",
     "won": 4
    }
   ],
   "picks": {
-   "hit": 60.9,
-   "lost": 9,
-   "n": 23,
-   "roi": -8.3,
-   "said": 63.6,
+   "hit": 58.3,
+   "lost": 10,
+   "n": 24,
+   "roi": -12.1,
+   "said": 63.0,
    "won": 14
   },
   "picks_by_league": {
@@ -1959,11 +1972,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 60.0,
-    "lost": 4,
-    "n": 10,
-    "roi": -0.6,
-    "said": 58.8,
+    "hit": 54.5,
+    "lost": 5,
+    "n": 11,
+    "roi": -9.6,
+    "said": 58.0,
     "won": 6
    },
    "ucl": {
@@ -1982,16 +1995,17 @@
     "said_price": 86.3,
     "won": 178
    },
-   "n": 123,
+   "n": 131,
    "said": 82.8,
-   "won": 99
+   "won": 106
   },
   "safe_locks": {
    "lost": [
-    "Toronto Maple Leafs under 5.5 goals (Toronto Maple Leafs at Columbus Blue Jackets) Toronto Maple Leafs 6 - Columbus Blue Jackets 2"
+    "Toronto Maple Leafs under 5.5 goals (Toronto Maple Leafs at Columbus Blue Jackets) Toronto Maple Leafs 6 - Columbus Blue Jackets 2",
+    "Vegas Golden Knights +3.5 (Tampa Bay Lightning at Vegas Golden Knights) Tampa Bay Lightning 6 - Vegas Golden Knights 2"
    ],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      7,
@@ -2019,10 +2033,10 @@
     "won": 10
    },
    "agree": {
-    "hit": 66.9,
-    "lost": 99,
-    "n": 299,
-    "roi": -2.4,
+    "hit": 66.7,
+    "lost": 100,
+    "n": 300,
+    "roi": -2.8,
     "said": 63.8,
     "won": 200
    }
@@ -2081,10 +2095,10 @@
    },
    {
     "flag": false,
-    "hit": 78.2,
-    "n": 229,
+    "hit": 78.5,
+    "n": 237,
     "name": "props nhl Shots on Goal",
-    "said": 79.6
+    "said": 79.7
    },
    {
     "flag": false,
@@ -2235,11 +2249,11 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.4,
-    "lost": 98,
-    "n": 292,
-    "roi": -3.5,
-    "said": 64.1,
+    "hit": 66.2,
+    "lost": 99,
+    "n": 293,
+    "roi": -3.9,
+    "said": 64.0,
     "won": 194
    }
   },
