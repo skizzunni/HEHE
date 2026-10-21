@@ -1798,9 +1798,9 @@
    {
     "flag": false,
     "hit": 78.8,
-    "n": 189,
+    "n": 193,
     "name": "props nhl Shots on Goal",
-    "said": 79.3
+    "said": 79.4
    },
    {
     "flag": false,
@@ -1924,6 +1924,14 @@
    {
     "against_market": false,
     "league": "nhl",
+    "pick": "Montreal Canadiens",
+    "price": "-225",
+    "said": 66,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
     "pick": "Washington Capitals",
     "price": "-162",
     "said": 59,
@@ -1953,7 +1961,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -1967,11 +1975,12 @@
    },
    {
     "killed_by": [
+     "San Jose Sharks over 4.5 goals",
      "New York Islanders under 1.5 goals",
      "New Jersey Devils under 1.5 goals"
     ],
     "legs": 6,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 1
@@ -2008,10 +2017,10 @@
    }
   ],
   "picks": {
-   "hit": 63.6,
-   "lost": 4,
-   "n": 11,
-   "roi": -10.4,
+   "hit": 58.3,
+   "lost": 5,
+   "n": 12,
+   "roi": -17.8,
    "said": 66.0,
    "won": 7
   },
@@ -2033,11 +2042,11 @@
     "won": 0
    },
    "nhl": {
-    "hit": 50.0,
-    "lost": 2,
-    "n": 4,
-    "roi": -12.3,
-    "said": 57.0,
+    "hit": 40.0,
+    "lost": 3,
+    "n": 5,
+    "roi": -29.8,
+    "said": 58.8,
     "won": 2
    },
    "ucl": {
@@ -2056,16 +2065,16 @@
     "said_price": 85.6,
     "won": 156
    },
-   "n": 55,
-   "said": 83.1,
-   "won": 47
+   "n": 59,
+   "said": 83.0,
+   "won": 50
   },
   "safe_locks": {
    "lost": [
     "Toronto Maple Leafs under 5.5 goals (Toronto Maple Leafs at Columbus Blue Jackets) Toronto Maple Leafs 6 - Columbus Blue Jackets 2"
    ],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      7,
@@ -2078,7 +2087,7 @@
      "lost"
     ]
    },
-   "won": 5
+   "won": 6
   },
   "strong": {
    "n": 0
@@ -2094,10 +2103,10 @@
     "won": 10
    },
    "agree": {
-    "hit": 67.2,
-    "lost": 94,
-    "n": 287,
-    "roi": -2.3,
+    "hit": 67.0,
+    "lost": 95,
+    "n": 288,
+    "roi": -2.6,
     "said": 63.9,
     "won": 193
    }

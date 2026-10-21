@@ -8577,11 +8577,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cole Caufield",
   "p": 0.8611,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892539|n:juraj slafkovsky|Shots on Goal|2+": {
   "aid": null,
@@ -8593,11 +8595,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Juraj Slafkovsky",
   "p": 0.7278,
   "p_fair": null,
   "price": "-355",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892539|n:lane hutson|Shots on Goal|1+": {
   "aid": null,
@@ -8609,11 +8613,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Lane Hutson",
   "p": 0.844,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892539|n:noah dobson|Shots on Goal|1+": {
   "aid": null,
@@ -8625,11 +8631,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Noah Dobson",
   "p": 0.8551,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892539|n:zachary bolduc|Shots on Goal|1+": {
   "aid": null,
@@ -8645,7 +8653,8 @@
   "p": 0.848,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "open",
+  "unresolved": true
  },
  "nhl:401892540|n:brock nelson|Shots on Goal|1+": {
   "aid": null,
