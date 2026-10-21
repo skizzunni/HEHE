@@ -338,7 +338,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T23:10:47+00:00",
+      "checked_at": "2026-10-21T23:15:59+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -350,10 +350,10 @@
       "match": "CHI @ TOR",
       "pick": "Toronto Raptors",
       "price": "-470",
-      "price_at": "2026-10-21T23:10:28+00:00",
+      "price_at": "2026-10-21T23:15:36+00:00",
       "price_market": "moneyline",
       "price_ref": "34787954:0ML86628276_1",
-      "prob_at": "2026-10-21T23:10:28+00:00",
+      "prob_at": "2026-10-21T23:15:36+00:00",
       "rank": 3,
       "ready": true,
       "side": "home",
@@ -461,7 +461,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T23:10:47+00:00",
+      "checked_at": "2026-10-21T23:15:59+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
@@ -473,17 +473,18 @@
       "match": "DAL @ HOU",
       "pick": "Houston Rockets",
       "price": "-425",
-      "price_at": "2026-10-21T23:10:28+00:00",
+      "price_at": "2026-10-21T23:15:36+00:00",
       "price_market": "moneyline",
       "price_ref": "34520240:0ML85871435_1",
-      "prob_at": "2026-10-21T23:10:28+00:00",
+      "prob_at": "2026-10-21T23:15:36+00:00",
       "rank": 5,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-22T00:30Z"
      },
      "dc": false,
-     "fp": "cfa7349411a5",
+     "fp": "35a892890866",
      "gate": {
       "ok": true,
       "what": "injury report checked (7 listed)"
@@ -500,10 +501,15 @@
        "event": "news",
        "t": "2026-10-21T16:13:20+00:00",
        "what": "injury report checked (7 listed)"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-21T23:15:59+00:00",
+       "what": "injury report checked (7 listed)"
       }
      ],
      "match": "DAL @ HOU",
-     "news_at": "2026-10-21T16:13:20+00:00",
+     "news_at": "2026-10-21T23:15:59+00:00",
      "pick": "Houston Rockets",
      "price": "-395",
      "price_at": "2026-10-21T11:59:46+00:00",
@@ -518,7 +524,7 @@
    ],
    "candidate_news": {
     "mls": "2026-10-21T22:45:06+00:00",
-    "nba": "2026-10-21T22:14:16+00:00",
+    "nba": "2026-10-21T23:15:59+00:00",
     "ucl": "2026-10-21T18:12:11+00:00"
    },
    "candidate_observations": {
@@ -530,7 +536,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T23:10:47+00:00",
+      "checked_at": "2026-10-21T23:15:59+00:00",
       "conf": 77,
       "dc": true,
       "gate": {
@@ -542,10 +548,10 @@
       "match": "MTY @ PUE",
       "pick": "Monterrey or draw",
       "price": "-450",
-      "price_at": "2026-10-21T23:05:39+00:00",
+      "price_at": "2026-10-21T23:15:57+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192208816:13737520",
-      "prob_at": "2026-10-21T23:10:28+00:00",
+      "prob_at": "2026-10-21T23:15:36+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -563,7 +569,7 @@
      "match": "MTY @ PUE",
      "pick": "Monterrey or draw",
      "price": "-450",
-     "price_at": "2026-10-21T23:05:39+00:00",
+     "price_at": "2026-10-21T23:15:57+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192208816:13737520",
      "side": "away",
@@ -578,7 +584,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T23:10:47+00:00",
+      "checked_at": "2026-10-21T23:15:59+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -590,10 +596,10 @@
       "match": "CHI @ TOR",
       "pick": "Toronto Raptors",
       "price": "-470",
-      "price_at": "2026-10-21T23:10:28+00:00",
+      "price_at": "2026-10-21T23:15:36+00:00",
       "price_market": "moneyline",
       "price_ref": "34787954:0ML86628276_1",
-      "prob_at": "2026-10-21T23:10:28+00:00",
+      "prob_at": "2026-10-21T23:15:36+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -611,7 +617,7 @@
      "news_at": "2026-10-21T22:14:16+00:00",
      "pick": "Toronto Raptors",
      "price": "-470",
-     "price_at": "2026-10-21T23:10:28+00:00",
+     "price_at": "2026-10-21T23:15:36+00:00",
      "price_market": "moneyline",
      "price_ref": "34787954:0ML86628276_1",
      "side": "home",
@@ -626,7 +632,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T23:10:47+00:00",
+      "checked_at": "2026-10-21T23:15:59+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
@@ -638,28 +644,36 @@
       "match": "DAL @ HOU",
       "pick": "Houston Rockets",
       "price": "-425",
-      "price_at": "2026-10-21T23:10:28+00:00",
+      "price_at": "2026-10-21T23:15:36+00:00",
       "price_market": "moneyline",
       "price_ref": "34520240:0ML85871435_1",
-      "prob_at": "2026-10-21T23:10:28+00:00",
+      "prob_at": "2026-10-21T23:15:36+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-22T00:30Z"
      },
      "dc": false,
-     "fp": "cfa7349411a5",
+     "fp": "35a892890866",
      "gate": {
       "ok": true,
       "what": "injury report checked (7 listed)"
      },
      "id": "nba:401909840",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-21T23:15:59+00:00",
+       "what": "injury report checked (7 listed)"
+      }
+     ],
      "match": "DAL @ HOU",
-     "news_at": "2026-10-21T16:13:20+00:00",
+     "news_at": "2026-10-21T23:15:59+00:00",
      "pick": "Houston Rockets",
      "price": "-425",
-     "price_at": "2026-10-21T23:10:28+00:00",
+     "price_at": "2026-10-21T23:15:36+00:00",
      "price_market": "moneyline",
      "price_ref": "34520240:0ML85871435_1",
      "side": "home",
@@ -668,10 +682,11 @@
     }
    },
    "frozen": [
+    "nba",
     "ucl"
    ],
    "news": {
-    "nba": "2026-10-21T22:14:16+00:00",
+    "nba": "2026-10-21T23:15:59+00:00",
     "ucl": "2026-10-21T18:06:47+00:00"
    }
   }
