@@ -1893,16 +1893,16 @@
    }
   },
   "clv": {
-   "avg": 0.88,
-   "beat": 69.2,
-   "n": 13
+   "avg": 0.52,
+   "beat": 64.3,
+   "n": 14
   },
   "day": "2026-10-20",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 4,
+   "open": 3,
    "plays": {
     "best": [
      2,
@@ -1910,7 +1910,7 @@
      "open"
     ]
    },
-   "won": 7
+   "won": 8
   },
   "losses": [
    {
@@ -1936,6 +1936,14 @@
     "price": "-410",
     "said": 79,
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 79%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "South Alabama Jaguars",
+    "price": "-125",
+    "said": 53,
+    "why": "margin 7 \u00b7 the book had my side favoured too \u00b7 called at 53%"
    },
    {
     "against_market": false,
@@ -1986,10 +1994,11 @@
     "killed_by": [
      "Over 8.5 goals",
      "Over 8.5 goals",
+     "Over 63.5 points",
      "Under 50.5 points"
     ],
     "legs": 9,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 3
@@ -2022,10 +2031,11 @@
     "killed_by": [
      "Over 8.5 goals",
      "Over 8.5 goals",
-     "Under 46.5 points"
+     "Under 46.5 points",
+     "South Alabama Jaguars to win"
     ],
     "legs": 8,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+50",
     "won": 3
@@ -2043,11 +2053,11 @@
    }
   ],
   "picks": {
-   "hit": 61.1,
-   "lost": 7,
-   "n": 18,
-   "roi": -10.3,
-   "said": 65.4,
+   "hit": 57.9,
+   "lost": 8,
+   "n": 19,
+   "roi": -15.0,
+   "said": 64.8,
    "won": 11
   },
   "picks_by_league": {
@@ -2076,11 +2086,11 @@
     "won": 0
    },
    "ncaaf": {
-    "hit": 50.0,
-    "lost": 1,
-    "n": 2,
-    "roi": -19.9,
-    "said": 70.0,
+    "hit": 33.3,
+    "lost": 2,
+    "n": 3,
+    "roi": -46.6,
+    "said": 64.3,
     "won": 1
    },
    "nhl": {
@@ -2145,10 +2155,10 @@
     "won": 10
    },
    "agree": {
-    "hit": 67.0,
-    "lost": 97,
-    "n": 294,
-    "roi": -2.5,
+    "hit": 66.8,
+    "lost": 98,
+    "n": 295,
+    "roi": -2.8,
     "said": 63.9,
     "won": 197
    }
@@ -2157,10 +2167,10 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": false,
-    "logloss": 0.6366,
-    "market_only": 0.6486,
-    "model_40": 0.6366,
-    "n": 54,
+    "logloss": 0.6378,
+    "market_only": 0.6507,
+    "model_40": 0.6378,
+    "n": 55,
     "weight": 0.0
    }
   }
