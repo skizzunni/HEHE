@@ -1,11 +1,11 @@
 # Review 2026-10-20
 
-Picks 6-3 (66.7% vs 68.2% claimed, ROI -10.8%).
-Closing line value: +1.07 points on 8 picks; beat the close on 75.0%.
+Picks 7-3 (70.0% vs 66.6% claimed, ROI -1.4%).
+Closing line value: +1.19 points on 9 picks; beat the close on 77.8%.
 - LOST nba Boston Celtics at 53%: margin 8 · the book had my side favoured too · called at 53%
 - LOST nhl Washington Capitals at 59%: margin 3 · the book had my side favoured too · called at 59%
 - LOST ucl Fenerbahce at 68%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 68%
-With the market 67.4% (285); against it 35.7% (28).
+With the market 67.5% (286); against it 35.7% (28).
 Locks 3/11 won, 8 open; Best play top 2 (57%) open.
 Safe Locks 5/11 won, 6 open; Winners parlay top 2 (84%) open; Best play top 7 (53%) open.
 Lottery 100: open (1/9 legs won)
