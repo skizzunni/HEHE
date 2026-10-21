@@ -2735,3 +2735,49 @@ The card's legs follow as a list of the day's likeliest bets, not as a parlay to
 **Test.** `test_daily_calls.test_shadow_tickets_archived_once` (archived once, never revised, graded) and UI probe check 6 (Locks lead with the 2× ticket) both fail on the previous commit and pass now.
 
 **Numbers.** None yet. The shadow record starts with the first day whose calls are complete after this change.
+
+## Pick-quality repair: current inputs and fixed-payout combinations
+
+The Oct 20 follow-up now changes the live chooser, while preserving original
+calls and their outcomes. Full trace and evidence: `research/pick_quality_repair.md`.
+
+- **All qualifying games are reconsidered.** The live pool includes currently
+  priced 75%+ candidates beyond the five frozen calls. Later arrivals can improve
+  a ticket without replacing original calls or changing the record.
+- **Current exact-market inputs.** A separate observation pairs the current
+  probability with the current price, book, source reference and timestamps.
+  Required lineup/news gates must pass. Each game's price and probability inputs
+  must postdate its own observed news. Started/settled games, stale quotes and
+  unknown prices are unavailable for new tickets. Original first-price/confidence
+  snapshots and outcomes remain recorded under the existing call/move policy.
+- **NBA/WNBA injury fetches fail closed.** A matching game header is required;
+  `{}` is no longer treated as a checked injury report. The summary cache retains
+  source identity. Tennis remains subject to its priced-only qualification, with
+  no claim of a player-fitness feed.
+- **Whole tickets at fixed payouts.** Exhaustive selection compares compatible
+  2–3-leg combinations at 2x, 3x and 5x total return, maximizing estimated cash
+  chance. One sportsbook, no shared game/team, minimum 75% per leg, no forced
+  fill and no silent loosening. Infeasible targets remain unavailable. Payouts
+  are estimated price products; negative modeled returns are marked comparison
+  tickets, not value recommendations. The browser expires old combinations.
+- **Forward comparisons freeze actual inputs.** The first eligible quote pool
+  and same-target baseline/optimizer choices are archived before those games
+  start. Later quotes or board-side changes cannot rewrite the archived bet.
+  Forecast comparisons wait for all legs and exclude void tickets; they are not
+  a complete cash-account ledger. Existing snapshots are preserved.
+- **Closing studies are diagnostics.** The existing whole-day close comparison
+  uses games with different kickoff times and cannot establish an executable
+  morning strategy. Unpriced cached rows are excluded and promotion is disabled.
+
+The priced-ledger calibration recheck (reviewed source `4d1ac5d`, Oct 15–20)
+**rejects** enabling the old fit: 111 fitted forecasts, raw/calibrated log loss
+0.5687/0.6055, Brier 0.1888/0.2012; per-game bootstrap log-loss difference
++0.03679 (95% +0.00752 to +0.06739). See `tools/review_pick_quality.py` and
+`research/pick_quality_recheck.json`. This legacy study splits by game date,
+not a complete morning-information replay. No new forecaster is promoted.
+
+Validation: the first 10 targeted regressions failed before implementation.
+**174 unit tests pass** after the expanded coverage. Existing browser fixtures
+and new fixed-payout/quote-expiry checks pass with no JavaScript errors using a
+Playwright adapter; the repository Chrome fixtures now cover the same new UI.
+These checks establish the decision rules, not future winning percentages.

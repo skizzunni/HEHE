@@ -8,7 +8,7 @@ from ESPN's scoreboard (probables, with their status) and game summary
     MLB      both starting pitchers confirmed and both lineups posted
     NBA      the latest injury report, checked this build
     soccer   both starting XIs posted (ESPN posts them about an hour out)
-    tennis   never a call (no sportsbook price: README item 2)
+    tennis   captured-price and prior-record qualification (no fitness feed)
 
 status() gives (confirmed, what is missing or confirmed, fingerprint). The
 fingerprint covers everything the gate reads plus the injury list, so any
@@ -70,11 +70,20 @@ def _gate(league, row, sm):
         return False, "awaiting " + " and ".join(x for x, ok in (("confirmed starters", len(sp) >= 2),
                                                                   ("lineups", len(lu) >= 2)) if not ok)
     if league == "nba" or league == "wnba":
-        if sm is None:
-            return False, "injury report not fetched"
+        comps = (((sm or {}).get("header") or {}).get("competitions") or [])
+        if not any(len(c.get("competitors") or []) >= 2 for c in comps):
+            return False, "injury report not fetched or game summary unverifiable"
+        expected = (row.get("id") or "").split(":")[-1]
+        if expected and not any(str(c.get("id")) == expected for c in comps):
+            return False, "injury report does not match this game"
         return True, f"injury report checked ({len(_injuries(sm))} listed)"
     if league in ("atp", "wta"):
-        return False, "tennis is never a call"
+        import calls
+        from record_eligibility import selection_leg
+        quote = selection_leg(row)
+        if quote and calls.is_call(league, row.get("myconf"), quote=quote):
+            return True, "priced tennis record qualified; player fitness feed unavailable"
+        return False, "tennis priced-record qualification not met"
     if league in ledger.SOCCER:
         xi = [t for t, v in st.items() if len(v) >= 11]
         if len(xi) >= 2:

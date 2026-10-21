@@ -80,6 +80,17 @@ def frontier_fixture():
                 evidence=ev, record=[], backtest=None)
 
 
+def call_targets_fixture(ms):
+    import datetime as dt
+    at=dt.datetime.fromtimestamp(ms/1000,dt.timezone.utc)
+    legs=[dict(id=f"nhl:{i}",pick=f"Team {i}",price=price,conf=conf,price_at=at.isoformat(),
+               prob_at=at.isoformat(),start=(at+dt.timedelta(hours=2)).isoformat(),
+               gate=dict(ok=True,what="both goalies confirmed"))
+          for i,price,conf in ((1,"-250",84),(2,"-200",82))]
+    return dict(as_of=at.isoformat(),standard=.75,max_legs=3,excluded=[],targets=[dict(target=2.,
+                ticket=dict(legs=legs,book="DraftKings",joint=.6764016,payout=2.1,value=.42044))])
+
+
 PROBE = """<script>setTimeout(function(){
   var out = {banner: !!document.getElementById("stalebar")};
   var iso = function(m){ return new Date(Date.now() - m * 60000).toISOString(); };
@@ -106,6 +117,11 @@ PROBE = """<script>setTimeout(function(){
           var st = document.querySelector('[data-tgstd="0.8"]'); if (st) st.click();
           setTimeout(function(){
             out.targets = ((document.getElementById("panel") || {}).textContent || "");
+            out.current = liveCallTargets(D.call_targets);
+            var oldNow = Date.now;
+            Date.now = function(){ return oldNow() + 20*60000; };
+            out.expiredCurrent = liveCallTargets(D.call_targets);
+            Date.now = oldNow;
             document.title = "UICHECK " + JSON.stringify(out);
           }, 300);
         }, 300);
@@ -119,7 +135,7 @@ def render(captured_ms, health=None):
     s = open(os.path.join(ROOT, "board.html")).read()
     s = re.sub(r'"captured":\d+', f'"captured":{captured_ms}', s, count=1)
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
-                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"health":' + json.dumps(health) + ',', 1)
+                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + ',', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -180,6 +196,10 @@ def main():
         fails.append(f"a price 20 minutes old at viewing time must read stale: {new.get('staleNow')}")
     if "All checks passing" not in new["health"]:
         fails.append("clean review must read 'All checks passing': " + new["health"])
+    if not all(x in new.get("current", "") for x in ("Current parlay choices", "67.6%", "2.10x", "DraftKings")):
+        fails.append("Current calls must show the same-book payout-target ticket")
+    if "quote expired" not in new.get("expiredCurrent", "") or "67.6%" in new.get("expiredCurrent", ""):
+        fails.append("Expired call-ticket quotes must not remain actionable")
     for f in fails:
         print("FAIL:", f)
     print("OK" if not fails else f"{len(fails)} failure(s)")

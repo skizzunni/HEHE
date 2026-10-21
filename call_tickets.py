@@ -27,10 +27,10 @@ PENALTY = 0.982
 
 def dec(american):
     try:
-        v = int(str(american).replace("+", ""))
+        v = float(str(american).replace("+", ""))
     except (TypeError, ValueError):
         return None
-    if v == 0:
+    if not math.isfinite(v) or abs(v) < 100:
         return None
     return 1 + (v / 100 if v > 0 else 100 / -v)
 

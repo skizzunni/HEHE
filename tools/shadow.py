@@ -30,18 +30,42 @@ def grade(days, book):
         sh = rec.get("shadow")
         if not sh or sh.get("skipped"):
             continue
-        price = {c["id"]: CT.dec(c.get("price")) for c in rec.get("calls") or []}
-        tickets = dict(sh)
-        tickets.pop("t", None)
-        strongest = tickets.pop("strongest", []) or []
-        for i, ids in enumerate(strongest):
-            tickets[f"strongest_{len(ids)}leg"] = ids
+        version = sh.get("version", 1)
+        frozen = {c["id"]: c for c in sh.get("pool") or []}
+        price = {c["id"]: CT.dec(c.get("price")) for c in (list(frozen.values()) if version == 2 else rec.get("calls") or [])}
+        if version == 2:
+            tickets = sh.get("strategies") or {}
+        else:
+            tickets = dict(sh)
+            tickets.pop("t", None)
+            strongest = tickets.pop("strongest", []) or []
+            for ids in strongest:
+                tickets[f"strongest_{len(ids)}leg"] = ids
         for name, ids in tickets.items():
-            if not ids:
+            if not ids or any(not price.get(i) for i in ids):
                 continue
-            st = [(book.get(i) or {}).get("status") for i in ids]
-            res = (False if "lost" in st else True if all(s == "won" for s in st) else None)
-            out.setdefault(name, []).append((day, res, math.prod(price.get(i) or 1 for i in ids)))
+            st = []
+            for i in ids:
+                e = book.get(i) or {}
+                if version == 2:
+                    # Grade the archived market/side, even if the board later
+                    # switched side or changed moneyline to double chance.
+                    if e.get("status") in ("void", "push"):
+                        st.append("void")
+                    elif e.get("status") in ("won", "lost") and e.get("winner"):
+                        import ledger
+                        snap = dict(frozen[i], pick=frozen[i]["pick"].removesuffix(" or draw"))
+                        st.append(ledger._settle(snap, e["winner"]))
+                    elif e.get("pick") == frozen[i]["pick"].removesuffix(" or draw") and bool(e.get("dc")) == bool(frozen[i].get("dc")):
+                        st.append(e.get("status"))
+                    else:
+                        st.append(None)
+                else:
+                    st.append(e.get("status"))
+            # Forecast cash calibration excludes void tickets, regardless of
+            # whether another leg lost. It is not a full bankroll ledger.
+            res = (all(s == "won" for s in st) if all(s in ("won", "lost") for s in st) else None)
+            out.setdefault(name, []).append((day, res, math.prod(price[i] for i in ids)))
     return out
 
 

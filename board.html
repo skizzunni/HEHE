@@ -1072,6 +1072,7 @@ function drawCalls(){
 }
 // Tickets from the day's calls only (call_tickets.py)
 function callTickets(){
+  if (D.call_targets) return liveCallTargets(D.call_targets);
   const T = D.call_tickets || [];
   if(!T.length) return "";
   const res = s => s === "won" ? '<span class="wl won">CASHED</span>' : s === "lost" ? '<span class="wl lost">LOST</span>'
@@ -1087,6 +1088,40 @@ function callTickets(){
         + '% if independent) &middot; fair payout <b>' + t.fair_payout.toFixed(2) + 'x</b> &middot; actual payout <b>'
         + t.actual_payout.toFixed(2) + 'x</b> (' + (t.value >= 0 ? '+' : '') + (100 * t.value).toFixed(1) + '% per $1)</div></div>').join("");
 }
+function liveCallTargets(F){
+  const pct = p => (100 * p).toFixed(1) + '%';
+  const live = t => t.legs.every(L => {
+    const at = Date.parse(L.price_at), pa = Date.parse(L.prob_at), st = Date.parse(L.start);
+    const now = Date.now();
+    return Number.isFinite(at) && Number.isFinite(pa) && Number.isFinite(st)
+      && now - at <= 15*60000 && now - pa <= 15*60000
+      && at <= now + 60000 && pa <= now + 60000 && st > now;
+  });
+  let h = '<h3 style="margin-top:18px">Current parlay choices</h3>'
+    + '<p class="note">Highest estimated cash chance at each payout target, with '
+    + ((F.standard || 0.75)*100).toFixed(0) + '%+ legs and at most ' + (F.max_legs || 3)
+    + ' legs. All currently priced games at this leg standard are considered, beyond the original five calls. Required lineup/news checks must pass; one sportsbook and no shared game or team. '
+    + 'Original calls and their outcomes remain in the record.</p>';
+  if(F.error) return h + '<p class="age stale">Recommendations temporarily unavailable.</p>';
+  if(!Number.isFinite(Date.parse(F.as_of)) || Date.now()-Date.parse(F.as_of)>15*60000)
+    return h + '<p class="age stale">Current quote expired. Refresh before placing.</p>';
+  h += (F.targets || []).map(r => {
+    const t = r.ticket;
+    if(!t) return '<p class="note"><b>' + r.target.toFixed(0) + 'x total return:</b> unavailable at this leg standard. '
+      + (r.ceiling ? 'The eligible combinations reach at most ' + r.ceiling.toFixed(2) + 'x.' : 'Fewer than two compatible confirmed calls are ready.') + '</p>';
+    if(!live(t)) return '<p class="age stale"><b>' + r.target.toFixed(0) + 'x:</b> quote expired or a game started. Refresh before placing.</p>';
+    return '<div class="parlays"><b>' + r.target.toFixed(0) + 'x target — ' + esc(t.book) + '</b>'
+      + '<ul class="legs">' + t.legs.map(L => '<li>' + esc(L.pick) + ' <b>' + esc(L.price) + '</b> · ' + L.conf + '%' + (L.gate && L.gate.what ? '<span class="sbn">' + esc(L.gate.what) + '</span>' : '') + '</li>').join('')
+      + '</ul><p class="note">Estimated cash chance <b>' + pct(t.joint) + '</b> · estimated payout <b>' + t.payout.toFixed(2)
+      + 'x</b> · modeled return ' + (t.value >= 0 ? '+' : '') + pct(t.value)
+      + '. Payout is a same-book price product; check the sportsbook’s actual combination quote.</p>'
+      + (t.value < 0 ? '<p class="age stale">Negative modeled return — a payout comparison, not a value recommendation.</p>' : '') + '</div>';
+  }).join('');
+  if((F.excluded || []).length) h += '<details><summary>' + F.excluded.length + ' calls not ready for a current ticket</summary><ul>'
+    + F.excluded.map(x => '<li>' + esc(x.pick || x.id) + ': ' + esc((x.reasons || []).join('; ')) + '</li>').join('') + '</ul></details>';
+  return h;
+}
+setInterval(function(){ if(slot === 'calls' && D.call_targets) drawCalls(); }, 30000);
 function drawTargets(){
   const F = D.frontier || {};
   const day = TGDAY || "today";

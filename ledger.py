@@ -647,7 +647,10 @@ def board_payload(limit=40):
                      ci95=_wilson(cw, len(cl)),
                      dates=[min(map(day_of, cl)), max(map(day_of, cl))] if cl else None)
     todays_calls = []
-    for c in sorted((_calls.load_daily()["days"].get(today) or {}).get("calls") or [],
+    daily_rec = _calls.load_daily()["days"].get(today) or {}
+    live_candidates = [dict(c, status=(book.get(c["id"]) or {}).get("status", "open"))
+                       for c in (daily_rec.get("candidate_observations") or {}).values()]
+    for c in sorted(daily_rec.get("calls") or [],
                     key=lambda c: -c["conf"]):
         e = book.get(c["id"]) or {}
         # strong/close by the cut-offs frozen for this window (constant inside
@@ -663,7 +666,7 @@ def board_payload(limit=40):
     # substitute for freshness.
     captured = int(dt.datetime.now(dt.timezone.utc).timestamp() * 1000)
     from tennis_eligibility import report as tennis_report
-    return dict(tennis_record=tennis_report(book.values(), today, _calls.TARGET),
+    return dict(live_candidates=live_candidates, tennis_record=tennis_report(book.values(), today, _calls.TARGET),
                 captured=captured, excluded_unpriced=r["excluded_unpriced"],
                 graded=r.get("graded", 0), open=r.get("open", 0),
                 won=r.get("won", 0), lost=r.get("lost", 0),

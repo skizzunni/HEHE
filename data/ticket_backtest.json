@@ -1,10 +1,12 @@
 {
+ "promotion_eligible": false,
+ "timing": "hindsight closing diagnostic; games have different kickoff times; not an executable morning backtest",
  "dates": [
   "2026-08-31",
   "2026-10-20"
  ],
  "days": 50,
- "legs": 1037,
+ "legs": 1049,
  "later_from": "2026-09-25",
  "results": [
   {
@@ -12,65 +14,67 @@
    "standard": 0.6,
    "strongest": {
     "made": 38,
-    "cashed": 14,
-    "cash_rate": 36.8,
-    "claimed": 36.8,
-    "avg_payout": 2.44,
+    "cashed": 13,
+    "cash_rate": 34.2,
+    "claimed": 37.0,
+    "avg_payout": 2.43,
     "avg_legs": 3.34,
-    "roi": -15.8,
-    "max_drawdown_units": 11.13,
+    "roi": -21.8,
+    "max_drawdown_units": 12.13,
     "longest_losing_run": 8
    },
    "optimizer": {
     "made": 47,
     "cashed": 22,
     "cash_rate": 46.8,
-    "claimed": 45.7,
+    "claimed": 45.8,
     "avg_payout": 2.08,
-    "avg_legs": 2.26,
+    "avg_legs": 2.23,
     "roi": -3.4,
     "max_drawdown_units": 6.93,
     "longest_losing_run": 4
    },
    "paired": {
     "days": 38,
-    "diff": 4,
+    "diff": 5,
     "ci95": [
-     -1,
-     9
+     0,
+     10
     ],
+    "ci_positive": false,
     "proven": false
    },
    "later": {
     "strongest": {
      "made": 19,
-     "cashed": 6,
-     "cash_rate": 31.6,
-     "claimed": 37.0,
-     "avg_payout": 2.46,
+     "cashed": 5,
+     "cash_rate": 26.3,
+     "claimed": 37.2,
+     "avg_payout": 2.45,
      "avg_legs": 3.26,
-     "roi": -30.7,
-     "max_drawdown_units": 7.13,
+     "roi": -42.8,
+     "max_drawdown_units": 8.13,
      "longest_losing_run": 4
     },
     "optimizer": {
      "made": 23,
      "cashed": 10,
      "cash_rate": 43.5,
-     "claimed": 45.5,
+     "claimed": 45.6,
      "avg_payout": 2.09,
-     "avg_legs": 2.22,
+     "avg_legs": 2.17,
      "roi": -10.4,
      "max_drawdown_units": 4.0,
      "longest_losing_run": 4
     },
     "paired": {
      "days": 19,
-     "diff": 1,
+     "diff": 2,
      "ci95": [
-      -3,
-      5
+      -2,
+      6
      ],
+     "ci_positive": false,
      "proven": false
     }
    }
@@ -79,66 +83,68 @@
    "target": 2.0,
    "standard": 0.7,
    "strongest": {
-    "made": 10,
+    "made": 11,
     "cashed": 4,
-    "cash_rate": 40.0,
-    "claimed": 37.5,
-    "avg_payout": 2.32,
-    "avg_legs": 4.3,
-    "roi": -6.2,
+    "cash_rate": 36.4,
+    "claimed": 37.9,
+    "avg_payout": 2.3,
+    "avg_legs": 4.27,
+    "roi": -14.7,
     "max_drawdown_units": 4.0,
     "longest_losing_run": 4
    },
    "optimizer": {
-    "made": 18,
-    "cashed": 10,
-    "cash_rate": 55.6,
-    "claimed": 46.9,
+    "made": 19,
+    "cashed": 11,
+    "cash_rate": 57.9,
+    "claimed": 46.7,
     "avg_payout": 2.03,
-    "avg_legs": 3.17,
-    "roi": 13.3,
+    "avg_legs": 3.16,
+    "roi": 17.9,
     "max_drawdown_units": 3.0,
     "longest_losing_run": 3
    },
    "paired": {
-    "days": 10,
-    "diff": 1,
+    "days": 11,
+    "diff": 2,
     "ci95": [
      0,
-     3
+     5
     ],
+    "ci_positive": false,
     "proven": false
    },
    "later": {
     "strongest": {
-     "made": 6,
+     "made": 7,
      "cashed": 2,
-     "cash_rate": 33.3,
-     "claimed": 39.0,
-     "avg_payout": 2.3,
-     "avg_legs": 3.83,
-     "roi": -24.7,
+     "cash_rate": 28.6,
+     "claimed": 39.4,
+     "avg_payout": 2.26,
+     "avg_legs": 3.86,
+     "roi": -35.5,
      "max_drawdown_units": 3.0,
      "longest_losing_run": 3
     },
     "optimizer": {
-     "made": 10,
-     "cashed": 5,
-     "cash_rate": 50.0,
-     "claimed": 47.3,
+     "made": 11,
+     "cashed": 6,
+     "cash_rate": 54.5,
+     "claimed": 46.9,
      "avg_payout": 2.03,
      "avg_legs": 3.0,
-     "roi": 2.5,
+     "roi": 11.4,
      "max_drawdown_units": 3.0,
      "longest_losing_run": 3
     },
     "paired": {
-     "days": 6,
-     "diff": 1,
+     "days": 7,
+     "diff": 2,
      "ci95": [
       0,
-      3
+      5
      ],
+     "ci_positive": false,
      "proven": false
     }
    }
@@ -175,6 +181,7 @@
      0,
      0
     ],
+    "ci_positive": false,
     "proven": false
    },
    "later": {
@@ -207,6 +214,7 @@
       0,
       0
      ],
+     "ci_positive": false,
      "proven": false
     }
    }
@@ -218,9 +226,9 @@
     "made": 30,
     "cashed": 9,
     "cash_rate": 30.0,
-    "claimed": 24.2,
-    "avg_payout": 3.58,
-    "avg_legs": 4.33,
+    "claimed": 24.0,
+    "avg_payout": 3.6,
+    "avg_legs": 4.37,
     "roi": 2.8,
     "max_drawdown_units": 6.1,
     "longest_losing_run": 6
@@ -229,9 +237,9 @@
     "made": 40,
     "cashed": 17,
     "cash_rate": 42.5,
-    "claimed": 29.7,
+    "claimed": 29.8,
     "avg_payout": 3.11,
-    "avg_legs": 3.33,
+    "avg_legs": 3.3,
     "roi": 29.9,
     "max_drawdown_units": 5.0,
     "longest_losing_run": 5
@@ -243,6 +251,7 @@
      0,
      7
     ],
+    "ci_positive": false,
     "proven": false
    },
    "later": {
@@ -250,9 +259,9 @@
      "made": 13,
      "cashed": 4,
      "cash_rate": 30.8,
-     "claimed": 25.3,
-     "avg_payout": 3.48,
-     "avg_legs": 4.31,
+     "claimed": 25.0,
+     "avg_payout": 3.53,
+     "avg_legs": 4.38,
      "roi": -2.3,
      "max_drawdown_units": 4.0,
      "longest_losing_run": 4
@@ -261,9 +270,9 @@
      "made": 17,
      "cashed": 8,
      "cash_rate": 47.1,
-     "claimed": 29.7,
+     "claimed": 29.9,
      "avg_payout": 3.1,
-     "avg_legs": 3.47,
+     "avg_legs": 3.41,
      "roi": 44.6,
      "max_drawdown_units": 5.0,
      "longest_losing_run": 5
@@ -275,6 +284,7 @@
       0,
       3
      ],
+     "ci_positive": false,
      "proven": false
     }
    }
@@ -311,6 +321,7 @@
      0,
      3
     ],
+    "ci_positive": false,
     "proven": false
    },
    "later": {
@@ -343,6 +354,7 @@
       0,
       3
      ],
+     "ci_positive": false,
      "proven": false
     }
    }
@@ -402,15 +414,15 @@
     "longest_losing_run": 7
    },
    "optimizer": {
-    "made": 27,
+    "made": 28,
     "cashed": 7,
-    "cash_rate": 25.9,
+    "cash_rate": 25.0,
     "claimed": 17.7,
-    "avg_payout": 5.08,
-    "avg_legs": 4.74,
-    "roi": 31.0,
-    "max_drawdown_units": 9.99,
-    "longest_losing_run": 9
+    "avg_payout": 5.07,
+    "avg_legs": 4.71,
+    "roi": 26.3,
+    "max_drawdown_units": 10.99,
+    "longest_losing_run": 10
    },
    "paired": {
     "days": 9,
@@ -419,6 +431,7 @@
      -2,
      4
     ],
+    "ci_positive": false,
     "proven": false
    },
    "later": {
@@ -434,15 +447,15 @@
      "longest_losing_run": 2
     },
     "optimizer": {
-     "made": 11,
+     "made": 12,
      "cashed": 1,
-     "cash_rate": 9.1,
-     "claimed": 17.9,
-     "avg_payout": 5.06,
-     "avg_legs": 4.64,
-     "roi": -54.4,
-     "max_drawdown_units": 9.0,
-     "longest_losing_run": 9
+     "cash_rate": 8.3,
+     "claimed": 17.8,
+     "avg_payout": 5.05,
+     "avg_legs": 4.58,
+     "roi": -58.2,
+     "max_drawdown_units": 10.0,
+     "longest_losing_run": 10
     },
     "paired": {
      "days": 3,
@@ -451,6 +464,7 @@
       -3,
       0
      ],
+     "ci_positive": false,
      "proven": false
     }
    }

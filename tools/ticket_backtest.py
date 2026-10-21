@@ -63,7 +63,7 @@ def load_days():
     days = defaultdict(list)
     for k, e in L.items():
         r = book.get(k)
-        if not r or r.get("close") is None or e.get("dc") or e.get("status") not in ("won", "lost"):
+        if not r or r.get("record_excluded") or not ledger.record_priced(e) or r.get("close") is None or e.get("dc") or e.get("status") not in ("won", "lost"):
             continue
         d = dec(e.get("price"))
         if not d or r["close"] < 0.5 or d >= 2.0:          # the favourite, at a favourite's price
@@ -118,14 +118,15 @@ def paired(a, b, draws=2000, seed=5):
     rng = random.Random(seed)
     boot = sorted(sum(rng.choice(diffs) for _ in diffs) for _ in range(draws))
     return dict(days=len(diffs), diff=sum(diffs), ci95=[boot[int(.025 * draws)], boot[int(.975 * draws) - 1]],
-                proven=boot[int(.025 * draws)] > 0)
+                ci_positive=boot[int(.025 * draws)] > 0, proven=False)
 
 
 def main():
     days = load_days()
     dates = sorted(days)
     cut = dates[len(dates) // 2]
-    rep = dict(dates=[dates[0], dates[-1]], days=len(dates), legs=sum(len(v) for v in days.values()),
+    rep = dict(promotion_eligible=False, timing="hindsight closing diagnostic; games have different kickoff times; not an executable morning backtest",
+               dates=[dates[0], dates[-1]], days=len(dates), legs=sum(len(v) for v in days.values()),
                later_from=cut, results=[])
     for target in TARGETS:
         for s in STANDARDS:

@@ -46,7 +46,9 @@ def _summary(league, eid):
         d = PL._get(f"{PL.SITE}/{sport}/{lg}/summary?event={eid}")
     except Exception:
         return None
-    keep = dict(rosters=d.get("rosters") or [], injuries=d.get("injuries") or [])
+    if not isinstance(d, dict) or not d.get("header"):
+        return None
+    keep = dict(header=d["header"], rosters=d.get("rosters") or [], injuries=d.get("injuries") or [])
     try:
         os.makedirs(CACHE, exist_ok=True)
         with open(f, "w") as fh:

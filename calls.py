@@ -160,12 +160,16 @@ def watch(rec, rows_by_league, now, summary=None):
     changed = False
     live = []
     for c in rec["calls"]:
+        if c.get("current"):
+            c["current"] = None
+            changed = True
         st = freshness.parse(c.get("start"))
         if c.get("status") == "pulled" or (st is not None and st <= now) or c["id"] not in rows:
             continue
         lg, r = rows[c["id"]]
         ok, what, fp = news.status(c["league"], r, summary(c["league"], c["id"]))
         if c.get("fp") and fp != c["fp"]:
+            c["news_at"] = t
             rec.setdefault("news", {})[c["league"]] = t
             c.setdefault("log", []).append(dict(t=t, event="news", what=what))
         if c.get("fp") != fp or (c.get("gate") or {}).get("what") != what:
@@ -197,6 +201,15 @@ def watch(rec, rows_by_league, now, summary=None):
             c.setdefault("log", []).append(dict(t=t, event="re-derived", from_=old, to=c["conf"],
                                                 why=f"moved {100 * p - old:+.1f} pts since published"))
         changed = True
+    # The recommendation quote is separate from the original forecast.
+    # Each game's own quote must postdate its own news; another game cannot
+    # clear this requirement merely by refreshing a league-level timestamp.
+    import live_tickets
+    for c, r in live:
+        q = live_tickets.current_quote(c, r, now)
+        if c.get("current") != q:
+            c["current"] = q
+            changed = True
     return changed
 
 
@@ -226,35 +239,53 @@ def update_daily(state, now=None, path=None, n=None, summary=None):
         if add:
             watch(rec, today, now, summary)        # each new call's gate and news baseline
             changed = True
-    # forward shadow test: once the day's calls are complete, both ways of
-    # building their tickets are archived side by side, never revised --
-    # likeliest-first (call_tickets, published) and the payout-target
-    # optimizer (tickets.optimize at 2x and 3x). Graded by tools/shadow.py.
+    # Reconsider every currently priced high-confidence game for the live
+    # chooser. The five original calls remain separate and stay on record.
+    import live_tickets as _live
+    previous = rec.get("candidate_observations") or {}
+    observations = []
+    for candidate in candidates(today, day, now):
+        if candidate["conf"] < 100 * _live.STANDARD:
+            continue
+        if candidate["league"] in ("atp", "wta") and candidate.get("close"):
+            continue
+        old = previous.get(candidate["id"]) or {}
+        candidate.update({k: old[k] for k in ("fp", "gate", "news_at") if k in old})
+        observations.append(candidate)
+    research = dict(calls=observations, news=rec.get("candidate_news") or {})
+    watch(research, today, now, summary)
+    rec["candidate_observations"] = {c["id"]: c for c in observations}
+    rec["candidate_news"] = research.get("news") or {}
+    changed = True
+    # Freeze the first executable comparison, not mutable call prices. Only
+    # selected candidate games must still be pregame; earlier calls remain
+    # in the record but cannot enter this snapshot.
     if len(rec["calls"]) >= n and "shadow" not in rec:
-        import freshness
-        begun = any((freshness.parse(c.get("start")) or now) <= now for c in rec["calls"])
-        # archived only before any of the day's calls has started; a day that
-        # completed earlier (2026-10-20, before this test existed) is skipped
-        rec["shadow"] = (dict(skipped="a call had already started") if begun
-                         else shadow_tickets(rec["calls"], now))
-        changed = True
+        snapshot = shadow_tickets(observations, now)
+        if snapshot:
+            rec["shadow"] = snapshot
+            changed = True
     if changed:
         save_daily(book, path)
     return rec
 
 
 def shadow_tickets(calls_today, now):
-    import call_tickets
-    import tickets as T
-    legs = [dict(gid=c["id"], p=c["conf"] / 100, dec=call_tickets.dec(c.get("price")), league=c["league"],
-                 spec=dict(t="win"), label=c["pick"]) for c in call_tickets.eligible(calls_today)]
-    legs = [L for L in legs if L["dec"]]
-    out = dict(t=now.isoformat(timespec="seconds"),
-               strongest=[[L["id"] for L in t["legs"]] for t in call_tickets.build(calls_today)])
-    for target in (2.0, 3.0):
-        r = T.optimize(legs, target, 0.5, max_legs=call_tickets.MAX_LEGS)
-        out[f"optimizer_{target:.0f}x"] = [L["gid"] for L in r["legs"]] if r.get("legs") else None
-    return out
+    import copy
+    import live_tickets as L
+    pool, _ = L.eligible(calls_today, now)
+    if len(pool) < 2:
+        return None
+    current = L.build(calls_today, now)
+    out = dict(version=2, t=now.isoformat(timespec="seconds"), standard=L.STANDARD,
+               pool=copy.deepcopy(pool), strategies={})
+    for row in current["targets"]:
+        target = row["target"]
+        base = L.strongest(pool, target)
+        opt = row["ticket"]
+        for name, ticket in ((f"strongest_{target:.0f}x", base), (f"optimizer_{target:.0f}x", opt)):
+            out["strategies"][name] = [x["id"] for x in ticket["legs"]] if ticket else None
+    return out if any(out["strategies"].values()) else None
 
 
 def daily_ids(day, path=None):
