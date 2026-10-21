@@ -338,7 +338,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T22:22:22+00:00",
+      "checked_at": "2026-10-21T22:24:27+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -350,13 +350,12 @@
       "match": "CHI @ TOR",
       "pick": "Toronto Raptors",
       "price": "-470",
-      "price_at": "2026-10-21T22:13:52+00:00",
+      "price_at": "2026-10-21T22:24:05+00:00",
       "price_market": "moneyline",
       "price_ref": "34787954:0ML86628276_1",
-      "prob_at": "2026-10-21T22:13:52+00:00",
+      "prob_at": "2026-10-21T22:24:05+00:00",
       "rank": 3,
-      "ready": false,
-      "reason": "awaiting this game's price after its lineup/news change",
+      "ready": true,
       "side": "home",
       "start": "2026-10-21T23:30Z"
      },
@@ -462,7 +461,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T22:22:22+00:00",
+      "checked_at": "2026-10-21T22:24:27+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
@@ -474,10 +473,10 @@
       "match": "DAL @ HOU",
       "pick": "Houston Rockets",
       "price": "-425",
-      "price_at": "2026-10-21T22:13:52+00:00",
+      "price_at": "2026-10-21T22:24:05+00:00",
       "price_market": "moneyline",
       "price_ref": "34520240:0ML85871435_1",
-      "prob_at": "2026-10-21T22:13:52+00:00",
+      "prob_at": "2026-10-21T22:24:05+00:00",
       "rank": 5,
       "ready": true,
       "side": "home",
@@ -518,7 +517,7 @@
     }
    ],
    "candidate_news": {
-    "mls": "2026-10-21T16:13:20+00:00",
+    "mls": "2026-10-21T22:24:27+00:00",
     "nba": "2026-10-21T22:14:16+00:00",
     "ucl": "2026-10-21T18:12:11+00:00"
    },
@@ -531,7 +530,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T22:22:22+00:00",
+      "checked_at": "2026-10-21T22:24:27+00:00",
       "conf": 76,
       "dc": true,
       "gate": {
@@ -543,10 +542,10 @@
       "match": "MTY @ PUE",
       "pick": "Monterrey or draw",
       "price": "-450",
-      "price_at": "2026-10-21T22:14:14+00:00",
+      "price_at": "2026-10-21T22:24:26+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192208816:13737520",
-      "prob_at": "2026-10-21T22:13:52+00:00",
+      "prob_at": "2026-10-21T22:24:06+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -564,7 +563,7 @@
      "match": "MTY @ PUE",
      "pick": "Monterrey or draw",
      "price": "-450",
-     "price_at": "2026-10-21T22:14:14+00:00",
+     "price_at": "2026-10-21T22:24:26+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192208816:13737520",
      "side": "away",
@@ -575,12 +574,12 @@
      "book": "FanDuel",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
-     "conf": 80,
+     "conf": 81,
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T22:22:22+00:00",
-      "conf": 80,
+      "checked_at": "2026-10-21T22:24:27+00:00",
+      "conf": 81,
       "dc": true,
       "gate": {
        "ok": true,
@@ -590,29 +589,37 @@
       "league": "mls",
       "match": "DC @ CIN",
       "pick": "FC Cincinnati or draw",
-      "price": "-550",
-      "price_at": "2026-10-21T22:14:14+00:00",
+      "price": "-600",
+      "price_at": "2026-10-21T22:24:26+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192283855:14179708",
-      "prob_at": "2026-10-21T22:13:52+00:00",
+      "prob_at": "2026-10-21T22:24:05+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-21T23:00Z"
      },
      "dc": true,
-     "fp": "066745874185",
+     "fp": "be54ebfba6ec",
      "gate": {
       "ok": true,
       "what": "both XIs confirmed"
      },
      "id": "mls:761773",
      "league": "mls",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-21T22:24:27+00:00",
+       "what": "both XIs confirmed"
+      }
+     ],
      "match": "DC @ CIN",
-     "news_at": "2026-10-21T16:13:20+00:00",
+     "news_at": "2026-10-21T22:24:27+00:00",
      "pick": "FC Cincinnati or draw",
-     "price": "-550",
-     "price_at": "2026-10-21T22:14:14+00:00",
+     "price": "-600",
+     "price_at": "2026-10-21T22:24:26+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192283855:14179708",
      "side": "home",
@@ -627,7 +634,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T22:22:22+00:00",
+      "checked_at": "2026-10-21T22:24:27+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -639,13 +646,12 @@
       "match": "CHI @ TOR",
       "pick": "Toronto Raptors",
       "price": "-470",
-      "price_at": "2026-10-21T22:13:52+00:00",
+      "price_at": "2026-10-21T22:24:05+00:00",
       "price_market": "moneyline",
       "price_ref": "34787954:0ML86628276_1",
-      "prob_at": "2026-10-21T22:13:52+00:00",
+      "prob_at": "2026-10-21T22:24:05+00:00",
       "rank": null,
-      "ready": false,
-      "reason": "awaiting this game's price after its lineup/news change",
+      "ready": true,
       "side": "home",
       "start": "2026-10-21T23:30Z"
      },
@@ -661,7 +667,7 @@
      "news_at": "2026-10-21T22:14:16+00:00",
      "pick": "Toronto Raptors",
      "price": "-470",
-     "price_at": "2026-10-21T22:13:52+00:00",
+     "price_at": "2026-10-21T22:24:05+00:00",
      "price_market": "moneyline",
      "price_ref": "34787954:0ML86628276_1",
      "side": "home",
@@ -676,7 +682,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-21T22:22:22+00:00",
+      "checked_at": "2026-10-21T22:24:27+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
@@ -688,10 +694,10 @@
       "match": "DAL @ HOU",
       "pick": "Houston Rockets",
       "price": "-425",
-      "price_at": "2026-10-21T22:13:52+00:00",
+      "price_at": "2026-10-21T22:24:05+00:00",
       "price_market": "moneyline",
       "price_ref": "34520240:0ML85871435_1",
-      "prob_at": "2026-10-21T22:13:52+00:00",
+      "prob_at": "2026-10-21T22:24:05+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -709,7 +715,7 @@
      "news_at": "2026-10-21T16:13:20+00:00",
      "pick": "Houston Rockets",
      "price": "-425",
-     "price_at": "2026-10-21T22:13:52+00:00",
+     "price_at": "2026-10-21T22:24:05+00:00",
      "price_market": "moneyline",
      "price_ref": "34520240:0ML85871435_1",
      "side": "home",
@@ -718,7 +724,6 @@
     }
    },
    "frozen": [
-    "nba",
     "ucl"
    ],
    "news": {
