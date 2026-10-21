@@ -1755,7 +1755,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      2,
@@ -1763,7 +1763,7 @@
      "won"
     ]
    },
-   "won": 10
+   "won": 11
   },
   "losses": [
    {
@@ -1842,11 +1842,12 @@
   "lottery": [
    {
     "killed_by": [
+     "Vancouver Canucks +2.5",
      "Over 224.5 points",
      "Under 46.5 points"
     ],
     "legs": 9,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 5
@@ -1869,10 +1870,11 @@
      "San Jose Sharks over 4.5 goals",
      "New York Islanders under 1.5 goals",
      "Edmonton Oilers under 1.5 goals",
-     "New Jersey Devils under 1.5 goals"
+     "New Jersey Devils under 1.5 goals",
+     "Vancouver Canucks +1.5"
     ],
     "legs": 6,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 1
@@ -1916,12 +1918,12 @@
    }
   ],
   "picks": {
-   "hit": 59.1,
+   "hit": 60.9,
    "lost": 9,
-   "n": 22,
-   "roi": -10.2,
-   "said": 63.2,
-   "won": 13
+   "n": 23,
+   "roi": -8.3,
+   "said": 63.6,
+   "won": 14
   },
   "picks_by_league": {
    "ksa": {
@@ -1957,12 +1959,12 @@
     "won": 1
    },
    "nhl": {
-    "hit": 55.6,
+    "hit": 60.0,
     "lost": 4,
-    "n": 9,
-    "roi": -4.4,
-    "said": 57.3,
-    "won": 5
+    "n": 10,
+    "roi": -0.6,
+    "said": 58.8,
+    "won": 6
    },
    "ucl": {
     "hit": 75.0,
@@ -1980,16 +1982,16 @@
     "said_price": 86.3,
     "won": 178
    },
-   "n": 117,
-   "said": 83.0,
-   "won": 93
+   "n": 123,
+   "said": 82.8,
+   "won": 99
   },
   "safe_locks": {
    "lost": [
     "Toronto Maple Leafs under 5.5 goals (Toronto Maple Leafs at Columbus Blue Jackets) Toronto Maple Leafs 6 - Columbus Blue Jackets 2"
    ],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      7,
@@ -2002,7 +2004,7 @@
      "lost"
     ]
    },
-   "won": 8
+   "won": 9
   },
   "strong": {
    "n": 0
@@ -2017,12 +2019,12 @@
     "won": 10
    },
    "agree": {
-    "hit": 66.8,
+    "hit": 66.9,
     "lost": 99,
-    "n": 298,
-    "roi": -2.6,
+    "n": 299,
+    "roi": -2.4,
     "said": 63.8,
-    "won": 199
+    "won": 200
    }
   }
  },
@@ -2079,8 +2081,8 @@
    },
    {
     "flag": false,
-    "hit": 77.6,
-    "n": 223,
+    "hit": 78.2,
+    "n": 229,
     "name": "props nhl Shots on Goal",
     "said": 79.6
    },
@@ -2107,10 +2109,10 @@
    },
    {
     "flag": false,
-    "hit": 90.0,
-    "n": 10,
+    "hit": 90.9,
+    "n": 11,
     "name": "locks nhl under",
-    "said": 81.6
+    "said": 80.9
    }
   ],
   "calls": {
@@ -2233,12 +2235,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.3,
+    "hit": 66.4,
     "lost": 98,
-    "n": 291,
-    "roi": -3.6,
+    "n": 292,
+    "roi": -3.5,
     "said": 64.1,
-    "won": 193
+    "won": 194
    }
   },
   "weights": {
