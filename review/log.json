@@ -1797,8 +1797,8 @@
    },
    {
     "flag": false,
-    "hit": 78.8,
-    "n": 193,
+    "hit": 78.3,
+    "n": 198,
     "name": "props nhl Shots on Goal",
     "said": 79.4
    },
@@ -1893,16 +1893,16 @@
    }
   },
   "clv": {
-   "avg": 0.94,
-   "beat": 72.7,
-   "n": 11
+   "avg": 0.88,
+   "beat": 69.2,
+   "n": 13
   },
   "day": "2026-10-20",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 7,
+   "open": 5,
    "plays": {
     "best": [
      2,
@@ -1910,7 +1910,7 @@
      "open"
     ]
    },
-   "won": 4
+   "won": 6
   },
   "losses": [
    {
@@ -1928,6 +1928,14 @@
     "price": "-175",
     "said": 61,
     "why": "margin 6 \u00b7 the book had my side favoured too \u00b7 called at 61%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "Florida International Panthers",
+    "price": "-410",
+    "said": 79,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 79%"
    },
    {
     "against_market": false,
@@ -1965,20 +1973,23 @@
   "lottery": [
    {
     "killed_by": [
-     "Over 224.5 points"
+     "Over 224.5 points",
+     "Under 46.5 points"
     ],
     "legs": 9,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "100",
     "won": 3
    },
    {
     "killed_by": [
-     "Over 8.5 goals"
+     "Over 8.5 goals",
+     "Over 8.5 goals",
+     "Under 50.5 points"
     ],
     "legs": 9,
-    "lost": 1,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 2
@@ -1997,42 +2008,47 @@
    },
    {
     "killed_by": [
-     "Over 8.5 goals"
+     "Over 8.5 goals",
+     "Over 8.5 goals",
+     "Under 46.5 points"
     ],
     "legs": 8,
-    "lost": 1,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+25",
     "won": 2
    },
    {
     "killed_by": [
-     "Over 8.5 goals"
+     "Over 8.5 goals",
+     "Over 8.5 goals",
+     "Under 46.5 points"
     ],
     "legs": 8,
-    "lost": 1,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+50",
     "won": 2
    },
    {
     "killed_by": [
+     "Over 8.5 goals",
      "Over 8.5 goals"
     ],
     "legs": 8,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+100",
     "won": 2
    }
   ],
   "picks": {
-   "hit": 57.1,
-   "lost": 6,
-   "n": 14,
-   "roi": -19.9,
-   "said": 65.9,
-   "won": 8
+   "hit": 58.8,
+   "lost": 7,
+   "n": 17,
+   "roi": -14.4,
+   "said": 65.8,
+   "won": 10
   },
   "picks_by_league": {
    "ksa": {
@@ -2059,13 +2075,21 @@
     "said": 57.0,
     "won": 0
    },
+   "ncaaf": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -19.9,
+    "said": 70.0,
+    "won": 1
+   },
    "nhl": {
-    "hit": 40.0,
+    "hit": 50.0,
     "lost": 3,
-    "n": 5,
-    "roi": -29.8,
-    "said": 58.8,
-    "won": 2
+    "n": 6,
+    "roi": -12.5,
+    "said": 58.2,
+    "won": 3
    },
    "ucl": {
     "hit": 75.0,
@@ -2083,9 +2107,9 @@
     "said_price": 85.9,
     "won": 164
    },
-   "n": 69,
-   "said": 83.3,
-   "won": 58
+   "n": 74,
+   "said": 83.1,
+   "won": 61
   },
   "safe_locks": {
    "lost": [
@@ -2122,21 +2146,21 @@
    },
    "agree": {
     "hit": 66.9,
-    "lost": 96,
-    "n": 290,
-    "roi": -2.8,
-    "said": 63.9,
-    "won": 194
+    "lost": 97,
+    "n": 293,
+    "roi": -2.7,
+    "said": 64.0,
+    "won": 196
    }
   },
   "weights": {
    "ncaaf": {
-    "fitted": 0.35,
+    "fitted": 0.4,
     "held_out": false,
-    "logloss": 0.6249,
-    "market_only": 0.634,
-    "model_40": 0.625,
-    "n": 52,
+    "logloss": 0.6366,
+    "market_only": 0.6486,
+    "model_40": 0.6366,
+    "n": 54,
     "weight": 0.0
    }
   }
