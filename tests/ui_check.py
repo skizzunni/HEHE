@@ -201,7 +201,7 @@ def main():
         if want not in tg:
             fails.append("Targets tab missing: " + want + " | " + tg[:300])
             break
-    if (new.get("moreHidden"), new.get("moreShown")) != (0, 6):
+    if (new.get("moreHidden"), new.get("moreShown")) != (0, 8):
         fails.append(f"secondary sections must sit behind More: {new.get('moreHidden')} shown, {new.get('moreShown')} after opening")
     if "64%" not in (new.get("odds") or "") or "1.6 of 2" not in (new.get("odds") or ""):
         fails.append("outcome odds: two 80% calls must read 64% all win, 1.6 expected: " + (new.get("odds") or "")[:200])

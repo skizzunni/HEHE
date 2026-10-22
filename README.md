@@ -2997,3 +2997,31 @@ Every find is archived in value.json and logged in the props ledger
 way as every other prop. The Props tab shows the finds and their forward
 record. There is no graded history yet, so this is a forward test: the
 record shown is the only evidence, and it is reported as it grades.
+
+## Site redesign (2026-10-22)
+
+The page was rebuilt visually. The content and every number are unchanged:
+the same render functions produce the same sections.
+
+- **App bar.** A brand mark, a live "Researched ..." status chip and a
+  light/dark theme toggle. The toggle follows the device until chosen, then
+  remembers the choice.
+- **At a glance.** Four tiles under the title: the calls record, today's
+  calls (and how they stand), today's Locks and the Prop Locks record. All
+  are read from the same records the sections show.
+- **Navigation.** On desktop it is a segmented control with icons. On phones
+  it moves to a bottom tab bar within thumb reach (Calls, Locks, Targets,
+  Results, More), and More opens a sheet with the rest: Today, Tomorrow,
+  Lottery, Props, Card, Stacks, Markets and Bot.
+- **Cards.** Every section sits on a raised, rounded card. Badges are tinted
+  pills (won is green, lost is orange-red, Lock is gold), and table headers
+  are shaded.
+- **Calls.** Each call's update log is folded behind an "N updates" toggle,
+  and the long explainer behind "How calls are chosen".
+- **Accessibility.**
+  - A skip-to-picks link, and a `nav` landmark with `aria-current` on the
+    open section.
+  - Visible focus rings and 42px+ tap targets.
+  - The outdated-page banner gets a fixed dark red so its white text keeps
+    its contrast in dark mode.
+  - Reduced motion is respected.

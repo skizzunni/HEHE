@@ -10,29 +10,33 @@
 <!-- Served from Pages there is no favicon route, so a saved home-screen
      bookmark comes up blank. Inline SVG needs no extra file. -->
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230B6E6E'/%3E%3Ctext x='16' y='23' font-family='Helvetica,Arial,sans-serif' font-size='19' font-weight='bold' fill='%23fff' text-anchor='middle'%3E%E2%9C%93%3C/text%3E%3C/svg%3E">
-<meta name="theme-color" content="#0B6E6E">
+<meta name="theme-color" content="#0B1F33">
 <meta name="apple-mobile-web-app-title" content="My Card">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap">
 <style>
 :root{
-  --ground:#FBFAF6; --panel:#FFFFFF; --rule:#E3DFD6; --rule-soft:#EFEBE3;
-  --ink:#16181D; --ink-dim:#6E6A61; --accent:#0B6E6E; --accent-soft:#E4F0EE;
-  --live:#1C7A43; --final:#8B857A; --dog:#0B6E6E; --bad:#A33A1E;
-  --display:"Archivo","Helvetica Neue",Arial,sans-serif;
-  --body:"IBM Plex Sans",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --ground:#F4F6FA; --panel:#FFFFFF; --rule:#DFE4EC; --rule-soft:#EBEFF5;
+  --ink:#0F1726; --ink-dim:#5B6577; --accent:#0E7C66; --accent-soft:#E2F4EF;
+  --live:#15803D; --final:#7A8394; --dog:#0E7C66; --bad:#C2410C; --gold:#B7791F;
+  --hero1:#0B1F33; --hero2:#0E4D4A; --shadow:0 1px 2px rgba(15,23,38,.06),0 4px 16px rgba(15,23,38,.06);
+  --radius:14px;
+  --display:"Space Grotesk","Inter","Helvetica Neue",Arial,sans-serif;
+  --body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --ground:#101317; --panel:#171B21; --rule:#2A2F38; --rule-soft:#21262E;
-    --ink:#E9EBEF; --ink-dim:#8D93A0; --accent:#4FC7BE; --accent-soft:#13302F;
-    --live:#5BD08A; --final:#767C88; --dog:#4FC7BE; --bad:#E0765A;
+    --ground:#0B0F17; --panel:#131A25; --rule:#253042; --rule-soft:#1B2433;
+    --ink:#E8EDF5; --ink-dim:#94A0B4; --accent:#34D3A6; --accent-soft:#0F2E28;
+    --live:#4ADE80; --final:#7C8799; --dog:#34D3A6; --bad:#FB8B5B; --gold:#F2C14E;
+    --hero1:#0E1A2B; --hero2:#0C3B37; --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35);
   }
 }
 :root[data-theme="dark"]{
-  --ground:#101317; --panel:#171B21; --rule:#2A2F38; --rule-soft:#21262E;
-  --ink:#E9EBEF; --ink-dim:#8D93A0; --accent:#4FC7BE; --accent-soft:#13302F;
-  --live:#5BD08A; --final:#767C88; --dog:#4FC7BE; --bad:#E0765A;
+  --ground:#0B0F17; --panel:#131A25; --rule:#253042; --rule-soft:#1B2433;
+  --ink:#E8EDF5; --ink-dim:#94A0B4; --accent:#34D3A6; --accent-soft:#0F2E28;
+  --live:#4ADE80; --final:#7C8799; --dog:#34D3A6; --bad:#FB8B5B; --gold:#F2C14E;
+  --hero1:#0E1A2B; --hero2:#0C3B37; --shadow:0 1px 2px rgba(0,0,0,.4),0 6px 20px rgba(0,0,0,.35);
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--body);
@@ -363,16 +367,188 @@ td.num.ok{color:var(--dog)}
 .age b{color:var(--ink);font-weight:600}
 .age.stale b{color:var(--bad)}
 .coinbar.stale{color:var(--bad)}
+
+/* ===================================================== design layer (2026-10-22)
+   One system on top of the rules above: an app bar with a status chip, a
+   summary strip, every section on a raised card, pill badges, and on phones a
+   bottom tab bar within thumb reach. Structure and class names are unchanged,
+   so every view renders exactly the same content. */
+html{scroll-padding-top:120px}
+body{font-size:15px;line-height:1.55;background:var(--ground);
+  font-feature-settings:"cv11","ss01";-moz-osx-font-smoothing:grayscale}
+.skip{position:absolute;left:-999px;top:8px;z-index:50;background:var(--ink);color:var(--ground);
+  padding:8px 14px;border-radius:8px;font-weight:600;text-decoration:none}
+.skip:focus{left:12px}
+.wrap{max-width:1120px;padding:0 20px 96px}
+header.hero{margin:0 -20px;padding:18px 20px 22px;color:#fff;
+  background:radial-gradient(1200px 300px at 85% -40%,rgba(52,211,166,.35),transparent 60%),
+    linear-gradient(135deg,var(--hero1),var(--hero2));border-radius:0 0 22px 22px}
+.bar{display:flex;align-items:center;gap:12px}
+.logo{flex:0 0 38px;height:38px;border-radius:11px;display:grid;place-items:center;
+  background:linear-gradient(140deg,#34D3A6,#0E7C66);box-shadow:0 4px 14px rgba(52,211,166,.35)}
+.logo svg{width:20px;height:20px}
+.brand{flex:1;min-width:0}
+header.hero .eyebrow{color:rgba(255,255,255,.7);margin:0 0 2px;font-size:10.5px}
+header.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(22px,4.2vw,30px);
+  letter-spacing:-.02em;color:#fff;margin:0}
+.iconbtn{flex:0 0 auto;width:40px;height:40px;border-radius:12px;border:1px solid rgba(255,255,255,.22);
+  background:rgba(255,255,255,.08);color:#fff;display:grid;place-items:center;cursor:pointer}
+.iconbtn:hover{background:rgba(255,255,255,.16)}
+.iconbtn:focus-visible{outline:2px solid #34D3A6;outline-offset:2px}
+.iconbtn svg{width:19px;height:19px}
+header.hero .stamp{display:inline-flex;align-items:center;gap:8px;margin-top:14px;
+  font-size:11.5px;color:rgba(255,255,255,.85);background:rgba(255,255,255,.08);
+  border:1px solid rgba(255,255,255,.16);border-radius:999px;padding:5px 12px 5px 10px}
+header.hero .stamp::before{content:"";width:8px;height:8px;border-radius:50%;background:#4ADE80;
+  box-shadow:0 0 0 3px rgba(74,222,128,.25)}
+.glance{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:16px}
+.glance .k{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:12px;
+  padding:10px 12px;min-width:0}
+.glance .k span{display:block;font:600 10px var(--mono);letter-spacing:.08em;text-transform:uppercase;
+  color:rgba(255,255,255,.65);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.glance .k b{display:block;font:700 22px/1.15 var(--display);color:#fff;margin-top:3px;
+  font-variant-numeric:tabular-nums;letter-spacing:-.01em}
+.glance .k i{display:block;font-style:normal;font-size:11.5px;color:rgba(255,255,255,.7);margin-top:1px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.glance .k.good b{color:#6EE7B7}
+@media (max-width:640px){.glance{grid-template-columns:repeat(2,minmax(0,1fr))}}
+/* section switcher: a segmented control on wide screens */
+.days{position:sticky;top:0;z-index:15;margin:14px 0 0;padding:8px;gap:6px;
+  background:color-mix(in srgb,var(--ground) 88%,transparent);backdrop-filter:saturate(1.4) blur(10px);
+  -webkit-backdrop-filter:saturate(1.4) blur(10px);border:1px solid var(--rule);border-radius:16px;
+  box-shadow:var(--shadow)}
+.days button{border:0;border-radius:11px;padding:9px 14px;font:600 14px var(--body);color:var(--ink-dim);
+  display:inline-flex;align-items:center;gap:7px;min-height:42px;transition:background .15s,color .15s}
+.days button svg{width:18px;height:18px;flex:0 0 auto}
+.days button:hover{background:var(--rule-soft);color:var(--ink)}
+.days button[aria-pressed="true"]{background:var(--ink);color:var(--ground);box-shadow:0 2px 8px rgba(15,23,38,.18)}
+.days button[aria-pressed="true"] .dnum{opacity:.75}
+.days .moretoggle{border:1px dashed var(--rule)!important}
+.days .moretoggle.active{color:var(--accent)}
+.days .sep{display:none}
+.days button{margin:0}
+.days button[hidden],#days button[hidden]{display:none!important}
+nav#tabs{top:76px;margin-top:10px;border-bottom:0;gap:6px;padding:4px 0;background:transparent}
+nav#tabs button{border:1px solid var(--rule);border-radius:999px;padding:6px 13px;margin:0;
+  font:600 13px var(--body);background:var(--panel);min-height:36px}
+nav#tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+:root[data-theme="dark"] nav#tabs button[aria-selected="true"]{color:#04140c}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) nav#tabs button[aria-selected="true"]{color:#04140c}}
+/* cards */
+#panel{padding-top:6px}
+.parlays,.sweep,aside,.gate,.bias,.age,.livecard,details.explain,.strip{
+  border:1px solid var(--rule)!important;border-radius:var(--radius)!important;background:var(--panel);
+  box-shadow:var(--shadow)}
+.parlays{padding:18px 20px;margin:14px 0 18px}
+.parlays h3,.sweep h3,aside h2,.bias h2,.sect h2{font-family:var(--display);font-weight:700;
+  font-size:18px;letter-spacing:-.015em;margin:0 0 8px;color:var(--ink)}
+.parlays h3[style]{padding-top:16px;border-top:1px solid var(--rule-soft);font-size:16px}
+.parlays .note,.parlays p{font-size:13.5px;line-height:1.6;max-width:78ch}
+.parlays .parlays{box-shadow:none;background:var(--ground)}
+.sweep{padding:18px 20px}
+aside{padding:22px 24px;margin-top:40px}
+.livecard{border-left:4px solid var(--live)!important;padding:12px 16px}
+.age{border-left:4px solid var(--ink-dim)!important}
+.age.stale{border-left-color:var(--bad)!important}
+.gate{border-left:4px solid var(--accent)!important}
+.coinbar.warn{border-left:4px solid var(--bad);border-radius:8px;background:color-mix(in srgb,var(--bad) 8%,transparent);
+  padding:10px 12px}
+/* tables inside cards */
+table{border-collapse:separate;border-spacing:0}
+th{font:600 10.5px var(--mono);letter-spacing:.08em;color:var(--ink-dim);padding:10px 12px;
+  background:var(--rule-soft);border-bottom:1px solid var(--rule)}
+th:first-child{border-top-left-radius:10px}th:last-child{border-top-right-radius:10px}
+td{padding:12px;border-bottom:1px solid var(--rule-soft)}
+tbody tr:last-child td{border-bottom:0}
+tbody tr:hover td{background:color-mix(in srgb,var(--accent) 5%,transparent)}
+td.mine{font-weight:650;font-size:15px}
+td.num{color:var(--accent)}
+/* badges: tinted pills, never bare outlines */
+.lgpill,.dogtag,.taxtag,.valtag,.tier,.kind,.wl,.res,.edgetag{border-radius:999px!important;
+  padding:2px 8px!important;font-size:10px!important;letter-spacing:.06em;vertical-align:2px}
+.lgpill{background:var(--rule-soft);border-color:transparent!important;color:var(--ink)}
+.wl.won,.res.won{background:color-mix(in srgb,var(--live) 16%,transparent);color:var(--live);
+  border:1px solid color-mix(in srgb,var(--live) 40%,transparent)}
+.wl.lost,.res.lost{background:color-mix(in srgb,var(--bad) 14%,transparent);color:var(--bad);
+  border:1px solid color-mix(in srgb,var(--bad) 40%,transparent)}
+.tier.call,.tier.strong{background:var(--accent-soft);color:var(--accent);border-color:transparent}
+.tier.lock{background:linear-gradient(135deg,var(--gold),#E8A93B);color:#2a1a00;border:0}
+.tier.value{color:var(--live)}
+/* buttons and pills inside sections */
+.parlays button,.rk,.ptk button{border-radius:999px;min-height:34px;padding:6px 14px;
+  font:600 13px var(--body);border:1px solid var(--rule);background:var(--panel);color:var(--ink-dim)}
+.parlays button:hover{border-color:var(--accent);color:var(--ink)}
+.parlays button[aria-pressed="true"],.rk.on{background:var(--accent);border-color:var(--accent);color:#fff}
+button:focus-visible,a:focus-visible,summary:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.strip{padding:12px 14px;gap:10px 22px}
+.strip b{font:700 19px var(--display)}
+.rhead{border-bottom:0;padding:22px 0 6px}
+.rbig{font-family:var(--display);font-weight:700}
+.sect{margin-top:30px}
+#fab{background:linear-gradient(135deg,#0E7C66,#0B1F33);color:#fff;padding:13px 20px;border-radius:999px;
+  box-shadow:0 8px 24px rgba(14,124,102,.35)}
+#slip{border-top:0;border-radius:20px 20px 0 0;box-shadow:0 -10px 40px rgba(0,0,0,.18)}
+.slipbtns a,.slipbtns button{border-radius:10px;min-height:40px}
+/* phones: section bar moves to the bottom, within thumb reach */
+@media (max-width:760px){
+  .wrap{padding:0 14px calc(150px + env(safe-area-inset-bottom))}
+  header.hero{margin:0 -14px;padding:14px 14px 18px;border-radius:0 0 18px 18px}
+  .days{position:fixed;left:0;right:0;bottom:0;top:auto;margin:0;z-index:30;border-radius:18px 18px 0 0;
+    border-bottom:0;display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;
+    padding:6px 6px calc(6px + env(safe-area-inset-bottom));overflow:visible;
+    background:color-mix(in srgb,var(--panel) 94%,transparent);box-shadow:0 -6px 24px rgba(15,23,38,.12)}
+  .days button,#days button{flex-direction:column;justify-content:center;gap:3px;padding:6px 2px;min-height:52px;
+    font-size:11px;border-radius:12px}
+  .days button svg{width:21px;height:21px}
+  .days button.more{order:-1;flex-direction:row;font-size:12.5px;min-height:44px;background:var(--rule-soft)}
+  .days button.more[aria-pressed="true"]{background:var(--ink)}
+  .days .moretoggle{border:0!important}
+  nav#tabs{top:0;margin-top:12px;background:var(--ground)}
+  #fab{bottom:calc(80px + env(safe-area-inset-bottom))}
+  #slip{bottom:calc(68px + env(safe-area-inset-bottom))}
+  .parlays{padding:14px 14px;margin:12px 0 14px}
+  html{scroll-padding-top:60px}
+}
+@media (min-width:761px){.days{display:flex;flex-wrap:wrap}}
+
+.rnum{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;
+  background:var(--accent-soft);color:var(--accent);font:700 12.5px var(--body)}
+td.rank{width:44px}
+#panel td.rank::before{display:none!important}
+details.clog{margin-top:4px}
+details.clog summary{cursor:pointer;font-size:12px;color:var(--ink-dim);list-style:none;display:inline-block;
+  padding:2px 10px;border-radius:999px;background:var(--rule-soft)}
+details.clog summary::-webkit-details-marker{display:none}
+details.clog summary::before{content:"\25B8  "}
+details.clog[open] summary::before{content:"\25BE  "}
+details.clog[open] summary{margin-bottom:4px}
+td .sbn{font-weight:500}
+
+/* Results: the headline record and each section on its own card */
+.rhead{background:var(--panel);border:1px solid var(--rule);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:18px 20px!important;margin-top:14px}
+.sect{background:var(--panel);border:1px solid var(--rule);border-radius:var(--radius);box-shadow:var(--shadow);
+  padding:18px 20px;margin-top:16px}
+.sect .sect{box-shadow:none;border:0;padding:0}
+@media (max-width:760px){.sect,.rhead{padding:14px!important}}
 </style>
 <div class="wrap">
-<header>
-  <div class="eyebrow">Winners only &middot; one line per game</div>
-  <h1>My Card</h1>
-  <div class="stamp" id="stamp"></div>
+<a class="skip" href="#panel">Skip to picks</a>
+<header class="hero">
+  <div class="bar">
+    <div class="logo" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+    <div class="brand">
+      <div class="eyebrow">Priced picks &middot; graded every night</div>
+      <h1>My Card</h1>
+    </div>
+    <button class="iconbtn" id="theme" type="button" aria-label="Switch colour theme"></button>
+  </div>
+  <div class="stamp" id="stamp" role="status"></div>
+  <div class="glance" id="glance" aria-label="At a glance"></div>
 </header>
-<div class="days" id="days" role="tablist" aria-label="Sections"></div>
+<nav class="days" id="days" aria-label="Sections"></nav>
 <nav id="tabs" role="tablist"></nav>
-<div class="scroll"><div id="panel" role="tabpanel"></div></div>
+<main class="scroll"><div id="panel" role="tabpanel" tabindex="-1"></div></main>
 <button id="fab" hidden></button>
 <div id="slip" hidden>
   <div class="slipwrap">
@@ -504,6 +680,47 @@ const order = ["mlb","wnba","nfl","ncaaf","nba","ncaab","nhl","atp","wta","pga",
 let slot = "calls", league = null;
 const SLIP = [];   // declared before render() reads it
 document.getElementById("stamp").textContent = "Researched " + D.at;
+// Colour theme: follows the device until chosen, then remembered.
+(function(){
+  const btn = document.getElementById("theme"), root = document.documentElement;
+  const SUN = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+  const MOON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/></svg>';
+  let t = null;
+  try { t = localStorage.getItem("theme"); } catch (e) {}
+  const dark = () => t ? t === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches;
+  function paint(){
+    if(t) root.setAttribute("data-theme", t); else root.removeAttribute("data-theme");
+    if(btn){ btn.innerHTML = dark() ? SUN : MOON;
+      btn.setAttribute("aria-label", dark() ? "Switch to light theme" : "Switch to dark theme"); }
+  }
+  if(btn) btn.onclick = () => {
+    t = dark() ? "light" : "dark";
+    try { localStorage.setItem("theme", t); } catch (e) {}
+    paint();
+  };
+  paint();
+})();
+// At a glance: the four numbers that matter, from the same data the
+// sections show -- nothing computed here that the record does not hold.
+(function(){
+  const g = document.getElementById("glance");
+  if(!g) return;
+  const R = D.results || {}, K = R.calls_record || {}, C = R.calls || [];
+  const PL = ((D.prop_locks || {}).record) || {};
+  const LK = (((D.locks || {}).today || {}).locks) || [];
+  const tile = (label, big, sub, cls) => '<div class="k' + (cls ? " " + cls : "") + '"><span>' + label
+    + '</span><b>' + big + '</b><i>' + sub + '</i></div>';
+  const done = C.filter(c => c.status === "won" || c.status === "lost");
+  g.innerHTML =
+    tile("Calls record", K.n ? K.won + "&ndash;" + K.lost : "&mdash;",
+         K.n ? K.hit.toFixed(1) + "% hit, N " + K.n : "none graded yet", K.n && K.hit >= 60 ? "good" : "")
+  + tile("Today&rsquo;s calls", String(C.length),
+         done.length ? C.filter(c => c.status === "won").length + "&ndash;" + C.filter(c => c.status === "lost").length + " so far"
+                     : (C.length ? "set at 8 AM ET" : "set at 8 AM ET"))
+  + tile("Locks today", String(LK.length), "FanDuel, one per game")
+  + tile("Prop Locks", PL.n ? PL.won + " of " + PL.n : "&mdash;",
+         PL.n ? PL.hit + "% hit" : "none graded yet", PL.n && PL.hit >= 70 ? "good" : "");
+})();
 const tabs = document.getElementById("tabs"), panel = document.getElementById("panel"),
       days = document.getElementById("days"), bias = document.getElementById("bias");
 const pretty = s => s.slice(4,6).replace(/^0/,"") + "/" + s.slice(6).replace(/^0/,"");
@@ -1106,18 +1323,24 @@ function drawCalls(){
       + K.stated.toFixed(1) + '% stated, N = ' + K.n + ', ' + esc(K.dates[0]) + ' to ' + esc(K.dates[1]) + '.</p>'
     : '<p class="note">No call has been graded yet.</p>';
   panel.innerHTML = marketBanner() + '<div class="parlays"><h3>Today&rsquo;s calls</h3>'
-    + '<p class="note">The ' + n + ' highest chances among today&rsquo;s games with a sportsbook price under 15 minutes old, '
-    + 'strongest first, set at 8:00 AM Eastern. Each is published at its honest chance and counts in the record; '
+    + '<p class="note">The ' + n + ' highest chances among today&rsquo;s games with a fresh sportsbook price, strongest first, set at 8:00 AM Eastern.</p>'
+    + '<details class="explain"><summary>How calls are chosen</summary><p class="note">Only games with a sportsbook price under 15 minutes old. '
+    + 'Each is published at its honest chance and counts in the record; '
     + 'one under its league&rsquo;s strong cut-off is a <b>close call</b>. Fewer games, fewer calls &mdash; never a softer number. '
     + 'Lineup news (confirmed goalies, starters, XIs, the injury report) freezes a league&rsquo;s calls until a new price is in; '
-    + 'a call whose market chance then moved more than 3 points is re-derived at the new chance, or pulled if its side is no longer the favourite.</p>'
+    + 'a call whose market chance then moved more than 3 points is re-derived at the new chance, or pulled if its side is no longer the favourite.</p></details>'
     + (C.length
       ? '<table><thead><tr><th>#</th><th>Call</th><th>Start</th><th class="num">Chance</th><th>Price</th><th>Result</th></tr></thead><tbody>'
-        + C.map((c, i) => '<tr><td class="state">' + (i + 1) + '</td><td class="mine"><span class="lgpill">' + esc(c.league)
+        + C.map((c, i) => '<tr><td class="state rank"><span class="rnum">' + (i + 1) + '</span></td><td class="mine"><span class="lgpill">' + esc(c.league)
             + '</span>' + esc(c.pick) + '<div class="sbn">' + esc(c.match || "") + '</div>'
             + (c.gate ? '<div class="sbn">' + (c.gate.ok ? '&#10003; ' : '&#8987; ') + esc(c.gate.what) + '</div>' : '')
-            + (c.log || []).map(x => '<div class="sbn">' + esc(x.t.slice(11, 16)) + ' UTC ' + esc(x.event)
+            + ((c.log || []).length
+              ? '<details class="clog"><summary>' + c.log.length + ' update' + (c.log.length === 1 ? '' : 's')
+                + (c.log.some(x => x.to) ? ' &middot; chance moved' : '') + '</summary>'
+                + c.log.map(x => '<div class="sbn">' + esc(x.t.slice(11, 16)) + ' UTC ' + esc(x.event)
                 + (x.to ? ' ' + x.from_ + '% &rarr; ' + x.to + '%' : '') + (x.why ? ': ' + esc(x.why) : (x.what ? ': ' + esc(x.what) : '')) + '</div>').join("")
+                + '</details>'
+              : '')
             + '</td><td class="state">' + esc(c.tip || "")
             + '</td><td class="num">' + c.conf + '%' + (c.close ? '<span class="tier lean">close call</span>' : '<span class="tier call">strong</span>')
             + '</td><td class="mkt">' + esc(c.price) + (c.book ? ' <span class="sbn">' + esc(c.book) + '</span>' : '')
@@ -1834,18 +2057,40 @@ function drawCard(slot){
 
 // The sections that decide a bet come first; everything else sits behind
 // "More" (opened automatically when one of them is the current section).
-const MORE = ["lottery", "props", "card", "stacks", "markets", "bot"];
+const MORE = ["today", "tomorrow", "lottery", "props", "card", "stacks", "markets", "bot"];
+// One line icon per section (24px grid, stroke only, no <title>: the
+// button's own text is its name).
+const ICON = {
+  calls: '<path d="M12 3l2.6 5.6 6.1.7-4.5 4.2 1.2 6L12 16.6 6.6 19.5l1.2-6L3.3 9.3l6.1-.7z"/>',
+  locks: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 018 0v3"/>',
+  targets: '<circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="4"/><circle cx="12" cy="12" r=".8"/>',
+  results: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+  today: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/>',
+  tomorrow: '<rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4M10 15h4l-2-2m2 2l-2 2"/>',
+  lottery: '<rect x="3" y="7" width="18" height="12" rx="2"/><path d="M9 7v12M3 11a2 2 0 010 4"/>',
+  props: '<circle cx="12" cy="7" r="3.5"/><path d="M5 21a7 7 0 0114 0"/>',
+  card: '<rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/>',
+  stacks: '<path d="M12 3l9 5-9 5-9-5z"/><path d="M3 13l9 5 9-5"/>',
+  markets: '<path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/>',
+  bot: '<rect x="5" y="8" width="14" height="11" rx="3"/><path d="M12 4v4M9 13h.01M15 13h.01"/>',
+  more: '<circle cx="5" cy="12" r="1.3"/><circle cx="12" cy="12" r="1.3"/><circle cx="19" cy="12" r="1.3"/>'
+};
+function icon(k){
+  return '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" '
+    + 'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICON[k] || "") + '</svg>';
+}
 let moreOpen = MORE.includes(slot);
 function showMore(){
   [...days.querySelectorAll(".more")].forEach(x => x.hidden = !moreOpen);
   const t = document.getElementById("moreToggle");
-  if(t){ t.setAttribute("aria-expanded", String(moreOpen)); t.firstChild.textContent = moreOpen ? "Less \u25B4" : "More \u25BE"; }
+  if(t){ t.classList.toggle("active", MORE.includes(slot)); t.setAttribute("aria-expanded", String(moreOpen)); [...t.childNodes].filter(n => n.nodeType === 3)[0].textContent = moreOpen ? "Less" : "More"; }
 }
-["calls","locks","targets","results","today","tomorrow","|"].concat(MORE).forEach(s => {
+["calls","locks","targets","results","|"].concat(MORE).forEach(s => {
   if(s === "|"){
     const d = document.createElement("button");
     d.type = "button"; d.id = "moreToggle"; d.className = "moretoggle";
     d.appendChild(document.createTextNode("More"));
+    d.insertAdjacentHTML("afterbegin", icon("more"));
     d.onclick = () => { moreOpen = !moreOpen; showMore(); };
     days.appendChild(d);
     return;
@@ -1894,9 +2139,18 @@ function showMore(){
       + '<span class="dnum">' + pretty(D.dates[s]) + '</span>';
   }
   b.dataset.slot = s;
+  b.type = "button";
+  b.insertAdjacentHTML("afterbegin", icon(s));
+  if(s === slot) b.setAttribute("aria-current", "page");
   b.onclick = () => {
     slot = s;
-    [...days.children].forEach(x => x.setAttribute && x.setAttribute("aria-pressed", String(x === b)));
+    [...days.children].forEach(x => {
+      if(!x.setAttribute || x.id === "moreToggle") return;
+      x.setAttribute("aria-pressed", String(x === b));
+      if(x === b) x.setAttribute("aria-current", "page"); else x.removeAttribute("aria-current");
+    });
+    // on phones the More sheet closes once a section is chosen
+    if(MORE.includes(s) && window.matchMedia("(max-width:760px)").matches){ moreOpen = false; showMore(); }
     buildTabs(); render();
     // keep the chosen tab in view and start the section at its top
     b.scrollIntoView({inline: "center", block: "nearest", behavior: "smooth"});
@@ -2447,7 +2701,7 @@ buildTabs(); render(); drawSlip();
       el.id = "stalebar";
       el.setAttribute("role", "alert");
       el.style.cssText = "position:sticky;top:0;z-index:50;padding:10px 16px;font-weight:600;"
-        + "background:var(--bad,#b3261e);color:#fff;text-align:center";
+        + "background:#B42318;color:#fff;text-align:center";
       document.body.insertBefore(el, document.body.firstChild);
     }
     var age = mins < 120 ? mins + " minutes" : Math.round(mins / 60) + " hours";
