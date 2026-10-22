@@ -317,6 +317,26 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|uel:401915557:away": {
+   "ev": 0.0584,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0584,
+     "fair": 0.5292,
+     "id": "uel:401915557",
+     "price": "+100",
+     "side": "away",
+     "spec": null,
+     "team": "Marseille"
+    }
+   ],
+   "payout": 2.0,
+   "prob": 0.5292,
+   "seen": "2026-10-22T15:34:54+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
   "uecl:401915744|away|FanDuel": {
    "dec": 8.0,
    "ev": 0.1086,
@@ -384,6 +404,23 @@
    "team": "Celta Vigo",
    "tip": "3:00 PM",
    "venue": "Kalshi"
+  },
+  "uel:401915557|away|FanDuel": {
+   "dec": 2.0,
+   "ev": 0.0584,
+   "fair": 0.5292,
+   "fair_source": "DraftKings (Shin)",
+   "id": "uel:401915557",
+   "kind": "value",
+   "league": "uel",
+   "match": "OLM @ STG",
+   "price": "+100",
+   "seen": "2026-10-22T15:34:54+00:00",
+   "side": "away",
+   "start": "2026-10-22T16:45Z",
+   "team": "Marseille",
+   "tip": "12:45 PM",
+   "venue": "FanDuel"
   }
  }
 }
