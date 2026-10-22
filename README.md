@@ -2888,3 +2888,17 @@ These checks establish the decision rules, not future winning percentages.
 
 - **Rejected:** the ledger's soccer profit does not reproduce. The pattern matches the other sports: weak favourites lose about 5–6%, and 60%+ favourites are near break-even.
 - `band_value` now covers soccer straight-win picks. No soccer band is a skip, because none has its whole interval below zero.
+
+**Props cost more: recommended tickets use game lines only.** 742 graded FanDuel props (2026-10-15 to 10-21) at their real prices:
+
+| props by chance | N | ROI per $1 |
+|---|---|---|
+| under 50% | 41 | −40.9% |
+| 60–70% | 38 | −23.1% |
+| 70–80% | 158 | −5.8% |
+| 80–90% | 482 | −7.1% (≈ −11 to −3) |
+
+- Game-line favourites in the same bands returned −1.6% and −1.9%.
+- `tickets.GAME_LINES_ONLY` keeps props out of the recommended tickets: the Locks 2× and 10× tickets and the Targets frontier.
+- Props stay on the Props tab, and the Locks card and Lottery are unchanged.
+- Test: `test_tickets.GameLinesOnly` fails on the previous commit and passes now.

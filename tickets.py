@@ -448,10 +448,21 @@ def candidates(pool, now=None):
     return ok, out
 
 
+# Player props cost more than game lines at the same chance: 482 graded
+# FanDuel props at 80-90% returned -7.1% per $1 (2026-10-15..21) against
+# -1.9% for 727 game-line favourites in that band (README, 2026-10-22). The
+# recommended tickets are built from game lines only.
+GAME_LINES_ONLY = True
+
+
+def game_lines(pool):
+    return [L for L in pool or [] if L.get("kind") != "prop"] if GAME_LINES_ONLY else list(pool or [])
+
+
 def build_frontier(pool, targets=TARGETS, standards=STANDARDS,
                    max_legs=MAX_LEGS, boost=0.0, now=None):
     """The frontier from a live candidate pool, every number labelled."""
-    ok, excluded = candidates(pool, now)
+    ok, excluded = candidates(game_lines(pool), now)
     rows = frontier(ok, targets, standards, max_legs=max_legs, boost=boost)
     for r in rows:
         r["payout_basis"] = "estimated: product of FanDuel's listed prices (FanDuel prices the slip)"

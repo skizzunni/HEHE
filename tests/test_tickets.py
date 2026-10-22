@@ -256,3 +256,19 @@ class Evidence(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class GameLinesOnly(unittest.TestCase):
+    def test_props_never_enter_the_recommended_tickets(self):
+        import datetime as dt
+        now = dt.datetime(2026, 10, 22, 14, tzinfo=dt.timezone.utc)
+        def leg(i, kind):
+            return dict(gid=f"nhl:{i}", label=f"L{i}", p=0.85, price="-300", kind=kind, league="nhl",
+                        spec=dict(t="win", team=f"T{i}"), fd=f"f{i}", market="Shots on Goal" if kind == "prop" else None,
+                        quoted=now.isoformat(), start=(now + dt.timedelta(hours=3)).isoformat(), plays=True)
+        pool = [leg(1, "prop"), leg(2, "game"), leg(3, "game")]
+        front = T.build_frontier(pool, targets=(1.5,), standards=(0.80,), now=now)
+        self.assertEqual(front["candidates"], 2)
+        legs = [L for r in front["rows"] for L in (r.get("legs") or [])]
+        self.assertTrue(legs)
+        self.assertTrue(all(L["gid"] != "nhl:1" for L in legs))

@@ -1196,7 +1196,8 @@ function drawTargets(){
     + (String(val) === String(cur)) + '">' + txt + '</button>';
   let h = '<div class="parlays"><div class="sechead"><h3>Payout targets</h3>' + dayPills("tgday", day) + '</div>'
     + '<p class="note">Pick the leg standard and the payout you want; this finds the combination of legs with the '
-    + 'highest estimated chance that every leg wins and the slip still pays that much. One leg per game, at most '
+    + 'highest estimated chance that every leg wins and the slip still pays that much. Game lines only: player props '
+    + 'returned -7.1% per $1 at 80-90% against -1.9% for game favourites. One leg per game, at most '
     + (X.max_legs || 6) + ' legs, at most ' + (X.kind_cap || 3) + ' of one league and kind. No quota: it stops when '
     + 'the payout is reached. A ticket of favourites is never &ldquo;safe&rdquo;.</p>'
     + '<p><span class="pills">' + [0.90, 0.85, 0.80, 0.75, 0.65].map(v => pill("data-tgstd", v, TGSTD, 'legs ' + (100 * v) + '%+')).join("")
