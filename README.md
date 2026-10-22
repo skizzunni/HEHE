@@ -2950,3 +2950,15 @@ They fail on the previous commit (no module) and pass now.
 - Each ticket is shown with its cash chance, payout and expected return, archived once in `value.json`, and graded when every leg settles. A pushed leg voids it here.
 - They are still mostly losing tickets; what changes is the expected return, not the odds of any one ticket.
 - Tests: `test_value_bets.Parlays` (positive EV, one book, one leg per game; archived once and graded).
+
+**Polymarket as a second fair reference** (`polymarket.py`, public API, no key).
+- Polymarket lists each game in the US leagues with a moneyline, spreads and totals; the deep markets carry six- and seven-figure liquidity.
+- An exchange price carries no bookmaker margin. Where a market has $10,000+ of liquidity, its price is averaged with DraftKings' Shin fair, and the value scan records `fair_source`.
+- It is a reference only, never a venue: its fees and availability to US bettors are not established here.
+- **Agreement check, 2026-10-22:** on 60 matched moneylines, DraftKings' Shin fair and Polymarket's price differed by 0.87 percentage points on average. Two independent markets agree, so the fair used for value bets is sound.
+- **Live finds with the consensus fair:**
+  - St. Louis +1.5 and Winnipeg +1.5 at FanDuel (+1.0% each);
+  - Toronto Raptors at FanDuel −162 (+1.7%);
+  - Chicago Bulls at FanDuel −104 (+1.5%);
+  - Indiana −5.5 at Kalshi +101 (+2.8%, DraftKings fair only).
+- **Test:** `tests/test_polymarket.py` (3) covers moneyline, spread both sides and totals, thin markets ignored, unmatched games ignored, and the average with DraftKings' fair.

@@ -114,7 +114,21 @@ def line_prices(league, row, spec, FD=None, KB=None):
     return out
 
 
-def scan(league, row, FD=None, KB=None, min_ev=MIN_EV, OA=None):
+def _consensus(fair, src, league, row, spec, PM):
+    """Average the fair chance with Polymarket's liquid price where it has one."""
+    if not PM:
+        return fair, src
+    try:
+        import polymarket
+        p = polymarket.fair(PM, league, row.get("mkt") or {}, spec)
+    except Exception:
+        p = None
+    if p is None:
+        return fair, src
+    return (fair + p) / 2, src + " + Polymarket"
+
+
+def scan(league, row, FD=None, KB=None, min_ev=MIN_EV, OA=None, PM=None):
     """(value bets, sure bet or None) for one board game."""
     import venues
     sides = _sides(row)
@@ -130,6 +144,7 @@ def scan(league, row, FD=None, KB=None, min_ev=MIN_EV, OA=None):
                     fair, src = sf, "Pinnacle (Shin)"
             except Exception:
                 pass
+        fair, src = _consensus(fair, src, league, row, dict(t="win", team=team), PM)
         vs = venues.compare(league, row, team, price, row.get("price_book") or "DraftKings", FD, KB, OA)
         if not vs:
             continue
@@ -146,13 +161,14 @@ def scan(league, row, FD=None, KB=None, min_ev=MIN_EV, OA=None):
                                   start=(row.get("mkt") or {}).get("start")))
     # spreads and totals: the same comparison on exactly the same line
     for spec, label, fair, dk in line_markets(row):
+        fair, lsrc = _consensus(fair, "DraftKings (Shin)", league, row, spec, PM)
         for v in line_prices(league, row, spec, FD, KB):
             ev = fair * v["dec"] - 1
             if ev > min_ev:
                 value.append(dict(id=row["id"], league=league, side=json.dumps(spec, sort_keys=True),
                                   team=label, market=spec["t"], spec=spec, venue=v["venue"],
                                   price=v.get("american") or v["price"], dec=v["dec"], fair=round(fair, 4),
-                                  ev=round(ev, 4), dk=dk, match=row.get("label"), tip=row.get("tip"),
+                                  ev=round(ev, 4), dk=dk, fair_source=lsrc, match=row.get("label"), tip=row.get("tip"),
                                   start=(row.get("mkt") or {}).get("start")))
     sure = None
     if len(best) == 2 and not any(L.get("side") == "draw" for L in row.get("legs") or []):
@@ -168,7 +184,7 @@ def scan(league, row, FD=None, KB=None, min_ev=MIN_EV, OA=None):
     return value, sure
 
 
-def scan_all(slot_rows, FD=None, KB=None, now=None, OA=None):
+def scan_all(slot_rows, FD=None, KB=None, now=None, OA=None, PM=None):
     """Over every fresh, priced, unstarted game: value bets (best EV first)
     and sure bets."""
     import freshness
@@ -179,7 +195,7 @@ def scan_all(slot_rows, FD=None, KB=None, now=None, OA=None):
             st = freshness.parse((r.get("mkt") or {}).get("start"))
             if not freshness.can_call(r, now) or st is None or st <= now:
                 continue
-            v, s = scan(lg, r, FD, KB, OA=OA)
+            v, s = scan(lg, r, FD, KB, OA=OA, PM=PM)
             value.extend(v)
             if s:
                 sure.append(s)

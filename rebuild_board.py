@@ -336,8 +336,13 @@ def snapshot():
     try:
         import value_bets
         vb_val, vb_sure = [], []
+        try:
+            import polymarket
+            PM0 = polymarket.load()
+        except Exception:
+            PM0 = {}
         for s_ in ("today", "tomorrow"):
-            v_, su_ = value_bets.scan_all(d._STATE["slots"].get(s_), FD, KB0, pub, OA)
+            v_, su_ = value_bets.scan_all(d._STATE["slots"].get(s_), FD, KB0, pub, OA, PM0)
             vb_val += v_
             vb_sure += su_
         value_bets.record(vb_val, vb_sure, pub)
