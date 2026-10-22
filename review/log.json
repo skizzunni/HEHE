@@ -2530,9 +2530,9 @@
    }
   },
   "clv": {
-   "avg": null,
-   "beat": null,
-   "n": 0
+   "avg": 0.83,
+   "beat": 100.0,
+   "n": 1
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2601,9 +2601,23 @@
    }
   ],
   "picks": {
-   "n": 0
+   "hit": 100.0,
+   "lost": 0,
+   "n": 1,
+   "roi": 14.3,
+   "said": 83.0,
+   "won": 1
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "uecl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 14.3,
+    "said": 83.0,
+    "won": 1
+   }
+  },
   "props": {
    "fair": {
     "n": 337,
@@ -2647,12 +2661,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.7,
+    "hit": 66.8,
     "lost": 103,
-    "n": 309,
-    "roi": -3.4,
+    "n": 310,
+    "roi": -3.3,
     "said": 64.3,
-    "won": 206
+    "won": 207
    }
   },
   "weights": {

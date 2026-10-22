@@ -1,7 +1,8 @@
 # Review 2026-10-22
 
-No picks settled yet.
-With the market 66.7% (309); against it 37.5% (24).
+Picks 1-0 (100.0% vs 83.0% claimed, ROI +14.3%).
+Closing line value: +0.83 points on 1 picks; beat the close on 100.0%.
+With the market 66.8% (310); against it 37.5% (24).
 Locks 0/11 won, 11 open; Best play top 2 (60%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (87%) open; Best play top 8 (51%) open.
 Lottery 10k: open (0/11 legs won)
