@@ -265,6 +265,13 @@ def update_daily(state, now=None, path=None, n=None, summary=None):
         if snapshot:
             rec["shadow"] = snapshot
             changed = True
+        else:
+            # No ticket could be built yet. Keep the day's best attempt, so a
+            # day with no comparison is evidence (why, and how close), not a
+            # silent gap: 2026-10-21 had five 75%+ legs at -395 to -500, and
+            # no 3 of them reach 2x (best 1.91x).
+            rec["shadow_watch"] = shadow_watch(rec.get("shadow_watch"), observations, now)
+            changed = True
     if changed:
         save_daily(book, path)
     return rec
@@ -286,6 +293,28 @@ def shadow_tickets(calls_today, now):
         for name, ticket in ((f"strongest_{target:.0f}x", base), (f"optimizer_{target:.0f}x", opt)):
             out["strategies"][name] = [x["id"] for x in ticket["legs"]] if ticket else None
     return out if any(out["strategies"].values()) else None
+
+
+def shadow_watch(prev, observations, now):
+    """The best attempt so far at a shadow snapshot: legs ready, the highest
+    payout any allowed ticket could reach, and why legs were left out."""
+    import collections
+    import live_tickets as L
+    w = dict(prev or dict(checks=0, max_ready=0, best_ceiling=None, reasons={}))
+    pool, excluded = L.eligible(observations, now)
+    ceil = max((t["payout"] for t in L.choices(pool)), default=None) if len(pool) >= 2 else None
+    w["checks"] += 1
+    w["last"] = now.isoformat(timespec="seconds")
+    if len(pool) > w["max_ready"]:
+        w["max_ready"] = len(pool)
+    if ceil and (w["best_ceiling"] is None or ceil > w["best_ceiling"]):
+        w["best_ceiling"], w["best_at"] = round(ceil, 3), w["last"]
+    r = collections.Counter(w.get("reasons") or {})
+    for x in excluded:
+        for why in x.get("reasons") or []:
+            r[why] += 1
+    w["reasons"] = dict(r.most_common(6))
+    return w
 
 
 def daily_ids(day, path=None):

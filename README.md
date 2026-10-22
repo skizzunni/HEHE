@@ -2781,3 +2781,26 @@ Validation: the first 10 targeted regressions failed before implementation.
 and new fixed-payout/quote-expiry checks pass with no JavaScript errors using a
 Playwright adapter; the repository Chrome fixtures now cover the same new UI.
 These checks establish the decision rules, not future winning percentages.
+
+## Results check and fixes (2026-10-22)
+
+**Live results, 2026-10-20 to 10-21.**
+- **Daily calls:** 9–1. 20 Oct went 4–1 (lost: Florida International −380, 23–26); 21 Oct went 5–0.
+- **Locks card legs:** 11–0 (the full card hit) and 9–2. **Safe Locks:** 9–2 and 9–2.
+- **Lottery:** 42 tickets, 0 hits.
+- **Independent re-grade:** 0 mismatches in 222 settled picks, 10-18 to 10-21.
+- **Closing line, last 300 picks** (10-10 to 10-21): Brier 0.2188 published vs 0.2074 closing, mean CLV −0.2 points. The market is still the model.
+- **Strong calls:** none earned in the 10-20 to 11-02 freeze.
+- Ten calls is far too few to judge.
+
+**Defect fixed: days with no shadow comparison were silent.**
+- On 2026-10-21 the five legs that cleared the 75% standard were priced −395 to −500. No three of them reach 2× (best 1.91×), so the shadow test archived nothing and said nothing.
+- Each day whose calls are complete now keeps `shadow_watch`: legs ready, the highest payout any allowed ticket could reach, and the top exclusion reasons.
+- `tools/shadow.py` lists those days under `no_ticket_days`.
+- Test: `tests/test_live_pick_quality.py::NoTicketDays` replays that day; it fails on the previous commit and passes now.
+- What 10-21 shows: at a 75% leg standard and at most 3 legs, 2× is unreachable on days when every strong leg is a heavy favourite. Changing the standard or the leg cap is a trade-off for the owner to choose, not a silent fix.
+
+**Site.**
+- **Navigation:** the six sections that decide a bet come first (Calls, Locks, Targets, Results, Today, Tomorrow). Lottery, Props, Card, Stacks, Markets and Bot sit behind **More**, which opens by itself when one of them is current.
+- **What to expect today:** the Calls tab shows the exact distribution of how many calls should win, from their published chances. That is what any number of simulations converges to. It shows expected wins, the chance all win, the chance of all but one, and the chance two or more lose. It is a display only; it changes no pick.
+- UI probe checks 7–8 fail on the previous commit and pass now.

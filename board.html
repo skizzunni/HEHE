@@ -203,6 +203,8 @@ aside .fig{font-family:var(--mono);color:var(--accent);font-weight:600}
 .days button[aria-pressed="true"]{background:var(--ink);color:var(--ground);border-color:var(--ink)}
 .days button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 .days .sep{flex:0 0 1px;background:var(--rule);margin:4px 2px}
+.days .moretoggle{border-style:dashed}
+.days button.more{font-weight:500}
 /* counts only where they help: the dates on Today/Tomorrow and today's record */
 .days button .dnum{display:none}
 .days button[data-slot="today"] .dnum,.days button[data-slot="tomorrow"] .dnum,
@@ -1068,7 +1070,26 @@ function drawCalls(){
             + '</td><td>' + st(c) + '</td></tr>').join("")
         + '</tbody></table>'
       : '<p class="empty">Today&rsquo;s calls are set at 8:00 AM Eastern from the games with a fresh price.</p>')
-    + rec + callTickets() + '</div>';
+    + rec + callOdds(C) + callTickets() + '</div>';
+}
+// How many of today's calls should win: the exact distribution from their
+// published chances (what any number of simulations converges to), treating
+// the games as independent -- the record shows no negative dependence.
+function callOdds(C){
+  const ps = C.filter(c => c.status !== "pulled" && c.status !== "void").map(c => c.conf / 100);
+  if(ps.length < 2) return "";
+  let d = [1];
+  ps.forEach(p => { const n = new Array(d.length + 1).fill(0);
+    d.forEach((v, k) => { n[k] += v * (1 - p); n[k + 1] += v * p; }); d = n; });
+  const atLeast = k => d.slice(k).reduce((a, b) => a + b, 0);
+  const exp = ps.reduce((a, b) => a + b, 0);
+  return '<h3 style="margin-top:18px">What to expect today</h3>'
+    + strip([["expected wins", exp.toFixed(1) + " of " + ps.length],
+             ["all " + ps.length + " win", (100 * atLeast(ps.length)).toFixed(0) + "%"],
+             [(ps.length - 1) + "+ win", (100 * atLeast(ps.length - 1)).toFixed(0) + "%"],
+             ["2 or more lose", (100 * (1 - atLeast(ps.length - 1))).toFixed(0) + "%"]])
+    + '<p class="note">Exact odds from each call&rsquo;s published chance &mdash; what running thousands of simulations '
+    + 'would converge to. Even five strong favourites usually include a loser.</p>';
 }
 // Tickets from the day's calls only (call_tickets.py)
 function callTickets(){
@@ -1688,9 +1709,26 @@ function drawCard(slot){
     + '</tbody></table>' + cardProps(slot);
 }
 
-["calls","today","tomorrow","locks","targets","lottery","props","results","|","card","stacks","markets","bot"].forEach(s => {
-  if(s === "|"){ const d = document.createElement("span"); d.className = "sep"; days.appendChild(d); return; }
+// The sections that decide a bet come first; everything else sits behind
+// "More" (opened automatically when one of them is the current section).
+const MORE = ["lottery", "props", "card", "stacks", "markets", "bot"];
+let moreOpen = MORE.includes(slot);
+function showMore(){
+  [...days.querySelectorAll(".more")].forEach(x => x.hidden = !moreOpen);
+  const t = document.getElementById("moreToggle");
+  if(t){ t.setAttribute("aria-expanded", String(moreOpen)); t.firstChild.textContent = moreOpen ? "Less \u25B4" : "More \u25BE"; }
+}
+["calls","locks","targets","results","today","tomorrow","|"].concat(MORE).forEach(s => {
+  if(s === "|"){
+    const d = document.createElement("button");
+    d.type = "button"; d.id = "moreToggle"; d.className = "moretoggle";
+    d.appendChild(document.createTextNode("More"));
+    d.onclick = () => { moreOpen = !moreOpen; showMore(); };
+    days.appendChild(d);
+    return;
+  }
   const b = document.createElement("button");
+  if(MORE.includes(s)) b.classList.add("more");
   b.setAttribute("aria-pressed", String(s === slot));
   const R = D.results || {};
   if(s === "calls"){
@@ -1744,6 +1782,7 @@ function drawCard(slot){
   };
   days.appendChild(b);
 });
+showMore();
 
 // ---------------------------------------------------------------- bot view
 // bot.json is written by bot/kalshi_bot.py after every rebuild. It is fetched

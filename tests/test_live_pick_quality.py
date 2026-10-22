@@ -19,6 +19,21 @@ def call(i,p=.82,price='-200',book='DraftKings',**kw):
     c['current']=q;c.update(kw);return c
 
 
+class NoTicketDays(unittest.TestCase):
+    def test_day_with_no_possible_ticket_is_recorded_not_silent(self):
+        """2026-10-21: five ready 75%+ legs at -395 to -500; no 3 of them pay
+        2x, so no snapshot was archived and nothing said why."""
+        prices=['-500','-450','-425','-425','-395']
+        cs=[call(i+1,p=.78,price=pr) for i,pr in enumerate(prices)]
+        self.assertIsNone(calls.shadow_tickets(cs,NOW))
+        w=calls.shadow_watch(None,cs,NOW)
+        self.assertEqual((w['checks'],w['max_ready']),(1,5))
+        self.assertLess(w['best_ceiling'],2.0)
+        self.assertAlmostEqual(w['best_ceiling'],round((1+100/395)*(1+100/425)**2,3))
+        w=calls.shadow_watch(w,cs[:1],NOW)
+        self.assertEqual((w['checks'],w['max_ready']),(2,5))     # the best attempt is kept
+
+
 class LivePickQuality(unittest.TestCase):
     def targets(self,cs,**kw):
         import live_tickets as L

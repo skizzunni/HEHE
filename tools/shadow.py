@@ -79,10 +79,18 @@ def report(graded):
     return rep
 
 
+def no_ticket_days(days):
+    """Days whose calls were complete but no ticket could be archived."""
+    return {d: rec.get("shadow_watch") for d, rec in sorted(days.items())
+            if rec.get("shadow_watch") and not rec.get("shadow")}
+
+
 def main():
     import calls
     import ledger
-    rep = report(grade(calls.load_daily()["days"], ledger.load()))
+    days = calls.load_daily()["days"]
+    rep = report(grade(days, ledger.load()))
+    rep["no_ticket_days"] = no_ticket_days(days)
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w") as fh:
         json.dump(rep, fh, indent=1, sort_keys=True)

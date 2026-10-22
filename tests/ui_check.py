@@ -95,6 +95,11 @@ PROBE = """<script>setTimeout(function(){
   var out = {banner: !!document.getElementById("stalebar")};
   var iso = function(m){ return new Date(Date.now() - m * 60000).toISOString(); };
   out.staleNow = [staleNow({pa: iso(20)}), staleNow({pa: iso(5)}), staleNow({st: true}), staleNow({})];
+  out.moreHidden = [].slice.call(document.querySelectorAll("#days .more")).filter(function(x){return !x.hidden}).length;
+  var mt = document.getElementById("moreToggle"); if (mt) mt.click();
+  out.moreShown = [].slice.call(document.querySelectorAll("#days .more")).filter(function(x){return !x.hidden}).length;
+  if (mt) mt.click();
+  out.odds = callOdds([{conf: 80}, {conf: 80}]);
   var b = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Locks/.test(x.textContent)})[0];
   if (b) b.click();
   setTimeout(function(){
@@ -190,6 +195,10 @@ def main():
         if want not in tg:
             fails.append("Targets tab missing: " + want + " | " + tg[:300])
             break
+    if (new.get("moreHidden"), new.get("moreShown")) != (0, 6):
+        fails.append(f"secondary sections must sit behind More: {new.get('moreHidden')} shown, {new.get('moreShown')} after opening")
+    if "64%" not in (new.get("odds") or "") or "1.6 of 2" not in (new.get("odds") or ""):
+        fails.append("outcome odds: two 80% calls must read 64% all win, 1.6 expected: " + (new.get("odds") or "")[:200])
     if not new.get("betFirst"):
         fails.append("Locks must lead with the likeliest 2x ticket (betFirst)")
     if new.get("staleNow") != [True, False, True, False]:
