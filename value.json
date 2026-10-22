@@ -354,6 +354,26 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|uel:401915553:away": {
+   "ev": 0.0184,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0184,
+     "fair": 0.3843,
+     "id": "uel:401915553",
+     "price": "+165",
+     "side": "away",
+     "spec": null,
+     "team": "Crystal Palace"
+    }
+   ],
+   "payout": 2.65,
+   "prob": 0.3843,
+   "seen": "2026-10-22T17:55:47+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|uel:401915557:away": {
    "ev": 0.0584,
    "kind": "parlay",
@@ -405,6 +425,23 @@
    "side": "away",
    "start": "2026-10-22T19:00Z",
    "team": "Egnatia",
+   "tip": "3:00 PM",
+   "venue": "FanDuel"
+  },
+  "uel:401915553|away|FanDuel": {
+   "dec": 2.65,
+   "ev": 0.0184,
+   "fair": 0.3843,
+   "fair_source": "DraftKings (Shin)",
+   "id": "uel:401915553",
+   "kind": "value",
+   "league": "uel",
+   "match": "CRY @ BES",
+   "price": "+165",
+   "seen": "2026-10-22T17:55:47+00:00",
+   "side": "away",
+   "start": "2026-10-22T19:00Z",
+   "team": "Crystal Palace",
    "tip": "3:00 PM",
    "venue": "FanDuel"
   },
