@@ -3295,11 +3295,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Brandon Miller",
   "p": 0.8521,
   "p_fair": 0.8769,
   "price": "-850",
-  "status": "open"
+  "status": "lost",
+  "value": 21.0
  },
  "nba:401909836|n:brandon miller|Pts + Reb|20+": {
   "aid": null,
@@ -3311,11 +3313,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb",
+  "matched": "name",
   "name": "Brandon Miller",
   "p": 0.8461,
   "p_fair": 0.9011,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401909836|n:dennis schroder|Assists|4+": {
   "aid": null,
@@ -3327,11 +3331,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Dennis Schroder",
   "p": 0.8489,
   "p_fair": 0.8711,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909836|n:egor demin|Reb + Ast|5+": {
   "aid": null,
@@ -3343,11 +3349,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Egor Demin",
   "p": 0.8457,
   "p_fair": 0.8735,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909836|n:egor demin|Threes Made|1+": {
   "aid": null,
@@ -3359,11 +3367,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Egor Demin",
   "p": 0.855,
   "p_fair": 0.9215,
   "price": "-1800",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401909836|n:grayson allen|Threes Made|1+": {
   "aid": null,
@@ -3375,11 +3385,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Grayson Allen",
   "p": 0.8494,
   "p_fair": 0.9128,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909836|n:michael porter|Rebounds|4+": {
   "aid": null,
@@ -3391,11 +3403,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Michael Porter Jr.",
   "p": 0.8483,
   "p_fair": 0.877,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909836|n:moussa diabat|Pts + Reb|10+": {
   "aid": null,
@@ -3407,11 +3421,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb",
+  "matched": "name",
   "name": "Moussa Diabat\u00e9",
   "p": 0.848,
   "p_fair": 0.9221,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 25.0
  },
  "nba:401909836|n:naz reid|Threes Made|1+": {
   "aid": null,
@@ -3423,11 +3439,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Naz Reid",
   "p": 0.8494,
   "p_fair": 0.9018,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909837|n:collin murray boyles|Points|5+": {
   "aid": null,
@@ -12039,6 +12057,7 @@
   "p": 0.7361,
   "p_fair": null,
   "price": "-395",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
