@@ -2603,11 +2603,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Andrew Wiggins",
   "p": 0.8544,
   "p_fair": 0.8727,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909091|n:anthony edwards|Assists|2+": {
   "aid": null,
@@ -2619,11 +2621,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Anthony Edwards",
   "p": 0.8539,
   "p_fair": 0.8662,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909091|n:davion mitchell|Assists|4+": {
   "aid": null,
@@ -2635,11 +2639,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Davion Mitchell",
   "p": 0.8489,
   "p_fair": 0.867,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909091|n:giannis antetokounmpo|Pts + Reb + Ast|35+": {
   "aid": null,
@@ -2651,11 +2657,13 @@
   "league": "nba",
   "line": "35+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Giannis Antetokounmpo",
   "p": 0.8521,
   "p_fair": 0.8446,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 42.0
  },
  "nba:401909091|n:jaden mcdaniels|Reb + Ast|5+": {
   "aid": null,
@@ -2667,11 +2675,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Jaden McDaniels",
   "p": 0.8507,
   "p_fair": 0.8735,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909091|n:pelle larsson|Points|5+": {
   "aid": null,
@@ -2683,11 +2693,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Pelle Larsson",
   "p": 0.8528,
   "p_fair": 0.9608,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nba:401909091|n:pelle larsson|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -2699,11 +2711,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Pelle Larsson",
   "p": 0.8519,
   "p_fair": 0.9543,
   "price": "-950",
-  "status": "open"
+  "status": "lost",
+  "value": 9.0
  },
  "nba:401909091|n:rudy gobert|Points|5+": {
   "aid": null,
@@ -2715,11 +2729,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Rudy Gobert",
   "p": 0.8487,
   "p_fair": 0.9507,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909091|n:tim hardaway|Threes Made|1+": {
   "aid": null,
@@ -2731,11 +2747,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Tim Hardaway Jr.",
   "p": 0.8503,
   "p_fair": 0.8828,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909092|n:austin reaves|Assists|4+": {
   "aid": null,
@@ -14198,11 +14216,13 @@
   "league": "wnba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Allisha Gray",
   "p": 0.8472,
   "p_fair": 0.904,
   "price": "-1300",
-  "status": "open"
+  "status": "lost",
+  "value": 8.0
  },
  "wnba:401918307|n:angel reese|Rebounds|10+": {
   "aid": null,
@@ -14214,11 +14234,13 @@
   "league": "wnba",
   "line": "10+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Angel Reese",
   "p": 0.7226,
   "p_fair": 0.7388,
   "price": "-360",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "wnba:401918307|n:angel reese|Rebounds|8+": {
   "aid": null,
@@ -14230,11 +14252,13 @@
   "league": "wnba",
   "line": "8+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Angel Reese",
   "p": 0.8523,
   "p_fair": 0.8976,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "wnba:401918307|n:gabby williams|Threes Made|1+": {
   "aid": null,
@@ -14246,11 +14270,13 @@
   "league": "wnba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Gabby Williams",
   "p": 0.8575,
   "p_fair": 0.8942,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "wnba:401918307|n:jordin canada|Assists|6+": {
   "aid": null,
@@ -14262,11 +14288,13 @@
   "league": "wnba",
   "line": "6+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jordin Canada",
   "p": 0.7406,
   "p_fair": 0.7425,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "wnba:401918307|n:rhyne howard|Assists|2+": {
   "aid": null,
@@ -14278,11 +14306,13 @@
   "league": "wnba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Rhyne Howard",
   "p": 0.8504,
   "p_fair": 0.8569,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "wnba:401918307|n:rhyne howard|Threes Made|2+": {
   "aid": null,
@@ -14294,11 +14324,13 @@
   "league": "wnba",
   "line": "2+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Rhyne Howard",
   "p": 0.7333,
   "p_fair": 0.742,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "wnba:401918307|n:tiffany hayes|Points|5+": {
   "aid": null,
@@ -14310,10 +14342,12 @@
   "league": "wnba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Tiffany Hayes",
   "p": 0.8472,
   "p_fair": 0.9598,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  }
 }

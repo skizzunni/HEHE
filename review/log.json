@@ -1990,10 +1990,10 @@
   },
   "props": {
    "fair": {
-    "n": 242,
-    "said_fair": 84.3,
-    "said_price": 86.5,
-    "won": 200
+    "n": 259,
+    "said_fair": 84.5,
+    "said_price": 86.6,
+    "won": 213
    },
    "n": 131,
    "said": 82.8,
@@ -2060,10 +2060,17 @@
    },
    {
     "flag": false,
-    "hit": 83.3,
-    "n": 12,
+    "hit": 100.0,
+    "n": 10,
+    "name": "props nba Assists",
+    "said": 85.5
+   },
+   {
+    "flag": false,
+    "hit": 78.6,
+    "n": 14,
     "name": "props nba Points",
-    "said": 84.9
+    "said": 85.0
    },
    {
     "flag": false,
@@ -2074,9 +2081,23 @@
    },
    {
     "flag": false,
-    "hit": 81.8,
-    "n": 11,
+    "hit": 76.9,
+    "n": 13,
     "name": "props nba Pts + Reb + Ast",
+    "said": 85.0
+   },
+   {
+    "flag": false,
+    "hit": 100.0,
+    "n": 10,
+    "name": "props nba Reb + Ast",
+    "said": 84.9
+   },
+   {
+    "flag": false,
+    "hit": 72.7,
+    "n": 11,
+    "name": "props nba Threes Made",
     "said": 85.0
    },
    {
@@ -2137,10 +2158,10 @@
    },
    {
     "flag": false,
-    "hit": 73.3,
-    "n": 15,
+    "hit": 70.6,
+    "n": 17,
     "name": "props wnba Points",
-    "said": 81.9
+    "said": 82.2
    },
    {
     "flag": false,
@@ -2226,9 +2247,9 @@
    }
   },
   "clv": {
-   "avg": -1.37,
-   "beat": 50.0,
-   "n": 8
+   "avg": -0.68,
+   "beat": 60.0,
+   "n": 10
   },
   "day": "2026-10-21",
   "leaks_14d": [],
@@ -2237,7 +2258,7 @@
     "Sporting CP to win (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2"
    ],
    "n": 11,
-   "open": 6,
+   "open": 4,
    "plays": {
     "best": [
      2,
@@ -2245,9 +2266,17 @@
      "lost"
     ]
    },
-   "won": 4
+   "won": 6
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "nba",
+    "pick": "Miami Heat",
+    "price": "-118",
+    "said": 52,
+    "why": "margin 25 \u00b7 the book had my side favoured too \u00b7 called at 52%"
+   },
    {
     "against_market": false,
     "league": "nba",
@@ -2276,44 +2305,49 @@
   "lottery": [
    {
     "killed_by": [
+     "Over 239.5 points",
      "Over 8.5 goals",
      "Over 219.5 points"
     ],
     "legs": 12,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 2
    },
    {
     "killed_by": [
+     "Over 239.5 points",
      "Over 8.5 goals",
      "Over 219.5 points"
     ],
     "legs": 12,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+25",
     "won": 2
    },
    {
     "killed_by": [
+     "Over 239.5 points",
      "Over 8.5 goals",
      "Over 219.5 points"
     ],
     "legs": 12,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+50",
     "won": 2
    },
    {
     "killed_by": [
+     "Over 239.5 points",
      "Over 8.5 goals",
-     "Over 219.5 points"
+     "Over 219.5 points",
+     "Under 154.5 points"
     ],
     "legs": 12,
-    "lost": 2,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+100",
     "won": 2
@@ -2324,7 +2358,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 4
+    "won": 6
    },
    {
     "killed_by": [
@@ -2341,20 +2375,20 @@
    }
   ],
   "picks": {
-   "hit": 66.7,
-   "lost": 3,
-   "n": 9,
-   "roi": -6.8,
-   "said": 67.4,
-   "won": 6
+   "hit": 63.6,
+   "lost": 4,
+   "n": 11,
+   "roi": -9.6,
+   "said": 65.5,
+   "won": 7
   },
   "picks_by_league": {
    "nba": {
-    "hit": 66.7,
-    "lost": 1,
-    "n": 3,
-    "roi": 12.4,
-    "said": 56.0,
+    "hit": 50.0,
+    "lost": 2,
+    "n": 4,
+    "roi": -15.7,
+    "said": 55.0,
     "won": 2
    },
    "nhl": {
@@ -2380,25 +2414,33 @@
     "roi": 29.4,
     "said": 72.0,
     "won": 1
+   },
+   "wnba": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 55.6,
+    "said": 62.0,
+    "won": 1
    }
   },
   "props": {
    "fair": {
-    "n": 242,
-    "said_fair": 84.3,
-    "said_price": 86.5,
-    "won": 200
+    "n": 259,
+    "said_fair": 84.5,
+    "said_price": 86.6,
+    "won": 213
    },
-   "n": 48,
-   "said": 80.0,
-   "won": 39
+   "n": 65,
+   "said": 80.8,
+   "won": 52
   },
   "safe_locks": {
    "lost": [
     "Sporting CP or draw (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2"
    ],
    "n": 11,
-   "open": 4,
+   "open": 3,
    "plays": {
     "best": [
      7,
@@ -2411,7 +2453,7 @@
      "won"
     ]
    },
-   "won": 6
+   "won": 7
   },
   "strong": {
    "n": 0
@@ -2427,12 +2469,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.2,
-    "lost": 102,
-    "n": 302,
-    "roi": -3.9,
+    "hit": 66.1,
+    "lost": 103,
+    "n": 304,
+    "roi": -4.1,
     "said": 64.1,
-    "won": 200
+    "won": 201
    }
   },
   "weights": {
