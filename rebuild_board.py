@@ -110,6 +110,13 @@ def snapshot():
         FD = fanduel.load()
     except Exception:
         FD = {}
+    # Kalshi's game markets, for where each straight-win pick pays most
+    # (venues.py); the stacks step reads the same cache
+    try:
+        KB0 = kalshi.load()
+    except Exception:
+        KB0 = {}
+    import venues
     # publish time for the freshness gate: a pick priced more than
     # freshness.MAX_AGE_MIN minutes before this is stale (freshness.py)
     pub = dt.datetime.now(dt.timezone.utc)
@@ -185,6 +192,10 @@ def snapshot():
                              "fd": ((leg or {}).get("fd") if r.get("dc") else fanduel.ml_ref(FD, k, (r.get("mkt") or {}).get("away"),
                                                   (r.get("mkt") or {}).get("home"),
                                                   r["mypick"])),
+                             # the same bet at each venue that lists it, best
+                             # payout first (straight win only)
+                             "vn": (venues.compare(k, r, r["mypick"], leg.get("price"), r.get("price_book"),
+                                                   FD, KB0) if leg and not r.get("dc") else []),
                              "lg": lab})
             # ranked by the published chance (the one probability)
             rows.sort(key=lambda x: (x["mc"] is None, -(x["hit"] or 0),

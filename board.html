@@ -438,6 +438,17 @@ function staleNow(r){
   const t = r.pa ? Date.parse(r.pa) : NaN;
   return !isNaN(t) && (Date.now() - t) > 15 * 60000;
 }
+// Where the same bet pays most (venues.py): shown when another venue beats
+// the listed price. Same pick, same chance -- only a better payout.
+function venueNote(r){
+  const V = r.vn || [];
+  if(V.length < 2) return "";
+  const best = V[0], listed = V.find(v => v.price === String(r.p)) || V[V.length - 1];
+  if(best.dec <= listed.dec + 1e-9) return '<div class="sbn">best price here</div>';
+  const gain = 100 * (best.dec / listed.dec - 1);
+  return '<div class="sbn">better at <b>' + esc(best.venue) + ' ' + esc(best.american || best.price) + '</b>'
+    + ' (+' + gain.toFixed(1) + '% payout)</div>';
+}
 function strongBar(n){
   const S = D.strong;
   // strong-call cut-offs are frozen for 14 days (tools/daily_review.fit_frozen)
@@ -653,7 +664,7 @@ function renderView(){
             + (r.mc >= 90 ? '<span class="tier call" title="90%+ picks won 97% of 110 graded college football picks: the only ones that belong in a long combo">combo-safe</span>' : '')
             + '</td>';
         const price = r.p
-          ? '<td class="mkt"><span class="' + (r.d ? "fade" : "agree") + '">' + r.p + '</span></td>'
+          ? '<td class="mkt"><span class="' + (r.d ? "fade" : "agree") + '">' + r.p + '</span>' + venueNote(r) + '</td>'
           : (r.fv && / or draw$/.test(r.mp)
              ? '<td class="mkt" title="Double chance is its own market on FanDuel: take it if offered at this price or better">fair ' + esc(r.fv) + '</td>'
              : '<td class="mkt none">no line' + (r.src ? ' &middot; ' + esc(r.src) + ' only' : '') + '</td>');

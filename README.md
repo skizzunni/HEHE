@@ -2829,3 +2829,29 @@ These checks establish the decision rules, not future winning percentages.
 **Cost.** Exact search over the 38 Kalshi days took 48 s in all, 3.9 s on the worst day. 27 rows hit the node budget and are labelled approximate.
 
 **Test.** UI probe check 9 (break-even boost: 8% at 10× needs +27.8%, 12% needs none) fails on the previous commit and passes now. Suite and probe pass.
+
+## Profit research, 2026-10-22: what was tested, what helps, what does not
+
+**Rejected: the game model's value on alternate lines.**
+- The Lottery's records suggested that legs whose model chance × FanDuel price exceeded 1 were profitable: 81 legs, 63.0% won vs 54.9% stated, ROI +30%; the other 94 returned −28.5%.
+- Tested properly on the Kalshi archive (18,735 settled contracts, threshold read on the older half), buying every line where the model's chance beat Kalshi's price plus fee by 3+ points:
+
+  | half | N | ROI | 95% range |
+  |---|---|---|---|
+  | older | 278 | +36.1% | |
+  | newer | 530 | **−7.7%** | −45.2% to +32.9% |
+
+- Spreads, totals and moneylines all flip the same way. Not used.
+
+**No edge: betting early vs the close.** On 169 picks with their first-published price, betting at publish lost 3–5% against the closing line in every league and price band, on both halves.
+
+**Small, certain gain: price shopping.** The pick and its chance are unchanged; only the venue changes.
+
+| comparison | N | listed price | other venue | better of the two |
+|---|---|---|---|---|
+| DraftKings vs FanDuel | 44 picks | −6.97% | −7.47% | −6.18% |
+| DraftKings vs Kalshi (fee included) | 203 picks | −10.07% | −10.54% | −9.66% |
+
+- `venues.py` compares each straight-win pick at DraftKings, FanDuel and Kalshi. Kalshi's fee is counted as 0.07 × P × (1 − P) per contract on a 100-lot, rounded up.
+- The price cell names the better venue and its payout gain ("better at FanDuel −140, +5.5% payout").
+- Tests: `tests/test_venues.py` (4) and UI probe check 10 fail on the previous commit and pass now.

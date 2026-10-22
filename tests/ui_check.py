@@ -100,6 +100,9 @@ PROBE = """<script>setTimeout(function(){
   out.moreShown = [].slice.call(document.querySelectorAll("#days .more")).filter(function(x){return !x.hidden}).length;
   if (mt) mt.click();
   out.odds = callOdds([{conf: 80}, {conf: 80}]);
+  out.venue = [venueNote({p: "-160", vn: [{venue: "FanDuel", price: "-140", dec: 1.7143}, {venue: "DraftKings", price: "-160", dec: 1.625}]}),
+               venueNote({p: "-160", vn: [{venue: "DraftKings", price: "-160", dec: 1.625}, {venue: "Kalshi", price: "62\u00a2", dec: 1.6}]}),
+               venueNote({p: "-160", vn: []})];
   out.be = [breakEvenBoost(0.08, 10), breakEvenBoost(0.12, 10), breakEvenBoost(0, 10)];
   var b = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Locks/.test(x.textContent)})[0];
   if (b) b.click();
@@ -203,6 +206,9 @@ def main():
     be = new.get("be") or []
     if len(be) != 3 or abs(be[0] - (1 / 0.08 - 1) / 9 + 1) > 1e-9 or be[1] != 0 or be[2] is not None:
         fails.append(f"break-even boost: 8% at 10x needs +27.8%, 12% needs none: {be}")
+    vn = new.get("venue") or ["", "", "x"]
+    if "FanDuel -140" not in vn[0] or "+5.5%" not in vn[0] or "best price here" not in vn[1] or vn[2] != "":
+        fails.append(f"venue note must name the better venue and its gain: {vn}")
     if not new.get("betFirst"):
         fails.append("Locks must lead with the likeliest 2x ticket (betFirst)")
     if new.get("staleNow") != [True, False, True, False]:
