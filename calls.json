@@ -438,32 +438,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-22T00:02:12+00:00",
+      "checked_at": "2026-10-22T00:07:29+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (7 listed)"
+       "what": "injury report checked (6 listed)"
       },
       "id": "nba:401909840",
       "league": "nba",
       "match": "DAL @ HOU",
       "pick": "Houston Rockets",
       "price": "-425",
-      "price_at": "2026-10-22T00:01:53+00:00",
+      "price_at": "2026-10-22T00:07:04+00:00",
       "price_market": "moneyline",
       "price_ref": "34520240:0ML85871435_1",
-      "prob_at": "2026-10-22T00:01:53+00:00",
+      "prob_at": "2026-10-22T00:07:04+00:00",
       "rank": 5,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-22T00:30Z"
      },
      "dc": false,
-     "fp": "35a892890866",
+     "fp": "3d395b2c77c4",
      "gate": {
       "ok": true,
-      "what": "injury report checked (7 listed)"
+      "what": "injury report checked (6 listed)"
      },
      "id": "nba:401909840",
      "league": "nba",
@@ -482,10 +483,15 @@
        "event": "news",
        "t": "2026-10-21T23:15:59+00:00",
        "what": "injury report checked (7 listed)"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-22T00:07:29+00:00",
+       "what": "injury report checked (6 listed)"
       }
      ],
      "match": "DAL @ HOU",
-     "news_at": "2026-10-21T23:15:59+00:00",
+     "news_at": "2026-10-22T00:07:29+00:00",
      "pick": "Houston Rockets",
      "price": "-395",
      "price_at": "2026-10-21T11:59:46+00:00",
@@ -500,7 +506,7 @@
    ],
    "candidate_news": {
     "mls": "2026-10-21T22:45:06+00:00",
-    "nba": "2026-10-21T23:15:59+00:00",
+    "nba": "2026-10-22T00:07:29+00:00",
     "ucl": "2026-10-21T18:12:11+00:00"
    },
    "candidate_observations": {
@@ -512,7 +518,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-22T00:02:12+00:00",
+      "checked_at": "2026-10-22T00:07:29+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -524,10 +530,10 @@
       "match": "COR @ SFE",
       "pick": "Independiente Santa Fe",
       "price": "-425",
-      "price_at": "2026-10-22T00:01:53+00:00",
+      "price_at": "2026-10-22T00:07:05+00:00",
       "price_market": "moneyline",
       "price_ref": "34862081:0ML86826292_1",
-      "prob_at": "2026-10-22T00:01:53+00:00",
+      "prob_at": "2026-10-22T00:07:05+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -545,7 +551,7 @@
      "match": "COR @ SFE",
      "pick": "Independiente Santa Fe",
      "price": "-425",
-     "price_at": "2026-10-22T00:01:53+00:00",
+     "price_at": "2026-10-22T00:07:05+00:00",
      "price_market": "moneyline",
      "price_ref": "34862081:0ML86826292_1",
      "side": "home",
@@ -560,7 +566,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-22T00:02:12+00:00",
+      "checked_at": "2026-10-22T00:07:29+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -571,11 +577,11 @@
       "league": "mex",
       "match": "TIJ @ TOL",
       "pick": "Toluca",
-      "price": "-400",
-      "price_at": "2026-10-22T00:01:53+00:00",
+      "price": "-425",
+      "price_at": "2026-10-22T00:07:05+00:00",
       "price_market": "moneyline",
       "price_ref": "34853183:0ML86802522_1",
-      "prob_at": "2026-10-22T00:01:53+00:00",
+      "prob_at": "2026-10-22T00:07:05+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -592,8 +598,8 @@
      "league": "mex",
      "match": "TIJ @ TOL",
      "pick": "Toluca",
-     "price": "-400",
-     "price_at": "2026-10-22T00:01:53+00:00",
+     "price": "-425",
+     "price_at": "2026-10-22T00:07:05+00:00",
      "price_market": "moneyline",
      "price_ref": "34853183:0ML86802522_1",
      "side": "home",
@@ -608,7 +614,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-22T00:02:12+00:00",
+      "checked_at": "2026-10-22T00:07:29+00:00",
       "conf": 77,
       "dc": true,
       "gate": {
@@ -620,10 +626,10 @@
       "match": "MTY @ PUE",
       "pick": "Monterrey or draw",
       "price": "-450",
-      "price_at": "2026-10-21T23:57:07+00:00",
+      "price_at": "2026-10-22T00:07:27+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192208816:13737520",
-      "prob_at": "2026-10-22T00:01:53+00:00",
+      "prob_at": "2026-10-22T00:07:05+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -641,7 +647,7 @@
      "match": "MTY @ PUE",
      "pick": "Monterrey or draw",
      "price": "-450",
-     "price_at": "2026-10-21T23:57:07+00:00",
+     "price_at": "2026-10-22T00:07:27+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192208816:13737520",
      "side": "away",
@@ -656,40 +662,48 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-22T00:02:12+00:00",
+      "checked_at": "2026-10-22T00:07:29+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (7 listed)"
+       "what": "injury report checked (6 listed)"
       },
       "id": "nba:401909840",
       "league": "nba",
       "match": "DAL @ HOU",
       "pick": "Houston Rockets",
       "price": "-425",
-      "price_at": "2026-10-22T00:01:53+00:00",
+      "price_at": "2026-10-22T00:07:04+00:00",
       "price_market": "moneyline",
       "price_ref": "34520240:0ML85871435_1",
-      "prob_at": "2026-10-22T00:01:53+00:00",
+      "prob_at": "2026-10-22T00:07:04+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-22T00:30Z"
      },
      "dc": false,
-     "fp": "35a892890866",
+     "fp": "3d395b2c77c4",
      "gate": {
       "ok": true,
-      "what": "injury report checked (7 listed)"
+      "what": "injury report checked (6 listed)"
      },
      "id": "nba:401909840",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-22T00:07:29+00:00",
+       "what": "injury report checked (6 listed)"
+      }
+     ],
      "match": "DAL @ HOU",
-     "news_at": "2026-10-21T23:15:59+00:00",
+     "news_at": "2026-10-22T00:07:29+00:00",
      "pick": "Houston Rockets",
      "price": "-425",
-     "price_at": "2026-10-22T00:01:53+00:00",
+     "price_at": "2026-10-22T00:07:04+00:00",
      "price_market": "moneyline",
      "price_ref": "34520240:0ML85871435_1",
      "side": "home",
@@ -698,10 +712,11 @@
     }
    },
    "frozen": [
+    "nba",
     "ucl"
    ],
    "news": {
-    "nba": "2026-10-21T23:15:59+00:00",
+    "nba": "2026-10-22T00:07:29+00:00",
     "ucl": "2026-10-21T18:06:47+00:00"
    }
   }
