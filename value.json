@@ -314,6 +314,26 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|uecl:401915743:away": {
+   "ev": 0.0158,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0157,
+     "fair": 0.1847,
+     "id": "uecl:401915743",
+     "price": "+450",
+     "side": "away",
+     "spec": null,
+     "team": "KuPS Kuopio"
+    }
+   ],
+   "payout": 5.5,
+   "prob": 0.1847,
+   "seen": "2026-10-22T17:50:42+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|uecl:401915744:away": {
    "ev": 0.1088,
    "kind": "parlay",
@@ -352,6 +372,23 @@
    "prob": 0.5292,
    "seen": "2026-10-22T15:34:54+00:00",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "uecl:401915743|away|FanDuel": {
+   "dec": 5.5,
+   "ev": 0.0157,
+   "fair": 0.1847,
+   "fair_source": "DraftKings (Shin)",
+   "id": "uecl:401915743",
+   "kind": "value",
+   "league": "uecl",
+   "match": "KUPS @ BBL",
+   "price": "+450",
+   "seen": "2026-10-22T17:50:42+00:00",
+   "side": "away",
+   "start": "2026-10-22T19:00Z",
+   "team": "KuPS Kuopio",
+   "tip": "3:00 PM",
    "venue": "FanDuel"
   },
   "uecl:401915744|away|FanDuel": {
