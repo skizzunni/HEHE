@@ -412,6 +412,19 @@ def market_lines(comp):
                     if v not in (None, "", "OFF"):
                         out[k] = str(v)
                         break
+    # DraftKings' closing spread line and price per side, for value_bets.py
+    for o in comp.get("odds") or []:
+        ps = (o or {}).get("pointSpread") if isinstance(o, dict) else None
+        if not ps or out.get("ps_home") is not None:
+            continue
+        for side in ("home", "away"):
+            c_ = ((ps.get(side) or {}).get("close") or {})
+            try:
+                line_ = float(str(c_.get("line")).replace("+", ""))
+            except (TypeError, ValueError):
+                line_ = None
+            if line_ is not None and c_.get("odds") not in (None, "", "OFF"):
+                out[f"ps_{side}"] = [line_, str(c_["odds"])]
     if out.get("fav") is None:
         ml = raw_prices(comp, 2)
         try:

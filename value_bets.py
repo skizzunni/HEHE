@@ -56,6 +56,64 @@ def _sides(row):
     return out
 
 
+def line_markets(row):
+    """[(spec, label, fair, DraftKings price)] for the game's spread and
+    total, fair by Shin's de-vig of DraftKings' two prices."""
+    import devig
+    import venues
+    m = row.get("mkt") or {}
+    out = []
+    h, a = m.get("ps_home"), m.get("ps_away")
+    if h and a and abs(h[0] + a[0]) < 1e-9:
+        fv = devig.fair_decimal(venues.dec(h[1]), venues.dec(a[1]), method=FAIR_METHOD)
+        if fv:
+            for (side, (line, price)), p in zip((("home", h), ("away", a)), fv):
+                team = m.get(side)
+                out.append((dict(t="spread", team=team, line=line), f"{team} {line:+g}", p, price))
+    o, u, tot = m.get("over"), m.get("under"), m.get("total")
+    if o and u and tot is not None:
+        fv = devig.fair_decimal(venues.dec(o), venues.dec(u), method=FAIR_METHOD)
+        if fv:
+            out.append((dict(t="over", line=tot), f"over {tot:g}", fv[0], o))
+            out.append((dict(t="under", line=tot), f"under {tot:g}", fv[1], u))
+    return out
+
+
+def line_prices(league, row, spec, FD=None, KB=None):
+    """[{venue, price, dec}] for a spread or total at FanDuel and Kalshi, on
+    exactly the same line."""
+    import venues
+    m = row.get("mkt") or {}
+    out = []
+    if FD:
+        try:
+            import fanduel
+            g = fanduel.find(FD, league, m.get("away"), m.get("home"))
+            if g:
+                if spec["t"] == "spread":
+                    v = fanduel._runner(g["spread"], spec["team"])
+                else:
+                    v = g["total"].get(spec["t"])
+                if v and v[0] is not None and abs(float(v[0]) - spec["line"]) < 1e-9:
+                    px = (g.get("px") or {}).get(v[1])
+                    d = venues.dec(px)
+                    if d:
+                        out.append(dict(venue="FanDuel", price=str(px), dec=round(d, 4), ref=v[1]))
+        except Exception:
+            pass
+    if KB:
+        try:
+            import kalshi
+            k = kalshi.leg(KB, league, m, spec)
+            kd = venues.kalshi_dec((k or {}).get("price"))
+            if kd:
+                out.append(dict(venue="Kalshi", price=f'{round(100 * k["price"])}¢', dec=round(kd, 4),
+                                american=venues.american(kd), ticker=k.get("ticker")))
+        except Exception:
+            pass
+    return out
+
+
 def scan(league, row, FD=None, KB=None, min_ev=MIN_EV):
     """(value bets, sure bet or None) for one board game."""
     import venues
@@ -72,6 +130,16 @@ def scan(league, row, FD=None, KB=None, min_ev=MIN_EV):
                 value.append(dict(id=row["id"], league=league, side=side, team=team, venue=v["venue"],
                                   price=v.get("american") or v["price"], dec=v["dec"], fair=round(fair, 4),
                                   ev=round(ev, 4), match=row.get("label"), tip=row.get("tip"),
+                                  start=(row.get("mkt") or {}).get("start")))
+    # spreads and totals: the same comparison on exactly the same line
+    for spec, label, fair, dk in line_markets(row):
+        for v in line_prices(league, row, spec, FD, KB):
+            ev = fair * v["dec"] - 1
+            if ev > min_ev:
+                value.append(dict(id=row["id"], league=league, side=json.dumps(spec, sort_keys=True),
+                                  team=label, market=spec["t"], spec=spec, venue=v["venue"],
+                                  price=v.get("american") or v["price"], dec=v["dec"], fair=round(fair, 4),
+                                  ev=round(ev, 4), dk=dk, match=row.get("label"), tip=row.get("tip"),
                                   start=(row.get("mkt") or {}).get("start")))
     sure = None
     if len(best) == 2 and not any(L.get("side") == "draw" for L in row.get("legs") or []):
@@ -142,18 +210,42 @@ def record(value, sure, now=None, path=None):
     return added
 
 
-def grade(results, path=None):
-    """results: {game id: winner name or 'Draw' or None}. Settles value finds."""
+def settle(f, e):
+    """won / lost / void for a find, from the ledger entry of its game
+    (winner and final scores), or None while unsettled."""
+    if not e or e.get("status") in (None, "open"):
+        return None
+    if e.get("status") == "void":
+        return "void"
+    spec = f.get("spec")
+    if not spec:
+        w = e.get("winner")
+        return None if w is None else ("won" if w == f["team"] else "lost")
+    sc = {k: v for k, v in (e.get("scores") or {}).items() if isinstance(v, (int, float))}
+    if len(sc) != 2:
+        return None
+    if spec["t"] == "spread":
+        mine = sc.get(spec["team"])
+        if mine is None:
+            return None
+        other = next(v for k, v in sc.items() if k != spec["team"])
+        m = mine + spec["line"] - other
+    else:
+        m = (sum(sc.values()) - spec["line"]) * (1 if spec["t"] == "over" else -1)
+    return "void" if abs(m) < 1e-9 else ("won" if m > 0 else "lost")
+
+
+def grade(entries, path=None):
+    """entries: {game id: ledger entry}. Settles every find it can."""
     book = load(path)
     changed = False
     for k, f in book["finds"].items():
         if f.get("kind") != "value" or f.get("status") in ("won", "lost", "void"):
             continue
-        w = results.get(f["id"])
-        if w is None:
-            continue
-        f["status"] = "won" if w == f["team"] else "lost"
-        changed = True
+        st = settle(f, entries.get(f["id"]))
+        if st:
+            f["status"] = st
+            changed = True
     if changed:
         save(book, path)
     return book

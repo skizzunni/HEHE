@@ -2925,3 +2925,13 @@ These checks establish the decision rules, not future winning percentages.
 - archived once, never revised, then graded.
 
 They fail on the previous commit (no module) and pass now.
+
+**Spreads and totals added to the value scan.**
+- DraftKings' closing spread line and price per side now come from ESPN's `pointSpread` (`dashboard.market_lines` → `ps_home` / `ps_away`).
+- Spreads and totals are scanned like moneylines. FanDuel's and Kalshi's price on exactly the same line is compared with DraftKings' Shin fair chance.
+- Finds are settled from the final scores: a line landed exactly is a push (void).
+- Live check, 2026-10-22: 125 of 197 games carry DraftKings spread and total prices. Finds:
+  - Winnipeg Jets +1.5 at FanDuel −138 (fair 58.7%, +1.2%);
+  - Stanford +6.5 at Kalshi +105 (fair 49.6%, +1.6%);
+  - Borussia Mönchengladbach at Kalshi +625 (+2.1%).
+- Tests: `test_value_bets.Lines` (score settlement with pushes; Shin fair for spreads and totals; mismatched lines skipped).

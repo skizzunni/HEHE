@@ -62,9 +62,32 @@ class Value(unittest.TestCase):
         val2 = [dict(v, ev=0.5) for v in val]
         self.assertEqual(V.record(val2, [], NOW + dt.timedelta(minutes=5), path), 0)
         self.assertEqual(V.load(path)["finds"], first)                     # never revised
-        V.grade({"nhl:7": "Toronto Maple Leafs"}, path)
+        V.grade({"nhl:7": dict(status="won", winner="Toronto Maple Leafs",
+                                scores={"Toronto Maple Leafs": 4, "Boston Bruins": 2})}, path)
         rep = V.report(path)
         self.assertEqual(rep["won"], sum(1 for v in val if v["team"] == "Toronto Maple Leafs"))
+
+
+class Lines(unittest.TestCase):
+    def test_spread_and_total_settle_from_scores(self):
+        e = dict(status="won", winner="Toronto Maple Leafs", scores={"Toronto Maple Leafs": 4, "Boston Bruins": 2})
+        sp = lambda line: dict(team="Toronto Maple Leafs", spec=dict(t="spread", team="Toronto Maple Leafs", line=line))
+        self.assertEqual(V.settle(sp(-1.5), e), "won")
+        self.assertEqual(V.settle(sp(-2.0), e), "void")              # landed exactly: a push
+        self.assertEqual(V.settle(sp(-2.5), e), "lost")
+        self.assertEqual(V.settle(dict(spec=dict(t="over", line=5.5)), e), "won")
+        self.assertEqual(V.settle(dict(spec=dict(t="under", line=6.0)), e), "void")
+        self.assertIsNone(V.settle(dict(spec=dict(t="over", line=5.5)), dict(status="open")))
+
+    def test_line_markets_fair_by_shin(self):
+        import devig
+        r = row(0.6, "-160", "+135")
+        r["mkt"].update(ps_home=[-1.5, "+150"], ps_away=[1.5, "-180"], total=5.5, over="-110", under="-110")
+        mk = {lab: (spec, p) for spec, lab, p, _ in V.line_markets(r)}
+        self.assertAlmostEqual(mk["Toronto Maple Leafs -1.5"][1], devig.fair(150, -180, method="shin")[0])
+        self.assertAlmostEqual(mk["over 5.5"][1], 0.5)
+        r["mkt"]["ps_away"] = [2.5, "-180"]                            # lines that do not mirror: skipped
+        self.assertNotIn("Toronto Maple Leafs -1.5", {lab for _, lab, _, _ in V.line_markets(r)})
 
 
 if __name__ == "__main__":

@@ -334,7 +334,7 @@ def snapshot():
             vb_val += v_
             vb_sure += su_
         value_bets.record(vb_val, vb_sure, pub)
-        value_bets.grade({k_: e_.get("winner") for k_, e_ in ledger.load().items() if e_.get("winner")})
+        value_bets.grade(ledger.load())
         out["value"] = dict(bets=vb_val[:20], sure=vb_sure[:10], record=value_bets.report(),
                             min_ev=value_bets.MIN_EV)
         print(f"value: {len(vb_val)} value bets, {len(vb_sure)} sure bets", file=sys.stderr)
