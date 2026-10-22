@@ -677,55 +677,7 @@
    "candidate_news": {
     "uel": "2026-10-22T18:09:20+00:00"
    },
-   "candidate_observations": {
-    "ncaaf:401862807": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 79,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-22T23:28:43+00:00",
-      "conf": 79,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaaf:401862807",
-      "league": "ncaaf",
-      "match": "ECU @ MEM",
-      "pick": "Memphis Tigers",
-      "price": "-425",
-      "price_at": "2026-10-22T23:28:24+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34827181:0ML86731855_1",
-      "prob_at": "2026-10-22T23:28:24+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-10-22T23:30Z"
-     },
-     "dc": false,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": true,
-      "what": "no lineup gate for this league"
-     },
-     "id": "ncaaf:401862807",
-     "league": "ncaaf",
-     "match": "ECU @ MEM",
-     "pick": "Memphis Tigers",
-     "price": "-425",
-     "price_at": "2026-10-22T23:28:24+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34827181:0ML86731855_1",
-     "side": "home",
-     "start": "2026-10-22T23:30Z",
-     "tip": "7:30 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
     "uel"
    ],
@@ -735,8 +687,8 @@
    "shadow_watch": {
     "best_at": "2026-10-22T18:46:30+00:00",
     "best_ceiling": 1.994,
-    "checks": 133,
-    "last": "2026-10-22T23:28:43+00:00",
+    "checks": 134,
+    "last": "2026-10-22T23:33:58+00:00",
     "max_ready": 9,
     "reasons": {
      "awaiting confirmed XIs": 1069,
