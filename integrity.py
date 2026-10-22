@@ -13,6 +13,8 @@ BAD_TEXT = re.compile(r"\bNone\b|\bnan\b|\bNaN\b|undefined")
 
 
 def _price_ok(v, path):
+    if isinstance(v, str) and re.fullmatch(r"\d{1,2}¢", v):
+        return 0 < int(v[:-1]) < 100                     # a Kalshi price shown in cents
     try:
         if ".kalshi." in path:
             return 0 < float(v) < 1                      # Kalshi trades in dollars

@@ -374,6 +374,21 @@ def snapshot():
         import traceback
         sys.stderr.write("sources scoreboard failed -- board unaffected:\n")
         traceback.print_exc()
+    # maker bids on Kalshi (maker.py): archived at the bid, fill decided by
+    # the trade tape after the start -- a forward test, nothing is ordered
+    try:
+        import maker
+        mk_ = []
+        for s_ in ("today", "tomorrow"):
+            mk_ += maker.record(d._STATE["slots"].get(s_), KB0, pub)
+        maker.grade()
+        mk_.sort(key=lambda x: -x["edge"])
+        out["maker"] = dict(bids=mk_[:15], record=maker.report())
+        print(f"maker: {len(mk_)} bid candidates", file=sys.stderr)
+    except Exception:
+        import traceback
+        sys.stderr.write("maker bids failed -- board unaffected:\n")
+        traceback.print_exc()
     try:
         out["stacks"] = stacks.build(FRESH, SOCCER, labels)
         for st_ in out["stacks"].values():

@@ -666,6 +666,13 @@ class StuckSweep(unittest.TestCase):
 class Integrity(unittest.TestCase):
     """Every build checks its own data before publishing."""
 
+    def test_kalshi_cents_price_is_valid(self):
+        import integrity
+        ok = {"slots": {"today": {"nhl": {"rows": [dict(vn=[dict(venue="Kalshi", price="60¢")])]}}}}
+        self.assertEqual(integrity.check(ok), [])
+        self.assertTrue(integrity.check({"x": dict(price="0¢")}))
+        self.assertTrue(integrity.check({"x": dict(price="60")}))
+
     def test_catches_bad_values(self):
         import integrity
         bad = {"locks": {"today": {"locks": [

@@ -112,6 +112,7 @@ jobs:
           if [ -f calls.json ]; then git add -f calls.json; fi
           if [ -f value.json ]; then git add -f value.json; fi
           if [ -f sources.json ]; then git add -f sources.json; fi
+          if [ -f maker.json ]; then git add -f maker.json; fi
           if [ -f prop_locks.json ]; then git add -f prop_locks.json; fi
           if [ -f safe_locks.json ]; then git add -f safe_locks.json; fi
           if [ -f lottery.json ]; then git add lottery.json; fi

@@ -3053,3 +3053,53 @@ first and a final logged price, the ones the market moved toward (more than
 from won 73.7% against 67.3% (N = 38). Each group's 95% range is about ±15
 points, so following or fading moves is not supported, and nothing is built
 on it.
+
+## Maker bids on Kalshi (2026-10-22)
+
+The data are 18,735 settled Kalshi legs (`data/backtest_kalshi_legs.json`,
+2026-08-29 to 10-18). The dates were split in half at 09-26. ROI per $1 by
+price band, buying at the ask with the taker fee:
+
+| band | first half | second half |
+|---|---|---|
+| 10-20c | +5.3% | -23.7% |
+| 20-30c | -16.6% | -11.4% |
+| 80-90c | -4.3% | -0.7% |
+| 90-100c | -4.1% | +0.6% |
+
+Kalshi has a longshot bias. Favourites at the ask only break even, because
+the taker fee and the 1c spread eat their edge.
+
+Buying at the bid instead, paying the maker fee of 0.0175·P(1-P), only on
+legs of 50c or more whose sportsbook no-vig chance is at least that cost:
+
+| | first half | second half |
+|---|---|---|
+| legs | 1,369 | 1,876 |
+| maker ROI | +4.2% ± 3.6 | +2.6% ± 3.0 |
+| taker, same filter | +1.1% ± 7.7 | -7.6% ± 6.1 |
+
+That is about +3.3% pooled, with a 95% range that excludes zero. Tighter
+value margins looked better on the first half but fell apart on the second
+(+14.3% then -6.4% at 3c), so they are rejected as overfit.
+
+By league, both halves: NCAAF +3.5% and +5.3%, NFL +6.1% and +1.1%, NHL
+-4.6% (N 206, second half only). NBA and MLB were not in the backtest.
+`maker.LEAGUES` is therefore NCAAF and NFL only.
+
+**The open risk is fills.** A resting bid fills most readily when the price
+moves against it, so `maker.py` places nothing. Each build archives the
+candidates at their bid (`maker.json`). After the start, Kalshi's public
+trade tape decides whether each would have filled: "strict" means a trade
+went through the bid, "touch" means one printed at it. Kalshi's settlement
+grades each leg. The Calls tab reports:
+
+- ROI on strict fills and on all fills
+- the hit rate of the bids that never filled, which is where adverse
+  selection would show
+
+The first live build found 8 NCAAF candidates, with edges of +0.7% to +2.0%.
+
+Also fixed: the integrity check flagged every Kalshi venue price shown in
+cents ("60¢") as bad data, which filled the live Checks box with 20 false
+problems.
