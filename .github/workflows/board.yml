@@ -202,6 +202,16 @@ jobs:
           start=${STARTED:-$now}
           wait=$(( 300 - (now - start) ))
           if [ "$wait" -gt 0 ]; then sleep "$wait"; fi
+          # One chain only: if a newer run already exists (a push, the cron,
+          # or a second chain), that one carries on and this chain ends here.
+          newer=$(gh run list --workflow board.yml --repo "$GITHUB_REPOSITORY" \
+                    --limit 20 --json databaseId,status \
+                    --jq "[.[] | select(.databaseId > ${GITHUB_RUN_ID}) | select(.status != \"completed\")] | length" \
+                  || echo 0)
+          if [ "${newer:-0}" -gt 0 ]; then
+            echo "a newer run ($newer) is already going; this chain ends here"
+            exit 0
+          fi
           # The chain is the board's heartbeat: the cron backstop is throttled
           # to gaps of 100-270 minutes, so one failed hand-off would leave the
           # site stale for hours. Retry with backoff before giving up.
