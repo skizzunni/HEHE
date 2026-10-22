@@ -2979,6 +2979,22 @@
   "price": "-1200",
   "status": "open"
  },
+ "nba:401909093|n:james harden|Points|10+": {
+  "aid": null,
+  "date": "2026-10-22",
+  "edge": -2.4,
+  "gid": "nba:401909093",
+  "imp": 0.9615,
+  "label": "James Harden: 10+ Points",
+  "league": "nba",
+  "line": "10+",
+  "market": "Points",
+  "name": "James Harden",
+  "p": 0.8517,
+  "p_fair": 0.9388,
+  "price": "-2500",
+  "status": "open"
+ },
  "nba:401909093|n:joel embiid|Pts + Reb|20+": {
   "aid": null,
   "date": "2026-10-22",
@@ -3011,6 +3027,22 @@
   "price": "-2200",
   "status": "open"
  },
+ "nba:401909093|n:tyrese maxey|Pts + Reb|15+": {
+  "aid": null,
+  "date": "2026-10-22",
+  "edge": -2.9,
+  "gid": "nba:401909093",
+  "imp": 0.9756,
+  "label": "Tyrese Maxey: 15+ Pts + Reb",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb",
+  "name": "Tyrese Maxey",
+  "p": 0.8536,
+  "p_fair": 0.9471,
+  "price": "-4000",
+  "status": "open"
+ },
  "nba:401909094|n:ajay mitchell|Points|5+": {
   "aid": null,
   "date": "2026-10-22",
@@ -3027,6 +3059,22 @@
   "price": "-1600",
   "status": "open"
  },
+ "nba:401909094|n:demar derozan|Pts + Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-10-22",
+  "edge": 3.9,
+  "gid": "nba:401909094",
+  "imp": 0.9355,
+  "label": "DeMar DeRozan: 10+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Pts + Reb + Ast",
+  "name": "DeMar DeRozan",
+  "p": 0.8497,
+  "p_fair": 0.9719,
+  "price": "-1450",
+  "status": "open"
+ },
  "nba:401909094|n:jalen williams|Pts + Reb|15+": {
   "aid": null,
   "date": "2026-10-22",
@@ -3041,6 +3089,22 @@
   "p": 0.8488,
   "p_fair": 0.9235,
   "price": "-2000",
+  "status": "open"
+ },
+ "nba:401909094|n:shai gilgeous alexander|Pts + Reb + Ast|30+": {
+  "aid": null,
+  "date": "2026-10-22",
+  "edge": -6.7,
+  "gid": "nba:401909094",
+  "imp": 0.9355,
+  "label": "Shai Gilgeous-Alexander: 30+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "30+",
+  "market": "Pts + Reb + Ast",
+  "name": "Shai Gilgeous-Alexander",
+  "p": 0.8497,
+  "p_fair": 0.8726,
+  "price": "-1450",
   "status": "open"
  },
  "nba:401909834|n:cj mccollum|Assists|2+": {
@@ -4493,11 +4557,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Collin Gillespie",
   "p": 0.8512,
   "p_fair": 0.96,
   "price": "-980",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401909841|n:collin gillespie|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -4509,11 +4575,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Collin Gillespie",
   "p": 0.8475,
   "p_fair": 0.9525,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909841|n:damian lillard|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -4525,11 +4593,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Damian Lillard",
   "p": 0.8475,
   "p_fair": 0.8936,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 34.0
  },
  "nba:401909841|n:damian lillard|Pts + Reb|15+": {
   "aid": null,
@@ -4541,11 +4611,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb",
+  "matched": "name",
   "name": "Damian Lillard",
   "p": 0.848,
   "p_fair": 0.9058,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 28.0
  },
  "nba:401909841|n:damian lillard|Threes Made|1+": {
   "aid": null,
@@ -4557,11 +4629,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Damian Lillard",
   "p": 0.8491,
   "p_fair": 0.9442,
   "price": "-4000",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909841|n:deni avdija|Rebounds|4+": {
   "aid": null,
@@ -4573,11 +4647,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Deni Avdija",
   "p": 0.8527,
   "p_fair": 0.8831,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909841|n:devin booker|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -4589,11 +4665,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Devin Booker",
   "p": 0.8519,
   "p_fair": 0.8732,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 29.0
  },
  "nba:401909841|n:dillon brooks|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -4605,11 +4683,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Dillon Brooks",
   "p": 0.856,
   "p_fair": 0.9259,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 14.0
  },
  "nba:401909841|n:dillon brooks|Threes Made|1+": {
   "aid": null,
@@ -4621,11 +4701,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Dillon Brooks",
   "p": 0.8503,
   "p_fair": 0.868,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909841|n:jalen green|Pts + Reb|15+": {
   "aid": null,
@@ -4637,11 +4719,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb",
+  "matched": "name",
   "name": "Jalen Green",
   "p": 0.848,
   "p_fair": 0.9128,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 12.0
  },
  "nba:401909841|n:jalen green|Reb + Ast|5+": {
   "aid": null,
@@ -4653,11 +4737,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Jalen Green",
   "p": 0.8507,
   "p_fair": 0.878,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909841|n:jrue holiday|Reb + Ast|5+": {
   "aid": null,
@@ -4669,11 +4755,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Jrue Holiday",
   "p": 0.8507,
   "p_fair": 0.8794,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909841|n:khaman maluach|Rebounds|6+": {
   "aid": null,
@@ -4685,11 +4773,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Khaman Maluach",
   "p": 0.8527,
   "p_fair": 0.8891,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909841|n:scoot henderson|Points|5+": {
   "aid": null,
@@ -4701,11 +4791,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Scoot Henderson",
   "p": 0.8487,
   "p_fair": 0.9603,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nfl:401872996|n:bhayshul tuten|Anytime Touchdown Scorer|1+": {
   "aid": null,
