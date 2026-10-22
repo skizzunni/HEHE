@@ -2855,3 +2855,21 @@ These checks establish the decision rules, not future winning percentages.
 - `venues.py` compares each straight-win pick at DraftKings, FanDuel and Kalshi. Kalshi's fee is counted as 0.07 × P × (1 − P) per contract on a 100-lot, rounded up.
 - The price cell names the better venue and its payout gain ("better at FanDuel −140, +5.5% payout").
 - Tests: `tests/test_venues.py` (4) and UI probe check 10 fail on the previous commit and pass now.
+
+**Rejected hypothesis, and a "lose less" rule: favourites by band** (`tools/fav_band_study.py` → `data/fav_band_study.json`).
+- The hypothesis came from the ledger before this data was examined: 70–80% favourites are under-priced enough to profit.
+- Tested on 6,976 favourites in MLB, NBA, NCAAB, NCAAF, NFL, NHL and WNBA, 2025-08-23 to 2026-10-21, at DraftKings' closing moneyline:
+
+| band | N | stated | won | ROI per $1 | 95% |
+|---|---|---|---|---|---|
+| 50–60% | 3,153 | 54.9% | 53.6% | −6.2% | −9.2 to −3.2 |
+| 60–70% | 1,623 | 64.3% | 64.4% | −3.8% | −7.3 to −0.5 |
+| 70–80% | 988 | 74.7% | 76.5% | −1.6% | −5.0 to +2.1 |
+| 80–90% | 727 | 84.9% | 87.2% | −1.9% | −4.6 to +0.8 |
+| 90%+ | 485 | 93.7% | 97.5% | +0.5% | −1.0 to +1.9 |
+
+- **The hypothesis is rejected.** 70–80% returned −1.6%, and its older half −4.6%.
+- What holds on both halves: losses fall as the favourite strengthens (the favourite-longshot bias). Near-coin-flip favourites lose 4–6% per $1, reliably; 70%+ favourites lose about 0–2%.
+- No band is proven profitable.
+- `band_value.py` puts each straight-win pick's band return on the board, and a **skip** tag where the whole interval is below zero (under 70%).
+- Tests: `tests/test_band_value.py` (3) and UI probe check 11 fail on the previous commit and pass now.

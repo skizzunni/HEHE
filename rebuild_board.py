@@ -117,6 +117,7 @@ def snapshot():
     except Exception:
         KB0 = {}
     import venues
+    import band_value
     # publish time for the freshness gate: a pick priced more than
     # freshness.MAX_AGE_MIN minutes before this is stale (freshness.py)
     pub = dt.datetime.now(dt.timezone.utc)
@@ -194,6 +195,10 @@ def snapshot():
                                                   r["mypick"])),
                              # the same bet at each venue that lists it, best
                              # payout first (straight win only)
+                             # what this band of favourite has returned per $1 at
+                             # its real price (band_value.py); skip = reliably lost
+                             "bv": (band_value.value(k, mc / 100) if (leg and mc is not None and not r.get("dc"))
+                                    else None),
                              "vn": (venues.compare(k, r, r["mypick"], leg.get("price"), r.get("price_book"),
                                                    FD, KB0) if leg and not r.get("dc") else []),
                              "lg": lab})
