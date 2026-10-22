@@ -1369,6 +1369,12 @@ function clvHTML(){
 }
 // Today's calls (calls.update_daily): the strongest published chances from
 // fresh sportsbook prices, set at 8:00 AM Eastern and never taken back.
+// What $10 on a call wins (profit, not return), from its American price.
+function callWin(price){
+  const v = parseFloat(String(price || "").replace("+", ""));
+  if(!isFinite(v) || Math.abs(v) < 100) return null;
+  return 10 * (v > 0 ? v / 100 : 100 / -v);
+}
 function drawCalls(){
   const R = D.results || {}, C = R.calls || [], K = R.calls_record || {};
   const n = R.calls_top || 5;
@@ -1404,6 +1410,7 @@ function drawCalls(){
             + '</td><td class="state">' + esc(c.tip || "")
             + '</td><td class="num">' + c.conf + '%' + (c.close ? '<span class="tier lean">close call</span>' : '<span class="tier call">strong</span>')
             + '</td><td class="mkt">' + esc(c.price) + (c.book ? ' <span class="sbn">' + esc(c.book) + '</span>' : '')
+            + (callWin(c.price) !== null ? '<div class="sbn">$10 wins $' + callWin(c.price).toFixed(2) + '</div>' : '')
             + '</td><td>' + st(c) + '</td></tr>').join("")
         + '</tbody></table>'
         + '<p>' + copyBtn("Today's calls", C.filter(c => c.status !== "pulled" && c.status !== "void")
@@ -1482,8 +1489,16 @@ function valueParlays(V){
 // published chances (what any number of simulations converges to), treating
 // the games as independent -- the record shows no negative dependence.
 function callOdds(C){
-  const ps = C.filter(c => c.status !== "pulled" && c.status !== "void").map(c => c.conf / 100);
+  const live = C.filter(c => c.status !== "pulled" && c.status !== "void");
+  const ps = live.map(c => c.conf / 100);
   if(ps.length < 2) return "";
+  // $10 on each call: what all of them win, and the expectation at the
+  // published chances (negative when the prices carry more margin than edge)
+  const wins = live.map(c => callWin(c.price));
+  const money = wins.every(w => w !== null);
+  const allWin = money ? wins.reduce((a, b) => a + b, 0) : 0;
+  const expect = money ? live.reduce((a, c, i) => a + (c.conf / 100) * wins[i] - (1 - c.conf / 100) * 10, 0) : 0;
+  const usd = v => (v < 0 ? "&minus;$" : "+$") + Math.abs(v).toFixed(2);
   let d = [1];
   ps.forEach(p => { const n = new Array(d.length + 1).fill(0);
     d.forEach((v, k) => { n[k] += v * (1 - p); n[k + 1] += v * p; }); d = n; });
@@ -1493,7 +1508,8 @@ function callOdds(C){
     + strip([["expected wins", exp.toFixed(1) + " of " + ps.length],
              ["all " + ps.length + " win", (100 * atLeast(ps.length)).toFixed(0) + "%"],
              [(ps.length - 1) + "+ win", (100 * atLeast(ps.length - 1)).toFixed(0) + "%"],
-             ["2 or more lose", (100 * (1 - atLeast(ps.length - 1))).toFixed(0) + "%"]])
+             ["2 or more lose", (100 * (1 - atLeast(ps.length - 1))).toFixed(0) + "%"]]
+             .concat(money ? [["$10 each, all win", usd(allWin)], ["$10 each, expected", usd(expect)]] : []))
     + '<p class="note">Exact odds from each call&rsquo;s published chance &mdash; what running thousands of simulations '
     + 'would converge to. Even five strong favourites usually include a loser.</p>';
 }
