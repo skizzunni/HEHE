@@ -276,7 +276,13 @@ def ceiling(legs, min_p, max_legs=MAX_LEGS, boost=0.0, kind_cap=KIND_CAP):
     return dict(legs=pick, dec=d, total=total_return(d, boost))
 
 
-def frontier(legs, targets=(2.0, 3.0, 5.0), standards=(0.90, 0.85, 0.80, 0.75),
+# 10x and a 65% standard since 2026-10-22: at 75%+ a 10x ticket needs 8-9 legs
+# (over MAX_LEGS); the best 10x tickets in both backtests cashed about 1 in 11.
+TARGETS = (2.0, 3.0, 5.0, 10.0)
+STANDARDS = (0.90, 0.85, 0.80, 0.75, 0.65)
+
+
+def frontier(legs, targets=TARGETS, standards=STANDARDS,
              max_legs=MAX_LEGS, boost=0.0):
     """For every (target, standard): the optimal ticket, or why there is none
     and the most it could pay at that standard."""
@@ -442,7 +448,7 @@ def candidates(pool, now=None):
     return ok, out
 
 
-def build_frontier(pool, targets=(2.0, 3.0, 5.0), standards=(0.90, 0.85, 0.80, 0.75),
+def build_frontier(pool, targets=TARGETS, standards=STANDARDS,
                    max_legs=MAX_LEGS, boost=0.0, now=None):
     """The frontier from a live candidate pool, every number labelled."""
     ok, excluded = candidates(pool, now)

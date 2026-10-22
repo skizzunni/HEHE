@@ -2804,3 +2804,28 @@ These checks establish the decision rules, not future winning percentages.
 - **Navigation:** the six sections that decide a bet come first (Calls, Locks, Targets, Results, Today, Tomorrow). Lottery, Props, Card, Stacks, Markets and Bot sit behind **More**, which opens by itself when one of them is current.
 - **What to expect today:** the Calls tab shows the exact distribution of how many calls should win, from their published chances. That is what any number of simulations converges to. It shows expected wins, the chance all win, the chance of all but one, and the chance two or more lose. It is a display only; it changes no pick.
 - UI probe checks 7–8 fail on the previous commit and pass now.
+
+## 10× tickets: possible, but only worth betting with a boost (2026-10-22)
+
+**The arithmetic.**
+- A ticket paying 10× is fair at a 10% cash chance. Every leg's margin pushes the real chance below that.
+- No selection method can make a 10× ticket cash "most of the time". The question is only whether it cashes often enough for its payout.
+
+**Backtest** (the likeliest 10× ticket each day, `tickets.optimize`, legs 60%+, at most 8 legs):
+
+| source | tickets | cashed | claimed | avg legs | est. EV, no boost | +25% boost | +50% boost | +100% boost |
+|---|---|---|---|---|---|---|---|---|
+| ledger, closing prices | 17 | 1 | 8.4% | 6.4 | −15.3% | +3.7% | +22.8% | +60.9% |
+| Kalshi, hourly quotes | 14 | 2 | 8.0% | 6.4 | −20.0% | −2.0% | +16.0% | +52.0% |
+
+- Together: 3 cashed in 31, 9.7% (Wilson 3.3–24.9%), against 8.2% claimed.
+- Unboosted, a 10× ticket loses about 15–20% per $1 over time. With a profit boost of about +25–50% or more, the estimated return turns positive.
+
+**What changed.**
+- The Targets tab adds a 10× target and a 65% leg standard. At 75%+ a 10× ticket needs 8–9 legs, over the 6-leg cap.
+- The Locks tab shows **The 10× ticket — only with a profit boost**: its legs, cash chance and payout, and the smallest boost that makes it worth betting, `breakEvenBoost(p, payout) = (1/p − 1)/(payout − 1) − 1`.
+- 10× rows are archived and graded with the other targets (`tickets.record` / `report`), so their forward record builds up.
+
+**Cost.** Exact search over the 38 Kalshi days took 48 s in all, 3.9 s on the worst day. 27 rows hit the node budget and are labelled approximate.
+
+**Test.** UI probe check 9 (break-even boost: 8% at 10× needs +27.8%, 12% needs none) fails on the previous commit and passes now. Suite and probe pass.

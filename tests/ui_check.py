@@ -100,6 +100,7 @@ PROBE = """<script>setTimeout(function(){
   out.moreShown = [].slice.call(document.querySelectorAll("#days .more")).filter(function(x){return !x.hidden}).length;
   if (mt) mt.click();
   out.odds = callOdds([{conf: 80}, {conf: 80}]);
+  out.be = [breakEvenBoost(0.08, 10), breakEvenBoost(0.12, 10), breakEvenBoost(0, 10)];
   var b = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Locks/.test(x.textContent)})[0];
   if (b) b.click();
   setTimeout(function(){
@@ -199,6 +200,9 @@ def main():
         fails.append(f"secondary sections must sit behind More: {new.get('moreHidden')} shown, {new.get('moreShown')} after opening")
     if "64%" not in (new.get("odds") or "") or "1.6 of 2" not in (new.get("odds") or ""):
         fails.append("outcome odds: two 80% calls must read 64% all win, 1.6 expected: " + (new.get("odds") or "")[:200])
+    be = new.get("be") or []
+    if len(be) != 3 or abs(be[0] - (1 / 0.08 - 1) / 9 + 1) > 1e-9 or be[1] != 0 or be[2] is not None:
+        fails.append(f"break-even boost: 8% at 10x needs +27.8%, 12% needs none: {be}")
     if not new.get("betFirst"):
         fails.append("Locks must lead with the likeliest 2x ticket (betFirst)")
     if new.get("staleNow") != [True, False, True, False]:

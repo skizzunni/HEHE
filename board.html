@@ -883,6 +883,28 @@ function betFirst(day){
     + 'so stake only what you can lose. The legs below are a list of the day&rsquo;s likeliest bets, not a parlay to bet '
     + '&mdash; all of them together has hit on few days.</p></div>';
 }
+// The smallest profit boost that makes a ticket worth betting: the boosted
+// payout times the cash chance must exceed the stake.
+function breakEvenBoost(p, payout){
+  if(!(p > 0) || !(payout > 1)) return null;
+  return Math.max(0, (1 / p - 1) / (payout - 1) - 1);
+}
+// The 10x ticket: the likeliest combination paying 10x. It cashes about 1
+// time in 11 at best, so it is only worth betting with a profit boost.
+function tenX(day){
+  const rows = (((D.frontier || {})[day] || {})["0"] || {}).rows || [];
+  const best = rows.filter(r => r.target === 10 && r.legs && r.legs.length).sort((a, b) => b.prob - a.prob)[0];
+  if(!best) return '';
+  const be = breakEvenBoost(best.prob, best.total);
+  return '<div class="parlays" style="margin:10px 0"><b>The 10x ticket &mdash; only with a profit boost</b>'
+    + strip([["cash chance (est.)", (100 * best.prob).toFixed(1) + "%"], ["pays (est.)", best.total.toFixed(1) + "x"],
+             ["legs", best.n], ["worth it with a boost of", be === null ? "&mdash;" : "+" + Math.ceil(100 * be) + "% or more"]])
+    + '<ul class="betlegs">' + best.legs.map(x => '<li>' + esc(x.label) + ' <b>' + esc(x.price) + '</b> &middot; '
+        + (100 * x.p).toFixed(0) + '% est. &middot; ' + esc(x.match || "") + '</li>').join("") + '</ul>'
+    + '<p class="note">No combination can pay 10x and cash more often than about 1 time in 10; the book&rsquo;s margin on every leg '
+    + 'makes it less. Without a boost this ticket loses money over time. Use it only with a FanDuel profit boost of at least the '
+    + 'size shown &mdash; then the payout outruns the margin. In the backtests the likeliest 10x tickets cashed 3 times in 31.</p></div>';
+}
 function drawLocks(){
   const SAFE = LKMODE === "safe";
   const K = (SAFE ? D.safe_locks : D.locks) || {};
@@ -906,7 +928,7 @@ function drawLocks(){
     return;
   }
   const won = L.filter(x => x.status === "won").length, lost = L.filter(x => x.status === "lost").length;
-  h += betFirst(day);
+  h += betFirst(day) + tenX(day);
   const SZ = X.sizes || [];
   const full = SZ.length ? SZ[SZ.length - 1] : null;
   h += strip([["legs", L.length], ["all hit (est.)", (100 * X.prob).toFixed(0) + "%"],
@@ -1156,14 +1178,14 @@ function drawTargets(){
     + 'highest estimated chance that every leg wins and the slip still pays that much. One leg per game, at most '
     + (X.max_legs || 6) + ' legs, at most ' + (X.kind_cap || 3) + ' of one league and kind. No quota: it stops when '
     + 'the payout is reached. A ticket of favourites is never &ldquo;safe&rdquo;.</p>'
-    + '<p><span class="pills">' + [0.90, 0.85, 0.80, 0.75].map(v => pill("data-tgstd", v, TGSTD, 'legs ' + (100 * v) + '%+')).join("")
+    + '<p><span class="pills">' + [0.90, 0.85, 0.80, 0.75, 0.65].map(v => pill("data-tgstd", v, TGSTD, 'legs ' + (100 * v) + '%+')).join("")
     + '</span> <span class="pills">' + ["0", "25", "50", "100"].map(v => pill("data-tgboost", v, TGBOOST,
         v === "0" ? "no boost" : "+" + v + "% boost")).join("") + '</span></p>';
   if(!rows.length){
     panel.innerHTML = h + '<p class="empty">No candidate legs for ' + day + ' yet.</p></div>';
     return;
   }
-  [2, 3, 5].forEach(T => {
+  [2, 3, 5, 10].forEach(T => {
     const r = rows.find(x => x.target === T && Math.abs(x.standard - TGSTD) < 1e-9) || {};
     h += '<h3 class="tier-h">' + T + 'x total return' + (TGBOOST !== "0" ? ' with a +' + TGBOOST + '% boost' : '') + '</h3>';
     if(r.legs && r.legs.length){
