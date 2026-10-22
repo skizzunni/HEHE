@@ -1990,10 +1990,10 @@
   },
   "props": {
    "fair": {
-    "n": 215,
-    "said_fair": 83.6,
-    "said_price": 86.3,
-    "won": 178
+    "n": 223,
+    "said_fair": 83.9,
+    "said_price": 86.0,
+    "won": 184
    },
    "n": 131,
    "said": 82.8,
@@ -2057,6 +2057,20 @@
     "n": 15,
     "name": "props mlb Hits + Runs + RBIs",
     "said": 65.6
+   },
+   {
+    "flag": false,
+    "hit": 80.0,
+    "n": 10,
+    "name": "props nba Points",
+    "said": 85.0
+   },
+   {
+    "flag": false,
+    "hit": 90.0,
+    "n": 10,
+    "name": "props nba Pts + Reb + Ast",
+    "said": 84.9
    },
    {
     "flag": false,
@@ -2205,9 +2219,9 @@
    }
   },
   "clv": {
-   "avg": -1.75,
-   "beat": 60.0,
-   "n": 5
+   "avg": -1.92,
+   "beat": 50.0,
+   "n": 6
   },
   "day": "2026-10-21",
   "leaks_14d": [],
@@ -2216,7 +2230,7 @@
     "Sporting CP to win (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2"
    ],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      2,
@@ -2224,7 +2238,7 @@
      "lost"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "losses": [
    {
@@ -2243,7 +2257,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -2251,7 +2265,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k+25",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -2259,7 +2273,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k+50",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -2267,7 +2281,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k+100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -2275,7 +2289,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -2292,14 +2306,22 @@
    }
   ],
   "picks": {
-   "hit": 80.0,
+   "hit": 83.3,
    "lost": 1,
-   "n": 5,
-   "roi": 0.3,
-   "said": 74.6,
-   "won": 4
+   "n": 6,
+   "roi": 9.8,
+   "said": 72.3,
+   "won": 5
   },
   "picks_by_league": {
+   "nba": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 57.1,
+    "said": 61.0,
+    "won": 1
+   },
    "ucl": {
     "hit": 75.0,
     "lost": 1,
@@ -2319,21 +2341,21 @@
   },
   "props": {
    "fair": {
-    "n": 215,
-    "said_fair": 83.6,
-    "said_price": 86.3,
-    "won": 178
+    "n": 223,
+    "said_fair": 83.9,
+    "said_price": 86.0,
+    "won": 184
    },
-   "n": 15,
-   "said": 70.5,
-   "won": 11
+   "n": 23,
+   "said": 75.8,
+   "won": 17
   },
   "safe_locks": {
    "lost": [
     "Sporting CP or draw (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2"
    ],
    "n": 11,
-   "open": 7,
+   "open": 6,
    "plays": {
     "best": [
      7,
@@ -2346,7 +2368,7 @@
      "open"
     ]
    },
-   "won": 3
+   "won": 4
   },
   "strong": {
    "n": 0
@@ -2362,12 +2384,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.4,
+    "hit": 66.6,
     "lost": 100,
-    "n": 298,
-    "roi": -3.8,
+    "n": 299,
+    "roi": -3.6,
     "said": 64.2,
-    "won": 198
+    "won": 199
    }
   },
   "weights": {
