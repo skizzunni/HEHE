@@ -2116,8 +2116,8 @@
    },
    {
     "flag": false,
-    "hit": 78.5,
-    "n": 237,
+    "hit": 79.0,
+    "n": 243,
     "name": "props nhl Shots on Goal",
     "said": 79.7
    },
@@ -2151,10 +2151,10 @@
    },
    {
     "flag": false,
-    "hit": 90.9,
-    "n": 11,
+    "hit": 91.7,
+    "n": 12,
     "name": "locks nhl under",
-    "said": 80.9
+    "said": 80.5
    }
   ],
   "calls": {
@@ -2237,7 +2237,7 @@
     "Sporting CP to win (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2"
    ],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      2,
@@ -2245,7 +2245,7 @@
      "lost"
     ]
    },
-   "won": 2
+   "won": 3
   },
   "losses": [
    {
@@ -2258,6 +2258,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "Buffalo Sabres",
+    "price": "-218",
+    "said": 66,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
     "league": "ucl",
     "pick": "Sporting CP",
     "price": "-275",
@@ -2267,34 +2275,42 @@
   ],
   "lottery": [
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 8.5 goals"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 8.5 goals"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+25",
     "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 8.5 goals"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+50",
     "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 8.5 goals"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+100",
     "won": 2
    },
@@ -2304,7 +2320,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -2321,11 +2337,11 @@
    }
   ],
   "picks": {
-   "hit": 71.4,
-   "lost": 2,
-   "n": 7,
-   "roi": -5.9,
-   "said": 69.7,
+   "hit": 62.5,
+   "lost": 3,
+   "n": 8,
+   "roi": -17.7,
+   "said": 69.2,
    "won": 5
   },
   "picks_by_league": {
@@ -2336,6 +2352,14 @@
     "roi": -21.4,
     "said": 57.5,
     "won": 1
+   },
+   "nhl": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 66.0,
+    "won": 0
    },
    "ucl": {
     "hit": 75.0,
@@ -2361,16 +2385,16 @@
     "said_price": 86.3,
     "won": 193
    },
-   "n": 33,
-   "said": 78.5,
-   "won": 26
+   "n": 39,
+   "said": 78.9,
+   "won": 32
   },
   "safe_locks": {
    "lost": [
     "Sporting CP or draw (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2"
    ],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      7,
@@ -2380,10 +2404,10 @@
     "winners": [
      2,
      0.8444,
-     "open"
+     "won"
     ]
    },
-   "won": 5
+   "won": 6
   },
   "strong": {
    "n": 0
@@ -2399,10 +2423,10 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.3,
-    "lost": 101,
-    "n": 300,
-    "roi": -3.9,
+    "hit": 66.1,
+    "lost": 102,
+    "n": 301,
+    "roi": -4.2,
     "said": 64.2,
     "won": 199
    }
