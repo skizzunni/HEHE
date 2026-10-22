@@ -2530,9 +2530,9 @@
    }
   },
   "clv": {
-   "avg": -0.73,
-   "beat": 46.2,
-   "n": 13
+   "avg": -0.75,
+   "beat": 52.9,
+   "n": 17
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2565,6 +2565,22 @@
     "price": "-525",
     "said": 80,
     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 80%"
+   },
+   {
+    "against_market": false,
+    "league": "uecl",
+    "pick": "FC Nordsj\u00e6lland",
+    "price": "-245",
+    "said": 68,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   },
+   {
+    "against_market": false,
+    "league": "uel",
+    "pick": "Juventus",
+    "price": "-225",
+    "said": 66,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 66%"
    },
    {
     "against_market": false,
@@ -2628,39 +2644,40 @@
     "killed_by": [
      "Afonso Moreira: Anytime Goalscorer",
      "Kristoffer Zachariassen: Anytime Goalscorer",
-     "Neal Maupay: Anytime Goalscorer"
+     "Neal Maupay: Anytime Goalscorer",
+     "Mateo Biondic: Anytime Goalscorer"
     ],
     "legs": 4,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "100",
     "won": 0
    }
   ],
   "picks": {
-   "hit": 69.2,
-   "lost": 4,
-   "n": 13,
-   "roi": -12.4,
-   "said": 75.5,
-   "won": 9
+   "hit": 64.7,
+   "lost": 6,
+   "n": 17,
+   "roi": -16.7,
+   "said": 73.8,
+   "won": 11
   },
   "picks_by_league": {
    "uecl": {
-    "hit": 71.4,
-    "lost": 2,
-    "n": 7,
-    "roi": -12.3,
-    "said": 77.0,
-    "won": 5
+    "hit": 66.7,
+    "lost": 3,
+    "n": 9,
+    "roi": -17.1,
+    "said": 75.4,
+    "won": 6
    },
    "uel": {
-    "hit": 66.7,
-    "lost": 2,
-    "n": 6,
-    "roi": -12.5,
-    "said": 73.8,
-    "won": 4
+    "hit": 62.5,
+    "lost": 3,
+    "n": 8,
+    "roi": -16.3,
+    "said": 71.9,
+    "won": 5
    }
   },
   "props": {
@@ -2670,9 +2687,9 @@
     "said_price": 87.4,
     "won": 280
    },
-   "n": 4,
-   "said": 43.8,
-   "won": 1
+   "n": 6,
+   "said": 48.3,
+   "won": 2
   },
   "safe_locks": {
    "lost": [],
@@ -2706,12 +2723,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.8,
-    "lost": 107,
-    "n": 322,
-    "roi": -3.7,
-    "said": 64.7,
-    "won": 215
+    "hit": 66.6,
+    "lost": 109,
+    "n": 326,
+    "roi": -4.1,
+    "said": 64.8,
+    "won": 217
    }
   },
   "weights": {
