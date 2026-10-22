@@ -1052,6 +1052,17 @@ function marketBanner(){
 }
 // The nightly independent re-grade (tools/regrade.py): every mismatch with
 // the ledger is listed until it is resolved.
+// Every graded prop (props_ledger), overall and by market
+function propsRecordHTML(){
+  const P = D.props_record || {}, A = P.all;
+  if(!A) return "";
+  const row = (k, s) => '<tr><td>' + esc(k) + '</td><td>' + s.n + '</td><td>' + s.hit.toFixed(1) + '%</td><td>'
+    + s.stated.toFixed(1) + '%</td><td>' + (s.roi >= 0 ? '+' : '') + s.roi.toFixed(1) + '%</td></tr>';
+  return '<div class="sect" id="propsrec"><h2>Props</h2><p class="note">Every graded player prop, '
+    + esc(P.dates[0]) + ' to ' + esc(P.dates[1]) + ', at the price it was logged.</p>'
+    + '<table class="sbt"><tr><th>market</th><th>N</th><th>won</th><th>stated</th><th>ROI</th></tr>'
+    + row("all props", A) + (P.markets || []).map(m => row(m[0], m[1])).join("") + '</table></div>';
+}
 function regradeHTML(){
   const G = D.regrade;
   if(!G || !G.checked) return "";
@@ -1387,6 +1398,25 @@ function propTuningHTML(){
     + T[k].hit + '%</td><td class="num">' + ((T[k].hold - 1) * 100).toFixed(1)
     + '%</td></tr>').join("") + '</tbody></table>';
 }
+// Prop Locks (prop_locks.py): the day's likeliest confirmed props, set from
+// noon Eastern, frozen and graded from box scores.
+function propLocksHTML(){
+  const X = D.prop_locks || {}, T = X.today || {}, L = T.legs || [], R = X.record || {};
+  const res = s => s === "won" ? '<span class="wl won">WON</span>' : s === "lost" ? '<span class="wl lost">LOST</span>'
+    : (s === "void" || s === "ungradable") ? '<span class="wl">VOID</span>' : '<span class="sbn">open</span>';
+  const rec = R.n ? 'Record: <b>' + R.won + ' of ' + R.n + '</b> won (' + R.hit + '%, 95% range ' + R.wilson95[0] + '&ndash;'
+      + R.wilson95[1] + '%) against ' + R.stated + '% stated; ROI at the locked prices <b>' + (R.roi >= 0 ? '+' : '') + R.roi + '%</b>.'
+    : 'No Prop Lock has been graded yet.';
+  return '<div class="parlays"><h3>Prop Locks</h3>'
+    + '<p class="note">The day&rsquo;s ' + (X.n || 10) + ' likeliest FanDuel props: player confirmed to play, settled from the box score, '
+    + (100 * (X.standard || 0.7)).toFixed(0) + '%+ chance, one per game and per player. Set from ' + (X.hour || 12)
+    + ':00 Eastern and never changed; every leg is graded. Props win often but cost more than game lines (80&ndash;90% props '
+    + 'returned &minus;7% per $1), so these are for hitting, not for profit. ' + rec + '</p>'
+    + (L.length ? '<ul class="betlegs">' + L.map(x => '<li>' + esc(x.label) + ' <b>' + esc(x.price) + '</b> &middot; '
+        + (100 * x.p).toFixed(0) + '% &middot; ' + esc(x.match || "") + ' ' + res(x.status) + '</li>').join("") + '</ul>'
+      : '<p class="empty">Today&rsquo;s Prop Locks are set from ' + (X.hour || 12) + ':00 Eastern.</p>')
+    + '</div>';
+}
 function drawProps(){
   const P = D.props || {};
   const has = d => ((P[d] || {}).games || []).length;
@@ -1395,7 +1425,7 @@ function drawProps(){
   const games = ((P[day] || {}).games || []).map(g => Object.assign({}, g, {
     props: g.props.filter(x => !q || (x.label + " " + g.match).toLowerCase().includes(q))
   })).filter(g => g.props.length);
-  let html = '<div class="parlays"><h3>Props \u2014 ' + day + '</h3>'
+  let html = propLocksHTML() + '<div class="parlays"><h3>Props \u2014 ' + day + '</h3>'
     + '<details class="explain"><summary>Where these come from</summary>'
     + '<p>Player props from FanDuel (every league it lists: points, rebounds, assists, threes, '
     + 'passing/rushing/receiving yards, receptions, anytime scorers, shots, hits, strikeouts) and '
@@ -2129,7 +2159,7 @@ function scoreboardHTML(){
           + '</tr>').join("")
       + '</tbody></table></div>';
   }
-  h += marketBanner() + regradeHTML() + clvHTML() + calibHTML();
+  h += marketBanner() + regradeHTML() + clvHTML() + calibHTML() + propsRecordHTML();
   // the review's alarms: what is trailing its stated chance, what never settled
   const HL = D.health;
   if(HL){

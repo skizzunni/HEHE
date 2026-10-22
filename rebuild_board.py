@@ -475,6 +475,22 @@ def snapshot():
         except Exception as ex:
             print(f"ladders failed: {ex}", file=sys.stderr)
         n = props_ledger.record(out["props"].get("today"), d._STATE["dates"][0])
+        # Prop Locks (prop_locks.py): the day's likeliest confirmed props,
+        # set from noon Eastern, frozen, logged in the props ledger, graded
+        try:
+            import prop_locks
+            _starts = {r_["id"]: (r_.get("mkt") or {}).get("start")
+                       for rs_ in (d._STATE["slots"].get("today") or {}).values() for r_ in rs_}
+            _iso = f'{d._STATE["dates"][0][:4]}-{d._STATE["dates"][0][4:6]}-{d._STATE["dates"][0][6:]}'
+            _pl = prop_locks.update(((out["props"].get("today") or {}).get("games")), _starts, _iso)
+            _led = props_ledger.load()
+            _pl = dict(_pl, legs=[dict(L_, status=(_led.get(L_.get("key")) or {}).get("status", "open"))
+                                  for L_ in _pl.get("legs") or []])
+            out["prop_locks"] = dict(today=_pl, record=prop_locks.report(), n=prop_locks.N,
+                                     standard=prop_locks.STANDARD, hour=prop_locks.PROP_HOUR)
+            out["props_record"] = prop_locks.props_record()
+        except Exception as ex:
+            print(f"prop locks failed: {ex}", file=sys.stderr)
         out["props_tuning"] = props_ledger.TUNING
         print(f"props: recorded {n} new legs; tuning {props_ledger.TUNING}", file=sys.stderr)
         print("props: " + ", ".join(f'{s_} {len(v["games"])} games, '

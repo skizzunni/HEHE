@@ -111,6 +111,7 @@ jobs:
           if [ -f frontier.json ]; then git add -f frontier.json; fi
           if [ -f calls.json ]; then git add -f calls.json; fi
           if [ -f value.json ]; then git add -f value.json; fi
+          if [ -f prop_locks.json ]; then git add -f prop_locks.json; fi
           if [ -f safe_locks.json ]; then git add -f safe_locks.json; fi
           if [ -f lottery.json ]; then git add lottery.json; fi
           if [ -f data/td_history.json ]; then git add -f data/td_history.json; fi

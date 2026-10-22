@@ -2962,3 +2962,23 @@ They fail on the previous commit (no module) and pass now.
   - Chicago Bulls at FanDuel −104 (+1.5%);
   - Indiana −5.5 at Kalshi +101 (+2.8%, DraftKings fair only).
 - **Test:** `tests/test_polymarket.py` (3) covers moneyline, spread both sides and totals, thin markets ignored, unmatched games ignored, and the average with DraftKings' fair.
+
+## Prop Locks, and props in Results (2026-10-22)
+
+**Prop Locks** (`prop_locks.py`, `prop_locks.json`).
+- Each day, the likeliest FanDuel props that pass four checks: the player is confirmed to play (`participation.py`), the market settles from the box score, the selection id is known, and the chance is 70%+. One per game and one per player, strongest first, up to 10.
+- Set from noon Eastern, when most prop lines are up. Frozen, and topped up as later games' props appear; a leg is never replaced.
+- Every leg is logged in `props.json` at its locked price, so the box-score grader settles it with every other prop.
+- The Props tab opens with the card and its record (N, won, Wilson range, stated, ROI at the locked prices).
+- They are for hitting, not profit: 80–90% props returned −7.1% per $1.
+
+**Props on Results.** Every graded prop is now on the Results tab, overall and by league and market (N ≥ 15), with stated chance and ROI at the logged price.
+- As of 2026-10-22: 742 graded props, 2026-10-15 to 2026-10-21.
+
+**Test.** `tests/test_prop_locks.py` (4) checks:
+- strongest first, one per game and per player, unconfirmed and ungradable props out;
+- nothing before noon; frozen, then topped up;
+- started games out;
+- the record read from the ledger's grading.
+
+They fail on the previous commit (no module) and pass now.
