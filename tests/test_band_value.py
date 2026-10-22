@@ -22,8 +22,14 @@ class BandValue(unittest.TestCase):
         roi = [B.value("mlb", p)["roi"] for p in (0.55, 0.65, 0.95)]
         self.assertEqual(roi, sorted(roi))
 
+    def test_soccer_straight_bands(self):
+        v = B.value("epl", 0.65)
+        self.assertEqual(v["band"], "60-70")
+        self.assertFalse(v["skip"])                       # no soccer band is reliably losing
+        self.assertEqual(B.value("epl", 0.85)["band"], "80-100")
+
     def test_outside_the_study(self):
-        self.assertIsNone(B.value("epl", 0.7))          # three-way soccer was not studied
+        self.assertIsNone(B.value("epl", 0.35))         # a soccer underdog
         self.assertIsNone(B.value("nba", 0.45))         # an underdog
         self.assertIsNone(B.value("nba", None))
 

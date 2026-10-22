@@ -2873,3 +2873,18 @@ These checks establish the decision rules, not future winning percentages.
 - No band is proven profitable.
 - `band_value.py` puts each straight-win pick's band return on the board, and a **skip** tag where the whole interval is below zero (under 70%).
 - Tests: `tests/test_band_value.py` (3) and UI probe check 11 fail on the previous commit and pass now.
+
+**Soccer, same test** (`tools/soccer_band_study.py` → `data/soccer_band_study.json`).
+- Hypothesis from the ledger: straight-win favourites at 60–80% returned +8.6% and +10.8% on 89 graded picks.
+- Tested on 2,240 league matches (EPL, La Liga, Bundesliga, Serie A, Ligue 1, MLS), 2025-08-15 to 2026-10-19, at DraftKings' 3-way closing price:
+
+| band | N | ROI per $1 | 95% |
+|---|---|---|---|
+| 40–50% | 796 | −4.9% | −11.9 to +2.1 |
+| 50–60% | 540 | −6.2% | −13.1 to +0.7 |
+| 60–70% | 309 | −0.2% | −7.5 to +7.3 |
+| 70–80% | 152 | −2.0% (older half +4.2%, newer −10.7%) | −9.9 to +6.4 |
+| 80%+ | 30 | +7.1% | −6.4 to +17.7 |
+
+- **Rejected:** the ledger's soccer profit does not reproduce. The pattern matches the other sports: weak favourites lose about 5–6%, and 60%+ favourites are near break-even.
+- `band_value` now covers soccer straight-win picks. No soccer band is a skip, because none has its whole interval below zero.
