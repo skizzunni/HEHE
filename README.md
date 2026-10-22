@@ -3025,3 +3025,31 @@ the same render functions produce the same sections.
   - The outdated-page banner gets a fixed dark red so its white text keeps
     its contrast in dark mode.
   - Reduced motion is respected.
+
+## Which price predicts best: a per-source scoreboard (2026-10-22)
+
+`sources.py` measures which price source is the best forecaster instead of
+assuming DraftKings is. For every fresh two-way game, each build records the
+no-vig chance that the home side wins from each source:
+
+- DraftKings and FanDuel (Shin de-vig)
+- Kalshi (both asks normalised)
+- Polymarket (liquid markets only)
+- Pinnacle (only with ODDS_API_KEY)
+- their average
+
+The last snapshot before the start is kept and graded from the ledger.
+Results scores each source against DraftKings on exactly the same games, by
+Brier score with a paired bootstrap 95% range. A source becomes the one picks
+are drawn from only once that range is wholly better.
+
+The first live build archived 36 games: DraftKings 36, Kalshi 36, Polymarket
+34, FanDuel 32. The sources differ by up to about 2 points on the same game
+(Celtics: DraftKings 55.4%, FanDuel 57.4%).
+
+Rejected on existing data, line movement: on 185 graded picks with both a
+first and a final logged price, the ones the market moved toward (more than
+2 points) won 65.8% against 72.2% implied (N = 38). The ones it moved away
+from won 73.7% against 67.3% (N = 38). Each group's 95% range is about ±15
+points, so following or fading moves is not supported, and nothing is built
+on it.

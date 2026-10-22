@@ -360,6 +360,20 @@ def snapshot():
         import traceback
         sys.stderr.write("value scan failed -- board unaffected:\n")
         traceback.print_exc()
+    # which price source predicts best (sources.py): each fresh game's no-vig
+    # home chance from every venue, last pre-start snapshot, graded
+    try:
+        import sources
+        for s_ in ("today", "tomorrow"):
+            sources.record({lg_: [r_ for r_ in rs_ if freshness.can_call(r_, pub)]
+                            for lg_, rs_ in (d._STATE["slots"].get(s_) or {}).items()},
+                           pub, FD=FD, KB=KB0, PM=PM0, OA=OA)
+        sources.grade(ledger.load())
+        out["sources"] = sources.report()
+    except Exception:
+        import traceback
+        sys.stderr.write("sources scoreboard failed -- board unaffected:\n")
+        traceback.print_exc()
     try:
         out["stacks"] = stacks.build(FRESH, SOCCER, labels)
         for st_ in out["stacks"].values():
