@@ -341,8 +341,14 @@ def snapshot():
             vb_val += v_
             vb_sure += su_
         value_bets.record(vb_val, vb_sure, pub)
-        value_bets.grade(ledger.load())
+        _today_val = [v_ for v_ in vb_val if v_["id"] in {r_["id"] for rs_ in (d._STATE["slots"].get("today") or {}).values() for r_ in rs_}]
+        vb_par = value_bets.value_parlays(_today_val)
+        value_bets.record_parlays(vb_par, pub)
+        _L = ledger.load()
+        value_bets.grade(_L)
+        value_bets.grade_parlays(_L)
         out["value"] = dict(bets=vb_val[:20], sure=vb_sure[:10], record=value_bets.report(),
+                            parlays=vb_par, parlay_record=value_bets.parlay_report(),
                             min_ev=value_bets.MIN_EV)
         print(f"value: {len(vb_val)} value bets, {len(vb_sure)} sure bets", file=sys.stderr)
     except Exception:

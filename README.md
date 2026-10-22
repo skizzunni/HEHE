@@ -2943,3 +2943,10 @@ They fail on the previous commit (no module) and pass now.
 - **Budget:** the free tier is 500 credits a month, and one moneyline call naming up to 10 books costs one credit. A sport is refetched at most every 6 hours, at most 16 calls a day, busiest sports first. Both limits are environment settings.
 - **Setup is the owner's alone:** add the key as a repository secret named `ODDS_API_KEY` in GitHub → Settings → Secrets and variables → Actions. It is never written into the repository or a chat.
 - **Test:** `tests/test_oddsapi.py` (4) covers off without a key, the daily budget (busiest sport first, then cache), Pinnacle as the reference, and extra books in the comparison.
+
+**Value parlays** (`value_bets.value_parlays`).
+- A parlay's expected return is the product of its legs' returns. Legs that each pay above fair make a ticket that does too, unlike an ordinary parlay, whose margin compounds.
+- Today's value bets are combined per book (one leg per game; Kalshi excluded, its combos are quoted separately) into the likeliest ticket reaching 2×, 3×, 5× and 10×.
+- Each ticket is shown with its cash chance, payout and expected return, archived once in `value.json`, and graded when every leg settles. A pushed leg voids it here.
+- They are still mostly losing tickets; what changes is the expected return, not the odds of any one ticket.
+- Tests: `test_value_bets.Parlays` (positive EV, one book, one leg per game; archived once and graded).

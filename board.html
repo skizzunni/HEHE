@@ -1134,7 +1134,24 @@ function valueBets(){
             + '<div class="sbn">' + esc(x.match || "") + ' &middot; ' + esc(x.tip || "") + '</div></td><td>' + esc(x.venue)
             + '</td><td class="mkt">' + esc(x.price) + '</td><td class="num">' + (100 * x.fair).toFixed(0) + '%</td><td class="num">+'
             + (100 * x.ev).toFixed(1) + '%</td></tr>').join("") + '</tbody></table>'
-      : '<p class="empty">No venue is paying above the fair price on an open game right now.</p>');
+      : '<p class="empty">No venue is paying above the fair price on an open game right now.</p>')
+    + valueParlays(V);
+}
+// Parlays made only of value bets: each leg pays above fair, so the ticket
+// does too (value_bets.value_parlays). Forward record beside them.
+function valueParlays(V){
+  const P = V.parlays || [], R = V.parlay_record || {};
+  if(!P.length && !R.n) return "";
+  return '<h3 style="margin-top:18px">Value parlays</h3>'
+    + '<p class="note">Built only from value bets at one book, so the expected return stays above zero as legs are added '
+    + '&mdash; unlike an ordinary parlay, where the margin compounds. Still mostly losing tickets: the cash chance is shown. '
+    + (R.n ? 'Record: <b>' + R.won + ' of ' + R.n + '</b> cashed (' + R.claimed + '% claimed), ROI <b>' + (R.roi >= 0 ? '+' : '') + R.roi + '%</b>.'
+           : 'No value parlay has been graded yet.') + '</p>'
+    + P.map(p => '<div class="parlays" style="margin:8px 0"><b>' + p.target + 'x at ' + esc(p.venue) + '</b>'
+        + strip([["cash chance", (100 * p.prob).toFixed(1) + "%"], ["pays", p.payout.toFixed(2) + "x"],
+                 ["legs", p.legs.length], ["expected return", "+" + (100 * p.ev).toFixed(1) + "%"]])
+        + '<ul class="betlegs">' + p.legs.map(L => '<li>' + esc(L.team) + ' <b>' + esc(L.price) + '</b> &middot; fair '
+            + (100 * L.fair).toFixed(0) + '% &middot; +' + (100 * L.ev).toFixed(1) + '%</li>').join("") + '</ul></div>').join("");
 }
 // How many of today's calls should win: the exact distribution from their
 // published chances (what any number of simulations converges to), treating

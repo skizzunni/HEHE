@@ -68,6 +68,33 @@ class Value(unittest.TestCase):
         self.assertEqual(rep["won"], sum(1 for v in val if v["team"] == "Toronto Maple Leafs"))
 
 
+class Parlays(unittest.TestCase):
+    def find(self, i, fair, price, venue="FanDuel"):
+        import venues
+        d = venues.dec(price)
+        return dict(id=f"nhl:{i}", league="nhl", side="home", team=f"T{i}", venue=venue, price=price,
+                    dec=round(d, 4), fair=fair, ev=round(fair * d - 1, 4))
+
+    def test_parlay_of_value_legs_keeps_positive_ev(self):
+        finds = [self.find(1, 0.62, "-150"), self.find(2, 0.55, "+100"), self.find(3, 0.45, "+140"),
+                 self.find(4, 0.70, "-200", venue="Kalshi")]
+        ps = V.value_parlays(finds, targets=(2.0, 3.0))
+        self.assertTrue(ps)
+        for p in ps:
+            self.assertEqual(p["venue"], "FanDuel")                       # one book; Kalshi left out
+            self.assertGreater(p["ev"], 0)
+            self.assertGreaterEqual(p["payout"], p["target"])
+            self.assertEqual(len({L["id"] for L in p["legs"]}), len(p["legs"]))
+
+    def test_parlay_archived_and_graded(self):
+        path = os.path.join(tempfile.mkdtemp(), "value.json")
+        p = V.value_parlays([self.find(1, 0.62, "-150"), self.find(2, 0.55, "+100")], targets=(2.0,))
+        self.assertEqual(V.record_parlays(p, NOW, path), 1)
+        self.assertEqual(V.record_parlays(p, NOW, path), 0)
+        V.grade_parlays({"nhl:1": dict(status="won", winner="T1"), "nhl:2": dict(status="won", winner="T2")}, path)
+        self.assertEqual(V.parlay_report(path)["won"], 1)
+
+
 class Lines(unittest.TestCase):
     def test_spread_and_total_settle_from_scores(self):
         e = dict(status="won", winner="Toronto Maple Leafs", scores={"Toronto Maple Leafs": 4, "Boston Bruins": 2})

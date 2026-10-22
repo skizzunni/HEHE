@@ -273,3 +273,93 @@ def report(path=None):
                 est_ev=round(100 * sum(f["ev"] for f in fs) / len(fs), 2),
                 roi=round(100 * sum(ret) / len(fs), 2),
                 dates=[min(f["seen"][:10] for f in fs), max(f["seen"][:10] for f in fs)])
+
+
+# ------------------------------------------------------- value parlays
+# A parlay's expected return is the product of its legs': (1 + EV_1)(1 + EV_2)
+# ... - 1. Legs that each pay above the fair chance make a parlay that does
+# too -- the opposite of an ordinary parlay, whose margin compounds. Built per
+# venue (a parlay is placed at one book; Kalshi combos are quoted separately,
+# so Kalshi is left out), one leg per game, the likeliest combination that
+# reaches each payout target.
+PARLAY_TARGETS = (2.0, 3.0, 5.0, 10.0)
+PARLAY_MAX_LEGS = 6
+
+
+def value_parlays(value, targets=PARLAY_TARGETS, max_legs=PARLAY_MAX_LEGS):
+    import tickets
+    out = []
+    by = {}
+    for v in value:
+        if v["venue"] == "Kalshi":
+            continue
+        by.setdefault(v["venue"], []).append(v)
+    for venue, vs in sorted(by.items()):
+        # one leg per game: the best-EV find of each game at this venue
+        best = {}
+        for v in sorted(vs, key=lambda x: -x["ev"]):
+            best.setdefault(v["id"], v)
+        legs = [dict(gid=v["id"], p=v["fair"], dec=v["dec"], league=v["league"], spec=dict(t="win"),
+                     label=v["team"], find=v) for v in best.values()]
+        for target in targets:
+            r = tickets.optimize(legs, target, 0.0, max_legs=max_legs, kind_cap=max_legs)
+            if not r.get("legs"):
+                continue
+            ls = [L["find"] for L in r["legs"]]
+            prob = 1.0
+            pay = 1.0
+            for L in r["legs"]:
+                prob *= L["p"]
+                pay *= L["dec"]
+            out.append(dict(venue=venue, target=target, legs=[dict(id=f["id"], team=f["team"], price=f["price"],
+                                                                     side=f["side"], spec=f.get("spec"),
+                                                                     fair=f["fair"], ev=f["ev"]) for f in ls],
+                            prob=round(prob, 4), payout=round(pay, 3), ev=round(prob * pay - 1, 4)))
+    return out
+
+
+def record_parlays(parlays, now=None, path=None):
+    """Archive each value parlay once, when first seen."""
+    import datetime as _dt
+    now = now or _dt.datetime.now(_dt.timezone.utc)
+    book = load(path)
+    added = 0
+    for p in parlays:
+        k = "parlay|" + p["venue"] + "|" + "|".join(sorted(f'{L["id"]}:{L["side"]}' for L in p["legs"]))
+        if k not in book["finds"]:
+            book["finds"][k] = dict(p, kind="parlay", seen=now.isoformat(timespec="seconds"))
+            added += 1
+    if added:
+        save(book, path)
+    return added
+
+
+def grade_parlays(entries, path=None):
+    book = load(path)
+    changed = False
+    for f in book["finds"].values():
+        if f.get("kind") != "parlay" or f.get("status") in ("won", "lost", "void"):
+            continue
+        st = [settle(dict(team=L["team"], spec=L.get("spec")), entries.get(L["id"])) for L in f["legs"]]
+        if "lost" in st:
+            f["status"] = "lost"
+        elif all(s == "won" for s in st):
+            f["status"] = "won"
+        elif None not in st:
+            f["status"] = "void"                 # a pushed leg: the slip is re-priced, not graded here
+        else:
+            continue
+        changed = True
+    if changed:
+        save(book, path)
+    return book
+
+
+def parlay_report(path=None):
+    fs = [f for f in load(path)["finds"].values() if f.get("kind") == "parlay" and f.get("status") in ("won", "lost")]
+    if not fs:
+        return dict(n=0)
+    ret = [(f["payout"] - 1) if f["status"] == "won" else -1 for f in fs]
+    return dict(n=len(fs), won=sum(f["status"] == "won" for f in fs), roi=round(100 * sum(ret) / len(fs), 2),
+                est_ev=round(100 * sum(f["ev"] for f in fs) / len(fs), 2),
+                claimed=round(100 * sum(f["prob"] for f in fs) / len(fs), 1))
