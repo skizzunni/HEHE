@@ -5,6 +5,7 @@ import os
 import sys
 import tempfile
 import unittest
+from unittest import mock
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -119,3 +120,39 @@ class Lines(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PropValue(unittest.TestCase):
+    def game(self, props):
+        return [dict(id="nfl:1", match="A @ B", tip="1:00 PM", props=props)]
+
+    def P(self, p, fd_price, dk_price, two=True, line="249.5"):
+        return dict(name="QB One", market="Passing Yards", line=line, label=f"QB One: Over {line} Passing Yards",
+                    price=fd_price, p=p, two_sided=two, alt=dict(book="DraftKings", price=dk_price))
+
+    def test_dk_above_fanduel_two_sided_fair(self):
+        f = V.prop_value(self.game([self.P(0.52, "-115", "+100")]))
+        self.assertEqual(len(f), 1)
+        self.assertAlmostEqual(f[0]["ev"], round(0.52 * 2.0 - 1, 4))
+        self.assertEqual(f[0]["venue"], "DraftKings")
+
+    def test_no_find_without_an_honest_fair(self):
+        self.assertEqual(V.prop_value(self.game([self.P(0.52, "-115", "+100", two=False)])), [])   # one-sided
+        self.assertEqual(V.prop_value(self.game([self.P(0.30, "+230", "+260")])), [])              # longshot
+        self.assertEqual(V.prop_value(self.game([self.P(0.52, "-115", "-120")])), [])              # below fair
+        self.assertEqual(V.prop_value(self.game([self.P(0.48, "-110", "+120", line="u249.5")])), [])  # under side
+
+    def test_logged_in_the_props_ledger(self):
+        import props_ledger
+        tmp = tempfile.mkdtemp()
+        with mock.patch.object(props_ledger, "LEDGER", os.path.join(tmp, "props.json")):
+            f = V.prop_value(self.game([self.P(0.52, "-115", "+100")]))
+            path = os.path.join(tmp, "value.json")
+            self.assertEqual(V.record_props(f, "2026-10-22", NOW, path), 1)
+            self.assertEqual(V.record_props(f, "2026-10-22", NOW, path), 0)
+            led = props_ledger.load()
+            k = props_ledger.prop_key(f[0])
+            self.assertTrue(led[k]["value_find"])
+            led[k]["status"] = "won"
+            props_ledger.save(led)
+            self.assertEqual(V.prop_report(path)["won"], 1)

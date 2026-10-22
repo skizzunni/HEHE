@@ -489,6 +489,10 @@ def snapshot():
             out["prop_locks"] = dict(today=_pl, record=prop_locks.report(), n=prop_locks.N,
                                      standard=prop_locks.STANDARD, hour=prop_locks.PROP_HOUR)
             out["props_record"] = prop_locks.props_record()
+            import value_bets as _vb
+            _pv = _vb.prop_value(((out["props"].get("today") or {}).get("games")))
+            _vb.record_props(_pv, _iso)
+            out["prop_value"] = dict(bets=_pv[:20], record=_vb.prop_report())
         except Exception as ex:
             print(f"prop locks failed: {ex}", file=sys.stderr)
         out["props_tuning"] = props_ledger.TUNING

@@ -232,14 +232,20 @@ def for_slot(board_slot, labels=None, max_games=40):
     out = []
     for (league, eid, row), items in zip(jobs, raws):
         # keep the page small: the 60 likeliest props worth stacking per game
-        merged, seen = [], set()
+        merged, seen = [], {}
         # FanDuel first: the same book the locks and lottery use
         for p in list(fd_by_row.get(row["id"]) or []) + [dict(q, quoted=raw_at) for q in
                                                              parse(items, who, props_ledger.hold(league), league)]:
             k = (props_ledger.norm_name(p["name"]), p["market"], str(p["line"]))
             if k in seen:
+                # the same prop at the second book: kept beside the first, for
+                # value_bets.prop_value (a better price, or one above fair)
+                first = seen[k]
+                if not first.get("fd") or p.get("fd"):
+                    continue
+                first["alt"] = dict(book="DraftKings", price=p["price"], p=p.get("p"))
                 continue
-            seen.add(k)
+            seen[k] = p
             merged.append(p)
         merged.sort(key=lambda o: -o["p"])
         props = [dict(p, gid=row["id"]) for p in merged

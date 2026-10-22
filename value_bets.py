@@ -379,3 +379,77 @@ def parlay_report(path=None):
     return dict(n=len(fs), won=sum(f["status"] == "won" for f in fs), roi=round(100 * sum(ret) / len(fs), 2),
                 est_ev=round(100 * sum(f["ev"] for f in fs) / len(fs), 2),
                 claimed=round(100 * sum(f["prob"] for f in fs) / len(fs), 1))
+
+
+# ----------------------------------------------------------- prop value
+def prop_value(games, now=None, min_ev=MIN_EV):
+    """DraftKings' over price on a player prop against FanDuel's fair chance
+    for the same player, stat and line -- only where FanDuel prices both
+    sides (its de-vigged pair; a one-sided price has no honest fair). Each
+    find is logged in the props ledger so the box-score grader settles it."""
+    import freshness
+    import venues
+    now = now or dt.datetime.now(dt.timezone.utc)
+    out = []
+    for g in games or []:
+        for P in g.get("props") or []:
+            alt = P.get("alt") or {}
+            if not P.get("two_sided") or not alt.get("price") or str(P.get("line", "")).startswith("u"):
+                continue
+            if P["p"] < 0.40:
+                continue          # a proportional pair overstates longshots: fair only near the middle
+            d = venues.dec(alt["price"])
+            if not d:
+                continue
+            ev = P["p"] * d - 1
+            if ev > min_ev:
+                out.append(dict(kind="prop", gid=g["id"], league=g["id"].split(":", 1)[0], match=g.get("match"),
+                                tip=g.get("tip"), name=P["name"], market=P["market"], line=P["line"],
+                                aid=P.get("aid"), label=P["label"], venue=alt.get("book", "DraftKings"),
+                                price=alt["price"], dec=round(d, 4), fair=P["p"], fair_source="FanDuel (two-sided)",
+                                fd_price=P.get("price"), ev=round(ev, 4)))
+    out.sort(key=lambda x: -x["ev"])
+    return out
+
+
+def record_props(finds, day, now=None, path=None):
+    """Archive prop finds once, and log each in the props ledger at the
+    better book's price so the box-score grader settles it."""
+    import props_ledger
+    now = now or dt.datetime.now(dt.timezone.utc)
+    book = load(path)
+    led = props_ledger.load()
+    added = 0
+    for f in finds:
+        key = props_ledger.prop_key(f)
+        k = "prop|" + key
+        if k in book["finds"]:
+            continue
+        book["finds"][k] = dict(f, ledger_key=key, seen=now.isoformat(timespec="seconds"))
+        if key not in led:
+            led[key] = dict(league=f["league"], gid=f["gid"], aid=f.get("aid"), name=f["name"], market=f["market"],
+                            line=f["line"], price=f["price"], p=f["fair"], label=f["label"], date=day,
+                            status="open" if props_ledger.gradable(f["league"], f["market"]) else "ungradable",
+                            value_find=True)
+        added += 1
+    if added:
+        save(book, path)
+        props_ledger.save(led)
+    return added
+
+
+def prop_report(path=None):
+    import props_ledger
+    led = props_ledger.load()
+    fs = []
+    for f in load(path)["finds"].values():
+        if f.get("kind") != "prop":
+            continue
+        st = (led.get(f.get("ledger_key")) or {}).get("status")
+        if st in ("won", "lost"):
+            fs.append((f, st))
+    if not fs:
+        return dict(n=0)
+    ret = [(f["dec"] - 1) if s == "won" else -1 for f, s in fs]
+    return dict(n=len(fs), won=sum(s == "won" for _, s in fs), roi=round(100 * sum(ret) / len(fs), 2),
+                est_ev=round(100 * sum(f["ev"] for f, _ in fs) / len(fs), 2))

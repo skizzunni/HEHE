@@ -136,7 +136,8 @@ def parse(markets, league, hold):
                                 imp=round(_imp(o), 4), p=round(min(p, 0.99), 4), aid=None,
                                 label=f"{who}: {side} {float(line):g} {stat}",
                                 fd=f"{mid}:{r.get('selectionId')}",
-                                where=f"{mn}: {r.get('runnerName')}"))
+                                where=f"{mn}: {r.get('runnerName')}",
+                                two_sided=True))     # p is FanDuel's own de-vigged pair
             continue
         # one-sided: ladders ("Player 50+ Yards"), milestones and scorers (names)
         stat = _stat(sport, mn)

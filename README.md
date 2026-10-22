@@ -2982,3 +2982,18 @@ They fail on the previous commit (no module) and pass now.
 - the record read from the ledger's grading.
 
 They fail on the previous commit (no module) and pass now.
+
+## Prop value bets (2026-10-22)
+
+Props are now checked for price value, not only likelihood. When FanDuel
+lists both sides of a player line (over and under), its no-vig chance for the
+over is taken as the fair chance. DraftKings' over price at the same player,
+stat and line is then compared with it. A find needs a fair chance of at
+least 40% and a positive expected return at DraftKings' price (EV = p x
+decimal - 1 > MIN_EV).
+
+Every find is archived in value.json and logged in the props ledger
+(props.json, `value_find=True`), so the box-score grader settles it the same
+way as every other prop. The Props tab shows the finds and their forward
+record. There is no graded history yet, so this is a forward test: the
+record shown is the only evidence, and it is reported as it grades.

@@ -1400,6 +1400,17 @@ function propTuningHTML(){
 }
 // Prop Locks (prop_locks.py): the day's likeliest confirmed props, set from
 // noon Eastern, frozen and graded from box scores.
+// Prop value: DraftKings' price above FanDuel's two-sided fair (value_bets.prop_value)
+function propValueHTML(){
+  const V = D.prop_value || {}, B = V.bets || [], R = V.record || {};
+  if(!B.length && !R.n) return "";
+  return '<div class="parlays"><h3>Prop value bets</h3><p class="note">The same player, stat and line where DraftKings pays more '
+    + 'than FanDuel&rsquo;s own two-sided fair chance. ' + (R.n ? 'Record: <b>' + R.won + ' of ' + R.n + '</b>, ROI <b>'
+    + (R.roi >= 0 ? '+' : '') + R.roi + '%</b> against ' + R.est_ev + '% expected.' : 'None graded yet.') + '</p>'
+    + (B.length ? '<ul class="betlegs">' + B.map(x => '<li>' + esc(x.label) + ' <b>' + esc(x.price) + '</b> at ' + esc(x.venue)
+        + ' (FanDuel ' + esc(x.fd_price) + ') &middot; fair ' + (100 * x.fair).toFixed(0) + '% &middot; +' + (100 * x.ev).toFixed(1)
+        + '%</li>').join("") + '</ul>' : '<p class="empty">None right now.</p>') + '</div>';
+}
 function propLocksHTML(){
   const X = D.prop_locks || {}, T = X.today || {}, L = T.legs || [], R = X.record || {};
   const res = s => s === "won" ? '<span class="wl won">WON</span>' : s === "lost" ? '<span class="wl lost">LOST</span>'
@@ -1425,7 +1436,7 @@ function drawProps(){
   const games = ((P[day] || {}).games || []).map(g => Object.assign({}, g, {
     props: g.props.filter(x => !q || (x.label + " " + g.match).toLowerCase().includes(q))
   })).filter(g => g.props.length);
-  let html = propLocksHTML() + '<div class="parlays"><h3>Props \u2014 ' + day + '</h3>'
+  let html = propLocksHTML() + propValueHTML() + '<div class="parlays"><h3>Props \u2014 ' + day + '</h3>'
     + '<details class="explain"><summary>Where these come from</summary>'
     + '<p>Player props from FanDuel (every league it lists: points, rebounds, assists, threes, '
     + 'passing/rushing/receiving yards, receptions, anytime scorers, shots, hits, strikeouts) and '
