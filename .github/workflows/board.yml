@@ -33,12 +33,6 @@ on:
       - 'board.html'
       - '.github/workflows/board.yml'
 
-# One run at a time. The two schedules can otherwise overlap and race each
-# other pushing ledger.json.
-concurrency:
-  group: board
-  cancel-in-progress: false
-
 permissions:
   actions: write         # each run starts the next one (see `next` below)
   contents: write        # commit ledger.json back
@@ -47,6 +41,14 @@ permissions:
 
 jobs:
   build:
+    # One build at a time: the schedules could otherwise overlap and race each
+    # other pushing ledger.json. Only the BUILD is serialised -- a run-wide
+    # group made every rebuild wait for the previous run's Pages deploy, which
+    # GitHub sometimes queues for 7+ minutes (2026-10-22: the page went 22
+    # minutes stale). A newer queued build replaces an older queued one.
+    concurrency:
+      group: board-build
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     outputs:
       started: ${{ steps.clock.outputs.started }}
@@ -163,6 +165,11 @@ jobs:
 
   deploy:
     needs: build
+    # deploys queue on their own; a newer waiting deploy replaces an older one,
+    # so the site always moves to the latest build
+    concurrency:
+      group: board-deploy
+      cancel-in-progress: false
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -175,12 +182,15 @@ jobs:
   # fires every 1.5 to 4 hours, so each run starts the next one instead: wait
   # out the rest of the five minutes, then dispatch. A run started by the
   # Actions token may trigger workflow_dispatch (the one exception to "token
-  # events start no runs"). The concurrency group keeps at most one run going
-  # and one waiting, so chains can never pile up; the cron above restarts the
+  # events start no runs"). The build's concurrency group keeps at most one build
+  # going and one waiting, so chains can never pile up; the cron above restarts the
   # chain if a dispatch is ever lost. Free on a public repository.
   next:
-    needs: [build, deploy]
-    if: always()
+    # starts as soon as the build is done -- never waits for the deploy queue.
+    # A build cancelled because a newer one replaced it ends its chain here,
+    # so two chains can never run side by side.
+    needs: [build]
+    if: always() && needs.build.result != 'cancelled'
     runs-on: ubuntu-latest
     steps:
       - name: Start the next rebuild five minutes after this one began

@@ -531,6 +531,33 @@ td .sbn{font-weight:500}
   padding:18px 20px;margin-top:16px}
 .sect .sect{box-shadow:none;border:0;padding:0}
 @media (max-width:760px){.sect,.rhead{padding:14px!important}}
+
+/* stale-page notice: one slim line, not a wall of red */
+#stalebar{position:sticky;top:0;z-index:50;display:flex;align-items:center;justify-content:center;gap:12px;
+  padding:7px 14px;padding-top:max(7px,env(safe-area-inset-top));font:600 13px/1.3 var(--body);color:#fff;text-align:left}
+#stalebar.late{background:#B45309}
+#stalebar.old{background:#B42318}
+#stalebar button{flex:0 0 auto;font:700 12px var(--body);color:inherit;background:rgba(255,255,255,.18);
+  border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 12px;cursor:pointer}
+nav#tabs:empty{display:none}
+@media (max-width:760px){
+  :root{--navh:76px}
+  /* the header shrinks so the first picks show on the first screen */
+  header.hero{padding:12px 14px 14px}
+  header.hero .eyebrow{display:none}
+  header.hero h1{font-size:21px}
+  .logo{flex-basis:32px;height:32px;border-radius:9px}
+  .logo svg{width:17px;height:17px}
+  .iconbtn{width:36px;height:36px;border-radius:10px}
+  header.hero .stamp{margin-top:10px;font-size:11px;padding:4px 10px 4px 9px}
+  .glance{grid-template-columns:repeat(4,minmax(0,1fr));gap:6px;margin-top:10px}
+  .glance .k{padding:7px 8px;border-radius:10px}
+  .glance .k span{font-size:8.5px;letter-spacing:.04em}
+  .glance .k b{font-size:17px}
+  .glance .k i{font-size:10px}
+  #panel{padding-top:0}
+  .parlays:first-child{margin-top:10px}
+}
 </style>
 <div class="wrap">
 <a class="skip" href="#panel">Skip to picks</a>
@@ -717,7 +744,7 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
   + tile("Today&rsquo;s calls", String(C.length),
          done.length ? C.filter(c => c.status === "won").length + "&ndash;" + C.filter(c => c.status === "lost").length + " so far"
                      : (C.length ? "set at 8 AM ET" : "set at 8 AM ET"))
-  + tile("Locks today", String(LK.length), "FanDuel, one per game")
+  + tile("Locks today", String(LK.length), "on FanDuel")
   + tile("Prop Locks", PL.n ? PL.won + " of " + PL.n : "&mdash;",
          PL.n ? PL.hit + "% hit" : "none graded yet", PL.n && PL.hit >= 70 ? "good" : "");
 })();
@@ -2740,13 +2767,13 @@ buildTabs(); render(); drawSlip();
       el = document.createElement("div");
       el.id = "stalebar";
       el.setAttribute("role", "alert");
-      el.style.cssText = "position:sticky;top:0;z-index:50;padding:10px 16px;font-weight:600;"
-        + "background:#B42318;color:#fff;text-align:center";
       document.body.insertBefore(el, document.body.firstChild);
     }
-    var age = mins < 120 ? mins + " minutes" : Math.round(mins / 60) + " hours";
-    el.textContent = "This page is " + age + " old (it normally updates every 5 minutes). "
-      + "Cards, picks and prices may have changed -- check FanDuel before betting.";
+    // amber while the next update is merely late, red once it is an hour+
+    el.className = mins < 60 ? "late" : "old";
+    var age = mins < 120 ? mins + " min" : Math.round(mins / 60) + " h";
+    el.innerHTML = "<span>Prices " + age + " old &mdash; check FanDuel before betting.</span>"
+      + '<button type="button" onclick="location.reload()">Refresh</button>';
   }
   staleBanner();
   setInterval(staleBanner, 60000);
@@ -2781,7 +2808,7 @@ buildTabs(); render(); drawSlip();
     var b = document.createElement("button");
     b.id = "newBuild"; b.type = "button";
     b.textContent = "New update \u2014 tap to refresh";
-    b.style.cssText = "position:fixed;left:50%;bottom:16px;transform:translateX(-50%);z-index:50;"
+    b.style.cssText = "position:fixed;left:50%;bottom:calc(16px + var(--navh,0px));transform:translateX(-50%);z-index:50;"
       + "padding:10px 16px;border-radius:20px;border:0;font:inherit;font-weight:600;"
       + "background:var(--ink,#111);color:var(--bg,#fff);box-shadow:0 2px 10px rgba(0,0,0,.25)";
     b.onclick = go;
