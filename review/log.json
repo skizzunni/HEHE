@@ -2530,9 +2530,9 @@
    }
   },
   "clv": {
-   "avg": 0.83,
-   "beat": 100.0,
-   "n": 1
+   "avg": -1.98,
+   "beat": 33.3,
+   "n": 3
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2592,10 +2592,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Kristoffer Zachariassen: Anytime Goalscorer"
+    ],
     "legs": 4,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 0
    }
@@ -2603,10 +2605,10 @@
   "picks": {
    "hit": 100.0,
    "lost": 0,
-   "n": 1,
-   "roi": 14.3,
-   "said": 83.0,
-   "won": 1
+   "n": 3,
+   "roi": 26.5,
+   "said": 75.7,
+   "won": 3
   },
   "picks_by_league": {
    "uecl": {
@@ -2616,6 +2618,14 @@
     "roi": 14.3,
     "said": 83.0,
     "won": 1
+   },
+   "uel": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 2,
+    "roi": 32.6,
+    "said": 72.0,
+    "won": 2
    }
   },
   "props": {
@@ -2625,9 +2635,9 @@
     "said_price": 87.4,
     "won": 280
    },
-   "n": 0,
-   "said": null,
-   "won": 0
+   "n": 2,
+   "said": 56.5,
+   "won": 1
   },
   "safe_locks": {
    "lost": [],
@@ -2661,12 +2671,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.8,
+    "hit": 67.0,
     "lost": 103,
-    "n": 310,
-    "roi": -3.3,
-    "said": 64.3,
-    "won": 207
+    "n": 312,
+    "roi": -3.1,
+    "said": 64.4,
+    "won": 209
    }
   },
   "weights": {
