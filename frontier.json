@@ -65309,6 +65309,50 @@
       "start": "2026-10-22T23:00Z",
       "starters": [],
       "t": "2026-10-22T22:34:15+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "PHI",
+        "Dean Wade",
+        "Out",
+        "F"
+       ],
+       [
+        "PHI",
+        "Tacko Fall",
+        "Out",
+        "C"
+       ],
+       [
+        "PHI",
+        "Dominick Barlow",
+        "Out",
+        "F"
+       ],
+       [
+        "PHI",
+        "Ariel Hukporti",
+        "Out",
+        "C"
+       ],
+       [
+        "CLE",
+        "Khalifa Diop",
+        "Out",
+        "C"
+       ],
+       [
+        "CLE",
+        "Nae'Qwan Tomlin",
+        "Out",
+        "F"
+       ]
+      ],
+      "probables": {},
+      "start": "2026-10-22T23:00Z",
+      "starters": [],
+      "t": "2026-10-22T22:43:35+00:00"
      }
     ],
     "nba:401909094": [
@@ -66372,6 +66416,33 @@
       "start": "2026-10-22T23:00Z",
       "starters": [],
       "t": "2026-10-22T15:24:11+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "NSH",
+        "Mavrik Bourque",
+        "Day-To-Day",
+        "C"
+       ]
+      ],
+      "probables": {
+       "BOS": [
+        [
+         "Michael DiPietro",
+         "probableStartingGoalie"
+        ]
+       ],
+       "NSH": [
+        [
+         "Justus Annunen",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-22T23:00Z",
+      "starters": [],
+      "t": "2026-10-22T22:43:35+00:00"
      }
     ],
     "nhl:401892553": [
@@ -116771,141 +116842,6 @@
        2.0,
        0.8,
        [
-        "Brighton & Hove Albion to win",
-        "Pafos or draw",
-        "Dinamo Zagreb or draw",
-        "St. Louis Blues under 4.5 goals",
-        "Edmonton Oilers over 1.5 goals"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Liberty Flames to win",
-        "East Carolina Pirates +21.5",
-        "AFC Bournemouth or draw"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Florida Panthers +1.5",
-        "Edmonton Oilers +1.5"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Liberty Flames to win",
-        "Memphis Tigers to win",
-        "AFC Bournemouth or draw",
-        "Chicago Bears +6.5",
-        "Under 250.5 points"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Under 245.5 points",
-        "Chicago Bears under 30.5 points",
-        "Kennesaw State Owls +15.5"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Under 245.5 points",
-        "Oklahoma City Thunder to win",
-        "Under 56.5 points",
-        "East Carolina Pirates +17.5",
-        "Trabzonspor to win"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-22T15:35:36+00:00"
-    },
-    {
-     "policy": "d772892d",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
         "Dinamo Zagreb or draw",
         "Pafos or draw",
         "Chicago Bears over 18.5 points",
@@ -124874,6 +124810,142 @@
       ]
      ],
      "t": "2026-10-22T22:34:06+00:00"
+    },
+    {
+     "policy": "d772892d",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "New England Patriots over 16.5 points",
+        "Under 64.5 points",
+        "Over 219.5 points",
+        "Utah Mammoth under 5.5 goals",
+        "New Jersey Devils +2.5"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Memphis Tigers to win",
+        "Chicago Bears over 20.5 points",
+        "Kennesaw State Owls +20.5",
+        "Pittsburgh Penguins under 6.5 goals"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Over 226.5 points",
+        "New Jersey Devils to win"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Memphis Tigers to win",
+        "Chicago Bears +5.5",
+        "Liberty Flames over 22.5 points",
+        "Over 222.5 points",
+        "Over 222.5 points"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "New England Patriots over 20.5 points",
+        "East Carolina Pirates under 26.5 points",
+        "New Jersey Devils to win"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "New Jersey Devils to win",
+        "Oklahoma City Thunder to win",
+        "East Carolina Pirates under 26.5 points",
+        "New England Patriots over 20.5 points",
+        "Liberty Flames to win"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-22T22:43:27+00:00"
     }
    ]
   }
