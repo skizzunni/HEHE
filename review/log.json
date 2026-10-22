@@ -1990,10 +1990,10 @@
   },
   "props": {
    "fair": {
-    "n": 259,
-    "said_fair": 84.5,
-    "said_price": 86.6,
-    "won": 213
+    "n": 271,
+    "said_fair": 84.7,
+    "said_price": 86.8,
+    "won": 224
    },
    "n": 131,
    "said": 82.8,
@@ -2061,42 +2061,42 @@
    {
     "flag": false,
     "hit": 100.0,
-    "n": 10,
+    "n": 13,
     "name": "props nba Assists",
-    "said": 85.5
+    "said": 85.4
    },
    {
     "flag": false,
-    "hit": 78.6,
-    "n": 14,
+    "hit": 82.4,
+    "n": 17,
     "name": "props nba Points",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 76.9,
-    "n": 13,
+    "hit": 78.6,
+    "n": 14,
     "name": "props nba Pts + Reb",
-    "said": 85.0
+    "said": 84.9
    },
    {
     "flag": false,
-    "hit": 76.9,
-    "n": 13,
+    "hit": 73.3,
+    "n": 15,
     "name": "props nba Pts + Reb + Ast",
     "said": 85.0
    },
    {
     "flag": false,
     "hit": 100.0,
-    "n": 10,
+    "n": 12,
     "name": "props nba Reb + Ast",
-    "said": 84.9
+    "said": 85.0
    },
    {
     "flag": false,
-    "hit": 72.7,
-    "n": 11,
+    "hit": 75.0,
+    "n": 12,
     "name": "props nba Threes Made",
     "said": 85.0
    },
@@ -2247,9 +2247,9 @@
    }
   },
   "clv": {
-   "avg": -0.68,
-   "beat": 60.0,
-   "n": 10
+   "avg": -0.66,
+   "beat": 54.5,
+   "n": 11
   },
   "day": "2026-10-21",
   "leaks_14d": [],
@@ -2307,13 +2307,14 @@
     "killed_by": [
      "Over 239.5 points",
      "Over 8.5 goals",
-     "Over 219.5 points"
+     "Over 219.5 points",
+     "Under 4.5 goals"
     ],
     "legs": 12,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -2325,19 +2326,20 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+25",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
      "Over 239.5 points",
      "Over 8.5 goals",
-     "Over 219.5 points"
+     "Over 219.5 points",
+     "Ottawa Senators under 2.5 goals"
     ],
     "legs": 12,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+50",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -2350,7 +2352,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "10k+100",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [],
@@ -2375,12 +2377,12 @@
    }
   ],
   "picks": {
-   "hit": 63.6,
+   "hit": 66.7,
    "lost": 4,
-   "n": 11,
-   "roi": -9.6,
-   "said": 65.5,
-   "won": 7
+   "n": 12,
+   "roi": -1.2,
+   "said": 64.2,
+   "won": 8
   },
   "picks_by_league": {
    "nba": {
@@ -2392,12 +2394,12 @@
     "won": 2
    },
    "nhl": {
-    "hit": 0.0,
+    "hit": 50.0,
     "lost": 1,
-    "n": 1,
-    "roi": -100.0,
-    "said": 66.0,
-    "won": 0
+    "n": 2,
+    "roi": -4.5,
+    "said": 58.0,
+    "won": 1
    },
    "ucl": {
     "hit": 75.0,
@@ -2426,21 +2428,22 @@
   },
   "props": {
    "fair": {
-    "n": 259,
-    "said_fair": 84.5,
-    "said_price": 86.6,
-    "won": 213
+    "n": 271,
+    "said_fair": 84.7,
+    "said_price": 86.8,
+    "won": 224
    },
-   "n": 65,
-   "said": 80.8,
-   "won": 52
+   "n": 78,
+   "said": 81.5,
+   "won": 64
   },
   "safe_locks": {
    "lost": [
+    "Florida Panthers +3.5 (Florida Panthers at Ottawa Senators) Florida Panthers 1 - Ottawa Senators 5",
     "Sporting CP or draw (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2"
    ],
    "n": 11,
-   "open": 3,
+   "open": 2,
    "plays": {
     "best": [
      7,
@@ -2469,12 +2472,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 66.1,
+    "hit": 66.2,
     "lost": 103,
-    "n": 304,
-    "roi": -4.1,
+    "n": 305,
+    "roi": -3.7,
     "said": 64.1,
-    "won": 201
+    "won": 202
    }
   },
   "weights": {
