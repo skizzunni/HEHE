@@ -1,9 +1,9 @@
 # Review 2026-10-21
 
-Picks 3-1 (75.0% vs 75.2% claimed, ROI -6.9%).
-Closing line value: -3.08 points on 4 picks; beat the close on 50.0%.
+Picks 4-1 (80.0% vs 74.6% claimed, ROI +0.3%).
+Closing line value: -1.75 points on 5 picks; beat the close on 60.0%.
 - LOST ucl Sporting CP at 70%: margin 1 · the book had my side favoured too · called at 70%
-With the market 66.3% (297); against it 36.0% (25).
+With the market 66.4% (298); against it 36.0% (25).
 Locks 0/11 won, 10 open; Best play top 2 (57%) lost; lost: Sporting CP to win (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2.
 Safe Locks 3/11 won, 7 open; Winners parlay top 2 (84%) open; Best play top 7 (53%) lost; lost: Sporting CP or draw (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2.
 Lottery 10k: open (0/12 legs won)
