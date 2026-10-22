@@ -1,0 +1,127 @@
+{
+ "finds": {
+  "ger:401884761|away|Kalshi": {
+   "dec": 7.2464,
+   "ev": 0.0206,
+   "fair": 0.1408,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ger:401884761",
+   "kind": "value",
+   "league": "ger",
+   "match": "BMG @ VFB",
+   "price": "+625",
+   "seen": "2026-10-22T05:46:40+00:00",
+   "side": "away",
+   "start": "2026-10-23T18:30Z",
+   "team": "Borussia M\u00f6nchengladbach",
+   "tip": "2:30 PM",
+   "venue": "Kalshi"
+  },
+  "ncaaf:401858272|{\"line\": 6.5, \"t\": \"spread\", \"team\": \"Stanford Cardinal\"}|Kalshi": {
+   "dec": 2.0513,
+   "dk": "-108",
+   "ev": 0.0163,
+   "fair": 0.4955,
+   "id": "ncaaf:401858272",
+   "kind": "value",
+   "league": "ncaaf",
+   "market": "spread",
+   "match": "NCSU @ STAN",
+   "price": "+105",
+   "seen": "2026-10-22T05:46:40+00:00",
+   "side": "{\"line\": 6.5, \"t\": \"spread\", \"team\": \"Stanford Cardinal\"}",
+   "spec": {
+    "line": 6.5,
+    "t": "spread",
+    "team": "Stanford Cardinal"
+   },
+   "start": "2026-10-24T02:30Z",
+   "team": "Stanford Cardinal +6.5",
+   "tip": "10:30 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892558|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"St. Louis Blues\"}|FanDuel": {
+   "dec": 1.4545,
+   "dk": "-258",
+   "ev": 0.0168,
+   "fair": 0.699,
+   "id": "nhl:401892558",
+   "kind": "value",
+   "league": "nhl",
+   "market": "spread",
+   "match": "VGK @ STL",
+   "price": "-220",
+   "seen": "2026-10-22T05:46:40+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"St. Louis Blues\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "St. Louis Blues"
+   },
+   "start": "2026-10-23T00:00Z",
+   "team": "St. Louis Blues +1.5",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892559|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Winnipeg Jets\"}|FanDuel": {
+   "dec": 1.7246,
+   "dk": "-155",
+   "ev": 0.0115,
+   "fair": 0.5865,
+   "id": "nhl:401892559",
+   "kind": "value",
+   "league": "nhl",
+   "market": "spread",
+   "match": "WPG @ DAL",
+   "price": "-138",
+   "seen": "2026-10-22T05:46:40+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Winnipeg Jets\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Winnipeg Jets"
+   },
+   "start": "2026-10-23T00:00Z",
+   "team": "Winnipeg Jets +1.5",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nhl:401892558:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"St. Louis Blues\"}|nhl:401892559:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Winnipeg Jets\"}": {
+   "ev": 0.0284,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0115,
+     "fair": 0.5865,
+     "id": "nhl:401892559",
+     "price": "-138",
+     "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Winnipeg Jets\"}",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "Winnipeg Jets"
+     },
+     "team": "Winnipeg Jets +1.5"
+    },
+    {
+     "ev": 0.0168,
+     "fair": 0.699,
+     "id": "nhl:401892558",
+     "price": "-220",
+     "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"St. Louis Blues\"}",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "St. Louis Blues"
+     },
+     "team": "St. Louis Blues +1.5"
+    }
+   ],
+   "payout": 2.508,
+   "prob": 0.41,
+   "seen": "2026-10-22T05:46:40+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  }
+ }
+}
