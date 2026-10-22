@@ -273,6 +273,43 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|uecl:401915744:away": {
+   "ev": 0.1088,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.1086,
+     "fair": 0.1386,
+     "id": "uecl:401915744",
+     "price": "+700",
+     "side": "away",
+     "spec": null,
+     "team": "Egnatia"
+    }
+   ],
+   "payout": 8.0,
+   "prob": 0.1386,
+   "seen": "2026-10-22T11:09:44+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "uecl:401915744|away|FanDuel": {
+   "dec": 8.0,
+   "ev": 0.1086,
+   "fair": 0.1386,
+   "fair_source": "DraftKings (Shin)",
+   "id": "uecl:401915744",
+   "kind": "value",
+   "league": "uecl",
+   "match": "EGN @ AGF",
+   "price": "+700",
+   "seen": "2026-10-22T11:09:44+00:00",
+   "side": "away",
+   "start": "2026-10-22T19:00Z",
+   "team": "Egnatia",
+   "tip": "3:00 PM",
+   "venue": "FanDuel"
+  },
   "uel:401915553|away|Kalshi": {
    "dec": 3.1776,
    "ev": 0.0245,
