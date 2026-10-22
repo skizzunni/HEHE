@@ -118,6 +118,13 @@ def snapshot():
         KB0 = {}
     import venues
     import band_value
+    # optional: more books and Pinnacle's sharp line (oddsapi.py; needs the
+    # ODDS_API_KEY secret, off without it)
+    try:
+        import oddsapi
+        OA = oddsapi.load({lg_: len(rs_) for lg_, rs_ in (d._STATE["slots"].get("today") or {}).items()})
+    except Exception:
+        OA = {}
     # publish time for the freshness gate: a pick priced more than
     # freshness.MAX_AGE_MIN minutes before this is stale (freshness.py)
     pub = dt.datetime.now(dt.timezone.utc)
@@ -200,7 +207,7 @@ def snapshot():
                              "bv": (band_value.value(k, mc / 100) if (leg and mc is not None and not r.get("dc"))
                                     else None),
                              "vn": (venues.compare(k, r, r["mypick"], leg.get("price"), r.get("price_book"),
-                                                   FD, KB0) if leg and not r.get("dc") else []),
+                                                   FD, KB0, OA) if leg and not r.get("dc") else []),
                              "lg": lab})
             # ranked by the published chance (the one probability)
             rows.sort(key=lambda x: (x["mc"] is None, -(x["hit"] or 0),
@@ -330,7 +337,7 @@ def snapshot():
         import value_bets
         vb_val, vb_sure = [], []
         for s_ in ("today", "tomorrow"):
-            v_, su_ = value_bets.scan_all(d._STATE["slots"].get(s_), FD, KB0, pub)
+            v_, su_ = value_bets.scan_all(d._STATE["slots"].get(s_), FD, KB0, pub, OA)
             vb_val += v_
             vb_sure += su_
         value_bets.record(vb_val, vb_sure, pub)

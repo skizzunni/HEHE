@@ -114,21 +114,34 @@ def line_prices(league, row, spec, FD=None, KB=None):
     return out
 
 
-def scan(league, row, FD=None, KB=None, min_ev=MIN_EV):
+def scan(league, row, FD=None, KB=None, min_ev=MIN_EV, OA=None):
     """(value bets, sure bet or None) for one board game."""
     import venues
     sides = _sides(row)
     best, value = {}, []
     for side, team, fair, price in sides:
-        vs = venues.compare(league, row, team, price, row.get("price_book") or "DraftKings", FD, KB)
+        # Pinnacle's fair chance where The Odds API has it (oddsapi.py)
+        src = "DraftKings (Shin)"
+        if OA:
+            try:
+                import oddsapi
+                sf = oddsapi.sharp_fair(OA, league, row.get("mkt") or {}, team)
+                if sf:
+                    fair, src = sf, "Pinnacle (Shin)"
+            except Exception:
+                pass
+        vs = venues.compare(league, row, team, price, row.get("price_book") or "DraftKings", FD, KB, OA)
         if not vs:
             continue
         best[side] = (team, vs[0])
         for v in vs:
             ev = fair * v["dec"] - 1
             if ev > min_ev and v["venue"] != (row.get("price_book") or "DraftKings"):
+                if src.startswith("Pinnacle") and v["venue"] == "Pinnacle":
+                    continue                     # the reference is never its own find
                 value.append(dict(id=row["id"], league=league, side=side, team=team, venue=v["venue"],
                                   price=v.get("american") or v["price"], dec=v["dec"], fair=round(fair, 4),
+                                  fair_source=src,
                                   ev=round(ev, 4), match=row.get("label"), tip=row.get("tip"),
                                   start=(row.get("mkt") or {}).get("start")))
     # spreads and totals: the same comparison on exactly the same line
@@ -155,7 +168,7 @@ def scan(league, row, FD=None, KB=None, min_ev=MIN_EV):
     return value, sure
 
 
-def scan_all(slot_rows, FD=None, KB=None, now=None):
+def scan_all(slot_rows, FD=None, KB=None, now=None, OA=None):
     """Over every fresh, priced, unstarted game: value bets (best EV first)
     and sure bets."""
     import freshness
@@ -166,7 +179,7 @@ def scan_all(slot_rows, FD=None, KB=None, now=None):
             st = freshness.parse((r.get("mkt") or {}).get("start"))
             if not freshness.can_call(r, now) or st is None or st <= now:
                 continue
-            v, s = scan(lg, r, FD, KB)
+            v, s = scan(lg, r, FD, KB, OA=OA)
             value.extend(v)
             if s:
                 sure.append(s)

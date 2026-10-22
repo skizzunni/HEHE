@@ -76,6 +76,9 @@ jobs:
 
       - name: Rebuild the board
         run: python3 rebuild_board.py
+        env:
+          # optional: more books and Pinnacle's line (oddsapi.py); unset = off
+          ODDS_API_KEY: ${{ secrets.ODDS_API_KEY }}
 
       # what lost and why, every day, and the weights for the next picks
       - name: Review the day

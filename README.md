@@ -2935,3 +2935,11 @@ They fail on the previous commit (no module) and pass now.
   - Stanford +6.5 at Kalshi +105 (fair 49.6%, +1.6%);
   - Borussia Mönchengladbach at Kalshi +625 (+2.1%).
 - Tests: `test_value_bets.Lines` (score settlement with pushes; Shin fair for spreads and totals; mismatched lines skipped).
+
+**Optional: more books and Pinnacle's line** (`oddsapi.py`, off unless the `ODDS_API_KEY` Actions secret is set).
+- With a free key from the-odds-api.com, each build adds moneylines from Pinnacle, BetMGM, Caesars, BetRivers, ESPN BET and Fanatics (and FanDuel and DraftKings where their own feeds miss a game).
+- **Price comparison:** each pick's best venue covers every book.
+- **Value scan:** the fair chance comes from **Pinnacle**, the sharpest book (Shin de-vig), wherever it lists the game. Pinnacle itself is never counted as a find.
+- **Budget:** the free tier is 500 credits a month, and one moneyline call naming up to 10 books costs one credit. A sport is refetched at most every 6 hours, at most 16 calls a day, busiest sports first. Both limits are environment settings.
+- **Setup is the owner's alone:** add the key as a repository secret named `ODDS_API_KEY` in GitHub → Settings → Secrets and variables → Actions. It is never written into the repository or a chat.
+- **Test:** `tests/test_oddsapi.py` (4) covers off without a key, the daily budget (busiest sport first, then cache), Pinnacle as the reference, and extra books in the comparison.

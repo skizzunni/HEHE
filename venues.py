@@ -45,7 +45,7 @@ def american(d):
     return f"+{round(100 * (d - 1))}" if d >= 2 else str(round(-100 / (d - 1)))
 
 
-def compare(league, row, team, book_price, book_name, FD=None, KB=None):
+def compare(league, row, team, book_price, book_name, FD=None, KB=None, OA=None):
     """[{venue, price, dec}] for a straight-win bet on `team`, best first."""
     out = []
     d = dec(book_price)
@@ -71,6 +71,16 @@ def compare(league, row, team, book_price, book_name, FD=None, KB=None):
             if kd:
                 out.append(dict(venue="Kalshi", price=f'{round(100 * k["price"])}¢', dec=round(kd, 4),
                                 american=american(kd), ticker=k.get("ticker")))
+        except Exception:
+            pass
+    if OA:
+        try:
+            import oddsapi
+            have = {x["venue"] for x in out}
+            for x in oddsapi.prices(OA, league, m, team):
+                if x["venue"] not in have:          # a book's own feed wins over the aggregator
+                    out.append(dict(venue=x["venue"], price=x["price"], dec=x["dec"]))
+                    have.add(x["venue"])
         except Exception:
             pass
     out.sort(key=lambda x: -x["dec"])
