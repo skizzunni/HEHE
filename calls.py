@@ -19,6 +19,7 @@ review/call_min.json. A league with no qualifying record gets no strong
 calls (soccer qualifies as one group).
 """
 import json
+from collections import Counter as _Counter
 import os
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -85,6 +86,14 @@ import datetime as _dt
 from zoneinfo import ZoneInfo as _ZI
 
 TOP_N = 5
+# At most this many of the day's calls from one sport (all soccer counts as
+# one). Ledger replay of the daily top 5, 53 days 2026-08-31 to 10-22:
+#   no cap      70.0% hit, -3.9% per $1  |  62.6%, -14.0%   (first | second half)
+#   2 per sport 72.5% hit, -1.6%         |  66.9%,  -3.0%
+# better in both halves; +18.2 units over the 53 days (95% -0.2 to +38.2).
+# Caps of 1 and 3 were each worse in one half. On 2026-10-22 all five calls
+# were soccer double chances at -700 to -1100, and one of them lost.
+PER_SPORT = 2
 CALL_HOUR = 8
 DAILY = os.path.join(HERE, "calls.json")
 _ET = _ZI("America/New_York")
@@ -231,8 +240,15 @@ def update_daily(state, now=None, path=None, n=None, summary=None):
     if len(rec["calls"]) < n:
         have = {c["id"] for c in rec["calls"]}
         frozen = set(rec.get("frozen") or [])
-        add = [c for c in candidates(today, day, now)
-               if c["id"] not in have and c["league"] not in frozen][:n - len(rec["calls"])]
+        per = _Counter(_group(c["league"]) for c in rec["calls"])
+        add = []
+        for c in candidates(today, day, now):
+            if len(rec["calls"]) + len(add) >= n:
+                break
+            if c["id"] in have or c["league"] in frozen or per[_group(c["league"])] >= PER_SPORT:
+                continue
+            per[_group(c["league"])] += 1
+            add.append(c)
         t = now.isoformat(timespec="seconds")
         for c in add:
             rec["calls"].append(dict(c, set_at=t, rank=len(rec["calls"]) + 1, conf_first=c["conf"]))

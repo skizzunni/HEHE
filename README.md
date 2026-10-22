@@ -3103,3 +3103,31 @@ The first live build found 8 NCAAF candidates, with edges of +0.7% to +2.0%.
 Also fixed: the integrity check flagged every Kalshi venue price shown in
 cents ("60¢") as bad data, which filled the live Checks box with 20 false
 problems.
+
+## Calls: at most 2 per sport (2026-10-22)
+
+On 2026-10-22 all five calls were soccer double chances priced from -700 to
+-1100. One of them lost (Dinamo Zagreb or draw, -800), which cost about
+eight wins' profit. The daily top 5 were replayed on the ledger (53 days,
+2026-08-31 to 10-22), with each rule picking that day's 5 strongest priced
+picks:
+
+| rule | first half | second half |
+|---|---|---|
+| no cap (old) | 70.0% hit, -3.9% per $1 | 62.6%, -14.0% |
+| at most 1 per sport | 76.7%, +1.8% | 62.7%, -9.3% |
+| **at most 2 per sport** | **72.5%, -1.6%** | **66.9%, -3.0%** |
+| at most 3 per sport | 71.4%, -2.3% | 65.1%, -8.4% |
+| no price shorter than -667 | 63.1%, -5.7% | 63.4%, -9.8% |
+
+Two per sport is the only rule better than the old one in both halves, on
+hit rate and on return: +18.2 units over the 53 days, with a paired
+day-bootstrap 95% range of -0.2 to +38.2. That is just short of proof, so
+the live record keeps testing it.
+
+The price floor was rejected: it lowered the hit rate and did not improve
+the return.
+
+`calls.PER_SPORT = 2`, and all soccer leagues count as one sport. A day
+with games in one sport gets fewer calls, never softer ones. The change
+starts with the 2026-10-23 card. Today's frozen card is not changed.

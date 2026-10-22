@@ -33,10 +33,30 @@ class DailyCalls(unittest.TestCase):
         self.path = os.path.join(tempfile.mkdtemp(), "calls.json")
         import news
         self._sum, news.summary = news.summary, lambda lg, gid: None        # no network
+        # these tests are about selection, freezing and gates on one sport;
+        # the per-sport cap has its own test below
+        self._per, calls.PER_SPORT = calls.PER_SPORT, 99
 
     def tearDown(self):
         import news
         news.summary = self._sum
+        calls.PER_SPORT = self._per
+
+    def test_at_most_two_per_sport_soccer_as_one(self):
+        calls.PER_SPORT = 2
+        rows = {"uel": [row(1, 0.85, lg="uel"), row(2, 0.84, lg="uel")],
+                "uecl": [row(3, 0.83, lg="uecl"), row(4, 0.82, lg="uecl")],
+                "nhl": [row(5, 0.70), row(6, 0.69), row(7, 0.68)],
+                "nba": [row(8, 0.60, lg="nba")]}
+        st = dict(dates=("20261020", "20261021"), slots=dict(today=rows, tomorrow={}))
+        rec = calls.update_daily(st, NINE, self.path)
+        # 2 soccer (the two strongest, across both soccer leagues), 2 NHL, then NBA
+        self.assertEqual(self.ids(rec), ["uel:1", "uel:2", "nhl:5", "nhl:6", "nba:8"])
+
+    def test_one_sport_day_gives_fewer_calls_not_softer_ones(self):
+        calls.PER_SPORT = 2
+        rec = calls.update_daily(state([row(i, 0.70 - i / 100) for i in range(6)]), NINE, self.path)
+        self.assertEqual(self.ids(rec), ["nhl:0", "nhl:1"])
 
     def ids(self, rec):
         return [c["id"] for c in rec["calls"]]
