@@ -69323,6 +69323,81 @@
       "start": "2026-10-23T01:00Z",
       "starters": [],
       "t": "2026-10-22T13:58:40+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "EDM",
+        "Jason Dickinson",
+        "Out",
+        "C"
+       ],
+       [
+        "EDM",
+        "Alec Regula",
+        "Injured Reserve",
+        "D"
+       ],
+       [
+        "EDM",
+        "Matt Savoie",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "EDM",
+        "Frederik Andersen",
+        "Injured Reserve",
+        "G"
+       ],
+       [
+        "EDM",
+        "Mattias Janmark",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "CAR",
+        "Taylor Hall",
+        "Injured Reserve",
+        "LW"
+       ],
+       [
+        "CAR",
+        "Mark Jankowski",
+        "Out",
+        "C"
+       ],
+       [
+        "CAR",
+        "Jordan Staal",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "CAR",
+        "Alexander Nikishin",
+        "Injured Reserve",
+        "D"
+       ]
+      ],
+      "probables": {
+       "CAR": [
+        [
+         "Brandon Bussi",
+         "probableStartingGoalie"
+        ]
+       ],
+       "EDM": [
+        [
+         "Devon Levi",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-23T01:00Z",
+      "starters": [],
+      "t": "2026-10-22T17:05:05+00:00"
      }
     ],
     "nhl:401892562": [
@@ -114986,141 +115061,6 @@
        [
         "CSU Craiova or draw",
         "Pafos or draw",
-        "RB Salzburg or draw",
-        "Panathinaikos or draw",
-        "Over 218.5 points"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Liberty Flames to win",
-        "Under 65.5 points",
-        "Marseille or draw"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "San Jose Sharks +1.5",
-        "Chicago Bears over 22.5 points"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Liberty Flames to win",
-        "Memphis Tigers to win",
-        "Marseille or draw",
-        "Getafe or draw",
-        "Braga or draw"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Florida Panthers +1.5",
-        "St. Louis Blues +1.5",
-        "Minnesota Wild to win"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Liberty Flames to win",
-        "Oklahoma City Thunder to win",
-        "New York Rangers +1.5",
-        "St. Louis Blues +1.5",
-        "Minnesota Wild to win"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-22T07:31:11+00:00"
-    },
-    {
-     "policy": "d772892d",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "CSU Craiova or draw",
-        "Pafos or draw",
         "Memphis Tigers under 43.5 points",
         "RB Salzburg or draw",
         "Panathinaikos or draw"
@@ -123039,6 +122979,141 @@
       ]
      ],
      "t": "2026-10-22T16:59:42+00:00"
+    },
+    {
+     "policy": "d772892d",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "RB Salzburg or draw",
+        "Olympiacos or draw",
+        "Chicago Bears +7.5",
+        "Kennesaw State Owls +23.5",
+        "Utah Mammoth under 5.5 goals"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Liberty Flames to win",
+        "East Carolina Pirates under 28.5 points",
+        "AFC Bournemouth or draw"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Over 226.5 points",
+        "New Jersey Devils to win"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Liberty Flames to win",
+        "Memphis Tigers to win",
+        "AFC Bournemouth or draw",
+        "Under 252.5 points",
+        "New York Rangers under 4.5 goals"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Kennesaw State Owls +15.5",
+        "Under 56.5 points",
+        "New Jersey Devils to win"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "New Jersey Devils to win",
+        "Oklahoma City Thunder to win",
+        "Under 56.5 points",
+        "Liberty Flames to win",
+        "East Carolina Pirates under 25.5 points"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-22T17:04:59+00:00"
     }
    ]
   }
