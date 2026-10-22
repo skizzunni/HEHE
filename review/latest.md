@@ -1,9 +1,10 @@
 # Review 2026-10-21
 
-Picks 5-1 (83.3% vs 72.3% claimed, ROI +9.8%).
-Closing line value: -1.92 points on 6 picks; beat the close on 50.0%.
+Picks 5-2 (71.4% vs 69.7% claimed, ROI -5.9%).
+Closing line value: -1.96 points on 7 picks; beat the close on 42.9%.
+- LOST nba Orlando Magic at 54%: margin 7 · the book had my side favoured too · called at 54%
 - LOST ucl Sporting CP at 70%: margin 1 · the book had my side favoured too · called at 70%
-With the market 66.6% (299); against it 36.0% (25).
+With the market 66.3% (300); against it 36.0% (25).
 Locks 2/11 won, 8 open; Best play top 2 (57%) lost; lost: Sporting CP to win (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2.
 Safe Locks 5/11 won, 5 open; Winners parlay top 2 (84%) open; Best play top 7 (53%) lost; lost: Sporting CP or draw (LASK Linz at Sporting CP) LASK Linz 3 - Sporting CP 2.
 Lottery 10k: open (2/12 legs won)
