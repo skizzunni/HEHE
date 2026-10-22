@@ -34,6 +34,47 @@
    "tip": "2:30 PM",
    "venue": "Kalshi"
   },
+  "mlb:401908042|away|FanDuel": {
+   "dec": 2.64,
+   "ev": 0.048,
+   "fair": 0.397,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "mlb:401908042",
+   "kind": "value",
+   "league": "mlb",
+   "match": "TB @ MIL",
+   "price": "+164",
+   "seen": "2026-10-22T20:29:30+00:00",
+   "side": "away",
+   "start": "2026-10-24T00:00Z",
+   "team": "Tampa Bay Rays",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "mlb:401908042|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Tampa Bay Rays\"}|FanDuel": {
+   "dec": 1.6579,
+   "dk": "-180",
+   "ev": 0.0153,
+   "fair": 0.6124,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "mlb:401908042",
+   "kind": "value",
+   "league": "mlb",
+   "market": "spread",
+   "match": "TB @ MIL",
+   "price": "-152",
+   "seen": "2026-10-22T20:29:30+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Tampa Bay Rays\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Tampa Bay Rays"
+   },
+   "start": "2026-10-24T00:00Z",
+   "team": "Tampa Bay Rays +1.5",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909096|{\"line\": 225.5, \"t\": \"under\"}|Kalshi": {
    "dec": 2.0947,
    "dk": "-110",
