@@ -1,14 +1,14 @@
 # Review 2026-10-22
 
-Picks 11-6 (64.7% vs 73.8% claimed, ROI -16.7%).
-Closing line value: -0.75 points on 17 picks; beat the close on 52.9%.
+Picks 12-6 (66.7% vs 73.6% claimed, ROI -13.8%).
+Closing line value: -0.43 points on 18 picks; beat the close on 55.6%.
 - LOST uecl Getafe at 72%: margin 3 · the book had my side favoured too · called at 72%
 - LOST uecl Brighton & Hove Albion at 80%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 80%
 - LOST uecl FC Nordsjælland at 68%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 68%
 - LOST uel Juventus at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST uel Dinamo Zagreb at 83%: margin 2 · the book had my side favoured too · called at 83%
 - LOST uel Marseille at 68%: margin 1 · the book had my side favoured too · called at 68%
-With the market 66.6% (326); against it 37.5% (24).
+With the market 66.7% (327); against it 37.5% (24).
 Locks 0/11 won, 11 open; Best play top 2 (60%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (87%) open; Best play top 8 (51%) open.
 Lottery 10k: open (0/11 legs won)
