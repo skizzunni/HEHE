@@ -558,6 +558,13 @@ nav#tabs:empty{display:none}
   #panel{padding-top:0}
   .parlays:first-child{margin-top:10px}
 }
+
+button.copylegs{display:inline-flex;align-items:center;gap:6px;margin:8px 0 2px;min-height:36px;padding:6px 14px;
+  border-radius:999px;border:1px solid var(--accent);background:var(--accent-soft);color:var(--accent);
+  font:600 13px var(--body);cursor:pointer}
+button.copylegs::before{content:"";width:13px;height:13px;border:2px solid currentColor;border-radius:3px;
+  box-shadow:3px -3px 0 -1px var(--accent-soft),3px -3px 0 1px currentColor}
+button.copylegs:hover{background:var(--accent);color:#fff}
 </style>
 <div class="wrap">
 <a class="skip" href="#panel">Skip to picks</a>
@@ -807,7 +814,17 @@ function labelCells(){
     });
   });
 }
-function render(){ renderView(); labelCells(); }
+// One "Copy legs" button for every list of bets: the text is kept here and
+// the delegated click handler copies it (copyText falls back to a prompt).
+let COPIES = [];
+function copyBtn(title, lines){
+  lines = (lines || []).filter(Boolean);
+  if(!lines.length) return '';
+  COPIES.push(title + "\n" + lines.map((l, i) => (i + 1) + ". " + l).join("\n"));
+  return '<button type="button" class="copylegs" data-copyid="' + (COPIES.length - 1) + '">Copy legs</button>';
+}
+const legLine = (what, price, where, extra) => what + (price ? "  " + price : "") + (where ? "  at " + where : "") + (extra ? "  (" + extra + ")" : "");
+function render(){ COPIES = []; renderView(); labelCells(); }
 function renderView(){
   const how = document.getElementById("how");
   if(slot === "results"){
@@ -1389,6 +1406,8 @@ function drawCalls(){
             + '</td><td class="mkt">' + esc(c.price) + (c.book ? ' <span class="sbn">' + esc(c.book) + '</span>' : '')
             + '</td><td>' + st(c) + '</td></tr>').join("")
         + '</tbody></table>'
+        + '<p>' + copyBtn("Today's calls", C.filter(c => c.status !== "pulled" && c.status !== "void")
+            .map(c => legLine(c.pick, c.price, c.book, c.match))) + '</p>'
       : '<p class="empty">Today&rsquo;s calls are set at 8:00 AM Eastern from the games with a fresh price.</p>')
     + rec + callOdds(C) + callTickets() + valueBets() + makerBids() + '</div>';
 }
@@ -1413,7 +1432,8 @@ function makerBids(){
       + B.map(b => '<tr><td><span class="lgpill">' + esc(b.league) + '</span>' + esc(b.label) + ' <span class="sbn">' + esc(b.side)
         + ' &middot; ' + esc(b.match || '') + '</span></td><td>' + Math.round(100 * b.bid) + '&cent;</td><td>' + Math.round(100 * b.ask)
         + '&cent;</td><td>' + (100 * b.fair).toFixed(1) + '%</td><td class="num">' + pct(100 * b.edge) + '</td></tr>').join('')
-      + '</table>'
+      + '</table><p>' + copyBtn("Kalshi maker bids (limit orders at the bid)", B.map(b => legLine(b.label + " " + b.side,
+          "bid " + Math.round(100 * b.bid) + "c", "Kalshi", b.match))) + '</p>'
       : '<p class="empty">No Kalshi leg is worth a resting bid right now.</p>');
 }
 // Value bets and sure bets across venues (value_bets.py), with their
@@ -1429,12 +1449,15 @@ function valueBets(){
     + (S.length ? '<div class="parlays" style="margin:8px 0"><b>Sure bets</b><ul class="betlegs">' + S.map(x =>
         '<li>' + esc(x.match) + ': ' + x.legs.map(l => esc(l.team) + ' <b>' + esc(l.price) + '</b> at ' + esc(l.venue)
           + ' (' + (100 * l.stake_share).toFixed(1) + '% of stake)').join(' + ') + ' &rarr; <b>+' + (100 * x.profit).toFixed(2)
-        + '%</b> either way</li>').join("") + '</ul><p class="note">Prices move fast: check both before placing.</p></div>' : '')
+        + '%</b> either way</li>').join("") + '</ul><p class="note">Prices move fast: check both before placing.</p>'
+        + copyBtn("Sure bets", S.flatMap(x => x.legs.map(l => legLine(l.team, l.price, l.venue,
+            (100 * l.stake_share).toFixed(1) + "% of stake")))) + '</div>' : '')
     + (B.length ? '<table><thead><tr><th>Bet</th><th>Venue</th><th>Price</th><th class="num">Fair</th><th class="num">Edge</th></tr></thead><tbody>'
         + B.map(x => '<tr><td class="mine"><span class="lgpill">' + esc(x.league) + '</span>' + esc(x.team)
             + '<div class="sbn">' + esc(x.match || "") + ' &middot; ' + esc(x.tip || "") + '</div></td><td>' + esc(x.venue)
             + '</td><td class="mkt">' + esc(x.price) + '</td><td class="num">' + (100 * x.fair).toFixed(0) + '%</td><td class="num">+'
             + (100 * x.ev).toFixed(1) + '%</td></tr>').join("") + '</tbody></table>'
+        + '<p>' + copyBtn("Value bets", B.map(x => legLine(x.team, x.price, x.venue, x.match))) + '</p>'
       : '<p class="empty">No venue is paying above the fair price on an open game right now.</p>')
     + valueParlays(V);
 }
@@ -1452,7 +1475,8 @@ function valueParlays(V){
         + strip([["cash chance", (100 * p.prob).toFixed(1) + "%"], ["pays", p.payout.toFixed(2) + "x"],
                  ["legs", p.legs.length], ["expected return", "+" + (100 * p.ev).toFixed(1) + "%"]])
         + '<ul class="betlegs">' + p.legs.map(L => '<li>' + esc(L.team) + ' <b>' + esc(L.price) + '</b> &middot; fair '
-            + (100 * L.fair).toFixed(0) + '% &middot; +' + (100 * L.ev).toFixed(1) + '%</li>').join("") + '</ul></div>').join("");
+            + (100 * L.fair).toFixed(0) + '% &middot; +' + (100 * L.ev).toFixed(1) + '%</li>').join("") + '</ul>'
+        + copyBtn(p.target + "x value parlay at " + p.venue, p.legs.map(L => legLine(L.team, L.price, p.venue))) + '</div>').join("");
 }
 // How many of today's calls should win: the exact distribution from their
 // published chances (what any number of simulations converges to), treating
@@ -1487,6 +1511,7 @@ function callTickets(){
     + T.map(t => '<div class="parlays" style="margin:8px 0"><b>' + t.legs.length + '-leg ticket</b> ' + res(t.status)
         + '<ul class="legs">' + t.legs.map(L => '<li>' + esc(L.pick) + ' <b>' + esc(L.price) + '</b> &middot; ' + L.conf + '% '
             + (L.status && L.status !== "open" ? '<span class="sbn">' + esc(L.status) + '</span>' : '') + '</li>').join("") + '</ul>'
+        + copyBtn(t.legs.length + "-leg ticket from today's calls", t.legs.map(L => legLine(L.pick, L.price)))
         + '<div class="note">All legs win: <b>' + (100 * t.joint).toFixed(1) + '%</b> (' + (100 * t.independent).toFixed(1)
         + '% if independent) &middot; fair payout <b>' + t.fair_payout.toFixed(2) + 'x</b> &middot; actual payout <b>'
         + t.actual_payout.toFixed(2) + 'x</b> (' + (t.value >= 0 ? '+' : '') + (100 * t.value).toFixed(1) + '% per $1)</div></div>').join("");
@@ -1518,7 +1543,8 @@ function liveCallTargets(F){
       + '</ul><p class="note">Estimated cash chance <b>' + pct(t.joint) + '</b> · estimated payout <b>' + t.payout.toFixed(2)
       + 'x</b> · modeled return ' + (t.value >= 0 ? '+' : '') + pct(t.value)
       + '. Payout is a same-book price product; check the sportsbook’s actual combination quote.</p>'
-      + (t.value < 0 ? '<p class="age stale">Negative modeled return — a payout comparison, not a value recommendation.</p>' : '') + '</div>';
+      + (t.value < 0 ? '<p class="age stale">Negative modeled return — a payout comparison, not a value recommendation.</p>' : '')
+      + copyBtn(r.target.toFixed(0) + "x ticket at " + t.book, t.legs.map(L => legLine(L.pick, L.price, t.book))) + '</div>';
   }).join('');
   if((F.excluded || []).length) h += '<details><summary>' + F.excluded.length + ' calls not ready for a current ticket</summary><ul>'
     + F.excluded.map(x => '<li>' + esc(x.pick || x.id) + ': ' + esc((x.reasons || []).join('; ')) + '</li>').join('') + '</ul></details>';
@@ -1553,6 +1579,8 @@ function drawTargets(){
       h += strip([["cash chance (est.)", pct(r.prob)], ["pays (est.)", r.total.toFixed(2) + "x"],
                   ["legs", r.n], ["est. return", (r.ev >= 0 ? "+" : "") + (100 * r.ev).toFixed(1) + "%"]])
         + '<ul class="legs">' + r.legs.map(x => legHTML(x, {})).join("") + '</ul>'
+        + '<p>' + copyBtn(T + "x ticket (" + (100 * TGSTD) + "%+ legs, pays " + r.total.toFixed(2) + "x)",
+            r.legs.map(x => legLine(x.label, x.price, null, x.match))) + '</p>'
         + (r.exact ? '' : '<p class="note">The search hit its limit: this is the best found, not proven best.</p>');
     } else {
       h += '<p class="note"><b>Unavailable at ' + (100 * TGSTD) + '%+ legs.</b> The most a ticket of those legs '
@@ -1699,7 +1727,8 @@ function propValueHTML(){
     + (R.roi >= 0 ? '+' : '') + R.roi + '%</b> against ' + R.est_ev + '% expected.' : 'None graded yet.') + '</p>'
     + (B.length ? '<ul class="betlegs">' + B.map(x => '<li>' + esc(x.label) + ' <b>' + esc(x.price) + '</b> at ' + esc(x.venue)
         + ' (FanDuel ' + esc(x.fd_price) + ') &middot; fair ' + (100 * x.fair).toFixed(0) + '% &middot; +' + (100 * x.ev).toFixed(1)
-        + '%</li>').join("") + '</ul>' : '<p class="empty">None right now.</p>') + '</div>';
+        + '%</li>').join("") + '</ul>' + copyBtn("Prop value bets", B.map(x => legLine(x.label, x.price, x.venue)))
+      : '<p class="empty">None right now.</p>') + '</div>';
 }
 function propLocksHTML(){
   const X = D.prop_locks || {}, T = X.today || {}, L = T.legs || [], R = X.record || {};
@@ -1715,6 +1744,7 @@ function propLocksHTML(){
     + 'returned &minus;7% per $1), so these are for hitting, not for profit. ' + rec + '</p>'
     + (L.length ? '<ul class="betlegs">' + L.map(x => '<li>' + esc(x.label) + ' <b>' + esc(x.price) + '</b> &middot; '
         + (100 * x.p).toFixed(0) + '% &middot; ' + esc(x.match || "") + ' ' + res(x.status) + '</li>').join("") + '</ul>'
+        + copyBtn("Prop Locks", L.map(x => legLine(x.label, x.price, "FanDuel", x.match)))
       : '<p class="empty">Today&rsquo;s Prop Locks are set from ' + (X.hour || 12) + ':00 Eastern.</p>')
     + '</div>';
 }
@@ -2659,6 +2689,8 @@ document.addEventListener("click", e => {
     render();
     return;
   }
+  const cp = e.target.closest("[data-copyid]");
+  if(cp){ const t = COPIES[+cp.getAttribute("data-copyid")]; if(t) copyText(t, cp, "Copied"); return; }
   const sk = e.target.closest("[data-stack]");
   if(sk){ copyStack(sk); return; }
   const kc = e.target.closest("[data-kalshi]");

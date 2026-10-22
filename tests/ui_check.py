@@ -93,6 +93,9 @@ def call_targets_fixture(ms):
 
 PROBE = """<script>setTimeout(function(){
   var out = {banner: !!document.getElementById("stalebar")};
+  var cl = [].slice.call(document.querySelectorAll("#panel button.copylegs"));
+  out.copyCalls = cl.length;
+  if (cl[0]) { var t = COPIES[+cl[0].getAttribute("data-copyid")] || ""; out.copyText = t.split("\\n").length; }
   var iso = function(m){ return new Date(Date.now() - m * 60000).toISOString(); };
   out.staleNow = [staleNow({pa: iso(20)}), staleNow({pa: iso(5)}), staleNow({st: true}), staleNow({})];
   out.moreHidden = [].slice.call(document.querySelectorAll("#days .more")).filter(function(x){return !x.hidden}).length;
@@ -201,6 +204,8 @@ def main():
         if want not in tg:
             fails.append("Targets tab missing: " + want + " | " + tg[:300])
             break
+    if not new.get("copyCalls") or new.get("copyText", 0) < 2:
+        fails.append(f"Calls must have a Copy legs button holding the legs: {new.get('copyCalls')} buttons, {new.get('copyText')} lines")
     if (new.get("moreHidden"), new.get("moreShown")) != (0, 8):
         fails.append(f"secondary sections must sit behind More: {new.get('moreHidden')} shown, {new.get('moreShown')} after opening")
     if "64%" not in (new.get("odds") or "") or "1.6 of 2" not in (new.get("odds") or ""):
