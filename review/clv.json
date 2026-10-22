@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 54.3,
-  "brier_close": 0.2046,
-  "brier_published": 0.2162,
+  "beat_close_pct": 53.3,
+  "brier_close": 0.2069,
+  "brier_published": 0.2166,
   "dates": [
    "2026-10-10",
    "2026-10-22"
   ],
-  "logloss_close": 0.6006,
-  "logloss_published": 0.6251,
-  "mean_clv_pts": -0.06,
+  "logloss_close": 0.6064,
+  "logloss_published": 0.6262,
+  "mean_clv_pts": -0.38,
   "n": 300
  },
  "market_is_model": true,
@@ -14919,6 +14919,60 @@
    "published": 0.734,
    "won": 1
   },
+  "uecl:401915838": {
+   "call": false,
+   "close": 0.7467,
+   "clv": -7.33,
+   "day": "2026-10-22",
+   "league": "uecl",
+   "published": 0.82,
+   "won": 1
+  },
+  "uecl:401915839": {
+   "call": false,
+   "close": 0.8532,
+   "clv": 3.32,
+   "day": "2026-10-22",
+   "league": "uecl",
+   "published": 0.82,
+   "won": 1
+  },
+  "uecl:401915840": {
+   "call": false,
+   "close": 0.7159,
+   "clv": -8.41,
+   "day": "2026-10-22",
+   "league": "uecl",
+   "published": 0.8,
+   "won": 0
+  },
+  "uecl:401915841": {
+   "call": false,
+   "close": 0.7878,
+   "clv": 1.78,
+   "day": "2026-10-22",
+   "league": "uecl",
+   "published": 0.77,
+   "won": 1
+  },
+  "uecl:401915842": {
+   "call": false,
+   "close": 0.804,
+   "clv": 7.4,
+   "day": "2026-10-22",
+   "league": "uecl",
+   "published": 0.73,
+   "won": 0
+  },
+  "uecl:401915845": {
+   "call": false,
+   "close": 0.6517,
+   "clv": -5.83,
+   "day": "2026-10-22",
+   "league": "uecl",
+   "published": 0.71,
+   "won": 1
+  },
   "uecl:401915846": {
    "call": true,
    "close": 0.8341,
@@ -14937,6 +14991,33 @@
    "published": 0.8,
    "won": 1
   },
+  "uel:401915548": {
+   "call": false,
+   "close": 0.6846,
+   "clv": -14.54,
+   "day": "2026-10-22",
+   "league": "uel",
+   "published": 0.83,
+   "won": 1
+  },
+  "uel:401915556": {
+   "call": true,
+   "close": 0.8263,
+   "clv": 2.63,
+   "day": "2026-10-22",
+   "league": "uel",
+   "published": 0.8,
+   "won": 0
+  },
+  "uel:401915557": {
+   "call": false,
+   "close": 0.6801,
+   "clv": -4.99,
+   "day": "2026-10-22",
+   "league": "uel",
+   "published": 0.73,
+   "won": 0
+  },
   "uel:401915558": {
    "call": false,
    "close": 0.6738,
@@ -14944,6 +15025,15 @@
    "day": "2026-10-22",
    "league": "uel",
    "published": 0.7,
+   "won": 1
+  },
+  "uel:401915559": {
+   "call": false,
+   "close": 0.7985,
+   "clv": 1.85,
+   "day": "2026-10-22",
+   "league": "uel",
+   "published": 0.78,
    "won": 1
   },
   "uru:401914271": {
@@ -15696,5 +15786,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-22T18:37+00:00"
+ "updated": "2026-10-22T18:42+00:00"
 }

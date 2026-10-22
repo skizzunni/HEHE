@@ -2530,9 +2530,9 @@
    }
   },
   "clv": {
-   "avg": -1.98,
-   "beat": 33.3,
-   "n": 3
+   "avg": -0.73,
+   "beat": 46.2,
+   "n": 13
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2549,7 +2549,40 @@
    },
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "uecl",
+    "pick": "Getafe",
+    "price": "-330",
+    "said": 72,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 72%"
+   },
+   {
+    "against_market": false,
+    "league": "uecl",
+    "pick": "Brighton & Hove Albion",
+    "price": "-525",
+    "said": 80,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 80%"
+   },
+   {
+    "against_market": false,
+    "league": "uel",
+    "pick": "Dinamo Zagreb",
+    "price": "-700",
+    "said": 83,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 83%"
+   },
+   {
+    "against_market": false,
+    "league": "uel",
+    "pick": "Marseille",
+    "price": "-260",
+    "said": 68,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -2593,39 +2626,41 @@
    },
    {
     "killed_by": [
-     "Kristoffer Zachariassen: Anytime Goalscorer"
+     "Afonso Moreira: Anytime Goalscorer",
+     "Kristoffer Zachariassen: Anytime Goalscorer",
+     "Neal Maupay: Anytime Goalscorer"
     ],
     "legs": 4,
-    "lost": 1,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 0
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 3,
-   "roi": 26.5,
-   "said": 75.7,
-   "won": 3
+   "hit": 69.2,
+   "lost": 4,
+   "n": 13,
+   "roi": -12.4,
+   "said": 75.5,
+   "won": 9
   },
   "picks_by_league": {
    "uecl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 14.3,
-    "said": 83.0,
-    "won": 1
+    "hit": 71.4,
+    "lost": 2,
+    "n": 7,
+    "roi": -12.3,
+    "said": 77.0,
+    "won": 5
    },
    "uel": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 32.6,
-    "said": 72.0,
-    "won": 2
+    "hit": 66.7,
+    "lost": 2,
+    "n": 6,
+    "roi": -12.5,
+    "said": 73.8,
+    "won": 4
    }
   },
   "props": {
@@ -2635,8 +2670,8 @@
     "said_price": 87.4,
     "won": 280
    },
-   "n": 2,
-   "said": 56.5,
+   "n": 4,
+   "said": 43.8,
    "won": 1
   },
   "safe_locks": {
@@ -2671,12 +2706,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.0,
-    "lost": 103,
-    "n": 312,
-    "roi": -3.1,
-    "said": 64.4,
-    "won": 209
+    "hit": 66.8,
+    "lost": 107,
+    "n": 322,
+    "roi": -3.7,
+    "said": 64.7,
+    "won": 215
    }
   },
   "weights": {
