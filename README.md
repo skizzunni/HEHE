@@ -2902,3 +2902,26 @@ These checks establish the decision rules, not future winning percentages.
 - `tickets.GAME_LINES_ONLY` keeps props out of the recommended tickets: the Locks 2× and 10× tickets and the Targets frontier.
 - Props stay on the Props tab, and the Locks card and Lottery are unchanged.
 - Test: `test_tickets.GameLinesOnly` fails on the previous commit and passes now.
+
+## Value bets and sure bets across venues, forward-tested (2026-10-22)
+
+**What it does.** `value_bets.py` runs every build over every fresh, unstarted game.
+- Each side is priced at FanDuel and Kalshi (fee included) against DraftKings' fair chance, de-vigged by **Shin's method**.
+  - Proportional de-vig overstates a longshot's chance. On the first live scan it made a +600 underdog look like +2.5% value; with Shin it does not.
+- **Value bet:** a venue pays more than fair by over 1%.
+- **Sure bet:** the best prices on the two sides cost under the payout together. The stake split that pays the same either way is shown.
+- Each find is archived in `value.json` the first time it is seen, before the game, never revised, and graded from the ledger's results.
+- The Calls tab lists today's finds and their forward record (won, ROI against the expected value, dates).
+
+**Evidence so far.** On 389 past Kalshi game contracts with a DraftKings close, the 44 where Kalshi paid above DraftKings' fair returned +6.7% (estimated +1.6%). That is too few, and measured against a later price, to call proven. The forward record decides.
+
+**First live scan,** 2026-10-22: 87 games today and 110 tomorrow; no sure bets; one value bet (Borussia Mönchengladbach at Kalshi, +625, fair 14.1%, +2.1%). The venues mostly agree within their margins.
+
+**Test.** `tests/test_value_bets.py`, 5 tests:
+- a FanDuel price above Shin fair is found, and DraftKings itself never is;
+- the longshot's Shin fair is below its proportional fair;
+- no find below fair;
+- the sure-bet profit and stake split;
+- archived once, never revised, then graded.
+
+They fail on the previous commit (no module) and pass now.

@@ -324,6 +324,24 @@ def snapshot():
     labels = {k: lab for k, _, lab in d.LEAGUES}
     # tickets, stacks, Locks pools and the Lottery draw only on fresh prices
     FRESH = freshness.fresh_days(d._STATE["slots"], pub)
+    # value bets and sure bets across venues (value_bets.py): archived when
+    # first seen, graded from the ledger, so the record decides if they work
+    try:
+        import value_bets
+        vb_val, vb_sure = [], []
+        for s_ in ("today", "tomorrow"):
+            v_, su_ = value_bets.scan_all(d._STATE["slots"].get(s_), FD, KB0, pub)
+            vb_val += v_
+            vb_sure += su_
+        value_bets.record(vb_val, vb_sure, pub)
+        value_bets.grade({k_: e_.get("winner") for k_, e_ in ledger.load().items() if e_.get("winner")})
+        out["value"] = dict(bets=vb_val[:20], sure=vb_sure[:10], record=value_bets.report(),
+                            min_ev=value_bets.MIN_EV)
+        print(f"value: {len(vb_val)} value bets, {len(vb_sure)} sure bets", file=sys.stderr)
+    except Exception:
+        import traceback
+        sys.stderr.write("value scan failed -- board unaffected:\n")
+        traceback.print_exc()
     try:
         out["stacks"] = stacks.build(FRESH, SOCCER, labels)
         for st_ in out["stacks"].values():

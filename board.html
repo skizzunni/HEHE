@@ -1113,7 +1113,28 @@ function drawCalls(){
             + '</td><td>' + st(c) + '</td></tr>').join("")
         + '</tbody></table>'
       : '<p class="empty">Today&rsquo;s calls are set at 8:00 AM Eastern from the games with a fresh price.</p>')
-    + rec + callOdds(C) + callTickets() + '</div>';
+    + rec + callOdds(C) + callTickets() + valueBets() + '</div>';
+}
+// Value bets and sure bets across venues (value_bets.py), with their
+// forward record -- the only test that counts.
+function valueBets(){
+  const V = D.value || {}, B = V.bets || [], S = V.sure || [], R = V.record || {};
+  const rec = R.n ? 'Record so far: <b>' + R.won + ' of ' + R.n + '</b> won, ROI <b>' + (R.roi >= 0 ? '+' : '') + R.roi
+      + '%</b> against ' + (R.est_ev >= 0 ? '+' : '') + R.est_ev + '% expected (' + esc(R.dates[0]) + ' to ' + esc(R.dates[1]) + ').'
+    : 'No value bet has been graded yet: every one is archived when first seen and graded after its game.';
+  return '<h3 style="margin-top:18px">Value bets: a venue paying more than the fair price</h3>'
+    + '<p class="note">The same pick, priced at FanDuel or Kalshi (fee included) above what DraftKings&rsquo; own no-vig chance says '
+    + 'it is worth. Not a prediction &mdash; buying the market&rsquo;s own number below its price. ' + rec + '</p>'
+    + (S.length ? '<div class="parlays" style="margin:8px 0"><b>Sure bets</b><ul class="betlegs">' + S.map(x =>
+        '<li>' + esc(x.match) + ': ' + x.legs.map(l => esc(l.team) + ' <b>' + esc(l.price) + '</b> at ' + esc(l.venue)
+          + ' (' + (100 * l.stake_share).toFixed(1) + '% of stake)').join(' + ') + ' &rarr; <b>+' + (100 * x.profit).toFixed(2)
+        + '%</b> either way</li>').join("") + '</ul><p class="note">Prices move fast: check both before placing.</p></div>' : '')
+    + (B.length ? '<table><thead><tr><th>Bet</th><th>Venue</th><th>Price</th><th class="num">Fair</th><th class="num">Edge</th></tr></thead><tbody>'
+        + B.map(x => '<tr><td class="mine"><span class="lgpill">' + esc(x.league) + '</span>' + esc(x.team)
+            + '<div class="sbn">' + esc(x.match || "") + ' &middot; ' + esc(x.tip || "") + '</div></td><td>' + esc(x.venue)
+            + '</td><td class="mkt">' + esc(x.price) + '</td><td class="num">' + (100 * x.fair).toFixed(0) + '%</td><td class="num">+'
+            + (100 * x.ev).toFixed(1) + '%</td></tr>').join("") + '</tbody></table>'
+      : '<p class="empty">No venue is paying above the fair price on an open game right now.</p>');
 }
 // How many of today's calls should win: the exact distribution from their
 // published chances (what any number of simulations converges to), treating
