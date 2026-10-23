@@ -1537,6 +1537,39 @@
    "tip": "10:00 PM",
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|nba:401909847:away|nba:401909849:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}": {
+   "ev": 0.0254,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0116,
+     "fair": 0.5344,
+     "id": "nba:401909847",
+     "price": "-112",
+     "side": "away",
+     "spec": null,
+     "team": "Detroit Pistons"
+    },
+    {
+     "ev": 0.0136,
+     "fair": 0.5216,
+     "id": "nba:401909849",
+     "price": "-106",
+     "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "New Orleans Pelicans"
+     },
+     "team": "New Orleans Pelicans +1.5"
+    }
+   ],
+   "payout": 3.679,
+   "prob": 0.2787,
+   "seen": "2026-10-23T17:48:33+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|nba:401909847:away|nba:401909849:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}|nba:401909850:home": {
    "ev": 0.0456,
    "kind": "parlay",
