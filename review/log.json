@@ -2420,10 +2420,10 @@
    },
    {
     "flag": false,
-    "hit": 78.7,
-    "n": 258,
+    "hit": 79.9,
+    "n": 279,
     "name": "props nhl Shots on Goal",
-    "said": 79.6
+    "said": 79.7
    },
    {
     "flag": false,
@@ -2455,10 +2455,10 @@
    },
    {
     "flag": false,
-    "hit": 91.7,
-    "n": 12,
+    "hit": 92.3,
+    "n": 13,
     "name": "locks nhl under",
-    "said": 80.5
+    "said": 80.0
    }
   ],
   "calls": {
@@ -2530,16 +2530,16 @@
    }
   },
   "clv": {
-   "avg": 0.82,
-   "beat": 65.7,
-   "n": 35
+   "avg": 0.72,
+   "beat": 63.9,
+   "n": 36
   },
   "day": "2026-10-22",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 8,
    "plays": {
     "best": [
      2,
@@ -2547,7 +2547,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 3
   },
   "losses": [
    {
@@ -2618,53 +2618,59 @@
   "lottery": [
    {
     "killed_by": [
-     "Over 6.5 goals"
+     "Over 6.5 goals",
+     "Over 7.5 goals"
     ],
     "legs": 11,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
     "won": 0
    },
    {
     "killed_by": [
-     "Over 6.5 goals"
+     "Over 6.5 goals",
+     "Over 7.5 goals"
     ],
     "legs": 11,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+25",
     "won": 0
    },
    {
     "killed_by": [
-     "Over 6.5 goals"
+     "Over 6.5 goals",
+     "Over 7.5 goals",
+     "Ottawa Senators under 1.5 goals"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+50",
     "won": 0
    },
    {
     "killed_by": [
-     "Over 6.5 goals"
+     "Over 6.5 goals",
+     "Over 7.5 goals"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+100",
     "won": 0
    },
    {
     "killed_by": [
-     "Anaheim Ducks +1.5"
+     "Anaheim Ducks +1.5",
+     "Nashville Predators +1.5"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -2681,21 +2687,21 @@
    }
   ],
   "picks": {
-   "hit": 77.1,
+   "hit": 77.8,
    "lost": 8,
-   "n": 35,
-   "roi": -1.6,
-   "said": 74.3,
-   "won": 27
+   "n": 36,
+   "roi": 0.3,
+   "said": 73.8,
+   "won": 28
   },
   "picks_by_league": {
    "nhl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 45.9,
-    "said": 66.0,
-    "won": 1
+    "n": 2,
+    "roi": 56.7,
+    "said": 61.5,
+    "won": 2
    },
    "uecl": {
     "hit": 81.2,
@@ -2721,14 +2727,16 @@
     "said_price": 87.4,
     "won": 280
    },
-   "n": 15,
-   "said": 69.3,
-   "won": 9
+   "n": 36,
+   "said": 76.3,
+   "won": 29
   },
   "safe_locks": {
-   "lost": [],
+   "lost": [
+    "Nashville Predators over 0.5 goals (Nashville Predators at Boston Bruins) Nashville Predators 0 - Boston Bruins 6"
+   ],
    "n": 11,
-   "open": 10,
+   "open": 8,
    "plays": {
     "best": [
      8,
@@ -2741,7 +2749,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "strong": {
    "n": 0
@@ -2757,12 +2765,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.7,
+    "hit": 67.8,
     "lost": 111,
-    "n": 344,
-    "roi": -3.2,
+    "n": 345,
+    "roi": -3.0,
     "said": 65.3,
-    "won": 233
+    "won": 234
    }
   },
   "weights": {
