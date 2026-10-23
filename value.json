@@ -13,6 +13,7 @@
    "seen": "2026-10-23T20:35:12+00:00",
    "side": "away",
    "start": "2026-10-23T21:00Z",
+   "status": "lost",
    "team": "Sarmiento (Jun\u00edn)",
    "tip": "5:00 PM",
    "venue": "FanDuel"
@@ -1026,6 +1027,23 @@
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
+  "ncaaf:401858497|home|FanDuel": {
+   "dec": 3.65,
+   "ev": 0.0154,
+   "fair": 0.2782,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "ncaaf:401858497",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "IOWA @ MINN",
+   "price": "+265",
+   "seen": "2026-10-23T22:56:46+00:00",
+   "side": "home",
+   "start": "2026-10-24T19:30Z",
+   "team": "Minnesota Golden Gophers",
+   "tip": "3:30 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401860905|{\"line\": 61.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0101,
    "dk": "-112",
@@ -1713,6 +1731,7 @@
    "payout": 6.0,
    "prob": 0.172,
    "seen": "2026-10-23T20:35:12+00:00",
+   "status": "lost",
    "target": 5.0,
    "venue": "FanDuel"
   },
@@ -1742,6 +1761,7 @@
    "payout": 11.357,
    "prob": 0.0919,
    "seen": "2026-10-23T20:35:12+00:00",
+   "status": "lost",
    "target": 10.0,
    "venue": "FanDuel"
   },
