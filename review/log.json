@@ -2649,10 +2649,10 @@
   },
   "props": {
    "fair": {
-    "n": 380,
-    "said_fair": 86.0,
-    "said_price": 87.3,
-    "won": 315
+    "n": 390,
+    "said_fair": 86.2,
+    "said_price": 87.2,
+    "won": 324
    },
    "n": 133,
    "said": 80.3,
@@ -2727,16 +2727,23 @@
    },
    {
     "flag": false,
-    "hit": 92.0,
-    "n": 25,
+    "hit": 92.9,
+    "n": 28,
     "name": "props nba Assists",
-    "said": 86.5
+    "said": 86.7
    },
    {
     "flag": false,
-    "hit": 78.1,
-    "n": 32,
+    "hit": 79.4,
+    "n": 34,
     "name": "props nba Points",
+    "said": 85.0
+   },
+   {
+    "flag": false,
+    "hit": 75.0,
+    "n": 12,
+    "name": "props nba Pts + Ast",
     "said": 85.0
    },
    {
@@ -2748,29 +2755,29 @@
    },
    {
     "flag": false,
-    "hit": 81.6,
-    "n": 38,
+    "hit": 82.1,
+    "n": 39,
     "name": "props nba Pts + Reb + Ast",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 95.0,
-    "n": 20,
+    "hit": 95.2,
+    "n": 21,
     "name": "props nba Reb + Ast",
     "said": 85.0
    },
    {
     "flag": false,
     "hit": 100.0,
-    "n": 11,
+    "n": 12,
     "name": "props nba Rebounds",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 83.3,
-    "n": 24,
+    "hit": 80.0,
+    "n": 25,
     "name": "props nba Threes Made",
     "said": 85.0
    },
@@ -2921,9 +2928,9 @@
    }
   },
   "clv": {
-   "avg": 0.43,
-   "beat": 57.1,
-   "n": 14
+   "avg": 0.49,
+   "beat": 60.0,
+   "n": 15
   },
   "day": "2026-10-23",
   "leaks_14d": [],
@@ -2956,6 +2963,14 @@
     "price": "-320",
     "said": 70,
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70%"
+   },
+   {
+    "against_market": false,
+    "league": "nba",
+    "pick": "Milwaukee Bucks",
+    "price": "-118",
+    "said": 52,
+    "why": "margin 7 \u00b7 the book had my side favoured too \u00b7 called at 52%"
    }
   ],
   "lottery": [
@@ -3011,11 +3026,11 @@
    }
   ],
   "picks": {
-   "hit": 85.7,
-   "lost": 2,
-   "n": 14,
-   "roi": 10.6,
-   "said": 72.6,
+   "hit": 80.0,
+   "lost": 3,
+   "n": 15,
+   "roi": 3.2,
+   "said": 71.2,
    "won": 12
   },
   "picks_by_league": {
@@ -3114,23 +3129,31 @@
     "roi": 26.2,
     "said": 75.0,
     "won": 2
+   },
+   "nba": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 52.0,
+    "won": 0
    }
   },
   "props": {
    "fair": {
-    "n": 380,
-    "said_fair": 86.0,
-    "said_price": 87.3,
-    "won": 315
+    "n": 390,
+    "said_fair": 86.2,
+    "said_price": 87.2,
+    "won": 324
    },
-   "n": 5,
-   "said": 86.2,
-   "won": 5
+   "n": 17,
+   "said": 85.8,
+   "won": 16
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      7,
@@ -3143,7 +3166,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "strong": {
    "n": 0
@@ -3159,10 +3182,10 @@
     "won": 9
    },
    "agree": {
-    "hit": 68.0,
-    "lost": 116,
-    "n": 362,
-    "roi": -3.3,
+    "hit": 67.8,
+    "lost": 117,
+    "n": 363,
+    "roi": -3.6,
     "said": 65.6,
     "won": 246
    }

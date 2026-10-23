@@ -7,90 +7,72 @@
    "baseline": "the pick as published (hand-set model weights in NFL/WNBA/MLB/tennis)",
    "proposal": "the same-time market favourite (tested weight 0)",
    "same": "one pick per game, same game, same price",
-   "untouched_from": "2026-09-26",
+   "untouched_from": "2026-09-27",
    "result": {
     "all": {
      "days": 27,
-     "picks": 493,
-     "old_won": 316,
-     "new_won": 331,
-     "diff": 15,
+     "picks": 423,
+     "old_won": 268,
+     "new_won": 273,
+     "diff": 5,
      "ci95_diff": [
-      -5,
-      41
+      -8,
+      21
      ],
-     "new_won_old_missed": 49,
-     "old_won_new_missed": 34,
+     "new_won_old_missed": 36,
+     "old_won_new_missed": 31,
      "promote": false,
      "examples_new": [
       {
-       "day": "2026-09-26",
-       "new": "opponent of Washington Nationals",
-       "game": "mlb:401817091",
+       "day": "2026-09-27",
+       "new": "opponent of Dallas Cowboys",
+       "game": "nfl:401872960",
        "won": true
       },
       {
-       "day": "2026-09-26",
-       "new": "opponent of Minnesota Twins",
-       "game": "mlb:401817097",
+       "day": "2026-10-01",
+       "new": "opponent of Western Kentucky Hilltoppers",
+       "game": "ncaaf:401871049",
        "won": true
       },
       {
-       "day": "2026-09-26",
-       "new": "opponent of Vanderbilt Commodores",
-       "game": "ncaaf:401856698",
+       "day": "2026-10-02",
+       "new": "opponent of Delaware Blue Hens",
+       "game": "ncaaf:401871050",
        "won": true
       },
       {
-       "day": "2026-09-26",
-       "new": "opponent of Ole Miss Rebels",
-       "game": "ncaaf:401856699",
+       "day": "2026-10-03",
+       "new": "opponent of UConn Huskies",
+       "game": "ncaaf:401858252",
        "won": true
       },
       {
-       "day": "2026-09-26",
-       "new": "opponent of Tennessee Volunteers",
-       "game": "ncaaf:401856704",
+       "day": "2026-10-03",
+       "new": "opponent of Iowa Hawkeyes",
+       "game": "ncaaf:401858473",
        "won": true
       },
       {
-       "day": "2026-09-26",
-       "new": "opponent of Washington State Cougars",
-       "game": "ncaaf:401856804",
+       "day": "2026-10-03",
+       "new": "opponent of Colorado State Rams",
+       "game": "ncaaf:401860899",
        "won": true
       },
       {
-       "day": "2026-09-26",
-       "new": "opponent of Boston College Eagles",
-       "game": "ncaaf:401858242",
+       "day": "2026-10-03",
+       "new": "opponent of Navy Midshipmen",
+       "game": "ncaaf:401862791",
        "won": true
       },
       {
-       "day": "2026-09-26",
-       "new": "opponent of Maryland Terrapins",
-       "game": "ncaaf:401858462",
+       "day": "2026-10-03",
+       "new": "opponent of Kent State Golden Flashes",
+       "game": "ncaaf:401866434",
        "won": true
       }
      ],
      "examples_old": [
-      {
-       "day": "2026-09-26",
-       "old": "Tampa Bay Rays",
-       "game": "mlb:401817093",
-       "won": true
-      },
-      {
-       "day": "2026-09-26",
-       "old": "Cincinnati Bearcats",
-       "game": "ncaaf:401856814",
-       "won": true
-      },
-      {
-       "day": "2026-09-26",
-       "old": "UCF Knights",
-       "game": "ncaaf:401856815",
-       "won": true
-      },
       {
        "day": "2026-09-27",
        "old": "Minnesota Twins",
@@ -120,26 +102,44 @@
        "old": "Cleveland Browns",
        "game": "nfl:401872964",
        "won": true
+      },
+      {
+       "day": "2026-10-02",
+       "old": "Pittsburgh Panthers",
+       "game": "ncaaf:401858245",
+       "won": true
+      },
+      {
+       "day": "2026-10-02",
+       "old": "Northwestern Wildcats",
+       "game": "ncaaf:401858476",
+       "won": true
+      },
+      {
+       "day": "2026-10-03",
+       "old": "Missouri Tigers",
+       "game": "ncaaf:401856708",
+       "won": true
       }
      ]
     },
     "mlb": {
-     "days": 2,
-     "picks": 27,
-     "old_won": 19,
-     "new_won": 19,
-     "diff": 0,
+     "days": 1,
+     "picks": 14,
+     "old_won": 11,
+     "new_won": 10,
+     "diff": -1,
      "ci95_diff": [
-      -2,
-      2
+      -1,
+      -1
      ],
-     "new_won_old_missed": 2,
-     "old_won_new_missed": 2,
+     "new_won_old_missed": 0,
+     "old_won_new_missed": 1,
      "promote": false
     },
     "nba": {
-     "days": 3,
-     "picks": 16,
+     "days": 4,
+     "picks": 17,
      "old_won": 12,
      "new_won": 12,
      "diff": 0,
@@ -152,17 +152,17 @@
      "promote": false
     },
     "ncaaf": {
-     "days": 17,
-     "picks": 236,
-     "old_won": 156,
-     "new_won": 170,
-     "diff": 14,
+     "days": 16,
+     "picks": 178,
+     "old_won": 116,
+     "new_won": 121,
+     "diff": 5,
      "ci95_diff": [
-      -3,
-      36
+      -5,
+      16
      ],
-     "new_won_old_missed": 29,
-     "old_won_new_missed": 15,
+     "new_won_old_missed": 18,
+     "old_won_new_missed": 13,
      "promote": false
     },
     "nfl": {
