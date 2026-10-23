@@ -226,6 +226,47 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909846|home|Kalshi": {
+   "dec": 3.1776,
+   "ev": 0.0236,
+   "fair": 0.3221,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909846",
+   "kind": "value",
+   "league": "nba",
+   "match": "TOR @ WSH",
+   "price": "+218",
+   "seen": "2026-10-23T04:58:34+00:00",
+   "side": "home",
+   "start": "2026-10-23T23:00Z",
+   "team": "Washington Wizards",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909846|{\"line\": 5.5, \"t\": \"spread\", \"team\": \"Washington Wizards\"}|Kalshi": {
+   "dec": 2.1395,
+   "dk": "-105",
+   "ev": 0.0202,
+   "fair": 0.4768,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909846",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "TOR @ WSH",
+   "price": "+114",
+   "seen": "2026-10-23T04:58:34+00:00",
+   "side": "{\"line\": 5.5, \"t\": \"spread\", \"team\": \"Washington Wizards\"}",
+   "spec": {
+    "line": 5.5,
+    "t": "spread",
+    "team": "Washington Wizards"
+   },
+   "start": "2026-10-23T23:00Z",
+   "team": "Washington Wizards +5.5",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909847|home|FanDuel": {
    "dec": 2.0,
    "ev": 0.0277,
@@ -480,6 +521,7 @@
     "team": "Seattle Kraken"
    },
    "start": "2026-10-23T02:00Z",
+   "status": "won",
    "team": "Seattle Kraken +1.5",
    "tip": "10:00 PM",
    "venue": "FanDuel"

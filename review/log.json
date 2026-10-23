@@ -2327,9 +2327,9 @@
  },
  "2026-10-22": {
   "clv": {
-   "avg": 0.66,
-   "beat": 55.8,
-   "n": 52
+   "avg": 0.74,
+   "beat": 56.6,
+   "n": 53
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2406,6 +2406,14 @@
     "price": "-135",
     "said": 55,
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 55%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Utah Mammoth",
+    "price": "-192",
+    "said": 63,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 63%"
    },
    {
     "against_market": false,
@@ -2574,11 +2582,11 @@
    }
   ],
   "picks": {
-   "hit": 71.2,
-   "lost": 15,
-   "n": 52,
-   "roi": -4.8,
-   "said": 70.4,
+   "hit": 69.8,
+   "lost": 16,
+   "n": 53,
+   "roi": -6.6,
+   "said": 70.2,
    "won": 37
   },
   "picks_by_league": {
@@ -2615,11 +2623,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 45.5,
-    "lost": 6,
-    "n": 11,
-    "roi": -26.4,
-    "said": 57.0,
+    "hit": 41.7,
+    "lost": 7,
+    "n": 12,
+    "roi": -32.5,
+    "said": 57.5,
     "won": 5
    },
    "uecl": {
@@ -2646,9 +2654,9 @@
     "said_price": 87.3,
     "won": 315
    },
-   "n": 126,
+   "n": 133,
    "said": 80.3,
-   "won": 104
+   "won": 111
   },
   "safe_locks": {
    "lost": [
@@ -2685,10 +2693,10 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.3,
-    "lost": 118,
-    "n": 361,
-    "roi": -3.6,
+    "hit": 67.1,
+    "lost": 119,
+    "n": 362,
+    "roi": -3.8,
     "said": 65.1,
     "won": 243
    }
@@ -2796,8 +2804,8 @@
    },
    {
     "flag": false,
-    "hit": 80.4,
-    "n": 321,
+    "hit": 80.8,
+    "n": 328,
     "name": "props nhl Shots on Goal",
     "said": 79.7
    },
@@ -2957,10 +2965,10 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.4,
-    "lost": 113,
-    "n": 347,
-    "roi": -3.6,
+    "hit": 67.2,
+    "lost": 114,
+    "n": 348,
+    "roi": -3.9,
     "said": 65.4,
     "won": 234
    }
@@ -2978,10 +2986,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6618,
-    "market_only": 0.6618,
-    "model_40": 0.6724,
-    "n": 47,
+    "logloss": 0.6688,
+    "market_only": 0.6688,
+    "model_40": 0.6778,
+    "n": 48,
     "weight": 0.0
    }
   }
