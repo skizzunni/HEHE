@@ -2706,6 +2706,13 @@
   "audit": [
    {
     "flag": false,
+    "hit": 80.0,
+    "n": 10,
+    "name": "props fra Goalkeeper Saves",
+    "said": 76.7
+   },
+   {
+    "flag": false,
     "hit": 75.0,
     "n": 12,
     "name": "props ita Goalkeeper Saves",
@@ -2914,9 +2921,9 @@
    }
   },
   "clv": {
-   "avg": -0.03,
-   "beat": 55.6,
-   "n": 9
+   "avg": 0.13,
+   "beat": 54.5,
+   "n": 11
   },
   "day": "2026-10-23",
   "leaks_14d": [],
@@ -2934,6 +2941,14 @@
    "won": 0
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "fra",
+    "pick": "Brest",
+    "price": "-270",
+    "said": 68,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   },
    {
     "against_market": false,
     "league": "ger",
@@ -2986,12 +3001,12 @@
    }
   ],
   "picks": {
-   "hit": 88.9,
-   "lost": 1,
-   "n": 9,
-   "roi": 17.5,
+   "hit": 81.8,
+   "lost": 2,
+   "n": 11,
+   "roi": 7.6,
    "said": 70.7,
-   "won": 8
+   "won": 9
   },
   "picks_by_league": {
    "aus": {
@@ -3018,6 +3033,14 @@
     "said": 76.0,
     "won": 1
    },
+   "fra": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 68.0,
+    "won": 0
+   },
    "ger": {
     "hit": 0.0,
     "lost": 1,
@@ -3042,6 +3065,14 @@
     "said": 70.0,
     "won": 1
    },
+   "ita": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 26.3,
+    "said": 74.0,
+    "won": 1
+   },
    "ksa": {
     "hit": 100.0,
     "lost": 0,
@@ -3058,9 +3089,9 @@
     "said_price": 87.3,
     "won": 315
    },
-   "n": 2,
-   "said": 86.5,
-   "won": 2
+   "n": 3,
+   "said": 85.0,
+   "won": 3
   },
   "safe_locks": {
    "lost": [],
@@ -3094,12 +3125,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.8,
-    "lost": 115,
-    "n": 357,
-    "roi": -3.3,
+    "hit": 67.7,
+    "lost": 116,
+    "n": 359,
+    "roi": -3.5,
     "said": 65.5,
-    "won": 242
+    "won": 243
    }
   },
   "weights": {
