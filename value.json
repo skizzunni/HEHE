@@ -1062,6 +1062,140 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nhl:401892569|away|FanDuel": {
+   "dec": 2.15,
+   "ev": 0.0252,
+   "fair": 0.4768,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nhl:401892569",
+   "kind": "value",
+   "league": "nhl",
+   "match": "NYR @ OTT",
+   "price": "+115",
+   "seen": "2026-10-23T16:04:44+00:00",
+   "side": "away",
+   "start": "2026-10-24T23:00Z",
+   "team": "New York Rangers",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892569|sure": {
+   "id": "nhl:401892569",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "+115",
+     "stake_share": 0.4651,
+     "team": "New York Rangers",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "-115",
+     "stake_share": 0.5349,
+     "team": "Ottawa Senators",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "NYR @ OTT",
+   "profit": 0.0,
+   "seen": "2026-10-23T16:04:44+00:00"
+  },
+  "nhl:401892569|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New York Rangers\"}|FanDuel": {
+   "dec": 1.4762,
+   "dk": "-250",
+   "ev": 0.0233,
+   "fair": 0.6932,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892569",
+   "kind": "value",
+   "league": "nhl",
+   "market": "spread",
+   "match": "NYR @ OTT",
+   "price": "-210",
+   "seen": "2026-10-23T16:04:44+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New York Rangers\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "New York Rangers"
+   },
+   "start": "2026-10-24T23:00Z",
+   "team": "New York Rangers +1.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892570|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Nashville Predators\"}|FanDuel": {
+   "dec": 1.5208,
+   "dk": "-225",
+   "ev": 0.02,
+   "fair": 0.6707,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892570",
+   "kind": "value",
+   "league": "nhl",
+   "market": "spread",
+   "match": "NSH @ PIT",
+   "price": "-192",
+   "seen": "2026-10-23T16:04:44+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Nashville Predators\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Nashville Predators"
+   },
+   "start": "2026-10-24T23:00Z",
+   "team": "Nashville Predators +1.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892574|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Toronto Maple Leafs\"}|FanDuel": {
+   "dec": 1.7143,
+   "dk": "-175",
+   "ev": 0.0528,
+   "fair": 0.6141,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892574",
+   "kind": "value",
+   "league": "nhl",
+   "market": "spread",
+   "match": "TOR @ EDM",
+   "price": "-140",
+   "seen": "2026-10-23T16:04:44+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Toronto Maple Leafs\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Toronto Maple Leafs"
+   },
+   "start": "2026-10-24T23:00Z",
+   "team": "Toronto Maple Leafs +1.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892574|{\"line\": 6.5, \"t\": \"under\"}|FanDuel": {
+   "dec": 2.18,
+   "dk": "-102",
+   "ev": 0.0504,
+   "fair": 0.4818,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892574",
+   "kind": "value",
+   "league": "nhl",
+   "market": "under",
+   "match": "TOR @ EDM",
+   "price": "+118",
+   "seen": "2026-10-23T16:04:44+00:00",
+   "side": "{\"line\": 6.5, \"t\": \"under\"}",
+   "spec": {
+    "line": 6.5,
+    "t": "under"
+   },
+   "start": "2026-10-24T23:00Z",
+   "team": "under 6.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|nba:401909849:away": {
    "ev": 0.0162,
    "kind": "parlay",
