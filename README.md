@@ -3131,3 +3131,31 @@ the return.
 `calls.PER_SPORT = 2`, and all soccer leagues count as one sport. A day
 with games in one sport gets fewer calls, never softer ones. The change
 starts with the 2026-10-23 card. Today's frozen card is not changed.
+
+## Past-picks audit: preseason games out of the fits (2026-10-23)
+
+All 1,501 priced picks from 2026-08-31 to 10-23 were audited. Overall they
+won 62.2%, a -3.6% return per $1. The findings:
+
+- **Picking against the market** (the model's underdog) was the biggest
+  leak: 276 picks won 34.4% against 39.2% priced in, -13.6%. It is already
+  closed: there have been no underdog picks since 2026-10-19 (market-only
+  policy).
+- **NBA preseason**: 49 picks on exhibition games won 46.9% against 68.8%
+  claimed (-26.7%). The 17 regular-season NBA picks since have won 70.6%
+  (+10.5%). The board stopped picking preseason games on 2026-10-15, but
+  the old picks still fed the calibration table and the strong-call
+  cutoffs. There they produced the "NBA 80-90% trailing" flags and most of
+  the apparent failure of 80-90% favourites (69% won). `tools/tag_preseason.py`
+  now tags every NBA/NHL/NFL/WNBA/MLB game from ESPN's own season type
+  (120 exhibitions: 55 NBA, 65 NHL) into `data/preseason_games.json`, and
+  `calibration.graded` leaves them out of every fit. Without them no
+  calibration bin is flagged: 80-90% is 80.5% won against 83.7% stated
+  (N 41). **The public record keeps them**, because they were published.
+- **Europa League shot props** (9 of 21 won, -53.5%) all date from
+  2026-10-15. The market has been off the board since 10-16, and the box
+  scores confirmed the misses (substitutes).
+- Rejected: a 70-80% favourites edge. By book price, 75-80% won in both
+  halves (+7.6%, +4.3%) but 80-85% lost in both (-5.2%, -5.5%). A real edge
+  would not zigzag between neighbouring bands, and the larger favourites
+  study measured 70-80% at -1.6%.

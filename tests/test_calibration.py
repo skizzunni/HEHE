@@ -77,5 +77,18 @@ class Table(unittest.TestCase):
         self.assertEqual(t["dates"], ["2026-09-01", "2026-09-10"])
 
 
+class Preseason(unittest.TestCase):
+    def test_exhibition_games_are_left_out_of_the_fit(self):
+        import preseason
+        e = dict(league="nba", date="2026-10-03", matchup="MIA @ TOR", status="lost", conf=80, price="-400")
+        reg = dict(e, date="2026-10-25")
+        old = preseason._CACHE
+        preseason._CACHE = (set(), {preseason.signature(e)})
+        try:
+            self.assertEqual(C.graded([e, reg]), [reg])
+        finally:
+            preseason._CACHE = old
+
+
 if __name__ == "__main__":
     unittest.main()

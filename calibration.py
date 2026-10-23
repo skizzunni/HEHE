@@ -62,8 +62,12 @@ def raw_pct(e):
 
 
 def graded(entries):
+    """Graded, priced picks for fitting -- exhibition games left out: the
+    board no longer picks them, and 49 NBA preseason picks went 46.9% against
+    68.8% claimed (preseason.py). The public record keeps them."""
+    import preseason
     return [e for e in entries if e.get("status") in ("won", "lost") and book_priced(e)
-            and raw_pct(e) and day_of(e)]
+            and raw_pct(e) and day_of(e) and not preseason.is_preseason_entry(e)]
 
 
 def _logit(p):
