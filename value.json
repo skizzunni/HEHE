@@ -1059,6 +1059,35 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|nba:401909849:away|nba:401909850:home": {
+   "ev": 0.0397,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0196,
+     "fair": 0.5048,
+     "id": "nba:401909849",
+     "price": "+102",
+     "side": "away",
+     "spec": null,
+     "team": "New Orleans Pelicans"
+    },
+    {
+     "ev": 0.0197,
+     "fair": 0.6182,
+     "id": "nba:401909850",
+     "price": "-154",
+     "side": "home",
+     "spec": null,
+     "team": "Golden State Warriors"
+    }
+   ],
+   "payout": 3.332,
+   "prob": 0.3121,
+   "seen": "2026-10-23T15:44:53+00:00",
+   "target": 3.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|ncaaf:401864525:home": {
    "ev": 0.0482,
    "kind": "parlay",
