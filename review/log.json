@@ -2537,9 +2537,9 @@
    }
   },
   "clv": {
-   "avg": 0.46,
-   "beat": 53.3,
-   "n": 45
+   "avg": 0.5,
+   "beat": 54.3,
+   "n": 46
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2561,6 +2561,14 @@
    "won": 5
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "James Madison Dukes",
+    "price": "-485",
+    "said": 82,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 82%"
+   },
    {
     "against_market": false,
     "league": "nhl",
@@ -2747,11 +2755,11 @@
    }
   ],
   "picks": {
-   "hit": 73.3,
-   "lost": 12,
-   "n": 45,
-   "roi": -2.9,
-   "said": 70.8,
+   "hit": 71.7,
+   "lost": 13,
+   "n": 46,
+   "roi": -5.0,
+   "said": 71.1,
    "won": 33
   },
   "picks_by_league": {
@@ -2772,11 +2780,11 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 26.3,
-    "said": 78.0,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -36.8,
+    "said": 80.0,
     "won": 1
    },
    "nhl": {
@@ -2849,22 +2857,22 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.5,
-    "lost": 115,
-    "n": 354,
-    "roi": -3.3,
+    "hit": 67.3,
+    "lost": 116,
+    "n": 355,
+    "roi": -3.6,
     "said": 65.1,
     "won": 239
    }
   },
   "weights": {
    "ncaaf": {
-    "fitted": 0.35,
+    "fitted": 0.4,
     "held_out": false,
-    "logloss": 0.6329,
-    "market_only": 0.6413,
-    "model_40": 0.633,
-    "n": 57,
+    "logloss": 0.6462,
+    "market_only": 0.6594,
+    "model_40": 0.6462,
+    "n": 58,
     "weight": 0.0
    },
    "nhl": {

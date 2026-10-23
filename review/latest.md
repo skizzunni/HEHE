@@ -1,7 +1,8 @@
 # Review 2026-10-22
 
-Picks 33-12 (73.3% vs 70.8% claimed, ROI -2.9%).
-Closing line value: +0.46 points on 45 picks; beat the close on 53.3%.
+Picks 33-13 (71.7% vs 71.1% claimed, ROI -5.0%).
+Closing line value: +0.5 points on 46 picks; beat the close on 54.3%.
+- LOST ncaaf James Madison Dukes at 82%: margin 3 · the book had my side favoured too · called at 82%
 - LOST nhl New York Rangers at 50%: margin 1 · the book had my side favoured too · called at 50%
 - LOST nhl Ottawa Senators at 55%: margin 4 · the book had my side favoured too · called at 55%
 - LOST nhl Florida Panthers at 50%: margin 4 · the book had my side favoured too · called at 50%
@@ -14,7 +15,7 @@ Closing line value: +0.46 points on 45 picks; beat the close on 53.3%.
 - LOST uel Celtic at 64%: margin 1 · the book had my side favoured too · called at 64%
 - LOST uel Dinamo Zagreb at 83%: margin 2 · the book had my side favoured too · called at 83%
 - LOST uel Marseille at 68%: margin 1 · the book had my side favoured too · called at 68%
-With the market 67.5% (354); against it 37.5% (24).
+With the market 67.3% (355); against it 37.5% (24).
 Locks 5/11 won, 3 open; Best play top 2 (60%) open; lost: Toronto Maple Leafs under 4.5 goals (New York Rangers at Toronto Maple Leafs) New York Rangers 4 - Toronto Maple Leafs 5; Over 221.5 points (Cleveland Cavaliers at Philadelphia 76ers) Cleveland Cavaliers 106 - Philadelphia 76ers 114; Under 7.5 goals (Vegas Golden Knights at St. Louis Blues) Vegas Golden Knights 2 - St. Louis Blues 6.
 Safe Locks 4/11 won, 6 open; Winners parlay top 2 (87%) open; Best play top 8 (51%) open; lost: Nashville Predators over 0.5 goals (Nashville Predators at Boston Bruins) Nashville Predators 0 - Boston Bruins 6.
 Lottery 10k: lost (0/11 legs won, killed by Over 6.5 goals, New York Rangers to win, Over 7.5 goals, Over 233.5 points, Over 49.5 points, Vegas Golden Knights under 1.5 goals)
@@ -27,4 +28,4 @@ Ladder-consistency props (all time): 292/350 won (83.4%) vs 86.0% fair, 87.6% pr
 Props 63/74 vs 78.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=57), nhl 0.00 (n=44)
+Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=58), nhl 0.00 (n=44)
