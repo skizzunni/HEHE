@@ -2455,10 +2455,10 @@
    },
    {
     "flag": false,
-    "hit": 76.9,
-    "n": 13,
+    "hit": 78.6,
+    "n": 14,
     "name": "locks ncaaf under",
-    "said": 82.2
+    "said": 81.7
    },
    {
     "flag": false,
@@ -2537,9 +2537,9 @@
    }
   },
   "clv": {
-   "avg": 0.62,
-   "beat": 57.5,
-   "n": 40
+   "avg": 0.59,
+   "beat": 56.1,
+   "n": 41
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2549,7 +2549,7 @@
     "Over 221.5 points (Cleveland Cavaliers at Philadelphia 76ers) Cleveland Cavaliers 106 - Philadelphia 76ers 114"
    ],
    "n": 11,
-   "open": 6,
+   "open": 5,
    "plays": {
     "best": [
      2,
@@ -2557,7 +2557,7 @@
      "open"
     ]
    },
-   "won": 3
+   "won": 4
   },
   "losses": [
    {
@@ -2655,10 +2655,11 @@
      "Over 6.5 goals",
      "New York Rangers to win",
      "Over 7.5 goals",
-     "Over 233.5 points"
+     "Over 233.5 points",
+     "Over 49.5 points"
     ],
     "legs": 11,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 0
@@ -2668,10 +2669,11 @@
      "Over 6.5 goals",
      "New York Rangers to win",
      "Over 7.5 goals",
-     "Over 233.5 points"
+     "Over 233.5 points",
+     "Over 48.5 points"
     ],
     "legs": 11,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+25",
     "won": 0
@@ -2682,10 +2684,11 @@
      "New York Rangers to win",
      "Over 7.5 goals",
      "Over 233.5 points",
+     "Over 49.5 points",
      "Ottawa Senators under 1.5 goals"
     ],
     "legs": 10,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+50",
     "won": 0
@@ -2695,10 +2698,11 @@
      "Over 6.5 goals",
      "New York Rangers to win",
      "Over 7.5 goals",
-     "Over 233.5 points"
+     "Over 233.5 points",
+     "Over 49.5 points"
     ],
     "legs": 10,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+100",
     "won": 0
@@ -2714,7 +2718,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -2731,12 +2735,12 @@
    }
   ],
   "picks": {
-   "hit": 72.5,
+   "hit": 73.2,
    "lost": 11,
-   "n": 40,
-   "roi": -5.4,
-   "said": 71.7,
-   "won": 29
+   "n": 41,
+   "roi": -4.7,
+   "said": 71.9,
+   "won": 30
   },
   "picks_by_league": {
    "nba": {
@@ -2745,6 +2749,14 @@
     "n": 1,
     "roi": 70.4,
     "said": 56.0,
+    "won": 1
+   },
+   "ncaaf": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 26.3,
+    "said": 78.0,
     "won": 1
    },
    "nhl": {
@@ -2817,22 +2829,22 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.3,
+    "hit": 67.4,
     "lost": 114,
-    "n": 349,
-    "roi": -3.6,
+    "n": 350,
+    "roi": -3.5,
     "said": 65.1,
-    "won": 235
+    "won": 236
    }
   },
   "weights": {
    "ncaaf": {
-    "fitted": 0.4,
+    "fitted": 0.35,
     "held_out": false,
-    "logloss": 0.637,
-    "market_only": 0.6483,
-    "model_40": 0.637,
-    "n": 56,
+    "logloss": 0.6329,
+    "market_only": 0.6413,
+    "model_40": 0.633,
+    "n": 57,
     "weight": 0.0
    },
    "nhl": {
