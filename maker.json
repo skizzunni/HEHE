@@ -6,6 +6,7 @@
    "cost": 0.7731,
    "edge": 0.0199,
    "fair": 0.7885,
+   "fill": "touch",
    "id": "ncaaf:401862807",
    "label": "Memphis Tigers",
    "league": "ncaaf",
@@ -17,8 +18,9 @@
     "team": "Memphis Tigers"
    },
    "start": "2026-10-22T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT22ECUMEM-MEM"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT22ECUMEM-MEM",
+   "won": 1
   },
   "KXNCAAFGAME-26OCT22JMUAPP-JMU|YES": {
    "ask": 0.79,
@@ -150,6 +152,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401862807",
    "label": "East Carolina Pirates +10.5",
    "league": "ncaaf",
@@ -162,8 +165,9 @@
     "team": "East Carolina Pirates"
    },
    "start": "2026-10-22T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT22ECUMEM-MEM11"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT22ECUMEM-MEM11",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT22JMUAPP-JMU12|NO": {
    "ask": 0.51,
@@ -301,6 +305,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401862807",
    "label": "over 53.5",
    "league": "ncaaf",
@@ -312,8 +317,9 @@
     "t": "over"
    },
    "start": "2026-10-22T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT22ECUMEM-54"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT22ECUMEM-54",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT22ECUMEM-55|YES": {
    "ask": 0.51,
@@ -321,6 +327,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401862807",
    "label": "over 54.5",
    "league": "ncaaf",
@@ -332,8 +339,9 @@
     "t": "over"
    },
    "start": "2026-10-22T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT22ECUMEM-55"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT22ECUMEM-55",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT22ECUMEM-56|NO": {
    "ask": 0.52,
@@ -341,6 +349,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401862807",
    "label": "under 55.5",
    "league": "ncaaf",
@@ -352,8 +361,9 @@
     "t": "under"
    },
    "start": "2026-10-22T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT22ECUMEM-56"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT22ECUMEM-56",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT22JMUAPP-56|YES": {
    "ask": 0.51,
