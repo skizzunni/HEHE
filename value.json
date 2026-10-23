@@ -665,6 +665,30 @@
    "tip": "9:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909849|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}|FanDuel": {
+   "dec": 1.9434,
+   "dk": "-118",
+   "ev": 0.0136,
+   "fair": 0.5216,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909849",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "NO @ UTAH",
+   "price": "-106",
+   "seen": "2026-10-23T16:41:17+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "New Orleans Pelicans"
+   },
+   "start": "2026-10-24T01:30Z",
+   "team": "New Orleans Pelicans +1.5",
+   "tip": "9:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909849|{\"line\": 5.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}|FanDuel": {
    "dec": 1.9091,
    "dk": "-115",
@@ -1339,6 +1363,48 @@
    "start": "2026-10-25T02:00Z",
    "team": "Calgary Flames",
    "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909847:away|nba:401909849:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}|nba:401909850:home": {
+   "ev": 0.0456,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0116,
+     "fair": 0.5344,
+     "id": "nba:401909847",
+     "price": "-112",
+     "side": "away",
+     "spec": null,
+     "team": "Detroit Pistons"
+    },
+    {
+     "ev": 0.0136,
+     "fair": 0.5216,
+     "id": "nba:401909849",
+     "price": "-106",
+     "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "New Orleans Pelicans"
+     },
+     "team": "New Orleans Pelicans +1.5"
+    },
+    {
+     "ev": 0.0197,
+     "fair": 0.6182,
+     "id": "nba:401909850",
+     "price": "-154",
+     "side": "home",
+     "spec": null,
+     "team": "Golden State Warriors"
+    }
+   ],
+   "payout": 6.068,
+   "prob": 0.1723,
+   "seen": "2026-10-23T16:41:17+00:00",
+   "target": 5.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909847:away|nba:401909850:home": {
