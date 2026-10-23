@@ -9,10 +9,20 @@
    "model_40": 0.637,
    "n": 56,
    "weight": 0.0
+  },
+  "nhl": {
+   "fitted": 0.0,
+   "held_out": false,
+   "logloss": 0.6536,
+   "market_only": 0.6536,
+   "model_40": 0.6629,
+   "n": 40,
+   "weight": 0.0
   }
  },
- "updated": "2026-10-22T21:43-04:00",
+ "updated": "2026-10-22T21:45-04:00",
  "weights": {
-  "ncaaf": 0.0
+  "ncaaf": 0.0,
+  "nhl": 0.0
  }
 }
