@@ -1,9 +1,9 @@
 # Review 2026-10-23
 
-Picks 1-0 (100.0% vs 69.0% claimed, ROI +34.5%).
+Picks 2-0 (100.0% vs 69.5% claimed, ROI +32.9%).
 TRAILING props nba Pts + Reb: 71.9% hit vs 85.0% stated on 32
-Closing line value: +0.67 points on 1 picks; beat the close on 100.0%.
-With the market 67.3% (349); against it 39.1% (23).
+Closing line value: -1.36 points on 2 picks; beat the close on 50.0%.
+With the market 67.4% (350); against it 39.1% (23).
 Locks 0/11 won, 11 open; Best play top 2 (60%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (52%) open.
 Lottery 100: open (0/10 legs won)
