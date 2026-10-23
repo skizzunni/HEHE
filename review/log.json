@@ -2427,8 +2427,8 @@
    },
    {
     "flag": false,
-    "hit": 80.1,
-    "n": 287,
+    "hit": 80.4,
+    "n": 291,
     "name": "props nhl Shots on Goal",
     "said": 79.7
    },
@@ -2537,9 +2537,9 @@
    }
   },
   "clv": {
-   "avg": 0.59,
-   "beat": 56.1,
-   "n": 41
+   "avg": 0.58,
+   "beat": 54.8,
+   "n": 42
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2735,12 +2735,12 @@
    }
   ],
   "picks": {
-   "hit": 73.2,
+   "hit": 73.8,
    "lost": 11,
-   "n": 41,
-   "roi": -4.7,
-   "said": 71.9,
-   "won": 30
+   "n": 42,
+   "roi": -2.5,
+   "said": 71.4,
+   "won": 31
   },
   "picks_by_league": {
    "nba": {
@@ -2760,12 +2760,12 @@
     "won": 1
    },
    "nhl": {
-    "hit": 40.0,
+    "hit": 50.0,
     "lost": 3,
-    "n": 5,
-    "roi": -37.3,
-    "said": 55.6,
-    "won": 2
+    "n": 6,
+    "roi": -16.6,
+    "said": 54.8,
+    "won": 3
    },
    "uecl": {
     "hit": 81.2,
@@ -2791,16 +2791,16 @@
     "said_price": 87.6,
     "won": 292
    },
-   "n": 58,
+   "n": 62,
    "said": 78.9,
-   "won": 49
+   "won": 53
   },
   "safe_locks": {
    "lost": [
     "Nashville Predators over 0.5 goals (Nashville Predators at Boston Bruins) Nashville Predators 0 - Boston Bruins 6"
    ],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      8,
@@ -2813,7 +2813,7 @@
      "open"
     ]
    },
-   "won": 2
+   "won": 3
   },
   "strong": {
    "n": 0
@@ -2829,12 +2829,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.4,
+    "hit": 67.5,
     "lost": 114,
-    "n": 350,
-    "roi": -3.5,
+    "n": 351,
+    "roi": -3.3,
     "said": 65.1,
-    "won": 236
+    "won": 237
    }
   },
   "weights": {
@@ -2850,10 +2850,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6548,
-    "market_only": 0.6548,
-    "model_40": 0.6659,
-    "n": 41,
+    "logloss": 0.6552,
+    "market_only": 0.6552,
+    "model_40": 0.6665,
+    "n": 42,
     "weight": 0.0
    }
   }
