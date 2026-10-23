@@ -1746,6 +1746,35 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|nba:401909847:away|nba:401909852:away": {
+   "ev": 0.0222,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0116,
+     "fair": 0.5344,
+     "id": "nba:401909847",
+     "price": "-112",
+     "side": "away",
+     "spec": null,
+     "team": "Detroit Pistons"
+    },
+    {
+     "ev": 0.0105,
+     "fair": 0.8043,
+     "id": "nba:401909852",
+     "price": "-390",
+     "side": "away",
+     "spec": null,
+     "team": "Portland Trail Blazers"
+    }
+   ],
+   "payout": 2.378,
+   "prob": 0.4298,
+   "seen": "2026-10-23T19:58:33+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|nba:401909849:away": {
    "ev": 0.0162,
    "kind": "parlay",
