@@ -65479,6 +65479,11 @@
       "start": "2026-10-23T01:30Z",
       "starters": [],
       "t": "2026-10-22T12:57:00+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-23T01:30Z",
+      "t": "2026-10-23T00:25:23+00:00"
      }
     ],
     "ncaaf:401862807": [
@@ -70185,6 +70190,24 @@
       "start": "2026-10-23T01:00Z",
       "starters": [],
       "t": "2026-10-22T18:20:47+00:00"
+     },
+     {
+      "probables": {
+       "CGY": [
+        [
+         "Devin Cooley",
+         "probableStartingGoalie"
+        ]
+       ],
+       "MIN": [
+        [
+         "Jesper Wallstedt",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-23T01:00Z",
+      "t": "2026-10-23T00:25:23+00:00"
      }
     ],
     "nhl:401892561": [
@@ -70853,6 +70876,24 @@
       "start": "2026-10-23T01:00Z",
       "starters": [],
       "t": "2026-10-23T00:10:41+00:00"
+     },
+     {
+      "probables": {
+       "CAR": [
+        [
+         "Brandon Bussi",
+         "probableStartingGoalie"
+        ]
+       ],
+       "EDM": [
+        [
+         "Devon Levi",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-23T01:00Z",
+      "t": "2026-10-23T00:25:23+00:00"
      }
     ],
     "nhl:401892562": [
@@ -71062,6 +71103,24 @@
       "start": "2026-10-23T02:00Z",
       "starters": [],
       "t": "2026-10-22T12:57:00+00:00"
+     },
+     {
+      "probables": {
+       "SEA": [
+        [
+         "Joey Daccord",
+         "probableStartingGoalie"
+        ]
+       ],
+       "UTA": [
+        [
+         "Karel Vejmelka",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-23T02:00Z",
+      "t": "2026-10-23T00:25:23+00:00"
      }
     ],
     "nhl:401892563": [
@@ -71400,6 +71459,24 @@
       "start": "2026-10-23T02:00Z",
       "starters": [],
       "t": "2026-10-22T18:52:13+00:00"
+     },
+     {
+      "probables": {
+       "DET": [
+        [
+         "John Gibson",
+         "probableStartingGoalie"
+        ]
+       ],
+       "VAN": [
+        [
+         "Kevin Lankinen",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-23T02:00Z",
+      "t": "2026-10-23T00:25:23+00:00"
      }
     ],
     "uecl:401915743": [
@@ -117600,141 +117677,6 @@
         "Memphis Tigers to win",
         "AFC Bournemouth or draw",
         "Under 252.5 points",
-        "Under 252.5 points"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "New Jersey Devils to win",
-        "Over 228.5 points",
-        "Chicago Bears under 30.5 points"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "New Jersey Devils to win",
-        "Over 228.5 points",
-        "Oklahoma City Thunder to win",
-        "Chicago Bears under 30.5 points",
-        "Liberty Flames to win"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-22T16:44:32+00:00"
-    },
-    {
-     "policy": "d772892d",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Borac Banja Luka or draw",
-        "RB Salzburg or draw",
-        "Olympiacos or draw",
-        "Utah Mammoth under 5.5 goals",
-        "Calgary Flames +3.5"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Liberty Flames to win",
-        "East Carolina Pirates under 28.5 points",
-        "AFC Bournemouth or draw"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "New Jersey Devils to win",
-        "Under 246.5 points"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Liberty Flames to win",
-        "Memphis Tigers to win",
-        "AFC Bournemouth or draw",
-        "Under 252.5 points",
         "New York Rangers under 4.5 goals"
        ]
       ],
@@ -125677,6 +125619,116 @@
       ]
      ],
      "t": "2026-10-23T00:10:34+00:00"
+    },
+    {
+     "policy": "d772892d",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       []
+      ],
+      [
+       2.0,
+       0.75,
+       []
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Atl\u00e9tico Nacional to win",
+        "Oklahoma City Thunder to win",
+        "Minnesota Wild to win"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       []
+      ],
+      [
+       3.0,
+       0.65,
+       []
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       []
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-23T00:25:22+00:00"
     }
    ]
   }
