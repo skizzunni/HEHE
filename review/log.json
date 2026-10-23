@@ -2914,9 +2914,9 @@
    }
   },
   "clv": {
-   "avg": -0.39,
-   "beat": 50.0,
-   "n": 8
+   "avg": -0.03,
+   "beat": 55.6,
+   "n": 9
   },
   "day": "2026-10-23",
   "leaks_14d": [],
@@ -2933,7 +2933,16 @@
    },
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "ger",
+    "pick": "VfB Stuttgart",
+    "price": "-320",
+    "said": 70,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70%"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -2977,11 +2986,11 @@
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 8,
-   "roi": 32.2,
-   "said": 70.8,
+   "hit": 88.9,
+   "lost": 1,
+   "n": 9,
+   "roi": 17.5,
+   "said": 70.7,
    "won": 8
   },
   "picks_by_league": {
@@ -3008,6 +3017,14 @@
     "roi": 25.0,
     "said": 76.0,
     "won": 1
+   },
+   "ger": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 70.0,
+    "won": 0
    },
    "ger2": {
     "hit": 100.0,
@@ -3041,9 +3058,9 @@
     "said_price": 87.3,
     "won": 315
    },
-   "n": 0,
-   "said": null,
-   "won": 0
+   "n": 1,
+   "said": 84.5,
+   "won": 1
   },
   "safe_locks": {
    "lost": [],
@@ -3077,10 +3094,10 @@
     "won": 9
    },
    "agree": {
-    "hit": 68.0,
-    "lost": 114,
-    "n": 356,
-    "roi": -3.1,
+    "hit": 67.8,
+    "lost": 115,
+    "n": 357,
+    "roi": -3.3,
     "said": 65.5,
     "won": 242
    }

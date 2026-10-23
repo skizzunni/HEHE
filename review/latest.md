@@ -1,9 +1,10 @@
 # Review 2026-10-23
 
-Picks 8-0 (100.0% vs 70.8% claimed, ROI +32.2%).
+Picks 8-1 (88.9% vs 70.7% claimed, ROI +17.5%).
 TRAILING props nba Pts + Reb: 71.9% hit vs 85.0% stated on 32
-Closing line value: -0.39 points on 8 picks; beat the close on 50.0%.
-With the market 68.0% (356); against it 39.1% (23).
+Closing line value: -0.03 points on 9 picks; beat the close on 55.6%.
+- LOST ger VfB Stuttgart at 70%: margin 1 · the book had my side favoured too · called at 70%
+With the market 67.8% (357); against it 39.1% (23).
 Locks 0/11 won, 11 open; Best play top 2 (60%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (52%) open.
 Lottery 100: open (0/10 legs won)
@@ -12,6 +13,7 @@ Lottery 10k+25: open (0/13 legs won)
 Lottery 10k+50: open (0/12 legs won)
 Lottery 10k+100: open (0/12 legs won)
 Ladder-consistency props (all time): 315/380 won (82.9%) vs 86.0% fair, 87.3% price.
+Props 1/1 vs 84.5% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=59), nhl 0.00 (n=48)
