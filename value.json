@@ -371,6 +371,23 @@
    "tip": "10:30 PM",
    "venue": "Kalshi"
   },
+  "ncaaf:401864525|home|FanDuel": {
+   "dec": 3.02,
+   "ev": 0.0481,
+   "fair": 0.3471,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "ncaaf:401864525",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "AFA @ WYO",
+   "price": "+202",
+   "seen": "2026-10-23T04:38:19+00:00",
+   "side": "home",
+   "start": "2026-10-24T01:00Z",
+   "team": "Wyoming Cowboys",
+   "tip": "9:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401866449|{\"line\": -11.5, \"t\": \"spread\", \"team\": \"Ohio Bobcats\"}|Kalshi": {
    "dec": 2.0101,
    "dk": "-112",
@@ -482,6 +499,26 @@
    "start": "2026-10-24T00:00Z",
    "team": "Montreal Canadiens",
    "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401864525:home": {
+   "ev": 0.0482,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0481,
+     "fair": 0.3471,
+     "id": "ncaaf:401864525",
+     "price": "+202",
+     "side": "home",
+     "spec": null,
+     "team": "Wyoming Cowboys"
+    }
+   ],
+   "payout": 3.02,
+   "prob": 0.3471,
+   "seen": "2026-10-23T04:38:19+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nhl:401892558:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"St. Louis Blues\"}|nhl:401892559:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Winnipeg Jets\"}": {
