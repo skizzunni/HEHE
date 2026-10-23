@@ -867,6 +867,23 @@
    "tip": "10:00 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401856835|home|FanDuel": {
+   "dec": 3.5,
+   "ev": 0.0174,
+   "fair": 0.2907,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "ncaaf:401856835",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "BYU @ UCF",
+   "price": "+250",
+   "seen": "2026-10-23T17:27:34+00:00",
+   "side": "home",
+   "start": "2026-10-24T19:30Z",
+   "team": "UCF Knights",
+   "tip": "3:30 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401858272|{\"line\": 6.5, \"t\": \"spread\", \"team\": \"Stanford Cardinal\"}|Kalshi": {
    "dec": 2.0513,
    "dk": "-108",
@@ -1057,6 +1074,45 @@
    "team": "Ohio Bobcats -11.5",
    "tip": "4:00 PM",
    "venue": "Kalshi"
+  },
+  "ncaaf:401869935|home|FanDuel": {
+   "dec": 2.26,
+   "ev": 0.0534,
+   "fair": 0.4661,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ncaaf:401869935",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "GAST @ ARST",
+   "price": "+126",
+   "seen": "2026-10-23T17:27:34+00:00",
+   "side": "home",
+   "start": "2026-10-24T23:00Z",
+   "team": "Arkansas State Red Wolves",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "ncaaf:401869935|sure": {
+   "id": "ncaaf:401869935",
+   "kind": "sure",
+   "league": "ncaaf",
+   "legs": [
+    {
+     "price": "-125",
+     "stake_share": 0.5567,
+     "team": "Georgia State Panthers",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "+126",
+     "stake_share": 0.4433,
+     "team": "Arkansas State Red Wolves",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "GAST @ ARST",
+   "profit": 0.002,
+   "seen": "2026-10-23T17:27:34+00:00"
   },
   "ncaaf:401869935|{\"line\": 57.5, \"t\": \"under\"}|Kalshi": {
    "dec": 2.0947,
