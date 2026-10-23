@@ -2420,10 +2420,10 @@
    },
    {
     "flag": false,
-    "hit": 78.5,
-    "n": 251,
+    "hit": 78.7,
+    "n": 258,
     "name": "props nhl Shots on Goal",
-    "said": 79.4
+    "said": 79.6
    },
    {
     "flag": false,
@@ -2530,9 +2530,9 @@
    }
   },
   "clv": {
-   "avg": 0.76,
-   "beat": 64.7,
-   "n": 34
+   "avg": 0.82,
+   "beat": 65.7,
+   "n": 35
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2617,42 +2617,52 @@
   ],
   "lottery": [
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 6.5 goals"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 6.5 goals"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+25",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 6.5 goals"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+50",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 6.5 goals"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+100",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Anaheim Ducks +1.5"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 0
    },
@@ -2671,14 +2681,22 @@
    }
   ],
   "picks": {
-   "hit": 76.5,
+   "hit": 77.1,
    "lost": 8,
-   "n": 34,
-   "roi": -3.0,
-   "said": 74.5,
-   "won": 26
+   "n": 35,
+   "roi": -1.6,
+   "said": 74.3,
+   "won": 27
   },
   "picks_by_league": {
+   "nhl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 45.9,
+    "said": 66.0,
+    "won": 1
+   },
    "uecl": {
     "hit": 81.2,
     "lost": 3,
@@ -2703,14 +2721,14 @@
     "said_price": 87.4,
     "won": 280
    },
-   "n": 8,
-   "said": 56.7,
-   "won": 3
+   "n": 15,
+   "said": 69.3,
+   "won": 9
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      8,
@@ -2723,7 +2741,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "strong": {
    "n": 0
@@ -2739,12 +2757,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.6,
+    "hit": 67.7,
     "lost": 111,
-    "n": 343,
-    "roi": -3.3,
+    "n": 344,
+    "roi": -3.2,
     "said": 65.3,
-    "won": 232
+    "won": 233
    }
   },
   "weights": {
