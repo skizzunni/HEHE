@@ -2327,9 +2327,9 @@
  },
  "2026-10-22": {
   "clv": {
-   "avg": 0.67,
-   "beat": 56.9,
-   "n": 51
+   "avg": 0.66,
+   "beat": 55.8,
+   "n": 52
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2574,12 +2574,12 @@
    }
   ],
   "picks": {
-   "hit": 70.6,
+   "hit": 71.2,
    "lost": 15,
-   "n": 51,
-   "roi": -6.0,
-   "said": 70.6,
-   "won": 36
+   "n": 52,
+   "roi": -4.8,
+   "said": 70.4,
+   "won": 37
   },
   "picks_by_league": {
    "col": {
@@ -2615,12 +2615,12 @@
     "won": 1
    },
    "nhl": {
-    "hit": 40.0,
+    "hit": 45.5,
     "lost": 6,
-    "n": 10,
-    "roi": -34.9,
-    "said": 56.7,
-    "won": 4
+    "n": 11,
+    "roi": -26.4,
+    "said": 57.0,
+    "won": 5
    },
    "uecl": {
     "hit": 81.2,
@@ -2646,9 +2646,9 @@
     "said_price": 87.3,
     "won": 315
    },
-   "n": 119,
-   "said": 80.2,
-   "won": 98
+   "n": 126,
+   "said": 80.3,
+   "won": 104
   },
   "safe_locks": {
    "lost": [
@@ -2657,7 +2657,7 @@
     "Nashville Predators over 0.5 goals (Nashville Predators at Boston Bruins) Nashville Predators 0 - Boston Bruins 6"
    ],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      8,
@@ -2670,7 +2670,7 @@
      "lost"
     ]
    },
-   "won": 6
+   "won": 7
   },
   "strong": {
    "n": 0
@@ -2685,12 +2685,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.2,
+    "hit": 67.3,
     "lost": 118,
-    "n": 360,
-    "roi": -3.7,
-    "said": 65.2,
-    "won": 242
+    "n": 361,
+    "roi": -3.6,
+    "said": 65.1,
+    "won": 243
    }
   }
  },
@@ -2796,8 +2796,8 @@
    },
    {
     "flag": false,
-    "hit": 80.3,
-    "n": 314,
+    "hit": 80.4,
+    "n": 321,
     "name": "props nhl Shots on Goal",
     "said": 79.7
    },
@@ -2957,12 +2957,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.3,
+    "hit": 67.4,
     "lost": 113,
-    "n": 346,
-    "roi": -3.8,
+    "n": 347,
+    "roi": -3.6,
     "said": 65.4,
-    "won": 233
+    "won": 234
    }
   },
   "weights": {
@@ -2978,10 +2978,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6653,
-    "market_only": 0.6653,
-    "model_40": 0.6759,
-    "n": 46,
+    "logloss": 0.6618,
+    "market_only": 0.6618,
+    "model_40": 0.6724,
+    "n": 47,
     "weight": 0.0
    }
   }
