@@ -133343,6 +133343,63 @@
       "start": "2026-10-24T00:00Z",
       "starters": [],
       "t": "2026-10-23T22:38:32+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "CHI",
+        "Bowen Byram",
+        "Out",
+        "D"
+       ],
+       [
+        "MTL",
+        "Nick Suzuki",
+        "Out",
+        "C"
+       ],
+       [
+        "MTL",
+        "Florian Xhekaj",
+        "Injured Reserve",
+        "LW"
+       ],
+       [
+        "MTL",
+        "Sam Montembeault",
+        "Injured Reserve",
+        "G"
+       ],
+       [
+        "MTL",
+        "Ivan Demidov",
+        "Injured Reserve",
+        "RW"
+       ],
+       [
+        "MTL",
+        "Bryce Pickford",
+        "Injured Reserve",
+        "D"
+       ]
+      ],
+      "probables": {
+       "CHI": [
+        [
+         "Spencer Knight",
+         "probableStartingGoalie"
+        ]
+       ],
+       "MTL": [
+        [
+         "Jacob Fowler",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-24T00:00Z",
+      "starters": [],
+      "t": "2026-10-23T23:57:34+00:00"
      }
     ],
     "nhl:401892565": [
@@ -189251,142 +189308,6 @@
         "Independiente del Valle or draw",
         "Tigre or draw",
         "Middlesbrough or draw",
-        "Alav\u00e9s or draw",
-        "Gimnasia La Plata or draw"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Tigre or draw",
-        "Independiente del Valle or draw",
-        "Atl\u00e9tico Junior or draw",
-        "Portland Trail Blazers to win"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Air Force Falcons to win",
-        "Over 229.5 points"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Over 222.5 points",
-        "Over 36.5 points",
-        "Duke Blue Devils under 30.5 points",
-        "NC State Wolfpack under 40.5 points",
-        "Portland Trail Blazers to win"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Air Force Falcons to win",
-        "Over 228.5 points",
-        "Under 245.5 points"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Air Force Falcons to win",
-        "Indiana Pacers to win",
-        "Toronto Raptors to win",
-        "NC State Wolfpack to win",
-        "Over 231.5 points"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-23T15:40:15+00:00"
-    },
-    {
-     "policy": "267b62dd",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Independiente del Valle or draw",
-        "Tigre or draw",
-        "Middlesbrough or draw",
         "NC State Wolfpack over 21.5 points",
         "VfB Stuttgart or draw"
        ]
@@ -197393,6 +197314,142 @@
       ]
      ],
      "t": "2026-10-23T23:51:12+00:00"
+    },
+    {
+     "policy": "267b62dd",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Under 9.5 goals",
+        "Under 250.5 points",
+        "Under 59.5 points",
+        "NC State Wolfpack +4.5",
+        "Tigre or draw"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Portland Trail Blazers to win",
+        "Stanford Cardinal over 15.5 points",
+        "Under 56.5 points",
+        "Tampa Bay Lightning +4.5"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "NC State Wolfpack under 37.5 points",
+        "Air Force Falcons to win"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Portland Trail Blazers to win",
+        "NC State Wolfpack over 23.5 points",
+        "Under 56.5 points",
+        "Over 211.5 points",
+        "Over 224.5 points"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Over 228.5 points",
+        "Over 224.5 points",
+        "Under 233.5 points"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Air Force Falcons to win",
+        "NC State Wolfpack to win",
+        "Over 228.5 points",
+        "Portland Trail Blazers to win",
+        "Under 233.5 points"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-23T23:56:29+00:00"
     }
    ]
   }
