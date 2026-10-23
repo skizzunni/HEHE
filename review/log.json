@@ -2273,10 +2273,10 @@
   },
   "props": {
    "fair": {
-    "n": 337,
-    "said_fair": 85.8,
-    "said_price": 87.4,
-    "won": 280
+    "n": 350,
+    "said_fair": 86.0,
+    "said_price": 87.6,
+    "won": 292
    },
    "n": 154,
    "said": 82.6,
@@ -2343,43 +2343,50 @@
    },
    {
     "flag": false,
-    "hit": 95.5,
-    "n": 22,
+    "hit": 95.7,
+    "n": 23,
     "name": "props nba Assists",
-    "said": 85.5
+    "said": 85.9
    },
    {
     "flag": false,
-    "hit": 77.8,
-    "n": 27,
+    "hit": 80.0,
+    "n": 30,
     "name": "props nba Points",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 76.0,
-    "n": 25,
+    "hit": 75.0,
+    "n": 28,
     "name": "props nba Pts + Reb",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 81.2,
-    "n": 32,
+    "hit": 81.8,
+    "n": 33,
     "name": "props nba Pts + Reb + Ast",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 94.7,
-    "n": 19,
+    "hit": 95.0,
+    "n": 20,
     "name": "props nba Reb + Ast",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 85.7,
-    "n": 21,
+    "hit": 100.0,
+    "n": 11,
+    "name": "props nba Rebounds",
+    "said": 85.0
+   },
+   {
+    "flag": false,
+    "hit": 86.4,
+    "n": 22,
     "name": "props nba Threes Made",
     "said": 85.0
    },
@@ -2420,8 +2427,8 @@
    },
    {
     "flag": false,
-    "hit": 79.9,
-    "n": 279,
+    "hit": 80.1,
+    "n": 287,
     "name": "props nhl Shots on Goal",
     "said": 79.7
    },
@@ -2455,10 +2462,10 @@
    },
    {
     "flag": false,
-    "hit": 92.3,
-    "n": 13,
+    "hit": 85.7,
+    "n": 14,
     "name": "locks nhl under",
-    "said": 80.0
+    "said": 79.6
    }
   ],
   "calls": {
@@ -2530,16 +2537,19 @@
    }
   },
   "clv": {
-   "avg": 0.65,
-   "beat": 60.5,
-   "n": 38
+   "avg": 0.62,
+   "beat": 57.5,
+   "n": 40
   },
   "day": "2026-10-22",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Toronto Maple Leafs under 4.5 goals (New York Rangers at Toronto Maple Leafs) New York Rangers 4 - Toronto Maple Leafs 5",
+    "Over 221.5 points (Cleveland Cavaliers at Philadelphia 76ers) Cleveland Cavaliers 106 - Philadelphia 76ers 114"
+   ],
    "n": 11,
-   "open": 8,
+   "open": 6,
    "plays": {
     "best": [
      2,
@@ -2550,6 +2560,14 @@
    "won": 3
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "New York Rangers",
+    "price": "-112",
+    "said": 50,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 50%"
+   },
    {
     "against_market": false,
     "league": "nhl",
@@ -2635,10 +2653,12 @@
    {
     "killed_by": [
      "Over 6.5 goals",
-     "Over 7.5 goals"
+     "New York Rangers to win",
+     "Over 7.5 goals",
+     "Over 233.5 points"
     ],
     "legs": 11,
-    "lost": 2,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 0
@@ -2646,10 +2666,12 @@
    {
     "killed_by": [
      "Over 6.5 goals",
-     "Over 7.5 goals"
+     "New York Rangers to win",
+     "Over 7.5 goals",
+     "Over 233.5 points"
     ],
     "legs": 11,
-    "lost": 2,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+25",
     "won": 0
@@ -2657,11 +2679,13 @@
    {
     "killed_by": [
      "Over 6.5 goals",
+     "New York Rangers to win",
      "Over 7.5 goals",
+     "Over 233.5 points",
      "Ottawa Senators under 1.5 goals"
     ],
     "legs": 10,
-    "lost": 3,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+50",
     "won": 0
@@ -2669,10 +2693,12 @@
    {
     "killed_by": [
      "Over 6.5 goals",
-     "Over 7.5 goals"
+     "New York Rangers to win",
+     "Over 7.5 goals",
+     "Over 233.5 points"
     ],
     "legs": 10,
-    "lost": 2,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+100",
     "won": 0
@@ -2680,10 +2706,12 @@
    {
     "killed_by": [
      "Anaheim Ducks +1.5",
+     "Over 221.5 points",
+     "New York Rangers to win",
      "Nashville Predators +1.5"
     ],
     "legs": 10,
-    "lost": 2,
+    "lost": 4,
     "status": "lost",
     "tier": "100",
     "won": 1
@@ -2703,20 +2731,28 @@
    }
   ],
   "picks": {
-   "hit": 73.7,
-   "lost": 10,
-   "n": 38,
-   "roi": -5.0,
-   "said": 72.7,
-   "won": 28
+   "hit": 72.5,
+   "lost": 11,
+   "n": 40,
+   "roi": -5.4,
+   "said": 71.7,
+   "won": 29
   },
   "picks_by_league": {
+   "nba": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 70.4,
+    "said": 56.0,
+    "won": 1
+   },
    "nhl": {
-    "hit": 50.0,
-    "lost": 2,
-    "n": 4,
-    "roi": -21.6,
-    "said": 57.0,
+    "hit": 40.0,
+    "lost": 3,
+    "n": 5,
+    "roi": -37.3,
+    "said": 55.6,
     "won": 2
    },
    "uecl": {
@@ -2738,14 +2774,14 @@
   },
   "props": {
    "fair": {
-    "n": 337,
-    "said_fair": 85.8,
-    "said_price": 87.4,
-    "won": 280
+    "n": 350,
+    "said_fair": 86.0,
+    "said_price": 87.6,
+    "won": 292
    },
-   "n": 36,
-   "said": 76.3,
-   "won": 29
+   "n": 58,
+   "said": 78.9,
+   "won": 49
   },
   "safe_locks": {
    "lost": [
@@ -2781,12 +2817,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.4,
-    "lost": 113,
-    "n": 347,
-    "roi": -3.5,
-    "said": 65.2,
-    "won": 234
+    "hit": 67.3,
+    "lost": 114,
+    "n": 349,
+    "roi": -3.6,
+    "said": 65.1,
+    "won": 235
    }
   },
   "weights": {
@@ -2802,10 +2838,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6536,
-    "market_only": 0.6536,
-    "model_40": 0.6629,
-    "n": 40,
+    "logloss": 0.6548,
+    "market_only": 0.6548,
+    "model_40": 0.6659,
+    "n": 41,
     "weight": 0.0
    }
   }
