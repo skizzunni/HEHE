@@ -2928,9 +2928,9 @@
    }
   },
   "clv": {
-   "avg": 0.19,
-   "beat": 52.9,
-   "n": 17
+   "avg": -0.2,
+   "beat": 50.0,
+   "n": 18
   },
   "day": "2026-10-23",
   "leaks_14d": [],
@@ -2948,6 +2948,14 @@
    "won": 0
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "arg",
+    "pick": "Gimnasia (Mendoza)",
+    "price": "-250",
+    "said": 67,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 67%"
+   },
    {
     "against_market": false,
     "league": "fra",
@@ -3026,20 +3034,20 @@
    }
   ],
   "picks": {
-   "hit": 82.4,
-   "lost": 3,
-   "n": 17,
-   "roi": 5.1,
-   "said": 72.2,
+   "hit": 77.8,
+   "lost": 4,
+   "n": 18,
+   "roi": -0.8,
+   "said": 71.9,
    "won": 14
   },
   "picks_by_league": {
    "arg": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 16.7,
-    "said": 82.0,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -41.7,
+    "said": 74.5,
     "won": 1
    },
    "aus": {
@@ -3198,10 +3206,10 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.9,
-    "lost": 117,
-    "n": 365,
-    "roi": -3.5,
+    "hit": 67.8,
+    "lost": 118,
+    "n": 366,
+    "roi": -3.7,
     "said": 65.7,
     "won": 248
    }

@@ -810,7 +810,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-23T23:22:20+00:00",
+      "checked_at": "2026-10-23T23:27:19+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -822,10 +822,10 @@
       "match": "LAC @ LAL",
       "pick": "Los Angeles Lakers",
       "price": "-360",
-      "price_at": "2026-10-23T23:21:38+00:00",
+      "price_at": "2026-10-23T23:26:53+00:00",
       "price_market": "moneyline",
       "price_ref": "34877192:0ML86866058_1",
-      "prob_at": "2026-10-23T23:21:38+00:00",
+      "prob_at": "2026-10-23T23:26:53+00:00",
       "rank": 4,
       "ready": true,
       "side": "home",
@@ -878,33 +878,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-23T23:22:20+00:00",
+      "checked_at": "2026-10-23T23:27:19+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
-       "ok": false,
-       "what": "injury report not fetched or game summary unverifiable"
+       "ok": true,
+       "what": "injury report checked (6 listed)"
       },
       "id": "nba:401909852",
       "league": "nba",
       "match": "POR @ SAC",
       "pick": "Portland Trail Blazers",
       "price": "-470",
-      "price_at": "2026-10-23T23:21:38+00:00",
+      "price_at": "2026-10-23T23:26:53+00:00",
       "price_market": "moneyline",
       "price_ref": "34877193:0ML86866059_3",
-      "prob_at": "2026-10-23T23:21:38+00:00",
+      "prob_at": "2026-10-23T23:26:53+00:00",
       "rank": 5,
       "ready": false,
-      "reason": "injury report not fetched or game summary unverifiable",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "away",
       "start": "2026-10-24T02:00Z"
      },
      "dc": false,
-     "fp": "6acf459eb5a7",
+     "fp": "e0539415cc2f",
      "gate": {
-      "ok": false,
-      "what": "injury report not fetched or game summary unverifiable"
+      "ok": true,
+      "what": "injury report checked (6 listed)"
      },
      "id": "nba:401909852",
      "league": "nba",
@@ -945,10 +945,15 @@
        "event": "news",
        "t": "2026-10-23T23:22:20+00:00",
        "what": "injury report not fetched or game summary unverifiable"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-23T23:27:19+00:00",
+       "what": "injury report checked (6 listed)"
       }
      ],
      "match": "POR @ SAC",
-     "news_at": "2026-10-23T23:22:20+00:00",
+     "news_at": "2026-10-23T23:27:19+00:00",
      "pick": "Portland Trail Blazers",
      "price": "-355",
      "price_at": "2026-10-23T12:03:21+00:00",
@@ -963,7 +968,7 @@
    ],
    "candidate_news": {
     "esp": "2026-10-23T18:14:51+00:00",
-    "nba": "2026-10-23T23:22:20+00:00"
+    "nba": "2026-10-23T23:27:19+00:00"
    },
    "candidate_observations": {
     "arg:401841643": {
@@ -974,7 +979,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-23T23:22:20+00:00",
+      "checked_at": "2026-10-23T23:27:19+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -986,10 +991,10 @@
       "match": "CAT @ TIG",
       "pick": "Tigre or draw",
       "price": "-650",
-      "price_at": "2026-10-23T23:16:46+00:00",
+      "price_at": "2026-10-23T23:27:17+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190950701:21282552",
-      "prob_at": "2026-10-23T23:21:58+00:00",
+      "prob_at": "2026-10-23T23:26:53+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -1007,7 +1012,7 @@
      "match": "CAT @ TIG",
      "pick": "Tigre or draw",
      "price": "-650",
-     "price_at": "2026-10-23T23:16:46+00:00",
+     "price_at": "2026-10-23T23:27:17+00:00",
      "price_market": "double_chance",
      "price_ref": "736.190950701:21282552",
      "side": "home",
@@ -1022,7 +1027,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-23T23:22:20+00:00",
+      "checked_at": "2026-10-23T23:27:19+00:00",
       "conf": 79,
       "dc": true,
       "gate": {
@@ -1034,10 +1039,10 @@
       "match": "JUA @ NCX",
       "pick": "Necaxa or draw",
       "price": "-500",
-      "price_at": "2026-10-23T23:16:46+00:00",
+      "price_at": "2026-10-23T23:27:17+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192392420:13736526",
-      "prob_at": "2026-10-23T23:21:43+00:00",
+      "prob_at": "2026-10-23T23:26:53+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -1055,7 +1060,7 @@
      "match": "JUA @ NCX",
      "pick": "Necaxa or draw",
      "price": "-500",
-     "price_at": "2026-10-23T23:16:46+00:00",
+     "price_at": "2026-10-23T23:27:17+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192392420:13736526",
      "side": "home",
@@ -1070,7 +1075,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-23T23:22:20+00:00",
+      "checked_at": "2026-10-23T23:27:19+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -1082,10 +1087,10 @@
       "match": "LAC @ LAL",
       "pick": "Los Angeles Lakers",
       "price": "-360",
-      "price_at": "2026-10-23T23:21:38+00:00",
+      "price_at": "2026-10-23T23:26:53+00:00",
       "price_market": "moneyline",
       "price_ref": "34877192:0ML86866058_1",
-      "prob_at": "2026-10-23T23:21:38+00:00",
+      "prob_at": "2026-10-23T23:26:53+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -1103,7 +1108,7 @@
      "news_at": "2026-10-23T20:14:06+00:00",
      "pick": "Los Angeles Lakers",
      "price": "-360",
-     "price_at": "2026-10-23T23:21:38+00:00",
+     "price_at": "2026-10-23T23:26:53+00:00",
      "price_market": "moneyline",
      "price_ref": "34877192:0ML86866058_1",
      "side": "home",
@@ -1118,48 +1123,48 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-23T23:22:20+00:00",
+      "checked_at": "2026-10-23T23:27:19+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
-       "ok": false,
-       "what": "injury report not fetched or game summary unverifiable"
+       "ok": true,
+       "what": "injury report checked (6 listed)"
       },
       "id": "nba:401909852",
       "league": "nba",
       "match": "POR @ SAC",
       "pick": "Portland Trail Blazers",
       "price": "-470",
-      "price_at": "2026-10-23T23:21:38+00:00",
+      "price_at": "2026-10-23T23:26:53+00:00",
       "price_market": "moneyline",
       "price_ref": "34877193:0ML86866059_3",
-      "prob_at": "2026-10-23T23:21:38+00:00",
+      "prob_at": "2026-10-23T23:26:53+00:00",
       "rank": null,
       "ready": false,
-      "reason": "injury report not fetched or game summary unverifiable",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "away",
       "start": "2026-10-24T02:00Z"
      },
      "dc": false,
-     "fp": "6acf459eb5a7",
+     "fp": "e0539415cc2f",
      "gate": {
-      "ok": false,
-      "what": "injury report not fetched or game summary unverifiable"
+      "ok": true,
+      "what": "injury report checked (6 listed)"
      },
      "id": "nba:401909852",
      "league": "nba",
      "log": [
       {
        "event": "news",
-       "t": "2026-10-23T23:22:20+00:00",
-       "what": "injury report not fetched or game summary unverifiable"
+       "t": "2026-10-23T23:27:19+00:00",
+       "what": "injury report checked (6 listed)"
       }
      ],
      "match": "POR @ SAC",
-     "news_at": "2026-10-23T23:22:20+00:00",
+     "news_at": "2026-10-23T23:27:19+00:00",
      "pick": "Portland Trail Blazers",
      "price": "-470",
-     "price_at": "2026-10-23T23:21:38+00:00",
+     "price_at": "2026-10-23T23:26:53+00:00",
      "price_market": "moneyline",
      "price_ref": "34877193:0ML86866059_3",
      "side": "away",
@@ -1173,17 +1178,17 @@
    ],
    "news": {
     "esp": "2026-10-23T18:14:51+00:00",
-    "nba": "2026-10-23T23:22:20+00:00"
+    "nba": "2026-10-23T23:27:19+00:00"
    },
    "shadow_watch": {
     "best_at": "2026-10-23T12:03:41+00:00",
     "best_ceiling": 1.859,
-    "checks": 129,
-    "last": "2026-10-23T23:22:20+00:00",
+    "checks": 130,
+    "last": "2026-10-23T23:27:19+00:00",
     "max_ready": 4,
     "reasons": {
-     "awaiting confirmed XIs": 747,
-     "awaiting this game's price after its lineup/news change": 7,
+     "awaiting confirmed XIs": 749,
+     "awaiting this game's price after its lineup/news change": 8,
      "injury report not fetched or game summary unverifiable": 4
     }
    }
