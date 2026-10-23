@@ -618,6 +618,23 @@
    "tip": "8:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909848|home|FanDuel": {
+   "dec": 1.9259,
+   "ev": 0.0133,
+   "fair": 0.5261,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909848",
+   "kind": "value",
+   "league": "nba",
+   "match": "CHI @ MIL",
+   "price": "-108",
+   "seen": "2026-10-23T17:59:49+00:00",
+   "side": "home",
+   "start": "2026-10-23T20:00Z",
+   "team": "Milwaukee Bucks",
+   "tip": "4:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909848|{\"line\": 240.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0947,
    "dk": "-108",
@@ -1535,6 +1552,77 @@
    "start": "2026-10-25T02:00Z",
    "team": "Calgary Flames",
    "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909847:away|nba:401909848:home": {
+   "ev": 0.0249,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0116,
+     "fair": 0.5344,
+     "id": "nba:401909847",
+     "price": "-112",
+     "side": "away",
+     "spec": null,
+     "team": "Detroit Pistons"
+    },
+    {
+     "ev": 0.0133,
+     "fair": 0.5261,
+     "id": "nba:401909848",
+     "price": "-108",
+     "side": "home",
+     "spec": null,
+     "team": "Milwaukee Bucks"
+    }
+   ],
+   "payout": 3.646,
+   "prob": 0.2811,
+   "seen": "2026-10-23T17:59:49+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909847:away|nba:401909848:home|nba:401909849:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}": {
+   "ev": 0.039,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0116,
+     "fair": 0.5344,
+     "id": "nba:401909847",
+     "price": "-112",
+     "side": "away",
+     "spec": null,
+     "team": "Detroit Pistons"
+    },
+    {
+     "ev": 0.0133,
+     "fair": 0.5261,
+     "id": "nba:401909848",
+     "price": "-108",
+     "side": "home",
+     "spec": null,
+     "team": "Milwaukee Bucks"
+    },
+    {
+     "ev": 0.0136,
+     "fair": 0.5216,
+     "id": "nba:401909849",
+     "price": "-106",
+     "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "New Orleans Pelicans"
+     },
+     "team": "New Orleans Pelicans +1.5"
+    }
+   ],
+   "payout": 7.085,
+   "prob": 0.1466,
+   "seen": "2026-10-23T17:59:49+00:00",
+   "target": 5.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909847:away|nba:401909849:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Orleans Pelicans\"}": {

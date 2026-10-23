@@ -226,6 +226,26 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26OCT24HAWNIU-HAW"
   },
+  "KXNCAAFGAME-26OCT24LSUAUB-LSU|YES": {
+   "ask": 0.72,
+   "bid": 0.71,
+   "cost": 0.7137,
+   "edge": 0.0069,
+   "fair": 0.7186,
+   "id": "ncaaf:401856728",
+   "label": "LSU Tigers",
+   "league": "ncaaf",
+   "match": "LSU @ AUB",
+   "posted": "2026-10-23T17:59:49+00:00",
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "LSU Tigers"
+   },
+   "start": "2026-10-24T16:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26OCT24LSUAUB-LSU"
+  },
   "KXNCAAFGAME-26OCT24MISSTEX-TEX|YES": {
    "ask": 0.59,
    "bid": 0.58,
@@ -1554,6 +1574,26 @@
    "start": "2026-10-24T23:30Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT24SYRUNC-47"
+  },
+  "KXNCAAFTOTAL-26OCT24SYRUNC-48|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401858275",
+   "label": "under 47.5",
+   "league": "ncaaf",
+   "match": "SYR @ UNC",
+   "posted": "2026-10-23T17:59:49+00:00",
+   "side": "NO",
+   "spec": {
+    "line": 47.5,
+    "t": "under"
+   },
+   "start": "2026-10-24T23:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT24SYRUNC-48"
   },
   "KXNCAAFTOTAL-26OCT24TXAMALA-51|NO": {
    "ask": 0.51,
