@@ -1,8 +1,9 @@
 # Review 2026-10-23
 
-No picks settled yet.
+Picks 1-0 (100.0% vs 69.0% claimed, ROI +34.5%).
 TRAILING props nba Pts + Reb: 71.9% hit vs 85.0% stated on 32
-With the market 67.2% (348); against it 39.1% (23).
+Closing line value: +0.67 points on 1 picks; beat the close on 100.0%.
+With the market 67.3% (349); against it 39.1% (23).
 Ladder-consistency props (all time): 315/380 won (82.9%) vs 86.0% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
