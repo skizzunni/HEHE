@@ -1,12 +1,12 @@
 # Review 2026-10-23
 
-Picks 13-3 (81.2% vs 71.9% claimed, ROI +4.1%).
+Picks 14-3 (82.4% vs 72.2% claimed, ROI +5.1%).
 TRAILING props nba Pts + Reb: 71.9% hit vs 85.0% stated on 32
-Closing line value: +0.4 points on 16 picks; beat the close on 56.2%.
+Closing line value: +0.19 points on 17 picks; beat the close on 52.9%.
 - LOST fra Brest at 68%: margin 1 · the book had my side favoured too · called at 68%
 - LOST ger VfB Stuttgart at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST nba Milwaukee Bucks at 52%: margin 7 · the book had my side favoured too · called at 52%
-With the market 67.9% (364); against it 39.1% (23).
+With the market 67.9% (365); against it 39.1% (23).
 Locks 0/11 won, 11 open; Best play top 2 (60%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 2 (84%) open; Best play top 7 (52%) open.
 Lottery 100: lost (0/10 legs won, killed by Milwaukee Bucks +1.5)
