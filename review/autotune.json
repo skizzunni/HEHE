@@ -1,0 +1,238 @@
+{
+ "benched": [],
+ "evidence": {
+  "changed": false,
+  "current": {
+   "first": {
+    "hit": 72.6,
+    "n": 106,
+    "roi": -1.36
+   },
+   "rule": {
+    "min_dec": 1.0,
+    "per_sport": 2
+   },
+   "second": {
+    "hit": 67.2,
+    "n": 116,
+    "roi": -1.5
+   }
+  },
+  "dates": [
+   "2026-08-31",
+   "2026-10-23"
+  ],
+  "days": 54,
+  "split": "2026-09-27",
+  "table": [
+   {
+    "first": {
+     "hit": 77.4,
+     "n": 62,
+     "roi": 3.04
+    },
+    "rule": {
+     "min_dec": 1.0,
+     "per_sport": 1
+    },
+    "second": {
+     "hit": 64.9,
+     "n": 77,
+     "roi": -6.31
+    }
+   },
+   {
+    "first": {
+     "hit": 67.7,
+     "n": 62,
+     "roi": -4.11
+    },
+    "rule": {
+     "min_dec": 1.15,
+     "per_sport": 1
+    },
+    "second": {
+     "hit": 64.9,
+     "n": 77,
+     "roi": -5.14
+    }
+   },
+   {
+    "first": {
+     "hit": 72.6,
+     "n": 106,
+     "roi": -1.36
+    },
+    "rule": {
+     "min_dec": 1.0,
+     "per_sport": 2
+    },
+    "second": {
+     "hit": 67.2,
+     "n": 116,
+     "roi": -1.5
+    }
+   },
+   {
+    "first": {
+     "hit": 65.4,
+     "n": 104,
+     "roi": -4.15
+    },
+    "rule": {
+     "min_dec": 1.15,
+     "per_sport": 2
+    },
+    "second": {
+     "hit": 65.5,
+     "n": 116,
+     "roi": -1.93
+    }
+   },
+   {
+    "first": {
+     "hit": 71.8,
+     "n": 124,
+     "roi": -1.88
+    },
+    "rule": {
+     "min_dec": 1.0,
+     "per_sport": 3
+    },
+    "second": {
+     "hit": 69.0,
+     "n": 126,
+     "roi": -0.07
+    }
+   },
+   {
+    "first": {
+     "hit": 64.2,
+     "n": 123,
+     "roi": -4.93
+    },
+    "rule": {
+     "min_dec": 1.15,
+     "per_sport": 3
+    },
+    "second": {
+     "hit": 65.9,
+     "n": 126,
+     "roi": -2.03
+    }
+   },
+   {
+    "first": {
+     "hit": 70.4,
+     "n": 135,
+     "roi": -4.13
+    },
+    "rule": {
+     "min_dec": 1.0,
+     "per_sport": null
+    },
+    "second": {
+     "hit": 69.0,
+     "n": 129,
+     "roi": -2.42
+    }
+   },
+   {
+    "first": {
+     "hit": 63.0,
+     "n": 135,
+     "roi": -6.51
+    },
+    "rule": {
+     "min_dec": 1.15,
+     "per_sport": null
+    },
+    "second": {
+     "hit": 65.9,
+     "n": 129,
+     "roi": -3.24
+    }
+   }
+  ]
+ },
+ "groups": {
+  "mlb": {
+   "benched": false,
+   "hit": 68.2,
+   "implied": 58.9,
+   "n": 44,
+   "roi": 16.3,
+   "upper95": 80.0,
+   "won": 30
+  },
+  "nba": {
+   "benched": false,
+   "hit": 70.6,
+   "implied": 62.7,
+   "n": 17,
+   "roi": 10.5,
+   "upper95": 86.7,
+   "won": 12
+  },
+  "ncaaf": {
+   "benched": false,
+   "hit": 65.4,
+   "implied": 68.7,
+   "n": 240,
+   "roi": -5.4,
+   "upper95": 71.1,
+   "won": 157
+  },
+  "nfl": {
+   "benched": false,
+   "hit": 61.7,
+   "implied": 62.5,
+   "n": 60,
+   "roi": 1.8,
+   "upper95": 72.9,
+   "won": 37
+  },
+  "nhl": {
+   "benched": false,
+   "hit": 56.4,
+   "implied": 59.7,
+   "n": 165,
+   "roi": -6.9,
+   "upper95": 63.7,
+   "won": 93
+  },
+  "soccer": {
+   "benched": false,
+   "hit": 80.4,
+   "implied": 77.9,
+   "n": 112,
+   "roi": 3.1,
+   "upper95": 86.7,
+   "won": 90
+  },
+  "ufc": {
+   "benched": false,
+   "hit": 53.8,
+   "implied": 69.1,
+   "n": 13,
+   "roi": -21.7,
+   "upper95": 76.8,
+   "won": 7
+  },
+  "wnba": {
+   "benched": false,
+   "hit": 78.9,
+   "implied": 61.0,
+   "n": 19,
+   "roi": 36.6,
+   "upper95": 91.5,
+   "won": 15
+  }
+ },
+ "log": [],
+ "rule": {
+  "min_dec": 1.0,
+  "per_sport": 2
+ },
+ "updated": "2026-10-23"
+}

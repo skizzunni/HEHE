@@ -235,6 +235,11 @@ def snapshot():
     # any bin trailing its stated chance by more than 2 SE flagged
     try:
         out["calib"] = calibration.table(list(ledger.load().values()))
+        try:
+            import autotune
+            out["autotune"] = autotune.load()
+        except Exception:
+            pass
     except Exception as ex_:
         print(f"calibration table failed: {ex_}", file=sys.stderr)
     # the nightly independent re-grade (tools/regrade.py)

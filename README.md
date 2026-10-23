@@ -3159,3 +3159,29 @@ won 62.2%, a -3.6% return per $1. The findings:
   halves (+7.6%, +4.3%) but 80-85% lost in both (-5.2%, -5.5%). A real edge
   would not zigzag between neighbouring bands, and the larger favourites
   study measured 70-80% at -1.6%.
+
+## Self-tuning calls (2026-10-23)
+
+The calls' selection now adapts to the record by itself. Every build runs
+`tools/autotune.py`, which writes `review/autotune.json`; `calls.py` reads
+that file, and the Results tab shows it under "Self-tuning".
+
+- **Rule.** Eight candidate rules (at most 1, 2 or 3 calls per sport, or no
+  cap; with or without a minimum price of 1.15 decimal) are each replayed
+  as the daily top 5 over the graded, priced, regular-season history. Each
+  is scored on the older and the newer half of the dates. A challenger
+  replaces the rule in force only if it returns more in **both** halves
+  **and** its paired day-by-day gain is above zero at 90% (bootstrap). On
+  2026-10-23 the current rule (2 per sport) was kept. 3 per sport did
+  better on the newer half (-0.07% against -1.5%) but worse on the older,
+  so it does not qualify.
+- **Bench.** A sport is benched from the calls when, over its last 28 days
+  with at least 20 graded priced picks, the 95% Wilson upper bound of its
+  hit rate is below the average chance its prices implied. That is, even
+  the most favourable reading of its record says the market is beating it.
+  The same test reinstates it. On 2026-10-23 nothing is benched; NHL is
+  closest (56.4% won against 59.7% implied, best case 63.7%).
+- Every change is logged with its evidence.
+- The tuner can only choose among picks the board already priced honestly,
+  or leave some out. It never raises a stated chance or softens a standard.
+- New exhibition games are tagged every build (`tools/tag_preseason.py`).

@@ -86,6 +86,17 @@ jobs:
       - name: Review the day
         run: python3 tools/daily_review.py || echo "review failed -- board unaffected"
 
+      # the calls adapt to the record: the selection rule changes only when a
+      # challenger wins both halves of the history, and a sport clearly
+      # losing to its own prices is benched until it is not (autotune.py)
+      - name: Auto-tune the calls
+        run: python3 tools/autotune.py || echo "autotune failed -- calls keep the last rule"
+
+      # exhibition games stay out of every fit (preseason.py): tag new ones
+      # from ESPN's season type
+      - name: Tag preseason games
+        run: timeout 300 python3 tools/tag_preseason.py || echo "preseason tagging failed -- tried again next run"
+
       # closing line value for every graded pick, and the hard rule: no
       # beating the close on Brier over 300 picks, no model (policy.py)
       # the nightly independent re-grade (game summaries, not the scoreboard
@@ -121,6 +132,7 @@ jobs:
           if [ -f data/td_history.json ]; then git add -f data/td_history.json; fi
           if [ -f data/ladder_history.json ]; then git add -f data/ladder_history.json; fi
           if [ -f data/paired_eval.json ]; then git add -f data/paired_eval.json; fi
+          if [ -f data/preseason_games.json ]; then git add -f data/preseason_games.json; fi
           if git diff --cached --quiet; then
             echo "ledger unchanged"
             exit 0

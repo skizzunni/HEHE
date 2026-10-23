@@ -36,11 +36,20 @@ class DailyCalls(unittest.TestCase):
         # these tests are about selection, freezing and gates on one sport;
         # the per-sport cap has its own test below
         self._per, calls.PER_SPORT = calls.PER_SPORT, 99
+        self._pol = (calls.MIN_DEC, calls.BENCHED)
+        calls.MIN_DEC, calls.BENCHED = 1.0, set()          # not the live auto-tuned file
 
     def tearDown(self):
         import news
         news.summary = self._sum
         calls.PER_SPORT = self._per
+        calls.MIN_DEC, calls.BENCHED = self._pol
+
+    def test_benched_sport_gets_no_calls(self):
+        calls.PER_SPORT, calls.BENCHED = 2, {"nhl"}
+        rows = {"nhl": [row(1, 0.90), row(2, 0.85)], "nba": [row(3, 0.60, lg="nba")]}
+        st = dict(dates=("20261020", "20261021"), slots=dict(today=rows, tomorrow={}))
+        self.assertEqual(self.ids(calls.update_daily(st, NINE, self.path)), ["nba:3"])
 
     def test_at_most_two_per_sport_soccer_as_one(self):
         calls.PER_SPORT = 2

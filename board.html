@@ -1337,6 +1337,30 @@ function regradeHTML(){
         + (m.score ? ' &middot; ' + esc(Object.entries(m.score).map(x => x[0] + ' ' + x[1]).join(", ")) : '') + '</li>').join("") + '</ul>' : '')
     + '</div>';
 }
+// The calls' self-tuning (autotune.py): the rule in force, each sport's
+// recent record against its prices, and every change it has made.
+function autotuneHTML(){
+  const A = D.autotune || {};
+  if(!A.rule) return "";
+  const r = A.rule, G = A.groups || {}, L = (A.log || []).slice(-8).reverse();
+  const rule = (r.per_sport ? 'at most ' + r.per_sport + ' calls per sport' : 'no per-sport cap')
+    + (r.min_dec > 1 ? ', no price shorter than ' + esc(String(r.min_dec)) + ' decimal' : '');
+  return '<div class="sect" id="autotune"><h2>Self-tuning</h2>'
+    + '<p class="note">Every build re-tests the calls&rsquo; rules on the whole record (exhibition games left out). '
+    + 'A new rule is adopted only if it returns more in <b>both</b> halves of the history and its gain clears zero at 90%. '
+    + 'A sport is benched from the calls while even the best reading of its last 28 days loses to its own prices. '
+    + 'In force now: <b>' + rule + '</b>; benched: <b>' + ((A.benched || []).length ? A.benched.map(esc).join(", ") : 'none') + '</b>'
+    + (A.updated ? ' (checked ' + esc(A.updated) + ')' : '') + '.</p>'
+    + '<table class="sbt"><tr><th>sport</th><th>N</th><th>won</th><th>prices said</th><th>best case</th><th>ROI</th><th>status</th></tr>'
+    + Object.entries(G).sort((a, b) => b[1].n - a[1].n).map(([g, v]) => '<tr><td>' + esc(g) + '</td><td>' + v.n
+      + '</td><td>' + v.hit + '%</td><td>' + v.implied + '%</td><td>' + v.upper95 + '%</td><td>' + (v.roi >= 0 ? '+' : '') + v.roi
+      + '%</td><td>' + (v.benched ? '<span class="wl lost">BENCHED</span>' : v.n < 20 ? '<span class="sbn">thin</span>' : '<span class="sbn">active</span>')
+      + '</td></tr>').join('') + '</table>'
+    + (L.length ? '<p class="note">Changes: ' + L.map(x => esc(x.day) + ' ' + esc(x.what) + ' '
+        + (x.group ? esc(x.group) : esc(JSON.stringify(x.new || ''))) ).join(' &middot; ') + '</p>'
+      : '<p class="note">No change yet: the current rule has not been beaten on both halves.</p>')
+    + '</div>';
+}
 // Which price source predicts winners best (sources.py): every venue's
 // no-vig chance on the same games, scored against DraftKings.
 function sourcesHTML(){
@@ -2537,7 +2561,7 @@ function scoreboardHTML(){
           + '</tr>').join("")
       + '</tbody></table></div>';
   }
-  h += marketBanner() + regradeHTML() + clvHTML() + sourcesHTML() + calibHTML() + propsRecordHTML();
+  h += marketBanner() + regradeHTML() + autotuneHTML() + clvHTML() + sourcesHTML() + calibHTML() + propsRecordHTML();
   // the review's alarms: what is trailing its stated chance, what never settled
   const HL = D.health;
   if(HL){

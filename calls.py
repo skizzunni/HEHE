@@ -93,7 +93,24 @@ TOP_N = 5
 # better in both halves; +18.2 units over the 53 days (95% -0.2 to +38.2).
 # Caps of 1 and 3 were each worse in one half. On 2026-10-22 all five calls
 # were soccer double chances at -700 to -1100, and one of them lost.
-PER_SPORT = 2
+# The live value comes from the nightly auto-tuner (autotune.py, which may
+# change it only on evidence from both halves of the record); 2 until it has
+# decided. Set an int here to pin it (tests do).
+PER_SPORT = None
+MIN_DEC = None
+BENCHED = None
+
+
+def _policy():
+    """(per-sport cap, minimum decimal price, benched sport groups) in force."""
+    try:
+        import autotune
+        r, b = autotune.rule(), autotune.benched()
+    except Exception:
+        r, b = dict(per_sport=2, min_dec=1.0), set()
+    return (r.get("per_sport") if PER_SPORT is None else PER_SPORT,
+            r.get("min_dec") or 1.0 if MIN_DEC is None else MIN_DEC,
+            b if BENCHED is None else set(BENCHED))
 CALL_HOUR = 8
 DAILY = os.path.join(HERE, "calls.json")
 _ET = _ZI("America/New_York")
@@ -240,12 +257,16 @@ def update_daily(state, now=None, path=None, n=None, summary=None):
     if len(rec["calls"]) < n:
         have = {c["id"] for c in rec["calls"]}
         frozen = set(rec.get("frozen") or [])
+        cap, min_dec, bench = _policy()
         per = _Counter(_group(c["league"]) for c in rec["calls"])
         add = []
+        import venues as _venues
         for c in candidates(today, day, now):
             if len(rec["calls"]) + len(add) >= n:
                 break
-            if c["id"] in have or c["league"] in frozen or per[_group(c["league"])] >= PER_SPORT:
+            if c["id"] in have or c["league"] in frozen or _group(c["league"]) in bench:
+                continue
+            if (cap and per[_group(c["league"])] >= cap) or (_venues.dec(c.get("price")) or 0) < min_dec:
                 continue
             per[_group(c["league"])] += 1
             add.append(c)
