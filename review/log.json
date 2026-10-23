@@ -2537,9 +2537,9 @@
    }
   },
   "clv": {
-   "avg": 0.46,
-   "beat": 53.2,
-   "n": 47
+   "avg": 0.57,
+   "beat": 55.1,
+   "n": 49
   },
   "day": "2026-10-22",
   "leaks_14d": [],
@@ -2550,15 +2550,15 @@
     "Under 7.5 goals (Vegas Golden Knights at St. Louis Blues) Vegas Golden Knights 2 - St. Louis Blues 6"
    ],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      2,
      0.6003,
-     "open"
+     "won"
     ]
    },
-   "won": 6
+   "won": 7
   },
   "losses": [
    {
@@ -2600,6 +2600,14 @@
     "price": "-125",
     "said": 53,
     "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Minnesota Wild",
+    "price": "-218",
+    "said": 66,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 66%"
    },
    {
     "against_market": false,
@@ -2681,7 +2689,7 @@
     "lost": 7,
     "status": "lost",
     "tier": "10k",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -2697,7 +2705,7 @@
     "lost": 7,
     "status": "lost",
     "tier": "10k+25",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -2713,7 +2721,7 @@
     "lost": 7,
     "status": "lost",
     "tier": "10k+50",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -2729,7 +2737,7 @@
     "lost": 7,
     "status": "lost",
     "tier": "10k+100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -2742,7 +2750,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "100",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -2759,12 +2767,12 @@
    }
   ],
   "picks": {
-   "hit": 72.3,
-   "lost": 13,
-   "n": 47,
-   "roi": -3.4,
+   "hit": 71.4,
+   "lost": 14,
+   "n": 49,
+   "roi": -4.8,
    "said": 70.8,
-   "won": 34
+   "won": 35
   },
   "picks_by_league": {
    "col": {
@@ -2784,12 +2792,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 50.0,
+    "hit": 66.7,
     "lost": 1,
-    "n": 2,
-    "roi": -36.8,
-    "said": 80.0,
-    "won": 1
+    "n": 3,
+    "roi": -16.7,
+    "said": 79.7,
+    "won": 2
    },
    "nfl": {
     "hit": 100.0,
@@ -2800,11 +2808,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 50.0,
-    "lost": 4,
-    "n": 8,
-    "roi": -18.6,
-    "said": 55.8,
+    "hit": 44.4,
+    "lost": 5,
+    "n": 9,
+    "roi": -27.7,
+    "said": 56.9,
     "won": 4
    },
    "uecl": {
@@ -2869,31 +2877,31 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.4,
-    "lost": 116,
-    "n": 356,
-    "roi": -3.4,
-    "said": 65.1,
-    "won": 240
+    "hit": 67.3,
+    "lost": 117,
+    "n": 358,
+    "roi": -3.6,
+    "said": 65.2,
+    "won": 241
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": false,
-    "logloss": 0.6462,
-    "market_only": 0.6594,
-    "model_40": 0.6462,
-    "n": 58,
+    "logloss": 0.6405,
+    "market_only": 0.6521,
+    "model_40": 0.6405,
+    "n": 59,
     "weight": 0.0
    },
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6529,
-    "market_only": 0.6529,
-    "model_40": 0.6641,
-    "n": 44,
+    "logloss": 0.6622,
+    "market_only": 0.6622,
+    "model_40": 0.6723,
+    "n": 45,
     "weight": 0.0
    }
   }
