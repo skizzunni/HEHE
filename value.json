@@ -191,6 +191,29 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909095|{\"line\": 223.5, \"t\": \"over\"}|Kalshi": {
+   "dec": 2.0947,
+   "dk": "-108",
+   "ev": 0.0217,
+   "fair": 0.4877,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909095",
+   "kind": "value",
+   "league": "nba",
+   "market": "over",
+   "match": "NY @ BOS",
+   "price": "+109",
+   "seen": "2026-10-23T13:57:02+00:00",
+   "side": "{\"line\": 223.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 223.5,
+    "t": "over"
+   },
+   "start": "2026-10-23T23:00Z",
+   "team": "over 223.5",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909096|{\"line\": 225.5, \"t\": \"under\"}|Kalshi": {
    "dec": 2.0947,
    "dk": "-110",
@@ -338,6 +361,30 @@
    },
    "start": "2026-10-23T23:00Z",
    "team": "Dallas Mavericks +6.5",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909845|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Minnesota Timberwolves\"}|Kalshi": {
+   "dec": 2.0101,
+   "dk": "-110",
+   "ev": 0.0101,
+   "fair": 0.5025,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909845",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "MIN @ ORL",
+   "price": "+101",
+   "seen": "2026-10-23T13:57:02+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Minnesota Timberwolves\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Minnesota Timberwolves"
+   },
+   "start": "2026-10-23T23:00Z",
+   "team": "Minnesota Timberwolves -1.5",
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
