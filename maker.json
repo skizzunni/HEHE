@@ -186,6 +186,26 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26OCT24BSUWSU-BSU"
   },
+  "KXNCAAFGAME-26OCT24GASTARST-GAST|YES": {
+   "ask": 0.55,
+   "bid": 0.54,
+   "cost": 0.5444,
+   "edge": 0.0399,
+   "fair": 0.5661,
+   "id": "ncaaf:401869935",
+   "label": "Georgia State Panthers",
+   "league": "ncaaf",
+   "match": "GAST @ ARST",
+   "posted": "2026-10-23T17:32:42+00:00",
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Georgia State Panthers"
+   },
+   "start": "2026-10-24T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26OCT24GASTARST-GAST"
+  },
   "KXNCAAFGAME-26OCT24HAWNIU-HAW|YES": {
    "ask": 0.64,
    "bid": 0.62,
@@ -604,6 +624,27 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26OCT24GASTARST-GAST3"
   },
+  "KXNCAAFSPREAD-26OCT24GASTARST-GAST3|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401869935",
+   "label": "Georgia State Panthers -2.5",
+   "league": "ncaaf",
+   "match": "GAST @ ARST",
+   "posted": "2026-10-23T17:32:42+00:00",
+   "side": "YES",
+   "spec": {
+    "line": -2.5,
+    "t": "spread",
+    "team": "Georgia State Panthers"
+   },
+   "start": "2026-10-24T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26OCT24GASTARST-GAST3"
+  },
   "KXNCAAFSPREAD-26OCT24HOUUTAH-UTAH7|YES": {
    "ask": 0.52,
    "bid": 0.51,
@@ -750,6 +791,27 @@
    "start": "2026-10-24T22:30Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26OCT24SDSUCSU-SDSU2"
+  },
+  "KXNCAAFSPREAD-26OCT24SYRUNC-UNC10|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401858275",
+   "label": "Syracuse Orange +9.5",
+   "league": "ncaaf",
+   "match": "SYR @ UNC",
+   "posted": "2026-10-23T17:32:42+00:00",
+   "side": "NO",
+   "spec": {
+    "line": 9.5,
+    "t": "spread",
+    "team": "Syracuse Orange"
+   },
+   "start": "2026-10-24T23:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26OCT24SYRUNC-UNC10"
   },
   "KXNCAAFSPREAD-26OCT24TTUCIN-TTU12|NO": {
    "ask": 0.51,
