@@ -1,5 +1,22 @@
 {
  "finds": {
+  "arg:401841638|away|FanDuel": {
+   "dec": 6.0,
+   "ev": 0.032,
+   "fair": 0.172,
+   "fair_source": "DraftKings (Shin)",
+   "id": "arg:401841638",
+   "kind": "value",
+   "league": "arg",
+   "match": "SARM @ GLP",
+   "price": "+500",
+   "seen": "2026-10-23T20:35:12+00:00",
+   "side": "away",
+   "start": "2026-10-23T21:00Z",
+   "team": "Sarmiento (Jun\u00edn)",
+   "tip": "5:00 PM",
+   "venue": "FanDuel"
+  },
   "efl1:401880200|away|FanDuel": {
    "dec": 4.4,
    "ev": 0.0156,
@@ -1570,6 +1587,55 @@
    "start": "2026-10-25T02:00Z",
    "team": "Calgary Flames",
    "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|arg:401841638:away": {
+   "ev": 0.032,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.032,
+     "fair": 0.172,
+     "id": "arg:401841638",
+     "price": "+500",
+     "side": "away",
+     "spec": null,
+     "team": "Sarmiento (Jun\u00edn)"
+    }
+   ],
+   "payout": 6.0,
+   "prob": 0.172,
+   "seen": "2026-10-23T20:35:12+00:00",
+   "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|arg:401841638:away|nba:401909847:away": {
+   "ev": 0.0439,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.032,
+     "fair": 0.172,
+     "id": "arg:401841638",
+     "price": "+500",
+     "side": "away",
+     "spec": null,
+     "team": "Sarmiento (Jun\u00edn)"
+    },
+    {
+     "ev": 0.0116,
+     "fair": 0.5344,
+     "id": "nba:401909847",
+     "price": "-112",
+     "side": "away",
+     "spec": null,
+     "team": "Detroit Pistons"
+    }
+   ],
+   "payout": 11.357,
+   "prob": 0.0919,
+   "seen": "2026-10-23T20:35:12+00:00",
+   "target": 10.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909847:away|nba:401909848:home": {
