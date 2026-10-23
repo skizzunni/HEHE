@@ -126671,6 +126671,58 @@
       "start": "2026-10-23T18:30Z",
       "starters": [],
       "t": "2026-10-23T12:01:17+00:00"
+     },
+     {
+      "injuries": [],
+      "probables": {},
+      "start": "2026-10-23T18:30Z",
+      "starters": [
+       [
+        "VFB",
+        "Dennis Seimen"
+       ],
+       [
+        "VFB",
+        "Ramon Hendriks"
+       ],
+       [
+        "VFB",
+        "Maximilian Mittelst\u00e4dt"
+       ],
+       [
+        "VFB",
+        "Finn Jeltsch"
+       ],
+       [
+        "VFB",
+        "Chris F\u00fchrich"
+       ],
+       [
+        "VFB",
+        "Atakan Karazor"
+       ],
+       [
+        "VFB",
+        "Lorenz Assignon"
+       ],
+       [
+        "VFB",
+        "Angelo Stiller"
+       ],
+       [
+        "VFB",
+        "Leo Sauer"
+       ],
+       [
+        "VFB",
+        "Dzenan Pejcinovic"
+       ],
+       [
+        "VFB",
+        "Ermedin Demirovic"
+       ]
+      ],
+      "t": "2026-10-23T17:40:18+00:00"
      }
     ],
     "ind:401925428": [
@@ -130094,6 +130146,69 @@
       "start": "2026-10-24T00:00Z",
       "starters": [],
       "t": "2026-10-23T12:01:17+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "CHI",
+        "Andrew Mangiapane",
+        "Injured Reserve",
+        "LW"
+       ],
+       [
+        "CHI",
+        "Bowen Byram",
+        "Day-To-Day",
+        "D"
+       ],
+       [
+        "MTL",
+        "Nick Suzuki",
+        "Out",
+        "C"
+       ],
+       [
+        "MTL",
+        "Florian Xhekaj",
+        "Injured Reserve",
+        "LW"
+       ],
+       [
+        "MTL",
+        "Sam Montembeault",
+        "Injured Reserve",
+        "G"
+       ],
+       [
+        "MTL",
+        "Ivan Demidov",
+        "Injured Reserve",
+        "RW"
+       ],
+       [
+        "MTL",
+        "Bryce Pickford",
+        "Injured Reserve",
+        "D"
+       ]
+      ],
+      "probables": {
+       "CHI": [
+        [
+         "Spencer Knight",
+         "probableStartingGoalie"
+        ]
+       ],
+       "MTL": [
+        [
+         "Jakub Dobes",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-24T00:00Z",
+      "starters": [],
+      "t": "2026-10-23T17:40:18+00:00"
      }
     ],
     "nhl:401892565": [
@@ -185853,142 +185968,6 @@
        2.0,
        0.75,
        [
-        "NC State Wolfpack under 39.5 points",
-        "Necaxa or draw",
-        "Middlesbrough or draw",
-        "Cruzeiro or draw"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Air Force Falcons to win",
-        "Toronto Raptors to win"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Stanford Cardinal +18.5",
-        "Virginia Cavaliers +7.5",
-        "Wyoming Cowboys under 27.5 points",
-        "Over 220.5 points",
-        "Under 252.5 points"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Air Force Falcons -1.5",
-        "Toronto Raptors to win",
-        "Indiana Pacers to win"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Indiana Pacers to win",
-        "Toronto Raptors to win",
-        "Air Force Falcons under 31.5 points",
-        "NC State Wolfpack to win",
-        "Portland Trail Blazers to win"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-23T07:15:27+00:00"
-    },
-    {
-     "policy": "267b62dd",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Middlesbrough or draw",
-        "Independiente del Valle or draw",
-        "Tigre or draw",
-        "Gimnasia La Plata or draw",
-        "Cruzeiro or draw"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
         "Over 44.5 points",
         "Necaxa or draw",
         "Middlesbrough or draw",
@@ -193941,6 +193920,142 @@
       ]
      ],
      "t": "2026-10-23T17:24:28+00:00"
+    },
+    {
+     "policy": "267b62dd",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Tigre or draw",
+        "Middlesbrough or draw",
+        "Stanford Cardinal +23.5",
+        "Over 215.5 points",
+        "VfB Stuttgart or draw"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Portland Trail Blazers to win",
+        "Atl\u00e9tico Junior or draw",
+        "Stanford Cardinal +19.5",
+        "Montreal Canadiens over 0.5 goals"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Air Force Falcons to win",
+        "Under 231.5 points"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Portland Trail Blazers to win",
+        "Atl\u00e9tico Junior or draw",
+        "Milwaukee Brewers +1.5",
+        "NC State Wolfpack under 40.5 points",
+        "Necaxa or draw"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Air Force Falcons to win",
+        "Under 245.5 points",
+        "Over 213.5 points"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Air Force Falcons to win",
+        "Indiana Pacers to win",
+        "Toronto Raptors to win",
+        "NC State Wolfpack to win",
+        "Over 231.5 points"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-23T17:39:17+00:00"
     }
    ]
   }
