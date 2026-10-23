@@ -99,6 +99,23 @@
    "tip": "8:00 PM",
    "venue": "FanDuel"
   },
+  "mls:761894|away|FanDuel": {
+   "dec": 5.7,
+   "ev": 0.0101,
+   "fair": 0.1772,
+   "fair_source": "DraftKings (Shin)",
+   "id": "mls:761894",
+   "kind": "value",
+   "league": "mls",
+   "match": "NE @ PHI",
+   "price": "+470",
+   "seen": "2026-10-23T04:02:31+00:00",
+   "side": "away",
+   "start": "2026-10-24T23:30Z",
+   "team": "New England Revolution",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909093|{\"line\": 236.5, \"t\": \"over\"}|FanDuel": {
    "dec": 1.9524,
    "dk": "-115",
@@ -352,6 +369,30 @@
    "start": "2026-10-24T02:30Z",
    "team": "Stanford Cardinal +6.5",
    "tip": "10:30 PM",
+   "venue": "Kalshi"
+  },
+  "ncaaf:401866449|{\"line\": -11.5, \"t\": \"spread\", \"team\": \"Ohio Bobcats\"}|Kalshi": {
+   "dec": 2.0101,
+   "dk": "-112",
+   "ev": 0.0142,
+   "fair": 0.5045,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ncaaf:401866449",
+   "kind": "value",
+   "league": "ncaaf",
+   "market": "spread",
+   "match": "EMU @ OHIO",
+   "price": "+101",
+   "seen": "2026-10-23T04:02:31+00:00",
+   "side": "{\"line\": -11.5, \"t\": \"spread\", \"team\": \"Ohio Bobcats\"}",
+   "spec": {
+    "line": -11.5,
+    "t": "spread",
+    "team": "Ohio Bobcats"
+   },
+   "start": "2026-10-24T20:00Z",
+   "team": "Ohio Bobcats -11.5",
+   "tip": "4:00 PM",
    "venue": "Kalshi"
   },
   "nhl:401892558|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"St. Louis Blues\"}|FanDuel": {
