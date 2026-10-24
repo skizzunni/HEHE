@@ -2649,10 +2649,10 @@
   },
   "props": {
    "fair": {
-    "n": 390,
-    "said_fair": 86.2,
-    "said_price": 87.2,
-    "won": 324
+    "n": 400,
+    "said_fair": 86.3,
+    "said_price": 87.3,
+    "won": 330
    },
    "n": 133,
    "said": 80.3,
@@ -2727,36 +2727,36 @@
    },
    {
     "flag": false,
-    "hit": 92.9,
-    "n": 28,
+    "hit": 93.3,
+    "n": 30,
     "name": "props nba Assists",
-    "said": 86.7
+    "said": 86.9
    },
    {
     "flag": false,
-    "hit": 79.4,
-    "n": 34,
+    "hit": 78.9,
+    "n": 38,
     "name": "props nba Points",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 75.0,
-    "n": 12,
+    "hit": 71.4,
+    "n": 14,
     "name": "props nba Pts + Ast",
     "said": 85.0
    },
    {
-    "flag": true,
-    "hit": 71.9,
-    "n": 32,
+    "flag": false,
+    "hit": 72.7,
+    "n": 33,
     "name": "props nba Pts + Reb",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 82.1,
-    "n": 39,
+    "hit": 80.5,
+    "n": 41,
     "name": "props nba Pts + Reb + Ast",
     "said": 85.0
    },
@@ -2769,10 +2769,10 @@
    },
    {
     "flag": false,
-    "hit": 100.0,
-    "n": 12,
+    "hit": 92.3,
+    "n": 13,
     "name": "props nba Rebounds",
-    "said": 85.0
+    "said": 84.4
    },
    {
     "flag": false,
@@ -2928,16 +2928,18 @@
    }
   },
   "clv": {
-   "avg": -0.09,
-   "beat": 50.0,
-   "n": 22
+   "avg": -0.03,
+   "beat": 52.2,
+   "n": 23
   },
   "day": "2026-10-23",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Over 212.5 points (Atlanta Hawks at Charlotte Hornets) Atlanta Hawks 128 - Charlotte Hornets 81"
+   ],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      2,
@@ -3042,12 +3044,12 @@
    }
   ],
   "picks": {
-   "hit": 77.3,
+   "hit": 78.3,
    "lost": 5,
-   "n": 22,
-   "roi": -1.2,
-   "said": 72.2,
-   "won": 17
+   "n": 23,
+   "roi": 1.9,
+   "said": 71.5,
+   "won": 18
   },
   "picks_by_league": {
    "arg": {
@@ -3187,12 +3189,12 @@
     "won": 2
    },
    "nba": {
-    "hit": 0.0,
+    "hit": 50.0,
     "lost": 1,
-    "n": 1,
-    "roi": -100.0,
-    "said": 52.0,
-    "won": 0
+    "n": 2,
+    "roi": -14.8,
+    "said": 54.0,
+    "won": 1
    },
    "uru": {
     "hit": 100.0,
@@ -3205,19 +3207,19 @@
   },
   "props": {
    "fair": {
-    "n": 390,
-    "said_fair": 86.2,
-    "said_price": 87.2,
-    "won": 324
+    "n": 400,
+    "said_fair": 86.3,
+    "said_price": 87.3,
+    "won": 330
    },
-   "n": 17,
-   "said": 85.8,
-   "won": 16
+   "n": 29,
+   "said": 85.6,
+   "won": 24
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      7,
@@ -3230,7 +3232,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "strong": {
    "n": 0
@@ -3246,12 +3248,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.8,
+    "hit": 67.9,
     "lost": 119,
-    "n": 370,
-    "roi": -3.7,
-    "said": 65.8,
-    "won": 251
+    "n": 371,
+    "roi": -3.5,
+    "said": 65.7,
+    "won": 252
    }
   },
   "weights": {
