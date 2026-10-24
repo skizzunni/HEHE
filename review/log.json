@@ -3433,16 +3433,18 @@
    }
   },
   "clv": {
-   "avg": 0.54,
-   "beat": 50.9,
-   "n": 53
+   "avg": 0.5,
+   "beat": 50.0,
+   "n": 54
   },
   "day": "2026-10-24",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20"
+   ],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      2,
@@ -3543,6 +3545,14 @@
    },
    {
     "against_market": false,
+    "league": "ncaaf",
+    "pick": "TCU Horned Frogs",
+    "price": "-360",
+    "said": 77,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 77%"
+   },
+   {
+    "against_market": false,
     "league": "nor",
     "pick": "Bodo/Glimt",
     "price": "-800",
@@ -3633,11 +3643,11 @@
    }
   ],
   "picks": {
-   "hit": 75.5,
-   "lost": 13,
-   "n": 53,
-   "roi": -0.9,
-   "said": 72.5,
+   "hit": 74.1,
+   "lost": 14,
+   "n": 54,
+   "roi": -2.8,
+   "said": 72.6,
    "won": 40
   },
   "picks_by_league": {
@@ -3753,6 +3763,14 @@
     "said": 70.2,
     "won": 3
    },
+   "ncaaf": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 77.0,
+    "won": 0
+   },
    "nor": {
     "hit": 0.0,
     "lost": 1,
@@ -3837,23 +3855,23 @@
     "won": 6
    },
    "agree": {
-    "hit": 68.9,
-    "lost": 137,
-    "n": 440,
-    "roi": -3.0,
-    "said": 66.7,
+    "hit": 68.7,
+    "lost": 138,
+    "n": 441,
+    "roi": -3.2,
+    "said": 66.8,
     "won": 303
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
-    "held_out": false,
-    "logloss": 0.6486,
-    "market_only": 0.6663,
-    "model_40": 0.6486,
-    "n": 64,
-    "weight": 0.0
+    "held_out": true,
+    "logloss": 0.6587,
+    "market_only": 0.6785,
+    "model_40": 0.6587,
+    "n": 65,
+    "weight": 0.4
    },
    "nhl": {
     "fitted": 0.0,
