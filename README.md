@@ -3274,3 +3274,29 @@ Also fixed in prop grading:
   Bolduc 1+ shots on goal (0 shots) as lost.
 - A Kalshi ask of $1.00 is now read as "no offer": 17 unbuyable legs had
   been on that day's Stacks tickets.
+
+## Maker bids: fills judged against the queue (2026-10-24)
+
+A resting bid fills in time priority: everyone already waiting at that
+price is filled first. Until now a bid counted as filled ("touch") whenever
+any trade printed at its price, so 97% of bids counted. That is not
+credible on a book where an NFL total had 116,883 contracts waiting at the
+best bid. Now:
+
+- `maker.queue_ahead` reads Kalshi's public order book when a bid is first
+  archived, and stores how many contracts were already resting at that
+  price.
+- At grading, a bid is filled if:
+  - **strict**: a trade went through the bid, so it filled whatever the
+    queue; or
+  - **queue**: the contracts traded at the bid exceeded the queue ahead of
+    it.
+- Anything else that printed at the price is only a **touch**, and is not
+  counted as a fill.
+
+The page and the daily audit judge maker bids on the realistic fills
+(strict + queue). Bids archived before this change have no queue
+recorded, so their touches stay touches.
+
+So far: certain fills 15 of 20 won, +40.9% (N 20). That is still too few to
+call it an edge.

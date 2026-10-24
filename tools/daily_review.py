@@ -445,7 +445,7 @@ def audit(graded, props, locks):
                         if f.get("kind") == "value" and f.get("status") in ("won", "lost")],
          lambda f: f.get("fair"), lambda f: f["status"] == "won")
     line("kalshi maker bids (filled)", [b for b in (_load("maker.json").get("bids") or {}).values()
-                                         if b.get("status") == "graded" and b.get("fill")],
+                                         if b.get("status") == "graded" and b.get("fill") in ("strict", "queue")],
          lambda b: b.get("fair"), lambda b: bool(b.get("won")))
     return out
 

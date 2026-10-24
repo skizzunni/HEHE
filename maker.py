@@ -118,10 +118,29 @@ def record(slot_rows, KB, now=None, path=None):
                 found.append(c)
                 key = f'{c["ticker"]}|{c["side"]}'
                 if key not in book["bids"]:
-                    book["bids"][key] = dict(c, posted=now.isoformat(timespec="seconds"), status="open")
+                    book["bids"][key] = dict(c, posted=now.isoformat(timespec="seconds"), status="open",
+                                             queue=queue_ahead(c["ticker"], c["side"], c["bid"]))
     save(book, path)
     found.sort(key=lambda x: -x["edge"])
     return found
+
+
+def queue_ahead(ticker, side, bid, api=None):
+    """Contracts already resting at `bid` on our side when we would post --
+    a new bid waits behind all of them. None if the book cannot be read.
+    (2026-10-24: an NFL total had 116,883 contracts at its best bid.)"""
+    import kalshi
+    d = _get(f'{api or kalshi.API}/markets/{ticker}/orderbook?depth=10', tries=1)
+    book = (d or {}).get("orderbook_fp") or (d or {}).get("orderbook")
+    if book is None:
+        return None
+    for px, qty in book.get("yes_dollars" if side == "YES" else "no_dollars") or []:
+        try:
+            if abs(float(px) - bid) < 1e-9:
+                return float(qty)
+        except (TypeError, ValueError):
+            continue
+    return 0.0
 
 
 def _get(url, tries=3):
@@ -141,9 +160,16 @@ def _ts(iso):
     return int(t.timestamp()) if t else None
 
 
-def fill(trades, side, bid):
-    """'strict', 'touch' or None for a resting bid at `bid` on `side`."""
-    best = None
+def fill(trades, side, bid, queue=None):
+    """How a resting bid at `bid` on `side` would have filled:
+
+    'strict'  a trade went through the bid: filled whatever the queue
+    'queue'   trades AT the bid added up to more than the queue that was
+              ahead of it when posted: filled, in time priority
+    'touch'   trades printed at the bid, but not enough (or the queue was
+              never read) to be sure ours was reached
+    None      nothing traded at or through the bid"""
+    best, at = None, 0.0
     for t in trades:
         try:
             if side == "YES" and t.get("taker_side") == "no":
@@ -158,6 +184,12 @@ def fill(trades, side, bid):
             return "strict"
         if abs(px - bid) < 1e-9:
             best = "touch"
+            try:
+                at += float(t.get("count_fp") or t.get("count") or 0)
+            except (TypeError, ValueError):
+                pass
+    if best and queue is not None and at > queue:
+        return "queue"
     return best
 
 
@@ -192,7 +224,7 @@ def grade(now=None, path=None, api=None, limit=60):
             if not cursor:
                 break
             time.sleep(0.3)
-        b["fill"] = fill(trades, b["side"], b["bid"])
+        b["fill"] = fill(trades, b["side"], b["bid"], b.get("queue"))
         b["won"] = int((res == "yes") == (b["side"] == "YES"))
         b["status"] = "graded"
         done += 1
@@ -208,8 +240,12 @@ def report(path=None):
     if not bs:
         return out
     out["fill_strict"] = round(100 * sum(b["fill"] == "strict" for b in bs) / len(bs), 1)
-    out["fill_any"] = round(100 * sum(b["fill"] in ("strict", "touch") for b in bs) / len(bs), 1)
-    for name, ok in (("strict", ("strict",)), ("any", ("strict", "touch"))):
+    out["fill_any"] = round(100 * sum(b["fill"] in ("strict", "queue", "touch") for b in bs) / len(bs), 1)
+    # 'realistic': only fills that are certain (through the bid) or that the
+    # volume at the bid proves reached us past the queue (from 2026-10-24)
+    out["fill_realistic"] = round(100 * sum(b["fill"] in ("strict", "queue") for b in bs) / len(bs), 1)
+    for name, ok in (("strict", ("strict",)), ("realistic", ("strict", "queue")),
+                     ("any", ("strict", "queue", "touch"))):
         f = [b for b in bs if b["fill"] in ok]
         if f:
             ret = [(b["won"] - b["cost"]) / b["cost"] for b in f]

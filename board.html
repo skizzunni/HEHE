@@ -1454,6 +1454,7 @@ function makerBids(){
   const rec = R.graded
     ? 'Forward test: ' + R.graded + ' graded, ' + R.fill_any + '% would have filled (' + R.fill_strict + '% certainly). '
       + (R.strict ? 'Certain fills: <b>' + R.strict.won + ' of ' + R.strict.n + '</b> won, ROI <b>' + pct(R.strict.roi) + '</b>. ' : '')
+      + (R.realistic && R.realistic.n !== (R.strict || {}).n ? 'Certain or past the queue: ' + R.realistic.won + ' of ' + R.realistic.n + ', ROI ' + pct(R.realistic.roi) + '. ' : '')
       + (R.any ? 'All fills: ' + R.any.won + ' of ' + R.any.n + ', ROI ' + pct(R.any.roi) + '. ' : '')
       + (R.unfilled_n ? 'Bids that never filled won ' + R.unfilled_won + '% (N ' + R.unfilled_n + ').' : '')
     : 'Forward test started 2026-10-22: no bid graded yet.';

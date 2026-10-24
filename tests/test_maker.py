@@ -59,6 +59,24 @@ class Fill(unittest.TestCase):
         self.assertEqual(M.fill(self.T, "NO", 0.41), "strict")
 
 
+class Queue(unittest.TestCase):
+    T = [dict(taker_side="no", yes_price_dollars="0.5900", count_fp="300.00"),
+         dict(taker_side="no", yes_price_dollars="0.5900", count_fp="250.00")]
+
+    def test_volume_at_the_bid_must_clear_the_queue(self):
+        self.assertEqual(M.fill(self.T, "YES", 0.59, queue=500), "queue")     # 550 traded > 500 ahead
+        self.assertEqual(M.fill(self.T, "YES", 0.59, queue=1000), "touch")    # not reached
+        self.assertEqual(M.fill(self.T, "YES", 0.59), "touch")                # queue unknown
+
+    def test_queue_read_from_the_book(self):
+        book = {"orderbook_fp": {"yes_dollars": [["0.5800", "10"], ["0.5900", "123.5"]], "no_dollars": []}}
+        with mock.patch.object(M, "_get", lambda url, tries=3: book):
+            self.assertEqual(M.queue_ahead("T", "YES", 0.59), 123.5)
+            self.assertEqual(M.queue_ahead("T", "YES", 0.60), 0.0)       # nobody at our price
+        with mock.patch.object(M, "_get", lambda url, tries=3: None):
+            self.assertIsNone(M.queue_ahead("T", "YES", 0.59))
+
+
 class Grade(unittest.TestCase):
     def test_roi_only_on_fills(self):
         path = tempfile.mktemp(suffix=".json")
