@@ -1403,6 +1403,21 @@ function callWin(price){
   if(!isFinite(v) || Math.abs(v) < 100) return null;
   return 10 * (v > 0 ? v / 100 : 100 / -v);
 }
+// Line shopping for a call: the same straight win at a better venue (the
+// board's DraftKings / FanDuel / Kalshi comparison for that game, Kalshi
+// after its fee). Double chances are a different bet and are left as quoted.
+function callBest(c){
+  if(c.dc) return '';
+  let row = null;
+  Object.values(D.slots.today || {}).forEach(v => (v.rows || []).forEach(r => { if(r.id === c.id && r.mp === c.pick) row = r; }));
+  const V = (row && row.vn) || [];
+  if(V.length < 2) return '';
+  const best = V[0], quoted = callWin(c.price);
+  const win = 10 * (best.dec - 1);
+  if(quoted === null || win <= quoted + 0.005) return '<div class="sbn">best price on the board</div>';
+  return '<div class="sbn">better at <b>' + esc(best.venue) + ' ' + esc(best.american || best.price) + '</b>: $10 wins $'
+    + win.toFixed(2) + ' (+' + (100 * (win / quoted - 1)).toFixed(0) + '%)</div>';
+}
 function drawCalls(){
   const R = D.results || {}, C = R.calls || [], K = R.calls_record || {};
   const n = R.calls_top || 5;
@@ -1439,6 +1454,7 @@ function drawCalls(){
             + '</td><td class="num">' + c.conf + '%' + (c.close ? '<span class="tier lean">close call</span>' : '<span class="tier call">strong</span>')
             + '</td><td class="mkt">' + esc(c.price) + (c.book ? ' <span class="sbn">' + esc(c.book) + '</span>' : '')
             + (callWin(c.price) !== null ? '<div class="sbn">$10 wins $' + callWin(c.price).toFixed(2) + '</div>' : '')
+            + callBest(c)
             + '</td><td>' + st(c) + '</td></tr>').join("")
         + '</tbody></table>'
         + '<p>' + copyBtn("Today's calls", C.filter(c => c.status !== "pulled" && c.status !== "void")
