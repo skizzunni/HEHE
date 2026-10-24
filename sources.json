@@ -97,6 +97,7 @@
    "at": "2026-10-23T22:56:46+00:00",
    "away": "Dallas Mavericks",
    "home": "Indiana Pacers",
+   "home_won": 0,
    "league": "nba",
    "p": {
     "blend": 0.7004,
@@ -106,7 +107,7 @@
     "pm": 0.695
    },
    "start": "2026-10-23T23:00Z",
-   "status": "open"
+   "status": "graded"
   },
   "nba:401909845": {
    "at": "2026-10-23T22:56:46+00:00",
@@ -187,22 +188,22 @@
    "status": "open"
   },
   "nba:401909850": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Memphis Grizzlies",
    "home": "Golden State Warriors",
    "league": "nba",
    "p": {
-    "blend": 0.6027,
-    "dk": 0.5865,
+    "blend": 0.6009,
+    "dk": 0.5973,
     "fd": 0.6113,
-    "kalshi": 0.6078,
-    "pm": 0.605
+    "kalshi": 0.6,
+    "pm": 0.595
    },
    "start": "2026-10-24T02:00Z",
    "status": "open"
   },
   "nba:401909851": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "LA Clippers",
    "home": "Los Angeles Lakers",
    "league": "nba",
@@ -216,7 +217,7 @@
    "status": "open"
   },
   "nba:401909852": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Portland Trail Blazers",
    "home": "Sacramento Kings",
    "league": "nba",
@@ -231,7 +232,7 @@
    "status": "open"
   },
   "ncaaf:401856727": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Texas A&M Aggies",
    "home": "Alabama Crimson Tide",
    "league": "ncaaf",
@@ -245,7 +246,7 @@
    "status": "open"
   },
   "ncaaf:401856728": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "LSU Tigers",
    "home": "Auburn Tigers",
    "league": "ncaaf",
@@ -260,7 +261,7 @@
    "status": "open"
   },
   "ncaaf:401856729": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Vanderbilt Commodores",
    "home": "Kentucky Wildcats",
    "league": "ncaaf",
@@ -273,7 +274,7 @@
    "status": "open"
   },
   "ncaaf:401856730": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Oklahoma Sooners",
    "home": "Mississippi State Bulldogs",
    "league": "ncaaf",
@@ -286,7 +287,7 @@
    "status": "open"
   },
   "ncaaf:401856731": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Tennessee Volunteers",
    "home": "South Carolina Gamecocks",
    "league": "ncaaf",
@@ -299,7 +300,7 @@
    "status": "open"
   },
   "ncaaf:401856732": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Ole Miss Rebels",
    "home": "Texas Longhorns",
    "league": "ncaaf",
@@ -313,7 +314,7 @@
    "status": "open"
   },
   "ncaaf:401856834": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Baylor Bears",
    "home": "Kansas Jayhawks",
    "league": "ncaaf",
@@ -327,7 +328,7 @@
    "status": "open"
   },
   "ncaaf:401856835": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "BYU Cougars",
    "home": "UCF Knights",
    "league": "ncaaf",
@@ -341,7 +342,7 @@
    "status": "open"
   },
   "ncaaf:401856836": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Colorado Buffaloes",
    "home": "Oklahoma State Cowboys",
    "league": "ncaaf",
@@ -355,7 +356,7 @@
    "status": "open"
   },
   "ncaaf:401856837": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Houston Cougars",
    "home": "Utah Utes",
    "league": "ncaaf",
@@ -370,7 +371,7 @@
    "status": "open"
   },
   "ncaaf:401856838": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Iowa State Cyclones",
    "home": "Arizona Wildcats",
    "league": "ncaaf",
@@ -384,7 +385,7 @@
    "status": "open"
   },
   "ncaaf:401856839": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Kansas State Wildcats",
    "home": "Arizona State Sun Devils",
    "league": "ncaaf",
@@ -398,7 +399,7 @@
    "status": "open"
   },
   "ncaaf:401856840": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Texas Tech Red Raiders",
    "home": "Cincinnati Bearcats",
    "league": "ncaaf",
@@ -412,7 +413,7 @@
    "status": "open"
   },
   "ncaaf:401856841": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "West Virginia Mountaineers",
    "home": "TCU Horned Frogs",
    "league": "ncaaf",
@@ -426,7 +427,7 @@
    "status": "open"
   },
   "ncaaf:401858270": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "California Golden Bears",
    "home": "SMU Mustangs",
    "league": "ncaaf",
@@ -455,7 +456,7 @@
    "status": "open"
   },
   "ncaaf:401858272": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "NC State Wolfpack",
    "home": "Stanford Cardinal",
    "league": "ncaaf",
@@ -470,7 +471,7 @@
    "status": "open"
   },
   "ncaaf:401858273": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Boston College Eagles",
    "home": "Georgia Tech Yellow Jackets",
    "league": "ncaaf",
@@ -483,7 +484,7 @@
    "status": "open"
   },
   "ncaaf:401858274": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Pittsburgh Panthers",
    "home": "Miami Hurricanes",
    "league": "ncaaf",
@@ -495,7 +496,7 @@
    "status": "open"
   },
   "ncaaf:401858275": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Syracuse Orange",
    "home": "North Carolina Tar Heels",
    "league": "ncaaf",
@@ -507,7 +508,7 @@
    "status": "open"
   },
   "ncaaf:401858276": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Virginia Tech Hokies",
    "home": "Clemson Tigers",
    "league": "ncaaf",
@@ -521,7 +522,7 @@
    "status": "open"
   },
   "ncaaf:401858495": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Oregon Ducks",
    "home": "Illinois Fighting Illini",
    "league": "ncaaf",
@@ -535,7 +536,7 @@
    "status": "open"
   },
   "ncaaf:401858496": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Indiana Hoosiers",
    "home": "Michigan Wolverines",
    "league": "ncaaf",
@@ -550,7 +551,7 @@
    "status": "open"
   },
   "ncaaf:401858497": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Iowa Hawkeyes",
    "home": "Minnesota Golden Gophers",
    "league": "ncaaf",
@@ -564,7 +565,7 @@
    "status": "open"
   },
   "ncaaf:401858498": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Rutgers Scarlet Knights",
    "home": "Northwestern Wildcats",
    "league": "ncaaf",
@@ -578,7 +579,7 @@
    "status": "open"
   },
   "ncaaf:401858499": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Michigan State Spartans",
    "home": "UCLA Bruins",
    "league": "ncaaf",
@@ -592,7 +593,7 @@
    "status": "open"
   },
   "ncaaf:401858500": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "USC Trojans",
    "home": "Wisconsin Badgers",
    "league": "ncaaf",
@@ -605,7 +606,7 @@
    "status": "open"
   },
   "ncaaf:401860905": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "San Diego State Aztecs",
    "home": "Colorado State Rams",
    "league": "ncaaf",
@@ -619,7 +620,7 @@
    "status": "open"
   },
   "ncaaf:401860906": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Utah State Aggies",
    "home": "Texas State Bobcats",
    "league": "ncaaf",
@@ -633,7 +634,7 @@
    "status": "open"
   },
   "ncaaf:401860907": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Boise State Broncos",
    "home": "Washington State Cougars",
    "league": "ncaaf",
@@ -690,7 +691,7 @@
    "status": "open"
   },
   "ncaaf:401862809": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Rice Owls",
    "home": "Florida Atlantic Owls",
    "league": "ncaaf",
@@ -704,7 +705,7 @@
    "status": "open"
   },
   "ncaaf:401862810": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "North Texas Mean Green",
    "home": "Navy Midshipmen",
    "league": "ncaaf",
@@ -718,7 +719,7 @@
    "status": "open"
   },
   "ncaaf:401862811": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "UTSA Roadrunners",
    "home": "Tulane Green Wave",
    "league": "ncaaf",
@@ -746,7 +747,7 @@
    "status": "open"
   },
   "ncaaf:401864526": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Hawai'i Rainbow Warriors",
    "home": "Northern Illinois Huskies",
    "league": "ncaaf",
@@ -760,7 +761,7 @@
    "status": "open"
   },
   "ncaaf:401864527": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "North Dakota State Bison",
    "home": "New Mexico Lobos",
    "league": "ncaaf",
@@ -774,7 +775,7 @@
    "status": "open"
   },
   "ncaaf:401864528": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "San Jos\u00e9 State Spartans",
    "home": "Nevada Wolf Pack",
    "league": "ncaaf",
@@ -787,7 +788,7 @@
    "status": "open"
   },
   "ncaaf:401866446": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Akron Zips",
    "home": "Kent State Golden Flashes",
    "league": "ncaaf",
@@ -801,7 +802,7 @@
    "status": "open"
   },
   "ncaaf:401866447": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Sacramento State Hornets",
    "home": "Ball State Cardinals",
    "league": "ncaaf",
@@ -815,7 +816,7 @@
    "status": "open"
   },
   "ncaaf:401866448": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Bowling Green Falcons",
    "home": "Buffalo Bulls",
    "league": "ncaaf",
@@ -827,7 +828,7 @@
    "status": "open"
   },
   "ncaaf:401866449": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Eastern Michigan Eagles",
    "home": "Ohio Bobcats",
    "league": "ncaaf",
@@ -840,7 +841,7 @@
    "status": "open"
   },
   "ncaaf:401866450": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Western Michigan Broncos",
    "home": "Toledo Rockets",
    "league": "ncaaf",
@@ -854,7 +855,7 @@
    "status": "open"
   },
   "ncaaf:401866476": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Miami (OH) RedHawks",
    "home": "Central Michigan Chippewas",
    "league": "ncaaf",
@@ -881,7 +882,7 @@
    "status": "graded"
   },
   "ncaaf:401869935": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Georgia State Panthers",
    "home": "Arkansas State Red Wolves",
    "league": "ncaaf",
@@ -895,7 +896,7 @@
    "status": "open"
   },
   "ncaaf:401869967": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Louisiana Ragin' Cajuns",
    "home": "Southern Miss Golden Eagles",
    "league": "ncaaf",
@@ -925,7 +926,7 @@
    "status": "graded"
   },
   "ncaaf:401871093": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Old Dominion Monarchs",
    "home": "Louisiana Tech Bulldogs",
    "league": "ncaaf",
@@ -939,7 +940,7 @@
    "status": "open"
   },
   "ncaaf:401871094": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "UL Monroe Warhawks",
    "home": "Troy Trojans",
    "league": "ncaaf",
@@ -1191,7 +1192,7 @@
    "status": "open"
   },
   "nhl:401892566": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Anaheim Ducks",
    "home": "Philadelphia Flyers",
    "league": "nhl",
@@ -1206,7 +1207,7 @@
    "status": "open"
   },
   "nhl:401892567": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Los Angeles Kings",
    "home": "New Jersey Devils",
    "league": "nhl",
@@ -1221,7 +1222,7 @@
    "status": "open"
   },
   "nhl:401892568": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "San Jose Sharks",
    "home": "Boston Bruins",
    "league": "nhl",
@@ -1236,7 +1237,7 @@
    "status": "open"
   },
   "nhl:401892569": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "New York Rangers",
    "home": "Ottawa Senators",
    "league": "nhl",
@@ -1251,7 +1252,7 @@
    "status": "open"
   },
   "nhl:401892570": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Nashville Predators",
    "home": "Pittsburgh Penguins",
    "league": "nhl",
@@ -1266,7 +1267,7 @@
    "status": "open"
   },
   "nhl:401892571": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Buffalo Sabres",
    "home": "Washington Capitals",
    "league": "nhl",
@@ -1281,7 +1282,7 @@
    "status": "open"
   },
   "nhl:401892572": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Vegas Golden Knights",
    "home": "Columbus Blue Jackets",
    "league": "nhl",
@@ -1296,22 +1297,22 @@
    "status": "open"
   },
   "nhl:401892573": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Carolina Hurricanes",
    "home": "St. Louis Blues",
    "league": "nhl",
    "p": {
-    "blend": 0.4118,
+    "blend": 0.4128,
     "dk": 0.4135,
     "fd": 0.4127,
-    "kalshi": 0.4158,
+    "kalshi": 0.42,
     "pm": 0.405
    },
    "start": "2026-10-24T23:00Z",
    "status": "open"
   },
   "nhl:401892574": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Toronto Maple Leafs",
    "home": "Edmonton Oilers",
    "league": "nhl",
@@ -1326,7 +1327,7 @@
    "status": "open"
   },
   "nhl:401892575": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Tampa Bay Lightning",
    "home": "Utah Mammoth",
    "league": "nhl",
@@ -1341,7 +1342,7 @@
    "status": "open"
   },
   "nhl:401892576": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Detroit Red Wings",
    "home": "Calgary Flames",
    "league": "nhl",
@@ -1356,7 +1357,7 @@
    "status": "open"
   },
   "nhl:401892577": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Minnesota Wild",
    "home": "Seattle Kraken",
    "league": "nhl",
@@ -1371,7 +1372,7 @@
    "status": "open"
   },
   "wnba:401918308": {
-   "at": "2026-10-24T01:43:27+00:00",
+   "at": "2026-10-24T01:48:32+00:00",
    "away": "Golden State Valkyries",
    "home": "Atlanta Dream",
    "league": "wnba",
