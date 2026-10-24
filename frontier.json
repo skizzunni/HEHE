@@ -438200,12 +438200,13 @@
        "play": null,
        "price": "-230",
        "quoted": "2026-10-24T11:52:19+00:00",
+       "score": "Boston College Eagles 49 - Georgia Tech Yellow Jackets 27",
        "spec": {
         "t": "win",
         "team": "Georgia Tech Yellow Jackets"
        },
        "start": "2026-10-24T19:30Z",
-       "status": "open",
+       "status": "lost",
        "tip": "3:30 PM",
        "where": null
       },
@@ -438240,7 +438241,7 @@
      ],
      "prob": 0.28755427410000006,
      "standard": 0.65,
-     "status": "open",
+     "status": "lost",
      "target": 3.0,
      "total": 3.0144927536231885
     },
@@ -438485,141 +438486,6 @@
     }
    ],
    "versions": [
-    {
-     "policy": "267b62dd",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Cleveland Cavaliers to win",
-        "Denver Nuggets to win",
-        "Philadelphia 76ers to win",
-        "Oklahoma State Cowboys to win",
-        "Carolina Hurricanes +3.5"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "TCU Horned Frogs to win",
-        "Oregon Ducks to win",
-        "FC Dallas or draw"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Vegas Golden Knights over 2.5 goals",
-        "Washington Capitals over 2.5 goals"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Phoenix Suns to win",
-        "Oregon Ducks to win",
-        "Louisiana Ragin' Cajuns to win",
-        "Arizona Wildcats to win",
-        "Edmonton Oilers over 2.5 goals"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Oregon Ducks over 25.5 points",
-        "Detroit Red Wings over 2.5 goals",
-        "Ottawa Senators over 2.5 goals"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Ottawa Senators over 2.5 goals",
-        "Washington Capitals over 2.5 goals",
-        "Vegas Golden Knights over 2.5 goals",
-        "LSU Tigers to win",
-        "Phoenix Suns to win"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-24T15:08:59+00:00"
-    },
     {
      "policy": "267b62dd",
      "sig": [
@@ -446636,6 +446502,142 @@
       ]
      ],
      "t": "2026-10-24T22:52:00+00:00"
+    },
+    {
+     "policy": "299a0a27",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Denver Nuggets to win",
+        "Philadelphia 76ers to win",
+        "Texas State Bobcats to win",
+        "San Antonio Spurs to win",
+        "Seattle Kraken +3.5"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Cleveland Cavaliers to win",
+        "Arizona Wildcats to win",
+        "Denver Nuggets to win",
+        "San Antonio Spurs to win"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Utah Utes to win",
+        "Over 213.5 points"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Phoenix Suns to win",
+        "Cleveland Cavaliers to win",
+        "Iowa State Cyclones +22.5",
+        "Santos or draw",
+        "FC Dallas or draw"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Houston Cougars +13.5",
+        "Over 213.5 points",
+        "Under 235.5 points"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Utah Utes to win",
+        "Utah Mammoth over 2.5 goals",
+        "Minnesota Wild over 2.5 goals",
+        "Over 221.5 points",
+        "Tulane Green Wave +8.5"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-24T22:58:07+00:00"
     }
    ]
   }

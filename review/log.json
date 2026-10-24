@@ -3351,15 +3351,15 @@
    },
    {
     "flag": false,
-    "hit": 47.0,
-    "n": 66,
+    "hit": 46.5,
+    "n": 71,
     "name": "value bets",
-    "said": 44.1
+    "said": 44.6
    },
    {
     "flag": false,
-    "hit": 59.1,
-    "n": 44,
+    "hit": 60.0,
+    "n": 45,
     "name": "kalshi maker bids (filled)",
     "said": 52.7
    }
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.6,
-   "beat": 51.7,
-   "n": 87
+   "avg": 0.54,
+   "beat": 52.2,
+   "n": 90
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3579,6 +3579,14 @@
    {
     "against_market": false,
     "league": "ncaaf",
+    "pick": "Georgia Tech Yellow Jackets",
+    "price": "-245",
+    "said": 69,
+    "why": "margin 22 \u00b7 the book had my side favoured too \u00b7 called at 69%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
     "pick": "Oregon Ducks",
     "price": "-410",
     "said": 79,
@@ -3655,10 +3663,11 @@
    {
     "killed_by": [
      "Michigan Wolverines to win",
-     "Over 55.5 points"
+     "Over 55.5 points",
+     "Navy Midshipmen -7.5"
     ],
     "legs": 10,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 1
@@ -3699,12 +3708,12 @@
    }
   ],
   "picks": {
-   "hit": 77.0,
-   "lost": 20,
-   "n": 87,
-   "roi": 2.7,
-   "said": 72.0,
-   "won": 67
+   "hit": 76.7,
+   "lost": 21,
+   "n": 90,
+   "roi": 3.2,
+   "said": 71.6,
+   "won": 69
   },
   "picks_by_league": {
    "arg": {
@@ -3852,12 +3861,12 @@
     "won": 2
    },
    "ncaaf": {
-    "hit": 81.2,
-    "lost": 3,
-    "n": 16,
-    "roi": 15.9,
-    "said": 72.3,
-    "won": 13
+    "hit": 78.9,
+    "lost": 4,
+    "n": 19,
+    "roi": 16.0,
+    "said": 70.4,
+    "won": 15
    },
    "nhl": {
     "hit": 50.0,
@@ -3984,21 +3993,21 @@
    },
    "agree": {
     "hit": 69.6,
-    "lost": 144,
-    "n": 474,
-    "roi": -2.2,
-    "said": 67.1,
-    "won": 330
+    "lost": 145,
+    "n": 477,
+    "roi": -2.1,
+    "said": 67.0,
+    "won": 332
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6328,
-    "market_only": 0.6495,
-    "model_40": 0.6328,
-    "n": 80,
+    "logloss": 0.6391,
+    "market_only": 0.6546,
+    "model_40": 0.6391,
+    "n": 83,
     "weight": 0.4
    },
    "nhl": {

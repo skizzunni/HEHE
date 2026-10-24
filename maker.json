@@ -370,6 +370,7 @@
    "cost": 0.8325,
    "edge": 0.0042,
    "fair": 0.836,
+   "fill": null,
    "id": "ncaaf:401866447",
    "label": "Ball State Cardinals",
    "league": "ncaaf",
@@ -381,8 +382,9 @@
     "team": "Ball State Cardinals"
    },
    "start": "2026-10-24T19:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT24SACBALL-BALL"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT24SACBALL-BALL",
+   "won": 1
   },
   "KXNCAAFGAME-26OCT24SDSUCSU-CSU|YES": {
    "ask": 0.51,
@@ -492,6 +494,7 @@
    "cost": 0.5743,
    "edge": 0.0213,
    "fair": 0.5865,
+   "fill": null,
    "id": "ncaaf:401862810",
    "label": "North Texas Mean Green",
    "league": "ncaaf",
@@ -503,8 +506,9 @@
     "team": "North Texas Mean Green"
    },
    "start": "2026-10-24T19:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT24UNTNAVY-UNT"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT24UNTNAVY-UNT",
+   "won": 1
   },
   "KXNCAAFGAME-26OCT24USUTXST-TXST|YES": {
    "ask": 0.82,
@@ -1472,6 +1476,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401866447",
    "label": "Sacramento State Hornets +14.5",
    "league": "ncaaf",
@@ -1485,8 +1490,9 @@
     "team": "Sacramento State Hornets"
    },
    "start": "2026-10-24T19:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24SACBALL-BALL15"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24SACBALL-BALL15",
+   "won": 0
   },
   "KXNCAAFSPREAD-26OCT24SDSUCSU-SDSU2|NO": {
    "ask": 0.52,
@@ -2434,6 +2440,27 @@
    "ticker": "KXNCAAFTOTAL-26OCT24CALSMU-56",
    "won": 0
   },
+  "KXNCAAFTOTAL-26OCT24COLOOKST-56|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401856836",
+   "label": "under 55.5",
+   "league": "ncaaf",
+   "match": "COLO @ OKST",
+   "posted": "2026-10-24T22:56:05+00:00",
+   "queue": 94814.88,
+   "side": "NO",
+   "spec": {
+    "line": 55.5,
+    "t": "under"
+   },
+   "start": "2026-10-24T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT24COLOOKST-56"
+  },
   "KXNCAAFTOTAL-26OCT24COLOOKST-57|NO": {
    "ask": 0.52,
    "bid": 0.5,
@@ -3368,6 +3395,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401862810",
    "label": "over 60.5",
    "league": "ncaaf",
@@ -3380,8 +3408,9 @@
     "t": "over"
    },
    "start": "2026-10-24T19:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24UNTNAVY-61"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24UNTNAVY-61",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24UNTNAVY-62|NO": {
    "ask": 0.51,
@@ -3389,6 +3418,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401862810",
    "label": "under 61.5",
    "league": "ncaaf",
@@ -3401,8 +3431,9 @@
     "t": "under"
    },
    "start": "2026-10-24T19:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24UNTNAVY-62"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24UNTNAVY-62",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24UNTNAVY-63|NO": {
    "ask": 0.51,
@@ -3410,6 +3441,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "ncaaf:401862810",
    "label": "under 62.5",
    "league": "ncaaf",
@@ -3421,8 +3453,9 @@
     "t": "under"
    },
    "start": "2026-10-24T19:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24UNTNAVY-63"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24UNTNAVY-63",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24UNTNAVY-63|YES": {
    "ask": 0.51,
@@ -3430,6 +3463,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401862810",
    "label": "over 62.5",
    "league": "ncaaf",
@@ -3441,8 +3475,9 @@
     "t": "over"
    },
    "start": "2026-10-24T19:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24UNTNAVY-63"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24UNTNAVY-63",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24USCWIS-51|NO": {
    "ask": 0.52,
