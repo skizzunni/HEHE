@@ -3018,6 +3018,35 @@
    "target": 5.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|nba:401909858:home|ncaaf:401871093:away": {
+   "ev": 0.0702,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0324,
+     "fair": 0.175,
+     "id": "ncaaf:401871093",
+     "price": "+490",
+     "side": "away",
+     "spec": null,
+     "team": "Old Dominion Monarchs"
+    },
+    {
+     "ev": 0.0364,
+     "fair": 0.1547,
+     "id": "nba:401909858",
+     "price": "+570",
+     "side": "home",
+     "spec": null,
+     "team": "Dallas Mavericks"
+    }
+   ],
+   "payout": 39.53,
+   "prob": 0.0271,
+   "seen": "2026-10-24T18:22:59+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|nba:401909860:away": {
    "ev": 0.0537,
    "kind": "parlay",
