@@ -132,6 +132,7 @@
    "cost": 0.5444,
    "edge": 0.0399,
    "fair": 0.5661,
+   "fill": "touch",
    "id": "ncaaf:401858271",
    "label": "Virginia Cavaliers",
    "league": "ncaaf",
@@ -143,8 +144,9 @@
     "team": "Virginia Cavaliers"
    },
    "start": "2026-10-23T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT23DUKEUVA-UVA"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT23DUKEUVA-UVA",
+   "won": 0
   },
   "KXNCAAFGAME-26OCT23MASSCONN-CONN|YES": {
    "ask": 0.85,
@@ -625,6 +627,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401858271",
    "label": "Virginia Cavaliers -1.5",
    "league": "ncaaf",
@@ -637,8 +640,9 @@
     "team": "Virginia Cavaliers"
    },
    "start": "2026-10-23T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT23DUKEUVA-UVA2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT23DUKEUVA-UVA2",
+   "won": 0
   },
   "KXNCAAFSPREAD-26OCT23DUKEUVA-UVA3|NO": {
    "ask": 0.52,
@@ -646,6 +650,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401858271",
    "label": "Duke Blue Devils +2.5",
    "league": "ncaaf",
@@ -658,8 +663,9 @@
     "team": "Duke Blue Devils"
    },
    "start": "2026-10-23T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT23DUKEUVA-UVA3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT23DUKEUVA-UVA3",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT23MASSCONN-CONN14|YES": {
    "ask": 0.51,
@@ -1553,6 +1559,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401858271",
    "label": "under 47.5",
    "league": "ncaaf",
@@ -1564,8 +1571,9 @@
     "t": "under"
    },
    "start": "2026-10-23T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT23DUKEUVA-48"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT23DUKEUVA-48",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT23MASSCONN-51|NO": {
    "ask": 0.53,
