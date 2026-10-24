@@ -306,6 +306,7 @@
    "cost": 0.7137,
    "edge": 0.0069,
    "fair": 0.7186,
+   "fill": "touch",
    "id": "ncaaf:401856728",
    "label": "LSU Tigers",
    "league": "ncaaf",
@@ -317,8 +318,9 @@
     "team": "LSU Tigers"
    },
    "start": "2026-10-24T16:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT24LSUAUB-LSU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT24LSUAUB-LSU",
+   "won": 1
   },
   "KXNCAAFGAME-26OCT24MISSTEX-TEX|YES": {
    "ask": 0.59,
@@ -1341,6 +1343,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401858274",
    "label": "Pittsburgh Panthers +20.5",
    "league": "ncaaf",
@@ -1353,8 +1356,9 @@
     "team": "Pittsburgh Panthers"
    },
    "start": "2026-10-24T16:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24PITTMIA-MIA21"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24PITTMIA-MIA21",
+   "won": 0
   },
   "KXNCAAFSPREAD-26OCT24PITTMIA-MIA21|YES": {
    "ask": 0.51,
@@ -1362,6 +1366,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401858274",
    "label": "Miami Hurricanes -20.5",
    "league": "ncaaf",
@@ -1375,8 +1380,9 @@
     "team": "Miami Hurricanes"
    },
    "start": "2026-10-24T16:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24PITTMIA-MIA21"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24PITTMIA-MIA21",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT24RICEFAU-FAU8|YES": {
    "ask": 0.51,
@@ -2609,6 +2615,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401856728",
    "label": "under 51.5",
    "league": "ncaaf",
@@ -2620,8 +2627,9 @@
     "t": "under"
    },
    "start": "2026-10-24T16:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24LSUAUB-52"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24LSUAUB-52",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24LSUAUB-52|YES": {
    "ask": 0.51,
@@ -2629,6 +2637,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401856728",
    "label": "over 51.5",
    "league": "ncaaf",
@@ -2641,8 +2650,9 @@
     "t": "over"
    },
    "start": "2026-10-24T16:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24LSUAUB-52"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24LSUAUB-52",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24LSUAUB-53|NO": {
    "ask": 0.51,
@@ -2650,6 +2660,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856728",
    "label": "under 52.5",
    "league": "ncaaf",
@@ -2662,8 +2673,9 @@
     "t": "under"
    },
    "start": "2026-10-24T16:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24LSUAUB-53"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24LSUAUB-53",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24MISSTEX-54|YES": {
    "ask": 0.51,
@@ -2836,6 +2848,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401858274",
    "label": "over 48.5",
    "league": "ncaaf",
@@ -2847,8 +2860,9 @@
     "t": "over"
    },
    "start": "2026-10-24T16:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24PITTMIA-49"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24PITTMIA-49",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24RICEFAU-54|YES": {
    "ask": 0.51,
