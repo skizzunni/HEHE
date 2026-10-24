@@ -1,26 +1,8 @@
-# Review 2026-10-23
+# Review 2026-10-24
 
-Picks 27-9 (75.0% vs 69.8% claimed, ROI +0.6%).
-Closing line value: +0.43 points on 36 picks; beat the close on 52.8%.
-- LOST arg Gimnasia (Mendoza) at 67%: margin 1 · the book had my side favoured too · called at 67%
-- LOST arg Tigre at 78%: margin 1 · the book had my side favoured too · called at 78%
-- LOST col Atlético Bucaramanga at 75%: margin 1 · the book had my side favoured too · called at 75%
-- LOST fra Brest at 68%: margin 1 · the book had my side favoured too · called at 68%
-- LOST ger VfB Stuttgart at 70%: margin 1 · the book had my side favoured too · called at 70%
-- LOST nba Indiana Pacers at 70%: margin 16 · the book had my side favoured too · called at 70%
-- LOST nba Orlando Magic at 52%: margin 22 · the book had my side favoured too · called at 52%
-- LOST nba Milwaukee Bucks at 52%: margin 7 · the book had my side favoured too · called at 52%
-- LOST ncaaf Virginia Cavaliers at 55%: margin 3 · the book had my side favoured too · called at 55%
-With the market 68.0% (384); against it 39.1% (23).
-Locks 5/11 won, 5 open; Best play top 2 (60%) open; lost: Over 212.5 points (Atlanta Hawks at Charlotte Hornets) Atlanta Hawks 128 - Charlotte Hornets 81.
-Safe Locks 7/11 won, 4 open; Winners parlay top 2 (84%) won; Best play top 7 (52%) open.
-Lottery 100: lost (5/10 legs won, killed by Milwaukee Bucks +1.5)
-Lottery 10k: lost (5/13 legs won, killed by Milwaukee Bucks +1.5, Under 237.5 points, Over 234.5 points, Yandy Diaz: 2+ Hits + Runs + RBIs)
-Lottery 10k+25: lost (6/13 legs won, killed by Milwaukee Bucks +1.5, Under 237.5 points, Over 234.5 points)
-Lottery 10k+50: lost (5/12 legs won, killed by Milwaukee Bucks +1.5, Under 237.5 points, Over 234.5 points)
-Lottery 10k+100: lost (5/12 legs won, killed by Milwaukee Bucks +1.5, Under 237.5 points, Over 234.5 points)
+No picks settled yet.
+With the market 68.4% (377); against it 30.0% (20).
 Ladder-consistency props (all time): 381/465 won (81.9%) vs 86.8% fair, 87.6% price.
-Props 87/109 vs 84.3% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=61), nhl 0.00 (n=49)
+Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=61), nhl 0.00 (n=50)
