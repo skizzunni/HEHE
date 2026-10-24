@@ -3116,10 +3116,10 @@
   },
   "props": {
    "fair": {
-    "n": 530,
-    "said_fair": 87.4,
+    "n": 538,
+    "said_fair": 87.3,
     "said_price": 88.0,
-    "won": 441
+    "won": 445
    },
    "n": 187,
    "said": 84.4,
@@ -3302,10 +3302,10 @@
    },
    {
     "flag": false,
-    "hit": 70.6,
-    "n": 17,
+    "hit": 68.4,
+    "n": 19,
     "name": "props wnba Points",
-    "said": 82.2
+    "said": 82.5
    },
    {
     "flag": false,
@@ -3344,17 +3344,17 @@
    },
    {
     "flag": false,
-    "hit": 95.0,
-    "n": 20,
+    "hit": 95.2,
+    "n": 21,
     "name": "prop locks",
-    "said": 92.2
+    "said": 92.1
    },
    {
     "flag": false,
-    "hit": 48.1,
-    "n": 54,
+    "hit": 49.1,
+    "n": 55,
     "name": "value bets",
-    "said": 44.8
+    "said": 44.7
    },
    {
     "flag": false,
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.47,
-   "beat": 48.2,
-   "n": 56
+   "avg": 0.52,
+   "beat": 49.1,
+   "n": 57
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3566,6 +3566,14 @@
     "price": "-650",
     "said": 82,
     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 82%"
+   },
+   {
+    "against_market": false,
+    "league": "wnba",
+    "pick": "Atlanta Dream",
+    "price": "-218",
+    "said": 66,
+    "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 66%"
    }
   ],
   "lottery": [
@@ -3602,10 +3610,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Michigan Wolverines to win"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
@@ -3643,11 +3653,11 @@
    }
   ],
   "picks": {
-   "hit": 75.0,
-   "lost": 14,
-   "n": 56,
-   "roi": -2.1,
-   "said": 72.9,
+   "hit": 73.7,
+   "lost": 15,
+   "n": 57,
+   "roi": -3.8,
+   "said": 72.8,
    "won": 42
   },
   "picks_by_league": {
@@ -3803,6 +3813,14 @@
     "said": 76.0,
     "won": 1
    },
+   "wnba": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 66.0,
+    "won": 0
+   },
    "wsl": {
     "hit": 100.0,
     "lost": 0,
@@ -3814,14 +3832,14 @@
   },
   "props": {
    "fair": {
-    "n": 530,
-    "said_fair": 87.4,
+    "n": 538,
+    "said_fair": 87.3,
     "said_price": 88.0,
-    "won": 441
+    "won": 445
    },
-   "n": 15,
-   "said": 64.7,
-   "won": 13
+   "n": 24,
+   "said": 70.7,
+   "won": 18
   },
   "safe_locks": {
    "lost": [],
@@ -3855,10 +3873,10 @@
     "won": 6
    },
    "agree": {
-    "hit": 68.8,
-    "lost": 138,
-    "n": 443,
-    "roi": -3.1,
+    "hit": 68.7,
+    "lost": 139,
+    "n": 444,
+    "roi": -3.4,
     "said": 66.8,
     "won": 305
    }

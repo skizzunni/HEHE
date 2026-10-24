@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 42-14 (75.0% vs 72.9% claimed, ROI -2.1%).
-Closing line value: +0.47 points on 56 picks; beat the close on 48.2%.
+Picks 42-15 (73.7% vs 72.8% claimed, ROI -3.8%).
+Closing line value: +0.52 points on 57 picks; beat the close on 49.1%.
 - LOST ecu Manta F.C. at 72%: margin 2 · the book had my side favoured too · called at 72%
 - LOST efl1 West Ham United at 78%: margin 1 · the book had my side favoured too · called at 78%
 - LOST efl1 Burnley at 65%: margin 3 · the book had my side favoured too · called at 65%
@@ -16,20 +16,21 @@ Closing line value: +0.47 points on 56 picks; beat the close on 48.2%.
 - LOST ncaaf TCU Horned Frogs at 77%: margin 4 · the book had my side favoured too · called at 77%
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
-With the market 68.8% (443); against it 30.0% (20).
+- LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
+With the market 68.7% (444); against it 30.0% (20).
 Locks 0/11 won, 10 open; Best play top 2 (59%) open; lost: TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (0/9 legs won)
 Lottery 100: open (0/6 legs won)
 Lottery 100: open (0/6 legs won)
 Lottery 10k: open (0/11 legs won)
-Lottery 10k: open (0/10 legs won)
+Lottery 10k: lost (0/10 legs won, killed by Michigan Wolverines to win)
 Lottery 10k: open (0/10 legs won)
 Lottery 10k+25: open (0/11 legs won)
 Lottery 10k+50: open (0/11 legs won)
 Lottery 10k+100: open (0/10 legs won)
-Ladder-consistency props (all time): 441/530 won (83.2%) vs 87.4% fair, 88.0% price.
-Props 13/15 vs 64.7% claimed.
+Ladder-consistency props (all time): 445/538 won (82.7%) vs 87.3% fair, 88.0% price.
+Props 18/24 vs 70.7% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=66), nhl 0.00 (n=50)
