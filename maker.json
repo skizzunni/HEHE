@@ -3897,6 +3897,27 @@
    "status": "open",
    "ticker": "KXNFLGAME-26OCT25DENARI-DEN"
   },
+  "KXNFLGAME-26OCT25GBDET-DET|YES": {
+   "ask": 0.63,
+   "bid": 0.62,
+   "cost": 0.6242,
+   "edge": 0.0196,
+   "fair": 0.6365,
+   "id": "nfl:401873020",
+   "label": "Detroit Lions",
+   "league": "nfl",
+   "match": "GB @ DET",
+   "posted": "2026-10-24T23:57:16+00:00",
+   "queue": 293644.23,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Detroit Lions"
+   },
+   "start": "2026-10-25T20:25Z",
+   "status": "open",
+   "ticker": "KXNFLGAME-26OCT25GBDET-DET"
+  },
   "KXNFLGAME-26OCT25INDMIN-MIN|YES": {
    "ask": 0.72,
    "bid": 0.71,
@@ -4082,6 +4103,28 @@
    "start": "2026-10-25T17:00Z",
    "status": "open",
    "ticker": "KXNFLSPREAD-26OCT25CLETEN-CLE3"
+  },
+  "KXNFLSPREAD-26OCT25GBDET-DET4|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "nfl:401873020",
+   "label": "Green Bay Packers +3.5",
+   "league": "nfl",
+   "match": "GB @ DET",
+   "posted": "2026-10-24T23:57:16+00:00",
+   "queue": 29921.03,
+   "side": "NO",
+   "spec": {
+    "line": 3.5,
+    "t": "spread",
+    "team": "Green Bay Packers"
+   },
+   "start": "2026-10-25T20:25Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26OCT25GBDET-DET4"
   },
   "KXNFLSPREAD-26OCT25INDMIN-MIN7|NO": {
    "ask": 0.51,
