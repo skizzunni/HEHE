@@ -3330,8 +3330,8 @@
    },
    {
     "flag": false,
-    "hit": 86.7,
-    "n": 15,
+    "hit": 87.5,
+    "n": 16,
     "name": "safe locks nhl under",
     "said": 91.5
    },
@@ -3358,10 +3358,10 @@
    },
    {
     "flag": false,
-    "hit": 62.5,
-    "n": 32,
+    "hit": 60.0,
+    "n": 35,
     "name": "kalshi maker bids (filled)",
-    "said": 53.0
+    "said": 52.8
    }
   ],
   "calls": {
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.51,
-   "beat": 52.2,
-   "n": 67
+   "avg": 0.5,
+   "beat": 51.5,
+   "n": 68
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3561,6 +3561,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "Philadelphia Flyers",
+    "price": "-122",
+    "said": 53,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
     "league": "nor",
     "pick": "Bodo/Glimt",
     "price": "-800",
@@ -3666,11 +3674,11 @@
    }
   ],
   "picks": {
-   "hit": 76.1,
-   "lost": 16,
-   "n": 67,
-   "roi": -1.0,
-   "said": 73.4,
+   "hit": 75.0,
+   "lost": 17,
+   "n": 68,
+   "roi": -2.5,
+   "said": 73.1,
    "won": 51
   },
   "picks_by_league": {
@@ -3810,6 +3818,14 @@
     "said": 78.3,
     "won": 7
    },
+   "nhl": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 53.0,
+    "won": 0
+   },
    "nor": {
     "hit": 0.0,
     "lost": 1,
@@ -3881,7 +3897,7 @@
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      8,
@@ -3894,7 +3910,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "strong": {
    "n": 0
@@ -3910,11 +3926,11 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.2,
-    "lost": 140,
-    "n": 454,
-    "roi": -3.0,
-    "said": 67.1,
+    "hit": 69.0,
+    "lost": 141,
+    "n": 455,
+    "roi": -3.2,
+    "said": 67.0,
     "won": 314
    }
   },
@@ -3931,10 +3947,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.665,
-    "market_only": 0.665,
-    "model_40": 0.6735,
-    "n": 50,
+    "logloss": 0.6666,
+    "market_only": 0.6666,
+    "model_40": 0.6748,
+    "n": 51,
     "weight": 0.0
    }
   }
