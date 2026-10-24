@@ -182,6 +182,7 @@
    "cost": 0.6938,
    "edge": 0.0151,
    "fair": 0.7043,
+   "fill": "touch",
    "id": "ncaaf:401858272",
    "label": "NC State Wolfpack",
    "league": "ncaaf",
@@ -193,8 +194,9 @@
     "team": "NC State Wolfpack"
    },
    "start": "2026-10-24T02:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT23NCSTSTAN-NCST"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT23NCSTSTAN-NCST",
+   "won": 0
   },
   "KXNCAAFGAME-26OCT24BSUWSU-BSU|YES": {
    "ask": 0.83,
@@ -735,6 +737,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401858272",
    "label": "Stanford Cardinal +7.5",
    "league": "ncaaf",
@@ -747,8 +750,9 @@
     "team": "Stanford Cardinal"
    },
    "start": "2026-10-24T02:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT23NCSTSTAN-NCST8"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT23NCSTSTAN-NCST8",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT24BAYKU-BAY2|NO": {
    "ask": 0.51,
@@ -1761,6 +1765,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858272",
    "label": "over 54.5",
    "league": "ncaaf",
@@ -1772,8 +1777,9 @@
     "t": "over"
    },
    "start": "2026-10-24T02:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT23NCSTSTAN-55"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT23NCSTSTAN-55",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT23NCSTSTAN-56|NO": {
    "ask": 0.51,
@@ -1781,6 +1787,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401858272",
    "label": "under 55.5",
    "league": "ncaaf",
@@ -1792,8 +1799,9 @@
     "t": "under"
    },
    "start": "2026-10-24T02:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT23NCSTSTAN-56"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT23NCSTSTAN-56",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24AKRKENT-48|YES": {
    "ask": 0.51,

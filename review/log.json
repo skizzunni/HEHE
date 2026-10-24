@@ -2704,9 +2704,9 @@
  },
  "2026-10-23": {
   "clv": {
-   "avg": 0.66,
-   "beat": 54.3,
-   "n": 46
+   "avg": 0.69,
+   "beat": 55.3,
+   "n": 47
   },
   "day": "2026-10-23",
   "leaks_14d": [],
@@ -2826,6 +2826,14 @@
    {
     "against_market": false,
     "league": "ncaaf",
+    "pick": "NC State Wolfpack",
+    "price": "-290",
+    "said": 73,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 73%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
     "pick": "Air Force Falcons",
     "price": "-258",
     "said": 70,
@@ -2913,11 +2921,11 @@
    }
   ],
   "picks": {
-   "hit": 71.7,
-   "lost": 13,
-   "n": 46,
-   "roi": -0.5,
-   "said": 68.4,
+   "hit": 70.2,
+   "lost": 14,
+   "n": 47,
+   "roi": -2.6,
+   "said": 68.5,
    "won": 33
   },
   "picks_by_league": {
@@ -3074,11 +3082,11 @@
     "won": 7
    },
    "ncaaf": {
-    "hit": 50.0,
-    "lost": 2,
-    "n": 4,
-    "roi": -24.0,
-    "said": 64.8,
+    "hit": 40.0,
+    "lost": 3,
+    "n": 5,
+    "roi": -39.2,
+    "said": 66.4,
     "won": 2
    },
    "nhl": {
@@ -3148,10 +3156,10 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.8,
-    "lost": 127,
-    "n": 394,
-    "roi": -3.5,
+    "hit": 67.6,
+    "lost": 128,
+    "n": 395,
+    "roi": -3.7,
     "said": 65.7,
     "won": 267
    }
@@ -3343,17 +3351,17 @@
    },
    {
     "flag": false,
-    "hit": 49.0,
-    "n": 49,
+    "hit": 50.0,
+    "n": 50,
     "name": "value bets",
-    "said": 46.5
+    "said": 46.6
    },
    {
     "flag": false,
-    "hit": 75.0,
-    "n": 20,
+    "hit": 72.7,
+    "n": 22,
     "name": "kalshi maker bids (filled)",
-    "said": 54.0
+    "said": 53.7
    }
   ],
   "calls": {
@@ -3490,11 +3498,11 @@
     "won": 6
    },
    "agree": {
-    "hit": 68.2,
-    "lost": 123,
-    "n": 387,
-    "roi": -2.9,
-    "said": 65.9,
+    "hit": 68.0,
+    "lost": 124,
+    "n": 388,
+    "roi": -3.2,
+    "said": 66.0,
     "won": 264
    }
   },
@@ -3502,10 +3510,10 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": false,
-    "logloss": 0.6433,
-    "market_only": 0.6563,
-    "model_40": 0.6433,
-    "n": 63,
+    "logloss": 0.6486,
+    "market_only": 0.6663,
+    "model_40": 0.6486,
+    "n": 64,
     "weight": 0.0
    },
    "nhl": {
