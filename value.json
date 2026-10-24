@@ -1121,6 +1121,23 @@
    "tip": "8:30 PM",
    "venue": "FanDuel"
   },
+  "nba:401909857|home|FanDuel": {
+   "dec": 1.9804,
+   "ev": 0.0163,
+   "fair": 0.5132,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909857",
+   "kind": "value",
+   "league": "nba",
+   "match": "WSH @ CHI",
+   "price": "-102",
+   "seen": "2026-10-24T13:10:11+00:00",
+   "side": "home",
+   "start": "2026-10-25T00:00Z",
+   "team": "Chicago Bulls",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909858|home|FanDuel": {
    "dec": 5.6,
    "ev": 0.0185,
@@ -2590,6 +2607,35 @@
    "payout": 6.615,
    "prob": 0.1549,
    "seen": "2026-10-24T04:42:19+00:00",
+   "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909857:home|nba:401909860:away": {
+   "ev": 0.0379,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0212,
+     "fair": 0.2321,
+     "id": "nba:401909860",
+     "price": "+340",
+     "side": "away",
+     "spec": null,
+     "team": "Golden State Warriors"
+    },
+    {
+     "ev": 0.0163,
+     "fair": 0.5132,
+     "id": "nba:401909857",
+     "price": "-102",
+     "side": "home",
+     "spec": null,
+     "team": "Chicago Bulls"
+    }
+   ],
+   "payout": 8.714,
+   "prob": 0.1191,
+   "seen": "2026-10-24T13:10:11+00:00",
    "target": 5.0,
    "venue": "FanDuel"
   },
