@@ -3344,10 +3344,10 @@
    },
    {
     "flag": false,
-    "hit": 95.2,
-    "n": 21,
+    "hit": 95.5,
+    "n": 22,
     "name": "prop locks",
-    "said": 92.1
+    "said": 91.2
    },
    {
     "flag": false,
@@ -3358,8 +3358,8 @@
    },
    {
     "flag": false,
-    "hit": 59.5,
-    "n": 37,
+    "hit": 60.5,
+    "n": 38,
     "name": "kalshi maker bids (filled)",
     "said": 52.7
    }
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.55,
-   "beat": 52.1,
-   "n": 71
+   "avg": 0.54,
+   "beat": 51.4,
+   "n": 72
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3682,12 +3682,12 @@
    }
   ],
   "picks": {
-   "hit": 74.6,
+   "hit": 75.0,
    "lost": 18,
-   "n": 71,
-   "roi": -1.8,
-   "said": 72.6,
-   "won": 53
+   "n": 72,
+   "roi": -0.8,
+   "said": 72.4,
+   "won": 54
   },
   "picks_by_league": {
    "arg": {
@@ -3819,12 +3819,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 81.8,
+    "hit": 83.3,
     "lost": 2,
-    "n": 11,
-    "roi": 12.5,
-    "said": 74.5,
-    "won": 9
+    "n": 12,
+    "roi": 17.1,
+    "said": 73.1,
+    "won": 10
    },
    "nhl": {
     "hit": 0.0,
@@ -3898,9 +3898,9 @@
     "said_price": 88.0,
     "won": 445
    },
-   "n": 25,
-   "said": 70.1,
-   "won": 19
+   "n": 26,
+   "said": 70.2,
+   "won": 20
   },
   "safe_locks": {
    "lost": [],
@@ -3934,22 +3934,22 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.0,
+    "hit": 69.1,
     "lost": 142,
-    "n": 458,
-    "roi": -3.1,
+    "n": 459,
+    "roi": -2.9,
     "said": 67.0,
-    "won": 316
+    "won": 317
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": false,
-    "logloss": 0.6341,
-    "market_only": 0.6481,
-    "model_40": 0.6341,
-    "n": 75,
+    "logloss": 0.6327,
+    "market_only": 0.6468,
+    "model_40": 0.6327,
+    "n": 76,
     "weight": 0.0
    },
    "nhl": {
