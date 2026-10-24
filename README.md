@@ -3408,3 +3408,15 @@ shows it under the planner. So far, from 2026-10-20:
 | 5x | lost, lost | $100 | 2 |
 
 This is exactly what the planner's odds predict.
+
+Boosts side by side (2026-10-24, 3 PM, $100 to $10,000). The planner now
+shows the best route at every boost level, with the boost applied to each
+day's ticket. Sportsbooks typically offer about one profit boost a day,
+which fits the one-ticket-a-day plan.
+
+| boost | best route | chance | best ticket's return |
+|---|---|---|---|
+| none | 2x, 2x, 5x, 5x | 1 in 185 | -8.4% per $1 |
+| +25% | 2x, 2x, 5x, 5x | 1.0% | +1.9% |
+| +50% | 2x, 2x, 3x, 3x, 3x | 1.6% | +14.8% |
+| +100% | 2x, 2x, 3x, 3x, 3x | 3.6% | +46.2% |

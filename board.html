@@ -1731,7 +1731,24 @@ function challengeHTML(rows){
         + (top.ev < 0 ? 'Each ticket returns ' + (100 * top.ev).toFixed(1) + '% per $1 on average, so the challenge loses money on average '
            + '&mdash; a boost (pills below) is the only thing that turns that around.'
            : 'With this boost each ticket returns +' + (100 * top.ev).toFixed(1) + '% per $1 on average.') + '</p>'
-      : '') + challengeTrack() + '</div>';
+      : '') + challengeBoosts() + challengeTrack() + '</div>';
+}
+// The best route at every boost level, side by side: a sportsbook profit
+// boost is the one thing that turns a ticket's expected return positive.
+function challengeBoosts(){
+  const F = D.frontier || {}, day = TGDAY || "today", c = CHAL;
+  const pc = v => v >= 0.01 ? (100 * v).toFixed(1) + '%' : v > 0 ? '1 in ' + Math.round(1 / v).toLocaleString() : '&mdash;';
+  const rows = ["0", "25", "50", "100"].map(b => {
+    const R = challengeRoutes((((F[day] || {})[b]) || {}).rows || [], c), mix = challengeMix(R, c);
+    const ev = R.length ? Math.max(...R.map(r => r.ev)) : null;
+    return {b, mix, ev};
+  }).filter(x => x.mix);
+  if(rows.length < 2) return '';
+  return '<p class="note" style="margin-top:12px"><b>With a sportsbook profit boost</b> (applied to every ticket on the route):</p>'
+    + '<table class="sbt"><tr><th>boost</th><th>best route</th><th>chance to reach the target</th><th>best ticket&rsquo;s return per $1</th></tr>'
+    + rows.map(x => '<tr' + (x.b === TGBOOST ? ' style="font-weight:600"' : '') + '><td>' + (x.b === "0" ? 'none' : '+' + x.b + '%')
+      + '</td><td>' + x.mix.used.map(r => r.m + '&times;').join(', ') + '</td><td>' + pc(x.mix.p) + '</td><td>'
+      + (x.ev === null ? '&mdash;' : (x.ev >= 0 ? '+' : '') + (100 * x.ev).toFixed(1) + '%') + '</td></tr>').join('') + '</table>';
 }
 // The same challenge actually played on each morning's frozen tickets
 // (tickets.challenge_track): all in, rolled while winning, restart on a loss.
