@@ -5,6 +5,15 @@ Closing line value: +1.89 points on 9 picks; beat the close on 77.8%.
 - LOST jpn Avispa Fukuoka at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Kashima Antlers at 69%: margin 1 · the book had my side favoured too · called at 69%
 With the market 68.2% (396); against it 30.0% (20).
+Lottery 100: open (0/9 legs won)
+Lottery 100: open (0/6 legs won)
+Lottery 100: open (0/6 legs won)
+Lottery 10k: open (0/11 legs won)
+Lottery 10k: open (0/10 legs won)
+Lottery 10k: open (0/10 legs won)
+Lottery 10k+25: open (0/11 legs won)
+Lottery 10k+50: open (0/11 legs won)
+Lottery 10k+100: open (0/10 legs won)
 Ladder-consistency props (all time): 441/530 won (83.2%) vs 87.4% fair, 88.0% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
