@@ -3,14 +3,14 @@
  "enough": true,
  "last": {
   "beat_close_pct": 58.7,
-  "brier_close": 0.1919,
-  "brier_published": 0.1941,
+  "brier_close": 0.1918,
+  "brier_published": 0.1939,
   "dates": [
    "2026-10-17",
    "2026-10-24"
   ],
-  "logloss_close": 0.5716,
-  "logloss_published": 0.5772,
+  "logloss_close": 0.5711,
+  "logloss_published": 0.5768,
   "mean_clv_pts": 0.3,
   "n": 300
  },
@@ -7850,6 +7850,15 @@
    "published": 0.637,
    "record_excluded": "unpriced_or_unverifiable",
    "won": 0
+  },
+  "mls:761890": {
+   "call": false,
+   "close": 0.7934,
+   "clv": -0.66,
+   "day": "2026-10-24",
+   "league": "mls",
+   "published": 0.8,
+   "won": 1
   },
   "mls:761903": {
    "call": false,
@@ -17289,5 +17298,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-24T21:40+00:00"
+ "updated": "2026-10-24T21:47+00:00"
 }
