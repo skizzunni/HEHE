@@ -10,11 +10,11 @@ Closing line value: -0.03 points on 23 picks; beat the close on 52.2%.
 With the market 67.9% (371); against it 39.1% (23).
 Locks 0/11 won, 10 open; Best play top 2 (60%) open; lost: Over 212.5 points (Atlanta Hawks at Charlotte Hornets) Atlanta Hawks 128 - Charlotte Hornets 81.
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (84%) open; Best play top 7 (52%) open.
-Lottery 100: lost (1/10 legs won, killed by Milwaukee Bucks +1.5)
-Lottery 10k: lost (1/13 legs won, killed by Milwaukee Bucks +1.5)
-Lottery 10k+25: lost (1/13 legs won, killed by Milwaukee Bucks +1.5)
-Lottery 10k+50: lost (1/12 legs won, killed by Milwaukee Bucks +1.5)
-Lottery 10k+100: lost (1/12 legs won, killed by Milwaukee Bucks +1.5)
+Lottery 100: lost (2/10 legs won, killed by Milwaukee Bucks +1.5)
+Lottery 10k: lost (2/13 legs won, killed by Milwaukee Bucks +1.5)
+Lottery 10k+25: lost (2/13 legs won, killed by Milwaukee Bucks +1.5)
+Lottery 10k+50: lost (2/12 legs won, killed by Milwaukee Bucks +1.5)
+Lottery 10k+100: lost (2/12 legs won, killed by Milwaukee Bucks +1.5)
 Ladder-consistency props (all time): 330/400 won (82.5%) vs 86.3% fair, 87.3% price.
 Props 24/29 vs 85.6% claimed.
 
