@@ -3351,17 +3351,17 @@
    },
    {
     "flag": false,
-    "hit": 46.6,
-    "n": 73,
+    "hit": 45.9,
+    "n": 74,
     "name": "value bets",
-    "said": 44.4
+    "said": 44.5
    },
    {
     "flag": false,
-    "hit": 58.9,
-    "n": 56,
+    "hit": 56.9,
+    "n": 58,
     "name": "kalshi maker bids (filled)",
-    "said": 52.9
+    "said": 52.8
    }
   ],
   "calls": {
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.54,
-   "beat": 51.5,
-   "n": 97
+   "avg": 0.53,
+   "beat": 52.0,
+   "n": 100
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3567,6 +3567,14 @@
     "price": "-270",
     "said": 69,
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 69%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "Kansas State Wildcats",
+    "price": "-118",
+    "said": 52,
+    "why": "margin 11 \u00b7 the book had my side favoured too \u00b7 called at 52%"
    },
    {
     "against_market": false,
@@ -3732,12 +3740,12 @@
    }
   ],
   "picks": {
-   "hit": 75.3,
-   "lost": 24,
-   "n": 97,
-   "roi": 1.2,
-   "said": 72.0,
-   "won": 73
+   "hit": 75.0,
+   "lost": 25,
+   "n": 100,
+   "roi": 0.6,
+   "said": 71.9,
+   "won": 75
   },
   "picks_by_league": {
    "arg": {
@@ -3767,18 +3775,18 @@
    "bra": {
     "hit": 100.0,
     "lost": 0,
-    "n": 3,
-    "roi": 33.5,
-    "said": 69.7,
-    "won": 3
+    "n": 4,
+    "roi": 28.7,
+    "said": 72.8,
+    "won": 4
    },
    "bra2": {
-    "hit": 0.0,
+    "hit": 50.0,
     "lost": 1,
-    "n": 1,
-    "roi": -100.0,
-    "said": 76.0,
-    "won": 0
+    "n": 2,
+    "roi": -33.1,
+    "said": 73.5,
+    "won": 1
    },
    "chi": {
     "hit": 100.0,
@@ -3893,11 +3901,11 @@
     "won": 2
    },
    "ncaaf": {
-    "hit": 76.0,
-    "lost": 6,
-    "n": 25,
-    "roi": 9.1,
-    "said": 72.2,
+    "hit": 73.1,
+    "lost": 7,
+    "n": 26,
+    "roi": 4.9,
+    "said": 71.4,
     "won": 19
    },
    "nhl": {
@@ -4025,21 +4033,21 @@
    },
    "agree": {
     "hit": 69.4,
-    "lost": 148,
-    "n": 484,
-    "roi": -2.4,
+    "lost": 149,
+    "n": 487,
+    "roi": -2.5,
     "said": 67.2,
-    "won": 336
+    "won": 338
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6414,
-    "market_only": 0.6587,
-    "model_40": 0.6414,
-    "n": 89,
+    "logloss": 0.6417,
+    "market_only": 0.6595,
+    "model_40": 0.6417,
+    "n": 90,
     "weight": 0.4
    },
    "nhl": {
