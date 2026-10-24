@@ -23,7 +23,7 @@ Closing line value: +0.71 points on 84 picks; beat the close on 53.6%.
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
 With the market 69.4% (471); against it 30.0% (20).
-Locks 2/11 won, 8 open; Best play top 2 (59%) open; lost: TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
+Locks 2/11 won, 7 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (1/9 legs won)
 Lottery 100: open (1/6 legs won)

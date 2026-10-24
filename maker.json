@@ -1350,6 +1350,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858495",
    "label": "Illinois Fighting Illini +9.5",
    "league": "ncaaf",
@@ -1362,8 +1363,9 @@
     "team": "Illinois Fighting Illini"
    },
    "start": "2026-10-24T19:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24OREILL-ORE10"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24OREILL-ORE10",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT24OREILL-ORE10|YES": {
    "ask": 0.51,
@@ -1371,6 +1373,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401858495",
    "label": "Oregon Ducks -9.5",
    "league": "ncaaf",
@@ -1383,8 +1386,9 @@
     "team": "Oregon Ducks"
    },
    "start": "2026-10-24T19:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24OREILL-ORE10"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24OREILL-ORE10",
+   "won": 0
   },
   "KXNCAAFSPREAD-26OCT24PITTMIA-MIA21|NO": {
    "ask": 0.51,
@@ -2910,6 +2914,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401858495",
    "label": "under 49.5",
    "league": "ncaaf",
@@ -2922,8 +2927,9 @@
     "t": "under"
    },
    "start": "2026-10-24T19:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24OREILL-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24OREILL-50",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24OREILL-50|YES": {
    "ask": 0.52,
@@ -2931,6 +2937,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858495",
    "label": "over 49.5",
    "league": "ncaaf",
@@ -2942,8 +2949,9 @@
     "t": "over"
    },
    "start": "2026-10-24T19:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24OREILL-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24OREILL-50",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24PITTMIA-49|YES": {
    "ask": 0.51,
