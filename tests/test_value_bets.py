@@ -118,10 +118,6 @@ class Lines(unittest.TestCase):
         self.assertNotIn("Toronto Maple Leafs -1.5", {lab for _, lab, _, _ in V.line_markets(r)})
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class PropValue(unittest.TestCase):
     def game(self, props):
         return [dict(id="nfl:1", match="A @ B", tip="1:00 PM", props=props)]
@@ -156,3 +152,7 @@ class PropValue(unittest.TestCase):
             led[k]["status"] = "won"
             props_ledger.save(led)
             self.assertEqual(V.prop_report(path)["won"], 1)
+
+
+if __name__ == "__main__":
+    unittest.main()

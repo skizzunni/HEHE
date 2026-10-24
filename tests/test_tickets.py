@@ -254,10 +254,6 @@ class Evidence(unittest.TestCase):
         self.assertGreater(r["ci95"][1] - r["ci95"][0], w[1] - w[0])           # wider than counting legs
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class GameLinesOnly(unittest.TestCase):
     def test_props_never_enter_the_recommended_tickets(self):
         import datetime as dt
@@ -272,3 +268,7 @@ class GameLinesOnly(unittest.TestCase):
         legs = [L for r in front["rows"] for L in (r.get("legs") or [])]
         self.assertTrue(legs)
         self.assertTrue(all(L["gid"] != "nhl:1" for L in legs))
+
+
+if __name__ == "__main__":
+    unittest.main()

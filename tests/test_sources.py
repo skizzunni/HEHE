@@ -67,9 +67,6 @@ class RecordAndScore(unittest.TestCase):
         self.assertEqual((g["status"], g["home_won"]), ("graded", 0))
 
 
-if __name__ == "__main__":
-    unittest.main()
-
 
 class Best(unittest.TestCase):
     def test_only_a_proven_source_is_best(self):
@@ -83,3 +80,7 @@ class Best(unittest.TestCase):
         self.assertEqual(S.best(path), "fd")
         self.assertIsNone(S.best(path, min_n=300))           # not enough games
         os.remove(path)
+
+
+if __name__ == "__main__":
+    unittest.main()
