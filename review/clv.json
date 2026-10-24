@@ -6,12 +6,12 @@
   "brier_close": 0.2004,
   "brier_published": 0.2017,
   "dates": [
-   "2026-10-15",
+   "2026-10-16",
    "2026-10-24"
   ],
   "logloss_close": 0.5913,
-  "logloss_published": 0.5944,
-  "mean_clv_pts": 0.28,
+  "logloss_published": 0.5946,
+  "mean_clv_pts": 0.29,
   "n": 300
  },
  "market_is_model": true,
@@ -15450,6 +15450,15 @@
    "record_excluded": "unpriced_or_unverifiable",
    "won": 0
   },
+  "swe:401842856": {
+   "call": false,
+   "close": 0.7023,
+   "clv": 3.23,
+   "day": "2026-10-24",
+   "league": "swe",
+   "published": 0.67,
+   "won": 1
+  },
   "swe:401873993": {
    "call": false,
    "close": 0.3998,
@@ -16731,5 +16740,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-24T14:47+00:00"
+ "updated": "2026-10-24T14:56+00:00"
 }
