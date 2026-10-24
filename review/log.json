@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.92,
-   "beat": 75.0,
-   "n": 4
+   "avg": 0.4,
+   "beat": 66.7,
+   "n": 6
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3446,14 +3446,31 @@
    "plays": {},
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "jpn",
+    "pick": "Avispa Fukuoka",
+    "price": "-270",
+    "said": 70,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 70%"
+   },
+   {
+    "against_market": false,
+    "league": "jpn",
+    "pick": "Kashima Antlers",
+    "price": "-270",
+    "said": 69,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 69%"
+   }
+  ],
   "lottery": [],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 4,
-   "roi": 39.3,
-   "said": 67.2,
+   "hit": 66.7,
+   "lost": 2,
+   "n": 6,
+   "roi": -7.1,
+   "said": 68.0,
    "won": 4
   },
   "picks_by_league": {
@@ -3466,11 +3483,11 @@
     "won": 2
    },
    "jpn": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 40.1,
-    "said": 67.0,
+    "hit": 50.0,
+    "lost": 2,
+    "n": 4,
+    "roi": -30.0,
+    "said": 68.2,
     "won": 2
    }
   },
@@ -3506,10 +3523,10 @@
     "won": 6
    },
    "agree": {
-    "hit": 68.3,
-    "lost": 124,
-    "n": 391,
-    "roi": -2.9,
+    "hit": 67.9,
+    "lost": 126,
+    "n": 393,
+    "roi": -3.4,
     "said": 66.0,
     "won": 267
    }
