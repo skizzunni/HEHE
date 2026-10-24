@@ -5,6 +5,8 @@ Closing line value: +1.89 points on 9 picks; beat the close on 77.8%.
 - LOST jpn Avispa Fukuoka at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Kashima Antlers at 69%: margin 1 · the book had my side favoured too · called at 69%
 With the market 68.2% (396); against it 30.0% (20).
+Locks 0/11 won, 11 open; Best play top 2 (59%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (0/9 legs won)
 Lottery 100: open (0/6 legs won)
 Lottery 100: open (0/6 legs won)
