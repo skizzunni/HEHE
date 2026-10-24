@@ -1,7 +1,8 @@
 # Review 2026-10-24
 
-Picks 63-18 (77.8% vs 72.3% claimed, ROI +2.9%).
-Closing line value: +0.68 points on 81 picks; beat the close on 53.1%.
+Picks 63-19 (76.8% vs 72.2% claimed, ROI +1.7%).
+Closing line value: +0.67 points on 82 picks; beat the close on 52.4%.
+- LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST ecu Manta F.C. at 72%: margin 2 · the book had my side favoured too · called at 72%
 - LOST efl1 West Ham United at 78%: margin 1 · the book had my side favoured too · called at 78%
 - LOST efl1 Burnley at 65%: margin 3 · the book had my side favoured too · called at 65%
@@ -20,7 +21,7 @@ Closing line value: +0.68 points on 81 picks; beat the close on 53.1%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.7% (468); against it 30.0% (20).
+With the market 69.5% (469); against it 30.0% (20).
 Locks 2/11 won, 8 open; Best play top 2 (59%) open; lost: TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (1/9 legs won)
