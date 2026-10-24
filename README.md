@@ -3229,3 +3229,28 @@ stated 73.9% and won 74.5% (N 192); 80-85% stated 84.4%, won 85.0% (N 386);
 (N 26). Every gap is within 1.3 standard errors. The box scores do confirm
 that the losing NBA props were real (every player played). Safe Locks'
 prop legs are 8 of 9 against about 91% stated.
+
+## Value bets: automatic bench by slice (2026-10-24)
+
+The Kalshi backtest was replayed as value bets: buy when the
+sportsbook-derived fair chance times the payout, after fees, beats the
+price by more than 1%. Over 18,735 settled legs:
+
+| band | first half | second half |
+|---|---|---|
+| under 30c | +8.1% (N 945) | -18.5% (N 1,343) |
+| 30-50c | +7.3% (N 288) | +3.0% (N 489) |
+| 50c+ | +7.1% (N 89) | -10.7% (N 200) |
+
+The fair chance overstated longshots in both halves: they won 18.4% against
+19.6% fair, then 15.5% against 20.8%. That is the favourite-longshot bias.
+The live value bets use a different fair (Shin de-vig, averaged with
+Polymarket) that is meant to correct exactly this, and so far they are on
+target (45 graded, 46.7% won against 45.6% fair, +8.0%). So the longshots
+are not hand-banned. Instead each slice of value bets (venue x
+longshot / middle / favourite by payout) is benched automatically by
+`autotune.py` once it has 30+ graded bets and the 95% Wilson upper bound of
+its hit rate is below its average break-even chance. That is, once even its
+best case cannot pay. `value_bets.scan_all` leaves benched slices out, and
+the Results "Self-tuning" section lists every slice. None is benched yet;
+the biggest is Kalshi middle, 11 of 22, +11.0%.

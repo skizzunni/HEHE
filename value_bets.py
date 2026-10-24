@@ -199,6 +199,13 @@ def scan_all(slot_rows, FD=None, KB=None, now=None, OA=None, PM=None):
             value.extend(v)
             if s:
                 sure.append(s)
+    # slices the record has shown cannot break even stay out (autotune.py)
+    try:
+        import autotune
+        off = autotune.value_benched()
+        value = [v for v in value if autotune.value_slice(v) not in off]
+    except Exception:
+        pass
     value.sort(key=lambda x: -x["ev"])
     sure.sort(key=lambda x: -x["profit"])
     return value, sure

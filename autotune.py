@@ -168,15 +168,62 @@ def bench(hist, today):
     return out
 
 
+# Value bets (value_bets.py) are benched by slice -- venue and price band --
+# when even the best case of their record cannot break even at their prices:
+# the 95% Wilson upper bound of the hit rate below the average break-even
+# chance (1 / decimal payout), over at least VALUE_MIN graded bets. Longshots
+# get their own slice because that is where a fair price is most often too
+# generous: on 18,735 settled Kalshi legs, "value" contracts under 30c won
+# 18.4% / 15.5% against 19.6% / 20.8% fair in the two halves of the dates.
+VALUE_MIN = 30
+
+
+def value_slice(f):
+    """'<venue> longshot|middle|favourite' for a value bet, by its payout."""
+    imp = 1 / f["dec"] if f.get("dec") else 0
+    band = "longshot" if imp < 0.30 else "favourite" if imp >= 0.60 else "middle"
+    return f'{f.get("venue")} {band}'
+
+
+def value_bench(finds):
+    by = collections.defaultdict(list)
+    for f in finds:
+        if f.get("kind") == "value" and f.get("status") in ("won", "lost") and f.get("dec"):
+            by[value_slice(f)].append(f)
+    out = {}
+    for k, fs in sorted(by.items()):
+        n = len(fs)
+        w = sum(f["status"] == "won" for f in fs)
+        be = sum(1 / f["dec"] for f in fs) / n
+        roi = sum((f["dec"] - 1) if f["status"] == "won" else -1 for f in fs) / n
+        out[k] = dict(n=n, won=w, hit=round(100 * w / n, 1), breakeven=round(100 * be, 1),
+                      upper95=round(100 * _wilson_upper(w, n), 1), roi=round(100 * roi, 1),
+                      benched=bool(n >= VALUE_MIN and _wilson_upper(w, n) < be))
+    return out
+
+
+def value_benched(path=None):
+    return set(load(path).get("value_benched") or [])
+
+
 def run(book, today, path=None):
     prev = load(path)
     hist = history(book)
     current = dict(DEFAULT, **(prev.get("rule") or {}))
     new, evidence = choose(hist, current)
     groups = bench(hist, today)
+    try:
+        with open(os.path.join(HERE, "value.json")) as fh:
+            vs = value_bench((json.load(fh).get("finds") or {}).values())
+    except (OSError, ValueError):
+        vs = {}
     out = dict(updated=today, rule=new, benched=sorted(g for g, v in groups.items() if v["benched"]),
                evidence=evidence, groups=groups,
+               value_slices=vs, value_benched=sorted(k for k, v in vs.items() if v["benched"]),
                log=(prev.get("log") or [])[-30:])
+    for k in sorted(set(out["value_benched"]) ^ set(prev.get("value_benched") or [])):
+        out["log"].append(dict(day=today, what="value benched" if k in out["value_benched"] else "value reinstated",
+                               group=k, evidence=vs.get(k)))
     if new != current:
         out["log"].append(dict(day=today, what="rule", old=current, new=new))
     was = set(prev.get("benched") or [])

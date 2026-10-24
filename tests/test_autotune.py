@@ -57,6 +57,33 @@ class Bench(unittest.TestCase):
         self.assertFalse(A.bench(h, "2026-09-28")["ufc"]["benched"])
 
 
+class ValueBench(unittest.TestCase):
+    def finds(self, n, won, dec, venue="FanDuel"):
+        return [dict(kind="value", status="won" if i < won else "lost", dec=dec, venue=venue) for i in range(n)]
+
+    def test_slice_that_cannot_break_even_is_benched(self):
+        # 40 longshots at 6.0 (break-even 16.7%) that won 1: best case under break-even
+        v = A.value_bench(self.finds(40, 1, 6.0))
+        self.assertTrue(v["FanDuel longshot"]["benched"])
+
+    def test_profitable_or_small_slices_stay(self):
+        self.assertFalse(A.value_bench(self.finds(40, 22, 2.0))["FanDuel middle"]["benched"])
+        self.assertFalse(A.value_bench(self.finds(A.VALUE_MIN - 1, 0, 6.0))["FanDuel longshot"]["benched"])
+
+    def test_scan_leaves_out_benched_slices(self):
+        import value_bets
+        from unittest import mock
+        rows = {"nhl": [dict(id="nhl:1")]}
+        fake = [dict(id="nhl:1", venue="FanDuel", dec=6.0, ev=0.05), dict(id="nhl:1", venue="FanDuel", dec=2.0, ev=0.02)]
+        with mock.patch.object(value_bets, "scan", lambda *a, **k: (list(fake), None)), \
+             mock.patch("freshness.can_call", lambda r, now: True), \
+             mock.patch("freshness.parse", lambda s: __import__("datetime").datetime(2099, 1, 1,
+                        tzinfo=__import__("datetime").timezone.utc)), \
+             mock.patch.object(A, "value_benched", lambda path=None: {"FanDuel longshot"}):
+            v, _ = value_bets.scan_all(rows)
+        self.assertEqual([x["dec"] for x in v], [2.0])
+
+
 class Run(unittest.TestCase):
     def test_log_records_changes(self):
         path = tempfile.mktemp(suffix=".json")

@@ -234,5 +234,53 @@
   "min_dec": 1.0,
   "per_sport": 2
  },
- "updated": "2026-10-24"
+ "updated": "2026-10-24",
+ "value_benched": [],
+ "value_slices": {
+  "FanDuel favourite": {
+   "benched": false,
+   "breakeven": 64.7,
+   "hit": 60.0,
+   "n": 5,
+   "roi": -5.6,
+   "upper95": 88.2,
+   "won": 3
+  },
+  "FanDuel longshot": {
+   "benched": false,
+   "breakeven": 15.8,
+   "hit": 0.0,
+   "n": 3,
+   "roi": -100.0,
+   "upper95": 56.2,
+   "won": 0
+  },
+  "FanDuel middle": {
+   "benched": false,
+   "breakeven": 49.5,
+   "hit": 50.0,
+   "n": 12,
+   "roi": 1.8,
+   "upper95": 74.6,
+   "won": 6
+  },
+  "Kalshi longshot": {
+   "benched": false,
+   "breakeven": 15.5,
+   "hit": 33.3,
+   "n": 3,
+   "roi": 141.5,
+   "upper95": 79.2,
+   "won": 1
+  },
+  "Kalshi middle": {
+   "benched": false,
+   "breakeven": 45.3,
+   "hit": 50.0,
+   "n": 22,
+   "roi": 11.0,
+   "upper95": 69.3,
+   "won": 11
+  }
+ }
 }
