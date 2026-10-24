@@ -807,30 +807,7 @@
      "close": true,
      "conf": 76,
      "conf_first": 76,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T01:58:13+00:00",
-      "conf": 75,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (8 listed)"
-      },
-      "id": "nba:401909851",
-      "league": "nba",
-      "match": "LAC @ LAL",
-      "pick": "Los Angeles Lakers",
-      "price": "-360",
-      "price_at": "2026-10-24T01:57:54+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34877192:0ML86866058_1",
-      "prob_at": "2026-10-24T01:57:54+00:00",
-      "rank": 4,
-      "ready": true,
-      "side": "home",
-      "start": "2026-10-24T02:00Z"
-     },
+     "current": null,
      "dc": false,
      "fp": "541d4612a89f",
      "gate": {
@@ -875,30 +852,7 @@
      "close": true,
      "conf": 78,
      "conf_first": 75,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T01:58:13+00:00",
-      "conf": 79,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (6 listed)"
-      },
-      "id": "nba:401909852",
-      "league": "nba",
-      "match": "POR @ SAC",
-      "pick": "Portland Trail Blazers",
-      "price": "-470",
-      "price_at": "2026-10-24T01:57:54+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34877193:0ML86866059_3",
-      "prob_at": "2026-10-24T01:57:54+00:00",
-      "rank": 5,
-      "ready": true,
-      "side": "away",
-      "start": "2026-10-24T02:00Z"
-     },
+     "current": null,
      "dc": false,
      "fp": "e0539415cc2f",
      "gate": {
@@ -969,106 +923,10 @@
     "esp": "2026-10-23T18:14:51+00:00",
     "nba": "2026-10-23T23:27:19+00:00"
    },
-   "candidate_observations": {
-    "nba:401909851": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 75,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T01:58:13+00:00",
-      "conf": 75,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (8 listed)"
-      },
-      "id": "nba:401909851",
-      "league": "nba",
-      "match": "LAC @ LAL",
-      "pick": "Los Angeles Lakers",
-      "price": "-360",
-      "price_at": "2026-10-24T01:57:54+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34877192:0ML86866058_1",
-      "prob_at": "2026-10-24T01:57:54+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-10-24T02:00Z"
-     },
-     "dc": false,
-     "fp": "541d4612a89f",
-     "gate": {
-      "ok": true,
-      "what": "injury report checked (8 listed)"
-     },
-     "id": "nba:401909851",
-     "league": "nba",
-     "match": "LAC @ LAL",
-     "news_at": "2026-10-23T20:14:06+00:00",
-     "pick": "Los Angeles Lakers",
-     "price": "-360",
-     "price_at": "2026-10-24T01:57:54+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34877192:0ML86866058_1",
-     "side": "home",
-     "start": "2026-10-24T02:00Z",
-     "tip": "10:00 PM"
-    },
-    "nba:401909852": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 79,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T01:58:13+00:00",
-      "conf": 79,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (6 listed)"
-      },
-      "id": "nba:401909852",
-      "league": "nba",
-      "match": "POR @ SAC",
-      "pick": "Portland Trail Blazers",
-      "price": "-470",
-      "price_at": "2026-10-24T01:57:54+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34877193:0ML86866059_3",
-      "prob_at": "2026-10-24T01:57:54+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "away",
-      "start": "2026-10-24T02:00Z"
-     },
-     "dc": false,
-     "fp": "e0539415cc2f",
-     "gate": {
-      "ok": true,
-      "what": "injury report checked (6 listed)"
-     },
-     "id": "nba:401909852",
-     "league": "nba",
-     "match": "POR @ SAC",
-     "news_at": "2026-10-23T23:27:19+00:00",
-     "pick": "Portland Trail Blazers",
-     "price": "-470",
-     "price_at": "2026-10-24T01:57:54+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34877193:0ML86866059_3",
-     "side": "away",
-     "start": "2026-10-24T02:00Z",
-     "tip": "10:00 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
-    "esp"
+    "esp",
+    "nba"
    ],
    "news": {
     "esp": "2026-10-23T18:14:51+00:00",
@@ -1077,8 +935,8 @@
    "shadow_watch": {
     "best_at": "2026-10-23T12:03:41+00:00",
     "best_ceiling": 1.859,
-    "checks": 158,
-    "last": "2026-10-24T01:58:13+00:00",
+    "checks": 159,
+    "last": "2026-10-24T02:03:25+00:00",
     "max_ready": 4,
     "reasons": {
      "awaiting confirmed XIs": 794,
