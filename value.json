@@ -2875,6 +2875,35 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|ncaaf:401856730:away|ncaaf:401871093:away": {
+   "ev": 0.1013,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0612,
+     "fair": 0.1769,
+     "id": "ncaaf:401871093",
+     "price": "+500",
+     "side": "away",
+     "spec": null,
+     "team": "Old Dominion Monarchs"
+    },
+    {
+     "ev": 0.0375,
+     "fair": 0.5339,
+     "id": "ncaaf:401856730",
+     "price": "-106",
+     "side": "away",
+     "spec": null,
+     "team": "Oklahoma Sooners"
+    }
+   ],
+   "payout": 11.66,
+   "prob": 0.0944,
+   "seen": "2026-10-24T14:39:32+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|ncaaf:401864525:home": {
    "ev": 0.0482,
    "kind": "parlay",
