@@ -476,6 +476,7 @@
    "cost": 0.8424,
    "edge": 0.0038,
    "fair": 0.8456,
+   "fill": "strict",
    "id": "ncaaf:401871094",
    "label": "Troy Trojans",
    "league": "ncaaf",
@@ -487,8 +488,9 @@
     "team": "Troy Trojans"
    },
    "start": "2026-10-24T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT24ULMTROY-TROY"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT24ULMTROY-TROY",
+   "won": 0
   },
   "KXNCAAFGAME-26OCT24UNTNAVY-UNT|YES": {
    "ask": 0.58,
@@ -1669,6 +1671,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401871094",
    "label": "Troy Trojans -11.5",
    "league": "ncaaf",
@@ -1681,8 +1684,9 @@
     "team": "Troy Trojans"
    },
    "start": "2026-10-24T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24ULMTROY-TROY12"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24ULMTROY-TROY12",
+   "won": 0
   },
   "KXNCAAFSPREAD-26OCT24ULMTROY-TROY14|NO": {
    "ask": 0.51,
@@ -1690,6 +1694,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "ncaaf:401871094",
    "label": "UL Monroe Warhawks +13.5",
    "league": "ncaaf",
@@ -1703,8 +1708,9 @@
     "team": "UL Monroe Warhawks"
    },
    "start": "2026-10-24T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24ULMTROY-TROY14"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24ULMTROY-TROY14",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT24ULMTROY-TROY14|YES": {
    "ask": 0.51,
@@ -1712,6 +1718,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401871094",
    "label": "Troy Trojans -13.5",
    "league": "ncaaf",
@@ -1724,8 +1731,9 @@
     "team": "Troy Trojans"
    },
    "start": "2026-10-24T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24ULMTROY-TROY14"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24ULMTROY-TROY14",
+   "won": 0
   },
   "KXNCAAFSPREAD-26OCT24USCWIS-USC3|YES": {
    "ask": 0.51,
@@ -2525,6 +2533,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401866449",
    "label": "over 48.5",
    "league": "ncaaf",
@@ -2537,8 +2546,9 @@
     "t": "over"
    },
    "start": "2026-10-24T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24EMUOHIO-49"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24EMUOHIO-49",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24EMUOHIO-50|NO": {
    "ask": 0.52,
@@ -2546,6 +2556,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "ncaaf:401866449",
    "label": "under 49.5",
    "league": "ncaaf",
@@ -2558,8 +2569,9 @@
     "t": "under"
    },
    "start": "2026-10-24T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24EMUOHIO-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24EMUOHIO-50",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24GASTARST-59|NO": {
    "ask": 0.51,
@@ -3380,6 +3392,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "ncaaf:401871094",
    "label": "over 49.5",
    "league": "ncaaf",
@@ -3392,8 +3405,9 @@
     "t": "over"
    },
    "start": "2026-10-24T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24ULMTROY-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24ULMTROY-50",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24ULMTROY-51|NO": {
    "ask": 0.51,
@@ -3401,6 +3415,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401871094",
    "label": "under 50.5",
    "league": "ncaaf",
@@ -3413,8 +3428,9 @@
     "t": "under"
    },
    "start": "2026-10-24T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24ULMTROY-51"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24ULMTROY-51",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24ULMTROY-51|YES": {
    "ask": 0.51,
@@ -3422,6 +3438,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401871094",
    "label": "over 50.5",
    "league": "ncaaf",
@@ -3434,8 +3451,9 @@
     "t": "over"
    },
    "start": "2026-10-24T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24ULMTROY-51"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24ULMTROY-51",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24UNTNAVY-61|YES": {
    "ask": 0.51,
