@@ -1,10 +1,10 @@
 # Review 2026-10-24
 
-Picks 8-2 (80.0% vs 71.5% claimed, ROI +4.8%).
-Closing line value: +2.26 points on 10 picks; beat the close on 80.0%.
+Picks 10-2 (83.3% vs 72.2% claimed, ROI +7.9%).
+Closing line value: +2.0 points on 12 picks; beat the close on 75.0%.
 - LOST jpn Avispa Fukuoka at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Kashima Antlers at 69%: margin 1 · the book had my side favoured too · called at 69%
-With the market 68.3% (397); against it 30.0% (20).
+With the market 68.4% (399); against it 30.0% (20).
 Locks 0/11 won, 11 open; Best play top 2 (59%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (0/9 legs won)
