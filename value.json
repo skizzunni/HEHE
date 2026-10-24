@@ -2003,6 +2003,62 @@
    "tip": "5:00 PM",
    "venue": "Kalshi"
   },
+  "nfl:401873012|home|FanDuel": {
+   "dec": 2.28,
+   "ev": 0.0794,
+   "fair": 0.4734,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nfl:401873012",
+   "kind": "value",
+   "league": "nfl",
+   "match": "CIN @ BAL",
+   "price": "+128",
+   "seen": "2026-10-24T19:35:32+00:00",
+   "side": "home",
+   "start": "2026-10-25T17:00Z",
+   "team": "Baltimore Ravens",
+   "tip": "1:00 PM",
+   "venue": "FanDuel"
+  },
+  "nfl:401873012|home|Kalshi": {
+   "dec": 2.2361,
+   "ev": 0.0586,
+   "fair": 0.4734,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nfl:401873012",
+   "kind": "value",
+   "league": "nfl",
+   "match": "CIN @ BAL",
+   "price": "+124",
+   "seen": "2026-10-24T19:35:32+00:00",
+   "side": "home",
+   "start": "2026-10-25T17:00Z",
+   "team": "Baltimore Ravens",
+   "tip": "1:00 PM",
+   "venue": "Kalshi"
+  },
+  "nfl:401873012|sure": {
+   "id": "nfl:401873012",
+   "kind": "sure",
+   "league": "nfl",
+   "legs": [
+    {
+     "price": "-118",
+     "stake_share": 0.5524,
+     "team": "Cincinnati Bengals",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "+128",
+     "stake_share": 0.4476,
+     "team": "Baltimore Ravens",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "CIN @ BAL",
+   "profit": 0.0205,
+   "seen": "2026-10-24T19:35:32+00:00"
+  },
   "nfl:401873019|{\"line\": 43.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0101,
    "dk": "-112",

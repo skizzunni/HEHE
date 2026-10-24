@@ -3434,8 +3434,8 @@
   },
   "clv": {
    "avg": 0.52,
-   "beat": 49.1,
-   "n": 57
+   "beat": 50.8,
+   "n": 59
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3591,7 +3591,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -3617,7 +3617,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -3653,12 +3653,12 @@
    }
   ],
   "picks": {
-   "hit": 73.7,
+   "hit": 74.6,
    "lost": 15,
-   "n": 57,
-   "roi": -3.8,
-   "said": 72.8,
-   "won": 42
+   "n": 59,
+   "roi": -2.9,
+   "said": 73.0,
+   "won": 44
   },
   "picks_by_league": {
    "aus": {
@@ -3773,13 +3773,21 @@
     "said": 70.2,
     "won": 3
    },
-   "ncaaf": {
-    "hit": 50.0,
-    "lost": 1,
-    "n": 2,
-    "roi": -43.3,
-    "said": 82.0,
+   "mls": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 10.0,
+    "said": 85.0,
     "won": 1
+   },
+   "ncaaf": {
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": -17.7,
+    "said": 79.0,
+    "won": 2
    },
    "nor": {
     "hit": 0.0,
@@ -3873,22 +3881,22 @@
     "won": 6
    },
    "agree": {
-    "hit": 68.7,
+    "hit": 68.8,
     "lost": 139,
-    "n": 444,
-    "roi": -3.4,
-    "said": 66.8,
-    "won": 305
+    "n": 446,
+    "roi": -3.2,
+    "said": 66.9,
+    "won": 307
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": false,
-    "logloss": 0.6519,
-    "market_only": 0.6703,
-    "model_40": 0.6519,
-    "n": 66,
+    "logloss": 0.6485,
+    "market_only": 0.665,
+    "model_40": 0.6485,
+    "n": 67,
     "weight": 0.0
    },
    "nhl": {
