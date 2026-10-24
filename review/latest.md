@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 63-19 (76.8% vs 72.2% claimed, ROI +1.7%).
-Closing line value: +0.67 points on 82 picks; beat the close on 52.4%.
+Picks 64-19 (77.1% vs 72.1% claimed, ROI +2.3%).
+Closing line value: +0.69 points on 83 picks; beat the close on 53.0%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST ecu Manta F.C. at 72%: margin 2 · the book had my side favoured too · called at 72%
 - LOST efl1 West Ham United at 78%: margin 1 · the book had my side favoured too · called at 78%
@@ -21,7 +21,7 @@ Closing line value: +0.67 points on 82 picks; beat the close on 52.4%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.5% (469); against it 30.0% (20).
+With the market 69.6% (470); against it 30.0% (20).
 Locks 2/11 won, 8 open; Best play top 2 (59%) open; lost: TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (1/9 legs won)
@@ -34,7 +34,7 @@ Lottery 10k+25: open (1/11 legs won)
 Lottery 10k+50: open (1/11 legs won)
 Lottery 10k+100: open (1/10 legs won)
 Ladder-consistency props (all time): 445/538 won (82.7%) vs 87.3% fair, 88.0% price.
-Props 20/26 vs 70.2% claimed.
+Props 23/31 vs 71.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=76), nhl 0.00 (n=51)
+Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=76), nhl 0.00 (n=52)

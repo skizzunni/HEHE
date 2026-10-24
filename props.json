@@ -19455,11 +19455,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Alex Laferriere",
   "p": 0.744,
   "p_fair": null,
   "price": "-385",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892567|n:artemi panarin|Shots on Goal|2+": {
   "aid": null,
@@ -19471,11 +19473,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Artemi Panarin",
   "p": 0.7312,
   "p_fair": null,
   "price": "-355",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892567|n:jack hughes|Shots on Goal|2+": {
   "aid": null,
@@ -19487,11 +19491,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jack Hughes",
   "p": 0.8479,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892567|n:jesper bratt|Shots on Goal|1+": {
   "aid": null,
@@ -19503,11 +19509,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jesper Bratt",
   "p": 0.8591,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892567|n:trevor moore|Shots on Goal|1+": {
   "aid": null,
@@ -19519,11 +19527,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Trevor Moore",
   "p": 0.852,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892568|n:david pastrnak|Shots on Goal|2+": {
   "aid": null,
@@ -19747,6 +19757,22 @@
   "p": 0.8386,
   "p_fair": null,
   "price": "-850",
+  "status": "open"
+ },
+ "nhl:401892572|n:tomas hertl|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-24",
+  "edge": null,
+  "gid": "nhl:401892572",
+  "imp": 0.9231,
+  "label": "Tomas Hertl: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Tomas Hertl",
+  "p": 0.8619,
+  "p_fair": null,
+  "price": "-1200",
   "status": "open"
  },
  "nhl:401892573|n:andrei svechnikov|Shots on Goal|2+": {
