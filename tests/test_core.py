@@ -675,6 +675,13 @@ class StuckSweep(unittest.TestCase):
 class Integrity(unittest.TestCase):
     """Every build checks its own data before publishing."""
 
+    def test_kalshi_dollar_ask_is_no_offer(self):
+        import kalshi
+        self.assertIsNone(kalshi._price({"yes_ask_dollars": "1.0000"}, "yes"))
+        self.assertIsNone(kalshi._price({"yes_ask": 100}, "yes"))
+        self.assertEqual(kalshi._price({"yes_ask_dollars": "0.9700"}, "yes"), 0.97)
+        self.assertEqual(kalshi._price({"yes_ask": 42}, "yes"), 0.42)
+
     def test_kalshi_cents_price_is_valid(self):
         import integrity
         ok = {"slots": {"today": {"nhl": {"rows": [dict(vn=[dict(venue="Kalshi", price="60¢")])]}}}}

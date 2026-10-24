@@ -60,7 +60,11 @@ def _get(url):
 
 
 def _price(m, side):
-    """Ask in dollars for buying `side`, from whichever field the API fills."""
+    """Ask in dollars for buying `side`, from whichever field the API fills.
+
+    An ask of $1.00 is Kalshi's "no one is selling": nothing can be bought
+    there, and a contract at $1.00 could never pay. Until 2026-10-24 those
+    went onto Stacks tickets (17 legs on one build, flagged by integrity.py)."""
     for k in (f"{side}_ask_dollars", f"{side}_ask"):
         v = m.get(k)
         if v in (None, "", 0, "0"):
@@ -69,7 +73,8 @@ def _price(m, side):
             v = float(v)
         except (TypeError, ValueError):
             continue
-        return v / 100 if v > 1 else v
+        v = v / 100 if v > 1 else v
+        return v if 0 < v < 0.995 else None
     return None
 
 
