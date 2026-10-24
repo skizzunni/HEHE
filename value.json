@@ -1047,6 +1047,23 @@
    "tip": "10:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909860|away|Kalshi": {
+   "dec": 3.9557,
+   "ev": 0.1998,
+   "fair": 0.3033,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909860",
+   "kind": "value",
+   "league": "nba",
+   "match": "GS @ PHX",
+   "price": "+296",
+   "seen": "2026-10-24T05:25:09+00:00",
+   "side": "away",
+   "start": "2026-10-25T02:00Z",
+   "team": "Golden State Warriors",
+   "tip": "10:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909860|sure": {
    "id": "nba:401909860",
    "kind": "sure",
@@ -1068,6 +1085,29 @@
    "match": "GS @ PHX",
    "profit": 0.0238,
    "seen": "2026-10-24T05:19:53+00:00"
+  },
+  "nba:401909860|{\"line\": 223.5, \"t\": \"over\"}|Kalshi": {
+   "dec": 2.0101,
+   "dk": "-115",
+   "ev": 0.0279,
+   "fair": 0.5113,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401909860",
+   "kind": "value",
+   "league": "nba",
+   "market": "over",
+   "match": "GS @ PHX",
+   "price": "+101",
+   "seen": "2026-10-24T05:25:09+00:00",
+   "side": "{\"line\": 223.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 223.5,
+    "t": "over"
+   },
+   "start": "2026-10-25T02:00Z",
+   "team": "over 223.5",
+   "tip": "10:00 PM",
+   "venue": "Kalshi"
   },
   "ncaaf:401856730|away|FanDuel": {
    "dec": 1.7042,
