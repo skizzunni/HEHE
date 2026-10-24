@@ -2928,9 +2928,9 @@
    }
   },
   "clv": {
-   "avg": 0.56,
-   "beat": 55.2,
-   "n": 29
+   "avg": 0.61,
+   "beat": 56.7,
+   "n": 30
   },
   "day": "2026-10-23",
   "leaks_14d": [],
@@ -2939,7 +2939,7 @@
     "Over 212.5 points (Atlanta Hawks at Charlotte Hornets) Atlanta Hawks 128 - Charlotte Hornets 81"
    ],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      2,
@@ -2947,7 +2947,7 @@
      "open"
     ]
    },
-   "won": 2
+   "won": 3
   },
   "losses": [
    {
@@ -3013,6 +3013,14 @@
     "price": "-118",
     "said": 52,
     "why": "margin 7 \u00b7 the book had my side favoured too \u00b7 called at 52%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "Virginia Cavaliers",
+    "price": "-135",
+    "said": 55,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 55%"
    }
   ],
   "lottery": [
@@ -3035,7 +3043,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3046,7 +3054,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+25",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3057,7 +3065,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+50",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3068,15 +3076,15 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+100",
-    "won": 3
+    "won": 4
    }
   ],
   "picks": {
-   "hit": 72.4,
-   "lost": 8,
-   "n": 29,
-   "roi": -4.2,
-   "said": 70.5,
+   "hit": 70.0,
+   "lost": 9,
+   "n": 30,
+   "roi": -7.4,
+   "said": 70.0,
    "won": 21
   },
   "picks_by_league": {
@@ -3224,6 +3232,14 @@
     "said": 60.0,
     "won": 3
    },
+   "ncaaf": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 55.0,
+    "won": 0
+   },
    "nwsl": {
     "hit": 100.0,
     "lost": 0,
@@ -3284,11 +3300,11 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.6,
-    "lost": 122,
-    "n": 377,
-    "roi": -3.9,
-    "said": 65.8,
+    "hit": 67.5,
+    "lost": 123,
+    "n": 378,
+    "roi": -4.2,
+    "said": 65.7,
     "won": 255
    }
   },
@@ -3296,10 +3312,10 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": false,
-    "logloss": 0.6405,
-    "market_only": 0.6521,
-    "model_40": 0.6405,
-    "n": 59,
+    "logloss": 0.6434,
+    "market_only": 0.6547,
+    "model_40": 0.6434,
+    "n": 60,
     "weight": 0.0
    },
    "nhl": {
