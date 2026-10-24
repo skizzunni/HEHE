@@ -3337,10 +3337,10 @@
    },
    {
     "flag": false,
-    "hit": 90.0,
-    "n": 20,
+    "hit": 90.5,
+    "n": 21,
     "name": "daily calls",
-    "said": 80.2
+    "said": 80.7
    },
    {
     "flag": false,
@@ -3358,10 +3358,10 @@
    },
    {
     "flag": false,
-    "hit": 73.1,
-    "n": 26,
+    "hit": 71.4,
+    "n": 28,
     "name": "kalshi maker bids (filled)",
-    "said": 53.3
+    "said": 53.2
    }
   ],
   "calls": {
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.52,
+   "avg": 0.5,
    "beat": 50.8,
-   "n": 59
+   "n": 63
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3594,10 +3594,12 @@
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 55.5 points"
+    ],
     "legs": 6,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 0
    },
@@ -3611,19 +3613,22 @@
    },
    {
     "killed_by": [
-     "Michigan Wolverines to win"
+     "Michigan Wolverines to win",
+     "Over 55.5 points"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Western Michigan Broncos +2.5"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
@@ -3653,12 +3658,12 @@
    }
   ],
   "picks": {
-   "hit": 74.6,
+   "hit": 76.2,
    "lost": 15,
-   "n": 59,
-   "roi": -2.9,
+   "n": 63,
+   "roi": -0.5,
    "said": 73.0,
-   "won": 44
+   "won": 48
   },
   "picks_by_league": {
    "aus": {
@@ -3782,12 +3787,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 66.7,
+    "hit": 83.3,
     "lost": 1,
-    "n": 3,
-    "roi": -17.7,
-    "said": 79.0,
-    "won": 2
+    "n": 6,
+    "roi": 9.2,
+    "said": 76.7,
+    "won": 5
    },
    "nor": {
     "hit": 0.0,
@@ -3796,6 +3801,14 @@
     "roi": -100.0,
     "said": 84.0,
     "won": 0
+   },
+   "per": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 29.4,
+    "said": 71.0,
+    "won": 1
    },
    "sco": {
     "hit": 100.0,
@@ -3881,22 +3894,22 @@
     "won": 6
    },
    "agree": {
-    "hit": 68.8,
+    "hit": 69.1,
     "lost": 139,
-    "n": 446,
-    "roi": -3.2,
+    "n": 450,
+    "roi": -2.9,
     "said": 66.9,
-    "won": 307
+    "won": 311
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": false,
-    "logloss": 0.6485,
-    "market_only": 0.665,
-    "model_40": 0.6485,
-    "n": 67,
+    "logloss": 0.6356,
+    "market_only": 0.6499,
+    "model_40": 0.6356,
+    "n": 70,
     "weight": 0.0
    },
    "nhl": {
