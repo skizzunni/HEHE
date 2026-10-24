@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.56,
-   "beat": 52.0,
-   "n": 50
+   "avg": 0.55,
+   "beat": 51.9,
+   "n": 52
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3453,6 +3453,14 @@
    "won": 0
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "ecu",
+    "pick": "Manta F.C.",
+    "price": "-330",
+    "said": 72,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 72%"
+   },
    {
     "against_market": false,
     "league": "efl1",
@@ -3625,12 +3633,12 @@
    }
   ],
   "picks": {
-   "hit": 76.0,
-   "lost": 12,
-   "n": 50,
-   "roi": 0.2,
+   "hit": 75.0,
+   "lost": 13,
+   "n": 52,
+   "roi": -1.2,
    "said": 72.2,
-   "won": 38
+   "won": 39
   },
   "picks_by_league": {
    "aus": {
@@ -3665,6 +3673,14 @@
     "said": 78.0,
     "won": 1
    },
+   "ecu": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 72.0,
+    "won": 0
+   },
    "efl1": {
     "hit": 60.0,
     "lost": 4,
@@ -3690,12 +3706,12 @@
     "won": 2
    },
    "esp": {
-    "hit": 50.0,
+    "hit": 66.7,
     "lost": 1,
-    "n": 2,
-    "roi": -30.8,
+    "n": 3,
+    "roi": -10.7,
     "said": 73.0,
-    "won": 1
+    "won": 2
    },
    "ger": {
     "hit": 80.0,
@@ -3813,12 +3829,12 @@
     "won": 6
    },
    "agree": {
-    "hit": 68.9,
-    "lost": 136,
-    "n": 437,
-    "roi": -2.9,
+    "hit": 68.8,
+    "lost": 137,
+    "n": 439,
+    "roi": -3.0,
     "said": 66.7,
-    "won": 301
+    "won": 302
    }
   },
   "weights": {
