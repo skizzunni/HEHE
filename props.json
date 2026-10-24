@@ -9910,6 +9910,7 @@
  "nfl:401873002|n:kenneth gainwell|Receiving Yards|5+": {
   "aid": null,
   "date": "2026-10-18",
+  "date_retry": "2026-10-24",
   "edge": 2.5,
   "gid": "nfl:401873002",
   "imp": 0.8,
@@ -9917,14 +9918,15 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "fuzzy",
   "name": "Kenneth Gainwell",
   "p": 0.7477,
   "p_fair": 0.8197,
   "price": "-400",
   "rechecked": "ungradable",
-  "status": "ungradable",
-  "unresolved": true,
-  "void_why": "identity_unresolved"
+  "rechecked_nick": true,
+  "status": "won",
+  "value": 7.0
  },
  "nfl:401873003|n:cam ward|Rushing Yards|5+": {
   "aid": null,
