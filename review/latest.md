@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 39-13 (75.0% vs 72.2% claimed, ROI -1.2%).
-Closing line value: +0.55 points on 52 picks; beat the close on 51.9%.
+Picks 40-13 (75.5% vs 72.5% claimed, ROI -0.9%).
+Closing line value: +0.54 points on 53 picks; beat the close on 50.9%.
 - LOST ecu Manta F.C. at 72%: margin 2 · the book had my side favoured too · called at 72%
 - LOST efl1 West Ham United at 78%: margin 1 · the book had my side favoured too · called at 78%
 - LOST efl1 Burnley at 65%: margin 3 · the book had my side favoured too · called at 65%
@@ -15,7 +15,7 @@ Closing line value: +0.55 points on 52 picks; beat the close on 51.9%.
 - LOST jpn Kashima Antlers at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
-With the market 68.8% (439); against it 30.0% (20).
+With the market 68.9% (440); against it 30.0% (20).
 Locks 0/11 won, 11 open; Best play top 2 (59%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (0/9 legs won)
