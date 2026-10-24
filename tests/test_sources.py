@@ -69,3 +69,17 @@ class RecordAndScore(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Best(unittest.TestCase):
+    def test_only_a_proven_source_is_best(self):
+        path = tempfile.mktemp(suffix=".json")
+        book = {"games": {}}
+        for i in range(250):
+            y = i % 2
+            book["games"][f"g{i}"] = dict(home="H", away="A", status="graded", home_won=y,
+                                          p=dict(dk=0.5, fd=0.7 if y else 0.3, kalshi=0.5))
+        S.save(book, path)
+        self.assertEqual(S.best(path), "fd")
+        self.assertIsNone(S.best(path, min_n=300))           # not enough games
+        os.remove(path)

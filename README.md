@@ -3254,3 +3254,23 @@ its hit rate is below its average break-even chance. That is, once even its
 best case cannot pay. `value_bets.scan_all` leaves benched slices out, and
 the Results "Self-tuning" section lists every slice. None is benched yet;
 the biggest is Kalshi middle, 11 of 22, +11.0%.
+
+## The price-source scoreboard now acts (2026-10-24)
+
+`sources.best()` returns the venue proven to forecast better than
+DraftKings, or nothing. "Proven" means at least 200 graded two-way games
+and a paired Brier difference whose 95% range is wholly below zero. When a
+venue qualifies, value bets take their straight-win fair chance from it
+instead of DraftKings' Shin de-vig (averaged with Polymarket); the source
+is shown as "(proven best)". As of 2026-10-24 none qualifies: FanDuel
+leads by 0.0009 Brier on 30 games, well inside the noise.
+
+Also fixed in prop grading:
+
+- Familiar first names now match (Kenny/Kenneth, Zack/Zachary, Bill/William
+  and others), still requiring the same surname and a unique player.
+- Names parked as unresolved are retried once.
+- Kenneth Gainwell 5+ receiving yards (7 yards) is settled as won, and Zack
+  Bolduc 1+ shots on goal (0 shots) as lost.
+- A Kalshi ask of $1.00 is now read as "no offer": 17 unbuyable legs had
+  been on that day's Stacks tickets.

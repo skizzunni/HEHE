@@ -144,7 +144,19 @@ def scan(league, row, FD=None, KB=None, min_ev=MIN_EV, OA=None, PM=None):
                     fair, src = sf, "Pinnacle (Shin)"
             except Exception:
                 pass
-        fair, src = _consensus(fair, src, league, row, dict(t="win", team=team), PM)
+        # a source the scoreboard has PROVEN beats DraftKings (sources.best)
+        # replaces the fair chance for straight wins; none qualifies yet
+        try:
+            import sources
+            b = sources.best()
+            if b and src == "DraftKings (Shin)":
+                snap = sources.snapshot(league, row, FD=FD, KB=KB, PM=PM, OA=OA)
+                if b in snap:
+                    fair, src = (snap[b] if side == "home" else 1 - snap[b]), f"{b} (proven best)"
+        except Exception:
+            pass
+        if not src.endswith("(proven best)"):
+            fair, src = _consensus(fair, src, league, row, dict(t="win", team=team), PM)
         vs = venues.compare(league, row, team, price, row.get("price_book") or "DraftKings", FD, KB, OA)
         if not vs:
             continue

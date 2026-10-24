@@ -190,3 +190,22 @@ def report(path=None, boots=1000, seed=7):
                         diff=round(mean, 5), ci95=[round(bs[int(.025 * boots)], 5), round(bs[int(.975 * boots)], 5)],
                         better=bs[int(.975 * boots)] < 0))
     return dict(games=len(gs), sources=out)
+
+
+PROVEN_MIN = 200
+_BEST = None
+
+
+def best(path=None, min_n=PROVEN_MIN):
+    """The source proven a better forecaster than DraftKings -- 95% range of
+    the paired Brier difference wholly below zero over at least min_n graded
+    games -- or None. Cached per process; value_bets takes its fair chance
+    for a straight win from it when there is one."""
+    global _BEST
+    if _BEST is None or path:
+        ok = [r for r in report(path, boots=500)["sources"] if r["better"] and r["n"] >= min_n]
+        got = min(ok, key=lambda r: r["diff"])["source"] if ok else ""
+        if path:
+            return got or None
+        _BEST = got
+    return _BEST or None
