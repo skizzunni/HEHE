@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 53.3,
-  "brier_close": 0.2009,
-  "brier_published": 0.2051,
+  "beat_close_pct": 54.0,
+  "brier_close": 0.2019,
+  "brier_published": 0.2054,
   "dates": [
    "2026-10-13",
    "2026-10-23"
   ],
-  "logloss_close": 0.5917,
-  "logloss_published": 0.6007,
-  "mean_clv_pts": -0.37,
+  "logloss_close": 0.5938,
+  "logloss_published": 0.6015,
+  "mean_clv_pts": -0.22,
   "n": 300
  },
  "market_is_model": true,
@@ -851,6 +851,15 @@
    "published": 0.546,
    "won": 0
   },
+  "chi:401850668": {
+   "call": false,
+   "close": 0.7254,
+   "clv": 0.54,
+   "day": "2026-10-23",
+   "league": "chi",
+   "published": 0.72,
+   "won": 1
+  },
   "chn:401861478": {
    "call": false,
    "close": 0.8211,
@@ -1039,6 +1048,15 @@
    "published": 0.763,
    "record_excluded": "unpriced_or_unverifiable",
    "won": 1
+  },
+  "col:401877907": {
+   "call": false,
+   "close": 0.7524,
+   "clv": 2.24,
+   "day": "2026-10-23",
+   "league": "col",
+   "published": 0.73,
+   "won": 0
   },
   "col:401877949": {
    "call": false,
@@ -15672,6 +15690,15 @@
    "record_excluded": "unpriced_or_unverifiable",
    "won": 0
   },
+  "uru:401930317": {
+   "call": false,
+   "close": 0.743,
+   "clv": -1.7,
+   "day": "2026-10-23",
+   "league": "uru",
+   "published": 0.76,
+   "won": 1
+  },
   "usl:401842274": {
    "call": false,
    "close": 0.7236,
@@ -16308,5 +16335,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-24T00:53+00:00"
+ "updated": "2026-10-24T00:58+00:00"
 }
