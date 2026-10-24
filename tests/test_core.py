@@ -686,6 +686,19 @@ class StuckSweep(unittest.TestCase):
 class Integrity(unittest.TestCase):
     """Every build checks its own data before publishing."""
 
+    def test_lock_of_the_day_record(self):
+        import locks
+        import tempfile
+        path = tempfile.mktemp(suffix=".json")
+        locks.save(dict(days={"2026-10-20": ["a", "b"], "2026-10-21": ["c", "d"], "2026-10-22": ["e"]},
+                        legs=dict(a=dict(p=0.95, status="won"), b=dict(p=0.90, status="lost"),
+                                  c=dict(p=0.92, status="lost"), d=dict(p=0.93, status="won"),
+                                  e=dict(p=0.94, status="open")), pools={}), path)
+        r = locks.top_record(path, 1)
+        os.remove(path)
+        # the likeliest leg each settled day: a (won), d (won); the open day is not counted
+        self.assertEqual((r["days"], r["won"], r["legs"]), (2, 2, 2))
+
     def test_kalshi_dollar_ask_is_no_offer(self):
         import kalshi
         self.assertIsNone(kalshi._price({"yes_ask_dollars": "1.0000"}, "yes"))

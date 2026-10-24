@@ -3364,3 +3364,18 @@ average unless a sportsbook profit boost lifts it. The planner says so on
 the page. A ticket that pays 10x can only cash about 1 time in 11, whoever
 picks its legs: high payout and high chance cannot be had together. What
 the board does is give the highest chance for each payout.
+
+## Lock of the day (2026-10-24)
+
+The record of each day's likeliest legs, by card:
+
+| | top 1 leg | top 2 both won | top 3 all won |
+|---|---|---|---|
+| Safe Locks (-2000 to -500) | 7 of 7 (92.7% stated) | 5 of 7 days | 4 of 7 days |
+| Locks (-400 to -120) | 6 of 9 (81.4% stated) | 6 of 9 days | 5 of 9 days |
+
+The single likeliest Safe Lock is now the "Lock of the day", shown at the
+top of the Locks tab with its price, chance and what $10 wins. The header
+tile shows its running record, computed by `locks.top_record` (which skips
+open days). Seven days prove little, and at about 93% a leg still loses
+about 1 time in 14. The page says so.

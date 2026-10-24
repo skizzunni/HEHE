@@ -733,3 +733,25 @@ def report(path=None):
                 days=days,
                 plays={k: dict(days=t[0], hit=t[1], said=round(100 * t[2] / t[0], 1) if t[0] else None)
                        for k, t in tally.items()})
+
+
+def top_record(path=None, k=1):
+    """How the k likeliest legs of each day's card have done: days where all
+    k won, and every one of those legs against its stated chance. The
+    single likeliest Safe Lock is the board's "Lock of the day"."""
+    book = load(path)
+    days = hit = n = won = 0
+    said = 0.0
+    for day, keys in sorted(book.get("days", {}).items()):
+        card = sorted((book["legs"][x] for x in keys if x in book["legs"]), key=lambda L: -L["p"])[:k]
+        if len(card) < k or any(L.get("status") not in ("won", "lost", "void") for L in card):
+            continue
+        days += 1
+        hit += all(L["status"] != "lost" for L in card)
+        for L in card:
+            if L["status"] in ("won", "lost"):
+                n += 1
+                won += L["status"] == "won"
+                said += L["p"]
+    return dict(days=days, all_won=hit, legs=n, won=won,
+                said=round(100 * said / n, 1) if n else None)

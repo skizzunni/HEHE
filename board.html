@@ -751,7 +751,10 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
   + tile("Today&rsquo;s calls", String(C.length),
          done.length ? C.filter(c => c.status === "won").length + "&ndash;" + C.filter(c => c.status === "lost").length + " so far"
                      : (C.length ? "set at 8 AM ET" : "set at 8 AM ET"))
-  + tile("Locks today", String(LK.length), "on FanDuel")
+  + (((D.lock_of_day || {}).record || {}).legs
+      ? tile("Lock of the day", D.lock_of_day.record.won + " of " + D.lock_of_day.record.legs, "top Safe Lock, all-time",
+             D.lock_of_day.record.won === D.lock_of_day.record.legs ? "good" : "")
+      : tile("Locks today", String(LK.length), "on FanDuel"))
   + tile("Prop Locks", PL.n ? PL.won + " of " + PL.n : "&mdash;",
          PL.n ? PL.hit + "% hit" : "none graded yet", PL.n && PL.hit >= 70 ? "good" : "");
 })();
@@ -1187,6 +1190,21 @@ function tenX(day){
     + 'makes it less. Without a boost this ticket loses money over time. Use it only with a FanDuel profit boost of at least the '
     + 'size shown &mdash; then the payout outruns the margin. In the backtests the likeliest 10x tickets cashed 3 times in 31.</p></div>';
 }
+// The Lock of the day: the single likeliest leg on today's Safe Locks card,
+// with the record of every day's likeliest Safe Lock (locks.top_record).
+function lockOfDay(){
+  const X = D.lock_of_day || {}, L = X.leg, R = X.record || {}, T = X.top2 || {};
+  if(!L) return '';
+  const res = L.status === "won" ? ' <span class="wl won">WON</span>' : L.status === "lost" ? ' <span class="wl lost">LOST</span>' : '';
+  return '<div class="sweep"><h3>Lock of the day</h3>'
+    + '<p class="three"><b>' + esc(L.label) + '</b> <span class="px">' + esc(L.price || '') + '</span> &middot; '
+    + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + res
+    + (callWin(L.price) !== null ? ' &middot; $10 wins $' + callWin(L.price).toFixed(2) : '') + '</p>'
+    + '<p class="note">The likeliest single leg on today&rsquo;s Safe Locks card. '
+    + (R.days ? 'Every day&rsquo;s Lock of the day so far: <b>' + R.won + ' of ' + R.legs + '</b> won against ' + R.said
+      + '% stated' + (T.days ? '; the top two together both won on ' + T.all_won + ' of ' + T.days + ' days' : '') + '. ' : '')
+    + 'A heavy favourite still loses about 1 time in ' + Math.max(2, Math.round(1 / Math.max(1 - L.p, 0.01))) + '.</p></div>';
+}
 function drawLocks(){
   const SAFE = LKMODE === "safe";
   const K = (SAFE ? D.safe_locks : D.locks) || {};
@@ -1195,7 +1213,7 @@ function drawLocks(){
   const X = K[day] || {};
   const L = X.locks || [];
   const R = (SAFE ? D.safe_locks_record : D.locks_record) || {};
-  let h = '<div class="parlays"><div class="sechead"><h3>' + (SAFE ? 'Safe Locks' : 'Locks') + '</h3>'
+  let h = lockOfDay() + '<div class="parlays"><div class="sechead"><h3>' + (SAFE ? 'Safe Locks' : 'Locks') + '</h3>'
     + dayPills("lkday", day) + '</div>'
     + '<p><span class="pills"><button type="button" data-lkmode="regular" aria-pressed="' + !SAFE
     + '">Locks &middot; -400 to -120</button><button type="button" data-lkmode="safe" aria-pressed="' + SAFE

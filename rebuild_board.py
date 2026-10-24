@@ -585,6 +585,10 @@ def snapshot():
         for v_ in out["safe_locks"].values():
             v_.pop("pool", None)
         out["safe_locks_record"] = locks.report(locks.SAFE_LEDGER)
+        # the Lock of the day: the single likeliest Safe Lock, with its record
+        _sl = sorted((out["safe_locks"]["today"].get("locks") or []), key=lambda L: -L["p"])
+        out["lock_of_day"] = dict(leg=_sl[0] if _sl else None, record=locks.top_record(locks.SAFE_LEDGER, 1),
+                                  top2=locks.top_record(locks.SAFE_LEDGER, 2))
         sk = out["safe_locks"]["today"]
         print(f'safe locks: {len(sk["locks"])} of {sk["available"]} games, '
               f'all-hit chance {100 * sk["prob"]:.1f}%', file=sys.stderr)
