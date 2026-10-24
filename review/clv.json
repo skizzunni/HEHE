@@ -3,14 +3,14 @@
  "enough": true,
  "last": {
   "beat_close_pct": 58.7,
-  "brier_close": 0.1997,
-  "brier_published": 0.2012,
+  "brier_close": 0.1994,
+  "brier_published": 0.201,
   "dates": [
    "2026-10-17",
    "2026-10-24"
   ],
-  "logloss_close": 0.5887,
-  "logloss_published": 0.5928,
+  "logloss_close": 0.5881,
+  "logloss_published": 0.5924,
   "mean_clv_pts": 0.27,
   "n": 300
  },
@@ -876,6 +876,15 @@
    "day": "2026-10-24",
    "league": "bra",
    "published": 0.81,
+   "won": 1
+  },
+  "bra:401841283": {
+   "call": false,
+   "close": 0.8362,
+   "clv": 0.62,
+   "day": "2026-10-24",
+   "league": "bra",
+   "published": 0.83,
    "won": 1
   },
   "bra:401841284": {
@@ -7895,6 +7904,15 @@
    "league": "mls",
    "published": 0.8,
    "won": 1
+  },
+  "mls:761891": {
+   "call": false,
+   "close": 0.7091,
+   "clv": -1.09,
+   "day": "2026-10-24",
+   "league": "mls",
+   "published": 0.72,
+   "won": 0
   },
   "mls:761903": {
    "call": false,
@@ -17469,5 +17487,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-24T23:37+00:00"
+ "updated": "2026-10-24T23:43+00:00"
 }
