@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 51-17 (75.0% vs 73.1% claimed, ROI -2.5%).
-Closing line value: +0.5 points on 68 picks; beat the close on 51.5%.
+Picks 51-18 (73.9% vs 73.1% claimed, ROI -3.9%).
+Closing line value: +0.49 points on 69 picks; beat the close on 50.7%.
 - LOST ecu Manta F.C. at 72%: margin 2 · the book had my side favoured too · called at 72%
 - LOST efl1 West Ham United at 78%: margin 1 · the book had my side favoured too · called at 78%
 - LOST efl1 Burnley at 65%: margin 3 · the book had my side favoured too · called at 65%
@@ -10,6 +10,7 @@ Closing line value: +0.5 points on 68 picks; beat the close on 51.5%.
 - LOST epl Chelsea at 75%: margin 2 · the book had my side favoured too · called at 75%
 - LOST epl Manchester City at 80%: margin 1 · the book had my side favoured too · called at 80%
 - LOST esp Rayo Vallecano at 78%: margin 3 · the book had my side favoured too · called at 78%
+- LOST ger2 1. FC Nürnberg at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST ger Mainz at 77%: margin 1 · the book had my side favoured too · called at 77%
 - LOST jpn Avispa Fukuoka at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Kashima Antlers at 69%: margin 1 · the book had my side favoured too · called at 69%
@@ -19,18 +20,18 @@ Closing line value: +0.5 points on 68 picks; beat the close on 51.5%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.0% (455); against it 30.0% (20).
+With the market 68.9% (456); against it 30.0% (20).
 Locks 0/11 won, 10 open; Best play top 2 (59%) open; lost: TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
 Safe Locks 1/11 won, 10 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
-Lottery 100: open (0/9 legs won)
+Lottery 100: open (1/9 legs won)
 Lottery 100: open (1/6 legs won)
 Lottery 100: lost (0/6 legs won, killed by Over 55.5 points)
-Lottery 10k: open (0/11 legs won)
+Lottery 10k: open (1/11 legs won)
 Lottery 10k: lost (1/10 legs won, killed by Michigan Wolverines to win, Over 55.5 points)
 Lottery 10k: lost (0/10 legs won, killed by Western Michigan Broncos +2.5)
-Lottery 10k+25: open (0/11 legs won)
-Lottery 10k+50: open (0/11 legs won)
-Lottery 10k+100: open (0/10 legs won)
+Lottery 10k+25: open (1/11 legs won)
+Lottery 10k+50: open (1/11 legs won)
+Lottery 10k+100: open (1/10 legs won)
 Ladder-consistency props (all time): 445/538 won (82.7%) vs 87.3% fair, 88.0% price.
 Props 18/24 vs 70.7% claimed.
 
