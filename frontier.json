@@ -198665,6 +198665,11 @@
       "start": "2026-10-24T16:00Z",
       "starters": [],
       "t": "2026-10-24T04:09:41+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-24T16:00Z",
+      "t": "2026-10-24T06:39:30+00:00"
      }
     ],
     "ita:401874955": [
@@ -198674,6 +198679,11 @@
       "start": "2026-10-24T18:45Z",
       "starters": [],
       "t": "2026-10-24T04:09:41+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-24T18:45Z",
+      "t": "2026-10-24T06:39:30+00:00"
      }
     ],
     "ita:401874958": [
@@ -198886,6 +198896,11 @@
       "start": "2026-10-24T21:30Z",
       "starters": [],
       "t": "2026-10-24T04:09:41+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-24T21:30Z",
+      "t": "2026-10-24T06:39:30+00:00"
      }
     ],
     "mls:761892": [
@@ -200249,6 +200264,24 @@
       "start": "2026-10-24T23:00Z",
       "starters": [],
       "t": "2026-10-24T04:09:41+00:00"
+     },
+     {
+      "probables": {
+       "CBJ": [
+        [
+         "Jet Greaves",
+         "probableStartingGoalie"
+        ]
+       ],
+       "VGK": [
+        [
+         "Carter Hart",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-24T23:00Z",
+      "t": "2026-10-24T06:39:30+00:00"
      }
     ],
     "nhl:401892573": [
@@ -201296,6 +201329,11 @@
       "probables": {},
       "start": "2026-10-24T06:35Z",
       "t": "2026-10-24T06:33:21+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-24T06:40Z",
+      "t": "2026-10-24T06:39:30+00:00"
      }
     ],
     "wta:187115": [
@@ -203505,6 +203543,143 @@
       ]
      ],
      "t": "2026-10-24T06:33:03+00:00"
+    },
+    {
+     "policy": "267b62dd",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Cleveland Cavaliers to win",
+        "Denver Nuggets to win",
+        "Philadelphia 76ers to win",
+        "Texas State Bobcats to win",
+        "Bodo/Glimt or draw"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Ohio Bobcats to win",
+        "Louisiana Ragin' Cajuns to win",
+        "Atl\u00e9tico Madrid to win"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Anaheim Ducks +1.5",
+        "Georgia Tech Yellow Jackets to win"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Ohio Bobcats to win",
+        "Louisiana Ragin' Cajuns to win",
+        "Oregon Ducks to win",
+        "Cleveland Cavaliers to win",
+        "Atl\u00e9tico Madrid to win"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Georgia Tech Yellow Jackets to win",
+        "BYU Cougars to win",
+        "Indiana Hoosiers to win",
+        "San Antonio Spurs to win"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Boston College Eagles +31.5",
+        "Houston Cougars under 36.5 points",
+        "Michigan Wolverines over 13.5 points",
+        "Over 223.5 points",
+        "Over 223.5 points",
+        "UCLA Bruins over 25.5 points"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-24T06:39:03+00:00"
     }
    ]
   }
