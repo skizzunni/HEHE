@@ -956,7 +956,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 93,
       "dc": false,
       "gate": {
@@ -1006,7 +1006,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 91,
       "dc": false,
       "gate": {
@@ -1056,7 +1056,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 86,
       "dc": true,
       "gate": {
@@ -1079,14 +1079,22 @@
       "start": "2026-10-24T18:45Z"
      },
      "dc": true,
-     "fp": "c122c6f31f86",
+     "fp": "6acf459eb5a7",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed XIs"
      },
      "id": "ita:401874955",
      "league": "ita",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-24T13:55:34+00:00",
+       "what": "awaiting confirmed XIs"
+      }
+     ],
      "match": "PAR @ LAZ",
+     "news_at": "2026-10-24T13:55:34+00:00",
      "pick": "Lazio or draw",
      "price": "-900",
      "price_at": "2026-10-24T11:57:36+00:00",
@@ -1107,7 +1115,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -1158,12 +1166,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (5 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401909855",
       "league": "nba",
@@ -1175,19 +1183,28 @@
       "price_ref": "34888782:0ML86897837_1",
       "prob_at": "2026-10-24T13:46:28+00:00",
       "rank": 5,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-10-24T23:30Z"
      },
      "dc": false,
-     "fp": "b7e33ba648c6",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (5 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401909855",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-24T13:55:34+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
+      }
+     ],
      "match": "MIL @ PHI",
+     "news_at": "2026-10-24T13:55:34+00:00",
      "pick": "Philadelphia 76ers",
      "price": "-700",
      "price_at": "2026-10-24T12:02:24+00:00",
@@ -1202,10 +1219,10 @@
    ],
    "candidate_news": {
     "esp": "2026-10-24T12:53:50+00:00",
-    "ger": "2026-10-24T12:53:50+00:00",
-    "ita": "2026-10-24T12:53:50+00:00",
-    "mls": "2026-10-24T12:53:50+00:00",
-    "nba": "2026-10-24T12:53:50+00:00"
+    "ger": "2026-10-24T13:55:34+00:00",
+    "ita": "2026-10-24T13:55:34+00:00",
+    "mls": "2026-10-24T13:55:34+00:00",
+    "nba": "2026-10-24T13:55:34+00:00"
    },
    "candidate_observations": {
     "aut:401881765": {
@@ -1216,7 +1233,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -1264,7 +1281,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -1312,7 +1329,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 78,
       "dc": true,
       "gate": {
@@ -1360,7 +1377,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 76,
       "dc": true,
       "gate": {
@@ -1408,7 +1425,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -1457,7 +1474,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -1480,14 +1497,22 @@
       "start": "2026-10-24T16:30Z"
      },
      "dc": true,
-     "fp": "fc54404d9ca2",
+     "fp": "6acf459eb5a7",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed XIs"
      },
      "id": "ger:401884763",
      "league": "ger",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-24T13:55:34+00:00",
+       "what": "awaiting confirmed XIs"
+      }
+     ],
      "match": "SGE @ DOR",
+     "news_at": "2026-10-24T13:55:34+00:00",
      "pick": "Borussia Dortmund or draw",
      "price": "-700",
      "price_at": "2026-10-24T13:46:50+00:00",
@@ -1505,7 +1530,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -1553,7 +1578,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 86,
       "dc": true,
       "gate": {
@@ -1576,14 +1601,22 @@
       "start": "2026-10-24T18:45Z"
      },
      "dc": true,
-     "fp": "c122c6f31f86",
+     "fp": "6acf459eb5a7",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed XIs"
      },
      "id": "ita:401874955",
      "league": "ita",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-24T13:55:34+00:00",
+       "what": "awaiting confirmed XIs"
+      }
+     ],
      "match": "PAR @ LAZ",
+     "news_at": "2026-10-24T13:55:34+00:00",
      "pick": "Lazio or draw",
      "price": "-900",
      "price_at": "2026-10-24T13:46:50+00:00",
@@ -1601,7 +1634,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 78,
       "dc": true,
       "gate": {
@@ -1624,14 +1657,22 @@
       "start": "2026-10-24T19:30Z"
      },
      "dc": true,
-     "fp": "5d866378600e",
+     "fp": "6acf459eb5a7",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed XIs"
      },
      "id": "mls:761890",
      "league": "mls",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-24T13:55:34+00:00",
+       "what": "awaiting confirmed XIs"
+      }
+     ],
      "match": "TOR @ CLB",
+     "news_at": "2026-10-24T13:55:34+00:00",
      "pick": "Columbus Crew or draw",
      "price": "-475",
      "price_at": "2026-10-24T13:46:50+00:00",
@@ -1649,7 +1690,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -1698,7 +1739,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 75,
       "dc": true,
       "gate": {
@@ -1747,7 +1788,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -1796,7 +1837,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 80,
       "dc": false,
       "gate": {
@@ -1844,12 +1885,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (5 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401909855",
       "league": "nba",
@@ -1861,19 +1902,28 @@
       "price_ref": "34888782:0ML86897837_1",
       "prob_at": "2026-10-24T13:46:28+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-10-24T23:30Z"
      },
      "dc": false,
-     "fp": "b7e33ba648c6",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (5 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401909855",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-24T13:55:34+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
+      }
+     ],
      "match": "MIL @ PHI",
+     "news_at": "2026-10-24T13:55:34+00:00",
      "pick": "Philadelphia 76ers",
      "price": "-675",
      "price_at": "2026-10-24T13:46:28+00:00",
@@ -1891,7 +1941,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 82,
       "dc": false,
       "gate": {
@@ -1939,7 +1989,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 80,
       "dc": false,
       "gate": {
@@ -1987,12 +2037,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (7 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401909860",
       "league": "nba",
@@ -2004,19 +2054,28 @@
       "price_ref": "34888792:0ML86897853_1",
       "prob_at": "2026-10-24T13:46:28+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-10-25T02:00Z"
      },
      "dc": false,
-     "fp": "480686ac56c6",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (7 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401909860",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-24T13:55:34+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
+      }
+     ],
      "match": "GS @ PHX",
+     "news_at": "2026-10-24T13:55:34+00:00",
      "pick": "Phoenix Suns",
      "price": "-380",
      "price_at": "2026-10-24T13:46:28+00:00",
@@ -2034,7 +2093,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -2081,7 +2140,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 80,
       "dc": false,
       "gate": {
@@ -2128,7 +2187,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
@@ -2175,7 +2234,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -2222,7 +2281,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 81,
       "dc": false,
       "gate": {
@@ -2269,7 +2328,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -2316,7 +2375,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 91,
       "dc": false,
       "gate": {
@@ -2363,7 +2422,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 93,
       "dc": false,
       "gate": {
@@ -2410,7 +2469,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -2457,7 +2516,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
@@ -2504,7 +2563,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 87,
       "dc": false,
       "gate": {
@@ -2551,7 +2610,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 88,
       "dc": false,
       "gate": {
@@ -2598,7 +2657,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
@@ -2645,7 +2704,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
@@ -2692,7 +2751,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -2739,7 +2798,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -2786,7 +2845,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
@@ -2833,7 +2892,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
@@ -2880,7 +2939,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
@@ -2927,7 +2986,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -2974,7 +3033,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -3022,7 +3081,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -3070,7 +3129,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 75,
       "dc": true,
       "gate": {
@@ -3118,7 +3177,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 81,
       "dc": false,
       "gate": {
@@ -3166,7 +3225,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T13:46:51+00:00",
+      "checked_at": "2026-10-24T13:55:34+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
@@ -3207,7 +3266,14 @@
      "tip": "7:30 PM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "ita",
+    "nba"
+   ],
+   "news": {
+    "ita": "2026-10-24T13:55:34+00:00",
+    "nba": "2026-10-24T13:55:34+00:00"
+   },
    "shadow": {
     "pool": [
      {
