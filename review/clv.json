@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 56.0,
-  "brier_close": 0.2024,
-  "brier_published": 0.2047,
+  "beat_close_pct": 56.3,
+  "brier_close": 0.2019,
+  "brier_published": 0.2044,
   "dates": [
    "2026-10-14",
    "2026-10-24"
   ],
-  "logloss_close": 0.5949,
-  "logloss_published": 0.6004,
-  "mean_clv_pts": 0.2,
+  "logloss_close": 0.5939,
+  "logloss_published": 0.5998,
+  "mean_clv_pts": 0.22,
   "n": 300
  },
  "market_is_model": true,
@@ -3219,6 +3219,15 @@
    "league": "ita",
    "published": 0.789,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 1
+  },
+  "jpn:401877565": {
+   "call": false,
+   "close": 0.6757,
+   "clv": 0.57,
+   "day": "2026-10-24",
+   "league": "jpn",
+   "published": 0.67,
    "won": 1
   },
   "jpn:401877572": {
@@ -16578,5 +16587,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-24T06:59+00:00"
+ "updated": "2026-10-24T07:06+00:00"
 }
