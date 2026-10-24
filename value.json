@@ -1803,6 +1803,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "ncaaf:401871093|away|FanDuel": {
+   "dec": 5.8,
+   "ev": 0.0258,
+   "fair": 0.1769,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "ncaaf:401871093",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "ODU @ LT",
+   "price": "+480",
+   "seen": "2026-10-24T14:29:00+00:00",
+   "side": "away",
+   "start": "2026-10-24T21:00Z",
+   "team": "Old Dominion Monarchs",
+   "tip": "5:00 PM",
+   "venue": "FanDuel"
+  },
   "nfl:401873019|{\"line\": 43.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0101,
    "dk": "-112",
@@ -2853,6 +2870,26 @@
    "prob": 0.3471,
    "seen": "2026-10-23T04:38:19+00:00",
    "status": "won",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401871093:away": {
+   "ev": 0.026,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0258,
+     "fair": 0.1769,
+     "id": "ncaaf:401871093",
+     "price": "+480",
+     "side": "away",
+     "spec": null,
+     "team": "Old Dominion Monarchs"
+    }
+   ],
+   "payout": 5.8,
+   "prob": 0.1769,
+   "seen": "2026-10-24T14:29:00+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
