@@ -501,6 +501,15 @@ def grade():
                 and e.get("league") in ("nfl", "ncaaf") and not e.get("rechecked_fb"):
             e["rechecked_fb"] = True
             e["status"] = "open"
+    # once more for names set aside as unresolved before the nickname table
+    # (2026-10-24: 'Kenneth' / 'Kenny' Gainwell); a failure parks it again
+    for e in book.values():
+        if e["status"] == "ungradable" and e.get("void_why") == "identity_unresolved" \
+                and not e.get("rechecked_nick"):
+            e["rechecked_nick"] = True
+            e["status"] = "open"
+            e["date_retry"] = dt.date.today().isoformat()
+            e.pop("void_why", None)
     by_game = {}
     for k, e in book.items():
         if e["status"] == "open":
@@ -530,7 +539,7 @@ def grade():
                 # review, out of every record (2026-10-18: Aho (CAR), Stützle
                 # and Marner were voided this way although all three played)
                 e["unresolved"] = True
-                if (today - dt.date.fromisoformat(e["date"])).days > VOID_AFTER_DAYS:
+                if (today - dt.date.fromisoformat(e.get("date_retry") or e["date"])).days > VOID_AFTER_DAYS:
                     e["status"], e["void_why"] = "ungradable", "identity_unresolved"
                 continue
             e.pop("unresolved", None)
