@@ -1488,6 +1488,36 @@ function makerBids(){
           "bid " + Math.round(100 * b.bid) + "c", "Kalshi", b.match))) + '</p>'
       : '<p class="empty">No Kalshi leg is worth a resting bid right now.</p>');
 }
+// Stake sizing for value bets: a quarter of the Kelly stake,
+// f = (p*d - 1) / (d - 1) of the bankroll for fair chance p at decimal d,
+// capped at 2%. Full Kelly maximises long-run growth only if p is exactly
+// right; a quarter keeps most of the growth and far less of the swings
+// when p is a little off -- and these edges are 1-5 points. The bankroll
+// is kept in this browser only.
+let BANKROLL = 0;
+try { BANKROLL = +localStorage.getItem("bankroll") || 0; } catch (e) {}
+function kellyQ(p, d){
+  if(!p || !d || d <= 1) return 0;
+  return Math.min(Math.max((p * d - 1) / (d - 1), 0) / 4, 0.02);
+}
+function stakeCell(p, d){
+  const f = kellyQ(p, d);
+  if(!f) return '&mdash;';
+  return (100 * f).toFixed(2) + '%' + (BANKROLL > 0 ? '<div class="sbn">$' + (f * BANKROLL).toFixed(2) + '</div>' : '');
+}
+function stakeBox(){
+  return '<p class="note">Stake: a quarter of the Kelly stake for each bet&rsquo;s edge, at most 2% of your bankroll per bet. '
+    + 'Your bankroll: $<input id="bankroll" type="number" min="0" step="10" inputmode="decimal" value="' + (BANKROLL || '')
+    + '" placeholder="e.g. 500" style="width:7em;font:inherit;padding:4px 8px;border:1px solid var(--rule);border-radius:8px;'
+    + 'background:var(--panel);color:var(--ink)"> (kept in this browser only).</p>';
+}
+document.addEventListener("change", e => {
+  if(e.target && e.target.id === "bankroll"){
+    BANKROLL = Math.max(+e.target.value || 0, 0);
+    try { localStorage.setItem("bankroll", String(BANKROLL)); } catch (err) {}
+    render();
+  }
+});
 // Value bets and sure bets across venues (value_bets.py), with their
 // forward record -- the only test that counts.
 function valueBets(){
@@ -1504,11 +1534,11 @@ function valueBets(){
         + '%</b> either way</li>').join("") + '</ul><p class="note">Prices move fast: check both before placing.</p>'
         + copyBtn("Sure bets", S.flatMap(x => x.legs.map(l => legLine(l.team, l.price, l.venue,
             (100 * l.stake_share).toFixed(1) + "% of stake")))) + '</div>' : '')
-    + (B.length ? '<table><thead><tr><th>Bet</th><th>Venue</th><th>Price</th><th class="num">Fair</th><th class="num">Edge</th></tr></thead><tbody>'
+    + (B.length ? stakeBox() + '<table><thead><tr><th>Bet</th><th>Venue</th><th>Price</th><th class="num">Fair</th><th class="num">Edge</th><th class="num">Stake</th></tr></thead><tbody>'
         + B.map(x => '<tr><td class="mine"><span class="lgpill">' + esc(x.league) + '</span>' + esc(x.team)
             + '<div class="sbn">' + esc(x.match || "") + ' &middot; ' + esc(x.tip || "") + '</div></td><td>' + esc(x.venue)
             + '</td><td class="mkt">' + esc(x.price) + '</td><td class="num">' + (100 * x.fair).toFixed(0) + '%</td><td class="num">+'
-            + (100 * x.ev).toFixed(1) + '%</td></tr>').join("") + '</tbody></table>'
+            + (100 * x.ev).toFixed(1) + '%</td><td class="num">' + stakeCell(x.fair, x.dec) + '</td></tr>').join("") + '</tbody></table>'
         + '<p>' + copyBtn("Value bets", B.map(x => legLine(x.team, x.price, x.venue, x.match))) + '</p>'
       : '<p class="empty">No venue is paying above the fair price on an open game right now.</p>')
     + valueParlays(V);

@@ -3319,3 +3319,19 @@ call it an edge.
   and +10.7% in the two halves. Simply joining the best bid on those same
   wide-spread legs returned +3.4% and +10.6%, so the maker test keeps
   joining the bid.
+
+## Calls: line shopping; value bets: stake sizing (2026-10-24)
+
+- **Line shopping on calls.** Each straight-win call now shows the best
+  price for the same pick on the board's DraftKings / FanDuel / Kalshi
+  comparison (Kalshi after its fee), and what $10 wins there, e.g. "better
+  at FanDuel -1100: $10 wins $0.91 (+14%)". Double chances are a different
+  bet and stay as quoted.
+- **Stake sizing on value bets.** Each value bet shows a stake of a
+  quarter of the Kelly fraction, f = (p*d - 1) / (d - 1) for fair chance p
+  at decimal payout d, capped at 2% of bankroll. Full Kelly maximises
+  long-run growth only when p is exact; these edges are 1-5 points and p
+  carries error, so a quarter keeps most of the growth with far smaller
+  swings. A bankroll box on the Calls tab turns the percentages into
+  dollars; the bankroll is stored only in that browser. Example with $500:
+  a 52% fair at 2.02 stakes $6.18, and a 17% longshot at 6.0 stakes $0.80.
