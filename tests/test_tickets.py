@@ -270,5 +270,20 @@ class GameLinesOnly(unittest.TestCase):
         self.assertTrue(all(L["gid"] != "nhl:1" for L in legs))
 
 
+class ChallengeTrack(unittest.TestCase):
+    def test_rolls_wins_and_restarts_on_a_loss(self):
+        import tempfile
+        path = tempfile.mktemp(suffix=".json")
+        t = lambda prob, st, total=2.0: dict(target=2.0, standard=0.8, prob=prob, total=total, status=st, legs=[{}])
+        T.save(dict(days={"2026-10-20": dict(tickets=[t(0.4, "won"), t(0.3, "lost")]),
+                          "2026-10-21": dict(tickets=[t(0.45, "won")]),
+                          "2026-10-22": dict(tickets=[t(0.41, "lost")]),
+                          "2026-10-23": dict(tickets=[t(0.5, "open")])}), path)
+        r = T.challenge_track(path, start=100, target=10000)["sizes"]["2"]
+        os.remove(path)
+        # likeliest each day: won (200), won (400), lost (bust -> 100), open
+        self.assertEqual((r["best"], r["busts"], r["bank"], r["days"][-1]["status"]), (400.0, 1, 100.0, "open"))
+
+
 if __name__ == "__main__":
     unittest.main()

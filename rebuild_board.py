@@ -631,6 +631,10 @@ def snapshot():
         except (OSError, ValueError):
             fr["backtest"] = None
         out["frontier"] = fr
+        try:
+            out["challenge"] = tickets.challenge_track()
+        except Exception:
+            pass
         r0 = fr["today"]["0"]
         print(f'frontier: {r0["candidates"]} legs from {r0["games"]} games ok, {r0["excluded"]} excluded '
               f'{r0["excluded_why"]}', file=sys.stderr)

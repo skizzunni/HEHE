@@ -3379,3 +3379,32 @@ top of the Locks tab with its price, chance and what $10 wins. The header
 tile shows its running record, computed by `locks.top_record` (which skips
 open days). Seven days prove little, and at about 93% a leg still loses
 about 1 time in 14. The page says so.
+
+## $10,000 challenge: target corrected, played on the real tickets (2026-10-24)
+
+The challenge is $10,000, not $1,000, and the planner now defaults to it
+(a saved $1,000 target moves over once). From $100 that is 100x in 7 days.
+At 3 PM on 2026-10-24:
+
+| route | wins in a row | chance |
+|---|---|---|
+| 2x tickets | 7 | 1 in 243 |
+| 3x tickets | 5 | 1 in 481 |
+| 5x tickets | 3 | 1 in 239 |
+| best mix: 2x, 2x, 5x, 5x | 4 | **1 in 185** (0.54%) |
+
+A larger start changes the odds: $1,000 to $10,000 is the 7.3% route
+above.
+
+`tickets.challenge_track` now plays the challenge on the tickets frozen at
+8 AM each day, the likeliest ticket of each size. It goes all in, rolls the
+winnings, restarts at $100 after a loss and counts busts. The Targets tab
+shows it under the planner. So far, from 2026-10-20:
+
+| size | results | best | busts |
+|---|---|---|---|
+| 2x | won, lost, lost | $200 | 2 |
+| 3x | won, lost, lost | $300 | 2 |
+| 5x | lost, lost | $100 | 2 |
+
+This is exactly what the planner's odds predict.

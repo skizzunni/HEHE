@@ -1731,7 +1731,22 @@ function challengeHTML(rows){
         + (top.ev < 0 ? 'Each ticket returns ' + (100 * top.ev).toFixed(1) + '% per $1 on average, so the challenge loses money on average '
            + '&mdash; a boost (pills below) is the only thing that turns that around.'
            : 'With this boost each ticket returns +' + (100 * top.ev).toFixed(1) + '% per $1 on average.') + '</p>'
-      : '') + '</div>';
+      : '') + challengeTrack() + '</div>';
+}
+// The same challenge actually played on each morning's frozen tickets
+// (tickets.challenge_track): all in, rolled while winning, restart on a loss.
+function challengeTrack(){
+  const C = D.challenge || {}, Z = C.sizes || {};
+  const rows = Object.entries(Z).filter(([m, v]) => (v.days || []).length);
+  if(!rows.length) return '';
+  const usd = v => '$' + Math.round(v).toLocaleString();
+  return '<p class="note" style="margin-top:12px"><b>Played for real on the 8 AM tickets</b> (each day&rsquo;s likeliest ticket of that size, '
+    + usd(C.start) + ' all in, rolled while it wins, restarted after a loss; target ' + usd(C.target) + '):</p>'
+    + '<table class="sbt"><tr><th>size</th><th>days</th><th>now</th><th>best</th><th>busts</th><th>reached target</th></tr>'
+    + rows.map(([m, v]) => '<tr><td>' + m + '&times;</td><td>' + v.days.map(d => d.status === 'won' ? '&#10003;'
+        : d.status === 'lost' ? '&#10007;' : d.status === 'reached' ? '&#9733;' : '&middot;').join(' ')
+      + '</td><td>' + usd(v.bank) + (v.streak ? ' (' + v.streak + ' in a row)' : '') + '</td><td>' + usd(v.best)
+      + '</td><td>' + v.busts + '</td><td>' + v.reached + '</td></tr>').join('') + '</table>';
 }
 document.addEventListener("change", e => {
   const id = e.target && e.target.id;

@@ -610,6 +610,42 @@ def report(path=None):
     return sorted(agg.values(), key=lambda a: (a["target"], -a["standard"]))
 
 
+def challenge_track(path=None, start=100.0, target=10000.0):
+    """The bankroll challenge played on the frozen 8 AM tickets: for each
+    payout size, every day's likeliest ticket of that size (any standard),
+    all in, winnings rolled into the next day; a loss restarts at `start`
+    and counts as a bust; reaching `target` counts as a success and also
+    restarts. Days without a settled ticket of that size are skipped."""
+    book = load(path)
+    out = {}
+    for m in TARGETS:
+        bank, busts, wins_in_row, reached, best, log = start, 0, 0, 0, start, []
+        for day, d in sorted(book["days"].items()):
+            ts = [t for t in d.get("tickets") or [] if t.get("target") == m and t.get("legs")]
+            if not ts:
+                continue
+            t = max(ts, key=lambda t: t.get("prob") or 0)
+            if t["status"] not in ("won", "lost", "void"):
+                log.append(dict(day=day, status="open", bank=round(bank, 2), prob=t.get("prob")))
+                continue
+            if t["status"] == "won":
+                bank *= t.get("total") or m
+                wins_in_row += 1
+                best = max(best, bank)
+                if bank >= target:
+                    reached += 1
+                    log.append(dict(day=day, status="reached", bank=round(bank, 2), prob=t.get("prob")))
+                    bank, wins_in_row = start, 0
+                    continue
+            elif t["status"] == "lost":
+                busts += 1
+                bank, wins_in_row = start, 0
+            log.append(dict(day=day, status=t["status"], bank=round(bank, 2), prob=t.get("prob")))
+        out[f"{m:g}"] = dict(bank=round(bank, 2), busts=busts, streak=wins_in_row, reached=reached,
+                            best=round(best, 2), days=log)
+    return dict(start=start, target=target, sizes=out)
+
+
 def replay(day, path=None):
     """True when the optimizer, re-run on the day's archived pool, gives the
     tickets frozen at card time; None without an archive."""
