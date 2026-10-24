@@ -923,6 +923,29 @@
    "tip": "10:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909855|{\"line\": 230.5, \"t\": \"under\"}|Kalshi": {
+   "dec": 2.0513,
+   "dk": "-110",
+   "ev": 0.0256,
+   "fair": 0.5,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401909855",
+   "kind": "value",
+   "league": "nba",
+   "market": "under",
+   "match": "MIL @ PHI",
+   "price": "+105",
+   "seen": "2026-10-24T02:48:49+00:00",
+   "side": "{\"line\": 230.5, \"t\": \"under\"}",
+   "spec": {
+    "line": 230.5,
+    "t": "under"
+   },
+   "start": "2026-10-24T23:30Z",
+   "team": "under 230.5",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
   "ncaaf:401856730|away|FanDuel": {
    "dec": 1.7042,
    "ev": 0.0365,
@@ -1465,6 +1488,7 @@
    "seen": "2026-10-22T15:45:15+00:00",
    "side": "away",
    "start": "2026-10-24T00:00Z",
+   "status": "won",
    "team": "Montreal Canadiens",
    "tip": "8:00 PM",
    "venue": "FanDuel"
@@ -1489,6 +1513,7 @@
     "team": "Chicago Blackhawks"
    },
    "start": "2026-10-24T00:00Z",
+   "status": "lost",
    "team": "Chicago Blackhawks +1.5",
    "tip": "8:00 PM",
    "venue": "FanDuel"

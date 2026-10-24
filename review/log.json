@@ -2818,10 +2818,10 @@
    },
    {
     "flag": false,
-    "hit": 80.8,
-    "n": 328,
+    "hit": 80.5,
+    "n": 334,
     "name": "props nhl Shots on Goal",
-    "said": 79.7
+    "said": 79.8
    },
    {
     "flag": false,
@@ -2929,8 +2929,8 @@
   },
   "clv": {
    "avg": 0.55,
-   "beat": 56.2,
-   "n": 32
+   "beat": 57.6,
+   "n": 33
   },
   "day": "2026-10-23",
   "leaks_14d": [],
@@ -3044,7 +3044,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -3056,7 +3056,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+25",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -3084,12 +3084,12 @@
    }
   ],
   "picks": {
-   "hit": 71.9,
+   "hit": 72.7,
    "lost": 9,
-   "n": 32,
-   "roi": -4.0,
-   "said": 69.9,
-   "won": 23
+   "n": 33,
+   "roi": -2.1,
+   "said": 69.6,
+   "won": 24
   },
   "picks_by_league": {
    "arg": {
@@ -3244,6 +3244,14 @@
     "said": 68.5,
     "won": 1
    },
+   "nhl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 58.8,
+    "said": 60.0,
+    "won": 1
+   },
    "nwsl": {
     "hit": 100.0,
     "lost": 0,
@@ -3268,14 +3276,14 @@
     "said_price": 87.6,
     "won": 381
    },
-   "n": 97,
-   "said": 85.5,
-   "won": 80
+   "n": 103,
+   "said": 85.3,
+   "won": 84
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      7,
@@ -3285,10 +3293,10 @@
     "winners": [
      2,
      0.8393,
-     "open"
+     "won"
     ]
    },
-   "won": 6
+   "won": 7
   },
   "strong": {
    "n": 0
@@ -3304,12 +3312,12 @@
     "won": 9
    },
    "agree": {
-    "hit": 67.6,
+    "hit": 67.7,
     "lost": 123,
-    "n": 380,
-    "roi": -3.9,
+    "n": 381,
+    "roi": -3.7,
     "said": 65.7,
-    "won": 257
+    "won": 258
    }
   },
   "weights": {
@@ -3325,10 +3333,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6688,
-    "market_only": 0.6688,
-    "model_40": 0.6778,
-    "n": 48,
+    "logloss": 0.6655,
+    "market_only": 0.6655,
+    "model_40": 0.674,
+    "n": 49,
     "weight": 0.0
    }
   }
