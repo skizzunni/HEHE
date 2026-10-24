@@ -138,6 +138,23 @@
    "tip": "12:15 PM",
    "venue": "FanDuel"
   },
+  "ger:401884756|away|FanDuel": {
+   "dec": 3.4,
+   "ev": 0.0231,
+   "fair": 0.3009,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ger:401884756",
+   "kind": "value",
+   "league": "ger",
+   "match": "S04 @ KOE",
+   "price": "+240",
+   "seen": "2026-10-24T13:22:12+00:00",
+   "side": "away",
+   "start": "2026-10-24T13:30Z",
+   "team": "Schalke 04",
+   "tip": "9:30 AM",
+   "venue": "FanDuel"
+  },
   "ger:401884761|away|Kalshi": {
    "dec": 7.2464,
    "ev": 0.0206,
@@ -2264,6 +2281,26 @@
    "prob": 0.0861,
    "seen": "2026-10-24T04:06:11+00:00",
    "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ger:401884756:away": {
+   "ev": 0.0231,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0231,
+     "fair": 0.3009,
+     "id": "ger:401884756",
+     "price": "+240",
+     "side": "away",
+     "spec": null,
+     "team": "Schalke 04"
+    }
+   ],
+   "payout": 3.4,
+   "prob": 0.3009,
+   "seen": "2026-10-24T13:22:12+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909847:away|nba:401909848:home": {
