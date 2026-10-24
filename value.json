@@ -951,6 +951,45 @@
    "tip": "10:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909854|away|Kalshi": {
+   "dec": 5.5586,
+   "ev": 0.0456,
+   "fair": 0.1881,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909854",
+   "kind": "value",
+   "league": "nba",
+   "match": "BKN @ CLE",
+   "price": "+456",
+   "seen": "2026-10-24T05:06:10+00:00",
+   "side": "away",
+   "start": "2026-10-24T23:30Z",
+   "team": "Brooklyn Nets",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909854|sure": {
+   "id": "nba:401909854",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+456",
+     "stake_share": 0.18,
+     "team": "Brooklyn Nets",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-455",
+     "stake_share": 0.82,
+     "team": "Cleveland Cavaliers",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "BKN @ CLE",
+   "profit": 0.0003,
+   "seen": "2026-10-24T05:06:10+00:00"
+  },
   "nba:401909855|{\"line\": 230.5, \"t\": \"under\"}|Kalshi": {
    "dec": 2.0513,
    "dk": "-110",
@@ -1893,6 +1932,26 @@
    "seen": "2026-10-23T20:35:12+00:00",
    "status": "lost",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|efl1:401880200:away": {
+   "ev": 0.0295,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0293,
+     "fair": 0.2238,
+     "id": "efl1:401880200",
+     "price": "+360",
+     "side": "away",
+     "spec": null,
+     "team": "Derby County"
+    }
+   ],
+   "payout": 4.6,
+   "prob": 0.2238,
+   "seen": "2026-10-24T05:06:10+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|efl1:401880200:away|nba:401909860:away": {
