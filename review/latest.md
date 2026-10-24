@@ -25,7 +25,7 @@ Lottery 10k+25: open (0/11 legs won)
 Lottery 10k+50: open (0/11 legs won)
 Lottery 10k+100: open (0/10 legs won)
 Ladder-consistency props (all time): 441/530 won (83.2%) vs 87.4% fair, 88.0% price.
-Props 7/8 vs 63.2% claimed.
+Props 10/11 vs 65.6% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=64), nhl 0.00 (n=50)

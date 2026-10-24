@@ -9003,6 +9003,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nba:401909859|n:christian braun|Points|5+": {
+  "aid": null,
+  "date": "2026-10-24",
+  "edge": -0.3,
+  "gid": "nba:401909859",
+  "imp": 0.9804,
+  "label": "Christian Braun: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Christian Braun",
+  "p": 0.8525,
+  "p_fair": 0.9777,
+  "price": "-5000",
+  "status": "open"
+ },
  "nba:401909859|n:jeremiah fears|Pts + Reb + Ast|10+": {
   "aid": null,
   "date": "2026-10-24",
@@ -9019,6 +9035,22 @@
   "price": "-1400",
   "status": "open"
  },
+ "nba:401909859|n:nikola jokic|Points|15+": {
+  "aid": null,
+  "date": "2026-10-24",
+  "edge": -5.7,
+  "gid": "nba:401909859",
+  "imp": 0.9804,
+  "label": "Nikola Jokic: 15+ Points",
+  "league": "nba",
+  "line": "15+",
+  "market": "Points",
+  "name": "Nikola Jokic",
+  "p": 0.8525,
+  "p_fair": 0.9243,
+  "price": "-5000",
+  "status": "open"
+ },
  "nba:401909859|n:nikola jokic|Rebounds|10+": {
   "aid": null,
   "date": "2026-10-24",
@@ -9033,6 +9065,22 @@
   "p": 0.8481,
   "p_fair": 0.8447,
   "price": "-850",
+  "status": "open"
+ },
+ "nba:401909859|n:trey murphy|Assists|2+": {
+  "aid": null,
+  "date": "2026-10-24",
+  "edge": -3.2,
+  "gid": "nba:401909859",
+  "imp": 0.8,
+  "label": "Trey Murphy III: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "Trey Murphy III",
+  "p": 0.7767,
+  "p_fair": 0.7741,
+  "price": "-400",
   "status": "open"
  },
  "nba:401909860|n:dillon brooks|Pts + Ast|10+": {
@@ -20568,7 +20616,8 @@
   "p": 0.487,
   "p_fair": null,
   "price": "-130",
-  "status": "open"
+  "status": "won",
+  "value": 2.37
  },
  "ufc:401911639|n:abdul rakhman yakhyaev|Winner|win": {
   "aid": null,
@@ -20584,7 +20633,8 @@
   "p": 0.8017,
   "p_fair": null,
   "price": "-500",
-  "status": "open"
+  "status": "won",
+  "value": 2.37
  },
  "ufc:401911639|n:fight|Goes the distance|No": {
   "aid": null,
@@ -20600,7 +20650,8 @@
   "p": 0.8708,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 2.37
  },
  "ufc:401911807|n:fight|Goes the distance|No": {
   "aid": null,

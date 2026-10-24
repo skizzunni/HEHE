@@ -1743,6 +1743,23 @@
    "tip": "9:00 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401864526|away|FanDuel": {
+   "dec": 1.7042,
+   "ev": 0.0288,
+   "fair": 0.6037,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ncaaf:401864526",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "HAW @ NIU",
+   "price": "-142",
+   "seen": "2026-10-24T17:19:07+00:00",
+   "side": "away",
+   "start": "2026-10-24T19:30Z",
+   "team": "Hawai'i Rainbow Warriors",
+   "tip": "3:30 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401864526|{\"line\": 3.5, \"t\": \"spread\", \"team\": \"Northern Illinois Huskies\"}|FanDuel": {
    "dec": 1.9524,
    "dk": "-118",
@@ -3069,6 +3086,35 @@
    "seen": "2026-10-23T04:38:19+00:00",
    "status": "won",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401864526:away|ncaaf:401871093:away": {
+   "ev": 0.0623,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0324,
+     "fair": 0.175,
+     "id": "ncaaf:401871093",
+     "price": "+490",
+     "side": "away",
+     "spec": null,
+     "team": "Old Dominion Monarchs"
+    },
+    {
+     "ev": 0.0288,
+     "fair": 0.6037,
+     "id": "ncaaf:401864526",
+     "price": "-142",
+     "side": "away",
+     "spec": null,
+     "team": "Hawai'i Rainbow Warriors"
+    }
+   ],
+   "payout": 10.055,
+   "prob": 0.1056,
+   "seen": "2026-10-24T17:19:07+00:00",
+   "target": 10.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401864526:{\"line\": 3.5, \"t\": \"spread\", \"team\": \"Northern Illinois Huskies\"}|ncaaf:401871093:away": {
