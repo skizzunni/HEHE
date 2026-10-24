@@ -1480,10 +1480,10 @@ function makerBids(){
     + '<b>+4.2%</b> and <b>+2.6%</b> per $1 in the two halves of the backtest &mdash; <i>if</i> the bid fills. '
     + 'College football and NFL only: those held in both halves; NHL lost and NBA/MLB were never tested. '
     + 'A bid fills most easily when the price moves against it, so these are tracked, not placed. ' + rec + '</p>'
-    + (B.length ? '<table class="sbt"><tr><th>leg</th><th>bid</th><th>ask</th><th>books&rsquo; fair</th><th>edge</th></tr>'
+    + (B.length ? '<table class="sbt"><tr><th>leg</th><th>bid</th><th>ask</th><th>books&rsquo; fair</th><th>edge</th><th>stake if tested</th></tr>'
       + B.map(b => '<tr><td><span class="lgpill">' + esc(b.league) + '</span>' + esc(b.label) + ' <span class="sbn">' + esc(b.side)
         + ' &middot; ' + esc(b.match || '') + '</span></td><td>' + Math.round(100 * b.bid) + '&cent;</td><td>' + Math.round(100 * b.ask)
-        + '&cent;</td><td>' + (100 * b.fair).toFixed(1) + '%</td><td class="num">' + pct(100 * b.edge) + '</td></tr>').join('')
+        + '&cent;</td><td>' + (100 * b.fair).toFixed(1) + '%</td><td class="num">' + pct(100 * b.edge) + '</td><td>' + stakeCell(b.fair, b.cost ? 1 / b.cost : null) + '</td></tr>').join('')
       + '</table><p>' + copyBtn("Kalshi maker bids (limit orders at the bid)", B.map(b => legLine(b.label + " " + b.side,
           "bid " + Math.round(100 * b.bid) + "c", "Kalshi", b.match))) + '</p>'
       : '<p class="empty">No Kalshi leg is worth a resting bid right now.</p>');
