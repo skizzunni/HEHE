@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 32-10 (76.2% vs 72.5% claimed, ROI -0.5%).
-Closing line value: +0.9 points on 42 picks; beat the close on 57.1%.
+Picks 33-10 (76.7% vs 72.5% claimed, ROI +0.4%).
+Closing line value: +0.73 points on 43 picks; beat the close on 55.8%.
 - LOST efl1 West Ham United at 78%: margin 1 · the book had my side favoured too · called at 78%
 - LOST efl1 Burnley at 65%: margin 3 · the book had my side favoured too · called at 65%
 - LOST efl1 Birmingham City at 63%: margin 1 · the book had my side favoured too · called at 63%
@@ -12,7 +12,7 @@ Closing line value: +0.9 points on 42 picks; beat the close on 57.1%.
 - LOST jpn Avispa Fukuoka at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Kashima Antlers at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
-With the market 68.8% (429); against it 30.0% (20).
+With the market 68.8% (430); against it 30.0% (20).
 Locks 0/11 won, 11 open; Best play top 2 (59%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (0/9 legs won)
