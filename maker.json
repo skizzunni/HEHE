@@ -2757,6 +2757,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT24ULMTROY-50"
   },
+  "KXNCAAFTOTAL-26OCT24ULMTROY-51|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401871094",
+   "label": "under 50.5",
+   "league": "ncaaf",
+   "match": "ULM @ TROY",
+   "posted": "2026-10-24T15:06:29+00:00",
+   "queue": 35438.08,
+   "side": "NO",
+   "spec": {
+    "line": 50.5,
+    "t": "under"
+   },
+   "start": "2026-10-24T20:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT24ULMTROY-51"
+  },
   "KXNCAAFTOTAL-26OCT24UNTNAVY-62|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -2914,6 +2935,27 @@
    "spec": {
     "line": 47.5,
     "t": "under"
+   },
+   "start": "2026-10-24T16:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT24WMUTOL-48"
+  },
+  "KXNCAAFTOTAL-26OCT24WMUTOL-48|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401866450",
+   "label": "over 47.5",
+   "league": "ncaaf",
+   "match": "WMU @ TOL",
+   "posted": "2026-10-24T15:06:29+00:00",
+   "queue": 180727.41,
+   "side": "YES",
+   "spec": {
+    "line": 47.5,
+    "t": "over"
    },
    "start": "2026-10-24T16:00Z",
    "status": "open",
@@ -3141,6 +3183,28 @@
    "start": "2026-10-25T17:00Z",
    "status": "open",
    "ticker": "KXNFLSPREAD-26OCT25CINBAL-CIN2"
+  },
+  "KXNFLSPREAD-26OCT25CLETEN-CLE3|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "nfl:401873013",
+   "label": "Tennessee Titans +2.5",
+   "league": "nfl",
+   "match": "CLE @ TEN",
+   "posted": "2026-10-24T15:06:29+00:00",
+   "queue": 543263.3,
+   "side": "NO",
+   "spec": {
+    "line": 2.5,
+    "t": "spread",
+    "team": "Tennessee Titans"
+   },
+   "start": "2026-10-25T17:00Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26OCT25CLETEN-CLE3"
   },
   "KXNFLSPREAD-26OCT25INDMIN-MIN7|NO": {
    "ask": 0.51,
