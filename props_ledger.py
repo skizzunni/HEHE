@@ -355,10 +355,38 @@ def team_hint(n):
 ALIASES = {}
 
 
+# Given names and the familiar forms that are not simple prefixes of them
+# ('kenny' is not a prefix of 'kenneth'): 2026-10-24, FanDuel's "Kenneth
+# Gainwell" is ESPN's "Kenny Gainwell", and his prop sat unsettled. Matching
+# still needs the same surname and exactly one such player in the box score.
+NICKNAMES = [
+    {"kenneth", "kenny", "ken"}, {"william", "will", "bill", "billy", "willie"},
+    {"robert", "rob", "bob", "bobby", "robbie"}, {"james", "jim", "jimmy", "jamie"},
+    {"joseph", "joe", "joey"}, {"michael", "mike", "mikey"}, {"christopher", "chris"},
+    {"nicholas", "nick", "nicky"}, {"anthony", "tony"}, {"daniel", "dan", "danny"},
+    {"thomas", "tom", "tommy"}, {"richard", "rick", "ricky", "rich", "dick"},
+    {"edward", "ed", "eddie", "ted"}, {"charles", "charlie", "chuck"}, {"matthew", "matt"},
+    {"zachary", "zach", "zack"}, {"benjamin", "ben", "benny"}, {"jonathan", "jon", "jonny"},
+    {"andrew", "andy", "drew"}, {"samuel", "sam", "sammy"}, {"theodore", "ted", "teddy", "theo"},
+    {"gregory", "greg"}, {"timothy", "tim", "timmy"}, {"jacob", "jake"},
+    {"nathaniel", "nathan", "nate"}, {"patrick", "pat"}, {"stephen", "steven", "steve"},
+    {"cameron", "cam"}, {"joshua", "josh"}, {"jeffrey", "jeff"}, {"douglas", "doug"},
+    {"gerald", "jerry"}, {"lawrence", "larry"}, {"ronald", "ron", "ronnie"},
+    {"donald", "don", "donnie"}, {"frederick", "fred", "freddie"}, {"walter", "walt"},
+    {"vincent", "vince"}, {"mitchell", "mitch"}, {"maximilian", "max"}, {"isaiah", "ike"},
+]
+_NICK = {}
+for _g in NICKNAMES:
+    for _n in _g:
+        _NICK.setdefault(_n, set()).update(_g)
+
+
 def _first_ok(a, b):
-    """First names that can be the same person: equal, or one a short form
-    of the other ('mitch' / 'mitchell', 'alex' / 'alexander')."""
-    return a == b or (min(len(a), len(b)) >= 3 and (a.startswith(b) or b.startswith(a)))
+    """First names that can be the same person: equal, one a short form of
+    the other ('mitch' / 'mitchell', 'alex' / 'alexander'), or a familiar
+    form of it ('kenny' / 'kenneth')."""
+    return (a == b or (min(len(a), len(b)) >= 3 and (a.startswith(b) or b.startswith(a)))
+            or b in _NICK.get(a, ()))
 
 
 def resolve(stats, e):

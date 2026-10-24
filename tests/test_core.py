@@ -395,6 +395,17 @@ class PropIdentity(unittest.TestCase):
         self.assertEqual(get("J Smith")[1], "unresolved")
         self.assertEqual(get("Connor McDavid"), (None, "absent"))
 
+    def test_nicknames(self):
+        """'Kenneth Gainwell' on FanDuel is 'Kenny Gainwell' in ESPN's box
+        (2026-10-24); a nickname still needs the surname and a unique match."""
+        import props_ledger as PL
+        box = self.box()
+        box["boxscore"]["players"][1]["statistics"][0]["athletes"].append(
+            dict(athlete=dict(id="9", displayName="Kenny Gainwell"), stats=["2"]))
+        st = PL.box_stats(box)
+        self.assertEqual(PL.resolve(st, dict(name="Kenneth Gainwell")), (st["9"], "fuzzy"))
+        self.assertEqual(PL.resolve(st, dict(name="Joseph Smith"))[1], "unresolved")   # John? Jake? neither
+
     def test_football_missing_group_is_zero(self):
         """A player in the box with no receiving line caught nothing: lost,
         not ungradable (Josh Cameron, 2026-10-18, kick returns only)."""
