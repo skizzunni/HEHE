@@ -1,11 +1,12 @@
 # Review 2026-10-24
 
-Picks 14-3 (82.4% vs 72.5% claimed, ROI +7.3%).
-Closing line value: +1.31 points on 17 picks; beat the close on 64.7%.
+Picks 14-4 (77.8% vs 72.8% claimed, ROI +1.3%).
+Closing line value: +1.2 points on 18 picks; beat the close on 61.1%.
 - LOST epl Manchester City at 80%: margin 1 · the book had my side favoured too · called at 80%
+- LOST esp Rayo Vallecano at 78%: margin 3 · the book had my side favoured too · called at 78%
 - LOST jpn Avispa Fukuoka at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Kashima Antlers at 69%: margin 1 · the book had my side favoured too · called at 69%
-With the market 68.6% (404); against it 30.0% (20).
+With the market 68.4% (405); against it 30.0% (20).
 Locks 0/11 won, 11 open; Best play top 2 (59%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (0/9 legs won)
