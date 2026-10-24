@@ -3358,10 +3358,10 @@
    },
    {
     "flag": false,
-    "hit": 60.0,
-    "n": 45,
+    "hit": 59.6,
+    "n": 52,
     "name": "kalshi maker bids (filled)",
-    "said": 52.7
+    "said": 52.4
    }
   ],
   "calls": {
@@ -3435,7 +3435,7 @@
   "clv": {
    "avg": 0.56,
    "beat": 52.7,
-   "n": 91
+   "n": 93
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3648,7 +3648,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -3678,7 +3678,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -3716,12 +3716,12 @@
    }
   ],
   "picks": {
-   "hit": 75.8,
+   "hit": 76.3,
    "lost": 22,
-   "n": 91,
-   "roi": 2.1,
-   "said": 71.6,
-   "won": 69
+   "n": 93,
+   "roi": 2.3,
+   "said": 71.9,
+   "won": 71
   },
   "picks_by_league": {
    "arg": {
@@ -3869,12 +3869,12 @@
     "won": 2
    },
    "ncaaf": {
-    "hit": 75.0,
+    "hit": 77.3,
     "lost": 5,
-    "n": 20,
-    "roi": 10.2,
-    "said": 70.5,
-    "won": 15
+    "n": 22,
+    "roi": 10.6,
+    "said": 71.9,
+    "won": 17
    },
    "nhl": {
     "hit": 50.0,
@@ -4000,22 +4000,22 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.5,
+    "hit": 69.6,
     "lost": 146,
-    "n": 478,
-    "roi": -2.3,
-    "said": 67.0,
-    "won": 332
+    "n": 480,
+    "roi": -2.2,
+    "said": 67.1,
+    "won": 334
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6434,
-    "market_only": 0.6623,
-    "model_40": 0.6434,
-    "n": 84,
+    "logloss": 0.6339,
+    "market_only": 0.6504,
+    "model_40": 0.6339,
+    "n": 86,
     "weight": 0.4
    },
    "nhl": {
