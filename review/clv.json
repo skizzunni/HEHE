@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 57.7,
-  "brier_close": 0.1983,
-  "brier_published": 0.1996,
+  "beat_close_pct": 58.0,
+  "brier_close": 0.1969,
+  "brier_published": 0.1982,
   "dates": [
    "2026-10-17",
    "2026-10-24"
   ],
-  "logloss_close": 0.5859,
-  "logloss_published": 0.589,
-  "mean_clv_pts": 0.32,
+  "logloss_close": 0.5828,
+  "logloss_published": 0.586,
+  "mean_clv_pts": 0.34,
   "n": 300
  },
  "market_is_model": true,
@@ -364,6 +364,15 @@
    "league": "aus",
    "published": 0.685,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 1
+  },
+  "aut:401881762": {
+   "call": false,
+   "close": 0.7219,
+   "clv": 6.19,
+   "day": "2026-10-24",
+   "league": "aut",
+   "published": 0.66,
    "won": 1
   },
   "aut:401881763": {
@@ -16956,5 +16965,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-24T17:07+00:00"
+ "updated": "2026-10-24T17:11+00:00"
 }
