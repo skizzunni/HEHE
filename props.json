@@ -8941,6 +8941,22 @@
   "price": "-1450",
   "status": "open"
  },
+ "nba:401909857|n:kyshawn george|Assists|2+": {
+  "aid": null,
+  "date": "2026-10-24",
+  "edge": null,
+  "gid": "nba:401909857",
+  "imp": 0.875,
+  "label": "Kyshawn George: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "Kyshawn George",
+  "p": 0.8495,
+  "p_fair": null,
+  "price": "-700",
+  "status": "open"
+ },
  "nba:401909857|n:norman powell|Points|10+": {
   "aid": null,
   "date": "2026-10-24",
@@ -9050,6 +9066,22 @@
   "p": 0.8497,
   "p_fair": 0.9108,
   "price": "-1450",
+  "status": "open"
+ },
+ "nba:401909858|n:victor wembanyama|Points|15+": {
+  "aid": null,
+  "date": "2026-10-24",
+  "edge": -5.0,
+  "gid": "nba:401909858",
+  "imp": 0.9804,
+  "label": "Victor Wembanyama: 15+ Points",
+  "league": "nba",
+  "line": "15+",
+  "market": "Points",
+  "name": "Victor Wembanyama",
+  "p": 0.8525,
+  "p_fair": 0.9313,
+  "price": "-5000",
   "status": "open"
  },
  "nba:401909858|n:victor wembanyama|Rebounds|10+": {
@@ -9176,6 +9208,22 @@
   "name": "Trey Murphy III",
   "p": 0.7767,
   "p_fair": 0.7741,
+  "price": "-400",
+  "status": "open"
+ },
+ "nba:401909859|n:zion williamson|Assists|2+": {
+  "aid": null,
+  "date": "2026-10-24",
+  "edge": -2.1,
+  "gid": "nba:401909859",
+  "imp": 0.8,
+  "label": "Zion Williamson: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "Zion Williamson",
+  "p": 0.7767,
+  "p_fair": 0.7834,
   "price": "-400",
   "status": "open"
  },
@@ -20679,7 +20727,8 @@
   "p": 0.6411,
   "p_fair": null,
   "price": "-200",
-  "status": "open"
+  "status": "lost",
+  "value": 2.67
  },
  "ufc:401911637|n:fight|Goes the distance|No": {
   "aid": null,
@@ -20695,7 +20744,8 @@
   "p": 0.7549,
   "p_fair": null,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 2.67
  },
  "ufc:401911638|n:abus magomedov|Winner|win": {
   "aid": null,
