@@ -11,11 +11,11 @@ Closing line value: -0.09 points on 22 picks; beat the close on 50.0%.
 With the market 67.8% (370); against it 39.1% (23).
 Locks 0/11 won, 11 open; Best play top 2 (60%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 2 (84%) open; Best play top 7 (52%) open.
-Lottery 100: lost (0/10 legs won, killed by Milwaukee Bucks +1.5)
-Lottery 10k: lost (0/13 legs won, killed by Milwaukee Bucks +1.5)
-Lottery 10k+25: lost (0/13 legs won, killed by Milwaukee Bucks +1.5)
-Lottery 10k+50: lost (0/12 legs won, killed by Milwaukee Bucks +1.5)
-Lottery 10k+100: lost (0/12 legs won, killed by Milwaukee Bucks +1.5)
+Lottery 100: lost (1/10 legs won, killed by Milwaukee Bucks +1.5)
+Lottery 10k: lost (1/13 legs won, killed by Milwaukee Bucks +1.5)
+Lottery 10k+25: lost (1/13 legs won, killed by Milwaukee Bucks +1.5)
+Lottery 10k+50: lost (1/12 legs won, killed by Milwaukee Bucks +1.5)
+Lottery 10k+100: lost (1/12 legs won, killed by Milwaukee Bucks +1.5)
 Ladder-consistency props (all time): 324/390 won (83.1%) vs 86.2% fair, 87.2% price.
 Props 16/17 vs 85.8% claimed.
 
