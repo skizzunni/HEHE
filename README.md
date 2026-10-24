@@ -3219,7 +3219,13 @@ against -9.4% for those it kept. Every prop market loses about the same
 amount (priced at 84.7%, won 77.6%), which is the books' margin, so
 choosing among markets cannot help.
 
-FanDuel's NBA milestone props are priced as about 92% likely and have won
-82% (N 297). The box scores confirm the losses were real (every player
-played). No other side of those props can be bet, so they stay a reason to
-keep NBA props out of anything sold as "safe".
+Correction, the same day: an earlier version of this note said FanDuel's
+NBA milestone props are priced as about 92% likely and won 82% (N 297).
+That 92% was the old ladder model's `p_fair`, which no longer sets any
+chance on the board. The board's own stated prop chance, a tuned
+per-market margin, is calibrated at every level. By stated band: 70-80%
+stated 73.9% and won 74.5% (N 192); 80-85% stated 84.4%, won 85.0% (N 386);
+85-90% stated 85.7%, won 83.2% (N 309); 90-95% stated 92.4%, won 88.5%
+(N 26). Every gap is within 1.3 standard errors. The box scores do confirm
+that the losing NBA props were real (every player played). Safe Locks'
+prop legs are 8 of 9 against about 91% stated.
