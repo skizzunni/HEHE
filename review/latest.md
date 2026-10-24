@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 51-18 (73.9% vs 73.1% claimed, ROI -3.9%).
-Closing line value: +0.49 points on 69 picks; beat the close on 50.7%.
+Picks 53-18 (74.6% vs 72.6% claimed, ROI -1.8%).
+Closing line value: +0.55 points on 71 picks; beat the close on 52.1%.
 - LOST ecu Manta F.C. at 72%: margin 2 · the book had my side favoured too · called at 72%
 - LOST efl1 West Ham United at 78%: margin 1 · the book had my side favoured too · called at 78%
 - LOST efl1 Burnley at 65%: margin 3 · the book had my side favoured too · called at 65%
@@ -20,8 +20,8 @@ Closing line value: +0.49 points on 69 picks; beat the close on 50.7%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 68.9% (456); against it 30.0% (20).
-Locks 0/11 won, 10 open; Best play top 2 (59%) open; lost: TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
+With the market 69.0% (458); against it 30.0% (20).
+Locks 1/11 won, 9 open; Best play top 2 (59%) open; lost: TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
 Safe Locks 1/11 won, 10 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (1/9 legs won)
 Lottery 100: open (1/6 legs won)
@@ -33,7 +33,7 @@ Lottery 10k+25: open (1/11 legs won)
 Lottery 10k+50: open (1/11 legs won)
 Lottery 10k+100: open (1/10 legs won)
 Ladder-consistency props (all time): 445/538 won (82.7%) vs 87.3% fair, 88.0% price.
-Props 18/24 vs 70.7% claimed.
+Props 19/25 vs 70.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=73), nhl 0.00 (n=51)
+Weights for tomorrow (model's share vs the price): ncaaf 0.00 (n=75), nhl 0.00 (n=51)

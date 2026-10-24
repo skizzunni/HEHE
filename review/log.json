@@ -3295,10 +3295,10 @@
    },
    {
     "flag": false,
-    "hit": 65.2,
-    "n": 23,
+    "hit": 66.7,
+    "n": 24,
     "name": "props ufc Winner",
-    "said": 65.5
+    "said": 65.1
    },
    {
     "flag": false,
@@ -3316,10 +3316,10 @@
    },
    {
     "flag": false,
-    "hit": 78.6,
-    "n": 14,
+    "hit": 80.0,
+    "n": 15,
     "name": "locks ncaaf under",
-    "said": 81.7
+    "said": 81.3
    },
    {
     "flag": false,
@@ -3351,17 +3351,17 @@
    },
    {
     "flag": false,
-    "hit": 48.2,
-    "n": 56,
+    "hit": 47.4,
+    "n": 57,
     "name": "value bets",
-    "said": 44.7
+    "said": 44.9
    },
    {
     "flag": false,
-    "hit": 60.0,
-    "n": 35,
+    "hit": 59.5,
+    "n": 37,
     "name": "kalshi maker bids (filled)",
-    "said": 52.8
+    "said": 52.7
    }
   ],
   "calls": {
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.49,
-   "beat": 50.7,
-   "n": 69
+   "avg": 0.55,
+   "beat": 52.1,
+   "n": 71
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3444,7 +3444,7 @@
     "TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20"
    ],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      2,
@@ -3452,7 +3452,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "losses": [
    {
@@ -3682,12 +3682,12 @@
    }
   ],
   "picks": {
-   "hit": 73.9,
+   "hit": 74.6,
    "lost": 18,
-   "n": 69,
-   "roi": -3.9,
-   "said": 73.1,
-   "won": 51
+   "n": 71,
+   "roi": -1.8,
+   "said": 72.6,
+   "won": 53
   },
   "picks_by_league": {
    "arg": {
@@ -3819,12 +3819,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 77.8,
+    "hit": 81.8,
     "lost": 2,
-    "n": 9,
-    "roi": -0.5,
-    "said": 78.3,
-    "won": 7
+    "n": 11,
+    "roi": 12.5,
+    "said": 74.5,
+    "won": 9
    },
    "nhl": {
     "hit": 0.0,
@@ -3898,9 +3898,9 @@
     "said_price": 88.0,
     "won": 445
    },
-   "n": 24,
-   "said": 70.7,
-   "won": 18
+   "n": 25,
+   "said": 70.1,
+   "won": 19
   },
   "safe_locks": {
    "lost": [],
@@ -3934,22 +3934,22 @@
     "won": 6
    },
    "agree": {
-    "hit": 68.9,
+    "hit": 69.0,
     "lost": 142,
-    "n": 456,
-    "roi": -3.4,
+    "n": 458,
+    "roi": -3.1,
     "said": 67.0,
-    "won": 314
+    "won": 316
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": false,
-    "logloss": 0.6347,
-    "market_only": 0.6502,
-    "model_40": 0.6347,
-    "n": 73,
+    "logloss": 0.6341,
+    "market_only": 0.6481,
+    "model_40": 0.6341,
+    "n": 75,
     "weight": 0.0
    },
    "nhl": {

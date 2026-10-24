@@ -785,6 +785,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401856834",
    "label": "Kansas Jayhawks +1.5",
    "league": "ncaaf",
@@ -797,8 +798,9 @@
     "team": "Kansas Jayhawks"
    },
    "start": "2026-10-24T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24BAYKU-BAY2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24BAYKU-BAY2",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT24BAYKU-BAY3|YES": {
    "ask": 0.51,
@@ -806,6 +808,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856834",
    "label": "Baylor Bears -2.5",
    "league": "ncaaf",
@@ -818,8 +821,9 @@
     "team": "Baylor Bears"
    },
    "start": "2026-10-24T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24BAYKU-BAY3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24BAYKU-BAY3",
+   "won": 0
   },
   "KXNCAAFSPREAD-26OCT24BAYKU-KU2|NO": {
    "ask": 0.52,
@@ -827,6 +831,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "ncaaf:401856834",
    "label": "Baylor Bears +1.5",
    "league": "ncaaf",
@@ -840,8 +845,9 @@
     "team": "Baylor Bears"
    },
    "start": "2026-10-24T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24BAYKU-KU2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24BAYKU-KU2",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT24BCGT-GT7|YES": {
    "ask": 0.51,
@@ -2202,6 +2208,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401856834",
    "label": "over 52.5",
    "league": "ncaaf",
@@ -2214,8 +2221,9 @@
     "t": "over"
    },
    "start": "2026-10-24T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24BAYKU-53"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24BAYKU-53",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24BAYKU-54|NO": {
    "ask": 0.51,
@@ -2223,6 +2231,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856834",
    "label": "under 53.5",
    "league": "ncaaf",
@@ -2235,8 +2244,9 @@
     "t": "under"
    },
    "start": "2026-10-24T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24BAYKU-54"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24BAYKU-54",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24BGSUBUFF-45|NO": {
    "ask": 0.51,
