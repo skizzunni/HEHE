@@ -956,7 +956,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 94,
       "dc": false,
       "gate": {
@@ -1006,7 +1006,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 91,
       "dc": false,
       "gate": {
@@ -1056,7 +1056,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 86,
       "dc": true,
       "gate": {
@@ -1068,7 +1068,7 @@
       "match": "PAR @ LAZ",
       "pick": "Lazio or draw",
       "price": "-1000",
-      "price_at": "2026-10-24T14:40:41+00:00",
+      "price_at": "2026-10-24T14:53:30+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192182229:13731474",
       "prob_at": "2026-10-24T14:49:02+00:00",
@@ -1120,7 +1120,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -1171,7 +1171,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -1227,6 +1227,7 @@
     }
    ],
    "candidate_news": {
+    "epl": "2026-10-24T15:01:09+00:00",
     "esp": "2026-10-24T12:53:50+00:00",
     "ger": "2026-10-24T14:01:34+00:00",
     "ita": "2026-10-24T14:01:34+00:00",
@@ -1242,7 +1243,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -1290,7 +1291,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -1338,7 +1339,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 75,
       "dc": true,
       "gate": {
@@ -1350,7 +1351,7 @@
       "match": "TOT @ CHE",
       "pick": "Chelsea or draw",
       "price": "-390",
-      "price_at": "2026-10-24T14:40:34+00:00",
+      "price_at": "2026-10-24T14:53:20+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190751399:13472864",
       "prob_at": "2026-10-24T14:49:01+00:00",
@@ -1361,17 +1362,25 @@
       "start": "2026-10-24T16:30Z"
      },
      "dc": true,
-     "fp": "268a12fa92c8",
+     "fp": "6acf459eb5a7",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed XIs"
      },
      "id": "epl:401878767",
      "league": "epl",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-24T15:01:09+00:00",
+       "what": "awaiting confirmed XIs"
+      }
+     ],
      "match": "TOT @ CHE",
+     "news_at": "2026-10-24T15:01:09+00:00",
      "pick": "Chelsea or draw",
      "price": "-390",
-     "price_at": "2026-10-24T14:40:34+00:00",
+     "price_at": "2026-10-24T14:53:20+00:00",
      "price_market": "double_chance",
      "price_ref": "736.190751399:13472864",
      "side": "home",
@@ -1386,7 +1395,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -1435,7 +1444,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -1447,7 +1456,7 @@
       "match": "SGE @ DOR",
       "pick": "Borussia Dortmund or draw",
       "price": "-700",
-      "price_at": "2026-10-24T14:40:42+00:00",
+      "price_at": "2026-10-24T14:53:31+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192183349:21904289",
       "prob_at": "2026-10-24T14:49:02+00:00",
@@ -1469,7 +1478,7 @@
      "news_at": "2026-10-24T14:01:34+00:00",
      "pick": "Borussia Dortmund or draw",
      "price": "-700",
-     "price_at": "2026-10-24T14:40:42+00:00",
+     "price_at": "2026-10-24T14:53:31+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192183349:21904289",
      "side": "home",
@@ -1484,7 +1493,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -1532,7 +1541,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 86,
       "dc": true,
       "gate": {
@@ -1544,7 +1553,7 @@
       "match": "PAR @ LAZ",
       "pick": "Lazio or draw",
       "price": "-1000",
-      "price_at": "2026-10-24T14:40:41+00:00",
+      "price_at": "2026-10-24T14:53:30+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192182229:13731474",
       "prob_at": "2026-10-24T14:49:02+00:00",
@@ -1566,7 +1575,7 @@
      "news_at": "2026-10-24T14:01:34+00:00",
      "pick": "Lazio or draw",
      "price": "-1000",
-     "price_at": "2026-10-24T14:40:41+00:00",
+     "price_at": "2026-10-24T14:53:30+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192182229:13731474",
      "side": "home",
@@ -1581,7 +1590,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 78,
       "dc": true,
       "gate": {
@@ -1593,7 +1602,7 @@
       "match": "TOR @ CLB",
       "pick": "Columbus Crew or draw",
       "price": "-475",
-      "price_at": "2026-10-24T14:40:36+00:00",
+      "price_at": "2026-10-24T14:53:22+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192282994:17324185",
       "prob_at": "2026-10-24T14:49:02+00:00",
@@ -1615,7 +1624,7 @@
      "news_at": "2026-10-24T14:01:34+00:00",
      "pick": "Columbus Crew or draw",
      "price": "-475",
-     "price_at": "2026-10-24T14:40:36+00:00",
+     "price_at": "2026-10-24T14:53:22+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192282994:17324185",
      "side": "home",
@@ -1630,7 +1639,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -1642,7 +1651,7 @@
       "match": "NE @ PHI",
       "pick": "Philadelphia Union or draw",
       "price": "-700",
-      "price_at": "2026-10-24T14:40:38+00:00",
+      "price_at": "2026-10-24T14:53:25+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192093859:22901011",
       "prob_at": "2026-10-24T14:49:02+00:00",
@@ -1664,7 +1673,7 @@
      "news_at": "2026-10-24T12:53:50+00:00",
      "pick": "Philadelphia Union or draw",
      "price": "-700",
-     "price_at": "2026-10-24T14:40:38+00:00",
+     "price_at": "2026-10-24T14:53:25+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192093859:22901011",
      "side": "home",
@@ -1679,7 +1688,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 75,
       "dc": true,
       "gate": {
@@ -1691,7 +1700,7 @@
       "match": "SJ @ DAL",
       "pick": "FC Dallas or draw",
       "price": "-380",
-      "price_at": "2026-10-24T14:40:38+00:00",
+      "price_at": "2026-10-24T14:53:25+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192107362:13129110",
       "prob_at": "2026-10-24T14:49:02+00:00",
@@ -1713,7 +1722,7 @@
      "news_at": "2026-10-24T12:53:50+00:00",
      "pick": "FC Dallas or draw",
      "price": "-380",
-     "price_at": "2026-10-24T14:40:38+00:00",
+     "price_at": "2026-10-24T14:53:25+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192107362:13129110",
      "side": "home",
@@ -1728,7 +1737,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 83,
       "dc": true,
       "gate": {
@@ -1740,7 +1749,7 @@
       "match": "NSH @ MTL",
       "pick": "Nashville SC or draw",
       "price": "-750",
-      "price_at": "2026-10-24T14:40:35+00:00",
+      "price_at": "2026-10-24T14:53:21+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192107950:23255496",
       "prob_at": "2026-10-24T14:49:02+00:00",
@@ -1762,7 +1771,7 @@
      "news_at": "2026-10-24T12:53:50+00:00",
      "pick": "Nashville SC or draw",
      "price": "-750",
-     "price_at": "2026-10-24T14:40:35+00:00",
+     "price_at": "2026-10-24T14:53:21+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192107950:23255496",
      "side": "away",
@@ -1777,7 +1786,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 80,
       "dc": false,
       "gate": {
@@ -1825,7 +1834,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -1873,7 +1882,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 82,
       "dc": false,
       "gate": {
@@ -1921,7 +1930,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 80,
       "dc": false,
       "gate": {
@@ -1969,7 +1978,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -2017,7 +2026,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -2064,7 +2073,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 80,
       "dc": false,
       "gate": {
@@ -2111,7 +2120,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
@@ -2158,7 +2167,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -2205,7 +2214,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 80,
       "dc": false,
       "gate": {
@@ -2252,7 +2261,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -2299,7 +2308,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 91,
       "dc": false,
       "gate": {
@@ -2346,7 +2355,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 94,
       "dc": false,
       "gate": {
@@ -2393,7 +2402,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -2440,7 +2449,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
@@ -2487,7 +2496,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 87,
       "dc": false,
       "gate": {
@@ -2534,7 +2543,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 88,
       "dc": false,
       "gate": {
@@ -2581,7 +2590,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
@@ -2628,7 +2637,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
@@ -2675,7 +2684,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -2722,7 +2731,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -2769,7 +2778,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
@@ -2816,7 +2825,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
@@ -2863,7 +2872,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -2910,7 +2919,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
@@ -2957,7 +2966,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 81,
       "dc": false,
       "gate": {
@@ -3005,7 +3014,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-24T14:49:28+00:00",
+      "checked_at": "2026-10-24T15:01:09+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
