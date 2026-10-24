@@ -139,6 +139,23 @@
    "tip": "2:45 PM",
    "venue": "Kalshi"
   },
+  "ita:401875036|away|Kalshi": {
+   "dec": 8.5543,
+   "ev": 0.0305,
+   "fair": 0.1205,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ita:401875036",
+   "kind": "value",
+   "league": "ita",
+   "match": "FIO @ INT",
+   "price": "+755",
+   "seen": "2026-10-24T06:01:11+00:00",
+   "side": "away",
+   "start": "2026-10-25T11:30Z",
+   "team": "Fiorentina",
+   "tip": "7:30 AM",
+   "venue": "Kalshi"
+  },
   "mlb:401908042|away|FanDuel": {
    "dec": 2.64,
    "ev": 0.048,
@@ -1028,6 +1045,23 @@
    "start": "2026-10-25T00:30Z",
    "team": "Houston Rockets",
    "tip": "8:30 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909858|home|FanDuel": {
+   "dec": 5.6,
+   "ev": 0.0185,
+   "fair": 0.1819,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909858",
+   "kind": "value",
+   "league": "nba",
+   "match": "SA @ DAL",
+   "price": "+460",
+   "seen": "2026-10-24T06:01:11+00:00",
+   "side": "home",
+   "start": "2026-10-25T00:00Z",
+   "team": "Dallas Mavericks",
+   "tip": "8:00 PM",
    "venue": "FanDuel"
   },
   "nba:401909860|away|FanDuel": {
@@ -2016,6 +2050,35 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|efl1:401880200:away|nba:401909858:home": {
+   "ev": 0.0487,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0185,
+     "fair": 0.1819,
+     "id": "nba:401909858",
+     "price": "+460",
+     "side": "home",
+     "spec": null,
+     "team": "Dallas Mavericks"
+    },
+    {
+     "ev": 0.0293,
+     "fair": 0.2238,
+     "id": "efl1:401880200",
+     "price": "+360",
+     "side": "away",
+     "spec": null,
+     "team": "Derby County"
+    }
+   ],
+   "payout": 25.76,
+   "prob": 0.0407,
+   "seen": "2026-10-24T06:01:11+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|efl1:401880200:away|nba:401909860:away": {
    "ev": 0.0442,
    "kind": "parlay",
@@ -2406,6 +2469,26 @@
    "payout": 6.615,
    "prob": 0.1549,
    "seen": "2026-10-24T04:42:19+00:00",
+   "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909858:home": {
+   "ev": 0.0186,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0185,
+     "fair": 0.1819,
+     "id": "nba:401909858",
+     "price": "+460",
+     "side": "home",
+     "spec": null,
+     "team": "Dallas Mavericks"
+    }
+   ],
+   "payout": 5.6,
+   "prob": 0.1819,
+   "seen": "2026-10-24T06:01:11+00:00",
    "target": 5.0,
    "venue": "FanDuel"
   },
