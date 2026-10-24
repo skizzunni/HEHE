@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 2.0,
-   "beat": 75.0,
-   "n": 12
+   "avg": 1.5,
+   "beat": 66.7,
+   "n": 15
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3453,6 +3453,14 @@
    "won": 0
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "epl",
+    "pick": "Manchester City",
+    "price": "-550",
+    "said": 80,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 80%"
+   },
    {
     "against_market": false,
     "league": "jpn",
@@ -3545,12 +3553,12 @@
    }
   ],
   "picks": {
-   "hit": 83.3,
-   "lost": 2,
-   "n": 12,
-   "roi": 7.9,
+   "hit": 80.0,
+   "lost": 3,
+   "n": 15,
+   "roi": 4.7,
    "said": 72.2,
-   "won": 10
+   "won": 12
   },
   "picks_by_league": {
    "aus": {
@@ -3568,6 +3576,30 @@
     "roi": 21.1,
     "said": 78.0,
     "won": 1
+   },
+   "efl1": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 38.5,
+    "said": 67.0,
+    "won": 1
+   },
+   "efl2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 36.4,
+    "said": 69.0,
+    "won": 1
+   },
+   "epl": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 80.0,
+    "won": 0
    },
    "ger2": {
     "hit": 100.0,
@@ -3630,11 +3662,11 @@
    },
    "agree": {
     "hit": 68.4,
-    "lost": 126,
-    "n": 399,
+    "lost": 127,
+    "n": 402,
     "roi": -3.0,
-    "said": 66.1,
-    "won": 273
+    "said": 66.2,
+    "won": 275
    }
   },
   "weights": {
