@@ -817,6 +817,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26OCT24BAYKU-BAY3"
   },
+  "KXNCAAFSPREAD-26OCT24BAYKU-KU2|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401856834",
+   "label": "Baylor Bears +1.5",
+   "league": "ncaaf",
+   "match": "BAY @ KU",
+   "posted": "2026-10-24T15:48:41+00:00",
+   "queue": 180744.65,
+   "side": "NO",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Baylor Bears"
+   },
+   "start": "2026-10-24T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26OCT24BAYKU-KU2"
+  },
   "KXNCAAFSPREAD-26OCT24BSUWSU-BSU14|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -2083,6 +2105,27 @@
    "start": "2026-10-24T17:00Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT24BAYKU-54"
+  },
+  "KXNCAAFTOTAL-26OCT24BGSUBUFF-45|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401866448",
+   "label": "under 44.5",
+   "league": "ncaaf",
+   "match": "BGSU @ BUFF",
+   "posted": "2026-10-24T15:48:41+00:00",
+   "queue": 9367.18,
+   "side": "NO",
+   "spec": {
+    "line": 44.5,
+    "t": "under"
+   },
+   "start": "2026-10-24T19:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT24BGSUBUFF-45"
   },
   "KXNCAAFTOTAL-26OCT24BSUWSU-53|NO": {
    "ask": 0.51,
