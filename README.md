@@ -3185,3 +3185,41 @@ that file, and the Results tab shows it under "Self-tuning".
 - The tuner can only choose among picks the board already priced honestly,
   or leave some out. It never raises a stated chance or softens a standard.
 - New exhibition games are tagged every build (`tools/tag_preseason.py`).
+
+## Every product audited daily; prop-market bench rejected (2026-10-24)
+
+The daily review's drift audit used to cover only props, Locks and tennis.
+It now also covers:
+
+- Safe Locks, by league and kind
+- the daily calls
+- Prop Locks
+- value bets (against their sportsbook-fair chance)
+- the Kalshi maker bids that would have filled
+
+Any split trailing its stated chance by more than two standard errors is
+flagged in the Results "Checks" box. On 2026-10-24 nothing is flagged:
+
+| product | N | won | stated |
+|---|---|---|---|
+| daily calls | 17 | 88.2% | 80.3% |
+| Prop Locks | 18 | 94.4% | 91.9% |
+| value bets | 44 | 45.5% | 45.5% |
+| maker fills | 37 | 59.5% | 54.3% |
+
+The value bets matching their fair chance means their +5.8% return comes
+from the price, as designed. Safe Locks NHL legs (23 of 28 against 91.4%
+stated, -13.6%) are not yet beyond chance, and all five losses were
+genuine blowouts. They stay under watch.
+
+Rejected: benching prop markets the way calls bench sports. In a
+walk-forward test (each day benched from the previous 28 days only), the
+markets the rule would have benched returned -7.5% on the next day,
+against -9.4% for those it kept. Every prop market loses about the same
+amount (priced at 84.7%, won 77.6%), which is the books' margin, so
+choosing among markets cannot help.
+
+FanDuel's NBA milestone props are priced as about 92% likely and have won
+82% (N 297). The box scores confirm the losses were real (every player
+played). No other side of those props can be bet, so they stay a reason to
+keep NBA props out of anything sold as "safe".

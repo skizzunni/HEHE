@@ -307,6 +307,15 @@ class Props(unittest.TestCase):
         props = {str(i): dict(league="uel", market="Shots", status="lost", p=0.85) for i in range(30)}
         self.assertEqual([a for a in R.audit([], props, {"legs": {}}) if "Shots" in a["name"]], [])
 
+    def test_audit_covers_calls_and_prop_locks(self):
+        import daily_review as R
+        calls = [dict(league="nhl", call=True, conf=85, status="lost") for _ in range(12)]
+        props = {str(i): dict(league="nhl", market="Points", status="lost", p=0.9, prop_lock=True)
+                 for i in range(12)}
+        got = {a["name"]: a["flag"] for a in R.audit(calls, props, {"legs": {}})}
+        self.assertTrue(got.get("daily calls"))
+        self.assertTrue(got.get("prop locks"))
+
     def test_fanduel_prop_names_gradable(self):
         import fd_props
         for sport, pats in fd_props.STATS.items():

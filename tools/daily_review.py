@@ -418,6 +418,35 @@ def audit(graded, props, locks):
         kinds.setdefault(f'locks {v.get("league")} {k}', []).append(v)
     for k, vs in sorted(kinds.items()):
         line(k, vs, lambda v: v.get("p"), lambda v: v["status"] == "won")
+    # every other product with a stated (or sportsbook-fair) chance, so no
+    # card can drift unseen: Safe Locks by league and kind, the daily calls,
+    # Prop Locks, value bets and the Kalshi maker bids that would have filled
+    def _load(name):
+        try:
+            with open(os.path.join(HERE, "..", name)) as fh:
+                return json.load(fh)
+        except (OSError, ValueError):
+            return {}
+    safe = {}
+    for v in (_load("safe_locks.json").get("legs") or {}).values():
+        if v.get("status") not in ("won", "lost"):
+            continue
+        t = (v.get("spec") or {}).get("t") or ""
+        k = "prop" if v.get("kind") == "prop" else "under" if "under" in t else "over" if "over" in t else "side"
+        safe.setdefault(f'safe locks {v.get("league")} {k}', []).append(v)
+    for k, vs in sorted(safe.items()):
+        line(k, vs, lambda v: v.get("p"), lambda v: v["status"] == "won")
+    line("daily calls", [e for e in graded if e.get("call") and not e.get("call_pulled")],
+         lambda e: (e.get("call_conf") or e.get("conf") or 0) / 100, lambda e: e["status"] == "won")
+    line("prop locks", [e for e in props.values() if isinstance(e, dict) and e.get("prop_lock")
+                        and e.get("status") in ("won", "lost")],
+         lambda e: e.get("p"), lambda e: e["status"] == "won")
+    line("value bets", [f for f in (_load("value.json").get("finds") or {}).values()
+                        if f.get("kind") == "value" and f.get("status") in ("won", "lost")],
+         lambda f: f.get("fair"), lambda f: f["status"] == "won")
+    line("kalshi maker bids (filled)", [b for b in (_load("maker.json").get("bids") or {}).values()
+                                         if b.get("status") == "graded" and b.get("fill")],
+         lambda b: b.get("fair"), lambda b: bool(b.get("won")))
     return out
 
 
