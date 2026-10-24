@@ -3335,3 +3335,32 @@ call it an edge.
   swings. A bankroll box on the Calls tab turns the percentages into
   dollars; the bankroll is stored only in that browser. Example with $500:
   a 52% fair at 2.02 stakes $6.18, and a 17% longshot at 6.0 stakes $0.80.
+
+## Bankroll challenge planner (2026-10-24)
+
+The Targets tab now opens with a planner for a challenge such as
+"$100 to $1,000 in 7 days". Start, target and days are editable and kept in
+the browser. The rules: one ticket a day, all winnings rolled into the
+next, and one loss ends the run.
+
+It is built from that day's actual best ticket at each payout size: the
+highest estimated cash chance at any leg standard, at the boost selected on
+the tab. For each size it shows how many wins in a row reach the target and
+the chance of all of them landing. It also searches every mix of sizes,
+since order does not matter, for the most likely route.
+
+On 2026-10-24 at 3 PM, from $100 to $1,000:
+
+| route | wins needed | chance |
+|---|---|---|
+| 2x tickets (45.6% each) | 4 | 4.3% |
+| 3x tickets | 3 | 2.5% |
+| 5x tickets | 2 | 2.6% |
+| best mix: 2x then 5x (to $1,006) | 2 | **7.3%** |
+
+Even the best route means a 92.7% chance of losing the $100. Each ticket
+returns about -8% per $1 on average, so the challenge loses money on
+average unless a sportsbook profit boost lifts it. The planner says so on
+the page. A ticket that pays 10x can only cash about 1 time in 11, whoever
+picks its legs: high payout and high chance cannot be had together. What
+the board does is give the highest chance for each payout.

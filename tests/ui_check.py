@@ -200,7 +200,8 @@ def main():
         fails.append("Results must list each tested change with both directions: " + new["results"][-300:])
     tg = new["targets"]
     for want in ("cash chance (est.)", "55.8%", "Unavailable at 80%+ legs", "most a ticket of those legs can pay today is 2.74x",
-                 "at a lower standard (75%+ legs)", "What 80%+ legs have done", "1151", "supported"):
+                 "at a lower standard (75%+ legs)", "What 80%+ legs have done", "1151", "supported",
+                 "Bankroll challenge", "wins in a row", "chance of losing"):
         if want not in tg:
             fails.append("Targets tab missing: " + want + " | " + tg[:300])
             break
