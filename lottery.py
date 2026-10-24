@@ -467,7 +467,12 @@ def report():
             if L["status"] in ("won", "lost")]
     tickets = [t for d in book["days"].values() for t in d["tickets"]]
     done = [t for t in tickets if t.get("status") in ("won", "lost")]
-    ed = [L for L in legs if L.get("value", 0) > 1]
+    # one bet per leg: the same leg sits on several tickets, and counting it
+    # once per ticket (until 2026-10-24) made 98 bets read as 204 and the
+    # return +30.2% instead of +17.9%
+    ed = list({(d, L.get("gid"), L.get("label")): L for d, v in book["days"].items()
+               for t in v["tickets"] for L in t["legs"]
+               if L["status"] in ("won", "lost") and L.get("value", 0) > 1}.values())
     ret = sum((L["dec"] - 1) if L["status"] == "won" else -1 for L in ed)
     return dict(edge_legs=len(ed), edge_won=sum(L["status"] == "won" for L in ed),
                 edge_said=round(100 * sum(L["p"] for L in ed) / len(ed), 1) if ed else None,

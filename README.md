@@ -3300,3 +3300,22 @@ recorded, so their touches stay touches.
 
 So far: certain fills 15 of 20 won, +40.9% (N 20). That is still too few to
 call it an edge.
+
+## Lottery edge-leg count fixed; two ideas rejected (2026-10-24)
+
+- **Fixed:** the Lottery's "edge legs" record counted a leg once per ticket
+  it sat on, so 98 bets read as 204 and the return as +30.2%. Counted once
+  each, it is 58 of 98, +17.9%. All of that came from the first half of
+  the dates (+28.7%, N 64); the second half returned -2.4% (N 34), so it is
+  not a stable edge.
+- **Rejected: unders.** In the Lottery, NCAAF, NFL and NBA unders won 32 of
+  49, and "the public bets overs, so unders are underpriced" is a familiar
+  story. On the 18,735-leg Kalshi archive, unders at 30-70c bought at the
+  ask returned -3.8% (N 826) and -11.8% (N 1,055) in the two halves; bought
+  at the bid, +2.1% and -6.8%. Overs: -7.6% and +0.6%. There is no unders
+  edge on Kalshi totals, so the Lottery run was noise.
+- **Rejected: bidding one cent above the best bid** to sit first in the
+  queue when the spread is 2c or more. Favourites at 50c+ returned -0.1%
+  and +10.7% in the two halves. Simply joining the best bid on those same
+  wide-spread legs returned +3.4% and +10.6%, so the maker test keeps
+  joining the bid.
