@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 57.3,
-  "brier_close": 0.197,
-  "brier_published": 0.1984,
+  "beat_close_pct": 57.7,
+  "brier_close": 0.1972,
+  "brier_published": 0.1985,
   "dates": [
    "2026-10-17",
    "2026-10-24"
   ],
-  "logloss_close": 0.5839,
-  "logloss_published": 0.5875,
-  "mean_clv_pts": 0.29,
+  "logloss_close": 0.5844,
+  "logloss_published": 0.5878,
+  "mean_clv_pts": 0.31,
   "n": 300
  },
  "market_is_model": true,
@@ -1449,6 +1449,15 @@
    "published": 0.77,
    "won": 1
   },
+  "efl1:401880202": {
+   "call": false,
+   "close": 0.7614,
+   "clv": 3.14,
+   "day": "2026-10-24",
+   "league": "efl1",
+   "published": 0.73,
+   "won": 1
+  },
   "efl1:401880203": {
    "call": false,
    "close": 0.6721,
@@ -1475,6 +1484,15 @@
    "league": "efl1",
    "published": 0.81,
    "won": 1
+  },
+  "efl1:401880208": {
+   "call": false,
+   "close": 0.6918,
+   "clv": 4.18,
+   "day": "2026-10-24",
+   "league": "efl1",
+   "published": 0.65,
+   "won": 0
   },
   "efl1:401880209": {
    "call": false,
@@ -15273,6 +15291,24 @@
    "published": 0.538,
    "won": 0
   },
+  "sco2:401878539": {
+   "call": false,
+   "close": 0.6723,
+   "clv": 2.23,
+   "day": "2026-10-24",
+   "league": "sco2",
+   "published": 0.65,
+   "won": 1
+  },
+  "sco2:401878540": {
+   "call": false,
+   "close": 0.6813,
+   "clv": -1.87,
+   "day": "2026-10-24",
+   "league": "sco2",
+   "published": 0.7,
+   "won": 1
+  },
   "sco2:401878542": {
    "call": false,
    "close": 0.7286,
@@ -15321,6 +15357,33 @@
    "league": "sco2",
    "published": 0.679,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 1
+  },
+  "sco:401878357": {
+   "call": false,
+   "close": 0.6776,
+   "clv": -0.24,
+   "day": "2026-10-24",
+   "league": "sco",
+   "published": 0.68,
+   "won": 1
+  },
+  "sco:401878361": {
+   "call": false,
+   "close": 0.738,
+   "clv": -1.2,
+   "day": "2026-10-24",
+   "league": "sco",
+   "published": 0.75,
+   "won": 1
+  },
+  "sco:401878362": {
+   "call": false,
+   "close": 0.7344,
+   "clv": 2.44,
+   "day": "2026-10-24",
+   "league": "sco",
+   "published": 0.71,
    "won": 1
   },
   "sco:401878363": {
@@ -16794,5 +16857,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-24T15:51+00:00"
+ "updated": "2026-10-24T15:58+00:00"
 }

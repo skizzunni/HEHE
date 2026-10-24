@@ -1,13 +1,14 @@
 # Review 2026-10-24
 
-Picks 20-5 (80.0% vs 73.6% claimed, ROI +3.1%).
-Closing line value: +0.91 points on 25 picks; beat the close on 56.0%.
+Picks 26-6 (81.2% vs 73.0% claimed, ROI +5.4%).
+Closing line value: +0.84 points on 32 picks; beat the close on 53.1%.
+- LOST efl1 Wrexham at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST epl Manchester City at 80%: margin 1 · the book had my side favoured too · called at 80%
 - LOST esp Rayo Vallecano at 78%: margin 3 · the book had my side favoured too · called at 78%
 - LOST ger Mainz at 77%: margin 1 · the book had my side favoured too · called at 77%
 - LOST jpn Avispa Fukuoka at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Kashima Antlers at 69%: margin 1 · the book had my side favoured too · called at 69%
-With the market 68.7% (412); against it 30.0% (20).
+With the market 69.0% (419); against it 30.0% (20).
 Locks 0/11 won, 11 open; Best play top 2 (59%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (0/9 legs won)

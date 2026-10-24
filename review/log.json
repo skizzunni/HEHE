@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.91,
-   "beat": 56.0,
-   "n": 25
+   "avg": 0.84,
+   "beat": 53.1,
+   "n": 32
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3453,6 +3453,14 @@
    "won": 0
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "efl1",
+    "pick": "Wrexham",
+    "price": "-270",
+    "said": 69,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 69%"
+   },
    {
     "against_market": false,
     "league": "epl",
@@ -3569,12 +3577,12 @@
    }
   ],
   "picks": {
-   "hit": 80.0,
-   "lost": 5,
-   "n": 25,
-   "roi": 3.1,
-   "said": 73.6,
-   "won": 20
+   "hit": 81.2,
+   "lost": 6,
+   "n": 32,
+   "roi": 5.4,
+   "said": 73.0,
+   "won": 26
   },
   "picks_by_league": {
    "aus": {
@@ -3594,12 +3602,12 @@
     "won": 1
    },
    "efl1": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": 30.6,
-    "said": 72.0,
-    "won": 3
+    "hit": 80.0,
+    "lost": 1,
+    "n": 5,
+    "roi": 3.1,
+    "said": 72.2,
+    "won": 4
    },
    "efl2": {
     "hit": 100.0,
@@ -3657,6 +3665,22 @@
     "said": 70.2,
     "won": 3
    },
+   "sco": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 3,
+    "roi": 30.9,
+    "said": 72.0,
+    "won": 3
+   },
+   "sco2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 2,
+    "roi": 39.8,
+    "said": 67.5,
+    "won": 2
+   },
    "swe": {
     "hit": 100.0,
     "lost": 0,
@@ -3709,12 +3733,12 @@
     "won": 6
    },
    "agree": {
-    "hit": 68.7,
-    "lost": 129,
-    "n": 412,
-    "roi": -2.9,
-    "said": 66.4,
-    "won": 283
+    "hit": 69.0,
+    "lost": 130,
+    "n": 419,
+    "roi": -2.6,
+    "said": 66.5,
+    "won": 289
    }
   },
   "weights": {

@@ -3070,6 +3070,39 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|ncaaf:401864526:{\"line\": 3.5, \"t\": \"spread\", \"team\": \"Northern Illinois Huskies\"}|ncaaf:401871093:away": {
+   "ev": 0.0279,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0157,
+     "fair": 0.1722,
+     "id": "ncaaf:401871093",
+     "price": "+490",
+     "side": "away",
+     "spec": null,
+     "team": "Old Dominion Monarchs"
+    },
+    {
+     "ev": 0.0117,
+     "fair": 0.5182,
+     "id": "ncaaf:401864526",
+     "price": "-105",
+     "side": "{\"line\": 3.5, \"t\": \"spread\", \"team\": \"Northern Illinois Huskies\"}",
+     "spec": {
+      "line": 3.5,
+      "t": "spread",
+      "team": "Northern Illinois Huskies"
+     },
+     "team": "Northern Illinois Huskies +3.5"
+    }
+   ],
+   "payout": 11.519,
+   "prob": 0.0892,
+   "seen": "2026-10-24T15:53:52+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|ncaaf:401871093:away": {
    "ev": 0.026,
    "kind": "parlay",
