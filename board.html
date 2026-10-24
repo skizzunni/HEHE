@@ -1723,6 +1723,7 @@ function challengeHTML(rows){
           + '&times;, ' + r.legs + ' legs)</td><td>' + r.k + '</td><td>' + pc(r.p) + '</td><td>'
           + (r.k === 0 ? 'already there' : r.fits ? '<b>' + pc(r.chance) + '</b>' : 'needs ' + r.k + ' days')
           + '</td><td>' + usd(r.end) + '</td></tr>').join('') + '</table>')
+    + challengeToday(rows, mix, top)
     + (mix && mix.used.length && (!top || mix.p > top.chance + 1e-12)
       ? '<p class="note">Best mix today: <b>' + mix.used.map(r => r.m + '&times;').join(' then ') + ' &mdash; '
         + pc(mix.p) + ' to reach ' + usd(c.start * mix.mult) + '</b> (' + mix.used.length + ' wins in a row; the order does not matter).</p>' : '')
@@ -1732,6 +1733,22 @@ function challengeHTML(rows){
            + '&mdash; a boost (pills below) is the only thing that turns that around.'
            : 'With this boost each ticket returns +' + (100 * top.ev).toFixed(1) + '% per $1 on average.') + '</p>'
       : '') + challengeBoosts() + challengeTrack() + '</div>';
+}
+// Today's step on the best route: its likeliest ticket of the first size,
+// legs listed, ready to copy. (The route's other tickets are played on later
+// days, from those days' boards.)
+function challengeToday(rows, mix, top){
+  const route = mix && mix.used.length ? mix.used : top ? [top] : [];
+  if(!route.length) return '';
+  const m = Math.min(...route.map(r => r.m));
+  const t = rows.filter(r => r.target === m && r.legs && r.legs.length).sort((a, b) => b.prob - a.prob)[0];
+  if(!t) return '';
+  return '<div class="parlays" style="margin:10px 0"><b>Today&rsquo;s ticket for this route: ' + m + '&times;</b> &mdash; '
+    + (100 * t.prob).toFixed(1) + '% est. to cash, pays ' + t.total.toFixed(2) + '&times; ('
+    + Math.round(100 * t.standard) + '%+ legs)'
+    + '<ul class="legs">' + t.legs.map(x => legHTML(x, {})).join('') + '</ul>'
+    + copyBtn('Challenge ticket (' + m + 'x, pays ' + t.total.toFixed(2) + 'x)', t.legs.map(x => legLine(x.label, x.price, null, x.match)))
+    + '</div>';
 }
 // The best route at every boost level, side by side: a sportsbook profit
 // boost is the one thing that turns a ticket's expected return positive.
