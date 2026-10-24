@@ -943,6 +943,7 @@
    "seen": "2026-10-23T13:37:24+00:00",
    "side": "away",
    "start": "2026-10-24T02:00Z",
+   "status": "won",
    "team": "Portland Trail Blazers",
    "tip": "10:00 PM",
    "venue": "FanDuel"
@@ -2115,6 +2116,7 @@
    "payout": 2.378,
    "prob": 0.4298,
    "seen": "2026-10-23T19:58:33+00:00",
+   "status": "won",
    "target": 2.0,
    "venue": "FanDuel"
   },
@@ -2199,7 +2201,57 @@
    "payout": 2.442,
    "prob": 0.4195,
    "seen": "2026-10-23T20:40:45+00:00",
+   "status": "won",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909856:away": {
+   "ev": 0.0103,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0104,
+     "fair": 0.4811,
+     "id": "nba:401909856",
+     "price": "+110",
+     "side": "away",
+     "spec": null,
+     "team": "Houston Rockets"
+    }
+   ],
+   "payout": 2.1,
+   "prob": 0.4811,
+   "seen": "2026-10-24T04:42:19+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909856:away|nba:401909860:away": {
+   "ev": 0.0248,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0142,
+     "fair": 0.322,
+     "id": "nba:401909860",
+     "price": "+215",
+     "side": "away",
+     "spec": null,
+     "team": "Golden State Warriors"
+    },
+    {
+     "ev": 0.0104,
+     "fair": 0.4811,
+     "id": "nba:401909856",
+     "price": "+110",
+     "side": "away",
+     "spec": null,
+     "team": "Houston Rockets"
+    }
+   ],
+   "payout": 6.615,
+   "prob": 0.1549,
+   "seen": "2026-10-24T04:42:19+00:00",
+   "target": 5.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909860:away": {
