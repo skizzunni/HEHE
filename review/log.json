@@ -3351,17 +3351,17 @@
    },
    {
     "flag": false,
-    "hit": 46.2,
-    "n": 91,
+    "hit": 45.7,
+    "n": 94,
     "name": "value bets",
-    "said": 45.2
+    "said": 45.3
    },
    {
     "flag": false,
-    "hit": 53.5,
-    "n": 71,
+    "hit": 52.8,
+    "n": 72,
     "name": "kalshi maker bids (filled)",
-    "said": 52.8
+    "said": 52.7
    }
   ],
   "calls": {
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.42,
-   "beat": 50.4,
-   "n": 131
+   "avg": 0.44,
+   "beat": 50.8,
+   "n": 132
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3668,6 +3668,14 @@
    {
     "against_market": false,
     "league": "ncaaf",
+    "pick": "Georgia State Panthers",
+    "price": "-142",
+    "said": 57,
+    "why": "margin 6 \u00b7 the book had my side favoured too \u00b7 called at 57%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
     "pick": "Louisiana Ragin' Cajuns",
     "price": "-470",
     "said": 81,
@@ -3747,7 +3755,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3768,7 +3776,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3801,7 +3809,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+25",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -3812,7 +3820,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+50",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -3823,15 +3831,15 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+100",
-    "won": 2
+    "won": 3
    }
   ],
   "picks": {
-   "hit": 74.0,
-   "lost": 34,
-   "n": 131,
-   "roi": 0.4,
-   "said": 71.2,
+   "hit": 73.5,
+   "lost": 35,
+   "n": 132,
+   "roi": -0.4,
+   "said": 71.1,
    "won": 97
   },
   "picks_by_league": {
@@ -4012,11 +4020,11 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 69.7,
-    "lost": 10,
-    "n": 33,
-    "roi": -0.2,
-    "said": 71.4,
+    "hit": 67.6,
+    "lost": 11,
+    "n": 34,
+    "roi": -3.2,
+    "said": 71.0,
     "won": 23
    },
    "nhl": {
@@ -4159,10 +4167,10 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.5,
-    "lost": 158,
-    "n": 518,
-    "roi": -2.4,
+    "hit": 69.4,
+    "lost": 159,
+    "n": 519,
+    "roi": -2.5,
     "said": 67.3,
     "won": 360
    }
@@ -4171,10 +4179,10 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6469,
-    "market_only": 0.6664,
-    "model_40": 0.6469,
-    "n": 97,
+    "logloss": 0.6475,
+    "market_only": 0.6682,
+    "model_40": 0.6475,
+    "n": 98,
     "weight": 0.4
    },
    "nhl": {

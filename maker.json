@@ -1856,6 +1856,7 @@
    "cost": 0.5144,
    "edge": 0.0162,
    "fair": 0.5227,
+   "fill": "strict",
    "id": "ncaaf:401858276",
    "label": "Clemson Tigers -2.5",
    "league": "ncaaf",
@@ -1868,8 +1869,9 @@
     "team": "Clemson Tigers"
    },
    "start": "2026-10-24T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24VTCLEM-CLEM3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24VTCLEM-CLEM3",
+   "won": 0
   },
   "KXNCAAFSPREAD-26OCT24WMUTOL-TOL3|YES": {
    "ask": 0.51,
@@ -3750,6 +3752,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401858276",
    "label": "over 48.5",
    "league": "ncaaf",
@@ -3762,8 +3765,9 @@
     "t": "over"
    },
    "start": "2026-10-24T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24VTCLEM-49"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24VTCLEM-49",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24VTCLEM-51|NO": {
    "ask": 0.51,
@@ -3771,6 +3775,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401858276",
    "label": "under 50.5",
    "league": "ncaaf",
@@ -3783,8 +3788,9 @@
     "t": "under"
    },
    "start": "2026-10-24T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24VTCLEM-51"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24VTCLEM-51",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24WMUTOL-48|NO": {
    "ask": 0.51,
