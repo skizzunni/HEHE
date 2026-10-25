@@ -1,15 +1,15 @@
 # Review 2026-10-25
 
-Picks 41-6 (87.2% vs 72.4% claimed, ROI +13.3%).
+Picks 43-6 (87.8% vs 72.3% claimed, ROI +14.1%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
-Closing line value: +0.7 points on 47 picks; beat the close on 55.3%.
+Closing line value: +0.74 points on 49 picks; beat the close on 57.1%.
 - LOST aut LASK Linz at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST chi Coquimbo Unido at 68%: margin 1 · the book had my side favoured too · called at 68%
 - LOST epl Manchester United at 67%: margin 3 · the book had my side favoured too · called at 67%
 - LOST epl Crystal Palace at 64%: margin 2 · the book had my side favoured too · called at 64%
 - LOST ger Bayer Leverkusen at 70%: margin 3 · the book had my side favoured too · called at 70%
 - LOST uru Montevideo Wanderers at 72%: margin 1 · the book had my side favoured too · called at 72%
-With the market 71.7% (552); against it 20.0% (10).
+With the market 71.8% (554); against it 20.0% (10).
 Locks 1/11 won, 10 open; Best play top 3 (55%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 5 (82%) open; Best play top 11 (53%) open.
 Lottery 10k: open (0/11 legs won)
