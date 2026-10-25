@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 93-31 (75.0% vs 71.5% claimed, ROI +1.2%).
-Closing line value: +0.44 points on 124 picks; beat the close on 50.0%.
+Picks 94-33 (74.0% vs 71.4% claimed, ROI +0.2%).
+Closing line value: +0.41 points on 127 picks; beat the close on 49.6%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST bra2 Fortaleza at 76%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76%
 - LOST bra Fluminense at 75%: margin 1 · the book had my side favoured too · called at 75%
@@ -18,6 +18,7 @@ Closing line value: +0.44 points on 124 picks; beat the close on 50.0%.
 - LOST jpn Avispa Fukuoka at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Kashima Antlers at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST mls Inter Miami CF at 70%: margin 2 · the book had my side favoured too · called at 70%
+- LOST mls Philadelphia Union at 82%: margin 1 · the book had my side favoured too · called at 82%
 - LOST nba Miami Heat at 62%: margin 5 · the book had my side favoured too · called at 62%
 - LOST ncaaf BYU Cougars at 74%: margin 8 · the book had my side favoured too · called at 74%
 - LOST ncaaf Kansas State Wildcats at 52%: margin 11 · the book had my side favoured too · called at 52%
@@ -30,10 +31,11 @@ Closing line value: +0.44 points on 124 picks; beat the close on 50.0%.
 - LOST ncaaf Troy Trojans at 85%: margin 7 · the book had my side favoured too · called at 85%
 - LOST nhl Philadelphia Flyers at 53%: margin 1 · the book had my side favoured too · called at 53%
 - LOST nhl Vegas Golden Knights at 55%: margin 1 · the book had my side favoured too · called at 55%
+- LOST nhl Edmonton Oilers at 57%: margin 5 · the book had my side favoured too · called at 57%
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.7% (511); against it 30.0% (20).
+With the market 69.5% (514); against it 30.0% (20).
 Locks 4/11 won, 4 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20; Edmonton Oilers over 2.5 goals (Toronto Maple Leafs at Edmonton Oilers) Toronto Maple Leafs 7 - Edmonton Oilers 2.
 Safe Locks 7/11 won, 4 open; Winners parlay top 2 (85%) won; Best play top 8 (50%) open.
 Lottery 100: open (3/9 legs won)
@@ -46,7 +48,7 @@ Lottery 10k+25: lost (3/11 legs won, killed by Washington State Cougars to win)
 Lottery 10k+50: lost (3/11 legs won, killed by Washington State Cougars to win)
 Lottery 10k+100: lost (1/10 legs won, killed by Washington State Cougars to win)
 Ladder-consistency props (all time): 450/547 won (82.3%) vs 87.3% fair, 88.0% price.
-Props 41/58 vs 76.1% claimed.
+Props 50/68 vs 76.6% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=95), nhl 0.00 (n=57)
+Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=95), nhl 0.00 (n=59)

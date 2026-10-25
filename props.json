@@ -2124,7 +2124,8 @@
   "p": 0.8989,
   "p_fair": null,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "mls:761900|181299|Goalkeeper Saves|2+": {
   "aid": "181299",
@@ -9934,6 +9935,22 @@
   "p": 0.8454,
   "p_fair": 0.9778,
   "price": "-3500",
+  "status": "open"
+ },
+ "nba:401909860|n:deanthony melton|Pts + Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-10-24",
+  "edge": 3.8,
+  "gid": "nba:401909860",
+  "imp": 0.9333,
+  "label": "De'Anthony Melton: 10+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Pts + Reb + Ast",
+  "name": "De'Anthony Melton",
+  "p": 0.8469,
+  "p_fair": 0.9686,
+  "price": "-1400",
   "status": "open"
  },
  "nba:401909860|n:devin booker|Pts + Ast|20+": {
@@ -20008,11 +20025,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Drake Batherson",
   "p": 0.8559,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892569|n:dylan cozens|Shots on Goal|2+": {
   "aid": null,
@@ -20024,11 +20043,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Dylan Cozens",
   "p": 0.6973,
   "p_fair": null,
   "price": "-295",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892569|n:pavel dorofeyev|Shots on Goal|2+": {
   "aid": null,
@@ -20040,11 +20061,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Pavel Dorofeyev",
   "p": 0.7058,
   "p_fair": null,
   "price": "-305",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892569|n:shane pinto|Shots on Goal|1+": {
   "aid": null,
@@ -20056,11 +20079,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Shane Pinto",
   "p": 0.8479,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892570|n:filip forsberg|Shots on Goal|2+": {
   "aid": null,
@@ -20270,11 +20295,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Connor McDavid",
   "p": 0.8406,
   "p_fair": null,
   "price": "-870",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892574|n:leon draisaitl|Shots on Goal|2+": {
   "aid": null,
@@ -20286,11 +20313,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Leon Draisaitl",
   "p": 0.8386,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nhl:401892574|n:vasily podkolzin|Shots on Goal|1+": {
   "aid": null,
@@ -20302,11 +20331,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Vasily Podkolzin",
   "p": 0.8651,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892574|n:william nylander|Shots on Goal|2+": {
   "aid": null,
@@ -20318,11 +20349,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "William Nylander",
   "p": 0.7218,
   "p_fair": null,
   "price": "-335",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892574|n:zach hyman|Shots on Goal|2+": {
   "aid": null,
@@ -20334,11 +20367,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Zach Hyman",
   "p": 0.7312,
   "p_fair": null,
   "price": "-355",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892575|n:anders lee|Shots on Goal|1+": {
   "aid": null,

@@ -3281,8 +3281,8 @@
    },
    {
     "flag": false,
-    "hit": 79.7,
-    "n": 365,
+    "hit": 79.9,
+    "n": 374,
     "name": "props nhl Shots on Goal",
     "said": 79.8
    },
@@ -3351,10 +3351,10 @@
    },
    {
     "flag": false,
-    "hit": 46.3,
-    "n": 82,
+    "hit": 46.1,
+    "n": 89,
     "name": "value bets",
-    "said": 44.6
+    "said": 45.1
    },
    {
     "flag": false,
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.44,
-   "beat": 50.0,
-   "n": 124
+   "avg": 0.41,
+   "beat": 49.6,
+   "n": 127
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3587,6 +3587,14 @@
    },
    {
     "against_market": false,
+    "league": "mls",
+    "pick": "Philadelphia Union",
+    "price": "-650",
+    "said": 82,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 82%"
+   },
+   {
+    "against_market": false,
     "league": "nba",
     "pick": "Miami Heat",
     "price": "-180",
@@ -3680,6 +3688,14 @@
     "price": "-135",
     "said": 55,
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 55%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Edmonton Oilers",
+    "price": "-148",
+    "said": 57,
+    "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 57%"
    },
    {
     "against_market": false,
@@ -3797,12 +3813,12 @@
    }
   ],
   "picks": {
-   "hit": 75.0,
-   "lost": 31,
-   "n": 124,
-   "roi": 1.2,
-   "said": 71.5,
-   "won": 93
+   "hit": 74.0,
+   "lost": 33,
+   "n": 127,
+   "roi": 0.2,
+   "said": 71.4,
+   "won": 94
   },
   "picks_by_league": {
    "arg": {
@@ -3966,11 +3982,11 @@
     "won": 1
    },
    "mls": {
-    "hit": 83.3,
-    "lost": 1,
-    "n": 6,
-    "roi": 9.8,
-    "said": 71.2,
+    "hit": 71.4,
+    "lost": 2,
+    "n": 7,
+    "roi": -5.9,
+    "said": 72.7,
     "won": 5
    },
    "nba": {
@@ -3990,12 +4006,12 @@
     "won": 22
    },
    "nhl": {
-    "hit": 71.4,
-    "lost": 2,
-    "n": 7,
-    "roi": 19.1,
-    "said": 56.6,
-    "won": 5
+    "hit": 66.7,
+    "lost": 3,
+    "n": 9,
+    "roi": 12.7,
+    "said": 56.2,
+    "won": 6
    },
    "nor": {
     "hit": 0.0,
@@ -4093,9 +4109,9 @@
     "said_price": 88.0,
     "won": 450
    },
-   "n": 58,
-   "said": 76.1,
-   "won": 41
+   "n": 68,
+   "said": 76.6,
+   "won": 50
   },
   "safe_locks": {
    "lost": [],
@@ -4129,12 +4145,12 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.7,
-    "lost": 155,
-    "n": 511,
-    "roi": -2.2,
+    "hit": 69.5,
+    "lost": 157,
+    "n": 514,
+    "roi": -2.4,
     "said": 67.3,
-    "won": 356
+    "won": 357
    }
   },
   "weights": {
@@ -4150,10 +4166,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6588,
-    "market_only": 0.6588,
-    "model_40": 0.6686,
-    "n": 57,
+    "logloss": 0.6616,
+    "market_only": 0.6616,
+    "model_40": 0.6717,
+    "n": 59,
     "weight": 0.0
    }
   }

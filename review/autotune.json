@@ -194,20 +194,20 @@
   },
   "nhl": {
    "benched": false,
-   "hit": 57.5,
+   "hit": 57.4,
    "implied": 59.6,
-   "n": 174,
+   "n": 176,
    "roi": -5.0,
-   "upper95": 64.6,
-   "won": 100
+   "upper95": 64.5,
+   "won": 101
   },
   "soccer": {
    "benched": false,
-   "hit": 79.2,
+   "hit": 78.8,
    "implied": 77.6,
-   "n": 207,
-   "roi": 2.5,
-   "upper95": 84.2,
+   "n": 208,
+   "roi": 2.0,
+   "upper95": 83.8,
    "won": 164
   },
   "ufc": {
@@ -239,30 +239,39 @@
  "value_slices": {
   "FanDuel favourite": {
    "benched": false,
-   "breakeven": 66.3,
-   "hit": 75.0,
-   "n": 8,
-   "roi": 13.8,
-   "upper95": 92.9,
+   "breakeven": 66.5,
+   "hit": 66.7,
+   "n": 9,
+   "roi": 1.1,
+   "upper95": 87.9,
    "won": 6
   },
   "FanDuel longshot": {
    "benched": false,
-   "breakeven": 20.1,
-   "hit": 22.2,
-   "n": 9,
-   "roi": -20.6,
-   "upper95": 54.7,
-   "won": 2
+   "breakeven": 19.9,
+   "hit": 30.0,
+   "n": 10,
+   "roi": 28.5,
+   "upper95": 60.3,
+   "won": 3
   },
   "FanDuel middle": {
    "benched": false,
-   "breakeven": 50.8,
-   "hit": 47.6,
-   "n": 21,
-   "roi": -6.9,
-   "upper95": 67.6,
-   "won": 10
+   "breakeven": 50.7,
+   "hit": 45.8,
+   "n": 24,
+   "roi": -11.4,
+   "upper95": 64.9,
+   "won": 11
+  },
+  "Kalshi favourite": {
+   "benched": false,
+   "breakeven": 60.7,
+   "hit": 100.0,
+   "n": 1,
+   "roi": 64.7,
+   "upper95": 100.0,
+   "won": 1
   },
   "Kalshi longshot": {
    "benched": false,
@@ -276,10 +285,10 @@
   "Kalshi middle": {
    "benched": false,
    "breakeven": 46.0,
-   "hit": 48.6,
-   "n": 37,
-   "roi": 8.3,
-   "upper95": 64.1,
+   "hit": 47.4,
+   "n": 38,
+   "roi": 5.4,
+   "upper95": 62.7,
    "won": 18
   }
  }
