@@ -45,19 +45,19 @@ Closing line value: +0.57 points on 154 picks; beat the close on 50.6%.
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
 With the market 69.3% (541); against it 30.0% (20).
-Locks 6/11 won, 1 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20; Edmonton Oilers over 2.5 goals (Toronto Maple Leafs at Edmonton Oilers) Toronto Maple Leafs 7 - Edmonton Oilers 2; USC Trojans over 18.5 points (USC Trojans at Wisconsin Badgers) USC Trojans 7 - Wisconsin Badgers 24.
+Locks 7/11 won, 0 open; Best play top 2 (59%) won; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20; Edmonton Oilers over 2.5 goals (Toronto Maple Leafs at Edmonton Oilers) Toronto Maple Leafs 7 - Edmonton Oilers 2; USC Trojans over 18.5 points (USC Trojans at Wisconsin Badgers) USC Trojans 7 - Wisconsin Badgers 24.
 Safe Locks 8/11 won, 3 open; Winners parlay top 2 (85%) won; Best play top 8 (50%) open.
-Lottery 100: lost (6/9 legs won, killed by Under 229.5 points, Under 230.5 points)
+Lottery 100: lost (7/9 legs won, killed by Under 229.5 points, Under 230.5 points)
 Lottery 100: open (5/6 legs won)
 Lottery 100: lost (2/6 legs won, killed by Over 55.5 points, Over 55.5 points)
-Lottery 10k: lost (6/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
+Lottery 10k: lost (7/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
 Lottery 10k: lost (5/10 legs won, killed by Michigan Wolverines to win, Over 55.5 points, Over 55.5 points, Navy Midshipmen -7.5)
 Lottery 10k: lost (4/10 legs won, killed by Iowa State Cyclones +3.5, Utah State Aggies to win, Western Michigan Broncos +2.5)
-Lottery 10k+25: lost (6/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
-Lottery 10k+50: lost (6/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
-Lottery 10k+100: lost (5/10 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
-Ladder-consistency props (all time): 507/606 won (83.7%) vs 87.6% fair, 88.4% price.
-Props 115/135 vs 80.9% claimed.
+Lottery 10k+25: lost (7/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
+Lottery 10k+50: lost (7/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
+Lottery 10k+100: lost (6/10 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
+Ladder-consistency props (all time): 510/609 won (83.7%) vs 87.6% fair, 88.5% price.
+Props 120/140 vs 80.8% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=106), nhl 0.00 (n=59)
