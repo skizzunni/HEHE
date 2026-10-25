@@ -3168,8 +3168,8 @@
  "2026-10-24": {
   "clv": {
    "avg": 0.75,
-   "beat": 51.5,
-   "n": 163
+   "beat": 51.2,
+   "n": 164
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3573,11 +3573,12 @@
    {
     "killed_by": [
      "Under 229.5 points",
+     "Over 48.5 points",
      "Washington State Cougars to win",
      "Under 230.5 points"
     ],
     "legs": 11,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 7
@@ -3611,11 +3612,12 @@
    {
     "killed_by": [
      "Under 229.5 points",
+     "Over 48.5 points",
      "Washington State Cougars to win",
      "Under 230.5 points"
     ],
     "legs": 11,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+25",
     "won": 7
@@ -3623,11 +3625,12 @@
    {
     "killed_by": [
      "Under 229.5 points",
+     "Over 48.5 points",
      "Washington State Cougars to win",
      "Under 230.5 points"
     ],
     "legs": 11,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+50",
     "won": 7
@@ -3635,23 +3638,24 @@
    {
     "killed_by": [
      "Under 229.5 points",
+     "Over 48.5 points",
      "Washington State Cougars to win",
      "Under 230.5 points"
     ],
     "legs": 10,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+100",
     "won": 6
    }
   ],
   "picks": {
-   "hit": 73.6,
+   "hit": 73.8,
    "lost": 43,
-   "n": 163,
-   "roi": -0.5,
+   "n": 164,
+   "roi": -0.2,
    "said": 71.0,
-   "won": 120
+   "won": 121
   },
   "picks_by_league": {
    "arg": {
@@ -3831,12 +3835,12 @@
     "won": 6
    },
    "ncaaf": {
-    "hit": 69.0,
+    "hit": 69.8,
     "lost": 13,
-    "n": 42,
-    "roi": -2.2,
-    "said": 71.1,
-    "won": 29
+    "n": 43,
+    "roi": -0.9,
+    "said": 71.0,
+    "won": 30
    },
    "nhl": {
     "hit": 66.7,
@@ -3977,12 +3981,12 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.6,
+    "hit": 69.7,
     "lost": 167,
-    "n": 550,
-    "roi": -2.5,
+    "n": 551,
+    "roi": -2.4,
     "said": 67.5,
-    "won": 383
+    "won": 384
    }
   }
  },
@@ -4179,10 +4183,10 @@
    },
    {
     "flag": false,
-    "hit": 45.0,
-    "n": 111,
+    "hit": 44.6,
+    "n": 112,
     "name": "value bets",
-    "said": 44.8
+    "said": 44.9
    },
    {
     "flag": false,
@@ -4319,20 +4323,20 @@
    "agree": {
     "hit": 70.2,
     "lost": 150,
-    "n": 503,
-    "roi": -1.8,
+    "n": 504,
+    "roi": -1.7,
     "said": 68.2,
-    "won": 353
+    "won": 354
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6407,
-    "market_only": 0.6568,
-    "model_40": 0.6407,
-    "n": 106,
+    "logloss": 0.6398,
+    "market_only": 0.6549,
+    "model_40": 0.6398,
+    "n": 107,
     "weight": 0.4
    },
    "nhl": {
