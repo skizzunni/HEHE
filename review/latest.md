@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 84-30 (73.7% vs 72.2% claimed, ROI -1.8%).
-Closing line value: +0.54 points on 114 picks; beat the close on 51.8%.
+Picks 85-30 (73.9% vs 72.3% claimed, ROI -1.6%).
+Closing line value: +0.55 points on 115 picks; beat the close on 52.2%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST bra2 Fortaleza at 76%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76%
 - LOST bra Fluminense at 75%: margin 1 · the book had my side favoured too · called at 75%
@@ -32,20 +32,20 @@ Closing line value: +0.54 points on 114 picks; beat the close on 51.8%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.3% (501); against it 30.0% (20).
+With the market 69.3% (502); against it 30.0% (20).
 Locks 4/11 won, 5 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
 Safe Locks 3/11 won, 8 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (2/9 legs won)
 Lottery 100: open (3/6 legs won)
 Lottery 100: lost (1/6 legs won, killed by Over 55.5 points)
-Lottery 10k: open (2/11 legs won)
+Lottery 10k: lost (2/11 legs won, killed by Washington State Cougars to win)
 Lottery 10k: lost (3/10 legs won, killed by Michigan Wolverines to win, Over 55.5 points, Navy Midshipmen -7.5)
 Lottery 10k: lost (2/10 legs won, killed by Western Michigan Broncos +2.5)
-Lottery 10k+25: open (3/11 legs won)
-Lottery 10k+50: open (3/11 legs won)
-Lottery 10k+100: open (1/10 legs won)
+Lottery 10k+25: lost (3/11 legs won, killed by Washington State Cougars to win)
+Lottery 10k+50: lost (3/11 legs won, killed by Washington State Cougars to win)
+Lottery 10k+100: lost (1/10 legs won, killed by Washington State Cougars to win)
 Ladder-consistency props (all time): 450/547 won (82.3%) vs 87.3% fair, 88.0% price.
 Props 29/41 vs 74.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=94), nhl 0.00 (n=52)
+Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=95), nhl 0.00 (n=52)
