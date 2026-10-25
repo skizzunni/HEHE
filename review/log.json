@@ -4267,9 +4267,9 @@
    }
   },
   "clv": {
-   "avg": 0.53,
-   "beat": 53.8,
-   "n": 13
+   "avg": 0.49,
+   "beat": 50.0,
+   "n": 14
   },
   "day": "2026-10-25",
   "leaks_14d": [],
@@ -4286,7 +4286,16 @@
    },
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "uru",
+    "pick": "Montevideo Wanderers",
+    "price": "-330",
+    "said": 72,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 72%"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -4330,11 +4339,11 @@
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 13,
-   "roi": 25.1,
-   "said": 75.2,
+   "hit": 92.9,
+   "lost": 1,
+   "n": 14,
+   "roi": 16.2,
+   "said": 74.9,
    "won": 13
   },
   "picks_by_league": {
@@ -4394,6 +4403,14 @@
     "said": 78.0,
     "won": 1
    },
+   "uru": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 72.0,
+    "won": 0
+   },
    "wsl": {
     "hit": 100.0,
     "lost": 0,
@@ -4451,10 +4468,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 71.0,
-    "lost": 150,
-    "n": 518,
-    "roi": -0.9,
+    "hit": 70.9,
+    "lost": 151,
+    "n": 519,
+    "roi": -1.1,
     "said": 68.4,
     "won": 368
    }

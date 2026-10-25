@@ -1,9 +1,10 @@
 # Review 2026-10-25
 
-Picks 13-0 (100.0% vs 75.2% claimed, ROI +25.1%).
+Picks 13-1 (92.9% vs 74.9% claimed, ROI +16.2%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
-Closing line value: +0.53 points on 13 picks; beat the close on 53.8%.
-With the market 71.0% (518); against it 20.0% (10).
+Closing line value: +0.49 points on 14 picks; beat the close on 50.0%.
+- LOST uru Montevideo Wanderers at 72%: margin 1 · the book had my side favoured too · called at 72%
+With the market 70.9% (519); against it 20.0% (10).
 Locks 0/11 won, 11 open; Best play top 3 (55%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 5 (82%) open; Best play top 11 (53%) open.
 Lottery 10k: open (0/11 legs won)
