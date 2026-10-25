@@ -1,15 +1,15 @@
 # Review 2026-10-25
 
-Picks 35-6 (85.4% vs 72.5% claimed, ROI +10.7%).
+Picks 36-6 (85.7% vs 72.4% claimed, ROI +11.2%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
-Closing line value: +0.69 points on 41 picks; beat the close on 53.7%.
+Closing line value: +0.72 points on 42 picks; beat the close on 54.8%.
 - LOST aut LASK Linz at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST chi Coquimbo Unido at 68%: margin 1 · the book had my side favoured too · called at 68%
 - LOST epl Manchester United at 67%: margin 3 · the book had my side favoured too · called at 67%
 - LOST epl Crystal Palace at 64%: margin 2 · the book had my side favoured too · called at 64%
 - LOST ger Bayer Leverkusen at 70%: margin 3 · the book had my side favoured too · called at 70%
 - LOST uru Montevideo Wanderers at 72%: margin 1 · the book had my side favoured too · called at 72%
-With the market 71.4% (546); against it 20.0% (10).
+With the market 71.5% (547); against it 20.0% (10).
 Locks 1/11 won, 10 open; Best play top 3 (55%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 5 (82%) open; Best play top 11 (53%) open.
 Lottery 10k: open (0/11 legs won)
@@ -17,10 +17,10 @@ Lottery 10k: lost (0/8 legs won, killed by Over 41.5 points)
 Lottery 10k+25: open (0/11 legs won)
 Lottery 10k+50: open (0/11 legs won)
 Lottery 10k+100: open (0/10 legs won)
-Lottery 100: open (0/5 legs won)
+Lottery 100: open (1/5 legs won)
 Lottery 100: open (0/11 legs won)
 Ladder-consistency props (all time): 538/639 won (84.2%) vs 87.5% fair, 88.3% price.
-Props 13/19 vs 76.5% claimed.
+Props 15/21 vs 75.0% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=108), nhl 0.00 (n=62)
