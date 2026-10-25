@@ -17,7 +17,7 @@ With the market 71.6% (563); against it 20.0% (10).
 Locks 4/11 won, 7 open; Best play top 3 (55%) won.
 Safe Locks 3/11 won, 7 open; Winners parlay top 5 (82%) lost; Best play top 11 (53%) lost; lost: Jalen Coker: 25+ Receiving Yards (TB @ CAR) 9.
 Lottery 10k: lost (0/11 legs won, killed by New York Jets -9.5)
-Lottery 10k: lost (1/8 legs won, killed by Over 41.5 points, Carolina Panthers -9.5, Indianapolis Colts +2.5)
+Lottery 10k: lost (1/8 legs won, killed by Over 41.5 points, Carolina Panthers -9.5, Indianapolis Colts +2.5, Cleveland Browns over 27.5 points)
 Lottery 10k+25: lost (0/11 legs won, killed by New York Jets -9.5)
 Lottery 10k+50: lost (0/11 legs won, killed by New York Jets -9.5)
 Lottery 10k+100: lost (0/10 legs won, killed by New York Jets -9.5)

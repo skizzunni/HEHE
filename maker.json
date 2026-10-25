@@ -4370,6 +4370,7 @@
    "cost": 0.5144,
    "edge": 0.0162,
    "fair": 0.5227,
+   "fill": "strict",
    "id": "nfl:401873015",
    "label": "New York Jets -3.5",
    "league": "nfl",
@@ -4383,8 +4384,9 @@
     "team": "New York Jets"
    },
    "start": "2026-10-25T17:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26OCT25MIANYJ-NYJ4"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26OCT25MIANYJ-NYJ4",
+   "won": 0
   },
   "KXNFLSPREAD-26OCT25SFATL-SF3|YES": {
    "ask": 0.52,
@@ -4601,6 +4603,27 @@
    "start": "2026-10-25T20:25Z",
    "status": "open",
    "ticker": "KXNFLTOTAL-26OCT25GBDET-56"
+  },
+  "KXNFLTOTAL-26OCT25LARLV-50|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "nfl:401873021",
+   "label": "under 49.5",
+   "league": "nfl",
+   "match": "LAR @ LV",
+   "posted": "2026-10-25T20:07:55+00:00",
+   "queue": 382222.37,
+   "side": "NO",
+   "spec": {
+    "line": 49.5,
+    "t": "under"
+   },
+   "start": "2026-10-25T20:25Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26OCT25LARLV-50"
   },
   "KXNFLTOTAL-26OCT25MIANYJ-40|NO": {
    "ask": 0.52,
