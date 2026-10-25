@@ -3358,8 +3358,8 @@
    },
    {
     "flag": false,
-    "hit": 52.6,
-    "n": 76,
+    "hit": 54.4,
+    "n": 79,
     "name": "kalshi maker bids (filled)",
     "said": 52.6
    }
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.51,
-   "beat": 51.1,
-   "n": 141
+   "avg": 0.48,
+   "beat": 50.3,
+   "n": 143
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3443,10 +3443,11 @@
    "lost": [
     "Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21",
     "TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20",
-    "Edmonton Oilers over 2.5 goals (Toronto Maple Leafs at Edmonton Oilers) Toronto Maple Leafs 7 - Edmonton Oilers 2"
+    "Edmonton Oilers over 2.5 goals (Toronto Maple Leafs at Edmonton Oilers) Toronto Maple Leafs 7 - Edmonton Oilers 2",
+    "USC Trojans over 18.5 points (USC Trojans at Wisconsin Badgers) USC Trojans 7 - Wisconsin Badgers 24"
    ],
    "n": 11,
-   "open": 3,
+   "open": 2,
    "plays": {
     "best": [
      2,
@@ -3684,6 +3685,14 @@
    {
     "against_market": false,
     "league": "ncaaf",
+    "pick": "USC Trojans",
+    "price": "-130",
+    "said": 55,
+    "why": "margin 17 \u00b7 the book had my side favoured too \u00b7 called at 55%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
     "pick": "Georgia State Panthers",
     "price": "-142",
     "said": 57,
@@ -3776,10 +3785,11 @@
    },
    {
     "killed_by": [
+     "Over 55.5 points",
      "Over 55.5 points"
     ],
     "legs": 6,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "100",
     "won": 1
@@ -3800,10 +3810,11 @@
     "killed_by": [
      "Michigan Wolverines to win",
      "Over 55.5 points",
+     "Over 55.5 points",
      "Navy Midshipmen -7.5"
     ],
     "legs": 10,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 4
@@ -3856,12 +3867,12 @@
    }
   ],
   "picks": {
-   "hit": 73.8,
-   "lost": 37,
-   "n": 141,
-   "roi": -0.7,
-   "said": 71.4,
-   "won": 104
+   "hit": 73.4,
+   "lost": 38,
+   "n": 143,
+   "roi": -1.3,
+   "said": 71.3,
+   "won": 105
   },
   "picks_by_league": {
    "arg": {
@@ -4041,12 +4052,12 @@
     "won": 3
    },
    "ncaaf": {
-    "hit": 68.6,
-    "lost": 11,
-    "n": 35,
-    "roi": -2.5,
-    "said": 71.3,
-    "won": 24
+    "hit": 67.6,
+    "lost": 12,
+    "n": 37,
+    "roi": -4.5,
+    "said": 71.1,
+    "won": 25
    },
    "nhl": {
     "hit": 66.7,
@@ -4188,22 +4199,22 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.5,
-    "lost": 161,
-    "n": 528,
-    "roi": -2.6,
+    "hit": 69.4,
+    "lost": 162,
+    "n": 530,
+    "roi": -2.7,
     "said": 67.4,
-    "won": 367
+    "won": 368
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6438,
-    "market_only": 0.6633,
-    "model_40": 0.6438,
-    "n": 99,
+    "logloss": 0.642,
+    "market_only": 0.6601,
+    "model_40": 0.642,
+    "n": 101,
     "weight": 0.4
    },
    "nhl": {
