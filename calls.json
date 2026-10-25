@@ -1177,106 +1177,10 @@
     "mls": "2026-10-24T23:51:26+00:00",
     "nba": "2026-10-25T01:21:20+00:00"
    },
-   "candidate_observations": {
-    "aus:401892152": {
-     "book": "FanDuel",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 82,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T01:57:15+00:00",
-      "conf": 82,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "aus:401892152",
-      "league": "aus",
-      "match": "CCM @ WEL",
-      "pick": "Wellington Phoenix or draw",
-      "price": "-650",
-      "price_at": "2026-10-25T01:52:10+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.188384368:13690600",
-      "prob_at": "2026-10-25T01:56:54+00:00",
-      "rank": null,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "home",
-      "start": "2026-10-25T02:00Z"
-     },
-     "dc": true,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
-     },
-     "id": "aus:401892152",
-     "league": "aus",
-     "match": "CCM @ WEL",
-     "pick": "Wellington Phoenix or draw",
-     "price": "-650",
-     "price_at": "2026-10-25T01:52:10+00:00",
-     "price_market": "double_chance",
-     "price_ref": "736.188384368:13690600",
-     "side": "home",
-     "start": "2026-10-25T02:00Z",
-     "tip": "10:00 PM"
-    },
-    "nba:401909860": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 77,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T01:57:15+00:00",
-      "conf": 77,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (7 listed)"
-      },
-      "id": "nba:401909860",
-      "league": "nba",
-      "match": "GS @ PHX",
-      "pick": "Phoenix Suns",
-      "price": "-410",
-      "price_at": "2026-10-25T01:56:53+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34888792:0ML86897853_1",
-      "prob_at": "2026-10-25T01:56:53+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-10-25T02:00Z"
-     },
-     "dc": false,
-     "fp": "e6dc90489a53",
-     "gate": {
-      "ok": true,
-      "what": "injury report checked (7 listed)"
-     },
-     "id": "nba:401909860",
-     "league": "nba",
-     "match": "GS @ PHX",
-     "news_at": "2026-10-25T01:21:20+00:00",
-     "pick": "Phoenix Suns",
-     "price": "-410",
-     "price_at": "2026-10-25T01:56:53+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34888792:0ML86897853_1",
-     "side": "home",
-     "start": "2026-10-25T02:00Z",
-     "tip": "10:00 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
-    "ita"
+    "ita",
+    "nba"
    ],
    "news": {
     "ita": "2026-10-24T18:11:35+00:00",

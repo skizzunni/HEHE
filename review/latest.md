@@ -38,17 +38,17 @@ Closing line value: +0.41 points on 127 picks; beat the close on 49.6%.
 With the market 69.5% (514); against it 30.0% (20).
 Locks 4/11 won, 4 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20; Edmonton Oilers over 2.5 goals (Toronto Maple Leafs at Edmonton Oilers) Toronto Maple Leafs 7 - Edmonton Oilers 2.
 Safe Locks 7/11 won, 4 open; Winners parlay top 2 (85%) won; Best play top 8 (50%) open.
-Lottery 100: open (3/9 legs won)
+Lottery 100: lost (3/9 legs won, killed by Under 230.5 points)
 Lottery 100: open (3/6 legs won)
 Lottery 100: lost (1/6 legs won, killed by Over 55.5 points)
-Lottery 10k: lost (2/11 legs won, killed by Washington State Cougars to win)
+Lottery 10k: lost (2/11 legs won, killed by Washington State Cougars to win, Under 230.5 points)
 Lottery 10k: lost (4/10 legs won, killed by Michigan Wolverines to win, Over 55.5 points, Navy Midshipmen -7.5)
 Lottery 10k: lost (2/10 legs won, killed by Western Michigan Broncos +2.5)
-Lottery 10k+25: lost (3/11 legs won, killed by Washington State Cougars to win)
-Lottery 10k+50: lost (3/11 legs won, killed by Washington State Cougars to win)
-Lottery 10k+100: lost (1/10 legs won, killed by Washington State Cougars to win)
-Ladder-consistency props (all time): 450/547 won (82.3%) vs 87.3% fair, 88.0% price.
-Props 50/68 vs 76.6% claimed.
+Lottery 10k+25: lost (3/11 legs won, killed by Washington State Cougars to win, Under 230.5 points)
+Lottery 10k+50: lost (3/11 legs won, killed by Washington State Cougars to win, Under 230.5 points)
+Lottery 10k+100: lost (1/10 legs won, killed by Washington State Cougars to win, Under 230.5 points)
+Ladder-consistency props (all time): 465/562 won (82.7%) vs 87.3% fair, 88.1% price.
+Props 66/84 vs 78.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=95), nhl 0.00 (n=59)

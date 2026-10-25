@@ -3116,10 +3116,10 @@
   },
   "props": {
    "fair": {
-    "n": 547,
+    "n": 562,
     "said_fair": 87.3,
-    "said_price": 88.0,
-    "won": 450
+    "said_price": 88.1,
+    "won": 465
    },
    "n": 187,
    "said": 84.4,
@@ -3190,15 +3190,15 @@
    },
    {
     "flag": false,
-    "hit": 89.3,
-    "n": 56,
+    "hit": 89.7,
+    "n": 58,
     "name": "props nba Assists",
-    "said": 86.6
+    "said": 86.7
    },
    {
     "flag": false,
-    "hit": 76.5,
-    "n": 68,
+    "hit": 77.5,
+    "n": 71,
     "name": "props nba Points",
     "said": 85.0
    },
@@ -3218,24 +3218,24 @@
    },
    {
     "flag": false,
-    "hit": 82.8,
-    "n": 64,
+    "hit": 84.1,
+    "n": 69,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.9
    },
    {
     "flag": false,
-    "hit": 87.5,
-    "n": 40,
+    "hit": 87.8,
+    "n": 41,
     "name": "props nba Reb + Ast",
     "said": 84.9
    },
    {
     "flag": false,
-    "hit": 89.7,
-    "n": 29,
+    "hit": 91.2,
+    "n": 34,
     "name": "props nba Rebounds",
-    "said": 85.0
+    "said": 84.4
    },
    {
     "flag": false,
@@ -3344,10 +3344,10 @@
    },
    {
     "flag": false,
-    "hit": 95.7,
-    "n": 23,
+    "hit": 95.8,
+    "n": 24,
     "name": "prop locks",
-    "said": 91.3
+    "said": 91.5
    },
    {
     "flag": false,
@@ -3724,10 +3724,12 @@
   ],
   "lottery": [
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 230.5 points"
+    ],
     "legs": 9,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 3
    },
@@ -3751,10 +3753,11 @@
    },
    {
     "killed_by": [
-     "Washington State Cougars to win"
+     "Washington State Cougars to win",
+     "Under 230.5 points"
     ],
     "legs": 11,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
     "won": 2
@@ -3783,30 +3786,33 @@
    },
    {
     "killed_by": [
-     "Washington State Cougars to win"
+     "Washington State Cougars to win",
+     "Under 230.5 points"
     ],
     "legs": 11,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+25",
     "won": 3
    },
    {
     "killed_by": [
-     "Washington State Cougars to win"
+     "Washington State Cougars to win",
+     "Under 230.5 points"
     ],
     "legs": 11,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+50",
     "won": 3
    },
    {
     "killed_by": [
-     "Washington State Cougars to win"
+     "Washington State Cougars to win",
+     "Under 230.5 points"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+100",
     "won": 1
@@ -4104,14 +4110,14 @@
   },
   "props": {
    "fair": {
-    "n": 547,
+    "n": 562,
     "said_fair": 87.3,
-    "said_price": 88.0,
-    "won": 450
+    "said_price": 88.1,
+    "won": 465
    },
-   "n": 68,
-   "said": 76.6,
-   "won": 50
+   "n": 84,
+   "said": 78.1,
+   "won": 66
   },
   "safe_locks": {
    "lost": [],

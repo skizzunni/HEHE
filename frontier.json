@@ -221161,6 +221161,11 @@
       "probables": {},
       "start": "2026-10-25T02:00Z",
       "t": "2026-10-24T09:26:18+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-25T02:05Z",
+      "t": "2026-10-25T02:04:36+00:00"
      }
     ],
     "wta:187125": [
@@ -221239,6 +221244,11 @@
       "probables": {},
       "start": "2026-10-25T02:00Z",
       "t": "2026-10-25T01:53:57+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-25T02:05Z",
+      "t": "2026-10-25T02:04:36+00:00"
      }
     ],
     "wta:187129": [
@@ -439458,12 +439468,13 @@
        "play": null,
        "price": "-650",
        "quoted": "2026-10-24T11:52:19+00:00",
+       "score": "Milwaukee Bucks 116 - Philadelphia 76ers 127",
        "spec": {
         "t": "win",
         "team": "Philadelphia 76ers"
        },
        "start": "2026-10-24T23:30Z",
-       "status": "open",
+       "status": "won",
        "tip": "7:30 PM",
        "where": null
       },
@@ -440209,143 +440220,6 @@
     }
    ],
    "versions": [
-    {
-     "policy": "267b62dd",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Cleveland Cavaliers to win",
-        "Denver Nuggets to win",
-        "Philadelphia 76ers to win",
-        "Troy Trojans to win",
-        "Buffalo Sabres +4.5"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Phoenix Suns to win",
-        "Louisiana Ragin' Cajuns to win",
-        "Ohio Bobcats to win",
-        "Washington Capitals over 0.5 goals"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Washington Capitals over 2.5 goals",
-        "Georgia Tech Yellow Jackets to win"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Over 192.5 points",
-        "Louisiana Ragin' Cajuns over 22.5 points",
-        "Eastern Michigan Eagles under 26.5 points",
-        "Iowa State Cyclones +22.5",
-        "Illinois Fighting Illini +21.5",
-        "FC Dallas or draw"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Pittsburgh Penguins over 2.5 goals",
-        "Georgia Tech Yellow Jackets to win",
-        "Ottawa Senators over 2.5 goals"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Vit\u00f3ria or draw",
-        "Georgia Tech Yellow Jackets to win",
-        "Utah Utes to win",
-        "Minnesota Wild over 2.5 goals",
-        "Phoenix Suns to win"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-24T18:45:14+00:00"
-    },
     {
      "policy": "267b62dd",
      "sig": [
@@ -448341,6 +448215,120 @@
       ]
      ],
      "t": "2026-10-25T01:53:36+00:00"
+    },
+    {
+     "policy": "8300a2c4",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       []
+      ],
+      [
+       2.0,
+       0.75,
+       []
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "San Diego FC or draw",
+        "Utah Utes to win"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       []
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Houston Cougars +23.5",
+        "San Diego FC or draw",
+        "Portland Timbers or draw",
+        "Pumas UNAM or draw"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       []
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-25T02:04:14+00:00"
     }
    ]
   }
