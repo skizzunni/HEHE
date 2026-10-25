@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.41,
-   "beat": 50.0,
-   "n": 130
+   "avg": 0.42,
+   "beat": 50.4,
+   "n": 131
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3644,6 +3644,14 @@
    {
     "against_market": false,
     "league": "ncaaf",
+    "pick": "Clemson Tigers",
+    "price": "-155",
+    "said": 59,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 59%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
     "pick": "Oregon Ducks",
     "price": "-410",
     "said": 79,
@@ -3819,11 +3827,11 @@
    }
   ],
   "picks": {
-   "hit": 74.6,
-   "lost": 33,
-   "n": 130,
-   "roi": 1.2,
-   "said": 71.3,
+   "hit": 74.0,
+   "lost": 34,
+   "n": 131,
+   "roi": 0.4,
+   "said": 71.2,
    "won": 97
   },
   "picks_by_league": {
@@ -4004,11 +4012,11 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 71.9,
-    "lost": 9,
-    "n": 32,
-    "roi": 2.9,
-    "said": 71.8,
+    "hit": 69.7,
+    "lost": 10,
+    "n": 33,
+    "roi": -0.2,
+    "said": 71.4,
     "won": 23
    },
    "nhl": {
@@ -4151,10 +4159,10 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.6,
-    "lost": 157,
-    "n": 517,
-    "roi": -2.2,
+    "hit": 69.5,
+    "lost": 158,
+    "n": 518,
+    "roi": -2.4,
     "said": 67.3,
     "won": 360
    }
@@ -4163,10 +4171,10 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.644,
-    "market_only": 0.6641,
-    "model_40": 0.644,
-    "n": 96,
+    "logloss": 0.6469,
+    "market_only": 0.6664,
+    "model_40": 0.6469,
+    "n": 97,
     "weight": 0.4
    },
    "nhl": {

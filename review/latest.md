@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 97-33 (74.6% vs 71.3% claimed, ROI +1.2%).
-Closing line value: +0.41 points on 130 picks; beat the close on 50.0%.
+Picks 97-34 (74.0% vs 71.2% claimed, ROI +0.4%).
+Closing line value: +0.42 points on 131 picks; beat the close on 50.4%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST bra2 Fortaleza at 76%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76%
 - LOST bra Fluminense at 75%: margin 1 · the book had my side favoured too · called at 75%
@@ -25,6 +25,7 @@ Closing line value: +0.41 points on 130 picks; beat the close on 50.0%.
 - LOST ncaaf Texas Tech Red Raiders at 79%: margin 13 · the book had my side favoured too · called at 79%
 - LOST ncaaf TCU Horned Frogs at 77%: margin 4 · the book had my side favoured too · called at 77%
 - LOST ncaaf Georgia Tech Yellow Jackets at 69%: margin 22 · the book had my side favoured too · called at 69%
+- LOST ncaaf Clemson Tigers at 59%: margin 4 · the book had my side favoured too · called at 59%
 - LOST ncaaf Oregon Ducks at 79%: margin 11 · the book had my side favoured too · called at 79%
 - LOST ncaaf Iowa Hawkeyes at 73%: margin 3 · the book had my side favoured too · called at 73%
 - LOST ncaaf Louisiana Ragin' Cajuns at 81%: margin 4 · the book had my side favoured too · called at 81%
@@ -35,7 +36,7 @@ Closing line value: +0.41 points on 130 picks; beat the close on 50.0%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.6% (517); against it 30.0% (20).
+With the market 69.5% (518); against it 30.0% (20).
 Locks 4/11 won, 4 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20; Edmonton Oilers over 2.5 goals (Toronto Maple Leafs at Edmonton Oilers) Toronto Maple Leafs 7 - Edmonton Oilers 2.
 Safe Locks 7/11 won, 4 open; Winners parlay top 2 (85%) won; Best play top 8 (50%) open.
 Lottery 100: lost (4/9 legs won, killed by Under 230.5 points)
@@ -51,4 +52,4 @@ Ladder-consistency props (all time): 465/562 won (82.7%) vs 87.3% fair, 88.1% pr
 Props 66/84 vs 78.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=96), nhl 0.00 (n=59)
+Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=97), nhl 0.00 (n=59)
