@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 57.0,
-  "brier_close": 0.1845,
-  "brier_published": 0.1857,
+  "beat_close_pct": 57.3,
+  "brier_close": 0.1839,
+  "brier_published": 0.1851,
   "dates": [
    "2026-10-22",
    "2026-10-25"
   ],
-  "logloss_close": 0.5528,
-  "logloss_published": 0.5569,
-  "mean_clv_pts": 0.26,
+  "logloss_close": 0.5516,
+  "logloss_published": 0.5556,
+  "mean_clv_pts": 0.27,
   "n": 300
  },
  "market_is_model": true,
@@ -1485,6 +1485,15 @@
    "league": "den",
    "published": 0.813,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 1
+  },
+  "den:401874553": {
+   "call": false,
+   "close": 0.6701,
+   "clv": 1.01,
+   "day": "2026-10-25",
+   "league": "den",
+   "published": 0.66,
    "won": 1
   },
   "den:401874565": {
@@ -18495,5 +18504,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-25T18:52+00:00"
+ "updated": "2026-10-25T18:57+00:00"
 }
