@@ -4185,8 +4185,8 @@
    },
    {
     "flag": false,
-    "hit": 41.3,
-    "n": 121,
+    "hit": 41.0,
+    "n": 122,
     "name": "value bets",
     "said": 43.2
    },
@@ -4267,9 +4267,9 @@
    }
   },
   "clv": {
-   "avg": 0.88,
-   "beat": 55.9,
-   "n": 34
+   "avg": 0.78,
+   "beat": 55.0,
+   "n": 40
   },
   "day": "2026-10-25",
   "leaks_14d": [],
@@ -4287,6 +4287,14 @@
    "won": 1
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "aut",
+    "pick": "LASK Linz",
+    "price": "-290",
+    "said": 69,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 69%"
+   },
    {
     "against_market": false,
     "league": "chi",
@@ -4389,12 +4397,12 @@
    }
   ],
   "picks": {
-   "hit": 85.3,
-   "lost": 5,
-   "n": 34,
+   "hit": 85.0,
+   "lost": 6,
+   "n": 40,
    "roi": 9.8,
-   "said": 72.9,
-   "won": 29
+   "said": 72.7,
+   "won": 34
   },
   "picks_by_league": {
    "aus": {
@@ -4406,11 +4414,11 @@
     "won": 1
    },
    "aut": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 15.4,
-    "said": 82.0,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -42.3,
+    "said": 75.5,
     "won": 1
    },
    "bel": {
@@ -4480,10 +4488,10 @@
    "gre": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 16.7,
-    "said": 81.0,
-    "won": 1
+    "n": 2,
+    "roi": 23.0,
+    "said": 77.0,
+    "won": 2
    },
    "ita": {
     "hit": 100.0,
@@ -4528,10 +4536,10 @@
    "nor": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 13.3,
-    "said": 84.0,
-    "won": 1
+    "n": 4,
+    "roi": 32.7,
+    "said": 71.5,
+    "won": 4
    },
    "sco": {
     "hit": 100.0,
@@ -4550,12 +4558,12 @@
     "won": 1
    },
    "uru": {
-    "hit": 0.0,
+    "hit": 50.0,
     "lost": 1,
-    "n": 1,
-    "roi": -100.0,
-    "said": 72.0,
-    "won": 0
+    "n": 2,
+    "roi": -43.8,
+    "said": 78.0,
+    "won": 1
    },
    "wsl": {
     "hit": 100.0,
@@ -4614,12 +4622,12 @@
     "won": 2
    },
    "agree": {
-    "hit": 71.2,
-    "lost": 155,
-    "n": 539,
-    "roi": -0.9,
+    "hit": 71.4,
+    "lost": 156,
+    "n": 545,
+    "roi": -0.7,
     "said": 68.5,
-    "won": 384
+    "won": 389
    }
   },
   "weights": {

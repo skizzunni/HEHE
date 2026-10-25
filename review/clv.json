@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 57.7,
-  "brier_close": 0.1884,
-  "brier_published": 0.1901,
+  "beat_close_pct": 57.3,
+  "brier_close": 0.1893,
+  "brier_published": 0.1908,
   "dates": [
-   "2026-10-21",
+   "2026-10-22",
    "2026-10-25"
   ],
-  "logloss_close": 0.5616,
-  "logloss_published": 0.5667,
-  "mean_clv_pts": 0.33,
+  "logloss_close": 0.5635,
+  "logloss_published": 0.5681,
+  "mean_clv_pts": 0.31,
   "n": 300
  },
  "market_is_model": true,
@@ -455,6 +455,15 @@
    "league": "aut",
    "published": 0.77,
    "won": 1
+  },
+  "aut:401881766": {
+   "call": false,
+   "close": 0.6906,
+   "clv": 2.06,
+   "day": "2026-10-25",
+   "league": "aut",
+   "published": 0.67,
+   "won": 0
   },
   "aut:401881767": {
    "call": false,
@@ -3564,6 +3573,15 @@
    "day": "2026-10-17",
    "league": "ger",
    "published": 0.765,
+   "won": 1
+  },
+  "gre:401896741": {
+   "call": false,
+   "close": 0.7305,
+   "clv": 4.05,
+   "day": "2026-10-25",
+   "league": "gre",
+   "published": 0.69,
    "won": 1
   },
   "gre:401896744": {
@@ -16014,6 +16032,33 @@
    "published": 0.58,
    "won": 1
   },
+  "nor:401843366": {
+   "call": false,
+   "close": 0.6503,
+   "clv": -3.97,
+   "day": "2026-10-25",
+   "league": "nor",
+   "published": 0.69,
+   "won": 1
+  },
+  "nor:401843367": {
+   "call": false,
+   "close": 0.7344,
+   "clv": -0.56,
+   "day": "2026-10-25",
+   "league": "nor",
+   "published": 0.74,
+   "won": 1
+  },
+  "nor:401843369": {
+   "call": false,
+   "close": 0.6383,
+   "clv": -2.17,
+   "day": "2026-10-25",
+   "league": "nor",
+   "published": 0.66,
+   "won": 1
+  },
   "nor:401843372": {
    "call": false,
    "close": 0.8421,
@@ -17679,6 +17724,15 @@
    "published": 0.69,
    "won": 1
   },
+  "uru:401930337": {
+   "call": false,
+   "close": 0.8397,
+   "clv": 0.97,
+   "day": "2026-10-25",
+   "league": "uru",
+   "published": 0.83,
+   "won": 1
+  },
   "uru:401930338": {
    "call": false,
    "close": 0.7169,
@@ -18360,5 +18414,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-25T17:53+00:00"
+ "updated": "2026-10-25T17:58+00:00"
 }
