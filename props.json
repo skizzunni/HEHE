@@ -2141,7 +2141,8 @@
   "p": 0.8755,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909088|n:ausar thompson|Assists|2+": {
   "aid": null,
@@ -9538,11 +9539,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Daniel Gafford",
   "p": 0.8497,
   "p_fair": 0.9638,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nba:401909858|n:devin vassell|Threes Made|1+": {
   "aid": null,
@@ -9554,11 +9557,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Devin Vassell",
   "p": 0.8496,
   "p_fair": 0.8828,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909858|n:julian champagnie|Threes Made|1+": {
   "aid": null,
@@ -9570,11 +9575,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Julian Champagnie",
   "p": 0.8496,
   "p_fair": 0.8805,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909858|n:kyrie irving|Points|10+": {
   "aid": null,
@@ -9590,7 +9597,9 @@
   "p": 0.8507,
   "p_fair": 0.9559,
   "price": "-4500",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909858|n:max christie|Points|5+": {
   "aid": null,
@@ -9602,11 +9611,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Max Christie",
   "p": 0.8525,
   "p_fair": 0.981,
   "price": "-5000",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909858|n:max christie|Threes Made|1+": {
   "aid": null,
@@ -9618,11 +9629,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Max Christie",
   "p": 0.8496,
   "p_fair": 0.8815,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909858|n:pj washington|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -9634,11 +9647,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "P.J. Washington",
   "p": 0.8497,
   "p_fair": 0.9457,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 18.0
  },
  "nba:401909858|n:stephon castle|Assists|4+": {
   "aid": null,
@@ -9650,11 +9665,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Stephon Castle",
   "p": 0.8495,
   "p_fair": 0.8491,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909858|n:stephon castle|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -9666,11 +9683,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Stephon Castle",
   "p": 0.8497,
   "p_fair": 0.9108,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 31.0
  },
  "nba:401909858|n:victor wembanyama|Points|15+": {
   "aid": null,
@@ -9682,11 +9701,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.8525,
   "p_fair": 0.9313,
   "price": "-5000",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nba:401909858|n:victor wembanyama|Pts + Reb + Ast|30+": {
   "aid": null,
@@ -9698,11 +9719,13 @@
   "league": "nba",
   "line": "30+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.8477,
   "p_fair": 0.8815,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nba:401909858|n:victor wembanyama|Rebounds|10+": {
   "aid": null,
@@ -9714,11 +9737,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.7583,
   "p_fair": 0.7672,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 7.0
  },
  "nba:401909858|n:victor wembanyama|Rebounds|6+": {
   "aid": null,
@@ -9729,11 +9754,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.9345,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909858|n:victor wembanyama|Rebounds|8+": {
   "aid": null,
@@ -9745,11 +9772,13 @@
   "league": "nba",
   "line": "8+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.8481,
   "p_fair": 0.8968,
   "price": "-850",
-  "status": "open"
+  "status": "lost",
+  "value": 7.0
  },
  "nba:401909858|n:zaccharie risacher|Points|5+": {
   "aid": null,
@@ -9761,11 +9790,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Zaccharie Risacher",
   "p": 0.8507,
   "p_fair": 0.9801,
   "price": "-4500",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401909859|n:aaron gordon|Assists|2+": {
   "aid": null,
