@@ -4115,10 +4115,10 @@
    },
    {
     "flag": false,
-    "hit": 79.5,
-    "n": 391,
+    "hit": 79.9,
+    "n": 398,
     "name": "props nhl Shots on Goal",
-    "said": 79.8
+    "said": 79.9
    },
    {
     "flag": false,
@@ -4161,6 +4161,13 @@
     "n": 16,
     "name": "locks nhl under",
     "said": 79.0
+   },
+   {
+    "flag": false,
+    "hit": 80.0,
+    "n": 10,
+    "name": "safe locks nhl side",
+    "said": 91.2
    },
    {
     "flag": false,
@@ -4268,8 +4275,8 @@
   },
   "clv": {
    "avg": 0.82,
-   "beat": 57.4,
-   "n": 68
+   "beat": 58.0,
+   "n": 69
   },
   "day": "2026-10-25",
   "leaks_14d": [],
@@ -4468,12 +4475,12 @@
    }
   ],
   "picks": {
-   "hit": 80.9,
+   "hit": 81.2,
    "lost": 13,
-   "n": 68,
-   "roi": 6.0,
-   "said": 72.0,
-   "won": 55
+   "n": 69,
+   "roi": 6.7,
+   "said": 71.8,
+   "won": 56
   },
   "picks_by_league": {
    "arg": {
@@ -4628,6 +4635,14 @@
     "said": 63.6,
     "won": 4
    },
+   "nhl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 54.1,
+    "said": 62.0,
+    "won": 1
+   },
    "nor": {
     "hit": 100.0,
     "lost": 0,
@@ -4684,16 +4699,16 @@
     "said_price": 87.7,
     "won": 577
    },
-   "n": 101,
-   "said": 75.3,
-   "won": 70
+   "n": 108,
+   "said": 75.7,
+   "won": 77
   },
   "safe_locks": {
    "lost": [
     "Jalen Coker: 25+ Receiving Yards (TB @ CAR) 9"
    ],
    "n": 11,
-   "open": 7,
+   "open": 6,
    "plays": {
     "best": [
      11,
@@ -4706,7 +4721,7 @@
      "lost"
     ]
    },
-   "won": 3
+   "won": 4
   },
   "strong": {
    "n": 0
@@ -4729,10 +4744,10 @@
    "agree": {
     "hit": 71.6,
     "lost": 163,
-    "n": 573,
-    "roi": -0.7,
+    "n": 574,
+    "roi": -0.6,
     "said": 68.6,
-    "won": 410
+    "won": 411
    }
   },
   "weights": {
@@ -4748,10 +4763,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6586,
-    "market_only": 0.6586,
-    "model_40": 0.6701,
-    "n": 62,
+    "logloss": 0.6557,
+    "market_only": 0.6557,
+    "model_40": 0.6673,
+    "n": 63,
     "weight": 0.0
    }
   }
