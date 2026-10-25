@@ -2738,6 +2738,23 @@
    "tip": "10:00 PM",
    "venue": "FanDuel"
   },
+  "nor:401843366|away|FanDuel": {
+   "dec": 3.0,
+   "ev": 0.0126,
+   "fair": 0.3375,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nor:401843366",
+   "kind": "value",
+   "league": "nor",
+   "match": "SAN @ IKS",
+   "price": "+200",
+   "seen": "2026-10-25T06:39:48+00:00",
+   "side": "away",
+   "start": "2026-10-25T16:00Z",
+   "team": "Sandefjord",
+   "tip": "12:00 PM",
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|arg:401841638:away": {
    "ev": 0.032,
    "kind": "parlay",
@@ -3663,6 +3680,59 @@
    "prob": 0.41,
    "seen": "2026-10-22T05:46:40+00:00",
    "status": "won",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nhl:401892580:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Nashville Predators\"}|nor:401843366:away": {
+   "ev": 0.0307,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0126,
+     "fair": 0.3375,
+     "id": "nor:401843366",
+     "price": "+200",
+     "side": "away",
+     "spec": null,
+     "team": "Sandefjord"
+    },
+    {
+     "ev": 0.0179,
+     "fair": 0.5423,
+     "id": "nhl:401892580",
+     "price": "-114",
+     "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Nashville Predators\"}",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "Nashville Predators"
+     },
+     "team": "Nashville Predators +1.5"
+    }
+   ],
+   "payout": 5.632,
+   "prob": 0.183,
+   "seen": "2026-10-25T06:39:48+00:00",
+   "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nor:401843366:away": {
+   "ev": 0.0125,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0126,
+     "fair": 0.3375,
+     "id": "nor:401843366",
+     "price": "+200",
+     "side": "away",
+     "spec": null,
+     "team": "Sandefjord"
+    }
+   ],
+   "payout": 3.0,
+   "prob": 0.3375,
+   "seen": "2026-10-25T06:39:48+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
