@@ -3167,9 +3167,9 @@
  },
  "2026-10-24": {
   "clv": {
-   "avg": 0.69,
-   "beat": 51.3,
-   "n": 158
+   "avg": 0.71,
+   "beat": 51.2,
+   "n": 162
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3506,6 +3506,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "Detroit Red Wings",
+    "price": "-130",
+    "said": 54,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 54%"
+   },
+   {
+    "against_market": false,
     "league": "nor",
     "pick": "Bodo/Glimt",
     "price": "-800",
@@ -3598,7 +3606,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k",
-    "won": 5
+    "won": 6
    },
    {
     "killed_by": [
@@ -3638,12 +3646,12 @@
    }
   ],
   "picks": {
-   "hit": 73.4,
-   "lost": 42,
-   "n": 158,
-   "roi": -0.8,
-   "said": 71.2,
-   "won": 116
+   "hit": 73.5,
+   "lost": 43,
+   "n": 162,
+   "roi": -0.7,
+   "said": 71.0,
+   "won": 119
   },
   "picks_by_league": {
    "arg": {
@@ -3807,12 +3815,12 @@
     "won": 1
    },
    "mls": {
-    "hit": 66.7,
+    "hit": 71.4,
     "lost": 4,
-    "n": 12,
-    "roi": -12.6,
-    "said": 72.0,
-    "won": 8
+    "n": 14,
+    "roi": -5.7,
+    "said": 71.5,
+    "won": 10
    },
    "nba": {
     "hit": 75.0,
@@ -3831,12 +3839,12 @@
     "won": 29
    },
    "nhl": {
-    "hit": 70.0,
-    "lost": 3,
-    "n": 10,
-    "roi": 18.2,
-    "said": 56.3,
-    "won": 7
+    "hit": 66.7,
+    "lost": 4,
+    "n": 12,
+    "roi": 11.1,
+    "said": 56.7,
+    "won": 8
    },
    "nor": {
     "hit": 0.0,
@@ -3934,19 +3942,19 @@
     "said_price": 88.5,
     "won": 532
    },
-   "n": 169,
+   "n": 181,
    "said": 81.1,
-   "won": 147
+   "won": 156
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 2,
+   "open": 0,
    "plays": {
     "best": [
      8,
      0.5039,
-     "open"
+     "won"
     ],
     "winners": [
      2,
@@ -3954,7 +3962,7 @@
      "won"
     ]
    },
-   "won": 9
+   "won": 11
   },
   "strong": {
    "n": 0
@@ -3969,12 +3977,12 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.5,
-    "lost": 166,
-    "n": 545,
-    "roi": -2.6,
-    "said": 67.5,
-    "won": 379
+    "hit": 69.6,
+    "lost": 167,
+    "n": 549,
+    "roi": -2.5,
+    "said": 67.4,
+    "won": 382
    }
   }
  },
@@ -4101,8 +4109,8 @@
    },
    {
     "flag": false,
-    "hit": 79.7,
-    "n": 379,
+    "hit": 79.5,
+    "n": 391,
     "name": "props nhl Shots on Goal",
     "said": 79.8
    },
@@ -4171,8 +4179,8 @@
    },
    {
     "flag": false,
-    "hit": 44.5,
-    "n": 110,
+    "hit": 45.0,
+    "n": 111,
     "name": "value bets",
     "said": 44.8
    },
@@ -4310,11 +4318,11 @@
    },
    "agree": {
     "hit": 70.1,
-    "lost": 149,
-    "n": 498,
-    "roi": -1.9,
+    "lost": 150,
+    "n": 502,
+    "roi": -1.8,
     "said": 68.2,
-    "won": 349
+    "won": 352
    }
   },
   "weights": {
@@ -4330,10 +4338,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6598,
-    "market_only": 0.6598,
-    "model_40": 0.6708,
-    "n": 60,
+    "logloss": 0.6586,
+    "market_only": 0.6586,
+    "model_40": 0.6701,
+    "n": 62,
     "weight": 0.0
    }
   }
