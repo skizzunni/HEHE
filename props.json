@@ -203,7 +203,8 @@
   "p": 0.8919,
   "p_fair": null,
   "price": "-3000",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "esp:401882832|257237|Goalkeeper Saves|3+": {
   "aid": "257237",
@@ -219,7 +220,8 @@
   "p": 0.8302,
   "p_fair": null,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "esp:401882835|222375|Goalkeeper Saves|1+": {
   "aid": "222375",
@@ -11574,6 +11576,22 @@
   "price": "-2200",
   "status": "open"
  },
+ "nba:401909864|n:rj barrett|Pts + Ast|15+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -1.5,
+  "gid": "nba:401909864",
+  "imp": 0.9259,
+  "label": "RJ Barrett: 15+ Pts + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Ast",
+  "name": "RJ Barrett",
+  "p": 0.8487,
+  "p_fair": 0.9118,
+  "price": "-1250",
+  "status": "open"
+ },
  "nba:401909864|n:rudy gobert|Pts + Reb|10+": {
   "aid": null,
   "date": "2026-10-25",
@@ -11734,6 +11752,22 @@
   "price": "-720",
   "status": "open"
  },
+ "nba:401909866|n:daniss jenkins|Reb + Ast|5+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -1.7,
+  "gid": "nba:401909866",
+  "imp": 0.8824,
+  "label": "Daniss Jenkins: 5+ Reb + Ast",
+  "league": "nba",
+  "line": "5+",
+  "market": "Reb + Ast",
+  "name": "Daniss Jenkins",
+  "p": 0.8525,
+  "p_fair": 0.8675,
+  "price": "-750",
+  "status": "open"
+ },
  "nba:401909866|n:duncan robinson|Threes Made|2+": {
   "aid": null,
   "date": "2026-10-25",
@@ -11859,6 +11893,22 @@
   "p": 0.8469,
   "p_fair": 0.9471,
   "price": "-4000",
+  "status": "open"
+ },
+ "nba:401909866|n:paul reed|Assists|2+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -4.0,
+  "gid": "nba:401909866",
+  "imp": 0.7778,
+  "label": "Paul Reed: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "Paul Reed",
+  "p": 0.7778,
+  "p_fair": 0.7466,
+  "price": "-350",
   "status": "open"
  },
  "nba:401909866|n:paul reed|Points|5+": {
@@ -12034,6 +12084,22 @@
   "p": 0.8519,
   "p_fair": 0.9518,
   "price": "-950",
+  "status": "open"
+ },
+ "nba:401909867|n:domantas sabonis|Points|10+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -2.7,
+  "gid": "nba:401909867",
+  "imp": 0.9615,
+  "label": "Domantas Sabonis: 10+ Points",
+  "league": "nba",
+  "line": "10+",
+  "market": "Points",
+  "name": "Domantas Sabonis",
+  "p": 0.8532,
+  "p_fair": 0.9358,
+  "price": "-2500",
   "status": "open"
  },
  "nba:401909867|n:isaiah stewart|Rebounds|4+": {
@@ -25438,6 +25504,22 @@
   "p": 0.8472,
   "p_fair": null,
   "price": "-1000",
+  "status": "open"
+ },
+ "nhl:401892580|n:brock nelson|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": null,
+  "gid": "nhl:401892580",
+  "imp": 0.8889,
+  "label": "Brock Nelson: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Brock Nelson",
+  "p": 0.83,
+  "p_fair": null,
+  "price": "-800",
   "status": "open"
  },
  "nhl:401892580|n:cale makar|Shots on Goal|2+": {

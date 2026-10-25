@@ -181,6 +181,7 @@
     "team": "Barcelona"
    },
    "start": "2026-10-25T20:00Z",
+   "status": "lost",
    "team": "Barcelona -1.5",
    "tip": "4:00 PM",
    "venue": "Kalshi"
@@ -1603,6 +1604,86 @@
    "team": "Orlando Magic",
    "tip": "7:00 PM",
    "venue": "FanDuel"
+  },
+  "nba:401909864|away|FanDuel": {
+   "dec": 2.16,
+   "ev": 0.0731,
+   "fair": 0.4968,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909864",
+   "kind": "value",
+   "league": "nba",
+   "match": "TOR @ MIN",
+   "price": "+116",
+   "seen": "2026-10-25T22:02:32+00:00",
+   "side": "away",
+   "start": "2026-10-25T23:00Z",
+   "team": "Toronto Raptors",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909864|away|Kalshi": {
+   "dec": 2.2878,
+   "ev": 0.1366,
+   "fair": 0.4968,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909864",
+   "kind": "value",
+   "league": "nba",
+   "match": "TOR @ MIN",
+   "price": "+129",
+   "seen": "2026-10-25T22:02:32+00:00",
+   "side": "away",
+   "start": "2026-10-25T23:00Z",
+   "team": "Toronto Raptors",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909864|sure": {
+   "id": "nba:401909864",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+129",
+     "stake_share": 0.4497,
+     "team": "Toronto Raptors",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-115",
+     "stake_share": 0.5503,
+     "team": "Minnesota Timberwolves",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "TOR @ MIN",
+   "profit": 0.0288,
+   "seen": "2026-10-25T22:02:32+00:00"
+  },
+  "nba:401909864|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Toronto Raptors\"}|Kalshi": {
+   "dec": 2.0101,
+   "dk": "-115",
+   "ev": 0.0516,
+   "fair": 0.5232,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909864",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "TOR @ MIN",
+   "price": "+101",
+   "seen": "2026-10-25T22:02:32+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Toronto Raptors\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Toronto Raptors"
+   },
+   "start": "2026-10-25T23:00Z",
+   "team": "Toronto Raptors +1.5",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
   },
   "nba:401909864|{\"line\": 231.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0101,
@@ -4322,6 +4403,55 @@
    "prob": 0.147,
    "seen": "2026-10-25T05:59:51+00:00",
    "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909864:away": {
+   "ev": 0.0731,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0731,
+     "fair": 0.4968,
+     "id": "nba:401909864",
+     "price": "+116",
+     "side": "away",
+     "spec": null,
+     "team": "Toronto Raptors"
+    }
+   ],
+   "payout": 2.16,
+   "prob": 0.4968,
+   "seen": "2026-10-25T22:02:32+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909864:away|nba:401909866:away": {
+   "ev": 0.1362,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0588,
+     "fair": 0.5498,
+     "id": "nba:401909866",
+     "price": "-108",
+     "side": "away",
+     "spec": null,
+     "team": "Detroit Pistons"
+    },
+    {
+     "ev": 0.0731,
+     "fair": 0.4968,
+     "id": "nba:401909864",
+     "price": "+116",
+     "side": "away",
+     "spec": null,
+     "team": "Toronto Raptors"
+    }
+   ],
+   "payout": 4.16,
+   "prob": 0.2731,
+   "seen": "2026-10-25T22:02:32+00:00",
+   "target": 3.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909866:away": {
