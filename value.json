@@ -1386,6 +1386,23 @@
    "tip": "5:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909863|away|FanDuel": {
+   "dec": 3.75,
+   "ev": 0.0121,
+   "fair": 0.2699,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909863",
+   "kind": "value",
+   "league": "nba",
+   "match": "ORL @ NY",
+   "price": "+275",
+   "seen": "2026-10-25T05:59:51+00:00",
+   "side": "away",
+   "start": "2026-10-25T23:00Z",
+   "team": "Orlando Magic",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401856730|away|FanDuel": {
    "dec": 1.7042,
    "ev": 0.0365,
@@ -3420,6 +3437,59 @@
    "seen": "2026-10-24T04:06:11+00:00",
    "status": "lost",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909863:away": {
+   "ev": 0.0121,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0121,
+     "fair": 0.2699,
+     "id": "nba:401909863",
+     "price": "+275",
+     "side": "away",
+     "spec": null,
+     "team": "Orlando Magic"
+    }
+   ],
+   "payout": 3.75,
+   "prob": 0.2699,
+   "seen": "2026-10-25T05:59:51+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909863:away|nhl:401892580:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Nashville Predators\"}": {
+   "ev": 0.0351,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0121,
+     "fair": 0.2699,
+     "id": "nba:401909863",
+     "price": "+275",
+     "side": "away",
+     "spec": null,
+     "team": "Orlando Magic"
+    },
+    {
+     "ev": 0.0226,
+     "fair": 0.5448,
+     "id": "nhl:401892580",
+     "price": "-114",
+     "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Nashville Predators\"}",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "Nashville Predators"
+     },
+     "team": "Nashville Predators +1.5"
+    }
+   ],
+   "payout": 7.04,
+   "prob": 0.147,
+   "seen": "2026-10-25T05:59:51+00:00",
+   "target": 5.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401856730:away|ncaaf:401871093:away": {

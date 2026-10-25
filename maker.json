@@ -270,6 +270,7 @@
    "cost": 0.6938,
    "edge": 0.0076,
    "fair": 0.699,
+   "fill": "strict",
    "id": "ncaaf:401856837",
    "label": "Utah Utes",
    "league": "ncaaf",
@@ -281,8 +282,9 @@
     "team": "Utah Utes"
    },
    "start": "2026-10-25T02:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT24HOUUTAH-UTAH"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT24HOUUTAH-UTAH",
+   "won": 1
   },
   "KXNCAAFGAME-26OCT24INDMICH-IND|YES": {
    "ask": 0.73,
@@ -1185,6 +1187,7 @@
    "cost": 0.5144,
    "edge": 0.0162,
    "fair": 0.5227,
+   "fill": "strict",
    "id": "ncaaf:401856837",
    "label": "Utah Utes -6.5",
    "league": "ncaaf",
@@ -1197,8 +1200,9 @@
     "team": "Utah Utes"
    },
    "start": "2026-10-25T02:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24HOUUTAH-UTAH7"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24HOUUTAH-UTAH7",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT24INDMICH-IND8|NO": {
    "ask": 0.52,
@@ -2734,6 +2738,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856837",
    "label": "under 57.5",
    "league": "ncaaf",
@@ -2745,8 +2750,9 @@
     "t": "under"
    },
    "start": "2026-10-25T02:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24HOUUTAH-58"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24HOUUTAH-58",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24HOUUTAH-58|YES": {
    "ask": 0.51,
@@ -2754,6 +2760,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856837",
    "label": "over 57.5",
    "league": "ncaaf",
@@ -2766,8 +2773,9 @@
     "t": "over"
    },
    "start": "2026-10-25T02:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24HOUUTAH-58"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24HOUUTAH-58",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24INDMICH-43|YES": {
    "ask": 0.51,
