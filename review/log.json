@@ -3167,9 +3167,9 @@
  },
  "2026-10-24": {
   "clv": {
-   "avg": 0.75,
-   "beat": 51.2,
-   "n": 164
+   "avg": 0.73,
+   "beat": 50.9,
+   "n": 165
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3562,10 +3562,11 @@
    {
     "killed_by": [
      "Over 55.5 points",
-     "Over 55.5 points"
+     "Over 55.5 points",
+     "Over 60.5 points"
     ],
     "legs": 6,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 3
@@ -3600,11 +3601,12 @@
    {
     "killed_by": [
      "Iowa State Cyclones +3.5",
+     "Over 60.5 points",
      "Utah State Aggies to win",
      "Western Michigan Broncos +2.5"
     ],
     "legs": 10,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 6
@@ -3650,12 +3652,12 @@
    }
   ],
   "picks": {
-   "hit": 73.8,
+   "hit": 73.9,
    "lost": 43,
-   "n": 164,
-   "roi": -0.2,
+   "n": 165,
+   "roi": 0.1,
    "said": 71.0,
-   "won": 121
+   "won": 122
   },
   "picks_by_league": {
    "arg": {
@@ -3835,12 +3837,12 @@
     "won": 6
    },
    "ncaaf": {
-    "hit": 69.8,
+    "hit": 70.5,
     "lost": 13,
-    "n": 43,
-    "roi": -0.9,
-    "said": 71.0,
-    "won": 30
+    "n": 44,
+    "roi": 0.1,
+    "said": 70.9,
+    "won": 31
    },
    "nhl": {
     "hit": 66.7,
@@ -3983,10 +3985,10 @@
    "agree": {
     "hit": 69.7,
     "lost": 167,
-    "n": 551,
-    "roi": -2.4,
+    "n": 552,
+    "roi": -2.3,
     "said": 67.5,
-    "won": 384
+    "won": 385
    }
   }
  },
@@ -4321,22 +4323,22 @@
     "won": 2
    },
    "agree": {
-    "hit": 70.2,
+    "hit": 70.3,
     "lost": 150,
-    "n": 504,
-    "roi": -1.7,
+    "n": 505,
+    "roi": -1.6,
     "said": 68.2,
-    "won": 354
+    "won": 355
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6398,
-    "market_only": 0.6549,
-    "model_40": 0.6398,
-    "n": 107,
+    "logloss": 0.6379,
+    "market_only": 0.6524,
+    "model_40": 0.6379,
+    "n": 108,
     "weight": 0.4
    },
    "nhl": {
