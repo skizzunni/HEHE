@@ -106,6 +106,23 @@
    "tip": "10:00 AM",
    "venue": "Kalshi"
   },
+  "epl:401879254|home|FanDuel": {
+   "dec": 2.9,
+   "ev": 0.0268,
+   "fair": 0.3541,
+   "fair_source": "DraftKings (Shin)",
+   "id": "epl:401879254",
+   "kind": "value",
+   "league": "epl",
+   "match": "NEW @ CRY",
+   "price": "+190",
+   "seen": "2026-10-25T12:49:25+00:00",
+   "side": "home",
+   "start": "2026-10-25T14:00Z",
+   "team": "Crystal Palace",
+   "tip": "10:00 AM",
+   "venue": "FanDuel"
+  },
   "esp:401882832|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Barcelona\"}|Kalshi": {
    "dec": 2.3992,
    "dk": "+115",
@@ -1518,6 +1535,23 @@
    "tip": "7:30 PM",
    "venue": "FanDuel"
   },
+  "nba:401909866|home|Kalshi": {
+   "dec": 1.8957,
+   "ev": 0.0232,
+   "fair": 0.5398,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909866",
+   "kind": "value",
+   "league": "nba",
+   "match": "DET @ PHI",
+   "price": "-112",
+   "seen": "2026-10-25T12:49:25+00:00",
+   "side": "home",
+   "start": "2026-10-25T23:30Z",
+   "team": "Philadelphia 76ers",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909866|sure": {
    "id": "nba:401909866",
    "kind": "sure",
@@ -1539,6 +1573,30 @@
    "match": "DET @ PHI",
    "profit": 0.0085,
    "seen": "2026-10-25T11:42:33+00:00"
+  },
+  "nba:401909866|{\"line\": -2.5, \"t\": \"spread\", \"team\": \"Philadelphia 76ers\"}|Kalshi": {
+   "dec": 2.1867,
+   "dk": "-102",
+   "ev": 0.0407,
+   "fair": 0.4759,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909866",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "DET @ PHI",
+   "price": "+119",
+   "seen": "2026-10-25T12:49:25+00:00",
+   "side": "{\"line\": -2.5, \"t\": \"spread\", \"team\": \"Philadelphia 76ers\"}",
+   "spec": {
+    "line": -2.5,
+    "t": "spread",
+    "team": "Philadelphia 76ers"
+   },
+   "start": "2026-10-25T23:30Z",
+   "team": "Philadelphia 76ers -2.5",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
   },
   "nba:401909867|{\"line\": 236.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0947,
@@ -3160,6 +3218,55 @@
    "prob": 0.0329,
    "seen": "2026-10-25T04:37:38+00:00",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|epl:401879254:home": {
+   "ev": 0.0269,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0268,
+     "fair": 0.3541,
+     "id": "epl:401879254",
+     "price": "+190",
+     "side": "home",
+     "spec": null,
+     "team": "Crystal Palace"
+    }
+   ],
+   "payout": 2.9,
+   "prob": 0.3541,
+   "seen": "2026-10-25T12:49:25+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|epl:401879254:home|nba:401909866:home": {
+   "ev": 0.0493,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0268,
+     "fair": 0.3541,
+     "id": "epl:401879254",
+     "price": "+190",
+     "side": "home",
+     "spec": null,
+     "team": "Crystal Palace"
+    },
+    {
+     "ev": 0.0217,
+     "fair": 0.5398,
+     "id": "nba:401909866",
+     "price": "-112",
+     "side": "home",
+     "spec": null,
+     "team": "Philadelphia 76ers"
+    }
+   ],
+   "payout": 5.489,
+   "prob": 0.1911,
+   "seen": "2026-10-25T12:49:25+00:00",
+   "target": 3.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|esp:401882834:away": {
