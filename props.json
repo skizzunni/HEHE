@@ -170,6 +170,22 @@
   "status": "void",
   "void_why": "not in box score"
  },
+ "esp:401882829|141438|Goalkeeper Saves|2+": {
+  "aid": "141438",
+  "date": "2026-10-25",
+  "edge": null,
+  "gid": "esp:401882829",
+  "imp": 0.9333,
+  "label": "Mathew Ryan: 2+ Goalkeeper Saves",
+  "league": "esp",
+  "line": "2+",
+  "market": "Goalkeeper Saves",
+  "name": "Mathew Ryan",
+  "p": 0.8855,
+  "p_fair": null,
+  "price": "-1400",
+  "status": "open"
+ },
  "esp:401882835|222375|Goalkeeper Saves|1+": {
   "aid": "222375",
   "date": "2026-10-25",
@@ -10665,6 +10681,22 @@
   "price": "-720",
   "status": "open"
  },
+ "nba:401909861|n:lauri markkanen|Pts + Ast|15+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": null,
+  "gid": "nba:401909861",
+  "imp": 0.9259,
+  "label": "Lauri Markkanen: 15+ Pts + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Ast",
+  "name": "Lauri Markkanen",
+  "p": 0.8487,
+  "p_fair": null,
+  "price": "-1250",
+  "status": "open"
+ },
  "nba:401909861|n:luka doncic|Points|20+": {
   "aid": null,
   "date": "2026-10-25",
@@ -10807,6 +10839,22 @@
   "p": 0.8492,
   "p_fair": 0.961,
   "price": "-4500",
+  "status": "open"
+ },
+ "nba:401909862|n:michael porter|Threes Made|2+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -3.5,
+  "gid": "nba:401909862",
+  "imp": 0.8947,
+  "label": "Michael Porter Jr.: 2+ Threes Made",
+  "league": "nba",
+  "line": "2+",
+  "market": "Threes Made",
+  "name": "Michael Porter Jr.",
+  "p": 0.8497,
+  "p_fair": 0.8635,
+  "price": "-850",
   "status": "open"
  },
  "nba:401909862|n:pascal siakam|Threes Made|1+": {
@@ -15204,11 +15252,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Alvin Kamara",
   "p": 0.813,
   "p_fair": 0.8197,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 57.0
  },
  "nfl:401873011|n:chris olave|Receiving Yards|50+": {
   "aid": null,
@@ -15220,11 +15270,13 @@
   "league": "nfl",
   "line": "50+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Chris Olave",
   "p": 0.8172,
   "p_fair": 0.6971,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 56.0
  },
  "nfl:401873011|n:devaughn vele|Receiving Yards|25+": {
   "aid": null,
@@ -15236,11 +15288,13 @@
   "league": "nfl",
   "line": "25+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Devaughn Vele",
   "p": 0.8172,
   "p_fair": 0.7337,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 54.0
  },
  "nfl:401873011|n:dk metcalf|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -15252,11 +15306,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "DK Metcalf",
   "p": 0.2899,
   "p_fair": null,
   "price": "+180",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873011|n:dk metcalf|Receiving Yards|20+": {
   "aid": null,
@@ -15268,11 +15324,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "DK Metcalf",
   "p": 0.9614,
   "p_fair": 0.8295,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 56.0
  },
  "nfl:401873011|n:germie bernard|Receiving Yards|30+": {
   "aid": null,
@@ -15284,11 +15342,13 @@
   "league": "nfl",
   "line": "30+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Germie Bernard",
   "p": 0.8422,
   "p_fair": 0.7392,
   "price": "-470",
-  "status": "open"
+  "status": "lost",
+  "value": 27.0
  },
  "nfl:401873011|n:jaylen warren|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -15300,11 +15360,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Jaylen Warren",
   "p": 0.4142,
   "p_fair": null,
   "price": "-105",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873011|n:jaylen warren|Rushing Yards|30+": {
   "aid": null,
@@ -15316,11 +15378,13 @@
   "league": "nfl",
   "line": "30+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Jaylen Warren",
   "p": 0.8464,
   "p_fair": 0.8381,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 101.0
  },
  "nfl:401873011|n:juwan johnson|Receiving Yards|15+": {
   "aid": null,
@@ -15332,11 +15396,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Juwan Johnson",
   "p": 0.8512,
   "p_fair": 0.7796,
   "price": "-500",
-  "status": "open"
+  "status": "lost",
+  "value": 7.0
  },
  "nfl:401873011|n:kendre miller|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -15348,11 +15414,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Kendre Miller",
   "p": 0.2858,
   "p_fair": null,
   "price": "+175",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873011|n:pat freiermuth|Receptions|2+": {
   "aid": null,
@@ -15364,11 +15432,13 @@
   "league": "nfl",
   "line": "2+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Pat Freiermuth",
   "p": 0.8438,
   "p_fair": 0.8486,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873012|n:chase brown|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -15480,6 +15550,22 @@
   "p": 0.8512,
   "p_fair": 0.8602,
   "price": "-500",
+  "status": "open"
+ },
+ "nfl:401873012|n:rashod bateman|Receptions|1+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -3.3,
+  "gid": "nfl:401873012",
+  "imp": 0.8824,
+  "label": "Rashod Bateman: 1+ Receptions",
+  "league": "nfl",
+  "line": "1+",
+  "market": "Receptions",
+  "name": "Rashod Bateman",
+  "p": 0.8501,
+  "p_fair": 0.8533,
+  "price": "-750",
   "status": "open"
  },
  "nfl:401873012|n:zay flowers|Receiving Yards|25+": {
@@ -16122,6 +16208,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nfl:401873016|n:woody marks|Rushing Yards|30+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -10.8,
+  "gid": "nfl:401873016",
+  "imp": 0.9355,
+  "label": "Woody Marks: 30+ Rushing Yards",
+  "league": "nfl",
+  "line": "30+",
+  "market": "Rushing Yards",
+  "name": "Woody Marks",
+  "p": 0.8413,
+  "p_fair": 0.8349,
+  "price": "-1450",
+  "status": "open"
+ },
  "nfl:401873017|n:bijan robinson|Anytime Touchdown Scorer|1+": {
   "aid": null,
   "date": "2026-10-25",
@@ -16263,6 +16365,22 @@
   "p": 0.8509,
   "p_fair": 0.8533,
   "price": "-750",
+  "status": "open"
+ },
+ "nfl:401873018|n:baker mayfield|Passing Yards|150+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -3.3,
+  "gid": "nfl:401873018",
+  "imp": 0.875,
+  "label": "Baker Mayfield: 150+ Passing Yards",
+  "league": "nfl",
+  "line": "150+",
+  "market": "Passing Yards",
+  "name": "Baker Mayfield",
+  "p": 0.852,
+  "p_fair": 0.8463,
+  "price": "-700",
   "status": "open"
  },
  "nfl:401873018|n:bucky irving|Anytime Touchdown Scorer|1+": {
@@ -16472,6 +16590,22 @@
   "p": 0.3533,
   "p_fair": null,
   "price": "+125",
+  "status": "open"
+ },
+ "nfl:401873019|n:jk dobbins|Rushing Yards|15+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -5.3,
+  "gid": "nfl:401873019",
+  "imp": 0.9474,
+  "label": "J.K. Dobbins: 15+ Rushing Yards",
+  "league": "nfl",
+  "line": "15+",
+  "market": "Rushing Yards",
+  "name": "J.K. Dobbins",
+  "p": 0.852,
+  "p_fair": 0.8967,
+  "price": "-1800",
   "status": "open"
  },
  "nfl:401873019|n:marvin mims|Receptions|1+": {
@@ -16743,6 +16877,22 @@
   "p": 0.9677,
   "price": "-1800",
   "prop_lock": true,
+  "status": "open"
+ },
+ "nfl:401873021|n:matthew stafford|Passing Yards|200+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -7.9,
+  "gid": "nfl:401873021",
+  "imp": 0.8701,
+  "label": "Matthew Stafford: 200+ Passing Yards",
+  "league": "nfl",
+  "line": "200+",
+  "market": "Passing Yards",
+  "name": "Matthew Stafford",
+  "p": 0.8473,
+  "p_fair": 0.8016,
+  "price": "-670",
   "status": "open"
  },
  "nfl:401873021|n:michael mayer|Receiving Yards|15+": {

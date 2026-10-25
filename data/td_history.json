@@ -6039,7 +6039,7 @@
 "name": "Aaron Rodgers",
 "p": 0.0519,
 "price": "+1400",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Alvin Kamara": {
@@ -6049,7 +6049,7 @@
 "name": "Alvin Kamara",
 "p": 0.1651,
 "price": "+380",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Asante Samuel Jr.": {
@@ -6059,7 +6059,7 @@
 "name": "Asante Samuel Jr.",
 "p": 0.0189,
 "price": "+4000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Barion Brown": {
@@ -6069,7 +6069,7 @@
 "name": "Barion Brown",
 "p": 0.037,
 "price": "+2000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Brandon Johnson": {
@@ -6079,8 +6079,9 @@
 "name": "Brandon Johnson",
 "p": 0.0251,
 "price": "+3000",
-"status": "open",
-"total": 43.5
+"status": "ungradable",
+"total": 43.5,
+"void_why": "identity_unresolved"
 },
 "nfl:401873011|Brandon Smith": {
 "date": "2026-10-25",
@@ -6089,7 +6090,7 @@
 "name": "Brandon Smith",
 "p": 0.0556,
 "price": "+1300",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Bryce Lance": {
@@ -6099,7 +6100,7 @@
 "name": "Bryce Lance",
 "p": 0.1123,
 "price": "+600",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|CJ Donaldson": {
@@ -6109,7 +6110,7 @@
 "name": "CJ Donaldson",
 "p": 0.1123,
 "price": "+600",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873011|Cedric Tillman": {
@@ -6119,7 +6120,7 @@
 "name": "Cedric Tillman",
 "p": 0.0215,
 "price": "+3500",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873011|Chris Olave": {
@@ -6129,7 +6130,7 @@
 "name": "Chris Olave",
 "p": 0.2599,
 "price": "+210",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|DK Metcalf": {
@@ -6139,7 +6140,7 @@
 "name": "DK Metcalf",
 "p": 0.2892,
 "price": "+180",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Darnell Washington": {
@@ -6149,7 +6150,7 @@
 "name": "Darnell Washington",
 "p": 0.2102,
 "price": "+280",
-"status": "open",
+"status": "won",
 "total": 43.5
 },
 "nfl:401873011|Daylen Everette": {
@@ -6159,7 +6160,7 @@
 "name": "Daylen Everette",
 "p": 0.0139,
 "price": "+5500",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Devaughn Vele": {
@@ -6169,7 +6170,7 @@
 "name": "Devaughn Vele",
 "p": 0.1895,
 "price": "+320",
-"status": "open",
+"status": "won",
 "total": 43.5
 },
 "nfl:401873011|Eli Heidenreich": {
@@ -6179,7 +6180,7 @@
 "name": "Eli Heidenreich",
 "p": 0.0367,
 "price": "+2000",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873011|Germie Bernard": {
@@ -6189,7 +6190,7 @@
 "name": "Germie Bernard",
 "p": 0.2599,
 "price": "+210",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Jalen Ramsey": {
@@ -6199,7 +6200,7 @@
 "name": "Jalen Ramsey",
 "p": 0.0189,
 "price": "+4000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Jamel Dean": {
@@ -6209,7 +6210,7 @@
 "name": "Jamel Dean",
 "p": 0.0152,
 "price": "+5000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Jaylen Warren": {
@@ -6219,7 +6220,7 @@
 "name": "Jaylen Warren",
 "p": 0.4257,
 "price": "-105",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Jonas Sanker": {
@@ -6229,7 +6230,7 @@
 "name": "Jonas Sanker",
 "p": 0.0152,
 "price": "+5000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Juwan Johnson": {
@@ -6239,7 +6240,7 @@
 "name": "Juwan Johnson",
 "p": 0.1895,
 "price": "+320",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Kaden Elliss": {
@@ -6249,7 +6250,7 @@
 "name": "Kaden Elliss",
 "p": 0.0139,
 "price": "+5500",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Kaden Wetjen": {
@@ -6259,7 +6260,7 @@
 "name": "Kaden Wetjen",
 "p": 0.0457,
 "price": "+1600",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Kendre Miller": {
@@ -6269,7 +6270,7 @@
 "name": "Kendre Miller",
 "p": 0.2839,
 "price": "+185",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Kool-Aid McKinstry": {
@@ -6279,7 +6280,7 @@
 "name": "Kool-Aid McKinstry",
 "p": 0.0168,
 "price": "+4500",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Lew Nichols III": {
@@ -6289,7 +6290,7 @@
 "name": "Lew Nichols III",
 "p": 0.0189,
 "price": "+4000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|New Orleans Defense": {
@@ -6299,7 +6300,7 @@
 "name": "New Orleans Defense",
 "p": 0.087,
 "price": "+800",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873011|Noah Fant": {
@@ -6309,7 +6310,7 @@
 "name": "Noah Fant",
 "p": 0.098,
 "price": "+700",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Oscar Delp": {
@@ -6319,7 +6320,7 @@
 "name": "Oscar Delp",
 "p": 0.0519,
 "price": "+1400",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Pat Freiermuth": {
@@ -6329,7 +6330,7 @@
 "name": "Pat Freiermuth",
 "p": 0.2289,
 "price": "+250",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Patrick Queen": {
@@ -6339,7 +6340,7 @@
 "name": "Patrick Queen",
 "p": 0.0139,
 "price": "+5500",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Pittsburgh Defense": {
@@ -6349,7 +6350,7 @@
 "name": "Pittsburgh Defense",
 "p": 0.0824,
 "price": "+850",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873011|Quincy Riley": {
@@ -6359,7 +6360,7 @@
 "name": "Quincy Riley",
 "p": 0.0139,
 "price": "+5500",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Rico Dowdle": {
@@ -6369,7 +6370,7 @@
 "name": "Rico Dowdle",
 "p": 0.1726,
 "price": "+360",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Riley Nowakowski": {
@@ -6379,7 +6380,7 @@
 "name": "Riley Nowakowski",
 "p": 0.0251,
 "price": "+3000",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873011|Robert Tonyan": {
@@ -6389,7 +6390,7 @@
 "name": "Robert Tonyan",
 "p": 0.0409,
 "price": "+1800",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873011|Sean Murphy-Bunting": {
@@ -6399,7 +6400,7 @@
 "name": "Sean Murphy-Bunting",
 "p": 0.0127,
 "price": "+6000",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873011|T.J. Watt": {
@@ -6409,7 +6410,7 @@
 "name": "T.J. Watt",
 "p": 0.0168,
 "price": "+4500",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Travis Homer": {
@@ -6419,7 +6420,7 @@
 "name": "Travis Homer",
 "p": 0.0299,
 "price": "+2500",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873011|Treyton Welch": {
@@ -6429,7 +6430,7 @@
 "name": "Treyton Welch",
 "p": 0.0149,
 "price": "+5000",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873011|Tyler Shough": {
@@ -6439,16 +6440,16 @@
 "name": "Tyler Shough",
 "p": 0.1521,
 "price": "+420",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873012|Baltimore Defense": {
 "date": "2026-10-25",
 "gid": "nfl:401873012",
-"imp": 0.1,
+"imp": 0.0952,
 "name": "Baltimore Defense",
-"p": 0.0741,
-"price": "+900",
+"p": 0.0707,
+"price": "+950",
 "status": "open",
 "total": 46.5
 },
@@ -6457,7 +6458,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0164,
 "name": "Barrett Carter",
-"p": 0.012,
+"p": 0.0121,
 "price": "+6000",
 "status": "open",
 "total": 46.5
@@ -6467,7 +6468,7 @@
 "gid": "nfl:401873012",
 "imp": 0.5122,
 "name": "Chase Brown",
-"p": 0.4083,
+"p": 0.4092,
 "price": "-105",
 "status": "open",
 "total": 46.5
@@ -6477,7 +6478,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0909,
 "name": "Cincinnati Defense",
-"p": 0.0673,
+"p": 0.0675,
 "price": "+1000",
 "status": "open",
 "total": 46.5
@@ -6487,7 +6488,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0588,
 "name": "Colbie Young",
-"p": 0.0433,
+"p": 0.0435,
 "price": "+1600",
 "status": "open",
 "total": 46.5
@@ -6497,7 +6498,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0179,
 "name": "DJ Turner II",
-"p": 0.0131,
+"p": 0.0132,
 "price": "+5500",
 "status": "open",
 "total": 46.5
@@ -6507,7 +6508,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0164,
 "name": "Dax Hill",
-"p": 0.012,
+"p": 0.0121,
 "price": "+6000",
 "status": "open",
 "total": 46.5
@@ -6517,7 +6518,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0164,
 "name": "Demetrius Knight Jr.",
-"p": 0.012,
+"p": 0.0121,
 "price": "+6000",
 "status": "open",
 "total": 46.5
@@ -6525,10 +6526,10 @@
 "nfl:401873012|Derrick Henry": {
 "date": "2026-10-25",
 "gid": "nfl:401873012",
-"imp": 0.6491,
+"imp": 0.6429,
 "name": "Derrick Henry",
-"p": 0.5349,
-"price": "-185",
+"p": 0.53,
+"price": "-180",
 "status": "open",
 "total": 46.5
 },
@@ -6537,7 +6538,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0588,
 "name": "Devontez Walker",
-"p": 0.0433,
+"p": 0.0435,
 "price": "+1600",
 "status": "open",
 "total": 46.5
@@ -6547,7 +6548,7 @@
 "gid": "nfl:401873012",
 "imp": 0.1667,
 "name": "Dohnte Meyers",
-"p": 0.1248,
+"p": 0.1251,
 "price": "+500",
 "status": "open",
 "total": 46.5
@@ -6555,10 +6556,10 @@
 "nfl:401873012|Drew Sample": {
 "date": "2026-10-25",
 "gid": "nfl:401873012",
-"imp": 0.0952,
+"imp": 0.0909,
 "name": "Drew Sample",
-"p": 0.0705,
-"price": "+950",
+"p": 0.0675,
+"price": "+1000",
 "status": "open",
 "total": 46.5
 },
@@ -6577,7 +6578,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0952,
 "name": "Erick All",
-"p": 0.0705,
+"p": 0.0707,
 "price": "+950",
 "status": "open",
 "total": 46.5
@@ -6587,7 +6588,7 @@
 "gid": "nfl:401873012",
 "imp": 0.1667,
 "name": "Ja'Kobi Lane",
-"p": 0.1248,
+"p": 0.1251,
 "price": "+500",
 "status": "open",
 "total": 46.5
@@ -6595,10 +6596,10 @@
 "nfl:401873012|Ja'Marr Chase": {
 "date": "2026-10-25",
 "gid": "nfl:401873012",
-"imp": 0.4651,
+"imp": 0.4762,
 "name": "Ja'Marr Chase",
-"p": 0.367,
-"price": "+115",
+"p": 0.3775,
+"price": "+110",
 "status": "open",
 "total": 46.5
 },
@@ -6607,7 +6608,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0526,
 "name": "Jack Endries",
-"p": 0.0387,
+"p": 0.0388,
 "price": "+1800",
 "status": "open",
 "total": 46.5
@@ -6617,7 +6618,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0164,
 "name": "Jaylinn Hawkins",
-"p": 0.012,
+"p": 0.0121,
 "price": "+6000",
 "status": "open",
 "total": 46.5
@@ -6627,7 +6628,7 @@
 "gid": "nfl:401873012",
 "imp": 0.125,
 "name": "Joe Burrow",
-"p": 0.093,
+"p": 0.0933,
 "price": "+700",
 "status": "open",
 "total": 46.5
@@ -6647,7 +6648,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0833,
 "name": "Josh Cuevas",
-"p": 0.0616,
+"p": 0.0618,
 "price": "+1100",
 "status": "open",
 "total": 46.5
@@ -6657,7 +6658,7 @@
 "gid": "nfl:401873012",
 "imp": 0.1333,
 "name": "Justice Hill",
-"p": 0.0993,
+"p": 0.0996,
 "price": "+650",
 "status": "open",
 "total": 46.5
@@ -6667,7 +6668,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0179,
 "name": "Kyle Hamilton",
-"p": 0.0131,
+"p": 0.0132,
 "price": "+5500",
 "status": "open",
 "total": 46.5
@@ -6677,7 +6678,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0476,
 "name": "LaJohntay Wester",
-"p": 0.035,
+"p": 0.0351,
 "price": "+2000",
 "status": "open",
 "total": 46.5
@@ -6687,7 +6688,7 @@
 "gid": "nfl:401873012",
 "imp": 0.2703,
 "name": "Mark Andrews",
-"p": 0.2057,
+"p": 0.2063,
 "price": "+270",
 "status": "open",
 "total": 46.5
@@ -6697,7 +6698,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0278,
 "name": "Marlon Humphrey",
-"p": 0.0204,
+"p": 0.0205,
 "price": "+3500",
 "status": "open",
 "total": 46.5
@@ -6705,10 +6706,10 @@
 "nfl:401873012|Matthew Hibner": {
 "date": "2026-10-25",
 "gid": "nfl:401873012",
-"imp": 0.0833,
+"imp": 0.0769,
 "name": "Matthew Hibner",
-"p": 0.0616,
-"price": "+1100",
+"p": 0.057,
+"price": "+1200",
 "status": "open",
 "total": 46.5
 },
@@ -6717,7 +6718,7 @@
 "gid": "nfl:401873012",
 "imp": 0.2381,
 "name": "Mike Gesicki",
-"p": 0.1803,
+"p": 0.1808,
 "price": "+320",
 "status": "open",
 "total": 46.5
@@ -6727,7 +6728,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0769,
 "name": "Mitchell Tinsley",
-"p": 0.0568,
+"p": 0.057,
 "price": "+1200",
 "status": "open",
 "total": 46.5
@@ -6737,7 +6738,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0217,
 "name": "Nate Wiggins",
-"p": 0.0159,
+"p": 0.016,
 "price": "+4500",
 "status": "open",
 "total": 46.5
@@ -6747,7 +6748,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0323,
 "name": "Nick Vannett",
-"p": 0.0237,
+"p": 0.0238,
 "price": "+3000",
 "status": "open",
 "total": 46.5
@@ -6757,7 +6758,7 @@
 "gid": "nfl:401873012",
 "imp": 0.05,
 "name": "Rasheen Ali",
-"p": 0.0368,
+"p": 0.0369,
 "price": "+1900",
 "status": "open",
 "total": 46.5
@@ -6767,7 +6768,7 @@
 "gid": "nfl:401873012",
 "imp": 0.1667,
 "name": "Rashod Bateman",
-"p": 0.1248,
+"p": 0.1251,
 "price": "+500",
 "status": "open",
 "total": 46.5
@@ -6787,7 +6788,7 @@
 "gid": "nfl:401873012",
 "imp": 0.2439,
 "name": "Samaje Perine",
-"p": 0.1848,
+"p": 0.1853,
 "price": "+310",
 "status": "open",
 "total": 46.5
@@ -6797,7 +6798,7 @@
 "gid": "nfl:401873012",
 "imp": 0.0323,
 "name": "Tahj Brooks",
-"p": 0.0237,
+"p": 0.0238,
 "price": "+3000",
 "status": "open",
 "total": 46.5
@@ -6807,7 +6808,7 @@
 "gid": "nfl:401873012",
 "imp": 0.4,
 "name": "Tee Higgins",
-"p": 0.3116,
+"p": 0.3124,
 "price": "+150",
 "status": "open",
 "total": 46.5
@@ -6815,10 +6816,10 @@
 "nfl:401873012|Tyler Huntley": {
 "date": "2026-10-25",
 "gid": "nfl:401873012",
-"imp": 0.2222,
+"imp": 0.2174,
 "name": "Tyler Huntley",
-"p": 0.1678,
-"price": "+350",
+"p": 0.1645,
+"price": "+360",
 "status": "open",
 "total": 46.5
 },
@@ -6827,7 +6828,7 @@
 "gid": "nfl:401873012",
 "imp": 0.3226,
 "name": "Zay Flowers",
-"p": 0.2477,
+"p": 0.2484,
 "price": "+210",
 "status": "open",
 "total": 46.5
@@ -6837,7 +6838,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0141,
 "name": "Amani Hooker",
-"p": 0.011,
+"p": 0.0111,
 "price": "+7000",
 "status": "open",
 "total": 36.5
@@ -6847,7 +6848,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0667,
 "name": "Blake Whiteheart",
-"p": 0.0524,
+"p": 0.0529,
 "price": "+1400",
 "status": "open",
 "total": 36.5
@@ -6865,10 +6866,10 @@
 "nfl:401873013|Cam Ward": {
 "date": "2026-10-25",
 "gid": "nfl:401873013",
-"imp": 0.1695,
+"imp": 0.1667,
 "name": "Cam Ward",
-"p": 0.1348,
-"price": "+490",
+"p": 0.1337,
+"price": "+500",
 "status": "open",
 "total": 36.5
 },
@@ -6877,7 +6878,7 @@
 "gid": "nfl:401873013",
 "imp": 0.25,
 "name": "Carnell Tate",
-"p": 0.2009,
+"p": 0.2026,
 "price": "+300",
 "status": "open",
 "total": 36.5
@@ -6885,10 +6886,10 @@
 "nfl:401873013|Carsen Ryan": {
 "date": "2026-10-25",
 "gid": "nfl:401873013",
-"imp": 0.0217,
+"imp": 0.0196,
 "name": "Carsen Ryan",
-"p": 0.017,
-"price": "+4500",
+"p": 0.0155,
+"price": "+5000",
 "status": "open",
 "total": 36.5
 },
@@ -6897,7 +6898,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0244,
 "name": "Carson Schwesinger",
-"p": 0.0191,
+"p": 0.0193,
 "price": "+4000",
 "status": "open",
 "total": 36.5
@@ -6907,7 +6908,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0909,
 "name": "Chimere Dike",
-"p": 0.0716,
+"p": 0.0722,
 "price": "+1000",
 "status": "open",
 "total": 36.5
@@ -6917,7 +6918,7 @@
 "gid": "nfl:401873013",
 "imp": 0.1176,
 "name": "Cleveland Defense",
-"p": 0.0929,
+"p": 0.0938,
 "price": "+750",
 "status": "open",
 "total": 36.5
@@ -6927,7 +6928,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0244,
 "name": "Cody Barton",
-"p": 0.0191,
+"p": 0.0193,
 "price": "+4000",
 "status": "open",
 "total": 36.5
@@ -6937,7 +6938,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0164,
 "name": "Cordale Flott",
-"p": 0.0128,
+"p": 0.0129,
 "price": "+6000",
 "status": "open",
 "total": 36.5
@@ -6947,7 +6948,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0769,
 "name": "Daniel Bellinger",
-"p": 0.0605,
+"p": 0.061,
 "price": "+1200",
 "status": "open",
 "total": 36.5
@@ -6957,7 +6958,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0244,
 "name": "David Martin-Robinson",
-"p": 0.0191,
+"p": 0.0193,
 "price": "+4000",
 "status": "open",
 "total": 36.5
@@ -6967,7 +6968,7 @@
 "gid": "nfl:401873013",
 "imp": 0.2941,
 "name": "Denzel Boston",
-"p": 0.2378,
+"p": 0.2397,
 "price": "+240",
 "status": "open",
 "total": 36.5
@@ -6977,7 +6978,7 @@
 "gid": "nfl:401873013",
 "imp": 0.1923,
 "name": "Deshaun Watson",
-"p": 0.1534,
+"p": 0.1547,
 "price": "+420",
 "status": "open",
 "total": 36.5
@@ -6987,7 +6988,7 @@
 "gid": "nfl:401873013",
 "imp": 0.1333,
 "name": "Dylan Sampson",
-"p": 0.1055,
+"p": 0.1065,
 "price": "+650",
 "status": "open",
 "total": 36.5
@@ -6997,7 +6998,7 @@
 "gid": "nfl:401873013",
 "imp": 0.1429,
 "name": "Elic Ayomanor",
-"p": 0.1133,
+"p": 0.1143,
 "price": "+600",
 "status": "open",
 "total": 36.5
@@ -7005,20 +7006,20 @@
 "nfl:401873013|Gunnar Helm": {
 "date": "2026-10-25",
 "gid": "nfl:401873013",
-"imp": 0.1667,
+"imp": 0.1538,
 "name": "Gunnar Helm",
-"p": 0.1325,
-"price": "+500",
+"p": 0.1231,
+"price": "+550",
 "status": "open",
 "total": 36.5
 },
 "nfl:401873013|Harold Fannin Jr.": {
 "date": "2026-10-25",
 "gid": "nfl:401873013",
-"imp": 0.3333,
+"imp": 0.3226,
 "name": "Harold Fannin Jr.",
-"p": 0.271,
-"price": "+200",
+"p": 0.264,
+"price": "+210",
 "status": "open",
 "total": 36.5
 },
@@ -7027,7 +7028,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0526,
 "name": "Isaiah Bond",
-"p": 0.0412,
+"p": 0.0416,
 "price": "+1800",
 "status": "open",
 "total": 36.5
@@ -7035,10 +7036,10 @@
 "nfl:401873013|Jaleel McLaughlin": {
 "date": "2026-10-25",
 "gid": "nfl:401873013",
-"imp": 0.0667,
+"imp": 0.0625,
 "name": "Jaleel McLaughlin",
-"p": 0.0524,
-"price": "+1400",
+"p": 0.0495,
+"price": "+1500",
 "status": "open",
 "total": 36.5
 },
@@ -7047,7 +7048,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0132,
 "name": "Jared Verse",
-"p": 0.0103,
+"p": 0.0104,
 "price": "+7500",
 "status": "open",
 "total": 36.5
@@ -7057,7 +7058,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0141,
 "name": "Jermaine Johnson II",
-"p": 0.011,
+"p": 0.0111,
 "price": "+7000",
 "status": "open",
 "total": 36.5
@@ -7067,7 +7068,7 @@
 "gid": "nfl:401873013",
 "imp": 0.1538,
 "name": "Jerry Jeudy",
-"p": 0.1221,
+"p": 0.1231,
 "price": "+550",
 "status": "open",
 "total": 36.5
@@ -7075,10 +7076,10 @@
 "nfl:401873013|Julius Chestnut": {
 "date": "2026-10-25",
 "gid": "nfl:401873013",
-"imp": 0.0556,
+"imp": 0.0588,
 "name": "Julius Chestnut",
-"p": 0.0436,
-"price": "+1700",
+"p": 0.0466,
+"price": "+1600",
 "status": "open",
 "total": 36.5
 },
@@ -7087,7 +7088,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0323,
 "name": "K.J. Osborn",
-"p": 0.0253,
+"p": 0.0255,
 "price": "+3000",
 "status": "open",
 "total": 36.5
@@ -7097,7 +7098,7 @@
 "gid": "nfl:401873013",
 "imp": 0.2326,
 "name": "KC Concepcion",
-"p": 0.1865,
+"p": 0.1881,
 "price": "+330",
 "status": "open",
 "total": 36.5
@@ -7107,7 +7108,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0357,
 "name": "Kalel Mullings",
-"p": 0.0279,
+"p": 0.0282,
 "price": "+2700",
 "status": "open",
 "total": 36.5
@@ -7127,7 +7128,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0357,
 "name": "Malachi Corley",
-"p": 0.0279,
+"p": 0.0282,
 "price": "+2700",
 "status": "open",
 "total": 36.5
@@ -7137,7 +7138,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0323,
 "name": "Michael Burton",
-"p": 0.0253,
+"p": 0.0255,
 "price": "+3000",
 "status": "open",
 "total": 36.5
@@ -7145,10 +7146,10 @@
 "nfl:401873013|Michael Carter": {
 "date": "2026-10-25",
 "gid": "nfl:401873013",
-"imp": 0.0952,
+"imp": 0.0909,
 "name": "Michael Carter",
-"p": 0.075,
-"price": "+950",
+"p": 0.0722,
+"price": "+1000",
 "status": "open",
 "total": 36.5
 },
@@ -7157,7 +7158,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0152,
 "name": "Myles Harden",
-"p": 0.0119,
+"p": 0.012,
 "price": "+6500",
 "status": "open",
 "total": 36.5
@@ -7177,7 +7178,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0196,
 "name": "Quincy Williams",
-"p": 0.0153,
+"p": 0.0155,
 "price": "+5000",
 "status": "open",
 "total": 36.5
@@ -7187,7 +7188,7 @@
 "gid": "nfl:401873013",
 "imp": 0.339,
 "name": "Quinshon Judkins",
-"p": 0.2758,
+"p": 0.278,
 "price": "+195",
 "status": "open",
 "total": 36.5
@@ -7197,7 +7198,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0196,
 "name": "Ronnie Hickman",
-"p": 0.0153,
+"p": 0.0155,
 "price": "+5000",
 "status": "open",
 "total": 36.5
@@ -7207,7 +7208,7 @@
 "gid": "nfl:401873013",
 "imp": 0.1176,
 "name": "Tennessee Defense",
-"p": 0.0929,
+"p": 0.0938,
 "price": "+750",
 "status": "open",
 "total": 36.5
@@ -7217,7 +7218,7 @@
 "gid": "nfl:401873013",
 "imp": 0.4444,
 "name": "Tony Pollard",
-"p": 0.3676,
+"p": 0.3703,
 "price": "+125",
 "status": "open",
 "total": 36.5
@@ -7235,10 +7236,10 @@
 "nfl:401873013|Tylan Wallace": {
 "date": "2026-10-25",
 "gid": "nfl:401873013",
-"imp": 0.0164,
+"imp": 0.0152,
 "name": "Tylan Wallace",
-"p": 0.0128,
-"price": "+6000",
+"p": 0.012,
+"price": "+6500",
 "status": "open",
 "total": 36.5
 },
@@ -7247,7 +7248,7 @@
 "gid": "nfl:401873013",
 "imp": 0.0217,
 "name": "Tyson Campbell",
-"p": 0.017,
+"p": 0.0171,
 "price": "+4500",
 "status": "open",
 "total": 36.5
@@ -7257,7 +7258,7 @@
 "gid": "nfl:401873013",
 "imp": 0.1852,
 "name": "Wan'Dale Robinson",
-"p": 0.1476,
+"p": 0.1488,
 "price": "+440",
 "status": "open",
 "total": 36.5
@@ -7267,7 +7268,7 @@
 "gid": "nfl:401873014",
 "imp": 0.4545,
 "name": "Aaron Jones",
-"p": 0.3614,
+"p": 0.3628,
 "price": "+120",
 "status": "open",
 "total": 41.5
@@ -7287,7 +7288,7 @@
 "gid": "nfl:401873014",
 "imp": 0.0217,
 "name": "Andrew Van Ginkel",
-"p": 0.0161,
+"p": 0.0162,
 "price": "+4500",
 "status": "open",
 "total": 41.5
@@ -7295,10 +7296,10 @@
 "nfl:401873014|Ashton Dulin": {
 "date": "2026-10-25",
 "gid": "nfl:401873014",
-"imp": 0.0526,
+"imp": 0.05,
 "name": "Ashton Dulin",
-"p": 0.0392,
-"price": "+1800",
+"p": 0.0374,
+"price": "+1900",
 "status": "open",
 "total": 41.5
 },
@@ -7307,7 +7308,7 @@
 "gid": "nfl:401873014",
 "imp": 0.0769,
 "name": "Ben Yurosek",
-"p": 0.0575,
+"p": 0.0578,
 "price": "+1200",
 "status": "open",
 "total": 41.5
@@ -7327,7 +7328,7 @@
 "gid": "nfl:401873014",
 "imp": 0.0323,
 "name": "Byron Murphy",
-"p": 0.024,
+"p": 0.0241,
 "price": "+3000",
 "status": "open",
 "total": 41.5
@@ -7355,10 +7356,10 @@
 "nfl:401873014|DJ Giddens": {
 "date": "2026-10-25",
 "gid": "nfl:401873014",
-"imp": 0.0179,
+"imp": 0.0217,
 "name": "DJ Giddens",
-"p": 0.0133,
-"price": "+5500",
+"p": 0.0162,
+"price": "+4500",
 "status": "open",
 "total": 41.5
 },
@@ -7377,7 +7378,7 @@
 "gid": "nfl:401873014",
 "imp": 0.1176,
 "name": "Daniel Jones",
-"p": 0.0884,
+"p": 0.0888,
 "price": "+750",
 "status": "open",
 "total": 41.5
@@ -7385,20 +7386,20 @@
 "nfl:401873014|DeeJay Dallas": {
 "date": "2026-10-25",
 "gid": "nfl:401873014",
-"imp": 0.0476,
+"imp": 0.0435,
 "name": "DeeJay Dallas",
-"p": 0.0354,
-"price": "+2000",
+"p": 0.0325,
+"price": "+2200",
 "status": "open",
 "total": 41.5
 },
 "nfl:401873014|Deion Burks": {
 "date": "2026-10-25",
 "gid": "nfl:401873014",
-"imp": 0.0588,
+"imp": 0.0556,
 "name": "Deion Burks",
-"p": 0.0439,
-"price": "+1600",
+"p": 0.0417,
+"price": "+1700",
 "status": "open",
 "total": 41.5
 },
@@ -7417,7 +7418,7 @@
 "gid": "nfl:401873014",
 "imp": 0.0714,
 "name": "Drew Ogletree",
-"p": 0.0533,
+"p": 0.0536,
 "price": "+1300",
 "status": "open",
 "total": 41.5
@@ -7437,7 +7438,7 @@
 "gid": "nfl:401873014",
 "imp": 0.1,
 "name": "Gavin Bartholomew",
-"p": 0.075,
+"p": 0.0754,
 "price": "+900",
 "status": "open",
 "total": 41.5
@@ -7447,7 +7448,7 @@
 "gid": "nfl:401873014",
 "imp": 0.0196,
 "name": "Harrison Smith",
-"p": 0.0145,
+"p": 0.0146,
 "price": "+5000",
 "status": "open",
 "total": 41.5
@@ -7457,7 +7458,7 @@
 "gid": "nfl:401873014",
 "imp": 0.1111,
 "name": "Indianapolis Defense",
-"p": 0.0835,
+"p": 0.0839,
 "price": "+800",
 "status": "open",
 "total": 41.5
@@ -7467,7 +7468,7 @@
 "gid": "nfl:401873014",
 "imp": 0.0217,
 "name": "Isaiah Rodgers",
-"p": 0.0161,
+"p": 0.0162,
 "price": "+4500",
 "status": "open",
 "total": 41.5
@@ -7485,10 +7486,10 @@
 "nfl:401873014|Jauan Jennings": {
 "date": "2026-10-25",
 "gid": "nfl:401873014",
-"imp": 0.1333,
+"imp": 0.125,
 "name": "Jauan Jennings",
-"p": 0.1005,
-"price": "+650",
+"p": 0.0945,
+"price": "+700",
 "status": "open",
 "total": 41.5
 },
@@ -7497,7 +7498,7 @@
 "gid": "nfl:401873014",
 "imp": 0.5238,
 "name": "Jonathan Taylor",
-"p": 0.4225,
+"p": 0.4241,
 "price": "-110",
 "status": "open",
 "total": 41.5
@@ -7507,7 +7508,7 @@
 "gid": "nfl:401873014",
 "imp": 0.2857,
 "name": "Jordan Addison",
-"p": 0.2204,
+"p": 0.2214,
 "price": "+250",
 "status": "open",
 "total": 41.5
@@ -7517,7 +7518,7 @@
 "gid": "nfl:401873014",
 "imp": 0.3774,
 "name": "Jordan Mason",
-"p": 0.2958,
+"p": 0.297,
 "price": "+165",
 "status": "open",
 "total": 41.5
@@ -7525,10 +7526,10 @@
 "nfl:401873014|Josh Downs": {
 "date": "2026-10-25",
 "gid": "nfl:401873014",
-"imp": 0.2128,
+"imp": 0.2083,
 "name": "Josh Downs",
-"p": 0.1623,
-"price": "+370",
+"p": 0.1595,
+"price": "+380",
 "status": "open",
 "total": 41.5
 },
@@ -7547,7 +7548,7 @@
 "gid": "nfl:401873014",
 "imp": 0.3922,
 "name": "Justin Jefferson",
-"p": 0.3082,
+"p": 0.3095,
 "price": "+155",
 "status": "open",
 "total": 41.5
@@ -7557,7 +7558,7 @@
 "gid": "nfl:401873014",
 "imp": 0.2128,
 "name": "Keenan Allen",
-"p": 0.1623,
+"p": 0.163,
 "price": "+370",
 "status": "open",
 "total": 41.5
@@ -7567,7 +7568,7 @@
 "gid": "nfl:401873014",
 "imp": 0.2083,
 "name": "Kyler Murray",
-"p": 0.1587,
+"p": 0.1595,
 "price": "+380",
 "status": "open",
 "total": 41.5
@@ -7587,7 +7588,7 @@
 "gid": "nfl:401873014",
 "imp": 0.125,
 "name": "Laquon Treadwell",
-"p": 0.0941,
+"p": 0.0945,
 "price": "+700",
 "status": "open",
 "total": 41.5
@@ -7595,10 +7596,10 @@
 "nfl:401873014|Max Bredeson": {
 "date": "2026-10-25",
 "gid": "nfl:401873014",
-"imp": 0.0385,
+"imp": 0.0435,
 "name": "Max Bredeson",
-"p": 0.0286,
-"price": "+2500",
+"p": 0.0325,
+"price": "+2200",
 "status": "open",
 "total": 41.5
 },
@@ -7607,7 +7608,7 @@
 "gid": "nfl:401873014",
 "imp": 0.1333,
 "name": "Minnesota Defense",
-"p": 0.1005,
+"p": 0.1009,
 "price": "+650",
 "status": "open",
 "total": 41.5
@@ -7617,7 +7618,7 @@
 "gid": "nfl:401873014",
 "imp": 0.1053,
 "name": "Mo Alie-Cox",
-"p": 0.079,
+"p": 0.0794,
 "price": "+850",
 "status": "open",
 "total": 41.5
@@ -7625,20 +7626,20 @@
 "nfl:401873014|Myles Price": {
 "date": "2026-10-25",
 "gid": "nfl:401873014",
-"imp": 0.0588,
+"imp": 0.0625,
 "name": "Myles Price",
-"p": 0.0439,
-"price": "+1600",
+"p": 0.0469,
+"price": "+1500",
 "status": "open",
 "total": 41.5
 },
 "nfl:401873014|Pharaoh Brown": {
 "date": "2026-10-25",
 "gid": "nfl:401873014",
-"imp": 0.0294,
+"imp": 0.0278,
 "name": "Pharaoh Brown",
-"p": 0.0218,
-"price": "+3300",
+"p": 0.0207,
+"price": "+3500",
 "status": "open",
 "total": 41.5
 },
@@ -7647,7 +7648,7 @@
 "gid": "nfl:401873014",
 "imp": 0.0667,
 "name": "Seth McGowan",
-"p": 0.0498,
+"p": 0.05,
 "price": "+1400",
 "status": "open",
 "total": 41.5
@@ -7655,10 +7656,10 @@
 "nfl:401873014|T.J. Hockenson": {
 "date": "2026-10-25",
 "gid": "nfl:401873014",
-"imp": 0.3125,
+"imp": 0.303,
 "name": "T.J. Hockenson",
-"p": 0.2421,
-"price": "+220",
+"p": 0.2354,
+"price": "+230",
 "status": "open",
 "total": 41.5
 },
@@ -7667,7 +7668,7 @@
 "gid": "nfl:401873014",
 "imp": 0.0714,
 "name": "Tai Felton",
-"p": 0.0533,
+"p": 0.0536,
 "price": "+1300",
 "status": "open",
 "total": 41.5
@@ -7677,7 +7678,7 @@
 "gid": "nfl:401873014",
 "imp": 0.1667,
 "name": "Will Mallory",
-"p": 0.1262,
+"p": 0.1268,
 "price": "+500",
 "status": "open",
 "total": 41.5
@@ -7685,10 +7686,10 @@
 "nfl:401873015|Adonai Mitchell": {
 "date": "2026-10-25",
 "gid": "nfl:401873015",
-"imp": 0.1818,
+"imp": 0.2128,
 "name": "Adonai Mitchell",
-"p": 0.1461,
-"price": "+450",
+"p": 0.1712,
+"price": "+370",
 "status": "open",
 "total": 39.5
 },
@@ -7697,7 +7698,7 @@
 "gid": "nfl:401873015",
 "imp": 0.0244,
 "name": "Andrew Beck",
-"p": 0.0193,
+"p": 0.0192,
 "price": "+4000",
 "status": "open",
 "total": 39.5
@@ -7717,7 +7718,7 @@
 "gid": "nfl:401873015",
 "imp": 0.5122,
 "name": "Braelon Allen",
-"p": 0.4316,
+"p": 0.4307,
 "price": "-105",
 "status": "open",
 "total": 39.5
@@ -7727,7 +7728,7 @@
 "gid": "nfl:401873015",
 "imp": 0.0152,
 "name": "Brandon Stephens",
-"p": 0.012,
+"p": 0.0119,
 "price": "+6500",
 "status": "open",
 "total": 39.5
@@ -7747,7 +7748,7 @@
 "gid": "nfl:401873015",
 "imp": 0.1887,
 "name": "Caleb Douglas",
-"p": 0.1518,
+"p": 0.1514,
 "price": "+430",
 "status": "open",
 "total": 39.5
@@ -7757,7 +7758,7 @@
 "gid": "nfl:401873015",
 "imp": 0.1333,
 "name": "Chris Bell",
-"p": 0.1065,
+"p": 0.1062,
 "price": "+650",
 "status": "open",
 "total": 39.5
@@ -7767,7 +7768,7 @@
 "gid": "nfl:401873015",
 "imp": 0.0196,
 "name": "Chris Johnson",
-"p": 0.0155,
+"p": 0.0154,
 "price": "+5000",
 "status": "open",
 "total": 39.5
@@ -7775,10 +7776,10 @@
 "nfl:401873015|DJ Herman": {
 "date": "2026-10-25",
 "gid": "nfl:401873015",
-"imp": 0.0323,
+"imp": 0.0357,
 "name": "DJ Herman",
-"p": 0.0255,
-"price": "+3000",
+"p": 0.0281,
+"price": "+2700",
 "status": "open",
 "total": 39.5
 },
@@ -7807,7 +7808,7 @@
 "gid": "nfl:401873015",
 "imp": 0.3571,
 "name": "Garrett Wilson",
-"p": 0.2937,
+"p": 0.293,
 "price": "+180",
 "status": "open",
 "total": 39.5
@@ -7817,7 +7818,7 @@
 "gid": "nfl:401873015",
 "imp": 0.1,
 "name": "Geno Smith",
-"p": 0.0796,
+"p": 0.0794,
 "price": "+900",
 "status": "open",
 "total": 39.5
@@ -7825,10 +7826,10 @@
 "nfl:401873015|Greg Dulcich": {
 "date": "2026-10-25",
 "gid": "nfl:401873015",
-"imp": 0.1786,
+"imp": 0.1818,
 "name": "Greg Dulcich",
-"p": 0.1435,
-"price": "+460",
+"p": 0.1457,
+"price": "+450",
 "status": "open",
 "total": 39.5
 },
@@ -7837,7 +7838,7 @@
 "gid": "nfl:401873015",
 "imp": 0.1538,
 "name": "Isaiah Davis",
-"p": 0.1232,
+"p": 0.1228,
 "price": "+550",
 "status": "open",
 "total": 39.5
@@ -7845,10 +7846,10 @@
 "nfl:401873015|Isaiah Williams": {
 "date": "2026-10-25",
 "gid": "nfl:401873015",
-"imp": 0.0588,
+"imp": 0.0625,
 "name": "Isaiah Williams",
-"p": 0.0466,
-"price": "+1600",
+"p": 0.0494,
+"price": "+1500",
 "status": "open",
 "total": 39.5
 },
@@ -7877,7 +7878,7 @@
 "gid": "nfl:401873015",
 "imp": 0.0323,
 "name": "Jared Wayne",
-"p": 0.0255,
+"p": 0.0254,
 "price": "+3000",
 "status": "open",
 "total": 39.5
@@ -7907,7 +7908,7 @@
 "gid": "nfl:401873015",
 "imp": 0.1667,
 "name": "Jaylen Wright",
-"p": 0.1337,
+"p": 0.1334,
 "price": "+500",
 "status": "open",
 "total": 39.5
@@ -7917,7 +7918,7 @@
 "gid": "nfl:401873015",
 "imp": 0.0476,
 "name": "Jelani Woods",
-"p": 0.0377,
+"p": 0.0376,
 "price": "+2000",
 "status": "open",
 "total": 39.5
@@ -7927,7 +7928,7 @@
 "gid": "nfl:401873015",
 "imp": 0.0435,
 "name": "Jeremy Ruckert",
-"p": 0.0344,
+"p": 0.0343,
 "price": "+2200",
 "status": "open",
 "total": 39.5
@@ -7955,20 +7956,20 @@
 "nfl:401873015|Justin Joly": {
 "date": "2026-10-25",
 "gid": "nfl:401873015",
-"imp": 0.0278,
+"imp": 0.0244,
 "name": "Justin Joly",
-"p": 0.0219,
-"price": "+3500",
+"p": 0.0192,
+"price": "+4000",
 "status": "open",
 "total": 39.5
 },
 "nfl:401873015|Kaytron Allen": {
 "date": "2026-10-25",
 "gid": "nfl:401873015",
-"imp": 0.1,
+"imp": 0.0952,
 "name": "Kaytron Allen",
-"p": 0.0796,
-"price": "+900",
+"p": 0.0755,
+"price": "+950",
 "status": "open",
 "total": 39.5
 },
@@ -7985,10 +7986,10 @@
 "nfl:401873015|Kenyon Sadiq": {
 "date": "2026-10-25",
 "gid": "nfl:401873015",
-"imp": 0.2041,
+"imp": 0.1961,
 "name": "Kenyon Sadiq",
-"p": 0.1645,
-"price": "+390",
+"p": 0.1575,
+"price": "+410",
 "status": "open",
 "total": 39.5
 },
@@ -7997,7 +7998,7 @@
 "gid": "nfl:401873015",
 "imp": 0.0833,
 "name": "Kevin Coleman Jr.",
-"p": 0.0662,
+"p": 0.066,
 "price": "+1100",
 "status": "open",
 "total": 39.5
@@ -8005,10 +8006,10 @@
 "nfl:401873015|Malik McClain": {
 "date": "2026-10-25",
 "gid": "nfl:401873015",
-"imp": 0.0323,
+"imp": 0.0357,
 "name": "Malik McClain",
-"p": 0.0255,
-"price": "+3000",
+"p": 0.0281,
+"price": "+2700",
 "status": "open",
 "total": 39.5
 },
@@ -8017,7 +8018,7 @@
 "gid": "nfl:401873015",
 "imp": 0.2222,
 "name": "Malik Washington",
-"p": 0.1794,
+"p": 0.179,
 "price": "+350",
 "status": "open",
 "total": 39.5
@@ -8027,7 +8028,7 @@
 "gid": "nfl:401873015",
 "imp": 0.2222,
 "name": "Malik Willis",
-"p": 0.1794,
+"p": 0.179,
 "price": "+350",
 "status": "open",
 "total": 39.5
@@ -8035,10 +8036,10 @@
 "nfl:401873015|Mason Taylor": {
 "date": "2026-10-25",
 "gid": "nfl:401873015",
-"imp": 0.1818,
+"imp": 0.1786,
 "name": "Mason Taylor",
-"p": 0.1461,
-"price": "+450",
+"p": 0.1431,
+"price": "+460",
 "status": "open",
 "total": 39.5
 },
@@ -8047,7 +8048,7 @@
 "gid": "nfl:401873015",
 "imp": 0.1333,
 "name": "Miami Defense",
-"p": 0.1065,
+"p": 0.1062,
 "price": "+650",
 "status": "open",
 "total": 39.5
@@ -8057,7 +8058,7 @@
 "gid": "nfl:401873015",
 "imp": 0.1111,
 "name": "New York Jets Defense",
-"p": 0.0885,
+"p": 0.0883,
 "price": "+800",
 "status": "open",
 "total": 39.5
@@ -8067,7 +8068,7 @@
 "gid": "nfl:401873015",
 "imp": 0.3448,
 "name": "Ollie Gordon II",
-"p": 0.2831,
+"p": 0.2824,
 "price": "+190",
 "status": "open",
 "total": 39.5
@@ -8075,10 +8076,10 @@
 "nfl:401873015|Omar Cooper Jr.": {
 "date": "2026-10-25",
 "gid": "nfl:401873015",
-"imp": 0.2174,
+"imp": 0.2041,
 "name": "Omar Cooper Jr.",
-"p": 0.1755,
-"price": "+360",
+"p": 0.164,
+"price": "+390",
 "status": "open",
 "total": 39.5
 },
@@ -8097,7 +8098,7 @@
 "gid": "nfl:401873015",
 "imp": 0.0714,
 "name": "Tim Patrick",
-"p": 0.0566,
+"p": 0.0565,
 "price": "+1300",
 "status": "open",
 "total": 39.5
@@ -8107,7 +8108,7 @@
 "gid": "nfl:401873015",
 "imp": 0.0833,
 "name": "Will Kacmarek",
-"p": 0.0662,
+"p": 0.066,
 "price": "+1100",
 "status": "open",
 "total": 39.5
@@ -8875,10 +8876,10 @@
 "nfl:401873018|Alex Anzalone": {
 "date": "2026-10-25",
 "gid": "nfl:401873018",
-"imp": 0.0164,
+"imp": 0.0152,
 "name": "Alex Anzalone",
-"p": 0.0124,
-"price": "+6000",
+"p": 0.0115,
+"price": "+6500",
 "status": "open",
 "total": 44.5
 },
@@ -8887,7 +8888,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0769,
 "name": "Anthony Tyus III",
-"p": 0.0585,
+"p": 0.0587,
 "price": "+1200",
 "status": "open",
 "total": 44.5
@@ -8897,7 +8898,7 @@
 "gid": "nfl:401873018",
 "imp": 0.1667,
 "name": "Baker Mayfield",
-"p": 0.1284,
+"p": 0.1288,
 "price": "+500",
 "status": "open",
 "total": 44.5
@@ -8907,7 +8908,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0435,
 "name": "Bauer Sharp",
-"p": 0.033,
+"p": 0.0331,
 "price": "+2200",
 "status": "open",
 "total": 44.5
@@ -8927,7 +8928,7 @@
 "gid": "nfl:401873018",
 "imp": 0.1333,
 "name": "Bryce Young",
-"p": 0.1022,
+"p": 0.1026,
 "price": "+650",
 "status": "open",
 "total": 44.5
@@ -8937,7 +8938,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0769,
 "name": "Brycen Tremayne",
-"p": 0.0585,
+"p": 0.0587,
 "price": "+1200",
 "status": "open",
 "total": 44.5
@@ -8947,7 +8948,7 @@
 "gid": "nfl:401873018",
 "imp": 0.4545,
 "name": "Bucky Irving",
-"p": 0.3667,
+"p": 0.3677,
 "price": "+120",
 "status": "open",
 "total": 44.5
@@ -8957,7 +8958,7 @@
 "gid": "nfl:401873018",
 "imp": 0.2941,
 "name": "Cade Otton",
-"p": 0.2309,
+"p": 0.2316,
 "price": "+240",
 "status": "open",
 "total": 44.5
@@ -8967,7 +8968,7 @@
 "gid": "nfl:401873018",
 "imp": 0.1176,
 "name": "Carolina Defense",
-"p": 0.09,
+"p": 0.0903,
 "price": "+750",
 "status": "open",
 "total": 44.5
@@ -8977,7 +8978,7 @@
 "gid": "nfl:401873018",
 "imp": 0.2778,
 "name": "Chris Godwin",
-"p": 0.2175,
+"p": 0.2182,
 "price": "+260",
 "status": "open",
 "total": 44.5
@@ -8987,7 +8988,7 @@
 "gid": "nfl:401873018",
 "imp": 0.5455,
 "name": "Chuba Hubbard",
-"p": 0.4481,
+"p": 0.4492,
 "price": "-120",
 "status": "open",
 "total": 44.5
@@ -8997,7 +8998,7 @@
 "gid": "nfl:401873018",
 "imp": 0.2439,
 "name": "Darren Waller",
-"p": 0.19,
+"p": 0.1906,
 "price": "+310",
 "status": "open",
 "total": 44.5
@@ -9007,7 +9008,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0476,
 "name": "David Moore",
-"p": 0.0361,
+"p": 0.0362,
 "price": "+2000",
 "status": "open",
 "total": 44.5
@@ -9017,7 +9018,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0556,
 "name": "David Sills V",
-"p": 0.0422,
+"p": 0.0423,
 "price": "+1700",
 "status": "open",
 "total": 44.5
@@ -9027,7 +9028,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0179,
 "name": "Devin Lloyd",
-"p": 0.0135,
+"p": 0.0136,
 "price": "+5500",
 "status": "open",
 "total": 44.5
@@ -9037,7 +9038,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0278,
 "name": "Feleipe Franks",
-"p": 0.021,
+"p": 0.0211,
 "price": "+3500",
 "status": "open",
 "total": 44.5
@@ -9057,7 +9058,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0179,
 "name": "Jacob Parrish",
-"p": 0.0135,
+"p": 0.0136,
 "price": "+5500",
 "status": "open",
 "total": 44.5
@@ -9067,7 +9068,7 @@
 "gid": "nfl:401873018",
 "imp": 0.3448,
 "name": "Jalen Coker",
-"p": 0.2729,
+"p": 0.2737,
 "price": "+190",
 "status": "open",
 "total": 44.5
@@ -9075,10 +9076,10 @@
 "nfl:401873018|John Metchie III": {
 "date": "2026-10-25",
 "gid": "nfl:401873018",
-"imp": 0.1111,
+"imp": 0.1053,
 "name": "John Metchie III",
-"p": 0.0849,
-"price": "+800",
+"p": 0.0807,
+"price": "+850",
 "status": "open",
 "total": 44.5
 },
@@ -9087,7 +9088,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0556,
 "name": "Kameron Johnson",
-"p": 0.0422,
+"p": 0.0423,
 "price": "+1700",
 "status": "open",
 "total": 44.5
@@ -9097,7 +9098,7 @@
 "gid": "nfl:401873018",
 "imp": 0.1818,
 "name": "Kenneth Gainwell",
-"p": 0.1404,
+"p": 0.1408,
 "price": "+450",
 "status": "open",
 "total": 44.5
@@ -9107,7 +9108,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0435,
 "name": "Ko Kieft",
-"p": 0.033,
+"p": 0.0331,
 "price": "+2200",
 "status": "open",
 "total": 44.5
@@ -9117,7 +9118,7 @@
 "gid": "nfl:401873018",
 "imp": 0.125,
 "name": "Mitchell Evans",
-"p": 0.0957,
+"p": 0.0961,
 "price": "+700",
 "status": "open",
 "total": 44.5
@@ -9127,7 +9128,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0435,
 "name": "Payne Durham",
-"p": 0.033,
+"p": 0.0331,
 "price": "+2200",
 "status": "open",
 "total": 44.5
@@ -9145,10 +9146,10 @@
 "nfl:401873018|Sean Tucker": {
 "date": "2026-10-25",
 "gid": "nfl:401873018",
-"imp": 0.1538,
+"imp": 0.1429,
 "name": "Sean Tucker",
-"p": 0.1183,
-"price": "+550",
+"p": 0.1101,
+"price": "+600",
 "status": "open",
 "total": 44.5
 },
@@ -9157,7 +9158,7 @@
 "gid": "nfl:401873018",
 "imp": 0.125,
 "name": "Tampa Bay Defense",
-"p": 0.0957,
+"p": 0.0961,
 "price": "+700",
 "status": "open",
 "total": 44.5
@@ -9167,7 +9168,7 @@
 "gid": "nfl:401873018",
 "imp": 0.2273,
 "name": "Ted Hurst III",
-"p": 0.1766,
+"p": 0.1772,
 "price": "+340",
 "status": "open",
 "total": 44.5
@@ -9177,7 +9178,7 @@
 "gid": "nfl:401873018",
 "imp": 0.4167,
 "name": "Tetairoa McMillan",
-"p": 0.3339,
+"p": 0.3348,
 "price": "+140",
 "status": "open",
 "total": 44.5
@@ -9187,7 +9188,7 @@
 "gid": "nfl:401873018",
 "imp": 0.1818,
 "name": "Tez Johnson",
-"p": 0.1404,
+"p": 0.1408,
 "price": "+450",
 "status": "open",
 "total": 44.5
@@ -9197,7 +9198,7 @@
 "gid": "nfl:401873018",
 "imp": 0.2381,
 "name": "Tommy Tremble",
-"p": 0.1853,
+"p": 0.1859,
 "price": "+320",
 "status": "open",
 "total": 44.5
@@ -9217,7 +9218,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0667,
 "name": "Trevor Etienne",
-"p": 0.0507,
+"p": 0.0509,
 "price": "+1400",
 "status": "open",
 "total": 44.5
@@ -9257,7 +9258,7 @@
 "gid": "nfl:401873018",
 "imp": 0.0179,
 "name": "Zyon McCollum",
-"p": 0.0135,
+"p": 0.0136,
 "price": "+5500",
 "status": "open",
 "total": 44.5
@@ -10027,7 +10028,7 @@
 "gid": "nfl:401873021",
 "imp": 0.5556,
 "name": "Ashton Jeanty",
-"p": 0.4468,
+"p": 0.4465,
 "price": "-125",
 "status": "open",
 "total": 48.5
@@ -10037,7 +10038,7 @@
 "gid": "nfl:401873021",
 "imp": 0.339,
 "name": "Blake Corum",
-"p": 0.2608,
+"p": 0.2606,
 "price": "+195",
 "status": "open",
 "total": 48.5
@@ -10047,7 +10048,7 @@
 "gid": "nfl:401873021",
 "imp": 0.4762,
 "name": "Brock Bowers",
-"p": 0.3763,
+"p": 0.376,
 "price": "+110",
 "status": "open",
 "total": 48.5
@@ -10067,7 +10068,7 @@
 "gid": "nfl:401873021",
 "imp": 0.0909,
 "name": "Cody White",
-"p": 0.0672,
+"p": 0.0671,
 "price": "+1000",
 "status": "open",
 "total": 48.5
@@ -10077,7 +10078,7 @@
 "gid": "nfl:401873021",
 "imp": 0.2857,
 "name": "Colby Parkinson",
-"p": 0.2178,
+"p": 0.2176,
 "price": "+250",
 "status": "open",
 "total": 48.5
@@ -10087,7 +10088,7 @@
 "gid": "nfl:401873021",
 "imp": 0.1176,
 "name": "Connor Heyward",
-"p": 0.0873,
+"p": 0.0872,
 "price": "+750",
 "status": "open",
 "total": 48.5
@@ -10097,7 +10098,7 @@
 "gid": "nfl:401873021",
 "imp": 0.05,
 "name": "Dareke Young",
-"p": 0.0368,
+"p": 0.0367,
 "price": "+1900",
 "status": "open",
 "total": 48.5
@@ -10107,7 +10108,7 @@
 "gid": "nfl:401873021",
 "imp": 0.1111,
 "name": "Davis Allen",
-"p": 0.0824,
+"p": 0.0823,
 "price": "+800",
 "status": "open",
 "total": 48.5
@@ -10137,7 +10138,7 @@
 "gid": "nfl:401873021",
 "imp": 0.1176,
 "name": "Dylan Laube",
-"p": 0.0873,
+"p": 0.0872,
 "price": "+750",
 "status": "open",
 "total": 48.5
@@ -10157,7 +10158,7 @@
 "gid": "nfl:401873021",
 "imp": 0.0588,
 "name": "Ian Thomas",
-"p": 0.0433,
+"p": 0.0432,
 "price": "+1600",
 "status": "open",
 "total": 48.5
@@ -10167,7 +10168,7 @@
 "gid": "nfl:401873021",
 "imp": 0.1333,
 "name": "Jalen Nailor",
-"p": 0.0992,
+"p": 0.0991,
 "price": "+650",
 "status": "open",
 "total": 48.5
@@ -10187,7 +10188,7 @@
 "gid": "nfl:401873021",
 "imp": 0.125,
 "name": "Jordan Whittington",
-"p": 0.0929,
+"p": 0.0928,
 "price": "+700",
 "status": "open",
 "total": 48.5
@@ -10197,7 +10198,7 @@
 "gid": "nfl:401873021",
 "imp": 0.0132,
 "name": "Kamren Kinchens",
-"p": 0.0097,
+"p": 0.0096,
 "price": "+7500",
 "status": "open",
 "total": 48.5
@@ -10217,7 +10218,7 @@
 "gid": "nfl:401873021",
 "imp": 0.1961,
 "name": "Konata Mumpfield",
-"p": 0.1473,
+"p": 0.1472,
 "price": "+410",
 "status": "open",
 "total": 48.5
@@ -10227,7 +10228,7 @@
 "gid": "nfl:401873021",
 "imp": 0.5745,
 "name": "Kyren Williams",
-"p": 0.4641,
+"p": 0.4637,
 "price": "-135",
 "status": "open",
 "total": 48.5
@@ -10237,7 +10238,7 @@
 "gid": "nfl:401873021",
 "imp": 0.1333,
 "name": "Las Vegas Defense",
-"p": 0.0992,
+"p": 0.0991,
 "price": "+650",
 "status": "open",
 "total": 48.5
@@ -10247,7 +10248,7 @@
 "gid": "nfl:401873021",
 "imp": 0.125,
 "name": "Los Angeles Rams Defense",
-"p": 0.0929,
+"p": 0.0928,
 "price": "+700",
 "status": "open",
 "total": 48.5
@@ -10297,7 +10298,7 @@
 "gid": "nfl:401873021",
 "imp": 0.2439,
 "name": "Michael Mayer",
-"p": 0.1846,
+"p": 0.1844,
 "price": "+310",
 "status": "open",
 "total": 48.5
@@ -10307,7 +10308,7 @@
 "gid": "nfl:401873021",
 "imp": 0.2174,
 "name": "Mike Washington Jr.",
-"p": 0.1639,
+"p": 0.1637,
 "price": "+360",
 "status": "open",
 "total": 48.5
@@ -10327,7 +10328,7 @@
 "gid": "nfl:401873021",
 "imp": 0.4651,
 "name": "Puka Nacua",
-"p": 0.3667,
+"p": 0.3664,
 "price": "+115",
 "status": "open",
 "total": 48.5
@@ -10367,7 +10368,7 @@
 "gid": "nfl:401873021",
 "imp": 0.2273,
 "name": "Tre Tucker",
-"p": 0.1716,
+"p": 0.1714,
 "price": "+340",
 "status": "open",
 "total": 48.5
@@ -10375,10 +10376,10 @@
 "nfl:401873021|Tutu Atwell": {
 "date": "2026-10-25",
 "gid": "nfl:401873021",
-"imp": 0.1111,
+"imp": 0.1176,
 "name": "Tutu Atwell",
-"p": 0.0824,
-"price": "+800",
+"p": 0.0872,
+"price": "+750",
 "status": "open",
 "total": 48.5
 },
@@ -10387,7 +10388,7 @@
 "gid": "nfl:401873021",
 "imp": 0.2941,
 "name": "Tyler Higbee",
-"p": 0.2245,
+"p": 0.2243,
 "price": "+240",
 "status": "open",
 "total": 48.5

@@ -4120,6 +4120,7 @@
    "cost": 0.6042,
    "edge": 0.0066,
    "fair": 0.6082,
+   "fill": "strict",
    "id": "nfl:401873011",
    "label": "Pittsburgh Steelers",
    "league": "nfl",
@@ -4132,8 +4133,9 @@
     "team": "Pittsburgh Steelers"
    },
    "start": "2026-10-25T13:30Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26OCT25PITNO-PIT"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26OCT25PITNO-PIT",
+   "won": 1
   },
   "KXNFLGAME-26OCT25SFATL-SF|YES": {
    "ask": 0.58,
@@ -4566,6 +4568,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "nfl:401873011",
    "label": "under 44.5",
    "league": "nfl",
@@ -4578,8 +4581,9 @@
     "t": "under"
    },
    "start": "2026-10-25T13:30Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26OCT25PITNO-45"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26OCT25PITNO-45",
+   "won": 1
   },
   "KXNFLTOTAL-26OCT25PITNO-45|YES": {
    "ask": 0.51,
@@ -4587,6 +4591,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873011",
    "label": "over 44.5",
    "league": "nfl",
@@ -4598,8 +4603,9 @@
     "t": "over"
    },
    "start": "2026-10-25T13:30Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26OCT25PITNO-45"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26OCT25PITNO-45",
+   "won": 0
   },
   "KXNFLTOTAL-26OCT25SFATL-50|YES": {
    "ask": 0.51,
