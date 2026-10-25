@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 79-27 (74.5% vs 72.2% claimed, ROI -0.4%).
-Closing line value: +0.52 points on 106 picks; beat the close on 51.9%.
+Picks 81-27 (75.0% vs 72.1% claimed, ROI +0.2%).
+Closing line value: +0.5 points on 108 picks; beat the close on 51.9%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST bra2 Fortaleza at 76%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76%
 - LOST ecu Manta F.C. at 72%: margin 2 · the book had my side favoured too · called at 72%
@@ -29,7 +29,7 @@ Closing line value: +0.52 points on 106 picks; beat the close on 51.9%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.4% (493); against it 30.0% (20).
+With the market 69.5% (495); against it 30.0% (20).
 Locks 4/11 won, 5 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (2/9 legs won)
@@ -45,4 +45,4 @@ Ladder-consistency props (all time): 445/538 won (82.7%) vs 87.3% fair, 88.0% pr
 Props 23/31 vs 71.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=92), nhl 0.00 (n=52)
+Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=93), nhl 0.00 (n=52)

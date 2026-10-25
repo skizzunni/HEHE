@@ -433,6 +433,7 @@
    "cost": 0.6839,
    "edge": 0.0298,
    "fair": 0.7043,
+   "fill": "strict",
    "id": "ncaaf:401864528",
    "label": "Nevada Wolf Pack",
    "league": "ncaaf",
@@ -444,8 +445,9 @@
     "team": "Nevada Wolf Pack"
    },
    "start": "2026-10-24T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT24SJSUNEV-NEV"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT24SJSUNEV-NEV",
+   "won": 1
   },
   "KXNCAAFGAME-26OCT24TXAMALA-ALA|YES": {
    "ask": 0.84,
@@ -1567,6 +1569,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401864528",
    "label": "Nevada Wolf Pack -5.5",
    "league": "ncaaf",
@@ -1580,8 +1583,9 @@
     "team": "Nevada Wolf Pack"
    },
    "start": "2026-10-24T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24SJSUNEV-NEV6"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24SJSUNEV-NEV6",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT24SYRUNC-UNC10|NO": {
    "ask": 0.51,
@@ -3264,6 +3268,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401864528",
    "label": "over 45.5",
    "league": "ncaaf",
@@ -3276,8 +3281,9 @@
     "t": "over"
    },
    "start": "2026-10-24T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24SJSUNEV-46"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24SJSUNEV-46",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24SJSUNEV-47|NO": {
    "ask": 0.51,
@@ -3285,6 +3291,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401864528",
    "label": "under 46.5",
    "league": "ncaaf",
@@ -3297,8 +3304,9 @@
     "t": "under"
    },
    "start": "2026-10-24T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24SJSUNEV-47"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24SJSUNEV-47",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24SJSUNEV-47|YES": {
    "ask": 0.51,
@@ -3306,6 +3314,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401864528",
    "label": "over 46.5",
    "league": "ncaaf",
@@ -3317,8 +3326,9 @@
     "t": "over"
    },
    "start": "2026-10-24T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24SJSUNEV-47"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24SJSUNEV-47",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24SYRUNC-47|YES": {
    "ask": 0.51,
