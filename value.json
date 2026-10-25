@@ -36,6 +36,23 @@
    "tip": "9:00 AM",
    "venue": "FanDuel"
   },
+  "ecu:401921334|away|FanDuel": {
+   "dec": 4.8,
+   "ev": 0.0297,
+   "fair": 0.2145,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ecu:401921334",
+   "kind": "value",
+   "league": "ecu",
+   "match": "GCF @ EME",
+   "price": "+380",
+   "seen": "2026-10-25T15:12:37+00:00",
+   "side": "away",
+   "start": "2026-10-25T19:00Z",
+   "team": "Guayaquil City FC",
+   "tip": "3:00 PM",
+   "venue": "FanDuel"
+  },
   "efl1:401880200|away|FanDuel": {
    "dec": 4.4,
    "ev": 0.0156,
@@ -3110,6 +3127,26 @@
    "seen": "2026-10-25T12:18:23+00:00",
    "status": "lost",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ecu:401921334:away": {
+   "ev": 0.0296,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0297,
+     "fair": 0.2145,
+     "id": "ecu:401921334",
+     "price": "+380",
+     "side": "away",
+     "spec": null,
+     "team": "Guayaquil City FC"
+    }
+   ],
+   "payout": 4.8,
+   "prob": 0.2145,
+   "seen": "2026-10-25T15:12:37+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|efl1:401880200:away": {
