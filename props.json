@@ -11704,6 +11704,22 @@
   "price": "-750",
   "status": "open"
  },
+ "nba:401909866|n:adem bona|Rebounds|4+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": 0.6,
+  "gid": "nba:401909866",
+  "imp": 0.8,
+  "label": "Adem Bona: 4+ Rebounds",
+  "league": "nba",
+  "line": "4+",
+  "market": "Rebounds",
+  "name": "Adem Bona",
+  "p": 0.7722,
+  "p_fair": 0.8049,
+  "price": "-400",
+  "status": "open"
+ },
  "nba:401909866|n:ausar thompson|Pts + Reb + Ast|15+": {
   "aid": null,
   "date": "2026-10-25",
@@ -11814,6 +11830,22 @@
   "p": 0.8475,
   "p_fair": 0.8491,
   "price": "-720",
+  "status": "open"
+ },
+ "nba:401909866|n:daniss jenkins|Points|5+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": 1.9,
+  "gid": "nba:401909866",
+  "imp": 0.9524,
+  "label": "Daniss Jenkins: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Daniss Jenkins",
+  "p": 0.8451,
+  "p_fair": 0.9702,
+  "price": "-2000",
   "status": "open"
  },
  "nba:401909866|n:daniss jenkins|Reb + Ast|5+": {
@@ -17433,11 +17465,13 @@
   "league": "nfl",
   "line": "150+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Bo Nix",
   "p": 0.8514,
   "p_fair": 0.8412,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 222.0
  },
  "nfl:401873019|n:courtland sutton|Receiving Yards|15+": {
   "aid": null,
@@ -17449,11 +17483,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Courtland Sutton",
   "p": 0.8483,
   "p_fair": 0.7911,
   "price": "-490",
-  "status": "open"
+  "status": "won",
+  "value": 45.0
  },
  "nfl:401873019|n:jaylen waddle|Receiving Yards|25+": {
   "aid": null,
@@ -17465,11 +17501,13 @@
   "league": "nfl",
   "line": "25+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Jaylen Waddle",
   "p": 0.8512,
   "p_fair": 0.769,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 48.0
  },
  "nfl:401873019|n:jaylen waddle|Receiving Yards|30+": {
   "aid": null,
@@ -17481,11 +17519,13 @@
   "league": "nfl",
   "line": "30+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Jaylen Waddle",
   "p": 0.8172,
   "p_fair": 0.7238,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 48.0
  },
  "nfl:401873019|n:jk dobbins|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -17497,11 +17537,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "J.K. Dobbins",
   "p": 0.3533,
   "p_fair": null,
   "price": "+125",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873019|n:jk dobbins|Rushing Yards|15+": {
   "aid": null,
@@ -17513,11 +17555,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "J.K. Dobbins",
   "p": 0.852,
   "p_fair": 0.8967,
   "price": "-1800",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nfl:401873019|n:kendrick bourne|Receiving Yards|15+": {
   "aid": null,
@@ -17529,11 +17573,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Kendrick Bourne",
   "p": 0.847,
   "p_fair": 0.7962,
   "price": "-580",
-  "status": "open"
+  "status": "lost",
+  "value": 9.0
  },
  "nfl:401873019|n:marvin mims|Receptions|1+": {
   "aid": null,
@@ -17545,11 +17591,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Marvin Mims Jr.",
   "p": 0.8509,
   "p_fair": 0.8463,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873019|n:michael wilson|Receiving Yards|25+": {
   "aid": null,
@@ -17561,11 +17609,13 @@
   "league": "nfl",
   "line": "25+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Michael Wilson",
   "p": 0.8513,
   "p_fair": 0.7647,
   "price": "-550",
-  "status": "open"
+  "status": "won",
+  "value": 55.0
  },
  "nfl:401873019|n:rj harvey|Receiving Yards|10+": {
   "aid": null,
@@ -17577,11 +17627,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "RJ Harvey",
   "p": 0.8512,
   "p_fair": 0.8052,
   "price": "-500",
-  "status": "open"
+  "status": "won",
+  "value": 54.0
  },
  "nfl:401873019|n:trey mcbride|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -17593,11 +17645,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Trey McBride",
   "p": 0.3371,
   "p_fair": null,
   "price": "+135",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873019|n:trey mcbride|Receiving Yards|40+": {
   "aid": null,
@@ -17609,11 +17663,13 @@
   "league": "nfl",
   "line": "40+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Trey McBride",
   "p": 0.8048,
   "p_fair": 0.69,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 111.0
  },
  "nfl:401873020|n:amon ra st brown|Anytime Touchdown Scorer|1+": {
   "aid": null,
