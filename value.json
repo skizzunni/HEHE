@@ -1555,6 +1555,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909866|away|FanDuel": {
+   "dec": 2.02,
+   "ev": 0.0435,
+   "fair": 0.5166,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909866",
+   "kind": "value",
+   "league": "nba",
+   "match": "DET @ PHI",
+   "price": "+102",
+   "seen": "2026-10-25T15:48:39+00:00",
+   "side": "away",
+   "start": "2026-10-25T23:30Z",
+   "team": "Detroit Pistons",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909866|home|FanDuel": {
    "dec": 1.8621,
    "ev": 0.0252,
@@ -3149,6 +3166,35 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|ecu:401921334:away|nba:401909866:away": {
+   "ev": 0.0744,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0297,
+     "fair": 0.2145,
+     "id": "ecu:401921334",
+     "price": "+380",
+     "side": "away",
+     "spec": null,
+     "team": "Guayaquil City FC"
+    },
+    {
+     "ev": 0.0435,
+     "fair": 0.5166,
+     "id": "nba:401909866",
+     "price": "+102",
+     "side": "away",
+     "spec": null,
+     "team": "Detroit Pistons"
+    }
+   ],
+   "payout": 9.696,
+   "prob": 0.1108,
+   "seen": "2026-10-25T15:48:39+00:00",
+   "target": 5.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|efl1:401880200:away": {
    "ev": 0.0295,
    "kind": "parlay",
@@ -3919,6 +3965,26 @@
    "prob": 0.147,
    "seen": "2026-10-25T05:59:51+00:00",
    "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909866:away": {
+   "ev": 0.0435,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0435,
+     "fair": 0.5166,
+     "id": "nba:401909866",
+     "price": "+102",
+     "side": "away",
+     "spec": null,
+     "team": "Detroit Pistons"
+    }
+   ],
+   "payout": 2.02,
+   "prob": 0.5166,
+   "seen": "2026-10-25T15:48:39+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909866:home|nfl:401873015:home": {
