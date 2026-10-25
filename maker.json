@@ -4040,6 +4040,7 @@
    "cost": 0.7137,
    "edge": 0.0124,
    "fair": 0.7225,
+   "fill": "touch",
    "id": "nfl:401873014",
    "label": "Minnesota Vikings",
    "league": "nfl",
@@ -4051,8 +4052,30 @@
     "team": "Minnesota Vikings"
    },
    "start": "2026-10-25T17:00Z",
+   "status": "graded",
+   "ticker": "KXNFLGAME-26OCT25INDMIN-MIN",
+   "won": 1
+  },
+  "KXNFLGAME-26OCT25KCSEA-SEA|YES": {
+   "ask": 0.59,
+   "bid": 0.58,
+   "cost": 0.5843,
+   "edge": 0.0038,
+   "fair": 0.5865,
+   "id": "nfl:401873022",
+   "label": "Seattle Seahawks",
+   "league": "nfl",
+   "match": "KC @ SEA",
+   "posted": "2026-10-25T19:52:30+00:00",
+   "queue": 651112.46,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Seattle Seahawks"
+   },
+   "start": "2026-10-26T00:20Z",
    "status": "open",
-   "ticker": "KXNFLGAME-26OCT25INDMIN-MIN"
+   "ticker": "KXNFLGAME-26OCT25KCSEA-SEA"
   },
   "KXNFLGAME-26OCT25LARLV-LAR|YES": {
    "ask": 0.61,
@@ -4163,6 +4186,7 @@
    "cost": 0.5943,
    "edge": 0.005,
    "fair": 0.5973,
+   "fill": "touch",
    "id": "nfl:401873018",
    "label": "Carolina Panthers",
    "league": "nfl",
@@ -4175,8 +4199,9 @@
     "team": "Carolina Panthers"
    },
    "start": "2026-10-25T17:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26OCT25TBCAR-CAR"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26OCT25TBCAR-CAR",
+   "won": 0
   },
   "KXNFLGAME-26OCT26DALPHI-DAL|YES": {
    "ask": 0.67,
@@ -4292,6 +4317,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873014",
    "label": "Indianapolis Colts +6.5",
    "league": "nfl",
@@ -4304,8 +4330,9 @@
     "team": "Indianapolis Colts"
    },
    "start": "2026-10-25T17:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26OCT25INDMIN-MIN7"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26OCT25INDMIN-MIN7",
+   "won": 1
   },
   "KXNFLSPREAD-26OCT25MIANYJ-NYJ4|YES": {
    "ask": 0.52,
@@ -4547,6 +4574,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "nfl:401873015",
    "label": "under 39.5",
    "league": "nfl",
@@ -4559,8 +4587,9 @@
     "t": "under"
    },
    "start": "2026-10-25T17:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26OCT25MIANYJ-40"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26OCT25MIANYJ-40",
+   "won": 0
   },
   "KXNFLTOTAL-26OCT25NYGHOU-43|YES": {
    "ask": 0.51,

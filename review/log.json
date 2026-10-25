@@ -3943,10 +3943,10 @@
   },
   "props": {
    "fair": {
-    "n": 647,
-    "said_fair": 87.4,
-    "said_price": 88.1,
-    "won": 543
+    "n": 655,
+    "said_fair": 87.3,
+    "said_price": 88.0,
+    "won": 548
    },
    "n": 181,
    "said": 81.1,
@@ -4080,24 +4080,24 @@
    },
    {
     "flag": false,
-    "hit": 39.4,
-    "n": 33,
+    "hit": 40.0,
+    "n": 35,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 41.8
+    "said": 41.7
    },
    {
     "flag": false,
-    "hit": 89.5,
-    "n": 19,
+    "hit": 85.0,
+    "n": 20,
     "name": "props nfl Passing Yards",
-    "said": 81.6
+    "said": 81.7
    },
    {
     "flag": false,
-    "hit": 86.3,
-    "n": 73,
+    "hit": 84.8,
+    "n": 79,
     "name": "props nfl Receiving Yards",
-    "said": 81.4
+    "said": 81.7
    },
    {
     "flag": false,
@@ -4108,10 +4108,10 @@
    },
    {
     "flag": false,
-    "hit": 74.1,
-    "n": 27,
+    "hit": 75.0,
+    "n": 28,
     "name": "props nfl Rushing Yards",
-    "said": 81.5
+    "said": 81.6
    },
    {
     "flag": false,
@@ -4178,10 +4178,10 @@
    },
    {
     "flag": false,
-    "hit": 96.8,
-    "n": 31,
+    "hit": 93.8,
+    "n": 32,
     "name": "prop locks",
-    "said": 91.8
+    "said": 92.0
    },
    {
     "flag": false,
@@ -4193,7 +4193,7 @@
    {
     "flag": false,
     "hit": 54.3,
-    "n": 92,
+    "n": 94,
     "name": "kalshi maker bids (filled)",
     "said": 52.7
    }
@@ -4267,9 +4267,9 @@
    }
   },
   "clv": {
-   "avg": 0.79,
-   "beat": 59.3,
-   "n": 54
+   "avg": 0.8,
+   "beat": 60.0,
+   "n": 55
   },
   "day": "2026-10-25",
   "leaks_14d": [],
@@ -4337,6 +4337,14 @@
    },
    {
     "against_market": false,
+    "league": "nfl",
+    "pick": "Carolina Panthers",
+    "price": "-166",
+    "said": 60,
+    "why": "margin 30 \u00b7 the book had my side favoured too \u00b7 called at 60%"
+   },
+   {
+    "against_market": false,
     "league": "uru",
     "pick": "Montevideo Wanderers",
     "price": "-330",
@@ -4356,10 +4364,11 @@
    {
     "killed_by": [
      "Over 41.5 points",
+     "Carolina Panthers -9.5",
      "Indianapolis Colts +2.5"
     ],
     "legs": 8,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 0
@@ -4408,11 +4417,11 @@
    }
   ],
   "picks": {
-   "hit": 87.0,
-   "lost": 7,
-   "n": 54,
-   "roi": 12.7,
-   "said": 72.8,
+   "hit": 85.5,
+   "lost": 8,
+   "n": 55,
+   "roi": 10.7,
+   "said": 72.5,
    "won": 47
   },
   "picks_by_league": {
@@ -4553,11 +4562,11 @@
     "won": 1
    },
    "nfl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 46.2,
-    "said": 66.0,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": -2.5,
+    "said": 64.0,
     "won": 2
    },
    "nor": {
@@ -4603,29 +4612,31 @@
   },
   "props": {
    "fair": {
-    "n": 647,
-    "said_fair": 87.4,
-    "said_price": 88.1,
-    "won": 543
+    "n": 655,
+    "said_fair": 87.3,
+    "said_price": 88.0,
+    "won": 548
    },
-   "n": 41,
-   "said": 73.5,
-   "won": 28
+   "n": 51,
+   "said": 74.1,
+   "won": 34
   },
   "safe_locks": {
-   "lost": [],
+   "lost": [
+    "Jalen Coker: 25+ Receiving Yards (TB @ CAR) 9"
+   ],
    "n": 11,
-   "open": 9,
+   "open": 8,
    "plays": {
     "best": [
      11,
      0.5299,
-     "open"
+     "lost"
     ],
     "winners": [
      5,
      0.82,
-     "open"
+     "lost"
     ]
    },
    "won": 2
@@ -4649,10 +4660,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 71.9,
-    "lost": 157,
-    "n": 559,
-    "roi": -0.2,
+    "hit": 71.8,
+    "lost": 158,
+    "n": 560,
+    "roi": -0.4,
     "said": 68.6,
     "won": 402
    }
