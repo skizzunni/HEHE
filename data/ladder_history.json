@@ -44241,6 +44241,9 @@
 "away": "Cincinnati Bengals",
 "home": "Baltimore Ravens",
 "ladder": {
+"22.5": {
+"under": "+2000"
+},
 "23.5": {
 "under": "+1700"
 },
@@ -44263,8 +44266,8 @@
 "under": "+870"
 },
 "30.5": {
-"over": "-1450",
-"under": "+700"
+"over": "-1600",
+"under": "+750"
 },
 "31.5": {
 "over": "-1200",
@@ -44275,28 +44278,28 @@
 "under": "+560"
 },
 "33.5": {
-"over": "-720",
-"under": "+450"
+"over": "-770",
+"under": "+470"
 },
 "34.5": {
-"over": "-620",
-"under": "+400"
+"over": "-650",
+"under": "+420"
 },
 "35.5": {
 "over": "-530",
 "under": "+360"
 },
 "36.5": {
-"over": "-460",
-"under": "+320"
+"over": "-480",
+"under": "+330"
 },
 "37.5": {
-"over": "-370",
-"under": "+265"
+"over": "-390",
+"under": "+280"
 },
 "38.5": {
-"over": "-330",
-"under": "+240"
+"over": "-340",
+"under": "+250"
 },
 "39.5": {
 "over": "-295",
@@ -44319,12 +44322,12 @@
 "under": "+128"
 },
 "44.5": {
-"over": "-140",
-"under": "+110"
+"over": "-142",
+"under": "+112"
 },
 "45.5": {
-"over": "-125",
-"under": "-102"
+"over": "-128",
+"under": "+100"
 },
 "46.5": {
 "over": "-113",
@@ -44335,16 +44338,16 @@
 "under": "-132"
 },
 "48.5": {
-"over": "+120",
-"under": "-154"
+"over": "+118",
+"under": "-150"
 },
 "49.5": {
 "over": "+132",
 "under": "-170"
 },
 "50.5": {
-"over": "+146",
-"under": "-188"
+"over": "+148",
+"under": "-192"
 },
 "51.5": {
 "over": "+176",
@@ -44359,8 +44362,8 @@
 "under": "-295"
 },
 "54.5": {
-"over": "+250",
-"under": "-340"
+"over": "+240",
+"under": "-330"
 },
 "55.5": {
 "over": "+285",
@@ -44371,12 +44374,12 @@
 "under": "-430"
 },
 "57.5": {
-"over": "+340",
-"under": "-500"
+"over": "+350",
+"under": "-520"
 },
 "58.5": {
 "over": "+400",
-"under": "-590"
+"under": "-620"
 },
 "59.5": {
 "over": "+440",
@@ -44434,7 +44437,7 @@
 }
 },
 "league": "nfl",
-"logged": "2026-10-24T22:30+00:00",
+"logged": "2026-10-25T01:43+00:00",
 "spreads": [
 [
 "Baltimore Ravens",
@@ -44449,7 +44452,7 @@
 [
 "Baltimore Ravens",
 -20.5,
-"+1700"
+"+1500"
 ],
 [
 "Baltimore Ravens",
@@ -44464,17 +44467,17 @@
 [
 "Baltimore Ravens",
 -17.5,
-"+1200"
+"+1300"
 ],
 [
 "Baltimore Ravens",
 -16.5,
-"+1060"
+"+1100"
 ],
 [
 "Baltimore Ravens",
 -15.5,
-"+1000"
+"+1060"
 ],
 [
 "Baltimore Ravens",
@@ -44489,12 +44492,12 @@
 [
 "Baltimore Ravens",
 -12.5,
-"+680"
+"+750"
 ],
 [
 "Baltimore Ravens",
 -11.5,
-"+630"
+"+680"
 ],
 [
 "Baltimore Ravens",
@@ -44504,12 +44507,12 @@
 [
 "Baltimore Ravens",
 -9.5,
-"+500"
+"+520"
 ],
 [
 "Baltimore Ravens",
 -8.5,
-"+470"
+"+480"
 ],
 [
 "Baltimore Ravens",
@@ -44534,7 +44537,7 @@
 [
 "Baltimore Ravens",
 -3.5,
-"+215"
+"+210"
 ],
 [
 "Baltimore Ravens",
@@ -44544,7 +44547,7 @@
 [
 "Baltimore Ravens",
 -1.5,
-"+144"
+"+142"
 ],
 [
 "Baltimore Ravens",
@@ -44554,42 +44557,42 @@
 [
 "Baltimore Ravens",
 2.5,
-"-102"
+"+100"
 ],
 [
 "Baltimore Ravens",
 3.5,
-"-156"
+"-148"
 ],
 [
 "Baltimore Ravens",
 4.5,
-"-174"
+"-172"
 ],
 [
 "Baltimore Ravens",
 5.5,
-"-194"
+"-188"
 ],
 [
 "Baltimore Ravens",
 6.5,
-"-240"
+"-230"
 ],
 [
 "Baltimore Ravens",
 7.5,
-"-330"
+"-320"
 ],
 [
 "Baltimore Ravens",
 8.5,
-"-390"
+"-370"
 ],
 [
 "Baltimore Ravens",
 9.5,
-"-410"
+"-400"
 ],
 [
 "Baltimore Ravens",
@@ -44604,32 +44607,37 @@
 [
 "Baltimore Ravens",
 12.5,
-"-620"
+"-590"
 ],
 [
 "Baltimore Ravens",
 13.5,
-"-750"
+"-700"
 ],
 [
 "Baltimore Ravens",
 14.5,
-"-1000"
+"-900"
 ],
 [
 "Baltimore Ravens",
 15.5,
-"-1100"
+"-1000"
 ],
 [
 "Baltimore Ravens",
 16.5,
-"-1400"
+"-1200"
 ],
 [
 "Baltimore Ravens",
 17.5,
-"-1800"
+"-1600"
+],
+[
+"Baltimore Ravens",
+18.5,
+"-2000"
 ],
 [
 "Cincinnati Bengals",
@@ -44644,7 +44652,7 @@
 [
 "Cincinnati Bengals",
 -21.5,
-"+1200"
+"+1100"
 ],
 [
 "Cincinnati Bengals",
@@ -44659,37 +44667,37 @@
 [
 "Cincinnati Bengals",
 -18.5,
-"+870"
+"+830"
 ],
 [
 "Cincinnati Bengals",
 -17.5,
-"+800"
+"+750"
 ],
 [
 "Cincinnati Bengals",
 -16.5,
-"+680"
+"+630"
 ],
 [
 "Cincinnati Bengals",
 -15.5,
-"+600"
-],
-[
-"Cincinnati Bengals",
--14.5,
 "+560"
 ],
 [
 "Cincinnati Bengals",
+-14.5,
+"+520"
+],
+[
+"Cincinnati Bengals",
 -13.5,
-"+460"
+"+440"
 ],
 [
 "Cincinnati Bengals",
 -12.5,
-"+400"
+"+390"
 ],
 [
 "Cincinnati Bengals",
@@ -44704,42 +44712,42 @@
 [
 "Cincinnati Bengals",
 -9.5,
-"+290"
+"+285"
 ],
 [
 "Cincinnati Bengals",
 -8.5,
-"+280"
+"+265"
 ],
 [
 "Cincinnati Bengals",
 -7.5,
-"+240"
+"+235"
 ],
 [
 "Cincinnati Bengals",
 -6.5,
-"+182"
+"+176"
 ],
 [
 "Cincinnati Bengals",
 -5.5,
-"+150"
+"+146"
 ],
 [
 "Cincinnati Bengals",
 -4.5,
-"+136"
+"+134"
 ],
 [
 "Cincinnati Bengals",
 -3.5,
-"+122"
+"+118"
 ],
 [
 "Cincinnati Bengals",
 -2.5,
-"-125"
+"-128"
 ],
 [
 "Cincinnati Bengals",
@@ -44749,7 +44757,7 @@
 [
 "Cincinnati Bengals",
 1.5,
-"-186"
+"-184"
 ],
 [
 "Cincinnati Bengals",
@@ -44759,7 +44767,7 @@
 [
 "Cincinnati Bengals",
 3.5,
-"-290"
+"-280"
 ],
 [
 "Cincinnati Bengals",
@@ -44784,12 +44792,12 @@
 [
 "Cincinnati Bengals",
 8.5,
-"-770"
+"-800"
 ],
 [
 "Cincinnati Bengals",
 9.5,
-"-850"
+"-900"
 ],
 [
 "Cincinnati Bengals",
@@ -44799,12 +44807,12 @@
 [
 "Cincinnati Bengals",
 11.5,
-"-1200"
+"-1400"
 ],
 [
 "Cincinnati Bengals",
 12.5,
-"-1400"
+"-1600"
 ],
 [
 "Cincinnati Bengals",

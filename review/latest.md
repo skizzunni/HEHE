@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 87-30 (74.4% vs 72.3% claimed, ROI -1.0%).
-Closing line value: +0.48 points on 117 picks; beat the close on 51.3%.
+Picks 89-30 (74.8% vs 72.1% claimed, ROI -0.1%).
+Closing line value: +0.47 points on 119 picks; beat the close on 50.4%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST bra2 Fortaleza at 76%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76%
 - LOST bra Fluminense at 75%: margin 1 · the book had my side favoured too · called at 75%
@@ -32,9 +32,9 @@ Closing line value: +0.48 points on 117 picks; beat the close on 51.3%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.4% (504); against it 30.0% (20).
+With the market 69.6% (506); against it 30.0% (20).
 Locks 4/11 won, 5 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
-Safe Locks 4/11 won, 7 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
+Safe Locks 5/11 won, 6 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (2/9 legs won)
 Lottery 100: open (3/6 legs won)
 Lottery 100: lost (1/6 legs won, killed by Over 55.5 points)
@@ -45,7 +45,7 @@ Lottery 10k+25: lost (3/11 legs won, killed by Washington State Cougars to win)
 Lottery 10k+50: lost (3/11 legs won, killed by Washington State Cougars to win)
 Lottery 10k+100: lost (1/10 legs won, killed by Washington State Cougars to win)
 Ladder-consistency props (all time): 450/547 won (82.3%) vs 87.3% fair, 88.0% price.
-Props 29/41 vs 74.9% claimed.
+Props 35/48 vs 75.7% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=95), nhl 0.00 (n=52)
+Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=95), nhl 0.00 (n=53)
