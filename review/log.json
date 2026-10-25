@@ -3434,8 +3434,8 @@
   },
   "clv": {
    "avg": 0.5,
-   "beat": 51.9,
-   "n": 108
+   "beat": 51.8,
+   "n": 110
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3471,6 +3471,14 @@
     "price": "-400",
     "said": 76,
     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 76%"
+   },
+   {
+    "against_market": false,
+    "league": "bra",
+    "pick": "Fluminense",
+    "price": "-390",
+    "said": 75,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 75%"
    },
    {
     "against_market": false,
@@ -3635,6 +3643,14 @@
    {
     "against_market": false,
     "league": "ncaaf",
+    "pick": "Louisiana Ragin' Cajuns",
+    "price": "-470",
+    "said": 81,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 81%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
     "pick": "Troy Trojans",
     "price": "-625",
     "said": 85,
@@ -3756,11 +3772,11 @@
    }
   ],
   "picks": {
-   "hit": 75.0,
-   "lost": 27,
-   "n": 108,
-   "roi": 0.2,
-   "said": 72.1,
+   "hit": 73.6,
+   "lost": 29,
+   "n": 110,
+   "roi": -1.6,
+   "said": 72.2,
    "won": 81
   },
   "picks_by_league": {
@@ -3789,10 +3805,10 @@
     "won": 3
    },
    "bra": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 5,
-    "roi": 25.4,
+    "hit": 83.3,
+    "lost": 1,
+    "n": 6,
+    "roi": 4.5,
     "said": 75.0,
     "won": 5
    },
@@ -3917,11 +3933,11 @@
     "won": 2
    },
    "ncaaf": {
-    "hit": 72.4,
-    "lost": 8,
-    "n": 29,
-    "roi": 3.1,
-    "said": 71.8,
+    "hit": 70.0,
+    "lost": 9,
+    "n": 30,
+    "roi": -0.3,
+    "said": 72.1,
     "won": 21
    },
    "nhl": {
@@ -4056,10 +4072,10 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.5,
-    "lost": 151,
-    "n": 495,
-    "roi": -2.5,
+    "hit": 69.2,
+    "lost": 153,
+    "n": 497,
+    "roi": -2.9,
     "said": 67.3,
     "won": 344
    }
@@ -4068,10 +4084,10 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6411,
-    "market_only": 0.6587,
-    "model_40": 0.6411,
-    "n": 93,
+    "logloss": 0.6477,
+    "market_only": 0.6694,
+    "model_40": 0.6477,
+    "n": 94,
     "weight": 0.4
    },
    "nhl": {
