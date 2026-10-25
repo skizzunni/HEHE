@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 82-30 (73.2% vs 72.2% claimed, ROI -2.2%).
-Closing line value: +0.56 points on 112 picks; beat the close on 52.7%.
+Picks 84-30 (73.7% vs 72.2% claimed, ROI -1.8%).
+Closing line value: +0.54 points on 114 picks; beat the close on 51.8%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST bra2 Fortaleza at 76%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76%
 - LOST bra Fluminense at 75%: margin 1 · the book had my side favoured too · called at 75%
@@ -32,7 +32,7 @@ Closing line value: +0.56 points on 112 picks; beat the close on 52.7%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.1% (499); against it 30.0% (20).
+With the market 69.3% (501); against it 30.0% (20).
 Locks 4/11 won, 5 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
 Safe Locks 3/11 won, 8 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (2/9 legs won)
