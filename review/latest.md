@@ -16,6 +16,7 @@ Lottery 10k+25: open (0/11 legs won)
 Lottery 10k+50: open (0/11 legs won)
 Lottery 10k+100: open (0/10 legs won)
 Lottery 100: open (0/5 legs won)
+Lottery 100: open (0/11 legs won)
 Ladder-consistency props (all time): 538/639 won (84.2%) vs 87.5% fair, 88.3% price.
 Props 13/19 vs 76.5% claimed.
 
