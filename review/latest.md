@@ -1,10 +1,11 @@
 # Review 2026-10-24
 
-Picks 108-40 (73.0% vs 71.3% claimed, ROI -1.7%).
-Closing line value: +0.52 points on 148 picks; beat the close on 50.7%.
+Picks 108-41 (72.5% vs 71.3% claimed, ROI -2.4%).
+Closing line value: +0.5 points on 149 picks; beat the close on 50.3%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST bra2 Fortaleza at 76%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76%
 - LOST bra Fluminense at 75%: margin 1 · the book had my side favoured too · called at 75%
+- LOST col Once Caldas at 69%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 69%
 - LOST ecu Manta F.C. at 72%: margin 2 · the book had my side favoured too · called at 72%
 - LOST efl1 West Ham United at 78%: margin 1 · the book had my side favoured too · called at 78%
 - LOST efl1 Burnley at 65%: margin 3 · the book had my side favoured too · called at 65%
@@ -42,7 +43,7 @@ Closing line value: +0.52 points on 148 picks; beat the close on 50.7%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.3% (535); against it 30.0% (20).
+With the market 69.2% (536); against it 30.0% (20).
 Locks 6/11 won, 1 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20; Edmonton Oilers over 2.5 goals (Toronto Maple Leafs at Edmonton Oilers) Toronto Maple Leafs 7 - Edmonton Oilers 2; USC Trojans over 18.5 points (USC Trojans at Wisconsin Badgers) USC Trojans 7 - Wisconsin Badgers 24.
 Safe Locks 8/11 won, 3 open; Winners parlay top 2 (85%) won; Best play top 8 (50%) open.
 Lottery 100: lost (6/9 legs won, killed by Under 229.5 points, Under 230.5 points)
