@@ -1,8 +1,8 @@
 # Review 2026-10-25
 
-Picks 58-15 (79.5% vs 72.1% claimed, ROI +4.2%).
+Picks 59-15 (79.7% vs 72.1% claimed, ROI +4.5%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
-Closing line value: +0.87 points on 73 picks; beat the close on 58.9%.
+Closing line value: +0.9 points on 74 picks; beat the close on 59.5%.
 - LOST arg Belgrano (Córdoba) at 75%: margin 1 · the book had my side favoured too · called at 75%
 - LOST aut LASK Linz at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST chi Universidad Católica at 73%: margin 2 · the book had my side favoured too · called at 73%
@@ -18,7 +18,7 @@ Closing line value: +0.87 points on 73 picks; beat the close on 58.9%.
 - LOST nfl Carolina Panthers at 60%: margin 30 · the book had my side favoured too · called at 60%
 - LOST por Sporting CP at 74%: margin 1 · the book had my side favoured too · called at 74%
 - LOST uru Montevideo Wanderers at 72%: margin 1 · the book had my side favoured too · called at 72%
-With the market 71.5% (578); against it 20.0% (10).
+With the market 71.5% (579); against it 20.0% (10).
 Locks 6/11 won, 4 open; Best play top 3 (55%) won; lost: Darnell Mooney: 5+ Receiving Yards (NYG @ HOU) 4.
 Safe Locks 4/11 won, 6 open; Winners parlay top 5 (82%) lost; Best play top 11 (53%) lost; lost: Jalen Coker: 25+ Receiving Yards (TB @ CAR) 9.
 Lottery 10k: lost (1/11 legs won, killed by New York Jets -9.5)
