@@ -4267,9 +4267,9 @@
    }
   },
   "clv": {
-   "avg": 0.71,
-   "beat": 53.8,
-   "n": 26
+   "avg": 0.93,
+   "beat": 55.6,
+   "n": 27
   },
   "day": "2026-10-25",
   "leaks_14d": [],
@@ -4305,6 +4305,14 @@
    },
    {
     "against_market": false,
+    "league": "ger",
+    "pick": "Bayer Leverkusen",
+    "price": "-290",
+    "said": 70,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 70%"
+   },
+   {
+    "against_market": false,
     "league": "uru",
     "pick": "Montevideo Wanderers",
     "price": "-330",
@@ -4322,10 +4330,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 41.5 points"
+    ],
     "legs": 8,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
@@ -4363,11 +4373,11 @@
    }
   ],
   "picks": {
-   "hit": 88.5,
-   "lost": 3,
-   "n": 26,
-   "roi": 10.3,
-   "said": 74.8,
+   "hit": 85.2,
+   "lost": 4,
+   "n": 27,
+   "roi": 6.2,
+   "said": 74.7,
    "won": 23
   },
   "picks_by_league": {
@@ -4418,6 +4428,14 @@
     "roi": 23.5,
     "said": 77.0,
     "won": 1
+   },
+   "ger": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 70.0,
+    "won": 0
    },
    "ger2": {
     "hit": 100.0,
@@ -4499,8 +4517,8 @@
     "said_price": 88.5,
     "won": 532
    },
-   "n": 7,
-   "said": 84.2,
+   "n": 8,
+   "said": 84.5,
    "won": 7
   },
   "safe_locks": {
@@ -4540,10 +4558,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 71.2,
-    "lost": 153,
-    "n": 531,
-    "roi": -1.0,
+    "hit": 71.1,
+    "lost": 154,
+    "n": 532,
+    "roi": -1.2,
     "said": 68.5,
     "won": 378
    }
