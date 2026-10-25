@@ -530,6 +530,7 @@
    "cost": 0.8127,
    "edge": 0.0057,
    "fair": 0.8173,
+   "fill": null,
    "id": "ncaaf:401860906",
    "label": "Texas State Bobcats",
    "league": "ncaaf",
@@ -541,8 +542,9 @@
     "team": "Texas State Bobcats"
    },
    "start": "2026-10-24T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT24USUTXST-TXST"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT24USUTXST-TXST",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT22ECUMEM-MEM11|NO": {
    "ask": 0.51,
@@ -1825,6 +1827,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401860906",
    "label": "Texas State Bobcats -13.5",
    "league": "ncaaf",
@@ -1837,8 +1840,9 @@
     "team": "Texas State Bobcats"
    },
    "start": "2026-10-24T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24USUTXST-TXST14"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24USUTXST-TXST14",
+   "won": 0
   },
   "KXNCAAFSPREAD-26OCT24USUTXST-TXST15|NO": {
    "ask": 0.52,
@@ -1846,6 +1850,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401860906",
    "label": "Utah State Aggies +14.5",
    "league": "ncaaf",
@@ -1859,8 +1864,9 @@
     "team": "Utah State Aggies"
    },
    "start": "2026-10-24T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24USUTXST-TXST15"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24USUTXST-TXST15",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT24VTCLEM-CLEM3|YES": {
    "ask": 0.52,
@@ -3694,6 +3700,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401860906",
    "label": "under 59.5",
    "league": "ncaaf",
@@ -3706,8 +3713,9 @@
     "t": "under"
    },
    "start": "2026-10-24T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24USUTXST-60"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24USUTXST-60",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24USUTXST-61|YES": {
    "ask": 0.52,
@@ -3715,6 +3723,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401860906",
    "label": "over 60.5",
    "league": "ncaaf",
@@ -3726,8 +3735,9 @@
     "t": "over"
    },
    "start": "2026-10-24T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24USUTXST-61"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24USUTXST-61",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT24USUTXST-62|NO": {
    "ask": 0.52,
@@ -3735,6 +3745,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": null,
    "id": "ncaaf:401860906",
    "label": "under 61.5",
    "league": "ncaaf",
@@ -3746,8 +3757,9 @@
     "t": "under"
    },
    "start": "2026-10-24T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24USUTXST-62"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24USUTXST-62",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24VANUK-52|NO": {
    "ask": 0.51,

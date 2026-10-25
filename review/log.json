@@ -3358,10 +3358,10 @@
    },
    {
     "flag": false,
-    "hit": 54.4,
-    "n": 79,
+    "hit": 54.3,
+    "n": 81,
     "name": "kalshi maker bids (filled)",
-    "said": 52.6
+    "said": 52.5
    }
   ],
   "calls": {
@@ -3433,9 +3433,9 @@
    }
   },
   "clv": {
-   "avg": 0.5,
-   "beat": 50.7,
-   "n": 144
+   "avg": 0.52,
+   "beat": 51.0,
+   "n": 145
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3447,7 +3447,7 @@
     "USC Trojans over 18.5 points (USC Trojans at Wisconsin Badgers) USC Trojans 7 - Wisconsin Badgers 24"
    ],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      2,
@@ -3455,7 +3455,7 @@
      "open"
     ]
    },
-   "won": 5
+   "won": 6
   },
   "losses": [
    {
@@ -3821,11 +3821,12 @@
    },
    {
     "killed_by": [
+     "Iowa State Cyclones +3.5",
      "Utah State Aggies to win",
      "Western Michigan Broncos +2.5"
     ],
     "legs": 10,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 3
@@ -3868,12 +3869,12 @@
    }
   ],
   "picks": {
-   "hit": 73.6,
+   "hit": 73.8,
    "lost": 38,
-   "n": 144,
-   "roi": -1.2,
-   "said": 71.4,
-   "won": 106
+   "n": 145,
+   "roi": -1.0,
+   "said": 71.5,
+   "won": 107
   },
   "picks_by_league": {
    "arg": {
@@ -4053,12 +4054,12 @@
     "won": 3
    },
    "ncaaf": {
-    "hit": 68.4,
+    "hit": 69.2,
     "lost": 12,
-    "n": 38,
-    "roi": -4.0,
-    "said": 71.5,
-    "won": 26
+    "n": 39,
+    "roi": -3.2,
+    "said": 71.6,
+    "won": 27
    },
    "nhl": {
     "hit": 66.7,
@@ -4202,20 +4203,20 @@
    "agree": {
     "hit": 69.5,
     "lost": 162,
-    "n": 531,
+    "n": 532,
     "roi": -2.7,
-    "said": 67.4,
-    "won": 369
+    "said": 67.5,
+    "won": 370
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6382,
-    "market_only": 0.6552,
-    "model_40": 0.6382,
-    "n": 102,
+    "logloss": 0.6352,
+    "market_only": 0.6513,
+    "model_40": 0.6352,
+    "n": 103,
     "weight": 0.4
    },
    "nhl": {
