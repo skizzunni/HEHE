@@ -3943,10 +3943,10 @@
   },
   "props": {
    "fair": {
-    "n": 683,
-    "said_fair": 87.1,
+    "n": 691,
+    "said_fair": 87.0,
     "said_price": 87.7,
-    "won": 572
+    "won": 577
    },
    "n": 181,
    "said": 81.1,
@@ -4080,10 +4080,10 @@
    },
    {
     "flag": false,
-    "hit": 39.5,
-    "n": 43,
+    "hit": 37.8,
+    "n": 45,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 42.0
+    "said": 41.9
    },
    {
     "flag": false,
@@ -4094,24 +4094,24 @@
    },
    {
     "flag": false,
-    "hit": 83.5,
-    "n": 97,
+    "hit": 81.7,
+    "n": 104,
     "name": "props nfl Receiving Yards",
-    "said": 82.3
+    "said": 82.5
    },
    {
     "flag": false,
-    "hit": 84.7,
-    "n": 59,
+    "hit": 85.0,
+    "n": 60,
     "name": "props nfl Receptions",
     "said": 81.8
    },
    {
     "flag": false,
-    "hit": 76.7,
-    "n": 30,
+    "hit": 77.4,
+    "n": 31,
     "name": "props nfl Rushing Yards",
-    "said": 81.8
+    "said": 81.9
    },
    {
     "flag": false,
@@ -4171,17 +4171,17 @@
    },
    {
     "flag": false,
-    "hit": 92.6,
-    "n": 27,
+    "hit": 89.3,
+    "n": 28,
     "name": "daily calls",
     "said": 81.4
    },
    {
     "flag": false,
-    "hit": 94.3,
-    "n": 35,
+    "hit": 94.4,
+    "n": 36,
     "name": "prop locks",
-    "said": 92.3
+    "said": 92.4
    },
    {
     "flag": false,
@@ -4267,16 +4267,18 @@
    }
   },
   "clv": {
-   "avg": 0.86,
-   "beat": 58.1,
-   "n": 62
+   "avg": 0.85,
+   "beat": 57.1,
+   "n": 63
   },
   "day": "2026-10-25",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Darnell Mooney: 5+ Receiving Yards (NYG @ HOU) 4"
+   ],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      3,
@@ -4354,6 +4356,14 @@
    {
     "against_market": false,
     "league": "nfl",
+    "pick": "Houston Texans",
+    "price": "-520",
+    "said": 80,
+    "why": "margin 6 \u00b7 the book had my side favoured too \u00b7 called at 80%"
+   },
+   {
+    "against_market": false,
+    "league": "nfl",
     "pick": "San Francisco 49ers",
     "price": "-155",
     "said": 58,
@@ -4398,7 +4408,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "10k",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -4450,11 +4460,11 @@
    }
   ],
   "picks": {
-   "hit": 82.3,
-   "lost": 11,
-   "n": 62,
-   "roi": 8.0,
-   "said": 71.6,
+   "hit": 81.0,
+   "lost": 12,
+   "n": 63,
+   "roi": 6.3,
+   "said": 71.7,
    "won": 51
   },
   "picks_by_league": {
@@ -4595,11 +4605,11 @@
     "won": 1
    },
    "nfl": {
-    "hit": 57.1,
-    "lost": 3,
-    "n": 7,
-    "roi": -9.8,
-    "said": 61.3,
+    "hit": 50.0,
+    "lost": 4,
+    "n": 8,
+    "roi": -21.1,
+    "said": 63.6,
     "won": 4
    },
    "nor": {
@@ -4645,14 +4655,14 @@
   },
   "props": {
    "fair": {
-    "n": 683,
-    "said_fair": 87.1,
+    "n": 691,
+    "said_fair": 87.0,
     "said_price": 87.7,
-    "won": 572
+    "won": 577
    },
-   "n": 89,
-   "said": 75.0,
-   "won": 63
+   "n": 100,
+   "said": 75.2,
+   "won": 69
   },
   "safe_locks": {
    "lost": [
@@ -4693,10 +4703,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 71.6,
-    "lost": 161,
-    "n": 567,
-    "roi": -0.5,
+    "hit": 71.5,
+    "lost": 162,
+    "n": 568,
+    "roi": -0.7,
     "said": 68.6,
     "won": 406
    }
