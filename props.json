@@ -409,7 +409,8 @@
   "p": 0.388,
   "p_fair": null,
   "price": "+140",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "fra:401876423|324289|Goalkeeper Saves|1+": {
   "aid": "324289",
@@ -425,7 +426,8 @@
   "p": 0.8739,
   "p_fair": null,
   "price": "-1400",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "fra:401876424|282381|Anytime Goalscorer|": {
   "aid": "282381",
@@ -441,7 +443,8 @@
   "p": 0.4331,
   "p_fair": null,
   "price": "+115",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "fra:401876426|228707|Goalkeeper Saves|3+": {
   "aid": "228707",
@@ -457,7 +460,8 @@
   "p": 0.4796,
   "p_fair": null,
   "price": "-105",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "fra:401876428|241029|Goalkeeper Saves|2+": {
   "aid": "241029",
@@ -490,7 +494,8 @@
   "p": 0.8262,
   "p_fair": null,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "fra:401876429|293347|Anytime Goalscorer|": {
   "aid": "293347",
@@ -506,7 +511,8 @@
   "p": 0.3581,
   "p_fair": null,
   "price": "+160",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "fra:401876430|199381|Goalkeeper Saves|1+": {
   "aid": "199381",
@@ -11147,6 +11153,22 @@
   "price": "-2200",
   "status": "open"
  },
+ "nba:401909863|n:wendell carter|Pts + Reb|10+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -1.1,
+  "gid": "nba:401909863",
+  "imp": 0.9756,
+  "label": "Wendell Carter Jr.: 10+ Pts + Reb",
+  "league": "nba",
+  "line": "10+",
+  "market": "Pts + Reb",
+  "name": "Wendell Carter Jr.",
+  "p": 0.8469,
+  "p_fair": 0.9647,
+  "price": "-4000",
+  "status": "open"
+ },
  "nba:401909864|n:anthony edwards|Threes Made|2+": {
   "aid": null,
   "date": "2026-10-25",
@@ -11576,6 +11598,22 @@
   "p": 0.8502,
   "p_fair": 0.9782,
   "price": "-2500",
+  "status": "open"
+ },
+ "nba:401909866|n:paul reed|Pts + Ast|10+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": 2.1,
+  "gid": "nba:401909866",
+  "imp": 0.9259,
+  "label": "Paul Reed: 10+ Pts + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Pts + Ast",
+  "name": "Paul Reed",
+  "p": 0.8487,
+  "p_fair": 0.9452,
+  "price": "-1250",
   "status": "open"
  },
  "nba:401909866|n:vj edgecombe|Rebounds|4+": {
