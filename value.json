@@ -18,6 +18,23 @@
    "tip": "5:00 PM",
    "venue": "FanDuel"
   },
+  "den:401874735|home|FanDuel": {
+   "dec": 5.6,
+   "ev": 0.0175,
+   "fair": 0.1817,
+   "fair_source": "DraftKings (Shin)",
+   "id": "den:401874735",
+   "kind": "value",
+   "league": "den",
+   "match": "FCN @ SIF",
+   "price": "+460",
+   "seen": "2026-10-25T12:18:23+00:00",
+   "side": "home",
+   "start": "2026-10-25T13:00Z",
+   "team": "Silkeborg IF",
+   "tip": "9:00 AM",
+   "venue": "FanDuel"
+  },
   "efl1:401880200|away|FanDuel": {
    "dec": 4.4,
    "ev": 0.0156,
@@ -2940,6 +2957,55 @@
    "prob": 0.0919,
    "seen": "2026-10-23T20:35:12+00:00",
    "status": "lost",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|den:401874735:home": {
+   "ev": 0.0175,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0175,
+     "fair": 0.1817,
+     "id": "den:401874735",
+     "price": "+460",
+     "side": "home",
+     "spec": null,
+     "team": "Silkeborg IF"
+    }
+   ],
+   "payout": 5.6,
+   "prob": 0.1817,
+   "seen": "2026-10-25T12:18:23+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|den:401874735:home|nba:401909866:home": {
+   "ev": 0.0397,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0175,
+     "fair": 0.1817,
+     "id": "den:401874735",
+     "price": "+460",
+     "side": "home",
+     "spec": null,
+     "team": "Silkeborg IF"
+    },
+    {
+     "ev": 0.0217,
+     "fair": 0.5398,
+     "id": "nba:401909866",
+     "price": "-112",
+     "side": "home",
+     "spec": null,
+     "team": "Philadelphia 76ers"
+    }
+   ],
+   "payout": 10.6,
+   "prob": 0.0981,
+   "seen": "2026-10-25T12:18:23+00:00",
    "target": 10.0,
    "venue": "FanDuel"
   },
