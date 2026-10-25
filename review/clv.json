@@ -3,14 +3,14 @@
  "enough": true,
  "last": {
   "beat_close_pct": 58.0,
-  "brier_close": 0.194,
-  "brier_published": 0.1958,
+  "brier_close": 0.1935,
+  "brier_published": 0.1953,
   "dates": [
    "2026-10-20",
    "2026-10-25"
   ],
-  "logloss_close": 0.5745,
-  "logloss_published": 0.5797,
+  "logloss_close": 0.5734,
+  "logloss_published": 0.5786,
   "mean_clv_pts": 0.39,
   "n": 300
  },
@@ -3768,6 +3768,15 @@
    "day": "2026-10-24",
    "league": "jpn",
    "published": 0.67,
+   "won": 1
+  },
+  "jpn:401877566": {
+   "call": false,
+   "close": 0.7639,
+   "clv": -2.61,
+   "day": "2026-10-25",
+   "league": "jpn",
+   "published": 0.79,
    "won": 1
   },
   "jpn:401877567": {
@@ -18081,5 +18090,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-25T08:03+00:00"
+ "updated": "2026-10-25T08:08+00:00"
 }
