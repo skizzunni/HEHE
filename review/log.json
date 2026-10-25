@@ -3943,10 +3943,10 @@
   },
   "props": {
    "fair": {
-    "n": 670,
-    "said_fair": 87.2,
-    "said_price": 87.8,
-    "won": 560
+    "n": 683,
+    "said_fair": 87.1,
+    "said_price": 87.7,
+    "won": 572
    },
    "n": 181,
    "said": 81.1,
@@ -4080,38 +4080,38 @@
    },
    {
     "flag": false,
-    "hit": 35.9,
-    "n": 39,
+    "hit": 39.5,
+    "n": 43,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 41.6
+    "said": 42.0
    },
    {
     "flag": false,
-    "hit": 85.7,
-    "n": 21,
+    "hit": 86.4,
+    "n": 22,
     "name": "props nfl Passing Yards",
-    "said": 81.9
+    "said": 82.0
    },
    {
     "flag": false,
-    "hit": 83.1,
-    "n": 89,
+    "hit": 83.5,
+    "n": 97,
     "name": "props nfl Receiving Yards",
-    "said": 82.1
+    "said": 82.3
    },
    {
     "flag": false,
-    "hit": 83.6,
-    "n": 55,
+    "hit": 84.7,
+    "n": 59,
     "name": "props nfl Receptions",
-    "said": 81.5
+    "said": 81.8
    },
    {
     "flag": false,
-    "hit": 75.9,
-    "n": 29,
+    "hit": 76.7,
+    "n": 30,
     "name": "props nfl Rushing Yards",
-    "said": 81.7
+    "said": 81.8
    },
    {
     "flag": false,
@@ -4178,10 +4178,10 @@
    },
    {
     "flag": false,
-    "hit": 94.1,
-    "n": 34,
+    "hit": 94.3,
+    "n": 35,
     "name": "prop locks",
-    "said": 92.2
+    "said": 92.3
    },
    {
     "flag": false,
@@ -4267,16 +4267,16 @@
    }
   },
   "clv": {
-   "avg": 0.89,
-   "beat": 58.6,
-   "n": 58
+   "avg": 0.91,
+   "beat": 59.0,
+   "n": 61
   },
   "day": "2026-10-25",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 7,
+   "open": 5,
    "plays": {
     "best": [
      3,
@@ -4284,7 +4284,7 @@
      "won"
     ]
    },
-   "won": 4
+   "won": 6
   },
   "losses": [
    {
@@ -4354,6 +4354,14 @@
    {
     "against_market": false,
     "league": "nfl",
+    "pick": "San Francisco 49ers",
+    "price": "-155",
+    "said": 58,
+    "why": "margin 9 \u00b7 the book had my side favoured too \u00b7 called at 58%"
+   },
+   {
+    "against_market": false,
+    "league": "nfl",
     "pick": "Carolina Panthers",
     "price": "-166",
     "said": 60,
@@ -4377,7 +4385,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -4400,7 +4408,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+25",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -4410,7 +4418,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+50",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -4420,7 +4428,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -4442,12 +4450,12 @@
    }
   ],
   "picks": {
-   "hit": 82.8,
-   "lost": 10,
-   "n": 58,
-   "roi": 7.7,
-   "said": 72.2,
-   "won": 48
+   "hit": 82.0,
+   "lost": 11,
+   "n": 61,
+   "roi": 7.6,
+   "said": 71.6,
+   "won": 50
   },
   "picks_by_league": {
    "arg": {
@@ -4587,20 +4595,20 @@
     "won": 1
    },
    "nfl": {
-    "hit": 60.0,
-    "lost": 2,
-    "n": 5,
-    "roi": -9.2,
-    "said": 63.4,
-    "won": 3
+    "hit": 57.1,
+    "lost": 3,
+    "n": 7,
+    "roi": -9.8,
+    "said": 61.3,
+    "won": 4
    },
    "nor": {
     "hit": 100.0,
     "lost": 0,
-    "n": 5,
-    "roi": 35.3,
-    "said": 70.2,
-    "won": 5
+    "n": 6,
+    "roi": 35.4,
+    "said": 70.0,
+    "won": 6
    },
    "sco": {
     "hit": 100.0,
@@ -4637,14 +4645,14 @@
   },
   "props": {
    "fair": {
-    "n": 670,
-    "said_fair": 87.2,
-    "said_price": 87.8,
-    "won": 560
+    "n": 683,
+    "said_fair": 87.1,
+    "said_price": 87.7,
+    "won": 572
    },
-   "n": 71,
-   "said": 74.7,
-   "won": 47
+   "n": 89,
+   "said": 75.0,
+   "won": 63
   },
   "safe_locks": {
    "lost": [
@@ -4686,11 +4694,11 @@
    },
    "agree": {
     "hit": 71.6,
-    "lost": 160,
-    "n": 563,
+    "lost": 161,
+    "n": 566,
     "roi": -0.6,
     "said": 68.6,
-    "won": 403
+    "won": 405
    }
   },
   "weights": {
