@@ -4275,13 +4275,60 @@
   "leaks_14d": [],
   "locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     3,
+     0.5457,
+     "open"
+    ]
+   },
    "won": 0
   },
   "losses": [],
-  "lottery": [],
+  "lottery": [
+   {
+    "killed_by": [],
+    "legs": 11,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 8,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 11,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+25",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 11,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+50",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 10,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+100",
+    "won": 0
+   }
+  ],
   "picks": {
    "hit": 100.0,
    "lost": 0,
@@ -4321,9 +4368,20 @@
   },
   "safe_locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     11,
+     0.5299,
+     "open"
+    ],
+    "winners": [
+     5,
+     0.82,
+     "open"
+    ]
+   },
    "won": 0
   },
   "strong": {

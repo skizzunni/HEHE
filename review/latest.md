@@ -4,6 +4,13 @@ Picks 6-0 (100.0% vs 73.5% claimed, ROI +27.5%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
 Closing line value: +0.71 points on 6 picks; beat the close on 50.0%.
 With the market 70.6% (511); against it 20.0% (10).
+Locks 0/11 won, 11 open; Best play top 3 (55%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 5 (82%) open; Best play top 11 (53%) open.
+Lottery 10k: open (0/11 legs won)
+Lottery 10k: open (0/8 legs won)
+Lottery 10k+25: open (0/11 legs won)
+Lottery 10k+50: open (0/11 legs won)
+Lottery 10k+100: open (0/10 legs won)
 Ladder-consistency props (all time): 532/631 won (84.3%) vs 87.6% fair, 88.5% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
