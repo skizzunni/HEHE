@@ -3435,7 +3435,7 @@
   "clv": {
    "avg": 0.51,
    "beat": 50.7,
-   "n": 150
+   "n": 152
   },
   "day": "2026-10-24",
   "leaks_14d": [],
@@ -3816,7 +3816,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -3841,7 +3841,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "10k",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -3853,7 +3853,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -3889,16 +3889,16 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+100",
-    "won": 4
+    "won": 5
    }
   ],
   "picks": {
-   "hit": 72.7,
+   "hit": 73.0,
    "lost": 41,
-   "n": 150,
-   "roi": -2.1,
-   "said": 71.3,
-   "won": 109
+   "n": 152,
+   "roi": -1.2,
+   "said": 71.2,
+   "won": 111
   },
   "picks_by_league": {
    "arg": {
@@ -4078,12 +4078,12 @@
     "won": 4
    },
    "ncaaf": {
-    "hit": 67.5,
+    "hit": 69.0,
     "lost": 13,
-    "n": 40,
-    "roi": -5.6,
-    "said": 71.8,
-    "won": 27
+    "n": 42,
+    "roi": -2.2,
+    "said": 71.1,
+    "won": 29
    },
    "nhl": {
     "hit": 66.7,
@@ -4225,22 +4225,22 @@
     "won": 6
    },
    "agree": {
-    "hit": 69.3,
+    "hit": 69.4,
     "lost": 165,
-    "n": 537,
-    "roi": -3.0,
+    "n": 539,
+    "roi": -2.7,
     "said": 67.4,
-    "won": 372
+    "won": 374
    }
   },
   "weights": {
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6412,
-    "market_only": 0.6591,
-    "model_40": 0.6412,
-    "n": 104,
+    "logloss": 0.6407,
+    "market_only": 0.6568,
+    "model_40": 0.6407,
+    "n": 106,
     "weight": 0.4
    },
    "nhl": {
