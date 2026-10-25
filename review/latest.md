@@ -1,9 +1,9 @@
 # Review 2026-10-25
 
-Picks 10-0 (100.0% vs 74.3% claimed, ROI +26.1%).
+Picks 11-0 (100.0% vs 73.6% claimed, ROI +27.2%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
-Closing line value: +0.03 points on 10 picks; beat the close on 40.0%.
-With the market 70.9% (515); against it 20.0% (10).
+Closing line value: +0.1 points on 11 picks; beat the close on 45.5%.
+With the market 70.9% (516); against it 20.0% (10).
 Locks 0/11 won, 11 open; Best play top 3 (55%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 5 (82%) open; Best play top 11 (53%) open.
 Lottery 10k: open (0/11 legs won)
