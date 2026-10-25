@@ -10901,6 +10901,22 @@
   "price": "-4500",
   "status": "open"
  },
+ "nba:401909861|n:walker kessler|Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": null,
+  "gid": "nba:401909861",
+  "imp": 0.8,
+  "label": "Walker Kessler: 10+ Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Reb + Ast",
+  "name": "Walker Kessler",
+  "p": 0.7729,
+  "p_fair": null,
+  "price": "-400",
+  "status": "open"
+ },
  "nba:401909862|n:egor demin|Points|5+": {
   "aid": null,
   "date": "2026-10-25",
@@ -11011,6 +11027,22 @@
   "p": 0.8497,
   "p_fair": 0.8635,
   "price": "-850",
+  "status": "open"
+ },
+ "nba:401909862|n:pascal siakam|Assists|2+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -3.1,
+  "gid": "nba:401909862",
+  "imp": 0.8485,
+  "label": "Pascal Siakam: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "Pascal Siakam",
+  "p": 0.8485,
+  "p_fair": 0.8223,
+  "price": "-560",
   "status": "open"
  },
  "nba:401909862|n:pascal siakam|Threes Made|1+": {
@@ -11251,6 +11283,22 @@
   "p": 0.8487,
   "p_fair": 0.971,
   "price": "-2200",
+  "status": "open"
+ },
+ "nba:401909863|n:wendell carter|Points|5+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": 1.0,
+  "gid": "nba:401909863",
+  "imp": 0.9615,
+  "label": "Wendell Carter Jr.: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Wendell Carter Jr.",
+  "p": 0.8532,
+  "p_fair": 0.9714,
+  "price": "-2500",
   "status": "open"
  },
  "nba:401909863|n:wendell carter|Pts + Reb|10+": {
@@ -11761,6 +11809,22 @@
   "p": 0.9677,
   "price": "-3000",
   "prop_lock": true,
+  "status": "open"
+ },
+ "nba:401909867|n:cedric coward|Assists|2+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -2.7,
+  "gid": "nba:401909867",
+  "imp": 0.8485,
+  "label": "Cedric Coward: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "Cedric Coward",
+  "p": 0.8485,
+  "p_fair": 0.8259,
+  "price": "-560",
   "status": "open"
  },
  "nba:401909867|n:cedric coward|Rebounds|4+": {
@@ -16039,11 +16103,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Aaron Jones",
   "p": 0.3368,
   "p_fair": null,
   "price": "+130",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873014|n:aaron jones|Receiving Yards|5+": {
   "aid": null,
@@ -16055,11 +16121,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Aaron Jones",
   "p": 0.8483,
   "p_fair": 0.8377,
   "price": "-490",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873014|n:jonathan taylor|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -16071,11 +16139,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Jonathan Taylor",
   "p": 0.4331,
   "p_fair": null,
   "price": "-120",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873014|n:jordan addison|Receiving Yards|20+": {
   "aid": null,
@@ -16087,11 +16157,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Jordan Addison",
   "p": 0.8172,
   "p_fair": 0.7596,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nfl:401873014|n:jordan mason|Rushing Yards|15+": {
   "aid": null,
@@ -16103,11 +16175,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Jordan Mason",
   "p": 0.852,
   "p_fair": 0.8967,
   "price": "-1800",
-  "status": "open"
+  "status": "won",
+  "value": 68.0
  },
  "nfl:401873014|n:josh downs|Receiving Yards|15+": {
   "aid": null,
@@ -16119,12 +16193,14 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Josh Downs",
   "p": 0.9677,
   "p_fair": 0.8438,
   "price": "-1800",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 18.0
  },
  "nfl:401873014|n:josh downs|Receiving Yards|30+": {
   "aid": null,
@@ -16136,11 +16212,13 @@
   "league": "nfl",
   "line": "30+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Josh Downs",
   "p": 0.8172,
   "p_fair": 0.7181,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 18.0
  },
  "nfl:401873014|n:josh downs|Receptions|3+": {
   "aid": null,
@@ -16152,11 +16230,13 @@
   "league": "nfl",
   "line": "3+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Josh Downs",
   "p": 0.8438,
   "p_fair": 0.8481,
   "price": "-700",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nfl:401873014|n:keenan allen|Receiving Yards|20+": {
   "aid": null,
@@ -16168,11 +16248,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Keenan Allen",
   "p": 0.8512,
   "p_fair": 0.7706,
   "price": "-500",
-  "status": "open"
+  "status": "won",
+  "value": 31.0
  },
  "nfl:401873014|n:laquon treadwell|Receiving Yards|10+": {
   "aid": null,
@@ -16184,11 +16266,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Laquon Treadwell",
   "p": 0.8086,
   "p_fair": 0.8026,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nfl:401873015|n:adonai mitchell|Receiving Yards|10+": {
   "aid": null,
@@ -16892,6 +16976,22 @@
   "price": "-490",
   "status": "open"
  },
+ "nfl:401873019|n:jaylen waddle|Receiving Yards|25+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -10.3,
+  "gid": "nfl:401873019",
+  "imp": 0.8571,
+  "label": "Jaylen Waddle: 25+ Receiving Yards",
+  "league": "nfl",
+  "line": "25+",
+  "market": "Receiving Yards",
+  "name": "Jaylen Waddle",
+  "p": 0.8512,
+  "p_fair": 0.769,
+  "price": "-600",
+  "status": "open"
+ },
  "nfl:401873019|n:jaylen waddle|Receiving Yards|30+": {
   "aid": null,
   "date": "2026-10-25",
@@ -16938,6 +17038,22 @@
   "p": 0.852,
   "p_fair": 0.8967,
   "price": "-1800",
+  "status": "open"
+ },
+ "nfl:401873019|n:kendrick bourne|Receiving Yards|15+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -6.6,
+  "gid": "nfl:401873019",
+  "imp": 0.8529,
+  "label": "Kendrick Bourne: 15+ Receiving Yards",
+  "league": "nfl",
+  "line": "15+",
+  "market": "Receiving Yards",
+  "name": "Kendrick Bourne",
+  "p": 0.847,
+  "p_fair": 0.7962,
+  "price": "-580",
   "status": "open"
  },
  "nfl:401873019|n:marvin mims|Receptions|1+": {
@@ -17068,6 +17184,22 @@
   "price": "-750",
   "status": "open"
  },
+ "nfl:401873020|n:christian watson|Receiving Yards|40+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -12.2,
+  "gid": "nfl:401873020",
+  "imp": 0.8571,
+  "label": "Christian Watson: 40+ Receiving Yards",
+  "league": "nfl",
+  "line": "40+",
+  "market": "Receiving Yards",
+  "name": "Christian Watson",
+  "p": 0.8512,
+  "p_fair": 0.7521,
+  "price": "-600",
+  "status": "open"
+ },
  "nfl:401873020|n:isaac teslaa|Receiving Yards|10+": {
   "aid": null,
   "date": "2026-10-25",
@@ -17114,6 +17246,22 @@
   "p": 0.6595,
   "p_fair": null,
   "price": "-390",
+  "status": "open"
+ },
+ "nfl:401873020|n:jameson williams|Receiving Yards|25+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -8.5,
+  "gid": "nfl:401873020",
+  "imp": 0.8571,
+  "label": "Jameson Williams: 25+ Receiving Yards",
+  "league": "nfl",
+  "line": "25+",
+  "market": "Receiving Yards",
+  "name": "Jameson Williams",
+  "p": 0.8512,
+  "p_fair": 0.7842,
+  "price": "-600",
   "status": "open"
  },
  "nfl:401873020|n:tucker kraft|Receiving Yards|30+": {
@@ -17178,6 +17326,22 @@
   "p": 0.8464,
   "p_fair": 0.8761,
   "price": "-1600",
+  "status": "open"
+ },
+ "nfl:401873021|n:brock bowers|Receiving Yards|40+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -14.2,
+  "gid": "nfl:401873021",
+  "imp": 0.8571,
+  "label": "Brock Bowers: 40+ Receiving Yards",
+  "league": "nfl",
+  "line": "40+",
+  "market": "Receiving Yards",
+  "name": "Brock Bowers",
+  "p": 0.8512,
+  "p_fair": 0.7351,
+  "price": "-600",
   "status": "open"
  },
  "nfl:401873021|n:brock bowers|Receiving Yards|50+": {
@@ -17339,6 +17503,22 @@
   "price": "-125",
   "status": "open"
  },
+ "nfl:401873021|n:puka nacua|Receiving Yards|50+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -14.5,
+  "gid": "nfl:401873021",
+  "imp": 0.8571,
+  "label": "Puka Nacua: 50+ Receiving Yards",
+  "league": "nfl",
+  "line": "50+",
+  "market": "Receiving Yards",
+  "name": "Puka Nacua",
+  "p": 0.8512,
+  "p_fair": 0.7325,
+  "price": "-600",
+  "status": "open"
+ },
  "nfl:401873021|n:tre tucker|Receptions|2+": {
   "aid": null,
   "date": "2026-10-25",
@@ -17403,6 +17583,22 @@
   "price": "-120",
   "status": "open"
  },
+ "nfl:401873022|n:noah gray|Receptions|1+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -3.6,
+  "gid": "nfl:401873022",
+  "imp": 0.8947,
+  "label": "Noah Gray: 1+ Receptions",
+  "league": "nfl",
+  "line": "1+",
+  "market": "Receptions",
+  "name": "Noah Gray",
+  "p": 0.8505,
+  "p_fair": 0.8629,
+  "price": "-850",
+  "status": "open"
+ },
  "nfl:401873022|n:patrick mahomes|Passing Yards|150+": {
   "aid": null,
   "date": "2026-10-25",
@@ -17417,6 +17613,22 @@
   "p": 0.8562,
   "p_fair": 0.8489,
   "price": "-700",
+  "status": "open"
+ },
+ "nfl:401873022|n:xavier worthy|Receiving Yards|25+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -10.3,
+  "gid": "nfl:401873022",
+  "imp": 0.8529,
+  "label": "Xavier Worthy: 25+ Receiving Yards",
+  "league": "nfl",
+  "line": "25+",
+  "market": "Receiving Yards",
+  "name": "Xavier Worthy",
+  "p": 0.847,
+  "p_fair": 0.7647,
+  "price": "-580",
   "status": "open"
  },
  "nfl:401873022|n:xavier worthy|Receiving Yards|30+": {
