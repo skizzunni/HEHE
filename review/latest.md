@@ -2,7 +2,7 @@
 
 No picks settled yet.
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
-With the market 70.1% (502); against it 20.0% (10).
+With the market 70.2% (503); against it 20.0% (10).
 Ladder-consistency props (all time): 532/631 won (84.3%) vs 87.6% fair, 88.5% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
