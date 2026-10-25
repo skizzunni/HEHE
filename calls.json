@@ -1175,19 +1175,19 @@
     "ger": "2026-10-24T14:01:34+00:00",
     "ita": "2026-10-24T17:08:16+00:00",
     "mls": "2026-10-24T23:51:26+00:00",
-    "nba": "2026-10-25T00:37:33+00:00"
+    "nba": "2026-10-25T01:21:20+00:00"
    },
    "candidate_observations": {
     "aus:401892152": {
      "book": "FanDuel",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
-     "conf": 80,
+     "conf": 81,
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T01:16:15+00:00",
-      "conf": 80,
+      "checked_at": "2026-10-25T01:21:20+00:00",
+      "conf": 81,
       "dc": true,
       "gate": {
        "ok": false,
@@ -1197,11 +1197,11 @@
       "league": "aus",
       "match": "CCM @ WEL",
       "pick": "Wellington Phoenix or draw",
-      "price": "-550",
-      "price_at": "2026-10-25T01:08:24+00:00",
+      "price": "-600",
+      "price_at": "2026-10-25T01:21:19+00:00",
       "price_market": "double_chance",
       "price_ref": "736.188384368:13690600",
-      "prob_at": "2026-10-25T01:15:55+00:00",
+      "prob_at": "2026-10-25T01:20:58+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -1218,8 +1218,8 @@
      "league": "aus",
      "match": "CCM @ WEL",
      "pick": "Wellington Phoenix or draw",
-     "price": "-550",
-     "price_at": "2026-10-25T01:08:24+00:00",
+     "price": "-600",
+     "price_at": "2026-10-25T01:21:19+00:00",
      "price_market": "double_chance",
      "price_ref": "736.188384368:13690600",
      "side": "home",
@@ -1234,7 +1234,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T01:16:15+00:00",
+      "checked_at": "2026-10-25T01:21:20+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
@@ -1246,28 +1246,36 @@
       "match": "GS @ PHX",
       "pick": "Phoenix Suns",
       "price": "-410",
-      "price_at": "2026-10-25T01:15:54+00:00",
+      "price_at": "2026-10-25T01:20:58+00:00",
       "price_market": "moneyline",
       "price_ref": "34888792:0ML86897853_1",
-      "prob_at": "2026-10-25T01:15:54+00:00",
+      "prob_at": "2026-10-25T01:20:58+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-25T02:00Z"
      },
      "dc": false,
-     "fp": "9f1582ea3dc9",
+     "fp": "e6dc90489a53",
      "gate": {
       "ok": true,
       "what": "injury report checked (7 listed)"
      },
      "id": "nba:401909860",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-25T01:21:20+00:00",
+       "what": "injury report checked (7 listed)"
+      }
+     ],
      "match": "GS @ PHX",
-     "news_at": "2026-10-25T00:37:33+00:00",
+     "news_at": "2026-10-25T01:21:20+00:00",
      "pick": "Phoenix Suns",
      "price": "-410",
-     "price_at": "2026-10-25T01:15:54+00:00",
+     "price_at": "2026-10-25T01:20:58+00:00",
      "price_market": "moneyline",
      "price_ref": "34888792:0ML86897853_1",
      "side": "home",
