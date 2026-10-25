@@ -4267,9 +4267,9 @@
    }
   },
   "clv": {
-   "avg": 0.77,
-   "beat": 57.7,
-   "n": 52
+   "avg": 0.76,
+   "beat": 58.5,
+   "n": 53
   },
   "day": "2026-10-25",
   "leaks_14d": [],
@@ -4287,6 +4287,14 @@
    "won": 1
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "arg",
+    "pick": "Belgrano (C\u00f3rdoba)",
+    "price": "-400",
+    "said": 75,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 75%"
+   },
    {
     "against_market": false,
     "league": "aut",
@@ -4399,14 +4407,22 @@
    }
   ],
   "picks": {
-   "hit": 88.5,
-   "lost": 6,
-   "n": 52,
-   "roi": 14.5,
-   "said": 72.7,
+   "hit": 86.8,
+   "lost": 7,
+   "n": 53,
+   "roi": 12.4,
+   "said": 72.8,
    "won": 46
   },
   "picks_by_league": {
+   "arg": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 75.0,
+    "won": 0
+   },
    "aus": {
     "hit": 100.0,
     "lost": 0,
@@ -4632,10 +4648,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 72.0,
-    "lost": 156,
-    "n": 557,
-    "roi": -0.1,
+    "hit": 71.9,
+    "lost": 157,
+    "n": 558,
+    "roi": -0.3,
     "said": 68.6,
     "won": 401
    }
