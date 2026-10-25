@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 101-35 (74.3% vs 71.4% claimed, ROI +0.2%).
-Closing line value: +0.48 points on 136 picks; beat the close on 50.7%.
+Picks 102-35 (74.5% vs 71.4% claimed, ROI +0.5%).
+Closing line value: +0.46 points on 137 picks; beat the close on 50.4%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST bra2 Fortaleza at 76%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76%
 - LOST bra Fluminense at 75%: margin 1 · the book had my side favoured too · called at 75%
@@ -37,7 +37,7 @@ Closing line value: +0.48 points on 136 picks; beat the close on 50.7%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.6% (523); against it 30.0% (20).
+With the market 69.7% (524); against it 30.0% (20).
 Locks 5/11 won, 3 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20; Edmonton Oilers over 2.5 goals (Toronto Maple Leafs at Edmonton Oilers) Toronto Maple Leafs 7 - Edmonton Oilers 2.
 Safe Locks 7/11 won, 4 open; Winners parlay top 2 (85%) won; Best play top 8 (50%) open.
 Lottery 100: lost (4/9 legs won, killed by Under 229.5 points, Under 230.5 points)
