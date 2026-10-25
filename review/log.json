@@ -4267,9 +4267,9 @@
    }
   },
   "clv": {
-   "avg": 0.88,
-   "beat": 56.2,
-   "n": 32
+   "avg": 0.9,
+   "beat": 57.6,
+   "n": 33
   },
   "day": "2026-10-25",
   "leaks_14d": [],
@@ -4287,6 +4287,14 @@
    "won": 1
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "chi",
+    "pick": "Coquimbo Unido",
+    "price": "-270",
+    "said": 68,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   },
    {
     "against_market": false,
     "league": "epl",
@@ -4381,11 +4389,11 @@
    }
   ],
   "picks": {
-   "hit": 87.5,
-   "lost": 4,
-   "n": 32,
-   "roi": 12.2,
-   "said": 73.2,
+   "hit": 84.8,
+   "lost": 5,
+   "n": 33,
+   "roi": 8.8,
+   "said": 73.1,
    "won": 28
   },
   "picks_by_league": {
@@ -4412,6 +4420,14 @@
     "roi": 29.4,
     "said": 73.0,
     "won": 1
+   },
+   "chi": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 68.0,
+    "won": 0
    },
    "den": {
     "hit": 100.0,
@@ -4590,10 +4606,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 71.3,
-    "lost": 154,
-    "n": 537,
-    "roi": -0.8,
+    "hit": 71.2,
+    "lost": 155,
+    "n": 538,
+    "roi": -0.9,
     "said": 68.5,
     "won": 383
    }
