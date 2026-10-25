@@ -10103,11 +10103,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "De'Anthony Melton",
   "p": 0.8454,
   "p_fair": 0.9778,
   "price": "-3500",
-  "status": "open"
+  "status": "won",
+  "value": 25.0
  },
  "nba:401909860|n:deanthony melton|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -10119,11 +10121,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "De'Anthony Melton",
   "p": 0.8469,
   "p_fair": 0.9686,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 35.0
  },
  "nba:401909860|n:devin booker|Pts + Ast|20+": {
   "aid": null,
@@ -10135,11 +10139,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Devin Booker",
   "p": 0.8431,
   "p_fair": 0.8889,
   "price": "-1500",
-  "status": "open"
+  "status": "won",
+  "value": 50.0
  },
  "nba:401909860|n:dillon brooks|Pts + Ast|10+": {
   "aid": null,
@@ -10151,11 +10157,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Dillon Brooks",
   "p": 0.8565,
   "p_fair": null,
   "price": "-2000",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401909860|n:gui santos|Assists|2+": {
   "aid": null,
@@ -10167,11 +10175,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Gui Santos",
   "p": 0.8518,
   "p_fair": 0.8571,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909860|n:gui santos|Points|5+": {
   "aid": null,
@@ -10183,11 +10193,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Gui Santos",
   "p": 0.8454,
   "p_fair": 0.9775,
   "price": "-3500",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909860|n:khaman maluach|Rebounds|4+": {
   "aid": null,
@@ -10198,11 +10210,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Khaman Maluach",
   "p": 0.9345,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909860|n:khaman maluach|Rebounds|6+": {
   "aid": null,
@@ -10214,11 +10228,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Khaman Maluach",
   "p": 0.8481,
   "p_fair": 0.8832,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909860|n:miles bridges|Assists|2+": {
   "aid": null,
@@ -10230,11 +10246,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Miles Bridges",
   "p": 0.7727,
   "p_fair": 0.7643,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909860|n:miles bridges|Pts + Ast|10+": {
   "aid": null,
@@ -10246,11 +10264,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Miles Bridges",
   "p": 0.8565,
   "p_fair": 0.9526,
   "price": "-2000",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nba:401909860|n:miles bridges|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -10262,10 +10282,28 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Miles Bridges",
   "p": 0.8548,
   "p_fair": 0.9372,
   "price": "-1600",
+  "status": "won",
+  "value": 26.0
+ },
+ "nba:401909861|n:austin reaves|Pts + Ast|20+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -4.4,
+  "gid": "nba:401909861",
+  "imp": 0.9259,
+  "label": "Austin Reaves: 20+ Pts + Ast",
+  "league": "nba",
+  "line": "20+",
+  "market": "Pts + Ast",
+  "name": "Austin Reaves",
+  "p": 0.8487,
+  "p_fair": 0.885,
+  "price": "-1250",
   "status": "open"
  },
  "nba:401909861|n:luka doncic|Points|20+": {
@@ -10314,6 +10352,22 @@
   "p": 0.8502,
   "p_fair": 0.9408,
   "price": "-2500",
+  "status": "open"
+ },
+ "nba:401909864|n:rj barrett|Points|10+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -2.2,
+  "gid": "nba:401909864",
+  "imp": 0.9565,
+  "label": "RJ Barrett: 10+ Points",
+  "league": "nba",
+  "line": "10+",
+  "market": "Points",
+  "name": "RJ Barrett",
+  "p": 0.8487,
+  "p_fair": 0.9358,
+  "price": "-2200",
   "status": "open"
  },
  "nba:401909864|n:scottie barnes|Assists|4+": {
@@ -10380,6 +10434,38 @@
   "price": "-2500",
   "status": "open"
  },
+ "nba:401909866|n:jaylen brown|Pts + Reb|20+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -5.0,
+  "gid": "nba:401909866",
+  "imp": 0.9783,
+  "label": "Jaylen Brown: 20+ Pts + Reb",
+  "league": "nba",
+  "line": "20+",
+  "market": "Pts + Reb",
+  "name": "Jaylen Brown",
+  "p": 0.8492,
+  "p_fair": 0.9295,
+  "price": "-4500",
+  "status": "open"
+ },
+ "nba:401909866|n:john collins|Pts + Reb|10+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -0.5,
+  "gid": "nba:401909866",
+  "imp": 0.9783,
+  "label": "John Collins: 10+ Pts + Reb",
+  "league": "nba",
+  "line": "10+",
+  "market": "Pts + Reb",
+  "name": "John Collins",
+  "p": 0.8492,
+  "p_fair": 0.9734,
+  "price": "-4500",
+  "status": "open"
+ },
  "nba:401909866|n:paul reed|Points|5+": {
   "aid": null,
   "date": "2026-10-25",
@@ -10410,6 +10496,22 @@
   "p": 0.7471,
   "p_fair": 0.7535,
   "price": "-350",
+  "status": "open"
+ },
+ "nba:401909867|n:isaiah stewart|Rebounds|4+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": null,
+  "gid": "nba:401909867",
+  "imp": 0.7727,
+  "label": "Isaiah Stewart: 4+ Rebounds",
+  "league": "nba",
+  "line": "4+",
+  "market": "Rebounds",
+  "name": "Isaiah Stewart",
+  "p": 0.7459,
+  "p_fair": null,
+  "price": "-340",
   "status": "open"
  },
  "nba:401909867|n:jerami grant|Points|5+": {
@@ -14173,6 +14275,22 @@
   "p": 0.8509,
   "p_fair": 0.8569,
   "price": "-750",
+  "status": "open"
+ },
+ "nfl:401873013|n:kc concepcion|Receiving Yards|20+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -8.5,
+  "gid": "nfl:401873013",
+  "imp": 0.8305,
+  "label": "KC Concepcion: 20+ Receiving Yards",
+  "league": "nfl",
+  "line": "20+",
+  "market": "Receiving Yards",
+  "name": "KC Concepcion",
+  "p": 0.8483,
+  "p_fair": 0.7596,
+  "price": "-490",
   "status": "open"
  },
  "nfl:401873013|n:quinshon judkins|Anytime Touchdown Scorer|1+": {

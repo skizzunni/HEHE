@@ -1300,6 +1300,7 @@
    "seen": "2026-10-24T04:06:11+00:00",
    "side": "away",
    "start": "2026-10-25T02:00Z",
+   "status": "lost",
    "team": "Golden State Warriors",
    "tip": "10:00 PM",
    "venue": "FanDuel"
@@ -1317,6 +1318,7 @@
    "seen": "2026-10-24T05:25:09+00:00",
    "side": "away",
    "start": "2026-10-25T02:00Z",
+   "status": "lost",
    "team": "Golden State Warriors",
    "tip": "10:00 PM",
    "venue": "Kalshi"
@@ -1362,6 +1364,7 @@
     "t": "over"
    },
    "start": "2026-10-25T02:00Z",
+   "status": "won",
    "team": "over 223.5",
    "tip": "10:00 PM",
    "venue": "Kalshi"
@@ -2824,6 +2827,55 @@
    "target": 10.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|epl:401878766:home": {
+   "ev": 0.015,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0149,
+     "fair": 0.1952,
+     "id": "epl:401878766",
+     "price": "+420",
+     "side": "home",
+     "spec": null,
+     "team": "Hull City"
+    }
+   ],
+   "payout": 5.2,
+   "prob": 0.1952,
+   "seen": "2026-10-25T04:37:38+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|epl:401878766:home|fra:401876426:away": {
+   "ev": 0.0268,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0114,
+     "fair": 0.1686,
+     "id": "fra:401876426",
+     "price": "+500",
+     "side": "away",
+     "spec": null,
+     "team": "Le Havre AC"
+    },
+    {
+     "ev": 0.0149,
+     "fair": 0.1952,
+     "id": "epl:401878766",
+     "price": "+420",
+     "side": "home",
+     "spec": null,
+     "team": "Hull City"
+    }
+   ],
+   "payout": 31.2,
+   "prob": 0.0329,
+   "seen": "2026-10-25T04:37:38+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|esp:401882834:away": {
    "ev": 0.0332,
    "kind": "parlay",
@@ -3208,6 +3260,7 @@
    "payout": 6.615,
    "prob": 0.1549,
    "seen": "2026-10-24T04:42:19+00:00",
+   "status": "lost",
    "target": 5.0,
    "venue": "FanDuel"
   },
@@ -3339,6 +3392,7 @@
    "payout": 3.15,
    "prob": 0.3345,
    "seen": "2026-10-24T04:06:11+00:00",
+   "status": "lost",
    "target": 2.0,
    "venue": "FanDuel"
   },
