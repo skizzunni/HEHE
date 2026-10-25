@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 81-29 (73.6% vs 72.2% claimed, ROI -1.6%).
-Closing line value: +0.5 points on 110 picks; beat the close on 51.8%.
+Picks 81-30 (73.0% vs 72.1% claimed, ROI -2.5%).
+Closing line value: +0.53 points on 111 picks; beat the close on 52.3%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST bra2 Fortaleza at 76%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76%
 - LOST bra Fluminense at 75%: margin 1 · the book had my side favoured too · called at 75%
@@ -18,6 +18,7 @@ Closing line value: +0.5 points on 110 picks; beat the close on 51.8%.
 - LOST jpn Avispa Fukuoka at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Kashima Antlers at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST mls Inter Miami CF at 70%: margin 2 · the book had my side favoured too · called at 70%
+- LOST nba Miami Heat at 62%: margin 5 · the book had my side favoured too · called at 62%
 - LOST ncaaf BYU Cougars at 74%: margin 8 · the book had my side favoured too · called at 74%
 - LOST ncaaf Kansas State Wildcats at 52%: margin 11 · the book had my side favoured too · called at 52%
 - LOST ncaaf Texas Tech Red Raiders at 79%: margin 13 · the book had my side favoured too · called at 79%
@@ -31,20 +32,20 @@ Closing line value: +0.5 points on 110 picks; beat the close on 51.8%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.2% (497); against it 30.0% (20).
+With the market 69.1% (498); against it 30.0% (20).
 Locks 4/11 won, 5 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20.
-Safe Locks 2/11 won, 9 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
+Safe Locks 3/11 won, 8 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (2/9 legs won)
-Lottery 100: open (2/6 legs won)
+Lottery 100: open (3/6 legs won)
 Lottery 100: lost (1/6 legs won, killed by Over 55.5 points)
-Lottery 10k: open (1/11 legs won)
+Lottery 10k: open (2/11 legs won)
 Lottery 10k: lost (3/10 legs won, killed by Michigan Wolverines to win, Over 55.5 points, Navy Midshipmen -7.5)
 Lottery 10k: lost (2/10 legs won, killed by Western Michigan Broncos +2.5)
-Lottery 10k+25: open (2/11 legs won)
-Lottery 10k+50: open (2/11 legs won)
+Lottery 10k+25: open (3/11 legs won)
+Lottery 10k+50: open (3/11 legs won)
 Lottery 10k+100: open (1/10 legs won)
-Ladder-consistency props (all time): 445/538 won (82.7%) vs 87.3% fair, 88.0% price.
-Props 23/31 vs 71.9% claimed.
+Ladder-consistency props (all time): 450/547 won (82.3%) vs 87.3% fair, 88.0% price.
+Props 29/41 vs 74.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=94), nhl 0.00 (n=52)
