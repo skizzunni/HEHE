@@ -10949,6 +10949,22 @@
   "price": "-4500",
   "status": "open"
  },
+ "nba:401909862|n:ivica zubac|Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -7.9,
+  "gid": "nba:401909862",
+  "imp": 0.878,
+  "label": "Ivica Zubac: 10+ Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Reb + Ast",
+  "name": "Ivica Zubac",
+  "p": 0.8484,
+  "p_fair": 0.8085,
+  "price": "-720",
+  "status": "open"
+ },
  "nba:401909862|n:ivica zubac|Rebounds|8+": {
   "aid": null,
   "date": "2026-10-25",
@@ -11075,6 +11091,22 @@
   "p": 0.9412,
   "p_fair": 0.9214,
   "price": "-1600",
+  "status": "open"
+ },
+ "nba:401909862|n:tyrese haliburton|Points|10+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -2.3,
+  "gid": "nba:401909862",
+  "imp": 0.9565,
+  "label": "Tyrese Haliburton: 10+ Points",
+  "league": "nba",
+  "line": "10+",
+  "market": "Points",
+  "name": "Tyrese Haliburton",
+  "p": 0.8487,
+  "p_fair": 0.9341,
+  "price": "-2200",
   "status": "open"
  },
  "nba:401909862|n:tyrese haliburton|Pts + Ast|20+": {
@@ -16304,11 +16336,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Adonai Mitchell",
   "p": 0.8512,
   "p_fair": 0.8295,
   "price": "-500",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873015|n:braelon allen|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -16320,11 +16354,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Braelon Allen",
   "p": 0.3971,
   "p_fair": null,
   "price": "-115",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873015|n:breece hall|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -16340,7 +16376,9 @@
   "p": 0.3971,
   "p_fair": null,
   "price": "-115",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401873015|n:caleb douglas|Receiving Yards|15+": {
   "aid": null,
@@ -16352,11 +16390,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Caleb Douglas",
   "p": 0.8172,
   "p_fair": 0.7856,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 70.0
  },
  "nfl:401873015|n:caleb douglas|Receiving Yards|5+": {
   "aid": null,
@@ -16367,11 +16407,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Caleb Douglas",
   "p": 0.9556,
   "price": "-1450",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 70.0
  },
  "nfl:401873015|n:garrett wilson|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -16383,11 +16425,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Garrett Wilson",
   "p": 0.2981,
   "p_fair": null,
   "price": "+175",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873015|n:garrett wilson|Receiving Yards|40+": {
   "aid": null,
@@ -16399,11 +16443,13 @@
   "league": "nfl",
   "line": "40+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Garrett Wilson",
   "p": 0.813,
   "p_fair": 0.7005,
   "price": "-390",
-  "status": "open"
+  "status": "lost",
+  "value": 26.0
  },
  "nfl:401873015|n:malik washington|Receiving Yards|20+": {
   "aid": null,
@@ -16415,11 +16461,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Malik Washington",
   "p": 0.8512,
   "p_fair": 0.7706,
   "price": "-500",
-  "status": "open"
+  "status": "won",
+  "value": 27.0
  },
  "nfl:401873015|n:malik willis|Passing Yards|125+": {
   "aid": null,
@@ -16431,11 +16479,13 @@
   "league": "nfl",
   "line": "125+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Malik Willis",
   "p": 0.8514,
   "p_fair": 0.8581,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 208.0
  },
  "nfl:401873015|n:ollie gordon|Rushing Yards|25+": {
   "aid": null,
@@ -16447,11 +16497,13 @@
   "league": "nfl",
   "line": "25+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Ollie Gordon II",
   "p": 0.8464,
   "p_fair": 0.8516,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 103.0
  },
  "nfl:401873015|n:omar cooper|Receiving Yards|15+": {
   "aid": null,
@@ -16463,11 +16515,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Omar Cooper Jr.",
   "p": 0.8172,
   "p_fair": 0.7732,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 115.0
  },
  "nfl:401873016|n:darnell mooney|Receiving Yards|5+": {
   "aid": null,
@@ -17304,6 +17358,22 @@
   "price": "-600",
   "status": "open"
  },
+ "nfl:401873020|n:tucker kraft|Receiving Yards|25+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -11.8,
+  "gid": "nfl:401873020",
+  "imp": 0.8667,
+  "label": "Tucker Kraft: 25+ Receiving Yards",
+  "league": "nfl",
+  "line": "25+",
+  "market": "Receiving Yards",
+  "name": "Tucker Kraft",
+  "p": 0.8472,
+  "p_fair": 0.7647,
+  "price": "-650",
+  "status": "open"
+ },
  "nfl:401873020|n:tucker kraft|Receiving Yards|30+": {
   "aid": null,
   "date": "2026-10-25",
@@ -17448,6 +17518,22 @@
   "price": "-155",
   "status": "open"
  },
+ "nfl:401873021|n:kyren williams|Receiving Yards|10+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -5.4,
+  "gid": "nfl:401873021",
+  "imp": 0.8667,
+  "label": "Kyren Williams: 10+ Receiving Yards",
+  "league": "nfl",
+  "line": "10+",
+  "market": "Receiving Yards",
+  "name": "Kyren Williams",
+  "p": 0.8472,
+  "p_fair": 0.8203,
+  "price": "-650",
+  "status": "open"
+ },
  "nfl:401873021|n:kyren williams|Receiving Yards|15+": {
   "aid": null,
   "date": "2026-10-25",
@@ -17543,6 +17629,22 @@
   "price": "-125",
   "status": "open"
  },
+ "nfl:401873021|n:mike washington|Rushing Yards|5+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": -1.7,
+  "gid": "nfl:401873021",
+  "imp": 0.9412,
+  "label": "Mike Washington Jr.: 5+ Rushing Yards",
+  "league": "nfl",
+  "line": "5+",
+  "market": "Rushing Yards",
+  "name": "Mike Washington Jr.",
+  "p": 0.8479,
+  "p_fair": 0.9247,
+  "price": "-1600",
+  "status": "open"
+ },
  "nfl:401873021|n:puka nacua|Receiving Yards|50+": {
   "aid": null,
   "date": "2026-10-25",
@@ -17589,6 +17691,22 @@
   "p": 0.8512,
   "p_fair": 0.8091,
   "price": "-500",
+  "status": "open"
+ },
+ "nfl:401873022|n:jalen royals|Receiving Yards|5+": {
+  "aid": null,
+  "date": "2026-10-25",
+  "edge": 0.5,
+  "gid": "nfl:401873022",
+  "imp": 0.8667,
+  "label": "Jalen Royals: 5+ Receiving Yards",
+  "league": "nfl",
+  "line": "5+",
+  "market": "Receiving Yards",
+  "name": "Jalen Royals",
+  "p": 0.8472,
+  "p_fair": 0.8707,
+  "price": "-650",
   "status": "open"
  },
  "nfl:401873022|n:jaxon smith njigba|Anytime Touchdown Scorer|1+": {

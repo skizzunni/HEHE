@@ -3958,6 +3958,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "nfl:401873012",
    "label": "Cincinnati Bengals",
    "league": "nfl",
@@ -3970,8 +3971,9 @@
     "team": "Cincinnati Bengals"
    },
    "start": "2026-10-25T17:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26OCT25CINBAL-CIN"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26OCT25CINBAL-CIN",
+   "won": 1
   },
   "KXNFLGAME-26OCT25CLETEN-CLE|YES": {
    "ask": 0.55,
@@ -4103,6 +4105,7 @@
    "cost": 0.664,
    "edge": 0.0101,
    "fair": 0.6707,
+   "fill": "strict",
    "id": "nfl:401873015",
    "label": "New York Jets",
    "league": "nfl",
@@ -4114,8 +4117,9 @@
     "team": "New York Jets"
    },
    "start": "2026-10-25T17:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26OCT25MIANYJ-NYJ"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26OCT25MIANYJ-NYJ",
+   "won": 0
   },
   "KXNFLGAME-26OCT25NYGHOU-HOU|YES": {
    "ask": 0.81,
@@ -4230,6 +4234,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "nfl:401873012",
    "label": "Baltimore Ravens +1.5",
    "league": "nfl",
@@ -4242,8 +4247,9 @@
     "team": "Baltimore Ravens"
    },
    "start": "2026-10-25T17:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26OCT25CINBAL-CIN2"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26OCT25CINBAL-CIN2",
+   "won": 0
   },
   "KXNFLSPREAD-26OCT25CINBAL-CIN3|YES": {
    "ask": 0.51,
@@ -4251,6 +4257,7 @@
    "cost": 0.5044,
    "edge": 0.0363,
    "fair": 0.5227,
+   "fill": "touch",
    "id": "nfl:401873012",
    "label": "Cincinnati Bengals -2.5",
    "league": "nfl",
@@ -4264,8 +4271,9 @@
     "team": "Cincinnati Bengals"
    },
    "start": "2026-10-25T17:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26OCT25CINBAL-CIN3"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26OCT25CINBAL-CIN3",
+   "won": 1
   },
   "KXNFLSPREAD-26OCT25CLETEN-CLE3|NO": {
    "ask": 0.51,
@@ -4288,6 +4296,28 @@
    "start": "2026-10-25T17:00Z",
    "status": "open",
    "ticker": "KXNFLSPREAD-26OCT25CLETEN-CLE3"
+  },
+  "KXNFLSPREAD-26OCT25DENARI-DEN5|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "nfl:401873019",
+   "label": "Denver Broncos -4.5",
+   "league": "nfl",
+   "match": "DEN @ ARI",
+   "posted": "2026-10-25T20:02:38+00:00",
+   "queue": 55308.15,
+   "side": "YES",
+   "spec": {
+    "line": -4.5,
+    "t": "spread",
+    "team": "Denver Broncos"
+   },
+   "start": "2026-10-25T20:05Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26OCT25DENARI-DEN5"
   },
   "KXNFLSPREAD-26OCT25GBDET-DET4|NO": {
    "ask": 0.51,

@@ -3943,10 +3943,10 @@
   },
   "props": {
    "fair": {
-    "n": 663,
-    "said_fair": 87.3,
+    "n": 670,
+    "said_fair": 87.2,
     "said_price": 87.8,
-    "won": 555
+    "won": 560
    },
    "n": 181,
    "said": 81.1,
@@ -4080,24 +4080,24 @@
    },
    {
     "flag": false,
-    "hit": 37.8,
-    "n": 37,
+    "hit": 35.9,
+    "n": 39,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 41.9
+    "said": 41.6
    },
    {
     "flag": false,
-    "hit": 85.0,
-    "n": 20,
+    "hit": 85.7,
+    "n": 21,
     "name": "props nfl Passing Yards",
-    "said": 81.7
+    "said": 81.9
    },
    {
     "flag": false,
-    "hit": 84.3,
-    "n": 83,
+    "hit": 83.1,
+    "n": 89,
     "name": "props nfl Receiving Yards",
-    "said": 81.9
+    "said": 82.1
    },
    {
     "flag": false,
@@ -4108,10 +4108,10 @@
    },
    {
     "flag": false,
-    "hit": 75.0,
-    "n": 28,
+    "hit": 75.9,
+    "n": 29,
     "name": "props nfl Rushing Yards",
-    "said": 81.6
+    "said": 81.7
    },
    {
     "flag": false,
@@ -4178,24 +4178,24 @@
    },
    {
     "flag": false,
-    "hit": 93.9,
-    "n": 33,
+    "hit": 94.1,
+    "n": 34,
     "name": "prop locks",
-    "said": 92.1
+    "said": 92.2
    },
    {
     "flag": false,
-    "hit": 40.0,
-    "n": 125,
+    "hit": 39.7,
+    "n": 126,
     "name": "value bets",
-    "said": 43.0
+    "said": 43.2
    },
    {
     "flag": false,
-    "hit": 54.7,
-    "n": 95,
+    "hit": 53.6,
+    "n": 97,
     "name": "kalshi maker bids (filled)",
-    "said": 52.6
+    "said": 52.8
    }
   ],
   "calls": {
@@ -4267,16 +4267,16 @@
    }
   },
   "clv": {
-   "avg": 0.94,
-   "beat": 60.7,
-   "n": 56
+   "avg": 0.89,
+   "beat": 58.6,
+   "n": 58
   },
   "day": "2026-10-25",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      3,
@@ -4284,7 +4284,7 @@
      "won"
     ]
    },
-   "won": 3
+   "won": 4
   },
   "losses": [
    {
@@ -4302,6 +4302,14 @@
     "price": "-290",
     "said": 69,
     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 69%"
+   },
+   {
+    "against_market": false,
+    "league": "chi",
+    "pick": "Universidad Cat\u00f3lica",
+    "price": "-360",
+    "said": 73,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 73%"
    },
    {
     "against_market": false,
@@ -4338,6 +4346,14 @@
    {
     "against_market": false,
     "league": "nfl",
+    "pick": "New York Jets",
+    "price": "-218",
+    "said": 66,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
+    "league": "nfl",
     "pick": "Carolina Panthers",
     "price": "-166",
     "said": 60,
@@ -4354,10 +4370,12 @@
   ],
   "lottery": [
    {
-    "killed_by": [],
+    "killed_by": [
+     "New York Jets -9.5"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
@@ -4374,26 +4392,32 @@
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "New York Jets -9.5"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+25",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "New York Jets -9.5"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+50",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "New York Jets -9.5"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+100",
     "won": 0
    },
@@ -4417,11 +4441,11 @@
    }
   ],
   "picks": {
-   "hit": 85.7,
-   "lost": 8,
-   "n": 56,
-   "roi": 11.6,
-   "said": 72.3,
+   "hit": 82.8,
+   "lost": 10,
+   "n": 58,
+   "roi": 7.7,
+   "said": 72.2,
    "won": 48
   },
   "picks_by_league": {
@@ -4459,10 +4483,10 @@
    },
    "chi": {
     "hit": 0.0,
-    "lost": 1,
-    "n": 1,
+    "lost": 2,
+    "n": 2,
     "roi": -100.0,
-    "said": 68.0,
+    "said": 70.5,
     "won": 0
    },
    "den": {
@@ -4562,11 +4586,11 @@
     "won": 1
    },
    "nfl": {
-    "hit": 75.0,
-    "lost": 1,
-    "n": 4,
-    "roi": 13.6,
-    "said": 62.8,
+    "hit": 60.0,
+    "lost": 2,
+    "n": 5,
+    "roi": -9.2,
+    "said": 63.4,
     "won": 3
    },
    "nor": {
@@ -4612,14 +4636,14 @@
   },
   "props": {
    "fair": {
-    "n": 663,
-    "said_fair": 87.3,
+    "n": 670,
+    "said_fair": 87.2,
     "said_price": 87.8,
-    "won": 555
+    "won": 560
    },
-   "n": 61,
+   "n": 71,
    "said": 74.7,
-   "won": 41
+   "won": 47
   },
   "safe_locks": {
    "lost": [
@@ -4660,10 +4684,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 71.8,
-    "lost": 158,
-    "n": 561,
-    "roi": -0.3,
+    "hit": 71.6,
+    "lost": 160,
+    "n": 563,
+    "roi": -0.6,
     "said": 68.6,
     "won": 403
    }
