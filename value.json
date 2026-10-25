@@ -322,6 +322,23 @@
    "tip": "3:45 PM",
    "venue": "FanDuel"
   },
+  "ita:401874952|away|FanDuel": {
+   "dec": 3.5,
+   "ev": 0.0214,
+   "fair": 0.2918,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ita:401874952",
+   "kind": "value",
+   "league": "ita",
+   "match": "VEN @ GEN",
+   "price": "+250",
+   "seen": "2026-10-25T13:09:49+00:00",
+   "side": "away",
+   "start": "2026-10-25T14:00Z",
+   "team": "Venezia",
+   "tip": "10:00 AM",
+   "venue": "FanDuel"
+  },
   "ita:401874955|away|Kalshi": {
    "dec": 9.4073,
    "ev": 0.0337,
@@ -3308,6 +3325,26 @@
    "prob": 0.3009,
    "seen": "2026-10-24T13:22:12+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ita:401874952:away": {
+   "ev": 0.0213,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0214,
+     "fair": 0.2918,
+     "id": "ita:401874952",
+     "price": "+250",
+     "side": "away",
+     "spec": null,
+     "team": "Venezia"
+    }
+   ],
+   "payout": 3.5,
+   "prob": 0.2918,
+   "seen": "2026-10-25T13:09:49+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
