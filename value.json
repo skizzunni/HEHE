@@ -84,6 +84,7 @@
    "seen": "2026-10-24T22:24:56+00:00",
    "side": "home",
    "start": "2026-10-25T14:00Z",
+   "status": "lost",
    "team": "Hull City",
    "tip": "10:00 AM",
    "venue": "FanDuel"
@@ -3166,6 +3167,73 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|ecu:401921334:away|nba:401909861:away": {
+   "ev": 0.0402,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0297,
+     "fair": 0.2145,
+     "id": "ecu:401921334",
+     "price": "+380",
+     "side": "away",
+     "spec": null,
+     "team": "Guayaquil City FC"
+    },
+    {
+     "ev": 0.0104,
+     "fair": 0.6946,
+     "id": "nba:401909861",
+     "price": "-220",
+     "side": "away",
+     "spec": null,
+     "team": "Los Angeles Lakers"
+    }
+   ],
+   "payout": 6.982,
+   "prob": 0.149,
+   "seen": "2026-10-25T15:53:46+00:00",
+   "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ecu:401921334:away|nba:401909861:away|nba:401909866:away": {
+   "ev": 0.075,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0297,
+     "fair": 0.2145,
+     "id": "ecu:401921334",
+     "price": "+380",
+     "side": "away",
+     "spec": null,
+     "team": "Guayaquil City FC"
+    },
+    {
+     "ev": 0.0104,
+     "fair": 0.6946,
+     "id": "nba:401909861",
+     "price": "-220",
+     "side": "away",
+     "spec": null,
+     "team": "Los Angeles Lakers"
+    },
+    {
+     "ev": 0.0334,
+     "fair": 0.5116,
+     "id": "nba:401909866",
+     "price": "+102",
+     "side": "away",
+     "spec": null,
+     "team": "Detroit Pistons"
+    }
+   ],
+   "payout": 14.103,
+   "prob": 0.0762,
+   "seen": "2026-10-25T15:53:46+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|ecu:401921334:away|nba:401909866:away": {
    "ev": 0.0744,
    "kind": "parlay",
@@ -3293,6 +3361,7 @@
    "payout": 5.2,
    "prob": 0.1952,
    "seen": "2026-10-25T04:37:38+00:00",
+   "status": "lost",
    "target": 2.0,
    "venue": "FanDuel"
   },
@@ -3322,6 +3391,7 @@
    "payout": 31.2,
    "prob": 0.0329,
    "seen": "2026-10-25T04:37:38+00:00",
+   "status": "lost",
    "target": 10.0,
    "venue": "FanDuel"
   },
