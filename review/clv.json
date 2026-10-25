@@ -3,14 +3,14 @@
  "enough": true,
  "last": {
   "beat_close_pct": 58.0,
-  "brier_close": 0.1871,
-  "brier_published": 0.1887,
+  "brier_close": 0.188,
+  "brier_published": 0.19,
   "dates": [
    "2026-10-21",
    "2026-10-25"
   ],
-  "logloss_close": 0.5587,
-  "logloss_published": 0.5638,
+  "logloss_close": 0.5605,
+  "logloss_published": 0.5666,
   "mean_clv_pts": 0.35,
   "n": 300
  },
@@ -2683,6 +2683,15 @@
    "published": 0.691,
    "won": 0
   },
+  "epl:401878765": {
+   "call": false,
+   "close": 0.7354,
+   "clv": 4.54,
+   "day": "2026-10-25",
+   "league": "epl",
+   "published": 0.69,
+   "won": 1
+  },
   "epl:401878766": {
    "call": false,
    "close": 0.8084,
@@ -2740,6 +2749,15 @@
    "record_excluded": "unpriced_or_unverifiable",
    "won": 1
   },
+  "epl:401879252": {
+   "call": false,
+   "close": 0.6668,
+   "clv": -3.32,
+   "day": "2026-10-25",
+   "league": "epl",
+   "published": 0.7,
+   "won": 0
+  },
   "epl:401879253": {
    "call": false,
    "close": 0.7059,
@@ -2748,6 +2766,15 @@
    "league": "epl",
    "published": 0.7,
    "won": 1
+  },
+  "epl:401879254": {
+   "call": false,
+   "close": 0.6398,
+   "clv": -3.02,
+   "day": "2026-10-25",
+   "league": "epl",
+   "published": 0.67,
+   "won": 0
   },
   "epl:401879255": {
    "call": false,
@@ -3112,6 +3139,15 @@
    "league": "fra2",
    "published": 0.757,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 1
+  },
+  "fra:401876425": {
+   "call": false,
+   "close": 0.7667,
+   "clv": 1.67,
+   "day": "2026-10-25",
+   "league": "fra",
+   "published": 0.75,
    "won": 1
   },
   "fra:401876427": {
@@ -3775,6 +3811,15 @@
    "day": "2026-10-24",
    "league": "ita",
    "published": 0.66,
+   "won": 1
+  },
+  "ita:401874952": {
+   "call": false,
+   "close": 0.7385,
+   "clv": 0.85,
+   "day": "2026-10-25",
+   "league": "ita",
+   "published": 0.73,
    "won": 1
   },
   "ita:401874953": {
@@ -18243,5 +18288,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-25T15:55+00:00"
+ "updated": "2026-10-25T16:00+00:00"
 }
