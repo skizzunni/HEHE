@@ -1,12 +1,14 @@
 # Review 2026-10-25
 
-Picks 62-15 (80.5% vs 71.9% claimed, ROI +6.0%).
+Picks 64-16 (80.0% vs 71.8% claimed, ROI +5.7%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
-Closing line value: +0.84 points on 77 picks; beat the close on 58.4%.
+TRAILING props nba Pts + Reb: 73.0% hit vs 85.0% stated on 37
+Closing line value: +0.81 points on 80 picks; beat the close on 57.5%.
 - LOST arg Belgrano (Córdoba) at 75%: margin 1 · the book had my side favoured too · called at 75%
 - LOST aut LASK Linz at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST chi Universidad Católica at 73%: margin 2 · the book had my side favoured too · called at 73%
 - LOST chi Coquimbo Unido at 68%: margin 1 · the book had my side favoured too · called at 68%
+- LOST ecu Aucas at 78%: margin 4 · the book had my side favoured too · called at 78%
 - LOST ecu Emelec at 81%: margin 1 · the book had my side favoured too · called at 81%
 - LOST epl Manchester United at 67%: margin 3 · the book had my side favoured too · called at 67%
 - LOST epl Crystal Palace at 64%: margin 2 · the book had my side favoured too · called at 64%
@@ -18,18 +20,18 @@ Closing line value: +0.84 points on 77 picks; beat the close on 58.4%.
 - LOST nfl Carolina Panthers at 60%: margin 30 · the book had my side favoured too · called at 60%
 - LOST por Sporting CP at 74%: margin 1 · the book had my side favoured too · called at 74%
 - LOST uru Montevideo Wanderers at 72%: margin 1 · the book had my side favoured too · called at 72%
-With the market 71.6% (582); against it 20.0% (10).
+With the market 71.6% (585); against it 20.0% (10).
 Locks 7/11 won, 3 open; Best play top 3 (55%) won; lost: Darnell Mooney: 5+ Receiving Yards (NYG @ HOU) 4.
 Safe Locks 4/11 won, 6 open; Winners parlay top 5 (82%) lost; Best play top 11 (53%) lost; lost: Jalen Coker: 25+ Receiving Yards (TB @ CAR) 9.
-Lottery 10k: lost (2/11 legs won, killed by New York Jets -9.5, Detroit Lions -9.5)
+Lottery 10k: lost (4/11 legs won, killed by New York Jets -9.5, Detroit Lions -9.5)
 Lottery 10k: lost (2/8 legs won, killed by Over 41.5 points, Carolina Panthers -9.5, Indianapolis Colts +2.5, Cleveland Browns over 27.5 points)
-Lottery 10k+25: lost (2/11 legs won, killed by New York Jets -9.5, Detroit Lions -9.5)
-Lottery 10k+50: lost (2/11 legs won, killed by New York Jets -9.5, Detroit Lions -9.5)
-Lottery 10k+100: lost (2/10 legs won, killed by New York Jets -9.5, Detroit Lions -9.5)
+Lottery 10k+25: lost (4/11 legs won, killed by New York Jets -9.5, Detroit Lions -9.5)
+Lottery 10k+50: lost (4/11 legs won, killed by New York Jets -9.5, Detroit Lions -9.5)
+Lottery 10k+100: lost (4/10 legs won, killed by New York Jets -9.5, Detroit Lions -9.5)
 Lottery 100: lost (4/5 legs won, killed by Jacen Russell-Rowe: Anytime Goalscorer)
-Lottery 100: open (2/11 legs won)
-Ladder-consistency props (all time): 596/711 won (83.8%) vs 86.8% fair, 87.6% price.
-Props 100/134 vs 76.2% claimed.
+Lottery 100: open (4/11 legs won)
+Ladder-consistency props (all time): 616/735 won (83.8%) vs 86.6% fair, 87.5% price.
+Props 125/166 vs 77.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=108), nhl 0.00 (n=63)
