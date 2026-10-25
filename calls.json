@@ -1175,7 +1175,7 @@
     "ger": "2026-10-24T14:01:34+00:00",
     "ita": "2026-10-24T17:08:16+00:00",
     "mls": "2026-10-24T23:51:26+00:00",
-    "nba": "2026-10-25T00:12:26+00:00"
+    "nba": "2026-10-25T00:17:05+00:00"
    },
    "candidate_observations": {
     "arg:401841633": {
@@ -1186,7 +1186,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T00:12:26+00:00",
+      "checked_at": "2026-10-25T00:17:05+00:00",
       "conf": 80,
       "dc": true,
       "gate": {
@@ -1201,7 +1201,7 @@
       "price_at": "2026-10-25T00:07:42+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190951231:13270151",
-      "prob_at": "2026-10-25T00:11:43+00:00",
+      "prob_at": "2026-10-25T00:16:46+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -1234,7 +1234,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T00:12:26+00:00",
+      "checked_at": "2026-10-25T00:17:05+00:00",
       "conf": 78,
       "dc": true,
       "gate": {
@@ -1249,7 +1249,7 @@
       "price_at": "2026-10-25T00:07:42+00:00",
       "price_market": "double_chance",
       "price_ref": "736.188384368:13690600",
-      "prob_at": "2026-10-25T00:11:44+00:00",
+      "prob_at": "2026-10-25T00:16:46+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -1282,7 +1282,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T00:12:26+00:00",
+      "checked_at": "2026-10-25T00:17:05+00:00",
       "conf": 75,
       "dc": true,
       "gate": {
@@ -1297,7 +1297,7 @@
       "price_at": "2026-10-25T00:07:42+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192107362:13129110",
-      "prob_at": "2026-10-25T00:11:46+00:00",
+      "prob_at": "2026-10-25T00:16:46+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -1330,7 +1330,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T00:12:26+00:00",
+      "checked_at": "2026-10-25T00:17:05+00:00",
       "conf": 80,
       "dc": false,
       "gate": {
@@ -1342,28 +1342,36 @@
       "match": "NO @ DEN",
       "pick": "Denver Nuggets",
       "price": "-485",
-      "price_at": "2026-10-25T00:11:41+00:00",
+      "price_at": "2026-10-25T00:16:45+00:00",
       "price_market": "moneyline",
       "price_ref": "34888791:0ML86897852_1",
-      "prob_at": "2026-10-25T00:11:41+00:00",
+      "prob_at": "2026-10-25T00:16:45+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-25T01:00Z"
      },
      "dc": false,
-     "fp": "3692405d23bf",
+     "fp": "90ec52bf4299",
      "gate": {
       "ok": true,
       "what": "injury report checked (5 listed)"
      },
      "id": "nba:401909859",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-25T00:17:05+00:00",
+       "what": "injury report checked (5 listed)"
+      }
+     ],
      "match": "NO @ DEN",
-     "news_at": "2026-10-24T19:18:12+00:00",
+     "news_at": "2026-10-25T00:17:05+00:00",
      "pick": "Denver Nuggets",
      "price": "-485",
-     "price_at": "2026-10-25T00:11:41+00:00",
+     "price_at": "2026-10-25T00:16:45+00:00",
      "price_market": "moneyline",
      "price_ref": "34888791:0ML86897852_1",
      "side": "home",
@@ -1378,48 +1386,48 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T00:12:26+00:00",
+      "checked_at": "2026-10-25T00:17:05+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
-       "ok": false,
-       "what": "injury report not fetched or game summary unverifiable"
+       "ok": true,
+       "what": "injury report checked (8 listed)"
       },
       "id": "nba:401909860",
       "league": "nba",
       "match": "GS @ PHX",
       "pick": "Phoenix Suns",
       "price": "-410",
-      "price_at": "2026-10-25T00:11:41+00:00",
+      "price_at": "2026-10-25T00:16:45+00:00",
       "price_market": "moneyline",
       "price_ref": "34888792:0ML86897853_1",
-      "prob_at": "2026-10-25T00:11:41+00:00",
+      "prob_at": "2026-10-25T00:16:45+00:00",
       "rank": null,
       "ready": false,
-      "reason": "injury report not fetched or game summary unverifiable",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-25T02:00Z"
      },
      "dc": false,
-     "fp": "6acf459eb5a7",
+     "fp": "83756806e326",
      "gate": {
-      "ok": false,
-      "what": "injury report not fetched or game summary unverifiable"
+      "ok": true,
+      "what": "injury report checked (8 listed)"
      },
      "id": "nba:401909860",
      "league": "nba",
      "log": [
       {
        "event": "news",
-       "t": "2026-10-25T00:12:26+00:00",
-       "what": "injury report not fetched or game summary unverifiable"
+       "t": "2026-10-25T00:17:05+00:00",
+       "what": "injury report checked (8 listed)"
       }
      ],
      "match": "GS @ PHX",
-     "news_at": "2026-10-25T00:12:26+00:00",
+     "news_at": "2026-10-25T00:17:05+00:00",
      "pick": "Phoenix Suns",
      "price": "-410",
-     "price_at": "2026-10-25T00:11:41+00:00",
+     "price_at": "2026-10-25T00:16:45+00:00",
      "price_market": "moneyline",
      "price_ref": "34888792:0ML86897853_1",
      "side": "home",
@@ -1430,12 +1438,12 @@
      "book": "FanDuel",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
-     "conf": 81,
+     "conf": 83,
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T00:12:26+00:00",
-      "conf": 81,
+      "checked_at": "2026-10-25T00:17:05+00:00",
+      "conf": 83,
       "dc": true,
       "gate": {
        "ok": false,
@@ -1449,7 +1457,7 @@
       "price_at": "2026-10-25T00:07:42+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192284305:43747443",
-      "prob_at": "2026-10-25T00:11:45+00:00",
+      "prob_at": "2026-10-25T00:16:46+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
