@@ -34,10 +34,10 @@ Locks 4/11 won, 5 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (O
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (85%) open; Best play top 8 (50%) open.
 Lottery 100: open (2/9 legs won)
 Lottery 100: open (2/6 legs won)
-Lottery 100: lost (0/6 legs won, killed by Over 55.5 points)
+Lottery 100: lost (1/6 legs won, killed by Over 55.5 points)
 Lottery 10k: open (1/11 legs won)
 Lottery 10k: lost (3/10 legs won, killed by Michigan Wolverines to win, Over 55.5 points, Navy Midshipmen -7.5)
-Lottery 10k: lost (1/10 legs won, killed by Western Michigan Broncos +2.5)
+Lottery 10k: lost (2/10 legs won, killed by Western Michigan Broncos +2.5)
 Lottery 10k+25: open (2/11 legs won)
 Lottery 10k+50: open (2/11 legs won)
 Lottery 10k+100: open (1/10 legs won)
