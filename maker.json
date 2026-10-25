@@ -1249,6 +1249,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401856838",
    "label": "Arizona Wildcats -10.5",
    "league": "ncaaf",
@@ -1261,8 +1262,9 @@
     "team": "Arizona Wildcats"
    },
    "start": "2026-10-24T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT24ISUARIZ-ARIZ11"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT24ISUARIZ-ARIZ11",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT24KSUASU-KSU3|NO": {
    "ask": 0.51,
@@ -2833,6 +2835,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401856838",
    "label": "under 51.5",
    "league": "ncaaf",
@@ -2844,8 +2847,9 @@
     "t": "under"
    },
    "start": "2026-10-24T23:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT24ISUARIZ-52"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT24ISUARIZ-52",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT24KSUASU-52|NO": {
    "ask": 0.51,

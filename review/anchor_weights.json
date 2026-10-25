@@ -1,13 +1,13 @@
 {
- "default": 0.254,
+ "default": 0.255,
  "detail": {
   "ncaaf": {
    "fitted": 0.4,
    "held_out": true,
-   "logloss": 0.6352,
-   "market_only": 0.6513,
-   "model_40": 0.6352,
-   "n": 103,
+   "logloss": 0.6412,
+   "market_only": 0.6591,
+   "model_40": 0.6412,
+   "n": 104,
    "weight": 0.4
   },
   "nhl": {
@@ -20,7 +20,7 @@
    "weight": 0.0
   }
  },
- "updated": "2026-10-24T23:05-04:00",
+ "updated": "2026-10-24T23:10-04:00",
  "weights": {
   "ncaaf": 0.4,
   "nhl": 0.0
