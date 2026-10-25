@@ -1817,7 +1817,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 89,
       "dc": false,
       "gate": {
@@ -1867,7 +1867,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 85,
       "dc": true,
       "gate": {
@@ -1879,7 +1879,7 @@
       "match": "JUV @ LEC",
       "pick": "Juventus or draw",
       "price": "-800",
-      "price_at": "2026-10-25T15:28:58+00:00",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192181676:13501694",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -1963,7 +1963,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 81,
       "dc": false,
       "gate": {
@@ -1980,12 +1980,13 @@
       "price_ref": "34118038:0ML84695471_1",
       "prob_at": "2026-10-25T15:37:47+00:00",
       "rank": 4,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-25T17:00Z"
      },
      "dc": false,
-     "fp": "18225e82adb6",
+     "fp": "bc68d0c78870",
      "gate": {
       "ok": true,
       "what": "no lineup gate for this league"
@@ -2002,10 +2003,15 @@
        "event": "news",
        "t": "2026-10-25T12:43:53+00:00",
        "what": "no lineup gate for this league"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-25T15:44:33+00:00",
+       "what": "no lineup gate for this league"
       }
      ],
      "match": "NYG @ HOU",
-     "news_at": "2026-10-25T12:43:53+00:00",
+     "news_at": "2026-10-25T15:44:33+00:00",
      "pick": "Houston Texans",
      "price": "-535",
      "price_at": "2026-10-25T12:02:15+00:00",
@@ -2026,7 +2032,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 73,
       "dc": false,
       "gate": {
@@ -2043,19 +2049,28 @@
       "price_ref": "34118173:0ML84695606_1",
       "prob_at": "2026-10-25T15:37:47+00:00",
       "rank": 5,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-25T17:00Z"
      },
      "dc": false,
-     "fp": "a38efbd2eb32",
+     "fp": "efa87410111d",
      "gate": {
       "ok": true,
       "what": "no lineup gate for this league"
      },
      "id": "nfl:401873014",
      "league": "nfl",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-25T15:44:33+00:00",
+       "what": "no lineup gate for this league"
+      }
+     ],
      "match": "IND @ MIN",
+     "news_at": "2026-10-25T15:44:33+00:00",
      "pick": "Minnesota Vikings",
      "price": "-325",
      "price_at": "2026-10-25T12:02:15+00:00",
@@ -2072,7 +2087,8 @@
     "epl": "2026-10-25T13:09:29+00:00",
     "esp": "2026-10-25T12:43:53+00:00",
     "fra": "2026-10-25T15:38:10+00:00",
-    "ger": "2026-10-25T12:43:53+00:00"
+    "ger": "2026-10-25T12:43:53+00:00",
+    "nfl": "2026-10-25T15:44:33+00:00"
    },
    "candidate_observations": {
     "arg:401841629": {
@@ -2083,7 +2099,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 75,
       "dc": true,
       "gate": {
@@ -2095,7 +2111,7 @@
       "match": "BEL @ ALDO",
       "pick": "Belgrano (C\u00f3rdoba) or draw",
       "price": "-390",
-      "price_at": "2026-10-25T15:29:02+00:00",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190952713:13141376",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -2116,7 +2132,7 @@
      "match": "BEL @ ALDO",
      "pick": "Belgrano (C\u00f3rdoba) or draw",
      "price": "-390",
-     "price_at": "2026-10-25T15:29:02+00:00",
+     "price_at": "2026-10-25T15:38:10+00:00",
      "price_market": "double_chance",
      "price_ref": "736.190952713:13141376",
      "side": "away",
@@ -2131,7 +2147,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 78,
       "dc": true,
       "gate": {
@@ -2143,7 +2159,7 @@
       "match": "GCF @ EME",
       "pick": "Emelec or draw",
       "price": "-600",
-      "price_at": "2026-10-25T15:32:51+00:00",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192277772:13625567",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -2164,7 +2180,7 @@
      "match": "GCF @ EME",
      "pick": "Emelec or draw",
      "price": "-600",
-     "price_at": "2026-10-25T15:32:51+00:00",
+     "price_at": "2026-10-25T15:38:10+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192277772:13625567",
      "side": "home",
@@ -2179,7 +2195,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -2191,7 +2207,7 @@
       "match": "LEV @ RSO",
       "pick": "Real Sociedad or draw",
       "price": "-650",
-      "price_at": "2026-10-25T15:28:58+00:00",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190886034:13579490",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -2213,7 +2229,7 @@
      "news_at": "2026-10-25T12:43:53+00:00",
      "pick": "Real Sociedad or draw",
      "price": "-650",
-     "price_at": "2026-10-25T15:28:58+00:00",
+     "price_at": "2026-10-25T15:38:10+00:00",
      "price_market": "double_chance",
      "price_ref": "736.190886034:13579490",
      "side": "home",
@@ -2228,7 +2244,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 77,
       "dc": true,
       "gate": {
@@ -2240,7 +2256,7 @@
       "match": "RMA @ BAR",
       "pick": "Barcelona or draw",
       "price": "-425",
-      "price_at": "2026-10-25T15:28:58+00:00",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190881741:13501625",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -2261,7 +2277,7 @@
      "match": "RMA @ BAR",
      "pick": "Barcelona or draw",
      "price": "-425",
-     "price_at": "2026-10-25T15:28:58+00:00",
+     "price_at": "2026-10-25T15:38:10+00:00",
      "price_market": "double_chance",
      "price_ref": "736.190881741:13501625",
      "side": "home",
@@ -2276,7 +2292,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 83,
       "dc": true,
       "gate": {
@@ -2287,8 +2303,8 @@
       "league": "fra",
       "match": "TRY @ TOU",
       "pick": "Toulouse or draw",
-      "price": "-750",
-      "price_at": "2026-10-25T15:29:00+00:00",
+      "price": "-700",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190880207:21972570",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -2306,18 +2322,11 @@
      },
      "id": "fra:401876423",
      "league": "fra",
-     "log": [
-      {
-       "event": "news",
-       "t": "2026-10-25T15:38:10+00:00",
-       "what": "both XIs confirmed"
-      }
-     ],
      "match": "TRY @ TOU",
      "news_at": "2026-10-25T15:38:10+00:00",
      "pick": "Toulouse or draw",
-     "price": "-750",
-     "price_at": "2026-10-25T15:29:00+00:00",
+     "price": "-700",
+     "price_at": "2026-10-25T15:38:10+00:00",
      "price_market": "double_chance",
      "price_ref": "736.190880207:21972570",
      "side": "home",
@@ -2332,7 +2341,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 76,
       "dc": true,
       "gate": {
@@ -2343,8 +2352,8 @@
       "league": "fra",
       "match": "STR @ REN",
       "pick": "Stade Rennais or draw",
-      "price": "-425",
-      "price_at": "2026-10-25T15:28:59+00:00",
+      "price": "-400",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190882303:13475385",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -2364,8 +2373,8 @@
      "match": "STR @ REN",
      "news_at": "2026-10-25T15:27:47+00:00",
      "pick": "Stade Rennais or draw",
-     "price": "-425",
-     "price_at": "2026-10-25T15:28:59+00:00",
+     "price": "-400",
+     "price_at": "2026-10-25T15:38:10+00:00",
      "price_market": "double_chance",
      "price_ref": "736.190882303:13475385",
      "side": "home",
@@ -2380,7 +2389,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -2391,8 +2400,8 @@
       "league": "ger",
       "match": "MUN @ SCF",
       "pick": "Bayern Munich or draw",
-      "price": "-700",
-      "price_at": "2026-10-25T15:28:59+00:00",
+      "price": "-650",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192183620:13074325",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -2413,8 +2422,8 @@
      "match": "MUN @ SCF",
      "news_at": "2026-10-25T12:43:53+00:00",
      "pick": "Bayern Munich or draw",
-     "price": "-700",
-     "price_at": "2026-10-25T15:28:59+00:00",
+     "price": "-650",
+     "price_at": "2026-10-25T15:38:10+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192183620:13074325",
      "side": "away",
@@ -2429,7 +2438,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 85,
       "dc": true,
       "gate": {
@@ -2441,7 +2450,7 @@
       "match": "JUV @ LEC",
       "pick": "Juventus or draw",
       "price": "-800",
-      "price_at": "2026-10-25T15:28:58+00:00",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192181676:13501694",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -2462,7 +2471,7 @@
      "match": "JUV @ LEC",
      "pick": "Juventus or draw",
      "price": "-800",
-     "price_at": "2026-10-25T15:28:58+00:00",
+     "price_at": "2026-10-25T15:38:10+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192181676:13501694",
      "side": "away",
@@ -2477,7 +2486,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 78,
       "dc": true,
       "gate": {
@@ -2489,7 +2498,7 @@
       "match": "MIL @ UDI",
       "pick": "AC Milan or draw",
       "price": "-500",
-      "price_at": "2026-10-25T15:28:58+00:00",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192181793:13501627",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -2510,7 +2519,7 @@
      "match": "MIL @ UDI",
      "pick": "AC Milan or draw",
      "price": "-500",
-     "price_at": "2026-10-25T15:28:58+00:00",
+     "price_at": "2026-10-25T15:38:10+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192181793:13501627",
      "side": "away",
@@ -2525,7 +2534,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 89,
       "dc": false,
       "gate": {
@@ -2572,7 +2581,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 81,
       "dc": false,
       "gate": {
@@ -2589,19 +2598,28 @@
       "price_ref": "34118038:0ML84695471_1",
       "prob_at": "2026-10-25T15:37:47+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-25T17:00Z"
      },
      "dc": false,
-     "fp": "18225e82adb6",
+     "fp": "bc68d0c78870",
      "gate": {
       "ok": true,
       "what": "no lineup gate for this league"
      },
      "id": "nfl:401873016",
      "league": "nfl",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-25T15:44:33+00:00",
+       "what": "no lineup gate for this league"
+      }
+     ],
      "match": "NYG @ HOU",
+     "news_at": "2026-10-25T15:44:33+00:00",
      "pick": "Houston Texans",
      "price": "-535",
      "price_at": "2026-10-25T15:37:47+00:00",
@@ -2619,7 +2637,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -2667,7 +2685,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-25T15:38:10+00:00",
+      "checked_at": "2026-10-25T15:44:33+00:00",
       "conf": 84,
       "dc": true,
       "gate": {
@@ -2679,7 +2697,7 @@
       "match": "CER @ MCT",
       "pick": "Montevideo City Torque or draw",
       "price": "-800",
-      "price_at": "2026-10-25T15:29:03+00:00",
+      "price_at": "2026-10-25T15:38:10+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192243253:14883266",
       "prob_at": "2026-10-25T15:37:48+00:00",
@@ -2700,7 +2718,7 @@
      "match": "CER @ MCT",
      "pick": "Montevideo City Torque or draw",
      "price": "-800",
-     "price_at": "2026-10-25T15:29:03+00:00",
+     "price_at": "2026-10-25T15:38:10+00:00",
      "price_market": "double_chance",
      "price_ref": "736.192243253:14883266",
      "side": "home",
@@ -2708,20 +2726,22 @@
      "tip": "12:00 PM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "nfl"
+   ],
    "news": {
     "esp": "2026-10-25T12:43:53+00:00",
-    "nfl": "2026-10-25T12:43:53+00:00"
+    "nfl": "2026-10-25T15:44:33+00:00"
    },
    "shadow_watch": {
     "best_at": "2026-10-25T13:55:46+00:00",
     "best_ceiling": 1.441,
-    "checks": 43,
-    "last": "2026-10-25T15:38:10+00:00",
+    "checks": 44,
+    "last": "2026-10-25T15:44:33+00:00",
     "max_ready": 4,
     "reasons": {
-     "awaiting confirmed XIs": 546,
-     "awaiting this game's price after its lineup/news change": 8
+     "awaiting confirmed XIs": 555,
+     "awaiting this game's price after its lineup/news change": 10
     }
    }
   }
