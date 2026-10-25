@@ -4129,6 +4129,7 @@
    "cost": 0.8028,
    "edge": 0.0181,
    "fair": 0.8173,
+   "fill": "touch",
    "id": "nfl:401873016",
    "label": "Houston Texans",
    "league": "nfl",
@@ -4140,8 +4141,9 @@
     "team": "Houston Texans"
    },
    "start": "2026-10-25T17:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26OCT25NYGHOU-HOU"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26OCT25NYGHOU-HOU",
+   "won": 0
   },
   "KXNFLGAME-26OCT25PITNO-PIT|YES": {
    "ask": 0.61,
@@ -4662,6 +4664,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "nfl:401873016",
    "label": "over 42.5",
    "league": "nfl",
@@ -4674,8 +4677,9 @@
     "t": "over"
    },
    "start": "2026-10-25T17:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26OCT25NYGHOU-43"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26OCT25NYGHOU-43",
+   "won": 1
   },
   "KXNFLTOTAL-26OCT25PITNO-45|NO": {
    "ask": 0.51,
