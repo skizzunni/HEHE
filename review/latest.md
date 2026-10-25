@@ -1,7 +1,7 @@
 # Review 2026-10-24
 
-Picks 103-36 (74.1% vs 71.4% claimed, ROI -0.2%).
-Closing line value: +0.5 points on 139 picks; beat the close on 51.1%.
+Picks 104-37 (73.8% vs 71.4% claimed, ROI -0.7%).
+Closing line value: +0.51 points on 141 picks; beat the close on 51.1%.
 - LOST arg Talleres (Córdoba) at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST bra2 Fortaleza at 76%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76%
 - LOST bra Fluminense at 75%: margin 1 · the book had my side favoured too · called at 75%
@@ -21,6 +21,7 @@ Closing line value: +0.5 points on 139 picks; beat the close on 51.1%.
 - LOST mls Philadelphia Union at 82%: margin 1 · the book had my side favoured too · called at 82%
 - LOST mls Sporting Kansas City at 69%: margin 1 · the book had my side favoured too · called at 69%
 - LOST nba Miami Heat at 62%: margin 5 · the book had my side favoured too · called at 62%
+- LOST nba Chicago Bulls at 53%: margin 4 · the book had my side favoured too · called at 53%
 - LOST ncaaf BYU Cougars at 74%: margin 8 · the book had my side favoured too · called at 74%
 - LOST ncaaf Kansas State Wildcats at 52%: margin 11 · the book had my side favoured too · called at 52%
 - LOST ncaaf Texas Tech Red Raiders at 79%: margin 13 · the book had my side favoured too · called at 79%
@@ -38,20 +39,20 @@ Closing line value: +0.5 points on 139 picks; beat the close on 51.1%.
 - LOST nor Bodo/Glimt at 84%: margin 1 · the book had my side favoured too · called at 84%
 - LOST swe Djurgården at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST wnba Atlanta Dream at 66%: margin 5 · the book had my side favoured too · called at 66%
-With the market 69.6% (526); against it 30.0% (20).
+With the market 69.5% (528); against it 30.0% (20).
 Locks 5/11 won, 3 open; Best play top 2 (59%) open; lost: Oregon Ducks to win (Oregon Ducks at Illinois Fighting Illini) Oregon Ducks 10 - Illinois Fighting Illini 21; TCU Horned Frogs to win (West Virginia Mountaineers at TCU Horned Frogs) West Virginia Mountaineers 24 - TCU Horned Frogs 20; Edmonton Oilers over 2.5 goals (Toronto Maple Leafs at Edmonton Oilers) Toronto Maple Leafs 7 - Edmonton Oilers 2.
 Safe Locks 7/11 won, 4 open; Winners parlay top 2 (85%) won; Best play top 8 (50%) open.
-Lottery 100: lost (4/9 legs won, killed by Under 229.5 points, Under 230.5 points)
-Lottery 100: open (4/6 legs won)
+Lottery 100: lost (5/9 legs won, killed by Under 229.5 points, Under 230.5 points)
+Lottery 100: open (5/6 legs won)
 Lottery 100: lost (1/6 legs won, killed by Over 55.5 points)
-Lottery 10k: lost (4/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
+Lottery 10k: lost (6/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
 Lottery 10k: lost (4/10 legs won, killed by Michigan Wolverines to win, Over 55.5 points, Navy Midshipmen -7.5)
 Lottery 10k: lost (3/10 legs won, killed by Western Michigan Broncos +2.5)
-Lottery 10k+25: lost (5/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
-Lottery 10k+50: lost (5/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
-Lottery 10k+100: lost (3/10 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
-Ladder-consistency props (all time): 486/585 won (83.1%) vs 87.5% fair, 88.3% price.
-Props 90/110 vs 79.8% claimed.
+Lottery 10k+25: lost (6/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
+Lottery 10k+50: lost (6/11 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
+Lottery 10k+100: lost (4/10 legs won, killed by Under 229.5 points, Washington State Cougars to win, Under 230.5 points)
+Ladder-consistency props (all time): 495/594 won (83.3%) vs 87.5% fair, 88.4% price.
+Props 101/121 vs 80.3% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=98), nhl 0.00 (n=59)
+Weights for tomorrow (model's share vs the price): ncaaf 0.40 (n=99), nhl 0.00 (n=59)
