@@ -1461,6 +1461,45 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909866|home|FanDuel": {
+   "dec": 1.8621,
+   "ev": 0.0252,
+   "fair": 0.5506,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909866",
+   "kind": "value",
+   "league": "nba",
+   "match": "DET @ PHI",
+   "price": "-116",
+   "seen": "2026-10-25T11:42:33+00:00",
+   "side": "home",
+   "start": "2026-10-25T23:30Z",
+   "team": "Philadelphia 76ers",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909866|sure": {
+   "id": "nba:401909866",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+120",
+     "stake_share": 0.4584,
+     "team": "Detroit Pistons",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-116",
+     "stake_share": 0.5416,
+     "team": "Philadelphia 76ers",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "DET @ PHI",
+   "profit": 0.0085,
+   "seen": "2026-10-25T11:42:33+00:00"
+  },
   "ncaaf:401856730|away|FanDuel": {
    "dec": 1.7042,
    "ev": 0.0365,
@@ -3582,6 +3621,35 @@
    "prob": 0.147,
    "seen": "2026-10-25T05:59:51+00:00",
    "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909866:home|nfl:401873015:home": {
+   "ev": 0.0374,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0117,
+     "fair": 0.6629,
+     "id": "nfl:401873015",
+     "price": "-190",
+     "side": "home",
+     "spec": null,
+     "team": "New York Jets"
+    },
+    {
+     "ev": 0.0252,
+     "fair": 0.5506,
+     "id": "nba:401909866",
+     "price": "-116",
+     "side": "home",
+     "spec": null,
+     "team": "Philadelphia 76ers"
+    }
+   ],
+   "payout": 2.842,
+   "prob": 0.365,
+   "seen": "2026-10-25T11:42:33+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401856730:away|ncaaf:401871093:away": {
