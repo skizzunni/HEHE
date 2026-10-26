@@ -2053,33 +2053,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
-       "ok": false,
-       "what": "injury report not fetched or game summary unverifiable"
+       "ok": true,
+       "what": "injury report checked (4 listed)"
       },
       "id": "nba:401909870",
       "league": "nba",
       "match": "CHI @ BOS",
       "pick": "Boston Celtics",
       "price": "-750",
-      "price_at": "2026-10-26T18:37:17+00:00",
+      "price_at": "2026-10-26T18:49:00+00:00",
       "price_market": "moneyline",
       "price_ref": "34900868:0ML86930224_1",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:00+00:00",
       "rank": 1,
       "ready": false,
-      "reason": "injury report not fetched or game summary unverifiable",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-26T23:30Z"
      },
      "dc": false,
-     "fp": "6acf459eb5a7",
+     "fp": "a9fbb60cdef6",
      "gate": {
-      "ok": false,
-      "what": "injury report not fetched or game summary unverifiable"
+      "ok": true,
+      "what": "injury report checked (4 listed)"
      },
      "id": "nba:401909870",
      "league": "nba",
@@ -2098,10 +2098,15 @@
        "event": "news",
        "t": "2026-10-26T18:46:20+00:00",
        "what": "injury report not fetched or game summary unverifiable"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-26T18:49:19+00:00",
+       "what": "injury report checked (4 listed)"
       }
      ],
      "match": "CHI @ BOS",
-     "news_at": "2026-10-26T18:46:20+00:00",
+     "news_at": "2026-10-26T18:49:19+00:00",
      "pick": "Boston Celtics",
      "price": "-750",
      "price_at": "2026-10-26T12:02:52+00:00",
@@ -2122,7 +2127,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 81,
       "dc": true,
       "gate": {
@@ -2137,7 +2142,7 @@
       "price_at": "2026-10-26T18:46:19+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190952082:21316832",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:01+00:00",
       "rank": 2,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2173,7 +2178,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 80,
       "dc": true,
       "gate": {
@@ -2188,7 +2193,7 @@
       "price_at": "2026-10-26T18:46:19+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190885792:13579486",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:00+00:00",
       "rank": 3,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2196,7 +2201,7 @@
       "start": "2026-10-26T20:00Z"
      },
      "dc": true,
-     "fp": "6acf459eb5a7",
+     "fp": "1f186cd2d66f",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed XIs"
@@ -2218,10 +2223,15 @@
        "event": "news",
        "t": "2026-10-26T18:46:20+00:00",
        "what": "awaiting confirmed XIs"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-26T18:49:19+00:00",
+       "what": "awaiting confirmed XIs"
       }
      ],
      "match": "OSA @ SEV",
-     "news_at": "2026-10-26T18:46:20+00:00",
+     "news_at": "2026-10-26T18:49:19+00:00",
      "pick": "Sevilla or draw",
      "price": "-550",
      "price_at": "2026-10-26T12:03:14+00:00",
@@ -2242,33 +2252,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 73,
       "dc": false,
       "gate": {
-       "ok": false,
-       "what": "injury report not fetched or game summary unverifiable"
+       "ok": true,
+       "what": "injury report checked (6 listed)"
       },
       "id": "nba:401909873",
       "league": "nba",
       "match": "PHX @ OKC",
       "pick": "Oklahoma City Thunder",
       "price": "-325",
-      "price_at": "2026-10-26T18:37:17+00:00",
+      "price_at": "2026-10-26T18:49:00+00:00",
       "price_market": "moneyline",
       "price_ref": "34901570:0ML86931511_1",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:00+00:00",
       "rank": 4,
       "ready": false,
-      "reason": "injury report not fetched or game summary unverifiable",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-27T00:00Z"
      },
      "dc": false,
-     "fp": "6acf459eb5a7",
+     "fp": "3ebf9f29e58c",
      "gate": {
-      "ok": false,
-      "what": "injury report not fetched or game summary unverifiable"
+      "ok": true,
+      "what": "injury report checked (6 listed)"
      },
      "id": "nba:401909873",
      "league": "nba",
@@ -2299,10 +2309,15 @@
        "event": "news",
        "t": "2026-10-26T18:46:20+00:00",
        "what": "injury report not fetched or game summary unverifiable"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-26T18:49:19+00:00",
+       "what": "injury report checked (6 listed)"
       }
      ],
      "match": "PHX @ OKC",
-     "news_at": "2026-10-26T18:46:20+00:00",
+     "news_at": "2026-10-26T18:49:19+00:00",
      "pick": "Oklahoma City Thunder",
      "price": "-410",
      "price_at": "2026-10-26T12:02:52+00:00",
@@ -2323,7 +2338,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 66,
       "dc": false,
       "gate": {
@@ -2335,10 +2350,10 @@
       "match": "DAL @ PHI",
       "pick": "Dallas Cowboys",
       "price": "-218",
-      "price_at": "2026-10-26T18:37:17+00:00",
+      "price_at": "2026-10-26T18:49:00+00:00",
       "price_market": "moneyline",
       "price_ref": "34118071:0ML84695504_3",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:00+00:00",
       "rank": 5,
       "ready": false,
       "reason": "awaiting this game's price after its lineup/news change",
@@ -2346,7 +2361,7 @@
       "start": "2026-10-27T00:15Z"
      },
      "dc": false,
-     "fp": "6acf459eb5a7",
+     "fp": "c2947d08bb9e",
      "gate": {
       "ok": true,
       "what": "no lineup gate for this league"
@@ -2373,10 +2388,15 @@
        "event": "news",
        "t": "2026-10-26T18:46:20+00:00",
        "what": "no lineup gate for this league"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-26T18:49:19+00:00",
+       "what": "no lineup gate for this league"
       }
      ],
      "match": "DAL @ PHI",
-     "news_at": "2026-10-26T18:46:20+00:00",
+     "news_at": "2026-10-26T18:49:19+00:00",
      "pick": "Dallas Cowboys",
      "price": "-218",
      "price_at": "2026-10-26T12:02:52+00:00",
@@ -2390,8 +2410,8 @@
     }
    ],
    "candidate_news": {
-    "esp": "2026-10-26T18:46:20+00:00",
-    "nba": "2026-10-26T18:46:20+00:00"
+    "esp": "2026-10-26T18:49:19+00:00",
+    "nba": "2026-10-26T18:49:19+00:00"
    },
    "candidate_observations": {
     "arg:401841635": {
@@ -2402,7 +2422,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 81,
       "dc": true,
       "gate": {
@@ -2417,7 +2437,7 @@
       "price_at": "2026-10-26T18:46:19+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190952082:21316832",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:01+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2450,7 +2470,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -2462,10 +2482,10 @@
       "match": "CAM @ FLA",
       "pick": "Flamengo",
       "price": "-425",
-      "price_at": "2026-10-26T18:37:17+00:00",
+      "price_at": "2026-10-26T18:49:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34860953:0ML86822867_1",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:01+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2483,7 +2503,7 @@
      "match": "CAM @ FLA",
      "pick": "Flamengo",
      "price": "-425",
-     "price_at": "2026-10-26T18:37:17+00:00",
+     "price_at": "2026-10-26T18:49:01+00:00",
      "price_market": "moneyline",
      "price_ref": "34860953:0ML86822867_1",
      "side": "home",
@@ -2498,7 +2518,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 79,
       "dc": true,
       "gate": {
@@ -2513,7 +2533,7 @@
       "price_at": "2026-10-26T18:46:19+00:00",
       "price_market": "double_chance",
       "price_ref": "736.191064875:14128702",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:01+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2546,7 +2566,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 75,
       "dc": true,
       "gate": {
@@ -2561,7 +2581,7 @@
       "price_at": "2026-10-26T18:46:19+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193320633:21786362",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:01+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2594,7 +2614,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 80,
       "dc": true,
       "gate": {
@@ -2609,7 +2629,7 @@
       "price_at": "2026-10-26T18:46:19+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190885792:13579486",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:00+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2617,7 +2637,7 @@
       "start": "2026-10-26T20:00Z"
      },
      "dc": true,
-     "fp": "6acf459eb5a7",
+     "fp": "1f186cd2d66f",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed XIs"
@@ -2627,12 +2647,12 @@
      "log": [
       {
        "event": "news",
-       "t": "2026-10-26T18:46:20+00:00",
+       "t": "2026-10-26T18:49:19+00:00",
        "what": "awaiting confirmed XIs"
       }
      ],
      "match": "OSA @ SEV",
-     "news_at": "2026-10-26T18:46:20+00:00",
+     "news_at": "2026-10-26T18:49:19+00:00",
      "pick": "Sevilla or draw",
      "price": "-550",
      "price_at": "2026-10-26T18:46:19+00:00",
@@ -2650,48 +2670,48 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T18:46:20+00:00",
+      "checked_at": "2026-10-26T18:49:19+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
-       "ok": false,
-       "what": "injury report not fetched or game summary unverifiable"
+       "ok": true,
+       "what": "injury report checked (4 listed)"
       },
       "id": "nba:401909870",
       "league": "nba",
       "match": "CHI @ BOS",
       "pick": "Boston Celtics",
       "price": "-750",
-      "price_at": "2026-10-26T18:37:17+00:00",
+      "price_at": "2026-10-26T18:49:00+00:00",
       "price_market": "moneyline",
       "price_ref": "34900868:0ML86930224_1",
-      "prob_at": "2026-10-26T18:37:17+00:00",
+      "prob_at": "2026-10-26T18:49:00+00:00",
       "rank": null,
       "ready": false,
-      "reason": "injury report not fetched or game summary unverifiable",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-10-26T23:30Z"
      },
      "dc": false,
-     "fp": "6acf459eb5a7",
+     "fp": "a9fbb60cdef6",
      "gate": {
-      "ok": false,
-      "what": "injury report not fetched or game summary unverifiable"
+      "ok": true,
+      "what": "injury report checked (4 listed)"
      },
      "id": "nba:401909870",
      "league": "nba",
      "log": [
       {
        "event": "news",
-       "t": "2026-10-26T18:46:20+00:00",
-       "what": "injury report not fetched or game summary unverifiable"
+       "t": "2026-10-26T18:49:19+00:00",
+       "what": "injury report checked (4 listed)"
       }
      ],
      "match": "CHI @ BOS",
-     "news_at": "2026-10-26T18:46:20+00:00",
+     "news_at": "2026-10-26T18:49:19+00:00",
      "pick": "Boston Celtics",
      "price": "-750",
-     "price_at": "2026-10-26T18:37:17+00:00",
+     "price_at": "2026-10-26T18:49:00+00:00",
      "price_market": "moneyline",
      "price_ref": "34900868:0ML86930224_1",
      "side": "home",
@@ -2705,19 +2725,19 @@
     "nfl"
    ],
    "news": {
-    "esp": "2026-10-26T18:46:20+00:00",
-    "nba": "2026-10-26T18:46:20+00:00",
-    "nfl": "2026-10-26T18:46:20+00:00"
+    "esp": "2026-10-26T18:49:19+00:00",
+    "nba": "2026-10-26T18:49:19+00:00",
+    "nfl": "2026-10-26T18:49:19+00:00"
    },
    "shadow_watch": {
     "best_at": "2026-10-26T12:03:14+00:00",
     "best_ceiling": 1.41,
-    "checks": 77,
-    "last": "2026-10-26T18:46:20+00:00",
+    "checks": 78,
+    "last": "2026-10-26T18:49:19+00:00",
     "max_ready": 2,
     "reasons": {
-     "awaiting confirmed XIs": 406,
-     "awaiting this game's price after its lineup/news change": 2,
+     "awaiting confirmed XIs": 411,
+     "awaiting this game's price after its lineup/news change": 3,
      "injury report not fetched or game summary unverifiable": 3
     }
    }
