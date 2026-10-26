@@ -3266,7 +3266,7 @@
    }
   ],
   "league": "arg",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "EST @ USF",
   "myside": "home",
@@ -3283,7 +3283,7 @@
   "status": "open",
   "strong": false,
   "tip": "6:00 PM",
-  "why": "market 40% to win, 69% to win or draw \u00b7 rating 1488 v 1507 (+18.94) \u00b7 last 10: 4-6 \u00b7 at home"
+  "why": "market 40% to win, 69% to win or draw"
  },
  "arg:401841631": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -8762,7 +8762,7 @@
    }
   ],
   "league": "arg",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "RIE @ IACC",
   "myside": "home",
@@ -8779,7 +8779,7 @@
   "status": "open",
   "strong": false,
   "tip": "8:15 PM",
-  "why": "market 53% to win, 82% to win or draw \u00b7 rating 1532 v 1462 (+70.25) \u00b7 last 10: 9-1 \u00b7 at home"
+  "why": "market 53% to win, 82% to win or draw"
  },
  "arg:401841636": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -18962,11 +18962,6 @@
    }
   ],
   "league": "arg",
-  "live": "31'",
-  "live_score": {
-   "Central C\u00f3rdoba (Santiago del Estero)": 0,
-   "V\u00e9lez Sarsfield": 2
-  },
   "logged": "2026-10-25T20:29",
   "market_agrees": true,
   "matchup": "VEL @ CTR",
@@ -19986,7 +19981,7 @@
    }
   ],
   "league": "arg",
-  "live": "30'",
+  "live": "36'",
   "live_score": {
    "Barracas Central": 0,
    "Estudiantes de R\u00edo Cuarto": 0
@@ -132264,7 +132259,7 @@
    }
   ],
   "league": "bra",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "GRE @ CFC",
   "myside": "home",
@@ -132281,7 +132276,7 @@
   "status": "open",
   "strong": false,
   "tip": "6:30 PM",
-  "why": "market 43% to win, 70% to win or draw \u00b7 rating 1485 v 1464 (+20.75) \u00b7 last 10: 3-7 \u00b7 at home"
+  "why": "market 43% to win, 70% to win or draw"
  },
  "bra:401841280": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -143815,7 +143810,7 @@
    }
   ],
   "league": "bra",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "CAM @ FLA",
   "myside": "home",
@@ -143832,7 +143827,7 @@
   "status": "open",
   "strong": false,
   "tip": "7:00 PM",
-  "why": "market 72% to win \u00b7 rating 1579 v 1527 (+51.51) \u00b7 last 10: 9-1 \u00b7 at home"
+  "why": "market 72% to win"
  },
  "bra:401841287": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -162210,7 +162205,7 @@
    }
   ],
   "league": "chi",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "EVE @ U. de Chile",
   "myside": "home",
@@ -162227,7 +162222,7 @@
   "status": "open",
   "strong": false,
   "tip": "5:00 PM",
-  "why": "market 57% to win, 80% to win or draw \u00b7 rating 1544 v 1527 (+17.59) \u00b7 last 10: 8-2 \u00b7 at home"
+  "why": "market 57% to win, 80% to win or draw"
  },
  "chi:401850672": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -180224,7 +180219,7 @@
    }
   ],
   "league": "col",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "BUC @ SFE",
   "myside": "home",
@@ -180241,7 +180236,7 @@
   "status": "open",
   "strong": false,
   "tip": "9:05 PM",
-  "why": "market 49% to win, 76% to win or draw \u00b7 rating 1536 v 1525 (+10.13) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "market 49% to win, 76% to win or draw"
  },
  "col:401877843": {
   "conf": 56.2,
@@ -221754,10 +221749,33 @@
     "version": "ea5a892",
     "w": 0.0,
     "why": "market 67% to win \u00b7 rating 1516 v 1481 (+34.81) \u00b7 last 10: 5-5 \u00b7 at home"
+   },
+   {
+    "conf": 67,
+    "dc": false,
+    "p_market_away": null,
+    "p_model_away": null,
+    "pick": "Deportes Tolima",
+    "policy": "1ed4e2eb",
+    "price": "-260",
+    "price_at": "2026-10-26T01:05:48+00:00",
+    "price_book": "DraftKings",
+    "price_market": "moneyline",
+    "price_ref": "34866407:0ML86837179_1",
+    "prices": {
+     "away": "+700",
+     "draw": "+320",
+     "home": "-260"
+    },
+    "strong": false,
+    "t": "2026-10-25T21:06",
+    "version": "7f6a3c4",
+    "w": 0.0,
+    "why": "market 67% to win \u00b7 rating 1516 v 1481 (+34.81) \u00b7 last 10: 5-5 \u00b7 at home"
    }
   ],
   "league": "col",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "PAS @ TOL",
   "myside": "home",
@@ -221767,7 +221785,7 @@
   "pick": "Deportes Tolima",
   "policy_version": "1ed4e2eb",
   "price": "-260",
-  "price_at": "2026-10-26T00:59:59+00:00",
+  "price_at": "2026-10-26T01:05:48+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34866407:0ML86837179_1",
@@ -229346,7 +229364,7 @@
    }
   ],
   "league": "col",
-  "live": "89'",
+  "live": "90'+6'",
   "live_score": {
    "Atl\u00e9tico Nacional": 2,
    "Independiente Medell\u00edn": 1
@@ -241330,7 +241348,7 @@
    }
   ],
   "league": "col",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "LLA @ COR",
   "myside": "away",
@@ -241347,7 +241365,7 @@
   "status": "open",
   "strong": false,
   "tip": "7:00 PM",
-  "why": "market 36% to win, 65% to win or draw \u00b7 rating 1447 v 1482 (+35.37) \u00b7 last 10: 3-7 \u00b7 at home"
+  "why": "market 36% to win, 65% to win or draw"
  },
  "den:401874501": {
   "conf": 51.6,
@@ -242492,7 +242510,7 @@
    }
   ],
   "league": "den",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "OBK @ KBH",
   "myside": "home",
@@ -242509,7 +242527,7 @@
   "status": "open",
   "strong": false,
   "tip": "2:00 PM",
-  "why": "market 65% to win, 84% to win or draw \u00b7 rating 1536 v 1491 (+44.66) \u00b7 last 10: 8-2 \u00b7 at home"
+  "why": "market 65% to win, 84% to win or draw"
  },
  "den:401874542": {
   "conf": 75.8,
@@ -260914,7 +260932,7 @@
    }
   ],
   "league": "ecu",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "MUS @ TUA",
   "myside": "home",
@@ -260931,7 +260949,7 @@
   "status": "open",
   "strong": false,
   "tip": "4:30 PM",
-  "why": "market 35% to win, 65% to win or draw \u00b7 rating 1454 v 1489 (+34.95) \u00b7 last 10: 2-8 \u00b7 at home"
+  "why": "market 35% to win, 65% to win or draw"
  },
  "ecu:401921378": {
   "conf": 76.0,
@@ -400351,10 +400369,33 @@
     "version": "ea5a892",
     "w": 0.0,
     "why": "market 50% to win, 77% to win or draw \u00b7 rating 1502 v 1491 (+10.75) \u00b7 last 7: 4-3 \u00b7 at home"
+   },
+   {
+    "conf": 77,
+    "dc": true,
+    "p_market_away": null,
+    "p_model_away": null,
+    "pick": "Sevilla",
+    "policy": "1ed4e2eb",
+    "price": "-475",
+    "price_at": "2026-10-26T01:00:20+00:00",
+    "price_book": "FanDuel",
+    "price_market": "double_chance",
+    "price_ref": "736.190885792:13579486",
+    "prices": {
+     "away": "+320",
+     "draw": "+245",
+     "home": "-110"
+    },
+    "strong": false,
+    "t": "2026-10-25T21:06",
+    "version": "7f6a3c4",
+    "w": 0.0,
+    "why": "market 50% to win, 77% to win or draw"
    }
   ],
   "league": "esp",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "OSA @ SEV",
   "myside": "home",
@@ -400364,14 +400405,14 @@
   "pick": "Sevilla",
   "policy_version": "1ed4e2eb",
   "price": "-475",
-  "price_at": "2026-10-26T00:55:14+00:00",
+  "price_at": "2026-10-26T01:00:20+00:00",
   "price_book": "FanDuel",
   "price_market": "double_chance",
   "price_ref": "736.190885792:13579486",
   "status": "open",
   "strong": false,
   "tip": "4:00 PM",
-  "why": "market 50% to win, 77% to win or draw \u00b7 rating 1502 v 1491 (+10.75) \u00b7 last 7: 4-3 \u00b7 at home"
+  "why": "market 50% to win, 77% to win or draw"
  },
  "esp:401882829": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -464194,10 +464235,33 @@
     "version": "ea5a892",
     "w": 0.0,
     "why": "market 69% to win \u00b7 rating 1517 v 1517 (+0.37) \u00b7 last 5: 4-1 \u00b7 at home"
+   },
+   {
+    "conf": 69,
+    "dc": false,
+    "p_market_away": null,
+    "p_model_away": null,
+    "pick": "Paris Saint-Germain",
+    "policy": "1ed4e2eb",
+    "price": "-265",
+    "price_at": "2026-10-26T01:05:55+00:00",
+    "price_book": "DraftKings",
+    "price_market": "moneyline",
+    "price_ref": "34828705:0ML86735837_1",
+    "prices": {
+     "away": "+600",
+     "draw": "+450",
+     "home": "-265"
+    },
+    "strong": false,
+    "t": "2026-10-25T21:06",
+    "version": "7f6a3c4",
+    "w": 0.0,
+    "why": "market 69% to win"
    }
   ],
   "league": "fra",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "LYON @ PSG",
   "myside": "home",
@@ -464207,14 +464271,14 @@
   "pick": "Paris Saint-Germain",
   "policy_version": "1ed4e2eb",
   "price": "-265",
-  "price_at": "2026-10-26T00:59:59+00:00",
+  "price_at": "2026-10-26T01:05:55+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34828705:0ML86735837_1",
   "status": "open",
   "strong": false,
   "tip": "3:30 PM",
-  "why": "market 69% to win \u00b7 rating 1517 v 1517 (+0.37) \u00b7 last 5: 4-1 \u00b7 at home"
+  "why": "market 69% to win"
  },
  "fra:401876423": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -638896,10 +638960,33 @@
     "version": "ea5a892",
     "w": 0.0,
     "why": "market 72% to win"
+   },
+   {
+    "conf": 72,
+    "dc": false,
+    "p_market_away": null,
+    "p_model_away": null,
+    "pick": "Mohun Bagan Super Giant",
+    "policy": "1ed4e2eb",
+    "price": "-380",
+    "price_at": "2026-10-26T01:06:33+00:00",
+    "price_book": "DraftKings",
+    "price_market": "moneyline",
+    "price_ref": "34898702:0ML86924226_1",
+    "prices": {
+     "away": "+850",
+     "draw": "+380",
+     "home": "-380"
+    },
+    "strong": false,
+    "t": "2026-10-25T21:06",
+    "version": "7f6a3c4",
+    "w": 0.0,
+    "why": "market 72% to win"
    }
   ],
   "league": "ind",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "CFC @ MBSG",
   "myside": "home",
@@ -638909,7 +638996,7 @@
   "pick": "Mohun Bagan Super Giant",
   "policy_version": "1ed4e2eb",
   "price": "-380",
-  "price_at": "2026-10-26T01:00:00+00:00",
+  "price_at": "2026-10-26T01:06:33+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34898702:0ML86924226_1",
@@ -807474,7 +807561,7 @@
    }
   ],
   "league": "mex",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "SAN @ TIJ",
   "myside": "home",
@@ -809604,6 +809691,11 @@
    }
   ],
   "league": "mex",
+  "live": "1'",
+  "live_score": {
+   "Am\u00e9rica": 0,
+   "Pachuca": 0
+  },
   "logged": "2026-10-25T21:00",
   "market_agrees": true,
   "matchup": "PAC @ AME",
@@ -1252695,11 +1252787,6 @@
    }
   ],
   "league": "nba",
-  "live": "9:19 - 4th",
-  "live_score": {
-   "New York Knicks": 86,
-   "Orlando Magic": 76
-  },
   "logged": "2026-10-25T18:55",
   "market_agrees": true,
   "matchup": "ORL @ NY",
@@ -1258142,9 +1258229,9 @@
    }
   ],
   "league": "nba",
-  "live": "1:21 - 3rd",
+  "live": "End of 3rd",
   "live_score": {
-   "Minnesota Timberwolves": 88,
+   "Minnesota Timberwolves": 90,
    "Toronto Raptors": 62
   },
   "logged": "2026-10-25T18:55",
@@ -1263593,10 +1263680,10 @@
    }
   ],
   "league": "nba",
-  "live": "5:58 - 4th",
+  "live": "4:25 - 4th",
   "live_score": {
-   "LA Clippers": 90,
-   "Oklahoma City Thunder": 90
+   "LA Clippers": 93,
+   "Oklahoma City Thunder": 95
   },
   "logged": "2026-10-25T18:55",
   "market_agrees": true,
@@ -1268732,10 +1268819,10 @@
    }
   ],
   "league": "nba",
-  "live": "Halftime",
+  "live": "9:47 - 3rd",
   "live_score": {
-   "Detroit Pistons": 56,
-   "Philadelphia 76ers": 44
+   "Detroit Pistons": 58,
+   "Philadelphia 76ers": 51
   },
   "logged": "2026-10-25T19:28",
   "market_agrees": true,
@@ -1939982,11 +1940069,6 @@
    }
   ],
   "league": "nfl",
-  "live": "10:33 - 2nd",
-  "live_score": {
-   "Kansas City Chiefs": 0,
-   "Seattle Seahawks": 0
-  },
   "logged": "2026-10-25T20:19",
   "market_agrees": true,
   "matchup": "KC @ SEA",
@@ -1949616,11 +1949698,6 @@
    }
   ],
   "league": "nhl",
-  "live": "0:07 - 2nd",
-  "live_score": {
-   "Montreal Canadiens": 2,
-   "Winnipeg Jets": 0
-  },
   "logged": "2026-10-25T18:55",
   "market_agrees": true,
   "matchup": "MTL @ WPG",
@@ -2197168,11 +2197245,6 @@
    }
   ],
   "league": "nhl",
-  "live": "End of 1st",
-  "live_score": {
-   "Colorado Avalanche": 0,
-   "Nashville Predators": 2
-  },
   "logged": "2026-10-25T19:58",
   "market_agrees": true,
   "matchup": "COL @ NSH",
@@ -2258313,11 +2258385,6 @@
    }
   ],
   "league": "nwsl",
-  "live": "87'",
-  "live_score": {
-   "Boston Legacy FC": 2,
-   "San Diego Wave FC": 2
-  },
   "logged": "2026-10-25T18:55",
   "market_agrees": true,
   "matchup": "BOS @ SD",
@@ -2297871,10 +2297938,33 @@
     "version": "ea5a892",
     "w": 0.0,
     "why": "market 69% to win \u00b7 rating 1526 v 1535 (+8.93) \u00b7 last 5: 5-0 \u00b7 at home"
+   },
+   {
+    "conf": 69,
+    "dc": false,
+    "p_market_away": null,
+    "p_model_away": null,
+    "pick": "Benfica",
+    "policy": "1ed4e2eb",
+    "price": "-265",
+    "price_at": "2026-10-26T01:05:55+00:00",
+    "price_book": "DraftKings",
+    "price_market": "moneyline",
+    "price_ref": "34861319:0ML86823797_3",
+    "prices": {
+     "away": "-265",
+     "draw": "+380",
+     "home": "+750"
+    },
+    "strong": false,
+    "t": "2026-10-25T21:06",
+    "version": "7f6a3c4",
+    "w": 0.0,
+    "why": "market 69% to win"
    }
   ],
   "league": "por",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "SLB @ CDSC",
   "myside": "away",
@@ -2297884,14 +2297974,14 @@
   "pick": "Benfica",
   "policy_version": "1ed4e2eb",
   "price": "-265",
-  "price_at": "2026-10-26T00:59:59+00:00",
+  "price_at": "2026-10-26T01:05:55+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34861319:0ML86823797_3",
   "status": "open",
   "strong": false,
   "tip": "2:45 PM",
-  "why": "market 69% to win \u00b7 rating 1526 v 1535 (+8.93) \u00b7 last 5: 5-0 \u00b7 at home"
+  "why": "market 69% to win"
  },
  "por:401885417": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -2361675,10 +2361765,33 @@
     "version": "ea5a892",
     "w": 0.0,
     "why": "market 68% to win \u00b7 rating 1512 v 1499 (+13.09) \u00b7 last 8: 5-3 \u00b7 at home"
+   },
+   {
+    "conf": 68,
+    "dc": false,
+    "p_market_away": null,
+    "p_model_away": null,
+    "pick": "Besiktas",
+    "policy": "1ed4e2eb",
+    "price": "-260",
+    "price_at": "2026-10-26T01:05:56+00:00",
+    "price_book": "DraftKings",
+    "price_market": "moneyline",
+    "price_ref": "34866790:0ML86838238_1",
+    "prices": {
+     "away": "+600",
+     "draw": "+425",
+     "home": "-260"
+    },
+    "strong": false,
+    "t": "2026-10-25T21:06",
+    "version": "7f6a3c4",
+    "w": 0.0,
+    "why": "market 68% to win"
    }
   ],
   "league": "tur",
-  "logged": "2026-10-25T21:00",
+  "logged": "2026-10-25T21:06",
   "market_agrees": true,
   "matchup": "IBFK @ BES",
   "myside": "home",
@@ -2361688,14 +2361801,14 @@
   "pick": "Besiktas",
   "policy_version": "1ed4e2eb",
   "price": "-260",
-  "price_at": "2026-10-26T00:59:59+00:00",
+  "price_at": "2026-10-26T01:05:56+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34866790:0ML86838238_1",
   "status": "open",
   "strong": false,
   "tip": "12:00 PM",
-  "why": "market 68% to win \u00b7 rating 1512 v 1499 (+13.09) \u00b7 last 8: 5-3 \u00b7 at home"
+  "why": "market 68% to win"
  },
  "tur:401888271": {
   "conf": 86.5,

@@ -2019,56 +2019,7 @@
     "ita": "2026-10-25T19:16:16+00:00",
     "nfl": "2026-10-25T16:08:57+00:00"
    },
-   "candidate_observations": {
-    "mex:401876922": {
-     "book": "FanDuel",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 80,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T01:00:21+00:00",
-      "conf": 80,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "mex:401876922",
-      "league": "mex",
-      "match": "PAC @ AME",
-      "pick": "Am\u00e9rica or draw",
-      "price": "-550",
-      "price_at": "2026-10-26T01:00:20+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.192402694:21865447",
-      "prob_at": "2026-10-26T00:59:59+00:00",
-      "rank": null,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "home",
-      "start": "2026-10-26T01:05Z"
-     },
-     "dc": true,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
-     },
-     "id": "mex:401876922",
-     "league": "mex",
-     "match": "PAC @ AME",
-     "pick": "Am\u00e9rica or draw",
-     "price": "-550",
-     "price_at": "2026-10-26T01:00:20+00:00",
-     "price_market": "double_chance",
-     "price_ref": "736.192402694:21865447",
-     "side": "home",
-     "start": "2026-10-26T01:05Z",
-     "tip": "9:05 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
     "esp",
     "ita",
@@ -2082,8 +2033,8 @@
    "shadow_watch": {
     "best_at": "2026-10-25T16:08:57+00:00",
     "best_ceiling": 1.596,
-    "checks": 153,
-    "last": "2026-10-26T01:00:21+00:00",
+    "checks": 154,
+    "last": "2026-10-26T01:06:49+00:00",
     "max_ready": 5,
     "reasons": {
      "awaiting confirmed XIs": 1483,
