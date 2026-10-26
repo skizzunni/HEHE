@@ -1,9 +1,9 @@
 # Review 2026-10-25
 
-Picks 76-18 (80.9% vs 71.4% claimed, ROI +8.1%).
+Picks 77-18 (81.1% vs 71.4% claimed, ROI +8.3%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
 TRAILING props nba Pts + Reb: 73.5% hit vs 85.0% stated on 49
-Closing line value: +0.81 points on 94 picks; beat the close on 57.4%.
+Closing line value: +0.82 points on 95 picks; beat the close on 57.9%.
 - LOST arg Belgrano (Córdoba) at 75%: margin 1 · the book had my side favoured too · called at 75%
 - LOST aut LASK Linz at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST chi Universidad Católica at 73%: margin 2 · the book had my side favoured too · called at 73%
@@ -22,7 +22,7 @@ Closing line value: +0.81 points on 94 picks; beat the close on 57.4%.
 - LOST por Sporting CP at 74%: margin 1 · the book had my side favoured too · called at 74%
 - LOST uru Nacional at 76%: margin 1 · the book had my side favoured too · called at 76%
 - LOST uru Montevideo Wanderers at 72%: margin 1 · the book had my side favoured too · called at 72%
-With the market 72.0% (599); against it 20.0% (10).
+With the market 72.0% (600); against it 20.0% (10).
 Locks 10/11 won, 0 open; Best play top 3 (55%) won; lost: Darnell Mooney: 5+ Receiving Yards (NYG @ HOU) 4.
 Safe Locks 7/11 won, 2 open; Winners parlay top 5 (82%) lost; Best play top 11 (53%) lost; lost: Jalen Coker: 25+ Receiving Yards (TB @ CAR) 9; Jamal Shead: 2+ Assists (TOR @ MIN) 0.
 Lottery 10k: lost (6/11 legs won, killed by Philadelphia 76ers to win, New York Jets -9.5, Under 234.5 points, Detroit Lions -9.5)
