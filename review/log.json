@@ -4879,9 +4879,9 @@
    }
   },
   "clv": {
-   "avg": -0.43,
-   "beat": 50.0,
-   "n": 4
+   "avg": -0.07,
+   "beat": 60.0,
+   "n": 5
   },
   "day": "2026-10-26",
   "leaks_14d": [],
@@ -4898,7 +4898,16 @@
    },
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "den",
+    "pick": "F.C. K\u00f8benhavn",
+    "price": "-240",
+    "said": 67,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 67%"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -4942,11 +4951,11 @@
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 4,
-   "roi": 34.6,
-   "said": 70.2,
+   "hit": 80.0,
+   "lost": 1,
+   "n": 5,
+   "roi": 7.7,
+   "said": 69.6,
    "won": 4
   },
   "picks_by_league": {
@@ -4957,6 +4966,14 @@
     "roi": 29.9,
     "said": 73.5,
     "won": 2
+   },
+   "den": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 67.0,
+    "won": 0
    },
    "ind": {
     "hit": 100.0,
@@ -5023,10 +5040,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 72.1,
-    "lost": 167,
-    "n": 599,
-    "roi": 0.0,
+    "hit": 72.0,
+    "lost": 168,
+    "n": 600,
+    "roi": -0.1,
     "said": 69.0,
     "won": 432
    }
