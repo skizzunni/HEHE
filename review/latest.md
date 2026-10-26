@@ -1,11 +1,11 @@
 # Review 2026-10-26
 
-Picks 4-1 (80.0% vs 69.6% claimed, ROI +7.7%).
+Picks 5-1 (83.3% vs 69.7% claimed, ROI +12.3%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
 TRAILING props nba Pts + Reb: 74.5% hit vs 84.9% stated on 51
-Closing line value: -0.07 points on 5 picks; beat the close on 60.0%.
+Closing line value: +0.12 points on 6 picks; beat the close on 66.7%.
 - LOST den F.C. København at 67%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67%
-With the market 72.0% (600); against it 22.2% (9).
+With the market 72.0% (601); against it 22.2% (9).
 Locks 0/11 won, 11 open; Best play top 3 (51%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 3 (82%) open; Best play top 8 (55%) open.
 Lottery 10k: open (0/13 legs won)
