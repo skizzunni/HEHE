@@ -4879,9 +4879,9 @@
    }
   },
   "clv": {
-   "avg": 0.99,
-   "beat": 60.0,
-   "n": 10
+   "avg": 1.13,
+   "beat": 63.6,
+   "n": 11
   },
   "day": "2026-10-26",
   "leaks_14d": [],
@@ -4899,6 +4899,14 @@
    "won": 0
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "arg",
+    "pick": "Estudiantes de La Plata",
+    "price": "-260",
+    "said": 67,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 67%"
+   },
    {
     "against_market": false,
     "league": "den",
@@ -4951,11 +4959,11 @@
    }
   ],
   "picks": {
-   "hit": 90.0,
-   "lost": 1,
-   "n": 10,
-   "roi": 18.0,
-   "said": 71.2,
+   "hit": 81.8,
+   "lost": 2,
+   "n": 11,
+   "roi": 7.3,
+   "said": 70.8,
    "won": 9
   },
   "picks_by_league": {
@@ -4966,6 +4974,14 @@
     "roi": 29.9,
     "said": 73.5,
     "won": 2
+   },
+   "arg": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 67.0,
+    "won": 0
    },
    "chi": {
     "hit": 100.0,
@@ -5080,10 +5096,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 72.2,
-    "lost": 168,
-    "n": 605,
-    "roi": 0.1,
+    "hit": 72.1,
+    "lost": 169,
+    "n": 606,
+    "roi": -0.1,
     "said": 69.0,
     "won": 437
    }
