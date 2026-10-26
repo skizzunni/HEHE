@@ -10,6 +10,7 @@ Lottery 10k: open (0/13 legs won)
 Lottery 10k+25: open (0/13 legs won)
 Lottery 10k+50: open (0/13 legs won)
 Lottery 10k+100: open (0/13 legs won)
+Lottery 100: open (0/12 legs won)
 Ladder-consistency props (all time): 697/834 won (83.6%) vs 86.8% fair, 87.4% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
