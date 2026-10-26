@@ -1561,6 +1561,7 @@
     "t": "over"
    },
    "start": "2026-10-25T22:00Z",
+   "status": "won",
    "team": "over 232.5",
    "tip": "6:00 PM",
    "venue": "Kalshi"
@@ -1585,6 +1586,7 @@
     "team": "Brooklyn Nets"
    },
    "start": "2026-10-25T22:00Z",
+   "status": "lost",
    "team": "Brooklyn Nets +6.5",
    "tip": "6:00 PM",
    "venue": "Kalshi"
@@ -1822,6 +1824,23 @@
    "team": "Philadelphia 76ers -2.5",
    "tip": "7:30 PM",
    "venue": "Kalshi"
+  },
+  "nba:401909867|away|FanDuel": {
+   "dec": 1.6329,
+   "ev": 0.0117,
+   "fair": 0.6196,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909867",
+   "kind": "value",
+   "league": "nba",
+   "match": "MEM @ SAC",
+   "price": "-158",
+   "seen": "2026-10-26T00:35:02+00:00",
+   "side": "away",
+   "start": "2026-10-26T01:00Z",
+   "team": "Memphis Grizzlies",
+   "tip": "9:00 PM",
+   "venue": "FanDuel"
   },
   "nba:401909867|{\"line\": 236.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0947,

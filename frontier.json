@@ -454434,6 +454434,50 @@
       "start": "2026-10-26T01:00Z",
       "starters": [],
       "t": "2026-10-26T00:25:17+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "SAC",
+        "Keegan Murray",
+        "Out",
+        "F"
+       ],
+       [
+        "SAC",
+        "Ben Simmons",
+        "Out",
+        "G"
+       ],
+       [
+        "SAC",
+        "Dylan Cardwell",
+        "Out",
+        "C"
+       ],
+       [
+        "SAC",
+        "Maxime Raynaud",
+        "Out",
+        "C"
+       ],
+       [
+        "MEM",
+        "Karim Lopez",
+        "Out",
+        "F"
+       ],
+       [
+        "MEM",
+        "Zach Edey",
+        "Out",
+        "C"
+       ]
+      ],
+      "probables": {},
+      "start": "2026-10-26T01:00Z",
+      "starters": [],
+      "t": "2026-10-26T00:35:40+00:00"
      }
     ],
     "ned:401875566": [
@@ -557189,19 +557233,20 @@
        "play": null,
        "price": "-260",
        "quoted": "2026-10-25T11:54:25+00:00",
+       "score": "Indiana Pacers 136 - Brooklyn Nets 109",
        "spec": {
         "t": "win",
         "team": "Indiana Pacers"
        },
        "start": "2026-10-25T22:00Z",
-       "status": "open",
+       "status": "won",
        "tip": "6:00 PM",
        "where": null
       }
      ],
      "prob": 0.46267020000000003,
      "standard": 0.65,
-     "status": "open",
+     "status": "won",
      "target": 2.0,
      "total": 2.0
     },
@@ -557602,12 +557647,13 @@
        "play": null,
        "price": "-260",
        "quoted": "2026-10-25T11:54:25+00:00",
+       "score": "Indiana Pacers 136 - Brooklyn Nets 109",
        "spec": {
         "t": "win",
         "team": "Indiana Pacers"
        },
        "start": "2026-10-25T22:00Z",
-       "status": "open",
+       "status": "won",
        "tip": "6:00 PM",
        "where": null
       },
@@ -557727,142 +557773,6 @@
     }
    ],
    "versions": [
-    {
-     "policy": "7cc2ad9e",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Atlas or draw",
-        "San Diego Wave FC or draw",
-        "Under 249.5 points",
-        "Real Sociedad or draw",
-        "River Plate or draw"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Colorado Avalanche over 2.5 goals",
-        "Las Vegas Raiders +10.5",
-        "Barcelona or draw",
-        "Over 2.5 goals"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Indiana Pacers to win",
-        "Denver Broncos to win"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Colorado Avalanche over 2.5 goals",
-        "Las Vegas Raiders +10.5",
-        "Barcelona or draw",
-        "Belgrano (C\u00f3rdoba) or draw",
-        "Under 53.5 points"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Denver Broncos to win",
-        "Los Angeles Lakers to win",
-        "Dallas Stars over 2.5 goals"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "AC Milan or draw",
-        "Indiana Pacers to win",
-        "Dallas Stars over 2.5 goals",
-        "Los Angeles Lakers to win",
-        "Denver Broncos to win"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-25T16:51:40+00:00"
-    },
     {
      "policy": "7cc2ad9e",
      "sig": [
@@ -565895,6 +565805,127 @@
       ]
      ],
      "t": "2026-10-26T00:20:09+00:00"
+    },
+    {
+     "policy": "1ed4e2eb",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       []
+      ],
+      [
+       2.0,
+       0.75,
+       []
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Minnesota Wild under 4.5 goals",
+        "Over 225.5 points"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       []
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Cruz Azul or draw",
+        "Tijuana or draw",
+        "Minnesota Wild over 2.5 goals",
+        "Under 245.5 points"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Over 224.5 points",
+        "Minnesota Wild over 2.5 goals",
+        "Tijuana or draw",
+        "Deportes Tolima to win",
+        "Cruz Azul or draw",
+        "Am\u00e9rica or draw"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-26T00:35:37+00:00"
     }
    ]
   }
