@@ -1,5 +1,22 @@
 {
  "finds": {
+  "arg:401841635|away|FanDuel": {
+   "dec": 5.6,
+   "ev": 0.0242,
+   "fair": 0.1829,
+   "fair_source": "DraftKings (Shin)",
+   "id": "arg:401841635",
+   "kind": "value",
+   "league": "arg",
+   "match": "RIE @ IACC",
+   "price": "+460",
+   "seen": "2026-10-26T23:33:00+00:00",
+   "side": "away",
+   "start": "2026-10-27T00:15Z",
+   "team": "Deportivo Riestra",
+   "tip": "8:15 PM",
+   "venue": "FanDuel"
+  },
   "arg:401841635|home|FanDuel": {
    "dec": 1.9524,
    "ev": 0.0116,
@@ -3809,6 +3826,26 @@
    "status": "lost",
    "team": "Boston Legacy FC",
    "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|arg:401841635:away": {
+   "ev": 0.0242,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0242,
+     "fair": 0.1829,
+     "id": "arg:401841635",
+     "price": "+460",
+     "side": "away",
+     "spec": null,
+     "team": "Deportivo Riestra"
+    }
+   ],
+   "payout": 5.6,
+   "prob": 0.1829,
+   "seen": "2026-10-26T23:33:00+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|arg:401841638:away": {
