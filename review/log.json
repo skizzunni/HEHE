@@ -3943,10 +3943,10 @@
   },
   "props": {
    "fair": {
-    "n": 817,
+    "n": 834,
     "said_fair": 86.8,
     "said_price": 87.4,
-    "won": 680
+    "won": 697
    },
    "n": 181,
    "said": 81.1,
@@ -4031,36 +4031,36 @@
    },
    {
     "flag": false,
-    "hit": 87.8,
-    "n": 90,
+    "hit": 88.3,
+    "n": 94,
     "name": "props nba Assists",
-    "said": 85.9
+    "said": 86.0
    },
    {
     "flag": false,
-    "hit": 83.8,
-    "n": 105,
+    "hit": 84.3,
+    "n": 108,
     "name": "props nba Points",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 85.4,
-    "n": 48,
+    "hit": 86.3,
+    "n": 51,
     "name": "props nba Pts + Ast",
     "said": 85.0
    },
    {
     "flag": true,
-    "hit": 73.5,
-    "n": 49,
+    "hit": 74.5,
+    "n": 51,
     "name": "props nba Pts + Reb",
-    "said": 85.0
+    "said": 84.9
    },
    {
     "flag": false,
-    "hit": 86.5,
-    "n": 89,
+    "hit": 87.0,
+    "n": 92,
     "name": "props nba Pts + Reb + Ast",
     "said": 85.0
    },
@@ -4073,10 +4073,10 @@
    },
    {
     "flag": false,
-    "hit": 86.3,
-    "n": 51,
+    "hit": 87.3,
+    "n": 55,
     "name": "props nba Rebounds",
-    "said": 84.2
+    "said": 83.9
    },
    {
     "flag": false,
@@ -4171,10 +4171,10 @@
    },
    {
     "flag": false,
-    "hit": 80.0,
-    "n": 10,
+    "hit": 81.8,
+    "n": 11,
     "name": "safe locks nba prop",
-    "said": 92.1
+    "said": 92.3
    },
    {
     "flag": false,
@@ -4199,17 +4199,17 @@
    },
    {
     "flag": false,
-    "hit": 94.9,
-    "n": 39,
+    "hit": 95.0,
+    "n": 40,
     "name": "prop locks",
-    "said": 92.7
+    "said": 92.8
    },
    {
     "flag": false,
-    "hit": 39.9,
-    "n": 148,
+    "hit": 40.0,
+    "n": 150,
     "name": "value bets",
-    "said": 43.2
+    "said": 43.3
    },
    {
     "flag": false,
@@ -4289,8 +4289,8 @@
   },
   "clv": {
    "avg": 0.77,
-   "beat": 57.4,
-   "n": 101
+   "beat": 57.8,
+   "n": 102
   },
   "day": "2026-10-25",
   "leaks_14d": [],
@@ -4569,16 +4569,16 @@
     "lost": 3,
     "status": "lost",
     "tier": "100",
-    "won": 6
+    "won": 7
    }
   ],
   "picks": {
-   "hit": 79.2,
+   "hit": 79.4,
    "lost": 21,
-   "n": 101,
-   "roi": 5.9,
-   "said": 71.4,
-   "won": 80
+   "n": 102,
+   "roi": 6.4,
+   "said": 71.3,
+   "won": 81
   },
   "picks_by_league": {
    "arg": {
@@ -4726,12 +4726,12 @@
     "won": 2
    },
    "nba": {
-    "hit": 83.3,
+    "hit": 85.7,
     "lost": 1,
-    "n": 6,
-    "roi": 22.3,
-    "said": 67.8,
-    "won": 5
+    "n": 7,
+    "roi": 27.5,
+    "said": 66.7,
+    "won": 6
    },
    "ned": {
     "hit": 100.0,
@@ -4824,14 +4824,14 @@
   },
   "props": {
    "fair": {
-    "n": 817,
+    "n": 834,
     "said_fair": 86.8,
     "said_price": 87.4,
-    "won": 680
+    "won": 697
    },
-   "n": 277,
-   "said": 79.3,
-   "won": 212
+   "n": 296,
+   "said": 79.6,
+   "won": 231
   },
   "safe_locks": {
    "lost": [
@@ -4839,7 +4839,7 @@
     "Jamal Shead: 2+ Assists (TOR @ MIN) 0"
    ],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      11,
@@ -4852,7 +4852,7 @@
      "lost"
     ]
    },
-   "won": 7
+   "won": 8
   },
   "strong": {
    "n": 0
@@ -4875,20 +4875,20 @@
    "agree": {
     "hit": 71.8,
     "lost": 171,
-    "n": 606,
-    "roi": -0.3,
+    "n": 607,
+    "roi": -0.2,
     "said": 68.7,
-    "won": 435
+    "won": 436
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5584,
-    "market_only": 0.5584,
-    "model_40": 0.588,
-    "n": 42,
+    "logloss": 0.5572,
+    "market_only": 0.5572,
+    "model_40": 0.5896,
+    "n": 43,
     "weight": 0.0
    },
    "ncaaf": {
