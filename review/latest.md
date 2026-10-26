@@ -1,9 +1,9 @@
 # Review 2026-10-25
 
-Picks 70-17 (80.5% vs 71.6% claimed, ROI +6.9%).
+Picks 71-17 (80.7% vs 71.7% claimed, ROI +7.0%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
 TRAILING props nba Pts + Reb: 70.0% hit vs 85.0% stated on 40
-Closing line value: +0.73 points on 87 picks; beat the close on 56.3%.
+Closing line value: +0.77 points on 88 picks; beat the close on 56.8%.
 - LOST arg Belgrano (Córdoba) at 75%: margin 1 · the book had my side favoured too · called at 75%
 - LOST aut LASK Linz at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST chi Universidad Católica at 73%: margin 2 · the book had my side favoured too · called at 73%
@@ -21,7 +21,7 @@ Closing line value: +0.73 points on 87 picks; beat the close on 56.3%.
 - LOST por Sporting CP at 74%: margin 1 · the book had my side favoured too · called at 74%
 - LOST uru Nacional at 76%: margin 1 · the book had my side favoured too · called at 76%
 - LOST uru Montevideo Wanderers at 72%: margin 1 · the book had my side favoured too · called at 72%
-With the market 71.8% (592); against it 20.0% (10).
+With the market 71.8% (593); against it 20.0% (10).
 Locks 8/11 won, 2 open; Best play top 3 (55%) won; lost: Darnell Mooney: 5+ Receiving Yards (NYG @ HOU) 4.
 Safe Locks 5/11 won, 5 open; Winners parlay top 5 (82%) lost; Best play top 11 (53%) lost; lost: Jalen Coker: 25+ Receiving Yards (TB @ CAR) 9.
 Lottery 10k: lost (4/11 legs won, killed by New York Jets -9.5, Under 234.5 points, Detroit Lions -9.5)
