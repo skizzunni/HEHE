@@ -161,6 +161,23 @@
    "tip": "10:00 AM",
    "venue": "FanDuel"
   },
+  "esp:401882828|away|FanDuel": {
+   "dec": 4.6,
+   "ev": 0.0108,
+   "fair": 0.2197,
+   "fair_source": "DraftKings (Shin)",
+   "id": "esp:401882828",
+   "kind": "value",
+   "league": "esp",
+   "match": "OSA @ SEV",
+   "price": "+360",
+   "seen": "2026-10-26T08:25:37+00:00",
+   "side": "away",
+   "start": "2026-10-26T20:00Z",
+   "team": "Osasuna",
+   "tip": "4:00 PM",
+   "venue": "FanDuel"
+  },
   "esp:401882832|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Barcelona\"}|Kalshi": {
    "dec": 2.3992,
    "dk": "+115",
@@ -3948,6 +3965,26 @@
    "seen": "2026-10-25T12:49:25+00:00",
    "status": "lost",
    "target": 3.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|esp:401882828:away": {
+   "ev": 0.0106,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0108,
+     "fair": 0.2197,
+     "id": "esp:401882828",
+     "price": "+360",
+     "side": "away",
+     "spec": null,
+     "team": "Osasuna"
+    }
+   ],
+   "payout": 4.6,
+   "prob": 0.2197,
+   "seen": "2026-10-26T08:25:37+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|esp:401882834:away": {
