@@ -12836,6 +12836,38 @@
   "price": "-290",
   "status": "open"
  },
+ "nba:401909869|n:james harden|Pts + Reb + Ast|20+": {
+  "aid": null,
+  "date": "2026-10-26",
+  "edge": -1.4,
+  "gid": "nba:401909869",
+  "imp": 0.9048,
+  "label": "James Harden: 20+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "20+",
+  "market": "Pts + Reb + Ast",
+  "name": "James Harden",
+  "p": 0.8519,
+  "p_fair": 0.8923,
+  "price": "-950",
+  "status": "open"
+ },
+ "nba:401909869|n:peyton watson|Reb + Ast|5+": {
+  "aid": null,
+  "date": "2026-10-26",
+  "edge": null,
+  "gid": "nba:401909869",
+  "imp": 0.7826,
+  "label": "Peyton Watson: 5+ Reb + Ast",
+  "league": "nba",
+  "line": "5+",
+  "market": "Reb + Ast",
+  "name": "Peyton Watson",
+  "p": 0.739,
+  "p_fair": null,
+  "price": "-360",
+  "status": "open"
+ },
  "nba:401909870|n:derrick white|Assists|4+": {
   "aid": null,
   "date": "2026-10-26",
@@ -12850,6 +12882,22 @@
   "p": 0.7849,
   "p_fair": 0.7637,
   "price": "-390",
+  "status": "open"
+ },
+ "nba:401909870|n:jayson tatum|Pts + Ast|25+": {
+  "aid": null,
+  "date": "2026-10-26",
+  "edge": -7.6,
+  "gid": "nba:401909870",
+  "imp": 0.9259,
+  "label": "Jayson Tatum: 25+ Pts + Ast",
+  "league": "nba",
+  "line": "25+",
+  "market": "Pts + Ast",
+  "name": "Jayson Tatum",
+  "p": 0.851,
+  "p_fair": 0.8555,
+  "price": "-1250",
   "status": "open"
  },
  "nba:401909870|n:paul george|Pts + Ast|15+": {
@@ -12882,6 +12930,22 @@
   "p": 0.8475,
   "p_fair": 0.8891,
   "price": "-900",
+  "status": "open"
+ },
+ "nba:401909870|n:paul george|Reb + Ast|5+": {
+  "aid": null,
+  "date": "2026-10-26",
+  "edge": -2.8,
+  "gid": "nba:401909870",
+  "imp": 0.9048,
+  "label": "Paul George: 5+ Reb + Ast",
+  "league": "nba",
+  "line": "5+",
+  "market": "Reb + Ast",
+  "name": "Paul George",
+  "p": 0.8544,
+  "p_fair": 0.8794,
+  "price": "-950",
   "status": "open"
  },
  "nba:401909874|n:aaron wiggins|Threes Made|1+": {
@@ -12932,6 +12996,22 @@
   "price": "-620",
   "status": "open"
  },
+ "nba:401909874|n:dyson daniels|Pts + Ast|10+": {
+  "aid": null,
+  "date": "2026-10-26",
+  "edge": 1.0,
+  "gid": "nba:401909874",
+  "imp": 0.9259,
+  "label": "Dyson Daniels: 10+ Pts + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Pts + Ast",
+  "name": "Dyson Daniels",
+  "p": 0.851,
+  "p_fair": 0.9351,
+  "price": "-1250",
+  "status": "open"
+ },
  "nba:401909874|n:kevin durant|Threes Made|1+": {
   "aid": null,
   "date": "2026-10-26",
@@ -12978,6 +13058,38 @@
   "p": 0.8464,
   "p_fair": null,
   "price": "-1600",
+  "status": "open"
+ },
+ "nba:401909876|n:aaron gordon|Assists|2+": {
+  "aid": null,
+  "date": "2026-10-26",
+  "edge": -4.0,
+  "gid": "nba:401909876",
+  "imp": 0.7778,
+  "label": "Aaron Gordon: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "Aaron Gordon",
+  "p": 0.767,
+  "p_fair": 0.7466,
+  "price": "-350",
+  "status": "open"
+ },
+ "nba:401909876|n:jamal murray|Pts + Ast|20+": {
+  "aid": null,
+  "date": "2026-10-26",
+  "edge": -3.6,
+  "gid": "nba:401909876",
+  "imp": 0.9259,
+  "label": "Jamal Murray: 20+ Pts + Ast",
+  "league": "nba",
+  "line": "20+",
+  "market": "Pts + Ast",
+  "name": "Jamal Murray",
+  "p": 0.851,
+  "p_fair": 0.893,
+  "price": "-1250",
   "status": "open"
  },
  "nba:401909876|n:jamal murray|Pts + Reb + Ast|25+": {
@@ -26762,11 +26874,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Blake Coleman",
   "p": 0.8638,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892581|n:brock boeser|Shots on Goal|1+": {
   "aid": null,
@@ -26778,11 +26892,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Brock Boeser",
   "p": 0.8416,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892581|n:filip chytil|Shots on Goal|1+": {
   "aid": null,
@@ -26794,11 +26910,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Filip Chytil",
   "p": 0.8403,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892581|n:jake debrusk|Shots on Goal|1+": {
   "aid": null,
@@ -26810,11 +26928,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jake DeBrusk",
   "p": 0.8638,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892581|n:kirill kaprizov|Shots on Goal|2+": {
   "aid": null,
@@ -26826,11 +26946,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kirill Kaprizov",
   "p": 0.8457,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892581|n:matt boldy|Shots on Goal|2+": {
   "aid": null,
@@ -26842,11 +26964,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Boldy",
   "p": 0.8472,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892581|n:quinn hughes|Shots on Goal|2+": {
   "aid": null,
@@ -26858,11 +26982,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Quinn Hughes",
   "p": 0.7271,
   "p_fair": null,
   "price": "-355",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892582|n:alex laferriere|Shots on Goal|2+": {
   "aid": null,

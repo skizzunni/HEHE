@@ -3994,9 +3994,9 @@
  },
  "2026-10-25": {
   "clv": {
-   "avg": 0.77,
-   "beat": 57.8,
-   "n": 102
+   "avg": 0.81,
+   "beat": 58.3,
+   "n": 103
   },
   "day": "2026-10-25",
   "leaks_14d": [],
@@ -4205,10 +4205,11 @@
      "Over 41.5 points",
      "Carolina Panthers -9.5",
      "Indianapolis Colts +2.5",
+     "Under 4.5 goals",
      "Cleveland Browns over 27.5 points"
     ],
     "legs": 8,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 3
@@ -4275,16 +4276,16 @@
     "lost": 3,
     "status": "lost",
     "tier": "100",
-    "won": 7
+    "won": 8
    }
   ],
   "picks": {
-   "hit": 79.4,
+   "hit": 79.6,
    "lost": 21,
-   "n": 102,
-   "roi": 6.4,
+   "n": 103,
+   "roi": 6.8,
    "said": 71.3,
-   "won": 81
+   "won": 82
   },
   "picks_by_league": {
    "arg": {
@@ -4456,12 +4457,12 @@
     "won": 8
    },
    "nhl": {
-    "hit": 75.0,
+    "hit": 80.0,
     "lost": 1,
-    "n": 4,
-    "roi": 23.2,
-    "said": 61.0,
-    "won": 3
+    "n": 5,
+    "roi": 28.3,
+    "said": 61.6,
+    "won": 4
    },
    "nor": {
     "hit": 100.0,
@@ -4535,9 +4536,9 @@
     "said_price": 87.4,
     "won": 697
    },
-   "n": 296,
-   "said": 79.6,
-   "won": 231
+   "n": 303,
+   "said": 79.7,
+   "won": 237
   },
   "safe_locks": {
    "lost": [
@@ -4545,7 +4546,7 @@
     "Jamal Shead: 2+ Assists (TOR @ MIN) 0"
    ],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      11,
@@ -4558,7 +4559,7 @@
      "lost"
     ]
    },
-   "won": 8
+   "won": 9
   },
   "strong": {
    "n": 0
@@ -4573,12 +4574,12 @@
     "won": 2
    },
    "agree": {
-    "hit": 71.8,
+    "hit": 71.9,
     "lost": 171,
-    "n": 607,
+    "n": 608,
     "roi": -0.2,
     "said": 68.7,
-    "won": 436
+    "won": 437
    }
   }
  },
@@ -4712,8 +4713,8 @@
    },
    {
     "flag": false,
-    "hit": 79.9,
-    "n": 423,
+    "hit": 80.0,
+    "n": 430,
     "name": "props nhl Shots on Goal",
     "said": 79.9
    },
@@ -4775,8 +4776,8 @@
    },
    {
     "flag": false,
-    "hit": 89.5,
-    "n": 19,
+    "hit": 90.0,
+    "n": 20,
     "name": "safe locks nhl under",
     "said": 91.6
    },
@@ -4796,10 +4797,10 @@
    },
    {
     "flag": false,
-    "hit": 40.0,
-    "n": 150,
+    "hit": 39.7,
+    "n": 151,
     "name": "value bets",
-    "said": 43.3
+    "said": 43.4
    },
    {
     "flag": false,
@@ -4934,12 +4935,12 @@
     "won": 2
    },
    "agree": {
-    "hit": 71.8,
+    "hit": 71.9,
     "lost": 167,
-    "n": 593,
-    "roi": -0.3,
+    "n": 594,
+    "roi": -0.2,
     "said": 69.0,
-    "won": 426
+    "won": 427
    }
   },
   "weights": {
@@ -4964,10 +4965,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6601,
-    "market_only": 0.6601,
-    "model_40": 0.6696,
-    "n": 66,
+    "logloss": 0.6568,
+    "market_only": 0.6568,
+    "model_40": 0.666,
+    "n": 67,
     "weight": 0.0
    }
   }
