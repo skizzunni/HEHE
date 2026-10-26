@@ -1,9 +1,10 @@
 # Review 2026-10-26
 
-No picks settled yet.
+Picks 1-0 (100.0% vs 65.0% claimed, ROI +41.7%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
 TRAILING props nba Pts + Reb: 74.5% hit vs 84.9% stated on 51
-With the market 71.9% (595); against it 22.2% (9).
+Closing line value: -8.58 points on 1 picks; beat the close on 0.0%.
+With the market 72.0% (596); against it 22.2% (9).
 Locks 0/11 won, 11 open; Best play top 3 (51%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 3 (82%) open; Best play top 8 (55%) open.
 Lottery 10k: open (0/13 legs won)
