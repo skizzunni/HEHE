@@ -2053,7 +2053,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
@@ -2065,10 +2065,10 @@
       "match": "CHI @ BOS",
       "pick": "Boston Celtics",
       "price": "-750",
-      "price_at": "2026-10-26T13:34:49+00:00",
+      "price_at": "2026-10-26T13:39:56+00:00",
       "price_market": "moneyline",
       "price_ref": "34900868:0ML86930224_1",
-      "prob_at": "2026-10-26T13:34:49+00:00",
+      "prob_at": "2026-10-26T13:39:56+00:00",
       "rank": 1,
       "ready": true,
       "side": "home",
@@ -2103,7 +2103,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 81,
       "dc": true,
       "gate": {
@@ -2115,10 +2115,10 @@
       "match": "RIE @ IACC",
       "pick": "Instituto (C\u00f3rdoba) or draw",
       "price": "-600",
-      "price_at": "2026-10-26T13:30:10+00:00",
+      "price_at": "2026-10-26T13:40:17+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190952082:21316832",
-      "prob_at": "2026-10-26T13:34:50+00:00",
+      "prob_at": "2026-10-26T13:39:57+00:00",
       "rank": 2,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2154,7 +2154,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 79,
       "dc": true,
       "gate": {
@@ -2166,10 +2166,10 @@
       "match": "OSA @ SEV",
       "pick": "Sevilla or draw",
       "price": "-550",
-      "price_at": "2026-10-26T13:30:10+00:00",
+      "price_at": "2026-10-26T13:40:17+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190885792:13579486",
-      "prob_at": "2026-10-26T13:34:49+00:00",
+      "prob_at": "2026-10-26T13:39:57+00:00",
       "rank": 3,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2205,7 +2205,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
@@ -2217,10 +2217,10 @@
       "match": "PHX @ OKC",
       "pick": "Oklahoma City Thunder",
       "price": "-410",
-      "price_at": "2026-10-26T13:34:49+00:00",
+      "price_at": "2026-10-26T13:39:56+00:00",
       "price_market": "moneyline",
       "price_ref": "34901570:0ML86931511_1",
-      "prob_at": "2026-10-26T13:34:49+00:00",
+      "prob_at": "2026-10-26T13:39:56+00:00",
       "rank": 4,
       "ready": true,
       "side": "home",
@@ -2255,7 +2255,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 64,
       "dc": false,
       "gate": {
@@ -2267,24 +2267,33 @@
       "match": "DAL @ PHI",
       "pick": "Dallas Cowboys",
       "price": "-205",
-      "price_at": "2026-10-26T13:34:49+00:00",
+      "price_at": "2026-10-26T13:39:56+00:00",
       "price_market": "moneyline",
       "price_ref": "34118071:0ML84695504_3",
-      "prob_at": "2026-10-26T13:34:49+00:00",
+      "prob_at": "2026-10-26T13:39:56+00:00",
       "rank": 5,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "away",
       "start": "2026-10-27T00:15Z"
      },
      "dc": false,
-     "fp": "ad3dbb853b4b",
+     "fp": "c2947d08bb9e",
      "gate": {
       "ok": true,
       "what": "no lineup gate for this league"
      },
      "id": "nfl:401873009",
      "league": "nfl",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-10-26T13:40:18+00:00",
+       "what": "no lineup gate for this league"
+      }
+     ],
      "match": "DAL @ PHI",
+     "news_at": "2026-10-26T13:40:18+00:00",
      "pick": "Dallas Cowboys",
      "price": "-218",
      "price_at": "2026-10-26T12:02:52+00:00",
@@ -2307,7 +2316,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -2319,10 +2328,10 @@
       "match": "ALG @ AHL",
       "pick": "Al Ahli",
       "price": "-390",
-      "price_at": "2026-10-26T13:34:51+00:00",
+      "price_at": "2026-10-26T13:39:57+00:00",
       "price_market": "moneyline",
       "price_ref": "34904157:0ML86937982_1",
-      "prob_at": "2026-10-26T13:34:51+00:00",
+      "prob_at": "2026-10-26T13:39:57+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2340,7 +2349,7 @@
      "match": "ALG @ AHL",
      "pick": "Al Ahli",
      "price": "-390",
-     "price_at": "2026-10-26T13:34:51+00:00",
+     "price_at": "2026-10-26T13:39:57+00:00",
      "price_market": "moneyline",
      "price_ref": "34904157:0ML86937982_1",
      "side": "home",
@@ -2355,7 +2364,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 81,
       "dc": true,
       "gate": {
@@ -2367,10 +2376,10 @@
       "match": "RIE @ IACC",
       "pick": "Instituto (C\u00f3rdoba) or draw",
       "price": "-600",
-      "price_at": "2026-10-26T13:30:10+00:00",
+      "price_at": "2026-10-26T13:40:17+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190952082:21316832",
-      "prob_at": "2026-10-26T13:34:50+00:00",
+      "prob_at": "2026-10-26T13:39:57+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2388,7 +2397,7 @@
      "match": "RIE @ IACC",
      "pick": "Instituto (C\u00f3rdoba) or draw",
      "price": "-600",
-     "price_at": "2026-10-26T13:30:10+00:00",
+     "price_at": "2026-10-26T13:40:17+00:00",
      "price_market": "double_chance",
      "price_ref": "736.190952082:21316832",
      "side": "home",
@@ -2403,7 +2412,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -2415,10 +2424,10 @@
       "match": "CAM @ FLA",
       "pick": "Flamengo",
       "price": "-380",
-      "price_at": "2026-10-26T13:34:50+00:00",
+      "price_at": "2026-10-26T13:39:57+00:00",
       "price_market": "moneyline",
       "price_ref": "34860953:0ML86822867_1",
-      "prob_at": "2026-10-26T13:34:50+00:00",
+      "prob_at": "2026-10-26T13:39:57+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2436,7 +2445,7 @@
      "match": "CAM @ FLA",
      "pick": "Flamengo",
      "price": "-380",
-     "price_at": "2026-10-26T13:34:50+00:00",
+     "price_at": "2026-10-26T13:39:57+00:00",
      "price_market": "moneyline",
      "price_ref": "34860953:0ML86822867_1",
      "side": "home",
@@ -2451,7 +2460,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 79,
       "dc": true,
       "gate": {
@@ -2463,10 +2472,10 @@
       "match": "EVE @ U. de Chile",
       "pick": "Universidad de Chile or draw",
       "price": "-500",
-      "price_at": "2026-10-26T13:30:10+00:00",
+      "price_at": "2026-10-26T13:40:17+00:00",
       "price_market": "double_chance",
       "price_ref": "736.191064875:14128702",
-      "prob_at": "2026-10-26T13:34:50+00:00",
+      "prob_at": "2026-10-26T13:39:57+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2484,7 +2493,7 @@
      "match": "EVE @ U. de Chile",
      "pick": "Universidad de Chile or draw",
      "price": "-500",
-     "price_at": "2026-10-26T13:30:10+00:00",
+     "price_at": "2026-10-26T13:40:17+00:00",
      "price_market": "double_chance",
      "price_ref": "736.191064875:14128702",
      "side": "home",
@@ -2499,7 +2508,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 76,
       "dc": true,
       "gate": {
@@ -2511,10 +2520,10 @@
       "match": "BUC @ SFE",
       "pick": "Independiente Santa Fe or draw",
       "price": "-425",
-      "price_at": "2026-10-26T13:30:10+00:00",
+      "price_at": "2026-10-26T13:40:17+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193320633:21786362",
-      "prob_at": "2026-10-26T13:34:50+00:00",
+      "prob_at": "2026-10-26T13:39:57+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2532,7 +2541,7 @@
      "match": "BUC @ SFE",
      "pick": "Independiente Santa Fe or draw",
      "price": "-425",
-     "price_at": "2026-10-26T13:30:10+00:00",
+     "price_at": "2026-10-26T13:40:17+00:00",
      "price_market": "double_chance",
      "price_ref": "736.193320633:21786362",
      "side": "home",
@@ -2547,7 +2556,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 79,
       "dc": true,
       "gate": {
@@ -2559,10 +2568,10 @@
       "match": "OSA @ SEV",
       "pick": "Sevilla or draw",
       "price": "-550",
-      "price_at": "2026-10-26T13:30:10+00:00",
+      "price_at": "2026-10-26T13:40:17+00:00",
       "price_market": "double_chance",
       "price_ref": "736.190885792:13579486",
-      "prob_at": "2026-10-26T13:34:49+00:00",
+      "prob_at": "2026-10-26T13:39:57+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2580,7 +2589,7 @@
      "match": "OSA @ SEV",
      "pick": "Sevilla or draw",
      "price": "-550",
-     "price_at": "2026-10-26T13:30:10+00:00",
+     "price_at": "2026-10-26T13:40:17+00:00",
      "price_market": "double_chance",
      "price_ref": "736.190885792:13579486",
      "side": "home",
@@ -2595,7 +2604,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
@@ -2607,10 +2616,10 @@
       "match": "CHI @ BOS",
       "pick": "Boston Celtics",
       "price": "-750",
-      "price_at": "2026-10-26T13:34:49+00:00",
+      "price_at": "2026-10-26T13:39:56+00:00",
       "price_market": "moneyline",
       "price_ref": "34900868:0ML86930224_1",
-      "prob_at": "2026-10-26T13:34:49+00:00",
+      "prob_at": "2026-10-26T13:39:56+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -2627,7 +2636,7 @@
      "match": "CHI @ BOS",
      "pick": "Boston Celtics",
      "price": "-750",
-     "price_at": "2026-10-26T13:34:49+00:00",
+     "price_at": "2026-10-26T13:39:56+00:00",
      "price_market": "moneyline",
      "price_ref": "34900868:0ML86930224_1",
      "side": "home",
@@ -2642,7 +2651,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-26T13:35:09+00:00",
+      "checked_at": "2026-10-26T13:40:18+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
@@ -2654,10 +2663,10 @@
       "match": "PHX @ OKC",
       "pick": "Oklahoma City Thunder",
       "price": "-410",
-      "price_at": "2026-10-26T13:34:49+00:00",
+      "price_at": "2026-10-26T13:39:56+00:00",
       "price_market": "moneyline",
       "price_ref": "34901570:0ML86931511_1",
-      "prob_at": "2026-10-26T13:34:49+00:00",
+      "prob_at": "2026-10-26T13:39:56+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -2674,7 +2683,7 @@
      "match": "PHX @ OKC",
      "pick": "Oklahoma City Thunder",
      "price": "-410",
-     "price_at": "2026-10-26T13:34:49+00:00",
+     "price_at": "2026-10-26T13:39:56+00:00",
      "price_market": "moneyline",
      "price_ref": "34901570:0ML86931511_1",
      "side": "home",
@@ -2682,15 +2691,20 @@
      "tip": "8:00 PM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "nfl"
+   ],
+   "news": {
+    "nfl": "2026-10-26T13:40:18+00:00"
+   },
    "shadow_watch": {
     "best_at": "2026-10-26T12:03:14+00:00",
     "best_ceiling": 1.41,
-    "checks": 19,
-    "last": "2026-10-26T13:35:09+00:00",
+    "checks": 20,
+    "last": "2026-10-26T13:40:18+00:00",
     "max_ready": 2,
     "reasons": {
-     "awaiting confirmed XIs": 114
+     "awaiting confirmed XIs": 120
     }
    }
   }
