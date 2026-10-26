@@ -4123,9 +4123,9 @@
    {
     "flag": false,
     "hit": 79.9,
-    "n": 413,
+    "n": 423,
     "name": "props nhl Shots on Goal",
-    "said": 79.8
+    "said": 79.9
    },
    {
     "flag": false,
@@ -4206,10 +4206,10 @@
    },
    {
     "flag": false,
-    "hit": 39.5,
-    "n": 147,
+    "hit": 39.9,
+    "n": 148,
     "name": "value bets",
-    "said": 43.1
+    "said": 43.2
    },
    {
     "flag": false,
@@ -4288,9 +4288,9 @@
    }
   },
   "clv": {
-   "avg": 0.77,
-   "beat": 57.3,
-   "n": 96
+   "avg": 0.79,
+   "beat": 57.7,
+   "n": 97
   },
   "day": "2026-10-25",
   "leaks_14d": [],
@@ -4432,6 +4432,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "Colorado Avalanche",
+    "price": "-238",
+    "said": 68,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   },
+   {
+    "against_market": false,
     "league": "por",
     "pick": "Sporting CP",
     "price": "-380",
@@ -4544,10 +4552,10 @@
    }
   ],
   "picks": {
-   "hit": 81.2,
-   "lost": 18,
-   "n": 96,
-   "roi": 8.4,
+   "hit": 80.4,
+   "lost": 19,
+   "n": 97,
+   "roi": 7.3,
    "said": 71.5,
    "won": 78
   },
@@ -4721,11 +4729,11 @@
     "won": 7
    },
    "nhl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": 64.3,
-    "said": 58.7,
+    "hit": 75.0,
+    "lost": 1,
+    "n": 4,
+    "roi": 23.2,
+    "said": 61.0,
     "won": 3
    },
    "nor": {
@@ -4800,9 +4808,9 @@
     "said_price": 87.5,
     "won": 671
    },
-   "n": 253,
+   "n": 263,
    "said": 79.3,
-   "won": 194
+   "won": 202
   },
   "safe_locks": {
    "lost": [
@@ -4844,10 +4852,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 72.0,
-    "lost": 168,
-    "n": 601,
-    "roi": 0.0,
+    "hit": 71.9,
+    "lost": 169,
+    "n": 602,
+    "roi": -0.2,
     "said": 68.7,
     "won": 433
    }
@@ -4874,10 +4882,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6529,
-    "market_only": 0.6529,
-    "model_40": 0.6641,
-    "n": 65,
+    "logloss": 0.6601,
+    "market_only": 0.6601,
+    "model_40": 0.6696,
+    "n": 66,
     "weight": 0.0
    }
   }
