@@ -156,15 +156,6 @@
   ]
  },
  "groups": {
-  "mlb": {
-   "benched": false,
-   "hit": 78.6,
-   "implied": 60.1,
-   "n": 14,
-   "roi": 29.9,
-   "upper95": 92.4,
-   "won": 11
-  },
   "nba": {
    "benched": false,
    "hit": 72.1,
@@ -185,12 +176,12 @@
   },
   "nfl": {
    "benched": false,
-   "hit": 62.5,
-   "implied": 63.1,
-   "n": 72,
-   "roi": 2.1,
-   "upper95": 72.8,
-   "won": 45
+   "hit": 60.3,
+   "implied": 63.4,
+   "n": 58,
+   "roi": -2.6,
+   "upper95": 71.9,
+   "won": 35
   },
   "nhl": {
    "benched": false,
@@ -222,11 +213,11 @@
   "wnba": {
    "benched": false,
    "hit": 75.0,
-   "implied": 61.4,
-   "n": 20,
-   "roi": 29.7,
-   "upper95": 88.8,
-   "won": 15
+   "implied": 58.8,
+   "n": 16,
+   "roi": 35.8,
+   "upper95": 89.8,
+   "won": 12
   }
  },
  "log": [],
@@ -234,7 +225,7 @@
   "min_dec": 1.0,
   "per_sport": 2
  },
- "updated": "2026-10-25",
+ "updated": "2026-10-26",
  "value_benched": [],
  "value_slices": {
   "FanDuel favourite": {

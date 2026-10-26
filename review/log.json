@@ -3993,300 +3993,6 @@
   }
  },
  "2026-10-25": {
-  "audit": [
-   {
-    "flag": false,
-    "hit": 80.0,
-    "n": 10,
-    "name": "props esp Goalkeeper Saves",
-    "said": 81.6
-   },
-   {
-    "flag": false,
-    "hit": 80.0,
-    "n": 15,
-    "name": "props fra Goalkeeper Saves",
-    "said": 73.8
-   },
-   {
-    "flag": false,
-    "hit": 83.3,
-    "n": 18,
-    "name": "props ita Goalkeeper Saves",
-    "said": 81.7
-   },
-   {
-    "flag": false,
-    "hit": 81.0,
-    "n": 21,
-    "name": "props mlb Hits + Runs + RBIs",
-    "said": 64.1
-   },
-   {
-    "flag": false,
-    "hit": 70.0,
-    "n": 10,
-    "name": "props mlb Strikeouts Thrown",
-    "said": 83.9
-   },
-   {
-    "flag": false,
-    "hit": 88.3,
-    "n": 94,
-    "name": "props nba Assists",
-    "said": 86.0
-   },
-   {
-    "flag": false,
-    "hit": 84.3,
-    "n": 108,
-    "name": "props nba Points",
-    "said": 85.0
-   },
-   {
-    "flag": false,
-    "hit": 86.3,
-    "n": 51,
-    "name": "props nba Pts + Ast",
-    "said": 85.0
-   },
-   {
-    "flag": true,
-    "hit": 74.5,
-    "n": 51,
-    "name": "props nba Pts + Reb",
-    "said": 84.9
-   },
-   {
-    "flag": false,
-    "hit": 87.0,
-    "n": 92,
-    "name": "props nba Pts + Reb + Ast",
-    "said": 85.0
-   },
-   {
-    "flag": false,
-    "hit": 84.9,
-    "n": 53,
-    "name": "props nba Reb + Ast",
-    "said": 84.6
-   },
-   {
-    "flag": false,
-    "hit": 87.3,
-    "n": 55,
-    "name": "props nba Rebounds",
-    "said": 83.9
-   },
-   {
-    "flag": false,
-    "hit": 87.0,
-    "n": 54,
-    "name": "props nba Threes Made",
-    "said": 84.3
-   },
-   {
-    "flag": false,
-    "hit": 41.5,
-    "n": 53,
-    "name": "props nfl Anytime Touchdown Scorer",
-    "said": 42.2
-   },
-   {
-    "flag": false,
-    "hit": 84.0,
-    "n": 25,
-    "name": "props nfl Passing Yards",
-    "said": 82.4
-   },
-   {
-    "flag": false,
-    "hit": 82.8,
-    "n": 134,
-    "name": "props nfl Receiving Yards",
-    "said": 82.6
-   },
-   {
-    "flag": false,
-    "hit": 87.0,
-    "n": 69,
-    "name": "props nfl Receptions",
-    "said": 82.1
-   },
-   {
-    "flag": false,
-    "hit": 77.8,
-    "n": 36,
-    "name": "props nfl Rushing Yards",
-    "said": 82.3
-   },
-   {
-    "flag": false,
-    "hit": 79.9,
-    "n": 423,
-    "name": "props nhl Shots on Goal",
-    "said": 79.9
-   },
-   {
-    "flag": false,
-    "hit": 90.0,
-    "n": 20,
-    "name": "props ucl Goalkeeper Saves",
-    "said": 81.2
-   },
-   {
-    "flag": false,
-    "hit": 66.7,
-    "n": 24,
-    "name": "props ufc Winner",
-    "said": 65.1
-   },
-   {
-    "flag": false,
-    "hit": 68.4,
-    "n": 19,
-    "name": "props wnba Points",
-    "said": 82.5
-   },
-   {
-    "flag": false,
-    "hit": 100.0,
-    "n": 10,
-    "name": "locks nba under",
-    "said": 75.3
-   },
-   {
-    "flag": false,
-    "hit": 81.2,
-    "n": 16,
-    "name": "locks ncaaf under",
-    "said": 81.0
-   },
-   {
-    "flag": false,
-    "hit": 81.2,
-    "n": 16,
-    "name": "locks nhl under",
-    "said": 79.0
-   },
-   {
-    "flag": false,
-    "hit": 81.8,
-    "n": 11,
-    "name": "safe locks nba prop",
-    "said": 92.3
-   },
-   {
-    "flag": false,
-    "hit": 81.8,
-    "n": 11,
-    "name": "safe locks nhl side",
-    "said": 91.3
-   },
-   {
-    "flag": false,
-    "hit": 89.5,
-    "n": 19,
-    "name": "safe locks nhl under",
-    "said": 91.6
-   },
-   {
-    "flag": false,
-    "hit": 89.7,
-    "n": 29,
-    "name": "daily calls",
-    "said": 81.7
-   },
-   {
-    "flag": false,
-    "hit": 95.0,
-    "n": 40,
-    "name": "prop locks",
-    "said": 92.8
-   },
-   {
-    "flag": false,
-    "hit": 40.0,
-    "n": 150,
-    "name": "value bets",
-    "said": 43.3
-   },
-   {
-    "flag": false,
-    "hit": 53.8,
-    "n": 104,
-    "name": "kalshi maker bids (filled)",
-    "said": 52.7
-   }
-  ],
-  "calls": {
-   "ncaaf": {
-    "all_hit": 64.0,
-    "cutoff": null,
-    "games": 114,
-    "note": "fewer than 150 graded picks in the window",
-    "tested": false,
-    "window": [
-     "2026-10-06",
-     "2026-10-19"
-    ]
-   },
-   "nfl": {
-    "all_hit": 53.6,
-    "cutoff": null,
-    "games": 28,
-    "note": "fewer than 150 graded picks in the window",
-    "tested": false,
-    "window": [
-     "2026-10-06",
-     "2026-10-19"
-    ]
-   },
-   "nhl": {
-    "all_hit": 59.8,
-    "cutoff": null,
-    "games": 97,
-    "note": "fewer than 150 graded picks in the window",
-    "tested": false,
-    "window": [
-     "2026-10-06",
-     "2026-10-19"
-    ]
-   },
-   "soccer": {
-    "all_hit": 82.6,
-    "cutoff": null,
-    "games": 46,
-    "note": "fewer than 150 graded picks in the window",
-    "tested": false,
-    "window": [
-     "2026-10-06",
-     "2026-10-19"
-    ]
-   },
-   "ufc": {
-    "all_hit": 53.8,
-    "cutoff": null,
-    "games": 13,
-    "note": "fewer than 150 graded picks in the window",
-    "tested": false,
-    "window": [
-     "2026-10-06",
-     "2026-10-19"
-    ]
-   },
-   "wnba": {
-    "all_hit": 83.3,
-    "cutoff": null,
-    "games": 6,
-    "note": "fewer than 150 graded picks in the window",
-    "tested": false,
-    "window": [
-     "2026-10-06",
-     "2026-10-19"
-    ]
-   }
-  },
   "clv": {
    "avg": 0.77,
    "beat": 57.8,
@@ -4857,12 +4563,6 @@
   "strong": {
    "n": 0
   },
-  "stuck": [
-   [
-    "picks",
-    "ksa:401900898"
-   ]
-  ],
   "vs_market_14d": {
    "against": {
     "hit": 20.0,
@@ -4879,6 +4579,367 @@
     "roi": -0.2,
     "said": 68.7,
     "won": 436
+   }
+  }
+ },
+ "2026-10-26": {
+  "audit": [
+   {
+    "flag": false,
+    "hit": 80.0,
+    "n": 10,
+    "name": "props esp Goalkeeper Saves",
+    "said": 81.6
+   },
+   {
+    "flag": false,
+    "hit": 80.0,
+    "n": 15,
+    "name": "props fra Goalkeeper Saves",
+    "said": 73.8
+   },
+   {
+    "flag": false,
+    "hit": 83.3,
+    "n": 18,
+    "name": "props ita Goalkeeper Saves",
+    "said": 81.7
+   },
+   {
+    "flag": false,
+    "hit": 81.0,
+    "n": 21,
+    "name": "props mlb Hits + Runs + RBIs",
+    "said": 64.1
+   },
+   {
+    "flag": false,
+    "hit": 70.0,
+    "n": 10,
+    "name": "props mlb Strikeouts Thrown",
+    "said": 83.9
+   },
+   {
+    "flag": false,
+    "hit": 88.3,
+    "n": 94,
+    "name": "props nba Assists",
+    "said": 86.0
+   },
+   {
+    "flag": false,
+    "hit": 84.3,
+    "n": 108,
+    "name": "props nba Points",
+    "said": 85.0
+   },
+   {
+    "flag": false,
+    "hit": 86.3,
+    "n": 51,
+    "name": "props nba Pts + Ast",
+    "said": 85.0
+   },
+   {
+    "flag": true,
+    "hit": 74.5,
+    "n": 51,
+    "name": "props nba Pts + Reb",
+    "said": 84.9
+   },
+   {
+    "flag": false,
+    "hit": 87.0,
+    "n": 92,
+    "name": "props nba Pts + Reb + Ast",
+    "said": 85.0
+   },
+   {
+    "flag": false,
+    "hit": 84.9,
+    "n": 53,
+    "name": "props nba Reb + Ast",
+    "said": 84.6
+   },
+   {
+    "flag": false,
+    "hit": 87.3,
+    "n": 55,
+    "name": "props nba Rebounds",
+    "said": 83.9
+   },
+   {
+    "flag": false,
+    "hit": 87.0,
+    "n": 54,
+    "name": "props nba Threes Made",
+    "said": 84.3
+   },
+   {
+    "flag": false,
+    "hit": 41.5,
+    "n": 53,
+    "name": "props nfl Anytime Touchdown Scorer",
+    "said": 42.2
+   },
+   {
+    "flag": false,
+    "hit": 84.0,
+    "n": 25,
+    "name": "props nfl Passing Yards",
+    "said": 82.4
+   },
+   {
+    "flag": false,
+    "hit": 82.8,
+    "n": 134,
+    "name": "props nfl Receiving Yards",
+    "said": 82.6
+   },
+   {
+    "flag": false,
+    "hit": 87.0,
+    "n": 69,
+    "name": "props nfl Receptions",
+    "said": 82.1
+   },
+   {
+    "flag": false,
+    "hit": 77.8,
+    "n": 36,
+    "name": "props nfl Rushing Yards",
+    "said": 82.3
+   },
+   {
+    "flag": false,
+    "hit": 79.9,
+    "n": 423,
+    "name": "props nhl Shots on Goal",
+    "said": 79.9
+   },
+   {
+    "flag": false,
+    "hit": 90.0,
+    "n": 20,
+    "name": "props ucl Goalkeeper Saves",
+    "said": 81.2
+   },
+   {
+    "flag": false,
+    "hit": 66.7,
+    "n": 24,
+    "name": "props ufc Winner",
+    "said": 65.1
+   },
+   {
+    "flag": false,
+    "hit": 68.4,
+    "n": 19,
+    "name": "props wnba Points",
+    "said": 82.5
+   },
+   {
+    "flag": false,
+    "hit": 100.0,
+    "n": 10,
+    "name": "locks nba under",
+    "said": 75.3
+   },
+   {
+    "flag": false,
+    "hit": 81.2,
+    "n": 16,
+    "name": "locks ncaaf under",
+    "said": 81.0
+   },
+   {
+    "flag": false,
+    "hit": 81.2,
+    "n": 16,
+    "name": "locks nhl under",
+    "said": 79.0
+   },
+   {
+    "flag": false,
+    "hit": 81.8,
+    "n": 11,
+    "name": "safe locks nba prop",
+    "said": 92.3
+   },
+   {
+    "flag": false,
+    "hit": 81.8,
+    "n": 11,
+    "name": "safe locks nhl side",
+    "said": 91.3
+   },
+   {
+    "flag": false,
+    "hit": 89.5,
+    "n": 19,
+    "name": "safe locks nhl under",
+    "said": 91.6
+   },
+   {
+    "flag": false,
+    "hit": 89.7,
+    "n": 29,
+    "name": "daily calls",
+    "said": 81.7
+   },
+   {
+    "flag": false,
+    "hit": 95.0,
+    "n": 40,
+    "name": "prop locks",
+    "said": 92.8
+   },
+   {
+    "flag": false,
+    "hit": 40.0,
+    "n": 150,
+    "name": "value bets",
+    "said": 43.3
+   },
+   {
+    "flag": false,
+    "hit": 53.8,
+    "n": 104,
+    "name": "kalshi maker bids (filled)",
+    "said": 52.7
+   }
+  ],
+  "calls": {
+   "ncaaf": {
+    "all_hit": 64.0,
+    "cutoff": null,
+    "games": 114,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
+   },
+   "nfl": {
+    "all_hit": 53.6,
+    "cutoff": null,
+    "games": 28,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
+   },
+   "nhl": {
+    "all_hit": 59.8,
+    "cutoff": null,
+    "games": 97,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
+   },
+   "soccer": {
+    "all_hit": 82.6,
+    "cutoff": null,
+    "games": 46,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
+   },
+   "ufc": {
+    "all_hit": 53.8,
+    "cutoff": null,
+    "games": 13,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
+   },
+   "wnba": {
+    "all_hit": 83.3,
+    "cutoff": null,
+    "games": 6,
+    "note": "fewer than 150 graded picks in the window",
+    "tested": false,
+    "window": [
+     "2026-10-06",
+     "2026-10-19"
+    ]
+   }
+  },
+  "clv": {
+   "avg": null,
+   "beat": null,
+   "n": 0
+  },
+  "day": "2026-10-26",
+  "leaks_14d": [],
+  "locks": {
+   "lost": [],
+   "n": 0,
+   "open": 0,
+   "plays": {},
+   "won": 0
+  },
+  "losses": [],
+  "lottery": [],
+  "picks": {
+   "n": 0
+  },
+  "picks_by_league": {},
+  "props": {
+   "fair": {
+    "n": 834,
+    "said_fair": 86.8,
+    "said_price": 87.4,
+    "won": 697
+   },
+   "n": 0,
+   "said": null,
+   "won": 0
+  },
+  "safe_locks": {
+   "lost": [],
+   "n": 0,
+   "open": 0,
+   "plays": {},
+   "won": 0
+  },
+  "strong": {
+   "n": 0
+  },
+  "stuck": [
+   [
+    "picks",
+    "ksa:401900898"
+   ]
+  ],
+  "vs_market_14d": {
+   "against": {
+    "hit": 22.2,
+    "lost": 7,
+    "n": 9,
+    "roi": -53.1,
+    "said": 54.5,
+    "won": 2
+   },
+   "agree": {
+    "hit": 71.8,
+    "lost": 167,
+    "n": 593,
+    "roi": -0.3,
+    "said": 69.0,
+    "won": 426
    }
   },
   "weights": {
