@@ -1,16 +1,16 @@
 # Review 2026-10-26
 
-Picks 15-5 (75.0% vs 68.8% claimed, ROI +2.0%).
+Picks 16-5 (76.2% vs 69.5% claimed, ROI +2.7%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
 TRAILING props nba Pts + Reb: 74.5% hit vs 84.9% stated on 51
 TRAILING safe locks nba prop: 75.0% hit vs 92.4% stated on 12
-Closing line value: +0.48 points on 20 picks; beat the close on 45.0%.
+Closing line value: +0.61 points on 21 picks; beat the close on 47.6%.
 - LOST arg Estudiantes de La Plata at 67%: margin 2 · the book had my side favoured too · called at 67%
 - LOST bra Coritiba at 68%: margin 1 · the book had my side favoured too · called at 68%
 - LOST den F.C. København at 67%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67%
 - LOST nba Miami Heat at 70%: margin 4 · the book had my side favoured too · called at 70%
 - LOST nhl New York Rangers at 54%: margin 3 · the book had my side favoured too · called at 54%
-With the market 72.0% (615); against it 22.2% (9).
+With the market 72.1% (616); against it 22.2% (9).
 Locks 3/11 won, 6 open; Best play top 3 (51%) open; lost: Under 247.5 points (Minnesota Timberwolves at Cleveland Cavaliers) Minnesota Timberwolves 125 - Cleveland Cavaliers 127; Over 214.5 points (Washington Wizards at Charlotte Hornets) Washington Wizards 103 - Charlotte Hornets 110.
 Safe Locks 2/11 won, 7 open; Winners parlay top 3 (82%) lost; Best play top 8 (55%) lost; lost: Davion Mitchell: 4+ Assists (DAL @ MIA) 2; Los Angeles Kings under 5.5 goals (Los Angeles Kings at New York Rangers) Los Angeles Kings 6 - New York Rangers 3.
 Lottery 10k: lost (4/13 legs won, killed by New York Rangers to win)
