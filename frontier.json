@@ -628261,6 +628261,87 @@
       "start": "2026-10-28T00:00Z",
       "starters": [],
       "t": "2026-10-27T13:27:25+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "STL",
+        "Ross Johnston",
+        "Injured Reserve",
+        "LW"
+       ],
+       [
+        "STL",
+        "Torey Krug",
+        "Injured Reserve",
+        "D"
+       ],
+       [
+        "STL",
+        "Dillon Dube",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "STL",
+        "Alexey Toropchenko",
+        "Injured Reserve",
+        "RW"
+       ],
+       [
+        "STL",
+        "Tyler Tucker",
+        "Injured Reserve",
+        "D"
+       ],
+       [
+        "MTL",
+        "Nick Suzuki",
+        "Out",
+        "C"
+       ],
+       [
+        "MTL",
+        "Sam Montembeault",
+        "Injured Reserve",
+        "G"
+       ],
+       [
+        "MTL",
+        "Ivan Demidov",
+        "Injured Reserve",
+        "RW"
+       ],
+       [
+        "MTL",
+        "Bryce Pickford",
+        "Injured Reserve",
+        "D"
+       ],
+       [
+        "MTL",
+        "Lucas Condotta",
+        "Injured Reserve",
+        "LW"
+       ]
+      ],
+      "probables": {
+       "MTL": [
+        [
+         "Jacob Fowler",
+         "probableStartingGoalie"
+        ]
+       ],
+       "STL": [
+        [
+         "Jordan Binnington",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-28T00:00Z",
+      "starters": [],
+      "t": "2026-10-27T16:19:44+00:00"
      }
     ],
     "nhl:401892589": [
@@ -631504,6 +631585,11 @@
       "probables": {},
       "start": "2026-10-27T16:20Z",
       "t": "2026-10-27T15:59:14+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-27T16:30Z",
+      "t": "2026-10-27T16:19:44+00:00"
      }
     ],
     "wta:185839": [
@@ -670153,142 +670239,6 @@
        0.75,
        [
         "Argentinos Juniors or draw",
-        "Over 46.5 points",
-        "Over 207.5 points",
-        "Philadelphia Flyers +4.5"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Chicago Blackhawks +1.5",
-        "Winnipeg Jets +1.5"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Argentinos Juniors or draw",
-        "Delaware Blue Hens +10.5",
-        "Over 221.5 points",
-        "Over 204.5 points",
-        "Under 244.5 points"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Under 245.5 points",
-        "Under 238.5 points",
-        "Over 5.5 runs"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Winnipeg Jets +1.5",
-        "New York Islanders +1.5",
-        "Chicago Blackhawks +1.5",
-        "Over 50.5 points",
-        "Argentinos Juniors or draw"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-27T05:35:55+00:00"
-    },
-    {
-     "policy": "d6438a7a",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Boston Celtics to win",
-        "Delaware Blue Hens +13.5",
-        "Under 236.5 points",
-        "Over 219.5 points",
-        "AS Roma or draw"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Argentinos Juniors or draw",
         "Under 69.5 points",
         "Under 251.5 points",
         "Philadelphia Flyers +4.5"
@@ -678261,6 +678211,142 @@
       ]
      ],
      "t": "2026-10-27T16:14:50+00:00"
+    },
+    {
+     "policy": "d6438a7a",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Boston Celtics to win",
+        "Borussia M\u00f6nchengladbach or draw",
+        "Delaware Blue Hens +15.5",
+        "Over 216.5 points",
+        "SV Elversberg or draw"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Argentinos Juniors or draw",
+        "Over 46.5 points",
+        "Over 208.5 points",
+        "Anaheim Ducks +3.5"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Under 240.5 points",
+        "Over 50.5 points"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Argentinos Juniors or draw",
+        "Under 69.5 points",
+        "Mainz or draw",
+        "Over 208.5 points",
+        "Under 246.5 points"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Under 240.5 points",
+        "Over 5.5 runs",
+        "Florida Panthers over 2.5 goals"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Under 240.5 points",
+        "Delaware Blue Hens under 33.5 points",
+        "Over 225.5 points",
+        "Over 210.5 points",
+        "Boston Celtics to win"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-27T16:19:37+00:00"
     }
    ]
   }
