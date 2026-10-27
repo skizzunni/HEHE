@@ -4,32 +4,32 @@
   "changed": false,
   "current": {
    "first": {
-    "hit": 73.0,
-    "n": 111,
-    "roi": -0.97
+    "hit": 73.2,
+    "n": 112,
+    "roi": 0.51
    },
    "rule": {
     "min_dec": 1.0,
     "per_sport": 2
    },
    "second": {
-    "hit": 71.1,
-    "n": 128,
-    "roi": 0.64
+    "hit": 71.3,
+    "n": 129,
+    "roi": -0.29
    }
   },
   "dates": [
    "2026-08-31",
-   "2026-10-26"
+   "2026-10-27"
   ],
-  "days": 57,
-  "split": "2026-09-28",
+  "days": 58,
+  "split": "2026-09-29",
   "table": [
    {
     "first": {
-     "hit": 76.9,
-     "n": 65,
-     "roi": 2.45
+     "hit": 77.3,
+     "n": 66,
+     "roi": 4.9
     },
     "rule": {
      "min_dec": 1.0,
@@ -38,14 +38,14 @@
     "second": {
      "hit": 66.7,
      "n": 90,
-     "roi": -6.56
+     "roi": -8.18
     }
    },
    {
     "first": {
-     "hit": 67.7,
-     "n": 65,
-     "roi": -4.36
+     "hit": 68.2,
+     "n": 66,
+     "roi": -1.81
     },
     "rule": {
      "min_dec": 1.15,
@@ -54,103 +54,103 @@
     "second": {
      "hit": 65.6,
      "n": 90,
-     "roi": -6.2
+     "roi": -7.82
     }
    },
    {
     "first": {
-     "hit": 73.0,
-     "n": 111,
-     "roi": -0.97
+     "hit": 73.2,
+     "n": 112,
+     "roi": 0.51
     },
     "rule": {
      "min_dec": 1.0,
      "per_sport": 2
     },
     "second": {
-     "hit": 71.1,
-     "n": 128,
-     "roi": 0.64
-    }
-   },
-   {
-    "first": {
-     "hit": 66.1,
-     "n": 109,
-     "roi": -3.62
-    },
-    "rule": {
-     "min_dec": 1.15,
-     "per_sport": 2
-    },
-    "second": {
-     "hit": 68.0,
-     "n": 128,
-     "roi": -1.08
-    }
-   },
-   {
-    "first": {
-     "hit": 72.1,
+     "hit": 71.3,
      "n": 129,
-     "roi": -1.54
+     "roi": -0.29
+    }
+   },
+   {
+    "first": {
+     "hit": 66.4,
+     "n": 110,
+     "roi": -2.1
     },
     "rule": {
-     "min_dec": 1.0,
-     "per_sport": 3
+     "min_dec": 1.15,
+     "per_sport": 2
     },
     "second": {
+     "hit": 68.2,
+     "n": 129,
+     "roi": -2.0
+    }
+   },
+   {
+    "first": {
      "hit": 72.3,
-     "n": 137,
-     "roi": 1.32
+     "n": 130,
+     "roi": -0.27
+    },
+    "rule": {
+     "min_dec": 1.0,
+     "per_sport": 3
+    },
+    "second": {
+     "hit": 72.5,
+     "n": 138,
+     "roi": 0.44
     }
    },
    {
     "first": {
-     "hit": 64.8,
-     "n": 128,
-     "roi": -4.46
+     "hit": 65.1,
+     "n": 129,
+     "roi": -3.16
     },
     "rule": {
      "min_dec": 1.15,
      "per_sport": 3
     },
     "second": {
-     "hit": 67.9,
-     "n": 137,
-     "roi": -1.64
+     "hit": 68.1,
+     "n": 138,
+     "roi": -2.5
     }
    },
    {
     "first": {
-     "hit": 70.7,
-     "n": 140,
-     "roi": -3.74
+     "hit": 70.9,
+     "n": 141,
+     "roi": -2.55
     },
     "rule": {
      "min_dec": 1.0,
      "per_sport": null
     },
     "second": {
-     "hit": 71.9,
-     "n": 139,
-     "roi": -1.11
+     "hit": 72.1,
+     "n": 140,
+     "roi": -1.96
     }
    },
    {
     "first": {
-     "hit": 63.6,
-     "n": 140,
-     "roi": -6.03
+     "hit": 63.8,
+     "n": 141,
+     "roi": -4.82
     },
     "rule": {
      "min_dec": 1.15,
      "per_sport": null
     },
     "second": {
-     "hit": 68.3,
-     "n": 139,
-     "roi": -2.26
+     "hit": 68.6,
+     "n": 140,
+     "roi": -3.1
     }
    }
   ]
@@ -194,12 +194,12 @@
   },
   "soccer": {
    "benched": false,
-   "hit": 79.4,
+   "hit": 79.5,
    "implied": 77.7,
-   "n": 320,
-   "roi": 2.5,
-   "upper95": 83.4,
-   "won": 254
+   "n": 322,
+   "roi": 2.6,
+   "upper95": 83.6,
+   "won": 256
   },
   "ufc": {
    "benched": false,
