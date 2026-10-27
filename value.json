@@ -72,6 +72,23 @@
    "tip": "9:00 AM",
    "venue": "FanDuel"
   },
+  "dfb:401917030|away|FanDuel": {
+   "dec": 7.5,
+   "ev": 0.0224,
+   "fair": 0.1363,
+   "fair_source": "DraftKings (Shin)",
+   "id": "dfb:401917030",
+   "kind": "value",
+   "league": "dfb",
+   "match": "SVW @ DOR",
+   "price": "+650",
+   "seen": "2026-10-27T18:38:08+00:00",
+   "side": "away",
+   "start": "2026-10-27T19:45Z",
+   "team": "Werder Bremen",
+   "tip": "3:45 PM",
+   "venue": "FanDuel"
+  },
   "ecu:401921334|away|FanDuel": {
    "dec": 4.8,
    "ev": 0.0297,
@@ -4072,6 +4089,26 @@
    "seen": "2026-10-25T12:18:23+00:00",
    "status": "lost",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|dfb:401917030:away": {
+   "ev": 0.0223,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0224,
+     "fair": 0.1363,
+     "id": "dfb:401917030",
+     "price": "+650",
+     "side": "away",
+     "spec": null,
+     "team": "Werder Bremen"
+    }
+   ],
+   "payout": 7.5,
+   "prob": 0.1363,
+   "seen": "2026-10-27T18:38:08+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ecu:401921334:away": {
