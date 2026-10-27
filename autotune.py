@@ -179,10 +179,16 @@ VALUE_MIN = 30
 
 
 def value_slice(f):
-    """'<venue> longshot|middle|favourite' for a value bet, by its payout."""
+    """'<venue> longshot|middle|favourite, confirmed|single' for a value bet:
+    its payout band, and whether its fair chance was confirmed by a second,
+    independent reference (Polymarket's liquid price, or a source proven
+    better). 2026-10-27: single-source bets (DraftKings' Shin fair alone)
+    returned -17.6% on 82, confirmed ones +0.8% on 78."""
     imp = 1 / f["dec"] if f.get("dec") else 0
     band = "longshot" if imp < 0.30 else "favourite" if imp >= 0.60 else "middle"
-    return f'{f.get("venue")} {band}'
+    src = f.get("fair_source") or ""
+    conf = "confirmed" if ("Polymarket" in src or "proven" in src) else "single"
+    return f'{f.get("venue")} {band}, {conf}'
 
 
 def value_bench(finds):

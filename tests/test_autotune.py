@@ -64,11 +64,18 @@ class ValueBench(unittest.TestCase):
     def test_slice_that_cannot_break_even_is_benched(self):
         # 40 longshots at 6.0 (break-even 16.7%) that won 1: best case under break-even
         v = A.value_bench(self.finds(40, 1, 6.0))
-        self.assertTrue(v["FanDuel longshot"]["benched"])
+        self.assertTrue(v["FanDuel longshot, single"]["benched"])
 
     def test_profitable_or_small_slices_stay(self):
-        self.assertFalse(A.value_bench(self.finds(40, 22, 2.0))["FanDuel middle"]["benched"])
-        self.assertFalse(A.value_bench(self.finds(A.VALUE_MIN - 1, 0, 6.0))["FanDuel longshot"]["benched"])
+        self.assertFalse(A.value_bench(self.finds(40, 22, 2.0))["FanDuel middle, single"]["benched"])
+        self.assertFalse(A.value_bench(self.finds(A.VALUE_MIN - 1, 0, 6.0))["FanDuel longshot, single"]["benched"])
+
+    def test_confirmed_and_single_are_judged_apart(self):
+        fs = [dict(f, fair_source="DraftKings (Shin) + Polymarket") for f in self.finds(40, 8, 6.0)]
+        fs += self.finds(40, 1, 6.0)
+        v = A.value_bench(fs)
+        self.assertFalse(v["FanDuel longshot, confirmed"]["benched"])     # 8 of 40 at 6.0: can still pay
+        self.assertTrue(v["FanDuel longshot, single"]["benched"])
 
     def test_scan_leaves_out_benched_slices(self):
         import value_bets
@@ -79,7 +86,7 @@ class ValueBench(unittest.TestCase):
              mock.patch("freshness.can_call", lambda r, now: True), \
              mock.patch("freshness.parse", lambda s: __import__("datetime").datetime(2099, 1, 1,
                         tzinfo=__import__("datetime").timezone.utc)), \
-             mock.patch.object(A, "value_benched", lambda path=None: {"FanDuel longshot"}):
+             mock.patch.object(A, "value_benched", lambda path=None: {"FanDuel longshot, single"}):
             v, _ = value_bets.scan_all(rows)
         self.assertEqual([x["dec"] for x in v], [2.0])
 

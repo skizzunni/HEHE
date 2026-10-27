@@ -3450,3 +3450,20 @@ priced -1000 or shorter. It needs 100 of them, is bounded to 80-97%, and is
 Prop Locks, Locks, Safe Locks, the Lock of the day and tickets. In effect,
 a -2000 prop now ranks with a game line around -650, not above every game
 line. If heavy props start winning more, the cap rises with them.
+
+## Value bets judged by confirmation too (2026-10-27)
+
+After 164 graded value bets the record is -7.6% per $1 against +2.7%
+expected (40.9% won against 43.9% fair, -0.8 SE). That is not yet proof of
+anything, but the split by where the fair chance came from is wide:
+
+| fair chance from | N | won | fair | ROI |
+|---|---|---|---|---|
+| DraftKings Shin alone | 82 | 32.9% | 38.4% | -17.6% |
+| confirmed by Polymarket | 78 | 47.4% | 49.1% | +0.8% |
+
+The value-bet slices in `autotune.py` are now venue x payout band x
+confirmed/single, so the automatic bench judges single-source bets apart
+from confirmed ones. The worst slice, FanDuel longshots on a single
+source, has won 2 of 21 against a 19.5% break-even. It needs 30 graded
+bets to be benched, and will bench itself if that continues.

@@ -228,59 +228,113 @@
  "updated": "2026-10-26",
  "value_benched": [],
  "value_slices": {
-  "FanDuel favourite": {
+  "FanDuel favourite, confirmed": {
    "benched": false,
-   "breakeven": 67.0,
-   "hit": 68.8,
-   "n": 16,
-   "roi": 3.8,
-   "upper95": 85.8,
+   "breakeven": 67.4,
+   "hit": 63.6,
+   "n": 11,
+   "roi": -4.6,
+   "upper95": 84.8,
+   "won": 7
+  },
+  "FanDuel favourite, single": {
+   "benched": false,
+   "breakeven": 66.0,
+   "hit": 80.0,
+   "n": 5,
+   "roi": 22.3,
+   "upper95": 96.4,
+   "won": 4
+  },
+  "FanDuel longshot, confirmed": {
+   "benched": false,
+   "breakeven": 23.5,
+   "hit": 60.0,
+   "n": 5,
+   "roi": 118.0,
+   "upper95": 88.2,
+   "won": 3
+  },
+  "FanDuel longshot, single": {
+   "benched": false,
+   "breakeven": 19.5,
+   "hit": 9.5,
+   "n": 21,
+   "roi": -50.0,
+   "upper95": 28.9,
+   "won": 2
+  },
+  "FanDuel middle, confirmed": {
+   "benched": false,
+   "breakeven": 49.1,
+   "hit": 45.8,
+   "n": 24,
+   "roi": -6.5,
+   "upper95": 64.9,
    "won": 11
   },
-  "FanDuel longshot": {
+  "FanDuel middle, single": {
    "benched": false,
-   "breakeven": 20.3,
-   "hit": 19.2,
-   "n": 26,
-   "roi": -17.7,
-   "upper95": 37.9,
-   "won": 5
+   "breakeven": 47.2,
+   "hit": 47.4,
+   "n": 19,
+   "roi": -6.0,
+   "upper95": 68.3,
+   "won": 9
   },
-  "FanDuel middle": {
+  "Kalshi favourite, confirmed": {
    "benched": false,
-   "breakeven": 48.3,
-   "hit": 46.5,
-   "n": 43,
-   "roi": -6.3,
-   "upper95": 61.1,
-   "won": 20
-  },
-  "Kalshi favourite": {
-   "benched": false,
-   "breakeven": 68.5,
+   "breakeven": 76.3,
    "hit": 100.0,
-   "n": 2,
-   "roi": 47.9,
+   "n": 1,
+   "roi": 31.0,
    "upper95": 100.0,
+   "won": 1
+  },
+  "Kalshi favourite, single": {
+   "benched": false,
+   "breakeven": 60.7,
+   "hit": 100.0,
+   "n": 1,
+   "roi": 64.7,
+   "upper95": 100.0,
+   "won": 1
+  },
+  "Kalshi longshot, confirmed": {
+   "benched": false,
+   "breakeven": 18.0,
+   "hit": 0.0,
+   "n": 3,
+   "roi": -100.0,
+   "upper95": 56.2,
+   "won": 0
+  },
+  "Kalshi longshot, single": {
+   "benched": false,
+   "breakeven": 14.3,
+   "hit": 22.2,
+   "n": 9,
+   "roi": 24.5,
+   "upper95": 54.7,
    "won": 2
   },
-  "Kalshi longshot": {
+  "Kalshi middle, confirmed": {
    "benched": false,
-   "breakeven": 15.2,
-   "hit": 16.7,
-   "n": 12,
-   "roi": -6.6,
-   "upper95": 44.8,
-   "won": 2
+   "breakeven": 46.6,
+   "hit": 45.7,
+   "n": 35,
+   "roi": 0.1,
+   "upper95": 61.8,
+   "won": 16
   },
-  "Kalshi middle": {
+  "Kalshi middle, single": {
    "benched": false,
-   "breakeven": 47.0,
-   "hit": 42.4,
-   "n": 66,
-   "roi": -8.3,
-   "upper95": 54.4,
-   "won": 28
+   "breakeven": 47.5,
+   "hit": 38.7,
+   "n": 31,
+   "roi": -17.7,
+   "upper95": 56.2,
+   "won": 12
   }
  }
 }
