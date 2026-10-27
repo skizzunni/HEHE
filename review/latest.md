@@ -1,7 +1,6 @@
 # Review 2026-10-26
 
 Picks 19-7 (73.1% vs 68.5% claimed, ROI -1.5%).
-STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
 TRAILING props nba Pts + Reb: 74.5% hit vs 84.9% stated on 51
 TRAILING safe locks nba prop: 71.4% hit vs 92.6% stated on 14
 Closing line value: +0.27 points on 26 picks; beat the close on 46.2%.
