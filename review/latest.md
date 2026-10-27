@@ -1,11 +1,12 @@
 # Review 2026-10-27
 
-Picks 4-1 (80.0% vs 76.8% claimed, ROI -1.2%).
+Picks 4-2 (66.7% vs 74.8% claimed, ROI -17.7%).
 TRAILING props nba Pts + Reb: 74.5% hit vs 84.9% stated on 51
 TRAILING safe locks nba prop: 73.3% hit vs 92.7% stated on 15
-Closing line value: -1.43 points on 5 picks; beat the close on 20.0%.
+Closing line value: -2.7 points on 6 picks; beat the close on 16.7%.
+- LOST afc Al Hilal at 65%: margin 2 · the book had my side favoured too · called at 65%
 - LOST dfb Mainz at 77%: margin 2 · the book had my side favoured too · called at 77%
-With the market 71.8% (628); against it 12.5% (8).
+With the market 71.7% (629); against it 12.5% (8).
 Locks 0/11 won, 11 open; Best play top 3 (51%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (53%) open.
 Lottery 10k: open (0/11 legs won)

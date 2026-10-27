@@ -5261,9 +5261,9 @@
    }
   },
   "clv": {
-   "avg": -1.43,
-   "beat": 20.0,
-   "n": 5
+   "avg": -2.7,
+   "beat": 16.7,
+   "n": 6
   },
   "day": "2026-10-27",
   "leaks_14d": [],
@@ -5281,6 +5281,14 @@
    "won": 0
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "afc",
+    "pick": "Al Hilal",
+    "price": "-220",
+    "said": 65,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 65%"
+   },
    {
     "against_market": false,
     "league": "dfb",
@@ -5341,14 +5349,22 @@
    }
   ],
   "picks": {
-   "hit": 80.0,
-   "lost": 1,
-   "n": 5,
-   "roi": -1.2,
-   "said": 76.8,
+   "hit": 66.7,
+   "lost": 2,
+   "n": 6,
+   "roi": -17.7,
+   "said": 74.8,
    "won": 4
   },
   "picks_by_league": {
+   "afc": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 65.0,
+    "won": 0
+   },
    "cdr": {
     "hit": 100.0,
     "lost": 0,
@@ -5417,10 +5433,10 @@
     "won": 1
    },
    "agree": {
-    "hit": 71.8,
-    "lost": 177,
-    "n": 628,
-    "roi": -0.6,
+    "hit": 71.7,
+    "lost": 178,
+    "n": 629,
+    "roi": -0.8,
     "said": 69.0,
     "won": 451
    }
