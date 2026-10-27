@@ -4713,8 +4713,8 @@
    },
    {
     "flag": false,
-    "hit": 79.7,
-    "n": 439,
+    "hit": 79.9,
+    "n": 448,
     "name": "props nhl Shots on Goal",
     "said": 79.9
    },
@@ -4783,8 +4783,8 @@
    },
    {
     "flag": false,
-    "hit": 85.7,
-    "n": 21,
+    "hit": 86.4,
+    "n": 22,
     "name": "safe locks nhl under",
     "said": 91.6
    },
@@ -4804,10 +4804,10 @@
    },
    {
     "flag": false,
-    "hit": 41.2,
-    "n": 165,
+    "hit": 41.9,
+    "n": 167,
     "name": "value bets",
-    "said": 44.1
+    "said": 44.2
    },
    {
     "flag": false,
@@ -4886,9 +4886,9 @@
    }
   },
   "clv": {
-   "avg": 0.27,
-   "beat": 46.2,
-   "n": 26
+   "avg": 0.26,
+   "beat": 44.4,
+   "n": 27
   },
   "day": "2026-10-26",
   "leaks_14d": [],
@@ -4959,6 +4959,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "Toronto Maple Leafs",
+    "price": "-135",
+    "said": 55,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 55%"
+   },
+   {
+    "against_market": false,
     "league": "wnba",
     "pick": "Atlanta Dream",
     "price": "-115",
@@ -4976,7 +4984,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 6
+    "won": 8
    },
    {
     "killed_by": [
@@ -4988,18 +4996,19 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+25",
-    "won": 6
+    "won": 7
    },
    {
     "killed_by": [
      "Over 238.5 points",
-     "New York Rangers to win"
+     "New York Rangers to win",
+     "Under 42.5 points"
     ],
     "legs": 13,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+50",
-    "won": 6
+    "won": 7
    },
    {
     "killed_by": [
@@ -5010,7 +5019,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+100",
-    "won": 7
+    "won": 8
    },
    {
     "killed_by": [
@@ -5021,15 +5030,15 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 6
+    "won": 7
    }
   ],
   "picks": {
-   "hit": 73.1,
-   "lost": 7,
-   "n": 26,
-   "roi": -1.5,
-   "said": 68.5,
+   "hit": 70.4,
+   "lost": 8,
+   "n": 27,
+   "roi": -5.1,
+   "said": 68.0,
    "won": 19
   },
   "picks_by_league": {
@@ -5131,10 +5140,10 @@
    },
    "nhl": {
     "hit": 0.0,
-    "lost": 1,
-    "n": 1,
+    "lost": 2,
+    "n": 2,
     "roi": -100.0,
-    "said": 54.0,
+    "said": 54.5,
     "won": 0
    },
    "por": {
@@ -5169,9 +5178,9 @@
     "said_price": 87.3,
     "won": 790
    },
-   "n": 128,
-   "said": 83.5,
-   "won": 112
+   "n": 137,
+   "said": 83.4,
+   "won": 120
   },
   "safe_locks": {
    "lost": [
@@ -5180,7 +5189,7 @@
     "Los Angeles Kings under 5.5 goals (Los Angeles Kings at New York Rangers) Los Angeles Kings 6 - New York Rangers 3"
    ],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      8,
@@ -5193,7 +5202,7 @@
      "lost"
     ]
    },
-   "won": 3
+   "won": 4
   },
   "strong": {
    "n": 0
@@ -5209,10 +5218,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 72.0,
-    "lost": 174,
-    "n": 621,
-    "roi": -0.2,
+    "hit": 71.9,
+    "lost": 175,
+    "n": 622,
+    "roi": -0.4,
     "said": 68.9,
     "won": 447
    }
@@ -5239,10 +5248,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6586,
-    "market_only": 0.6586,
-    "model_40": 0.6681,
-    "n": 68,
+    "logloss": 0.6607,
+    "market_only": 0.6607,
+    "model_40": 0.6701,
+    "n": 69,
     "weight": 0.0
    }
   }

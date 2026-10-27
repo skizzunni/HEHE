@@ -11141,12 +11141,13 @@
    "match": "Toronto Maple Leafs at Calgary Flames",
    "p": 0.8958,
    "p_model": 0.8903,
+   "score": "Toronto Maple Leafs 2 - Calgary Flames 5",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Calgary Flames"
    },
-   "status": "open"
+   "status": "lost"
   },
   "nhl:401892583|Over 2.5 goals": {
    "away": "Toronto Maple Leafs",
@@ -11158,11 +11159,12 @@
    "match": "Toronto Maple Leafs at Calgary Flames",
    "p": 0.9741,
    "p_model": 0.9727,
+   "score": "Toronto Maple Leafs 2 - Calgary Flames 5",
    "spec": {
     "line": 2.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892584|Over 2.5 goals": {
    "away": "Detroit Red Wings",
@@ -18749,7 +18751,7 @@
    "logged": "2026-10-26T00:03",
    "n": 3,
    "prob": 0.731,
-   "status": "open"
+   "status": "lost"
   },
   "20261026:4:0": {
    "fair": 1.27,
