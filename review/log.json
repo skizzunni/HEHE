@@ -4531,10 +4531,10 @@
   },
   "props": {
    "fair": {
-    "n": 947,
+    "n": 961,
     "said_fair": 86.8,
-    "said_price": 87.2,
-    "won": 799
+    "said_price": 87.1,
+    "won": 810
    },
    "n": 303,
    "said": 79.7,
@@ -4622,22 +4622,22 @@
    },
    {
     "flag": false,
-    "hit": 87.4,
-    "n": 119,
+    "hit": 87.9,
+    "n": 124,
     "name": "props nba Assists",
-    "said": 85.9
+    "said": 86.0
    },
    {
     "flag": false,
-    "hit": 86.1,
-    "n": 122,
+    "hit": 85.7,
+    "n": 126,
     "name": "props nba Points",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 87.5,
-    "n": 64,
+    "hit": 87.7,
+    "n": 65,
     "name": "props nba Pts + Ast",
     "said": 85.0
    },
@@ -4650,22 +4650,22 @@
    },
    {
     "flag": false,
-    "hit": 86.9,
-    "n": 107,
+    "hit": 87.0,
+    "n": 108,
     "name": "props nba Pts + Reb + Ast",
     "said": 85.0
    },
    {
     "flag": false,
-    "hit": 86.2,
-    "n": 65,
+    "hit": 86.4,
+    "n": 66,
     "name": "props nba Reb + Ast",
     "said": 84.1
    },
    {
     "flag": false,
-    "hit": 87.7,
-    "n": 65,
+    "hit": 85.3,
+    "n": 68,
     "name": "props nba Rebounds",
     "said": 84.1
    },
@@ -4748,6 +4748,13 @@
    },
    {
     "flag": false,
+    "hit": 50.0,
+    "n": 10,
+    "name": "locks nba over",
+    "said": 75.3
+   },
+   {
+    "flag": false,
     "hit": 92.3,
     "n": 13,
     "name": "locks nba under",
@@ -4769,10 +4776,10 @@
    },
    {
     "flag": true,
-    "hit": 71.4,
-    "n": 14,
+    "hit": 73.3,
+    "n": 15,
     "name": "safe locks nba prop",
-    "said": 92.6
+    "said": 92.7
    },
    {
     "flag": false,
@@ -4797,10 +4804,10 @@
    },
    {
     "flag": false,
-    "hit": 95.7,
-    "n": 47,
+    "hit": 95.8,
+    "n": 48,
     "name": "prop locks",
-    "said": 93.2
+    "said": 93.3
    },
    {
     "flag": false,
@@ -4886,19 +4893,20 @@
    }
   },
   "clv": {
-   "avg": 0.28,
-   "beat": 46.4,
-   "n": 28
+   "avg": 0.27,
+   "beat": 44.8,
+   "n": 29
   },
   "day": "2026-10-26",
   "leaks_14d": [],
   "locks": {
    "lost": [
     "Under 247.5 points (Minnesota Timberwolves at Cleveland Cavaliers) Minnesota Timberwolves 125 - Cleveland Cavaliers 127",
+    "Over 224.5 points (Memphis Grizzlies at Utah Jazz) Memphis Grizzlies 110 - Utah Jazz 105",
     "Over 214.5 points (Washington Wizards at Charlotte Hornets) Washington Wizards 103 - Charlotte Hornets 110"
    ],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      3,
@@ -4984,7 +4992,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 8
+    "won": 9
    },
    {
     "killed_by": [
@@ -4996,7 +5004,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+25",
-    "won": 7
+    "won": 8
    },
    {
     "killed_by": [
@@ -5008,7 +5016,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+50",
-    "won": 7
+    "won": 8
    },
    {
     "killed_by": [
@@ -5019,7 +5027,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+100",
-    "won": 8
+    "won": 9
    },
    {
     "killed_by": [
@@ -5030,16 +5038,16 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 7
+    "won": 8
    }
   ],
   "picks": {
-   "hit": 71.4,
+   "hit": 72.4,
    "lost": 8,
-   "n": 28,
-   "roi": -3.4,
-   "said": 68.0,
-   "won": 20
+   "n": 29,
+   "roi": -0.2,
+   "said": 67.3,
+   "won": 21
   },
   "picks_by_league": {
    "afc": {
@@ -5131,12 +5139,12 @@
     "won": 1
    },
    "nba": {
-    "hit": 71.4,
+    "hit": 75.0,
     "lost": 2,
-    "n": 7,
-    "roi": 4.4,
-    "said": 66.4,
-    "won": 5
+    "n": 8,
+    "roi": 15.1,
+    "said": 64.4,
+    "won": 6
    },
    "nfl": {
     "hit": 100.0,
@@ -5181,14 +5189,14 @@
   },
   "props": {
    "fair": {
-    "n": 947,
+    "n": 961,
     "said_fair": 86.8,
-    "said_price": 87.2,
-    "won": 799
+    "said_price": 87.1,
+    "won": 810
    },
-   "n": 148,
-   "said": 82.9,
-   "won": 131
+   "n": 163,
+   "said": 83.2,
+   "won": 143
   },
   "safe_locks": {
    "lost": [
@@ -5197,7 +5205,7 @@
     "Los Angeles Kings under 5.5 goals (Los Angeles Kings at New York Rangers) Los Angeles Kings 6 - New York Rangers 3"
    ],
    "n": 11,
-   "open": 3,
+   "open": 2,
    "plays": {
     "best": [
      8,
@@ -5210,7 +5218,7 @@
      "lost"
     ]
    },
-   "won": 5
+   "won": 6
   },
   "strong": {
    "n": 0
@@ -5226,22 +5234,22 @@
     "won": 2
    },
    "agree": {
-    "hit": 71.9,
+    "hit": 72.0,
     "lost": 175,
-    "n": 623,
-    "roi": -0.3,
+    "n": 624,
+    "roi": -0.2,
     "said": 68.9,
-    "won": 448
+    "won": 449
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5626,
-    "market_only": 0.5626,
-    "model_40": 0.5853,
-    "n": 50,
+    "logloss": 0.565,
+    "market_only": 0.565,
+    "model_40": 0.5884,
+    "n": 51,
     "weight": 0.0
    },
    "ncaaf": {
