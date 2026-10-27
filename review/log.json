@@ -4531,10 +4531,10 @@
   },
   "props": {
    "fair": {
-    "n": 885,
+    "n": 893,
     "said_fair": 86.8,
-    "said_price": 87.3,
-    "won": 742
+    "said_price": 87.4,
+    "won": 749
    },
    "n": 303,
    "said": 79.7,
@@ -4734,10 +4734,17 @@
    },
    {
     "flag": false,
-    "hit": 68.4,
-    "n": 19,
+    "hit": 81.8,
+    "n": 11,
+    "name": "props wnba Assists",
+    "said": 80.0
+   },
+   {
+    "flag": false,
+    "hit": 70.0,
+    "n": 20,
     "name": "props wnba Points",
-    "said": 82.5
+    "said": 82.6
    },
    {
     "flag": false,
@@ -4879,9 +4886,9 @@
    }
   },
   "clv": {
-   "avg": 0.61,
-   "beat": 47.6,
-   "n": 21
+   "avg": 0.62,
+   "beat": 50.0,
+   "n": 22
   },
   "day": "2026-10-26",
   "leaks_14d": [],
@@ -4941,6 +4948,14 @@
     "price": "-130",
     "said": 54,
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 54%"
+   },
+   {
+    "against_market": false,
+    "league": "wnba",
+    "pick": "Atlanta Dream",
+    "price": "-115",
+    "said": 51,
+    "why": "margin 9 \u00b7 the book had my side favoured too \u00b7 called at 51%"
    }
   ],
   "lottery": [
@@ -4996,11 +5011,11 @@
    }
   ],
   "picks": {
-   "hit": 76.2,
-   "lost": 5,
-   "n": 21,
-   "roi": 2.7,
-   "said": 69.5,
+   "hit": 72.7,
+   "lost": 6,
+   "n": 22,
+   "roi": -2.0,
+   "said": 68.6,
    "won": 16
   },
   "picks_by_league": {
@@ -5123,18 +5138,26 @@
     "roi": 37.0,
     "said": 69.0,
     "won": 1
+   },
+   "wnba": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 51.0,
+    "won": 0
    }
   },
   "props": {
    "fair": {
-    "n": 885,
+    "n": 893,
     "said_fair": 86.8,
-    "said_price": 87.3,
-    "won": 742
+    "said_price": 87.4,
+    "won": 749
    },
-   "n": 66,
-   "said": 83.5,
-   "won": 57
+   "n": 74,
+   "said": 83.1,
+   "won": 64
   },
   "safe_locks": {
    "lost": [
@@ -5176,11 +5199,11 @@
     "won": 2
    },
    "agree": {
-    "hit": 72.1,
-    "lost": 172,
-    "n": 616,
-    "roi": -0.1,
-    "said": 69.0,
+    "hit": 72.0,
+    "lost": 173,
+    "n": 617,
+    "roi": -0.3,
+    "said": 68.9,
     "won": 444
    }
   },
