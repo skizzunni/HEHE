@@ -617204,13 +617204,14 @@
        "play": null,
        "price": "-220",
        "quoted": "2026-10-26T11:52:43+00:00",
+       "score": "Detroit Red Wings 4 - Edmonton Oilers 3",
        "spec": {
         "line": 3.5,
         "t": "teamunder",
         "team": "Detroit Red Wings"
        },
        "start": "2026-10-27T01:30Z",
-       "status": "open",
+       "status": "lost",
        "tip": "9:30 PM",
        "where": "Detroit Red Wings Alt Total Goals: Under 3.5"
       },
@@ -625930,6 +625931,26 @@
       "start": "2026-10-27T23:30Z",
       "starters": [],
       "t": "2026-10-27T04:02:21+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "BOS",
+        "Devin Carter",
+        "Out",
+        "G"
+       ],
+       [
+        "BKN",
+        "Tyler Bilodeau",
+        "Out",
+        "F"
+       ]
+      ],
+      "probables": {},
+      "start": "2026-10-27T23:30Z",
+      "starters": [],
+      "t": "2026-10-27T04:23:15+00:00"
      }
     ],
     "nba:401909878": [
@@ -627494,6 +627515,137 @@
       ]
      ],
      "t": "2026-10-27T04:17:23+00:00"
+    },
+    {
+     "policy": "981c3dcc",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "AS Roma or draw",
+        "Columbus Blue Jackets over 1.5 goals",
+        "Delaware Blue Hens +13.5",
+        "Como or draw",
+        "Boston Celtics to win"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Boston Celtics to win",
+        "Over 46.5 points",
+        "Milwaukee Brewers +2.5",
+        "Como or draw"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Chicago Blackhawks +1.5",
+        "Winnipeg Jets +1.5"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       []
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Winnipeg Jets +1.5",
+        "New York Islanders +1.5",
+        "Chicago Blackhawks +1.5",
+        "San Antonio Spurs to win"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Winnipeg Jets +1.5",
+        "Chicago Blackhawks +1.5",
+        "Montreal Canadiens +1.5",
+        "Milwaukee Brewers +1.5",
+        "Delaware Blue Hens over 23.5 points"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-27T04:23:09+00:00"
     }
    ]
   }
