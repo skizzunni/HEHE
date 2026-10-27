@@ -5384,7 +5384,7 @@
 "name": "Brevyn Spann-Ford",
 "p": 0.1065,
 "price": "+600",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Britain Covey": {
@@ -5394,7 +5394,7 @@
 "name": "Britain Covey",
 "p": 0.032,
 "price": "+2200",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Caleb Downs": {
@@ -5404,7 +5404,7 @@
 "name": "Caleb Downs",
 "p": 0.0131,
 "price": "+5500",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Camden Brown": {
@@ -5414,8 +5414,9 @@
 "name": "Camden Brown",
 "p": 0.0492,
 "price": "+1400",
-"status": "open",
-"total": 43.5
+"status": "ungradable",
+"total": 43.5,
+"void_why": "identity_unresolved"
 },
 "nfl:401873009|CeeDee Lamb": {
 "date": "2026-10-26",
@@ -5424,7 +5425,7 @@
 "name": "CeeDee Lamb",
 "p": 0.3407,
 "price": "+130",
-"status": "open",
+"status": "won",
 "total": 43.5
 },
 "nfl:401873009|Cooper DeJean": {
@@ -5434,7 +5435,7 @@
 "name": "Cooper DeJean",
 "p": 0.012,
 "price": "+6000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|DaRon Bland": {
@@ -5444,7 +5445,7 @@
 "name": "DaRon Bland",
 "p": 0.0179,
 "price": "+4000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Dak Prescott": {
@@ -5454,7 +5455,7 @@
 "name": "Dak Prescott",
 "p": 0.1065,
 "price": "+600",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Dallas Defense": {
@@ -5464,7 +5465,7 @@
 "name": "Dallas Defense",
 "p": 0.0824,
 "price": "+800",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873009|Dallas Goedert": {
@@ -5474,7 +5475,7 @@
 "name": "Dallas Goedert",
 "p": 0.2757,
 "price": "+180",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Dameon Pierce": {
@@ -5484,7 +5485,7 @@
 "name": "Dameon Pierce",
 "p": 0.1148,
 "price": "+550",
-"status": "open",
+"status": "won",
 "total": 43.5
 },
 "nfl:401873009|Darius Cooper": {
@@ -5494,7 +5495,7 @@
 "name": "Darius Cooper",
 "p": 0.1999,
 "price": "+280",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|DeMarvion Overshown": {
@@ -5504,7 +5505,7 @@
 "name": "DeMarvion Overshown",
 "p": 0.009,
 "price": "+8000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Decobie Durant": {
@@ -5514,8 +5515,9 @@
 "name": "Decobie Durant",
 "p": 0.0131,
 "price": "+5500",
-"status": "open",
-"total": 43.5
+"status": "ungradable",
+"total": 43.5,
+"void_why": "identity_unresolved"
 },
 "nfl:401873009|Dee Winters": {
 "date": "2026-10-26",
@@ -5524,7 +5526,7 @@
 "name": "Dee Winters",
 "p": 0.0096,
 "price": "+7500",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873009|Eli Stowers": {
@@ -5534,7 +5536,7 @@
 "name": "Eli Stowers",
 "p": 0.0527,
 "price": "+1300",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Elijah Mitchell": {
@@ -5544,7 +5546,7 @@
 "name": "Elijah Mitchell",
 "p": 0.0262,
 "price": "+2700",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Elijah Moore": {
@@ -5554,7 +5556,7 @@
 "name": "Elijah Moore",
 "p": 0.0672,
 "price": "+1000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Emari Demercado": {
@@ -5564,7 +5566,7 @@
 "name": "Emari Demercado",
 "p": 0.0508,
 "price": "+1300",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873009|George Pickens": {
@@ -5574,7 +5576,7 @@
 "name": "George Pickens",
 "p": 0.2811,
 "price": "+175",
-"status": "open",
+"status": "won",
 "total": 43.5
 },
 "nfl:401873009|Grant Calcaterra": {
@@ -5584,7 +5586,7 @@
 "name": "Grant Calcaterra",
 "p": 0.046,
 "price": "+1500",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873009|Hunter Luepke": {
@@ -5594,7 +5596,7 @@
 "name": "Hunter Luepke",
 "p": 0.0527,
 "price": "+1300",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Jake Ferguson": {
@@ -5604,7 +5606,7 @@
 "name": "Jake Ferguson",
 "p": 0.1999,
 "price": "+280",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Jalyx Hunt": {
@@ -5614,7 +5616,7 @@
 "name": "Jalyx Hunt",
 "p": 0.009,
 "price": "+8000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Javonte Williams": {
@@ -5624,7 +5626,7 @@
 "name": "Javonte Williams",
 "p": 0.4878,
 "price": "-150",
-"status": "open",
+"status": "won",
 "total": 43.5
 },
 "nfl:401873009|Johnny Mundt": {
@@ -5634,7 +5636,7 @@
 "name": "Johnny Mundt",
 "p": 0.032,
 "price": "+2200",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873009|Jonathan Mingo": {
@@ -5644,7 +5646,7 @@
 "name": "Jonathan Mingo",
 "p": 0.0615,
 "price": "+1100",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Luke Schoonmaker": {
@@ -5654,7 +5656,7 @@
 "name": "Luke Schoonmaker",
 "p": 0.0433,
 "price": "+1600",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873009|Makai Lemon": {
@@ -5664,7 +5666,7 @@
 "name": "Makai Lemon",
 "p": 0.1846,
 "price": "+310",
-"status": "open",
+"status": "won",
 "total": 43.5
 },
 "nfl:401873009|Marquise Brown": {
@@ -5674,8 +5676,9 @@
 "name": "Marquise Brown",
 "p": 0.0672,
 "price": "+1000",
-"status": "open",
-"total": 43.5
+"status": "ungradable",
+"total": 43.5,
+"void_why": "identity_unresolved"
 },
 "nfl:401873009|Philadelphia Defense": {
 "date": "2026-10-26",
@@ -5684,7 +5687,7 @@
 "name": "Philadelphia Defense",
 "p": 0.0929,
 "price": "+700",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873009|Quinyon Mitchell": {
@@ -5694,7 +5697,7 @@
 "name": "Quinyon Mitchell",
 "p": 0.012,
 "price": "+6000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Rashan Gary": {
@@ -5704,7 +5707,7 @@
 "name": "Rashan Gary",
 "p": 0.009,
 "price": "+8000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Ryan Flournoy": {
@@ -5714,7 +5717,7 @@
 "name": "Ryan Flournoy",
 "p": 0.1639,
 "price": "+360",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Saquon Barkley": {
@@ -5724,7 +5727,7 @@
 "name": "Saquon Barkley",
 "p": 0.3763,
 "price": "+110",
-"status": "open",
+"status": "won",
 "total": 43.5
 },
 "nfl:401873009|Tanner McKee": {
@@ -5734,7 +5737,7 @@
 "name": "Tanner McKee",
 "p": 0.078,
 "price": "+850",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Tariq Woolen": {
@@ -5744,8 +5747,9 @@
 "name": "Tariq Woolen",
 "p": 0.012,
 "price": "+6000",
-"status": "open",
-"total": 43.5
+"status": "ungradable",
+"total": 43.5,
+"void_why": "identity_unresolved"
 },
 "nfl:401873009|Tyler Goodson": {
 "date": "2026-10-26",
@@ -5754,7 +5758,7 @@
 "name": "Tyler Goodson",
 "p": 0.0672,
 "price": "+1000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873009|Zack Baun": {
@@ -5764,7 +5768,7 @@
 "name": "Zack Baun",
 "p": 0.012,
 "price": "+6000",
-"status": "open",
+"status": "lost",
 "total": 43.5
 },
 "nfl:401873010|A.J. Brown": {

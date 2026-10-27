@@ -4417,6 +4417,7 @@
    "cost": 0.664,
    "edge": 0.0003,
    "fair": 0.6642,
+   "fill": "touch",
    "id": "nfl:401873009",
    "label": "Dallas Cowboys",
    "league": "nfl",
@@ -4429,8 +4430,9 @@
     "team": "Dallas Cowboys"
    },
    "start": "2026-10-27T00:15Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26OCT26DALPHI-DAL"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26OCT26DALPHI-DAL",
+   "won": 1
   },
   "KXNFLSPREAD-26OCT25CINBAL-CIN2|NO": {
    "ask": 0.51,
@@ -4628,6 +4630,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "nfl:401873009",
    "label": "Philadelphia Eagles +4.5",
    "league": "nfl",
@@ -4641,8 +4644,9 @@
     "team": "Philadelphia Eagles"
    },
    "start": "2026-10-27T00:15Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26OCT26DALPHI-DAL5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26OCT26DALPHI-DAL5",
+   "won": 0
   },
   "KXNFLSPREAD-26OCT26DALPHI-DAL5|YES": {
    "ask": 0.51,
@@ -4650,6 +4654,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873009",
    "label": "Dallas Cowboys -4.5",
    "league": "nfl",
@@ -4663,8 +4668,9 @@
     "team": "Dallas Cowboys"
    },
    "start": "2026-10-27T00:15Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26OCT26DALPHI-DAL5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26OCT26DALPHI-DAL5",
+   "won": 1
   },
   "KXNFLTOTAL-26OCT22NECHI-51|YES": {
    "ask": 0.52,
