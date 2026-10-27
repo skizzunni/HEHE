@@ -615,6 +615,48 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26OCT27SHSUMOSU-MOSU"
   },
+  "KXNCAAFGAME-26OCT28JVSTNMSU-JVST|YES": {
+   "ask": 0.6,
+   "bid": 0.59,
+   "cost": 0.5943,
+   "edge": 0.005,
+   "fair": 0.5973,
+   "id": "ncaaf:401871057",
+   "label": "Jacksonville State Gamecocks",
+   "league": "ncaaf",
+   "match": "JXST @ NMSU",
+   "posted": "2026-10-27T04:01:39+00:00",
+   "queue": 2584.43,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Jacksonville State Gamecocks"
+   },
+   "start": "2026-10-29T00:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26OCT28JVSTNMSU-JVST"
+  },
+  "KXNCAAFGAME-26OCT28KENNMTU-MTU|YES": {
+   "ask": 0.56,
+   "bid": 0.55,
+   "cost": 0.5544,
+   "edge": 0.0211,
+   "fair": 0.5661,
+   "id": "ncaaf:401871058",
+   "label": "Middle Tennessee Blue Raiders",
+   "league": "ncaaf",
+   "match": "KENN @ MTSU",
+   "posted": "2026-10-27T04:01:39+00:00",
+   "queue": 2609.43,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Middle Tennessee Blue Raiders"
+   },
+   "start": "2026-10-28T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26OCT28KENNMTU-MTU"
+  },
   "KXNCAAFSPREAD-26OCT22ECUMEM-MEM11|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -2059,6 +2101,28 @@
    "start": "2026-10-27T23:00Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26OCT27DELWKU-WKU2"
+  },
+  "KXNCAAFSPREAD-26OCT28KENNMTU-MTU3|YES": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0162,
+   "fair": 0.5227,
+   "id": "ncaaf:401871058",
+   "label": "Middle Tennessee Blue Raiders -2.5",
+   "league": "ncaaf",
+   "match": "KENN @ MTSU",
+   "posted": "2026-10-27T04:01:39+00:00",
+   "queue": 6725.0,
+   "side": "YES",
+   "spec": {
+    "line": -2.5,
+    "t": "spread",
+    "team": "Middle Tennessee Blue Raiders"
+   },
+   "start": "2026-10-28T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26OCT28KENNMTU-MTU3"
   },
   "KXNCAAFTOTAL-26OCT22ECUMEM-54|YES": {
    "ask": 0.51,
@@ -4141,6 +4205,27 @@
    "start": "2026-10-28T00:00Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT27SHSUMOSU-51"
+  },
+  "KXNCAAFTOTAL-26OCT28KENNMTU-52|NO": {
+   "ask": 0.53,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401871058",
+   "label": "under 51.5",
+   "league": "ncaaf",
+   "match": "KENN @ MTSU",
+   "posted": "2026-10-27T04:01:39+00:00",
+   "queue": 8877.71,
+   "side": "NO",
+   "spec": {
+    "line": 51.5,
+    "t": "under"
+   },
+   "start": "2026-10-28T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT28KENNMTU-52"
   },
   "KXNFLGAME-26OCT25CINBAL-CIN|YES": {
    "ask": 0.52,

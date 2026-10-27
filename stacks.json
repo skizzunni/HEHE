@@ -1,5 +1,21 @@
 {
  "legs": {
+  "afc:401912620|Over 0.5 goals": {
+   "away": "Al Hilal",
+   "date": "2026-10-27",
+   "home": "Al-Shamal",
+   "label": "Over 0.5 goals",
+   "league": "afc",
+   "logged": "2026-10-27T00:01",
+   "match": "Al Hilal at Al-Shamal",
+   "p": 0.9668,
+   "p_model": 0.9668,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "arg:401841614|No \u00b7 Atl\u00e9tico Tucum\u00e1n wins by over 2.5 goals": {
    "away": "Rosario Central",
    "date": "2026-10-17",
@@ -405,6 +421,55 @@
     "t": "under"
    },
    "status": "won"
+  },
+  "arg:401841642|No \u00b7 Argentinos Juniors wins by over 2.5 goals": {
+   "away": "Independiente Rivadavia",
+   "date": "2026-10-27",
+   "home": "Argentinos Juniors",
+   "label": "No \u00b7 Argentinos Juniors wins by over 2.5 goals",
+   "league": "arg",
+   "logged": "2026-10-27T00:01",
+   "match": "Independiente Rivadavia at Argentinos Juniors",
+   "p": 0.9212,
+   "p_model": 0.9212,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Argentinos Juniors"
+   },
+   "status": "open"
+  },
+  "arg:401841642|Over 0.5 goals": {
+   "away": "Independiente Rivadavia",
+   "date": "2026-10-27",
+   "home": "Argentinos Juniors",
+   "label": "Over 0.5 goals",
+   "league": "arg",
+   "logged": "2026-10-27T00:01",
+   "match": "Independiente Rivadavia at Argentinos Juniors",
+   "p": 0.8972,
+   "p_model": 0.8972,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "arg:401841642|Under 5.5 goals": {
+   "away": "Independiente Rivadavia",
+   "date": "2026-10-27",
+   "home": "Argentinos Juniors",
+   "label": "Under 5.5 goals",
+   "league": "arg",
+   "logged": "2026-10-27T00:01",
+   "match": "Independiente Rivadavia at Argentinos Juniors",
+   "p": 0.9713,
+   "p_model": 0.9713,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "arg:401841643|No \u00b7 Tigre wins by over 3.5 goals": {
    "away": "Atl\u00e9tico Tucum\u00e1n",
@@ -1069,6 +1134,54 @@
     "t": "over"
    },
    "status": "won"
+  },
+  "cdr:401928493|Over 0.5 goals": {
+   "away": "Girona",
+   "date": "2026-10-27",
+   "home": "CD Cuarte",
+   "label": "Over 0.5 goals",
+   "league": "cdr",
+   "logged": "2026-10-27T00:01",
+   "match": "Girona at CD Cuarte",
+   "p": 0.9592,
+   "p_model": 0.9592,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "cdr:401928493|Under 5.5 goals": {
+   "away": "Girona",
+   "date": "2026-10-27",
+   "home": "CD Cuarte",
+   "label": "Under 5.5 goals",
+   "league": "cdr",
+   "logged": "2026-10-27T00:01",
+   "match": "Girona at CD Cuarte",
+   "p": 0.8946,
+   "p_model": 0.8946,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "cdr:401928521|Over 0.5 goals": {
+   "away": "Almer\u00eda",
+   "date": "2026-10-27",
+   "home": "UD Castellonense",
+   "label": "Over 0.5 goals",
+   "league": "cdr",
+   "logged": "2026-10-27T00:01",
+   "match": "Almer\u00eda at UD Castellonense",
+   "p": 0.9392,
+   "p_model": 0.9392,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "chi:401850668|No \u00b7 Huachipato wins by over 2.5 goals": {
    "away": "Huachipato",
@@ -2609,6 +2722,22 @@
    },
    "status": "won"
   },
+  "efl2:401880834|Over 0.5 goals": {
+   "away": "Wigan Athletic",
+   "date": "2026-10-27",
+   "home": "Leicester City",
+   "label": "Over 0.5 goals",
+   "league": "efl2",
+   "logged": "2026-10-27T00:01",
+   "match": "Wigan Athletic at Leicester City",
+   "p": 0.9668,
+   "p_model": 0.9668,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "efl3:401881301|No \u00b7 York City wins by over 3.5 goals": {
    "away": "Accrington Stanley",
    "date": "2026-10-20",
@@ -3030,6 +3159,22 @@
     "team": "Exeter City"
    },
    "status": "won"
+  },
+  "eflc:401921835|Over 0.5 goals": {
+   "away": "Arsenal",
+   "date": "2026-10-27",
+   "home": "Fleetwood Town",
+   "label": "Over 0.5 goals",
+   "league": "eflc",
+   "logged": "2026-10-27T00:01",
+   "match": "Arsenal at Fleetwood Town",
+   "p": 0.9763,
+   "p_model": 0.9763,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "epl:401878764|Under 5.5 goals": {
    "away": "Leeds United",
@@ -5367,6 +5512,22 @@
    },
    "status": "won"
   },
+  "ita:401874780|Over 0.5 goals": {
+   "away": "Cagliari",
+   "date": "2026-10-27",
+   "home": "AS Roma",
+   "label": "Over 0.5 goals",
+   "league": "ita",
+   "logged": "2026-10-27T00:01",
+   "match": "Cagliari at AS Roma",
+   "p": 0.9505,
+   "p_model": 0.9505,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "ita:401874784|No \u00b7 Parma wins by over 2.5 goals": {
    "away": "Torino",
    "date": "2026-10-19",
@@ -5402,6 +5563,39 @@
     "team": "Torino"
    },
    "status": "lost"
+  },
+  "ita:401874786|No \u00b7 Como wins by over 3.5 goals": {
+   "away": "Como",
+   "date": "2026-10-27",
+   "home": "Torino",
+   "label": "No \u00b7 Como wins by over 3.5 goals",
+   "league": "ita",
+   "logged": "2026-10-27T00:01",
+   "match": "Como at Torino",
+   "p": 0.9397,
+   "p_model": 0.9397,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Como"
+   },
+   "status": "open"
+  },
+  "ita:401874786|Over 0.5 goals": {
+   "away": "Como",
+   "date": "2026-10-27",
+   "home": "Torino",
+   "label": "Over 0.5 goals",
+   "league": "ita",
+   "logged": "2026-10-27T00:01",
+   "match": "Como at Torino",
+   "p": 0.9467,
+   "p_model": 0.9467,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "ita:401874952|No \u00b7 Venezia wins by over 2.5 goals": {
    "away": "Venezia",
@@ -5560,6 +5754,56 @@
     "team": "Atalanta"
    },
    "status": "won"
+  },
+  "ita:401874980|No \u00b7 Lazio wins by over 2.5 goals": {
+   "away": "Lazio",
+   "date": "2026-10-27",
+   "home": "Sassuolo",
+   "label": "No \u00b7 Lazio wins by over 2.5 goals",
+   "league": "ita",
+   "logged": "2026-10-27T00:01",
+   "match": "Lazio at Sassuolo",
+   "p": 0.9006,
+   "p_model": 0.9006,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Lazio"
+   },
+   "status": "open"
+  },
+  "ita:401874980|No \u00b7 Sassuolo wins by over 2.5 goals": {
+   "away": "Lazio",
+   "date": "2026-10-27",
+   "home": "Sassuolo",
+   "label": "No \u00b7 Sassuolo wins by over 2.5 goals",
+   "league": "ita",
+   "logged": "2026-10-27T00:01",
+   "match": "Lazio at Sassuolo",
+   "p": 0.9564,
+   "p_model": 0.9564,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Sassuolo"
+   },
+   "status": "open"
+  },
+  "ita:401874980|Over 0.5 goals": {
+   "away": "Lazio",
+   "date": "2026-10-27",
+   "home": "Sassuolo",
+   "label": "Over 0.5 goals",
+   "league": "ita",
+   "logged": "2026-10-27T00:01",
+   "match": "Lazio at Sassuolo",
+   "p": 0.9467,
+   "p_model": 0.9467,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "ita:401875036|Over 0.5 goals": {
    "away": "Fiorentina",
@@ -7109,6 +7353,23 @@
    },
    "status": "lost"
   },
+  "mlb:401908045|No \u00b7 Tampa Bay Rays wins by over 4.5 runs": {
+   "away": "Milwaukee Brewers",
+   "date": "2026-10-27",
+   "home": "Tampa Bay Rays",
+   "label": "No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+   "league": "mlb",
+   "logged": "2026-10-27T00:01",
+   "match": "Milwaukee Brewers at Tampa Bay Rays",
+   "p": 0.8863,
+   "p_model": 0.9003,
+   "spec": {
+    "line": 4.5,
+    "t": "nomargin",
+    "team": "Tampa Bay Rays"
+   },
+   "status": "open"
+  },
   "mls:761773|No \u00b7 D.C. United wins by over 2.5 goals": {
    "away": "D.C. United",
    "date": "2026-10-21",
@@ -8218,6 +8479,141 @@
    },
    "status": "open"
   },
+  "nba:401909877|No \u00b7 Boston Celtics wins by over 27.5 points": {
+   "away": "Brooklyn Nets",
+   "date": "2026-10-27",
+   "home": "Boston Celtics",
+   "label": "No \u00b7 Boston Celtics wins by over 27.5 points",
+   "league": "nba",
+   "logged": "2026-10-27T00:01",
+   "match": "Brooklyn Nets at Boston Celtics",
+   "p": 0.8942,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 27.5,
+    "t": "nomargin",
+    "team": "Boston Celtics"
+   },
+   "status": "open"
+  },
+  "nba:401909877|No \u00b7 Brooklyn Nets wins by over 12.5 points": {
+   "away": "Brooklyn Nets",
+   "date": "2026-10-27",
+   "home": "Boston Celtics",
+   "label": "No \u00b7 Brooklyn Nets wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-10-27T00:01",
+   "match": "Brooklyn Nets at Boston Celtics",
+   "p": 0.9736,
+   "p_model": 0.9772,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Brooklyn Nets"
+   },
+   "status": "open"
+  },
+  "nba:401909877|No \u00b7 Brooklyn Nets wins by over 8.5 points": {
+   "away": "Brooklyn Nets",
+   "date": "2026-10-27",
+   "home": "Boston Celtics",
+   "label": "No \u00b7 Brooklyn Nets wins by over 8.5 points",
+   "league": "nba",
+   "logged": "2026-10-27T00:01",
+   "match": "Brooklyn Nets at Boston Celtics",
+   "p": 0.9446,
+   "p_model": 0.9522,
+   "spec": {
+    "line": 8.5,
+    "t": "nomargin",
+    "team": "Brooklyn Nets"
+   },
+   "status": "open"
+  },
+  "nba:401909878|No \u00b7 New York Knicks wins by over 19.5 points": {
+   "away": "Detroit Pistons",
+   "date": "2026-10-27",
+   "home": "New York Knicks",
+   "label": "No \u00b7 New York Knicks wins by over 19.5 points",
+   "league": "nba",
+   "logged": "2026-10-27T00:01",
+   "match": "Detroit Pistons at New York Knicks",
+   "p": 0.8942,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 19.5,
+    "t": "nomargin",
+    "team": "New York Knicks"
+   },
+   "status": "open"
+  },
+  "nba:401909879|No \u00b7 Sacramento Kings wins by over 4.5 points": {
+   "away": "Sacramento Kings",
+   "date": "2026-10-27",
+   "home": "San Antonio Spurs",
+   "label": "No \u00b7 Sacramento Kings wins by over 4.5 points",
+   "league": "nba",
+   "logged": "2026-10-27T00:01",
+   "match": "Sacramento Kings at San Antonio Spurs",
+   "p": 0.9679,
+   "p_model": 0.9724,
+   "spec": {
+    "line": 4.5,
+    "t": "nomargin",
+    "team": "Sacramento Kings"
+   },
+   "status": "open"
+  },
+  "nba:401909879|No \u00b7 San Antonio Spurs wins by over 34.5 points": {
+   "away": "Sacramento Kings",
+   "date": "2026-10-27",
+   "home": "San Antonio Spurs",
+   "label": "No \u00b7 San Antonio Spurs wins by over 34.5 points",
+   "league": "nba",
+   "logged": "2026-10-27T00:01",
+   "match": "Sacramento Kings at San Antonio Spurs",
+   "p": 0.8942,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 34.5,
+    "t": "nomargin",
+    "team": "San Antonio Spurs"
+   },
+   "status": "open"
+  },
+  "nba:401909879|San Antonio Spurs to win": {
+   "away": "Sacramento Kings",
+   "date": "2026-10-27",
+   "home": "San Antonio Spurs",
+   "label": "San Antonio Spurs to win",
+   "league": "nba",
+   "logged": "2026-10-27T00:01",
+   "match": "Sacramento Kings at San Antonio Spurs",
+   "p": 0.9286,
+   "p_model": 0.9384,
+   "spec": {
+    "t": "win",
+    "team": "San Antonio Spurs"
+   },
+   "status": "open"
+  },
+  "nba:401909880|No \u00b7 Los Angeles Lakers wins by over 18.5 points": {
+   "away": "Portland Trail Blazers",
+   "date": "2026-10-27",
+   "home": "Los Angeles Lakers",
+   "label": "No \u00b7 Los Angeles Lakers wins by over 18.5 points",
+   "league": "nba",
+   "logged": "2026-10-27T00:01",
+   "match": "Portland Trail Blazers at Los Angeles Lakers",
+   "p": 0.8942,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 18.5,
+    "t": "nomargin",
+    "team": "Los Angeles Lakers"
+   },
+   "status": "open"
+  },
   "ncaaf:401856727|No \u00b7 Texas A&M Aggies wins by over 14.5 points": {
    "away": "Texas A&M Aggies",
    "date": "2026-10-24",
@@ -8964,6 +9360,39 @@
     "t": "under"
    },
    "status": "won"
+  },
+  "ncaaf:401871071|Over 40.5 points": {
+   "away": "Delaware Blue Hens",
+   "date": "2026-10-27",
+   "home": "Western Kentucky Hilltoppers",
+   "label": "Over 40.5 points",
+   "league": "ncaaf",
+   "logged": "2026-10-27T00:01",
+   "match": "Delaware Blue Hens at Western Kentucky Hilltoppers",
+   "p": 0.8816,
+   "p_model": 0.8816,
+   "spec": {
+    "line": 40.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "ncaaf:401871072|No \u00b7 Sam Houston Bearkats wins by over 14.5 points": {
+   "away": "Sam Houston Bearkats",
+   "date": "2026-10-27",
+   "home": "Missouri State Bears",
+   "label": "No \u00b7 Sam Houston Bearkats wins by over 14.5 points",
+   "league": "ncaaf",
+   "logged": "2026-10-27T00:01",
+   "match": "Sam Houston Bearkats at Missouri State Bears",
+   "p": 0.8873,
+   "p_model": 0.8873,
+   "spec": {
+    "line": 14.5,
+    "t": "nomargin",
+    "team": "Sam Houston Bearkats"
+   },
+   "status": "open"
   },
   "ncaaf:401871093|No \u00b7 Old Dominion Monarchs wins by over 14.5 points": {
    "away": "Old Dominion Monarchs",
@@ -11178,6 +11607,278 @@
    "match": "Detroit Red Wings at Edmonton Oilers",
    "p": 0.9734,
    "p_model": 0.972,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892585|Over 2.5 goals": {
+   "away": "Columbus Blue Jackets",
+   "date": "2026-10-27",
+   "home": "Philadelphia Flyers",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Columbus Blue Jackets at Philadelphia Flyers",
+   "p": 0.9557,
+   "p_model": 0.9544,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892585|Under 9.5 goals": {
+   "away": "Columbus Blue Jackets",
+   "date": "2026-10-27",
+   "home": "Philadelphia Flyers",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Columbus Blue Jackets at Philadelphia Flyers",
+   "p": 0.9305,
+   "p_model": 0.9284,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892586|Over 2.5 goals": {
+   "away": "Boston Bruins",
+   "date": "2026-10-27",
+   "home": "Carolina Hurricanes",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Boston Bruins at Carolina Hurricanes",
+   "p": 0.9655,
+   "p_model": 0.9644,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892587|Over 2.5 goals": {
+   "away": "Los Angeles Kings",
+   "date": "2026-10-27",
+   "home": "Chicago Blackhawks",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Los Angeles Kings at Chicago Blackhawks",
+   "p": 0.9606,
+   "p_model": 0.9594,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892587|Under 9.5 goals": {
+   "away": "Los Angeles Kings",
+   "date": "2026-10-27",
+   "home": "Chicago Blackhawks",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Los Angeles Kings at Chicago Blackhawks",
+   "p": 0.9207,
+   "p_model": 0.9182,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892588|Over 2.5 goals": {
+   "away": "Montreal Canadiens",
+   "date": "2026-10-27",
+   "home": "St. Louis Blues",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Montreal Canadiens at St. Louis Blues",
+   "p": 0.9641,
+   "p_model": 0.963,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892589|Over 2.5 goals": {
+   "away": "New York Islanders",
+   "date": "2026-10-27",
+   "home": "Nashville Predators",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "New York Islanders at Nashville Predators",
+   "p": 0.9557,
+   "p_model": 0.9544,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892589|Under 9.5 goals": {
+   "away": "New York Islanders",
+   "date": "2026-10-27",
+   "home": "Nashville Predators",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "New York Islanders at Nashville Predators",
+   "p": 0.9305,
+   "p_model": 0.9284,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892590|Over 2.5 goals": {
+   "away": "New Jersey Devils",
+   "date": "2026-10-27",
+   "home": "Dallas Stars",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "New Jersey Devils at Dallas Stars",
+   "p": 0.9547,
+   "p_model": 0.9533,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892590|Under 9.5 goals": {
+   "away": "New Jersey Devils",
+   "date": "2026-10-27",
+   "home": "Dallas Stars",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "New Jersey Devils at Dallas Stars",
+   "p": 0.9324,
+   "p_model": 0.9303,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892591|Over 2.5 goals": {
+   "away": "Florida Panthers",
+   "date": "2026-10-27",
+   "home": "Winnipeg Jets",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Florida Panthers at Winnipeg Jets",
+   "p": 0.9624,
+   "p_model": 0.9612,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892592|Over 2.5 goals": {
+   "away": "Minnesota Wild",
+   "date": "2026-10-27",
+   "home": "Utah Mammoth",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Minnesota Wild at Utah Mammoth",
+   "p": 0.9689,
+   "p_model": 0.9679,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892592|Under 9.5 goals": {
+   "away": "Minnesota Wild",
+   "date": "2026-10-27",
+   "home": "Utah Mammoth",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Minnesota Wild at Utah Mammoth",
+   "p": 0.8985,
+   "p_model": 0.8954,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892593|Over 2.5 goals": {
+   "away": "Ottawa Senators",
+   "date": "2026-10-27",
+   "home": "Vegas Golden Knights",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Ottawa Senators at Vegas Golden Knights",
+   "p": 0.9688,
+   "p_model": 0.9678,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892593|Under 9.5 goals": {
+   "away": "Ottawa Senators",
+   "date": "2026-10-27",
+   "home": "Vegas Golden Knights",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Ottawa Senators at Vegas Golden Knights",
+   "p": 0.8985,
+   "p_model": 0.8954,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892594|Over 2.5 goals": {
+   "away": "Vancouver Canucks",
+   "date": "2026-10-27",
+   "home": "Anaheim Ducks",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Vancouver Canucks at Anaheim Ducks",
+   "p": 0.9734,
+   "p_model": 0.9726,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892595|Over 2.5 goals": {
+   "away": "Buffalo Sabres",
+   "date": "2026-10-27",
+   "home": "San Jose Sharks",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-10-27T00:01",
+   "match": "Buffalo Sabres at San Jose Sharks",
+   "p": 0.9742,
+   "p_model": 0.9734,
    "spec": {
     "line": 2.5,
     "t": "over"
@@ -18888,6 +19589,426 @@
    "logged": "2026-10-26T00:03",
    "n": 8,
    "prob": 0.5962,
+   "status": "open"
+  },
+  "20261027:10:0": {
+   "fair": 1.5,
+   "legs": [
+    "nhl:401892587|Over 2.5 goals",
+    "cdr:401928493|Over 0.5 goals",
+    "nhl:401892591|Over 2.5 goals",
+    "ita:401874980|No \u00b7 Sassuolo wins by over 2.5 goals",
+    "nhl:401892588|Over 2.5 goals",
+    "nhl:401892585|Over 2.5 goals",
+    "nhl:401892589|Over 2.5 goals",
+    "nhl:401892590|Over 2.5 goals",
+    "nhl:401892586|Over 2.5 goals",
+    "efl2:401880834|Over 0.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 10,
+   "prob": 0.6655,
+   "status": "open"
+  },
+  "20261027:10:1": {
+   "fair": 1.41,
+   "legs": [
+    "afc:401912620|Over 0.5 goals",
+    "nba:401909879|No \u00b7 Sacramento Kings wins by over 4.5 points",
+    "nhl:401892593|Over 2.5 goals",
+    "nhl:401892592|Over 2.5 goals",
+    "ita:401874780|Over 0.5 goals",
+    "arg:401841642|Under 5.5 goals",
+    "ita:401874786|Over 0.5 goals",
+    "nhl:401892594|Over 2.5 goals",
+    "nba:401909877|No \u00b7 Brooklyn Nets wins by over 12.5 points",
+    "nhl:401892595|Over 2.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 10,
+   "prob": 0.7089,
+   "status": "open"
+  },
+  "20261027:10:2": {
+   "fair": 2.22,
+   "legs": [
+    "eflc:401921835|Over 0.5 goals",
+    "cdr:401928521|Over 0.5 goals",
+    "nba:401909880|No \u00b7 Los Angeles Lakers wins by over 18.5 points",
+    "nba:401909878|No \u00b7 New York Knicks wins by over 19.5 points",
+    "ncaaf:401871072|No \u00b7 Sam Houston Bearkats wins by over 14.5 points",
+    "mlb:401908045|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "ncaaf:401871071|Over 40.5 points",
+    "nhl:401892587|Over 2.5 goals",
+    "cdr:401928493|Over 0.5 goals",
+    "nhl:401892591|Over 2.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 10,
+   "prob": 0.4508,
+   "status": "open"
+  },
+  "20261027:15:0": {
+   "fair": 1.8,
+   "legs": [
+    "nhl:401892587|Over 2.5 goals",
+    "cdr:401928493|Over 0.5 goals",
+    "nhl:401892591|Over 2.5 goals",
+    "ita:401874980|No \u00b7 Sassuolo wins by over 2.5 goals",
+    "nhl:401892588|Over 2.5 goals",
+    "nhl:401892585|Over 2.5 goals",
+    "nhl:401892589|Over 2.5 goals",
+    "nhl:401892590|Over 2.5 goals",
+    "nhl:401892586|Over 2.5 goals",
+    "efl2:401880834|Over 0.5 goals",
+    "afc:401912620|Over 0.5 goals",
+    "nba:401909879|No \u00b7 Sacramento Kings wins by over 4.5 points",
+    "nhl:401892593|Over 2.5 goals",
+    "nhl:401892592|Over 2.5 goals",
+    "ita:401874780|Over 0.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 15,
+   "prob": 0.5557,
+   "status": "open"
+  },
+  "20261027:15:1": {
+   "fair": 2.61,
+   "legs": [
+    "arg:401841642|Under 5.5 goals",
+    "ita:401874786|Over 0.5 goals",
+    "nhl:401892594|Over 2.5 goals",
+    "nba:401909877|No \u00b7 Brooklyn Nets wins by over 12.5 points",
+    "nhl:401892595|Over 2.5 goals",
+    "eflc:401921835|Over 0.5 goals",
+    "cdr:401928521|Over 0.5 goals",
+    "nba:401909880|No \u00b7 Los Angeles Lakers wins by over 18.5 points",
+    "nba:401909878|No \u00b7 New York Knicks wins by over 19.5 points",
+    "ncaaf:401871072|No \u00b7 Sam Houston Bearkats wins by over 14.5 points",
+    "mlb:401908045|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "ncaaf:401871071|Over 40.5 points",
+    "nhl:401892587|Over 2.5 goals",
+    "cdr:401928493|Over 0.5 goals",
+    "nhl:401892591|Over 2.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 15,
+   "prob": 0.3827,
+   "status": "open"
+  },
+  "20261027:15:2": {
+   "fair": 1.78,
+   "legs": [
+    "ita:401874980|No \u00b7 Sassuolo wins by over 2.5 goals",
+    "nhl:401892588|Over 2.5 goals",
+    "nhl:401892585|Over 2.5 goals",
+    "nhl:401892589|Over 2.5 goals",
+    "nhl:401892590|Over 2.5 goals",
+    "nhl:401892586|Over 2.5 goals",
+    "efl2:401880834|Over 0.5 goals",
+    "afc:401912620|Over 0.5 goals",
+    "nba:401909879|No \u00b7 Sacramento Kings wins by over 4.5 points",
+    "nhl:401892593|Over 2.5 goals",
+    "nhl:401892592|Over 2.5 goals",
+    "ita:401874780|Over 0.5 goals",
+    "arg:401841642|Under 5.5 goals",
+    "ita:401874786|Over 0.5 goals",
+    "nhl:401892594|Over 2.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 15,
+   "prob": 0.5608,
+   "status": "open"
+  },
+  "20261027:20:0": {
+   "fair": 2.12,
+   "legs": [
+    "nhl:401892587|Over 2.5 goals",
+    "cdr:401928493|Over 0.5 goals",
+    "nhl:401892591|Over 2.5 goals",
+    "ita:401874980|No \u00b7 Sassuolo wins by over 2.5 goals",
+    "nhl:401892588|Over 2.5 goals",
+    "nhl:401892585|Over 2.5 goals",
+    "nhl:401892589|Over 2.5 goals",
+    "nhl:401892590|Over 2.5 goals",
+    "nhl:401892586|Over 2.5 goals",
+    "efl2:401880834|Over 0.5 goals",
+    "afc:401912620|Over 0.5 goals",
+    "nba:401909879|No \u00b7 Sacramento Kings wins by over 4.5 points",
+    "nhl:401892593|Over 2.5 goals",
+    "nhl:401892592|Over 2.5 goals",
+    "ita:401874780|Over 0.5 goals",
+    "arg:401841642|Under 5.5 goals",
+    "ita:401874786|Over 0.5 goals",
+    "nhl:401892594|Over 2.5 goals",
+    "nba:401909877|No \u00b7 Brooklyn Nets wins by over 12.5 points",
+    "nhl:401892595|Over 2.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 20,
+   "prob": 0.4718,
+   "status": "open"
+  },
+  "20261027:20:1": {
+   "fair": 3.26,
+   "legs": [
+    "eflc:401921835|Over 0.5 goals",
+    "cdr:401928521|Over 0.5 goals",
+    "nba:401909880|No \u00b7 Los Angeles Lakers wins by over 18.5 points",
+    "nba:401909878|No \u00b7 New York Knicks wins by over 19.5 points",
+    "ncaaf:401871072|No \u00b7 Sam Houston Bearkats wins by over 14.5 points",
+    "mlb:401908045|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "ncaaf:401871071|Over 40.5 points",
+    "nhl:401892587|Over 2.5 goals",
+    "cdr:401928493|Over 0.5 goals",
+    "nhl:401892591|Over 2.5 goals",
+    "ita:401874980|No \u00b7 Sassuolo wins by over 2.5 goals",
+    "nhl:401892588|Over 2.5 goals",
+    "nhl:401892585|Over 2.5 goals",
+    "nhl:401892589|Over 2.5 goals",
+    "nhl:401892590|Over 2.5 goals",
+    "nhl:401892586|Over 2.5 goals",
+    "efl2:401880834|Over 0.5 goals",
+    "afc:401912620|Over 0.5 goals",
+    "nba:401909879|No \u00b7 Sacramento Kings wins by over 4.5 points",
+    "nhl:401892593|Over 2.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 20,
+   "prob": 0.3067,
+   "status": "open"
+  },
+  "20261027:20:2": {
+   "fair": 3.22,
+   "legs": [
+    "nhl:401892592|Over 2.5 goals",
+    "ita:401874780|Over 0.5 goals",
+    "arg:401841642|Under 5.5 goals",
+    "ita:401874786|Over 0.5 goals",
+    "nhl:401892594|Over 2.5 goals",
+    "nba:401909877|No \u00b7 Brooklyn Nets wins by over 12.5 points",
+    "nhl:401892595|Over 2.5 goals",
+    "eflc:401921835|Over 0.5 goals",
+    "cdr:401928521|Over 0.5 goals",
+    "nba:401909880|No \u00b7 Los Angeles Lakers wins by over 18.5 points",
+    "nba:401909878|No \u00b7 New York Knicks wins by over 19.5 points",
+    "ncaaf:401871072|No \u00b7 Sam Houston Bearkats wins by over 14.5 points",
+    "mlb:401908045|No \u00b7 Tampa Bay Rays wins by over 4.5 runs",
+    "ncaaf:401871071|Over 40.5 points",
+    "nhl:401892587|Over 2.5 goals",
+    "cdr:401928493|Over 0.5 goals",
+    "nhl:401892591|Over 2.5 goals",
+    "ita:401874980|No \u00b7 Sassuolo wins by over 2.5 goals",
+    "nhl:401892588|Over 2.5 goals",
+    "nhl:401892585|Over 2.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 20,
+   "prob": 0.3106,
+   "status": "open"
+  },
+  "20261027:2:0": {
+   "fair": 1.24,
+   "legs": [
+    "ita:401874980|No \u00b7 Lazio wins by over 2.5 goals",
+    "nhl:401892593|Under 9.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 2,
+   "prob": 0.8092,
+   "status": "open"
+  },
+  "20261027:2:1": {
+   "fair": 1.24,
+   "legs": [
+    "nhl:401892592|Under 9.5 goals",
+    "arg:401841642|Over 0.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 2,
+   "prob": 0.8061,
+   "status": "open"
+  },
+  "20261027:2:2": {
+   "fair": 1.25,
+   "legs": [
+    "cdr:401928493|Under 5.5 goals",
+    "nba:401909880|No \u00b7 Los Angeles Lakers wins by over 18.5 points"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 2,
+   "prob": 0.7999,
+   "status": "open"
+  },
+  "20261027:3:0": {
+   "fair": 1.38,
+   "legs": [
+    "ita:401874980|No \u00b7 Lazio wins by over 2.5 goals",
+    "nhl:401892593|Under 9.5 goals",
+    "nhl:401892592|Under 9.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 3,
+   "prob": 0.727,
+   "status": "open"
+  },
+  "20261027:3:1": {
+   "fair": 1.39,
+   "legs": [
+    "arg:401841642|Over 0.5 goals",
+    "cdr:401928493|Under 5.5 goals",
+    "nba:401909880|No \u00b7 Los Angeles Lakers wins by over 18.5 points"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 3,
+   "prob": 0.7177,
+   "status": "open"
+  },
+  "20261027:3:2": {
+   "fair": 1.4,
+   "legs": [
+    "nba:401909877|No \u00b7 Boston Celtics wins by over 27.5 points",
+    "nba:401909878|No \u00b7 New York Knicks wins by over 19.5 points",
+    "nba:401909879|No \u00b7 San Antonio Spurs wins by over 34.5 points"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 3,
+   "prob": 0.715,
+   "status": "open"
+  },
+  "20261027:4:0": {
+   "fair": 1.27,
+   "legs": [
+    "ita:401874786|No \u00b7 Como wins by over 3.5 goals",
+    "cdr:401928521|Over 0.5 goals",
+    "nba:401909877|No \u00b7 Brooklyn Nets wins by over 8.5 points",
+    "ita:401874980|Over 0.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 4,
+   "prob": 0.7892,
+   "status": "open"
+  },
+  "20261027:4:1": {
+   "fair": 1.3,
+   "legs": [
+    "nhl:401892590|Under 9.5 goals",
+    "nhl:401892585|Under 9.5 goals",
+    "nhl:401892589|Under 9.5 goals",
+    "ita:401874780|Over 0.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 4,
+   "prob": 0.7673,
+   "status": "open"
+  },
+  "20261027:4:2": {
+   "fair": 1.32,
+   "legs": [
+    "nba:401909879|San Antonio Spurs to win",
+    "arg:401841642|No \u00b7 Argentinos Juniors wins by over 2.5 goals",
+    "cdr:401928493|Over 0.5 goals",
+    "nhl:401892587|Under 9.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 4,
+   "prob": 0.7555,
+   "status": "open"
+  },
+  "20261027:6:0": {
+   "fair": 1.28,
+   "legs": [
+    "nhl:401892587|Over 2.5 goals",
+    "cdr:401928493|Over 0.5 goals",
+    "nhl:401892591|Over 2.5 goals",
+    "ita:401874980|No \u00b7 Sassuolo wins by over 2.5 goals",
+    "nhl:401892588|Over 2.5 goals",
+    "nhl:401892585|Over 2.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 6,
+   "prob": 0.7814,
+   "status": "open"
+  },
+  "20261027:6:1": {
+   "fair": 1.25,
+   "legs": [
+    "nhl:401892589|Over 2.5 goals",
+    "nhl:401892590|Over 2.5 goals",
+    "nhl:401892586|Over 2.5 goals",
+    "efl2:401880834|Over 0.5 goals",
+    "afc:401912620|Over 0.5 goals",
+    "nba:401909879|No \u00b7 Sacramento Kings wins by over 4.5 points"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 6,
+   "prob": 0.797,
+   "status": "open"
+  },
+  "20261027:6:2": {
+   "fair": 1.25,
+   "legs": [
+    "nhl:401892593|Over 2.5 goals",
+    "nhl:401892592|Over 2.5 goals",
+    "ita:401874780|Over 0.5 goals",
+    "arg:401841642|Under 5.5 goals",
+    "ita:401874786|Over 0.5 goals",
+    "nhl:401892594|Over 2.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 6,
+   "prob": 0.7986,
+   "status": "open"
+  },
+  "20261027:8:0": {
+   "fair": 1.4,
+   "legs": [
+    "nhl:401892587|Over 2.5 goals",
+    "cdr:401928493|Over 0.5 goals",
+    "nhl:401892591|Over 2.5 goals",
+    "ita:401874980|No \u00b7 Sassuolo wins by over 2.5 goals",
+    "nhl:401892588|Over 2.5 goals",
+    "nhl:401892585|Over 2.5 goals",
+    "nhl:401892589|Over 2.5 goals",
+    "nhl:401892590|Over 2.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 8,
+   "prob": 0.713,
+   "status": "open"
+  },
+  "20261027:8:1": {
+   "fair": 1.32,
+   "legs": [
+    "nhl:401892586|Over 2.5 goals",
+    "efl2:401880834|Over 0.5 goals",
+    "afc:401912620|Over 0.5 goals",
+    "nba:401909879|No \u00b7 Sacramento Kings wins by over 4.5 points",
+    "nhl:401892593|Over 2.5 goals",
+    "nhl:401892592|Over 2.5 goals",
+    "ita:401874780|Over 0.5 goals",
+    "arg:401841642|Under 5.5 goals"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 8,
+   "prob": 0.757,
+   "status": "open"
+  },
+  "20261027:8:2": {
+   "fair": 1.56,
+   "legs": [
+    "ita:401874786|Over 0.5 goals",
+    "nhl:401892594|Over 2.5 goals",
+    "nba:401909877|No \u00b7 Brooklyn Nets wins by over 12.5 points",
+    "nhl:401892595|Over 2.5 goals",
+    "eflc:401921835|Over 0.5 goals",
+    "cdr:401928521|Over 0.5 goals",
+    "nba:401909880|No \u00b7 Los Angeles Lakers wins by over 18.5 points",
+    "nba:401909878|No \u00b7 New York Knicks wins by over 19.5 points"
+   ],
+   "logged": "2026-10-27T00:01",
+   "n": 8,
+   "prob": 0.6409,
    "status": "open"
   }
  }
