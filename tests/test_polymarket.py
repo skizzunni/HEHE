@@ -47,5 +47,29 @@ class Polymarket(unittest.TestCase):
         self.assertTrue(all(v["fair_source"] == "DraftKings (Shin) + Polymarket" for v in home))
 
 
+class Soccer(unittest.TestCase):
+    """Three yes/no markets per game, normalised; club tags (FC, SS) dropped."""
+    BOOK = {"ita": [dict(title="SS Lazio vs. FC Internazionale Milano", start="2026-10-28T19:45:00Z", markets=[
+        dict(type="moneyline", question="Will SS Lazio win on 2026-10-28?", outcomes='["Yes", "No"]',
+             prices='["0.30", "0.70"]', liquidity=20000),
+        dict(type="moneyline", question="Will SS Lazio vs. FC Internazionale Milano end in a draw?",
+             outcomes='["Yes", "No"]', prices='["0.26", "0.74"]', liquidity=20000),
+        dict(type="moneyline", question="Will FC Internazionale Milano win on 2026-10-28?",
+             outcomes='["Yes", "No"]', prices='["0.46", "0.54"]', liquidity=20000)]),
+        dict(title="SS Lazio vs. FC Internazionale Milano - Total Corners", start="2026-10-28T19:45:00Z", markets=[])]}
+    MKT = dict(home="Lazio", away="Internazionale", start="2026-10-28T19:45Z")
+
+    def test_three_way_normalised(self):
+        f = lambda spec: P.fair(self.BOOK, "ita", self.MKT, spec)
+        self.assertAlmostEqual(f(dict(t="win", team="Lazio")), 0.30 / 1.02, places=4)
+        self.assertAlmostEqual(f(dict(t="draw")), 0.26 / 1.02, places=4)
+        self.assertAlmostEqual(f(dict(t="win", team="Internazionale")), 0.46 / 1.02, places=4)
+        self.assertIsNone(f(dict(t="over", line=2.5)))
+
+    def test_thin_market_gives_nothing(self):
+        thin = {"ita": [dict(self.BOOK["ita"][0], markets=[dict(m, liquidity=50) for m in self.BOOK["ita"][0]["markets"]])]}
+        self.assertIsNone(P.fair(thin, "ita", self.MKT, dict(t="win", team="Lazio")))
+
+
 if __name__ == "__main__":
     unittest.main()

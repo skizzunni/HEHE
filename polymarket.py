@@ -22,8 +22,14 @@ CACHE = os.path.join(HERE, ".cache", "polymarket")
 API = "https://gamma-api.polymarket.com"
 TTL = 600
 MIN_LIQUIDITY = 10000
-# board league -> Polymarket sport code (two-way leagues only)
-SPORTS = {"nba": "nba", "nhl": "nhl", "nfl": "nfl", "ncaaf": "cfb", "mlb": "mlb", "wnba": "wnba", "ncaab": "cbb"}
+# board league -> Polymarket sport code. Soccer (from 2026-10-27): three
+# yes/no markets per game -- each side to win, and the draw -- each about
+# $20k deep in the Premier League; the single-source soccer value bets were
+# the ones losing (-17.6% on 82), and this gives them a second reference.
+SPORTS = {"nba": "nba", "nhl": "nhl", "nfl": "nfl", "ncaaf": "cfb", "mlb": "mlb", "wnba": "wnba", "ncaab": "cbb",
+          "epl": "epl", "esp": "lal", "ger": "bun", "ita": "sea", "fra": "fl1", "mls": "mls",
+          "ucl": "ucl", "uel": "uel"}
+SOCCER = {"epl", "esp", "ger", "ita", "fra", "mls", "ucl", "uel"}
 
 
 def _get(url):
@@ -87,23 +93,75 @@ def _js(x):
     return x
 
 
+_CLUB = {"fc", "afc", "cf", "sc", "ac", "ssc", "as", "rc", "cd", "ud", "sd", "fk", "sk", "if", "bk", "vfb", "vfl", "tsg", "1."}
+
+
+def _club(n):
+    """'Manchester United FC' -> 'manchester united'; accents folded."""
+    import unicodedata
+    n = unicodedata.normalize("NFKD", n or "").encode("ascii", "ignore").decode().lower()
+    return " ".join(w for w in n.replace(".", " ").split() if w not in _CLUB)
+
+
 def _is(short, full):
-    """Polymarket's short name ("Maple Leafs") within ESPN's full one."""
-    s, f = (short or "").lower().strip(), (full or "").lower()
-    return bool(s) and (f.endswith(" " + s) or f == s or f.startswith(s + " "))
+    """Polymarket's name ("Maple Leafs", "Chelsea FC") is ESPN's ("Toronto
+    Maple Leafs", "Chelsea"): a whole-word prefix or suffix either way, after
+    dropping club tags (FC, AFC, CF ...)."""
+    s, f = _club(short), _club(full)
+    if not s or not f:
+        return False
+    return s == f or f.endswith(" " + s) or f.startswith(s + " ") or s.endswith(" " + f) or s.startswith(f + " ")
 
 
-def event_for(book, league, mkt):
+def events_for(book, league, mkt):
+    """Every Polymarket event for one board game (a soccer game has several:
+    the match, its corners, its players), start within 6 hours."""
     import freshness
     st = freshness.parse(mkt.get("start"))
+    out = []
     for e in book.get(league) or []:
         t = freshness.parse(e.get("start"))
         if st and t and abs((t - st).total_seconds()) > 6 * 3600:
             continue
-        names = (e.get("title") or "").split(" vs. ")
+        names = [x.split(" - ")[0] for x in (e.get("title") or "").split(" vs. ")]
         if len(names) == 2 and {_is(names[0], mkt.get("home")) or _is(names[0], mkt.get("away")),
                                 _is(names[1], mkt.get("home")) or _is(names[1], mkt.get("away"))} == {True}:
-            return e
+            out.append(e)
+    return out
+
+
+def event_for(book, league, mkt):
+    ev = events_for(book, league, mkt)
+    return ev[0] if ev else None
+
+
+def _soccer_fair(markets, spec):
+    """A soccer side's (or the draw's) chance from the three yes/no markets,
+    normalised so the three sum to one; None unless all three are liquid."""
+    yes = {}
+    for m in markets:
+        if m.get("type") != "moneyline" or not _liquid(m):
+            continue
+        outs, prices = _js(m.get("outcomes")), _js(m.get("prices"))
+        if not outs or not prices or "Yes" not in outs:
+            continue
+        try:
+            p = float(prices[outs.index("Yes")])
+        except (TypeError, ValueError):
+            continue
+        q = m.get("question") or ""
+        key = "draw" if "draw" in q.lower() else q
+        yes[key] = (p, q)
+    if len(yes) != 3:
+        return None
+    tot = sum(p for p, _ in yes.values())
+    if not 0.9 < tot < 1.15:
+        return None
+    if spec["t"] == "draw":
+        return yes["draw"][0] / tot
+    for key, (p, q) in yes.items():
+        if key != "draw" and q.lower().startswith("will ") and _is(q[5:].split(" win")[0], spec["team"]):
+            return p / tot
     return None
 
 
@@ -117,9 +175,14 @@ def _liquid(m):
 def fair(book, league, mkt, spec):
     """Polymarket's chance for a straight win, spread or total, or None.
     spec: dict(t="win", team) / dict(t="spread", team, line) / dict(t="over"|"under", line)."""
-    e = event_for(book or {}, league, mkt)
-    if not e:
+    evs = events_for(book or {}, league, mkt)
+    if not evs:
         return None
+    if league in SOCCER:
+        if spec["t"] not in ("win", "draw"):
+            return None
+        return _soccer_fair([m for e in evs for m in e.get("markets") or []], spec)
+    e = evs[0]
     for m in e.get("markets") or []:
         outs, prices = _js(m.get("outcomes")), _js(m.get("prices"))
         if not outs or not prices or len(outs) != 2 or not _liquid(m):

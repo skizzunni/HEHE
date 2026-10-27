@@ -3467,3 +3467,24 @@ confirmed/single, so the automatic bench judges single-source bets apart
 from confirmed ones. The worst slice, FanDuel longshots on a single
 source, has won 2 of 21 against a 19.5% break-even. It needs 30 graded
 bets to be benched, and will bench itself if that continues.
+
+## Polymarket soccer as a second reference (2026-10-27)
+
+Polymarket lists the Premier League, La Liga, Bundesliga, Serie A,
+Ligue 1, MLS, Champions League and Europa League. Each match has three
+yes/no markets (each side to win, and the draw), about $20k deep each in
+the Premier League. `polymarket.py` now reads them:
+
+- the three prices are normalised to sum to 1, and nothing is used unless
+  all three are liquid ($10k+);
+- club tags (FC, AFC, SS, CF ...) are dropped and names matched as
+  whole-word prefixes or suffixes either way, so "SS Lazio" is ESPN's
+  "Lazio" and "FC Internazionale Milano" is "Internazionale";
+- every event of the match is searched, since corners and player markets
+  are separate events.
+
+Checked live on six Serie A games: every triple sums to 1.000 (AS Roma
+72.4% / draw 18.2% / Cagliari 9.4%). Soccer value bets, which until now had
+only DraftKings' Shin fair (the "single" slices returning -17.6%), are now
+averaged with Polymarket and confirmed where it is liquid. The confirmed
+and single slices are judged apart by the automatic bench.
