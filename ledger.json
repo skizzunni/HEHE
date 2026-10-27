@@ -6151,7 +6151,7 @@
    }
   ],
   "league": "afc",
-  "live": "42'",
+  "live": "45'+1'",
   "live_score": {
    "Al Hilal": 1,
    "Al-Shamal": 1
@@ -8118,7 +8118,7 @@
    }
   ],
   "league": "afc",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "POH @ KAN",
   "myside": "home",
@@ -46493,7 +46493,7 @@
    }
   ],
   "league": "arg",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "RIV @ ARGJ",
   "myside": "home",
@@ -192482,7 +192482,7 @@
    }
   ],
   "league": "bra",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "INT @ FLU",
   "myside": "home",
@@ -196468,7 +196468,7 @@
    }
   ],
   "league": "bra",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "CHA @ BRA",
   "myside": "home",
@@ -198660,7 +198660,7 @@
    }
   ],
   "league": "bra",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "PAL @ SAN",
   "myside": "away",
@@ -204832,7 +204832,7 @@
    }
   ],
   "league": "cdr",
-  "live": "72'",
+  "live": "75'",
   "live_score": {
    "CD Cuarte": 0,
    "Girona": 2
@@ -210870,7 +210870,7 @@
    }
   ],
   "league": "cdr",
-  "live": "10'",
+  "live": "13'",
   "live_score": {
    "Almer\u00eda": 0,
    "UD Castellonense": 0
@@ -211986,7 +211986,7 @@
    }
   ],
   "league": "cdr",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "RAY @ HUE",
   "myside": "away",
@@ -212200,6 +212200,11 @@
    }
   ],
   "league": "cdr",
+  "live": "1'",
+  "live_score": {
+   "Alcal\u00e1": 0,
+   "Las Palmas": 0
+  },
   "logged": "2026-10-27T14:58",
   "market_agrees": true,
   "matchup": "LPA @ ALC",
@@ -322523,7 +322528,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "BSC @ SSV",
   "myside": "away",
@@ -323312,7 +323317,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "S04 @ SGD",
   "myside": "away",
@@ -324101,7 +324106,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "FCK @ H96",
   "myside": "home",
@@ -325097,7 +325102,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "SVD @ ELV",
   "myside": "home",
@@ -325886,7 +325891,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "FCU @ KOE",
   "myside": "home",
@@ -327090,6 +327095,7 @@
   "conf": 77,
   "date": "2026-10-27",
   "dc": true,
+  "diagnosis": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 77%",
   "dog": false,
   "first": {
    "conf": 81,
@@ -327579,11 +327585,6 @@
    }
   ],
   "league": "dfb",
-  "live": "90'+8'",
-  "live_score": {
-   "Mainz": 0,
-   "VfL Bochum": 2
-  },
   "logged": "2026-10-27T12:59",
   "market_agrees": true,
   "matchup": "M05 @ BOC",
@@ -327592,16 +327593,24 @@
   "p_model_away": null,
   "p_raw": 77.0,
   "pick": "Mainz",
+  "played": "2026-10-27",
   "policy_version": "d6438a7a",
   "price": "-475",
   "price_at": "2026-10-27T16:49:42+00:00",
   "price_book": "FanDuel",
   "price_market": "double_chance",
   "price_ref": "736.189281868:21904041",
-  "status": "open",
+  "scores": {
+   "Mainz": 0,
+   "VfL Bochum": 2
+  },
+  "settled": "2026-10-27T15:02",
+  "state": "lost",
+  "status": "lost",
   "strong": false,
   "tip": "1:00 PM",
-  "why": "market 53% to win, 77% to win or draw"
+  "why": "market 53% to win, 77% to win or draw",
+  "winner": "VfL Bochum"
  },
  "dfb:401917030": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -328695,7 +328704,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "SVW @ DOR",
   "myside": "home",
@@ -329507,7 +329516,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "KSC @ BMG",
   "myside": "home",
@@ -330296,7 +330305,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "VFB @ SCP",
   "myside": "away",
@@ -331407,7 +331416,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "FCN @ B04",
   "myside": "home",
@@ -332196,7 +332205,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "TSG @ KSV",
   "myside": "away",
@@ -333307,7 +333316,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "FCM @ MUN",
   "myside": "home",
@@ -334096,7 +334105,7 @@
    }
   ],
   "league": "dfb",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "WOB @ SCF",
   "myside": "home",
@@ -402787,7 +402796,7 @@
    }
   ],
   "league": "efl2",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "DON @ LTN",
   "myside": "home",
@@ -413006,7 +413015,7 @@
    }
   ],
   "league": "efl2",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "WGA @ LEI",
   "myside": "home",
@@ -430397,7 +430406,7 @@
    }
   ],
   "league": "eflc",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "ARS @ FLE",
   "myside": "away",
@@ -774395,7 +774404,7 @@
    }
   ],
   "league": "ita",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "INT @ VEN",
   "myside": "away",
@@ -792137,7 +792146,7 @@
    }
   ],
   "league": "ita",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "CAG @ ROMA",
   "myside": "home",
@@ -797906,7 +797915,7 @@
    }
   ],
   "league": "ita",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "COMO @ TOR",
   "myside": "away",
@@ -800098,7 +800107,7 @@
    }
   ],
   "league": "ita",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "NAP @ MON",
   "myside": "away",
@@ -842304,7 +842313,7 @@
    }
   ],
   "league": "ita",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "UDI @ PAR",
   "myside": "away",
@@ -853902,9 +853911,9 @@
    }
   ],
   "league": "ita",
-  "live": "65'",
+  "live": "68'",
   "live_score": {
-   "Lazio": 5,
+   "Lazio": 6,
    "Sassuolo": 2
   },
   "logged": "2026-10-27T13:25",
@@ -856099,7 +856108,7 @@
    }
   ],
   "league": "ita",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "JUV @ GEN",
   "myside": "away",
@@ -858314,7 +858323,7 @@
    }
   ],
   "league": "ita",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "BOL @ MIL",
   "myside": "home",
@@ -1006997,7 +1007006,7 @@
    }
   ],
   "league": "mex",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "TIJ @ AME",
   "myside": "home",
@@ -1132100,7 +1132109,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "ATL @ NYC",
   "myside": "home",
@@ -1134315,7 +1134324,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "DC @ TOR",
   "myside": "home",
@@ -1136507,7 +1136516,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "MTL @ CLT",
   "myside": "home",
@@ -1138699,7 +1138708,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "CIN @ MIA",
   "myside": "home",
@@ -1140891,7 +1140900,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "RBNY @ NE",
   "myside": "home",
@@ -1143083,7 +1143092,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "RSL @ ATX",
   "myside": "away",
@@ -1145275,7 +1145284,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "ORL @ CHI",
   "myside": "home",
@@ -1147490,7 +1147499,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "CLB @ DAL",
   "myside": "home",
@@ -1151476,7 +1151485,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "SKC @ MIN",
   "myside": "home",
@@ -1153691,7 +1153700,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "PHI @ NSH",
   "myside": "home",
@@ -1155883,7 +1155892,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "POR @ STL",
   "myside": "home",
@@ -1158075,7 +1158084,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "HOU @ SEA",
   "myside": "home",
@@ -1160267,7 +1160276,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "COL @ SJ",
   "myside": "home",
@@ -1162459,7 +1162468,7 @@
    }
   ],
   "league": "mls",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "SD @ VAN",
   "myside": "home",
@@ -1517876,7 +1517885,7 @@
    }
   ],
   "league": "nba",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "BKN @ BOS",
   "myside": "home",
@@ -1522086,7 +1522095,7 @@
    }
   ],
   "league": "nba",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "DET @ NY",
   "myside": "home",
@@ -1526300,7 +1526309,7 @@
    }
   ],
   "league": "nba",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "SAC @ SA",
   "myside": "home",
@@ -1530422,7 +1530431,7 @@
    }
   ],
   "league": "nba",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "POR @ LAL",
   "myside": "home",
@@ -1534126,7 +1534135,7 @@
    }
   ],
   "league": "nba",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "PHI @ IND",
   "myside": "away",
@@ -2034439,7 +2034448,7 @@
    }
   ],
   "league": "ncaaf",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "JXST @ NMSU",
   "myside": "away",
@@ -2038121,7 +2038130,7 @@
    }
   ],
   "league": "ncaaf",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "KENN @ MTSU",
   "myside": "home",
@@ -2055111,7 +2055120,7 @@
    }
   ],
   "league": "ncaaf",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "DEL @ WKU",
   "myside": "home",
@@ -2064825,7 +2064834,7 @@
    }
   ],
   "league": "ncaaf",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "SHSU @ MOST",
   "myside": "home",
@@ -2527173,7 +2527182,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "CBJ @ PHI",
   "myside": "away",
@@ -2534111,7 +2534120,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "BOS @ CAR",
   "myside": "home",
@@ -2541049,7 +2541058,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "LA @ CHI",
   "myside": "home",
@@ -2548009,7 +2548018,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "MTL @ STL",
   "myside": "home",
@@ -2554947,7 +2554956,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "NYI @ NSH",
   "myside": "home",
@@ -2561907,7 +2561916,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "NJ @ DAL",
   "myside": "home",
@@ -2568845,7 +2568854,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "FLA @ WPG",
   "myside": "away",
@@ -2575783,7 +2575792,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "MIN @ UTA",
   "myside": "home",
@@ -2582721,7 +2582730,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "OTT @ VGK",
   "myside": "home",
@@ -2589659,7 +2589668,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "VAN @ ANA",
   "myside": "home",
@@ -2596597,7 +2596606,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "BUF @ SJ",
   "myside": "away",
@@ -2597529,7 +2597538,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "PHI @ WSH",
   "myside": "home",
@@ -2598461,7 +2598470,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "CGY @ EDM",
   "myside": "home",
@@ -2599393,7 +2599402,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "NJ @ COL",
   "myside": "home",
@@ -2600325,7 +2600334,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "TOR @ SEA",
   "myside": "away",
@@ -2661811,7 +2661820,7 @@
    }
   ],
   "league": "per",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "AGR @ CIE",
   "myside": "home",
@@ -2713176,7 +2713185,7 @@
    }
   ],
   "league": "sco",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "HIBS @ STM",
   "myside": "away",
@@ -2715368,7 +2715377,7 @@
    }
   ],
   "league": "sco",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "MOT @ STJ",
   "myside": "home",
@@ -2717560,7 +2717569,7 @@
    }
   ],
   "league": "sco",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "RAN @ HOM",
   "myside": "away",
@@ -2719752,7 +2719761,7 @@
    }
   ],
   "league": "sco",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "KIL @ DUN",
   "myside": "home",
@@ -2723738,7 +2723747,7 @@
    }
   ],
   "league": "sco",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "DUN @ CEL",
   "myside": "home",
@@ -2725930,7 +2725939,7 @@
    }
   ],
   "league": "sco",
-  "logged": "2026-10-27T14:58",
+  "logged": "2026-10-27T15:02",
   "market_agrees": true,
   "matchup": "FALK @ ABE",
   "myside": "home",

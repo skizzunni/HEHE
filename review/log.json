@@ -5261,9 +5261,9 @@
    }
   },
   "clv": {
-   "avg": -1.4,
+   "avg": -1.97,
    "beat": 0.0,
-   "n": 2
+   "n": 3
   },
   "day": "2026-10-27",
   "leaks_14d": [],
@@ -5280,7 +5280,16 @@
    },
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "dfb",
+    "pick": "Mainz",
+    "price": "-475",
+    "said": 77,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 77%"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -5332,20 +5341,20 @@
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 2,
-   "roi": 21.9,
-   "said": 77.5,
+   "hit": 66.7,
+   "lost": 1,
+   "n": 3,
+   "roi": -18.7,
+   "said": 77.3,
    "won": 2
   },
   "picks_by_league": {
    "dfb": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 21.9,
-    "said": 77.5,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": -18.7,
+    "said": 77.3,
     "won": 2
    }
   },
@@ -5392,10 +5401,10 @@
     "won": 1
    },
    "agree": {
-    "hit": 71.8,
-    "lost": 176,
-    "n": 625,
-    "roi": -0.6,
+    "hit": 71.7,
+    "lost": 177,
+    "n": 626,
+    "roi": -0.7,
     "said": 69.0,
     "won": 449
    }
