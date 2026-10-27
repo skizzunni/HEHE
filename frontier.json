@@ -625567,6 +625567,11 @@
       "probables": {},
       "start": "2026-10-27T16:00Z",
       "t": "2026-10-27T15:38:41+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-27T16:30Z",
+      "t": "2026-10-27T15:54:09+00:00"
      }
     ],
     "atp:185188": [
@@ -629174,6 +629179,75 @@
       "start": "2026-10-28T00:00Z",
       "starters": [],
       "t": "2026-10-27T15:32:35+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "WPG",
+        "Vladislav Namestnikov",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "WPG",
+        "Nick Bjugstad",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "WPG",
+        "Josh Morrissey",
+        "Injured Reserve",
+        "D"
+       ],
+       [
+        "WPG",
+        "Garrett Brown",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "FLA",
+        "Jacob Markstrom",
+        "Injured Reserve",
+        "G"
+       ],
+       [
+        "FLA",
+        "Brad Marchand",
+        "Injured Reserve",
+        "LW"
+       ],
+       [
+        "FLA",
+        "Aleksander Barkov",
+        "Injured Reserve",
+        "C"
+       ],
+       [
+        "FLA",
+        "Jonah Gadjovich",
+        "Injured Reserve",
+        "LW"
+       ]
+      ],
+      "probables": {
+       "FLA": [
+        [
+         "Akira Schmid",
+         "probableStartingGoalie"
+        ]
+       ],
+       "WPG": [
+        [
+         "Clay Stevenson",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-28T00:00Z",
+      "starters": [],
+      "t": "2026-10-27T15:54:09+00:00"
      }
     ],
     "nhl:401892592": [
@@ -669944,142 +670018,6 @@
        2.0,
        0.8,
        [
-        "Columbus Blue Jackets under 5.5 goals",
-        "Over 213.5 points",
-        "Under 255.5 points",
-        "Delaware Blue Hens +13.5",
-        "Boston Celtics to win"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Over 206.5 points",
-        "Western Kentucky Hilltoppers +9.5",
-        "Under 232.5 points",
-        "Philadelphia Flyers +4.5"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Chicago Blackhawks +1.5",
-        "Winnipeg Jets +1.5"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Over 206.5 points",
-        "Western Kentucky Hilltoppers +9.5",
-        "Under 232.5 points",
-        "Over 216.5 points",
-        "Over 4.5 runs"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Under 229.5 points",
-        "Under 226.5 points",
-        "Under 238.5 points"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Chicago Blackhawks +1.5",
-        "Montreal Canadiens +1.5",
-        "New Jersey Devils +1.5",
-        "Over 211.5 points",
-        "Delaware Blue Hens over 21.5 points"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-27T04:58:25+00:00"
-    },
-    {
-     "policy": "d6438a7a",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
         "Boston Celtics to win",
         "Delaware Blue Hens +13.5",
         "Under 255.5 points",
@@ -678062,6 +678000,143 @@
       ]
      ],
      "t": "2026-10-27T15:48:50+00:00"
+    },
+    {
+     "policy": "d6438a7a",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Boston Celtics to win",
+        "Como or draw",
+        "Western Kentucky Hilltoppers over 17.5 points",
+        "Mainz or draw",
+        "Borussia Dortmund or draw"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Argentinos Juniors or draw",
+        "Over 46.5 points",
+        "Under 237.5 points",
+        "Anaheim Ducks +3.5"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Philadelphia Flyers +1.5",
+        "Under 227.5 points"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Argentinos Juniors or draw",
+        "Under 69.5 points",
+        "Over 207.5 points",
+        "Under 246.5 points",
+        "Over 219.5 points"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Under 227.5 points",
+        "Florida Panthers over 2.5 goals",
+        "Over 5.5 runs",
+        "Minnesota Wild +4.5"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Under 227.5 points",
+        "Philadelphia Flyers +1.5",
+        "Florida Panthers over 2.5 goals",
+        "Over 222.5 points",
+        "Lazio or draw"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-27T15:54:02+00:00"
     }
    ]
   }
