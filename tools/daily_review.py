@@ -356,20 +356,34 @@ def frozen_cutoffs(graded, today, path):
     return cfg
 
 
-STUCK_DAYS = 6          # every grader voids an unplayed game after 5 days
+STUCK_DAYS = 6          # props, locks and lottery void an unplayed game after 5 days
+
+
+# Game picks wait longer: the ledger voids an unplayed or rescheduled game
+# only after its VOID_AFTER_DAYS (7), so flagging picks at 6 raised false
+# alarms (2026-10-26: a Saudi game moved to December, voided the next day).
+def _pick_stuck_days():
+    try:
+        import ledger as _l
+        return _l.VOID_AFTER_DAYS + 2
+    except Exception:
+        return 9
+
+
+PICK_STUCK_DAYS = _pick_stuck_days()
 
 
 def stuck(ledger, props, locks, lottery, today):
     """Records still open a week after their game: by then every grader has
     settled or voided them, so anything left means grading broke somewhere
     (2026-10-18: a UFC prop waited on a result line ESPN never posted)."""
-    def old(d):
+    def old(d, n=None):
         try:
-            return (today - dt.date.fromisoformat(str(d)[:10])).days >= STUCK_DAYS
+            return (today - dt.date.fromisoformat(str(d)[:10])).days >= (n or STUCK_DAYS)
         except ValueError:
             return False
     out = [("picks", k) for k, e in ledger.items()
-           if e.get("status") == "open" and old(e.get("played") or e.get("date") or "")]
+           if e.get("status") == "open" and old(e.get("played") or e.get("date") or "", PICK_STUCK_DAYS)]
     out += [("props", k) for k, e in props.items() if e.get("status") == "open" and old(e.get("date") or "")]
     for name, book in (("locks", locks), ("safe locks", load("safe_locks.json", {"legs": {}}))):
         out += [(name, k) for k, e in (book.get("legs") or {}).items()

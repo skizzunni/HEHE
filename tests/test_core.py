@@ -691,6 +691,10 @@ class StuckSweep(unittest.TestCase):
         props = {"p": dict(status="open", date="2026-10-10"), "q": dict(status="open", date="2026-10-15")}
         got = R.stuck(led, props, {"legs": {}}, {"days": {}}, dt.date(2026, 10, 18))
         self.assertEqual(sorted(got), [("picks", "a"), ("props", "p")])
+        # a pick 7 days old is still inside the grader's void window: not stuck yet
+        got = R.stuck({"r": dict(status="open", date="2026-10-11")}, {}, {"legs": {}}, {"days": {}},
+                      dt.date(2026, 10, 18))
+        self.assertEqual(got, [])
 
     def test_alarm_dropped_once_market_is_off(self):
         import rebuild_board as B
