@@ -26,10 +26,11 @@ def row(p_home, home_price, away_price):
 
 class Value(unittest.TestCase):
     def test_fanduel_above_fair_is_a_value_bet(self):
-        # DraftKings -160/+135: Shin fair home ~59.7%; FanDuel -140 pays 1.714
+        # DraftKings -160/+135: Shin fair home ~59.7%; FanDuel -140 pays 1.714.
+        # No Kalshi feed, so FanDuel has one other venue and DraftKings' fair stands.
         import devig
         fair = devig.fair(-160, 135, method="shin")[0]
-        val, sure = V.scan("nhl", row(0.60, "-160", "+135"), FD, KB)
+        val, sure = V.scan("nhl", row(0.60, "-160", "+135"), FD, {})
         fd = [v for v in val if v["venue"] == "FanDuel" and v["side"] == "home"]
         self.assertEqual(len(fd), 1)
         self.assertAlmostEqual(fd[0]["ev"], round(fair * (1 + 100 / 140) - 1, 4))
@@ -171,6 +172,26 @@ class Suspect(unittest.TestCase):
         kinds = sorted(f["kind"] for f in V.load(path)["finds"].values())
         os.remove(path)
         self.assertEqual(kinds, ["suspect", "value"])
+
+
+class LeaveOneOut(unittest.TestCase):
+    def test_venue_judged_against_the_other_venues(self):
+        """FanDuel is priced against DraftKings and Kalshi (not itself); a
+        FanDuel price that only beats a lagging DraftKings is no value."""
+        row = dict(id="nhl:1", label="BOS @ TOR", price_book="DraftKings",
+                   mkt=dict(home="Toronto Maple Leafs", away="Boston Bruins", home_abbr="TOR", away_abbr="BOS", start=START),
+                   legs=[dict(side="home", price="-150"), dict(side="away", price="+130")])
+        v, _ = V.scan("nhl", row, FD=FD, KB=KB)
+        for x in v:
+            if x["venue"] == "FanDuel":
+                self.assertIn("consensus", x["fair_source"])
+        import sources
+        snap = sources.snapshot("nhl", row, FD=FD, KB=KB)
+        refs = [snap["dk"], snap["kalshi"]]
+        fd_home_fair = sum(refs) / 2
+        # FanDuel's own -140 on Toronto is value only if that consensus says so
+        self.assertEqual(any(x["venue"] == "FanDuel" and x["side"] == "home" for x in v),
+                         fd_home_fair * (1 + 100 / 140) - 1 > V.MIN_EV)
 
 
 if __name__ == "__main__":

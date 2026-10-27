@@ -187,7 +187,7 @@ def value_slice(f):
     imp = 1 / f["dec"] if f.get("dec") else 0
     band = "longshot" if imp < 0.30 else "favourite" if imp >= 0.60 else "middle"
     src = f.get("fair_source") or ""
-    conf = "confirmed" if ("Polymarket" in src or "proven" in src) else "single"
+    conf = "confirmed" if ("Polymarket" in src or "proven" in src or "consensus" in src) else "single"
     return f'{f.get("venue")} {band}, {conf}'
 
 

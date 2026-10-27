@@ -3534,3 +3534,18 @@ Finds above `value_bets.MAX_EV` (5%) are therefore archived and graded
 apart as "suspect": they are not shown as value bets and not put in value
 parlays. The Calls tab shows their own record, so the rule keeps being
 tested.
+
+**Value bets judged against the other venues.** For a straight win on a
+two-way game, each venue (FanDuel, Kalshi) is now priced against the
+average no-vig chance of every *other* source quoting the game
+(DraftKings, the other of FanDuel/Kalshi, Polymarket), when at least two
+others quote. A venue is never part of its own reference, so a quote that
+only one book has moved to no longer looks like value. With fewer than two
+other sources the old fair (DraftKings' Shin, or a proven source) stands.
+These bets count as "confirmed" in the value-slice bench.
+
+Evidence, on the 55 graded straight-win finds where the other venues could
+be reconstructed afterwards: the ones that still showed value against the
+consensus won 14 of 22 (+28.3%), the rest 11 of 33 (-21.5%). The sample is
+small and the reconstruction used later snapshots, so this is a forward
+test: the value record on the Calls tab keeps scoring it.

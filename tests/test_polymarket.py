@@ -43,8 +43,12 @@ class Polymarket(unittest.TestCase):
         val, _ = V.scan("nhl", row(0.6, "-160", "+135"), FD, {}, min_ev=-1, PM=PM)
         home = [v for v in val if v["side"] == "home"]
         self.assertEqual([v["venue"] for v in home], ["FanDuel"])
-        self.assertTrue(all(abs(v["fair"] - round((dk + 0.62) / 2, 4)) < 1e-4 for v in home))
-        self.assertTrue(all(v["fair_source"] == "DraftKings (Shin) + Polymarket" for v in home))
+        # FanDuel is judged against the two other venues: DraftKings and Polymarket
+        import sources
+        snap = sources.snapshot("nhl", row(0.6, "-160", "+135"), FD=FD, PM=PM)
+        self.assertTrue(all(abs(v["fair"] - round((snap["dk"] + snap["pm"]) / 2, 4)) < 1e-4 for v in home))
+        self.assertTrue(abs(snap["dk"] - dk) < 1e-3)
+        self.assertTrue(all(v["fair_source"] == "consensus of 2 other venues" for v in home))
 
 
 class Soccer(unittest.TestCase):

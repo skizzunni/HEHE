@@ -174,14 +174,33 @@ def scan(league, row, FD=None, KB=None, min_ev=MIN_EV, OA=None, PM=None):
         if not vs:
             continue
         best[side] = (team, vs[0])
+        # Two-way games: each venue is judged against the consensus of the
+        # OTHER venues' no-vig chances (DraftKings, FanDuel, Kalshi,
+        # Polymarket), never against a single book that may lag the market
+        # (2026-10-27: on 55 archived two-way finds, the ones the
+        # leave-one-out consensus still rated as value went 14 of 22, the
+        # rest 11 of 33 -- with hindsight in that test, so it is tracked).
+        loo = {}
+        if src.startswith("DraftKings") and not any(L.get("side") == "draw" for L in row.get("legs") or []):
+            try:
+                import sources
+                snap = {k: v for k, v in sources.snapshot(league, row, FD=FD, KB=KB, PM=PM).items() if k != "blend"}
+                for name, key in (("FanDuel", "fd"), ("Kalshi", "kalshi")):
+                    refs = [p for k, p in snap.items() if k != key]
+                    if len(refs) >= 2:
+                        ph = sum(refs) / len(refs)
+                        loo[name] = (ph if side == "home" else 1 - ph, f"consensus of {len(refs)} other venues")
+            except Exception:
+                loo = {}
         for v in vs:
-            ev = fair * v["dec"] - 1
+            v_fair, v_src = loo.get(v["venue"], (fair, src))
+            ev = v_fair * v["dec"] - 1
             if ev > min_ev and v["venue"] != (row.get("price_book") or "DraftKings"):
                 if src.startswith("Pinnacle") and v["venue"] == "Pinnacle":
                     continue                     # the reference is never its own find
                 value.append(dict(id=row["id"], league=league, side=side, team=team, venue=v["venue"],
-                                  price=v.get("american") or v["price"], dec=v["dec"], fair=round(fair, 4),
-                                  fair_source=src,
+                                  price=v.get("american") or v["price"], dec=v["dec"], fair=round(v_fair, 4),
+                                  fair_source=v_src,
                                   ev=round(ev, 4), match=row.get("label"), tip=row.get("tip"),
                                   start=(row.get("mkt") or {}).get("start")))
     # spreads and totals: the same comparison on exactly the same line
