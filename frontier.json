@@ -627755,6 +627755,38 @@
       "start": "2026-10-28T03:00Z",
       "starters": [],
       "t": "2026-10-27T19:39:47+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "LAL",
+        "Adou Thiero",
+        "Out",
+        "F"
+       ],
+       [
+        "POR",
+        "Chris Youngblood",
+        "Out",
+        "G"
+       ],
+       [
+        "POR",
+        "Scoot Henderson",
+        "Day-To-Day",
+        "G"
+       ],
+       [
+        "POR",
+        "Shaedon Sharpe",
+        "Out",
+        "G"
+       ]
+      ],
+      "probables": {},
+      "start": "2026-10-28T03:00Z",
+      "starters": [],
+      "t": "2026-10-27T20:26:52+00:00"
      }
     ],
     "ncaaf:401871071": [
@@ -633295,6 +633327,11 @@
       "probables": {},
       "start": "2026-10-27T20:20Z",
       "t": "2026-10-27T19:59:47+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-27T20:35Z",
+      "t": "2026-10-27T20:26:52+00:00"
      }
     ],
     "wta:185790": [
@@ -672279,142 +672316,6 @@
        0.75,
        [
         "Argentinos Juniors or draw",
-        "Under 235.5 points",
-        "Delaware Blue Hens under 37.5 points",
-        "Over 220.5 points",
-        "Philadelphia Flyers +2.5"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Under 229.5 points",
-        "Under 226.5 points",
-        "Over 223.5 points"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Boston Celtics to win",
-        "Under 226.5 points",
-        "Over 223.5 points",
-        "Philadelphia Flyers +1.5",
-        "Over 5.5 runs"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-27T13:00:29+00:00"
-    },
-    {
-     "policy": "d6438a7a",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Boston Celtics to win",
-        "Como or draw",
-        "Delaware Blue Hens over 19.5 points",
-        "Over 4.5 goals",
-        "New York Islanders under 5.5 goals"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Argentinos Juniors or draw",
-        "Delaware Blue Hens under 37.5 points",
-        "Over 220.5 points",
-        "Anaheim Ducks +3.5"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Under 7.5 goals",
-        "Philadelphia Flyers +1.5"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Argentinos Juniors or draw",
         "Under 236.5 points",
         "Delaware Blue Hens +9.5",
         "Over 217.5 points",
@@ -680380,6 +680281,142 @@
       ]
      ],
      "t": "2026-10-27T20:20:10+00:00"
+    },
+    {
+     "policy": "d6438a7a",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Boston Celtics to win",
+        "Delaware Blue Hens under 37.5 points",
+        "Over 216.5 points",
+        "Under 236.5 points",
+        "Carolina Hurricanes +2.5"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Over 44.5 points",
+        "Over 219.5 points",
+        "Argentinos Juniors or draw",
+        "Under 10.5 goals"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Over 214.5 points",
+        "Carolina Hurricanes under 4.5 goals"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Over 44.5 points",
+        "Under 248.5 points",
+        "Argentinos Juniors or draw",
+        "Under 233.5 points",
+        "Over 4.5 runs"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Over 214.5 points",
+        "Under 240.5 points",
+        "Over 49.5 points"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Over 214.5 points",
+        "Over 220.5 points",
+        "Under 7.5 goals",
+        "Delaware Blue Hens under 34.5 points",
+        "Minnesota Wild +1.5"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-27T20:26:45+00:00"
     }
    ]
   }
