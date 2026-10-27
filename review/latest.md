@@ -1,12 +1,13 @@
 # Review 2026-10-26
 
-Picks 9-2 (81.8% vs 70.8% claimed, ROI +7.3%).
+Picks 9-3 (75.0% vs 70.6% claimed, ROI -1.6%).
 STUCK 1 record(s) open a week after their game -- grading is broken: picks ksa:401900898
 TRAILING props nba Pts + Reb: 74.5% hit vs 84.9% stated on 51
-Closing line value: +1.13 points on 11 picks; beat the close on 63.6%.
+Closing line value: +0.87 points on 12 picks; beat the close on 58.3%.
 - LOST arg Estudiantes de La Plata at 67%: margin 2 · the book had my side favoured too · called at 67%
+- LOST bra Coritiba at 68%: margin 1 · the book had my side favoured too · called at 68%
 - LOST den F.C. København at 67%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67%
-With the market 72.1% (606); against it 22.2% (9).
+With the market 72.0% (607); against it 22.2% (9).
 Locks 0/11 won, 11 open; Best play top 3 (51%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 3 (82%) open; Best play top 8 (55%) open.
 Lottery 10k: open (0/13 legs won)

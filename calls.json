@@ -2343,56 +2343,7 @@
     "esp": "2026-10-26T19:09:55+00:00",
     "nba": "2026-10-26T21:47:24+00:00"
    },
-   "candidate_observations": {
-    "col:401877841": {
-     "book": "FanDuel",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 75,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-27T00:24:00+00:00",
-      "conf": 75,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "col:401877841",
-      "league": "col",
-      "match": "BUC @ SFE",
-      "pick": "Independiente Santa Fe or draw",
-      "price": "-380",
-      "price_at": "2026-10-27T00:14:11+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.193320633:21786362",
-      "prob_at": "2026-10-27T00:23:42+00:00",
-      "rank": null,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "home",
-      "start": "2026-10-27T01:05Z"
-     },
-     "dc": true,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
-     },
-     "id": "col:401877841",
-     "league": "col",
-     "match": "BUC @ SFE",
-     "pick": "Independiente Santa Fe or draw",
-     "price": "-380",
-     "price_at": "2026-10-27T00:14:11+00:00",
-     "price_market": "double_chance",
-     "price_ref": "736.193320633:21786362",
-     "side": "home",
-     "start": "2026-10-27T01:05Z",
-     "tip": "9:05 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
     "esp",
     "nfl"
@@ -2405,8 +2356,8 @@
    "shadow_watch": {
     "best_at": "2026-10-26T12:03:14+00:00",
     "best_ceiling": 1.41,
-    "checks": 144,
-    "last": "2026-10-27T00:24:00+00:00",
+    "checks": 145,
+    "last": "2026-10-27T00:29:09+00:00",
     "max_ready": 2,
     "reasons": {
      "awaiting confirmed XIs": 618,
