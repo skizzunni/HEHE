@@ -2368,6 +2368,62 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909888|away|FanDuel": {
+   "dec": 2.72,
+   "ev": 0.0163,
+   "fair": 0.3736,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909888",
+   "kind": "value",
+   "league": "nba",
+   "match": "GS @ MIN",
+   "price": "+172",
+   "seen": "2026-10-27T22:53:06+00:00",
+   "side": "away",
+   "start": "2026-10-29T00:00Z",
+   "team": "Golden State Warriors",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909888|home|Kalshi": {
+   "dec": 1.703,
+   "ev": 0.1228,
+   "fair": 0.6593,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909888",
+   "kind": "suspect",
+   "league": "nba",
+   "match": "GS @ MIN",
+   "price": "-142",
+   "seen": "2026-10-27T22:53:06+00:00",
+   "side": "home",
+   "start": "2026-10-29T00:00Z",
+   "team": "Minnesota Timberwolves",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909888|sure": {
+   "id": "nba:401909888",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+185",
+     "stake_share": 0.374,
+     "team": "Golden State Warriors",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-142",
+     "stake_share": 0.626,
+     "team": "Minnesota Timberwolves",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "GS @ MIN",
+   "profit": 0.066,
+   "seen": "2026-10-27T22:53:06+00:00"
+  },
   "ncaaf:401856730|away|FanDuel": {
    "dec": 1.7042,
    "ev": 0.0365,
