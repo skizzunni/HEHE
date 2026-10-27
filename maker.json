@@ -5015,6 +5015,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "queue",
    "id": "nfl:401873009",
    "label": "over 43.5",
    "league": "nfl",
@@ -5027,8 +5028,9 @@
     "t": "over"
    },
    "start": "2026-10-27T00:15Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26OCT26DALPHI-44"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26OCT26DALPHI-44",
+   "won": 1
   },
   "KXNFLTOTAL-26OCT26DALPHI-45|NO": {
    "ask": 0.52,
@@ -5036,6 +5038,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "nfl:401873009",
    "label": "under 44.5",
    "league": "nfl",
@@ -5048,8 +5051,9 @@
     "t": "under"
    },
    "start": "2026-10-27T00:15Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26OCT26DALPHI-45"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26OCT26DALPHI-45",
+   "won": 0
   }
  }
 }
