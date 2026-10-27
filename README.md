@@ -3506,3 +3506,31 @@ Results page shows it under "Which price predicts best". As with two-way
 games, `best3()` names a source only once it is proven better over 200+
 games, and then soccer value bets take their fair chance from it
 automatically.
+
+## Today's plan, and outsized value edges held out (2026-10-27)
+
+**Today's plan.** The Calls tab opens with the day's best pick from each
+section, each with its own record:
+
+- the Lock of the day
+- the strongest call still to play
+- the 2x ticket, with the challenge run's state
+- the best value bet, preferring one a second source confirmed
+
+One Copy button covers all of them. Nothing on the card is new; each line
+is the same pick its own tab shows.
+
+**Suspect edges.** Value bets by claimed edge, 168 graded:
+
+| claimed edge | N | ROI | won | fair |
+|---|---|---|---|---|
+| 0-2% | 77 | 0.0% | 46.8% | 46.9% |
+| 2-3% | 50 | -7.3% | 38.0% | 43.0% |
+| 3-5% | 24 | -1.8% | 41.7% | 37.1% |
+| 5%+ | 17 | **-40.7%** | 29.4% | 45.0% |
+
+An edge that large is usually a stale or mismatched quote, not value.
+Finds above `value_bets.MAX_EV` (5%) are therefore archived and graded
+apart as "suspect": they are not shown as value bets and not put in value
+parlays. The Calls tab shows their own record, so the rule keeps being
+tested.

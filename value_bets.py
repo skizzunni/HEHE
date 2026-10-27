@@ -27,6 +27,13 @@ import os
 HERE = os.path.dirname(os.path.abspath(__file__))
 PATH = os.path.join(HERE, "value.json")
 MIN_EV = 0.01                    # one cent per dollar, below which prices are noise
+# An edge this large is more often a stale or mismatched quote than value:
+# 2026-10-27, finds claiming 5%+ won 5 of 17 against 45% fair (-40.7%),
+# while 0-5% ones broke about even. They are archived and graded apart as
+# "suspect" -- not shown as value bets, not put in value parlays -- so the
+# record keeps testing them.
+MAX_EV = 0.05
+LAST_SUSPECT = []
 
 
 # The fair chance is Shin's de-vig of the reference book's prices, not the
@@ -217,6 +224,9 @@ def scan_all(slot_rows, FD=None, KB=None, now=None, OA=None, PM=None):
             value.extend(v)
             if s:
                 sure.append(s)
+    global LAST_SUSPECT
+    LAST_SUSPECT = [v for v in value if v["ev"] > MAX_EV]
+    value = [v for v in value if v["ev"] <= MAX_EV]
     # slices the record has shown cannot break even stay out (autotune.py)
     try:
         import autotune
@@ -253,6 +263,11 @@ def record(value, sure, now=None, path=None):
         k = f'{v["id"]}|{v["side"]}|{v["venue"]}'
         if k not in book["finds"]:
             book["finds"][k] = dict(v, kind="value", seen=t)
+            added += 1
+    for v in LAST_SUSPECT:
+        k = f'{v["id"]}|{v["side"]}|{v["venue"]}'
+        if k not in book["finds"]:
+            book["finds"][k] = dict(v, kind="suspect", seen=t)
             added += 1
     for s in sure:
         k = f'{s["id"]}|sure'
@@ -294,7 +309,7 @@ def grade(entries, path=None):
     book = load(path)
     changed = False
     for k, f in book["finds"].items():
-        if f.get("kind") != "value" or f.get("status") in ("won", "lost", "void"):
+        if f.get("kind") not in ("value", "suspect") or f.get("status") in ("won", "lost", "void"):
             continue
         st = settle(f, entries.get(f["id"]))
         if st:
@@ -305,8 +320,8 @@ def grade(entries, path=None):
     return book
 
 
-def report(path=None):
-    fs = [f for f in load(path)["finds"].values() if f.get("kind") == "value" and f.get("status") in ("won", "lost")]
+def report(path=None, kind="value"):
+    fs = [f for f in load(path)["finds"].values() if f.get("kind") == kind and f.get("status") in ("won", "lost")]
     if not fs:
         return dict(n=0)
     ret = [(f["dec"] - 1) if f["status"] == "won" else -1 for f in fs]

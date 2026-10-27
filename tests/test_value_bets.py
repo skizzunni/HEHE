@@ -154,5 +154,24 @@ class PropValue(unittest.TestCase):
             self.assertEqual(V.prop_report(path)["won"], 1)
 
 
+class Suspect(unittest.TestCase):
+    def test_outsized_edges_are_held_out_but_archived(self):
+        import tempfile
+        rows = {"nhl": [dict(id="nhl:9")]}
+        fake = [dict(id="nhl:9", side="home", venue="FanDuel", dec=2.0, ev=0.03, team="A"),
+                dict(id="nhl:9", side="away", venue="Kalshi", dec=3.0, ev=0.09, team="B")]
+        import datetime as _dt
+        with mock.patch.object(V, "scan", lambda *a, **k: (list(fake), None)), \
+             mock.patch("freshness.can_call", lambda r, now: True), \
+             mock.patch("freshness.parse", lambda s: _dt.datetime(2099, 1, 1, tzinfo=_dt.timezone.utc)):
+            v, _ = V.scan_all(rows)
+        self.assertEqual([x["ev"] for x in v], [0.03])
+        path = tempfile.mktemp(suffix=".json")
+        V.record(v, [], path=path)
+        kinds = sorted(f["kind"] for f in V.load(path)["finds"].values())
+        os.remove(path)
+        self.assertEqual(kinds, ["suspect", "value"])
+
+
 if __name__ == "__main__":
     unittest.main()
