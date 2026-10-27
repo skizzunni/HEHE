@@ -12,15 +12,15 @@ Closing line value: +0.27 points on 26 picks; beat the close on 46.2%.
 - LOST nhl New York Rangers at 54%: margin 3 · the book had my side favoured too · called at 54%
 - LOST wnba Atlanta Dream at 51%: margin 9 · the book had my side favoured too · called at 51%
 With the market 72.0% (621); against it 22.2% (9).
-Locks 5/11 won, 4 open; Best play top 3 (51%) open; lost: Under 247.5 points (Minnesota Timberwolves at Cleveland Cavaliers) Minnesota Timberwolves 125 - Cleveland Cavaliers 127; Over 214.5 points (Washington Wizards at Charlotte Hornets) Washington Wizards 103 - Charlotte Hornets 110.
+Locks 6/11 won, 3 open; Best play top 3 (51%) open; lost: Under 247.5 points (Minnesota Timberwolves at Cleveland Cavaliers) Minnesota Timberwolves 125 - Cleveland Cavaliers 127; Over 214.5 points (Washington Wizards at Charlotte Hornets) Washington Wizards 103 - Charlotte Hornets 110.
 Safe Locks 3/11 won, 5 open; Winners parlay top 3 (82%) lost; Best play top 8 (55%) lost; lost: Jaime Jaquez Jr.: 2+ Assists (IND @ MIL) 0; Davion Mitchell: 4+ Assists (DAL @ MIA) 2; Los Angeles Kings under 5.5 goals (Los Angeles Kings at New York Rangers) Los Angeles Kings 6 - New York Rangers 3.
-Lottery 10k: lost (5/13 legs won, killed by Over 238.5 points, New York Rangers to win)
-Lottery 10k+25: lost (5/13 legs won, killed by Over 238.5 points, New York Rangers to win, Over 236.5 points)
-Lottery 10k+50: lost (5/13 legs won, killed by Over 238.5 points, New York Rangers to win)
-Lottery 10k+100: lost (6/13 legs won, killed by Over 238.5 points, New York Rangers to win)
-Lottery 100: lost (5/12 legs won, killed by Over 228.5 points, Over 237.5 points)
-Ladder-consistency props (all time): 789/937 won (84.2%) vs 86.9% fair, 87.3% price.
-Props 108/122 vs 83.8% claimed.
+Lottery 10k: lost (6/13 legs won, killed by Over 238.5 points, New York Rangers to win)
+Lottery 10k+25: lost (6/13 legs won, killed by Over 238.5 points, New York Rangers to win, Over 236.5 points)
+Lottery 10k+50: lost (6/13 legs won, killed by Over 238.5 points, New York Rangers to win)
+Lottery 10k+100: lost (7/13 legs won, killed by Over 238.5 points, New York Rangers to win)
+Lottery 100: lost (6/12 legs won, killed by Over 228.5 points, Over 237.5 points)
+Ladder-consistency props (all time): 790/938 won (84.2%) vs 86.9% fair, 87.3% price.
+Props 112/128 vs 83.5% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=50), ncaaf 0.40 (n=108), nhl 0.00 (n=68)
