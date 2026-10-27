@@ -1441,6 +1441,46 @@ function callBest(c){
   return '<div class="sbn">better at <b>' + esc(best.venue) + ' ' + esc(best.american || best.price) + '</b>: $10 wins $'
     + win.toFixed(2) + ' (+' + (100 * (win / quoted - 1)).toFixed(0) + '%)</div>';
 }
+// Today's plan: the one pick each product rates best today, each with its
+// own record, so the day's strongest bets sit in one place. Nothing here is
+// new -- each line is the same pick its own tab shows.
+function todaysPlan(){
+  const R = D.results || {}, K = R.calls_record || {}, items = [];
+  const win10 = (price, dec) => { const w = price != null ? callWin(price) : (dec ? 10 * (dec - 1) : null);
+    return w === null || w === undefined ? '' : ' &middot; $10 wins $' + w.toFixed(2); };
+  // 1. the Lock of the day
+  const LD = D.lock_of_day || {}, L = LD.leg, LR = LD.record || {};
+  if(L && L.status !== 'lost' && L.status !== 'won')
+    items.push({what: 'Lock of the day', pick: L.label, price: L.price, p: L.p, extra: L.match,
+                rec: LR.legs ? LR.won + ' of ' + LR.legs + ' so far' : '', line: legLine(L.label, L.price, 'FanDuel', L.match)});
+  // 2. the strongest call still to play
+  const C = (R.calls || []).filter(c => !c.status || c.status === 'open');
+  if(C.length){ const c = C[0];
+    items.push({what: 'Top call', pick: c.pick, price: c.price, p: c.conf / 100, extra: (c.match || '') + (c.book ? ' &middot; ' + esc(c.book) : ''),
+                rec: K.n ? 'calls ' + K.won + '&ndash;' + K.lost : '', line: legLine(c.pick, c.price, c.book, c.match)}); }
+  // 3. today's 2x challenge ticket
+  const rows = (((D.frontier || {}).today || {})["0"] || {}).rows || [];
+  const t2 = rows.filter(r => r.target === 2 && r.legs && r.legs.length).sort((a, b) => b.prob - a.prob)[0];
+  const ch = ((D.challenge || {}).sizes || {})["2"];
+  if(t2) items.push({what: '2&times; ticket', pick: t2.legs.map(x => x.label).join(' + '), dec: t2.total, p: t2.prob,
+                     extra: t2.legs.length + ' legs',
+                     rec: ch ? 'challenge run: $' + Math.round(ch.bank) + (ch.streak ? ', ' + ch.streak + ' in a row' : '') : '',
+                     line: '2x ticket: ' + t2.legs.map(x => x.label + ' ' + (x.price || '')).join(' + ')});
+  // 4. the best value bet, preferring one a second source confirmed
+  const VB = ((D.value || {}).bets || []), VR = (D.value || {}).record || {};
+  const v = VB.find(x => /Polymarket|proven/.test(x.fair_source || '')) || VB[0];
+  if(v) items.push({what: 'Value bet', pick: v.team, price: v.price, dec: v.dec, p: v.fair, extra: esc(v.venue) + ' &middot; edge +' + (100 * v.ev).toFixed(1) + '%',
+                    rec: VR.n ? 'value bets ' + (VR.roi >= 0 ? '+' : '') + VR.roi + '% on ' + VR.n : '', line: legLine(v.team, v.price, v.venue, v.match)});
+  if(!items.length) return '';
+  return '<div class="sweep"><h3>Today&rsquo;s plan</h3>'
+    + '<ul class="betlegs">' + items.map(x => '<li><span><b>' + x.what + ':</b> ' + esc(x.pick)
+      + ' <span class="px">' + esc(x.price || (x.dec ? x.dec.toFixed(2) + '&times;' : '')) + '</span>'
+      + (x.p ? ' &middot; ' + (100 * x.p).toFixed(0) + '%' : '') + win10(x.price && !/¢/.test(x.price) ? x.price : null, x.dec)
+      + (x.extra ? '<div class="sbn">' + x.extra + (x.rec ? ' &middot; ' + x.rec : '') + '</div>' : '') + '</span></li>').join('')
+    + '</ul>' + copyBtn("Today's plan", items.map(x => x.line))
+    + '<p class="note">The best pick from each section below, with its own record. Nothing is certain: even the Lock of the day '
+    + 'loses about 1 time in 10.</p></div>';
+}
 function drawCalls(){
   const R = D.results || {}, C = R.calls || [], K = R.calls_record || {};
   const n = R.calls_top || 5;
@@ -1454,7 +1494,7 @@ function drawCalls(){
       + '%, 95% range ' + K.ci95[0].toFixed(1) + '&ndash;' + K.ci95[1].toFixed(1) + '%) against '
       + K.stated.toFixed(1) + '% stated, N = ' + K.n + ', ' + esc(K.dates[0]) + ' to ' + esc(K.dates[1]) + '.</p>'
     : '<p class="note">No call has been graded yet.</p>';
-  panel.innerHTML = marketBanner() + '<div class="parlays"><h3>Today&rsquo;s calls</h3>'
+  panel.innerHTML = marketBanner() + todaysPlan() + '<div class="parlays"><h3>Today&rsquo;s calls</h3>'
     + '<p class="note">The ' + n + ' highest chances among today&rsquo;s games with a fresh sportsbook price, strongest first, set at 8:00 AM Eastern.</p>'
     + '<details class="explain"><summary>How calls are chosen</summary><p class="note">Only games with a sportsbook price under 15 minutes old. '
     + 'Each is published at its honest chance and counts in the record; '
