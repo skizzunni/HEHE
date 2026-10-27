@@ -133,7 +133,7 @@ def parse(markets, league, hold):
                                    ("Under", ru, 1 - po, f"u{float(line):g}")):
                 o = _odds(r)
                 out.append(dict(name=who, market=stat, line=ln, price=f"+{o}" if o > 0 else str(o),
-                                imp=round(_imp(o), 4), p=round(min(p, 0.99), 4), aid=None,
+                                imp=round(_imp(o), 4), p=round(props_ledger.cap(min(p, 0.99)), 4), aid=None,
                                 label=f"{who}: {side} {float(line):g} {stat}",
                                 fd=f"{mid}:{r.get('selectionId')}",
                                 where=f"{mn}: {r.get('runnerName')}",
@@ -163,7 +163,7 @@ def parse(markets, league, hold):
             if not ln or " or " in who or who.lower().startswith("no "):
                 continue
             out.append(dict(name=who, market=stat, line=ln, price=f"+{o}" if o > 0 else str(o),
-                            imp=round(i, 4), p=round(min(i / props_ledger.hold(league, stat), 0.99), 4),
+                            imp=round(i, 4), p=round(props_ledger.cap(min(i / props_ledger.hold(league, stat), 0.99)), 4),
                             aid=None,
                             label=f"{who}: {ln} {stat}",
                             fd=f"{mid}:{r.get('selectionId')}", where=f"{mn}: {nm}"))

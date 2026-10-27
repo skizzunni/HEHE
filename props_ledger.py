@@ -605,6 +605,48 @@ def tune():
         MARKET_HOLD[(lg, mk)] = round(min(max(k, HOLD_BOUNDS[0]), HOLD_BOUNDS[1]), 3)
 
 
+# The ceiling on any prop's stated chance, refitted from the record by
+# tune(): what the heaviest graded props (-1000 or shorter) actually won.
+# 2026-10-27: 709 of them were priced at 93.7% and won 86.7% -- 83.7% and
+# 88.0% in the two halves of the dates -- and FanDuel ladders at -1600 to
+# -2000 were being stated at 93-97% (Safe Locks prop legs: 14 of 19 against
+# 93.4% stated). However short the price, a player prop has not won more
+# often than this: injuries, rest, blowouts and late scratches.
+CAP_DEC = 1.10
+CAP_MIN_N = 100
+CAP_BOUNDS = (0.80, 0.97)
+CAP = CAP_BOUNDS[1]
+CAP_EVIDENCE = {}
+
+
+def _fit_cap():
+    """Hit rate of graded props priced CAP_DEC or shorter, within CAP_BOUNDS;
+    the upper bound (no cap in effect) until CAP_MIN_N are graded."""
+    global CAP
+    rows = [e for e in load().values() if isinstance(e, dict) and e.get("status") in ("won", "lost")]
+    heavy = []
+    for e in rows:
+        try:
+            v = float(str(e.get("price")).replace("+", ""))
+        except (TypeError, ValueError):
+            continue
+        if v < 0 and 1 + 100 / -v <= CAP_DEC:
+            heavy.append(e)
+    CAP_EVIDENCE.clear()
+    if len(heavy) < CAP_MIN_N:
+        CAP = CAP_BOUNDS[1]
+        CAP_EVIDENCE.update(n=len(heavy))
+        return
+    hit = sum(e["status"] == "won" for e in heavy) / len(heavy)
+    CAP = round(min(max(hit, CAP_BOUNDS[0]), CAP_BOUNDS[1]), 4)
+    CAP_EVIDENCE.update(n=len(heavy), hit=round(100 * hit, 1), cap=CAP)
+
+
+def cap(p):
+    """A prop's chance, never above what the heaviest props have won."""
+    return min(p, CAP) if p is not None else p
+
+
 def hold(league, market=None):
     if market is not None and (league, market) in MARKET_HOLD:
         return MARKET_HOLD[(league, market)]
@@ -612,3 +654,4 @@ def hold(league, market=None):
 
 
 tune()
+_fit_cap()

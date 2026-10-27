@@ -171,8 +171,8 @@ def parse(items, who, hold=ONE_SIDED_HOLD, league=None):
         # the margin is re-fitted per league from graded props (props_ledger)
         out.append(dict(name=name, market=market, line=line, price=str(price),
                         imp=round(imp, 4), aid=aid.group(1) if aid else None,
-                        p=round(min(imp / (props_ledger.hold(league, market) if league else hold),
-                                    0.99), 4), label=label.strip()))
+                        p=round(props_ledger.cap(min(imp / (props_ledger.hold(league, market) if league else hold),
+                                                     0.99)), 4), label=label.strip()))
     # one entry per (player, market, line): the feed repeats some
     seen, uniq = set(), []
     for o in out:

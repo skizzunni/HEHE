@@ -395,6 +395,22 @@ class PropIdentity(unittest.TestCase):
         self.assertEqual(get("J Smith")[1], "unresolved")
         self.assertEqual(get("Connor McDavid"), (None, "absent"))
 
+    def test_prop_cap_from_the_heaviest_props(self):
+        """No prop is stated above what props at -1000 or shorter have won."""
+        import props_ledger as PL
+        from unittest import mock
+        book = {str(i): dict(status="won" if i < 85 else "lost", price="-1500", p=0.95) for i in range(100)}
+        book.update({f"x{i}": dict(status="won", price="-200", p=0.6) for i in range(50)})
+        with mock.patch.object(PL, "load", lambda: book):
+            PL._fit_cap()
+            self.assertEqual(PL.CAP, 0.85)
+            self.assertEqual(PL.cap(0.95), 0.85)
+            self.assertEqual(PL.cap(0.70), 0.70)
+        with mock.patch.object(PL, "load", lambda: {k: book[k] for k in list(book)[:50]}):
+            PL._fit_cap()                       # too few heavy props: no cap in effect
+            self.assertEqual(PL.CAP, PL.CAP_BOUNDS[1])
+        PL._fit_cap()
+
     def test_nicknames(self):
         """'Kenneth Gainwell' on FanDuel is 'Kenny Gainwell' in ESPN's box
         (2026-10-24); a nickname still needs the surname and a unique match."""

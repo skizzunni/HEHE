@@ -3420,3 +3420,33 @@ which fits the one-ticket-a-day plan.
 | +25% | 2x, 2x, 5x, 5x | 1.0% | +1.9% |
 | +50% | 2x, 2x, 3x, 3x, 3x | 1.6% | +14.8% |
 | +100% | 2x, 2x, 3x, 3x, 3x | 3.6% | +46.2% |
+
+## Props capped at what the heaviest props actually win (2026-10-27)
+
+The automatic audit flagged Safe Locks prop legs: 14 of 19 won against
+93.4% stated (-3.5 SE). Safe Locks game legs were on target (77 of 85,
+90.6% won against 91.0% stated). Safe Locks takes the props system's own
+chance, so the cause is upstream: FanDuel ladder props at -1600 to -2000
+were stated at 93-97%.
+
+Across the props ledger, props are accurate up to about 88% stated (80-85%:
+646 props, 84.5% won against 84.3% stated; 85-88%: 477 props, 86.4%
+against 85.5%), and overstated above it. By price:
+
+| props priced | N | won | implied by price |
+|---|---|---|---|
+| -667 or shorter | 1,108 | 85.9% | 92.1% |
+| -1000 or shorter | 709 | 86.7% | 93.7% |
+| -1667 or shorter | 251 | 87.3% | 96.3% |
+
+The -1000 band, split by date: 83.7% won (N 209), then 88.0% (N 500).
+However short the price, a player prop has not won more often than about
+87%: injuries, rest, blowouts and late scratches.
+
+`props_ledger.CAP` is refitted every build as the hit rate of graded props
+priced -1000 or shorter. It needs 100 of them, is bounded to 80-97%, and is
+86.7% now. `props_ledger.cap()` applies it to every stated prop chance
+(FanDuel one- and two-sided props, DraftKings props), and through them to
+Prop Locks, Locks, Safe Locks, the Lock of the day and tickets. In effect,
+a -2000 prop now ranks with a game line around -650, not above every game
+line. If heavy props start winning more, the cap rises with them.
