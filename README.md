@@ -3488,3 +3488,21 @@ Checked live on six Serie A games: every triple sums to 1.000 (AS Roma
 only DraftKings' Shin fair (the "single" slices returning -17.6%), are now
 averaged with Polymarket and confirmed where it is liquid. The confirmed
 and single slices are judged apart by the automatic bench.
+
+## Soccer in the price-source scoreboard (2026-10-27)
+
+The scoreboard was two-way only, so it could not say whether Polymarket
+or DraftKings forecasts soccer better, and soccer is where value bets lost.
+`sources.snapshot3` now archives each fresh soccer game's
+home / draw / away chances from:
+
+- DraftKings (Shin de-vig of its three prices)
+- Polymarket (its three yes/no markets, only when all are liquid)
+- their average
+
+Games are graded from the ledger (a draw's winner is "Draw") and scored by
+three-way Brier against DraftKings with a paired bootstrap (`report3`). The
+Results page shows it under "Which price predicts best". As with two-way
+games, `best3()` names a source only once it is proven better over 200+
+games, and then soccer value bets take their fair chance from it
+automatically.

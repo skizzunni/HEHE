@@ -375,6 +375,7 @@ def snapshot():
                            pub, FD=FD, KB=KB0, PM=PM0, OA=OA)
         sources.grade(ledger.load())
         out["sources"] = sources.report()
+        out["sources3"] = sources.report3()
     except Exception:
         import traceback
         sys.stderr.write("sources scoreboard failed -- board unaffected:\n")

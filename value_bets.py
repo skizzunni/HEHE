@@ -148,11 +148,17 @@ def scan(league, row, FD=None, KB=None, min_ev=MIN_EV, OA=None, PM=None):
         # replaces the fair chance for straight wins; none qualifies yet
         try:
             import sources
-            b = sources.best()
+            three = any(L.get("side") == "draw" for L in row.get("legs") or [])
+            b = sources.best3() if three else sources.best()
             if b and src == "DraftKings (Shin)":
-                snap = sources.snapshot(league, row, FD=FD, KB=KB, PM=PM, OA=OA)
-                if b in snap:
-                    fair, src = (snap[b] if side == "home" else 1 - snap[b]), f"{b} (proven best)"
+                if three:
+                    snap = sources.snapshot3(league, row, PM=PM)
+                    if b in snap:
+                        fair, src = snap[b][0 if side == "home" else 2], f"{b} (proven best)"
+                else:
+                    snap = sources.snapshot(league, row, FD=FD, KB=KB, PM=PM, OA=OA)
+                    if b in snap:
+                        fair, src = (snap[b] if side == "home" else 1 - snap[b]), f"{b} (proven best)"
         except Exception:
             pass
         if not src.endswith("(proven best)"):

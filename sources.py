@@ -110,6 +110,36 @@ def snapshot(league, row, FD=None, KB=None, PM=None, OA=None):
     return out
 
 
+def snapshot3(league, row, PM=None, **_):
+    """{source: [P(home), P(draw), P(away)]} for a three-way (soccer) game:
+    DraftKings' Shin de-vig of its three prices, and Polymarket's three
+    yes/no markets where all are liquid. {} for a two-way game."""
+    import devig
+    import venues
+    if not any(L.get("side") == "draw" for L in row.get("legs") or []):
+        return {}
+    m = row.get("mkt") or {}
+    legs = {L.get("side"): L for L in row.get("legs") or [] if L.get("price")}
+    out = {}
+    if all(k in legs for k in ("home", "draw", "away")):
+        fv = devig.fair_decimal(*[venues.dec(legs[k]["price"]) for k in ("home", "draw", "away")], method="shin")
+        if fv and len(fv) == 3:
+            out["dk"] = [round(x, 4) for x in fv]
+    if PM and m.get("home") and m.get("away"):
+        try:
+            import polymarket
+            v = [polymarket.fair(PM, league, m, dict(t="win", team=m["home"])),
+                 polymarket.fair(PM, league, m, dict(t="draw")),
+                 polymarket.fair(PM, league, m, dict(t="win", team=m["away"]))]
+            if all(v):
+                out["pm"] = [round(x, 4) for x in v]
+        except Exception:
+            pass
+    if len(out) == 2:
+        out["blend"] = [round((a + b) / 2, 4) for a, b in zip(out["dk"], out["pm"])]
+    return out
+
+
 def record(slot_rows, now=None, path=None, **feeds):
     """Keep each unstarted game's latest snapshot; returns how many updated."""
     import freshness
@@ -123,13 +153,17 @@ def record(slot_rows, now=None, path=None, **feeds):
             if not r.get("id") or st is None or st <= now:
                 continue
             snap = snapshot(lg, r, **feeds)
-            if not snap:
+            snap3 = {} if snap else snapshot3(lg, r, **feeds)
+            if not snap and not snap3:
                 continue
             g = book["games"].setdefault(r["id"], dict(league=lg, home=m.get("home"), away=m.get("away"),
                                                       start=m.get("start"), status="open"))
             if g.get("status") != "open":
                 continue
-            g.update(p=snap, at=now.isoformat(timespec="seconds"))
+            if snap:
+                g.update(p=snap, at=now.isoformat(timespec="seconds"))
+            else:
+                g.update(p3=snap3, at=now.isoformat(timespec="seconds"))
             n += 1
     save(book, path)
     return n
@@ -151,9 +185,15 @@ def grade(entries, path=None):
         if w is None or e.get("status") in (None, "open"):
             continue
         g["status"] = "graded"
-        g["home_won"] = 1 if w == g["home"] else 0 if w == g["away"] else None
-        if g["home_won"] is None:
-            g["status"] = "void"
+        if g.get("p3"):
+            # home, draw, away: the ledger records a drawn game's winner as "Draw"
+            g["outcome"] = 0 if w == g["home"] else 2 if w == g["away"] else 1 if str(w).lower() == "draw" else None
+            if g["outcome"] is None:
+                g["status"] = "void"
+        else:
+            g["home_won"] = 1 if w == g["home"] else 0 if w == g["away"] else None
+            if g["home_won"] is None:
+                g["status"] = "void"
         changed = True
     if changed:
         save(book, path)
@@ -209,3 +249,42 @@ def best(path=None, min_n=PROVEN_MIN):
             return got or None
         _BEST = got
     return _BEST or None
+
+
+def _brier3(p, k):
+    return sum((q - (1 if i == k else 0)) ** 2 for i, q in enumerate(p))
+
+
+def report3(path=None, boots=1000, seed=7):
+    """Soccer: each source's three-way Brier score against DraftKings' on the
+    games both quote (negative difference = better than DraftKings)."""
+    gs = [g for g in load(path)["games"].values() if g.get("status") == "graded" and g.get("outcome") in (0, 1, 2)]
+    out = []
+    rnd = random.Random(seed)
+    for s in ("pm", "blend"):
+        pairs = [(g["p3"][s], g["p3"]["dk"], g["outcome"]) for g in gs if s in g["p3"] and "dk" in g["p3"]]
+        if not pairs:
+            continue
+        d = [_brier3(a, k) - _brier3(b, k) for a, b, k in pairs]
+        mean = sum(d) / len(d)
+        bs = sorted(sum(rnd.choice(d) for _ in d) / len(d) for _ in range(boots))
+        out.append(dict(source=s, n=len(pairs), brier=round(sum(_brier3(a, k) for a, _, k in pairs) / len(pairs), 4),
+                        brier_dk=round(sum(_brier3(b, k) for _, b, k in pairs) / len(pairs), 4),
+                        diff=round(mean, 5), ci95=[round(bs[int(.025 * boots)], 5), round(bs[int(.975 * boots)], 5)],
+                        better=bs[int(.975 * boots)] < 0))
+    return dict(games=len(gs), sources=out)
+
+
+_BEST3 = None
+
+
+def best3(path=None, min_n=PROVEN_MIN):
+    """The soccer source proven better than DraftKings (as best()), or None."""
+    global _BEST3
+    if _BEST3 is None or path:
+        ok = [r for r in report3(path, boots=500)["sources"] if r["better"] and r["n"] >= min_n]
+        got = min(ok, key=lambda r: r["diff"])["source"] if ok else ""
+        if path:
+            return got or None
+        _BEST3 = got
+    return _BEST3 or None

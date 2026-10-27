@@ -82,5 +82,29 @@ class Best(unittest.TestCase):
         os.remove(path)
 
 
+class ThreeWay(unittest.TestCase):
+    def test_soccer_snapshot_grade_and_score(self):
+        path = tempfile.mktemp(suffix=".json")
+        row = dict(id="epl:1", mkt=dict(home="Chelsea", away="Manchester United", start=START),
+                   legs=[dict(side="home", price="-110"), dict(side="draw", price="+260"), dict(side="away", price="+280")])
+        p = S.snapshot3("epl", row)
+        self.assertEqual(set(p), {"dk"})
+        self.assertAlmostEqual(sum(p["dk"]), 1.0, places=3)
+        self.assertEqual(S.snapshot("epl", row), {})                  # never in the two-way scoreboard
+        S.record({"epl": [row]}, now=BEFORE, path=path)
+        S.grade({"epl:1": dict(status="lost", winner="Draw")}, path)
+        g = S.load(path)["games"]["epl:1"]
+        self.assertEqual((g["status"], g["outcome"]), ("graded", 1))
+        # a source that always puts more on the result than DraftKings scores better
+        book = {"games": {f"g{i}": dict(status="graded", outcome=i % 3,
+                                        p3=dict(dk=[1 / 3] * 3, pm=[0.6 if j == i % 3 else 0.2 for j in range(3)]))
+                          for i in range(240)}}
+        S.save(book, path)
+        r = {x["source"]: x for x in S.report3(path)["sources"]}
+        self.assertTrue(r["pm"]["better"])
+        self.assertEqual(S.best3(path), "pm")
+        os.remove(path)
+
+
 if __name__ == "__main__":
     unittest.main()

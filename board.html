@@ -1391,13 +1391,18 @@ function sourcesHTML(){
   const head = '<div class="sect" id="sources"><h2>Which price predicts best</h2>'
     + '<p class="note">Each venue&rsquo;s no-vig chance from the last snapshot before the start, scored on the same graded games '
     + 'as DraftKings (lower Brier is better). A source is only picked from once its 95% range is wholly better.</p>';
-  if(!S.length) return head + '<p class="note">Collecting: ' + (X.games || 0) + ' graded games so far.</p></div>';
+  const X3 = D.sources3 || {}, S3 = X3.sources || [];
+  const soccer = '<p class="note" style="margin-top:10px"><b>Soccer</b> (home / draw / away, three-way Brier): '
+    + (S3.length ? S3.map(r => esc(NAME[r.source] || r.source) + ' ' + r.brier.toFixed(4) + ' vs DraftKings ' + r.brier_dk.toFixed(4)
+        + ' on ' + r.n + ' games' + (r.better ? ' <span class="wl won">BETTER</span>' : '')).join(' &middot; ')
+      : 'collecting, ' + (X3.games || 0) + ' graded games so far') + '.</p>';
+  if(!S.length) return head + '<p class="note">Collecting: ' + (X.games || 0) + ' graded games so far.</p>' + soccer + '</div>';
   return head + '<table class="sbt"><tr><th>source</th><th>N</th><th>Brier</th><th>DraftKings</th><th>difference (95% range)</th><th>verdict</th></tr>'
     + S.map(r => '<tr><td>' + esc(NAME[r.source] || r.source) + '</td><td>' + r.n + '</td><td>' + r.brier.toFixed(4)
       + '</td><td>' + r.brier_dk.toFixed(4) + '</td><td>' + (r.diff >= 0 ? '+' : '') + r.diff.toFixed(4)
       + ' (' + r.ci95[0].toFixed(4) + ' to ' + r.ci95[1].toFixed(4) + ')</td><td>'
       + (r.better ? '<span class="wl won">BETTER</span>' : r.n < 100 ? '<span class="sbn">thin</span>' : '<span class="sbn">no proof</span>')
-      + '</td></tr>').join("") + '</table></div>';
+      + '</td></tr>').join("") + '</table>' + soccer + '</div>';
 }
 function clvHTML(){
   const V = D.clv || {}, L = V.last || {}, W = V.weeks || {};
