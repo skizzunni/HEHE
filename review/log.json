@@ -4585,9 +4585,9 @@
  },
  "2026-10-26": {
   "clv": {
-   "avg": 0.27,
-   "beat": 44.8,
-   "n": 29
+   "avg": 0.24,
+   "beat": 43.3,
+   "n": 30
   },
   "day": "2026-10-26",
   "leaks_14d": [],
@@ -4667,6 +4667,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "Edmonton Oilers",
+    "price": "-180",
+    "said": 62,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 62%"
+   },
+   {
+    "against_market": false,
     "league": "wnba",
     "pick": "Atlanta Dream",
     "price": "-115",
@@ -4734,11 +4742,11 @@
    }
   ],
   "picks": {
-   "hit": 72.4,
-   "lost": 8,
-   "n": 29,
-   "roi": -0.2,
-   "said": 67.3,
+   "hit": 70.0,
+   "lost": 9,
+   "n": 30,
+   "roi": -3.5,
+   "said": 67.2,
    "won": 21
   },
   "picks_by_league": {
@@ -4848,10 +4856,10 @@
    },
    "nhl": {
     "hit": 0.0,
-    "lost": 2,
-    "n": 2,
+    "lost": 3,
+    "n": 3,
     "roi": -100.0,
-    "said": 54.5,
+    "said": 57.0,
     "won": 0
    },
    "por": {
@@ -4886,9 +4894,9 @@
     "said_price": 87.1,
     "won": 810
    },
-   "n": 163,
-   "said": 83.2,
-   "won": 143
+   "n": 169,
+   "said": 83.1,
+   "won": 149
   },
   "safe_locks": {
    "lost": [
@@ -4925,10 +4933,10 @@
     "won": 2
    },
    "agree": {
-    "hit": 72.0,
-    "lost": 175,
-    "n": 624,
-    "roi": -0.2,
+    "hit": 71.8,
+    "lost": 176,
+    "n": 625,
+    "roi": -0.3,
     "said": 68.9,
     "won": 449
    }
@@ -5064,10 +5072,10 @@
    },
    {
     "flag": false,
-    "hit": 79.9,
-    "n": 448,
+    "hit": 80.2,
+    "n": 454,
     "name": "props nhl Shots on Goal",
-    "said": 79.9
+    "said": 80.0
    },
    {
     "flag": false,
@@ -5162,10 +5170,10 @@
    },
    {
     "flag": false,
-    "hit": 41.7,
-    "n": 168,
+    "hit": 42.7,
+    "n": 171,
     "name": "value bets",
-    "said": 44.2
+    "said": 44.3
    },
    {
     "flag": false,
@@ -5295,10 +5303,10 @@
     "won": 1
    },
    "agree": {
-    "hit": 72.0,
-    "lost": 174,
-    "n": 621,
-    "roi": -0.3,
+    "hit": 71.9,
+    "lost": 175,
+    "n": 622,
+    "roi": -0.5,
     "said": 68.9,
     "won": 447
    }
@@ -5325,10 +5333,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6607,
-    "market_only": 0.6607,
-    "model_40": 0.6701,
-    "n": 69,
+    "logloss": 0.665,
+    "market_only": 0.665,
+    "model_40": 0.6734,
+    "n": 70,
     "weight": 0.0
    }
   }
