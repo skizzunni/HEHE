@@ -4589,6 +4589,47 @@
    "tip": "9:00 PM",
    "venue": "Kalshi"
   },
+  "nhl:401892599|home|FanDuel": {
+   "dec": 2.16,
+   "ev": 0.0136,
+   "fair": 0.4693,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nhl:401892599",
+   "kind": "value",
+   "league": "nhl",
+   "match": "TOR @ SEA",
+   "price": "+116",
+   "seen": "2026-10-28T13:42:17+00:00",
+   "side": "home",
+   "start": "2026-10-29T02:00Z",
+   "team": "Seattle Kraken",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892599|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Seattle Kraken\"}|FanDuel": {
+   "dec": 1.4762,
+   "dk": "-250",
+   "ev": 0.0173,
+   "fair": 0.6891,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nhl:401892599",
+   "kind": "value",
+   "league": "nhl",
+   "market": "spread",
+   "match": "TOR @ SEA",
+   "price": "-210",
+   "seen": "2026-10-28T13:42:17+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Seattle Kraken\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Seattle Kraken"
+   },
+   "start": "2026-10-29T02:00Z",
+   "team": "Seattle Kraken +1.5",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
   "nor:401843366|away|FanDuel": {
    "dec": 3.0,
    "ev": 0.0126,
