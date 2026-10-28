@@ -4496,6 +4496,52 @@
    "tip": "10:00 PM",
    "venue": "FanDuel"
   },
+  "nhl:401892597|sure": {
+   "id": "nhl:401892597",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "+180",
+     "stake_share": 0.3581,
+     "team": "Calgary Flames",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-178",
+     "stake_share": 0.6419,
+     "team": "Edmonton Oilers",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "CGY @ EDM",
+   "profit": 0.0026,
+   "seen": "2026-10-28T13:31:57+00:00"
+  },
+  "nhl:401892597|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Edmonton Oilers\"}|FanDuel": {
+   "dec": 2.36,
+   "dk": "+120",
+   "ev": 0.0135,
+   "fair": 0.4294,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nhl:401892597",
+   "kind": "value",
+   "league": "nhl",
+   "market": "spread",
+   "match": "CGY @ EDM",
+   "price": "+136",
+   "seen": "2026-10-28T13:31:57+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Edmonton Oilers\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Edmonton Oilers"
+   },
+   "start": "2026-10-29T00:30Z",
+   "team": "Edmonton Oilers -1.5",
+   "tip": "8:30 PM",
+   "venue": "FanDuel"
+  },
   "nhl:401892598|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Jersey Devils\"}|FanDuel": {
    "dec": 1.6667,
    "dk": "-170",
@@ -6123,6 +6169,30 @@
    "seen": "2026-10-25T06:39:48+00:00",
    "status": "lost",
    "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nhl:401892597:{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Edmonton Oilers\"}": {
+   "ev": 0.0134,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0135,
+     "fair": 0.4294,
+     "id": "nhl:401892597",
+     "price": "+136",
+     "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Edmonton Oilers\"}",
+     "spec": {
+      "line": -1.5,
+      "t": "spread",
+      "team": "Edmonton Oilers"
+     },
+     "team": "Edmonton Oilers -1.5"
+    }
+   ],
+   "payout": 2.36,
+   "prob": 0.4294,
+   "seen": "2026-10-28T13:31:57+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nor:401843366:away": {
