@@ -5081,8 +5081,8 @@
    },
    {
     "flag": false,
-    "hit": 80.4,
-    "n": 464,
+    "hit": 79.9,
+    "n": 482,
     "name": "props nhl Shots on Goal",
     "said": 80.0
    },
@@ -5151,17 +5151,17 @@
    },
    {
     "flag": false,
-    "hit": 81.8,
-    "n": 11,
+    "hit": 83.3,
+    "n": 12,
     "name": "safe locks nhl side",
-    "said": 91.3
+    "said": 91.2
    },
    {
     "flag": false,
-    "hit": 87.0,
-    "n": 23,
+    "hit": 87.5,
+    "n": 24,
     "name": "safe locks nhl under",
-    "said": 91.6
+    "said": 91.5
    },
    {
     "flag": false,
@@ -5172,15 +5172,15 @@
    },
    {
     "flag": false,
-    "hit": 96.2,
-    "n": 52,
+    "hit": 94.4,
+    "n": 54,
     "name": "prop locks",
-    "said": 92.9
+    "said": 92.7
    },
    {
     "flag": false,
-    "hit": 42.3,
-    "n": 175,
+    "hit": 42.0,
+    "n": 176,
     "name": "value bets",
     "said": 44.0
    },
@@ -5261,9 +5261,9 @@
    }
   },
   "clv": {
-   "avg": -0.37,
-   "beat": 52.6,
-   "n": 19
+   "avg": -0.55,
+   "beat": 47.6,
+   "n": 21
   },
   "day": "2026-10-27",
   "leaks_14d": [],
@@ -5314,6 +5314,14 @@
     "price": "-130",
     "said": 55,
     "why": "margin 14 \u00b7 the book had my side favoured too \u00b7 called at 55%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Dallas Stars",
+    "price": "-118",
+    "said": 52,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 52%"
    }
   ],
   "lottery": [
@@ -5326,7 +5334,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -5373,21 +5381,24 @@
     "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 6.5 goals",
+     "Under 5.5 goals"
+    ],
     "legs": 6,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "100",
     "won": 0
    }
   ],
   "picks": {
-   "hit": 78.9,
-   "lost": 4,
-   "n": 19,
-   "roi": 1.9,
-   "said": 73.7,
-   "won": 15
+   "hit": 76.2,
+   "lost": 5,
+   "n": 21,
+   "roi": 1.2,
+   "said": 71.5,
+   "won": 16
   },
   "picks_by_league": {
    "afc": {
@@ -5455,12 +5466,12 @@
     "won": 0
    },
    "nhl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 83.3,
-    "said": 52.0,
-    "won": 1
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": 24.2,
+    "said": 51.3,
+    "won": 2
    }
   },
   "props": {
@@ -5470,14 +5481,14 @@
     "said_price": 87.1,
     "won": 846
    },
-   "n": 46,
-   "said": 83.3,
-   "won": 38
+   "n": 64,
+   "said": 82.7,
+   "won": 50
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 9,
+   "open": 7,
    "plays": {
     "best": [
      7,
@@ -5490,7 +5501,7 @@
      "open"
     ]
    },
-   "won": 2
+   "won": 4
   },
   "strong": {
    "n": 0
@@ -5506,12 +5517,12 @@
     "won": 1
    },
    "agree": {
-    "hit": 72.0,
-    "lost": 180,
-    "n": 642,
+    "hit": 71.9,
+    "lost": 181,
+    "n": 644,
     "roi": -0.6,
-    "said": 69.1,
-    "won": 462
+    "said": 69.0,
+    "won": 463
    }
   },
   "weights": {
@@ -5536,10 +5547,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6647,
-    "market_only": 0.6647,
-    "model_40": 0.6732,
-    "n": 71,
+    "logloss": 0.6659,
+    "market_only": 0.6659,
+    "model_40": 0.6754,
+    "n": 73,
     "weight": 0.0
    }
   }
