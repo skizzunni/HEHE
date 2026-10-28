@@ -652,6 +652,23 @@
    "tip": "8:30 PM",
    "venue": "FanDuel"
   },
+  "mls:761912|away|FanDuel": {
+   "dec": 3.3,
+   "ev": 0.0127,
+   "fair": 0.3069,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "mls:761912",
+   "kind": "value",
+   "league": "mls",
+   "match": "CLB @ DAL",
+   "price": "+230",
+   "seen": "2026-10-28T07:20:35+00:00",
+   "side": "away",
+   "start": "2026-10-29T00:30Z",
+   "team": "Columbus Crew",
+   "tip": "8:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909093|{\"line\": 236.5, \"t\": \"over\"}|FanDuel": {
    "dec": 1.9524,
    "dk": "-115",
@@ -5066,6 +5083,58 @@
    "prob": 0.3244,
    "seen": "2026-10-28T05:01:50+00:00",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|mls:761912:away": {
+   "ev": 0.0128,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0127,
+     "fair": 0.3069,
+     "id": "mls:761912",
+     "price": "+230",
+     "side": "away",
+     "spec": null,
+     "team": "Columbus Crew"
+    }
+   ],
+   "payout": 3.3,
+   "prob": 0.3069,
+   "seen": "2026-10-28T07:20:35+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|mls:761912:away|ncaaf:401871058:{\"line\": 50.5, \"t\": \"over\"}": {
+   "ev": 0.0294,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0127,
+     "fair": 0.3069,
+     "id": "mls:761912",
+     "price": "+230",
+     "side": "away",
+     "spec": null,
+     "team": "Columbus Crew"
+    },
+    {
+     "ev": 0.0164,
+     "fair": 0.5182,
+     "id": "ncaaf:401871058",
+     "price": "-104",
+     "side": "{\"line\": 50.5, \"t\": \"over\"}",
+     "spec": {
+      "line": 50.5,
+      "t": "over"
+     },
+     "team": "over 50.5"
+    }
+   ],
+   "payout": 6.473,
+   "prob": 0.159,
+   "seen": "2026-10-28T07:20:35+00:00",
+   "target": 5.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909847:away|nba:401909848:home": {
