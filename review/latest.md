@@ -12,12 +12,12 @@ Closing line value: -0.57 points on 22 picks; beat the close on 45.5%.
 With the market 71.9% (645); against it 12.5% (8).
 Locks 4/11 won, 5 open; Best play top 3 (51%) lost; lost: Day'Ron Sharpe: 2+ Assists (BKN @ BOS) 0; Charlie McAvoy: 1+ Shots on Goal (BOS @ CAR) 0.
 Safe Locks 7/11 won, 4 open; Winners parlay top 2 (84%) won; Best play top 7 (53%) open.
-Lottery 10k: lost (2/11 legs won, killed by Western Kentucky Hilltoppers -13.5, Over 6.5 goals, Under 226.5 points, Winnipeg Jets to win)
-Lottery 10k+25: lost (1/11 legs won, killed by Western Kentucky Hilltoppers -13.5, Over 6.5 goals, Under 226.5 points, Winnipeg Jets to win)
-Lottery 10k+50: lost (1/11 legs won, killed by Western Kentucky Hilltoppers -13.5, Over 6.5 goals, Under 226.5 points, Winnipeg Jets to win)
-Lottery 10k+100: lost (1/11 legs won, killed by Western Kentucky Hilltoppers -13.5, Over 6.5 goals, Under 226.5 points, Winnipeg Jets to win)
+Lottery 10k: lost (2/11 legs won, killed by Western Kentucky Hilltoppers -13.5, Over 216.5 points, Over 6.5 goals, Under 226.5 points, Winnipeg Jets to win)
+Lottery 10k+25: lost (1/11 legs won, killed by Western Kentucky Hilltoppers -13.5, Over 216.5 points, Over 6.5 goals, Under 226.5 points, Over 7.5 goals, Winnipeg Jets to win)
+Lottery 10k+50: lost (1/11 legs won, killed by Western Kentucky Hilltoppers -13.5, Over 216.5 points, Over 6.5 goals, Under 226.5 points, Over 7.5 goals, Winnipeg Jets to win)
+Lottery 10k+100: lost (1/11 legs won, killed by Western Kentucky Hilltoppers -13.5, Over 6.5 goals, Under 226.5 points, Over 7.5 goals, Winnipeg Jets to win)
 Lottery 100: lost (3/11 legs won, killed by Day'Ron Sharpe: 2+ Assists, Western Kentucky Hilltoppers -4.5)
-Lottery 100: lost (0/6 legs won, killed by Winnipeg Jets to win, Over 6.5 goals, Under 5.5 goals, Over 6.5 goals)
+Lottery 100: lost (1/6 legs won, killed by Winnipeg Jets to win, Over 6.5 goals, Under 5.5 goals, Over 6.5 goals)
 Ladder-consistency props (all time): 846/1005 won (84.2%) vs 86.8% fair, 87.1% price.
 Props 68/87 vs 82.3% claimed.
 
