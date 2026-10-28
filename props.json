@@ -31002,11 +31002,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Andrei Svechnikov",
   "p": 0.7364,
   "p_fair": null,
   "price": "-370",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892586|n:charlie mcavoy|Shots on Goal|1+": {
   "aid": null,
@@ -31018,11 +31020,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Charlie McAvoy",
   "p": 0.7465,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892586|n:david pastrnak|Shots on Goal|2+": {
   "aid": null,
@@ -31034,11 +31038,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "David Pastrnak",
   "p": 0.7444,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892586|n:jackson blake|Shots on Goal|1+": {
   "aid": null,
@@ -31050,11 +31056,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jackson Blake",
   "p": 0.8699,
   "p_fair": null,
   "price": "-2200",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892586|n:nikolaj ehlers|Shots on Goal|1+": {
   "aid": null,
@@ -31066,12 +31074,14 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Nikolaj Ehlers",
   "p": 0.8697,
   "p_fair": null,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892586|n:sebastian aho car|Shots on Goal|2+": {
   "aid": null,
@@ -31083,11 +31093,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Sebastian Aho (CAR)",
   "p": 0.7321,
   "p_fair": null,
   "price": "-360",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892586|n:seth jarvis|Shots on Goal|1+": {
   "aid": null,
@@ -31099,11 +31111,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Seth Jarvis",
   "p": 0.8685,
   "p_fair": null,
   "price": "-1800",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892586|n:shayne gostisbehere|Shots on Goal|1+": {
   "aid": null,
@@ -31115,11 +31129,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Shayne Gostisbehere",
   "p": 0.8315,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892586|n:taylor hall|Shots on Goal|1+": {
   "aid": null,
@@ -31135,7 +31151,9 @@
   "p": 0.837,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nhl:401892587|n:adrian kempe|Shots on Goal|2+": {
   "aid": null,
@@ -31308,11 +31326,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Chris Kreider",
   "p": 0.7426,
   "p_fair": null,
   "price": "-385",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892588|n:cole caufield|Shots on Goal|2+": {
   "aid": null,
@@ -31324,11 +31344,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cole Caufield",
   "p": 0.8315,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892588|n:dylan holloway|Shots on Goal|1+": {
   "aid": null,
@@ -31339,11 +31361,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Dylan Holloway",
   "p": 0.8697,
   "price": "-2000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892588|n:jake neighbours|Shots on Goal|1+": {
   "aid": null,
@@ -31355,11 +31379,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jake Neighbours",
   "p": 0.7385,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892588|n:jimmy snuggerud|Shots on Goal|1+": {
   "aid": null,
@@ -31371,11 +31397,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jimmy Snuggerud",
   "p": 0.8699,
   "p_fair": null,
   "price": "-2000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892588|n:juraj slafkovsky|Shots on Goal|1+": {
   "aid": null,
@@ -31387,11 +31415,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Juraj Slafkovsky",
   "p": 0.844,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892588|n:mason mctavish|Shots on Goal|1+": {
   "aid": null,
@@ -31403,11 +31433,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mason McTavish",
   "p": 0.8517,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892588|n:noah dobson|Shots on Goal|1+": {
   "aid": null,
@@ -31419,11 +31451,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Noah Dobson",
   "p": 0.8541,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892589|n:jonathan marchessault|Shots on Goal|1+": {
   "aid": null,
@@ -31691,11 +31725,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Brady Tkachuk",
   "p": 0.844,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892591|n:carter verhaeghe|Shots on Goal|1+": {
   "aid": null,
@@ -31707,11 +31743,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Carter Verhaeghe",
   "p": 0.8635,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892591|n:cole perfetti|Shots on Goal|2+": {
   "aid": null,
@@ -31723,11 +31761,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cole Perfetti",
   "p": 0.6874,
   "p_fair": null,
   "price": "-280",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892591|n:kyle connor|Shots on Goal|2+": {
   "aid": null,
@@ -31739,11 +31779,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kyle Connor",
   "p": 0.839,
   "p_fair": null,
   "price": "-870",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892591|n:mark scheifele|Shots on Goal|1+": {
   "aid": null,
@@ -31755,11 +31797,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mark Scheifele",
   "p": 0.8551,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892591|n:matthew tkachuk|Shots on Goal|2+": {
   "aid": null,
@@ -31771,11 +31815,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matthew Tkachuk",
   "p": 0.7426,
   "p_fair": null,
   "price": "-385",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892591|n:sam reinhart|Shots on Goal|1+": {
   "aid": null,
@@ -31787,12 +31833,14 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Sam Reinhart",
   "p": 0.8686,
   "p_fair": null,
   "price": "-1300",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892592|n:anders lee|Shots on Goal|1+": {
   "aid": null,
