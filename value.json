@@ -575,6 +575,30 @@
    "tip": "8:00 PM",
    "venue": "FanDuel"
   },
+  "mlb:401908046|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Tampa Bay Rays\"}|FanDuel": {
+   "dec": 1.625,
+   "dk": "-185",
+   "ev": 0.0175,
+   "fair": 0.6261,
+   "fair_source": "DraftKings (Shin)",
+   "id": "mlb:401908046",
+   "kind": "value",
+   "league": "mlb",
+   "market": "spread",
+   "match": "MIL @ TB",
+   "price": "-160",
+   "seen": "2026-10-28T05:01:50+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Tampa Bay Rays\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Tampa Bay Rays"
+   },
+   "start": "2026-10-29T00:00Z",
+   "team": "Tampa Bay Rays +1.5",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "mls:761894|away|FanDuel": {
    "dec": 5.7,
    "ev": 0.0101,
@@ -5003,6 +5027,42 @@
    "prob": 0.2918,
    "seen": "2026-10-25T13:09:49+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|mlb:401908046:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Tampa Bay Rays\"}|ncaaf:401871058:{\"line\": 50.5, \"t\": \"over\"}": {
+   "ev": 0.0341,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0164,
+     "fair": 0.5182,
+     "id": "ncaaf:401871058",
+     "price": "-104",
+     "side": "{\"line\": 50.5, \"t\": \"over\"}",
+     "spec": {
+      "line": 50.5,
+      "t": "over"
+     },
+     "team": "over 50.5"
+    },
+    {
+     "ev": 0.0175,
+     "fair": 0.6261,
+     "id": "mlb:401908046",
+     "price": "-160",
+     "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Tampa Bay Rays\"}",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "Tampa Bay Rays"
+     },
+     "team": "Tampa Bay Rays +1.5"
+    }
+   ],
+   "payout": 3.187,
+   "prob": 0.3244,
+   "seen": "2026-10-28T05:01:50+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
