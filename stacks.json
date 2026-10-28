@@ -6310,12 +6310,13 @@
    "match": "Bologna at AC Milan",
    "p": 0.9483,
    "p_model": 0.9488,
+   "score": "Bologna 4 - AC Milan 2",
    "spec": {
     "line": 3.5,
     "t": "nomargin",
     "team": "AC Milan"
    },
-   "status": "open"
+   "status": "won"
   },
   "ita:401874993|Under 5.5 goals": {
    "away": "Bologna",
@@ -6327,11 +6328,12 @@
    "match": "Bologna at AC Milan",
    "p": 0.9407,
    "p_model": 0.9412,
+   "score": "Bologna 4 - AC Milan 2",
    "spec": {
     "line": 5.5,
     "t": "under"
    },
-   "status": "open"
+   "status": "lost"
   },
   "ita:401875036|Over 0.5 goals": {
    "away": "Fiorentina",
@@ -21678,7 +21680,7 @@
    "logged": "2026-10-28T00:05",
    "n": 4,
    "prob": 0.7828,
-   "status": "open"
+   "status": "lost"
   },
   "20261028:4:1": {
    "fair": 1.28,
