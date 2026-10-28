@@ -5495,10 +5495,10 @@
    },
    {
     "flag": false,
-    "hit": 92.1,
-    "n": 38,
+    "hit": 92.3,
+    "n": 39,
     "name": "daily calls",
-    "said": 80.8
+    "said": 81.0
    },
    {
     "flag": false,
@@ -5591,9 +5591,9 @@
    }
   },
   "clv": {
-   "avg": -9.03,
+   "avg": -5.61,
    "beat": 0.0,
-   "n": 1
+   "n": 3
   },
   "day": "2026-10-28",
   "leaks_14d": [],
@@ -5610,7 +5610,16 @@
    },
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "dfb",
+    "pick": "Schalke 04",
+    "price": "-260",
+    "said": 67,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 67%"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -5654,12 +5663,12 @@
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 1,
-   "roi": 43.5,
-   "said": 66.0,
-   "won": 1
+   "hit": 66.7,
+   "lost": 1,
+   "n": 3,
+   "roi": -16.1,
+   "said": 73.3,
+   "won": 2
   },
   "picks_by_league": {
    "afc": {
@@ -5668,6 +5677,14 @@
     "n": 1,
     "roi": 43.5,
     "said": 66.0,
+    "won": 1
+   },
+   "dfb": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -45.8,
+    "said": 77.0,
     "won": 1
    }
   },
@@ -5714,12 +5731,12 @@
     "won": 1
    },
    "agree": {
-    "hit": 72.2,
-    "lost": 178,
-    "n": 640,
-    "roi": -0.4,
+    "hit": 72.1,
+    "lost": 179,
+    "n": 642,
+    "roi": -0.5,
     "said": 69.1,
-    "won": 462
+    "won": 463
    }
   },
   "weights": {
