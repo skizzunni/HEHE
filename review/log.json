@@ -5591,25 +5591,86 @@
    }
   },
   "clv": {
-   "avg": null,
-   "beat": null,
-   "n": 0
+   "avg": -9.03,
+   "beat": 0.0,
+   "n": 1
   },
   "day": "2026-10-28",
   "leaks_14d": [],
   "locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     3,
+     0.5352,
+     "open"
+    ]
+   },
    "won": 0
   },
   "losses": [],
-  "lottery": [],
+  "lottery": [
+   {
+    "killed_by": [],
+    "legs": 14,
+    "lost": 0,
+    "status": "open",
+    "tier": "100",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 13,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 13,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+25",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 13,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+50",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 12,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+100",
+    "won": 0
+   }
+  ],
   "picks": {
-   "n": 0
+   "hit": 100.0,
+   "lost": 0,
+   "n": 1,
+   "roi": 43.5,
+   "said": 66.0,
+   "won": 1
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "afc": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 43.5,
+    "said": 66.0,
+    "won": 1
+   }
+  },
   "props": {
    "fair": {
     "n": 1036,
@@ -5623,9 +5684,20 @@
   },
   "safe_locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     7,
+     0.5249,
+     "open"
+    ],
+    "winners": [
+     2,
+     0.8407,
+     "open"
+    ]
+   },
    "won": 0
   },
   "strong": {
@@ -5642,12 +5714,12 @@
     "won": 1
    },
    "agree": {
-    "hit": 72.1,
+    "hit": 72.2,
     "lost": 178,
-    "n": 639,
-    "roi": -0.5,
+    "n": 640,
+    "roi": -0.4,
     "said": 69.1,
-    "won": 461
+    "won": 462
    }
   },
   "weights": {
