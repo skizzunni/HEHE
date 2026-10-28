@@ -2375,30 +2375,7 @@
      "close": true,
      "conf": 91,
      "conf_first": 91,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-27T23:59:06+00:00",
-      "conf": 91,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (6 listed)"
-      },
-      "id": "nba:401909879",
-      "league": "nba",
-      "match": "SAC @ SA",
-      "pick": "San Antonio Spurs",
-      "price": "-1800",
-      "price_at": "2026-10-27T23:58:43+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34901564:0ML86931385_1",
-      "prob_at": "2026-10-27T23:58:43+00:00",
-      "rank": 1,
-      "ready": true,
-      "side": "home",
-      "start": "2026-10-28T00:00Z"
-     },
+     "current": null,
      "dc": false,
      "fp": "e4e3cfbca24b",
      "gate": {
@@ -2551,30 +2528,7 @@
      "close": true,
      "conf": 67,
      "conf_first": 67,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-27T23:59:06+00:00",
-      "conf": 67,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaaf:401871072",
-      "league": "ncaaf",
-      "match": "SHSU @ MOST",
-      "pick": "Missouri State Bears",
-      "price": "-218",
-      "price_at": "2026-10-27T23:58:43+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34876638:0ML86864912_1",
-      "prob_at": "2026-10-27T23:58:43+00:00",
-      "rank": 5,
-      "ready": true,
-      "side": "home",
-      "start": "2026-10-28T00:00Z"
-     },
+     "current": null,
      "dc": false,
      "fp": "6acf459eb5a7",
      "gate": {
@@ -2600,55 +2554,7 @@
     "ita": "2026-10-27T19:12:26+00:00",
     "nba": "2026-10-27T23:07:51+00:00"
    },
-   "candidate_observations": {
-    "nba:401909879": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 91,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-27T23:59:06+00:00",
-      "conf": 91,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (6 listed)"
-      },
-      "id": "nba:401909879",
-      "league": "nba",
-      "match": "SAC @ SA",
-      "pick": "San Antonio Spurs",
-      "price": "-1800",
-      "price_at": "2026-10-27T23:58:43+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34901564:0ML86931385_1",
-      "prob_at": "2026-10-27T23:58:43+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-10-28T00:00Z"
-     },
-     "dc": false,
-     "fp": "e4e3cfbca24b",
-     "gate": {
-      "ok": true,
-      "what": "injury report checked (6 listed)"
-     },
-     "id": "nba:401909879",
-     "league": "nba",
-     "match": "SAC @ SA",
-     "pick": "San Antonio Spurs",
-     "price": "-1800",
-     "price_at": "2026-10-27T23:58:43+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34901564:0ML86931385_1",
-     "side": "home",
-     "start": "2026-10-28T00:00Z",
-     "tip": "8:00 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [],
    "news": {
     "nba": "2026-10-27T23:07:51+00:00"
@@ -2656,8 +2562,8 @@
    "shadow_watch": {
     "best_at": "2026-10-27T16:54:27+00:00",
     "best_ceiling": 1.245,
-    "checks": 140,
-    "last": "2026-10-27T23:59:06+00:00",
+    "checks": 141,
+    "last": "2026-10-28T00:04:09+00:00",
     "max_ready": 3,
     "reasons": {
      "awaiting confirmed XIs": 543,
