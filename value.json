@@ -3216,6 +3216,86 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "ncaaf:401871058|away|FanDuel": {
+   "dec": 2.38,
+   "ev": 0.0543,
+   "fair": 0.443,
+   "fair_source": "consensus of 3 other venues",
+   "id": "ncaaf:401871058",
+   "kind": "suspect",
+   "league": "ncaaf",
+   "match": "KENN @ MTSU",
+   "price": "+138",
+   "seen": "2026-10-28T03:04:23+00:00",
+   "side": "away",
+   "start": "2026-10-28T23:00Z",
+   "team": "Kennesaw State Owls",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "ncaaf:401871058|home|Kalshi": {
+   "dec": 1.7624,
+   "ev": 0.0122,
+   "fair": 0.5743,
+   "fair_source": "consensus of 3 other venues",
+   "id": "ncaaf:401871058",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "KENN @ MTSU",
+   "price": "-131",
+   "seen": "2026-10-28T03:04:23+00:00",
+   "side": "home",
+   "start": "2026-10-28T23:00Z",
+   "team": "Middle Tennessee Blue Raiders",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
+  "ncaaf:401871058|sure": {
+   "id": "ncaaf:401871058",
+   "kind": "sure",
+   "league": "ncaaf",
+   "legs": [
+    {
+     "price": "+138",
+     "stake_share": 0.4255,
+     "team": "Kennesaw State Owls",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "-131",
+     "stake_share": 0.5745,
+     "team": "Middle Tennessee Blue Raiders",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "KENN @ MTSU",
+   "profit": 0.0126,
+   "seen": "2026-10-28T03:04:23+00:00"
+  },
+  "ncaaf:401871058|{\"line\": 2.5, \"t\": \"spread\", \"team\": \"Kennesaw State Owls\"}|FanDuel": {
+   "dec": 2.1,
+   "dk": "-105",
+   "ev": 0.0223,
+   "fair": 0.4868,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "ncaaf:401871058",
+   "kind": "value",
+   "league": "ncaaf",
+   "market": "spread",
+   "match": "KENN @ MTSU",
+   "price": "+110",
+   "seen": "2026-10-28T03:04:23+00:00",
+   "side": "{\"line\": 2.5, \"t\": \"spread\", \"team\": \"Kennesaw State Owls\"}",
+   "spec": {
+    "line": 2.5,
+    "t": "spread",
+    "team": "Kennesaw State Owls"
+   },
+   "start": "2026-10-28T23:00Z",
+   "team": "Kennesaw State Owls +2.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401871058|{\"line\": 50.5, \"t\": \"over\"}|FanDuel": {
    "dec": 1.9524,
    "dk": "-118",
