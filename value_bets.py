@@ -34,6 +34,11 @@ MIN_EV = 0.01                    # one cent per dollar, below which prices are n
 # record keeps testing them.
 MAX_EV = 0.05
 LAST_SUSPECT = []
+# A find whose fair chance rests on DraftKings' price alone ("single") is
+# held out the same way, archived and graded apart as "single". 2026-10-28,
+# 183 graded: single-source finds returned -6.5% / -35.5% in the two halves
+# of the dates (n=55 / 41), confirmed ones +20.9% / -10.3% (n=44 / 43).
+LAST_SINGLE = []
 
 
 # The fair chance is Shin's de-vig of the reference book's prices, not the
@@ -228,6 +233,13 @@ def scan(league, row, FD=None, KB=None, min_ev=MIN_EV, OA=None, PM=None):
     return value, sure
 
 
+def confirmed(v):
+    """True when the fair chance is backed by more than DraftKings alone:
+    Polymarket's liquid price, a proven source, or the other venues' consensus."""
+    src = v.get("fair_source") or ""
+    return any(w in src for w in ("Polymarket", "proven", "consensus"))
+
+
 def scan_all(slot_rows, FD=None, KB=None, now=None, OA=None, PM=None):
     """Over every fresh, priced, unstarted game: value bets (best EV first)
     and sure bets."""
@@ -243,9 +255,11 @@ def scan_all(slot_rows, FD=None, KB=None, now=None, OA=None, PM=None):
             value.extend(v)
             if s:
                 sure.append(s)
-    global LAST_SUSPECT
+    global LAST_SUSPECT, LAST_SINGLE
     LAST_SUSPECT = [v for v in value if v["ev"] > MAX_EV]
     value = [v for v in value if v["ev"] <= MAX_EV]
+    LAST_SINGLE = [v for v in value if not confirmed(v)]
+    value = [v for v in value if confirmed(v)]
     # slices the record has shown cannot break even stay out (autotune.py)
     try:
         import autotune
@@ -283,11 +297,12 @@ def record(value, sure, now=None, path=None):
         if k not in book["finds"]:
             book["finds"][k] = dict(v, kind="value", seen=t)
             added += 1
-    for v in LAST_SUSPECT:
-        k = f'{v["id"]}|{v["side"]}|{v["venue"]}'
-        if k not in book["finds"]:
-            book["finds"][k] = dict(v, kind="suspect", seen=t)
-            added += 1
+    for kind, held in (("suspect", LAST_SUSPECT), ("single", LAST_SINGLE)):
+        for v in held:
+            k = f'{v["id"]}|{v["side"]}|{v["venue"]}'
+            if k not in book["finds"]:
+                book["finds"][k] = dict(v, kind=kind, seen=t)
+                added += 1
     for s in sure:
         k = f'{s["id"]}|sure'
         if k not in book["finds"]:
@@ -328,7 +343,7 @@ def grade(entries, path=None):
     book = load(path)
     changed = False
     for k, f in book["finds"].items():
-        if f.get("kind") not in ("value", "suspect") or f.get("status") in ("won", "lost", "void"):
+        if f.get("kind") not in ("value", "suspect", "single") or f.get("status") in ("won", "lost", "void"):
             continue
         st = settle(f, entries.get(f["id"]))
         if st:

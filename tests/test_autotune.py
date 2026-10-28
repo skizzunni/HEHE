@@ -81,12 +81,14 @@ class ValueBench(unittest.TestCase):
         import value_bets
         from unittest import mock
         rows = {"nhl": [dict(id="nhl:1")]}
-        fake = [dict(id="nhl:1", venue="FanDuel", dec=6.0, ev=0.05), dict(id="nhl:1", venue="FanDuel", dec=2.0, ev=0.02)]
+        c = "consensus of 2 other venues"
+        fake = [dict(id="nhl:1", venue="FanDuel", dec=6.0, ev=0.05, fair_source=c),
+                dict(id="nhl:1", venue="FanDuel", dec=2.0, ev=0.02, fair_source=c)]
         with mock.patch.object(value_bets, "scan", lambda *a, **k: (list(fake), None)), \
              mock.patch("freshness.can_call", lambda r, now: True), \
              mock.patch("freshness.parse", lambda s: __import__("datetime").datetime(2099, 1, 1,
                         tzinfo=__import__("datetime").timezone.utc)), \
-             mock.patch.object(A, "value_benched", lambda path=None: {"FanDuel longshot, single"}):
+             mock.patch.object(A, "value_benched", lambda path=None: {"FanDuel longshot, confirmed"}):
             v, _ = value_bets.scan_all(rows)
         self.assertEqual([x["dec"] for x in v], [2.0])
 

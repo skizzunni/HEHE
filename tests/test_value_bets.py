@@ -159,8 +159,10 @@ class Suspect(unittest.TestCase):
     def test_outsized_edges_are_held_out_but_archived(self):
         import tempfile
         rows = {"nhl": [dict(id="nhl:9")]}
-        fake = [dict(id="nhl:9", side="home", venue="FanDuel", dec=2.0, ev=0.03, team="A"),
-                dict(id="nhl:9", side="away", venue="Kalshi", dec=3.0, ev=0.09, team="B")]
+        fake = [dict(id="nhl:9", side="home", venue="FanDuel", dec=2.0, ev=0.03, team="A",
+                     fair_source="consensus of 2 other venues"),
+                dict(id="nhl:9", side="away", venue="Kalshi", dec=3.0, ev=0.09, team="B",
+                     fair_source="consensus of 2 other venues")]
         import datetime as _dt
         with mock.patch.object(V, "scan", lambda *a, **k: (list(fake), None)), \
              mock.patch("freshness.can_call", lambda r, now: True), \
@@ -172,6 +174,27 @@ class Suspect(unittest.TestCase):
         kinds = sorted(f["kind"] for f in V.load(path)["finds"].values())
         os.remove(path)
         self.assertEqual(kinds, ["suspect", "value"])
+
+
+class Single(unittest.TestCase):
+    def test_draftkings_only_finds_are_held_out_but_archived(self):
+        import tempfile
+        import datetime as _dt
+        rows = {"nhl": [dict(id="nhl:9")]}
+        fake = [dict(id="nhl:9", side="home", venue="FanDuel", dec=2.0, ev=0.03, team="A",
+                     fair_source="DraftKings (Shin) + Polymarket"),
+                dict(id="nhl:9", side="away", venue="Kalshi", dec=3.0, ev=0.02, team="B",
+                     fair_source="DraftKings (Shin)")]
+        with mock.patch.object(V, "scan", lambda *a, **k: (list(fake), None)), \
+             mock.patch("freshness.can_call", lambda r, now: True), \
+             mock.patch("freshness.parse", lambda s: _dt.datetime(2099, 1, 1, tzinfo=_dt.timezone.utc)):
+            v, _ = V.scan_all(rows)
+        self.assertEqual([x["venue"] for x in v], ["FanDuel"])
+        path = tempfile.mktemp(suffix=".json")
+        V.record(v, [], path=path)
+        kinds = sorted(f["kind"] for f in V.load(path)["finds"].values())
+        os.remove(path)
+        self.assertEqual(kinds, ["single", "value"])
 
 
 class LeaveOneOut(unittest.TestCase):

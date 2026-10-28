@@ -1588,9 +1588,11 @@ function valueBets(){
   const rec = R.n ? 'Record so far: <b>' + R.won + ' of ' + R.n + '</b> won, ROI <b>' + (R.roi >= 0 ? '+' : '') + R.roi
       + '%</b> against ' + (R.est_ev >= 0 ? '+' : '') + R.est_ev + '% expected (' + esc(R.dates[0]) + ' to ' + esc(R.dates[1]) + ').'
     : 'No value bet has been graded yet: every one is archived when first seen and graded after its game.';
-  const SR = V.suspect_record || {};
+  const SR = V.suspect_record || {}, GR = V.single_record || {};
   const sus = ' Edges claiming more than 5% are held out as likely stale quotes (they won 5 of 17 before this rule) and graded apart'
-    + (SR.n ? ': ' + SR.won + ' of ' + SR.n + ', ROI ' + (SR.roi >= 0 ? '+' : '') + SR.roi + '%.' : '.');
+    + (SR.n ? ': ' + SR.won + ' of ' + SR.n + ', ROI ' + (SR.roi >= 0 ? '+' : '') + SR.roi + '%.' : '.')
+    + ' Only finds a second source backs are shown; ones resting on DraftKings alone lost in both halves of the record before this rule and are graded apart'
+    + (GR.n ? ': ' + GR.won + ' of ' + GR.n + ', ROI ' + (GR.roi >= 0 ? '+' : '') + GR.roi + '%.' : '.');
   return '<h3 style="margin-top:18px">Value bets: a venue paying more than the fair price</h3>'
     + '<p class="note">The same pick, priced at FanDuel or Kalshi (fee included) above what DraftKings&rsquo; own no-vig chance says '
     + 'it is worth. Not a prediction &mdash; buying the market&rsquo;s own number below its price. ' + rec + sus + '</p>'

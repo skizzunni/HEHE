@@ -186,8 +186,8 @@ def value_slice(f):
     returned -17.6% on 82, confirmed ones +0.8% on 78."""
     imp = 1 / f["dec"] if f.get("dec") else 0
     band = "longshot" if imp < 0.30 else "favourite" if imp >= 0.60 else "middle"
-    src = f.get("fair_source") or ""
-    conf = "confirmed" if ("Polymarket" in src or "proven" in src or "consensus" in src) else "single"
+    import value_bets
+    conf = "confirmed" if value_bets.confirmed(f) else "single"
     return f'{f.get("venue")} {band}, {conf}'
 
 

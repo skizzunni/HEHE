@@ -3549,3 +3549,17 @@ be reconstructed afterwards: the ones that still showed value against the
 consensus won 14 of 22 (+28.3%), the rest 11 of 33 (-21.5%). The sample is
 small and the reconstruction used later snapshots, so this is a forward
 test: the value record on the Calls tab keeps scoring it.
+
+**Only confirmed value bets are shown.** A value bet whose fair chance rests
+on DraftKings' price alone is now held out of the value list and value
+parlays, archived and graded apart as "single" (the Calls tab shows its
+record). Confirmed means Polymarket's liquid price, a proven source, or the
+other venues' consensus backs the fair chance. Record on 183 graded finds,
+split by date (2026-10-22 to 10-24 / 10-25 to 10-28):
+
+| | first half | second half |
+|---|---|---|
+| single | -6.5% (n=55) | -35.5% (n=41) |
+| confirmed | +20.9% (n=44) | -10.3% (n=43) |
+
+Single-source finds were worse in both halves, by 27 and 25 points.

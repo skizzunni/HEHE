@@ -359,6 +359,7 @@ def snapshot():
         value_bets.grade_parlays(_L)
         out["value"] = dict(bets=vb_val[:20], sure=vb_sure[:10], record=value_bets.report(),
                             suspect_record=value_bets.report(kind="suspect"),
+                            single_record=value_bets.report(kind="single"),
                             parlays=vb_par, parlay_record=value_bets.parlay_report(),
                             min_ev=value_bets.MIN_EV)
         print(f"value: {len(vb_val)} value bets, {len(vb_sure)} sure bets", file=sys.stderr)
