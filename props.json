@@ -1174,7 +1174,8 @@
   "p": 0.8693,
   "p_fair": null,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "ita:401874774|108482|Goalkeeper Saves|2+": {
   "aid": "108482",
@@ -1295,6 +1296,22 @@
   "status": "won",
   "value": 3.0
  },
+ "ita:401874799|219531|Goalkeeper Saves|1+": {
+  "aid": "219531",
+  "date": "2026-10-28",
+  "edge": null,
+  "gid": "ita:401874799",
+  "imp": 0.9615,
+  "label": "Vanja Milinkovic-Savic: 1+ Goalkeeper Saves",
+  "league": "ita",
+  "line": "1+",
+  "market": "Goalkeeper Saves",
+  "name": "Vanja Milinkovic-Savic",
+  "p": 0.8693,
+  "p_fair": null,
+  "price": "-2500",
+  "status": "open"
+ },
  "ita:401874952|205653|Goalkeeper Saves|1+": {
   "aid": "205653",
   "date": "2026-10-25",
@@ -1395,7 +1412,8 @@
   "p": 0.7869,
   "p_fair": null,
   "price": "-500",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "ita:401874972|325056|Goalkeeper Saves|2+": {
   "aid": "325056",
@@ -1447,6 +1465,22 @@
   "price": "-140",
   "status": "lost",
   "value": 3.0
+ },
+ "ita:401874988|204082|Goalkeeper Saves|1+": {
+  "aid": "204082",
+  "date": "2026-10-28",
+  "edge": null,
+  "gid": "ita:401874988",
+  "imp": 0.9333,
+  "label": "Guglielmo Vicario: 1+ Goalkeeper Saves",
+  "league": "ita",
+  "line": "1+",
+  "market": "Goalkeeper Saves",
+  "name": "Guglielmo Vicario",
+  "p": 0.8693,
+  "p_fair": null,
+  "price": "-1400",
+  "status": "open"
  },
  "ita:401874988|205653|Goalkeeper Saves|2+": {
   "aid": "205653",
@@ -16661,6 +16695,22 @@
   "price": "-900",
   "status": "open"
  },
+ "nba:401909881|n:bam adebayo|Points|10+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": -1.1,
+  "gid": "nba:401909881",
+  "imp": 0.9333,
+  "label": "Bam Adebayo: 10+ Points",
+  "league": "nba",
+  "line": "10+",
+  "market": "Points",
+  "name": "Bam Adebayo",
+  "p": 0.8539,
+  "p_fair": 0.9226,
+  "price": "-1400",
+  "status": "open"
+ },
  "nba:401909881|n:bam adebayo|Rebounds|6+": {
   "aid": null,
   "date": "2026-10-28",
@@ -17327,6 +17377,22 @@
   "p": 0.8508,
   "p_fair": 0.9141,
   "price": "-1400",
+  "status": "open"
+ },
+ "nba:401909884|n:pascal siakam|Pts + Ast|20+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": -3.3,
+  "gid": "nba:401909884",
+  "imp": 0.9,
+  "label": "Pascal Siakam: 20+ Pts + Ast",
+  "league": "nba",
+  "line": "20+",
+  "market": "Pts + Ast",
+  "name": "Pascal Siakam",
+  "p": 0.8499,
+  "p_fair": 0.8703,
+  "price": "-900",
   "status": "open"
  },
  "nba:401909884|n:tyrese haliburton|Points|10+": {
