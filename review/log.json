@@ -5081,8 +5081,8 @@
    },
    {
     "flag": false,
-    "hit": 80.2,
-    "n": 454,
+    "hit": 80.4,
+    "n": 464,
     "name": "props nhl Shots on Goal",
     "said": 80.0
    },
@@ -5172,10 +5172,10 @@
    },
    {
     "flag": false,
-    "hit": 95.9,
-    "n": 49,
+    "hit": 96.0,
+    "n": 50,
     "name": "prop locks",
-    "said": 93.3
+    "said": 93.2
    },
    {
     "flag": false,
@@ -5261,9 +5261,9 @@
    }
   },
   "clv": {
-   "avg": -0.89,
-   "beat": 46.7,
-   "n": 15
+   "avg": -0.76,
+   "beat": 50.0,
+   "n": 16
   },
   "day": "2026-10-27",
   "leaks_14d": [],
@@ -5345,7 +5345,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -5357,12 +5357,12 @@
    }
   ],
   "picks": {
-   "hit": 80.0,
+   "hit": 81.2,
    "lost": 3,
-   "n": 15,
-   "roi": 2.1,
-   "said": 74.6,
-   "won": 12
+   "n": 16,
+   "roi": 7.1,
+   "said": 73.2,
+   "won": 13
   },
   "picks_by_league": {
    "afc": {
@@ -5412,6 +5412,14 @@
     "roi": 28.4,
     "said": 73.7,
     "won": 3
+   },
+   "nhl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 83.3,
+    "said": 52.0,
+    "won": 1
    }
   },
   "props": {
@@ -5421,9 +5429,9 @@
     "said_price": 87.1,
     "won": 822
    },
-   "n": 1,
-   "said": 85.5,
-   "won": 1
+   "n": 11,
+   "said": 81.9,
+   "won": 10
   },
   "safe_locks": {
    "lost": [],
@@ -5457,12 +5465,12 @@
     "won": 1
    },
    "agree": {
-    "hit": 71.9,
+    "hit": 72.0,
     "lost": 179,
-    "n": 638,
-    "roi": -0.6,
-    "said": 69.1,
-    "won": 459
+    "n": 639,
+    "roi": -0.4,
+    "said": 69.0,
+    "won": 460
    }
   },
   "weights": {
@@ -5487,10 +5495,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.665,
-    "market_only": 0.665,
-    "model_40": 0.6734,
-    "n": 70,
+    "logloss": 0.6647,
+    "market_only": 0.6647,
+    "model_40": 0.6732,
+    "n": 71,
     "weight": 0.0
    }
   }

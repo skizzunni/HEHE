@@ -7,20 +7,20 @@
    "baseline": "the pick as published (hand-set model weights in NFL/WNBA/MLB/tennis)",
    "proposal": "the same-time market favourite (tested weight 0)",
    "same": "one pick per game, same game, same price",
-   "untouched_from": "2026-09-28",
+   "untouched_from": "2026-09-29",
    "result": {
     "all": {
      "days": 29,
      "picks": 512,
      "old_won": 325,
-     "new_won": 332,
-     "diff": 7,
+     "new_won": 333,
+     "diff": 8,
      "ci95_diff": [
-      -6,
-      21
+      -5,
+      23
      ],
      "new_won_old_missed": 35,
-     "old_won_new_missed": 28,
+     "old_won_new_missed": 27,
      "promote": false,
      "examples_new": [
       {
@@ -74,12 +74,6 @@
      ],
      "examples_old": [
       {
-       "day": "2026-09-28",
-       "old": "Chicago Bears",
-       "game": "nfl:401872963",
-       "won": true
-      },
-      {
        "day": "2026-10-01",
        "old": "Cleveland Browns",
        "game": "nfl:401872964",
@@ -120,6 +114,12 @@
        "old": "San Diego State Aztecs",
        "game": "ncaaf:401860900",
        "won": true
+      },
+      {
+       "day": "2026-10-04",
+       "old": "New York Giants",
+       "game": "nfl:401872966",
+       "won": true
       }
      ]
     },
@@ -152,24 +152,24 @@
      "promote": false
     },
     "nfl": {
-     "days": 13,
-     "picks": 59,
-     "old_won": 36,
+     "days": 12,
+     "picks": 58,
+     "old_won": 35,
      "new_won": 35,
-     "diff": -1,
+     "diff": 0,
      "ci95_diff": [
-      -4,
-      2
+      -3,
+      3
      ],
      "new_won_old_missed": 5,
-     "old_won_new_missed": 6,
+     "old_won_new_missed": 5,
      "promote": false
     },
     "nhl": {
-     "days": 21,
-     "picks": 144,
-     "old_won": 84,
-     "new_won": 90,
+     "days": 22,
+     "picks": 145,
+     "old_won": 85,
+     "new_won": 91,
      "diff": 6,
      "ci95_diff": [
       0,
