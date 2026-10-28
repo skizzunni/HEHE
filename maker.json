@@ -663,6 +663,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26OCT28KENNMTU-MTU"
   },
+  "KXNCAAFGAME-26OCT29TROYJMU-JMU|YES": {
+   "ask": 0.92,
+   "bid": 0.91,
+   "cost": 0.9115,
+   "edge": 0.01,
+   "fair": 0.9206,
+   "id": "ncaaf:401869963",
+   "label": "James Madison Dukes",
+   "league": "ncaaf",
+   "match": "TROY @ JMU",
+   "posted": "2026-10-28T04:05:12+00:00",
+   "queue": 24578.27,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "James Madison Dukes"
+   },
+   "start": "2026-10-29T23:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26OCT29TROYJMU-JMU"
+  },
   "KXNCAAFSPREAD-26OCT22ECUMEM-MEM11|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -4937,6 +4958,28 @@
    "status": "graded",
    "ticker": "KXNFLSPREAD-26OCT26DALPHI-DAL5",
    "won": 1
+  },
+  "KXNFLSPREAD-26OCT29CARGB-GB4|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "nfl:401873023",
+   "label": "Green Bay Packers -3.5",
+   "league": "nfl",
+   "match": "CAR @ GB",
+   "posted": "2026-10-28T04:05:12+00:00",
+   "queue": 922368.06,
+   "side": "YES",
+   "spec": {
+    "line": -3.5,
+    "t": "spread",
+    "team": "Green Bay Packers"
+   },
+   "start": "2026-10-30T00:15Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26OCT29CARGB-GB4"
   },
   "KXNFLTOTAL-26OCT22NECHI-51|YES": {
    "ask": 0.52,

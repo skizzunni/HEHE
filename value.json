@@ -5715,6 +5715,42 @@
    "target": 10.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|ncaaf:401871058:{\"line\": 50.5, \"t\": \"over\"}|nhl:401892598:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Jersey Devils\"}": {
+   "ev": 0.0277,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.011,
+     "fair": 0.6066,
+     "id": "nhl:401892598",
+     "price": "-150",
+     "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Jersey Devils\"}",
+     "spec": {
+      "line": 1.5,
+      "t": "spread",
+      "team": "New Jersey Devils"
+     },
+     "team": "New Jersey Devils +1.5"
+    },
+    {
+     "ev": 0.0164,
+     "fair": 0.5182,
+     "id": "ncaaf:401871058",
+     "price": "-104",
+     "side": "{\"line\": 50.5, \"t\": \"over\"}",
+     "spec": {
+      "line": 50.5,
+      "t": "over"
+     },
+     "team": "over 50.5"
+    }
+   ],
+   "payout": 3.269,
+   "prob": 0.3143,
+   "seen": "2026-10-28T04:05:12+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|ncaaf:401871093:away": {
    "ev": 0.026,
    "kind": "parlay",
