@@ -8,7 +8,7 @@ Closing line value: -1.01 points on 14 picks; beat the close on 42.9%.
 - LOST dfb SV Elversberg at 83%: margin 2 · the book had my side favoured too · called at 83%
 - LOST dfb Mainz at 77%: margin 2 · the book had my side favoured too · called at 77%
 With the market 71.9% (637); against it 12.5% (8).
-Locks 0/11 won, 11 open; Best play top 3 (51%) open.
+Locks 1/11 won, 10 open; Best play top 3 (51%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (53%) open.
 Lottery 10k: open (0/11 legs won)
 Lottery 10k+25: open (0/11 legs won)
