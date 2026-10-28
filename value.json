@@ -72,6 +72,23 @@
    "tip": "9:00 AM",
    "venue": "FanDuel"
   },
+  "dfb:401916922|home|FanDuel": {
+   "dec": 2.2,
+   "ev": 0.0248,
+   "fair": 0.4658,
+   "fair_source": "DraftKings (Shin)",
+   "id": "dfb:401916922",
+   "kind": "value",
+   "league": "dfb",
+   "match": "FCK @ H96",
+   "price": "+120",
+   "seen": "2026-10-28T18:46:15+00:00",
+   "side": "home",
+   "start": "2026-10-28T19:45Z",
+   "team": "Hannover 96",
+   "tip": "3:45 PM",
+   "venue": "FanDuel"
+  },
   "dfb:401917030|away|FanDuel": {
    "dec": 7.5,
    "ev": 0.0224,
@@ -4956,6 +4973,26 @@
    "seen": "2026-10-25T12:18:23+00:00",
    "status": "lost",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|dfb:401916922:home": {
+   "ev": 0.0248,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0248,
+     "fair": 0.4658,
+     "id": "dfb:401916922",
+     "price": "+120",
+     "side": "home",
+     "spec": null,
+     "team": "Hannover 96"
+    }
+   ],
+   "payout": 2.2,
+   "prob": 0.4658,
+   "seen": "2026-10-28T18:46:15+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|dfb:401917030:away": {
