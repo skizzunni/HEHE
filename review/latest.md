@@ -1,12 +1,12 @@
 # Review 2026-10-28
 
-Picks 6-2 (75.0% vs 73.2% claimed, ROI -2.3%).
+Picks 7-2 (77.8% vs 73.0% claimed, ROI +1.3%).
 TRAILING props nba Pts + Reb: 74.5% hit vs 84.9% stated on 51
 TRAILING safe locks nba prop: 73.3% hit vs 92.7% stated on 15
-Closing line value: -2.24 points on 8 picks; beat the close on 25.0%.
+Closing line value: -2.1 points on 9 picks; beat the close on 22.2%.
 - LOST dfb Schalke 04 at 67%: margin 2 · the book had my side favoured too · called at 67%
 - LOST ita AC Milan at 82%: margin 2 · the book had my side favoured too · called at 82%
-With the market 72.2% (647); against it 16.7% (6).
+With the market 72.2% (648); against it 16.7% (6).
 Locks 0/11 won, 11 open; Best play top 3 (54%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (52%) open.
 Lottery 100: open (0/14 legs won)
