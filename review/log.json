@@ -5130,10 +5130,10 @@
    },
    {
     "flag": false,
-    "hit": 81.2,
-    "n": 16,
+    "hit": 82.4,
+    "n": 17,
     "name": "locks ncaaf under",
-    "said": 81.0
+    "said": 80.6
    },
    {
     "flag": false,
@@ -5179,8 +5179,8 @@
    },
    {
     "flag": false,
-    "hit": 42.8,
-    "n": 173,
+    "hit": 42.5,
+    "n": 174,
     "name": "value bets",
     "said": 44.2
    },
@@ -5261,16 +5261,16 @@
    }
   },
   "clv": {
-   "avg": -0.76,
-   "beat": 50.0,
-   "n": 16
+   "avg": -0.48,
+   "beat": 52.9,
+   "n": 17
   },
   "day": "2026-10-27",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      3,
@@ -5278,7 +5278,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "losses": [
    {
@@ -5304,46 +5304,64 @@
     "price": "-475",
     "said": 77,
     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 77%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "Western Kentucky Hilltoppers",
+    "price": "-130",
+    "said": 55,
+    "why": "margin 14 \u00b7 the book had my side favoured too \u00b7 called at 55%"
    }
   ],
   "lottery": [
    {
-    "killed_by": [],
+    "killed_by": [
+     "Western Kentucky Hilltoppers -13.5"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Western Kentucky Hilltoppers -13.5"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+25",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Western Kentucky Hilltoppers -13.5"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+50",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Western Kentucky Hilltoppers -13.5"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+100",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Western Kentucky Hilltoppers -4.5"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 1
    },
@@ -5357,11 +5375,11 @@
    }
   ],
   "picks": {
-   "hit": 81.2,
-   "lost": 3,
-   "n": 16,
-   "roi": 7.1,
-   "said": 73.2,
+   "hit": 76.5,
+   "lost": 4,
+   "n": 17,
+   "roi": 0.8,
+   "said": 72.1,
    "won": 13
   },
   "picks_by_league": {
@@ -5412,6 +5430,14 @@
     "roi": 28.4,
     "said": 73.7,
     "won": 3
+   },
+   "ncaaf": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 55.0,
+    "won": 0
    },
    "nhl": {
     "hit": 100.0,
@@ -5465,10 +5491,10 @@
     "won": 1
    },
    "agree": {
-    "hit": 72.0,
-    "lost": 179,
-    "n": 639,
-    "roi": -0.4,
+    "hit": 71.9,
+    "lost": 180,
+    "n": 640,
+    "roi": -0.6,
     "said": 69.0,
     "won": 460
    }
@@ -5486,10 +5512,10 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6379,
-    "market_only": 0.6524,
-    "model_40": 0.6379,
-    "n": 108,
+    "logloss": 0.6395,
+    "market_only": 0.6536,
+    "model_40": 0.6395,
+    "n": 109,
     "weight": 0.4
    },
    "nhl": {
