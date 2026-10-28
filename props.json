@@ -2123,6 +2123,38 @@
   "status": "won",
   "value": 1.0
  },
+ "mlb:401908046|n:jackson chourio|Hits + Runs + RBIs|1+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": null,
+  "gid": "mlb:401908046",
+  "imp": 0.7674,
+  "label": "Jackson Chourio: 1+ Hits + Runs + RBIs",
+  "league": "mlb",
+  "line": "1+",
+  "market": "Hits + Runs + RBIs",
+  "name": "Jackson Chourio",
+  "p": 0.7776,
+  "p_fair": null,
+  "price": "-330",
+  "status": "open"
+ },
+ "mlb:401908046|n:yandy diaz|Hits + Runs + RBIs|1+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": null,
+  "gid": "mlb:401908046",
+  "imp": 0.7778,
+  "label": "Yandy Diaz: 1+ Hits + Runs + RBIs",
+  "league": "mlb",
+  "line": "1+",
+  "market": "Hits + Runs + RBIs",
+  "name": "Yandy Diaz",
+  "p": 0.788,
+  "p_fair": null,
+  "price": "-350",
+  "status": "open"
+ },
  "mlb:401930515|n:chandler simpson|Hits + Runs + RBIs|1+": {
   "aid": null,
   "date": "2026-10-18",
@@ -16722,6 +16754,54 @@
   "p": 0.8394,
   "p_fair": 0.8545,
   "price": "-720",
+  "status": "open"
+ },
+ "nba:401909885|n:rj barrett|Pts + Ast|15+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": -0.5,
+  "gid": "nba:401909885",
+  "imp": 0.9167,
+  "label": "RJ Barrett: 15+ Pts + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Ast",
+  "name": "RJ Barrett",
+  "p": 0.8615,
+  "p_fair": 0.9118,
+  "price": "-1100",
+  "status": "open"
+ },
+ "nba:401909885|n:scottie barnes|Points|10+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": -2.9,
+  "gid": "nba:401909885",
+  "imp": 0.9836,
+  "label": "Scottie Barnes: 10+ Points",
+  "league": "nba",
+  "line": "10+",
+  "market": "Points",
+  "name": "Scottie Barnes",
+  "p": 0.8685,
+  "p_fair": 0.9554,
+  "price": "-6000",
+  "status": "open"
+ },
+ "nba:401909885|n:scottie barnes|Pts + Reb + Ast|30+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": -4.6,
+  "gid": "nba:401909885",
+  "imp": 0.7826,
+  "label": "Scottie Barnes: 30+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "30+",
+  "market": "Pts + Reb + Ast",
+  "name": "Scottie Barnes",
+  "p": 0.7482,
+  "p_fair": 0.7464,
+  "price": "-360",
   "status": "open"
  },
  "nba:401909889|n:aaron gordon|Assists|2+": {
@@ -32417,11 +32497,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Drake Batherson",
   "p": 0.8575,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892593|n:drake batherson|Shots on Goal|2+": {
   "aid": null,
@@ -32433,11 +32515,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Drake Batherson",
   "p": 0.6956,
   "p_fair": null,
   "price": "-290",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892593|n:dylan cozens|Shots on Goal|1+": {
   "aid": null,
@@ -32449,11 +32533,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Dylan Cozens",
   "p": 0.8611,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892593|n:dylan cozens|Shots on Goal|2+": {
   "aid": null,
@@ -32465,11 +32551,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Dylan Cozens",
   "p": 0.6682,
   "p_fair": null,
   "price": "-250",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892593|n:jack eichel|Shots on Goal|2+": {
   "aid": null,
@@ -32481,11 +32569,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jack Eichel",
   "p": 0.7444,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892593|n:jake sanderson|Shots on Goal|1+": {
   "aid": null,
@@ -32497,11 +32587,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jake Sanderson",
   "p": 0.8419,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892593|n:mark stone|Shots on Goal|1+": {
   "aid": null,
@@ -32513,11 +32605,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mark Stone",
   "p": 0.837,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892593|n:mitchell marner|Shots on Goal|2+": {
   "aid": null,
@@ -32529,11 +32623,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "fuzzy",
   "name": "Mitchell Marner",
   "p": 0.6603,
   "p_fair": null,
   "price": "-240",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892593|n:shane pinto|Shots on Goal|1+": {
   "aid": null,
@@ -32545,11 +32641,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Shane Pinto",
   "p": 0.8331,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892593|n:tim sttzle|Shots on Goal|1+": {
   "aid": null,
@@ -32561,11 +32659,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Tim St\u00fctzle",
   "p": 0.8551,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892593|n:tomas hertl|Shots on Goal|2+": {
   "aid": null,
@@ -32577,11 +32677,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Tomas Hertl",
   "p": 0.6956,
   "p_fair": null,
   "price": "-290",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892593|n:trevor connelly|Shots on Goal|1+": {
   "aid": null,
@@ -32593,11 +32695,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Trevor Connelly",
   "p": 0.8419,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892594|n:brock boeser|Shots on Goal|1+": {
   "aid": null,
