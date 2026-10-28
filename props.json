@@ -2061,11 +2061,13 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Chandler Simpson",
   "p": 0.7864,
   "p_fair": null,
   "price": "-350",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "mlb:401908045|n:jackson chourio|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -2077,11 +2079,13 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Jackson Chourio",
   "p": 0.7864,
   "p_fair": null,
   "price": "-350",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "mlb:401908045|n:taylor walls|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -2093,11 +2097,13 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Taylor Walls",
   "p": 0.6067,
   "p_fair": null,
   "price": "-150",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "mlb:401908045|n:yandy diaz|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -2109,11 +2115,13 @@
   "league": "mlb",
   "line": "1+",
   "market": "Hits + Runs + RBIs",
+  "matched": "name",
   "name": "Yandy Diaz",
   "p": 0.7813,
   "p_fair": null,
   "price": "-340",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "mlb:401930515|n:chandler simpson|Hits + Runs + RBIs|1+": {
   "aid": null,
@@ -16602,6 +16610,38 @@
   "p": 0.8469,
   "p_fair": 0.8557,
   "price": "-770",
+  "status": "open"
+ },
+ "nba:401909884|n:joel embiid|Points|15+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": -5.7,
+  "gid": "nba:401909884",
+  "imp": 0.9333,
+  "label": "Joel Embiid: 15+ Points",
+  "league": "nba",
+  "line": "15+",
+  "market": "Points",
+  "name": "Joel Embiid",
+  "p": 0.8508,
+  "p_fair": 0.88,
+  "price": "-1400",
+  "status": "open"
+ },
+ "nba:401909884|n:joel embiid|Pts + Ast|20+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": -5.2,
+  "gid": "nba:401909884",
+  "imp": 0.9,
+  "label": "Joel Embiid: 20+ Pts + Ast",
+  "league": "nba",
+  "line": "20+",
+  "market": "Pts + Ast",
+  "name": "Joel Embiid",
+  "p": 0.8459,
+  "p_fair": 0.8531,
+  "price": "-900",
   "status": "open"
  },
  "nba:401909884|n:joel embiid|Rebounds|6+": {
@@ -32847,6 +32887,22 @@
   "price": "-395",
   "status": "open"
  },
+ "nhl:401892596|n:jakob chychrun|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": null,
+  "gid": "nhl:401892596",
+  "imp": 0.7917,
+  "label": "Jakob Chychrun: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Jakob Chychrun",
+  "p": 0.7351,
+  "p_fair": null,
+  "price": "-380",
+  "status": "open"
+ },
  "nhl:401892596|n:jordan kyrou|Shots on Goal|1+": {
   "aid": null,
   "date": "2026-10-28",
@@ -33005,6 +33061,22 @@
   "p": 0.8685,
   "p_fair": null,
   "price": "-2000",
+  "status": "open"
+ },
+ "nhl:401892599|n:darren raddysh|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": null,
+  "gid": "nhl:401892599",
+  "imp": 0.7674,
+  "label": "Darren Raddysh: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Darren Raddysh",
+  "p": 0.7126,
+  "p_fair": null,
+  "price": "-330",
   "status": "open"
  },
  "nhl:401892599|n:mackie samoskevich|Shots on Goal|1+": {
