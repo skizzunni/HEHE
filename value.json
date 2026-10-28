@@ -2528,6 +2528,23 @@
    "tip": "8:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909890|home|Kalshi": {
+   "dec": 5.8997,
+   "ev": 0.0126,
+   "fair": 0.1716,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909890",
+   "kind": "value",
+   "league": "nba",
+   "match": "SA @ UTAH",
+   "price": "+490",
+   "seen": "2026-10-28T04:41:00+00:00",
+   "side": "home",
+   "start": "2026-10-29T01:00Z",
+   "team": "Utah Jazz",
+   "tip": "9:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909891|home|Kalshi": {
    "dec": 2.9824,
    "ev": 0.0105,
@@ -2544,6 +2561,28 @@
    "team": "Dallas Mavericks",
    "tip": "9:30 PM",
    "venue": "Kalshi"
+  },
+  "nba:401909891|sure": {
+   "id": "nba:401909891",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-198",
+     "stake_share": 0.6646,
+     "team": "Oklahoma City Thunder",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+198",
+     "stake_share": 0.3354,
+     "team": "Dallas Mavericks",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "OKC @ DAL",
+   "profit": 0.0003,
+   "seen": "2026-10-28T04:41:00+00:00"
   },
   "ncaaf:401856730|away|FanDuel": {
    "dec": 1.7042,
