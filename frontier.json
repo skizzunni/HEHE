@@ -672844,13 +672844,14 @@
        "play": null,
        "price": "-600",
        "quoted": "2026-10-27T11:58:35+00:00",
+       "score": "Vancouver Canucks 6 - Anaheim Ducks 5",
        "spec": {
         "line": 1.5,
         "t": "spread",
         "team": "Anaheim Ducks"
        },
        "start": "2026-10-28T02:00Z",
-       "status": "open",
+       "status": "won",
        "tip": "10:00 PM",
        "where": "Alternate Puck Line: Anaheim Ducks +1.5"
       },
@@ -672886,7 +672887,7 @@
      ],
      "prob": 0.39059819349425307,
      "standard": 0.8,
-     "status": "open",
+     "status": "won",
      "target": 2.0,
      "total": 2.00094200868469
     },
@@ -672996,12 +672997,13 @@
        "play": null,
        "price": "-5000",
        "quoted": "2026-10-27T11:58:35+00:00",
+       "score": "Vancouver Canucks 6 - Anaheim Ducks 5",
        "spec": {
         "line": 11.5,
         "t": "under"
        },
        "start": "2026-10-28T02:00Z",
-       "status": "open",
+       "status": "won",
        "tip": "10:00 PM",
        "where": "Alternate Total Goals: Under 11.5"
       }
@@ -682164,6 +682166,62 @@
       "start": "2026-10-29T00:00Z",
       "starters": [],
       "t": "2026-10-28T04:05:53+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "TB",
+        "Gavin Lux",
+        "60-Day-IL",
+        "LF"
+       ],
+       [
+        "TB",
+        "Junior Caminero",
+        "Day-To-Day",
+        "3B"
+       ],
+       [
+        "TB",
+        "Shane McClanahan",
+        "Out",
+        "SP"
+       ],
+       [
+        "TB",
+        "Jacob Melton",
+        "60-Day-IL",
+        "LF"
+       ],
+       [
+        "TB",
+        "Edwin Uceta",
+        "60-Day-IL",
+        "RP"
+       ],
+       [
+        "MIL",
+        "Quinn Priester",
+        "60-Day-IL",
+        "SP"
+       ],
+       [
+        "MIL",
+        "Angel Zerpa",
+        "60-Day-IL",
+        "RP"
+       ],
+       [
+        "MIL",
+        "Brian Fitzpatrick",
+        "60-Day-IL",
+        "RP"
+       ]
+      ],
+      "probables": {},
+      "start": "2026-10-29T00:00Z",
+      "starters": [],
+      "t": "2026-10-28T04:53:18+00:00"
      }
     ],
     "mls:761905": [
@@ -684037,6 +684095,141 @@
       ]
      ],
      "t": "2026-10-28T04:41:42+00:00"
+    },
+    {
+     "policy": "7ee93785",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "San Antonio Spurs to win",
+        "Juventus or draw",
+        "SC Freiburg or draw",
+        "New Mexico State Aggies under 34.5 points",
+        "Internazionale or draw"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Over 39.5 points",
+        "Middle Tennessee Blue Raiders over 19.5 points",
+        "Cleveland Cavaliers to win"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Detroit Pistons to win",
+        "Oklahoma City Thunder to win"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Cleveland Cavaliers to win",
+        "Fluminense or draw",
+        "Kennesaw State Owls +12.5",
+        "Over 39.5 points",
+        "Seattle Sounders FC or draw"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Washington Capitals to win",
+        "Edmonton Oilers to win",
+        "Oklahoma City Thunder to win"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Edmonton Oilers to win",
+        "New York Knicks to win",
+        "Washington Capitals to win",
+        "Houston Rockets to win",
+        "Cleveland Cavaliers to win"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-28T04:53:12+00:00"
     }
    ]
   }
