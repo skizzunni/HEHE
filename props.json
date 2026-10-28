@@ -16884,6 +16884,22 @@
   "price": "-1000",
   "status": "open"
  },
+ "nba:401909885|n:jamal shead|Reb + Ast|5+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": 1.3,
+  "gid": "nba:401909885",
+  "imp": 0.8,
+  "label": "Jamal Shead: 5+ Reb + Ast",
+  "league": "nba",
+  "line": "5+",
+  "market": "Reb + Ast",
+  "name": "Jamal Shead",
+  "p": 0.779,
+  "p_fair": 0.8103,
+  "price": "-400",
+  "status": "open"
+ },
  "nba:401909885|n:rj barrett|Pts + Ast|15+": {
   "aid": null,
   "date": "2026-10-28",
@@ -32965,11 +32981,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Ivar Stenberg",
   "p": 0.8419,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892595|n:jack quinn|Shots on Goal|2+": {
   "aid": null,
@@ -32981,11 +32999,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jack Quinn",
   "p": 0.7204,
   "p_fair": null,
   "price": "-335",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892595|n:macklin celebrini|Shots on Goal|2+": {
   "aid": null,
@@ -32997,11 +33017,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Macklin Celebrini",
   "p": 0.8396,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892595|n:mason marchment|Shots on Goal|1+": {
   "aid": null,
@@ -33013,11 +33035,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mason Marchment",
   "p": 0.8315,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892595|n:olen zellweger|Shots on Goal|1+": {
   "aid": null,
@@ -33029,11 +33053,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Olen Zellweger",
   "p": 0.8315,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892595|n:rasmus dahlin|Shots on Goal|2+": {
   "aid": null,
@@ -33045,11 +33071,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Rasmus Dahlin",
   "p": 0.7179,
   "p_fair": null,
   "price": "-330",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892595|n:tage thompson|Shots on Goal|2+": {
   "aid": null,
@@ -33061,11 +33089,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Tage Thompson",
   "p": 0.8367,
   "p_fair": null,
   "price": "-870",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nhl:401892595|n:will smith|Shots on Goal|1+": {
   "aid": null,
@@ -33077,11 +33107,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Will Smith",
   "p": 0.8697,
   "p_fair": null,
   "price": "-2200",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892595|n:will smith|Shots on Goal|2+": {
   "aid": null,
@@ -33093,11 +33125,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Will Smith",
   "p": 0.7344,
   "p_fair": null,
   "price": "-370",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892595|n:zach benson|Shots on Goal|1+": {
   "aid": null,
@@ -33109,11 +33143,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Zach Benson",
   "p": 0.8699,
   "p_fair": null,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892596|n:alex ovechkin|Shots on Goal|1+": {
   "aid": null,
