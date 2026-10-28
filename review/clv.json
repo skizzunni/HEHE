@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 55.7,
-  "brier_close": 0.1856,
-  "brier_published": 0.1883,
+  "beat_close_pct": 55.0,
+  "brier_close": 0.1889,
+  "brier_published": 0.191,
   "dates": [
    "2026-10-24",
    "2026-10-28"
   ],
-  "logloss_close": 0.5562,
-  "logloss_published": 0.5625,
-  "mean_clv_pts": 0.24,
+  "logloss_close": 0.5635,
+  "logloss_published": 0.5679,
+  "mean_clv_pts": 0.21,
   "n": 300
  },
  "market_is_model": true,
@@ -1785,6 +1785,15 @@
    "published": 0.7,
    "won": 0
   },
+  "dfb:401916922": {
+   "call": false,
+   "close": 0.7052,
+   "clv": 4.52,
+   "day": "2026-10-28",
+   "league": "dfb",
+   "published": 0.66,
+   "won": 0
+  },
   "dfb:401916923": {
    "call": false,
    "close": 0.8349,
@@ -1855,6 +1864,24 @@
    "day": "2026-10-28",
    "league": "dfb",
    "published": 0.82,
+   "won": 1
+  },
+  "dfb:401917033": {
+   "call": false,
+   "close": 0.7746,
+   "clv": -4.54,
+   "day": "2026-10-28",
+   "league": "dfb",
+   "published": 0.82,
+   "won": 1
+  },
+  "dfb:401917035": {
+   "call": true,
+   "close": 0.8857,
+   "clv": -2.43,
+   "day": "2026-10-28",
+   "league": "dfb",
+   "published": 0.91,
    "won": 1
   },
   "dfb:401917036": {
@@ -4424,6 +4451,15 @@
    "published": 0.79,
    "won": 1
   },
+  "ita:401874799": {
+   "call": false,
+   "close": 0.8233,
+   "clv": 5.33,
+   "day": "2026-10-28",
+   "league": "ita",
+   "published": 0.77,
+   "won": 1
+  },
   "ita:401874935": {
    "call": false,
    "close": 0.839,
@@ -4534,6 +4570,15 @@
    "league": "ita",
    "published": 0.71,
    "won": 1
+  },
+  "ita:401874988": {
+   "call": false,
+   "close": 0.8251,
+   "clv": 0.51,
+   "day": "2026-10-28",
+   "league": "ita",
+   "published": 0.82,
+   "won": 0
   },
   "ita:401874993": {
    "call": false,
@@ -17987,6 +18032,42 @@
    "published": 0.72,
    "won": 1
   },
+  "sco:401878352": {
+   "call": false,
+   "close": 0.6629,
+   "clv": 1.29,
+   "day": "2026-10-28",
+   "league": "sco",
+   "published": 0.65,
+   "won": 1
+  },
+  "sco:401878354": {
+   "call": false,
+   "close": 0.7266,
+   "clv": -0.34,
+   "day": "2026-10-28",
+   "league": "sco",
+   "published": 0.73,
+   "won": 1
+  },
+  "sco:401878355": {
+   "call": false,
+   "close": 0.7305,
+   "clv": 0.05,
+   "day": "2026-10-28",
+   "league": "sco",
+   "published": 0.73,
+   "won": 0
+  },
+  "sco:401878356": {
+   "call": false,
+   "close": 0.7553,
+   "clv": 2.53,
+   "day": "2026-10-28",
+   "league": "sco",
+   "published": 0.73,
+   "won": 0
+  },
   "sco:401878357": {
    "call": false,
    "close": 0.6776,
@@ -19638,5 +19719,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-28T21:36+00:00"
+ "updated": "2026-10-28T21:42+00:00"
 }

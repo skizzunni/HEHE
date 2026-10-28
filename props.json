@@ -1310,7 +1310,8 @@
   "p": 0.8693,
   "p_fair": null,
   "price": "-2500",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "ita:401874952|205653|Goalkeeper Saves|1+": {
   "aid": "205653",
@@ -1480,7 +1481,8 @@
   "p": 0.8693,
   "p_fair": null,
   "price": "-1400",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "ita:401874988|205653|Goalkeeper Saves|2+": {
   "aid": "205653",
@@ -1496,7 +1498,8 @@
   "p": 0.8184,
   "p_fair": null,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "ita:401874993|179358|Goalkeeper Saves|2+": {
   "aid": "179358",
@@ -17840,6 +17843,22 @@
   "p": 0.8499,
   "p_fair": 0.82,
   "price": "-900",
+  "status": "open"
+ },
+ "nba:401909886|n:jalen brunson|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": -3.3,
+  "gid": "nba:401909886",
+  "imp": 0.9167,
+  "label": "Jalen Brunson: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Jalen Brunson",
+  "p": 0.8575,
+  "p_fair": 0.8867,
+  "price": "-1100",
   "status": "open"
  },
  "nba:401909886|n:jalen smith|Points|5+": {
@@ -35228,6 +35247,22 @@
   "price": "-1500",
   "status": "open"
  },
+ "nhl:401892598|n:luke evangelista|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": null,
+  "gid": "nhl:401892598",
+  "imp": 0.9167,
+  "label": "Luke Evangelista: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Luke Evangelista",
+  "p": 0.8472,
+  "p_fair": null,
+  "price": "-1100",
+  "status": "open"
+ },
  "nhl:401892598|n:luke hughes|Shots on Goal|1+": {
   "aid": null,
   "date": "2026-10-28",
@@ -35386,6 +35421,22 @@
   "p": 0.7126,
   "p_fair": null,
   "price": "-330",
+  "status": "open"
+ },
+ "nhl:401892599|n:easton cowan|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-28",
+  "edge": null,
+  "gid": "nhl:401892599",
+  "imp": 0.9091,
+  "label": "Easton Cowan: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Easton Cowan",
+  "p": 0.8402,
+  "p_fair": null,
+  "price": "-1000",
   "status": "open"
  },
  "nhl:401892599|n:jordan eberle|Shots on Goal|1+": {
