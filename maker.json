@@ -732,6 +732,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26OCT29TROYJMU-JMU"
   },
+  "KXNCAAFGAME-26OCT30KENTSAC-KENT|YES": {
+   "ask": 0.75,
+   "bid": 0.74,
+   "cost": 0.7434,
+   "edge": 0.0147,
+   "fair": 0.7543,
+   "id": "ncaaf:401866451",
+   "label": "Kent State Golden Flashes",
+   "league": "ncaaf",
+   "match": "KENT @ SAC",
+   "posted": "2026-10-29T04:04:50+00:00",
+   "queue": 24730.69,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Kent State Golden Flashes"
+   },
+   "start": "2026-10-31T02:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26OCT30KENTSAC-KENT"
+  },
   "KXNCAAFSPREAD-26OCT22ECUMEM-MEM11|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -4620,6 +4641,27 @@
    "start": "2026-10-29T23:30Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT29FAUUNT-77"
+  },
+  "KXNCAAFTOTAL-26OCT30TULNCHAR-48|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401862813",
+   "label": "under 47.5",
+   "league": "ncaaf",
+   "match": "TULN @ CLT",
+   "posted": "2026-10-29T04:04:50+00:00",
+   "queue": 52870.22,
+   "side": "NO",
+   "spec": {
+    "line": 47.5,
+    "t": "under"
+   },
+   "start": "2026-10-30T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT30TULNCHAR-48"
   },
   "KXNFLGAME-26OCT25CINBAL-CIN|YES": {
    "ask": 0.52,
