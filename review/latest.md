@@ -15,12 +15,12 @@ Closing line value: +0.19 points on 47 picks; beat the close on 51.1%.
 - LOST sco Aberdeen at 76%: margin 1 · the book had my side favoured too · called at 76%
 With the market 72.6% (686); against it 16.7% (6).
 Locks 6/11 won, 3 open; Best play top 3 (54%) lost; lost: Amen Thompson: 4+ Assists (HOU @ MIL) 3; Over 201.5 points (Charlotte Hornets at Detroit Pistons) Charlotte Hornets 89 - Detroit Pistons 97.
-Safe Locks 6/11 won, 4 open; Winners parlay top 2 (84%) open; Best play top 7 (52%) open; lost: Over 215.5 points (Denver Nuggets at New Orleans Pelicans) Denver Nuggets 104 - New Orleans Pelicans 91.
-Lottery 100: lost (7/14 legs won, killed by Amen Thompson: 4+ Assists, Naz Reid: 2+ Assists, Under 221.5 points)
-Lottery 10k: lost (4/13 legs won, killed by Under 234.5 points, Under 221.5 points, Under 228.5 points)
-Lottery 10k+25: lost (5/13 legs won, killed by Under 234.5 points, Under 221.5 points, Under 228.5 points)
-Lottery 10k+50: lost (5/13 legs won, killed by Under 234.5 points, Under 221.5 points, Under 228.5 points)
-Lottery 10k+100: lost (4/12 legs won, killed by Under 234.5 points, Under 221.5 points, Under 228.5 points)
+Safe Locks 7/11 won, 3 open; Winners parlay top 2 (84%) won; Best play top 7 (52%) open; lost: Over 215.5 points (Denver Nuggets at New Orleans Pelicans) Denver Nuggets 104 - New Orleans Pelicans 91.
+Lottery 100: lost (7/14 legs won, killed by Amen Thompson: 4+ Assists, Naz Reid: 2+ Assists, Under 221.5 points, Calgary Flames +2.5)
+Lottery 10k: lost (5/13 legs won, killed by Under 234.5 points, Under 221.5 points, Under 228.5 points)
+Lottery 10k+25: lost (6/13 legs won, killed by Under 234.5 points, Under 221.5 points, Under 228.5 points)
+Lottery 10k+50: lost (6/13 legs won, killed by Under 234.5 points, Under 221.5 points, Under 228.5 points)
+Lottery 10k+100: lost (5/12 legs won, killed by Under 234.5 points, Under 221.5 points, Under 228.5 points)
 Ladder-consistency props (all time): 967/1147 won (84.3%) vs 86.7% fair, 87.2% price.
 Props 115/138 vs 83.9% claimed.
 
