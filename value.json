@@ -854,6 +854,23 @@
    "tip": "9:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909279|away|FanDuel": {
+   "dec": 1.4,
+   "ev": 0.0342,
+   "fair": 0.7387,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909279",
+   "kind": "value",
+   "league": "nba",
+   "match": "DET @ BKN",
+   "price": "-250",
+   "seen": "2026-10-29T19:36:36+00:00",
+   "side": "away",
+   "start": "2026-10-30T23:30Z",
+   "team": "Detroit Pistons",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909279|away|Kalshi": {
    "dec": 1.3444,
    "ev": 0.0107,
@@ -868,6 +885,51 @@
    "side": "away",
    "start": "2026-10-30T23:30Z",
    "team": "Detroit Pistons",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909279|sure": {
+   "id": "nba:401909279",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-250",
+     "stake_share": 0.7308,
+     "team": "Detroit Pistons",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+280",
+     "stake_share": 0.2692,
+     "team": "Brooklyn Nets",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "DET @ BKN",
+   "profit": 0.0231,
+   "seen": "2026-10-29T19:36:36+00:00"
+  },
+  "nba:401909279|{\"line\": 224.5, \"t\": \"over\"}|Kalshi": {
+   "dec": 2.0947,
+   "dk": "-112",
+   "ev": 0.0569,
+   "fair": 0.5045,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401909279",
+   "kind": "suspect",
+   "league": "nba",
+   "market": "over",
+   "match": "DET @ BKN",
+   "price": "+109",
+   "seen": "2026-10-29T19:36:36+00:00",
+   "side": "{\"line\": 224.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 224.5,
+    "t": "over"
+   },
+   "start": "2026-10-30T23:30Z",
+   "team": "over 224.5",
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
