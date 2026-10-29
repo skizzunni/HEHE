@@ -4491,6 +4491,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401871057",
    "label": "under 50.5",
    "league": "ncaaf",
@@ -4503,8 +4504,9 @@
     "t": "under"
    },
    "start": "2026-10-29T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT28JVSTNMSU-51"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT28JVSTNMSU-51",
+   "won": 1
   },
   "KXNCAAFTOTAL-26OCT28JVSTNMSU-51|YES": {
    "ask": 0.51,
@@ -4512,6 +4514,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401871057",
    "label": "over 50.5",
    "league": "ncaaf",
@@ -4524,8 +4527,9 @@
     "t": "over"
    },
    "start": "2026-10-29T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT28JVSTNMSU-51"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT28JVSTNMSU-51",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT28KENNMTU-51|NO": {
    "ask": 0.51,

@@ -5230,10 +5230,10 @@
   },
   "props": {
    "fair": {
-    "n": 1147,
+    "n": 1150,
     "said_fair": 86.7,
     "said_price": 87.2,
-    "won": 967
+    "won": 968
    },
    "n": 165,
    "said": 81.9,
@@ -5306,17 +5306,17 @@
    },
    {
     "flag": false,
-    "hit": 76.7,
-    "n": 30,
+    "hit": 72.7,
+    "n": 33,
     "name": "props mlb Hits + Runs + RBIs",
-    "said": 67.5
+    "said": 68.0
    },
    {
-    "flag": false,
-    "hit": 72.7,
-    "n": 11,
+    "flag": true,
+    "hit": 64.3,
+    "n": 14,
     "name": "props mlb Strikeouts Thrown",
-    "said": 83.8
+    "said": 83.9
    },
    {
     "flag": false,
@@ -5418,8 +5418,8 @@
    },
    {
     "flag": false,
-    "hit": 79.5,
-    "n": 555,
+    "hit": 79.7,
+    "n": 562,
     "name": "props nhl Shots on Goal",
     "said": 80.1
    },
@@ -5523,22 +5523,22 @@
    },
    {
     "flag": false,
-    "hit": 94.1,
-    "n": 68,
+    "hit": 92.8,
+    "n": 69,
     "name": "prop locks",
     "said": 91.5
    },
    {
     "flag": false,
-    "hit": 41.0,
-    "n": 205,
+    "hit": 41.3,
+    "n": 206,
     "name": "value bets",
     "said": 44.4
    },
    {
     "flag": false,
-    "hit": 54.9,
-    "n": 122,
+    "hit": 54.8,
+    "n": 124,
     "name": "kalshi maker bids (filled)",
     "said": 52.7
    }
@@ -5612,9 +5612,9 @@
    }
   },
   "clv": {
-   "avg": 0.19,
-   "beat": 51.1,
-   "n": 47
+   "avg": 0.08,
+   "beat": 49.0,
+   "n": 49
   },
   "day": "2026-10-28",
   "leaks_14d": [],
@@ -5624,7 +5624,7 @@
     "Over 201.5 points (Charlotte Hornets at Detroit Pistons) Charlotte Hornets 89 - Detroit Pistons 97"
    ],
    "n": 11,
-   "open": 3,
+   "open": 1,
    "plays": {
     "best": [
      3,
@@ -5632,7 +5632,7 @@
      "lost"
     ]
    },
-   "won": 6
+   "won": 8
   },
   "losses": [
    {
@@ -5728,16 +5728,18 @@
     "lost": 4,
     "status": "lost",
     "tier": "100",
-    "won": 7
+    "won": 8
    },
    {
     "killed_by": [
      "Under 234.5 points",
+     "Jackson Chourio: 2+ Hits + Runs + RBIs",
      "Under 221.5 points",
-     "Under 228.5 points"
+     "Under 228.5 points",
+     "New Mexico State Aggies +1.5"
     ],
     "legs": 13,
-    "lost": 3,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 5
@@ -5745,11 +5747,13 @@
    {
     "killed_by": [
      "Under 234.5 points",
+     "Jackson Chourio: 2+ Hits + Runs + RBIs",
      "Under 221.5 points",
-     "Under 228.5 points"
+     "Under 228.5 points",
+     "New Mexico State Aggies +1.5"
     ],
     "legs": 13,
-    "lost": 3,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+25",
     "won": 6
@@ -5757,11 +5761,13 @@
    {
     "killed_by": [
      "Under 234.5 points",
+     "Jackson Chourio: 2+ Hits + Runs + RBIs",
      "Under 221.5 points",
-     "Under 228.5 points"
+     "Under 228.5 points",
+     "New Mexico State Aggies +1.5"
     ],
     "legs": 13,
-    "lost": 3,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+50",
     "won": 6
@@ -5769,23 +5775,25 @@
    {
     "killed_by": [
      "Under 234.5 points",
+     "Jackson Chourio: 2+ Hits + Runs + RBIs",
      "Under 221.5 points",
-     "Under 228.5 points"
+     "Under 228.5 points",
+     "New Mexico State Aggies +1.5"
     ],
     "legs": 12,
-    "lost": 3,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+100",
     "won": 5
    }
   ],
   "picks": {
-   "hit": 78.7,
+   "hit": 79.6,
    "lost": 10,
-   "n": 47,
-   "roi": 3.3,
-   "said": 72.2,
-   "won": 37
+   "n": 49,
+   "roi": 5.6,
+   "said": 71.7,
+   "won": 39
   },
   "picks_by_league": {
    "afc": {
@@ -5839,18 +5847,18 @@
    "ncaaf": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 89.3,
-    "said": 50.0,
-    "won": 1
+    "n": 2,
+    "roi": 76.9,
+    "said": 54.5,
+    "won": 2
    },
    "nhl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 40.8,
-    "said": 68.0,
-    "won": 1
+    "n": 2,
+    "roi": 48.2,
+    "said": 65.0,
+    "won": 2
    },
    "per": {
     "hit": 100.0,
@@ -5871,14 +5879,14 @@
   },
   "props": {
    "fair": {
-    "n": 1147,
+    "n": 1150,
     "said_fair": 86.7,
     "said_price": 87.2,
-    "won": 967
+    "won": 968
    },
-   "n": 138,
-   "said": 83.9,
-   "won": 115
+   "n": 151,
+   "said": 83.6,
+   "won": 124
   },
   "safe_locks": {
    "lost": [
@@ -5914,12 +5922,12 @@
     "won": 1
    },
    "agree": {
-    "hit": 72.6,
+    "hit": 72.7,
     "lost": 188,
-    "n": 686,
-    "roi": -0.2,
+    "n": 688,
+    "roi": -0.0,
     "said": 69.3,
-    "won": 498
+    "won": 500
    }
   },
   "weights": {
@@ -5935,19 +5943,19 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6384,
-    "market_only": 0.6517,
-    "model_40": 0.6384,
-    "n": 111,
+    "logloss": 0.6379,
+    "market_only": 0.6506,
+    "model_40": 0.6379,
+    "n": 112,
     "weight": 0.4
    },
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6627,
-    "market_only": 0.6627,
-    "model_40": 0.6725,
-    "n": 82,
+    "logloss": 0.6606,
+    "market_only": 0.6606,
+    "model_40": 0.6704,
+    "n": 83,
     "weight": 0.0
    }
   }
