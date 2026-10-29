@@ -5597,10 +5597,10 @@
   },
   "props": {
    "fair": {
-    "n": 1187,
+    "n": 1191,
     "said_fair": 86.6,
     "said_price": 87.2,
-    "won": 996
+    "won": 1000
    },
    "n": 211,
    "said": 82.7,
@@ -5806,17 +5806,24 @@
    },
    {
     "flag": false,
-    "hit": 81.8,
-    "n": 11,
+    "hit": 84.6,
+    "n": 13,
     "name": "props wnba Assists",
     "said": 80.0
    },
    {
     "flag": false,
-    "hit": 70.0,
-    "n": 20,
+    "hit": 72.7,
+    "n": 22,
     "name": "props wnba Points",
-    "said": 82.6
+    "said": 82.8
+   },
+   {
+    "flag": false,
+    "hit": 80.0,
+    "n": 10,
+    "name": "props wnba Rebounds",
+    "said": 76.0
    },
    {
     "flag": false,
@@ -5890,10 +5897,10 @@
    },
    {
     "flag": false,
-    "hit": 92.8,
-    "n": 69,
+    "hit": 92.9,
+    "n": 70,
     "name": "prop locks",
-    "said": 91.5
+    "said": 91.4
    },
    {
     "flag": false,
@@ -5979,16 +5986,16 @@
    }
   },
   "clv": {
-   "avg": null,
-   "beat": null,
-   "n": 0
+   "avg": 2.12,
+   "beat": 100.0,
+   "n": 1
   },
   "day": "2026-10-29",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      2,
@@ -5996,7 +6003,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "losses": [],
   "lottery": [
@@ -6050,19 +6057,33 @@
    }
   ],
   "picks": {
-   "n": 0
+   "hit": 100.0,
+   "lost": 0,
+   "n": 1,
+   "roi": 52.1,
+   "said": 63.0,
+   "won": 1
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "wnba": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 52.1,
+    "said": 63.0,
+    "won": 1
+   }
+  },
   "props": {
    "fair": {
-    "n": 1187,
+    "n": 1191,
     "said_fair": 86.6,
     "said_price": 87.2,
-    "won": 996
+    "won": 1000
    },
-   "n": 0,
-   "said": null,
-   "won": 0
+   "n": 5,
+   "said": 82.7,
+   "won": 5
   },
   "safe_locks": {
    "lost": [],
@@ -6096,12 +6117,12 @@
     "won": 0
    },
    "agree": {
-    "hit": 72.5,
+    "hit": 72.6,
     "lost": 191,
-    "n": 695,
-    "roi": -0.4,
+    "n": 696,
+    "roi": -0.3,
     "said": 69.3,
-    "won": 504
+    "won": 505
    }
   },
   "weights": {
