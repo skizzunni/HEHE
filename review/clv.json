@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 55.7,
-  "brier_close": 0.1843,
-  "brier_published": 0.187,
+  "beat_close_pct": 56.7,
+  "brier_close": 0.1802,
+  "brier_published": 0.1835,
   "dates": [
    "2026-10-24",
    "2026-10-28"
   ],
-  "logloss_close": 0.5537,
-  "logloss_published": 0.5597,
-  "mean_clv_pts": 0.31,
+  "logloss_close": 0.5444,
+  "logloss_published": 0.5517,
+  "mean_clv_pts": 0.35,
   "n": 300
  },
  "market_is_model": true,
@@ -1164,6 +1164,15 @@
    "day": "2026-10-28",
    "league": "bra",
    "published": 0.69,
+   "won": 1
+  },
+  "bra:401841296": {
+   "call": false,
+   "close": 0.76,
+   "clv": 3.0,
+   "day": "2026-10-28",
+   "league": "bra",
+   "published": 0.73,
    "won": 1
   },
   "bra:401841297": {
@@ -9129,6 +9138,51 @@
    "published": 0.71,
    "won": 1
   },
+  "mls:761910": {
+   "call": false,
+   "close": 0.7114,
+   "clv": 7.14,
+   "day": "2026-10-28",
+   "league": "mls",
+   "published": 0.64,
+   "won": 1
+  },
+  "mls:761911": {
+   "call": false,
+   "close": 0.8161,
+   "clv": 3.61,
+   "day": "2026-10-28",
+   "league": "mls",
+   "published": 0.78,
+   "won": 1
+  },
+  "mls:761912": {
+   "call": false,
+   "close": 0.6699,
+   "clv": -4.01,
+   "day": "2026-10-28",
+   "league": "mls",
+   "published": 0.71,
+   "won": 0
+  },
+  "mls:761913": {
+   "call": false,
+   "close": 0.6608,
+   "clv": 0.08,
+   "day": "2026-10-28",
+   "league": "mls",
+   "published": 0.66,
+   "won": 1
+  },
+  "mls:761914": {
+   "call": false,
+   "close": 0.7391,
+   "clv": -0.09,
+   "day": "2026-10-28",
+   "league": "mls",
+   "published": 0.74,
+   "won": 1
+  },
   "nba:401898388": {
    "call": false,
    "close": 0.5996,
@@ -10045,6 +10099,15 @@
    "day": "2026-10-28",
    "league": "nba",
    "published": 0.61,
+   "won": 1
+  },
+  "nba:401909886": {
+   "call": false,
+   "close": 0.705,
+   "clv": 1.5,
+   "day": "2026-10-28",
+   "league": "nba",
+   "published": 0.69,
    "won": 1
   },
   "nba:401909887": {
@@ -19890,5 +19953,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-29T02:35+00:00"
+ "updated": "2026-10-29T02:39+00:00"
 }
