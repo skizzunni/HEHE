@@ -17454,11 +17454,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Aaron Nesmith",
   "p": 0.8504,
   "p_fair": 0.8745,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909884|n:andrew nembhard|Assists|6+": {
   "aid": null,
@@ -17470,11 +17472,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Assists",
+  "matched": "name",
   "name": "Andrew Nembhard",
   "p": 0.8486,
   "p_fair": 0.8022,
   "price": "-500",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401909884|n:andrew nembhard|Pts + Ast|15+": {
   "aid": null,
@@ -17486,11 +17490,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Andrew Nembhard",
   "p": 0.8499,
   "p_fair": 0.8823,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nba:401909884|n:andrew nembhard|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -17502,11 +17508,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Andrew Nembhard",
   "p": 0.8486,
   "p_fair": 0.8777,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 35.0
  },
  "nba:401909884|n:jaylen brown|Points|10+": {
   "aid": null,
@@ -17517,11 +17525,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Jaylen Brown",
   "p": 0.8693,
   "price": "-6000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401909884|n:jaylen brown|Rebounds|4+": {
   "aid": null,
@@ -17533,11 +17543,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Jaylen Brown",
   "p": 0.8469,
   "p_fair": 0.8557,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909884|n:joel embiid|Points|15+": {
   "aid": null,
@@ -17549,11 +17561,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Joel Embiid",
   "p": 0.8508,
   "p_fair": 0.88,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909884|n:joel embiid|Pts + Ast|20+": {
   "aid": null,
@@ -17565,11 +17579,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Joel Embiid",
   "p": 0.8459,
   "p_fair": 0.8531,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nba:401909884|n:joel embiid|Rebounds|6+": {
   "aid": null,
@@ -17581,11 +17597,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Joel Embiid",
   "p": 0.8562,
   "p_fair": 0.8934,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401909884|n:lebron james|Points|10+": {
   "aid": null,
@@ -17597,11 +17615,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "LeBron James",
   "p": 0.8508,
   "p_fair": 0.9141,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401909884|n:pascal siakam|Points|15+": {
   "aid": null,
@@ -17613,11 +17633,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Pascal Siakam",
   "p": 0.8539,
   "p_fair": 0.8925,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401909884|n:pascal siakam|Pts + Ast|20+": {
   "aid": null,
@@ -17629,11 +17651,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Pascal Siakam",
   "p": 0.8499,
   "p_fair": 0.8703,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 29.0
  },
  "nba:401909884|n:tyrese haliburton|Points|10+": {
   "aid": null,
@@ -17649,7 +17673,9 @@
   "p": 0.858,
   "p_fair": 0.9358,
   "price": "-1600",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909884|n:tyrese haliburton|Pts + Ast|20+": {
   "aid": null,
@@ -17665,7 +17691,9 @@
   "p": 0.8499,
   "p_fair": 0.8651,
   "price": "-900",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909884|n:tyrese maxey|Assists|4+": {
   "aid": null,
@@ -17677,11 +17705,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Tyrese Maxey",
   "p": 0.808,
   "p_fair": 0.7604,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909884|n:tyrese maxey|Points|15+": {
   "aid": null,
@@ -17693,11 +17723,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Tyrese Maxey",
   "p": 0.8508,
   "p_fair": 0.8902,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 27.0
  },
  "nba:401909884|n:tyrese maxey|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -17709,11 +17741,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Tyrese Maxey",
   "p": 0.8394,
   "p_fair": 0.8545,
   "price": "-720",
-  "status": "open"
+  "status": "won",
+  "value": 36.0
  },
  "nba:401909884|n:vj edgecombe|Assists|2+": {
   "aid": null,
@@ -17725,11 +17759,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "VJ Edgecombe",
   "p": 0.7896,
   "p_fair": 0.7511,
   "price": "-350",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909885|n:anthony black|Points|5+": {
   "aid": null,
