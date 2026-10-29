@@ -3,14 +3,14 @@
  "enough": true,
  "last": {
   "beat_close_pct": 54.3,
-  "brier_close": 0.1845,
-  "brier_published": 0.1884,
+  "brier_close": 0.1842,
+  "brier_published": 0.1881,
   "dates": [
    "2026-10-24",
    "2026-10-29"
   ],
-  "logloss_close": 0.5542,
-  "logloss_published": 0.5625,
+  "logloss_close": 0.5534,
+  "logloss_published": 0.5617,
   "mean_clv_pts": 0.18,
   "n": 300
  },
@@ -5101,6 +5101,15 @@
    "day": "2026-10-29",
    "league": "ksa",
    "published": 0.72,
+   "won": 1
+  },
+  "ksa:401900881": {
+   "call": false,
+   "close": 0.7848,
+   "clv": 1.48,
+   "day": "2026-10-29",
+   "league": "ksa",
+   "published": 0.77,
    "won": 1
   },
   "ksa:401900892": {
@@ -20124,5 +20133,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-29T19:59+00:00"
+ "updated": "2026-10-29T20:03+00:00"
 }
