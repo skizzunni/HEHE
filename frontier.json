@@ -690772,6 +690772,68 @@
       "start": "2026-10-29T02:30Z",
       "starters": [],
       "t": "2026-10-29T01:27:47+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "LAC",
+        "Yanic Konan Niederhauser",
+        "Out",
+        "C"
+       ],
+       [
+        "LAC",
+        "Max Strus",
+        "Out",
+        "G"
+       ],
+       [
+        "LAC",
+        "Brandon Ingram",
+        "Out",
+        "F"
+       ],
+       [
+        "LAC",
+        "Rui Hachimura",
+        "Out",
+        "F"
+       ],
+       [
+        "LAC",
+        "Bradley Beal",
+        "Out",
+        "G"
+       ],
+       [
+        "LAL",
+        "Cameron Carr",
+        "Out",
+        "G"
+       ],
+       [
+        "LAL",
+        "Adou Thiero",
+        "Out",
+        "F"
+       ],
+       [
+        "LAL",
+        "Ziaire Williams",
+        "Out",
+        "F"
+       ],
+       [
+        "LAL",
+        "Luka Doncic",
+        "Out",
+        "G"
+       ]
+      ],
+      "probables": {},
+      "start": "2026-10-29T02:30Z",
+      "starters": [],
+      "t": "2026-10-29T01:38:15+00:00"
      }
     ],
     "ncaaf:401871057": [
@@ -747436,12 +747498,13 @@
        "play": null,
        "price": "-650",
        "quoted": "2026-10-28T11:58:59+00:00",
+       "score": "FC Cincinnati 2 - Inter Miami CF 2",
        "spec": {
         "t": "dc",
         "team": "Inter Miami CF"
        },
        "start": "2026-10-28T23:30Z",
-       "status": "open",
+       "status": "won",
        "tip": "7:30 PM",
        "where": "Double Chance: Inter Miami CF And Draw"
       },
@@ -748140,12 +748203,13 @@
        "play": null,
        "price": "-220",
        "quoted": "2026-10-28T11:55:13+00:00",
+       "score": "Charlotte Hornets 89 - Detroit Pistons 97",
        "spec": {
         "t": "win",
         "team": "Detroit Pistons"
        },
        "start": "2026-10-28T23:00Z",
-       "status": "open",
+       "status": "won",
        "tip": "7:00 PM",
        "where": null
       }
@@ -748208,142 +748272,6 @@
     }
    ],
    "versions": [
-    {
-     "policy": "8d8db67c",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Inter Miami CF or draw",
-        "San Antonio Spurs to win",
-        "Chicago Fire FC or draw",
-        "Over 4.5 goals",
-        "Vancouver Whitecaps or draw"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Cleveland Cavaliers to win",
-        "Under 9.5 runs",
-        "Aberdeen or draw",
-        "Under 11.5 goals"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "New York Knicks to win",
-        "Oklahoma City Thunder to win"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "New York City FC or draw",
-        "Aberdeen or draw",
-        "Under 9.5 runs",
-        "Over 199.5 points",
-        "Cleveland Cavaliers to win"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Edmonton Oilers under 4.5 goals",
-        "Under 242.5 points",
-        "Oklahoma City Thunder to win"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Oklahoma City Thunder to win",
-        "Philadelphia 76ers to win",
-        "Washington Capitals to win",
-        "New York Knicks to win",
-        "Dundee or draw"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-28T18:52:16+00:00"
-    },
     {
      "policy": "8d8db67c",
      "sig": [
@@ -756287,6 +756215,122 @@
       ]
      ],
      "t": "2026-10-29T01:32:56+00:00"
+    },
+    {
+     "policy": "11a75d77",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       []
+      ],
+      [
+       2.0,
+       0.75,
+       []
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Am\u00e9rica or draw",
+        "San Jose Earthquakes or draw",
+        "Seattle Kraken +2.5"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       []
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Vancouver Whitecaps or draw",
+        "Am\u00e9rica or draw",
+        "Seattle Sounders FC or draw",
+        "San Jose Earthquakes or draw",
+        "Toronto Maple Leafs over 2.5 goals"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       []
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-29T01:38:09+00:00"
     }
    ]
   }

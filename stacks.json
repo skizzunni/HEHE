@@ -8379,11 +8379,12 @@
    "match": "D.C. United at Toronto FC",
    "p": 0.9618,
    "p_model": 0.9622,
+   "score": "D.C. United 1 - Toronto FC 2",
    "spec": {
     "line": 0.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761907|No \u00b7 Charlotte FC wins by over 3.5 goals": {
    "away": "CF Montr\u00e9al",
@@ -8395,12 +8396,13 @@
    "match": "CF Montr\u00e9al at Charlotte FC",
    "p": 0.8988,
    "p_model": 0.8998,
+   "score": "CF Montr\u00e9al 0 - Charlotte FC 4",
    "spec": {
     "line": 3.5,
     "t": "nomargin",
     "team": "Charlotte FC"
    },
-   "status": "open"
+   "status": "lost"
   },
   "mls:761907|Over 0.5 goals": {
    "away": "CF Montr\u00e9al",
@@ -8412,11 +8414,12 @@
    "match": "CF Montr\u00e9al at Charlotte FC",
    "p": 0.9683,
    "p_model": 0.9686,
+   "score": "CF Montr\u00e9al 0 - Charlotte FC 4",
    "spec": {
     "line": 0.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761908|No \u00b7 FC Cincinnati wins by over 2.5 goals": {
    "away": "FC Cincinnati",
@@ -8428,12 +8431,13 @@
    "match": "FC Cincinnati at Inter Miami CF",
    "p": 0.9695,
    "p_model": 0.9698,
+   "score": "FC Cincinnati 2 - Inter Miami CF 2",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "FC Cincinnati"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761909|Over 0.5 goals": {
    "away": "Red Bull New York",
@@ -8445,11 +8449,12 @@
    "match": "Red Bull New York at New England Revolution",
    "p": 0.9689,
    "p_model": 0.9692,
+   "score": "Red Bull New York 2 - New England Revolution 3",
    "spec": {
     "line": 0.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761910|No \u00b7 Austin FC wins by over 2.5 goals": {
    "away": "Real Salt Lake",
@@ -9574,12 +9579,13 @@
    "match": "Charlotte Hornets at Detroit Pistons",
    "p": 0.9446,
    "p_model": 0.9522,
+   "score": "Charlotte Hornets 89 - Detroit Pistons 97",
    "spec": {
     "line": 12.5,
     "t": "nomargin",
     "team": "Charlotte Hornets"
    },
-   "status": "open"
+   "status": "won"
   },
   "nba:401909884|No \u00b7 Indiana Pacers wins by over 12.5 points": {
    "away": "Philadelphia 76ers",
@@ -21653,7 +21659,7 @@
    "logged": "2026-10-28T00:05",
    "n": 2,
    "prob": 0.8099,
-   "status": "open"
+   "status": "lost"
   },
   "20261028:3:0": {
    "fair": 1.37,
@@ -21677,7 +21683,7 @@
    "logged": "2026-10-28T00:05",
    "n": 3,
    "prob": 0.7297,
-   "status": "open"
+   "status": "lost"
   },
   "20261028:3:2": {
    "fair": 1.37,
