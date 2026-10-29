@@ -2795,56 +2795,7 @@
     "mls": "2026-10-29T02:07:28+00:00",
     "nba": "2026-10-29T00:30:09+00:00"
    },
-   "candidate_observations": {
-    "mex:401876986": {
-     "book": "FanDuel",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 83,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T02:58:42+00:00",
-      "conf": 83,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "mex:401876986",
-      "league": "mex",
-      "match": "TIJ @ AME",
-      "pick": "Am\u00e9rica or draw",
-      "price": "-700",
-      "price_at": "2026-10-29T02:58:42+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.193411236:21865447",
-      "prob_at": "2026-10-29T02:58:22+00:00",
-      "rank": null,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "home",
-      "start": "2026-10-29T03:00Z"
-     },
-     "dc": true,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
-     },
-     "id": "mex:401876986",
-     "league": "mex",
-     "match": "TIJ @ AME",
-     "pick": "Am\u00e9rica or draw",
-     "price": "-700",
-     "price_at": "2026-10-29T02:58:42+00:00",
-     "price_market": "double_chance",
-     "price_ref": "736.193411236:21865447",
-     "side": "home",
-     "start": "2026-10-29T03:00Z",
-     "tip": "11:00 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
     "nba",
     "nhl"
@@ -2856,8 +2807,8 @@
    "shadow_watch": {
     "best_at": "2026-10-28T23:02:07+00:00",
     "best_ceiling": 1.859,
-    "checks": 176,
-    "last": "2026-10-29T02:58:42+00:00",
+    "checks": 177,
+    "last": "2026-10-29T03:03:54+00:00",
     "max_ready": 5,
     "reasons": {
      "awaiting confirmed XIs": 2007,
