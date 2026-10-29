@@ -5,7 +5,9 @@ From FanDuel's props for today's games that have not started:
     eligible   the player is confirmed to play (participation.py), the
                market is settled from the box score (props_ledger.gradable),
                FanDuel's selection id is known, chance >= STANDARD
-    chosen     strongest first, one per game and one per player, up to N
+    chosen     strongest first, one per game and one per player, up to N;
+               if the card is still short, a second player from a game
+               already on it (never a third)
 
 The card is set from PROP_HOUR (noon Eastern, when most prop lines are up),
 frozen in prop_locks.json, and topped up as later games' props appear until
@@ -17,6 +19,7 @@ The record is honest about what props cost: 482 graded FanDuel props at
 80-90% returned -7.1% per $1 at their prices (README 2026-10-22). Prop
 Locks are for winning often, not for profit.
 """
+import collections
 import datetime as dt
 import json
 import os
@@ -24,7 +27,12 @@ from zoneinfo import ZoneInfo
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PATH = os.path.join(HERE, "prop_locks.json")
-N = 10
+# 2026-10-29: 15 legs, a second player per game only to fill. Replayed on
+# 14 days of graded props: legs 1-10 won 88.9% / 95.7% in the two halves of
+# the dates, legs 11-15 84.0% / 82.9% (n=25 / 35) -- both above the daily
+# calls' 78.7%. 12 of the 14 days filled all 15.
+N = 15
+MAX_PER_GAME = 2
 STANDARD = 0.70
 PROP_HOUR = 12
 ET = ZoneInfo("America/New_York")
@@ -76,18 +84,19 @@ def update(games, starts, day, now=None, path=None, n=N):
     rec = book["days"].setdefault(day, dict(legs=[]))
     if now.astimezone(ET).hour < PROP_HOUR or len(rec["legs"]) >= n:
         return rec
-    games_used = {L["gid"] for L in rec["legs"]}
-    players = {(L["gid"], L["name"]) for L in rec["legs"]}
+    per_game = collections.Counter(L["gid"] for L in rec["legs"])
     names = {L["name"] for L in rec["legs"]}
     add = []
-    for c in candidates(games, starts, now):
-        if len(rec["legs"]) + len(add) >= n:
-            break
-        if c["gid"] in games_used or c["name"] in names or (c["gid"], c["name"]) in players:
-            continue
-        games_used.add(c["gid"])
-        names.add(c["name"])
-        add.append(c)
+    cands = candidates(games, starts, now)
+    for cap in range(1, MAX_PER_GAME + 1):          # one per game first, then fill
+        for c in cands:
+            if len(rec["legs"]) + len(add) >= n:
+                break
+            if per_game[c["gid"]] >= cap or c["name"] in names:
+                continue
+            per_game[c["gid"]] += 1
+            names.add(c["name"])
+            add.append(c)
     if not add:
         return rec
     t = now.isoformat(timespec="seconds")

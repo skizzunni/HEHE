@@ -3563,3 +3563,18 @@ split by date (2026-10-22 to 10-24 / 10-25 to 10-28):
 | confirmed | +20.9% (n=44) | -10.3% (n=43) |
 
 Single-source finds were worse in both halves, by 27 and 25 points.
+
+**Prop Locks: 15 a day.** The card now takes 15 FanDuel player props
+(points, rebounds, assists, shots, yards and the rest): one per player, one
+per game until every game is used, then a second player from a game already
+on it (never a third). Replayed on 14 days of graded props (2026-10-15 to
+10-28), split by date:
+
+| legs | first half | second half |
+|---|---|---|
+| 1-10 | 88.9% (n=63) | 95.7% (n=70) |
+| 11-15 | 84.0% (n=25) | 82.9% (n=35) |
+
+The extra legs hit less often than the first ten but above the daily calls'
+78.7%; 12 of 14 days filled all 15. Today's card is topped up to 15 from
+games that have not started; no locked leg is changed.

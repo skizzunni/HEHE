@@ -2028,8 +2028,8 @@ function propLocksHTML(){
       + R.wilson95[1] + '%) against ' + R.stated + '% stated; ROI at the locked prices <b>' + (R.roi >= 0 ? '+' : '') + R.roi + '%</b>.'
     : 'No Prop Lock has been graded yet.';
   return '<div class="parlays"><h3>Prop Locks</h3>'
-    + '<p class="note">The day&rsquo;s ' + (X.n || 10) + ' likeliest FanDuel props: player confirmed to play, settled from the box score, '
-    + (100 * (X.standard || 0.7)).toFixed(0) + '%+ chance, one per game and per player. Set from ' + (X.hour || 12)
+    + '<p class="note">The day&rsquo;s ' + (X.n || 15) + ' likeliest FanDuel props: player confirmed to play, settled from the box score, '
+    + (100 * (X.standard || 0.7)).toFixed(0) + '%+ chance, one per player and one per game until every game is used, then a second player from a game (never a third). Set from ' + (X.hour || 12)
     + ':00 Eastern and never changed; every leg is graded. Props win often but cost more than game lines (80&ndash;90% props '
     + 'returned &minus;7% per $1), so these are for hitting, not for profit. ' + rec + '</p>'
     + (L.length ? '<ul class="betlegs">' + L.map(x => '<li>' + esc(x.label) + ' <b>' + esc(x.price) + '</b> &middot; '

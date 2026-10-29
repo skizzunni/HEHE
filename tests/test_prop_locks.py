@@ -46,7 +46,9 @@ class PropLocks(unittest.TestCase):
                  game(2, [prop("Ann", 0.95), prop("Cat", 0.80), prop("Low", 0.60)]),
                  game(3, [prop("Dee", 0.75, market="Fantasy Score")])]          # not gradable
         rec = self.run_at(NOON, games)
-        self.assertEqual([(L["gid"], L["name"]) for L in rec["legs"]], [("nba:2", "Ann"), ("nba:1", "Bea")])
+        # one per game first; the third slot goes to a second player from a game on the card
+        self.assertEqual([(L["gid"], L["name"]) for L in rec["legs"]],
+                         [("nba:2", "Ann"), ("nba:1", "Bea"), ("nba:2", "Cat")])
         led = props_ledger.load()
         self.assertTrue(all(led[L["key"]]["prop_lock"] and led[L["key"]]["status"] == "open" for L in rec["legs"]))
 
@@ -56,7 +58,11 @@ class PropLocks(unittest.TestCase):
         self.run_at(NOON, g1)
         later = NOON + dt.timedelta(hours=1)
         rec = self.run_at(later, [game(1, [prop("Zed", 0.99)]), game(4, [prop("Eve", 0.85)])])
-        self.assertEqual([L["name"] for L in rec["legs"]], ["Ann", "Eve"])         # never replaced; topped up
+        self.assertEqual([L["name"] for L in rec["legs"]], ["Ann", "Eve", "Zed"])  # never replaced; topped up
+
+    def test_never_three_from_one_game(self):
+        rec = self.run_at(NOON, [game(1, [prop("Ann", 0.95), prop("Bea", 0.94), prop("Cat", 0.93)])])
+        self.assertEqual([L["name"] for L in rec["legs"]], ["Ann", "Bea"])
 
     def test_started_games_excluded(self):
         g = [game(1, [prop("Ann", 0.92)])]
