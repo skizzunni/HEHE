@@ -54,6 +54,23 @@
    "tip": "5:00 PM",
    "venue": "FanDuel"
   },
+  "col:401877995|home|FanDuel": {
+   "dec": 2.25,
+   "ev": 0.0135,
+   "fair": 0.4504,
+   "fair_source": "DraftKings (Shin)",
+   "id": "col:401877995",
+   "kind": "single",
+   "league": "col",
+   "match": "COR @ PER",
+   "price": "+125",
+   "seen": "2026-10-29T22:56:16+00:00",
+   "side": "home",
+   "start": "2026-10-30T21:00Z",
+   "team": "Deportivo Pereira",
+   "tip": "5:00 PM",
+   "venue": "FanDuel"
+  },
   "den:401874735|home|FanDuel": {
    "dec": 5.6,
    "ev": 0.0175,
@@ -1088,6 +1105,29 @@
    "match": "IND @ MIA",
    "profit": 0.0118,
    "seen": "2026-10-29T15:46:09+00:00"
+  },
+  "nba:401909282|{\"line\": 239.5, \"t\": \"over\"}|Kalshi": {
+   "dec": 2.1395,
+   "dk": "-110",
+   "ev": 0.0697,
+   "fair": 0.5,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401909282",
+   "kind": "suspect",
+   "league": "nba",
+   "market": "over",
+   "match": "IND @ MIA",
+   "price": "+114",
+   "seen": "2026-10-29T22:56:16+00:00",
+   "side": "{\"line\": 239.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 239.5,
+    "t": "over"
+   },
+   "start": "2026-10-31T00:00Z",
+   "team": "over 239.5",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
   },
   "nba:401909282|{\"line\": 3.5, \"t\": \"spread\", \"team\": \"Indiana Pacers\"}|Kalshi": {
    "dec": 2.0513,
@@ -3674,6 +3714,23 @@
    "team": "over 62.5",
    "tip": "3:30 PM",
    "venue": "Kalshi"
+  },
+  "ncaaf:401862812|away|FanDuel": {
+   "dec": 5.8,
+   "ev": 0.0212,
+   "fair": 0.1761,
+   "fair_source": "consensus of 3 other venues",
+   "id": "ncaaf:401862812",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "FAU @ UNT",
+   "price": "+480",
+   "seen": "2026-10-29T22:56:16+00:00",
+   "side": "away",
+   "start": "2026-10-29T23:30Z",
+   "team": "Florida Atlantic Owls",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
   },
   "ncaaf:401862813|home|Kalshi": {
    "dec": 4.1254,
@@ -6754,6 +6811,26 @@
    "seen": "2026-10-24T14:39:32+00:00",
    "status": "lost",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401862812:away": {
+   "ev": 0.0214,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0212,
+     "fair": 0.1761,
+     "id": "ncaaf:401862812",
+     "price": "+480",
+     "side": "away",
+     "spec": null,
+     "team": "Florida Atlantic Owls"
+    }
+   ],
+   "payout": 5.8,
+   "prob": 0.1761,
+   "seen": "2026-10-29T22:56:16+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401864525:home": {
