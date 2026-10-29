@@ -2804,7 +2804,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T02:07:28+00:00",
+      "checked_at": "2026-10-29T02:12:30+00:00",
       "conf": 83,
       "dc": true,
       "gate": {
@@ -2819,7 +2819,7 @@
       "price_at": "2026-10-29T02:02:43+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193411236:21865447",
-      "prob_at": "2026-10-29T02:07:07+00:00",
+      "prob_at": "2026-10-29T02:12:11+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2848,12 +2848,12 @@
      "book": "FanDuel",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
-     "conf": 79,
+     "conf": 81,
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T02:07:28+00:00",
-      "conf": 79,
+      "checked_at": "2026-10-29T02:12:30+00:00",
+      "conf": 81,
       "dc": true,
       "gate": {
        "ok": true,
@@ -2867,7 +2867,7 @@
       "price_at": "2026-10-29T02:02:43+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193517859:13130281",
-      "prob_at": "2026-10-29T02:07:07+00:00",
+      "prob_at": "2026-10-29T02:12:11+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -2900,7 +2900,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T02:07:28+00:00",
+      "checked_at": "2026-10-29T02:12:30+00:00",
       "conf": 81,
       "dc": true,
       "gate": {
@@ -2915,7 +2915,7 @@
       "price_at": "2026-10-29T02:02:43+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193517384:13130798",
-      "prob_at": "2026-10-29T02:07:07+00:00",
+      "prob_at": "2026-10-29T02:12:11+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting this game's price after its lineup/news change",
@@ -2930,13 +2930,6 @@
      },
      "id": "mls:761918",
      "league": "mls",
-     "log": [
-      {
-       "event": "news",
-       "t": "2026-10-29T02:07:28+00:00",
-       "what": "both XIs confirmed"
-      }
-     ],
      "match": "SD @ VAN",
      "news_at": "2026-10-29T02:07:28+00:00",
      "pick": "Vancouver Whitecaps or draw",
@@ -2959,12 +2952,12 @@
    "shadow_watch": {
     "best_at": "2026-10-28T23:02:07+00:00",
     "best_ceiling": 1.859,
-    "checks": 166,
-    "last": "2026-10-29T02:07:28+00:00",
+    "checks": 167,
+    "last": "2026-10-29T02:12:30+00:00",
     "max_ready": 5,
     "reasons": {
-     "awaiting confirmed XIs": 1997,
-     "awaiting this game's price after its lineup/news change": 23,
+     "awaiting confirmed XIs": 1998,
+     "awaiting this game's price after its lineup/news change": 24,
      "injury report not fetched or game summary unverifiable": 2
     }
    }
