@@ -5230,10 +5230,10 @@
   },
   "props": {
    "fair": {
-    "n": 1136,
+    "n": 1147,
     "said_fair": 86.7,
     "said_price": 87.2,
-    "won": 958
+    "won": 967
    },
    "n": 165,
    "said": 81.9,
@@ -5327,22 +5327,22 @@
    },
    {
     "flag": false,
-    "hit": 87.1,
-    "n": 163,
+    "hit": 87.3,
+    "n": 166,
     "name": "props nba Assists",
-    "said": 85.2
+    "said": 85.1
    },
    {
     "flag": false,
-    "hit": 86.7,
-    "n": 173,
+    "hit": 85.9,
+    "n": 177,
     "name": "props nba Points",
     "said": 85.1
    },
    {
     "flag": false,
-    "hit": 89.2,
-    "n": 93,
+    "hit": 89.4,
+    "n": 94,
     "name": "props nba Pts + Ast",
     "said": 84.9
    },
@@ -5356,28 +5356,28 @@
    {
     "flag": false,
     "hit": 88.1,
-    "n": 134,
+    "n": 135,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.8
    },
    {
     "flag": false,
-    "hit": 85.4,
-    "n": 82,
+    "hit": 85.5,
+    "n": 83,
     "name": "props nba Reb + Ast",
     "said": 83.8
    },
    {
     "flag": false,
-    "hit": 84.5,
-    "n": 84,
+    "hit": 83.5,
+    "n": 85,
     "name": "props nba Rebounds",
     "said": 84.1
    },
    {
     "flag": false,
-    "hit": 83.5,
-    "n": 85,
+    "hit": 83.7,
+    "n": 86,
     "name": "props nba Threes Made",
     "said": 83.9
    },
@@ -5523,17 +5523,17 @@
    },
    {
     "flag": false,
-    "hit": 95.5,
-    "n": 67,
+    "hit": 94.1,
+    "n": 68,
     "name": "prop locks",
-    "said": 91.6
+    "said": 91.5
    },
    {
     "flag": false,
-    "hit": 40.9,
-    "n": 198,
+    "hit": 41.0,
+    "n": 205,
     "name": "value bets",
-    "said": 44.2
+    "said": 44.4
    },
    {
     "flag": false,
@@ -5612,9 +5612,9 @@
    }
   },
   "clv": {
-   "avg": 0.34,
-   "beat": 53.3,
-   "n": 45
+   "avg": 0.19,
+   "beat": 51.1,
+   "n": 47
   },
   "day": "2026-10-28",
   "leaks_14d": [],
@@ -5624,7 +5624,7 @@
     "Over 201.5 points (Charlotte Hornets at Detroit Pistons) Charlotte Hornets 89 - Detroit Pistons 97"
    ],
    "n": 11,
-   "open": 4,
+   "open": 3,
    "plays": {
     "best": [
      3,
@@ -5632,7 +5632,7 @@
      "lost"
     ]
    },
-   "won": 5
+   "won": 6
   },
   "losses": [
    {
@@ -5693,6 +5693,14 @@
    },
    {
     "against_market": false,
+    "league": "nba",
+    "pick": "Minnesota Timberwolves",
+    "price": "-170",
+    "said": 60,
+    "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 60%"
+   },
+   {
+    "against_market": false,
     "league": "sco",
     "pick": "Celtic",
     "price": "-340",
@@ -5719,7 +5727,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "100",
-    "won": 5
+    "won": 7
    },
    {
     "killed_by": [
@@ -5731,7 +5739,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -5743,7 +5751,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+25",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -5755,7 +5763,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+50",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -5767,16 +5775,16 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+100",
-    "won": 3
+    "won": 4
    }
   ],
   "picks": {
-   "hit": 80.0,
-   "lost": 9,
-   "n": 45,
-   "roi": 3.6,
-   "said": 73.0,
-   "won": 36
+   "hit": 78.7,
+   "lost": 10,
+   "n": 47,
+   "roi": 3.3,
+   "said": 72.2,
+   "won": 37
   },
   "picks_by_league": {
    "afc": {
@@ -5820,12 +5828,20 @@
     "won": 9
    },
    "nba": {
-    "hit": 87.5,
-    "lost": 1,
-    "n": 8,
-    "roi": 21.1,
-    "said": 68.1,
+    "hit": 77.8,
+    "lost": 2,
+    "n": 9,
+    "roi": 7.6,
+    "said": 67.2,
     "won": 7
+   },
+   "ncaaf": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 89.3,
+    "said": 50.0,
+    "won": 1
    },
    "nhl": {
     "hit": 100.0,
@@ -5854,21 +5870,21 @@
   },
   "props": {
    "fair": {
-    "n": 1136,
+    "n": 1147,
     "said_fair": 86.7,
     "said_price": 87.2,
-    "won": 958
+    "won": 967
    },
-   "n": 126,
+   "n": 138,
    "said": 83.9,
-   "won": 106
+   "won": 115
   },
   "safe_locks": {
    "lost": [
     "Over 215.5 points (Denver Nuggets at New Orleans Pelicans) Denver Nuggets 104 - New Orleans Pelicans 91"
    ],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      7,
@@ -5881,7 +5897,7 @@
      "open"
     ]
    },
-   "won": 5
+   "won": 6
   },
   "strong": {
    "n": 0
@@ -5897,31 +5913,31 @@
     "won": 1
    },
    "agree": {
-    "hit": 72.7,
-    "lost": 187,
-    "n": 684,
+    "hit": 72.6,
+    "lost": 188,
+    "n": 686,
     "roi": -0.2,
-    "said": 69.4,
-    "won": 497
+    "said": 69.3,
+    "won": 498
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5451,
-    "market_only": 0.5451,
-    "model_40": 0.5682,
-    "n": 64,
+    "logloss": 0.551,
+    "market_only": 0.551,
+    "model_40": 0.5762,
+    "n": 65,
     "weight": 0.0
    },
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6376,
-    "market_only": 0.6514,
-    "model_40": 0.6376,
-    "n": 110,
+    "logloss": 0.6384,
+    "market_only": 0.6517,
+    "model_40": 0.6384,
+    "n": 111,
     "weight": 0.4
    },
    "nhl": {

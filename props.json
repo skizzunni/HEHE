@@ -18516,11 +18516,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Draymond Green",
   "p": 0.8486,
   "p_fair": 0.8079,
   "price": "-500",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909888|n:gui santos|Assists|2+": {
   "aid": null,
@@ -18532,11 +18534,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Gui Santos",
   "p": 0.8486,
   "p_fair": 0.805,
   "price": "-500",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401909888|n:gui santos|Points|5+": {
   "aid": null,
@@ -18548,11 +18552,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Gui Santos",
   "p": 0.8518,
   "p_fair": 0.9641,
   "price": "-1350",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401909888|n:gui santos|Reb + Ast|5+": {
   "aid": null,
@@ -18564,11 +18570,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Gui Santos",
   "p": 0.852,
   "p_fair": 0.8644,
   "price": "-700",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401909888|n:jaden mcdaniels|Assists|2+": {
   "aid": null,
@@ -18580,11 +18588,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jaden McDaniels",
   "p": 0.8147,
   "p_fair": 0.7741,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909888|n:jaden mcdaniels|Points|10+": {
   "aid": null,
@@ -18596,11 +18606,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Jaden McDaniels",
   "p": 0.8539,
   "p_fair": 0.9143,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nba:401909888|n:jonathan kuminga|Assists|2+": {
   "aid": null,
@@ -18612,11 +18624,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jonathan Kuminga",
   "p": 0.7869,
   "p_fair": 0.7511,
   "price": "-340",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909888|n:lamelo ball|Points|10+": {
   "aid": null,
@@ -18627,11 +18641,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "LaMelo Ball",
   "p": 0.8693,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "lost",
+  "value": 8.0
  },
  "nba:401909888|n:lamelo ball|Threes Made|2+": {
   "aid": null,
@@ -18643,11 +18659,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "LaMelo Ball",
   "p": 0.8504,
   "p_fair": 0.8839,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909888|n:rudy gobert|Points|5+": {
   "aid": null,
@@ -18659,11 +18677,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Rudy Gobert",
   "p": 0.8445,
   "p_fair": 0.9608,
   "price": "-1200",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401909888|n:rudy gobert|Rebounds|8+": {
   "aid": null,
@@ -18675,11 +18695,13 @@
   "league": "nba",
   "line": "8+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Rudy Gobert",
   "p": 0.8497,
   "p_fair": 0.9065,
   "price": "-850",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401909888|n:stephen curry|Pts + Ast|20+": {
   "aid": null,
@@ -18691,11 +18713,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Stephen Curry",
   "p": 0.8499,
   "p_fair": 0.8914,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 50.0
  },
  "nba:401909888|n:stephen curry|Reb + Ast|5+": {
   "aid": null,
@@ -18707,11 +18731,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Stephen Curry",
   "p": 0.855,
   "p_fair": 0.8612,
   "price": "-720",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401909888|n:yaxel lendeborg|Points|10+": {
   "aid": null,
@@ -18723,11 +18749,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Yaxel Lendeborg",
   "p": 0.8445,
   "p_fair": 0.9214,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401909888|n:yaxel lendeborg|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -18739,11 +18767,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Yaxel Lendeborg",
   "p": 0.8486,
   "p_fair": 0.8845,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 35.0
  },
  "nba:401909889|n:aaron gordon|Assists|2+": {
   "aid": null,
