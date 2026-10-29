@@ -5283,19 +5283,20 @@
  },
  "2026-10-28": {
   "clv": {
-   "avg": 0.02,
-   "beat": 48.1,
-   "n": 54
+   "avg": 0.09,
+   "beat": 50.0,
+   "n": 56
   },
   "day": "2026-10-28",
   "leaks_14d": [],
   "locks": {
    "lost": [
     "Amen Thompson: 4+ Assists (HOU @ MIL) 3",
+    "Seattle Kraken under 4.5 goals (Toronto Maple Leafs at Seattle Kraken) Toronto Maple Leafs 4 - Seattle Kraken 5",
     "Over 201.5 points (Charlotte Hornets at Detroit Pistons) Charlotte Hornets 89 - Detroit Pistons 97"
    ],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      3,
@@ -5388,6 +5389,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "Toronto Maple Leafs",
+    "price": "-130",
+    "said": 54,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 54%"
+   },
+   {
+    "against_market": false,
     "league": "sco",
     "pick": "Celtic",
     "price": "-340",
@@ -5432,7 +5441,7 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k",
-    "won": 6
+    "won": 7
    },
    {
     "killed_by": [
@@ -5481,12 +5490,12 @@
    }
   ],
   "picks": {
-   "hit": 77.8,
-   "lost": 12,
-   "n": 54,
-   "roi": 3.2,
-   "said": 71.9,
-   "won": 42
+   "hit": 76.8,
+   "lost": 13,
+   "n": 56,
+   "roi": 1.9,
+   "said": 71.5,
+   "won": 43
   },
   "picks_by_league": {
    "afc": {
@@ -5522,12 +5531,12 @@
     "won": 3
    },
    "mls": {
-    "hit": 76.9,
+    "hit": 78.6,
     "lost": 3,
-    "n": 13,
-    "roi": -3.9,
-    "said": 74.9,
-    "won": 10
+    "n": 14,
+    "roi": -1.2,
+    "said": 74.5,
+    "won": 11
    },
    "nba": {
     "hit": 72.7,
@@ -5546,11 +5555,11 @@
     "won": 2
    },
    "nhl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": 54.6,
-    "said": 62.3,
+    "hit": 75.0,
+    "lost": 1,
+    "n": 4,
+    "roi": 16.0,
+    "said": 60.2,
     "won": 3
    },
    "per": {
@@ -5577,21 +5586,21 @@
     "said_price": 87.2,
     "won": 996
    },
-   "n": 198,
-   "said": 82.8,
-   "won": 157
+   "n": 211,
+   "said": 82.7,
+   "won": 165
   },
   "safe_locks": {
    "lost": [
     "Over 215.5 points (Denver Nuggets at New Orleans Pelicans) Denver Nuggets 104 - New Orleans Pelicans 91"
    ],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      7,
      0.5249,
-     "open"
+     "won"
     ],
     "winners": [
      2,
@@ -5599,7 +5608,7 @@
      "won"
     ]
    },
-   "won": 9
+   "won": 10
   },
   "strong": {
    "n": 0
@@ -5614,12 +5623,12 @@
     "won": 1
    },
    "agree": {
-    "hit": 72.6,
-    "lost": 190,
-    "n": 693,
-    "roi": -0.2,
+    "hit": 72.5,
+    "lost": 191,
+    "n": 695,
+    "roi": -0.3,
     "said": 69.3,
-    "won": 503
+    "won": 504
    }
   }
  },
@@ -5662,10 +5671,10 @@
    },
    {
     "flag": false,
-    "hit": 76.9,
-    "n": 13,
+    "hit": 71.4,
+    "n": 14,
     "name": "props mls Goalkeeper Saves",
-    "said": 77.5
+    "said": 77.6
    },
    {
     "flag": false,
@@ -5760,8 +5769,8 @@
    },
    {
     "flag": false,
-    "hit": 79.3,
-    "n": 570,
+    "hit": 79.0,
+    "n": 582,
     "name": "props nhl Shots on Goal",
     "said": 80.1
    },
@@ -5823,10 +5832,10 @@
    },
    {
     "flag": false,
-    "hit": 82.4,
-    "n": 17,
+    "hit": 77.8,
+    "n": 18,
     "name": "locks nhl under",
-    "said": 78.7
+    "said": 78.5
    },
    {
     "flag": false,
@@ -5851,8 +5860,8 @@
    },
    {
     "flag": false,
-    "hit": 85.7,
-    "n": 28,
+    "hit": 86.2,
+    "n": 29,
     "name": "safe locks nhl under",
     "said": 91.5
    },
@@ -5872,10 +5881,10 @@
    },
    {
     "flag": false,
-    "hit": 41.2,
-    "n": 211,
+    "hit": 41.8,
+    "n": 213,
     "name": "value bets",
-    "said": 44.4
+    "said": 44.5
    },
    {
     "flag": false,
@@ -6006,11 +6015,11 @@
    },
    "agree": {
     "hit": 72.6,
-    "lost": 189,
-    "n": 691,
-    "roi": -0.2,
+    "lost": 190,
+    "n": 693,
+    "roi": -0.3,
     "said": 69.4,
-    "won": 502
+    "won": 503
    }
   },
   "weights": {
@@ -6035,10 +6044,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6594,
-    "market_only": 0.6594,
-    "model_40": 0.6694,
-    "n": 84,
+    "logloss": 0.6608,
+    "market_only": 0.6608,
+    "model_40": 0.6704,
+    "n": 85,
     "weight": 0.0
    }
   }

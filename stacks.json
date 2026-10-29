@@ -8865,12 +8865,13 @@
    "match": "Houston Dynamo FC at Seattle Sounders FC",
    "p": 0.9679,
    "p_model": 0.9682,
+   "score": "Houston Dynamo FC 1 - Seattle Sounders FC 0",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Houston Dynamo FC"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761917|No \u00b7 Colorado Rapids wins by over 2.5 goals": {
    "away": "Colorado Rapids",
@@ -8882,12 +8883,13 @@
    "match": "Colorado Rapids at San Jose Earthquakes",
    "p": 0.9405,
    "p_model": 0.9411,
+   "score": "Colorado Rapids 2 - San Jose Earthquakes 2",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Colorado Rapids"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761917|Over 0.5 goals": {
    "away": "Colorado Rapids",
@@ -8899,11 +8901,12 @@
    "match": "Colorado Rapids at San Jose Earthquakes",
    "p": 0.9528,
    "p_model": 0.9532,
+   "score": "Colorado Rapids 2 - San Jose Earthquakes 2",
    "spec": {
     "line": 0.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "mls:761918|Over 0.5 goals": {
    "away": "San Diego FC",
@@ -8915,11 +8918,12 @@
    "match": "San Diego FC at Vancouver Whitecaps",
    "p": 0.9774,
    "p_model": 0.9776,
+   "score": "San Diego FC 1 - Vancouver Whitecaps 4",
    "spec": {
     "line": 0.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "nba:401909091|No \u00b7 Miami Heat wins by over 17.5 points": {
    "away": "Minnesota Timberwolves",
@@ -13536,11 +13540,12 @@
    "match": "Toronto Maple Leafs at Seattle Kraken",
    "p": 0.9736,
    "p_model": 0.9728,
+   "score": "Toronto Maple Leafs 4 - Seattle Kraken 5",
    "spec": {
     "line": 2.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892600|Over 2.5 goals": {
    "away": "Chicago Blackhawks",
@@ -22240,7 +22245,7 @@
    "logged": "2026-10-28T00:05",
    "n": 10,
    "prob": 0.6731,
-   "status": "open"
+   "status": "won"
   },
   "20261028:15:0": {
    "fair": 1.86,
@@ -22288,7 +22293,7 @@
    "logged": "2026-10-28T00:05",
    "n": 15,
    "prob": 0.5512,
-   "status": "open"
+   "status": "won"
   },
   "20261028:15:2": {
    "fair": 1.75,
@@ -22312,7 +22317,7 @@
    "logged": "2026-10-28T00:05",
    "n": 15,
    "prob": 0.5711,
-   "status": "open"
+   "status": "void"
   },
   "20261028:20:0": {
    "fair": 2.27,
@@ -22370,7 +22375,7 @@
    "logged": "2026-10-28T00:05",
    "n": 20,
    "prob": 0.4518,
-   "status": "open"
+   "status": "won"
   },
   "20261028:20:2": {
    "fair": 3.46,
