@@ -5,6 +5,14 @@ TRAILING props mlb Strikeouts Thrown: 64.3% hit vs 83.9% stated on 14
 TRAILING props nba Pts + Reb: 73.6% hit vs 84.6% stated on 53
 TRAILING safe locks nba prop: 73.3% hit vs 92.7% stated on 15
 With the market 72.5% (695); against it 0.0% (4).
+Locks 0/11 won, 11 open; Best play top 2 (60%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (54%) open.
+Lottery 100: open (0/9 legs won)
+Lottery 10k: open (0/9 legs won)
+Lottery 10k: open (0/6 legs won)
+Lottery 10k+25: open (0/9 legs won)
+Lottery 10k+50: open (0/8 legs won)
+Lottery 10k+100: open (0/8 legs won)
 Ladder-consistency props (all time): 996/1187 won (83.9%) vs 86.6% fair, 87.2% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
