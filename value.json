@@ -854,6 +854,45 @@
    "tip": "9:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909277|away|FanDuel": {
+   "dec": 2.06,
+   "ev": 0.014,
+   "fair": 0.4922,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909277",
+   "kind": "value",
+   "league": "nba",
+   "match": "CHA @ WSH",
+   "price": "+106",
+   "seen": "2026-10-29T21:19:34+00:00",
+   "side": "away",
+   "start": "2026-10-30T23:00Z",
+   "team": "Charlotte Hornets",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909277|sure": {
+   "id": "nba:401909277",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+106",
+     "stake_share": 0.4866,
+     "team": "Charlotte Hornets",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "-105",
+     "stake_share": 0.5134,
+     "team": "Washington Wizards",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "CHA @ WSH",
+   "profit": 0.0024,
+   "seen": "2026-10-29T21:19:34+00:00"
+  },
   "nba:401909279|away|FanDuel": {
    "dec": 1.4,
    "ev": 0.0342,
