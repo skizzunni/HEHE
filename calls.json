@@ -2828,7 +2828,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T22:04:17+00:00",
+      "checked_at": "2026-10-29T22:09:17+00:00",
       "conf": 91,
       "dc": false,
       "gate": {
@@ -2840,10 +2840,10 @@
       "match": "TROY @ JMU",
       "pick": "James Madison Dukes",
       "price": "-1200",
-      "price_at": "2026-10-29T22:03:53+00:00",
+      "price_at": "2026-10-29T22:08:58+00:00",
       "price_market": "moneyline",
       "price_ref": "34876642:0ML86864926_1",
-      "prob_at": "2026-10-29T22:03:53+00:00",
+      "prob_at": "2026-10-29T22:08:58+00:00",
       "rank": 1,
       "ready": true,
       "side": "home",
@@ -2878,7 +2878,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T22:04:17+00:00",
+      "checked_at": "2026-10-29T22:09:17+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
@@ -2890,10 +2890,10 @@
       "match": "FAU @ UNT",
       "pick": "North Texas Mean Green",
       "price": "-550",
-      "price_at": "2026-10-29T22:03:53+00:00",
+      "price_at": "2026-10-29T22:08:58+00:00",
       "price_market": "moneyline",
       "price_ref": "34876643:0ML86864927_1",
-      "prob_at": "2026-10-29T22:03:53+00:00",
+      "prob_at": "2026-10-29T22:08:58+00:00",
       "rank": 2,
       "ready": true,
       "side": "home",
@@ -2963,13 +2963,13 @@
      "book": "FanDuel",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
-     "conf": 76,
+     "conf": 80,
      "conf_first": 76,
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T22:04:17+00:00",
-      "conf": 79,
+      "checked_at": "2026-10-29T22:09:17+00:00",
+      "conf": 80,
       "dc": true,
       "gate": {
        "ok": false,
@@ -2983,7 +2983,7 @@
       "price_at": "2026-10-29T22:04:15+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192403681:13758600",
-      "prob_at": "2026-10-29T22:03:53+00:00",
+      "prob_at": "2026-10-29T22:08:58+00:00",
       "rank": 4,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2998,6 +2998,15 @@
      },
      "id": "bra:401841292",
      "league": "bra",
+     "log": [
+      {
+       "event": "re-derived",
+       "from_": 76,
+       "t": "2026-10-29T22:09:17+00:00",
+       "to": 80,
+       "why": "moved +3.8 pts since published"
+      }
+     ],
      "match": "FLA @ VAS",
      "pick": "Flamengo or draw",
      "price": "-450",
@@ -3019,7 +3028,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T22:04:17+00:00",
+      "checked_at": "2026-10-29T22:09:17+00:00",
       "conf": 71,
       "dc": false,
       "gate": {
@@ -3031,10 +3040,10 @@
       "match": "MEM @ POR",
       "pick": "Portland Trail Blazers",
       "price": "-290",
-      "price_at": "2026-10-29T22:03:53+00:00",
+      "price_at": "2026-10-29T22:08:58+00:00",
       "price_market": "moneyline",
       "price_ref": "34910287:0ML86953920_1",
-      "prob_at": "2026-10-29T22:03:53+00:00",
+      "prob_at": "2026-10-29T22:08:58+00:00",
       "rank": 5,
       "ready": true,
       "side": "home",
@@ -3077,12 +3086,12 @@
      "book": "FanDuel",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
-     "conf": 79,
+     "conf": 80,
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T22:04:17+00:00",
-      "conf": 79,
+      "checked_at": "2026-10-29T22:09:17+00:00",
+      "conf": 80,
       "dc": true,
       "gate": {
        "ok": false,
@@ -3096,7 +3105,7 @@
       "price_at": "2026-10-29T22:04:15+00:00",
       "price_market": "double_chance",
       "price_ref": "736.192403681:13758600",
-      "prob_at": "2026-10-29T22:03:53+00:00",
+      "prob_at": "2026-10-29T22:08:58+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -3129,7 +3138,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T22:04:17+00:00",
+      "checked_at": "2026-10-29T22:09:17+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
@@ -3141,10 +3150,10 @@
       "match": "FAU @ UNT",
       "pick": "North Texas Mean Green",
       "price": "-550",
-      "price_at": "2026-10-29T22:03:53+00:00",
+      "price_at": "2026-10-29T22:08:58+00:00",
       "price_market": "moneyline",
       "price_ref": "34876643:0ML86864927_1",
-      "prob_at": "2026-10-29T22:03:53+00:00",
+      "prob_at": "2026-10-29T22:08:58+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -3161,7 +3170,7 @@
      "match": "FAU @ UNT",
      "pick": "North Texas Mean Green",
      "price": "-550",
-     "price_at": "2026-10-29T22:03:53+00:00",
+     "price_at": "2026-10-29T22:08:58+00:00",
      "price_market": "moneyline",
      "price_ref": "34876643:0ML86864927_1",
      "side": "home",
@@ -3176,7 +3185,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T22:04:17+00:00",
+      "checked_at": "2026-10-29T22:09:17+00:00",
       "conf": 91,
       "dc": false,
       "gate": {
@@ -3188,10 +3197,10 @@
       "match": "TROY @ JMU",
       "pick": "James Madison Dukes",
       "price": "-1200",
-      "price_at": "2026-10-29T22:03:53+00:00",
+      "price_at": "2026-10-29T22:08:58+00:00",
       "price_market": "moneyline",
       "price_ref": "34876642:0ML86864926_1",
-      "prob_at": "2026-10-29T22:03:53+00:00",
+      "prob_at": "2026-10-29T22:08:58+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -3208,7 +3217,7 @@
      "match": "TROY @ JMU",
      "pick": "James Madison Dukes",
      "price": "-1200",
-     "price_at": "2026-10-29T22:03:53+00:00",
+     "price_at": "2026-10-29T22:08:58+00:00",
      "price_market": "moneyline",
      "price_ref": "34876642:0ML86864926_1",
      "side": "home",
@@ -3224,13 +3233,13 @@
     "nba": "2026-10-29T19:03:43+00:00"
    },
    "shadow_watch": {
-    "best_at": "2026-10-29T22:04:17+00:00",
+    "best_at": "2026-10-29T22:09:17+00:00",
     "best_ceiling": 1.28,
-    "checks": 118,
-    "last": "2026-10-29T22:04:17+00:00",
+    "checks": 119,
+    "last": "2026-10-29T22:09:17+00:00",
     "max_ready": 3,
     "reasons": {
-     "awaiting confirmed XIs": 392,
+     "awaiting confirmed XIs": 393,
      "awaiting this game's price after its lineup/news change": 2
     }
    }
