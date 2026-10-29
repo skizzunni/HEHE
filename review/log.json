@@ -5605,9 +5605,9 @@
    }
   },
   "clv": {
-   "avg": 0.03,
-   "beat": 41.9,
-   "n": 31
+   "avg": 0.05,
+   "beat": 43.8,
+   "n": 32
   },
   "day": "2026-10-28",
   "leaks_14d": [],
@@ -5687,54 +5687,63 @@
   "lottery": [
    {
     "killed_by": [
-     "Naz Reid: 2+ Assists"
+     "Naz Reid: 2+ Assists",
+     "Under 221.5 points"
     ],
     "legs": 14,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "100",
     "won": 3
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 221.5 points"
+    ],
     "legs": 13,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 221.5 points"
+    ],
     "legs": 13,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+25",
     "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 221.5 points"
+    ],
     "legs": 13,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+50",
     "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 221.5 points"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+100",
     "won": 2
    }
   ],
   "picks": {
-   "hit": 77.4,
+   "hit": 78.1,
    "lost": 7,
-   "n": 31,
-   "roi": -1.8,
+   "n": 32,
+   "roi": -1.0,
    "said": 74.1,
-   "won": 24
+   "won": 25
   },
   "picks_by_league": {
    "afc": {
@@ -5784,6 +5793,14 @@
     "roi": -1.1,
     "said": 68.8,
     "won": 3
+   },
+   "per": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 25.0,
+    "said": 74.0,
+    "won": 1
    },
    "sco": {
     "hit": 66.7,
@@ -5839,10 +5856,10 @@
    "agree": {
     "hit": 72.4,
     "lost": 185,
-    "n": 670,
+    "n": 671,
     "roi": -0.5,
     "said": 69.4,
-    "won": 485
+    "won": 486
    }
   },
   "weights": {
