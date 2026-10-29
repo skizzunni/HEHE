@@ -837,6 +837,45 @@
    "tip": "9:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909280|away|Kalshi": {
+   "dec": 2.0947,
+   "ev": 0.0149,
+   "fair": 0.4845,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909280",
+   "kind": "value",
+   "league": "nba",
+   "match": "NY @ PHI",
+   "price": "+109",
+   "seen": "2026-10-29T15:56:28+00:00",
+   "side": "away",
+   "start": "2026-10-30T23:30Z",
+   "team": "New York Knicks",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909280|sure": {
+   "id": "nba:401909280",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+109",
+     "stake_share": 0.479,
+     "team": "New York Knicks",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-108",
+     "stake_share": 0.521,
+     "team": "Philadelphia 76ers",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "NY @ PHI",
+   "profit": 0.0034,
+   "seen": "2026-10-29T15:56:28+00:00"
+  },
   "nba:401909282|away|Kalshi": {
    "dec": 2.8944,
    "ev": 0.0255,
