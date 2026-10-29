@@ -2648,7 +2648,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T00:30:09+00:00",
+      "checked_at": "2026-10-29T00:35:03+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
@@ -2660,13 +2660,12 @@
       "match": "SA @ UTAH",
       "pick": "San Antonio Spurs",
       "price": "-800",
-      "price_at": "2026-10-29T00:29:47+00:00",
+      "price_at": "2026-10-29T00:34:43+00:00",
       "price_market": "moneyline",
       "price_ref": "34904713:0ML86939466_3",
-      "prob_at": "2026-10-29T00:29:47+00:00",
+      "prob_at": "2026-10-29T00:34:43+00:00",
       "rank": 3,
-      "ready": false,
-      "reason": "awaiting this game's price after its lineup/news change",
+      "ready": true,
       "side": "away",
       "start": "2026-10-29T01:00Z"
      },
@@ -2828,7 +2827,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T00:30:09+00:00",
+      "checked_at": "2026-10-29T00:35:03+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -2843,7 +2842,7 @@
       "price_at": "2026-10-29T00:30:08+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193411236:21865447",
-      "prob_at": "2026-10-29T00:29:47+00:00",
+      "prob_at": "2026-10-29T00:34:43+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2876,7 +2875,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T00:30:09+00:00",
+      "checked_at": "2026-10-29T00:35:03+00:00",
       "conf": 78,
       "dc": true,
       "gate": {
@@ -2891,7 +2890,7 @@
       "price_at": "2026-10-29T00:30:08+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193517859:13130281",
-      "prob_at": "2026-10-29T00:29:47+00:00",
+      "prob_at": "2026-10-29T00:34:43+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2925,7 +2924,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T00:30:09+00:00",
+      "checked_at": "2026-10-29T00:35:03+00:00",
       "conf": 83,
       "dc": true,
       "gate": {
@@ -2940,7 +2939,7 @@
       "price_at": "2026-10-29T00:30:08+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193517384:13130798",
-      "prob_at": "2026-10-29T00:29:47+00:00",
+      "prob_at": "2026-10-29T00:34:43+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -2974,7 +2973,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-29T00:30:09+00:00",
+      "checked_at": "2026-10-29T00:35:03+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
@@ -2986,13 +2985,12 @@
       "match": "SA @ UTAH",
       "pick": "San Antonio Spurs",
       "price": "-800",
-      "price_at": "2026-10-29T00:29:47+00:00",
+      "price_at": "2026-10-29T00:34:43+00:00",
       "price_market": "moneyline",
       "price_ref": "34904713:0ML86939466_3",
-      "prob_at": "2026-10-29T00:29:47+00:00",
+      "prob_at": "2026-10-29T00:34:43+00:00",
       "rank": null,
-      "ready": false,
-      "reason": "awaiting this game's price after its lineup/news change",
+      "ready": true,
       "side": "away",
       "start": "2026-10-29T01:00Z"
      },
@@ -3004,18 +3002,11 @@
      },
      "id": "nba:401909890",
      "league": "nba",
-     "log": [
-      {
-       "event": "news",
-       "t": "2026-10-29T00:30:09+00:00",
-       "what": "injury report checked (6 listed)"
-      }
-     ],
      "match": "SA @ UTAH",
      "news_at": "2026-10-29T00:30:09+00:00",
      "pick": "San Antonio Spurs",
      "price": "-800",
-     "price_at": "2026-10-29T00:29:47+00:00",
+     "price_at": "2026-10-29T00:34:43+00:00",
      "price_market": "moneyline",
      "price_ref": "34904713:0ML86939466_3",
      "side": "away",
@@ -3023,9 +3014,7 @@
      "tip": "9:00 PM"
     }
    },
-   "frozen": [
-    "nba"
-   ],
+   "frozen": [],
    "news": {
     "nba": "2026-10-29T00:30:09+00:00",
     "nhl": "2026-10-28T21:55:25+00:00"
@@ -3033,11 +3022,11 @@
    "shadow_watch": {
     "best_at": "2026-10-28T23:02:07+00:00",
     "best_ceiling": 1.859,
-    "checks": 147,
-    "last": "2026-10-29T00:30:09+00:00",
+    "checks": 148,
+    "last": "2026-10-29T00:35:03+00:00",
     "max_ready": 5,
     "reasons": {
-     "awaiting confirmed XIs": 1944,
+     "awaiting confirmed XIs": 1947,
      "awaiting this game's price after its lineup/news change": 20,
      "injury report not fetched or game summary unverifiable": 2
     }
