@@ -5509,8 +5509,8 @@
    },
    {
     "flag": false,
-    "hit": 41.5,
-    "n": 183,
+    "hit": 41.3,
+    "n": 184,
     "name": "value bets",
     "said": 44.3
    },
@@ -5591,9 +5591,9 @@
    }
   },
   "clv": {
-   "avg": -0.36,
-   "beat": 45.5,
-   "n": 22
+   "avg": -0.48,
+   "beat": 43.5,
+   "n": 23
   },
   "day": "2026-10-28",
   "leaks_14d": [],
@@ -5642,6 +5642,14 @@
     "price": "-650",
     "said": 82,
     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 82%"
+   },
+   {
+    "against_market": false,
+    "league": "nba",
+    "pick": "Atlanta Hawks",
+    "price": "-142",
+    "said": 56,
+    "why": "margin 12 \u00b7 the book had my side favoured too \u00b7 called at 56%"
    },
    {
     "against_market": false,
@@ -5703,11 +5711,11 @@
    }
   ],
   "picks": {
-   "hit": 72.7,
-   "lost": 6,
-   "n": 22,
-   "roi": -7.8,
-   "said": 74.7,
+   "hit": 69.6,
+   "lost": 7,
+   "n": 23,
+   "roi": -11.8,
+   "said": 73.9,
    "won": 16
   },
   "picks_by_league": {
@@ -5742,6 +5750,14 @@
     "roi": -22.5,
     "said": 76.6,
     "won": 3
+   },
+   "nba": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 56.0,
+    "won": 0
    },
    "sco": {
     "hit": 66.7,
@@ -5795,10 +5811,10 @@
     "won": 1
    },
    "agree": {
-    "hit": 72.2,
-    "lost": 184,
-    "n": 661,
-    "roi": -0.7,
+    "hit": 72.1,
+    "lost": 185,
+    "n": 662,
+    "roi": -0.9,
     "said": 69.3,
     "won": 477
    }
@@ -5807,10 +5823,10 @@
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5627,
-    "market_only": 0.5627,
-    "model_40": 0.587,
-    "n": 56,
+    "logloss": 0.5674,
+    "market_only": 0.5674,
+    "model_40": 0.5935,
+    "n": 57,
     "weight": 0.0
    },
    "ncaaf": {
