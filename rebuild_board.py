@@ -557,6 +557,10 @@ def snapshot():
                                                        locks.frozen(d._STATE["dates"][0]))
         else:
             out["locks"]["today"]["preview"] = True
+        try:
+            locks.kalshi_alt(out["locks"]["today"], FRESH.get("today"), KB0)
+        except Exception:
+            pass
         for v_ in out["locks"].values():
             v_.pop("pool", None)                # saved in the ledger, not published
         out["locks_record"] = locks.report()
@@ -585,6 +589,12 @@ def snapshot():
                 out["safe_locks"]["today"], locks.frozen(d._STATE["dates"][0], locks.SAFE_LEDGER))
         else:
             out["safe_locks"]["today"]["preview"] = True
+        # where Kalshi pays more for the same leg (locks.kalshi_alt)
+        try:
+            _alt = locks.kalshi_alt(out["safe_locks"]["today"], FRESH.get("today"), KB0)
+            print(f"safe locks: {_alt} legs pay more at Kalshi", file=sys.stderr)
+        except Exception as e_:
+            print(f"safe locks: Kalshi comparison skipped ({e_})", file=sys.stderr)
         for v_ in out["safe_locks"].values():
             v_.pop("pool", None)
         out["safe_locks_record"] = locks.report(locks.SAFE_LEDGER)

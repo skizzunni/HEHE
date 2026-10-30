@@ -3599,3 +3599,17 @@ games that have not started; no locked leg is changed.
   were stated above 92%, before the ceiling. Since then props cannot
   outrank 90%+ game lines, and the game legs are 90.9% against 91.0%
   stated on 110.
+
+**Locks: where the same leg pays more.** Each game leg on the Locks and
+Safe Locks cards now shows Kalshi's price for the same bet, fee included,
+when it pays more than FanDuel ("Pays more at Kalshi"). Kalshi lists
+moneylines, spreads and totals. The leg, its chance and the card do not
+change, so neither does the hit rate; only the payout moves. Props stay
+FanDuel's.
+
+A Kalshi ask more than 6 points from the leg's chance
+(`locks.ALT_TOLERANCE`) is never shown: that is a stale or mismatched
+market, not a better price. On 2026-10-29's card, "Under 9.5 goals" showed
+75c against FanDuel's -2000. At Safe Lock prices the real gains are small
+(Bruins +3.5: 94c pays 1.059 against -2000's 1.050, +0.9%). Each one is
+still free money on the same outcome.

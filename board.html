@@ -1129,6 +1129,12 @@ function legHTML(x, opts){
   const kind = x.kind === "prop" || x.name ? "prop" : "game";
   const where = done ? '' : (x.where ? '<div class="lgw">On FanDuel: <b>' + esc(x.where) + '</b></div>'
     : (fdOne(x.fd) ? '<div class="lgw">' + legBtns(null, fdOne(x.fd)) + '</div>' : ''));
+  // the same bet where Kalshi pays more, fee included (locks.kalshi_alt)
+  const A = x.alt;
+  const alt = done || !A ? '' : '<div class="lgw">Pays more at <b>Kalshi</b>: ' + esc(A.words || '') + ' at '
+    + Math.round(100 * A.ask) + '&cent; (' + esc(A.american || '') + ' after fee) &middot; $100 wins $'
+    + (100 * (A.dec - 1)).toFixed(2) + ' vs $' + (100 * ((callWin(x.price) || 0) / 10)).toFixed(2) + ' at FanDuel (+'
+    + (100 * A.gain).toFixed(1) + '%)</div>';
   return '<li class="leg"><div class="lgt"><span class="kind ' + kind + '">' + kind + '</span>'
     + '<b>' + esc(x.label) + '</b>' + (x.price ? '<span class="px">' + esc(x.price) + '</span>' : '')
     + '<span class="ch" title="estimated from the market price">' + (100 * x.p).toFixed(0) + '% est.</span>'
@@ -1140,7 +1146,7 @@ function legHTML(x, opts){
     + (x.edge > 0 ? '<span class="edgetag" title="Priced off this player\'s own main line, this rung is underpriced">+'
        + x.edge.toFixed(0) + '% vs price</span>' : '') + res + '</div>'
     + '<div class="lgs">' + esc(x.match || '') + ' &middot; ' + esc(x.lg || x.league || '')
-    + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>' + where + '</li>';
+    + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>' + where + alt + '</li>';
 }
 function dayPills(attr, day){
   return '<span class="pills"><button type="button" data-' + attr + '="today" aria-pressed="'

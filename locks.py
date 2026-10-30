@@ -735,6 +735,43 @@ def report(path=None):
                        for k, t in tally.items()})
 
 
+ALT_TOLERANCE = 0.06
+
+
+def kalshi_alt(card, slot_rows, KB):
+    """Mark each game leg Kalshi pays more for: the same bet (spec), bought at
+    Kalshi's ask with the taker fee taken out, against FanDuel's price. The
+    leg, its chance and the card never change -- only where it pays most.
+    Returns how many legs got one."""
+    import kalshi
+    import venues
+    if not KB or not card:
+        return 0
+    rows = {r.get("id"): r for rs in (slot_rows or {}).values() for r in rs or []}
+    n = 0
+    for L in card.get("locks") or []:
+        L.pop("alt", None)
+        r = rows.get(L.get("gid"))
+        if L.get("kind") == "prop" or not L.get("spec") or not r or L.get("status") in ("won", "lost"):
+            continue
+        try:
+            k = kalshi.leg(KB, L.get("league") or L["gid"].split(":", 1)[0], r.get("mkt") or {}, L["spec"])
+        except Exception:
+            k = None
+        # the same bet costs about its chance; an ask far from it is a stale or
+        # mismatched market (2026-10-30: "Under 9.5 goals" at 75c against
+        # FanDuel's -2000), not a better price
+        if not k or not k.get("price") or abs(k["price"] - (L.get("p") or 0)) > ALT_TOLERANCE:
+            continue
+        kd = venues.kalshi_dec(k["price"])
+        fd = _dec(L.get("price"))
+        if kd and fd and kd > fd + 1e-6:
+            L["alt"] = dict(venue="Kalshi", ask=k["price"], dec=round(kd, 4), american=venues.american(kd),
+                            words=k.get("words"), ticker=k.get("ticker"), gain=round(kd / fd - 1, 4))
+            n += 1
+    return n
+
+
 def top_record(path=None, k=1):
     """How the k likeliest legs of each day's card have done: days where all
     k won, and every one of those legs against its stated chance. The
