@@ -613,6 +613,7 @@ def tune():
 # 93.4% stated). However short the price, a player prop has not won more
 # often than this: injuries, rest, blowouts and late scratches.
 CAP_DEC = 1.10
+CAP_SINCE = "2026-10-27"     # first day props were stated under the ceiling
 CAP_MIN_N = 100
 CAP_BOUNDS = (0.80, 0.97)
 CAP = CAP_BOUNDS[1]

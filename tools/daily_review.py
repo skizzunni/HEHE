@@ -419,12 +419,16 @@ def audit(graded, props, locks):
     # only markets still offered: a market already taken off (soccer shots)
     # is a closed case, and a permanent alarm for it would hide new ones
     import props_ledger as _pl
+    # props stated before the ceiling (props_ledger.CAP_SINCE) are a closed
+    # case too: the alarm tests the rule now in force, not the one replaced
     pg = [e for e in props.values() if isinstance(e, dict) and e.get("status") in ("won", "lost")
-          and _pl.offered(e.get("league"), e.get("market") or "")]
+          and _pl.offered(e.get("league"), e.get("market") or "")
+          and (e.get("date") or "") >= _pl.CAP_SINCE]
     for key in sorted({(e["league"], e["market"]) for e in pg}):
         line(f"props {key[0]} {key[1]}", [e for e in pg if (e["league"], e["market"]) == key],
              lambda e: e.get("p"), lambda e: e["status"] == "won")
-    lg = [v for v in (locks.get("legs") or {}).values() if v.get("status") in ("won", "lost")]
+    lg = [v for v in (locks.get("legs") or {}).values() if v.get("status") in ("won", "lost")
+          and not (v.get("kind") == "prop" and (v.get("date") or "") < _pl.CAP_SINCE)]
     kinds = {}
     for v in lg:
         t = (v.get("spec") or {}).get("t") or ""
@@ -444,6 +448,8 @@ def audit(graded, props, locks):
     safe = {}
     for v in (_load("safe_locks.json").get("legs") or {}).values():
         if v.get("status") not in ("won", "lost"):
+            continue
+        if v.get("kind") == "prop" and (v.get("date") or "") < _pl.CAP_SINCE:
             continue
         t = (v.get("spec") or {}).get("t") or ""
         k = "prop" if v.get("kind") == "prop" else "under" if "under" in t else "over" if "over" in t else "side"

@@ -3627,3 +3627,17 @@ still free money on the same outcome.
   held in every slice (+3.7% / +2.2% at 83-95c, +5.7% / +4.5% at 55-83c,
   edge-filtered), and NFL is already one of the maker tracker's two
   leagues. Its forward record: 124 realistic fills, +5.1%.
+
+**Daily review: prop alarms test the rule in force.** The review flags any
+split trailing its stated chance by more than two standard errors. It kept
+flagging Safe Locks NBA props (11 of 15) and props-ledger splits whose
+chances were stated before the prop ceiling (`props_ledger.CAP_SINCE`,
+2026-10-27). Those props are a closed case, like markets no longer offered,
+so they no longer feed the alarm, and the full record still shows them.
+Scored on post-ceiling props alone, no split trails. Prop Locks are 94.0%
+against 90.6% stated on 84.
+
+The Safe Locks Winners parlay (9 of 13 days against 84% stated) lost on
+10-20, 10-22, 10-25 and 10-26. All but 10-20 had a pre-ceiling prop (92-97%
+stated) among its top legs. Since 10-27 the top legs have been game lines,
+and on the 10 days whose top two were both game lines, only one leg lost.
