@@ -7,4 +7,4 @@ TRAILING safe locks nba prop: 73.3% hit vs 92.7% stated on 15
 Ladder-consistency props (all time): 1052/1253 won (84.0%) vs 86.6% fair, 87.2% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=71), ncaaf 0.40 (n=114), nhl 0.00 (n=94)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=71), ncaaf 0.40 (n=114), nhl 0.00 (n=95)
