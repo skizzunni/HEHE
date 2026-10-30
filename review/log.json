@@ -5785,8 +5785,8 @@
    },
    {
     "flag": false,
-    "hit": 78.8,
-    "n": 614,
+    "hit": 78.7,
+    "n": 621,
     "name": "props nhl Shots on Goal",
     "said": 80.1
    },
@@ -5890,8 +5890,8 @@
    },
    {
     "flag": false,
-    "hit": 86.7,
-    "n": 30,
+    "hit": 87.1,
+    "n": 31,
     "name": "safe locks nhl under",
     "said": 91.5
    },
@@ -5904,10 +5904,10 @@
    },
    {
     "flag": false,
-    "hit": 93.4,
-    "n": 76,
+    "hit": 93.5,
+    "n": 77,
     "name": "prop locks",
-    "said": 91.0
+    "said": 90.9
    },
    {
     "flag": false,
@@ -6033,14 +6033,15 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
-     "Under 237.5 points"
+     "Under 237.5 points",
+     "Over 8.5 goals"
     ],
     "legs": 9,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
     "won": 0
@@ -6059,30 +6060,33 @@
    },
    {
     "killed_by": [
-     "Under 237.5 points"
+     "Under 237.5 points",
+     "Over 8.5 goals"
     ],
     "legs": 9,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+25",
     "won": 1
    },
    {
     "killed_by": [
-     "Under 237.5 points"
+     "Under 237.5 points",
+     "Over 8.5 goals"
     ],
     "legs": 8,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+50",
     "won": 0
    },
    {
     "killed_by": [
-     "Under 237.5 points"
+     "Under 237.5 points",
+     "Over 8.5 goals"
     ],
     "legs": 8,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+100",
     "won": 0
@@ -6185,14 +6189,14 @@
     "said_price": 87.2,
     "won": 1026
    },
-   "n": 74,
-   "said": 82.2,
-   "won": 61
+   "n": 81,
+   "said": 82.1,
+   "won": 66
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 6,
+   "open": 5,
    "plays": {
     "best": [
      7,
@@ -6202,10 +6206,10 @@
     "winners": [
      2,
      0.8455,
-     "open"
+     "won"
     ]
    },
-   "won": 5
+   "won": 6
   },
   "strong": {
    "n": 0

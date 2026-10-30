@@ -8,15 +8,15 @@ Closing line value: +0.35 points on 21 picks; beat the close on 38.1%.
 - LOST per Melgar at 70%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 70%
 With the market 73.2% (716); against it 0.0% (4).
 Locks 4/11 won, 6 open; Best play top 2 (60%) open; lost: Winnipeg Jets under 3.5 goals (Winnipeg Jets at Tampa Bay Lightning) Winnipeg Jets 4 - Tampa Bay Lightning 6.
-Safe Locks 5/11 won, 6 open; Winners parlay top 2 (85%) open; Best play top 7 (54%) open.
-Lottery 100: lost (3/9 legs won, killed by Under 249.5 points)
-Lottery 10k: lost (0/9 legs won, killed by Under 237.5 points)
+Safe Locks 6/11 won, 5 open; Winners parlay top 2 (85%) won; Best play top 7 (54%) open.
+Lottery 100: lost (4/9 legs won, killed by Under 249.5 points)
+Lottery 10k: lost (0/9 legs won, killed by Under 237.5 points, Over 8.5 goals)
 Lottery 10k: lost (0/6 legs won, killed by Under 4.5 goals, Chicago Blackhawks over 4.5 goals, Pittsburgh Penguins under 1.5 goals)
-Lottery 10k+25: lost (1/9 legs won, killed by Under 237.5 points)
-Lottery 10k+50: lost (0/8 legs won, killed by Under 237.5 points)
-Lottery 10k+100: lost (0/8 legs won, killed by Under 237.5 points)
+Lottery 10k+25: lost (1/9 legs won, killed by Under 237.5 points, Over 8.5 goals)
+Lottery 10k+50: lost (0/8 legs won, killed by Under 237.5 points, Over 8.5 goals)
+Lottery 10k+100: lost (0/8 legs won, killed by Under 237.5 points, Over 8.5 goals)
 Ladder-consistency props (all time): 1026/1221 won (84.0%) vs 86.6% fair, 87.2% price.
-Props 61/74 vs 82.2% claimed.
+Props 66/81 vs 82.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=70), ncaaf 0.40 (n=112), nhl 0.00 (n=89)
