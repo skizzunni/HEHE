@@ -5785,10 +5785,10 @@
    },
    {
     "flag": false,
-    "hit": 78.7,
-    "n": 591,
+    "hit": 78.8,
+    "n": 604,
     "name": "props nhl Shots on Goal",
-    "said": 80.1
+    "said": 80.2
    },
    {
     "flag": false,
@@ -5855,10 +5855,10 @@
    },
    {
     "flag": false,
-    "hit": 77.8,
-    "n": 18,
+    "hit": 75.0,
+    "n": 20,
     "name": "locks nhl under",
-    "said": 78.5
+    "said": 78.2
    },
    {
     "flag": false,
@@ -5876,10 +5876,10 @@
    },
    {
     "flag": false,
-    "hit": 86.7,
-    "n": 15,
+    "hit": 88.2,
+    "n": 17,
     "name": "safe locks nhl side",
-    "said": 91.1
+    "said": 91.2
    },
    {
     "flag": false,
@@ -5897,10 +5897,10 @@
    },
    {
     "flag": false,
-    "hit": 93.0,
-    "n": 71,
+    "hit": 93.2,
+    "n": 73,
     "name": "prop locks",
-    "said": 91.3
+    "said": 91.2
    },
    {
     "flag": false,
@@ -5986,16 +5986,18 @@
    }
   },
   "clv": {
-   "avg": 0.56,
-   "beat": 35.7,
-   "n": 14
+   "avg": 0.4,
+   "beat": 33.3,
+   "n": 15
   },
   "day": "2026-10-29",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Winnipeg Jets under 3.5 goals (Winnipeg Jets at Tampa Bay Lightning) Winnipeg Jets 4 - Tampa Bay Lightning 6"
+   ],
    "n": 11,
-   "open": 10,
+   "open": 8,
    "plays": {
     "best": [
      2,
@@ -6003,7 +6005,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "losses": [],
   "lottery": [
@@ -6013,7 +6015,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [],
@@ -6025,10 +6027,11 @@
    },
    {
     "killed_by": [
-     "Under 4.5 goals"
+     "Under 4.5 goals",
+     "Pittsburgh Penguins under 1.5 goals"
     ],
     "legs": 6,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
     "won": 0
@@ -6061,10 +6064,10 @@
   "picks": {
    "hit": 100.0,
    "lost": 0,
-   "n": 14,
-   "roi": 29.3,
-   "said": 74.1,
-   "won": 14
+   "n": 15,
+   "roi": 30.4,
+   "said": 73.5,
+   "won": 15
   },
   "picks_by_league": {
    "bra": {
@@ -6110,10 +6113,10 @@
    "nhl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 38.8,
-    "said": 69.0,
-    "won": 1
+    "n": 2,
+    "roi": 42.3,
+    "said": 67.5,
+    "won": 2
    },
    "swe": {
     "hit": 100.0,
@@ -6139,14 +6142,14 @@
     "said_price": 87.2,
     "won": 1000
    },
-   "n": 18,
-   "said": 81.3,
-   "won": 14
+   "n": 31,
+   "said": 81.4,
+   "won": 25
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
+   "open": 8,
    "plays": {
     "best": [
      7,
@@ -6159,7 +6162,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 3
   },
   "strong": {
    "n": 0
@@ -6177,10 +6180,10 @@
    "agree": {
     "hit": 73.1,
     "lost": 191,
-    "n": 709,
-    "roi": 0.2,
+    "n": 710,
+    "roi": 0.3,
     "said": 69.4,
-    "won": 518
+    "won": 519
    }
   },
   "weights": {
@@ -6205,10 +6208,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6574,
-    "market_only": 0.6574,
-    "model_40": 0.6673,
-    "n": 86,
+    "logloss": 0.6547,
+    "market_only": 0.6547,
+    "model_40": 0.665,
+    "n": 87,
     "weight": 0.0
    }
   }
