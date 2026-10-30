@@ -5650,9 +5650,9 @@
  },
  "2026-10-29": {
   "clv": {
-   "avg": 0.23,
-   "beat": 34.5,
-   "n": 29
+   "avg": 0.22,
+   "beat": 33.3,
+   "n": 30
   },
   "day": "2026-10-29",
   "leaks_14d": [],
@@ -5661,7 +5661,7 @@
     "Winnipeg Jets under 3.5 goals (Winnipeg Jets at Tampa Bay Lightning) Winnipeg Jets 4 - Tampa Bay Lightning 6"
    ],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      2,
@@ -5669,9 +5669,17 @@
      "won"
     ]
    },
-   "won": 8
+   "won": 9
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "nba",
+    "pick": "Portland Trail Blazers",
+    "price": "-285",
+    "said": 71,
+    "why": "margin 21 \u00b7 the book had my side favoured too \u00b7 called at 71%"
+   },
    {
     "against_market": false,
     "league": "ncaaf",
@@ -5715,7 +5723,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 5
+    "won": 6
    },
    {
     "killed_by": [
@@ -5730,7 +5738,7 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -5758,7 +5766,7 @@
     "lost": 5,
     "status": "lost",
     "tier": "10k+25",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -5773,7 +5781,7 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k+50",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -5787,15 +5795,15 @@
     "lost": 5,
     "status": "lost",
     "tier": "10k+100",
-    "won": 1
+    "won": 2
    }
   ],
   "picks": {
-   "hit": 86.2,
-   "lost": 4,
-   "n": 29,
-   "roi": 22.1,
-   "said": 69.0,
+   "hit": 83.3,
+   "lost": 5,
+   "n": 30,
+   "roi": 18.0,
+   "said": 69.1,
    "won": 25
   },
   "picks_by_league": {
@@ -5840,11 +5848,11 @@
     "won": 2
    },
    "nba": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 63.4,
-    "said": 60.0,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": 8.9,
+    "said": 63.7,
     "won": 2
    },
    "ncaaf": {
@@ -5898,19 +5906,19 @@
   },
   "props": {
    "fair": {
-    "n": 1234,
-    "said_fair": 86.5,
-    "said_price": 87.1,
-    "won": 1037
+    "n": 1253,
+    "said_fair": 86.6,
+    "said_price": 87.2,
+    "won": 1052
    },
-   "n": 122,
-   "said": 81.1,
-   "won": 101
+   "n": 142,
+   "said": 81.5,
+   "won": 117
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 4,
+   "open": 3,
    "plays": {
     "best": [
      7,
@@ -5923,7 +5931,7 @@
      "won"
     ]
    },
-   "won": 7
+   "won": 8
   },
   "strong": {
    "n": 0
@@ -5938,10 +5946,10 @@
     "won": 0
    },
    "agree": {
-    "hit": 73.1,
-    "lost": 195,
-    "n": 724,
-    "roi": 0.5,
+    "hit": 73.0,
+    "lost": 196,
+    "n": 725,
+    "roi": 0.4,
     "said": 69.3,
     "won": 529
    }
@@ -5993,22 +6001,22 @@
    },
    {
     "flag": false,
-    "hit": 85.0,
-    "n": 180,
+    "hit": 84.7,
+    "n": 183,
     "name": "props nba Assists",
     "said": 84.5
    },
    {
     "flag": false,
-    "hit": 86.3,
-    "n": 190,
+    "hit": 86.2,
+    "n": 196,
     "name": "props nba Points",
     "said": 85.1
    },
    {
     "flag": false,
-    "hit": 90.7,
-    "n": 107,
+    "hit": 90.8,
+    "n": 109,
     "name": "props nba Pts + Ast",
     "said": 84.7
    },
@@ -6021,29 +6029,29 @@
    },
    {
     "flag": false,
-    "hit": 87.2,
-    "n": 149,
+    "hit": 86.4,
+    "n": 154,
     "name": "props nba Pts + Reb + Ast",
-    "said": 84.8
+    "said": 84.7
    },
    {
     "flag": false,
-    "hit": 85.1,
-    "n": 87,
+    "hit": 85.4,
+    "n": 89,
     "name": "props nba Reb + Ast",
     "said": 83.7
    },
    {
     "flag": false,
-    "hit": 81.5,
-    "n": 92,
+    "hit": 81.7,
+    "n": 93,
     "name": "props nba Rebounds",
     "said": 83.9
    },
    {
     "flag": false,
-    "hit": 84.8,
-    "n": 92,
+    "hit": 84.9,
+    "n": 93,
     "name": "props nba Threes Made",
     "said": 83.9
    },
@@ -6126,8 +6134,8 @@
    },
    {
     "flag": false,
-    "hit": 57.1,
-    "n": 14,
+    "hit": 60.0,
+    "n": 15,
     "name": "locks nba over",
     "said": 75.3
    },
@@ -6196,24 +6204,24 @@
    },
    {
     "flag": false,
-    "hit": 91.5,
-    "n": 47,
+    "hit": 89.6,
+    "n": 48,
     "name": "daily calls",
-    "said": 81.0
+    "said": 80.8
    },
    {
     "flag": false,
-    "hit": 93.8,
-    "n": 81,
+    "hit": 93.9,
+    "n": 82,
     "name": "prop locks",
     "said": 90.7
    },
    {
     "flag": false,
-    "hit": 43.0,
-    "n": 221,
+    "hit": 43.2,
+    "n": 222,
     "name": "value bets",
-    "said": 44.4
+    "said": 44.3
    },
    {
     "flag": false,
@@ -6313,10 +6321,10 @@
   "picks_by_league": {},
   "props": {
    "fair": {
-    "n": 1234,
-    "said_fair": 86.5,
-    "said_price": 87.1,
-    "won": 1037
+    "n": 1253,
+    "said_fair": 86.6,
+    "said_price": 87.2,
+    "won": 1052
    },
    "n": 0,
    "said": null,
@@ -6338,10 +6346,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 73.4,
-    "lost": 190,
-    "n": 713,
-    "roi": 0.8,
+    "hit": 73.2,
+    "lost": 191,
+    "n": 714,
+    "roi": 0.7,
     "said": 69.5,
     "won": 523
    }
@@ -6350,10 +6358,10 @@
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5534,
-    "market_only": 0.5534,
-    "model_40": 0.5791,
-    "n": 70,
+    "logloss": 0.563,
+    "market_only": 0.563,
+    "model_40": 0.5902,
+    "n": 71,
     "weight": 0.0
    },
    "ncaaf": {

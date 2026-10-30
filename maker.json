@@ -2760,6 +2760,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26OCT31KSUCOLO-COLO2"
   },
+  "KXNCAAFSPREAD-26OCT31OKSTISU-OKST10|YES": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401856847",
+   "label": "Oklahoma State Cowboys -9.5",
+   "league": "ncaaf",
+   "match": "OKST @ ISU",
+   "posted": "2026-10-30T04:21:53+00:00",
+   "queue": 11296.56,
+   "side": "YES",
+   "spec": {
+    "line": -9.5,
+    "t": "spread",
+    "team": "Oklahoma State Cowboys"
+   },
+   "start": "2026-10-31T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26OCT31OKSTISU-OKST10"
+  },
   "KXNCAAFSPREAD-26OCT31SMUSYR-SMU11|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -5356,6 +5378,27 @@
    "start": "2026-10-31T23:30Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT31MSSTTEX-51"
+  },
+  "KXNCAAFTOTAL-26OCT31NDNAVY-57|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401859185",
+   "label": "under 56.5",
+   "league": "ncaaf",
+   "match": "ND @ NAVY",
+   "posted": "2026-10-30T04:21:53+00:00",
+   "queue": 34755.35,
+   "side": "NO",
+   "spec": {
+    "line": 56.5,
+    "t": "under"
+   },
+   "start": "2026-10-31T16:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT31NDNAVY-57"
   },
   "KXNCAAFTOTAL-26OCT31NEVUCLA-44|YES": {
    "ask": 0.52,
