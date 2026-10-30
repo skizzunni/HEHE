@@ -1,11 +1,11 @@
 # Review 2026-10-29
 
-Picks 12-0 (100.0% vs 75.0% claimed, ROI +27.9%).
+Picks 13-0 (100.0% vs 74.5% claimed, ROI +28.5%).
 TRAILING props mlb Strikeouts Thrown: 64.3% hit vs 83.9% stated on 14
 TRAILING props nba Pts + Reb: 73.6% hit vs 84.6% stated on 53
 TRAILING safe locks nba prop: 73.3% hit vs 92.7% stated on 15
-Closing line value: +0.09 points on 12 picks; beat the close on 25.0%.
-With the market 73.0% (707); against it 0.0% (4).
+Closing line value: +0.17 points on 13 picks; beat the close on 30.8%.
+With the market 73.0% (708); against it 0.0% (4).
 Locks 1/11 won, 10 open; Best play top 2 (60%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (54%) open.
 Lottery 100: open (0/9 legs won)
