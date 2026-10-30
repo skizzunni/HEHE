@@ -1,15 +1,15 @@
 # Review 2026-10-29
 
-Picks 24-4 (85.7% vs 68.5% claimed, ROI +22.3%).
+Picks 25-4 (86.2% vs 69.0% claimed, ROI +22.1%).
 TRAILING props mlb Strikeouts Thrown: 64.3% hit vs 83.9% stated on 14
 TRAILING props nba Pts + Reb: 73.6% hit vs 84.6% stated on 53
 TRAILING safe locks nba prop: 73.3% hit vs 92.7% stated on 15
-Closing line value: +0.17 points on 28 picks; beat the close on 32.1%.
+Closing line value: +0.23 points on 29 picks; beat the close on 34.5%.
 - LOST ncaaf James Madison Dukes at 90%: margin 3 · the book had my side favoured too · called at 90%
 - LOST nhl Dallas Stars at 61%: margin 3 · the book had my side favoured too · called at 61%
 - LOST nhl Minnesota Wild at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST per Melgar at 70%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 70%
-With the market 73.0% (723); against it 0.0% (4).
+With the market 73.1% (724); against it 0.0% (4).
 Locks 8/11 won, 2 open; Best play top 2 (60%) won; lost: Winnipeg Jets under 3.5 goals (Winnipeg Jets at Tampa Bay Lightning) Winnipeg Jets 4 - Tampa Bay Lightning 6.
 Safe Locks 7/11 won, 4 open; Winners parlay top 2 (85%) won; Best play top 7 (54%) open.
 Lottery 100: lost (5/9 legs won, killed by Under 249.5 points, Over 56.5 points)
@@ -22,4 +22,4 @@ Ladder-consistency props (all time): 1037/1234 won (84.0%) vs 86.5% fair, 87.1% 
 Props 101/122 vs 81.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=70), ncaaf 0.40 (n=113), nhl 0.00 (n=93)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=70), ncaaf 0.40 (n=114), nhl 0.00 (n=93)
