@@ -1,5 +1,5 @@
 {
- "default": 0.163,
+ "default": 0.164,
  "detail": {
   "nba": {
    "fitted": 0.0,
@@ -13,10 +13,10 @@
   "ncaaf": {
    "fitted": 0.4,
    "held_out": true,
-   "logloss": 0.6379,
-   "market_only": 0.6506,
-   "model_40": 0.6379,
-   "n": 112,
+   "logloss": 0.6492,
+   "market_only": 0.6654,
+   "model_40": 0.6492,
+   "n": 113,
    "weight": 0.4
   },
   "nhl": {
@@ -29,7 +29,7 @@
    "weight": 0.0
   }
  },
- "updated": "2026-10-29T23:26-04:00",
+ "updated": "2026-10-29T23:30-04:00",
  "weights": {
   "nba": 0.0,
   "ncaaf": 0.4,
