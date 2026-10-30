@@ -5597,10 +5597,10 @@
   },
   "props": {
    "fair": {
-    "n": 1191,
+    "n": 1206,
     "said_fair": 86.6,
     "said_price": 87.2,
-    "won": 1000
+    "won": 1014
    },
    "n": 211,
    "said": 82.7,
@@ -5694,24 +5694,24 @@
    },
    {
     "flag": false,
-    "hit": 85.5,
-    "n": 172,
+    "hit": 85.8,
+    "n": 176,
     "name": "props nba Assists",
-    "said": 84.6
+    "said": 84.5
    },
    {
     "flag": false,
-    "hit": 85.8,
-    "n": 183,
+    "hit": 86.1,
+    "n": 187,
     "name": "props nba Points",
     "said": 85.1
    },
    {
     "flag": false,
-    "hit": 90.2,
-    "n": 102,
+    "hit": 90.5,
+    "n": 105,
     "name": "props nba Pts + Ast",
-    "said": 84.8
+    "said": 84.7
    },
    {
     "flag": true,
@@ -5722,8 +5722,8 @@
    },
    {
     "flag": false,
-    "hit": 87.9,
-    "n": 141,
+    "hit": 87.6,
+    "n": 145,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.8
    },
@@ -5736,8 +5736,8 @@
    },
    {
     "flag": false,
-    "hit": 82.0,
-    "n": 89,
+    "hit": 82.2,
+    "n": 90,
     "name": "props nba Rebounds",
     "said": 83.9
    },
@@ -5827,8 +5827,8 @@
    },
    {
     "flag": false,
-    "hit": 53.8,
-    "n": 13,
+    "hit": 57.1,
+    "n": 14,
     "name": "locks nba over",
     "said": 75.3
    },
@@ -5862,8 +5862,8 @@
    },
    {
     "flag": false,
-    "hit": 91.7,
-    "n": 12,
+    "hit": 92.3,
+    "n": 13,
     "name": "safe locks nba over",
     "said": 90.3
    },
@@ -5904,8 +5904,8 @@
    },
    {
     "flag": false,
-    "hit": 93.2,
-    "n": 74,
+    "hit": 93.3,
+    "n": 75,
     "name": "prop locks",
     "said": 91.1
    },
@@ -5993,9 +5993,9 @@
    }
   },
   "clv": {
-   "avg": 0.21,
-   "beat": 29.4,
-   "n": 17
+   "avg": 0.42,
+   "beat": 33.3,
+   "n": 18
   },
   "day": "2026-10-29",
   "leaks_14d": [],
@@ -6004,7 +6004,7 @@
     "Winnipeg Jets under 3.5 goals (Winnipeg Jets at Tampa Bay Lightning) Winnipeg Jets 4 - Tampa Bay Lightning 6"
    ],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      2,
@@ -6012,7 +6012,7 @@
      "open"
     ]
    },
-   "won": 2
+   "won": 3
   },
   "losses": [],
   "lottery": [
@@ -6082,10 +6082,10 @@
   "picks": {
    "hit": 100.0,
    "lost": 0,
-   "n": 17,
-   "roi": 35.0,
-   "said": 71.5,
-   "won": 17
+   "n": 18,
+   "roi": 35.3,
+   "said": 71.3,
+   "won": 18
   },
   "picks_by_league": {
    "bra": {
@@ -6128,6 +6128,14 @@
     "said": 75.0,
     "won": 2
    },
+   "nba": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 42.0,
+    "said": 68.0,
+    "won": 1
+   },
    "nhl": {
     "hit": 100.0,
     "lost": 0,
@@ -6155,19 +6163,19 @@
   },
   "props": {
    "fair": {
-    "n": 1191,
+    "n": 1206,
     "said_fair": 86.6,
     "said_price": 87.2,
-    "won": 1000
+    "won": 1014
    },
-   "n": 41,
-   "said": 80.7,
-   "won": 33
+   "n": 57,
+   "said": 81.5,
+   "won": 48
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 7,
+   "open": 6,
    "plays": {
     "best": [
      7,
@@ -6180,7 +6188,7 @@
      "open"
     ]
    },
-   "won": 4
+   "won": 5
   },
   "strong": {
    "n": 0
@@ -6198,20 +6206,20 @@
    "agree": {
     "hit": 73.2,
     "lost": 191,
-    "n": 712,
+    "n": 713,
     "roi": 0.5,
     "said": 69.4,
-    "won": 521
+    "won": 522
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5542,
-    "market_only": 0.5542,
-    "model_40": 0.581,
-    "n": 68,
+    "logloss": 0.5519,
+    "market_only": 0.5519,
+    "model_40": 0.5785,
+    "n": 69,
     "weight": 0.0
    },
    "ncaaf": {
