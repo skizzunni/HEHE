@@ -8,12 +8,12 @@ Closing line value: +0.21 points on 17 picks; beat the close on 29.4%.
 With the market 73.2% (712); against it 0.0% (4).
 Locks 2/11 won, 8 open; Best play top 2 (60%) open; lost: Winnipeg Jets under 3.5 goals (Winnipeg Jets at Tampa Bay Lightning) Winnipeg Jets 4 - Tampa Bay Lightning 6.
 Safe Locks 4/11 won, 7 open; Winners parlay top 2 (85%) open; Best play top 7 (54%) open.
-Lottery 100: open (3/9 legs won)
-Lottery 10k: open (0/9 legs won)
+Lottery 100: lost (3/9 legs won, killed by Under 249.5 points)
+Lottery 10k: lost (0/9 legs won, killed by Under 237.5 points)
 Lottery 10k: lost (0/6 legs won, killed by Under 4.5 goals, Chicago Blackhawks over 4.5 goals, Pittsburgh Penguins under 1.5 goals)
-Lottery 10k+25: open (1/9 legs won)
-Lottery 10k+50: open (0/8 legs won)
-Lottery 10k+100: open (0/8 legs won)
+Lottery 10k+25: lost (1/9 legs won, killed by Under 237.5 points)
+Lottery 10k+50: lost (0/8 legs won, killed by Under 237.5 points)
+Lottery 10k+100: lost (0/8 legs won, killed by Under 237.5 points)
 Ladder-consistency props (all time): 1000/1191 won (84.0%) vs 86.6% fair, 87.2% price.
 Props 33/41 vs 80.7% claimed.
 
