@@ -5483,6 +5483,86 @@
   "price": "-720",
   "status": "open"
  },
+ "nba:401909283|n:alperen sengun|Rebounds|6+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": -2.9,
+  "gid": "nba:401909283",
+  "imp": 0.9091,
+  "label": "Alperen Sengun: 6+ Rebounds",
+  "league": "nba",
+  "line": "6+",
+  "market": "Rebounds",
+  "name": "Alperen Sengun",
+  "p": 0.848,
+  "p_fair": 0.8832,
+  "price": "-1000",
+  "status": "open"
+ },
+ "nba:401909283|n:cooper flagg|Rebounds|4+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": -3.1,
+  "gid": "nba:401909283",
+  "imp": 0.9091,
+  "label": "Cooper Flagg: 4+ Rebounds",
+  "league": "nba",
+  "line": "4+",
+  "market": "Rebounds",
+  "name": "Cooper Flagg",
+  "p": 0.848,
+  "p_fair": 0.8813,
+  "price": "-1000",
+  "status": "open"
+ },
+ "nba:401909283|n:fred vanvleet|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": 1.2,
+  "gid": "nba:401909283",
+  "imp": 0.8947,
+  "label": "Fred VanVleet: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Fred VanVleet",
+  "p": 0.8513,
+  "p_fair": 0.9053,
+  "price": "-850",
+  "status": "open"
+ },
+ "nba:401909285|n:austin reaves|Points|15+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": -5.2,
+  "gid": "nba:401909285",
+  "imp": 0.9333,
+  "label": "Austin Reaves: 15+ Points",
+  "league": "nba",
+  "line": "15+",
+  "market": "Points",
+  "name": "Austin Reaves",
+  "p": 0.8563,
+  "p_fair": 0.8843,
+  "price": "-1400",
+  "status": "open"
+ },
+ "nba:401909285|n:austin reaves|Pts + Ast|25+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": -6.5,
+  "gid": "nba:401909285",
+  "imp": 0.7826,
+  "label": "Austin Reaves: 25+ Pts + Ast",
+  "league": "nba",
+  "line": "25+",
+  "market": "Pts + Ast",
+  "name": "Austin Reaves",
+  "p": 0.7613,
+  "p_fair": 0.7317,
+  "price": "-360",
+  "status": "open"
+ },
  "nba:401909285|n:brandin podziemski|Pts + Ast|15+": {
   "aid": null,
   "date": "2026-10-30",
@@ -5515,6 +5595,22 @@
   "price": "-1100",
   "status": "open"
  },
+ "nba:401909285|n:luka doncic|Assists|6+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": -5.1,
+  "gid": "nba:401909285",
+  "imp": 0.8551,
+  "label": "Luka Doncic: 6+ Assists",
+  "league": "nba",
+  "line": "6+",
+  "market": "Assists",
+  "name": "Luka Doncic",
+  "p": 0.8517,
+  "p_fair": 0.8114,
+  "price": "-590",
+  "status": "open"
+ },
  "nba:401909285|n:yaxel lendeborg|Points|10+": {
   "aid": null,
   "date": "2026-10-30",
@@ -5545,6 +5641,22 @@
   "p": 0.8567,
   "p_fair": 0.8726,
   "price": "-750",
+  "status": "open"
+ },
+ "nba:401909286|n:dillon brooks|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": -4.2,
+  "gid": "nba:401909286",
+  "imp": 0.9,
+  "label": "Dillon Brooks: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Dillon Brooks",
+  "p": 0.8467,
+  "p_fair": 0.8618,
+  "price": "-900",
   "status": "open"
  },
  "nba:401909286|n:jalen green|Assists|2+": {
@@ -39506,11 +39618,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Brock Boeser",
   "p": 0.8625,
   "p_fair": null,
   "price": "-1500",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892610|n:elias pettersson|Shots on Goal|1+": {
   "aid": null,
@@ -39522,11 +39636,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Elias Pettersson #40",
   "p": 0.8684,
   "p_fair": null,
   "price": "-1800",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892610|n:filip chytil|Shots on Goal|1+": {
   "aid": null,
@@ -39538,11 +39654,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Filip Chytil",
   "p": 0.8658,
   "p_fair": null,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892610|n:ivar stenberg|Shots on Goal|1+": {
   "aid": null,
@@ -39554,11 +39672,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Ivar Stenberg",
   "p": 0.8354,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892610|n:jake debrusk|Shots on Goal|1+": {
   "aid": null,
@@ -39570,11 +39690,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jake DeBrusk",
   "p": 0.8543,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892610|n:jake debrusk|Shots on Goal|2+": {
   "aid": null,
@@ -39586,11 +39708,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jake DeBrusk",
   "p": 0.7283,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892610|n:kiefer sherwood|Shots on Goal|1+": {
   "aid": null,
@@ -39602,11 +39726,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kiefer Sherwood",
   "p": 0.8433,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892610|n:macklin celebrini|Shots on Goal|2+": {
   "aid": null,
@@ -39618,11 +39744,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Macklin Celebrini",
   "p": 0.8606,
   "p_fair": null,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nhl:401892610|n:macklin celebrini|Shots on Goal|3+": {
   "aid": null,
@@ -39634,11 +39762,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Macklin Celebrini",
   "p": 0.7242,
   "p_fair": null,
   "price": "-370",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nhl:401892610|n:mason marchment|Shots on Goal|1+": {
   "aid": null,
@@ -39650,11 +39780,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mason Marchment",
   "p": 0.8543,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892610|n:tyler toffoli|Shots on Goal|1+": {
   "aid": null,
@@ -39666,11 +39798,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Tyler Toffoli",
   "p": 0.8492,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892610|n:will smith|Shots on Goal|2+": {
   "aid": null,
@@ -39682,11 +39816,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Will Smith",
   "p": 0.7269,
   "p_fair": null,
   "price": "-370",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892611|n:jack eichel|Shots on Goal|2+": {
   "aid": null,
@@ -39715,6 +39851,22 @@
   "line": "1+",
   "market": "Shots on Goal",
   "name": "Luke Hughes",
+  "p": 0.8519,
+  "p_fair": null,
+  "price": "-1300",
+  "status": "open"
+ },
+ "nhl:401892611|n:mitchell marner|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": null,
+  "gid": "nhl:401892611",
+  "imp": 0.9286,
+  "label": "Mitchell Marner: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Mitchell Marner",
   "p": 0.8519,
   "p_fair": null,
   "price": "-1300",
