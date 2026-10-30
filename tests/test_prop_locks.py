@@ -60,6 +60,12 @@ class PropLocks(unittest.TestCase):
         rec = self.run_at(later, [game(1, [prop("Zed", 0.99)]), game(4, [prop("Eve", 0.85)])])
         self.assertEqual([L["name"] for L in rec["legs"]], ["Ann", "Eve", "Zed"])  # never replaced; topped up
 
+    def test_ties_at_the_ceiling_go_to_the_shorter_price(self):
+        a, b = prop("Ann", 0.87), prop("Bea", 0.87)
+        a["imp"], b["imp"] = 0.95, 0.99
+        rec = self.run_at(NOON, [game(1, [a]), game(2, [b])])
+        self.assertEqual([L["name"] for L in rec["legs"]], ["Bea", "Ann"])
+
     def test_never_three_from_one_game(self):
         rec = self.run_at(NOON, [game(1, [prop("Ann", 0.95), prop("Bea", 0.94), prop("Cat", 0.93)])])
         self.assertEqual([L["name"] for L in rec["legs"]], ["Ann", "Bea"])

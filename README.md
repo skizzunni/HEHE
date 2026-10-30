@@ -3578,3 +3578,24 @@ on it (never a third). Replayed on 14 days of graded props (2026-10-15 to
 The extra legs hit less often than the first ten but above the daily calls'
 78.7%; 12 of 14 days filled all 15. Today's card is topped up to 15 from
 games that have not started; no locked leg is changed.
+
+**Prop Locks tie-break; three ideas rejected (2026-10-30).**
+
+- *Adopted:* props held at the ceiling all show the same chance, so they
+  now rank by price (shortest first) instead of kickoff time. Replayed:
+  83.0% / 91.0% in the two date halves against 82.0% / 89.2%. That is 3
+  more wins in 211, weak evidence, but a price carries information and a
+  kickoff time does not.
+- *Rejected: per-market ceilings.* NBA Pts + Reb props priced -1000 or
+  shorter won 76% / 74% in the two halves against ~88% for other markets.
+  A ceiling per market, shrunk toward the overall one, was fitted on early
+  dates and scored on later ones at three splits and three shrinkage
+  strengths. It was no better (Brier within 0.0003 either way), and Pts +
+  Reb has never made the Prop Locks card.
+- *Not a bug: soccer Shots losses (2026-10-15).* The zero-shot players'
+  counts sum exactly to ESPN's team totals (11 and 9), so they are real
+  losses.
+- *Stale alert: Safe Locks NBA props (11 of 15).* All 22 Safe Lock props
+  were stated above 92%, before the ceiling. Since then props cannot
+  outrank 90%+ game lines, and the game legs are 90.9% against 91.0%
+  stated on 110.

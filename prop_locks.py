@@ -72,7 +72,11 @@ def candidates(games, starts, now, standard=STANDARD):
                             market=P["market"], line=P["line"], label=P["label"], price=P["price"],
                             p=P["p"], imp=P.get("imp"), fd=P["fd"], where=P.get("where"),
                             quoted=P.get("quoted")))
-    out.sort(key=lambda x: (-x["p"], x["start"] or ""))
+    # Props at the ceiling (props_ledger.CAP) tie on p; the shorter price goes
+    # first. Replayed on 15 days: 83.0% / 91.0% in the two date halves
+    # against 82.0% / 89.2% by kickoff time -- 3 more wins in 211, weak but
+    # the price is information and the kickoff time is not.
+    out.sort(key=lambda x: (-x["p"], -(x.get("imp") or 0), x["start"] or ""))
     return out
 
 
