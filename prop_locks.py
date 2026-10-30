@@ -119,6 +119,31 @@ def update(games, starts, day, now=None, path=None, n=N):
     return rec
 
 
+def attach_alt(rec, games):
+    """Mark each open leg DraftKings pays more for: the same player, stat and
+    line (the props feed's second-book price) against FanDuel's current price
+    for it. The leg itself never changes. Returns how many were marked."""
+    import props_ledger
+    import venues
+    now = {}
+    for g in games or []:
+        for P in g.get("props") or []:
+            now[(g.get("id"), props_ledger.norm_name(P.get("name") or ""), P.get("market"), str(P.get("line")))] = P
+    n = 0
+    for L in (rec or {}).get("legs") or []:
+        L.pop("alt", None)
+        if L.get("status") in ("won", "lost", "void"):
+            continue
+        P = now.get((L.get("gid"), props_ledger.norm_name(L.get("name") or ""), L.get("market"), str(L.get("line"))))
+        a = (P or {}).get("alt") or {}
+        dk, fd = venues.dec(a.get("price")), venues.dec((P or {}).get("price"))
+        if dk and fd and dk > fd + 1e-6:
+            L["alt"] = dict(venue=a.get("book", "DraftKings"), price=a["price"], dec=round(dk, 4),
+                            fd_now=P["price"], gain=round(dk / fd - 1, 4))
+            n += 1
+    return n
+
+
 def _dec(price):
     import venues
     return venues.dec(price)

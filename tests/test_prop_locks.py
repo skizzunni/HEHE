@@ -88,5 +88,20 @@ class PropLocks(unittest.TestCase):
         self.assertEqual(pr["all"]["n"], 2)
 
 
+class Alt(unittest.TestCase):
+    def test_draftkings_marked_only_where_it_pays_more(self):
+        a = dict(prop("Ann", 0.87, price="-500"), alt=dict(book="DraftKings", price="-400"))
+        b = dict(prop("Bea", 0.87, price="-500"), alt=dict(book="DraftKings", price="-600"))
+        games = [game(1, [a]), game(2, [b])]
+        rec = {"legs": [dict(gid="nba:1", name="Ann", market="Points", line="10+", status="open"),
+                        dict(gid="nba:2", name="Bea", market="Points", line="10+", status="open"),
+                        dict(gid="nba:1", name="Ann", market="Points", line="10+", status="won")]}
+        self.assertEqual(PL.attach_alt(rec, games), 1)
+        self.assertEqual(rec["legs"][0]["alt"]["price"], "-400")
+        self.assertAlmostEqual(rec["legs"][0]["alt"]["gain"], round(1.25 / 1.2 - 1, 4))
+        self.assertNotIn("alt", rec["legs"][1])                       # FanDuel -500 already pays more
+        self.assertNotIn("alt", rec["legs"][2])                       # settled
+
+
 if __name__ == "__main__":
     unittest.main()

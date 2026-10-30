@@ -523,6 +523,10 @@ def snapshot():
             _led = props_ledger.load()
             _pl = dict(_pl, legs=[dict(L_, status=(_led.get(L_.get("key")) or {}).get("status", "open"))
                                   for L_ in _pl.get("legs") or []])
+            try:                                # where DraftKings pays more for the same prop
+                prop_locks.attach_alt(_pl, (out["props"].get("today") or {}).get("games"))
+            except Exception:
+                pass
             out["prop_locks"] = dict(today=_pl, record=prop_locks.report(), n=prop_locks.N,
                                      standard=prop_locks.STANDARD, hour=prop_locks.PROP_HOUR)
             out["props_record"] = prop_locks.props_record()

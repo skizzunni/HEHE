@@ -2039,7 +2039,9 @@ function propLocksHTML(){
     + ':00 Eastern and never changed; every leg is graded. Props win often but cost more than game lines (80&ndash;90% props '
     + 'returned &minus;7% per $1), so these are for hitting, not for profit. ' + rec + '</p>'
     + (L.length ? '<ul class="betlegs">' + L.map(x => '<li>' + esc(x.label) + ' <b>' + esc(x.price) + '</b> &middot; '
-        + (100 * x.p).toFixed(0) + '% &middot; ' + esc(x.match || "") + ' ' + res(x.status) + '</li>').join("") + '</ul>'
+        + (100 * x.p).toFixed(0) + '% &middot; ' + esc(x.match || "") + ' ' + res(x.status)
+        + (x.alt ? '<div class="sbn">pays more at <b>' + esc(x.alt.venue) + ' ' + esc(x.alt.price) + '</b> (FanDuel now '
+          + esc(x.alt.fd_now) + ', +' + (100 * x.alt.gain).toFixed(1) + '%)</div>' : '') + '</li>').join("") + '</ul>'
         + copyBtn("Prop Locks", L.map(x => legLine(x.label, x.price, "FanDuel", x.match)))
       : '<p class="empty">Today&rsquo;s Prop Locks are set from ' + (X.hour || 12) + ':00 Eastern.</p>')
     + '</div>';

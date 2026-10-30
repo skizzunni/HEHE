@@ -3613,3 +3613,17 @@ market, not a better price. On 2026-10-29's card, "Under 9.5 goals" showed
 75c against FanDuel's -2000. At Safe Lock prices the real gains are small
 (Bruins +3.5: 94c pays 1.059 against -2000's 1.050, +0.9%). Each one is
 still free money on the same outcome.
+
+**Prop Locks: where DraftKings pays more; maker bids on locks tested
+(2026-10-30).**
+
+- *Adopted:* each open Prop Lock now shows DraftKings' current price for
+  the same player, stat and line when it beats FanDuel's current price for
+  that prop. The leg is unchanged; only the payout moves.
+- *Rejected: resting Kalshi bids on lock-priced legs.* Replayed on 20,557
+  settled Kalshi legs (2026-08-29 to 10-18, halves by date), bids at 83-95c
+  returned -1.0% / +1.0% (n=1,730 / 1,711); with the maker edge filter,
+  +1.1% / -1.9%. That is break-even, so the cards are unchanged. NFL alone
+  held in every slice (+3.7% / +2.2% at 83-95c, +5.7% / +4.5% at 55-83c,
+  edge-filtered), and NFL is already one of the maker tracker's two
+  leagues. Its forward record: 124 realistic fills, +5.1%.
