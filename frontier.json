@@ -763584,6 +763584,24 @@
       "start": "2026-10-30T02:00Z",
       "starters": [],
       "t": "2026-10-29T22:15:55+00:00"
+     },
+     {
+      "probables": {
+       "ANA": [
+        [
+         "Lukas Dostal",
+         "probableStartingGoalie"
+        ]
+       ],
+       "BUF": [
+        [
+         "Colten Ellis",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-30T02:00Z",
+      "t": "2026-10-30T01:24:19+00:00"
      }
     ],
     "nhl:401892609": [
@@ -764396,6 +764414,24 @@
       "start": "2026-10-30T02:00Z",
       "starters": [],
       "t": "2026-10-29T18:55:28+00:00"
+     },
+     {
+      "probables": {
+       "LA": [
+        [
+         "Darcy Kuemper",
+         "probableStartingGoalie"
+        ]
+       ],
+       "OTT": [
+        [
+         "Jonas Johansson",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-30T02:00Z",
+      "t": "2026-10-30T01:24:19+00:00"
      }
     ],
     "nhl:401892610": [
@@ -764785,6 +764821,24 @@
       "start": "2026-10-30T02:00Z",
       "starters": [],
       "t": "2026-10-29T11:58:29+00:00"
+     },
+     {
+      "probables": {
+       "SJ": [
+        [
+         "Yaroslav Askarov",
+         "probableStartingGoalie"
+        ]
+       ],
+       "VAN": [
+        [
+         "Leevi Merilainen",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-10-30T02:00Z",
+      "t": "2026-10-30T01:24:19+00:00"
      }
     ],
     "per:401886131": [
@@ -812123,142 +812177,6 @@
         "Carolina Panthers +15.5",
         "James Madison Dukes to win",
         "Under 254.5 points",
-        "Over 4.5 goals"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "North Texas Mean Green to win",
-        "Over 135.5 points",
-        "Carolina Panthers +12.5",
-        "James Madison Dukes to win"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Tampa Bay Lightning to win",
-        "New Orleans Pelicans to win"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Florida Atlantic Owls +27.5",
-        "Over 134.5 points",
-        "Green Bay Packers under 32.5 points",
-        "James Madison Dukes under 42.5 points",
-        "Over 218.5 points"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Over 69.5 points",
-        "Over 5.5 goals",
-        "Over 228.5 points"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "New Orleans Pelicans to win",
-        "Portland Trail Blazers to win",
-        "Tampa Bay Lightning to win",
-        "Carolina Hurricanes to win",
-        "North Texas Mean Green over 38.5 points"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-29T14:55:29+00:00"
-    },
-    {
-     "policy": "c88e6b87",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "North Texas Mean Green to win",
-        "Carolina Panthers +15.5",
-        "James Madison Dukes to win",
-        "Under 254.5 points",
         "Chicago Blackhawks under 4.5 goals"
        ]
       ],
@@ -820199,6 +820117,125 @@
       ]
      ],
      "t": "2026-10-30T00:54:27+00:00"
+    },
+    {
+     "policy": "c88e6b87",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       []
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Under 247.5 points",
+        "Over 4.5 goals",
+        "Under 8.5 goals",
+        "Vancouver Canucks +4.5"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "San Jose Sharks under 4.5 goals",
+        "Over 222.5 points"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       []
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Portland Trail Blazers to win",
+        "Under 7.5 goals",
+        "Under 7.5 goals",
+        "Under 8.5 goals"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       []
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-30T01:24:06+00:00"
     }
    ]
   }

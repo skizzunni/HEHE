@@ -3252,6 +3252,23 @@
    "tip": "10:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909895|away|FanDuel": {
+   "dec": 3.65,
+   "ev": 0.0216,
+   "fair": 0.2799,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909895",
+   "kind": "value",
+   "league": "nba",
+   "match": "MEM @ POR",
+   "price": "+265",
+   "seen": "2026-10-30T01:23:31+00:00",
+   "side": "away",
+   "start": "2026-10-30T02:00Z",
+   "team": "Memphis Grizzlies",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401856730|away|FanDuel": {
    "dec": 1.7042,
    "ev": 0.0365,
@@ -6797,6 +6814,26 @@
    "prob": 0.365,
    "seen": "2026-10-25T11:42:33+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909895:away": {
+   "ev": 0.0216,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0216,
+     "fair": 0.2799,
+     "id": "nba:401909895",
+     "price": "+265",
+     "side": "away",
+     "spec": null,
+     "team": "Memphis Grizzlies"
+    }
+   ],
+   "payout": 3.65,
+   "prob": 0.2799,
+   "seen": "2026-10-30T01:23:31+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
