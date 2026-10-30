@@ -5597,10 +5597,10 @@
   },
   "props": {
    "fair": {
-    "n": 1206,
+    "n": 1221,
     "said_fair": 86.6,
     "said_price": 87.2,
-    "won": 1014
+    "won": 1026
    },
    "n": 211,
    "said": 82.7,
@@ -5694,22 +5694,22 @@
    },
    {
     "flag": false,
-    "hit": 85.8,
-    "n": 176,
+    "hit": 85.0,
+    "n": 180,
     "name": "props nba Assists",
     "said": 84.5
    },
    {
     "flag": false,
-    "hit": 86.1,
-    "n": 187,
+    "hit": 86.3,
+    "n": 190,
     "name": "props nba Points",
     "said": 85.1
    },
    {
     "flag": false,
-    "hit": 90.5,
-    "n": 105,
+    "hit": 90.7,
+    "n": 107,
     "name": "props nba Pts + Ast",
     "said": 84.7
    },
@@ -5722,8 +5722,8 @@
    },
    {
     "flag": false,
-    "hit": 87.6,
-    "n": 145,
+    "hit": 87.2,
+    "n": 149,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.8
    },
@@ -5736,17 +5736,17 @@
    },
    {
     "flag": false,
-    "hit": 82.2,
-    "n": 90,
+    "hit": 81.5,
+    "n": 92,
     "name": "props nba Rebounds",
     "said": 83.9
    },
    {
     "flag": false,
-    "hit": 84.4,
-    "n": 90,
+    "hit": 84.8,
+    "n": 92,
     "name": "props nba Threes Made",
-    "said": 83.8
+    "said": 83.9
    },
    {
     "flag": false,
@@ -5841,10 +5841,10 @@
    },
    {
     "flag": false,
-    "hit": 93.3,
-    "n": 15,
+    "hit": 93.8,
+    "n": 16,
     "name": "locks nba under",
-    "said": 75.2
+    "said": 75.3
    },
    {
     "flag": false,
@@ -5904,10 +5904,10 @@
    },
    {
     "flag": false,
-    "hit": 93.3,
-    "n": 75,
+    "hit": 93.4,
+    "n": 76,
     "name": "prop locks",
-    "said": 91.1
+    "said": 91.0
    },
    {
     "flag": false,
@@ -5993,9 +5993,9 @@
    }
   },
   "clv": {
-   "avg": 0.42,
-   "beat": 33.3,
-   "n": 18
+   "avg": 0.35,
+   "beat": 38.1,
+   "n": 21
   },
   "day": "2026-10-29",
   "leaks_14d": [],
@@ -6004,7 +6004,7 @@
     "Winnipeg Jets under 3.5 goals (Winnipeg Jets at Tampa Bay Lightning) Winnipeg Jets 4 - Tampa Bay Lightning 6"
    ],
    "n": 11,
-   "open": 7,
+   "open": 6,
    "plays": {
     "best": [
      2,
@@ -6012,9 +6012,18 @@
      "open"
     ]
    },
-   "won": 3
+   "won": 4
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "per",
+    "pick": "Melgar",
+    "price": "-320",
+    "said": 70,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 70%"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [
@@ -6080,21 +6089,21 @@
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 18,
-   "roi": 35.3,
-   "said": 71.3,
-   "won": 18
+   "hit": 95.2,
+   "lost": 1,
+   "n": 21,
+   "roi": 31.2,
+   "said": 70.2,
+   "won": 20
   },
   "picks_by_league": {
    "bra": {
     "hit": 100.0,
     "lost": 0,
-    "n": 2,
-    "roi": 29.1,
-    "said": 73.0,
-    "won": 2
+    "n": 3,
+    "roi": 30.9,
+    "said": 71.7,
+    "won": 3
    },
    "cdr": {
     "hit": 100.0,
@@ -6131,10 +6140,10 @@
    "nba": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 42.0,
-    "said": 68.0,
-    "won": 1
+    "n": 2,
+    "roi": 63.4,
+    "said": 60.0,
+    "won": 2
    },
    "nhl": {
     "hit": 100.0,
@@ -6143,6 +6152,14 @@
     "roi": 55.8,
     "said": 62.0,
     "won": 4
+   },
+   "per": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 70.0,
+    "won": 0
    },
    "swe": {
     "hit": 100.0,
@@ -6163,14 +6180,14 @@
   },
   "props": {
    "fair": {
-    "n": 1206,
+    "n": 1221,
     "said_fair": 86.6,
     "said_price": 87.2,
-    "won": 1014
+    "won": 1026
    },
-   "n": 57,
-   "said": 81.5,
-   "won": 48
+   "n": 74,
+   "said": 82.2,
+   "won": 61
   },
   "safe_locks": {
    "lost": [],
@@ -6205,21 +6222,21 @@
    },
    "agree": {
     "hit": 73.2,
-    "lost": 191,
-    "n": 713,
+    "lost": 192,
+    "n": 716,
     "roi": 0.5,
     "said": 69.4,
-    "won": 522
+    "won": 524
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5519,
-    "market_only": 0.5519,
-    "model_40": 0.5785,
-    "n": 69,
+    "logloss": 0.5534,
+    "market_only": 0.5534,
+    "model_40": 0.5791,
+    "n": 70,
     "weight": 0.0
    },
    "ncaaf": {
