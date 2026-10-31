@@ -46,6 +46,27 @@ class Recording(unittest.TestCase):
         self.assertEqual((e["price_book"], e["price_at"]), ("DraftKings", ago(5)))
         self.assertEqual(e["history"][-1]["price_at"], ago(5))
 
+    def test_compact_history_keeps_first_of_each_version(self):
+        h = [dict(pick="A", price="-150", price_at="t1", t="1"), dict(pick="A", price="-150", price_at="t2", t="2"),
+             dict(pick="A", price="-160", price_at="t3", t="3"), dict(pick="A", price="-160", price_at="t4", t="4")]
+        book = {"x": dict(history=h)}
+        self.assertEqual(ledger.compact_history(book), 2)
+        self.assertEqual([x["t"] for x in book["x"]["history"]], ["1", "3"])
+
+    def test_a_fresher_quote_of_the_same_price_is_no_new_version(self):
+        path = os.path.join(tempfile.mkdtemp(), "ledger.json")
+        start = (NOW + dt.timedelta(hours=3)).isoformat()
+        real, ledger.LEDGER = ledger.LEDGER, path
+        try:
+            for at in (ago(9), ago(4)):
+                row = dict(id="nhl:7", mypick="Boston Bruins", myside="home", myconf=0.62, label="A @ B",
+                           legs=[dict(side="home", price="-160", at=at)],
+                           mkt=dict(start=start), price_at=at, price_book="DraftKings")
+                ledger.record(dict(dates=("20261020", "20261021"), slots=dict(today={"nhl": [row]}, tomorrow={})))
+            self.assertEqual(len(ledger.load()["nhl:7"]["history"]), 1)
+        finally:
+            ledger.LEDGER = real
+
     def test_stale_price_never_recorded(self):
         self.assertIsNone(self.record(ago(20)))
 

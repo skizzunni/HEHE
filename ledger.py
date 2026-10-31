@@ -94,6 +94,31 @@ def save(d):
 
 
 # ------------------------------------------------------------------ record
+VERSION_KEYS = ("pick", "dc", "price", "price_market", "price_book", "conf", "policy")
+
+
+def _version(h):
+    return {k: h.get(k) for k in VERSION_KEYS}
+
+
+def compact_history(book):
+    """Collapse runs of history entries that show the same version (only the
+    quote time moved) to the first of each run -- when that version was first
+    shown. Returns how many entries were dropped."""
+    dropped = 0
+    for e in book.values():
+        h = e.get("history") if isinstance(e, dict) else None
+        if not h:
+            continue
+        keep = [h[0]]
+        for x in h[1:]:
+            if _version(x) != _version(keep[-1]):
+                keep.append(x)
+        dropped += len(h) - len(keep)
+        e["history"] = keep
+    return dropped
+
+
 # which code made a call: the commit the rebuild runs on (GitHub Actions)
 POLICY = (os.environ.get("GITHUB_SHA") or "")[:7] or None
 
@@ -246,8 +271,11 @@ def record(state=None):
                             p_model_away=r.get("p_model_away"),
                             prices={L.get("side"): L.get("price") for L in r.get("legs") or []
                                     if L.get("side")})
-                if not hist or {k: hist[-1].get(k) for k in ("pick", "dc", "price", "price_market", "price_book", "price_at", "conf", "policy")} != \
-                        {k: snap.get(k) for k in ("pick", "dc", "price", "price_market", "price_book", "price_at", "conf", "policy")}:
+                # a new version is a change in what was shown -- not a fresher
+                # quote of the same price: price_at moves every build, and
+                # counting it made ~500 copies per game (ledger.json passed
+                # GitHub's 100 MB limit on 2026-10-30)
+                if not hist or _version(hist[-1]) != _version(snap):
                     hist.append(snap)
                 entry["history"] = hist
                 if "first" not in prev:

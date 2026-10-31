@@ -3641,3 +3641,14 @@ The Safe Locks Winners parlay (9 of 13 days against 84% stated) lost on
 10-20, 10-22, 10-25 and 10-26. All but 10-20 had a pre-ceiling prop (92-97%
 stated) among its top legs. Since 10-27 the top legs have been game lines,
 and on the 10 days whose top two were both game lines, only one leg lost.
+
+**Ledger history: one entry per version (2026-10-31 fix).** From 2026-10-30
+every board build failed: ledger.json reached 100.09 MB, over GitHub's file
+limit, so the bot could not push and the page stopped updating. The
+append-only history counted `price_at`, the time a price was fetched, as part
+of a version. That moves every build, so each call kept about 500 copies of
+the same version (79 of the 80 MB). A version is now a change in what was
+shown (pick, double chance, price, market, book, chance, policy). The
+existing histories were collapsed to the first entry of each run, when that
+version was first shown: 160,727 duplicates dropped, 105 MB to 10.9 MB, no
+version lost.
