@@ -3025,7 +3025,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T01:22:26+00:00",
+      "checked_at": "2026-10-31T01:27:40+00:00",
       "conf": 74,
       "dc": true,
       "gate": {
@@ -3040,7 +3040,7 @@
       "price_at": "2026-10-31T01:22:24+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193666247:15735562",
-      "prob_at": "2026-10-31T01:22:04+00:00",
+      "prob_at": "2026-10-31T01:27:20+00:00",
       "rank": 1,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -3076,7 +3076,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T01:22:26+00:00",
+      "checked_at": "2026-10-31T01:27:40+00:00",
       "conf": 72,
       "dc": false,
       "gate": {
@@ -3088,10 +3088,10 @@
       "match": "KENT @ SAC",
       "pick": "Kent State Golden Flashes",
       "price": "-278",
-      "price_at": "2026-10-31T01:22:04+00:00",
+      "price_at": "2026-10-31T01:27:20+00:00",
       "price_market": "moneyline",
       "price_ref": "34876646:0ML86864930_3",
-      "prob_at": "2026-10-31T01:22:04+00:00",
+      "prob_at": "2026-10-31T01:27:20+00:00",
       "rank": 2,
       "ready": true,
       "side": "away",
@@ -3126,7 +3126,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T01:22:26+00:00",
+      "checked_at": "2026-10-31T01:27:40+00:00",
       "conf": 70,
       "dc": false,
       "gate": {
@@ -3138,10 +3138,10 @@
       "match": "DOR @ PAZ",
       "pick": "Club Atl\u00e9tico La Paz",
       "price": "-320",
-      "price_at": "2026-10-31T01:22:04+00:00",
+      "price_at": "2026-10-31T01:27:20+00:00",
       "price_market": "moneyline",
       "price_ref": "34897985:0ML86922742_1",
-      "prob_at": "2026-10-31T01:22:04+00:00",
+      "prob_at": "2026-10-31T01:27:20+00:00",
       "rank": 3,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -3177,7 +3177,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T01:22:26+00:00",
+      "checked_at": "2026-10-31T01:27:40+00:00",
       "conf": 61,
       "dc": false,
       "gate": {
@@ -3189,13 +3189,12 @@
       "match": "DEN @ PHX",
       "pick": "Denver Nuggets",
       "price": "-175",
-      "price_at": "2026-10-31T01:22:04+00:00",
+      "price_at": "2026-10-31T01:27:20+00:00",
       "price_market": "moneyline",
       "price_ref": "34516258:0ML85859654_3",
-      "prob_at": "2026-10-31T01:22:04+00:00",
+      "prob_at": "2026-10-31T01:27:20+00:00",
       "rank": 4,
-      "ready": false,
-      "reason": "awaiting this game's price after its lineup/news change",
+      "ready": true,
       "side": "away",
       "start": "2026-10-31T02:00Z"
      },
@@ -3241,7 +3240,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T01:22:26+00:00",
+      "checked_at": "2026-10-31T01:27:40+00:00",
       "conf": 58,
       "dc": false,
       "gate": {
@@ -3253,10 +3252,10 @@
       "match": "LAL @ GS",
       "pick": "Los Angeles Lakers",
       "price": "-155",
-      "price_at": "2026-10-31T01:22:04+00:00",
+      "price_at": "2026-10-31T01:27:20+00:00",
       "price_market": "moneyline",
       "price_ref": "34515422:0ML85857628_3",
-      "prob_at": "2026-10-31T01:22:04+00:00",
+      "prob_at": "2026-10-31T01:27:20+00:00",
       "rank": 5,
       "ready": true,
       "side": "away",
@@ -3285,16 +3284,14 @@
    ],
    "candidate_news": {},
    "candidate_observations": {},
-   "frozen": [
-    "nba"
-   ],
+   "frozen": [],
    "news": {
     "nba": "2026-10-31T01:22:26+00:00"
    },
    "shadow_watch": {
     "best_ceiling": null,
-    "checks": 5,
-    "last": "2026-10-31T01:22:26+00:00",
+    "checks": 6,
+    "last": "2026-10-31T01:27:40+00:00",
     "max_ready": 0,
     "reasons": {}
    }
