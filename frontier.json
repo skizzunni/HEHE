@@ -827197,6 +827197,11 @@
       "probables": {},
       "start": "2026-10-31T13:20Z",
       "t": "2026-10-31T13:12:45+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-31T13:30Z",
+      "t": "2026-10-31T13:25:00+00:00"
      }
     ],
     "atp:187336": [
@@ -827209,6 +827214,11 @@
       "probables": {},
       "start": "2026-10-31T13:30Z",
       "t": "2026-10-31T13:12:45+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-31T13:40Z",
+      "t": "2026-10-31T13:25:00+00:00"
      }
     ],
     "atp:187337": [
@@ -827216,6 +827226,11 @@
       "probables": {},
       "start": "2026-10-31T14:30Z",
       "t": "2026-10-31T04:07:37+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-31T14:40Z",
+      "t": "2026-10-31T13:25:00+00:00"
      }
     ],
     "atp:187338": [
@@ -827273,6 +827288,11 @@
       "probables": {},
       "start": "2026-10-31T15:00Z",
       "t": "2026-10-31T04:07:37+00:00"
+     },
+     {
+      "probables": {},
+      "start": "2026-10-31T15:30Z",
+      "t": "2026-10-31T13:25:00+00:00"
      }
     ],
     "atp:187344": [
@@ -828955,6 +828975,58 @@
       "start": "2026-10-31T14:00Z",
       "starters": [],
       "t": "2026-10-31T09:34:32+00:00"
+     },
+     {
+      "injuries": [],
+      "probables": {},
+      "start": "2026-10-31T14:00Z",
+      "starters": [
+       [
+        "BOL",
+        "Lukasz Skorupski"
+       ],
+       [
+        "BOL",
+        "Juan Miranda"
+       ],
+       [
+        "BOL",
+        "Nicol\u00f3 Casale"
+       ],
+       [
+        "BOL",
+        "Nicol\u00f2 Cambiaghi"
+       ],
+       [
+        "BOL",
+        "Jens Odgaard"
+       ],
+       [
+        "BOL",
+        "Martin Vit\u00edk"
+       ],
+       [
+        "BOL",
+        "Nadir Zortea"
+       ],
+       [
+        "BOL",
+        "Arthur Theate"
+       ],
+       [
+        "BOL",
+        "Tommaso Pobega"
+       ],
+       [
+        "BOL",
+        "Lewis Ferguson"
+       ],
+       [
+        "BOL",
+        "Federico Bernardeschi"
+       ]
+      ],
+      "t": "2026-10-31T13:25:00+00:00"
      }
     ],
     "ita:401874990": [
@@ -836315,6 +836387,75 @@
       "start": "2026-11-01T02:00Z",
       "starters": [],
       "t": "2026-10-31T09:34:32+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "COL",
+        "Josh Manson",
+        "Out",
+        "D"
+       ],
+       [
+        "COL",
+        "Logan O'Connor",
+        "Day-To-Day",
+        "RW"
+       ],
+       [
+        "COL",
+        "Zachary L'Heureux",
+        "Injured Reserve",
+        "LW"
+       ],
+       [
+        "CGY",
+        "Brennan Othmann",
+        "Day-To-Day",
+        "LW"
+       ],
+       [
+        "CGY",
+        "Connor Zary",
+        "Out",
+        "C"
+       ],
+       [
+        "CGY",
+        "Devin Cooley",
+        "Injured Reserve",
+        "G"
+       ],
+       [
+        "CGY",
+        "Jonathan Huberdeau",
+        "Injured Reserve",
+        "LW"
+       ],
+       [
+        "CGY",
+        "Samuel Honzek",
+        "Injured Reserve",
+        "LW"
+       ]
+      ],
+      "probables": {
+       "CGY": [
+        [
+         "Arsenii Sergeev",
+         "probableStartingGoalie"
+        ]
+       ],
+       "COL": [
+        [
+         "Mackenzie Blackwood",
+         "probableStartingGoalie"
+        ]
+       ]
+      },
+      "start": "2026-11-01T02:00Z",
+      "starters": [],
+      "t": "2026-10-31T13:25:00+00:00"
      }
     ],
     "nor:401843467": [
@@ -1026933,6 +1027074,142 @@
       ]
      ],
      "t": "2026-10-31T13:19:21+00:00"
+    },
+    {
+     "policy": "badc93c4",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "San Antonio Spurs to win",
+        "Western Michigan Broncos to win",
+        "Barcelona to win",
+        "LA Galaxy or draw",
+        "Texas State Bobcats +26.5"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Missouri Tigers to win",
+        "Penn State Nittany Lions to win",
+        "San Antonio Spurs to win",
+        "Barcelona to win"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Duke Blue Devils to win",
+        "Oregon State Beavers to win"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Missouri Tigers to win",
+        "Penn State Nittany Lions to win",
+        "Memphis Grizzlies to win",
+        "Auburn Tigers over 14.5 points",
+        "Rosenborg or draw"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Florida State Seminoles to win",
+        "Oregon State Beavers to win",
+        "Under 246.5 points"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Florida State Seminoles to win",
+        "Oregon State Beavers to win",
+        "Boston Bruins to win",
+        "Cleveland Cavaliers to win",
+        "Missouri Tigers to win"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-10-31T13:24:24+00:00"
     }
    ]
   }
