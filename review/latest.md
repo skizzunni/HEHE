@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 44-10 (81.5% vs 73.6% claimed, ROI +4.9%).
-Closing line value: +0.52 points on 54 picks; beat the close on 46.3%.
+Picks 46-10 (82.1% vs 74.0% claimed, ROI +5.3%).
+Closing line value: +0.51 points on 56 picks; beat the close on 48.2%.
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST epl Manchester City at 79%: margin 1 · the book had my side favoured too · called at 79%
 - LOST epl Sunderland at 69%: margin 2 · the book had my side favoured too · called at 69%
@@ -17,13 +17,13 @@ Safe Locks 1/11 won, 10 open; Winners parlay top 2 (85%) open; Best play top 7 (
 Lottery 100: lost (0/6 legs won, killed by Notre Dame Fighting Irish -35.5)
 Lottery 100: open (0/6 legs won)
 Lottery 100: open (0/8 legs won)
-Lottery 10k: lost (0/9 legs won, killed by Navy Midshipmen +17.5)
+Lottery 10k: lost (0/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Lottery 10k: open (0/11 legs won)
 Lottery 10k: open (0/10 legs won)
-Lottery 10k+25: lost (0/9 legs won, killed by Navy Midshipmen +17.5)
-Lottery 10k+50: lost (0/8 legs won, killed by Navy Midshipmen +17.5)
-Lottery 10k+100: lost (0/8 legs won, killed by Navy Midshipmen +17.5)
+Lottery 10k+25: lost (0/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
+Lottery 10k+50: lost (0/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
+Lottery 10k+100: lost (0/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Ladder-consistency props (all time): 1110/1327 won (83.6%) vs 86.6% fair, 87.2% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=81), ncaaf 0.40 (n=117), nhl 0.00 (n=99)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=81), ncaaf 0.40 (n=118), nhl 0.00 (n=99)
