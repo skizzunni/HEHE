@@ -1059,6 +1059,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26OCT31TXSTBSU-BSU"
   },
+  "KXNCAAFGAME-26OCT31UNMSJSU-UNM|YES": {
+   "ask": 0.86,
+   "bid": 0.85,
+   "cost": 0.8523,
+   "edge": 0.0104,
+   "fair": 0.8612,
+   "id": "ncaaf:401864529",
+   "label": "New Mexico Lobos",
+   "league": "ncaaf",
+   "match": "UNM @ SJSU",
+   "posted": "2026-10-31T19:58:09+00:00",
+   "queue": 31194.47,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "New Mexico Lobos"
+   },
+   "start": "2026-10-31T20:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26OCT31UNMSJSU-UNM"
+  },
   "KXNCAAFGAME-26OCT31UTEPNDSU-NDSU|YES": {
    "ask": 0.95,
    "bid": 0.94,
@@ -6678,6 +6699,27 @@
    "start": "2026-10-31T20:15Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT31PURPSU-56"
+  },
+  "KXNCAAFTOTAL-26OCT31PURPSU-57|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401858506",
+   "label": "under 56.5",
+   "league": "ncaaf",
+   "match": "PUR @ PSU",
+   "posted": "2026-10-31T19:58:09+00:00",
+   "queue": 62240.4,
+   "side": "NO",
+   "spec": {
+    "line": 56.5,
+    "t": "under"
+   },
+   "start": "2026-10-31T20:15Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT31PURPSU-57"
   },
   "KXNCAAFTOTAL-26OCT31STANLOU-61|NO": {
    "ask": 0.51,
