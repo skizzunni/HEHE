@@ -6563,9 +6563,9 @@
    }
   },
   "clv": {
-   "avg": 0.65,
-   "beat": 50.4,
-   "n": 119
+   "avg": 0.62,
+   "beat": 49.2,
+   "n": 122
   },
   "day": "2026-10-31",
   "leaks_14d": [
@@ -6793,44 +6793,49 @@
    {
     "killed_by": [
      "North Dakota State Bison -30.5",
+     "Purdue Boilermakers +10.5",
      "Over 44.5 points"
     ],
     "legs": 6,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Nevada Wolf Pack +16.5"
+    ],
     "legs": 8,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 0
    },
    {
     "killed_by": [
      "Navy Midshipmen +17.5",
+     "Nevada Wolf Pack +10.5",
      "Bowling Green Falcons +6.5",
      "UTEP Miners +14.5",
      "Auburn Tigers +7.5"
     ],
     "legs": 9,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 1
    },
    {
     "killed_by": [
+     "Purdue Boilermakers +10.5",
      "Over 44.5 points",
      "Over 8.5 goals",
      "Over 55.5 points",
      "Over 55.5 points"
     ],
     "legs": 11,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 2
@@ -6852,12 +6857,13 @@
    {
     "killed_by": [
      "Navy Midshipmen +17.5",
+     "Nevada Wolf Pack +10.5",
      "Bowling Green Falcons +6.5",
      "UTEP Miners +14.5",
      "Auburn Tigers +7.5"
     ],
     "legs": 9,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+25",
     "won": 1
@@ -6865,12 +6871,13 @@
    {
     "killed_by": [
      "Navy Midshipmen +17.5",
+     "Nevada Wolf Pack +10.5",
      "Bowling Green Falcons +6.5",
      "UTEP Miners +14.5",
      "Over 47.5 points"
     ],
     "legs": 8,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+50",
     "won": 1
@@ -6878,23 +6885,24 @@
    {
     "killed_by": [
      "Navy Midshipmen +17.5",
+     "Nevada Wolf Pack +10.5",
      "Bowling Green Falcons +6.5",
      "UTEP Miners +14.5"
     ],
     "legs": 8,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+100",
     "won": 1
    }
   ],
   "picks": {
-   "hit": 80.7,
+   "hit": 81.1,
    "lost": 23,
-   "n": 119,
-   "roi": 5.6,
-   "said": 73.2,
-   "won": 96
+   "n": 122,
+   "roi": 6.0,
+   "said": 73.4,
+   "won": 99
   },
   "picks_by_league": {
    "arg": {
@@ -6946,12 +6954,12 @@
     "won": 1
    },
    "ecu": {
-    "hit": 50.0,
+    "hit": 66.7,
     "lost": 1,
-    "n": 2,
-    "roi": -36.5,
-    "said": 77.0,
-    "won": 1
+    "n": 3,
+    "roi": -15.8,
+    "said": 76.7,
+    "won": 2
    },
    "efl1": {
     "hit": 90.0,
@@ -7066,12 +7074,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 93.3,
+    "hit": 93.8,
     "lost": 2,
-    "n": 30,
-    "roi": 26.0,
-    "said": 74.3,
-    "won": 28
+    "n": 32,
+    "roi": 25.4,
+    "said": 75.1,
+    "won": 30
    },
    "ned": {
     "hit": 50.0,
@@ -7145,9 +7153,9 @@
     "said_price": 87.2,
     "won": 1122
    },
-   "n": 51,
-   "said": 80.3,
-   "won": 43
+   "n": 52,
+   "said": 80.0,
+   "won": 44
   },
   "safe_locks": {
    "lost": [],
@@ -7176,12 +7184,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.4,
+    "hit": 74.5,
     "lost": 224,
-    "n": 874,
+    "n": 877,
     "roi": 1.4,
-    "said": 70.0,
-    "won": 650
+    "said": 70.1,
+    "won": 653
    }
   },
   "weights": {
@@ -7197,10 +7205,10 @@
    "ncaaf": {
     "fitted": 0.25,
     "held_out": false,
-    "logloss": 0.5976,
-    "market_only": 0.6021,
-    "model_40": 0.5986,
-    "n": 147,
+    "logloss": 0.5922,
+    "market_only": 0.5961,
+    "model_40": 0.5936,
+    "n": 149,
     "weight": 0.0
    },
    "nhl": {
