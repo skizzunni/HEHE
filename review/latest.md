@@ -28,12 +28,12 @@ Lottery 100: lost (1/6 legs won, killed by Over 44.5 points)
 Lottery 100: open (0/8 legs won)
 Lottery 10k: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5, Auburn Tigers +7.5)
 Lottery 10k: lost (1/11 legs won, killed by Over 44.5 points)
-Lottery 10k: lost (0/10 legs won, killed by Over 55.5 points, Texas Tech Red Raiders -11.5)
+Lottery 10k: lost (0/10 legs won, killed by Over 55.5 points, Over 54.5 points, Texas Tech Red Raiders -11.5, Georgia State Panthers -10.5)
 Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5, Auburn Tigers +7.5)
 Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Ladder-consistency props (all time): 1122/1342 won (83.6%) vs 86.6% fair, 87.2% price.
-Props 28/32 vs 82.1% claimed.
+Props 29/33 vs 82.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.40 (n=129), nhl 0.00 (n=103)
