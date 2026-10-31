@@ -6549,9 +6549,9 @@
    }
   },
   "clv": {
-   "avg": 0.62,
-   "beat": 50.0,
-   "n": 18
+   "avg": 0.43,
+   "beat": 45.0,
+   "n": 20
   },
   "day": "2026-10-31",
   "leaks_14d": [],
@@ -6568,7 +6568,16 @@
    },
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "rsa",
+    "pick": "Sekhukhune United FC",
+    "price": "-260",
+    "said": 68,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -6644,12 +6653,12 @@
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 18,
-   "roi": 30.1,
-   "said": 72.7,
-   "won": 18
+   "hit": 95.0,
+   "lost": 1,
+   "n": 20,
+   "roi": 23.0,
+   "said": 72.8,
+   "won": 19
   },
   "picks_by_league": {
    "aus": {
@@ -6700,6 +6709,14 @@
     "said": 72.8,
     "won": 6
    },
+   "rsa": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -40.9,
+    "said": 74.0,
+    "won": 1
+   },
    "uru": {
     "hit": 100.0,
     "lost": 0,
@@ -6747,12 +6764,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.0,
-    "lost": 201,
-    "n": 773,
-    "roi": 1.4,
+    "hit": 73.9,
+    "lost": 202,
+    "n": 775,
+    "roi": 1.3,
     "said": 69.6,
-    "won": 572
+    "won": 573
    }
   },
   "weights": {
