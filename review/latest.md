@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 65-14 (82.3% vs 73.7% claimed, ROI +6.3%).
-Closing line value: +0.53 points on 79 picks; beat the close on 50.6%.
+Picks 66-15 (81.5% vs 73.2% claimed, ROI +5.8%).
+Closing line value: +0.51 points on 81 picks; beat the close on 49.4%.
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST epl Manchester City at 79%: margin 1 · the book had my side favoured too · called at 79%
 - LOST epl Sunderland at 69%: margin 2 · the book had my side favoured too · called at 69%
@@ -12,6 +12,7 @@ Closing line value: +0.53 points on 79 picks; beat the close on 50.6%.
 - LOST ncaaf SMU Mustangs at 75%: margin 3 · the book had my side favoured too · called at 75%
 - LOST ned Feyenoord Rotterdam at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST nhl Detroit Red Wings at 52%: margin 1 · the book had my side favoured too · called at 52%
+- LOST nhl New York Islanders at 50%: margin 4 · the book had my side favoured too · called at 50%
 - LOST nor Aalesund at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST rsa Sekhukhune United FC at 68%: margin 1 · the book had my side favoured too · called at 68%
 - LOST rsa Stellenbosch at 80%: margin 2 · the book had my side favoured too · called at 80%
@@ -31,4 +32,4 @@ Ladder-consistency props (all time): 1110/1327 won (83.6%) vs 86.6% fair, 87.2% 
 Props 8/9 vs 79.6% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=81), ncaaf 0.40 (n=128), nhl 0.00 (n=101)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=81), ncaaf 0.40 (n=129), nhl 0.00 (n=102)
