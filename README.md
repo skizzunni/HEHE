@@ -3675,7 +3675,8 @@ Counted per game, because alternate totals share a game: -10.2 points over
 131 games (bootstrap 95% -16.7 to -4.0; halves -7.5 and -14.2). Controls on
 the same data: NFL unders +0.3, NFL overs -0.7, college overs +4.4.
 `locks.EXCLUDED` keeps them out of everything `locks.build` makes: Locks,
-Safe Locks, the 2x / 3x / 5x tickets and the challenge. Cards already set
+Safe Locks, the 2x / 3x / 5x tickets and the challenge, and from the
+Lottery's own leg pool (`lottery._game_legs`, from 2026-10-31). Cards already set
 are not changed. On the live cards, college unders were 14 of 17 on Locks
 (80.6% stated) and 6 of 6 on Safe Locks, too few to judge either way.
 Checked against multiple testing (2026-10-31): every league and bet type

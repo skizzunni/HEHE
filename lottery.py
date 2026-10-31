@@ -129,6 +129,8 @@ def _game_legs(rows, soccer_keys, labels, FD, KB=None):
             d = decimal(price)
             if not ref or not d or not LEG_DEC[0] <= d <= LEG_DEC[1]:
                 continue
+            if (g["league"], L["spec"].get("t")) in locks.EXCLUDED:
+                continue                        # priced above what they win (locks.EXCLUDED)
             k = None
             if KB:
                 try:
