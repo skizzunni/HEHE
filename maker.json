@@ -950,6 +950,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26OCT31NIUUNLV-UNLV"
   },
+  "KXNCAAFGAME-26OCT31ORSTFRES-ORST|YES": {
+   "ask": 0.69,
+   "bid": 0.67,
+   "cost": 0.6739,
+   "edge": 0.0032,
+   "fair": 0.6761,
+   "id": "ncaaf:401860924",
+   "label": "Oregon State Beavers",
+   "league": "ncaaf",
+   "match": "ORST @ FRES",
+   "posted": "2026-10-31T14:32:31+00:00",
+   "queue": 16660.12,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Oregon State Beavers"
+   },
+   "start": "2026-11-01T03:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26OCT31ORSTFRES-ORST"
+  },
   "KXNCAAFGAME-26OCT31OSUUSC-OSU|YES": {
    "ask": 0.69,
    "bid": 0.68,
@@ -5768,6 +5789,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT31AUBMISS-58"
   },
+  "KXNCAAFTOTAL-26OCT31AUBMISS-59|NO": {
+   "ask": 0.52,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401856735",
+   "label": "under 58.5",
+   "league": "ncaaf",
+   "match": "AUB @ MISS",
+   "posted": "2026-10-31T14:32:31+00:00",
+   "queue": 140889.78,
+   "side": "NO",
+   "spec": {
+    "line": 58.5,
+    "t": "under"
+   },
+   "start": "2026-10-31T16:45Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT31AUBMISS-59"
+  },
   "KXNCAAFTOTAL-26OCT31BCDUKE-50|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -5998,6 +6040,27 @@
    "start": "2026-10-31T19:00Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT31LTUSA-59"
+  },
+  "KXNCAAFTOTAL-26OCT31MIAUNC-54|NO": {
+   "ask": 0.52,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401858282",
+   "label": "under 53.5",
+   "league": "ncaaf",
+   "match": "MIA @ UNC",
+   "posted": "2026-10-31T14:32:31+00:00",
+   "queue": 91513.45,
+   "side": "NO",
+   "spec": {
+    "line": 53.5,
+    "t": "under"
+   },
+   "start": "2026-10-31T23:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT31MIAUNC-54"
   },
   "KXNCAAFTOTAL-26OCT31MICHRUTG-46|NO": {
    "ask": 0.51,
@@ -6355,6 +6418,27 @@
    "start": "2026-10-31T19:45Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT31UVAWAKE-49"
+  },
+  "KXNCAAFTOTAL-26OCT31WASHNEB-50|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401858504",
+   "label": "over 49.5",
+   "league": "ncaaf",
+   "match": "WASH @ NEB",
+   "posted": "2026-10-31T14:32:31+00:00",
+   "queue": 8809.4,
+   "side": "YES",
+   "spec": {
+    "line": 49.5,
+    "t": "over"
+   },
+   "start": "2026-11-01T00:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT31WASHNEB-50"
   },
   "KXNCAAFTOTAL-26OCT31WASHNEB-51|NO": {
    "ask": 0.51,

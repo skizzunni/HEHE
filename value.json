@@ -3726,6 +3726,23 @@
    "tip": "3:30 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401858501|away|FanDuel": {
+   "dec": 12.0,
+   "ev": 0.0194,
+   "fair": 0.0849,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401858501",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "MINN @ IU",
+   "price": "+1100",
+   "seen": "2026-10-31T14:32:31+00:00",
+   "side": "away",
+   "start": "2026-10-31T19:30Z",
+   "team": "Minnesota Golden Gophers",
+   "tip": "3:30 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401858506|away|FanDuel": {
    "dec": 4.5,
    "ev": 0.0433,
@@ -5775,6 +5792,28 @@
    "tip": "10:00 PM",
    "venue": "FanDuel"
   },
+  "nhl:401892617|sure": {
+   "id": "nhl:401892617",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "-112",
+     "stake_share": 0.5303,
+     "team": "Edmonton Oilers",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "+114",
+     "stake_share": 0.4697,
+     "team": "New York Islanders",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "EDM @ NYI",
+   "profit": 0.0052,
+   "seen": "2026-10-31T14:32:31+00:00"
+  },
   "nhl:401892621|home|Kalshi": {
    "dec": 2.588,
    "ev": 0.0108,
@@ -7271,6 +7310,26 @@
    "prob": 0.4773,
    "seen": "2026-10-30T04:05:30+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401858501:away": {
+   "ev": 0.0188,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0194,
+     "fair": 0.0849,
+     "id": "ncaaf:401858501",
+     "price": "+1100",
+     "side": "away",
+     "spec": null,
+     "team": "Minnesota Golden Gophers"
+    }
+   ],
+   "payout": 12.0,
+   "prob": 0.0849,
+   "seen": "2026-10-31T14:32:31+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
