@@ -1,12 +1,13 @@
 # Review 2026-10-30
 
-Picks 25-10 (71.4% vs 69.8% claimed, ROI -5.9%).
-Closing line value: +0.29 points on 35 picks; beat the close on 54.3%.
+Picks 26-11 (70.3% vs 69.9% claimed, ROI -7.5%).
+Closing line value: +0.28 points on 37 picks; beat the close on 54.1%.
 - LOST arg Huracán at 73%: margin 2 · the book had my side favoured too · called at 73%
 - LOST aut Grazer AK at 66%: margin 4 · the book had my side favoured too · called at 66%
 - LOST esp Villarreal at 67%: margin 1 · the book had my side favoured too · called at 67%
 - LOST fra Lens at 65%: margin 1 · the book had my side favoured too · called at 65%
 - LOST ger Mainz at 70%: margin 3 · the book had my side favoured too · called at 70%
+- LOST mex Querétaro at 68%: margin 2 · the book had my side favoured too · called at 68%
 - LOST nba New York Knicks at 53%: margin 5 · the book had my side favoured too · called at 53%
 - LOST nba Toronto Raptors at 66%: margin 7 · the book had my side favoured too · called at 66%
 - LOST nba Houston Rockets at 66%: margin 5 · the book had my side favoured too · called at 66%
@@ -18,4 +19,4 @@ Ladder-consistency props (all time): 1092/1302 won (83.9%) vs 86.6% fair, 87.2% 
 Props 57/69 vs 82.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=79), ncaaf 0.40 (n=114), nhl 0.00 (n=99)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=79), ncaaf 0.40 (n=115), nhl 0.00 (n=99)

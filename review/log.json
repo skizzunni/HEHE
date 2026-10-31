@@ -6104,10 +6104,10 @@
    },
    {
     "flag": false,
-    "hit": 42.7,
-    "n": 232,
+    "hit": 42.5,
+    "n": 233,
     "name": "value bets",
-    "said": 44.4
+    "said": 44.3
    },
    {
     "flag": false,
@@ -6187,9 +6187,9 @@
    }
   },
   "clv": {
-   "avg": 0.29,
-   "beat": 54.3,
-   "n": 35
+   "avg": 0.28,
+   "beat": 54.1,
+   "n": 37
   },
   "day": "2026-10-30",
   "leaks_14d": [],
@@ -6249,6 +6249,14 @@
    },
    {
     "against_market": false,
+    "league": "mex",
+    "pick": "Quer\u00e9taro",
+    "price": "-270",
+    "said": 68,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   },
+   {
+    "against_market": false,
     "league": "nba",
     "pick": "New York Knicks",
     "price": "-122",
@@ -6290,12 +6298,12 @@
   ],
   "lottery": [],
   "picks": {
-   "hit": 71.4,
-   "lost": 10,
-   "n": 35,
-   "roi": -5.9,
-   "said": 69.8,
-   "won": 25
+   "hit": 70.3,
+   "lost": 11,
+   "n": 37,
+   "roi": -7.5,
+   "said": 69.9,
+   "won": 26
   },
   "picks_by_league": {
    "arg": {
@@ -6410,6 +6418,14 @@
     "said": 71.0,
     "won": 2
    },
+   "mex": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 68.0,
+    "won": 0
+   },
    "nba": {
     "hit": 62.5,
     "lost": 3,
@@ -6417,6 +6433,14 @@
     "roi": -13.1,
     "said": 67.4,
     "won": 5
+   },
+   "ncaaf": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 29.0,
+    "said": 76.0,
+    "won": 1
    },
    "nhl": {
     "hit": 33.3,
@@ -6490,11 +6514,11 @@
    },
    "agree": {
     "hit": 73.1,
-    "lost": 202,
-    "n": 752,
-    "roi": 0.4,
+    "lost": 203,
+    "n": 754,
+    "roi": 0.3,
     "said": 69.5,
-    "won": 550
+    "won": 551
    }
   },
   "weights": {
@@ -6510,10 +6534,10 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6456,
-    "market_only": 0.661,
-    "model_40": 0.6456,
-    "n": 114,
+    "logloss": 0.6428,
+    "market_only": 0.6577,
+    "model_40": 0.6428,
+    "n": 115,
     "weight": 0.4
    },
    "nhl": {
