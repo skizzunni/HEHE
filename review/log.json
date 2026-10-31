@@ -6556,9 +6556,9 @@
    }
   },
   "clv": {
-   "avg": 0.52,
+   "avg": 0.54,
    "beat": 50.0,
-   "n": 82
+   "n": 84
   },
   "day": "2026-10-31",
   "leaks_14d": [],
@@ -6576,6 +6576,14 @@
    "won": 2
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "ecu",
+    "pick": "Emelec",
+    "price": "-475",
+    "said": 78,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 78%"
+   },
    {
     "against_market": false,
     "league": "efl1",
@@ -6804,12 +6812,12 @@
    }
   ],
   "picks": {
-   "hit": 80.5,
-   "lost": 16,
-   "n": 82,
-   "roi": 4.5,
-   "said": 73.0,
-   "won": 66
+   "hit": 79.8,
+   "lost": 17,
+   "n": 84,
+   "roi": 3.5,
+   "said": 73.1,
+   "won": 67
   },
   "picks_by_league": {
    "aus": {
@@ -6828,12 +6836,20 @@
     "said": 72.0,
     "won": 2
    },
-   "ecu": {
+   "bra": {
     "hit": 100.0,
     "lost": 0,
     "n": 1,
-    "roi": 27.0,
-    "said": 76.0,
+    "roi": 28.6,
+    "said": 73.0,
+    "won": 1
+   },
+   "ecu": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -36.5,
+    "said": 77.0,
     "won": 1
    },
    "efl1": {
@@ -7035,12 +7051,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.1,
-    "lost": 217,
-    "n": 837,
-    "roi": 1.1,
+    "hit": 74.0,
+    "lost": 218,
+    "n": 839,
+    "roi": 1.0,
     "said": 69.9,
-    "won": 620
+    "won": 621
    }
   },
   "weights": {
