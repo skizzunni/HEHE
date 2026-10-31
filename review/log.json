@@ -5916,10 +5916,10 @@
   },
   "props": {
    "fair": {
-    "n": 1253,
-    "said_fair": 86.6,
+    "n": 1262,
+    "said_fair": 86.5,
     "said_price": 87.2,
-    "won": 1052
+    "won": 1060
    },
    "n": 170,
    "said": 81.6,
@@ -5978,38 +5978,38 @@
    },
    {
     "flag": false,
-    "hit": 75.5,
-    "n": 53,
+    "hit": 76.4,
+    "n": 55,
     "name": "props nba Assists",
-    "said": 81.0
+    "said": 81.1
    },
    {
     "flag": false,
-    "hit": 86.8,
-    "n": 68,
+    "hit": 85.5,
+    "n": 69,
     "name": "props nba Points",
     "said": 85.4
    },
    {
     "flag": false,
-    "hit": 95.3,
-    "n": 43,
+    "hit": 95.5,
+    "n": 44,
     "name": "props nba Pts + Ast",
     "said": 84.3
    },
    {
     "flag": false,
-    "hit": 84.1,
-    "n": 44,
+    "hit": 85.4,
+    "n": 48,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.3
    },
    {
     "flag": false,
-    "hit": 81.8,
-    "n": 22,
+    "hit": 82.6,
+    "n": 23,
     "name": "props nba Reb + Ast",
-    "said": 82.3
+    "said": 82.1
    },
    {
     "flag": false,
@@ -6104,8 +6104,8 @@
    },
    {
     "flag": false,
-    "hit": 43.0,
-    "n": 223,
+    "hit": 42.9,
+    "n": 224,
     "name": "value bets",
     "said": 44.4
    },
@@ -6187,9 +6187,9 @@
    }
   },
   "clv": {
-   "avg": -0.59,
-   "beat": 43.5,
-   "n": 23
+   "avg": -0.46,
+   "beat": 45.8,
+   "n": 24
   },
   "day": "2026-10-30",
   "leaks_14d": [],
@@ -6258,12 +6258,12 @@
   ],
   "lottery": [],
   "picks": {
-   "hit": 73.9,
+   "hit": 75.0,
    "lost": 6,
-   "n": 23,
-   "roi": -3.8,
-   "said": 70.9,
-   "won": 17
+   "n": 24,
+   "roi": -0.2,
+   "said": 70.1,
+   "won": 18
   },
   "picks_by_league": {
    "arg": {
@@ -6378,6 +6378,14 @@
     "said": 71.0,
     "won": 2
    },
+   "nba": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 82.0,
+    "said": 53.0,
+    "won": 1
+   },
    "nhl": {
     "hit": 0.0,
     "lost": 1,
@@ -6413,14 +6421,14 @@
   },
   "props": {
    "fair": {
-    "n": 1253,
-    "said_fair": 86.6,
+    "n": 1262,
+    "said_fair": 86.5,
     "said_price": 87.2,
-    "won": 1052
+    "won": 1060
    },
-   "n": 5,
-   "said": 82.5,
-   "won": 4
+   "n": 14,
+   "said": 83.0,
+   "won": 12
   },
   "safe_locks": {
    "lost": [],
@@ -6449,22 +6457,22 @@
     "n": 0
    },
    "agree": {
-    "hit": 73.2,
+    "hit": 73.3,
     "lost": 198,
-    "n": 740,
-    "roi": 0.6,
+    "n": 741,
+    "roi": 0.7,
     "said": 69.5,
-    "won": 542
+    "won": 543
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.563,
-    "market_only": 0.563,
-    "model_40": 0.5902,
-    "n": 71,
+    "logloss": 0.5641,
+    "market_only": 0.5641,
+    "model_40": 0.5947,
+    "n": 72,
     "weight": 0.0
    },
    "ncaaf": {

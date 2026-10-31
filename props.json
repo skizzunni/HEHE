@@ -5397,11 +5397,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "AJ Dybantsa",
   "p": 0.8478,
   "p_fair": 0.9115,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401909277|n:alex sarr|Points|5+": {
   "aid": null,
@@ -5413,11 +5415,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Alex Sarr",
   "p": 0.8609,
   "p_fair": 0.9624,
   "price": "-1500",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909277|n:anthony davis|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -5429,11 +5433,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Anthony Davis",
   "p": 0.8452,
   "p_fair": 0.8612,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 39.0
  },
  "nba:401909277|n:anthony davis|Reb + Ast|10+": {
   "aid": null,
@@ -5445,11 +5451,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Anthony Davis",
   "p": 0.7692,
   "p_fair": 0.7474,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401909277|n:dennis schroder|Assists|4+": {
   "aid": null,
@@ -5461,11 +5469,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Dennis Schroder",
   "p": 0.8517,
   "p_fair": 0.8206,
   "price": "-590",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909277|n:dennis schroder|Pts + Ast|15+": {
   "aid": null,
@@ -5477,11 +5487,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Dennis Schroder",
   "p": 0.8512,
   "p_fair": 0.8676,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909277|n:moussa diabat|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -5493,11 +5505,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Moussa Diabat\u00e9",
   "p": 0.8513,
   "p_fair": 0.9036,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nba:401909277|n:trae young|Assists|8+": {
   "aid": null,
@@ -5509,11 +5523,13 @@
   "league": "nba",
   "line": "8+",
   "market": "Assists",
+  "matched": "name",
   "name": "Trae Young",
   "p": 0.772,
   "p_fair": 0.7667,
   "price": "-340",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909277|n:trae young|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -5525,11 +5541,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Trae Young",
   "p": 0.841,
   "p_fair": 0.8404,
   "price": "-720",
-  "status": "open"
+  "status": "won",
+  "value": 37.0
  },
  "nba:401909278|n:caleb wilson|Points|10+": {
   "aid": null,
@@ -6410,6 +6428,22 @@
   "price": "-590",
   "status": "open"
  },
+ "nba:401909285|n:sandro mamukelashvili|Pts + Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": 6.6,
+  "gid": "nba:401909285",
+  "imp": 0.8851,
+  "label": "Sandro Mamukelashvili: 10+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Pts + Reb + Ast",
+  "name": "Sandro Mamukelashvili",
+  "p": 0.8453,
+  "p_fair": 0.9435,
+  "price": "-770",
+  "status": "open"
+ },
  "nba:401909285|n:walker kessler|Points|5+": {
   "aid": null,
   "date": "2026-10-30",
@@ -6472,6 +6506,22 @@
   "prop_lock": true,
   "status": "open"
  },
+ "nba:401909286|n:cam johnson|Points|5+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": 3.4,
+  "gid": "nba:401909286",
+  "imp": 0.931,
+  "label": "Cam Johnson: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Cam Johnson",
+  "p": 0.8503,
+  "p_fair": 0.9629,
+  "price": "-1350",
+  "status": "open"
+ },
  "nba:401909286|n:collin gillespie|Pts + Reb + Ast|10+": {
   "aid": null,
   "date": "2026-10-30",
@@ -6518,6 +6568,22 @@
   "p": 0.8469,
   "p_fair": 0.883,
   "price": "-1200",
+  "status": "open"
+ },
+ "nba:401909286|n:devin booker|Pts + Reb + Ast|25+": {
+  "aid": null,
+  "date": "2026-10-30",
+  "edge": -3.2,
+  "gid": "nba:401909286",
+  "imp": 0.8889,
+  "label": "Devin Booker: 25+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "25+",
+  "market": "Pts + Reb + Ast",
+  "name": "Devin Booker",
+  "p": 0.849,
+  "p_fair": 0.8604,
+  "price": "-800",
   "status": "open"
  },
  "nba:401909286|n:dillon brooks|Threes Made|1+": {
