@@ -1,7 +1,7 @@
 # Review 2026-10-30
 
-Picks 16-6 (72.7% vs 70.6% claimed, ROI -4.9%).
-Closing line value: -0.49 points on 22 picks; beat the close on 45.5%.
+Picks 17-6 (73.9% vs 70.9% claimed, ROI -3.8%).
+Closing line value: -0.59 points on 23 picks; beat the close on 43.5%.
 - LOST arg Huracán at 73%: margin 2 · the book had my side favoured too · called at 73%
 - LOST aut Grazer AK at 66%: margin 4 · the book had my side favoured too · called at 66%
 - LOST esp Villarreal at 67%: margin 1 · the book had my side favoured too · called at 67%
