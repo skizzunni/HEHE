@@ -1,9 +1,10 @@
 # Review 2026-10-31
 
-Picks 26-6 (81.2% vs 73.2% claimed, ROI +4.9%).
-Closing line value: +0.22 points on 32 picks; beat the close on 43.8%.
+Picks 36-7 (83.7% vs 73.5% claimed, ROI +7.5%).
+Closing line value: +0.59 points on 43 picks; beat the close on 48.8%.
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST epl Manchester City at 79%: margin 1 · the book had my side favoured too · called at 79%
+- LOST epl Sunderland at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST ger FC Augsburg at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST ger Bayer Leverkusen at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST rsa Sekhukhune United FC at 68%: margin 1 · the book had my side favoured too · called at 68%

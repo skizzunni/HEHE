@@ -6549,9 +6549,9 @@
    }
   },
   "clv": {
-   "avg": 0.22,
-   "beat": 43.8,
-   "n": 32
+   "avg": 0.59,
+   "beat": 48.8,
+   "n": 43
   },
   "day": "2026-10-31",
   "leaks_14d": [],
@@ -6584,6 +6584,14 @@
     "price": "-500",
     "said": 79,
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 79%"
+   },
+   {
+    "against_market": false,
+    "league": "epl",
+    "pick": "Sunderland",
+    "price": "-270",
+    "said": 69,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 69%"
    },
    {
     "against_market": false,
@@ -6693,12 +6701,12 @@
    }
   ],
   "picks": {
-   "hit": 81.2,
-   "lost": 6,
-   "n": 32,
-   "roi": 4.9,
-   "said": 73.2,
-   "won": 26
+   "hit": 83.7,
+   "lost": 7,
+   "n": 43,
+   "roi": 7.5,
+   "said": 73.5,
+   "won": 36
   },
   "picks_by_league": {
    "aus": {
@@ -6710,12 +6718,12 @@
     "won": 3
    },
    "efl1": {
-    "hit": 75.0,
+    "hit": 88.9,
     "lost": 1,
-    "n": 4,
-    "roi": -8.4,
-    "said": 77.2,
-    "won": 3
+    "n": 9,
+    "roi": 7.7,
+    "said": 78.1,
+    "won": 8
    },
    "efl2": {
     "hit": 100.0,
@@ -6725,13 +6733,21 @@
     "said": 74.0,
     "won": 1
    },
+   "efl3": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 44.4,
+    "said": 65.0,
+    "won": 1
+   },
    "epl": {
     "hit": 66.7,
-    "lost": 1,
-    "n": 3,
-    "roi": -11.0,
-    "said": 73.0,
-    "won": 2
+    "lost": 2,
+    "n": 6,
+    "roi": -11.7,
+    "said": 71.7,
+    "won": 4
    },
    "esp": {
     "hit": 100.0,
@@ -6773,6 +6789,14 @@
     "said": 72.8,
     "won": 6
    },
+   "nor": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 25.6,
+    "said": 75.0,
+    "won": 1
+   },
    "rsa": {
     "hit": 50.0,
     "lost": 1,
@@ -6784,10 +6808,10 @@
    "sco": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 22.2,
-    "said": 76.0,
-    "won": 1
+    "n": 2,
+    "roi": 26.3,
+    "said": 74.0,
+    "won": 2
    },
    "sco2": {
     "hit": 0.0,
@@ -6844,12 +6868,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 73.7,
-    "lost": 207,
-    "n": 787,
-    "roi": 0.9,
+    "hit": 73.9,
+    "lost": 208,
+    "n": 798,
+    "roi": 1.1,
     "said": 69.7,
-    "won": 580
+    "won": 590
    }
   },
   "weights": {
