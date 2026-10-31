@@ -67,6 +67,7 @@
    "seen": "2026-10-29T22:56:16+00:00",
    "side": "home",
    "start": "2026-10-30T21:00Z",
+   "status": "won",
    "team": "Deportivo Pereira",
    "tip": "5:00 PM",
    "venue": "FanDuel"
@@ -379,6 +380,7 @@
    "seen": "2026-10-29T18:59:34+00:00",
    "side": "home",
    "start": "2026-10-30T18:00Z",
+   "status": "lost",
    "team": "Le Havre AC",
    "tip": "2:00 PM",
    "venue": "Kalshi"
@@ -3310,6 +3312,30 @@
    "tip": "10:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909896|{\"line\": -6.5, \"t\": \"spread\", \"team\": \"Portland Trail Blazers\"}|Kalshi": {
+   "dec": 2.0513,
+   "dk": "-110",
+   "ev": 0.0256,
+   "fair": 0.5,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401909896",
+   "kind": "single",
+   "league": "nba",
+   "market": "spread",
+   "match": "POR @ UTAH",
+   "price": "+105",
+   "seen": "2026-10-31T01:01:29+00:00",
+   "side": "{\"line\": -6.5, \"t\": \"spread\", \"team\": \"Portland Trail Blazers\"}",
+   "spec": {
+    "line": -6.5,
+    "t": "spread",
+    "team": "Portland Trail Blazers"
+   },
+   "start": "2026-10-31T19:00Z",
+   "team": "Portland Trail Blazers -6.5",
+   "tip": "3:00 PM",
+   "venue": "Kalshi"
+  },
   "ncaaf:401856730|away|FanDuel": {
    "dec": 1.7042,
    "ev": 0.0365,
@@ -3564,6 +3590,23 @@
    "status": "won",
    "team": "Minnesota Golden Gophers",
    "tip": "3:30 PM",
+   "venue": "FanDuel"
+  },
+  "ncaaf:401858506|away|FanDuel": {
+   "dec": 4.5,
+   "ev": 0.0433,
+   "fair": 0.2318,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ncaaf:401858506",
+   "kind": "single",
+   "league": "ncaaf",
+   "match": "PUR @ PSU",
+   "price": "+350",
+   "seen": "2026-10-31T01:01:29+00:00",
+   "side": "away",
+   "start": "2026-10-31T20:15Z",
+   "team": "Purdue Boilermakers",
+   "tip": "4:15 PM",
    "venue": "FanDuel"
   },
   "ncaaf:401858508|away|FanDuel": {
@@ -4023,6 +4066,23 @@
    "team": "Ohio Bobcats -11.5",
    "tip": "4:00 PM",
    "venue": "Kalshi"
+  },
+  "ncaaf:401866452|away|FanDuel": {
+   "dec": 6.0,
+   "ev": 0.011,
+   "fair": 0.1685,
+   "fair_source": "consensus of 3 other venues",
+   "id": "ncaaf:401866452",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "BGSU @ WMU",
+   "price": "+500",
+   "seen": "2026-10-31T01:01:29+00:00",
+   "side": "away",
+   "start": "2026-10-31T16:00Z",
+   "team": "Bowling Green Falcons",
+   "tip": "12:00 PM",
+   "venue": "FanDuel"
   },
   "ncaaf:401869935|home|FanDuel": {
    "dec": 2.26,

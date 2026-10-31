@@ -6027,10 +6027,10 @@
    },
    {
     "flag": false,
-    "hit": 78.6,
-    "n": 220,
+    "hit": 78.7,
+    "n": 225,
     "name": "props nhl Shots on Goal",
-    "said": 80.7
+    "said": 80.8
    },
    {
     "flag": false,
@@ -6117,6 +6117,7 @@
     "said": 53.0
    }
   ],
+  "big_files": [],
   "calls": {
    "ncaaf": {
     "all_hit": 64.0,
@@ -6186,25 +6187,222 @@
    }
   },
   "clv": {
-   "avg": null,
-   "beat": null,
-   "n": 0
+   "avg": -0.49,
+   "beat": 45.5,
+   "n": 22
   },
   "day": "2026-10-30",
   "leaks_14d": [],
   "locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 4,
+   "open": 4,
+   "plays": {
+    "best": [
+     2,
+     0.5984,
+     "open"
+    ]
+   },
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "arg",
+    "pick": "Hurac\u00e1n",
+    "price": "-350",
+    "said": 73,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 73%"
+   },
+   {
+    "against_market": false,
+    "league": "aut",
+    "pick": "Grazer AK",
+    "price": "-230",
+    "said": 66,
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 66%"
+   },
+   {
+    "against_market": false,
+    "league": "esp",
+    "pick": "Villarreal",
+    "price": "-245",
+    "said": 67,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 67%"
+   },
+   {
+    "against_market": false,
+    "league": "fra",
+    "pick": "Lens",
+    "price": "-230",
+    "said": 65,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 65%"
+   },
+   {
+    "against_market": false,
+    "league": "ger",
+    "pick": "Mainz",
+    "price": "-300",
+    "said": 70,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 70%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Vegas Golden Knights",
+    "price": "-115",
+    "said": 51,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 51%"
+   }
+  ],
   "lottery": [],
   "picks": {
-   "n": 0
+   "hit": 72.7,
+   "lost": 6,
+   "n": 22,
+   "roi": -4.9,
+   "said": 70.6,
+   "won": 16
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "arg": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -38.9,
+    "said": 75.0,
+    "won": 1
+   },
+   "aus": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 40.0,
+    "said": 67.0,
+    "won": 1
+   },
+   "aut": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 66.0,
+    "won": 0
+   },
+   "bel": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 40.0,
+    "said": 67.0,
+    "won": 1
+   },
+   "bra2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 7.1,
+    "said": 88.0,
+    "won": 1
+   },
+   "chi": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 2,
+    "roi": 22.2,
+    "said": 78.0,
+    "won": 2
+   },
+   "col": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 45.5,
+    "said": 66.0,
+    "won": 1
+   },
+   "den": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 35.7,
+    "said": 70.0,
+    "won": 1
+   },
+   "efl1": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 35.7,
+    "said": 68.0,
+    "won": 1
+   },
+   "esp": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 67.0,
+    "won": 0
+   },
+   "fra": {
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": -7.8,
+    "said": 67.0,
+    "won": 2
+   },
+   "ger": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 70.0,
+    "won": 0
+   },
+   "ger2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 2,
+    "roi": 32.1,
+    "said": 71.0,
+    "won": 2
+   },
+   "nhl": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 51.0,
+    "won": 0
+   },
+   "nor": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 18.2,
+    "said": 80.0,
+    "won": 1
+   },
+   "por": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 27.0,
+    "said": 74.0,
+    "won": 1
+   },
+   "rsa": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 34.5,
+    "said": 70.0,
+    "won": 1
+   }
+  },
   "props": {
    "fair": {
     "n": 1253,
@@ -6212,15 +6410,26 @@
     "said_price": 87.2,
     "won": 1052
    },
-   "n": 0,
-   "said": null,
-   "won": 0
+   "n": 5,
+   "said": 82.5,
+   "won": 4
   },
   "safe_locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 3,
+   "open": 3,
+   "plays": {
+    "best": [
+     3,
+     0.7309,
+     "open"
+    ],
+    "winners": [
+     2,
+     0.8133,
+     "open"
+    ]
+   },
    "won": 0
   },
   "strong": {
@@ -6233,11 +6442,11 @@
    },
    "agree": {
     "hit": 73.2,
-    "lost": 192,
-    "n": 717,
-    "roi": 0.7,
+    "lost": 198,
+    "n": 739,
+    "roi": 0.5,
     "said": 69.5,
-    "won": 525
+    "won": 541
    }
   },
   "weights": {
@@ -6262,10 +6471,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6578,
-    "market_only": 0.6578,
-    "model_40": 0.667,
-    "n": 96,
+    "logloss": 0.6584,
+    "market_only": 0.6584,
+    "model_40": 0.668,
+    "n": 97,
     "weight": 0.0
    }
   }
