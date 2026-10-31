@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 8-0 (100.0% vs 71.8% claimed, ROI +31.4%).
-Closing line value: +1.7 points on 8 picks; beat the close on 75.0%.
+Picks 9-0 (100.0% vs 71.7% claimed, ROI +31.5%).
+Closing line value: +2.28 points on 9 picks; beat the close on 77.8%.
 Ladder-consistency props (all time): 1110/1327 won (83.6%) vs 86.6% fair, 87.2% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
