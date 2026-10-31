@@ -3469,6 +3469,23 @@
    "profit": 0.0051,
    "seen": "2026-10-31T13:32:54+00:00"
   },
+  "nba:401909901|away|FanDuel": {
+   "dec": 5.8,
+   "ev": 0.0156,
+   "fair": 0.1751,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909901",
+   "kind": "value",
+   "league": "nba",
+   "match": "MIN @ SA",
+   "price": "+480",
+   "seen": "2026-10-31T16:17:22+00:00",
+   "side": "away",
+   "start": "2026-11-01T00:00Z",
+   "team": "Minnesota Timberwolves",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909902|away|FanDuel": {
    "dec": 2.3,
    "ev": 0.0154,
@@ -7352,6 +7369,26 @@
    "prob": 0.0381,
    "seen": "2026-10-31T14:05:18+00:00",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909901:away": {
+   "ev": 0.0156,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0156,
+     "fair": 0.1751,
+     "id": "nba:401909901",
+     "price": "+480",
+     "side": "away",
+     "spec": null,
+     "team": "Minnesota Timberwolves"
+    }
+   ],
+   "payout": 5.8,
+   "prob": 0.1751,
+   "seen": "2026-10-31T16:17:22+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909902:away": {
