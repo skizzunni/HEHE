@@ -3648,7 +3648,11 @@ limit, so the bot could not push and the page stopped updating. The
 append-only history counted `price_at`, the time a price was fetched, as part
 of a version. That moves every build, so each call kept about 500 copies of
 the same version (79 of the 80 MB). A version is now a change in what was
-shown (pick, double chance, price, market, book, chance, policy). The
+shown (pick, double chance, price, market, book, chance). The policy
+fingerprint is stored in every entry but does not start a version by
+itself: it includes the fallback model weight, which is refitted as games
+settle and moved nearly every build (11.07 to 11.46 MB in an hour, about
+9 MB a day). A second compaction dropped 7,353 more copies (7.3 MB). The
 existing histories were collapsed to the first entry of each run, when that
 version was first shown: 160,727 duplicates dropped, 105 MB to 10.9 MB, no
 version lost.

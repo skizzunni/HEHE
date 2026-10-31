@@ -94,7 +94,10 @@ def save(d):
 
 
 # ------------------------------------------------------------------ record
-VERSION_KEYS = ("pick", "dc", "price", "price_market", "price_book", "conf", "policy")
+# what was shown. The policy fingerprint is kept in every entry but does not
+# start one by itself: it includes the fallback model weight, refitted as
+# games settle, so it moved nearly every build with the call unchanged.
+VERSION_KEYS = ("pick", "dc", "price", "price_market", "price_book", "conf")
 
 
 def _version(h):

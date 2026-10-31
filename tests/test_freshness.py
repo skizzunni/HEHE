@@ -46,6 +46,24 @@ class Recording(unittest.TestCase):
         self.assertEqual((e["price_book"], e["price_at"]), ("DraftKings", ago(5)))
         self.assertEqual(e["history"][-1]["price_at"], ago(5))
 
+    def test_a_policy_refit_alone_is_no_new_version(self):
+        import policy
+        from unittest import mock
+        path = os.path.join(tempfile.mkdtemp(), "ledger.json")
+        start = (NOW + dt.timedelta(hours=3)).isoformat()
+        real, ledger.LEDGER = ledger.LEDGER, path
+        try:
+            for fp in ("aaaa", "bbbb"):
+                row = dict(id="nhl:7", mypick="Boston Bruins", myside="home", myconf=0.62, label="A @ B",
+                           legs=[dict(side="home", price="-160", at=ago(4))],
+                           mkt=dict(start=start), price_at=ago(4), price_book="DraftKings")
+                with mock.patch.object(policy, "version", lambda fp=fp: fp):
+                    ledger.record(dict(dates=("20261020", "20261021"), slots=dict(today={"nhl": [row]}, tomorrow={})))
+            h = ledger.load()["nhl:7"]["history"]
+            self.assertEqual((len(h), h[0]["policy"]), (1, "aaaa"))
+        finally:
+            ledger.LEDGER = real
+
     def test_compact_history_keeps_first_of_each_version(self):
         h = [dict(pick="A", price="-150", price_at="t1", t="1"), dict(pick="A", price="-150", price_at="t2", t="2"),
              dict(pick="A", price="-160", price_at="t3", t="3"), dict(pick="A", price="-160", price_at="t4", t="4")]
