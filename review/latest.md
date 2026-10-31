@@ -1,7 +1,7 @@
 # Review 2026-10-30
 
-Picks 23-8 (74.2% vs 70.5% claimed, ROI -2.4%).
-Closing line value: -0.24 points on 31 picks; beat the close on 51.6%.
+Picks 24-8 (75.0% vs 70.5% claimed, ROI -1.2%).
+Closing line value: -0.11 points on 32 picks; beat the close on 53.1%.
 - LOST arg Huracán at 73%: margin 2 · the book had my side favoured too · called at 73%
 - LOST aut Grazer AK at 66%: margin 4 · the book had my side favoured too · called at 66%
 - LOST esp Villarreal at 67%: margin 1 · the book had my side favoured too · called at 67%
@@ -16,4 +16,4 @@ Ladder-consistency props (all time): 1085/1293 won (83.9%) vs 86.6% fair, 87.2% 
 Props 43/51 vs 83.0% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=76), ncaaf 0.40 (n=114), nhl 0.00 (n=98)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=77), ncaaf 0.40 (n=114), nhl 0.00 (n=98)
