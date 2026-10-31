@@ -763,6 +763,7 @@
    "cost": 0.7533,
    "edge": 0.0013,
    "fair": 0.7543,
+   "fill": "strict",
    "id": "ncaaf:401862813",
    "label": "Tulane Green Wave",
    "league": "ncaaf",
@@ -775,8 +776,9 @@
     "team": "Tulane Green Wave"
    },
    "start": "2026-10-30T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT30TULNCHAR-TULN"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT30TULNCHAR-TULN",
+   "won": 1
   },
   "KXNCAAFGAME-26OCT31BGSUWMU-WMU|YES": {
    "ask": 0.84,
@@ -5413,6 +5415,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401862813",
    "label": "under 47.5",
    "league": "ncaaf",
@@ -5425,8 +5428,9 @@
     "t": "under"
    },
    "start": "2026-10-30T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT30TULNCHAR-48"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT30TULNCHAR-48",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT31APPGASO-57|YES": {
    "ask": 0.52,
@@ -5658,6 +5662,27 @@
    "start": "2026-10-31T16:30Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT31MICHRUTG-46"
+  },
+  "KXNCAAFTOTAL-26OCT31MICHRUTG-47|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401858507",
+   "label": "under 46.5",
+   "league": "ncaaf",
+   "match": "MICH @ RUTG",
+   "posted": "2026-10-31T03:03:38+00:00",
+   "queue": 56832.66,
+   "side": "NO",
+   "spec": {
+    "line": 46.5,
+    "t": "under"
+   },
+   "start": "2026-10-31T16:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT31MICHRUTG-47"
   },
   "KXNCAAFTOTAL-26OCT31MRSHODU-46|NO": {
    "ask": 0.51,

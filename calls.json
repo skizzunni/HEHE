@@ -3022,31 +3022,7 @@
      "close": true,
      "conf": 74,
      "conf_first": 74,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T02:57:32+00:00",
-      "conf": 75,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "mex:401876917",
-      "league": "mex",
-      "match": "UNAM @ PUE",
-      "pick": "Pumas UNAM or draw",
-      "price": "-380",
-      "price_at": "2026-10-31T02:48:21+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.193666247:15735562",
-      "prob_at": "2026-10-31T02:57:13+00:00",
-      "rank": 1,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "away",
-      "start": "2026-10-31T03:00Z"
-     },
+     "current": null,
      "dc": true,
      "fp": "6acf459eb5a7",
      "gate": {
@@ -3100,31 +3076,7 @@
      "close": true,
      "conf": 70,
      "conf_first": 70,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T02:57:32+00:00",
-      "conf": 72,
-      "dc": false,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "mex2:401886325",
-      "league": "mex2",
-      "match": "DOR @ PAZ",
-      "pick": "Club Atl\u00e9tico La Paz",
-      "price": "-370",
-      "price_at": "2026-10-31T02:57:13+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34897985:0ML86922742_1",
-      "prob_at": "2026-10-31T02:57:13+00:00",
-      "rank": 3,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "home",
-      "start": "2026-10-31T03:00Z"
-     },
+     "current": null,
      "dc": false,
      "fp": "6acf459eb5a7",
      "gate": {
@@ -3214,56 +3166,7 @@
     }
    ],
    "candidate_news": {},
-   "candidate_observations": {
-    "mex:401876917": {
-     "book": "FanDuel",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 75,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T02:57:32+00:00",
-      "conf": 75,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "mex:401876917",
-      "league": "mex",
-      "match": "UNAM @ PUE",
-      "pick": "Pumas UNAM or draw",
-      "price": "-380",
-      "price_at": "2026-10-31T02:48:21+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.193666247:15735562",
-      "prob_at": "2026-10-31T02:57:13+00:00",
-      "rank": null,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "away",
-      "start": "2026-10-31T03:00Z"
-     },
-     "dc": true,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
-     },
-     "id": "mex:401876917",
-     "league": "mex",
-     "match": "UNAM @ PUE",
-     "pick": "Pumas UNAM or draw",
-     "price": "-380",
-     "price_at": "2026-10-31T02:48:21+00:00",
-     "price_market": "double_chance",
-     "price_ref": "736.193666247:15735562",
-     "side": "away",
-     "start": "2026-10-31T03:00Z",
-     "tip": "11:00 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
     "nba"
    ],
@@ -3272,8 +3175,8 @@
    },
    "shadow_watch": {
     "best_ceiling": null,
-    "checks": 24,
-    "last": "2026-10-31T02:57:32+00:00",
+    "checks": 25,
+    "last": "2026-10-31T03:02:46+00:00",
     "max_ready": 0,
     "reasons": {
      "awaiting confirmed XIs": 3
