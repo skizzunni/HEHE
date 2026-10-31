@@ -6135,11 +6135,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Andrew Wiggins",
   "p": 0.8512,
   "p_fair": 0.9108,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401909282|n:andrew wiggins|Reb + Ast|5+": {
   "aid": null,
@@ -6151,11 +6153,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Andrew Wiggins",
   "p": 0.7459,
   "p_fair": 0.7815,
   "price": "-340",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909282|n:bam adebayo|Rebounds|6+": {
   "aid": null,
@@ -6167,11 +6171,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Bam Adebayo",
   "p": 0.8551,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909282|n:giannis antetokounmpo|Pts + Ast|30+": {
   "aid": null,
@@ -6183,11 +6189,13 @@
   "league": "nba",
   "line": "30+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Giannis Antetokounmpo",
   "p": 0.8431,
   "p_fair": 0.7903,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 41.0
  },
  "nba:401909282|n:giannis antetokounmpo|Reb + Ast|15+": {
   "aid": null,
@@ -6199,11 +6207,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Giannis Antetokounmpo",
   "p": 0.7459,
   "p_fair": null,
   "price": "-340",
-  "status": "open"
+  "status": "won",
+  "value": 27.0
  },
  "nba:401909282|n:giannis antetokounmpo|Rebounds|8+": {
   "aid": null,
@@ -6215,11 +6225,13 @@
   "league": "nba",
   "line": "8+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Giannis Antetokounmpo",
   "p": 0.848,
   "p_fair": 0.9081,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909282|n:klay thompson|Threes Made|1+": {
   "aid": null,
@@ -6231,11 +6243,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Klay Thompson",
   "p": 0.8552,
   "p_fair": 0.8953,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909282|n:obi toppin|Pts + Ast|10+": {
   "aid": null,
@@ -6247,11 +6261,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Obi Toppin",
   "p": 0.8512,
   "p_fair": null,
   "price": "-700",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401909283|n:alperen sengun|Rebounds|6+": {
   "aid": null,
