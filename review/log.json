@@ -6283,10 +6283,10 @@
   },
   "props": {
    "fair": {
-    "n": 1327,
+    "n": 1342,
     "said_fair": 86.6,
     "said_price": 87.2,
-    "won": 1110
+    "won": 1122
    },
    "n": 98,
    "said": 83.2,
@@ -6347,8 +6347,8 @@
    },
    {
     "flag": false,
-    "hit": 85.1,
-    "n": 87,
+    "hit": 84.6,
+    "n": 91,
     "name": "props nba Points",
     "said": 85.5
    },
@@ -6361,31 +6361,31 @@
    },
    {
     "flag": false,
-    "hit": 83.1,
-    "n": 59,
+    "hit": 84.4,
+    "n": 64,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.2
    },
    {
     "flag": false,
-    "hit": 81.5,
-    "n": 27,
+    "hit": 83.3,
+    "n": 30,
     "name": "props nba Reb + Ast",
-    "said": 81.4
+    "said": 81.8
    },
    {
     "flag": false,
-    "hit": 75.7,
-    "n": 37,
+    "hit": 73.7,
+    "n": 38,
     "name": "props nba Rebounds",
     "said": 84.0
    },
    {
     "flag": false,
     "hit": 75.0,
-    "n": 28,
+    "n": 32,
     "name": "props nba Threes Made",
-    "said": 83.6
+    "said": 83.8
    },
    {
     "flag": false,
@@ -6466,17 +6466,17 @@
    },
    {
     "flag": false,
-    "hit": 94.3,
-    "n": 88,
+    "hit": 94.4,
+    "n": 90,
     "name": "prop locks",
-    "said": 90.4
+    "said": 90.3
    },
    {
     "flag": false,
-    "hit": 42.6,
-    "n": 237,
+    "hit": 42.4,
+    "n": 238,
     "name": "value bets",
-    "said": 44.4
+    "said": 44.5
    },
    {
     "flag": false,
@@ -6556,9 +6556,9 @@
    }
   },
   "clv": {
-   "avg": 0.54,
-   "beat": 50.0,
-   "n": 86
+   "avg": 0.57,
+   "beat": 50.6,
+   "n": 89
   },
   "day": "2026-10-31",
   "leaks_14d": [],
@@ -6607,6 +6607,14 @@
     "price": "-270",
     "said": 69,
     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 69%"
+   },
+   {
+    "against_market": false,
+    "league": "ger2",
+    "pick": "1. FC Heidenheim 1846",
+    "price": "-330",
+    "said": 72,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 72%"
    },
    {
     "against_market": false,
@@ -6820,12 +6828,12 @@
    }
   ],
   "picks": {
-   "hit": 79.1,
-   "lost": 18,
-   "n": 86,
-   "roi": 2.7,
-   "said": 73.1,
-   "won": 68
+   "hit": 78.7,
+   "lost": 19,
+   "n": 89,
+   "roi": 2.0,
+   "said": 73.2,
+   "won": 70
   },
   "picks_by_league": {
    "aus": {
@@ -6909,10 +6917,10 @@
     "won": 3
    },
    "ger2": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": 31.2,
+    "hit": 75.0,
+    "lost": 1,
+    "n": 4,
+    "roi": -1.6,
     "said": 72.0,
     "won": 3
    },
@@ -6955,6 +6963,14 @@
     "roi": -13.9,
     "said": 73.3,
     "won": 4
+   },
+   "nba": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 38.8,
+    "said": 69.0,
+    "won": 1
    },
    "ncaaf": {
     "hit": 91.7,
@@ -7015,22 +7031,22 @@
    "uru": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 18.2,
-    "said": 80.0,
-    "won": 1
+    "n": 2,
+    "roi": 15.8,
+    "said": 82.5,
+    "won": 2
    }
   },
   "props": {
    "fair": {
-    "n": 1327,
+    "n": 1342,
     "said_fair": 86.6,
     "said_price": 87.2,
-    "won": 1110
+    "won": 1122
    },
-   "n": 15,
-   "said": 78.7,
-   "won": 14
+   "n": 32,
+   "said": 82.1,
+   "won": 28
   },
   "safe_locks": {
    "lost": [],
@@ -7059,22 +7075,22 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.0,
-    "lost": 219,
-    "n": 841,
+    "hit": 73.9,
+    "lost": 220,
+    "n": 844,
     "roi": 0.9,
     "said": 69.9,
-    "won": 622
+    "won": 624
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5682,
-    "market_only": 0.5682,
-    "model_40": 0.596,
-    "n": 81,
+    "logloss": 0.5658,
+    "market_only": 0.5658,
+    "model_40": 0.5938,
+    "n": 82,
     "weight": 0.0
    },
    "ncaaf": {

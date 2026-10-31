@@ -1,11 +1,12 @@
 # Review 2026-10-31
 
-Picks 68-18 (79.1% vs 73.1% claimed, ROI +2.7%).
-Closing line value: +0.54 points on 86 picks; beat the close on 50.0%.
+Picks 70-19 (78.7% vs 73.2% claimed, ROI +2.0%).
+Closing line value: +0.57 points on 89 picks; beat the close on 50.6%.
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST epl Manchester City at 79%: margin 1 · the book had my side favoured too · called at 79%
 - LOST epl Sunderland at 69%: margin 2 · the book had my side favoured too · called at 69%
+- LOST ger2 1. FC Heidenheim 1846 at 72%: margin 1 · the book had my side favoured too · called at 72%
 - LOST ger FC Augsburg at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST ger Bayer Leverkusen at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST ger Bayern Munich at 70%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 70%
@@ -31,8 +32,8 @@ Lottery 10k: lost (0/10 legs won, killed by Over 55.5 points, Texas Tech Red Rai
 Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5, Auburn Tigers +7.5)
 Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
-Ladder-consistency props (all time): 1110/1327 won (83.6%) vs 86.6% fair, 87.2% price.
-Props 14/15 vs 78.7% claimed.
+Ladder-consistency props (all time): 1122/1342 won (83.6%) vs 86.6% fair, 87.2% price.
+Props 28/32 vs 82.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=81), ncaaf 0.40 (n=129), nhl 0.00 (n=103)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.40 (n=129), nhl 0.00 (n=103)
