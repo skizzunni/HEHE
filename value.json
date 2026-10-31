@@ -3492,6 +3492,30 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909899|{\"line\": -8.5, \"t\": \"spread\", \"team\": \"Memphis Grizzlies\"}|Kalshi": {
+   "dec": 2.0513,
+   "dk": "-115",
+   "ev": 0.0424,
+   "fair": 0.5082,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909899",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "SAC @ MEM",
+   "price": "+105",
+   "seen": "2026-10-31T23:25:01+00:00",
+   "side": "{\"line\": -8.5, \"t\": \"spread\", \"team\": \"Memphis Grizzlies\"}",
+   "spec": {
+    "line": -8.5,
+    "t": "spread",
+    "team": "Memphis Grizzlies"
+   },
+   "start": "2026-11-01T00:00Z",
+   "team": "Memphis Grizzlies -8.5",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909900|home|FanDuel": {
    "dec": 4.5,
    "ev": 0.0452,
@@ -3853,6 +3877,7 @@
    "seen": "2026-10-31T14:32:31+00:00",
    "side": "away",
    "start": "2026-10-31T19:30Z",
+   "status": "lost",
    "team": "Minnesota Golden Gophers",
    "tip": "3:30 PM",
    "venue": "FanDuel"
@@ -7632,6 +7657,7 @@
    "payout": 12.0,
    "prob": 0.0849,
    "seen": "2026-10-31T14:32:31+00:00",
+   "status": "lost",
    "target": 2.0,
    "venue": "FanDuel"
   },
