@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 50.0,
-  "brier_close": 0.1794,
-  "brier_published": 0.1835,
+  "beat_close_pct": 50.3,
+  "brier_close": 0.1792,
+  "brier_published": 0.1836,
   "dates": [
    "2026-10-25",
    "2026-10-31"
   ],
-  "logloss_close": 0.5436,
-  "logloss_published": 0.5537,
-  "mean_clv_pts": 0.04,
+  "logloss_close": 0.5433,
+  "logloss_published": 0.5539,
+  "mean_clv_pts": 0.08,
   "n": 300
  },
  "market_is_model": true,
@@ -598,6 +598,15 @@
    "league": "aus",
    "published": 0.685,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 1
+  },
+  "aut:401881756": {
+   "call": false,
+   "close": 0.751,
+   "clv": 6.1,
+   "day": "2026-10-31",
+   "league": "aut",
+   "published": 0.69,
    "won": 1
   },
   "aut:401881757": {
@@ -19283,6 +19292,24 @@
    "published": 0.69,
    "won": 0
   },
+  "rsa:401902020": {
+   "call": false,
+   "close": 0.7252,
+   "clv": -0.48,
+   "day": "2026-10-31",
+   "league": "rsa",
+   "published": 0.73,
+   "won": 1
+  },
+  "rsa:401902021": {
+   "call": false,
+   "close": 0.7436,
+   "clv": -0.64,
+   "day": "2026-10-31",
+   "league": "rsa",
+   "published": 0.75,
+   "won": 1
+  },
   "rsa:401902022": {
    "call": false,
    "close": 0.8022,
@@ -21195,5 +21222,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-31T17:57+00:00"
+ "updated": "2026-10-31T18:01+00:00"
 }
