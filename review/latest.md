@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 85-22 (79.4% vs 72.9% claimed, ROI +4.2%).
-Closing line value: +0.67 points on 107 picks; beat the close on 52.3%.
+Picks 86-22 (79.6% vs 73.1% claimed, ROI +4.2%).
+Closing line value: +0.66 points on 108 picks; beat the close on 51.9%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
@@ -40,4 +40,4 @@ Ladder-consistency props (all time): 1122/1342 won (83.6%) vs 86.6% fair, 87.2% 
 Props 42/49 vs 80.8% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.35 (n=138), nhl 0.00 (n=105)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.35 (n=139), nhl 0.00 (n=105)
