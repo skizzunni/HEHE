@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 19-1 (95.0% vs 72.8% claimed, ROI +23.0%).
-Closing line value: +0.43 points on 20 picks; beat the close on 45.0%.
+Picks 20-1 (95.2% vs 73.2% claimed, ROI +22.6%).
+Closing line value: +0.45 points on 21 picks; beat the close on 47.6%.
 - LOST rsa Sekhukhune United FC at 68%: margin 1 · the book had my side favoured too · called at 68%
 Locks 0/11 won, 11 open; Best play top 2 (59%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
