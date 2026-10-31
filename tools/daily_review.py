@@ -373,6 +373,23 @@ def _pick_stuck_days():
 PICK_STUCK_DAYS = _pick_stuck_days()
 
 
+BIG_MB = 60     # GitHub refuses any file over 100 MB, and every build then fails
+
+
+def big_files(root=None, limit_mb=BIG_MB):
+    """[(name, MB)] for the bot's data files grown past limit_mb: a warning
+    well before the push limit (ledger.json reached 100.09 MB on 2026-10-30
+    and stopped the board)."""
+    root = root or os.path.join(HERE, "..")
+    out = []
+    for name in sorted(os.listdir(root)):
+        if name.endswith(".json"):
+            mb = os.path.getsize(os.path.join(root, name)) / 1e6
+            if mb > limit_mb:
+                out.append((name, round(mb, 1)))
+    return out
+
+
 def stuck(ledger, props, locks, lottery, today):
     """Records still open a week after their game: by then every grader has
     settled or voided them, so anything left means grading broke somewhere
@@ -617,6 +634,8 @@ def words(r, fit):
                    + (f", ROI {p['roi']:+}%" if p.get("roi") is not None else "") + ").")
     else:
         out.append("No picks settled yet.")
+    for name, mb in r.get("big_files") or []:
+        out.append(f"BIG FILE {name} is {mb} MB -- GitHub refuses files over 100 MB and the board stops; trim it")
     st = r.get("stuck") or []
     if st:
         out.append(f"STUCK {len(st)} record(s) open a week after their game -- grading is broken: "
@@ -712,6 +731,7 @@ def main():
     log[today.isoformat()]["calls"] = cfg["detail"]
     log[today.isoformat()]["audit"] = audit(graded, props, locks)
     log[today.isoformat()]["stuck"] = stuck(ledger, props, locks, lottery, today)
+    log[today.isoformat()]["big_files"] = big_files()
     with open(log_path, "w") as fh:
         json.dump(log, fh, indent=1, sort_keys=True)
     latest = max(k for k, v in log.items() if v["picks"].get("n") or k == today.isoformat())

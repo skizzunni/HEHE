@@ -3652,3 +3652,6 @@ shown (pick, double chance, price, market, book, chance, policy). The
 existing histories were collapsed to the first entry of each run, when that
 version was first shown: 160,727 duplicates dropped, 105 MB to 10.9 MB, no
 version lost.
+The daily review now prints `BIG FILE` for any data file over 60 MB
+(`tools/daily_review.big_files`), well before the 100 MB limit. The next
+largest, frontier.json, is 19.5 MB and grows 1-5 MB a day.

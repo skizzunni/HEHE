@@ -307,6 +307,17 @@ class Props(unittest.TestCase):
         props = {str(i): dict(league="uel", market="Shots", status="lost", p=0.85) for i in range(30)}
         self.assertEqual([a for a in R.audit([], props, {"legs": {}}) if "Shots" in a["name"]], [])
 
+    def test_big_files_flagged_before_the_push_limit(self):
+        import tempfile
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        d = tempfile.mkdtemp()
+        with open(os.path.join(d, "big.json"), "wb") as fh:
+            fh.write(b"0" * 2_000_000)
+        with open(os.path.join(d, "small.json"), "wb") as fh:
+            fh.write(b"0" * 10)
+        self.assertEqual(daily_review.big_files(d, limit_mb=1), [("big.json", 2.0)])
+
     def test_audit_covers_calls_and_prop_locks(self):
         import daily_review as R
         calls = [dict(league="nhl", call=True, conf=85, status="lost") for _ in range(12)]
