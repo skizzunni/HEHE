@@ -1,12 +1,15 @@
 # Review 2026-10-31
 
-Picks 23-3 (88.5% vs 72.7% claimed, ROI +14.4%).
-Closing line value: +0.56 points on 26 picks; beat the close on 50.0%.
+Picks 26-6 (81.2% vs 73.2% claimed, ROI +4.9%).
+Closing line value: +0.22 points on 32 picks; beat the close on 43.8%.
+- LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
+- LOST epl Manchester City at 79%: margin 1 · the book had my side favoured too · called at 79%
 - LOST ger FC Augsburg at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST ger Bayer Leverkusen at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST rsa Sekhukhune United FC at 68%: margin 1 · the book had my side favoured too · called at 68%
+- LOST sco2 Partick Thistle at 77%: margin 1 · the book had my side favoured too · called at 77%
 Locks 0/11 won, 11 open; Best play top 2 (59%) open.
-Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
+Safe Locks 1/11 won, 10 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: open (0/6 legs won)
 Lottery 100: open (0/6 legs won)
 Lottery 100: open (0/8 legs won)

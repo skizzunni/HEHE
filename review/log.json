@@ -6549,9 +6549,9 @@
    }
   },
   "clv": {
-   "avg": 0.56,
-   "beat": 50.0,
-   "n": 26
+   "avg": 0.22,
+   "beat": 43.8,
+   "n": 32
   },
   "day": "2026-10-31",
   "leaks_14d": [],
@@ -6569,6 +6569,22 @@
    "won": 0
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "efl1",
+    "pick": "West Ham United",
+    "price": "-450",
+    "said": 77,
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 77%"
+   },
+   {
+    "against_market": false,
+    "league": "epl",
+    "pick": "Manchester City",
+    "price": "-500",
+    "said": 79,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 79%"
+   },
    {
     "against_market": false,
     "league": "ger",
@@ -6592,6 +6608,14 @@
     "price": "-260",
     "said": 68,
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   },
+   {
+    "against_market": false,
+    "league": "sco2",
+    "pick": "Partick Thistle",
+    "price": "-475",
+    "said": 77,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 77%"
    }
   ],
   "lottery": [
@@ -6669,12 +6693,12 @@
    }
   ],
   "picks": {
-   "hit": 88.5,
-   "lost": 3,
-   "n": 26,
-   "roi": 14.4,
-   "said": 72.7,
-   "won": 23
+   "hit": 81.2,
+   "lost": 6,
+   "n": 32,
+   "roi": 4.9,
+   "said": 73.2,
+   "won": 26
   },
   "picks_by_league": {
    "aus": {
@@ -6686,20 +6710,28 @@
     "won": 3
    },
    "efl1": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": 22.2,
-    "said": 77.3,
+    "hit": 75.0,
+    "lost": 1,
+    "n": 4,
+    "roi": -8.4,
+    "said": 77.2,
     "won": 3
    },
-   "epl": {
+   "efl2": {
     "hit": 100.0,
     "lost": 0,
     "n": 1,
-    "roi": 35.7,
-    "said": 69.0,
+    "roi": 28.6,
+    "said": 74.0,
     "won": 1
+   },
+   "epl": {
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": -11.0,
+    "said": 73.0,
+    "won": 2
    },
    "esp": {
     "hit": 100.0,
@@ -6749,6 +6781,22 @@
     "said": 74.0,
     "won": 1
    },
+   "sco": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 22.2,
+    "said": 76.0,
+    "won": 1
+   },
+   "sco2": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 77.0,
+    "won": 0
+   },
    "uru": {
     "hit": 100.0,
     "lost": 0,
@@ -6772,7 +6820,7 @@
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      7,
@@ -6785,7 +6833,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "strong": {
    "n": 0
@@ -6796,12 +6844,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 73.9,
-    "lost": 204,
-    "n": 781,
-    "roi": 1.2,
-    "said": 69.6,
-    "won": 577
+    "hit": 73.7,
+    "lost": 207,
+    "n": 787,
+    "roi": 0.9,
+    "said": 69.7,
+    "won": 580
    }
   },
   "weights": {
