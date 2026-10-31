@@ -401,7 +401,9 @@ def stuck(ledger, props, locks, lottery, today):
             return False
     out = [("picks", k) for k, e in ledger.items()
            if e.get("status") == "open" and old(e.get("played") or e.get("date") or "", PICK_STUCK_DAYS)]
-    out += [("props", k) for k, e in props.items() if e.get("status") == "open" and old(e.get("date") or "")]
+    # a prop reopened for one more try counts from its retry (date_retry)
+    out += [("props", k) for k, e in props.items() if e.get("status") == "open"
+            and old(e.get("date_retry") or e.get("date") or "")]
     for name, book in (("locks", locks), ("safe locks", load("safe_locks.json", {"legs": {}}))):
         out += [(name, k) for k, e in (book.get("legs") or {}).items()
                 if e.get("status") == "open" and old(e.get("date") or "")]

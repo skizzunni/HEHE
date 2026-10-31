@@ -329,6 +329,14 @@ class Props(unittest.TestCase):
             fh.write(b"0" * 10)
         self.assertEqual(daily_review.big_files(d, limit_mb=1), [("big.json", 2.0)])
 
+    def test_reopened_prop_counts_from_its_retry(self):
+        import daily_review
+        today = dt.date(2026, 10, 31)
+        props = {"a": dict(status="open", date="2026-10-25", date_retry="2026-10-31"),
+                 "b": dict(status="open", date="2026-10-24")}
+        got = daily_review.stuck({}, props, {"legs": {}}, {"days": {}}, today)
+        self.assertEqual([k for kind, k in got if kind == "props"], ["b"])
+
     def test_audit_covers_calls_and_prop_locks(self):
         import daily_review as R
         calls = [dict(league="nhl", call=True, conf=85, status="lost") for _ in range(12)]

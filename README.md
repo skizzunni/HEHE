@@ -3684,3 +3684,12 @@ bootstrap range clear of zero and the same sign in both halves. Only college
 football unders qualify (-10.2 points, 99.5% range -19.5 to -1.1). The
 nearest others: NHL unders +9.3 (one half only), college overs +4.4 and
 spreads +5.0 (ranges include zero), so nothing else is excluded or favoured.
+
+**Daily review: a reopened prop counts from its retry (2026-10-31).** The
+review flagged "Keegan Murray: 5+ Points" (2026-10-25) as stuck. The grader
+had reopened it today for its one retry against the nickname table
+(`date_retry`), and the stuck check still counted from the game date. It now
+counts from the retry. The prop itself is handled as designed: the box score
+has only his brother Kris, and a same-surname, different-first-name player
+is never graded as a did-not-play (a missing nickname could hide the real
+player). It is retried, then set aside out of every record.
