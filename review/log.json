@@ -6549,9 +6549,9 @@
    }
   },
   "clv": {
-   "avg": 0.54,
-   "beat": 46.2,
-   "n": 52
+   "avg": 0.52,
+   "beat": 46.3,
+   "n": 54
   },
   "day": "2026-10-31",
   "leaks_14d": [],
@@ -6616,6 +6616,14 @@
     "price": "-650",
     "said": 82,
     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 82%"
+   },
+   {
+    "against_market": false,
+    "league": "nor",
+    "pick": "Aalesund",
+    "price": "-290",
+    "said": 70,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70%"
    },
    {
     "against_market": false,
@@ -6717,12 +6725,12 @@
    }
   ],
   "picks": {
-   "hit": 82.7,
-   "lost": 9,
-   "n": 52,
-   "roi": 6.2,
-   "said": 73.8,
-   "won": 43
+   "hit": 81.5,
+   "lost": 10,
+   "n": 54,
+   "roi": 4.9,
+   "said": 73.6,
+   "won": 44
   },
   "picks_by_league": {
    "aus": {
@@ -6805,6 +6813,14 @@
     "said": 72.0,
     "won": 3
    },
+   "gre": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 44.4,
+    "said": 65.0,
+    "won": 1
+   },
    "ita": {
     "hit": 100.0,
     "lost": 0,
@@ -6830,11 +6846,11 @@
     "won": 0
    },
    "nor": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 25.6,
-    "said": 75.0,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -37.2,
+    "said": 72.5,
     "won": 1
    },
    "rsa": {
@@ -6908,12 +6924,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.0,
-    "lost": 210,
-    "n": 807,
-    "roi": 1.1,
+    "hit": 73.9,
+    "lost": 211,
+    "n": 809,
+    "roi": 1.0,
     "said": 69.8,
-    "won": 597
+    "won": 598
    }
   },
   "weights": {
