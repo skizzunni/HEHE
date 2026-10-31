@@ -1,7 +1,8 @@
 # Review 2026-10-31
 
-Picks 20-1 (95.2% vs 73.2% claimed, ROI +22.6%).
-Closing line value: +0.45 points on 21 picks; beat the close on 47.6%.
+Picks 20-2 (90.9% vs 72.8% claimed, ROI +17.1%).
+Closing line value: +0.43 points on 22 picks; beat the close on 45.5%.
+- LOST ger FC Augsburg at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST rsa Sekhukhune United FC at 68%: margin 1 · the book had my side favoured too · called at 68%
 Locks 0/11 won, 11 open; Best play top 2 (59%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
