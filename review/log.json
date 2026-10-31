@@ -6452,17 +6452,17 @@
    },
    {
     "flag": false,
-    "hit": 85.3,
-    "n": 34,
+    "hit": 85.7,
+    "n": 35,
     "name": "safe locks nhl under",
     "said": 91.5
    },
    {
     "flag": false,
-    "hit": 87.5,
-    "n": 56,
+    "hit": 87.7,
+    "n": 57,
     "name": "daily calls",
-    "said": 80.1
+    "said": 80.4
    },
    {
     "flag": false,
@@ -6481,9 +6481,9 @@
    {
     "flag": false,
     "hit": 52.0,
-    "n": 150,
+    "n": 152,
     "name": "kalshi maker bids (filled)",
-    "said": 53.1
+    "said": 53.0
    }
   ],
   "big_files": [],
@@ -6556,9 +6556,9 @@
    }
   },
   "clv": {
-   "avg": 0.61,
-   "beat": 51.5,
-   "n": 103
+   "avg": 0.64,
+   "beat": 51.4,
+   "n": 105
   },
   "day": "2026-10-31",
   "leaks_14d": [
@@ -6810,10 +6810,11 @@
    {
     "killed_by": [
      "Over 44.5 points",
+     "Over 8.5 goals",
      "Over 55.5 points"
     ],
     "legs": 11,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 1
@@ -6871,12 +6872,12 @@
    }
   ],
   "picks": {
-   "hit": 78.6,
+   "hit": 79.0,
    "lost": 22,
-   "n": 103,
-   "roi": 3.2,
-   "said": 72.7,
-   "won": 81
+   "n": 105,
+   "roi": 3.5,
+   "said": 72.9,
+   "won": 83
   },
   "picks_by_league": {
    "arg": {
@@ -7040,12 +7041,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 88.9,
+    "hit": 90.0,
     "lost": 2,
-    "n": 18,
-    "roi": 26.5,
-    "said": 70.5,
-    "won": 16
+    "n": 20,
+    "roi": 25.6,
+    "said": 72.0,
+    "won": 18
    },
    "ned": {
     "hit": 50.0,
@@ -7126,7 +7127,7 @@
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 7,
+   "open": 6,
    "plays": {
     "best": [
      7,
@@ -7139,7 +7140,7 @@
      "open"
     ]
    },
-   "won": 4
+   "won": 5
   },
   "strong": {
    "n": 0
@@ -7150,12 +7151,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.0,
+    "hit": 74.1,
     "lost": 223,
-    "n": 858,
-    "roi": 1.0,
+    "n": 860,
+    "roi": 1.1,
     "said": 69.9,
-    "won": 635
+    "won": 637
    }
   },
   "weights": {
@@ -7171,10 +7172,10 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6251,
-    "market_only": 0.6348,
-    "model_40": 0.6251,
-    "n": 135,
+    "logloss": 0.6192,
+    "market_only": 0.628,
+    "model_40": 0.6192,
+    "n": 137,
     "weight": 0.4
    },
    "nhl": {
