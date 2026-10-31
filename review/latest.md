@@ -2,6 +2,8 @@
 
 Picks 9-0 (100.0% vs 71.7% claimed, ROI +31.5%).
 Closing line value: +2.28 points on 9 picks; beat the close on 77.8%.
+Locks 0/11 won, 11 open; Best play top 2 (59%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: open (0/6 legs won)
 Lottery 100: open (0/6 legs won)
 Lottery 100: open (0/8 legs won)
