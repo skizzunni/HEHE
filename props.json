@@ -22650,6 +22650,22 @@
   "price": "-1000",
   "status": "open"
  },
+ "nba:401909897|n:adem bona|Rebounds|4+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": -1.9,
+  "gid": "nba:401909897",
+  "imp": 0.9167,
+  "label": "Adem Bona: 4+ Rebounds",
+  "league": "nba",
+  "line": "4+",
+  "market": "Rebounds",
+  "name": "Adem Bona",
+  "p": 0.8472,
+  "p_fair": 0.8993,
+  "price": "-1100",
+  "status": "open"
+ },
  "nba:401909897|n:anfernee simons|Pts + Ast|10+": {
   "aid": null,
   "date": "2026-10-31",
@@ -22951,6 +22967,22 @@
   "p": 0.8531,
   "p_fair": 0.9251,
   "price": "-1200",
+  "status": "open"
+ },
+ "nba:401909898|n:jalen johnson|Assists|6+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": -2.1,
+  "gid": "nba:401909898",
+  "imp": 0.8551,
+  "label": "Jalen Johnson: 6+ Assists",
+  "league": "nba",
+  "line": "6+",
+  "market": "Assists",
+  "name": "Jalen Johnson",
+  "p": 0.8517,
+  "p_fair": 0.8371,
+  "price": "-590",
   "status": "open"
  },
  "nba:401909898|n:jalen johnson|Points|10+": {
@@ -42603,11 +42635,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "David Pastrnak",
   "p": 0.681,
   "p_fair": null,
   "price": "-280",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892614|n:elias lindholm|Shots on Goal|1+": {
   "aid": null,
@@ -42619,11 +42653,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Elias Lindholm",
   "p": 0.8531,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892614|n:patrick kane|Shots on Goal|1+": {
   "aid": null,
@@ -42635,11 +42671,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Patrick Kane",
   "p": 0.8472,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892615|n:emmitt finnie|Shots on Goal|1+": {
   "aid": null,
