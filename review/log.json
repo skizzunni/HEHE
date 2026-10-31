@@ -6473,10 +6473,10 @@
    },
    {
     "flag": false,
-    "hit": 42.1,
-    "n": 240,
+    "hit": 42.3,
+    "n": 241,
     "name": "value bets",
-    "said": 44.4
+    "said": 44.5
    },
    {
     "flag": false,
@@ -6556,9 +6556,9 @@
    }
   },
   "clv": {
-   "avg": 0.58,
+   "avg": 0.55,
    "beat": 51.0,
-   "n": 98
+   "n": 100
   },
   "day": "2026-10-31",
   "leaks_14d": [
@@ -6807,10 +6807,11 @@
    },
    {
     "killed_by": [
-     "Over 44.5 points"
+     "Over 44.5 points",
+     "Over 55.5 points"
     ],
     "legs": 11,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
     "won": 1
@@ -6865,12 +6866,12 @@
    }
   ],
   "picks": {
-   "hit": 77.6,
+   "hit": 78.0,
    "lost": 22,
-   "n": 98,
-   "roi": 1.4,
-   "said": 72.8,
-   "won": 76
+   "n": 100,
+   "roi": 2.3,
+   "said": 72.6,
+   "won": 78
   },
   "picks_by_league": {
    "arg": {
@@ -7034,12 +7035,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 86.7,
+    "hit": 88.2,
     "lost": 2,
-    "n": 15,
-    "roi": 24.1,
-    "said": 70.3,
-    "won": 13
+    "n": 17,
+    "roi": 27.0,
+    "said": 69.7,
+    "won": 15
    },
    "ned": {
     "hit": 50.0,
@@ -7138,10 +7139,10 @@
    "agree": {
     "hit": 73.9,
     "lost": 223,
-    "n": 853,
-    "roi": 0.8,
+    "n": 855,
+    "roi": 0.9,
     "said": 69.9,
-    "won": 630
+    "won": 632
    }
   },
   "weights": {
@@ -7157,10 +7158,10 @@
    "ncaaf": {
     "fitted": 0.4,
     "held_out": true,
-    "logloss": 0.6299,
-    "market_only": 0.6415,
-    "model_40": 0.6299,
-    "n": 132,
+    "logloss": 0.6277,
+    "market_only": 0.6383,
+    "model_40": 0.6277,
+    "n": 134,
     "weight": 0.4
    },
    "nhl": {
