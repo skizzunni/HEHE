@@ -6410,8 +6410,8 @@
    },
    {
     "flag": false,
-    "hit": 70.0,
-    "n": 10,
+    "hit": 72.7,
+    "n": 11,
     "name": "locks ncaaf side",
     "said": 75.8
    },
@@ -6556,9 +6556,9 @@
    }
   },
   "clv": {
-   "avg": 0.66,
-   "beat": 51.9,
-   "n": 108
+   "avg": 0.65,
+   "beat": 50.4,
+   "n": 115
   },
   "day": "2026-10-31",
   "leaks_14d": [
@@ -6575,7 +6575,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 9,
+   "open": 8,
    "plays": {
     "best": [
      2,
@@ -6583,7 +6583,7 @@
      "open"
     ]
    },
-   "won": 2
+   "won": 3
   },
   "losses": [
    {
@@ -6673,6 +6673,14 @@
     "price": "-500",
     "said": 80,
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 80%"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
+    "pick": "Real Salt Lake",
+    "price": "-200",
+    "said": 63,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 63%"
    },
    {
     "against_market": false,
@@ -6872,12 +6880,12 @@
    }
   ],
   "picks": {
-   "hit": 79.6,
-   "lost": 22,
-   "n": 108,
-   "roi": 4.2,
-   "said": 73.1,
-   "won": 86
+   "hit": 80.0,
+   "lost": 23,
+   "n": 115,
+   "roi": 5.0,
+   "said": 72.9,
+   "won": 92
   },
   "picks_by_league": {
    "arg": {
@@ -6918,6 +6926,14 @@
     "n": 1,
     "roi": 28.6,
     "said": 73.0,
+    "won": 1
+   },
+   "chi": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 28.6,
+    "said": 74.0,
     "won": 1
    },
    "ecu": {
@@ -7025,12 +7041,12 @@
     "won": 1
    },
    "mls": {
-    "hit": 66.7,
-    "lost": 2,
-    "n": 6,
-    "roi": -13.9,
-    "said": 73.3,
-    "won": 4
+    "hit": 62.5,
+    "lost": 3,
+    "n": 8,
+    "roi": -18.6,
+    "said": 71.5,
+    "won": 5
    },
    "nba": {
     "hit": 100.0,
@@ -7041,12 +7057,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 90.9,
+    "hit": 92.3,
     "lost": 2,
-    "n": 22,
-    "roi": 24.1,
-    "said": 73.7,
-    "won": 20
+    "n": 26,
+    "roi": 26.3,
+    "said": 73.4,
+    "won": 24
    },
    "ned": {
     "hit": 50.0,
@@ -7120,9 +7136,9 @@
     "said_price": 87.2,
     "won": 1122
    },
-   "n": 49,
-   "said": 80.8,
-   "won": 42
+   "n": 51,
+   "said": 80.3,
+   "won": 43
   },
   "safe_locks": {
    "lost": [],
@@ -7151,12 +7167,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.2,
-    "lost": 223,
-    "n": 863,
-    "roi": 1.2,
+    "hit": 74.3,
+    "lost": 224,
+    "n": 870,
+    "roi": 1.3,
     "said": 70.0,
-    "won": 640
+    "won": 646
    }
   },
   "weights": {
@@ -7170,13 +7186,13 @@
     "weight": 0.0
    },
    "ncaaf": {
-    "fitted": 0.35,
+    "fitted": 0.3,
     "held_out": true,
-    "logloss": 0.6128,
-    "market_only": 0.6204,
-    "model_40": 0.6129,
-    "n": 139,
-    "weight": 0.35
+    "logloss": 0.6066,
+    "market_only": 0.6126,
+    "model_40": 0.607,
+    "n": 143,
+    "weight": 0.3
    },
    "nhl": {
     "fitted": 0.0,

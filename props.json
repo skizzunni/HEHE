@@ -23803,6 +23803,22 @@
   "price": "-350",
   "status": "open"
  },
+ "nba:401909902|n:isaiah hartenstein|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": 2.0,
+  "gid": "nba:401909902",
+  "imp": 0.9,
+  "label": "Isaiah Hartenstein: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Isaiah Hartenstein",
+  "p": 0.8571,
+  "p_fair": 0.918,
+  "price": "-900",
+  "status": "open"
+ },
  "nba:401909902|n:isaiah hartenstein|Rebounds|6+": {
   "aid": null,
   "date": "2026-10-31",
@@ -43556,6 +43572,22 @@
   "price": "-355",
   "status": "open"
  },
+ "nhl:401892622|n:adam fantilli|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": null,
+  "gid": "nhl:401892622",
+  "imp": 0.9524,
+  "label": "Adam Fantilli: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Adam Fantilli",
+  "p": 0.8665,
+  "p_fair": null,
+  "price": "-2000",
+  "status": "open"
+ },
  "nhl:401892622|n:mikko rantanen|Shots on Goal|1+": {
   "aid": null,
   "date": "2026-10-31",
@@ -43714,6 +43746,22 @@
   "p": 0.8582,
   "p_fair": null,
   "price": "-1300",
+  "status": "open"
+ },
+ "nhl:401892623|n:nathan mackinnon|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": null,
+  "gid": "nhl:401892623",
+  "imp": 0.9412,
+  "label": "Nathan MacKinnon: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Nathan MacKinnon",
+  "p": 0.8665,
+  "p_fair": null,
+  "price": "-1600",
   "status": "open"
  },
  "nhl:401892623|n:nathan mackinnon|Shots on Goal|3+": {
@@ -45711,7 +45759,8 @@
   "p": 0.7857,
   "p_fair": null,
   "price": "-500",
-  "status": "open"
+  "status": "won",
+  "value": 1.52
  },
  "ufc:401928109|n:jeongyeong lee|Winner|win": {
   "aid": null,
@@ -45727,7 +45776,8 @@
   "p": 0.5857,
   "p_fair": null,
   "price": "-156",
-  "status": "open"
+  "status": "lost",
+  "value": 1.52
  },
  "ufc:401929495|n:aaron pico|Winner|win": {
   "aid": null,

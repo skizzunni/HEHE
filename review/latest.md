@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 86-22 (79.6% vs 73.1% claimed, ROI +4.2%).
-Closing line value: +0.66 points on 108 picks; beat the close on 51.9%.
+Picks 92-23 (80.0% vs 72.9% claimed, ROI +5.0%).
+Closing line value: +0.65 points on 115 picks; beat the close on 50.4%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
@@ -13,6 +13,7 @@ Closing line value: +0.66 points on 108 picks; beat the close on 51.9%.
 - LOST ger Bayern Munich at 70%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 70%
 - LOST ita Internazionale at 74%: margin 2 · the book had my side favoured too · called at 74%
 - LOST mls St. Louis CITY SC at 80%: margin 1 · the book had my side favoured too · called at 80%
+- LOST mls Real Salt Lake at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST mls New York City FC at 65%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 65%
 - LOST ncaaf SMU Mustangs at 75%: margin 3 · the book had my side favoured too · called at 75%
 - LOST ncaaf Georgia State Panthers at 62%: margin 11 · the book had my side favoured too · called at 62%
@@ -25,7 +26,7 @@ Closing line value: +0.66 points on 108 picks; beat the close on 51.9%.
 - LOST rsa Stellenbosch at 80%: margin 2 · the book had my side favoured too · called at 80%
 - LOST sco2 Partick Thistle at 77%: margin 1 · the book had my side favoured too · called at 77%
 LEAK arg: 65.0% hit vs 74.8% claimed on 20 calls (14 days)
-Locks 2/11 won, 9 open; Best play top 2 (59%) open.
+Locks 3/11 won, 8 open; Best play top 2 (59%) open.
 Safe Locks 6/11 won, 5 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: lost (1/6 legs won, killed by Notre Dame Fighting Irish -35.5, Auburn Tigers +7.5)
 Lottery 100: lost (1/6 legs won, killed by North Dakota State Bison -30.5, Over 44.5 points)
@@ -37,7 +38,7 @@ Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Gre
 Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5, UTEP Miners +14.5)
 Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5, UTEP Miners +14.5)
 Ladder-consistency props (all time): 1122/1342 won (83.6%) vs 86.6% fair, 87.2% price.
-Props 42/49 vs 80.8% claimed.
+Props 43/51 vs 80.3% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.35 (n=139), nhl 0.00 (n=105)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.30 (n=143), nhl 0.00 (n=105)
