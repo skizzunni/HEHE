@@ -2877,6 +2877,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26OCT31CSUUSU-USU8"
   },
+  "KXNCAAFSPREAD-26OCT31CSUUSU-USU8|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401860910",
+   "label": "Utah State Aggies -7.5",
+   "league": "ncaaf",
+   "match": "CSU @ USU",
+   "posted": "2026-10-31T13:32:54+00:00",
+   "queue": 269462.38,
+   "side": "YES",
+   "spec": {
+    "line": -7.5,
+    "t": "spread",
+    "team": "Utah State Aggies"
+   },
+   "start": "2026-10-31T19:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26OCT31CSUUSU-USU8"
+  },
   "KXNCAAFSPREAD-26OCT31FLAUGA-UGA12|YES": {
    "ask": 0.51,
    "bid": 0.5,
@@ -5702,6 +5724,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT31AUBMISS-58"
   },
+  "KXNCAAFTOTAL-26OCT31BCDUKE-50|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401858279",
+   "label": "under 49.5",
+   "league": "ncaaf",
+   "match": "BC @ DUKE",
+   "posted": "2026-10-31T13:32:54+00:00",
+   "queue": 115783.48,
+   "side": "NO",
+   "spec": {
+    "line": 49.5,
+    "t": "under"
+   },
+   "start": "2026-10-31T16:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT31BCDUKE-50"
+  },
   "KXNCAAFTOTAL-26OCT31BGSUWMU-45|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -6121,6 +6164,27 @@
    "start": "2026-10-31T19:15Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT31STANLOU-61"
+  },
+  "KXNCAAFTOTAL-26OCT31UABUSF-43|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401862816",
+   "label": "under 42.5",
+   "league": "ncaaf",
+   "match": "UAB @ USF",
+   "posted": "2026-10-31T13:32:54+00:00",
+   "queue": 112407.84,
+   "side": "NO",
+   "spec": {
+    "line": 42.5,
+    "t": "under"
+   },
+   "start": "2026-10-31T16:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26OCT31UABUSF-43"
   },
   "KXNCAAFTOTAL-26OCT31UNMSJSU-43|NO": {
    "ask": 0.51,
