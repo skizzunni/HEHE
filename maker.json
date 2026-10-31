@@ -3330,6 +3330,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401858278",
    "label": "SMU Mustangs -9.5",
    "league": "ncaaf",
@@ -3343,8 +3344,9 @@
     "team": "SMU Mustangs"
    },
    "start": "2026-10-31T16:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT31SMUSYR-SMU10"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT31SMUSYR-SMU10",
+   "won": 0
   },
   "KXNCAAFSPREAD-26OCT31SMUSYR-SMU11|NO": {
    "ask": 0.51,
@@ -3352,6 +3354,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401858278",
    "label": "Syracuse Orange +10.5",
    "league": "ncaaf",
@@ -3365,8 +3368,9 @@
     "team": "Syracuse Orange"
    },
    "start": "2026-10-31T16:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26OCT31SMUSYR-SMU11"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26OCT31SMUSYR-SMU11",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT31UABUSF-USF8|NO": {
    "ask": 0.51,

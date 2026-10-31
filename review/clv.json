@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 51.0,
-  "brier_close": 0.1786,
-  "brier_published": 0.1826,
+  "beat_close_pct": 50.7,
+  "brier_close": 0.1792,
+  "brier_published": 0.1831,
   "dates": [
    "2026-10-25",
    "2026-10-31"
   ],
-  "logloss_close": 0.5412,
-  "logloss_published": 0.5508,
-  "mean_clv_pts": 0.08,
+  "logloss_close": 0.5423,
+  "logloss_published": 0.5519,
+  "mean_clv_pts": 0.05,
   "n": 300
  },
  "market_is_model": true,
@@ -12288,6 +12288,15 @@
    "published": 0.78,
    "won": 0
   },
+  "ncaaf:401856842": {
+   "call": false,
+   "close": 0.624,
+   "clv": 1.4,
+   "day": "2026-10-31",
+   "league": "ncaaf",
+   "published": 0.61,
+   "won": 1
+  },
   "ncaaf:401856844": {
    "call": false,
    "close": 0.5547,
@@ -12809,6 +12818,15 @@
    "league": "ncaaf",
    "published": 0.71,
    "won": 1
+  },
+  "ncaaf:401858278": {
+   "call": false,
+   "close": 0.7488,
+   "clv": -3.12,
+   "day": "2026-10-31",
+   "league": "ncaaf",
+   "published": 0.78,
+   "won": 0
   },
   "ncaaf:401858279": {
    "call": false,
@@ -15657,6 +15675,15 @@
    "league": "ned2",
    "published": 0.675,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 1
+  },
+  "ned:401875564": {
+   "call": true,
+   "close": 0.8877,
+   "clv": 0.77,
+   "day": "2026-10-31",
+   "league": "ned",
+   "published": 0.88,
    "won": 1
   },
   "ned:401875565": {
@@ -21366,5 +21393,5 @@
    "won": 0
   }
  },
- "updated": "2026-10-31T19:39+00:00"
+ "updated": "2026-10-31T19:44+00:00"
 }
