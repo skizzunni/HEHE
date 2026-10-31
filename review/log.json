@@ -5969,24 +5969,24 @@
  },
  "2026-10-30": {
   "clv": {
-   "avg": 0.31,
-   "beat": 57.5,
-   "n": 40
+   "avg": 0.43,
+   "beat": 58.5,
+   "n": 41
   },
   "day": "2026-10-30",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 4,
-   "open": 3,
+   "open": 2,
    "plays": {
     "best": [
      2,
      0.5984,
-     "open"
+     "won"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "losses": [
    {
@@ -6063,6 +6063,14 @@
    },
    {
     "against_market": false,
+    "league": "nba",
+    "pick": "Los Angeles Lakers",
+    "price": "-148",
+    "said": 57,
+    "why": "margin 17 \u00b7 the book had my side favoured too \u00b7 called at 57%"
+   },
+   {
+    "against_market": false,
     "league": "nhl",
     "pick": "Vegas Golden Knights",
     "price": "-115",
@@ -6080,11 +6088,11 @@
   ],
   "lottery": [],
   "picks": {
-   "hit": 72.5,
-   "lost": 11,
-   "n": 40,
-   "roi": -2.2,
-   "said": 69.1,
+   "hit": 70.7,
+   "lost": 12,
+   "n": 41,
+   "roi": -4.6,
+   "said": 68.8,
    "won": 29
   },
   "picks_by_league": {
@@ -6209,11 +6217,11 @@
     "won": 1
    },
    "nba": {
-    "hit": 66.7,
-    "lost": 3,
-    "n": 9,
-    "roi": -5.3,
-    "said": 66.7,
+    "hit": 60.0,
+    "lost": 4,
+    "n": 10,
+    "roi": -14.7,
+    "said": 65.7,
     "won": 6
    },
    "ncaaf": {
@@ -6259,29 +6267,31 @@
   },
   "props": {
    "fair": {
-    "n": 1315,
+    "n": 1327,
     "said_fair": 86.6,
     "said_price": 87.2,
-    "won": 1102
+    "won": 1110
    },
-   "n": 84,
-   "said": 83.1,
-   "won": 69
+   "n": 98,
+   "said": 83.2,
+   "won": 79
   },
   "safe_locks": {
-   "lost": [],
+   "lost": [
+    "Over 209.5 points (Los Angeles Lakers at Golden State Warriors) Los Angeles Lakers 95 - Golden State Warriors 112"
+   ],
    "n": 3,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      3,
      0.7309,
-     "open"
+     "lost"
     ],
     "winners": [
      2,
      0.8133,
-     "open"
+     "lost"
     ]
    },
    "won": 1
@@ -6294,10 +6304,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 73.2,
-    "lost": 203,
-    "n": 757,
-    "roi": 0.6,
+    "hit": 73.1,
+    "lost": 204,
+    "n": 758,
+    "roi": 0.4,
     "said": 69.4,
     "won": 554
    }
@@ -6314,31 +6324,31 @@
    },
    {
     "flag": false,
-    "hit": 77.8,
-    "n": 63,
+    "hit": 76.9,
+    "n": 65,
     "name": "props nba Assists",
-    "said": 81.1
+    "said": 81.2
    },
    {
     "flag": false,
-    "hit": 86.6,
-    "n": 82,
+    "hit": 85.1,
+    "n": 87,
     "name": "props nba Points",
-    "said": 85.4
+    "said": 85.5
    },
    {
     "flag": false,
-    "hit": 94.1,
-    "n": 51,
+    "hit": 92.7,
+    "n": 55,
     "name": "props nba Pts + Ast",
-    "said": 84.2
+    "said": 83.8
    },
    {
     "flag": false,
-    "hit": 82.5,
-    "n": 57,
+    "hit": 83.1,
+    "n": 59,
     "name": "props nba Pts + Reb + Ast",
-    "said": 84.1
+    "said": 84.2
    },
    {
     "flag": false,
@@ -6356,10 +6366,10 @@
    },
    {
     "flag": false,
-    "hit": 74.1,
-    "n": 27,
+    "hit": 75.0,
+    "n": 28,
     "name": "props nba Threes Made",
-    "said": 83.5
+    "said": 83.6
    },
    {
     "flag": false,
@@ -6377,8 +6387,8 @@
    },
    {
     "flag": false,
-    "hit": 93.8,
-    "n": 16,
+    "hit": 94.1,
+    "n": 17,
     "name": "locks nba under",
     "said": 75.3
    },
@@ -6398,8 +6408,8 @@
    },
    {
     "flag": false,
-    "hit": 92.3,
-    "n": 13,
+    "hit": 85.7,
+    "n": 14,
     "name": "safe locks nba over",
     "said": 90.3
    },
@@ -6426,17 +6436,17 @@
    },
    {
     "flag": false,
-    "hit": 89.8,
-    "n": 49,
+    "hit": 88.0,
+    "n": 50,
     "name": "daily calls",
-    "said": 80.4
+    "said": 80.0
    },
    {
     "flag": false,
-    "hit": 94.2,
-    "n": 86,
+    "hit": 94.3,
+    "n": 88,
     "name": "prop locks",
-    "said": 90.5
+    "said": 90.4
    },
    {
     "flag": false,
@@ -6544,10 +6554,10 @@
   "picks_by_league": {},
   "props": {
    "fair": {
-    "n": 1315,
+    "n": 1327,
     "said_fair": 86.6,
     "said_price": 87.2,
-    "won": 1102
+    "won": 1110
    },
    "n": 0,
    "said": null,
@@ -6574,10 +6584,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 73.5,
-    "lost": 199,
-    "n": 751,
-    "roi": 0.9,
+    "hit": 73.4,
+    "lost": 200,
+    "n": 752,
+    "roi": 0.8,
     "said": 69.5,
     "won": 552
    }
@@ -6586,10 +6596,10 @@
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5647,
-    "market_only": 0.5647,
-    "model_40": 0.5923,
-    "n": 80,
+    "logloss": 0.5682,
+    "market_only": 0.5682,
+    "model_40": 0.596,
+    "n": 81,
     "weight": 0.0
    },
    "ncaaf": {
