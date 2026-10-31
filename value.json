@@ -3760,6 +3760,23 @@
    "tip": "3:30 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401858502|home|FanDuel": {
+   "dec": 1.8197,
+   "ev": 0.02,
+   "fair": 0.5606,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401858502",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "WIS @ IOWA",
+   "price": "-122",
+   "seen": "2026-10-31T15:46:20+00:00",
+   "side": "home",
+   "start": "2026-10-31T16:00Z",
+   "team": "Iowa Hawkeyes",
+   "tip": "12:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401858506|away|FanDuel": {
    "dec": 4.5,
    "ev": 0.0433,
@@ -5846,6 +5863,30 @@
    "start": "2026-10-31T23:00Z",
    "team": "Vancouver Canucks",
    "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892624|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Carolina Hurricanes\"}|Kalshi": {
+   "dec": 1.9704,
+   "dk": "-118",
+   "ev": 0.021,
+   "fair": 0.5182,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892624",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "WPG @ CAR",
+   "price": "-103",
+   "seen": "2026-10-31T15:46:20+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Carolina Hurricanes\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Carolina Hurricanes"
+   },
+   "start": "2026-11-01T18:00Z",
+   "team": "Carolina Hurricanes -1.5",
+   "tip": "1:00 PM",
    "venue": "Kalshi"
   },
   "nhl:401892627|home|Kalshi": {
