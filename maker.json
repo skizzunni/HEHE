@@ -922,6 +922,7 @@
    "cost": 0.8325,
    "edge": 0.0042,
    "fair": 0.836,
+   "fill": "touch",
    "id": "ncaaf:401871059",
    "label": "Liberty Flames",
    "league": "ncaaf",
@@ -934,8 +935,9 @@
     "team": "Liberty Flames"
    },
    "start": "2026-10-31T19:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26OCT31FIULIB-LIB"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26OCT31FIULIB-LIB",
+   "won": 1
   },
   "KXNCAAFGAME-26OCT31FLAUGA-UGA|YES": {
    "ask": 0.8,
@@ -2980,6 +2982,28 @@
    "status": "graded",
    "ticker": "KXNCAAFSPREAD-26OCT31CCARGAST-GAST4",
    "won": 0
+  },
+  "KXNCAAFSPREAD-26OCT31CLEMFSU-FSU5|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401858280",
+   "label": "Florida State Seminoles -4.5",
+   "league": "ncaaf",
+   "match": "CLEM @ FSU",
+   "posted": "2026-10-31T22:41:06+00:00",
+   "queue": 212112.71,
+   "side": "YES",
+   "spec": {
+    "line": -4.5,
+    "t": "spread",
+    "team": "Florida State Seminoles"
+   },
+   "start": "2026-10-31T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26OCT31CLEMFSU-FSU5"
   },
   "KXNCAAFSPREAD-26OCT31CLEMFSU-FSU6|NO": {
    "ask": 0.51,
@@ -6296,6 +6320,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "ncaaf:401871059",
    "label": "under 45.5",
    "league": "ncaaf",
@@ -6308,8 +6333,9 @@
     "t": "under"
    },
    "start": "2026-10-31T19:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26OCT31FIULIB-46"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26OCT31FIULIB-46",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT31FLAUGA-57|NO": {
    "ask": 0.51,
