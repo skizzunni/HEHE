@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 58-13 (81.7% vs 73.5% claimed, ROI +5.9%).
-Closing line value: +0.57 points on 71 picks; beat the close on 50.7%.
+Picks 59-13 (81.9% vs 73.7% claimed, ROI +6.0%).
+Closing line value: +0.51 points on 72 picks; beat the close on 50.0%.
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST epl Manchester City at 79%: margin 1 · the book had my side favoured too · called at 79%
 - LOST epl Sunderland at 69%: margin 2 · the book had my side favoured too · called at 69%
