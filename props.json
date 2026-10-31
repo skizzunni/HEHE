@@ -23134,6 +23134,22 @@
   "prop_lock": true,
   "status": "open"
  },
+ "nba:401909898|n:jalen johnson|Pts + Reb + Ast|30+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": -5.8,
+  "gid": "nba:401909898",
+  "imp": 0.8947,
+  "label": "Jalen Johnson: 30+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "30+",
+  "market": "Pts + Reb + Ast",
+  "name": "Jalen Johnson",
+  "p": 0.8521,
+  "p_fair": 0.8425,
+  "price": "-850",
+  "status": "open"
+ },
  "nba:401909898|n:jalen johnson|Rebounds|6+": {
   "aid": null,
   "date": "2026-10-31",
@@ -23196,6 +23212,22 @@
   "p": 0.8517,
   "p_fair": 0.8322,
   "price": "-590",
+  "status": "open"
+ },
+ "nba:401909898|n:trey murphy|Points|10+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": -1.0,
+  "gid": "nba:401909898",
+  "imp": 0.9333,
+  "label": "Trey Murphy III: 10+ Points",
+  "league": "nba",
+  "line": "10+",
+  "market": "Points",
+  "name": "Trey Murphy III",
+  "p": 0.8477,
+  "p_fair": 0.9243,
+  "price": "-1400",
   "status": "open"
  },
  "nba:401909899|n:cameron boozer|Reb + Ast|10+": {
@@ -23433,6 +23465,22 @@
   "p": 0.8677,
   "price": "-10000",
   "prop_lock": true,
+  "status": "open"
+ },
+ "nba:401909901|n:ayo dosunmu|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": 3.1,
+  "gid": "nba:401909901",
+  "imp": 0.8947,
+  "label": "Ayo Dosunmu: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Ayo Dosunmu",
+  "p": 0.8521,
+  "p_fair": 0.9225,
+  "price": "-850",
   "status": "open"
  },
  "nba:401909901|n:deaaron fox|Pts + Ast|15+": {
@@ -43171,7 +43219,9 @@
   "p": 0.7375,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nhl:401892618|n:alex laferriere|Shots on Goal|2+": {
   "aid": null,
@@ -43183,11 +43233,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Alex Laferriere",
   "p": 0.7165,
   "p_fair": null,
   "price": "-345",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892618|n:trevor moore|Shots on Goal|1+": {
   "aid": null,
@@ -43199,11 +43251,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Trevor Moore",
   "p": 0.8646,
   "p_fair": null,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892618|n:zach benson|Shots on Goal|1+": {
   "aid": null,
@@ -43215,11 +43269,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Zach Benson",
   "p": 0.8582,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892619|n:dylan cozens|Shots on Goal|2+": {
   "aid": null,
@@ -43289,6 +43345,22 @@
   "p": 0.8418,
   "p_fair": null,
   "price": "-1000",
+  "status": "open"
+ },
+ "nhl:401892620|n:evgeni malkin|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": null,
+  "gid": "nhl:401892620",
+  "imp": 0.9,
+  "label": "Evgeni Malkin: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Evgeni Malkin",
+  "p": 0.8372,
+  "p_fair": null,
+  "price": "-900",
   "status": "open"
  },
  "nhl:401892620|n:juraj slafkovsky|Shots on Goal|2+": {
@@ -43593,6 +43665,22 @@
   "p": 0.7402,
   "p_fair": null,
   "price": "-395",
+  "status": "open"
+ },
+ "nhl:401892623|n:joel farabee|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": null,
+  "gid": "nhl:401892623",
+  "imp": 0.9,
+  "label": "Joel Farabee: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Joel Farabee",
+  "p": 0.8372,
+  "p_fair": null,
+  "price": "-900",
   "status": "open"
  },
  "nhl:401892623|n:martin necas|Shots on Goal|2+": {
@@ -45855,7 +45943,8 @@
   "p_fair": null,
   "price": "-670",
   "prop_lock": true,
-  "status": "open"
+  "status": "lost",
+  "value": 15.0
  },
  "ufc:401931617|n:zach reese|Method|KO/TKO": {
   "aid": null,
@@ -45871,7 +45960,8 @@
   "p": 0.4767,
   "p_fair": null,
   "price": "-125",
-  "status": "open"
+  "status": "lost",
+  "value": 15.0
  },
  "ufc:401931617|n:zach reese|Winner|win": {
   "aid": null,
@@ -45887,7 +45977,8 @@
   "p": 0.7711,
   "p_fair": null,
   "price": "-405",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "wnba:401918305|n:allisha gray|Points|10+": {
   "aid": null,
