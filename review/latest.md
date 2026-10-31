@@ -2,6 +2,15 @@
 
 Picks 9-0 (100.0% vs 71.7% claimed, ROI +31.5%).
 Closing line value: +2.28 points on 9 picks; beat the close on 77.8%.
+Lottery 100: open (0/6 legs won)
+Lottery 100: open (0/6 legs won)
+Lottery 100: open (0/8 legs won)
+Lottery 10k: open (0/9 legs won)
+Lottery 10k: open (0/11 legs won)
+Lottery 10k: open (0/10 legs won)
+Lottery 10k+25: open (0/9 legs won)
+Lottery 10k+50: open (0/8 legs won)
+Lottery 10k+100: open (0/8 legs won)
 Ladder-consistency props (all time): 1110/1327 won (83.6%) vs 86.6% fair, 87.2% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
