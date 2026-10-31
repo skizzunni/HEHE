@@ -4595,6 +4595,47 @@
    "tip": "4:05 PM",
    "venue": "Kalshi"
   },
+  "nfl:401873024|away|FanDuel": {
+   "dec": 3.9,
+   "ev": 0.015,
+   "fair": 0.2603,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nfl:401873024",
+   "kind": "value",
+   "league": "nfl",
+   "match": "ARI @ DAL",
+   "price": "+290",
+   "seen": "2026-10-31T04:05:32+00:00",
+   "side": "away",
+   "start": "2026-11-01T18:00Z",
+   "team": "Arizona Cardinals",
+   "tip": "1:00 PM",
+   "venue": "FanDuel"
+  },
+  "nfl:401873035|{\"line\": 5.5, \"t\": \"spread\", \"team\": \"Philadelphia Eagles\"}|Kalshi": {
+   "dec": 2.0947,
+   "dk": "-108",
+   "ev": 0.0164,
+   "fair": 0.4852,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nfl:401873035",
+   "kind": "value",
+   "league": "nfl",
+   "market": "spread",
+   "match": "PHI @ WSH",
+   "price": "+109",
+   "seen": "2026-10-31T04:05:32+00:00",
+   "side": "{\"line\": 5.5, \"t\": \"spread\", \"team\": \"Philadelphia Eagles\"}",
+   "spec": {
+    "line": 5.5,
+    "t": "spread",
+    "team": "Philadelphia Eagles"
+   },
+   "start": "2026-11-02T01:20Z",
+   "team": "Philadelphia Eagles +5.5",
+   "tip": "8:20 PM",
+   "venue": "Kalshi"
+  },
   "nhl:401892558|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"St. Louis Blues\"}|FanDuel": {
    "dec": 1.4545,
    "dk": "-258",
@@ -7190,6 +7231,26 @@
    "seen": "2026-10-24T15:53:52+00:00",
    "status": "lost",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401866452:away": {
+   "ev": 0.011,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.011,
+     "fair": 0.1685,
+     "id": "ncaaf:401866452",
+     "price": "+500",
+     "side": "away",
+     "spec": null,
+     "team": "Bowling Green Falcons"
+    }
+   ],
+   "payout": 6.0,
+   "prob": 0.1685,
+   "seen": "2026-10-31T04:05:32+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401871058:{\"line\": 50.5, \"t\": \"over\"}|nhl:401892598:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New Jersey Devils\"}": {

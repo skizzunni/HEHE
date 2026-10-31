@@ -5877,6 +5877,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26OCT31WASHNEB-51"
   },
+  "KXNFLGAME-26NOV01INDJAC-JAC|YES": {
+   "ask": 0.81,
+   "bid": 0.8,
+   "cost": 0.8028,
+   "edge": 0.0121,
+   "fair": 0.8125,
+   "id": "nfl:401873028",
+   "label": "Jacksonville Jaguars",
+   "league": "nfl",
+   "match": "IND @ JAX",
+   "posted": "2026-10-31T04:05:32+00:00",
+   "queue": 92138.6,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Jacksonville Jaguars"
+   },
+   "start": "2026-11-01T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLGAME-26NOV01INDJAC-JAC"
+  },
   "KXNFLGAME-26OCT25CINBAL-CIN|YES": {
    "ask": 0.52,
    "bid": 0.51,
@@ -6192,6 +6213,28 @@
    "ticker": "KXNFLGAME-26OCT29CARGB-GB",
    "won": 1
   },
+  "KXNFLSPREAD-26NOV01ATLTB-TB3|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "nfl:401873025",
+   "label": "Atlanta Falcons +2.5",
+   "league": "nfl",
+   "match": "ATL @ TB",
+   "posted": "2026-10-31T04:05:32+00:00",
+   "queue": 512853.02,
+   "side": "NO",
+   "spec": {
+    "line": 2.5,
+    "t": "spread",
+    "team": "Atlanta Falcons"
+   },
+   "start": "2026-11-01T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26NOV01ATLTB-TB3"
+  },
   "KXNFLSPREAD-26OCT25CINBAL-CIN2|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -6453,6 +6496,69 @@
    "status": "graded",
    "ticker": "KXNFLSPREAD-26OCT29CARGB-GB4",
    "won": 1
+  },
+  "KXNFLTOTAL-26NOV01ARIDAL-55|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "nfl:401873024",
+   "label": "over 54.5",
+   "league": "nfl",
+   "match": "ARI @ DAL",
+   "posted": "2026-10-31T04:05:32+00:00",
+   "queue": 95.0,
+   "side": "YES",
+   "spec": {
+    "line": 54.5,
+    "t": "over"
+   },
+   "start": "2026-11-01T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV01ARIDAL-55"
+  },
+  "KXNFLTOTAL-26NOV01KCDEN-41|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "nfl:401873033",
+   "label": "over 40.5",
+   "league": "nfl",
+   "match": "KC @ DEN",
+   "posted": "2026-10-31T04:05:32+00:00",
+   "queue": 534113.62,
+   "side": "YES",
+   "spec": {
+    "line": 40.5,
+    "t": "over"
+   },
+   "start": "2026-11-01T21:25Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV01KCDEN-41"
+  },
+  "KXNFLTOTAL-26NOV01LACLAR-46|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "nfl:401873032",
+   "label": "under 45.5",
+   "league": "nfl",
+   "match": "LAC @ LAR",
+   "posted": "2026-10-31T04:05:32+00:00",
+   "queue": 210849.8,
+   "side": "NO",
+   "spec": {
+    "line": 45.5,
+    "t": "under"
+   },
+   "start": "2026-11-01T21:05Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV01LACLAR-46"
   },
   "KXNFLTOTAL-26OCT22NECHI-51|YES": {
    "ask": 0.52,
