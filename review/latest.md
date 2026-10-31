@@ -28,7 +28,7 @@ Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Gre
 Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Ladder-consistency props (all time): 1110/1327 won (83.6%) vs 86.6% fair, 87.2% price.
-Props 4/5 vs 78.0% claimed.
+Props 8/9 vs 79.6% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=81), ncaaf 0.40 (n=128), nhl 0.00 (n=101)
