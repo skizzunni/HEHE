@@ -3678,3 +3678,9 @@ the same data: NFL unders +0.3, NFL overs -0.7, college overs +4.4.
 Safe Locks, the 2x / 3x / 5x tickets and the challenge. Cards already set
 are not changed. On the live cards, college unders were 14 of 17 on Locks
 (80.6% stated) and 6 of 6 on Safe Locks, too few to judge either way.
+Checked against multiple testing (2026-10-31): every league and bet type
+with 40+ games in the same data was scanned at game level, needing a 99.5%
+bootstrap range clear of zero and the same sign in both halves. Only college
+football unders qualify (-10.2 points, 99.5% range -19.5 to -1.1). The
+nearest others: NHL unders +9.3 (one half only), college overs +4.4 and
+spreads +5.0 (ranges include zero), so nothing else is excluded or favoured.
