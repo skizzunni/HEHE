@@ -3025,7 +3025,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T01:17:20+00:00",
+      "checked_at": "2026-10-31T01:22:26+00:00",
       "conf": 74,
       "dc": true,
       "gate": {
@@ -3037,10 +3037,10 @@
       "match": "UNAM @ PUE",
       "pick": "Pumas UNAM or draw",
       "price": "-360",
-      "price_at": "2026-10-31T01:12:12+00:00",
+      "price_at": "2026-10-31T01:22:24+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193666247:15735562",
-      "prob_at": "2026-10-31T01:17:01+00:00",
+      "prob_at": "2026-10-31T01:22:04+00:00",
       "rank": 1,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -3076,7 +3076,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T01:17:20+00:00",
+      "checked_at": "2026-10-31T01:22:26+00:00",
       "conf": 72,
       "dc": false,
       "gate": {
@@ -3088,10 +3088,10 @@
       "match": "KENT @ SAC",
       "pick": "Kent State Golden Flashes",
       "price": "-278",
-      "price_at": "2026-10-31T01:17:00+00:00",
+      "price_at": "2026-10-31T01:22:04+00:00",
       "price_market": "moneyline",
       "price_ref": "34876646:0ML86864930_3",
-      "prob_at": "2026-10-31T01:17:00+00:00",
+      "prob_at": "2026-10-31T01:22:04+00:00",
       "rank": 2,
       "ready": true,
       "side": "away",
@@ -3126,7 +3126,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T01:17:20+00:00",
+      "checked_at": "2026-10-31T01:22:26+00:00",
       "conf": 70,
       "dc": false,
       "gate": {
@@ -3138,10 +3138,10 @@
       "match": "DOR @ PAZ",
       "pick": "Club Atl\u00e9tico La Paz",
       "price": "-320",
-      "price_at": "2026-10-31T01:17:01+00:00",
+      "price_at": "2026-10-31T01:22:04+00:00",
       "price_market": "moneyline",
       "price_ref": "34897985:0ML86922742_1",
-      "prob_at": "2026-10-31T01:17:01+00:00",
+      "prob_at": "2026-10-31T01:22:04+00:00",
       "rank": 3,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -3177,32 +3177,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T01:17:20+00:00",
+      "checked_at": "2026-10-31T01:22:26+00:00",
       "conf": 61,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (5 listed)"
+       "what": "injury report checked (4 listed)"
       },
       "id": "nba:401909286",
       "league": "nba",
       "match": "DEN @ PHX",
       "pick": "Denver Nuggets",
       "price": "-175",
-      "price_at": "2026-10-31T01:17:00+00:00",
+      "price_at": "2026-10-31T01:22:04+00:00",
       "price_market": "moneyline",
       "price_ref": "34516258:0ML85859654_3",
-      "prob_at": "2026-10-31T01:17:00+00:00",
+      "prob_at": "2026-10-31T01:22:04+00:00",
       "rank": 4,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "away",
       "start": "2026-10-31T02:00Z"
      },
      "dc": false,
-     "fp": "59870654da11",
+     "fp": "170efa340898",
      "gate": {
       "ok": true,
-      "what": "injury report checked (5 listed)"
+      "what": "injury report checked (4 listed)"
      },
      "id": "nba:401909286",
      "league": "nba",
@@ -3211,10 +3212,15 @@
        "event": "news",
        "t": "2026-10-31T01:12:15+00:00",
        "what": "injury report checked (5 listed)"
+      },
+      {
+       "event": "news",
+       "t": "2026-10-31T01:22:26+00:00",
+       "what": "injury report checked (4 listed)"
       }
      ],
      "match": "DEN @ PHX",
-     "news_at": "2026-10-31T01:12:15+00:00",
+     "news_at": "2026-10-31T01:22:26+00:00",
      "pick": "Denver Nuggets",
      "price": "-175",
      "price_at": "2026-10-31T00:59:58+00:00",
@@ -3235,7 +3241,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-10-31T01:17:20+00:00",
+      "checked_at": "2026-10-31T01:22:26+00:00",
       "conf": 58,
       "dc": false,
       "gate": {
@@ -3247,10 +3253,10 @@
       "match": "LAL @ GS",
       "pick": "Los Angeles Lakers",
       "price": "-155",
-      "price_at": "2026-10-31T01:17:00+00:00",
+      "price_at": "2026-10-31T01:22:04+00:00",
       "price_market": "moneyline",
       "price_ref": "34515422:0ML85857628_3",
-      "prob_at": "2026-10-31T01:17:00+00:00",
+      "prob_at": "2026-10-31T01:22:04+00:00",
       "rank": 5,
       "ready": true,
       "side": "away",
@@ -3279,14 +3285,16 @@
    ],
    "candidate_news": {},
    "candidate_observations": {},
-   "frozen": [],
+   "frozen": [
+    "nba"
+   ],
    "news": {
-    "nba": "2026-10-31T01:12:15+00:00"
+    "nba": "2026-10-31T01:22:26+00:00"
    },
    "shadow_watch": {
     "best_ceiling": null,
-    "checks": 4,
-    "last": "2026-10-31T01:17:20+00:00",
+    "checks": 5,
+    "last": "2026-10-31T01:22:26+00:00",
     "max_ready": 0,
     "reasons": {}
    }
