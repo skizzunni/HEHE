@@ -3469,6 +3469,23 @@
    "profit": 0.0051,
    "seen": "2026-10-31T13:32:54+00:00"
   },
+  "nba:401909902|away|FanDuel": {
+   "dec": 2.3,
+   "ev": 0.0154,
+   "fair": 0.4415,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909902",
+   "kind": "value",
+   "league": "nba",
+   "match": "OKC @ HOU",
+   "price": "+130",
+   "seen": "2026-10-31T14:57:59+00:00",
+   "side": "away",
+   "start": "2026-11-01T00:30Z",
+   "team": "Oklahoma City Thunder",
+   "tip": "8:30 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401856730|away|FanDuel": {
    "dec": 1.7042,
    "ev": 0.0365,
@@ -7260,6 +7277,26 @@
    "prob": 0.0381,
    "seen": "2026-10-31T14:05:18+00:00",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909902:away": {
+   "ev": 0.0154,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0154,
+     "fair": 0.4415,
+     "id": "nba:401909902",
+     "price": "+130",
+     "side": "away",
+     "spec": null,
+     "team": "Oklahoma City Thunder"
+    }
+   ],
+   "payout": 2.3,
+   "prob": 0.4415,
+   "seen": "2026-10-31T14:57:59+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401856730:away|ncaaf:401871093:away": {

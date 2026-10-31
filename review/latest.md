@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 17-0 (100.0% vs 73.1% claimed, ROI +29.3%).
-Closing line value: +0.6 points on 17 picks; beat the close on 47.1%.
+Picks 18-0 (100.0% vs 72.7% claimed, ROI +30.1%).
+Closing line value: +0.62 points on 18 picks; beat the close on 50.0%.
 Locks 0/11 won, 11 open; Best play top 2 (59%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: open (0/6 legs won)
