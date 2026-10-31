@@ -3693,3 +3693,9 @@ counts from the retry. The prop itself is handled as designed: the box score
 has only his brother Kris, and a same-surname, different-first-name player
 is never graded as a did-not-play (a missing nickname could hide the real
 player). It is retried, then set aside out of every record.
+
+**More daily calls: rejected (2026-10-31).** Ranks 6+ under the current
+rule (2 per sport), replayed on 62 days of graded, priced picks (halves
+split at 2026-10-01): ranks 1-5 won 71.7% / 74.3% (ROI -0.9% / +0.9%), ranks
+6-7 won 55.6% / 56.7% (ROI -8.9% / -13.6%, n=9 / 30). Ranks 8-10 have 17
+picks, all in the second half, too few to judge. The card stays at five.
