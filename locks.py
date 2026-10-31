@@ -314,6 +314,8 @@ def build(slot_rows, soccer_keys, labels, FD, n=N_LOCKS, day=None, prop_games=No
             d = _dec(price)
             if not ref or not d or not dmin <= d <= dmax:
                 continue
+            if (g["league"], L["spec"].get("t")) in EXCLUDED:
+                continue
             p2, how = two_sided(refs, g["gid"], L["spec"], g["home"], g["away"], price,
                                 g["league"] in fanduel.SOCCER)
             pm = _market_p(price, p2)
@@ -736,6 +738,14 @@ def report(path=None):
 
 
 ALT_TOLERANCE = 0.06
+# Bets whose sportsbook price has overstated their chance, kept out of every
+# pool built here (Locks, Safe Locks, the payout frontier and the challenge).
+# College football unders, 20,557 settled Kalshi legs priced from the books'
+# no-vig chance (2026-08-29 to 10-18): at 55%+ they won 10.2 points below
+# their price per game (131 games, 95% -16.7 to -4.0; date halves -7.5 and
+# -14.2), at every price band (85-97%: 86.8% / 79.7% against 90.7%). Controls
+# on the same games: NFL unders +0.3, NFL overs -0.7, college overs +4.4.
+EXCLUDED = {("ncaaf", "under")}
 
 
 def kalshi_alt(card, slot_rows, KB):

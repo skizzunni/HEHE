@@ -71,6 +71,17 @@ class LocksRules(unittest.TestCase):
         self.assertEqual([L["price"] for L in legs], ["-600"])
         self.assertEqual(legs[0]["spec"], dict(t="dc", team=H))  # board's name, so ESPN grades it
 
+    def test_excluded_bet_types_never_in_the_pool(self):
+        real = locks.EXCLUDED
+        try:
+            locks.EXCLUDED = {("epl", "dc")}
+            legs = self.build([("dc", "Brighton", None, None, "d:1", "-600", "DC")],
+                              dec=locks.SAFE_DEC, band=locks.SAFE_BAND)
+            self.assertEqual(legs, [])
+        finally:
+            locks.EXCLUDED = real
+        self.assertIn(("ncaaf", "under"), locks.EXCLUDED)
+
     def test_soccer_only_validated_kinds(self):
         legs = self.build([("total", None, "under", 4.5, "t:1", "-1000", "U4.5"),
                            ("spread", "Brighton", None, 1.5, "s:1", "-1800", "+1.5")],

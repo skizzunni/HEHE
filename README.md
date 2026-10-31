@@ -3655,3 +3655,22 @@ version lost.
 The daily review now prints `BIG FILE` for any data file over 60 MB
 (`tools/daily_review.big_files`), well before the 100 MB limit. The next
 largest, frontier.json, is 19.5 MB and grows 1-5 MB a day.
+
+**College football unders out of the lock and parlay pools (2026-10-31).**
+On 20,557 settled Kalshi legs priced from the books' no-vig chance
+(2026-08-29 to 10-18), college football unders won less often than priced
+in every price band and both date halves:
+
+| price | first half | second half |
+|---|---|---|
+| 55-70% | 52.6% vs 61.1% (n=289) | 48.6% vs 61.6% (n=181) |
+| 70-85% | 68.8% vs 77.9% (n=202) | 66.7% vs 77.4% (n=138) |
+| 85-97% | 86.8% vs 90.8% (n=219) | 79.7% vs 90.6% (n=153) |
+
+Counted per game, because alternate totals share a game: -10.2 points over
+131 games (bootstrap 95% -16.7 to -4.0; halves -7.5 and -14.2). Controls on
+the same data: NFL unders +0.3, NFL overs -0.7, college overs +4.4.
+`locks.EXCLUDED` keeps them out of everything `locks.build` makes: Locks,
+Safe Locks, the 2x / 3x / 5x tickets and the challenge. Cards already set
+are not changed. On the live cards, college unders were 14 of 17 on Locks
+(80.6% stated) and 6 of 6 on Safe Locks, too few to judge either way.
