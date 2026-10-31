@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 73-22 (76.8% vs 72.8% claimed, ROI +0.2%).
-Closing line value: +0.56 points on 95 picks; beat the close on 50.5%.
+Picks 75-22 (77.3% vs 73.0% claimed, ROI +0.6%).
+Closing line value: +0.56 points on 97 picks; beat the close on 50.5%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
@@ -37,7 +37,7 @@ Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Gre
 Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Ladder-consistency props (all time): 1122/1342 won (83.6%) vs 86.6% fair, 87.2% price.
-Props 31/35 vs 82.1% claimed.
+Props 33/38 vs 82.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.40 (n=131), nhl 0.00 (n=103)

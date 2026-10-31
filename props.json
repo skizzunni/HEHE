@@ -98,7 +98,8 @@
   "p": 0.8677,
   "p_fair": null,
   "price": "-2500",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "epl:401879252|301425|Goalkeeper Saves|1+": {
   "aid": "301425",
@@ -202,7 +203,8 @@
   "p": 0.8595,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "esp:401882829|141438|Goalkeeper Saves|2+": {
   "aid": "141438",
@@ -43459,6 +43461,22 @@
   "price": "-1100",
   "status": "open"
  },
+ "nhl:401892623|n:cale makar|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-10-31",
+  "edge": null,
+  "gid": "nhl:401892623",
+  "imp": 0.798,
+  "label": "Cale Makar: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Cale Makar",
+  "p": 0.7402,
+  "p_fair": null,
+  "price": "-395",
+  "status": "open"
+ },
  "nhl:401892623|n:martin necas|Shots on Goal|2+": {
   "aid": null,
   "date": "2026-10-31",
@@ -45402,7 +45420,8 @@
   "p_fair": null,
   "price": "-295",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "ufc:401928106|n:rodrigo sezinando|Winner|win": {
   "aid": null,
