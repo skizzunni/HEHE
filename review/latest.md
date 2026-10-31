@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 92-23 (80.0% vs 72.9% claimed, ROI +5.0%).
-Closing line value: +0.65 points on 115 picks; beat the close on 50.4%.
+Picks 94-23 (80.3% vs 72.9% claimed, ROI +5.6%).
+Closing line value: +0.64 points on 117 picks; beat the close on 50.4%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
@@ -26,19 +26,19 @@ Closing line value: +0.65 points on 115 picks; beat the close on 50.4%.
 - LOST rsa Stellenbosch at 80%: margin 2 · the book had my side favoured too · called at 80%
 - LOST sco2 Partick Thistle at 77%: margin 1 · the book had my side favoured too · called at 77%
 LEAK arg: 65.0% hit vs 74.8% claimed on 20 calls (14 days)
-Locks 3/11 won, 8 open; Best play top 2 (59%) open.
+Locks 4/11 won, 7 open; Best play top 2 (59%) open.
 Safe Locks 6/11 won, 5 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: lost (1/6 legs won, killed by Notre Dame Fighting Irish -35.5, Auburn Tigers +7.5)
-Lottery 100: lost (1/6 legs won, killed by North Dakota State Bison -30.5, Over 44.5 points)
+Lottery 100: lost (2/6 legs won, killed by North Dakota State Bison -30.5, Over 44.5 points)
 Lottery 100: open (0/8 legs won)
 Lottery 10k: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Auburn Tigers +7.5)
-Lottery 10k: lost (1/11 legs won, killed by Over 44.5 points, Over 8.5 goals, Over 55.5 points)
+Lottery 10k: lost (2/11 legs won, killed by Over 44.5 points, Over 8.5 goals, Over 55.5 points, Over 55.5 points)
 Lottery 10k: lost (1/10 legs won, killed by Over 55.5 points, Over 54.5 points, Texas Tech Red Raiders -11.5, Georgia State Panthers -10.5, Temple Owls +6.5)
 Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Auburn Tigers +7.5)
-Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5, UTEP Miners +14.5)
+Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Over 47.5 points)
 Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5, UTEP Miners +14.5)
 Ladder-consistency props (all time): 1122/1342 won (83.6%) vs 86.6% fair, 87.2% price.
 Props 43/51 vs 80.3% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.30 (n=143), nhl 0.00 (n=105)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.00 (n=145), nhl 0.00 (n=105)

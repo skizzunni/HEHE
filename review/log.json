@@ -6410,6 +6410,13 @@
    },
    {
     "flag": false,
+    "hit": 90.0,
+    "n": 10,
+    "name": "locks ncaaf over",
+    "said": 79.8
+   },
+   {
+    "flag": false,
     "hit": 72.7,
     "n": 11,
     "name": "locks ncaaf side",
@@ -6556,9 +6563,9 @@
    }
   },
   "clv": {
-   "avg": 0.65,
+   "avg": 0.64,
    "beat": 50.4,
-   "n": 115
+   "n": 117
   },
   "day": "2026-10-31",
   "leaks_14d": [
@@ -6575,7 +6582,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      2,
@@ -6583,7 +6590,7 @@
      "open"
     ]
    },
-   "won": 3
+   "won": 4
   },
   "losses": [
    {
@@ -6792,7 +6799,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [],
@@ -6819,13 +6826,14 @@
     "killed_by": [
      "Over 44.5 points",
      "Over 8.5 goals",
+     "Over 55.5 points",
      "Over 55.5 points"
     ],
     "legs": 11,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -6858,10 +6866,11 @@
     "killed_by": [
      "Navy Midshipmen +17.5",
      "Bowling Green Falcons +6.5",
-     "UTEP Miners +14.5"
+     "UTEP Miners +14.5",
+     "Over 47.5 points"
     ],
     "legs": 8,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+50",
     "won": 1
@@ -6880,12 +6889,12 @@
    }
   ],
   "picks": {
-   "hit": 80.0,
+   "hit": 80.3,
    "lost": 23,
-   "n": 115,
-   "roi": 5.0,
+   "n": 117,
+   "roi": 5.6,
    "said": 72.9,
-   "won": 92
+   "won": 94
   },
   "picks_by_league": {
    "arg": {
@@ -7057,12 +7066,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 92.3,
+    "hit": 92.9,
     "lost": 2,
-    "n": 26,
-    "roi": 26.3,
-    "said": 73.4,
-    "won": 24
+    "n": 28,
+    "roi": 27.3,
+    "said": 73.1,
+    "won": 26
    },
    "ned": {
     "hit": 50.0,
@@ -7169,10 +7178,10 @@
    "agree": {
     "hit": 74.3,
     "lost": 224,
-    "n": 870,
-    "roi": 1.3,
+    "n": 872,
+    "roi": 1.4,
     "said": 70.0,
-    "won": 646
+    "won": 648
    }
   },
   "weights": {
@@ -7187,12 +7196,12 @@
    },
    "ncaaf": {
     "fitted": 0.3,
-    "held_out": true,
-    "logloss": 0.6066,
-    "market_only": 0.6126,
-    "model_40": 0.607,
-    "n": 143,
-    "weight": 0.3
+    "held_out": false,
+    "logloss": 0.6038,
+    "market_only": 0.6091,
+    "model_40": 0.6045,
+    "n": 145,
+    "weight": 0.0
    },
    "nhl": {
     "fitted": 0.0,
