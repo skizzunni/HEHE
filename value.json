@@ -3430,6 +3430,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909900|home|FanDuel": {
+   "dec": 4.5,
+   "ev": 0.0452,
+   "fair": 0.2323,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909900",
+   "kind": "value",
+   "league": "nba",
+   "match": "CLE @ MIL",
+   "price": "+350",
+   "seen": "2026-10-31T14:05:18+00:00",
+   "side": "home",
+   "start": "2026-11-01T00:00Z",
+   "team": "Milwaukee Bucks",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909900|sure": {
    "id": "nba:401909900",
    "kind": "sure",
@@ -7138,6 +7155,55 @@
    "seen": "2026-10-30T01:23:31+00:00",
    "status": "won",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909900:home": {
+   "ev": 0.0454,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0452,
+     "fair": 0.2323,
+     "id": "nba:401909900",
+     "price": "+350",
+     "side": "home",
+     "spec": null,
+     "team": "Milwaukee Bucks"
+    }
+   ],
+   "payout": 4.5,
+   "prob": 0.2323,
+   "seen": "2026-10-31T14:05:18+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909900:home|ncaaf:401866452:away": {
+   "ev": 0.0636,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0176,
+     "fair": 0.1641,
+     "id": "ncaaf:401866452",
+     "price": "+520",
+     "side": "away",
+     "spec": null,
+     "team": "Bowling Green Falcons"
+    },
+    {
+     "ev": 0.0452,
+     "fair": 0.2323,
+     "id": "nba:401909900",
+     "price": "+350",
+     "side": "home",
+     "spec": null,
+     "team": "Milwaukee Bucks"
+    }
+   ],
+   "payout": 27.9,
+   "prob": 0.0381,
+   "seen": "2026-10-31T14:05:18+00:00",
+   "target": 10.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401856730:away|ncaaf:401871093:away": {
