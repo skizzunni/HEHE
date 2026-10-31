@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 70-19 (78.7% vs 73.2% claimed, ROI +2.0%).
-Closing line value: +0.57 points on 89 picks; beat the close on 50.6%.
+Picks 73-20 (78.5% vs 72.8% claimed, ROI +2.4%).
+Closing line value: +0.61 points on 93 picks; beat the close on 50.5%.
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST epl Manchester City at 79%: margin 1 · the book had my side favoured too · called at 79%
@@ -13,6 +13,7 @@ Closing line value: +0.57 points on 89 picks; beat the close on 50.6%.
 - LOST mls St. Louis CITY SC at 80%: margin 1 · the book had my side favoured too · called at 80%
 - LOST mls New York City FC at 65%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 65%
 - LOST ncaaf SMU Mustangs at 75%: margin 3 · the book had my side favoured too · called at 75%
+- LOST ncaaf Georgia State Panthers at 62%: margin 11 · the book had my side favoured too · called at 62%
 - LOST ned Feyenoord Rotterdam at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
 - LOST nhl Detroit Red Wings at 52%: margin 1 · the book had my side favoured too · called at 52%
 - LOST nhl Tampa Bay Lightning at 62%: margin 1 · the book had my side favoured too · called at 62%
@@ -33,7 +34,7 @@ Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Gre
 Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Ladder-consistency props (all time): 1122/1342 won (83.6%) vs 86.6% fair, 87.2% price.
-Props 29/33 vs 82.1% claimed.
+Props 30/34 vs 82.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.40 (n=129), nhl 0.00 (n=103)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=82), ncaaf 0.40 (n=131), nhl 0.00 (n=103)
