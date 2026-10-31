@@ -1,6 +1,7 @@
 # Review 2026-10-31
 
-No picks settled yet.
+Picks 1-0 (100.0% vs 65.0% claimed, ROI +43.5%).
+Closing line value: +0.95 points on 1 picks; beat the close on 100.0%.
 Ladder-consistency props (all time): 1110/1327 won (83.6%) vs 86.6% fair, 87.2% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified

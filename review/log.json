@@ -6541,9 +6541,9 @@
    }
   },
   "clv": {
-   "avg": null,
-   "beat": null,
-   "n": 0
+   "avg": 0.95,
+   "beat": 100.0,
+   "n": 1
   },
   "day": "2026-10-31",
   "leaks_14d": [],
@@ -6557,9 +6557,23 @@
   "losses": [],
   "lottery": [],
   "picks": {
-   "n": 0
+   "hit": 100.0,
+   "lost": 0,
+   "n": 1,
+   "roi": 43.5,
+   "said": 65.0,
+   "won": 1
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "aus": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 43.5,
+    "said": 65.0,
+    "won": 1
+   }
+  },
   "props": {
    "fair": {
     "n": 1327,
@@ -6589,10 +6603,10 @@
    "agree": {
     "hit": 73.5,
     "lost": 200,
-    "n": 754,
-    "roi": 0.8,
+    "n": 755,
+    "roi": 0.9,
     "said": 69.5,
-    "won": 554
+    "won": 555
    }
   },
   "weights": {
