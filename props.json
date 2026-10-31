@@ -6266,6 +6266,7 @@
   "p": 0.8512,
   "p_fair": null,
   "price": "-700",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -6279,11 +6280,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Alperen Sengun",
   "p": 0.848,
   "p_fair": 0.8832,
   "price": "-1000",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401909283|n:cooper flagg|Rebounds|4+": {
   "aid": null,
@@ -6295,11 +6298,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Cooper Flagg",
   "p": 0.848,
   "p_fair": 0.8813,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909283|n:fred vanvleet|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -6311,11 +6316,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Fred VanVleet",
   "p": 0.8513,
   "p_fair": 0.9053,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 27.0
  },
  "nba:401909283|n:jabari smith|Rebounds|4+": {
   "aid": null,
@@ -6327,11 +6334,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Jabari Smith",
   "p": 0.848,
   "p_fair": 0.8831,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909283|n:kevin durant|Pts + Ast|20+": {
   "aid": null,
@@ -6343,11 +6352,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Kevin Durant",
   "p": 0.8512,
   "p_fair": 0.8425,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 29.0
  },
  "nba:401909285|n:austin reaves|Points|15+": {
   "aid": null,
@@ -41087,11 +41098,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Bobby McMann",
   "p": 0.8683,
   "p_fair": null,
   "price": "-2200",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892613|n:bobby mcmann|Shots on Goal|2+": {
   "aid": null,
@@ -41103,11 +41116,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Bobby McMann",
   "p": 0.7042,
   "p_fair": null,
   "price": "-320",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892613|n:joel farabee|Shots on Goal|1+": {
   "aid": null,
@@ -41119,11 +41134,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Joel Farabee",
   "p": 0.8683,
   "p_fair": null,
   "price": "-1800",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892613|n:jordan eberle|Shots on Goal|1+": {
   "aid": null,
@@ -41135,11 +41152,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jordan Eberle",
   "p": 0.8318,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892613|n:matt coronato|Shots on Goal|2+": {
   "aid": null,
@@ -41151,11 +41170,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Coronato",
   "p": 0.7321,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892613|n:mikael backlund|Shots on Goal|1+": {
   "aid": null,
@@ -41167,11 +41188,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikael Backlund",
   "p": 0.8698,
   "p_fair": null,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892613|n:vince dunn|Shots on Goal|1+": {
   "aid": null,
@@ -41183,11 +41206,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Vince Dunn",
   "p": 0.8469,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "ucl:401915312|196176|Goalkeeper Saves|2+": {
   "aid": "196176",
