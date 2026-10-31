@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 56-13 (81.2% vs 73.4% claimed, ROI +5.3%).
-Closing line value: +0.56 points on 69 picks; beat the close on 49.3%.
+Picks 57-13 (81.4% vs 73.6% claimed, ROI +5.4%).
+Closing line value: +0.57 points on 70 picks; beat the close on 50.0%.
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST epl Manchester City at 79%: margin 1 · the book had my side favoured too · called at 79%
 - LOST epl Sunderland at 69%: margin 2 · the book had my side favoured too · called at 69%
@@ -17,17 +17,17 @@ Closing line value: +0.56 points on 69 picks; beat the close on 49.3%.
 - LOST sco2 Partick Thistle at 77%: margin 1 · the book had my side favoured too · called at 77%
 Locks 1/11 won, 10 open; Best play top 2 (59%) open.
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
-Lottery 100: lost (0/6 legs won, killed by Notre Dame Fighting Irish -35.5)
+Lottery 100: lost (1/6 legs won, killed by Notre Dame Fighting Irish -35.5)
 Lottery 100: lost (1/6 legs won, killed by Over 44.5 points)
 Lottery 100: open (0/8 legs won)
-Lottery 10k: lost (0/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
+Lottery 10k: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Lottery 10k: lost (1/11 legs won, killed by Over 44.5 points)
 Lottery 10k: lost (0/10 legs won, killed by Over 55.5 points, Texas Tech Red Raiders -11.5)
-Lottery 10k+25: lost (0/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
-Lottery 10k+50: lost (0/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
-Lottery 10k+100: lost (0/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
+Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
+Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
+Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Bowling Green Falcons +6.5)
 Ladder-consistency props (all time): 1110/1327 won (83.6%) vs 86.6% fair, 87.2% price.
 Props 1/2 vs 76.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=81), ncaaf 0.40 (n=126), nhl 0.00 (n=100)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=81), ncaaf 0.40 (n=127), nhl 0.00 (n=100)
