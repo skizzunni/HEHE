@@ -1,7 +1,7 @@
 # Review 2026-11-01
 
-Picks 15-10 (60.0% vs 73.4% claimed, ROI -24.7%).
-Closing line value: +0.59 points on 25 picks; beat the close on 52.0%.
+Picks 16-10 (61.5% vs 73.1% claimed, ROI -22.0%).
+Closing line value: +0.61 points on 26 picks; beat the close on 53.8%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST esp Sevilla at 74%: margin 2 · the book had my side favoured too · called at 74%
 - LOST ger2 St. Pauli at 72%: margin 2 · the book had my side favoured too · called at 72%
@@ -21,7 +21,7 @@ Lottery 10k+25: open (0/8 legs won)
 Lottery 10k+50: open (0/8 legs won)
 Lottery 10k+100: open (0/8 legs won)
 Ladder-consistency props (all time): 1185/1426 won (83.1%) vs 86.6% fair, 87.3% price.
-Props 3/3 vs 86.3% claimed.
+Props 3/4 vs 84.3% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=88), ncaaf 0.00 (n=164), nhl 0.00 (n=109)
