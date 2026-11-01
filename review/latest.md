@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 100-24 (80.6% vs 73.4% claimed, ROI +5.2%).
-Closing line value: +0.62 points on 124 picks; beat the close on 49.2%.
+Picks 100-25 (80.0% vs 73.3% claimed, ROI +4.4%).
+Closing line value: +0.67 points on 125 picks; beat the close on 49.6%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
@@ -23,6 +23,7 @@ Closing line value: +0.62 points on 124 picks; beat the close on 49.2%.
 - LOST nhl Tampa Bay Lightning at 62%: margin 1 · the book had my side favoured too · called at 62%
 - LOST nhl New York Islanders at 50%: margin 4 · the book had my side favoured too · called at 50%
 - LOST nor Aalesund at 70%: margin 1 · the book had my side favoured too · called at 70%
+- LOST par Libertad at 71%: margin 1 · the book had my side favoured too · called at 71%
 - LOST rsa Sekhukhune United FC at 68%: margin 1 · the book had my side favoured too · called at 68%
 - LOST rsa Stellenbosch at 80%: margin 2 · the book had my side favoured too · called at 80%
 - LOST sco2 Partick Thistle at 77%: margin 1 · the book had my side favoured too · called at 77%
