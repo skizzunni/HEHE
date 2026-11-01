@@ -6424,8 +6424,8 @@
    },
    {
     "flag": false,
-    "hit": 75.0,
-    "n": 12,
+    "hit": 76.9,
+    "n": 13,
     "name": "locks ncaaf side",
     "said": 75.8
    },
@@ -6494,8 +6494,8 @@
    },
    {
     "flag": false,
-    "hit": 50.9,
-    "n": 167,
+    "hit": 50.3,
+    "n": 169,
     "name": "kalshi maker bids (filled)",
     "said": 52.9
    }
@@ -6570,16 +6570,16 @@
    }
   },
   "clv": {
-   "avg": 0.62,
+   "avg": 0.61,
    "beat": 51.4,
-   "n": 144
+   "n": 146
   },
   "day": "2026-10-31",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      2,
@@ -6587,7 +6587,7 @@
      "open"
     ]
    },
-   "won": 9
+   "won": 10
   },
   "losses": [
    {
@@ -6859,10 +6859,11 @@
    {
     "killed_by": [
      "Nevada Wolf Pack +16.5",
-     "Under 244.5 points"
+     "Under 244.5 points",
+     "Ohio State Buckeyes to win"
     ],
     "legs": 8,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 3
@@ -6960,12 +6961,12 @@
    }
   ],
   "picks": {
-   "hit": 79.2,
+   "hit": 79.5,
    "lost": 30,
-   "n": 144,
-   "roi": 5.0,
+   "n": 146,
+   "roi": 5.4,
    "said": 72.6,
-   "won": 114
+   "won": 116
   },
   "picks_by_league": {
    "arg": {
@@ -7131,10 +7132,10 @@
    "mex": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 27.0,
-    "said": 75.0,
-    "won": 1
+    "n": 2,
+    "roi": 33.9,
+    "said": 71.0,
+    "won": 2
    },
    "mex2": {
     "hit": 0.0,
@@ -7161,12 +7162,12 @@
     "won": 6
    },
    "ncaaf": {
-    "hit": 86.8,
+    "hit": 87.2,
     "lost": 5,
-    "n": 38,
-    "roi": 16.6,
-    "said": 74.3,
-    "won": 33
+    "n": 39,
+    "roi": 16.7,
+    "said": 74.5,
+    "won": 34
    },
    "ned": {
     "hit": 50.0,
@@ -7287,12 +7288,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.3,
+    "hit": 74.4,
     "lost": 231,
-    "n": 899,
-    "roi": 1.4,
+    "n": 901,
+    "roi": 1.5,
     "said": 70.0,
-    "won": 668
+    "won": 670
    }
   },
   "weights": {
@@ -7308,10 +7309,10 @@
    "ncaaf": {
     "fitted": 0.3,
     "held_out": false,
-    "logloss": 0.5961,
-    "market_only": 0.6022,
-    "model_40": 0.5966,
-    "n": 155,
+    "logloss": 0.5938,
+    "market_only": 0.5995,
+    "model_40": 0.5945,
+    "n": 156,
     "weight": 0.0
    },
    "nhl": {
