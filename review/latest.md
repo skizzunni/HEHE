@@ -1,7 +1,7 @@
 # Review 2026-11-01
 
-Picks 32-16 (66.7% vs 72.9% claimed, ROI -14.6%).
-Closing line value: +0.88 points on 48 picks; beat the close on 58.3%.
+Picks 32-17 (65.3% vs 72.8% claimed, ROI -16.3%).
+Closing line value: +0.86 points on 49 picks; beat the close on 57.1%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST chi Universidad de Chile at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST ecu Universidad Católica (Quito) at 67%: margin 1 · the book had my side favoured too · called at 67%
@@ -15,6 +15,7 @@ Closing line value: +0.88 points on 48 picks; beat the close on 58.3%.
 - LOST nor IK Start at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST nor Sarpsborg FK at 84%: margin 2 · the book had my side favoured too · called at 84%
 - LOST nor Molde at 63%: margin 1 · the book had my side favoured too · called at 63%
+- LOST per Cusco FC at 67%: margin 1 · the book had my side favoured too · called at 67%
 - LOST sco Celtic at 84%: margin 2 · the book had my side favoured too · called at 84%
 - LOST uru Progreso at 68%: margin 2 · the book had my side favoured too · called at 68%
 - LOST wsl Arsenal at 83%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 83%
