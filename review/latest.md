@@ -22,11 +22,11 @@ Closing line value: +0.82 points on 51 picks; beat the close on 56.9%.
 Locks 0/11 won, 10 open; Best play top 3 (50%) lost; lost: Kyle Pitts: 20+ Receiving Yards (ATL @ TB) 6.
 Safe Locks 3/11 won, 8 open; Winners parlay top 2 (85%) open; Best play top 7 (53%) open.
 Lottery 100: open (1/8 legs won)
-Lottery 10k: open (1/8 legs won)
+Lottery 10k: lost (1/8 legs won, killed by Las Vegas Raiders -6.5)
 Lottery 10k: lost (0/8 legs won, killed by Under 5.5 goals)
-Lottery 10k+25: open (1/8 legs won)
-Lottery 10k+50: open (1/8 legs won)
-Lottery 10k+100: open (1/8 legs won)
+Lottery 10k+25: lost (1/8 legs won, killed by Las Vegas Raiders -6.5)
+Lottery 10k+50: lost (1/8 legs won, killed by Las Vegas Raiders -6.5)
+Lottery 10k+100: lost (1/8 legs won, killed by Las Vegas Raiders -6.5)
 Ladder-consistency props (all time): 1186/1430 won (82.9%) vs 86.6% fair, 87.3% price.
 Props 15/23 vs 80.3% claimed.
 
