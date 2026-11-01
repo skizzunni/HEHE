@@ -1032903,19 +1032903,20 @@
        "play": null,
        "price": "-215",
        "quoted": "2026-10-31T12:00:21+00:00",
+       "score": "Clemson Tigers 36 - Florida State Seminoles 24",
        "spec": {
         "t": "win",
         "team": "Florida State Seminoles"
        },
        "start": "2026-10-31T23:00Z",
-       "status": "open",
+       "status": "lost",
        "tip": "7:00 PM",
        "where": null
       }
      ],
      "prob": 0.29426243040999994,
      "standard": 0.65,
-     "status": "open",
+     "status": "lost",
      "target": 3.0,
      "total": 3.019027484143763
     },
@@ -1032981,12 +1032982,13 @@
        "play": null,
        "price": "-215",
        "quoted": "2026-10-31T12:00:21+00:00",
+       "score": "Clemson Tigers 36 - Florida State Seminoles 24",
        "spec": {
         "t": "win",
         "team": "Florida State Seminoles"
        },
        "start": "2026-10-31T23:00Z",
-       "status": "open",
+       "status": "lost",
        "tip": "7:00 PM",
        "where": null
       },
@@ -1033104,7 +1033106,7 @@
      ],
      "prob": 0.16346042599331165,
      "standard": 0.65,
-     "status": "open",
+     "status": "lost",
      "target": 5.0,
      "total": 5.018643090524697
     },
@@ -1033160,141 +1033162,6 @@
     }
    ],
    "versions": [
-    {
-     "policy": "badc93c4",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Wake Forest Demon Deacons to win",
-        "San Antonio Spurs to win",
-        "Monterrey or draw",
-        "BYU Cougars to win",
-        "Under 8.5 goals"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Missouri Tigers to win",
-        "Memphis Grizzlies to win",
-        "Cleveland Cavaliers to win"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Ohio State Buckeyes +1.5",
-        "TCU Horned Frogs to win"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Georgia Bulldogs to win",
-        "Penn State Nittany Lions to win",
-        "Cleveland Cavaliers to win",
-        "Memphis Grizzlies to win",
-        "Missouri Tigers to win"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Louisiana Tech Bulldogs to win",
-        "TCU Horned Frogs to win",
-        "Florida State Seminoles under 33.5 points"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Louisiana Tech Bulldogs to win",
-        "TCU Horned Frogs to win",
-        "Oregon State Beavers to win",
-        "Memphis Grizzlies to win",
-        "Cleveland Cavaliers to win"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-10-31T18:06:54+00:00"
-    },
     {
      "policy": "badc93c4",
      "sig": [
@@ -1041168,6 +1041035,115 @@
       ]
      ],
      "t": "2026-11-01T02:22:54+00:00"
+    },
+    {
+     "policy": "fed10454",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       []
+      ],
+      [
+       2.0,
+       0.75,
+       []
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Am\u00e9rica or draw",
+        "Oregon State Beavers to win"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       []
+      ],
+      [
+       3.0,
+       0.65,
+       []
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       []
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-11-01T02:48:45+00:00"
     }
    ]
   }
