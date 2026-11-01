@@ -1,11 +1,12 @@
 # Review 2026-11-01
 
-Picks 2-4 (33.3% vs 69.0% claimed, ROI -57.7%).
-Closing line value: -0.18 points on 6 picks; beat the close on 50.0%.
+Picks 2-5 (28.6% vs 71.0% claimed, ROI -63.7%).
+Closing line value: -0.15 points on 7 picks; beat the close on 42.9%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST jpn V-Varen Nagasaki at 66%: margin 1 · the book had my side favoured too · called at 66%
 - LOST jpn Kawasaki Frontale at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Avispa Fukuoka at 65%: margin 3 · the book had my side favoured too · called at 65%
+- LOST wsl Arsenal at 83%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 83%
 Locks 0/11 won, 11 open; Best play top 3 (50%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (53%) open.
 Lottery 100: open (0/8 legs won)
