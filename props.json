@@ -23450,11 +23450,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "AJ Green",
   "p": 0.8528,
   "p_fair": 0.8805,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401909900|n:donovan mitchell|Points|15+": {
   "aid": null,
@@ -23466,11 +23468,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Donovan Mitchell",
   "p": 0.85,
   "p_fair": 0.8861,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nba:401909900|n:donovan mitchell|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -23482,11 +23486,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Donovan Mitchell",
   "p": 0.8531,
   "p_fair": 0.8698,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 22.0
  },
  "nba:401909900|n:james harden|Pts + Ast|20+": {
   "aid": null,
@@ -23498,11 +23504,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "James Harden",
   "p": 0.8431,
   "p_fair": 0.8205,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401909900|n:jarrett allen|Pts + Ast|10+": {
   "aid": null,
@@ -23514,11 +23522,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Jarrett Allen",
   "p": 0.8583,
   "p_fair": 0.9146,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 29.0
  },
  "nba:401909900|n:jarrett allen|Rebounds|6+": {
   "aid": null,
@@ -23530,11 +23540,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Jarrett Allen",
   "p": 0.8402,
   "p_fair": 0.8891,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401909900|n:kyle kuzma|Assists|2+": {
   "aid": null,
@@ -23546,11 +23558,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Kyle Kuzma",
   "p": 0.7968,
   "p_fair": 0.7702,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909900|n:ryan rollins|Points|5+": {
   "aid": null,
@@ -23561,11 +23575,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Ryan Rollins",
   "p": 0.8677,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909900|n:ryan rollins|Threes Made|1+": {
   "aid": null,
@@ -23577,11 +23593,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Ryan Rollins",
   "p": 0.8528,
   "p_fair": 0.8805,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909900|n:sam merrill|Threes Made|1+": {
   "aid": null,
@@ -23593,11 +23611,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Sam Merrill",
   "p": 0.8496,
   "p_fair": 0.893,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909901|n:ayo dosunmu|Points|5+": {
   "aid": null,
@@ -46203,7 +46223,8 @@
   "p": 0.7753,
   "p_fair": null,
   "price": "-460",
-  "status": "open"
+  "status": "lost",
+  "value": 15.0
  },
  "ufc:401931616|n:jacobe smith|Winner|win": {
   "aid": null,
@@ -46219,7 +46240,8 @@
   "p": 0.6947,
   "p_fair": null,
   "price": "-260",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "ufc:401931617|n:fight|Goes the distance|No": {
   "aid": null,
