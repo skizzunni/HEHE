@@ -7309,6 +7309,27 @@
    "status": "open",
    "ticker": "KXNFLGAME-26NOV01LVNYJ-NYJ"
   },
+  "KXNFLGAME-26NOV02CHISEA-SEA|YES": {
+   "ask": 0.61,
+   "bid": 0.6,
+   "cost": 0.6042,
+   "edge": 0.0066,
+   "fair": 0.6082,
+   "id": "nfl:401873036",
+   "label": "Seattle Seahawks",
+   "league": "nfl",
+   "match": "CHI @ SEA",
+   "posted": "2026-11-01T04:04:44+00:00",
+   "queue": 34621.23,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Seattle Seahawks"
+   },
+   "start": "2026-11-03T01:15Z",
+   "status": "open",
+   "ticker": "KXNFLGAME-26NOV02CHISEA-SEA"
+  },
   "KXNFLGAME-26OCT25CINBAL-CIN|YES": {
    "ask": 0.52,
    "bid": 0.51,
@@ -7928,6 +7949,27 @@
    "start": "2026-11-01T18:00Z",
    "status": "open",
    "ticker": "KXNFLTOTAL-26NOV01ARIDAL-55"
+  },
+  "KXNFLTOTAL-26NOV01CLEPIT-39|YES": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "nfl:401873027",
+   "label": "over 38.5",
+   "league": "nfl",
+   "match": "CLE @ PIT",
+   "posted": "2026-11-01T04:04:44+00:00",
+   "queue": 45118.75,
+   "side": "YES",
+   "spec": {
+    "line": 38.5,
+    "t": "over"
+   },
+   "start": "2026-11-01T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV01CLEPIT-39"
   },
   "KXNFLTOTAL-26NOV01KCDEN-41|YES": {
    "ask": 0.51,
