@@ -7151,7 +7151,7 @@
    {
     "flag": false,
     "hit": 81.8,
-    "n": 285,
+    "n": 291,
     "name": "props nhl Shots on Goal",
     "said": 80.6
    },
@@ -7227,8 +7227,8 @@
    },
    {
     "flag": false,
-    "hit": 86.5,
-    "n": 37,
+    "hit": 86.8,
+    "n": 38,
     "name": "safe locks nhl under",
     "said": 91.5
    },
@@ -7241,8 +7241,8 @@
    },
    {
     "flag": false,
-    "hit": 93.2,
-    "n": 103,
+    "hit": 93.3,
+    "n": 104,
     "name": "prop locks",
     "said": 89.3
    },
@@ -7332,8 +7332,8 @@
   },
   "clv": {
    "avg": 0.86,
-   "beat": 57.1,
-   "n": 49
+   "beat": 58.0,
+   "n": 50
   },
   "day": "2026-11-01",
   "leaks_14d": [],
@@ -7506,10 +7506,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 5.5 goals"
+    ],
     "legs": 8,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
@@ -7539,12 +7541,12 @@
    }
   ],
   "picks": {
-   "hit": 65.3,
+   "hit": 66.0,
    "lost": 17,
-   "n": 49,
-   "roi": -16.3,
+   "n": 50,
+   "roi": -15.3,
    "said": 72.8,
-   "won": 32
+   "won": 33
   },
   "picks_by_league": {
    "arg": {
@@ -7683,6 +7685,14 @@
     "said": 75.0,
     "won": 0
    },
+   "nhl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 36.0,
+    "said": 71.0,
+    "won": 1
+   },
    "nor": {
     "hit": 25.0,
     "lost": 3,
@@ -7747,14 +7757,14 @@
     "said_price": 87.3,
     "won": 1185
    },
-   "n": 10,
-   "said": 84.8,
-   "won": 8
+   "n": 16,
+   "said": 83.8,
+   "won": 13
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      7,
@@ -7767,7 +7777,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "strong": {
    "n": 0
@@ -7780,10 +7790,10 @@
    "agree": {
     "hit": 74.2,
     "lost": 222,
-    "n": 859,
+    "n": 860,
     "roi": 0.5,
     "said": 70.3,
-    "won": 637
+    "won": 638
    }
   },
   "weights": {
@@ -7808,10 +7818,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6495,
-    "market_only": 0.6495,
-    "model_40": 0.6589,
-    "n": 109,
+    "logloss": 0.6467,
+    "market_only": 0.6467,
+    "model_40": 0.6562,
+    "n": 110,
     "weight": 0.0
    }
   }

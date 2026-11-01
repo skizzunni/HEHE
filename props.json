@@ -24762,6 +24762,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nba:401909904|n:jarace walker|Points|5+": {
+  "aid": null,
+  "date": "2026-11-01",
+  "edge": null,
+  "gid": "nba:401909904",
+  "imp": 0.931,
+  "label": "Jarace Walker: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Jarace Walker",
+  "p": 0.8418,
+  "p_fair": null,
+  "price": "-1350",
+  "status": "open"
+ },
  "nba:401909904|n:jarace walker|Reb + Ast|5+": {
   "aid": null,
   "date": "2026-11-01",
@@ -33341,6 +33357,22 @@
   "prop_lock": true,
   "status": "open"
  },
+ "nfl:401873033|n:xavier worthy|Receiving Yards|15+": {
+  "aid": null,
+  "date": "2026-11-01",
+  "edge": -4.2,
+  "gid": "nfl:401873033",
+  "imp": 0.8,
+  "label": "Xavier Worthy: 15+ Receiving Yards",
+  "league": "nfl",
+  "line": "15+",
+  "market": "Receiving Yards",
+  "name": "Xavier Worthy",
+  "p": 0.7944,
+  "p_fair": 0.7662,
+  "price": "-400",
+  "status": "open"
+ },
  "nfl:401873034|n:caleb douglas|Receiving Yards|15+": {
   "aid": null,
   "date": "2026-11-01",
@@ -33546,6 +33578,22 @@
   "p": 0.8512,
   "p_fair": 0.8095,
   "price": "-600",
+  "status": "open"
+ },
+ "nfl:401873035|n:antonio williams|Receptions|2+": {
+  "aid": null,
+  "date": "2026-11-01",
+  "edge": -2.6,
+  "gid": "nfl:401873035",
+  "imp": 0.8667,
+  "label": "Antonio Williams: 2+ Receptions",
+  "league": "nfl",
+  "line": "2+",
+  "market": "Receptions",
+  "name": "Antonio Williams",
+  "p": 0.8564,
+  "p_fair": 0.8442,
+  "price": "-650",
   "status": "open"
  },
  "nfl:401873035|n:jayden daniels|Rushing Yards|15+": {
@@ -46953,11 +47001,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Andrei Svechnikov",
   "p": 0.8672,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892624|n:cole perfetti|Shots on Goal|1+": {
   "aid": null,
@@ -46969,11 +47019,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cole Perfetti",
   "p": 0.8496,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892624|n:jackson blake|Shots on Goal|1+": {
   "aid": null,
@@ -46985,11 +47037,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jackson Blake",
   "p": 0.8668,
   "p_fair": null,
   "price": "-2200",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892624|n:jalen chatfield|Shots on Goal|1+": {
   "aid": null,
@@ -47001,11 +47055,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jalen Chatfield",
   "p": 0.7472,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892624|n:kyle connor|Shots on Goal|2+": {
   "aid": null,
@@ -47017,11 +47073,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kyle Connor",
   "p": 0.7399,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892624|n:shayne gostisbehere|Shots on Goal|1+": {
   "aid": null,
@@ -47033,11 +47091,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Shayne Gostisbehere",
   "p": 0.8496,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892625|n:blake coleman|Shots on Goal|1+": {
   "aid": null,
