@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 99-24 (80.5% vs 73.3% claimed, ROI +5.1%).
-Closing line value: +0.61 points on 123 picks; beat the close on 48.8%.
+Picks 100-24 (80.6% vs 73.4% claimed, ROI +5.2%).
+Closing line value: +0.62 points on 124 picks; beat the close on 49.2%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
@@ -26,7 +26,7 @@ Closing line value: +0.61 points on 123 picks; beat the close on 48.8%.
 - LOST rsa Sekhukhune United FC at 68%: margin 1 · the book had my side favoured too · called at 68%
 - LOST rsa Stellenbosch at 80%: margin 2 · the book had my side favoured too · called at 80%
 - LOST sco2 Partick Thistle at 77%: margin 1 · the book had my side favoured too · called at 77%
-LEAK arg: 65.0% hit vs 74.8% claimed on 20 calls (14 days)
+LEAK arg: 66.7% hit vs 75.0% claimed on 21 calls (14 days)
 Locks 6/11 won, 5 open; Best play top 2 (59%) open.
 Safe Locks 7/11 won, 4 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: lost (1/6 legs won, killed by Notre Dame Fighting Irish -35.5, Auburn Tigers +7.5)
