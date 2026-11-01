@@ -23418,6 +23418,7 @@
   "p": 0.8517,
   "p_fair": 0.8283,
   "price": "-590",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -43893,11 +43894,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Adam Fantilli",
   "p": 0.8665,
   "p_fair": null,
   "price": "-2000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892622|n:mikko rantanen|Shots on Goal|1+": {
   "aid": null,
@@ -43909,11 +43912,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikko Rantanen",
   "p": 0.8531,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892622|n:roope hintz|Shots on Goal|1+": {
   "aid": null,
@@ -43925,11 +43930,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Roope Hintz",
   "p": 0.8438,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892622|n:wyatt johnston|Shots on Goal|2+": {
   "aid": null,
@@ -43941,11 +43948,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Wyatt Johnston",
   "p": 0.7042,
   "p_fair": null,
   "price": "-320",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892622|n:zach werenski|Shots on Goal|2+": {
   "aid": null,
@@ -43957,11 +43966,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Zach Werenski",
   "p": 0.7375,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892623|n:artturi lehkonen|Shots on Goal|1+": {
   "aid": null,
