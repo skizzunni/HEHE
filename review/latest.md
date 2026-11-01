@@ -30,7 +30,7 @@ Closing line value: +0.6 points on 141 picks; beat the close on 51.1%.
 - LOST rsa Sekhukhune United FC at 68%: margin 1 · the book had my side favoured too · called at 68%
 - LOST rsa Stellenbosch at 80%: margin 2 · the book had my side favoured too · called at 80%
 - LOST sco2 Partick Thistle at 77%: margin 1 · the book had my side favoured too · called at 77%
-Locks 8/11 won, 3 open; Best play top 2 (59%) open.
+Locks 9/11 won, 2 open; Best play top 2 (59%) open.
 Safe Locks 9/11 won, 2 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: lost (3/6 legs won, killed by Notre Dame Fighting Irish -35.5, Over 6.5 goals, Auburn Tigers +7.5)
 Lottery 100: lost (2/6 legs won, killed by North Dakota State Bison -30.5, Purdue Boilermakers +10.5, Over 44.5 points)
