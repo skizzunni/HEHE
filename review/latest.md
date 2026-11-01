@@ -1,7 +1,7 @@
 # Review 2026-11-01
 
-Picks 50-19 (72.5% vs 71.8% claimed, ROI -4.6%).
-Closing line value: +0.82 points on 69 picks; beat the close on 58.0%.
+Picks 52-19 (73.2% vs 71.9% claimed, ROI -3.7%).
+Closing line value: +0.9 points on 71 picks; beat the close on 59.2%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST chi Universidad de Chile at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST ecu Universidad Católica (Quito) at 67%: margin 1 · the book had my side favoured too · called at 67%
@@ -25,7 +25,7 @@ Locks 5/11 won, 3 open; Best play top 3 (50%) lost; lost: Kyle Pitts: 20+ Receiv
 Safe Locks 6/11 won, 5 open; Winners parlay top 2 (85%) open; Best play top 7 (53%) open.
 Lottery 100: open (3/8 legs won)
 Lottery 10k: lost (3/8 legs won, killed by Las Vegas Raiders -6.5, Detroit Lions -9.5, Indianapolis Colts +3.5)
-Lottery 10k: lost (1/8 legs won, killed by Tennessee Titans +3.5, Under 5.5 goals)
+Lottery 10k: lost (2/8 legs won, killed by Tennessee Titans +3.5, Under 5.5 goals)
 Lottery 10k+25: lost (2/8 legs won, killed by Las Vegas Raiders -6.5, Detroit Lions -9.5, Indianapolis Colts +3.5, Over 37.5 points)
 Lottery 10k+50: lost (2/8 legs won, killed by Las Vegas Raiders -6.5, Detroit Lions -9.5, Indianapolis Colts +3.5)
 Lottery 10k+100: lost (3/8 legs won, killed by Las Vegas Raiders -6.5, Indianapolis Colts +3.5)
