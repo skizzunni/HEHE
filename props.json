@@ -31789,11 +31789,13 @@
   "league": "nfl",
   "line": "125+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Baker Mayfield",
   "p": 0.8672,
   "price": "-1800",
   "prop_lock": true,
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873025|n:bijan robinson|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -31805,11 +31807,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Bijan Robinson",
   "p": 0.5513,
   "p_fair": null,
   "price": "-195",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873025|n:bucky irving|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -31821,11 +31825,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Bucky Irving",
   "p": 0.4125,
   "p_fair": null,
   "price": "-105",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873025|n:cade otton|Receiving Yards|15+": {
   "aid": null,
@@ -31841,7 +31847,9 @@
   "p": 0.8512,
   "p_fair": 0.7911,
   "price": "-600",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401873025|n:drake london|Receptions|5+": {
   "aid": null,
@@ -31853,11 +31861,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Drake London",
   "p": 0.7905,
   "p_fair": 0.7652,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nfl:401873025|n:jahan dotson|Receiving Yards|10+": {
   "aid": null,
@@ -31869,11 +31879,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Jahan Dotson",
   "p": 0.7944,
   "p_fair": 0.8026,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 95.0
  },
  "nfl:401873025|n:kyle pitts|Receiving Yards|20+": {
   "aid": null,
@@ -31885,11 +31897,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Kyle Pitts",
   "p": 0.7944,
   "p_fair": 0.7402,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 6.0
  },
  "nfl:401873025|n:ted hurst|Receiving Yards|10+": {
   "aid": null,
@@ -31901,11 +31915,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Ted Hurst III",
   "p": 0.847,
   "p_fair": 0.8408,
   "price": "-580",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873026|n:dalton kincaid|Receiving Yards|20+": {
   "aid": null,

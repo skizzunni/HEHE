@@ -7046,10 +7046,10 @@
   },
   "props": {
    "fair": {
-    "n": 1426,
+    "n": 1430,
     "said_fair": 86.6,
     "said_price": 87.3,
-    "won": 1185
+    "won": 1186
    },
    "n": 180,
    "said": 81.6,
@@ -7150,6 +7150,13 @@
    },
    {
     "flag": false,
+    "hit": 70.0,
+    "n": 10,
+    "name": "props nfl Receiving Yards",
+    "said": 82.0
+   },
+   {
+    "flag": false,
     "hit": 81.8,
     "n": 291,
     "name": "props nhl Shots on Goal",
@@ -7241,10 +7248,10 @@
    },
    {
     "flag": false,
-    "hit": 93.3,
-    "n": 104,
+    "hit": 92.4,
+    "n": 105,
     "name": "prop locks",
-    "said": 89.3
+    "said": 89.2
    },
    {
     "flag": false,
@@ -7331,21 +7338,23 @@
    }
   },
   "clv": {
-   "avg": 0.86,
-   "beat": 58.0,
-   "n": 50
+   "avg": 0.82,
+   "beat": 56.9,
+   "n": 51
   },
   "day": "2026-11-01",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Kyle Pitts: 20+ Receiving Yards (ATL @ TB) 6"
+   ],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      3,
      0.5013,
-     "open"
+     "lost"
     ]
    },
    "won": 0
@@ -7495,7 +7504,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -7503,7 +7512,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -7521,7 +7530,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k+25",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -7529,7 +7538,7 @@
     "lost": 0,
     "status": "open",
     "tier": "10k+50",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [],
@@ -7537,16 +7546,16 @@
     "lost": 0,
     "status": "open",
     "tier": "10k+100",
-    "won": 0
+    "won": 1
    }
   ],
   "picks": {
-   "hit": 66.0,
+   "hit": 66.7,
    "lost": 17,
-   "n": 50,
-   "roi": -15.3,
-   "said": 72.8,
-   "won": 33
+   "n": 51,
+   "roi": -13.5,
+   "said": 72.4,
+   "won": 34
   },
   "picks_by_league": {
    "arg": {
@@ -7685,6 +7694,14 @@
     "said": 75.0,
     "won": 0
    },
+   "nfl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 76.9,
+    "said": 54.0,
+    "won": 1
+   },
    "nhl": {
     "hit": 100.0,
     "lost": 0,
@@ -7752,19 +7769,19 @@
   },
   "props": {
    "fair": {
-    "n": 1426,
+    "n": 1430,
     "said_fair": 86.6,
     "said_price": 87.3,
-    "won": 1185
+    "won": 1186
    },
-   "n": 16,
-   "said": 83.8,
-   "won": 13
+   "n": 23,
+   "said": 80.3,
+   "won": 15
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 9,
+   "open": 8,
    "plays": {
     "best": [
      7,
@@ -7777,7 +7794,7 @@
      "open"
     ]
    },
-   "won": 2
+   "won": 3
   },
   "strong": {
    "n": 0
@@ -7790,10 +7807,10 @@
    "agree": {
     "hit": 74.2,
     "lost": 222,
-    "n": 860,
-    "roi": 0.5,
-    "said": 70.3,
-    "won": 638
+    "n": 861,
+    "roi": 0.6,
+    "said": 70.2,
+    "won": 639
    }
   },
   "weights": {

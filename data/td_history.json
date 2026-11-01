@@ -11833,7 +11833,7 @@
 "name": "A.J. Terrell",
 "p": 0.0094,
 "price": "+8000",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Alex Anzalone": {
@@ -11843,7 +11843,7 @@
 "name": "Alex Anzalone",
 "p": 0.0094,
 "price": "+8000",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Antoine Winfield Jr.": {
@@ -11853,7 +11853,7 @@
 "name": "Antoine Winfield Jr.",
 "p": 0.0094,
 "price": "+8000",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Atlanta Defense": {
@@ -11863,7 +11863,7 @@
 "name": "Atlanta Defense",
 "p": 0.0772,
 "price": "+900",
-"status": "open",
+"status": "void",
 "total": 42.5
 },
 "nfl:401873025|Austin Hooper": {
@@ -11873,7 +11873,7 @@
 "name": "Austin Hooper",
 "p": 0.0592,
 "price": "+1200",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Avieon Terrell": {
@@ -11883,8 +11883,9 @@
 "name": "Avieon Terrell",
 "p": 0.0094,
 "price": "+8000",
-"status": "open",
-"total": 42.5
+"status": "ungradable",
+"total": 42.5,
+"void_why": "identity_unresolved"
 },
 "nfl:401873025|Baker Mayfield": {
 "date": "2026-11-01",
@@ -11893,7 +11894,7 @@
 "name": "Baker Mayfield",
 "p": 0.1196,
 "price": "+550",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Bauer Sharp": {
@@ -11903,7 +11904,7 @@
 "name": "Bauer Sharp",
 "p": 0.0295,
 "price": "+2500",
-"status": "open",
+"status": "void",
 "total": 42.5
 },
 "nfl:401873025|Bijan Robinson": {
@@ -11913,7 +11914,7 @@
 "name": "Bijan Robinson",
 "p": 0.5442,
 "price": "-180",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Bucky Irving": {
@@ -11923,7 +11924,7 @@
 "name": "Bucky Irving",
 "p": 0.3998,
 "price": "+105",
-"status": "open",
+"status": "won",
 "total": 42.5
 },
 "nfl:401873025|Cade Otton": {
@@ -11933,7 +11934,7 @@
 "name": "Cade Otton",
 "p": 0.1829,
 "price": "+330",
-"status": "open",
+"status": "void",
 "total": 42.5
 },
 "nfl:401873025|Charlie Woerner": {
@@ -11943,7 +11944,7 @@
 "name": "Charlie Woerner",
 "p": 0.055,
 "price": "+1300",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Chris Blair": {
@@ -11953,7 +11954,7 @@
 "name": "Chris Blair",
 "p": 0.0384,
 "price": "+1900",
-"status": "open",
+"status": "void",
 "total": 42.5
 },
 "nfl:401873025|Chris Godwin": {
@@ -11963,7 +11964,7 @@
 "name": "Chris Godwin",
 "p": 0.2264,
 "price": "+250",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|David Sills V": {
@@ -11973,7 +11974,7 @@
 "name": "David Sills V",
 "p": 0.055,
 "price": "+1300",
-"status": "open",
+"status": "void",
 "total": 42.5
 },
 "nfl:401873025|Drake London": {
@@ -11983,7 +11984,7 @@
 "name": "Drake London",
 "p": 0.3096,
 "price": "+160",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Jacob Parrish": {
@@ -11993,7 +11994,7 @@
 "name": "Jacob Parrish",
 "p": 0.0108,
 "price": "+7000",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Jahan Dotson": {
@@ -12003,7 +12004,7 @@
 "name": "Jahan Dotson",
 "p": 0.1447,
 "price": "+440",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Jessie Bates III": {
@@ -12013,7 +12014,7 @@
 "name": "Jessie Bates III",
 "p": 0.0094,
 "price": "+8000",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Kameron Johnson": {
@@ -12023,8 +12024,9 @@
 "name": "Kameron Johnson",
 "p": 0.0225,
 "price": "+3300",
-"status": "open",
-"total": 42.5
+"status": "ungradable",
+"total": 42.5,
+"void_why": "identity_unresolved"
 },
 "nfl:401873025|Kenneth Gainwell": {
 "date": "2026-11-01",
@@ -12033,7 +12035,7 @@
 "name": "Kenneth Gainwell",
 "p": 0.1632,
 "price": "+380",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Khalil Herbert": {
@@ -12043,7 +12045,7 @@
 "name": "Khalil Herbert",
 "p": 0.091,
 "price": "+750",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Ko Kieft": {
@@ -12053,7 +12055,7 @@
 "name": "Ko Kieft",
 "p": 0.0365,
 "price": "+2000",
-"status": "open",
+"status": "void",
 "total": 42.5
 },
 "nfl:401873025|Kyle Pitts": {
@@ -12063,7 +12065,7 @@
 "name": "Kyle Pitts",
 "p": 0.1786,
 "price": "+340",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Michael Penix Jr.": {
@@ -12073,7 +12075,7 @@
 "name": "Michael Penix Jr.",
 "p": 0.055,
 "price": "+1300",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Nick Muse": {
@@ -12083,7 +12085,7 @@
 "name": "Nick Muse",
 "p": 0.0334,
 "price": "+2200",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Olamide Zaccheaus": {
@@ -12093,7 +12095,7 @@
 "name": "Olamide Zaccheaus",
 "p": 0.0513,
 "price": "+1400",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Payne Durham": {
@@ -12103,7 +12105,7 @@
 "name": "Payne Durham",
 "p": 0.0452,
 "price": "+1600",
-"status": "open",
+"status": "void",
 "total": 42.5
 },
 "nfl:401873025|Rueben Bain": {
@@ -12113,7 +12115,7 @@
 "name": "Rueben Bain",
 "p": 0.0094,
 "price": "+8000",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873025|Sean Tucker": {
@@ -12123,7 +12125,7 @@
 "name": "Sean Tucker",
 "p": 0.1447,
 "price": "+440",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Tampa Bay Defense": {
@@ -12133,7 +12135,7 @@
 "name": "Tampa Bay Defense",
 "p": 0.0814,
 "price": "+850",
-"status": "open",
+"status": "void",
 "total": 42.5
 },
 "nfl:401873025|Ted Hurst III": {
@@ -12143,7 +12145,7 @@
 "name": "Ted Hurst III",
 "p": 0.1921,
 "price": "+310",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Tez Johnson": {
@@ -12153,7 +12155,7 @@
 "name": "Tez Johnson",
 "p": 0.1874,
 "price": "+320",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Xavier Watts": {
@@ -12163,7 +12165,7 @@
 "name": "Xavier Watts",
 "p": 0.0116,
 "price": "+6500",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Zachariah Branch": {
@@ -12173,7 +12175,7 @@
 "name": "Zachariah Branch",
 "p": 0.0859,
 "price": "+800",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873025|Zyon McCollum": {
@@ -12183,7 +12185,7 @@
 "name": "Zyon McCollum",
 "p": 0.0101,
 "price": "+7500",
-"status": "open",
+"status": "lost",
 "total": 42.5
 },
 "nfl:401873026|Baltimore Defense": {
