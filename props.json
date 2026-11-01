@@ -24385,6 +24385,38 @@
   "price": "-390",
   "status": "open"
  },
+ "nba:401909904|n:andrew nembhard|Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-11-01",
+  "edge": -8.0,
+  "gid": "nba:401909904",
+  "imp": 0.8,
+  "label": "Andrew Nembhard: 10+ Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Reb + Ast",
+  "name": "Andrew Nembhard",
+  "p": 0.7729,
+  "p_fair": 0.7363,
+  "price": "-400",
+  "status": "open"
+ },
+ "nba:401909904|n:jarace walker|Reb + Ast|5+": {
+  "aid": null,
+  "date": "2026-11-01",
+  "edge": null,
+  "gid": "nba:401909904",
+  "imp": 0.878,
+  "label": "Jarace Walker: 5+ Reb + Ast",
+  "league": "nba",
+  "line": "5+",
+  "market": "Reb + Ast",
+  "name": "Jarace Walker",
+  "p": 0.8484,
+  "p_fair": null,
+  "price": "-720",
+  "status": "open"
+ },
  "nba:401909904|n:pascal siakam|Pts + Ast|20+": {
   "aid": null,
   "date": "2026-11-01",
@@ -24415,6 +24447,22 @@
   "p": 0.8515,
   "p_fair": 0.8927,
   "price": "-1200",
+  "status": "open"
+ },
+ "nba:401909906|n:jakobe walter|Points|5+": {
+  "aid": null,
+  "date": "2026-11-01",
+  "edge": 2.9,
+  "gid": "nba:401909906",
+  "imp": 0.9412,
+  "label": "Ja'Kobe Walter: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Ja'Kobe Walter",
+  "p": 0.851,
+  "p_fair": 0.9689,
+  "price": "-1600",
   "status": "open"
  },
  "nba:401909906|n:rj barrett|Pts + Ast|20+": {
@@ -44987,11 +45035,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Artturi Lehkonen",
   "p": 0.8582,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892623|n:brock nelson|Shots on Goal|1+": {
   "aid": null,
@@ -45003,11 +45053,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Brock Nelson",
   "p": 0.8472,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892623|n:cale makar|Shots on Goal|2+": {
   "aid": null,
@@ -45019,11 +45071,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cale Makar",
   "p": 0.7402,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892623|n:joel farabee|Shots on Goal|1+": {
   "aid": null,
@@ -45035,11 +45089,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Joel Farabee",
   "p": 0.8372,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892623|n:martin necas|Shots on Goal|2+": {
   "aid": null,
@@ -45051,11 +45107,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Martin Necas",
   "p": 0.7317,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892623|n:matt coronato|Shots on Goal|1+": {
   "aid": null,
@@ -45067,11 +45125,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Coronato",
   "p": 0.8582,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892623|n:nathan mackinnon|Shots on Goal|2+": {
   "aid": null,
@@ -45083,11 +45143,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Nathan MacKinnon",
   "p": 0.8665,
   "p_fair": null,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892623|n:nathan mackinnon|Shots on Goal|3+": {
   "aid": null,
@@ -45099,11 +45161,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Nathan MacKinnon",
   "p": 0.7375,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892624|n:cole perfetti|Shots on Goal|1+": {
   "aid": null,
@@ -45183,6 +45247,22 @@
   "p": 0.8496,
   "p_fair": null,
   "price": "-1000",
+  "status": "open"
+ },
+ "nhl:401892626|n:clayton keller|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-11-01",
+  "edge": null,
+  "gid": "nhl:401892626",
+  "imp": 0.7297,
+  "label": "Clayton Keller: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Clayton Keller",
+  "p": 0.6833,
+  "p_fair": null,
+  "price": "-270",
   "status": "open"
  },
  "nhl:401892626|n:logan cooley|Shots on Goal|1+": {
