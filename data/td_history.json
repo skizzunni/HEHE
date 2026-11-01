@@ -11483,7 +11483,7 @@
 "name": "Arizona Defense",
 "p": 0.0743,
 "price": "+850",
-"status": "open",
+"status": "void",
 "total": 54.5
 },
 "nfl:401873024|Bam Knight": {
@@ -11493,7 +11493,7 @@
 "name": "Bam Knight",
 "p": 0.1377,
 "price": "+420",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Brevyn Spann-Ford": {
@@ -11503,7 +11503,7 @@
 "name": "Brevyn Spann-Ford",
 "p": 0.16,
 "price": "+350",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Caleb Downs": {
@@ -11513,7 +11513,7 @@
 "name": "Caleb Downs",
 "p": 0.0125,
 "price": "+5500",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Camden Brown": {
@@ -11523,7 +11523,7 @@
 "name": "Camden Brown",
 "p": 0.0468,
 "price": "+1400",
-"status": "open",
+"status": "void",
 "total": 54.5
 },
 "nfl:401873024|CeeDee Lamb": {
@@ -11533,7 +11533,7 @@
 "name": "CeeDee Lamb",
 "p": 0.4473,
 "price": "-135",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|DaRon Bland": {
@@ -11543,7 +11543,7 @@
 "name": "DaRon Bland",
 "p": 0.017,
 "price": "+4000",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Dak Prescott": {
@@ -11553,7 +11553,7 @@
 "name": "Dak Prescott",
 "p": 0.1325,
 "price": "+440",
-"status": "open",
+"status": "won",
 "total": 54.5
 },
 "nfl:401873024|Dallas Defense": {
@@ -11563,7 +11563,7 @@
 "name": "Dallas Defense",
 "p": 0.0945,
 "price": "+650",
-"status": "open",
+"status": "void",
 "total": 54.5
 },
 "nfl:401873024|DeMarvion Overshown": {
@@ -11573,7 +11573,7 @@
 "name": "DeMarvion Overshown",
 "p": 0.0086,
 "price": "+8000",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Decobie Durant": {
@@ -11583,8 +11583,9 @@
 "name": "Decobie Durant",
 "p": 0.0136,
 "price": "+5000",
-"status": "open",
-"total": 54.5
+"status": "ungradable",
+"total": 54.5,
+"void_why": "identity_unresolved"
 },
 "nfl:401873024|Denzel Burke": {
 "date": "2026-11-01",
@@ -11593,7 +11594,7 @@
 "name": "Denzel Burke",
 "p": 0.0114,
 "price": "+6000",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Devin Duvernay": {
@@ -11603,7 +11604,7 @@
 "name": "Devin Duvernay",
 "p": 0.0501,
 "price": "+1300",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Elijah Higgins": {
@@ -11613,7 +11614,7 @@
 "name": "Elijah Higgins",
 "p": 0.1094,
 "price": "+550",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Evan Hull": {
@@ -11623,7 +11624,7 @@
 "name": "Evan Hull",
 "p": 0.0521,
 "price": "+1200",
-"status": "open",
+"status": "void",
 "total": 54.5
 },
 "nfl:401873024|George Pickens": {
@@ -11633,7 +11634,7 @@
 "name": "George Pickens",
 "p": 0.3924,
 "price": "-105",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Hunter Luepke": {
@@ -11643,7 +11644,7 @@
 "name": "Hunter Luepke",
 "p": 0.0671,
 "price": "+950",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Jacoby Brissett": {
@@ -11653,7 +11654,7 @@
 "name": "Jacoby Brissett",
 "p": 0.0832,
 "price": "+750",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Jake Ferguson": {
@@ -11663,7 +11664,7 @@
 "name": "Jake Ferguson",
 "p": 0.2082,
 "price": "+250",
-"status": "open",
+"status": "void",
 "total": 54.5
 },
 "nfl:401873024|James Mitchell": {
@@ -11673,7 +11674,7 @@
 "name": "James Mitchell",
 "p": 0.0468,
 "price": "+1400",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Javonte Williams": {
@@ -11683,7 +11684,7 @@
 "name": "Javonte Williams",
 "p": 0.5808,
 "price": "-250",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Jeremiyah Love": {
@@ -11693,7 +11694,7 @@
 "name": "Jeremiyah Love",
 "p": 0.2985,
 "price": "+150",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Jonathan Mingo": {
@@ -11703,7 +11704,7 @@
 "name": "Jonathan Mingo",
 "p": 0.0885,
 "price": "+700",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Kendrick Bourne": {
@@ -11713,7 +11714,7 @@
 "name": "Kendrick Bourne",
 "p": 0.1638,
 "price": "+340",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Kenny Yeboah": {
@@ -11723,7 +11724,7 @@
 "name": "Kenny Yeboah",
 "p": 0.0249,
 "price": "+2700",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Luke Schoonmaker": {
@@ -11733,7 +11734,7 @@
 "name": "Luke Schoonmaker",
 "p": 0.0617,
 "price": "+1000",
-"status": "open",
+"status": "void",
 "total": 54.5
 },
 "nfl:401873024|Michael Wilson": {
@@ -11743,7 +11744,7 @@
 "name": "Michael Wilson",
 "p": 0.2692,
 "price": "+175",
-"status": "open",
+"status": "won",
 "total": 54.5
 },
 "nfl:401873024|Reggie Virgil": {
@@ -11753,7 +11754,7 @@
 "name": "Reggie Virgil",
 "p": 0.0743,
 "price": "+850",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Ryan Flournoy": {
@@ -11763,7 +11764,7 @@
 "name": "Ryan Flournoy",
 "p": 0.2022,
 "price": "+260",
-"status": "open",
+"status": "won",
 "total": 54.5
 },
 "nfl:401873024|Simi Fehoko": {
@@ -11773,7 +11774,7 @@
 "name": "Simi Fehoko",
 "p": 0.0438,
 "price": "+1500",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Teagan Quitoriano": {
@@ -11783,7 +11784,7 @@
 "name": "Teagan Quitoriano",
 "p": 0.0586,
 "price": "+1100",
-"status": "open",
+"status": "void",
 "total": 54.5
 },
 "nfl:401873024|Trey McBride": {
@@ -11793,7 +11794,7 @@
 "name": "Trey McBride",
 "p": 0.3924,
 "price": "-105",
-"status": "open",
+"status": "won",
 "total": 54.5
 },
 "nfl:401873024|Tyler Allgeier": {
@@ -11803,7 +11804,7 @@
 "name": "Tyler Allgeier",
 "p": 0.1325,
 "price": "+440",
-"status": "open",
+"status": "won",
 "total": 54.5
 },
 "nfl:401873024|Tyler Goodson": {
@@ -11813,7 +11814,7 @@
 "name": "Tyler Goodson",
 "p": 0.1496,
 "price": "+380",
-"status": "open",
+"status": "lost",
 "total": 54.5
 },
 "nfl:401873024|Zay Jones": {
@@ -11823,7 +11824,7 @@
 "name": "Zay Jones",
 "p": 0.0574,
 "price": "+1100",
-"status": "open",
+"status": "void",
 "total": 54.5
 },
 "nfl:401873025|A.J. Terrell": {

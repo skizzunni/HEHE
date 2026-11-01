@@ -1579,7 +1579,8 @@
   "p": 0.8667,
   "p_fair": null,
   "price": "-2000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "ita:401874952|205653|Goalkeeper Saves|1+": {
   "aid": "205653",
@@ -31630,11 +31631,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Brevyn Spann-Ford",
   "p": 0.7944,
   "p_fair": 0.8377,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 31.0
  },
  "nfl:401873024|n:ceedee lamb|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -31646,11 +31649,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "CeeDee Lamb",
   "p": 0.4251,
   "p_fair": null,
   "price": "-130",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873024|n:ceedee lamb|Receiving Yards|50+": {
   "aid": null,
@@ -31662,11 +31667,13 @@
   "league": "nfl",
   "line": "50+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "CeeDee Lamb",
   "p": 0.8512,
   "p_fair": 0.7294,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 58.0
  },
  "nfl:401873024|n:elijah higgins|Receiving Yards|5+": {
   "aid": null,
@@ -31678,11 +31685,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Elijah Higgins",
   "p": 0.8512,
   "p_fair": 0.8557,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nfl:401873024|n:george pickens|Receiving Yards|40+": {
   "aid": null,
@@ -31694,11 +31703,13 @@
   "league": "nfl",
   "line": "40+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "George Pickens",
   "p": 0.7944,
   "p_fair": 0.7147,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 48.0
  },
  "nfl:401873024|n:jake ferguson|Receiving Yards|5+": {
   "aid": null,
@@ -31714,7 +31725,9 @@
   "p": 0.8512,
   "p_fair": 0.8557,
   "price": "-600",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401873024|n:javonte williams|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -31726,11 +31739,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Javonte Williams",
   "p": 0.5651,
   "p_fair": null,
   "price": "-250",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873024|n:jeremiyah love|Rushing Yards|15+": {
   "aid": null,
@@ -31742,11 +31757,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Jeremiyah Love",
   "p": 0.85,
   "p_fair": 0.8816,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nfl:401873024|n:michael wilson|Receiving Yards|30+": {
   "aid": null,
@@ -31758,11 +31775,13 @@
   "league": "nfl",
   "line": "30+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Michael Wilson",
   "p": 0.8512,
   "p_fair": 0.7606,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 111.0
  },
  "nfl:401873024|n:ryan flournoy|Receiving Yards|15+": {
   "aid": null,
@@ -31774,11 +31793,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Ryan Flournoy",
   "p": 0.8512,
   "p_fair": 0.8054,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 38.0
  },
  "nfl:401873024|n:ryan flournoy|Receiving Yards|20+": {
   "aid": null,
@@ -31790,11 +31811,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Ryan Flournoy",
   "p": 0.7904,
   "p_fair": 0.7471,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 38.0
  },
  "nfl:401873024|n:trey mcbride|Receiving Yards|50+": {
   "aid": null,
@@ -31806,11 +31829,13 @@
   "league": "nfl",
   "line": "50+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Trey McBride",
   "p": 0.7904,
   "p_fair": 0.6699,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 72.0
  },
  "nfl:401873025|n:baker mayfield|Passing Yards|125+": {
   "aid": null,
@@ -47784,6 +47809,22 @@
   "p": 0.8672,
   "price": "-2000",
   "prop_lock": true,
+  "status": "open"
+ },
+ "nhl:401892627|n:ryan nugent hopkins|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-01",
+  "edge": null,
+  "gid": "nhl:401892627",
+  "imp": 0.8947,
+  "label": "Ryan Nugent-Hopkins: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Ryan Nugent-Hopkins",
+  "p": 0.8378,
+  "p_fair": null,
+  "price": "-850",
   "status": "open"
  },
  "nhl:401892627|n:vasily podkolzin|Shots on Goal|1+": {
