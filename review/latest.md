@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 102-26 (79.7% vs 73.1% claimed, ROI +4.4%).
-Closing line value: +0.7 points on 128 picks; beat the close on 50.8%.
+Picks 102-27 (79.1% vs 73.0% claimed, ROI +3.6%).
+Closing line value: +0.74 points on 129 picks; beat the close on 51.2%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
 - LOST col Atlético Junior at 65%: margin 1 · the book had my side favoured too · called at 65%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
@@ -16,6 +16,7 @@ Closing line value: +0.7 points on 128 picks; beat the close on 50.8%.
 - LOST mls St. Louis CITY SC at 80%: margin 1 · the book had my side favoured too · called at 80%
 - LOST mls Real Salt Lake at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST mls New York City FC at 65%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 65%
+- LOST nba Atlanta Hawks at 64%: margin 22 · the book had my side favoured too · called at 64%
 - LOST ncaaf Oklahoma Sooners at 61%: margin 17 · the book had my side favoured too · called at 61%
 - LOST ncaaf SMU Mustangs at 75%: margin 3 · the book had my side favoured too · called at 75%
 - LOST ncaaf Georgia State Panthers at 62%: margin 11 · the book had my side favoured too · called at 62%
@@ -40,8 +41,8 @@ Lottery 10k: lost (2/10 legs won, killed by Over 55.5 points, Over 54.5 points, 
 Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Auburn Tigers +7.5)
 Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Over 47.5 points)
 Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5)
-Ladder-consistency props (all time): 1136/1360 won (83.5%) vs 86.6% fair, 87.3% price.
-Props 61/74 vs 80.8% claimed.
+Ladder-consistency props (all time): 1145/1371 won (83.5%) vs 86.6% fair, 87.3% price.
+Props 71/86 vs 81.4% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=83), ncaaf 0.00 (n=150), nhl 0.00 (n=105)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=84), ncaaf 0.00 (n=150), nhl 0.00 (n=105)

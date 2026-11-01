@@ -23073,11 +23073,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Aaron Wiggins",
   "p": 0.8528,
   "p_fair": 0.8798,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909898|n:cj mccollum|Assists|2+": {
   "aid": null,
@@ -23089,11 +23091,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "CJ McCollum",
   "p": 0.8517,
   "p_fair": 0.8196,
   "price": "-590",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909898|n:dejounte murray|Points|10+": {
   "aid": null,
@@ -23109,7 +23113,9 @@
   "p": 0.85,
   "p_fair": 0.9152,
   "price": "-1400",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909898|n:derik queen|Points|5+": {
   "aid": null,
@@ -23121,11 +23127,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Derik Queen",
   "p": 0.8479,
   "p_fair": 0.9686,
   "price": "-1350",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909898|n:derik queen|Rebounds|4+": {
   "aid": null,
@@ -23137,11 +23145,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Derik Queen",
   "p": 0.8531,
   "p_fair": 0.9251,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909898|n:jalen johnson|Assists|6+": {
   "aid": null,
@@ -23153,11 +23163,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jalen Johnson",
   "p": 0.8517,
   "p_fair": 0.8371,
   "price": "-590",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401909898|n:jalen johnson|Points|10+": {
   "aid": null,
@@ -23168,11 +23180,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Jalen Johnson",
   "p": 0.8677,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401909898|n:jalen johnson|Pts + Reb + Ast|30+": {
   "aid": null,
@@ -23184,11 +23198,13 @@
   "league": "nba",
   "line": "30+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jalen Johnson",
   "p": 0.8521,
   "p_fair": 0.8425,
   "price": "-850",
-  "status": "open"
+  "status": "lost",
+  "value": 24.0
  },
  "nba:401909898|n:jalen johnson|Rebounds|6+": {
   "aid": null,
@@ -23200,11 +23216,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Jalen Johnson",
   "p": 0.8472,
   "p_fair": 0.9228,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909898|n:jeremiah fears|Assists|2+": {
   "aid": null,
@@ -23216,11 +23234,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jeremiah Fears",
   "p": 0.8517,
   "p_fair": 0.8461,
   "price": "-590",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909898|n:kingston flemings|Assists|2+": {
   "aid": null,
@@ -23232,11 +23252,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Kingston Flemings",
   "p": 0.8517,
   "p_fair": 0.8461,
   "price": "-590",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909898|n:trey murphy|Assists|2+": {
   "aid": null,
@@ -23248,11 +23270,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Trey Murphy III",
   "p": 0.8517,
   "p_fair": 0.8322,
   "price": "-590",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909898|n:trey murphy|Points|10+": {
   "aid": null,
@@ -23264,11 +23288,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Trey Murphy III",
   "p": 0.8477,
   "p_fair": 0.9243,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nba:401909899|n:cam spencer|Threes Made|1+": {
   "aid": null,
