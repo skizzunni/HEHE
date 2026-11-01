@@ -3700,3 +3700,10 @@ rule (2 per sport), replayed on 62 days of graded, priced picks (halves
 split at 2026-10-01): ranks 1-5 won 71.7% / 74.3% (ROI -0.9% / +0.9%), ranks
 6-7 won 55.6% / 56.7% (ROI -8.9% / -13.6%, n=9 / 30). Ranks 8-10 have 17
 picks, all in the second half, too few to judge. The card stays at five.
+
+**Dropping picks whose price drifts before kickoff: rejected (2026-11-01).**
+On 862 graded priced picks with price history (2026-10-18 to 11-01, halves
+split at 10-25), picks whose implied chance fell 2+ points from first quote
+to last won 71.2% vs 66.7% stated (ROI +1.8%, n=59), then 67.9% vs 69.0%
+(ROI -7.5%, n=84). The halves disagree, so no late-drift rule. Stable and
+shortened picks: 72.0% / 76.8% and 71.7% / 78.4%.
