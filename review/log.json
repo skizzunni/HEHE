@@ -7046,10 +7046,10 @@
   },
   "props": {
    "fair": {
-    "n": 1430,
-    "said_fair": 86.6,
-    "said_price": 87.3,
-    "won": 1186
+    "n": 1460,
+    "said_fair": 86.4,
+    "said_price": 87.2,
+    "won": 1213
    },
    "n": 180,
    "said": 81.6,
@@ -7150,8 +7150,15 @@
    },
    {
     "flag": false,
-    "hit": 70.0,
-    "n": 10,
+    "hit": 58.3,
+    "n": 12,
+    "name": "props nfl Anytime Touchdown Scorer",
+    "said": 42.8
+   },
+   {
+    "flag": false,
+    "hit": 80.6,
+    "n": 31,
     "name": "props nfl Receiving Yards",
     "said": 82.0
    },
@@ -7206,6 +7213,13 @@
    },
    {
     "flag": false,
+    "hit": 80.0,
+    "n": 10,
+    "name": "locks nfl side",
+    "said": 77.6
+   },
+   {
+    "flag": false,
     "hit": 71.4,
     "n": 21,
     "name": "locks nhl under",
@@ -7241,15 +7255,15 @@
    },
    {
     "flag": false,
-    "hit": 88.3,
-    "n": 60,
+    "hit": 88.5,
+    "n": 61,
     "name": "daily calls",
     "said": 80.7
    },
    {
     "flag": false,
-    "hit": 92.4,
-    "n": 105,
+    "hit": 92.5,
+    "n": 107,
     "name": "prop locks",
     "said": 89.2
    },
@@ -7338,18 +7352,19 @@
    }
   },
   "clv": {
-   "avg": 0.82,
-   "beat": 56.9,
-   "n": 51
+   "avg": 0.78,
+   "beat": 56.4,
+   "n": 55
   },
   "day": "2026-11-01",
   "leaks_14d": [],
   "locks": {
    "lost": [
-    "Kyle Pitts: 20+ Receiving Yards (ATL @ TB) 6"
+    "Kyle Pitts: 20+ Receiving Yards (ATL @ TB) 6",
+    "DK Metcalf: 30+ Receiving Yards (CLE @ PIT) 4"
    ],
    "n": 11,
-   "open": 10,
+   "open": 6,
    "plays": {
     "best": [
      3,
@@ -7357,7 +7372,7 @@
      "lost"
     ]
    },
-   "won": 0
+   "won": 3
   },
   "losses": [
    {
@@ -7442,6 +7457,14 @@
    },
    {
     "against_market": false,
+    "league": "nfl",
+    "pick": "New York Jets",
+    "price": "-125",
+    "said": 53,
+    "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
     "league": "nor",
     "pick": "IK Start",
     "price": "-210",
@@ -7504,14 +7527,16 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
-     "Las Vegas Raiders -6.5"
+     "Las Vegas Raiders -6.5",
+     "Detroit Lions -9.5",
+     "Indianapolis Colts +3.5"
     ],
     "legs": 8,
-    "lost": 1,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 1
@@ -7524,46 +7549,52 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
-     "Las Vegas Raiders -6.5"
+     "Las Vegas Raiders -6.5",
+     "Detroit Lions -9.5",
+     "Indianapolis Colts +3.5",
+     "Over 37.5 points"
     ],
     "legs": 8,
-    "lost": 1,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+25",
     "won": 1
    },
    {
     "killed_by": [
-     "Las Vegas Raiders -6.5"
+     "Las Vegas Raiders -6.5",
+     "Detroit Lions -9.5",
+     "Indianapolis Colts +3.5"
     ],
     "legs": 8,
-    "lost": 1,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+50",
     "won": 1
    },
    {
     "killed_by": [
-     "Las Vegas Raiders -6.5"
+     "Las Vegas Raiders -6.5",
+     "Indianapolis Colts +3.5"
     ],
     "legs": 8,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+100",
     "won": 1
    }
   ],
   "picks": {
-   "hit": 66.7,
-   "lost": 17,
-   "n": 51,
-   "roi": -13.5,
-   "said": 72.4,
-   "won": 34
+   "hit": 67.3,
+   "lost": 18,
+   "n": 55,
+   "roi": -11.9,
+   "said": 71.8,
+   "won": 37
   },
   "picks_by_league": {
    "arg": {
@@ -7703,12 +7734,12 @@
     "won": 0
    },
    "nfl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 76.9,
-    "said": 54.0,
-    "won": 1
+    "hit": 80.0,
+    "lost": 1,
+    "n": 5,
+    "roi": 21.4,
+    "said": 62.2,
+    "won": 4
    },
    "nhl": {
     "hit": 100.0,
@@ -7777,14 +7808,14 @@
   },
   "props": {
    "fair": {
-    "n": 1430,
-    "said_fair": 86.6,
-    "said_price": 87.3,
-    "won": 1186
+    "n": 1460,
+    "said_fair": 86.4,
+    "said_price": 87.2,
+    "won": 1213
    },
-   "n": 23,
-   "said": 80.3,
-   "won": 15
+   "n": 63,
+   "said": 76.8,
+   "won": 48
   },
   "safe_locks": {
    "lost": [],
@@ -7814,11 +7845,11 @@
    },
    "agree": {
     "hit": 74.2,
-    "lost": 222,
-    "n": 861,
-    "roi": 0.6,
+    "lost": 223,
+    "n": 865,
+    "roi": 0.7,
     "said": 70.2,
-    "won": 639
+    "won": 642
    }
   },
   "weights": {
