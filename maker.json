@@ -8141,6 +8141,27 @@
    "status": "open",
    "ticker": "KXNFLTOTAL-26NOV01ARIDAL-55"
   },
+  "KXNFLTOTAL-26NOV01ATLTB-43|YES": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "nfl:401873025",
+   "label": "over 42.5",
+   "league": "nfl",
+   "match": "ATL @ TB",
+   "posted": "2026-11-01T17:39:21+00:00",
+   "queue": 707508.56,
+   "side": "YES",
+   "spec": {
+    "line": 42.5,
+    "t": "over"
+   },
+   "start": "2026-11-01T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV01ATLTB-43"
+  },
   "KXNFLTOTAL-26NOV01ATLTB-44|NO": {
    "ask": 0.52,
    "bid": 0.51,
@@ -8329,6 +8350,27 @@
    "start": "2026-11-01T18:00Z",
    "status": "open",
    "ticker": "KXNFLTOTAL-26NOV01LVNYJ-47"
+  },
+  "KXNFLTOTAL-26NOV01MINDET-47|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0162,
+   "fair": 0.5227,
+   "id": "nfl:401873030",
+   "label": "under 46.5",
+   "league": "nfl",
+   "match": "MIN @ DET",
+   "posted": "2026-11-01T17:39:21+00:00",
+   "queue": 19744.66,
+   "side": "NO",
+   "spec": {
+    "line": 46.5,
+    "t": "under"
+   },
+   "start": "2026-11-01T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV01MINDET-47"
   },
   "KXNFLTOTAL-26NOV01NEMIA-42|NO": {
    "ask": 0.51,
