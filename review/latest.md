@@ -41,7 +41,7 @@ Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf
 Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Over 47.5 points)
 Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5)
 Ladder-consistency props (all time): 1136/1360 won (83.5%) vs 86.6% fair, 87.3% price.
-Props 60/73 vs 80.9% claimed.
+Props 61/74 vs 80.8% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=83), ncaaf 0.00 (n=150), nhl 0.00 (n=105)
