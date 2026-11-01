@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 117-31 (79.1% vs 72.6% claimed, ROI +4.8%).
-Closing line value: +0.61 points on 148 picks; beat the close on 51.4%.
+Picks 118-31 (79.2% vs 72.7% claimed, ROI +4.9%).
+Closing line value: +0.62 points on 149 picks; beat the close on 51.7%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
 - LOST col Atlético Junior at 65%: margin 1 · the book had my side favoured too · called at 65%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
