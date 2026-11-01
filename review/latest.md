@@ -1,11 +1,12 @@
 # Review 2026-11-01
 
-Picks 28-15 (65.1% vs 73.0% claimed, ROI -16.6%).
-Closing line value: +0.49 points on 43 picks; beat the close on 53.5%.
+Picks 28-16 (63.6% vs 72.9% claimed, ROI -18.5%).
+Closing line value: +0.52 points on 44 picks; beat the close on 54.5%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST chi Universidad de Chile at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST ecu Universidad Católica (Quito) at 67%: margin 1 · the book had my side favoured too · called at 67%
 - LOST esp Sevilla at 74%: margin 2 · the book had my side favoured too · called at 74%
+- LOST esp Elche at 71%: margin 1 · the book had my side favoured too · called at 71%
 - LOST ger2 St. Pauli at 72%: margin 2 · the book had my side favoured too · called at 72%
 - LOST jpn V-Varen Nagasaki at 66%: margin 1 · the book had my side favoured too · called at 66%
 - LOST jpn Kawasaki Frontale at 70%: margin 2 · the book had my side favoured too · called at 70%
@@ -26,7 +27,7 @@ Lottery 10k+25: open (0/8 legs won)
 Lottery 10k+50: open (0/8 legs won)
 Lottery 10k+100: open (0/8 legs won)
 Ladder-consistency props (all time): 1185/1426 won (83.1%) vs 86.6% fair, 87.3% price.
-Props 7/9 vs 85.5% claimed.
+Props 8/10 vs 84.8% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=88), ncaaf 0.00 (n=164), nhl 0.00 (n=109)
