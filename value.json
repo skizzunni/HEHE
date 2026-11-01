@@ -3684,6 +3684,45 @@
    "tip": "9:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909908|away|FanDuel": {
+   "dec": 1.6579,
+   "ev": 0.0293,
+   "fair": 0.6209,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909908",
+   "kind": "value",
+   "league": "nba",
+   "match": "DET @ CHA",
+   "price": "-152",
+   "seen": "2026-11-01T23:25:16+00:00",
+   "side": "away",
+   "start": "2026-11-03T00:30Z",
+   "team": "Detroit Pistons",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909908|sure": {
+   "id": "nba:401909908",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-152",
+     "stake_share": 0.6034,
+     "team": "Detroit Pistons",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+152",
+     "stake_share": 0.3966,
+     "team": "Charlotte Hornets",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "DET @ CHA",
+   "profit": 0.0003,
+   "seen": "2026-11-01T23:25:16+00:00"
+  },
   "ncaab:401906769|away|FanDuel": {
    "dec": 2.84,
    "ev": 0.0144,
