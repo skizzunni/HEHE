@@ -1,7 +1,7 @@
 # Review 2026-11-01
 
-Picks 19-11 (63.3% vs 73.7% claimed, ROI -20.3%).
-Closing line value: +0.77 points on 30 picks; beat the close on 56.7%.
+Picks 20-11 (64.5% vs 73.6% claimed, ROI -18.6%).
+Closing line value: +0.81 points on 31 picks; beat the close on 58.1%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST esp Sevilla at 74%: margin 2 · the book had my side favoured too · called at 74%
 - LOST ger2 St. Pauli at 72%: margin 2 · the book had my side favoured too · called at 72%
