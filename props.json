@@ -23307,11 +23307,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Cam Spencer",
   "p": 0.8496,
   "p_fair": 0.8709,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909899|n:cameron boozer|Reb + Ast|10+": {
   "aid": null,
@@ -23323,11 +23325,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Cameron Boozer",
   "p": 0.8517,
   "p_fair": 0.7984,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nba:401909899|n:cedric coward|Assists|2+": {
   "aid": null,
@@ -23339,11 +23343,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Cedric Coward",
   "p": 0.8517,
   "p_fair": 0.8304,
   "price": "-590",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909899|n:darius acuff|Points|10+": {
   "aid": null,
@@ -23354,11 +23360,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Darius Acuff Jr.",
   "p": 0.8677,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 38.0
  },
  "nba:401909899|n:domantas sabonis|Rebounds|10+": {
   "aid": null,
@@ -23370,11 +23378,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Domantas Sabonis",
   "p": 0.8402,
   "p_fair": 0.8934,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401909899|n:jerami grant|Points|5+": {
   "aid": null,
@@ -23386,11 +23396,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Jerami Grant",
   "p": 0.8477,
   "p_fair": 0.9645,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401909899|n:ty jerome|Assists|4+": {
   "aid": null,
@@ -23406,7 +23418,9 @@
   "p": 0.8517,
   "p_fair": 0.8283,
   "price": "-590",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909899|n:zach lavine|Assists|2+": {
   "aid": null,
@@ -23418,11 +23432,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Zach LaVine",
   "p": 0.8451,
   "p_fair": 0.8219,
   "price": "-560",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401909899|n:zach lavine|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -23434,11 +23450,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Zach LaVine",
   "p": 0.8403,
   "p_fair": 0.8844,
   "price": "-750",
-  "status": "open"
+  "status": "lost",
+  "value": 12.0
  },
  "nba:401909900|n:aj green|Threes Made|1+": {
   "aid": null,
