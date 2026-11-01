@@ -30,17 +30,17 @@ Closing line value: +0.72 points on 135 picks; beat the close on 52.6%.
 - LOST rsa Stellenbosch at 80%: margin 2 · the book had my side favoured too · called at 80%
 - LOST sco2 Partick Thistle at 77%: margin 1 · the book had my side favoured too · called at 77%
 LEAK arg: 66.7% hit vs 75.0% claimed on 21 calls (14 days)
-Locks 7/11 won, 4 open; Best play top 2 (59%) open.
+Locks 8/11 won, 3 open; Best play top 2 (59%) open.
 Safe Locks 9/11 won, 2 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: lost (2/6 legs won, killed by Notre Dame Fighting Irish -35.5, Auburn Tigers +7.5)
 Lottery 100: lost (2/6 legs won, killed by North Dakota State Bison -30.5, Purdue Boilermakers +10.5, Over 44.5 points)
-Lottery 100: lost (1/8 legs won, killed by Nevada Wolf Pack +16.5, Under 244.5 points)
-Lottery 10k: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Auburn Tigers +7.5)
+Lottery 100: lost (2/8 legs won, killed by Nevada Wolf Pack +16.5, Under 244.5 points)
+Lottery 10k: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Auburn Tigers +7.5, Under 230.5 points)
 Lottery 10k: lost (3/11 legs won, killed by Purdue Boilermakers +10.5, Over 44.5 points, Over 8.5 goals, Over 55.5 points, Over 55.5 points)
 Lottery 10k: lost (3/10 legs won, killed by Over 55.5 points, Under 238.5 points, Over 54.5 points, Texas Tech Red Raiders -11.5, Georgia State Panthers -10.5, Temple Owls +6.5)
-Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Auburn Tigers +7.5)
+Lottery 10k+25: lost (1/9 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Auburn Tigers +7.5, Under 230.5 points)
 Lottery 10k+50: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Over 47.5 points)
-Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5)
+Lottery 10k+100: lost (1/8 legs won, killed by Navy Midshipmen +17.5, Nevada Wolf Pack +10.5, Bowling Green Falcons +6.5, UTEP Miners +14.5, Under 230.5 points)
 Ladder-consistency props (all time): 1156/1385 won (83.5%) vs 86.6% fair, 87.3% price.
 Props 100/120 vs 81.1% claimed.
 
