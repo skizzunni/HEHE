@@ -1045055,6 +1045055,38 @@
       "start": "2026-11-02T02:00Z",
       "starters": [],
       "t": "2026-11-01T15:26:57+00:00"
+     },
+     {
+      "injuries": [
+       [
+        "LAL",
+        "Ziaire Williams",
+        "Out",
+        "F"
+       ],
+       [
+        "LAL",
+        "Adou Thiero",
+        "Out",
+        "F"
+       ],
+       [
+        "TOR",
+        "Kawhi Leonard",
+        "Out",
+        "F"
+       ],
+       [
+        "TOR",
+        "Nate Bittle",
+        "Out",
+        "C"
+       ]
+      ],
+      "probables": {},
+      "start": "2026-11-02T02:00Z",
+      "starters": [],
+      "t": "2026-11-01T21:25:11+00:00"
      }
     ],
     "ncaab:401920409": [
@@ -1136197,13 +1136229,14 @@
        "play": null,
        "price": "-400",
        "quoted": "2026-11-01T12:58:11+00:00",
+       "score": "Baltimore Ravens 10 - Buffalo Bills 36",
        "spec": {
         "line": 4.5,
         "t": "spread",
         "team": "Buffalo Bills"
        },
        "start": "2026-11-01T18:00Z",
-       "status": "open",
+       "status": "won",
        "tip": "1:00 PM",
        "where": "Alternate Spread: Buffalo Bills (+4.5)"
       },
@@ -1136602,143 +1136635,6 @@
     }
    ],
    "versions": [
-    {
-     "policy": "fed10454",
-     "sig": [
-      [
-       2.0,
-       0.9,
-       []
-      ],
-      [
-       2.0,
-       0.85,
-       []
-      ],
-      [
-       2.0,
-       0.8,
-       [
-        "Jacksonville Jaguars to win",
-        "Viborg FF or draw",
-        "Real Madrid to win",
-        "Rapid Vienna or draw",
-        "Philadelphia Flyers +4.5"
-       ]
-      ],
-      [
-       2.0,
-       0.75,
-       [
-        "Jacksonville Jaguars to win",
-        "Baltimore Ravens +11.5",
-        "Viborg FF or draw",
-        "Real Madrid to win"
-       ]
-      ],
-      [
-       2.0,
-       0.65,
-       [
-        "Philadelphia Eagles +10.5",
-        "Boston Celtics to win"
-       ]
-      ],
-      [
-       3.0,
-       0.9,
-       []
-      ],
-      [
-       3.0,
-       0.85,
-       []
-      ],
-      [
-       3.0,
-       0.8,
-       []
-      ],
-      [
-       3.0,
-       0.75,
-       [
-        "Jacksonville Jaguars under 35.5 points",
-        "Over 30.5 points",
-        "Over 36.5 points",
-        "Buffalo Bills +4.5",
-        "Cincinnati Bengals under 36.5 points"
-       ]
-      ],
-      [
-       3.0,
-       0.65,
-       [
-        "Boston Celtics to win",
-        "Washington Commanders to win",
-        "New England Patriots to win",
-        "Jacksonville Jaguars to win"
-       ]
-      ],
-      [
-       5.0,
-       0.9,
-       []
-      ],
-      [
-       5.0,
-       0.85,
-       []
-      ],
-      [
-       5.0,
-       0.8,
-       []
-      ],
-      [
-       5.0,
-       0.75,
-       []
-      ],
-      [
-       5.0,
-       0.65,
-       [
-        "Carolina Hurricanes to win",
-        "Miami Dolphins under 21.5 points",
-        "Washington Commanders to win",
-        "Los Angeles Rams to win",
-        "Boston Celtics to win"
-       ]
-      ],
-      [
-       10.0,
-       0.9,
-       []
-      ],
-      [
-       10.0,
-       0.85,
-       []
-      ],
-      [
-       10.0,
-       0.8,
-       []
-      ],
-      [
-       10.0,
-       0.75,
-       []
-      ],
-      [
-       10.0,
-       0.65,
-       []
-      ]
-     ],
-     "t": "2026-11-01T12:49:22+00:00"
-    },
     {
      "policy": "fed10454",
      "sig": [
@@ -1144688,6 +1144584,143 @@
       ]
      ],
      "t": "2026-11-01T21:19:14+00:00"
+    },
+    {
+     "policy": "fed10454",
+     "sig": [
+      [
+       2.0,
+       0.9,
+       []
+      ],
+      [
+       2.0,
+       0.85,
+       []
+      ],
+      [
+       2.0,
+       0.8,
+       [
+        "Gotham FC or draw",
+        "Over 29.5 points",
+        "Over 208.5 points",
+        "Under 247.5 points",
+        "Ottawa Senators +3.5"
+       ]
+      ],
+      [
+       2.0,
+       0.75,
+       [
+        "Portland Timbers or draw",
+        "Seattle Reign FC or draw",
+        "Kansas City Current or draw",
+        "Independiente Medell\u00edn or draw"
+       ]
+      ],
+      [
+       2.0,
+       0.65,
+       [
+        "Philadelphia Eagles under 20.5 points",
+        "Under 7.5 goals"
+       ]
+      ],
+      [
+       3.0,
+       0.9,
+       []
+      ],
+      [
+       3.0,
+       0.85,
+       []
+      ],
+      [
+       3.0,
+       0.8,
+       []
+      ],
+      [
+       3.0,
+       0.75,
+       [
+        "Santos or draw",
+        "Under 49.5 points",
+        "Over 215.5 points",
+        "Over 211.5 points",
+        "Edmonton Oilers +2.5"
+       ]
+      ],
+      [
+       3.0,
+       0.65,
+       [
+        "Philadelphia Eagles +10.5",
+        "Under 7.5 goals",
+        "Edmonton Oilers under 6.5 goals",
+        "Under 234.5 points"
+       ]
+      ],
+      [
+       5.0,
+       0.9,
+       []
+      ],
+      [
+       5.0,
+       0.85,
+       []
+      ],
+      [
+       5.0,
+       0.8,
+       []
+      ],
+      [
+       5.0,
+       0.75,
+       []
+      ],
+      [
+       5.0,
+       0.65,
+       [
+        "Washington Commanders to win",
+        "Under 7.5 goals",
+        "New York Rangers over 2.5 goals",
+        "Over 221.5 points",
+        "Over 210.5 points"
+       ]
+      ],
+      [
+       10.0,
+       0.9,
+       []
+      ],
+      [
+       10.0,
+       0.85,
+       []
+      ],
+      [
+       10.0,
+       0.8,
+       []
+      ],
+      [
+       10.0,
+       0.75,
+       []
+      ],
+      [
+       10.0,
+       0.65,
+       []
+      ]
+     ],
+     "t": "2026-11-01T21:25:07+00:00"
     }
    ]
   }
