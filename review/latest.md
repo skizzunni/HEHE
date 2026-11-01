@@ -1,8 +1,9 @@
 # Review 2026-11-01
 
-Picks 0-3 (0.0% vs 67.0% claimed, ROI -100.0%).
-Closing line value: +0.04 points on 3 picks; beat the close on 66.7%.
+Picks 0-4 (0.0% vs 66.8% claimed, ROI -100.0%).
+Closing line value: -0.16 points on 4 picks; beat the close on 50.0%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
+- LOST jpn V-Varen Nagasaki at 66%: margin 1 · the book had my side favoured too · called at 66%
 - LOST jpn Kawasaki Frontale at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Avispa Fukuoka at 65%: margin 3 · the book had my side favoured too · called at 65%
 Ladder-consistency props (all time): 1185/1426 won (83.1%) vs 86.6% fair, 87.3% price.
