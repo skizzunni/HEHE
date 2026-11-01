@@ -6,6 +6,12 @@ Closing line value: -0.4 points on 5 picks; beat the close on 40.0%.
 - LOST jpn V-Varen Nagasaki at 66%: margin 1 · the book had my side favoured too · called at 66%
 - LOST jpn Kawasaki Frontale at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Avispa Fukuoka at 65%: margin 3 · the book had my side favoured too · called at 65%
+Lottery 100: open (0/8 legs won)
+Lottery 10k: open (0/8 legs won)
+Lottery 10k: open (0/8 legs won)
+Lottery 10k+25: open (0/8 legs won)
+Lottery 10k+50: open (0/8 legs won)
+Lottery 10k+100: open (0/8 legs won)
 Ladder-consistency props (all time): 1185/1426 won (83.1%) vs 86.6% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
