@@ -7322,9 +7322,9 @@
    }
   },
   "clv": {
-   "avg": null,
-   "beat": null,
-   "n": 0
+   "avg": 0.45,
+   "beat": 100.0,
+   "n": 1
   },
   "day": "2026-11-01",
   "leaks_14d": [],
@@ -7335,12 +7335,35 @@
    "plays": {},
    "won": 0
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "aus",
+    "pick": "Melbourne Victory",
+    "price": "-235",
+    "said": 66,
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 66%"
+   }
+  ],
   "lottery": [],
   "picks": {
-   "n": 0
+   "hit": 0.0,
+   "lost": 1,
+   "n": 1,
+   "roi": -100.0,
+   "said": 66.0,
+   "won": 0
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "aus": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 66.0,
+    "won": 0
+   }
+  },
   "props": {
    "fair": {
     "n": 1426,
@@ -7368,10 +7391,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.6,
-    "lost": 205,
-    "n": 808,
-    "roi": 1.5,
+    "hit": 74.5,
+    "lost": 206,
+    "n": 809,
+    "roi": 1.4,
     "said": 70.1,
     "won": 603
    }
