@@ -8043,6 +8043,26 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|nfl:401873024:away": {
+   "ev": 0.0105,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0104,
+     "fair": 0.2591,
+     "id": "nfl:401873024",
+     "price": "+290",
+     "side": "away",
+     "spec": null,
+     "team": "Arizona Cardinals"
+    }
+   ],
+   "payout": 3.9,
+   "prob": 0.2591,
+   "seen": "2026-11-01T16:07:02+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|nhl:401892558:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"St. Louis Blues\"}|nhl:401892559:{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Winnipeg Jets\"}": {
    "ev": 0.0284,
    "kind": "parlay",
