@@ -6494,10 +6494,10 @@
    },
    {
     "flag": false,
-    "hit": 50.0,
-    "n": 174,
+    "hit": 50.6,
+    "n": 176,
     "name": "kalshi maker bids (filled)",
-    "said": 53.0
+    "said": 52.9
    }
   ],
   "big_files": [],
@@ -6570,9 +6570,9 @@
    }
   },
   "clv": {
-   "avg": 0.61,
+   "avg": 0.62,
    "beat": 51.3,
-   "n": 150
+   "n": 152
   },
   "day": "2026-10-31",
   "leaks_14d": [],
@@ -6749,6 +6749,14 @@
     "price": "-205",
     "said": 65,
     "why": "margin 12 \u00b7 the book had my side favoured too \u00b7 called at 65%"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "pick": "Nebraska Cornhuskers",
+    "price": "-298",
+    "said": 73,
+    "why": "margin 7 \u00b7 the book had my side favoured too \u00b7 called at 73%"
    },
    {
     "against_market": false,
@@ -6969,12 +6977,12 @@
    }
   ],
   "picks": {
-   "hit": 79.3,
-   "lost": 31,
-   "n": 150,
-   "roi": 5.1,
-   "said": 72.6,
-   "won": 119
+   "hit": 78.9,
+   "lost": 32,
+   "n": 152,
+   "roi": 4.6,
+   "said": 72.7,
+   "won": 120
   },
   "picks_by_league": {
    "arg": {
@@ -7170,12 +7178,12 @@
     "won": 6
    },
    "ncaaf": {
-    "hit": 85.7,
-    "lost": 6,
-    "n": 42,
-    "roi": 14.8,
+    "hit": 84.1,
+    "lost": 7,
+    "n": 44,
+    "roi": 12.5,
     "said": 74.3,
-    "won": 36
+    "won": 37
    },
    "ned": {
     "hit": 50.0,
@@ -7296,12 +7304,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.4,
-    "lost": 232,
-    "n": 905,
+    "hit": 74.3,
+    "lost": 233,
+    "n": 907,
     "roi": 1.4,
     "said": 70.0,
-    "won": 673
+    "won": 674
    }
   },
   "weights": {
@@ -7317,10 +7325,10 @@
    "ncaaf": {
     "fitted": 0.3,
     "held_out": false,
-    "logloss": 0.594,
-    "market_only": 0.5997,
-    "model_40": 0.5946,
-    "n": 159,
+    "logloss": 0.5961,
+    "market_only": 0.6022,
+    "model_40": 0.5966,
+    "n": 161,
     "weight": 0.0
    },
    "nhl": {

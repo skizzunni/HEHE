@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 119-31 (79.3% vs 72.6% claimed, ROI +5.1%).
-Closing line value: +0.61 points on 150 picks; beat the close on 51.3%.
+Picks 120-32 (78.9% vs 72.7% claimed, ROI +4.6%).
+Closing line value: +0.62 points on 152 picks; beat the close on 51.3%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
 - LOST col Atlético Junior at 65%: margin 1 · the book had my side favoured too · called at 65%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
@@ -22,6 +22,7 @@ Closing line value: +0.61 points on 150 picks; beat the close on 51.3%.
 - LOST ncaaf Oklahoma State Cowboys at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST ncaaf SMU Mustangs at 75%: margin 3 · the book had my side favoured too · called at 75%
 - LOST ncaaf Florida State Seminoles at 65%: margin 12 · the book had my side favoured too · called at 65%
+- LOST ncaaf Nebraska Cornhuskers at 73%: margin 7 · the book had my side favoured too · called at 73%
 - LOST ncaaf Ohio State Buckeyes at 69%: margin 12 · the book had my side favoured too · called at 69%
 - LOST ncaaf Georgia State Panthers at 62%: margin 11 · the book had my side favoured too · called at 62%
 - LOST ned Feyenoord Rotterdam at 82%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 82%
@@ -48,4 +49,4 @@ Ladder-consistency props (all time): 1185/1426 won (83.1%) vs 86.6% fair, 87.3% 
 Props 137/172 vs 81.6% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=88), ncaaf 0.00 (n=159), nhl 0.00 (n=108)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=88), ncaaf 0.00 (n=161), nhl 0.00 (n=108)
