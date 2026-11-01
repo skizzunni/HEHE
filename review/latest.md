@@ -1,13 +1,14 @@
 # Review 2026-11-01
 
-Picks 18-10 (64.3% vs 73.5% claimed, ROI -18.8%).
-Closing line value: +0.73 points on 28 picks; beat the close on 53.6%.
+Picks 18-11 (62.1% vs 73.5% claimed, ROI -21.6%).
+Closing line value: +0.75 points on 29 picks; beat the close on 55.2%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST esp Sevilla at 74%: margin 2 · the book had my side favoured too · called at 74%
 - LOST ger2 St. Pauli at 72%: margin 2 · the book had my side favoured too · called at 72%
 - LOST jpn V-Varen Nagasaki at 66%: margin 1 · the book had my side favoured too · called at 66%
 - LOST jpn Kawasaki Frontale at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Avispa Fukuoka at 65%: margin 3 · the book had my side favoured too · called at 65%
+- LOST ncaab Villanova Wildcats at 75%: margin 4 · the book had my side favoured too · called at 75%
 - LOST nor Molde at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST sco Celtic at 84%: margin 2 · the book had my side favoured too · called at 84%
 - LOST uru Progreso at 68%: margin 2 · the book had my side favoured too · called at 68%
