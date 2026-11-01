@@ -1,7 +1,7 @@
 # Review 2026-11-01
 
-Picks 53-20 (72.6% vs 71.7% claimed, ROI -4.5%).
-Closing line value: +0.94 points on 73 picks; beat the close on 60.3%.
+Picks 54-20 (73.0% vs 71.6% claimed, ROI -3.9%).
+Closing line value: +0.93 points on 74 picks; beat the close on 60.8%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST chi Universidad de Chile at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST ecu Universidad Católica (Quito) at 67%: margin 1 · the book had my side favoured too · called at 67%
