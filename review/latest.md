@@ -1,8 +1,9 @@
 # Review 2026-10-31
 
-Picks 101-25 (80.2% vs 73.2% claimed, ROI +5.0%).
-Closing line value: +0.67 points on 126 picks; beat the close on 50.0%.
+Picks 101-26 (79.5% vs 73.1% claimed, ROI +4.2%).
+Closing line value: +0.68 points on 127 picks; beat the close on 50.4%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
+- LOST col Atlético Junior at 65%: margin 1 · the book had my side favoured too · called at 65%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
 - LOST efl1 West Ham United at 77%: margin 2 · the book had my side favoured too · called at 77%
 - LOST epl Manchester City at 79%: margin 1 · the book had my side favoured too · called at 79%
