@@ -1,7 +1,7 @@
 # Review 2026-11-01
 
-Picks 2-5 (28.6% vs 71.0% claimed, ROI -63.7%).
-Closing line value: -0.15 points on 7 picks; beat the close on 42.9%.
+Picks 4-5 (44.4% vs 70.6% claimed, ROI -41.6%).
+Closing line value: +0.6 points on 9 picks; beat the close on 55.6%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST jpn V-Varen Nagasaki at 66%: margin 1 · the book had my side favoured too · called at 66%
 - LOST jpn Kawasaki Frontale at 70%: margin 2 · the book had my side favoured too · called at 70%
