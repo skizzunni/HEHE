@@ -14,7 +14,7 @@ Closing line value: +0.75 points on 29 picks; beat the close on 55.2%.
 - LOST uru Progreso at 68%: margin 2 · the book had my side favoured too · called at 68%
 - LOST wsl Arsenal at 83%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 83%
 Locks 0/11 won, 11 open; Best play top 3 (50%) open.
-Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (53%) open.
+Safe Locks 1/11 won, 10 open; Winners parlay top 2 (85%) open; Best play top 7 (53%) open.
 Lottery 100: open (0/8 legs won)
 Lottery 10k: open (0/8 legs won)
 Lottery 10k: open (0/8 legs won)
