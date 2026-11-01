@@ -1,7 +1,7 @@
 # Review 2026-10-31
 
-Picks 120-32 (78.9% vs 72.7% claimed, ROI +4.6%).
-Closing line value: +0.62 points on 152 picks; beat the close on 51.3%.
+Picks 120-33 (78.4% vs 72.6% claimed, ROI +3.9%).
+Closing line value: +0.61 points on 153 picks; beat the close on 51.0%.
 - LOST arg Deportivo Riestra at 68%: margin 3 · the book had my side favoured too · called at 68%
 - LOST col Atlético Junior at 65%: margin 1 · the book had my side favoured too · called at 65%
 - LOST ecu Emelec at 78%: margin 2 · the book had my side favoured too · called at 78%
@@ -14,6 +14,7 @@ Closing line value: +0.62 points on 152 picks; beat the close on 51.3%.
 - LOST ger Bayern Munich at 70%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 70%
 - LOST ita Internazionale at 74%: margin 2 · the book had my side favoured too · called at 74%
 - LOST mex2 Piratas at 77%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 77%
+- LOST mls Colorado Rapids at 66%: margin 2 · the book had my side favoured too · called at 66%
 - LOST mls St. Louis CITY SC at 80%: margin 1 · the book had my side favoured too · called at 80%
 - LOST mls Real Salt Lake at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST mls New York City FC at 65%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 65%
