@@ -32266,7 +32266,7 @@
    }
   ],
   "league": "aut",
-  "live": "62'",
+  "live": "67'",
   "live_score": {
    "SK Sturm Graz": 0,
    "Wolfsberger": 1
@@ -32730,7 +32730,7 @@
    }
   ],
   "league": "aut",
-  "live": "63'",
+  "live": "68'",
   "live_score": {
    "Austria Lustenau": 0,
    "RB Salzburg": 3
@@ -37251,7 +37251,7 @@
    }
   ],
   "league": "bra2",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "OPE @ NOV",
   "myside": "home",
@@ -37261,7 +37261,7 @@
   "pick": "Novorizontino",
   "policy_version": "fed10454",
   "price": "-250",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34907395:0ML86946017_1",
@@ -52185,7 +52185,7 @@
    }
   ],
   "league": "col",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "CHI @ DCI",
   "myside": "home",
@@ -52195,7 +52195,7 @@
   "pick": "Deportivo Cali",
   "policy_version": "fed10454",
   "price": "-400",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34920350:0ML86981555_1",
@@ -55813,11 +55813,6 @@
    }
   ],
   "league": "den",
-  "live": "90'+2'",
-  "live_score": {
-   "AC Horsens": 0,
-   "Viborg FF": 1
-  },
   "logged": "2026-11-01T07:58",
   "market_agrees": true,
   "matchup": "ACH @ VIB",
@@ -55826,16 +55821,24 @@
   "p_model_away": null,
   "p_raw": 82.1,
   "pick": "Viborg FF",
+  "played": "2026-11-01",
   "policy_version": "fed10454",
   "price": "-650",
   "price_at": "2026-11-01T12:58:11+00:00",
   "price_book": "FanDuel",
   "price_market": "double_chance",
   "price_ref": "736.193821985:22698148",
-  "status": "open",
+  "scores": {
+   "AC Horsens": 0,
+   "Viborg FF": 1
+  },
+  "settled": "2026-11-01T09:54",
+  "state": "won",
+  "status": "won",
   "strong": false,
   "tip": "8:00 AM",
-  "why": "market 61% to win, 82% to win or draw \u00b7 rating 1511 v 1503 (+7.99) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "market 61% to win, 82% to win or draw \u00b7 rating 1511 v 1503 (+7.99) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Viborg FF"
  },
  "den:401874501": {
   "conf": 51.6,
@@ -57703,11 +57706,6 @@
    }
   ],
   "league": "den",
-  "live": "90'",
-  "live_score": {
-   "Odense Boldklub": 4,
-   "Silkeborg IF": 1
-  },
   "logged": "2026-11-01T07:58",
   "market_agrees": true,
   "matchup": "SIF @ OBK",
@@ -57716,16 +57714,24 @@
   "p_model_away": null,
   "p_raw": 74.8,
   "pick": "Odense Boldklub",
+  "played": "2026-11-01",
   "policy_version": "fed10454",
   "price": "-425",
   "price_at": "2026-11-01T12:58:11+00:00",
   "price_book": "FanDuel",
   "price_market": "double_chance",
   "price_ref": "736.194006757:22263839",
-  "status": "open",
+  "scores": {
+   "Odense Boldklub": 4,
+   "Silkeborg IF": 1
+  },
+  "settled": "2026-11-01T09:54",
+  "state": "won",
+  "status": "won",
   "strong": false,
   "tip": "8:00 AM",
-  "why": "market 51% to win, 75% to win or draw \u00b7 rating 1491 v 1491 (+0.15) \u00b7 last 7: 3-4 \u00b7 at home"
+  "why": "market 51% to win, 75% to win or draw \u00b7 rating 1491 v 1491 (+0.15) \u00b7 last 7: 3-4 \u00b7 at home",
+  "winner": "Odense Boldklub"
  },
  "den:401874728": {
   "conf": 51.2,
@@ -89661,7 +89667,7 @@
  },
  "esp:401882819": {
   "calib": "raw no-vig (calibration failed its untouched test)",
-  "conf": 79,
+  "conf": 80,
   "date": "2026-11-01",
   "dc": false,
   "dog": false,
@@ -89805,27 +89811,50 @@
     "version": "d89e44f",
     "w": 0.0,
     "why": "market 79% to win \u00b7 rating 1486 v 1534 (+48.10) \u00b7 last 8: 3-5 \u00b7 at home"
+   },
+   {
+    "conf": 80,
+    "dc": false,
+    "p_market_away": null,
+    "p_model_away": null,
+    "pick": "Real Madrid",
+    "policy": "fed10454",
+    "price": "-500",
+    "price_at": "2026-11-01T14:54:27+00:00",
+    "price_book": "DraftKings",
+    "price_market": "moneyline",
+    "price_ref": "34861442:0ML86824181_3",
+    "prices": {
+     "away": "-500",
+     "draw": "+700",
+     "home": "+1100"
+    },
+    "strong": false,
+    "t": "2026-11-01T09:54",
+    "version": "e2ea6e9",
+    "w": 0.0,
+    "why": "market 80% to win \u00b7 rating 1486 v 1534 (+48.10) \u00b7 last 8: 3-5 \u00b7 at home"
    }
   ],
   "league": "esp",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "RMA @ RAC",
   "myside": "away",
   "p_market_away": null,
   "p_model_away": null,
-  "p_raw": 79.4,
+  "p_raw": 80.0,
   "pick": "Real Madrid",
   "policy_version": "fed10454",
   "price": "-500",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34861442:0ML86824181_3",
   "status": "open",
   "strong": false,
   "tip": "10:15 AM",
-  "why": "market 79% to win \u00b7 rating 1486 v 1534 (+48.10) \u00b7 last 8: 3-5 \u00b7 at home"
+  "why": "market 80% to win \u00b7 rating 1486 v 1534 (+48.10) \u00b7 last 8: 3-5 \u00b7 at home"
  },
  "esp:401882820": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -90543,7 +90572,7 @@
    }
   ],
   "league": "esp",
-  "live": "86'",
+  "live": "90'+2'",
   "live_score": {
    "Getafe": 2,
    "Sevilla": 1
@@ -99000,7 +99029,7 @@
    }
   ],
   "league": "fra",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "ANG @ LYON",
   "myside": "home",
@@ -99010,7 +99039,7 @@
   "pick": "Lyon",
   "policy_version": "fed10454",
   "price": "-245",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34861325:0ML86823803_1",
@@ -110792,7 +110821,7 @@
    }
   ],
   "league": "ger",
-  "live": "19'",
+  "live": "25'",
   "live_score": {
    "1. FC Union Berlin": 1,
    "FC Cologne": 0
@@ -115878,7 +115907,7 @@
    }
   ],
   "league": "gre",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "AST @ PAOK",
   "myside": "home",
@@ -115888,7 +115917,7 @@
   "pick": "PAOK",
   "policy_version": "fed10454",
   "price": "-320",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34902388:0ML86933551_1",
@@ -121501,7 +121530,7 @@
    }
   ],
   "league": "ita",
-  "live": "45'+2'",
+  "live": "HT",
   "live_score": {
    "Frosinone": 0,
    "Torino": 0
@@ -145373,7 +145402,7 @@
    }
   ],
   "league": "mex2",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "TEP @ UDG",
   "myside": "home",
@@ -145383,7 +145412,7 @@
   "pick": "Leones Negros",
   "policy_version": "fed10454",
   "price": "-700",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34912650:0ML86961115_1",
@@ -199591,7 +199620,7 @@
    }
   ],
   "league": "nba",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "BOS @ ORL",
   "myside": "away",
@@ -199601,7 +199630,7 @@
   "pick": "Boston Celtics",
   "policy_version": "fed10454",
   "price": "-258",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:26+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34930759:0ML87010773_3",
@@ -199753,7 +199782,7 @@
    }
   ],
   "league": "nba",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "BKN @ IND",
   "myside": "home",
@@ -199763,7 +199792,7 @@
   "pick": "Indiana Pacers",
   "policy_version": "fed10454",
   "price": "-170",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:26+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34930760:0ML87010774_1",
@@ -199849,7 +199878,7 @@
    }
   ],
   "league": "nba",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "LAC @ GS",
   "myside": "home",
@@ -199859,7 +199888,7 @@
   "pick": "Golden State Warriors",
   "policy_version": "fed10454",
   "price": "-135",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:26+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34930761:0ML87010775_1",
@@ -200055,7 +200084,7 @@
    }
   ],
   "league": "nba",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "TOR @ LAL",
   "myside": "home",
@@ -200065,7 +200094,7 @@
   "pick": "Los Angeles Lakers",
   "policy_version": "fed10454",
   "price": "-148",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:26+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34930762:0ML87010776_1",
@@ -200358,7 +200387,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "MIA @ FLA",
   "myside": "home",
@@ -200368,7 +200397,7 @@
   "pick": "Florida Gators",
   "policy_version": "fed10454",
   "price": "-198",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34864868:0ML86833056_3",
@@ -200432,7 +200461,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "ARIZ @ UCLA",
   "myside": "away",
@@ -200442,7 +200471,7 @@
   "pick": "Arizona Wildcats",
   "policy_version": "fed10454",
   "price": "-205",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34864867:0ML86833055_1",
@@ -200572,7 +200601,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "MEM @ ISU",
   "myside": "home",
@@ -200582,7 +200611,7 @@
   "pick": "Iowa State Cyclones",
   "policy_version": "fed10454",
   "price": "-1000",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34903887:0ML86937240_1",
@@ -200646,7 +200675,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "FOR @ KU",
   "myside": "home",
@@ -200656,7 +200685,7 @@
   "pick": "Kansas Jayhawks",
   "policy_version": "fed10454",
   "price": "-6500",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34940988:0ML87037816_1",
@@ -200720,7 +200749,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "OSU @ BYU",
   "myside": "home",
@@ -200730,7 +200759,7 @@
   "pick": "BYU Cougars",
   "policy_version": "fed10454",
   "price": "-148",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34903889:0ML86937242_1",
@@ -200794,7 +200823,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "UTC @ LOU",
   "myside": "home",
@@ -200804,7 +200833,7 @@
   "pick": "Louisville Cardinals",
   "policy_version": "fed10454",
   "price": "-100000",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34940997:0ML87037841_1",
@@ -200956,7 +200985,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "LIB @ HPU",
   "myside": "home",
@@ -200966,7 +200995,7 @@
   "pick": "High Point Panthers",
   "policy_version": "fed10454",
   "price": "-310",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:26+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34903886:0ML86937239_3",
@@ -201030,7 +201059,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "MONM @ SJU",
   "myside": "home",
@@ -201040,7 +201069,7 @@
   "pick": "St. John's Red Storm",
   "policy_version": "fed10454",
   "price": "-20000",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34940946:0ML87037666_1",
@@ -201174,10 +201203,10 @@
    }
   ],
   "league": "ncaab",
-  "live": "12:38 - 1st",
+  "live": "11:39 - 1st",
   "live_score": {
    "Notre Dame Fighting Irish": 16,
-   "Villanova Wildcats": 18
+   "Villanova Wildcats": 22
   },
   "logged": "2026-11-01T09:29",
   "market_agrees": true,
@@ -201253,7 +201282,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "GONZ @ PUR",
   "myside": "away",
@@ -201263,7 +201292,7 @@
   "pick": "Gonzaga Bulldogs",
   "policy_version": "fed10454",
   "price": "-245",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34864866:0ML86833054_1",
@@ -201327,7 +201356,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "QUIN @ MSU",
   "myside": "home",
@@ -201337,7 +201366,7 @@
   "pick": "Michigan State Spartans",
   "policy_version": "fed10454",
   "price": "-100000",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34940984:0ML87037806_1",
@@ -201423,7 +201452,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "OAK @ MICH",
   "myside": "home",
@@ -201433,7 +201462,7 @@
   "pick": "Michigan Wolverines",
   "policy_version": "fed10454",
   "price": "-10000",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34940944:0ML87037664_1",
@@ -201571,7 +201600,7 @@
    }
   ],
   "league": "ncaab",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "MILW @ USC",
   "myside": "home",
@@ -201581,7 +201610,7 @@
   "pick": "USC Trojans",
   "policy_version": "fed10454",
   "price": "-9000",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34941022:0ML87037860_1",
@@ -229239,7 +229268,7 @@
    }
   ],
   "league": "ned2",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "TOP @ HER",
   "myside": "home",
@@ -229249,7 +229278,7 @@
   "pick": "Heracles Almelo",
   "policy_version": "fed10454",
   "price": "-600",
-  "price_at": "2026-11-01T14:49:16+00:00",
+  "price_at": "2026-11-01T14:54:29+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34913034:0ML86962266_1",
@@ -238900,7 +238929,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "ARI @ DAL",
   "myside": "home",
@@ -238910,7 +238939,7 @@
   "pick": "Dallas Cowboys",
   "policy_version": "fed10454",
   "price": "-325",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118131:0ML84695564_1",
@@ -239084,7 +239113,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "ATL @ TB",
   "myside": "home",
@@ -239094,7 +239123,7 @@
   "pick": "Tampa Bay Buccaneers",
   "policy_version": "fed10454",
   "price": "-130",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118133:0ML84695566_1",
@@ -239532,7 +239561,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "BAL @ BUF",
   "myside": "home",
@@ -239542,7 +239571,7 @@
   "pick": "Buffalo Bills",
   "policy_version": "fed10454",
   "price": "-166",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118214:0ML84695647_1",
@@ -239672,7 +239701,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "CLE @ PIT",
   "myside": "home",
@@ -239682,7 +239711,7 @@
   "pick": "Pittsburgh Steelers",
   "policy_version": "fed10454",
   "price": "-185",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118052:0ML84695485_1",
@@ -239882,7 +239911,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "IND @ JAX",
   "myside": "home",
@@ -239892,7 +239921,7 @@
   "pick": "Jacksonville Jaguars",
   "policy_version": "fed10454",
   "price": "-500",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118246:0ML84695689_1",
@@ -240044,7 +240073,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "LV @ NYJ",
   "myside": "home",
@@ -240054,7 +240083,7 @@
   "pick": "New York Jets",
   "policy_version": "fed10454",
   "price": "-130",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118199:0ML84695632_1",
@@ -240206,7 +240235,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "MIN @ DET",
   "myside": "home",
@@ -240216,7 +240245,7 @@
   "pick": "Detroit Lions",
   "policy_version": "fed10454",
   "price": "-170",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118206:0ML84695639_1",
@@ -240231,7 +240260,7 @@
   "call_conf": 85,
   "call_pulled": false,
   "call_rank": 3,
-  "conf": 85,
+  "conf": 86,
   "date": "2026-11-01",
   "dc": false,
   "dog": false,
@@ -240545,20 +240574,42 @@
     "version": "44dd7eb",
     "w": 0.0,
     "why": "rating 1541 v 1442 (+99.27) \u00b7 last 6: 4-2 \u00b7 at home"
+   },
+   {
+    "conf": 86,
+    "dc": false,
+    "p_market_away": 0.14205607476635515,
+    "p_model_away": 0.29749096931678287,
+    "pick": "Cincinnati Bengals",
+    "policy": "fed10454",
+    "price": "-850",
+    "price_at": "2026-11-01T14:54:27+00:00",
+    "price_book": "DraftKings",
+    "price_market": "moneyline",
+    "price_ref": "34118130:0ML84695563_1",
+    "prices": {
+     "away": "+575",
+     "home": "-850"
+    },
+    "strong": false,
+    "t": "2026-11-01T09:54",
+    "version": "e2ea6e9",
+    "w": 0.0,
+    "why": "rating 1541 v 1442 (+99.27) \u00b7 last 6: 4-2 \u00b7 at home"
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "TEN @ CIN",
   "myside": "home",
-  "p_market_away": 0.1475409836065574,
+  "p_market_away": 0.14205607476635515,
   "p_model_away": 0.29749096931678287,
-  "p_raw": 85.2,
+  "p_raw": 85.8,
   "pick": "Cincinnati Bengals",
   "policy_version": "fed10454",
-  "price": "-800",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price": "-850",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118130:0ML84695563_1",
@@ -240886,7 +240937,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "LAC @ LAR",
   "myside": "home",
@@ -240896,7 +240947,7 @@
   "pick": "Los Angeles Rams",
   "policy_version": "fed10454",
   "price": "-270",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118097:0ML84695530_1",
@@ -241026,7 +241077,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "KC @ DEN",
   "myside": "away",
@@ -241036,7 +241087,7 @@
   "pick": "Kansas City Chiefs",
   "policy_version": "fed10454",
   "price": "-115",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118271:0ML84695714_3",
@@ -241254,7 +241305,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "NE @ MIA",
   "myside": "away",
@@ -241264,7 +241315,7 @@
   "pick": "New England Patriots",
   "policy_version": "fed10454",
   "price": "-355",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118184:0ML84695617_3",
@@ -241416,7 +241467,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "PHI @ WSH",
   "myside": "home",
@@ -241426,7 +241477,7 @@
   "pick": "Washington Commanders",
   "policy_version": "fed10454",
   "price": "-278",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118045:0ML84695478_1",
@@ -241600,7 +241651,7 @@
    }
   ],
   "league": "nfl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "CHI @ SEA",
   "myside": "home",
@@ -241610,7 +241661,7 @@
   "pick": "Seattle Seahawks",
   "policy_version": "fed10454",
   "price": "-166",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34118031:0ML84695464_1",
@@ -261264,7 +261315,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "WPG @ CAR",
   "myside": "home",
@@ -261274,7 +261325,7 @@
   "pick": "Carolina Hurricanes",
   "policy_version": "fed10454",
   "price": "-278",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34905964:0ML86944643_1",
@@ -261360,7 +261411,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "MIN @ WSH",
   "myside": "away",
@@ -261370,7 +261421,7 @@
   "pick": "Minnesota Wild",
   "policy_version": "fed10454",
   "price": "-112",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34905966:0ML86944667_3",
@@ -261456,7 +261507,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "UTA @ PHI",
   "myside": "away",
@@ -261466,7 +261517,7 @@
   "pick": "Utah Mammoth",
   "policy_version": "fed10454",
   "price": "-162",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34905968:0ML86944659_3",
@@ -261640,7 +261691,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "EDM @ NYR",
   "myside": "home",
@@ -261650,7 +261701,7 @@
   "pick": "New York Rangers",
   "policy_version": "fed10454",
   "price": "-125",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34905970:0ML86944657_1",
@@ -261802,7 +261853,7 @@
    }
   ],
   "league": "nhl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "OTT @ ANA",
   "myside": "away",
@@ -261812,7 +261863,7 @@
   "pick": "Ottawa Senators",
   "policy_version": "fed10454",
   "price": "-118",
-  "price_at": "2026-11-01T14:49:14+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34905971:0ML86944661_3",
@@ -264642,7 +264693,7 @@
  },
  "nor:401843471": {
   "calib": "raw no-vig (calibration failed its untouched test)",
-  "conf": 66,
+  "conf": 65,
   "date": "2026-11-01",
   "dc": false,
   "dog": false,
@@ -264740,27 +264791,50 @@
     "version": "2266ac4",
     "w": 0.0,
     "why": "market 66% to win \u00b7 rating 1492 v 1457 (+35.08) \u00b7 last 10: 6-4 \u00b7 at home"
+   },
+   {
+    "conf": 65,
+    "dc": false,
+    "p_market_away": null,
+    "p_model_away": null,
+    "pick": "Sarpsborg FK",
+    "policy": "fed10454",
+    "price": "-220",
+    "price_at": "2026-11-01T14:54:27+00:00",
+    "price_book": "DraftKings",
+    "price_market": "moneyline",
+    "price_ref": "34902378:0ML86933557_1",
+    "prices": {
+     "away": "+550",
+     "draw": "+370",
+     "home": "-220"
+    },
+    "strong": false,
+    "t": "2026-11-01T09:54",
+    "version": "e2ea6e9",
+    "w": 0.0,
+    "why": "market 65% to win \u00b7 rating 1492 v 1457 (+35.08) \u00b7 last 10: 6-4 \u00b7 at home"
    }
   ],
   "league": "nor",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "KRI @ SAR",
   "myside": "home",
   "p_market_away": null,
   "p_model_away": null,
-  "p_raw": 65.8,
+  "p_raw": 65.2,
   "pick": "Sarpsborg FK",
   "policy_version": "fed10454",
-  "price": "-230",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price": "-220",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34902378:0ML86933557_1",
   "status": "open",
   "strong": false,
   "tip": "11:00 AM",
-  "why": "market 66% to win \u00b7 rating 1492 v 1457 (+35.08) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "market 65% to win \u00b7 rating 1492 v 1457 (+35.08) \u00b7 last 10: 6-4 \u00b7 at home"
  },
  "nor:401843473": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -265248,7 +265322,7 @@
    }
   ],
   "league": "nor",
-  "live": "55'",
+  "live": "60'",
   "live_score": {
    "Molde": 1,
    "SK Brann": 1
@@ -267096,7 +267170,7 @@
    }
   ],
   "league": "nwsl",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "CHI @ WAS",
   "myside": "home",
@@ -267106,7 +267180,7 @@
   "pick": "Washington Spirit",
   "policy_version": "fed10454",
   "price": "-1100",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34938269:0ML87031249_1",
@@ -268428,7 +268502,7 @@
    }
   ],
   "league": "per",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "CAJ @ SCR",
   "myside": "home",
@@ -268438,7 +268512,7 @@
   "pick": "Sporting Cristal",
   "policy_version": "fed10454",
   "price": "-450",
-  "price_at": "2026-11-01T14:49:16+00:00",
+  "price_at": "2026-11-01T14:54:29+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34928383:0ML87004370_1",
@@ -268504,7 +268578,7 @@
    }
   ],
   "league": "per",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "UNI @ AGR",
   "myside": "away",
@@ -268514,7 +268588,7 @@
   "pick": "Universitario",
   "policy_version": "fed10454",
   "price": "-265",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34924675:0ML86993550_3",
@@ -270490,7 +270564,7 @@
    }
   ],
   "league": "por",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "ALV @ SLB",
   "myside": "home",
@@ -270500,7 +270574,7 @@
   "pick": "Benfica",
   "policy_version": "fed10454",
   "price": "-575",
-  "price_at": "2026-11-01T14:49:16+00:00",
+  "price_at": "2026-11-01T14:54:28+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34912421:0ML86960439_1",
@@ -274869,6 +274943,7 @@
   "conf": 84,
   "date": "2026-11-01",
   "dc": true,
+  "diagnosis": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 84%",
   "dog": false,
   "first": {
    "conf": 84,
@@ -275174,11 +275249,6 @@
    }
   ],
   "league": "sco",
-  "live": "90'+2'",
-  "live_score": {
-   "Celtic": 0,
-   "Falkirk": 2
-  },
   "logged": "2026-11-01T07:58",
   "market_agrees": true,
   "matchup": "CEL @ FALK",
@@ -275187,16 +275257,24 @@
   "p_model_away": null,
   "p_raw": 84.3,
   "pick": "Celtic",
+  "played": "2026-11-01",
   "policy_version": "fed10454",
   "price": "-900",
   "price_at": "2026-11-01T12:52:57+00:00",
   "price_book": "FanDuel",
   "price_market": "double_chance",
   "price_ref": "736.193970472:13370665",
-  "status": "open",
+  "scores": {
+   "Celtic": 0,
+   "Falkirk": 2
+  },
+  "settled": "2026-11-01T09:55",
+  "state": "lost",
+  "status": "lost",
   "strong": false,
   "tip": "8:00 AM",
-  "why": "market 65% to win, 84% to win or draw \u00b7 rating 1500 v 1544 (+44.61) \u00b7 last 8: 4-4 \u00b7 at home"
+  "why": "market 65% to win, 84% to win or draw \u00b7 rating 1500 v 1544 (+44.61) \u00b7 last 8: 4-4 \u00b7 at home",
+  "winner": "Falkirk"
  },
  "sco:401878351": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -281122,7 +281200,7 @@
    }
   ],
   "league": "swe",
-  "logged": "2026-11-01T09:49",
+  "logged": "2026-11-01T09:54",
   "market_agrees": true,
   "matchup": "\u00d6RG @ ELF",
   "myside": "home",
@@ -281132,7 +281210,7 @@
   "pick": "IF Elfsborg",
   "policy_version": "fed10454",
   "price": "-270",
-  "price_at": "2026-11-01T14:49:15+00:00",
+  "price_at": "2026-11-01T14:54:27+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34928372:0ML87004360_1",
@@ -281267,11 +281345,6 @@
    }
   ],
   "league": "swe",
-  "live": "90'+1'",
-  "live_score": {
-   "Degerfors IF": 1,
-   "Djurg\u00e5rden": 2
-  },
   "logged": "2026-11-01T07:58",
   "market_agrees": true,
   "matchup": "DEG @ DJU",
@@ -281280,16 +281353,24 @@
   "p_model_away": null,
   "p_raw": 73.6,
   "pick": "Djurg\u00e5rden",
+  "played": "2026-11-01",
   "policy_version": "fed10454",
   "price": "-350",
   "price_at": "2026-11-01T12:57:49+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34923130:0ML86988841_1",
-  "status": "open",
+  "scores": {
+   "Degerfors IF": 1,
+   "Djurg\u00e5rden": 2
+  },
+  "settled": "2026-11-01T09:55",
+  "state": "won",
+  "status": "won",
   "strong": false,
   "tip": "8:00 AM",
-  "why": "market 74% to win \u00b7 rating 1549 v 1446 (+102.91) \u00b7 last 10: 7-3 \u00b7 at home"
+  "why": "market 74% to win \u00b7 rating 1549 v 1446 (+102.91) \u00b7 last 10: 7-3 \u00b7 at home",
+  "winner": "Djurg\u00e5rden"
  },
  "swe:401873993": {
   "conf": 56.3,
@@ -281685,11 +281766,6 @@
    }
   ],
   "league": "tur",
-  "live": "90'+1'",
-  "live_score": {
-   "Gaziantep FK": 0,
-   "Trabzonspor": 2
-  },
   "logged": "2026-11-01T07:58",
   "market_agrees": true,
   "matchup": "GAZ @ TRAB",
@@ -281698,16 +281774,24 @@
   "p_model_away": null,
   "p_raw": 75.5,
   "pick": "Trabzonspor",
+  "played": "2026-11-01",
   "policy_version": "fed10454",
   "price": "-400",
   "price_at": "2026-11-01T12:57:49+00:00",
   "price_book": "DraftKings",
   "price_market": "moneyline",
   "price_ref": "34912815:0ML86961697_1",
-  "status": "open",
+  "scores": {
+   "Gaziantep FK": 0,
+   "Trabzonspor": 2
+  },
+  "settled": "2026-11-01T09:55",
+  "state": "won",
+  "status": "won",
   "strong": false,
   "tip": "8:00 AM",
-  "why": "market 76% to win \u00b7 rating 1527 v 1483 (+44.10) \u00b7 last 8: 6-2 \u00b7 at home"
+  "why": "market 76% to win \u00b7 rating 1527 v 1483 (+44.10) \u00b7 last 8: 6-2 \u00b7 at home",
+  "winner": "Trabzonspor"
  },
  "tur:401888264": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -308305,6 +308389,7 @@
   "conf": 68,
   "date": "2026-11-01",
   "dc": true,
+  "diagnosis": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 68%",
   "dog": false,
   "first": {
    "conf": 65,
@@ -308472,11 +308557,6 @@
    }
   ],
   "league": "uru",
-  "live": "90'+2'",
-  "live_score": {
-   "Defensor Sporting": 2,
-   "Progreso": 0
-  },
   "logged": "2026-11-01T07:58",
   "market_agrees": true,
   "matchup": "DSC @ PSO",
@@ -308485,16 +308565,24 @@
   "p_model_away": null,
   "p_raw": 68.2,
   "pick": "Progreso",
+  "played": "2026-11-01",
   "policy_version": "fed10454",
   "price": "-250",
   "price_at": "2026-11-01T12:58:11+00:00",
   "price_book": "FanDuel",
   "price_market": "double_chance",
   "price_ref": "736.193588705:16276546",
-  "status": "open",
+  "scores": {
+   "Defensor Sporting": 2,
+   "Progreso": 0
+  },
+  "settled": "2026-11-01T09:55",
+  "state": "lost",
+  "status": "lost",
   "strong": false,
   "tip": "8:00 AM",
-  "why": "market 38% to win, 68% to win or draw \u00b7 rating 1469 v 1463 (+5.92) \u00b7 last 10: 6-4 \u00b7 at home"
+  "why": "market 38% to win, 68% to win or draw \u00b7 rating 1469 v 1463 (+5.92) \u00b7 last 10: 6-4 \u00b7 at home",
+  "winner": "Defensor Sporting"
  },
  "uru:401931258": {
   "calib": "raw no-vig (calibration failed its untouched test)",
@@ -312207,10 +312295,10 @@
    }
   ],
   "league": "wsl",
-  "live": "19'",
+  "live": "25'",
   "live_score": {
    "Charlton Athletic": 0,
-   "Chelsea": 3
+   "Chelsea": 4
   },
   "logged": "2026-11-01T09:29",
   "market_agrees": true,

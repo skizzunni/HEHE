@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 52.0,
-  "brier_close": 0.1807,
-  "brier_published": 0.1824,
+  "beat_close_pct": 52.3,
+  "brier_close": 0.1813,
+  "brier_published": 0.183,
   "dates": [
    "2026-10-28",
    "2026-11-01"
   ],
-  "logloss_close": 0.5424,
-  "logloss_published": 0.5467,
-  "mean_clv_pts": 0.27,
+  "logloss_close": 0.5445,
+  "logloss_published": 0.5485,
+  "mean_clv_pts": 0.29,
   "n": 300
  },
  "market_is_model": true,
@@ -2015,6 +2015,15 @@
    "published": 0.66,
    "won": 0
   },
+  "den:401874491": {
+   "call": false,
+   "close": 0.8206,
+   "clv": 0.06,
+   "day": "2026-11-01",
+   "league": "den",
+   "published": 0.82,
+   "won": 1
+  },
   "den:401874501": {
    "call": false,
    "close": 0.4188,
@@ -2107,6 +2116,15 @@
    "league": "den",
    "published": 0.651,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 1
+  },
+  "den:401874571": {
+   "call": false,
+   "close": 0.7479,
+   "clv": -0.21,
+   "day": "2026-11-01",
+   "league": "den",
+   "published": 0.75,
    "won": 1
   },
   "den:401874735": {
@@ -20516,6 +20534,15 @@
    "published": 0.67,
    "won": 1
   },
+  "sco:401878349": {
+   "call": false,
+   "close": 0.8431,
+   "clv": 0.31,
+   "day": "2026-11-01",
+   "league": "sco",
+   "published": 0.84,
+   "won": 0
+  },
   "sco:401878351": {
    "call": false,
    "close": 0.7136,
@@ -20841,6 +20868,15 @@
    "published": 0.65,
    "won": 1
   },
+  "swe:401842872": {
+   "call": false,
+   "close": 0.7359,
+   "clv": -0.41,
+   "day": "2026-11-01",
+   "league": "swe",
+   "published": 0.74,
+   "won": 1
+  },
   "swe:401873993": {
    "call": false,
    "close": 0.3998,
@@ -20875,6 +20911,15 @@
    "day": "2026-09-05",
    "league": "swe",
    "published": 0.502,
+   "won": 1
+  },
+  "tur:401888263": {
+   "call": false,
+   "close": 0.7554,
+   "clv": 4.54,
+   "day": "2026-11-01",
+   "league": "tur",
+   "published": 0.71,
    "won": 1
   },
   "tur:401888264": {
@@ -21566,6 +21611,15 @@
    "league": "uru",
    "published": 0.81,
    "won": 1
+  },
+  "uru:401931257": {
+   "call": false,
+   "close": 0.6847,
+   "clv": 3.47,
+   "day": "2026-11-01",
+   "league": "uru",
+   "published": 0.65,
+   "won": 0
   },
   "uru:401931258": {
    "call": false,
@@ -22284,5 +22338,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-01T14:51+00:00"
+ "updated": "2026-11-01T14:58+00:00"
 }
