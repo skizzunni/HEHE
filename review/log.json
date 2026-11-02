@@ -7380,9 +7380,9 @@
    }
   },
   "clv": {
-   "avg": 1.18,
-   "beat": 62.8,
-   "n": 94
+   "avg": 1.17,
+   "beat": 62.1,
+   "n": 95
   },
   "day": "2026-11-01",
   "leaks_14d": [],
@@ -7681,12 +7681,12 @@
    }
   ],
   "picks": {
-   "hit": 74.5,
+   "hit": 74.7,
    "lost": 24,
-   "n": 94,
-   "roi": -2.9,
-   "said": 71.8,
-   "won": 70
+   "n": 95,
+   "roi": -2.1,
+   "said": 71.6,
+   "won": 71
   },
   "picks_by_league": {
    "arg": {
@@ -7850,12 +7850,12 @@
     "won": 4
    },
    "nba": {
-    "hit": 50.0,
+    "hit": 66.7,
     "lost": 1,
-    "n": 2,
-    "roi": -32.5,
-    "said": 64.5,
-    "won": 1
+    "n": 3,
+    "roi": 4.0,
+    "said": 61.0,
+    "won": 2
    },
    "ncaab": {
     "hit": 0.0,
@@ -7986,20 +7986,20 @@
    "agree": {
     "hit": 74.7,
     "lost": 229,
-    "n": 904,
+    "n": 905,
     "roi": 1.1,
     "said": 70.3,
-    "won": 675
+    "won": 676
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5629,
-    "market_only": 0.5629,
-    "model_40": 0.5938,
-    "n": 90,
+    "logloss": 0.5635,
+    "market_only": 0.5635,
+    "model_40": 0.5944,
+    "n": 91,
     "weight": 0.0
    },
    "ncaaf": {

@@ -1,7 +1,7 @@
 # Review 2026-11-01
 
-Picks 70-24 (74.5% vs 71.8% claimed, ROI -2.9%).
-Closing line value: +1.18 points on 94 picks; beat the close on 62.8%.
+Picks 71-24 (74.7% vs 71.6% claimed, ROI -2.1%).
+Closing line value: +1.17 points on 95 picks; beat the close on 62.1%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST chi Universidad de Chile at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST ecu Universidad Católica (Quito) at 67%: margin 1 · the book had my side favoured too · called at 67%
@@ -38,4 +38,4 @@ Ladder-consistency props (all time): 1287/1550 won (83.0%) vs 86.1% fair, 87.1% 
 Props 164/206 vs 78.7% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=90), ncaaf 0.00 (n=164), nhl 0.00 (n=114)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=91), ncaaf 0.00 (n=164), nhl 0.00 (n=114)
