@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 56.7,
-  "brier_close": 0.1814,
+  "beat_close_pct": 57.0,
+  "brier_close": 0.1813,
   "brier_published": 0.183,
   "dates": [
    "2026-10-29",
    "2026-11-01"
   ],
-  "logloss_close": 0.5445,
-  "logloss_published": 0.5491,
-  "mean_clv_pts": 0.52,
+  "logloss_close": 0.5443,
+  "logloss_published": 0.5492,
+  "mean_clv_pts": 0.53,
   "n": 300
  },
  "market_is_model": true,
@@ -20344,6 +20344,15 @@
    "published": 0.73,
    "won": 1
   },
+  "nwsl:401854037": {
+   "call": false,
+   "close": 0.8149,
+   "clv": 3.49,
+   "day": "2026-11-01",
+   "league": "nwsl",
+   "published": 0.78,
+   "won": 1
+  },
   "nwsl:401854091": {
    "call": false,
    "close": 0.7679,
@@ -22869,5 +22878,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-01T23:57+00:00"
+ "updated": "2026-11-02T00:01+00:00"
 }
