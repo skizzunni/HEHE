@@ -13,7 +13,8 @@
   "p": 0.8534,
   "p_fair": null,
   "price": "-3000",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "epl:401878764|301449|Goalkeeper Saves|1+": {
   "aid": "301449",
@@ -304,7 +305,8 @@
   "p": 0.7806,
   "p_fair": null,
   "price": "-550",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "esp:401882826|222375|Goalkeeper Saves|1+": {
   "aid": "222375",
@@ -25782,6 +25784,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nba:401909909|n:quenton jackson|Pts + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-02",
+  "edge": 0.8,
+  "gid": "nba:401909909",
+  "imp": 0.8824,
+  "label": "Quenton Jackson: 15+ Pts + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Ast",
+  "name": "Quenton Jackson",
+  "p": 0.8484,
+  "p_fair": 0.8896,
+  "price": "-750",
+  "status": "open"
+ },
  "nba:401909910|n:jalen brunson|Points|15+": {
   "aid": null,
   "date": "2026-11-02",
@@ -26942,6 +26960,22 @@
   "p": 0.848,
   "p_fair": 0.9589,
   "price": "-1000",
+  "status": "open"
+ },
+ "nba:401909915|n:tyler herro|Pts + Reb + Ast|20+": {
+  "aid": null,
+  "date": "2026-11-02",
+  "edge": -0.8,
+  "gid": "nba:401909915",
+  "imp": 0.9167,
+  "label": "Tyler Herro: 20+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "20+",
+  "market": "Pts + Reb + Ast",
+  "name": "Tyler Herro",
+  "p": 0.8551,
+  "p_fair": 0.9097,
+  "price": "-1100",
   "status": "open"
  },
  "nba:401909916|n:alperen sengun|Assists|4+": {
