@@ -7046,10 +7046,10 @@
   },
   "props": {
    "fair": {
-    "n": 1521,
-    "said_fair": 86.2,
+    "n": 1538,
+    "said_fair": 86.1,
     "said_price": 87.1,
-    "won": 1262
+    "won": 1277
    },
    "n": 180,
    "said": 81.6,
@@ -7150,24 +7150,38 @@
    },
    {
     "flag": false,
-    "hit": 54.5,
-    "n": 22,
+    "hit": 54.2,
+    "n": 24,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 44.1
+    "said": 43.5
    },
    {
     "flag": false,
-    "hit": 82.3,
-    "n": 62,
+    "hit": 80.0,
+    "n": 10,
+    "name": "props nfl Passing Yards",
+    "said": 86.0
+   },
+   {
+    "flag": false,
+    "hit": 83.1,
+    "n": 71,
     "name": "props nfl Receiving Yards",
+    "said": 82.1
+   },
+   {
+    "flag": false,
+    "hit": 82.1,
+    "n": 28,
+    "name": "props nfl Receptions",
     "said": 82.3
    },
    {
     "flag": false,
-    "hit": 81.0,
-    "n": 21,
-    "name": "props nfl Receptions",
-    "said": 82.0
+    "hit": 100.0,
+    "n": 10,
+    "name": "props nfl Rushing Yards",
+    "said": 85.1
    },
    {
     "flag": false,
@@ -7277,7 +7291,7 @@
    {
     "flag": false,
     "hit": 93.0,
-    "n": 114,
+    "n": 115,
     "name": "prop locks",
     "said": 89.0
    },
@@ -7291,7 +7305,7 @@
    {
     "flag": false,
     "hit": 50.0,
-    "n": 190,
+    "n": 192,
     "name": "kalshi maker bids (filled)",
     "said": 53.0
    }
@@ -7366,9 +7380,9 @@
    }
   },
   "clv": {
-   "avg": 1.23,
-   "beat": 64.3,
-   "n": 84
+   "avg": 1.22,
+   "beat": 63.5,
+   "n": 85
   },
   "day": "2026-11-01",
   "leaks_14d": [],
@@ -7569,17 +7583,18 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
      "New England Patriots -9.5",
      "Las Vegas Raiders -6.5",
+     "Denver Broncos -6.5",
      "Detroit Lions -9.5",
      "Indianapolis Colts +3.5"
     ],
     "legs": 8,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 3
@@ -7599,12 +7614,13 @@
     "killed_by": [
      "New England Patriots -9.5",
      "Las Vegas Raiders -6.5",
+     "Denver Broncos -6.5",
      "Detroit Lions -9.5",
      "Indianapolis Colts +3.5",
      "Over 37.5 points"
     ],
     "legs": 8,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+25",
     "won": 2
@@ -7613,12 +7629,13 @@
     "killed_by": [
      "New England Patriots -9.5",
      "Las Vegas Raiders -6.5",
+     "Denver Broncos -6.5",
      "Detroit Lions -9.5",
      "Indianapolis Colts +3.5",
      "Over 43.5 points"
     ],
     "legs": 8,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+50",
     "won": 2
@@ -7627,23 +7644,24 @@
     "killed_by": [
      "New England Patriots -9.5",
      "Las Vegas Raiders -6.5",
+     "Denver Broncos -6.5",
      "Indianapolis Colts +3.5",
      "Over 43.5 points"
     ],
     "legs": 8,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+100",
     "won": 3
    }
   ],
   "picks": {
-   "hit": 75.0,
+   "hit": 75.3,
    "lost": 21,
-   "n": 84,
-   "roi": -2.4,
-   "said": 72.3,
-   "won": 63
+   "n": 85,
+   "roi": -1.3,
+   "said": 72.0,
+   "won": 64
   },
   "picks_by_league": {
    "arg": {
@@ -7815,12 +7833,12 @@
     "won": 0
    },
    "nfl": {
-    "hit": 80.0,
+    "hit": 81.8,
     "lost": 2,
-    "n": 10,
-    "roi": 14.5,
-    "said": 67.5,
-    "won": 8
+    "n": 11,
+    "roi": 21.3,
+    "said": 65.9,
+    "won": 9
    },
    "nhl": {
     "hit": 66.7,
@@ -7897,14 +7915,14 @@
   },
   "props": {
    "fair": {
-    "n": 1521,
-    "said_fair": 86.2,
+    "n": 1538,
+    "said_fair": 86.1,
     "said_price": 87.1,
-    "won": 1262
+    "won": 1277
    },
-   "n": 156,
+   "n": 176,
    "said": 78.0,
-   "won": 122
+   "won": 139
   },
   "safe_locks": {
    "lost": [],
@@ -7935,10 +7953,10 @@
    "agree": {
     "hit": 74.7,
     "lost": 226,
-    "n": 894,
-    "roi": 1.1,
+    "n": 895,
+    "roi": 1.2,
     "said": 70.3,
-    "won": 668
+    "won": 669
    }
   },
   "weights": {

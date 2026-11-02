@@ -3802,6 +3802,62 @@
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909915|away|FanDuel": {
+   "dec": 4.7,
+   "ev": 0.1,
+   "fair": 0.234,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909915",
+   "kind": "suspect",
+   "league": "nba",
+   "match": "MIL @ MIN",
+   "price": "+370",
+   "seen": "2026-11-02T00:41:52+00:00",
+   "side": "away",
+   "start": "2026-11-03T01:00Z",
+   "team": "Milwaukee Bucks",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909917|away|FanDuel": {
+   "dec": 9.1,
+   "ev": 0.0808,
+   "fair": 0.1188,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909917",
+   "kind": "suspect",
+   "league": "nba",
+   "match": "UTAH @ SA",
+   "price": "+810",
+   "seen": "2026-11-02T00:41:52+00:00",
+   "side": "away",
+   "start": "2026-11-03T01:30Z",
+   "team": "Utah Jazz",
+   "tip": "8:30 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909917|sure": {
+   "id": "nba:401909917",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+810",
+     "stake_share": 0.11,
+     "team": "Utah Jazz",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "-800",
+     "stake_share": 0.89,
+     "team": "San Antonio Spurs",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "UTAH @ SA",
+   "profit": 0.0012,
+   "seen": "2026-11-02T00:41:52+00:00"
+  },
   "ncaab:401906769|away|FanDuel": {
    "dec": 2.84,
    "ev": 0.0144,

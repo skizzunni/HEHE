@@ -7320,6 +7320,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "nfl:401873033",
    "label": "Denver Broncos",
    "league": "nfl",
@@ -7332,8 +7333,9 @@
     "team": "Denver Broncos"
    },
    "start": "2026-11-01T21:25Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV01KCDEN-DEN"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV01KCDEN-DEN",
+   "won": 1
   },
   "KXNFLGAME-26NOV01KCDEN-KC|YES": {
    "ask": 0.52,
@@ -7341,6 +7343,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "nfl:401873033",
    "label": "Kansas City Chiefs",
    "league": "nfl",
@@ -7353,8 +7356,9 @@
     "team": "Kansas City Chiefs"
    },
    "start": "2026-11-01T21:25Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV01KCDEN-KC"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV01KCDEN-KC",
+   "won": 0
   },
   "KXNFLGAME-26NOV01LVNYJ-NYJ|YES": {
    "ask": 0.53,
