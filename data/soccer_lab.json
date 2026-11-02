@@ -1,10 +1,10 @@
 {
- "run": "2026-10-26",
- "matches": 2250,
+ "run": "2026-11-02",
+ "matches": 2259,
  "leagues": {
   "epl": {
-   "matches": 459,
-   "draws": 27.7
+   "matches": 468,
+   "draws": 27.6
   },
   "esp": {
    "matches": 380,
@@ -30,18 +30,18 @@
  "fit": [
   {
    "band": "0-45",
-   "n": 427,
-   "win": 44.5,
+   "n": 430,
+   "win": 44.4,
    "win_said": 39.9,
    "win_or_draw": 71.4,
    "wod_said": 69.3
   },
   {
    "band": "45-55",
-   "n": 322,
-   "win": 46.6,
+   "n": 323,
+   "win": 46.7,
    "win_said": 49.8,
-   "win_or_draw": 79.2,
+   "win_or_draw": 79.3,
    "wod_said": 76.6
   },
   {
@@ -72,26 +72,26 @@
  "test": [
   {
    "band": "0-45",
-   "n": 427,
-   "win": 38.6,
+   "n": 429,
+   "win": 38.9,
    "win_said": 40.3,
-   "win_or_draw": 69.6,
+   "win_or_draw": 69.7,
    "wod_said": 68.1
   },
   {
    "band": "45-55",
-   "n": 344,
-   "win": 54.1,
+   "n": 345,
+   "win": 53.9,
    "win_said": 49.8,
-   "win_or_draw": 80.5,
+   "win_or_draw": 80.6,
    "wod_said": 75.2
   },
   {
    "band": "55-65",
-   "n": 209,
-   "win": 58.4,
+   "n": 211,
+   "win": 58.3,
    "win_said": 59.5,
-   "win_or_draw": 78.9,
+   "win_or_draw": 78.7,
    "wod_said": 81.9
   },
   {
@@ -114,26 +114,26 @@
  "all": [
   {
    "band": "0-45",
-   "n": 854,
-   "win": 41.6,
+   "n": 859,
+   "win": 41.7,
    "win_said": 40.1,
    "win_or_draw": 70.5,
    "wod_said": 68.7
   },
   {
    "band": "45-55",
-   "n": 666,
-   "win": 50.5,
+   "n": 668,
+   "win": 50.4,
    "win_said": 49.8,
    "win_or_draw": 79.9,
    "wod_said": 75.9
   },
   {
    "band": "55-65",
-   "n": 414,
+   "n": 416,
    "win": 60.6,
    "win_said": 59.6,
-   "win_or_draw": 82.1,
+   "win_or_draw": 82.0,
    "wod_said": 82.4
   },
   {
@@ -157,18 +157,18 @@
   "fit": [
    {
     "band": "0-45",
-    "n": 396,
-    "win": 44.7,
+    "n": 399,
+    "win": 44.6,
     "win_said": 39.9,
     "win_or_draw": 71.2,
-    "wod_said": 69.1
+    "wod_said": 69.2
    },
    {
     "band": "45-55",
-    "n": 312,
-    "win": 44.6,
+    "n": 313,
+    "win": 44.7,
     "win_said": 49.7,
-    "win_or_draw": 78.2,
+    "win_or_draw": 78.3,
     "wod_said": 76.4
    },
    {
@@ -199,26 +199,26 @@
   "test": [
    {
     "band": "0-45",
-    "n": 412,
-    "win": 37.6,
+    "n": 414,
+    "win": 37.9,
     "win_said": 40.6,
-    "win_or_draw": 69.2,
-    "wod_said": 68.1
+    "win_or_draw": 69.3,
+    "wod_said": 68.0
    },
    {
     "band": "45-55",
-    "n": 308,
-    "win": 53.9,
+    "n": 309,
+    "win": 53.7,
     "win_said": 49.8,
-    "win_or_draw": 81.5,
+    "win_or_draw": 81.6,
     "wod_said": 75.1
    },
    {
     "band": "55-65",
-    "n": 228,
-    "win": 56.6,
+    "n": 230,
+    "win": 56.5,
     "win_said": 59.5,
-    "win_or_draw": 76.8,
+    "win_or_draw": 76.5,
     "wod_said": 81.7
    },
    {
@@ -239,10 +239,10 @@
    }
   ],
   "logloss": {
-   "prop_fit": 0.6542,
-   "prop_test": 0.6656,
-   "power_fit": 0.6523,
-   "power_test": 0.6654
+   "prop_fit": 0.6543,
+   "prop_test": 0.6659,
+   "power_fit": 0.6524,
+   "power_test": 0.6658
   }
  }
 }
