@@ -7380,9 +7380,9 @@
    }
   },
   "clv": {
-   "avg": 1.22,
-   "beat": 63.5,
-   "n": 85
+   "avg": 1.18,
+   "beat": 62.8,
+   "n": 86
   },
   "day": "2026-11-01",
   "leaks_14d": [],
@@ -7476,6 +7476,14 @@
     "price": "-240",
     "said": 65,
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 65%"
+   },
+   {
+    "against_market": false,
+    "league": "nba",
+    "pick": "Indiana Pacers",
+    "price": "-155",
+    "said": 58,
+    "why": "margin 8 \u00b7 the book had my side favoured too \u00b7 called at 58%"
    },
    {
     "against_market": false,
@@ -7657,11 +7665,11 @@
    }
   ],
   "picks": {
-   "hit": 75.3,
-   "lost": 21,
-   "n": 85,
-   "roi": -1.3,
-   "said": 72.0,
+   "hit": 74.4,
+   "lost": 22,
+   "n": 86,
+   "roi": -2.5,
+   "said": 71.9,
    "won": 64
   },
   "picks_by_league": {
@@ -7818,11 +7826,11 @@
     "won": 3
    },
    "nba": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 35.1,
-    "said": 71.0,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -32.5,
+    "said": 64.5,
     "won": 1
    },
    "ncaab": {
@@ -7953,9 +7961,9 @@
    },
    "agree": {
     "hit": 74.7,
-    "lost": 226,
-    "n": 895,
-    "roi": 1.2,
+    "lost": 227,
+    "n": 896,
+    "roi": 1.1,
     "said": 70.3,
     "won": 669
    }
@@ -7964,10 +7972,10 @@
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5594,
-    "market_only": 0.5594,
-    "model_40": 0.5896,
-    "n": 89,
+    "logloss": 0.5629,
+    "market_only": 0.5629,
+    "model_40": 0.5938,
+    "n": 90,
     "weight": 0.0
    },
    "ncaaf": {

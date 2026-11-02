@@ -1,7 +1,7 @@
 # Review 2026-11-01
 
-Picks 64-21 (75.3% vs 72.0% claimed, ROI -1.3%).
-Closing line value: +1.22 points on 85 picks; beat the close on 63.5%.
+Picks 64-22 (74.4% vs 71.9% claimed, ROI -2.5%).
+Closing line value: +1.18 points on 86 picks; beat the close on 62.8%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST chi Universidad de Chile at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST ecu Universidad Católica (Quito) at 67%: margin 1 · the book had my side favoured too · called at 67%
@@ -11,6 +11,7 @@ Closing line value: +1.22 points on 85 picks; beat the close on 63.5%.
 - LOST jpn V-Varen Nagasaki at 66%: margin 1 · the book had my side favoured too · called at 66%
 - LOST jpn Kawasaki Frontale at 70%: margin 2 · the book had my side favoured too · called at 70%
 - LOST jpn Avispa Fukuoka at 65%: margin 3 · the book had my side favoured too · called at 65%
+- LOST nba Indiana Pacers at 58%: margin 8 · the book had my side favoured too · called at 58%
 - LOST ncaab Villanova Wildcats at 75%: margin 4 · the book had my side favoured too · called at 75%
 - LOST nfl Dallas Cowboys at 74%: margin 3 · the book had my side favoured too · called at 74%
 - LOST nfl New York Jets at 53%: margin 5 · the book had my side favoured too · called at 53%
@@ -35,4 +36,4 @@ Ladder-consistency props (all time): 1287/1550 won (83.0%) vs 86.1% fair, 87.1% 
 Props 152/192 vs 78.4% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=89), ncaaf 0.00 (n=164), nhl 0.00 (n=112)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=90), ncaaf 0.00 (n=164), nhl 0.00 (n=112)
