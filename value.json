@@ -4196,6 +4196,52 @@
    "tip": "10:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909920|sure": {
+   "id": "nba:401909920",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-168",
+     "stake_share": 0.637,
+     "team": "Toronto Raptors",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "+180",
+     "stake_share": 0.363,
+     "team": "LA Clippers",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "TOR @ LAC",
+   "profit": 0.0164,
+   "seen": "2026-11-02T21:07:22+00:00"
+  },
+  "nba:401909920|{\"line\": -5.5, \"t\": \"spread\", \"team\": \"Toronto Raptors\"}|Kalshi": {
+   "dec": 2.1395,
+   "dk": "-110",
+   "ev": 0.0216,
+   "fair": 0.4775,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909920",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "TOR @ LAC",
+   "price": "+114",
+   "seen": "2026-11-02T21:07:22+00:00",
+   "side": "{\"line\": -5.5, \"t\": \"spread\", \"team\": \"Toronto Raptors\"}",
+   "spec": {
+    "line": -5.5,
+    "t": "spread",
+    "team": "Toronto Raptors"
+   },
+   "start": "2026-11-03T03:00Z",
+   "team": "Toronto Raptors -5.5",
+   "tip": "10:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909921|away|FanDuel": {
    "dec": 2.12,
    "ev": 0.044,
