@@ -91175,6 +91175,9 @@
 "away": "Philadelphia Eagles",
 "home": "Washington Commanders",
 "ladder": {
+"17.5": {
+"under": "+2000"
+},
 "18.5": {
 "under": "+2000"
 },
@@ -91188,18 +91191,18 @@
 "under": "+1300"
 },
 "22.5": {
-"under": "+1060"
+"under": "+1100"
 },
 "23.5": {
 "under": "+900"
 },
 "24.5": {
-"over": "-1800",
-"under": "+800"
+"over": "-2000",
+"under": "+830"
 },
 "25.5": {
-"over": "-1450",
-"under": "+700"
+"over": "-1600",
+"under": "+750"
 },
 "26.5": {
 "over": "-1100",
@@ -91210,83 +91213,83 @@
 "under": "+500"
 },
 "28.5": {
-"over": "-720",
-"under": "+450"
+"over": "-750",
+"under": "+460"
 },
 "29.5": {
-"over": "-560",
-"under": "+370"
+"over": "-590",
+"under": "+390"
 },
 "30.5": {
-"over": "-460",
-"under": "+320"
+"over": "-480",
+"under": "+330"
 },
 "31.5": {
 "over": "-400",
-"under": "+285"
+"under": "+290"
 },
 "32.5": {
-"over": "-350",
-"under": "+255"
+"over": "-360",
+"under": "+260"
 },
 "33.5": {
-"over": "-290",
-"under": "+215"
+"over": "-295",
+"under": "+220"
 },
 "34.5": {
 "over": "-250",
 "under": "+190"
 },
 "35.5": {
-"over": "-215",
-"under": "+164"
+"over": "-220",
+"under": "+168"
 },
 "36.5": {
-"over": "-186",
-"under": "+144"
+"over": "-188",
+"under": "+146"
 },
 "37.5": {
-"over": "-158",
-"under": "+124"
+"over": "-162",
+"under": "+126"
 },
 "38.5": {
-"over": "-140",
-"under": "+110"
+"over": "-146",
+"under": "+114"
 },
 "39.5": {
-"over": "-122",
-"under": "-104"
+"over": "-128",
+"under": "+100"
 },
 "40.5": {
-"over": "-106",
-"under": "-120"
+"over": "-111",
+"under": "-115"
 },
 "41.5": {
-"over": "+110",
-"under": "-140"
+"over": "+108",
+"under": "-138"
 },
 "42.5": {
-"over": "+122",
-"under": "-156"
+"over": "+120",
+"under": "-154"
 },
 "43.5": {
-"over": "+142",
-"under": "-184"
+"over": "+140",
+"under": "-180"
 },
 "44.5": {
-"over": "+164",
-"under": "-215"
+"over": "+162",
+"under": "-210"
 },
 "45.5": {
 "over": "+182",
-"under": "-240"
+"under": "-235"
 },
 "46.5": {
 "over": "+200",
 "under": "-265"
 },
 "47.5": {
-"over": "+240",
+"over": "+235",
 "under": "-330"
 },
 "48.5": {
@@ -91294,8 +91297,8 @@
 "under": "-360"
 },
 "49.5": {
-"over": "+300",
-"under": "-430"
+"over": "+290",
+"under": "-410"
 },
 "50.5": {
 "over": "+330",
@@ -91306,8 +91309,8 @@
 "under": "-590"
 },
 "52.5": {
-"over": "+430",
-"under": "-670"
+"over": "+420",
+"under": "-650"
 },
 "53.5": {
 "over": "+470",
@@ -91330,7 +91333,7 @@
 "under": "-1800"
 },
 "58.5": {
-"over": "+900"
+"over": "+870"
 },
 "59.5": {
 "over": "+1000"
@@ -91354,14 +91357,11 @@
 "over": "+1700"
 },
 "66.5": {
-"over": "+1800"
-},
-"67.5": {
 "over": "+2000"
 }
 },
 "league": "nfl",
-"logged": "2026-11-02T00:16+00:00",
+"logged": "2026-11-02T00:22+00:00",
 "spreads": [
 [
 "Philadelphia Eagles",
@@ -91371,7 +91371,7 @@
 [
 "Philadelphia Eagles",
 -18.5,
-"+1700"
+"+1800"
 ],
 [
 "Philadelphia Eagles",
@@ -91386,22 +91386,22 @@
 [
 "Philadelphia Eagles",
 -15.5,
-"+1300"
+"+1400"
 ],
 [
 "Philadelphia Eagles",
 -14.5,
-"+1200"
+"+1300"
 ],
 [
 "Philadelphia Eagles",
 -13.5,
-"+1060"
+"+1100"
 ],
 [
 "Philadelphia Eagles",
 -12.5,
-"+1000"
+"+1060"
 ],
 [
 "Philadelphia Eagles",
@@ -91411,12 +91411,12 @@
 [
 "Philadelphia Eagles",
 -10.5,
-"+830"
+"+870"
 ],
 [
 "Philadelphia Eagles",
 -9.5,
-"+700"
+"+750"
 ],
 [
 "Philadelphia Eagles",
@@ -91431,7 +91431,7 @@
 [
 "Philadelphia Eagles",
 -6.5,
-"+450"
+"+470"
 ],
 [
 "Philadelphia Eagles",
@@ -91441,12 +91441,12 @@
 [
 "Philadelphia Eagles",
 -4.5,
-"+350"
+"+360"
 ],
 [
 "Philadelphia Eagles",
 -3.5,
-"+310"
+"+320"
 ],
 [
 "Philadelphia Eagles",
@@ -91456,7 +91456,7 @@
 [
 "Philadelphia Eagles",
 -1.5,
-"+230"
+"+220"
 ],
 [
 "Philadelphia Eagles",
@@ -91466,57 +91466,57 @@
 [
 "Philadelphia Eagles",
 2.5,
-"+162"
+"+158"
 ],
 [
 "Philadelphia Eagles",
 3.5,
-"+120"
+"+116"
 ],
 [
 "Philadelphia Eagles",
 4.5,
-"+102"
+"+100"
 ],
 [
 "Philadelphia Eagles",
 5.5,
-"-108"
+"-113"
 ],
 [
 "Philadelphia Eagles",
 6.5,
-"-130"
+"-136"
 ],
 [
 "Philadelphia Eagles",
 7.5,
-"-170"
+"-172"
 ],
 [
 "Philadelphia Eagles",
 8.5,
-"-188"
+"-194"
 ],
 [
 "Philadelphia Eagles",
 9.5,
-"-205"
+"-215"
 ],
 [
 "Philadelphia Eagles",
 10.5,
-"-245"
+"-250"
 ],
 [
 "Philadelphia Eagles",
 11.5,
-"-265"
+"-280"
 ],
 [
 "Philadelphia Eagles",
 12.5,
-"-295"
+"-310"
 ],
 [
 "Philadelphia Eagles",
@@ -91526,52 +91526,52 @@
 [
 "Philadelphia Eagles",
 14.5,
-"-400"
+"-410"
 ],
 [
 "Philadelphia Eagles",
 15.5,
-"-440"
+"-460"
 ],
 [
 "Philadelphia Eagles",
 16.5,
-"-500"
+"-520"
 ],
 [
 "Philadelphia Eagles",
 17.5,
-"-620"
+"-650"
 ],
 [
 "Philadelphia Eagles",
 18.5,
-"-720"
+"-750"
 ],
 [
 "Philadelphia Eagles",
 19.5,
-"-850"
+"-900"
 ],
 [
 "Philadelphia Eagles",
 20.5,
-"-1000"
+"-1100"
 ],
 [
 "Philadelphia Eagles",
 21.5,
-"-1400"
+"-1600"
 ],
 [
 "Philadelphia Eagles",
 22.5,
-"-1600"
+"-1800"
 ],
 [
 "Washington Commanders",
 -30.5,
-"+2000"
+"+1800"
 ],
 [
 "Washington Commanders",
@@ -91591,7 +91591,7 @@
 [
 "Washington Commanders",
 -26.5,
-"+1200"
+"+1300"
 ],
 [
 "Washington Commanders",
@@ -91606,7 +91606,7 @@
 [
 "Washington Commanders",
 -23.5,
-"+870"
+"+900"
 ],
 [
 "Washington Commanders",
@@ -91616,42 +91616,42 @@
 [
 "Washington Commanders",
 -21.5,
-"+680"
+"+750"
 ],
 [
 "Washington Commanders",
 -20.5,
-"+560"
+"+600"
 ],
 [
 "Washington Commanders",
 -19.5,
-"+500"
+"+520"
 ],
 [
 "Washington Commanders",
 -18.5,
-"+450"
+"+460"
 ],
 [
 "Washington Commanders",
 -17.5,
-"+400"
+"+420"
 ],
 [
 "Washington Commanders",
 -16.5,
-"+340"
+"+350"
 ],
 [
 "Washington Commanders",
 -15.5,
-"+310"
+"+320"
 ],
 [
 "Washington Commanders",
 -14.5,
-"+285"
+"+290"
 ],
 [
 "Washington Commanders",
@@ -91661,57 +91661,57 @@
 [
 "Washington Commanders",
 -12.5,
-"+220"
+"+230"
 ],
 [
 "Washington Commanders",
 -11.5,
-"+200"
+"+210"
 ],
 [
 "Washington Commanders",
 -10.5,
-"+186"
+"+190"
 ],
 [
 "Washington Commanders",
 -9.5,
-"+158"
+"+164"
 ],
 [
 "Washington Commanders",
 -8.5,
-"+146"
+"+150"
 ],
 [
 "Washington Commanders",
 -7.5,
-"+130"
+"+134"
 ],
 [
 "Washington Commanders",
 -6.5,
-"+102"
+"+106"
 ],
 [
 "Washington Commanders",
 -5.5,
-"-118"
+"-113"
 ],
 [
 "Washington Commanders",
 -4.5,
-"-130"
+"-128"
 ],
 [
 "Washington Commanders",
 -3.5,
-"-154"
+"-148"
 ],
 [
 "Washington Commanders",
 -2.5,
-"-210"
+"-205"
 ],
 [
 "Washington Commanders",
@@ -91721,7 +91721,7 @@
 [
 "Washington Commanders",
 1.5,
-"-310"
+"-295"
 ],
 [
 "Washington Commanders",
@@ -91731,12 +91731,12 @@
 [
 "Washington Commanders",
 3.5,
-"-440"
+"-460"
 ],
 [
 "Washington Commanders",
 4.5,
-"-520"
+"-530"
 ],
 [
 "Washington Commanders",
@@ -91746,7 +91746,7 @@
 [
 "Washington Commanders",
 6.5,
-"-720"
+"-770"
 ],
 [
 "Washington Commanders",
@@ -91761,12 +91761,7 @@
 [
 "Washington Commanders",
 9.5,
-"-1450"
-],
-[
-"Washington Commanders",
-10.5,
-"-2000"
+"-1600"
 ]
 ],
 "start": "2026-11-02T01:20Z",
