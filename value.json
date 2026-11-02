@@ -3769,6 +3769,40 @@
    "profit": 0.0003,
    "seen": "2026-11-01T23:25:16+00:00"
   },
+  "nba:401909909|away|Kalshi": {
+   "dec": 1.294,
+   "ev": 0.0272,
+   "fair": 0.7938,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909909",
+   "kind": "value",
+   "league": "nba",
+   "match": "ATL @ IND",
+   "price": "-340",
+   "seen": "2026-11-02T22:55:38+00:00",
+   "side": "away",
+   "start": "2026-11-03T00:30Z",
+   "team": "Atlanta Hawks",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909909|home|FanDuel": {
+   "dec": 4.6,
+   "ev": 0.0243,
+   "fair": 0.2227,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909909",
+   "kind": "value",
+   "league": "nba",
+   "match": "ATL @ IND",
+   "price": "+360",
+   "seen": "2026-11-02T22:55:38+00:00",
+   "side": "home",
+   "start": "2026-11-03T00:30Z",
+   "team": "Indiana Pacers",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909909|sure": {
    "id": "nba:401909909",
    "kind": "sure",
@@ -4292,6 +4326,28 @@
    "team": "Miami Hurricanes",
    "tip": "6:00 PM",
    "venue": "Kalshi"
+  },
+  "ncaab:401906769|sure": {
+   "id": "ncaab:401906769",
+   "kind": "sure",
+   "league": "ncaab",
+   "legs": [
+    {
+     "price": "+252",
+     "stake_share": 0.2855,
+     "team": "Miami Hurricanes",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-245",
+     "stake_share": 0.7145,
+     "team": "Florida Gators",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "MIA @ FLA",
+   "profit": 0.0061,
+   "seen": "2026-11-02T22:55:38+00:00"
   },
   "ncaab:401906769|{\"line\": 4.5, \"t\": \"spread\", \"team\": \"Miami Hurricanes\"}|Kalshi": {
    "dec": 2.0513,
@@ -8698,6 +8754,26 @@
    "prob": 0.4415,
    "seen": "2026-10-31T14:57:59+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909909:home": {
+   "ev": 0.0244,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0243,
+     "fair": 0.2227,
+     "id": "nba:401909909",
+     "price": "+360",
+     "side": "home",
+     "spec": null,
+     "team": "Indiana Pacers"
+    }
+   ],
+   "payout": 4.6,
+   "prob": 0.2227,
+   "seen": "2026-11-02T22:55:38+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
