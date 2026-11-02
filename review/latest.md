@@ -1,7 +1,7 @@
 # Review 2026-11-01
 
-Picks 70-23 (75.3% vs 72.0% claimed, ROI -1.9%).
-Closing line value: +1.17 points on 93 picks; beat the close on 62.4%.
+Picks 70-24 (74.5% vs 71.8% claimed, ROI -2.9%).
+Closing line value: +1.18 points on 94 picks; beat the close on 62.8%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST chi Universidad de Chile at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST ecu Universidad Católica (Quito) at 67%: margin 1 · the book had my side favoured too · called at 67%
@@ -17,6 +17,7 @@ Closing line value: +1.17 points on 93 picks; beat the close on 62.4%.
 - LOST nfl New York Jets at 53%: margin 5 · the book had my side favoured too · called at 53%
 - LOST nhl Utah Mammoth at 60%: margin 3 · the book had my side favoured too · called at 60%
 - LOST nhl New York Rangers at 53%: margin 3 · the book had my side favoured too · called at 53%
+- LOST nhl Ottawa Senators at 53%: margin 3 · the book had my side favoured too · called at 53%
 - LOST nor IK Start at 63%: margin 1 · the book had my side favoured too · called at 63%
 - LOST nor Sarpsborg FK at 84%: margin 2 · the book had my side favoured too · called at 84%
 - LOST nor Molde at 63%: margin 1 · the book had my side favoured too · called at 63%
@@ -26,7 +27,7 @@ Closing line value: +1.17 points on 93 picks; beat the close on 62.4%.
 - LOST uru Progreso at 68%: margin 2 · the book had my side favoured too · called at 68%
 - LOST wsl Arsenal at 83%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 83%
 Locks 6/11 won, 1 open; Best play top 3 (50%) lost; lost: Kyle Pitts: 20+ Receiving Yards (ATL @ TB) 6; DK Metcalf: 30+ Receiving Yards (CLE @ PIT) 4; Over 36.5 points (Los Angeles Chargers at Los Angeles Rams) Los Angeles Chargers 9 - Los Angeles Rams 24; Dallas Cowboys +1.5 (Arizona Cardinals at Dallas Cowboys) Arizona Cardinals 33 - Dallas Cowboys 30.
-Safe Locks 8/11 won, 3 open; Winners parlay top 2 (85%) won; Best play top 7 (53%) open.
+Safe Locks 9/11 won, 2 open; Winners parlay top 2 (85%) won; Best play top 7 (53%) won.
 Lottery 100: lost (5/8 legs won, killed by New England Patriots -9.5, Over 218.5 points)
 Lottery 10k: lost (3/8 legs won, killed by New England Patriots -9.5, Las Vegas Raiders -6.5, Denver Broncos -6.5, Detroit Lions -9.5, Indianapolis Colts +3.5)
 Lottery 10k: lost (4/8 legs won, killed by Tennessee Titans +3.5, Under 5.5 goals)
@@ -34,7 +35,7 @@ Lottery 10k+25: lost (2/8 legs won, killed by New England Patriots -9.5, Las Veg
 Lottery 10k+50: lost (2/8 legs won, killed by New England Patriots -9.5, Las Vegas Raiders -6.5, Denver Broncos -6.5, Detroit Lions -9.5, Indianapolis Colts +3.5, Over 43.5 points)
 Lottery 10k+100: lost (3/8 legs won, killed by New England Patriots -9.5, Las Vegas Raiders -6.5, Denver Broncos -6.5, Indianapolis Colts +3.5, Over 43.5 points)
 Ladder-consistency props (all time): 1287/1550 won (83.0%) vs 86.1% fair, 87.1% price.
-Props 158/200 vs 78.6% claimed.
+Props 164/206 vs 78.7% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=90), ncaaf 0.00 (n=164), nhl 0.00 (n=113)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=90), ncaaf 0.00 (n=164), nhl 0.00 (n=114)

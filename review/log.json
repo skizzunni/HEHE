@@ -7185,8 +7185,8 @@
    },
    {
     "flag": false,
-    "hit": 82.0,
-    "n": 311,
+    "hit": 82.3,
+    "n": 317,
     "name": "props nhl Shots on Goal",
     "said": 80.7
    },
@@ -7276,8 +7276,8 @@
    },
    {
     "flag": false,
-    "hit": 86.8,
-    "n": 38,
+    "hit": 87.2,
+    "n": 39,
     "name": "safe locks nhl under",
     "said": 91.5
    },
@@ -7380,9 +7380,9 @@
    }
   },
   "clv": {
-   "avg": 1.17,
-   "beat": 62.4,
-   "n": 93
+   "avg": 1.18,
+   "beat": 62.8,
+   "n": 94
   },
   "day": "2026-11-01",
   "leaks_14d": [],
@@ -7522,6 +7522,14 @@
     "league": "nhl",
     "pick": "New York Rangers",
     "price": "-125",
+    "said": 53,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Ottawa Senators",
+    "price": "-122",
     "said": 53,
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 53%"
    },
@@ -7673,11 +7681,11 @@
    }
   ],
   "picks": {
-   "hit": 75.3,
-   "lost": 23,
-   "n": 93,
-   "roi": -1.9,
-   "said": 72.0,
+   "hit": 74.5,
+   "lost": 24,
+   "n": 94,
+   "roi": -2.9,
+   "said": 71.8,
    "won": 70
   },
   "picks_by_league": {
@@ -7866,11 +7874,11 @@
     "won": 9
    },
    "nhl": {
-    "hit": 50.0,
-    "lost": 2,
-    "n": 4,
-    "roi": -20.5,
-    "said": 59.2,
+    "hit": 40.0,
+    "lost": 3,
+    "n": 5,
+    "roi": -36.4,
+    "said": 58.0,
     "won": 2
    },
    "nor": {
@@ -7945,19 +7953,19 @@
     "said_price": 87.1,
     "won": 1287
    },
-   "n": 200,
-   "said": 78.6,
-   "won": 158
+   "n": 206,
+   "said": 78.7,
+   "won": 164
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 3,
+   "open": 2,
    "plays": {
     "best": [
      7,
      0.5279,
-     "open"
+     "won"
     ],
     "winners": [
      2,
@@ -7965,7 +7973,7 @@
      "won"
     ]
    },
-   "won": 8
+   "won": 9
   },
   "strong": {
    "n": 0
@@ -7976,10 +7984,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 74.8,
-    "lost": 228,
-    "n": 903,
-    "roi": 1.2,
+    "hit": 74.7,
+    "lost": 229,
+    "n": 904,
+    "roi": 1.1,
     "said": 70.3,
     "won": 675
    }
@@ -8006,10 +8014,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6501,
-    "market_only": 0.6501,
-    "model_40": 0.6588,
-    "n": 113,
+    "logloss": 0.6509,
+    "market_only": 0.6509,
+    "model_40": 0.66,
+    "n": 114,
     "weight": 0.0
    }
   }
