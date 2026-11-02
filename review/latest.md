@@ -1,7 +1,9 @@
 # Review 2026-11-02
 
-Picks 6-0 (100.0% vs 73.7% claimed, ROI +28.7%).
-Closing line value: +4.18 points on 6 picks; beat the close on 66.7%.
+Picks 6-2 (75.0% vs 72.4% claimed, ROI -3.5%).
+Closing line value: +3.51 points on 8 picks; beat the close on 75.0%.
+- LOST fra Lorient at 69%: margin 2 · the book had my side favoured too · called at 69%
+- LOST ita Atalanta at 68%: margin 3 · the book had my side favoured too · called at 68%
 Locks 0/11 won, 11 open; Best play top 2 (62%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (83%) open; Best play top 7 (50%) open.
 Lottery 100: open (0/11 legs won)
