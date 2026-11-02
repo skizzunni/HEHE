@@ -3779,6 +3779,23 @@
    "profit": 0.0024,
    "seen": "2026-11-01T23:30:00+00:00"
   },
+  "nba:401909911|away|Kalshi": {
+   "dec": 2.1867,
+   "ev": 0.016,
+   "fair": 0.4646,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909911",
+   "kind": "value",
+   "league": "nba",
+   "match": "WSH @ ORL",
+   "price": "+119",
+   "seen": "2026-11-02T01:38:12+00:00",
+   "side": "away",
+   "start": "2026-11-03T00:30Z",
+   "team": "Washington Wizards",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909912|{\"line\": 239.5, \"t\": \"under\"}|Kalshi": {
    "dec": 2.1867,
    "dk": "-110",
@@ -6584,6 +6601,7 @@
    "seen": "2026-10-31T15:14:37+00:00",
    "side": "home",
    "start": "2026-11-01T23:00Z",
+   "status": "lost",
    "team": "New York Rangers",
    "tip": "6:00 PM",
    "venue": "Kalshi"

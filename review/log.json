@@ -7185,8 +7185,8 @@
    },
    {
     "flag": false,
-    "hit": 82.2,
-    "n": 304,
+    "hit": 82.0,
+    "n": 311,
     "name": "props nhl Shots on Goal",
     "said": 80.7
    },
@@ -7269,10 +7269,10 @@
    },
    {
     "flag": false,
-    "hit": 90.5,
-    "n": 21,
+    "hit": 90.9,
+    "n": 22,
     "name": "safe locks nhl side",
-    "said": 91.2
+    "said": 91.3
    },
    {
     "flag": false,
@@ -7290,8 +7290,8 @@
    },
    {
     "flag": false,
-    "hit": 93.1,
-    "n": 116,
+    "hit": 93.2,
+    "n": 117,
     "name": "prop locks",
     "said": 89.0
    },
@@ -7380,9 +7380,9 @@
    }
   },
   "clv": {
-   "avg": 1.16,
-   "beat": 61.8,
-   "n": 89
+   "avg": 1.14,
+   "beat": 61.1,
+   "n": 90
   },
   "day": "2026-11-01",
   "leaks_14d": [],
@@ -7519,6 +7519,14 @@
    },
    {
     "against_market": false,
+    "league": "nhl",
+    "pick": "New York Rangers",
+    "price": "-125",
+    "said": 53,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
     "league": "nor",
     "pick": "IK Start",
     "price": "-210",
@@ -7617,7 +7625,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -7665,11 +7673,11 @@
    }
   ],
   "picks": {
-   "hit": 75.3,
-   "lost": 22,
-   "n": 89,
-   "roi": -1.6,
-   "said": 72.1,
+   "hit": 74.4,
+   "lost": 23,
+   "n": 90,
+   "roi": -2.7,
+   "said": 71.9,
    "won": 67
   },
   "picks_by_league": {
@@ -7858,11 +7866,11 @@
     "won": 9
    },
    "nhl": {
-    "hit": 66.7,
-    "lost": 1,
-    "n": 3,
-    "roi": 6.0,
-    "said": 61.3,
+    "hit": 50.0,
+    "lost": 2,
+    "n": 4,
+    "roi": -20.5,
+    "said": 59.2,
     "won": 2
    },
    "nor": {
@@ -7937,14 +7945,14 @@
     "said_price": 87.1,
     "won": 1287
    },
-   "n": 192,
-   "said": 78.4,
-   "won": 152
+   "n": 199,
+   "said": 78.6,
+   "won": 157
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 4,
+   "open": 3,
    "plays": {
     "best": [
      7,
@@ -7954,10 +7962,10 @@
     "winners": [
      2,
      0.8455,
-     "open"
+     "won"
     ]
    },
-   "won": 7
+   "won": 8
   },
   "strong": {
    "n": 0
@@ -7969,9 +7977,9 @@
    },
    "agree": {
     "hit": 74.7,
-    "lost": 227,
-    "n": 899,
-    "roi": 1.2,
+    "lost": 228,
+    "n": 900,
+    "roi": 1.1,
     "said": 70.3,
     "won": 672
    }
@@ -7998,10 +8006,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6491,
-    "market_only": 0.6491,
-    "model_40": 0.6582,
-    "n": 112,
+    "logloss": 0.6501,
+    "market_only": 0.6501,
+    "model_40": 0.6588,
+    "n": 113,
     "weight": 0.0
    }
   }
