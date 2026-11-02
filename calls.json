@@ -4141,7 +4141,55 @@
     "mls": "2026-11-02T02:17:15+00:00",
     "nfl": "2026-11-01T17:49:06+00:00"
    },
-   "candidate_observations": {},
+   "candidate_observations": {
+    "ncaab:401920409": {
+     "book": "DraftKings",
+     "calib": "raw no-vig (calibration failed its untouched test)",
+     "close": true,
+     "conf": 78,
+     "current": {
+      "book": "DraftKings",
+      "calib": "raw no-vig (calibration failed its untouched test)",
+      "checked_at": "2026-11-02T02:52:59+00:00",
+      "conf": 78,
+      "dc": false,
+      "gate": {
+       "ok": true,
+       "what": "no lineup gate for this league"
+      },
+      "id": "ncaab:401920409",
+      "league": "ncaab",
+      "match": "LIB @ HPU",
+      "pick": "High Point Panthers",
+      "price": "-395",
+      "price_at": "2026-11-02T02:52:39+00:00",
+      "price_market": "moneyline",
+      "price_ref": "34903886:0ML86937239_3",
+      "prob_at": "2026-11-02T02:52:39+00:00",
+      "rank": null,
+      "ready": true,
+      "side": "home",
+      "start": "2026-11-02T04:59Z"
+     },
+     "dc": false,
+     "fp": "6acf459eb5a7",
+     "gate": {
+      "ok": true,
+      "what": "no lineup gate for this league"
+     },
+     "id": "ncaab:401920409",
+     "league": "ncaab",
+     "match": "LIB @ HPU",
+     "pick": "High Point Panthers",
+     "price": "-395",
+     "price_at": "2026-11-02T02:52:39+00:00",
+     "price_market": "moneyline",
+     "price_ref": "34903886:0ML86937239_3",
+     "side": "home",
+     "start": "2026-11-02T04:59Z",
+     "tip": "11:59 PM"
+    }
+   },
    "frozen": [
     "ita",
     "nfl"
