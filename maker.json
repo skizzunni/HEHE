@@ -8326,6 +8326,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "nfl:401873033",
    "label": "under 41.5",
    "league": "nfl",
@@ -8338,8 +8339,9 @@
     "t": "under"
    },
    "start": "2026-11-01T21:25Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV01KCDEN-42"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV01KCDEN-42",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV01KCDEN-43|NO": {
    "ask": 0.52,
@@ -8347,6 +8349,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "nfl:401873033",
    "label": "under 42.5",
    "league": "nfl",
@@ -8359,8 +8362,9 @@
     "t": "under"
    },
    "start": "2026-11-01T21:25Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV01KCDEN-43"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV01KCDEN-43",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV01LACLAR-46|NO": {
    "ask": 0.51,
