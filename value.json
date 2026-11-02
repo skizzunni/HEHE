@@ -4076,6 +4076,30 @@
    "tip": "8:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909915|{\"line\": -12.5, \"t\": \"spread\", \"team\": \"Minnesota Timberwolves\"}|Kalshi": {
+   "dec": 2.2361,
+   "dk": "-105",
+   "ev": 0.0215,
+   "fair": 0.4568,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909915",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "MIL @ MIN",
+   "price": "+124",
+   "seen": "2026-11-02T19:07:55+00:00",
+   "side": "{\"line\": -12.5, \"t\": \"spread\", \"team\": \"Minnesota Timberwolves\"}",
+   "spec": {
+    "line": -12.5,
+    "t": "spread",
+    "team": "Minnesota Timberwolves"
+   },
+   "start": "2026-11-03T01:00Z",
+   "team": "Minnesota Timberwolves -12.5",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909917|away|FanDuel": {
    "dec": 9.1,
    "ev": 0.0808,
@@ -8611,6 +8635,26 @@
    "prob": 0.4415,
    "seen": "2026-10-31T14:57:59+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909915:away": {
+   "ev": 0.0285,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0283,
+     "fair": 0.2057,
+     "id": "nba:401909915",
+     "price": "+400",
+     "side": "away",
+     "spec": null,
+     "team": "Milwaukee Bucks"
+    }
+   ],
+   "payout": 5.0,
+   "prob": 0.2057,
+   "seen": "2026-11-02T19:07:55+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
