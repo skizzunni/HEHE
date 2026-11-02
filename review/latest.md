@@ -1,6 +1,7 @@
 # Review 2026-11-02
 
-No picks settled yet.
+Picks 1-0 (100.0% vs 65.0% claimed, ROI +44.4%).
+Closing line value: -0.47 points on 1 picks; beat the close on 0.0%.
 Locks 0/11 won, 11 open; Best play top 2 (62%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (83%) open; Best play top 7 (50%) open.
 Lottery 100: open (0/11 legs won)
