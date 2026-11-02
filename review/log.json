@@ -7046,10 +7046,10 @@
   },
   "props": {
    "fair": {
-    "n": 1550,
+    "n": 1564,
     "said_fair": 86.1,
     "said_price": 87.1,
-    "won": 1287
+    "won": 1301
    },
    "n": 180,
    "said": 81.6,
@@ -7150,10 +7150,10 @@
    },
    {
     "flag": false,
-    "hit": 54.2,
-    "n": 24,
+    "hit": 57.7,
+    "n": 26,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 43.5
+    "said": 42.8
    },
    {
     "flag": false,
@@ -7164,24 +7164,24 @@
    },
    {
     "flag": false,
-    "hit": 83.1,
-    "n": 71,
+    "hit": 84.4,
+    "n": 77,
     "name": "props nfl Receiving Yards",
     "said": 82.1
    },
    {
     "flag": false,
-    "hit": 82.1,
-    "n": 28,
+    "hit": 84.4,
+    "n": 32,
     "name": "props nfl Receptions",
-    "said": 82.3
+    "said": 82.5
    },
    {
     "flag": false,
     "hit": 100.0,
-    "n": 10,
+    "n": 14,
     "name": "props nfl Rushing Yards",
-    "said": 85.1
+    "said": 85.0
    },
    {
     "flag": false,
@@ -7297,17 +7297,17 @@
    },
    {
     "flag": false,
-    "hit": 41.9,
-    "n": 253,
+    "hit": 41.7,
+    "n": 254,
     "name": "value bets",
     "said": 44.1
    },
    {
     "flag": false,
-    "hit": 50.0,
-    "n": 192,
+    "hit": 50.3,
+    "n": 193,
     "name": "kalshi maker bids (filled)",
-    "said": 53.0
+    "said": 53.1
    }
   ],
   "big_files": [],
@@ -7380,9 +7380,9 @@
    }
   },
   "clv": {
-   "avg": 1.17,
-   "beat": 62.1,
-   "n": 95
+   "avg": 1.15,
+   "beat": 61.5,
+   "n": 96
   },
   "day": "2026-11-01",
   "leaks_14d": [],
@@ -7627,10 +7627,11 @@
    {
     "killed_by": [
      "Tennessee Titans +3.5",
-     "Under 5.5 goals"
+     "Under 5.5 goals",
+     "Over 41.5 points"
     ],
     "legs": 8,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 4
@@ -7681,12 +7682,12 @@
    }
   ],
   "picks": {
-   "hit": 74.7,
+   "hit": 75.0,
    "lost": 24,
-   "n": 95,
-   "roi": -2.1,
+   "n": 96,
+   "roi": -1.7,
    "said": 71.6,
-   "won": 71
+   "won": 72
   },
   "picks_by_league": {
    "arg": {
@@ -7866,12 +7867,12 @@
     "won": 0
    },
    "nfl": {
-    "hit": 81.8,
+    "hit": 83.3,
     "lost": 2,
-    "n": 11,
-    "roi": 21.3,
-    "said": 65.9,
-    "won": 9
+    "n": 12,
+    "roi": 22.9,
+    "said": 66.1,
+    "won": 10
    },
    "nhl": {
     "hit": 40.0,
@@ -7948,19 +7949,19 @@
   },
   "props": {
    "fair": {
-    "n": 1550,
+    "n": 1564,
     "said_fair": 86.1,
     "said_price": 87.1,
-    "won": 1287
+    "won": 1301
    },
-   "n": 206,
-   "said": 78.7,
-   "won": 164
+   "n": 222,
+   "said": 78.6,
+   "won": 180
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 2,
+   "open": 1,
    "plays": {
     "best": [
      7,
@@ -7973,7 +7974,7 @@
      "won"
     ]
    },
-   "won": 9
+   "won": 10
   },
   "strong": {
    "n": 0
@@ -7986,10 +7987,10 @@
    "agree": {
     "hit": 74.7,
     "lost": 229,
-    "n": 905,
-    "roi": 1.1,
+    "n": 906,
+    "roi": 1.2,
     "said": 70.3,
-    "won": 676
+    "won": 677
    }
   },
   "weights": {
@@ -8009,6 +8010,15 @@
     "market_only": 0.5998,
     "model_40": 0.5929,
     "n": 164,
+    "weight": 0.0
+   },
+   "nfl": {
+    "fitted": 0.0,
+    "held_out": false,
+    "logloss": 0.6324,
+    "market_only": 0.6324,
+    "model_40": 0.6449,
+    "n": 40,
     "weight": 0.0
    },
    "nhl": {

@@ -1,7 +1,7 @@
 # Review 2026-11-01
 
-Picks 71-24 (74.7% vs 71.6% claimed, ROI -2.1%).
-Closing line value: +1.17 points on 95 picks; beat the close on 62.1%.
+Picks 72-24 (75.0% vs 71.6% claimed, ROI -1.7%).
+Closing line value: +1.15 points on 96 picks; beat the close on 61.5%.
 - LOST aus Melbourne Victory at 66%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66%
 - LOST chi Universidad de Chile at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST ecu Universidad Católica (Quito) at 67%: margin 1 · the book had my side favoured too · called at 67%
@@ -27,15 +27,15 @@ Closing line value: +1.17 points on 95 picks; beat the close on 62.1%.
 - LOST uru Progreso at 68%: margin 2 · the book had my side favoured too · called at 68%
 - LOST wsl Arsenal at 83%: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 83%
 Locks 6/11 won, 1 open; Best play top 3 (50%) lost; lost: Kyle Pitts: 20+ Receiving Yards (ATL @ TB) 6; DK Metcalf: 30+ Receiving Yards (CLE @ PIT) 4; Over 36.5 points (Los Angeles Chargers at Los Angeles Rams) Los Angeles Chargers 9 - Los Angeles Rams 24; Dallas Cowboys +1.5 (Arizona Cardinals at Dallas Cowboys) Arizona Cardinals 33 - Dallas Cowboys 30.
-Safe Locks 9/11 won, 2 open; Winners parlay top 2 (85%) won; Best play top 7 (53%) won.
+Safe Locks 10/11 won, 1 open; Winners parlay top 2 (85%) won; Best play top 7 (53%) won.
 Lottery 100: lost (5/8 legs won, killed by New England Patriots -9.5, Over 218.5 points)
 Lottery 10k: lost (3/8 legs won, killed by New England Patriots -9.5, Las Vegas Raiders -6.5, Denver Broncos -6.5, Detroit Lions -9.5, Indianapolis Colts +3.5)
-Lottery 10k: lost (4/8 legs won, killed by Tennessee Titans +3.5, Under 5.5 goals)
+Lottery 10k: lost (4/8 legs won, killed by Tennessee Titans +3.5, Under 5.5 goals, Over 41.5 points)
 Lottery 10k+25: lost (2/8 legs won, killed by New England Patriots -9.5, Las Vegas Raiders -6.5, Denver Broncos -6.5, Detroit Lions -9.5, Indianapolis Colts +3.5, Over 37.5 points)
 Lottery 10k+50: lost (2/8 legs won, killed by New England Patriots -9.5, Las Vegas Raiders -6.5, Denver Broncos -6.5, Detroit Lions -9.5, Indianapolis Colts +3.5, Over 43.5 points)
 Lottery 10k+100: lost (3/8 legs won, killed by New England Patriots -9.5, Las Vegas Raiders -6.5, Denver Broncos -6.5, Indianapolis Colts +3.5, Over 43.5 points)
-Ladder-consistency props (all time): 1287/1550 won (83.0%) vs 86.1% fair, 87.1% price.
-Props 164/206 vs 78.7% claimed.
+Ladder-consistency props (all time): 1301/1564 won (83.2%) vs 86.1% fair, 87.1% price.
+Props 180/222 vs 78.6% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=91), ncaaf 0.00 (n=164), nhl 0.00 (n=114)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=91), ncaaf 0.00 (n=164), nfl 0.00 (n=40), nhl 0.00 (n=114)

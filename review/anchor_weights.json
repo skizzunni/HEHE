@@ -19,6 +19,15 @@
    "n": 164,
    "weight": 0.0
   },
+  "nfl": {
+   "fitted": 0.0,
+   "held_out": false,
+   "logloss": 0.6324,
+   "market_only": 0.6324,
+   "model_40": 0.6449,
+   "n": 40,
+   "weight": 0.0
+  },
   "nhl": {
    "fitted": 0.0,
    "held_out": false,
@@ -29,10 +38,11 @@
    "weight": 0.0
   }
  },
- "updated": "2026-11-01T23:22-05:00",
+ "updated": "2026-11-01T23:28-05:00",
  "weights": {
   "nba": 0.0,
   "ncaaf": 0.0,
+  "nfl": 0.0,
   "nhl": 0.0
  }
 }
