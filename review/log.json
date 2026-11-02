@@ -7046,10 +7046,10 @@
   },
   "props": {
    "fair": {
-    "n": 1508,
-    "said_fair": 86.3,
-    "said_price": 87.2,
-    "won": 1249
+    "n": 1521,
+    "said_fair": 86.2,
+    "said_price": 87.1,
+    "won": 1262
    },
    "n": 180,
    "said": 81.6,
@@ -7150,24 +7150,24 @@
    },
    {
     "flag": false,
-    "hit": 60.0,
-    "n": 20,
+    "hit": 54.5,
+    "n": 22,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 44.6
+    "said": 44.1
    },
    {
     "flag": false,
-    "hit": 79.6,
-    "n": 54,
+    "hit": 82.3,
+    "n": 62,
     "name": "props nfl Receiving Yards",
     "said": 82.3
    },
    {
     "flag": false,
-    "hit": 76.5,
-    "n": 17,
+    "hit": 81.0,
+    "n": 21,
     "name": "props nfl Receptions",
-    "said": 81.7
+    "said": 82.0
    },
    {
     "flag": false,
@@ -7276,8 +7276,8 @@
    },
    {
     "flag": false,
-    "hit": 92.9,
-    "n": 113,
+    "hit": 93.0,
+    "n": 114,
     "name": "prop locks",
     "said": 89.0
    },
@@ -7562,21 +7562,24 @@
   ],
   "lottery": [
    {
-    "killed_by": [],
+    "killed_by": [
+     "New England Patriots -9.5"
+    ],
     "legs": 8,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 4
    },
    {
     "killed_by": [
+     "New England Patriots -9.5",
      "Las Vegas Raiders -6.5",
      "Detroit Lions -9.5",
      "Indianapolis Colts +3.5"
     ],
     "legs": 8,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 3
@@ -7594,38 +7597,41 @@
    },
    {
     "killed_by": [
+     "New England Patriots -9.5",
      "Las Vegas Raiders -6.5",
      "Detroit Lions -9.5",
      "Indianapolis Colts +3.5",
      "Over 37.5 points"
     ],
     "legs": 8,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+25",
     "won": 2
    },
    {
     "killed_by": [
+     "New England Patriots -9.5",
      "Las Vegas Raiders -6.5",
      "Detroit Lions -9.5",
      "Indianapolis Colts +3.5",
      "Over 43.5 points"
     ],
     "legs": 8,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+50",
     "won": 2
    },
    {
     "killed_by": [
+     "New England Patriots -9.5",
      "Las Vegas Raiders -6.5",
      "Indianapolis Colts +3.5",
      "Over 43.5 points"
     ],
     "legs": 8,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+100",
     "won": 3
@@ -7891,14 +7897,14 @@
   },
   "props": {
    "fair": {
-    "n": 1508,
-    "said_fair": 86.3,
-    "said_price": 87.2,
-    "won": 1249
+    "n": 1521,
+    "said_fair": 86.2,
+    "said_price": 87.1,
+    "won": 1262
    },
-   "n": 140,
-   "said": 78.1,
-   "won": 108
+   "n": 156,
+   "said": 78.0,
+   "won": 122
   },
   "safe_locks": {
    "lost": [],
