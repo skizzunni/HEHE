@@ -25571,11 +25571,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Ausar Thompson",
   "p": 0.8485,
   "p_fair": 0.9612,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401909908|n:ausar thompson|Pts + Ast|10+": {
   "aid": null,
@@ -25587,11 +25589,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Ausar Thompson",
   "p": 0.8484,
   "p_fair": 0.8982,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 18.0
  },
  "nba:401909908|n:ausar thompson|Rebounds|4+": {
   "aid": null,
@@ -25603,11 +25607,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Ausar Thompson",
   "p": 0.8488,
   "p_fair": 0.8993,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909908|n:cade cunningham|Threes Made|1+": {
   "aid": null,
@@ -25619,11 +25625,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Cade Cunningham",
   "p": 0.8496,
   "p_fair": 0.8788,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909908|n:daniss jenkins|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -25635,11 +25643,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Daniss Jenkins",
   "p": 0.848,
   "p_fair": 0.9551,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909908|n:dennis schroder|Points|5+": {
   "aid": null,
@@ -25651,11 +25661,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Dennis Schroder",
   "p": 0.8485,
   "p_fair": 0.962,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909908|n:duncan robinson|Pts + Ast|10+": {
   "aid": null,
@@ -25667,11 +25679,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Duncan Robinson",
   "p": 0.8484,
   "p_fair": 0.9189,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 27.0
  },
  "nba:401909908|n:grayson allen|Threes Made|1+": {
   "aid": null,
@@ -25683,11 +25697,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Grayson Allen",
   "p": 0.8496,
   "p_fair": 0.8851,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909908|n:john collins|Rebounds|4+": {
   "aid": null,
@@ -25699,11 +25715,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "John Collins",
   "p": 0.8488,
   "p_fair": 0.8993,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909908|n:paul reed|Points|5+": {
   "aid": null,
@@ -25714,11 +25732,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Paul Reed",
   "p": 0.8729,
   "price": "-9000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401909909|n:aaron wiggins|Threes Made|1+": {
   "aid": null,
@@ -25753,6 +25773,7 @@
   "p": 0.8531,
   "p_fair": 0.8476,
   "price": "-670",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -25771,6 +25792,7 @@
   "p": 0.848,
   "p_fair": 0.8907,
   "price": "-1000",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -25789,6 +25811,7 @@
   "p": 0.7242,
   "p_fair": 0.6977,
   "price": "-310",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -25807,6 +25830,7 @@
   "p": 0.8496,
   "p_fair": 0.8805,
   "price": "-1100",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -25951,6 +25975,7 @@
   "p": 0.8464,
   "p_fair": 0.9617,
   "price": "-1350",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -25969,6 +25994,7 @@
   "p": 0.848,
   "p_fair": 0.9408,
   "price": "-1000",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -25987,6 +26013,7 @@
   "p": 0.7663,
   "p_fair": null,
   "price": "-400",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -26023,6 +26050,7 @@
   "p": 0.8496,
   "p_fair": 0.8941,
   "price": "-1100",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -26058,6 +26086,7 @@
   "p": 0.8729,
   "price": "-10000",
   "prop_lock": true,
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -26076,6 +26105,7 @@
   "p": 0.7208,
   "p_fair": 0.7399,
   "price": "-350",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -26695,11 +26725,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Anfernee Simons",
   "p": 0.8496,
   "p_fair": 0.8916,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909912|n:caleb wilson|Pts + Ast|15+": {
   "aid": null,
@@ -26711,11 +26743,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Caleb Wilson",
   "p": 0.8484,
   "p_fair": 0.8856,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 28.0
  },
  "nba:401909912|n:caleb wilson|Threes Made|1+": {
   "aid": null,
@@ -26727,11 +26761,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Caleb Wilson",
   "p": 0.8496,
   "p_fair": 0.8815,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909912|n:jalen smith|Points|5+": {
   "aid": null,
@@ -26743,11 +26779,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Jalen Smith",
   "p": 0.8523,
   "p_fair": 0.9695,
   "price": "-1500",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401909912|n:jaylen brown|Points|10+": {
   "aid": null,
@@ -26758,11 +26796,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Jaylen Brown",
   "p": 0.8729,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 25.0
  },
  "nba:401909912|n:lebron james|Points|10+": {
   "aid": null,
@@ -26774,11 +26814,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "LeBron James",
   "p": 0.8504,
   "p_fair": 0.9178,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nba:401909912|n:lebron james|Reb + Ast|10+": {
   "aid": null,
@@ -26790,11 +26832,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "LeBron James",
   "p": 0.8478,
   "p_fair": 0.8014,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909912|n:lebron james|Rebounds|4+": {
   "aid": null,
@@ -26806,11 +26850,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "LeBron James",
   "p": 0.8488,
   "p_fair": 0.8993,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909912|n:norman powell|Pts + Ast|15+": {
   "aid": null,
@@ -26822,11 +26868,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Norman Powell",
   "p": 0.8484,
   "p_fair": 0.8896,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 18.0
  },
  "nba:401909912|n:vj edgecombe|Assists|2+": {
   "aid": null,
@@ -26838,11 +26886,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "VJ Edgecombe",
   "p": 0.8497,
   "p_fair": 0.834,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909912|n:vj edgecombe|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -26854,11 +26904,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "VJ Edgecombe",
   "p": 0.848,
   "p_fair": 0.9157,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 29.0
  },
  "nba:401909912|n:vj edgecombe|Rebounds|4+": {
   "aid": null,
@@ -26870,11 +26922,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "VJ Edgecombe",
   "p": 0.8488,
   "p_fair": 0.8852,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909913|n:cooper flagg|Points|20+": {
   "aid": null,
