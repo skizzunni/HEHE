@@ -7663,10 +7663,10 @@
   },
   "props": {
    "fair": {
-    "n": 1709,
-    "said_fair": 86.3,
+    "n": 1720,
+    "said_fair": 86.2,
     "said_price": 87.3,
-    "won": 1424
+    "won": 1434
    },
    "n": 232,
    "said": 78.8,
@@ -7767,38 +7767,38 @@
    },
    {
     "flag": false,
-    "hit": 57.7,
-    "n": 26,
+    "hit": 60.7,
+    "n": 28,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 42.8
+    "said": 42.7
    },
    {
     "flag": false,
-    "hit": 80.0,
-    "n": 10,
+    "hit": 81.8,
+    "n": 11,
     "name": "props nfl Passing Yards",
-    "said": 86.0
+    "said": 85.9
    },
    {
     "flag": false,
-    "hit": 84.4,
-    "n": 77,
+    "hit": 84.3,
+    "n": 83,
     "name": "props nfl Receiving Yards",
     "said": 82.1
    },
    {
     "flag": false,
-    "hit": 84.4,
-    "n": 32,
+    "hit": 85.3,
+    "n": 34,
     "name": "props nfl Receptions",
-    "said": 82.5
+    "said": 82.6
    },
    {
     "flag": false,
     "hit": 100.0,
-    "n": 14,
+    "n": 16,
     "name": "props nfl Rushing Yards",
-    "said": 85.0
+    "said": 85.1
    },
    {
     "flag": false,
@@ -8004,26 +8004,27 @@
    }
   },
   "clv": {
-   "avg": 1.54,
-   "beat": 53.3,
-   "n": 45
+   "avg": 1.5,
+   "beat": 52.2,
+   "n": 46
   },
   "day": "2026-11-02",
   "ladder": null,
   "leaks_14d": [],
   "locks": {
    "lost": [
+    "Cooper Kupp: 15+ Receiving Yards (CHI @ SEA) 7",
     "Under 249.5 points (New Orleans Pelicans at Memphis Grizzlies) New Orleans Pelicans 135 - Memphis Grizzlies 134",
     "Over 207.5 points (Brooklyn Nets at New York Knicks) Brooklyn Nets 90 - New York Knicks 103",
     "Over 210.5 points (Washington Wizards at Orlando Magic) Washington Wizards 103 - Orlando Magic 94"
    ],
    "n": 11,
-   "open": 4,
+   "open": 3,
    "plays": {
     "best": [
      2,
      0.6242,
-     "open"
+     "lost"
     ]
    },
    "won": 4
@@ -8095,6 +8096,14 @@
    },
    {
     "against_market": false,
+    "league": "nfl",
+    "pick": "Seattle Seahawks",
+    "price": "-166",
+    "said": 60,
+    "why": "margin 17 \u00b7 the book had my side favoured too \u00b7 called at 60%"
+   },
+   {
+    "against_market": false,
     "league": "nhl",
     "pick": "Vegas Golden Knights",
     "price": "-118",
@@ -8114,10 +8123,11 @@
    {
     "killed_by": [
      "Iowa State Cyclones -14.5",
-     "Under 249.5 points"
+     "Under 249.5 points",
+     "Cooper Kupp: 15+ Receiving Yards"
     ],
     "legs": 11,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 6
@@ -8147,7 +8157,7 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k",
-    "won": 5
+    "won": 6
    },
    {
     "killed_by": [
@@ -8177,7 +8187,7 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k+25",
-    "won": 5
+    "won": 6
    },
    {
     "killed_by": [
@@ -8193,7 +8203,7 @@
     "lost": 7,
     "status": "lost",
     "tier": "10k+50",
-    "won": 4
+    "won": 5
    },
    {
     "killed_by": [
@@ -8208,15 +8218,15 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k+100",
-    "won": 4
+    "won": 5
    }
   ],
   "picks": {
-   "hit": 77.8,
-   "lost": 10,
-   "n": 45,
-   "roi": -1.9,
-   "said": 74.8,
+   "hit": 76.1,
+   "lost": 11,
+   "n": 46,
+   "roi": -4.1,
+   "said": 74.5,
    "won": 35
   },
   "picks_by_league": {
@@ -8332,6 +8342,14 @@
     "said": 80.0,
     "won": 1
    },
+   "nfl": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 60.0,
+    "won": 0
+   },
    "nhl": {
     "hit": 33.3,
     "lost": 2,
@@ -8367,14 +8385,14 @@
   },
   "props": {
    "fair": {
-    "n": 1709,
-    "said_fair": 86.3,
+    "n": 1720,
+    "said_fair": 86.2,
     "said_price": 87.3,
-    "won": 1424
+    "won": 1434
    },
-   "n": 172,
-   "said": 83.8,
-   "won": 145
+   "n": 185,
+   "said": 83.3,
+   "won": 157
   },
   "safe_locks": {
    "lost": [
@@ -8405,10 +8423,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.0,
-    "lost": 230,
-    "n": 921,
-    "roi": 1.2,
+    "hit": 74.9,
+    "lost": 231,
+    "n": 922,
+    "roi": 1.1,
     "said": 70.6,
     "won": 691
    }
@@ -8435,10 +8453,10 @@
    "nfl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6324,
-    "market_only": 0.6324,
-    "model_40": 0.6449,
-    "n": 40,
+    "logloss": 0.6393,
+    "market_only": 0.6393,
+    "model_40": 0.6526,
+    "n": 41,
     "weight": 0.0
    },
    "nhl": {
