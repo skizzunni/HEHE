@@ -1,9 +1,9 @@
 # Review 2026-11-03
 
-Picks 10-1 (90.9% vs 70.2% claimed, ROI +21.7%).
+Picks 11-1 (91.7% vs 71.2% claimed, ROI +21.3%).
 Ladder: run 1, bank $1.00, 0 win(s) in a row, best $1.00; today stakes $1.00 at 3.07x (25% est.); 9 wins to $10,000.
-Strong calls 10-1 (90.9% vs 70.2% claimed).
-Closing line value: +1.59 points on 11 picks; beat the close on 72.7%.
+Strong calls 11-1 (91.7% vs 71.2% claimed).
+Closing line value: +1.93 points on 12 picks; beat the close on 75.0%.
 - LOST efl1 Charlton Athletic at 70%: margin 1 · the book had my side favoured too · called at 70%
 Locks 1/11 won, 10 open; Best play top 2 (57%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (54%) open.
