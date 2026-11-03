@@ -3751,3 +3751,7 @@ Same for the lock and lottery ledgers (`locks.save`, `lottery.save`), whose
 daily candidate pools make up about 95% of each file: lottery.json 11.7 to
 8.1 MB, safe_locks.json 10.0 to 7.4 MB, locks.json 8.8 to 6.4 MB, same
 contents (2026-11-03).
+The browser check (tests/ui_check.py) now renders the ladder too: the
+summary tile must show the bank and streak, and the Locks tab's card must
+show the day's 5 legs, the stake, the wins needed and the odds. Breaking the
+card's heading makes it fail (2026-11-03).

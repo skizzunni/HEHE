@@ -11,7 +11,9 @@ read back. Checks:
   3. Locks -> Safe Locks renders the card, the Winners parlay (top N at 80%+)
      and the Best play (50%+), with the numbers the card's own sizes imply;
   4. the record lists the Winners parlay's own hit rate and each day's result;
-  5. a price older than 15 minutes on the viewer's clock reads stale.
+  5. a price older than 15 minutes on the viewer's clock reads stale;
+  6. the ladder tile shows the bank and streak, and the Locks tab's ladder
+     card shows today's 5 legs, the stake, the wins needed and the odds.
 """
 import json
 import os
@@ -109,12 +111,15 @@ PROBE = """<script>setTimeout(function(){
                venueNote({p: "-160", vn: [{venue: "DraftKings", price: "-160", dec: 1.625}, {venue: "Kalshi", price: "62\u00a2", dec: 1.6}]}),
                venueNote({p: "-160", vn: []})];
   out.be = [breakEvenBoost(0.08, 10), breakEvenBoost(0.12, 10), breakEvenBoost(0, 10)];
+  out.ladderTile = ((document.querySelector('#glance [data-goto="locks"]') || {}).textContent || "");
   var b = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Locks/.test(x.textContent)})[0];
   if (b) b.click();
   setTimeout(function(){
     var s = document.querySelector('[data-lkmode="safe"]'); if (s) s.click();
     setTimeout(function(){
       out.bannerOnLocks = !!document.getElementById("stalebar");
+      out.ladderCard = [].slice.call(document.querySelectorAll("#panel .sweep")).map(function(e){return e.textContent})
+        .filter(function(t){return /Ladder challenge/.test(t)}).join(" | ");
       out.betFirst = /Ticket to bet: doubles your stake/.test((document.getElementById("panel") || {}).textContent || "");
       out.heading = (document.querySelector(".parlays h3") || {}).textContent || "";
       out.legs = ((document.querySelector(".parlays ul.legs") || {}).children || []).length;
@@ -145,11 +150,18 @@ PROBE = """<script>setTimeout(function(){
 }, 500);</script>"""
 
 
+LADDER = dict(start="2026-11-03", target=10000.0, bank=3.05, runs=1, streak=1, best=3.05, wins_needed=8,
+              chance_to_target=0.0000656, history=[],
+              today=dict(stake=3.05, pays=3.06, prob=0.30, result="open",
+                         legs=[dict(label=f"Ladder leg {i + 1}", price="-300", p=0.79, match=f"Game {i + 1}", status="open")
+                               for i in range(5)]))
+
+
 def render(captured_ms, health=None):
     s = open(os.path.join(ROOT, "board.html")).read()
     s = re.sub(r'"captured":\d+', f'"captured":{captured_ms}', s, count=1)
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
-                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + ',', 1)
+                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + ',"ladder":' + json.dumps(LADDER) + ',', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -230,6 +242,11 @@ def main():
         fails.append("Current calls must show the same-book payout-target ticket")
     if "quote expired" not in new.get("expiredCurrent", "") or "67.6%" in new.get("expiredCurrent", ""):
         fails.append("Expired call-ticket quotes must not remain actionable")
+    lt, lc = new.get("ladderTile", ""), new.get("ladderCard", "")
+    if "$3.05" not in lt or "1 win in a row" not in lt:
+        fails.append("ladder tile must show the bank and streak: " + lt)
+    if not all(x in lc for x in ("Ladder challenge: $1", "Ladder leg 5", "stake $3.05", "8 straight wins", "1 in 15,244")):
+        fails.append("ladder card must show today's 5 legs, stake, wins needed and odds: " + lc[:300])
     for f in fails:
         print("FAIL:", f)
     print("OK" if not fails else f"{len(fails)} failure(s)")
