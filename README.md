@@ -3779,3 +3779,5 @@ Each open leg on the ladder ticket shows its league and kickoff time
 The Lock of the day card shows Kalshi's fee-included price when it pays
 more for the same leg (`locks.kalshi_alt`, already on the Safe Locks card)
 (2026-11-03).
+Open Prop Locks legs show their league and kickoff time (Eastern)
+(2026-11-03).
