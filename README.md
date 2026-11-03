@@ -3792,3 +3792,5 @@ The Locks and Safe Locks records break down by league too
 (`locks.report().by_sport`, top six shown). At release, Safe Locks: NHL 69
 of 77, NBA 42 of 48, NFL 16 of 17, college football 15 of 15. Locks: NBA 48
 of 60, college football 36 of 43, NHL 29 of 37, NFL 26 of 34 (2026-11-03).
+Tests cover the Locks by-league breakdown: graded legs only, most legs
+first (tests/test_by_sport.py, 2026-11-03).
