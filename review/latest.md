@@ -1,7 +1,7 @@
 # Review 2026-11-02
 
-Picks 37-12 (75.5% vs 74.5% claimed, ROI -4.6%).
-Closing line value: +1.49 points on 49 picks; beat the close on 53.1%.
+Picks 37-13 (74.0% vs 74.1% claimed, ROI -6.5%).
+Closing line value: +1.43 points on 50 picks; beat the close on 52.0%.
 - LOST epl Newcastle United at 71%: margin 1 · the book had my side favoured too · called at 71%
 - LOST fra Lorient at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST ita Atalanta at 68%: margin 3 · the book had my side favoured too · called at 68%
@@ -14,6 +14,7 @@ Closing line value: +1.49 points on 49 picks; beat the close on 53.1%.
 - LOST nfl Seattle Seahawks at 60%: margin 17 · the book had my side favoured too · called at 60%
 - LOST nhl Vegas Golden Knights at 52%: margin 1 · the book had my side favoured too · called at 52%
 - LOST nhl Florida Panthers at 62%: margin 2 · the book had my side favoured too · called at 62%
+- LOST nhl San Jose Sharks at 53%: margin 1 · the book had my side favoured too · called at 53%
 Locks 5/11 won, 2 open; Best play top 2 (62%) lost; lost: Cooper Kupp: 15+ Receiving Yards (CHI @ SEA) 7; Under 249.5 points (New Orleans Pelicans at Memphis Grizzlies) New Orleans Pelicans 135 - Memphis Grizzlies 134; Over 207.5 points (Brooklyn Nets at New York Knicks) Brooklyn Nets 90 - New York Knicks 103; Over 210.5 points (Washington Wizards at Orlando Magic) Washington Wizards 103 - Orlando Magic 94.
 Safe Locks 9/11 won, 1 open; Winners parlay top 2 (83%) won; Best play top 7 (50%) won; lost: Iowa State Cyclones to win (Memphis Tigers at Iowa State Cyclones) Memphis Tigers 80 - Iowa State Cyclones 76.
 Lottery 100: lost (6/11 legs won, killed by Iowa State Cyclones -14.5, Under 249.5 points, Cooper Kupp: 15+ Receiving Yards)
@@ -27,4 +28,4 @@ Ladder-consistency props (all time): 1445/1732 won (83.4%) vs 86.3% fair, 87.3% 
 Props 176/209 vs 83.4% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=104), ncaaf 0.00 (n=164), nfl 0.00 (n=41), nhl 0.00 (n=117)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=104), ncaaf 0.00 (n=164), nfl 0.00 (n=41), nhl 0.00 (n=118)
