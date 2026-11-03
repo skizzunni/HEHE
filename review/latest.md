@@ -10,7 +10,7 @@ Safe Locks 0/11 won, 11 open; Winners parlay top 2 (83%) open; Best play top 7 (
 Lottery 100: open (0/11 legs won)
 Lottery 100: open (0/9 legs won)
 Lottery 10k: open (0/14 legs won)
-Lottery 10k: open (0/11 legs won)
+Lottery 10k: lost (0/11 legs won, killed by Michigan Wolverines -26.5)
 Lottery 10k+25: open (0/14 legs won)
 Lottery 10k+50: open (0/14 legs won)
 Lottery 10k+100: open (0/13 legs won)
