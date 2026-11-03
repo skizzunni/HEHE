@@ -3733,3 +3733,6 @@ straight wins, roughly 1 in 40,000. Replayed from 2026-10-17, 12 runs, the
 best reached $9.38 (two wins). Safe Locks' top 5 hit 9 of 15 days but pay
 about 1.28x, which needs 38 straight wins, so the ladder uses the regular
 card.
+The summary tiles at the top of the page include the ladder (bank and win
+streak); tapping the tile, or pressing Enter on it, opens the Locks tab
+(2026-11-03).

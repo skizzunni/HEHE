@@ -757,7 +757,16 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
       : tile("Locks today", String(LK.length), "on FanDuel"))
   + tile("Prop Locks", PL.n ? PL.won + " of " + PL.n : "&mdash;",
          PL.n ? PL.hit + "% hit" : "none graded yet", PL.n && PL.hit >= 70 ? "good" : "")
-  + safe7();
+  + safe7() + ladderTile();
+  // the $1 -> $10k ladder (ladder.py): bank and streak; tapping opens the Locks tab
+  function ladderTile(){
+    const X = D.ladder;
+    if(!X) return "";
+    const m = v => "$" + (v >= 100 ? Math.round(v).toLocaleString() : v.toFixed(2));
+    return '<div class="k" data-goto="locks" role="button" tabindex="0" style="cursor:pointer"><span>Ladder $1 &rarr; $10k</span><b>'
+      + m(X.bank) + '</b><i>' + (X.streak ? X.streak + " win" + (X.streak > 1 ? "s" : "") + " in a row" : "run " + Math.max(X.runs, 1))
+      + " &middot; Locks tab</i></div>";
+  }
   // Safe Locks over the last 7 graded card days (locks.report days, newest first)
   function safe7(){
     const S = D.safe_locks_record || {}, days7 = (S.days || []).filter(d => (d.won || 0) + (d.lost || 0) > 0).slice(0, 7);
@@ -766,6 +775,19 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
     return tile("Safe Locks, 7 days", w + " of " + (w + l), (100 * w / (w + l)).toFixed(1) + "% hit, " + days7.length + " cards",
                 w / (w + l) >= 0.85 ? "good" : "");
   }
+})();
+// a glance tile with data-goto opens that section, as its button in the day bar would
+(function(){
+  const g = document.getElementById("glance");
+  if(!g) return;
+  const open = e => {
+    const t = e.target.closest("[data-goto]");
+    if(!t) return;
+    const b = document.querySelector('.days [data-slot="' + t.getAttribute("data-goto") + '"]');
+    if(b){ b.click(); (document.getElementById("panel") || b).scrollIntoView({behavior: "smooth", block: "start"}); }
+  };
+  g.addEventListener("click", open);
+  g.addEventListener("keydown", e => { if(e.key === "Enter" || e.key === " ") open(e); });
 })();
 const tabs = document.getElementById("tabs"), panel = document.getElementById("panel"),
       days = document.getElementById("days"), bias = document.getElementById("bias");
