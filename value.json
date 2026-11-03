@@ -4683,6 +4683,62 @@
    "tip": "8:00 PM",
    "venue": "Kalshi"
   },
+  "ncaab:401917512|away|FanDuel": {
+   "dec": 7.4,
+   "ev": 0.0108,
+   "fair": 0.1366,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaab:401917512",
+   "kind": "value",
+   "league": "ncaab",
+   "match": "NDSU @ SMC",
+   "price": "+640",
+   "seen": "2026-11-03T20:20:05+00:00",
+   "side": "away",
+   "start": "2026-11-05T03:00Z",
+   "team": "North Dakota State Bison",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "ncaab:401917512|away|Kalshi": {
+   "dec": 7.8493,
+   "ev": 0.0495,
+   "fair": 0.1337,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaab:401917512",
+   "kind": "value",
+   "league": "ncaab",
+   "match": "NDSU @ SMC",
+   "price": "+685",
+   "seen": "2026-11-03T20:20:05+00:00",
+   "side": "away",
+   "start": "2026-11-05T03:00Z",
+   "team": "North Dakota State Bison",
+   "tip": "10:00 PM",
+   "venue": "Kalshi"
+  },
+  "ncaab:401917512|sure": {
+   "id": "ncaab:401917512",
+   "kind": "sure",
+   "league": "ncaab",
+   "legs": [
+    {
+     "price": "+685",
+     "stake_share": 0.1282,
+     "team": "North Dakota State Bison",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-650",
+     "stake_share": 0.8718,
+     "team": "Saint Mary's Gaels",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "NDSU @ SMC",
+   "profit": 0.0059,
+   "seen": "2026-11-03T20:20:05+00:00"
+  },
   "ncaab:401917513|away|Kalshi": {
    "dec": 18.7266,
    "ev": 0.1835,
@@ -4722,6 +4778,23 @@
    "status": "won",
    "team": "under 158.5",
    "tip": "9:00 PM",
+   "venue": "Kalshi"
+  },
+  "ncaab:401919028|away|Kalshi": {
+   "dec": 11.7371,
+   "ev": 0.2226,
+   "fair": 0.1042,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ncaab:401919028",
+   "kind": "suspect",
+   "league": "ncaab",
+   "match": "CSUN @ WICH",
+   "price": "+1074",
+   "seen": "2026-11-03T20:20:05+00:00",
+   "side": "away",
+   "start": "2026-11-05T00:30Z",
+   "team": "Cal State Northridge Matadors",
+   "tip": "7:30 PM",
    "venue": "Kalshi"
   },
   "ncaab:401920422|away|FanDuel": {
