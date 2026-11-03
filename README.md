@@ -3761,3 +3761,6 @@ ledger.json is written without indentation too (`ledger.save`): 9.2 to
 Before 8 AM Eastern the ladder card previews the 5 legs it would take from
 the Locks card as it stands, with the price and chance, marked as a preview
 that can change before the card is set (2026-11-03).
+The ladder card lists past runs in a collapsible table, newest first:
+start, days lasted, peak bank, and whether the run busted or reached the
+target (2026-11-03).

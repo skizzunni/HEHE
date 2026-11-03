@@ -1257,6 +1257,15 @@ function ladderPreview(){
       + esc(L.match || '') + '</li>').join('') + '</ul><p class="note">About ' + pays.toFixed(2) + '&times;, '
     + (100 * prob).toFixed(0) + '% est. to all win. Prices and legs can change before 8 AM.</p>';
 }
+// past ladder runs, newest first: start, days lasted, peak bank, how it ended
+function ladderRuns(R, money){
+  if(!R.length) return '';
+  const how = s => s === "reached" ? '<span class="wl won">REACHED</span>' : '<span class="wl lost">BUSTED</span>';
+  return '<details><summary>Past runs (' + R.length + ')</summary><table class="sweeptab"><thead><tr><th>Started</th>'
+    + '<th>Days</th><th>Peak</th><th>Ended</th></tr></thead><tbody>'
+    + R.map(r => '<tr><td>' + esc(r.start) + '</td><td>' + r.days + '</td><td>' + money(r.peak) + '</td><td>' + how(r.status)
+      + '</td></tr>').join('') + '</tbody></table></details>';
+}
 function ladderHTML(){
   const X = D.ladder;
   if(!X) return '';
@@ -1279,8 +1288,7 @@ function ladderHTML(){
       : ladderPreview())
     + '<p class="note">Before the start, all 5 top legs won on 5 of 16 cards (31%) and paid about 3.05&times;: reaching '
     + money(X.target) + ' takes about 9 wins in a row, roughly 1 in 40,000. For fun, not a plan.'
-    + (H.length > 1 ? ' Past runs: ' + H.slice(0, -1).map(r => esc(r.start) + ' peak ' + money(r.peak)).join(' &middot; ') + '.' : '')
-    + '</p></div>';
+    + '</p>' + ladderRuns(H.slice(0, -1).reverse(), money) + '</div>';
 }
 function drawLocks(){
   const SAFE = LKMODE === "safe";
