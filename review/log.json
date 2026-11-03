@@ -7802,8 +7802,8 @@
    },
    {
     "flag": false,
-    "hit": 82.2,
-    "n": 331,
+    "hit": 81.7,
+    "n": 339,
     "name": "props nhl Shots on Goal",
     "said": 80.7
    },
@@ -7900,8 +7900,8 @@
    },
    {
     "flag": false,
-    "hit": 87.2,
-    "n": 39,
+    "hit": 87.5,
+    "n": 40,
     "name": "safe locks nhl under",
     "said": 91.5
    },
@@ -7921,8 +7921,8 @@
    },
    {
     "flag": false,
-    "hit": 42.3,
-    "n": 272,
+    "hit": 42.5,
+    "n": 273,
     "name": "value bets",
     "said": 44.5
    },
@@ -8004,9 +8004,9 @@
    }
   },
   "clv": {
-   "avg": 1.63,
-   "beat": 56.1,
-   "n": 41
+   "avg": 1.59,
+   "beat": 54.8,
+   "n": 42
   },
   "day": "2026-11-02",
   "leaks_14d": [],
@@ -8123,11 +8123,12 @@
    },
    {
     "killed_by": [
+     "Under 6.5 goals",
      "Over 225.5 points",
      "Over 224.5 points"
     ],
     "legs": 9,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "100",
     "won": 3
@@ -8135,12 +8136,13 @@
    {
     "killed_by": [
      "Iowa State Cyclones -14.5",
+     "Under 6.5 goals",
      "Under 237.5 points",
      "Over 224.5 points",
      "Over 233.5 points"
     ],
     "legs": 14,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k",
     "won": 4
@@ -8163,12 +8165,13 @@
    {
     "killed_by": [
      "Iowa State Cyclones -14.5",
+     "Under 6.5 goals",
      "Under 237.5 points",
      "Over 224.5 points",
      "Over 233.5 points"
     ],
     "legs": 14,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+25",
     "won": 4
@@ -8176,13 +8179,14 @@
    {
     "killed_by": [
      "Iowa State Cyclones -14.5",
+     "Under 6.5 goals",
      "Under 237.5 points",
      "Over 224.5 points",
      "Over 233.5 points",
      "Over 228.5 points"
     ],
     "legs": 14,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+50",
     "won": 3
@@ -8190,24 +8194,25 @@
    {
     "killed_by": [
      "Iowa State Cyclones -14.5",
+     "Under 6.5 goals",
      "Under 237.5 points",
      "Over 224.5 points",
      "Over 233.5 points"
     ],
     "legs": 13,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+100",
     "won": 4
    }
   ],
   "picks": {
-   "hit": 75.6,
+   "hit": 76.2,
    "lost": 10,
-   "n": 41,
-   "roi": -4.7,
-   "said": 74.4,
-   "won": 31
+   "n": 42,
+   "roi": -3.6,
+   "said": 74.2,
+   "won": 32
   },
   "picks_by_league": {
    "afc": {
@@ -8323,12 +8328,12 @@
     "won": 1
    },
    "nhl": {
-    "hit": 0.0,
+    "hit": 33.3,
     "lost": 2,
-    "n": 2,
-    "roi": -100.0,
-    "said": 57.0,
-    "won": 0
+    "n": 3,
+    "roi": -52.2,
+    "said": 60.3,
+    "won": 1
    },
    "per": {
     "hit": 100.0,
@@ -8362,16 +8367,16 @@
     "said_price": 87.2,
     "won": 1409
    },
-   "n": 139,
-   "said": 83.7,
-   "won": 123
+   "n": 147,
+   "said": 83.6,
+   "won": 128
   },
   "safe_locks": {
    "lost": [
     "Iowa State Cyclones to win (Memphis Tigers at Iowa State Cyclones) Memphis Tigers 80 - Iowa State Cyclones 76"
    ],
    "n": 11,
-   "open": 4,
+   "open": 3,
    "plays": {
     "best": [
      7,
@@ -8381,10 +8386,10 @@
     "winners": [
      2,
      0.831,
-     "open"
+     "won"
     ]
    },
-   "won": 6
+   "won": 7
   },
   "strong": {
    "n": 0
@@ -8397,10 +8402,10 @@
    "agree": {
     "hit": 74.9,
     "lost": 230,
-    "n": 917,
+    "n": 918,
     "roi": 1.1,
     "said": 70.5,
-    "won": 687
+    "won": 688
    }
   },
   "weights": {
@@ -8434,10 +8439,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6544,
-    "market_only": 0.6544,
-    "model_40": 0.6623,
-    "n": 116,
+    "logloss": 0.6522,
+    "market_only": 0.6522,
+    "model_40": 0.6601,
+    "n": 117,
     "weight": 0.0
    }
   }
