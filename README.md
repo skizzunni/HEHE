@@ -3758,3 +3758,6 @@ card's heading makes it fail (2026-11-03).
 ledger.json is written without indentation too (`ledger.save`): 9.2 to
 7.3 MB, same contents. That is the file that hit the 100 MB limit on
 2026-10-30 (2026-11-03).
+Before 8 AM Eastern the ladder card previews the 5 legs it would take from
+the Locks card as it stands, with the price and chance, marked as a preview
+that can change before the card is set (2026-11-03).
