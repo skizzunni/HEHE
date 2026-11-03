@@ -8361,8 +8361,8 @@
    },
    {
     "flag": false,
-    "hit": 89.7,
-    "n": 68,
+    "hit": 88.4,
+    "n": 69,
     "name": "daily calls",
     "said": 81.6
    },
@@ -8477,9 +8477,9 @@
    }
   },
   "clv": {
-   "avg": 1.97,
-   "beat": 71.4,
-   "n": 21
+   "avg": 1.84,
+   "beat": 68.2,
+   "n": 22
   },
   "day": "2026-11-03",
   "ladder": "Ladder: run 1, bank $1.00, 0 win(s) in a row, best $1.00; today stakes $1.00 at 3.07x (25% est.); 9 wins to $10,000.",
@@ -8498,6 +8498,14 @@
    "won": 4
   },
   "losses": [
+   {
+    "against_market": false,
+    "league": "ecu",
+    "pick": "Mushuc Runa",
+    "price": "-600",
+    "said": 82,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 82%"
+   },
    {
     "against_market": false,
     "league": "efl1",
@@ -8550,11 +8558,11 @@
    }
   ],
   "picks": {
-   "hit": 95.2,
-   "lost": 1,
-   "n": 21,
-   "roi": 24.2,
-   "said": 72.4,
+   "hit": 90.9,
+   "lost": 2,
+   "n": 22,
+   "roi": 18.5,
+   "said": 72.9,
    "won": 20
   },
   "picks_by_league": {
@@ -8573,6 +8581,14 @@
     "roi": 15.4,
     "said": 82.0,
     "won": 1
+   },
+   "ecu": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 82.0,
+    "won": 0
    },
    "efl1": {
     "hit": 87.5,
@@ -8629,11 +8645,11 @@
    "won": 0
   },
   "strong": {
-   "hit": 95.2,
-   "lost": 1,
-   "n": 21,
-   "roi": 24.2,
-   "said": 72.4,
+   "hit": 90.9,
+   "lost": 2,
+   "n": 22,
+   "roi": 18.5,
+   "said": 72.9,
    "won": 20
   },
   "stuck": [],
@@ -8642,10 +8658,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.3,
-    "lost": 233,
-    "n": 944,
-    "roi": 1.5,
+    "hit": 75.2,
+    "lost": 234,
+    "n": 945,
+    "roi": 1.4,
     "said": 70.6,
     "won": 711
    }
