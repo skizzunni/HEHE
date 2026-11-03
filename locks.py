@@ -736,7 +736,19 @@ def report(path=None):
                 said=round(100 * sum(L["p"] for L in legs) / len(legs), 1) if legs else None,
                 days=days,
                 plays={k: dict(days=t[0], hit=t[1], said=round(100 * t[2] / t[0], 1) if t[0] else None)
-                       for k, t in tally.items()})
+                       for k, t in tally.items()},
+                by_sport=by_sport(legs))
+
+
+def by_sport(legs):
+    """Graded legs by league, most legs first: [{sport, won, n}]."""
+    import collections
+    n, w = collections.Counter(), collections.Counter()
+    for L in legs:
+        lg = L.get("league") or "?"
+        n[lg] += 1
+        w[lg] += L["status"] == "won"
+    return [dict(sport=lg, won=w[lg], n=c) for lg, c in n.most_common()]
 
 
 ALT_TOLERANCE = 0.06

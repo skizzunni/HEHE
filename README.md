@@ -3788,3 +3788,7 @@ Prop Locks tiles open Props. The browser check confirms each one
 The daily calls record now breaks down by sport (`calls_record.by_sport`,
 most calls first). At release: soccer 29-1, NBA 16-2, college football 7-3,
 NFL 4-1, college basketball 2-1, NHL 2-0, 60-8 in all (2026-11-03).
+The Locks and Safe Locks records break down by league too
+(`locks.report().by_sport`, top six shown). At release, Safe Locks: NHL 69
+of 77, NBA 42 of 48, NFL 16 of 17, college football 15 of 15. Locks: NBA 48
+of 60, college football 36 of 43, NHL 29 of 37, NFL 26 of 34 (2026-11-03).
