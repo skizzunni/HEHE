@@ -3707,3 +3707,8 @@ split at 10-25), picks whose implied chance fell 2+ points from first quote
 to last won 71.2% vs 66.7% stated (ROI +1.8%, n=59), then 67.9% vs 69.0%
 (ROI -7.5%, n=84). The halves disagree, so no late-drift rule. Stable and
 shortened picks: 72.0% / 76.8% and 71.7% / 78.4%.
+
+**Glance tile: Safe Locks, last 7 days (2026-11-03).** The summary tiles now
+include Safe Locks' record over its last 7 graded card days, read from the
+graded card days already published (`safe_locks_record.days`); nothing new
+is computed. At release: 62 of 69 (89.9%), 2026-10-26 to 11-01.

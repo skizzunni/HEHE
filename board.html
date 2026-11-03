@@ -756,7 +756,16 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
              D.lock_of_day.record.won === D.lock_of_day.record.legs ? "good" : "")
       : tile("Locks today", String(LK.length), "on FanDuel"))
   + tile("Prop Locks", PL.n ? PL.won + " of " + PL.n : "&mdash;",
-         PL.n ? PL.hit + "% hit" : "none graded yet", PL.n && PL.hit >= 70 ? "good" : "");
+         PL.n ? PL.hit + "% hit" : "none graded yet", PL.n && PL.hit >= 70 ? "good" : "")
+  + safe7();
+  // Safe Locks over the last 7 graded card days (locks.report days, newest first)
+  function safe7(){
+    const S = D.safe_locks_record || {}, days7 = (S.days || []).filter(d => (d.won || 0) + (d.lost || 0) > 0).slice(0, 7);
+    const w = days7.reduce((a, d) => a + (d.won || 0), 0), l = days7.reduce((a, d) => a + (d.lost || 0), 0);
+    if(!(w + l)) return "";
+    return tile("Safe Locks, 7 days", w + " of " + (w + l), (100 * w / (w + l)).toFixed(1) + "% hit, " + days7.length + " cards",
+                w / (w + l) >= 0.85 ? "good" : "");
+  }
 })();
 const tabs = document.getElementById("tabs"), panel = document.getElementById("panel"),
       days = document.getElementById("days"), bias = document.getElementById("bias");
