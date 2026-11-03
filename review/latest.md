@@ -1,7 +1,7 @@
 # Review 2026-11-02
 
-Picks 14-3 (82.4% vs 72.9% claimed, ROI +5.7%).
-Closing line value: +2.71 points on 17 picks; beat the close on 82.4%.
+Picks 15-3 (83.3% vs 72.7% claimed, ROI +7.3%).
+Closing line value: +2.56 points on 18 picks; beat the close on 77.8%.
 - LOST epl Newcastle United at 71%: margin 1 · the book had my side favoured too · called at 71%
 - LOST fra Lorient at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST ita Atalanta at 68%: margin 3 · the book had my side favoured too · called at 68%
