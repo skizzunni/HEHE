@@ -7663,10 +7663,10 @@
   },
   "props": {
    "fair": {
-    "n": 1586,
+    "n": 1597,
     "said_fair": 86.1,
     "said_price": 87.1,
-    "won": 1321
+    "won": 1331
    },
    "n": 232,
    "said": 78.8,
@@ -7718,15 +7718,15 @@
    },
    {
     "flag": false,
-    "hit": 75.9,
-    "n": 87,
+    "hit": 76.1,
+    "n": 88,
     "name": "props nba Assists",
     "said": 81.9
    },
    {
     "flag": false,
-    "hit": 85.8,
-    "n": 120,
+    "hit": 86.2,
+    "n": 123,
     "name": "props nba Points",
     "said": 85.5
    },
@@ -7739,29 +7739,29 @@
    },
    {
     "flag": false,
-    "hit": 80.5,
-    "n": 87,
+    "hit": 81.5,
+    "n": 92,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.5
    },
    {
     "flag": false,
-    "hit": 80.5,
-    "n": 41,
+    "hit": 81.0,
+    "n": 42,
     "name": "props nba Reb + Ast",
     "said": 81.7
    },
    {
     "flag": false,
-    "hit": 79.2,
-    "n": 48,
+    "hit": 77.6,
+    "n": 49,
     "name": "props nba Rebounds",
     "said": 84.2
    },
    {
     "flag": false,
-    "hit": 76.1,
-    "n": 46,
+    "hit": 76.6,
+    "n": 47,
     "name": "props nba Threes Made",
     "said": 84.2
    },
@@ -7907,15 +7907,15 @@
    },
    {
     "flag": false,
-    "hit": 93.3,
-    "n": 120,
+    "hit": 93.4,
+    "n": 121,
     "name": "prop locks",
     "said": 88.9
    },
    {
     "flag": false,
-    "hit": 42.3,
-    "n": 260,
+    "hit": 42.5,
+    "n": 261,
     "name": "value bets",
     "said": 44.1
    },
@@ -7997,9 +7997,9 @@
    }
   },
   "clv": {
-   "avg": 1.73,
-   "beat": 58.1,
-   "n": 31
+   "avg": 1.84,
+   "beat": 59.4,
+   "n": 32
   },
   "day": "2026-11-02",
   "leaks_14d": [],
@@ -8051,6 +8051,14 @@
    },
    {
     "against_market": false,
+    "league": "nba",
+    "pick": "Orlando Magic",
+    "price": "-148",
+    "said": 57,
+    "why": "margin 9 \u00b7 the book had my side favoured too \u00b7 called at 57%"
+   },
+   {
+    "against_market": false,
     "league": "ncaab",
     "pick": "Iowa State Cyclones",
     "price": "-1600",
@@ -8086,10 +8094,12 @@
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 224.5 points"
+    ],
     "legs": 9,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 2
    },
@@ -8118,41 +8128,44 @@
    },
    {
     "killed_by": [
-     "Iowa State Cyclones -14.5"
+     "Iowa State Cyclones -14.5",
+     "Over 224.5 points"
     ],
     "legs": 14,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+25",
     "won": 1
    },
    {
     "killed_by": [
-     "Iowa State Cyclones -14.5"
+     "Iowa State Cyclones -14.5",
+     "Over 224.5 points"
     ],
     "legs": 14,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+50",
     "won": 0
    },
    {
     "killed_by": [
-     "Iowa State Cyclones -14.5"
+     "Iowa State Cyclones -14.5",
+     "Over 224.5 points"
     ],
     "legs": 13,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+100",
     "won": 1
    }
   ],
   "picks": {
-   "hit": 77.4,
-   "lost": 7,
-   "n": 31,
-   "roi": -1.7,
-   "said": 74.2,
+   "hit": 75.0,
+   "lost": 8,
+   "n": 32,
+   "roi": -4.8,
+   "said": 73.7,
    "won": 24
   },
   "picks_by_league": {
@@ -8246,10 +8259,10 @@
    },
    "nba": {
     "hit": 0.0,
-    "lost": 1,
-    "n": 1,
+    "lost": 2,
+    "n": 2,
     "roi": -100.0,
-    "said": 62.0,
+    "said": 59.5,
     "won": 0
    },
    "ncaab": {
@@ -8303,14 +8316,14 @@
   },
   "props": {
    "fair": {
-    "n": 1586,
+    "n": 1597,
     "said_fair": 86.1,
     "said_price": 87.1,
-    "won": 1321
+    "won": 1331
    },
-   "n": 30,
-   "said": 81.2,
-   "won": 26
+   "n": 42,
+   "said": 82.2,
+   "won": 37
   },
   "safe_locks": {
    "lost": [
@@ -8341,10 +8354,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.0,
-    "lost": 227,
-    "n": 907,
-    "roi": 1.3,
+    "hit": 74.9,
+    "lost": 228,
+    "n": 908,
+    "roi": 1.2,
     "said": 70.5,
     "won": 680
    }
@@ -8353,10 +8366,10 @@
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5673,
-    "market_only": 0.5673,
-    "model_40": 0.5964,
-    "n": 93,
+    "logloss": 0.5703,
+    "market_only": 0.5703,
+    "model_40": 0.6021,
+    "n": 94,
     "weight": 0.0
    },
    "ncaaf": {
