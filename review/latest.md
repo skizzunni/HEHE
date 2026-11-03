@@ -1,10 +1,11 @@
 # Review 2026-11-02
 
-Picks 23-5 (82.1% vs 75.6% claimed, ROI +3.8%).
-Closing line value: +1.89 points on 28 picks; beat the close on 60.7%.
+Picks 23-6 (79.3% vs 75.1% claimed, ROI +0.2%).
+Closing line value: +1.81 points on 29 picks; beat the close on 58.6%.
 - LOST epl Newcastle United at 71%: margin 1 · the book had my side favoured too · called at 71%
 - LOST fra Lorient at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST ita Atalanta at 68%: margin 3 · the book had my side favoured too · called at 68%
+- LOST nba Cleveland Cavaliers at 62%: margin 5 · the book had my side favoured too · called at 62%
 - LOST ncaab Iowa State Cyclones at 93%: margin 4 · the book had my side favoured too · called at 93%
 - LOST nhl Florida Panthers at 62%: margin 2 · the book had my side favoured too · called at 62%
 Locks 0/11 won, 11 open; Best play top 2 (62%) open.
@@ -20,4 +21,4 @@ Ladder-consistency props (all time): 1321/1586 won (83.3%) vs 86.1% fair, 87.1% 
 Props 22/24 vs 82.0% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=92), ncaaf 0.00 (n=164), nfl 0.00 (n=40), nhl 0.00 (n=115)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=93), ncaaf 0.00 (n=164), nfl 0.00 (n=40), nhl 0.00 (n=115)

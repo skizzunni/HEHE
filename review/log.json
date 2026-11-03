@@ -7997,9 +7997,9 @@
    }
   },
   "clv": {
-   "avg": 1.89,
-   "beat": 60.7,
-   "n": 28
+   "avg": 1.81,
+   "beat": 58.6,
+   "n": 29
   },
   "day": "2026-11-02",
   "leaks_14d": [],
@@ -8040,6 +8040,14 @@
     "price": "-280",
     "said": 68,
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 68%"
+   },
+   {
+    "against_market": false,
+    "league": "nba",
+    "pick": "Cleveland Cavaliers",
+    "price": "-180",
+    "said": 62,
+    "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 62%"
    },
    {
     "against_market": false,
@@ -8131,11 +8139,11 @@
    }
   ],
   "picks": {
-   "hit": 82.1,
-   "lost": 5,
-   "n": 28,
-   "roi": 3.8,
-   "said": 75.6,
+   "hit": 79.3,
+   "lost": 6,
+   "n": 29,
+   "roi": 0.2,
+   "said": 75.1,
    "won": 23
   },
   "picks_by_league": {
@@ -8227,6 +8235,14 @@
     "said": 68.5,
     "won": 1
    },
+   "nba": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 62.0,
+    "won": 0
+   },
    "ncaab": {
     "hit": 80.0,
     "lost": 1,
@@ -8316,10 +8332,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.1,
-    "lost": 225,
-    "n": 904,
-    "roi": 1.4,
+    "hit": 75.0,
+    "lost": 226,
+    "n": 905,
+    "roi": 1.3,
     "said": 70.5,
     "won": 679
    }
@@ -8328,10 +8344,10 @@
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.563,
-    "market_only": 0.563,
-    "model_40": 0.5939,
-    "n": 92,
+    "logloss": 0.5673,
+    "market_only": 0.5673,
+    "model_40": 0.5964,
+    "n": 93,
     "weight": 0.0
    },
    "ncaaf": {
