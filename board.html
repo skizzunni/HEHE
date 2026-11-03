@@ -1582,7 +1582,10 @@ function todaysPlan(){
   const LX = D.ladder, LT = LX && LX.today;
   if(LT && LT.legs && LT.legs.length)
     items.push({what: 'Ladder ticket', pick: LT.legs.map(x => x.label).join(' + '), dec: LT.pays, p: LT.prob,
-                extra: 'stake $' + LT.stake.toFixed(2) + ' (run ' + Math.max(LX.runs, 1) + ', ' + LX.wins_needed + ' wins to $10k)',
+                extra: 'stake $' + LT.stake.toFixed(2) + ' (run ' + Math.max(LX.runs, 1) + ', ' + LX.wins_needed + ' wins to $10k)'
+                  + (LT.legs.some(x => x.status === 'won' || x.status === 'lost')
+                     ? ' &middot; ' + (LT.legs.some(x => x.status === 'lost') ? 'ticket lost'
+                       : LT.legs.filter(x => x.status === 'won').length + ' of ' + LT.legs.length + ' won so far') : ''),
                 rec: LX.best > 1 ? 'best so far $' + LX.best.toFixed(2) : '',
                 line: 'Ladder ticket: ' + LT.legs.map(x => x.label + ' ' + (x.price || '')).join(' + ')});
   // 4. the strongest Prop Lock still to play (the card is ranked strongest first)

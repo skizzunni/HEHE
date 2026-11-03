@@ -3802,3 +3802,5 @@ play", "Ticket lost", "All in: ticket won") and each settled leg's final
 score (2026-11-03).
 While a ladder ticket is in play, the ladder tile shows how many of its
 legs have won ("3 of 5 won today") (2026-11-03).
+Today's plan's ladder line shows the ticket's progress too ("3 of 5 won so
+far", "ticket lost") (2026-11-03).
