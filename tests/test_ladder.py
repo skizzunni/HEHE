@@ -43,6 +43,7 @@ class Ladder(unittest.TestCase):
         r = ladder.report(b, start="2026-11-03")
         self.assertEqual(r["today"]["result"], "open")
         self.assertEqual(r["streak"], 1)
+        self.assertIn("tip", r["today"]["legs"][0])                       # kickoff time carried to the card
 
     def test_short_card_skipped(self):
         b = book({"2026-11-03": W5[:3]})

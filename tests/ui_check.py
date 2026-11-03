@@ -156,7 +156,8 @@ PROBE = """<script>setTimeout(function(){
 LADDER = dict(start="2026-11-03", target=10000.0, bank=3.05, runs=1, streak=1, best=3.05, wins_needed=8,
               chance_to_target=0.0000656, history=[],
               today=dict(stake=3.05, pays=3.06, prob=0.30, result="open",
-                         legs=[dict(label=f"Ladder leg {i + 1}", price="-300", p=0.79, match=f"Game {i + 1}", status="open")
+                         legs=[dict(label=f"Ladder leg {i + 1}", price="-300", p=0.79, match=f"Game {i + 1}", status="open",
+                                    tip="7:30 PM", lg="NHL")
                                for i in range(5)]))
 
 
@@ -251,7 +252,7 @@ def main():
     lt, lc = new.get("ladderTile", ""), new.get("ladderCard", "")
     if "$3.05" not in lt or "1 win in a row" not in lt:
         fails.append("ladder tile must show the bank and streak: " + lt)
-    if not all(x in lc for x in ("Ladder challenge: $1", "Ladder leg 5", "stake $3.05", "8 straight wins", "1 in 15,244")):
+    if not all(x in lc for x in ("Ladder challenge: $1", "Ladder leg 5", "NHL · 7:30 PM", "stake $3.05", "8 straight wins", "1 in 15,244")):
         fails.append("ladder card must show today's 5 legs, stake, wins needed and odds: " + lc[:300])
     for f in fails:
         print("FAIL:", f)

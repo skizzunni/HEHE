@@ -3774,3 +3774,5 @@ Ladder tests now cover reaching the target (the run ends, the next day
 restarts at $1), the wins-needed and chance figures, and the best bank
 surviving a bust. The bank is kept to the cent each day, as a real account
 would be (2026-11-03).
+Each open leg on the ladder ticket shows its league and kickoff time
+(Eastern), carried from the Locks card (2026-11-03).

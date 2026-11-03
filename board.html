@@ -1281,7 +1281,9 @@ function ladderHTML(){
     + esc(X.start) + '. Run ' + Math.max(X.runs, 1) + ', bank <b>' + money(X.bank) + '</b>'
     + (X.streak ? ', ' + X.streak + ' win' + (X.streak > 1 ? 's' : '') + ' in a row' : '') + '; best so far ' + money(X.best) + '.</p>'
     + (T ? '<ul class="betlegs">' + T.legs.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> &middot; '
-          + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status) + '</li>').join('') + '</ul>'
+          + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
+          + ((L.tip || L.lg) && L.status !== 'won' && L.status !== 'lost'
+             ? '<div class="sbn">' + [L.lg, L.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '') + '</li>').join('') + '</ul>'
         + '<p class="note">Today: stake ' + money(T.stake) + ' at about ' + T.pays.toFixed(2) + '&times; &rarr; '
         + money(T.stake * T.pays) + ' if all 5 win (' + (100 * T.prob).toFixed(0) + '% est.). '
         + X.wins_needed + ' straight wins at this price reach the target'
