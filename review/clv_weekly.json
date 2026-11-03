@@ -183,30 +183,30 @@
  },
  "2026-W45": {
   "all": {
-   "beat_close_pct": 65.3,
-   "brier_close": 0.1477,
-   "brier_published": 0.1545,
+   "beat_close_pct": 64.5,
+   "brier_close": 0.1462,
+   "brier_published": 0.1529,
    "dates": [
     "2026-11-02",
     "2026-11-03"
    ],
-   "logloss_close": 0.4652,
-   "logloss_published": 0.4809,
-   "mean_clv_pts": 1.0,
-   "n": 75
+   "logloss_close": 0.4617,
+   "logloss_published": 0.4771,
+   "mean_clv_pts": 0.96,
+   "n": 76
   },
   "calls": {
-   "beat_close_pct": 60.0,
-   "brier_close": 0.0289,
-   "brier_published": 0.0124,
+   "beat_close_pct": 50.0,
+   "brier_close": 0.0298,
+   "brier_published": 0.0151,
    "dates": [
     "2026-11-02",
-    "2026-11-02"
+    "2026-11-03"
    ],
-   "logloss_close": 0.1359,
-   "logloss_published": 0.0948,
-   "mean_clv_pts": -2.97,
-   "n": 5
+   "logloss_close": 0.1474,
+   "logloss_published": 0.1101,
+   "mean_clv_pts": -2.72,
+   "n": 6
   }
  }
 }
