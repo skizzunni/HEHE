@@ -1,8 +1,8 @@
 # Review 2026-11-02
 
-Picks 34-10 (77.3% vs 74.3% claimed, ROI -2.0%).
+Picks 35-10 (77.8% vs 74.8% claimed, ROI -1.9%).
 TRAILING props nba Threes Made: 75.0% hit vs 84.4% stated on 60
-Closing line value: +1.58 points on 44 picks; beat the close on 54.5%.
+Closing line value: +1.54 points on 45 picks; beat the close on 53.3%.
 - LOST epl Newcastle United at 71%: margin 1 · the book had my side favoured too · called at 71%
 - LOST fra Lorient at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST ita Atalanta at 68%: margin 3 · the book had my side favoured too · called at 68%
@@ -18,7 +18,7 @@ Safe Locks 8/11 won, 2 open; Winners parlay top 2 (83%) won; Best play top 7 (50
 Lottery 100: lost (6/11 legs won, killed by Iowa State Cyclones -14.5, Under 249.5 points)
 Lottery 100: lost (4/9 legs won, killed by Under 6.5 goals, Over 225.5 points, Over 224.5 points)
 Lottery 10k: lost (5/14 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points)
-Lottery 10k: lost (1/11 legs won, killed by Atlanta Hawks -4.5, New York Knicks -14.5, Michigan Wolverines -26.5, Under 150.5 points, Miami Hurricanes +5.5, Vegas Golden Knights over 4.5 goals)
+Lottery 10k: lost (2/11 legs won, killed by Atlanta Hawks -4.5, New York Knicks -14.5, Michigan Wolverines -26.5, Under 150.5 points, Miami Hurricanes +5.5, Vegas Golden Knights over 4.5 goals)
 Lottery 10k+25: lost (5/14 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points)
 Lottery 10k+50: lost (4/14 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points, Over 228.5 points)
 Lottery 10k+100: lost (4/13 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points)
