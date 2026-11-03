@@ -678,7 +678,12 @@ def board_payload(limit=40):
                      hit=round(100 * cw / len(cl), 1) if cl else None,
                      stated=round(sum(e.get("call_conf") or e.get("conf") or 0 for e in cl) / len(cl), 1) if cl else None,
                      ci95=_wilson(cw, len(cl)),
-                     dates=[min(map(day_of, cl)), max(map(day_of, cl))] if cl else None)
+                     dates=[min(map(day_of, cl)), max(map(day_of, cl))] if cl else None,
+                     # by sport (calls._group), most calls first
+                     by_sport=[dict(sport=g, won=sum(e["status"] == "won" for e in cl if _calls._group(e["league"]) == g),
+                                    n=sum(1 for e in cl if _calls._group(e["league"]) == g))
+                               for g in sorted({_calls._group(e["league"]) for e in cl},
+                                               key=lambda g: -sum(1 for e in cl if _calls._group(e["league"]) == g))])
     todays_calls = []
     daily_rec = _calls.load_daily()["days"].get(today) or {}
     live_candidates = [dict(c, status=(book.get(c["id"]) or {}).get("status", "open"))

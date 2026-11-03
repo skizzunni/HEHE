@@ -3785,3 +3785,6 @@ Every summary tile now opens its section when tapped, or with Enter: the
 Calls tiles open Calls, the Lock and Safe Locks tiles open Locks, and the
 Prop Locks tiles open Props. The browser check confirms each one
 (2026-11-03).
+The daily calls record now breaks down by sport (`calls_record.by_sport`,
+most calls first). At release: soccer 29-1, NBA 16-2, college football 7-3,
+NFL 4-1, college basketball 2-1, NHL 2-0, 60-8 in all (2026-11-03).

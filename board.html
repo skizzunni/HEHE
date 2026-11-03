@@ -1599,7 +1599,9 @@ function drawCalls(){
   const rec = K.n
     ? '<p class="note">Every call so far: <b>' + K.won + '&ndash;' + K.lost + '</b> (' + K.hit.toFixed(1)
       + '%, 95% range ' + K.ci95[0].toFixed(1) + '&ndash;' + K.ci95[1].toFixed(1) + '%) against '
-      + K.stated.toFixed(1) + '% stated, N = ' + K.n + ', ' + esc(K.dates[0]) + ' to ' + esc(K.dates[1]) + '.</p>'
+      + K.stated.toFixed(1) + '% stated, N = ' + K.n + ', ' + esc(K.dates[0]) + ' to ' + esc(K.dates[1]) + '.'
+      + ((K.by_sport || []).length > 1 ? ' By sport: ' + K.by_sport.map(x => esc(String(x.sport).toUpperCase()) + ' ' + x.won
+          + '&ndash;' + (x.n - x.won)).join(' &middot; ') + '.' : '') + '</p>'
     : '<p class="note">No call has been graded yet.</p>';
   panel.innerHTML = marketBanner() + todaysPlan() + '<div class="parlays"><h3>Today&rsquo;s calls</h3>'
     + '<p class="note">The ' + n + ' highest chances among today&rsquo;s games with a fresh sportsbook price, strongest first, set at 8:00 AM Eastern.</p>'
