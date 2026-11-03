@@ -3797,3 +3797,6 @@ first (tests/test_by_sport.py, 2026-11-03).
 `value_bets.confirmed` has its own test: a Polymarket, proven-source or
 other-venue consensus fair chance confirms a value bet, and DraftKings
 alone or no source does not (2026-11-03).
+The ladder ticket shows its progress through the day ("1 of 5 won, 4 to
+play", "Ticket lost", "All in: ticket won") and each settled leg's final
+score (2026-11-03).

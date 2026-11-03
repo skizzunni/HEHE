@@ -1264,6 +1264,14 @@ function ladderPreview(){
     + (100 * prob).toFixed(0) + '% est. to all win. Prices and legs can change before 8 AM.</p>';
 }
 // past ladder runs, newest first: start, days lasted, peak bank, how it ended
+// today's ticket so far: legs won, any loss, legs still to play
+function ladderProgress(legs){
+  const w = legs.filter(L => L.status === 'won').length, l = legs.filter(L => L.status === 'lost').length;
+  const v = legs.filter(L => L.status === 'void' || L.status === 'push').length, o = legs.length - w - l - v;
+  if(!w && !l && !v) return '';
+  return '<p class="three"><b>' + (l ? 'Ticket lost' : o ? w + ' of ' + legs.length + ' won, ' + o + ' to play' : 'All in: ticket won')
+    + '</b>' + (v ? ' &middot; ' + v + ' void (drops out)' : '') + '</p>';
+}
 function ladderRuns(R, money){
   if(!R.length) return '';
   const how = s => s === "reached" ? '<span class="wl won">REACHED</span>' : '<span class="wl lost">BUSTED</span>';
@@ -1288,8 +1296,10 @@ function ladderHTML(){
     + (X.streak ? ', ' + X.streak + ' win' + (X.streak > 1 ? 's' : '') + ' in a row' : '') + '; best so far ' + money(X.best) + '.</p>'
     + (T ? '<ul class="betlegs">' + T.legs.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> &middot; '
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
+          + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')
           + ((L.tip || L.lg) && L.status !== 'won' && L.status !== 'lost'
              ? '<div class="sbn">' + [L.lg, L.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '') + '</li>').join('') + '</ul>'
+        + ladderProgress(T.legs)
         + '<p class="note">Today: stake ' + money(T.stake) + ' at about ' + T.pays.toFixed(2) + '&times; &rarr; '
         + money(T.stake * T.pays) + ' if all 5 win (' + (100 * T.prob).toFixed(0) + '% est.). '
         + X.wins_needed + ' straight wins at this price reach the target'

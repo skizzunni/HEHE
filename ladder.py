@@ -60,7 +60,7 @@ def replay(book=None, start=START, target=TARGET):
                      prob=round(math.prod(L["p"] for L in legs), 4),
                      pays=round(math.prod(locks._dec(L["price"]) for L in legs), 3),
                      legs=[dict(label=L["label"], price=L["price"], p=L["p"], match=L.get("match"),
-                                tip=L.get("tip"), lg=L.get("lg") or L.get("league"),
+                                tip=L.get("tip"), lg=L.get("lg") or L.get("league"), score=L.get("score"),
                                 status=L.get("status") or "open") for L in legs])
         cur["days"].append(entry)
         if res == "open":
