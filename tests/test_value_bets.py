@@ -176,6 +176,15 @@ class Suspect(unittest.TestCase):
         self.assertEqual(kinds, ["suspect", "value"])
 
 
+class Confirmed(unittest.TestCase):
+    def test_second_sources_confirm_draftkings_alone_does_not(self):
+        yes = ["DraftKings (Shin) + Polymarket", "proven source: fd", "consensus of 2 other venues"]
+        no = ["DraftKings (Shin)", "", None]
+        self.assertTrue(all(V.confirmed(dict(fair_source=s)) for s in yes))
+        self.assertFalse(any(V.confirmed(dict(fair_source=s)) for s in no))
+        self.assertFalse(V.confirmed({}))
+
+
 class Single(unittest.TestCase):
     def test_draftkings_only_finds_are_held_out_but_archived(self):
         import tempfile

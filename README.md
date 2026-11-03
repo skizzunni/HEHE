@@ -3794,3 +3794,6 @@ of 77, NBA 42 of 48, NFL 16 of 17, college football 15 of 15. Locks: NBA 48
 of 60, college football 36 of 43, NHL 29 of 37, NFL 26 of 34 (2026-11-03).
 Tests cover the Locks by-league breakdown: graded legs only, most legs
 first (tests/test_by_sport.py, 2026-11-03).
+`value_bets.confirmed` has its own test: a Polymarket, proven-source or
+other-venue consensus fair chance confirms a value bet, and DraftKings
+alone or no source does not (2026-11-03).
