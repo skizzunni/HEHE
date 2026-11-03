@@ -1,6 +1,8 @@
 # Review 2026-11-03
 
-No picks settled yet.
+Picks 2-0 (100.0% vs 70.5% claimed, ROI +34.2%).
+Strong calls 2-0 (100.0% vs 70.5% claimed).
+Closing line value: -1.54 points on 2 picks; beat the close on 0.0%.
 Ladder-consistency props (all time): 1462/1755 won (83.3%) vs 86.3% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)

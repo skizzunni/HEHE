@@ -92,17 +92,20 @@
  "frozen_from": "2026-11-03",
  "frozen_to": "2026-11-16",
  "holdout": {
-  "all_hit": null,
-  "all_n": 0,
-  "days": 0,
-  "hit": null,
-  "n": 0,
-  "wilson95": null,
+  "all_hit": 100.0,
+  "all_n": 2,
+  "days": 1,
+  "hit": 100.0,
+  "n": 2,
+  "wilson95": [
+   34.2,
+   100.0
+  ],
   "window": [
    "2026-11-03",
    "2026-11-16"
   ],
-  "won": 0
+  "won": 2
  },
  "holm_alpha": 0.025,
  "lb_margin": 0.03,
@@ -116,5 +119,5 @@
   "nhl",
   "wnba"
  ],
- "updated": "2026-11-03T06:51-05:00"
+ "updated": "2026-11-03T06:56-05:00"
 }
