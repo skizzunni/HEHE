@@ -3767,3 +3767,6 @@ target (2026-11-03).
 A Prop Locks, 7 days tile sits beside the Safe Locks one, from the days
 `prop_locks.report` already publishes. At release: 77 of 83 (92.8%),
 2026-10-27 to 11-02 (2026-11-03).
+The browser check also confirms the Safe Locks 7-day tile totals the
+record's graded days; emptying its day window makes the check fail
+(2026-11-03).

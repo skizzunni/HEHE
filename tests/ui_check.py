@@ -12,7 +12,8 @@ read back. Checks:
      and the Best play (50%+), with the numbers the card's own sizes imply;
   4. the record lists the Winners parlay's own hit rate and each day's result;
   5. a price older than 15 minutes on the viewer's clock reads stale;
-  6. the ladder tile shows the bank and streak, and the Locks tab's ladder
+  6. the Safe Locks 7-day tile totals the record's graded days;
+  7. the ladder tile shows the bank and streak, and the Locks tab's ladder
      card shows today's 5 legs, the stake, the wins needed and the odds.
 """
 import json
@@ -112,6 +113,8 @@ PROBE = """<script>setTimeout(function(){
                venueNote({p: "-160", vn: []})];
   out.be = [breakEvenBoost(0.08, 10), breakEvenBoost(0.12, 10), breakEvenBoost(0, 10)];
   out.ladderTile = ((document.querySelector('#glance [data-goto="locks"]') || {}).textContent || "");
+  out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
+    .filter(function(t){return /7 days/.test(t)});
   var b = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Locks/.test(x.textContent)})[0];
   if (b) b.click();
   setTimeout(function(){
@@ -242,6 +245,9 @@ def main():
         fails.append("Current calls must show the same-book payout-target ticket")
     if "quote expired" not in new.get("expiredCurrent", "") or "67.6%" in new.get("expiredCurrent", ""):
         fails.append("Expired call-ticket quotes must not remain actionable")
+    t7 = " | ".join(new.get("tiles7") or [])
+    if "Safe Locks, 7 days11 of 11100.0% hit, 1 cards" not in t7:
+        fails.append("Safe Locks 7-day tile must total the record's graded days: " + t7)
     lt, lc = new.get("ladderTile", ""), new.get("ladderCard", "")
     if "$3.05" not in lt or "1 win in a row" not in lt:
         fails.append("ladder tile must show the bank and streak: " + lt)
