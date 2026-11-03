@@ -26980,11 +26980,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Points",
+  "matched": "name",
   "name": "Cooper Flagg",
   "p": 0.7273,
   "p_fair": 0.7562,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 17.0
  },
  "nba:401909913|n:cooper flagg|Reb + Ast|10+": {
   "aid": null,
@@ -26996,11 +26998,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Cooper Flagg",
   "p": 0.857,
   "p_fair": 0.8083,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909913|n:cooper flagg|Rebounds|4+": {
   "aid": null,
@@ -27012,11 +27016,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Cooper Flagg",
   "p": 0.8547,
   "p_fair": 0.8968,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909913|n:darius acuff|Assists|4+": {
   "aid": null,
@@ -27028,11 +27034,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Darius Acuff Jr.",
   "p": 0.8531,
   "p_fair": 0.8491,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909913|n:darius acuff|Points|15+": {
   "aid": null,
@@ -27044,11 +27052,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Darius Acuff Jr.",
   "p": 0.8485,
   "p_fair": 0.8963,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 25.0
  },
  "nba:401909913|n:darius acuff|Pts + Ast|25+": {
   "aid": null,
@@ -27060,11 +27070,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Darius Acuff Jr.",
   "p": 0.7612,
   "p_fair": 0.755,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 31.0
  },
  "nba:401909913|n:domantas sabonis|Pts + Ast|15+": {
   "aid": null,
@@ -27076,11 +27088,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Domantas Sabonis",
   "p": 0.8547,
   "p_fair": 0.8796,
   "price": "-800",
-  "status": "open"
+  "status": "lost",
+  "value": 13.0
  },
  "nba:401909913|n:domantas sabonis|Reb + Ast|15+": {
   "aid": null,
@@ -27092,11 +27106,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Domantas Sabonis",
   "p": 0.8478,
   "p_fair": 0.782,
   "price": "-770",
-  "status": "open"
+  "status": "lost",
+  "value": 11.0
  },
  "nba:401909913|n:kyrie irving|Assists|4+": {
   "aid": null,
@@ -27112,7 +27128,9 @@
   "p": 0.7843,
   "p_fair": 0.7833,
   "price": "-400",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909913|n:marcus sasser|Assists|2+": {
   "aid": null,
@@ -27124,11 +27142,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Marcus Sasser",
   "p": 0.7803,
   "p_fair": 0.7571,
   "price": "-390",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401909913|n:naji marshall|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -27140,11 +27160,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Naji Marshall",
   "p": 0.8551,
   "p_fair": 0.919,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 14.0
  },
  "nba:401909913|n:pj washington|Points|5+": {
   "aid": null,
@@ -27155,11 +27177,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "P.J. Washington",
   "p": 0.8729,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nba:401909913|n:precious achiuwa|Points|5+": {
   "aid": null,
@@ -27171,11 +27195,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Precious Achiuwa",
   "p": 0.8556,
   "p_fair": 0.965,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909914|n:cameron boozer|Assists|4+": {
   "aid": null,
@@ -27442,11 +27468,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Ayo Dosunmu",
   "p": 0.8485,
   "p_fair": 0.9334,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nba:401909915|n:brayden burries|Points|5+": {
   "aid": null,
@@ -27458,11 +27486,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Brayden Burries",
   "p": 0.8485,
   "p_fair": 0.9633,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909915|n:jaden mcdaniels|Assists|2+": {
   "aid": null,
@@ -27474,11 +27504,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jaden McDaniels",
   "p": 0.8497,
   "p_fair": 0.8399,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909915|n:jaden mcdaniels|Pts + Ast|15+": {
   "aid": null,
@@ -27490,11 +27522,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Jaden McDaniels",
   "p": 0.8484,
   "p_fair": 0.881,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909915|n:jaime jaquez|Points|5+": {
   "aid": null,
@@ -27505,11 +27539,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Jaime Jaquez Jr.",
   "p": 0.8729,
   "price": "-9000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nba:401909915|n:jaime jaquez|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -27521,11 +27557,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jaime Jaquez Jr.",
   "p": 0.848,
   "p_fair": 0.9239,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 29.0
  },
  "nba:401909915|n:kasparas jakucionis|Assists|2+": {
   "aid": null,
@@ -27537,11 +27575,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Kasparas Jakucionis",
   "p": 0.8497,
   "p_fair": 0.8507,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909915|n:kelel ware|Rebounds|4+": {
   "aid": null,
@@ -27553,11 +27593,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Kel'el Ware",
   "p": 0.8488,
   "p_fair": 0.9397,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909915|n:kyle kuzma|Reb + Ast|5+": {
   "aid": null,
@@ -27569,11 +27611,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Kyle Kuzma",
   "p": 0.8478,
   "p_fair": 0.8766,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909915|n:lamelo ball|Pts + Ast|20+": {
   "aid": null,
@@ -27585,11 +27629,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "LaMelo Ball",
   "p": 0.8484,
   "p_fair": 0.8481,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 37.0
  },
  "nba:401909915|n:lamelo ball|Threes Made|2+": {
   "aid": null,
@@ -27601,11 +27647,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "LaMelo Ball",
   "p": 0.8496,
   "p_fair": 0.8916,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909915|n:myles turner|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -27617,11 +27665,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Myles Turner",
   "p": 0.848,
   "p_fair": 0.9543,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401909915|n:rudy gobert|Points|5+": {
   "aid": null,
@@ -27633,11 +27683,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Rudy Gobert",
   "p": 0.8464,
   "p_fair": 0.9613,
   "price": "-1350",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909915|n:rudy gobert|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -27649,11 +27701,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Rudy Gobert",
   "p": 0.848,
   "p_fair": 0.9157,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909915|n:terrence shannon|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -27669,7 +27723,9 @@
   "p": 0.848,
   "p_fair": 0.9589,
   "price": "-1000",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909915|n:tyler herro|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -27681,11 +27737,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Tyler Herro",
   "p": 0.8551,
   "p_fair": 0.9097,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 30.0
  },
  "nba:401909916|n:alperen sengun|Assists|4+": {
   "aid": null,
