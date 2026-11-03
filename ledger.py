@@ -89,8 +89,10 @@ def load():
 
 
 def save(d):
+    # no indentation (as tickets/locks/lottery): 9.2 -> 7.3 MB on 2026-11-03,
+    # headroom under GitHub's 100 MB limit, which this file hit on 2026-10-30
     with open(LEDGER, "w") as fh:
-        json.dump(d, fh, indent=1, sort_keys=True)
+        json.dump(d, fh, separators=(",", ":"), sort_keys=True)
 
 
 # ------------------------------------------------------------------ record

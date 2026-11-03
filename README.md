@@ -3755,3 +3755,6 @@ The browser check (tests/ui_check.py) now renders the ladder too: the
 summary tile must show the bank and streak, and the Locks tab's card must
 show the day's 5 legs, the stake, the wins needed and the odds. Breaking the
 card's heading makes it fail (2026-11-03).
+ledger.json is written without indentation too (`ledger.save`): 9.2 to
+7.3 MB, same contents. That is the file that hit the 100 MB limit on
+2026-10-30 (2026-11-03).
