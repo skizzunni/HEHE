@@ -765,9 +765,14 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
   function ladderTile(){
     const X = D.ladder;
     if(!X) return "";
+    // while today's ticket is in play: how many of its legs have won
+    const today = () => {
+      const L = ((X.today || {}).legs) || [], w = L.filter(x => x.status === "won").length;
+      return L.length && w && !L.some(x => x.status === "lost") ? w + " of " + L.length + " won today" : "";
+    };
     const m = v => "$" + (v >= 100 ? Math.round(v).toLocaleString() : v.toFixed(2));
     return '<div class="k" data-goto="locks" role="button" tabindex="0" style="cursor:pointer"><span>Ladder $1 &rarr; $10k</span><b>'
-      + m(X.bank) + '</b><i>' + (X.streak ? X.streak + " win" + (X.streak > 1 ? "s" : "") + " in a row" : "run " + Math.max(X.runs, 1))
+      + m(X.bank) + '</b><i>' + (today() || (X.streak ? X.streak + " win" + (X.streak > 1 ? "s" : "") + " in a row" : "run " + Math.max(X.runs, 1)))
       + " &middot; Locks tab</i></div>";
   }
   // Safe Locks over the last 7 graded card days (locks.report days, newest first)

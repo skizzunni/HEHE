@@ -255,7 +255,7 @@ def main():
     if "Safe Locks, 7 days11 of 11100.0% hit, 1 cards" not in t7:
         fails.append("Safe Locks 7-day tile must total the record's graded days: " + t7)
     lt, lc = new.get("ladderTile", ""), new.get("ladderCard", "")
-    if "$3.05" not in lt or "1 win in a row" not in lt:
+    if "$3.05" not in lt or "1 of 5 won today" not in lt:
         fails.append("ladder tile must show the bank and streak: " + lt)
     if not all(x in lc for x in ("Ladder challenge: $1", "Ladder leg 5", "NHL · 7:30 PM", "1 of 5 won, 4 to play", "A 3 - B 2", "stake $3.05", "8 straight wins", "1 in 15,244")):
         fails.append("ladder card must show today's 5 legs, stake, wins needed and odds: " + lc[:300])

@@ -3800,3 +3800,5 @@ alone or no source does not (2026-11-03).
 The ladder ticket shows its progress through the day ("1 of 5 won, 4 to
 play", "Ticket lost", "All in: ticket won") and each settled leg's final
 score (2026-11-03).
+While a ladder ticket is in play, the ladder tile shows how many of its
+legs have won ("3 of 5 won today") (2026-11-03).
