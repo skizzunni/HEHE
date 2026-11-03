@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 61.0,
-  "brier_close": 0.1695,
-  "brier_published": 0.1724,
+  "beat_close_pct": 61.7,
+  "brier_close": 0.166,
+  "brier_published": 0.1694,
   "dates": [
    "2026-10-31",
    "2026-11-03"
   ],
-  "logloss_close": 0.5149,
-  "logloss_published": 0.5219,
-  "mean_clv_pts": 0.66,
+  "logloss_close": 0.5071,
+  "logloss_published": 0.5152,
+  "mean_clv_pts": 0.75,
   "n": 300
  },
  "market_is_model": true,
@@ -2817,6 +2817,15 @@
    "published": 0.69,
    "won": 0
   },
+  "efl1:401880177": {
+   "call": false,
+   "close": 0.6982,
+   "clv": 4.82,
+   "day": "2026-11-03",
+   "league": "efl1",
+   "published": 0.65,
+   "won": 1
+  },
   "efl1:401880178": {
    "call": false,
    "close": 0.6511,
@@ -2860,6 +2869,15 @@
    "day": "2026-11-03",
    "league": "efl1",
    "published": 0.65,
+   "won": 1
+  },
+  "efl1:401880184": {
+   "call": false,
+   "close": 0.7458,
+   "clv": -0.42,
+   "day": "2026-11-03",
+   "league": "efl1",
+   "published": 0.75,
    "won": 1
   },
   "efl1:401880185": {
@@ -22267,6 +22285,33 @@
    "record_excluded": "unpriced_or_unverifiable",
    "won": 1
   },
+  "ucl:401915307": {
+   "call": false,
+   "close": 0.7734,
+   "clv": 2.34,
+   "day": "2026-11-03",
+   "league": "ucl",
+   "published": 0.75,
+   "won": 1
+  },
+  "ucl:401915308": {
+   "call": false,
+   "close": 0.6854,
+   "clv": 3.54,
+   "day": "2026-11-03",
+   "league": "ucl",
+   "published": 0.65,
+   "won": 1
+  },
+  "ucl:401915309": {
+   "call": false,
+   "close": 0.7734,
+   "clv": -2.66,
+   "day": "2026-11-03",
+   "league": "ucl",
+   "published": 0.8,
+   "won": 1
+  },
   "ucl:401915310": {
    "call": false,
    "close": 0.7155,
@@ -22301,6 +22346,33 @@
    "day": "2026-11-03",
    "league": "ucl",
    "published": 0.75,
+   "won": 1
+  },
+  "ucl:401915385": {
+   "call": false,
+   "close": 0.715,
+   "clv": 5.5,
+   "day": "2026-11-03",
+   "league": "ucl",
+   "published": 0.66,
+   "won": 1
+  },
+  "ucl:401915386": {
+   "call": false,
+   "close": 0.7061,
+   "clv": 7.61,
+   "day": "2026-11-03",
+   "league": "ucl",
+   "published": 0.63,
+   "won": 1
+  },
+  "ucl:401915387": {
+   "call": false,
+   "close": 0.7348,
+   "clv": -2.52,
+   "day": "2026-11-03",
+   "league": "ucl",
+   "published": 0.76,
    "won": 1
   },
   "ucl:401915390": {
@@ -23688,5 +23760,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-03T21:52+00:00"
+ "updated": "2026-11-03T21:57+00:00"
 }
