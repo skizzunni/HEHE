@@ -3740,3 +3740,6 @@ Today's plan on the Calls tab now includes the day's ladder ticket, with
 its stake and the wins still needed. A display fix in the same card:
 multiplier-priced lines (the 2x ticket, the ladder) showed a literal
 "&times;" instead of "×" (2026-11-03).
+The daily review (review/latest.md) now carries a ladder line: run, bank,
+streak, best, today's stake and price, and the wins still needed
+(`tools/daily_review.ladder_line`, 2026-11-03).

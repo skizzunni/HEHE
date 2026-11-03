@@ -373,6 +373,21 @@ def _pick_stuck_days():
 PICK_STUCK_DAYS = _pick_stuck_days()
 
 
+def ladder_line(book=None):
+    """One line on the $1 -> $10k ladder (ladder.py), or None before it starts."""
+    try:
+        import ladder
+        r = ladder.report(book)
+    except Exception:
+        return None
+    if not r.get("runs"):
+        return None
+    t = r.get("today")
+    return (f"Ladder: run {r['runs']}, bank ${r['bank']:.2f}, {r['streak']} win(s) in a row, best ${r['best']:.2f}"
+            + (f"; today stakes ${t['stake']:.2f} at {t['pays']:.2f}x ({100 * t['prob']:.0f}% est.)" if t else "")
+            + f"; {r['wins_needed']} wins to ${r['target']:,.0f}.")
+
+
 BIG_MB = 60     # GitHub refuses any file over 100 MB, and every build then fails
 
 
@@ -636,6 +651,8 @@ def words(r, fit):
                    + (f", ROI {p['roi']:+}%" if p.get("roi") is not None else "") + ").")
     else:
         out.append("No picks settled yet.")
+    if r.get("ladder"):
+        out.append(r["ladder"])
     for name, mb in r.get("big_files") or []:
         out.append(f"BIG FILE {name} is {mb} MB -- GitHub refuses files over 100 MB and the board stops; trim it")
     st = r.get("stuck") or []
@@ -734,6 +751,7 @@ def main():
     log[today.isoformat()]["audit"] = audit(graded, props, locks)
     log[today.isoformat()]["stuck"] = stuck(ledger, props, locks, lottery, today)
     log[today.isoformat()]["big_files"] = big_files()
+    log[today.isoformat()]["ladder"] = ladder_line()
     with open(log_path, "w") as fh:
         json.dump(log, fh, indent=1, sort_keys=True)
     latest = max(k for k, v in log.items() if v["picks"].get("n") or k == today.isoformat())

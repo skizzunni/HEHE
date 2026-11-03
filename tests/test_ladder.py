@@ -49,5 +49,22 @@ class Ladder(unittest.TestCase):
         self.assertEqual(ladder.replay(b, start="2026-11-03"), [])
 
 
+class ReviewLine(unittest.TestCase):
+    def test_daily_review_reports_the_ladder(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        b = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "open")]})
+        from unittest import mock
+        with mock.patch.object(ladder, "START", "2026-11-03"), \
+             mock.patch.object(ladder, "report", lambda bk=None: ladder.__dict__["_report"](b, start="2026-11-03")):
+            line = daily_review.ladder_line()
+        self.assertIn("run 1, bank $7.59, 1 win(s) in a row", line)
+        self.assertIn("today stakes $7.59", line)
+        self.assertIsNone(daily_review.ladder_line(book({})))
+
+
+ladder._report = ladder.report
+
+
 if __name__ == "__main__":
     unittest.main()
