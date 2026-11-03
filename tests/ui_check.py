@@ -112,7 +112,9 @@ PROBE = """<script>setTimeout(function(){
                venueNote({p: "-160", vn: [{venue: "DraftKings", price: "-160", dec: 1.625}, {venue: "Kalshi", price: "62\u00a2", dec: 1.6}]}),
                venueNote({p: "-160", vn: []})];
   out.be = [breakEvenBoost(0.08, 10), breakEvenBoost(0.12, 10), breakEvenBoost(0, 10)];
-  out.ladderTile = ((document.querySelector('#glance [data-goto="locks"]') || {}).textContent || "");
+  out.ladderTile = [].slice.call(document.querySelectorAll('#glance [data-goto="locks"]')).map(function(e){return e.textContent})
+    .filter(function(t){return /Ladder/.test(t)}).join("");
+  out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
   var b = [].slice.call(document.querySelectorAll("button")).filter(function(x){return /^Locks/.test(x.textContent)})[0];
@@ -246,6 +248,8 @@ def main():
         fails.append("Current calls must show the same-book payout-target ticket")
     if "quote expired" not in new.get("expiredCurrent", "") or "67.6%" in new.get("expiredCurrent", ""):
         fails.append("Expired call-ticket quotes must not remain actionable")
+    if (new.get("tileGoto") or [""])[0] != "calls" or "" in (new.get("tileGoto") or [""]):
+        fails.append(f"every summary tile must open its section: {new.get('tileGoto')}")
     t7 = " | ".join(new.get("tiles7") or [])
     if "Safe Locks, 7 days11 of 11100.0% hit, 1 cards" not in t7:
         fails.append("Safe Locks 7-day tile must total the record's graded days: " + t7)

@@ -3781,3 +3781,7 @@ more for the same leg (`locks.kalshi_alt`, already on the Safe Locks card)
 (2026-11-03).
 Open Prop Locks legs show their league and kickoff time (Eastern)
 (2026-11-03).
+Every summary tile now opens its section when tapped, or with Enter: the
+Calls tiles open Calls, the Lock and Safe Locks tiles open Locks, and the
+Prop Locks tiles open Props. The browser check confirms each one
+(2026-11-03).

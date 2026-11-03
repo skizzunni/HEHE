@@ -742,7 +742,10 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
   const R = D.results || {}, K = R.calls_record || {}, C = R.calls || [];
   const PL = ((D.prop_locks || {}).record) || {};
   const LK = (((D.locks || {}).today || {}).locks) || [];
-  const tile = (label, big, sub, cls) => '<div class="k' + (cls ? " " + cls : "") + '"><span>' + label
+  // each tile opens its section when tapped (handled by the data-goto listener below)
+  const goto = label => /Prop/.test(label) ? "props" : /Lock/.test(label) ? "locks" : /call/i.test(label) ? "calls" : "";
+  const tile = (label, big, sub, cls) => '<div class="k' + (cls ? " " + cls : "") + '"'
+    + (goto(label) ? ' data-goto="' + goto(label) + '" role="button" tabindex="0" style="cursor:pointer"' : '') + '><span>' + label
     + '</span><b>' + big + '</b><i>' + sub + '</i></div>';
   const done = C.filter(c => c.status === "won" || c.status === "lost");
   g.innerHTML =
