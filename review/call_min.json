@@ -1,85 +1,106 @@
 {
- "cutoffs": {},
+ "cutoffs": {
+  "soccer": 0.55
+ },
  "detail": {
-  "ncaaf": {
-   "all_hit": 64.0,
+  "nba": {
+   "all_hit": 69.2,
    "cutoff": null,
-   "games": 114,
+   "games": 104,
    "note": "fewer than 150 graded picks in the window",
    "tested": false,
    "window": [
-    "2026-10-06",
-    "2026-10-19"
+    "2026-10-20",
+    "2026-11-02"
+   ]
+  },
+  "ncaab": {
+   "all_hit": 90.0,
+   "cutoff": null,
+   "games": 10,
+   "note": "fewer than 150 graded picks in the window",
+   "tested": false,
+   "window": [
+    "2026-10-20",
+    "2026-11-02"
+   ]
+  },
+  "ncaaf": {
+   "all_hit": 73.2,
+   "cutoff": null,
+   "games": 112,
+   "note": "fewer than 150 graded picks in the window",
+   "tested": false,
+   "window": [
+    "2026-10-20",
+    "2026-11-02"
    ]
   },
   "nfl": {
-   "all_hit": 53.6,
+   "all_hit": 75.0,
    "cutoff": null,
    "games": 28,
    "note": "fewer than 150 graded picks in the window",
    "tested": false,
    "window": [
-    "2026-10-06",
-    "2026-10-19"
+    "2026-10-20",
+    "2026-11-02"
    ]
   },
   "nhl": {
-   "all_hit": 59.8,
+   "all_hit": 57.9,
    "cutoff": null,
-   "games": 97,
+   "games": 95,
    "note": "fewer than 150 graded picks in the window",
    "tested": false,
    "window": [
-    "2026-10-06",
-    "2026-10-19"
+    "2026-10-20",
+    "2026-11-02"
    ]
   },
   "soccer": {
-   "all_hit": 82.6,
-   "cutoff": null,
-   "games": 46,
-   "note": "fewer than 150 graded picks in the window",
-   "tested": false,
+   "all_hit": 78.9,
+   "calls": 564,
+   "candidate": 0.55,
+   "cutoff": 0.55,
+   "games": 564,
+   "hit": 78.9,
+   "holm_threshold": 0.025,
+   "p": 0.0001082458353091998,
+   "tested": true,
+   "wilson95": [
+    75.3,
+    82.1
+   ],
    "window": [
-    "2026-10-06",
-    "2026-10-19"
-   ]
-  },
-  "ufc": {
-   "all_hit": 53.8,
-   "cutoff": null,
-   "games": 13,
-   "note": "fewer than 150 graded picks in the window",
-   "tested": false,
-   "window": [
-    "2026-10-06",
-    "2026-10-19"
+    "2026-10-20",
+    "2026-11-02"
    ]
   },
   "wnba": {
-   "all_hit": 83.3,
+   "all_hit": 60.0,
    "cutoff": null,
-   "games": 6,
+   "games": 5,
    "note": "fewer than 150 graded picks in the window",
    "tested": false,
    "window": [
-    "2026-10-06",
-    "2026-10-19"
+    "2026-10-20",
+    "2026-11-02"
    ]
   }
  },
- "frozen_from": "2026-10-20",
- "frozen_to": "2026-11-02",
+ "frozen_from": "2026-11-03",
+ "frozen_to": "2026-11-16",
  "holdout": {
-  "all_hit": 74.8,
-  "all_n": 918,
+  "all_hit": null,
+  "all_n": 0,
   "days": 0,
   "hit": null,
   "n": 0,
   "wilson95": null,
   "window": [
-   "2026-10-20",
-   "2026-11-02"
+   "2026-11-03",
+   "2026-11-16"
   ],
   "won": 0
  },
@@ -88,12 +109,12 @@
  "min_n": 150,
  "target": 0.75,
  "unqualified": [
+  "nba",
+  "ncaab",
   "ncaaf",
   "nfl",
   "nhl",
-  "soccer",
-  "ufc",
   "wnba"
  ],
- "updated": "2026-11-02T23:56-05:00"
+ "updated": "2026-11-03T00:01-05:00"
 }
