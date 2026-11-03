@@ -8477,9 +8477,9 @@
    }
   },
   "clv": {
-   "avg": -0.28,
-   "beat": 40.0,
-   "n": 5
+   "avg": 1.59,
+   "beat": 72.7,
+   "n": 11
   },
   "day": "2026-11-03",
   "ladder": "Ladder: run 1, bank $1.00, 0 win(s) in a row, best $1.00; today stakes $1.00 at 3.07x (25% est.); 9 wins to $10,000.",
@@ -8497,7 +8497,16 @@
    },
    "won": 1
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "efl1",
+    "pick": "Charlton Athletic",
+    "price": "-310",
+    "said": 70,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70%"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -8541,12 +8550,12 @@
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 5,
-   "roi": 33.0,
-   "said": 71.2,
-   "won": 5
+   "hit": 90.9,
+   "lost": 1,
+   "n": 11,
+   "roi": 21.7,
+   "said": 70.2,
+   "won": 10
   },
   "picks_by_league": {
    "afc": {
@@ -8556,6 +8565,14 @@
     "roi": 34.2,
     "said": 70.5,
     "won": 2
+   },
+   "efl1": {
+    "hit": 83.3,
+    "lost": 1,
+    "n": 6,
+    "roi": 12.3,
+    "said": 69.3,
+    "won": 5
    },
    "swe": {
     "hit": 100.0,
@@ -8604,12 +8621,12 @@
    "won": 0
   },
   "strong": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 5,
-   "roi": 33.0,
-   "said": 71.2,
-   "won": 5
+   "hit": 90.9,
+   "lost": 1,
+   "n": 11,
+   "roi": 21.7,
+   "said": 70.2,
+   "won": 10
   },
   "stuck": [],
   "vs_market_14d": {
@@ -8617,12 +8634,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.0,
-    "lost": 232,
-    "n": 928,
+    "hit": 75.1,
+    "lost": 233,
+    "n": 934,
     "roi": 1.2,
     "said": 70.6,
-    "won": 696
+    "won": 701
    }
   },
   "weights": {

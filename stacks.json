@@ -3684,12 +3684,13 @@
    "match": "Bolton Wanderers at Charlton Athletic",
    "p": 0.9518,
    "p_model": 0.9508,
+   "score": "Bolton Wanderers 1 - Charlton Athletic 0",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Bolton Wanderers"
    },
-   "status": "open"
+   "status": "won"
   },
   "efl1:401880174|Over 0.5 goals": {
    "away": "Bolton Wanderers",
@@ -3701,11 +3702,12 @@
    "match": "Bolton Wanderers at Charlton Athletic",
    "p": 0.9404,
    "p_model": 0.9392,
+   "score": "Bolton Wanderers 1 - Charlton Athletic 0",
    "spec": {
     "line": 0.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "efl1:401880177|No \u00b7 Southampton wins by over 2.5 goals": {
    "away": "Southampton",
@@ -3768,11 +3770,12 @@
    "match": "Lincoln City at Watford",
    "p": 0.9454,
    "p_model": 0.9443,
+   "score": "Lincoln City 0 - Watford 1",
    "spec": {
     "line": 5.5,
     "t": "under"
    },
-   "status": "open"
+   "status": "won"
   },
   "efl1:401880180|No \u00b7 Sheffield United wins by over 2.5 goals": {
    "away": "Sheffield United",
@@ -3784,12 +3787,13 @@
    "match": "Sheffield United at Preston North End",
    "p": 0.8996,
    "p_model": 0.8976,
+   "score": "Sheffield United 3 - Preston North End 2",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Sheffield United"
    },
-   "status": "open"
+   "status": "won"
   },
   "efl1:401880180|No \u00b7 Sheffield United wins by over 3.5 goals": {
    "away": "Sheffield United",
@@ -3801,12 +3805,13 @@
    "match": "Sheffield United at Preston North End",
    "p": 0.9658,
    "p_model": 0.9651,
+   "score": "Sheffield United 3 - Preston North End 2",
    "spec": {
     "line": 3.5,
     "t": "nomargin",
     "team": "Sheffield United"
    },
-   "status": "open"
+   "status": "won"
   },
   "efl1:401880180|Under 5.5 goals": {
    "away": "Sheffield United",
@@ -3835,11 +3840,12 @@
    "match": "Swansea City at Portsmouth",
    "p": 0.9006,
    "p_model": 0.8986,
+   "score": "Swansea City 1 - Portsmouth 3",
    "spec": {
     "line": 4.5,
     "t": "under"
    },
-   "status": "open"
+   "status": "won"
   },
   "efl1:401880181|Under 5.5 goals": {
    "away": "Swansea City",
@@ -3851,11 +3857,12 @@
    "match": "Swansea City at Portsmouth",
    "p": 0.9624,
    "p_model": 0.9616,
+   "score": "Swansea City 1 - Portsmouth 3",
    "spec": {
     "line": 5.5,
     "t": "under"
    },
-   "status": "open"
+   "status": "won"
   },
   "efl1:401880182|No \u00b7 Derby County wins by over 2.5 goals": {
    "away": "Norwich City",
@@ -3885,12 +3892,13 @@
    "match": "Norwich City at Derby County",
    "p": 0.897,
    "p_model": 0.8949,
+   "score": "Norwich City 4 - Derby County 0",
    "spec": {
     "line": 2.5,
     "t": "nomargin",
     "team": "Norwich City"
    },
-   "status": "open"
+   "status": "lost"
   },
   "efl1:401880182|Over 0.5 goals": {
    "away": "Norwich City",
@@ -30945,7 +30953,7 @@
    "logged": "2026-11-03T00:06",
    "n": 3,
    "prob": 0.7285,
-   "status": "open"
+   "status": "lost"
   },
   "20261103:4:0": {
    "fair": 1.28,

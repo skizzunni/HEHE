@@ -4488,6 +4488,45 @@
    "tip": "7:30 PM",
    "venue": "FanDuel"
   },
+  "nba:401909926|home|Kalshi": {
+   "dec": 1.2183,
+   "ev": 0.0106,
+   "fair": 0.8296,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909926",
+   "kind": "value",
+   "league": "nba",
+   "match": "CHI @ NY",
+   "price": "-458",
+   "seen": "2026-11-03T21:45:41+00:00",
+   "side": "home",
+   "start": "2026-11-05T00:30Z",
+   "team": "New York Knicks",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909926|sure": {
+   "id": "nba:401909926",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+466",
+     "stake_share": 0.1771,
+     "team": "Chicago Bulls",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-458",
+     "stake_share": 0.8229,
+     "team": "New York Knicks",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "CHI @ NY",
+   "profit": 0.0025,
+   "seen": "2026-11-03T21:45:41+00:00"
+  },
   "nba:401909929|home|FanDuel": {
    "dec": 1.8475,
    "ev": 0.0184,
