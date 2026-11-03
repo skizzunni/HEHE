@@ -556,8 +556,10 @@ def load(path=None):
 
 
 def save(book, path=None):
+    # no indentation: the daily candidate pools are ~95% of the file and grow
+    # every day (as tickets.save, 2026-11-03: safe_locks.json 10.0 -> 7.4 MB)
     with open(path or LEDGER, "w") as fh:
-        json.dump(book, fh, indent=1, sort_keys=True)
+        json.dump(book, fh, separators=(",", ":"), sort_keys=True)
 
 
 def record(res, day, path=None, tag="locks"):

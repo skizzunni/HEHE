@@ -3747,3 +3747,7 @@ frontier.json is now written without indentation (`tickets.save`). It keeps
 every day's full candidate pool (about 3,000 legs, 1.8 MB a day), and the
 indenting cost another 30%: 29.1 MB becomes 20.4 MB with the same contents
 (2026-11-03). The daily review's 60 MB warning still watches it.
+Same for the lock and lottery ledgers (`locks.save`, `lottery.save`), whose
+daily candidate pools make up about 95% of each file: lottery.json 11.7 to
+8.1 MB, safe_locks.json 10.0 to 7.4 MB, locks.json 8.8 to 6.4 MB, same
+contents (2026-11-03).

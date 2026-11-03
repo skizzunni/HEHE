@@ -359,8 +359,9 @@ def load():
 
 
 def save(book):
+    # no indentation, as locks.save (pools are ~95% of the file)
     with open(LEDGER, "w") as fh:
-        json.dump(book, fh, indent=1, sort_keys=True)
+        json.dump(book, fh, separators=(",", ":"), sort_keys=True)
 
 
 def _iso(day):
