@@ -1,7 +1,7 @@
 # Review 2026-11-02
 
-Picks 23-6 (79.3% vs 75.1% claimed, ROI +0.2%).
-Closing line value: +1.81 points on 29 picks; beat the close on 58.6%.
+Picks 24-6 (80.0% vs 74.9% claimed, ROI +1.6%).
+Closing line value: +1.75 points on 30 picks; beat the close on 56.7%.
 - LOST epl Newcastle United at 71%: margin 1 · the book had my side favoured too · called at 71%
 - LOST fra Lorient at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST ita Atalanta at 68%: margin 3 · the book had my side favoured too · called at 68%
@@ -11,9 +11,9 @@ Closing line value: +1.81 points on 29 picks; beat the close on 58.6%.
 Locks 0/11 won, 11 open; Best play top 2 (62%) open.
 Safe Locks 1/11 won, 9 open; Winners parlay top 2 (83%) open; Best play top 7 (50%) open; lost: Iowa State Cyclones to win (Memphis Tigers at Iowa State Cyclones) Memphis Tigers 80 - Iowa State Cyclones 76.
 Lottery 100: lost (1/11 legs won, killed by Iowa State Cyclones -14.5)
-Lottery 100: open (1/9 legs won)
+Lottery 100: open (2/9 legs won)
 Lottery 10k: lost (1/14 legs won, killed by Iowa State Cyclones -14.5)
-Lottery 10k: lost (1/11 legs won, killed by Michigan Wolverines -26.5, Under 150.5 points, Miami Hurricanes +5.5)
+Lottery 10k: lost (1/11 legs won, killed by Michigan Wolverines -26.5, Under 150.5 points, Miami Hurricanes +5.5, Vegas Golden Knights over 4.5 goals)
 Lottery 10k+25: lost (1/14 legs won, killed by Iowa State Cyclones -14.5)
 Lottery 10k+50: lost (0/14 legs won, killed by Iowa State Cyclones -14.5)
 Lottery 10k+100: lost (1/13 legs won, killed by Iowa State Cyclones -14.5)
