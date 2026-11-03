@@ -1,7 +1,7 @@
 # Review 2026-11-02
 
-Picks 19-3 (86.4% vs 74.6% claimed, ROI +9.6%).
-Closing line value: +2.09 points on 22 picks; beat the close on 63.6%.
+Picks 20-3 (87.0% vs 74.5% claimed, ROI +10.8%).
+Closing line value: +2.27 points on 23 picks; beat the close on 65.2%.
 - LOST epl Newcastle United at 71%: margin 1 · the book had my side favoured too · called at 71%
 - LOST fra Lorient at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST ita Atalanta at 68%: margin 3 · the book had my side favoured too · called at 68%
@@ -10,7 +10,7 @@ Safe Locks 0/11 won, 11 open; Winners parlay top 2 (83%) open; Best play top 7 (
 Lottery 100: open (0/11 legs won)
 Lottery 100: open (0/9 legs won)
 Lottery 10k: open (0/14 legs won)
-Lottery 10k: lost (0/11 legs won, killed by Michigan Wolverines -26.5)
+Lottery 10k: lost (0/11 legs won, killed by Michigan Wolverines -26.5, Miami Hurricanes +5.5)
 Lottery 10k+25: open (0/14 legs won)
 Lottery 10k+50: open (0/14 legs won)
 Lottery 10k+100: open (0/13 legs won)
