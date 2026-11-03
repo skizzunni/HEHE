@@ -494,9 +494,12 @@ def load(path=None):
 
 
 def save(book, path=None):
+    # written without indentation: the archive keeps every day's full candidate
+    # pool (~3,000 legs, ~1.8 MB) and indenting cost another 30% (29 MB -> 20 MB
+    # on 2026-11-03), against GitHub's 100 MB file limit
     import json
     with open(path or _ledger(), "w") as fh:
-        json.dump(book, fh, indent=1, sort_keys=True)
+        json.dump(book, fh, separators=(",", ":"), sort_keys=True)
 
 
 def _sig(front):

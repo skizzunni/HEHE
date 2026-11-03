@@ -3743,3 +3743,7 @@ multiplier-priced lines (the 2x ticket, the ladder) showed a literal
 The daily review (review/latest.md) now carries a ladder line: run, bank,
 streak, best, today's stake and price, and the wins still needed
 (`tools/daily_review.ladder_line`, 2026-11-03).
+frontier.json is now written without indentation (`tickets.save`). It keeps
+every day's full candidate pool (about 3,000 legs, 1.8 MB a day), and the
+indenting cost another 30%: 29.1 MB becomes 20.4 MB with the same contents
+(2026-11-03). The daily review's 60 MB warning still watches it.
