@@ -28253,6 +28253,38 @@
   "price": "-1400",
   "status": "open"
  },
+ "nba:401909919|n:devin booker|Pts + Ast|25+": {
+  "aid": null,
+  "date": "2026-11-02",
+  "edge": -5.8,
+  "gid": "nba:401909919",
+  "imp": 0.7959,
+  "label": "Devin Booker: 25+ Pts + Ast",
+  "league": "nba",
+  "line": "25+",
+  "market": "Pts + Ast",
+  "name": "Devin Booker",
+  "p": 0.7653,
+  "p_fair": 0.7498,
+  "price": "-390",
+  "status": "open"
+ },
+ "nba:401909919|n:devin booker|Pts + Reb + Ast|25+": {
+  "aid": null,
+  "date": "2026-11-02",
+  "edge": -4.0,
+  "gid": "nba:401909919",
+  "imp": 0.9091,
+  "label": "Devin Booker: 25+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "25+",
+  "market": "Pts + Reb + Ast",
+  "name": "Devin Booker",
+  "p": 0.8488,
+  "p_fair": 0.873,
+  "price": "-1000",
+  "status": "open"
+ },
  "nba:401909919|n:dillon brooks|Pts + Reb + Ast|15+": {
   "aid": null,
   "date": "2026-11-02",
@@ -28267,6 +28299,22 @@
   "p": 0.8551,
   "p_fair": 0.9325,
   "price": "-1100",
+  "status": "open"
+ },
+ "nba:401909919|n:jalen green|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-02",
+  "edge": 2.1,
+  "gid": "nba:401909919",
+  "imp": 0.9,
+  "label": "Jalen Green: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Jalen Green",
+  "p": 0.8403,
+  "p_fair": 0.919,
+  "price": "-900",
   "status": "open"
  },
  "nba:401909919|n:khaman maluach|Rebounds|4+": {
@@ -51873,11 +51921,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Ivan Barbashev",
   "p": 0.8573,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892629|n:jack eichel|Shots on Goal|2+": {
   "aid": null,
@@ -51889,11 +51939,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jack Eichel",
   "p": 0.7493,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892629|n:mark stone|Shots on Goal|1+": {
   "aid": null,
@@ -51905,11 +51957,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mark Stone",
   "p": 0.8536,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892629|n:mitchell marner|Shots on Goal|2+": {
   "aid": null,
@@ -51921,11 +51975,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "fuzzy",
   "name": "Mitchell Marner",
   "p": 0.6852,
   "p_fair": null,
   "price": "-270",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892629|n:tomas hertl|Shots on Goal|2+": {
   "aid": null,
@@ -51937,11 +51993,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Tomas Hertl",
   "p": 0.6745,
   "p_fair": null,
   "price": "-255",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892629|n:trevor connelly|Shots on Goal|1+": {
   "aid": null,
@@ -51953,11 +52011,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Trevor Connelly",
   "p": 0.8607,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892630|n:anton lundell|Shots on Goal|1+": {
   "aid": null,
