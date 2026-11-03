@@ -1239,13 +1239,14 @@ function lockOfDay(){
     + '<p class="three"><b>' + esc(L.label) + '</b> <span class="px">' + esc(L.price || '') + '</span> &middot; '
     + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + res
     + (callWin(L.price) !== null ? ' &middot; $10 wins $' + callWin(L.price).toFixed(2) : '') + '</p>'
+    + (L.alt && !res ? '<p class="sbn">Pays more at <b>Kalshi</b>: ' + esc(L.alt.words || '') + ' at ' + Math.round(100 * L.alt.ask)
+       + '&cent; (' + esc(L.alt.american || '') + ' after fee), $10 wins $' + (10 * (L.alt.dec - 1)).toFixed(2)
+       + ' (+' + (100 * L.alt.gain).toFixed(1) + '%)</p>' : '')
     + '<p class="note">The likeliest single leg on today&rsquo;s Safe Locks card. '
     + (R.days ? 'Every day&rsquo;s Lock of the day so far: <b>' + R.won + ' of ' + R.legs + '</b> won against ' + R.said
       + '% stated' + (T.days ? '; the top two together both won on ' + T.all_won + ' of ' + T.days + ' days' : '') + '. ' : '')
     + 'A heavy favourite still loses about 1 time in ' + Math.max(2, Math.round(1 / Math.max(1 - L.p, 0.01))) + '.</p></div>';
 }
-// Ladder challenge (ladder.py): $1 to $10,000, one parlay a day of the 5
-// likeliest Locks, the whole bank rolled forward; one loss starts over at $1.
 // before 8 AM: the 5 legs the ladder would take from the Locks card as it
 // stands now (a preview; the ticket is whatever the 8 AM card holds)
 function ladderPreview(){
@@ -1268,6 +1269,8 @@ function ladderRuns(R, money){
     + R.map(r => '<tr><td>' + esc(r.start) + '</td><td>' + r.days + '</td><td>' + money(r.peak) + '</td><td>' + how(r.status)
       + '</td></tr>').join('') + '</tbody></table></details>';
 }
+// Ladder challenge (ladder.py): $1 to $10,000, one parlay a day of the 5
+// likeliest Locks, the whole bank rolled forward; one loss starts over at $1.
 function ladderHTML(){
   const X = D.ladder;
   if(!X) return '';

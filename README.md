@@ -3776,3 +3776,6 @@ surviving a bust. The bank is kept to the cent each day, as a real account
 would be (2026-11-03).
 Each open leg on the ladder ticket shows its league and kickoff time
 (Eastern), carried from the Locks card (2026-11-03).
+The Lock of the day card shows Kalshi's fee-included price when it pays
+more for the same leg (`locks.kalshi_alt`, already on the Safe Locks card)
+(2026-11-03).
