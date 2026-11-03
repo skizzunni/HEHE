@@ -4514,54 +4514,6 @@
     "nba": "2026-11-03T00:47:03+00:00"
    },
    "candidate_observations": {
-    "ncaab:401918947": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 100,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-03T01:58:40+00:00",
-      "conf": 100,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaab:401918947",
-      "league": "ncaab",
-      "match": "UTC @ LOU",
-      "pick": "Louisville Cardinals",
-      "price": "-100000",
-      "price_at": "2026-11-03T01:54:45+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34940997:0ML87037841_1",
-      "prob_at": "2026-11-03T01:54:45+00:00",
-      "rank": null,
-      "ready": false,
-      "reason": "probability unavailable",
-      "side": "home",
-      "start": "2026-11-03T02:00Z"
-     },
-     "dc": false,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": true,
-      "what": "no lineup gate for this league"
-     },
-     "id": "ncaab:401918947",
-     "league": "ncaab",
-     "match": "UTC @ LOU",
-     "pick": "Louisville Cardinals",
-     "price": "-100000",
-     "price_at": "2026-11-03T01:54:45+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34940997:0ML87037841_1",
-     "side": "home",
-     "start": "2026-11-03T02:00Z",
-     "tip": "9:00 PM"
-    },
     "ncaab:401926771": {
      "book": "DraftKings",
      "calib": "raw no-vig (calibration failed its untouched test)",
@@ -4570,7 +4522,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-03T01:58:40+00:00",
+      "checked_at": "2026-11-03T02:03:44+00:00",
       "conf": 99,
       "dc": false,
       "gate": {
@@ -4582,10 +4534,10 @@
       "match": "MILW @ USC",
       "pick": "USC Trojans",
       "price": "-20000",
-      "price_at": "2026-11-03T01:54:45+00:00",
+      "price_at": "2026-11-03T02:03:25+00:00",
       "price_market": "moneyline",
       "price_ref": "34941022:0ML87037860_1",
-      "prob_at": "2026-11-03T01:54:45+00:00",
+      "prob_at": "2026-11-03T02:03:25+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -4602,7 +4554,7 @@
      "match": "MILW @ USC",
      "pick": "USC Trojans",
      "price": "-20000",
-     "price_at": "2026-11-03T01:54:45+00:00",
+     "price_at": "2026-11-03T02:03:25+00:00",
      "price_market": "moneyline",
      "price_ref": "34941022:0ML87037860_1",
      "side": "home",
@@ -4617,8 +4569,8 @@
    "shadow_watch": {
     "best_at": "2026-11-02T19:28:35+00:00",
     "best_ceiling": 1.968,
-    "checks": 152,
-    "last": "2026-11-03T01:58:40+00:00",
+    "checks": 153,
+    "last": "2026-11-03T02:03:44+00:00",
     "max_ready": 12,
     "reasons": {
      "awaiting confirmed XIs": 618,
