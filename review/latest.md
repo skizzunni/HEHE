@@ -1,8 +1,7 @@
 # Review 2026-11-02
 
-Picks 36-11 (76.6% vs 75.1% claimed, ROI -4.0%).
-TRAILING props nba Threes Made: 75.0% hit vs 84.4% stated on 60
-Closing line value: +1.46 points on 47 picks; beat the close on 51.1%.
+Picks 37-12 (75.5% vs 74.5% claimed, ROI -4.6%).
+Closing line value: +1.49 points on 49 picks; beat the close on 53.1%.
 - LOST epl Newcastle United at 71%: margin 1 · the book had my side favoured too · called at 71%
 - LOST fra Lorient at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST ita Atalanta at 68%: margin 3 · the book had my side favoured too · called at 68%
@@ -10,6 +9,7 @@ Closing line value: +1.46 points on 47 picks; beat the close on 51.1%.
 - LOST nba Orlando Magic at 57%: margin 9 · the book had my side favoured too · called at 57%
 - LOST nba Dallas Mavericks at 72%: margin 15 · the book had my side favoured too · called at 72%
 - LOST nba Memphis Grizzlies at 65%: margin 1 · the book had my side favoured too · called at 65%
+- LOST nba Denver Nuggets at 61%: margin 8 · the book had my side favoured too · called at 61%
 - LOST ncaab Iowa State Cyclones at 93%: margin 4 · the book had my side favoured too · called at 93%
 - LOST nfl Seattle Seahawks at 60%: margin 17 · the book had my side favoured too · called at 60%
 - LOST nhl Vegas Golden Knights at 52%: margin 1 · the book had my side favoured too · called at 52%
@@ -23,8 +23,8 @@ Lottery 10k: lost (3/11 legs won, killed by Atlanta Hawks -4.5, New York Knicks 
 Lottery 10k+25: lost (6/14 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points)
 Lottery 10k+50: lost (5/14 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points, Over 228.5 points)
 Lottery 10k+100: lost (5/13 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points)
-Ladder-consistency props (all time): 1434/1720 won (83.4%) vs 86.2% fair, 87.3% price.
-Props 157/185 vs 83.3% claimed.
+Ladder-consistency props (all time): 1445/1732 won (83.4%) vs 86.3% fair, 87.3% price.
+Props 169/198 vs 83.4% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): none qualified
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=103), ncaaf 0.00 (n=164), nfl 0.00 (n=41), nhl 0.00 (n=117)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=104), ncaaf 0.00 (n=164), nfl 0.00 (n=41), nhl 0.00 (n=117)
