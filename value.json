@@ -4498,6 +4498,30 @@
    "profit": 0.005,
    "seen": "2026-11-03T16:55:04+00:00"
   },
+  "nba:401909933|{\"line\": 12.5, \"t\": \"spread\", \"team\": \"Dallas Mavericks\"}|FanDuel": {
+   "dec": 1.9259,
+   "dk": "-110",
+   "ev": 0.0111,
+   "fair": 0.525,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909933",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "DAL @ SA",
+   "price": "-108",
+   "seen": "2026-11-03T20:25:41+00:00",
+   "side": "{\"line\": 12.5, \"t\": \"spread\", \"team\": \"Dallas Mavericks\"}",
+   "spec": {
+    "line": 12.5,
+    "t": "spread",
+    "team": "Dallas Mavericks"
+   },
+   "start": "2026-11-05T02:30Z",
+   "team": "Dallas Mavericks +12.5",
+   "tip": "9:30 PM",
+   "venue": "FanDuel"
+  },
   "ncaab:401906769|away|FanDuel": {
    "dec": 2.84,
    "ev": 0.0144,
@@ -4917,6 +4941,45 @@
    "match": "OAK @ MICH",
    "profit": 0.0003,
    "seen": "2026-11-01T16:11:51+00:00"
+  },
+  "ncaab:401928811|away|FanDuel": {
+   "dec": 1.9091,
+   "ev": 0.0395,
+   "fair": 0.5445,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ncaab:401928811",
+   "kind": "single",
+   "league": "ncaab",
+   "match": "NKU @ SDAK",
+   "price": "-110",
+   "seen": "2026-11-03T20:25:41+00:00",
+   "side": "away",
+   "start": "2026-11-05T01:00Z",
+   "team": "Northern Kentucky Norse",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "ncaab:401928811|sure": {
+   "id": "ncaab:401928811",
+   "kind": "sure",
+   "league": "ncaab",
+   "legs": [
+    {
+     "price": "-110",
+     "stake_share": 0.5238,
+     "team": "Northern Kentucky Norse",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+110",
+     "stake_share": 0.4762,
+     "team": "South Dakota Coyotes",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "NKU @ SDAK",
+   "profit": 0.0,
+   "seen": "2026-11-03T20:25:41+00:00"
   },
   "ncaaf:401856730|away|FanDuel": {
    "dec": 1.7042,
