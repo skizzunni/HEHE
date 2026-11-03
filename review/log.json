@@ -8482,17 +8482,64 @@
    "n": 2
   },
   "day": "2026-11-03",
-  "ladder": null,
+  "ladder": "Ladder: run 1, bank $1.00, 0 win(s) in a row, best $1.00; today stakes $1.00 at 3.07x (25% est.); 9 wins to $10,000.",
   "leaks_14d": [],
   "locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     2,
+     0.5735,
+     "open"
+    ]
+   },
    "won": 0
   },
   "losses": [],
-  "lottery": [],
+  "lottery": [
+   {
+    "killed_by": [],
+    "legs": 6,
+    "lost": 0,
+    "status": "open",
+    "tier": "100",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 6,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 6,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+25",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 6,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+50",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 6,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+100",
+    "won": 0
+   }
+  ],
   "picks": {
    "hit": 100.0,
    "lost": 0,
@@ -8524,9 +8571,20 @@
   },
   "safe_locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     7,
+     0.542,
+     "open"
+    ],
+    "winners": [
+     2,
+     0.8432,
+     "open"
+    ]
+   },
    "won": 0
   },
   "strong": {
