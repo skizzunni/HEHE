@@ -7553,6 +7553,23 @@
    "tip": "8:00 PM",
    "venue": "FanDuel"
   },
+  "nhl:401892644|home|FanDuel": {
+   "dec": 1.7937,
+   "ev": 0.0132,
+   "fair": 0.5649,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892644",
+   "kind": "value",
+   "league": "nhl",
+   "match": "OTT @ BUF",
+   "price": "-126",
+   "seen": "2026-11-03T18:04:21+00:00",
+   "side": "home",
+   "start": "2026-11-05T00:30Z",
+   "team": "Buffalo Sabres",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nhl:401892644|home|Kalshi": {
    "dec": 1.7624,
    "ev": 0.0137,
@@ -7570,6 +7587,23 @@
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
+  "nhl:401892647|home|FanDuel": {
+   "dec": 1.7463,
+   "ev": 0.0204,
+   "fair": 0.5843,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nhl:401892647",
+   "kind": "value",
+   "league": "nhl",
+   "match": "CGY @ SEA",
+   "price": "-134",
+   "seen": "2026-11-03T18:04:21+00:00",
+   "side": "home",
+   "start": "2026-11-05T03:00Z",
+   "team": "Seattle Kraken",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
   "nhl:401892647|home|Kalshi": {
    "dec": 1.703,
    "ev": 0.0281,
@@ -7584,6 +7618,76 @@
    "side": "home",
    "start": "2026-11-05T03:00Z",
    "team": "Seattle Kraken",
+   "tip": "10:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892647|sure": {
+   "id": "nhl:401892647",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "+140",
+     "stake_share": 0.4212,
+     "team": "Calgary Flames",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-134",
+     "stake_share": 0.5788,
+     "team": "Seattle Kraken",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "CGY @ SEA",
+   "profit": 0.0108,
+   "seen": "2026-11-03T18:04:21+00:00"
+  },
+  "nhl:401892647|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Seattle Kraken\"}|FanDuel": {
+   "dec": 2.72,
+   "dk": "+150",
+   "ev": 0.0297,
+   "fair": 0.3786,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892647",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "CGY @ SEA",
+   "price": "+172",
+   "seen": "2026-11-03T18:04:21+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Seattle Kraken\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Seattle Kraken"
+   },
+   "start": "2026-11-05T03:00Z",
+   "team": "Seattle Kraken -1.5",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892647|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Seattle Kraken\"}|Kalshi": {
+   "dec": 2.7322,
+   "dk": "+150",
+   "ev": 0.0343,
+   "fair": 0.3786,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892647",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "CGY @ SEA",
+   "price": "+173",
+   "seen": "2026-11-03T18:04:21+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Seattle Kraken\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Seattle Kraken"
+   },
+   "start": "2026-11-05T03:00Z",
+   "team": "Seattle Kraken -1.5",
    "tip": "10:00 PM",
    "venue": "Kalshi"
   },
