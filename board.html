@@ -1530,6 +1530,13 @@ function todaysPlan(){
                      extra: t2.legs.length + ' legs',
                      rec: ch ? 'challenge run: $' + Math.round(ch.bank) + (ch.streak ? ', ' + ch.streak + ' in a row' : '') : '',
                      line: '2x ticket: ' + t2.legs.map(x => x.label + ' ' + (x.price || '')).join(' + ')});
+  // the ladder's ticket for today (ladder.py): its 5 legs as one parlay, staking the whole bank
+  const LX = D.ladder, LT = LX && LX.today;
+  if(LT && LT.legs && LT.legs.length)
+    items.push({what: 'Ladder ticket', pick: LT.legs.map(x => x.label).join(' + '), dec: LT.pays, p: LT.prob,
+                extra: 'stake $' + LT.stake.toFixed(2) + ' (run ' + Math.max(LX.runs, 1) + ', ' + LX.wins_needed + ' wins to $10k)',
+                rec: LX.best > 1 ? 'best so far $' + LX.best.toFixed(2) : '',
+                line: 'Ladder ticket: ' + LT.legs.map(x => x.label + ' ' + (x.price || '')).join(' + ')});
   // 4. the strongest Prop Lock still to play (the card is ranked strongest first)
   const PX = D.prop_locks || {}, PLR = PX.record || {};
   const pl = ((PX.today || {}).legs || []).find(x => !x.status || x.status === 'open');
@@ -1543,7 +1550,7 @@ function todaysPlan(){
   if(!items.length) return '';
   return '<div class="sweep"><h3>Today&rsquo;s plan</h3>'
     + '<ul class="betlegs">' + items.map(x => '<li><span><b>' + x.what + ':</b> ' + esc(x.pick)
-      + ' <span class="px">' + esc(x.price || (x.dec ? x.dec.toFixed(2) + '&times;' : '')) + '</span>'
+      + ' <span class="px">' + (x.price ? esc(x.price) : (x.dec ? x.dec.toFixed(2) + '&times;' : '')) + '</span>'
       + (x.p ? ' &middot; ' + (100 * x.p).toFixed(0) + '%' : '') + win10(x.price && !/¢/.test(x.price) ? x.price : null, x.dec)
       + (x.extra ? '<div class="sbn">' + x.extra + (x.rec ? ' &middot; ' + x.rec : '') + '</div>' : '') + '</span></li>').join('')
     + '</ul>' + copyBtn("Today's plan", items.map(x => x.line))

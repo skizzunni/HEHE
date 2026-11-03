@@ -3736,3 +3736,7 @@ card.
 The summary tiles at the top of the page include the ladder (bank and win
 streak); tapping the tile, or pressing Enter on it, opens the Locks tab
 (2026-11-03).
+Today's plan on the Calls tab now includes the day's ladder ticket, with
+its stake and the wins still needed. A display fix in the same card:
+multiplier-priced lines (the 2x ticket, the ladder) showed a literal
+"&times;" instead of "×" (2026-11-03).
