@@ -3718,3 +3718,18 @@ card now includes the strongest Prop Lock still to play, with the Prop Locks
 record (104 of 112 at release). Its value-bet line now also treats a
 consensus-of-other-venues fair price as confirmed, matching
 `value_bets.confirmed`.
+
+**Ladder challenge: $1 to $10,000 (from 2026-11-03).** Every day, one
+parlay of the 5 highest-chance legs on the 8 AM Locks card (one per game),
+staking the whole bank. A win rolls everything into the next day. One loss
+ends the run, and the next day starts again at $1. A voided or pushed leg
+drops out (1x). `ladder.py` replays the run from the locks ledger on every
+build and stores nothing, so it always matches the graded record. Shown at
+the top of the Locks tab with its own Copy button.
+
+Odds, honestly: on the 16 graded cards before the start, all 5 top legs won
+on 5 (31% against 32% stated) and paid about 3.05x. $10,000 needs about 9
+straight wins, roughly 1 in 40,000. Replayed from 2026-10-17, 12 runs, the
+best reached $9.38 (two wins). Safe Locks' top 5 hit 9 of 15 days but pay
+about 1.28x, which needs 38 straight wins, so the ladder uses the regular
+card.

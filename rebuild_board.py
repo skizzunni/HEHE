@@ -568,6 +568,11 @@ def snapshot():
         for v_ in out["locks"].values():
             v_.pop("pool", None)                # saved in the ledger, not published
         out["locks_record"] = locks.report()
+        try:                                    # $1 -> $10k on the day's 5 likeliest Locks (ladder.py)
+            import ladder
+            out["ladder"] = ladder.report()
+        except Exception as e_:
+            print(f"ladder skipped ({e_})", file=sys.stderr)
         lk = out["locks"]["today"]
         print(f'locks: {len(lk["locks"])} of {lk["available"]} FanDuel games, '
               f'all-hit chance {100 * lk["prob"]:.1f}%', file=sys.stderr)
