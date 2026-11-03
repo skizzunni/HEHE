@@ -3770,3 +3770,7 @@ A Prop Locks, 7 days tile sits beside the Safe Locks one, from the days
 The browser check also confirms the Safe Locks 7-day tile totals the
 record's graded days; emptying its day window makes the check fail
 (2026-11-03).
+Ladder tests now cover reaching the target (the run ends, the next day
+restarts at $1), the wins-needed and chance figures, and the best bank
+surviving a bust. The bank is kept to the cent each day, as a real account
+would be (2026-11-03).

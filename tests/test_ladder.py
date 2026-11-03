@@ -49,6 +49,31 @@ class Ladder(unittest.TestCase):
         self.assertEqual(ladder.replay(b, start="2026-11-03"), [])
 
 
+class Target(unittest.TestCase):
+    def test_reaching_the_target_ends_the_run_and_the_next_day_restarts(self):
+        # -200 x5 = 7.59x a day: $1 -> $7.59 -> $57.64 passes a $50 target on day 2
+        b = book({"2026-11-03": W5, "2026-11-04": W5, "2026-11-05": W5[:4] + [("e", 0.8, "open")]})
+        runs = ladder.replay(b, start="2026-11-03", target=50)
+        self.assertEqual([r["status"] for r in runs], ["reached", "live"])
+        self.assertEqual(runs[1]["days"][0]["stake"], 1.0)
+        r = ladder.report(b, start="2026-11-03", target=50)
+        self.assertEqual(r["reached"], 1)
+        self.assertEqual(r["history"][0]["peak"], round(round(7.59375, 2) * 7.59375, 2))   # the bank is kept to the cent each day
+
+    def test_wins_needed_and_chance_from_today(self):
+        b = book({"2026-11-03": W5[:4] + [("e", 0.8, "open")]})
+        r = ladder.report(b, start="2026-11-03")
+        # 7.59x a day from $1: 7.59^4 = 3,325 < 10,000 <= 7.59^5
+        self.assertEqual(r["wins_needed"], 5)
+        self.assertAlmostEqual(r["chance_to_target"], round(round(0.8 ** 5, 4) ** 5, 8))   # from the displayed 4-dp chance
+
+    def test_best_keeps_a_busted_runs_peak(self):
+        b = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "lost")]})
+        r = ladder.report(b, start="2026-11-03")
+        self.assertEqual(r["best"], round(1.5 ** 5, 2))
+        self.assertEqual(r["bank"], 1.0)                                   # a new run starts at $1
+
+
 class ReviewLine(unittest.TestCase):
     def test_daily_review_reports_the_ladder(self):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
