@@ -3764,3 +3764,6 @@ that can change before the card is set (2026-11-03).
 The ladder card lists past runs in a collapsible table, newest first:
 start, days lasted, peak bank, and whether the run busted or reached the
 target (2026-11-03).
+A Prop Locks, 7 days tile sits beside the Safe Locks one, from the days
+`prop_locks.report` already publishes. At release: 77 of 83 (92.8%),
+2026-10-27 to 11-02 (2026-11-03).

@@ -757,7 +757,7 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
       : tile("Locks today", String(LK.length), "on FanDuel"))
   + tile("Prop Locks", PL.n ? PL.won + " of " + PL.n : "&mdash;",
          PL.n ? PL.hit + "% hit" : "none graded yet", PL.n && PL.hit >= 70 ? "good" : "")
-  + safe7() + ladderTile();
+  + last7(D.safe_locks_record, "Safe Locks", 0.85) + last7(PL, "Prop Locks", 0.85) + ladderTile();
   // the $1 -> $10k ladder (ladder.py): bank and streak; tapping opens the Locks tab
   function ladderTile(){
     const X = D.ladder;
@@ -768,12 +768,14 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
       + " &middot; Locks tab</i></div>";
   }
   // Safe Locks over the last 7 graded card days (locks.report days, newest first)
-  function safe7(){
-    const S = D.safe_locks_record || {}, days7 = (S.days || []).filter(d => (d.won || 0) + (d.lost || 0) > 0).slice(0, 7);
+  // a record over its last 7 graded days (report .days, newest first: Safe
+  // Locks from locks.report, Prop Locks from prop_locks.report)
+  function last7(S, name, good){
+    const days7 = ((S || {}).days || []).filter(d => (d.won || 0) + (d.lost || 0) > 0).slice(0, 7);
     const w = days7.reduce((a, d) => a + (d.won || 0), 0), l = days7.reduce((a, d) => a + (d.lost || 0), 0);
     if(!(w + l)) return "";
-    return tile("Safe Locks, 7 days", w + " of " + (w + l), (100 * w / (w + l)).toFixed(1) + "% hit, " + days7.length + " cards",
-                w / (w + l) >= 0.85 ? "good" : "");
+    return tile(name + ", 7 days", w + " of " + (w + l), (100 * w / (w + l)).toFixed(1) + "% hit, " + days7.length + " cards",
+                w / (w + l) >= good ? "good" : "");
   }
 })();
 // a glance tile with data-goto opens that section, as its button in the day bar would
