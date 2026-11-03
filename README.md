@@ -3712,3 +3712,9 @@ shortened picks: 72.0% / 76.8% and 71.7% / 78.4%.
 include Safe Locks' record over its last 7 graded card days, read from the
 graded card days already published (`safe_locks_record.days`); nothing new
 is computed. At release: 62 of 69 (89.9%), 2026-10-26 to 11-01.
+
+**Today's plan: Top Prop Lock (2026-11-03).** The Calls tab's Today's plan
+card now includes the strongest Prop Lock still to play, with the Prop Locks
+record (104 of 112 at release). Its value-bet line now also treats a
+consensus-of-other-venues fair price as confirmed, matching
+`value_bets.confirmed`.

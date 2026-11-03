@@ -1481,9 +1481,14 @@ function todaysPlan(){
                      extra: t2.legs.length + ' legs',
                      rec: ch ? 'challenge run: $' + Math.round(ch.bank) + (ch.streak ? ', ' + ch.streak + ' in a row' : '') : '',
                      line: '2x ticket: ' + t2.legs.map(x => x.label + ' ' + (x.price || '')).join(' + ')});
+  // 4. the strongest Prop Lock still to play (the card is ranked strongest first)
+  const PX = D.prop_locks || {}, PLR = PX.record || {};
+  const pl = ((PX.today || {}).legs || []).find(x => !x.status || x.status === 'open');
+  if(pl) items.push({what: 'Top Prop Lock', pick: pl.label, price: pl.price, p: pl.p, extra: pl.match || '',
+                     rec: PLR.n ? 'Prop Locks ' + PLR.won + ' of ' + PLR.n : '', line: legLine(pl.label, pl.price, 'FanDuel', pl.match)});
   // 4. the best value bet, preferring one a second source confirmed
   const VB = ((D.value || {}).bets || []), VR = (D.value || {}).record || {};
-  const v = VB.find(x => /Polymarket|proven/.test(x.fair_source || '')) || VB[0];
+  const v = VB.find(x => /Polymarket|proven|consensus/.test(x.fair_source || '')) || VB[0];
   if(v) items.push({what: 'Value bet', pick: v.team, price: v.price, dec: v.dec, p: v.fair, extra: esc(v.venue) + ' &middot; edge +' + (100 * v.ev).toFixed(1) + '%',
                     rec: VR.n ? 'value bets ' + (VR.roi >= 0 ? '+' : '') + VR.roi + '% on ' + VR.n : '', line: legLine(v.team, v.price, v.venue, v.match)});
   if(!items.length) return '';
