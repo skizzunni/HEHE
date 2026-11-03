@@ -1,197 +1,197 @@
 {
- "run": "2026-10-27",
- "player_games": 822,
- "games": 27,
- "test_games": 14,
- "hold": 1.2219,
+ "run": "2026-11-03",
+ "player_games": 1240,
+ "games": 41,
+ "test_games": 21,
+ "hold": 1.1529,
  "form_weights": [
-  -0.007,
-  1.0,
+  0.228,
+  1.124,
   0.0
  ],
  "methods": {
   "p_raw": {
-   "logloss": 0.308,
+   "logloss": 0.3201,
    "bands": [
     {
      "band": "0-15",
-     "n": 264,
-     "said": 5.1,
-     "scored": 2.7
+     "n": 379,
+     "said": 4.8,
+     "scored": 4.2
     },
     {
      "band": "15-25",
-     "n": 75,
-     "said": 19.7,
-     "scored": 26.7
+     "n": 111,
+     "said": 19.9,
+     "scored": 19.8
     },
     {
      "band": "25-35",
-     "n": 39,
-     "said": 29.9,
-     "scored": 28.2
+     "n": 67,
+     "said": 29.5,
+     "scored": 26.9
     },
     {
      "band": "35-45",
-     "n": 23,
-     "said": 39.6,
-     "scored": 39.1
+     "n": 30,
+     "said": 39.2,
+     "scored": 43.3
     },
     {
      "band": "45-55",
-     "n": 18,
+     "n": 23,
      "said": 49.7,
-     "scored": 55.6
+     "scored": 56.5
     },
     {
      "band": "55-100",
-     "n": 9,
-     "said": 65.1,
-     "scored": 44.4
+     "n": 18,
+     "said": 62.0,
+     "scored": 61.1
     }
    ],
    "top2": {
-    "n": 28,
-    "scored": 50.0,
-    "said": 52.6
+    "n": 42,
+    "scored": 57.1,
+    "said": 52.9
    }
   },
   "p_hold": {
-   "logloss": 0.3096,
+   "logloss": 0.3219,
    "bands": [
     {
      "band": "0-15",
-     "n": 291,
-     "said": 5.0,
-     "scored": 4.8
+     "n": 406,
+     "said": 4.8,
+     "scored": 5.4
     },
     {
      "band": "15-25",
-     "n": 73,
-     "said": 19.4,
-     "scored": 24.7
+     "n": 119,
+     "said": 19.9,
+     "scored": 21.0
     },
     {
      "band": "25-35",
-     "n": 31,
-     "said": 29.5,
-     "scored": 35.5
+     "n": 51,
+     "said": 29.3,
+     "scored": 33.3
     },
     {
      "band": "35-45",
-     "n": 24,
-     "said": 39.5,
-     "scored": 58.3
+     "n": 29,
+     "said": 40.4,
+     "scored": 55.2
     },
     {
      "band": "45-55",
-     "n": 6,
-     "said": 49.0,
-     "scored": 50.0
+     "n": 17,
+     "said": 49.2,
+     "scored": 58.8
     },
     {
      "band": "55-100",
-     "n": 3,
-     "said": 61.8,
-     "scored": 33.3
+     "n": 6,
+     "said": 60.7,
+     "scored": 50.0
     }
    ],
    "top2": {
-    "n": 28,
-    "scored": 50.0,
-    "said": 43.0
+    "n": 42,
+    "scored": 57.1,
+    "said": 45.9
    }
   },
   "p_scaled": {
-   "logloss": 0.3097,
+   "logloss": 0.3222,
    "bands": [
     {
      "band": "0-15",
-     "n": 292,
-     "said": 5.0,
-     "scored": 4.8
+     "n": 409,
+     "said": 4.7,
+     "scored": 6.1
     },
     {
      "band": "15-25",
-     "n": 70,
+     "n": 113,
      "said": 19.4,
-     "scored": 24.3
+     "scored": 19.5
     },
     {
      "band": "25-35",
-     "n": 32,
-     "said": 29.4,
-     "scored": 37.5
+     "n": 54,
+     "said": 28.9,
+     "scored": 31.5
     },
     {
      "band": "35-45",
-     "n": 22,
+     "n": 27,
      "said": 39.9,
-     "scored": 59.1
+     "scored": 59.3
     },
     {
      "band": "45-55",
-     "n": 8,
-     "said": 49.0,
-     "scored": 50.0
+     "n": 19,
+     "said": 49.2,
+     "scored": 52.6
     },
     {
      "band": "55-100",
-     "n": 4,
-     "said": 63.8,
-     "scored": 25.0
+     "n": 6,
+     "said": 61.8,
+     "scored": 50.0
     }
    ],
    "top2": {
-    "n": 28,
-    "scored": 50.0,
-    "said": 45.2
+    "n": 42,
+    "scored": 57.1,
+    "said": 46.5
    }
   },
   "p_form": {
-   "logloss": 0.3098,
+   "logloss": 0.3204,
    "bands": [
     {
      "band": "0-15",
-     "n": 292,
-     "said": 5.0,
-     "scored": 4.8
+     "n": 407,
+     "said": 4.2,
+     "scored": 5.9
     },
     {
      "band": "15-25",
-     "n": 72,
+     "n": 104,
      "said": 19.5,
-     "scored": 25.0
+     "scored": 20.2
     },
     {
      "band": "25-35",
-     "n": 31,
-     "said": 29.7,
-     "scored": 35.5
+     "n": 58,
+     "said": 29.6,
+     "scored": 25.9
     },
     {
      "band": "35-45",
      "n": 21,
-     "said": 40.0,
-     "scored": 61.9
+     "said": 39.9,
+     "scored": 52.4
     },
     {
      "band": "45-55",
-     "n": 8,
-     "said": 48.8,
-     "scored": 50.0
+     "n": 23,
+     "said": 49.5,
+     "scored": 52.2
     },
     {
      "band": "55-100",
-     "n": 4,
-     "said": 63.6,
-     "scored": 25.0
+     "n": 15,
+     "said": 61.5,
+     "scored": 66.7
     }
    ],
    "top2": {
-    "n": 28,
-    "scored": 50.0,
-    "said": 45.0
+    "n": 42,
+    "scored": 57.1,
+    "said": 51.5
    }
   }
  }
