@@ -1,8 +1,8 @@
 # Review 2026-11-02
 
-Picks 35-11 (76.1% vs 74.5% claimed, ROI -4.1%).
+Picks 36-11 (76.6% vs 75.1% claimed, ROI -4.0%).
 TRAILING props nba Threes Made: 75.0% hit vs 84.4% stated on 60
-Closing line value: +1.5 points on 46 picks; beat the close on 52.2%.
+Closing line value: +1.46 points on 47 picks; beat the close on 51.1%.
 - LOST epl Newcastle United at 71%: margin 1 · the book had my side favoured too · called at 71%
 - LOST fra Lorient at 69%: margin 2 · the book had my side favoured too · called at 69%
 - LOST ita Atalanta at 68%: margin 3 · the book had my side favoured too · called at 68%
@@ -17,9 +17,9 @@ Closing line value: +1.5 points on 46 picks; beat the close on 52.2%.
 Locks 4/11 won, 3 open; Best play top 2 (62%) lost; lost: Cooper Kupp: 15+ Receiving Yards (CHI @ SEA) 7; Under 249.5 points (New Orleans Pelicans at Memphis Grizzlies) New Orleans Pelicans 135 - Memphis Grizzlies 134; Over 207.5 points (Brooklyn Nets at New York Knicks) Brooklyn Nets 90 - New York Knicks 103; Over 210.5 points (Washington Wizards at Orlando Magic) Washington Wizards 103 - Orlando Magic 94.
 Safe Locks 8/11 won, 2 open; Winners parlay top 2 (83%) won; Best play top 7 (50%) open; lost: Iowa State Cyclones to win (Memphis Tigers at Iowa State Cyclones) Memphis Tigers 80 - Iowa State Cyclones 76.
 Lottery 100: lost (6/11 legs won, killed by Iowa State Cyclones -14.5, Under 249.5 points, Cooper Kupp: 15+ Receiving Yards)
-Lottery 100: lost (4/9 legs won, killed by Under 6.5 goals, Over 225.5 points, Over 224.5 points)
+Lottery 100: lost (5/9 legs won, killed by Under 6.5 goals, Over 225.5 points, Over 224.5 points)
 Lottery 10k: lost (6/14 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points)
-Lottery 10k: lost (2/11 legs won, killed by Atlanta Hawks -4.5, New York Knicks -14.5, Michigan Wolverines -26.5, Under 150.5 points, Miami Hurricanes +5.5, Vegas Golden Knights over 4.5 goals)
+Lottery 10k: lost (3/11 legs won, killed by Atlanta Hawks -4.5, New York Knicks -14.5, Michigan Wolverines -26.5, Under 150.5 points, Miami Hurricanes +5.5, Vegas Golden Knights over 4.5 goals)
 Lottery 10k+25: lost (6/14 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points)
 Lottery 10k+50: lost (5/14 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points, Over 228.5 points)
 Lottery 10k+100: lost (5/13 legs won, killed by Iowa State Cyclones -14.5, Under 6.5 goals, Boston Celtics +5.5, Under 237.5 points, Over 224.5 points, Over 233.5 points)
