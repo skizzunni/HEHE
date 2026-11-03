@@ -7663,10 +7663,10 @@
   },
   "props": {
    "fair": {
-    "n": 1673,
-    "said_fair": 86.2,
+    "n": 1686,
+    "said_fair": 86.3,
     "said_price": 87.2,
-    "won": 1396
+    "won": 1409
    },
    "n": 232,
    "said": 78.8,
@@ -7718,43 +7718,43 @@
    },
    {
     "flag": false,
-    "hit": 76.0,
-    "n": 96,
+    "hit": 76.5,
+    "n": 98,
     "name": "props nba Assists",
     "said": 81.9
    },
    {
     "flag": false,
-    "hit": 87.4,
-    "n": 143,
+    "hit": 87.8,
+    "n": 147,
     "name": "props nba Points",
     "said": 85.4
    },
    {
     "flag": false,
-    "hit": 85.9,
-    "n": 99,
+    "hit": 86.5,
+    "n": 104,
     "name": "props nba Pts + Ast",
-    "said": 83.0
+    "said": 83.1
    },
    {
     "flag": false,
-    "hit": 82.7,
-    "n": 104,
+    "hit": 82.9,
+    "n": 105,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.6
    },
    {
     "flag": false,
-    "hit": 82.0,
-    "n": 50,
+    "hit": 82.4,
+    "n": 51,
     "name": "props nba Reb + Ast",
-    "said": 82.1
+    "said": 82.2
    },
    {
     "flag": false,
-    "hit": 78.7,
-    "n": 61,
+    "hit": 79.0,
+    "n": 62,
     "name": "props nba Rebounds",
     "said": 84.4
    },
@@ -7830,8 +7830,8 @@
    },
    {
     "flag": false,
-    "hit": 95.2,
-    "n": 21,
+    "hit": 90.9,
+    "n": 22,
     "name": "locks nba under",
     "said": 75.3
    },
@@ -7872,8 +7872,8 @@
    },
    {
     "flag": false,
-    "hit": 88.2,
-    "n": 17,
+    "hit": 88.9,
+    "n": 18,
     "name": "safe locks nba over",
     "said": 90.3
    },
@@ -7915,16 +7915,16 @@
    {
     "flag": false,
     "hit": 93.7,
-    "n": 126,
+    "n": 127,
     "name": "prop locks",
     "said": 88.8
    },
    {
     "flag": false,
-    "hit": 42.6,
-    "n": 270,
+    "hit": 42.3,
+    "n": 272,
     "name": "value bets",
-    "said": 44.4
+    "said": 44.5
    },
    {
     "flag": false,
@@ -8004,19 +8004,20 @@
    }
   },
   "clv": {
-   "avg": 1.75,
-   "beat": 57.5,
-   "n": 40
+   "avg": 1.63,
+   "beat": 56.1,
+   "n": 41
   },
   "day": "2026-11-02",
   "leaks_14d": [],
   "locks": {
    "lost": [
+    "Under 249.5 points (New Orleans Pelicans at Memphis Grizzlies) New Orleans Pelicans 135 - Memphis Grizzlies 134",
     "Over 207.5 points (Brooklyn Nets at New York Knicks) Brooklyn Nets 90 - New York Knicks 103",
     "Over 210.5 points (Washington Wizards at Orlando Magic) Washington Wizards 103 - Orlando Magic 94"
    ],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      2,
@@ -8077,6 +8078,14 @@
    },
    {
     "against_market": false,
+    "league": "nba",
+    "pick": "Memphis Grizzlies",
+    "price": "-214",
+    "said": 65,
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 65%"
+   },
+   {
+    "against_market": false,
     "league": "ncaab",
     "pick": "Iowa State Cyclones",
     "price": "-1600",
@@ -8103,10 +8112,11 @@
   "lottery": [
    {
     "killed_by": [
-     "Iowa State Cyclones -14.5"
+     "Iowa State Cyclones -14.5",
+     "Under 249.5 points"
     ],
     "legs": 11,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "100",
     "won": 5
@@ -8125,11 +8135,12 @@
    {
     "killed_by": [
      "Iowa State Cyclones -14.5",
+     "Under 237.5 points",
      "Over 224.5 points",
      "Over 233.5 points"
     ],
     "legs": 14,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 4
@@ -8152,11 +8163,12 @@
    {
     "killed_by": [
      "Iowa State Cyclones -14.5",
+     "Under 237.5 points",
      "Over 224.5 points",
      "Over 233.5 points"
     ],
     "legs": 14,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+25",
     "won": 4
@@ -8164,12 +8176,13 @@
    {
     "killed_by": [
      "Iowa State Cyclones -14.5",
+     "Under 237.5 points",
      "Over 224.5 points",
      "Over 233.5 points",
      "Over 228.5 points"
     ],
     "legs": 14,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+50",
     "won": 3
@@ -8177,22 +8190,23 @@
    {
     "killed_by": [
      "Iowa State Cyclones -14.5",
+     "Under 237.5 points",
      "Over 224.5 points",
      "Over 233.5 points"
     ],
     "legs": 13,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k+100",
     "won": 4
    }
   ],
   "picks": {
-   "hit": 77.5,
-   "lost": 9,
-   "n": 40,
-   "roi": -2.4,
-   "said": 74.6,
+   "hit": 75.6,
+   "lost": 10,
+   "n": 41,
+   "roi": -4.7,
+   "said": 74.4,
    "won": 31
   },
   "picks_by_league": {
@@ -8285,11 +8299,11 @@
     "won": 1
    },
    "nba": {
-    "hit": 62.5,
-    "lost": 3,
-    "n": 8,
-    "roi": -22.9,
-    "said": 72.9,
+    "hit": 55.6,
+    "lost": 4,
+    "n": 9,
+    "roi": -31.5,
+    "said": 72.0,
     "won": 5
    },
    "ncaab": {
@@ -8343,21 +8357,21 @@
   },
   "props": {
    "fair": {
-    "n": 1673,
-    "said_fair": 86.2,
+    "n": 1686,
+    "said_fair": 86.3,
     "said_price": 87.2,
-    "won": 1396
+    "won": 1409
    },
-   "n": 125,
-   "said": 83.5,
-   "won": 109
+   "n": 139,
+   "said": 83.7,
+   "won": 123
   },
   "safe_locks": {
    "lost": [
     "Iowa State Cyclones to win (Memphis Tigers at Iowa State Cyclones) Memphis Tigers 80 - Iowa State Cyclones 76"
    ],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      7,
@@ -8370,7 +8384,7 @@
      "open"
     ]
    },
-   "won": 5
+   "won": 6
   },
   "strong": {
    "n": 0
@@ -8381,10 +8395,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.0,
-    "lost": 229,
-    "n": 916,
-    "roi": 1.2,
+    "hit": 74.9,
+    "lost": 230,
+    "n": 917,
+    "roi": 1.1,
     "said": 70.5,
     "won": 687
    }
@@ -8393,10 +8407,10 @@
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.561,
-    "market_only": 0.561,
-    "model_40": 0.5907,
-    "n": 100,
+    "logloss": 0.566,
+    "market_only": 0.566,
+    "model_40": 0.593,
+    "n": 101,
     "weight": 0.0
    },
    "ncaaf": {
