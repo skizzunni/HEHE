@@ -5316,6 +5316,23 @@
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
+  "ncaab:401920191|away|FanDuel": {
+   "dec": 5.6,
+   "ev": 0.0413,
+   "fair": 0.186,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaab:401920191",
+   "kind": "value",
+   "league": "ncaab",
+   "match": "LONG @ JOES",
+   "price": "+460",
+   "seen": "2026-11-04T14:05:10+00:00",
+   "side": "away",
+   "start": "2026-11-05T00:00Z",
+   "team": "Longwood Lancers",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaab:401920191|away|Kalshi": {
    "dec": 4.7348,
    "ev": 0.0125,
@@ -10111,6 +10128,26 @@
    "payout": 3.75,
    "prob": 0.27,
    "seen": "2026-11-04T13:30:12+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaab:401920191:away": {
+   "ev": 0.0416,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0413,
+     "fair": 0.186,
+     "id": "ncaab:401920191",
+     "price": "+460",
+     "side": "away",
+     "spec": null,
+     "team": "Longwood Lancers"
+    }
+   ],
+   "payout": 5.6,
+   "prob": 0.186,
+   "seen": "2026-11-04T14:05:10+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
