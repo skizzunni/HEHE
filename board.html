@@ -1391,6 +1391,17 @@ function ladderHTML(){
 }
 // Every game: its single likeliest FanDuel line (locks.every_game), the whole
 // Safe Locks pool rather than the 11-leg card. Straight bets, one per game.
+// what $10 straight on every leg returns if all win, and the expected
+// profit from each leg's own chance (short prices: small wins)
+function everyPays(G){
+  const d = a => { const v = parseInt(String(a).replace('+', ''), 10); return isNaN(v) ? null : v > 0 ? 1 + v / 100 : 1 + 100 / Math.abs(v); };
+  const L = G.filter(g => d(g.price));
+  if(!L.length) return '';
+  const win = L.reduce((a, g) => a + 10 * (d(g.price) - 1), 0);
+  const ev = L.reduce((a, g) => a + 10 * (g.p * d(g.price) - 1), 0);
+  return '<p class="note"><b>$10 on each</b> (' + L.length + ' bets, $' + (10 * L.length) + ' staked): +$' + win.toFixed(2)
+    + ' if every one wins; expected ' + (ev >= 0 ? '+' : '&minus;') + '$' + Math.abs(ev).toFixed(2) + ' from the stated chances.</p>';
+}
 // the chance every leg on the list wins, and its five likeliest (each leg's
 // own chance multiplied: separate games), beside how many days have swept
 function everySweep(G, R){
@@ -1398,7 +1409,8 @@ function everySweep(G, R){
   const prod = L => L.reduce((a, g) => a * g.p, 1);
   const top = G.slice().sort((a, b) => b.p - a.p).slice(0, 5);
   return '<p class="note"><b>Sweep odds:</b> all ' + G.length + ' win ' + oneIn(prod(G)) + '; the top ' + top.length + ' win '
-    + oneIn(prod(top)) + '.' + (R.days ? ' The whole list has swept on ' + (R.swept || 0) + ' of ' + R.days + ' days.' : '') + '</p>';
+    + oneIn(prod(top)) + '.' + (R.days ? ' The whole list has swept on ' + (R.swept || 0) + ' of ' + R.days + ' days.' : '') + '</p>'
+    + everyPays(G);
 }
 function everyGameHTML(){
   const X = D.every_game;

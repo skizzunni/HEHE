@@ -258,7 +258,7 @@ def main():
         fails.append("oneIn wrong: " + repr(new.get("oneIn")))
     eg = new.get("everyGame", "")
     if not all(x in eg for x in ("Every game: its safest bet (2 games, 1–0 so far)", "386 of 427", "90.4%",
-                                   "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89", "Sweep odds: all 2 win 83%; the top 2 win 83%. The whole list has swept on 0 of 14 days.", "NBA · 7:30 PM", "set at 8 AM")):
+                                   "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89", "Sweep odds: all 2 win 83%; the top 2 win 83%. The whole list has swept on 0 of 14 days.", "$10 on each (2 bets, $20 staked): +$1.61 if every one wins; expected −$0.37 from the stated chances.", "NBA · 7:30 PM", "set at 8 AM")):
         fails.append("every game section wrong: " + eg)
     ow = new.get("own", "")
     if not all(x in ow for x in ("mine 232 right (60.7%)", "260 (68.1%)", "The market is ahead", "I take LAC</b> (60%)")):

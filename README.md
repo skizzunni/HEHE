@@ -3857,3 +3857,6 @@ swept (0 of 14 so far). Study, rejected: a "sweep core" of the top K legs -- the
 Results tab: "Yesterday" -- the board's record and every loss with its score, tags and why
 (`board_payload` yesterday). Study, rejected: home vs away favourites by league -- prices by side
 are only logged since mid-October, so the first date half has too few picks to test (2026-11-04).
+"Every game" shows what $10 straight on each leg returns if all win, and the expected result from
+the stated chances. Study, rejected: every-game legs by price band (-500..-799, -800..-1199,
+-1200..-2000) in each date half -- none trails its stated chance in both halves (2026-11-04).
