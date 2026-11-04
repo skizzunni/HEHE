@@ -730,6 +730,12 @@ function injNote(r){
     + ((I.mine || []).length ? 'my side: ' + j(I.mine) : 'my side: none listed')
     + ((I.opp || []).length ? ' &middot; their side: ' + j(I.opp) : '') + '</div>';
 }
+// a ticket nothing of which has started: how many legs, and when the first begins
+function ladderFirst(L){
+  const mins = t => { const m = /(\d+):(\d+)\s*(AM|PM)/i.exec(t || ""); return m ? (+m[1] % 12 + (/PM/i.test(m[3]) ? 12 : 0)) * 60 + +m[2] : 9999; };
+  const first = L.map(x => x.tip).filter(Boolean).sort((a, b) => mins(a) - mins(b))[0];
+  return L.length + " to play" + (first ? ", first at " + first : "");
+}
 function coinBar(n){
   if(!n) return "";
   return '<p class="coinbar">'
@@ -837,6 +843,7 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
     const today = () => {
       const L = ((X.today || {}).legs) || [], w = L.filter(x => x.status === "won").length;
       const lv = L.filter(x => (!x.status || x.status === "open") && x.live).length;
+      if(L.length && !w && !lv && !L.some(x => x.status && x.status !== "open")) return ladderFirst(L);
       return L.length && w && !L.some(x => x.status === "lost") ? w + " of " + L.length + " won today" + (lv ? ", " + lv + " live" : "") : "";
     };
     const m = v => "$" + (v >= 100 ? Math.round(v).toLocaleString() : v.toFixed(2));

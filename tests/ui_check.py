@@ -130,6 +130,7 @@ PROBE = """<script>setTimeout(function(){
   D.prop_locks = {standard: 0.7, hour: 12, record: {n: 0}, today: {legs: [{label: "Luka Doncic: 6+ Assists", price: "-400", p: 0.79, match: "LAL @ SAC", status: "open", live: "3rd 4:10", live_score: "LAL 88 - SAC 80"}]}};
   try { out.plLive = propLocksHTML(); } catch(e) { out.plLive = "ERR " + e; }
   D.prop_locks = plSave;
+  out.ladderFirst = [ladderFirst([{tip: "9:30 PM"}, {tip: "7:00 PM"}, {tip: "12:45 PM"}, {tip: "10:00 PM"}]), ladderFirst([{}, {}])];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -298,6 +299,8 @@ def main():
     pl = new.get("plLive", "")
     if "<b>Live:</b> 3rd 4:10 &middot; LAL 88 - SAC 80" not in pl:
         fails.append("prop locks live line wrong: " + pl[-400:])
+    if new.get("ladderFirst") != ["4 to play, first at 12:45 PM", "2 to play"]:
+        fails.append("ladder first-leg line wrong: " + repr(new.get("ladderFirst")))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)
