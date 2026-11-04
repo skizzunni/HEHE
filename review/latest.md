@@ -1,9 +1,9 @@
 # Review 2026-11-03
 
-Picks 20-3 (87.0% vs 72.8% claimed, ROI +13.4%).
+Picks 21-3 (87.5% vs 72.8% claimed, ROI +13.9%).
 Ladder: run 1, bank $1.00, 0 win(s) in a row, best $1.00; today stakes $1.00 at 3.07x (25% est.); 9 wins to $10,000.
-Strong calls 20-3 (87.0% vs 72.8% claimed).
-Closing line value: +1.67 points on 23 picks; beat the close on 65.2%.
+Strong calls 21-3 (87.5% vs 72.8% claimed).
+Closing line value: +1.72 points on 24 picks; beat the close on 66.7%.
 - LOST ecu Mushuc Runa at 82%: margin 1 · the book had my side favoured too · called at 82%
 - LOST efl1 Charlton Athletic at 70%: margin 1 · the book had my side favoured too · called at 70%
 - LOST par Nacional Asunción at 71%: margin 2 · the book had my side favoured too · called at 71%
