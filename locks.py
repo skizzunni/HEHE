@@ -864,7 +864,7 @@ def every_game(legs, led=None):
     for L in best_per_game(legs):
         st, score = _every_status(L, led)
         out.append(dict(gid=L["gid"], label=L["label"], price=L.get("price"), p=L["p"], match=L.get("match"),
-                        league=L.get("league"), tip=L.get("tip"), status=st, score=score))
+                        league=L.get("league"), tip=L.get("tip"), status=st, score=score, spec=L.get("spec")))
     return out
 
 

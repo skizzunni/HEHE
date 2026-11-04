@@ -1420,6 +1420,8 @@ function ladderHTML(){
 }
 // Every game: its single likeliest FanDuel line (locks.every_game), the whole
 // Safe Locks pool rather than the 11-leg card. Straight bets, one per game.
+// American odds to decimal (the bet slip's dec is declared later in the script)
+function dec0(a){ const v = parseInt(String(a).replace('+', ''), 10); return isNaN(v) ? 1 : v > 0 ? 1 + v / 100 : 1 + 100 / Math.abs(v); }
 // what $10 straight on every leg returns if all win, and the expected
 // profit from each leg's own chance (short prices: small wins)
 function everyPays(G){
@@ -1459,6 +1461,8 @@ function everyGameHTML(){
       + (100 * g.p).toFixed(0) + '% &middot; ' + esc(g.match || '') + ' ' + res(g.status)
       + (g.score && g.status !== 'open' ? '<div class="sbn">' + esc(g.score) + '</div>'
          : g.live ? '<div class="sbn"><b>Live:</b> ' + esc(g.live) + ' &middot; ' + esc(g.live_score || '') + '</div>'
+         : g.alt ? '<div class="sbn">Pays more at <b>Kalshi</b>: ' + Math.round(100 * g.alt.ask) + '&cent; (' + esc(g.alt.american || '')
+           + ' after fee), $10 wins $' + (10 * (g.alt.dec - 1)).toFixed(2) + ' vs $' + (10 * (dec0(g.price) - 1)).toFixed(2) + ' at FanDuel</div>'
          : (g.league || g.tip) ? '<div class="sbn">' + [String(g.league || '').toUpperCase(), g.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '')
       + '</li>').join('') + '</ul>'
     + copyBtn("Every game, safest bet", G.map(g => legLine(g.label, g.price, "FanDuel", g.match)))

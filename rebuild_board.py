@@ -654,6 +654,10 @@ def snapshot():
                 _ld.live(_eg)              # game clock and score on legs in play
             except Exception:
                 pass
+            try:                           # where Kalshi pays more for the same bet
+                locks.kalshi_alt({"locks": _eg}, FRESH.get("today"), KB0)
+            except Exception:
+                pass
             out["every_game"] = dict(today=_eg, preview=not _fz, record=locks.every_game_record(locks.SAFE_LEDGER))
             print(f"every game: {len(_eg)} games, record {out['every_game']['record']}", file=sys.stderr)
         except Exception as e_:
