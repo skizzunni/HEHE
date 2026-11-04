@@ -117,6 +117,7 @@ PROBE = """<script>setTimeout(function(){
   out.be = [breakEvenBoost(0.08, 10), breakEvenBoost(0.12, 10), breakEvenBoost(0, 10)];
   out.ladderTile = [].slice.call(document.querySelectorAll('#glance [data-goto="locks"]')).map(function(e){return e.textContent})
     .filter(function(t){return /Ladder/.test(t)}).join("");
+  out.sweepTile = [].slice.call(document.querySelectorAll('#glance [data-goto="results"]')).map(function(e){return e.textContent}).join("|");
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -241,6 +242,9 @@ def main():
     vn = new.get("venue") or ["", "", "x"]
     if "FanDuel -140" not in vn[0] or "+5.5%" not in vn[0] or "best price here" not in vn[1] or vn[2] != "":
         fails.append(f"venue note must name the better venue and its gain: {vn}")
+    st = new.get("sweepTile", "")
+    if not ("Board sweep" in st and "5–2" in st and "sweep broken" in st):
+        fails.append("board sweep tile wrong: " + st)
     sb = new.get("skipBar") or ["", "x"]
     if not ("2 of 3 picks here are marked" in sb[0] and "50-60%: -6.2% per $1 over 3,153 games" in sb[0]
             and "Bet the day" in sb[0]) or sb[1]:

@@ -756,7 +756,7 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
   const PL = ((D.prop_locks || {}).record) || {};
   const LK = (((D.locks || {}).today || {}).locks) || [];
   // each tile opens its section when tapped (handled by the data-goto listener below)
-  const goto = label => /Prop/.test(label) ? "props" : /Lock/.test(label) ? "locks" : /call/i.test(label) ? "calls" : "";
+  const goto = label => /sweep/i.test(label) ? "results" : /Prop/.test(label) ? "props" : /Lock/.test(label) ? "locks" : /call/i.test(label) ? "calls" : "";
   const tile = (label, big, sub, cls) => '<div class="k' + (cls ? " " + cls : "") + '"'
     + (goto(label) ? ' data-goto="' + goto(label) + '" role="button" tabindex="0" style="cursor:pointer"' : '') + '><span>' + label
     + '</span><b>' + big + '</b><i>' + sub + '</i></div>';
@@ -773,7 +773,20 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
       : tile("Locks today", String(LK.length), "on FanDuel"))
   + tile("Prop Locks", PL.n ? PL.won + " of " + PL.n : "&mdash;",
          PL.n ? PL.hit + "% hit" : "none graded yet", PL.n && PL.hit >= 70 ? "good" : "")
-  + last7(D.safe_locks_record, "Safe Locks", 0.85) + last7(PL, "Prop Locks", 0.85) + ladderTile();
+  + last7(D.safe_locks_record, "Safe Locks", 0.85) + last7(PL, "Prop Locks", 0.85) + ladderTile() + sweepTile();
+  // the whole board today (every priced pick, ledger.board_payload): still a
+  // clean sweep, or broken; the best day of the last two weeks beside it
+  function sweepTile(){
+    const R = D.results || {};
+    const w = R.today_won || 0, l = R.today_lost || 0, o = R.today_open || 0, H = R.board_days || [];
+    if(!(w + l + o) && !H.length) return "";
+    const best = H.filter(d => d.won + d.lost >= 5).sort((a, b) => b.won / (b.won + b.lost) - a.won / (a.won + a.lost))[0];
+    const bestTxt = best ? "best day " + best.won + "&ndash;" + best.lost + " (" + best.day.slice(5) + ")" : "";
+    const big = !(w + l) ? (o ? o + " to play" : "&mdash;") : l ? w + "&ndash;" + l : w + "&ndash;0";
+    const sub = !(w + l + o) ? bestTxt
+      : (l ? "sweep broken" : w ? "still clean" : "clean so far") + (o ? ", " + o + " to go" : "") + (bestTxt ? " &middot; " + bestTxt : "");
+    return tile("Board sweep", big, sub, (w + l) && !l ? "good" : "");
+  }
   // the $1 -> $10k ladder (ladder.py): bank and streak; tapping opens the Locks tab
   function ladderTile(){
     const X = D.ladder;

@@ -3821,3 +3821,5 @@ League tabs warn when their picks sit in favourite bands that lost money at thei
 longer also shows a "strong" badge. Why: NHL picks under 55% went 57-62 (47.9%, -15.7% per $1)
 from 2026-09-29 to 11-03, losing in both date halves (-14.0%, -18.2%); the 986-game NHL
 50-60% band study gives -8.6% per $1 (95% -14.4 to -3.3) (2026-11-04).
+A "Board sweep" tile tracks the whole board today: still clean or broken, games to go, and the
+best day of the last two weeks (`ledger.sweep_days`; taps open Results) (2026-11-04).
