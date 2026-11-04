@@ -119,6 +119,7 @@ PROBE = """<script>setTimeout(function(){
     .filter(function(t){return /Ladder/.test(t)}).join("");
   out.sweepTile = [].slice.call(document.querySelectorAll('#glance [data-goto="results"]')).map(function(e){return e.textContent}).join("|");
   out.oneIn = [oneIn(0.71), oneIn(4.22e-8)];
+  out.own = ownHTML({n: 382, own: 232, market: 260, since: "2026-10-05", today: [{league: "nba", match: "MIA @ LAC", own: "LAC", own_p: 60, market: "MIA", market_p: 65}]});
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -255,6 +256,9 @@ def main():
     if not all(x in eg for x in ("Every game: its safest bet (2 games, 1–0 so far)", "386 of 427", "90.4%",
                                    "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "NBA · 7:30 PM", "set at 8 AM")):
         fails.append("every game section wrong: " + eg)
+    ow = new.get("own", "")
+    if not all(x in ow for x in ("mine 232 right (60.7%)", "260 (68.1%)", "The market is ahead", "I take LAC</b> (60%)")):
+        fails.append("own picks section wrong: " + ow)
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken" in st):
         fails.append("board sweep tile wrong: " + st)

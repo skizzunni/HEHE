@@ -1395,6 +1395,22 @@ function everyGameHTML(){
     + copyBtn("Every game, safest bet", G.map(g => legLine(g.label, g.price, "FanDuel", g.match)))
     + '</details></div>';
 }
+// My own picks with the prices hidden (ledger.own_view): the model alone
+// against the market, head to head on the same games, and today's games
+// where they disagree -- tracked, not bet, until the model earns it.
+function ownHTML(O){
+  if(!O || !O.n) return '';
+  const pc = x => (100 * x / O.n).toFixed(1) + '%';
+  return '<div class="sweep"><h3>My own picks, prices hidden</h3><p class="note">Every game picked by my ratings, form and home edge alone, '
+    + 'never looking at the odds. Since ' + esc(O.since) + ', same ' + O.n + ' games: <b>mine ' + O.own + ' right (' + pc(O.own)
+    + ')</b>, the market&rsquo;s favourite ' + O.market + ' (' + pc(O.market) + '). '
+    + (O.own > O.market ? 'Mine are ahead.' : 'The market is ahead, so the board still follows it; mine are tracked here until they beat it.') + '</p>'
+    + ((O.today || []).length ? '<p class="note"><b>Today I disagree with the market on ' + O.today.length + ':</b></p><ul class="betlegs">'
+      + O.today.map(x => '<li>' + esc(String(x.league).toUpperCase()) + ' ' + esc(x.match) + ': <b>I take ' + esc(x.own) + '</b> ('
+        + x.own_p + '%), market has ' + esc(x.market) + ' (' + x.market_p + '%)</li>').join('') + '</ul>'
+      : '<p class="note">Today my picks and the market agree on every game.</p>')
+    + '</div>';
+}
 function drawLocks(){
   const SAFE = LKMODE === "safe";
   const K = (SAFE ? D.safe_locks : D.locks) || {};
@@ -2960,6 +2976,7 @@ function scoreboardHTML(){
         : '')
     + '<div class="rsub">' + live.length + ' in play &middot; ' + (R.today_open || 0)
     + ' still to finish</div></div>';
+  h += ownHTML(R.own);
 
   h += '<p class="rsub">' + (R.excluded_unpriced || 0)
     + ' unpriced picks excluded from the record (all dates).</p>';

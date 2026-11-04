@@ -3835,3 +3835,7 @@ Locks tab: "Every game: its safest bet" -- for every game FanDuel prices, its si
 line from the Safe Locks pool (-2000 to -500), as straight bets (`locks.every_game`). Tested on
 the frozen 8 AM pools 2026-10-21 to 11-03, graded off final scores: 90.2% and 90.6% in the two
 date halves (386 of 427, 90.4% vs 88.5% stated; -3.0% per $1 at the short prices) (2026-11-04).
+Results tab: "My own picks, prices hidden" -- every game by my ratings, form and home edge
+alone, head to head with the market on the same games (`ledger.own_view`): 2026-10-05 to 11-03,
+mine 232 of 382 (60.7%), the market 260 (68.1%); today's disagreements listed and tracked, never
+bet until mine are ahead (2026-11-04).

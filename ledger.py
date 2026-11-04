@@ -663,6 +663,34 @@ def report():
 
 
 # ----------------------------------------------------------- site payload
+def own_view(book, today, since_days=30):
+    """My own picks with the prices hidden: each game's side by the model
+    alone (ratings, form, home edge -- the history's p_model_away), against
+    the market's side. Graded head to head on the same games over the last
+    since_days, plus today's games where the two disagree."""
+    since = (dt.date.fromisoformat(today) - dt.timedelta(days=since_days)).isoformat()
+    n = own = mkt = 0
+    split = []
+    for k, e in book.items():
+        H = [h for h in e.get("history") or [] if h.get("p_model_away") is not None and h.get("p_market_away") is not None]
+        if not H or not record_priced(e):
+            continue
+        h, d = H[-1], e.get("date") or ""
+        model_away, mkt_away = h["p_model_away"] > 0.5, h["p_market_away"] > 0.5
+        teams = (e.get("matchup") or "").split(" @ ")
+        if e.get("status") in ("won", "lost") and since <= d < today:
+            mkt_won = (e["status"] == "won") == (e.get("market_agrees") is not False)
+            n += 1
+            mkt += mkt_won
+            own += mkt_won if model_away == mkt_away else not mkt_won
+        elif e.get("status") == "open" and d == today and model_away != mkt_away and len(teams) == 2:
+            split.append(dict(league=k.split(":")[0], match=e.get("matchup"), own=teams[0] if model_away else teams[1],
+                              own_p=round(100 * (h["p_model_away"] if model_away else 1 - h["p_model_away"])),
+                              market=teams[0] if mkt_away else teams[1],
+                              market_p=round(100 * (h["p_market_away"] if mkt_away else 1 - h["p_market_away"]))))
+    return dict(n=n, own=own, market=mkt, since=since, today=sorted(split, key=lambda x: x["league"]))
+
+
 def sweep_days(done, day_of, today, n=14):
     """The whole board, day by day: priced picks won and lost on each of the
     last n days before today ([{day, won, lost}], newest first), for the
@@ -721,6 +749,7 @@ def board_payload(limit=40):
     open_today = sum(1 for e in book.values()
                      if record_priced(e) and e.get("status") == "open" and (e.get("date") or "") == today)
     board_days = sweep_days(done, day_of, today)
+    own = own_view(book, today)
     # the chance every still-open priced pick today wins, from each pick's own
     # stated chance (independent games): what the sweep tile calls the odds
     # of finishing clean
@@ -781,7 +810,7 @@ def board_payload(limit=40):
                 calls_top=_calls.TOP_N,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance,
+                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance, own=own,
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))
