@@ -709,6 +709,10 @@ function skipBar(rows){
       + B[k].n.toLocaleString() + ' games').join('; ')
     + '). Bet the day&rsquo;s Calls instead.</p>';
 }
+// a chance as a percent, or "1 in N" once it is under 1%
+function oneIn(p){
+  return p >= 0.01 ? (100 * p).toFixed(0) + "%" : "1 in " + Math.round(1 / p).toLocaleString();
+}
 function coinBar(n){
   if(!n) return "";
   return '<p class="coinbar">'
@@ -784,7 +788,8 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
     const bestTxt = best ? "best day " + best.won + "&ndash;" + best.lost + " (" + best.day.slice(5) + ")" : "";
     const big = !(w + l) ? (o ? o + " to play" : "&mdash;") : l ? w + "&ndash;" + l : w + "&ndash;0";
     const sub = !(w + l + o) ? bestTxt
-      : (l ? "sweep broken" : w ? "still clean" : "clean so far") + (o ? ", " + o + " to go" : "") + (bestTxt ? " &middot; " + bestTxt : "");
+      : (l ? "sweep broken" : w ? "still clean" : "clean so far") + (o ? ", " + o + " to go" : "")
+        + (!l && o && R.sweep_chance ? " (" + oneIn(R.sweep_chance) + " to stay clean)" : "") + (bestTxt ? " &middot; " + bestTxt : "");
     return tile("Board sweep", big, sub, (w + l) && !l ? "good" : "");
   }
   // the $1 -> $10k ladder (ladder.py): bank and streak; tapping opens the Locks tab

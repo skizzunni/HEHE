@@ -118,6 +118,7 @@ PROBE = """<script>setTimeout(function(){
   out.ladderTile = [].slice.call(document.querySelectorAll('#glance [data-goto="locks"]')).map(function(e){return e.textContent})
     .filter(function(t){return /Ladder/.test(t)}).join("");
   out.sweepTile = [].slice.call(document.querySelectorAll('#glance [data-goto="results"]')).map(function(e){return e.textContent}).join("|");
+  out.oneIn = [oneIn(0.71), oneIn(4.22e-8)];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -242,6 +243,8 @@ def main():
     vn = new.get("venue") or ["", "", "x"]
     if "FanDuel -140" not in vn[0] or "+5.5%" not in vn[0] or "best price here" not in vn[1] or vn[2] != "":
         fails.append(f"venue note must name the better venue and its gain: {vn}")
+    if new.get("oneIn") != ["71%", "1 in 23,696,682"]:
+        fails.append("oneIn wrong: " + repr(new.get("oneIn")))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken" in st):
         fails.append("board sweep tile wrong: " + st)

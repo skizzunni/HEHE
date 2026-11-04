@@ -683,6 +683,14 @@ def board_payload(limit=40):
     open_today = sum(1 for e in book.values()
                      if record_priced(e) and e.get("status") == "open" and (e.get("date") or "") == today)
     board_days = sweep_days(done, day_of, today)
+    # the chance every still-open priced pick today wins, from each pick's own
+    # stated chance (independent games): what the sweep tile calls the odds
+    # of finishing clean
+    import math as _m
+    _open_p = [e["conf"] / 100 for e in book.values()
+               if record_priced(e) and e.get("status") == "open" and (e.get("date") or "") == today
+               and isinstance(e.get("conf"), (int, float))]
+    sweep_chance = round(_m.prod(_open_p), 10) if _open_p else None
 
     # the day's calls and their record (calls.update_daily): N, dates, Wilson
     import calls as _calls
@@ -735,7 +743,7 @@ def board_payload(limit=40):
                 calls_top=_calls.TOP_N,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days,
+                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance,
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))

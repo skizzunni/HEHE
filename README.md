@@ -3823,3 +3823,7 @@ from 2026-09-29 to 11-03, losing in both date halves (-14.0%, -18.2%); the 986-g
 50-60% band study gives -8.6% per $1 (95% -14.4 to -3.3) (2026-11-04).
 A "Board sweep" tile tracks the whole board today: still clean or broken, games to go, and the
 best day of the last two weeks (`ledger.sweep_days`; taps open Results) (2026-11-04).
+The Board sweep tile gives the chance the still-open picks all win ("1 in 23,696,682 to stay
+clean", the product of their stated chances). Study, nothing to adopt: picks against the market
+won 33.3% / 38.1% in the two date halves (276 picks) against 69.0% / 72.7% with it; none has
+been made since 2026-10-15, as every pick now follows the market (2026-11-04).
