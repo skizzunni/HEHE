@@ -3843,3 +3843,8 @@ Every pick row on the NBA, NHL, NFL and WNBA tabs lists the ESPN injury report f
 (`injuries.py`). Each build appends a snapshot to review/injuries/<date>.json when the report
 changes, so an injury-aware version of my own price-blind picks can be tested on reports as they
 stood before each game. Display only (2026-11-04).
+Pick rows show how far the price moved since the pick was called (display only). Study
+(1,104 priced picks, split at 2026-10-25): picks whose price moved 3+ points AGAINST them hit
+75.6% then 57.1% against ~67% stated -- the halves disagree, so no rule. Picks it moved 3+
+TOWARD hit 79.1% and 83.7% against ~72.5% stated (steady prices: 69.9%, 77.0%); shown as
+"Money moving my way", not used to choose picks (2026-11-04).

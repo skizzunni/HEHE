@@ -713,6 +713,13 @@ function skipBar(rows){
 function oneIn(p){
   return p >= 0.01 ? (100 * p).toFixed(0) + "%" : "1 in " + Math.round(1 / p).toLocaleString();
 }
+// the price's move since the pick was first called (rebuild_board.move_of)
+function moveNote(r){
+  if(r.mv === null || r.mv === undefined) return '';
+  return r.mv > 0
+    ? '<div class="sbn"><b>Money moving my way</b> (+' + r.mv + ' pts since called): picks like this hit 79&ndash;84% against ~72% stated.</div>'
+    : '<div class="sbn"><b>Price moved against it</b> (' + r.mv + ' pts since called): check the news before betting.</div>';
+}
 // the ESPN injury report for both teams (injuries.py): who is out on my
 // pick's side and on the other side
 function injNote(r){
@@ -1032,7 +1039,7 @@ function renderView(){
              + '<span class="stripe"></span>' + esc(r.mp) + dog + val + '</td>'
              + (mixed ? '<td class="comp">' + esc(r.lg) + '</td>' : '')
              + '<td class="state">' + esc(r.t) + '</td>' + conf
-             + '<td class="why">' + esc(r.why) + injNote(r) + '</td>' + price + '</tr>';
+             + '<td class="why">' + esc(r.why) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
       }).join("")
     + '</tbody></table>';
 }

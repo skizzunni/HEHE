@@ -136,6 +136,22 @@ def snapshot():
         INJ = {}
         print(f"injury reports skipped ({e_})", file=sys.stderr)
 
+    # how far each pick's price has moved since it was first called, in
+    # implied-chance points (+ = toward my side); display only. 2026-10-12 to
+    # 11-03, picks that moved 3+ toward my side hit 79.1% and 83.7% in the
+    # two date halves against ~72.5% stated (171 picks).
+    try:
+        _LB = ledger.load()
+    except Exception:
+        _LB = {}
+
+    def move_of(r):
+        e = _LB.get(r.get("id")) or {}
+        a, b = ledger._implied(e.get("first_price")), ledger._implied(e.get("price"))
+        if a is None or b is None or e.get("pick") != r.get("mypick") or abs(b - a) < 0.03:
+            return None
+        return round(100 * (b - a))
+
     def inj_note(k, r):
         if k not in INJ:
             return None
@@ -226,6 +242,7 @@ def snapshot():
                              "vn": (venues.compare(k, r, r["mypick"], leg.get("price"), r.get("price_book"),
                                                    FD, KB0, OA) if leg and not r.get("dc") else []),
                              "inj": inj_note(k, r),
+                             "mv": move_of(r),
                              "lg": lab})
             # ranked by the published chance (the one probability)
             rows.sort(key=lambda x: (x["mc"] is None, -(x["hit"] or 0),

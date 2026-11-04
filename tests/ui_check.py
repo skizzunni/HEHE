@@ -121,6 +121,7 @@ PROBE = """<script>setTimeout(function(){
   out.oneIn = [oneIn(0.71), oneIn(4.22e-8)];
   out.own = ownHTML({n: 382, own: 232, market: 260, since: "2026-10-05", today: [{league: "nba", match: "MIA @ LAC", own: "LAC", own_p: 60, market: "MIA", market_p: 65}]});
   out.inj = [injNote({inj: {mine: ["Giannis Antetokounmpo (Day-To-Day)"], opp: ["Brandon Ingram (Out)", "Bradley Beal (Out)", "A (Out)", "B (Out)", "C (Out)"]}}), injNote({}), injNote({inj: {mine: [], opp: []}})];
+  out.mv = [moveNote({mv: 5}), moveNote({mv: -4}), moveNote({mv: null}), moveNote({})];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -263,6 +264,9 @@ def main():
     ij = new.get("inj") or ["", "x", "x"]
     if not ("my side: Giannis Antetokounmpo (Day-To-Day)" in ij[0] and "their side: Brandon Ingram (Out), Bradley Beal (Out), A (Out), B (Out) +1" in ij[0]) or ij[1] or ij[2]:
         fails.append("injury note wrong: " + repr(ij))
+    mv = new.get("mv") or ["", "", "x", "x"]
+    if not ("Money moving my way</b> (+5 pts" in mv[0] and "Price moved against it</b> (-4 pts" in mv[1]) or mv[2] or mv[3]:
+        fails.append("move note wrong: " + repr(mv))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken" in st):
         fails.append("board sweep tile wrong: " + st)
