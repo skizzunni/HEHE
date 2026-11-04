@@ -1473,6 +1473,12 @@ function ownHTML(O){
       : '<p class="note">Today my picks and the market agree on every game.</p>')
     + '</div>';
 }
+// a Locks record split into player props and game lines (locks.by_kind)
+function kindLine(K){
+  if(!(K || []).length) return '';
+  return '<p class="note">By type: ' + K.map(x => esc(x.kind) + ' ' + x.won + ' of ' + x.n + ' ('
+    + (100 * x.won / x.n).toFixed(0) + '% vs ' + x.said + '% stated)').join(' &middot; ') + '.</p>';
+}
 function drawLocks(){
   const SAFE = LKMODE === "safe";
   const K = (SAFE ? D.safe_locks : D.locks) || {};
@@ -1558,6 +1564,7 @@ function drawLocks(){
         + playsLine(R.plays)
         + ((R.by_sport || []).length > 1 ? '<p class="note">By league: ' + R.by_sport.slice(0, 6).map(x =>
             esc(String(x.sport).toUpperCase()) + ' ' + x.won + ' of ' + x.n).join(' &middot; ') + '.</p>' : '')
+        + kindLine(R.by_kind)
         + '<table class="mk"><thead><tr><th>Day</th><th class="num">Won</th><th class="num">Lost</th>'
         + '<th class="num">Open</th><th>All hit?</th><th>Winners parlay</th></tr></thead><tbody>'
         + (R.days || []).map(d => '<tr><td>' + esc(d.day) + '</td><td class="num">' + d.won

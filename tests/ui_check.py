@@ -124,6 +124,7 @@ PROBE = """<script>setTimeout(function(){
   out.mv = [moveNote({mv: 5}), moveNote({mv: -4}), moveNote({mv: null}), moveNote({})];
   out.yday = [yesterdayHTML({day: "2026-11-03", won: 34, lost: 1, losses: [{league: "efl1", pick: "Charlton Athletic", conf: 70, price: "-310", score: {"Bolton Wanderers": 1, "Charlton Athletic": 0}, tags: ["favourite lost", "close game"], why: "margin 1"}]}), yesterdayHTML({day: "x", won: 0, lost: 0})];
   out.ownTile = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.textContent}).filter(function(t){return /vs market/.test(t)}).join("|");
+  out.kind = [kindLine([{kind: "player props", won: 33, n: 41, said: 79.1}, {kind: "game lines", won: 136, n: 165, said: 77.3}]), kindLine([])];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -278,6 +279,9 @@ def main():
     ot = new.get("ownTile", "")
     if not ("My picks vs market" in ot and "232–260" in ot and "same 382 games, prices hidden · 2 splits today" in ot):
         fails.append("own tile wrong: " + ot)
+    kd = new.get("kind") or ["", "x"]
+    if "By type: player props 33 of 41 (80% vs 79.1% stated) &middot; game lines 136 of 165 (82% vs 77.3% stated)." not in kd[0] or kd[1]:
+        fails.append("kind line wrong: " + repr(kd))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken" in st):
         fails.append("board sweep tile wrong: " + st)

@@ -737,7 +737,7 @@ def report(path=None):
                 days=days,
                 plays={k: dict(days=t[0], hit=t[1], said=round(100 * t[2] / t[0], 1) if t[0] else None)
                        for k, t in tally.items()},
-                by_sport=by_sport(legs))
+                by_sport=by_sport(legs), by_kind=by_kind(legs))
 
 
 def by_sport(legs):
@@ -749,6 +749,17 @@ def by_sport(legs):
         n[lg] += 1
         w[lg] += L["status"] == "won"
     return [dict(sport=lg, won=w[lg], n=c) for lg, c in n.most_common()]
+
+
+def by_kind(legs):
+    """Graded legs split into player props and game lines: [{kind, won, n, said}]."""
+    out = []
+    for name, f in (("player props", lambda L: L.get("kind") == "prop"), ("game lines", lambda L: L.get("kind") != "prop")):
+        S = [L for L in legs if f(L)]
+        if S:
+            out.append(dict(kind=name, won=sum(L["status"] == "won" for L in S), n=len(S),
+                            said=round(100 * sum(L["p"] for L in S) / len(S), 1)))
+    return out
 
 
 ALT_TOLERANCE = 0.06

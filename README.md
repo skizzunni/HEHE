@@ -3866,3 +3866,6 @@ Study, rejected: market picks my price-blind model agrees with hit 61.2% then 73
 Ladder card explains why it uses Locks, not Safe Locks. Study, kept as is: top-5 Safe Locks
 won 5/8 then 6/9 days at ~1.29x (37 wins to $10,000; 2.8e-08 / 3.1e-07) against Locks 2/9 then
 4/10 at ~3x (9 wins; 1.3e-06 / 2.6e-04) -- Locks better in both halves (2026-11-04).
+Locks and Safe Locks records split by type (player props 33 of 41, 80% vs 79% stated; game
+lines 136 of 165, 82% vs 77%). Study, nothing to change: Locks props hit 7/8 then 26/33 (78.8%
+vs 79.2% stated), on their price; game lines beat theirs in both halves (2026-11-04).

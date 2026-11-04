@@ -29,5 +29,13 @@ class LocksBySport(unittest.TestCase):
         self.assertEqual(r["by_sport"], [dict(sport="nhl", won=1, n=1), dict(sport="nfl", won=0, n=1)])
 
 
+class ByKind(unittest.TestCase):
+    def test_props_and_game_lines(self):
+        import locks
+        legs = [dict(kind="prop", status="won", p=0.8), dict(kind="prop", status="lost", p=0.8), dict(kind=None, status="won", p=0.7)]
+        self.assertEqual(locks.by_kind(legs), [dict(kind="player props", won=1, n=2, said=80.0),
+                                                dict(kind="game lines", won=1, n=1, said=70.0)])
+
+
 if __name__ == "__main__":
     unittest.main()
