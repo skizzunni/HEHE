@@ -8256,8 +8256,8 @@
    },
    {
     "flag": false,
-    "hit": 81.3,
-    "n": 444,
+    "hit": 81.5,
+    "n": 454,
     "name": "props nhl Shots on Goal",
     "said": 80.9
    },
@@ -8376,16 +8376,16 @@
    {
     "flag": false,
     "hit": 92.5,
-    "n": 146,
+    "n": 147,
     "name": "prop locks",
     "said": 88.6
    },
    {
     "flag": false,
     "hit": 42.0,
-    "n": 281,
+    "n": 283,
     "name": "value bets",
-    "said": 44.1
+    "said": 44.2
    },
    {
     "flag": false,
@@ -8484,9 +8484,9 @@
    }
   },
   "clv": {
-   "avg": 1.48,
-   "beat": 73.2,
-   "n": 41
+   "avg": 1.59,
+   "beat": 73.8,
+   "n": 42
   },
   "day": "2026-11-03",
   "ladder": "Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; 8 wins to $10,000.",
@@ -8494,7 +8494,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      2,
@@ -8502,7 +8502,7 @@
      "won"
     ]
    },
-   "won": 10
+   "won": 11
   },
   "losses": [
    {
@@ -8639,12 +8639,12 @@
    }
   ],
   "picks": {
-   "hit": 80.5,
+   "hit": 81.0,
    "lost": 8,
-   "n": 41,
-   "roi": 5.3,
-   "said": 71.9,
-   "won": 33
+   "n": 42,
+   "roi": 6.4,
+   "said": 71.6,
+   "won": 34
   },
   "picks_by_league": {
    "afc": {
@@ -8704,12 +8704,12 @@
     "won": 1
    },
    "nhl": {
-    "hit": 50.0,
+    "hit": 54.5,
     "lost": 5,
-    "n": 10,
-    "roi": -19.9,
-    "said": 58.3,
-    "won": 5
+    "n": 11,
+    "roi": -13.3,
+    "said": 58.7,
+    "won": 6
    },
    "par": {
     "hit": 0.0,
@@ -8751,9 +8751,9 @@
     "said_price": 87.3,
     "won": 1462
    },
-   "n": 102,
-   "said": 81.8,
-   "won": 85
+   "n": 112,
+   "said": 81.9,
+   "won": 94
   },
   "safe_locks": {
    "lost": [],
@@ -8789,10 +8789,10 @@
    "agree": {
     "hit": 75.1,
     "lost": 240,
-    "n": 964,
+    "n": 965,
     "roi": 1.2,
     "said": 70.6,
-    "won": 724
+    "won": 725
    }
   },
   "weights": {
@@ -8826,10 +8826,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6546,
-    "market_only": 0.6546,
-    "model_40": 0.6634,
-    "n": 128,
+    "logloss": 0.6531,
+    "market_only": 0.6531,
+    "model_40": 0.6619,
+    "n": 129,
     "weight": 0.0
    }
   }
