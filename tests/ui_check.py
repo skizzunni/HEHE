@@ -108,6 +108,9 @@ PROBE = """<script>setTimeout(function(){
   out.odds = callOdds([{conf: 80}, {conf: 80}]);
   out.band = [bandNote({bv: {band: "50-60", roi: -6.24, roi95: [-9.15, -3.23], n: 3153, skip: true}}),
               bandNote({bv: {band: "90-100", roi: 0.49, roi95: [-1.01, 1.88], n: 485, skip: false}}), bandNote({})];
+  var sk = {band: "50-60", roi: -6.24, roi95: [-9.15, -3.23], n: 3153, skip: true};
+  out.skipBar = [skipBar([{bv: sk, p: "-120"}, {bv: sk, p: "-118"}, {bv: {band: "90-100", roi: 0.49, n: 485, skip: false}, p: "-900"}]),
+                 skipBar([{p: "-900"}])];
   out.venue = [venueNote({p: "-160", vn: [{venue: "FanDuel", price: "-140", dec: 1.7143}, {venue: "DraftKings", price: "-160", dec: 1.625}]}),
                venueNote({p: "-160", vn: [{venue: "DraftKings", price: "-160", dec: 1.625}, {venue: "Kalshi", price: "62\u00a2", dec: 1.6}]}),
                venueNote({p: "-160", vn: []})];
@@ -238,6 +241,10 @@ def main():
     vn = new.get("venue") or ["", "", "x"]
     if "FanDuel -140" not in vn[0] or "+5.5%" not in vn[0] or "best price here" not in vn[1] or vn[2] != "":
         fails.append(f"venue note must name the better venue and its gain: {vn}")
+    sb = new.get("skipBar") or ["", "x"]
+    if not ("2 of 3 picks here are marked" in sb[0] and "50-60%: -6.2% per $1 over 3,153 games" in sb[0]
+            and "Bet the day" in sb[0]) or sb[1]:
+        fails.append("skip bar wrong: " + repr(sb))
     bn = new.get("band") or ["", "", "x"]
     if "-6.2% per $1" not in bn[0] or "skip" not in bn[0] or "+0.5%" not in bn[1] or "skip" in bn[1] or bn[2] != "":
         fails.append(f"band note must state the band's historical return and mark skips: {bn}")

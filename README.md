@@ -3816,3 +3816,8 @@ lost: the leg that sank it) and a day-by-day log of the run (`ladder.report` las
 Prop Locks record shows hits by league and stat ("NHL Shots on Goal 41/45").
 Study, rejected: Prop Locks by market in each date half (88 and 59 graded legs) -- no
 market trails its stated chance, so none is cut (2026-11-04).
+League tabs warn when their picks sit in favourite bands that lost money at their price
+(band_value skip): "Don't copy this whole list... Bet the day's Calls instead."; a skip row no
+longer also shows a "strong" badge. Why: NHL picks under 55% went 57-62 (47.9%, -15.7% per $1)
+from 2026-09-29 to 11-03, losing in both date halves (-14.0%, -18.2%); the 986-game NHL
+50-60% band study gives -8.6% per $1 (95% -14.4 to -3.3) (2026-11-04).

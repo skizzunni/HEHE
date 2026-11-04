@@ -696,6 +696,19 @@ function setRank(r){
   render();
 }
 
+// The slate is who should win each game, not a bet list: say so when its
+// favourites sit in bands that have lost money at their price (band_value.py).
+function skipBar(rows){
+  const S = rows.filter(r => r.bv && r.bv.skip && !r.np && !staleNow(r));
+  if(!S.length) return "";
+  const B = {};
+  S.forEach(r => { B[r.bv.band] = r.bv; });
+  return '<p class="coinbar stale"><b>Don&rsquo;t copy this whole list.</b> It shows who should win each game, not what to bet. '
+    + S.length + ' of ' + rows.length + ' pick' + (rows.length === 1 ? '' : 's') + ' here are marked <b>skip</b>: favourites at that chance have lost money at their real price ('
+    + Object.keys(B).sort().map(k => k + '%: ' + (B[k].roi >= 0 ? '+' : '') + B[k].roi.toFixed(1) + '% per $1 over '
+      + B[k].n.toLocaleString() + ' games').join('; ')
+    + '). Bet the day&rsquo;s Calls instead.</p>';
+}
 function coinBar(n){
   if(!n) return "";
   return '<p class="coinbar">'
@@ -953,7 +966,7 @@ function renderView(){
       + '(' + coins + ' of them). Nothing worth a leg.</p>' + coinBar(coins);
     return;
   }
-  panel.innerHTML = strongBar(closeN) + coinBar(coins)
+  panel.innerHTML = strongBar(closeN) + coinBar(coins) + skipBar(shown)
     + (lg.asof ? (function(){
         const old = lg.rows.filter(r => r.pa && !r.np).some(staleNow);
         return '<p class="coinbar' + (old ? ' stale' : '') + '">Prices as of ' + esc(lg.asof) + ' (oldest on this tab)'
@@ -976,6 +989,7 @@ function renderView(){
             + (r.np ? '<span class="tier lean" title="No sportsbook price: a lean only, never a call, not in the record or any ticket">lean</span>'
                : staleNow(r) ? '<span class="tier lean" title="Price older than 15 minutes, or with no capture time: not a call, not in the record or any ticket">stale</span>'
                : r.nc ? '<span class="tier lean" title="Close game: the favourite is under this league\'s cutoff">close</span>'
+               : r.bv && r.bv.skip ? ''
                : '<span class="tier call">strong</span>')
             + (r.mc >= 90 ? '<span class="tier call" title="90%+ picks won 97% of 110 graded college football picks: the only ones that belong in a long combo">combo-safe</span>' : '')
             + '</td>';
