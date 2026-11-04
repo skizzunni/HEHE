@@ -1391,6 +1391,15 @@ function ladderHTML(){
 }
 // Every game: its single likeliest FanDuel line (locks.every_game), the whole
 // Safe Locks pool rather than the 11-leg card. Straight bets, one per game.
+// the chance every leg on the list wins, and its five likeliest (each leg's
+// own chance multiplied: separate games), beside how many days have swept
+function everySweep(G, R){
+  if(G.length < 2) return '';
+  const prod = L => L.reduce((a, g) => a * g.p, 1);
+  const top = G.slice().sort((a, b) => b.p - a.p).slice(0, 5);
+  return '<p class="note"><b>Sweep odds:</b> all ' + G.length + ' win ' + oneIn(prod(G)) + '; the top ' + top.length + ' win '
+    + oneIn(prod(top)) + '.' + (R.days ? ' The whole list has swept on ' + (R.swept || 0) + ' of ' + R.days + ' days.' : '') + '</p>';
+}
 function everyGameHTML(){
   const X = D.every_game;
   if(!X || !(X.today || []).length) return '';
@@ -1405,7 +1414,7 @@ function everyGameHTML(){
     + (R.n ? 'Record: <b>' + R.won + ' of ' + R.n + '</b> (' + R.hit + '%) against ' + R.stated + '% stated, over '
         + R.days + ' days; ' + (R.roi >= 0 ? '+' : '') + R.roi + '% per $1 at the price. These are short prices: a win pays little.'
         + ((R.by_league || []).length > 1 ? ' By league: ' + R.by_league.slice(0, 6).map(x => esc(x.league) + ' ' + x.won + '/' + x.n).join(', ') + '.' : '') : '')
-    + '</p><ul class="betlegs">' + G.map(g => '<li>' + esc(g.label) + ' <b>' + esc(g.price || '') + '</b> &middot; '
+    + '</p>' + everySweep(G, R) + '<ul class="betlegs">' + G.map(g => '<li>' + esc(g.label) + ' <b>' + esc(g.price || '') + '</b> &middot; '
       + (100 * g.p).toFixed(0) + '% &middot; ' + esc(g.match || '') + ' ' + res(g.status)
       + (g.score && g.status !== 'open' ? '<div class="sbn">' + esc(g.score) + '</div>'
          : (g.league || g.tip) ? '<div class="sbn">' + [String(g.league || '').toUpperCase(), g.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '')

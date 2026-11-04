@@ -878,7 +878,11 @@ def every_game_record(path=None, led=None):
         a, n = lg.get(k, (0, 0))
         lg[k] = (a + (g["status"] == "won"), n + 1)
     by_league = [dict(league=k, won=a, n=n) for k, (a, n) in sorted(lg.items(), key=lambda x: (-x[1][1], x[0]))]
-    return dict(n=len(rows), won=w, hit=round(100 * w / len(rows), 1), by_league=by_league,
+    per_day = {}
+    for d, g in rows:
+        per_day.setdefault(d, []).append(g["status"] == "won")
+    swept = sum(all(v) for v in per_day.values())
+    return dict(n=len(rows), won=w, hit=round(100 * w / len(rows), 1), by_league=by_league, swept=swept,
                 stated=round(100 * sum(g["p"] for _, g in rows) / len(rows), 1),
                 roi=round(100 * ret / len(rows), 1), days=len(days), since=days[0])
 

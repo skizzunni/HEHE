@@ -3851,3 +3851,6 @@ TOWARD hit 79.1% and 83.7% against ~72.5% stated (steady prices: 69.9%, 77.0%); 
 "Every game" record shows hits by league (NCAAF 86/91, NBA 82/89, NHL 82/89). Study, rejected:
 every-game legs by league and by bet type in each date half -- none trails its stated chance in
 both halves (NFL 14/14 then 11/14, NHL 39/45 then 43/44), so none is dropped (2026-11-04).
+"Every game" shows its sweep odds (all legs, and the top 5) and how many days the whole list has
+swept (0 of 14 so far). Study, rejected: a "sweep core" of the top K legs -- the top 5 all won on
+2 of 6 days, then 6 of 7 (13 days), too few days and the halves disagree (2026-11-04).

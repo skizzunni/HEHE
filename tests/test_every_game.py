@@ -38,7 +38,7 @@ class Record(unittest.TestCase):
             r = locks.every_game_record(None, led)
         finally:
             locks.load = orig
-        self.assertEqual((r["n"], r["won"], r["by_league"]), (2, 1, [dict(league="NHL", won=1, n=2)]))
+        self.assertEqual((r["n"], r["won"], r["by_league"], r["swept"]), (2, 1, [dict(league="NHL", won=1, n=2)], 0))
 
 
 if __name__ == "__main__":
