@@ -118,13 +118,14 @@
   "2026-11-04": {
    "best_at": "2026-11-04T13:45:40+00:00",
    "best_ceiling": 1.905,
-   "checks": 45,
-   "last": "2026-11-04T16:43:17+00:00",
+   "checks": 46,
+   "last": "2026-11-04T16:48:22+00:00",
    "max_ready": 12,
    "reasons": {
-    "awaiting confirmed XIs": 458,
-    "below 75% leg standard or probability invalid": 59,
-    "probability unavailable": 59
+    "awaiting confirmed XIs": 468,
+    "awaiting this game's price after its lineup/news change": 1,
+    "below 75% leg standard or probability invalid": 61,
+    "probability unavailable": 61
    }
   }
  },
