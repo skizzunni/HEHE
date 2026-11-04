@@ -174,7 +174,9 @@ EVERY = dict(preview=False, record=dict(n=427, won=386, hit=90.4, stated=88.5, r
              today=[dict(gid="nhl:1", label="Winnipeg Jets +4.5", price="-2000", p=0.917, match="WPG at MTL", league="nhl",
                          tip="7:00 PM", status="won", score="WPG 5 - MTL 4"),
                     dict(gid="nba:2", label="Over 200.5 points", price="-900", p=0.9, match="A at B", league="nba",
-                         tip="7:30 PM", status="open", score=None)])
+                         tip="7:30 PM", status="open", score=None),
+                    dict(gid="nhl:3", label="Under 9.5 goals", price="-1500", p=0.9, match="C at D", league="nhl",
+                         tip="7:00 PM", status="open", score=None, live="2nd 5:12", live_score="C 1 - D 1")])
 LADDER = dict(start="2026-11-03", target=10000.0, bank=3.05, runs=1, streak=1, best=3.05, wins_needed=8,
               log=[dict(day="2026-11-02", stake=1.0, result="won", pays=3.05)],
               chance_to_target=0.0000656, history=[],
@@ -261,8 +263,8 @@ def main():
     if new.get("oneIn") != ["71%", "1 in 23,696,682"]:
         fails.append("oneIn wrong: " + repr(new.get("oneIn")))
     eg = new.get("everyGame", "")
-    if not all(x in eg for x in ("Every game: its safest bet (2 games, 1–0 so far)", "386 of 427", "90.4%",
-                                   "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89", "Sweep odds: all 2 win 83%; the top 2 win 83%. The whole list has swept on 0 of 14 days.", "$10 on each (2 bets, $20 staked): +$1.61 if every one wins; expected −$0.37 from the stated chances.", "NBA · 7:30 PM", "set at 8 AM")):
+    if not all(x in eg for x in ("Every game: its safest bet (3 games, 1–0 so far)", "Live: 2nd 5:12 · C 1 - D 1", "386 of 427", "90.4%",
+                                   "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89", "Sweep odds: all 3 win 74%; the top 3 win 74%. The whole list has swept on 0 of 14 days.", "$10 on each (3 bets, $30 staked): +$2.28 if every one wins; expected −$0.77 from the stated chances.", "NBA · 7:30 PM", "set at 8 AM")):
         fails.append("every game section wrong: " + eg)
     ow = new.get("own", "")
     if not all(x in ow for x in ("mine 232 right (60.7%)", "260 (68.1%)", "The market is ahead", "I take LAC</b> (60%)")):

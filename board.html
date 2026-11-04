@@ -1449,6 +1449,7 @@ function everyGameHTML(){
     + '</p>' + everySweep(G, R) + '<ul class="betlegs">' + G.map(g => '<li>' + esc(g.label) + ' <b>' + esc(g.price || '') + '</b> &middot; '
       + (100 * g.p).toFixed(0) + '% &middot; ' + esc(g.match || '') + ' ' + res(g.status)
       + (g.score && g.status !== 'open' ? '<div class="sbn">' + esc(g.score) + '</div>'
+         : g.live ? '<div class="sbn"><b>Live:</b> ' + esc(g.live) + ' &middot; ' + esc(g.live_score || '') + '</div>'
          : (g.league || g.tip) ? '<div class="sbn">' + [String(g.league || '').toUpperCase(), g.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '')
       + '</li>').join('') + '</ul>'
     + copyBtn("Every game, safest bet", G.map(g => legLine(g.label, g.price, "FanDuel", g.match)))

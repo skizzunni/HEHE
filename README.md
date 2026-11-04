@@ -3873,3 +3873,4 @@ Glance tile "Next up": the next game to start today and my pick in it (`ledger.n
 Results). Study, rejected: soccer straight-win picks hit 55.1% then 84.1% against 60.7% / 72.7%
 stated -- the halves disagree; "or draw" picks exist only in the second half (77.5% vs 73.7%,
 413 picks), too new to test (2026-11-04).
+"Every game" legs in play show the live clock and score (`ladder.live`) (2026-11-04).

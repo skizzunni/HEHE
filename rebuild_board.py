@@ -644,6 +644,11 @@ def snapshot():
         try:
             _fz = (locks.load(locks.SAFE_LEDGER).get("pools") or {}).get(d._STATE["dates"][0]) if locks.card_time() else None
             _eg = locks.every_game((_fz or {}).get("legs") or out["safe_locks"]["today"].get("pool"))
+            try:
+                import ladder as _ld
+                _ld.live(_eg)              # game clock and score on legs in play
+            except Exception:
+                pass
             out["every_game"] = dict(today=_eg, preview=not _fz, record=locks.every_game_record(locks.SAFE_LEDGER))
             print(f"every game: {len(_eg)} games, record {out['every_game']['record']}", file=sys.stderr)
         except Exception as e_:
