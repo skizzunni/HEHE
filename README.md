@@ -3804,3 +3804,5 @@ While a ladder ticket is in play, the ladder tile shows how many of its
 legs have won ("3 of 5 won today") (2026-11-03).
 Today's plan's ladder line shows the ticket's progress too ("3 of 5 won so
 far", "ticket lost") (2026-11-03).
+The ladder card's Copy button includes the stake and payout ("stake $1.00,
+5-leg parlay, about 3.07x (pays $3.07)") above the five legs (2026-11-04).

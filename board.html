@@ -1309,7 +1309,9 @@ function ladderHTML(){
         + money(T.stake * T.pays) + ' if all 5 win (' + (100 * T.prob).toFixed(0) + '% est.). '
         + X.wins_needed + ' straight wins at this price reach the target'
         + (X.chance_to_target ? ', about 1 in ' + Math.round(1 / X.chance_to_target).toLocaleString() : '') + '.</p>'
-        + copyBtn("Ladder ticket", T.legs.map(L => legLine(L.label, L.price, "FanDuel", L.match)))
+        + copyBtn("Ladder ticket", ['Ladder ticket: stake ' + money(T.stake) + ', ' + T.legs.length + '-leg parlay, about '
+            + T.pays.toFixed(2) + 'x (pays ' + money(T.stake * T.pays) + ')']
+            .concat(T.legs.map(L => legLine(L.label, L.price, "FanDuel", L.match))))
       : ladderPreview())
     + '<p class="note">Before the start, all 5 top legs won on 5 of 16 cards (31%) and paid about 3.05&times;: reaching '
     + money(X.target) + ' takes about 9 wins in a row, roughly 1 in 40,000. For fun, not a plan.'
