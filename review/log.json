@@ -8782,8 +8782,8 @@
    },
    {
     "flag": false,
-    "hit": 88.9,
-    "n": 72,
+    "hit": 87.7,
+    "n": 73,
     "name": "daily calls",
     "said": 82.2
    },
@@ -8898,9 +8898,9 @@
    }
   },
   "clv": {
-   "avg": 1.93,
-   "beat": 100.0,
-   "n": 1
+   "avg": 2.18,
+   "beat": 66.7,
+   "n": 3
   },
   "day": "2026-11-04",
   "ladder": "Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.",
@@ -8920,13 +8920,31 @@
   },
   "loss_reasons_14d": {
    "blowout": 45,
-   "close game": 108,
+   "close game": 109,
    "coin flip": 49,
    "favourite lost": 129,
    "price moved against it": 30,
-   "upset": 53
+   "upset": 54
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "ucl",
+    "match": "LIV @ FEN",
+    "pick": "Liverpool",
+    "price": "-700",
+    "said": 83,
+    "score": {
+     "Fenerbahce": 3,
+     "Liverpool": 2
+    },
+    "tags": [
+     "upset",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 83% \u00b7 upset \u00b7 close game"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -8978,14 +8996,22 @@
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 1,
-   "roi": 32.3,
-   "said": 71.0,
-   "won": 1
+   "hit": 66.7,
+   "lost": 1,
+   "n": 3,
+   "roi": -16.5,
+   "said": 78.3,
+   "won": 2
   },
   "picks_by_league": {
+   "ucl": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -40.9,
+    "said": 82.0,
+    "won": 1
+   },
    "uel": {
     "hit": 100.0,
     "lost": 0,
@@ -9009,7 +9035,7 @@
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      7,
@@ -9022,34 +9048,34 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "strong": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 1,
-   "roi": 32.3,
-   "said": 71.0,
-   "won": 1
+   "hit": 66.7,
+   "lost": 1,
+   "n": 3,
+   "roi": -16.5,
+   "said": 78.3,
+   "won": 2
   },
   "stuck": [],
   "sweep": {
-   "broke_on": null,
-   "lost": 0,
-   "open": 51,
-   "won": 1
+   "broke_on": "ucl Liverpool at 83%",
+   "lost": 1,
+   "open": 49,
+   "won": 2
   },
   "vs_market_14d": {
    "against": {
     "n": 0
    },
    "agree": {
-    "hit": 75.5,
-    "lost": 231,
-    "n": 943,
-    "roi": 1.5,
+    "hit": 75.4,
+    "lost": 232,
+    "n": 945,
+    "roi": 1.4,
     "said": 70.8,
-    "won": 712
+    "won": 713
    }
   },
   "weights": {

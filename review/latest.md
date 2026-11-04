@@ -1,11 +1,12 @@
 # Review 2026-11-04
 
-Picks 1-0 (100.0% vs 71.0% claimed, ROI +32.3%).
+Picks 2-1 (66.7% vs 78.3% claimed, ROI -16.5%).
 Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.
-Strong calls 1-0 (100.0% vs 71.0% claimed).
-Closing line value: +1.93 points on 1 picks; beat the close on 100.0%.
-Board sweep: 1-0, 51 open -- still clean.
-Why picks lost (14 days): favourite lost 129, close game 108, upset 53, coin flip 49, blowout 45, price moved against it 30.
+Strong calls 2-1 (66.7% vs 78.3% claimed).
+Closing line value: +2.18 points on 3 picks; beat the close on 66.7%.
+Board sweep: 2-1, 49 open -- broken (first loss: ucl Liverpool at 83%).
+- LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game [upset, close game]
+Why picks lost (14 days): favourite lost 129, close game 109, upset 54, coin flip 49, blowout 45, price moved against it 30.
 Yesterday (2026-11-03): board 34-9, sweep broken by efl1 Charlton Athletic at 70%.
 - LOST efl1 Charlton Athletic at 70% (-310), Bolton Wanderers 1 - Charlton Athletic 0: margin 1 · the book had my side favoured too · called at 70% [favourite lost, close game]
 - LOST ecu Mushuc Runa at 82% (-600), Manta F.C. 3 - Mushuc Runa 2: margin 1 · the book had my side favoured too · called at 82% [upset, close game]
@@ -17,7 +18,7 @@ Yesterday (2026-11-03): board 34-9, sweep broken by efl1 Charlton Athletic at 70
 - LOST nhl Carolina Hurricanes at 64% (-198), Carolina Hurricanes 1 - Nashville Predators 4: margin 3 · the book had my side favoured too · called at 64% [favourite lost, blowout]
 - LOST ncaaf Miami (OH) RedHawks at 71% (-265), Buffalo Bulls 34 - Miami (OH) RedHawks 31: margin 3 · the book had my side favoured too · called at 71% [favourite lost, close game]
 Locks 0/11 won, 11 open; Best play top 2 (62%) open.
-Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (52%) open.
+Safe Locks 1/11 won, 10 open; Winners parlay top 2 (85%) open; Best play top 7 (52%) open.
 Lottery 100: open (0/10 legs won)
 Lottery 10k: open (0/14 legs won)
 Lottery 10k: open (0/8 legs won)
