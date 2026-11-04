@@ -824,6 +824,7 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
     const big = !(w + l) ? (o ? o + " to play" : "&mdash;") : l ? w + "&ndash;" + l : w + "&ndash;0";
     const sub = !(w + l + o) ? bestTxt
       : (l ? "sweep broken" : w ? "still clean" : "clean so far") + (o ? ", " + o + " to go" : "")
+        + ((R.live || []).length ? " (" + R.live.length + " live)" : "")
         + (!l && o && R.sweep_chance ? " (" + oneIn(R.sweep_chance) + " to stay clean)" : "") + (bestTxt ? " &middot; " + bestTxt : "");
     return tile("Board sweep", big, sub, (w + l) && !l ? "good" : "");
   }

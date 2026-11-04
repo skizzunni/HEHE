@@ -3877,3 +3877,7 @@ stated -- the halves disagree; "or draw" picks exist only in the second half (77
 Prop Locks legs in play show the live clock and score (`ladder.live`). Study, nothing to change:
 Prop Locks "1+" lines hit 13/14 then 27/30, higher lines 43/45 then 53/58 -- both beat their stated
 chance in both halves, no gap between them (2026-11-04).
+Board sweep tile counts games live right now. Watch item (not a rule): the top 3 Safe Locks by
+stated chance hit 22/27 then 24/27 (85.2% vs ~92% stated, 54 legs, about -1.9 SE) -- short in both
+halves but under the 99.5% bar; recheck at 100+ legs. Positions 4-11 beat their stated chance
+(2026-11-04).
