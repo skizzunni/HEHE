@@ -1,8 +1,10 @@
 # Review 2026-11-04
 
-No picks settled yet.
+Picks 1-0 (100.0% vs 71.0% claimed, ROI +32.3%).
 Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.
-Board sweep: 0-0, 52 open -- still clean.
+Strong calls 1-0 (100.0% vs 71.0% claimed).
+Closing line value: +1.93 points on 1 picks; beat the close on 100.0%.
+Board sweep: 1-0, 51 open -- still clean.
 Why picks lost (14 days): favourite lost 129, close game 108, upset 53, coin flip 49, blowout 45, price moved against it 30.
 Yesterday (2026-11-03): board 34-9, sweep broken by efl1 Charlton Athletic at 70%.
 - LOST efl1 Charlton Athletic at 70% (-310), Bolton Wanderers 1 - Charlton Athletic 0: margin 1 · the book had my side favoured too · called at 70% [favourite lost, close game]
