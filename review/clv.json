@@ -3,14 +3,14 @@
  "enough": true,
  "last": {
   "beat_close_pct": 63.0,
-  "brier_close": 0.1714,
-  "brier_published": 0.1755,
+  "brier_close": 0.1715,
+  "brier_published": 0.1756,
   "dates": [
    "2026-10-31",
    "2026-11-04"
   ],
-  "logloss_close": 0.5179,
-  "logloss_published": 0.5279,
+  "logloss_close": 0.5183,
+  "logloss_published": 0.5282,
   "mean_clv_pts": 0.93,
   "n": 300
  },
@@ -2870,6 +2870,15 @@
    "league": "efl1",
    "published": 0.69,
    "won": 0
+  },
+  "efl1:401880175": {
+   "call": false,
+   "close": 0.7136,
+   "clv": 0.36,
+   "day": "2026-11-04",
+   "league": "efl1",
+   "published": 0.71,
+   "won": 1
   },
   "efl1:401880177": {
    "call": false,
@@ -24003,5 +24012,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-04T21:42+00:00"
+ "updated": "2026-11-04T21:46+00:00"
 }
