@@ -131,6 +131,7 @@ PROBE = """<script>setTimeout(function(){
   try { out.plLive = propLocksHTML(); } catch(e) { out.plLive = "ERR " + e; }
   D.prop_locks = plSave;
   out.ladderFirst = [ladderFirst([{tip: "9:30 PM"}, {tip: "7:00 PM"}, {tip: "12:45 PM"}, {tip: "10:00 PM"}]), ladderFirst([{}, {}])];
+  out.reasons = [reasonsHTML({since: "2026-10-21", n: 237, tags: [{tag: "favourite lost", n: 130}, {tag: "close game", n: 110}]}), reasonsHTML({n: 0, tags: []})];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -301,6 +302,9 @@ def main():
         fails.append("prop locks live line wrong: " + pl[-400:])
     if new.get("ladderFirst") != ["4 to play, first at 12:45 PM", "2 to play"]:
         fails.append("ladder first-leg line wrong: " + repr(new.get("ladderFirst")))
+    rz = new.get("reasons") or ["", "x"]
+    if not ("Why picks lost, last 14 days</b> (237 losses)" in rz[0] and "favourite lost</td><td class=\"num\">130" in rz[0] and "width:85%" in rz[0]) or rz[1]:
+        fails.append("loss reasons wrong: " + repr(rz)[:300])
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)

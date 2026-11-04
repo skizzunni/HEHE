@@ -3887,3 +3887,6 @@ Loss lines no longer repeat reasons already in the diagnosis (review and Results
 Ladder tile, before any leg has started: "5 to play, first at 7:00 PM" (`ladderFirst`) (2026-11-04).
 "Every game" legs show when Kalshi pays more for the same bet, after its fee (`locks.kalshi_alt`)
 (2026-11-04).
+Results tab: "Why picks lost, last 14 days" -- the loss-reason tally with bars
+(`board_payload` loss_reasons). Study, rejected: soccer "or draw" picks on the away side hit
+11/16 then 17/19 (home side 75% in both halves) -- too few and the halves disagree (2026-11-04).

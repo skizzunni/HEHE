@@ -791,6 +791,16 @@ def board_payload(limit=40):
                                   conf=e.get("conf"), price=e.get("price"), score=e.get("scores") or {},
                                   why=e.get("diagnosis") or "", tags=loss_tags(e)) for e in _yl])
     own = own_view(book, today)
+    # why the last 14 days' losses happened, counted (loss_tags)
+    _since = (dt.date.fromisoformat(today) - dt.timedelta(days=14)).isoformat()
+    _rs = {}
+    for e in done:
+        if e["status"] == "lost" and _since <= (day_of(e) or "") < today:
+            for t in loss_tags(e):
+                t = t.split(" (")[0]
+                _rs[t] = _rs.get(t, 0) + 1
+    loss_reasons = dict(since=_since, n=sum(1 for e in done if e["status"] == "lost" and _since <= (day_of(e) or "") < today),
+                        tags=[dict(tag=k, n=v) for k, v in sorted(_rs.items(), key=lambda x: -x[1])])
     # the chance every still-open priced pick today wins, from each pick's own
     # stated chance (independent games): what the sweep tile calls the odds
     # of finishing clean
@@ -851,7 +861,7 @@ def board_payload(limit=40):
                 calls_top=_calls.TOP_N,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance, own=own, yesterday=yesterday, next_up=next_up(book, today),
+                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance, own=own, yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))

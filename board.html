@@ -1468,6 +1468,17 @@ function everyGameHTML(){
     + copyBtn("Every game, safest bet", G.map(g => legLine(g.label, g.price, "FanDuel", g.match)))
     + '</details></div>';
 }
+// why the last 14 days' losses happened, counted (ledger.loss_tags); a loss
+// carries one tag of each kind, so the counts add to more than the losses
+function reasonsHTML(X){
+  if(!X || !X.n || !(X.tags || []).length) return '';
+  const top = X.tags[0].n;
+  return '<div class="sweep"><details><summary><b>Why picks lost, last 14 days</b> (' + X.n + ' losses)</summary>'
+    + '<table class="sweeptab"><tbody>' + X.tags.map(t => '<tr><td>' + esc(t.tag) + '</td><td class="num">' + t.n
+      + '</td><td style="width:50%"><div style="background:currentColor;opacity:.35;height:8px;width:' + Math.round(100 * t.n / top) + '%"></div></td></tr>').join('')
+    + '</tbody></table><p class="note">How likely it was (coin flip under 60%, upset at 75%+, else favourite lost), how it was lost '
+    + '(close game or blowout, by each sport&rsquo;s margins) and whether the price moved 3+ points against it before the start.</p></details></div>';
+}
 // yesterday's board and why each pick lost (ledger.diagnose / loss_tags)
 function yesterdayHTML(Y){
   if(!Y || !(Y.won + Y.lost)) return '';
@@ -3071,7 +3082,7 @@ function scoreboardHTML(){
         : '')
     + '<div class="rsub">' + live.length + ' in play &middot; ' + (R.today_open || 0)
     + ' still to finish</div></div>';
-  h += yesterdayHTML(R.yesterday) + ownHTML(R.own);
+  h += yesterdayHTML(R.yesterday) + reasonsHTML(R.loss_reasons) + ownHTML(R.own);
 
   h += '<p class="rsub">' + (R.excluded_unpriced || 0)
     + ' unpriced picks excluded from the record (all dates).</p>';
