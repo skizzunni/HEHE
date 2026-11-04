@@ -4570,30 +4570,7 @@
      "close": true,
      "conf": 99,
      "conf_first": 99,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-04T00:28:13+00:00",
-      "conf": 98,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaab:401906757",
-      "league": "ncaab",
-      "match": "SHSU @ ALA",
-      "pick": "Alabama Crimson Tide",
-      "price": "-8000",
-      "price_at": "2026-11-04T00:27:54+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34952510:0ML87066539_1",
-      "prob_at": "2026-11-04T00:27:54+00:00",
-      "rank": 2,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-04T00:30Z"
-     },
+     "current": null,
      "dc": false,
      "fp": "6acf459eb5a7",
      "gate": {
@@ -4699,109 +4676,13 @@
    "candidate_news": {
     "ucl": "2026-11-03T19:09:53+00:00"
    },
-   "candidate_observations": {
-    "bra:401841301": {
-     "book": "FanDuel",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": false,
-     "conf": 84,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-04T00:28:13+00:00",
-      "conf": 84,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "bra:401841301",
-      "league": "bra",
-      "match": "CFC @ INT",
-      "pick": "Internacional or draw",
-      "price": "-750",
-      "price_at": "2026-11-04T00:23:20+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.193632797:13129695",
-      "prob_at": "2026-11-04T00:27:54+00:00",
-      "rank": null,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "home",
-      "start": "2026-11-04T00:30Z"
-     },
-     "dc": true,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
-     },
-     "id": "bra:401841301",
-     "league": "bra",
-     "match": "CFC @ INT",
-     "pick": "Internacional or draw",
-     "price": "-750",
-     "price_at": "2026-11-04T00:23:20+00:00",
-     "price_market": "double_chance",
-     "price_ref": "736.193632797:13129695",
-     "side": "home",
-     "start": "2026-11-04T00:30Z",
-     "tip": "7:30 PM"
-    },
-    "ncaab:401906757": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 98,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-04T00:28:13+00:00",
-      "conf": 98,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaab:401906757",
-      "league": "ncaab",
-      "match": "SHSU @ ALA",
-      "pick": "Alabama Crimson Tide",
-      "price": "-8000",
-      "price_at": "2026-11-04T00:27:54+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34952510:0ML87066539_1",
-      "prob_at": "2026-11-04T00:27:54+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-04T00:30Z"
-     },
-     "dc": false,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": true,
-      "what": "no lineup gate for this league"
-     },
-     "id": "ncaab:401906757",
-     "league": "ncaab",
-     "match": "SHSU @ ALA",
-     "pick": "Alabama Crimson Tide",
-     "price": "-8000",
-     "price_at": "2026-11-04T00:27:54+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34952510:0ML87066539_1",
-     "side": "home",
-     "start": "2026-11-04T00:30Z",
-     "tip": "7:30 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [],
    "shadow_watch": {
     "best_at": "2026-11-03T19:50:54+00:00",
     "best_ceiling": 1.782,
-    "checks": 138,
-    "last": "2026-11-04T00:28:13+00:00",
+    "checks": 139,
+    "last": "2026-11-04T00:33:28+00:00",
     "max_ready": 6,
     "reasons": {
      "awaiting confirmed XIs": 762,
