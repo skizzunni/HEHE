@@ -3874,3 +3874,6 @@ Results). Study, rejected: soccer straight-win picks hit 55.1% then 84.1% agains
 stated -- the halves disagree; "or draw" picks exist only in the second half (77.5% vs 73.7%,
 413 picks), too new to test (2026-11-04).
 "Every game" legs in play show the live clock and score (`ladder.live`) (2026-11-04).
+Prop Locks legs in play show the live clock and score (`ladder.live`). Study, nothing to change:
+Prop Locks "1+" lines hit 13/14 then 27/30, higher lines 43/45 then 53/58 -- both beat their stated
+chance in both halves, no gap between them (2026-11-04).

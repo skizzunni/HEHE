@@ -2342,6 +2342,7 @@ function propLocksHTML(){
         + (100 * x.p).toFixed(0) + '% &middot; ' + esc(x.match || "")
         + (x.tip && x.status !== 'won' && x.status !== 'lost' ? ' &middot; ' + esc(String(x.league || '').toUpperCase()) + ' ' + esc(x.tip) : '')
         + ' ' + res(x.status)
+        + (x.live ? '<div class="sbn"><b>Live:</b> ' + esc(x.live) + ' &middot; ' + esc(x.live_score || '') + '</div>' : '')
         + (x.alt ? '<div class="sbn">pays more at <b>' + esc(x.alt.venue) + ' ' + esc(x.alt.price) + '</b> (FanDuel now '
           + esc(x.alt.fd_now) + ', +' + (100 * x.alt.gain).toFixed(1) + '%)</div>' : '') + '</li>').join("") + '</ul>'
         + copyBtn("Prop Locks", L.map(x => legLine(x.label, x.price, "FanDuel", x.match)))

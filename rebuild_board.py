@@ -562,6 +562,11 @@ def snapshot():
                 prop_locks.attach_alt(_pl, (out["props"].get("today") or {}).get("games"))
             except Exception:
                 pass
+            try:                                # game clock and score on legs in play
+                import ladder as _ld
+                _ld.live(_pl.get("legs") or [])
+            except Exception:
+                pass
             out["prop_locks"] = dict(today=_pl, record=prop_locks.report(), n=prop_locks.N,
                                      standard=prop_locks.STANDARD, hour=prop_locks.PROP_HOUR)
             out["props_record"] = prop_locks.props_record()
