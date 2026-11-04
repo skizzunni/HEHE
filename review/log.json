@@ -8256,8 +8256,8 @@
    },
    {
     "flag": false,
-    "hit": 82.0,
-    "n": 434,
+    "hit": 81.3,
+    "n": 444,
     "name": "props nhl Shots on Goal",
     "said": 80.9
    },
@@ -8354,8 +8354,8 @@
    },
    {
     "flag": false,
-    "hit": 92.3,
-    "n": 26,
+    "hit": 92.6,
+    "n": 27,
     "name": "safe locks nhl side",
     "said": 91.3
    },
@@ -8375,8 +8375,8 @@
    },
    {
     "flag": false,
-    "hit": 93.8,
-    "n": 144,
+    "hit": 92.5,
+    "n": 146,
     "name": "prop locks",
     "said": 88.6
    },
@@ -8484,9 +8484,9 @@
    }
   },
   "clv": {
-   "avg": 1.46,
-   "beat": 72.5,
-   "n": 40
+   "avg": 1.48,
+   "beat": 73.2,
+   "n": 41
   },
   "day": "2026-11-03",
   "ladder": "Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; 8 wins to $10,000.",
@@ -8552,6 +8552,14 @@
     "price": "-125",
     "said": 53,
     "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 53%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "pick": "Carolina Hurricanes",
+    "price": "-198",
+    "said": 64,
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 64%"
    },
    {
     "against_market": false,
@@ -8631,11 +8639,11 @@
    }
   ],
   "picks": {
-   "hit": 82.5,
-   "lost": 7,
-   "n": 40,
-   "roi": 8.0,
-   "said": 72.0,
+   "hit": 80.5,
+   "lost": 8,
+   "n": 41,
+   "roi": 5.3,
+   "said": 71.9,
    "won": 33
   },
   "picks_by_league": {
@@ -8696,11 +8704,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 55.6,
-    "lost": 4,
-    "n": 9,
-    "roi": -11.0,
-    "said": 57.7,
+    "hit": 50.0,
+    "lost": 5,
+    "n": 10,
+    "roi": -19.9,
+    "said": 58.3,
     "won": 5
    },
    "par": {
@@ -8743,19 +8751,19 @@
     "said_price": 87.3,
     "won": 1462
    },
-   "n": 92,
+   "n": 102,
    "said": 81.8,
-   "won": 80
+   "won": 85
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      7,
      0.542,
-     "open"
+     "won"
     ],
     "winners": [
      2,
@@ -8763,7 +8771,7 @@
      "won"
     ]
    },
-   "won": 10
+   "won": 11
   },
   "strong": {
    "hit": 88.9,
@@ -8779,10 +8787,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.2,
-    "lost": 239,
-    "n": 963,
-    "roi": 1.3,
+    "hit": 75.1,
+    "lost": 240,
+    "n": 964,
+    "roi": 1.2,
     "said": 70.6,
     "won": 724
    }
@@ -8818,10 +8826,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6517,
-    "market_only": 0.6517,
-    "model_40": 0.6604,
-    "n": 127,
+    "logloss": 0.6546,
+    "market_only": 0.6546,
+    "model_40": 0.6634,
+    "n": 128,
     "weight": 0.0
    }
   }
