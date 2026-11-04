@@ -27,5 +27,19 @@ class EveryGame(unittest.TestCase):
         self.assertEqual(got, {"nhl:1": ("lost", "A 6 - H 1"), "nhl:2": ("open", None)})
 
 
+class Record(unittest.TestCase):
+    def test_by_league(self):
+        legs = [dict(EveryGame.POOL[1], league="nhl"), dict(EveryGame.POOL[3], league="nhl")]
+        book = {"pools": {"2026-11-03": {"legs": legs}}}
+        led = {"nhl:1": dict(status="won", scores={"H": 3, "A": 1}), "nhl:2": dict(status="won", scores={"H": 0, "A": 0})}
+        orig = locks.load
+        locks.load = lambda path=None: book
+        try:
+            r = locks.every_game_record(None, led)
+        finally:
+            locks.load = orig
+        self.assertEqual((r["n"], r["won"], r["by_league"]), (2, 1, [dict(league="NHL", won=1, n=2)]))
+
+
 if __name__ == "__main__":
     unittest.main()

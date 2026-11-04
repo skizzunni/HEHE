@@ -3848,3 +3848,6 @@ Pick rows show how far the price moved since the pick was called (display only).
 75.6% then 57.1% against ~67% stated -- the halves disagree, so no rule. Picks it moved 3+
 TOWARD hit 79.1% and 83.7% against ~72.5% stated (steady prices: 69.9%, 77.0%); shown as
 "Money moving my way", not used to choose picks (2026-11-04).
+"Every game" record shows hits by league (NCAAF 86/91, NBA 82/89, NHL 82/89). Study, rejected:
+every-game legs by league and by bet type in each date half -- none trails its stated chance in
+both halves (NFL 14/14 then 11/14, NHL 39/45 then 43/44), so none is dropped (2026-11-04).
