@@ -4466,6 +4466,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909924|home|Kalshi": {
+   "dec": 1.2473,
+   "ev": 0.0156,
+   "fair": 0.8142,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909924",
+   "kind": "value",
+   "league": "nba",
+   "match": "MIL @ BOS",
+   "price": "-404",
+   "seen": "2026-11-04T17:45:26+00:00",
+   "side": "home",
+   "start": "2026-11-05T00:30Z",
+   "team": "Boston Celtics",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909924|sure": {
    "id": "nba:401909924",
    "kind": "sure",
@@ -4487,6 +4504,30 @@
    "match": "MIL @ BOS",
    "profit": 0.0395,
    "seen": "2026-11-03T21:09:56+00:00"
+  },
+  "nba:401909924|{\"line\": -11.5, \"t\": \"spread\", \"team\": \"Boston Celtics\"}|Kalshi": {
+   "dec": 2.1867,
+   "dk": "-112",
+   "ev": 0.0491,
+   "fair": 0.4798,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909924",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "MIL @ BOS",
+   "price": "+119",
+   "seen": "2026-11-04T17:45:26+00:00",
+   "side": "{\"line\": -11.5, \"t\": \"spread\", \"team\": \"Boston Celtics\"}",
+   "spec": {
+    "line": -11.5,
+    "t": "spread",
+    "team": "Boston Celtics"
+   },
+   "start": "2026-11-05T00:30Z",
+   "team": "Boston Celtics -11.5",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
   },
   "nba:401909925|{\"line\": 212.5, \"t\": \"over\"}|Kalshi": {
    "dec": 1.8957,
