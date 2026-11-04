@@ -768,7 +768,8 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
     // while today's ticket is in play: how many of its legs have won
     const today = () => {
       const L = ((X.today || {}).legs) || [], w = L.filter(x => x.status === "won").length;
-      return L.length && w && !L.some(x => x.status === "lost") ? w + " of " + L.length + " won today" : "";
+      const lv = L.filter(x => (!x.status || x.status === "open") && x.live).length;
+      return L.length && w && !L.some(x => x.status === "lost") ? w + " of " + L.length + " won today" + (lv ? ", " + lv + " live" : "") : "";
     };
     const m = v => "$" + (v >= 100 ? Math.round(v).toLocaleString() : v.toFixed(2));
     return '<div class="k" data-goto="locks" role="button" tabindex="0" style="cursor:pointer"><span>Ladder $1 &rarr; $10k</span><b>'
@@ -1273,8 +1274,9 @@ function ladderPreview(){
 function ladderProgress(legs){
   const w = legs.filter(L => L.status === 'won').length, l = legs.filter(L => L.status === 'lost').length;
   const v = legs.filter(L => L.status === 'void' || L.status === 'push').length, o = legs.length - w - l - v;
+  const lv = l ? 0 : legs.filter(L => (!L.status || L.status === 'open') && L.live).length;
   if(!w && !l && !v) return '';
-  return '<p class="three"><b>' + (l ? 'Ticket lost' : o ? w + ' of ' + legs.length + ' won, ' + o + ' to play' : 'All in: ticket won')
+  return '<p class="three"><b>' + (l ? 'Ticket lost' : o ? w + ' of ' + legs.length + ' won, ' + o + ' to play' + (lv ? ' (' + lv + ' live now)' : '') : 'All in: ticket won')
     + '</b>' + (v ? ' &middot; ' + v + ' void (drops out)' : '') + '</p>';
 }
 function ladderRuns(R, money){

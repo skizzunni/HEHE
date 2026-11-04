@@ -3808,3 +3808,6 @@ The ladder card's Copy button includes the stake and payout ("stake $1.00,
 5-leg parlay, about 3.07x (pays $3.07)") above the five legs (2026-11-04).
 Open ladder legs show the live game clock and score from the picks ledger
 (`ladder.live`) (2026-11-04).
+The ladder tile and progress line count legs live right now ("1 of 5 won, 4 to play (1 live now)").
+Study, rejected: Locks legs calibrated by league in each date half (n 16-40 per
+league-half) -- all within noise, so the ladder keeps picking by chance alone (2026-11-04).
