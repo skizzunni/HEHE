@@ -1302,7 +1302,8 @@ function ladderHTML(){
     + (T ? '<ul class="betlegs">' + T.legs.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> &middot; '
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')
-          + ((L.tip || L.lg) && L.status !== 'won' && L.status !== 'lost'
+          + (L.live ? '<div class="sbn"><b>Live:</b> ' + esc(L.live) + ' &middot; ' + esc(L.live_score || '') + '</div>' : '')
+          + (!L.live && (L.tip || L.lg) && L.status !== 'won' && L.status !== 'lost'
              ? '<div class="sbn">' + [L.lg, L.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '') + '</li>').join('') + '</ul>'
         + ladderProgress(T.legs)
         + '<p class="note">Today: stake ' + money(T.stake) + ' at about ' + T.pays.toFixed(2) + '&times; &rarr; '

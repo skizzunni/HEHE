@@ -75,6 +75,20 @@ class Target(unittest.TestCase):
         self.assertEqual(r["bank"], 1.0)                                   # a new run starts at $1
 
 
+class Live(unittest.TestCase):
+    def test_open_legs_carry_the_game_clock_and_score(self):
+        from unittest import mock
+        import ledger
+        legs = [dict(gid="nhl:1", status="open"), dict(gid="nhl:2", status="won"), dict(gid="nhl:3", status="open")]
+        book = {"nhl:1": dict(live="End of 2nd", live_score={"Utah": 2, "Toronto": 1}),
+                "nhl:2": dict(live="Final", live_score={"A": 1, "B": 0})}
+        with mock.patch.object(ledger, "load", lambda: book):
+            ladder.live(legs)
+        self.assertEqual((legs[0]["live"], legs[0]["live_score"]), ("End of 2nd", "Utah 2 - Toronto 1"))
+        self.assertNotIn("live", legs[1])                                  # settled: no live line
+        self.assertNotIn("live", legs[2])                                  # no live data yet
+
+
 class ReviewLine(unittest.TestCase):
     def test_daily_review_reports_the_ladder(self):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))

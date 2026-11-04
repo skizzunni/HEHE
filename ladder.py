@@ -61,6 +61,7 @@ def replay(book=None, start=START, target=TARGET):
                      pays=round(math.prod(locks._dec(L["price"]) for L in legs), 3),
                      legs=[dict(label=L["label"], price=L["price"], p=L["p"], match=L.get("match"),
                                 tip=L.get("tip"), lg=L.get("lg") or L.get("league"), score=L.get("score"),
+                                gid=L.get("gid"),
                                 status=L.get("status") or "open") for L in legs])
         cur["days"].append(entry)
         if res == "open":
@@ -74,11 +75,28 @@ def replay(book=None, start=START, target=TARGET):
     return runs
 
 
+def live(legs):
+    """Attach the game clock and score (the picks ledger's live fields, by
+    game id) to each open leg, so the ticket can be followed in play."""
+    try:
+        import ledger
+        book = ledger.load()
+    except Exception:
+        return
+    for L in legs:
+        e = book.get(L.get("gid")) or {}
+        if L.get("status") in (None, "open") and e.get("live") and e.get("live_score"):
+            L["live"] = e["live"]
+            L["live_score"] = " - ".join(f"{t} {v}" for t, v in e["live_score"].items())
+
+
 def report(book=None, start=START, target=TARGET):
     runs = replay(book, start, target)
     cur = runs[-1] if runs else None
     bank = cur["bank"] if cur and cur["status"] == "live" else BANK0
     today = cur["days"][-1] if cur and cur["days"] and cur["days"][-1]["result"] == "open" else None
+    if today:
+        live(today["legs"])
     pays = (today or {}).get("pays") or 3.05
     need = max(0, math.ceil(math.log(target / bank) / math.log(pays))) if pays > 1 and bank < target else 0
     p = (today or {}).get("prob")
