@@ -737,7 +737,7 @@ def report(path=None):
                 days=days,
                 plays={k: dict(days=t[0], hit=t[1], said=round(100 * t[2] / t[0], 1) if t[0] else None)
                        for k, t in tally.items()},
-                by_sport=by_sport(legs), by_kind=by_kind(legs))
+                by_sport=by_sport(legs), by_kind=by_kind(legs), watch=watch_kinds(book))
 
 
 def by_sport(legs):
@@ -749,6 +749,41 @@ def by_sport(legs):
         n[lg] += 1
         w[lg] += L["status"] == "won"
     return [dict(sport=lg, won=w[lg], n=c) for lg, c in n.most_common()]
+
+
+WATCH_MIN, WATCH_GAP = 15, 0.10
+
+
+def watch_kinds(book):
+    """Bet kinds (league + over/under/spread/..., game lines) that have hit
+    under their stated chance in BOTH date halves and by 10+ points overall,
+    on 15+ graded legs. Shown beside matching legs as a caution; no card is
+    changed by it (2026-11-04: NBA overs on Locks, 10 of 18 against 75%)."""
+    rows = []
+    for d, keys in sorted((book.get("days") or {}).items()):
+        keys = keys.get("legs") if isinstance(keys, dict) else keys
+        for k in keys or []:
+            L = (book.get("legs") or {}).get(k)
+            if L and L.get("status") in ("won", "lost") and L.get("kind") != "prop" and (L.get("spec") or {}).get("t"):
+                rows.append((d, L))
+    if not rows:
+        return []
+    days = sorted({d for d, _ in rows})
+    mid = days[len(days) // 2]
+    g = {}
+    for d, L in rows:
+        k = (L.get("league") or "", L["spec"]["t"])
+        g.setdefault(k, {False: [], True: []})[d >= mid].append(L)
+    out = []
+    for (lg, t), H in sorted(g.items()):
+        allL = H[False] + H[True]
+        hit = lambda S: sum(L["status"] == "won" for L in S) / len(S)
+        said = lambda S: sum(L["p"] for L in S) / len(S)
+        if (len(allL) >= WATCH_MIN and H[False] and H[True] and all(hit(S) < said(S) for S in H.values())
+                and said(allL) - hit(allL) >= WATCH_GAP):
+            out.append(dict(league=lg, t=t, won=sum(L["status"] == "won" for L in allL), n=len(allL),
+                            said=round(100 * said(allL))))
+    return out
 
 
 def by_kind(legs):

@@ -1264,7 +1264,18 @@ function legHTML(x, opts){
     + (x.edge > 0 ? '<span class="edgetag" title="Priced off this player\'s own main line, this rung is underpriced">+'
        + x.edge.toFixed(0) + '% vs price</span>' : '') + res + '</div>'
     + '<div class="lgs">' + esc(x.match || '') + ' &middot; ' + esc(x.lg || x.league || '')
-    + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>' + where + alt + '</li>';
+    + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>' + where + alt + (done ? '' : watchNote(x)) + '</li>';
+}
+// a caution beside a leg whose kind (league + over/under/...) has hit under its
+// stated chance in both halves of a Locks record (locks.watch_kinds)
+function watchNote(x){
+  const t = (x.spec || {}).t || x.t, lg = x.league || x.lgk;
+  if(!t || !lg || x.kind === 'prop') return '';
+  const W = [].concat(((D.locks_record || {}).watch || []).map(w => Object.assign({card: 'Locks'}, w)),
+                      ((D.safe_locks_record || {}).watch || []).map(w => Object.assign({card: 'Safe Locks'}, w)));
+  const w = W.find(v => v.league === lg && v.t === t);
+  return w ? '<div class="lgw"><b>Caution:</b> ' + esc(String(lg).toUpperCase()) + ' ' + esc(t) + 's on ' + w.card + ' have won '
+    + w.won + ' of ' + w.n + ' against ' + w.said + '% stated, short in both halves of the record.</div>' : '';
 }
 function dayPills(attr, day){
   return '<span class="pills"><button type="button" data-' + attr + '="today" aria-pressed="'
@@ -1400,6 +1411,7 @@ function ladderHTML(){
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')
           + (L.live ? '<div class="sbn"><b>Live:</b> ' + esc(L.live) + ' &middot; ' + esc(L.live_score || '') + '</div>' : '')
+          + (L.status === 'open' || !L.status ? watchNote(L) : '')
           + (!L.live && (L.tip || L.lg) && L.status !== 'won' && L.status !== 'lost'
              ? '<div class="sbn">' + [L.lg, L.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '') + '</li>').join('') + '</ul>'
         + ladderProgress(T.legs)

@@ -37,5 +37,21 @@ class ByKind(unittest.TestCase):
                                                 dict(kind="game lines", won=1, n=1, said=70.0)])
 
 
+class Watch(unittest.TestCase):
+    def test_kind_short_in_both_halves(self):
+        import locks
+        legs, days = {}, {}
+        for i in range(16):
+            d = f"2026-10-{10 + i:02d}"
+            k = f"{d}|o"
+            legs[k] = dict(league="nba", spec=dict(t="over"), p=0.75, status="won" if i % 2 else "lost")
+            days[d] = [k]
+        w = locks.watch_kinds(dict(days=days, legs=legs))
+        self.assertEqual(w, [dict(league="nba", t="over", won=8, n=16, said=75)])
+        for k in legs:
+            legs[k]["status"] = "won"
+        self.assertEqual(locks.watch_kinds(dict(days=days, legs=legs)), [])
+
+
 if __name__ == "__main__":
     unittest.main()

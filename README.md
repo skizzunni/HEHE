@@ -3890,3 +3890,7 @@ Ladder tile, before any leg has started: "5 to play, first at 7:00 PM" (`ladderF
 Results tab: "Why picks lost, last 14 days" -- the loss-reason tally with bars
 (`board_payload` loss_reasons). Study, rejected: soccer "or draw" picks on the away side hit
 11/16 then 17/19 (home side 75% in both halves) -- too few and the halves disagree (2026-11-04).
+Caution on legs whose kind has hit under its stated chance in both date halves and by 10+ points on
+15+ legs (`locks.watch_kinds`; shown on Locks, Safe Locks and Ladder legs, no card changed). First:
+NBA overs on Locks, 5/8 then 5/10 (10 of 18, 56%) against 75% stated -- about -1.9 SE, under the
+99.5% bar to change picks; NBA unders on Locks 10/10 then 10/12 (2026-11-04).

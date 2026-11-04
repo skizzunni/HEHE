@@ -132,6 +132,9 @@ PROBE = """<script>setTimeout(function(){
   D.prop_locks = plSave;
   out.ladderFirst = [ladderFirst([{tip: "9:30 PM"}, {tip: "7:00 PM"}, {tip: "12:45 PM"}, {tip: "10:00 PM"}]), ladderFirst([{}, {}])];
   out.reasons = [reasonsHTML({since: "2026-10-21", n: 237, tags: [{tag: "favourite lost", n: 130}, {tag: "close game", n: 110}]}), reasonsHTML({n: 0, tags: []})];
+  var lrSave = D.locks_record; D.locks_record = Object.assign({}, lrSave, {watch: [{league: "nba", t: "over", won: 10, n: 18, said: 75}]});
+  out.watch = [watchNote({league: "nba", spec: {t: "over"}}), watchNote({league: "nba", t: "under"}), watchNote({league: "nba", kind: "prop", t: "over"})];
+  D.locks_record = lrSave;
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -305,6 +308,9 @@ def main():
     rz = new.get("reasons") or ["", "x"]
     if not ("Why picks lost, last 14 days</b> (237 losses)" in rz[0] and "favourite lost</td><td class=\"num\">130" in rz[0] and "width:85%" in rz[0]) or rz[1]:
         fails.append("loss reasons wrong: " + repr(rz)[:300])
+    wn = new.get("watch") or ["", "x", "x"]
+    if "Caution:</b> NBA overs on Locks have won 10 of 18 against 75% stated" not in wn[0] or wn[1] or wn[2]:
+        fails.append("watch note wrong: " + repr(wn))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)
