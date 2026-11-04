@@ -42,6 +42,13 @@ def settle(legs):
     return "won", math.prod(locks._dec(L["price"]) if L.get("status") == "won" else 1.0 for L in legs)
 
 
+def settle_pay(entry):
+    """What a settled day entry paid per $1: 0 when lost; void legs at 1x."""
+    if entry["result"] != "won":
+        return 0.0
+    return math.prod(locks._dec(L["price"]) if L["status"] == "won" else 1.0 for L in entry["legs"])
+
+
 def replay(book=None, start=START, target=TARGET):
     """Every run from start: [{start, days: [...], status, bank}]; the last
     run is the live one. Stops at the first unsettled day."""
@@ -100,12 +107,15 @@ def report(book=None, start=START, target=TARGET):
     pays = (today or {}).get("pays") or 3.05
     need = max(0, math.ceil(math.log(target / bank) / math.log(pays))) if pays > 1 and bank < target else 0
     p = (today or {}).get("prob")
+    done = [d for d in (cur or {}).get("days", []) if d["result"] != "open"]
+    last = dict(done[-1], after=round(done[-1]["stake"] * settle_pay(done[-1]), 2)) if done else None
     return dict(start=start, target=target, bank=round(bank, 2), runs=len(runs),
                 reached=sum(r["status"] == "reached" for r in runs),
                 best=round(max([r["bank"] for r in runs if r["status"] != "lost"] +
                                [max([d["stake"] for d in r["days"]] or [BANK0]) for r in runs] + [BANK0]), 2),
                 streak=sum(1 for d in (cur or {}).get("days", []) if d["result"] == "won") if cur else 0,
-                today=today, wins_needed=need,
+                today=today, wins_needed=need, last=last,
+                log=[dict(day=d["day"], stake=d["stake"], result=d["result"], pays=d["pays"]) for d in done],
                 chance_to_target=round(p ** need, 8) if p and need else None,
                 history=[dict(start=r["start"], status=r["status"], days=len(r["days"]),
                               peak=max([d["stake"] for d in r["days"]] + [r["bank"]])) for r in runs][-10:])

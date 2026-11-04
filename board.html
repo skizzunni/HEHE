@@ -1287,6 +1287,25 @@ function ladderRuns(R, money){
     + R.map(r => '<tr><td>' + esc(r.start) + '</td><td>' + r.days + '</td><td>' + money(r.peak) + '</td><td>' + how(r.status)
       + '</td></tr>').join('') + '</tbody></table></details>';
 }
+// the ticket that settled last, shown until the next 8 AM card is set
+function ladderLast(S, money){
+  if(!S) return '';
+  const w = S.result === 'won';
+  return '<p class="three"><b>Last ticket (' + esc(S.day) + '): ' + (w ? 'WON' : 'LOST') + '</b> &middot; '
+    + (w ? money(S.stake) + ' &rarr; ' + money(S.after) + ', all of it rides on the next card'
+         : money(S.stake) + ' lost; the next card starts a new run at $1')
+    + (S.legs || []).filter(L => L.status === 'lost').map(L => '<div class="sbn">Lost on ' + esc(L.label)
+      + (L.score ? ' (' + esc(L.score) + ')' : '') + '</div>').join('') + '</p>';
+}
+// this run, day by day
+function ladderLog(G, money){
+  if(!G.length) return '';
+  return '<details><summary>This run, day by day (' + G.length + ')</summary><table class="sweeptab"><thead><tr><th>Day</th>'
+    + '<th>Stake</th><th>Price</th><th>Result</th></tr></thead><tbody>'
+    + G.map(g => '<tr><td>' + esc(g.day) + '</td><td>' + money(g.stake) + '</td><td>' + g.pays.toFixed(2) + '&times;</td><td>'
+      + (g.result === 'won' ? '<span class="wl won">WON</span>' : '<span class="wl lost">LOST</span>') + '</td></tr>').join('')
+    + '</tbody></table></details>';
+}
 // Ladder challenge (ladder.py): $1 to $10,000, one parlay a day of the 5
 // likeliest Locks, the whole bank rolled forward; one loss starts over at $1.
 function ladderHTML(){
@@ -1315,7 +1334,8 @@ function ladderHTML(){
         + copyBtn("Ladder ticket", ['Ladder ticket: stake ' + money(T.stake) + ', ' + T.legs.length + '-leg parlay, about '
             + T.pays.toFixed(2) + 'x (pays ' + money(T.stake * T.pays) + ')']
             .concat(T.legs.map(L => legLine(L.label, L.price, "FanDuel", L.match))))
-      : ladderPreview())
+      : ladderLast(X.last, money) + ladderPreview())
+    + ladderLog(X.log || [], money)
     + '<p class="note">Before the start, all 5 top legs won on 5 of 16 cards (31%) and paid about 3.05&times;: reaching '
     + money(X.target) + ' takes about 9 wins in a row, roughly 1 in 40,000. For fun, not a plan.'
     + '</p>' + ladderRuns(H.slice(0, -1).reverse(), money) + '</div>';

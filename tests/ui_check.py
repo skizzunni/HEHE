@@ -125,6 +125,7 @@ PROBE = """<script>setTimeout(function(){
       out.bannerOnLocks = !!document.getElementById("stalebar");
       out.ladderCard = [].slice.call(document.querySelectorAll("#panel .sweep")).map(function(e){return e.textContent})
         .filter(function(t){return /Ladder challenge/.test(t)}).join(" | ");
+      try { out.ladderLast = ladderLast({day: "2026-11-03", result: "lost", stake: 3.07, after: 0, legs: [{label: "Leg X", status: "lost", score: "A 1 - B 2"}]}, function(v){return "$" + v.toFixed(2)}); } catch(e) { out.ladderLast = "ERR " + e; }
       out.betFirst = /Ticket to bet: doubles your stake/.test((document.getElementById("panel") || {}).textContent || "");
       out.heading = (document.querySelector(".parlays h3") || {}).textContent || "";
       out.legs = ((document.querySelector(".parlays ul.legs") || {}).children || []).length;
@@ -156,6 +157,7 @@ PROBE = """<script>setTimeout(function(){
 
 
 LADDER = dict(start="2026-11-03", target=10000.0, bank=3.05, runs=1, streak=1, best=3.05, wins_needed=8,
+              log=[dict(day="2026-11-02", stake=1.0, result="won", pays=3.05)],
               chance_to_target=0.0000656, history=[],
               today=dict(stake=3.05, pays=3.06, prob=0.30, result="open",
                          legs=[dict(label=f"Ladder leg {i + 1}", price="-300", p=0.79, match=f"Game {i + 1}",
@@ -255,9 +257,12 @@ def main():
     if "Safe Locks, 7 days11 of 11100.0% hit, 1 cards" not in t7:
         fails.append("Safe Locks 7-day tile must total the record's graded days: " + t7)
     lt, lc = new.get("ladderTile", ""), new.get("ladderCard", "")
+    ll = new.get("ladderLast", "")
+    if not all(x in ll for x in ("Last ticket (2026-11-03): LOST", "$3.07 lost", "Lost on Leg X (A 1 - B 2)")):
+        fails.append("ladder last ticket wrong: " + ll)
     if "$3.05" not in lt or "1 of 5 won today, 1 live" not in lt:
         fails.append("ladder tile must show the bank and streak: " + lt)
-    if not all(x in lc for x in ("Ladder challenge: $1", "Ladder leg 5", "NHL · 7:30 PM", "1 of 5 won, 4 to play (1 live now)", "Live: 2nd 10:00 · A 1 - B 0", "A 3 - B 2", "stake $3.05", "8 straight wins", "1 in 15,244")):
+    if not all(x in lc for x in ("Ladder challenge: $1", "Ladder leg 5", "NHL · 7:30 PM", "1 of 5 won, 4 to play (1 live now)", "Live: 2nd 10:00 · A 1 - B 0", "A 3 - B 2", "stake $3.05", "8 straight wins", "1 in 15,244", "This run, day by day (1)")):
         fails.append("ladder card must show today's 5 legs, stake, wins needed and odds: " + lc[:300])
     for f in fails:
         print("FAIL:", f)

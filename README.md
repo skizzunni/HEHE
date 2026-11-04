@@ -3811,3 +3811,5 @@ Open ladder legs show the live game clock and score from the picks ledger
 The ladder tile and progress line count legs live right now ("1 of 5 won, 4 to play (1 live now)").
 Study, rejected: Locks legs calibrated by league in each date half (n 16-40 per
 league-half) -- all within noise, so the ladder keeps picking by chance alone (2026-11-04).
+Before the 8 AM card, the ladder shows the last settled ticket (won: what rides on;
+lost: the leg that sank it) and a day-by-day log of the run (`ladder.report` last/log) (2026-11-04).

@@ -75,6 +75,27 @@ class Target(unittest.TestCase):
         self.assertEqual(r["bank"], 1.0)                                   # a new run starts at $1
 
 
+class Last(unittest.TestCase):
+    def test_last_settled_ticket_and_run_log(self):
+        b = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "void")]})
+        r = ladder.report(b, start="2026-11-03")
+        self.assertEqual(r["last"]["day"], "2026-11-04")
+        self.assertEqual(r["last"]["after"], round(round(1.5 ** 5, 2) * 1.5 ** 4, 2))   # void leg pays 1x
+        self.assertEqual([g["result"] for g in r["log"]], ["won", "won"])
+        self.assertIsNone(r["today"])
+
+    def test_a_loss_is_the_last_ticket_until_the_next_card(self):
+        b = book({"2026-11-03": W5[:4] + [("e", 0.8, "lost")]})
+        r = ladder.report(b, start="2026-11-03")
+        self.assertEqual((r["last"]["result"], r["last"]["after"]), ("lost", 0.0))
+        self.assertEqual(r["bank"], 1.0)
+
+    def test_open_ticket_is_not_in_the_log(self):
+        b = book({"2026-11-03": W5[:4] + [("e", 0.8, "open")]})
+        r = ladder.report(b, start="2026-11-03")
+        self.assertEqual((r["last"], r["log"]), (None, []))
+
+
 class Live(unittest.TestCase):
     def test_open_legs_carry_the_game_clock_and_score(self):
         from unittest import mock
