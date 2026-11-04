@@ -1467,7 +1467,8 @@ function yesterdayHTML(Y){
       + esc(L.pick) + ' at ' + Math.round(L.conf) + '%' + (L.price ? ' (' + esc(L.price) + ')' : '')
       + (Object.keys(L.score || {}).length ? '<br>' + sc(L.score) : '')
       + ((L.tags || []).length ? '<br><b>' + L.tags.map(esc).join(', ') + '</b>' : '')
-      + (L.why ? '<br><span class="sbn">' + esc(L.why) + '</span>' : '') + '</p>').join('')
+      + (L.why ? '<br><span class="sbn">' + esc(L.tags && L.tags.length ? L.why.split(' · ').filter(b => L.tags.indexOf(b) < 0).join(' · ') : L.why)
+         + '</span>' : '') + '</p>').join('')
     + '</details></div>';
 }
 // My own picks with the prices hidden (ledger.own_view): the model alone

@@ -3883,3 +3883,4 @@ halves but under the 99.5% bar; recheck at 100+ legs. Positions 4-11 beat their 
 (2026-11-04).
 Board sweep tile flags live picks that would lose if the game ended now ("2 live, 1 not winning
 now"; `ledger.live_winning`: my side ahead, or not behind for "or draw") (2026-11-04).
+Loss lines no longer repeat reasons already in the diagnosis (review and Results tab) (2026-11-04).

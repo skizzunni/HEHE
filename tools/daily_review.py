@@ -668,7 +668,8 @@ def loss_line(L):
     score = " - ".join(f"{k} {v}" for k, v in sc.items()) if sc else ""
     return (f"- LOST {L['league']} {L['pick']} at {L['said']}%" + (f" ({L['price']})" if L.get("price") else "")
             + (f", {score}" if score else "") + (" (against the market)" if L.get("against_market") else "")
-            + f": {L.get('why') or ''}" + (f" [{', '.join(L['tags'])}]" if L.get("tags") else ""))
+            + f": {L.get('why') or ''}" + (lambda t: f" [{', '.join(t)}]" if t else "")(
+                [t for t in L.get("tags") or [] if t not in (L.get("why") or "")]))
 
 
 def words(r, fit):

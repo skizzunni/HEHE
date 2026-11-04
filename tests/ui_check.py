@@ -122,7 +122,7 @@ PROBE = """<script>setTimeout(function(){
   out.own = ownHTML({n: 382, own: 232, market: 260, since: "2026-10-05", today: [{league: "nba", match: "MIA @ LAC", own: "LAC", own_p: 60, market: "MIA", market_p: 65}]});
   out.inj = [injNote({inj: {mine: ["Giannis Antetokounmpo (Day-To-Day)"], opp: ["Brandon Ingram (Out)", "Bradley Beal (Out)", "A (Out)", "B (Out)", "C (Out)"]}}), injNote({}), injNote({inj: {mine: [], opp: []}})];
   out.mv = [moveNote({mv: 5}), moveNote({mv: -4}), moveNote({mv: null}), moveNote({})];
-  out.yday = [yesterdayHTML({day: "2026-11-03", won: 34, lost: 1, losses: [{league: "efl1", pick: "Charlton Athletic", conf: 70, price: "-310", score: {"Bolton Wanderers": 1, "Charlton Athletic": 0}, tags: ["favourite lost", "close game"], why: "margin 1"}]}), yesterdayHTML({day: "x", won: 0, lost: 0})];
+  out.yday = [yesterdayHTML({day: "2026-11-03", won: 34, lost: 1, losses: [{league: "efl1", pick: "Charlton Athletic", conf: 70, price: "-310", score: {"Bolton Wanderers": 1, "Charlton Athletic": 0}, tags: ["favourite lost", "close game"], why: "margin 1 · favourite lost · close game"}]}), yesterdayHTML({day: "x", won: 0, lost: 0})];
   out.ownTile = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.textContent}).filter(function(t){return /vs market/.test(t)}).join("|");
   out.kind = [kindLine([{kind: "player props", won: 33, n: 41, said: 79.1}, {kind: "game lines", won: 136, n: 165, said: 77.3}]), kindLine([])];
   out.nextTile = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.textContent}).filter(function(t){return /Next up/i.test(t)}).join("|");
@@ -284,6 +284,8 @@ def main():
     if not all(x in yd[0] for x in ("Yesterday (2026-11-03): 34&ndash;1", "EFL1 Charlton Athletic at 70% (-310)",
                                     "Bolton Wanderers 1 &ndash; Charlton Athletic 0", "favourite lost, close game", "margin 1")) or yd[1]:
         fails.append("yesterday section wrong: " + repr(yd))
+    if "margin 1 · favourite lost" in (yd[0] if yd else ""):
+        fails.append("yesterday section repeats its tags: " + yd[0])
     ot = new.get("ownTile", "")
     if not ("My picks vs market" in ot and "232–260" in ot and "same 382 games, prices hidden · 2 splits today" in ot):
         fails.append("own tile wrong: " + ot)

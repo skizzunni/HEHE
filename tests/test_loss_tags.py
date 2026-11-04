@@ -34,5 +34,12 @@ class LossLine(unittest.TestCase):
                                "Vegas Golden Knights 3: margin 1 [coin flip, close game]")
 
 
+class NoRepeat(unittest.TestCase):
+    def test_tags_already_in_why_not_repeated(self):
+        line = daily_review.loss_line(dict(league="ucl", pick="Liverpool", said=83, price="-700",
+                                           why="margin 1 · called at 83% · upset · close game", tags=["upset", "close game"]))
+        self.assertTrue(line.endswith("margin 1 · called at 83% · upset · close game"))
+
+
 if __name__ == "__main__":
     unittest.main()
