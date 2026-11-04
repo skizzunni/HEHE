@@ -103,5 +103,16 @@ class Alt(unittest.TestCase):
         self.assertNotIn("alt", rec["legs"][2])                       # settled
 
 
+
+
+class ByMarket(unittest.TestCase):
+    def test_grouped_by_league_and_stat_most_legs_first(self):
+        import prop_locks
+        rows = [(dict(league="nhl", market="Shots on Goal"), "won"), (dict(league="nhl", market="Shots on Goal"), "lost"),
+                (dict(league="nba", market="Points"), "won")]
+        self.assertEqual(prop_locks.by_market(rows), [dict(market="NHL Shots on Goal", won=1, n=2),
+                                                      dict(market="NBA Points", won=1, n=1)])
+
+
 if __name__ == "__main__":
     unittest.main()

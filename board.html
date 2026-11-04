@@ -2180,6 +2180,7 @@ function propLocksHTML(){
     : (s === "void" || s === "ungradable") ? '<span class="wl">VOID</span>' : '<span class="sbn">open</span>';
   const rec = R.n ? 'Record: <b>' + R.won + ' of ' + R.n + '</b> won (' + R.hit + '%, 95% range ' + R.wilson95[0] + '&ndash;'
       + R.wilson95[1] + '%) against ' + R.stated + '% stated; ROI at the locked prices <b>' + (R.roi >= 0 ? '+' : '') + R.roi + '%</b>.'
+      + ((R.by_market || []).length > 1 ? ' By market: ' + R.by_market.slice(0, 6).map(x => esc(x.market) + ' ' + x.won + '/' + x.n).join(', ') + '.' : '')
     : 'No Prop Lock has been graded yet.';
   return '<div class="parlays"><h3>Prop Locks</h3>'
     + '<p class="note">The day&rsquo;s ' + (X.n || 15) + ' likeliest FanDuel props: player confirmed to play, settled from the box score, '

@@ -174,7 +174,17 @@ def report(path=None):
     hi = (p + z * z / (2 * n) + z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))) / (1 + z * z / n)
     return dict(days=days, n=n, won=w, hit=round(100 * p, 1), wilson95=[round(100 * lo, 1), round(100 * hi, 1)],
                 stated=round(100 * sum(L["p"] for L, _ in allrows) / n, 1),
-                roi=round(100 * sum(ret) / n, 1))
+                roi=round(100 * sum(ret) / n, 1), by_market=by_market(allrows))
+
+
+def by_market(rows):
+    """Graded legs by league and stat ({market, won, n}), most legs first."""
+    g = {}
+    for L, s in rows:
+        k = (str(L.get("league") or "").upper() + " " + str(L.get("market") or "")).strip()
+        w, n = g.get(k, (0, 0))
+        g[k] = (w + (s == "won"), n + 1)
+    return [dict(market=k, won=w, n=n) for k, (w, n) in sorted(g.items(), key=lambda x: (-x[1][1], x[0]))]
 
 
 def props_record():

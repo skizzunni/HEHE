@@ -3813,3 +3813,6 @@ Study, rejected: Locks legs calibrated by league in each date half (n 16-40 per
 league-half) -- all within noise, so the ladder keeps picking by chance alone (2026-11-04).
 Before the 8 AM card, the ladder shows the last settled ticket (won: what rides on;
 lost: the leg that sank it) and a day-by-day log of the run (`ladder.report` last/log) (2026-11-04).
+Prop Locks record shows hits by league and stat ("NHL Shots on Goal 41/45").
+Study, rejected: Prop Locks by market in each date half (88 and 59 graded legs) -- no
+market trails its stated chance, so none is cut (2026-11-04).
