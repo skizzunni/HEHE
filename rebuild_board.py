@@ -604,6 +604,15 @@ def snapshot():
             print(f"safe locks: {_alt} legs pay more at Kalshi", file=sys.stderr)
         except Exception as e_:
             print(f"safe locks: Kalshi comparison skipped ({e_})", file=sys.stderr)
+        # every game, its likeliest line (locks.every_game): from the frozen
+        # 8 AM pool once the card is set, the live pool before
+        try:
+            _fz = (locks.load(locks.SAFE_LEDGER).get("pools") or {}).get(d._STATE["dates"][0]) if locks.card_time() else None
+            _eg = locks.every_game((_fz or {}).get("legs") or out["safe_locks"]["today"].get("pool"))
+            out["every_game"] = dict(today=_eg, preview=not _fz, record=locks.every_game_record(locks.SAFE_LEDGER))
+            print(f"every game: {len(_eg)} games, record {out['every_game']['record']}", file=sys.stderr)
+        except Exception as e_:
+            print(f"every game skipped ({e_})", file=sys.stderr)
         for v_ in out["safe_locks"].values():
             v_.pop("pool", None)
         out["safe_locks_record"] = locks.report(locks.SAFE_LEDGER)

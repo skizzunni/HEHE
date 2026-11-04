@@ -1372,6 +1372,29 @@ function ladderHTML(){
     + money(X.target) + ' takes about 9 wins in a row, roughly 1 in 40,000. For fun, not a plan.'
     + '</p>' + ladderRuns(H.slice(0, -1).reverse(), money) + '</div>';
 }
+// Every game: its single likeliest FanDuel line (locks.every_game), the whole
+// Safe Locks pool rather than the 11-leg card. Straight bets, one per game.
+function everyGameHTML(){
+  const X = D.every_game;
+  if(!X || !(X.today || []).length) return '';
+  const G = X.today, R = X.record || {};
+  const w = G.filter(g => g.status === 'won').length, l = G.filter(g => g.status === 'lost').length;
+  const res = s => s === 'won' ? '<span class="wl won">WON</span>' : s === 'lost' ? '<span class="wl lost">LOST</span>'
+    : s === 'void' ? '<span class="wl">VOID</span>' : '';
+  return '<div class="sweep"><details' + (l + w ? '' : ' open') + '><summary><b>Every game: its safest bet</b> (' + G.length + ' games'
+    + (w + l ? ', ' + w + '&ndash;' + l + ' so far' : '') + ')</summary>'
+    + '<p class="note">For every game FanDuel prices, the one line most likely to win (-2000 to -500), as a straight bet'
+    + (X.preview ? '. Preview: set at 8 AM' : ', set at 8 AM') + '. '
+    + (R.n ? 'Record: <b>' + R.won + ' of ' + R.n + '</b> (' + R.hit + '%) against ' + R.stated + '% stated, over '
+        + R.days + ' days; ' + (R.roi >= 0 ? '+' : '') + R.roi + '% per $1 at the price. These are short prices: a win pays little.' : '')
+    + '</p><ul class="betlegs">' + G.map(g => '<li>' + esc(g.label) + ' <b>' + esc(g.price || '') + '</b> &middot; '
+      + (100 * g.p).toFixed(0) + '% &middot; ' + esc(g.match || '') + ' ' + res(g.status)
+      + (g.score && g.status !== 'open' ? '<div class="sbn">' + esc(g.score) + '</div>'
+         : (g.league || g.tip) ? '<div class="sbn">' + [String(g.league || '').toUpperCase(), g.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '')
+      + '</li>').join('') + '</ul>'
+    + copyBtn("Every game, safest bet", G.map(g => legLine(g.label, g.price, "FanDuel", g.match)))
+    + '</details></div>';
+}
 function drawLocks(){
   const SAFE = LKMODE === "safe";
   const K = (SAFE ? D.safe_locks : D.locks) || {};
@@ -1380,7 +1403,7 @@ function drawLocks(){
   const X = K[day] || {};
   const L = X.locks || [];
   const R = (SAFE ? D.safe_locks_record : D.locks_record) || {};
-  let h = lockOfDay() + ladderHTML() + '<div class="parlays"><div class="sechead"><h3>' + (SAFE ? 'Safe Locks' : 'Locks') + '</h3>'
+  let h = lockOfDay() + ladderHTML() + everyGameHTML() + '<div class="parlays"><div class="sechead"><h3>' + (SAFE ? 'Safe Locks' : 'Locks') + '</h3>'
     + dayPills("lkday", day) + '</div>'
     + '<p><span class="pills"><button type="button" data-lkmode="regular" aria-pressed="' + !SAFE
     + '">Locks &middot; -400 to -120</button><button type="button" data-lkmode="safe" aria-pressed="' + SAFE

@@ -3831,3 +3831,7 @@ Every loss is logged with why (review/log.json, latest.md): score, price, and co
 (`ledger.loss_tags`: coin flip / favourite lost / upset; close game / blowout by sport; price
 moved 3+ points against it before the start). The review also logs the daily board sweep (record
 and the pick that broke it), yesterday's losses, and a 14-day tally of loss reasons (2026-11-04).
+Locks tab: "Every game: its safest bet" -- for every game FanDuel prices, its single likeliest
+line from the Safe Locks pool (-2000 to -500), as straight bets (`locks.every_game`). Tested on
+the frozen 8 AM pools 2026-10-21 to 11-03, graded off final scores: 90.2% and 90.6% in the two
+date halves (386 of 427, 90.4% vs 88.5% stated; -3.0% per $1 at the short prices) (2026-11-04).

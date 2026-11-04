@@ -816,3 +816,63 @@ def top_record(path=None, k=1):
                 said += L["p"]
     return dict(days=days, all_won=hit, legs=n, won=won,
                 said=round(100 * said / n, 1) if n else None)
+
+
+# Every game: its single likeliest game line from the Safe Locks pool (the
+# whole pool, not the 11-leg card). Tested 2026-10-21 to 11-03 on the pools
+# frozen at 8 AM, graded off the picks ledger's final scores: 90.2% and 90.6%
+# in the two date halves (427 games) against 88.5% stated, -3% per $1 at the
+# price. Props are left out (graded by another ledger).
+def best_per_game(legs):
+    best = {}
+    for L in legs or []:
+        if L.get("kind") == "prop" or not L.get("spec"):
+            continue
+        g = L["gid"]
+        if g not in best or L["p"] > best[g]["p"]:
+            best[g] = L
+    return sorted(best.values(), key=lambda L: -L["p"])
+
+
+def _every_status(L, led):
+    e = led.get(L["gid"]) or {}
+    sc = e.get("scores") or {}
+    h, a = sc.get(L.get("home")), sc.get(L.get("away"))
+    if e.get("status") not in ("won", "lost", "push") or not (isinstance(h, int) and isinstance(a, int)):
+        return "open", None
+    r = stacks.settle_score(L["spec"], L["home"], L["away"], h, a)
+    return ("void" if r == "push" else r), f"{L['away']} {a} - {L['home']} {h}"
+
+
+def every_game(legs, led=None):
+    """[{label, price, p, match, league, tip, status, score}] for each game."""
+    if led is None:
+        import ledger
+        led = ledger.load()
+    out = []
+    for L in best_per_game(legs):
+        st, score = _every_status(L, led)
+        out.append(dict(gid=L["gid"], label=L["label"], price=L.get("price"), p=L["p"], match=L.get("match"),
+                        league=L.get("league"), tip=L.get("tip"), status=st, score=score))
+    return out
+
+
+def every_game_record(path=None, led=None):
+    """The every-game list's graded record from the frozen 8 AM pools."""
+    if led is None:
+        import ledger
+        led = ledger.load()
+    rows = []
+    for d, x in sorted((load(path).get("pools") or {}).items()):
+        for g in every_game(x.get("legs"), led):
+            if g["status"] in ("won", "lost"):
+                rows.append((d, g))
+    if not rows:
+        return dict(n=0)
+    w = sum(g["status"] == "won" for _, g in rows)
+    ret = sum((_dec(g["price"]) - 1) if g["status"] == "won" else -1 for _, g in rows)
+    days = sorted({d for d, _ in rows})
+    return dict(n=len(rows), won=w, hit=round(100 * w / len(rows), 1),
+                stated=round(100 * sum(g["p"] for _, g in rows) / len(rows), 1),
+                roi=round(100 * ret / len(rows), 1), days=len(days), since=days[0])
+
