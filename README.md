@@ -3881,3 +3881,5 @@ Board sweep tile counts games live right now. Watch item (not a rule): the top 3
 stated chance hit 22/27 then 24/27 (85.2% vs ~92% stated, 54 legs, about -1.9 SE) -- short in both
 halves but under the 99.5% bar; recheck at 100+ legs. Positions 4-11 beat their stated chance
 (2026-11-04).
+Board sweep tile flags live picks that would lose if the game ended now ("2 live, 1 not winning
+now"; `ledger.live_winning`: my side ahead, or not behind for "or draw") (2026-11-04).

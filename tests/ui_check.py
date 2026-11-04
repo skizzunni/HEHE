@@ -196,7 +196,7 @@ def render(captured_ms, health=None):
     s = re.sub(r'"captured":\d+', f'"captured":{captured_ms}', s, count=1)
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
                   + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + ',"ladder":' + json.dumps(LADDER) + ',"every_game":' + json.dumps(EVERY) + ',', 1)
-    s = s.replace('"live":[],"feed":', '"live":[{"pick":"X"},{"pick":"Y"}],"feed":', 1)
+    s = s.replace('"live":[],"feed":', '"live":[{"pick":"X","winning":false},{"pick":"Y","winning":true}],"feed":', 1)
     s = s.replace('"results":{', '"results":{"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
@@ -297,7 +297,7 @@ def main():
     if "<b>Live:</b> 3rd 4:10 &middot; LAL 88 - SAC 80" not in pl:
         fails.append("prop locks live line wrong: " + pl[-400:])
     st = new.get("sweepTile", "")
-    if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live)" in st):
+    if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)
     sb = new.get("skipBar") or ["", "x"]
     if not ("2 of 3 picks here are marked" in sb[0] and "50-60%: -6.2% per $1 over 3,153 games" in sb[0]

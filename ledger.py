@@ -711,6 +711,19 @@ def next_up(book, today, n=3):
                  pick=e["pick"] + (" or draw" if e.get("dc") else ""), price=e.get("price")) for _, e in rows[:n]]
 
 
+def live_winning(e):
+    """Whether a pick in play would win if it ended now: my side ahead (or,
+    for 'or draw', not behind). None when the score cannot be read."""
+    sc = e.get("live_score") or {}
+    mine = sc.get(e.get("pick"))
+    other = [v for k, v in sc.items() if k != e.get("pick")]
+    try:
+        mine, other = float(mine), float(other[0])
+    except (TypeError, ValueError, IndexError):
+        return None
+    return mine >= other if e.get("dc") else mine > other
+
+
 def sweep_days(done, day_of, today, n=14):
     """The whole board, day by day: priced picks won and lost on each of the
     last n days before today ([{day, won, lost}], newest first), for the
@@ -735,7 +748,7 @@ def board_payload(limit=40):
     r, recs = report()
     live = [dict(league=e["league"], pick=e["pick"] + (" or draw" if e.get("dc") else ""), matchup=e.get("matchup", ""),
                  state=e.get("live", ""), conf=e.get("conf"),
-                 score=e.get("live_score") or {})
+                 score=e.get("live_score") or {}, winning=live_winning(e))
             for e in book.values()
             if record_priced(e) and e.get("status") == "open" and e.get("live")]
     live.sort(key=lambda x: (x["league"], x["pick"]))
