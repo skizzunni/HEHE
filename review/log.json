@@ -8256,10 +8256,10 @@
    },
    {
     "flag": false,
-    "hit": 81.8,
-    "n": 424,
+    "hit": 82.0,
+    "n": 434,
     "name": "props nhl Shots on Goal",
-    "said": 80.8
+    "said": 80.9
    },
    {
     "flag": false,
@@ -8319,6 +8319,13 @@
    },
    {
     "flag": false,
+    "hit": 90.0,
+    "n": 10,
+    "name": "locks nhl over",
+    "said": 79.5
+   },
+   {
+    "flag": false,
     "hit": 73.9,
     "n": 23,
     "name": "locks nhl under",
@@ -8340,8 +8347,8 @@
    },
    {
     "flag": false,
-    "hit": 92.9,
-    "n": 14,
+    "hit": 93.3,
+    "n": 15,
     "name": "safe locks nhl over",
     "said": 91.3
    },
@@ -8368,8 +8375,8 @@
    },
    {
     "flag": false,
-    "hit": 94.4,
-    "n": 143,
+    "hit": 93.8,
+    "n": 144,
     "name": "prop locks",
     "said": 88.6
    },
@@ -8477,9 +8484,9 @@
    }
   },
   "clv": {
-   "avg": 1.48,
-   "beat": 71.1,
-   "n": 38
+   "avg": 1.47,
+   "beat": 71.8,
+   "n": 39
   },
   "day": "2026-11-03",
   "ladder": "Ladder: run 1, bank $1.00, 0 win(s) in a row, best $1.00; today stakes $1.00 at 3.07x (25% est.); 9 wins to $10,000.",
@@ -8487,7 +8494,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 3,
+   "open": 2,
    "plays": {
     "best": [
      2,
@@ -8495,7 +8502,7 @@
      "won"
     ]
    },
-   "won": 8
+   "won": 9
   },
   "losses": [
    {
@@ -8615,16 +8622,16 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+100",
-    "won": 1
+    "won": 2
    }
   ],
   "picks": {
-   "hit": 81.6,
+   "hit": 82.1,
    "lost": 7,
-   "n": 38,
-   "roi": 6.2,
-   "said": 72.1,
-   "won": 31
+   "n": 39,
+   "roi": 7.7,
+   "said": 71.8,
+   "won": 32
   },
   "picks_by_league": {
    "afc": {
@@ -8676,12 +8683,12 @@
     "won": 3
    },
    "nhl": {
-    "hit": 50.0,
+    "hit": 55.6,
     "lost": 4,
-    "n": 8,
-    "roi": -20.1,
-    "said": 57.5,
-    "won": 4
+    "n": 9,
+    "roi": -11.0,
+    "said": 57.7,
+    "won": 5
    },
    "par": {
     "hit": 0.0,
@@ -8723,14 +8730,14 @@
     "said_price": 87.3,
     "won": 1462
    },
-   "n": 82,
-   "said": 81.6,
-   "won": 71
+   "n": 92,
+   "said": 81.8,
+   "won": 80
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 3,
+   "open": 2,
    "plays": {
     "best": [
      7,
@@ -8740,10 +8747,10 @@
     "winners": [
      2,
      0.8432,
-     "open"
+     "won"
     ]
    },
-   "won": 8
+   "won": 9
   },
   "strong": {
    "hit": 88.9,
@@ -8759,12 +8766,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.1,
+    "hit": 75.2,
     "lost": 239,
-    "n": 961,
-    "roi": 1.2,
+    "n": 962,
+    "roi": 1.3,
     "said": 70.6,
-    "won": 722
+    "won": 723
    }
   },
   "weights": {
@@ -8798,10 +8805,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6528,
-    "market_only": 0.6528,
-    "model_40": 0.6608,
-    "n": 126,
+    "logloss": 0.6517,
+    "market_only": 0.6517,
+    "model_40": 0.6604,
+    "n": 127,
     "weight": 0.0
    }
   }
