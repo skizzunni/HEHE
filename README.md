@@ -3860,3 +3860,6 @@ are only logged since mid-October, so the first date half has too few picks to t
 "Every game" shows what $10 straight on each leg returns if all win, and the expected result from
 the stated chances. Study, rejected: every-game legs by price band (-500..-799, -800..-1199,
 -1200..-2000) in each date half -- none trails its stated chance in both halves (2026-11-04).
+Glance tile "My picks vs market" (232-260 on the same 382 games, splits today; opens Results).
+Study, rejected: market picks my price-blind model agrees with hit 61.2% then 73.0% against
+66.2% / 69.7% stated (308 picks); the halves disagree, so agreement earns no badge (2026-11-04).

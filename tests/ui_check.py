@@ -123,6 +123,7 @@ PROBE = """<script>setTimeout(function(){
   out.inj = [injNote({inj: {mine: ["Giannis Antetokounmpo (Day-To-Day)"], opp: ["Brandon Ingram (Out)", "Bradley Beal (Out)", "A (Out)", "B (Out)", "C (Out)"]}}), injNote({}), injNote({inj: {mine: [], opp: []}})];
   out.mv = [moveNote({mv: 5}), moveNote({mv: -4}), moveNote({mv: null}), moveNote({})];
   out.yday = [yesterdayHTML({day: "2026-11-03", won: 34, lost: 1, losses: [{league: "efl1", pick: "Charlton Athletic", conf: 70, price: "-310", score: {"Bolton Wanderers": 1, "Charlton Athletic": 0}, tags: ["favourite lost", "close game"], why: "margin 1"}]}), yesterdayHTML({day: "x", won: 0, lost: 0})];
+  out.ownTile = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.textContent}).filter(function(t){return /vs market/.test(t)}).join("|");
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -187,6 +188,7 @@ def render(captured_ms, health=None):
     s = re.sub(r'"captured":\d+', f'"captured":{captured_ms}', s, count=1)
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
                   + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + ',"ladder":' + json.dumps(LADDER) + ',"every_game":' + json.dumps(EVERY) + ',', 1)
+    s = s.replace('"results":{', '"results":{"own":{"n":382,"own":232,"market":260,"today":[{},{}]},', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -273,6 +275,9 @@ def main():
     if not all(x in yd[0] for x in ("Yesterday (2026-11-03): 34&ndash;1", "EFL1 Charlton Athletic at 70% (-310)",
                                     "Bolton Wanderers 1 &ndash; Charlton Athletic 0", "favourite lost, close game", "margin 1")) or yd[1]:
         fails.append("yesterday section wrong: " + repr(yd))
+    ot = new.get("ownTile", "")
+    if not ("My picks vs market" in ot and "232–260" in ot and "same 382 games, prices hidden · 2 splits today" in ot):
+        fails.append("own tile wrong: " + ot)
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken" in st):
         fails.append("board sweep tile wrong: " + st)
