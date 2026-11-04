@@ -8903,13 +8903,19 @@
    "n": 0
   },
   "day": "2026-11-04",
-  "ladder": "Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; 8 wins to $10,000.",
+  "ladder": "Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.",
   "leaks_14d": [],
   "locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     2,
+     0.62,
+     "open"
+    ]
+   },
    "won": 0
   },
   "loss_reasons_14d": {
@@ -8988,9 +8994,20 @@
   },
   "safe_locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     7,
+     0.525,
+     "open"
+    ],
+    "winners": [
+     2,
+     0.8467,
+     "open"
+    ]
+   },
    "won": 0
   },
   "strong": {

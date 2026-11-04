@@ -1,7 +1,7 @@
 # Review 2026-11-04
 
 No picks settled yet.
-Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; 8 wins to $10,000.
+Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.
 Board sweep: 0-0, 52 open -- still clean.
 Why picks lost (14 days): favourite lost 129, close game 108, upset 53, coin flip 49, blowout 45, price moved against it 30.
 Yesterday (2026-11-03): board 34-9, sweep broken by efl1 Charlton Athletic at 70%.
@@ -14,6 +14,8 @@ Yesterday (2026-11-03): board 34-9, sweep broken by efl1 Charlton Athletic at 70
 - LOST nhl Montreal Canadiens at 61% (-175), Montreal Canadiens 4 - Winnipeg Jets 5: margin 1 · the book had my side favoured too · called at 61% [favourite lost, close game]
 - LOST nhl Carolina Hurricanes at 64% (-198), Carolina Hurricanes 1 - Nashville Predators 4: margin 3 · the book had my side favoured too · called at 64% [favourite lost, blowout]
 - LOST ncaaf Miami (OH) RedHawks at 71% (-265), Buffalo Bulls 34 - Miami (OH) RedHawks 31: margin 3 · the book had my side favoured too · called at 71% [favourite lost, close game]
+Locks 0/11 won, 11 open; Best play top 2 (62%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (52%) open.
 Lottery 100: open (0/10 legs won)
 Lottery 10k: open (0/14 legs won)
 Lottery 10k: open (0/8 legs won)
