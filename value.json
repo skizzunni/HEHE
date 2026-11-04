@@ -4489,6 +4489,45 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909923|away|FanDuel": {
+   "dec": 1.7937,
+   "ev": 0.0197,
+   "fair": 0.5685,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909923",
+   "kind": "value",
+   "league": "nba",
+   "match": "ATL @ WSH",
+   "price": "-126",
+   "seen": "2026-11-04T23:05:14+00:00",
+   "side": "away",
+   "start": "2026-11-05T00:00Z",
+   "team": "Atlanta Hawks",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909923|sure": {
+   "id": "nba:401909923",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-126",
+     "stake_share": 0.5618,
+     "team": "Atlanta Hawks",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+130",
+     "stake_share": 0.4382,
+     "team": "Washington Wizards",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "ATL @ WSH",
+   "profit": 0.0078,
+   "seen": "2026-11-04T23:05:14+00:00"
+  },
   "nba:401909924|home|Kalshi": {
    "dec": 1.2473,
    "ev": 0.0156,
