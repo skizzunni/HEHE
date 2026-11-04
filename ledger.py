@@ -512,7 +512,45 @@ def diagnose(e, res):
         bits.append("a starter was unannounced when I called it")
     c = e.get("conf") or 0
     bits.append(f"called at {c:.0f}%")
+    bits += [t for t in loss_tags(e, scores) if t not in bits]
     return " · ".join(bits)
+
+
+# how many points makes a game close or a blowout, by sport
+_MARGINS = dict(nba=(5, 15), wnba=(5, 15), ncaab=(5, 15), nfl=(7, 17), ncaaf=(7, 17),
+                nhl=(1, 3), mlb=(1, 6))
+
+
+def _implied(price):
+    try:
+        v = float(str(price).replace("+", ""))
+    except (TypeError, ValueError):
+        return None
+    return -v / (-v + 100) if v < 0 else 100 / (v + 100)
+
+
+def loss_tags(e, scores=None):
+    """Short, countable reasons for one loss (description only, never a
+    parameter): how likely it was ('coin flip' under 60%, 'upset' at 75%+,
+    else 'favourite lost'), how it was lost ('close game' / 'blowout' by the
+    sport's margins; soccer: 1 goal is close), and 'price moved against it'
+    when the line drifted 3+ points the other way between the call and the
+    last price before the start -- the mark late news leaves."""
+    tags = []
+    c = e.get("conf") or 0
+    tags.append("coin flip" if c < 60 else "upset" if c >= 75 else "favourite lost")
+    sc = [v for v in (scores if scores is not None else e.get("scores") or {}).values() if isinstance(v, int)]
+    if len(sc) == 2 and sc[0] != sc[1]:
+        m = abs(sc[0] - sc[1])
+        close, blow = _MARGINS.get(e.get("league"), (1, 3))
+        if m <= close:
+            tags.append("close game")
+        elif m >= blow:
+            tags.append("blowout")
+    a, b = _implied(e.get("first_price")), _implied(e.get("price"))
+    if a is not None and b is not None and a - b >= 0.03:
+        tags.append(f"price moved against it ({100 * (a - b):.0f} pts)")
+    return tags
 
 
 def _stale(e):

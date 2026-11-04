@@ -3827,3 +3827,7 @@ The Board sweep tile gives the chance the still-open picks all win ("1 in 23,696
 clean", the product of their stated chances). Study, nothing to adopt: picks against the market
 won 33.3% / 38.1% in the two date halves (276 picks) against 69.0% / 72.7% with it; none has
 been made since 2026-10-15, as every pick now follows the market (2026-11-04).
+Every loss is logged with why (review/log.json, latest.md): score, price, and countable tags
+(`ledger.loss_tags`: coin flip / favourite lost / upset; close game / blowout by sport; price
+moved 3+ points against it before the start). The review also logs the daily board sweep (record
+and the pick that broke it), yesterday's losses, and a 14-day tally of loss reasons (2026-11-04).

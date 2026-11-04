@@ -583,9 +583,21 @@ def review_day(day, ledger, locks, lottery, props):
     leagues = defaultdict(list)
     for e in todays:
         leagues[e["league"]].append(e)
+    import sys
+    if ROOT not in sys.path:
+        sys.path.insert(0, ROOT)
+    from ledger import loss_tags
+    lost_e = sorted((e for e in todays if e["status"] == "lost"), key=lambda e: e.get("settled") or "")
     losses = [dict(league=e["league"], pick=e["pick"], said=e.get("conf"), price=e.get("price"),
-                   against_market=e.get("market_agrees") is False, why=e.get("diagnosis") or "")
-              for e in todays if e["status"] == "lost"]
+                   match=e.get("matchup"), score=e.get("scores") or {},
+                   against_market=e.get("market_agrees") is False, why=e.get("diagnosis") or "",
+                   tags=loss_tags(e))
+              for e in lost_e]
+    # the whole board as one ticket: clean, or broken by its first loss
+    n_open = sum(1 for e in ledger.values() if record_priced(e) and e.get("status") == "open"
+                 and (e.get("date") or "") == day)
+    sweep = dict(won=sum(e["status"] == "won" for e in todays), lost=len(lost_e), open=n_open,
+                 broke_on=(f'{lost_e[0]["league"]} {lost_e[0]["pick"]} at {lost_e[0].get("conf")}%' if lost_e else None))
     # the last 14 days, to tell a bad night from a leak
     since = (dt.date.fromisoformat(day) - dt.timedelta(days=14)).isoformat()
     recent = [e for e in graded if since <= day_of(e) <= day and not exhibition(e) and record_priced(e)]
@@ -598,6 +610,12 @@ def review_day(day, ledger, locks, lottery, props):
         # a leak: 20+ calls hitting 8+ points under what they claimed
         if s["n"] >= 20 and s["hit"] < s["said"] - 8:
             leaks.append(dict(league=lg, **s))
+    # why the last 14 days' losses happened, counted (ledger.loss_tags)
+    reasons = defaultdict(int)
+    for e in recent:
+        if e["status"] == "lost":
+            for t in loss_tags(e):
+                reasons[t.split(" (")[0]] += 1
     vs_mkt = dict(agree=summarize([e for e in recent if e.get("market_agrees") is True]),
                   against=summarize([e for e in recent if e.get("market_agrees") is False]))
 
@@ -639,8 +657,18 @@ def review_day(day, ledger, locks, lottery, props):
     strong = [e for e in todays if _strong(e)]
     return dict(day=day, picks=summarize(todays), strong=summarize(strong), clv=clv([e for e in todays if e.get("first_price")]),
                 picks_by_league={k: summarize(v) for k, v in leagues.items()},
-                losses=losses, leaks_14d=leaks, vs_market_14d=vs_mkt,
+                losses=losses, sweep=sweep, loss_reasons_14d=dict(sorted(reasons.items(), key=lambda x: -x[1])),
+                leaks_14d=leaks, vs_market_14d=vs_mkt,
                 locks=lk_view, safe_locks=sk_view, lottery=lt_view, props=pr_view)
+
+
+def loss_line(L):
+    """One lost pick and why, for the review and the hourly report."""
+    sc = L.get("score") or {}
+    score = " - ".join(f"{k} {v}" for k, v in sc.items()) if sc else ""
+    return (f"- LOST {L['league']} {L['pick']} at {L['said']}%" + (f" ({L['price']})" if L.get("price") else "")
+            + (f", {score}" if score else "") + (" (against the market)" if L.get("against_market") else "")
+            + f": {L.get('why') or ''}" + (f" [{', '.join(L['tags'])}]" if L.get("tags") else ""))
 
 
 def words(r, fit):
@@ -667,9 +695,22 @@ def words(r, fit):
     c = r.get("clv") or {}
     if c.get("n"):
         out.append(f"Closing line value: {c['avg']:+} points on {c['n']} picks; beat the close on {c['beat']}%.")
+    sw = r.get("sweep") or {}
+    if sw.get("won") or sw.get("lost") or sw.get("open"):
+        out.append(f"Board sweep: {sw['won']}-{sw['lost']}, {sw['open']} open -- "
+                   + (f"broken (first loss: {sw['broke_on']})" if sw.get("lost") else "still clean") + ".")
     for L in r["losses"]:
-        out.append(f"- LOST {L['league']} {L['pick']} at {L['said']}%"
-                   + (" (against the market)" if L["against_market"] else "") + f": {L['why']}")
+        out.append(loss_line(L))
+    rs = r.get("loss_reasons_14d") or {}
+    if rs:
+        out.append("Why picks lost (14 days): " + ", ".join(f"{k} {v}" for k, v in rs.items()) + ".")
+    y = r.get("yesterday") or {}
+    if y.get("day"):
+        ys = y.get("sweep") or {}
+        out.append(f"Yesterday ({y['day']}): board {ys.get('won', 0)}-{ys.get('lost', 0)}"
+                   + (f", sweep broken by {ys['broke_on']}" if ys.get("broke_on") else ", clean sweep" if ys.get("won") else "") + ".")
+        for L in y.get("losses") or []:
+            out.append(loss_line(L))
     for k in r["leaks_14d"]:
         out.append(f"LEAK {k['league']}: {k['hit']}% hit vs {k['said']}% claimed on {k['n']} calls (14 days)")
     a, b = r["vs_market_14d"]["agree"], r["vs_market_14d"]["against"]
@@ -752,6 +793,8 @@ def main():
     log[today.isoformat()]["stuck"] = stuck(ledger, props, locks, lottery, today)
     log[today.isoformat()]["big_files"] = big_files()
     log[today.isoformat()]["ladder"] = ladder_line()
+    yk = (today - dt.timedelta(days=1)).isoformat()
+    log[today.isoformat()]["yesterday"] = dict(day=yk, sweep=log[yk].get("sweep"), losses=log[yk].get("losses"))
     with open(log_path, "w") as fh:
         json.dump(log, fh, indent=1, sort_keys=True)
     latest = max(k for k, v in log.items() if v["picks"].get("n") or k == today.isoformat())
