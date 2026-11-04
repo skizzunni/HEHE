@@ -8182,78 +8182,166 @@
    },
    "won": 11
   },
+  "loss_reasons_14d": {
+   "blowout": 48,
+   "close game": 112,
+   "coin flip": 54,
+   "favourite lost": 133,
+   "price moved against it": 31,
+   "upset": 54
+  },
   "losses": [
    {
     "against_market": false,
-    "league": "ecu",
-    "pick": "Mushuc Runa",
-    "price": "-600",
-    "said": 82,
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 82%"
-   },
-   {
-    "against_market": false,
     "league": "efl1",
+    "match": "BOL @ CHA",
     "pick": "Charlton Athletic",
     "price": "-310",
     "said": 70,
+    "score": {
+     "Bolton Wanderers": 1,
+     "Charlton Athletic": 0
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70%"
    },
    {
     "against_market": false,
-    "league": "ncaaf",
-    "pick": "Miami (OH) RedHawks",
-    "price": "-265",
+    "league": "ecu",
+    "match": "MAN @ MUS",
+    "pick": "Mushuc Runa",
+    "price": "-600",
+    "said": 82,
+    "score": {
+     "Manta F.C.": 3,
+     "Mushuc Runa": 2
+    },
+    "tags": [
+     "upset",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 82%"
+   },
+   {
+    "against_market": false,
+    "league": "par",
+    "match": "SSL @ NAC",
+    "pick": "Nacional Asunci\u00f3n",
+    "price": "-330",
     "said": 71,
-    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 71%"
+    "score": {
+     "Nacional Asunci\u00f3n": 0,
+     "Sportivo San Lorenzo": 2
+    },
+    "tags": [
+     "favourite lost"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 71%"
    },
    {
     "against_market": false,
     "league": "nhl",
-    "pick": "Montreal Canadiens",
-    "price": "-175",
-    "said": 61,
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 61%"
-   },
-   {
-    "against_market": false,
-    "league": "nhl",
-    "pick": "Pittsburgh Penguins",
-    "price": "-118",
-    "said": 52,
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 52%"
-   },
-   {
-    "against_market": false,
-    "league": "nhl",
-    "pick": "Washington Capitals",
-    "price": "-118",
-    "said": 52,
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 52%"
-   },
-   {
-    "against_market": false,
-    "league": "nhl",
+    "match": "COL @ CBJ",
     "pick": "Colorado Avalanche",
     "price": "-125",
     "said": 53,
+    "score": {
+     "Colorado Avalanche": 2,
+     "Columbus Blue Jackets": 7
+    },
+    "tags": [
+     "coin flip",
+     "blowout"
+    ],
     "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 53%"
    },
    {
     "against_market": false,
     "league": "nhl",
+    "match": "VGK @ PIT",
+    "pick": "Pittsburgh Penguins",
+    "price": "-118",
+    "said": 52,
+    "score": {
+     "Pittsburgh Penguins": 2,
+     "Vegas Golden Knights": 3
+    },
+    "tags": [
+     "coin flip",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 52%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "match": "DAL @ WSH",
+    "pick": "Washington Capitals",
+    "price": "-118",
+    "said": 52,
+    "score": {
+     "Dallas Stars": 6,
+     "Washington Capitals": 5
+    },
+    "tags": [
+     "coin flip",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 52%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "match": "WPG @ MTL",
+    "pick": "Montreal Canadiens",
+    "price": "-175",
+    "said": 61,
+    "score": {
+     "Montreal Canadiens": 4,
+     "Winnipeg Jets": 5
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 61%"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "match": "CAR @ NSH",
     "pick": "Carolina Hurricanes",
     "price": "-198",
     "said": 64,
+    "score": {
+     "Carolina Hurricanes": 1,
+     "Nashville Predators": 4
+    },
+    "tags": [
+     "favourite lost",
+     "blowout"
+    ],
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 64%"
    },
    {
     "against_market": false,
-    "league": "par",
-    "pick": "Nacional Asunci\u00f3n",
-    "price": "-330",
+    "league": "ncaaf",
+    "match": "BUFF @ M-OH",
+    "pick": "Miami (OH) RedHawks",
+    "price": "-265",
     "said": 71,
-    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 71%"
+    "score": {
+     "Buffalo Bulls": 34,
+     "Miami (OH) RedHawks": 31
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 71%"
    }
   ],
   "lottery": [
@@ -8466,6 +8554,12 @@
    "roi": 14.6,
    "said": 73.5,
    "won": 24
+  },
+  "sweep": {
+   "broke_on": "efl1 Charlton Athletic at 70%",
+   "lost": 9,
+   "open": 0,
+   "won": 34
   },
   "vs_market_14d": {
    "against": {
@@ -8818,6 +8912,14 @@
    "plays": {},
    "won": 0
   },
+  "loss_reasons_14d": {
+   "blowout": 45,
+   "close game": 108,
+   "coin flip": 49,
+   "favourite lost": 129,
+   "price moved against it": 30,
+   "upset": 53
+  },
   "losses": [],
   "lottery": [],
   "picks": {
@@ -8846,6 +8948,12 @@
    "n": 0
   },
   "stuck": [],
+  "sweep": {
+   "broke_on": null,
+   "lost": 0,
+   "open": 52,
+   "won": 0
+  },
   "vs_market_14d": {
    "against": {
     "n": 0
@@ -8895,6 +9003,169 @@
     "model_40": 0.6619,
     "n": 129,
     "weight": 0.0
+   }
+  },
+  "yesterday": {
+   "day": "2026-11-03",
+   "losses": [
+    {
+     "against_market": false,
+     "league": "efl1",
+     "match": "BOL @ CHA",
+     "pick": "Charlton Athletic",
+     "price": "-310",
+     "said": 70,
+     "score": {
+      "Bolton Wanderers": 1,
+      "Charlton Athletic": 0
+     },
+     "tags": [
+      "favourite lost",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70%"
+    },
+    {
+     "against_market": false,
+     "league": "ecu",
+     "match": "MAN @ MUS",
+     "pick": "Mushuc Runa",
+     "price": "-600",
+     "said": 82,
+     "score": {
+      "Manta F.C.": 3,
+      "Mushuc Runa": 2
+     },
+     "tags": [
+      "upset",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 82%"
+    },
+    {
+     "against_market": false,
+     "league": "par",
+     "match": "SSL @ NAC",
+     "pick": "Nacional Asunci\u00f3n",
+     "price": "-330",
+     "said": 71,
+     "score": {
+      "Nacional Asunci\u00f3n": 0,
+      "Sportivo San Lorenzo": 2
+     },
+     "tags": [
+      "favourite lost"
+     ],
+     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 71%"
+    },
+    {
+     "against_market": false,
+     "league": "nhl",
+     "match": "COL @ CBJ",
+     "pick": "Colorado Avalanche",
+     "price": "-125",
+     "said": 53,
+     "score": {
+      "Colorado Avalanche": 2,
+      "Columbus Blue Jackets": 7
+     },
+     "tags": [
+      "coin flip",
+      "blowout"
+     ],
+     "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 53%"
+    },
+    {
+     "against_market": false,
+     "league": "nhl",
+     "match": "VGK @ PIT",
+     "pick": "Pittsburgh Penguins",
+     "price": "-118",
+     "said": 52,
+     "score": {
+      "Pittsburgh Penguins": 2,
+      "Vegas Golden Knights": 3
+     },
+     "tags": [
+      "coin flip",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 52%"
+    },
+    {
+     "against_market": false,
+     "league": "nhl",
+     "match": "DAL @ WSH",
+     "pick": "Washington Capitals",
+     "price": "-118",
+     "said": 52,
+     "score": {
+      "Dallas Stars": 6,
+      "Washington Capitals": 5
+     },
+     "tags": [
+      "coin flip",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 52%"
+    },
+    {
+     "against_market": false,
+     "league": "nhl",
+     "match": "WPG @ MTL",
+     "pick": "Montreal Canadiens",
+     "price": "-175",
+     "said": 61,
+     "score": {
+      "Montreal Canadiens": 4,
+      "Winnipeg Jets": 5
+     },
+     "tags": [
+      "favourite lost",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 61%"
+    },
+    {
+     "against_market": false,
+     "league": "nhl",
+     "match": "CAR @ NSH",
+     "pick": "Carolina Hurricanes",
+     "price": "-198",
+     "said": 64,
+     "score": {
+      "Carolina Hurricanes": 1,
+      "Nashville Predators": 4
+     },
+     "tags": [
+      "favourite lost",
+      "blowout"
+     ],
+     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 64%"
+    },
+    {
+     "against_market": false,
+     "league": "ncaaf",
+     "match": "BUFF @ M-OH",
+     "pick": "Miami (OH) RedHawks",
+     "price": "-265",
+     "said": 71,
+     "score": {
+      "Buffalo Bulls": 34,
+      "Miami (OH) RedHawks": 31
+     },
+     "tags": [
+      "favourite lost",
+      "close game"
+     ],
+     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 71%"
+    }
+   ],
+   "sweep": {
+    "broke_on": "efl1 Charlton Athletic at 70%",
+    "lost": 9,
+    "open": 0,
+    "won": 34
    }
   }
  }

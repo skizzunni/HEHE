@@ -2,6 +2,18 @@
 
 No picks settled yet.
 Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; 8 wins to $10,000.
+Board sweep: 0-0, 52 open -- still clean.
+Why picks lost (14 days): favourite lost 129, close game 108, upset 53, coin flip 49, blowout 45, price moved against it 30.
+Yesterday (2026-11-03): board 34-9, sweep broken by efl1 Charlton Athletic at 70%.
+- LOST efl1 Charlton Athletic at 70% (-310), Bolton Wanderers 1 - Charlton Athletic 0: margin 1 · the book had my side favoured too · called at 70% [favourite lost, close game]
+- LOST ecu Mushuc Runa at 82% (-600), Manta F.C. 3 - Mushuc Runa 2: margin 1 · the book had my side favoured too · called at 82% [upset, close game]
+- LOST par Nacional Asunción at 71% (-330), Nacional Asunción 0 - Sportivo San Lorenzo 2: margin 2 · the book had my side favoured too · called at 71% [favourite lost]
+- LOST nhl Colorado Avalanche at 53% (-125), Colorado Avalanche 2 - Columbus Blue Jackets 7: margin 5 · the book had my side favoured too · called at 53% [coin flip, blowout]
+- LOST nhl Pittsburgh Penguins at 52% (-118), Pittsburgh Penguins 2 - Vegas Golden Knights 3: margin 1 · the book had my side favoured too · called at 52% [coin flip, close game]
+- LOST nhl Washington Capitals at 52% (-118), Dallas Stars 6 - Washington Capitals 5: margin 1 · the book had my side favoured too · called at 52% [coin flip, close game]
+- LOST nhl Montreal Canadiens at 61% (-175), Montreal Canadiens 4 - Winnipeg Jets 5: margin 1 · the book had my side favoured too · called at 61% [favourite lost, close game]
+- LOST nhl Carolina Hurricanes at 64% (-198), Carolina Hurricanes 1 - Nashville Predators 4: margin 3 · the book had my side favoured too · called at 64% [favourite lost, blowout]
+- LOST ncaaf Miami (OH) RedHawks at 71% (-265), Buffalo Bulls 34 - Miami (OH) RedHawks 31: margin 3 · the book had my side favoured too · called at 71% [favourite lost, close game]
 Ladder-consistency props (all time): 1462/1755 won (83.3%) vs 86.3% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
