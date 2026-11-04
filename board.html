@@ -713,6 +713,16 @@ function skipBar(rows){
 function oneIn(p){
   return p >= 0.01 ? (100 * p).toFixed(0) + "%" : "1 in " + Math.round(1 / p).toLocaleString();
 }
+// the ESPN injury report for both teams (injuries.py): who is out on my
+// pick's side and on the other side
+function injNote(r){
+  const I = r.inj;
+  if(!I || !((I.mine || []).length || (I.opp || []).length)) return '';
+  const j = L => L.slice(0, 4).map(esc).join(', ') + (L.length > 4 ? ' +' + (L.length - 4) : '');
+  return '<div class="sbn"><b>Injuries</b> &middot; '
+    + ((I.mine || []).length ? 'my side: ' + j(I.mine) : 'my side: none listed')
+    + ((I.opp || []).length ? ' &middot; their side: ' + j(I.opp) : '') + '</div>';
+}
 function coinBar(n){
   if(!n) return "";
   return '<p class="coinbar">'
@@ -1022,7 +1032,7 @@ function renderView(){
              + '<span class="stripe"></span>' + esc(r.mp) + dog + val + '</td>'
              + (mixed ? '<td class="comp">' + esc(r.lg) + '</td>' : '')
              + '<td class="state">' + esc(r.t) + '</td>' + conf
-             + '<td class="why">' + esc(r.why) + '</td>' + price + '</tr>';
+             + '<td class="why">' + esc(r.why) + injNote(r) + '</td>' + price + '</tr>';
       }).join("")
     + '</tbody></table>';
 }

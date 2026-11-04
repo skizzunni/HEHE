@@ -3839,3 +3839,7 @@ Results tab: "My own picks, prices hidden" -- every game by my ratings, form and
 alone, head to head with the market on the same games (`ledger.own_view`): 2026-10-05 to 11-03,
 mine 232 of 382 (60.7%), the market 260 (68.1%); today's disagreements listed and tracked, never
 bet until mine are ahead (2026-11-04).
+Every pick row on the NBA, NHL, NFL and WNBA tabs lists the ESPN injury report for both sides
+(`injuries.py`). Each build appends a snapshot to review/injuries/<date>.json when the report
+changes, so an injury-aware version of my own price-blind picks can be tested on reports as they
+stood before each game. Display only (2026-11-04).

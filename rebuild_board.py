@@ -128,6 +128,23 @@ def snapshot():
     # publish time for the freshness gate: a pick priced more than
     # freshness.MAX_AGE_MIN minutes before this is stale (freshness.py)
     pub = dt.datetime.now(dt.timezone.utc)
+    # ESPN injury reports: shown on each pick, archived before play (injuries.py)
+    try:
+        import injuries
+        INJ = injuries.snapshot(injuries.fetch())
+    except Exception as e_:
+        INJ = {}
+        print(f"injury reports skipped ({e_})", file=sys.stderr)
+
+    def inj_note(k, r):
+        if k not in INJ:
+            return None
+        m_ = r.get("mkt") or {}
+        n_ = injuries.note(INJ, k, m_.get("home"), m_.get("away"))
+        side = r.get("myside")
+        if side not in ("home", "away") or not (n_["home"] or n_["away"]):
+            return None
+        return dict(mine=n_[side], opp=n_["away" if side == "home" else "home"])
     for slot in ("today", "tomorrow"):
         lg = {}
         soccer_rows = []
@@ -208,6 +225,7 @@ def snapshot():
                                     else None),
                              "vn": (venues.compare(k, r, r["mypick"], leg.get("price"), r.get("price_book"),
                                                    FD, KB0, OA) if leg and not r.get("dc") else []),
+                             "inj": inj_note(k, r),
                              "lg": lab})
             # ranked by the published chance (the one probability)
             rows.sort(key=lambda x: (x["mc"] is None, -(x["hit"] or 0),
