@@ -122,6 +122,7 @@ PROBE = """<script>setTimeout(function(){
   out.own = ownHTML({n: 382, own: 232, market: 260, since: "2026-10-05", today: [{league: "nba", match: "MIA @ LAC", own: "LAC", own_p: 60, market: "MIA", market_p: 65}]});
   out.inj = [injNote({inj: {mine: ["Giannis Antetokounmpo (Day-To-Day)"], opp: ["Brandon Ingram (Out)", "Bradley Beal (Out)", "A (Out)", "B (Out)", "C (Out)"]}}), injNote({}), injNote({inj: {mine: [], opp: []}})];
   out.mv = [moveNote({mv: 5}), moveNote({mv: -4}), moveNote({mv: null}), moveNote({})];
+  out.yday = [yesterdayHTML({day: "2026-11-03", won: 34, lost: 1, losses: [{league: "efl1", pick: "Charlton Athletic", conf: 70, price: "-310", score: {"Bolton Wanderers": 1, "Charlton Athletic": 0}, tags: ["favourite lost", "close game"], why: "margin 1"}]}), yesterdayHTML({day: "x", won: 0, lost: 0})];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -268,6 +269,10 @@ def main():
     mv = new.get("mv") or ["", "", "x", "x"]
     if not ("Money moving my way</b> (+5 pts" in mv[0] and "Price moved against it</b> (-4 pts" in mv[1]) or mv[2] or mv[3]:
         fails.append("move note wrong: " + repr(mv))
+    yd = new.get("yday") or ["", "x"]
+    if not all(x in yd[0] for x in ("Yesterday (2026-11-03): 34&ndash;1", "EFL1 Charlton Athletic at 70% (-310)",
+                                    "Bolton Wanderers 1 &ndash; Charlton Athletic 0", "favourite lost, close game", "margin 1")) or yd[1]:
+        fails.append("yesterday section wrong: " + repr(yd))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken" in st):
         fails.append("board sweep tile wrong: " + st)

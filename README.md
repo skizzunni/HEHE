@@ -3854,3 +3854,6 @@ both halves (NFL 14/14 then 11/14, NHL 39/45 then 43/44), so none is dropped (20
 "Every game" shows its sweep odds (all legs, and the top 5) and how many days the whole list has
 swept (0 of 14 so far). Study, rejected: a "sweep core" of the top K legs -- the top 5 all won on
 2 of 6 days, then 6 of 7 (13 days), too few days and the halves disagree (2026-11-04).
+Results tab: "Yesterday" -- the board's record and every loss with its score, tags and why
+(`board_payload` yesterday). Study, rejected: home vs away favourites by league -- prices by side
+are only logged since mid-October, so the first date half has too few picks to test (2026-11-04).

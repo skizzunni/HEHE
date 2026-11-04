@@ -1422,6 +1422,19 @@ function everyGameHTML(){
     + copyBtn("Every game, safest bet", G.map(g => legLine(g.label, g.price, "FanDuel", g.match)))
     + '</details></div>';
 }
+// yesterday's board and why each pick lost (ledger.diagnose / loss_tags)
+function yesterdayHTML(Y){
+  if(!Y || !(Y.won + Y.lost)) return '';
+  const sc = o => Object.keys(o || {}).map(k => esc(k) + ' ' + esc(o[k])).join(' &ndash; ');
+  return '<div class="sweep"><details><summary><b>Yesterday (' + esc(Y.day) + '): ' + Y.won + '&ndash;' + Y.lost + '</b>'
+    + (Y.lost ? ' &middot; why each loss happened' : ' &middot; clean sweep') + '</summary>'
+    + (Y.losses || []).map(L => '<p class="note"><span class="wl lost">LOST</span> ' + esc(String(L.league).toUpperCase()) + ' '
+      + esc(L.pick) + ' at ' + Math.round(L.conf) + '%' + (L.price ? ' (' + esc(L.price) + ')' : '')
+      + (Object.keys(L.score || {}).length ? '<br>' + sc(L.score) : '')
+      + ((L.tags || []).length ? '<br><b>' + L.tags.map(esc).join(', ') + '</b>' : '')
+      + (L.why ? '<br><span class="sbn">' + esc(L.why) + '</span>' : '') + '</p>').join('')
+    + '</details></div>';
+}
 // My own picks with the prices hidden (ledger.own_view): the model alone
 // against the market, head to head on the same games, and today's games
 // where they disagree -- tracked, not bet, until the model earns it.
@@ -3003,7 +3016,7 @@ function scoreboardHTML(){
         : '')
     + '<div class="rsub">' + live.length + ' in play &middot; ' + (R.today_open || 0)
     + ' still to finish</div></div>';
-  h += ownHTML(R.own);
+  h += yesterdayHTML(R.yesterday) + ownHTML(R.own);
 
   h += '<p class="rsub">' + (R.excluded_unpriced || 0)
     + ' unpriced picks excluded from the record (all dates).</p>';
