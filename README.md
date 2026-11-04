@@ -3863,3 +3863,6 @@ the stated chances. Study, rejected: every-game legs by price band (-500..-799, 
 Glance tile "My picks vs market" (232-260 on the same 382 games, splits today; opens Results).
 Study, rejected: market picks my price-blind model agrees with hit 61.2% then 73.0% against
 66.2% / 69.7% stated (308 picks); the halves disagree, so agreement earns no badge (2026-11-04).
+Ladder card explains why it uses Locks, not Safe Locks. Study, kept as is: top-5 Safe Locks
+won 5/8 then 6/9 days at ~1.29x (37 wins to $10,000; 2.8e-08 / 3.1e-07) against Locks 2/9 then
+4/10 at ~3x (9 wins; 1.3e-06 / 2.6e-04) -- Locks better in both halves (2026-11-04).

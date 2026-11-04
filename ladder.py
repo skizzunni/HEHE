@@ -12,6 +12,11 @@ build, from START, so it can never drift from the graded record.
 Odds, honestly: on 16 graded cards before the start, all 5 top legs won on 5
 days (31%, against 32% stated) and the parlay paid about 3.05x. Reaching
 $10,000 from $1 takes 9 wins in a row at that price -- about 1 in 40,000.
+
+Why Locks, not Safe Locks (2026-11-04, cards 10-17 to 11-03): the top 5 Safe
+Locks all won on 5/8 then 6/9 days but pay ~1.29x, so $10,000 takes 37 wins
+in a row (chance 2.8e-08 / 3.1e-07 by half) against the Locks' 9 (2/9 then
+4/10 days at ~3x: 1.3e-06 / 2.6e-04). Locks win in both halves.
 """
 import math
 

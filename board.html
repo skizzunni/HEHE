@@ -1395,6 +1395,8 @@ function ladderHTML(){
     + ladderLog(X.log || [], money)
     + '<p class="note">Before the start, all 5 top legs won on 5 of 16 cards (31%) and paid about 3.05&times;: reaching '
     + money(X.target) + ' takes about 9 wins in a row, roughly 1 in 40,000. For fun, not a plan.'
+    + ' Why Locks and not Safe Locks: the top 5 Safe Locks all won on 11 of 17 days but pay only about 1.29&times;, so '
+    + money(X.target) + ' would take 37 wins in a row &mdash; less likely than the Locks route in both halves of the record.'
     + '</p>' + ladderRuns(H.slice(0, -1).reverse(), money) + '</div>';
 }
 // Every game: its single likeliest FanDuel line (locks.every_game), the whole
