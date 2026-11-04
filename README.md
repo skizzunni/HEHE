@@ -3869,3 +3869,7 @@ won 5/8 then 6/9 days at ~1.29x (37 wins to $10,000; 2.8e-08 / 3.1e-07) against 
 Locks and Safe Locks records split by type (player props 33 of 41, 80% vs 79% stated; game
 lines 136 of 165, 82% vs 77%). Study, nothing to change: Locks props hit 7/8 then 26/33 (78.8%
 vs 79.2% stated), on their price; game lines beat theirs in both halves (2026-11-04).
+Glance tile "Next up": the next game to start today and my pick in it (`ledger.next_up`; opens
+Results). Study, rejected: soccer straight-win picks hit 55.1% then 84.1% against 60.7% / 72.7%
+stated -- the halves disagree; "or draw" picks exist only in the second half (77.5% vs 73.7%,
+413 picks), too new to test (2026-11-04).

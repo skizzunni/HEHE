@@ -125,6 +125,7 @@ PROBE = """<script>setTimeout(function(){
   out.yday = [yesterdayHTML({day: "2026-11-03", won: 34, lost: 1, losses: [{league: "efl1", pick: "Charlton Athletic", conf: 70, price: "-310", score: {"Bolton Wanderers": 1, "Charlton Athletic": 0}, tags: ["favourite lost", "close game"], why: "margin 1"}]}), yesterdayHTML({day: "x", won: 0, lost: 0})];
   out.ownTile = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.textContent}).filter(function(t){return /vs market/.test(t)}).join("|");
   out.kind = [kindLine([{kind: "player props", won: 33, n: 41, said: 79.1}, {kind: "game lines", won: 136, n: 165, said: 77.3}]), kindLine([])];
+  out.nextTile = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.textContent}).filter(function(t){return /Next up/i.test(t)}).join("|");
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -189,7 +190,7 @@ def render(captured_ms, health=None):
     s = re.sub(r'"captured":\d+', f'"captured":{captured_ms}', s, count=1)
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
                   + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + ',"ladder":' + json.dumps(LADDER) + ',"every_game":' + json.dumps(EVERY) + ',', 1)
-    s = s.replace('"results":{', '"results":{"own":{"n":382,"own":232,"market":260,"today":[{},{}]},', 1)
+    s = s.replace('"results":{', '"results":{"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -282,6 +283,9 @@ def main():
     kd = new.get("kind") or ["", "x"]
     if "By type: player props 33 of 41 (80% vs 79.1% stated) &middot; game lines 136 of 165 (82% vs 77.3% stated)." not in kd[0] or kd[1]:
         fails.append("kind line wrong: " + repr(kd))
+    nt = new.get("nextTile", "")
+    if not ("12:45 PM" in nt and "Real Madrid 78% (-450) · RMA @ AEK" in nt):
+        fails.append("next tile wrong: " + nt)
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken" in st):
         fails.append("board sweep tile wrong: " + st)

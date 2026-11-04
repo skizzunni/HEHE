@@ -777,7 +777,7 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
   const PL = ((D.prop_locks || {}).record) || {};
   const LK = (((D.locks || {}).today || {}).locks) || [];
   // each tile opens its section when tapped (handled by the data-goto listener below)
-  const goto = label => /sweep|vs market/i.test(label) ? "results" : /Prop/.test(label) ? "props" : /Lock/.test(label) ? "locks" : /call/i.test(label) ? "calls" : "";
+  const goto = label => /sweep|vs market|Next up/i.test(label) ? "results" : /Prop/.test(label) ? "props" : /Lock/.test(label) ? "locks" : /call/i.test(label) ? "calls" : "";
   const tile = (label, big, sub, cls) => '<div class="k' + (cls ? " " + cls : "") + '"'
     + (goto(label) ? ' data-goto="' + goto(label) + '" role="button" tabindex="0" style="cursor:pointer"' : '') + '><span>' + label
     + '</span><b>' + big + '</b><i>' + sub + '</i></div>';
@@ -794,7 +794,17 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
       : tile("Locks today", String(LK.length), "on FanDuel"))
   + tile("Prop Locks", PL.n ? PL.won + " of " + PL.n : "&mdash;",
          PL.n ? PL.hit + "% hit" : "none graded yet", PL.n && PL.hit >= 70 ? "good" : "")
-  + last7(D.safe_locks_record, "Safe Locks", 0.85) + last7(PL, "Prop Locks", 0.85) + ladderTile() + sweepTile() + ownTile();
+  + last7(D.safe_locks_record, "Safe Locks", 0.85) + last7(PL, "Prop Locks", 0.85) + ladderTile() + sweepTile() + ownTile() + nextTile();
+  // the next game to start today and my pick in it (ledger.next_up)
+  function nextTile(){
+    const N = (D.results || {}).next_up || [];
+    if(!N.length) return "";
+    const x = N[0];
+    // esc is declared further down the script (const), so not usable here yet
+    const esc = v => String(v == null ? "" : v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+    return tile("Next up", esc(x.tip || ""), esc(x.pick) + " " + Math.round(x.conf) + "%" + (x.price ? " (" + esc(x.price) + ")" : "")
+                + " &middot; " + esc(x.match || ""));
+  }
   // my own price-blind picks against the market (ledger.own_view), head to head
   function ownTile(){
     const O = (D.results || {}).own;

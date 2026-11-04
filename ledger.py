@@ -691,6 +691,26 @@ def own_view(book, today, since_days=30):
     return dict(n=n, own=own, market=mkt, since=since, today=sorted(split, key=lambda x: x["league"]))
 
 
+def _tip_min(tip):
+    """'7:30 PM' -> minutes after midnight (None when unreadable)."""
+    try:
+        hm, ap = str(tip).strip().split()
+        h, m = (int(x) for x in hm.split(":"))
+        return (h % 12 + (12 if ap.upper() == "PM" else 0)) * 60 + m
+    except (ValueError, AttributeError):
+        return None
+
+
+def next_up(book, today, n=3):
+    """Today's next priced picks still to start, earliest first."""
+    rows = [(m, e) for e in book.values()
+            if record_priced(e) and e.get("status") == "open" and (e.get("date") or "") == today
+            and not e.get("live_score") and (m := _tip_min(e.get("tip"))) is not None]
+    rows.sort(key=lambda x: x[0])
+    return [dict(tip=e.get("tip"), league=e.get("league"), match=e.get("matchup"), conf=e.get("conf"),
+                 pick=e["pick"] + (" or draw" if e.get("dc") else ""), price=e.get("price")) for _, e in rows[:n]]
+
+
 def sweep_days(done, day_of, today, n=14):
     """The whole board, day by day: priced picks won and lost on each of the
     last n days before today ([{day, won, lost}], newest first), for the
@@ -818,7 +838,7 @@ def board_payload(limit=40):
                 calls_top=_calls.TOP_N,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance, own=own, yesterday=yesterday,
+                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance, own=own, yesterday=yesterday, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))
