@@ -14,6 +14,12 @@ Yesterday (2026-11-03): board 34-9, sweep broken by efl1 Charlton Athletic at 70
 - LOST nhl Montreal Canadiens at 61% (-175), Montreal Canadiens 4 - Winnipeg Jets 5: margin 1 · the book had my side favoured too · called at 61% [favourite lost, close game]
 - LOST nhl Carolina Hurricanes at 64% (-198), Carolina Hurricanes 1 - Nashville Predators 4: margin 3 · the book had my side favoured too · called at 64% [favourite lost, blowout]
 - LOST ncaaf Miami (OH) RedHawks at 71% (-265), Buffalo Bulls 34 - Miami (OH) RedHawks 31: margin 3 · the book had my side favoured too · called at 71% [favourite lost, close game]
+Lottery 100: open (0/10 legs won)
+Lottery 10k: open (0/14 legs won)
+Lottery 10k: open (0/8 legs won)
+Lottery 10k+25: open (0/14 legs won)
+Lottery 10k+50: open (0/14 legs won)
+Lottery 10k+100: open (0/14 legs won)
 Ladder-consistency props (all time): 1462/1755 won (83.3%) vs 86.3% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
