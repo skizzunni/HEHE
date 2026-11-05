@@ -1418,12 +1418,31 @@ function ladderPreview(){
 }
 // past ladder runs, newest first: start, days lasted, peak bank, how it ended
 // today's ticket so far: legs won, any loss, legs still to play
+// whether an open leg has already met its line: a prop's stat so far, or an
+// over whose live total is past it
+function legMet(L){
+  if(L.so_far !== null && L.so_far !== undefined){
+    const need = parseFloat(String(L.line || '').replace('+', ''));
+    return !isNaN(need) && +L.so_far >= need;
+  }
+  const m = /^Over\s+([\d.]+)/i.exec(L.label || '');
+  if(m && L.live_score){
+    const pts = (String(L.live_score).match(/-?\d+(?=\s*(?:-|$))/g) || []).map(Number);
+    return pts.length >= 2 && pts[pts.length - 2] + pts[pts.length - 1] > +m[1];
+  }
+  return false;
+}
 function ladderProgress(legs){
   const w = legs.filter(L => L.status === 'won').length, l = legs.filter(L => L.status === 'lost').length;
   const v = legs.filter(L => L.status === 'void' || L.status === 'push').length, o = legs.length - w - l - v;
   const lv = l ? 0 : legs.filter(L => (!L.status || L.status === 'open') && L.live).length;
   if(!w && !l && !v) return '';
-  return '<p class="three"><b>' + (l ? 'Ticket lost' : o ? w + ' of ' + legs.length + ' won, ' + o + ' to play' + (lv ? ' (' + lv + ' live now)' : '') : 'All in: ticket won')
+  // open legs whose line is already met (a prop's stat so far, an over's total):
+  // only the final whistle and the grade are left
+  const met = l ? 0 : legs.filter(L => (!L.status || L.status === 'open') && legMet(L)).length;
+  return '<p class="three"><b>' + (l ? 'Ticket lost' : o ? w + ' of ' + legs.length + ' won, '
+      + (met ? met + ' cleared waiting on the final' + (o - met ? ', ' + (o - met) + ' to play' : '') : o + ' to play')
+      + (lv && o - met ? ' (' + lv + ' live now)' : '') : 'All in: ticket won')
     + '</b>' + (v ? ' &middot; ' + v + ' void (drops out)' : '') + '</p>';
 }
 function ladderRuns(R, money){

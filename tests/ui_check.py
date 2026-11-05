@@ -146,6 +146,8 @@ PROBE = """<script>setTimeout(function(){
                          today: [{league: "nhl", match: "OTT @ BUF", favourite: "Buffalo Sabres", dog: "OTT", chance: 46, tip: "7:30 PM", signals: ["my model picks them", "price moving their way"], result: "won"},
                                  {league: "nba", match: "PHI @ DET", favourite: "Detroit Pistons", dog: "PHI", chance: 45, result: "won"},
                                  {league: "nba", match: "CLE @ OKC", favourite: "Oklahoma City Thunder", dog: "CLE", chance: 45, result: "lost"}]});
+  out.met = [ladderProgress([{status: "won"}, {status: "won"}, {status: "won"}, {status: "open", so_far: 4, line: "2+", live: "4th"}, {status: "open", so_far: 3, line: "6+", live: "2nd"}]),
+             ladderProgress([{status: "won"}, {status: "open", label: "Over 205.5 points", live_score: "A 110 - B 100"}])];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -338,6 +340,9 @@ def main():
     if not all(x in up for x in ("Upset watch", "won <b>37.0% of 797 (price said 45.4%)</b>", "first half 36.8% of 685",
                                  "Under their price", "<b>OTT</b> 46% &middot; NHL OTT @ BUF", "my model picks them &middot; price moving their way", "Today: 2 of 3 upsets came in</b> (their chances said about 1.4)", "UPSET</span>")):
         fails.append("upset watch wrong: " + up[:400])
+    mt = new.get("met") or ["", ""]
+    if not ("3 of 5 won, 1 cleared waiting on the final, 1 to play (2 live now)" in mt[0] and "1 of 2 won, 1 cleared waiting on the final</b>" in mt[1]):
+        fails.append("cleared legs wrong: " + repr(mt))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)
