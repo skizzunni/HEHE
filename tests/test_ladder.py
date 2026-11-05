@@ -48,6 +48,14 @@ class Ladder(unittest.TestCase):
         self.assertEqual(len(ladder.choose(b, "2026-11-04")), 5)       # before the change: 5
         self.assertEqual(ladder.choose(book({"2026-11-05": W5[:2]}), "2026-11-05"), [])   # under 3: no ticket
 
+    def test_options_list_every_count_and_the_choice_is_the_best(self):
+        b = book({"2026-11-05": [(c, 0.8, "open") for c in "abcdefgh"]})
+        o = ladder.options(b, "2026-11-05")
+        self.assertEqual([x["legs"] for x in o], [3, 4, 5, 6, 7, 8])
+        best = max(o, key=lambda x: x["reach"] + 1e-15 * (10 - x["legs"]))
+        self.assertEqual(len(ladder.choose(b, "2026-11-05")), best["legs"])
+        self.assertEqual(ladder.options(b, "2026-11-04"), [])
+
     def test_page_and_ladder_choose_the_same_count(self):
         # board.html's ladderK picks 7 of ten 97% legs at -1000 (tests/ui_check.py)
         b = {"days": {"2026-11-05": []}, "legs": {}}

@@ -152,6 +152,7 @@ PROBE = """<script>setTimeout(function(){
   var kl = function(n, p, pr){ var a = []; for (var i = 0; i < n; i++) a.push({p: p, price: pr}); return a; };
   out.ladderK = [ladderK(kl(5, 0.8, "-200"), 1, 10000).length, ladderK(kl(2, 0.8, "-200"), 1, 10000).length,
                  ladderK(kl(10, 0.97, "-1000"), 1, 10000).length];
+  out.lopts = ladderOptions({legs: [1, 2, 3], options: [{legs: 3, prob: 0.5, pays: 1.9, need: 12, reach: 0.000244}, {legs: 5, prob: 0.3, pays: 3.0, need: 8, reach: 0.0000656}]});
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -355,6 +356,9 @@ def main():
     lk = new.get("ladderK") or []
     if lk[:2] != [3, 0] or not (3 <= (lk[2] if len(lk) > 2 else 0) <= 8):
         fails.append("ladder leg count chooser wrong (want 3 legs, none under 3, and 3..8): " + repr(lk))
+    lo = new.get("lopts", "")
+    if not ("Why 3 legs" in lo and '<tr style="font-weight:700"><td>3</td><td class="num">50%</td><td class="num">1.90&times;</td><td class="num">12</td><td class="num">1 in 4,098</td>' in lo):
+        fails.append("ladder options wrong: " + lo[:400])
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)

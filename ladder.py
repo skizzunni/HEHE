@@ -46,6 +46,26 @@ def ticket(book, day, n=LEGS):
     return legs[:n] if len(legs) >= n else []
 
 
+def options(book, day, bank=BANK0, target=TARGET):
+    """Every leg count the chooser weighed (from LEGS_FROM): [{legs, prob,
+    pays, need, reach}] -- the ticket's chance, its payout, the wins still
+    needed at that payout, and the chance of reaching target that way."""
+    out = []
+    if day < LEGS_FROM:
+        return out
+    for k in range(MIN_LEGS, MAX_LEGS + 1):
+        legs = ticket(book, day, k)
+        if not legs:
+            continue
+        p = math.prod(L["p"] for L in legs)
+        pays = math.prod(locks._dec(L["price"]) for L in legs)
+        if pays <= 1:
+            continue
+        need = max(1, math.ceil(math.log(max(target / bank, 1.0001)) / math.log(pays)))
+        out.append(dict(legs=k, prob=round(p, 4), pays=round(pays, 3), need=need, reach=p ** need))
+    return out
+
+
 def choose(book, day, bank=BANK0, target=TARGET):
     """The day's ticket: 5 legs before LEGS_FROM; from then, the top K Locks
     (MIN_LEGS..MAX_LEGS) with the best estimated chance of reaching target
@@ -156,6 +176,10 @@ def report(book=None, start=START, target=TARGET):
     today = cur["days"][-1] if cur and cur["days"] and cur["days"][-1]["result"] == "open" else None
     if today:
         live(today["legs"])
+        try:
+            today["options"] = options(book or locks.load(), today["day"], today["stake"], target)
+        except Exception:
+            pass
     pays = (today or {}).get("pays") or 3.05
     need = max(0, math.ceil(math.log(target / bank) / math.log(pays))) if pays > 1 and bank < target else 0
     p = (today or {}).get("prob")

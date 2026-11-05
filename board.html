@@ -1405,6 +1405,18 @@ function ladderBar(bank, target, money){
     + '<p class="note" style="margin-top:2px">' + money(bank) + ' of ' + money(target) + ' &middot; ' + Math.round(100 * f)
     + '% of the way, counted in doublings (' + (Math.log2(Math.max(bank, 1))).toFixed(1) + ' of ' + Math.log2(target).toFixed(1) + ')</p>';
 }
+// why the ticket has the legs it has: every count weighed, its chance and
+// payout, and the chance of reaching the target that way (ladder.options)
+function ladderOptions(T){
+  const O = T.options || [];
+  if(O.length < 2) return '';
+  const best = O.reduce((a, o) => o.reach > a.reach ? o : a, O[0]);
+  return '<details><summary>Why ' + T.legs.length + ' legs</summary><table class="sweeptab"><thead><tr><th>Legs</th>'
+    + '<th class="num">Ticket wins</th><th class="num">Pays</th><th class="num">Wins needed</th><th class="num">Reach $10k</th></tr></thead><tbody>'
+    + O.map(o => '<tr' + (o === best ? ' style="font-weight:700"' : '') + '><td>' + o.legs + '</td><td class="num">' + (100 * o.prob).toFixed(0)
+      + '%</td><td class="num">' + o.pays.toFixed(2) + '&times;</td><td class="num">' + o.need + '</td><td class="num">'
+      + oneIn(o.reach) + '</td></tr>').join('') + '</tbody></table></details>';
+}
 // the ladder's leg count (ladder.choose): of the top 3..8 legs, the slice
 // whose chance raised to the wins still needed is best
 function ladderK(sorted, bank, target){
@@ -1516,6 +1528,7 @@ function ladderHTML(){
         + money(T.stake * T.pays) + ' if all ' + T.legs.length + ' win (' + (100 * T.prob).toFixed(0) + '% est.). '
         + X.wins_needed + ' straight wins at this price reach the target'
         + (X.chance_to_target ? ', about 1 in ' + Math.round(1 / X.chance_to_target).toLocaleString() : '') + '.</p>'
+        + ladderOptions(T)
         + copyBtn("Ladder ticket", ['Ladder ticket: stake ' + money(T.stake) + ', ' + T.legs.length + '-leg parlay, about '
             + T.pays.toFixed(2) + 'x (pays ' + money(T.stake * T.pays) + ')']
             .concat(T.legs.map(L => legLine(L.label, L.price, "FanDuel", L.match))))

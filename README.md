@@ -3946,3 +3946,6 @@ Board sweep tile, before the first result: "59 to go, first at 10:30 AM" (from `
 (NCAAF 8 of 25, NBA 5 of 23, NHL 8 of 20, NFL 0 of 6). Study, rejected: no league where my
 price-blind pick beat the market's on disagreements in both halves (NBA 23% / 20%, NCAAF 33% /
 30%, NHL 14% / 54%) (2026-11-05).
+Ladder card: "Why N legs" -- every leg count weighed (3-8) with the ticket's chance, its payout,
+the wins it would need, and its chance of reaching $10,000; the chosen one in bold (`ladder.options`)
+(2026-11-05).
