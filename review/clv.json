@@ -4,14 +4,14 @@
  "last": {
   "beat_close_pct": 63.7,
   "brier_close": 0.1707,
-  "brier_published": 0.1755,
+  "brier_published": 0.1753,
   "dates": [
    "2026-10-31",
    "2026-11-04"
   ],
-  "logloss_close": 0.5161,
-  "logloss_published": 0.528,
-  "mean_clv_pts": 0.98,
+  "logloss_close": 0.5162,
+  "logloss_published": 0.5275,
+  "mean_clv_pts": 0.94,
   "n": 300
  },
  "market_is_model": true,
@@ -1579,6 +1579,15 @@
    "league": "bra",
    "published": 0.72,
    "won": 0
+  },
+  "bra:401841307": {
+   "call": true,
+   "close": 0.8356,
+   "clv": 3.56,
+   "day": "2026-11-04",
+   "league": "bra",
+   "published": 0.8,
+   "won": 1
   },
   "bra:401913077": {
    "call": false,
@@ -24093,5 +24102,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-05T00:31+00:00"
+ "updated": "2026-11-05T00:36+00:00"
 }
