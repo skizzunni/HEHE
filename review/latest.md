@@ -1,10 +1,10 @@
 # Review 2026-11-04
 
-Picks 11-4 (73.3% vs 76.9% claimed, ROI -10.2%).
+Picks 13-4 (76.5% vs 79.6% claimed, ROI -9.0%).
 Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.
 Strong calls 11-4 (73.3% vs 76.9% claimed).
-Closing line value: +1.67 points on 15 picks; beat the close on 66.7%.
-Board sweep: 11-4, 37 open -- broken (first loss: ucl Liverpool at 83%).
+Closing line value: +1.53 points on 17 picks; beat the close on 64.7%.
+Board sweep: 13-4, 35 open -- broken (first loss: ucl Liverpool at 83%).
 - LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
 - LOST efl1 Middlesbrough at 78% (-500), Middlesbrough 0 - Wrexham 2: margin 2 · the book had my side favoured too · called at 78% · upset
 - LOST ucl PSV Eindhoven at 73% (-330), Club Brugge 2 - PSV Eindhoven 1: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game
