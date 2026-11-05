@@ -3966,3 +3966,6 @@ step that exits non-zero on any failure -- commits now go through it (`tools/che
 after a failing test slipped through a pipe into tail (2026-11-05).
 "Every game" can be sorted by chance or by start time (pills; remembered for the visit) to follow
 the day in order (`egOrder`) (2026-11-05).
+"Every game" shows the last graded list's result (2026-11-04: 27 of 30). Study, watch item eased:
+the top 3 Safe Locks now 23/30 then 26/27 by half (86% vs 92% stated overall, about -1.8 SE) -- no
+longer short in both halves; no rule (2026-11-05).

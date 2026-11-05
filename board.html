@@ -1581,7 +1581,9 @@ function everySweep(G, R){
   const prod = L => L.reduce((a, g) => a * g.p, 1);
   const top = G.slice().sort((a, b) => b.p - a.p).slice(0, 5);
   return '<p class="note"><b>Sweep odds:</b> all ' + G.length + ' win ' + oneIn(prod(G)) + '; the top ' + top.length + ' win '
-    + oneIn(prod(top)) + '.' + (R.days ? ' The whole list has swept on ' + (R.swept || 0) + ' of ' + R.days + ' days.' : '') + '</p>'
+    + oneIn(prod(top)) + '.' + (R.days ? ' The whole list has swept on ' + (R.swept || 0) + ' of ' + R.days + ' days.' : '')
+    + (R.last ? ' Last graded list (' + esc(R.last.day) + '): <b>' + R.last.won + ' of ' + R.last.n + '</b>'
+       + (R.last.won === R.last.n ? ', a clean sweep.' : '.') : '') + '</p>'
     + everyPays(G);
 }
 function everyGameHTML(){

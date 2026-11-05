@@ -946,6 +946,8 @@ def every_game_record(path=None, led=None):
     for d, g in rows:
         per_day.setdefault(d, []).append(g["status"] == "won")
     swept = sum(all(v) for v in per_day.values())
+    lastd = max(per_day) if per_day else None
+    last = dict(day=lastd, won=sum(per_day[lastd]), n=len(per_day[lastd])) if lastd else None
     def _type(g):
         sp = g.get("spec") or {}
         t = sp.get("t")
@@ -958,7 +960,7 @@ def every_game_record(path=None, led=None):
         a_, n_ = ty.get(k, (0, 0))
         ty[k] = (a_ + (g["status"] == "won"), n_ + 1)
     by_type = [dict(type=k, won=a_, n=n_) for k, (a_, n_) in sorted(ty.items(), key=lambda x: -x[1][1])]
-    return dict(n=len(rows), won=w, hit=round(100 * w / len(rows), 1), by_league=by_league, by_type=by_type, swept=swept,
+    return dict(n=len(rows), won=w, hit=round(100 * w / len(rows), 1), by_league=by_league, by_type=by_type, swept=swept, last=last,
                 stated=round(100 * sum(g["p"] for _, g in rows) / len(rows), 1),
                 roi=round(100 * ret / len(rows), 1), days=len(days), since=days[0])
 
