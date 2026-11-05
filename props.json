@@ -31412,11 +31412,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Daniel Gafford",
   "p": 0.8489,
   "p_fair": 0.9336,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909933|n:deaaron fox|Pts + Ast|15+": {
   "aid": null,
@@ -31428,11 +31430,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "De'Aaron Fox",
   "p": 0.8509,
   "p_fair": 0.8676,
   "price": "-750",
-  "status": "open"
+  "status": "lost",
+  "value": 14.0
  },
  "nba:401909933|n:devin vassell|Assists|2+": {
   "aid": null,
@@ -31444,11 +31448,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Devin Vassell",
   "p": 0.7874,
   "p_fair": 0.7607,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909933|n:dylan harper|Points|10+": {
   "aid": null,
@@ -31460,11 +31466,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Dylan Harper",
   "p": 0.8484,
   "p_fair": 0.9075,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909933|n:dylan harper|Pts + Ast|15+": {
   "aid": null,
@@ -31476,11 +31484,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Dylan Harper",
   "p": 0.8509,
   "p_fair": 0.8676,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909933|n:naji marshall|Assists|2+": {
   "aid": null,
@@ -31492,11 +31502,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Naji Marshall",
   "p": 0.853,
   "p_fair": 0.8461,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909933|n:pj washington|Rebounds|4+": {
   "aid": null,
@@ -31508,11 +31520,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "P.J. Washington",
   "p": 0.8489,
   "p_fair": 0.9153,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909933|n:stephon castle|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -31523,11 +31537,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Stephon Castle",
   "p": 0.8723,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 30.0
  },
  "nba:401909933|n:victor wembanyama|Pts + Reb + Ast|30+": {
   "aid": null,
@@ -31539,11 +31555,13 @@
   "league": "nba",
   "line": "30+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.8488,
   "p_fair": 0.8638,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 78.0
  },
  "nba:401909934|n:austin reaves|Assists|4+": {
   "aid": null,
@@ -31733,6 +31751,54 @@
   "name": "Zach LaVine",
   "p": 0.7874,
   "p_fair": 0.7702,
+  "price": "-400",
+  "status": "open"
+ },
+ "nba:401909936|n:desmond bane|Reb + Ast|5+": {
+  "aid": null,
+  "date": "2026-11-05",
+  "edge": -1.9,
+  "gid": "nba:401909936",
+  "imp": 0.8824,
+  "label": "Desmond Bane: 5+ Reb + Ast",
+  "league": "nba",
+  "line": "5+",
+  "market": "Reb + Ast",
+  "name": "Desmond Bane",
+  "p": 0.8476,
+  "p_fair": 0.8658,
+  "price": "-750",
+  "status": "open"
+ },
+ "nba:401909936|n:franz wagner|Points|15+": {
+  "aid": null,
+  "date": "2026-11-05",
+  "edge": -5.1,
+  "gid": "nba:401909936",
+  "imp": 0.9231,
+  "label": "Franz Wagner: 15+ Points",
+  "league": "nba",
+  "line": "15+",
+  "market": "Points",
+  "name": "Franz Wagner",
+  "p": 0.8508,
+  "p_fair": 0.8763,
+  "price": "-1200",
+  "status": "open"
+ },
+ "nba:401909936|n:franz wagner|Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-11-05",
+  "edge": -7.6,
+  "gid": "nba:401909936",
+  "imp": 0.8,
+  "label": "Franz Wagner: 10+ Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Reb + Ast",
+  "name": "Franz Wagner",
+  "p": 0.7685,
+  "p_fair": 0.7388,
   "price": "-400",
   "status": "open"
  },
