@@ -9295,6 +9295,86 @@
    "tip": "9:30 PM",
    "venue": "FanDuel"
   },
+  "nhl:401892659|away|Kalshi": {
+   "dec": 2.3992,
+   "ev": 0.0244,
+   "fair": 0.427,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nhl:401892659",
+   "kind": "value",
+   "league": "nhl",
+   "match": "CBJ @ BUF",
+   "price": "+140",
+   "seen": "2026-11-05T18:19:18+00:00",
+   "side": "away",
+   "start": "2026-11-07T00:00Z",
+   "team": "Columbus Blue Jackets",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892659|home|FanDuel": {
+   "dec": 1.9091,
+   "ev": 0.1602,
+   "fair": 0.6077,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nhl:401892659",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "CBJ @ BUF",
+   "price": "-110",
+   "seen": "2026-11-05T18:19:18+00:00",
+   "side": "home",
+   "start": "2026-11-07T00:00Z",
+   "team": "Buffalo Sabres",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892659|sure": {
+   "id": "nhl:401892659",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "+145",
+     "stake_share": 0.438,
+     "team": "Columbus Blue Jackets",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-110",
+     "stake_share": 0.562,
+     "team": "Buffalo Sabres",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "CBJ @ BUF",
+   "profit": 0.073,
+   "seen": "2026-11-05T18:19:18+00:00"
+  },
+  "nhl:401892659|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Buffalo Sabres\"}|FanDuel": {
+   "dec": 3.1,
+   "dk": "+145",
+   "ev": 0.1963,
+   "fair": 0.3859,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892659",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "spread",
+   "match": "CBJ @ BUF",
+   "price": "+210",
+   "seen": "2026-11-05T18:19:18+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Buffalo Sabres\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Buffalo Sabres"
+   },
+   "start": "2026-11-07T00:00Z",
+   "team": "Buffalo Sabres -1.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "nor:401843366|away|FanDuel": {
    "dec": 3.0,
    "ev": 0.0126,
