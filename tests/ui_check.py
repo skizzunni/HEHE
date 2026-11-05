@@ -193,7 +193,8 @@ PROBE = """<script>setTimeout(function(){
 
 
 EVERY = dict(preview=False, record=dict(n=427, won=386, hit=90.4, stated=88.5, roi=-3.0, days=14, since="2026-10-21", swept=0,
-                                             by_league=[dict(league="NCAAF", won=86, n=91), dict(league="NBA", won=82, n=89)]),
+                                             by_league=[dict(league="NCAAF", won=86, n=91), dict(league="NBA", won=82, n=89)],
+                                             by_type=[dict(type="game totals", won=137, n=149), dict(type="underdog +points", won=53, n=58)]),
              today=[dict(gid="nhl:1", label="Winnipeg Jets +4.5", price="-2000", p=0.917, match="WPG at MTL", league="nhl",
                          tip="7:00 PM", status="won", score="WPG 5 - MTL 4"),
                     dict(gid="nba:2", label="Over 200.5 points", price="-900", p=0.9, match="A at B", league="nba",
@@ -288,7 +289,7 @@ def main():
         fails.append("oneIn wrong: " + repr(new.get("oneIn")))
     eg = new.get("everyGame", "")
     if not all(x in eg for x in ("Every game: its safest bet (3 games, 1–0 so far)", "Live: 2nd 5:12 · C 1 - D 1", "Pays more at Kalshi: 88¢ (-800 after fee), $10 wins $1.25 vs $1.11 at FanDuel", "386 of 427", "90.4%",
-                                   "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89", "Sweep odds: all 3 win 74%; the top 3 win 74%. The whole list has swept on 0 of 14 days.", "$10 on each (3 bets, $30 staked): +$2.28 if every one wins; expected −$0.77 from the stated chances.", "set at 8 AM")):
+                                   "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89.", "By type: game totals 137/149, underdog +points 53/58.", "Sweep odds: all 3 win 74%; the top 3 win 74%. The whole list has swept on 0 of 14 days.", "$10 on each (3 bets, $30 staked): +$2.28 if every one wins; expected −$0.77 from the stated chances.", "set at 8 AM")):
         fails.append("every game section wrong: " + eg)
     ow = new.get("own", "")
     if not all(x in ow for x in ("mine 232 right (60.7%)", "260 (68.1%)", "The market is ahead", "I take LAC</b> (60%)")):

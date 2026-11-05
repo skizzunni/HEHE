@@ -3929,3 +3929,7 @@ part beats or matches its price and the late part trails by 12-20 points -- not 
 stays a caution (2026-11-05).
 Ladder card: a progress bar from $1 to $10,000 on a log scale ($100 is half way), with the bank's
 doublings so far ($9.57: 3.3 of 13.3) (`ladderBar`) (2026-11-05).
+"Every game" record by bet type: game totals 137/149, win or draw 115/134, team totals 90/96,
+underdog +points 53/58. Study, nothing adopted: underdog +points legs hit 27/29 then 26/29 (about
+their 90% stated) -- as reliable as the rest; team totals 93.6% then 93.9% against ~90% stated,
+above in both halves but about 1 SE on 96 legs; win / or draw 87% then 84% against 84% (2026-11-05).

@@ -1563,7 +1563,8 @@ function everyGameHTML(){
     + (X.preview ? '. Preview: set at 8 AM' : ', set at 8 AM') + '. '
     + (R.n ? 'Record: <b>' + R.won + ' of ' + R.n + '</b> (' + R.hit + '%) against ' + R.stated + '% stated, over '
         + R.days + ' days; ' + (R.roi >= 0 ? '+' : '') + R.roi + '% per $1 at the price. These are short prices: a win pays little.'
-        + ((R.by_league || []).length > 1 ? ' By league: ' + R.by_league.slice(0, 6).map(x => esc(x.league) + ' ' + x.won + '/' + x.n).join(', ') + '.' : '') : '')
+        + ((R.by_league || []).length > 1 ? ' By league: ' + R.by_league.slice(0, 6).map(x => esc(x.league) + ' ' + x.won + '/' + x.n).join(', ') + '.' : '')
+        + ((R.by_type || []).length > 1 ? ' By type: ' + R.by_type.map(x => esc(x.type) + ' ' + x.won + '/' + x.n).join(', ') + '.' : '') : '')
     + '</p>' + everySweep(G, R) + '<ul class="betlegs">' + G.map(g => '<li>' + esc(g.label) + ' <b>' + esc(g.price || '') + '</b> &middot; '
       + (100 * g.p).toFixed(0) + '% &middot; ' + esc(g.match || '') + ' ' + res(g.status)
       + (g.score && g.status !== 'open' ? '<div class="sbn">' + esc(g.score) + '</div>'

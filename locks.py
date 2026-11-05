@@ -928,7 +928,19 @@ def every_game_record(path=None, led=None):
     for d, g in rows:
         per_day.setdefault(d, []).append(g["status"] == "won")
     swept = sum(all(v) for v in per_day.values())
-    return dict(n=len(rows), won=w, hit=round(100 * w / len(rows), 1), by_league=by_league, swept=swept,
+    def _type(g):
+        sp = g.get("spec") or {}
+        t = sp.get("t")
+        return ("underdog +points" if t == "spread" and (sp.get("line") or 0) > 0 else "favourite -points" if t == "spread"
+                else "game totals" if t in ("over", "under") else "team totals" if t in ("teamover", "teamunder")
+                else "win / or draw")
+    ty = {}
+    for _, g in rows:
+        k = _type(g)
+        a_, n_ = ty.get(k, (0, 0))
+        ty[k] = (a_ + (g["status"] == "won"), n_ + 1)
+    by_type = [dict(type=k, won=a_, n=n_) for k, (a_, n_) in sorted(ty.items(), key=lambda x: -x[1][1])]
+    return dict(n=len(rows), won=w, hit=round(100 * w / len(rows), 1), by_league=by_league, by_type=by_type, swept=swept,
                 stated=round(100 * sum(g["p"] for _, g in rows) / len(rows), 1),
                 roi=round(100 * ret / len(rows), 1), days=len(days), since=days[0])
 
