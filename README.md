@@ -3937,3 +3937,7 @@ Tests: the page's ladder leg-count chooser (`ladderK`) is checked, and checked t
 `ladder.choose`. Study, kept as is: choosing the ladder's 3-8 legs from Locks and Safe Locks together
 (one per game) won 5/10 then 8/11 days but at ~1.3x / ~1.2x -- reach chance 2.9e-11 / 1.7e-07 against
 Locks only 3.1e-05 / 2.8e-03 (2026-11-05).
+frontier.json keeps decision-time pools for the last 14 card days only (`tickets.POOLS_KEPT`, as
+the Locks ledgers do); older days keep their tickets and record. The file was 22 MB, growing ~1 MB a
+day; this holds it near 15-20 MB. Study, nothing adopted: the daily top-5 Calls by type and league
+(79 graded) -- soccer 95% then 87% against ~81% stated, every other group under 20 picks (2026-11-05).

@@ -521,6 +521,12 @@ def record(front, pool, day, set_card=False, path=None, now=None):
         if d_.get("set_at") and not in_card_window(_at(d_["set_at"])):
             for k in ("tickets", "set_at", "policy", "pool"):
                 d_.pop(k, None)
+    # the decision-time pools are kept for the last POOLS_KEPT card days only,
+    # as in the Locks ledgers (locks.POOLS_KEPT): ~1 MB a day each; replay()
+    # of an older day returns None, and its tickets and record stay
+    with_pool = sorted(k for k, v in book["days"].items() if v.get("pool"))
+    for old in with_pool[:-POOLS_KEPT]:
+        book["days"][old].pop("pool", None)
     d = book["days"].setdefault(day, dict(versions=[]))
     stamp = (now or dt.datetime.now(dt.timezone.utc)).isoformat(timespec="seconds")
     sig = _sig(front)
@@ -647,6 +653,9 @@ def challenge_track(path=None, start=100.0, target=10000.0):
         out[f"{m:g}"] = dict(bank=round(bank, 2), busts=busts, streak=wins_in_row, reached=reached,
                             best=round(best, 2), days=log)
     return dict(start=start, target=target, sizes=out)
+
+
+POOLS_KEPT = 14
 
 
 def replay(day, path=None):

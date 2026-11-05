@@ -183,6 +183,17 @@ class WagerAndRecord(unittest.TestCase):
             self.assertNotIn("tickets", T.load(path)["days"]["2026-10-20"])        # 10 PM: no card
             T.record(front, pool, "2026-10-20", set_card=True, path=path, now=self.NOW)
             self.assertTrue(T.replay("2026-10-20", path))
+            # pools kept for the last POOLS_KEPT card days only; tickets stay
+            book = T.load(path)
+            for i in range(T.POOLS_KEPT + 2):
+                book["days"][f"2026-09-{i + 1:02d}"] = dict(versions=[], pool=[{}], tickets=[],
+                                                             set_at=book["days"]["2026-10-20"]["set_at"])
+            T.save(book, path)
+            T.record(front, pool, "2026-10-20", set_card=False, path=path, now=self.NOW)
+            kept = sorted(k for k, v in T.load(path)["days"].items() if v.get("pool"))
+            self.assertEqual(len(kept), T.POOLS_KEPT)
+            self.assertEqual(kept[-1], "2026-10-20")
+            self.assertIn("tickets", T.load(path)["days"]["2026-09-01"])
             frozen = [L["label"] for L in T.load(path)["days"]["2026-10-20"]["tickets"][0]["legs"]]
             T.record(dict(front, rows=[dict(front["rows"][0], legs=[])]), pool, "2026-10-20", set_card=True,
                      path=path, now=self.NOW)
