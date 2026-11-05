@@ -4840,150 +4840,7 @@
     "nba": "2026-11-05T00:29:43+00:00",
     "ucl": "2026-11-04T19:09:28+00:00"
    },
-   "candidate_observations": {
-    "nba:401909934": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 83,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-05T02:58:27+00:00",
-      "conf": 83,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (5 listed)"
-      },
-      "id": "nba:401909934",
-      "league": "nba",
-      "match": "LAL @ SAC",
-      "pick": "Los Angeles Lakers",
-      "price": "-650",
-      "price_at": "2026-11-05T02:56:13+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34936999:0ML87027712_3",
-      "prob_at": "2026-11-05T02:56:13+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "away",
-      "start": "2026-11-05T03:00Z"
-     },
-     "dc": false,
-     "fp": "43c871864cb9",
-     "gate": {
-      "ok": true,
-      "what": "injury report checked (5 listed)"
-     },
-     "id": "nba:401909934",
-     "league": "nba",
-     "match": "LAL @ SAC",
-     "news_at": "2026-11-04T21:18:17+00:00",
-     "pick": "Los Angeles Lakers",
-     "price": "-650",
-     "price_at": "2026-11-05T02:56:13+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34936999:0ML87027712_3",
-     "side": "away",
-     "start": "2026-11-05T03:00Z",
-     "tip": "10:00 PM"
-    },
-    "ncaab:401917512": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 91,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-05T02:58:27+00:00",
-      "conf": 91,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaab:401917512",
-      "league": "ncaab",
-      "match": "NDSU @ SMC",
-      "pick": "Saint Mary's Gaels",
-      "price": "-1100",
-      "price_at": "2026-11-05T02:56:13+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34958195:0ML87082086_1",
-      "prob_at": "2026-11-05T02:56:13+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-05T03:00Z"
-     },
-     "dc": false,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": true,
-      "what": "no lineup gate for this league"
-     },
-     "id": "ncaab:401917512",
-     "league": "ncaab",
-     "match": "NDSU @ SMC",
-     "pick": "Saint Mary's Gaels",
-     "price": "-1100",
-     "price_at": "2026-11-05T02:56:13+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34958195:0ML87082086_1",
-     "side": "home",
-     "start": "2026-11-05T03:00Z",
-     "tip": "10:00 PM"
-    },
-    "ncaab:401917513": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 94,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-05T02:58:27+00:00",
-      "conf": 94,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaab:401917513",
-      "league": "ncaab",
-      "match": "MILW @ SCU",
-      "pick": "Santa Clara Broncos",
-      "price": "-1800",
-      "price_at": "2026-11-05T02:56:13+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34958194:0ML87082085_1",
-      "prob_at": "2026-11-05T02:56:13+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-05T03:00Z"
-     },
-     "dc": false,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": true,
-      "what": "no lineup gate for this league"
-     },
-     "id": "ncaab:401917513",
-     "league": "ncaab",
-     "match": "MILW @ SCU",
-     "pick": "Santa Clara Broncos",
-     "price": "-1800",
-     "price_at": "2026-11-05T02:56:13+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34958194:0ML87082085_1",
-     "side": "home",
-     "start": "2026-11-05T03:00Z",
-     "tip": "10:00 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
     "ucl"
    ],
@@ -4993,8 +4850,8 @@
    "shadow_watch": {
     "best_at": "2026-11-04T19:51:03+00:00",
     "best_ceiling": 1.958,
-    "checks": 171,
-    "last": "2026-11-05T02:58:27+00:00",
+    "checks": 172,
+    "last": "2026-11-05T03:03:33+00:00",
     "max_ready": 16,
     "reasons": {
      "awaiting confirmed XIs": 926,
