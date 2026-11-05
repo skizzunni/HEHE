@@ -3982,3 +3982,5 @@ Results header: today's losses by competition ("UEL 7, UECL 3"), so a matchday t
 once shows as one cluster. Study, nothing adopted: Europa and Conference League picks after 11-05's
 matchday -- 51 of 69 (73.9%) against 75.1% stated (z -0.2), 76.5% then 71.4% by half: on price; the
 losses came together because those games share one night (2026-11-05).
+Ladder legs say what they need in plain words ("Utah Mammoth must score 4 or fewer goals", "James
+Madison Dukes must win by 4 or more", "5 or more receiving yards") (`needLine`) (2026-11-05).

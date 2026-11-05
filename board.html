@@ -1320,6 +1320,28 @@ function paceNote(L){
   return '<div class="sbn">On pace for <b>' + Math.round(pace) + '</b> (' + total + ' so far, line ' + line + ') &middot; '
     + (good ? 'on track' : 'behind the pace it needs') + '</div>';
 }
+// what a leg needs, in plain words: "Utah must score 4 or fewer goals",
+// "James Madison must win by 4 or more", "5 or more receiving yards"
+function needLine(L){
+  const lab = String(L.label || ''), unit = /goal/i.test(lab) ? 'goals' : /run/i.test(lab) ? 'runs' : 'points';
+  let m;
+  if((m = /^(.+?)\s+(under|over)\s+([\d.]+)\s+\w+/i.exec(lab)) && !/^(over|under)$/i.test(m[1])){
+    const x = parseFloat(m[3]);
+    return m[1] + ' must score ' + (/under/i.test(m[2]) ? Math.floor(x) + ' or fewer ' : Math.ceil(x) + ' or more ') + unit;
+  }
+  if((m = /^(Over|Under)\s+([\d.]+)/i.exec(lab))){
+    const x = parseFloat(m[2]);
+    return 'Both teams together: ' + (/under/i.test(m[1]) ? Math.floor(x) + ' or fewer ' : Math.ceil(x) + ' or more ') + unit;
+  }
+  if((m = /^(.+?)\s+([+-])([\d.]+)$/.exec(lab))){
+    const x = parseFloat(m[3]);
+    return m[2] === '-' ? m[1] + ' must win by ' + Math.ceil(x) + ' or more'
+      : m[1] + ' must win, or lose by ' + Math.floor(x) + ' or fewer';
+  }
+  if((m = /:\s*(\d+)\+\s+(.+)$/.exec(lab))) return m[1] + ' or more ' + m[2].toLowerCase();
+  if(/ or draw$/i.test(lab)) return lab.replace(/ or draw$/i, '') + ' must win or draw';
+  return '';
+}
 // a team total ("Florida Atlantic under 41.5 points") reads like a game
 // total; say which it is
 function teamTag(x){
@@ -1530,6 +1552,7 @@ function ladderHTML(){
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')
           + (L.live ? '<div class="sbn"><b>Live:</b> ' + esc(L.live) + ' &middot; ' + esc(L.live_score || '') + '</div>' : '')
+          + ((L.status === 'open' || !L.status) && needLine(L) ? '<div class="sbn">Needs: ' + esc(needLine(L)) + '</div>' : '')
           + (L.live ? paceNote(L) + soFar(L) : '')
           + (L.kind_rec && (L.status === 'open' || !L.status) ? '<div class="sbn">Locks like this have won ' + L.kind_rec.won + ' of ' + L.kind_rec.n
              + (L.prop_rec ? '; every ' + esc(String(L.league || '').toUpperCase()) + ' ' + esc(L.market || '') + ' prop at a similar chance: '

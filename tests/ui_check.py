@@ -156,6 +156,8 @@ PROBE = """<script>setTimeout(function(){
   out.teamTag = [teamTag({t: "teamunder"}), teamTag({spec: {t: "teamover"}}), teamTag({t: "under"}), teamTag({})];
   out.egOrder = [egOrder([{p: 0.9, tip: "10:00 PM"}, {p: 0.95, tip: "7:00 PM"}, {p: 0.92, tip: "12:45 PM"}], "time").map(function(x){return x.tip}).join(","),
                  egOrder([{p: 0.9, tip: "10:00 PM"}, {p: 0.95, tip: "7:00 PM"}], "chance").map(function(x){return x.p}).join(",")];
+  out.need = ["Utah Mammoth under 4.5 goals", "Florida Atlantic Owls under 41.5 points", "James Madison Dukes -3.5", "Sacramento State Hornets +35.5",
+              "Ja'Kobi Lane: 5+ Receiving Yards", "Over 205.5 points", "Real Madrid or draw", "Barcelona to win"].map(function(l){return needLine({label: l})});
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -371,6 +373,12 @@ def main():
         fails.append("team total tag wrong: " + repr(tt))
     if new.get("egOrder") != ["12:45 PM,7:00 PM,10:00 PM", "0.95,0.9"]:
         fails.append("every game sort wrong: " + repr(new.get("egOrder")))
+    nd = new.get("need") or []
+    want = ["Utah Mammoth must score 4 or fewer goals", "Florida Atlantic Owls must score 41 or fewer points",
+            "James Madison Dukes must win by 4 or more", "Sacramento State Hornets must win, or lose by 35 or fewer",
+            "5 or more receiving yards", "Both teams together: 206 or more points", "Real Madrid must win or draw", ""]
+    if nd != want:
+        fails.append("need lines wrong: " + repr(nd))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken by Trabzonspor, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)
