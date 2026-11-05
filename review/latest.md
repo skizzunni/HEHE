@@ -1,11 +1,14 @@
 # Review 2026-11-05
 
-Picks 1-0 (100.0% vs 68.0% claimed, ROI +35.7%).
+Picks 9-3 (75.0% vs 74.7% claimed, ROI -5.8%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
-Strong calls 1-0 (100.0% vs 68.0% claimed).
-Closing line value: -1.32 points on 1 picks; beat the close on 0.0%.
-Board sweep: 1-0, 59 open -- still clean.
-Why picks lost (14 days): favourite lost 135, close game 113, upset 54, coin flip 49, blowout 44, price moved against it 33.
+Strong calls 9-3 (75.0% vs 74.7% claimed).
+Closing line value: +1.0 points on 12 picks; beat the close on 75.0%.
+Board sweep: 9-3, 48 open -- broken (first loss: uecl Trabzonspor at 67%).
+- LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
+- LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
+- LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
+Why picks lost (14 days): favourite lost 137, close game 114, upset 55, coin flip 49, blowout 44, price moved against it 34.
 Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
 - LOST efl1 Middlesbrough at 78% (-500), Middlesbrough 0 - Wrexham 2: margin 2 · the book had my side favoured too · called at 78% · upset
@@ -19,7 +22,7 @@ Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST per Universitario at 67% (-265), Sport Boys 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost · price moved against it (3 pts)
 - LOST nba Houston Rockets at 71% (-278), Houston Rockets 107 - Minnesota Timberwolves 117: margin 10 · the book had my side favoured too · called at 71% · favourite lost · price moved against it (4 pts)
 - LOST ncaab Loyola Marymount Lions at 68% (-230), Loyola Marymount Lions 95 - Queens University Royals 96: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
-Locks 0/11 won, 11 open; Best play top 2 (60%) open.
+Locks 1/11 won, 10 open; Best play top 2 (60%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (54%) open.
 Lottery 100: open (0/9 legs won)
 Lottery 100: open (0/6 legs won)
@@ -31,6 +34,7 @@ Lottery 10k+50: open (0/11 legs won)
 Lottery 10k+100: open (0/11 legs won)
 Lottery 100: open (0/5 legs won)
 Ladder-consistency props (all time): 1585/1896 won (83.6%) vs 86.4% fair, 87.4% price.
+Props 1/1 vs 81.2% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=121), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=133)

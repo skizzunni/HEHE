@@ -9243,8 +9243,8 @@
    },
    {
     "flag": false,
-    "hit": 88.3,
-    "n": 77,
+    "hit": 87.2,
+    "n": 78,
     "name": "daily calls",
     "said": 82.8
    },
@@ -9359,9 +9359,9 @@
    }
   },
   "clv": {
-   "avg": -1.32,
-   "beat": 0.0,
-   "n": 1
+   "avg": 1.0,
+   "beat": 75.0,
+   "n": 12
   },
   "day": "2026-11-05",
   "ladder": "Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.",
@@ -9369,7 +9369,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      2,
@@ -9377,17 +9377,68 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "loss_reasons_14d": {
    "blowout": 44,
-   "close game": 113,
+   "close game": 114,
    "coin flip": 49,
-   "favourite lost": 135,
-   "price moved against it": 33,
-   "upset": 54
+   "favourite lost": 137,
+   "price moved against it": 34,
+   "upset": 55
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "uecl",
+    "match": "SCF @ TRAB",
+    "pick": "Trabzonspor",
+    "price": "-230",
+    "said": 67,
+    "score": {
+     "SC Freiburg": 1,
+     "Trabzonspor": 0
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "uecl",
+    "match": "KAI @ ATA",
+    "pick": "Atalanta",
+    "price": "-700",
+    "said": 84,
+    "score": {
+     "Atalanta": 1,
+     "Kairat Almaty": 1
+    },
+    "tags": [
+     "upset"
+    ],
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 84% \u00b7 upset"
+   },
+   {
+    "against_market": false,
+    "league": "uel",
+    "match": "FER @ MIL",
+    "pick": "AC Milan",
+    "price": "-240",
+    "said": 67,
+    "score": {
+     "AC Milan": 0,
+     "Ferencvaros": 2
+    },
+    "tags": [
+     "favourite lost",
+     "price moved against it (5 pts)"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost \u00b7 price moved against it (5 pts)"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -9463,12 +9514,12 @@
    }
   ],
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 1,
-   "roi": 35.7,
-   "said": 68.0,
-   "won": 1
+   "hit": 75.0,
+   "lost": 3,
+   "n": 12,
+   "roi": -5.8,
+   "said": 74.7,
+   "won": 9
   },
   "picks_by_league": {
    "ind": {
@@ -9478,6 +9529,22 @@
     "roi": 35.7,
     "said": 68.0,
     "won": 1
+   },
+   "uecl": {
+    "hit": 60.0,
+    "lost": 2,
+    "n": 5,
+    "roi": -25.2,
+    "said": 76.0,
+    "won": 3
+   },
+   "uel": {
+    "hit": 83.3,
+    "lost": 1,
+    "n": 6,
+    "roi": 3.5,
+    "said": 74.7,
+    "won": 5
    }
   },
   "props": {
@@ -9487,9 +9554,9 @@
     "said_price": 87.4,
     "won": 1585
    },
-   "n": 0,
-   "said": null,
-   "won": 0
+   "n": 1,
+   "said": 81.2,
+   "won": 1
   },
   "safe_locks": {
    "lost": [],
@@ -9510,19 +9577,19 @@
    "won": 0
   },
   "strong": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 1,
-   "roi": 35.7,
-   "said": 68.0,
-   "won": 1
+   "hit": 75.0,
+   "lost": 3,
+   "n": 12,
+   "roi": -5.8,
+   "said": 74.7,
+   "won": 9
   },
   "stuck": [],
   "sweep": {
-   "broke_on": null,
-   "lost": 0,
-   "open": 59,
-   "won": 1
+   "broke_on": "uecl Trabzonspor at 67%",
+   "lost": 3,
+   "open": 48,
+   "won": 9
   },
   "vs_market_14d": {
    "against": {
@@ -9530,11 +9597,11 @@
    },
    "agree": {
     "hit": 75.5,
-    "lost": 238,
-    "n": 973,
-    "roi": 1.1,
-    "said": 71.1,
-    "won": 735
+    "lost": 241,
+    "n": 984,
+    "roi": 1.0,
+    "said": 71.2,
+    "won": 743
    }
   },
   "weights": {
