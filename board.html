@@ -1390,11 +1390,26 @@ function lockOfDay(){
 }
 // before 8 AM: the 5 legs the ladder would take from the Locks card as it
 // stands now (a preview; the ticket is whatever the 8 AM card holds)
+// the ladder's leg count (ladder.choose): of the top 3..8 legs, the slice
+// whose chance raised to the wins still needed is best
+function ladderK(sorted, bank, target){
+  let best = null;
+  for(let k = 3; k <= Math.min(8, sorted.length); k++){
+    const L = sorted.slice(0, k);
+    const p = L.reduce((a, x) => a * x.p, 1), pays = L.reduce((a, x) => a * dec0(x.price), 1);
+    if(pays <= 1) continue;
+    const need = Math.max(1, Math.ceil(Math.log(Math.max(target / bank, 1.0001)) / Math.log(pays)));
+    const sc = Math.pow(p, need);
+    if(!best || sc > best[0] + 1e-15) best = [sc, L];
+  }
+  return best ? best[1] : [];
+}
 function ladderPreview(){
   const K = (D.locks || {}).today || {};
-  const P = (K.locks || []).filter(L => !L.status || L.status === 'open').slice().sort((a, b) => b.p - a.p).slice(0, 5);
+  const all = (K.locks || []).filter(L => !L.status || L.status === 'open').slice().sort((a, b) => b.p - a.p);
+  const P = ladderK(all, (D.ladder || {}).bank || 1, (D.ladder || {}).target || 10000);
   const msg = '<p class="empty">Today&rsquo;s ladder ticket is set with the 8 AM Eastern Locks card.</p>';
-  if(!K.preview || P.length < 5) return msg;
+  if(!K.preview || P.length < 3) return msg;
   const pays = P.reduce((a, L) => a * (callWin(L.price) / 10 + 1), 1), prob = P.reduce((a, L) => a * L.p, 1);
   return msg + '<p class="note">Preview, if the card were set now:</p><ul class="betlegs">'
     + P.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> &middot; ' + (100 * L.p).toFixed(0) + '% &middot; '
@@ -1448,7 +1463,8 @@ function ladderHTML(){
   const res = s => s === "won" ? '<span class="wl won">WON</span>' : s === "lost" ? '<span class="wl lost">LOST</span>'
     : (s === "void" || s === "push") ? '<span class="wl">VOID</span>' : '<span class="sbn">open</span>';
   return '<div class="sweep"><h3>Ladder challenge: $1 &rarr; ' + money(X.target) + '</h3>'
-    + '<p class="note">Every day, one parlay of the 5 likeliest legs on the 8 AM Locks card, staking the whole bank. '
+    + '<p class="note">Every day, one parlay of the likeliest legs on the 8 AM Locks card (3 to 8 of them: the count with the best '
+    + 'chance of reaching the target from the bank; 5 before Nov 5), staking the whole bank. '
     + 'A win rolls everything into tomorrow; one loss ends the run and the next day starts again at $1. Started '
     + esc(X.start) + '. Run ' + Math.max(X.runs, 1) + ', bank <b>' + money(X.bank) + '</b>'
     + (X.streak ? ', ' + X.streak + ' win' + (X.streak > 1 ? 's' : '') + ' in a row' : '') + '; best so far ' + money(X.best) + '.</p>'
@@ -1462,7 +1478,7 @@ function ladderHTML(){
              ? '<div class="sbn">' + [L.lg, L.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '') + '</li>').join('') + '</ul>'
         + ladderProgress(T.legs)
         + '<p class="note">Today: stake ' + money(T.stake) + ' at about ' + T.pays.toFixed(2) + '&times; &rarr; '
-        + money(T.stake * T.pays) + ' if all 5 win (' + (100 * T.prob).toFixed(0) + '% est.). '
+        + money(T.stake * T.pays) + ' if all ' + T.legs.length + ' win (' + (100 * T.prob).toFixed(0) + '% est.). '
         + X.wins_needed + ' straight wins at this price reach the target'
         + (X.chance_to_target ? ', about 1 in ' + Math.round(1 / X.chance_to_target).toLocaleString() : '') + '.</p>'
         + copyBtn("Ladder ticket", ['Ladder ticket: stake ' + money(T.stake) + ', ' + T.legs.length + '-leg parlay, about '

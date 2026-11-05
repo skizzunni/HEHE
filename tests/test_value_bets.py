@@ -213,7 +213,10 @@ class LeaveOneOut(unittest.TestCase):
         row = dict(id="nhl:1", label="BOS @ TOR", price_book="DraftKings",
                    mkt=dict(home="Toronto Maple Leafs", away="Boston Bruins", home_abbr="TOR", away_abbr="BOS", start=START),
                    legs=[dict(side="home", price="-150"), dict(side="away", price="+130")])
-        v, _ = V.scan("nhl", row, FD=FD, KB=KB)
+        # with no source proven best on the live scoreboard (sources.best), so
+        # the result does not depend on what the bot's sources.json holds today
+        with mock.patch("sources.best", lambda *a, **k: None):
+            v, _ = V.scan("nhl", row, FD=FD, KB=KB)
         for x in v:
             if x["venue"] == "FanDuel":
                 self.assertIn("consensus", x["fair_source"])

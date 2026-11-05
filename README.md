@@ -3911,3 +3911,10 @@ their price by date half (`ledger.upset_view`). So far 295 of 797 (37.0%) agains
 They join the board only once they beat their price in both halves (2026-11-05).
 Pace line reads under-a-minute clocks ("20.2 - 4th") and says when a total has already cleared its
 line ("Already over", or "Gone over" for an under) (2026-11-05).
+Ladder legs, user's change of plan ("as many legs as you want ... minimum 3"): from the 2026-11-05
+card the ticket is the top K Locks for K in 3..8 with the best estimated chance of reaching $10,000
+from the bank (`ladder.choose`; earlier days keep their 5 legs, so the replay never moves). Tested
+on cards 10-17 to 11-03 against a fixed 5: reach chance 3.1e-05 vs 1.3e-06, then 1.3e-03 vs
+2.6e-04 by date half (it chose 3 legs on 18 of 20 days). Fixed counts for comparison: 3 legs
+5/10 then 6/10 days at ~1.9x; 8 legs 2/9 and 2/9 at ~5.9x. Also: the value-bets leave-one-out
+test no longer depends on the live scoreboard (Kalshi is now its proven best source) (2026-11-05).

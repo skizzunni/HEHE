@@ -1,4 +1,4 @@
-"""Ladder challenge: $1 to $10,000 on the day's 5 likeliest Locks.
+"""Ladder challenge: $1 to $10,000 on the day's likeliest Locks (3 to 8 legs).
 
 Each day's ticket is the 5 highest-chance legs of that day's Locks card (set
 at 8 AM Eastern and recorded in locks.json, one leg per game), as one parlay.
@@ -13,6 +13,13 @@ Odds, honestly: on 16 graded cards before the start, all 5 top legs won on 5
 days (31%, against 32% stated) and the parlay paid about 3.05x. Reaching
 $10,000 from $1 takes 9 wins in a row at that price -- about 1 in 40,000.
 
+How many legs (from 2026-11-05; 5 before): each day the ticket is the top K
+Locks for the K in 3..8 that gives the best estimated chance of reaching the
+target from the day's bank -- the ticket's chance (its legs' p multiplied)
+raised to the wins still needed at its payout. Tested on cards 10-17 to 11-03
+against a fixed 5: reach chance 3.1e-05 vs 1.3e-06, then 1.3e-03 vs 2.6e-04
+by date half (it chose 3 legs on 18 of 20 days).
+
 Why Locks, not Safe Locks (2026-11-04, cards 10-17 to 11-03): the top 5 Safe
 Locks all won on 5/8 then 6/9 days but pay ~1.29x, so $10,000 takes 37 wins
 in a row (chance 2.8e-08 / 3.1e-07 by half) against the Locks' 9 (2/9 then
@@ -25,7 +32,9 @@ import locks
 START = "2026-11-03"
 BANK0 = 1.0
 TARGET = 10000.0
-LEGS = 5
+LEGS = 5                    # cards before LEGS_FROM
+LEGS_FROM = "2026-11-05"
+MIN_LEGS, MAX_LEGS = 3, 8
 
 
 def ticket(book, day, n=LEGS):
@@ -35,6 +44,28 @@ def ticket(book, day, n=LEGS):
         keys = keys.get("legs") or []
     legs = sorted((dict(book["legs"][k], key=k) for k in keys if k in book["legs"]), key=lambda L: -L["p"])
     return legs[:n] if len(legs) >= n else []
+
+
+def choose(book, day, bank=BANK0, target=TARGET):
+    """The day's ticket: 5 legs before LEGS_FROM; from then, the top K Locks
+    (MIN_LEGS..MAX_LEGS) with the best estimated chance of reaching target
+    from bank. Decided from the frozen 8 AM card, so a replay never moves."""
+    if day < LEGS_FROM:
+        return ticket(book, day)
+    best = None
+    for k in range(MIN_LEGS, MAX_LEGS + 1):
+        legs = ticket(book, day, k)
+        if not legs:
+            continue
+        p = math.prod(L["p"] for L in legs)
+        pays = math.prod(locks._dec(L["price"]) for L in legs)
+        if pays <= 1:
+            continue
+        need = max(1, math.ceil(math.log(max(target / bank, 1.0001)) / math.log(pays)))
+        score = p ** need
+        if best is None or score > best[0] + 1e-15:
+            best = (score, legs)
+    return best[1] if best else []
 
 
 def settle(legs):
@@ -60,10 +91,16 @@ def replay(book=None, start=START, target=TARGET):
     book = book or locks.load()
     runs, cur = [], None
     for day in sorted(d for d in book["days"] if d >= start):
-        legs = ticket(book, day)
+        if cur is None or cur["status"] in ("lost", "reached"):
+            fresh = True
+            bank0 = BANK0
+        else:
+            fresh = False
+            bank0 = cur["bank"]
+        legs = choose(book, day, bank0, target)
         if not legs:
             continue
-        if cur is None or cur["status"] in ("lost", "reached"):
+        if fresh:
             cur = dict(start=day, days=[], status="live", bank=BANK0)
             runs.append(cur)
         res, pay = settle(legs)

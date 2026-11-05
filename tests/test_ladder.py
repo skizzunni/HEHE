@@ -34,7 +34,19 @@ class Ladder(unittest.TestCase):
         runs = ladder.replay(b, start="2026-11-03")
         self.assertEqual([r["status"] for r in runs], ["lost", "live"])
         self.assertAlmostEqual(runs[0]["days"][1]["stake"], round(1.5 ** 5, 2))   # -200 x5 = 7.59x
-        self.assertAlmostEqual(runs[1]["bank"], round(1.5 ** 5, 2))
+        # from 2026-11-05 the leg count is chosen (3..8): with five 80% legs at
+        # -200, three legs reach $10,000 as likely as four and more than five
+        self.assertEqual(len(runs[1]["days"][0]["legs"]), 3)
+        self.assertAlmostEqual(runs[1]["bank"], round(1.5 ** 3, 2))
+
+    def test_leg_count_chosen_from_three_to_eight(self):
+        legs = [(c, 0.95, "open") for c in "abcdefghij"]
+        b = book({"2026-11-05": legs})
+        got = ladder.choose(b, "2026-11-05")
+        self.assertTrue(3 <= len(got) <= 8)
+        b = book({"2026-11-04": [(c, 0.95, "open") for c in "abcdefg"]})
+        self.assertEqual(len(ladder.choose(b, "2026-11-04")), 5)       # before the change: 5
+        self.assertEqual(ladder.choose(book({"2026-11-05": W5[:2]}), "2026-11-05"), [])   # under 3: no ticket
 
     def test_void_leg_drops_out_and_open_day_stops(self):
         b = book({"2026-11-03": W5[:4] + [("e", 0.8, "void")], "2026-11-04": W5[:4] + [("e", 0.8, "open")]})
