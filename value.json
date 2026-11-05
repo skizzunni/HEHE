@@ -5697,6 +5697,23 @@
    "tip": "8:00 PM",
    "venue": "Kalshi"
   },
+  "ncaab:401921133|away|FanDuel": {
+   "dec": 56.0,
+   "ev": 0.0435,
+   "fair": 0.0186,
+   "fair_source": "consensus of 3 other venues",
+   "id": "ncaab:401921133",
+   "kind": "value",
+   "league": "ncaab",
+   "match": "BCU @ TTU",
+   "price": "+5500",
+   "seen": "2026-11-05T12:28:35+00:00",
+   "side": "away",
+   "start": "2026-11-06T02:00Z",
+   "team": "Bethune-Cookman Wildcats",
+   "tip": "9:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaab:401921704|sure": {
    "id": "ncaab:401921704",
    "kind": "sure",
@@ -10934,6 +10951,26 @@
    "prob": 0.186,
    "seen": "2026-11-04T14:05:10+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaab:401921133:away": {
+   "ev": 0.0416,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0435,
+     "fair": 0.0186,
+     "id": "ncaab:401921133",
+     "price": "+5500",
+     "side": "away",
+     "spec": null,
+     "team": "Bethune-Cookman Wildcats"
+    }
+   ],
+   "payout": 56.0,
+   "prob": 0.0186,
+   "seen": "2026-11-05T12:28:35+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
