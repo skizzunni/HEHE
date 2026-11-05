@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 63.7,
-  "brier_close": 0.1664,
-  "brier_published": 0.1721,
+  "beat_close_pct": 64.3,
+  "brier_close": 0.1706,
+  "brier_published": 0.1759,
   "dates": [
    "2026-10-31",
    "2026-11-05"
   ],
-  "logloss_close": 0.5053,
-  "logloss_published": 0.5199,
-  "mean_clv_pts": 1.03,
+  "logloss_close": 0.5155,
+  "logloss_published": 0.5288,
+  "mean_clv_pts": 1.0,
   "n": 300
  },
  "market_is_model": true,
@@ -23163,6 +23163,24 @@
    "published": 0.734,
    "won": 1
   },
+  "uecl:401915741": {
+   "call": false,
+   "close": 0.6758,
+   "clv": -3.42,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.71,
+   "won": 1
+  },
+  "uecl:401915742": {
+   "call": false,
+   "close": 0.7314,
+   "clv": 4.14,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.69,
+   "won": 0
+  },
   "uecl:401915743": {
    "call": false,
    "close": 0.8411,
@@ -23189,6 +23207,42 @@
    "league": "uecl",
    "published": 0.7,
    "won": 1
+  },
+  "uecl:401915825": {
+   "call": false,
+   "close": 0.6669,
+   "clv": 2.69,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.64,
+   "won": 0
+  },
+  "uecl:401915826": {
+   "call": false,
+   "close": 0.8172,
+   "clv": 0.72,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.81,
+   "won": 1
+  },
+  "uecl:401915827": {
+   "call": true,
+   "close": 0.9095,
+   "clv": 1.95,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.89,
+   "won": 1
+  },
+  "uecl:401915830": {
+   "call": true,
+   "close": 0.8385,
+   "clv": 1.85,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.82,
+   "won": 0
   },
   "uecl:401915831": {
    "call": false,
@@ -23316,6 +23370,15 @@
    "published": 0.82,
    "won": 1
   },
+  "uel:401915526": {
+   "call": false,
+   "close": 0.7521,
+   "clv": 2.21,
+   "day": "2026-11-05",
+   "league": "uel",
+   "published": 0.73,
+   "won": 1
+  },
   "uel:401915527": {
    "call": false,
    "close": 0.7116,
@@ -23324,6 +23387,24 @@
    "league": "uel",
    "published": 0.68,
    "won": 1
+  },
+  "uel:401915528": {
+   "call": false,
+   "close": 0.8102,
+   "clv": -2.98,
+   "day": "2026-11-05",
+   "league": "uel",
+   "published": 0.84,
+   "won": 1
+  },
+  "uel:401915534": {
+   "call": false,
+   "close": 0.6818,
+   "clv": -3.82,
+   "day": "2026-11-05",
+   "league": "uel",
+   "published": 0.72,
+   "won": 0
   },
   "uel:401915535": {
    "call": false,
@@ -23334,6 +23415,15 @@
    "published": 0.76,
    "won": 1
   },
+  "uel:401915536": {
+   "call": false,
+   "close": 0.773,
+   "clv": 3.3,
+   "day": "2026-11-05",
+   "league": "uel",
+   "published": 0.74,
+   "won": 1
+  },
   "uel:401915537": {
    "call": false,
    "close": 0.7871,
@@ -23341,6 +23431,15 @@
    "day": "2026-11-05",
    "league": "uel",
    "published": 0.76,
+   "won": 1
+  },
+  "uel:401915538": {
+   "call": false,
+   "close": 0.7449,
+   "clv": 1.49,
+   "day": "2026-11-05",
+   "league": "uel",
+   "published": 0.73,
    "won": 1
   },
   "uel:401915539": {
@@ -24480,5 +24579,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-05T19:42+00:00"
+ "updated": "2026-11-05T19:46+00:00"
 }
