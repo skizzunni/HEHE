@@ -9364,13 +9364,19 @@
    "n": 0
   },
   "day": "2026-11-05",
-  "ladder": "Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; 7 wins to $10,000.",
+  "ladder": "Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.",
   "leaks_14d": [],
   "locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     2,
+     0.6045,
+     "open"
+    ]
+   },
    "won": 0
   },
   "loss_reasons_14d": {
@@ -9382,7 +9388,72 @@
    "upset": 54
   },
   "losses": [],
-  "lottery": [],
+  "lottery": [
+   {
+    "killed_by": [],
+    "legs": 9,
+    "lost": 0,
+    "status": "open",
+    "tier": "100",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 6,
+    "lost": 0,
+    "status": "open",
+    "tier": "100",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 5,
+    "lost": 0,
+    "status": "open",
+    "tier": "100",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 11,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 6,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 11,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+25",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 11,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+50",
+    "won": 0
+   },
+   {
+    "killed_by": [],
+    "legs": 11,
+    "lost": 0,
+    "status": "open",
+    "tier": "10k+100",
+    "won": 0
+   }
+  ],
   "picks": {
    "n": 0
   },
@@ -9400,9 +9471,20 @@
   },
   "safe_locks": {
    "lost": [],
-   "n": 0,
-   "open": 0,
-   "plays": {},
+   "n": 11,
+   "open": 11,
+   "plays": {
+    "best": [
+     7,
+     0.5417,
+     "open"
+    ],
+    "winners": [
+     2,
+     0.8455,
+     "open"
+    ]
+   },
    "won": 0
   },
   "strong": {

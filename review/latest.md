@@ -1,7 +1,7 @@
 # Review 2026-11-05
 
 No picks settled yet.
-Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; 7 wins to $10,000.
+Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
 Board sweep: 0-0, 59 open -- still clean.
 Why picks lost (14 days): favourite lost 135, close game 113, upset 54, coin flip 49, blowout 44, price moved against it 33.
 Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
@@ -17,6 +17,16 @@ Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST per Universitario at 67% (-265), Sport Boys 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost · price moved against it (3 pts)
 - LOST nba Houston Rockets at 71% (-278), Houston Rockets 107 - Minnesota Timberwolves 117: margin 10 · the book had my side favoured too · called at 71% · favourite lost · price moved against it (4 pts)
 - LOST ncaab Loyola Marymount Lions at 68% (-230), Loyola Marymount Lions 95 - Queens University Royals 96: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
+Locks 0/11 won, 11 open; Best play top 2 (60%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (54%) open.
+Lottery 100: open (0/9 legs won)
+Lottery 100: open (0/6 legs won)
+Lottery 100: open (0/5 legs won)
+Lottery 10k: open (0/11 legs won)
+Lottery 10k: open (0/6 legs won)
+Lottery 10k+25: open (0/11 legs won)
+Lottery 10k+50: open (0/11 legs won)
+Lottery 10k+100: open (0/11 legs won)
 Ladder-consistency props (all time): 1585/1896 won (83.6%) vs 86.4% fair, 87.4% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
