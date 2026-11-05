@@ -1,10 +1,10 @@
 # Review 2026-11-04
 
-Picks 27-9 (75.0% vs 75.8% claimed, ROI -6.3%).
+Picks 28-10 (73.7% vs 75.1% claimed, ROI -7.0%).
 Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.
-Strong calls 15-5 (75.0% vs 75.9% claimed).
-Closing line value: +1.01 points on 36 picks; beat the close on 55.6%.
-Board sweep: 27-9, 16 open -- broken (first loss: ucl Liverpool at 83%).
+Strong calls 15-6 (71.4% vs 75.5% claimed).
+Closing line value: +0.98 points on 38 picks; beat the close on 55.3%.
+Board sweep: 28-10, 14 open -- broken (first loss: ucl Liverpool at 83%).
 - LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
 - LOST efl1 Middlesbrough at 78% (-500), Middlesbrough 0 - Wrexham 2: margin 2 · the book had my side favoured too · called at 78% · upset
 - LOST ucl PSV Eindhoven at 73% (-330), Club Brugge 2 - PSV Eindhoven 1: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game
@@ -14,7 +14,8 @@ Board sweep: 27-9, 16 open -- broken (first loss: ucl Liverpool at 83%).
 - LOST nhl Buffalo Sabres at 54% (-130), Buffalo Sabres 1 - Ottawa Senators 2: margin 1 · the book had my side favoured too · called at 54% · coin flip · close game · price moved against it (3 pts)
 - LOST nba Charlotte Hornets at 60% (-170), Brooklyn Nets 114 - Charlotte Hornets 104: margin 10 · the book had my side favoured too · called at 60% · favourite lost
 - LOST nba Memphis Grizzlies at 67% (-228), Indiana Pacers 107 - Memphis Grizzlies 103: margin 4 · the book had my side favoured too · called at 67% · favourite lost · close game
-Why picks lost (14 days): favourite lost 134, close game 113, upset 55, coin flip 51, blowout 45, price moved against it 32.
+- LOST per Universitario at 67% (-265), Sport Boys 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost · price moved against it (3 pts)
+Why picks lost (14 days): favourite lost 135, close game 113, upset 55, coin flip 51, blowout 45, price moved against it 33.
 Yesterday (2026-11-03): board 34-9, sweep broken by efl1 Charlton Athletic at 70%.
 - LOST efl1 Charlton Athletic at 70% (-310), Bolton Wanderers 1 - Charlton Athletic 0: margin 1 · the book had my side favoured too · called at 70% [favourite lost, close game]
 - LOST ecu Mushuc Runa at 82% (-600), Manta F.C. 3 - Mushuc Runa 2: margin 1 · the book had my side favoured too · called at 82% [upset, close game]
@@ -25,7 +26,7 @@ Yesterday (2026-11-03): board 34-9, sweep broken by efl1 Charlton Athletic at 70
 - LOST nhl Montreal Canadiens at 61% (-175), Montreal Canadiens 4 - Winnipeg Jets 5: margin 1 · the book had my side favoured too · called at 61% [favourite lost, close game]
 - LOST nhl Carolina Hurricanes at 64% (-198), Carolina Hurricanes 1 - Nashville Predators 4: margin 3 · the book had my side favoured too · called at 64% [favourite lost, blowout]
 - LOST ncaaf Miami (OH) RedHawks at 71% (-265), Buffalo Bulls 34 - Miami (OH) RedHawks 31: margin 3 · the book had my side favoured too · called at 71% [favourite lost, close game]
-Locks 5/11 won, 6 open; Best play top 2 (62%) open.
+Locks 6/11 won, 5 open; Best play top 2 (62%) open.
 Safe Locks 5/11 won, 6 open; Winners parlay top 2 (85%) won; Best play top 7 (52%) open.
 Lottery 100: open (6/10 legs won)
 Lottery 10k: lost (7/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
@@ -33,8 +34,8 @@ Lottery 10k: lost (2/8 legs won, killed by Florida Panthers over 5.5 goals)
 Lottery 10k+25: lost (7/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
 Lottery 10k+50: lost (7/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
 Lottery 10k+100: lost (7/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
-Ladder-consistency props (all time): 1524/1823 won (83.6%) vs 86.4% fair, 87.4% price.
-Props 81/90 vs 83.6% claimed.
+Ladder-consistency props (all time): 1536/1837 won (83.6%) vs 86.4% fair, 87.4% price.
+Props 94/105 vs 83.7% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=113), ncaaf 0.00 (n=168), nfl 0.00 (n=41), nhl 0.00 (n=131)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=114), ncaaf 0.00 (n=168), nfl 0.00 (n=41), nhl 0.00 (n=131)
