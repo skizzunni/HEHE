@@ -139,6 +139,7 @@ PROBE = """<script>setTimeout(function(){
               paceNote({label: "Under 5.5 goals", league: "nhl", live: "End of 2nd", live_score: "A 1 - B 2"}),
               paceNote({label: "Luka Doncic: 6+ Assists", league: "nba", live: "1st", live_score: "A 1 - B 2"})];
   out.soFar = [soFar({so_far: 2, line: "4+", market: "Assists"}), soFar({so_far: 3, line: "2+", market: "Assists"}), soFar({line: "2+"})];
+  out.safe = [safeNote({mc: 54, safe: {label: "Ottawa Senators under 5.5 goals", price: "-1450", p: 0.89}}), safeNote({mc: 80, safe: {label: "Over 204.5 points", price: "-2000", p: 0.9}}), safeNote({mc: 54})];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -322,6 +323,10 @@ def main():
     sf = new.get("soFar") or ["", "", "x"]
     if not ("Assists so far: 2</b>, needs 4 (2 to go)" in sf[0] and "Assists so far: 3</b>, needs 2 &middot; already there" in sf[1]) or sf[2]:
         fails.append("so-far line wrong: " + repr(sf))
+    sn = new.get("safe") or ["", "", "x"]
+    if not ("Safest bet in this game:</b> Ottawa Senators under 5.5 goals -1450 (89%) &mdash; for a sweep" in sn[0]
+            and "Over 204.5 points -2000 (90%)</div>" in sn[1]) or sn[2]:
+        fails.append("safe note wrong: " + repr(sn))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)

@@ -713,6 +713,14 @@ function skipBar(rows){
 function oneIn(p){
   return p >= 0.01 ? (100 * p).toFixed(0) + "%" : "1 in " + Math.round(1 / p).toLocaleString();
 }
+// this game's single likeliest FanDuel line (locks.every_game): for a close
+// game, often the other side with points or a total, at ~90%
+function safeNote(r){
+  const S = r.safe;
+  if(!S) return '';
+  return '<div class="sbn"><b>Safest bet in this game:</b> ' + esc(S.label) + ' ' + esc(S.price || '') + ' (' + Math.round(100 * S.p) + '%)'
+    + (r.mc !== null && r.mc !== undefined && r.mc < 60 ? ' &mdash; for a sweep, this beats the coin-flip winner pick' : '') + '</div>';
+}
 // the price's move since the pick was first called (rebuild_board.move_of)
 function moveNote(r){
   if(r.mv === null || r.mv === undefined) return '';
@@ -1066,7 +1074,7 @@ function renderView(){
              + '<span class="stripe"></span>' + esc(r.mp) + dog + val + '</td>'
              + (mixed ? '<td class="comp">' + esc(r.lg) + '</td>' : '')
              + '<td class="state">' + esc(r.t) + '</td>' + conf
-             + '<td class="why">' + esc(r.why) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
+             + '<td class="why">' + esc(r.why) + safeNote(r) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
       }).join("")
     + '</tbody></table>';
 }

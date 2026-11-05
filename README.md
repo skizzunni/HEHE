@@ -3898,3 +3898,9 @@ Live over/under legs (Ladder, Every game) show the total their game is on pace f
 that beats the line (`paceNote`: score so far over time played) (2026-11-05).
 Player-prop legs in play (Ladder, Prop Locks) show the stat so far against the line ("Assists so
 far: 2, needs 4") from ESPN's live box score (`props_ledger.live_value`, display only) (2026-11-05).
+Every game row on today's league tabs shows that game's safest FanDuel line ("Safest bet in this
+game"), flagged as the sweep play when the winner pick is under 60%. Study, rejected: taking the
+underdog in close games (<60%) -- underdogs won LESS than their price said in nearly every
+league and half (NCAAF 13% / 32% vs 45%; MLB 42% vs 46%; NHL 43% vs 46%; NBA 38% vs 46%),
+so the other side is backed with points (e.g. +45.5) through the safest line, not straight up
+(2026-11-05).

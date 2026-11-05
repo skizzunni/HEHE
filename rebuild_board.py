@@ -659,6 +659,14 @@ def snapshot():
             except Exception:
                 pass
             out["every_game"] = dict(today=_eg, preview=not _fz, record=locks.every_game_record(locks.SAFE_LEDGER))
+            # each game row on today's tabs: that game's safest line, which is
+            # often the other side with points (Sacramento State +45.5)
+            _by = {g_["gid"]: g_ for g_ in _eg}
+            for _lg in (out["slots"].get("today") or {}).values():
+                for _r in _lg.get("rows") or []:
+                    _g = _by.get(_r.get("id"))
+                    if _g:
+                        _r["safe"] = dict(label=_g["label"], price=_g.get("price"), p=_g["p"])
             print(f"every game: {len(_eg)} games, record {out['every_game']['record']}", file=sys.stderr)
         except Exception as e_:
             print(f"every game skipped ({e_})", file=sys.stderr)
