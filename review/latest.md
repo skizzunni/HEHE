@@ -2,7 +2,7 @@
 
 No picks settled yet.
 Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.
-Board sweep: 0-0, 57 open -- still clean.
+Board sweep: 0-0, 58 open -- still clean.
 Why picks lost (14 days): favourite lost 135, close game 113, upset 54, coin flip 49, blowout 44, price moved against it 33.
 Yesterday (2026-11-04): board 35-12, sweep broken by ucl Liverpool at 83%.
 - LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
