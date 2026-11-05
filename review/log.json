@@ -8577,9 +8577,9 @@
  },
  "2026-11-04": {
   "clv": {
-   "avg": 0.67,
-   "beat": 49.0,
-   "n": 51
+   "avg": 0.7,
+   "beat": 50.0,
+   "n": 52
   },
   "day": "2026-11-04",
   "leaks_14d": [],
@@ -8882,12 +8882,12 @@
    }
   ],
   "picks": {
-   "hit": 76.5,
+   "hit": 76.9,
    "lost": 12,
-   "n": 51,
-   "roi": -0.8,
-   "said": 74.4,
-   "won": 39
+   "n": 52,
+   "roi": 0.1,
+   "said": 74.2,
+   "won": 40
   },
   "picks_by_league": {
    "bra": {
@@ -8915,12 +8915,12 @@
     "won": 2
    },
    "nba": {
-    "hit": 69.2,
+    "hit": 71.4,
     "lost": 4,
-    "n": 13,
-    "roi": -1.6,
-    "said": 67.6,
-    "won": 9
+    "n": 14,
+    "roi": 1.8,
+    "said": 67.5,
+    "won": 10
    },
    "ncaab": {
     "hit": 90.0,
@@ -9019,20 +9019,20 @@
   "sweep": {
    "broke_on": "ucl Liverpool at 83%",
    "lost": 12,
-   "open": 1,
-   "won": 39
+   "open": 0,
+   "won": 40
   },
   "vs_market_14d": {
    "against": {
     "n": 0
    },
    "agree": {
-    "hit": 75.5,
+    "hit": 75.6,
     "lost": 243,
-    "n": 993,
-    "roi": 1.3,
+    "n": 994,
+    "roi": 1.4,
     "said": 71.0,
-    "won": 750
+    "won": 751
    }
   }
  },
@@ -9422,20 +9422,20 @@
    "agree": {
     "hit": 75.5,
     "lost": 238,
-    "n": 971,
-    "roi": 1.0,
+    "n": 972,
+    "roi": 1.1,
     "said": 71.1,
-    "won": 733
+    "won": 734
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5648,
-    "market_only": 0.5648,
+    "logloss": 0.5636,
+    "market_only": 0.5636,
     "model_40": 0.587,
-    "n": 120,
+    "n": 121,
     "weight": 0.0
    },
    "ncaaf": {
@@ -9675,8 +9675,8 @@
    "sweep": {
     "broke_on": "ucl Liverpool at 83%",
     "lost": 12,
-    "open": 1,
-    "won": 39
+    "open": 0,
+    "won": 40
    }
   }
  }
