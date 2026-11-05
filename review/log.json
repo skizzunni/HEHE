@@ -9359,9 +9359,9 @@
    }
   },
   "clv": {
-   "avg": null,
-   "beat": null,
-   "n": 0
+   "avg": -1.32,
+   "beat": 0.0,
+   "n": 1
   },
   "day": "2026-11-05",
   "ladder": "Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.",
@@ -9455,9 +9455,23 @@
    }
   ],
   "picks": {
-   "n": 0
+   "hit": 100.0,
+   "lost": 0,
+   "n": 1,
+   "roi": 35.7,
+   "said": 68.0,
+   "won": 1
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "ind": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 35.7,
+    "said": 68.0,
+    "won": 1
+   }
+  },
   "props": {
    "fair": {
     "n": 1896,
@@ -9488,14 +9502,19 @@
    "won": 0
   },
   "strong": {
-   "n": 0
+   "hit": 100.0,
+   "lost": 0,
+   "n": 1,
+   "roi": 35.7,
+   "said": 68.0,
+   "won": 1
   },
   "stuck": [],
   "sweep": {
    "broke_on": null,
    "lost": 0,
-   "open": 59,
-   "won": 0
+   "open": 58,
+   "won": 1
   },
   "vs_market_14d": {
    "against": {
@@ -9504,10 +9523,10 @@
    "agree": {
     "hit": 75.5,
     "lost": 238,
-    "n": 972,
+    "n": 973,
     "roi": 1.1,
     "said": 71.1,
-    "won": 734
+    "won": 735
    }
   },
   "weights": {

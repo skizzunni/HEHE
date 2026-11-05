@@ -1,8 +1,10 @@
 # Review 2026-11-05
 
-No picks settled yet.
+Picks 1-0 (100.0% vs 68.0% claimed, ROI +35.7%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
-Board sweep: 0-0, 59 open -- still clean.
+Strong calls 1-0 (100.0% vs 68.0% claimed).
+Closing line value: -1.32 points on 1 picks; beat the close on 0.0%.
+Board sweep: 1-0, 58 open -- still clean.
 Why picks lost (14 days): favourite lost 135, close game 113, upset 54, coin flip 49, blowout 44, price moved against it 33.
 Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
