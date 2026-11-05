@@ -31,9 +31,9 @@ Locks 7/11 won, 3 open; Best play top 2 (62%) open; lost: Central Michigan Chipp
 Safe Locks 7/11 won, 4 open; Winners parlay top 2 (85%) won; Best play top 7 (52%) open.
 Lottery 100: lost (7/10 legs won, killed by Houston Rockets to win)
 Lottery 10k: lost (9/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
-Lottery 10k: lost (4/8 legs won, killed by Florida Panthers over 5.5 goals)
+Lottery 10k: lost (5/8 legs won, killed by Florida Panthers over 5.5 goals)
 Lottery 10k+25: lost (8/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5, Eastern Michigan Eagles over 29.5 points)
-Lottery 10k+50: lost (8/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
+Lottery 10k+50: lost (8/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5, Under 219.5 points)
 Lottery 10k+100: lost (8/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5, Under 218.5 points)
 Ladder-consistency props (all time): 1562/1867 won (83.7%) vs 86.4% fair, 87.4% price.
 Props 123/138 vs 83.9% claimed.
