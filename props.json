@@ -30981,11 +30981,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Aaron Gordon",
   "p": 0.7874,
   "p_fair": 0.7741,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401909931|n:aaron gordon|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -30997,11 +30999,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Aaron Gordon",
   "p": 0.8488,
   "p_fair": 0.9201,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 18.0
  },
  "nba:401909931|n:demar derozan|Points|5+": {
   "aid": null,
@@ -31013,11 +31017,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "DeMar DeRozan",
   "p": 0.851,
   "p_fair": 0.9686,
   "price": "-1250",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401909931|n:immanuel quickley|Assists|4+": {
   "aid": null,
@@ -31029,11 +31035,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Immanuel Quickley",
   "p": 0.8564,
   "p_fair": 0.8467,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909931|n:jamal murray|Assists|4+": {
   "aid": null,
@@ -31045,11 +31053,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jamal Murray",
   "p": 0.8564,
   "p_fair": 0.8445,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909931|n:jamal murray|Points|15+": {
   "aid": null,
@@ -31061,11 +31071,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Jamal Murray",
   "p": 0.8484,
   "p_fair": 0.8769,
   "price": "-1200",
-  "status": "open"
+  "status": "lost",
+  "value": 14.0
  },
  "nba:401909931|n:jamal murray|Pts + Ast|25+": {
   "aid": null,
@@ -31077,11 +31089,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Jamal Murray",
   "p": 0.7675,
   "p_fair": 0.7435,
   "price": "-390",
-  "status": "open"
+  "status": "lost",
+  "value": 21.0
  },
  "nba:401909931|n:jamal murray|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -31093,11 +31107,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jamal Murray",
   "p": 0.8488,
   "p_fair": 0.8791,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401909931|n:nikola jokic|Pts + Reb + Ast|35+": {
   "aid": null,
@@ -31109,11 +31125,13 @@
   "league": "nba",
   "line": "35+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Nikola Jokic",
   "p": 0.8559,
   "p_fair": 0.8464,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 53.0
  },
  "nba:401909931|n:rj barrett|Pts + Ast|20+": {
   "aid": null,
@@ -31125,11 +31143,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "RJ Barrett",
   "p": 0.7675,
   "p_fair": 0.7814,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 25.0
  },
  "nba:401909931|n:scottie barnes|Assists|4+": {
   "aid": null,
@@ -31141,11 +31161,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Scottie Barnes",
   "p": 0.853,
   "p_fair": 0.8395,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909931|n:scottie barnes|Points|10+": {
   "aid": null,
@@ -31156,11 +31178,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Scottie Barnes",
   "p": 0.8723,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909931|n:scottie barnes|Points|15+": {
   "aid": null,
@@ -31172,11 +31196,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Scottie Barnes",
   "p": 0.8484,
   "p_fair": 0.8769,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909932|n:collin gillespie|Assists|2+": {
   "aid": null,
