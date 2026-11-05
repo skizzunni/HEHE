@@ -3896,3 +3896,5 @@ NBA overs on Locks, 5/8 then 5/10 (10 of 18, 56%) against 75% stated -- about -1
 99.5% bar to change picks; NBA unders on Locks 10/10 then 10/12 (2026-11-04).
 Live over/under legs (Ladder, Every game) show the total their game is on pace for and whether
 that beats the line (`paceNote`: score so far over time played) (2026-11-05).
+Player-prop legs in play (Ladder, Prop Locks) show the stat so far against the line ("Assists so
+far: 2, needs 4") from ESPN's live box score (`props_ledger.live_value`, display only) (2026-11-05).

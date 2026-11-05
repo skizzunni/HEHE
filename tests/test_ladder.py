@@ -110,6 +110,20 @@ class Live(unittest.TestCase):
         self.assertNotIn("live", legs[2])                                  # no live data yet
 
 
+class SoFar(unittest.TestCase):
+    def test_live_prop_value_from_box_score(self):
+        import props_ledger
+        box = {"boxscore": {"players": [{"team": {"abbreviation": "MEM"}, "statistics": [
+            {"name": "", "keys": ["assists"], "athletes": [{"athlete": {"id": "7", "displayName": "Cameron Boozer"},
+                                                           "stats": ["2"]}]}]}]}}
+        props_ledger._LIVE[("nba", "1")] = props_ledger.box_stats(box)
+        try:
+            v = props_ledger.live_value(dict(gid="nba:1", name="Cameron Boozer", market="Assists", line="4+"))
+        finally:
+            props_ledger._LIVE.pop(("nba", "1"), None)
+        self.assertEqual(v, 2.0)
+
+
 class ReviewLine(unittest.TestCase):
     def test_daily_review_reports_the_ladder(self):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))

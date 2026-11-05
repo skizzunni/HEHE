@@ -389,6 +389,36 @@ def _first_ok(a, b):
             or b in _NICK.get(a, ()))
 
 
+_LIVE = {}
+
+
+def live_value(L):
+    """A prop's stat so far in a game in play (e.g. 3 assists), from ESPN's
+    live box score; None when the game, player or market cannot be read.
+    One fetch per game per build. Display only -- grading stays in grade()."""
+    league, _, eid = str(L.get("gid") or "").partition(":")
+    f = (MARKETS.get(league) or {}).get(L.get("market"))
+    if league not in SPORT or not eid or f is None:
+        return None
+    if (league, eid) not in _LIVE:
+        sport, lg = SPORT[league]
+        try:
+            d = _get(f"{SITE}/{sport}/{lg}/summary?event={eid}")
+            _LIVE[(league, eid)] = box_stats({"boxscore": d.get("boxscore"), "rosters": d.get("rosters")})
+        except Exception:
+            _LIVE[(league, eid)] = None
+    stats = _LIVE[(league, eid)]
+    if not stats:
+        return None
+    st, _how = resolve(stats, L)
+    if st is None:
+        return None
+    try:
+        return f(st)
+    except Exception:
+        return None
+
+
 def resolve(stats, e):
     """(stats, how) for one prop's player in a box score, where how is 'id',
     'name', 'fuzzy' or 'alias'; (None, 'absent') when no player in the box

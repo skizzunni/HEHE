@@ -1266,6 +1266,16 @@ function legHTML(x, opts){
     + '<div class="lgs">' + esc(x.match || '') + ' &middot; ' + esc(x.lg || x.league || '')
     + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>' + where + alt + (done ? '' : watchNote(x)) + '</li>';
 }
+// a player prop in play: the stat so far against the line it needs
+// (props_ledger.live_value), e.g. "2 so far, needs 4 (2 to go)"
+function soFar(L){
+  if(L.so_far === null || L.so_far === undefined) return '';
+  const need = parseFloat(String(L.line || '').replace('+', ''));
+  if(isNaN(need)) return '';
+  const v = +L.so_far, left = Math.max(0, need - v);
+  return '<div class="sbn"><b>' + esc(L.market || 'Stat') + ' so far: ' + v + '</b>, needs ' + need
+    + (left ? ' (' + left + ' to go)' : ' &middot; already there') + '</div>';
+}
 // a live over/under leg: the total its game is on pace for, from the score
 // so far and the time played (NBA 4x12, college basketball 2x20, football
 // 4x15, NHL 3x20 minutes). Null when the clock cannot be read.
@@ -1433,7 +1443,7 @@ function ladderHTML(){
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')
           + (L.live ? '<div class="sbn"><b>Live:</b> ' + esc(L.live) + ' &middot; ' + esc(L.live_score || '') + '</div>' : '')
-          + (L.live ? paceNote(L) : '')
+          + (L.live ? paceNote(L) + soFar(L) : '')
           + (L.status === 'open' || !L.status ? watchNote(L) : '')
           + (!L.live && (L.tip || L.lg) && L.status !== 'won' && L.status !== 'lost'
              ? '<div class="sbn">' + [L.lg, L.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '') + '</li>').join('') + '</ul>'
@@ -2402,7 +2412,7 @@ function propLocksHTML(){
         + (100 * x.p).toFixed(0) + '% &middot; ' + esc(x.match || "")
         + (x.tip && x.status !== 'won' && x.status !== 'lost' ? ' &middot; ' + esc(String(x.league || '').toUpperCase()) + ' ' + esc(x.tip) : '')
         + ' ' + res(x.status)
-        + (x.live ? '<div class="sbn"><b>Live:</b> ' + esc(x.live) + ' &middot; ' + esc(x.live_score || '') + '</div>' : '')
+        + (x.live ? '<div class="sbn"><b>Live:</b> ' + esc(x.live) + ' &middot; ' + esc(x.live_score || '') + '</div>' + soFar(x) : '')
         + (x.alt ? '<div class="sbn">pays more at <b>' + esc(x.alt.venue) + ' ' + esc(x.alt.price) + '</b> (FanDuel now '
           + esc(x.alt.fd_now) + ', +' + (100 * x.alt.gain).toFixed(1) + '%)</div>' : '') + '</li>').join("") + '</ul>'
         + copyBtn("Prop Locks", L.map(x => legLine(x.label, x.price, "FanDuel", x.match)))

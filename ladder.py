@@ -74,7 +74,8 @@ def replay(book=None, start=START, target=TARGET):
                      legs=[dict(label=L["label"], price=L["price"], p=L["p"], match=L.get("match"),
                                 tip=L.get("tip"), lg=L.get("lg") or L.get("league"), score=L.get("score"),
                                 gid=L.get("gid"), t=(L.get("spec") or {}).get("t"), kind=L.get("kind"),
-                                league=L.get("league"),
+                                league=L.get("league"), name=L.get("name"), aid=L.get("aid"),
+                                market=L.get("market"), line=L.get("line"),
                                 status=L.get("status") or "open") for L in legs])
         cur["days"].append(entry)
         if res == "open":
@@ -101,6 +102,14 @@ def live(legs):
         if L.get("status") in (None, "open") and e.get("live") and e.get("live_score"):
             L["live"] = e["live"]
             L["live_score"] = " - ".join(f"{t} {v}" for t, v in e["live_score"].items())
+            if L.get("kind") == "prop" and L.get("market"):
+                try:                        # the player's stat so far
+                    import props_ledger
+                    v = props_ledger.live_value(L)
+                    if v is not None:
+                        L["so_far"] = v
+                except Exception:
+                    pass
 
 
 def report(book=None, start=START, target=TARGET):
