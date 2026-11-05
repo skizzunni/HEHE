@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
-Picks 24-10 (70.6% vs 75.3% claimed, ROI -11.8%).
+Picks 26-10 (72.2% vs 75.3% claimed, ROI -9.8%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
-Strong calls 24-10 (70.6% vs 75.3% claimed).
-Closing line value: +1.38 points on 34 picks; beat the close on 64.7%.
-Board sweep: 24-10, 26 open -- broken (first loss: uecl Trabzonspor at 67%).
+Strong calls 26-10 (72.2% vs 75.3% claimed).
+Closing line value: +1.39 points on 36 picks; beat the close on 63.9%.
+Board sweep: 26-10, 24 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -29,7 +29,6 @@ Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST per Universitario at 67% (-265), Sport Boys 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost · price moved against it (3 pts)
 - LOST nba Houston Rockets at 71% (-278), Houston Rockets 107 - Minnesota Timberwolves 117: margin 10 · the book had my side favoured too · called at 71% · favourite lost · price moved against it (4 pts)
 - LOST ncaab Loyola Marymount Lions at 68% (-230), Loyola Marymount Lions 95 - Queens University Royals 96: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
-LEAK uel: 64.7% hit vs 73.9% claimed on 34 calls (14 days)
 Locks 2/11 won, 9 open; Best play top 2 (60%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (54%) open.
 Lottery 100: open (0/9 legs won)
