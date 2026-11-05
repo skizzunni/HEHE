@@ -41858,6 +41858,22 @@
   "price": "-105",
   "status": "open"
  },
+ "nfl:401873037|n:derrick henry|Anytime Touchdown Scorer|1+": {
+  "aid": null,
+  "date": "2026-11-05",
+  "edge": null,
+  "gid": "nfl:401873037",
+  "imp": 0.4348,
+  "label": "Derrick Henry: anytime TD",
+  "league": "nfl",
+  "line": "1+",
+  "market": "Anytime Touchdown Scorer",
+  "name": "Derrick Henry",
+  "p": 0.3495,
+  "p_fair": null,
+  "price": "+130",
+  "status": "open"
+ },
  "nfl:401873037|n:jakobi lane|Receiving Yards|5+": {
   "aid": null,
   "date": "2026-11-05",
@@ -60690,7 +60706,8 @@
   "p": 0.7837,
   "p_fair": null,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "uel:401915523|239411|Goalkeeper Saves|4+": {
   "aid": "239411",
@@ -60706,7 +60723,8 @@
   "p": 0.5167,
   "p_fair": null,
   "price": "-160",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "uel:401915524|329483|Anytime Goalscorer|": {
   "aid": "329483",
@@ -60790,7 +60808,8 @@
   "p": 0.8073,
   "p_fair": null,
   "price": "-2500",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "uel:401915529|204082|Goalkeeper Saves|3+": {
   "aid": "204082",
@@ -60806,7 +60825,8 @@
   "p": 0.4746,
   "p_fair": null,
   "price": "-130",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "uel:401915533|177821|Goalkeeper Saves|1+": {
   "aid": "177821",
@@ -60822,7 +60842,8 @@
   "p": 0.7633,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "uel:401915533|177821|Goalkeeper Saves|3+": {
   "aid": "177821",
@@ -60838,7 +60859,8 @@
   "p": 0.3498,
   "p_fair": null,
   "price": "+140",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "uel:401915537|312011|Goalkeeper Saves|1+": {
   "aid": "312011",
