@@ -1638,7 +1638,9 @@ function ownHTML(O){
   return '<div class="sweep"><h3>My own picks, prices hidden</h3><p class="note">Every game picked by my ratings, form and home edge alone, '
     + 'never looking at the odds. Since ' + esc(O.since) + ', same ' + O.n + ' games: <b>mine ' + O.own + ' right (' + pc(O.own)
     + ')</b>, the market&rsquo;s favourite ' + O.market + ' (' + pc(O.market) + '). '
-    + (O.own > O.market ? 'Mine are ahead.' : 'The market is ahead, so the board still follows it; mine are tracked here until they beat it.') + '</p>'
+    + (O.own > O.market ? 'Mine are ahead.' : 'The market is ahead, so the board still follows it; mine are tracked here until they beat it.')
+    + ((O.splits || []).length ? ' Where we disagreed, I was right: ' + O.splits.slice(0, 5).map(x => esc(String(x.league).toUpperCase()) + ' '
+        + x.mine + ' of ' + x.n).join(', ') + '.' : '') + '</p>'
     + ((O.today || []).length ? '<p class="note"><b>Today I disagree with the market on ' + O.today.length + ':</b></p><ul class="betlegs">'
       + O.today.map(x => '<li>' + esc(String(x.league).toUpperCase()) + ' ' + esc(x.match) + ': <b>I take ' + esc(x.own) + '</b> ('
         + x.own_p + '%), market has ' + esc(x.market) + ' (' + x.market_p + '%)</li>').join('') + '</ul>'

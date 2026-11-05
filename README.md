@@ -3942,3 +3942,7 @@ the Locks ledgers do); older days keep their tickets and record. The file was 22
 day; this caps it at 14 days of pools (about 20-25 MB, as some days' pools are 4 MB). Study, nothing adopted: the daily top-5 Calls by type and league
 (79 graded) -- soccer 95% then 87% against ~81% stated, every other group under 20 picks (2026-11-05).
 Board sweep tile, before the first result: "59 to go, first at 10:30 AM" (from `next_up`) (2026-11-05).
+"My own picks" shows, per league, how often I was right where I disagreed with the market
+(NCAAF 8 of 25, NBA 5 of 23, NHL 8 of 20, NFL 0 of 6). Study, rejected: no league where my
+price-blind pick beat the market's on disagreements in both halves (NBA 23% / 20%, NCAAF 33% /
+30%, NHL 14% / 54%) (2026-11-05).

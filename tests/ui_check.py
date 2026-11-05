@@ -119,7 +119,7 @@ PROBE = """<script>setTimeout(function(){
     .filter(function(t){return /Ladder/.test(t)}).join("");
   out.sweepTile = [].slice.call(document.querySelectorAll('#glance [data-goto="results"]')).map(function(e){return e.textContent}).join("|");
   out.oneIn = [oneIn(0.71), oneIn(4.22e-8)];
-  out.own = ownHTML({n: 382, own: 232, market: 260, since: "2026-10-05", today: [{league: "nba", match: "MIA @ LAC", own: "LAC", own_p: 60, market: "MIA", market_p: 65}]});
+  out.own = ownHTML({n: 382, own: 232, market: 260, since: "2026-10-05", splits: [{league: "ncaaf", mine: 8, n: 25}, {league: "nba", mine: 5, n: 23}], today: [{league: "nba", match: "MIA @ LAC", own: "LAC", own_p: 60, market: "MIA", market_p: 65}]});
   out.inj = [injNote({inj: {mine: ["Giannis Antetokounmpo (Day-To-Day)"], opp: ["Brandon Ingram (Out)", "Bradley Beal (Out)", "A (Out)", "B (Out)", "C (Out)"]}}), injNote({}), injNote({inj: {mine: [], opp: []}})];
   out.mv = [moveNote({mv: 5}), moveNote({mv: -4}), moveNote({mv: null}), moveNote({})];
   out.yday = [yesterdayHTML({day: "2026-11-03", won: 34, lost: 1, losses: [{league: "efl1", pick: "Charlton Athletic", conf: 70, price: "-310", score: {"Bolton Wanderers": 1, "Charlton Athletic": 0}, tags: ["favourite lost", "close game"], why: "margin 1 · favourite lost · close game"}]}), yesterdayHTML({day: "x", won: 0, lost: 0})];
@@ -295,7 +295,7 @@ def main():
                                    "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89.", "By type: game totals 137/149, underdog +points 53/58.", "Sweep odds: all 3 win 74%; the top 3 win 74%. The whole list has swept on 0 of 14 days.", "$10 on each (3 bets, $30 staked): +$2.28 if every one wins; expected −$0.77 from the stated chances.", "set at 8 AM")):
         fails.append("every game section wrong: " + eg)
     ow = new.get("own", "")
-    if not all(x in ow for x in ("mine 232 right (60.7%)", "260 (68.1%)", "The market is ahead", "I take LAC</b> (60%)")):
+    if not all(x in ow for x in ("mine 232 right (60.7%)", "260 (68.1%)", "The market is ahead", "I take LAC</b> (60%)", "Where we disagreed, I was right: NCAAF 8 of 25, NBA 5 of 23.")):
         fails.append("own picks section wrong: " + ow)
     ij = new.get("inj") or ["", "x", "x"]
     if not ("my side: Giannis Antetokounmpo (Day-To-Day)" in ij[0] and "their side: Brandon Ingram (Out), Bradley Beal (Out), A (Out), B (Out) +1" in ij[0]) or ij[1] or ij[2]:

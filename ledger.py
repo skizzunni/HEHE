@@ -719,6 +719,7 @@ def own_view(book, today, since_days=30):
     since = (dt.date.fromisoformat(today) - dt.timedelta(days=since_days)).isoformat()
     n = own = mkt = 0
     split = []
+    split_rec = {}
     for k, e in book.items():
         H = [h for h in e.get("history") or [] if h.get("p_model_away") is not None and h.get("p_market_away") is not None]
         if not H or not record_priced(e):
@@ -731,12 +732,17 @@ def own_view(book, today, since_days=30):
             n += 1
             mkt += mkt_won
             own += mkt_won if model_away == mkt_away else not mkt_won
+            if model_away != mkt_away:              # the games where I would differ
+                lg_ = k.split(":")[0]
+                a_, n_ = split_rec.get(lg_, (0, 0))
+                split_rec[lg_] = (a_ + (not mkt_won), n_ + 1)
         elif e.get("status") == "open" and d == today and model_away != mkt_away and len(teams) == 2:
             split.append(dict(league=k.split(":")[0], match=e.get("matchup"), own=teams[0] if model_away else teams[1],
                               own_p=round(100 * (h["p_model_away"] if model_away else 1 - h["p_model_away"])),
                               market=teams[0] if mkt_away else teams[1],
                               market_p=round(100 * (h["p_market_away"] if mkt_away else 1 - h["p_market_away"]))))
-    return dict(n=n, own=own, market=mkt, since=since, today=sorted(split, key=lambda x: x["league"]))
+    return dict(n=n, own=own, market=mkt, since=since, today=sorted(split, key=lambda x: x["league"]),
+                splits=[dict(league=k, mine=a_, n=n_) for k, (a_, n_) in sorted(split_rec.items(), key=lambda x: -x[1][1])])
 
 
 def _tip_min(tip):
