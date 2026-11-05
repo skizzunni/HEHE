@@ -8898,9 +8898,9 @@
    }
   },
   "clv": {
-   "avg": 1.96,
-   "beat": 69.2,
-   "n": 13
+   "avg": 1.56,
+   "beat": 64.3,
+   "n": 14
   },
   "day": "2026-11-04",
   "ladder": "Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.",
@@ -8922,8 +8922,8 @@
    "blowout": 45,
    "close game": 110,
    "coin flip": 49,
-   "favourite lost": 130,
-   "price moved against it": 30,
+   "favourite lost": 131,
+   "price moved against it": 31,
    "upset": 55
   },
   "losses": [
@@ -8976,6 +8976,23 @@
      "close game"
     ],
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 73% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "bra",
+    "match": "VAS @ CAP",
+    "pick": "Athletico-PR",
+    "price": "-250",
+    "said": 66,
+    "score": {
+     "Athletico-PR": 1,
+     "Vasco da Gama": 3
+    },
+    "tags": [
+     "favourite lost",
+     "price moved against it (4 pts)"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 price moved against it (4 pts)"
    }
   ],
   "lottery": [
@@ -9029,14 +9046,22 @@
    }
   ],
   "picks": {
-   "hit": 76.9,
-   "lost": 3,
-   "n": 13,
-   "roi": -5.1,
-   "said": 77.2,
+   "hit": 71.4,
+   "lost": 4,
+   "n": 14,
+   "roi": -11.9,
+   "said": 76.4,
    "won": 10
   },
   "picks_by_league": {
+   "bra": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 66.0,
+    "won": 0
+   },
    "efl1": {
     "hit": 66.7,
     "lost": 1,
@@ -9092,18 +9117,18 @@
    "won": 1
   },
   "strong": {
-   "hit": 76.9,
-   "lost": 3,
-   "n": 13,
-   "roi": -5.1,
-   "said": 77.2,
+   "hit": 71.4,
+   "lost": 4,
+   "n": 14,
+   "roi": -11.9,
+   "said": 76.4,
    "won": 10
   },
   "stuck": [],
   "sweep": {
    "broke_on": "ucl Liverpool at 83%",
-   "lost": 3,
-   "open": 39,
+   "lost": 4,
+   "open": 38,
    "won": 10
   },
   "vs_market_14d": {
@@ -9111,10 +9136,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.5,
-    "lost": 234,
-    "n": 955,
-    "roi": 1.4,
+    "hit": 75.4,
+    "lost": 235,
+    "n": 956,
+    "roi": 1.3,
     "said": 70.9,
     "won": 721
    }
