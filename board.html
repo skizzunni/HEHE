@@ -1393,6 +1393,16 @@ function lockOfDay(){
 }
 // before 8 AM: the 5 legs the ladder would take from the Locks card as it
 // stands now (a preview; the ticket is whatever the 8 AM card holds)
+// how far the bank is from $1 to the target, on a log scale: each step of
+// the bar is the same multiple, so $100 sits half way to $10,000
+function ladderBar(bank, target, money){
+  if(!bank || !target || target <= 1) return '';
+  const f = Math.max(0, Math.min(1, Math.log(Math.max(bank, 1)) / Math.log(target)));
+  return '<div class="lbar" style="margin:8px 0 2px;height:10px;border-radius:5px;background:color-mix(in srgb, currentColor 15%, transparent)">'
+    + '<div style="height:100%;border-radius:5px;width:' + (100 * f).toFixed(1) + '%;background:var(--good, #2e7d32)"></div></div>'
+    + '<p class="note" style="margin-top:2px">' + money(bank) + ' of ' + money(target) + ' &middot; ' + Math.round(100 * f)
+    + '% of the way, counted in doublings (' + (Math.log2(Math.max(bank, 1))).toFixed(1) + ' of ' + Math.log2(target).toFixed(1) + ')</p>';
+}
 // the ladder's leg count (ladder.choose): of the top 3..8 legs, the slice
 // whose chance raised to the wins still needed is best
 function ladderK(sorted, bank, target){
@@ -1490,6 +1500,7 @@ function ladderHTML(){
     + 'A win rolls everything into tomorrow; one loss ends the run and the next day starts again at $1. Started '
     + esc(X.start) + '. Run ' + Math.max(X.runs, 1) + ', bank <b>' + money(X.bank) + '</b>'
     + (X.streak ? ', ' + X.streak + ' win' + (X.streak > 1 ? 's' : '') + ' in a row' : '') + '; best so far ' + money(X.best) + '.</p>'
+    + ladderBar(X.bank, X.target, money)
     + (T ? '<ul class="betlegs">' + T.legs.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> &middot; '
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')

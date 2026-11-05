@@ -3927,3 +3927,5 @@ of 168 (82%) vs 76% priced; moved against 48 of 81 (59%) vs 72%. Study, still no
 against picks hit 84% (16/19) before 10-22 and 59% (48/81) after; at three split dates the early
 part beats or matches its price and the late part trails by 12-20 points -- not stable yet, so it
 stays a caution (2026-11-05).
+Ladder card: a progress bar from $1 to $10,000 on a log scale ($100 is half way), with the bank's
+doublings so far ($9.57: 3.3 of 13.3) (`ladderBar`) (2026-11-05).

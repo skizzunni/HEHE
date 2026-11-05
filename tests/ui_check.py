@@ -148,6 +148,7 @@ PROBE = """<script>setTimeout(function(){
                                  {league: "nba", match: "CLE @ OKC", favourite: "Oklahoma City Thunder", dog: "CLE", chance: 45, result: "lost"}]});
   out.met = [ladderProgress([{status: "won"}, {status: "won"}, {status: "won"}, {status: "open", so_far: 4, line: "2+", live: "4th"}, {status: "open", so_far: 3, line: "6+", live: "2nd"}]),
              ladderProgress([{status: "won"}, {status: "open", label: "Over 205.5 points", live_score: "A 110 - B 100"}])];
+  out.lbar = [ladderBar(9.57, 10000, function(v){return "$" + v.toFixed(2)}), ladderBar(100, 10000, function(v){return "$" + v.toFixed(2)})];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -344,6 +345,9 @@ def main():
     mt = new.get("met") or ["", ""]
     if not ("3 of 5 won, 1 cleared waiting on the final, 1 to play (2 live now)" in mt[0] and "1 of 2 won, 1 cleared waiting on the final</b>" in mt[1]):
         fails.append("cleared legs wrong: " + repr(mt))
+    lb = new.get("lbar") or ["", ""]
+    if not ("width:24.5%" in lb[0] and "$9.57 of $10000.00 &middot; 25% of the way, counted in doublings (3.3 of 13.3)" in lb[0] and "width:50.0%" in lb[1]):
+        fails.append("ladder bar wrong: " + repr(lb)[:300])
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)
