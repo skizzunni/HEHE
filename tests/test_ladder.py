@@ -48,6 +48,14 @@ class Ladder(unittest.TestCase):
         self.assertEqual(len(ladder.choose(b, "2026-11-04")), 5)       # before the change: 5
         self.assertEqual(ladder.choose(book({"2026-11-05": W5[:2]}), "2026-11-05"), [])   # under 3: no ticket
 
+    def test_page_and_ladder_choose_the_same_count(self):
+        # board.html's ladderK picks 7 of ten 97% legs at -1000 (tests/ui_check.py)
+        b = {"days": {"2026-11-05": []}, "legs": {}}
+        for i in range(10):
+            b["legs"][f"k{i}"] = dict(label=f"k{i}", price="-1000", p=0.97, status="open")
+            b["days"]["2026-11-05"].append(f"k{i}")
+        self.assertEqual(len(ladder.choose(b, "2026-11-05")), 7)
+
     def test_void_leg_drops_out_and_open_day_stops(self):
         b = book({"2026-11-03": W5[:4] + [("e", 0.8, "void")], "2026-11-04": W5[:4] + [("e", 0.8, "open")]})
         runs = ladder.replay(b, start="2026-11-03")

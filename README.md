@@ -3933,3 +3933,7 @@ doublings so far ($9.57: 3.3 of 13.3) (`ladderBar`) (2026-11-05).
 underdog +points 53/58. Study, nothing adopted: underdog +points legs hit 27/29 then 26/29 (about
 their 90% stated) -- as reliable as the rest; team totals 93.6% then 93.9% against ~90% stated,
 above in both halves but about 1 SE on 96 legs; win / or draw 87% then 84% against 84% (2026-11-05).
+Tests: the page's ladder leg-count chooser (`ladderK`) is checked, and checked to agree with
+`ladder.choose`. Study, kept as is: choosing the ladder's 3-8 legs from Locks and Safe Locks together
+(one per game) won 5/10 then 8/11 days but at ~1.3x / ~1.2x -- reach chance 2.9e-11 / 1.7e-07 against
+Locks only 3.1e-05 / 2.8e-03 (2026-11-05).

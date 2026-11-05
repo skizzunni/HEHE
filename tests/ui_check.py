@@ -149,6 +149,9 @@ PROBE = """<script>setTimeout(function(){
   out.met = [ladderProgress([{status: "won"}, {status: "won"}, {status: "won"}, {status: "open", so_far: 4, line: "2+", live: "4th"}, {status: "open", so_far: 3, line: "6+", live: "2nd"}]),
              ladderProgress([{status: "won"}, {status: "open", label: "Over 205.5 points", live_score: "A 110 - B 100"}])];
   out.lbar = [ladderBar(9.57, 10000, function(v){return "$" + v.toFixed(2)}), ladderBar(100, 10000, function(v){return "$" + v.toFixed(2)})];
+  var kl = function(n, p, pr){ var a = []; for (var i = 0; i < n; i++) a.push({p: p, price: pr}); return a; };
+  out.ladderK = [ladderK(kl(5, 0.8, "-200"), 1, 10000).length, ladderK(kl(2, 0.8, "-200"), 1, 10000).length,
+                 ladderK(kl(10, 0.97, "-1000"), 1, 10000).length];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -349,6 +352,9 @@ def main():
     lb = new.get("lbar") or ["", ""]
     if not ("width:24.5%" in lb[0] and "$9.57 of $10000.00 &middot; 25% of the way, counted in doublings (3.3 of 13.3)" in lb[0] and "width:50.0%" in lb[1]):
         fails.append("ladder bar wrong: " + repr(lb)[:300])
+    lk = new.get("ladderK") or []
+    if lk[:2] != [3, 0] or not (3 <= (lk[2] if len(lk) > 2 else 0) <= 8):
+        fails.append("ladder leg count chooser wrong (want 3 legs, none under 3, and 3..8): " + repr(lk))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)
