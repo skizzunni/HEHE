@@ -3961,3 +3961,6 @@ Ladder prop legs also show every graded prop in the same league and market at a 
 receiving-yards props. Study, nothing adopted: NFL receiving yards 80%+ hit 84.8% then 85.4% against
 85% stated (147); receptions 80%+ 89.6% then 95.7% against 85.1% (71) -- above in both halves but
 under the bar (2026-11-05).
+`tools/check.sh`: unit tests, the page check, the live-data-line guard and a bot-data-file guard in one
+step that exits non-zero on any failure -- commits now go through it (`tools/check.sh && git commit`)
+after a failing test slipped through a pipe into tail (2026-11-05).
