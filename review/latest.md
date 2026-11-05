@@ -1,15 +1,16 @@
 # Review 2026-11-05
 
-Picks 14-4 (77.8% vs 75.1% claimed, ROI -2.5%).
+Picks 21-5 (80.8% vs 75.7% claimed, ROI +1.2%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
-Strong calls 14-4 (77.8% vs 75.1% claimed).
-Closing line value: +1.09 points on 18 picks; beat the close on 72.2%.
-Board sweep: 14-4, 42 open -- broken (first loss: uecl Trabzonspor at 67%).
+Strong calls 21-5 (80.8% vs 75.7% claimed).
+Closing line value: +1.3 points on 26 picks; beat the close on 73.1%.
+Board sweep: 21-5, 34 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
 - LOST uecl Hajduk Split at 74% (-350), Hajduk Split 0 - Lincoln Red Imps 1: margin 1 · the book had my side favoured too · called at 74% · favourite lost · close game
-Why picks lost (14 days): favourite lost 138, close game 115, upset 55, coin flip 49, blowout 44, price moved against it 34.
+- LOST uel SK Sturm Graz at 83% (-750), NK Celje 3 - SK Sturm Graz 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
+Why picks lost (14 days): favourite lost 138, close game 116, upset 56, coin flip 49, blowout 44, price moved against it 34.
 Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
 - LOST efl1 Middlesbrough at 78% (-500), Middlesbrough 0 - Wrexham 2: margin 2 · the book had my side favoured too · called at 78% · upset
@@ -33,9 +34,9 @@ Lottery 10k: open (0/6 legs won)
 Lottery 10k+25: open (0/11 legs won)
 Lottery 10k+50: open (0/11 legs won)
 Lottery 10k+100: open (0/11 legs won)
-Lottery 100: open (0/5 legs won)
+Lottery 100: lost (1/5 legs won, killed by Claudio Echeverri: Anytime Goalscorer)
 Ladder-consistency props (all time): 1585/1896 won (83.6%) vs 86.4% fair, 87.4% price.
-Props 3/3 vs 80.1% claimed.
+Props 5/6 vs 64.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=121), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=133)

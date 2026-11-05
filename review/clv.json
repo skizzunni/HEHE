@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 64.7,
-  "brier_close": 0.1697,
-  "brier_published": 0.1748,
+  "beat_close_pct": 64.3,
+  "brier_close": 0.1683,
+  "brier_published": 0.1734,
   "dates": [
    "2026-10-31",
    "2026-11-05"
   ],
-  "logloss_close": 0.5136,
-  "logloss_published": 0.5267,
-  "mean_clv_pts": 1.02,
+  "logloss_close": 0.5107,
+  "logloss_published": 0.5235,
+  "mean_clv_pts": 0.98,
   "n": 300
  },
  "market_is_model": true,
@@ -23217,6 +23217,60 @@
    "published": 0.7,
    "won": 1
   },
+  "uecl:401915818": {
+   "call": false,
+   "close": 0.676,
+   "clv": -0.4,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.68,
+   "won": 1
+  },
+  "uecl:401915819": {
+   "call": false,
+   "close": 0.7459,
+   "clv": -10.41,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.85,
+   "won": 1
+  },
+  "uecl:401915820": {
+   "call": false,
+   "close": 0.797,
+   "clv": 1.7,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.78,
+   "won": 1
+  },
+  "uecl:401915821": {
+   "call": false,
+   "close": 0.8349,
+   "clv": -0.51,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.84,
+   "won": 1
+  },
+  "uecl:401915823": {
+   "call": false,
+   "close": 0.8099,
+   "clv": 0.99,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.8,
+   "won": 1
+  },
+  "uecl:401915824": {
+   "call": false,
+   "close": 0.683,
+   "clv": 2.3,
+   "day": "2026-11-05",
+   "league": "uecl",
+   "published": 0.66,
+   "won": 1
+  },
   "uecl:401915825": {
    "call": false,
    "close": 0.6669,
@@ -23385,6 +23439,24 @@
    "clv": 1.41,
    "day": "2026-10-22",
    "league": "uecl",
+   "published": 0.82,
+   "won": 1
+  },
+  "uel:401915524": {
+   "call": false,
+   "close": 0.8336,
+   "clv": 0.36,
+   "day": "2026-11-05",
+   "league": "uel",
+   "published": 0.83,
+   "won": 0
+  },
+  "uel:401915525": {
+   "call": false,
+   "close": 0.7849,
+   "clv": -3.51,
+   "day": "2026-11-05",
+   "league": "uel",
    "published": 0.82,
    "won": 1
   },
@@ -24597,5 +24669,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-05T21:51+00:00"
+ "updated": "2026-11-05T21:55+00:00"
 }
