@@ -724,9 +724,12 @@ function safeNote(r){
 // the price's move since the pick was first called (rebuild_board.move_of)
 function moveNote(r){
   if(r.mv === null || r.mv === undefined) return '';
+  const M = ((D.results || {}).moves || {})[r.mv > 0 ? 'for' : 'against'];
+  const rec = M && M.n ? ' Last 14 days, picks like this won ' + M.won + ' of ' + M.n + ' (' + Math.round(100 * M.won / M.n)
+    + '%) against ' + M.price + '% priced.' : '';
   return r.mv > 0
-    ? '<div class="sbn"><b>Money moving my way</b> (+' + r.mv + ' pts since called): picks like this hit 79&ndash;84% against ~72% stated.</div>'
-    : '<div class="sbn"><b>Price moved against it</b> (' + r.mv + ' pts since called): check the news before betting.</div>';
+    ? '<div class="sbn"><b>Money moving my way</b> (+' + r.mv + ' pts since called).' + rec + '</div>'
+    : '<div class="sbn"><b>Price moved against it</b> (' + r.mv + ' pts since called): check the news before betting.' + rec + '</div>';
 }
 // the ESPN injury report for both teams (injuries.py): who is out on my
 // pick's side and on the other side

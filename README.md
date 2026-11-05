@@ -3922,3 +3922,8 @@ Upset watch keeps today's underdogs after they settle, marked UPSET or not, with
 many came in against how many their chances said to expect (2026-11-05).
 Ladder progress counts open legs that have already met their line ("3 of 5 won, 2 cleared waiting on
 the final") -- a prop's stat so far, or an over's live total past the line (`legMet`) (2026-11-05).
+Price-move badges carry their live 14-day record (`board_payload` moves): moved toward the pick 137
+of 168 (82%) vs 76% priced; moved against 48 of 81 (59%) vs 72%. Study, still no rule: moved-
+against picks hit 84% (16/19) before 10-22 and 59% (48/81) after; at three split dates the early
+part beats or matches its price and the late part trails by 12-20 points -- not stable yet, so it
+stays a caution (2026-11-05).

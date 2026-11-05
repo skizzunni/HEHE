@@ -839,6 +839,21 @@ def board_payload(limit=40):
                                   conf=e.get("conf"), price=e.get("price"), score=e.get("scores") or {},
                                   why=e.get("diagnosis") or "", tags=loss_tags(e)) for e in _yl])
     own = own_view(book, today)
+    # picks whose price moved 3+ points between the call and the start, last
+    # 14 days: how they did against their final price (the badge's record)
+    moves = {}
+    for e in done:
+        if not (_since_m := (dt.date.fromisoformat(today) - dt.timedelta(days=14)).isoformat()) <= (day_of(e) or "") < today:
+            continue
+        a_, b_ = _implied(e.get("first_price")), _implied(e.get("price"))
+        if a_ is None or b_ is None or abs(b_ - a_) < 0.03:
+            continue
+        k_ = "for" if b_ > a_ else "against"
+        m_ = moves.setdefault(k_, [0, 0, 0.0])
+        m_[0] += 1
+        m_[1] += e["status"] == "won"
+        m_[2] += b_
+    moves = {k: dict(n=n, won=w, price=round(100 * p / n, 1)) for k, (n, w, p) in moves.items()}
     # why the last 14 days' losses happened, counted (loss_tags)
     _since = (dt.date.fromisoformat(today) - dt.timedelta(days=14)).isoformat()
     _rs = {}
@@ -909,7 +924,7 @@ def board_payload(limit=40):
                 calls_top=_calls.TOP_N,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance, own=own, upsets=upset_view(book, today), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
+                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))

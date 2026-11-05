@@ -215,7 +215,7 @@ def render(captured_ms, health=None):
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
                   + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + ',"ladder":' + json.dumps(LADDER) + ',"every_game":' + json.dumps(EVERY) + ',', 1)
     s = s.replace('"live":[],"feed":', '"live":[{"pick":"X","winning":false},{"pick":"Y","winning":true}],"feed":', 1)
-    s = s.replace('"results":{', '"results":{"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
+    s = s.replace('"results":{', '"results":{"moves":{"against":{"n":81,"won":48,"price":71.9}},"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -296,7 +296,8 @@ def main():
     if not ("my side: Giannis Antetokounmpo (Day-To-Day)" in ij[0] and "their side: Brandon Ingram (Out), Bradley Beal (Out), A (Out), B (Out) +1" in ij[0]) or ij[1] or ij[2]:
         fails.append("injury note wrong: " + repr(ij))
     mv = new.get("mv") or ["", "", "x", "x"]
-    if not ("Money moving my way</b> (+5 pts" in mv[0] and "Price moved against it</b> (-4 pts" in mv[1]) or mv[2] or mv[3]:
+    if not ("Money moving my way</b> (+5 pts" in mv[0] and "Price moved against it</b> (-4 pts" in mv[1]
+            and "won 48 of 81 (59%) against 71.9% priced" in mv[1]) or mv[2] or mv[3]:
         fails.append("move note wrong: " + repr(mv))
     yd = new.get("yday") or ["", "x"]
     if not all(x in yd[0] for x in ("Yesterday (2026-11-03): 34&ndash;1", "EFL1 Charlton Athletic at 70% (-310)",
