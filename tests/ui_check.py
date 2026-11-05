@@ -154,6 +154,8 @@ PROBE = """<script>setTimeout(function(){
                  ladderK(kl(10, 0.97, "-1000"), 1, 10000).length];
   out.lopts = ladderOptions({legs: [1, 2, 3], options: [{legs: 3, prob: 0.5, pays: 1.9, need: 12, reach: 0.000244}, {legs: 5, prob: 0.3, pays: 3.0, need: 8, reach: 0.0000656}]});
   out.teamTag = [teamTag({t: "teamunder"}), teamTag({spec: {t: "teamover"}}), teamTag({t: "under"}), teamTag({})];
+  out.egOrder = [egOrder([{p: 0.9, tip: "10:00 PM"}, {p: 0.95, tip: "7:00 PM"}, {p: 0.92, tip: "12:45 PM"}], "time").map(function(x){return x.tip}).join(","),
+                 egOrder([{p: 0.9, tip: "10:00 PM"}, {p: 0.95, tip: "7:00 PM"}], "chance").map(function(x){return x.p}).join(",")];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -296,7 +298,7 @@ def main():
         fails.append("oneIn wrong: " + repr(new.get("oneIn")))
     eg = new.get("everyGame", "")
     if not all(x in eg for x in ("Every game: its safest bet (3 games, 1–0 so far)", "Live: 2nd 5:12 · C 1 - D 1", "Pays more at Kalshi: 88¢ (-800 after fee), $10 wins $1.25 vs $1.11 at FanDuel", "386 of 427", "90.4%",
-                                   "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89.", "By type: game totals 137/149, underdog +points 53/58.", "Sweep odds: all 3 win 74%; the top 3 win 74%. The whole list has swept on 0 of 14 days.", "$10 on each (3 bets, $30 staked): +$2.28 if every one wins; expected −$0.77 from the stated chances.", "set at 8 AM")):
+                                   "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89.", "By type: game totals 137/149, underdog +points 53/58.", "Sweep odds: all 3 win 74%; the top 3 win 74%. The whole list has swept on 0 of 14 days.", "$10 on each (3 bets, $30 staked): +$2.28 if every one wins; expected −$0.77 from the stated chances.", "set at 8 AM", "By start time")):
         fails.append("every game section wrong: " + eg)
     ow = new.get("own", "")
     if not all(x in ow for x in ("mine 232 right (60.7%)", "260 (68.1%)", "The market is ahead", "I take LAC</b> (60%)", "Where we disagreed, I was right: NCAAF 8 of 25, NBA 5 of 23.")):
@@ -365,6 +367,8 @@ def main():
     tt = new.get("teamTag") or ["", "", "x", "x"]
     if not ("team total</span>" in tt[0] and "team total</span>" in tt[1]) or tt[2] or tt[3]:
         fails.append("team total tag wrong: " + repr(tt))
+    if new.get("egOrder") != ["12:45 PM,7:00 PM,10:00 PM", "0.95,0.9"]:
+        fails.append("every game sort wrong: " + repr(new.get("egOrder")))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)

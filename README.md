@@ -3964,3 +3964,5 @@ under the bar (2026-11-05).
 `tools/check.sh`: unit tests, the page check, the live-data-line guard and a bot-data-file guard in one
 step that exits non-zero on any failure -- commits now go through it (`tools/check.sh && git commit`)
 after a failing test slipped through a pipe into tail (2026-11-05).
+"Every game" can be sorted by chance or by start time (pills; remembered for the visit) to follow
+the day in order (`egOrder`) (2026-11-05).

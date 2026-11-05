@@ -1250,6 +1250,8 @@ let LKDAY = null;
 // two cards on one tab: the regular Locks (-400 .. -120) and Safe Locks,
 // heavy favourites (-2000 .. -500) that all hit far more often and pay less
 let LKMODE = "regular";
+let EGSORT = "chance";      // Every game list: by chance, or by start time
+try { EGSORT = sessionStorage.getItem("egsort") || "chance"; } catch (e) {}
 try { LKMODE = sessionStorage.getItem("lkmode") || "regular"; } catch (e) {}
 // one leg, the same everywhere: what to bet, its price and chance, where it
 // is, and how it settled
@@ -1565,6 +1567,13 @@ function everyPays(G){
   return '<p class="note"><b>$10 on each</b> (' + L.length + ' bets, $' + (10 * L.length) + ' staked): +$' + win.toFixed(2)
     + ' if every one wins; expected ' + (ev >= 0 ? '+' : '&minus;') + '$' + Math.abs(ev).toFixed(2) + ' from the stated chances.</p>';
 }
+// the Every game list in the order asked: likeliest first, or by start
+// time (earliest first; unreadable times last), ties by chance
+function egOrder(G, how){
+  const mins = t => { const m = /(\d+):(\d+)\s*(AM|PM)/i.exec(t || ''); return m ? (+m[1] % 12 + (/PM/i.test(m[3]) ? 12 : 0)) * 60 + +m[2] : 9999; };
+  const L = (G || []).slice();
+  return how === 'time' ? L.sort((a, b) => mins(a.tip) - mins(b.tip) || b.p - a.p) : L.sort((a, b) => b.p - a.p);
+}
 // the chance every leg on the list wins, and its five likeliest (each leg's
 // own chance multiplied: separate games), beside how many days have swept
 function everySweep(G, R){
@@ -1578,7 +1587,8 @@ function everySweep(G, R){
 function everyGameHTML(){
   const X = D.every_game;
   if(!X || !(X.today || []).length) return '';
-  const G = X.today, R = X.record || {};
+  const R = X.record || {};
+  const G = egOrder(X.today, EGSORT);
   const w = G.filter(g => g.status === 'won').length, l = G.filter(g => g.status === 'lost').length;
   const res = s => s === 'won' ? '<span class="wl won">WON</span>' : s === 'lost' ? '<span class="wl lost">LOST</span>'
     : s === 'void' ? '<span class="wl">VOID</span>' : '';
@@ -1590,7 +1600,10 @@ function everyGameHTML(){
         + R.days + ' days; ' + (R.roi >= 0 ? '+' : '') + R.roi + '% per $1 at the price. These are short prices: a win pays little.'
         + ((R.by_league || []).length > 1 ? ' By league: ' + R.by_league.slice(0, 6).map(x => esc(x.league) + ' ' + x.won + '/' + x.n).join(', ') + '.' : '')
         + ((R.by_type || []).length > 1 ? ' By type: ' + R.by_type.map(x => esc(x.type) + ' ' + x.won + '/' + x.n).join(', ') + '.' : '') : '')
-    + '</p>' + everySweep(G, R) + '<ul class="betlegs">' + G.map(g => '<li>' + esc(g.label) + teamTag(g) + ' <b>' + esc(g.price || '') + '</b> &middot; '
+    + '</p>' + everySweep(G, R)
+    + '<p><span class="pills"><button type="button" data-egsort="chance" aria-pressed="' + (EGSORT !== 'time') + '">By chance</button>'
+    + '<button type="button" data-egsort="time" aria-pressed="' + (EGSORT === 'time') + '">By start time</button></span></p>'
+    + '<ul class="betlegs">' + G.map(g => '<li>' + esc(g.label) + teamTag(g) + ' <b>' + esc(g.price || '') + '</b> &middot; '
       + (100 * g.p).toFixed(0) + '% &middot; ' + esc(g.match || '') + ' ' + res(g.status)
       + (g.score && g.status !== 'open' ? '<div class="sbn">' + esc(g.score) + '</div>'
          : g.live ? '<div class="sbn"><b>Live:</b> ' + esc(g.live) + ' &middot; ' + esc(g.live_score || '') + '</div>' + paceNote(g)
@@ -3518,6 +3531,12 @@ document.addEventListener("click", e => {
   }
   const lkd = e.target.closest("[data-lkday]");
   if(lkd){ LKDAY = lkd.getAttribute("data-lkday"); render(); return; }
+  const egs = e.target.closest("[data-egsort]");
+  if(egs){
+    EGSORT = egs.getAttribute("data-egsort");
+    try { sessionStorage.setItem("egsort", EGSORT); } catch (e2) {}
+    render(); return;
+  }
   const lkm = e.target.closest("[data-lkmode]");
   if(lkm){
     LKMODE = lkm.getAttribute("data-lkmode");
