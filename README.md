@@ -3918,3 +3918,5 @@ on cards 10-17 to 11-03 against a fixed 5: reach chance 3.1e-05 vs 1.3e-06, then
 2.6e-04 by date half (it chose 3 legs on 18 of 20 days). Fixed counts for comparison: 3 legs
 5/10 then 6/10 days at ~1.9x; 8 legs 2/9 and 2/9 at ~5.9x. Also: the value-bets leave-one-out
 test no longer depends on the live scoreboard (Kalshi is now its proven best source) (2026-11-05).
+Upset watch keeps today's underdogs after they settle, marked UPSET or not, with a line for how
+many came in against how many their chances said to expect (2026-11-05).

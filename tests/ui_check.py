@@ -143,7 +143,9 @@ PROBE = """<script>setTimeout(function(){
   out.soFar = [soFar({so_far: 2, line: "4+", market: "Assists"}), soFar({so_far: 3, line: "2+", market: "Assists"}), soFar({line: "2+"})];
   out.safe = [safeNote({mc: 54, safe: {label: "Ottawa Senators under 5.5 goals", price: "-1450", p: 0.89}}), safeNote({mc: 80, safe: {label: "Over 204.5 points", price: "-2000", p: 0.9}}), safeNote({mc: 54})];
   out.upset = upsetHTML({min: 40, record: {n: 797, won: 295, said: 45.4, beating: false, halves: [{n: 685, won: 252, said: 45.5}, {n: 112, won: 43, said: 45.1}]},
-                         today: [{league: "nhl", match: "OTT @ BUF", favourite: "Buffalo Sabres", dog: "OTT", chance: 46, tip: "7:30 PM", signals: ["my model picks them", "price moving their way"]}]});
+                         today: [{league: "nhl", match: "OTT @ BUF", favourite: "Buffalo Sabres", dog: "OTT", chance: 46, tip: "7:30 PM", signals: ["my model picks them", "price moving their way"], result: "won"},
+                                 {league: "nba", match: "PHI @ DET", favourite: "Detroit Pistons", dog: "PHI", chance: 45, result: "won"},
+                                 {league: "nba", match: "CLE @ OKC", favourite: "Oklahoma City Thunder", dog: "CLE", chance: 45, result: "lost"}]});
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -334,7 +336,7 @@ def main():
         fails.append("safe note wrong: " + repr(sn))
     up = new.get("upset", "")
     if not all(x in up for x in ("Upset watch", "won <b>37.0% of 797 (price said 45.4%)</b>", "first half 36.8% of 685",
-                                 "Under their price", "<b>OTT</b> 46% &middot; NHL OTT @ BUF", "my model picks them &middot; price moving their way")):
+                                 "Under their price", "<b>OTT</b> 46% &middot; NHL OTT @ BUF", "my model picks them &middot; price moving their way", "Today: 2 of 3 upsets came in</b> (their chances said about 1.4)", "UPSET</span>")):
         fails.append("upset watch wrong: " + up[:400])
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):

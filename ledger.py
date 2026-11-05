@@ -687,13 +687,15 @@ def upset_view(book, today):
         d = e.get("date") or ""
         if e.get("status") in ("won", "lost") and d < today:
             rows.append((d, e["status"] == "lost", 1 - c / 100))
-        elif e.get("status") == "open" and d == today:
+        if d == today and e.get("status") in ("open", "won", "lost"):
             teams = (e.get("matchup") or "").split(" @ ")
             dog = None
             if H and len(teams) == 2:
                 dog = teams[1] if H[-1]["p_market_away"] > 0.5 else teams[0]
             today_.append(dict(league=k.split(":")[0], match=e.get("matchup"), favourite=e["pick"], dog=dog,
                                chance=round(100 - c), tip=e.get("tip"),
+                               result=("open" if e["status"] == "open" else "won" if e["status"] == "lost" else "lost"),
+                               score=e.get("scores") or {},
                                signals=[x for x, on in (("my model picks them", model),
                                                         ("price moving their way", move)) if on]))
     today_.sort(key=lambda x: (-len(x["signals"]), -x["chance"]))

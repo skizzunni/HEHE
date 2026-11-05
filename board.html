@@ -1567,6 +1567,14 @@ function yesterdayHTML(Y){
          + '</span>' : '') + '</p>').join('')
     + '</details></div>';
 }
+// today's underdogs settled so far: how many pulled the upset, against the
+// number their chances said to expect
+function upsetToday(T){
+  const S = T.filter(x => x.result === 'won' || x.result === 'lost');
+  if(!S.length) return '';
+  const w = S.filter(x => x.result === 'won').length, exp = S.reduce((a, x) => a + x.chance / 100, 0);
+  return '<p class="note"><b>Today: ' + w + ' of ' + S.length + ' upsets came in</b> (their chances said about ' + exp.toFixed(1) + ').</p>';
+}
 // Upset watch (ledger.upset_view): every underdog with a real chance, with
 // its signals, and how such underdogs have done against their price
 function upsetHTML(U){
@@ -1578,8 +1586,9 @@ function upsetHTML(U){
       + (R.beating ? '<b>They are beating their price in both halves: consider them.</b>'
                    : 'Under their price, so the board still takes the favourite or the safest line; they move onto it once they beat their price in both halves.')
       : '') + '</p>'
-    + (T.length ? '<ul class="betlegs">' + T.slice(0, 8).map(x => '<li><b>' + esc(x.dog || ('the other side of ' + x.favourite)) + '</b> '
+    + (T.length ? upsetToday(T) + '<ul class="betlegs">' + T.slice(0, 8).map(x => '<li><b>' + esc(x.dog || ('the other side of ' + x.favourite)) + '</b> '
         + x.chance + '% &middot; ' + esc(String(x.league).toUpperCase()) + ' ' + esc(x.match || '') + (x.tip ? ' &middot; ' + esc(x.tip) : '')
+        + (x.result === 'won' ? ' <span class="wl won">UPSET</span>' : x.result === 'lost' ? ' <span class="wl lost">NO</span>' : '')
         + ((x.signals || []).length ? '<div class="sbn">' + x.signals.map(esc).join(' &middot; ') + '</div>' : '') + '</li>').join('') + '</ul>'
       : '<p class="note">No live underdogs today.</p>')
     + '</div>';
