@@ -3904,3 +3904,8 @@ underdog in close games (<60%) -- underdogs won LESS than their price said in ne
 league and half (NCAAF 13% / 32% vs 45%; MLB 42% vs 46%; NHL 43% vs 46%; NBA 38% vs 46%),
 so the other side is backed with points (e.g. +45.5) through the safest line, not straight up
 (2026-11-05).
+Results tab: "Upset watch" -- every underdog given 40%+ is considered each day: today's live
+underdogs with their signals (my model picks them; price moving their way) and their record against
+their price by date half (`ledger.upset_view`). So far 295 of 797 (37.0%) against 45.4% priced
+(36.8% / 38.4% by half); signals did not help (model-picked 25% of 52, price-moving 38% of 21).
+They join the board only once they beat their price in both halves (2026-11-05).

@@ -663,6 +663,52 @@ def report():
 
 
 # ----------------------------------------------------------- site payload
+UPSET_MIN = 0.40      # an underdog with at least this chance is "live"
+
+
+def upset_view(book, today):
+    """Upset watch: every underdog with a real chance (40%+), considered each
+    day and kept on record. Today's live underdogs with their signals (my
+    price-blind model picks them; the price has moved 3+ points their way),
+    and how all such underdogs have done against their price, by date half.
+    Display and tracking only: they reach the board's picks only once they
+    beat their price in both halves."""
+    rows, today_ = [], []
+    for k, e in book.items():
+        if not record_priced(e) or e.get("dc") or e.get("market_agrees") is False:
+            continue
+        c = e.get("conf")
+        if not isinstance(c, (int, float)) or 1 - c / 100 < UPSET_MIN:
+            continue
+        H = [h for h in e.get("history") or [] if h.get("p_model_away") is not None and h.get("p_market_away") is not None]
+        model = bool(H) and (H[-1]["p_model_away"] > 0.5) != (H[-1]["p_market_away"] > 0.5)
+        a, b = _implied(e.get("first_price")), _implied(e.get("price"))
+        move = a is not None and b is not None and a - b >= 0.03
+        d = e.get("date") or ""
+        if e.get("status") in ("won", "lost") and d < today:
+            rows.append((d, e["status"] == "lost", 1 - c / 100))
+        elif e.get("status") == "open" and d == today:
+            teams = (e.get("matchup") or "").split(" @ ")
+            dog = None
+            if H and len(teams) == 2:
+                dog = teams[1] if H[-1]["p_market_away"] > 0.5 else teams[0]
+            today_.append(dict(league=k.split(":")[0], match=e.get("matchup"), favourite=e["pick"], dog=dog,
+                               chance=round(100 - c), tip=e.get("tip"),
+                               signals=[x for x, on in (("my model picks them", model),
+                                                        ("price moving their way", move)) if on]))
+    today_.sort(key=lambda x: (-len(x["signals"]), -x["chance"]))
+    rec = dict(n=len(rows))
+    if rows:
+        days = sorted({r[0] for r in rows})
+        mid = days[len(days) // 2]
+        def part(S):
+            return dict(n=len(S), won=sum(r[1] for r in S), said=round(100 * sum(r[2] for r in S) / len(S), 1)) if S else None
+        rec.update(part(rows), halves=[part([r for r in rows if r[0] < mid]), part([r for r in rows if r[0] >= mid])])
+        H2 = rec["halves"]
+        rec["beating"] = all(h and h["won"] / h["n"] * 100 > h["said"] for h in H2)
+    return dict(today=today_, record=rec, min=round(100 * UPSET_MIN))
+
+
 def own_view(book, today, since_days=30):
     """My own picks with the prices hidden: each game's side by the model
     alone (ratings, form, home edge -- the history's p_model_away), against
@@ -861,7 +907,7 @@ def board_payload(limit=40):
                 calls_top=_calls.TOP_N,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance, own=own, yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
+                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance, own=own, upsets=upset_view(book, today), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))

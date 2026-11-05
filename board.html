@@ -1546,6 +1546,23 @@ function yesterdayHTML(Y){
          + '</span>' : '') + '</p>').join('')
     + '</details></div>';
 }
+// Upset watch (ledger.upset_view): every underdog with a real chance, with
+// its signals, and how such underdogs have done against their price
+function upsetHTML(U){
+  if(!U) return '';
+  const R = U.record || {}, T = U.today || [];
+  const pc = h => h ? (100 * h.won / h.n).toFixed(1) + '% of ' + h.n + ' (price said ' + h.said + '%)' : '&mdash;';
+  return '<div class="sweep"><h3>Upset watch</h3><p class="note">Every underdog given ' + U.min + '%+ is considered each day and kept on record. '
+    + (R.n ? 'So far they have won <b>' + pc(R) + '</b>: first half ' + pc((R.halves || [])[0]) + ', second half ' + pc((R.halves || [])[1]) + '. '
+      + (R.beating ? '<b>They are beating their price in both halves: consider them.</b>'
+                   : 'Under their price, so the board still takes the favourite or the safest line; they move onto it once they beat their price in both halves.')
+      : '') + '</p>'
+    + (T.length ? '<ul class="betlegs">' + T.slice(0, 8).map(x => '<li><b>' + esc(x.dog || ('the other side of ' + x.favourite)) + '</b> '
+        + x.chance + '% &middot; ' + esc(String(x.league).toUpperCase()) + ' ' + esc(x.match || '') + (x.tip ? ' &middot; ' + esc(x.tip) : '')
+        + ((x.signals || []).length ? '<div class="sbn">' + x.signals.map(esc).join(' &middot; ') + '</div>' : '') + '</li>').join('') + '</ul>'
+      : '<p class="note">No live underdogs today.</p>')
+    + '</div>';
+}
 // My own picks with the prices hidden (ledger.own_view): the model alone
 // against the market, head to head on the same games, and today's games
 // where they disagree -- tracked, not bet, until the model earns it.
@@ -3135,7 +3152,7 @@ function scoreboardHTML(){
         : '')
     + '<div class="rsub">' + live.length + ' in play &middot; ' + (R.today_open || 0)
     + ' still to finish</div></div>';
-  h += yesterdayHTML(R.yesterday) + reasonsHTML(R.loss_reasons) + ownHTML(R.own);
+  h += yesterdayHTML(R.yesterday) + reasonsHTML(R.loss_reasons) + upsetHTML(R.upsets) + ownHTML(R.own);
 
   h += '<p class="rsub">' + (R.excluded_unpriced || 0)
     + ' unpriced picks excluded from the record (all dates).</p>';
