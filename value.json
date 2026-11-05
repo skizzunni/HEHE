@@ -5071,6 +5071,23 @@
    "tip": "9:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909937|away|FanDuel": {
+   "dec": 3.3,
+   "ev": 0.0322,
+   "fair": 0.3128,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909937",
+   "kind": "value",
+   "league": "nba",
+   "match": "MIA @ GS",
+   "price": "+230",
+   "seen": "2026-11-05T06:28:58+00:00",
+   "side": "away",
+   "start": "2026-11-06T03:00Z",
+   "team": "Miami Heat",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909937|sure": {
    "id": "nba:401909937",
    "kind": "sure",
@@ -10834,6 +10851,26 @@
    "payout": 2.12,
    "prob": 0.4765,
    "seen": "2026-11-05T05:13:12+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909937:away": {
+   "ev": 0.0322,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0322,
+     "fair": 0.3128,
+     "id": "nba:401909937",
+     "price": "+230",
+     "side": "away",
+     "spec": null,
+     "team": "Miami Heat"
+    }
+   ],
+   "payout": 3.3,
+   "prob": 0.3128,
+   "seen": "2026-11-05T06:28:58+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
