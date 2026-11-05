@@ -369,7 +369,7 @@
    "status": "graded"
   },
   "arg:401841659": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "River Plate",
    "home": "Aldosivi",
    "league": "arg",
@@ -384,7 +384,7 @@
    "status": "open"
   },
   "arg:401841667": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Belgrano (C\u00f3rdoba)",
    "home": "Gimnasia La Plata",
    "league": "arg",
@@ -479,7 +479,7 @@
    "status": "graded"
   },
   "aut:401881754": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Wolfsberger",
    "home": "Rapid Vienna",
    "league": "aut",
@@ -846,7 +846,7 @@
    "status": "graded"
   },
   "bra:401841300": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Remo",
    "home": "Palmeiras",
    "league": "bra",
@@ -877,7 +877,7 @@
    "status": "graded"
   },
   "bra:401841303": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Bahia",
    "home": "Cruzeiro",
    "league": "bra",
@@ -2370,7 +2370,7 @@
    "status": "graded"
   },
   "epl:401879242": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Coventry City",
    "home": "Everton",
    "league": "epl",
@@ -2593,7 +2593,7 @@
    "status": "graded"
   },
   "esp:401882809": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Alav\u00e9s",
    "home": "Sevilla",
    "league": "esp",
@@ -2838,7 +2838,7 @@
    "status": "graded"
   },
   "facup:401931109": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Leicester City",
    "home": "Oxford City",
    "league": "facup",
@@ -2853,7 +2853,7 @@
    "status": "open"
   },
   "fra:401876405": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Strasbourg",
    "home": "Toulouse",
    "league": "fra",
@@ -3436,7 +3436,7 @@
    "status": "graded"
   },
   "ind:401925416": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Odisha FC",
    "home": "Mohun Bagan Super Giant",
    "league": "ind",
@@ -3649,7 +3649,7 @@
    "status": "graded"
   },
   "ita:401874815": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Udinese",
    "home": "Venezia",
    "league": "ita",
@@ -6868,27 +6868,29 @@
    "status": "graded"
   },
   "nba:401909936": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Orlando Magic",
    "home": "Phoenix Suns",
    "league": "nba",
    "p": {
-    "blend": 0.516,
+    "blend": 0.5155,
     "dk": 0.5229,
-    "kalshi": 0.51,
+    "fd": 0.5092,
+    "kalshi": 0.5149,
     "pm": 0.515
    },
    "start": "2026-11-06T02:00Z",
    "status": "open"
   },
   "nba:401909937": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Miami Heat",
    "home": "Golden State Warriors",
    "league": "nba",
    "p": {
-    "blend": 0.7067,
+    "blend": 0.7116,
     "dk": 0.712,
+    "fd": 0.7264,
     "kalshi": 0.703,
     "pm": 0.705
    },
@@ -6957,13 +6959,14 @@
    "status": "graded"
   },
   "ncaab:401909726": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Wake Forest Demon Deacons",
    "home": "Vanderbilt Commodores",
    "league": "ncaab",
    "p": {
-    "blend": 0.9361,
+    "blend": 0.9407,
     "dk": 0.9415,
+    "fd": 0.9499,
     "kalshi": 0.9307
    },
    "start": "2026-11-05T23:00Z",
@@ -6984,13 +6987,14 @@
    "status": "graded"
   },
   "ncaab:401909739": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Cal Poly Mustangs",
    "home": "Arizona Wildcats",
    "league": "ncaab",
    "p": {
-    "blend": 0.9849,
+    "blend": 0.9875,
     "dk": 0.9897,
+    "fd": 0.9925,
     "kalshi": 0.9802
    },
    "start": "2026-11-06T03:30Z",
@@ -7199,14 +7203,14 @@
    "status": "graded"
   },
   "ncaab:401920685": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "UConn Huskies",
    "home": "Michigan Wolverines",
    "league": "ncaab",
    "p": {
-    "blend": 0.3105,
+    "blend": 0.3139,
     "dk": 0.3239,
-    "kalshi": 0.297
+    "kalshi": 0.3039
    },
    "start": "2026-11-07T01:00Z",
    "status": "open"
@@ -7242,13 +7246,14 @@
    "status": "graded"
   },
   "ncaab:401921133": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Bethune-Cookman Wildcats",
    "home": "Texas Tech Red Raiders",
    "league": "ncaab",
    "p": {
-    "blend": 0.9795,
+    "blend": 0.9831,
     "dk": 0.9789,
+    "fd": 0.9901,
     "kalshi": 0.9802
    },
    "start": "2026-11-06T02:00Z",
@@ -7299,13 +7304,14 @@
    "status": "graded"
   },
   "ncaab:401925754": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Toledo Rockets",
    "home": "Michigan State Spartans",
    "league": "ncaab",
    "p": {
-    "blend": 0.9795,
+    "blend": 0.9817,
     "dk": 0.9789,
+    "fd": 0.9861,
     "kalshi": 0.9802
    },
    "start": "2026-11-06T01:00Z",
@@ -7748,13 +7754,14 @@
    "status": "graded"
   },
   "ncaaf:401856855": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "TCU Horned Frogs",
    "home": "Arizona Wildcats",
    "league": "ncaaf",
    "p": {
-    "blend": 0.7334,
+    "blend": 0.7282,
     "dk": 0.7352,
+    "fd": 0.7128,
     "kalshi": 0.73,
     "pm": 0.735
    },
@@ -7982,13 +7989,14 @@
    "status": "graded"
   },
   "ncaaf:401858288": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Virginia Tech Hokies",
    "home": "SMU Mustangs",
    "league": "ncaaf",
    "p": {
-    "blend": 0.6664,
+    "blend": 0.6648,
     "dk": 0.6707,
+    "fd": 0.6601,
     "kalshi": 0.6634,
     "pm": 0.665
    },
@@ -8221,13 +8229,14 @@
    "status": "graded"
   },
   "ncaaf:401858510": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Nebraska Cornhuskers",
    "home": "Illinois Fighting Illini",
    "league": "ncaaf",
    "p": {
-    "blend": 0.3562,
+    "blend": 0.359,
     "dk": 0.3572,
+    "fd": 0.3674,
     "kalshi": 0.3564,
     "pm": 0.355
    },
@@ -8541,13 +8550,14 @@
    "status": "graded"
   },
   "ncaaf:401862817": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "UTSA Roadrunners",
    "home": "Florida Atlantic Owls",
    "league": "ncaaf",
    "p": {
-    "blend": 0.2982,
+    "blend": 0.3013,
     "dk": 0.2957,
+    "fd": 0.3105,
     "kalshi": 0.3039,
     "pm": 0.295
    },
@@ -8555,13 +8565,14 @@
    "status": "open"
   },
   "ncaaf:401862818": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "South Florida Bulls",
    "home": "East Carolina Pirates",
    "league": "ncaaf",
    "p": {
-    "blend": 0.5511,
+    "blend": 0.5499,
     "dk": 0.5536,
+    "fd": 0.5464,
     "kalshi": 0.5446,
     "pm": 0.555
    },
@@ -8676,13 +8687,14 @@
    "status": "graded"
   },
   "ncaaf:401864533": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "New Mexico Lobos",
    "home": "Nevada Wolf Pack",
    "league": "ncaaf",
    "p": {
-    "blend": 0.2269,
+    "blend": 0.2257,
     "dk": 0.223,
+    "fd": 0.222,
     "kalshi": 0.2277,
     "pm": 0.23
    },
@@ -8957,13 +8969,14 @@
    "status": "graded"
   },
   "ncaaf:401869964": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "James Madison Dukes",
    "home": "Southern Miss Golden Eagles",
    "league": "ncaaf",
    "p": {
-    "blend": 0.162,
+    "blend": 0.161,
     "dk": 0.1544,
+    "fd": 0.1578,
     "kalshi": 0.1667,
     "pm": 0.165
    },
@@ -9650,13 +9663,14 @@
    "status": "graded"
   },
   "nfl:401873037": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Jacksonville Jaguars",
    "home": "Baltimore Ravens",
    "league": "nfl",
    "p": {
-    "blend": 0.1853,
+    "blend": 0.185,
     "dk": 0.1827,
+    "fd": 0.184,
     "kalshi": 0.1881,
     "pm": 0.185
    },
@@ -11216,13 +11230,14 @@
    "status": "graded"
   },
   "nhl:401892648": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Utah Mammoth",
    "home": "Montreal Canadiens",
    "league": "nhl",
    "p": {
-    "blend": 0.4743,
+    "blend": 0.475,
     "dk": 0.4727,
+    "fd": 0.4773,
     "kalshi": 0.4752,
     "pm": 0.475
    },
@@ -11230,13 +11245,14 @@
    "status": "open"
   },
   "nhl:401892649": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Vegas Golden Knights",
    "home": "Detroit Red Wings",
    "league": "nhl",
    "p": {
-    "blend": 0.4334,
+    "blend": 0.4341,
     "dk": 0.4339,
+    "fd": 0.436,
     "kalshi": 0.4314,
     "pm": 0.435
    },
@@ -11244,13 +11260,14 @@
    "status": "open"
   },
   "nhl:401892650": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Chicago Blackhawks",
    "home": "Tampa Bay Lightning",
    "league": "nhl",
    "p": {
-    "blend": 0.7807,
+    "blend": 0.7817,
     "dk": 0.777,
+    "fd": 0.7848,
     "kalshi": 0.78,
     "pm": 0.785
    },
@@ -11258,13 +11275,14 @@
    "status": "open"
   },
   "nhl:401892651": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "St. Louis Blues",
    "home": "New Jersey Devils",
    "league": "nhl",
    "p": {
-    "blend": 0.6321,
+    "blend": 0.6351,
     "dk": 0.6277,
+    "fd": 0.6439,
     "kalshi": 0.6337,
     "pm": 0.635
    },
@@ -11272,13 +11290,14 @@
    "status": "open"
   },
   "nhl:401892652": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Carolina Hurricanes",
    "home": "New York Islanders",
    "league": "nhl",
    "p": {
-    "blend": 0.3825,
+    "blend": 0.383,
     "dk": 0.3963,
+    "fd": 0.3844,
     "kalshi": 0.3762,
     "pm": 0.375
    },
@@ -11286,13 +11305,14 @@
    "status": "open"
   },
   "nhl:401892653": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Philadelphia Flyers",
    "home": "New York Rangers",
    "league": "nhl",
    "p": {
-    "blend": 0.5852,
+    "blend": 0.584,
     "dk": 0.5865,
+    "fd": 0.5803,
     "kalshi": 0.5842,
     "pm": 0.585
    },
@@ -11300,13 +11320,14 @@
    "status": "open"
   },
   "nhl:401892654": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Boston Bruins",
    "home": "Pittsburgh Penguins",
    "league": "nhl",
    "p": {
-    "blend": 0.4932,
+    "blend": 0.4929,
     "dk": 0.5045,
+    "fd": 0.492,
     "kalshi": 0.49,
     "pm": 0.485
    },
@@ -11314,13 +11335,14 @@
    "status": "open"
   },
   "nhl:401892655": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Dallas Stars",
    "home": "Columbus Blue Jackets",
    "league": "nhl",
    "p": {
-    "blend": 0.4553,
+    "blend": 0.4549,
     "dk": 0.4555,
+    "fd": 0.4536,
     "kalshi": 0.4554,
     "pm": 0.455
    },
@@ -11328,13 +11350,14 @@
    "status": "open"
   },
   "nhl:401892656": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Vancouver Canucks",
    "home": "Winnipeg Jets",
    "league": "nhl",
    "p": {
-    "blend": 0.662,
+    "blend": 0.6628,
     "dk": 0.6642,
+    "fd": 0.6652,
     "kalshi": 0.6569,
     "pm": 0.665
    },
@@ -11342,13 +11365,14 @@
    "status": "open"
   },
   "nhl:401892657": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Anaheim Ducks",
    "home": "Edmonton Oilers",
    "league": "nhl",
    "p": {
-    "blend": 0.6255,
+    "blend": 0.6285,
     "dk": 0.6277,
+    "fd": 0.6376,
     "kalshi": 0.6238,
     "pm": 0.625
    },
@@ -11356,13 +11380,14 @@
    "status": "open"
   },
   "nhl:401892658": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Nashville Predators",
    "home": "Colorado Avalanche",
    "league": "nhl",
    "p": {
-    "blend": 0.6609,
+    "blend": 0.6644,
     "dk": 0.6509,
+    "fd": 0.6749,
     "kalshi": 0.6667,
     "pm": 0.665
    },
@@ -12170,7 +12195,7 @@
    "status": "graded"
   },
   "swe:401842876": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "IF Elfsborg",
    "home": "Hammarby IF",
    "league": "swe",
@@ -12645,7 +12670,7 @@
    "status": "graded"
   },
   "uecl:401915740": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Iberia 1999",
    "home": "F.C. K\u00f8benhavn",
    "league": "uecl",
@@ -12660,7 +12685,7 @@
    "status": "open"
   },
   "uecl:401915741": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Borac Banja Luka",
    "home": "Mj\u00e4llby AIF",
    "league": "uecl",
@@ -12675,7 +12700,7 @@
    "status": "open"
   },
   "uecl:401915742": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Hajduk Split",
    "home": "Lincoln Red Imps",
    "league": "uecl",
@@ -12690,7 +12715,7 @@
    "status": "open"
   },
   "uecl:401915817": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Egnatia",
    "home": "CSU Craiova",
    "league": "uecl",
@@ -12705,7 +12730,7 @@
    "status": "open"
   },
   "uecl:401915818": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Jablonec",
    "home": "Riga FC",
    "league": "uecl",
@@ -12720,7 +12745,7 @@
    "status": "open"
   },
   "uecl:401915819": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "CSKA Sofia",
    "home": "Panathinaikos",
    "league": "uecl",
@@ -12735,7 +12760,7 @@
    "status": "open"
   },
   "uecl:401915820": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "SK Brann",
    "home": "Sint-Truidense",
    "league": "uecl",
@@ -12750,7 +12775,7 @@
    "status": "open"
   },
   "uecl:401915821": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Brighton & Hove Albion",
    "home": "Getafe",
    "league": "uecl",
@@ -12765,7 +12790,7 @@
    "status": "open"
   },
   "uecl:401915822": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Pafos",
    "home": "FC Twente",
    "league": "uecl",
@@ -12780,7 +12805,7 @@
    "status": "open"
   },
   "uecl:401915823": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Kauno Zalgiris",
    "home": "FC Lugano",
    "league": "uecl",
@@ -12795,7 +12820,7 @@
    "status": "open"
   },
   "uecl:401915824": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "FC Nordsj\u00e6lland",
    "home": "AS Monaco",
    "league": "uecl",
@@ -12810,7 +12835,7 @@
    "status": "open"
   },
   "uecl:401915825": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "SC Freiburg",
    "home": "Trabzonspor",
    "league": "uecl",
@@ -12825,7 +12850,7 @@
    "status": "open"
   },
   "uecl:401915826": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "KAA Gent",
    "home": "KuPS Kuopio",
    "league": "uecl",
@@ -12840,7 +12865,7 @@
    "status": "open"
   },
   "uecl:401915827": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Inter D'Escaldes",
    "home": "Red Star Belgrade",
    "league": "uecl",
@@ -12855,7 +12880,7 @@
    "status": "open"
   },
   "uecl:401915828": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Heart of Midlothian",
    "home": "FC Thun",
    "league": "uecl",
@@ -12870,7 +12895,7 @@
    "status": "open"
   },
   "uecl:401915830": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Kairat Almaty",
    "home": "Atalanta",
    "league": "uecl",
@@ -12885,7 +12910,7 @@
    "status": "open"
   },
   "uecl:401915831": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Braga",
    "home": "AGF",
    "league": "uecl",
@@ -12900,7 +12925,7 @@
    "status": "open"
   },
   "uel:401915522": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Besiktas",
    "home": "Celtic",
    "league": "uel",
@@ -12925,15 +12950,15 @@
    "status": "open"
   },
   "uel:401915523": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Dinamo Zagreb",
    "home": "Sunderland",
    "league": "uel",
    "p3": {
     "blend": [
-     0.6643,
-     0.1987,
-     0.137
+     0.6675,
+     0.1947,
+     0.1377
     ],
     "dk": [
      0.6668,
@@ -12941,16 +12966,16 @@
      0.1397
     ],
     "pm": [
-     0.6617,
-     0.204,
-     0.1343
+     0.6683,
+     0.196,
+     0.1357
     ]
    },
    "start": "2026-11-05T20:00Z",
    "status": "open"
   },
   "uel:401915524": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "NK Celje",
    "home": "SK Sturm Graz",
    "league": "uel",
@@ -12975,7 +13000,7 @@
    "status": "open"
   },
   "uel:401915525": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Lech Poznan",
    "home": "Benfica",
    "league": "uel",
@@ -13000,15 +13025,15 @@
    "status": "open"
   },
   "uel:401915526": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "TSG Hoffenheim",
    "home": "Crystal Palace",
    "league": "uel",
    "p3": {
     "blend": [
-     0.5096,
-     0.2395,
-     0.251
+     0.5121,
+     0.2407,
+     0.2472
     ],
     "dk": [
      0.5167,
@@ -13016,31 +13041,31 @@
      0.2482
     ],
     "pm": [
-     0.5025,
-     0.2438,
-     0.2537
+     0.5075,
+     0.2462,
+     0.2462
     ]
    },
    "start": "2026-11-05T17:45Z",
    "status": "open"
   },
   "uel:401915527": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Viktoria Plzen",
    "home": "Lillestrom",
    "league": "uel",
    "p3": {
     "dk": [
-     0.314,
-     0.2466,
-     0.4394
+     0.3118,
+     0.2513,
+     0.4369
     ]
    },
    "start": "2026-11-05T17:45Z",
    "status": "open"
   },
   "uel:401915528": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "AFC Bournemouth",
    "home": "Sparta Prague",
    "league": "uel",
@@ -13055,7 +13080,7 @@
    "status": "open"
   },
   "uel:401915529": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Juventus",
    "home": "AZ Alkmaar",
    "league": "uel",
@@ -13080,7 +13105,7 @@
    "status": "open"
   },
   "uel:401915530": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Ararat-Armenia",
    "home": "Torreense",
    "league": "uel",
@@ -13095,7 +13120,7 @@
    "status": "open"
   },
   "uel:401915531": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Union St.-Gilloise",
    "home": "Celta Vigo",
    "league": "uel",
@@ -13110,7 +13135,7 @@
    "status": "open"
   },
   "uel:401915532": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "OFI Crete",
    "home": "Hapoel Be'er",
    "league": "uel",
@@ -13125,7 +13150,7 @@
    "status": "open"
   },
   "uel:401915533": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Marseille",
    "home": "Bayer Leverkusen",
    "league": "uel",
@@ -13140,7 +13165,7 @@
    "status": "open"
   },
   "uel:401915534": {
-   "at": "2026-11-05T07:19:13+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Ferencvaros",
    "home": "AC Milan",
    "league": "uel",
@@ -13155,7 +13180,7 @@
    "status": "open"
   },
   "uel:401915535": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Omonia Nicosia",
    "home": "NEC Nijmegen",
    "league": "uel",
@@ -13170,22 +13195,22 @@
    "status": "open"
   },
   "uel:401915536": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Jagiellonia Bialystok",
    "home": "Levski Sofia",
    "league": "uel",
    "p3": {
     "dk": [
-     0.4795,
-     0.2603,
-     0.2603
+     0.469,
+     0.2694,
+     0.2616
     ]
    },
    "start": "2026-11-05T17:45Z",
    "status": "open"
   },
   "uel:401915537": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "Lyon",
    "home": "Real Sociedad",
    "league": "uel",
@@ -13200,7 +13225,7 @@
    "status": "open"
   },
   "uel:401915538": {
-   "at": "2026-11-05T07:09:09+00:00",
+   "at": "2026-11-05T07:24:25+00:00",
    "away": "RB Salzburg",
    "home": "Anderlecht",
    "league": "uel",
