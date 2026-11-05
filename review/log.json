@@ -8684,8 +8684,8 @@
    },
    {
     "flag": false,
-    "hit": 55.6,
-    "n": 18,
+    "hit": 57.9,
+    "n": 19,
     "name": "locks nba over",
     "said": 75.3
    },
@@ -8747,8 +8747,8 @@
    },
    {
     "flag": false,
-    "hit": 89.5,
-    "n": 19,
+    "hit": 90.0,
+    "n": 20,
     "name": "safe locks nba over",
     "said": 90.3
    },
@@ -8797,9 +8797,9 @@
    {
     "flag": false,
     "hit": 42.0,
-    "n": 288,
+    "n": 293,
     "name": "value bets",
-    "said": 44.2
+    "said": 44.3
    },
    {
     "flag": false,
@@ -8898,9 +8898,9 @@
    }
   },
   "clv": {
-   "avg": 1.29,
-   "beat": 60.0,
-   "n": 25
+   "avg": 1.36,
+   "beat": 61.5,
+   "n": 26
   },
   "day": "2026-11-04",
   "ladder": "Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.",
@@ -8908,7 +8908,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      2,
@@ -8916,12 +8916,12 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "loss_reasons_14d": {
    "blowout": 45,
    "close game": 111,
-   "coin flip": 49,
+   "coin flip": 50,
    "favourite lost": 132,
    "price moved against it": 31,
    "upset": 55
@@ -9010,6 +9010,22 @@
      "close game"
     ],
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "nba",
+    "match": "PHI @ DET",
+    "pick": "Detroit Pistons",
+    "price": "-136",
+    "said": 55,
+    "score": {
+     "Detroit Pistons": 106,
+     "Philadelphia 76ers": 112
+    },
+    "tags": [
+     "coin flip"
+    ],
+    "why": "margin 6 \u00b7 the book had my side favoured too \u00b7 called at 55% \u00b7 coin flip"
    }
   ],
   "lottery": [
@@ -9071,11 +9087,11 @@
    }
   ],
   "picks": {
-   "hit": 80.0,
-   "lost": 5,
-   "n": 25,
-   "roi": -2.0,
-   "said": 78.2,
+   "hit": 76.9,
+   "lost": 6,
+   "n": 26,
+   "roi": -5.8,
+   "said": 77.3,
    "won": 20
   },
   "picks_by_league": {
@@ -9104,11 +9120,11 @@
     "won": 2
    },
    "nba": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 48.2,
-    "said": 68.0,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": -1.2,
+    "said": 63.7,
     "won": 2
    },
    "ncaab": {
@@ -9158,7 +9174,7 @@
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      7,
@@ -9171,7 +9187,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "strong": {
    "hit": 73.7,
@@ -9184,8 +9200,8 @@
   "stuck": [],
   "sweep": {
    "broke_on": "ucl Liverpool at 83%",
-   "lost": 5,
-   "open": 27,
+   "lost": 6,
+   "open": 26,
    "won": 20
   },
   "vs_market_14d": {
@@ -9193,10 +9209,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.6,
-    "lost": 236,
-    "n": 967,
-    "roi": 1.4,
+    "hit": 75.5,
+    "lost": 237,
+    "n": 968,
+    "roi": 1.3,
     "said": 71.0,
     "won": 731
    }
@@ -9205,10 +9221,10 @@
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5609,
-    "market_only": 0.5609,
-    "model_40": 0.5865,
-    "n": 109,
+    "logloss": 0.5632,
+    "market_only": 0.5632,
+    "model_40": 0.5897,
+    "n": 110,
     "weight": 0.0
    },
    "ncaaf": {
