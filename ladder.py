@@ -178,10 +178,15 @@ def report(book=None, start=START, target=TARGET):
         live(today["legs"])
         try:                       # how Locks of each leg's kind have done
             kr = locks.kind_record(book or locks.load())
+            import props_ledger
             for L in today["legs"]:
                 r = kr.get(locks.kind_key(L))
                 if r:
                     L["kind_rec"] = dict(won=r[0], n=r[1])
+                if L.get("kind") == "prop" and L.get("market"):
+                    pr = props_ledger.like_record(L.get("league"), L["market"], L["p"])
+                    if pr:
+                        L["prop_rec"] = pr
         except Exception:
             pass
         try:

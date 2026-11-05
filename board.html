@@ -1527,7 +1527,9 @@ function ladderHTML(){
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')
           + (L.live ? '<div class="sbn"><b>Live:</b> ' + esc(L.live) + ' &middot; ' + esc(L.live_score || '') + '</div>' : '')
           + (L.live ? paceNote(L) + soFar(L) : '')
-          + (L.kind_rec && (L.status === 'open' || !L.status) ? '<div class="sbn">Locks like this have won ' + L.kind_rec.won + ' of ' + L.kind_rec.n + '</div>' : '')
+          + (L.kind_rec && (L.status === 'open' || !L.status) ? '<div class="sbn">Locks like this have won ' + L.kind_rec.won + ' of ' + L.kind_rec.n
+             + (L.prop_rec ? '; every ' + esc(String(L.league || '').toUpperCase()) + ' ' + esc(L.market || '') + ' prop at a similar chance: '
+                + L.prop_rec.won + ' of ' + L.prop_rec.n + ' (' + Math.round(100 * L.prop_rec.won / L.prop_rec.n) + '% vs ' + L.prop_rec.said + '% stated)' : '') + '</div>' : '')
           + (L.status === 'open' || !L.status ? watchNote(L) : '')
           + (!L.live && (L.tip || L.lg) && L.status !== 'won' && L.status !== 'lost'
              ? '<div class="sbn">' + [L.lg, L.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '') + '</li>').join('') + '</ul>'

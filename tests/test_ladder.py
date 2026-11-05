@@ -2,6 +2,7 @@
 import os
 import sys
 import unittest
+from unittest import mock
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
@@ -150,6 +151,18 @@ class SoFar(unittest.TestCase):
         finally:
             props_ledger._LIVE.pop(("nba", "1"), None)
         self.assertEqual(v, 2.0)
+
+
+class LikeRecord(unittest.TestCase):
+    def test_props_near_the_same_chance(self):
+        import props_ledger
+        book = {"a": dict(status="won", league="nfl", market="Receiving Yards", p=0.82),
+                "b": dict(status="lost", league="nfl", market="Receiving Yards", p=0.86),
+                "c": dict(status="won", league="nfl", market="Receiving Yards", p=0.60),
+                "d": dict(status="open", league="nfl", market="Receiving Yards", p=0.80)}
+        with mock.patch.object(props_ledger, "load", lambda: book):
+            self.assertEqual(props_ledger.like_record("nfl", "Receiving Yards", 0.80),
+                             dict(won=1, n=2, said=84))
 
 
 class ReviewLine(unittest.TestCase):

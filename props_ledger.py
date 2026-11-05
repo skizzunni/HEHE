@@ -389,6 +389,16 @@ def _first_ok(a, b):
             or b in _NICK.get(a, ()))
 
 
+def like_record(league, market, p, band=0.05):
+    """Every graded prop in the same league and market whose stated chance
+    was within band of p: dict(won, n, said) -- a prop leg's own history."""
+    R = [e for e in load().values() if e.get("status") in ("won", "lost") and e.get("league") == league
+         and e.get("market") == market and isinstance(e.get("p"), (int, float)) and abs(e["p"] - p) <= band]
+    if not R:
+        return None
+    return dict(won=sum(e["status"] == "won" for e in R), n=len(R), said=round(100 * sum(e["p"] for e in R) / len(R)))
+
+
 _LIVE = {}
 
 

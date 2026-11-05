@@ -3956,3 +3956,8 @@ Ladder legs show how Locks of the same kind have done ("Locks like this have won
 bet type for game lines, league + market for props; `locks.kind_record`). Study, nothing adopted:
 team totals on Locks / Safe Locks by half -- Locks team unders 9/10 then 4/7, Safe Locks team unders
 14/16 then 10/11, overs at or above their stated chance; too few and the halves disagree (2026-11-05).
+Ladder prop legs also show every graded prop in the same league and market at a similar chance
+(within 5 points; `props_ledger.like_record`): Ja'Kobi Lane 5+ receiving yards -> 113 of 138 NFL
+receiving-yards props. Study, nothing adopted: NFL receiving yards 80%+ hit 84.8% then 85.4% against
+85% stated (147); receptions 80%+ 89.6% then 95.7% against 85.1% (71) -- above in both halves but
+under the bar (2026-11-05).
