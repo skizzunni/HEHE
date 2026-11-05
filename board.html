@@ -839,8 +839,10 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
     const best = H.filter(d => d.won + d.lost >= 5).sort((a, b) => b.won / (b.won + b.lost) - a.won / (a.won + a.lost))[0];
     const bestTxt = best ? "best day " + best.won + "&ndash;" + best.lost + " (" + best.day.slice(5) + ")" : "";
     const big = !(w + l) ? (o ? o + " to play" : "&mdash;") : l ? w + "&ndash;" + l : w + "&ndash;0";
+    const first = ((R.next_up || [])[0] || {}).tip;
     const sub = !(w + l + o) ? bestTxt
       : (l ? "sweep broken" : w ? "still clean" : "clean so far") + (o ? ", " + o + " to go" : "")
+        + (!(w + l) && !(R.live || []).length && first ? ", first at " + first : "")
         + ((R.live || []).length ? " (" + R.live.length + " live"
            + ((n => n ? ", " + n + " not winning now" : "")((R.live || []).filter(x => x.winning === false).length)) + ")" : "")
         + (!l && o && R.sweep_chance ? " (" + oneIn(R.sweep_chance) + " to stay clean)" : "") + (bestTxt ? " &middot; " + bestTxt : "");

@@ -3939,5 +3939,6 @@ Tests: the page's ladder leg-count chooser (`ladderK`) is checked, and checked t
 Locks only 3.1e-05 / 2.8e-03 (2026-11-05).
 frontier.json keeps decision-time pools for the last 14 card days only (`tickets.POOLS_KEPT`, as
 the Locks ledgers do); older days keep their tickets and record. The file was 22 MB, growing ~1 MB a
-day; this holds it near 15-20 MB. Study, nothing adopted: the daily top-5 Calls by type and league
+day; this caps it at 14 days of pools (about 20-25 MB, as some days' pools are 4 MB). Study, nothing adopted: the daily top-5 Calls by type and league
 (79 graded) -- soccer 95% then 87% against ~81% stated, every other group under 20 picks (2026-11-05).
+Board sweep tile, before the first result: "59 to go, first at 10:30 AM" (from `next_up`) (2026-11-05).
