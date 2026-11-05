@@ -3255,6 +3255,7 @@ function scoreboardHTML(){
           + '<div class="rsub">today' + (R.today ? ' (' + esc(R.today) + ')' : '') + ' &middot; '
           + (100 * w / (w + l)).toFixed(0) + '% of ' + (w + l) + ' finished'
           + (R.today_expected ? ' &middot; their chances said about ' + R.today_expected.toFixed(1) + ' wins' : '') + '</div>'
+          + ((R.today_losses_by || []).length ? '<div class="rsub">Losses by competition: ' + R.today_losses_by.map(x => esc(String(x.league).toUpperCase()) + ' ' + x.n).join(', ') + '</div>' : '')
         : '<div class="rbig">&mdash;</div>'
           + '<div class="rsub">no call has finished yet today</div>')
     + (R.today_strong_won + R.today_strong_lost

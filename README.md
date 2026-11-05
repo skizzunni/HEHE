@@ -3978,3 +3978,7 @@ half -- NBA 61% then 100%, NCAAF 74.5% then 89.7%, soccer 81% then 86% against ~
 short in both halves (2026-11-05).
 Prop Locks legs show the record of graded props like them -- same league and market, stated chance
 within 5 points (Devin Booker 2+ assists: 126 of 146, 86% vs 85% stated) (2026-11-05).
+Results header: today's losses by competition ("UEL 7, UECL 3"), so a matchday that goes badly at
+once shows as one cluster. Study, nothing adopted: Europa and Conference League picks after 11-05's
+matchday -- 51 of 69 (73.9%) against 75.1% stated (z -0.2), 76.5% then 71.4% by half: on price; the
+losses came together because those games share one night (2026-11-05).
