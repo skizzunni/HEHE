@@ -1,10 +1,10 @@
 # Review 2026-11-04
 
-Picks 28-10 (73.7% vs 75.1% claimed, ROI -7.0%).
+Picks 29-10 (74.4% vs 74.6% claimed, ROI -5.1%).
 Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.
 Strong calls 15-6 (71.4% vs 75.5% claimed).
-Closing line value: +0.98 points on 38 picks; beat the close on 55.3%.
-Board sweep: 28-10, 14 open -- broken (first loss: ucl Liverpool at 83%).
+Closing line value: +1.13 points on 39 picks; beat the close on 56.4%.
+Board sweep: 29-10, 13 open -- broken (first loss: ucl Liverpool at 83%).
 - LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
 - LOST efl1 Middlesbrough at 78% (-500), Middlesbrough 0 - Wrexham 2: margin 2 · the book had my side favoured too · called at 78% · upset
 - LOST ucl PSV Eindhoven at 73% (-330), Club Brugge 2 - PSV Eindhoven 1: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game
@@ -26,16 +26,16 @@ Yesterday (2026-11-03): board 34-9, sweep broken by efl1 Charlton Athletic at 70
 - LOST nhl Montreal Canadiens at 61% (-175), Montreal Canadiens 4 - Winnipeg Jets 5: margin 1 · the book had my side favoured too · called at 61% [favourite lost, close game]
 - LOST nhl Carolina Hurricanes at 64% (-198), Carolina Hurricanes 1 - Nashville Predators 4: margin 3 · the book had my side favoured too · called at 64% [favourite lost, blowout]
 - LOST ncaaf Miami (OH) RedHawks at 71% (-265), Buffalo Bulls 34 - Miami (OH) RedHawks 31: margin 3 · the book had my side favoured too · called at 71% [favourite lost, close game]
-Locks 6/11 won, 5 open; Best play top 2 (62%) open.
+Locks 6/11 won, 4 open; Best play top 2 (62%) open; lost: Central Michigan Chippewas under 30.5 points (Central Michigan Chippewas at Eastern Michigan Eagles) Central Michigan Chippewas 35 - Eastern Michigan Eagles 7.
 Safe Locks 5/11 won, 6 open; Winners parlay top 2 (85%) won; Best play top 7 (52%) open.
 Lottery 100: open (6/10 legs won)
-Lottery 10k: lost (7/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
+Lottery 10k: lost (8/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
 Lottery 10k: lost (2/8 legs won, killed by Florida Panthers over 5.5 goals)
-Lottery 10k+25: lost (7/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
+Lottery 10k+25: lost (7/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5, Eastern Michigan Eagles over 29.5 points)
 Lottery 10k+50: lost (7/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
 Lottery 10k+100: lost (7/14 legs won, killed by Over 230.5 points, Chicago Bulls +12.5)
 Ladder-consistency props (all time): 1536/1837 won (83.6%) vs 86.4% fair, 87.4% price.
 Props 94/105 vs 83.7% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=114), ncaaf 0.00 (n=168), nfl 0.00 (n=41), nhl 0.00 (n=131)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=114), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=131)

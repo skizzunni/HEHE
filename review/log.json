@@ -8719,10 +8719,10 @@
    },
    {
     "flag": false,
-    "hit": 84.2,
-    "n": 19,
+    "hit": 80.0,
+    "n": 20,
     "name": "locks ncaaf under",
-    "said": 80.1
+    "said": 79.9
    },
    {
     "flag": false,
@@ -8898,17 +8898,19 @@
    }
   },
   "clv": {
-   "avg": 0.98,
-   "beat": 55.3,
-   "n": 38
+   "avg": 1.13,
+   "beat": 56.4,
+   "n": 39
   },
   "day": "2026-11-04",
   "ladder": "Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Central Michigan Chippewas under 30.5 points (Central Michigan Chippewas at Eastern Michigan Eagles) Central Michigan Chippewas 35 - Eastern Michigan Eagles 7"
+   ],
    "n": 11,
-   "open": 5,
+   "open": 4,
    "plays": {
     "best": [
      2,
@@ -9114,7 +9116,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k",
-    "won": 7
+    "won": 8
    },
    {
     "killed_by": [
@@ -9129,10 +9131,11 @@
    {
     "killed_by": [
      "Over 230.5 points",
-     "Chicago Bulls +12.5"
+     "Chicago Bulls +12.5",
+     "Eastern Michigan Eagles over 29.5 points"
     ],
     "legs": 14,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k+25",
     "won": 7
@@ -9161,12 +9164,12 @@
    }
   ],
   "picks": {
-   "hit": 73.7,
+   "hit": 74.4,
    "lost": 10,
-   "n": 38,
-   "roi": -7.0,
-   "said": 75.1,
-   "won": 28
+   "n": 39,
+   "roi": -5.1,
+   "said": 74.6,
+   "won": 29
   },
   "picks_by_league": {
    "bra": {
@@ -9212,10 +9215,10 @@
    "ncaaf": {
     "hit": 100.0,
     "lost": 0,
-    "n": 2,
-    "roi": 37.0,
-    "said": 76.5,
-    "won": 2
+    "n": 3,
+    "roi": 47.2,
+    "said": 70.3,
+    "won": 3
    },
    "nhl": {
     "hit": 50.0,
@@ -9299,8 +9302,8 @@
   "sweep": {
    "broke_on": "ucl Liverpool at 83%",
    "lost": 10,
-   "open": 14,
-   "won": 28
+   "open": 13,
+   "won": 29
   },
   "vs_market_14d": {
    "against": {
@@ -9309,10 +9312,10 @@
    "agree": {
     "hit": 75.4,
     "lost": 241,
-    "n": 980,
-    "roi": 1.1,
+    "n": 981,
+    "roi": 1.2,
     "said": 71.0,
-    "won": 739
+    "won": 740
    }
   },
   "weights": {
@@ -9326,12 +9329,12 @@
     "weight": 0.0
    },
    "ncaaf": {
-    "fitted": 0.35,
+    "fitted": 0.3,
     "held_out": false,
-    "logloss": 0.5907,
-    "market_only": 0.5976,
-    "model_40": 0.591,
-    "n": 168,
+    "logloss": 0.5909,
+    "market_only": 0.5974,
+    "model_40": 0.5914,
+    "n": 169,
     "weight": 0.0
    },
    "nfl": {
