@@ -31573,11 +31573,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Austin Reaves",
   "p": 0.8476,
   "p_fair": 0.8231,
   "price": "-620",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909934|n:austin reaves|Points|15+": {
   "aid": null,
@@ -31589,11 +31591,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Austin Reaves",
   "p": 0.8484,
   "p_fair": 0.8825,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909934|n:darius acuff|Points|10+": {
   "aid": null,
@@ -31604,11 +31608,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Darius Acuff Jr.",
   "p": 0.8723,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 22.0
  },
  "nba:401909934|n:darius acuff|Points|15+": {
   "aid": null,
@@ -31620,11 +31626,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Darius Acuff Jr.",
   "p": 0.8484,
   "p_fair": 0.8926,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 22.0
  },
  "nba:401909934|n:deandre hunter|Threes Made|1+": {
   "aid": null,
@@ -31636,11 +31644,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "De'Andre Hunter",
   "p": 0.8371,
   "p_fair": 0.8805,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909934|n:domantas sabonis|Rebounds|8+": {
   "aid": null,
@@ -31652,11 +31662,13 @@
   "league": "nba",
   "line": "8+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Domantas Sabonis",
   "p": 0.8541,
   "p_fair": 0.9513,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909934|n:luka doncic|Assists|6+": {
   "aid": null,
@@ -31668,11 +31680,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Assists",
+  "matched": "name",
   "name": "Luka Doncic",
   "p": 0.7874,
   "p_fair": 0.7663,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909934|n:luka doncic|Points|25+": {
   "aid": null,
@@ -31684,11 +31698,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Points",
+  "matched": "name",
   "name": "Luka Doncic",
   "p": 0.8356,
   "p_fair": 0.8035,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 40.0
  },
  "nba:401909934|n:malik monk|Assists|2+": {
   "aid": null,
@@ -31700,11 +31716,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Malik Monk",
   "p": 0.7874,
   "p_fair": 0.7803,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909934|n:precious achiuwa|Points|5+": {
   "aid": null,
@@ -31716,11 +31734,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Precious Achiuwa",
   "p": 0.8484,
   "p_fair": 0.9538,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909934|n:precious achiuwa|Rebounds|4+": {
   "aid": null,
@@ -31732,11 +31752,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Precious Achiuwa",
   "p": 0.8541,
   "p_fair": 0.9287,
   "price": "-1600",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909934|n:zach lavine|Assists|2+": {
   "aid": null,
@@ -31748,11 +31770,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Zach LaVine",
   "p": 0.7874,
   "p_fair": 0.7702,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401909936|n:anthony black|Pts + Ast|15+": {
   "aid": null,
@@ -31816,6 +31840,54 @@
   "p": 0.7685,
   "p_fair": 0.7388,
   "price": "-400",
+  "status": "open"
+ },
+ "nba:401909937|n:brandin podziemski|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-11-05",
+  "edge": -2.9,
+  "gid": "nba:401909937",
+  "imp": 0.9091,
+  "label": "Brandin Podziemski: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Brandin Podziemski",
+  "p": 0.8386,
+  "p_fair": 0.8828,
+  "price": "-1000",
+  "status": "open"
+ },
+ "nba:401909937|n:stephen curry|Pts + Ast|25+": {
+  "aid": null,
+  "date": "2026-11-05",
+  "edge": -4.2,
+  "gid": "nba:401909937",
+  "imp": 0.7959,
+  "label": "Stephen Curry: 25+ Pts + Ast",
+  "league": "nba",
+  "line": "25+",
+  "market": "Pts + Ast",
+  "name": "Stephen Curry",
+  "p": 0.7638,
+  "p_fair": 0.7627,
+  "price": "-390",
+  "status": "open"
+ },
+ "nba:401909937|n:stephen curry|Pts + Reb + Ast|25+": {
+  "aid": null,
+  "date": "2026-11-05",
+  "edge": -2.2,
+  "gid": "nba:401909937",
+  "imp": 0.8947,
+  "label": "Stephen Curry: 25+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "25+",
+  "market": "Pts + Reb + Ast",
+  "name": "Stephen Curry",
+  "p": 0.8481,
+  "p_fair": 0.8746,
+  "price": "-850",
   "status": "open"
  },
  "nfl:401872996|n:bhayshul tuten|Anytime Touchdown Scorer|1+": {
@@ -58167,11 +58239,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Bobby McMann",
   "p": 0.7458,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892647|n:mackie samoskevich|Shots on Goal|1+": {
   "aid": null,
@@ -58183,11 +58257,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mackie Samoskevich",
   "p": 0.8567,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892647|n:matt coronato|Shots on Goal|2+": {
   "aid": null,
@@ -58199,11 +58275,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Coronato",
   "p": 0.7066,
   "p_fair": null,
   "price": "-310",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892647|n:matvei gridin|Shots on Goal|1+": {
   "aid": null,
@@ -58215,11 +58293,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matvei Gridin",
   "p": 0.8627,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892647|n:mikael backlund|Shots on Goal|1+": {
   "aid": null,
@@ -58231,11 +58311,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikael Backlund",
   "p": 0.8496,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892647|n:vince dunn|Shots on Goal|1+": {
   "aid": null,
@@ -58247,11 +58329,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Vince Dunn",
   "p": 0.8362,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892648|n:dylan guenther|Shots on Goal|2+": {
   "aid": null,

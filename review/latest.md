@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
 No picks settled yet.
-Ladder: run 1, bank $3.07, 1 win(s) in a row, best $3.07; today stakes $3.07 at 3.12x (28% est.); 8 wins to $10,000.
+Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; 7 wins to $10,000.
 Board sweep: 0-0, 58 open -- still clean.
 Why picks lost (14 days): favourite lost 135, close game 113, upset 54, coin flip 49, blowout 44, price moved against it 33.
-Yesterday (2026-11-04): board 36-12, sweep broken by ucl Liverpool at 83%.
+Yesterday (2026-11-04): board 38-12, sweep broken by ucl Liverpool at 83%.
 - LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
 - LOST efl1 Middlesbrough at 78% (-500), Middlesbrough 0 - Wrexham 2: margin 2 · the book had my side favoured too · called at 78% · upset
 - LOST ucl PSV Eindhoven at 73% (-330), Club Brugge 2 - PSV Eindhoven 1: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game
@@ -17,7 +17,7 @@ Yesterday (2026-11-04): board 36-12, sweep broken by ucl Liverpool at 83%.
 - LOST per Universitario at 67% (-265), Sport Boys 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost · price moved against it (3 pts)
 - LOST nba Houston Rockets at 71% (-278), Houston Rockets 107 - Minnesota Timberwolves 117: margin 10 · the book had my side favoured too · called at 71% · favourite lost · price moved against it (4 pts)
 - LOST ncaab Loyola Marymount Lions at 68% (-230), Loyola Marymount Lions 95 - Queens University Royals 96: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
-Ladder-consistency props (all time): 1576/1885 won (83.6%) vs 86.4% fair, 87.4% price.
+Ladder-consistency props (all time): 1585/1896 won (83.6%) vs 86.4% fair, 87.4% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=119), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=131)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=120), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=132)
