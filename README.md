@@ -3972,3 +3972,7 @@ longer short in both halves; no rule (2026-11-05).
 Board sweep tile names the pick that broke the sweep ("sweep broken by Trabzonspor or draw";
 `board_payload` broke_on). Study, nothing adopted: European cup picks (77) -- "or draw" 78% then 89%
 against ~76% stated, straight wins 74% then 63% (27 picks) -- too few to act on (2026-11-05).
+Results header: today's record beside the wins its picks' chances said to expect ("14-4 ... their
+chances said about 13.5 wins"; `today_expected`). Study, nothing adopted: 75%+ picks by league and
+half -- NBA 61% then 100%, NCAAF 74.5% then 89.7%, soccer 81% then 86% against ~80%; no league
+short in both halves (2026-11-05).

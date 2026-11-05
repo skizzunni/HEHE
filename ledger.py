@@ -932,6 +932,7 @@ def board_payload(limit=40):
                 live=live, feed=feed, gate=gate, calls=todays_calls, calls_record=calls_rec,
                 calls_top=_calls.TOP_N,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
+                today_expected=round(sum((e.get("conf") or 0) / 100 for e in todays), 1),
                 today_lost=sum(e["status"] == "lost" for e in todays),
                 today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
