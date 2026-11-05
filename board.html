@@ -2546,6 +2546,8 @@ function propLocksHTML(){
         + (x.tip && x.status !== 'won' && x.status !== 'lost' ? ' &middot; ' + esc(String(x.league || '').toUpperCase()) + ' ' + esc(x.tip) : '')
         + ' ' + res(x.status)
         + (x.live ? '<div class="sbn"><b>Live:</b> ' + esc(x.live) + ' &middot; ' + esc(x.live_score || '') + '</div>' + soFar(x) : '')
+        + (x.prop_rec && x.status !== 'won' && x.status !== 'lost' ? '<div class="sbn">Props like this: ' + x.prop_rec.won + ' of ' + x.prop_rec.n
+           + ' (' + Math.round(100 * x.prop_rec.won / x.prop_rec.n) + '% vs ' + x.prop_rec.said + '% stated)</div>' : '')
         + (x.alt ? '<div class="sbn">pays more at <b>' + esc(x.alt.venue) + ' ' + esc(x.alt.price) + '</b> (FanDuel now '
           + esc(x.alt.fd_now) + ', +' + (100 * x.alt.gain).toFixed(1) + '%)</div>' : '') + '</li>').join("") + '</ul>'
         + copyBtn("Prop Locks", L.map(x => legLine(x.label, x.price, "FanDuel", x.match)))

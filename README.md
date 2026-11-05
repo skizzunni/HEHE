@@ -3976,3 +3976,5 @@ Results header: today's record beside the wins its picks' chances said to expect
 chances said about 13.5 wins"; `today_expected`). Study, nothing adopted: 75%+ picks by league and
 half -- NBA 61% then 100%, NCAAF 74.5% then 89.7%, soccer 81% then 86% against ~80%; no league
 short in both halves (2026-11-05).
+Prop Locks legs show the record of graded props like them -- same league and market, stated chance
+within 5 points (Devin Booker 2+ assists: 126 of 146, 86% vs 85% stated) (2026-11-05).

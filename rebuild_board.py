@@ -567,6 +567,15 @@ def snapshot():
                 _ld.live(_pl.get("legs") or [])
             except Exception:
                 pass
+            try:                                # each leg's own history: props like it
+                import props_ledger as _pld
+                for L_ in _pl.get("legs") or []:
+                    if L_.get("market") and isinstance(L_.get("p"), (int, float)):
+                        r_ = _pld.like_record(L_.get("league"), L_["market"], L_["p"])
+                        if r_:
+                            L_["prop_rec"] = r_
+            except Exception:
+                pass
             out["prop_locks"] = dict(today=_pl, record=prop_locks.report(), n=prop_locks.N,
                                      standard=prop_locks.STANDARD, hour=prop_locks.PROP_HOUR)
             out["props_record"] = prop_locks.props_record()
