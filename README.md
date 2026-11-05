@@ -3969,3 +3969,6 @@ the day in order (`egOrder`) (2026-11-05).
 "Every game" shows the last graded list's result (2026-11-04: 27 of 30). Study, watch item eased:
 the top 3 Safe Locks now 23/30 then 26/27 by half (86% vs 92% stated overall, about -1.8 SE) -- no
 longer short in both halves; no rule (2026-11-05).
+Board sweep tile names the pick that broke the sweep ("sweep broken by Trabzonspor or draw";
+`board_payload` broke_on). Study, nothing adopted: European cup picks (77) -- "or draw" 78% then 89%
+against ~76% stated, straight wins 74% then 63% (27 picks) -- too few to act on (2026-11-05).

@@ -834,6 +834,8 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
   // clean sweep, or broken; the best day of the last two weeks beside it
   function sweepTile(){
     const R = D.results || {};
+    // esc is declared further down the script (const), so not usable here yet
+    const esc = v => String(v == null ? "" : v).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
     const w = R.today_won || 0, l = R.today_lost || 0, o = R.today_open || 0, H = R.board_days || [];
     if(!(w + l + o) && !H.length) return "";
     const best = H.filter(d => d.won + d.lost >= 5).sort((a, b) => b.won / (b.won + b.lost) - a.won / (a.won + a.lost))[0];
@@ -841,7 +843,7 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
     const big = !(w + l) ? (o ? o + " to play" : "&mdash;") : l ? w + "&ndash;" + l : w + "&ndash;0";
     const first = ((R.next_up || [])[0] || {}).tip;
     const sub = !(w + l + o) ? bestTxt
-      : (l ? "sweep broken" : w ? "still clean" : "clean so far") + (o ? ", " + o + " to go" : "")
+      : (l ? "sweep broken" + (R.broke_on ? " by " + esc(R.broke_on.pick) : "") : w ? "still clean" : "clean so far") + (o ? ", " + o + " to go" : "")
         + (!(w + l) && !(R.live || []).length && first ? ", first at " + first : "")
         + ((R.live || []).length ? " (" + R.live.length + " live"
            + ((n => n ? ", " + n + " not winning now" : "")((R.live || []).filter(x => x.winning === false).length)) + ")" : "")

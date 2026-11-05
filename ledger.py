@@ -836,6 +836,9 @@ def board_payload(limit=40):
     open_today = sum(1 for e in book.values()
                      if record_priced(e) and e.get("status") == "open" and (e.get("date") or "") == today)
     board_days = sweep_days(done, day_of, today)
+    _lt = sorted((e for e in todays if e["status"] == "lost"), key=lambda e: e.get("settled") or "")
+    broke_on = (dict(pick=_lt[0]["pick"] + (" or draw" if _lt[0].get("dc") else ""), conf=_lt[0].get("conf"),
+                     score=_lt[0].get("scores") or {}) if _lt else None)
     # yesterday's board: its record and every loss with why (diagnose)
     _yk = (dt.date.fromisoformat(today) - dt.timedelta(days=1)).isoformat()
     _yd = [e for e in done if day_of(e) == _yk]
@@ -930,7 +933,7 @@ def board_payload(limit=40):
                 calls_top=_calls.TOP_N,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
+                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))
