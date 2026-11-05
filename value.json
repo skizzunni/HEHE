@@ -11815,6 +11815,26 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|uel:401915529:home": {
+   "ev": 0.0271,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.027,
+     "fair": 0.2853,
+     "id": "uel:401915529",
+     "price": "+260",
+     "side": "home",
+     "spec": null,
+     "team": "AZ Alkmaar"
+    }
+   ],
+   "payout": 3.6,
+   "prob": 0.2853,
+   "seen": "2026-11-05T19:08:57+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|uel:401915553:away": {
    "ev": 0.0184,
    "kind": "parlay",
@@ -11979,6 +11999,23 @@
    "start": "2026-11-05T17:45Z",
    "team": "KuPS Kuopio",
    "tip": "12:45 PM",
+   "venue": "FanDuel"
+  },
+  "uel:401915529|home|FanDuel": {
+   "dec": 3.6,
+   "ev": 0.027,
+   "fair": 0.2853,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "uel:401915529",
+   "kind": "value",
+   "league": "uel",
+   "match": "JUV @ AZ",
+   "price": "+260",
+   "seen": "2026-11-05T19:08:57+00:00",
+   "side": "home",
+   "start": "2026-11-05T20:00Z",
+   "team": "AZ Alkmaar",
+   "tip": "3:00 PM",
    "venue": "FanDuel"
   },
   "uel:401915553|away|FanDuel": {
