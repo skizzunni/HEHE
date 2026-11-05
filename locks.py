@@ -786,6 +786,24 @@ def watch_kinds(book):
     return out
 
 
+def kind_key(L):
+    """(league, bet type) for a game line, (league, prop market) for a prop."""
+    if L.get("kind") == "prop":
+        return (L.get("league") or "", "prop:" + str(L.get("market") or ""))
+    return (L.get("league") or "", (L.get("spec") or {}).get("t") or L.get("t") or "")
+
+
+def kind_record(book):
+    """Graded legs on a card by kind_key: {key: [won, n]}."""
+    out = {}
+    for L in (book.get("legs") or {}).values():
+        if L.get("status") in ("won", "lost"):
+            r = out.setdefault(kind_key(L), [0, 0])
+            r[0] += L["status"] == "won"
+            r[1] += 1
+    return out
+
+
 def by_kind(legs):
     """Graded legs split into player props and game lines: [{kind, won, n, said}]."""
     out = []

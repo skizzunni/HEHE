@@ -212,7 +212,8 @@ LADDER = dict(start="2026-11-03", target=10000.0, bank=3.05, runs=1, streak=1, b
               today=dict(stake=3.05, pays=3.06, prob=0.30, result="open",
                          legs=[dict(label=f"Ladder leg {i + 1}", price="-300", p=0.79, match=f"Game {i + 1}",
                                     status="won" if i == 0 else "open", score="A 3 - B 2" if i == 0 else None,
-                                    tip="7:30 PM", lg="NHL", **(dict(live="2nd 10:00", live_score="A 1 - B 0") if i == 1 else {}))
+                                    tip="7:30 PM", lg="NHL", **(dict(live="2nd 10:00", live_score="A 1 - B 0") if i == 1 else {}),
+                                    **(dict(kind_rec=dict(won=13, n=17)) if i == 2 else {}))
                                for i in range(5)]))
 
 
@@ -394,7 +395,7 @@ def main():
         fails.append("ladder last ticket wrong: " + ll)
     if "$3.05" not in lt or "1 of 5 won today, 1 live" not in lt:
         fails.append("ladder tile must show the bank and streak: " + lt)
-    if not all(x in lc for x in ("Ladder challenge: $1", "Ladder leg 5", "NHL · 7:30 PM", "1 of 5 won, 4 to play (1 live now)", "Live: 2nd 10:00 · A 1 - B 0", "A 3 - B 2", "stake $3.05", "8 straight wins", "1 in 15,244", "This run, day by day (1)", "would take 37 wins in a row")):
+    if not all(x in lc for x in ("Ladder challenge: $1", "Ladder leg 5", "NHL · 7:30 PM", "1 of 5 won, 4 to play (1 live now)", "Live: 2nd 10:00 · A 1 - B 0", "A 3 - B 2", "stake $3.05", "8 straight wins", "1 in 15,244", "This run, day by day (1)", "would take 37 wins in a row", "Locks like this have won 13 of 17")):
         fails.append("ladder card must show today's 5 legs, stake, wins needed and odds: " + lc[:300])
     for f in fails:
         print("FAIL:", f)

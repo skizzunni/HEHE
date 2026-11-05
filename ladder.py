@@ -176,6 +176,14 @@ def report(book=None, start=START, target=TARGET):
     today = cur["days"][-1] if cur and cur["days"] and cur["days"][-1]["result"] == "open" else None
     if today:
         live(today["legs"])
+        try:                       # how Locks of each leg's kind have done
+            kr = locks.kind_record(book or locks.load())
+            for L in today["legs"]:
+                r = kr.get(locks.kind_key(L))
+                if r:
+                    L["kind_rec"] = dict(won=r[0], n=r[1])
+        except Exception:
+            pass
         try:
             today["options"] = options(book or locks.load(), today["day"], today["stake"], target)
         except Exception:

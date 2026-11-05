@@ -3952,3 +3952,7 @@ the wins it would need, and its chance of reaching $10,000; the chosen one in bo
 Team-total legs carry a "team total" tag on the Ladder, Locks and Every game, and the Ladder's copied
 slip says "(team total)" -- "Florida Atlantic under 41.5 points" is FAU's own score, found under the
 team's Alternate Total on FanDuel, not the game total (2026-11-05).
+Ladder legs show how Locks of the same kind have done ("Locks like this have won 8 of 11": league +
+bet type for game lines, league + market for props; `locks.kind_record`). Study, nothing adopted:
+team totals on Locks / Safe Locks by half -- Locks team unders 9/10 then 4/7, Safe Locks team unders
+14/16 then 10/11, overs at or above their stated chance; too few and the halves disagree (2026-11-05).

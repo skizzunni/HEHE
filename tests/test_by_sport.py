@@ -53,5 +53,16 @@ class Watch(unittest.TestCase):
         self.assertEqual(locks.watch_kinds(dict(days=days, legs=legs)), [])
 
 
+class KindRecord(unittest.TestCase):
+    def test_game_lines_by_type_props_by_market(self):
+        import locks
+        book = {"legs": {"a": dict(league="nhl", spec=dict(t="teamunder"), status="won"),
+                         "b": dict(league="nhl", spec=dict(t="teamunder"), status="lost"),
+                         "c": dict(league="nba", kind="prop", market="Assists", status="won"),
+                         "d": dict(league="nba", kind="prop", market="Assists", status="open")}}
+        self.assertEqual(locks.kind_record(book), {("nhl", "teamunder"): [1, 2], ("nba", "prop:Assists"): [1, 1]})
+        self.assertEqual(locks.kind_key(dict(league="nhl", t="teamunder")), ("nhl", "teamunder"))
+
+
 if __name__ == "__main__":
     unittest.main()
