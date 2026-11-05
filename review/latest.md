@@ -25,9 +25,9 @@ Safe Locks 1/11 won, 10 open; Winners parlay top 2 (85%) open; Best play top 7 (
 Lottery 100: open (0/10 legs won)
 Lottery 10k: open (0/14 legs won)
 Lottery 10k: open (0/8 legs won)
-Lottery 10k+25: open (0/14 legs won)
-Lottery 10k+50: open (0/14 legs won)
-Lottery 10k+100: open (0/14 legs won)
+Lottery 10k+25: lost (0/14 legs won, killed by Over 230.5 points)
+Lottery 10k+50: lost (0/14 legs won, killed by Over 230.5 points)
+Lottery 10k+100: lost (0/14 legs won, killed by Over 230.5 points)
 Ladder-consistency props (all time): 1462/1755 won (83.3%) vs 86.3% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
