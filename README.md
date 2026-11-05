@@ -3949,3 +3949,6 @@ price-blind pick beat the market's on disagreements in both halves (NBA 23% / 20
 Ladder card: "Why N legs" -- every leg count weighed (3-8) with the ticket's chance, its payout,
 the wins it would need, and its chance of reaching $10,000; the chosen one in bold (`ladder.options`)
 (2026-11-05).
+Team-total legs carry a "team total" tag on the Ladder, Locks and Every game, and the Ladder's copied
+slip says "(team total)" -- "Florida Atlantic under 41.5 points" is FAU's own score, found under the
+team's Alternate Total on FanDuel, not the game total (2026-11-05).
