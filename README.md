@@ -3909,3 +3909,5 @@ underdogs with their signals (my model picks them; price moving their way) and t
 their price by date half (`ledger.upset_view`). So far 295 of 797 (37.0%) against 45.4% priced
 (36.8% / 38.4% by half); signals did not help (model-picked 25% of 52, price-moving 38% of 21).
 They join the board only once they beat their price in both halves (2026-11-05).
+Pace line reads under-a-minute clocks ("20.2 - 4th") and says when a total has already cleared its
+line ("Already over", or "Gone over" for an under) (2026-11-05).

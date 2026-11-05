@@ -1295,9 +1295,14 @@ function paceNote(L){
   const pts = (String(L.live_score).match(/-?\d+(?=\s*(?:-|$))/g) || []).map(Number);
   if(pts.length < 2) return '';
   const total = pts[pts.length - 2] + pts[pts.length - 1];
+  const line0 = +m[2], over0 = /over/i.test(m[1]);
+  if(over0 && total > line0) return '<div class="sbn"><b>Already over</b> (' + total + ', line ' + line0 + ')</div>';
+  if(!over0 && total > line0) return '<div class="sbn"><b>Gone over</b> (' + total + ', line ' + line0 + ')</div>';
   let el = null;
-  const c = /(\d+):(\d+)\s*-\s*(\d)/.exec(L.live), e = /End of (\d)/i.exec(L.live);
+  // "9:23 - 2nd", or under a minute "20.2 - 4th"
+  const c = /(\d+):(\d+)\s*-\s*(\d)/.exec(L.live), sec = /^\s*(\d+(?:\.\d+)?)\s*-\s*(\d)/.exec(L.live), e = /End of (\d)/i.exec(L.live);
   if(c) el = (+c[3] - 1) * F[1] + (F[1] - (+c[1] + +c[2] / 60));
+  else if(sec) el = (+sec[2] - 1) * F[1] + (F[1] - +sec[1] / 60);
   else if(e) el = +e[1] * F[1];
   else if(/half/i.test(L.live)) el = F[0] * F[1] / 2;
   if(!el || el <= 0) return '';
