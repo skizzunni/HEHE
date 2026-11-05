@@ -135,6 +135,9 @@ PROBE = """<script>setTimeout(function(){
   var lrSave = D.locks_record; D.locks_record = Object.assign({}, lrSave, {watch: [{league: "nba", t: "over", won: 10, n: 18, said: 75}]});
   out.watch = [watchNote({league: "nba", spec: {t: "over"}}), watchNote({league: "nba", t: "under"}), watchNote({league: "nba", kind: "prop", t: "over"})];
   D.locks_record = lrSave;
+  out.pace = [paceNote({label: "Over 205.5 points", league: "nba", live: "9:23 - 2nd", live_score: "Detroit Pistons 25 - Philadelphia 76ers 33"}),
+              paceNote({label: "Under 5.5 goals", league: "nhl", live: "End of 2nd", live_score: "A 1 - B 2"}),
+              paceNote({label: "Luka Doncic: 6+ Assists", league: "nba", live: "1st", live_score: "A 1 - B 2"})];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -311,6 +314,10 @@ def main():
     wn = new.get("watch") or ["", "x", "x"]
     if "Caution:</b> NBA overs on Locks have won 10 of 18 against 75% stated" not in wn[0] or wn[1] or wn[2]:
         fails.append("watch note wrong: " + repr(wn))
+    pc = new.get("pace") or ["", "", "x"]
+    if not ("On pace for <b>190</b> (58 so far, line 205.5) &middot; behind the pace it needs" in pc[0]
+            and "On pace for <b>5</b> (3 so far, line 5.5) &middot; on track" in pc[1]) or pc[2]:
+        fails.append("pace note wrong: " + repr(pc))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)

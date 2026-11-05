@@ -1266,6 +1266,28 @@ function legHTML(x, opts){
     + '<div class="lgs">' + esc(x.match || '') + ' &middot; ' + esc(x.lg || x.league || '')
     + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>' + where + alt + (done ? '' : watchNote(x)) + '</li>';
 }
+// a live over/under leg: the total its game is on pace for, from the score
+// so far and the time played (NBA 4x12, college basketball 2x20, football
+// 4x15, NHL 3x20 minutes). Null when the clock cannot be read.
+function paceNote(L){
+  const m = /^(Over|Under)\s+([\d.]+)/i.exec(L.label || ''), lg = L.league || '';
+  if(!m || !L.live || !L.live_score) return '';
+  const F = {nba: [4, 12], wnba: [4, 10], ncaab: [2, 20], nfl: [4, 15], ncaaf: [4, 15], nhl: [3, 20]}[lg];
+  if(!F) return '';
+  const pts = (String(L.live_score).match(/-?\d+(?=\s*(?:-|$))/g) || []).map(Number);
+  if(pts.length < 2) return '';
+  const total = pts[pts.length - 2] + pts[pts.length - 1];
+  let el = null;
+  const c = /(\d+):(\d+)\s*-\s*(\d)/.exec(L.live), e = /End of (\d)/i.exec(L.live);
+  if(c) el = (+c[3] - 1) * F[1] + (F[1] - (+c[1] + +c[2] / 60));
+  else if(e) el = +e[1] * F[1];
+  else if(/half/i.test(L.live)) el = F[0] * F[1] / 2;
+  if(!el || el <= 0) return '';
+  const pace = total / el * F[0] * F[1], line = +m[2], over = /over/i.test(m[1]);
+  const good = over ? pace > line : pace < line;
+  return '<div class="sbn">On pace for <b>' + Math.round(pace) + '</b> (' + total + ' so far, line ' + line + ') &middot; '
+    + (good ? 'on track' : 'behind the pace it needs') + '</div>';
+}
 // a caution beside a leg whose kind (league + over/under/...) has hit under its
 // stated chance in both halves of a Locks record (locks.watch_kinds)
 function watchNote(x){
@@ -1411,6 +1433,7 @@ function ladderHTML(){
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')
           + (L.live ? '<div class="sbn"><b>Live:</b> ' + esc(L.live) + ' &middot; ' + esc(L.live_score || '') + '</div>' : '')
+          + (L.live ? paceNote(L) : '')
           + (L.status === 'open' || !L.status ? watchNote(L) : '')
           + (!L.live && (L.tip || L.lg) && L.status !== 'won' && L.status !== 'lost'
              ? '<div class="sbn">' + [L.lg, L.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '') + '</li>').join('') + '</ul>'
@@ -1472,7 +1495,7 @@ function everyGameHTML(){
     + '</p>' + everySweep(G, R) + '<ul class="betlegs">' + G.map(g => '<li>' + esc(g.label) + ' <b>' + esc(g.price || '') + '</b> &middot; '
       + (100 * g.p).toFixed(0) + '% &middot; ' + esc(g.match || '') + ' ' + res(g.status)
       + (g.score && g.status !== 'open' ? '<div class="sbn">' + esc(g.score) + '</div>'
-         : g.live ? '<div class="sbn"><b>Live:</b> ' + esc(g.live) + ' &middot; ' + esc(g.live_score || '') + '</div>'
+         : g.live ? '<div class="sbn"><b>Live:</b> ' + esc(g.live) + ' &middot; ' + esc(g.live_score || '') + '</div>' + paceNote(g)
          : g.alt ? '<div class="sbn">Pays more at <b>Kalshi</b>: ' + Math.round(100 * g.alt.ask) + '&cent; (' + esc(g.alt.american || '')
            + ' after fee), $10 wins $' + (10 * (g.alt.dec - 1)).toFixed(2) + ' vs $' + (10 * (dec0(g.price) - 1)).toFixed(2) + ' at FanDuel</div>'
          : (g.league || g.tip) ? '<div class="sbn">' + [String(g.league || '').toUpperCase(), g.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '')
