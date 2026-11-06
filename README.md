@@ -4015,3 +4015,7 @@ The daily review's Ladder line lists the day's legs and each one's state ("legs:
 Locks and Safe Locks records by place on the card (Locks: #1-3 53 of 64, 83% vs 79% stated; #4-5 37 of
 43; #6-8 49 of 60; #9-11 48 of 60) (`locks.by_rank`). Study, no rule: the top 3 beat their stated chance in
 both halves (84% / 81% vs ~79%); ranks 4-11 swing between halves (2026-11-06).
+Locks tab: "Cautions in force" lists every flagged bet type and its record before the legs. As of
+11-06 morning the pool flags are NFL team unders (311 of 402, 77% vs 82%) and NHL unders (162 of 203,
+80% vs 83%); NBA overs dropped off once the latest night put one half back above its stated chance --
+cautions are re-checked every build. Build cost of the pool check: ~0.5 s (2026-11-06).

@@ -168,6 +168,8 @@ PROBE = """<script>setTimeout(function(){
   try { out.ladEnded = ladderHTML(); } catch(e) { out.ladEnded = "ERR " + e; }
   D.ladder = ldS;
   out.caution = [cautionLine({flagged: {won: 3, n: 7, said: 75.3}, other: {won: 75, n: 90, said: 75.4}}), cautionLine({flagged: {won: 0, n: 0}})];
+  var wpS2 = D.watch_pool; D.watch_pool = [{league: "nba", t: "over", won: 882, n: 1120, said: 82}];
+  out.cautions = cautionsHTML(); D.watch_pool = wpS2;
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -402,6 +404,8 @@ def main():
     cl = new.get("caution") or ["", "x"]
     if "Legs that carried a caution when the card was set: <b>3 of 7</b> (43% vs 75.3% stated); the rest 75 of 90 (83% vs 75.4%)." not in cl[0] or cl[1]:
         fails.append("caution line wrong: " + repr(cl))
+    if "Cautions in force</b> (1)" not in new.get("cautions", "") or "NBA overs across every saved FanDuel line at 70-95%: 882 of 1120 (79% vs 82% stated)" not in new.get("cautions", ""):
+        fails.append("cautions list wrong: " + new.get("cautions", "")[:300])
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken by Trabzonspor, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)
