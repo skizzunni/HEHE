@@ -4000,3 +4000,6 @@ in both date halves by 3+ points on 100+ legs. First flags: NBA overs 882/1120 (
 unders 299/388 (77% vs 82%), NHL unders 159/200 (80% vs 83%). Shown beside matching legs; picks unchanged.
 Study (the 11-05 ladder loss): college football team unders at 70-85% beat their stated chance in both
 halves (79.1% / 83.1% vs 78%, 1,049 legs) -- FAU's 43 points was variance, not a leak (2026-11-06).
+Ladder: a lost run no longer reports a winning streak -- the review says "run 1 ended (peak $9.57, lost on
+Florida Atlantic Owls under 41.5 points); the next ticket starts again at $1", and the card says the same
+(`ladder.report` ended) (2026-11-06).

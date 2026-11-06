@@ -163,6 +163,10 @@ PROBE = """<script>setTimeout(function(){
                  egOrder([{p: 0.9, tip: "10:00 PM"}, {p: 0.95, tip: "7:00 PM"}], "chance").map(function(x){return x.p}).join(",")];
   out.need = ["Utah Mammoth under 4.5 goals", "Florida Atlantic Owls under 41.5 points", "James Madison Dukes -3.5", "Sacramento State Hornets +35.5",
               "Ja'Kobi Lane: 5+ Receiving Yards", "Over 205.5 points", "Real Madrid or draw", "Barcelona to win"].map(function(l){return needLine({label: l})});
+  var ldS = D.ladder; D.ladder = {start: "2026-11-03", target: 10000, bank: 1, runs: 1, streak: 0, best: 9.57, history: [],
+                                    ended: {start: "2026-11-03", peak: 9.57, lost_on: ["Florida Atlantic Owls under 41.5 points"]}};
+  try { out.ladEnded = ladderHTML(); } catch(e) { out.ladEnded = "ERR " + e; }
+  D.ladder = ldS;
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -389,6 +393,9 @@ def main():
             "5 or more receiving yards", "Both teams together: 206 or more points", "Real Madrid must win or draw", ""]
     if nd != want:
         fails.append("need lines wrong: " + repr(nd))
+    le = new.get("ladEnded", "")
+    if "Run 1 ended at its peak of $9.57 (lost on Florida Atlantic Owls under 41.5 points); the next ticket starts a new run at $1. Run 2, bank <b>$1.00</b>" not in le:
+        fails.append("ended ladder run wrong: " + le[:400])
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken by Trabzonspor, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)

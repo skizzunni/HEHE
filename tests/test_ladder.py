@@ -42,6 +42,12 @@ class Ladder(unittest.TestCase):
         r = ladder.report(b, start="2026-11-03")
         self.assertEqual(r["history"][0]["lost_on"], ["2026-11-04|e"])
 
+    def test_a_lost_run_has_no_streak(self):
+        b = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "lost")]})
+        r = ladder.report(b, start="2026-11-03")
+        self.assertEqual((r["streak"], r["bank"]), (0, 1.0))
+        self.assertEqual(r["ended"]["lost_on"], ["2026-11-04|e"])
+
     def test_leg_count_chosen_from_three_to_eight(self):
         legs = [(c, 0.95, "open") for c in "abcdefghij"]
         b = book({"2026-11-05": legs})
@@ -189,6 +195,10 @@ class ReviewLine(unittest.TestCase):
         self.assertIn("run 1, bank $7.59, 1 win(s) in a row", line)
         self.assertIn("today stakes $7.59", line)
         self.assertIsNone(daily_review.ladder_line(book({})))
+        b2 = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "lost")]})
+        with mock.patch.object(ladder, "report", lambda bk=None: ladder.__dict__["_report"](b2, start="2026-11-03")):
+            line = daily_review.ladder_line()
+        self.assertIn("run 1 ended (peak $7.59, lost on 2026-11-04|e); the next ticket starts again at $1", line)
 
 
 ladder._report = ladder.report

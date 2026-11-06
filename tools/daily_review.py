@@ -383,6 +383,10 @@ def ladder_line(book=None):
     if not r.get("runs"):
         return None
     t = r.get("today")
+    if r.get("ended"):
+        e = r["ended"]
+        return (f"Ladder: run {r['runs']} ended (peak ${e['peak']:.2f}, lost on {', '.join(e['lost_on']) or 'a leg'});"
+                f" the next ticket starts again at $1; best ever ${r['best']:.2f}.")
     return (f"Ladder: run {r['runs']}, bank ${r['bank']:.2f}, {r['streak']} win(s) in a row, best ${r['best']:.2f}"
             + (f"; today stakes ${t['stake']:.2f} at {t['pays']:.2f}x ({100 * t['prob']:.0f}% est.)" if t else "")
             + f"; {r['wins_needed']} wins to ${r['target']:,.0f}.")

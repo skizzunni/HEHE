@@ -1565,7 +1565,9 @@ function ladderHTML(){
     + '<p class="note">Every day, one parlay of the likeliest legs on the 8 AM Locks card (3 to 8 of them: the count with the best '
     + 'chance of reaching the target from the bank; 5 before Nov 5), staking the whole bank. '
     + 'A win rolls everything into tomorrow; one loss ends the run and the next day starts again at $1. Started '
-    + esc(X.start) + '. Run ' + Math.max(X.runs, 1) + ', bank <b>' + money(X.bank) + '</b>'
+    + esc(X.start) + '. ' + (X.ended ? 'Run ' + X.runs + ' ended at its peak of ' + money(X.ended.peak)
+        + ((X.ended.lost_on || []).length ? ' (lost on ' + X.ended.lost_on.map(esc).join(', ') + ')' : '') + '; the next ticket starts a new run at $1. '
+      : '') + 'Run ' + (X.ended ? X.runs + 1 : Math.max(X.runs, 1)) + ', bank <b>' + money(X.bank) + '</b>'
     + (X.streak ? ', ' + X.streak + ' win' + (X.streak > 1 ? 's' : '') + ' in a row' : '') + '; best so far ' + money(X.best) + '.</p>'
     + ladderBar(X.bank, X.target, money)
     + (T ? '<ul class="betlegs">' + T.legs.map(L => '<li>' + esc(L.label) + teamTag(L) + ' <b>' + esc(L.price) + '</b> &middot; '

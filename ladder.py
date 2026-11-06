@@ -202,7 +202,11 @@ def report(book=None, start=START, target=TARGET):
                 reached=sum(r["status"] == "reached" for r in runs),
                 best=round(max([r["bank"] for r in runs if r["status"] != "lost"] +
                                [max([d["stake"] for d in r["days"]] or [BANK0]) for r in runs] + [BANK0]), 2),
-                streak=sum(1 for d in (cur or {}).get("days", []) if d["result"] == "won") if cur else 0,
+                # a lost run's wins are history, not a streak: the next ticket starts again at $1
+                streak=(sum(1 for d in cur["days"] if d["result"] == "won") if cur and cur["status"] != "lost" else 0),
+                ended=(dict(start=cur["start"], peak=max([d["stake"] for d in cur["days"]] + [cur["bank"]]),
+                            lost_on=[L["label"] for L in cur["days"][-1]["legs"] if L.get("status") == "lost"])
+                       if cur and cur["status"] == "lost" else None),
                 today=today, wins_needed=need, last=last,
                 log=[dict(day=d["day"], stake=d["stake"], result=d["result"], pays=d["pays"]) for d in done],
                 chance_to_target=round(p ** need, 8) if p and need else None,
