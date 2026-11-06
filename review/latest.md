@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
-Picks 36-14 (72.0% vs 73.5% claimed, ROI -8.2%).
+Picks 37-14 (72.5% vs 74.0% claimed, ROI -8.0%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
 Strong calls 28-11 (71.8% vs 75.2% claimed).
-Closing line value: +1.33 points on 50 picks; beat the close on 60.0%.
-Board sweep: 36-14, 10 open -- broken (first loss: uecl Trabzonspor at 67%).
+Closing line value: +1.31 points on 51 picks; beat the close on 58.8%.
+Board sweep: 37-14, 9 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
