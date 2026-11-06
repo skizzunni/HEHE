@@ -9998,6 +9998,23 @@
    "tip": "1:00 PM",
    "venue": "Kalshi"
   },
+  "nhl:401892667|home|Kalshi": {
+   "dec": 2.3419,
+   "ev": 0.0138,
+   "fair": 0.4329,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nhl:401892667",
+   "kind": "value",
+   "league": "nhl",
+   "match": "NJ @ NYI",
+   "price": "+134",
+   "seen": "2026-11-06T17:25:57+00:00",
+   "side": "home",
+   "start": "2026-11-08T00:00Z",
+   "team": "New York Islanders",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
   "nhl:401892668|away|Kalshi": {
    "dec": 4.7348,
    "ev": 0.0369,
@@ -10014,6 +10031,30 @@
    "team": "Chicago Blackhawks",
    "tip": "8:00 PM",
    "venue": "Kalshi"
+  },
+  "nhl:401892668|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Chicago Blackhawks\"}|FanDuel": {
+   "dec": 2.42,
+   "dk": "+120",
+   "ev": 0.05,
+   "fair": 0.4339,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892668",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "CHI @ CAR",
+   "price": "+142",
+   "seen": "2026-11-06T17:25:57+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Chicago Blackhawks\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Chicago Blackhawks"
+   },
+   "start": "2026-11-08T01:00Z",
+   "team": "Chicago Blackhawks +1.5",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
   },
   "nhl:401892668|{\"line\": 6.5, \"t\": \"under\"}|Kalshi": {
    "dec": 1.9704,
@@ -10036,6 +10077,93 @@
    "start": "2026-11-08T01:00Z",
    "team": "under 6.5",
    "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892669|home|FanDuel": {
+   "dec": 1.4,
+   "ev": 0.0136,
+   "fair": 0.724,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892669",
+   "kind": "value",
+   "league": "nhl",
+   "match": "SJ @ DAL",
+   "price": "-250",
+   "seen": "2026-11-06T17:25:57+00:00",
+   "side": "home",
+   "start": "2026-11-08T01:00Z",
+   "team": "Dallas Stars",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892669|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Dallas Stars\"}|FanDuel": {
+   "dec": 2.0,
+   "dk": "-118",
+   "ev": 0.0363,
+   "fair": 0.5182,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892669",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "SJ @ DAL",
+   "price": "+100",
+   "seen": "2026-11-06T17:25:57+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Dallas Stars\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Dallas Stars"
+   },
+   "start": "2026-11-08T01:00Z",
+   "team": "Dallas Stars -1.5",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892673|{\"line\": 6.5, \"t\": \"under\"}|FanDuel": {
+   "dec": 2.12,
+   "dk": "+100",
+   "ev": 0.0118,
+   "fair": 0.4773,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892673",
+   "kind": "single",
+   "league": "nhl",
+   "market": "under",
+   "match": "VAN @ EDM",
+   "price": "+112",
+   "seen": "2026-11-06T17:25:57+00:00",
+   "side": "{\"line\": 6.5, \"t\": \"under\"}",
+   "spec": {
+    "line": 6.5,
+    "t": "under"
+   },
+   "start": "2026-11-08T03:00Z",
+   "team": "under 6.5",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892673|{\"line\": 6.5, \"t\": \"under\"}|Kalshi": {
+   "dec": 2.1395,
+   "dk": "+100",
+   "ev": 0.0211,
+   "fair": 0.4773,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892673",
+   "kind": "single",
+   "league": "nhl",
+   "market": "under",
+   "match": "VAN @ EDM",
+   "price": "+114",
+   "seen": "2026-11-06T17:25:57+00:00",
+   "side": "{\"line\": 6.5, \"t\": \"under\"}",
+   "spec": {
+    "line": 6.5,
+    "t": "under"
+   },
+   "start": "2026-11-08T03:00Z",
+   "team": "under 6.5",
+   "tip": "10:00 PM",
    "venue": "Kalshi"
   },
   "nor:401843366|away|FanDuel": {
