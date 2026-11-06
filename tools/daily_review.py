@@ -389,6 +389,26 @@ def caution_line():
                                              for w in W) + "."
 
 
+def leg_text(L, mark=None):
+    """One ladder leg for the review: what, which game, and where it stands --
+    "Over 214.5 points (WAS at ATL, 7:00 PM; live Q2 5:12, ATL 55 - WAS 50)"."""
+    mark = mark or {"won": "won", "lost": "LOST", "void": "void", "push": "void"}
+    st = L.get("status")
+    where = [str(L["match"])] if L.get("match") else []
+    if st in (None, "open"):
+        if L.get("live"):
+            bit = f"live {L['live']}" + (f", {L['live_score']}" if L.get("live_score") else "")
+            if L.get("so_far") is not None:
+                v = L["so_far"]
+                bit += f", {int(v) if float(v).is_integer() else v} so far"
+            where.append(bit)
+        else:
+            where.append((f"{L['tip']}, " if L.get("tip") else "") + "open")
+    else:
+        where.append(mark.get(st, st))
+    return f"{L['label']} ({'; '.join(where)})"
+
+
 def ladder_line(book=None):
     """One line on the $1 -> $10k ladder (ladder.py), or None before it starts."""
     try:
@@ -404,7 +424,7 @@ def ladder_line(book=None):
         return (f"Ladder: run {r['runs']} ended (peak ${e['peak']:.2f}, lost on {', '.join(e['lost_on']) or 'a leg'});"
                 f" the next ticket starts again at $1; best ever ${r['best']:.2f}.")
     mark = {"won": "won", "lost": "LOST", "void": "void", "push": "void"}
-    legs = ("; legs: " + ", ".join(f"{L['label']} ({mark.get(L.get('status'), 'open')})" for L in t["legs"])) if t else ""
+    legs = ("; legs: " + ", ".join(leg_text(L, mark) for L in t["legs"])) if t else ""
     return (f"Ladder: run {r['runs']}, bank ${r['bank']:.2f}, {r['streak']} win(s) in a row, best ${r['best']:.2f}"
             + (f"; today stakes ${t['stake']:.2f} at {t['pays']:.2f}x ({100 * t['prob']:.0f}% est.)" if t else "")
             + f"; {r['wins_needed']} wins to ${r['target']:,.0f}" + legs + ".")

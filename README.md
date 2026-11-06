@@ -4073,3 +4073,6 @@ ahead in both halves) -- promising for underdogs with points but z ~ 1.9, short 
 underdogs getting points 113/141 (80% vs 81%) then 93/139 (67% vs 82%), all NFL getting-points legs
 400/502 (80% vs 82%, mixed halves); college football favourites laying points 154/209 (74% vs 78%)
 short in both halves but under 100 legs in the first. No change (2026-11-06).
+Ladder line in the daily review names each leg's game, tip time and, once it is in play, the clock, score
+and a prop's stat so far (`daily_review.leg_text`), so the hourly and live reports can be followed
+without opening the page (2026-11-06).

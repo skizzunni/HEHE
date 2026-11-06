@@ -228,6 +228,21 @@ class ReviewLine(unittest.TestCase):
         self.assertIn("run 1 ended (peak $7.59, lost on 2026-11-04|e); the next ticket starts again at $1", line)
 
 
+    def test_leg_text_live_and_settled(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        self.assertEqual(daily_review.leg_text(dict(label="Over 214.5 points", match="WAS at ATL", tip="7:00 PM", status="open")),
+                         "Over 214.5 points (WAS at ATL; 7:00 PM, open)")
+        self.assertEqual(daily_review.leg_text(dict(label="Over 214.5 points", match="WAS at ATL", status="open",
+                                                    live="Q2 5:12", live_score="ATL 55 - WAS 50")),
+                         "Over 214.5 points (WAS at ATL; live Q2 5:12, ATL 55 - WAS 50)")
+        self.assertEqual(daily_review.leg_text(dict(label="Alex Caruso: 2+ Assists", match="OKC @ MEM", status="open",
+                                                    live="Q1 2:00", live_score="OKC 20 - MEM 18", so_far=1.0)),
+                         "Alex Caruso: 2+ Assists (OKC @ MEM; live Q1 2:00, OKC 20 - MEM 18, 1 so far)")
+        self.assertEqual(daily_review.leg_text(dict(label="Under 241.5 points", match="UTA at DAL", status="lost")),
+                         "Under 241.5 points (UTA at DAL; LOST)")
+
+
 ladder._report = ladder.report
 
 
