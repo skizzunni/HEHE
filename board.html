@@ -1283,6 +1283,7 @@ function legHTML(x, opts){
     + '<div class="lgs">' + esc(x.match || '') + ' &middot; ' + esc(x.lg || x.league || '')
     + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>'
     + (!done && needLine(x) ? '<div class="lgs">Needs: ' + esc(needLine(x)) + '</div>' : '')
+    + (!done ? kindRec(x) : '')
     + where + alt + (done ? '' : watchNote(x)) + '</li>';
 }
 // a player prop in play: the stat so far against the line it needs
@@ -1360,6 +1361,14 @@ function needLine(L){
   if((m = /:\s*(\d+)\+\s+(.+)$/.exec(lab))) return m[1] + ' or more ' + m[2].toLowerCase();
   if(/ or draw$/i.test(lab)) return lab.replace(/ or draw$/i, '') + ' must win or draw';
   return '';
+}
+// how card legs of this kind (league + bet type, or league + prop market)
+// have done on the Locks and Safe Locks cards (locks.report kinds)
+function kindRec(x){
+  const key = (x.league || '') + '|' + (x.kind === 'prop' ? 'prop:' + (x.market || '') : ((x.spec || {}).t || x.t || ''));
+  const parts = [['Locks', (D.locks_record || {}).kinds], ['Safe Locks', (D.safe_locks_record || {}).kinds]]
+    .map(([name, K]) => (K || {})[key] ? name + ' ' + K[key][0] + ' of ' + K[key][1] : '').filter(Boolean);
+  return parts.length ? '<div class="lgs">Like this before: ' + parts.join(' &middot; ') + '</div>' : '';
 }
 // a team total ("Florida Atlantic under 41.5 points") reads like a game
 // total; say which it is

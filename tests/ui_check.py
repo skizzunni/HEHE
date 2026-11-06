@@ -175,6 +175,10 @@ PROBE = """<script>setTimeout(function(){
                                                               by_edge: [{band: "2-4%", n: 128, won: 53, roi: 4.2}, {band: "4%+", n: 37, won: 11, roi: -37.3}]}};
   try { out.valueRec = valueBets(); } catch(e) { out.valueRec = "ERR " + e; }
   D.value = vS;
+  var lrK = D.locks_record, srK = D.safe_locks_record;
+  D.locks_record = Object.assign({}, lrK, {kinds: {"nhl|teamunder": [8, 11]}}); D.safe_locks_record = Object.assign({}, srK, {kinds: {"nhl|teamunder": [26, 29], "nba|prop:Assists": [5, 5]}});
+  out.kindRec = [kindRec({league: "nhl", spec: {t: "teamunder"}}), kindRec({league: "nba", kind: "prop", market: "Assists"}), kindRec({league: "nfl", t: "spread"})];
+  D.locks_record = lrK; D.safe_locks_record = srK;
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -414,6 +418,9 @@ def main():
     if "Last 7 days: 40 of 98 (41% vs 46.3% fair), ROI -14.2%." not in new.get("valueRec", "") \
             or "By stated edge: 2-4% 53 of 128 (ROI +4.2%), 4%+ 11 of 37 (ROI -37.3%)." not in new.get("valueRec", ""):
         fails.append("value last-7 line wrong: " + new.get("valueRec", "")[:300])
+    kr = new.get("kindRec") or ["", "", "x"]
+    if not ("Like this before: Locks 8 of 11 &middot; Safe Locks 26 of 29" in kr[0] and "Like this before: Safe Locks 5 of 5" in kr[1]) or kr[2]:
+        fails.append("kind record line wrong: " + repr(kr))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken by Trabzonspor, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)

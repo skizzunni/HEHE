@@ -778,7 +778,8 @@ def report(path=None):
                 plays={k: dict(days=t[0], hit=t[1], said=round(100 * t[2] / t[0], 1) if t[0] else None)
                        for k, t in tally.items()},
                 by_sport=by_sport(legs), by_kind=by_kind(legs), watch=watch_kinds(book),
-                caution=caution_record(path), by_rank=by_rank(book))
+                caution=caution_record(path), by_rank=by_rank(book),
+                kinds={'|'.join(k): v for k, v in kind_record(book).items()})
 
 
 def by_sport(legs):

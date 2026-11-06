@@ -4027,3 +4027,5 @@ Value bets record by stated edge (under 2%: 74 of 163, ROI -5.9%; 2-4%: 53 of 12
 37, -37.3%) (`value_bets.report` by_edge). Study, no rule: finds at 4%+ lost in both halves (-37.6% /
 -36.7%) but 11 wins against 15.1 expected is p ~0.10 -- under the 99.5% bar, so the 5% suspect cutoff
 stays; 2-4% finds positive in both halves (+3.2% / +6.3%) (2026-11-06).
+Every Locks and Safe Locks leg shows how card legs of its kind have done on both cards ("Like this before:
+Locks 8 of 11 · Safe Locks 26 of 29"; `locks.report` kinds) (2026-11-06).
