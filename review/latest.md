@@ -32,18 +32,18 @@ Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST nba Houston Rockets at 71% (-278), Houston Rockets 107 - Minnesota Timberwolves 117: margin 10 · the book had my side favoured too · called at 71% · favourite lost · price moved against it (4 pts)
 - LOST ncaab Loyola Marymount Lions at 68% (-230), Loyola Marymount Lions 95 - Queens University Royals 96: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 Locks 4/11 won, 7 open; Best play top 2 (60%) open.
-Safe Locks 6/11 won, 5 open; Winners parlay top 2 (85%) won; Best play top 7 (54%) open.
+Safe Locks 8/11 won, 3 open; Winners parlay top 2 (85%) won; Best play top 7 (54%) open.
 Lottery 100: open (3/9 legs won)
-Lottery 100: lost (1/6 legs won, killed by Over 6.5 goals, Vancouver Canucks to win)
-Lottery 100: lost (0/5 legs won, killed by Over 6.5 goals)
-Lottery 10k: lost (2/11 legs won, killed by Over 8.5 goals)
+Lottery 100: lost (2/6 legs won, killed by Over 6.5 goals, Vancouver Canucks to win)
+Lottery 100: lost (0/5 legs won, killed by Over 6.5 goals, Over 6.5 goals)
+Lottery 10k: lost (3/11 legs won, killed by Over 7.5 goals, Over 8.5 goals)
 Lottery 10k: lost (1/6 legs won, killed by Vegas Golden Knights under 1.5 goals, Under 6.5 goals)
-Lottery 10k+25: lost (2/11 legs won, killed by Over 8.5 goals)
-Lottery 10k+50: lost (2/11 legs won, killed by Over 8.5 goals)
-Lottery 10k+100: lost (2/11 legs won, killed by Over 8.5 goals)
+Lottery 10k+25: lost (3/11 legs won, killed by Over 7.5 goals, Over 8.5 goals)
+Lottery 10k+50: lost (3/11 legs won, killed by Over 7.5 goals, Over 8.5 goals)
+Lottery 10k+100: lost (3/11 legs won, killed by Over 7.5 goals, Over 8.5 goals)
 Lottery 100: lost (2/5 legs won, killed by Mark Flekken: 3+ Goalkeeper Saves, Claudio Echeverri: Anytime Goalscorer, Guglielmo Vicario: 3+ Goalkeeper Saves)
 Ladder-consistency props (all time): 1585/1896 won (83.6%) vs 86.4% fair, 87.4% price.
-Props 46/58 vs 77.7% claimed.
+Props 56/73 vs 78.4% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=121), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=139)
