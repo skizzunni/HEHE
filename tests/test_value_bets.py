@@ -219,6 +219,7 @@ class Recent(unittest.TestCase):
         finally:
             os.remove(path)
         self.assertEqual((r["n"], r["recent"]["n"], r["recent"]["since"]), (14, 7, "2026-10-17"))
+        self.assertEqual([(x["band"], x["n"]) for x in r["by_edge"]], [("4%+", 14)])
 
 
 class LeaveOneOut(unittest.TestCase):

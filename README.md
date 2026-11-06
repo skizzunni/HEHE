@@ -4023,3 +4023,7 @@ Value bets record shows its last 7 days beside the all-time line (`value_bets.re
 (41% vs 46.3% fair), ROI -14.2% since 10-31. Study, no rule: value finds by fair source and half --
 all finds -1.2% then -14.0% ROI (218 / 110); Polymarket-priced +8.9% then -18.7%, consensus +77.8%
 (15) then -9.9%; none holds in both halves; no Kalshi-proven find graded yet (2026-11-06).
+Value bets record by stated edge (under 2%: 74 of 163, ROI -5.9%; 2-4%: 53 of 128, +4.2%; 4%+: 11 of
+37, -37.3%) (`value_bets.report` by_edge). Study, no rule: finds at 4%+ lost in both halves (-37.6% /
+-36.7%) but 11 wins against 15.1 expected is p ~0.10 -- under the 99.5% bar, so the 5% suspect cutoff
+stays; 2-4% finds positive in both halves (+3.2% / +6.3%) (2026-11-06).

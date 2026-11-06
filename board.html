@@ -2170,6 +2170,8 @@ function valueBets(){
       + '%</b> against ' + (R.est_ev >= 0 ? '+' : '') + R.est_ev + '% expected (' + esc(R.dates[0]) + ' to ' + esc(R.dates[1]) + ').'
       + (R.recent && R.recent.n ? ' Last 7 days: ' + R.recent.won + ' of ' + R.recent.n + ' (' + Math.round(100 * R.recent.won / R.recent.n)
          + '% vs ' + R.recent.fair + '% fair), ROI ' + (R.recent.roi >= 0 ? '+' : '') + R.recent.roi + '%.' : '')
+      + ((R.by_edge || []).length > 1 ? ' By stated edge: ' + R.by_edge.map(x => esc(x.band) + ' ' + x.won + ' of ' + x.n + ' (ROI '
+         + (x.roi >= 0 ? '+' : '') + x.roi + '%)').join(', ') + '.' : '')
     : 'No value bet has been graded yet: every one is archived when first seen and graded after its game.';
   const SR = V.suspect_record || {}, GR = V.single_record || {};
   const sus = ' Edges claiming more than 5% are held out as likely stale quotes (they won 5 of 17 before this rule) and graded apart'

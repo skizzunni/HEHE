@@ -171,7 +171,8 @@ PROBE = """<script>setTimeout(function(){
   var wpS2 = D.watch_pool; D.watch_pool = [{league: "nba", t: "over", won: 882, n: 1120, said: 82}];
   out.cautions = cautionsHTML(); D.watch_pool = wpS2;
   var vS = D.value; D.value = {bets: [], sure: [], record: {n: 328, won: 137, roi: -5.6, est_ev: 3.1, dates: ["2026-10-22", "2026-11-06"],
-                                                              recent: {n: 98, won: 40, fair: 46.3, roi: -14.2, since: "2026-10-31"}}};
+                                                              recent: {n: 98, won: 40, fair: 46.3, roi: -14.2, since: "2026-10-31"},
+                                                              by_edge: [{band: "2-4%", n: 128, won: 53, roi: 4.2}, {band: "4%+", n: 37, won: 11, roi: -37.3}]}};
   try { out.valueRec = valueBets(); } catch(e) { out.valueRec = "ERR " + e; }
   D.value = vS;
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
@@ -410,7 +411,8 @@ def main():
         fails.append("caution line wrong: " + repr(cl))
     if "Cautions in force</b> (1)" not in new.get("cautions", "") or "NBA overs across every saved FanDuel line at 70-95%: 882 of 1120 (79% vs 82% stated)" not in new.get("cautions", ""):
         fails.append("cautions list wrong: " + new.get("cautions", "")[:300])
-    if "Last 7 days: 40 of 98 (41% vs 46.3% fair), ROI -14.2%." not in new.get("valueRec", ""):
+    if "Last 7 days: 40 of 98 (41% vs 46.3% fair), ROI -14.2%." not in new.get("valueRec", "") \
+            or "By stated edge: 2-4% 53 of 128 (ROI +4.2%), 4%+ 11 of 37 (ROI -37.3%)." not in new.get("valueRec", ""):
         fails.append("value last-7 line wrong: " + new.get("valueRec", "")[:300])
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken by Trabzonspor, 17 to go (2 live, 1 not winning now)" in st):
