@@ -179,6 +179,7 @@ PROBE = """<script>setTimeout(function(){
   D.locks_record = Object.assign({}, lrK, {kinds: {"nhl|teamunder": [8, 11]}}); D.safe_locks_record = Object.assign({}, srK, {kinds: {"nhl|teamunder": [26, 29], "nba|prop:Assists": [5, 5]}});
   out.kindRec = [kindRec({league: "nhl", spec: {t: "teamunder"}}), kindRec({league: "nba", kind: "prop", market: "Assists"}), kindRec({league: "nfl", t: "spread"})];
   D.locks_record = lrK; D.safe_locks_record = srK;
+  out.lockMeaning = [lockMeaning({legs: 227, won: 187}, false), lockMeaning({legs: 190, won: 172}, true), lockMeaning({}, false)];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -421,6 +422,10 @@ def main():
     kr = new.get("kindRec") or ["", "", "x"]
     if not ("Like this before: Locks 8 of 11 &middot; Safe Locks 26 of 29" in kr[0] and "Like this before: Safe Locks 5 of 5" in kr[1]) or kr[2]:
         fails.append("kind record line wrong: " + repr(kr))
+    lm = new.get("lockMeaning") or ["", "", "x"]
+    if not ("What a Lock is:</b> the likeliest bets on FanDuel today, not sure things. They have won <b>187 of 227</b> (82%), so about 1 in 6 loses, and several" in lm[0]
+            and "What a Safe Lock is:" in lm[1] and "about 1 in 11 loses." in lm[1]) or lm[2]:
+        fails.append("lock meaning wrong: " + repr(lm))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken by Trabzonspor, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)

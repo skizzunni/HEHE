@@ -1773,6 +1773,14 @@ function kindLine(K){
   return '<p class="note">By type: ' + K.map(x => esc(x.kind) + ' ' + x.won + ' of ' + x.n + ' ('
     + (100 * x.won / x.n).toFixed(0) + '% vs ' + x.said + '% stated)').join(' &middot; ') + '.</p>';
 }
+// what a "Lock" is, from its own record: the likeliest bets, not certainties
+function lockMeaning(R, SAFE){
+  if(!R || !R.legs) return '';
+  const hit = R.won / R.legs, miss = Math.max(1, Math.round(1 / Math.max(1 - hit, 0.001)));
+  return '<p class="coinbar"><b>What a ' + (SAFE ? 'Safe Lock' : 'Lock') + ' is:</b> the likeliest bets on FanDuel today, not sure things. '
+    + 'They have won <b>' + R.won + ' of ' + R.legs + '</b> (' + Math.round(100 * hit) + '%), so about 1 in ' + miss + ' loses'
+    + (SAFE ? '.' : ', and several together lose more often than not.') + '</p>';
+}
 function drawLocks(){
   const SAFE = LKMODE === "safe";
   const K = (SAFE ? D.safe_locks : D.locks) || {};
@@ -1786,6 +1794,7 @@ function drawLocks(){
     + '<p><span class="pills"><button type="button" data-lkmode="regular" aria-pressed="' + !SAFE
     + '">Locks &middot; -400 to -120</button><button type="button" data-lkmode="safe" aria-pressed="' + SAFE
     + '">Safe Locks &middot; -2000 to -500</button></span></p>'
+    + lockMeaning(R, SAFE)
     + (SAFE ? '<p class="note">Heavy favourites only: each leg wins far more often, so all of them '
       + 'hitting together is far likelier than on the regular card &mdash; and it pays much less. '
       + 'The regular Locks and their rules are unchanged. The all-hit number is an estimate built from each '

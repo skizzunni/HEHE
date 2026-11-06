@@ -4034,3 +4034,6 @@ ticket is the top 5 Locks (`ladder.FIXED_FROM`/`FIXED_LEGS`). The 3-8 chooser ra
 in the record; the card still shows what other counts would have given. For the record, the 11-05 study
 found the chooser ahead of a fixed 5 in both halves (reach chance 3.1e-05 vs 1.3e-06, 1.3e-03 vs 2.6e-04)
 (2026-11-06).
+Locks tab says what a Lock is, from its own record: "the likeliest bets on FanDuel today, not sure things.
+They have won N of M, so about 1 in K loses" -- after the user's point that a caution on a "Lock" reads
+as a contradiction (`lockMeaning`) (2026-11-06).
