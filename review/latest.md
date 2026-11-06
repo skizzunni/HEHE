@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
-Picks 28-11 (71.8% vs 75.6% claimed, ROI -10.9%).
+Picks 29-12 (70.7% vs 75.1% claimed, ROI -12.3%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
-Strong calls 27-11 (71.1% vs 75.1% claimed).
-Closing line value: +1.33 points on 39 picks; beat the close on 64.1%.
-Board sweep: 28-11, 21 open -- broken (first loss: uecl Trabzonspor at 67%).
+Strong calls 28-11 (71.8% vs 75.2% claimed).
+Closing line value: +1.3 points on 41 picks; beat the close on 63.4%.
+Board sweep: 29-12, 19 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -16,7 +16,8 @@ Board sweep: 28-11, 21 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uel Hapoel Be'er at 71% (-310), Hapoel Be'er 0 - OFI Crete 2: margin 2 · the book had my side favoured too · called at 71% · favourite lost
 - LOST uel Bayer Leverkusen at 68% (-255), Bayer Leverkusen 0 - Marseille 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 - LOST arg Belgrano (Córdoba) at 67% (-250), Belgrano (Córdoba) 1 - Gimnasia La Plata 2: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
-Why picks lost (14 days): favourite lost 143, close game 120, upset 57, coin flip 49, blowout 44, price moved against it 34.
+- LOST nhl Pittsburgh Penguins at 52% (-118), Boston Bruins 6 - Pittsburgh Penguins 2: margin 4 · the book had my side favoured too · called at 52% · coin flip · blowout
+Why picks lost (14 days): favourite lost 143, close game 120, upset 57, coin flip 50, blowout 45, price moved against it 34.
 Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
 - LOST efl1 Middlesbrough at 78% (-500), Middlesbrough 0 - Wrexham 2: margin 2 · the book had my side favoured too · called at 78% · upset
@@ -31,18 +32,18 @@ Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST nba Houston Rockets at 71% (-278), Houston Rockets 107 - Minnesota Timberwolves 117: margin 10 · the book had my side favoured too · called at 71% · favourite lost · price moved against it (4 pts)
 - LOST ncaab Loyola Marymount Lions at 68% (-230), Loyola Marymount Lions 95 - Queens University Royals 96: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 Locks 2/11 won, 9 open; Best play top 2 (60%) open.
-Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (54%) open.
-Lottery 100: open (0/9 legs won)
+Safe Locks 1/11 won, 10 open; Winners parlay top 2 (85%) open; Best play top 7 (54%) open.
+Lottery 100: open (1/9 legs won)
 Lottery 100: open (1/6 legs won)
 Lottery 100: open (0/5 legs won)
-Lottery 10k: open (0/11 legs won)
+Lottery 10k: open (1/11 legs won)
 Lottery 10k: open (0/6 legs won)
-Lottery 10k+25: open (0/11 legs won)
-Lottery 10k+50: open (0/11 legs won)
-Lottery 10k+100: open (0/11 legs won)
+Lottery 10k+25: open (1/11 legs won)
+Lottery 10k+50: open (1/11 legs won)
+Lottery 10k+100: open (1/11 legs won)
 Lottery 100: lost (2/5 legs won, killed by Mark Flekken: 3+ Goalkeeper Saves, Claudio Echeverri: Anytime Goalscorer, Guglielmo Vicario: 3+ Goalkeeper Saves)
 Ladder-consistency props (all time): 1585/1896 won (83.6%) vs 86.4% fair, 87.4% price.
-Props 9/12 vs 63.2% claimed.
+Props 13/18 vs 69.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=121), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=133)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=121), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=134)
