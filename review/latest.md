@@ -1,7 +1,7 @@
 # Review 2026-11-06
 
 Picks 1-0 (100.0% vs 83.0% claimed, ROI +14.3%).
-Ladder: run 1 ended (peak $9.57, lost on Florida Atlantic Owls under 41.5 points); the next ticket starts again at $1; best ever $9.57.
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 1.99x (47% est.); 14 wins to $10,000; legs: Alex Caruso: 2+ Assists (open), Austin Reaves: 4+ Assists (open), Over 214.5 points (open).
 Strong calls 1-0 (100.0% vs 83.0% claimed).
 Closing line value: -1.39 points on 1 picks; beat the close on 0.0%.
 Board sweep: 1-0, 48 open -- still clean.
@@ -24,6 +24,14 @@ Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST nhl Edmonton Oilers at 63% (-192), Anaheim Ducks 5 - Edmonton Oilers 4: margin 1 · the book had my side favoured too · called at 63% · favourite lost · close game
 - LOST ncaaf UTSA Roadrunners at 72% (-278), Florida Atlantic Owls 60 - UTSA Roadrunners 29: margin 31 · the book had my side favoured too · called at 72% · favourite lost · blowout
 - LOST nhl Colorado Avalanche at 66% (-218), Colorado Avalanche 2 - Nashville Predators 3: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game
+Locks 0/11 won, 11 open; Best play top 2 (62%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (51%) open.
+Lottery 100: open (0/9 legs won)
+Lottery 100: open (0/7 legs won)
+Lottery 10k: open (0/13 legs won)
+Lottery 10k+25: open (0/13 legs won)
+Lottery 10k+50: open (0/13 legs won)
+Lottery 10k+100: open (0/12 legs won)
 Ladder-consistency props (all time): 1622/1939 won (83.7%) vs 86.4% fair, 87.4% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
