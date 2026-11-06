@@ -9131,8 +9131,8 @@
    },
    {
     "flag": false,
-    "hit": 80.8,
-    "n": 504,
+    "hit": 81.1,
+    "n": 528,
     "name": "props nhl Shots on Goal",
     "said": 81.0
    },
@@ -9229,10 +9229,10 @@
    },
    {
     "flag": false,
-    "hit": 94.1,
-    "n": 17,
+    "hit": 94.4,
+    "n": 18,
     "name": "safe locks nhl over",
-    "said": 91.4
+    "said": 91.3
    },
    {
     "flag": false,
@@ -9243,8 +9243,8 @@
    },
    {
     "flag": false,
-    "hit": 89.4,
-    "n": 47,
+    "hit": 89.8,
+    "n": 49,
     "name": "safe locks nhl under",
     "said": 91.4
    },
@@ -9257,8 +9257,8 @@
    },
    {
     "flag": false,
-    "hit": 92.7,
-    "n": 165,
+    "hit": 92.9,
+    "n": 168,
     "name": "prop locks",
     "said": 88.4
    },
@@ -9366,9 +9366,9 @@
    }
   },
   "clv": {
-   "avg": 1.17,
-   "beat": 60.5,
-   "n": 43
+   "avg": 1.34,
+   "beat": 60.9,
+   "n": 46
   },
   "day": "2026-11-05",
   "ladder": "Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.",
@@ -9376,7 +9376,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      2,
@@ -9384,7 +9384,7 @@
      "open"
     ]
    },
-   "won": 3
+   "won": 4
   },
   "loss_reasons_14d": {
    "blowout": 45,
@@ -9604,7 +9604,7 @@
     "lost": 0,
     "status": "open",
     "tier": "100",
-    "won": 1
+    "won": 3
    },
    {
     "killed_by": [
@@ -9618,10 +9618,12 @@
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 6.5 goals"
+    ],
     "legs": 5,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 0
    },
@@ -9633,13 +9635,16 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k",
-    "won": 1
+    "won": 2
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Vegas Golden Knights under 1.5 goals",
+     "Under 6.5 goals"
+    ],
     "legs": 6,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k",
     "won": 1
    },
@@ -9651,7 +9656,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+25",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -9661,7 +9666,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+50",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -9671,7 +9676,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -9687,12 +9692,12 @@
    }
   ],
   "picks": {
-   "hit": 72.1,
+   "hit": 73.9,
    "lost": 12,
-   "n": 43,
-   "roi": -9.1,
-   "said": 74.5,
-   "won": 31
+   "n": 46,
+   "roi": -5.0,
+   "said": 73.7,
+   "won": 34
   },
   "picks_by_league": {
    "arg": {
@@ -9728,12 +9733,12 @@
     "won": 1
    },
    "nhl": {
-    "hit": 66.7,
+    "hit": 83.3,
     "lost": 1,
-    "n": 3,
-    "roi": 4.5,
-    "said": 58.3,
-    "won": 2
+    "n": 6,
+    "roi": 29.1,
+    "said": 60.5,
+    "won": 5
    },
    "uecl": {
     "hit": 82.4,
@@ -9759,14 +9764,14 @@
     "said_price": 87.4,
     "won": 1585
    },
-   "n": 34,
-   "said": 75.7,
-   "won": 25
+   "n": 58,
+   "said": 77.7,
+   "won": 46
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 8,
+   "open": 5,
    "plays": {
     "best": [
      7,
@@ -9779,7 +9784,7 @@
      "won"
     ]
    },
-   "won": 3
+   "won": 6
   },
   "strong": {
    "hit": 71.8,
@@ -9793,8 +9798,8 @@
   "sweep": {
    "broke_on": "uecl Trabzonspor at 67%",
    "lost": 12,
-   "open": 17,
-   "won": 31
+   "open": 14,
+   "won": 34
   },
   "vs_market_14d": {
    "against": {
@@ -9803,10 +9808,10 @@
    "agree": {
     "hit": 75.4,
     "lost": 250,
-    "n": 1015,
-    "roi": 0.7,
-    "said": 71.3,
-    "won": 765
+    "n": 1018,
+    "roi": 0.8,
+    "said": 71.2,
+    "won": 768
    }
   },
   "weights": {
@@ -9840,10 +9845,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6486,
-    "market_only": 0.6486,
-    "model_40": 0.6574,
-    "n": 136,
+    "logloss": 0.6447,
+    "market_only": 0.6447,
+    "model_40": 0.6538,
+    "n": 139,
     "weight": 0.0
    }
   },

@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
-Picks 31-12 (72.1% vs 74.5% claimed, ROI -9.1%).
+Picks 34-12 (73.9% vs 73.7% claimed, ROI -5.0%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
 Strong calls 28-11 (71.8% vs 75.2% claimed).
-Closing line value: +1.17 points on 43 picks; beat the close on 60.5%.
-Board sweep: 31-12, 17 open -- broken (first loss: uecl Trabzonspor at 67%).
+Closing line value: +1.34 points on 46 picks; beat the close on 60.9%.
+Board sweep: 34-12, 14 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -31,19 +31,19 @@ Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST per Universitario at 67% (-265), Sport Boys 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost · price moved against it (3 pts)
 - LOST nba Houston Rockets at 71% (-278), Houston Rockets 107 - Minnesota Timberwolves 117: margin 10 · the book had my side favoured too · called at 71% · favourite lost · price moved against it (4 pts)
 - LOST ncaab Loyola Marymount Lions at 68% (-230), Loyola Marymount Lions 95 - Queens University Royals 96: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
-Locks 3/11 won, 8 open; Best play top 2 (60%) open.
-Safe Locks 3/11 won, 8 open; Winners parlay top 2 (85%) won; Best play top 7 (54%) open.
-Lottery 100: open (1/9 legs won)
+Locks 4/11 won, 7 open; Best play top 2 (60%) open.
+Safe Locks 6/11 won, 5 open; Winners parlay top 2 (85%) won; Best play top 7 (54%) open.
+Lottery 100: open (3/9 legs won)
 Lottery 100: lost (1/6 legs won, killed by Over 6.5 goals, Vancouver Canucks to win)
-Lottery 100: open (0/5 legs won)
-Lottery 10k: lost (1/11 legs won, killed by Over 8.5 goals)
-Lottery 10k: open (1/6 legs won)
-Lottery 10k+25: lost (1/11 legs won, killed by Over 8.5 goals)
-Lottery 10k+50: lost (1/11 legs won, killed by Over 8.5 goals)
-Lottery 10k+100: lost (1/11 legs won, killed by Over 8.5 goals)
+Lottery 100: lost (0/5 legs won, killed by Over 6.5 goals)
+Lottery 10k: lost (2/11 legs won, killed by Over 8.5 goals)
+Lottery 10k: lost (1/6 legs won, killed by Vegas Golden Knights under 1.5 goals, Under 6.5 goals)
+Lottery 10k+25: lost (2/11 legs won, killed by Over 8.5 goals)
+Lottery 10k+50: lost (2/11 legs won, killed by Over 8.5 goals)
+Lottery 10k+100: lost (2/11 legs won, killed by Over 8.5 goals)
 Lottery 100: lost (2/5 legs won, killed by Mark Flekken: 3+ Goalkeeper Saves, Claudio Echeverri: Anytime Goalscorer, Guglielmo Vicario: 3+ Goalkeeper Saves)
 Ladder-consistency props (all time): 1585/1896 won (83.6%) vs 86.4% fair, 87.4% price.
-Props 25/34 vs 75.7% claimed.
+Props 46/58 vs 77.7% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=121), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=136)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=121), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=139)
