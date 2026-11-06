@@ -9131,8 +9131,8 @@
    },
    {
     "flag": false,
-    "hit": 80.7,
-    "n": 543,
+    "hit": 80.5,
+    "n": 550,
     "name": "props nhl Shots on Goal",
     "said": 81.0
    },
@@ -9208,10 +9208,10 @@
    },
    {
     "flag": false,
-    "hit": 73.9,
-    "n": 23,
+    "hit": 75.0,
+    "n": 24,
     "name": "locks nhl under",
-    "said": 77.8
+    "said": 77.7
    },
    {
     "flag": false,
@@ -9236,8 +9236,8 @@
    },
    {
     "flag": false,
-    "hit": 93.3,
-    "n": 30,
+    "hit": 93.5,
+    "n": 31,
     "name": "safe locks nhl side",
     "said": 91.3
    },
@@ -9257,15 +9257,15 @@
    },
    {
     "flag": false,
-    "hit": 92.9,
-    "n": 170,
+    "hit": 93.0,
+    "n": 171,
     "name": "prop locks",
     "said": 88.4
    },
    {
     "flag": false,
-    "hit": 42.4,
-    "n": 323,
+    "hit": 42.3,
+    "n": 324,
     "name": "value bets",
     "said": 45.1
    },
@@ -9366,9 +9366,9 @@
    }
   },
   "clv": {
-   "avg": 1.35,
-   "beat": 60.4,
-   "n": 48
+   "avg": 1.36,
+   "beat": 61.2,
+   "n": 49
   },
   "day": "2026-11-05",
   "ladder": "Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.",
@@ -9376,7 +9376,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 7,
+   "open": 6,
    "plays": {
     "best": [
      2,
@@ -9384,12 +9384,12 @@
      "open"
     ]
    },
-   "won": 4
+   "won": 5
   },
   "loss_reasons_14d": {
    "blowout": 45,
-   "close game": 121,
-   "coin flip": 51,
+   "close game": 122,
+   "coin flip": 52,
    "favourite lost": 143,
    "price moved against it": 34,
    "upset": 57
@@ -9612,6 +9612,23 @@
      "close game"
     ],
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 54% \u00b7 coin flip \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "match": "UTA @ MTL",
+    "pick": "Utah Mammoth",
+    "price": "-122",
+    "said": 53,
+    "score": {
+     "Montreal Canadiens": 5,
+     "Utah Mammoth": 4
+    },
+    "tags": [
+     "coin flip",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 53% \u00b7 coin flip \u00b7 close game"
    }
   ],
   "lottery": [
@@ -9715,11 +9732,11 @@
    }
   ],
   "picks": {
-   "hit": 72.9,
-   "lost": 13,
-   "n": 48,
-   "roi": -6.4,
-   "said": 73.4,
+   "hit": 71.4,
+   "lost": 14,
+   "n": 49,
+   "roi": -8.3,
+   "said": 73.0,
    "won": 35
   },
   "picks_by_league": {
@@ -9756,11 +9773,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 75.0,
-    "lost": 2,
-    "n": 8,
-    "roi": 12.0,
-    "said": 62.0,
+    "hit": 66.7,
+    "lost": 3,
+    "n": 9,
+    "roi": -0.5,
+    "said": 61.0,
     "won": 6
    },
    "uecl": {
@@ -9787,14 +9804,14 @@
     "said_price": 87.4,
     "won": 1585
    },
-   "n": 73,
+   "n": 80,
    "said": 78.4,
-   "won": 56
+   "won": 61
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 3,
+   "open": 2,
    "plays": {
     "best": [
      7,
@@ -9807,7 +9824,7 @@
      "won"
     ]
    },
-   "won": 8
+   "won": 9
   },
   "strong": {
    "hit": 71.8,
@@ -9820,8 +9837,8 @@
   "stuck": [],
   "sweep": {
    "broke_on": "uecl Trabzonspor at 67%",
-   "lost": 13,
-   "open": 12,
+   "lost": 14,
+   "open": 11,
    "won": 35
   },
   "vs_market_14d": {
@@ -9829,10 +9846,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.4,
-    "lost": 251,
-    "n": 1020,
-    "roi": 0.7,
+    "hit": 75.3,
+    "lost": 252,
+    "n": 1021,
+    "roi": 0.6,
     "said": 71.2,
     "won": 769
    }
@@ -9868,10 +9885,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6428,
-    "market_only": 0.6428,
-    "model_40": 0.6522,
-    "n": 141,
+    "logloss": 0.6435,
+    "market_only": 0.6435,
+    "model_40": 0.6527,
+    "n": 142,
     "weight": 0.0
    }
   },
