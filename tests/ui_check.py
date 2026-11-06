@@ -127,7 +127,8 @@ PROBE = """<script>setTimeout(function(){
   out.kind = [kindLine([{kind: "player props", won: 33, n: 41, said: 79.1}, {kind: "game lines", won: 136, n: 165, said: 77.3}]), kindLine([])];
   out.nextTile = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.textContent}).filter(function(t){return /Next up/i.test(t)}).join("|");
   var plSave = D.prop_locks;
-  D.prop_locks = {standard: 0.7, hour: 12, record: {n: 0}, today: {legs: [{label: "Luka Doncic: 6+ Assists", price: "-400", p: 0.79, match: "LAL @ SAC", status: "open", live: "3rd 4:10", live_score: "LAL 88 - SAC 80", prop_rec: {won: 40, n: 50, said: 80}}]}};
+  D.prop_locks = {standard: 0.7, hour: 12, record: {n: 148, won: 136, hit: 91.9, wilson95: [86.4, 95.3], stated: 87.8, roi: 3.1,
+                   by_rank: [{ranks: "1-5", won: 71, n: 73}, {ranks: "6-10", won: 63, n: 69}]}, today: {legs: [{label: "Luka Doncic: 6+ Assists", price: "-400", p: 0.79, match: "LAL @ SAC", status: "open", live: "3rd 4:10", live_score: "LAL 88 - SAC 80", prop_rec: {won: 40, n: 50, said: 80}}]}};
   try { out.plLive = propLocksHTML(); } catch(e) { out.plLive = "ERR " + e; }
   D.prop_locks = plSave;
   out.ladderFirst = [ladderFirst([{tip: "9:30 PM"}, {tip: "7:00 PM"}, {tip: "12:45 PM"}, {tip: "10:00 PM"}]), ladderFirst([{}, {}])];
@@ -356,7 +357,8 @@ def main():
     if not ("12:45 PM" in nt and "Real Madrid 78% (-450) · RMA @ AEK" in nt):
         fails.append("next tile wrong: " + nt)
     pl = new.get("plLive", "")
-    if "<b>Live:</b> 3rd 4:10 &middot; LAL 88 - SAC 80" not in pl or "Props like this: 40 of 50 (80% vs 80% stated)" not in pl:
+    if "<b>Live:</b> 3rd 4:10 &middot; LAL 88 - SAC 80" not in pl or "Props like this: 40 of 50 (80% vs 80% stated)" not in pl \
+            or "By place on the card: #1-5 71/73, #6-10 63/69." not in pl:
         fails.append("prop locks live line wrong: " + pl[-400:])
     if new.get("ladderFirst") != ["4 to play, first at 12:45 PM", "2 to play"]:
         fails.append("ladder first-leg line wrong: " + repr(new.get("ladderFirst")))

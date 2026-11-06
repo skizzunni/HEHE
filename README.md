@@ -4044,3 +4044,6 @@ their stated chance in both halves (85.9% / 88.8% vs 85%), rebounds 80-90% 84.9%
 Ladder card: a small chart of the bank day by day across every run (log scale; each run starts at $1, a
 loss drops to the floor; hover a dot for the day and amount) (`ladder.report` path, `ladderChart`)
 (2026-11-06).
+Prop Locks record by place on the card (#1-5 71 of 73, #6-10 63 of 69, #11-15 31 of 35;
+`prop_locks.report` by_rank). Study, nothing to change: the top 5 beat their stated chance in both halves
+(35/35 then 36/38 vs ~90%); 6-10 mixed (85% then 97%); 11-15 89% vs 85% (2026-11-06).

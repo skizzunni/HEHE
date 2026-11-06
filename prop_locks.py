@@ -156,6 +156,7 @@ def report(path=None):
     import props_ledger
     led = props_ledger.load()
     days, allrows = [], []
+    ranks = {}
     for day, rec in sorted(load(path)["days"].items(), reverse=True):
         st = [(L, (led.get(L.get("key")) or {}).get("status", "open")) for L in rec.get("legs") or []]
         won = sum(s == "won" for _, s in st)
@@ -163,6 +164,13 @@ def report(path=None):
         days.append(dict(day=day, n=len(st), won=won, lost=lost, open=sum(s == "open" for _, s in st),
                          void=sum(s in ("void", "ungradable") for _, s in st)))
         allrows += [(L, s) for L, s in st if s in ("won", "lost")]
+        for i, (L, s_) in enumerate(sorted(st, key=lambda x: -x[0]["p"])):
+            if s_ in ("won", "lost"):
+                g = "1-5" if i < 5 else "6-10" if i < 10 else "11-15"
+                r = ranks.setdefault(g, [0, 0, 0.0])
+                r[0] += s_ == "won"
+                r[1] += 1
+                r[2] += L["p"]
     if not allrows:
         return dict(days=days, n=0)
     n = len(allrows)
@@ -174,7 +182,9 @@ def report(path=None):
     hi = (p + z * z / (2 * n) + z * math.sqrt(p * (1 - p) / n + z * z / (4 * n * n))) / (1 + z * z / n)
     return dict(days=days, n=n, won=w, hit=round(100 * p, 1), wilson95=[round(100 * lo, 1), round(100 * hi, 1)],
                 stated=round(100 * sum(L["p"] for L, _ in allrows) / n, 1),
-                roi=round(100 * sum(ret) / n, 1), by_market=by_market(allrows))
+                roi=round(100 * sum(ret) / n, 1), by_market=by_market(allrows),
+                by_rank=[dict(ranks=g, won=r[0], n=r[1], said=round(100 * r[2] / r[1], 1))
+                         for g, r in sorted(ranks.items(), key=lambda x: int(x[0].split("-")[0]))])
 
 
 def by_market(rows):
