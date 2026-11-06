@@ -6826,6 +6826,23 @@
    "tip": "7:30 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401858513|home|FanDuel": {
+   "dec": 1.9804,
+   "ev": 0.0194,
+   "fair": 0.5147,
+   "fair_source": "consensus of 3 other venues",
+   "id": "ncaaf:401858513",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "IOWA @ NU",
+   "price": "-102",
+   "seen": "2026-11-06T17:58:14+00:00",
+   "side": "home",
+   "start": "2026-11-08T00:30Z",
+   "team": "Northwestern Wildcats",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401858513|home|Kalshi": {
    "dec": 2.0101,
    "ev": 0.1021,
@@ -6864,6 +6881,30 @@
    "match": "IOWA @ NU",
    "profit": 0.0365,
    "seen": "2026-11-06T17:53:04+00:00"
+  },
+  "ncaaf:401858513|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Northwestern Wildcats\"}|Kalshi": {
+   "dec": 2.0947,
+   "dk": "-112",
+   "ev": 0.073,
+   "fair": 0.5123,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "ncaaf:401858513",
+   "kind": "suspect",
+   "league": "ncaaf",
+   "market": "spread",
+   "match": "IOWA @ NU",
+   "price": "+109",
+   "seen": "2026-11-06T17:58:14+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Northwestern Wildcats\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Northwestern Wildcats"
+   },
+   "start": "2026-11-08T00:30Z",
+   "team": "Northwestern Wildcats -1.5",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
   },
   "ncaaf:401858513|{\"line\": -2.5, \"t\": \"spread\", \"team\": \"Northwestern Wildcats\"}|Kalshi": {
    "dec": 2.1867,
