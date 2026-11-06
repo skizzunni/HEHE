@@ -9957,6 +9957,46 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nhl:401892668|away|Kalshi": {
+   "dec": 4.7348,
+   "ev": 0.0369,
+   "fair": 0.219,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892668",
+   "kind": "value",
+   "league": "nhl",
+   "match": "CHI @ CAR",
+   "price": "+373",
+   "seen": "2026-11-06T16:23:41+00:00",
+   "side": "away",
+   "start": "2026-11-08T01:00Z",
+   "team": "Chicago Blackhawks",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892668|{\"line\": 6.5, \"t\": \"under\"}|Kalshi": {
+   "dec": 1.9704,
+   "dk": "-135",
+   "ev": 0.0908,
+   "fair": 0.5536,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892668",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "under",
+   "match": "CHI @ CAR",
+   "price": "-103",
+   "seen": "2026-11-06T16:23:41+00:00",
+   "side": "{\"line\": 6.5, \"t\": \"under\"}",
+   "spec": {
+    "line": 6.5,
+    "t": "under"
+   },
+   "start": "2026-11-08T01:00Z",
+   "team": "under 6.5",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
   "nor:401843366|away|FanDuel": {
    "dec": 3.0,
    "ev": 0.0126,
