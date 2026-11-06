@@ -1071,7 +1071,22 @@ def every_game_record(path=None, led=None):
         a_, n_ = ty.get(k, (0, 0))
         ty[k] = (a_ + (g["status"] == "won"), n_ + 1)
     by_type = [dict(type=k, won=a_, n=n_) for k, (a_, n_) in sorted(ty.items(), key=lambda x: -x[1][1])]
-    return dict(n=len(rows), won=w, hit=round(100 * w / len(rows), 1), by_league=by_league, by_type=by_type, swept=swept, last=last,
+    import re as _re
+
+    def _when(t):
+        m = _re.match(r"(\d+):(\d+)\s*(AM|PM)", t or "")
+        if not m:
+            return None
+        h = int(m[1]) % 12 + (12 if m[3] == "PM" else 0)
+        return "before 5 PM" if h < 17 else "5-8 PM" if h < 20 else "8 PM or later"
+    bs = {}
+    for _, g in rows:
+        k = _when(g.get("tip"))
+        if k:
+            a_, n_ = bs.get(k, (0, 0))
+            bs[k] = (a_ + (g["status"] == "won"), n_ + 1)
+    by_start = [dict(when=k, won=bs[k][0], n=bs[k][1]) for k in ("before 5 PM", "5-8 PM", "8 PM or later") if k in bs]
+    return dict(n=len(rows), won=w, hit=round(100 * w / len(rows), 1), by_league=by_league, by_type=by_type, by_start=by_start, swept=swept, last=last,
                 stated=round(100 * sum(g["p"] for _, g in rows) / len(rows), 1),
                 roi=round(100 * ret / len(rows), 1), days=len(days), since=days[0])
 
