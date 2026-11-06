@@ -3,14 +3,14 @@
  "enough": true,
  "last": {
   "beat_close_pct": 63.3,
-  "brier_close": 0.169,
-  "brier_published": 0.1739,
+  "brier_close": 0.1675,
+  "brier_published": 0.1727,
   "dates": [
    "2026-11-01",
    "2026-11-06"
   ],
-  "logloss_close": 0.5102,
-  "logloss_published": 0.5228,
+  "logloss_close": 0.5071,
+  "logloss_published": 0.5202,
   "mean_clv_pts": 0.93,
   "n": 300
  },
@@ -2979,6 +2979,15 @@
    "record_excluded": "unpriced_or_unverifiable",
    "won": 1
   },
+  "efl1:401880167": {
+   "call": false,
+   "close": 0.6669,
+   "clv": 2.69,
+   "day": "2026-11-06",
+   "league": "efl1",
+   "published": 0.64,
+   "won": 1
+  },
   "efl1:401880173": {
    "call": false,
    "close": 0.7788,
@@ -4331,6 +4340,15 @@
    "league": "epl",
    "published": 0.666,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 1
+  },
+  "epl:401879242": {
+   "call": false,
+   "close": 0.8053,
+   "clv": 1.53,
+   "day": "2026-11-06",
+   "league": "epl",
+   "published": 0.79,
    "won": 1
   },
   "epl:401879245": {
@@ -25074,5 +25092,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-06T21:54+00:00"
+ "updated": "2026-11-06T21:59+00:00"
 }
