@@ -3994,3 +3994,9 @@ Ladder past runs name the leg(s) that ended each run (`ladder.report` history lo
 team-total unders -- Locks 9/10 then 4/7 (17 legs), Safe Locks 14/16 then 12/13, against their stated
 chance; not short in both halves, and the automatic caution (`locks.watch_kinds`) will flag them if they
 become so (2026-11-06).
+Caution from the full saved pools (`locks.watch_pool`): every FanDuel game line kept in the 8 AM pools, at
+70-95%, graded off final scores, grouped by league and bet type; flagged when short of its stated chance
+in both date halves by 3+ points on 100+ legs. First flags: NBA overs 882/1120 (79% vs 82%), NFL team
+unders 299/388 (77% vs 82%), NHL unders 159/200 (80% vs 83%). Shown beside matching legs; picks unchanged.
+Study (the 11-05 ladder loss): college football team unders at 70-85% beat their stated chance in both
+halves (79.1% / 83.1% vs 78%, 1,049 legs) -- FAU's 43 points was variance, not a leak (2026-11-06).

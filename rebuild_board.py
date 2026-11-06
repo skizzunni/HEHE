@@ -617,6 +617,10 @@ def snapshot():
         for v_ in out["locks"].values():
             v_.pop("pool", None)                # saved in the ledger, not published
         out["locks_record"] = locks.report()
+        try:                                    # caution from the full saved pools (locks.watch_pool)
+            out["watch_pool"] = locks.watch_pool()
+        except Exception as e_:
+            print(f"pool caution skipped ({e_})", file=sys.stderr)
         try:                                    # $1 -> $10k on the day's 3-8 likeliest Locks (ladder.py)
             import ladder
             out["ladder"] = ladder.report()

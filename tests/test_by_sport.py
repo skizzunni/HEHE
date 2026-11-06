@@ -53,6 +53,29 @@ class Watch(unittest.TestCase):
         self.assertEqual(locks.watch_kinds(dict(days=days, legs=legs)), [])
 
 
+class WatchPool(unittest.TestCase):
+    def test_short_in_both_halves_across_the_pools(self):
+        import locks
+        legs = []
+        days = [f"2026-10-{10 + i:02d}" for i in range(10)]
+        for i, d in enumerate(days):
+            for j in range(12):                    # 120 NHL unders at 80%, ~70% won (home 2 away 1)
+                legs.append((d, dict(gid=f"nhl:{i}-{j}", label="Under 2.5 goals", p=0.80, home="H", away="A",
+                                     spec=dict(t="under", line=2.5 if j % 10 < 7 else 3.5 - 2), league="nhl")))
+        pools = {}
+        for d, L in legs:
+            pools.setdefault(d, {"legs": []})["legs"].append(L)
+        led = {L["gid"]: dict(status="won", scores={"H": 2, "A": 1} if L["spec"]["line"] == 2.5 else {"H": 2, "A": 2})
+               for _, L in legs}
+        orig = locks.load
+        locks.load = lambda path=None: {"pools": pools}
+        try:
+            got = locks.watch_pool(paths=(None,), led=led)
+        finally:
+            locks.load = orig
+        self.assertEqual([(w["league"], w["t"], w["n"]) for w in got], [("nhl", "under", 120)])
+
+
 class KindRecord(unittest.TestCase):
     def test_game_lines_by_type_props_by_market(self):
         import locks

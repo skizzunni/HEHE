@@ -1371,11 +1371,13 @@ function teamTag(x){
 function watchNote(x){
   const t = (x.spec || {}).t || x.t, lg = x.league || x.lgk;
   if(!t || !lg || x.kind === 'prop') return '';
-  const W = [].concat(((D.locks_record || {}).watch || []).map(w => Object.assign({card: 'Locks'}, w)),
-                      ((D.safe_locks_record || {}).watch || []).map(w => Object.assign({card: 'Safe Locks'}, w)));
-  const w = W.find(v => v.league === lg && v.t === t);
-  return w ? '<div class="lgw"><b>Caution:</b> ' + esc(String(lg).toUpperCase()) + ' ' + esc(t) + 's on ' + w.card + ' have won '
-    + w.won + ' of ' + w.n + ' against ' + w.said + '% stated, short in both halves of the record.</div>' : '';
+  const W = [].concat(((D.locks_record || {}).watch || []).map(w => Object.assign({card: 'on Locks'}, w)),
+                      ((D.safe_locks_record || {}).watch || []).map(w => Object.assign({card: 'on Safe Locks'}, w)),
+                      (D.watch_pool || []).map(w => Object.assign({card: 'at 70-95% across every saved FanDuel line'}, w)));
+  const nice = {over: 'overs', under: 'unders', teamover: 'team overs', teamunder: 'team unders', spread: 'spreads', win: 'wins', dc: 'double chances'};
+  const ws = W.filter(v => v.league === lg && v.t === t);
+  return ws.map(w => '<div class="lgw"><b>Caution:</b> ' + esc(String(lg).toUpperCase()) + ' ' + esc(nice[t] || t) + ' ' + w.card + ' have won '
+    + w.won + ' of ' + w.n + ' against ' + w.said + '% stated, short in both halves of the record.</div>').join('');
 }
 function dayPills(attr, day){
   return '<span class="pills"><button type="button" data-' + attr + '="today" aria-pressed="'

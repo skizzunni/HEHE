@@ -133,7 +133,10 @@ PROBE = """<script>setTimeout(function(){
   out.ladderFirst = [ladderFirst([{tip: "9:30 PM"}, {tip: "7:00 PM"}, {tip: "12:45 PM"}, {tip: "10:00 PM"}]), ladderFirst([{}, {}])];
   out.reasons = [reasonsHTML({since: "2026-10-21", n: 237, tags: [{tag: "favourite lost", n: 130}, {tag: "close game", n: 110}]}), reasonsHTML({n: 0, tags: []})];
   var lrSave = D.locks_record; D.locks_record = Object.assign({}, lrSave, {watch: [{league: "nba", t: "over", won: 10, n: 18, said: 75}]});
-  out.watch = [watchNote({league: "nba", spec: {t: "over"}}), watchNote({league: "nba", t: "under"}), watchNote({league: "nba", kind: "prop", t: "over"})];
+  var wpSave = D.watch_pool; D.watch_pool = [{league: "nfl", t: "teamunder", won: 299, n: 388, said: 82}];
+  out.watch = [watchNote({league: "nba", spec: {t: "over"}}), watchNote({league: "nba", t: "under"}), watchNote({league: "nba", kind: "prop", t: "over"}),
+               watchNote({league: "nfl", t: "teamunder"})];
+  D.watch_pool = wpSave;
   D.locks_record = lrSave;
   out.pace = [paceNote({label: "Over 205.5 points", league: "nba", live: "9:23 - 2nd", live_score: "Detroit Pistons 25 - Philadelphia 76ers 33"}),
               paceNote({label: "Under 5.5 goals", league: "nhl", live: "End of 2nd", live_score: "A 1 - B 2"}),
@@ -341,7 +344,8 @@ def main():
     if not ("Why picks lost, last 14 days</b> (237 losses)" in rz[0] and "favourite lost</td><td class=\"num\">130" in rz[0] and "width:85%" in rz[0]) or rz[1]:
         fails.append("loss reasons wrong: " + repr(rz)[:300])
     wn = new.get("watch") or ["", "x", "x"]
-    if "Caution:</b> NBA overs on Locks have won 10 of 18 against 75% stated" not in wn[0] or wn[1] or wn[2]:
+    if "Caution:</b> NBA overs on Locks have won 10 of 18 against 75% stated" not in wn[0] or wn[1] or wn[2] \
+            or "NFL team unders at 70-95% across every saved FanDuel line have won 299 of 388 against 82% stated" not in (wn[3] if len(wn) > 3 else ""):
         fails.append("watch note wrong: " + repr(wn))
     pc = new.get("pace") or ["", "", "x", "", "", "", ""]
     if not ("On pace for <b>190</b> (58 so far, line 205.5) &middot; behind the pace it needs" in pc[0]

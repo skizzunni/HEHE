@@ -804,6 +804,57 @@ def kind_record(book):
     return out
 
 
+POOL_WATCH_MIN, POOL_WATCH_GAP = 100, 0.03
+
+
+def watch_pool(paths=None, led=None):
+    """The same caution as watch_kinds, from every game line in the saved
+    decision-time pools (thousands of legs, not just the card's), graded off
+    final scores: (league, bet type) at Locks-level chances (70-95%) that hit
+    under their stated chance in BOTH date halves and by 3+ points overall,
+    on 100+ legs. 2026-11-06: NHL team unders 112/151 (74% vs 78%), NFL team
+    overs 168/230 (73% vs 78%). A caution, never a pick rule."""
+    if led is None:
+        import ledger
+        led = ledger.load()
+    rows, seen = [], set()
+    for path in paths or (None, SAFE_LEDGER):
+        for d, x in sorted((load(path).get("pools") or {}).items()):
+            for L in x.get("legs") or []:
+                sp = L.get("spec") or {}
+                if L.get("kind") == "prop" or not sp.get("t") or not (0.70 <= (L.get("p") or 0) < 0.95):
+                    continue
+                key = (L.get("gid"), L.get("label"))
+                if key in seen:
+                    continue
+                seen.add(key)
+                e = led.get(L.get("gid")) or {}
+                sc = e.get("scores") or {}
+                h, a = sc.get(L.get("home")), sc.get(L.get("away"))
+                if e.get("status") not in ("won", "lost", "push") or not (isinstance(h, int) and isinstance(a, int)):
+                    continue
+                r = stacks.settle_score(sp, L["home"], L["away"], h, a)
+                if r in ("won", "lost"):
+                    rows.append((d, L.get("league") or "", sp["t"], L["p"], r == "won"))
+    if not rows:
+        return []
+    days = sorted({r[0] for r in rows})
+    mid = days[len(days) // 2]
+    g = {}
+    for d, lg, t, p, w in rows:
+        g.setdefault((lg, t), {False: [], True: []})[d >= mid].append((p, w))
+    out = []
+    for (lg, t), H in sorted(g.items()):
+        allx = H[False] + H[True]
+        hit = lambda X: sum(w for _, w in X) / len(X)
+        said = lambda X: sum(p for p, _ in X) / len(X)
+        if (len(allx) >= POOL_WATCH_MIN and H[False] and H[True] and all(hit(X) < said(X) for X in H.values())
+                and said(allx) - hit(allx) >= POOL_WATCH_GAP):
+            out.append(dict(league=lg, t=t, won=sum(w for _, w in allx), n=len(allx), said=round(100 * said(allx)),
+                            source="pool"))
+    return out
+
+
 def by_kind(legs):
     """Graded legs split into player props and game lines: [{kind, won, n, said}]."""
     out = []
