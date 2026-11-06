@@ -3984,3 +3984,6 @@ matchday -- 51 of 69 (73.9%) against 75.1% stated (z -0.2), 76.5% then 71.4% by 
 losses came together because those games share one night (2026-11-05).
 Ladder legs say what they need in plain words ("Utah Mammoth must score 4 or fewer goals", "James
 Madison Dukes must win by 4 or more", "5 or more receiving yards") (`needLine`) (2026-11-05).
+Pace line covers team totals (that team's own score: "Utah Mammoth under 4.5 goals" at 2 after one
+period is on pace for 6) and stays quiet for the first quarter of a game ("too early to project"), when
+a projection swings too much to mean anything (2026-11-06).

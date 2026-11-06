@@ -139,7 +139,9 @@ PROBE = """<script>setTimeout(function(){
               paceNote({label: "Under 5.5 goals", league: "nhl", live: "End of 2nd", live_score: "A 1 - B 2"}),
               paceNote({label: "Luka Doncic: 6+ Assists", league: "nba", live: "1st", live_score: "A 1 - B 2"}),
               paceNote({label: "Over 205.5 points", league: "nba", live: "20.2 - 4th", live_score: "Detroit Pistons 104 - Philadelphia 76ers 109"}),
-              paceNote({label: "Over 220.5 points", league: "nba", live: "30.5 - 4th", live_score: "A 100 - B 100"})];
+              paceNote({label: "Over 220.5 points", league: "nba", live: "30.5 - 4th", live_score: "A 100 - B 100"}),
+              paceNote({label: "Utah Mammoth under 4.5 goals", league: "nhl", live: "0:39 - 1st", live_score: "Montreal Canadiens 2 - Utah Mammoth 2"}),
+              paceNote({label: "Florida Atlantic Owls under 41.5 points", league: "ncaaf", live: "9:59 - 1st", live_score: "Florida Atlantic Owls 7 - UTSA Roadrunners 0"})];
   out.soFar = [soFar({so_far: 2, line: "4+", market: "Assists"}), soFar({so_far: 3, line: "2+", market: "Assists"}), soFar({line: "2+"})];
   out.safe = [safeNote({mc: 54, safe: {label: "Ottawa Senators under 5.5 goals", price: "-1450", p: 0.89}}), safeNote({mc: 80, safe: {label: "Over 204.5 points", price: "-2000", p: 0.9}}), safeNote({mc: 54})];
   out.upset = upsetHTML({min: 40, record: {n: 797, won: 295, said: 45.4, beating: false, halves: [{n: 685, won: 252, said: 45.5}, {n: 112, won: 43, said: 45.1}]},
@@ -340,10 +342,12 @@ def main():
     wn = new.get("watch") or ["", "x", "x"]
     if "Caution:</b> NBA overs on Locks have won 10 of 18 against 75% stated" not in wn[0] or wn[1] or wn[2]:
         fails.append("watch note wrong: " + repr(wn))
-    pc = new.get("pace") or ["", "", "x", "", ""]
+    pc = new.get("pace") or ["", "", "x", "", "", "", ""]
     if not ("On pace for <b>190</b> (58 so far, line 205.5) &middot; behind the pace it needs" in pc[0]
             and "On pace for <b>5</b> (3 so far, line 5.5) &middot; on track" in pc[1]
-            and "Already over</b> (213, line 205.5)" in pc[3] and "On pace for <b>202</b>" in pc[4]) or pc[2]:
+            and "Already over</b> (213, line 205.5)" in pc[3] and "On pace for <b>202</b>" in pc[4]
+            and "On pace for <b>6</b> (2 so far, line 4.5) &middot; behind the pace it needs" in pc[5]
+            and "7 so far, line 41.5 &middot; too early to project" in pc[6]) or pc[2]:
         fails.append("pace note wrong: " + repr(pc))
     sf = new.get("soFar") or ["", "", "x"]
     if not ("Assists so far: 2</b>, needs 4 (2 to go)" in sf[0] and "Assists so far: 3</b>, needs 2 &middot; already there" in sf[1]) or sf[2]:

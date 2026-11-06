@@ -1297,13 +1297,28 @@ function soFar(L){
 // so far and the time played (NBA 4x12, college basketball 2x20, football
 // 4x15, NHL 3x20 minutes). Null when the clock cannot be read.
 function paceNote(L){
-  const m = /^(Over|Under)\s+([\d.]+)/i.exec(L.label || ''), lg = L.league || '';
+  // a game total ("Over 205.5 points") or one team's ("Utah Mammoth under 4.5 goals")
+  let m = /^(Over|Under)\s+([\d.]+)/i.exec(L.label || ''), team = null;
+  if(!m){
+    const t = /^(.+?)\s+(over|under)\s+([\d.]+)/i.exec(L.label || '');
+    if(t){ team = t[1]; m = [t[0], t[2], t[3]]; }
+  }
+  const lg = L.league || '';
   if(!m || !L.live || !L.live_score) return '';
   const F = {nba: [4, 12], wnba: [4, 10], ncaab: [2, 20], nfl: [4, 15], ncaaf: [4, 15], nhl: [3, 20]}[lg];
   if(!F) return '';
-  const pts = (String(L.live_score).match(/-?\d+(?=\s*(?:-|$))/g) || []).map(Number);
-  if(pts.length < 2) return '';
-  const total = pts[pts.length - 2] + pts[pts.length - 1];
+  let total;
+  if(team){
+    // "Montreal Canadiens 2 - Utah Mammoth 2": this team's own number
+    const part = String(L.live_score).split(/\s+-\s+/).find(x => x.indexOf(team) === 0);
+    const v = part ? /(-?\d+)\s*$/.exec(part) : null;
+    if(!v) return '';
+    total = +v[1];
+  } else {
+    const pts = (String(L.live_score).match(/-?\d+(?=\s*(?:-|$))/g) || []).map(Number);
+    if(pts.length < 2) return '';
+    total = pts[pts.length - 2] + pts[pts.length - 1];
+  }
   const line0 = +m[2], over0 = /over/i.test(m[1]);
   if(over0 && total > line0) return '<div class="sbn"><b>Already over</b> (' + total + ', line ' + line0 + ')</div>';
   if(!over0 && total > line0) return '<div class="sbn"><b>Gone over</b> (' + total + ', line ' + line0 + ')</div>';
@@ -1315,6 +1330,8 @@ function paceNote(L){
   else if(e) el = +e[1] * F[1];
   else if(/half/i.test(L.live)) el = F[0] * F[1] / 2;
   if(!el || el <= 0) return '';
+  // a projection from the first quarter of a game swings too much to mean much
+  if(el < 0.25 * F[0] * F[1]) return '<div class="sbn">' + total + ' so far, line ' + m[2] + ' &middot; too early to project</div>';
   const pace = total / el * F[0] * F[1], line = +m[2], over = /over/i.test(m[1]);
   const good = over ? pace > line : pace < line;
   return '<div class="sbn">On pace for <b>' + Math.round(pace) + '</b> (' + total + ' so far, line ' + line + ') &middot; '
