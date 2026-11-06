@@ -4873,7 +4873,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-06T01:57:31+00:00",
+      "checked_at": "2026-11-06T02:02:37+00:00",
       "conf": 100,
       "dc": false,
       "gate": {
@@ -4885,10 +4885,10 @@
       "match": "CP @ ARIZ",
       "pick": "Arizona Wildcats",
       "price": "-100000",
-      "price_at": "2026-11-06T01:54:21+00:00",
+      "price_at": "2026-11-06T02:02:17+00:00",
       "price_market": "moneyline",
       "price_ref": "34964243:0ML87098860_1",
-      "prob_at": "2026-11-06T01:54:21+00:00",
+      "prob_at": "2026-11-06T02:02:17+00:00",
       "rank": 1,
       "ready": false,
       "reason": "probability unavailable",
@@ -5038,7 +5038,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-06T01:57:31+00:00",
+      "checked_at": "2026-11-06T02:02:37+00:00",
       "conf": 100,
       "dc": false,
       "gate": {
@@ -5050,10 +5050,10 @@
       "match": "CP @ ARIZ",
       "pick": "Arizona Wildcats",
       "price": "-100000",
-      "price_at": "2026-11-06T01:54:21+00:00",
+      "price_at": "2026-11-06T02:02:17+00:00",
       "price_market": "moneyline",
       "price_ref": "34964243:0ML87098860_1",
-      "prob_at": "2026-11-06T01:54:21+00:00",
+      "prob_at": "2026-11-06T02:02:17+00:00",
       "rank": null,
       "ready": false,
       "reason": "probability unavailable",
@@ -5071,74 +5071,27 @@
      "match": "CP @ ARIZ",
      "pick": "Arizona Wildcats",
      "price": "-100000",
-     "price_at": "2026-11-06T01:54:21+00:00",
+     "price_at": "2026-11-06T02:02:17+00:00",
      "price_market": "moneyline",
      "price_ref": "34964243:0ML87098860_1",
      "side": "home",
      "start": "2026-11-06T03:30Z",
      "tip": "10:30 PM"
-    },
-    "ncaab:401921133": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 99,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-06T01:57:31+00:00",
-      "conf": 99,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaab:401921133",
-      "league": "ncaab",
-      "match": "BCU @ TTU",
-      "pick": "Texas Tech Red Raiders",
-      "price": "-9000",
-      "price_at": "2026-11-06T01:54:21+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34965096:0ML87101296_1",
-      "prob_at": "2026-11-06T01:54:21+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-06T02:00Z"
-     },
-     "dc": false,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": true,
-      "what": "no lineup gate for this league"
-     },
-     "id": "ncaab:401921133",
-     "league": "ncaab",
-     "match": "BCU @ TTU",
-     "pick": "Texas Tech Red Raiders",
-     "price": "-9000",
-     "price_at": "2026-11-06T01:54:21+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34965096:0ML87101296_1",
-     "side": "home",
-     "start": "2026-11-06T02:00Z",
-     "tip": "9:00 PM"
     }
    },
    "frozen": [],
    "shadow_watch": {
     "best_at": "2026-11-05T17:25:44+00:00",
     "best_ceiling": 1.9,
-    "checks": 157,
-    "last": "2026-11-06T01:57:31+00:00",
+    "checks": 158,
+    "last": "2026-11-06T02:02:37+00:00",
     "max_ready": 10,
     "reasons": {
      "awaiting confirmed XIs": 1456,
      "awaiting confirmed goalies (0 of 2)": 128,
      "awaiting this game's price after its lineup/news change": 31,
-     "below 75% leg standard or probability invalid": 248,
-     "probability unavailable": 248
+     "below 75% leg standard or probability invalid": 249,
+     "probability unavailable": 249
     }
    }
   }
