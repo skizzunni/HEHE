@@ -1441,6 +1441,47 @@
    "tip": "8:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909291|home|FanDuel": {
+   "dec": 2.5,
+   "ev": 0.0287,
+   "fair": 0.4115,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909291",
+   "kind": "value",
+   "league": "nba",
+   "match": "OKC @ MEM",
+   "price": "+150",
+   "seen": "2026-11-06T13:55:15+00:00",
+   "side": "home",
+   "start": "2026-11-07T01:00Z",
+   "team": "Memphis Grizzlies",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909291|{\"line\": 3.5, \"t\": \"spread\", \"team\": \"Memphis Grizzlies\"}|Kalshi": {
+   "dec": 2.0101,
+   "dk": "-118",
+   "ev": 0.0283,
+   "fair": 0.5116,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909291",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "OKC @ MEM",
+   "price": "+101",
+   "seen": "2026-11-06T13:55:15+00:00",
+   "side": "{\"line\": 3.5, \"t\": \"spread\", \"team\": \"Memphis Grizzlies\"}",
+   "spec": {
+    "line": 3.5,
+    "t": "spread",
+    "team": "Memphis Grizzlies"
+   },
+   "start": "2026-11-07T01:00Z",
+   "team": "Memphis Grizzlies +3.5",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909292|home|Kalshi": {
    "dec": 3.2841,
    "ev": 0.0345,
@@ -10560,6 +10601,26 @@
    "payout": 3.15,
    "prob": 0.3219,
    "seen": "2026-11-06T05:49:46+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909291:home": {
+   "ev": 0.0288,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0287,
+     "fair": 0.4115,
+     "id": "nba:401909291",
+     "price": "+150",
+     "side": "home",
+     "spec": null,
+     "team": "Memphis Grizzlies"
+    }
+   ],
+   "payout": 2.5,
+   "prob": 0.4115,
+   "seen": "2026-11-06T13:55:15+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
