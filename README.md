@@ -4057,3 +4057,8 @@ Yesterday's rarity (`ledger.day_rarity`: losses expected from each pick's stated
 of that many losses or more, losses by league). Study, no rule: the Nov 5 board lost 17 vs 15.5 expected
 (37% of days are that bad or worse), 10 of them UEL/UECL. Soccer straight-win calls at 65-90% still beat
 their stated chance in both halves (82/98 then 79/98 vs 72-73%), so no soccer change (2026-11-06).
+Recent form beside each leg (`locks.pool_form`: last 7 pool days per league and bet type at 70-95% on every
+saved line, shown with the cautions; information only). Study, no rule: NBA game overs on all saved lines
+ran 427/514 (83.1% vs 81.8%) then 370/488 (75.8% vs 81.8%) -- short in one half only, so no caution or
+change; NBA unders beat their chance in both halves (82.7%, 91.2% vs 81.9%) but by under 1 pt in the
+first, so no rule either (2026-11-06).

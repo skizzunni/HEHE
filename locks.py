@@ -849,13 +849,9 @@ def kind_record(book):
 POOL_WATCH_MIN, POOL_WATCH_GAP = 100, 0.03
 
 
-def watch_pool(paths=None, led=None):
-    """The same caution as watch_kinds, from every game line in the saved
-    decision-time pools (thousands of legs, not just the card's), graded off
-    final scores: (league, bet type) at Locks-level chances (70-95%) that hit
-    under their stated chance in BOTH date halves and by 3+ points overall,
-    on 100+ legs. 2026-11-06: NHL team unders 112/151 (74% vs 78%), NFL team
-    overs 168/230 (73% vs 78%). A caution, never a pick rule."""
+def _pool_rows(paths=None, led=None):
+    """Every graded game line (no props) at 70-95% in the saved decision-time
+    pools, once each: [(day, league, bet type, p, won)]."""
     if led is None:
         import ledger
         led = ledger.load()
@@ -878,6 +874,37 @@ def watch_pool(paths=None, led=None):
                 r = stacks.settle_score(sp, L["home"], L["away"], h, a)
                 if r in ("won", "lost"):
                     rows.append((d, L.get("league") or "", sp["t"], L["p"], r == "won"))
+    return rows
+
+
+def pool_form(paths=None, led=None, days=7, min_n=30):
+    """Recent form of every (league, bet type) across the saved pools at
+    70-95%: the last `days` pool days, graded off final scores. Shown beside
+    ladder and Locks legs as information only, never a pick rule (a 7-day
+    dip is often noise: NBA overs ran 83% then 76% vs 82% stated)."""
+    rows = _pool_rows(paths, led)
+    if not rows:
+        return []
+    keep = set(sorted({r[0] for r in rows})[-days:])
+    g = {}
+    for d, lg, t, p, w in rows:
+        if d in keep:
+            a = g.setdefault((lg, t), [0, 0, 0.0])
+            a[0] += w
+            a[1] += 1
+            a[2] += p
+    return [dict(league=lg, t=t, won=w, n=n, said=round(100 * p / n, 1), since=min(keep))
+            for (lg, t), (w, n, p) in sorted(g.items()) if n >= min_n]
+
+
+def watch_pool(paths=None, led=None):
+    """The same caution as watch_kinds, from every game line in the saved
+    decision-time pools (thousands of legs, not just the card's), graded off
+    final scores: (league, bet type) at Locks-level chances (70-95%) that hit
+    under their stated chance in BOTH date halves and by 3+ points overall,
+    on 100+ legs. 2026-11-06: NHL team unders 112/151 (74% vs 78%), NFL team
+    overs 168/230 (73% vs 78%). A caution, never a pick rule."""
+    rows = _pool_rows(paths, led)
     if not rows:
         return []
     days = sorted({r[0] for r in rows})

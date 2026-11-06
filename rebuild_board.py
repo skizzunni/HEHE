@@ -619,6 +619,7 @@ def snapshot():
         out["locks_record"] = locks.report()
         try:                                    # caution from the full saved pools (locks.watch_pool)
             out["watch_pool"] = locks.watch_pool()
+            out["pool_form"] = locks.pool_form()    # last 7 days per league and bet type
         except Exception as e_:
             print(f"pool caution skipped ({e_})", file=sys.stderr)
         try:                                    # $1 -> $10k on the day's 3-8 likeliest Locks (ladder.py)

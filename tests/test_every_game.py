@@ -43,3 +43,16 @@ class Record(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PoolForm(unittest.TestCase):
+    def test_last_days_only(self):
+        import locks
+        rows = [("2026-11-0%d" % d, "nba", "over", 0.8, d % 2 == 0) for d in range(1, 10) for _ in range(5)]
+        orig = locks._pool_rows
+        locks._pool_rows = lambda paths=None, led=None: rows
+        try:
+            f = locks.pool_form(days=2, min_n=5)
+        finally:
+            locks._pool_rows = orig
+        self.assertEqual(f, [dict(league="nba", t="over", won=5, n=10, said=80.0, since="2026-11-08")])

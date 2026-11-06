@@ -1388,7 +1388,18 @@ function watchNote(x){
   const nice = {over: 'overs', under: 'unders', teamover: 'team overs', teamunder: 'team unders', spread: 'spreads', win: 'wins', dc: 'double chances'};
   const ws = W.filter(v => v.league === lg && v.t === t);
   return ws.map(w => '<div class="lgw"><b>Caution:</b> ' + esc(String(lg).toUpperCase()) + ' ' + esc(nice[t] || t) + ' ' + w.card + ' have won '
-    + w.won + ' of ' + w.n + ' against ' + w.said + '% stated, short in both halves of the record.</div>').join('');
+    + w.won + ' of ' + w.n + ' against ' + w.said + '% stated, short in both halves of the record.</div>').join('')
+    + formNote(lg, t, nice[t] || t);
+}
+// last 7 days of this league and bet type across every saved line at 70-95%
+// (locks.pool_form): information only, a short dip is often noise
+function formNote(lg, t, name){
+  const f = (D.pool_form || []).find(v => v.league === lg && v.t === t);
+  if(!f || !f.n) return '';
+  const pct = Math.round(100 * f.won / f.n), gap = pct - f.said;
+  return '<div class="sbn">Last 7 days, ' + String(lg).toUpperCase().replace(/[<>&"]/g, '') + ' ' + name + ' at 70-95% on every saved line: '
+    + f.won + ' of ' + f.n + ' (' + pct + '% vs ' + Math.round(f.said) + '% stated)'
+    + (gap <= -5 ? ' &ndash; running cold lately.' : gap >= 5 ? ' &ndash; running hot lately.' : ' &ndash; on par.') + '</div>';
 }
 function dayPills(attr, day){
   return '<span class="pills"><button type="button" data-' + attr + '="today" aria-pressed="'
