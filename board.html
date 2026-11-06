@@ -1290,7 +1290,7 @@ function soFar(L){
   const need = parseFloat(String(L.line || '').replace('+', ''));
   if(isNaN(need)) return '';
   const v = +L.so_far, left = Math.max(0, need - v);
-  return '<div class="sbn"><b>' + esc(L.market || 'Stat') + ' so far: ' + v + '</b>, needs ' + need
+  return '<div class="sbn"><b>' + esc(L.market || 'Stat') + ' so far: ' + v + '</b>' + (v === 0 ? ' (none yet)' : '') + ', needs ' + need
     + (left ? ' (' + left + ' to go)' : ' &middot; already there') + '</div>';
 }
 // a live over/under leg: the total its game is on pace for, from the score

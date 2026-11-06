@@ -152,6 +152,16 @@ class SoFar(unittest.TestCase):
             props_ledger._LIVE.pop(("nba", "1"), None)
         self.assertEqual(v, 2.0)
 
+    def test_player_not_yet_in_the_live_box_is_zero(self):
+        import props_ledger
+        props_ledger._LIVE[("nba", "2")] = props_ledger.box_stats({"boxscore": {"players": []}})
+        props_ledger._LIVE[("nba", "2")]["_people"] = [("someone else", "mem", {"assists": 1.0})]
+        try:
+            v = props_ledger.live_value(dict(gid="nba:2", name="Cameron Boozer", market="Assists", line="4+"))
+        finally:
+            props_ledger._LIVE.pop(("nba", "2"), None)
+        self.assertEqual(v, 0.0)
+
 
 class LikeRecord(unittest.TestCase):
     def test_props_near_the_same_chance(self):

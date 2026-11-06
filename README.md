@@ -3987,3 +3987,6 @@ Madison Dukes must win by 4 or more", "5 or more receiving yards") (`needLine`) 
 Pace line covers team totals (that team's own score: "Utah Mammoth under 4.5 goals" at 2 after one
 period is on pace for 6) and stays quiet for the first quarter of a game ("too early to project"), when
 a projection swings too much to mean anything (2026-11-06).
+Live prop stat: a player missing from the in-game box score (no catch yet) now shows "0 so far (none
+yet)" instead of nothing -- ESPN lists only players with a stat in that group mid-game
+(`props_ledger.live_value`; grading is unchanged) (2026-11-06).

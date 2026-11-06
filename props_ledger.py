@@ -420,7 +420,11 @@ def live_value(L):
     stats = _LIVE[(league, eid)]
     if not stats:
         return None
-    st, _how = resolve(stats, L)
+    st, how = resolve(stats, L)
+    if how == "absent":
+        # mid-game the box lists only players with a stat in that group: a
+        # receiver with no catch yet is simply not there -- show 0, not nothing
+        return 0.0
     if st is None:
         return None
     try:
