@@ -1,11 +1,11 @@
 # Review 2026-11-06
 
-Picks 1-0 (100.0% vs 83.0% claimed, ROI +14.3%).
+Picks 3-0 (100.0% vs 76.7% claimed, ROI +22.8%).
 Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (open), Austin Reaves: 4+ Assists (open), Over 214.5 points (open), Under 241.5 points (open), Over 216.5 points (open).
 Cautions in force: NBA over on Locks 12/21 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
-Strong calls 1-0 (100.0% vs 83.0% claimed).
-Closing line value: -1.39 points on 1 picks; beat the close on 0.0%.
-Board sweep: 1-0, 50 open -- still clean.
+Strong calls 3-0 (100.0% vs 76.7% claimed).
+Closing line value: +0.19 points on 3 picks; beat the close on 66.7%.
+Board sweep: 3-0, 48 open -- still clean.
 Why picks lost (14 days): favourite lost 139, close game 117, upset 53, coin flip 47, blowout 42, price moved against it 32.
 Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
