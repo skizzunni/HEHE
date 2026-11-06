@@ -4066,3 +4066,10 @@ Recent form beside prop legs (`props_ledger.form`: last 7 graded days per league
 information only). Study, no rule: NBA assists props at 75-90% ran 95/107 (89% vs 83%) then 100/124
 (81% vs 83%) -- mixed; NBA rebounds short in both halves (52/63 83% vs 84%, 60/77 78% vs 85%) but the
 first-half gap is 1 pt and far from the 99.5% bar, so no caution or change (2026-11-06).
+Spreads by side beside spread legs (`locks.spread_sides`: getting vs giving points per league at 70-95%
+on every saved line, both halves; information only). Study, no rule: NHL underdogs +1.5 (the market's
+underdog) 67/76 then 67/75 (88-89% vs 83%) and all NHL getting-the-puck-line legs 277/322 (86% vs 83%,
+ahead in both halves) -- promising for underdogs with points but z ~ 1.9, short of the 99.5% bar; NFL
+underdogs getting points 113/141 (80% vs 81%) then 93/139 (67% vs 82%), all NFL getting-points legs
+400/502 (80% vs 82%, mixed halves); college football favourites laying points 154/209 (74% vs 78%)
+short in both halves but under 100 legs in the first. No change (2026-11-06).

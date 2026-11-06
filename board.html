@@ -1390,7 +1390,21 @@ function watchNote(x){
   const ws = W.filter(v => v.league === lg && v.t === t);
   return ws.map(w => '<div class="lgw"><b>Caution:</b> ' + esc(String(lg).toUpperCase()) + ' ' + esc(nice[t] || t) + ' ' + w.card + ' have won '
     + w.won + ' of ' + w.n + ' against ' + w.said + '% stated, short in both halves of the record.</div>').join('')
-    + formNote(lg, t, nice[t] || t);
+    + formNote(lg, t, nice[t] || t) + (t === 'spread' ? sideNote(lg, (x.spec || {}).line) : '');
+}
+// spreads by side (locks.spread_sides): how this league's spreads that get
+// points, or give them, have done at 70-95% across every saved line, both halves
+function sideNote(lg, line){
+  if(typeof line !== 'number' || !line) return '';
+  const side = line > 0 ? 'getting' : 'giving';
+  const f = (D.spread_sides || []).find(v => v.league === lg && v.side === side);
+  if(!f) return '';
+  const pc = r => r[1] ? Math.round(100 * r[0] / r[1]) : 0;
+  const h = f.halves || [], both = h.length === 2 && h.every(r => r[1]);
+  const up = both && h.every(r => pc(r) > r[2]), down = both && h.every(r => pc(r) < r[2]);
+  return '<div class="sbn">' + String(lg).toUpperCase().replace(/[<>&"]/g, '') + ' spreads ' + side + ' points at 70-95%: '
+    + f.all[0] + ' of ' + f.all[1] + ' (' + pc(f.all) + '% vs ' + Math.round(f.all[2]) + '% stated)'
+    + (up ? ' &ndash; ahead of their chance in both halves.' : down ? ' &ndash; behind their chance in both halves.' : ' &ndash; mixed across the two halves.') + '</div>';
 }
 // last 7 days of this league and prop market among graded props at 70-95%
 // (props_ledger.form): information only

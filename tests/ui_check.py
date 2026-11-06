@@ -140,6 +140,11 @@ PROBE = """<script>setTimeout(function(){
   out.form = [watchNote({league: "mlb", t: "over"}), watchNote({league: "nhl", t: "spread"}), watchNote({league: "nhl", t: "under"}),
               watchNote({league: "nba", kind: "prop", market: "Assists"}), watchNote({league: "nba", kind: "prop", market: "Points"})];
   D.prop_form = ppSave;
+  var ssSave = D.spread_sides; D.spread_sides = [{league: "nhl", side: "getting", all: [277, 322, 82.6], halves: [[141, 164, 82.6], [136, 158, 82.5]]},
+                                                 {league: "nfl", side: "getting", all: [400, 502, 82.2], halves: [[214, 260, 82.0], [186, 242, 82.4]]}];
+  out.sides = [watchNote({league: "nhl", spec: {t: "spread", line: 1.5}}), watchNote({league: "nfl", spec: {t: "spread", line: 7.5}}),
+               watchNote({league: "nhl", spec: {t: "spread", line: -1.5}})];
+  D.spread_sides = ssSave;
   out.watch = [watchNote({league: "nba", spec: {t: "over"}}), watchNote({league: "nba", t: "under"}), watchNote({league: "nba", kind: "prop", t: "over"}),
                watchNote({league: "nfl", t: "teamunder"})];
   D.watch_pool = wpSave; D.pool_form = pfSave;
@@ -380,6 +385,11 @@ def main():
     if "Caution:</b> NBA overs on Locks have won 10 of 18 against 75% stated" not in wn[0] or wn[1] or wn[2] \
             or "NFL team unders at 70-95% across every saved FanDuel line have won 299 of 388 against 82% stated" not in (wn[3] if len(wn) > 3 else ""):
         fails.append("watch note wrong: " + repr(wn))
+    sd = new.get("sides") or ["", "", "x"]
+    if not ("NHL spreads getting points at 70-95%: 277 of 322 (86% vs 83% stated) &ndash; ahead of their chance in both halves." in sd[0]
+            and "NFL spreads getting points at 70-95%: 400 of 502 (80% vs 82% stated) &ndash; mixed across the two halves." in sd[1]
+            and "spreads giving" not in sd[2]):
+        fails.append("spread side note wrong: " + repr(sd))
     fm = new.get("form") or ["", "", "x", "", "x"]
     if not ("Last 7 days, NFL team unders at 70-95% on every saved line: 145 of 197 (74% vs 82% stated) &ndash; running cold lately." in (wn[3] if len(wn) > 3 else "")
             and "MLB overs at 70-95% on every saved line: 90 of 100 (90% vs 80% stated) &ndash; running hot lately." in fm[0]

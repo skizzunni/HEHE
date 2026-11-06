@@ -621,6 +621,7 @@ def snapshot():
             out["watch_pool"] = locks.watch_pool()
             out["pool_form"] = locks.pool_form()    # last 7 days per league and bet type
             out["prop_form"] = props_ledger.form()  # last 7 days per league and prop market
+            out["spread_sides"] = locks.spread_sides()  # + vs - spreads per league, both halves
         except Exception as e_:
             print(f"pool caution skipped ({e_})", file=sys.stderr)
         try:                                    # $1 -> $10k on the day's 3-8 likeliest Locks (ladder.py)

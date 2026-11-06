@@ -877,6 +877,52 @@ def _pool_rows(paths=None, led=None):
     return rows
 
 
+def spread_sides(paths=None, led=None, min_n=50):
+    """Spreads at 70-95% across the saved pools, split by side: getting points
+    (+) or giving them (-), per league, with both date halves. Information
+    beside spread legs, never a pick rule. 2026-11-06: NHL getting the puck
+    line 277/322 (86% vs 83%, ahead in both halves); NFL getting points
+    400/502 (80% vs 82%, 82% then 77%: mixed) -- neither past the 99.5% bar."""
+    if led is None:
+        import ledger
+        led = ledger.load()
+    rows, seen = [], set()
+    for path in paths or (None, SAFE_LEDGER):
+        for d, x in sorted((load(path).get("pools") or {}).items()):
+            for L in x.get("legs") or []:
+                sp = L.get("spec") or {}
+                if sp.get("t") != "spread" or not isinstance(sp.get("line"), (int, float)) \
+                        or not (0.70 <= (L.get("p") or 0) < 0.95):
+                    continue
+                key = (L.get("gid"), L.get("label"))
+                if key in seen:
+                    continue
+                seen.add(key)
+                e = led.get(L.get("gid")) or {}
+                sc = e.get("scores") or {}
+                h, a = sc.get(L.get("home")), sc.get(L.get("away"))
+                if not (isinstance(h, int) and isinstance(a, int)):
+                    continue
+                r = stacks.settle_score(sp, L["home"], L["away"], h, a)
+                if r in ("won", "lost"):
+                    rows.append((d, L.get("league") or "", "getting" if sp["line"] > 0 else "giving", L["p"], r == "won"))
+    if not rows:
+        return []
+    days = sorted({r[0] for r in rows})
+    mid = days[len(days) // 2]
+    g = {}
+    for d, lg, side, p, w in rows:
+        g.setdefault((lg, side), {False: [], True: []})[d >= mid].append((p, w))
+    out = []
+    for (lg, side), H in sorted(g.items()):
+        allx = H[False] + H[True]
+        if len(allx) < min_n:
+            continue
+        rec = lambda X: [sum(w for _, w in X), len(X), round(100 * sum(p for p, _ in X) / len(X), 1) if X else None]
+        out.append(dict(league=lg, side=side, all=rec(allx), halves=[rec(H[False]), rec(H[True])]))
+    return out
+
+
 def pool_form(paths=None, led=None, days=7, min_n=30):
     """Recent form of every (league, bet type) across the saved pools at
     70-95%: the last `days` pool days, graded off final scores. Shown beside

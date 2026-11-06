@@ -69,3 +69,25 @@ class PropForm(unittest.TestCase):
         book["x"] = dict(date="2026-11-09", league="nba", market="Assists", p=0.99, status="lost")   # out of band
         f = props_ledger.form(days=2, min_n=5, book=book)
         self.assertEqual(f, [dict(league="nba", market="Assists", won=6, n=8, said=80.0, since="2026-11-08")])
+
+
+class SpreadSides(unittest.TestCase):
+    def test_split_by_side_and_halves(self):
+        import locks
+        legs = []
+        led = {}
+        for d in range(1, 5):
+            for i in range(30):
+                gid = f"nhl:{d}{i}"
+                led[gid] = dict(status="won", scores={"H": 3, "A": 2 if i % 3 else 5})
+                legs.append(dict(gid=gid, label=f"A +1.5 {i}", league="nhl", home="H", away="A", p=0.8,
+                                 spec=dict(t="spread", team="A", line=1.5)))
+        pools = {"pools": {f"2026-11-0{d}": {"legs": [L for L in legs if L["gid"].startswith(f"nhl:{d}")]} for d in range(1, 5)}}
+        orig = locks.load
+        locks.load = lambda path=None: pools if path == "x" else {}
+        try:
+            out = locks.spread_sides(paths=["x"], led=led)
+        finally:
+            locks.load = orig
+        self.assertEqual(out, [dict(league="nhl", side="getting", all=[120, 120, 80.0],
+                                    halves=[[60, 60, 80.0], [60, 60, 80.0]])])
