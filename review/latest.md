@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
-Picks 27-11 (71.1% vs 75.1% claimed, ROI -11.3%).
+Picks 28-11 (71.8% vs 75.6% claimed, ROI -10.9%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
 Strong calls 27-11 (71.1% vs 75.1% claimed).
-Closing line value: +1.32 points on 38 picks; beat the close on 63.2%.
-Board sweep: 27-11, 22 open -- broken (first loss: uecl Trabzonspor at 67%).
+Closing line value: +1.33 points on 39 picks; beat the close on 64.1%.
+Board sweep: 28-11, 21 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -33,7 +33,7 @@ Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 Locks 2/11 won, 9 open; Best play top 2 (60%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (54%) open.
 Lottery 100: open (0/9 legs won)
-Lottery 100: open (0/6 legs won)
+Lottery 100: open (1/6 legs won)
 Lottery 100: open (0/5 legs won)
 Lottery 10k: open (0/11 legs won)
 Lottery 10k: open (0/6 legs won)
