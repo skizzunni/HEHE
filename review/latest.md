@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
-Picks 40-16 (71.4% vs 73.9% claimed, ROI -9.0%).
+Picks 41-16 (71.9% vs 74.1% claimed, ROI -8.5%).
 Ladder: run 1, bank $1.00, 2 win(s) in a row, best $9.57; 9 wins to $10,000.
 Strong calls 28-11 (71.8% vs 75.2% claimed).
-Closing line value: +1.17 points on 56 picks; beat the close on 57.1%.
-Board sweep: 40-16, 4 open -- broken (first loss: uecl Trabzonspor at 67%).
+Closing line value: +1.12 points on 57 picks; beat the close on 56.1%.
+Board sweep: 41-16, 3 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -35,19 +35,19 @@ Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST per Universitario at 67% (-265), Sport Boys 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost · price moved against it (3 pts)
 - LOST nba Houston Rockets at 71% (-278), Houston Rockets 107 - Minnesota Timberwolves 117: margin 10 · the book had my side favoured too · called at 71% · favourite lost · price moved against it (4 pts)
 - LOST ncaab Loyola Marymount Lions at 68% (-230), Loyola Marymount Lions 95 - Queens University Royals 96: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
-Locks 7/11 won, 3 open; Best play top 2 (60%) lost; lost: Florida Atlantic Owls under 41.5 points (UTSA Roadrunners at Florida Atlantic Owls) UTSA Roadrunners 29 - Florida Atlantic Owls 60.
+Locks 8/11 won, 2 open; Best play top 2 (60%) lost; lost: Florida Atlantic Owls under 41.5 points (UTSA Roadrunners at Florida Atlantic Owls) UTSA Roadrunners 29 - Florida Atlantic Owls 60.
 Safe Locks 10/11 won, 1 open; Winners parlay top 2 (85%) won; Best play top 7 (54%) open.
 Lottery 100: lost (5/9 legs won, killed by Over 152.5 points, UTSA Roadrunners to win)
-Lottery 100: lost (2/6 legs won, killed by Over 6.5 goals, Vancouver Canucks to win)
+Lottery 100: lost (2/6 legs won, killed by Over 6.5 goals, Southern Miss Golden Eagles +14.5, Vancouver Canucks to win)
 Lottery 100: lost (1/5 legs won, killed by Utah Mammoth -1.5, Over 6.5 goals, Over 6.5 goals, Texas Tech Red Raiders -26.5)
-Lottery 10k: lost (4/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals, Florida Atlantic Owls under 30.5 points)
+Lottery 10k: lost (4/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals, Southern Miss Golden Eagles +14.5, Florida Atlantic Owls under 30.5 points)
 Lottery 10k: lost (1/6 legs won, killed by Edmonton Oilers -3.5, Vegas Golden Knights under 1.5 goals, Under 6.5 goals, Jacksonville Jaguars over 34.5 points)
-Lottery 10k+25: lost (4/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals, UTSA Roadrunners -6.5)
-Lottery 10k+50: lost (5/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals)
-Lottery 10k+100: lost (5/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals)
+Lottery 10k+25: lost (4/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals, Southern Miss Golden Eagles +14.5, UTSA Roadrunners -6.5)
+Lottery 10k+50: lost (5/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals, Southern Miss Golden Eagles +14.5)
+Lottery 10k+100: lost (5/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals, Southern Miss Golden Eagles +14.5)
 Lottery 100: lost (2/5 legs won, killed by Mark Flekken: 3+ Goalkeeper Saves, Claudio Echeverri: Anytime Goalscorer, Guglielmo Vicario: 3+ Goalkeeper Saves)
 Ladder-consistency props (all time): 1606/1922 won (83.6%) vs 86.4% fair, 87.4% price.
 Props 96/121 vs 78.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=122), ncaaf 0.00 (n=170), nfl 0.00 (n=42), nhl 0.00 (n=143)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=122), ncaaf 0.00 (n=171), nfl 0.00 (n=42), nhl 0.00 (n=143)
