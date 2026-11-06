@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
-Picks 35-14 (71.4% vs 73.0% claimed, ROI -8.3%).
+Picks 36-14 (72.0% vs 73.5% claimed, ROI -8.2%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
 Strong calls 28-11 (71.8% vs 75.2% claimed).
-Closing line value: +1.36 points on 49 picks; beat the close on 61.2%.
-Board sweep: 35-14, 11 open -- broken (first loss: uecl Trabzonspor at 67%).
+Closing line value: +1.33 points on 50 picks; beat the close on 60.0%.
+Board sweep: 36-14, 10 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -35,14 +35,14 @@ Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST ncaab Loyola Marymount Lions at 68% (-230), Loyola Marymount Lions 95 - Queens University Royals 96: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 Locks 5/11 won, 6 open; Best play top 2 (60%) open.
 Safe Locks 9/11 won, 2 open; Winners parlay top 2 (85%) won; Best play top 7 (54%) open.
-Lottery 100: open (3/9 legs won)
+Lottery 100: lost (3/9 legs won, killed by Over 152.5 points)
 Lottery 100: lost (2/6 legs won, killed by Over 6.5 goals, Vancouver Canucks to win)
 Lottery 100: lost (0/5 legs won, killed by Utah Mammoth -1.5, Over 6.5 goals, Over 6.5 goals)
-Lottery 10k: lost (3/11 legs won, killed by Over 7.5 goals, Over 8.5 goals)
+Lottery 10k: lost (3/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals)
 Lottery 10k: lost (1/6 legs won, killed by Vegas Golden Knights under 1.5 goals, Under 6.5 goals)
-Lottery 10k+25: lost (3/11 legs won, killed by Over 7.5 goals, Over 8.5 goals)
-Lottery 10k+50: lost (3/11 legs won, killed by Over 7.5 goals, Over 8.5 goals)
-Lottery 10k+100: lost (3/11 legs won, killed by Over 7.5 goals, Over 8.5 goals)
+Lottery 10k+25: lost (3/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals)
+Lottery 10k+50: lost (3/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals)
+Lottery 10k+100: lost (3/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals)
 Lottery 100: lost (2/5 legs won, killed by Mark Flekken: 3+ Goalkeeper Saves, Claudio Echeverri: Anytime Goalscorer, Guglielmo Vicario: 3+ Goalkeeper Saves)
 Ladder-consistency props (all time): 1585/1896 won (83.6%) vs 86.4% fair, 87.4% price.
 Props 61/80 vs 78.4% claimed.
