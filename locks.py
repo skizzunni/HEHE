@@ -778,7 +778,7 @@ def report(path=None):
                 plays={k: dict(days=t[0], hit=t[1], said=round(100 * t[2] / t[0], 1) if t[0] else None)
                        for k, t in tally.items()},
                 by_sport=by_sport(legs), by_kind=by_kind(legs), watch=watch_kinds(book),
-                caution=caution_record(path))
+                caution=caution_record(path), by_rank=by_rank(book))
 
 
 def by_sport(legs):
@@ -894,6 +894,24 @@ def watch_pool(paths=None, led=None):
             out.append(dict(league=lg, t=t, won=sum(w for _, w in allx), n=len(allx), said=round(100 * said(allx)),
                             source="pool"))
     return out
+
+
+def by_rank(book):
+    """Graded card legs by their place on the card (likeliest first):
+    [{ranks, won, n, said}] for 1-3, 4-5, 6-8, 9-11."""
+    groups = [("1-3", 0, 3), ("4-5", 3, 5), ("6-8", 5, 8), ("9-11", 8, 99)]
+    acc = {g: [0, 0, 0.0] for g, _, _ in groups}
+    for d, keys in (book.get("days") or {}).items():
+        keys = keys.get("legs") if isinstance(keys, dict) else keys
+        legs = sorted([book["legs"][k] for k in keys or [] if k in book.get("legs", {})], key=lambda L: -L["p"])
+        for i, L in enumerate(legs):
+            if L.get("status") not in ("won", "lost"):
+                continue
+            g = next(g for g, lo, hi in groups if lo <= i < hi)
+            acc[g][0] += L["status"] == "won"
+            acc[g][1] += 1
+            acc[g][2] += L["p"]
+    return [dict(ranks=g, won=w, n=n, said=round(100 * p / n, 1)) for g, (w, n, p) in acc.items() if n]
 
 
 def by_kind(legs):

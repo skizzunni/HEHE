@@ -1836,6 +1836,8 @@ function drawLocks(){
         + ((R.by_sport || []).length > 1 ? '<p class="note">By league: ' + R.by_sport.slice(0, 6).map(x =>
             esc(String(x.sport).toUpperCase()) + ' ' + x.won + ' of ' + x.n).join(' &middot; ') + '.</p>' : '')
         + kindLine(R.by_kind) + cautionLine(R.caution)
+        + ((R.by_rank || []).length > 1 ? '<p class="note">By place on the card: ' + R.by_rank.map(x => '#' + esc(x.ranks) + ' ' + x.won + ' of ' + x.n
+            + ' (' + Math.round(100 * x.won / x.n) + '% vs ' + x.said + '%)').join(' &middot; ') + '.</p>' : '')
         + '<table class="mk"><thead><tr><th>Day</th><th class="num">Won</th><th class="num">Lost</th>'
         + '<th class="num">Open</th><th>All hit?</th><th>Winners parlay</th></tr></thead><tbody>'
         + (R.days || []).map(d => '<tr><td>' + esc(d.day) + '</td><td class="num">' + d.won

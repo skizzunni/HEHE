@@ -55,7 +55,7 @@ def safe_card():
                 tomorrow=dict(locks=[]))
 
 
-RECORD = dict(legs=11, won=11, said=94.0, plays=dict(winners=dict(days=3, hit=3, said=81.0),
+RECORD = dict(legs=11, won=11, said=94.0, by_rank=[dict(ranks="1-3", won=53, n=64, said=79.0), dict(ranks="4-5", won=37, n=43, said=77.5)], plays=dict(winners=dict(days=3, hit=3, said=81.0),
                                                      best=dict(days=3, hit=2, said=55.0)),
               days=[dict(day="2026-10-17", n=11, won=11, lost=0, void=0, open=0, all_hit=True,
                          plays=dict(winners=dict(n=4, prob=0.81, result="won")))])
@@ -277,6 +277,8 @@ def main():
         fails.append("Winners parlay line missing or wrong: " + bars)
     if "Best play: the top 10 legs" not in bars or "est. 54% to all hit" not in bars:
         fails.append("Best play line missing or wrong: " + bars)
+    if "By place on the card: #1-3 53 of 64 (83% vs 79%) · #4-5 37 of 43 (86% vs 77.5%)." not in new["record"]:
+        fails.append("Locks record by place on the card missing: " + new["record"][-400:])
     if "Winners parlay hit 3 of 3 days (81% promised)" not in new["record"] \
             or "top 4 (81%): hit" not in new["record"]:
         fails.append("Safe Locks record must show the Winners parlay's own record: " + new["record"][-300:])

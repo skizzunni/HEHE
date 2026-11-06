@@ -97,6 +97,14 @@ class CautionRecord(unittest.TestCase):
         self.assertEqual(r, {"flagged": dict(won=1, n=2, said=80.0), "other": dict(won=1, n=1, said=70.0)})
 
 
+class ByRank(unittest.TestCase):
+    def test_place_on_card(self):
+        import locks
+        legs = {f"k{i}": dict(p=0.9 - 0.01 * i, status="won" if i != 4 else "lost") for i in range(10)}
+        got = locks.by_rank(dict(days={"d": list(legs)}, legs=legs))
+        self.assertEqual([(x["ranks"], x["won"], x["n"]) for x in got], [("1-3", 3, 3), ("4-5", 1, 2), ("6-8", 3, 3), ("9-11", 2, 2)])
+
+
 class KindRecord(unittest.TestCase):
     def test_game_lines_by_type_props_by_market(self):
         import locks
