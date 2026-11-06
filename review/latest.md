@@ -4,7 +4,7 @@ No picks settled yet.
 Ladder: run 1 ended (peak $9.57, lost on Florida Atlantic Owls under 41.5 points); the next ticket starts again at $1; best ever $9.57.
 Board sweep: 0-0, 48 open -- still clean.
 Why picks lost (14 days): favourite lost 139, close game 117, upset 53, coin flip 47, blowout 42, price moved against it 32.
-Yesterday (2026-11-05): board 41-17, sweep broken by uecl Trabzonspor at 67%.
+Yesterday (2026-11-05): board 42-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -22,7 +22,7 @@ Yesterday (2026-11-05): board 41-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST nhl Edmonton Oilers at 63% (-192), Anaheim Ducks 5 - Edmonton Oilers 4: margin 1 · the book had my side favoured too · called at 63% · favourite lost · close game
 - LOST ncaaf UTSA Roadrunners at 72% (-278), Florida Atlantic Owls 60 - UTSA Roadrunners 29: margin 31 · the book had my side favoured too · called at 72% · favourite lost · blowout
 - LOST nhl Colorado Avalanche at 66% (-218), Colorado Avalanche 2 - Nashville Predators 3: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game
-Ladder-consistency props (all time): 1606/1922 won (83.6%) vs 86.4% fair, 87.4% price.
+Ladder-consistency props (all time): 1622/1939 won (83.7%) vs 86.4% fair, 87.4% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=122), ncaaf 0.00 (n=171), nfl 0.00 (n=42), nhl 0.00 (n=144)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=123), ncaaf 0.00 (n=171), nfl 0.00 (n=42), nhl 0.00 (n=144)
