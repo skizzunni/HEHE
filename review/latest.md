@@ -1,7 +1,7 @@
 # Review 2026-11-05
 
 Picks 41-16 (71.9% vs 74.1% claimed, ROI -8.5%).
-Ladder: run 1, bank $1.00, 2 win(s) in a row, best $9.57; 9 wins to $10,000.
+Ladder: run 1 ended (peak $9.57, lost on Florida Atlantic Owls under 41.5 points); the next ticket starts again at $1; best ever $9.57.
 Strong calls 28-11 (71.8% vs 75.2% claimed).
 Closing line value: +1.12 points on 57 picks; beat the close on 56.1%.
 Board sweep: 41-16, 3 open -- broken (first loss: uecl Trabzonspor at 67%).
