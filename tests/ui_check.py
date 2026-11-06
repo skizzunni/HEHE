@@ -311,7 +311,7 @@ def main():
     if new.get("oneIn") != ["71%", "1 in 23,696,682"]:
         fails.append("oneIn wrong: " + repr(new.get("oneIn")))
     eg = new.get("everyGame", "")
-    if not all(x in eg for x in ("Every game: its safest bet (3 games, 1–0 so far)", "Live: 2nd 5:12 · C 1 - D 1", "Pays more at Kalshi: 88¢ (-800 after fee), $10 wins $1.25 vs $1.11 at FanDuel", "386 of 427", "90.4%",
+    if not all(x in eg for x in ("Every game: its safest bet (3 games, 1–0 so far)", "Live: 2nd 5:12 · C 1 - D 1", "Needs: Both teams together: 201 or more points", "Pays more at Kalshi: 88¢ (-800 after fee), $10 wins $1.25 vs $1.11 at FanDuel", "386 of 427", "90.4%",
                                    "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89.", "By type: game totals 137/149, underdog +points 53/58.", "Sweep odds: all 3 win 74%; the top 3 win 74%. The whole list has swept on 0 of 14 days. Last graded list (2026-11-04): 27 of 30.", "$10 on each (3 bets, $30 staked): +$2.28 if every one wins; expected −$0.77 from the stated chances.", "set at 8 AM", "By start time")):
         fails.append("every game section wrong: " + eg)
     ow = new.get("own", "")

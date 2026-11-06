@@ -1281,7 +1281,9 @@ function legHTML(x, opts){
     + (x.edge > 0 ? '<span class="edgetag" title="Priced off this player\'s own main line, this rung is underpriced">+'
        + x.edge.toFixed(0) + '% vs price</span>' : '') + res + '</div>'
     + '<div class="lgs">' + esc(x.match || '') + ' &middot; ' + esc(x.lg || x.league || '')
-    + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>' + where + alt + (done ? '' : watchNote(x)) + '</li>';
+    + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>'
+    + (!done && needLine(x) ? '<div class="lgs">Needs: ' + esc(needLine(x)) + '</div>' : '')
+    + where + alt + (done ? '' : watchNote(x)) + '</li>';
 }
 // a player prop in play: the stat so far against the line it needs
 // (props_ledger.live_value), e.g. "2 so far, needs 4 (2 to go)"
@@ -1654,6 +1656,7 @@ function everyGameHTML(){
     + '<button type="button" data-egsort="time" aria-pressed="' + (EGSORT === 'time') + '">By start time</button></span></p>'
     + '<ul class="betlegs">' + G.map(g => '<li>' + esc(g.label) + teamTag(g) + ' <b>' + esc(g.price || '') + '</b> &middot; '
       + (100 * g.p).toFixed(0) + '% &middot; ' + esc(g.match || '') + ' ' + res(g.status)
+      + (g.status === 'open' && needLine(g) ? '<div class="sbn">Needs: ' + esc(needLine(g)) + '</div>' : '')
       + (g.score && g.status !== 'open' ? '<div class="sbn">' + esc(g.score) + '</div>'
          : g.live ? '<div class="sbn"><b>Live:</b> ' + esc(g.live) + ' &middot; ' + esc(g.live_score || '') + '</div>' + paceNote(g)
          : g.alt ? '<div class="sbn">Pays more at <b>Kalshi</b>: ' + Math.round(100 * g.alt.ask) + '&cent; (' + esc(g.alt.american || '')
