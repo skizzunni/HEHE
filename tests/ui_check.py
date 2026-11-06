@@ -136,7 +136,10 @@ PROBE = """<script>setTimeout(function(){
   var lrSave = D.locks_record; D.locks_record = Object.assign({}, lrSave, {watch: [{league: "nba", t: "over", won: 10, n: 18, said: 75}]});
   var wpSave = D.watch_pool; D.watch_pool = [{league: "nfl", t: "teamunder", won: 299, n: 388, said: 82}];
   var pfSave = D.pool_form; D.pool_form = [{league: "nfl", t: "teamunder", won: 145, n: 197, said: 81.7}, {league: "mlb", t: "over", won: 90, n: 100, said: 80}, {league: "nhl", t: "spread", won: 136, n: 158, said: 82.5}];
-  out.form = [watchNote({league: "mlb", t: "over"}), watchNote({league: "nhl", t: "spread"}), watchNote({league: "nhl", t: "under"})];
+  var ppSave = D.prop_form; D.prop_form = [{league: "nba", market: "Assists", won: 62, n: 76, said: 82.7}];
+  out.form = [watchNote({league: "mlb", t: "over"}), watchNote({league: "nhl", t: "spread"}), watchNote({league: "nhl", t: "under"}),
+              watchNote({league: "nba", kind: "prop", market: "Assists"}), watchNote({league: "nba", kind: "prop", market: "Points"})];
+  D.prop_form = ppSave;
   out.watch = [watchNote({league: "nba", spec: {t: "over"}}), watchNote({league: "nba", t: "under"}), watchNote({league: "nba", kind: "prop", t: "over"}),
                watchNote({league: "nfl", t: "teamunder"})];
   D.watch_pool = wpSave; D.pool_form = pfSave;
@@ -377,10 +380,11 @@ def main():
     if "Caution:</b> NBA overs on Locks have won 10 of 18 against 75% stated" not in wn[0] or wn[1] or wn[2] \
             or "NFL team unders at 70-95% across every saved FanDuel line have won 299 of 388 against 82% stated" not in (wn[3] if len(wn) > 3 else ""):
         fails.append("watch note wrong: " + repr(wn))
-    fm = new.get("form") or ["", "", "x"]
+    fm = new.get("form") or ["", "", "x", "", "x"]
     if not ("Last 7 days, NFL team unders at 70-95% on every saved line: 145 of 197 (74% vs 82% stated) &ndash; running cold lately." in (wn[3] if len(wn) > 3 else "")
             and "MLB overs at 70-95% on every saved line: 90 of 100 (90% vs 80% stated) &ndash; running hot lately." in fm[0]
-            and "NHL spreads at 70-95% on every saved line: 136 of 158 (86% vs 83% stated) &ndash; on par." in fm[1] and not fm[2]):
+            and "NHL spreads at 70-95% on every saved line: 136 of 158 (86% vs 83% stated) &ndash; on par." in fm[1] and not fm[2]
+            and len(fm) > 4 and "Last 7 days, NBA Assists props at 70-95%: 62 of 76 (82% vs 83% stated) &ndash; on par." in fm[3] and not fm[4]):
         fails.append("form note wrong: " + repr(fm) + repr(wn))
     pc = new.get("pace") or ["", "", "x", "", "", "", ""]
     if not ("On pace for <b>190</b> (58 so far, line 205.5) &middot; behind the pace it needs" in pc[0]

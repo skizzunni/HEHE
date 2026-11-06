@@ -4062,3 +4062,7 @@ saved line, shown with the cautions; information only). Study, no rule: NBA game
 ran 427/514 (83.1% vs 81.8%) then 370/488 (75.8% vs 81.8%) -- short in one half only, so no caution or
 change; NBA unders beat their chance in both halves (82.7%, 91.2% vs 81.9%) but by under 1 pt in the
 first, so no rule either (2026-11-06).
+Recent form beside prop legs (`props_ledger.form`: last 7 graded days per league and market at 70-95%,
+information only). Study, no rule: NBA assists props at 75-90% ran 95/107 (89% vs 83%) then 100/124
+(81% vs 83%) -- mixed; NBA rebounds short in both halves (52/63 83% vs 84%, 60/77 78% vs 85%) but the
+first-half gap is 1 pt and far from the 99.5% bar, so no caution or change (2026-11-06).

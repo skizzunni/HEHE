@@ -1381,7 +1381,8 @@ function teamTag(x){
 // stated chance in both halves of a Locks record (locks.watch_kinds)
 function watchNote(x){
   const t = (x.spec || {}).t || x.t, lg = x.league || x.lgk;
-  if(!t || !lg || x.kind === 'prop') return '';
+  if(x.kind === 'prop') return propForm(x);
+  if(!t || !lg) return '';
   const W = [].concat(((D.locks_record || {}).watch || []).map(w => Object.assign({card: 'on Locks'}, w)),
                       ((D.safe_locks_record || {}).watch || []).map(w => Object.assign({card: 'on Safe Locks'}, w)),
                       (D.watch_pool || []).map(w => Object.assign({card: 'at 70-95% across every saved FanDuel line'}, w)));
@@ -1390,6 +1391,16 @@ function watchNote(x){
   return ws.map(w => '<div class="lgw"><b>Caution:</b> ' + esc(String(lg).toUpperCase()) + ' ' + esc(nice[t] || t) + ' ' + w.card + ' have won '
     + w.won + ' of ' + w.n + ' against ' + w.said + '% stated, short in both halves of the record.</div>').join('')
     + formNote(lg, t, nice[t] || t);
+}
+// last 7 days of this league and prop market among graded props at 70-95%
+// (props_ledger.form): information only
+function propForm(x){
+  const f = (D.prop_form || []).find(v => v.league === x.league && v.market === x.market);
+  if(!f || !f.n) return '';
+  const pct = Math.round(100 * f.won / f.n), gap = pct - f.said, cl = s => String(s).replace(/[<>&"]/g, '');
+  return '<div class="sbn">Last 7 days, ' + cl(String(f.league).toUpperCase()) + ' ' + cl(f.market) + ' props at 70-95%: '
+    + f.won + ' of ' + f.n + ' (' + pct + '% vs ' + Math.round(f.said) + '% stated)'
+    + (gap <= -5 ? ' &ndash; running cold lately.' : gap >= 5 ? ' &ndash; running hot lately.' : ' &ndash; on par.') + '</div>';
 }
 // last 7 days of this league and bet type across every saved line at 70-95%
 // (locks.pool_form): information only, a short dip is often noise

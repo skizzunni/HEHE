@@ -399,6 +399,25 @@ def like_record(league, market, p, band=0.05):
     return dict(won=sum(e["status"] == "won" for e in R), n=len(R), said=round(100 * sum(e["p"] for e in R) / len(R)))
 
 
+def form(days=7, min_n=20, book=None):
+    """Recent form of every (league, market) among graded props at 70-95%:
+    the last `days` graded days. Shown beside prop legs, information only
+    (NBA rebounds ran 83% then 78% vs 84-85% stated: short, but not past the
+    bar, so no rule)."""
+    R = [e for e in (book if book is not None else load()).values() if e.get("status") in ("won", "lost")
+         and isinstance(e.get("p"), (int, float)) and 0.70 <= e["p"] < 0.95 and e.get("date")]
+    keep = set(sorted({e["date"] for e in R})[-days:])
+    g = {}
+    for e in R:
+        if e["date"] in keep:
+            a = g.setdefault((e.get("league"), e.get("market")), [0, 0, 0.0])
+            a[0] += e["status"] == "won"
+            a[1] += 1
+            a[2] += e["p"]
+    return [dict(league=lg, market=m, won=w, n=n, said=round(100 * p / n, 1), since=min(keep))
+            for (lg, m), (w, n, p) in sorted(g.items(), key=lambda kv: (str(kv[0][0]), str(kv[0][1]))) if n >= min_n]
+
+
 _LIVE = {}
 
 

@@ -56,3 +56,16 @@ class PoolForm(unittest.TestCase):
         finally:
             locks._pool_rows = orig
         self.assertEqual(f, [dict(league="nba", t="over", won=5, n=10, said=80.0, since="2026-11-08")])
+
+
+class PropForm(unittest.TestCase):
+    def test_last_days_and_band(self):
+        import props_ledger
+        book = {}
+        for d in range(1, 10):
+            for i in range(4):
+                book[f"{d}-{i}"] = dict(date=f"2026-11-0{d}", league="nba", market="Assists", p=0.8,
+                                        status="won" if i < 3 else "lost")
+        book["x"] = dict(date="2026-11-09", league="nba", market="Assists", p=0.99, status="lost")   # out of band
+        f = props_ledger.form(days=2, min_n=5, book=book)
+        self.assertEqual(f, [dict(league="nba", market="Assists", won=6, n=8, said=80.0, since="2026-11-08")])
