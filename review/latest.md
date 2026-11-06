@@ -2,6 +2,7 @@
 
 Picks 1-0 (100.0% vs 83.0% claimed, ROI +14.3%).
 Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (open), Austin Reaves: 4+ Assists (open), Over 214.5 points (open), Under 241.5 points (open), Over 216.5 points (open).
+Cautions in force: NBA over on Locks 12/21 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 1-0 (100.0% vs 83.0% claimed).
 Closing line value: -1.39 points on 1 picks; beat the close on 0.0%.
 Board sweep: 1-0, 49 open -- still clean.
