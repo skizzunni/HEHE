@@ -1,10 +1,10 @@
-# Review 2026-11-05
+# Review 2026-11-06
 
-Picks 41-16 (71.9% vs 74.1% claimed, ROI -8.5%).
+No picks settled yet.
 Ladder: run 1 ended (peak $9.57, lost on Florida Atlantic Owls under 41.5 points); the next ticket starts again at $1; best ever $9.57.
-Strong calls 28-11 (71.8% vs 75.2% claimed).
-Closing line value: +1.12 points on 57 picks; beat the close on 56.1%.
-Board sweep: 41-16, 3 open -- broken (first loss: uecl Trabzonspor at 67%).
+Board sweep: 0-0, 48 open -- still clean.
+Why picks lost (14 days): favourite lost 138, close game 116, upset 53, coin flip 47, blowout 42, price moved against it 32.
+Yesterday (2026-11-05): board 41-16, sweep broken by uecl Trabzonspor at 67%.
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -21,33 +21,7 @@ Board sweep: 41-16, 3 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST nhl Utah Mammoth at 53% (-122), Montreal Canadiens 5 - Utah Mammoth 4: margin 1 · the book had my side favoured too · called at 53% · coin flip · close game
 - LOST nhl Edmonton Oilers at 63% (-192), Anaheim Ducks 5 - Edmonton Oilers 4: margin 1 · the book had my side favoured too · called at 63% · favourite lost · close game
 - LOST ncaaf UTSA Roadrunners at 72% (-278), Florida Atlantic Owls 60 - UTSA Roadrunners 29: margin 31 · the book had my side favoured too · called at 72% · favourite lost · blowout
-Why picks lost (14 days): favourite lost 145, close game 123, upset 57, coin flip 52, blowout 46, price moved against it 34.
-Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
-- LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
-- LOST efl1 Middlesbrough at 78% (-500), Middlesbrough 0 - Wrexham 2: margin 2 · the book had my side favoured too · called at 78% · upset
-- LOST ucl PSV Eindhoven at 73% (-330), Club Brugge 2 - PSV Eindhoven 1: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game
-- LOST bra Athletico-PR at 66% (-250), Athletico-PR 1 - Vasco da Gama 3: margin 2 · the book had my side favoured too · called at 66% · favourite lost · price moved against it (4 pts)
-- LOST col Independiente Santa Fe at 67% (-230), Cúcuta Deportivo 1 - Independiente Santa Fe 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
-- LOST nba Detroit Pistons at 55% (-136), Detroit Pistons 106 - Philadelphia 76ers 112: margin 6 · the book had my side favoured too · called at 55% · coin flip
-- LOST nhl Buffalo Sabres at 54% (-130), Buffalo Sabres 1 - Ottawa Senators 2: margin 1 · the book had my side favoured too · called at 54% · coin flip · close game · price moved against it (3 pts)
-- LOST nba Charlotte Hornets at 60% (-170), Brooklyn Nets 114 - Charlotte Hornets 104: margin 10 · the book had my side favoured too · called at 60% · favourite lost
-- LOST nba Memphis Grizzlies at 67% (-228), Indiana Pacers 107 - Memphis Grizzlies 103: margin 4 · the book had my side favoured too · called at 67% · favourite lost · close game
-- LOST per Universitario at 67% (-265), Sport Boys 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost · price moved against it (3 pts)
-- LOST nba Houston Rockets at 71% (-278), Houston Rockets 107 - Minnesota Timberwolves 117: margin 10 · the book had my side favoured too · called at 71% · favourite lost · price moved against it (4 pts)
-- LOST ncaab Loyola Marymount Lions at 68% (-230), Loyola Marymount Lions 95 - Queens University Royals 96: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
-Locks 8/11 won, 2 open; Best play top 2 (60%) lost; lost: Florida Atlantic Owls under 41.5 points (UTSA Roadrunners at Florida Atlantic Owls) UTSA Roadrunners 29 - Florida Atlantic Owls 60.
-Safe Locks 10/11 won, 1 open; Winners parlay top 2 (85%) won; Best play top 7 (54%) open.
-Lottery 100: lost (5/9 legs won, killed by Over 152.5 points, UTSA Roadrunners to win)
-Lottery 100: lost (2/6 legs won, killed by Over 6.5 goals, Southern Miss Golden Eagles +14.5, Vancouver Canucks to win)
-Lottery 100: lost (1/5 legs won, killed by Utah Mammoth -1.5, Over 6.5 goals, Over 6.5 goals, Texas Tech Red Raiders -26.5)
-Lottery 10k: lost (4/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals, Southern Miss Golden Eagles +14.5, Florida Atlantic Owls under 30.5 points)
-Lottery 10k: lost (1/6 legs won, killed by Edmonton Oilers -3.5, Vegas Golden Knights under 1.5 goals, Under 6.5 goals, Jacksonville Jaguars over 34.5 points)
-Lottery 10k+25: lost (4/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals, Southern Miss Golden Eagles +14.5, UTSA Roadrunners -6.5)
-Lottery 10k+50: lost (5/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals, Southern Miss Golden Eagles +14.5)
-Lottery 10k+100: lost (5/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals, Southern Miss Golden Eagles +14.5)
-Lottery 100: lost (2/5 legs won, killed by Mark Flekken: 3+ Goalkeeper Saves, Claudio Echeverri: Anytime Goalscorer, Guglielmo Vicario: 3+ Goalkeeper Saves)
 Ladder-consistency props (all time): 1606/1922 won (83.6%) vs 86.4% fair, 87.4% price.
-Props 96/121 vs 78.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=122), ncaaf 0.00 (n=171), nfl 0.00 (n=42), nhl 0.00 (n=143)
