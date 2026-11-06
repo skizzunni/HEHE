@@ -39,6 +39,8 @@ class Ladder(unittest.TestCase):
         # -200, three legs reach $10,000 as likely as four and more than five
         self.assertEqual(len(runs[1]["days"][0]["legs"]), 3)
         self.assertAlmostEqual(runs[1]["bank"], round(1.5 ** 3, 2))
+        r = ladder.report(b, start="2026-11-03")
+        self.assertEqual(r["history"][0]["lost_on"], ["2026-11-04|e"])
 
     def test_leg_count_chosen_from_three_to_eight(self):
         legs = [(c, 0.95, "open") for c in "abcdefghij"]

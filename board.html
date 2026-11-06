@@ -1528,6 +1528,7 @@ function ladderRuns(R, money){
   return '<details><summary>Past runs (' + R.length + ')</summary><table class="sweeptab"><thead><tr><th>Started</th>'
     + '<th>Days</th><th>Peak</th><th>Ended</th></tr></thead><tbody>'
     + R.map(r => '<tr><td>' + esc(r.start) + '</td><td>' + r.days + '</td><td>' + money(r.peak) + '</td><td>' + how(r.status)
+      + ((r.lost_on || []).length ? '<div class="sbn">on ' + r.lost_on.map(esc).join(', ') + '</div>' : '')
       + '</td></tr>').join('') + '</tbody></table></details>';
 }
 // the ticket that settled last, shown until the next 8 AM card is set

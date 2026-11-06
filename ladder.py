@@ -207,4 +207,7 @@ def report(book=None, start=START, target=TARGET):
                 log=[dict(day=d["day"], stake=d["stake"], result=d["result"], pays=d["pays"]) for d in done],
                 chance_to_target=round(p ** need, 8) if p and need else None,
                 history=[dict(start=r["start"], status=r["status"], days=len(r["days"]),
-                              peak=max([d["stake"] for d in r["days"]] + [r["bank"]])) for r in runs][-10:])
+                              peak=max([d["stake"] for d in r["days"]] + [r["bank"]]),
+                              lost_on=[L["label"] for L in r["days"][-1]["legs"] if L.get("status") == "lost"]
+                              if r["status"] == "lost" and r["days"] else [])
+                         for r in runs][-10:])

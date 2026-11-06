@@ -3990,3 +3990,7 @@ a projection swings too much to mean anything (2026-11-06).
 Live prop stat: a player missing from the in-game box score (no catch yet) now shows "0 so far (none
 yet)" instead of nothing -- ESPN lists only players with a stat in that group mid-game
 (`props_ledger.live_value`; grading is unchanged) (2026-11-06).
+Ladder past runs name the leg(s) that ended each run (`ladder.report` history lost_on). Study, no rule:
+team-total unders -- Locks 9/10 then 4/7 (17 legs), Safe Locks 14/16 then 12/13, against their stated
+chance; not short in both halves, and the automatic caution (`locks.watch_kinds`) will flag them if they
+become so (2026-11-06).
