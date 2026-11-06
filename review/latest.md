@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
-Picks 30-12 (71.4% vs 74.7% claimed, ROI -10.4%).
+Picks 31-12 (72.1% vs 74.5% claimed, ROI -9.1%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
 Strong calls 28-11 (71.8% vs 75.2% claimed).
-Closing line value: +1.2 points on 42 picks; beat the close on 61.9%.
-Board sweep: 30-12, 18 open -- broken (first loss: uecl Trabzonspor at 67%).
+Closing line value: +1.17 points on 43 picks; beat the close on 60.5%.
+Board sweep: 31-12, 17 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -46,4 +46,4 @@ Ladder-consistency props (all time): 1585/1896 won (83.6%) vs 86.4% fair, 87.4% 
 Props 25/34 vs 75.7% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=121), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=135)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=121), ncaaf 0.00 (n=169), nfl 0.00 (n=41), nhl 0.00 (n=136)
