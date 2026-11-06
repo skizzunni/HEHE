@@ -1,11 +1,11 @@
 # Review 2026-11-06
 
-Picks 13-0 (100.0% vs 71.8% claimed, ROI +31.8%).
+Picks 14-0 (100.0% vs 72.2% claimed, ROI +31.1%).
 Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (open), Austin Reaves: 4+ Assists (open), Over 214.5 points (open), Under 241.5 points (open), Over 216.5 points (open).
 Cautions in force: NBA over on Locks 12/21 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
-Strong calls 13-0 (100.0% vs 71.8% claimed).
-Closing line value: +0.94 points on 13 picks; beat the close on 61.5%.
-Board sweep: 13-0, 38 open -- still clean.
+Strong calls 14-0 (100.0% vs 72.2% claimed).
+Closing line value: +0.94 points on 14 picks; beat the close on 64.3%.
+Board sweep: 14-0, 37 open -- still clean.
 Why picks lost (14 days): favourite lost 139, close game 117, upset 53, coin flip 47, blowout 42, price moved against it 32.
 Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
@@ -34,7 +34,7 @@ Lottery 10k+25: open (0/13 legs won)
 Lottery 10k+50: open (0/13 legs won)
 Lottery 10k+100: open (0/12 legs won)
 Ladder-consistency props (all time): 1622/1939 won (83.7%) vs 86.4% fair, 87.4% price.
-Props 3/3 vs 85.0% claimed.
+Props 4/4 vs 83.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=123), ncaaf 0.00 (n=171), nfl 0.00 (n=42), nhl 0.00 (n=144)
