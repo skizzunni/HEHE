@@ -1597,6 +1597,23 @@
    "tip": "8:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909292|away|FanDuel": {
+   "dec": 1.6329,
+   "ev": 0.0176,
+   "fair": 0.6232,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909292",
+   "kind": "value",
+   "league": "nba",
+   "match": "TOR @ MIL",
+   "price": "-158",
+   "seen": "2026-11-06T23:39:59+00:00",
+   "side": "away",
+   "start": "2026-11-07T01:00Z",
+   "team": "Toronto Raptors",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909292|away|Kalshi": {
    "dec": 1.547,
    "ev": 0.0342,
@@ -1653,6 +1670,30 @@
    "profit": 0.0264,
    "seen": "2026-11-06T17:53:04+00:00"
   },
+  "nba:401909292|{\"line\": -4.5, \"t\": \"spread\", \"team\": \"Toronto Raptors\"}|Kalshi": {
+   "dec": 2.0513,
+   "dk": "-110",
+   "ev": 0.041,
+   "fair": 0.5075,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909292",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "TOR @ MIL",
+   "price": "+105",
+   "seen": "2026-11-06T23:39:59+00:00",
+   "side": "{\"line\": -4.5, \"t\": \"spread\", \"team\": \"Toronto Raptors\"}",
+   "spec": {
+    "line": -4.5,
+    "t": "spread",
+    "team": "Toronto Raptors"
+   },
+   "start": "2026-11-07T01:00Z",
+   "team": "Toronto Raptors -4.5",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909292|{\"line\": -6.5, \"t\": \"spread\", \"team\": \"Toronto Raptors\"}|Kalshi": {
    "dec": 2.1395,
    "dk": "-115",
@@ -1700,6 +1741,29 @@
    "team": "Toronto Raptors -8.5",
    "tip": "8:00 PM",
    "venue": "Kalshi"
+  },
+  "nba:401909292|{\"line\": 228.5, \"t\": \"over\"}|FanDuel": {
+   "dec": 1.9804,
+   "dk": "-113",
+   "ev": 0.0118,
+   "fair": 0.5109,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909292",
+   "kind": "value",
+   "league": "nba",
+   "market": "over",
+   "match": "TOR @ MIL",
+   "price": "-102",
+   "seen": "2026-11-06T23:39:59+00:00",
+   "side": "{\"line\": 228.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 228.5,
+    "t": "over"
+   },
+   "start": "2026-11-07T01:00Z",
+   "team": "over 228.5",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
   },
   "nba:401909844|away|Kalshi": {
    "dec": 3.1776,
