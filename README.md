@@ -4050,3 +4050,6 @@ Prop Locks record by place on the card (#1-5 71 of 73, #6-10 63 of 69, #11-15 31
 "Every game" record by start time (before 5 PM 164/189, 5-8 PM 108/116, 8 PM or later 100/107). Study,
 no rule: late games (set at 8 AM, decided at night) are not weaker -- 8 PM+ 89.8% then 97.9% vs 90%
 stated; before 5 PM 90.9% then 83.9% vs 87% (mixed) (2026-11-06).
+Ladder legs and tickets record (`ladder.report` legs_record, tickets). Study, no rule: ladder legs have
+won 12 of 13 vs 76.4% stated, tickets 2 of 3 -- one lost leg ends a ticket, so a ticket of likely legs
+still loses often (2026-11-06).

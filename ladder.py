@@ -216,6 +216,12 @@ def report(book=None, start=START, target=TARGET):
                 today=today, wins_needed=need, last=last,
                 log=[dict(day=d["day"], stake=d["stake"], result=d["result"], pays=d["pays"]) for d in done],
                 chance_to_target=round(p ** need, 8) if p and need else None,
+                # every ladder leg ever graded, against its stated chance
+                legs_record=(lambda G: dict(won=sum(L["status"] == "won" for L in G), n=len(G),
+                                            said=round(100 * sum(L["p"] for L in G) / len(G), 1)) if G else None)(
+                    [L for r in runs for d in r["days"] for L in d["legs"] if L.get("status") in ("won", "lost")]),
+                tickets=dict(won=sum(1 for r in runs for d in r["days"] if d["result"] == "won"),
+                             n=sum(1 for r in runs for d in r["days"] if d["result"] in ("won", "lost"))),
                 # every settled day of every run: the bank after it (0 on a loss)
                 path=[dict(day=d["day"], run=i + 1, bank=(0.0 if d["result"] == "lost"
                                                           else round(d["stake"] * settle_pay(d), 2)))

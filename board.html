@@ -1600,6 +1600,9 @@ function ladderHTML(){
       : '') + 'Run ' + (X.ended ? X.runs + 1 : Math.max(X.runs, 1)) + ', bank <b>' + money(X.bank) + '</b>'
     + (X.streak ? ', ' + X.streak + ' win' + (X.streak > 1 ? 's' : '') + ' in a row' : '') + '; best so far ' + money(X.best) + '.</p>'
     + ladderBar(X.bank, X.target, money) + ladderChart(X.path || [])
+    + (X.legs_record && X.legs_record.n ? '<p class="note">Ladder legs so far: <b>' + X.legs_record.won + ' of ' + X.legs_record.n + '</b> ('
+       + Math.round(100 * X.legs_record.won / X.legs_record.n) + '% vs ' + X.legs_record.said + '% stated); tickets ' + (X.tickets || {}).won + ' of '
+       + (X.tickets || {}).n + '. One leg lost ends a ticket, which is why a ticket of likely legs still loses often.</p>' : '')
     + (T ? '<ul class="betlegs">' + T.legs.map(L => '<li>' + esc(L.label) + teamTag(L) + ' <b>' + esc(L.price) + '</b> &middot; '
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')

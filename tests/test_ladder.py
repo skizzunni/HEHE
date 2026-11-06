@@ -42,6 +42,12 @@ class Ladder(unittest.TestCase):
         r = ladder.report(b, start="2026-11-03")
         self.assertEqual(r["history"][0]["lost_on"], ["2026-11-04|e"])
 
+    def test_legs_and_tickets_record(self):
+        b = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "lost")]})
+        r = ladder.report(b, start="2026-11-03")
+        self.assertEqual((r["legs_record"]["won"], r["legs_record"]["n"]), (9, 10))
+        self.assertEqual(r["tickets"], dict(won=1, n=2))
+
     def test_bank_path_across_runs(self):
         b = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "lost")]})
         r = ladder.report(b, start="2026-11-03")
