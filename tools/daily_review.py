@@ -373,6 +373,22 @@ def _pick_stuck_days():
 PICK_STUCK_DAYS = _pick_stuck_days()
 
 
+def caution_line():
+    """The cautions in force (locks.watch_kinds per card, locks.watch_pool),
+    one line, or None."""
+    try:
+        import locks
+        W = [dict(w, where="Locks") for w in locks.watch_kinds(locks.load())]
+        W += [dict(w, where="Safe Locks") for w in locks.watch_kinds(locks.load(locks.SAFE_LEDGER))]
+        W += [dict(w, where="all saved lines") for w in locks.watch_pool()]
+    except Exception:
+        return None
+    if not W:
+        return None
+    return "Cautions in force: " + "; ".join(f"{w['league'].upper()} {w['t']} on {w['where']} {w['won']}/{w['n']} vs {w['said']}%"
+                                             for w in W) + "."
+
+
 def ladder_line(book=None):
     """One line on the $1 -> $10k ladder (ladder.py), or None before it starts."""
     try:
@@ -688,6 +704,8 @@ def words(r, fit):
         out.append("No picks settled yet.")
     if r.get("ladder"):
         out.append(r["ladder"])
+    if r.get("cautions"):
+        out.append(r["cautions"])
     for name, mb in r.get("big_files") or []:
         out.append(f"BIG FILE {name} is {mb} MB -- GitHub refuses files over 100 MB and the board stops; trim it")
     st = r.get("stuck") or []
@@ -800,6 +818,7 @@ def main():
     log[today.isoformat()]["stuck"] = stuck(ledger, props, locks, lottery, today)
     log[today.isoformat()]["big_files"] = big_files()
     log[today.isoformat()]["ladder"] = ladder_line()
+    log[today.isoformat()]["cautions"] = caution_line()
     yk = (today - dt.timedelta(days=1)).isoformat()
     log[today.isoformat()]["yesterday"] = dict(day=yk, sweep=log[yk].get("sweep"), losses=log[yk].get("losses"))
     with open(log_path, "w") as fh:

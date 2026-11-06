@@ -185,6 +185,18 @@ class LikeRecord(unittest.TestCase):
                              dict(won=1, n=2, said=83))
 
 
+class CautionLine(unittest.TestCase):
+    def test_lists_cautions_or_none(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        import locks
+        with mock.patch.object(locks, "watch_kinds", lambda b: []), \
+             mock.patch.object(locks, "watch_pool", lambda *a, **k: [dict(league="nfl", t="teamunder", won=311, n=402, said=82)]):
+            self.assertEqual(daily_review.caution_line(), "Cautions in force: NFL teamunder on all saved lines 311/402 vs 82%.")
+        with mock.patch.object(locks, "watch_kinds", lambda b: []), mock.patch.object(locks, "watch_pool", lambda *a, **k: []):
+            self.assertIsNone(daily_review.caution_line())
+
+
 class ReviewLine(unittest.TestCase):
     def test_daily_review_reports_the_ladder(self):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))

@@ -4037,3 +4037,7 @@ found the chooser ahead of a fixed 5 in both halves (reach chance 3.1e-05 vs 1.3
 Locks tab says what a Lock is, from its own record: "the likeliest bets on FanDuel today, not sure things.
 They have won N of M, so about 1 in K loses" -- after the user's point that a caution on a "Lock" reads
 as a contradiction (`lockMeaning`) (2026-11-06).
+The daily review lists the cautions in force ("Cautions in force: NBA over on Locks 12/21 vs 75%; NFL
+teamunder on all saved lines 311/402 vs 82%"; `caution_line`), so each hourly report carries them. Study,
+no rule: NBA props by market at 70-90% -- assists 70-80% 90.3% then 75.6% (mixed), points 80-90% above
+their stated chance in both halves (85.9% / 88.8% vs 85%), rebounds 80-90% 84.9% then 78.9% (2026-11-06).
