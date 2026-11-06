@@ -778,6 +778,31 @@ def live_winning(e):
     return mine >= other if e.get("dc") else mine > other
 
 
+def day_rarity(rows):
+    """How unusual a day's losses were, given the chances each pick was called
+    at: losses expected, the chance of that many losses or more (picks taken as
+    independent), and which leagues the losses came from."""
+    ps = [min(max((e.get("conf") or 0) / 100, 0.0), 1.0) for e in rows if e.get("status") in ("won", "lost")]
+    if not ps:
+        return {}
+    dist = [1.0]                       # dist[k] = chance of exactly k losses
+    for p in ps:
+        q = 1 - p
+        nxt = [0.0] * (len(dist) + 1)
+        for k, v in enumerate(dist):
+            nxt[k] += v * p
+            nxt[k + 1] += v * q
+        dist = nxt
+    lost = sum(e.get("status") == "lost" for e in rows)
+    by = {}
+    for e in rows:
+        if e.get("status") == "lost":
+            by[e.get("league")] = by.get(e.get("league"), 0) + 1
+    return dict(expected_losses=round(sum(1 - p for p in ps), 1),
+                as_bad_pct=round(100 * sum(dist[lost:]), 1),
+                lost_by_league=dict(sorted(by.items(), key=lambda kv: -kv[1])))
+
+
 def sweep_days(done, day_of, today, n=14):
     """The whole board, day by day: priced picks won and lost on each of the
     last n days before today ([{day, won, lost}], newest first), for the
@@ -847,6 +872,7 @@ def board_payload(limit=40):
                      losses=[dict(league=e["league"], pick=e["pick"] + (" or draw" if e.get("dc") else ""),
                                   conf=e.get("conf"), price=e.get("price"), score=e.get("scores") or {},
                                   why=e.get("diagnosis") or "", tags=loss_tags(e)) for e in _yl])
+    yesterday.update(day_rarity(_yd))
     own = own_view(book, today)
     # picks whose price moved 3+ points between the call and the start, last
     # 14 days: how they did against their final price (the badge's record)

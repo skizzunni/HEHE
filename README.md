@@ -4053,3 +4053,7 @@ stated; before 5 PM 90.9% then 83.9% vs 87% (mixed) (2026-11-06).
 Ladder legs and tickets record (`ladder.report` legs_record, tickets). Study, no rule: ladder legs have
 won 12 of 13 vs 76.4% stated, tickets 2 of 3 -- one lost leg ends a ticket, so a ticket of likely legs
 still loses often (2026-11-06).
+Yesterday's rarity (`ledger.day_rarity`: losses expected from each pick's stated chance, the exact chance
+of that many losses or more, losses by league). Study, no rule: the Nov 5 board lost 17 vs 15.5 expected
+(37% of days are that bad or worse), 10 of them UEL/UECL. Soccer straight-win calls at 65-90% still beat
+their stated chance in both halves (82/98 then 79/98 vs 72-73%), so no soccer change (2026-11-06).

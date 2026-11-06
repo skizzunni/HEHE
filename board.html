@@ -1715,6 +1715,11 @@ function yesterdayHTML(Y){
   const sc = o => Object.keys(o || {}).map(k => esc(k) + ' ' + esc(o[k])).join(' &ndash; ');
   return '<div class="sweep"><details><summary><b>Yesterday (' + esc(Y.day) + '): ' + Y.won + '&ndash;' + Y.lost + '</b>'
     + (Y.lost ? ' &middot; why each loss happened' : ' &middot; clean sweep') + '</summary>'
+    + (Y.expected_losses != null && Y.lost ? '<p class="note">The chances said to expect about <b>' + Y.expected_losses + ' losses</b>; '
+      + Y.lost + ' came in. A day with this many losses or more happens about <b>' + Math.round(Y.as_bad_pct) + '%</b> of the time'
+      + (Y.as_bad_pct < 5 ? ' &ndash; unusually bad, worth a look.' : ', so it was within normal swings.')
+      + (Object.keys(Y.lost_by_league || {}).length ? ' Losses by league: ' + Object.keys(Y.lost_by_league).map(k => esc(k.toUpperCase()) + ' ' + Y.lost_by_league[k]).join(', ') + '.' : '')
+      + '</p>' : '')
     + (Y.losses || []).map(L => '<p class="note"><span class="wl lost">LOST</span> ' + esc(String(L.league).toUpperCase()) + ' '
       + esc(L.pick) + ' at ' + Math.round(L.conf) + '%' + (L.price ? ' (' + esc(L.price) + ')' : '')
       + (Object.keys(L.score || {}).length ? '<br>' + sc(L.score) : '')
