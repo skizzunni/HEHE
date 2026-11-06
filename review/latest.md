@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
-Picks 26-10 (72.2% vs 75.3% claimed, ROI -9.8%).
+Picks 26-11 (70.3% vs 75.1% claimed, ROI -12.3%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
-Strong calls 26-10 (72.2% vs 75.3% claimed).
-Closing line value: +1.39 points on 36 picks; beat the close on 63.9%.
-Board sweep: 26-10, 24 open -- broken (first loss: uecl Trabzonspor at 67%).
+Strong calls 26-11 (70.3% vs 75.1% claimed).
+Closing line value: +1.4 points on 37 picks; beat the close on 64.9%.
+Board sweep: 26-11, 23 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -15,7 +15,8 @@ Board sweep: 26-10, 24 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uel Celta Vigo at 69% (-290), Celta Vigo 1 - Union St.-Gilloise 2: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game
 - LOST uel Hapoel Be'er at 71% (-310), Hapoel Be'er 0 - OFI Crete 2: margin 2 · the book had my side favoured too · called at 71% · favourite lost
 - LOST uel Bayer Leverkusen at 68% (-255), Bayer Leverkusen 0 - Marseille 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
-Why picks lost (14 days): favourite lost 142, close game 119, upset 57, coin flip 49, blowout 44, price moved against it 34.
+- LOST arg Belgrano (Córdoba) at 67% (-250), Belgrano (Córdoba) 1 - Gimnasia La Plata 2: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
+Why picks lost (14 days): favourite lost 143, close game 120, upset 57, coin flip 49, blowout 44, price moved against it 34.
 Yesterday (2026-11-04): board 40-12, sweep broken by ucl Liverpool at 83%.
 - LOST ucl Liverpool at 83% (-700), Fenerbahce 3 - Liverpool 2: margin 1 · the book had my side favoured too · called at 83% · upset · close game
 - LOST efl1 Middlesbrough at 78% (-500), Middlesbrough 0 - Wrexham 2: margin 2 · the book had my side favoured too · called at 78% · upset
