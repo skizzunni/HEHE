@@ -53,6 +53,8 @@ class Ladder(unittest.TestCase):
         b = book({"2026-11-05": legs})
         got = ladder.choose(b, "2026-11-05")
         self.assertTrue(3 <= len(got) <= 8)
+        b = book({"2026-11-06": legs})
+        self.assertEqual(len(ladder.choose(b, "2026-11-06")), 5)              # the user's call from 11-06: 5 legs
         b = book({"2026-11-04": [(c, 0.95, "open") for c in "abcdefg"]})
         self.assertEqual(len(ladder.choose(b, "2026-11-04")), 5)       # before the change: 5
         self.assertEqual(ladder.choose(book({"2026-11-05": W5[:2]}), "2026-11-05"), [])   # under 3: no ticket

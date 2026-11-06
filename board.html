@@ -1474,7 +1474,7 @@ function ladderOptions(T){
   const O = T.options || [];
   if(O.length < 2) return '';
   const best = O.reduce((a, o) => o.reach > a.reach ? o : a, O[0]);
-  return '<details><summary>Why ' + T.legs.length + ' legs</summary><table class="sweeptab"><thead><tr><th>Legs</th>'
+  return '<details><summary>' + T.legs.length + ' legs, and what other counts would give</summary><table class="sweeptab"><thead><tr><th>Legs</th>'
     + '<th class="num">Ticket wins</th><th class="num">Pays</th><th class="num">Wins needed</th><th class="num">Reach $10k</th></tr></thead><tbody>'
     + O.map(o => '<tr' + (o === best ? ' style="font-weight:700"' : '') + '><td>' + o.legs + '</td><td class="num">' + (100 * o.prob).toFixed(0)
       + '%</td><td class="num">' + o.pays.toFixed(2) + '&times;</td><td class="num">' + o.need + '</td><td class="num">'
@@ -1497,9 +1497,9 @@ function ladderK(sorted, bank, target){
 function ladderPreview(){
   const K = (D.locks || {}).today || {};
   const all = (K.locks || []).filter(L => !L.status || L.status === 'open').slice().sort((a, b) => b.p - a.p);
-  const P = ladderK(all, (D.ladder || {}).bank || 1, (D.ladder || {}).target || 10000);
+  const P = all.slice(0, 5);       // the ladder is the top 5 again from Nov 6 (ladder.FIXED_LEGS)
   const msg = '<p class="empty">Today&rsquo;s ladder ticket is set with the 8 AM Eastern Locks card.</p>';
-  if(!K.preview || P.length < 3) return msg;
+  if(!K.preview || P.length < 5) return msg;
   const pays = P.reduce((a, L) => a * (callWin(L.price) / 10 + 1), 1), prob = P.reduce((a, L) => a * L.p, 1);
   return msg + '<p class="note">Preview, if the card were set now:</p><ul class="betlegs">'
     + P.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> &middot; ' + (100 * L.p).toFixed(0) + '% &middot; '
@@ -1573,8 +1573,8 @@ function ladderHTML(){
   const res = s => s === "won" ? '<span class="wl won">WON</span>' : s === "lost" ? '<span class="wl lost">LOST</span>'
     : (s === "void" || s === "push") ? '<span class="wl">VOID</span>' : '<span class="sbn">open</span>';
   return '<div class="sweep"><h3>Ladder challenge: $1 &rarr; ' + money(X.target) + '</h3>'
-    + '<p class="note">Every day, one parlay of the likeliest legs on the 8 AM Locks card (3 to 8 of them: the count with the best '
-    + 'chance of reaching the target from the bank; 5 before Nov 5), staking the whole bank. '
+    + '<p class="note">Every day, one parlay of the 5 likeliest legs on the 8 AM Locks card, staking the whole bank '
+    + '(on Nov 5 only, the leg count was chosen from 3 to 8 by the best chance of reaching the target). '
     + 'A win rolls everything into tomorrow; one loss ends the run and the next day starts again at $1. Started '
     + esc(X.start) + '. ' + (X.ended ? 'Run ' + X.runs + ' ended at its peak of ' + money(X.ended.peak)
         + ((X.ended.lost_on || []).length ? ' (lost on ' + X.ended.lost_on.map(esc).join(', ') + ')' : '') + '; the next ticket starts a new run at $1. '

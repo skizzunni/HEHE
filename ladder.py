@@ -35,6 +35,10 @@ TARGET = 10000.0
 LEGS = 5                    # cards before LEGS_FROM
 LEGS_FROM = "2026-11-05"
 MIN_LEGS, MAX_LEGS = 3, 8
+# the user's call (2026-11-06, "5 might be our lucky number"): from this card
+# on, every ticket is the top 5 again. The 3-8 chooser ran on 11-05 only and
+# stays in the record; options() still shows what each count would have been.
+FIXED_FROM, FIXED_LEGS = "2026-11-06", 5
 
 
 def ticket(book, day, n=LEGS):
@@ -72,6 +76,8 @@ def choose(book, day, bank=BANK0, target=TARGET):
     from bank. Decided from the frozen 8 AM card, so a replay never moves."""
     if day < LEGS_FROM:
         return ticket(book, day)
+    if day >= FIXED_FROM:
+        return ticket(book, day, FIXED_LEGS)
     best = None
     for k in range(MIN_LEGS, MAX_LEGS + 1):
         legs = ticket(book, day, k)

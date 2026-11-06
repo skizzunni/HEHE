@@ -394,7 +394,7 @@ def main():
     if lk[:2] != [3, 0] or not (3 <= (lk[2] if len(lk) > 2 else 0) <= 8):
         fails.append("ladder leg count chooser wrong (want 3 legs, none under 3, and 3..8): " + repr(lk))
     lo = new.get("lopts", "")
-    if not ("Why 3 legs" in lo and '<tr style="font-weight:700"><td>3</td><td class="num">50%</td><td class="num">1.90&times;</td><td class="num">12</td><td class="num">1 in 4,098</td>' in lo):
+    if not ("3 legs, and what other counts would give" in lo and '<tr style="font-weight:700"><td>3</td><td class="num">50%</td><td class="num">1.90&times;</td><td class="num">12</td><td class="num">1 in 4,098</td>' in lo):
         fails.append("ladder options wrong: " + lo[:400])
     tt = new.get("teamTag") or ["", "", "x", "x"]
     if not ("team total</span>" in tt[0] and "team total</span>" in tt[1]) or tt[2] or tt[3]:

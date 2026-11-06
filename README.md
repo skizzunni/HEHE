@@ -4029,3 +4029,8 @@ Value bets record by stated edge (under 2%: 74 of 163, ROI -5.9%; 2-4%: 53 of 12
 stays; 2-4% finds positive in both halves (+3.2% / +6.3%) (2026-11-06).
 Every Locks and Safe Locks leg shows how card legs of its kind have done on both cards ("Like this before:
 Locks 8 of 11 · Safe Locks 26 of 29"; `locks.report` kinds) (2026-11-06).
+Ladder back to 5 legs from the 2026-11-06 card, the user's call ("5 might be our lucky number"): every
+ticket is the top 5 Locks (`ladder.FIXED_FROM`/`FIXED_LEGS`). The 3-8 chooser ran on 11-05 only and stays
+in the record; the card still shows what other counts would have given. For the record, the 11-05 study
+found the chooser ahead of a fixed 5 in both halves (reach chance 3.1e-05 vs 1.3e-06, 1.3e-03 vs 2.6e-04)
+(2026-11-06).
