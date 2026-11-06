@@ -76,6 +76,27 @@ class WatchPool(unittest.TestCase):
         self.assertEqual([(w["league"], w["t"], w["n"]) for w in got], [("nhl", "under", 120)])
 
 
+class CautionRecord(unittest.TestCase):
+    def test_flag_at_card_time_and_record(self):
+        import locks
+        locks._CAUTION = {("nba", "over")}
+        try:
+            self.assertTrue(locks._cautioned(dict(league="nba", spec=dict(t="over"))))
+            self.assertFalse(locks._cautioned(dict(league="nba", spec=dict(t="under"))))
+            self.assertFalse(locks._cautioned(dict(league="nba", kind="prop", spec=None)))
+        finally:
+            locks._CAUTION = None
+        book = {"legs": {"a": dict(caution=True, status="lost", p=0.8), "b": dict(caution=True, status="won", p=0.8),
+                         "c": dict(caution=False, status="won", p=0.7), "d": dict(status="won", p=0.9)}}
+        orig = locks.load
+        locks.load = lambda path=None: book
+        try:
+            r = locks.caution_record()
+        finally:
+            locks.load = orig
+        self.assertEqual(r, {"flagged": dict(won=1, n=2, said=80.0), "other": dict(won=1, n=1, said=70.0)})
+
+
 class KindRecord(unittest.TestCase):
     def test_game_lines_by_type_props_by_market(self):
         import locks

@@ -562,6 +562,42 @@ def save(book, path=None):
         json.dump(book, fh, separators=(",", ":"), sort_keys=True)
 
 
+_CAUTION = None
+
+
+def _cautioned(L):
+    """True when this leg's kind is flagged now (watch_kinds on either card
+    or watch_pool); computed once per run."""
+    global _CAUTION
+    if L.get("kind") == "prop" or not (L.get("spec") or {}).get("t"):
+        return False
+    if _CAUTION is None:
+        try:
+            ks = set()
+            for path in (None, SAFE_LEDGER):
+                ks |= {(w["league"], w["t"]) for w in watch_kinds(load(path))}
+            ks |= {(w["league"], w["t"]) for w in watch_pool()}
+            _CAUTION = ks
+        except Exception:
+            _CAUTION = set()
+    return (L.get("league"), L["spec"]["t"]) in _CAUTION
+
+
+def caution_record(path=None):
+    """Card legs flagged with a caution when the card was set, against the
+    rest: dict(flagged=[won, n, said], other=[...]) -- evidence gathered on
+    games decided after the flag, the fair test for making it a rule."""
+    out = {"flagged": [0, 0, 0.0], "other": [0, 0, 0.0]}
+    for L in load(path)["legs"].values():
+        if "caution" not in L or L.get("status") not in ("won", "lost") or L.get("kind") == "prop":
+            continue
+        r = out["flagged" if L["caution"] else "other"]
+        r[0] += L["status"] == "won"
+        r[1] += 1
+        r[2] += L["p"]
+    return {k: dict(won=w, n=n, said=round(100 * p / n, 1) if n else None) for k, (w, n, p) in out.items()}
+
+
 def record(res, day, path=None, tag="locks"):
     """The day's first full card of locks stands; later rebuilds only add
     legs for games that had no lock yet (a late line), up to N_LOCKS."""
@@ -590,7 +626,11 @@ def record(res, day, path=None, tag="locks"):
                                         kind=L.get("kind", "game"), name=L.get("name"),
                                         market=L.get("market"), line=L.get("line"),
                                         aid=L.get("aid"), edge=L.get("edge"),
-                                        p_fair=L.get("p_fair")))
+                                        p_fair=L.get("p_fair"),
+                                        # whether the leg's kind carried a caution when the card
+                                        # was set: the record of cautioned legs is then built on
+                                        # games decided after the flag (caution_record)
+                                        caution=_cautioned(L)))
     if first and keys and res.get("pool") is not None:
         # the decision-time snapshot: the pool the card was chosen from and
         # the card as first set, so replay() can re-run the same chooser
@@ -737,7 +777,8 @@ def report(path=None):
                 days=days,
                 plays={k: dict(days=t[0], hit=t[1], said=round(100 * t[2] / t[0], 1) if t[0] else None)
                        for k, t in tally.items()},
-                by_sport=by_sport(legs), by_kind=by_kind(legs), watch=watch_kinds(book))
+                by_sport=by_sport(legs), by_kind=by_kind(legs), watch=watch_kinds(book),
+                caution=caution_record(path))
 
 
 def by_sport(legs):

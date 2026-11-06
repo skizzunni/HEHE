@@ -167,6 +167,7 @@ PROBE = """<script>setTimeout(function(){
                                     ended: {start: "2026-11-03", peak: 9.57, lost_on: ["Florida Atlantic Owls under 41.5 points"]}};
   try { out.ladEnded = ladderHTML(); } catch(e) { out.ladEnded = "ERR " + e; }
   D.ladder = ldS;
+  out.caution = [cautionLine({flagged: {won: 3, n: 7, said: 75.3}, other: {won: 75, n: 90, said: 75.4}}), cautionLine({flagged: {won: 0, n: 0}})];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -396,6 +397,9 @@ def main():
     le = new.get("ladEnded", "")
     if "Run 1 ended at its peak of $9.57 (lost on Florida Atlantic Owls under 41.5 points); the next ticket starts a new run at $1. Run 2, bank <b>$1.00</b>" not in le:
         fails.append("ended ladder run wrong: " + le[:400])
+    cl = new.get("caution") or ["", "x"]
+    if "Legs that carried a caution when the card was set: <b>3 of 7</b> (43% vs 75.3% stated); the rest 75 of 90 (83% vs 75.4%)." not in cl[0] or cl[1]:
+        fails.append("caution line wrong: " + repr(cl))
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken by Trabzonspor, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)

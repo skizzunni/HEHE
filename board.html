@@ -1735,6 +1735,15 @@ function ownHTML(O){
       : '<p class="note">Today my picks and the market agree on every game.</p>')
     + '</div>';
 }
+// legs that carried a caution when the card was set, against the rest
+// (locks.caution_record): the fair test before a caution becomes a rule
+function cautionLine(C){
+  const f = (C || {}).flagged, o = (C || {}).other;
+  if(!f || !f.n) return '';
+  const pc = x => Math.round(100 * x.won / x.n) + '%';
+  return '<p class="note">Legs that carried a caution when the card was set: <b>' + f.won + ' of ' + f.n + '</b> (' + pc(f) + ' vs '
+    + f.said + '% stated); the rest ' + o.won + ' of ' + o.n + ' (' + pc(o) + ' vs ' + o.said + '%).</p>';
+}
 // a Locks record split into player props and game lines (locks.by_kind)
 function kindLine(K){
   if(!(K || []).length) return '';
@@ -1826,7 +1835,7 @@ function drawLocks(){
         + playsLine(R.plays)
         + ((R.by_sport || []).length > 1 ? '<p class="note">By league: ' + R.by_sport.slice(0, 6).map(x =>
             esc(String(x.sport).toUpperCase()) + ' ' + x.won + ' of ' + x.n).join(' &middot; ') + '.</p>' : '')
-        + kindLine(R.by_kind)
+        + kindLine(R.by_kind) + cautionLine(R.caution)
         + '<table class="mk"><thead><tr><th>Day</th><th class="num">Won</th><th class="num">Lost</th>'
         + '<th class="num">Open</th><th>All hit?</th><th>Winners parlay</th></tr></thead><tbody>'
         + (R.days || []).map(d => '<tr><td>' + esc(d.day) + '</td><td class="num">' + d.won

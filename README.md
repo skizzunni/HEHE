@@ -4005,3 +4005,8 @@ Florida Atlantic Owls under 41.5 points); the next ticket starts again at $1", a
 (`ladder.report` ended) (2026-11-06).
 Every Locks, Safe Locks and Every-game leg says what it needs in plain words, as the Ladder does
 ("Needs: Utah Mammoth must score 4 or fewer goals") (2026-11-06).
+Locks and Safe Locks legs record whether their kind carried a caution when the card was set
+(`locks._cautioned`), and the record shows cautioned legs against the rest (`locks.caution_record`):
+the fair, after-the-flag test before a caution becomes a rule. Study (walk-forward: flags from earlier
+days' pools only, applied to each later Locks card, 10-24 to 11-05): flagged legs 3 of 7 (43%) against
+75% stated, the rest 75 of 90 (83%) -- the right direction but 7 legs; no rule yet (2026-11-06).
