@@ -8981,10 +8981,10 @@
   },
   "props": {
    "fair": {
-    "n": 1896,
+    "n": 1908,
     "said_fair": 86.4,
     "said_price": 87.4,
-    "won": 1585
+    "won": 1594
    },
    "n": 183,
    "said": 83.8,
@@ -9096,31 +9096,31 @@
    },
    {
     "flag": false,
-    "hit": 60.7,
-    "n": 28,
+    "hit": 61.3,
+    "n": 31,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 42.7
+    "said": 42.2
    },
    {
     "flag": false,
-    "hit": 81.8,
-    "n": 11,
+    "hit": 75.0,
+    "n": 12,
     "name": "props nfl Passing Yards",
-    "said": 85.9
+    "said": 85.8
    },
    {
     "flag": false,
-    "hit": 84.3,
-    "n": 83,
+    "hit": 84.4,
+    "n": 90,
     "name": "props nfl Receiving Yards",
-    "said": 82.1
+    "said": 82.2
    },
    {
     "flag": false,
-    "hit": 85.3,
-    "n": 34,
+    "hit": 84.2,
+    "n": 38,
     "name": "props nfl Receptions",
-    "said": 82.6
+    "said": 82.8
    },
    {
     "flag": false,
@@ -9257,8 +9257,8 @@
    },
    {
     "flag": false,
-    "hit": 93.0,
-    "n": 172,
+    "hit": 93.1,
+    "n": 173,
     "name": "prop locks",
     "said": 88.4
    },
@@ -9366,9 +9366,9 @@
    }
   },
   "clv": {
-   "avg": 1.27,
-   "beat": 57.7,
-   "n": 52
+   "avg": 1.21,
+   "beat": 56.6,
+   "n": 53
   },
   "day": "2026-11-05",
   "ladder": "Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.",
@@ -9657,7 +9657,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -9698,10 +9698,11 @@
     "killed_by": [
      "Edmonton Oilers -3.5",
      "Vegas Golden Knights under 1.5 goals",
-     "Under 6.5 goals"
+     "Under 6.5 goals",
+     "Jacksonville Jaguars over 34.5 points"
     ],
     "legs": 6,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 1
@@ -9728,7 +9729,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+50",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -9740,7 +9741,7 @@
     "lost": 3,
     "status": "lost",
     "tier": "10k+100",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -9756,12 +9757,12 @@
    }
   ],
   "picks": {
-   "hit": 71.2,
+   "hit": 71.7,
    "lost": 15,
-   "n": 52,
-   "roi": -9.8,
-   "said": 73.8,
-   "won": 37
+   "n": 53,
+   "roi": -9.2,
+   "said": 73.9,
+   "won": 38
   },
   "picks_by_league": {
    "arg": {
@@ -9796,6 +9797,14 @@
     "said": 98.0,
     "won": 3
    },
+   "nfl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 22.0,
+    "said": 79.0,
+    "won": 1
+   },
    "nhl": {
     "hit": 60.0,
     "lost": 4,
@@ -9823,14 +9832,14 @@
   },
   "props": {
    "fair": {
-    "n": 1896,
+    "n": 1908,
     "said_fair": 86.4,
     "said_price": 87.4,
-    "won": 1585
+    "won": 1594
    },
-   "n": 89,
-   "said": 78.8,
-   "won": 70
+   "n": 105,
+   "said": 78.2,
+   "won": 82
   },
   "safe_locks": {
    "lost": [],
@@ -9862,8 +9871,8 @@
   "sweep": {
    "broke_on": "uecl Trabzonspor at 67%",
    "lost": 15,
-   "open": 8,
-   "won": 37
+   "open": 7,
+   "won": 38
   },
   "vs_market_14d": {
    "against": {
@@ -9872,10 +9881,10 @@
    "agree": {
     "hit": 75.3,
     "lost": 253,
-    "n": 1024,
-    "roi": 0.5,
+    "n": 1025,
+    "roi": 0.6,
     "said": 71.3,
-    "won": 771
+    "won": 772
    }
   },
   "weights": {
@@ -9900,10 +9909,10 @@
    "nfl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6393,
-    "market_only": 0.6393,
-    "model_40": 0.6526,
-    "n": 41,
+    "logloss": 0.6298,
+    "market_only": 0.6298,
+    "model_40": 0.6459,
+    "n": 42,
     "weight": 0.0
    },
    "nhl": {
