@@ -9038,9 +9038,9 @@
  },
  "2026-11-05": {
   "clv": {
-   "avg": 1.12,
-   "beat": 56.1,
-   "n": 57
+   "avg": 1.07,
+   "beat": 55.2,
+   "n": 58
   },
   "day": "2026-11-05",
   "leaks_14d": [],
@@ -9061,9 +9061,9 @@
   },
   "loss_reasons_14d": {
    "blowout": 46,
-   "close game": 123,
+   "close game": 124,
    "coin flip": 52,
-   "favourite lost": 145,
+   "favourite lost": 146,
    "price moved against it": 34,
    "upset": 57
   },
@@ -9336,6 +9336,23 @@
      "blowout"
     ],
     "why": "margin 31 \u00b7 the book had my side favoured too \u00b7 called at 72% \u00b7 favourite lost \u00b7 blowout"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "match": "NSH @ COL",
+    "pick": "Colorado Avalanche",
+    "price": "-218",
+    "said": 66,
+    "score": {
+     "Colorado Avalanche": 2,
+     "Nashville Predators": 3
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 close game"
    }
   ],
   "lottery": [
@@ -9457,11 +9474,11 @@
    }
   ],
   "picks": {
-   "hit": 71.9,
-   "lost": 16,
-   "n": 57,
-   "roi": -8.5,
-   "said": 74.1,
+   "hit": 70.7,
+   "lost": 17,
+   "n": 58,
+   "roi": -10.1,
+   "said": 74.0,
    "won": 41
   },
   "picks_by_league": {
@@ -9522,11 +9539,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 60.0,
-    "lost": 4,
-    "n": 10,
-    "roi": -10.4,
-    "said": 61.2,
+    "hit": 54.5,
+    "lost": 5,
+    "n": 11,
+    "roi": -18.6,
+    "said": 61.6,
     "won": 6
    },
    "uecl": {
@@ -9553,19 +9570,19 @@
     "said_price": 87.4,
     "won": 1606
    },
-   "n": 121,
-   "said": 78.9,
-   "won": 96
+   "n": 130,
+   "said": 79.1,
+   "won": 102
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      7,
      0.5417,
-     "open"
+     "won"
     ],
     "winners": [
      2,
@@ -9573,7 +9590,7 @@
      "won"
     ]
    },
-   "won": 10
+   "won": 11
   },
   "strong": {
    "hit": 71.8,
@@ -9585,8 +9602,8 @@
   },
   "sweep": {
    "broke_on": "uecl Trabzonspor at 67%",
-   "lost": 16,
-   "open": 3,
+   "lost": 17,
+   "open": 2,
    "won": 41
   },
   "vs_market_14d": {
@@ -9594,10 +9611,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.3,
-    "lost": 254,
-    "n": 1029,
-    "roi": 0.6,
+    "hit": 75.2,
+    "lost": 255,
+    "n": 1030,
+    "roi": 0.5,
     "said": 71.3,
     "won": 775
    }
@@ -9698,8 +9715,8 @@
    },
    {
     "flag": false,
-    "hit": 80.9,
-    "n": 559,
+    "hit": 80.6,
+    "n": 568,
     "name": "props nhl Shots on Goal",
     "said": 81.0
    },
@@ -9796,10 +9813,10 @@
    },
    {
     "flag": false,
-    "hit": 94.7,
-    "n": 19,
+    "hit": 95.0,
+    "n": 20,
     "name": "safe locks nhl over",
-    "said": 91.4
+    "said": 91.3
    },
    {
     "flag": false,
@@ -9824,8 +9841,8 @@
    },
    {
     "flag": false,
-    "hit": 93.1,
-    "n": 175,
+    "hit": 93.2,
+    "n": 176,
     "name": "prop locks",
     "said": 88.4
    },
@@ -9949,9 +9966,9 @@
   },
   "loss_reasons_14d": {
    "blowout": 42,
-   "close game": 116,
+   "close game": 117,
    "coin flip": 47,
-   "favourite lost": 138,
+   "favourite lost": 139,
    "price moved against it": 32,
    "upset": 53
   },
@@ -9994,10 +10011,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 75.6,
-    "lost": 238,
-    "n": 976,
-    "roi": 0.9,
+    "hit": 75.5,
+    "lost": 239,
+    "n": 977,
+    "roi": 0.8,
     "said": 71.3,
     "won": 738
    }
@@ -10033,10 +10050,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.646,
-    "market_only": 0.646,
-    "model_40": 0.6546,
-    "n": 143,
+    "logloss": 0.6489,
+    "market_only": 0.6489,
+    "model_40": 0.6568,
+    "n": 144,
     "weight": 0.0
    }
   },
@@ -10311,12 +10328,29 @@
       "blowout"
      ],
      "why": "margin 31 \u00b7 the book had my side favoured too \u00b7 called at 72% \u00b7 favourite lost \u00b7 blowout"
+    },
+    {
+     "against_market": false,
+     "league": "nhl",
+     "match": "NSH @ COL",
+     "pick": "Colorado Avalanche",
+     "price": "-218",
+     "said": 66,
+     "score": {
+      "Colorado Avalanche": 2,
+      "Nashville Predators": 3
+     },
+     "tags": [
+      "favourite lost",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 close game"
     }
    ],
    "sweep": {
     "broke_on": "uecl Trabzonspor at 67%",
-    "lost": 16,
-    "open": 3,
+    "lost": 17,
+    "open": 2,
     "won": 41
    }
   }
