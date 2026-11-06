@@ -4010,3 +4010,5 @@ Locks and Safe Locks legs record whether their kind carried a caution when the c
 the fair, after-the-flag test before a caution becomes a rule. Study (walk-forward: flags from earlier
 days' pools only, applied to each later Locks card, 10-24 to 11-05): flagged legs 3 of 7 (43%) against
 75% stated, the rest 75 of 90 (83%) -- the right direction but 7 legs; no rule yet (2026-11-06).
+The daily review's Ladder line lists the day's legs and each one's state ("legs: Utah Mammoth under 4.5 goals
+(won), ... (open)"), so every hourly report carries the ticket's status (2026-11-06).

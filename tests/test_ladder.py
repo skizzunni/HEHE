@@ -194,6 +194,8 @@ class ReviewLine(unittest.TestCase):
             line = daily_review.ladder_line()
         self.assertIn("run 1, bank $7.59, 1 win(s) in a row", line)
         self.assertIn("today stakes $7.59", line)
+        self.assertIn("legs: 2026-11-04|a (won), 2026-11-04|b (won), 2026-11-04|c (won)", line)
+        self.assertIn("2026-11-04|e (open)", line)
         self.assertIsNone(daily_review.ladder_line(book({})))
         b2 = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "lost")]})
         with mock.patch.object(ladder, "report", lambda bk=None: ladder.__dict__["_report"](b2, start="2026-11-03")):

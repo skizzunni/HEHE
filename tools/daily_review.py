@@ -387,9 +387,11 @@ def ladder_line(book=None):
         e = r["ended"]
         return (f"Ladder: run {r['runs']} ended (peak ${e['peak']:.2f}, lost on {', '.join(e['lost_on']) or 'a leg'});"
                 f" the next ticket starts again at $1; best ever ${r['best']:.2f}.")
+    mark = {"won": "won", "lost": "LOST", "void": "void", "push": "void"}
+    legs = ("; legs: " + ", ".join(f"{L['label']} ({mark.get(L.get('status'), 'open')})" for L in t["legs"])) if t else ""
     return (f"Ladder: run {r['runs']}, bank ${r['bank']:.2f}, {r['streak']} win(s) in a row, best ${r['best']:.2f}"
             + (f"; today stakes ${t['stake']:.2f} at {t['pays']:.2f}x ({100 * t['prob']:.0f}% est.)" if t else "")
-            + f"; {r['wins_needed']} wins to ${r['target']:,.0f}.")
+            + f"; {r['wins_needed']} wins to ${r['target']:,.0f}" + legs + ".")
 
 
 BIG_MB = 60     # GitHub refuses any file over 100 MB, and every build then fails
