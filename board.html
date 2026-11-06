@@ -1458,6 +1458,25 @@ function lockOfDay(){
 }
 // before 8 AM: the 5 legs the ladder would take from the Locks card as it
 // stands now (a preview; the ticket is whatever the 8 AM card holds)
+// the bank day by day across every run, on a log scale from $0.50 to the
+// best so far: each run starts at $1, a loss drops to the floor
+function ladderChart(P){
+  if(P.length < 2) return '';
+  const pts = [];
+  let run = 0;
+  P.forEach(p => { if(p.run !== run){ pts.push({run: p.run, bank: 1, day: 'start'}); run = p.run; } pts.push(p); });
+  const W = 300, H = 70, top = Math.max(2, ...pts.map(p => p.bank));
+  const y = b => H - 6 - (H - 12) * (Math.log(Math.max(b, 0.5)) - Math.log(0.5)) / (Math.log(top) - Math.log(0.5));
+  const x = i => 6 + (W - 12) * i / (pts.length - 1);
+  let path = '';
+  pts.forEach((p, i) => { path += (i && p.day !== 'start' ? 'L' : 'M') + x(i).toFixed(1) + ' ' + y(p.bank).toFixed(1) + ' '; });
+  const dots = pts.map((p, i) => '<circle cx="' + x(i).toFixed(1) + '" cy="' + y(p.bank).toFixed(1) + '" r="2.5" fill="'
+    + (p.bank === 0 ? 'var(--bad, #c62828)' : 'currentColor') + '"><title>' + (p.day === 'start' ? 'Run ' + p.run + ' starts: $1'
+    : esc(p.day) + ': $' + p.bank.toFixed(2)) + '</title></circle>').join('');
+  return '<svg viewBox="0 0 ' + W + ' ' + H + '" width="100%" height="' + H + '" role="img" aria-label="Ladder bank by day" style="margin:6px 0">'
+    + '<line x1="6" x2="' + (W - 6) + '" y1="' + y(1).toFixed(1) + '" y2="' + y(1).toFixed(1) + '" stroke="currentColor" stroke-opacity=".2" stroke-dasharray="3 3"/>'
+    + '<path d="' + path + '" fill="none" stroke="currentColor" stroke-width="1.5"/>' + dots + '</svg>';
+}
 // how far the bank is from $1 to the target, on a log scale: each step of
 // the bar is the same multiple, so $100 sits half way to $10,000
 function ladderBar(bank, target, money){
@@ -1580,7 +1599,7 @@ function ladderHTML(){
         + ((X.ended.lost_on || []).length ? ' (lost on ' + X.ended.lost_on.map(esc).join(', ') + ')' : '') + '; the next ticket starts a new run at $1. '
       : '') + 'Run ' + (X.ended ? X.runs + 1 : Math.max(X.runs, 1)) + ', bank <b>' + money(X.bank) + '</b>'
     + (X.streak ? ', ' + X.streak + ' win' + (X.streak > 1 ? 's' : '') + ' in a row' : '') + '; best so far ' + money(X.best) + '.</p>'
-    + ladderBar(X.bank, X.target, money)
+    + ladderBar(X.bank, X.target, money) + ladderChart(X.path || [])
     + (T ? '<ul class="betlegs">' + T.legs.map(L => '<li>' + esc(L.label) + teamTag(L) + ' <b>' + esc(L.price) + '</b> &middot; '
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')

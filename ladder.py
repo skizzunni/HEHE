@@ -216,6 +216,10 @@ def report(book=None, start=START, target=TARGET):
                 today=today, wins_needed=need, last=last,
                 log=[dict(day=d["day"], stake=d["stake"], result=d["result"], pays=d["pays"]) for d in done],
                 chance_to_target=round(p ** need, 8) if p and need else None,
+                # every settled day of every run: the bank after it (0 on a loss)
+                path=[dict(day=d["day"], run=i + 1, bank=(0.0 if d["result"] == "lost"
+                                                          else round(d["stake"] * settle_pay(d), 2)))
+                      for i, r in enumerate(runs) for d in r["days"] if d["result"] != "open"],
                 history=[dict(start=r["start"], status=r["status"], days=len(r["days"]),
                               peak=max([d["stake"] for d in r["days"]] + [r["bank"]]),
                               lost_on=[L["label"] for L in r["days"][-1]["legs"] if L.get("status") == "lost"]

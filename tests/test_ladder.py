@@ -42,6 +42,11 @@ class Ladder(unittest.TestCase):
         r = ladder.report(b, start="2026-11-03")
         self.assertEqual(r["history"][0]["lost_on"], ["2026-11-04|e"])
 
+    def test_bank_path_across_runs(self):
+        b = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "lost")]})
+        r = ladder.report(b, start="2026-11-03")
+        self.assertEqual([(p["day"], p["run"], p["bank"]) for p in r["path"]], [("2026-11-03", 1, 7.59), ("2026-11-04", 1, 0.0)])
+
     def test_a_lost_run_has_no_streak(self):
         b = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "lost")]})
         r = ladder.report(b, start="2026-11-03")

@@ -4041,3 +4041,6 @@ The daily review lists the cautions in force ("Cautions in force: NBA over on Lo
 teamunder on all saved lines 311/402 vs 82%"; `caution_line`), so each hourly report carries them. Study,
 no rule: NBA props by market at 70-90% -- assists 70-80% 90.3% then 75.6% (mixed), points 80-90% above
 their stated chance in both halves (85.9% / 88.8% vs 85%), rebounds 80-90% 84.9% then 78.9% (2026-11-06).
+Ladder card: a small chart of the bank day by day across every run (log scale; each run starts at $1, a
+loss drops to the floor; hover a dot for the day and amount) (`ladder.report` path, `ladderChart`)
+(2026-11-06).

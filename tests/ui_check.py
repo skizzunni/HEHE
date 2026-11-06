@@ -180,6 +180,7 @@ PROBE = """<script>setTimeout(function(){
   out.kindRec = [kindRec({league: "nhl", spec: {t: "teamunder"}}), kindRec({league: "nba", kind: "prop", market: "Assists"}), kindRec({league: "nfl", t: "spread"})];
   D.locks_record = lrK; D.safe_locks_record = srK;
   out.lockMeaning = [lockMeaning({legs: 227, won: 187}, false), lockMeaning({legs: 190, won: 172}, true), lockMeaning({}, false)];
+  out.lchart = [ladderChart([{day: "2026-11-03", run: 1, bank: 3.07}, {day: "2026-11-04", run: 1, bank: 9.57}, {day: "2026-11-05", run: 1, bank: 0}]), ladderChart([])];
   out.tileGoto = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.getAttribute("data-goto") || ""});
   out.tiles7 = [].slice.call(document.querySelectorAll("#glance .k")).map(function(e){return e.textContent})
     .filter(function(t){return /7 days/.test(t)});
@@ -426,6 +427,9 @@ def main():
     if not ("What a Lock is:</b> the likeliest bets on FanDuel today, not sure things. They have won <b>187 of 227</b> (82%), so about 1 in 6 loses, and several" in lm[0]
             and "What a Safe Lock is:" in lm[1] and "about 1 in 11 loses." in lm[1]) or lm[2]:
         fails.append("lock meaning wrong: " + repr(lm))
+    lc2 = new.get("lchart") or ["", "x"]
+    if not ("<svg" in lc2[0] and lc2[0].count("<circle") == 4 and "Run 1 starts: $1" in lc2[0] and "2026-11-04: $9.57" in lc2[0]) or lc2[1]:
+        fails.append("ladder chart wrong: " + repr(lc2)[:300])
     st = new.get("sweepTile", "")
     if not ("Board sweep" in st and "5–2" in st and "sweep broken by Trabzonspor, 17 to go (2 live, 1 not winning now)" in st):
         fails.append("board sweep tile wrong: " + st)
