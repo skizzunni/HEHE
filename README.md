@@ -4019,3 +4019,7 @@ Locks tab: "Cautions in force" lists every flagged bet type and its record befor
 11-06 morning the pool flags are NFL team unders (311 of 402, 77% vs 82%) and NHL unders (162 of 203,
 80% vs 83%); NBA overs dropped off once the latest night put one half back above its stated chance --
 cautions are re-checked every build. Build cost of the pool check: ~0.5 s (2026-11-06).
+Value bets record shows its last 7 days beside the all-time line (`value_bets.report` recent): 40 of 98
+(41% vs 46.3% fair), ROI -14.2% since 10-31. Study, no rule: value finds by fair source and half --
+all finds -1.2% then -14.0% ROI (218 / 110); Polymarket-priced +8.9% then -18.7%, consensus +77.8%
+(15) then -9.9%; none holds in both halves; no Kalshi-proven find graded yet (2026-11-06).

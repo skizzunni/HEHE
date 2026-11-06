@@ -206,6 +206,21 @@ class Single(unittest.TestCase):
         self.assertEqual(kinds, ["single", "value"])
 
 
+class Recent(unittest.TestCase):
+    def test_last_seven_days_beside_all_time(self):
+        import json
+        finds = {str(i): dict(kind="value", status="won" if i % 2 else "lost", dec=2.0, ev=0.05, fair=0.5,
+                              seen=f"2026-10-{10 + i:02d}T12:00", start=f"2026-10-{10 + i:02d}T20:00Z") for i in range(14)}
+        path = tempfile.mktemp(suffix=".json")
+        with open(path, "w") as fh:
+            json.dump(dict(finds=finds), fh)
+        try:
+            r = V.report(path)
+        finally:
+            os.remove(path)
+        self.assertEqual((r["n"], r["recent"]["n"], r["recent"]["since"]), (14, 7, "2026-10-17"))
+
+
 class LeaveOneOut(unittest.TestCase):
     def test_venue_judged_against_the_other_venues(self):
         """FanDuel is priced against DraftKings and Kalshi (not itself); a

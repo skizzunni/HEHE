@@ -359,9 +359,18 @@ def report(path=None, kind="value"):
     if not fs:
         return dict(n=0)
     ret = [(f["dec"] - 1) if f["status"] == "won" else -1 for f in fs]
+    # the last 7 days on their own, so a slump shows beside the all-time line
+    last = max(str(f.get("start") or f["seen"])[:10] for f in fs)
+    import datetime as _dt
+    cut = (_dt.date.fromisoformat(last) - _dt.timedelta(days=6)).isoformat()
+    rs = [f for f in fs if str(f.get("start") or f["seen"])[:10] >= cut]
+    recent = (dict(n=len(rs), won=sum(f["status"] == "won" for f in rs),
+                   fair=round(100 * sum(f.get("fair") or 0 for f in rs) / len(rs), 1),
+                   roi=round(100 * sum((f["dec"] - 1) if f["status"] == "won" else -1 for f in rs) / len(rs), 1),
+                   since=cut) if rs else None)
     return dict(n=len(fs), won=sum(f["status"] == "won" for f in fs),
                 est_ev=round(100 * sum(f["ev"] for f in fs) / len(fs), 2),
-                roi=round(100 * sum(ret) / len(fs), 2),
+                roi=round(100 * sum(ret) / len(fs), 2), recent=recent,
                 dates=[min(f["seen"][:10] for f in fs), max(f["seen"][:10] for f in fs)])
 
 
