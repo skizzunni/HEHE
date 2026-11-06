@@ -1,7 +1,7 @@
 # Review 2026-11-06
 
 Picks 1-0 (100.0% vs 83.0% claimed, ROI +14.3%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 1.99x (47% est.); 14 wins to $10,000; legs: Alex Caruso: 2+ Assists (open), Austin Reaves: 4+ Assists (open), Over 214.5 points (open).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (open), Austin Reaves: 4+ Assists (open), Over 214.5 points (open), Under 241.5 points (open), Over 216.5 points (open).
 Strong calls 1-0 (100.0% vs 83.0% claimed).
 Closing line value: -1.39 points on 1 picks; beat the close on 0.0%.
 Board sweep: 1-0, 48 open -- still clean.
