@@ -1,10 +1,10 @@
 # Review 2026-11-05
 
-Picks 38-15 (71.7% vs 73.9% claimed, ROI -9.2%).
+Picks 39-15 (72.2% vs 74.4% claimed, ROI -9.0%).
 Ladder: run 1, bank $9.57, 2 win(s) in a row, best $9.57; today stakes $9.57 at 2.44x (34% est.); 8 wins to $10,000.
 Strong calls 28-11 (71.8% vs 75.2% claimed).
-Closing line value: +1.21 points on 53 picks; beat the close on 56.6%.
-Board sweep: 38-15, 7 open -- broken (first loss: uecl Trabzonspor at 67%).
+Closing line value: +1.19 points on 54 picks; beat the close on 55.6%.
+Board sweep: 39-15, 6 open -- broken (first loss: uecl Trabzonspor at 67%).
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST uel AC Milan at 67% (-240), AC Milan 0 - Ferencvaros 2: margin 2 · the book had my side favoured too · called at 67% · favourite lost · price moved against it (5 pts)
@@ -38,7 +38,7 @@ Locks 6/11 won, 5 open; Best play top 2 (60%) open.
 Safe Locks 10/11 won, 1 open; Winners parlay top 2 (85%) won; Best play top 7 (54%) open.
 Lottery 100: lost (4/9 legs won, killed by Over 152.5 points)
 Lottery 100: lost (2/6 legs won, killed by Over 6.5 goals, Vancouver Canucks to win)
-Lottery 100: lost (1/5 legs won, killed by Utah Mammoth -1.5, Over 6.5 goals, Over 6.5 goals)
+Lottery 100: lost (1/5 legs won, killed by Utah Mammoth -1.5, Over 6.5 goals, Over 6.5 goals, Texas Tech Red Raiders -26.5)
 Lottery 10k: lost (3/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals)
 Lottery 10k: lost (1/6 legs won, killed by Edmonton Oilers -3.5, Vegas Golden Knights under 1.5 goals, Under 6.5 goals, Jacksonville Jaguars over 34.5 points)
 Lottery 10k+25: lost (3/11 legs won, killed by Over 152.5 points, Over 7.5 goals, Over 8.5 goals)
