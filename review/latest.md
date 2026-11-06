@@ -1,8 +1,10 @@
 # Review 2026-11-06
 
-No picks settled yet.
+Picks 1-0 (100.0% vs 83.0% claimed, ROI +14.3%).
 Ladder: run 1 ended (peak $9.57, lost on Florida Atlantic Owls under 41.5 points); the next ticket starts again at $1; best ever $9.57.
-Board sweep: 0-0, 49 open -- still clean.
+Strong calls 1-0 (100.0% vs 83.0% claimed).
+Closing line value: -1.39 points on 1 picks; beat the close on 0.0%.
+Board sweep: 1-0, 48 open -- still clean.
 Why picks lost (14 days): favourite lost 139, close game 117, upset 53, coin flip 47, blowout 42, price moved against it 32.
 Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
