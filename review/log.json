@@ -9849,10 +9849,10 @@
    },
    {
     "flag": false,
-    "hit": 88.0,
-    "n": 83,
+    "hit": 88.1,
+    "n": 84,
     "name": "daily calls",
-    "said": 83.4
+    "said": 83.6
    },
    {
     "flag": false,
@@ -9966,12 +9966,12 @@
   },
   "cautions": "Cautions in force: NBA over on Locks 13/22 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.",
   "clv": {
-   "avg": 1.13,
-   "beat": 51.7,
-   "n": 29
+   "avg": 1.22,
+   "beat": 51.6,
+   "n": 31
   },
   "day": "2026-11-06",
-  "ladder": "Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 7:45 - 4th, Memphis Grizzlies 84 - Oklahoma City Thunder 110, 2 so far, line reached), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; live 2:52 - 4th, Dallas Mavericks 109 - Utah Jazz 94, on pace for 216 (203 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 9:29 - 4th, Minnesota Timberwolves 85 - New Orleans Pelicans 81, on pace for 207 (166 so far, line 216.5), behind the pace it needs).",
+  "ladder": "Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 4:21 - 4th, Memphis Grizzlies 89 - Oklahoma City Thunder 117, 2 so far, line reached), Austin Reaves: 4+ Assists (POR @ LAL; live 8:43 - 1st, Los Angeles Lakers 2 - Portland Trail Blazers 4, 0 so far, needs 4 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; live 55.7 - 4th, Dallas Mavericks 112 - Utah Jazz 98, on pace for 214 (210 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 7:55 - 4th, Minnesota Timberwolves 87 - New Orleans Pelicans 89, on pace for 211 (176 so far, line 216.5), behind the pace it needs).",
   "leaks_14d": [],
   "locks": {
    "lost": [],
@@ -9987,9 +9987,9 @@
    "won": 2
   },
   "loss_reasons_14d": {
-   "blowout": 42,
+   "blowout": 43,
    "close game": 119,
-   "coin flip": 47,
+   "coin flip": 48,
    "favourite lost": 141,
    "price moved against it": 32,
    "upset": 54
@@ -10044,6 +10044,23 @@
      "close game"
     ],
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 82% \u00b7 upset \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "nba",
+    "match": "PHI @ CLE",
+    "pick": "Philadelphia 76ers",
+    "price": "-152",
+    "said": 58,
+    "score": {
+     "Cleveland Cavaliers": 119,
+     "Philadelphia 76ers": 95
+    },
+    "tags": [
+     "coin flip",
+     "blowout"
+    ],
+    "why": "margin 24 \u00b7 the book had my side favoured too \u00b7 called at 58% \u00b7 coin flip \u00b7 blowout"
    }
   ],
   "lottery": [
@@ -10110,12 +10127,12 @@
    }
   ],
   "picks": {
-   "hit": 89.7,
-   "lost": 3,
-   "n": 29,
-   "roi": 16.7,
-   "said": 73.6,
-   "won": 26
+   "hit": 87.1,
+   "lost": 4,
+   "n": 31,
+   "roi": 12.4,
+   "said": 73.9,
+   "won": 27
   },
   "picks_by_league": {
    "arg": {
@@ -10231,20 +10248,20 @@
     "won": 1
    },
    "nba": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 28.0,
-    "said": 75.5,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": -14.7,
+    "said": 69.7,
     "won": 2
    },
    "ncaab": {
     "hit": 100.0,
     "lost": 0,
-    "n": 2,
-    "roi": 1.2,
-    "said": 98.5,
-    "won": 2
+    "n": 3,
+    "roi": 0.8,
+    "said": 99.0,
+    "won": 3
    },
    "ned2": {
     "hit": 100.0,
@@ -10310,39 +10327,40 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 99.2,
+   "as_bad_pct": 98.0,
    "broke_on": "arg San Lorenzo at 68%",
-   "expected_losses": 7.7,
-   "lost": 3,
+   "expected_losses": 8.1,
+   "lost": 4,
    "lost_by_league": {
     "arg": 1,
     "col": 1,
-    "mex": 1
+    "mex": 1,
+    "nba": 1
    },
-   "open": 22,
-   "won": 26
+   "open": 20,
+   "won": 27
   },
   "vs_market_14d": {
    "against": {
     "n": 0
    },
    "agree": {
-    "hit": 76.0,
-    "lost": 242,
-    "n": 1008,
-    "roi": 1.4,
+    "hit": 75.9,
+    "lost": 243,
+    "n": 1010,
+    "roi": 1.3,
     "said": 71.4,
-    "won": 766
+    "won": 767
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5594,
-    "market_only": 0.5594,
-    "model_40": 0.5828,
-    "n": 125,
+    "logloss": 0.5618,
+    "market_only": 0.5618,
+    "model_40": 0.5841,
+    "n": 126,
     "weight": 0.0
    },
    "ncaaf": {
