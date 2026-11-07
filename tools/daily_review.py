@@ -458,6 +458,11 @@ def leg_text(L, mark=None):
             if L.get("so_far") is not None:
                 v = L["so_far"]
                 bit += f", {int(v) if float(v).is_integer() else v} so far"
+                import re
+                need = re.match(r"^\s*(\d+(?:\.\d+)?)\+\s*$", str(L.get("line") or ""))
+                if need:                    # "2+": reached, or how many more
+                    left = float(need.group(1)) - float(v)
+                    bit += ", line reached" if left <= 0 else f", needs {int(left) if left.is_integer() else left} more"
             where.append(bit)
         else:
             where.append((f"{L['tip']}, " if L.get("tip") else "") + "open")

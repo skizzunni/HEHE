@@ -239,6 +239,12 @@ class ReviewLine(unittest.TestCase):
         self.assertEqual(daily_review.leg_text(dict(label="Alex Caruso: 2+ Assists", match="OKC @ MEM", status="open",
                                                     live="Q1 2:00", live_score="OKC 20 - MEM 18", so_far=1.0)),
                          "Alex Caruso: 2+ Assists (OKC @ MEM; live Q1 2:00, OKC 20 - MEM 18, 1 so far)")
+        self.assertEqual(daily_review.leg_text(dict(label="Alex Caruso: 2+ Assists", match="OKC @ MEM", status="open", line="2+",
+                                                    live="Q1 2:00", live_score="OKC 20 - MEM 18", so_far=1.0)),
+                         "Alex Caruso: 2+ Assists (OKC @ MEM; live Q1 2:00, OKC 20 - MEM 18, 1 so far, needs 1 more)")
+        self.assertEqual(daily_review.leg_text(dict(label="Alex Caruso: 2+ Assists", match="OKC @ MEM", status="open", line="2+",
+                                                    live="Halftime", live_score="OKC 71 - MEM 49", so_far=3.0)),
+                         "Alex Caruso: 2+ Assists (OKC @ MEM; live Halftime, OKC 71 - MEM 49, 3 so far, line reached)")
         self.assertEqual(daily_review.leg_text(dict(label="Under 241.5 points", match="UTA at DAL", status="lost")),
                          "Under 241.5 points (UTA at DAL; LOST)")
 

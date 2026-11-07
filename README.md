@@ -4083,3 +4083,5 @@ Today's sweep line in the review says, once broken, how many losses the settled 
 the chance of that many by now (`daily_review.sweep_line`, `ledger.day_rarity`). Study, no rule: South
 American soccer straight-win calls at 65-75% 14/17 then 13/18 (82%, 72% vs 69%), so the Nov 6 San Lorenzo
 and Internacional de Bogota losses (both 68%) are not a leak (2026-11-07).
+Review ladder line says when a live "N+" prop has reached its line, or how many it still needs
+(`daily_review.leg_text`) (2026-11-07).
