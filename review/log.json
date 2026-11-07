@@ -10438,8 +10438,8 @@
    },
    {
     "flag": false,
-    "hit": 52.4,
-    "n": 248,
+    "hit": 52.8,
+    "n": 250,
     "name": "kalshi maker bids (filled)",
     "said": 53.7
    }
@@ -10532,13 +10532,13 @@
     ]
    }
   },
-  "cautions": "Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 32/52 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.",
+  "cautions": "Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 34/54 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.",
   "clv": {
-   "avg": 1.01,
-   "beat": 52.5,
-   "n": 101
+   "avg": 0.92,
+   "beat": 51.5,
+   "n": 103
   },
-  "cold": "Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 410/539 (76% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.6% for the rest (1524 and 6712 legs), so a cold week is noise, not a signal.",
+  "cold": "Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 439/581 (76% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.5% for the rest (1524 and 6847 legs), so a cold week is noise, not a signal.",
   "day": "2026-11-07",
   "ladder": "Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.",
   "leaks_14d": [
@@ -10931,9 +10931,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 149,
+     "n": 151,
      "said": 69,
-     "won": 112
+     "won": 114
     },
     "match": "ODU @ CCU",
     "pick": "Coastal Carolina Chanticleers",
@@ -10990,9 +10990,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 182,
+     "n": 183,
      "said": 68,
-     "won": 141
+     "won": 142
     },
     "match": "GAST @ APP",
     "pick": "App State Mountaineers",
@@ -11175,12 +11175,12 @@
    }
   ],
   "picks": {
-   "hit": 76.2,
+   "hit": 76.7,
    "lost": 24,
-   "n": 101,
-   "roi": 1.6,
+   "n": 103,
+   "roi": 2.2,
    "said": 72.2,
-   "won": 77
+   "won": 79
   },
   "picks_by_league": {
    "arg": {
@@ -11336,12 +11336,12 @@
     "won": 6
    },
    "ncaaf": {
-    "hit": 75.0,
+    "hit": 77.8,
     "lost": 4,
-    "n": 16,
-    "roi": 12.2,
-    "said": 67.4,
-    "won": 12
+    "n": 18,
+    "roi": 14.6,
+    "said": 68.1,
+    "won": 14
    },
    "nhl": {
     "hit": 100.0,
@@ -11440,7 +11440,7 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 85.0,
+   "as_bad_pct": 87.5,
    "broke_on": "jpn Nagoya Grampus or draw at 76%",
    "expected_by_league": {
     "arg": 1.4,
@@ -11454,11 +11454,11 @@
     "ita": 0.9,
     "jpn": 1.4,
     "mls": 2.2,
-    "ncaaf": 5.2,
+    "ncaaf": 5.7,
     "sco": 1.3,
     "wsl": 0.3
    },
-   "expected_losses": 28.1,
+   "expected_losses": 28.6,
    "lost": 24,
    "lost_by_league": {
     "arg": 1,
@@ -11476,8 +11476,8 @@
     "sco": 2,
     "wsl": 1
    },
-   "open": 68,
-   "won": 77
+   "open": 66,
+   "won": 79
   },
   "vs_market_14d": {
    "against": {
@@ -11486,10 +11486,10 @@
    "agree": {
     "hit": 76.2,
     "lost": 258,
-    "n": 1084,
-    "roi": 1.5,
+    "n": 1086,
+    "roi": 1.6,
     "said": 71.6,
-    "won": 826
+    "won": 828
    }
   },
   "weights": {
@@ -11505,10 +11505,10 @@
    "ncaaf": {
     "fitted": 0.25,
     "held_out": false,
-    "logloss": 0.5976,
-    "market_only": 0.6017,
-    "model_40": 0.5991,
-    "n": 192,
+    "logloss": 0.595,
+    "market_only": 0.5987,
+    "model_40": 0.5967,
+    "n": 194,
     "weight": 0.0
    },
    "nfl": {
