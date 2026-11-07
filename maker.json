@@ -879,6 +879,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV07SHSUJVST-JVST"
   },
+  "KXNCAAFGAME-26NOV07TEMNAVY-NAVY|YES": {
+   "ask": 0.71,
+   "bid": 0.7,
+   "cost": 0.7037,
+   "edge": 0.007,
+   "fair": 0.7086,
+   "id": "ncaaf:401862820",
+   "label": "Navy Midshipmen",
+   "league": "ncaaf",
+   "match": "TEM @ NAVY",
+   "posted": "2026-11-07T15:22:54+00:00",
+   "queue": 9435.18,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Navy Midshipmen"
+   },
+   "start": "2026-11-07T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV07TEMNAVY-NAVY"
+  },
   "KXNCAAFGAME-26NOV07TEXMIZZ-TEX|YES": {
    "ask": 0.57,
    "bid": 0.56,
@@ -3324,6 +3345,28 @@
    "start": "2026-11-07T20:45Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV07UCFKU-KU4"
+  },
+  "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA4|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401858512",
+   "label": "UCLA Bruins -3.5",
+   "league": "ncaaf",
+   "match": "UCLA @ MINN",
+   "posted": "2026-11-07T15:22:54+00:00",
+   "queue": 69158.28,
+   "side": "YES",
+   "spec": {
+    "line": -3.5,
+    "t": "spread",
+    "team": "UCLA Bruins"
+   },
+   "start": "2026-11-07T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA4"
   },
   "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA5|NO": {
    "ask": 0.51,
