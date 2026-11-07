@@ -10534,11 +10534,11 @@
   },
   "cautions": "Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 31/51 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NCAAF over on all saved lines 602/712 vs 81%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.",
   "clv": {
-   "avg": 0.91,
-   "beat": 52.1,
-   "n": 96
+   "avg": 1.05,
+   "beat": 53.5,
+   "n": 99
   },
-  "cold": "Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 388/517 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.8% for the rest (1524 and 6644 legs), so a cold week is noise, not a signal.",
+  "cold": "Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 388/517 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.8% for the rest (1524 and 6647 legs), so a cold week is noise, not a signal.",
   "day": "2026-11-07",
   "ladder": "Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.",
   "leaks_14d": [
@@ -10569,11 +10569,11 @@
   },
   "loss_reasons_14d": {
    "blowout": 42,
-   "close game": 125,
+   "close game": 126,
    "coin flip": 45,
-   "favourite lost": 149,
+   "favourite lost": 150,
    "price moved against it": 29,
-   "upset": 62
+   "upset": 63
   },
   "losses": [
    {
@@ -11028,6 +11028,45 @@
      "close game"
     ],
     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 86% \u00b7 upset \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
+    "like": {
+     "n": 24,
+     "said": 76,
+     "won": 20
+    },
+    "match": "CLB @ CHI",
+    "pick": "Chicago Fire FC or draw",
+    "price": "-425",
+    "said": 76,
+    "score": {
+     "Chicago Fire FC": 3,
+     "Columbus Crew": 4
+    },
+    "tags": [
+     "upset",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
+    "like": null,
+    "match": "CLT @ MIA",
+    "pick": "Inter Miami CF",
+    "price": "-320",
+    "said": 71,
+    "score": {
+     "Charlotte FC": 3,
+     "Inter Miami CF": 3
+    },
+    "tags": [
+     "favourite lost"
+    ],
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 71% \u00b7 favourite lost"
    }
   ],
   "lottery": [
@@ -11136,12 +11175,12 @@
    }
   ],
   "picks": {
-   "hit": 77.1,
-   "lost": 22,
-   "n": 96,
-   "roi": 2.9,
+   "hit": 75.8,
+   "lost": 24,
+   "n": 99,
+   "roi": 1.0,
    "said": 72.1,
-   "won": 74
+   "won": 75
   },
   "picks_by_league": {
    "arg": {
@@ -11289,12 +11328,12 @@
     "won": 4
    },
    "mls": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 5,
-    "roi": 31.6,
-    "said": 71.0,
-    "won": 5
+    "hit": 75.0,
+    "lost": 2,
+    "n": 8,
+    "roi": -1.9,
+    "said": 71.9,
+    "won": 6
    },
    "ncaaf": {
     "hit": 73.3,
@@ -11392,16 +11431,16 @@
    "won": 3
   },
   "strong": {
-   "hit": 77.2,
-   "lost": 18,
-   "n": 79,
-   "roi": -0.7,
+   "hit": 75.6,
+   "lost": 20,
+   "n": 82,
+   "roi": -2.7,
    "said": 73.5,
-   "won": 61
+   "won": 62
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 89.2,
+   "as_bad_pct": 82.5,
    "broke_on": "jpn Nagoya Grampus or draw at 76%",
    "expected_by_league": {
     "arg": 1.4,
@@ -11414,12 +11453,13 @@
     "ger2": 1.2,
     "ita": 0.9,
     "jpn": 1.4,
+    "mls": 2.2,
     "ncaaf": 4.9,
     "sco": 1.3,
     "wsl": 0.3
    },
-   "expected_losses": 26.8,
-   "lost": 22,
+   "expected_losses": 27.6,
+   "lost": 24,
    "lost_by_league": {
     "arg": 1,
     "chi": 1,
@@ -11431,24 +11471,25 @@
     "ger2": 2,
     "ita": 1,
     "jpn": 1,
+    "mls": 2,
     "ncaaf": 4,
     "sco": 2,
     "wsl": 1
    },
-   "open": 73,
-   "won": 74
+   "open": 70,
+   "won": 75
   },
   "vs_market_14d": {
    "against": {
     "n": 0
    },
    "agree": {
-    "hit": 76.3,
-    "lost": 256,
-    "n": 1079,
-    "roi": 1.6,
+    "hit": 76.2,
+    "lost": 258,
+    "n": 1082,
+    "roi": 1.5,
     "said": 71.6,
-    "won": 823
+    "won": 824
    }
   },
   "weights": {
