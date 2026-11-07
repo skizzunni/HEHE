@@ -4153,3 +4153,6 @@ days ran 5+ pts short on 100+ legs, then grade that day. Flagged legs 1261/1524 
 halves 83.6%, 81.6%) against the rest 4856/5850 (83.0% vs 81.7%; halves 83.9%, 81.9%): a cold week does
 not carry into the next day, so cautions stay information only and no leg is dropped for one. Shown in
 the review's running-cold line and the board's form note (2026-11-07).
+`tools/ladder_watch.py STATE`: the live ladder watcher, now in the repo with tests -- prints a CHANGE line
+per leg whose result moved and a SETTLED line when the ticket settles, keeping its last state in a file so
+a container restart never misses or repeats a change (2026-11-07).
