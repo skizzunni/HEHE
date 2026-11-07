@@ -5084,30 +5084,7 @@
      "close": true,
      "conf": 88,
      "conf_first": 88,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-07T02:57:22+00:00",
-      "conf": 89,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (6 listed)"
-      },
-      "id": "nba:401909295",
-      "league": "nba",
-      "match": "SA @ SAC",
-      "pick": "San Antonio Spurs",
-      "price": "-1340",
-      "price_at": "2026-11-07T02:57:02+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34961002:0ML87089595_3",
-      "prob_at": "2026-11-07T02:57:02+00:00",
-      "rank": 3,
-      "ready": true,
-      "side": "away",
-      "start": "2026-11-07T03:00Z"
-     },
+     "current": null,
      "dc": false,
      "fp": "795877285c97",
      "gate": {
@@ -5204,31 +5181,7 @@
      "close": false,
      "conf": 83,
      "conf_first": 83,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-07T02:57:22+00:00",
-      "conf": 81,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "nwsl:401932959",
-      "league": "nwsl",
-      "match": "UTA @ SD",
-      "pick": "San Diego Wave FC or draw",
-      "price": "-600",
-      "price_at": "2026-11-07T02:47:55+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.195327921:43747554",
-      "prob_at": "2026-11-07T02:57:02+00:00",
-      "rank": 5,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "home",
-      "start": "2026-11-07T03:00Z"
-     },
+     "current": null,
      "dc": true,
      "fp": "6acf459eb5a7",
      "gate": {
@@ -5255,105 +5208,10 @@
     "esp": "2026-11-06T19:09:06+00:00",
     "nba": "2026-11-07T00:54:50+00:00"
    },
-   "candidate_observations": {
-    "nba:401909295": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 89,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-07T02:57:22+00:00",
-      "conf": 89,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (6 listed)"
-      },
-      "id": "nba:401909295",
-      "league": "nba",
-      "match": "SA @ SAC",
-      "pick": "San Antonio Spurs",
-      "price": "-1340",
-      "price_at": "2026-11-07T02:57:02+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34961002:0ML87089595_3",
-      "prob_at": "2026-11-07T02:57:02+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "away",
-      "start": "2026-11-07T03:00Z"
-     },
-     "dc": false,
-     "fp": "795877285c97",
-     "gate": {
-      "ok": true,
-      "what": "injury report checked (6 listed)"
-     },
-     "id": "nba:401909295",
-     "league": "nba",
-     "match": "SA @ SAC",
-     "news_at": "2026-11-07T00:54:50+00:00",
-     "pick": "San Antonio Spurs",
-     "price": "-1340",
-     "price_at": "2026-11-07T02:57:02+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34961002:0ML87089595_3",
-     "side": "away",
-     "start": "2026-11-07T03:00Z",
-     "tip": "10:00 PM"
-    },
-    "nwsl:401932959": {
-     "book": "FanDuel",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": false,
-     "conf": 81,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-07T02:57:22+00:00",
-      "conf": 81,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "nwsl:401932959",
-      "league": "nwsl",
-      "match": "UTA @ SD",
-      "pick": "San Diego Wave FC or draw",
-      "price": "-600",
-      "price_at": "2026-11-07T02:47:55+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.195327921:43747554",
-      "prob_at": "2026-11-07T02:57:02+00:00",
-      "rank": null,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "home",
-      "start": "2026-11-07T03:00Z"
-     },
-     "dc": true,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
-     },
-     "id": "nwsl:401932959",
-     "league": "nwsl",
-     "match": "UTA @ SD",
-     "pick": "San Diego Wave FC or draw",
-     "price": "-600",
-     "price_at": "2026-11-07T02:47:55+00:00",
-     "price_market": "double_chance",
-     "price_ref": "736.195327921:43747554",
-     "side": "home",
-     "start": "2026-11-07T03:00Z",
-     "tip": "10:00 PM"
-    }
-   },
-   "frozen": [],
+   "candidate_observations": {},
+   "frozen": [
+    "nba"
+   ],
    "news": {
     "nba": "2026-11-07T00:54:50+00:00"
    },
