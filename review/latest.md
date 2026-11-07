@@ -1,7 +1,7 @@
 # Review 2026-11-06
 
 Picks 14-0 (100.0% vs 72.2% claimed, ROI +31.1%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (open), Austin Reaves: 4+ Assists (open), Over 214.5 points (open), Under 241.5 points (open), Over 216.5 points (open).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; 8:00 PM, open), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; 7:00 PM, open), Under 241.5 points (Utah Jazz at Dallas Mavericks; 8:00 PM, open), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; 8:00 PM, open).
 Cautions in force: NBA over on Locks 12/21 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 14-0 (100.0% vs 72.2% claimed).
 Closing line value: +0.94 points on 14 picks; beat the close on 64.3%.
