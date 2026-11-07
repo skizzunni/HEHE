@@ -4115,3 +4115,8 @@ Locks card player props went 13/15 then 25/32 (87%, 78% vs 79%: mixed) while gam
 76/92 (83% vs 78%, 83% vs 75%: ahead in both). Safe Locks props 17/22 vs 93% (first half only). Game
 lines are the steadier ladder leg, but props are not short in both halves, so they stay eligible
 (2026-11-07).
+Call cautions by league and chance band (`ledger.call_cautions`: 10-pt bands from 50%, short of the stated
+chance in both halves by 8+ pts on 40+ calls; board `bandCaution` beside the call; information only).
+Study, no rule: college football calls at 70-80% 15/28 then 13/19 (54%, 68% vs 75%), 28/47 overall,
+z ~ -2.4 -- short of the 99.5% bar, so no change; the only league/band flagged. Other college bands
+were at or above their chance (50-60% 29/39, 80-90% 30/35) (2026-11-07).

@@ -778,6 +778,34 @@ def live_winning(e):
     return mine >= other if e.get("dc") else mine > other
 
 
+def call_cautions(book, min_n=40, gap=8.0):
+    """Calls by (league, 10-point chance band, 50%+) that won under their
+    stated chance in BOTH date halves and by `gap`+ points overall, on
+    `min_n`+ graded calls: [{league, band, won, n, said}]. A caution beside
+    calls, never a pick rule. 2026-11-07: college football at 70-80% 28/47
+    (54% then 68% vs 75%) -- the only one; z ~ -2.4, short of the 99.5% bar."""
+    R = [e for e in book.values() if e.get("status") in ("won", "lost") and e.get("conf") and e.get("date") and e.get("league")]
+    if not R:
+        return []
+    days = sorted({e["date"] for e in R})
+    mid = days[len(days) // 2]
+    g = {}
+    for e in R:
+        b = int(min(e["conf"], 99.9) // 10 * 10)
+        if b >= 50:
+            g.setdefault((e["league"], b), {False: [], True: []})[e["date"] >= mid].append(e)
+    out = []
+    for (lg, b), H in sorted(g.items()):
+        A = H[False] + H[True]
+        if len(A) < min_n or not (H[False] and H[True]):
+            continue
+        hit = lambda X: 100 * sum(e["status"] == "won" for e in X) / len(X)
+        said = lambda X: sum(e["conf"] for e in X) / len(X)
+        if all(hit(X) < said(X) for X in H.values()) and said(A) - hit(A) >= gap:
+            out.append(dict(league=lg, band=b, won=sum(e["status"] == "won" for e in A), n=len(A), said=round(said(A))))
+    return out
+
+
 def day_rarity(rows):
     """How unusual a day's losses were, given the chances each pick was called
     at: losses expected, the chance of that many losses or more (picks taken as
@@ -963,7 +991,7 @@ def board_payload(limit=40):
                     ((lg_, sum(1 for e in todays if e["status"] == "lost" and e["league"] == lg_))
                      for lg_ in {e["league"] for e in todays if e["status"] == "lost"}), key=lambda x: -x[1])],
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
+                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), call_cautions=call_cautions(book), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))

@@ -722,6 +722,15 @@ function safeNote(r){
     + (r.mc !== null && r.mc !== undefined && r.mc < 60 ? ' &mdash; for a sweep, this beats the coin-flip winner pick' : '') + '</div>';
 }
 // the price's move since the pick was first called (rebuild_board.move_of)
+// calls in a league and 10-point chance band that ran short in both halves
+// (ledger.call_cautions): information beside the call, never a pick rule
+function bandCaution(league, mc){
+  if(typeof mc !== 'number') return '';
+  const b = Math.floor(Math.min(mc, 99.9) / 10) * 10;
+  const c = ((D.results || {}).call_cautions || []).find(v => v.league === league && v.band === b);
+  return c ? '<div class="lgw"><b>Caution:</b> ' + String(league).toUpperCase().replace(/[<>&"]/g, '') + ' calls at ' + b + '-' + (b + 10)
+    + '% have won ' + c.won + ' of ' + c.n + ' against ' + c.said + '% stated, short in both halves of the record.</div>' : '';
+}
 function moveNote(r){
   if(r.mv === null || r.mv === undefined) return '';
   const M = ((D.results || {}).moves || {})[r.mv > 0 ? 'for' : 'against'];
@@ -1081,7 +1090,7 @@ function renderView(){
              + '<span class="stripe"></span>' + esc(r.mp) + dog + val + '</td>'
              + (mixed ? '<td class="comp">' + esc(r.lg) + '</td>' : '')
              + '<td class="state">' + esc(r.t) + '</td>' + conf
-             + '<td class="why">' + esc(r.why) + safeNote(r) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
+             + '<td class="why">' + esc(r.why) + safeNote(r) + bandCaution(league, r.mc) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
       }).join("")
     + '</tbody></table>';
 }

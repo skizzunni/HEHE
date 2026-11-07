@@ -41,5 +41,17 @@ class ReviewSweepLine(unittest.TestCase):
                          "Yesterday (2026-11-05): board 30-0, clean sweep.")
 
 
+class CallCautions(unittest.TestCase):
+    def test_short_in_both_halves_only(self):
+        book = {}
+        for d in range(1, 9):
+            for i in range(6):
+                book[f"a{d}{i}"] = dict(league="ncaaf", conf=75, date=f"2026-11-0{d}", status="won" if i < 3 else "lost")
+                book[f"b{d}{i}"] = dict(league="nfl", conf=75, date=f"2026-11-0{d}",
+                                        status="won" if (i < 2 if d < 5 else i < 6) else "lost")   # short then long
+        self.assertEqual(ledger.call_cautions(book), [dict(league="ncaaf", band=70, won=24, n=48, said=75)])
+        self.assertEqual(ledger.call_cautions({}), [])
+
+
 if __name__ == "__main__":
     unittest.main()
