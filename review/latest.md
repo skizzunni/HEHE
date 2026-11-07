@@ -1,11 +1,11 @@
 # Review 2026-11-06
 
-Picks 34-5 (87.2% vs 72.1% claimed, ROI +15.8%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; won); 4 of 5 won, the ticket now rests on 1 leg, 78% on its stated chance before play.
+Picks 37-5 (88.1% vs 72.9% claimed, ROI +16.7%).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; live 5:06 - 2nd, Los Angeles Lakers 36 - Portland Trail Blazers 51, 1 so far, needs 3 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; won); 4 of 5 won, the ticket now rests on 1 leg, 78% on its stated chance before play.
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 21-3 (87.5% vs 71.9% claimed).
-Closing line value: +1.11 points on 39 picks; beat the close on 53.8%.
-Board sweep: 34-5, 12 open -- broken (first loss: arg San Lorenzo at 68%); 10.9 losses expected from the settled picks' chances, so 5 or more by now had a 99.4% chance.
+Closing line value: +0.94 points on 42 picks; beat the close on 50.0%.
+Board sweep: 37-5, 9 open -- broken (first loss: arg San Lorenzo at 68%); 11.4 losses expected from the settled picks' chances, so 5 or more by now had a 99.6% chance.
 - LOST arg San Lorenzo at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost
 - LOST col Internacional de Bogotá at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 - LOST mex Atlético de San Luis at 82% (-650), Atlético de San Luis 0 - FC Juárez 1: margin 1 · the book had my side favoured too · called at 82% · upset · close game
@@ -30,7 +30,7 @@ Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST nhl Edmonton Oilers at 63% (-192), Anaheim Ducks 5 - Edmonton Oilers 4: margin 1 · the book had my side favoured too · called at 63% · favourite lost · close game
 - LOST ncaaf UTSA Roadrunners at 72% (-278), Florida Atlantic Owls 60 - UTSA Roadrunners 29: margin 31 · the book had my side favoured too · called at 72% · favourite lost · blowout
 - LOST nhl Colorado Avalanche at 66% (-218), Colorado Avalanche 2 - Nashville Predators 3: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game
-Locks 6/11 won, 5 open; Best play top 2 (62%) open.
+Locks 7/11 won, 4 open; Best play top 2 (62%) open.
 Safe Locks 10/11 won, 1 open; Winners parlay top 2 (84%) won; Best play top 7 (51%) open.
 Lottery 100: lost (4/9 legs won, killed by Over 221.5 points, Under 230.5 points)
 Lottery 100: lost (2/7 legs won, killed by Over 222.5 points, Calgary Flames to win, Columbus Blue Jackets +1.5)
@@ -42,4 +42,4 @@ Ladder-consistency props (all time): 1702/2045 won (83.2%) vs 86.4% fair, 87.5% 
 Props 115/144 vs 83.8% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=130), ncaaf 0.00 (n=172), nfl 0.00 (n=42), nhl 0.00 (n=147)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=130), ncaaf 0.00 (n=173), nfl 0.00 (n=42), nhl 0.00 (n=147)
