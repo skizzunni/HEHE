@@ -4164,3 +4164,7 @@ z -1.5, -1.5). The band was picked after looking, so this is a caution, not a ru
 if the next 100 such legs (college + NFL, after 2026-11-07) also run 5+ pts under their stated chance,
 propose to the user excluding the 7-13.5 band from Locks and the ladder. Big college spreads (+14 or
 more) were fine overall (651/787, 83% vs 83%) (2026-11-07).
+The pre-registered spread-band test is now tracked by itself (`locks.PREREG`, `locks.prereg_status`; review
+line "Pre-registered test"): college + NFL spreads getting 7-13.5 points at 70-95%, counted only from pools
+saved on 2026-11-08 or later, verdict "waiting" until 100 legs, then "short" (5+ pts under: propose the
+exclusion to the user) or "fine" (drop the caution) (2026-11-07).

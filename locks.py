@@ -940,9 +940,10 @@ def spread_band_watch(paths=None, led=None, min_n=100, gap=5.0):
     stated chance in BOTH date halves by `gap`+ points overall on `min_n`+
     legs: [{league, band, won, n, said}]. A caution, never a pick rule.
     2026-11-07: college football getting 7-13.5, 146/201 then 101/135
-    (73%, 75% vs 82%; z -3.5 and -2.2). Pre-registered: if the next 100
-    such legs after 2026-11-07 also run 5+ pts short, propose excluding the
-    band (as EXCLUDED does for college unders)."""
+    (73%, 75% vs 82%; z -3.5 and -2.2). Pre-registered (PREREG,
+    prereg_status): if the next 100 such legs, college + NFL, from pools
+    saved from 2026-11-08 also run 5+ pts short, propose excluding the band
+    to the user (as EXCLUDED does for college unders)."""
     if led is None:
         import ledger
         led = ledger.load()
@@ -981,6 +982,50 @@ def spread_band_watch(paths=None, led=None, min_n=100, gap=5.0):
         if len(A) >= min_n and H[False] and H[True] and all(hit(X) < said(X) for X in H.values()) and said(A) - hit(A) >= gap:
             out.append(dict(league=lg, band=b, won=sum(w for _, w in A), n=len(A), said=round(said(A))))
     return out
+
+
+PREREG = dict(name="college + NFL spreads getting 7-13.5 points", since="2026-11-08", leagues=("ncaaf", "nfl"),
+              band="getting 7-13.5", need=100, gap=5.0)
+
+
+def prereg_status(paths=None, led=None, test=PREREG):
+    """The pre-registered spread-band test (see spread_band_watch), counted
+    only on legs from pools saved on or after test["since"]:
+    dict(won, n, said, need, verdict) -- verdict "waiting" until `need` legs,
+    then "short" (5+ pts under: propose excluding the band to the user) or
+    "fine" (the caution is dropped)."""
+    if led is None:
+        import ledger
+        led = ledger.load()
+    w = n = 0
+    p = 0.0
+    seen = set()
+    for path in paths or (None, SAFE_LEDGER):
+        for d, x in sorted((load(path).get("pools") or {}).items()):
+            if d < test["since"]:
+                continue
+            for L in x.get("legs") or []:
+                sp = L.get("spec") or {}
+                if (L.get("league") not in test["leagues"] or sp.get("t") != "spread"
+                        or spread_band(sp.get("line")) != test["band"] or not (0.70 <= (L.get("p") or 0) < 0.95)):
+                    continue
+                key = (L.get("gid"), L.get("label"))
+                if key in seen:
+                    continue
+                seen.add(key)
+                e = led.get(L.get("gid")) or {}
+                sc = e.get("scores") or {}
+                h, a = sc.get(L.get("home")), sc.get(L.get("away"))
+                if not (isinstance(h, int) and isinstance(a, int)):
+                    continue
+                r = stacks.settle_score(sp, L["home"], L["away"], h, a)
+                if r in ("won", "lost"):
+                    w += r == "won"
+                    n += 1
+                    p += L["p"]
+    said = round(100 * p / n, 1) if n else None
+    verdict = ("waiting" if n < test["need"] else "short" if 100 * w / n <= said - test["gap"] else "fine")
+    return dict(name=test["name"], won=w, n=n, said=said, need=test["need"], verdict=verdict)
 
 
 def pool_form(paths=None, led=None, days=7, min_n=30):

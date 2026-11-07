@@ -144,3 +144,32 @@ class SpreadBand(unittest.TestCase):
         import locks
         self.assertEqual([locks.spread_band(x) for x in (3.5, 7, 13.5, 14, 21.5, -3.5, 0, None)],
                          ["getting 0-6.5", "getting 7-13.5", "getting 7-13.5", "getting 14+", "getting 14+", "giving points", None, None])
+
+
+class Prereg(unittest.TestCase):
+    def _run(self, results, day="2026-11-09"):
+        import locks
+        legs, led = [], {}
+        for i, won in enumerate(results):
+            gid = f"ncaaf:{i}"
+            led[gid] = dict(status="won", scores={"H": 30, "A": 20 if won else 5})      # A +10.5
+            legs.append(dict(gid=gid, label=f"A +10.5 #{i}", league="ncaaf", home="H", away="A", p=0.8,
+                             spec=dict(t="spread", team="A", line=10.5)))
+        legs.append(dict(gid="ncaaf:x", label="A +3.5", league="ncaaf", home="H", away="A", p=0.8,
+                         spec=dict(t="spread", team="A", line=3.5)))                     # other band
+        led["ncaaf:x"] = dict(status="won", scores={"H": 30, "A": 20})
+        pools = {"pools": {day: {"legs": legs}, "2026-11-07": {"legs": legs}}}           # 11-07 is before the test
+        orig = locks.load
+        locks.load = lambda path=None: pools if path == "x" else {}
+        try:
+            return locks.prereg_status(paths=["x"], led=led)
+        finally:
+            locks.load = orig
+
+    def test_verdicts(self):
+        s = self._run([True] * 10)
+        self.assertEqual((s["won"], s["n"], s["verdict"]), (10, 10, "waiting"))
+        s = self._run([i % 10 < 7 for i in range(100)])
+        self.assertEqual((s["won"], s["n"], s["said"], s["verdict"]), (70, 100, 80.0, "short"))
+        s = self._run([i % 10 < 8 for i in range(100)])
+        self.assertEqual(s["verdict"], "fine")

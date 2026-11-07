@@ -402,6 +402,19 @@ def caution_line():
     return out
 
 
+def prereg_line():
+    """Where the pre-registered spread-band test stands (locks.prereg_status)."""
+    try:
+        import locks
+        s = locks.prereg_status()
+    except Exception:
+        return None
+    rec = f"{s['won']}/{s['n']}" + (f" ({round(100 * s['won'] / s['n'])}% vs {round(s['said'])}% stated)" if s["n"] else "")
+    what = {"waiting": f"waiting for {s['need']} legs", "short": "SHORT again -- propose excluding the band",
+            "fine": "fine -- drop the caution"}[s["verdict"]]
+    return f"Pre-registered test, {s['name']}: {rec}; {what}."
+
+
 def form_line(min_n=100, gap=5):
     """Bet types running cold over the last 7 pool days (locks.pool_form):
     5+ points under their stated chance on 100+ legs, one line or None.
@@ -894,6 +907,8 @@ def words(r, fit):
         out.append(r["cautions"])
     if r.get("cold"):
         out.append(r["cold"])
+    if r.get("prereg"):
+        out.append(r["prereg"])
     for name, mb in r.get("big_files") or []:
         out.append(f"BIG FILE {name} is {mb} MB -- GitHub refuses files over 100 MB and the board stops; trim it")
     st = r.get("stuck") or []
@@ -1005,6 +1020,7 @@ def main():
     log[today.isoformat()]["ladder"] = ladder_line()
     log[today.isoformat()]["cautions"] = caution_line()
     log[today.isoformat()]["cold"] = form_line()
+    log[today.isoformat()]["prereg"] = prereg_line()
     yk = (today - dt.timedelta(days=1)).isoformat()
     log[today.isoformat()]["yesterday"] = dict(day=yk, sweep=log[yk].get("sweep"), losses=log[yk].get("losses"))
     with open(log_path, "w") as fh:
