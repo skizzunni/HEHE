@@ -7389,6 +7389,7 @@
   "p": 0.8747,
   "price": "-10000",
   "prop_lock": true,
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -7407,6 +7408,7 @@
   "p": 0.8333,
   "p_fair": 0.8702,
   "price": "-900",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -7425,6 +7427,7 @@
   "p": 0.7638,
   "p_fair": 0.7838,
   "price": "-390",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -7443,6 +7446,7 @@
   "p": 0.86,
   "p_fair": 0.8943,
   "price": "-950",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -7461,6 +7465,7 @@
   "p": 0.7345,
   "p_fair": 0.7545,
   "price": "-340",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -7479,6 +7484,7 @@
   "p": 0.8747,
   "p_fair": 0.953,
   "price": "-2500",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -9486,6 +9492,22 @@
   "price": "-1600",
   "status": "open"
  },
+ "nba:401909294|n:donovan clingan|Points|5+": {
+  "aid": null,
+  "date": "2026-11-06",
+  "edge": 3.4,
+  "gid": "nba:401909294",
+  "imp": 0.931,
+  "label": "Donovan Clingan: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Donovan Clingan",
+  "p": 0.8557,
+  "p_fair": 0.9626,
+  "price": "-1350",
+  "status": "open"
+ },
  "nba:401909294|n:jrue holiday|Pts + Reb + Ast|15+": {
   "aid": null,
   "date": "2026-11-06",
@@ -9595,6 +9617,22 @@
   "p": 0.8517,
   "p_fair": 0.8256,
   "price": "-620",
+  "status": "open"
+ },
+ "nba:401909295|n:deaaron fox|Pts + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-06",
+  "edge": -3.0,
+  "gid": "nba:401909295",
+  "imp": 0.9,
+  "label": "De'Aaron Fox: 15+ Pts + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Ast",
+  "name": "De'Aaron Fox",
+  "p": 0.8547,
+  "p_fair": 0.8726,
+  "price": "-900",
   "status": "open"
  },
  "nba:401909295|n:domantas sabonis|Assists|4+": {
