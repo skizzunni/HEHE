@@ -1,12 +1,13 @@
 # Review 2026-11-06
 
-Picks 14-0 (100.0% vs 72.2% claimed, ROI +31.1%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; 8:00 PM, open), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; live 9:27 - 1st, Atlanta Hawks 9 - Washington Wizards 4), Under 241.5 points (Utah Jazz at Dallas Mavericks; 8:00 PM, open), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; 8:00 PM, open).
+Picks 16-1 (94.1% vs 72.2% claimed, ROI +23.1%).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; 8:00 PM, open), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; live 6:52 - 1st, Atlanta Hawks 18 - Washington Wizards 8), Under 241.5 points (Utah Jazz at Dallas Mavericks; 8:00 PM, open), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; 8:00 PM, open).
 Cautions in force: NBA over on Locks 12/21 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
-Strong calls 14-0 (100.0% vs 72.2% claimed).
-Closing line value: +0.94 points on 14 picks; beat the close on 64.3%.
-Board sweep: 14-0, 37 open -- still clean.
-Why picks lost (14 days): favourite lost 139, close game 117, upset 53, coin flip 47, blowout 42, price moved against it 32.
+Strong calls 16-1 (94.1% vs 72.2% claimed).
+Closing line value: +0.81 points on 17 picks; beat the close on 58.8%.
+Board sweep: 16-1, 34 open -- broken (first loss: arg San Lorenzo at 68%).
+- LOST arg San Lorenzo at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost
+Why picks lost (14 days): favourite lost 140, close game 117, upset 53, coin flip 47, blowout 42, price moved against it 32.
 Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST uecl Trabzonspor at 67% (-230), SC Freiburg 1 - Trabzonspor 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
 - LOST uecl Atalanta at 84% (-700), Atalanta 1 - Kairat Almaty 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
