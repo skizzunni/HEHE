@@ -39,6 +39,14 @@ MIN_LEGS, MAX_LEGS = 3, 8
 # on, every ticket is the top 5 again. The 3-8 chooser ran on 11-05 only and
 # stays in the record; options() still shows what each count would have been.
 FIXED_FROM, FIXED_LEGS = "2026-11-06", 5
+# the user's call (2026-11-07, "whatever gets me to 2x-5x my money per day"):
+# from this card on, the ticket is the top K Locks (1..8) whose payout is
+# 2x-5x, choosing K by the best estimated chance of reaching target. A study
+# of ~20 cards (top 2: 15/20 at 1.55x, top 4: 10/20 at 2.41x, top 5: 7/19 at
+# 3.00x) is too small to fix K, so the chooser decides each day. If no count
+# lands in 2x-5x, the count whose payout is nearest the band is taken.
+FLEX_FROM, FLEX_MIN, FLEX_MAX = "2026-11-07", 1, 8
+PAY_MIN, PAY_MAX = 2.0, 5.0
 
 
 def ticket(book, day, n=LEGS):
@@ -57,7 +65,8 @@ def options(book, day, bank=BANK0, target=TARGET):
     out = []
     if day < LEGS_FROM:
         return out
-    for k in range(MIN_LEGS, MAX_LEGS + 1):
+    lo, hi = (FLEX_MIN, FLEX_MAX) if day >= FLEX_FROM else (MIN_LEGS, MAX_LEGS)
+    for k in range(lo, hi + 1):
         legs = ticket(book, day, k)
         if not legs:
             continue
@@ -66,8 +75,23 @@ def options(book, day, bank=BANK0, target=TARGET):
         if pays <= 1:
             continue
         need = max(1, math.ceil(math.log(max(target / bank, 1.0001)) / math.log(pays)))
-        out.append(dict(legs=k, prob=round(p, 4), pays=round(pays, 3), need=need, reach=p ** need))
+        out.append(dict(legs=k, prob=round(p, 4), pays=round(pays, 3), need=need, reach=p ** need,
+                        in_band=PAY_MIN <= pays <= PAY_MAX))
     return out
+
+
+def _flex(book, day, bank, target):
+    """From FLEX_FROM: the top K Locks paying 2x-5x with the best chance of
+    reaching target; with none in the band, the count paying nearest it."""
+    opts = options(book, day, bank, target)
+    if not opts:
+        return []
+    band = [o for o in opts if o["in_band"]]
+    if band:
+        k = max(band, key=lambda o: (o["reach"], -o["legs"]))["legs"]
+    else:
+        k = min(opts, key=lambda o: (PAY_MIN - o["pays"] if o["pays"] < PAY_MIN else o["pays"] - PAY_MAX, o["legs"]))["legs"]
+    return ticket(book, day, k)
 
 
 def choose(book, day, bank=BANK0, target=TARGET):
@@ -76,6 +100,8 @@ def choose(book, day, bank=BANK0, target=TARGET):
     from bank. Decided from the frozen 8 AM card, so a replay never moves."""
     if day < LEGS_FROM:
         return ticket(book, day)
+    if day >= FLEX_FROM:
+        return _flex(book, day, bank, target)
     if day >= FIXED_FROM:
         return ticket(book, day, FIXED_LEGS)
     best = None

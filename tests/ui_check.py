@@ -170,6 +170,9 @@ PROBE = """<script>setTimeout(function(){
   var kl = function(n, p, pr){ var a = []; for (var i = 0; i < n; i++) a.push({p: p, price: pr}); return a; };
   out.ladderK = [ladderK(kl(5, 0.8, "-200"), 1, 10000).length, ladderK(kl(2, 0.8, "-200"), 1, 10000).length,
                  ladderK(kl(10, 0.97, "-1000"), 1, 10000).length];
+  out.lflex = [ladderFlex(kl(10, 0.95, "-200"), 1, 10000).length, ladderFlex(kl(10, 0.6, "+150"), 1, 10000).length,
+               ladderFlex(kl(10, 0.97, "-2000"), 1, 10000).length, ladderFlex([], 1, 10000).length];
+  out.lopts2 = ladderOptions({legs: [1, 2, 3], options: [{legs: 1, prob: 0.9, pays: 1.5, need: 23, reach: 0.09, in_band: false}, {legs: 3, prob: 0.5, pays: 3.0, need: 9, reach: 0.002, in_band: true}]});
   out.lopts = ladderOptions({legs: [1, 2, 3], options: [{legs: 3, prob: 0.5, pays: 1.9, need: 12, reach: 0.000244}, {legs: 5, prob: 0.3, pays: 3.0, need: 8, reach: 0.0000656}]});
   out.teamTag = [teamTag({t: "teamunder"}), teamTag({spec: {t: "teamover"}}), teamTag({t: "under"}), teamTag({})];
   out.egOrder = [egOrder([{p: 0.9, tip: "10:00 PM"}, {p: 0.95, tip: "7:00 PM"}, {p: 0.92, tip: "12:45 PM"}], "time").map(function(x){return x.tip}).join(","),
@@ -429,6 +432,12 @@ def main():
     lk = new.get("ladderK") or []
     if lk[:2] != [3, 0] or not (3 <= (lk[2] if len(lk) > 2 else 0) <= 8):
         fails.append("ladder leg count chooser wrong (want 3 legs, none under 3, and 3..8): " + repr(lk))
+    lf = new.get("lflex") or []
+    if not (len(lf) == 4 and lf[0] in (2, 3) and lf[1:] == [1, 8, 0]):
+        fails.append("ladder 2x-5x chooser wrong: " + repr(lf))
+    l2 = new.get("lopts2", "")
+    if not ("(outside 2&ndash;5&times;)" in l2 and '<tr style="font-weight:700"><td>3</td>' in l2):
+        fails.append("ladder options band wrong: " + l2[:400])
     lo = new.get("lopts", "")
     if not ("3 legs, and what other counts would give" in lo and '<tr style="font-weight:700"><td>3</td><td class="num">50%</td><td class="num">1.90&times;</td><td class="num">12</td><td class="num">1 in 4,098</td>' in lo):
         fails.append("ladder options wrong: " + lo[:400])

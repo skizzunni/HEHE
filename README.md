@@ -4089,3 +4089,9 @@ Review ladder line says where an open ticket stands once a leg settles: legs won
 chance of the legs still open (`daily_review.now_text`; the live game state is not priced in) (2026-11-07).
 Board ladder: once legs have won, "Rests on <legs still needed> · N% before play" (`restsOn`; cleared
 legs left out, stated chances only) (2026-11-07).
+Ladder from Nov 7 (the user's call, "whatever gets me to 2x-5x my money per day"): the ticket is the top K
+Locks (1..8) whose payout is 2x-5x, K chosen by the best estimated chance of reaching $10k; with none in the
+band, the count paying nearest it (`ladder.FLEX_FROM`, `_flex`; board `ladderFlex`). Study behind it, too
+small to fix K: top 2 won 15/20 days at 1.55x, top 3 12/20 at 1.93x, top 4 10/20 at 2.41x, top 5 7/19 at
+3.00x, top 8 5/19 at 5.87x. Straight underdog calls at +250..+500 won 9/33 (27% vs 24% priced) -- too few,
+and underdogs overall lag their price (37% vs 45%), so straight dogs are not added to the ladder (2026-11-07).

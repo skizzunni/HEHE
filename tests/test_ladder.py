@@ -1,4 +1,4 @@
-"""Ladder challenge: the day's 5 likeliest Locks as one parlay, bank rolled."""
+"""Ladder challenge: the day's likeliest Locks as one parlay (2x-5x from Nov 7), bank rolled."""
 import os
 import sys
 import unittest
@@ -58,6 +58,28 @@ class Ladder(unittest.TestCase):
         r = ladder.report(b, start="2026-11-03")
         self.assertEqual((r["streak"], r["bank"]), (0, 1.0))
         self.assertEqual(r["ended"]["lost_on"], ["2026-11-04|e"])
+
+    def test_two_to_five_x_from_nov_7(self):
+        import math, locks
+        def bk(n, p, price):
+            b = {"days": {"2026-11-07": []}, "legs": {}}
+            for i in range(n):
+                kk, L = leg(f"x{i}", p, "open", price)
+                b["legs"][kk] = L
+                b["days"]["2026-11-07"].append(kk)
+            return b
+        got = ladder.choose(bk(10, 0.95, "-200"), "2026-11-07")          # 1.5x a leg: 2 or 3 legs pay 2.25x / 3.38x
+        pays = math.prod(locks._dec(L["price"]) for L in got)
+        self.assertIn(len(got), (2, 3))
+        self.assertTrue(2 <= pays <= 5)
+        self.assertEqual(len(ladder.choose(bk(10, 0.6, "+150"), "2026-11-07")), 1)   # one +150 leg is 2.5x
+        self.assertEqual(len(ladder.choose(bk(10, 0.97, "-2000"), "2026-11-07")), 8)  # none reach 2x: nearest is 8
+        o = ladder.options(bk(10, 0.95, "-200"), "2026-11-07")
+        self.assertEqual([x["legs"] for x in o], list(range(1, 9)))
+        self.assertEqual([x["in_band"] for x in o][:4], [False, True, True, False])
+        b6 = bk(10, 0.95, "-200")
+        b6["days"]["2026-11-06"] = b6["days"].pop("2026-11-07")
+        self.assertEqual(len(ladder.choose(b6, "2026-11-06")), 5)                     # 11-06 stays 5 legs
 
     def test_leg_count_chosen_from_three_to_eight(self):
         legs = [(c, 0.95, "open") for c in "abcdefghij"]
