@@ -1,8 +1,8 @@
 # Review 2026-11-07
 
 Picks 6-1 (85.7% vs 71.0% claimed, ROI +15.3%).
-Ladder: run 2 ended (peak $1.00, lost on Austin Reaves: 4+ Assists); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
-Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1085/1245 vs 82%; NHL over on all saved lines 131/149 vs 84%; NHL spread on all saved lines 286/333 vs 83%.
+Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; 12:45 PM, open), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; 12:30 PM, open), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; 12:00 PM, open), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
+Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 115/130 vs 83%; NHL spread on all saved lines 250/289 vs 83%; NHL teamover on all saved lines 158/180 vs 82%.
 Strong calls 6-1 (85.7% vs 71.0% claimed).
 Closing line value: +2.04 points on 7 picks; beat the close on 71.4%.
 Board sweep: 6-1, 145 open -- broken (first loss: jpn Nagoya Grampus at 76%); 2 losses expected from the settled picks' chances, so 1 or more by now had a 91% chance.
@@ -18,6 +18,8 @@ Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo at 68%; 13.9
 - LOST mex Atlante at 69% (-280), Atlante 0 - Santos 2: margin 2 · the book had my side favoured too · called at 69% · favourite lost
 - LOST nwsl San Diego Wave FC at 81% (-600), San Diego Wave FC 0 - Utah Royals 1: margin 1 · the book had my side favoured too · called at 81% · upset · close game
 - LOST jpn Shimizu S-Pulse at 67% (-260), Shimizu S-Pulse 0 - Tokyo Verdy 1969 1: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
+Locks 0/11 won, 11 open; Best play top 2 (59%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: open (0/8 legs won)
 Lottery 100: open (0/6 legs won)
 Lottery 100: open (0/5 legs won)
