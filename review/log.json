@@ -9779,8 +9779,8 @@
    },
    {
     "flag": false,
-    "hit": 84.2,
-    "n": 19,
+    "hit": 85.0,
+    "n": 20,
     "name": "locks ncaaf side",
     "said": 75.7
    },
@@ -9870,10 +9870,10 @@
    },
    {
     "flag": false,
-    "hit": 50.5,
-    "n": 216,
+    "hit": 50.7,
+    "n": 221,
     "name": "kalshi maker bids (filled)",
-    "said": 53.4
+    "said": 53.3
    }
   ],
   "big_files": [],
@@ -9966,9 +9966,9 @@
   },
   "cautions": "Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.",
   "clv": {
-   "avg": 0.94,
-   "beat": 50.0,
-   "n": 42
+   "avg": 0.9,
+   "beat": 48.8,
+   "n": 43
   },
   "day": "2026-11-06",
   "ladder": "Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; live Halftime, Los Angeles Lakers 53 - Portland Trail Blazers 60, 1 so far, needs 3 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; won); 4 of 5 won, the ticket now rests on 1 leg, 78% on its stated chance before play.",
@@ -9976,7 +9976,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 4,
+   "open": 3,
    "plays": {
     "best": [
      2,
@@ -9984,13 +9984,13 @@
      "open"
     ]
    },
-   "won": 7
+   "won": 8
   },
   "loss_reasons_14d": {
    "blowout": 43,
    "close game": 119,
    "coin flip": 49,
-   "favourite lost": 141,
+   "favourite lost": 142,
    "price moved against it": 32,
    "upset": 54
   },
@@ -10077,6 +10077,22 @@
      "coin flip"
     ],
     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 57% \u00b7 coin flip"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "match": "NEB @ ILL",
+    "pick": "Nebraska Cornhuskers",
+    "price": "-192",
+    "said": 64,
+    "score": {
+     "Illinois Fighting Illini": 24,
+     "Nebraska Cornhuskers": 13
+    },
+    "tags": [
+     "favourite lost"
+    ],
+    "why": "margin 11 \u00b7 the book had my side favoured too \u00b7 called at 64% \u00b7 favourite lost"
    }
   ],
   "lottery": [
@@ -10154,11 +10170,11 @@
    }
   ],
   "picks": {
-   "hit": 88.1,
-   "lost": 5,
-   "n": 42,
-   "roi": 16.7,
-   "said": 72.9,
+   "hit": 86.0,
+   "lost": 6,
+   "n": 43,
+   "roi": 14.0,
+   "said": 72.7,
    "won": 37
   },
   "picks_by_league": {
@@ -10291,11 +10307,11 @@
     "won": 6
    },
    "ncaaf": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 66.4,
-    "said": 59.0,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": 10.9,
+    "said": 60.7,
     "won": 2
    },
    "ned2": {
@@ -10337,12 +10353,12 @@
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      7,
      0.507,
-     "open"
+     "won"
     ],
     "winners": [
      2,
@@ -10350,7 +10366,7 @@
      "won"
     ]
    },
-   "won": 10
+   "won": 11
   },
   "strong": {
    "hit": 87.5,
@@ -10362,18 +10378,19 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 99.6,
+   "as_bad_pct": 99.1,
    "broke_on": "arg San Lorenzo at 68%",
-   "expected_losses": 11.4,
-   "lost": 5,
+   "expected_losses": 11.7,
+   "lost": 6,
    "lost_by_league": {
     "arg": 1,
     "col": 1,
     "mex": 1,
     "nba": 1,
+    "ncaaf": 1,
     "nhl": 1
    },
-   "open": 9,
+   "open": 8,
    "won": 37
   },
   "vs_market_14d": {
@@ -10381,10 +10398,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 76.1,
-    "lost": 244,
-    "n": 1021,
-    "roi": 1.6,
+    "hit": 76.0,
+    "lost": 245,
+    "n": 1022,
+    "roi": 1.5,
     "said": 71.4,
     "won": 777
    }
@@ -10402,10 +10419,10 @@
    "ncaaf": {
     "fitted": 0.35,
     "held_out": false,
-    "logloss": 0.5911,
-    "market_only": 0.5981,
-    "model_40": 0.5915,
-    "n": 173,
+    "logloss": 0.5928,
+    "market_only": 0.6005,
+    "model_40": 0.593,
+    "n": 174,
     "weight": 0.0
    },
    "nfl": {
