@@ -5676,6 +5676,23 @@
    "tip": "8:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909941|away|FanDuel": {
+   "dec": 5.9,
+   "ev": 0.0315,
+   "fair": 0.1748,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909941",
+   "kind": "value",
+   "league": "nba",
+   "match": "WSH @ OKC",
+   "price": "+490",
+   "seen": "2026-11-07T23:39:34+00:00",
+   "side": "away",
+   "start": "2026-11-08T01:00Z",
+   "team": "Washington Wizards",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909941|{\"line\": 11.5, \"t\": \"spread\", \"team\": \"Washington Wizards\"}|Kalshi": {
    "dec": 2.0101,
    "dk": "-116",
@@ -13225,6 +13242,26 @@
    "prob": 0.3128,
    "seen": "2026-11-05T06:28:58+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909941:away": {
+   "ev": 0.0313,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0315,
+     "fair": 0.1748,
+     "id": "nba:401909941",
+     "price": "+490",
+     "side": "away",
+     "spec": null,
+     "team": "Washington Wizards"
+    }
+   ],
+   "payout": 5.9,
+   "prob": 0.1748,
+   "seen": "2026-11-07T23:39:34+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
