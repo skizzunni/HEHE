@@ -4087,3 +4087,5 @@ Review ladder line says when a live "N+" prop has reached its line, or how many 
 (`daily_review.leg_text`) (2026-11-07).
 Review ladder line says where an open ticket stands once a leg settles: legs won so far and the stated
 chance of the legs still open (`daily_review.now_text`; the live game state is not priced in) (2026-11-07).
+Board ladder: once legs have won, "Rests on <legs still needed> · N% before play" (`restsOn`; cleared
+legs left out, stated chances only) (2026-11-07).

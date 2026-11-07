@@ -163,7 +163,9 @@ PROBE = """<script>setTimeout(function(){
                                  {league: "nba", match: "PHI @ DET", favourite: "Detroit Pistons", dog: "PHI", chance: 45, result: "won"},
                                  {league: "nba", match: "CLE @ OKC", favourite: "Oklahoma City Thunder", dog: "CLE", chance: 45, result: "lost"}]});
   out.met = [ladderProgress([{status: "won"}, {status: "won"}, {status: "won"}, {status: "open", so_far: 4, line: "2+", live: "4th"}, {status: "open", so_far: 3, line: "6+", live: "2nd"}]),
-             ladderProgress([{status: "won"}, {status: "open", label: "Over 205.5 points", live_score: "A 110 - B 100"}])];
+             ladderProgress([{status: "won"}, {status: "open", label: "Over 205.5 points", live_score: "A 110 - B 100"}]),
+             ladderProgress([{status: "won"}, {status: "won"}, {status: "won"}, {status: "won"}, {status: "open", label: "Austin Reaves: 4+ Assists", p: 0.78, so_far: 1, line: "4+", live: "3rd"}]),
+             ladderProgress([{status: "won"}, {status: "lost", label: "X"}, {status: "open", label: "Y", p: 0.8}])];
   out.lbar = [ladderBar(9.57, 10000, function(v){return "$" + v.toFixed(2)}), ladderBar(100, 10000, function(v){return "$" + v.toFixed(2)})];
   var kl = function(n, p, pr){ var a = []; for (var i = 0; i < n; i++) a.push({p: p, price: pr}); return a; };
   out.ladderK = [ladderK(kl(5, 0.8, "-200"), 1, 10000).length, ladderK(kl(2, 0.8, "-200"), 1, 10000).length,
@@ -418,6 +420,9 @@ def main():
     mt = new.get("met") or ["", ""]
     if not ("3 of 5 won, 1 cleared waiting on the final, 1 to play (2 live now)" in mt[0] and "1 of 2 won, 1 cleared waiting on the final</b>" in mt[1]):
         fails.append("cleared legs wrong: " + repr(mt))
+    if not (len(mt) > 3 and "4 of 5 won, 1 to play (1 live now)</b>" in mt[2] and "Rests on Austin Reaves: 4+ Assists &middot; 78% before play" in mt[2]
+            and "Rests on" not in mt[0] and "Rests on" not in mt[1] and "Rests on" not in mt[3]):
+        fails.append("rests-on line wrong: " + repr(mt))
     lb = new.get("lbar") or ["", ""]
     if not ("width:24.5%" in lb[0] and "$9.57 of $10000.00 &middot; 25% of the way, counted in doublings (3.3 of 13.3)" in lb[0] and "width:50.0%" in lb[1]):
         fails.append("ladder bar wrong: " + repr(lb)[:300])

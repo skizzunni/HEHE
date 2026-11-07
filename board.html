@@ -1588,7 +1588,16 @@ function ladderProgress(legs){
   return '<p class="three"><b>' + (l ? 'Ticket lost' : o ? w + ' of ' + legs.length + ' won, '
       + (met ? met + ' cleared waiting on the final' + (o - met ? ', ' + (o - met) + ' to play' : '') : o + ' to play')
       + (lv && o - met ? ' (' + lv + ' live now)' : '') : 'All in: ticket won')
-    + '</b>' + (v ? ' &middot; ' + v + ' void (drops out)' : '') + '</p>';
+    + '</b>' + (v ? ' &middot; ' + v + ' void (drops out)' : '') + restsOn(legs, l) + '</p>';
+}
+// once legs have won: the legs the ticket still needs, and their chance
+// before play (stated chances taken as independent; the live game is not priced in)
+function restsOn(legs, lost){
+  if(lost) return '';
+  const R = legs.filter(L => (!L.status || L.status === 'open') && !legMet(L) && L.label);
+  if(!R.length || R.length === legs.length) return '';
+  const p = R.reduce((a, L) => a * (L.p || 0), 1);
+  return '<div class="sbn">Rests on ' + R.map(L => esc(L.label)).join(' + ') + ' &middot; ' + Math.round(100 * p) + '% before play</div>';
 }
 function ladderRuns(R, money){
   if(!R.length) return '';
