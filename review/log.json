@@ -9776,7 +9776,7 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 238,
+     "n": 239,
      "said": 64,
      "won": 197
     },
@@ -10438,8 +10438,8 @@
    },
    {
     "flag": false,
-    "hit": 52.5,
-    "n": 244,
+    "hit": 52.2,
+    "n": 245,
     "name": "kalshi maker bids (filled)",
     "said": 53.5
    }
@@ -10534,9 +10534,9 @@
   },
   "cautions": "Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 31/51 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NCAAF over on all saved lines 600/702 vs 81%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.",
   "clv": {
-   "avg": 0.9,
-   "beat": 52.3,
-   "n": 88
+   "avg": 0.89,
+   "beat": 51.7,
+   "n": 89
   },
   "cold": "Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 373/496 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 6585 legs), so a cold week is noise, not a signal.",
   "day": "2026-11-07",
@@ -10571,7 +10571,7 @@
    "blowout": 42,
    "close game": 124,
    "coin flip": 45,
-   "favourite lost": 148,
+   "favourite lost": 149,
    "price moved against it": 29,
    "upset": 61
   },
@@ -10887,7 +10887,7 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 219,
+     "n": 220,
      "said": 65,
      "won": 178
     },
@@ -10931,7 +10931,7 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 147,
+     "n": 148,
      "said": 69,
      "won": 111
     },
@@ -10985,6 +10985,27 @@
      "upset"
     ],
     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 81% \u00b7 upset"
+   },
+   {
+    "against_market": false,
+    "league": "ncaaf",
+    "like": {
+     "n": 181,
+     "said": 68,
+     "won": 140
+    },
+    "match": "GAST @ APP",
+    "pick": "App State Mountaineers",
+    "price": "-230",
+    "said": 68,
+    "score": {
+     "App State Mountaineers": 23,
+     "Georgia State Panthers": 39
+    },
+    "tags": [
+     "favourite lost"
+    ],
+    "why": "margin 16 \u00b7 the book had my side favoured too \u00b7 called at 68% \u00b7 favourite lost"
    }
   ],
   "lottery": [
@@ -11092,11 +11113,11 @@
    }
   ],
   "picks": {
-   "hit": 77.3,
-   "lost": 20,
-   "n": 88,
-   "roi": 3.3,
-   "said": 72.0,
+   "hit": 76.4,
+   "lost": 21,
+   "n": 89,
+   "roi": 2.2,
+   "said": 71.9,
    "won": 68
   },
   "picks_by_league": {
@@ -11237,11 +11258,11 @@
     "won": 4
    },
    "ncaaf": {
-    "hit": 84.6,
-    "lost": 2,
-    "n": 13,
-    "roi": 27.4,
-    "said": 65.8,
+    "hit": 78.6,
+    "lost": 3,
+    "n": 14,
+    "roi": 18.3,
+    "said": 65.9,
     "won": 11
    },
    "nhl": {
@@ -11340,7 +11361,7 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 89.6,
+   "as_bad_pct": 86.0,
    "broke_on": "jpn Nagoya Grampus or draw at 76%",
    "expected_by_league": {
     "arg": 1.4,
@@ -11353,12 +11374,12 @@
     "ger2": 1.2,
     "ita": 0.9,
     "jpn": 1.4,
-    "ncaaf": 4.4,
+    "ncaaf": 4.8,
     "sco": 1.3,
     "wsl": 0.3
    },
-   "expected_losses": 24.7,
-   "lost": 20,
+   "expected_losses": 25.0,
+   "lost": 21,
    "lost_by_league": {
     "arg": 1,
     "chi": 1,
@@ -11370,11 +11391,11 @@
     "ger2": 2,
     "ita": 1,
     "jpn": 1,
-    "ncaaf": 2,
+    "ncaaf": 3,
     "sco": 2,
     "wsl": 1
    },
-   "open": 81,
+   "open": 80,
    "won": 68
   },
   "vs_market_14d": {
@@ -11382,10 +11403,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 76.3,
-    "lost": 254,
-    "n": 1071,
-    "roi": 1.7,
+    "hit": 76.2,
+    "lost": 255,
+    "n": 1072,
+    "roi": 1.6,
     "said": 71.6,
     "won": 817
    }
@@ -11401,12 +11422,12 @@
     "weight": 0.0
    },
    "ncaaf": {
-    "fitted": 0.2,
+    "fitted": 0.25,
     "held_out": false,
-    "logloss": 0.5899,
-    "market_only": 0.5929,
-    "model_40": 0.592,
-    "n": 189,
+    "logloss": 0.5926,
+    "market_only": 0.5958,
+    "model_40": 0.5946,
+    "n": 190,
     "weight": 0.0
    },
    "nfl": {
@@ -11539,7 +11560,7 @@
      "against_market": false,
      "league": "ncaaf",
      "like": {
-      "n": 238,
+      "n": 239,
       "said": 64,
       "won": 197
      },
