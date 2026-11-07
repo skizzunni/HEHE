@@ -1158,6 +1158,7 @@
    "cost": 0.6938,
    "edge": 0.0214,
    "fair": 0.7086,
+   "fill": null,
    "id": "ncaaf:401858292",
    "label": "North Carolina Tar Heels",
    "league": "ncaaf",
@@ -1170,8 +1171,9 @@
     "team": "North Carolina Tar Heels"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07UNCCONN-UNC"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07UNCCONN-UNC",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07USAULL-ULL|YES": {
    "ask": 0.73,
@@ -8057,6 +8059,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "ncaaf:401858292",
    "label": "under 55.5",
    "league": "ncaaf",
@@ -8069,8 +8072,9 @@
     "t": "under"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07UNCCONN-56"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07UNCCONN-56",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07USAULL-57|YES": {
    "ask": 0.52,

@@ -9776,9 +9776,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 232,
+     "n": 233,
      "said": 64,
-     "won": 192
+     "won": 193
     },
     "match": "NEB @ ILL",
     "pick": "Nebraska Cornhuskers",
@@ -10340,10 +10340,10 @@
    },
    {
     "flag": false,
-    "hit": 90.9,
-    "n": 11,
+    "hit": 91.7,
+    "n": 12,
     "name": "locks ncaaf over",
-    "said": 79.4
+    "said": 79.1
    },
    {
     "flag": false,
@@ -10532,15 +10532,15 @@
     ]
    }
   },
-  "cautions": "Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 29/48 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 116/131 vs 83%; NHL spread on all saved lines 254/293 vs 83%; NHL teamover on all saved lines 160/182 vs 82%.",
+  "cautions": "Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 29/48 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NCAAF over on all saved lines 516/611 vs 81%; NHL over on all saved lines 116/131 vs 83%; NHL spread on all saved lines 254/293 vs 83%; NHL teamover on all saved lines 160/182 vs 82%.",
   "clv": {
-   "avg": 1.13,
-   "beat": 61.3,
-   "n": 62
+   "avg": 1.11,
+   "beat": 60.9,
+   "n": 64
   },
-  "cold": "Running cold (last 7 days, all saved lines at 70-95%): NCAAF spread 185/252 (73% vs 82%); NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 83.0% for the rest (1524 and 5864 legs), so a cold week is noise, not a signal.",
+  "cold": "Running cold (last 7 days, all saved lines at 70-95%): NCAAF spread 220/299 (74% vs 82%); NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 5999 legs), so a cold week is noise, not a signal.",
   "day": "2026-11-07",
-  "ladder": "Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; live 3:37 - 3rd, Arkansas Razorbacks 10 - Auburn Tigers 9), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; live 1:37 - 3rd, Duke Blue Devils 38 - NC State Wolfpack 3), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; live 1:28 - 4th, Boston College Eagles 24 - Florida State Seminoles 31, already over (24, line 15.5)), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).",
+  "ladder": "Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; live 0:43 - 3rd, Arkansas Razorbacks 13 - Auburn Tigers 9), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; live 14:54 - 4th, Duke Blue Devils 38 - NC State Wolfpack 3), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; won), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open); 1 of 6 won, the ticket now rests on 5 legs, 25% on their stated chance before play.",
   "leaks_14d": [
    {
     "hit": 62.5,
@@ -10555,7 +10555,7 @@
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      2,
@@ -10563,7 +10563,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "loss_reasons_14d": {
    "blowout": 42,
@@ -10924,10 +10924,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 55.5 points"
+    ],
     "legs": 12,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 2
    },
@@ -10957,12 +10959,12 @@
    }
   ],
   "picks": {
-   "hit": 75.8,
+   "hit": 76.6,
    "lost": 15,
-   "n": 62,
-   "roi": -1.1,
-   "said": 72.7,
-   "won": 47
+   "n": 64,
+   "roi": 0.6,
+   "said": 72.4,
+   "won": 49
   },
   "picks_by_league": {
    "arg": {
@@ -11088,10 +11090,10 @@
    "ncaaf": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 33.6,
-    "said": 73.0,
-    "won": 1
+    "n": 3,
+    "roi": 48.2,
+    "said": 66.3,
+    "won": 3
    },
    "nhl": {
     "hit": 100.0,
@@ -11181,7 +11183,7 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 75.2,
+   "as_bad_pct": 81.2,
    "broke_on": "jpn Nagoya Grampus or draw at 76%",
    "expected_by_league": {
     "efl1": 2.4,
@@ -11194,7 +11196,7 @@
     "sco": 1.0,
     "wsl": 0.3
    },
-   "expected_losses": 16.9,
+   "expected_losses": 17.6,
    "lost": 15,
    "lost_by_league": {
     "efl1": 4,
@@ -11207,8 +11209,8 @@
     "sco": 2,
     "wsl": 1
    },
-   "open": 107,
-   "won": 47
+   "open": 105,
+   "won": 49
   },
   "vs_market_14d": {
    "against": {
@@ -11217,10 +11219,10 @@
    "agree": {
     "hit": 76.2,
     "lost": 249,
-    "n": 1045,
-    "roi": 1.4,
+    "n": 1047,
+    "roi": 1.5,
     "said": 71.6,
-    "won": 796
+    "won": 798
    }
   },
   "weights": {
@@ -11234,12 +11236,12 @@
     "weight": 0.0
    },
    "ncaaf": {
-    "fitted": 0.3,
+    "fitted": 0.25,
     "held_out": false,
-    "logloss": 0.5894,
-    "market_only": 0.5954,
-    "model_40": 0.59,
-    "n": 177,
+    "logloss": 0.5893,
+    "market_only": 0.594,
+    "model_40": 0.5904,
+    "n": 179,
     "weight": 0.0
    },
    "nfl": {
@@ -11372,9 +11374,9 @@
      "against_market": false,
      "league": "ncaaf",
      "like": {
-      "n": 232,
+      "n": 233,
       "said": 64,
-      "won": 192
+      "won": 193
      },
      "match": "NEB @ ILL",
      "pick": "Nebraska Cornhuskers",
