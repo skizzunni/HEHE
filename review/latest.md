@@ -1,12 +1,12 @@
 # Review 2026-11-07
 
-Picks 66-18 (78.6% vs 71.8% claimed, ROI +5.2%).
+Picks 67-20 (77.0% vs 72.0% claimed, ROI +2.9%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 31/51 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NCAAF over on all saved lines 600/702 vs 81%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 373/496 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 6585 legs), so a cold week is noise, not a signal.
-Strong calls 53-16 (76.8% vs 73.5% claimed).
-Closing line value: +0.86 points on 84 picks; beat the close on 52.4%.
-Board sweep: 66-18, 85 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 23.7 losses expected from the settled picks' chances, so 18 or more by now had a 94% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (1.2 expected), ncaaf 2 (4.4 expected), sco 2 (1.3 expected), ecu 1 (0.3 expected), esp 1 (1.1 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
+Strong calls 54-18 (75.0% vs 73.8% claimed).
+Closing line value: +0.91 points on 87 picks; beat the close on 52.9%.
+Board sweep: 67-20, 82 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 24.3 losses expected from the settled picks' chances, so 20 or more by now had a 88% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (1.2 expected), ncaaf 2 (4.4 expected), sco 2 (1.3 expected), arg 1 (1 expected), chi 1 (0.5 expected), ecu 1 (0.3 expected), esp 1 (1.1 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 18 (72% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 13 of 16 (81% vs 68% stated)
@@ -25,7 +25,9 @@ Board sweep: 66-18, 85 open -- broken (first loss: jpn Nagoya Grampus or draw at
 - LOST ncaaf Purdue Boilermakers at 65% (-205), Maryland Terrapins 34 - Purdue Boilermakers 29: margin 5 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 178 of 219 (81% vs 65% stated)
 - LOST ecu Libertad (Ecuador) or draw at 74% (-340), Emelec 1 - Libertad (Ecuador) 0: margin 1 · the book had my side favoured too · called at 74% · favourite lost · close game; picks like it: 9 of 13 (69% vs 75% stated)
 - LOST ncaaf Coastal Carolina Chanticleers at 70% (-250), Coastal Carolina Chanticleers 8 - Old Dominion Monarchs 21: margin 13 · the book had my side favoured too · called at 70% · favourite lost; picks like it: 111 of 147 (76% vs 69% stated)
-Why picks lost (14 days): favourite lost 148, close game 124, upset 59, coin flip 45, blowout 42, price moved against it 29.
+- LOST arg Argentinos Juniors or draw at 76% (-425), Argentinos Juniors 0 - Huracán 2: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 21 of 25 (84% vs 76% stated)
+- LOST chi Everton CD or draw at 81% (-600), Deportes Concepcion 2 - Everton CD 0: margin 2 · the book had my side favoured too · called at 81% · upset
+Why picks lost (14 days): favourite lost 148, close game 124, upset 61, coin flip 45, blowout 42, price moved against it 29.
 Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 68%; 13.9 losses expected, 9 came in (96.6% chance of that many or more).
 - LOST arg San Lorenzo or draw at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost; picks like it: 12 of 19 (63% vs 69% stated)
 - LOST col Internacional de Bogotá or draw at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 9 of 14 (64% vs 68% stated)
