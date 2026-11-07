@@ -7314,11 +7314,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Aaron Wiggins",
   "p": 0.8468,
   "p_fair": null,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 22.0
  },
  "nba:401909287|n:aaron wiggins|Threes Made|1+": {
   "aid": null,
@@ -7330,11 +7332,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Aaron Wiggins",
   "p": 0.8539,
   "p_fair": 0.893,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909287|n:aj dybantsa|Reb + Ast|5+": {
   "aid": null,
@@ -7346,11 +7350,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "AJ Dybantsa",
   "p": 0.8415,
   "p_fair": 0.8612,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nba:401909287|n:alex sarr|Rebounds|4+": {
   "aid": null,
@@ -7362,11 +7368,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Alex Sarr",
   "p": 0.8572,
   "p_fair": 0.9335,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909287|n:anthony davis|Points|10+": {
   "aid": null,
@@ -7381,7 +7389,9 @@
   "p": 0.8747,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909287|n:anthony davis|Points|15+": {
   "aid": null,
@@ -7397,7 +7407,9 @@
   "p": 0.8333,
   "p_fair": 0.8702,
   "price": "-900",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909287|n:anthony davis|Pts + Ast|20+": {
   "aid": null,
@@ -7413,7 +7425,9 @@
   "p": 0.7638,
   "p_fair": 0.7838,
   "price": "-390",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909287|n:anthony davis|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -7429,7 +7443,9 @@
   "p": 0.86,
   "p_fair": 0.8943,
   "price": "-950",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909287|n:anthony davis|Pts + Reb + Ast|30+": {
   "aid": null,
@@ -7445,7 +7461,9 @@
   "p": 0.7345,
   "p_fair": 0.7545,
   "price": "-340",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909287|n:anthony davis|Rebounds|6+": {
   "aid": null,
@@ -7461,7 +7479,9 @@
   "p": 0.8747,
   "p_fair": 0.953,
   "price": "-2500",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909287|n:cj mccollum|Points|10+": {
   "aid": null,
@@ -7473,11 +7493,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "CJ McCollum",
   "p": 0.8488,
   "p_fair": 0.9176,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401909287|n:dyson daniels|Assists|4+": {
   "aid": null,
@@ -7489,11 +7511,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Dyson Daniels",
   "p": 0.8458,
   "p_fair": 0.8168,
   "price": "-590",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nba:401909287|n:dyson daniels|Rebounds|4+": {
   "aid": null,
@@ -7505,11 +7529,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Dyson Daniels",
   "p": 0.85,
   "p_fair": 0.9017,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909287|n:kingston flemings|Points|5+": {
   "aid": null,
@@ -7521,11 +7547,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Kingston Flemings",
   "p": 0.8488,
   "p_fair": 0.9544,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401909287|n:kingston flemings|Pts + Ast|10+": {
   "aid": null,
@@ -7537,11 +7565,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Kingston Flemings",
   "p": 0.8468,
   "p_fair": 0.9087,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909287|n:kyshawn george|Points|5+": {
   "aid": null,
@@ -7552,11 +7582,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Kyshawn George",
   "p": 0.8747,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 33.0
  },
  "nba:401909287|n:nickeil alexander walker|Assists|2+": {
   "aid": null,
@@ -7568,11 +7600,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Nickeil Alexander-Walker",
   "p": 0.8458,
   "p_fair": null,
   "price": "-590",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909287|n:onyeka okongwu|Assists|2+": {
   "aid": null,
@@ -7584,11 +7618,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Onyeka Okongwu",
   "p": 0.8517,
   "p_fair": 0.8219,
   "price": "-620",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401909287|n:onyeka okongwu|Points|10+": {
   "aid": null,
@@ -7600,11 +7636,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Onyeka Okongwu",
   "p": 0.8488,
   "p_fair": 0.8983,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 22.0
  },
  "nba:401909287|n:onyeka okongwu|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -7616,11 +7654,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Onyeka Okongwu",
   "p": 0.8505,
   "p_fair": 0.8777,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 33.0
  },
  "nba:401909287|n:trae young|Assists|8+": {
   "aid": null,
@@ -7632,11 +7672,13 @@
   "league": "nba",
   "line": "8+",
   "market": "Assists",
+  "matched": "name",
   "name": "Trae Young",
   "p": 0.7643,
   "p_fair": 0.7727,
   "price": "-340",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909287|n:trae young|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -7648,11 +7690,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Trae Young",
   "p": 0.845,
   "p_fair": 0.8612,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 35.0
  },
  "nba:401909288|n:brandon miller|Assists|2+": {
   "aid": null,
@@ -7664,11 +7708,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Brandon Miller",
   "p": 0.8517,
   "p_fair": 0.8219,
   "price": "-620",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401909288|n:coby white|Pts + Ast|10+": {
   "aid": null,
@@ -7680,11 +7726,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Coby White",
   "p": 0.8468,
   "p_fair": 0.923,
   "price": "-750",
-  "status": "open"
+  "status": "lost",
+  "value": 8.0
  },
  "nba:401909288|n:derrick white|Points|5+": {
   "aid": null,
@@ -7695,11 +7743,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Derrick White",
   "p": 0.8747,
   "price": "-9000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 18.0
  },
  "nba:401909288|n:derrick white|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -7711,11 +7761,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Derrick White",
   "p": 0.8505,
   "p_fair": 0.9006,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 27.0
  },
  "nba:401909288|n:derrick white|Threes Made|1+": {
   "aid": null,
@@ -7727,11 +7779,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Derrick White",
   "p": 0.8539,
   "p_fair": 0.8851,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909288|n:grayson allen|Assists|2+": {
   "aid": null,
@@ -7743,11 +7797,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Grayson Allen",
   "p": 0.7913,
   "p_fair": 0.7776,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909288|n:grayson allen|Pts + Ast|10+": {
   "aid": null,
@@ -7759,11 +7815,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Grayson Allen",
   "p": 0.8468,
   "p_fair": 0.9315,
   "price": "-750",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909288|n:jayson tatum|Pts + Ast|25+": {
   "aid": null,
@@ -7775,11 +7833,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Jayson Tatum",
   "p": 0.8531,
   "p_fair": 0.8285,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 43.0
  },
  "nba:401909288|n:jayson tatum|Reb + Ast|10+": {
   "aid": null,
@@ -7791,11 +7851,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Jayson Tatum",
   "p": 0.8492,
   "p_fair": 0.7984,
   "price": "-720",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909288|n:naz reid|Rebounds|4+": {
   "aid": null,
@@ -7807,11 +7869,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Naz Reid",
   "p": 0.8572,
   "p_fair": 0.9228,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909288|n:naz reid|Threes Made|1+": {
   "aid": null,
@@ -7823,11 +7887,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Naz Reid",
   "p": 0.8539,
   "p_fair": 0.898,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909288|n:neemias queta|Points|5+": {
   "aid": null,
@@ -7839,11 +7905,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Neemias Queta",
   "p": 0.8573,
   "p_fair": 0.9604,
   "price": "-1250",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401909288|n:neemias queta|Rebounds|4+": {
   "aid": null,
@@ -7855,11 +7923,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Neemias Queta",
   "p": 0.85,
   "p_fair": 0.925,
   "price": "-1400",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909288|n:paul george|Points|10+": {
   "aid": null,
@@ -7871,11 +7941,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Paul George",
   "p": 0.8547,
   "p_fair": 0.9214,
   "price": "-1200",
-  "status": "open"
+  "status": "lost",
+  "value": 8.0
  },
  "nba:401909288|n:paul george|Pts + Ast|15+": {
   "aid": null,
@@ -7887,11 +7959,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Paul George",
   "p": 0.8468,
   "p_fair": 0.8726,
   "price": "-750",
-  "status": "open"
+  "status": "lost",
+  "value": 9.0
  },
  "nba:401909288|n:paul george|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -7903,11 +7977,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Paul George",
   "p": 0.8505,
   "p_fair": 0.8777,
   "price": "-850",
-  "status": "open"
+  "status": "lost",
+  "value": 14.0
  },
  "nba:401909288|n:payton pritchard|Reb + Ast|5+": {
   "aid": null,
@@ -7919,11 +7995,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Payton Pritchard",
   "p": 0.7737,
   "p_fair": 0.8103,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401909288|n:sam hauser|Threes Made|1+": {
   "aid": null,
@@ -7935,11 +8013,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Sam Hauser",
   "p": 0.848,
   "p_fair": 0.8927,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909289|n:donovan mitchell|Assists|2+": {
   "aid": null,
