@@ -1,7 +1,7 @@
 # Review 2026-11-06
 
 Picks 17-2 (89.5% vs 71.9% claimed, ROI +17.2%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; 8:00 PM, open), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; live Halftime, Atlanta Hawks 66 - Washington Wizards 59, on pace for 250 (125 so far, line 214.5), on track), Under 241.5 points (Utah Jazz at Dallas Mavericks; 8:00 PM, open), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; 8:00 PM, open).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 9:18 - 1st, Memphis Grizzlies 6 - Oklahoma City Thunder 8), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; live Halftime, Atlanta Hawks 66 - Washington Wizards 59, on pace for 250 (125 so far, line 214.5), on track), Under 241.5 points (Utah Jazz at Dallas Mavericks; live 9:32 - 1st, Dallas Mavericks 8 - Utah Jazz 3, 11 so far, line 241.5, too early to project), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 8:40 - 1st, Minnesota Timberwolves 13 - New Orleans Pelicans 5, 18 so far, line 216.5, too early to project).
 Cautions in force: NBA over on Locks 12/21 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 17-2 (89.5% vs 71.9% claimed).
 Closing line value: +1.27 points on 19 picks; beat the close on 63.2%.
