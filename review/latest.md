@@ -1,24 +1,24 @@
 # Review 2026-11-07
 
-Picks 30-13 (69.8% vs 73.4% claimed, ROI -10.4%).
-Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; 12:45 PM, open), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; 12:30 PM, open), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; 12:00 PM, open), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
+Picks 32-13 (71.1% vs 73.4% claimed, ROI -8.7%).
+Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; 12:45 PM, open), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; 12:30 PM, open), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; live 15:00 - 1st, Boston College Eagles 0 - Florida State Seminoles 0), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 115/130 vs 83%; NHL spread on all saved lines 250/289 vs 83%; NHL teamover on all saved lines 158/180 vs 82%.
-Strong calls 30-13 (69.8% vs 73.4% claimed).
-Closing line value: +1.31 points on 43 picks; beat the close on 65.1%.
-Board sweep: 30-13, 120 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 11.4 losses expected from the settled picks' chances, so 13 or more by now had a 34.8% chance.
+Strong calls 32-13 (71.1% vs 73.4% claimed).
+Closing line value: +1.27 points on 45 picks; beat the close on 64.4%.
+Board sweep: 32-13, 118 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 11.9 losses expected from the settled picks' chances, so 13 or more by now had a 41.6% chance.
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 12 of 17 (71% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 12 of 15 (80% vs 67% stated)
-- LOST efl1 Portsmouth or draw at 70% (-300), Portsmouth 1 - Stoke City 2: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 24 of 28 (86% vs 70% stated)
+- LOST efl1 Portsmouth or draw at 70% (-300), Portsmouth 1 - Stoke City 2: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 25 of 29 (86% vs 70% stated)
 - LOST epl Tottenham Hotspur or draw at 66% (-240), Leeds United 1 - Tottenham Hotspur 0: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game; picks like it: 10 of 15 (67% vs 68% stated)
 - LOST wsl Chelsea at 84% (-900), Chelsea 1 - Everton 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST esp Málaga or draw at 69% (-270), Málaga 1 - Racing Santander 2: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game; picks like it: 9 of 12 (75% vs 71% stated)
 - LOST ita Frosinone or draw at 70% (-290), Cagliari 1 - Frosinone 0: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 16 of 17 (94% vs 70% stated)
-- LOST efl1 West Ham United or draw at 80% (-550), Blackburn Rovers 2 - West Ham United 1: margin 1 · the book had my side favoured too · called at 80% · upset · close game; picks like it: 17 of 23 (74% vs 79% stated)
+- LOST efl1 West Ham United or draw at 80% (-550), Blackburn Rovers 2 - West Ham United 1: margin 1 · the book had my side favoured too · called at 80% · upset · close game; picks like it: 18 of 24 (75% vs 79% stated)
 - LOST facup Huddersfield Town at 71% (-290), Exeter City 2 - Huddersfield Town 1: margin 1 · the book had my side favoured too · called at 71% · favourite lost · close game
 - LOST sco Dundee or draw at 65% (-220), Dundee 1 - St Johnstone 2: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game
 - LOST efl1 Southampton or draw at 82% (-700), Preston North End 1 - Southampton 0: margin 1 · the book had my side favoured too · called at 82% · upset · close game; picks like it: 12 of 18 (67% vs 80% stated)
-- LOST efl1 Sheffield United or draw at 77% (-450), Charlton Athletic 2 - Sheffield United 1: margin 1 · the book had my side favoured too · called at 77% · upset · close game; picks like it: 18 of 25 (72% vs 77% stated)
+- LOST efl1 Sheffield United or draw at 77% (-450), Charlton Athletic 2 - Sheffield United 1: margin 1 · the book had my side favoured too · called at 77% · upset · close game; picks like it: 20 of 27 (74% vs 77% stated)
 Why picks lost (14 days): favourite lost 144, close game 122, upset 58, coin flip 45, blowout 41, price moved against it 29.
 Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 68%; 13.9 losses expected, 9 came in (96.6% chance of that many or more).
 - LOST arg San Lorenzo or draw at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost; picks like it: 11 of 18 (61% vs 69% stated)
