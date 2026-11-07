@@ -1,7 +1,7 @@
 # Review 2026-11-07
 
 No picks settled yet.
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; live 9:08 - 4th, Los Angeles Lakers 95 - Portland Trail Blazers 81, 1 so far, needs 3 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; won); 4 of 5 won, the ticket now rests on 1 leg, 78% on its stated chance before play.
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; live 7:19 - 4th, Los Angeles Lakers 95 - Portland Trail Blazers 89, 1 so far, needs 3 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; won); 4 of 5 won, the ticket now rests on 1 leg, 78% on its stated chance before play.
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Board sweep: 0-0, 148 open -- still clean.
 Why picks lost (14 days): favourite lost 135, close game 110, upset 53, coin flip 45, blowout 41, price moved against it 29.
