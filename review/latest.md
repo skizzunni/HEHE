@@ -1,7 +1,7 @@
 # Review 2026-11-07
 
 Picks 45-15 (75.0% vs 73.1% claimed, ROI -3.1%).
-Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; live 6:17 - 3rd, Arkansas Razorbacks 10 - Auburn Tigers 3), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; live 6:09 - 3rd, Duke Blue Devils 31 - NC State Wolfpack 3), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; live 2:29 - 4th, Boston College Eagles 24 - Florida State Seminoles 30, already over (24, line 15.5)), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
+Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; live 5:01 - 3rd, Arkansas Razorbacks 10 - Auburn Tigers 9), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; live 3:52 - 3rd, Duke Blue Devils 38 - NC State Wolfpack 3), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; live 1:54 - 4th, Boston College Eagles 24 - Florida State Seminoles 31, already over (24, line 15.5)), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 115/130 vs 83%; NHL spread on all saved lines 250/289 vs 83%; NHL teamover on all saved lines 158/180 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NCAAF spread 185/252 (73% vs 82%); NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 83.0% for the rest (1524 and 5851 legs), so a cold week is noise, not a signal.
 Strong calls 45-15 (75.0% vs 73.1% claimed).
@@ -41,7 +41,7 @@ Lottery 100: open (0/6 legs won)
 Lottery 100: open (0/5 legs won)
 Lottery 10k: open (0/11 legs won)
 Lottery 10k: open (0/9 legs won)
-Lottery 10k: open (0/12 legs won)
+Lottery 10k: open (1/12 legs won)
 Lottery 10k+25: open (0/11 legs won)
 Lottery 10k+50: open (0/11 legs won)
 Lottery 10k+100: open (0/11 legs won)
