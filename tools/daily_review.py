@@ -739,7 +739,7 @@ def review_day(day, ledger, locks, lottery, props):
     losses = [dict(league=e["league"], pick=e["pick"], said=e.get("conf"), price=e.get("price"),
                    match=e.get("matchup"), score=e.get("scores") or {},
                    against_market=e.get("market_agrees") is False, why=e.get("diagnosis") or "",
-                   tags=loss_tags(e))
+                   tags=loss_tags(e), like=like_record(ledger, e))
               for e in lost_e]
     # the whole board as one ticket: clean, or broken by its first loss
     n_open = sum(1 for e in ledger.values() if record_priced(e) and e.get("status") == "open"
@@ -811,6 +811,20 @@ def review_day(day, ledger, locks, lottery, props):
                 locks=lk_view, safe_locks=sk_view, lottery=lt_view, props=pr_view)
 
 
+def like_record(book, e, band=5):
+    """Graded picks like a lost one -- same league, same bet (win or double
+    chance), called within `band` points: dict(won, n, said), or None under
+    10. Tells a bad beat on a sound kind of pick from a leak."""
+    c = e.get("conf")
+    if c is None:
+        return None
+    R = [x for x in book.values() if x is not e and x.get("status") in ("won", "lost") and x.get("league") == e.get("league")
+         and bool(x.get("dc")) == bool(e.get("dc")) and x.get("conf") is not None and abs(x["conf"] - c) <= band]
+    if len(R) < 10:
+        return None
+    return dict(won=sum(x["status"] == "won" for x in R), n=len(R), said=round(sum(x["conf"] for x in R) / len(R)))
+
+
 def loss_line(L):
     """One lost pick and why, for the review and the hourly report."""
     sc = L.get("score") or {}
@@ -818,7 +832,9 @@ def loss_line(L):
     return (f"- LOST {L['league']} {L['pick']} at {L['said']}%" + (f" ({L['price']})" if L.get("price") else "")
             + (f", {score}" if score else "") + (" (against the market)" if L.get("against_market") else "")
             + f": {L.get('why') or ''}" + (lambda t: f" [{', '.join(t)}]" if t else "")(
-                [t for t in L.get("tags") or [] if t not in (L.get("why") or "")]))
+                [t for t in L.get("tags") or [] if t not in (L.get("why") or "")])
+            + (lambda k: f"; picks like it: {k['won']} of {k['n']} ({round(100 * k['won'] / k['n'])}% vs {k['said']}% stated)"
+               if k else "")(L.get("like")))
 
 
 def yesterday_line(y):

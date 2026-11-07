@@ -4127,3 +4127,8 @@ from ladder.py's constants) (2026-11-07).
 Ladder options table notes when the best leg count on the stated chances pays outside 2x-5x and was left
 out by the user's band (Nov 7: 1-3 legs rated 1.2e-5 to 1.4e-5 to reach $10k against 9.7e-6 for the
 6-leg ticket chosen) (2026-11-07).
+Every loss line in the review now carries "picks like it" (`daily_review.like_record`: same league, same
+bet, called within 5 pts; 10+ graded), to tell a bad beat on a sound kind of pick from a leak. Study, no
+rule: soccer straight-win picks at 65-70% 36/44 then 27/35 (82%, 77% vs 67%), 70-75% 86% then 82% vs
+72%, so the Nov 7 morning losses (Osnabruck, Holstein Kiel, Portsmouth, Tottenham, all 65-70%, all by
+one goal) are variance, not a leak (2026-11-07).

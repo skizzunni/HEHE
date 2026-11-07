@@ -41,6 +41,26 @@ class ReviewSweepLine(unittest.TestCase):
                          "Yesterday (2026-11-05): board 30-0, clean sweep.")
 
 
+class LikeRecord(unittest.TestCase):
+    def test_like_record_and_line(self):
+        import os, sys
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        lost = dict(league="epl", conf=66, dc=False, status="lost")
+        book = {"x": lost}
+        for i in range(12):
+            book[f"w{i}"] = dict(league="epl", conf=64 + i % 4, dc=False, status="won" if i < 9 else "lost")
+        book["far"] = dict(league="epl", conf=80, dc=False, status="won")            # outside the band
+        book["dc"] = dict(league="epl", conf=66, dc=True, status="won")              # other bet
+        book["nfl"] = dict(league="nfl", conf=66, dc=False, status="won")            # other league
+        self.assertEqual(daily_review.like_record(book, lost), dict(won=9, n=12, said=66))
+        self.assertIsNone(daily_review.like_record({"x": lost}, lost))
+        line = daily_review.loss_line(dict(league="epl", pick="Tottenham Hotspur", said=66, price="-240",
+                                           score={"Leeds United": 1, "Tottenham Hotspur": 0}, why="margin 1",
+                                           tags=["favourite lost"], like=dict(won=9, n=12, said=66)))
+        self.assertTrue(line.endswith("[favourite lost]; picks like it: 9 of 12 (75% vs 66% stated)"), line)
+
+
 class CallCautions(unittest.TestCase):
     def test_short_in_both_halves_only(self):
         book = {}
