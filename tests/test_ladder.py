@@ -81,6 +81,12 @@ class Ladder(unittest.TestCase):
         b6["days"]["2026-11-06"] = b6["days"].pop("2026-11-07")
         self.assertEqual(len(ladder.choose(b6, "2026-11-06")), 5)                     # 11-06 stays 5 legs
 
+    def test_log_has_leg_count_and_lost_leg(self):
+        b = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "lost")]})
+        with mock.patch.object(ladder, "START", "2026-11-03"):
+            r = ladder.report(b, start="2026-11-03")
+        self.assertEqual([(g["n"], g["lost_on"]) for g in r["log"]], [(5, []), (5, ["2026-11-04|e"])])
+
     def test_count_record(self):
         b = book({"2026-11-03": W5, "2026-11-04": W5[:2] + [("c", 0.8, "lost")] + W5[3:],
                   "2026-11-05": W5[:4] + [("e", 0.8, "open")]})

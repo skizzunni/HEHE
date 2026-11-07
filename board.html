@@ -1652,9 +1652,10 @@ function ladderLast(S, money){
 function ladderLog(G, money){
   if(!G.length) return '';
   return '<details><summary>This run, day by day (' + G.length + ')</summary><table class="sweeptab"><thead><tr><th>Day</th>'
-    + '<th>Stake</th><th>Price</th><th>Result</th></tr></thead><tbody>'
-    + G.map(g => '<tr><td>' + esc(g.day) + '</td><td>' + money(g.stake) + '</td><td>' + g.pays.toFixed(2) + '&times;</td><td>'
-      + (g.result === 'won' ? '<span class="wl won">WON</span>' : '<span class="wl lost">LOST</span>') + '</td></tr>').join('')
+    + '<th>Legs</th><th>Stake</th><th>Price</th><th>Result</th></tr></thead><tbody>'
+    + G.map(g => '<tr><td>' + esc(g.day) + '</td><td>' + (g.n || '') + '</td><td>' + money(g.stake) + '</td><td>' + g.pays.toFixed(2) + '&times;</td><td>'
+      + (g.result === 'won' ? '<span class="wl won">WON</span>' : '<span class="wl lost">LOST</span>'
+         + ((g.lost_on || []).length ? '<div class="sbn">on ' + g.lost_on.map(esc).join(', ') + '</div>' : '')) + '</td></tr>').join('')
     + '</tbody></table></details>';
 }
 // Ladder challenge (ladder.py): $1 to $10,000, one parlay a day of the 5

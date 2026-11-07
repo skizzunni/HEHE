@@ -265,7 +265,8 @@ def report(book=None, start=START, target=TARGET):
                             lost_on=[L["label"] for L in cur["days"][-1]["legs"] if L.get("status") == "lost"])
                        if cur and cur["status"] == "lost" else None),
                 today=today, wins_needed=need, last=last,
-                log=[dict(day=d["day"], stake=d["stake"], result=d["result"], pays=d["pays"]) for d in done],
+                log=[dict(day=d["day"], stake=d["stake"], result=d["result"], pays=d["pays"], n=len(d["legs"]),
+                          lost_on=[L["label"] for L in d["legs"] if L.get("status") == "lost"]) for d in done],
                 chance_to_target=round(p ** need, 8) if p and need else None,
                 # every ladder leg ever graded, against its stated chance
                 legs_record=(lambda G: dict(won=sum(L["status"] == "won" for L in G), n=len(G),

@@ -4102,3 +4102,6 @@ Review "Yesterday" line now gives the losses its chances expected and the chance
 (straight wins 62/75 then 60/76, 83% and 79% vs 72-74%; double chances 78% and 79% vs 74%); away double
 chances on par (72% vs 72-73%), so Nov 6's home-favourite losses (Atlante, San Diego Wave, Shimizu) are
 not a leak (2026-11-07).
+Ladder day-by-day log shows each ticket's leg count and, for a lost ticket, the leg it lost on (needed now
+that the 2x-5x chooser varies the count). Study, no rule: J-League calls 16/21 then 14/21 (76%, 67% vs
+72-73%) -- mixed, so Nagoya Grampus's 0-2 at Kyoto (76%) is not a leak (2026-11-07).
