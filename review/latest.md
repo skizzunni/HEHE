@@ -2,7 +2,7 @@
 
 Picks 5-1 (83.3% vs 72.5% claimed, ROI +9.5%).
 Ladder: run 2 ended (peak $1.00, lost on Austin Reaves: 4+ Assists); the next ticket starts again at $1; best ever $9.57.
-Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
+Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1085/1245 vs 82%; NHL over on all saved lines 131/149 vs 84%; NHL spread on all saved lines 286/333 vs 83%.
 Strong calls 5-1 (83.3% vs 72.5% claimed).
 Closing line value: +2.73 points on 6 picks; beat the close on 83.3%.
 Board sweep: 5-1, 145 open -- broken (first loss: jpn Nagoya Grampus at 76%); 1.7 losses expected from the settled picks' chances, so 1 or more by now had a 85.5% chance.
