@@ -9207,6 +9207,7 @@
   "p": 0.8501,
   "p_fair": 0.8315,
   "price": "-620",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -9224,6 +9225,7 @@
   "p": 0.8747,
   "price": "-10000",
   "prop_lock": true,
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -9242,6 +9244,7 @@
   "p": 0.848,
   "p_fair": 0.8733,
   "price": "-1100",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -9292,11 +9295,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Ayo Dosunmu",
   "p": 0.8505,
   "p_fair": 0.8792,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nba:401909293|n:dejounte murray|Assists|4+": {
   "aid": null,
@@ -9308,11 +9313,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Dejounte Murray",
   "p": 0.8517,
   "p_fair": 0.8315,
   "price": "-620",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909293|n:dejounte murray|Points|10+": {
   "aid": null,
@@ -9324,11 +9331,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Dejounte Murray",
   "p": 0.8488,
   "p_fair": 0.909,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 7.0
  },
  "nba:401909293|n:derik queen|Points|5+": {
   "aid": null,
@@ -9340,11 +9349,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Derik Queen",
   "p": 0.8488,
   "p_fair": 0.962,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909293|n:derik queen|Rebounds|4+": {
   "aid": null,
@@ -9356,11 +9367,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Derik Queen",
   "p": 0.85,
   "p_fair": 0.9272,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909293|n:jaden mcdaniels|Assists|2+": {
   "aid": null,
@@ -9372,11 +9385,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jaden McDaniels",
   "p": 0.7897,
   "p_fair": 0.7741,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909293|n:jaden mcdaniels|Points|10+": {
   "aid": null,
@@ -9388,11 +9403,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Jaden McDaniels",
   "p": 0.848,
   "p_fair": 0.909,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nba:401909293|n:jeremiah fears|Assists|2+": {
   "aid": null,
@@ -9404,11 +9421,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jeremiah Fears",
   "p": 0.8517,
   "p_fair": 0.8281,
   "price": "-620",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909293|n:jeremiah fears|Reb + Ast|5+": {
   "aid": null,
@@ -9420,11 +9439,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Jeremiah Fears",
   "p": 0.856,
   "p_fair": 0.8735,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909293|n:jonathan kuminga|Assists|2+": {
   "aid": null,
@@ -9436,11 +9457,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jonathan Kuminga",
   "p": 0.7373,
   "p_fair": 0.7174,
   "price": "-295",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909293|n:jonathan kuminga|Points|5+": {
   "aid": null,
@@ -9451,11 +9474,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Jonathan Kuminga",
   "p": 0.8747,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909293|n:lamelo ball|Pts + Ast|20+": {
   "aid": null,
@@ -9467,11 +9492,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "LaMelo Ball",
   "p": 0.8547,
   "p_fair": 0.8614,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 30.0
  },
  "nba:401909293|n:lamelo ball|Threes Made|2+": {
   "aid": null,
@@ -9483,11 +9510,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "LaMelo Ball",
   "p": 0.8464,
   "p_fair": 0.8916,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909293|n:rudy gobert|Points|5+": {
   "aid": null,
@@ -9499,11 +9528,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Rudy Gobert",
   "p": 0.848,
   "p_fair": 0.9545,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909293|n:terrence shannon|Threes Made|1+": {
   "aid": null,
@@ -9519,7 +9550,9 @@
   "p": 0.7387,
   "p_fair": 0.7789,
   "price": "-400",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909293|n:trey murphy|Points|5+": {
   "aid": null,
@@ -9530,11 +9563,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Trey Murphy III",
   "p": 0.8747,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909293|n:zion williamson|Pts + Ast|15+": {
   "aid": null,
@@ -9546,11 +9581,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Zion Williamson",
   "p": 0.8468,
   "p_fair": 0.884,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909294|n:austin reaves|Assists|4+": {
   "aid": null,
@@ -63530,11 +63567,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Blake Coleman",
   "p": 0.8527,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892660|n:kirill kaprizov|Shots on Goal|2+": {
   "aid": null,
@@ -63546,11 +63585,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kirill Kaprizov",
   "p": 0.8457,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892660|n:matt boldy|Shots on Goal|2+": {
   "aid": null,
@@ -63562,11 +63603,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Boldy",
   "p": 0.8622,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nhl:401892660|n:matt boldy|Shots on Goal|3+": {
   "aid": null,
@@ -63578,11 +63621,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Boldy",
   "p": 0.7323,
   "p_fair": null,
   "price": "-370",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nhl:401892660|n:quinn hughes|Shots on Goal|2+": {
   "aid": null,
@@ -63594,11 +63639,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Quinn Hughes",
   "p": 0.7351,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892660|n:tyler toffoli|Shots on Goal|1+": {
   "aid": null,
@@ -63610,11 +63657,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Tyler Toffoli",
   "p": 0.8328,
   "p_fair": null,
   "price": "-870",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892660|n:will smith|Shots on Goal|1+": {
   "aid": null,
@@ -63626,12 +63675,14 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Will Smith",
   "p": 0.8702,
   "p_fair": null,
   "price": "-1450",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892661|n:beckett sennecke|Shots on Goal|2+": {
   "aid": null,
@@ -63643,11 +63694,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Beckett Sennecke",
   "p": 0.7351,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892661|n:cutter gauthier|Shots on Goal|2+": {
   "aid": null,
@@ -63659,11 +63712,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cutter Gauthier",
   "p": 0.8705,
   "p_fair": null,
   "price": "-1500",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892661|n:cutter gauthier|Shots on Goal|3+": {
   "aid": null,
@@ -63675,11 +63730,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cutter Gauthier",
   "p": 0.7409,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892661|n:joel farabee|Shots on Goal|1+": {
   "aid": null,
@@ -63691,11 +63748,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Joel Farabee",
   "p": 0.8686,
   "p_fair": null,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892661|n:leo carlsson|Shots on Goal|2+": {
   "aid": null,
@@ -63707,11 +63766,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Leo Carlsson",
   "p": 0.6947,
   "p_fair": null,
   "price": "-295",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892661|n:matt coronato|Shots on Goal|1+": {
   "aid": null,
@@ -63722,11 +63783,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Coronato",
   "p": 0.8747,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892661|n:matvei gridin|Shots on Goal|1+": {
   "aid": null,
@@ -63738,11 +63801,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matvei Gridin",
   "p": 0.8638,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892661|n:mikael backlund|Shots on Goal|1+": {
   "aid": null,
@@ -63754,11 +63819,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikael Backlund",
   "p": 0.8493,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892661|n:mikael granlund|Shots on Goal|1+": {
   "aid": null,
@@ -63770,11 +63837,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikael Granlund",
   "p": 0.8457,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "ucl:401915307|335870|Goalkeeper Saves|2+": {
   "aid": "335870",
