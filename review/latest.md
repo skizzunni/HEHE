@@ -1,15 +1,15 @@
 # Review 2026-11-07
 
-Picks 60-18 (76.9% vs 71.4% claimed, ROI +3.7%).
+Picks 62-18 (77.5% vs 71.4% claimed, ROI +4.4%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 31/51 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NCAAF over on all saved lines 600/702 vs 81%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.
-Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 373/496 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 6581 legs), so a cold week is noise, not a signal.
-Strong calls 47-16 (74.6% vs 73.2% claimed).
-Closing line value: +0.79 points on 78 picks; beat the close on 51.3%.
-Board sweep: 60-18, 91 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 22.3 losses expected from the settled picks' chances, so 18 or more by now had a 89.2% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (0.9 expected), ncaaf 2 (4.4 expected), sco 2 (1 expected), ecu 1 (0.3 expected), esp 1 (0.9 expected), facup 1 (2.5 expected), ita 1 (0.7 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
+Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 373/496 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 6583 legs), so a cold week is noise, not a signal.
+Strong calls 49-16 (75.4% vs 73.1% claimed).
+Closing line value: +0.78 points on 80 picks; beat the close on 51.2%.
+Board sweep: 62-18, 89 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 22.9 losses expected from the settled picks' chances, so 18 or more by now had a 91.5% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (1.2 expected), ncaaf 2 (4.4 expected), sco 2 (1 expected), ecu 1 (0.3 expected), esp 1 (0.9 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
-- LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 12 of 17 (71% vs 68% stated)
-- LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 12 of 15 (80% vs 67% stated)
+- LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 18 (72% vs 68% stated)
+- LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 13 of 16 (81% vs 68% stated)
 - LOST efl1 Portsmouth or draw at 70% (-300), Portsmouth 1 - Stoke City 2: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 25 of 29 (86% vs 70% stated)
 - LOST epl Tottenham Hotspur or draw at 66% (-240), Leeds United 1 - Tottenham Hotspur 0: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game; picks like it: 10 of 15 (67% vs 68% stated)
 - LOST wsl Chelsea at 84% (-900), Chelsea 1 - Everton 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
