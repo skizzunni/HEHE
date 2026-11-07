@@ -1,11 +1,11 @@
 # Review 2026-11-06
 
-Picks 27-4 (87.1% vs 73.9% claimed, ROI +12.4%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 4:21 - 4th, Memphis Grizzlies 89 - Oklahoma City Thunder 117, 2 so far, line reached), Austin Reaves: 4+ Assists (POR @ LAL; live 8:43 - 1st, Los Angeles Lakers 2 - Portland Trail Blazers 4, 0 so far, needs 4 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; live 55.7 - 4th, Dallas Mavericks 112 - Utah Jazz 98, on pace for 214 (210 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 7:55 - 4th, Minnesota Timberwolves 87 - New Orleans Pelicans 89, on pace for 211 (176 so far, line 216.5), behind the pace it needs).
+Picks 28-4 (87.5% vs 73.8% claimed, ROI +13.3%).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 2:19 - 4th, Memphis Grizzlies 91 - Oklahoma City Thunder 126, 2 so far, line reached), Austin Reaves: 4+ Assists (POR @ LAL; live 7:02 - 1st, Los Angeles Lakers 4 - Portland Trail Blazers 10, 0 so far, needs 4 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 6:15 - 4th, Minnesota Timberwolves 94 - New Orleans Pelicans 89, on pace for 210 (183 so far, line 216.5), behind the pace it needs).
 Cautions in force: NBA over on Locks 13/22 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 21-3 (87.5% vs 71.9% claimed).
-Closing line value: +1.22 points on 31 picks; beat the close on 51.6%.
-Board sweep: 27-4, 20 open -- broken (first loss: arg San Lorenzo at 68%); 8.1 losses expected from the settled picks' chances, so 4 or more by now had a 98% chance.
+Closing line value: +1.19 points on 32 picks; beat the close on 53.1%.
+Board sweep: 28-4, 19 open -- broken (first loss: arg San Lorenzo at 68%); 8.4 losses expected from the settled picks' chances, so 4 or more by now had a 98.4% chance.
 - LOST arg San Lorenzo at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost
 - LOST col Internacional de Bogotá at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 - LOST mex Atlético de San Luis at 82% (-650), Atlético de San Luis 0 - FC Juárez 1: margin 1 · the book had my side favoured too · called at 82% · upset · close game
@@ -29,16 +29,16 @@ Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST nhl Edmonton Oilers at 63% (-192), Anaheim Ducks 5 - Edmonton Oilers 4: margin 1 · the book had my side favoured too · called at 63% · favourite lost · close game
 - LOST ncaaf UTSA Roadrunners at 72% (-278), Florida Atlantic Owls 60 - UTSA Roadrunners 29: margin 31 · the book had my side favoured too · called at 72% · favourite lost · blowout
 - LOST nhl Colorado Avalanche at 66% (-218), Colorado Avalanche 2 - Nashville Predators 3: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game
-Locks 2/11 won, 9 open; Best play top 2 (62%) open.
-Safe Locks 4/11 won, 7 open; Winners parlay top 2 (84%) open; Best play top 7 (51%) open.
-Lottery 100: lost (0/9 legs won, killed by Under 230.5 points)
+Locks 3/11 won, 8 open; Best play top 2 (62%) open.
+Safe Locks 5/11 won, 6 open; Winners parlay top 2 (84%) open; Best play top 7 (51%) open.
+Lottery 100: lost (0/9 legs won, killed by Over 221.5 points, Under 230.5 points)
 Lottery 100: lost (1/7 legs won, killed by Over 222.5 points, Columbus Blue Jackets +1.5)
 Lottery 10k: lost (1/13 legs won, killed by Under 230.5 points)
-Lottery 10k+25: lost (1/13 legs won, killed by Under 230.5 points)
-Lottery 10k+50: lost (1/13 legs won, killed by Under 230.5 points)
+Lottery 10k+25: lost (1/13 legs won, killed by Under 230.5 points, Over 223.5 points)
+Lottery 10k+50: lost (1/13 legs won, killed by Under 230.5 points, Over 223.5 points)
 Lottery 10k+100: lost (1/12 legs won, killed by Under 230.5 points)
-Ladder-consistency props (all time): 1651/1981 won (83.3%) vs 86.4% fair, 87.4% price.
-Props 43/58 vs 83.9% claimed.
+Ladder-consistency props (all time): 1663/1994 won (83.4%) vs 86.4% fair, 87.4% price.
+Props 56/72 vs 84.2% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=126), ncaaf 0.00 (n=171), nfl 0.00 (n=42), nhl 0.00 (n=145)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=127), ncaaf 0.00 (n=171), nfl 0.00 (n=42), nhl 0.00 (n=145)
