@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 61.3,
-  "brier_close": 0.1701,
-  "brier_published": 0.1734,
+  "beat_close_pct": 61.7,
+  "brier_close": 0.1719,
+  "brier_published": 0.1746,
   "dates": [
-   "2026-11-01",
+   "2026-11-02",
    "2026-11-07"
   ],
-  "logloss_close": 0.5109,
-  "logloss_published": 0.5194,
-  "mean_clv_pts": 0.82,
+  "logloss_close": 0.5149,
+  "logloss_published": 0.5219,
+  "mean_clv_pts": 0.77,
   "n": 300
  },
  "market_is_model": true,
@@ -3105,6 +3105,15 @@
    "published": 0.82,
    "won": 1
   },
+  "efl1:401880165": {
+   "call": false,
+   "close": 0.8181,
+   "clv": 1.81,
+   "day": "2026-11-07",
+   "league": "efl1",
+   "published": 0.8,
+   "won": 0
+  },
   "efl1:401880166": {
    "call": false,
    "close": 0.7047,
@@ -3122,6 +3131,15 @@
    "league": "efl1",
    "published": 0.64,
    "won": 1
+  },
+  "efl1:401880168": {
+   "call": false,
+   "close": 0.7667,
+   "clv": 4.67,
+   "day": "2026-11-07",
+   "league": "efl1",
+   "published": 0.72,
+   "won": 0
   },
   "efl1:401880170": {
    "call": false,
@@ -4513,6 +4531,15 @@
    "record_excluded": "unpriced_or_unverifiable",
    "won": 1
   },
+  "epl:401879241": {
+   "call": false,
+   "close": 0.7362,
+   "clv": 1.62,
+   "day": "2026-11-07",
+   "league": "epl",
+   "published": 0.72,
+   "won": 1
+  },
   "epl:401879242": {
    "call": false,
    "close": 0.8053,
@@ -5118,6 +5145,15 @@
    "published": 0.87,
    "won": 1
   },
+  "facup:401931087": {
+   "call": false,
+   "close": 0.6806,
+   "clv": 0.06,
+   "day": "2026-11-07",
+   "league": "facup",
+   "published": 0.68,
+   "won": 1
+  },
   "facup:401931089": {
    "call": false,
    "close": 0.7524,
@@ -5135,6 +5171,15 @@
    "league": "facup",
    "published": 0.73,
    "won": 0
+  },
+  "facup:401931100": {
+   "call": false,
+   "close": 0.7142,
+   "clv": -1.58,
+   "day": "2026-11-07",
+   "league": "facup",
+   "published": 0.73,
+   "won": 1
   },
   "facup:401931102": {
    "call": false,
@@ -25776,5 +25821,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-07T17:00+00:00"
+ "updated": "2026-11-07T17:06+00:00"
 }
