@@ -1,11 +1,11 @@
 # Review 2026-11-07
 
-Picks 11-8 (57.9% vs 72.0% claimed, ROI -24.9%).
+Picks 14-8 (63.6% vs 71.8% claimed, ROI -17.2%).
 Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; 12:45 PM, open), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; 12:30 PM, open), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; 12:00 PM, open), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 115/130 vs 83%; NHL spread on all saved lines 250/289 vs 83%; NHL teamover on all saved lines 158/180 vs 82%.
-Strong calls 11-8 (57.9% vs 72.0% claimed).
-Closing line value: +1.68 points on 19 picks; beat the close on 73.7%.
-Board sweep: 11-8, 140 open -- broken (first loss: jpn Nagoya Grampus at 76%); 5.3 losses expected from the settled picks' chances, so 8 or more by now had a 13.2% chance.
+Strong calls 14-8 (63.6% vs 71.8% claimed).
+Closing line value: +1.66 points on 22 picks; beat the close on 72.7%.
+Board sweep: 14-8, 139 open -- broken (first loss: jpn Nagoya Grampus at 76%); 6.2 losses expected from the settled picks' chances, so 8 or more by now had a 26.2% chance.
 - LOST jpn Nagoya Grampus at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 12 of 17 (71% vs 68% stated)
 - LOST ger2 Holstein Kiel at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 12 of 15 (80% vs 67% stated)

@@ -540,6 +540,7 @@
    "seen": "2026-11-06T21:31:26+00:00",
    "side": "home",
    "start": "2026-11-07T14:30Z",
+   "status": "lost",
    "team": "Mainz",
    "tip": "9:30 AM",
    "venue": "FanDuel"
@@ -557,6 +558,7 @@
    "seen": "2026-11-06T23:02:44+00:00",
    "side": "home",
    "start": "2026-11-07T14:30Z",
+   "status": "lost",
    "team": "Mainz",
    "tip": "9:30 AM",
    "venue": "Kalshi"
@@ -6386,6 +6388,45 @@
    "tip": "7:30 PM",
    "venue": "FanDuel"
   },
+  "ncaab:401920424|home|Kalshi": {
+   "dec": 1.794,
+   "ev": 0.0911,
+   "fair": 0.6082,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ncaab:401920424",
+   "kind": "suspect",
+   "league": "ncaab",
+   "match": "ARK @ UVA",
+   "price": "-126",
+   "seen": "2026-11-07T16:29:31+00:00",
+   "side": "home",
+   "start": "2026-11-08T18:00Z",
+   "team": "Virginia Cavaliers",
+   "tip": "1:00 PM",
+   "venue": "Kalshi"
+  },
+  "ncaab:401920424|sure": {
+   "id": "ncaab:401920424",
+   "kind": "sure",
+   "league": "ncaab",
+   "legs": [
+    {
+     "price": "+142",
+     "stake_share": 0.4257,
+     "team": "Arkansas Razorbacks",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-126",
+     "stake_share": 0.5743,
+     "team": "Virginia Cavaliers",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "ARK @ UVA",
+   "profit": 0.0303,
+   "seen": "2026-11-07T16:29:31+00:00"
+  },
   "ncaab:401920685|home|Kalshi": {
    "dec": 3.1776,
    "ev": 0.0293,
@@ -8292,6 +8333,23 @@
    "team": "over 44.5",
    "tip": "5:00 PM",
    "venue": "Kalshi"
+  },
+  "ncaaf:401871098|home|FanDuel": {
+   "dec": 3.05,
+   "ev": 0.0204,
+   "fair": 0.3346,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401871098",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "LT @ TROY",
+   "price": "+205",
+   "seen": "2026-11-07T16:29:31+00:00",
+   "side": "home",
+   "start": "2026-11-07T21:00Z",
+   "team": "Troy Trojans",
+   "tip": "4:00 PM",
+   "venue": "FanDuel"
   },
   "nfl:401873009|home|Kalshi": {
    "dec": 2.9824,
@@ -13129,6 +13187,26 @@
    "prob": 0.1769,
    "seen": "2026-10-24T14:29:00+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401871098:home": {
+   "ev": 0.0205,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0204,
+     "fair": 0.3346,
+     "id": "ncaaf:401871098",
+     "price": "+205",
+     "side": "home",
+     "spec": null,
+     "team": "Troy Trojans"
+    }
+   ],
+   "payout": 3.05,
+   "prob": 0.3346,
+   "seen": "2026-11-07T16:29:31+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
