@@ -7630,6 +7630,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV07PSUWASH-46"
   },
+  "KXNCAAFTOTAL-26NOV07RICEUNT-66|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401862821",
+   "label": "under 65.5",
+   "league": "ncaaf",
+   "match": "RICE @ UNT",
+   "posted": "2026-11-07T19:32:58+00:00",
+   "queue": 45047.31,
+   "side": "NO",
+   "spec": {
+    "line": 65.5,
+    "t": "under"
+   },
+   "start": "2026-11-07T21:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV07RICEUNT-66"
+  },
   "KXNCAAFTOTAL-26NOV07RUTGWIS-46|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -12438,6 +12459,28 @@
    "start": "2026-11-08T18:00Z",
    "status": "open",
    "ticker": "KXNFLSPREAD-26NOV08DALIND-DAL5"
+  },
+  "KXNFLSPREAD-26NOV08DENCAR-DEN3|YES": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0162,
+   "fair": 0.5227,
+   "id": "nfl:401873041",
+   "label": "Denver Broncos -2.5",
+   "league": "nfl",
+   "match": "DEN @ CAR",
+   "posted": "2026-11-07T19:32:58+00:00",
+   "queue": 722831.74,
+   "side": "YES",
+   "spec": {
+    "line": -2.5,
+    "t": "spread",
+    "team": "Denver Broncos"
+   },
+   "start": "2026-11-08T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26NOV08DENCAR-DEN3"
   },
   "KXNFLSPREAD-26NOV08LARWAS-LAR5|YES": {
    "ask": 0.51,
