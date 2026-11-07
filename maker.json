@@ -333,6 +333,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV07CINHOU-HOU"
   },
+  "KXNCAAFGAME-26NOV07COLOASU-ASU|YES": {
+   "ask": 0.6,
+   "bid": 0.59,
+   "cost": 0.5943,
+   "edge": 0.005,
+   "fair": 0.5973,
+   "id": "ncaaf:401856852",
+   "label": "Arizona State Sun Devils",
+   "league": "ncaaf",
+   "match": "COLO @ ASU",
+   "posted": "2026-11-07T13:24:52+00:00",
+   "queue": 20385.41,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Arizona State Sun Devils"
+   },
+   "start": "2026-11-08T00:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV07COLOASU-ASU"
+  },
   "KXNCAAFGAME-26NOV07DELKENN-DEL|YES": {
    "ask": 0.53,
    "bid": 0.52,
@@ -6649,6 +6670,27 @@
    "start": "2026-11-07T20:30Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV07CINHOU-62"
+  },
+  "KXNCAAFTOTAL-26NOV07COLOASU-49|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401856852",
+   "label": "under 48.5",
+   "league": "ncaaf",
+   "match": "COLO @ ASU",
+   "posted": "2026-11-07T13:24:52+00:00",
+   "queue": 7222.13,
+   "side": "NO",
+   "spec": {
+    "line": 48.5,
+    "t": "under"
+   },
+   "start": "2026-11-08T00:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV07COLOASU-49"
   },
   "KXNCAAFTOTAL-26NOV07FRESUSU-44|NO": {
    "ask": 0.51,
