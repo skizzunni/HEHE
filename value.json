@@ -998,6 +998,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "mls:761944|away|FanDuel": {
+   "dec": 2.95,
+   "ev": 0.0163,
+   "fair": 0.3445,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "mls:761944",
+   "kind": "value",
+   "league": "mls",
+   "match": "STL @ HOU",
+   "price": "+195",
+   "seen": "2026-11-07T23:08:19+00:00",
+   "side": "away",
+   "start": "2026-11-08T00:00Z",
+   "team": "St. Louis CITY SC",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909093|{\"line\": 236.5, \"t\": \"over\"}|FanDuel": {
    "dec": 1.9524,
    "dk": "-115",
@@ -5800,6 +5817,30 @@
    "tip": "3:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909945|{\"line\": -9.5, \"t\": \"spread\", \"team\": \"Philadelphia 76ers\"}|Kalshi": {
+   "dec": 2.0513,
+   "dk": "-110",
+   "ev": 0.0256,
+   "fair": 0.5,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401909945",
+   "kind": "single",
+   "league": "nba",
+   "market": "spread",
+   "match": "PHI @ CHI",
+   "price": "+105",
+   "seen": "2026-11-07T23:08:19+00:00",
+   "side": "{\"line\": -9.5, \"t\": \"spread\", \"team\": \"Philadelphia 76ers\"}",
+   "spec": {
+    "line": -9.5,
+    "t": "spread",
+    "team": "Philadelphia 76ers"
+   },
+   "start": "2026-11-08T20:30Z",
+   "team": "Philadelphia 76ers -9.5",
+   "tip": "3:30 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909946|away|FanDuel": {
    "dec": 2.3,
    "ev": 0.0669,
@@ -5855,6 +5896,23 @@
    "match": "LAL @ DET",
    "profit": 0.018,
    "seen": "2026-11-07T22:01:41+00:00"
+  },
+  "nba:401909947|away|FanDuel": {
+   "dec": 5.4,
+   "ev": 0.0236,
+   "fair": 0.1895,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909947",
+   "kind": "value",
+   "league": "nba",
+   "match": "UTAH @ MIN",
+   "price": "+440",
+   "seen": "2026-11-07T23:08:19+00:00",
+   "side": "away",
+   "start": "2026-11-09T00:00Z",
+   "team": "Utah Jazz",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
   },
   "ncaab:401906758|away|FanDuel": {
    "dec": 41.0,
@@ -12206,6 +12264,26 @@
    "seen": "2026-10-28T07:20:35+00:00",
    "status": "won",
    "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|mls:761944:away": {
+   "ev": 0.0163,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0163,
+     "fair": 0.3445,
+     "id": "mls:761944",
+     "price": "+195",
+     "side": "away",
+     "spec": null,
+     "team": "St. Louis CITY SC"
+    }
+   ],
+   "payout": 2.95,
+   "prob": 0.3445,
+   "seen": "2026-11-07T23:08:19+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909287:away": {

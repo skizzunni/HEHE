@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 60.0,
-  "brier_close": 0.1708,
-  "brier_published": 0.1731,
+  "beat_close_pct": 60.3,
+  "brier_close": 0.1725,
+  "brier_published": 0.1749,
   "dates": [
-   "2026-11-02",
+   "2026-11-03",
    "2026-11-07"
   ],
-  "logloss_close": 0.5149,
-  "logloss_published": 0.5211,
-  "mean_clv_pts": 0.81,
+  "logloss_close": 0.5195,
+  "logloss_published": 0.5258,
+  "mean_clv_pts": 0.83,
   "n": 300
  },
  "market_is_model": true,
@@ -2186,6 +2186,15 @@
    "day": "2026-10-24",
    "league": "chn",
    "published": 0.74,
+   "won": 1
+  },
+  "col:401877771": {
+   "call": false,
+   "close": 0.7616,
+   "clv": 1.16,
+   "day": "2026-11-07",
+   "league": "col",
+   "published": 0.75,
    "won": 1
   },
   "col:401877772": {
@@ -11928,6 +11937,42 @@
    "published": 0.78,
    "won": 1
   },
+  "mls:761936": {
+   "call": false,
+   "close": 0.7566,
+   "clv": 7.66,
+   "day": "2026-11-07",
+   "league": "mls",
+   "published": 0.68,
+   "won": 1
+  },
+  "mls:761937": {
+   "call": false,
+   "close": 0.6568,
+   "clv": 2.68,
+   "day": "2026-11-07",
+   "league": "mls",
+   "published": 0.63,
+   "won": 1
+  },
+  "mls:761939": {
+   "call": false,
+   "close": 0.6815,
+   "clv": -4.85,
+   "day": "2026-11-07",
+   "league": "mls",
+   "published": 0.73,
+   "won": 1
+  },
+  "mls:761940": {
+   "call": false,
+   "close": 0.7026,
+   "clv": 0.26,
+   "day": "2026-11-07",
+   "league": "mls",
+   "published": 0.7,
+   "won": 1
+  },
   "nba:401898388": {
    "call": false,
    "close": 0.5996,
@@ -18451,6 +18496,15 @@
    "day": "2026-10-24",
    "league": "ncaaf",
    "published": 0.53,
+   "won": 0
+  },
+  "ncaaf:401869936": {
+   "call": false,
+   "close": 0.8587,
+   "clv": -0.13,
+   "day": "2026-11-07",
+   "league": "ncaaf",
+   "published": 0.86,
    "won": 0
   },
   "ncaaf:401869940": {
@@ -26244,5 +26298,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-07T23:05+00:00"
+ "updated": "2026-11-07T23:11+00:00"
 }

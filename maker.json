@@ -1184,6 +1184,7 @@
    "cost": 0.8523,
    "edge": 0.0022,
    "fair": 0.8542,
+   "fill": "strict",
    "id": "ncaaf:401869936",
    "label": "Arkansas State Red Wolves",
    "league": "ncaaf",
@@ -1196,8 +1197,9 @@
     "team": "Arkansas State Red Wolves"
    },
    "start": "2026-11-07T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07ULMARST-ARST"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07ULMARST-ARST",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV07UNCCONN-UNC|YES": {
    "ask": 0.7,
@@ -8235,6 +8237,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401869936",
    "label": "over 52.5",
    "league": "ncaaf",
@@ -8247,8 +8250,9 @@
     "t": "over"
    },
    "start": "2026-11-07T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07ULMARST-53"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07ULMARST-53",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07ULMARST-54|NO": {
    "ask": 0.51,
@@ -8256,6 +8260,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "ncaaf:401869936",
    "label": "under 53.5",
    "league": "ncaaf",
@@ -8268,8 +8273,9 @@
     "t": "under"
    },
    "start": "2026-11-07T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07ULMARST-54"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07ULMARST-54",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07UNCCONN-56|NO": {
    "ask": 0.52,
