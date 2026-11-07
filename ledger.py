@@ -840,9 +840,14 @@ def day_rarity(rows):
     for e in rows:
         if e.get("status") == "lost":
             by[e.get("league")] = by.get(e.get("league"), 0) + 1
+    exp = {}
+    for e in rows:
+        if e.get("status") in ("won", "lost"):
+            exp[e.get("league")] = exp.get(e.get("league"), 0.0) + 1 - min(max((e.get("conf") or 0) / 100, 0.0), 1.0)
     return dict(expected_losses=round(sum(1 - p for p in ps), 1),
                 as_bad_pct=round(100 * sum(dist[lost:]), 1),
-                lost_by_league=dict(sorted(by.items(), key=lambda kv: -kv[1])))
+                lost_by_league=dict(sorted(by.items(), key=lambda kv: -kv[1])),
+                expected_by_league={k: round(exp.get(k, 0.0), 1) for k in by})
 
 
 def sweep_days(done, day_of, today, n=14):

@@ -4139,3 +4139,7 @@ Fix: the review's loss lines and sweep line dropped " or draw" on double-chance 
 losses read as straight wins. Corrected study on the bet actually made: double chance at 65-70% 96/136
 then 51/80 (71%, 64% vs 67%) -- mixed, 147/216 overall on par (z +0.25); 70-75% ahead in both halves
 (75%, 78% vs 72%). No change, but the 65-70% double-chance band is the one to watch (2026-11-07).
+Losses by league now carry the losses each league's chances expected (`day_rarity` expected_by_league;
+review sweep line and the board's Yesterday). Study, no rule: double chance by league, both halves --
+EFL1 15/21 then 25/32 (71%, 78% vs 74%), Argentina, MLS, Japan, Italy, Mexico, Brazil all on or above par
+overall (z -0.4 to +1.8); none short in both halves on 30+ picks (2026-11-07).

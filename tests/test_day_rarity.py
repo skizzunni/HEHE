@@ -9,6 +9,7 @@ class DayRarity(unittest.TestCase):
         self.assertEqual(r["expected_losses"], 1.0)
         self.assertEqual(r["as_bad_pct"], 75.0)          # 1 or 2 losses of two coin flips
         self.assertEqual(r["lost_by_league"], {"nhl": 1})
+        self.assertEqual(r["expected_by_league"], {"nhl": 1.0})
 
     def test_rare_day(self):
         rows = [dict(conf=90, status="lost", league="uel") for _ in range(3)]
@@ -28,9 +29,11 @@ class ReviewSweepLine(unittest.TestCase):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
         import daily_review
         text = daily_review.sweep_line(dict(won=17, lost=2, open=32, broke_on="arg San Lorenzo at 68%",
-                                            expected_losses=5.3, as_bad_pct=98.5))
+                                            expected_losses=5.3, as_bad_pct=98.5, lost_by_league={"arg": 1, "col": 1},
+                                            expected_by_league={"arg": 0.6, "col": 0.4}))
         self.assertIn("Board sweep: 17-2, 32 open -- broken (first loss: arg San Lorenzo at 68%); 5.3 losses expected"
-                      " from the settled picks' chances, so 2 or more by now had a 98.5% chance.", text)
+                      " from the settled picks' chances, so 2 or more by now had a 98.5% chance; losses by league:"
+                      " arg 1 (0.6 expected), col 1 (0.4 expected).", text)
         self.assertEqual(daily_review.sweep_line(dict(won=5, lost=0, open=3, broke_on=None, expected_losses=0.9,
                                                       as_bad_pct=100.0)), "Board sweep: 5-0, 3 open -- still clean.")
         self.assertIsNone(daily_review.sweep_line({}))

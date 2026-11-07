@@ -850,7 +850,10 @@ def sweep_line(sw):
             + (f"broken (first loss: {sw['broke_on']})" if sw.get("lost") else "still clean")
             + (f"; {sw['expected_losses']:g} losses expected from the settled picks' chances,"
                f" so {sw['lost']} or more by now had a {sw['as_bad_pct']:g}% chance"
-               if sw.get("lost") and sw.get("expected_losses") is not None else "") + ".")
+               if sw.get("lost") and sw.get("expected_losses") is not None else "")
+            + ("; losses by league: " + ", ".join(f"{k} {v} ({(sw.get('expected_by_league') or {}).get(k, 0):g} expected)"
+                                                  for k, v in sw["lost_by_league"].items())
+               if sw.get("lost") and sw.get("lost_by_league") else "") + ".")
 
 
 def words(r, fit):
