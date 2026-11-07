@@ -3479,6 +3479,10 @@ function scoreboardHTML(){
           + '<div class="rsub">today' + (R.today ? ' (' + esc(R.today) + ')' : '') + ' &middot; '
           + (100 * w / (w + l)).toFixed(0) + '% of ' + (w + l) + ' finished'
           + (R.today_expected ? ' &middot; their chances said about ' + R.today_expected.toFixed(1) + ' wins' : '') + '</div>'
+          + ((R.today_rarity || {}).expected_losses != null && l
+             ? '<div class="rsub">' + l + ' loss' + (l > 1 ? 'es' : '') + ' against about ' + R.today_rarity.expected_losses + ' expected &middot; '
+               + (R.today_rarity.as_bad_pct < 5 ? 'an unusually bad day so far (' : 'within normal swings (')
+               + Math.round(R.today_rarity.as_bad_pct) + '% of days this far in have as many or more)</div>' : '')
           + ((R.today_losses_by || []).length ? '<div class="rsub">Losses by competition: ' + R.today_losses_by.map(x => esc(String(x.league).toUpperCase()) + ' ' + x.n).join(', ') + '</div>' : '')
         : '<div class="rbig">&mdash;</div>'
           + '<div class="rsub">no call has finished yet today</div>')

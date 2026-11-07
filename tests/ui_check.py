@@ -281,7 +281,7 @@ def render(captured_ms, health=None):
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
                   + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + ',"ladder":' + json.dumps(LADDER) + ',"every_game":' + json.dumps(EVERY) + ',', 1)
     s = s.replace('"live":[],"feed":', '"live":[{"pick":"X","winning":false},{"pick":"Y","winning":true}],"feed":', 1)
-    s = s.replace('"results":{', '"results":{"today_losses_by":[{"league":"uel","n":6},{"league":"uecl","n":4}],"today_expected":5.4,"broke_on":{"pick":"Trabzonspor","conf":67},"moves":{"against":{"n":81,"won":48,"price":71.9}},"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
+    s = s.replace('"results":{', '"results":{"today_losses_by":[{"league":"uel","n":6},{"league":"uecl","n":4}],"today_expected":5.4,"today_rarity":{"expected_losses":4.8,"as_bad_pct":18.1},"broke_on":{"pick":"Trabzonspor","conf":67},"moves":{"against":{"n":81,"won":48,"price":71.9}},"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -329,6 +329,8 @@ def main():
     if "4 problems found" not in old["health"] or "Old input: football/nfl" not in old["health"] or "props uel Shots" not in old["health"] \
             or "Never settled" not in old["health"] or "Bad data: chance outside 0-1" not in old["health"]:
         fails.append("health box must list the trailing split and the stuck record: " + old["health"])
+    if "2 losses against about 4.8 expected · within normal swings (18% of days this far in have as many or more)" not in new["results"]:
+        fails.append("today rarity line missing: " + new["results"][:600])
     if "their chances said about 5.4 wins" not in new["results"] or "Losses by competition: UEL 6, UECL 4" not in new["results"]:
         fails.append("Results header must give the expected wins: " + new["results"][:200])
     if "Changes tested" not in new["results"] or "New right, old wrong" not in new["results"] \

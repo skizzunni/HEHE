@@ -987,6 +987,7 @@ def board_payload(limit=40):
                 calls_top=_calls.TOP_N,
                 today=today, today_won=sum(e["status"] == "won" for e in todays),
                 today_expected=round(sum((e.get("conf") or 0) / 100 for e in todays), 1),
+                today_rarity=day_rarity(todays),
                 today_losses_by=[dict(league=k, n=v) for k, v in sorted(
                     ((lg_, sum(1 for e in todays if e["status"] == "lost" and e["league"] == lg_))
                      for lg_ in {e["league"] for e in todays if e["status"] == "lost"}), key=lambda x: -x[1])],

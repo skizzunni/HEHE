@@ -4132,3 +4132,5 @@ bet, called within 5 pts; 10+ graded), to tell a bad beat on a sound kind of pic
 rule: soccer straight-win picks at 65-70% 36/44 then 27/35 (82%, 77% vs 67%), 70-75% 86% then 82% vs
 72%, so the Nov 7 morning losses (Osnabruck, Holstein Kiel, Portsmouth, Tottenham, all 65-70%, all by
 one goal) are variance, not a leak (2026-11-07).
+Results "today" header says how many losses the settled picks' chances expected and how often a day this
+far in has as many (`ledger.board_payload` today_rarity from `day_rarity`) (2026-11-07).
