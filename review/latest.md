@@ -1,11 +1,11 @@
 # Review 2026-11-07
 
-Picks 33-13 (71.7% vs 73.3% claimed, ROI -7.7%).
-Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; live 13:56 - 1st, Arkansas Razorbacks 0 - Auburn Tigers 0), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; live 13:28 - 1st, Duke Blue Devils 7 - NC State Wolfpack 0), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; live 12:15 - 2nd, Boston College Eagles 10 - Florida State Seminoles 7, on pace for 34 (10 so far, line 15.5), on track), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
+Picks 34-13 (72.3% vs 73.1% claimed, ROI -6.6%).
+Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; live 10:31 - 1st, Arkansas Razorbacks 0 - Auburn Tigers 0), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; live 10:26 - 1st, Duke Blue Devils 7 - NC State Wolfpack 3), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; live 9:24 - 2nd, Boston College Eagles 17 - Florida State Seminoles 7, already over (17, line 15.5)), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 115/130 vs 83%; NHL spread on all saved lines 250/289 vs 83%; NHL teamover on all saved lines 158/180 vs 82%.
-Strong calls 33-13 (71.7% vs 73.3% claimed).
-Closing line value: +1.21 points on 46 picks; beat the close on 63.0%.
-Board sweep: 33-13, 118 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 12.3 losses expected from the settled picks' chances, so 13 or more by now had a 45.9% chance.
+Strong calls 34-13 (72.3% vs 73.1% claimed).
+Closing line value: +1.18 points on 47 picks; beat the close on 61.7%.
+Board sweep: 34-13, 117 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 12.6 losses expected from the settled picks' chances, so 13 or more by now had a 50.7% chance.
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 12 of 17 (71% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 12 of 15 (80% vs 67% stated)
