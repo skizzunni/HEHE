@@ -4122,3 +4122,5 @@ z ~ -2.4 -- short of the 99.5% bar, so no change; the only league/band flagged. 
 were at or above their chance (50-60% 29/39, 80-90% 30/35) (2026-11-07).
 Review cautions line now also lists call cautions by league and band (`ledger.call_cautions`) and the
 bet types running ahead of their chance (`locks.bright_pool`) (2026-11-07).
+Review ladder line, once a run has ended, says how the next ticket is built (`daily_review.rule_text`,
+from ladder.py's constants) (2026-11-07).

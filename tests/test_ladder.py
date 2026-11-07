@@ -273,7 +273,10 @@ class ReviewLine(unittest.TestCase):
         b2 = book({"2026-11-03": W5, "2026-11-04": W5[:4] + [("e", 0.8, "lost")]})
         with mock.patch.object(ladder, "report", lambda bk=None: ladder.__dict__["_report"](b2, start="2026-11-03")):
             line = daily_review.ladder_line()
-        self.assertIn("run 1 ended (peak $7.59, lost on 2026-11-04|e); the next ticket starts again at $1", line)
+        self.assertIn("run 1 ended (peak $7.59, lost on 2026-11-04|e); the next ticket starts again at $1 with the 8 AM card", line)
+        self.assertEqual(daily_review.rule_text("2026-11-07"),
+                         "the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000")
+        self.assertEqual(daily_review.rule_text("2026-11-06"), "the top 5 Locks")
 
 
     def test_leg_text_live_and_settled(self):

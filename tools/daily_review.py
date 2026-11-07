@@ -504,6 +504,16 @@ def now_text(legs):
             f" {100 * p:.0f}% on {'their' if len(left) > 1 else 'its'} stated chance before play")
 
 
+def rule_text(day=None):
+    """How the next ladder ticket is built, from ladder.py's constants."""
+    import ladder
+    day = day or dt.date.today().isoformat()
+    if day >= ladder.FLEX_FROM:
+        return (f"the top Locks paying {ladder.PAY_MIN:g}x-{ladder.PAY_MAX:g}x, leg count {ladder.FLEX_MIN}-{ladder.FLEX_MAX}"
+                f" by the best chance of reaching ${ladder.TARGET:,.0f}")
+    return f"the top {ladder.FIXED_LEGS} Locks"
+
+
 def ladder_line(book=None):
     """One line on the $1 -> $10k ladder (ladder.py), or None before it starts."""
     try:
@@ -517,7 +527,7 @@ def ladder_line(book=None):
     if r.get("ended"):
         e = r["ended"]
         return (f"Ladder: run {r['runs']} ended (peak ${e['peak']:.2f}, lost on {', '.join(e['lost_on']) or 'a leg'});"
-                f" the next ticket starts again at $1; best ever ${r['best']:.2f}.")
+                f" the next ticket starts again at $1 with the 8 AM card ({rule_text()}); best ever ${r['best']:.2f}.")
     mark = {"won": "won", "lost": "LOST", "void": "void", "push": "void"}
     legs = ("; legs: " + ", ".join(leg_text(L, mark) for L in t["legs"])) if t else ""
     legs += now_text(t["legs"]) if t else ""
