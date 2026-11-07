@@ -1,7 +1,7 @@
 # Review 2026-11-07
 
 Picks 52-15 (77.6% vs 72.2% claimed, ROI +2.9%).
-Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; live 12:50 - 4th, Arkansas Razorbacks 13 - Auburn Tigers 16), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; live 9:38 - 4th, Duke Blue Devils 38 - NC State Wolfpack 3), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; won), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open); 1 of 6 won, the ticket now rests on 5 legs, 25% on their stated chance before play.
+Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; live 11:39 - 4th, Arkansas Razorbacks 13 - Auburn Tigers 16), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; live 6:31 - 4th, Duke Blue Devils 38 - NC State Wolfpack 3), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; won), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open); 1 of 6 won, the ticket now rests on 5 legs, 25% on their stated chance before play.
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 29/48 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NCAAF over on all saved lines 526/621 vs 81%; NHL over on all saved lines 116/131 vs 83%; NHL spread on all saved lines 254/293 vs 83%; NHL teamover on all saved lines 160/182 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 242/321 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 83.1% for the rest (1524 and 6061 legs), so a cold week is noise, not a signal.
 Strong calls 46-15 (75.4% vs 73.2% claimed).
@@ -36,15 +36,15 @@ Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 6
 LEAK epl: 62.5% hit vs 73.1% claimed on 24 calls (14 days)
 Locks 1/11 won, 10 open; Best play top 2 (59%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
-Lottery 100: open (0/8 legs won)
+Lottery 100: lost (0/8 legs won, killed by Iowa State Cyclones +7.5)
 Lottery 100: open (0/6 legs won)
 Lottery 100: lost (0/5 legs won, killed by Over 51.5 points)
-Lottery 10k: open (0/11 legs won)
-Lottery 10k: open (0/9 legs won)
+Lottery 10k: lost (0/11 legs won, killed by Iowa State Cyclones +7.5)
+Lottery 10k: lost (0/9 legs won, killed by Over 8.5 goals)
 Lottery 10k: lost (2/12 legs won, killed by Over 51.5 points, Over 55.5 points)
-Lottery 10k+25: open (0/11 legs won)
-Lottery 10k+50: open (0/11 legs won)
-Lottery 10k+100: open (0/11 legs won)
+Lottery 10k+25: lost (0/11 legs won, killed by Iowa State Cyclones +7.5)
+Lottery 10k+50: lost (0/11 legs won, killed by Iowa State Cyclones +7.5)
+Lottery 10k+100: lost (0/11 legs won, killed by Iowa State Cyclones +7.5)
 Ladder-consistency props (all time): 1722/2068 won (83.3%) vs 86.4% fair, 87.5% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
