@@ -683,6 +683,7 @@
    "cost": 0.6441,
    "edge": 0.0413,
    "fair": 0.6707,
+   "fill": "touch",
    "id": "ncaaf:401858515",
    "label": "Purdue Boilermakers",
    "league": "ncaaf",
@@ -695,8 +696,9 @@
     "team": "Purdue Boilermakers"
    },
    "start": "2026-11-07T17:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07MDPUR-PUR"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07MDPUR-PUR",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV07MIAND-ND|YES": {
    "ask": 0.71,
@@ -998,6 +1000,7 @@
    "cost": 0.5644,
    "edge": 0.003,
    "fair": 0.5661,
+   "fill": "queue",
    "id": "ncaaf:401856743",
    "label": "Texas Longhorns",
    "league": "ncaaf",
@@ -1010,8 +1013,9 @@
     "team": "Texas Longhorns"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07TEXMIZZ-TEX"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07TEXMIZZ-TEX",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07TLSATULN-TLSA|YES": {
    "ask": 0.57,
@@ -1105,6 +1109,7 @@
    "cost": 0.6441,
    "edge": 0.0105,
    "fair": 0.6509,
+   "fill": "strict",
    "id": "ncaaf:401858512",
    "label": "UCLA Bruins",
    "league": "ncaaf",
@@ -1117,8 +1122,9 @@
     "team": "UCLA Bruins"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07UCLAMINN-UCLA"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07UCLAMINN-UCLA",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07UKTENN-TENN|YES": {
    "ask": 0.68,
@@ -3218,6 +3224,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401858515",
    "label": "Purdue Boilermakers -4.5",
    "league": "ncaaf",
@@ -3231,8 +3238,9 @@
     "team": "Purdue Boilermakers"
    },
    "start": "2026-11-07T17:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07MDPUR-PUR5"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07MDPUR-PUR5",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07MDPUR-PUR6|NO": {
    "ask": 0.51,
@@ -3240,6 +3248,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401858515",
    "label": "Maryland Terrapins +5.5",
    "league": "ncaaf",
@@ -3253,8 +3262,9 @@
     "team": "Maryland Terrapins"
    },
    "start": "2026-11-07T17:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07MDPUR-PUR6"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07MDPUR-PUR6",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07MSUMICH-MICH15|NO": {
    "ask": 0.51,
@@ -3684,6 +3694,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401858512",
    "label": "Minnesota Golden Gophers +3.5",
    "league": "ncaaf",
@@ -3697,8 +3708,9 @@
     "team": "Minnesota Golden Gophers"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA4"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA4",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA4|YES": {
    "ask": 0.51,
@@ -3706,6 +3718,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858512",
    "label": "UCLA Bruins -3.5",
    "league": "ncaaf",
@@ -3719,8 +3732,9 @@
     "team": "UCLA Bruins"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA4"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA4",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA5|NO": {
    "ask": 0.51,
@@ -3728,6 +3742,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401858512",
    "label": "Minnesota Golden Gophers +4.5",
    "league": "ncaaf",
@@ -3741,8 +3756,9 @@
     "team": "Minnesota Golden Gophers"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA5"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA5",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA5|YES": {
    "ask": 0.51,
@@ -3750,6 +3766,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401858512",
    "label": "UCLA Bruins -4.5",
    "league": "ncaaf",
@@ -3763,8 +3780,9 @@
     "team": "UCLA Bruins"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA5"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA5",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07UGAMISS-UGA4|YES": {
    "ask": 0.51,
@@ -7465,6 +7483,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401858515",
    "label": "over 56.5",
    "league": "ncaaf",
@@ -7477,8 +7496,9 @@
     "t": "over"
    },
    "start": "2026-11-07T17:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07MDPUR-57"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07MDPUR-57",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07MIAND-55|YES": {
    "ask": 0.51,
@@ -8015,6 +8035,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401858512",
    "label": "under 38.5",
    "league": "ncaaf",
@@ -8027,8 +8048,9 @@
     "t": "under"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07UCLAMINN-39"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07UCLAMINN-39",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07UKTENN-50|NO": {
    "ask": 0.51,
