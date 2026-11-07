@@ -8,7 +8,7 @@ Closing line value: +3.6 points on 2 picks; beat the close on 100.0%.
 Board sweep: 1-1, 148 open -- broken (first loss: jpn Nagoya Grampus at 76%); 0.5 losses expected from the settled picks' chances, so 1 or more by now had a 46% chance.
 - LOST jpn Nagoya Grampus at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset
 Why picks lost (14 days): favourite lost 136, close game 111, upset 54, coin flip 45, blowout 41, price moved against it 29.
-Yesterday (2026-11-06): board 41-9, sweep broken by arg San Lorenzo at 68%; 13.6 losses expected, 9 came in (95.9% chance of that many or more).
+Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo at 68%; 13.9 losses expected, 9 came in (96.6% chance of that many or more).
 - LOST arg San Lorenzo at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost
 - LOST col Internacional de Bogotá at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 - LOST mex Atlético de San Luis at 82% (-650), Atlético de San Luis 0 - FC Juárez 1: margin 1 · the book had my side favoured too · called at 82% · upset · close game
@@ -21,4 +21,4 @@ Yesterday (2026-11-06): board 41-9, sweep broken by arg San Lorenzo at 68%; 13.6
 Ladder-consistency props (all time): 1722/2068 won (83.3%) vs 86.4% fair, 87.5% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=132), ncaaf 0.00 (n=175), nfl 0.00 (n=42), nhl 0.00 (n=147)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=132), ncaaf 0.00 (n=176), nfl 0.00 (n=42), nhl 0.00 (n=147)

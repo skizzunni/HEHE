@@ -9637,9 +9637,9 @@
  },
  "2026-11-06": {
   "clv": {
-   "avg": 0.83,
-   "beat": 50.0,
-   "n": 50
+   "avg": 0.73,
+   "beat": 49.0,
+   "n": 51
   },
   "day": "2026-11-06",
   "leaks_14d": [],
@@ -9649,7 +9649,7 @@
     "Nevada Wolf Pack +20.5 (New Mexico Lobos at Nevada Wolf Pack) New Mexico Lobos 31 - Nevada Wolf Pack 3"
    ],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      2,
@@ -9657,7 +9657,7 @@
      "lost"
     ]
    },
-   "won": 8
+   "won": 9
   },
   "loss_reasons_14d": {
    "blowout": 43,
@@ -9842,7 +9842,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "100",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -9855,7 +9855,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "10k",
-    "won": 8
+    "won": 9
    },
    {
     "killed_by": [
@@ -9870,7 +9870,7 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k+25",
-    "won": 6
+    "won": 7
    },
    {
     "killed_by": [
@@ -9885,7 +9885,7 @@
     "lost": 6,
     "status": "lost",
     "tier": "10k+50",
-    "won": 6
+    "won": 7
    },
    {
     "killed_by": [
@@ -9898,16 +9898,16 @@
     "lost": 4,
     "status": "lost",
     "tier": "10k+100",
-    "won": 7
+    "won": 8
    }
   ],
   "picks": {
-   "hit": 82.0,
+   "hit": 82.4,
    "lost": 9,
-   "n": 50,
-   "roi": 8.8,
+   "n": 51,
+   "roi": 9.4,
    "said": 72.7,
-   "won": 41
+   "won": 42
   },
   "picks_by_league": {
    "arg": {
@@ -10047,12 +10047,12 @@
     "won": 6
    },
    "ncaaf": {
-    "hit": 75.0,
+    "hit": 80.0,
     "lost": 1,
-    "n": 4,
-    "roi": 14.1,
-    "said": 65.2,
-    "won": 3
+    "n": 5,
+    "roi": 19.3,
+    "said": 66.2,
+    "won": 4
    },
    "ned2": {
     "hit": 100.0,
@@ -10125,9 +10125,9 @@
    "won": 22
   },
   "sweep": {
-   "as_bad_pct": 95.9,
+   "as_bad_pct": 96.6,
    "broke_on": "arg San Lorenzo at 68%",
-   "expected_losses": 13.6,
+   "expected_losses": 13.9,
    "lost": 9,
    "lost_by_league": {
     "arg": 1,
@@ -10139,8 +10139,8 @@
     "nhl": 1,
     "nwsl": 1
    },
-   "open": 1,
-   "won": 41
+   "open": 0,
+   "won": 42
   },
   "vs_market_14d": {
    "against": {
@@ -10149,10 +10149,10 @@
    "agree": {
     "hit": 75.9,
     "lost": 248,
-    "n": 1029,
+    "n": 1030,
     "roi": 1.3,
     "said": 71.4,
-    "won": 781
+    "won": 782
    }
   }
  },
@@ -10307,10 +10307,10 @@
    },
    {
     "flag": false,
-    "hit": 76.2,
-    "n": 21,
+    "hit": 77.3,
+    "n": 22,
     "name": "locks ncaaf under",
-    "said": 79.7
+    "said": 79.5
    },
    {
     "flag": false,
@@ -10384,10 +10384,10 @@
    },
    {
     "flag": false,
-    "hit": 41.3,
-    "n": 346,
+    "hit": 41.5,
+    "n": 347,
     "name": "value bets",
-    "said": 44.7
+    "said": 44.8
    },
    {
     "flag": false,
@@ -10591,10 +10591,10 @@
    "agree": {
     "hit": 76.1,
     "lost": 235,
-    "n": 984,
+    "n": 985,
     "roi": 1.4,
     "said": 71.6,
-    "won": 749
+    "won": 750
    }
   },
   "weights": {
@@ -10610,10 +10610,10 @@
    "ncaaf": {
     "fitted": 0.35,
     "held_out": false,
-    "logloss": 0.5912,
-    "market_only": 0.5984,
-    "model_40": 0.5915,
-    "n": 175,
+    "logloss": 0.59,
+    "market_only": 0.5971,
+    "model_40": 0.5903,
+    "n": 176,
     "weight": 0.0
    },
    "nfl": {
@@ -10789,9 +10789,9 @@
     }
    ],
    "sweep": {
-    "as_bad_pct": 95.9,
+    "as_bad_pct": 96.6,
     "broke_on": "arg San Lorenzo at 68%",
-    "expected_losses": 13.6,
+    "expected_losses": 13.9,
     "lost": 9,
     "lost_by_league": {
      "arg": 1,
@@ -10803,8 +10803,8 @@
      "nhl": 1,
      "nwsl": 1
     },
-    "open": 1,
-    "won": 41
+    "open": 0,
+    "won": 42
    }
   }
  }
