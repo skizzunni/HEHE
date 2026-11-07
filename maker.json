@@ -597,6 +597,7 @@
    "cost": 0.7533,
    "edge": 0.0197,
    "fair": 0.7682,
+   "fill": "touch",
    "id": "ncaaf:401856853",
    "label": "Baylor Bears",
    "league": "ncaaf",
@@ -609,8 +610,9 @@
     "team": "Baylor Bears"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07ISUBAY-BAY"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07ISUBAY-BAY",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07LIBNMSU-LIB|YES": {
    "ask": 0.88,
@@ -3568,6 +3570,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401856743",
    "label": "Texas Longhorns -2.5",
    "league": "ncaaf",
@@ -3581,8 +3584,9 @@
     "team": "Texas Longhorns"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07TEXMIZZ-TEX3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07TEXMIZZ-TEX3",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07TLSATULN-TLSA3|YES": {
    "ask": 0.51,
