@@ -1,11 +1,11 @@
 # Review 2026-11-06
 
-Picks 16-2 (88.9% vs 71.9% claimed, ROI +16.3%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; 8:00 PM, open), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; live 4:07 - 2nd, Atlanta Hawks 54 - Washington Wizards 49), Under 241.5 points (Utah Jazz at Dallas Mavericks; 8:00 PM, open), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; 8:00 PM, open).
+Picks 17-2 (89.5% vs 71.9% claimed, ROI +17.2%).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; 8:00 PM, open), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; live 57.9 - 2nd, Atlanta Hawks 63 - Washington Wizards 54, on pace for 244 (117 so far, line 214.5), on track), Under 241.5 points (Utah Jazz at Dallas Mavericks; 8:00 PM, open), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; 8:00 PM, open).
 Cautions in force: NBA over on Locks 12/21 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
-Strong calls 16-2 (88.9% vs 71.9% claimed).
-Closing line value: +1.1 points on 18 picks; beat the close on 61.1%.
-Board sweep: 16-2, 33 open -- broken (first loss: arg San Lorenzo at 68%).
+Strong calls 17-2 (89.5% vs 71.9% claimed).
+Closing line value: +1.27 points on 19 picks; beat the close on 63.2%.
+Board sweep: 17-2, 32 open -- broken (first loss: arg San Lorenzo at 68%).
 - LOST arg San Lorenzo at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost
 - LOST col Internacional de Bogotá at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 Why picks lost (14 days): favourite lost 141, close game 118, upset 53, coin flip 47, blowout 42, price moved against it 32.
