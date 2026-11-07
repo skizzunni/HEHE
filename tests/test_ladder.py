@@ -330,6 +330,19 @@ class ReviewLine(unittest.TestCase):
         self.assertEqual(d.now_text([dict(status="open", p=0.8)]), "")
 
 
+    def test_form_line(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        import locks
+        F = [dict(league="ncaaf", t="spread", won=185, n=252, said=82.0), dict(league="nba", t="over", won=80, n=100, said=82.0),
+             dict(league="nhl", t="over", won=40, n=60, said=83.0)]                     # too few legs
+        with mock.patch.object(locks, "pool_form", lambda *a, **k: F):
+            self.assertEqual(daily_review.form_line(),
+                             "Running cold (last 7 days, all saved lines at 70-95%): NCAAF spread 185/252 (73% vs 82%).")
+        with mock.patch.object(locks, "pool_form", lambda *a, **k: F[1:]):
+            self.assertIsNone(daily_review.form_line())
+
+
 ladder._report = ladder.report
 
 

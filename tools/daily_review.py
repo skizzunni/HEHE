@@ -402,6 +402,23 @@ def caution_line():
     return out
 
 
+def form_line(min_n=100, gap=5):
+    """Bet types running cold over the last 7 pool days (locks.pool_form):
+    5+ points under their stated chance on 100+ legs, one line or None.
+    Information for the hourly report, never a pick rule."""
+    try:
+        import locks
+        F = locks.pool_form()
+    except Exception:
+        return None
+    cold = [f for f in F if f["n"] >= min_n and 100 * f["won"] / f["n"] <= f["said"] - gap]
+    if not cold:
+        return None
+    cold.sort(key=lambda f: 100 * f["won"] / f["n"] - f["said"])
+    return "Running cold (last 7 days, all saved lines at 70-95%): " + "; ".join(
+        f"{f['league'].upper()} {f['t']} {f['won']}/{f['n']} ({round(100 * f['won'] / f['n'])}% vs {round(f['said'])}%)" for f in cold) + "."
+
+
 _PERIODS = {"nba": (4, 12), "wnba": (4, 10), "ncaab": (2, 20), "nfl": (4, 15), "ncaaf": (4, 15), "nhl": (3, 20)}
 
 
@@ -868,6 +885,8 @@ def words(r, fit):
         out.append(r["ladder"])
     if r.get("cautions"):
         out.append(r["cautions"])
+    if r.get("cold"):
+        out.append(r["cold"])
     for name, mb in r.get("big_files") or []:
         out.append(f"BIG FILE {name} is {mb} MB -- GitHub refuses files over 100 MB and the board stops; trim it")
     st = r.get("stuck") or []
@@ -978,6 +997,7 @@ def main():
     log[today.isoformat()]["big_files"] = big_files()
     log[today.isoformat()]["ladder"] = ladder_line()
     log[today.isoformat()]["cautions"] = caution_line()
+    log[today.isoformat()]["cold"] = form_line()
     yk = (today - dt.timedelta(days=1)).isoformat()
     log[today.isoformat()]["yesterday"] = dict(day=yk, sweep=log[yk].get("sweep"), losses=log[yk].get("losses"))
     with open(log_path, "w") as fh:

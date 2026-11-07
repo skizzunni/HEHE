@@ -4143,3 +4143,8 @@ Losses by league now carry the losses each league's chances expected (`day_rarit
 review sweep line and the board's Yesterday). Study, no rule: double chance by league, both halves --
 EFL1 15/21 then 25/32 (71%, 78% vs 74%), Argentina, MLS, Japan, Italy, Mexico, Brazil all on or above par
 overall (z -0.4 to +1.8); none short in both halves on 30+ picks (2026-11-07).
+Review "Running cold" line (`daily_review.form_line` from `locks.pool_form`): bet types 5+ pts under their
+stated chance over the last 7 pool days on 100+ legs, for the hourly report. Study, no rule: college
+football spreads on all saved lines 810/992 (82% vs 82%) then 185/252 (73% vs 82%) -- short in the recent
+half only; team overs 82% then 79% vs 81%, team unders 86% then 78% vs 81-82% (mixed). No change
+(2026-11-07).
