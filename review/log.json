@@ -9637,9 +9637,9 @@
  },
  "2026-11-06": {
   "clv": {
-   "avg": 0.91,
-   "beat": 51.1,
-   "n": 47
+   "avg": 0.9,
+   "beat": 51.0,
+   "n": 49
   },
   "day": "2026-11-06",
   "leaks_14d": [],
@@ -9661,9 +9661,9 @@
   },
   "loss_reasons_14d": {
    "blowout": 43,
-   "close game": 120,
+   "close game": 121,
    "coin flip": 49,
-   "favourite lost": 143,
+   "favourite lost": 144,
    "price moved against it": 32,
    "upset": 55
   },
@@ -9799,6 +9799,23 @@
      "close game"
     ],
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 81% \u00b7 upset \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "jpn",
+    "match": "TYKV @ SHI",
+    "pick": "Shimizu S-Pulse",
+    "price": "-260",
+    "said": 67,
+    "score": {
+     "Shimizu S-Pulse": 0,
+     "Tokyo Verdy 1969": 1
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost \u00b7 close game"
    }
   ],
   "lottery": [
@@ -9885,12 +9902,12 @@
    }
   ],
   "picks": {
-   "hit": 83.0,
-   "lost": 8,
-   "n": 47,
-   "roi": 9.2,
-   "said": 73.3,
-   "won": 39
+   "hit": 81.6,
+   "lost": 9,
+   "n": 49,
+   "roi": 8.1,
+   "said": 72.8,
+   "won": 40
   },
   "picks_by_league": {
    "arg": {
@@ -9997,6 +10014,14 @@
     "said": 68.0,
     "won": 1
    },
+   "jpn": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 67.0,
+    "won": 0
+   },
    "mex": {
     "hit": 33.3,
     "lost": 2,
@@ -10006,12 +10031,12 @@
     "won": 1
    },
    "nba": {
-    "hit": 87.5,
+    "hit": 88.9,
     "lost": 1,
-    "n": 8,
-    "roi": 22.7,
-    "said": 68.4,
-    "won": 7
+    "n": 9,
+    "roi": 27.4,
+    "said": 67.2,
+    "won": 8
    },
    "ncaab": {
     "hit": 100.0,
@@ -10092,29 +10117,30 @@
    "won": 11
   },
   "strong": {
-   "hit": 80.8,
-   "lost": 5,
-   "n": 26,
-   "roi": 6.5,
-   "said": 72.2,
+   "hit": 77.8,
+   "lost": 6,
+   "n": 27,
+   "roi": 2.5,
+   "said": 72.0,
    "won": 21
   },
   "sweep": {
-   "as_bad_pct": 96.3,
+   "as_bad_pct": 95.0,
    "broke_on": "arg San Lorenzo at 68%",
-   "expected_losses": 12.6,
-   "lost": 8,
+   "expected_losses": 13.3,
+   "lost": 9,
    "lost_by_league": {
     "arg": 1,
     "col": 1,
+    "jpn": 1,
     "mex": 2,
     "nba": 1,
     "ncaaf": 1,
     "nhl": 1,
     "nwsl": 1
    },
-   "open": 4,
-   "won": 39
+   "open": 2,
+   "won": 40
   },
   "vs_market_14d": {
    "against": {
@@ -10122,11 +10148,11 @@
    },
    "agree": {
     "hit": 75.9,
-    "lost": 247,
-    "n": 1026,
-    "roi": 1.3,
+    "lost": 248,
+    "n": 1028,
+    "roi": 1.2,
     "said": 71.4,
-    "won": 779
+    "won": 780
    }
   }
  },
@@ -10477,9 +10503,9 @@
   },
   "loss_reasons_14d": {
    "blowout": 41,
-   "close game": 110,
+   "close game": 111,
    "coin flip": 45,
-   "favourite lost": 135,
+   "favourite lost": 136,
    "price moved against it": 29,
    "upset": 53
   },
@@ -10522,22 +10548,22 @@
     "n": 0
    },
    "agree": {
-    "hit": 76.2,
-    "lost": 233,
-    "n": 979,
-    "roi": 1.5,
+    "hit": 76.1,
+    "lost": 234,
+    "n": 981,
+    "roi": 1.4,
     "said": 71.6,
-    "won": 746
+    "won": 747
    }
   },
   "weights": {
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5557,
-    "market_only": 0.5557,
-    "model_40": 0.5754,
-    "n": 131,
+    "logloss": 0.5556,
+    "market_only": 0.5556,
+    "model_40": 0.5749,
+    "n": 132,
     "weight": 0.0
    },
    "ncaaf": {
@@ -10702,24 +10728,42 @@
       "close game"
      ],
      "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 81% \u00b7 upset \u00b7 close game"
+    },
+    {
+     "against_market": false,
+     "league": "jpn",
+     "match": "TYKV @ SHI",
+     "pick": "Shimizu S-Pulse",
+     "price": "-260",
+     "said": 67,
+     "score": {
+      "Shimizu S-Pulse": 0,
+      "Tokyo Verdy 1969": 1
+     },
+     "tags": [
+      "favourite lost",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost \u00b7 close game"
     }
    ],
    "sweep": {
-    "as_bad_pct": 96.3,
+    "as_bad_pct": 95.0,
     "broke_on": "arg San Lorenzo at 68%",
-    "expected_losses": 12.6,
-    "lost": 8,
+    "expected_losses": 13.3,
+    "lost": 9,
     "lost_by_league": {
      "arg": 1,
      "col": 1,
+     "jpn": 1,
      "mex": 2,
      "nba": 1,
      "ncaaf": 1,
      "nhl": 1,
      "nwsl": 1
     },
-    "open": 4,
-    "won": 39
+    "open": 2,
+    "won": 40
    }
   }
  }
