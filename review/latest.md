@@ -1,7 +1,7 @@
 # Review 2026-11-06
 
 Picks 18-2 (90.0% vs 73.2% claimed, ROI +16.4%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live Halftime, Memphis Grizzlies 49 - Oklahoma City Thunder 71, 3 so far), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; live 59.4 - 4th, Atlanta Hawks 132 - Washington Wizards 127, already over (259, line 214.5)), Under 241.5 points (Utah Jazz at Dallas Mavericks; live Halftime, Dallas Mavericks 57 - Utah Jazz 57, on pace for 228 (114 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 1:47 - 2nd, Minnesota Timberwolves 53 - New Orleans Pelicans 47, on pace for 216 (100 so far, line 216.5), behind the pace it needs).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live Halftime, Memphis Grizzlies 49 - Oklahoma City Thunder 71, 3 so far), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; live 9.6 - 4th, Atlanta Hawks 136 - Washington Wizards 132, already over (268, line 214.5)), Under 241.5 points (Utah Jazz at Dallas Mavericks; live Halftime, Dallas Mavericks 57 - Utah Jazz 57, on pace for 228 (114 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live Halftime, Minnesota Timberwolves 57 - New Orleans Pelicans 51, on pace for 216 (108 so far, line 216.5), behind the pace it needs).
 Cautions in force: NBA over on Locks 12/21 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 17-2 (89.5% vs 71.9% claimed).
 Closing line value: +1.21 points on 20 picks; beat the close on 60.0%.
@@ -29,12 +29,12 @@ Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST nhl Colorado Avalanche at 66% (-218), Colorado Avalanche 2 - Nashville Predators 3: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game
 Locks 0/11 won, 11 open; Best play top 2 (62%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (51%) open.
-Lottery 100: open (0/9 legs won)
+Lottery 100: lost (0/9 legs won, killed by Under 230.5 points)
 Lottery 100: open (0/7 legs won)
-Lottery 10k: open (0/13 legs won)
-Lottery 10k+25: open (0/13 legs won)
-Lottery 10k+50: open (0/13 legs won)
-Lottery 10k+100: open (0/12 legs won)
+Lottery 10k: lost (0/13 legs won, killed by Under 230.5 points)
+Lottery 10k+25: lost (0/13 legs won, killed by Under 230.5 points)
+Lottery 10k+50: lost (0/13 legs won, killed by Under 230.5 points)
+Lottery 10k+100: lost (0/12 legs won, killed by Under 230.5 points)
 Ladder-consistency props (all time): 1622/1939 won (83.7%) vs 86.4% fair, 87.4% price.
 Props 4/4 vs 83.9% claimed.
 
