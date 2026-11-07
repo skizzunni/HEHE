@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 62.3,
-  "brier_close": 0.1716,
-  "brier_published": 0.175,
+  "beat_close_pct": 61.3,
+  "brier_close": 0.1701,
+  "brier_published": 0.1734,
   "dates": [
    "2026-11-01",
    "2026-11-07"
   ],
-  "logloss_close": 0.5146,
-  "logloss_published": 0.5231,
-  "mean_clv_pts": 0.89,
+  "logloss_close": 0.5109,
+  "logloss_published": 0.5194,
+  "mean_clv_pts": 0.82,
   "n": 300
  },
  "market_is_model": true,
@@ -3087,6 +3087,24 @@
    "published": 0.71,
    "won": 1
   },
+  "efl1:401880162": {
+   "call": false,
+   "close": 0.7492,
+   "clv": 2.92,
+   "day": "2026-11-07",
+   "league": "efl1",
+   "published": 0.72,
+   "won": 1
+  },
+  "efl1:401880163": {
+   "call": false,
+   "close": 0.8407,
+   "clv": 2.07,
+   "day": "2026-11-07",
+   "league": "efl1",
+   "published": 0.82,
+   "won": 1
+  },
   "efl1:401880166": {
    "call": false,
    "close": 0.7047,
@@ -3113,6 +3131,15 @@
    "league": "efl1",
    "published": 0.66,
    "won": 1
+  },
+  "efl1:401880171": {
+   "call": false,
+   "close": 0.8009,
+   "clv": -0.91,
+   "day": "2026-11-07",
+   "league": "efl1",
+   "published": 0.81,
+   "won": 0
   },
   "efl1:401880173": {
    "call": false,
@@ -4375,6 +4402,15 @@
    "published": 0.66,
    "won": 0
   },
+  "epl:401878760": {
+   "call": false,
+   "close": 0.8333,
+   "clv": 1.33,
+   "day": "2026-11-07",
+   "league": "epl",
+   "published": 0.82,
+   "won": 1
+  },
   "epl:401878761": {
    "call": false,
    "close": 0.8098,
@@ -5064,6 +5100,51 @@
    "published": 0.579,
    "won": 0
   },
+  "facup:401931081": {
+   "call": false,
+   "close": 0.6731,
+   "clv": 0.31,
+   "day": "2026-11-07",
+   "league": "facup",
+   "published": 0.67,
+   "won": 1
+  },
+  "facup:401931082": {
+   "call": true,
+   "close": 0.89,
+   "clv": 2.0,
+   "day": "2026-11-07",
+   "league": "facup",
+   "published": 0.87,
+   "won": 1
+  },
+  "facup:401931089": {
+   "call": false,
+   "close": 0.7524,
+   "clv": 0.24,
+   "day": "2026-11-07",
+   "league": "facup",
+   "published": 0.75,
+   "won": 1
+  },
+  "facup:401931094": {
+   "call": false,
+   "close": 0.7129,
+   "clv": -1.71,
+   "day": "2026-11-07",
+   "league": "facup",
+   "published": 0.73,
+   "won": 0
+  },
+  "facup:401931102": {
+   "call": false,
+   "close": 0.7409,
+   "clv": 2.09,
+   "day": "2026-11-07",
+   "league": "facup",
+   "published": 0.72,
+   "won": 1
+  },
   "facup:401931109": {
    "call": false,
    "close": 0.7159,
@@ -5071,6 +5152,33 @@
    "day": "2026-11-06",
    "league": "facup",
    "published": 0.7,
+   "won": 1
+  },
+  "facup:401931110": {
+   "call": false,
+   "close": 0.6984,
+   "clv": 2.84,
+   "day": "2026-11-07",
+   "league": "facup",
+   "published": 0.67,
+   "won": 1
+  },
+  "facup:401931118": {
+   "call": false,
+   "close": 0.8163,
+   "clv": -0.37,
+   "day": "2026-11-07",
+   "league": "facup",
+   "published": 0.82,
+   "won": 1
+  },
+  "facup:401931275": {
+   "call": false,
+   "close": 0.8374,
+   "clv": 4.74,
+   "day": "2026-11-07",
+   "league": "facup",
+   "published": 0.79,
    "won": 1
   },
   "fra2:401876719": {
@@ -23166,6 +23274,15 @@
    "published": 0.538,
    "won": 0
   },
+  "sco2:401878528": {
+   "call": false,
+   "close": 0.6736,
+   "clv": -0.64,
+   "day": "2026-11-07",
+   "league": "sco2",
+   "published": 0.68,
+   "won": 1
+  },
   "sco2:401878533": {
    "call": false,
    "close": 0.7714,
@@ -23241,6 +23358,24 @@
    "league": "sco2",
    "published": 0.679,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 1
+  },
+  "sco:401878341": {
+   "call": false,
+   "close": 0.6495,
+   "clv": -0.05,
+   "day": "2026-11-07",
+   "league": "sco",
+   "published": 0.65,
+   "won": 0
+  },
+  "sco:401878342": {
+   "call": false,
+   "close": 0.6986,
+   "clv": -1.14,
+   "day": "2026-11-07",
+   "league": "sco",
+   "published": 0.71,
    "won": 1
   },
   "sco:401878346": {
@@ -25641,5 +25776,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-07T16:55+00:00"
+ "updated": "2026-11-07T17:00+00:00"
 }
