@@ -1,7 +1,7 @@
 # Review 2026-11-07
 
 Picks 6-1 (85.7% vs 71.0% claimed, ROI +15.3%).
-Ladder: run 2 ended (peak $1.00, lost on Austin Reaves: 4+ Assists); the next ticket starts again at $1; best ever $9.57.
+Ladder: run 2 ended (peak $1.00, lost on Austin Reaves: 4+ Assists); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1085/1245 vs 82%; NHL over on all saved lines 131/149 vs 84%; NHL spread on all saved lines 286/333 vs 83%.
 Strong calls 6-1 (85.7% vs 71.0% claimed).
 Closing line value: +2.04 points on 7 picks; beat the close on 71.4%.
@@ -18,6 +18,15 @@ Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo at 68%; 13.9
 - LOST mex Atlante at 69% (-280), Atlante 0 - Santos 2: margin 2 · the book had my side favoured too · called at 69% · favourite lost
 - LOST nwsl San Diego Wave FC at 81% (-600), San Diego Wave FC 0 - Utah Royals 1: margin 1 · the book had my side favoured too · called at 81% · upset · close game
 - LOST jpn Shimizu S-Pulse at 67% (-260), Shimizu S-Pulse 0 - Tokyo Verdy 1969 1: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
+Lottery 100: open (0/8 legs won)
+Lottery 100: open (0/6 legs won)
+Lottery 100: open (0/5 legs won)
+Lottery 10k: open (0/11 legs won)
+Lottery 10k: open (0/9 legs won)
+Lottery 10k: open (0/12 legs won)
+Lottery 10k+25: open (0/11 legs won)
+Lottery 10k+50: open (0/11 legs won)
+Lottery 10k+100: open (0/11 legs won)
 Ladder-consistency props (all time): 1722/2068 won (83.3%) vs 86.4% fair, 87.5% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
