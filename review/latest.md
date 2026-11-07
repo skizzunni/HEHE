@@ -1,7 +1,7 @@
 # Review 2026-11-06
 
 Picks 20-2 (90.9% vs 73.5% claimed, ROI +17.4%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 5:42 - 3rd, Memphis Grizzlies 63 - Oklahoma City Thunder 92, 2 so far), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; live 5:27 - 3rd, Dallas Mavericks 77 - Utah Jazz 70, on pace for 231 (147 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 7:46 - 3rd, Minnesota Timberwolves 66 - New Orleans Pelicans 61, on pace for 216 (127 so far, line 216.5), behind the pace it needs).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 4:27 - 3rd, Memphis Grizzlies 68 - Oklahoma City Thunder 92, 2 so far), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; live 3:33 - 3rd, Dallas Mavericks 80 - Utah Jazz 70, on pace for 222 (150 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 6:20 - 3rd, Minnesota Timberwolves 66 - New Orleans Pelicans 65, on pace for 212 (131 so far, line 216.5), behind the pace it needs).
 Cautions in force: NBA over on Locks 13/22 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 17-2 (89.5% vs 71.9% claimed).
 Closing line value: +1.48 points on 22 picks; beat the close on 63.6%.
@@ -30,7 +30,7 @@ Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 Locks 2/11 won, 9 open; Best play top 2 (62%) open.
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (84%) open; Best play top 7 (51%) open.
 Lottery 100: lost (0/9 legs won, killed by Under 230.5 points)
-Lottery 100: open (1/7 legs won)
+Lottery 100: lost (1/7 legs won, killed by Columbus Blue Jackets +1.5)
 Lottery 10k: lost (1/13 legs won, killed by Under 230.5 points)
 Lottery 10k+25: lost (1/13 legs won, killed by Under 230.5 points)
 Lottery 10k+50: lost (1/13 legs won, killed by Under 230.5 points)
