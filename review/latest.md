@@ -1,7 +1,7 @@
 # Review 2026-11-06
 
 Picks 34-5 (87.2% vs 72.1% claimed, ROI +15.8%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; live 10:35 - 2nd, Los Angeles Lakers 22 - Portland Trail Blazers 34, 0 so far, needs 4 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; won).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; live 8:59 - 2nd, Los Angeles Lakers 28 - Portland Trail Blazers 38, 0 so far, needs 4 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; won).
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 21-3 (87.5% vs 71.9% claimed).
 Closing line value: +1.11 points on 39 picks; beat the close on 53.8%.
@@ -32,12 +32,12 @@ Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST nhl Colorado Avalanche at 66% (-218), Colorado Avalanche 2 - Nashville Predators 3: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game
 Locks 6/11 won, 5 open; Best play top 2 (62%) open.
 Safe Locks 10/11 won, 1 open; Winners parlay top 2 (84%) won; Best play top 7 (51%) open.
-Lottery 100: lost (3/9 legs won, killed by Over 221.5 points, Under 230.5 points)
+Lottery 100: lost (4/9 legs won, killed by Over 221.5 points, Under 230.5 points)
 Lottery 100: lost (2/7 legs won, killed by Over 222.5 points, Calgary Flames to win, Columbus Blue Jackets +1.5)
-Lottery 10k: lost (6/13 legs won, killed by Under 230.5 points)
-Lottery 10k+25: lost (4/13 legs won, killed by Under 230.5 points, Over 223.5 points, Calgary Flames to win)
-Lottery 10k+50: lost (4/13 legs won, killed by Under 230.5 points, Over 223.5 points, Calgary Flames to win)
-Lottery 10k+100: lost (5/12 legs won, killed by Under 230.5 points)
+Lottery 10k: lost (7/13 legs won, killed by Under 230.5 points)
+Lottery 10k+25: lost (5/13 legs won, killed by Under 230.5 points, Over 223.5 points, Calgary Flames to win)
+Lottery 10k+50: lost (5/13 legs won, killed by Under 230.5 points, Over 223.5 points, Calgary Flames to win)
+Lottery 10k+100: lost (6/12 legs won, killed by Under 230.5 points)
 Ladder-consistency props (all time): 1702/2045 won (83.2%) vs 86.4% fair, 87.5% price.
 Props 115/144 vs 83.8% claimed.
 
