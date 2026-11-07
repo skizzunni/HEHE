@@ -12482,6 +12482,28 @@
    "status": "open",
    "ticker": "KXNFLSPREAD-26NOV08DENCAR-DEN3"
   },
+  "KXNFLSPREAD-26NOV08DETMIA-DET7|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0273,
+   "fair": 0.5182,
+   "id": "nfl:401873042",
+   "label": "Detroit Lions -6.5",
+   "league": "nfl",
+   "match": "DET @ MIA",
+   "posted": "2026-11-07T19:47:45+00:00",
+   "queue": 20852.0,
+   "side": "YES",
+   "spec": {
+    "line": -6.5,
+    "t": "spread",
+    "team": "Detroit Lions"
+   },
+   "start": "2026-11-08T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26NOV08DETMIA-DET7"
+  },
   "KXNFLSPREAD-26NOV08LARWAS-LAR5|YES": {
    "ask": 0.51,
    "bid": 0.5,
@@ -13290,6 +13312,27 @@
    "start": "2026-11-08T18:00Z",
    "status": "open",
    "ticker": "KXNFLTOTAL-26NOV08CLENO-43"
+  },
+  "KXNFLTOTAL-26NOV08DALIND-52|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "nfl:401873040",
+   "label": "over 51.5",
+   "league": "nfl",
+   "match": "DAL @ IND",
+   "posted": "2026-11-07T19:47:45+00:00",
+   "queue": 231539.03,
+   "side": "YES",
+   "spec": {
+    "line": 51.5,
+    "t": "over"
+   },
+   "start": "2026-11-08T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV08DALIND-52"
   },
   "KXNFLTOTAL-26NOV08DETMIA-50|YES": {
    "ask": 0.51,

@@ -1,12 +1,12 @@
 # Review 2026-11-07
 
-Picks 41-14 (74.5% vs 73.3% claimed, ROI -3.7%).
-Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; 12:45 PM, open), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; 12:30 PM, open), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; 12:00 PM, open), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
+Picks 41-15 (73.2% vs 73.1% claimed, ROI -5.4%).
+Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; live 12:46 - 3rd, Arkansas Razorbacks 10 - Auburn Tigers 3), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; live 13:19 - 3rd, Duke Blue Devils 31 - NC State Wolfpack 3), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; live 10:53 - 4th, Boston College Eagles 24 - Florida State Seminoles 24, already over (24, line 15.5)), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 115/130 vs 83%; NHL spread on all saved lines 250/289 vs 83%; NHL teamover on all saved lines 158/180 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NCAAF spread 185/252 (73% vs 82%); NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%).
-Strong calls 41-14 (74.5% vs 73.3% claimed).
-Closing line value: +1.13 points on 55 picks; beat the close on 60.0%.
-Board sweep: 41-14, 114 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 14.7 losses expected from the settled picks' chances, so 14 or more by now had a 63.8% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (0.9 expected), esp 1 (0.9 expected), facup 1 (2.5 expected), ita 1 (0.7 expected), jpn 1 (1.4 expected), sco 1 (0.7 expected), wsl 1 (0.3 expected).
+Strong calls 41-15 (73.2% vs 73.1% claimed).
+Closing line value: +1.08 points on 56 picks; beat the close on 58.9%.
+Board sweep: 41-15, 113 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 15.1 losses expected from the settled picks' chances, so 15 or more by now had a 56% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (0.9 expected), sco 2 (1 expected), esp 1 (0.9 expected), facup 1 (2.5 expected), ita 1 (0.7 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 12 of 17 (71% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 12 of 15 (80% vs 67% stated)
@@ -21,7 +21,8 @@ Board sweep: 41-14, 114 open -- broken (first loss: jpn Nagoya Grampus or draw a
 - LOST efl1 Southampton or draw at 82% (-700), Preston North End 1 - Southampton 0: margin 1 · the book had my side favoured too · called at 82% · upset · close game; picks like it: 12 of 18 (67% vs 80% stated)
 - LOST efl1 Sheffield United or draw at 77% (-450), Charlton Athletic 2 - Sheffield United 1: margin 1 · the book had my side favoured too · called at 77% · upset · close game; picks like it: 20 of 27 (74% vs 77% stated)
 - LOST epl Manchester City or draw at 81% (-600), Manchester City 1 - Nottingham Forest 3: margin 2 · the book had my side favoured too · called at 81% · upset
-Why picks lost (14 days): favourite lost 144, close game 122, upset 59, coin flip 45, blowout 41, price moved against it 29.
+- LOST sco Aberdeen or draw at 64% (-220), Aberdeen 0 - Hibernian 4: margin 4 · the book had my side favoured too · called at 64% · favourite lost · blowout
+Why picks lost (14 days): favourite lost 145, close game 122, upset 59, coin flip 45, blowout 42, price moved against it 29.
 Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 68%; 13.9 losses expected, 9 came in (96.6% chance of that many or more).
 - LOST arg San Lorenzo or draw at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost; picks like it: 11 of 18 (61% vs 69% stated)
 - LOST col Internacional de Bogotá or draw at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 9 of 14 (64% vs 68% stated)
