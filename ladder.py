@@ -120,6 +120,31 @@ def choose(book, day, bank=BANK0, target=TARGET):
     return best[1] if best else []
 
 
+def count_record(book=None, start=START, hi=FLEX_MAX):
+    """Every graded Locks card since start, as if the ladder had always used
+    the top K legs (K = 1..hi): [{legs, won, n, pays}] -- days that K would
+    have cashed, cards with K graded legs, and its average payout. Lets the
+    2x-5x chooser be checked against fixed counts as days come in."""
+    book = book or locks.load()
+    out = []
+    for k in range(1, hi + 1):
+        won = n = 0
+        pay = 0.0
+        for day in sorted(d for d in book.get("days", {}) if d >= start):
+            legs = ticket(book, day, k)
+            if not legs or any(L.get("status") not in ("won", "lost") for L in legs):
+                continue
+            try:
+                pay += math.prod(locks._dec(L["price"]) for L in legs)
+            except Exception:
+                continue
+            n += 1
+            won += all(L["status"] == "won" for L in legs)
+        if n:
+            out.append(dict(legs=k, won=won, n=n, pays=round(pay / n, 2)))
+    return out
+
+
 def settle(legs):
     """('won', payout) / ('lost', 0) / ('open', None) for one parlay."""
     st = [L.get("status") for L in legs]
@@ -246,7 +271,8 @@ def report(book=None, start=START, target=TARGET):
                 legs_record=(lambda G: dict(won=sum(L["status"] == "won" for L in G), n=len(G),
                                             said=round(100 * sum(L["p"] for L in G) / len(G), 1)) if G else None)(
                     [L for r in runs for d in r["days"] for L in d["legs"] if L.get("status") in ("won", "lost")]),
-                tickets=dict(won=sum(1 for r in runs for d in r["days"] if d["result"] == "won"),
+                counts=count_record(book, ""),         # every saved Locks card, not just the ladder's
+        tickets=dict(won=sum(1 for r in runs for d in r["days"] if d["result"] == "won"),
                              n=sum(1 for r in runs for d in r["days"] if d["result"] in ("won", "lost"))),
                 # every settled day of every run: the bank after it (0 on a loss)
                 path=[dict(day=d["day"], run=i + 1, bank=(0.0 if d["result"] == "lost"

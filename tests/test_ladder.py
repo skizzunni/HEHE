@@ -81,6 +81,17 @@ class Ladder(unittest.TestCase):
         b6["days"]["2026-11-06"] = b6["days"].pop("2026-11-07")
         self.assertEqual(len(ladder.choose(b6, "2026-11-06")), 5)                     # 11-06 stays 5 legs
 
+    def test_count_record(self):
+        b = book({"2026-11-03": W5, "2026-11-04": W5[:2] + [("c", 0.8, "lost")] + W5[3:],
+                  "2026-11-05": W5[:4] + [("e", 0.8, "open")]})
+        got = {c["legs"]: (c["won"], c["n"]) for c in ladder.count_record(b, "", hi=5)}
+        self.assertEqual(got[1], (3, 3))
+        self.assertEqual(got[3], (2, 3))          # 11-04's 3rd leg lost
+        self.assertEqual(got[5], (1, 2))          # 11-05's 5th leg is still open, so that card is left out
+        self.assertEqual(got[4], (2, 3))
+        self.assertEqual(got[5], (1, 2))
+        self.assertEqual(ladder.count_record(b, "", hi=5)[0]["pays"], 1.5)
+
     def test_leg_count_chosen_from_three_to_eight(self):
         legs = [(c, 0.95, "open") for c in "abcdefghij"]
         b = book({"2026-11-05": legs})

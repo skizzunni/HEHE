@@ -173,6 +173,7 @@ PROBE = """<script>setTimeout(function(){
   out.lflex = [ladderFlex(kl(10, 0.95, "-200"), 1, 10000).length, ladderFlex(kl(10, 0.6, "+150"), 1, 10000).length,
                ladderFlex(kl(10, 0.97, "-2000"), 1, 10000).length, ladderFlex([], 1, 10000).length];
   out.lopts2 = ladderOptions({legs: [1, 2, 3], options: [{legs: 1, prob: 0.9, pays: 1.5, need: 23, reach: 0.09, in_band: false}, {legs: 3, prob: 0.5, pays: 3.0, need: 9, reach: 0.002, in_band: true}]});
+  out.lcounts = [ladderCounts([{legs: 2, won: 15, n: 20, pays: 1.55}, {legs: 4, won: 10, n: 20, pays: 2.41}]), ladderCounts([])];
   out.lopts = ladderOptions({legs: [1, 2, 3], options: [{legs: 3, prob: 0.5, pays: 1.9, need: 12, reach: 0.000244}, {legs: 5, prob: 0.3, pays: 3.0, need: 8, reach: 0.0000656}]});
   out.teamTag = [teamTag({t: "teamunder"}), teamTag({spec: {t: "teamover"}}), teamTag({t: "under"}), teamTag({})];
   out.egOrder = [egOrder([{p: 0.9, tip: "10:00 PM"}, {p: 0.95, tip: "7:00 PM"}, {p: 0.92, tip: "12:45 PM"}], "time").map(function(x){return x.tip}).join(","),
@@ -438,6 +439,10 @@ def main():
     l2 = new.get("lopts2", "")
     if not ("(outside 2&ndash;5&times;)" in l2 and '<tr style="font-weight:700"><td>3</td>' in l2):
         fails.append("ladder options band wrong: " + l2[:400])
+    lc = new.get("lcounts") or ["", "x"]
+    if not ("<td>2</td><td class=\"num\">15 of 20 (75%)</td><td class=\"num\">1.55&times; <span class=\"sbn\">(outside 2&ndash;5&times;)</span>" in lc[0]
+            and "10 of 20 (50%)</td><td class=\"num\">2.41&times;</td>" in lc[0] and not lc[1]):
+        fails.append("ladder counts table wrong: " + repr(lc)[:400])
     lo = new.get("lopts", "")
     if not ("3 legs, and what other counts would give" in lo and '<tr style="font-weight:700"><td>3</td><td class="num">50%</td><td class="num">1.90&times;</td><td class="num">12</td><td class="num">1 in 4,098</td>' in lo):
         fails.append("ladder options wrong: " + lo[:400])

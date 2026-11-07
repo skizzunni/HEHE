@@ -1550,6 +1550,16 @@ function ladderK(sorted, bank, target){
   }
   return best ? best[1] : [];
 }
+// every saved Locks card as if the ladder had always used the top K legs
+// (ladder.count_record): days it would have cashed, at what average payout
+function ladderCounts(C){
+  if(!C.length) return '';
+  return '<details><summary>If the ladder had always used the same number of legs</summary><table class="sweeptab"><thead><tr><th>Legs</th>'
+    + '<th class="num">Cashed</th><th class="num">Avg pays</th></tr></thead><tbody>'
+    + C.map(c => '<tr><td>' + c.legs + '</td><td class="num">' + c.won + ' of ' + c.n + ' (' + Math.round(100 * c.won / c.n) + '%)</td><td class="num">'
+      + c.pays.toFixed(2) + '&times;' + (c.pays >= 2 && c.pays <= 5 ? '' : ' <span class="sbn">(outside 2&ndash;5&times;)</span>') + '</td></tr>').join('')
+    + '</tbody></table><p class="note">Every saved 8 AM Locks card; a small record, so one day moves it a lot.</p></details>';
+}
 // from Nov 7 (ladder.FLEX_FROM, the user's "2x-5x my money per day"): of the
 // top 1..8 Locks, the count paying 2x-5x with the best chance of reaching the
 // target; with none in the band, the count paying nearest it
@@ -1686,7 +1696,7 @@ function ladderHTML(){
         + money(T.stake * T.pays) + ' if all ' + T.legs.length + ' win (' + (100 * T.prob).toFixed(0) + '% est.). '
         + X.wins_needed + ' straight wins at this price reach the target'
         + (X.chance_to_target ? ', about 1 in ' + Math.round(1 / X.chance_to_target).toLocaleString() : '') + '.</p>'
-        + ladderOptions(T)
+        + ladderOptions(T) + ladderCounts(X.counts || [])
         + copyBtn("Ladder ticket", ['Ladder ticket: stake ' + money(T.stake) + ', ' + T.legs.length + '-leg parlay, about '
             + T.pays.toFixed(2) + 'x (pays ' + money(T.stake * T.pays) + ')']
             .concat(T.legs.map(L => legLine(L.label + (teamTag(L) ? ' (team total)' : ''), L.price, "FanDuel", L.match))))

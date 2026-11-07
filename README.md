@@ -4095,3 +4095,5 @@ band, the count paying nearest it (`ladder.FLEX_FROM`, `_flex`; board `ladderFle
 small to fix K: top 2 won 15/20 days at 1.55x, top 3 12/20 at 1.93x, top 4 10/20 at 2.41x, top 5 7/19 at
 3.00x, top 8 5/19 at 5.87x. Straight underdog calls at +250..+500 won 9/33 (27% vs 24% priced) -- too few,
 and underdogs overall lag their price (37% vs 45%), so straight dogs are not added to the ladder (2026-11-07).
+Ladder "if it had always used K legs" table (`ladder.count_record` over every saved Locks card, board
+`ladderCounts`), so the 2x-5x chooser can be checked against fixed counts as cards come in (2026-11-07).
