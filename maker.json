@@ -2881,6 +2881,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV07CINHOU-HOU11"
   },
+  "KXNCAAFSPREAD-26NOV07CLEMSYR-CLEM2|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0273,
+   "fair": 0.5182,
+   "id": "ncaaf:401858285",
+   "label": "Syracuse Orange +1.5",
+   "league": "ncaaf",
+   "match": "CLEM @ SYR",
+   "posted": "2026-11-07T16:46:00+00:00",
+   "queue": 437694.15,
+   "side": "NO",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Syracuse Orange"
+   },
+   "start": "2026-11-07T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV07CLEMSYR-CLEM2"
+  },
   "KXNCAAFSPREAD-26NOV07CLEMSYR-CLEM3|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -2968,6 +2990,28 @@
    "start": "2026-11-08T02:30Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV07FRESUSU-FRES2"
+  },
+  "KXNCAAFSPREAD-26NOV07FSUBC-FSU6|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401858289",
+   "label": "Florida State Seminoles -5.5",
+   "league": "ncaaf",
+   "match": "FSU @ BC",
+   "posted": "2026-11-07T16:46:00+00:00",
+   "queue": 10668.43,
+   "side": "YES",
+   "spec": {
+    "line": -5.5,
+    "t": "spread",
+    "team": "Florida State Seminoles"
+   },
+   "start": "2026-11-07T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV07FSUBC-FSU6"
   },
   "KXNCAAFSPREAD-26NOV07FSUBC-FSU7|YES": {
    "ask": 0.51,
@@ -7037,6 +7081,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV07CLEMSYR-50"
   },
+  "KXNCAAFTOTAL-26NOV07CLEMSYR-51|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401858285",
+   "label": "under 50.5",
+   "league": "ncaaf",
+   "match": "CLEM @ SYR",
+   "posted": "2026-11-07T16:46:00+00:00",
+   "queue": 22357.12,
+   "side": "NO",
+   "spec": {
+    "line": 50.5,
+    "t": "under"
+   },
+   "start": "2026-11-07T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV07CLEMSYR-51"
+  },
   "KXNCAAFTOTAL-26NOV07COLOASU-49|NO": {
    "ask": 0.52,
    "bid": 0.51,
@@ -7666,6 +7731,27 @@
    "start": "2026-11-07T20:45Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV07UCFKU-49"
+  },
+  "KXNCAAFTOTAL-26NOV07UCLAMINN-39|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401858512",
+   "label": "under 38.5",
+   "league": "ncaaf",
+   "match": "UCLA @ MINN",
+   "posted": "2026-11-07T16:46:00+00:00",
+   "queue": 258277.28,
+   "side": "NO",
+   "spec": {
+    "line": 38.5,
+    "t": "under"
+   },
+   "start": "2026-11-07T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV07UCLAMINN-39"
   },
   "KXNCAAFTOTAL-26NOV07UKTENN-50|NO": {
    "ask": 0.51,
