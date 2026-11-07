@@ -161,6 +161,7 @@
    "cost": 0.5444,
    "edge": 0.0169,
    "fair": 0.5536,
+   "fill": "strict",
    "id": "ncaaf:401862818",
    "label": "East Carolina Pirates",
    "league": "ncaaf",
@@ -173,8 +174,9 @@
     "team": "East Carolina Pirates"
    },
    "start": "2026-11-07T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV06USFECU-ECU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV06USFECU-ECU",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV06VTSMU-SMU|YES": {
    "ask": 0.67,
@@ -2608,6 +2610,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "ncaaf:401862818",
    "label": "South Florida Bulls +1.5",
    "league": "ncaaf",
@@ -2621,8 +2624,9 @@
     "team": "South Florida Bulls"
    },
    "start": "2026-11-07T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV06USFECU-ECU2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV06USFECU-ECU2",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV06USFECU-ECU3|YES": {
    "ask": 0.51,
@@ -2630,6 +2634,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401862818",
    "label": "East Carolina Pirates -2.5",
    "league": "ncaaf",
@@ -2643,8 +2648,9 @@
     "team": "East Carolina Pirates"
    },
    "start": "2026-11-07T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV06USFECU-ECU3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV06USFECU-ECU3",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07BYUUTAH-UTAH5|NO": {
    "ask": 0.51,
