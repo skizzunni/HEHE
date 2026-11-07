@@ -415,8 +415,15 @@ def form_line(min_n=100, gap=5):
     if not cold:
         return None
     cold.sort(key=lambda f: 100 * f["won"] / f["n"] - f["said"])
+    try:
+        C = locks.cold_check()
+    except Exception:
+        C = {}
+    c, r = C.get("cold") or [0, 0, None], C.get("rest") or [0, 0, None]
+    tail = (f" Walk-forward: legs of a type running cold won {100 * c[0] / c[1]:.1f}% the next day vs {100 * r[0] / r[1]:.1f}%"
+            f" for the rest ({c[1]} and {r[1]} legs), so a cold week is noise, not a signal." if c[1] and r[1] else "")
     return "Running cold (last 7 days, all saved lines at 70-95%): " + "; ".join(
-        f"{f['league'].upper()} {f['t']} {f['won']}/{f['n']} ({round(100 * f['won'] / f['n'])}% vs {round(f['said'])}%)" for f in cold) + "."
+        f"{f['league'].upper()} {f['t']} {f['won']}/{f['n']} ({round(100 * f['won'] / f['n'])}% vs {round(f['said'])}%)" for f in cold) + "." + tail
 
 
 _PERIODS = {"nba": (4, 12), "wnba": (4, 10), "ncaab": (2, 20), "nfl": (4, 15), "ncaaf": (4, 15), "nhl": (3, 20)}

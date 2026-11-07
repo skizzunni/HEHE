@@ -944,6 +944,40 @@ def pool_form(paths=None, led=None, days=7, min_n=30):
             for (lg, t), (w, n, p) in sorted(g.items()) if n >= min_n]
 
 
+def cold_check(paths=None, led=None, days=7, min_n=100, gap=5):
+    """Walk-forward test of the "running cold" flag: on each pool day, flag
+    the (league, bet type)s whose previous `days` pool days ran `gap`+ points
+    under their stated chance on `min_n`+ legs, then grade that day's legs.
+    {cold: [won, n, said], rest: [won, n, said]} -- whether a cold run
+    carries into the next day. 2026-11-07: cold 1261/1524 (82.7% vs 81.7%),
+    rest 4856/5850 (83.0% vs 81.7%): it does not, so the flag stays
+    information only."""
+    rows = _pool_rows(paths, led)
+    by = {}
+    for r in rows:
+        by.setdefault(r[0], []).append(r)
+    ds = sorted(by)
+    out = {"cold": [0, 0, 0.0], "rest": [0, 0, 0.0]}
+    for i, d in enumerate(ds):
+        prior = ds[max(0, i - days):i]
+        if len(prior) < 3:
+            continue
+        g = {}
+        for pd in prior:
+            for _, lg, t, p, w in by[pd]:
+                a = g.setdefault((lg, t), [0, 0, 0.0])
+                a[0] += w
+                a[1] += 1
+                a[2] += p
+        cold = {k for k, (w, n, p) in g.items() if n >= min_n and 100 * w / n <= 100 * p / n - gap}
+        for _, lg, t, p, w in by[d]:
+            a = out["cold" if (lg, t) in cold else "rest"]
+            a[0] += w
+            a[1] += 1
+            a[2] += p
+    return {k: [w, n, round(100 * p / n, 1) if n else None] for k, (w, n, p) in out.items()}
+
+
 def watch_pool(paths=None, led=None):
     """The same caution as watch_kinds, from every game line in the saved
     decision-time pools (thousands of legs, not just the card's), graded off

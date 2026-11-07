@@ -336,9 +336,12 @@ class ReviewLine(unittest.TestCase):
         import locks
         F = [dict(league="ncaaf", t="spread", won=185, n=252, said=82.0), dict(league="nba", t="over", won=80, n=100, said=82.0),
              dict(league="nhl", t="over", won=40, n=60, said=83.0)]                     # too few legs
-        with mock.patch.object(locks, "pool_form", lambda *a, **k: F):
+        with mock.patch.object(locks, "pool_form", lambda *a, **k: F), \
+             mock.patch.object(locks, "cold_check", lambda *a, **k: {"cold": [80, 100, 81.0], "rest": [410, 500, 81.0]}):
             self.assertEqual(daily_review.form_line(),
-                             "Running cold (last 7 days, all saved lines at 70-95%): NCAAF spread 185/252 (73% vs 82%).")
+                             "Running cold (last 7 days, all saved lines at 70-95%): NCAAF spread 185/252 (73% vs 82%)."
+                             " Walk-forward: legs of a type running cold won 80.0% the next day vs 82.0% for the rest"
+                             " (100 and 500 legs), so a cold week is noise, not a signal.")
         with mock.patch.object(locks, "pool_form", lambda *a, **k: F[1:]):
             self.assertIsNone(daily_review.form_line())
 

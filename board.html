@@ -1436,7 +1436,7 @@ function formNote(lg, t, name){
   const pct = Math.round(100 * f.won / f.n), gap = pct - f.said;
   return '<div class="sbn">Last 7 days, ' + String(lg).toUpperCase().replace(/[<>&"]/g, '') + ' ' + name + ' at 70-95% on every saved line: '
     + f.won + ' of ' + f.n + ' (' + pct + '% vs ' + Math.round(f.said) + '% stated)'
-    + (gap <= -5 ? ' &ndash; running cold lately.' : gap >= 5 ? ' &ndash; running hot lately.' : ' &ndash; on par.') + '</div>';
+    + (gap <= -5 ? ' &ndash; running cold lately (so far a cold week has not carried into the next day).' : gap >= 5 ? ' &ndash; running hot lately.' : ' &ndash; on par.') + '</div>';
 }
 function dayPills(attr, day){
   return '<span class="pills"><button type="button" data-' + attr + '="today" aria-pressed="'

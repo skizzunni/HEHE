@@ -421,7 +421,7 @@ def main():
             and "spreads giving" not in sd[2]):
         fails.append("spread side note wrong: " + repr(sd))
     fm = new.get("form") or ["", "", "x", "", "x"]
-    if not ("Last 7 days, NFL team unders at 70-95% on every saved line: 145 of 197 (74% vs 82% stated) &ndash; running cold lately." in (wn[3] if len(wn) > 3 else "")
+    if not ("Last 7 days, NFL team unders at 70-95% on every saved line: 145 of 197 (74% vs 82% stated) &ndash; running cold lately (so far a cold week has not carried into the next day)." in (wn[3] if len(wn) > 3 else "")
             and "MLB overs at 70-95% on every saved line: 90 of 100 (90% vs 80% stated) &ndash; running hot lately." in fm[0]
             and "NHL spreads at 70-95% on every saved line: 136 of 158 (86% vs 83% stated) &ndash; on par." in fm[1] and not fm[2]
             and len(fm) > 4 and "Last 7 days, NBA Assists props at 70-95%: 62 of 76 (82% vs 83% stated) &ndash; on par." in fm[3] and not fm[4]):

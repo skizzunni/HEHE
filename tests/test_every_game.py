@@ -116,3 +116,24 @@ class KindHalves(unittest.TestCase):
         self.assertEqual(locks.kind_halves(book), {"player props": [[1, 1, 80.0], [0, 1, 80.0]],
                                                    "game lines": [[0, 1, 70.0], [1, 1, 90.0]]})
         self.assertEqual(locks.kind_halves({"days": {}, "legs": {}}), {})
+
+
+class ColdCheck(unittest.TestCase):
+    def test_walk_forward_flags_from_prior_days_only(self):
+        import locks
+        rows = []
+        for d in range(1, 9):
+            day = f"2026-11-0{d}"
+            for i in range(120):                       # nba over: 60% for days 1-4, then 90%
+                rows.append((day, "nba", "over", 0.8, (i % 10 < 6) if d <= 4 else (i % 10 < 9)))
+            for i in range(10):
+                rows.append((day, "nhl", "over", 0.8, i % 10 < 8))
+        orig = locks._pool_rows
+        locks._pool_rows = lambda paths=None, led=None: rows
+        try:
+            c = locks.cold_check()
+        finally:
+            locks._pool_rows = orig
+        # days 4-8 are graded; nba over is flagged on days 4-8 (its prior 7 days include days 1-4 at 60%)
+        self.assertEqual(c["cold"][1], 120 * 5)
+        self.assertEqual(c["rest"][1], 10 * 5)

@@ -4148,3 +4148,8 @@ stated chance over the last 7 pool days on 100+ legs, for the hourly report. Stu
 football spreads on all saved lines 810/992 (82% vs 82%) then 185/252 (73% vs 82%) -- short in the recent
 half only; team overs 82% then 79% vs 81%, team unders 86% then 78% vs 81-82% (mixed). No change
 (2026-11-07).
+Walk-forward test of "running cold" (`locks.cold_check`): each pool day, flag the bet types whose prior 7
+days ran 5+ pts short on 100+ legs, then grade that day. Flagged legs 1261/1524 (82.7% vs 81.7% stated;
+halves 83.6%, 81.6%) against the rest 4856/5850 (83.0% vs 81.7%; halves 83.9%, 81.9%): a cold week does
+not carry into the next day, so cautions stay information only and no leg is dropped for one. Shown in
+the review's running-cold line and the board's form note (2026-11-07).
