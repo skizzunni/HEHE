@@ -4156,3 +4156,11 @@ the review's running-cold line and the board's form note (2026-11-07).
 `tools/ladder_watch.py STATE`: the live ladder watcher, now in the repo with tests -- prints a CHANGE line
 per leg whose result moved and a SETTLED line when the ticket settles, keeping its last state in a file so
 a container restart never misses or repeats a change (2026-11-07).
+Spread-band caution (`locks.spread_band_watch`, board `sideNote`): spreads at 70-95% on every saved line
+by league and band (getting 0-6.5 / 7-13.5 / 14+, giving points), short of their chance in both halves by
+5+ pts on 100+ legs. Study after NC State +15.5 lost 41-3: college football getting 7-13.5 points 146/201
+then 101/135 (73%, 75% vs 82%; z -3.5, -2.2) and NFL getting 7-13.5 94/123 then 59/78 (76%, 76% vs 82%;
+z -1.5, -1.5). The band was picked after looking, so this is a caution, not a rule. Pre-registered test:
+if the next 100 such legs (college + NFL, after 2026-11-07) also run 5+ pts under their stated chance,
+propose to the user excluding the 7-13.5 band from Locks and the ladder. Big college spreads (+14 or
+more) were fine overall (651/787, 83% vs 83%) (2026-11-07).

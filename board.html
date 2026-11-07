@@ -1408,6 +1408,13 @@ function watchNote(x){
 // points, or give them, have done at 70-95% across every saved line, both halves
 function sideNote(lg, line){
   if(typeof line !== 'number' || !line) return '';
+  const bn = line < 0 ? 'giving points' : line < 7 ? 'getting 0-6.5' : line < 14 ? 'getting 7-13.5' : 'getting 14+';
+  const bw = (D.spread_band_watch || []).find(v => v.league === lg && v.band === bn);
+  const cau = bw ? '<div class="lgw"><b>Caution:</b> ' + String(lg).toUpperCase().replace(/[<>&"]/g, '') + ' spreads ' + bn.replace('-', '&ndash;')
+    + ' points at 70-95% have won ' + bw.won + ' of ' + bw.n + ' against ' + bw.said + '% stated, short in both halves of the record.</div>' : '';
+  return cau + sideNote0(lg, line);
+}
+function sideNote0(lg, line){
   const side = line > 0 ? 'getting' : 'giving';
   const f = (D.spread_sides || []).find(v => v.league === lg && v.side === side);
   if(!f) return '';

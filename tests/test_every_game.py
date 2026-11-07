@@ -137,3 +137,10 @@ class ColdCheck(unittest.TestCase):
         # days 4-8 are graded; nba over is flagged on days 4-8 (its prior 7 days include days 1-4 at 60%)
         self.assertEqual(c["cold"][1], 120 * 5)
         self.assertEqual(c["rest"][1], 10 * 5)
+
+
+class SpreadBand(unittest.TestCase):
+    def test_bands(self):
+        import locks
+        self.assertEqual([locks.spread_band(x) for x in (3.5, 7, 13.5, 14, 21.5, -3.5, 0, None)],
+                         ["getting 0-6.5", "getting 7-13.5", "getting 7-13.5", "getting 14+", "getting 14+", "giving points", None, None])

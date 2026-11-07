@@ -150,6 +150,9 @@ PROBE = """<script>setTimeout(function(){
   D.bright_pool = bpSave;
   var ssSave = D.spread_sides; D.spread_sides = [{league: "nhl", side: "getting", all: [277, 322, 82.6], halves: [[141, 164, 82.6], [136, 158, 82.5]]},
                                                  {league: "nfl", side: "getting", all: [400, 502, 82.2], halves: [[214, 260, 82.0], [186, 242, 82.4]]}];
+  var sbSave = D.spread_band_watch; D.spread_band_watch = [{league: "ncaaf", band: "getting 7-13.5", won: 247, n: 336, said: 82}];
+  out.sband = [watchNote({league: "ncaaf", spec: {t: "spread", line: 10.5}}), watchNote({league: "ncaaf", spec: {t: "spread", line: 15.5}})];
+  D.spread_band_watch = sbSave;
   out.sides = [watchNote({league: "nhl", spec: {t: "spread", line: 1.5}}), watchNote({league: "nfl", spec: {t: "spread", line: 7.5}}),
                watchNote({league: "nhl", spec: {t: "spread", line: -1.5}})];
   D.spread_sides = ssSave;
@@ -415,6 +418,10 @@ def main():
     if not ("<b>Running ahead:</b> NHL overs at 70-95% across every saved FanDuel line have won 131 of 149 against 84% stated, ahead in both halves" in br[0]
             and "Running ahead" not in br[1]):
         fails.append("running-ahead note wrong: " + repr(br))
+    sb = new.get("sband") or ["", "x"]
+    if not ("<b>Caution:</b> NCAAF spreads getting 7&ndash;13.5 points at 70-95% have won 247 of 336 against 82% stated" in sb[0]
+            and "getting 7&ndash;13.5" not in sb[1]):
+        fails.append("spread band caution wrong: " + repr(sb))
     sd = new.get("sides") or ["", "", "x"]
     if not ("NHL spreads getting points at 70-95%: 277 of 322 (86% vs 83% stated) &ndash; ahead of their chance in both halves." in sd[0]
             and "NFL spreads getting points at 70-95%: 400 of 502 (80% vs 82% stated) &ndash; mixed across the two halves." in sd[1]

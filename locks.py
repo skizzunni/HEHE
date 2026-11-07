@@ -924,6 +924,65 @@ def spread_sides(paths=None, led=None, min_n=50):
     return out
 
 
+SPREAD_BANDS = (("getting 0-6.5", 0, 7), ("getting 7-13.5", 7, 14), ("getting 14+", 14, 999), ("giving points", -999, 0))
+
+
+def spread_band(line):
+    """The spread band a line falls in (see SPREAD_BANDS), or None."""
+    if not isinstance(line, (int, float)) or line == 0:
+        return None
+    return next((name for name, lo, hi in SPREAD_BANDS if lo <= line < hi), None)
+
+
+def spread_band_watch(paths=None, led=None, min_n=100, gap=5.0):
+    """Spreads at 70-95% on every saved line, by league and band (getting
+    0-6.5 / 7-13.5 / 14+ points, or giving points), that won under their
+    stated chance in BOTH date halves by `gap`+ points overall on `min_n`+
+    legs: [{league, band, won, n, said}]. A caution, never a pick rule.
+    2026-11-07: college football getting 7-13.5, 146/201 then 101/135
+    (73%, 75% vs 82%; z -3.5 and -2.2). Pre-registered: if the next 100
+    such legs after 2026-11-07 also run 5+ pts short, propose excluding the
+    band (as EXCLUDED does for college unders)."""
+    if led is None:
+        import ledger
+        led = ledger.load()
+    rows, seen = [], set()
+    for path in paths or (None, SAFE_LEDGER):
+        for d, x in sorted((load(path).get("pools") or {}).items()):
+            for L in x.get("legs") or []:
+                sp = L.get("spec") or {}
+                b = spread_band(sp.get("line")) if sp.get("t") == "spread" else None
+                if not b or not (0.70 <= (L.get("p") or 0) < 0.95):
+                    continue
+                key = (L.get("gid"), L.get("label"))
+                if key in seen:
+                    continue
+                seen.add(key)
+                e = led.get(L.get("gid")) or {}
+                sc = e.get("scores") or {}
+                h, a = sc.get(L.get("home")), sc.get(L.get("away"))
+                if not (isinstance(h, int) and isinstance(a, int)):
+                    continue
+                r = stacks.settle_score(sp, L["home"], L["away"], h, a)
+                if r in ("won", "lost"):
+                    rows.append((d, L.get("league") or "", b, L["p"], r == "won"))
+    if not rows:
+        return []
+    ds = sorted({r[0] for r in rows})
+    mid = ds[len(ds) // 2]
+    g = {}
+    for d, lg, b, p, w in rows:
+        g.setdefault((lg, b), {False: [], True: []})[d >= mid].append((p, w))
+    out = []
+    for (lg, b), H in sorted(g.items()):
+        A = H[False] + H[True]
+        hit = lambda X: 100 * sum(w for _, w in X) / len(X)
+        said = lambda X: 100 * sum(p for p, _ in X) / len(X)
+        if len(A) >= min_n and H[False] and H[True] and all(hit(X) < said(X) for X in H.values()) and said(A) - hit(A) >= gap:
+            out.append(dict(league=lg, band=b, won=sum(w for _, w in A), n=len(A), said=round(said(A))))
+    return out
+
+
 def pool_form(paths=None, led=None, days=7, min_n=30):
     """Recent form of every (league, bet type) across the saved pools at
     70-95%: the last `days` pool days, graded off final scores. Shown beside
