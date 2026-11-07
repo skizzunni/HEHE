@@ -8084,6 +8084,22 @@
   "price": "-1400",
   "status": "open"
  },
+ "nba:401909289|n:peyton watson|Points|5+": {
+  "aid": null,
+  "date": "2026-11-06",
+  "edge": 4.1,
+  "gid": "nba:401909289",
+  "imp": 0.9231,
+  "label": "Peyton Watson: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Peyton Watson",
+  "p": 0.8547,
+  "p_fair": 0.9608,
+  "price": "-1200",
+  "status": "open"
+ },
  "nba:401909289|n:tyrese maxey|Pts + Reb + Ast|25+": {
   "aid": null,
   "date": "2026-11-06",
@@ -8768,6 +8784,22 @@
   "p": 0.7913,
   "p_fair": 0.7988,
   "price": "-400",
+  "status": "open"
+ },
+ "nba:401909292|n:jamison battle|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-11-06",
+  "edge": -1.6,
+  "gid": "nba:401909292",
+  "imp": 0.9167,
+  "label": "Jamison Battle: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Jamison Battle",
+  "p": 0.848,
+  "p_fair": 0.9022,
+  "price": "-1100",
   "status": "open"
  },
  "nba:401909292|n:kyle kuzma|Points|5+": {
@@ -41728,6 +41760,7 @@
  "nfl:401873026|n:dj moore|Receiving Yards|25+": {
   "aid": null,
   "date": "2026-11-01",
+  "date_retry": "2026-11-07",
   "edge": -9.4,
   "gid": "nfl:401873026",
   "imp": 0.8571,
@@ -41740,9 +41773,9 @@
   "p_fair": 0.7769,
   "price": "-600",
   "rechecked": "ungradable",
-  "status": "ungradable",
-  "unresolved": true,
-  "void_why": "identity_unresolved"
+  "rechecked_nick": true,
+  "status": "open",
+  "unresolved": true
  },
  "nfl:401873026|n:jakobi lane|Receiving Yards|15+": {
   "aid": null,
@@ -42808,6 +42841,7 @@
  "nfl:401873031|n:michael carter|Receptions|1+": {
   "aid": null,
   "date": "2026-11-01",
+  "date_retry": "2026-11-07",
   "edge": -2.5,
   "gid": "nfl:401873031",
   "imp": 0.8529,
@@ -42820,9 +42854,9 @@
   "p_fair": 0.832,
   "price": "-580",
   "rechecked": "ungradable",
-  "status": "ungradable",
-  "unresolved": true,
-  "void_why": "identity_unresolved"
+  "rechecked_nick": true,
+  "status": "open",
+  "unresolved": true
  },
  "nfl:401873031|n:tee higgins|Receptions|4+": {
   "aid": null,
@@ -43921,6 +43955,7 @@
  "nfl:401873035|n:marquise brown|Receiving Yards|5+": {
   "aid": null,
   "date": "2026-11-01",
+  "date_retry": "2026-11-07",
   "edge": 0.4,
   "gid": "nfl:401873035",
   "imp": 0.8701,
@@ -43933,9 +43968,9 @@
   "p_fair": 0.8735,
   "price": "-670",
   "rechecked": "ungradable",
-  "status": "ungradable",
-  "unresolved": true,
-  "void_why": "identity_unresolved"
+  "rechecked_nick": true,
+  "status": "open",
+  "unresolved": true
  },
  "nfl:401873035|n:rachaad white|Anytime Touchdown Scorer|1+": {
   "aid": null,
