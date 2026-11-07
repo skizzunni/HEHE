@@ -1,11 +1,11 @@
 # Review 2026-11-06
 
-Picks 33-5 (86.8% vs 72.4% claimed, ROI +14.6%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; live End of 1st, Los Angeles Lakers 20 - Portland Trail Blazers 29, 0 so far, needs 4 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; won).
+Picks 34-5 (87.2% vs 72.1% claimed, ROI +15.8%).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; live 10:35 - 2nd, Los Angeles Lakers 22 - Portland Trail Blazers 34, 0 so far, needs 4 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; won).
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 21-3 (87.5% vs 71.9% claimed).
-Closing line value: +1.22 points on 38 picks; beat the close on 55.3%.
-Board sweep: 33-5, 13 open -- broken (first loss: arg San Lorenzo at 68%); 10.5 losses expected from the settled picks' chances, so 5 or more by now had a 99.1% chance.
+Closing line value: +1.11 points on 39 picks; beat the close on 53.8%.
+Board sweep: 34-5, 12 open -- broken (first loss: arg San Lorenzo at 68%); 10.9 losses expected from the settled picks' chances, so 5 or more by now had a 99.4% chance.
 - LOST arg San Lorenzo at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost
 - LOST col Internacional de Bogotá at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 - LOST mex Atlético de San Luis at 82% (-650), Atlético de San Luis 0 - FC Juárez 1: margin 1 · the book had my side favoured too · called at 82% · upset · close game
@@ -42,4 +42,4 @@ Ladder-consistency props (all time): 1702/2045 won (83.2%) vs 86.4% fair, 87.5% 
 Props 115/144 vs 83.8% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=129), ncaaf 0.00 (n=172), nfl 0.00 (n=42), nhl 0.00 (n=147)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=130), ncaaf 0.00 (n=172), nfl 0.00 (n=42), nhl 0.00 (n=147)
