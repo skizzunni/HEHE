@@ -1,12 +1,12 @@
 # Review 2026-11-07
 
-Picks 62-18 (77.5% vs 71.4% claimed, ROI +4.4%).
+Picks 64-18 (78.0% vs 71.6% claimed, ROI +4.9%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 31/51 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NCAAF over on all saved lines 600/702 vs 81%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.
-Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 373/496 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 6583 legs), so a cold week is noise, not a signal.
-Strong calls 49-16 (75.4% vs 73.1% claimed).
-Closing line value: +0.78 points on 80 picks; beat the close on 51.2%.
-Board sweep: 62-18, 89 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 22.9 losses expected from the settled picks' chances, so 18 or more by now had a 91.5% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (1.2 expected), ncaaf 2 (4.4 expected), sco 2 (1 expected), ecu 1 (0.3 expected), esp 1 (0.9 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
+Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 373/496 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 6584 legs), so a cold week is noise, not a signal.
+Strong calls 51-16 (76.1% vs 73.3% claimed).
+Closing line value: +0.81 points on 82 picks; beat the close on 51.2%.
+Board sweep: 64-18, 87 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 23.3 losses expected from the settled picks' chances, so 18 or more by now had a 92.9% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (1.2 expected), ncaaf 2 (4.4 expected), sco 2 (1.3 expected), ecu 1 (0.3 expected), esp 1 (0.9 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 18 (72% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 13 of 16 (81% vs 68% stated)
@@ -38,7 +38,7 @@ Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 6
 - LOST jpn Shimizu S-Pulse or draw at 67% (-260), Shimizu S-Pulse 0 - Tokyo Verdy 1969 1: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 9 of 16 (56% vs 69% stated)
 LEAK epl: 62.5% hit vs 73.1% claimed on 24 calls (14 days)
 Locks 2/11 won, 8 open; Best play top 2 (59%) open; lost: NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack) Duke Blue Devils 41 - NC State Wolfpack 3.
-Safe Locks 2/11 won, 9 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
+Safe Locks 3/11 won, 8 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: lost (1/8 legs won, killed by Iowa State Cyclones +7.5)
 Lottery 100: lost (0/6 legs won, killed by Missouri Tigers +3.5)
 Lottery 100: lost (0/5 legs won, killed by Kansas State Wildcats +1.5, Over 51.5 points, Purdue Boilermakers -10.5)
