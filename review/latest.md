@@ -32,12 +32,12 @@ Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST nhl Colorado Avalanche at 66% (-218), Colorado Avalanche 2 - Nashville Predators 3: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game
 Locks 7/11 won, 4 open; Best play top 2 (62%) open.
 Safe Locks 10/11 won, 1 open; Winners parlay top 2 (84%) won; Best play top 7 (51%) open.
-Lottery 100: lost (4/9 legs won, killed by Over 221.5 points, Under 230.5 points)
+Lottery 100: lost (4/9 legs won, killed by Over 221.5 points, Over 49.5 points, Under 230.5 points)
 Lottery 100: lost (2/7 legs won, killed by Over 222.5 points, Calgary Flames to win, Columbus Blue Jackets +1.5)
-Lottery 10k: lost (7/13 legs won, killed by Under 230.5 points)
-Lottery 10k+25: lost (5/13 legs won, killed by Under 230.5 points, Over 223.5 points, Calgary Flames to win)
-Lottery 10k+50: lost (5/13 legs won, killed by Under 230.5 points, Over 223.5 points, Calgary Flames to win)
-Lottery 10k+100: lost (6/12 legs won, killed by Under 230.5 points)
+Lottery 10k: lost (7/13 legs won, killed by Over 49.5 points, Under 230.5 points)
+Lottery 10k+25: lost (5/13 legs won, killed by Over 49.5 points, Under 230.5 points, Over 223.5 points, Calgary Flames to win)
+Lottery 10k+50: lost (5/13 legs won, killed by Over 49.5 points, Under 230.5 points, Over 223.5 points, Calgary Flames to win)
+Lottery 10k+100: lost (6/12 legs won, killed by Over 49.5 points, Under 230.5 points)
 Ladder-consistency props (all time): 1702/2045 won (83.2%) vs 86.4% fair, 87.5% price.
 Props 115/144 vs 83.8% claimed.
 
