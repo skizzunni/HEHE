@@ -1,11 +1,11 @@
 # Review 2026-11-06
 
-Picks 17-2 (89.5% vs 71.9% claimed, ROI +17.2%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 3:11 - 2nd, Memphis Grizzlies 43 - Oklahoma City Thunder 58, 1 so far), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; live 5:37 - 4th, Atlanta Hawks 121 - Washington Wizards 113, already over (234, line 214.5)), Under 241.5 points (Utah Jazz at Dallas Mavericks; live 4:10 - 2nd, Dallas Mavericks 45 - Utah Jazz 45, on pace for 218 (90 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 6:44 - 2nd, Minnesota Timberwolves 37 - New Orleans Pelicans 43, on pace for 222 (80 so far, line 216.5), on track).
+Picks 18-2 (90.0% vs 73.2% claimed, ROI +16.4%).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 2:20 - 2nd, Memphis Grizzlies 46 - Oklahoma City Thunder 58, 3 so far), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; live 4:30 - 4th, Atlanta Hawks 124 - Washington Wizards 117, already over (241, line 214.5)), Under 241.5 points (Utah Jazz at Dallas Mavericks; live 2:53 - 2nd, Dallas Mavericks 50 - Utah Jazz 49, on pace for 225 (99 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 5:17 - 2nd, Minnesota Timberwolves 44 - New Orleans Pelicans 45, on pace for 228 (89 so far, line 216.5), on track).
 Cautions in force: NBA over on Locks 12/21 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 17-2 (89.5% vs 71.9% claimed).
-Closing line value: +1.27 points on 19 picks; beat the close on 63.2%.
-Board sweep: 17-2, 32 open -- broken (first loss: arg San Lorenzo at 68%).
+Closing line value: +1.21 points on 20 picks; beat the close on 60.0%.
+Board sweep: 18-2, 31 open -- broken (first loss: arg San Lorenzo at 68%); 5.4 losses expected from the settled picks' chances, so 2 or more by now had a 98.5% chance.
 - LOST arg San Lorenzo at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost
 - LOST col Internacional de Bogotá at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 Why picks lost (14 days): favourite lost 141, close game 118, upset 53, coin flip 47, blowout 42, price moved against it 32.
