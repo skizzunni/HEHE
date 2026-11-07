@@ -1,11 +1,11 @@
 # Review 2026-11-07
 
-Picks 5-1 (83.3% vs 72.5% claimed, ROI +9.5%).
+Picks 6-1 (85.7% vs 71.0% claimed, ROI +15.3%).
 Ladder: run 2 ended (peak $1.00, lost on Austin Reaves: 4+ Assists); the next ticket starts again at $1; best ever $9.57.
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1085/1245 vs 82%; NHL over on all saved lines 131/149 vs 84%; NHL spread on all saved lines 286/333 vs 83%.
-Strong calls 5-1 (83.3% vs 72.5% claimed).
-Closing line value: +2.73 points on 6 picks; beat the close on 83.3%.
-Board sweep: 5-1, 145 open -- broken (first loss: jpn Nagoya Grampus at 76%); 1.7 losses expected from the settled picks' chances, so 1 or more by now had a 85.5% chance.
+Strong calls 6-1 (85.7% vs 71.0% claimed).
+Closing line value: +2.04 points on 7 picks; beat the close on 71.4%.
+Board sweep: 6-1, 145 open -- broken (first loss: jpn Nagoya Grampus at 76%); 2 losses expected from the settled picks' chances, so 1 or more by now had a 91% chance.
 - LOST jpn Nagoya Grampus at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset
 Why picks lost (14 days): favourite lost 136, close game 111, upset 54, coin flip 45, blowout 41, price moved against it 29.
 Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo at 68%; 13.9 losses expected, 9 came in (96.6% chance of that many or more).
