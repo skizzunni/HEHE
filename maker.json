@@ -6944,6 +6944,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV07OKSTKSU-63"
   },
+  "KXNCAAFTOTAL-26NOV07OKSTKSU-63|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401856854",
+   "label": "over 62.5",
+   "league": "ncaaf",
+   "match": "OKST @ KSU",
+   "posted": "2026-11-07T13:55:25+00:00",
+   "queue": 7322.21,
+   "side": "YES",
+   "spec": {
+    "line": 62.5,
+    "t": "over"
+   },
+   "start": "2026-11-07T18:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV07OKSTKSU-63"
+  },
   "KXNCAAFTOTAL-26NOV07PSUWASH-45|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -7153,6 +7174,27 @@
    "start": "2026-11-07T20:00Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV07TXAMSCAR-52"
+  },
+  "KXNCAAFTOTAL-26NOV07TXAMSCAR-53|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401856744",
+   "label": "under 52.5",
+   "league": "ncaaf",
+   "match": "TA&M @ SC",
+   "posted": "2026-11-07T13:55:25+00:00",
+   "queue": 26770.73,
+   "side": "NO",
+   "spec": {
+    "line": 52.5,
+    "t": "under"
+   },
+   "start": "2026-11-07T20:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV07TXAMSCAR-53"
   },
   "KXNCAAFTOTAL-26NOV07TXSTORST-71|YES": {
    "ask": 0.51,
@@ -11130,6 +11172,27 @@
    "start": "2026-11-08T18:00Z",
    "status": "open",
    "ticker": "KXNFLGAME-26NOV08DETMIA-DET"
+  },
+  "KXNFLGAME-26NOV08GBNE-NE|YES": {
+   "ask": 0.61,
+   "bid": 0.6,
+   "cost": 0.6042,
+   "edge": 0.0066,
+   "fair": 0.6082,
+   "id": "nfl:401873049",
+   "label": "New England Patriots",
+   "league": "nfl",
+   "match": "GB @ NE",
+   "posted": "2026-11-07T13:55:25+00:00",
+   "queue": 202980.29,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "New England Patriots"
+   },
+   "start": "2026-11-08T21:25Z",
+   "status": "open",
+   "ticker": "KXNFLGAME-26NOV08GBNE-NE"
   },
   "KXNFLGAME-26NOV08LARWAS-LAR|YES": {
    "ask": 0.67,
