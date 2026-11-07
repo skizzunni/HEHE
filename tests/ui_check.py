@@ -457,7 +457,9 @@ def main():
     if not (len(lf) == 4 and lf[0] in (2, 3) and lf[1:] == [1, 8, 0]):
         fails.append("ladder 2x-5x chooser wrong: " + repr(lf))
     l2 = new.get("lopts2", "")
-    if not ("(outside 2&ndash;5&times;)" in l2 and '<tr style="font-weight:700"><td>3</td>' in l2):
+    if not ("(outside 2&ndash;5&times;)" in l2 and '<tr style="font-weight:700"><td>3</td>' in l2
+            and "Best overall on the stated chances: 1 leg at 1.50&times;" in l2 and "left out because it pays outside 2&ndash;5&times;" in l2
+            and "Best overall" not in new.get("lopts", "")):
         fails.append("ladder options band wrong: " + l2[:400])
     lc = new.get("lcounts") or ["", "x"]
     if not ("<td>2</td><td class=\"num\">15 of 20 (75%)</td><td class=\"num\">1.55&times; <span class=\"sbn\">(outside 2&ndash;5&times;)</span>" in lc[0]

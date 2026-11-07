@@ -1546,7 +1546,13 @@ function ladderOptions(T){
     + '<th class="num">Ticket wins</th><th class="num">Pays</th><th class="num">Wins needed</th><th class="num">Reach $10k</th></tr></thead><tbody>'
     + O.map(o => '<tr' + (o === best ? ' style="font-weight:700"' : '') + '><td>' + o.legs + '</td><td class="num">' + (100 * o.prob).toFixed(0)
       + '%</td><td class="num">' + o.pays.toFixed(2) + '&times;</td><td class="num">' + o.need + '</td><td class="num">'
-      + oneIn(o.reach) + (o.in_band === false ? ' <span class="sbn">(outside 2&ndash;5&times;)</span>' : '') + '</td></tr>').join('') + '</tbody></table></details>';
+      + oneIn(o.reach) + (o.in_band === false ? ' <span class="sbn">(outside 2&ndash;5&times;)</span>' : '') + '</td></tr>').join('') + '</tbody></table>'
+    + (function(){
+        const all = O.reduce((a, o) => o.reach > a.reach ? o : a, O[0]);
+        return all !== best && all.in_band === false
+          ? '<p class="note">Best overall on the stated chances: ' + all.legs + ' leg' + (all.legs > 1 ? 's' : '') + ' at ' + all.pays.toFixed(2)
+            + '&times; (' + oneIn(all.reach) + ' to reach the target), left out because it pays outside 2&ndash;5&times;.</p>' : '';
+      })() + '</details>';
 }
 // the ladder's leg count (ladder.choose): of the top 3..8 legs, the slice
 // whose chance raised to the wins still needed is best

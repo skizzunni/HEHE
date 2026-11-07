@@ -4124,3 +4124,6 @@ Review cautions line now also lists call cautions by league and band (`ledger.ca
 bet types running ahead of their chance (`locks.bright_pool`) (2026-11-07).
 Review ladder line, once a run has ended, says how the next ticket is built (`daily_review.rule_text`,
 from ladder.py's constants) (2026-11-07).
+Ladder options table notes when the best leg count on the stated chances pays outside 2x-5x and was left
+out by the user's band (Nov 7: 1-3 legs rated 1.2e-5 to 1.4e-5 to reach $10k against 9.7e-6 for the
+6-leg ticket chosen) (2026-11-07).
