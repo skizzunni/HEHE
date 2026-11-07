@@ -9870,8 +9870,8 @@
    },
    {
     "flag": false,
-    "hit": 50.2,
-    "n": 213,
+    "hit": 50.0,
+    "n": 214,
     "name": "kalshi maker bids (filled)",
     "said": 53.4
    }
@@ -9966,12 +9966,12 @@
   },
   "cautions": "Cautions in force: NBA over on Locks 13/22 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.",
   "clv": {
-   "avg": 1.2,
-   "beat": 54.5,
-   "n": 33
+   "avg": 1.14,
+   "beat": 52.9,
+   "n": 34
   },
   "day": "2026-11-06",
-  "ladder": "Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; live 5:10 - 1st, Los Angeles Lakers 9 - Portland Trail Blazers 16, 0 so far, needs 4 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 4:44 - 4th, Minnesota Timberwolves 97 - New Orleans Pelicans 91, on pace for 209 (188 so far, line 216.5), behind the pace it needs).",
+  "ladder": "Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; won), Austin Reaves: 4+ Assists (POR @ LAL; live 2:42 - 1st, Los Angeles Lakers 15 - Portland Trail Blazers 20, 0 so far, needs 4 more), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; won), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 3:04 - 4th, Minnesota Timberwolves 104 - New Orleans Pelicans 96, on pace for 214 (200 so far, line 216.5), behind the pace it needs).",
   "leaks_14d": [],
   "locks": {
    "lost": [],
@@ -10073,7 +10073,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "100",
-    "won": 1
+    "won": 2
    },
    {
     "killed_by": [
@@ -10094,7 +10094,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -10105,7 +10105,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+25",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -10116,7 +10116,7 @@
     "lost": 2,
     "status": "lost",
     "tier": "10k+50",
-    "won": 2
+    "won": 3
    },
    {
     "killed_by": [
@@ -10126,16 +10126,16 @@
     "lost": 1,
     "status": "lost",
     "tier": "10k+100",
-    "won": 3
+    "won": 4
    }
   ],
   "picks": {
-   "hit": 87.9,
+   "hit": 88.2,
    "lost": 4,
-   "n": 33,
-   "roi": 14.6,
-   "said": 73.4,
-   "won": 29
+   "n": 34,
+   "roi": 15.5,
+   "said": 73.2,
+   "won": 30
   },
   "picks_by_league": {
    "arg": {
@@ -10266,6 +10266,14 @@
     "said": 99.0,
     "won": 3
    },
+   "ncaaf": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 45.9,
+    "said": 67.0,
+    "won": 1
+   },
    "ned2": {
     "hit": 100.0,
     "lost": 0,
@@ -10330,9 +10338,9 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 98.9,
+   "as_bad_pct": 99.2,
    "broke_on": "arg San Lorenzo at 68%",
-   "expected_losses": 8.8,
+   "expected_losses": 9.1,
    "lost": 4,
    "lost_by_league": {
     "arg": 1,
@@ -10340,8 +10348,8 @@
     "mex": 1,
     "nba": 1
    },
-   "open": 18,
-   "won": 29
+   "open": 17,
+   "won": 30
   },
   "vs_market_14d": {
    "against": {
@@ -10350,10 +10358,10 @@
    "agree": {
     "hit": 76.0,
     "lost": 243,
-    "n": 1012,
-    "roi": 1.3,
+    "n": 1013,
+    "roi": 1.4,
     "said": 71.4,
-    "won": 769
+    "won": 770
    }
   },
   "weights": {
@@ -10369,10 +10377,10 @@
    "ncaaf": {
     "fitted": 0.35,
     "held_out": false,
-    "logloss": 0.5916,
-    "market_only": 0.5988,
-    "model_40": 0.5919,
-    "n": 171,
+    "logloss": 0.5906,
+    "market_only": 0.5977,
+    "model_40": 0.5909,
+    "n": 172,
     "weight": 0.0
    },
    "nfl": {

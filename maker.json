@@ -182,6 +182,7 @@
    "cost": 0.664,
    "edge": 0.0101,
    "fair": 0.6707,
+   "fill": "touch",
    "id": "ncaaf:401858288",
    "label": "SMU Mustangs",
    "league": "ncaaf",
@@ -194,8 +195,9 @@
     "team": "SMU Mustangs"
    },
    "start": "2026-11-07T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV06VTSMU-SMU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV06VTSMU-SMU",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07AFAARMY-ARMY|YES": {
    "ask": 0.59,
@@ -6402,6 +6404,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858288",
    "label": "under 56.5",
    "league": "ncaaf",
@@ -6414,8 +6417,9 @@
     "t": "under"
    },
    "start": "2026-11-07T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV06VTSMU-57"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV06VTSMU-57",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07AFAARMY-44|YES": {
    "ask": 0.52,
