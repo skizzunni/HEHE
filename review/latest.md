@@ -1,11 +1,11 @@
 # Review 2026-11-07
 
-Picks 10-7 (58.8% vs 71.6% claimed, ROI -22.9%).
+Picks 10-8 (55.6% vs 71.5% claimed, ROI -27.2%).
 Ladder: run 3, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.84x (19% est.); 7 wins to $10,000; legs: Houston Cougars to win (Cincinnati Bearcats at Houston Cougars; 3:30 PM, open), Auburn Tigers to win (Arkansas Razorbacks at Auburn Tigers; 12:45 PM, open), NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack; 12:30 PM, open), Georgia Tech Yellow Jackets under 31.5 points (Louisville Cardinals at Georgia Tech Yellow Jackets; 7:30 PM, open), Boston College Eagles over 15.5 points (Florida State Seminoles at Boston College Eagles; 12:00 PM, open), Over 214.5 points (Denver Nuggets at Indiana Pacers; 5:00 PM, open).
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 28/47 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 115/130 vs 83%; NHL spread on all saved lines 250/289 vs 83%; NHL teamover on all saved lines 158/180 vs 82%.
-Strong calls 10-7 (58.8% vs 71.6% claimed).
-Closing line value: +1.36 points on 17 picks; beat the close on 70.6%.
-Board sweep: 10-7, 142 open -- broken (first loss: jpn Nagoya Grampus at 76%); 4.8 losses expected from the settled picks' chances, so 7 or more by now had a 18.1% chance.
+Strong calls 10-8 (55.6% vs 71.5% claimed).
+Closing line value: +1.6 points on 18 picks; beat the close on 72.2%.
+Board sweep: 10-8, 141 open -- broken (first loss: jpn Nagoya Grampus at 76%); 5.1 losses expected from the settled picks' chances, so 8 or more by now had a 10.9% chance.
 - LOST jpn Nagoya Grampus at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 12 of 17 (71% vs 68% stated)
 - LOST ger2 Holstein Kiel at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 12 of 15 (80% vs 67% stated)
@@ -13,7 +13,8 @@ Board sweep: 10-7, 142 open -- broken (first loss: jpn Nagoya Grampus at 76%); 4
 - LOST epl Tottenham Hotspur at 66% (-240), Leeds United 1 - Tottenham Hotspur 0: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game; picks like it: 10 of 15 (67% vs 68% stated)
 - LOST wsl Chelsea at 84% (-900), Chelsea 1 - Everton 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST esp Málaga at 69% (-270), Málaga 1 - Racing Santander 2: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game; picks like it: 9 of 12 (75% vs 71% stated)
-Why picks lost (14 days): favourite lost 141, close game 116, upset 55, coin flip 45, blowout 41, price moved against it 29.
+- LOST ita Frosinone at 70% (-290), Cagliari 1 - Frosinone 0: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 16 of 17 (94% vs 70% stated)
+Why picks lost (14 days): favourite lost 142, close game 117, upset 55, coin flip 45, blowout 41, price moved against it 29.
 Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo at 68%; 13.9 losses expected, 9 came in (96.6% chance of that many or more).
 - LOST arg San Lorenzo at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost; picks like it: 11 of 18 (61% vs 69% stated)
 - LOST col Internacional de Bogotá at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 9 of 14 (64% vs 68% stated)
