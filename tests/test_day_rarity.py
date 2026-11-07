@@ -64,6 +64,17 @@ class LikeRecord(unittest.TestCase):
         self.assertTrue(line.endswith("[favourite lost]; picks like it: 9 of 12 (75% vs 66% stated)"), line)
 
 
+class DrawLosses(unittest.TestCase):
+    def test_counts_draws_among_straight_win_losses(self):
+        three = {"first": {"prices": {"home": "-200", "draw": "+300", "away": "+500"}}}
+        book = {"a": dict(three, status="lost", scores={"X": 1, "Y": 1}),
+                "b": dict(three, status="lost", scores={"X": 0, "Y": 2}),
+                "c": dict(three, status="won", scores={"X": 2, "Y": 0}),
+                "d": dict(three, status="lost", dc=True, scores={"X": 0, "Y": 1}),          # double chance: left out
+                "e": dict(status="lost", scores={"X": 1, "Y": 1})}                          # two-way sport: left out
+        self.assertEqual(ledger.draw_losses(book), dict(n=3, lost=2, drawn=1))
+
+
 class CallCautions(unittest.TestCase):
     def test_short_in_both_halves_only(self):
         book = {}

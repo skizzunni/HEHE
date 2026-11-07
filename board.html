@@ -731,6 +731,14 @@ function bandCaution(league, mc){
   return c ? '<div class="lgw"><b>Caution:</b> ' + String(league).toUpperCase().replace(/[<>&"]/g, '') + ' calls at ' + b + '-' + (b + 10)
     + '% have won ' + c.won + ' of ' + c.n + ' against ' + c.said + '% stated, short in both halves of the record.</div>' : '';
 }
+// a straight win in soccer loses on a draw too (ledger.draw_losses): how
+// many of these picks' losses were draws, the case "or draw" covers
+function drawNote(r){
+  const X = (D.results || {}).draw_losses;
+  if(!r.sw || !X || !X.lost) return '';
+  return '<div class="sbn">Straight win: a draw loses it. ' + X.drawn + ' of the ' + X.lost + ' losses on ' + X.n
+    + ' straight-win soccer picks were draws; the &ldquo;or draw&rdquo; bet covers that at a shorter price.</div>';
+}
 function moveNote(r){
   if(r.mv === null || r.mv === undefined) return '';
   const M = ((D.results || {}).moves || {})[r.mv > 0 ? 'for' : 'against'];
@@ -1090,7 +1098,7 @@ function renderView(){
              + '<span class="stripe"></span>' + esc(r.mp) + dog + val + '</td>'
              + (mixed ? '<td class="comp">' + esc(r.lg) + '</td>' : '')
              + '<td class="state">' + esc(r.t) + '</td>' + conf
-             + '<td class="why">' + esc(r.why) + safeNote(r) + bandCaution(league, r.mc) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
+             + '<td class="why">' + esc(r.why) + safeNote(r) + bandCaution(league, r.mc) + drawNote(r) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
       }).join("")
     + '</tbody></table>';
 }

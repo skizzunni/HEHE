@@ -142,7 +142,8 @@ PROBE = """<script>setTimeout(function(){
   out.form = [watchNote({league: "mlb", t: "over"}), watchNote({league: "nhl", t: "spread"}), watchNote({league: "nhl", t: "under"}),
               watchNote({league: "nba", kind: "prop", market: "Assists"}), watchNote({league: "nba", kind: "prop", market: "Points"})];
   D.prop_form = ppSave;
-  var rsC = D.results; D.results = Object.assign({}, rsC, {call_cautions: [{league: "ncaaf", band: 70, won: 28, n: 47, said: 75}]});
+  var rsC = D.results; D.results = Object.assign({}, rsC, {call_cautions: [{league: "ncaaf", band: 70, won: 28, n: 47, said: 75}], draw_losses: {n: 234, lost: 38, drawn: 21}});
+  out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({})];
   out.bandc = [bandCaution("ncaaf", 72.5), bandCaution("ncaaf", 81), bandCaution("nfl", 72), bandCaution("ncaaf", undefined)];
   D.results = rsC;
   var bpSave = D.bright_pool; D.bright_pool = [{league: "nhl", t: "over", won: 131, n: 149, said: 84}];
@@ -411,6 +412,9 @@ def main():
     if "Caution:</b> NBA overs on Locks have won 10 of 18 against 75% stated" not in wn[0] or wn[1] or wn[2] \
             or "NFL team unders at 70-95% across every saved FanDuel line have won 299 of 388 against 82% stated" not in (wn[3] if len(wn) > 3 else ""):
         fails.append("watch note wrong: " + repr(wn))
+    dn = new.get("drawn") or ["", "x", "x"]
+    if not ("Straight win: a draw loses it. 21 of the 38 losses on 234 straight-win soccer picks were draws" in dn[0] and not dn[1] and not dn[2]):
+        fails.append("draw note wrong: " + repr(dn))
     bc = new.get("bandc") or ["", "x"]
     if not ("<b>Caution:</b> NCAAF calls at 70-80% have won 28 of 47 against 75% stated, short in both halves" in bc[0] and not any(bc[1:])):
         fails.append("band caution wrong: " + repr(bc))

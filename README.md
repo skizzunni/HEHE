@@ -4168,3 +4168,6 @@ The pre-registered spread-band test is now tracked by itself (`locks.PREREG`, `l
 line "Pre-registered test"): college + NFL spreads getting 7-13.5 points at 70-95%, counted only from pools
 saved on 2026-11-08 or later, verdict "waiting" until 100 legs, then "short" (5+ pts under: propose the
 exclusion to the user) or "fine" (drop the caution) (2026-11-07).
+Straight-win soccer calls carry a draw note (`ledger.draw_losses`, row flag `sw`, board `drawNote`): of
+234 graded straight-win picks in sports with a draw, 38 lost and 21 of those were draws -- the case the
+"or draw" bet covers. Information only; the call itself is unchanged (2026-11-07).
