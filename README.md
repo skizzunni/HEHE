@@ -4105,3 +4105,8 @@ not a leak (2026-11-07).
 Ladder day-by-day log shows each ticket's leg count and, for a lost ticket, the leg it lost on (needed now
 that the 2x-5x chooser varies the count). Study, no rule: J-League calls 16/21 then 14/21 (76%, 67% vs
 72-73%) -- mixed, so Nagoya Grampus's 0-2 at Kyoto (76%) is not a leak (2026-11-07).
+"Running ahead" beside legs (`locks.bright_pool`, the other side of watch_pool: bet types at 70-95% on
+every saved line ahead of their stated chance in both halves by 3+ pts on 100+ legs; information only).
+Study, no rule: NBA unders 1085/1245 (83% then 91% vs 82%), NHL overs 131/149 (88% vs 84% in both halves),
+NHL spreads 286/333 (86% vs 83% both halves, mostly the +1.5 puck line). None is past the 99.5% bar
+across both halves, so no pick change (2026-11-07).

@@ -1390,6 +1390,9 @@ function watchNote(x){
   const ws = W.filter(v => v.league === lg && v.t === t);
   return ws.map(w => '<div class="lgw"><b>Caution:</b> ' + esc(String(lg).toUpperCase()) + ' ' + esc(nice[t] || t) + ' ' + w.card + ' have won '
     + w.won + ' of ' + w.n + ' against ' + w.said + '% stated, short in both halves of the record.</div>').join('')
+    + (D.bright_pool || []).filter(v => v.league === lg && v.t === t).map(w => '<div class="sbn"><b>Running ahead:</b> '
+        + esc(String(lg).toUpperCase()) + ' ' + esc(nice[t] || t) + ' at 70-95% across every saved FanDuel line have won ' + w.won + ' of ' + w.n
+        + ' against ' + w.said + '% stated, ahead in both halves of the record.</div>').join('')
     + formNote(lg, t, nice[t] || t) + (t === 'spread' ? sideNote(lg, (x.spec || {}).line) : '');
 }
 // spreads by side (locks.spread_sides): how this league's spreads that get

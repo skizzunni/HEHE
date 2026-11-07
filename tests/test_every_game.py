@@ -91,3 +91,17 @@ class SpreadSides(unittest.TestCase):
             locks.load = orig
         self.assertEqual(out, [dict(league="nhl", side="getting", all=[120, 120, 80.0],
                                     halves=[[60, 60, 80.0], [60, 60, 80.0]])])
+
+
+class BrightPool(unittest.TestCase):
+    def test_ahead_in_both_halves(self):
+        import locks
+        rows = [(f"2026-11-0{d}", "nhl", "over", 0.8, i % 10 != 0) for d in range(1, 9) for i in range(20)]   # 90% vs 80%
+        rows += [(f"2026-11-0{d}", "nba", "over", 0.8, i % 5 != 0 if d < 5 else i % 2 == 0) for d in range(1, 9) for i in range(20)]
+        orig = locks._pool_rows
+        locks._pool_rows = lambda paths=None, led=None: rows
+        try:
+            out = locks.bright_pool()
+        finally:
+            locks._pool_rows = orig
+        self.assertEqual(out, [dict(league="nhl", t="over", won=144, n=160, said=80, source="pool")])

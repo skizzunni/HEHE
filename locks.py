@@ -970,6 +970,32 @@ def watch_pool(paths=None, led=None):
     return out
 
 
+def bright_pool(paths=None, led=None):
+    """The other side of watch_pool: (league, bet type) at 70-95% on every
+    saved line that beat its stated chance in BOTH date halves and by 3+
+    points overall, on 100+ legs. Information beside legs, never a pick rule.
+    2026-11-07: NBA unders 1085/1245 (83% then 91% vs 82%), NHL overs 131/149
+    (88% vs 84% both halves), NHL spreads 286/333 (86% vs 83% both halves)."""
+    rows = _pool_rows(paths, led)
+    if not rows:
+        return []
+    days = sorted({r[0] for r in rows})
+    mid = days[len(days) // 2]
+    g = {}
+    for d, lg, t, p, w in rows:
+        g.setdefault((lg, t), {False: [], True: []})[d >= mid].append((p, w))
+    out = []
+    for (lg, t), H in sorted(g.items()):
+        allx = H[False] + H[True]
+        hit = lambda X: sum(w for _, w in X) / len(X)
+        said = lambda X: sum(p for p, _ in X) / len(X)
+        if (len(allx) >= POOL_WATCH_MIN and H[False] and H[True] and all(hit(X) > said(X) for X in H.values())
+                and hit(allx) - said(allx) >= POOL_WATCH_GAP):
+            out.append(dict(league=lg, t=t, won=sum(w for _, w in allx), n=len(allx), said=round(100 * said(allx)),
+                            source="pool"))
+    return out
+
+
 def by_rank(book):
     """Graded card legs by their place on the card (likeliest first):
     [{ranks, won, n, said}] for 1-3, 4-5, 6-8, 9-11."""
