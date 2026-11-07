@@ -5800,6 +5800,62 @@
    "tip": "3:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909946|away|FanDuel": {
+   "dec": 2.3,
+   "ev": 0.0669,
+   "fair": 0.4638,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909946",
+   "kind": "suspect",
+   "league": "nba",
+   "match": "LAL @ DET",
+   "price": "+130",
+   "seen": "2026-11-07T22:01:41+00:00",
+   "side": "away",
+   "start": "2026-11-08T23:00Z",
+   "team": "Los Angeles Lakers",
+   "tip": "6:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909946|home|Kalshi": {
+   "dec": 1.8265,
+   "ev": 0.035,
+   "fair": 0.5666,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909946",
+   "kind": "value",
+   "league": "nba",
+   "match": "LAL @ DET",
+   "price": "-121",
+   "seen": "2026-11-07T22:01:41+00:00",
+   "side": "home",
+   "start": "2026-11-08T23:00Z",
+   "team": "Detroit Pistons",
+   "tip": "6:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909946|sure": {
+   "id": "nba:401909946",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+130",
+     "stake_share": 0.4426,
+     "team": "Los Angeles Lakers",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "-121",
+     "stake_share": 0.5574,
+     "team": "Detroit Pistons",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "LAL @ DET",
+   "profit": 0.018,
+   "seen": "2026-11-07T22:01:41+00:00"
+  },
   "ncaab:401906758|away|FanDuel": {
    "dec": 41.0,
    "ev": 0.0352,

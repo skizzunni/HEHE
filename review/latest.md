@@ -1,12 +1,12 @@
 # Review 2026-11-07
 
-Picks 64-18 (78.0% vs 71.6% claimed, ROI +4.9%).
+Picks 65-18 (78.3% vs 71.6% claimed, ROI +5.1%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 31/51 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NCAAF over on all saved lines 600/702 vs 81%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.
-Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 373/496 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 6584 legs), so a cold week is noise, not a signal.
-Strong calls 51-16 (76.1% vs 73.3% claimed).
-Closing line value: +0.81 points on 82 picks; beat the close on 51.2%.
-Board sweep: 64-18, 87 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 23.3 losses expected from the settled picks' chances, so 18 or more by now had a 92.9% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (1.2 expected), ncaaf 2 (4.4 expected), sco 2 (1.3 expected), ecu 1 (0.3 expected), esp 1 (0.9 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
+Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 373/496 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 6585 legs), so a cold week is noise, not a signal.
+Strong calls 52-16 (76.5% vs 73.3% claimed).
+Closing line value: +0.85 points on 83 picks; beat the close on 51.8%.
+Board sweep: 65-18, 86 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 23.6 losses expected from the settled picks' chances, so 18 or more by now had a 93.6% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (1.2 expected), ncaaf 2 (4.4 expected), sco 2 (1.3 expected), ecu 1 (0.3 expected), esp 1 (1.1 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 18 (72% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 13 of 16 (81% vs 68% stated)
