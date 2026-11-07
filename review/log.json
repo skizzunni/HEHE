@@ -10487,9 +10487,9 @@
   },
   "cautions": "Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.",
   "clv": {
-   "avg": null,
-   "beat": null,
-   "n": 0
+   "avg": 3.6,
+   "beat": 100.0,
+   "n": 2
   },
   "day": "2026-11-07",
   "ladder": "Ladder: run 2 ended (peak $1.00, lost on Austin Reaves: 4+ Assists); the next ticket starts again at $1; best ever $9.57.",
@@ -10507,14 +10507,45 @@
    "coin flip": 45,
    "favourite lost": 136,
    "price moved against it": 29,
-   "upset": 53
+   "upset": 54
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "jpn",
+    "match": "KYO @ NAG",
+    "pick": "Nagoya Grampus",
+    "price": "-425",
+    "said": 76,
+    "score": {
+     "Kyoto Sanga": 2,
+     "Nagoya Grampus": 0
+    },
+    "tags": [
+     "upset"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset"
+   }
+  ],
   "lottery": [],
   "picks": {
-   "n": 0
+   "hit": 50.0,
+   "lost": 1,
+   "n": 2,
+   "roi": -33.3,
+   "said": 73.5,
+   "won": 1
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "jpn": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -33.3,
+    "said": 73.5,
+    "won": 1
+   }
+  },
   "props": {
    "fair": {
     "n": 2068,
@@ -10534,26 +10565,36 @@
    "won": 0
   },
   "strong": {
-   "n": 0
+   "hit": 50.0,
+   "lost": 1,
+   "n": 2,
+   "roi": -33.3,
+   "said": 73.5,
+   "won": 1
   },
   "stuck": [],
   "sweep": {
-   "broke_on": null,
-   "lost": 0,
-   "open": 149,
-   "won": 0
+   "as_bad_pct": 46.0,
+   "broke_on": "jpn Nagoya Grampus at 76%",
+   "expected_losses": 0.5,
+   "lost": 1,
+   "lost_by_league": {
+    "jpn": 1
+   },
+   "open": 147,
+   "won": 1
   },
   "vs_market_14d": {
    "against": {
     "n": 0
    },
    "agree": {
-    "hit": 76.2,
-    "lost": 234,
-    "n": 982,
-    "roi": 1.5,
+    "hit": 76.1,
+    "lost": 235,
+    "n": 984,
+    "roi": 1.4,
     "said": 71.6,
-    "won": 748
+    "won": 749
    }
   },
   "weights": {
