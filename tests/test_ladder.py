@@ -243,6 +243,24 @@ class ReviewLine(unittest.TestCase):
                          "Under 241.5 points (UTA at DAL; LOST)")
 
 
+    def test_pace_text(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review as d
+        nba = dict(label="Over 214.5 points", league="nba", live="5:37 - 2nd", live_score="Atlanta Hawks 47 - Washington Wizards 45")
+        self.assertEqual(d.pace_text(nba), "on pace for 240 (92 so far, line 214.5), on track")
+        self.assertEqual(d.pace_text(dict(nba, label="Under 241.5 points")), "on pace for 240 (92 so far, line 241.5), on track")
+        self.assertEqual(d.pace_text(dict(nba, live="8:00 - 1st", live_score="A 10 - B 8")), "18 so far, line 214.5, too early to project")
+        self.assertEqual(d.pace_text(dict(nba, live="Halftime", live_score="A 60 - B 50")), "on pace for 220 (110 so far, line 214.5), on track")
+        self.assertEqual(d.pace_text(dict(nba, live="2:00 - 4th", live_score="A 110 - B 106")), "already over (216, line 214.5)")
+        self.assertEqual(d.pace_text(dict(label="Utah Mammoth under 4.5 goals", league="nhl", live="10:00 - 2nd",
+                                          live_score="Montreal Canadiens 2 - Utah Mammoth 2")),
+                         "on pace for 4 (2 so far, line 4.5), on track")
+        self.assertIsNone(d.pace_text(dict(label="Alex Caruso: 2+ Assists", league="nba", live="1:00 - 1st", live_score="A 1 - B 2")))
+        line = d.leg_text(dict(nba, match="WAS at ATL", status="open"))
+        self.assertEqual(line, "Over 214.5 points (WAS at ATL; live 5:37 - 2nd, Atlanta Hawks 47 - Washington Wizards 45, "
+                               "on pace for 240 (92 so far, line 214.5), on track)")
+
+
 ladder._report = ladder.report
 
 

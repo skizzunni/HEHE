@@ -4076,3 +4076,6 @@ short in both halves but under 100 legs in the first. No change (2026-11-06).
 Ladder line in the daily review names each leg's game, tip time and, once it is in play, the clock, score
 and a prop's stat so far (`daily_review.leg_text`), so the hourly and live reports can be followed
 without opening the page (2026-11-06).
+Live pace in the review's ladder line (`daily_review.pace_text`, the board's paceNote in Python: game and
+team totals, "on pace for N, on track / behind", "already over", too early before 25% of the game)
+(2026-11-07).

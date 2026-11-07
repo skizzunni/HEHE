@@ -389,6 +389,60 @@ def caution_line():
                                              for w in W) + "."
 
 
+_PERIODS = {"nba": (4, 12), "wnba": (4, 10), "ncaab": (2, 20), "nfl": (4, 15), "ncaaf": (4, 15), "nhl": (3, 20)}
+
+
+def pace_text(L):
+    """The board's paceNote in words for a live game or team total: "on pace
+    for 240, on track" / "already over" / "too early to project"; None when
+    it cannot be read (props, unknown clock or league)."""
+    import re
+    lab, live, sc = str(L.get("label") or ""), str(L.get("live") or ""), str(L.get("live_score") or "")
+    F = _PERIODS.get(L.get("league") or "")
+    if not (F and live and sc):
+        return None
+    m, team = re.match(r"^(Over|Under)\s+([\d.]+)", lab, re.I), None
+    if m:
+        side, line = m.group(1).lower(), float(m.group(2))
+        pts = [int(x) for x in re.findall(r"-?\d+(?=\s*(?:-|$))", sc)]
+        if len(pts) < 2:
+            return None
+        total = pts[-2] + pts[-1]
+    else:
+        t = re.match(r"^(.+?)\s+(over|under)\s+([\d.]+)", lab, re.I)
+        if not t:
+            return None
+        team, side, line = t.group(1), t.group(2).lower(), float(t.group(3))
+        part = next((x for x in re.split(r"\s+-\s+", sc) if x.startswith(team)), None)
+        v = re.search(r"(-?\d+)\s*$", part or "")
+        if not v:
+            return None
+        total = int(v.group(1))
+    if total > line:
+        return f"already over ({total}, line {line:g})" if side == "over" else f"gone over ({total}, line {line:g})"
+    n, mins = F
+    c = re.search(r"(\d+):(\d+)\s*-\s*(\d)", live)
+    s = re.match(r"^\s*(\d+(?:\.\d+)?)\s*-\s*(\d)", live)
+    e = re.search(r"End of (\d)", live, re.I)
+    if c:
+        el = (int(c.group(3)) - 1) * mins + (mins - (int(c.group(1)) + int(c.group(2)) / 60))
+    elif s:
+        el = (int(s.group(2)) - 1) * mins + (mins - float(s.group(1)) / 60)
+    elif e:
+        el = int(e.group(1)) * mins
+    elif re.search(r"half", live, re.I):
+        el = n * mins / 2
+    else:
+        return None
+    if el <= 0:
+        return None
+    if el < 0.25 * n * mins:
+        return f"{total} so far, line {line:g}, too early to project"
+    pace = total / el * n * mins
+    good = pace > line if side == "over" else pace < line
+    return f"on pace for {round(pace)} ({total} so far, line {line:g}), " + ("on track" if good else "behind the pace it needs")
+
+
 def leg_text(L, mark=None):
     """One ladder leg for the review: what, which game, and where it stands --
     "Over 214.5 points (WAS at ATL, 7:00 PM; live Q2 5:12, ATL 55 - WAS 50)"."""
@@ -398,6 +452,9 @@ def leg_text(L, mark=None):
     if st in (None, "open"):
         if L.get("live"):
             bit = f"live {L['live']}" + (f", {L['live_score']}" if L.get("live_score") else "")
+            p = pace_text(L)
+            if p:
+                bit += f", {p}"
             if L.get("so_far") is not None:
                 v = L["so_far"]
                 bit += f", {int(v) if float(v).is_integer() else v} so far"
