@@ -4120,3 +4120,5 @@ chance in both halves by 8+ pts on 40+ calls; board `bandCaution` beside the cal
 Study, no rule: college football calls at 70-80% 15/28 then 13/19 (54%, 68% vs 75%), 28/47 overall,
 z ~ -2.4 -- short of the 99.5% bar, so no change; the only league/band flagged. Other college bands
 were at or above their chance (50-60% 29/39, 80-90% 30/35) (2026-11-07).
+Review cautions line now also lists call cautions by league and band (`ledger.call_cautions`) and the
+bet types running ahead of their chance (`locks.bright_pool`) (2026-11-07).

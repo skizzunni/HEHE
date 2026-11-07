@@ -240,11 +240,20 @@ class CautionLine(unittest.TestCase):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
         import daily_review
         import locks
+        import ledger
+        none = dict(bright=lambda *a, **k: [], calls=lambda b: [])
         with mock.patch.object(locks, "watch_kinds", lambda b: []), \
-             mock.patch.object(locks, "watch_pool", lambda *a, **k: [dict(league="nfl", t="teamunder", won=311, n=402, said=82)]):
+             mock.patch.object(locks, "watch_pool", lambda *a, **k: [dict(league="nfl", t="teamunder", won=311, n=402, said=82)]), \
+             mock.patch.object(locks, "bright_pool", none["bright"]), mock.patch.object(ledger, "call_cautions", none["calls"]):
             self.assertEqual(daily_review.caution_line(), "Cautions in force: NFL teamunder on all saved lines 311/402 vs 82%.")
-        with mock.patch.object(locks, "watch_kinds", lambda b: []), mock.patch.object(locks, "watch_pool", lambda *a, **k: []):
+        with mock.patch.object(locks, "watch_kinds", lambda b: []), mock.patch.object(locks, "watch_pool", lambda *a, **k: []), \
+             mock.patch.object(locks, "bright_pool", none["bright"]), mock.patch.object(ledger, "call_cautions", none["calls"]):
             self.assertIsNone(daily_review.caution_line())
+        with mock.patch.object(locks, "watch_kinds", lambda b: []), mock.patch.object(locks, "watch_pool", lambda *a, **k: []), \
+             mock.patch.object(locks, "bright_pool", lambda *a, **k: [dict(league="nhl", t="over", won=131, n=149, said=84)]), \
+             mock.patch.object(ledger, "call_cautions", lambda b: [dict(league="ncaaf", band=70, won=28, n=47, said=75)]):
+            self.assertEqual(daily_review.caution_line(), "Cautions in force: NCAAF calls at 70-80% 28/47 vs 75%."
+                                                          " Running ahead: NHL over on all saved lines 131/149 vs 84%.")
 
 
 class ReviewLine(unittest.TestCase):

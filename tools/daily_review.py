@@ -383,10 +383,23 @@ def caution_line():
         W += [dict(w, where="all saved lines") for w in locks.watch_pool()]
     except Exception:
         return None
-    if not W:
-        return None
-    return "Cautions in force: " + "; ".join(f"{w['league'].upper()} {w['t']} on {w['where']} {w['won']}/{w['n']} vs {w['said']}%"
-                                             for w in W) + "."
+    try:                                  # calls by league and chance band (ledger.call_cautions)
+        import ledger
+        C = ledger.call_cautions(ledger.load())
+    except Exception:
+        C = []
+    try:                                  # bet types ahead of their chance (locks.bright_pool)
+        B = locks.bright_pool()
+    except Exception:
+        B = []
+    parts = [f"{w['league'].upper()} {w['t']} on {w['where']} {w['won']}/{w['n']} vs {w['said']}%" for w in W]
+    parts += [f"{c['league'].upper()} calls at {c['band']}-{c['band'] + 10}% {c['won']}/{c['n']} vs {c['said']}%" for c in C]
+    out = ("Cautions in force: " + "; ".join(parts) + ".") if parts else None
+    if B:
+        ahead = "Running ahead: " + "; ".join(f"{b['league'].upper()} {b['t']} on all saved lines {b['won']}/{b['n']} vs {b['said']}%"
+                                              for b in B) + "."
+        out = f"{out} {ahead}" if out else ahead
+    return out
 
 
 _PERIODS = {"nba": (4, 12), "wnba": (4, 10), "ncaab": (2, 20), "nfl": (4, 15), "ncaaf": (4, 15), "nhl": (3, 20)}
