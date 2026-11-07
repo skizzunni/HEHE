@@ -34,6 +34,11 @@ class ReviewSweepLine(unittest.TestCase):
         self.assertEqual(daily_review.sweep_line(dict(won=5, lost=0, open=3, broke_on=None, expected_losses=0.9,
                                                       as_bad_pct=100.0)), "Board sweep: 5-0, 3 open -- still clean.")
         self.assertIsNone(daily_review.sweep_line({}))
+        y = dict(day="2026-11-06", sweep=dict(won=40, lost=9, broke_on="arg San Lorenzo at 68%", expected_losses=13.3, as_bad_pct=95.0))
+        self.assertEqual(daily_review.yesterday_line(y), "Yesterday (2026-11-06): board 40-9, sweep broken by arg San Lorenzo at 68%;"
+                         " 13.3 losses expected, 9 came in (95% chance of that many or more).")
+        self.assertEqual(daily_review.yesterday_line(dict(day="2026-11-05", sweep=dict(won=30, lost=0))),
+                         "Yesterday (2026-11-05): board 30-0, clean sweep.")
 
 
 if __name__ == "__main__":

@@ -4097,3 +4097,8 @@ small to fix K: top 2 won 15/20 days at 1.55x, top 3 12/20 at 1.93x, top 4 10/20
 and underdogs overall lag their price (37% vs 45%), so straight dogs are not added to the ladder (2026-11-07).
 Ladder "if it had always used K legs" table (`ladder.count_record` over every saved Locks card, board
 `ladderCounts`), so the 2x-5x chooser can be checked against fixed counts as cards come in (2026-11-07).
+Review "Yesterday" line now gives the losses its chances expected and the chance of that many or more
+(`daily_review.yesterday_line`). Study, no rule: soccer home picks beat their stated chance in both halves
+(straight wins 62/75 then 60/76, 83% and 79% vs 72-74%; double chances 78% and 79% vs 74%); away double
+chances on par (72% vs 72-73%), so Nov 6's home-favourite losses (Atlante, San Diego Wave, Shimizu) are
+not a leak (2026-11-07).

@@ -798,6 +798,16 @@ def loss_line(L):
                 [t for t in L.get("tags") or [] if t not in (L.get("why") or "")]))
 
 
+def yesterday_line(y):
+    """Yesterday's board in one line, with the losses its chances expected."""
+    ys = y.get("sweep") or {}
+    return (f"Yesterday ({y['day']}): board {ys.get('won', 0)}-{ys.get('lost', 0)}"
+            + (f", sweep broken by {ys['broke_on']}" if ys.get("broke_on") else ", clean sweep" if ys.get("won") else "")
+            + (f"; {ys['expected_losses']:g} losses expected, {ys.get('lost', 0)} came in"
+               f" ({ys['as_bad_pct']:g}% chance of that many or more)"
+               if ys.get("expected_losses") is not None and ys.get("lost") else "") + ".")
+
+
 def sweep_line(sw):
     """Today's board as one ticket: record, clean or the pick that broke it,
     and once broken how unusual that many losses is from the chances."""
@@ -846,9 +856,7 @@ def words(r, fit):
         out.append("Why picks lost (14 days): " + ", ".join(f"{k} {v}" for k, v in rs.items()) + ".")
     y = r.get("yesterday") or {}
     if y.get("day"):
-        ys = y.get("sweep") or {}
-        out.append(f"Yesterday ({y['day']}): board {ys.get('won', 0)}-{ys.get('lost', 0)}"
-                   + (f", sweep broken by {ys['broke_on']}" if ys.get("broke_on") else ", clean sweep" if ys.get("won") else "") + ".")
+        out.append(yesterday_line(y))
         for L in y.get("losses") or []:
             out.append(loss_line(L))
     for k in r["leaks_14d"]:
