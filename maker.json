@@ -360,6 +360,7 @@
    "cost": 0.5244,
    "edge": 0.0054,
    "fair": 0.5273,
+   "fill": "strict",
    "id": "ncaaf:401858285",
    "label": "Clemson Tigers",
    "league": "ncaaf",
@@ -372,8 +373,9 @@
     "team": "Clemson Tigers"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07CLEMSYR-CLEM"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07CLEMSYR-CLEM",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07COLOASU-ASU|YES": {
    "ask": 0.6,
@@ -2936,6 +2938,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "ncaaf:401858285",
    "label": "Syracuse Orange +1.5",
    "league": "ncaaf",
@@ -2949,8 +2952,9 @@
     "team": "Syracuse Orange"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07CLEMSYR-CLEM2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07CLEMSYR-CLEM2",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07CLEMSYR-CLEM3|NO": {
    "ask": 0.51,
@@ -2958,6 +2962,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401858285",
    "label": "Syracuse Orange +2.5",
    "league": "ncaaf",
@@ -2971,8 +2976,9 @@
     "team": "Syracuse Orange"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07CLEMSYR-CLEM3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07CLEMSYR-CLEM3",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07COLOASU-ASU4|NO": {
    "ask": 0.52,
@@ -7166,6 +7172,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856849",
    "label": "under 49.5",
    "league": "ncaaf",
@@ -7178,8 +7185,9 @@
     "t": "under"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07BYUUTAH-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07BYUUTAH-50",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07CINHOU-62|NO": {
    "ask": 0.51,
@@ -7229,6 +7237,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401858285",
    "label": "over 49.5",
    "league": "ncaaf",
@@ -7241,8 +7250,9 @@
     "t": "over"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07CLEMSYR-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07CLEMSYR-50",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07CLEMSYR-51|NO": {
    "ask": 0.51,
@@ -7250,6 +7260,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401858285",
    "label": "under 50.5",
    "league": "ncaaf",
@@ -7262,8 +7273,9 @@
     "t": "under"
    },
    "start": "2026-11-07T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07CLEMSYR-51"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07CLEMSYR-51",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07COLOASU-48|YES": {
    "ask": 0.51,
