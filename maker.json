@@ -121,6 +121,7 @@
    "cost": 0.7236,
    "edge": 0.016,
    "fair": 0.7352,
+   "fill": "strict",
    "id": "ncaaf:401856855",
    "label": "Arizona Wildcats",
    "league": "ncaaf",
@@ -133,8 +134,9 @@
     "team": "Arizona Wildcats"
    },
    "start": "2026-11-07T03:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV06TCUARIZ-ARIZ"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV06TCUARIZ-ARIZ",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV06UNMNEV-UNM|YES": {
    "ask": 0.78,
@@ -2573,6 +2575,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401856855",
    "label": "TCU Horned Frogs +6.5",
    "league": "ncaaf",
@@ -2586,8 +2589,9 @@
     "team": "TCU Horned Frogs"
    },
    "start": "2026-11-07T03:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV06TCUARIZ-ARIZ7"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV06TCUARIZ-ARIZ7",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV06TCUARIZ-ARIZ7|YES": {
    "ask": 0.52,
@@ -2595,6 +2599,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401856855",
    "label": "Arizona Wildcats -6.5",
    "league": "ncaaf",
@@ -2608,8 +2613,9 @@
     "team": "Arizona Wildcats"
    },
    "start": "2026-11-07T03:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV06TCUARIZ-ARIZ7"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV06TCUARIZ-ARIZ7",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV06TCUARIZ-ARIZ8|NO": {
    "ask": 0.52,
@@ -2617,6 +2623,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "ncaaf:401856855",
    "label": "TCU Horned Frogs +7.5",
    "league": "ncaaf",
@@ -2630,8 +2637,9 @@
     "team": "TCU Horned Frogs"
    },
    "start": "2026-11-07T03:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV06TCUARIZ-ARIZ8"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV06TCUARIZ-ARIZ8",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV06USFECU-ECU2|NO": {
    "ask": 0.51,
@@ -6406,6 +6414,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856855",
    "label": "under 46.5",
    "league": "ncaaf",
@@ -6418,8 +6427,9 @@
     "t": "under"
    },
    "start": "2026-11-07T03:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV06TCUARIZ-47"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV06TCUARIZ-47",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV06TCUARIZ-47|YES": {
    "ask": 0.51,
@@ -6427,6 +6437,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "ncaaf:401856855",
    "label": "over 46.5",
    "league": "ncaaf",
@@ -6439,8 +6450,9 @@
     "t": "over"
    },
    "start": "2026-11-07T03:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV06TCUARIZ-47"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV06TCUARIZ-47",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV06UNMNEV-39|NO": {
    "ask": 0.52,

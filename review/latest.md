@@ -5,7 +5,7 @@ Ladder: run 2 ended (peak $1.00, lost on Austin Reaves: 4+ Assists); the next ti
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 1-1 (50.0% vs 73.5% claimed).
 Closing line value: +3.6 points on 2 picks; beat the close on 100.0%.
-Board sweep: 1-1, 147 open -- broken (first loss: jpn Nagoya Grampus at 76%); 0.5 losses expected from the settled picks' chances, so 1 or more by now had a 46% chance.
+Board sweep: 1-1, 148 open -- broken (first loss: jpn Nagoya Grampus at 76%); 0.5 losses expected from the settled picks' chances, so 1 or more by now had a 46% chance.
 - LOST jpn Nagoya Grampus at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset
 Why picks lost (14 days): favourite lost 136, close game 111, upset 54, coin flip 45, blowout 41, price moved against it 29.
 Yesterday (2026-11-06): board 41-9, sweep broken by arg San Lorenzo at 68%; 13.6 losses expected, 9 came in (95.9% chance of that many or more).
