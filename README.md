@@ -4079,3 +4079,7 @@ without opening the page (2026-11-06).
 Live pace in the review's ladder line (`daily_review.pace_text`, the board's paceNote in Python: game and
 team totals, "on pace for N, on track / behind", "already over", too early before 25% of the game)
 (2026-11-07).
+Today's sweep line in the review says, once broken, how many losses the settled picks' chances expected and
+the chance of that many by now (`daily_review.sweep_line`, `ledger.day_rarity`). Study, no rule: South
+American soccer straight-win calls at 65-75% 14/17 then 13/18 (82%, 72% vs 69%), so the Nov 6 San Lorenzo
+and Internacional de Bogota losses (both 68%) are not a leak (2026-11-07).

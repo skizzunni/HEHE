@@ -685,7 +685,7 @@ def review_day(day, ledger, locks, lottery, props):
     import sys
     if ROOT not in sys.path:
         sys.path.insert(0, ROOT)
-    from ledger import loss_tags
+    from ledger import loss_tags, day_rarity
     lost_e = sorted((e for e in todays if e["status"] == "lost"), key=lambda e: e.get("settled") or "")
     losses = [dict(league=e["league"], pick=e["pick"], said=e.get("conf"), price=e.get("price"),
                    match=e.get("matchup"), score=e.get("scores") or {},
@@ -697,6 +697,7 @@ def review_day(day, ledger, locks, lottery, props):
                  and (e.get("date") or "") == day)
     sweep = dict(won=sum(e["status"] == "won" for e in todays), lost=len(lost_e), open=n_open,
                  broke_on=(f'{lost_e[0]["league"]} {lost_e[0]["pick"]} at {lost_e[0].get("conf")}%' if lost_e else None))
+    sweep.update(day_rarity(todays))     # losses expected so far, how unusual
     # the last 14 days, to tell a bad night from a leak
     since = (dt.date.fromisoformat(day) - dt.timedelta(days=14)).isoformat()
     recent = [e for e in graded if since <= day_of(e) <= day and not exhibition(e) and record_priced(e)]
@@ -771,6 +772,18 @@ def loss_line(L):
                 [t for t in L.get("tags") or [] if t not in (L.get("why") or "")]))
 
 
+def sweep_line(sw):
+    """Today's board as one ticket: record, clean or the pick that broke it,
+    and once broken how unusual that many losses is from the chances."""
+    if not (sw.get("won") or sw.get("lost") or sw.get("open")):
+        return None
+    return (f"Board sweep: {sw['won']}-{sw['lost']}, {sw['open']} open -- "
+            + (f"broken (first loss: {sw['broke_on']})" if sw.get("lost") else "still clean")
+            + (f"; {sw['expected_losses']:g} losses expected from the settled picks' chances,"
+               f" so {sw['lost']} or more by now had a {sw['as_bad_pct']:g}% chance"
+               if sw.get("lost") and sw.get("expected_losses") is not None else "") + ".")
+
+
 def words(r, fit):
     p = r["picks"]
     out = [f"# Review {r['day']}", ""]
@@ -797,10 +810,9 @@ def words(r, fit):
     c = r.get("clv") or {}
     if c.get("n"):
         out.append(f"Closing line value: {c['avg']:+} points on {c['n']} picks; beat the close on {c['beat']}%.")
-    sw = r.get("sweep") or {}
-    if sw.get("won") or sw.get("lost") or sw.get("open"):
-        out.append(f"Board sweep: {sw['won']}-{sw['lost']}, {sw['open']} open -- "
-                   + (f"broken (first loss: {sw['broke_on']})" if sw.get("lost") else "still clean") + ".")
+    sl = sweep_line(r.get("sweep") or {})
+    if sl:
+        out.append(sl)
     for L in r["losses"]:
         out.append(loss_line(L))
     rs = r.get("loss_reasons_14d") or {}
