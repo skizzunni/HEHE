@@ -736,7 +736,7 @@ def review_day(day, ledger, locks, lottery, props):
         sys.path.insert(0, ROOT)
     from ledger import loss_tags, day_rarity
     lost_e = sorted((e for e in todays if e["status"] == "lost"), key=lambda e: e.get("settled") or "")
-    losses = [dict(league=e["league"], pick=e["pick"], said=e.get("conf"), price=e.get("price"),
+    losses = [dict(league=e["league"], pick=e["pick"] + (" or draw" if e.get("dc") else ""), said=e.get("conf"), price=e.get("price"),
                    match=e.get("matchup"), score=e.get("scores") or {},
                    against_market=e.get("market_agrees") is False, why=e.get("diagnosis") or "",
                    tags=loss_tags(e), like=like_record(ledger, e))
@@ -745,7 +745,8 @@ def review_day(day, ledger, locks, lottery, props):
     n_open = sum(1 for e in ledger.values() if record_priced(e) and e.get("status") == "open"
                  and (e.get("date") or "") == day)
     sweep = dict(won=sum(e["status"] == "won" for e in todays), lost=len(lost_e), open=n_open,
-                 broke_on=(f'{lost_e[0]["league"]} {lost_e[0]["pick"]} at {lost_e[0].get("conf")}%' if lost_e else None))
+                 broke_on=(f'{lost_e[0]["league"]} {lost_e[0]["pick"]}{" or draw" if lost_e[0].get("dc") else ""} at {lost_e[0].get("conf")}%'
+                           if lost_e else None))
     sweep.update(day_rarity(todays))     # losses expected so far, how unusual
     # the last 14 days, to tell a bad night from a leak
     since = (dt.date.fromisoformat(day) - dt.timedelta(days=14)).isoformat()
@@ -812,17 +813,10 @@ def review_day(day, ledger, locks, lottery, props):
 
 
 def like_record(book, e, band=5):
-    """Graded picks like a lost one -- same league, same bet (win or double
-    chance), called within `band` points: dict(won, n, said), or None under
-    10. Tells a bad beat on a sound kind of pick from a leak."""
-    c = e.get("conf")
-    if c is None:
-        return None
-    R = [x for x in book.values() if x is not e and x.get("status") in ("won", "lost") and x.get("league") == e.get("league")
-         and bool(x.get("dc")) == bool(e.get("dc")) and x.get("conf") is not None and abs(x["conf"] - c) <= band]
-    if len(R) < 10:
-        return None
-    return dict(won=sum(x["status"] == "won" for x in R), n=len(R), said=round(sum(x["conf"] for x in R) / len(R)))
+    """ledger.like_record: graded picks like a lost one (same league, same
+    bet, within `band` points), or None under 10."""
+    import ledger
+    return ledger.like_record(book, e, band)
 
 
 def loss_line(L):

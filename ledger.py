@@ -806,6 +806,20 @@ def call_cautions(book, min_n=40, gap=8.0):
     return out
 
 
+def like_record(book, e, band=5):
+    """Graded picks like a lost one -- same league, same bet (win or double
+    chance), called within `band` points: dict(won, n, said), or None under
+    10. Tells a bad beat on a sound kind of pick from a leak."""
+    c = e.get("conf")
+    if c is None:
+        return None
+    R = [x for x in book.values() if x is not e and x.get("status") in ("won", "lost") and x.get("league") == e.get("league")
+         and bool(x.get("dc")) == bool(e.get("dc")) and x.get("conf") is not None and abs(x["conf"] - c) <= band]
+    if len(R) < 10:
+        return None
+    return dict(won=sum(x["status"] == "won" for x in R), n=len(R), said=round(sum(x["conf"] for x in R) / len(R)))
+
+
 def day_rarity(rows):
     """How unusual a day's losses were, given the chances each pick was called
     at: losses expected, the chance of that many losses or more (picks taken as
@@ -899,7 +913,7 @@ def board_payload(limit=40):
     yesterday = dict(day=_yk, won=sum(e["status"] == "won" for e in _yd), lost=len(_yl),
                      losses=[dict(league=e["league"], pick=e["pick"] + (" or draw" if e.get("dc") else ""),
                                   conf=e.get("conf"), price=e.get("price"), score=e.get("scores") or {},
-                                  why=e.get("diagnosis") or "", tags=loss_tags(e)) for e in _yl])
+                                  why=e.get("diagnosis") or "", tags=loss_tags(e), like=like_record(book, e)) for e in _yl])
     yesterday.update(day_rarity(_yd))
     own = own_view(book, today)
     # picks whose price moved 3+ points between the call and the start, last

@@ -1819,6 +1819,8 @@ function yesterdayHTML(Y){
       + esc(L.pick) + ' at ' + Math.round(L.conf) + '%' + (L.price ? ' (' + esc(L.price) + ')' : '')
       + (Object.keys(L.score || {}).length ? '<br>' + sc(L.score) : '')
       + ((L.tags || []).length ? '<br><b>' + L.tags.map(esc).join(', ') + '</b>' : '')
+      + (L.like && L.like.n ? '<br><span class="sbn">Picks like it: ' + L.like.won + ' of ' + L.like.n + ' (' + Math.round(100 * L.like.won / L.like.n)
+         + '% vs ' + L.like.said + '% stated)' + (100 * L.like.won / L.like.n >= L.like.said ? ' &ndash; a bad beat on a sound kind of pick' : ' &ndash; this kind has run short') + '</span>' : '')
       + (L.why ? '<br><span class="sbn">' + esc(L.tags && L.tags.length ? L.why.split(' · ').filter(b => L.tags.indexOf(b) < 0).join(' · ') : L.why)
          + '</span>' : '') + '</p>').join('')
     + '</details></div>';

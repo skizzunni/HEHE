@@ -122,7 +122,7 @@ PROBE = """<script>setTimeout(function(){
   out.own = ownHTML({n: 382, own: 232, market: 260, since: "2026-10-05", splits: [{league: "ncaaf", mine: 8, n: 25}, {league: "nba", mine: 5, n: 23}], today: [{league: "nba", match: "MIA @ LAC", own: "LAC", own_p: 60, market: "MIA", market_p: 65}]});
   out.inj = [injNote({inj: {mine: ["Giannis Antetokounmpo (Day-To-Day)"], opp: ["Brandon Ingram (Out)", "Bradley Beal (Out)", "A (Out)", "B (Out)", "C (Out)"]}}), injNote({}), injNote({inj: {mine: [], opp: []}})];
   out.mv = [moveNote({mv: 5}), moveNote({mv: -4}), moveNote({mv: null}), moveNote({})];
-  out.yday = [yesterdayHTML({day: "2026-11-03", won: 34, lost: 1, losses: [{league: "efl1", pick: "Charlton Athletic", conf: 70, price: "-310", score: {"Bolton Wanderers": 1, "Charlton Athletic": 0}, tags: ["favourite lost", "close game"], why: "margin 1 · favourite lost · close game"}], expected_losses: 4.2, as_bad_pct: 98.6, lost_by_league: {efl1: 1}}), yesterdayHTML({day: "x", won: 0, lost: 0}), yesterdayHTML({day: "y", won: 5, lost: 4, losses: [], expected_losses: 0.8, as_bad_pct: 0.3, lost_by_league: {uel: 3, nhl: 1}})];
+  out.yday = [yesterdayHTML({day: "2026-11-03", won: 34, lost: 1, losses: [{league: "efl1", pick: "Charlton Athletic", conf: 70, price: "-310", score: {"Bolton Wanderers": 1, "Charlton Athletic": 0}, tags: ["favourite lost", "close game"], why: "margin 1 · favourite lost · close game", like: {won: 23, n: 27, said: 70}}], expected_losses: 4.2, as_bad_pct: 98.6, lost_by_league: {efl1: 1}}), yesterdayHTML({day: "x", won: 0, lost: 0}), yesterdayHTML({day: "y", won: 5, lost: 4, losses: [], expected_losses: 0.8, as_bad_pct: 0.3, lost_by_league: {uel: 3, nhl: 1}})];
   out.ownTile = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.textContent}).filter(function(t){return /vs market/.test(t)}).join("|");
   out.kind = [kindLine([{kind: "player props", won: 33, n: 41, said: 79.1}, {kind: "game lines", won: 136, n: 165, said: 77.3}]), kindLine([]),
               kindLine([{kind: "player props", won: 38, n: 47, said: 79, halves: [[13, 15, 79.1], [25, 32, 79.0]]},
@@ -379,6 +379,8 @@ def main():
             and "Losses by league: EFL1 1." in yd[0] and len(yd) > 2 and "about <b>0%</b> of the time &ndash; unusually bad" in yd[2]
             and "UEL 3, NHL 1" in yd[2]):
         fails.append("yesterday rarity wrong: " + repr(yd))
+    if "Picks like it: 23 of 27 (85% vs 70% stated) &ndash; a bad beat on a sound kind of pick" not in yd[0]:
+        fails.append("yesterday like-record wrong: " + yd[0][:600])
     if "margin 1 · favourite lost" in (yd[0] if yd else ""):
         fails.append("yesterday section repeats its tags: " + yd[0])
     ot = new.get("ownTile", "")

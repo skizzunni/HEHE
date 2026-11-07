@@ -4134,3 +4134,8 @@ rule: soccer straight-win picks at 65-70% 36/44 then 27/35 (82%, 77% vs 67%), 70
 one goal) are variance, not a leak (2026-11-07).
 Results "today" header says how many losses the settled picks' chances expected and how often a day this
 far in has as many (`ledger.board_payload` today_rarity from `day_rarity`) (2026-11-07).
+Board loss lists (Yesterday) carry "picks like it" too (`ledger.like_record`, shared with the review).
+Fix: the review's loss lines and sweep line dropped " or draw" on double-chance picks, so Nov 6-7 soccer
+losses read as straight wins. Corrected study on the bet actually made: double chance at 65-70% 96/136
+then 51/80 (71%, 64% vs 67%) -- mixed, 147/216 overall on par (z +0.25); 70-75% ahead in both halves
+(75%, 78% vs 72%). No change, but the 65-70% double-chance band is the one to watch (2026-11-07).
