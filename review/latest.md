@@ -5,7 +5,7 @@ Ladder: run 2 ended (peak $1.00, lost on Austin Reaves: 4+ Assists); the next ti
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Board sweep: 0-0, 149 open -- still clean.
 Why picks lost (14 days): favourite lost 136, close game 111, upset 53, coin flip 45, blowout 41, price moved against it 29.
-Yesterday (2026-11-06): board 41-9, sweep broken by arg San Lorenzo at 68%.
+Yesterday (2026-11-06): board 41-9, sweep broken by arg San Lorenzo at 68%; 13.6 losses expected, 9 came in (95.9% chance of that many or more).
 - LOST arg San Lorenzo at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost
 - LOST col Internacional de Bogotá at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 - LOST mex Atlético de San Luis at 82% (-650), Atlético de San Luis 0 - FC Juárez 1: margin 1 · the book had my side favoured too · called at 82% · upset · close game
