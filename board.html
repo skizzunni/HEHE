@@ -1878,8 +1878,13 @@ function cautionLine(C){
 // a Locks record split into player props and game lines (locks.by_kind)
 function kindLine(K){
   if(!(K || []).length) return '';
+  const half = h => h[1] ? Math.round(100 * h[0] / h[1]) + '% vs ' + Math.round(h[2]) + '%' : 'none';
+  const word = H => (H || []).length === 2 && H.every(h => h[1])
+    ? (H.every(h => h[0] / h[1] * 100 > h[2]) ? ', ahead in both halves' : H.every(h => h[0] / h[1] * 100 < h[2]) ? ', behind in both halves' : ', mixed across halves')
+    : '';
   return '<p class="note">By type: ' + K.map(x => esc(x.kind) + ' ' + x.won + ' of ' + x.n + ' ('
-    + (100 * x.won / x.n).toFixed(0) + '% vs ' + x.said + '% stated)').join(' &middot; ') + '.</p>';
+    + (100 * x.won / x.n).toFixed(0) + '% vs ' + x.said + '% stated'
+    + ((x.halves || []).length === 2 ? '; halves ' + half(x.halves[0]) + ', ' + half(x.halves[1]) + word(x.halves) : '') + ')').join(' &middot; ') + '.</p>';
 }
 // what a "Lock" is, from its own record: the likeliest bets, not certainties
 function lockMeaning(R, SAFE){

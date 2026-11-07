@@ -124,7 +124,9 @@ PROBE = """<script>setTimeout(function(){
   out.mv = [moveNote({mv: 5}), moveNote({mv: -4}), moveNote({mv: null}), moveNote({})];
   out.yday = [yesterdayHTML({day: "2026-11-03", won: 34, lost: 1, losses: [{league: "efl1", pick: "Charlton Athletic", conf: 70, price: "-310", score: {"Bolton Wanderers": 1, "Charlton Athletic": 0}, tags: ["favourite lost", "close game"], why: "margin 1 · favourite lost · close game"}], expected_losses: 4.2, as_bad_pct: 98.6, lost_by_league: {efl1: 1}}), yesterdayHTML({day: "x", won: 0, lost: 0}), yesterdayHTML({day: "y", won: 5, lost: 4, losses: [], expected_losses: 0.8, as_bad_pct: 0.3, lost_by_league: {uel: 3, nhl: 1}})];
   out.ownTile = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.textContent}).filter(function(t){return /vs market/.test(t)}).join("|");
-  out.kind = [kindLine([{kind: "player props", won: 33, n: 41, said: 79.1}, {kind: "game lines", won: 136, n: 165, said: 77.3}]), kindLine([])];
+  out.kind = [kindLine([{kind: "player props", won: 33, n: 41, said: 79.1}, {kind: "game lines", won: 136, n: 165, said: 77.3}]), kindLine([]),
+              kindLine([{kind: "player props", won: 38, n: 47, said: 79, halves: [[13, 15, 79.1], [25, 32, 79.0]]},
+                        {kind: "game lines", won: 158, n: 191, said: 76.6, halves: [[82, 99, 78.0], [76, 92, 75.2]]}])];
   out.nextTile = [].slice.call(document.querySelectorAll('#glance .k')).map(function(e){return e.textContent}).filter(function(t){return /Next up/i.test(t)}).join("|");
   var plSave = D.prop_locks;
   D.prop_locks = {standard: 0.7, hour: 12, record: {n: 148, won: 136, hit: 91.9, wilson95: [86.4, 95.3], stated: 87.8, roi: 3.1,
@@ -380,6 +382,9 @@ def main():
     kd = new.get("kind") or ["", "x"]
     if "By type: player props 33 of 41 (80% vs 79.1% stated) &middot; game lines 136 of 165 (82% vs 77.3% stated)." not in kd[0] or kd[1]:
         fails.append("kind line wrong: " + repr(kd))
+    if not (len(kd) > 2 and "player props 38 of 47 (81% vs 79% stated; halves 87% vs 79%, 78% vs 79%, mixed across halves)" in kd[2]
+            and "game lines 158 of 191 (83% vs 76.6% stated; halves 83% vs 78%, 83% vs 75%, ahead in both halves)" in kd[2]):
+        fails.append("kind halves wrong: " + repr(kd))
     nt = new.get("nextTile", "")
     if not ("12:45 PM" in nt and "Real Madrid 78% (-450) · RMA @ AEK" in nt):
         fails.append("next tile wrong: " + nt)

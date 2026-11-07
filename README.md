@@ -4110,3 +4110,8 @@ every saved line ahead of their stated chance in both halves by 3+ pts on 100+ l
 Study, no rule: NBA unders 1085/1245 (83% then 91% vs 82%), NHL overs 131/149 (88% vs 84% in both halves),
 NHL spreads 286/333 (86% vs 83% both halves, mostly the +1.5 puck line). None is past the 99.5% bar
 across both halves, so no pick change (2026-11-07).
+Locks "By type" line shows each type's two date halves (`locks.kind_halves`). Study, no rule: on the
+Locks card player props went 13/15 then 25/32 (87%, 78% vs 79%: mixed) while game lines went 82/99 then
+76/92 (83% vs 78%, 83% vs 75%: ahead in both). Safe Locks props 17/22 vs 93% (first half only). Game
+lines are the steadier ladder leg, but props are not short in both halves, so they stay eligible
+(2026-11-07).

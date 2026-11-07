@@ -105,3 +105,14 @@ class BrightPool(unittest.TestCase):
         finally:
             locks._pool_rows = orig
         self.assertEqual(out, [dict(league="nhl", t="over", won=144, n=160, said=80, source="pool")])
+
+
+class KindHalves(unittest.TestCase):
+    def test_split_by_half(self):
+        import locks
+        book = {"days": {"2026-11-01": ["a", "b"], "2026-11-02": ["c", "d"]},
+                "legs": {"a": dict(kind="prop", p=0.8, status="won"), "b": dict(kind=None, p=0.7, status="lost"),
+                         "c": dict(kind="prop", p=0.8, status="lost"), "d": dict(kind=None, p=0.9, status="won")}}
+        self.assertEqual(locks.kind_halves(book), {"player props": [[1, 1, 80.0], [0, 1, 80.0]],
+                                                   "game lines": [[0, 1, 70.0], [1, 1, 90.0]]})
+        self.assertEqual(locks.kind_halves({"days": {}, "legs": {}}), {})

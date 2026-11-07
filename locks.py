@@ -777,7 +777,8 @@ def report(path=None):
                 days=days,
                 plays={k: dict(days=t[0], hit=t[1], said=round(100 * t[2] / t[0], 1) if t[0] else None)
                        for k, t in tally.items()},
-                by_sport=by_sport(legs), by_kind=by_kind(legs), watch=watch_kinds(book),
+                by_sport=by_sport(legs), by_kind=[dict(x, halves=kind_halves(book).get(x["kind"])) for x in by_kind(legs)],
+                watch=watch_kinds(book),
                 caution=caution_record(path), by_rank=by_rank(book),
                 kinds={'|'.join(k): v for k, v in kind_record(book).items()})
 
@@ -1022,6 +1023,34 @@ def by_kind(legs):
         if S:
             out.append(dict(kind=name, won=sum(L["status"] == "won" for L in S), n=len(S),
                             said=round(100 * sum(L["p"] for L in S) / len(S), 1)))
+    return out
+
+
+def kind_halves(book):
+    """by_kind's split by date half of the card's graded days:
+    {kind: [[won, n, said], [won, n, said]]} -- whether props or game lines
+    beat their stated chance in both halves. 2026-11-07, Locks: props 13/15
+    then 25/32 (87%, 78% vs 79%: mixed), game lines 82/99 then 76/92 (83% vs
+    78%, 83% vs 75%: ahead in both)."""
+    R = []
+    for d, keys in (book.get("days") or {}).items():
+        keys = keys.get("legs") if isinstance(keys, dict) else keys
+        for k in keys or []:
+            L = book["legs"].get(k)
+            if L and L.get("status") in ("won", "lost"):
+                R.append((d, "player props" if L.get("kind") == "prop" else "game lines", L["p"], L["status"] == "won"))
+    if not R:
+        return {}
+    days = sorted({r[0] for r in R})
+    mid = days[len(days) // 2]
+    out = {}
+    for kind in ("player props", "game lines"):
+        H = []
+        for half in (False, True):
+            X = [r for r in R if r[1] == kind and (r[0] >= mid) == half]
+            H.append([sum(r[3] for r in X), len(X), round(100 * sum(r[2] for r in X) / len(X), 1) if X else None])
+        if any(h[1] for h in H):
+            out[kind] = H
     return out
 
 
