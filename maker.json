@@ -142,6 +142,7 @@
    "cost": 0.7731,
    "edge": 0.0051,
    "fair": 0.777,
+   "fill": "queue",
    "id": "ncaaf:401864533",
    "label": "New Mexico Lobos",
    "league": "ncaaf",
@@ -154,8 +155,9 @@
     "team": "New Mexico Lobos"
    },
    "start": "2026-11-07T02:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV06UNMNEV-UNM"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV06UNMNEV-UNM",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV06USFECU-ECU|YES": {
    "ask": 0.55,
@@ -6446,6 +6448,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401864533",
    "label": "under 38.5",
    "league": "ncaaf",
@@ -6458,8 +6461,9 @@
     "t": "under"
    },
    "start": "2026-11-07T02:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV06UNMNEV-39"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV06UNMNEV-39",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV06VTSMU-57|NO": {
    "ask": 0.52,
