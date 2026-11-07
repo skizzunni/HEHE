@@ -1,12 +1,12 @@
 # Review 2026-11-07
 
-Picks 58-17 (77.3% vs 71.3% claimed, ROI +4.3%).
+Picks 59-17 (77.6% vs 71.4% claimed, ROI +4.6%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
-Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 30/49 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NCAAF over on all saved lines 575/670 vs 81%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.
-Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF teamunder 254/336 (76% vs 81%); NCAAF spread 332/433 (77% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 83.1% for the rest (1524 and 6387 legs), so a cold week is noise, not a signal.
+Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 31/50 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NCAAF over on all saved lines 586/681 vs 81%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.
+Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 83.3% for the rest (1524 and 6456 legs), so a cold week is noise, not a signal.
 Strong calls 47-16 (74.6% vs 73.2% claimed).
-Closing line value: +0.79 points on 75 picks; beat the close on 52.0%.
-Board sweep: 58-17, 94 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 21.5 losses expected from the settled picks' chances, so 17 or more by now had a 90.5% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (0.9 expected), sco 2 (1 expected), ecu 1 (0.3 expected), esp 1 (0.9 expected), facup 1 (2.5 expected), ita 1 (0.7 expected), jpn 1 (1.4 expected), ncaaf 1 (3.6 expected), wsl 1 (0.3 expected).
+Closing line value: +0.78 points on 76 picks; beat the close on 51.3%.
+Board sweep: 59-17, 93 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 21.7 losses expected from the settled picks' chances, so 17 or more by now had a 91.3% chance; losses by league: efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (0.9 expected), sco 2 (1 expected), ecu 1 (0.3 expected), esp 1 (0.9 expected), facup 1 (2.5 expected), ita 1 (0.7 expected), jpn 1 (1.4 expected), ncaaf 1 (3.8 expected), wsl 1 (0.3 expected).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 12 of 17 (71% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 12 of 15 (80% vs 67% stated)
@@ -36,18 +36,18 @@ Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 6
 - LOST nwsl San Diego Wave FC or draw at 81% (-600), San Diego Wave FC 0 - Utah Royals 1: margin 1 · the book had my side favoured too · called at 81% · upset · close game
 - LOST jpn Shimizu S-Pulse or draw at 67% (-260), Shimizu S-Pulse 0 - Tokyo Verdy 1969 1: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 9 of 16 (56% vs 69% stated)
 LEAK epl: 62.5% hit vs 73.1% claimed on 24 calls (14 days)
-Locks 1/11 won, 9 open; Best play top 2 (59%) open; lost: NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack) Duke Blue Devils 41 - NC State Wolfpack 3.
+Locks 2/11 won, 8 open; Best play top 2 (59%) open; lost: NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack) Duke Blue Devils 41 - NC State Wolfpack 3.
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: lost (1/8 legs won, killed by Iowa State Cyclones +7.5)
 Lottery 100: lost (0/6 legs won, killed by Missouri Tigers +3.5)
-Lottery 100: lost (0/5 legs won, killed by Over 51.5 points, Purdue Boilermakers -10.5)
-Lottery 10k: lost (0/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
+Lottery 100: lost (0/5 legs won, killed by Kansas State Wildcats +1.5, Over 51.5 points, Purdue Boilermakers -10.5)
+Lottery 10k: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5, Kansas State Wildcats +1.5)
 Lottery 10k: lost (0/9 legs won, killed by Over 8.5 goals)
 Lottery 10k: lost (2/12 legs won, killed by Over 51.5 points, Over 55.5 points)
-Lottery 10k+25: lost (0/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
-Lottery 10k+50: lost (0/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
-Lottery 10k+100: lost (0/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
+Lottery 10k+25: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
+Lottery 10k+50: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
+Lottery 10k+100: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
 Ladder-consistency props (all time): 1722/2068 won (83.3%) vs 86.4% fair, 87.5% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=132), ncaaf 0.00 (n=186), nfl 0.00 (n=42), nhl 0.00 (n=149)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=132), ncaaf 0.00 (n=187), nfl 0.00 (n=42), nhl 0.00 (n=149)
