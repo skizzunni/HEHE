@@ -471,6 +471,26 @@ def leg_text(L, mark=None):
     return f"{L['label']} ({'; '.join(where)})"
 
 
+def now_text(legs):
+    """Where the open ticket stands once a leg has settled: "4 of 5 won; the
+    ticket now rests on 1 leg, 76% on its stated chance" (stated chances
+    taken as independent; a live game's state is not priced in)."""
+    done = [L for L in legs if L.get("status") in ("won", "lost", "void", "push")]
+    if not done:
+        return ""
+    won = sum(L.get("status") == "won" for L in done)
+    if any(L.get("status") == "lost" for L in done):
+        return f"; {won} of {len(legs)} won, a leg lost -- the ticket is lost"
+    left = [L for L in legs if L.get("status") in (None, "open")]
+    if not left:
+        return f"; {won} of {len(legs)} won"
+    p = 1.0
+    for L in left:
+        p *= L.get("p") or 0
+    return (f"; {won} of {len(legs)} won, the ticket now rests on {len(left)} leg{'s' if len(left) > 1 else ''},"
+            f" {100 * p:.0f}% on {'their' if len(left) > 1 else 'its'} stated chance before play")
+
+
 def ladder_line(book=None):
     """One line on the $1 -> $10k ladder (ladder.py), or None before it starts."""
     try:
@@ -487,6 +507,7 @@ def ladder_line(book=None):
                 f" the next ticket starts again at $1; best ever ${r['best']:.2f}.")
     mark = {"won": "won", "lost": "LOST", "void": "void", "push": "void"}
     legs = ("; legs: " + ", ".join(leg_text(L, mark) for L in t["legs"])) if t else ""
+    legs += now_text(t["legs"]) if t else ""
     return (f"Ladder: run {r['runs']}, bank ${r['bank']:.2f}, {r['streak']} win(s) in a row, best ${r['best']:.2f}"
             + (f"; today stakes ${t['stake']:.2f} at {t['pays']:.2f}x ({100 * t['prob']:.0f}% est.)" if t else "")
             + f"; {r['wins_needed']} wins to ${r['target']:,.0f}" + legs + ".")

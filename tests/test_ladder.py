@@ -267,6 +267,18 @@ class ReviewLine(unittest.TestCase):
                                "on pace for 240 (92 so far, line 214.5), on track)")
 
 
+    def test_now_text(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review as d
+        legs = [dict(status="won", p=0.8)] * 4 + [dict(status="open", p=0.76)]
+        self.assertEqual(d.now_text(legs), "; 4 of 5 won, the ticket now rests on 1 leg, 76% on its stated chance before play")
+        legs = [dict(status="won", p=0.8)] * 3 + [dict(status="open", p=0.8), dict(status="open", p=0.5)]
+        self.assertEqual(d.now_text(legs), "; 3 of 5 won, the ticket now rests on 2 legs, 40% on their stated chance before play")
+        self.assertEqual(d.now_text([dict(status="won", p=0.8), dict(status="lost", p=0.8), dict(status="open", p=0.8)]),
+                         "; 1 of 3 won, a leg lost -- the ticket is lost")
+        self.assertEqual(d.now_text([dict(status="open", p=0.8)]), "")
+
+
 ladder._report = ladder.report
 
 
