@@ -2,15 +2,15 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 63.7,
-  "brier_close": 0.1666,
-  "brier_published": 0.1719,
+  "beat_close_pct": 64.0,
+  "brier_close": 0.1664,
+  "brier_published": 0.1717,
   "dates": [
    "2026-11-01",
    "2026-11-06"
   ],
-  "logloss_close": 0.5044,
-  "logloss_published": 0.5177,
+  "logloss_close": 0.5035,
+  "logloss_published": 0.5169,
   "mean_clv_pts": 0.94,
   "n": 300
  },
@@ -12864,6 +12864,15 @@
    "published": 0.99,
    "won": 1
   },
+  "ncaab:401906758": {
+   "call": false,
+   "close": 0.9838,
+   "clv": 0.38,
+   "day": "2026-11-06",
+   "league": "ncaab",
+   "published": 0.98,
+   "won": 1
+  },
   "ncaab:401906769": {
    "call": false,
    "close": 0.7186,
@@ -21621,6 +21630,15 @@
    "published": 0.68,
    "won": 0
   },
+  "nhl:401892659": {
+   "call": false,
+   "close": 0.6164,
+   "clv": 0.64,
+   "day": "2026-11-06",
+   "league": "nhl",
+   "published": 0.61,
+   "won": 1
+  },
   "nor:401843366": {
    "call": false,
    "close": 0.6503,
@@ -25173,5 +25191,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-07T02:46+00:00"
+ "updated": "2026-11-07T02:50+00:00"
 }

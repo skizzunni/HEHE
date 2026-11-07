@@ -1,11 +1,11 @@
 # Review 2026-11-06
 
-Picks 20-2 (90.9% vs 73.5% claimed, ROI +17.4%).
-Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 4:27 - 3rd, Memphis Grizzlies 68 - Oklahoma City Thunder 92, 2 so far), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; live 3:33 - 3rd, Dallas Mavericks 80 - Utah Jazz 70, on pace for 222 (150 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 6:20 - 3rd, Minnesota Timberwolves 66 - New Orleans Pelicans 65, on pace for 212 (131 so far, line 216.5), behind the pace it needs).
+Picks 22-2 (91.7% vs 73.9% claimed, ROI +18.5%).
+Ladder: run 2, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 3.10x (27% est.); 9 wins to $10,000; legs: Alex Caruso: 2+ Assists (OKC @ MEM; live 3:05 - 3rd, Memphis Grizzlies 70 - Oklahoma City Thunder 97, 2 so far), Austin Reaves: 4+ Assists (POR @ LAL; 10:00 PM, open), Over 214.5 points (Washington Wizards at Atlanta Hawks; won), Under 241.5 points (Utah Jazz at Dallas Mavericks; live End of 3rd, Dallas Mavericks 89 - Utah Jazz 76, on pace for 220 (165 so far, line 241.5), on track), Over 216.5 points (Minnesota Timberwolves at New Orleans Pelicans; live 3:54 - 3rd, Minnesota Timberwolves 68 - New Orleans Pelicans 73, on pace for 211 (141 so far, line 216.5), behind the pace it needs).
 Cautions in force: NBA over on Locks 13/22 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%.
 Strong calls 17-2 (89.5% vs 71.9% claimed).
-Closing line value: +1.48 points on 22 picks; beat the close on 63.6%.
-Board sweep: 20-2, 29 open -- broken (first loss: arg San Lorenzo at 68%); 5.8 losses expected from the settled picks' chances, so 2 or more by now had a 99.1% chance.
+Closing line value: +1.32 points on 24 picks; beat the close on 58.3%.
+Board sweep: 22-2, 27 open -- broken (first loss: arg San Lorenzo at 68%); 6.3 losses expected from the settled picks' chances, so 2 or more by now had a 99.4% chance.
 - LOST arg San Lorenzo at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost
 - LOST col Internacional de Bogotá at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game
 Why picks lost (14 days): favourite lost 141, close game 118, upset 53, coin flip 47, blowout 42, price moved against it 32.
@@ -28,7 +28,7 @@ Yesterday (2026-11-05): board 43-17, sweep broken by uecl Trabzonspor at 67%.
 - LOST ncaaf UTSA Roadrunners at 72% (-278), Florida Atlantic Owls 60 - UTSA Roadrunners 29: margin 31 · the book had my side favoured too · called at 72% · favourite lost · blowout
 - LOST nhl Colorado Avalanche at 66% (-218), Colorado Avalanche 2 - Nashville Predators 3: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game
 Locks 2/11 won, 9 open; Best play top 2 (62%) open.
-Safe Locks 2/11 won, 9 open; Winners parlay top 2 (84%) open; Best play top 7 (51%) open.
+Safe Locks 3/11 won, 8 open; Winners parlay top 2 (84%) open; Best play top 7 (51%) open.
 Lottery 100: lost (0/9 legs won, killed by Under 230.5 points)
 Lottery 100: lost (1/7 legs won, killed by Columbus Blue Jackets +1.5)
 Lottery 10k: lost (1/13 legs won, killed by Under 230.5 points)
@@ -36,7 +36,7 @@ Lottery 10k+25: lost (1/13 legs won, killed by Under 230.5 points)
 Lottery 10k+50: lost (1/13 legs won, killed by Under 230.5 points)
 Lottery 10k+100: lost (1/12 legs won, killed by Under 230.5 points)
 Ladder-consistency props (all time): 1642/1969 won (83.4%) vs 86.4% fair, 87.4% price.
-Props 28/38 vs 84.4% claimed.
+Props 33/45 vs 83.8% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=125), ncaaf 0.00 (n=171), nfl 0.00 (n=42), nhl 0.00 (n=144)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=125), ncaaf 0.00 (n=171), nfl 0.00 (n=42), nhl 0.00 (n=145)
