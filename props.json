@@ -37240,6 +37240,22 @@
   "price": "-650",
   "status": "open"
  },
+ "nba:401909946|n:ausar thompson|Points|5+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": 2.6,
+  "gid": "nba:401909946",
+  "imp": 0.9375,
+  "label": "Ausar Thompson: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Ausar Thompson",
+  "p": 0.8546,
+  "p_fair": 0.962,
+  "price": "-1500",
+  "status": "open"
+ },
  "nba:401909946|n:ausar thompson|Pts + Ast|10+": {
   "aid": null,
   "date": "2026-11-08",
@@ -37397,6 +37413,22 @@
   "p": 0.7576,
   "p_fair": 0.7195,
   "price": "-380",
+  "status": "open"
+ },
+ "nba:401909946|n:quentin grimes|Reb + Ast|5+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": -1.9,
+  "gid": "nba:401909946",
+  "imp": 0.7619,
+  "label": "Quentin Grimes: 5+ Reb + Ast",
+  "league": "nba",
+  "line": "5+",
+  "market": "Reb + Ast",
+  "name": "Quentin Grimes",
+  "p": 0.7426,
+  "p_fair": 0.7476,
+  "price": "-320",
   "status": "open"
  },
  "nba:401909946|n:walker kessler|Pts + Reb + Ast|20+": {
@@ -48764,11 +48796,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Amon-Ra St. Brown",
   "p": 0.3951,
   "p_fair": null,
   "price": "-115",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873042|n:isaac teslaa|Receiving Yards|5+": {
   "aid": null,
@@ -48780,11 +48814,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Isaac TeSlaa",
   "p": 0.7818,
   "p_fair": 0.8506,
   "price": "-360",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nfl:401873042|n:jahmyr gibbs|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -48796,11 +48832,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Jahmyr Gibbs",
   "p": 0.6431,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873042|n:jameson williams|Receiving Yards|30+": {
   "aid": null,
@@ -48812,11 +48850,13 @@
   "league": "nfl",
   "line": "30+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Jameson Williams",
   "p": 0.8016,
   "p_fair": 0.7343,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 31.0
  },
  "nfl:401873042|n:jared goff|Passing Touchdowns|1+": {
   "aid": null,
@@ -48827,11 +48867,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Passing Touchdowns",
+  "matched": "name",
   "name": "Jared Goff",
   "p": 0.872,
   "price": "-1800",
   "prop_lock": true,
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873042|n:malik washington|Receiving Yards|25+": {
   "aid": null,
@@ -48843,11 +48885,13 @@
   "league": "nfl",
   "line": "25+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Malik Washington",
   "p": 0.7842,
   "p_fair": 0.7274,
   "price": "-360",
-  "status": "open"
+  "status": "lost",
+  "value": 21.0
  },
  "nfl:401873042|n:ollie gordon|Receptions|1+": {
   "aid": null,
@@ -48859,11 +48903,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Ollie Gordon II",
   "p": 0.8487,
   "p_fair": 0.8217,
   "price": "-580",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873043|n:antonio williams|Receptions|3+": {
   "aid": null,
@@ -49261,6 +49307,22 @@
   "p": 0.8589,
   "p_fair": 0.7911,
   "price": "-600",
+  "status": "open"
+ },
+ "nfl:401873046|n:kayshon boutte|Receptions|1+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": -5.0,
+  "gid": "nfl:401873046",
+  "imp": 0.8,
+  "label": "Kayshon Boutte: 1+ Receptions",
+  "league": "nfl",
+  "line": "1+",
+  "market": "Receptions",
+  "name": "Kayshon Boutte",
+  "p": 0.7984,
+  "p_fair": 0.7597,
+  "price": "-400",
   "status": "open"
  },
  "nfl:401873046|n:keaton mitchell|Receptions|1+": {
@@ -69939,6 +70001,22 @@
   "p": 0.8517,
   "p_fair": null,
   "price": "-1050",
+  "status": "open"
+ },
+ "nhl:401892679|n:erik karlsson|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": null,
+  "gid": "nhl:401892679",
+  "imp": 0.9048,
+  "label": "Erik Karlsson: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Erik Karlsson",
+  "p": 0.844,
+  "p_fair": null,
+  "price": "-950",
   "status": "open"
  },
  "nhl:401892679|n:evgeni malkin|Shots on Goal|1+": {

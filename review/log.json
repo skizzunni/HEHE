@@ -11556,10 +11556,10 @@
   },
   "props": {
    "fair": {
-    "n": 2153,
+    "n": 2157,
     "said_fair": 86.4,
-    "said_price": 87.5,
-    "won": 1795
+    "said_price": 87.4,
+    "won": 1798
    },
    "n": 151,
    "said": 81.6,
@@ -11722,10 +11722,10 @@
    },
    {
     "flag": false,
-    "hit": 60.6,
-    "n": 33,
+    "hit": 60.0,
+    "n": 35,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 43.0
+    "said": 43.5
    },
    {
     "flag": false,
@@ -11736,17 +11736,17 @@
    },
    {
     "flag": false,
-    "hit": 82.8,
-    "n": 93,
+    "hit": 82.3,
+    "n": 96,
     "name": "props nfl Receiving Yards",
-    "said": 82.2
+    "said": 82.1
    },
    {
     "flag": false,
-    "hit": 85.0,
-    "n": 40,
+    "hit": 85.4,
+    "n": 41,
     "name": "props nfl Receptions",
-    "said": 82.9
+    "said": 83.0
    },
    {
     "flag": false,
@@ -11883,8 +11883,8 @@
    },
    {
     "flag": false,
-    "hit": 92.7,
-    "n": 205,
+    "hit": 92.2,
+    "n": 206,
     "name": "prop locks",
     "said": 87.9
    },
@@ -11897,8 +11897,8 @@
    },
    {
     "flag": false,
-    "hit": 52.9,
-    "n": 314,
+    "hit": 53.0,
+    "n": 315,
     "name": "kalshi maker bids (filled)",
     "said": 54.3
    }
@@ -11992,11 +11992,11 @@
    }
   },
   "card_missing": null,
-  "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%; NFL spread on all saved lines 238/306 vs 82%; NFL teamunder on all saved lines 180/239 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NFL over on all saved lines 135/154 vs 81%; NHL over on all saved lines 128/143 vs 84%; NHL spread on all saved lines 269/312 vs 83%; NHL teamover on all saved lines 166/190 vs 82%.",
+  "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%; NFL spread on all saved lines 254/322 vs 82%; NFL teamover on all saved lines 180/230 vs 81%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NHL over on all saved lines 128/143 vs 84%; NHL spread on all saved lines 269/312 vs 83%; NHL teamover on all saved lines 166/190 vs 82%.",
   "clv": {
-   "avg": 1.25,
-   "beat": 59.7,
-   "n": 67
+   "avg": 1.29,
+   "beat": 60.9,
+   "n": 69
   },
   "cold": null,
   "day": "2026-11-08",
@@ -12211,10 +12211,12 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 64.5 points"
+    ],
     "legs": 8,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
@@ -12259,7 +12261,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 0
+    "won": 1
    },
    {
     "killed_by": [
@@ -12273,12 +12275,12 @@
    }
   ],
   "picks": {
-   "hit": 88.1,
+   "hit": 88.4,
    "lost": 8,
-   "n": 67,
-   "roi": 12.0,
-   "said": 74.1,
-   "won": 59
+   "n": 69,
+   "roi": 12.2,
+   "said": 74.3,
+   "won": 61
   },
   "picks_by_league": {
    "aus": {
@@ -12324,10 +12326,10 @@
    "col": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 26.3,
-    "said": 74.0,
-    "won": 1
+    "n": 2,
+    "roi": 17.3,
+    "said": 79.0,
+    "won": 2
    },
    "den": {
     "hit": 100.0,
@@ -12428,10 +12430,10 @@
    "nfl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 1,
-    "roi": 55.6,
-    "said": 62.0,
-    "won": 1
+    "n": 2,
+    "roi": 44.2,
+    "said": 67.0,
+    "won": 2
    },
    "nor": {
     "hit": 100.0,
@@ -12482,18 +12484,18 @@
     "won": 1
    }
   },
-  "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 5/9 (56% vs 81% stated); waiting for 100 legs.",
-  "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 87% (83% / 84%); 85-90% 87%, 84% (88% / 85%); 90%+ 84%, 83% (93% / 85%).",
+  "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 7/11 (64% vs 81% stated); waiting for 100 legs.",
+  "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 76% (76% / 79%); 80-85% 85%, 87% (83% / 84%); 85-90% 87%, 84% (88% / 85%); 90%+ 84%, 83% (93% / 85%).",
   "props": {
    "fair": {
-    "n": 2153,
+    "n": 2157,
     "said_fair": 86.4,
-    "said_price": 87.5,
-    "won": 1795
+    "said_price": 87.4,
+    "won": 1798
    },
-   "n": 17,
-   "said": 81.2,
-   "won": 13
+   "n": 24,
+   "said": 78.9,
+   "won": 17
   },
   "safe_locks": {
    "lost": [],
@@ -12514,17 +12516,17 @@
    "won": 0
   },
   "strong": {
-   "hit": 87.5,
+   "hit": 87.7,
    "lost": 8,
-   "n": 64,
-   "roi": 10.8,
-   "said": 74.1,
-   "won": 56
+   "n": 65,
+   "roi": 10.7,
+   "said": 74.3,
+   "won": 57
   },
   "stuck": [],
   "sweep": {
    "as_bad_pct": 99.9,
-   "as_good_pct": 0.4,
+   "as_good_pct": 0.3,
    "broke_on": "jpn Gamba Osaka or draw at 68%",
    "coin_flips": 0,
    "expected_by_league": {
@@ -12536,7 +12538,7 @@
     "sco": 0.3,
     "swe": 0.3
    },
-   "expected_losses": 17.3,
+   "expected_losses": 17.8,
    "lost": 8,
    "lost_by_league": {
     "chn": 1,
@@ -12547,8 +12549,8 @@
     "sco": 1,
     "swe": 1
    },
-   "open": 44,
-   "won": 59
+   "open": 42,
+   "won": 61
   },
   "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
   "ufc_next": "Next UFC card 2026-11-14 (12 fights priced, 3 close): Bilal Hasan 86%; Melquizael Costa 75%; Ciryl Gane 68%; Bia Mesquita 66%; Terrance McKinney 66%; Kayla Harrison 63%; Donte Johnson 62%; Chris Duncan 60%; Uro\u0161 Medi\u0107 60%; Caio Borralho 59% (close); Stephen Thompson 56% (close); Evan Elder 51% (close).",
@@ -12557,12 +12559,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 77.0,
+    "hit": 77.1,
     "lost": 242,
-    "n": 1053,
+    "n": 1055,
     "roi": 2.1,
     "said": 71.8,
-    "won": 811
+    "won": 813
    }
   },
   "weights": {
@@ -12587,10 +12589,10 @@
    "nfl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6264,
-    "market_only": 0.6264,
-    "model_40": 0.6436,
-    "n": 43,
+    "logloss": 0.6195,
+    "market_only": 0.6195,
+    "model_40": 0.6379,
+    "n": 44,
     "weight": 0.0
    },
    "nhl": {
