@@ -10,6 +10,7 @@ class DayRarity(unittest.TestCase):
         self.assertEqual(r["as_bad_pct"], 75.0)          # 1 or 2 losses of two coin flips
         self.assertEqual(r["lost_by_league"], {"nhl": 1})
         self.assertEqual(r["expected_by_league"], {"nhl": 1.0})
+        self.assertEqual(r["as_good_pct"], 75.0)         # 0 or 1 losses of two coin flips
 
     def test_rare_day(self):
         rows = [dict(conf=90, status="lost", league="uel") for _ in range(3)]
@@ -38,6 +39,9 @@ class ReviewSweepLine(unittest.TestCase):
         self.assertEqual(daily_review.sweep_line(dict(won=5, lost=0, open=3, broke_on=None, expected_losses=0.9,
                                                       as_bad_pct=100.0)), "Board sweep: 5-0, 3 open -- still clean.")
         self.assertIsNone(daily_review.sweep_line({}))
+        good = daily_review.sweep_line(dict(won=52, lost=8, open=51, broke_on="x", expected_losses=15.5, as_bad_pct=99.5,
+                                            as_good_pct=2.1, coin_flips=0))
+        self.assertIn("-- an unusually good day: only 2.1% of days go this well this far in", good)
         y = dict(day="2026-11-06", sweep=dict(won=40, lost=9, broke_on="arg San Lorenzo at 68%", expected_losses=13.3, as_bad_pct=95.0))
         self.assertEqual(daily_review.yesterday_line(y), "Yesterday (2026-11-06): board 40-9, sweep broken by arg San Lorenzo at 68%;"
                          " 13.3 losses expected, 9 came in (95% chance of that many or more).")

@@ -1008,6 +1008,9 @@ def sweep_line(sw):
             + (f"; {sw['expected_losses']:g} losses expected from the settled picks' chances,"
                f" so {sw['lost']} or more by now had a {sw['as_bad_pct']:g}% chance"
                if sw.get("lost") and sw.get("expected_losses") is not None else "")
+            + (f" -- an unusually good day: only {sw['as_good_pct']:g}% of days go this well this far in"
+               if sw.get("as_good_pct") is not None and sw["as_good_pct"] < 10 and sw.get("lost") is not None
+               and (sw.get("won") or 0) + sw["lost"] >= 10 else "")
             + (f"; {sw['coin_flips']} of the {sw['lost']} were near coin flips (called under 60%),"
                f" {sw['lost'] - sw['coin_flips']} were real misses"
                if sw.get("lost") and sw.get("coin_flips") is not None else "")

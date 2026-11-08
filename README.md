@@ -4258,3 +4258,6 @@ Ladder leg-ranking studies, walk-forward on every saved card (`tools/ladder_stud
 - Tickets from the whole saved pool restricted to bet types running ahead so far (3+ pts on 100+ legs): 7/8
   vs 11/14 for the plain top (3 legs), but those legs pay ~1.2x and only 8 days qualified -- not comparable
   to the 2x-5x ladder. Rerun as cards come in (2026-11-08).
+Unusually good days are named too (`day_rarity` as_good_pct: the chance of this few losses or fewer; review
+sweep line and the Results header flag it under 10% with 10+ settled). Nov 8 at 52-8: 15.5 losses expected,
+only 1.4% of days go this well (2026-11-08).
