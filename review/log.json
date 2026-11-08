@@ -10586,9 +10586,9 @@
     "against_market": false,
     "league": "ecu",
     "like": {
-     "n": 13,
-     "said": 75,
-     "won": 9
+     "n": 14,
+     "said": 74,
+     "won": 10
     },
     "match": "EME @ LIB",
     "pick": "Libertad (Ecuador) or draw",
@@ -11658,6 +11658,13 @@
   "audit": [
    {
     "flag": false,
+    "hit": 90.0,
+    "n": 10,
+    "name": "props fra Goalkeeper Saves",
+    "said": 86.3
+   },
+   {
+    "flag": false,
     "hit": 88.2,
     "n": 17,
     "name": "props ita Goalkeeper Saves",
@@ -11986,9 +11993,9 @@
   "card_missing": null,
   "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%; NFL spread on all saved lines 238/306 vs 82%; NFL teamunder on all saved lines 180/239 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NFL over on all saved lines 135/154 vs 81%; NHL over on all saved lines 128/143 vs 84%; NHL spread on all saved lines 269/312 vs 83%; NHL teamover on all saved lines 166/190 vs 82%.",
   "clv": {
-   "avg": 1.15,
-   "beat": 55.1,
-   "n": 49
+   "avg": 1.32,
+   "beat": 58.5,
+   "n": 53
   },
   "cold": null,
   "day": "2026-11-08",
@@ -12101,9 +12108,9 @@
     "against_market": false,
     "league": "fra",
     "like": {
-     "n": 15,
+     "n": 16,
      "said": 70,
-     "won": 10
+     "won": 11
     },
     "match": "LILL @ REN",
     "pick": "Stade Rennais or draw",
@@ -12163,7 +12170,11 @@
    {
     "against_market": false,
     "league": "fra",
-    "like": null,
+    "like": {
+     "n": 10,
+     "said": 68,
+     "won": 5
+    },
     "match": "LYON @ BRE",
     "pick": "Lyon or draw",
     "price": "-240",
@@ -12255,12 +12266,12 @@
    }
   ],
   "picks": {
-   "hit": 83.7,
+   "hit": 84.9,
    "lost": 8,
-   "n": 49,
-   "roi": 7.5,
-   "said": 73.1,
-   "won": 41
+   "n": 53,
+   "roi": 9.0,
+   "said": 73.2,
+   "won": 45
   },
   "picks_by_league": {
    "aus": {
@@ -12319,6 +12330,14 @@
     "said": 77.7,
     "won": 3
    },
+   "ecu": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 34.5,
+    "said": 69.0,
+    "won": 1
+   },
    "epl": {
     "hit": 75.0,
     "lost": 1,
@@ -12336,12 +12355,12 @@
     "won": 2
    },
    "fra": {
-    "hit": 0.0,
+    "hit": 60.0,
     "lost": 2,
-    "n": 2,
-    "roi": -100.0,
-    "said": 67.5,
-    "won": 0
+    "n": 5,
+    "roi": -25.1,
+    "said": 72.8,
+    "won": 3
    },
    "ger": {
     "hit": 100.0,
@@ -12441,9 +12460,9 @@
     "said_price": 87.5,
     "won": 1795
    },
-   "n": 13,
-   "said": 80.0,
-   "won": 9
+   "n": 15,
+   "said": 81.0,
+   "won": 11
   },
   "safe_locks": {
    "lost": [],
@@ -12464,28 +12483,28 @@
    "won": 0
   },
   "strong": {
-   "hit": 83.3,
+   "hit": 84.6,
    "lost": 8,
-   "n": 48,
-   "roi": 6.5,
+   "n": 52,
+   "roi": 8.1,
    "said": 73.4,
-   "won": 40
+   "won": 44
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 97.3,
+   "as_bad_pct": 98.6,
    "broke_on": "jpn Gamba Osaka or draw at 68%",
    "coin_flips": 0,
    "expected_by_league": {
     "chn": 1.9,
     "epl": 1.0,
-    "fra": 0.7,
+    "fra": 1.4,
     "ger2": 0.8,
     "jpn": 1.2,
     "sco": 0.3,
     "swe": 0.3
    },
-   "expected_losses": 13.2,
+   "expected_losses": 14.2,
    "lost": 8,
    "lost_by_league": {
     "chn": 1,
@@ -12496,8 +12515,8 @@
     "sco": 1,
     "swe": 1
    },
-   "open": 61,
-   "won": 41
+   "open": 57,
+   "won": 45
   },
   "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
   "ufc_next": "Next UFC card 2026-11-14 (12 fights priced, 3 close): Bilal Hasan 86%; Melquizael Costa 75%; Ciryl Gane 68%; Bia Mesquita 66%; Terrance McKinney 66%; Kayla Harrison 63%; Donte Johnson 60%; Chris Duncan 60%; Uro\u0161 Medi\u0107 60%; Caio Borralho 59% (close); Stephen Thompson 56% (close); Evan Elder 52% (close).",
@@ -12506,12 +12525,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 76.6,
+    "hit": 76.7,
     "lost": 242,
-    "n": 1035,
-    "roi": 1.7,
+    "n": 1039,
+    "roi": 1.8,
     "said": 71.7,
-    "won": 793
+    "won": 797
    }
   },
   "weights": {
@@ -12888,9 +12907,9 @@
      "against_market": false,
      "league": "ecu",
      "like": {
-      "n": 13,
-      "said": 75,
-      "won": 9
+      "n": 14,
+      "said": 74,
+      "won": 10
      },
      "match": "EME @ LIB",
      "pick": "Libertad (Ecuador) or draw",
