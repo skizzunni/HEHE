@@ -437,6 +437,31 @@ def ufc_line(today=None, back=8):
     return None
 
 
+def ufc_next_line(today=None, ahead=7, picks_fn=None):
+    """The next UFC card in the coming `ahead` days with prices posted: each
+    fight's price favourite and chance, close fights (under 60%) flagged."""
+    if picks_fn is None:
+        try:
+            import picks as P
+            picks_fn = P.ufc_picks
+        except Exception:
+            return None
+    today = today or dt.date.today()
+    for i in range(0, ahead + 1):
+        day = (today + dt.timedelta(days=i)).strftime("%Y%m%d")
+        try:
+            r = picks_fn(day)
+        except Exception:
+            r = None
+        if r:
+            fights = sorted(r.items(), key=lambda kv: -(kv[1].get("conf") or 0))
+            close = sum((v.get("conf") or 0) < 0.60 for _, v in fights)
+            return (f"Next UFC card {day[:4]}-{day[4:6]}-{day[6:]} ({len(fights)} fights priced, {close} close): "
+                    + "; ".join(f"{v['pick']} {round(100 * (v.get('conf') or 0))}%" + (" (close)" if (v.get("conf") or 0) < 0.60 else "")
+                                for _, v in fights) + ".")
+    return None
+
+
 def form_line(min_n=100, gap=5):
     """Bet types running cold over the last 7 pool days (locks.pool_form):
     5+ points under their stated chance on 100+ legs, one line or None.
@@ -937,6 +962,8 @@ def words(r, fit):
         out.append(r["prereg"])
     if r.get("ufc"):
         out.append(r["ufc"])
+    if r.get("ufc_next"):
+        out.append(r["ufc_next"])
     for name, mb in r.get("big_files") or []:
         out.append(f"BIG FILE {name} is {mb} MB -- GitHub refuses files over 100 MB and the board stops; trim it")
     st = r.get("stuck") or []
@@ -1050,6 +1077,7 @@ def main():
     log[today.isoformat()]["cold"] = form_line()
     log[today.isoformat()]["prereg"] = prereg_line()
     log[today.isoformat()]["ufc"] = ufc_line(today)
+    log[today.isoformat()]["ufc_next"] = ufc_next_line(today)
     yk = (today - dt.timedelta(days=1)).isoformat()
     log[today.isoformat()]["yesterday"] = dict(day=yk, sweep=log[yk].get("sweep"), losses=log[yk].get("losses"))
     with open(log_path, "w") as fh:

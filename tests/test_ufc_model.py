@@ -42,5 +42,16 @@ class UFCModel(unittest.TestCase):
         self.assertIsNone(M.card_record("x", picks={}, winners={}))
 
 
+    def test_next_card_line(self):
+        import datetime as dt
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        fake = lambda day: ({("A", "B"): dict(pick="A", conf=0.55), ("C", "D"): dict(pick="D", conf=0.8)}
+                            if day == "20261114" else {})
+        line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake)
+        self.assertEqual(line, "Next UFC card 2026-11-14 (2 fights priced, 1 close): D 80%; A 55% (close).")
+        self.assertIsNone(daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=lambda d: {}))
+
+
 if __name__ == "__main__":
     unittest.main()
