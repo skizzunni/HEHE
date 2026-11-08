@@ -58,15 +58,15 @@ Locks 5/11 won, 4 open; Best play top 2 (59%) won; lost: NC State Wolfpack +15.5
 Safe Locks 3/11 won, 8 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: lost (2/8 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Over 56.5 points)
 Lottery 100: lost (2/6 legs won, killed by Missouri Tigers +3.5, Over 64.5 points)
-Lottery 100: lost (0/5 legs won, killed by Kansas State Wildcats +1.5, Over 51.5 points, Purdue Boilermakers -10.5)
+Lottery 100: lost (1/5 legs won, killed by Kansas State Wildcats +1.5, Over 51.5 points, Purdue Boilermakers -10.5)
 Lottery 10k: lost (1/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points, Kansas State Wildcats +1.5)
-Lottery 10k: lost (2/9 legs won, killed by Over 8.5 goals)
+Lottery 10k: lost (3/9 legs won, killed by Over 8.5 goals)
 Lottery 10k: lost (3/12 legs won, killed by Over 51.5 points, Over 55.5 points, Rutgers Scarlet Knights +5.5, Over 55.5 points)
 Lottery 10k+25: lost (2/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points)
 Lottery 10k+50: lost (2/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points)
 Lottery 10k+100: lost (1/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points)
 Ladder-consistency props (all time): 1729/2076 won (83.3%) vs 86.4% fair, 87.5% price.
-Props 21/26 vs 78.6% claimed.
+Props 22/27 vs 78.4% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=133), ncaaf 0.00 (n=210), nfl 0.00 (n=42), nhl 0.00 (n=150)
