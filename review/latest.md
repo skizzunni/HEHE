@@ -2,14 +2,14 @@
 
 Picks 1-0 (100.0% vs 74.0% claimed, ROI +26.3%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
-Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 848/1089 vs 82%; NFL teamunder on all saved lines 311/402 vs 82%. Running ahead: NBA under on all saved lines 1068/1212 vs 82%; NHL over on all saved lines 133/149 vs 83%; NHL spread on all saved lines 283/328 vs 83%; NHL teamover on all saved lines 177/202 vs 82%.
-Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.2% for the rest (1524 and 8554 legs), so a cold week is noise, not a signal.
+Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 860/1101 vs 82%; NFL teamunder on all saved lines 311/402 vs 82%. Running ahead: NBA under on all saved lines 1081/1225 vs 82%; NHL over on all saved lines 133/149 vs 83%; NHL spread on all saved lines 283/328 vs 83%; NHL teamover on all saved lines 177/202 vs 82%.
+Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.3% for the rest (1524 and 8579 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.
 Strong calls 1-0 (100.0% vs 74.0% claimed).
 Closing line value: +1.89 points on 1 picks; beat the close on 100.0%.
 Board sweep: 1-0, 95 open -- still clean.
 Why picks lost (14 days): favourite lost 140, close game 109, upset 49, coin flip 42, blowout 39, price moved against it 28.
-Yesterday (2026-11-07): board 120-40, sweep broken by jpn Nagoya Grampus or draw at 76%; 45.3 losses expected, 40 came in (85% chance of that many or more).
+Yesterday (2026-11-07): board 121-40, sweep broken by jpn Nagoya Grampus or draw at 76%; 45.6 losses expected, 40 came in (86.4% chance of that many or more).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 18 (72% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 13 of 16 (81% vs 68% stated)
@@ -48,9 +48,9 @@ Yesterday (2026-11-07): board 120-40, sweep broken by jpn Nagoya Grampus or draw
 - LOST ncaaf Army Black Knights at 62% (-175), Air Force Falcons 24 - Army Black Knights 21: margin 3 · the book had my side favoured too · called at 62% · favourite lost · close game; picks like it: 218 of 264 (83% vs 61% stated)
 - LOST ncaaf Florida Gators at 64% (-192), Florida Gators 7 - Oklahoma Sooners 23: margin 16 · the book had my side favoured too · called at 64% · favourite lost · price moved against it (5 pts); picks like it: 202 of 248 (81% vs 64% stated)
 - LOST ncaaf Michigan Wolverines at 84% (-600), Michigan State Spartans 15 - Michigan Wolverines 6: margin 9 · the book had my side favoured too · called at 84% · upset; picks like it: 43 of 51 (84% vs 83% stated)
-- LOST nba Houston Rockets at 70% (-264), Houston Rockets 99 - Phoenix Suns 102: margin 3 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 40 of 57 (70% vs 70% stated)
+- LOST nba Houston Rockets at 70% (-264), Houston Rockets 99 - Phoenix Suns 102: margin 3 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 41 of 58 (71% vs 70% stated)
 - LOST nhl Los Angeles Kings at 53% (-122), Los Angeles Kings 2 - Pittsburgh Penguins 5: margin 3 · the book had my side favoured too · called at 53% · coin flip · blowout; picks like it: 108 of 207 (52% vs 53% stated)
-Ladder-consistency props (all time): 1784/2137 won (83.5%) vs 86.4% fair, 87.5% price.
+Ladder-consistency props (all time): 1790/2146 won (83.4%) vs 86.4% fair, 87.5% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=138), ncaaf 0.00 (n=221), nfl 0.00 (n=42), nhl 0.00 (n=158)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=139), ncaaf 0.00 (n=221), nfl 0.00 (n=42), nhl 0.00 (n=158)

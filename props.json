@@ -36646,11 +36646,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Damian Lillard",
   "p": 0.8725,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nba:401909944|n:damian lillard|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -36662,11 +36664,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Damian Lillard",
   "p": 0.8481,
   "p_fair": 0.8907,
   "price": "-850",
-  "status": "open"
+  "status": "lost",
+  "value": 19.0
  },
  "nba:401909944|n:deaaron fox|Assists|4+": {
   "aid": null,
@@ -36678,11 +36682,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "De'Aaron Fox",
   "p": 0.853,
   "p_fair": 0.8339,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909944|n:deni avdija|Points|10+": {
   "aid": null,
@@ -36693,11 +36699,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Deni Avdija",
   "p": 0.8725,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nba:401909944|n:deni avdija|Rebounds|4+": {
   "aid": null,
@@ -36709,11 +36717,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Deni Avdija",
   "p": 0.8508,
   "p_fair": 0.9049,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909944|n:dylan harper|Pts + Ast|15+": {
   "aid": null,
@@ -36725,11 +36735,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Dylan Harper",
   "p": 0.8547,
   "p_fair": 0.884,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909944|n:dylan harper|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -36741,11 +36753,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Dylan Harper",
   "p": 0.8481,
   "p_fair": 0.8799,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nba:401909944|n:scoot henderson|Pts + Ast|10+": {
   "aid": null,
@@ -36757,11 +36771,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Scoot Henderson",
   "p": 0.8547,
   "p_fair": 0.9377,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401909944|n:stephon castle|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -36773,11 +36789,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Stephon Castle",
   "p": 0.8425,
   "p_fair": 0.8862,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401909944|n:toumani camara|Points|5+": {
   "aid": null,
@@ -36789,11 +36807,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Toumani Camara",
   "p": 0.8539,
   "p_fair": 0.9646,
   "price": "-1400",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401909944|n:toumani camara|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -36805,11 +36825,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Toumani Camara",
   "p": 0.8531,
   "p_fair": 0.9512,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 8.0
  },
  "nba:401909945|n:caleb wilson|Threes Made|1+": {
   "aid": null,
@@ -36859,6 +36881,22 @@
   "price": "-1400",
   "status": "open"
  },
+ "nba:401909946|n:cade cunningham|Pts + Reb + Ast|30+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": -6.2,
+  "gid": "nba:401909946",
+  "imp": 0.9,
+  "label": "Cade Cunningham: 30+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "30+",
+  "market": "Pts + Reb + Ast",
+  "name": "Cade Cunningham",
+  "p": 0.8499,
+  "p_fair": 0.8444,
+  "price": "-900",
+  "status": "open"
+ },
  "nba:401909946|n:luka doncic|Pts + Ast|35+": {
   "aid": null,
   "date": "2026-11-08",
@@ -36873,6 +36911,22 @@
   "p": 0.7576,
   "p_fair": 0.7195,
   "price": "-380",
+  "status": "open"
+ },
+ "nba:401909949|n:derrick white|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": 1.6,
+  "gid": "nba:401909949",
+  "imp": 0.8947,
+  "label": "Derrick White: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Derrick White",
+  "p": 0.8449,
+  "p_fair": 0.909,
+  "price": "-850",
   "status": "open"
  },
  "nba:401909949|n:paul george|Threes Made|2+": {
@@ -67509,6 +67563,22 @@
   "p": 0.8509,
   "p_fair": null,
   "price": "-1050",
+  "status": "open"
+ },
+ "nhl:401892679|n:evgeni malkin|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": null,
+  "gid": "nhl:401892679",
+  "imp": 0.9091,
+  "label": "Evgeni Malkin: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Evgeni Malkin",
+  "p": 0.8472,
+  "p_fair": null,
+  "price": "-1000",
   "status": "open"
  },
  "nhl:401892679|n:mikael granlund|Shots on Goal|1+": {
