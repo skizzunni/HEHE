@@ -4193,3 +4193,7 @@ collects every UFC fight ESPN lists (event calendar per year, both US and UTC da
 `ufc_model.py` rates fighters Elo-style from results (finishes count more than split decisions), walk-forward,
 plus per-fighter finish rates for method props. Not used for any pick until it beats the favourite on fights
 it has not seen (2026-11-08).
+UFC enrichment fix before any use: ESPN's away/home odds blocks are not in fighter order (MMA has no home
+fighter), and a first pass keyed prices by block position -- the market "favourite" then won 35% and a fake
++120% edge appeared for underdogs. Prices are now keyed by each block's own athlete id, as picks.ufc_picks
+already does; the 750 fights done the wrong way are being redone (2026-11-08).

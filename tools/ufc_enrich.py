@@ -36,9 +36,17 @@ def odds(eid, cid):
     it = (d.get("items") or [None])[0]
     if not it:
         return None
-    side = lambda k: {"ml": (it.get(k) or {}).get("moneyLine"),
-                      "open": (((it.get(k) or {}).get("open") or {}).get("moneyLine") or {}).get("american")}
-    return dict(book=(it.get("provider") or {}).get("name"), away=side("awayAthleteOdds"), home=side("homeAthleteOdds"),
+    # MMA has no home or away fighter and the two odds blocks are NOT in
+    # competitor order (see picks.ufc_picks): key each price by the athlete
+    # id its own $ref names, never by block position
+    ml, op = {}, {}
+    for k in ("awayAthleteOdds", "homeAthleteOdds"):
+        v = it.get(k) or {}
+        aid = str((v.get("athlete") or {}).get("$ref", "")).rsplit("/", 1)[-1].split("?")[0]
+        if aid:
+            ml[aid] = v.get("moneyLine")
+            op[aid] = ((v.get("open") or {}).get("moneyLine") or {}).get("american")
+    return dict(book=(it.get("provider") or {}).get("name"), ml=ml, open=op,
                 ou=it.get("overUnder"), over=it.get("overOdds"), under=it.get("underOdds"))
 
 
@@ -75,11 +83,11 @@ def main(since):
     except (OSError, ValueError):
         cache = {}
     todo = [(cid, f) for cid, f in sorted(book.items(), key=lambda kv: kv[1].get("date") or "")
-            if (f.get("date") or "") >= since and f.get("eid") and "odds" not in f]
+            if (f.get("date") or "") >= since and f.get("eid") and not (f.get("odds") or {}).get("ml")]
     for i, (cid, f) in enumerate(todo):
         eid = f["eid"]
         f["odds"] = odds(eid, cid)
-        f["side"] = order(eid, cid)
+        f.pop("side", None)
         for x in (f["a"], f["b"]):
             x["stats"] = stats(eid, cid, x["id"])
             bio(x["id"], cache)
