@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 58.7,
-  "brier_close": 0.1739,
-  "brier_published": 0.1756,
+  "beat_close_pct": 58.0,
+  "brier_close": 0.1737,
+  "brier_published": 0.1754,
   "dates": [
    "2026-11-03",
    "2026-11-07"
   ],
-  "logloss_close": 0.5226,
-  "logloss_published": 0.5272,
-  "mean_clv_pts": 0.75,
+  "logloss_close": 0.5221,
+  "logloss_published": 0.527,
+  "mean_clv_pts": 0.69,
   "n": 300
  },
  "market_is_model": true,
@@ -12026,6 +12026,42 @@
    "league": "mls",
    "published": 0.83,
    "won": 1
+  },
+  "mls:761942": {
+   "call": false,
+   "close": 0.7673,
+   "clv": -1.27,
+   "day": "2026-11-07",
+   "league": "mls",
+   "published": 0.78,
+   "won": 1
+  },
+  "mls:761945": {
+   "call": false,
+   "close": 0.79,
+   "clv": 2.0,
+   "day": "2026-11-07",
+   "league": "mls",
+   "published": 0.77,
+   "won": 1
+  },
+  "mls:761946": {
+   "call": false,
+   "close": 0.7679,
+   "clv": -0.21,
+   "day": "2026-11-07",
+   "league": "mls",
+   "published": 0.77,
+   "won": 1
+  },
+  "mls:761947": {
+   "call": false,
+   "close": 0.7673,
+   "clv": -5.27,
+   "day": "2026-11-07",
+   "league": "mls",
+   "published": 0.82,
+   "won": 0
   },
   "nba:401898388": {
    "call": false,
@@ -26550,5 +26586,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-08T02:05+00:00"
+ "updated": "2026-11-08T02:12+00:00"
 }
