@@ -4235,3 +4235,6 @@ rule: US 134/145 then 153/167 (92% vs 90%, ROI -2.8%, -3.7%); soccer/other 51/56
 vs 84%; ROI +3.4%, -13.0%) -- mixed (2026-11-08).
 Ladder preview says how many legs the 2x-5x rule chose and why (board `ladderPreview`, now tested)
 (2026-11-08).
+Review ladder line shows each open prop leg's record at a similar chance ("props like it"). Study, no rule:
+NFL receiving yards at lines of 30 or less 92/114 then 75/86 (81%, 87% vs 82-83%), on par overall
+(2026-11-08).

@@ -298,6 +298,9 @@ class ReviewLine(unittest.TestCase):
                          "Alex Caruso: 2+ Assists (OKC @ MEM; live Halftime, OKC 71 - MEM 49, 3 so far, line reached)")
         self.assertEqual(daily_review.leg_text(dict(label="Under 241.5 points", match="UTA at DAL", status="lost")),
                          "Under 241.5 points (UTA at DAL; LOST)")
+        self.assertEqual(daily_review.leg_text(dict(label="Kyle Pitts: 25+ Receiving Yards", match="CIN @ ATL", tip="9:30 AM", status="open",
+                                                    prop_rec=dict(won=144, n=176, said=82))),
+                         "Kyle Pitts: 25+ Receiving Yards (CIN @ ATL; 9:30 AM, open; props like it 144/176)")
 
 
     def test_pace_text(self):

@@ -581,6 +581,9 @@ def leg_text(L, mark=None):
             where.append((f"{L['tip']}, " if L.get("tip") else "") + "open")
     else:
         where.append(mark.get(st, st))
+    pr = L.get("prop_rec")
+    if pr and pr.get("n") and st in (None, "open"):      # a prop leg's own history at a similar chance
+        where.append(f"props like it {pr['won']}/{pr['n']}")
     return f"{L['label']} ({'; '.join(where)})"
 
 
