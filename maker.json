@@ -1197,6 +1197,7 @@
    "cost": 0.6739,
    "edge": 0.0129,
    "fair": 0.6826,
+   "fill": "strict",
    "id": "ncaaf:401856745",
    "label": "Tennessee Volunteers",
    "league": "ncaaf",
@@ -1209,8 +1210,9 @@
     "team": "Tennessee Volunteers"
    },
    "start": "2026-11-07T23:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07UKTENN-TENN"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07UKTENN-TENN",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07ULMARST-ARST|YES": {
    "ask": 0.86,
@@ -8395,6 +8397,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401856745",
    "label": "under 49.5",
    "league": "ncaaf",
@@ -8407,8 +8410,9 @@
     "t": "under"
    },
    "start": "2026-11-07T23:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07UKTENN-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07UKTENN-50",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07ULMARST-53|YES": {
    "ask": 0.51,
