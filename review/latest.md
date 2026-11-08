@@ -1,13 +1,13 @@
 # Review 2026-11-07
 
-Picks 95-33 (74.2% vs 72.2% claimed, ROI -1.8%).
+Picks 96-34 (73.8% vs 72.2% claimed, ROI -2.4%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 15/24 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 38/59 vs 75%. Running ahead: NBA under on all saved lines 1018/1145 vs 82%; NCAAF over on all saved lines 756/883 vs 81%; NHL over on all saved lines 119/134 vs 83%; NHL spread on all saved lines 261/301 vs 83%; NHL teamover on all saved lines 163/186 vs 82%.
-Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF teamunder 531/700 (76% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 7751 legs), so a cold week is noise, not a signal.
+Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF teamunder 531/700 (76% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.9% for the rest (1524 and 7752 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.
-Strong calls 68-22 (75.6% vs 73.7% claimed).
-Closing line value: +0.83 points on 128 picks; beat the close on 50.0%.
-Board sweep: 95-33, 41 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 35.6 losses expected from the settled picks' chances, so 33 or more by now had a 73.3% chance; 4 of the 33 were near coin flips (called under 60%), 29 were real misses; losses by league: ncaaf 11 (10.3 expected), efl1 4 (2.4 expected), mls 3 (3.1 expected), epl 2 (1 expected), ger2 2 (1.2 expected), sco 2 (1.3 expected), arg 1 (1.4 expected), chi 1 (0.5 expected), ecu 1 (0.4 expected), esp 1 (1.1 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), mex 1 (0.4 expected), wsl 1 (0.3 expected).
+Strong calls 69-23 (75.0% vs 73.7% claimed).
+Closing line value: +0.89 points on 130 picks; beat the close on 50.8%.
+Board sweep: 96-34, 39 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 36.2 losses expected from the settled picks' chances, so 34 or more by now had a 70% chance; 4 of the 34 were near coin flips (called under 60%), 30 were real misses; losses by league: ncaaf 11 (10.3 expected), efl1 4 (2.4 expected), mls 4 (3.7 expected), epl 2 (1 expected), ger2 2 (1.2 expected), sco 2 (1.3 expected), arg 1 (1.4 expected), chi 1 (0.5 expected), ecu 1 (0.4 expected), esp 1 (1.1 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), mex 1 (0.4 expected), wsl 1 (0.3 expected).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 18 (72% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 13 of 16 (81% vs 68% stated)
@@ -30,7 +30,7 @@ Board sweep: 95-33, 41 open -- broken (first loss: jpn Nagoya Grampus or draw at
 - LOST chi Everton CD or draw at 81% (-600), Deportes Concepcion 2 - Everton CD 0: margin 2 · the book had my side favoured too · called at 81% · upset
 - LOST ncaaf App State Mountaineers at 68% (-230), App State Mountaineers 23 - Georgia State Panthers 39: margin 16 · the book had my side favoured too · called at 68% · favourite lost; picks like it: 145 of 188 (77% vs 68% stated)
 - LOST ncaaf Arkansas State Red Wolves at 86% (-675), Arkansas State Red Wolves 17 - UL Monroe Warhawks 19: margin 2 · the book had my side favoured too · called at 86% · upset · close game; picks like it: 33 of 39 (85% vs 85% stated)
-- LOST mls Chicago Fire FC or draw at 76% (-425), Chicago Fire FC 3 - Columbus Crew 4: margin 1 · the book had my side favoured too · called at 76% · upset · close game; picks like it: 23 of 28 (82% vs 76% stated)
+- LOST mls Chicago Fire FC or draw at 76% (-425), Chicago Fire FC 3 - Columbus Crew 4: margin 1 · the book had my side favoured too · called at 76% · upset · close game; picks like it: 24 of 29 (83% vs 76% stated)
 - LOST mls Inter Miami CF at 71% (-320), Charlotte FC 3 - Inter Miami CF 3: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 71% · favourite lost
 - LOST ncaaf Delaware Blue Hens at 52% (-118), Delaware Blue Hens 40 - Kennesaw State Owls 42: margin 2 · the book had my side favoured too · called at 52% · coin flip · close game; picks like it: 120 of 200 (60% vs 53% stated)
 - LOST ncaaf Washington Huskies at 55% (-135), Penn State Nittany Lions 28 - Washington Huskies 25: margin 3 · the book had my side favoured too · called at 55% · coin flip · close game; picks like it: 196 of 292 (67% vs 55% stated)
@@ -40,8 +40,9 @@ Board sweep: 95-33, 41 open -- broken (first loss: jpn Nagoya Grampus or draw at
 - LOST ncaaf Ohio State Buckeyes at 74% (-305), Ohio State Buckeyes 28 - Oregon Ducks 41: margin 13 · the book had my side favoured too · called at 74% · favourite lost; picks like it: 77 of 107 (72% vs 73% stated)
 - LOST ncaaf Mississippi State Bulldogs at 58% (-148), Mississippi State Bulldogs 23 - Vanderbilt Commodores 25: margin 2 · the book had my side favoured too · called at 58% · coin flip · close game; picks like it: 211 of 285 (74% vs 58% stated)
 - LOST mex Atlas or draw at 64% (-220), Atlas 1 - Pachuca 4: margin 3 · the book had my side favoured too · called at 64% · favourite lost · blowout
-- LOST mls San Diego FC or draw at 77% (-450), San Diego FC 0 - Sporting Kansas City 1: margin 1 · the book had my side favoured too · called at 77% · upset · close game · price moved against it (5 pts); picks like it: 20 of 26 (77% vs 77% stated)
-Why picks lost (14 days): favourite lost 154, close game 131, upset 64, coin flip 49, blowout 44, price moved against it 30.
+- LOST mls San Diego FC or draw at 77% (-450), San Diego FC 0 - Sporting Kansas City 1: margin 1 · the book had my side favoured too · called at 77% · upset · close game · price moved against it (5 pts); picks like it: 21 of 27 (78% vs 77% stated)
+- LOST mls Houston Dynamo FC or draw at 69% (-260), Houston Dynamo FC 0 - St. Louis CITY SC 1: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game; picks like it: 21 of 28 (75% vs 69% stated)
+Why picks lost (14 days): favourite lost 155, close game 132, upset 64, coin flip 49, blowout 44, price moved against it 30.
 Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 68%; 13.9 losses expected, 9 came in (96.6% chance of that many or more).
 - LOST arg San Lorenzo or draw at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost; picks like it: 12 of 19 (63% vs 69% stated)
 - LOST col Internacional de Bogotá or draw at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 9 of 14 (64% vs 68% stated)
