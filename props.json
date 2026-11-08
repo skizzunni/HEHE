@@ -37351,6 +37351,22 @@
   "price": "-800",
   "status": "open"
  },
+ "nba:401909946|n:austin reaves|Pts + Reb + Ast|30+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": -5.8,
+  "gid": "nba:401909946",
+  "imp": 0.8,
+  "label": "Austin Reaves: 30+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "30+",
+  "market": "Pts + Reb + Ast",
+  "name": "Austin Reaves",
+  "p": 0.7554,
+  "p_fair": 0.7533,
+  "price": "-400",
+  "status": "open"
+ },
  "nba:401909946|n:cade cunningham|Pts + Reb + Ast|30+": {
   "aid": null,
   "date": "2026-11-08",
@@ -49160,11 +49176,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Cyrus Allen",
   "p": 0.792,
   "p_fair": 0.7707,
   "price": "-390",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873045|n:kenneth walker|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -49176,11 +49194,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Kenneth Walker III",
   "p": 0.5896,
   "p_fair": null,
   "price": "-240",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nfl:401873045|n:patrick mahomes|Passing Yards|150+": {
   "aid": null,
@@ -49191,11 +49211,13 @@
   "league": "nfl",
   "line": "150+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Patrick Mahomes",
   "p": 0.872,
   "price": "-1800",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 242.0
  },
  "nfl:401873045|n:rashee rice|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -49207,11 +49229,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Rashee Rice",
   "p": 0.348,
   "p_fair": null,
   "price": "+125",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873045|n:rashee rice|Receiving Yards|30+": {
   "aid": null,
@@ -49223,11 +49247,13 @@
   "league": "nfl",
   "line": "30+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Rashee Rice",
   "p": 0.8478,
   "p_fair": 0.7483,
   "price": "-550",
-  "status": "open"
+  "status": "won",
+  "value": 49.0
  },
  "nfl:401873045|n:tim patrick|Receptions|1+": {
   "aid": null,
@@ -49243,7 +49269,9 @@
   "p": 0.796,
   "p_fair": 0.7731,
   "price": "-400",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401873045|n:xavier worthy|Receiving Yards|15+": {
   "aid": null,
@@ -49255,11 +49283,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Xavier Worthy",
   "p": 0.7933,
   "p_fair": 0.7586,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 48.0
  },
  "nfl:401873045|n:xavier worthy|Receptions|2+": {
   "aid": null,
@@ -49271,11 +49301,13 @@
   "league": "nfl",
   "line": "2+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Xavier Worthy",
   "p": 0.8487,
   "p_fair": 0.8299,
   "price": "-580",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nfl:401873046|n:cj stroud|Passing Yards|175+": {
   "aid": null,
@@ -49739,6 +49771,22 @@
   "p": 0.3969,
   "p_fair": null,
   "price": "-110",
+  "status": "open"
+ },
+ "nfl:401873049|n:josh jacobs|Receiving Yards|10+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": -2.7,
+  "gid": "nfl:401873049",
+  "imp": 0.8,
+  "label": "Josh Jacobs: 10+ Receiving Yards",
+  "league": "nfl",
+  "line": "10+",
+  "market": "Receiving Yards",
+  "name": "Josh Jacobs",
+  "p": 0.7984,
+  "p_fair": 0.7783,
+  "price": "-400",
   "status": "open"
  },
  "nfl:401873049|n:kyle williams|Receptions|1+": {
@@ -69600,11 +69648,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Carter Verhaeghe",
   "p": 0.872,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892674|n:carter verhaeghe|Shots on Goal|2+": {
   "aid": null,
@@ -69616,11 +69666,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Carter Verhaeghe",
   "p": 0.7053,
   "p_fair": null,
   "price": "-310",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892674|n:jj peterka|Shots on Goal|1+": {
   "aid": null,
@@ -69632,11 +69684,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "JJ Peterka",
   "p": 0.8603,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nhl:401892674|n:sam reinhart|Shots on Goal|2+": {
   "aid": null,
@@ -69648,11 +69702,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Sam Reinhart",
   "p": 0.7398,
   "p_fair": null,
   "price": "-385",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892675|n:jack eichel|Shots on Goal|2+": {
   "aid": null,
