@@ -415,6 +415,28 @@ def prereg_line():
     return f"Pre-registered test, {s['name']}: {rec}; {what}."
 
 
+def ufc_line(today=None, back=8):
+    """The most recent UFC card in the last `back` days, its picks graded
+    (ufc_model.card_record), one line or None."""
+    try:
+        import ufc_model
+    except Exception:
+        return None
+    today = today or dt.date.today()
+    for i in range(1, back + 1):
+        day = (today - dt.timedelta(days=i)).strftime("%Y%m%d")
+        try:
+            r = ufc_model.card_record(day)
+        except Exception:
+            r = None
+        if r:
+            c = r["close"]
+            return (f"UFC {day[:4]}-{day[4:6]}-{day[6:]}: picks (the price favourite) {r['won']}-{r['lost']}"
+                    + (f"; close fights (under 60%) {c[0]} of {c[1]}" if c[1] else "")
+                    + (f"; lost: {', '.join(r['losses'])}" if r["losses"] else "") + ".")
+    return None
+
+
 def form_line(min_n=100, gap=5):
     """Bet types running cold over the last 7 pool days (locks.pool_form):
     5+ points under their stated chance on 100+ legs, one line or None.
@@ -913,6 +935,8 @@ def words(r, fit):
         out.append(r["cold"])
     if r.get("prereg"):
         out.append(r["prereg"])
+    if r.get("ufc"):
+        out.append(r["ufc"])
     for name, mb in r.get("big_files") or []:
         out.append(f"BIG FILE {name} is {mb} MB -- GitHub refuses files over 100 MB and the board stops; trim it")
     st = r.get("stuck") or []
@@ -1025,6 +1049,7 @@ def main():
     log[today.isoformat()]["cautions"] = caution_line()
     log[today.isoformat()]["cold"] = form_line()
     log[today.isoformat()]["prereg"] = prereg_line()
+    log[today.isoformat()]["ufc"] = ufc_line(today)
     yk = (today - dt.timedelta(days=1)).isoformat()
     log[today.isoformat()]["yesterday"] = dict(day=yk, sweep=log[yk].get("sweep"), losses=log[yk].get("losses"))
     with open(log_path, "w") as fh:

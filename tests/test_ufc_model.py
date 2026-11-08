@@ -32,5 +32,15 @@ class UFCModel(unittest.TestCase):
         self.assertEqual(M.finish_rates(book)["x"], [1, 2])
 
 
+    def test_card_record(self):
+        picks = {("A", "B"): dict(pick="A", conf=0.7), ("C", "D"): dict(pick="C", conf=0.55),
+                 ("E", "F"): dict(pick="E", conf=0.8)}
+        winners = {frozenset(("A", "B")): "A", frozenset(("C", "D")): "D"}           # E-F not finished
+        r = M.card_record("20261107", picks=picks, winners=winners)
+        self.assertEqual((r["won"], r["lost"], r["close"]), (1, 1, [0, 1]))
+        self.assertEqual(r["losses"], ["C (55%) lost to D"])
+        self.assertIsNone(M.card_record("x", picks={}, winners={}))
+
+
 if __name__ == "__main__":
     unittest.main()

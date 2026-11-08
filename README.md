@@ -4210,3 +4210,6 @@ UFC studies on 2,850 fights with DraftKings prices since 2021 (`tools/ufc_study_
   first half: test log loss 0.5873 vs the market's 0.5871 -- adds nothing; betting its 5+ pt "edges" -15.8%.
 Conclusion: on this data the UFC price already holds what results, stats, reach and age say; the least-bad
 straight bet is the favourite, and underdogs lose about 11% a bet (2026-11-08).
+UFC tracking fix: the review now grades the latest UFC card's picks against ESPN results
+(`ufc_model.card_record`, `daily_review.ufc_line`), since ESPN's UFC prices carry no capture time and so
+never become graded calls in the ledger. Nov 7 card: 9-5 (all 14 fights now priced) (2026-11-08).

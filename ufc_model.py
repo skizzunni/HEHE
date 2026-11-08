@@ -85,3 +85,38 @@ def score(log, since="2024-01-01", min_fights=1):
     right = sum((r[3] >= 0.5) == r[4] for r in X)
     ll = -sum(math.log(max(1e-9, r[3] if r[4] else 1 - r[3])) for r in X) / len(X)
     return dict(n=len(X), right=right, acc=round(100 * right / len(X), 1), logloss=round(ll, 4))
+
+
+def card_record(day, picks=None, winners=None):
+    """The board's UFC picks for one card (picks.ufc_picks: the price
+    favourite) graded against ESPN's results: dict(won, lost, losses=[...],
+    close=[won, n]) where `close` is fights rated under 60%. `picks` and
+    `winners` can be passed in (tests); otherwise they are fetched."""
+    if picks is None:
+        import picks as P
+        picks = P.ufc_picks(day)
+    if winners is None:
+        import json as _j, urllib.request as _u
+        d = _j.load(_u.urlopen(f"https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard?dates={day}", timeout=60))
+        winners = {}
+        for ev in d.get("events") or []:
+            for c in ev.get("competitions") or []:
+                names = frozenset((x.get("athlete") or {}).get("displayName") for x in c.get("competitors") or [])
+                w = [(x.get("athlete") or {}).get("displayName") for x in c.get("competitors") or [] if x.get("winner")]
+                if w:
+                    winners[names] = w[0]
+    won = lost = cw = cn = 0
+    losses = []
+    for pair, v in (picks or {}).items():
+        res = winners.get(frozenset(pair))
+        if not res or not v.get("pick"):
+            continue
+        hit = res == v["pick"]
+        won += hit
+        lost += not hit
+        if (v.get("conf") or 0) < 0.60:
+            cn += 1
+            cw += hit
+        if not hit:
+            losses.append(f"{v['pick']} ({round(100 * (v.get('conf') or 0))}%) lost to {res}")
+    return dict(won=won, lost=lost, losses=losses, close=[cw, cn]) if won + lost else None
