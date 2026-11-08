@@ -319,6 +319,11 @@ def report(book=None, start=START, target=TARGET):
             pass
         try:
             today["options"] = options(book or locks.load(), today["day"], today["stake"], target)
+            if today["day"] >= BEST_FROM:      # the chosen combination against the plain top 4
+                t4 = ticket(book or locks.load(), today["day"], 4)
+                if t4:
+                    today["vs_top4"] = dict(prob=round(math.prod(L["p"] for L in t4), 4),
+                                            pays=round(math.prod(locks._dec(L["price"]) for L in t4), 3))
         except Exception:
             pass
     pays = (today or {}).get("pays") or 3.05

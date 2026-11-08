@@ -1797,6 +1797,9 @@ function ladderHTML(){
         + money(T.stake * T.pays) + ' if all ' + T.legs.length + ' win (' + (100 * T.prob).toFixed(0) + '% est.). '
         + X.wins_needed + ' straight wins at this price reach the target'
         + (X.chance_to_target ? ', about 1 in ' + Math.round(1 / X.chance_to_target).toLocaleString() : '') + '.</p>'
+        + (T.vs_top4 ? '<p class="note">Chosen as the 2&ndash;5&times; combination with the best chance of all winning: '
+           + (100 * T.prob).toFixed(0) + '% at ' + T.pays.toFixed(2) + '&times;, against ' + (100 * T.vs_top4.prob).toFixed(0)
+           + '% at ' + T.vs_top4.pays.toFixed(2) + '&times; for the plain top 4.</p>' : '')
         + ladderOptions(T) + ladderCounts(X.counts || [], X.counts_games || [])
         + copyBtn("Ladder ticket", ['Ladder ticket: stake ' + money(T.stake) + ', ' + T.legs.length + '-leg parlay, about '
             + T.pays.toFixed(2) + 'x (pays ' + money(T.stake * T.pays) + ')']

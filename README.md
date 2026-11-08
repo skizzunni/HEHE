@@ -4277,3 +4277,5 @@ Lost ladder prop legs show the final number and the miss ("Kyle Pitts: 25+ Recei
 props 11/17 (6/7 then 5/10) vs ~80% stated -- short only recently and on 17 legs; Nov 8's misses were Pitts
 23 of 25 and Coker 29 of 30. Grading checked correct; no caution until it is short in both halves
 (2026-11-08).
+From Nov 9 the ladder ticket shows its chance and payout against the plain top-4 ticket (`report` today
+vs_top4; board note under the legs) (2026-11-08).
