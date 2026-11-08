@@ -6319,6 +6319,30 @@
    "tip": "8:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909957|{\"line\": 8.5, \"t\": \"spread\", \"team\": \"Denver Nuggets\"}|FanDuel": {
+   "dec": 1.9804,
+   "dk": "-115",
+   "ev": 0.0127,
+   "fair": 0.5113,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401909957",
+   "kind": "single",
+   "league": "nba",
+   "market": "spread",
+   "match": "DEN @ HOU",
+   "price": "-102",
+   "seen": "2026-11-08T23:09:09+00:00",
+   "side": "{\"line\": 8.5, \"t\": \"spread\", \"team\": \"Denver Nuggets\"}",
+   "spec": {
+    "line": 8.5,
+    "t": "spread",
+    "team": "Denver Nuggets"
+   },
+   "start": "2026-11-10T01:30Z",
+   "team": "Denver Nuggets +8.5",
+   "tip": "8:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909958|home|FanDuel": {
    "dec": 3.6,
    "ev": 0.0114,
@@ -11860,6 +11884,7 @@
     "team": "Buffalo Sabres"
    },
    "start": "2026-11-08T20:30Z",
+   "status": "lost",
    "team": "Buffalo Sabres +1.5",
    "tip": "3:30 PM",
    "venue": "FanDuel"

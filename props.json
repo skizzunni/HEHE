@@ -37590,6 +37590,22 @@
   "price": "-1400",
   "status": "open"
  },
+ "nba:401909947|n:jaxson hayes|Rebounds|4+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": -2.3,
+  "gid": "nba:401909947",
+  "imp": 0.9333,
+  "label": "Jaxson Hayes: 4+ Rebounds",
+  "league": "nba",
+  "line": "4+",
+  "market": "Rebounds",
+  "name": "Jaxson Hayes",
+  "p": 0.8586,
+  "p_fair": 0.9121,
+  "price": "-1400",
+  "status": "open"
+ },
  "nba:401909947|n:jonathan kuminga|Points|5+": {
   "aid": null,
   "date": "2026-11-08",
@@ -70080,11 +70096,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jack Eichel",
   "p": 0.7271,
   "p_fair": null,
   "price": "-355",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892675|n:jack quinn|Shots on Goal|1+": {
   "aid": null,
@@ -70095,11 +70113,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jack Quinn",
   "p": 0.872,
   "price": "-2000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892675|n:mitchell marner|Shots on Goal|1+": {
   "aid": null,
@@ -70111,11 +70131,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "fuzzy",
   "name": "Mitchell Marner",
   "p": 0.8543,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892675|n:tomas hertl|Shots on Goal|1+": {
   "aid": null,
@@ -70127,11 +70149,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Tomas Hertl",
   "p": 0.848,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892676|n:auston matthews|Shots on Goal|3+": {
   "aid": null,
