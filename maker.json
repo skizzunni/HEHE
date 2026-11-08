@@ -13153,6 +13153,28 @@
    "status": "open",
    "ticker": "KXNFLSPREAD-26NOV08CLENO-NO5"
   },
+  "KXNFLSPREAD-26NOV08CLENO-NO5|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "nfl:401873039",
+   "label": "New Orleans Saints -4.5",
+   "league": "nfl",
+   "match": "CLE @ NO",
+   "posted": "2026-11-08T17:43:46+00:00",
+   "queue": 954285.56,
+   "side": "YES",
+   "spec": {
+    "line": -4.5,
+    "t": "spread",
+    "team": "New Orleans Saints"
+   },
+   "start": "2026-11-08T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26NOV08CLENO-NO5"
+  },
   "KXNFLSPREAD-26NOV08DALIND-DAL5|YES": {
    "ask": 0.51,
    "bid": 0.5,
@@ -14220,6 +14242,27 @@
    "start": "2026-11-08T21:25Z",
    "status": "open",
    "ticker": "KXNFLTOTAL-26NOV08GBNE-45"
+  },
+  "KXNFLTOTAL-26NOV08LARWAS-49|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "nfl:401873043",
+   "label": "under 48.5",
+   "league": "nfl",
+   "match": "LAR @ WSH",
+   "posted": "2026-11-08T17:43:46+00:00",
+   "queue": 43653.44,
+   "side": "NO",
+   "spec": {
+    "line": 48.5,
+    "t": "under"
+   },
+   "start": "2026-11-08T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV08LARWAS-49"
   },
   "KXNFLTOTAL-26NOV08NYGPHI-39|YES": {
    "ask": 0.51,
