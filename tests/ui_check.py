@@ -179,7 +179,9 @@ PROBE = """<script>setTimeout(function(){
               paceNote({label: "Over 220.5 points", league: "nba", live: "30.5 - 4th", live_score: "A 100 - B 100"}),
               paceNote({label: "Utah Mammoth under 4.5 goals", league: "nhl", live: "0:39 - 1st", live_score: "Montreal Canadiens 2 - Utah Mammoth 2"}),
               paceNote({label: "Florida Atlantic Owls under 41.5 points", league: "ncaaf", live: "9:59 - 1st", live_score: "Florida Atlantic Owls 7 - UTSA Roadrunners 0"})];
-  out.soFar = [soFar({so_far: 2, line: "4+", market: "Assists"}), soFar({so_far: 3, line: "2+", market: "Assists"}), soFar({line: "2+"}), soFar({so_far: 0, line: "5+", market: "Receiving Yards"})];
+  out.soFar = [soFar({so_far: 2, line: "4+", market: "Assists"}), soFar({so_far: 3, line: "2+", market: "Assists"}), soFar({line: "2+"}), soFar({so_far: 0, line: "5+", market: "Receiving Yards"}),
+                soFar({so_far: 8, line: "25+", market: "Receiving Yards", league: "nfl", live: "3:19 - 2nd"}),
+                soFar({so_far: 8, line: "25+", market: "Receiving Yards", league: "nfl", live: "10:00 - 1st"})];
   out.safe = [safeNote({mc: 54, safe: {label: "Ottawa Senators under 5.5 goals", price: "-1450", p: 0.89}}), safeNote({mc: 80, safe: {label: "Over 204.5 points", price: "-2000", p: 0.9}}), safeNote({mc: 54})];
   out.upset = upsetHTML({min: 40, record: {n: 797, won: 295, said: 45.4, beating: false, halves: [{n: 685, won: 252, said: 45.5}, {n: 112, won: 43, said: 45.1}]},
                          today: [{league: "nhl", match: "OTT @ BUF", favourite: "Buffalo Sabres", dog: "OTT", chance: 46, tip: "7:30 PM", signals: ["my model picks them", "price moving their way"], result: "won"},
@@ -495,6 +497,9 @@ def main():
     if not ("Assists so far: 2</b>, needs 4 (2 to go)" in sf[0] and "Assists so far: 3</b>, needs 2 &middot; already there" in sf[1]
             and "Receiving Yards so far: 0</b> (none yet), needs 5 (5 to go)" in (sf[3] if len(sf) > 3 else "")) or sf[2]:
         fails.append("so-far line wrong: " + repr(sf))
+    sf2 = new.get("soFar") or []
+    if not (len(sf2) > 5 and "(17 to go) &middot; on pace for 18, behind the pace it needs" in sf2[4] and "on pace" not in sf2[5]):
+        fails.append("prop pace on board wrong: " + repr(sf2[4:]))
     sn = new.get("safe") or ["", "", "x"]
     if not ("Safest bet in this game:</b> Ottawa Senators under 5.5 goals -1450 (89%) &mdash; for a sweep" in sn[0]
             and "Over 204.5 points -2000 (90%)</div>" in sn[1]) or sn[2]:

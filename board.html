@@ -1336,7 +1336,22 @@ function soFar(L){
   if(isNaN(need)) return '';
   const v = +L.so_far, left = Math.max(0, need - v);
   return '<div class="sbn"><b>' + esc(L.market || 'Stat') + ' so far: ' + v + '</b>' + (v === 0 ? ' (none yet)' : '') + ', needs ' + need
-    + (left ? ' (' + left + ' to go)' : ' &middot; already there') + '</div>';
+    + (left ? ' (' + left + ' to go)' + propPace(L, v, need) : ' &middot; already there') + '</div>';
+}
+// a live prop's pace from minutes played (the review's prop_pace): only from
+// a quarter of the game on, when one early catch no longer swings it
+function propPace(L, v, need){
+  const F = {nba: [4, 12], wnba: [4, 10], ncaab: [2, 20], nfl: [4, 15], ncaaf: [4, 15], nhl: [3, 20]}[L.league || ''];
+  const live = String(L.live || '');
+  if(!F || !live) return '';
+  let el = null;
+  const c = /(\d+):(\d+)\s*-\s*(\d)/.exec(live), e = /End of (\d)/i.exec(live);
+  if(c) el = (+c[3] - 1) * F[1] + (F[1] - (+c[1] + +c[2] / 60));
+  else if(e) el = +e[1] * F[1];
+  else if(/half/i.test(live)) el = F[0] * F[1] / 2;
+  if(!el || el < 0.25 * F[0] * F[1]) return '';
+  const pace = v / el * F[0] * F[1];
+  return ' &middot; on pace for ' + Math.round(pace) + (pace >= need ? ', on track' : ', behind the pace it needs');
 }
 // a live over/under leg: the total its game is on pace for, from the score
 // so far and the time played (NBA 4x12, college basketball 2x20, football

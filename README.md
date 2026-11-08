@@ -4244,3 +4244,5 @@ props by ~9 pts in both halves, and our capped stated chance (~85%) matches what
 won 85% then 87% (2026-11-08).
 Review ladder line gives a live "N+" prop leg's pace (`daily_review.prop_pace`: stat so far over minutes
 played, from 25% of the game) (2026-11-08).
+Board ladder legs show a live prop's pace too (`propPace` beside "so far", from a quarter of the game on)
+(2026-11-08).
