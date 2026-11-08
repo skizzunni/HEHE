@@ -1,13 +1,15 @@
 # Review 2026-11-08
 
-Picks 3-1 (75.0% vs 69.8% claimed, ROI +0.1%).
+Picks 4-1 (80.0% vs 70.0% claimed, ROI +6.8%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 860/1101 vs 82%; NFL teamunder on all saved lines 311/402 vs 82%. Running ahead: NBA under on all saved lines 1081/1225 vs 82%; NHL over on all saved lines 135/151 vs 84%; NHL spread on all saved lines 286/331 vs 83%; NHL teamover on all saved lines 180/205 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.1% for the rest (1524 and 8928 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.
-Strong calls 3-1 (75.0% vs 69.8% claimed).
-Closing line value: +0.73 points on 4 picks; beat the close on 75.0%.
-Board sweep: 3-1, 95 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 1.2 losses expected from the settled picks' chances, so 1 or more by now had a 76.4% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: jpn 1 (1 expected).
+UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
+Next UFC card 2026-11-14 (5 fights priced, 1 close): Bilal Hasan 86%; Ciryl Gane 68%; Kayla Harrison 64%; Uroš Medić 61%; Caio Borralho 58% (close).
+Strong calls 4-1 (80.0% vs 70.0% claimed).
+Closing line value: +1.14 points on 5 picks; beat the close on 80.0%.
+Board sweep: 4-1, 94 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 1.5 losses expected from the settled picks' chances, so 1 or more by now had a 83.2% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: jpn 1 (1 expected).
 - LOST jpn Gamba Osaka or draw at 68% (-270), Cerezo Osaka 3 - Gamba Osaka 2: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 13 of 21 (62% vs 69% stated)
 Why picks lost (14 days): favourite lost 144, close game 112, upset 49, coin flip 42, blowout 40, price moved against it 30.
 Yesterday (2026-11-07): board 125-43, sweep broken by jpn Nagoya Grampus or draw at 76%; 47.9 losses expected, 43 came in (82.7% chance of that many or more).
