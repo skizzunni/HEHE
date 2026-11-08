@@ -1,6 +1,6 @@
 # Review 2026-11-08
 
-Picks 68-8 (89.5% vs 73.4% claimed, ROI +15.6%).
+Picks 68-9 (88.3% vs 73.4% claimed, ROI +14.1%).
 Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards, Jalen Coker: 30+ Receiving Yards); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NHL over on all saved lines 129/144 vs 84%; NHL spread on all saved lines 272/315 vs 83%; NHL teamover on all saved lines 167/191 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 55/59 (93% vs 81% stated); waiting for 100 legs.
@@ -8,18 +8,19 @@ Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 7
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (12 fights priced, 3 close): Bilal Hasan 86%; Melquizael Costa 75%; Ciryl Gane 68%; Bia Mesquita 66%; Terrance McKinney 66%; Kayla Harrison 63%; Donte Johnson 62%; Chris Duncan 60%; Uroš Medić 60%; Caio Borralho 59% (close); Stephen Thompson 56% (close); Evan Elder 50% (close).
 TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10
-Strong calls 57-8 (87.7% vs 74.3% claimed).
-Closing line value: +1.33 points on 76 picks; beat the close on 63.2%.
-Board sweep: 68-8, 35 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 20.2 losses expected from the settled picks' chances, so 8 or more by now had a 100% chance -- an unusually good day: only 0% of days go this well this far in; 0 of the 8 were near coin flips (called under 60%), 8 were real misses; losses by league: fra 2 (1.4 expected), chn 1 (1.9 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
+Strong calls 57-9 (86.4% vs 74.2% claimed).
+Closing line value: +1.36 points on 77 picks; beat the close on 63.6%.
+Board sweep: 68-9, 34 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 20.5 losses expected from the settled picks' chances, so 9 or more by now had a 100% chance -- an unusually good day: only 0.1% of days go this well this far in; 0 of the 9 were near coin flips (called under 60%), 9 were real misses; losses by league: fra 3 (1.7 expected), chn 1 (1.9 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
 - LOST jpn Gamba Osaka or draw at 68% (-270), Cerezo Osaka 3 - Gamba Osaka 2: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 13 of 21 (62% vs 69% stated)
 - LOST chn Shenzhen Xinpengcheng at 77% (-450), Qingdao Hainiu 2 - Shenzhen Xinpengcheng 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 77% · upset
 - LOST ger2 St. Pauli or draw at 65% (-230), 1. FC Magdeburg 4 - St. Pauli 1: margin 3 · the book had my side favoured too · called at 65% · favourite lost · blowout; picks like it: 13 of 17 (76% vs 67% stated)
 - LOST swe Djurgården at 67% (-240), Djurgården 1 - Halmstads BK 2: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
-- LOST fra Stade Rennais or draw at 70% (-300), Lille 2 - Stade Rennais 1: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 11 of 16 (69% vs 70% stated)
+- LOST fra Stade Rennais or draw at 70% (-300), Lille 2 - Stade Rennais 1: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 11 of 17 (65% vs 70% stated)
 - LOST epl Chelsea or draw at 70% (-270), Chelsea 0 - Sunderland 1: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game · price moved against it (5 pts); picks like it: 16 of 22 (73% vs 70% stated)
 - LOST sco Heart of Midlothian or draw at 82% (-600), Falkirk 5 - Heart of Midlothian 2: margin 3 · the book had my side favoured too · called at 82% · upset · blowout
-- LOST fra Lyon or draw at 65% (-240), Brest 2 - Lyon 0: margin 2 · the book had my side favoured too · called at 65% · favourite lost; picks like it: 5 of 10 (50% vs 68% stated)
-Why picks lost (14 days): favourite lost 149, close game 115, upset 51, blowout 42, coin flip 42, price moved against it 31.
+- LOST fra Lyon or draw at 65% (-240), Brest 2 - Lyon 0: margin 2 · the book had my side favoured too · called at 65% · favourite lost; picks like it: 5 of 11 (45% vs 68% stated)
+- LOST fra Lens or draw at 70% (-290), Lens 1 - Marseille 2: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 11 of 17 (65% vs 70% stated)
+Why picks lost (14 days): favourite lost 150, close game 116, upset 51, blowout 42, coin flip 42, price moved against it 31.
 Yesterday (2026-11-07): board 125-43, sweep broken by jpn Nagoya Grampus or draw at 76%; 47.9 losses expected, 43 came in (82.7% chance of that many or more).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 20 of 21 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 19 (68% vs 68% stated)
@@ -75,7 +76,7 @@ Lottery 10k+100: lost (1/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 
 Lottery 100: lost (6/14 legs won, killed by Devaughn Vele: 20+ Receiving Yards, Tee Higgins: 50+ Receiving Yards)
 Lottery 100: lost (1/11 legs won, killed by Under 162.5 points)
 Ladder-consistency props (all time): 1834/2201 won (83.3%) vs 86.3% fair, 87.4% price.
-Props 65/87 vs 75.9% claimed.
+Props 66/88 vs 76.0% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=139), ncaaf 0.00 (n=226), nfl 0.00 (n=50), nhl 0.00 (n=160)
