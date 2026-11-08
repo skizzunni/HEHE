@@ -280,6 +280,7 @@
    "cost": 0.872,
    "edge": 0.0131,
    "fair": 0.8834,
+   "fill": "strict",
    "id": "ncaaf:401860911",
    "label": "Boise State Broncos",
    "league": "ncaaf",
@@ -292,8 +293,9 @@
     "team": "Boise State Broncos"
    },
    "start": "2026-11-07T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07BSUCSU-BSU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07BSUCSU-BSU",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07BYUUTAH-UTAH|YES": {
    "ask": 0.63,
@@ -2931,6 +2933,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401860911",
    "label": "Colorado State Rams +16.5",
    "league": "ncaaf",
@@ -2944,8 +2947,9 @@
     "team": "Colorado State Rams"
    },
    "start": "2026-11-07T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07BSUCSU-BSU17"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07BSUCSU-BSU17",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07BSUCSU-BSU17|YES": {
    "ask": 0.51,
@@ -2953,6 +2957,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401860911",
    "label": "Boise State Broncos -16.5",
    "league": "ncaaf",
@@ -2966,8 +2971,9 @@
     "team": "Boise State Broncos"
    },
    "start": "2026-11-07T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07BSUCSU-BSU17"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07BSUCSU-BSU17",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07BYUUTAH-UTAH5|NO": {
    "ask": 0.51,
@@ -7399,6 +7405,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401860911",
    "label": "over 68.5",
    "league": "ncaaf",
@@ -7411,8 +7418,9 @@
     "t": "over"
    },
    "start": "2026-11-07T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07BSUCSU-69"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07BSUCSU-69",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07BSUCSU-70|NO": {
    "ask": 0.52,
@@ -7420,6 +7428,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401860911",
    "label": "under 69.5",
    "league": "ncaaf",
@@ -7432,8 +7441,9 @@
     "t": "under"
    },
    "start": "2026-11-07T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07BSUCSU-70"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07BSUCSU-70",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07BYUUTAH-50|NO": {
    "ask": 0.51,
