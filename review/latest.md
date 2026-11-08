@@ -1,13 +1,13 @@
 # Review 2026-11-07
 
-Picks 101-35 (74.3% vs 72.0% claimed, ROI -1.6%).
+Picks 102-35 (74.5% vs 72.0% claimed, ROI -1.4%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 15/24 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 38/59 vs 75%. Running ahead: NBA under on all saved lines 1018/1145 vs 82%; NCAAF over on all saved lines 777/906 vs 81%; NHL over on all saved lines 123/138 vs 83%; NHL spread on all saved lines 267/307 vs 83%; NHL teamover on all saved lines 167/190 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF teamunder 552/736 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.8% for the rest (1524 and 7914 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.
-Strong calls 71-23 (75.5% vs 73.7% claimed).
-Closing line value: +0.87 points on 136 picks; beat the close on 51.5%.
-Board sweep: 101-35, 33 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 38.1 losses expected from the settled picks' chances, so 35 or more by now had a 75.7% chance; 5 of the 35 were near coin flips (called under 60%), 30 were real misses; losses by league: ncaaf 11 (10.8 expected), efl1 4 (2.4 expected), mls 4 (3.7 expected), epl 2 (1 expected), ger2 2 (1.2 expected), sco 2 (1.3 expected), arg 1 (1.6 expected), chi 1 (0.5 expected), ecu 1 (0.4 expected), esp 1 (1.1 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), mex 1 (0.4 expected), nhl 1 (2.4 expected), wsl 1 (0.3 expected).
+Strong calls 72-23 (75.8% vs 73.8% claimed).
+Closing line value: +0.87 points on 137 picks; beat the close on 51.1%.
+Board sweep: 102-35, 32 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 38.3 losses expected from the settled picks' chances, so 35 or more by now had a 76.9% chance; 5 of the 35 were near coin flips (called under 60%), 30 were real misses; losses by league: ncaaf 11 (10.8 expected), efl1 4 (2.4 expected), mls 4 (3.7 expected), epl 2 (1 expected), ger2 2 (1.2 expected), sco 2 (1.3 expected), arg 1 (1.6 expected), chi 1 (0.5 expected), ecu 1 (0.4 expected), esp 1 (1.1 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), mex 1 (0.6 expected), nhl 1 (2.4 expected), wsl 1 (0.3 expected).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 18 (72% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 13 of 16 (81% vs 68% stated)
@@ -47,7 +47,7 @@ Why picks lost (14 days): favourite lost 155, close game 132, upset 64, coin fli
 Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 68%; 13.9 losses expected, 9 came in (96.6% chance of that many or more).
 - LOST arg San Lorenzo or draw at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost; picks like it: 12 of 19 (63% vs 69% stated)
 - LOST col Internacional de Bogotá or draw at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 9 of 14 (64% vs 68% stated)
-- LOST mex Atlético de San Luis or draw at 82% (-650), Atlético de San Luis 0 - FC Juárez 1: margin 1 · the book had my side favoured too · called at 82% · upset · close game
+- LOST mex Atlético de San Luis or draw at 82% (-650), Atlético de San Luis 0 - FC Juárez 1: margin 1 · the book had my side favoured too · called at 82% · upset · close game; picks like it: 9 of 10 (90% vs 80% stated)
 - LOST nba Philadelphia 76ers at 58% (-152), Cleveland Cavaliers 119 - Philadelphia 76ers 95: margin 24 · the book had my side favoured too · called at 58% · coin flip · blowout; picks like it: 42 of 70 (60% vs 58% stated)
 - LOST nhl Calgary Flames at 57% (-148), Anaheim Ducks 5 - Calgary Flames 3: margin 2 · the book had my side favoured too · called at 57% · coin flip; picks like it: 99 of 169 (59% vs 56% stated)
 - LOST ncaaf Nebraska Cornhuskers at 64% (-192), Illinois Fighting Illini 24 - Nebraska Cornhuskers 13: margin 11 · the book had my side favoured too · called at 64% · favourite lost; picks like it: 199 of 243 (82% vs 64% stated)
