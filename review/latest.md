@@ -5,8 +5,6 @@ Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next tick
 Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 860/1101 vs 82%; NFL teamunder on all saved lines 311/402 vs 82%. Running ahead: NBA under on all saved lines 1081/1225 vs 82%; NHL over on all saved lines 135/151 vs 84%; NHL spread on all saved lines 286/331 vs 83%; NHL teamover on all saved lines 180/205 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.1% for the rest (1524 and 8928 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.
-UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
-Next UFC card 2026-11-14 (5 fights priced, 1 close): Bilal Hasan 86%; Ciryl Gane 68%; Kayla Harrison 64%; Uroš Medić 60%; Caio Borralho 59% (close).
 Strong calls 11-2 (84.6% vs 71.8% claimed).
 Closing line value: +2.69 points on 13 picks; beat the close on 76.9%.
 Board sweep: 11-2, 86 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 3.7 losses expected from the settled picks' chances, so 2 or more by now had a 92% chance; 0 of the 2 were near coin flips (called under 60%), 2 were real misses; losses by league: chn 1 (1.9 expected), jpn 1 (1.2 expected).
