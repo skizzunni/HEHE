@@ -12473,6 +12473,7 @@
    "cost": 0.6042,
    "edge": 0.0066,
    "fair": 0.6082,
+   "fill": "touch",
    "id": "nfl:401873039",
    "label": "New Orleans Saints",
    "league": "nfl",
@@ -12485,8 +12486,9 @@
     "team": "New Orleans Saints"
    },
    "start": "2026-11-08T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV08CLENO-NO"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV08CLENO-NO",
+   "won": 1
   },
   "KXNFLGAME-26NOV08DALIND-DAL|YES": {
    "ask": 0.68,
@@ -12494,6 +12496,7 @@
    "cost": 0.6739,
    "edge": 0.0032,
    "fair": 0.6761,
+   "fill": "strict",
    "id": "nfl:401873040",
    "label": "Dallas Cowboys",
    "league": "nfl",
@@ -12506,8 +12509,9 @@
     "team": "Dallas Cowboys"
    },
    "start": "2026-11-08T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV08DALIND-DAL"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV08DALIND-DAL",
+   "won": 1
   },
   "KXNFLGAME-26NOV08DENCAR-DEN|YES": {
    "ask": 0.57,
