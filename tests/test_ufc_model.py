@@ -69,3 +69,28 @@ class UFCBands(unittest.TestCase):
         self.assertEqual(out["70-80"], dict(won=1, n=1, roi=33.3))
         self.assertEqual(out["60-70"], dict(won=0, n=1, roi=-100.0))
         self.assertNotIn("50-60", out)
+
+
+class UFCReviewLines(unittest.TestCase):
+    def test_ufc_line_finds_the_latest_card(self):
+        import datetime as dt
+        from unittest import mock
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        rec = dict(won=9, lost=5, losses=["Degli (69%) lost to Raposo"], close=[1, 2])
+        with mock.patch.object(M, "card_record", lambda day: rec if day == "20261107" else None):
+            line = daily_review.ufc_line(dt.date(2026, 11, 8))
+        self.assertEqual(line, "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2;"
+                               " lost: Degli (69%) lost to Raposo.")
+        with mock.patch.object(M, "card_record", lambda day: None):
+            self.assertIsNone(daily_review.ufc_line(dt.date(2026, 11, 8)))
+
+    def test_prop_fair_line(self):
+        from unittest import mock
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        import props_ledger
+        B = [dict(band="90%+", halves=[[250, 296, 93.4, 85.4], [283, 339, 93.2, 85.1]])]
+        with mock.patch.object(props_ledger, "fair_bands", lambda *a, **k: B):
+            self.assertEqual(daily_review.prop_fair_line(),
+                             "Props by the book's fair chance (won, by half; fair / our stated): 90%+ 84%, 83% (93% / 85%).")

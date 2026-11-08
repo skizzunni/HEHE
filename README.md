@@ -4250,3 +4250,5 @@ Ladder "same number of legs" table adds a game-lines-only column (`ladder.count_
 `games_ticket`). Study after Pitts (23 of 25 yards) lost run 4: top K Locks of any kind vs game lines only vs
 props only on every saved card -- 3 legs 12/22, 14/23, 4/8; 4 legs 10/22, 11/22, 2/7; 5 legs 7/21, 6/21, 0/4.
 A card or two apart: no rule; props-only tickets are few (2026-11-08).
+Tests for the review's UFC card line and props-vs-fair line. Timing check: the UFC lines take ~2-3 s each
+(ESPN calls), the rest of the review well under a second each, so no speed fix needed (2026-11-08).
