@@ -1892,12 +1892,21 @@ function cautionsHTML(){
   const W = [].concat(((D.locks_record || {}).watch || []).map(w => Object.assign({where: 'on Locks'}, w)),
                       ((D.safe_locks_record || {}).watch || []).map(w => Object.assign({where: 'on Safe Locks'}, w)),
                       (D.watch_pool || []).map(w => Object.assign({where: 'across every saved FanDuel line at 70-95%'}, w)));
-  if(!W.length) return '';
-  return '<div class="sweep"><details><summary><b>Cautions in force</b> (' + W.length + ')</summary><ul class="betlegs">'
+  const cold = (D.pool_form || []).filter(f => f.n >= 100 && 100 * f.won / f.n <= f.said - 5);
+  if(!W.length && !cold.length) return '';
+  const C = D.cold_check || {}, cc = C.cold || [], cr = C.rest || [];
+  return '<div class="sweep"><details><summary><b>Cautions in force</b> (' + W.length + ')' + (cold.length ? ' &middot; running cold (' + cold.length + ')' : '')
+    + '</summary>' + (W.length ? '<ul class="betlegs">'
     + W.map(w => '<li>' + esc(String(w.league).toUpperCase()) + ' ' + esc(nice[w.t] || w.t) + ' ' + w.where + ': ' + w.won + ' of ' + w.n
       + ' (' + Math.round(100 * w.won / w.n) + '% vs ' + w.said + '% stated)</li>').join('')
     + '</ul><p class="note">Short of their stated chance in both halves of the record. Legs of these kinds carry a caution; picks are not changed until '
-    + 'cautioned legs, recorded at card time, keep losing on games decided after the flag.</p></details></div>';
+    + 'cautioned legs, recorded at card time, keep losing on games decided after the flag.</p>' : '')
+    + (cold.length ? '<p class="note"><b>Running cold, last 7 days</b> (every saved line at 70-95%): '
+      + cold.map(f => esc(String(f.league).toUpperCase()) + ' ' + esc(nice[f.t] || f.t) + ' ' + f.won + ' of ' + f.n + ' ('
+        + Math.round(100 * f.won / f.n) + '% vs ' + Math.round(f.said) + '%)').join(' &middot; ') + '.'
+      + (cc[1] && cr[1] ? ' Tested walk-forward: legs of a type running cold won ' + (100 * cc[0] / cc[1]).toFixed(1) + '% the next day against '
+        + (100 * cr[0] / cr[1]).toFixed(1) + '% for the rest, so a cold week is noise, not a reason to drop a leg.' : '') + '</p>' : '')
+    + '</details></div>';
 }
 // legs that carried a caution when the card was set, against the rest
 // (locks.caution_record): the fair test before a caution becomes a rule

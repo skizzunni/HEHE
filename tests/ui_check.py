@@ -201,6 +201,13 @@ PROBE = """<script>setTimeout(function(){
   out.caution = [cautionLine({flagged: {won: 3, n: 7, said: 75.3}, other: {won: 75, n: 90, said: 75.4}}), cautionLine({flagged: {won: 0, n: 0}})];
   var wpS2 = D.watch_pool; D.watch_pool = [{league: "nba", t: "over", won: 882, n: 1120, said: 82}];
   out.cautions = cautionsHTML(); D.watch_pool = wpS2;
+  var pfS3 = D.pool_form, ccS3 = D.cold_check, wpS3 = D.watch_pool, lrS3 = D.locks_record, slS3 = D.safe_locks_record;
+  D.watch_pool = []; D.locks_record = {}; D.safe_locks_record = {};
+  D.pool_form = [{league: "ncaaf", t: "spread", won: 185, n: 252, said: 82}, {league: "nhl", t: "over", won: 60, n: 69, said: 84}];
+  D.cold_check = {cold: [1261, 1524, 81.7], rest: [4856, 5850, 81.7]};
+  out.cautionsCold = cautionsHTML();
+  D.pool_form = []; out.cautionsNone = cautionsHTML();
+  D.pool_form = pfS3; D.cold_check = ccS3; D.watch_pool = wpS3; D.locks_record = lrS3; D.safe_locks_record = slS3;
   var vS = D.value; D.value = {bets: [], sure: [], record: {n: 328, won: 137, roi: -5.6, est_ev: 3.1, dates: ["2026-10-22", "2026-11-06"],
                                                               recent: {n: 98, won: 40, fair: 46.3, roi: -14.2, since: "2026-10-31"},
                                                               by_edge: [{band: "2-4%", n: 128, won: 53, roi: 4.2}, {band: "4%+", n: 37, won: 11, roi: -37.3}]}};
@@ -412,6 +419,10 @@ def main():
     if "Caution:</b> NBA overs on Locks have won 10 of 18 against 75% stated" not in wn[0] or wn[1] or wn[2] \
             or "NFL team unders at 70-95% across every saved FanDuel line have won 299 of 388 against 82% stated" not in (wn[3] if len(wn) > 3 else ""):
         fails.append("watch note wrong: " + repr(wn))
+    cc = new.get("cautionsCold", "")
+    if not ("running cold (1)" in cc and "<b>Running cold, last 7 days</b> (every saved line at 70-95%): NCAAF spreads 185 of 252 (73% vs 82%)." in cc
+            and "won 82.7% the next day against 83.0% for the rest" in cc and "NHL" not in cc and not new.get("cautionsNone")):
+        fails.append("running-cold block wrong: " + cc[:500] + " | " + repr(new.get("cautionsNone", ""))[:100])
     dn = new.get("drawn") or ["", "x", "x"]
     if not ("Straight win: a draw loses it. 21 of the 38 losses on 234 straight-win soccer picks were draws" in dn[0] and not dn[1] and not dn[2]):
         fails.append("draw note wrong: " + repr(dn))

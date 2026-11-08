@@ -4173,3 +4173,7 @@ Straight-win soccer calls carry a draw note (`ledger.draw_losses`, row flag `sw`
 "or draw" bet covers. Information only; the call itself is unchanged (2026-11-07).
 Review sweep line splits today's losses into near coin flips (called under 60%) and real misses
 (2026-11-08).
+Board cautions section adds "Running cold, last 7 days" (bet types 5+ pts short on 100+ legs, from
+`pool_form`) with the walk-forward result beside it (`cold_check` published as D.cold_check). Data-size
+check: lottery.json 10 MB and frontier.json 26 MB are both capped at 14 pool days, so no trim needed
+(2026-11-08).
