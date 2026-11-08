@@ -4226,3 +4226,7 @@ Study, no rule: value bets 99/234 then 52/137 (42% vs 44% fair, ROI -2.3%; 38% v
 -- behind in both halves; stated 4%+ edges 8/27 then 5/14 (ROI -37.6%, -25.2%); favourites (fair 50%+)
 short in both halves (53% vs 57%, 55% vs 61%). Overall 151/371 vs 164.7 fair (z ~ -1.4): the edges are
 not showing in results yet, but not past the bar to drop the section (2026-11-08).
+Tests for the UFC band record (`tools/ufc_bands.py`: price favourite chosen by de-vigged price, draws and
+one-sided prices skipped). Study, no rule: NFL props at 70-95% on par or ahead in both halves -- receiving
+yards 103/125 then 79/93 (82%, 85% vs 82%), receptions 60/69 then 33/39 (87%, 85% vs 82-83%); passing
+yards and TDs short in the recent half on 13 and 6 legs only (2026-11-08).

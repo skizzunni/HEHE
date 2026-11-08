@@ -55,3 +55,17 @@ class UFCModel(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class UFCBands(unittest.TestCase):
+    def test_bands_pick_the_price_favourite(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import ufc_bands
+        book = {"1": dict(a=dict(id="x", won=True), b=dict(id="y", won=False), odds=dict(ml={"x": -300, "y": 240})),   # fav x ~73%, won
+                "2": dict(a=dict(id="p", won=True), b=dict(id="q", won=False), odds=dict(ml={"p": 150, "q": -180})),   # fav q ~62%, lost
+                "3": dict(a=dict(id="m", won=False), b=dict(id="n", won=False), odds=dict(ml={"m": -200, "n": 170})),  # draw: skipped
+                "4": dict(a=dict(id="s", won=True), b=dict(id="t", won=False), odds=dict(ml={"s": -150}))}             # one price: skipped
+        out = ufc_bands.bands(book)
+        self.assertEqual(out["70-80"], dict(won=1, n=1, roi=33.3))
+        self.assertEqual(out["60-70"], dict(won=0, n=1, roi=-100.0))
+        self.assertNotIn("50-60", out)
