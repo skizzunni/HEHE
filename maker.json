@@ -13363,6 +13363,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873045",
    "label": "New York Jets +9.5",
    "league": "nfl",
@@ -13376,8 +13377,9 @@
     "team": "New York Jets"
    },
    "start": "2026-11-08T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV08NYJKC-KC10"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV08NYJKC-KC10",
+   "won": 0
   },
   "KXNFLSPREAD-26OCT25CINBAL-CIN2|NO": {
    "ask": 0.51,
