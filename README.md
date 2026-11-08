@@ -4272,3 +4272,8 @@ card it cashed 11/21 (6/11 then 5/10, mostly 3 legs at ~2.0x or 4 at ~2.45x, sta
 10/22 for the top 4, 7/21 for the top 5, and the 6-leg tickets the reach chooser picked on Nov 6-7. Same
 legs and chances as before; only how they are combined changes. Falls back to the 2x-5x count chooser if no
 combination pays in the band (2026-11-08).
+Lost ladder prop legs show the final number and the miss ("Kyle Pitts: 25+ Receiving Yards (23, missed by
+2)"; `ladder.miss_label`) in the run history, ended runs and the review. TRAILING check (review): Locks NFL
+props 11/17 (6/7 then 5/10) vs ~80% stated -- short only recently and on 17 legs; Nov 8's misses were Pitts
+23 of 25 and Coker 29 of 30. Grading checked correct; no caution until it is short in both halves
+(2026-11-08).

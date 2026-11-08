@@ -99,6 +99,16 @@ class Ladder(unittest.TestCase):
             r = ladder.report(b, start="2026-11-03")
         self.assertEqual([(g["n"], g["lost_on"]) for g in r["log"]], [(5, []), (5, ["2026-11-04|e"])])
 
+    def test_miss_label(self):
+        import props_ledger
+        L = dict(label="Kyle Pitts: 25+ Receiving Yards", kind="prop", status="lost", market="Receiving Yards", line="25+",
+                 gid="nfl:1", name="Kyle Pitts", aid="9")
+        pb = {props_ledger.prop_key(L): dict(value=23.0)}
+        self.assertEqual(ladder.miss_label(L, pb), "Kyle Pitts: 25+ Receiving Yards (23, missed by 2)")
+        self.assertEqual(ladder.miss_label(dict(L, status="won"), pb), L["label"])
+        self.assertEqual(ladder.miss_label(L, {}), L["label"])
+        self.assertEqual(ladder.miss_label(dict(label="Over 214.5 points", status="lost"), pb), "Over 214.5 points")
+
     def test_count_record_games_only(self):
         b = book({"2026-11-03": W5})
         b["legs"]["2026-11-03|a"]["kind"] = "prop"

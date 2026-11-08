@@ -196,6 +196,26 @@ def count_record(book=None, start=START, hi=FLEX_MAX, games_only=False):
     return out
 
 
+def miss_label(L, pbook=None):
+    """A lost leg's label, with a prop's final number and the miss when the
+    props ledger has it: "Kyle Pitts: 25+ Receiving Yards (23, missed by 2)"."""
+    if L.get("kind") != "prop" or L.get("status") != "lost" or not L.get("market"):
+        return L["label"]
+    try:
+        import props_ledger
+        pbook = pbook if pbook is not None else props_ledger.load()
+        e = pbook.get(props_ledger.prop_key(L)) or {}
+        v = e.get("value")
+        need = float(str(L.get("line") or "").rstrip("+"))
+    except Exception:
+        return L["label"]
+    if not isinstance(v, (int, float)):
+        return L["label"]
+    miss = need - v
+    fmt = lambda x: int(x) if float(x).is_integer() else x
+    return f"{L['label']} ({fmt(v)}, missed by {fmt(miss)})" if miss > 0 else L["label"]
+
+
 def settle(legs):
     """('won', payout) / ('lost', 0) / ('open', None) for one parlay."""
     st = [L.get("status") for L in legs]
@@ -313,11 +333,11 @@ def report(book=None, start=START, target=TARGET):
                 # a lost run's wins are history, not a streak: the next ticket starts again at $1
                 streak=(sum(1 for d in cur["days"] if d["result"] == "won") if cur and cur["status"] != "lost" else 0),
                 ended=(dict(start=cur["start"], peak=max([d["stake"] for d in cur["days"]] + [cur["bank"]]),
-                            lost_on=[L["label"] for L in cur["days"][-1]["legs"] if L.get("status") == "lost"])
+                            lost_on=[miss_label(L) for L in cur["days"][-1]["legs"] if L.get("status") == "lost"])
                        if cur and cur["status"] == "lost" else None),
                 today=today, wins_needed=need, last=last,
                 log=[dict(day=d["day"], stake=d["stake"], result=d["result"], pays=d["pays"], n=len(d["legs"]),
-                          lost_on=[L["label"] for L in d["legs"] if L.get("status") == "lost"]) for d in done],
+                          lost_on=[miss_label(L) for L in d["legs"] if L.get("status") == "lost"]) for d in done],
                 chance_to_target=round(p ** need, 8) if p and need else None,
                 # every ladder leg ever graded, against its stated chance
                 legs_record=(lambda G: dict(won=sum(L["status"] == "won" for L in G), n=len(G),
@@ -333,6 +353,6 @@ def report(book=None, start=START, target=TARGET):
                       for i, r in enumerate(runs) for d in r["days"] if d["result"] != "open"],
                 history=[dict(start=r["start"], status=r["status"], days=len(r["days"]),
                               peak=max([d["stake"] for d in r["days"]] + [r["bank"]]),
-                              lost_on=[L["label"] for L in r["days"][-1]["legs"] if L.get("status") == "lost"]
+                              lost_on=[miss_label(L) for L in r["days"][-1]["legs"] if L.get("status") == "lost"]
                               if r["status"] == "lost" and r["days"] else [])
                          for r in runs][-10:])
