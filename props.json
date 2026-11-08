@@ -35246,11 +35246,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Aaron Gordon",
   "p": 0.7655,
   "p_fair": 0.7466,
   "price": "-350",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401909938|n:aaron gordon|Pts + Ast|10+": {
   "aid": null,
@@ -35262,11 +35264,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Aaron Gordon",
   "p": 0.8547,
   "p_fair": 0.923,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nba:401909938|n:aaron gordon|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -35278,11 +35282,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Aaron Gordon",
   "p": 0.8425,
   "p_fair": 0.9036,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909938|n:aaron nesmith|Threes Made|1+": {
   "aid": null,
@@ -35294,11 +35300,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Aaron Nesmith",
   "p": 0.8472,
   "p_fair": 0.8916,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909938|n:andrew nembhard|Threes Made|1+": {
   "aid": null,
@@ -35310,11 +35318,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Andrew Nembhard",
   "p": 0.8472,
   "p_fair": 0.8953,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909938|n:cam johnson|Reb + Ast|5+": {
   "aid": null,
@@ -35326,11 +35336,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "fuzzy",
   "name": "Cam Johnson",
   "p": 0.7712,
   "p_fair": 0.792,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909938|n:demar derozan|Assists|2+": {
   "aid": null,
@@ -35342,11 +35354,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "DeMar DeRozan",
   "p": 0.7874,
   "p_fair": 0.7834,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909938|n:jamal murray|Points|10+": {
   "aid": null,
@@ -35357,11 +35371,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Jamal Murray",
   "p": 0.8725,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909938|n:nikola jokic|Rebounds|6+": {
   "aid": null,
@@ -35372,11 +35388,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Nikola Jokic",
   "p": 0.8725,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401909938|n:obi toppin|Points|5+": {
   "aid": null,
@@ -35388,11 +35406,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Obi Toppin",
   "p": 0.8577,
   "p_fair": 0.971,
   "price": "-1500",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909939|n:cj mccollum|Pts + Ast|10+": {
   "aid": null,
@@ -65235,11 +65255,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Bobby McMann",
   "p": 0.7164,
   "p_fair": null,
   "price": "-335",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892664|n:mackie samoskevich|Shots on Goal|1+": {
   "aid": null,
@@ -65251,11 +65273,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mackie Samoskevich",
   "p": 0.8416,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892664|n:pavel dorofeyev|Shots on Goal|2+": {
   "aid": null,
@@ -65267,11 +65291,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Pavel Dorofeyev",
   "p": 0.7423,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892664|n:vince dunn|Shots on Goal|1+": {
   "aid": null,
@@ -65283,11 +65309,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Vince Dunn",
   "p": 0.8493,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nhl:401892665|n:jack roslovic|Shots on Goal|1+": {
   "aid": null,
@@ -65559,6 +65587,22 @@
   "p": 0.7384,
   "p_fair": null,
   "price": "-385",
+  "status": "open"
+ },
+ "nhl:401892668|n:logan stankoven|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-07",
+  "edge": null,
+  "gid": "nhl:401892668",
+  "imp": 0.9565,
+  "label": "Logan Stankoven: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Logan Stankoven",
+  "p": 0.8725,
+  "p_fair": null,
+  "price": "-2200",
   "status": "open"
  },
  "nhl:401892668|n:taylor hall|Shots on Goal|1+": {
@@ -68729,7 +68773,8 @@
   "p": 0.5965,
   "p_fair": null,
   "price": "-164",
-  "status": "open"
+  "status": "won",
+  "value": 14.78
  },
  "ufc:401933235|n:austin bashi|Winner|win": {
   "aid": null,
