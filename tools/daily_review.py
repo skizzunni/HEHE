@@ -785,6 +785,7 @@ def review_day(day, ledger, locks, lottery, props):
                  broke_on=(f'{lost_e[0]["league"]} {lost_e[0]["pick"]}{" or draw" if lost_e[0].get("dc") else ""} at {lost_e[0].get("conf")}%'
                            if lost_e else None))
     sweep.update(day_rarity(todays))     # losses expected so far, how unusual
+    sweep["coin_flips"] = sum((e.get("conf") or 0) < 60 for e in lost_e)   # losses called under 60%
     # the last 14 days, to tell a bad night from a leak
     since = (dt.date.fromisoformat(day) - dt.timedelta(days=14)).isoformat()
     recent = [e for e in graded if since <= day_of(e) <= day and not exhibition(e) and record_priced(e)]
@@ -888,6 +889,9 @@ def sweep_line(sw):
             + (f"; {sw['expected_losses']:g} losses expected from the settled picks' chances,"
                f" so {sw['lost']} or more by now had a {sw['as_bad_pct']:g}% chance"
                if sw.get("lost") and sw.get("expected_losses") is not None else "")
+            + (f"; {sw['coin_flips']} of the {sw['lost']} were near coin flips (called under 60%),"
+               f" {sw['lost'] - sw['coin_flips']} were real misses"
+               if sw.get("lost") and sw.get("coin_flips") is not None else "")
             + ("; losses by league: " + ", ".join(f"{k} {v} ({(sw.get('expected_by_league') or {}).get(k, 0):g} expected)"
                                                   for k, v in sw["lost_by_league"].items())
                if sw.get("lost") and sw.get("lost_by_league") else "") + ".")

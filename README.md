@@ -4171,3 +4171,5 @@ exclusion to the user) or "fine" (drop the caution) (2026-11-07).
 Straight-win soccer calls carry a draw note (`ledger.draw_losses`, row flag `sw`, board `drawNote`): of
 234 graded straight-win picks in sports with a draw, 38 lost and 21 of those were draws -- the case the
 "or draw" bet covers. Information only; the call itself is unchanged (2026-11-07).
+Review sweep line splits today's losses into near coin flips (called under 60%) and real misses
+(2026-11-08).

@@ -30,9 +30,10 @@ class ReviewSweepLine(unittest.TestCase):
         import daily_review
         text = daily_review.sweep_line(dict(won=17, lost=2, open=32, broke_on="arg San Lorenzo at 68%",
                                             expected_losses=5.3, as_bad_pct=98.5, lost_by_league={"arg": 1, "col": 1},
-                                            expected_by_league={"arg": 0.6, "col": 0.4}))
+                                            expected_by_league={"arg": 0.6, "col": 0.4}, coin_flips=0))
         self.assertIn("Board sweep: 17-2, 32 open -- broken (first loss: arg San Lorenzo at 68%); 5.3 losses expected"
-                      " from the settled picks' chances, so 2 or more by now had a 98.5% chance; losses by league:"
+                      " from the settled picks' chances, so 2 or more by now had a 98.5% chance; 0 of the 2 were near coin flips"
+                      " (called under 60%), 2 were real misses; losses by league:"
                       " arg 1 (0.6 expected), col 1 (0.4 expected).", text)
         self.assertEqual(daily_review.sweep_line(dict(won=5, lost=0, open=3, broke_on=None, expected_losses=0.9,
                                                       as_bad_pct=100.0)), "Board sweep: 5-0, 3 open -- still clean.")
