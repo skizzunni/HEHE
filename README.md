@@ -4252,3 +4252,9 @@ props only on every saved card -- 3 legs 12/22, 14/23, 4/8; 4 legs 10/22, 11/22,
 A card or two apart: no rule; props-only tickets are few (2026-11-08).
 Tests for the review's UFC card line and props-vs-fair line. Timing check: the UFC lines take ~2-3 s each
 (ESPN calls), the rest of the review well under a second each, so no speed fix needed (2026-11-08).
+Ladder leg-ranking studies, walk-forward on every saved card (`tools/ladder_study.py`), no rule:
+- Rank by each kind's record so far (shrunk to stated, 10 pseudo-legs) instead of stated chance: 3 legs 13/23
+  vs 12/22, 4 legs 11/23 vs 10/22, 5 legs 8/22 vs 7/21 -- one card better at each size, within noise.
+- Tickets from the whole saved pool restricted to bet types running ahead so far (3+ pts on 100+ legs): 7/8
+  vs 11/14 for the plain top (3 legs), but those legs pay ~1.2x and only 8 days qualified -- not comparable
+  to the 2x-5x ladder. Rerun as cards come in (2026-11-08).
