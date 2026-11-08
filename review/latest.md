@@ -9,7 +9,7 @@ Strong calls 1-0 (100.0% vs 74.0% claimed).
 Closing line value: +1.89 points on 1 picks; beat the close on 100.0%.
 Board sweep: 1-0, 95 open -- still clean.
 Why picks lost (14 days): favourite lost 140, close game 109, upset 49, coin flip 42, blowout 39, price moved against it 28.
-Yesterday (2026-11-07): board 119-40, sweep broken by jpn Nagoya Grampus or draw at 76%; 45 losses expected, 40 came in (83.7% chance of that many or more).
+Yesterday (2026-11-07): board 120-40, sweep broken by jpn Nagoya Grampus or draw at 76%; 45.3 losses expected, 40 came in (85% chance of that many or more).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 18 (72% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 13 of 16 (81% vs 68% stated)
@@ -41,7 +41,7 @@ Yesterday (2026-11-07): board 119-40, sweep broken by jpn Nagoya Grampus or draw
 - LOST ncaaf Western Kentucky Hilltoppers at 55% (-135), Middle Tennessee Blue Raiders 51 - Western Kentucky Hilltoppers 42: margin 9 · the book had my side favoured too · called at 55% · coin flip; picks like it: 198 of 294 (67% vs 55% stated)
 - LOST ncaaf Ohio State Buckeyes at 74% (-305), Ohio State Buckeyes 28 - Oregon Ducks 41: margin 13 · the book had my side favoured too · called at 74% · favourite lost; picks like it: 78 of 108 (72% vs 73% stated)
 - LOST ncaaf Mississippi State Bulldogs at 58% (-148), Mississippi State Bulldogs 23 - Vanderbilt Commodores 25: margin 2 · the book had my side favoured too · called at 58% · coin flip · close game; picks like it: 214 of 289 (74% vs 58% stated)
-- LOST mex Atlas or draw at 64% (-220), Atlas 1 - Pachuca 4: margin 3 · the book had my side favoured too · called at 64% · favourite lost · blowout
+- LOST mex Atlas or draw at 64% (-220), Atlas 1 - Pachuca 4: margin 3 · the book had my side favoured too · called at 64% · favourite lost · blowout; picks like it: 6 of 10 (60% vs 66% stated)
 - LOST mls San Diego FC or draw at 77% (-450), San Diego FC 0 - Sporting Kansas City 1: margin 1 · the book had my side favoured too · called at 77% · upset · close game · price moved against it (5 pts); picks like it: 21 of 27 (78% vs 77% stated)
 - LOST mls Houston Dynamo FC or draw at 69% (-260), Houston Dynamo FC 0 - St. Louis CITY SC 1: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game; picks like it: 21 of 28 (75% vs 69% stated)
 - LOST nhl Utah Mammoth at 52% (-120), Ottawa Senators 4 - Utah Mammoth 2: margin 2 · the book had my side favoured too · called at 52% · coin flip; picks like it: 101 of 196 (52% vs 53% stated)
