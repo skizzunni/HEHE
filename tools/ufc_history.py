@@ -42,7 +42,7 @@ def fights(sb):
                  for x in cs]
             res = next((d.get("type", {}).get("text") for d in c.get("details") or []
                         if d.get("type", {}).get("text", "").startswith(("KO", "TKO", "Sub", "Dec", "U-Dec", "S-Dec", "M-Dec"))), None)
-            out.append((c.get("id"), dict(date=(c.get("date") or ev.get("date") or "")[:10], event=ev.get("name"),
+            out.append((c.get("id"), dict(date=(c.get("date") or ev.get("date") or "")[:10], event=ev.get("name"), eid=ev.get("id"),
                                          a=a[0], b=a[1], round=st.get("period"), clock=st.get("displayClock"),
                                          rounds=((c.get("format") or {}).get("regulation") or {}).get("periods"),
                                          result=res)))
