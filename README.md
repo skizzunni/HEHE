@@ -4181,3 +4181,8 @@ Price-move note shows the all-time record by half against the closing price (`le
 Study, no rule: moved 3+ pts our way 72/88 then 116/146 (82%, 79% vs 77% close; 80% vs 73% as called);
 moved 3+ against 39/50 then 37/64 (78% vs 70%, 58% vs 72%: mixed), so no rule to drop or fade a pick on a
 move (2026-11-08).
+Every open call shows "Calls like this" (`ledger.band_records`: same league, same bet, same 5-pt chance
+band, 10+ graded). Study, no rule: college football calls at 50-65% beat their stated chance in both halves
+(26/39 then 24/32, 67% and 75% vs ~57%; z ~ 2.3) -- under the 99.5% bar, so no recalibration; the
+college 70-80% band that carried a caution came back to par in the recent half (23/31, 74% vs 74%), so
+that caution will drop by itself if it holds (2026-11-08).

@@ -142,7 +142,9 @@ PROBE = """<script>setTimeout(function(){
   out.form = [watchNote({league: "mlb", t: "over"}), watchNote({league: "nhl", t: "spread"}), watchNote({league: "nhl", t: "under"}),
               watchNote({league: "nba", kind: "prop", market: "Assists"}), watchNote({league: "nba", kind: "prop", market: "Points"})];
   D.prop_form = ppSave;
-  var rsC = D.results; D.results = Object.assign({}, rsC, {call_cautions: [{league: "ncaaf", band: 70, won: 28, n: 47, said: 75}], draw_losses: {n: 234, lost: 38, drawn: 21}});
+  var rsC = D.results; D.results = Object.assign({}, rsC, {call_cautions: [{league: "ncaaf", band: 70, won: 28, n: 47, said: 75}], draw_losses: {n: 234, lost: 38, drawn: 21}, band_records: {"ncaaf|0|55": [21, 30, 57.2], "epl|1|65": [10, 15, 67.0]}});
+  out.likeN = [likeNote("ncaaf", {mc: 57, mp: "Purdue"}), likeNote("epl", {mc: 66, mp: "Tottenham Hotspur or draw"}),
+               likeNote("epl", {mc: 66, mp: "Tottenham Hotspur"}), likeNote("ncaaf", {mp: "X"})];
   out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({})];
   out.bandc = [bandCaution("ncaaf", 72.5), bandCaution("ncaaf", 81), bandCaution("nfl", 72), bandCaution("ncaaf", undefined)];
   D.results = rsC;
@@ -426,6 +428,10 @@ def main():
     if not ("running cold (1)" in cc and "<b>Running cold, last 7 days</b> (every saved line at 70-95%): NCAAF spreads 185 of 252 (73% vs 82%)." in cc
             and "won 82.7% the next day against 83.0% for the rest" in cc and "NHL" not in cc and not new.get("cautionsNone")):
         fails.append("running-cold block wrong: " + cc[:500] + " | " + repr(new.get("cautionsNone", ""))[:100])
+    ln = new.get("likeN") or ["", "", "x", "x"]
+    if not ("Calls like this: 21 of 30 (70% vs 57% stated)" in ln[0] and "Calls like this: 10 of 15 (67% vs 67% stated)" in ln[1]
+            and not ln[2] and not ln[3]):
+        fails.append("calls-like-this note wrong: " + repr(ln))
     dn = new.get("drawn") or ["", "x", "x"]
     if not ("Straight win: a draw loses it. 21 of the 38 losses on 234 straight-win soccer picks were draws" in dn[0] and not dn[1] and not dn[2]):
         fails.append("draw note wrong: " + repr(dn))

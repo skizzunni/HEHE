@@ -733,6 +733,16 @@ function bandCaution(league, mc){
 }
 // a straight win in soccer loses on a draw too (ledger.draw_losses): how
 // many of these picks' losses were draws, the case "or draw" covers
+// calls like this one -- same league, same bet, same 5-point chance band
+// (ledger.band_records): how they have done
+function likeNote(league, r){
+  if(typeof r.mc !== 'number') return '';
+  const key = league + '|' + (/ or draw$/.test(r.mp || '') ? 1 : 0) + '|' + Math.floor(Math.min(r.mc, 99.9) / 5) * 5;
+  const R = ((D.results || {}).band_records || {})[key];
+  if(!R || !R[1]) return '';
+  const pct = Math.round(100 * R[0] / R[1]);
+  return '<div class="sbn">Calls like this: ' + R[0] + ' of ' + R[1] + ' (' + pct + '% vs ' + Math.round(R[2]) + '% stated)</div>';
+}
 function drawNote(r){
   const X = (D.results || {}).draw_losses;
   if(!r.sw || !X || !X.lost) return '';
@@ -1102,7 +1112,7 @@ function renderView(){
              + '<span class="stripe"></span>' + esc(r.mp) + dog + val + '</td>'
              + (mixed ? '<td class="comp">' + esc(r.lg) + '</td>' : '')
              + '<td class="state">' + esc(r.t) + '</td>' + conf
-             + '<td class="why">' + esc(r.why) + safeNote(r) + bandCaution(league, r.mc) + drawNote(r) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
+             + '<td class="why">' + esc(r.why) + safeNote(r) + bandCaution(league, r.mc) + likeNote(league, r) + drawNote(r) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
       }).join("")
     + '</tbody></table>';
 }

@@ -88,6 +88,13 @@ class MovesHalves(unittest.TestCase):
         self.assertEqual(ledger.moves_halves({}), {})
 
 
+class BandRecords(unittest.TestCase):
+    def test_keys_and_min(self):
+        book = {f"a{i}": dict(league="ncaaf", conf=56 + i % 3, status="won" if i < 7 else "lost") for i in range(10)}
+        book["dc"] = dict(league="ncaaf", conf=56, dc=True, status="won")
+        self.assertEqual(ledger.band_records(book), {"ncaaf|0|55": [7, 10, 56.9]})
+
+
 class CallCautions(unittest.TestCase):
     def test_short_in_both_halves_only(self):
         book = {}
