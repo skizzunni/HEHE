@@ -292,7 +292,7 @@ def render(captured_ms, health=None):
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
                   + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + ',"ladder":' + json.dumps(LADDER) + ',"every_game":' + json.dumps(EVERY) + ',', 1)
     s = s.replace('"live":[],"feed":', '"live":[{"pick":"X","winning":false},{"pick":"Y","winning":true}],"feed":', 1)
-    s = s.replace('"results":{', '"results":{"today_losses_by":[{"league":"uel","n":6},{"league":"uecl","n":4}],"today_expected":5.4,"today_rarity":{"expected_losses":4.8,"as_bad_pct":18.1},"broke_on":{"pick":"Trabzonspor","conf":67},"moves":{"against":{"n":81,"won":48,"price":71.9}},"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
+    s = s.replace('"results":{', '"results":{"today_losses_by":[{"league":"uel","n":6},{"league":"uecl","n":4}],"today_expected":5.4,"today_rarity":{"expected_losses":4.8,"as_bad_pct":18.1},"broke_on":{"pick":"Trabzonspor","conf":67},"moves":{"against":{"n":81,"won":48,"price":71.9}},"moves_halves":{"for":[[72,88,77.0],[116,146,77.0]],"against":[[39,50,70.0],[37,64,72.0]]},"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -382,6 +382,9 @@ def main():
     if not ("Money moving my way</b> (+5 pts" in mv[0] and "Price moved against it</b> (-4 pts" in mv[1]
             and "won 48 of 81 (59%) against 71.9% priced" in mv[1]) or mv[2] or mv[3]:
         fails.append("move note wrong: " + repr(mv))
+    if not ("All time, by half: 82% vs 77%, then 79% vs 77% at the closing price (ahead both times)." in mv[0]
+            and "All time, by half: 78% vs 70%, then 58% vs 72% at the closing price (mixed)." in mv[1]):
+        fails.append("move halves wrong: " + repr(mv))
     yd = new.get("yday") or ["", "x"]
     if not all(x in yd[0] for x in ("Yesterday (2026-11-03): 34&ndash;1", "EFL1 Charlton Athletic at 70% (-310)",
                                     "Bolton Wanderers 1 &ndash; Charlton Athletic 0", "favourite lost, close game", "margin 1")) or yd[1]:

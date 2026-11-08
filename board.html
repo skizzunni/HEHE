@@ -742,8 +742,12 @@ function drawNote(r){
 function moveNote(r){
   if(r.mv === null || r.mv === undefined) return '';
   const M = ((D.results || {}).moves || {})[r.mv > 0 ? 'for' : 'against'];
-  const rec = M && M.n ? ' Last 14 days, picks like this won ' + M.won + ' of ' + M.n + ' (' + Math.round(100 * M.won / M.n)
-    + '%) against ' + M.price + '% priced.' : '';
+  const H = ((D.results || {}).moves_halves || {})[r.mv > 0 ? 'for' : 'against'] || [];
+  const half = h => h[1] ? Math.round(100 * h[0] / h[1]) + '% vs ' + Math.round(h[2]) + '%' : '';
+  const rec = (M && M.n ? ' Last 14 days, picks like this won ' + M.won + ' of ' + M.n + ' (' + Math.round(100 * M.won / M.n)
+    + '%) against ' + M.price + '% priced.' : '')
+    + (H.length === 2 && H[0][1] && H[1][1] ? ' All time, by half: ' + half(H[0]) + ', then ' + half(H[1]) + ' at the closing price'
+       + (H.every(h => 100 * h[0] / h[1] > h[2]) ? ' (ahead both times).' : H.every(h => 100 * h[0] / h[1] < h[2]) ? ' (short both times).' : ' (mixed).') : '');
   return r.mv > 0
     ? '<div class="sbn"><b>Money moving my way</b> (+' + r.mv + ' pts since called).' + rec + '</div>'
     : '<div class="sbn"><b>Price moved against it</b> (' + r.mv + ' pts since called): check the news before betting.' + rec + '</div>';

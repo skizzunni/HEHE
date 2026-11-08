@@ -76,6 +76,18 @@ class DrawLosses(unittest.TestCase):
         self.assertEqual(ledger.draw_losses(book), dict(n=3, lost=2, drawn=1))
 
 
+class MovesHalves(unittest.TestCase):
+    def test_split(self):
+        book = {"a": dict(date="2026-11-01", status="won", first_price="-150", price="-250"),     # moved for
+                "b": dict(date="2026-11-02", status="lost", first_price="-250", price="-150"),    # moved against
+                "c": dict(date="2026-11-03", status="won", first_price="-200", price="-205"),     # flat
+                "d": dict(date="2026-11-04", status="lost", first_price="-150", price="-250")}
+        m = ledger.moves_halves(book)
+        self.assertEqual([h[:2] for h in m["for"]], [[1, 1], [0, 1]])
+        self.assertEqual([h[:2] for h in m["against"]], [[0, 0], [0, 1]])        # mid is 11-02, so b is second half
+        self.assertEqual(ledger.moves_halves({}), {})
+
+
 class CallCautions(unittest.TestCase):
     def test_short_in_both_halves_only(self):
         book = {}

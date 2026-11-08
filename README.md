@@ -4177,3 +4177,7 @@ Board cautions section adds "Running cold, last 7 days" (bet types 5+ pts short 
 `pool_form`) with the walk-forward result beside it (`cold_check` published as D.cold_check). Data-size
 check: lottery.json 10 MB and frontier.json 26 MB are both capped at 14 pool days, so no trim needed
 (2026-11-08).
+Price-move note shows the all-time record by half against the closing price (`ledger.moves_halves`).
+Study, no rule: moved 3+ pts our way 72/88 then 116/146 (82%, 79% vs 77% close; 80% vs 73% as called);
+moved 3+ against 39/50 then 37/64 (78% vs 70%, 58% vs 72%: mixed), so no rule to drop or fade a pick on a
+move (2026-11-08).
