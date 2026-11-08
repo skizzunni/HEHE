@@ -213,6 +213,7 @@
    "cost": 0.5843,
    "edge": 0.0332,
    "fair": 0.6037,
+   "fill": "touch",
    "id": "ncaaf:401862823",
    "label": "Army Black Knights",
    "league": "ncaaf",
@@ -225,8 +226,9 @@
     "team": "Army Black Knights"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07AFAARMY-ARMY"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07AFAARMY-ARMY",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV07ALALSU-LSU|YES": {
    "ask": 0.68,
@@ -395,6 +397,7 @@
    "cost": 0.5943,
    "edge": 0.005,
    "fair": 0.5973,
+   "fill": "touch",
    "id": "ncaaf:401856852",
    "label": "Arizona State Sun Devils",
    "league": "ncaaf",
@@ -407,8 +410,9 @@
     "team": "Arizona State Sun Devils"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07COLOASU-ASU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07COLOASU-ASU",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07DELKENN-DEL|YES": {
    "ask": 0.53,
@@ -594,6 +598,7 @@
    "cost": 0.5544,
    "edge": 0.0211,
    "fair": 0.5661,
+   "fill": null,
    "id": "ncaaf:401858513",
    "label": "Iowa Hawkeyes",
    "league": "ncaaf",
@@ -606,8 +611,9 @@
     "team": "Iowa Hawkeyes"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07IOWANW-IOWA"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07IOWANW-IOWA",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07IOWANW-NW|YES": {
    "ask": 0.55,
@@ -615,6 +621,7 @@
    "cost": 0.5444,
    "edge": 0.0169,
    "fair": 0.5536,
+   "fill": "strict",
    "id": "ncaaf:401858513",
    "label": "Northwestern Wildcats",
    "league": "ncaaf",
@@ -627,8 +634,9 @@
     "team": "Northwestern Wildcats"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07IOWANW-NW"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07IOWANW-NW",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV07ISUBAY-BAY|YES": {
    "ask": 0.76,
@@ -3081,6 +3089,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401856852",
    "label": "Colorado Buffaloes +3.5",
    "league": "ncaaf",
@@ -3094,8 +3103,9 @@
     "team": "Colorado Buffaloes"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07COLOASU-ASU4"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07COLOASU-ASU4",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07DELKENN-DEL2|NO": {
    "ask": 0.52,
@@ -3287,6 +3297,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858513",
    "label": "Northwestern Wildcats -2.5",
    "league": "ncaaf",
@@ -3300,8 +3311,9 @@
     "team": "Northwestern Wildcats"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07IOWANW-NW3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07IOWANW-NW3",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07ISUBAY-BAY10|YES": {
    "ask": 0.51,
@@ -7348,6 +7360,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401862823",
    "label": "under 43.5",
    "league": "ncaaf",
@@ -7360,8 +7373,9 @@
     "t": "under"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07AFAARMY-44"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07AFAARMY-44",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07AFAARMY-44|YES": {
    "ask": 0.52,
@@ -7369,6 +7383,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401862823",
    "label": "over 43.5",
    "league": "ncaaf",
@@ -7381,8 +7396,9 @@
     "t": "over"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07AFAARMY-44"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07AFAARMY-44",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07ALALSU-53|YES": {
    "ask": 0.51,
@@ -7620,6 +7636,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856852",
    "label": "over 47.5",
    "league": "ncaaf",
@@ -7632,8 +7649,9 @@
     "t": "over"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07COLOASU-48"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07COLOASU-48",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07COLOASU-49|NO": {
    "ask": 0.52,
@@ -7641,6 +7659,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "ncaaf:401856852",
    "label": "under 48.5",
    "league": "ncaaf",
@@ -7653,8 +7672,9 @@
     "t": "under"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07COLOASU-49"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07COLOASU-49",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07FRESUSU-44|NO": {
    "ask": 0.51,
@@ -7725,6 +7745,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401858513",
    "label": "over 42.5",
    "league": "ncaaf",
@@ -7737,8 +7758,9 @@
     "t": "over"
    },
    "start": "2026-11-08T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07IOWANW-43"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07IOWANW-43",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07ISUBAY-51|YES": {
    "ask": 0.52,
