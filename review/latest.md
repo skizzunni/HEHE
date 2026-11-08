@@ -5,6 +5,8 @@ Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards, Jalen 
 Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NHL over on all saved lines 129/144 vs 84%; NHL spread on all saved lines 272/315 vs 83%; NHL teamover on all saved lines 167/191 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 55/59 (93% vs 81% stated); waiting for 100 legs.
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 83% (88% / 85%); 90%+ 84%, 83% (93% / 85%).
+UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
+Next UFC card 2026-11-14 (12 fights priced, 3 close): Bilal Hasan 86%; Melquizael Costa 75%; Ciryl Gane 68%; Bia Mesquita 66%; Terrance McKinney 66%; Kayla Harrison 63%; Donte Johnson 62%; Chris Duncan 60%; Uroš Medić 60%; Caio Borralho 59% (close); Stephen Thompson 56% (close); Evan Elder 50% (close).
 TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10
 Strong calls 58-9 (86.6% vs 74.2% claimed).
 Closing line value: +1.32 points on 78 picks; beat the close on 62.8%.
@@ -74,7 +76,7 @@ Lottery 10k+100: lost (1/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 
 Lottery 100: lost (6/14 legs won, killed by Devaughn Vele: 20+ Receiving Yards, Tee Higgins: 50+ Receiving Yards)
 Lottery 100: lost (1/11 legs won, killed by Under 162.5 points)
 Ladder-consistency props (all time): 1834/2201 won (83.3%) vs 86.3% fair, 87.4% price.
-Props 66/88 vs 76.0% claimed.
+Props 67/89 vs 76.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=139), ncaaf 0.00 (n=226), nfl 0.00 (n=50), nhl 0.00 (n=160)
