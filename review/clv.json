@@ -4,14 +4,14 @@
  "last": {
   "beat_close_pct": 60.7,
   "brier_close": 0.1628,
-  "brier_published": 0.1647,
+  "brier_published": 0.1649,
   "dates": [
    "2026-11-06",
    "2026-11-08"
   ],
-  "logloss_close": 0.5027,
-  "logloss_published": 0.5078,
-  "mean_clv_pts": 0.84,
+  "logloss_close": 0.503,
+  "logloss_published": 0.5083,
+  "mean_clv_pts": 0.85,
   "n": 300
  },
  "market_is_model": true,
@@ -14268,6 +14268,15 @@
    "published": 0.6,
    "won": 1
   },
+  "nba:401909945": {
+   "call": false,
+   "close": 0.7771,
+   "clv": 4.71,
+   "day": "2026-11-08",
+   "league": "nba",
+   "published": 0.73,
+   "won": 1
+  },
   "nba:401914101": {
    "call": false,
    "close": 0.6309,
@@ -27693,5 +27702,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-08T22:47+00:00"
+ "updated": "2026-11-08T22:52+00:00"
 }
