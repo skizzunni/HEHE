@@ -47,6 +47,13 @@ FIXED_FROM, FIXED_LEGS = "2026-11-06", 5
 # lands in 2x-5x, the count whose payout is nearest the band is taken.
 FLEX_FROM, FLEX_MIN, FLEX_MAX = "2026-11-07", 1, 8
 PAY_MIN, PAY_MAX = 2.0, 5.0
+# the user's call (2026-11-08, "i need winning ladder runs"): from this card
+# on, the ticket is the combination of Locks legs (one per game, up to
+# BEST_MAX, from the BEST_POOL likeliest) paying 2x-5x with the highest
+# chance of ALL winning -- not the top K. Walk-forward on every saved card it
+# cashed 11 of 21 (6/11 then 5/10, ~2.0-2.5x) against 10/22 for the top 4,
+# 7/21 for the top 5, and the 6-leg tickets the reach chooser was picking.
+BEST_FROM, BEST_MAX, BEST_POOL = "2026-11-09", 6, 12
 
 
 def games_ticket(book, day, n):
@@ -90,6 +97,38 @@ def options(book, day, bank=BANK0, target=TARGET):
     return out
 
 
+def best_combo(legs, lo=PAY_MIN, hi=PAY_MAX, maxk=BEST_MAX, pool=BEST_POOL):
+    """Of the `pool` likeliest legs, the combination (one leg per game, up to
+    `maxk`) whose parlay pays lo..hi with the highest joint stated chance;
+    ties go to fewer legs. [] when none pays in the band."""
+    import itertools
+    cand = sorted(legs, key=lambda L: -L["p"])[:pool]
+    best = None
+    for k in range(1, maxk + 1):
+        for c in itertools.combinations(cand, k):
+            if len({L.get("gid") or L.get("key") for L in c}) < k:
+                continue
+            try:
+                pays = math.prod(locks._dec(L["price"]) for L in c)
+            except (KeyError, TypeError, ValueError):
+                continue
+            if not (lo <= pays <= hi):
+                continue
+            p = math.prod(L["p"] for L in c)
+            if best is None or p > best[0] + 1e-12:
+                best = (p, list(c))
+    return best[1] if best else []
+
+
+def _best(book, day):
+    keys = book["days"].get(day) or []
+    if isinstance(keys, dict):
+        keys = keys.get("legs") or []
+    legs = [dict(book["legs"][k], key=k) for k in keys if k in book["legs"]]
+    got = best_combo(legs)
+    return sorted(got, key=lambda L: -L["p"]) if got else []
+
+
 def _flex(book, day, bank, target):
     """From FLEX_FROM: the top K Locks paying 2x-5x with the best chance of
     reaching target; with none in the band, the count paying nearest it."""
@@ -110,6 +149,8 @@ def choose(book, day, bank=BANK0, target=TARGET):
     from bank. Decided from the frozen 8 AM card, so a replay never moves."""
     if day < LEGS_FROM:
         return ticket(book, day)
+    if day >= BEST_FROM:
+        return _best(book, day) or _flex(book, day, bank, target)
     if day >= FLEX_FROM:
         return _flex(book, day, bank, target)
     if day >= FIXED_FROM:

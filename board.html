@@ -1653,18 +1653,41 @@ function ladderFlex(sorted, bank, target){
   const gap = o => o.pays < 2 ? 2 - o.pays : o.pays - 5;
   return O.reduce((a, o) => gap(o) < gap(a) ? o : a, O[0]).L;
 }
+// from Nov 9 (ladder.BEST_FROM, "i need winning ladder runs"): of the 12
+// likeliest Locks, the combination (one per game, up to 6) paying 2x-5x with
+// the highest chance of all winning
+function ladderBest(legs){
+  const C = legs.slice().sort((a, b) => b.p - a.p).slice(0, 12);
+  let best = null;
+  const walk = (i, pick) => {
+    if(pick.length){
+      const pays = pick.reduce((a, x) => a * dec0(x.price), 1);
+      if(pays >= 2 && pays <= 5){
+        const p = pick.reduce((a, x) => a * x.p, 1);
+        if(!best || p > best[0] + 1e-12) best = [p, pick.slice()];
+      }
+    }
+    if(pick.length >= 6) return;
+    for(let j = i; j < C.length; j++){
+      if(pick.some(x => (x.gid || x.match) === (C[j].gid || C[j].match))) continue;
+      pick.push(C[j]); walk(j + 1, pick); pick.pop();
+    }
+  };
+  walk(0, []);
+  return best ? best[1] : [];
+}
 function ladderPreview(){
   const K = (D.locks || {}).today || {};
   const all = (K.locks || []).filter(L => !L.status || L.status === 'open').slice().sort((a, b) => b.p - a.p);
   const X = D.ladder || {};
-  const P = ladderFlex(all, X.ended ? 1 : (X.bank || 1), X.target || 10000);
+  const P = (ladderBest(all).length ? ladderBest(all) : ladderFlex(all, X.ended ? 1 : (X.bank || 1), X.target || 10000));
   const msg = '<p class="empty">Today&rsquo;s ladder ticket is set with the 8 AM Eastern Locks card.</p>';
   if(!K.preview || !P.length) return msg;
   const pays = P.reduce((a, L) => a * (callWin(L.price) / 10 + 1), 1), prob = P.reduce((a, L) => a * L.p, 1);
   return msg + '<p class="note">Preview, if the card were set now:</p><ul class="betlegs">'
     + P.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> &middot; ' + (100 * L.p).toFixed(0) + '% &middot; '
       + esc(L.match || '') + '</li>').join('') + '</ul><p class="note">' + P.length + ' leg' + (P.length > 1 ? 's' : '')
-    + (pays >= 2 && pays <= 5 ? ', the count paying 2&ndash;5&times; with the best chance of reaching the target' : ', the count paying nearest 2&ndash;5&times;')
+    + (pays >= 2 && pays <= 5 ? ', the combination paying 2&ndash;5&times; with the best chance of all winning' : ', the count paying nearest 2&ndash;5&times;')
     + ': about ' + pays.toFixed(2) + '&times;, '
     + (100 * prob).toFixed(0) + '% est. to all win. Prices and legs can change before 8 AM.</p>';
 }
@@ -1746,8 +1769,8 @@ function ladderHTML(){
     : (s === "void" || s === "push") ? '<span class="wl">VOID</span>' : '<span class="sbn">open</span>';
   return '<div class="sweep"><h3>Ladder challenge: $1 &rarr; ' + money(X.target) + '</h3>'
     + '<p class="note">Every day, one parlay of the likeliest legs on the 8 AM Locks card, staking the whole bank. '
-    + 'From Nov 7 the leg count (1 to 8) is the one paying 2&ndash;5&times; with the best chance of reaching the target '
-    + '(Nov 3-4 and Nov 6 used 5 legs; Nov 5 chose from 3 to 8). '
+    + 'From Nov 9 the ticket is the combination of Locks legs paying 2&ndash;5&times; with the best chance of all winning '
+    + '(Nov 7-8 took the leg count with the best chance of reaching the target; Nov 3-4 and 6 used 5 legs; Nov 5 chose 3 to 8). '
     + 'A win rolls everything into tomorrow; one loss ends the run and the next day starts again at $1. Started '
     + esc(X.start) + '. ' + (X.ended ? 'Run ' + X.runs + ' ended at its peak of ' + money(X.ended.peak)
         + ((X.ended.lost_on || []).length ? ' (lost on ' + X.ended.lost_on.map(esc).join(', ') + ')' : '') + '; the next ticket starts a new run at $1. '

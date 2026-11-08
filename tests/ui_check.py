@@ -151,6 +151,9 @@ PROBE = """<script>setTimeout(function(){
   D.locks = {today: {preview: true, locks: [{label: "A", price: "-200", p: 0.95, match: "X @ Y"}, {label: "B", price: "-200", p: 0.95, match: "Z @ W"},
                                              {label: "C", price: "-200", p: 0.95, match: "Q @ R"}]}};
   out.lprev = ladderPreview();
+  out.lbest = [ladderBest([{p: 0.8, price: "-400", gid: "a"}, {p: 0.8, price: "-400", gid: "b"}, {p: 0.8, price: "-400", gid: "c"},
+                           {p: 0.8, price: "-400", gid: "d"}, {p: 0.6, price: "-150", gid: "e"}, {p: 0.95, price: "-5000", gid: "a"}]).map(x => x.gid).sort().join(""),
+               ladderBest([{p: 0.97, price: "-2000", gid: "a"}]).length];
   D.locks = lkS; D.ladder = ldS;
   out.likeN = [likeNote("ncaaf", {mc: 57, mp: "Purdue"}), likeNote("epl", {mc: 66, mp: "Tottenham Hotspur or draw"}),
                likeNote("epl", {mc: 66, mp: "Tottenham Hotspur"}), likeNote("ncaaf", {mp: "X"})];
@@ -450,8 +453,11 @@ def main():
             and "Close fight" not in un[1] and "UFC favourites at 70-80% since 2021: 507 of 650 won (78%), -0.4% a bet" in un[1] and not un[2]):
         fails.append("ufc note wrong: " + repr(un))
     lp = new.get("lprev", "")
-    if not ("legs, the count paying 2&ndash;5&times; with the best chance of reaching the target: about" in lp and "Preview, if the card were set now" in lp):
+    if not ("the combination paying 2&ndash;5&times; with the best chance of all winning: about" in lp and "Preview, if the card were set now" in lp):
         fails.append("ladder preview wrong: " + lp[:400])
+    lb = new.get("lbest") or []
+    if lb != ["ae", 0]:
+        fails.append("ladder best combination wrong: " + repr(lb))
     ln = new.get("likeN") or ["", "", "x", "x"]
     if not ("Calls like this: 21 of 30 (70% vs 57% stated)" in ln[0] and "Calls like this: 10 of 15 (67% vs 67% stated)" in ln[1]
             and not ln[2] and not ln[3]):

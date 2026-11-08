@@ -59,6 +59,18 @@ class Ladder(unittest.TestCase):
         self.assertEqual((r["streak"], r["bank"]), (0, 1.0))
         self.assertEqual(r["ended"]["lost_on"], ["2026-11-04|e"])
 
+    def test_best_combo_from_nov_9(self):
+        import math, locks
+        legs = [dict(key=k, gid=k, label=k, price=pr, p=p, status="open") for k, pr, p in
+                (("a", "-400", 0.8), ("b", "-400", 0.8), ("c", "-400", 0.8), ("d", "-400", 0.8), ("e", "-150", 0.6))]
+        got = ladder.best_combo(legs)
+        self.assertEqual(sorted(L["key"] for L in got), ["a", "e"])               # 2.08x at 48% beats 4 legs 2.44x at 41%
+        self.assertTrue(2 <= math.prod(locks._dec(L["price"]) for L in got) <= 5)
+        b = {"days": {"2026-11-09": [L["key"] for L in legs]}, "legs": {L["key"]: L for L in legs}}
+        self.assertEqual(sorted(L["key"] for L in ladder.choose(b, "2026-11-09")), ["a", "e"])
+        same_game = [dict(legs[0]), dict(legs[4], gid="a")]                       # one leg per game
+        self.assertEqual(ladder.best_combo(same_game), [])
+
     def test_two_to_five_x_from_nov_7(self):
         import math, locks
         def bk(n, p, price):

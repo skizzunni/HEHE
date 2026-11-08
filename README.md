@@ -4265,3 +4265,10 @@ Ladder from the board's top calls instead of Locks (`tools/ladder_study.calls_st
 top 4 calls 5/12 at 2.20x then 10/13 at 1.28x; top 6 4/12 at 5.31x then 10/13 at 1.60x. The recent top calls
 were heavy favourites paying under 2x -- the same trade-off of chance for payout, not a better ladder
 (2026-11-08).
+Ladder from Nov 9 (the user's call, "i need winning ladder runs", inside "2x-5x a day"): the ticket is the
+combination of Locks legs -- one per game, up to 6, from the 12 likeliest -- paying 2x-5x with the highest
+chance of ALL winning (`ladder.best_combo`, `BEST_FROM`; board `ladderBest`). Walk-forward on every saved
+card it cashed 11/21 (6/11 then 5/10, mostly 3 legs at ~2.0x or 4 at ~2.45x, stated ~42% a day) against
+10/22 for the top 4, 7/21 for the top 5, and the 6-leg tickets the reach chooser picked on Nov 6-7. Same
+legs and chances as before; only how they are combined changes. Falls back to the 2x-5x count chooser if no
+combination pays in the band (2026-11-08).
