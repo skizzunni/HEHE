@@ -1,6 +1,6 @@
 # Review 2026-11-08
 
-Picks 74-10 (88.1% vs 73.5% claimed, ROI +13.6%).
+Picks 75-10 (88.2% vs 73.5% claimed, ROI +13.7%).
 Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1)); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 15/24 vs 75%. Running ahead: NBA under on all saved lines 1019/1157 vs 82%; NHL over on all saved lines 129/144 vs 84%; NHL spread on all saved lines 272/315 vs 83%; NHL teamover on all saved lines 167/191 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 55/59 (93% vs 81% stated); waiting for 100 legs.
@@ -8,9 +8,9 @@ Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 7
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (12 fights priced, 4 close): Bilal Hasan 86%; Melquizael Costa 75%; Ciryl Gane 68%; Bia Mesquita 67%; Terrance McKinney 66%; Kayla Harrison 63%; Donte Johnson 62%; Chris Duncan 60%; Caio Borralho 59% (close); Uroš Medić 58% (close); Stephen Thompson 58% (close); Evan Elder 52% (close).
 TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10
-Strong calls 62-10 (86.1% vs 74.2% claimed).
-Closing line value: +1.46 points on 84 picks; beat the close on 63.1%.
-Board sweep: 74-10, 27 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 22.3 losses expected from the settled picks' chances, so 10 or more by now had a 100% chance -- an unusually good day: only 0.1% of days go this well this far in; 0 of the 10 were near coin flips (called under 60%), 10 were real misses; losses by league: fra 3 (1.7 expected), chn 1 (1.9 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), par 1 (0.3 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
+Strong calls 63-10 (86.3% vs 74.2% claimed).
+Closing line value: +1.45 points on 85 picks; beat the close on 63.5%.
+Board sweep: 75-10, 26 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 22.5 losses expected from the settled picks' chances, so 10 or more by now had a 100% chance -- an unusually good day: only 0.1% of days go this well this far in; 0 of the 10 were near coin flips (called under 60%), 10 were real misses; losses by league: fra 3 (1.7 expected), chn 1 (1.9 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), par 1 (0.3 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
 - LOST jpn Gamba Osaka or draw at 68% (-270), Cerezo Osaka 3 - Gamba Osaka 2: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 13 of 21 (62% vs 69% stated)
 - LOST chn Shenzhen Xinpengcheng at 77% (-450), Qingdao Hainiu 2 - Shenzhen Xinpengcheng 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 77% · upset
 - LOST ger2 St. Pauli or draw at 65% (-230), 1. FC Magdeburg 4 - St. Pauli 1: margin 3 · the book had my side favoured too · called at 65% · favourite lost · blowout; picks like it: 13 of 17 (76% vs 67% stated)
