@@ -1,14 +1,14 @@
 # Review 2026-11-08
 
-Picks 1-0 (100.0% vs 74.0% claimed, ROI +26.3%).
+Picks 2-0 (100.0% vs 72.0% claimed, ROI +31.0%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 860/1101 vs 82%; NFL teamunder on all saved lines 311/402 vs 82%. Running ahead: NBA under on all saved lines 1081/1225 vs 82%; NHL over on all saved lines 135/151 vs 84%; NHL spread on all saved lines 286/331 vs 83%; NHL teamover on all saved lines 180/205 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.2% for the rest (1524 and 8793 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
-Strong calls 1-0 (100.0% vs 74.0% claimed).
-Closing line value: +1.89 points on 1 picks; beat the close on 100.0%.
-Board sweep: 1-0, 97 open -- still clean.
+Strong calls 2-0 (100.0% vs 72.0% claimed).
+Closing line value: +0.29 points on 2 picks; beat the close on 50.0%.
+Board sweep: 2-0, 96 open -- still clean.
 Why picks lost (14 days): favourite lost 141, close game 110, upset 49, coin flip 42, blowout 39, price moved against it 28.
 Yesterday (2026-11-07): board 125-41, sweep broken by jpn Nagoya Grampus or draw at 76%; 47.1 losses expected, 41 came in (87.9% chance of that many or more).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
