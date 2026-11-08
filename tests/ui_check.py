@@ -146,6 +146,12 @@ PROBE = """<script>setTimeout(function(){
   var ubS = D.ufc_bands; D.ufc_bands = {"50-60": {won: 482, n: 859, roi: -3.6}, "70-80": {won: 507, n: 650, roi: -0.4}};
   out.ufcN = [ufcNote("ufc", {mc: 55}), ufcNote("ufc", {mc: 74}), ufcNote("nba", {mc: 55})];
   D.ufc_bands = ubS;
+  var lkS = D.locks, ldS = D.ladder;
+  D.ladder = {bank: 1, target: 10000};
+  D.locks = {today: {preview: true, locks: [{label: "A", price: "-200", p: 0.95, match: "X @ Y"}, {label: "B", price: "-200", p: 0.95, match: "Z @ W"},
+                                             {label: "C", price: "-200", p: 0.95, match: "Q @ R"}]}};
+  out.lprev = ladderPreview();
+  D.locks = lkS; D.ladder = ldS;
   out.likeN = [likeNote("ncaaf", {mc: 57, mp: "Purdue"}), likeNote("epl", {mc: 66, mp: "Tottenham Hotspur or draw"}),
                likeNote("epl", {mc: 66, mp: "Tottenham Hotspur"}), likeNote("ncaaf", {mp: "X"})];
   out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({})];
@@ -441,6 +447,9 @@ def main():
     if not ("<b>Close fight:</b> near a coin flip" in un[0] and "UFC favourites at 50-60% since 2021: 482 of 859 won (56%), -3.6% a bet" in un[0]
             and "Close fight" not in un[1] and "UFC favourites at 70-80% since 2021: 507 of 650 won (78%), -0.4% a bet" in un[1] and not un[2]):
         fails.append("ufc note wrong: " + repr(un))
+    lp = new.get("lprev", "")
+    if not ("legs, the count paying 2&ndash;5&times; with the best chance of reaching the target: about" in lp and "Preview, if the card were set now" in lp):
+        fails.append("ladder preview wrong: " + lp[:400])
     ln = new.get("likeN") or ["", "", "x", "x"]
     if not ("Calls like this: 21 of 30 (70% vs 57% stated)" in ln[0] and "Calls like this: 10 of 15 (67% vs 67% stated)" in ln[1]
             and not ln[2] and not ln[3]):

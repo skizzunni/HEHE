@@ -4233,3 +4233,5 @@ yards and TDs short in the recent half on 13 and 6 legs only (2026-11-08).
 Every-game record split into US leagues and soccer/other by half (`every_game_record` by_group). Study, no
 rule: US 134/145 then 153/167 (92% vs 90%, ROI -2.8%, -3.7%); soccer/other 51/56 then 57/74 (91% then 77%
 vs 84%; ROI +3.4%, -13.0%) -- mixed (2026-11-08).
+Ladder preview says how many legs the 2x-5x rule chose and why (board `ladderPreview`, now tested)
+(2026-11-08).

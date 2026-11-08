@@ -1646,7 +1646,9 @@ function ladderPreview(){
   const pays = P.reduce((a, L) => a * (callWin(L.price) / 10 + 1), 1), prob = P.reduce((a, L) => a * L.p, 1);
   return msg + '<p class="note">Preview, if the card were set now:</p><ul class="betlegs">'
     + P.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> &middot; ' + (100 * L.p).toFixed(0) + '% &middot; '
-      + esc(L.match || '') + '</li>').join('') + '</ul><p class="note">About ' + pays.toFixed(2) + '&times;, '
+      + esc(L.match || '') + '</li>').join('') + '</ul><p class="note">' + P.length + ' leg' + (P.length > 1 ? 's' : '')
+    + (pays >= 2 && pays <= 5 ? ', the count paying 2&ndash;5&times; with the best chance of reaching the target' : ', the count paying nearest 2&ndash;5&times;')
+    + ': about ' + pays.toFixed(2) + '&times;, '
     + (100 * prob).toFixed(0) + '% est. to all win. Prices and legs can change before 8 AM.</p>';
 }
 // past ladder runs, newest first: start, days lasted, peak bank, how it ended
