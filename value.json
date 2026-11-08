@@ -9158,6 +9158,23 @@
    "tip": "4:25 PM",
    "venue": "Kalshi"
   },
+  "nfl:401873048|away|FanDuel": {
+   "dec": 4.8,
+   "ev": 0.0224,
+   "fair": 0.213,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nfl:401873048",
+   "kind": "value",
+   "league": "nfl",
+   "match": "ARI @ SEA",
+   "price": "+380",
+   "seen": "2026-11-08T18:09:00+00:00",
+   "side": "away",
+   "start": "2026-11-08T21:25Z",
+   "team": "Arizona Cardinals",
+   "tip": "4:25 PM",
+   "venue": "FanDuel"
+  },
   "nhl:401892558|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"St. Louis Blues\"}|FanDuel": {
    "dec": 1.4545,
    "dk": "-258",
@@ -14004,6 +14021,26 @@
    "prob": 0.2591,
    "seen": "2026-11-01T16:07:02+00:00",
    "status": "won",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nfl:401873048:away": {
+   "ev": 0.0224,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0224,
+     "fair": 0.213,
+     "id": "nfl:401873048",
+     "price": "+380",
+     "side": "away",
+     "spec": null,
+     "team": "Arizona Cardinals"
+    }
+   ],
+   "payout": 4.8,
+   "prob": 0.213,
+   "seen": "2026-11-08T18:09:00+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
