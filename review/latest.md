@@ -1,16 +1,14 @@
 # Review 2026-11-08
 
-Picks 68-9 (88.3% vs 73.4% claimed, ROI +14.1%).
+Picks 69-9 (88.5% vs 73.3% claimed, ROI +14.3%).
 Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards, Jalen Coker: 30+ Receiving Yards); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NHL over on all saved lines 129/144 vs 84%; NHL spread on all saved lines 272/315 vs 83%; NHL teamover on all saved lines 167/191 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 55/59 (93% vs 81% stated); waiting for 100 legs.
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 83% (88% / 85%); 90%+ 84%, 83% (93% / 85%).
-UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
-Next UFC card 2026-11-14 (12 fights priced, 3 close): Bilal Hasan 86%; Melquizael Costa 75%; Ciryl Gane 68%; Bia Mesquita 66%; Terrance McKinney 66%; Kayla Harrison 63%; Donte Johnson 62%; Chris Duncan 60%; Uroš Medić 60%; Caio Borralho 59% (close); Stephen Thompson 56% (close); Evan Elder 50% (close).
 TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10
-Strong calls 57-9 (86.4% vs 74.2% claimed).
-Closing line value: +1.36 points on 77 picks; beat the close on 63.6%.
-Board sweep: 68-9, 34 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 20.5 losses expected from the settled picks' chances, so 9 or more by now had a 100% chance -- an unusually good day: only 0.1% of days go this well this far in; 0 of the 9 were near coin flips (called under 60%), 9 were real misses; losses by league: fra 3 (1.7 expected), chn 1 (1.9 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
+Strong calls 58-9 (86.6% vs 74.2% claimed).
+Closing line value: +1.32 points on 78 picks; beat the close on 62.8%.
+Board sweep: 69-9, 33 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 20.8 losses expected from the settled picks' chances, so 9 or more by now had a 100% chance -- an unusually good day: only 0.1% of days go this well this far in; 0 of the 9 were near coin flips (called under 60%), 9 were real misses; losses by league: fra 3 (1.7 expected), chn 1 (1.9 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
 - LOST jpn Gamba Osaka or draw at 68% (-270), Cerezo Osaka 3 - Gamba Osaka 2: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 13 of 21 (62% vs 69% stated)
 - LOST chn Shenzhen Xinpengcheng at 77% (-450), Qingdao Hainiu 2 - Shenzhen Xinpengcheng 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 77% · upset
 - LOST ger2 St. Pauli or draw at 65% (-230), 1. FC Magdeburg 4 - St. Pauli 1: margin 3 · the book had my side favoured too · called at 65% · favourite lost · blowout; picks like it: 13 of 17 (76% vs 67% stated)
@@ -29,7 +27,7 @@ Yesterday (2026-11-07): board 125-43, sweep broken by jpn Nagoya Grampus or draw
 - LOST epl Tottenham Hotspur or draw at 66% (-240), Leeds United 1 - Tottenham Hotspur 0: margin 1 · the book had my side favoured too · called at 66% · favourite lost · close game; picks like it: 10 of 16 (62% vs 68% stated)
 - LOST wsl Chelsea at 84% (-900), Chelsea 1 - Everton 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 84% · upset
 - LOST esp Málaga or draw at 69% (-270), Málaga 1 - Racing Santander 2: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game; picks like it: 10 of 13 (77% vs 71% stated)
-- LOST ita Frosinone or draw at 70% (-290), Cagliari 1 - Frosinone 0: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 19 of 20 (95% vs 71% stated)
+- LOST ita Frosinone or draw at 70% (-290), Cagliari 1 - Frosinone 0: margin 1 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 20 of 21 (95% vs 71% stated)
 - LOST efl1 West Ham United or draw at 80% (-550), Blackburn Rovers 2 - West Ham United 1: margin 1 · the book had my side favoured too · called at 80% · upset · close game; picks like it: 18 of 24 (75% vs 79% stated)
 - LOST facup Huddersfield Town at 71% (-290), Exeter City 2 - Huddersfield Town 1: margin 1 · the book had my side favoured too · called at 71% · favourite lost · close game
 - LOST sco Dundee or draw at 65% (-220), Dundee 1 - St Johnstone 2: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game
