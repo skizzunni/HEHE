@@ -1,19 +1,20 @@
 # Review 2026-11-08
 
-Picks 15-3 (83.3% vs 72.2% claimed, ROI +8.7%).
-Ladder: run 4, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.44x (41% est.); 11 wins to $10,000; legs: Kyle Pitts: 25+ Receiving Yards (CIN @ ATL; live 9:39 - 1st, Atlanta Falcons 7 - Cincinnati Bengals 0, 0 so far, needs 25 more; props like it 144/176), Harold Fannin Jr.: 25+ Receiving Yards (CLE @ NO; 1:00 PM, open; props like it 144/176), Keenan Allen: 25+ Receiving Yards (DAL @ IND; 1:00 PM, open; props like it 144/176), Jalen Coker: 30+ Receiving Yards (DEN @ CAR; 1:00 PM, open; props like it 144/176).
+Picks 16-4 (80.0% vs 72.2% claimed, ROI +3.9%).
+Ladder: run 4, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.44x (41% est.); 11 wins to $10,000; legs: Kyle Pitts: 25+ Receiving Yards (CIN @ ATL; live 8:33 - 1st, Atlanta Falcons 7 - Cincinnati Bengals 7, 0 so far, needs 25 more; props like it 144/176), Harold Fannin Jr.: 25+ Receiving Yards (CLE @ NO; 1:00 PM, open; props like it 144/176), Keenan Allen: 25+ Receiving Yards (DAL @ IND; 1:00 PM, open; props like it 144/176), Jalen Coker: 30+ Receiving Yards (DEN @ CAR; 1:00 PM, open; props like it 144/176).
 Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%; NFL teamunder on all saved lines 166/224 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NFL over on all saved lines 126/145 vs 81%; NHL over on all saved lines 128/143 vs 84%; NHL spread on all saved lines 269/312 vs 83%; NHL teamover on all saved lines 166/190 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 83.3% the next day vs 82.1% for the rest (1369 and 8556 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (5 fights priced, 1 close): Bilal Hasan 86%; Ciryl Gane 68%; Kayla Harrison 62%; Uroš Medić 60%; Caio Borralho 59% (close).
-Strong calls 15-3 (83.3% vs 72.2% claimed).
-Closing line value: +2.64 points on 18 picks; beat the close on 77.8%.
-Board sweep: 15-3, 82 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 5 losses expected from the settled picks' chances, so 3 or more by now had a 91.4% chance; 0 of the 3 were near coin flips (called under 60%), 3 were real misses; losses by league: chn 1 (1.9 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected).
+Strong calls 16-4 (80.0% vs 72.2% claimed).
+Closing line value: +2.51 points on 20 picks; beat the close on 75.0%.
+Board sweep: 16-4, 79 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 5.6 losses expected from the settled picks' chances, so 4 or more by now had a 85.1% chance; 0 of the 4 were near coin flips (called under 60%), 4 were real misses; losses by league: chn 1 (1.9 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), swe 1 (0.3 expected).
 - LOST jpn Gamba Osaka or draw at 68% (-270), Cerezo Osaka 3 - Gamba Osaka 2: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 13 of 21 (62% vs 69% stated)
 - LOST chn Shenzhen Xinpengcheng at 77% (-450), Qingdao Hainiu 2 - Shenzhen Xinpengcheng 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 77% · upset
 - LOST ger2 St. Pauli or draw at 65% (-230), 1. FC Magdeburg 4 - St. Pauli 1: margin 3 · the book had my side favoured too · called at 65% · favourite lost · blowout; picks like it: 13 of 17 (76% vs 67% stated)
-Why picks lost (14 days): favourite lost 145, close game 112, upset 50, coin flip 42, blowout 41, price moved against it 30.
+- LOST swe Djurgården at 67% (-240), Djurgården 1 - Halmstads BK 2: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game
+Why picks lost (14 days): favourite lost 146, close game 113, upset 50, coin flip 42, blowout 41, price moved against it 30.
 Yesterday (2026-11-07): board 125-43, sweep broken by jpn Nagoya Grampus or draw at 76%; 47.9 losses expected, 43 came in (82.7% chance of that many or more).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 20 of 21 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 19 (68% vs 68% stated)

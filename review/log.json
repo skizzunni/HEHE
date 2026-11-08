@@ -11986,13 +11986,13 @@
   "card_missing": null,
   "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%; NFL teamunder on all saved lines 166/224 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NFL over on all saved lines 126/145 vs 81%; NHL over on all saved lines 128/143 vs 84%; NHL spread on all saved lines 269/312 vs 83%; NHL teamover on all saved lines 166/190 vs 82%.",
   "clv": {
-   "avg": 2.64,
-   "beat": 77.8,
-   "n": 18
+   "avg": 2.51,
+   "beat": 75.0,
+   "n": 20
   },
   "cold": "Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 83.3% the next day vs 82.1% for the rest (1369 and 8556 legs), so a cold week is noise, not a signal.",
   "day": "2026-11-08",
-  "ladder": "Ladder: run 4, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.44x (41% est.); 11 wins to $10,000; legs: Kyle Pitts: 25+ Receiving Yards (CIN @ ATL; live 9:39 - 1st, Atlanta Falcons 7 - Cincinnati Bengals 0, 0 so far, needs 25 more; props like it 144/176), Harold Fannin Jr.: 25+ Receiving Yards (CLE @ NO; 1:00 PM, open; props like it 144/176), Keenan Allen: 25+ Receiving Yards (DAL @ IND; 1:00 PM, open; props like it 144/176), Jalen Coker: 30+ Receiving Yards (DEN @ CAR; 1:00 PM, open; props like it 144/176).",
+  "ladder": "Ladder: run 4, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.44x (41% est.); 11 wins to $10,000; legs: Kyle Pitts: 25+ Receiving Yards (CIN @ ATL; live 8:33 - 1st, Atlanta Falcons 7 - Cincinnati Bengals 7, 0 so far, needs 25 more; props like it 144/176), Harold Fannin Jr.: 25+ Receiving Yards (CLE @ NO; 1:00 PM, open; props like it 144/176), Keenan Allen: 25+ Receiving Yards (DAL @ IND; 1:00 PM, open; props like it 144/176), Jalen Coker: 30+ Receiving Yards (DEN @ CAR; 1:00 PM, open; props like it 144/176).",
   "leaks_14d": [],
   "locks": {
    "lost": [],
@@ -12009,9 +12009,9 @@
   },
   "loss_reasons_14d": {
    "blowout": 41,
-   "close game": 112,
+   "close game": 113,
    "coin flip": 42,
-   "favourite lost": 145,
+   "favourite lost": 146,
    "price moved against it": 30,
    "upset": 50
   },
@@ -12076,6 +12076,24 @@
      "blowout"
     ],
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 65% \u00b7 favourite lost \u00b7 blowout"
+   },
+   {
+    "against_market": false,
+    "league": "swe",
+    "like": null,
+    "match": "DJU @ HBK",
+    "pick": "Djurg\u00e5rden",
+    "price": "-240",
+    "said": 67,
+    "score": {
+     "Djurg\u00e5rden": 1,
+     "Halmstads BK": 2
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost \u00b7 close game"
    }
   ],
   "lottery": [
@@ -12145,12 +12163,12 @@
    }
   ],
   "picks": {
-   "hit": 83.3,
-   "lost": 3,
-   "n": 18,
-   "roi": 8.7,
+   "hit": 80.0,
+   "lost": 4,
+   "n": 20,
+   "roi": 3.9,
    "said": 72.2,
-   "won": 15
+   "won": 16
   },
   "picks_by_league": {
    "aus": {
@@ -12185,6 +12203,14 @@
     "said": 77.0,
     "won": 1
    },
+   "esp": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 22.2,
+    "said": 77.0,
+    "won": 1
+   },
    "ger2": {
     "hit": 66.7,
     "lost": 1,
@@ -12208,6 +12234,14 @@
     "roi": -0.6,
     "said": 70.2,
     "won": 3
+   },
+   "swe": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 67.0,
+    "won": 0
    }
   },
   "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.",
@@ -12241,32 +12275,34 @@
    "won": 0
   },
   "strong": {
-   "hit": 83.3,
-   "lost": 3,
-   "n": 18,
-   "roi": 8.7,
+   "hit": 80.0,
+   "lost": 4,
+   "n": 20,
+   "roi": 3.9,
    "said": 72.2,
-   "won": 15
+   "won": 16
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 91.4,
+   "as_bad_pct": 85.1,
    "broke_on": "jpn Gamba Osaka or draw at 68%",
    "coin_flips": 0,
    "expected_by_league": {
     "chn": 1.9,
     "ger2": 0.8,
-    "jpn": 1.2
+    "jpn": 1.2,
+    "swe": 0.3
    },
-   "expected_losses": 5.0,
-   "lost": 3,
+   "expected_losses": 5.6,
+   "lost": 4,
    "lost_by_league": {
     "chn": 1,
     "ger2": 1,
-    "jpn": 1
+    "jpn": 1,
+    "swe": 1
    },
-   "open": 82,
-   "won": 15
+   "open": 79,
+   "won": 16
   },
   "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
   "ufc_next": "Next UFC card 2026-11-14 (5 fights priced, 1 close): Bilal Hasan 86%; Ciryl Gane 68%; Kayla Harrison 62%; Uro\u0161 Medi\u0107 60%; Caio Borralho 59% (close).",
@@ -12275,12 +12311,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 76.4,
-    "lost": 237,
-    "n": 1004,
+    "hit": 76.3,
+    "lost": 238,
+    "n": 1006,
     "roi": 1.5,
     "said": 71.6,
-    "won": 767
+    "won": 768
    }
   },
   "weights": {
