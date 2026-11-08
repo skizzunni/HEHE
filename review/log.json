@@ -9797,7 +9797,7 @@
     "against_market": false,
     "league": "mex",
     "like": {
-     "n": 17,
+     "n": 18,
      "said": 69,
      "won": 13
     },
@@ -10164,6 +10164,7 @@
   "sweep": {
    "as_bad_pct": 96.6,
    "broke_on": "arg San Lorenzo or draw at 68%",
+   "coin_flips": 2,
    "expected_by_league": {
     "arg": 1.7,
     "col": 0.6,
@@ -10312,10 +10313,10 @@
    },
    {
     "flag": false,
-    "hit": 81.2,
-    "n": 16,
+    "hit": 76.5,
+    "n": 17,
     "name": "props ufc Winner",
-    "said": 70.2
+    "said": 70.5
    },
    {
     "flag": false,
@@ -10424,8 +10425,8 @@
    },
    {
     "flag": false,
-    "hit": 93.4,
-    "n": 196,
+    "hit": 92.9,
+    "n": 197,
     "name": "prop locks",
     "said": 88.1
    },
@@ -10534,9 +10535,9 @@
   },
   "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 37/58 vs 75%. Running ahead: NBA under on all saved lines 1018/1145 vs 82%; NCAAF over on all saved lines 745/872 vs 81%; NHL over on all saved lines 119/134 vs 83%; NHL spread on all saved lines 261/301 vs 83%; NHL teamover on all saved lines 163/186 vs 82%.",
   "clv": {
-   "avg": 0.95,
-   "beat": 51.7,
-   "n": 120
+   "avg": 0.93,
+   "beat": 51.2,
+   "n": 121
   },
   "cold": "Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF teamunder 513/682 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.8% for the rest (1524 and 7681 legs), so a cold week is noise, not a signal.",
   "day": "2026-11-07",
@@ -10569,10 +10570,10 @@
    "won": 5
   },
   "loss_reasons_14d": {
-   "blowout": 43,
+   "blowout": 44,
    "close game": 130,
    "coin flip": 49,
-   "favourite lost": 153,
+   "favourite lost": 154,
    "price moved against it": 29,
    "upset": 63
   },
@@ -11220,6 +11221,24 @@
      "close game"
     ],
     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 58% \u00b7 coin flip \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "mex",
+    "like": null,
+    "match": "PAC @ ATS",
+    "pick": "Atlas or draw",
+    "price": "-220",
+    "said": 64,
+    "score": {
+     "Atlas": 1,
+     "Pachuca": 4
+    },
+    "tags": [
+     "favourite lost",
+     "blowout"
+    ],
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 64% \u00b7 favourite lost \u00b7 blowout"
    }
   ],
   "lottery": [
@@ -11344,10 +11363,10 @@
    }
   ],
   "picks": {
-   "hit": 74.2,
-   "lost": 31,
-   "n": 120,
-   "roi": -1.6,
+   "hit": 73.6,
+   "lost": 32,
+   "n": 121,
+   "roi": -2.4,
    "said": 72.0,
    "won": 89
   },
@@ -11496,6 +11515,14 @@
     "said": 73.0,
     "won": 4
    },
+   "mex": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 64.0,
+    "won": 0
+   },
    "mls": {
     "hit": 75.0,
     "lost": 2,
@@ -11601,8 +11628,8 @@
     "said_price": 87.5,
     "won": 1729
    },
-   "n": 21,
-   "said": 78.9,
+   "n": 22,
+   "said": 78.8,
    "won": 18
   },
   "safe_locks": {
@@ -11624,17 +11651,18 @@
    "won": 3
   },
   "strong": {
-   "hit": 76.2,
-   "lost": 20,
-   "n": 84,
-   "roi": -2.1,
-   "said": 73.6,
+   "hit": 75.3,
+   "lost": 21,
+   "n": 85,
+   "roi": -3.3,
+   "said": 73.5,
    "won": 64
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 73.4,
+   "as_bad_pct": 68.7,
    "broke_on": "jpn Nagoya Grampus or draw at 76%",
+   "coin_flips": 4,
    "expected_by_league": {
     "arg": 1.4,
     "chi": 0.5,
@@ -11646,13 +11674,14 @@
     "ger2": 1.2,
     "ita": 0.9,
     "jpn": 1.4,
+    "mex": 0.4,
     "mls": 2.2,
     "ncaaf": 9.7,
     "sco": 1.3,
     "wsl": 0.3
    },
-   "expected_losses": 33.6,
-   "lost": 31,
+   "expected_losses": 33.9,
+   "lost": 32,
    "lost_by_league": {
     "arg": 1,
     "chi": 1,
@@ -11664,12 +11693,13 @@
     "ger2": 2,
     "ita": 1,
     "jpn": 1,
+    "mex": 1,
     "mls": 2,
     "ncaaf": 11,
     "sco": 2,
     "wsl": 1
    },
-   "open": 49,
+   "open": 48,
    "won": 89
   },
   "vs_market_14d": {
@@ -11677,10 +11707,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 76.0,
-    "lost": 265,
-    "n": 1103,
-    "roi": 1.2,
+    "hit": 75.9,
+    "lost": 266,
+    "n": 1104,
+    "roi": 1.1,
     "said": 71.6,
     "won": 838
    }
@@ -11855,7 +11885,7 @@
      "against_market": false,
      "league": "mex",
      "like": {
-      "n": 17,
+      "n": 18,
       "said": 69,
       "won": 13
      },
@@ -11916,6 +11946,7 @@
    "sweep": {
     "as_bad_pct": 96.6,
     "broke_on": "arg San Lorenzo or draw at 68%",
+    "coin_flips": 2,
     "expected_by_league": {
      "arg": 1.7,
      "col": 0.6,
