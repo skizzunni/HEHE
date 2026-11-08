@@ -766,6 +766,7 @@
    "cost": 0.6441,
    "edge": 0.0105,
    "fair": 0.6509,
+   "fill": null,
    "id": "ncaaf:401871074",
    "label": "Florida International Panthers",
    "league": "ncaaf",
@@ -778,8 +779,9 @@
     "team": "Florida International Panthers"
    },
    "start": "2026-11-07T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07MOSUFIU-FIU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07MOSUFIU-FIU",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07MRSHGASO-GASO|YES": {
    "ask": 0.78,
@@ -3128,6 +3130,28 @@
    "start": "2026-11-08T02:30Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV07FRESUSU-FRES2"
+  },
+  "KXNCAAFSPREAD-26NOV07FRESUSU-USU2|NO": {
+   "ask": 0.53,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401860913",
+   "label": "Fresno State Bulldogs +1.5",
+   "league": "ncaaf",
+   "match": "FRES @ USU",
+   "posted": "2026-11-08T00:46:11+00:00",
+   "queue": 140533.69,
+   "side": "NO",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Fresno State Bulldogs"
+   },
+   "start": "2026-11-08T02:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV07FRESUSU-USU2"
   },
   "KXNCAAFSPREAD-26NOV07FSUBC-FSU6|YES": {
    "ask": 0.51,
