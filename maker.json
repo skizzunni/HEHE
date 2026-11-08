@@ -12515,6 +12515,7 @@
    "cost": 0.5644,
    "edge": 0.0392,
    "fair": 0.5865,
+   "fill": null,
    "id": "nfl:401873041",
    "label": "Denver Broncos",
    "league": "nfl",
@@ -12527,8 +12528,9 @@
     "team": "Denver Broncos"
    },
    "start": "2026-11-08T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV08DENCAR-DEN"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV08DENCAR-DEN",
+   "won": 1
   },
   "KXNFLGAME-26NOV08DETMIA-DET|YES": {
    "ask": 0.74,
@@ -12601,6 +12603,7 @@
    "cost": 0.664,
    "edge": 0.0003,
    "fair": 0.6642,
+   "fill": "touch",
    "id": "nfl:401873043",
    "label": "Los Angeles Rams",
    "league": "nfl",
@@ -12613,8 +12616,9 @@
     "team": "Los Angeles Rams"
    },
    "start": "2026-11-08T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV08LARWAS-LAR"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV08LARWAS-LAR",
+   "won": 1
   },
   "KXNFLGAME-26NOV08LVSF-SF|YES": {
    "ask": 0.8,
@@ -12643,6 +12647,7 @@
    "cost": 0.5843,
    "edge": 0.0222,
    "fair": 0.5973,
+   "fill": "touch",
    "id": "nfl:401873044",
    "label": "New York Giants",
    "league": "nfl",
@@ -12655,8 +12660,9 @@
     "team": "New York Giants"
    },
    "start": "2026-11-08T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV08NYGPHI-NYG"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV08NYGPHI-NYG",
+   "won": 1
   },
   "KXNFLGAME-26NOV08NYJKC-KC|YES": {
    "ask": 0.81,
@@ -13207,6 +13213,7 @@
    "cost": 0.5144,
    "edge": 0.0162,
    "fair": 0.5227,
+   "fill": "touch",
    "id": "nfl:401873041",
    "label": "Denver Broncos -2.5",
    "league": "nfl",
@@ -13220,8 +13227,9 @@
     "team": "Denver Broncos"
    },
    "start": "2026-11-08T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV08DENCAR-DEN3"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV08DENCAR-DEN3",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV08DETMIA-DET7|YES": {
    "ask": 0.51,
@@ -13297,6 +13305,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "nfl:401873043",
    "label": "Washington Commanders +4.5",
    "league": "nfl",
@@ -13310,8 +13319,9 @@
     "team": "Washington Commanders"
    },
    "start": "2026-11-08T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV08LARWAS-LAR5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV08LARWAS-LAR5",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV08LARWAS-LAR5|YES": {
    "ask": 0.51,
@@ -13319,6 +13329,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873043",
    "label": "Los Angeles Rams -4.5",
    "league": "nfl",
@@ -13332,8 +13343,9 @@
     "team": "Los Angeles Rams"
    },
    "start": "2026-11-08T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV08LARWAS-LAR5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV08LARWAS-LAR5",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV08LVSF-SF10|YES": {
    "ask": 0.51,
@@ -14285,6 +14297,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "nfl:401873043",
    "label": "under 48.5",
    "league": "nfl",
@@ -14297,8 +14310,9 @@
     "t": "under"
    },
    "start": "2026-11-08T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV08LARWAS-49"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV08LARWAS-49",
+   "won": 1
   },
   "KXNFLTOTAL-26NOV08LVSF-52|YES": {
    "ask": 0.51,

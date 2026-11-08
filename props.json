@@ -37399,6 +37399,22 @@
   "price": "-380",
   "status": "open"
  },
+ "nba:401909946|n:daniss jenkins|Pts + Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": 5.1,
+  "gid": "nba:401909946",
+  "imp": 0.9091,
+  "label": "Daniss Jenkins: 10+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Pts + Reb + Ast",
+  "name": "Daniss Jenkins",
+  "p": 0.8584,
+  "p_fair": 0.9554,
+  "price": "-1000",
+  "status": "open"
+ },
  "nba:401909946|n:daniss jenkins|Reb + Ast|5+": {
   "aid": null,
   "date": "2026-11-08",
@@ -49079,11 +49095,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Dallas Goedert",
   "p": 0.7933,
   "p_fair": 0.7402,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 50.0
  },
  "nfl:401873044|n:darnell mooney|Receptions|1+": {
   "aid": null,
@@ -49095,11 +49113,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Darnell Mooney",
   "p": 0.796,
   "p_fair": 0.7521,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nfl:401873044|n:devin singletary|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -49111,11 +49131,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Devin Singletary",
   "p": 0.3814,
   "p_fair": null,
   "price": "+110",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873044|n:isaiah likely|Receptions|3+": {
   "aid": null,
@@ -49127,11 +49149,13 @@
   "league": "nfl",
   "line": "3+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Isaiah Likely",
   "p": 0.8529,
   "p_fair": 0.823,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nfl:401873044|n:malachi fields|Receiving Yards|10+": {
   "aid": null,
@@ -49143,11 +49167,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Malachi Fields",
   "p": 0.8016,
   "p_fair": 0.8026,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 40.0
  },
  "nfl:401873044|n:malik nabers|Receptions|3+": {
   "aid": null,
@@ -49158,11 +49184,13 @@
   "league": "nfl",
   "line": "3+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Malik Nabers",
   "p": 0.872,
   "price": "-1800",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nfl:401873044|n:saquon barkley|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -49174,11 +49202,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Saquon Barkley",
   "p": 0.3625,
   "p_fair": null,
   "price": "+120",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873044|n:saquon barkley|Receptions|1+": {
   "aid": null,
@@ -49190,11 +49220,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Saquon Barkley",
   "p": 0.8487,
   "p_fair": 0.8373,
   "price": "-580",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873045|n:cyrus allen|Receptions|1+": {
   "aid": null,
@@ -49692,6 +49724,22 @@
   "price": "-120",
   "status": "open"
  },
+ "nfl:401873048|n:jaxon smith njigba|Receptions|5+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": -3.1,
+  "gid": "nfl:401873048",
+  "imp": 0.8667,
+  "label": "Jaxon Smith-Njigba: 5+ Receptions",
+  "league": "nfl",
+  "line": "5+",
+  "market": "Receptions",
+  "name": "Jaxon Smith-Njigba",
+  "p": 0.8555,
+  "p_fair": 0.8399,
+  "price": "-650",
+  "status": "open"
+ },
  "nfl:401873048|n:michael wilson|Receptions|3+": {
   "aid": null,
   "date": "2026-11-08",
@@ -49930,6 +49978,22 @@
   "p": 0.8016,
   "p_fair": 0.7586,
   "price": "-400",
+  "status": "open"
+ },
+ "nfl:401873050|n:cade otton|Receptions|2+": {
+  "aid": null,
+  "date": "2026-11-08",
+  "edge": -3.8,
+  "gid": "nfl:401873050",
+  "imp": 0.8667,
+  "label": "Cade Otton: 2+ Receptions",
+  "league": "nfl",
+  "line": "2+",
+  "market": "Receptions",
+  "name": "Cade Otton",
+  "p": 0.8555,
+  "p_fair": 0.834,
+  "price": "-650",
   "status": "open"
  },
  "nfl:401873050|n:caleb williams|Passing Touchdowns|1+": {
