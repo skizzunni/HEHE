@@ -437,6 +437,22 @@ def ufc_line(today=None, back=8):
     return None
 
 
+def card_check(now=None, book=None):
+    """After 8:15 AM Eastern, today's Locks card must be saved -- the ladder
+    ticket is set from it. A MISSING line when it is not, else None."""
+    now = now or dt.datetime.now(ET)
+    if (now.hour, now.minute) < (8, 15):
+        return None
+    if book is None:
+        import locks
+        book = locks.load()
+    day = now.date().isoformat()
+    if day in (book.get("days") or {}):
+        return None
+    return (f"MISSING today's 8 AM Locks card ({day}) at {now.strftime('%-I:%M %p')} ET -- the ladder ticket"
+            " cannot be set until it is saved; check the board build.")
+
+
 def ufc_next_line(today=None, ahead=7, picks_fn=None):
     """The next UFC card in the coming `ahead` days with prices posted: each
     fight's price favourite and chance, close fights (under 60%) flagged."""
@@ -964,6 +980,8 @@ def words(r, fit):
         out.append(r["ufc"])
     if r.get("ufc_next"):
         out.append(r["ufc_next"])
+    if r.get("card_missing"):
+        out.append(r["card_missing"])
     for name, mb in r.get("big_files") or []:
         out.append(f"BIG FILE {name} is {mb} MB -- GitHub refuses files over 100 MB and the board stops; trim it")
     st = r.get("stuck") or []
@@ -1076,6 +1094,7 @@ def main():
     log[today.isoformat()]["cautions"] = caution_line()
     log[today.isoformat()]["cold"] = form_line()
     log[today.isoformat()]["prereg"] = prereg_line()
+    log[today.isoformat()]["card_missing"] = card_check()
     log[today.isoformat()]["ufc"] = ufc_line(today)
     log[today.isoformat()]["ufc_next"] = ufc_next_line(today)
     yk = (today - dt.timedelta(days=1)).isoformat()

@@ -4218,3 +4218,6 @@ and a "close fight" flag under 60%. Price favourites since 2021 at DraftKings pr
 (-3.6% a bet), 60-70% 670/1035 (-4.6%), 70-80% 507/650 (-0.4%), 80%+ 270/306 (-0.1%) (2026-11-08).
 Review "Next UFC card" line (`daily_review.ufc_next_line`): the coming card's priced fights, each price
 favourite with its chance, close fights (under 60%) flagged (2026-11-08).
+Review raises "MISSING today's 8 AM Locks card" after 8:15 AM Eastern when the card is not saved
+(`daily_review.card_check`), since the ladder ticket is set from it. Study, no rule: J-League double
+chance 19/24 then 9/14 (79%, 64% vs 72-75%) -- mixed, so Gamba Osaka's 2-3 (68%) is not a leak (2026-11-08).

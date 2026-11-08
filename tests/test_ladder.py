@@ -346,6 +346,16 @@ class ReviewLine(unittest.TestCase):
             self.assertIsNone(daily_review.form_line())
 
 
+    def test_card_check(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review as d
+        import datetime as dt
+        at = lambda h, m: dt.datetime(2026, 11, 8, h, m, tzinfo=d.ET)
+        self.assertIsNone(d.card_check(at(7, 59), {"days": {}}))                    # before the card is due
+        self.assertIsNone(d.card_check(at(9, 0), {"days": {"2026-11-08": []}}))     # saved
+        self.assertTrue(d.card_check(at(8, 20), {"days": {"2026-11-07": []}}).startswith("MISSING today's 8 AM Locks card (2026-11-08)"))
+
+
 ladder._report = ladder.report
 
 
