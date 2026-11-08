@@ -934,6 +934,7 @@
    "cost": 0.5444,
    "edge": 0.0169,
    "fair": 0.5536,
+   "fill": "queue",
    "id": "ncaaf:401858516",
    "label": "Washington Huskies",
    "league": "ncaaf",
@@ -946,8 +947,9 @@
     "team": "Washington Huskies"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07PSUWASH-WASH"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07PSUWASH-WASH",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV07RICEUNT-UNT|YES": {
    "ask": 0.88,
@@ -1018,6 +1020,7 @@
    "cost": 0.7037,
    "edge": 0.007,
    "fair": 0.7086,
+   "fill": "touch",
    "id": "ncaaf:401862820",
    "label": "Navy Midshipmen",
    "league": "ncaaf",
@@ -1030,8 +1033,9 @@
     "team": "Navy Midshipmen"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07TEMNAVY-NAVY"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07TEMNAVY-NAVY",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07TEXMIZZ-TEX|YES": {
    "ask": 0.57,
@@ -3313,6 +3317,28 @@
    "ticker": "KXNCAAFSPREAD-26NOV07MDPUR-PUR6",
    "won": 1
   },
+  "KXNCAAFSPREAD-26NOV07MIAND-ND8|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401858291",
+   "label": "Miami Hurricanes +7.5",
+   "league": "ncaaf",
+   "match": "MIA @ ND",
+   "posted": "2026-11-08T00:04:32+00:00",
+   "queue": 42342.17,
+   "side": "NO",
+   "spec": {
+    "line": 7.5,
+    "t": "spread",
+    "team": "Miami Hurricanes"
+   },
+   "start": "2026-11-08T00:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV07MIAND-ND8"
+  },
   "KXNCAAFSPREAD-26NOV07MSUMICH-MICH15|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -3499,6 +3525,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401858516",
    "label": "Penn State Nittany Lions +2.5",
    "league": "ncaaf",
@@ -3512,8 +3539,9 @@
     "team": "Penn State Nittany Lions"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07PSUWASH-WASH3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07PSUWASH-WASH3",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07RICEUNT-UNT15|YES": {
    "ask": 0.52,
@@ -3631,6 +3659,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401862820",
    "label": "Temple Owls +7.5",
    "league": "ncaaf",
@@ -3644,8 +3673,9 @@
     "team": "Temple Owls"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07TEMNAVY-NAVY8"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07TEMNAVY-NAVY8",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07TEXMIZZ-TEX3|YES": {
    "ask": 0.52,
@@ -7867,6 +7897,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401858516",
    "label": "under 44.5",
    "league": "ncaaf",
@@ -7879,8 +7910,9 @@
     "t": "under"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07PSUWASH-45"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07PSUWASH-45",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07PSUWASH-46|NO": {
    "ask": 0.51,
@@ -7888,6 +7920,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401858516",
    "label": "under 45.5",
    "league": "ncaaf",
@@ -7900,8 +7933,9 @@
     "t": "under"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07PSUWASH-46"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07PSUWASH-46",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07RICEUNT-66|NO": {
    "ask": 0.51,
@@ -8014,6 +8048,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "ncaaf:401862820",
    "label": "over 54.5",
    "league": "ncaaf",
@@ -8026,8 +8061,9 @@
     "t": "over"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07TEMNAVY-55"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07TEMNAVY-55",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07TLSATULN-50|YES": {
    "ask": 0.52,
