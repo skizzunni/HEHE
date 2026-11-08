@@ -7,40 +7,22 @@
    "baseline": "the pick as published (hand-set model weights in NFL/WNBA/MLB/tennis)",
    "proposal": "the same-time market favourite (tested weight 0)",
    "same": "one pick per game, same game, same price",
-   "untouched_from": "2026-10-04",
+   "untouched_from": "2026-10-05",
    "result": {
     "all": {
      "days": 35,
-     "picks": 795,
-     "old_won": 536,
-     "new_won": 542,
-     "diff": 6,
+     "picks": 780,
+     "old_won": 526,
+     "new_won": 533,
+     "diff": 7,
      "ci95_diff": [
-      -5,
-      19
+      -4,
+      20
      ],
-     "new_won_old_missed": 26,
-     "old_won_new_missed": 20,
+     "new_won_old_missed": 23,
+     "old_won_new_missed": 16,
      "promote": false,
      "examples_new": [
-      {
-       "day": "2026-10-04",
-       "new": "opponent of Washington Commanders",
-       "game": "nfl:401872965",
-       "won": true
-      },
-      {
-       "day": "2026-10-04",
-       "new": "opponent of Tampa Bay Buccaneers",
-       "game": "nfl:401872968",
-       "won": true
-      },
-      {
-       "day": "2026-10-04",
-       "new": "opponent of Philadelphia Eagles",
-       "game": "nfl:401872970",
-       "won": true
-      },
       {
        "day": "2026-10-06",
        "new": "opponent of Nashville Predators",
@@ -70,33 +52,27 @@
        "new": "opponent of Pittsburgh Penguins",
        "game": "nhl:401892467",
        "won": true
+      },
+      {
+       "day": "2026-10-10",
+       "new": "opponent of Vanderbilt Commodores",
+       "game": "ncaaf:401856718",
+       "won": true
+      },
+      {
+       "day": "2026-10-10",
+       "new": "opponent of NC State Wolfpack",
+       "game": "ncaaf:401858260",
+       "won": true
+      },
+      {
+       "day": "2026-10-10",
+       "new": "opponent of Penn State Nittany Lions",
+       "game": "ncaaf:401858485",
+       "won": true
       }
      ],
      "examples_old": [
-      {
-       "day": "2026-10-04",
-       "old": "New York Giants",
-       "game": "nfl:401872966",
-       "won": true
-      },
-      {
-       "day": "2026-10-04",
-       "old": "Jacksonville Jaguars",
-       "game": "nfl:401872969",
-       "won": true
-      },
-      {
-       "day": "2026-10-04",
-       "old": "Carolina Panthers",
-       "game": "nfl:401872978",
-       "won": true
-      },
-      {
-       "day": "2026-10-04",
-       "old": "Golden State Valkyries",
-       "game": "wnba:401918296",
-       "won": true
-      },
       {
        "day": "2026-10-06",
        "old": "Utah Mammoth",
@@ -119,6 +95,30 @@
        "day": "2026-10-09",
        "old": "Atlanta Dream",
        "game": "wnba:401918299",
+       "won": true
+      },
+      {
+       "day": "2026-10-09",
+       "old": "Golden State Valkyries",
+       "game": "wnba:401918300",
+       "won": true
+      },
+      {
+       "day": "2026-10-10",
+       "old": "Kentucky Wildcats",
+       "game": "ncaaf:401856715",
+       "won": true
+      },
+      {
+       "day": "2026-10-10",
+       "old": "Oklahoma Sooners",
+       "game": "ncaaf:401856717",
+       "won": true
+      },
+      {
+       "day": "2026-10-10",
+       "old": "California Golden Bears",
+       "game": "ncaaf:401858259",
        "won": true
       }
      ]
@@ -167,16 +167,16 @@
     },
     "nfl": {
      "days": 15,
-     "picks": 72,
-     "old_won": 46,
-     "new_won": 47,
+     "picks": 59,
+     "old_won": 38,
+     "new_won": 39,
      "diff": 1,
      "ci95_diff": [
       0,
       3
      ],
-     "new_won_old_missed": 5,
-     "old_won_new_missed": 4,
+     "new_won_old_missed": 2,
+     "old_won_new_missed": 1,
      "promote": false
     },
     "nhl": {
@@ -208,17 +208,17 @@
      "promote": false
     },
     "wnba": {
-     "days": 10,
-     "picks": 13,
-     "old_won": 10,
-     "new_won": 7,
-     "diff": -3,
+     "days": 9,
+     "picks": 11,
+     "old_won": 8,
+     "new_won": 6,
+     "diff": -2,
      "ci95_diff": [
-      -8,
+      -6,
       0
      ],
      "new_won_old_missed": 0,
-     "old_won_new_missed": 3,
+     "old_won_new_missed": 2,
      "promote": false
     }
    }

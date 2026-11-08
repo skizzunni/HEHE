@@ -12450,6 +12450,7 @@
    "cost": 0.6142,
    "edge": 0.0118,
    "fair": 0.6214,
+   "fill": "touch",
    "id": "nfl:401873038",
    "label": "Cincinnati Bengals",
    "league": "nfl",
@@ -12462,8 +12463,9 @@
     "team": "Cincinnati Bengals"
    },
    "start": "2026-11-08T14:30Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV08CINATL-CIN"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV08CINATL-CIN",
+   "won": 1
   },
   "KXNFLGAME-26NOV08CLENO-NO|YES": {
    "ask": 0.61,
@@ -14055,6 +14057,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873038",
    "label": "under 52.5",
    "league": "nfl",
@@ -14067,8 +14070,9 @@
     "t": "under"
    },
    "start": "2026-11-08T14:30Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV08CINATL-53"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV08CINATL-53",
+   "won": 1
   },
   "KXNFLTOTAL-26NOV08CLENO-43|NO": {
    "ask": 0.51,

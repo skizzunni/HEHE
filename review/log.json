@@ -11556,10 +11556,10 @@
   },
   "props": {
    "fair": {
-    "n": 2146,
+    "n": 2153,
     "said_fair": 86.4,
     "said_price": 87.5,
-    "won": 1790
+    "won": 1795
    },
    "n": 151,
    "said": 81.6,
@@ -11714,31 +11714,31 @@
    },
    {
     "flag": false,
-    "hit": 61.3,
-    "n": 31,
+    "hit": 60.6,
+    "n": 33,
     "name": "props nfl Anytime Touchdown Scorer",
-    "said": 42.2
+    "said": 43.0
    },
    {
     "flag": false,
-    "hit": 75.0,
-    "n": 12,
+    "hit": 78.6,
+    "n": 14,
     "name": "props nfl Passing Yards",
-    "said": 85.8
+    "said": 85.7
    },
    {
     "flag": false,
-    "hit": 84.4,
-    "n": 90,
+    "hit": 82.8,
+    "n": 93,
     "name": "props nfl Receiving Yards",
     "said": 82.2
    },
    {
     "flag": false,
-    "hit": 84.2,
-    "n": 38,
+    "hit": 85.0,
+    "n": 40,
     "name": "props nfl Receptions",
-    "said": 82.8
+    "said": 82.9
    },
    {
     "flag": false,
@@ -11889,8 +11889,8 @@
    },
    {
     "flag": false,
-    "hit": 52.7,
-    "n": 313,
+    "hit": 52.9,
+    "n": 314,
     "name": "kalshi maker bids (filled)",
     "said": 54.3
    }
@@ -11984,25 +11984,27 @@
    }
   },
   "card_missing": null,
-  "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%; NFL spread on all saved lines 226/287 vs 82%; NFL teamunder on all saved lines 166/224 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NFL over on all saved lines 126/145 vs 81%; NHL over on all saved lines 128/143 vs 84%; NHL spread on all saved lines 269/312 vs 83%; NHL teamover on all saved lines 166/190 vs 82%.",
+  "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%; NFL spread on all saved lines 238/306 vs 82%; NFL teamunder on all saved lines 180/239 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NFL over on all saved lines 135/154 vs 81%; NHL over on all saved lines 128/143 vs 84%; NHL spread on all saved lines 269/312 vs 83%; NHL teamover on all saved lines 166/190 vs 82%.",
   "clv": {
-   "avg": 1.6,
-   "beat": 63.4,
-   "n": 41
+   "avg": 1.56,
+   "beat": 61.9,
+   "n": 42
   },
   "cold": null,
   "day": "2026-11-08",
-  "ladder": "Ladder: run 4, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.44x (41% est.); 11 wins to $10,000; legs: Kyle Pitts: 25+ Receiving Yards (CIN @ ATL; live 1:19 - 4th, Atlanta Falcons 17 - Cincinnati Bengals 34, 23 so far, needs 2 more, on pace for 24, behind the pace it needs; props like it 144/176), Harold Fannin Jr.: 25+ Receiving Yards (CLE @ NO; 1:00 PM, open; props like it 144/176), Keenan Allen: 25+ Receiving Yards (DAL @ IND; 1:00 PM, open; props like it 144/176), Jalen Coker: 30+ Receiving Yards (DEN @ CAR; 1:00 PM, open; props like it 144/176).",
+  "ladder": "Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "Kyle Pitts: 25+ Receiving Yards (CIN @ ATL) 23"
+   ],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      3,
      0.5151,
-     "open"
+     "lost"
     ]
    },
    "won": 1
@@ -12161,10 +12163,12 @@
   ],
   "lottery": [
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 58.5 points"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 0
    },
@@ -12185,34 +12189,42 @@
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 58.5 points"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+25",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 58.5 points"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+50",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Over 58.5 points"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+100",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Tee Higgins: 50+ Receiving Yards"
+    ],
     "legs": 14,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 0
    },
@@ -12226,12 +12238,12 @@
    }
   ],
   "picks": {
-   "hit": 82.9,
+   "hit": 83.3,
    "lost": 7,
-   "n": 41,
-   "roi": 5.6,
-   "said": 73.7,
-   "won": 34
+   "n": 42,
+   "roi": 6.8,
+   "said": 73.4,
+   "won": 35
   },
   "picks_by_league": {
    "aus": {
@@ -12354,6 +12366,14 @@
     "said": 70.2,
     "won": 3
    },
+   "nfl": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 55.6,
+    "said": 62.0,
+    "won": 1
+   },
    "nor": {
     "hit": 100.0,
     "lost": 0,
@@ -12387,18 +12407,18 @@
     "won": 1
    }
   },
-  "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.",
-  "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 79%, 77% (76% / 79%); 80-85% 85%, 87% (83% / 84%); 85-90% 86%, 84% (88% / 85%); 90%+ 85%, 83% (93% / 85%).",
+  "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 5/9 (56% vs 81% stated); waiting for 100 legs.",
+  "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 87% (83% / 84%); 85-90% 87%, 84% (88% / 85%); 90%+ 84%, 83% (93% / 85%).",
   "props": {
    "fair": {
-    "n": 2146,
+    "n": 2153,
     "said_fair": 86.4,
     "said_price": 87.5,
-    "won": 1790
+    "won": 1795
    },
-   "n": 2,
-   "said": 85.2,
-   "won": 1
+   "n": 11,
+   "said": 78.9,
+   "won": 7
   },
   "safe_locks": {
    "lost": [],
@@ -12428,7 +12448,7 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 94.3,
+   "as_bad_pct": 95.6,
    "broke_on": "jpn Gamba Osaka or draw at 68%",
    "coin_flips": 0,
    "expected_by_league": {
@@ -12440,7 +12460,7 @@
     "sco": 0.2,
     "swe": 0.3
    },
-   "expected_losses": 10.8,
+   "expected_losses": 11.2,
    "lost": 7,
    "lost_by_league": {
     "chn": 1,
@@ -12451,8 +12471,8 @@
     "sco": 1,
     "swe": 1
    },
-   "open": 69,
-   "won": 34
+   "open": 68,
+   "won": 35
   },
   "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
   "ufc_next": "Next UFC card 2026-11-14 (11 fights priced, 3 close): Bilal Hasan 86%; Melquizael Costa 75%; Ciryl Gane 68%; Bia Mesquita 66%; Terrance McKinney 66%; Kayla Harrison 63%; Donte Johnson 60%; Uro\u0161 Medi\u0107 60%; Caio Borralho 59% (close); Stephen Thompson 56% (close); Evan Elder 51% (close).",
@@ -12461,12 +12481,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 76.5,
+    "hit": 76.6,
     "lost": 241,
-    "n": 1027,
+    "n": 1028,
     "roi": 1.6,
     "said": 71.7,
-    "won": 786
+    "won": 787
    }
   },
   "weights": {
@@ -12491,10 +12511,10 @@
    "nfl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6298,
-    "market_only": 0.6298,
-    "model_40": 0.6459,
-    "n": 42,
+    "logloss": 0.6264,
+    "market_only": 0.6264,
+    "model_40": 0.6436,
+    "n": 43,
     "weight": 0.0
    },
    "nhl": {
