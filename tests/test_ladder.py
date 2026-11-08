@@ -381,3 +381,14 @@ ladder._report = ladder.report
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class CallsStudy(unittest.TestCase):
+    def test_calls_study(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import ladder_study
+        book = {f"{d}{i}": dict(date=f"2026-11-0{d}", conf=80 - i, status="won" if (d, i) != (1, 1) else "lost", price="-200")
+                for d in (1, 2, 3, 4) for i in range(3)}
+        r = ladder_study.calls_study(book, sizes=(2,))
+        self.assertEqual(r[(2, "first")], dict(won=1, n=2, pays=2.25))
+        self.assertEqual(r[(2, "second")], dict(won=2, n=2, pays=2.25))

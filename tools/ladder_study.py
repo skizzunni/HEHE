@@ -42,6 +42,48 @@ def study(book=None, sizes=(3, 4, 5), prior=10):
     return out
 
 
+def calls_study(book=None, sizes=(2, 3, 4, 5, 6)):
+    """The same idea from the board's calls: each day's top K calls by stated
+    chance as one parlay, by date half -- {(K, half): dict(won, n, pays)}.
+    2026-11-08: top 6 cashed 4/12 at 5.31x then 10/13 at 1.60x -- the recent
+    top calls were heavy favourites paying under 2x, so the same trade-off."""
+    import collections
+    import ledger
+    book = book if book is not None else ledger.load()
+    def dec(a):
+        a = float(str(a).replace("+", ""))
+        return 1 + (a / 100 if a > 0 else 100 / -a)
+    by = collections.defaultdict(list)
+    for e in book.values():
+        if e.get("status") in ("won", "lost") and e.get("conf") and e.get("price") and e.get("date"):
+            try:
+                by[e["date"]].append((e["conf"], e["status"] == "won", dec(e["price"])))
+            except (TypeError, ValueError):
+                continue
+    days = sorted(by)
+    if not days:
+        return {}
+    mid = days[len(days) // 2]
+    out = {}
+    for K in sizes:
+        for half in ("first", "second"):
+            n = w = 0
+            pay = 0.0
+            for d in days:
+                if (d >= mid) != (half == "second"):
+                    continue
+                X = sorted(by[d], key=lambda r: -r[0])[:K]
+                if len(X) < K:
+                    continue
+                n += 1
+                w += all(r[1] for r in X)
+                pay += math.prod(r[2] for r in X)
+            out[(K, half)] = dict(won=w, n=n, pays=round(pay / n, 2) if n else None)
+    return out
+
+
 if __name__ == "__main__":
+    for (K, half), r in calls_study().items():
+        print(f"top {K} calls, {half} half: {r['won']}/{r['n']} cashed at {r['pays']}x")
     for (K, mode), r in study().items():
         print(f"{K} legs by {mode}: {r['won']}/{r['n']} cashed at {r['pays']}x")

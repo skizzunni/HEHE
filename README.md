@@ -4261,3 +4261,7 @@ Ladder leg-ranking studies, walk-forward on every saved card (`tools/ladder_stud
 Unusually good days are named too (`day_rarity` as_good_pct: the chance of this few losses or fewer; review
 sweep line and the Results header flag it under 10% with 10+ settled). Nov 8 at 52-8: 15.5 losses expected,
 only 1.4% of days go this well (2026-11-08).
+Ladder from the board's top calls instead of Locks (`tools/ladder_study.calls_study`), by half, no rule:
+top 4 calls 5/12 at 2.20x then 10/13 at 1.28x; top 6 4/12 at 5.31x then 10/13 at 1.60x. The recent top calls
+were heavy favourites paying under 2x -- the same trade-off of chance for payout, not a better ladder
+(2026-11-08).
