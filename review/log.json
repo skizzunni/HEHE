@@ -9776,9 +9776,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 241,
+     "n": 242,
      "said": 64,
-     "won": 197
+     "won": 198
     },
     "match": "NEB @ ILL",
     "pick": "Nebraska Cornhuskers",
@@ -10536,8 +10536,8 @@
   "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 37/58 vs 75%. Running ahead: NBA under on all saved lines 1018/1145 vs 82%; NCAAF over on all saved lines 745/872 vs 81%; NHL over on all saved lines 119/134 vs 83%; NHL spread on all saved lines 261/301 vs 83%; NHL teamover on all saved lines 163/186 vs 82%.",
   "clv": {
    "avg": 0.93,
-   "beat": 51.2,
-   "n": 121
+   "beat": 50.8,
+   "n": 122
   },
   "cold": "Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF teamunder 513/682 (75% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.8% for the rest (1524 and 7681 legs), so a cold week is noise, not a signal.",
   "day": "2026-11-07",
@@ -10889,9 +10889,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 223,
+     "n": 224,
      "said": 65,
-     "won": 179
+     "won": 180
     },
     "match": "MD @ PUR",
     "pick": "Purdue Boilermakers",
@@ -10933,9 +10933,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 156,
+     "n": 157,
      "said": 69,
-     "won": 116
+     "won": 117
     },
     "match": "ODU @ CCU",
     "pick": "Coastal Carolina Chanticleers",
@@ -10992,9 +10992,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 186,
+     "n": 187,
      "said": 68,
-     "won": 143
+     "won": 144
     },
     "match": "GAST @ APP",
     "pick": "App State Mountaineers",
@@ -11118,9 +11118,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 200,
+     "n": 201,
      "said": 66,
-     "won": 153
+     "won": 154
     },
     "match": "ALA @ LSU",
     "pick": "LSU Tigers",
@@ -11140,9 +11140,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 200,
+     "n": 201,
      "said": 66,
-     "won": 153
+     "won": 154
     },
     "match": "UCF @ KU",
     "pick": "Kansas Jayhawks",
@@ -11363,12 +11363,12 @@
    }
   ],
   "picks": {
-   "hit": 73.6,
+   "hit": 73.8,
    "lost": 32,
-   "n": 121,
-   "roi": -2.4,
-   "said": 72.0,
-   "won": 89
+   "n": 122,
+   "roi": -2.0,
+   "said": 71.9,
+   "won": 90
   },
   "picks_by_league": {
    "arg": {
@@ -11548,12 +11548,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 64.5,
+    "hit": 65.6,
     "lost": 11,
-    "n": 31,
-    "roi": -9.5,
-    "said": 68.8,
-    "won": 20
+    "n": 32,
+    "roi": -7.7,
+    "said": 68.7,
+    "won": 21
    },
    "nhl": {
     "hit": 100.0,
@@ -11660,7 +11660,7 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 68.7,
+   "as_bad_pct": 71.2,
    "broke_on": "jpn Nagoya Grampus or draw at 76%",
    "coin_flips": 4,
    "expected_by_league": {
@@ -11676,11 +11676,11 @@
     "jpn": 1.4,
     "mex": 0.4,
     "mls": 2.2,
-    "ncaaf": 9.7,
+    "ncaaf": 10.0,
     "sco": 1.3,
     "wsl": 0.3
    },
-   "expected_losses": 33.9,
+   "expected_losses": 34.3,
    "lost": 32,
    "lost_by_league": {
     "arg": 1,
@@ -11699,8 +11699,8 @@
     "sco": 2,
     "wsl": 1
    },
-   "open": 48,
-   "won": 89
+   "open": 47,
+   "won": 90
   },
   "vs_market_14d": {
    "against": {
@@ -11709,10 +11709,10 @@
    "agree": {
     "hit": 75.9,
     "lost": 266,
-    "n": 1104,
+    "n": 1105,
     "roi": 1.1,
     "said": 71.6,
-    "won": 838
+    "won": 839
    }
   },
   "weights": {
@@ -11728,10 +11728,10 @@
    "ncaaf": {
     "fitted": 0.25,
     "held_out": false,
-    "logloss": 0.5966,
-    "market_only": 0.6004,
-    "model_40": 0.598,
-    "n": 207,
+    "logloss": 0.5958,
+    "market_only": 0.5996,
+    "model_40": 0.5972,
+    "n": 208,
     "weight": 0.0
    },
    "nfl": {
@@ -11864,9 +11864,9 @@
      "against_market": false,
      "league": "ncaaf",
      "like": {
-      "n": 241,
+      "n": 242,
       "said": 64,
-      "won": 197
+      "won": 198
      },
      "match": "NEB @ ILL",
      "pick": "Nebraska Cornhuskers",
