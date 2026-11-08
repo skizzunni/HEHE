@@ -60,7 +60,7 @@ Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 6
 - LOST jpn Shimizu S-Pulse or draw at 67% (-260), Shimizu S-Pulse 0 - Tokyo Verdy 1969 1: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 9 of 16 (56% vs 69% stated)
 LEAK epl: 62.5% hit vs 73.1% claimed on 24 calls (14 days)
 Locks 7/11 won, 0 open; Best play top 2 (59%) won; lost: NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack) Duke Blue Devils 41 - NC State Wolfpack 3; Under 236.5 points (Orlando Magic at Golden State Warriors) Orlando Magic 119 - Golden State Warriors 126; Florida Gators over 18.5 points (Oklahoma Sooners at Florida Gators) Oklahoma Sooners 23 - Florida Gators 7; LSU Tigers +4.5 (Alabama Crimson Tide at LSU Tigers) Alabama Crimson Tide 31 - LSU Tigers 13.
-Safe Locks 8/11 won, 3 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
+Safe Locks 9/11 won, 2 open; Winners parlay top 2 (85%) won; Best play top 7 (55%) open.
 Lottery 100: lost (4/8 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Over 56.5 points)
 Lottery 100: lost (2/6 legs won, killed by Missouri Tigers +3.5, Over 64.5 points, Over 50.5 points)
 Lottery 100: lost (2/5 legs won, killed by Kansas State Wildcats +1.5, Over 51.5 points, Purdue Boilermakers -10.5)
