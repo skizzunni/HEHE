@@ -10443,10 +10443,10 @@
    },
    {
     "flag": false,
-    "hit": 53.4,
-    "n": 292,
+    "hit": 53.1,
+    "n": 294,
     "name": "kalshi maker bids (filled)",
-    "said": 54.1
+    "said": 54.2
    }
   ],
   "big_files": [],
@@ -10537,11 +10537,11 @@
     ]
    }
   },
-  "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 833/1065 vs 82%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 38/59 vs 75%. Running ahead: NBA under on all saved lines 1053/1186 vs 82%; NCAAF over on all saved lines 800/947 vs 81%; NHL over on all saved lines 130/145 vs 83%; NHL spread on all saved lines 279/321 vs 83%; NHL teamover on all saved lines 174/197 vs 82%.",
+  "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 833/1065 vs 82%; NFL teamunder on all saved lines 311/402 vs 82%. Running ahead: NBA under on all saved lines 1053/1186 vs 82%; NCAAF over on all saved lines 800/947 vs 81%; NHL over on all saved lines 130/145 vs 83%; NHL spread on all saved lines 279/321 vs 83%; NHL teamover on all saved lines 174/197 vs 82%.",
   "clv": {
    "avg": 0.9,
-   "beat": 51.7,
-   "n": 151
+   "beat": 52.0,
+   "n": 152
   },
   "cold": "Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.6% for the rest (1524 and 8298 legs), so a cold week is noise, not a signal.",
   "day": "2026-11-07",
@@ -10938,9 +10938,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 159,
+     "n": 160,
      "said": 69,
-     "won": 119
+     "won": 120
     },
     "match": "ODU @ CCU",
     "pick": "Coastal Carolina Chanticleers",
@@ -10997,9 +10997,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 190,
+     "n": 191,
      "said": 68,
-     "won": 146
+     "won": 147
     },
     "match": "GAST @ APP",
     "pick": "App State Mountaineers",
@@ -11188,9 +11188,9 @@
     "against_market": false,
     "league": "ncaaf",
     "like": {
-     "n": 107,
+     "n": 108,
      "said": 73,
-     "won": 77
+     "won": 78
     },
     "match": "ORE @ OSU",
     "pick": "Ohio State Buckeyes",
@@ -11481,12 +11481,12 @@
    }
   ],
   "picks": {
-   "hit": 75.5,
+   "hit": 75.7,
    "lost": 37,
-   "n": 151,
-   "roi": 0.6,
+   "n": 152,
+   "roi": 0.9,
    "said": 71.8,
-   "won": 114
+   "won": 115
   },
   "picks_by_league": {
    "arg": {
@@ -11674,12 +11674,12 @@
     "won": 1
    },
    "ncaaf": {
-    "hit": 68.3,
+    "hit": 69.0,
     "lost": 13,
-    "n": 41,
-    "roi": -4.8,
-    "said": 69.3,
-    "won": 28
+    "n": 42,
+    "roi": -3.8,
+    "said": 69.4,
+    "won": 29
    },
    "nhl": {
     "hit": 88.9,
@@ -11786,7 +11786,7 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 87.2,
+   "as_bad_pct": 88.1,
    "broke_on": "jpn Nagoya Grampus or draw at 76%",
    "coin_flips": 5,
    "expected_by_league": {
@@ -11802,12 +11802,12 @@
     "jpn": 1.4,
     "mex": 0.8,
     "mls": 3.7,
-    "ncaaf": 12.6,
+    "ncaaf": 12.9,
     "nhl": 3.8,
     "sco": 1.3,
     "wsl": 0.3
    },
-   "expected_losses": 42.6,
+   "expected_losses": 42.9,
    "lost": 37,
    "lost_by_league": {
     "arg": 1,
@@ -11827,8 +11827,8 @@
     "sco": 2,
     "wsl": 1
    },
-   "open": 18,
-   "won": 114
+   "open": 17,
+   "won": 115
   },
   "vs_market_14d": {
    "against": {
@@ -11837,10 +11837,10 @@
    "agree": {
     "hit": 76.1,
     "lost": 271,
-    "n": 1134,
+    "n": 1135,
     "roi": 1.4,
     "said": 71.6,
-    "won": 863
+    "won": 864
    }
   },
   "weights": {
@@ -11854,12 +11854,12 @@
     "weight": 0.0
    },
    "ncaaf": {
-    "fitted": 0.25,
+    "fitted": 0.2,
     "held_out": false,
-    "logloss": 0.591,
-    "market_only": 0.594,
-    "model_40": 0.5929,
-    "n": 217,
+    "logloss": 0.5899,
+    "market_only": 0.5927,
+    "model_40": 0.592,
+    "n": 218,
     "weight": 0.0
    },
    "nfl": {
