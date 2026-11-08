@@ -65,12 +65,12 @@ Lottery 100: lost (2/6 legs won, killed by Missouri Tigers +3.5, Over 64.5 point
 Lottery 100: lost (2/5 legs won, killed by Kansas State Wildcats +1.5, Over 51.5 points, Purdue Boilermakers -10.5)
 Lottery 10k: lost (3/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points, Kansas State Wildcats +1.5)
 Lottery 10k: lost (4/9 legs won, killed by Over 8.5 goals, Over 50.5 points)
-Lottery 10k: lost (5/12 legs won, killed by Over 51.5 points, Over 55.5 points, Rutgers Scarlet Knights +5.5, Utah Mammoth to win, Over 55.5 points)
+Lottery 10k: lost (6/12 legs won, killed by Over 51.5 points, Over 55.5 points, Rutgers Scarlet Knights +5.5, Utah Mammoth to win, Over 55.5 points)
 Lottery 10k+25: lost (4/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points)
 Lottery 10k+50: lost (4/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points)
 Lottery 10k+100: lost (3/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points)
-Ladder-consistency props (all time): 1764/2117 won (83.3%) vs 86.4% fair, 87.5% price.
-Props 88/106 vs 81.0% claimed.
+Ladder-consistency props (all time): 1770/2123 won (83.4%) vs 86.4% fair, 87.5% price.
+Props 94/112 vs 81.2% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=136), ncaaf 0.00 (n=220), nfl 0.00 (n=42), nhl 0.00 (n=156)
