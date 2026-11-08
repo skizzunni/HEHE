@@ -998,6 +998,11 @@ def yesterday_line(y):
                if ys.get("expected_losses") is not None and ys.get("lost") else "") + ".")
 
 
+def pct_text(x):
+    """A small percentage in words: 'under 0.1%' rather than a rounded 0%."""
+    return "under 0.1%" if x is not None and x < 0.1 else f"{x:g}%"
+
+
 def sweep_line(sw):
     """Today's board as one ticket: record, clean or the pick that broke it,
     and once broken how unusual that many losses is from the chances."""
@@ -1006,9 +1011,9 @@ def sweep_line(sw):
     return (f"Board sweep: {sw['won']}-{sw['lost']}, {sw['open']} open -- "
             + (f"broken (first loss: {sw['broke_on']})" if sw.get("lost") else "still clean")
             + (f"; {sw['expected_losses']:g} losses expected from the settled picks' chances,"
-               f" so {sw['lost']} or more by now had a {sw['as_bad_pct']:g}% chance"
+               f" so {sw['lost']} or more by now had a {pct_text(sw['as_bad_pct'])} chance"
                if sw.get("lost") and sw.get("expected_losses") is not None else "")
-            + (f" -- an unusually good day: only {sw['as_good_pct']:g}% of days go this well this far in"
+            + (f" -- an unusually good day: only {pct_text(sw['as_good_pct'])} of days go this well this far in"
                if sw.get("as_good_pct") is not None and sw["as_good_pct"] < 10 and sw.get("lost") is not None
                and (sw.get("won") or 0) + sw["lost"] >= 10 else "")
             + (f"; {sw['coin_flips']} of the {sw['lost']} were near coin flips (called under 60%),"

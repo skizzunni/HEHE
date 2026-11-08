@@ -4279,3 +4279,4 @@ props 11/17 (6/7 then 5/10) vs ~80% stated -- short only recently and on 17 legs
 (2026-11-08).
 From Nov 9 the ladder ticket shows its chance and payout against the plain top-4 ticket (`report` today
 vs_top4; board note under the legs) (2026-11-08).
+Small chances read "under 0.1%" (review) and "under 0.5%" (board) instead of a rounded 0% (2026-11-08).

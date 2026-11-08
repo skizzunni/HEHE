@@ -42,6 +42,10 @@ class ReviewSweepLine(unittest.TestCase):
         good = daily_review.sweep_line(dict(won=52, lost=8, open=51, broke_on="x", expected_losses=15.5, as_bad_pct=99.5,
                                             as_good_pct=2.1, coin_flips=0))
         self.assertIn("-- an unusually good day: only 2.1% of days go this well this far in", good)
+        tiny = daily_review.sweep_line(dict(won=76, lost=10, open=25, broke_on="x", expected_losses=23, as_bad_pct=100.0,
+                                            as_good_pct=0.04, coin_flips=0))
+        self.assertIn("only under 0.1% of days go this well", tiny)
+        self.assertEqual(daily_review.pct_text(12.5), "12.5%")
         y = dict(day="2026-11-06", sweep=dict(won=40, lost=9, broke_on="arg San Lorenzo at 68%", expected_losses=13.3, as_bad_pct=95.0))
         self.assertEqual(daily_review.yesterday_line(y), "Yesterday (2026-11-06): board 40-9, sweep broken by arg San Lorenzo at 68%;"
                          " 13.3 losses expected, 9 came in (95% chance of that many or more).")
