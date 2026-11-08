@@ -87,6 +87,12 @@ class Ladder(unittest.TestCase):
             r = ladder.report(b, start="2026-11-03")
         self.assertEqual([(g["n"], g["lost_on"]) for g in r["log"]], [(5, []), (5, ["2026-11-04|e"])])
 
+    def test_count_record_games_only(self):
+        b = book({"2026-11-03": W5})
+        b["legs"]["2026-11-03|a"]["kind"] = "prop"
+        got = {c["legs"]: c["n"] for c in ladder.count_record(b, "", hi=5, games_only=True)}
+        self.assertEqual(got, {1: 1, 2: 1, 3: 1, 4: 1})                  # four game lines; a 5-leg games ticket is short
+
     def test_count_record(self):
         b = book({"2026-11-03": W5, "2026-11-04": W5[:2] + [("c", 0.8, "lost")] + W5[3:],
                   "2026-11-05": W5[:4] + [("e", 0.8, "open")]})

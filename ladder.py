@@ -49,6 +49,16 @@ FLEX_FROM, FLEX_MIN, FLEX_MAX = "2026-11-07", 1, 8
 PAY_MIN, PAY_MAX = 2.0, 5.0
 
 
+def games_ticket(book, day, n):
+    """The day's n likeliest Locks game lines (no player props), or []."""
+    keys = book["days"].get(day) or []
+    if isinstance(keys, dict):
+        keys = keys.get("legs") or []
+    legs = sorted((dict(book["legs"][k], key=k) for k in keys if k in book["legs"] and book["legs"][k].get("kind") != "prop"),
+                  key=lambda L: -L["p"])
+    return legs[:n] if len(legs) >= n else []
+
+
 def ticket(book, day, n=LEGS):
     """The day's n likeliest Locks legs, or [] when the card is short."""
     keys = book["days"].get(day) or []
@@ -120,7 +130,7 @@ def choose(book, day, bank=BANK0, target=TARGET):
     return best[1] if best else []
 
 
-def count_record(book=None, start=START, hi=FLEX_MAX):
+def count_record(book=None, start=START, hi=FLEX_MAX, games_only=False):
     """Every graded Locks card since start, as if the ladder had always used
     the top K legs (K = 1..hi): [{legs, won, n, pays}] -- days that K would
     have cashed, cards with K graded legs, and its average payout. Lets the
@@ -131,7 +141,7 @@ def count_record(book=None, start=START, hi=FLEX_MAX):
         won = n = 0
         pay = 0.0
         for day in sorted(d for d in book.get("days", {}) if d >= start):
-            legs = ticket(book, day, k)
+            legs = ticket(book, day, k) if not games_only else games_ticket(book, day, k)
             if not legs or any(L.get("status") not in ("won", "lost") for L in legs):
                 continue
             try:
@@ -273,6 +283,7 @@ def report(book=None, start=START, target=TARGET):
                                             said=round(100 * sum(L["p"] for L in G) / len(G), 1)) if G else None)(
                     [L for r in runs for d in r["days"] for L in d["legs"] if L.get("status") in ("won", "lost")]),
                 counts=count_record(book, ""),         # every saved Locks card, not just the ladder's
+        counts_games=count_record(book, "", games_only=True),   # the same with game lines only
         tickets=dict(won=sum(1 for r in runs for d in r["days"] if d["result"] == "won"),
                              n=sum(1 for r in runs for d in r["days"] if d["result"] in ("won", "lost"))),
                 # every settled day of every run: the bank after it (0 on a loss)

@@ -198,7 +198,7 @@ PROBE = """<script>setTimeout(function(){
   out.lflex = [ladderFlex(kl(10, 0.95, "-200"), 1, 10000).length, ladderFlex(kl(10, 0.6, "+150"), 1, 10000).length,
                ladderFlex(kl(10, 0.97, "-2000"), 1, 10000).length, ladderFlex([], 1, 10000).length];
   out.lopts2 = ladderOptions({legs: [1, 2, 3], options: [{legs: 1, prob: 0.9, pays: 1.5, need: 23, reach: 0.09, in_band: false}, {legs: 3, prob: 0.5, pays: 3.0, need: 9, reach: 0.002, in_band: true}]});
-  out.lcounts = [ladderCounts([{legs: 2, won: 15, n: 20, pays: 1.55}, {legs: 4, won: 10, n: 20, pays: 2.41}]), ladderCounts([])];
+  out.lcounts = [ladderCounts([{legs: 2, won: 15, n: 20, pays: 1.55}, {legs: 4, won: 10, n: 20, pays: 2.41}], [{legs: 4, won: 11, n: 22, pays: 2.39}]), ladderCounts([])];
   out.llog = ladderLog([{day: "2026-11-06", stake: 1, pays: 3.101, result: "lost", n: 5, lost_on: ["Austin Reaves: 4+ Assists"]},
                         {day: "2026-11-05", stake: 3.1, pays: 3.05, result: "won", n: 3, lost_on: []}], function(v){ return "$" + v.toFixed(2); });
   out.lopts = ladderOptions({legs: [1, 2, 3], options: [{legs: 3, prob: 0.5, pays: 1.9, need: 12, reach: 0.000244}, {legs: 5, prob: 0.3, pays: 3.0, need: 8, reach: 0.0000656}]});
@@ -532,6 +532,8 @@ def main():
     if not ("<td>2</td><td class=\"num\">15 of 20 (75%)</td><td class=\"num\">1.55&times; <span class=\"sbn\">(outside 2&ndash;5&times;)</span>" in lc[0]
             and "10 of 20 (50%)</td><td class=\"num\">2.41&times;</td>" in lc[0] and not lc[1]):
         fails.append("ladder counts table wrong: " + repr(lc)[:400])
+    if not ("<th class=\"num\">Game lines only</th>" in lc[0] and "<td class=\"num\">11 of 22</td>" in lc[0] and "<td class=\"num\">&ndash;</td>" in lc[0]):
+        fails.append("ladder games-only column wrong: " + lc[0][:600])
     ll = new.get("llog", "")
     if not ("<th>Legs</th>" in ll and "<td>2026-11-06</td><td>5</td><td>$1.00</td><td>3.10&times;</td>" in ll
             and "on Austin Reaves: 4+ Assists" in ll and "<td>2026-11-05</td><td>3</td>" in ll and ll.count("on Austin") == 1):
