@@ -6213,6 +6213,45 @@
    "tip": "9:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909958|home|Kalshi": {
+   "dec": 3.6563,
+   "ev": 0.0556,
+   "fair": 0.2887,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909958",
+   "kind": "suspect",
+   "league": "nba",
+   "match": "SA @ PHX",
+   "price": "+266",
+   "seen": "2026-11-08T19:46:52+00:00",
+   "side": "home",
+   "start": "2026-11-10T02:00Z",
+   "team": "Phoenix Suns",
+   "tip": "9:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909958|sure": {
+   "id": "nba:401909958",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-243",
+     "stake_share": 0.7215,
+     "team": "San Antonio Spurs",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "+266",
+     "stake_share": 0.2785,
+     "team": "Phoenix Suns",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "SA @ PHX",
+   "profit": 0.0184,
+   "seen": "2026-11-08T19:46:52+00:00"
+  },
   "ncaab:401906758|away|FanDuel": {
    "dec": 41.0,
    "ev": 0.0352,
