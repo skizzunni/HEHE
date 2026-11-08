@@ -74,7 +74,7 @@ Lottery 10k+100: lost (0/10 legs won, killed by Over 58.5 points, Under 162.5 po
 Lottery 100: lost (0/14 legs won, killed by Tee Higgins: 50+ Receiving Yards)
 Lottery 100: lost (0/11 legs won, killed by Under 162.5 points)
 Ladder-consistency props (all time): 1795/2153 won (83.4%) vs 86.4% fair, 87.5% price.
-Props 12/16 vs 81.2% claimed.
+Props 13/17 vs 81.2% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=139), ncaaf 0.00 (n=226), nfl 0.00 (n=43), nhl 0.00 (n=159)
