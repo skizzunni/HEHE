@@ -4230,3 +4230,6 @@ Tests for the UFC band record (`tools/ufc_bands.py`: price favourite chosen by d
 one-sided prices skipped). Study, no rule: NFL props at 70-95% on par or ahead in both halves -- receiving
 yards 103/125 then 79/93 (82%, 85% vs 82%), receptions 60/69 then 33/39 (87%, 85% vs 82-83%); passing
 yards and TDs short in the recent half on 13 and 6 legs only (2026-11-08).
+Every-game record split into US leagues and soccer/other by half (`every_game_record` by_group). Study, no
+rule: US 134/145 then 153/167 (92% vs 90%, ROI -2.8%, -3.7%); soccer/other 51/56 then 57/74 (91% then 77%
+vs 84%; ROI +3.4%, -13.0%) -- mixed (2026-11-08).

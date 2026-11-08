@@ -1816,6 +1816,11 @@ function everyGameHTML(){
     + (R.n ? 'Record: <b>' + R.won + ' of ' + R.n + '</b> (' + R.hit + '%) against ' + R.stated + '% stated, over '
         + R.days + ' days; ' + (R.roi >= 0 ? '+' : '') + R.roi + '% per $1 at the price. These are short prices: a win pays little.'
         + ((R.by_league || []).length > 1 ? ' By league: ' + R.by_league.slice(0, 6).map(x => esc(x.league) + ' ' + x.won + '/' + x.n).join(', ') + '.' : '')
+        + Object.keys(R.by_group || {}).map(k => {
+            const H = R.by_group[k], pc = h => h[1] ? Math.round(100 * h[0] / h[1]) + '% vs ' + Math.round(h[2]) + '%' : 'none';
+            return H.length === 2 && H[0][1] && H[1][1] ? ' ' + esc(k[0].toUpperCase() + k.slice(1)) + ' by half: ' + pc(H[0]) + ', then ' + pc(H[1])
+              + (H.every(h => 100 * h[0] / h[1] >= h[2]) ? ' (on or ahead both times).' : H.every(h => 100 * h[0] / h[1] < h[2]) ? ' (short both times).' : ' (mixed).') : '';
+          }).join('')
         + ((R.by_type || []).length > 1 ? ' By type: ' + R.by_type.map(x => esc(x.type) + ' ' + x.won + '/' + x.n).join(', ') + '.' : '')
         + ((R.by_start || []).length > 1 ? ' By start time: ' + R.by_start.map(x => esc(x.when) + ' ' + x.won + '/' + x.n).join(', ') + '.' : '') : '')
     + '</p>' + everySweep(G, R)

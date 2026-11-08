@@ -1352,7 +1352,21 @@ def every_game_record(path=None, led=None):
             a_, n_ = bs.get(k, (0, 0))
             bs[k] = (a_ + (g["status"] == "won"), n_ + 1)
     by_start = [dict(when=k, won=bs[k][0], n=bs[k][1]) for k in ("before 5 PM", "5-8 PM", "8 PM or later") if k in bs]
+    # US leagues against the rest (mostly soccer), by date half: 2026-11-08
+    # US 134/145 then 153/167 (92% vs 90%); soccer/other 51/56 then 57/74
+    # (91%, 77% vs 84%) -- mixed, so information only
+    US = {"ncaaf", "nhl", "nba", "nfl", "ncaab", "wnba", "mlb"}
+    mid_ = days[len(days) // 2]
+    by_group = {}
+    for grp in ("US leagues", "soccer and other"):
+        H = []
+        for h in (False, True):
+            X = [g for d, g in rows if ((g.get("league") or "") in US) == (grp == "US leagues") and (d >= mid_) == h]
+            H.append([sum(g["status"] == "won" for g in X), len(X), round(100 * sum(g["p"] for g in X) / len(X), 1) if X else None])
+        if any(x[1] for x in H):
+            by_group[grp] = H
     return dict(n=len(rows), won=w, hit=round(100 * w / len(rows), 1), by_league=by_league, by_type=by_type, by_start=by_start, swept=swept, last=last,
+                by_group=by_group,
                 stated=round(100 * sum(g["p"] for _, g in rows) / len(rows), 1),
                 roi=round(100 * ret / len(rows), 1), days=len(days), since=days[0])
 

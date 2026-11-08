@@ -274,7 +274,8 @@ PROBE = """<script>setTimeout(function(){
 EVERY = dict(preview=False, record=dict(n=427, won=386, hit=90.4, stated=88.5, roi=-3.0, days=14, since="2026-10-21", swept=0, last=dict(day="2026-11-04", won=27, n=30),
                                              by_league=[dict(league="NCAAF", won=86, n=91), dict(league="NBA", won=82, n=89)],
                                              by_type=[dict(type="game totals", won=137, n=149), dict(type="underdog +points", won=53, n=58)],
-                                             by_start=[dict(when="before 5 PM", won=164, n=189), dict(when="8 PM or later", won=100, n=107)]),
+                                             by_start=[dict(when="before 5 PM", won=164, n=189), dict(when="8 PM or later", won=100, n=107)],
+                                             by_group={"US leagues": [[134, 145, 90.0], [153, 167, 90.2]], "soccer and other": [[51, 56, 84.0], [57, 74, 84.0]]}),
              today=[dict(gid="nhl:1", label="Winnipeg Jets +4.5", price="-2000", p=0.917, match="WPG at MTL", league="nhl",
                          tip="7:00 PM", status="won", score="WPG 5 - MTL 4"),
                     dict(gid="nba:2", label="Over 200.5 points", price="-900", p=0.9, match="A at B", league="nba",
@@ -379,7 +380,8 @@ def main():
         fails.append("oneIn wrong: " + repr(new.get("oneIn")))
     eg = new.get("everyGame", "")
     if not all(x in eg for x in ("Every game: its safest bet (3 games, 1–0 so far)", "Live: 2nd 5:12 · C 1 - D 1", "Needs: Both teams together: 201 or more points", "Pays more at Kalshi: 88¢ (-800 after fee), $10 wins $1.25 vs $1.11 at FanDuel", "386 of 427", "90.4%",
-                                   "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89.", "By type: game totals 137/149, underdog +points 53/58.", "By start time: before 5 PM 164/189, 8 PM or later 100/107.", "Sweep odds: all 3 win 74%; the top 3 win 74%. The whole list has swept on 0 of 14 days. Last graded list (2026-11-04): 27 of 30.", "$10 on each (3 bets, $30 staked): +$2.28 if every one wins; expected −$0.77 from the stated chances.", "set at 8 AM", "By start time")):
+                                   "Winnipeg Jets +4.5", "WPG 5 - MTL 4", "By league: NCAAF 86/91, NBA 82/89.", "By type: game totals 137/149, underdog +points 53/58.", "By start time: before 5 PM 164/189, 8 PM or later 100/107.", "US leagues by half: 92% vs 90%, then 92% vs 90% (on or ahead both times).",
+                                   "Soccer and other by half: 91% vs 84%, then 77% vs 84% (mixed).", "Sweep odds: all 3 win 74%; the top 3 win 74%. The whole list has swept on 0 of 14 days. Last graded list (2026-11-04): 27 of 30.", "$10 on each (3 bets, $30 staked): +$2.28 if every one wins; expected −$0.77 from the stated chances.", "set at 8 AM", "By start time")):
         fails.append("every game section wrong: " + eg)
     ow = new.get("own", "")
     if not all(x in ow for x in ("mine 232 right (60.7%)", "260 (68.1%)", "The market is ahead", "I take LAC</b> (60%)", "Where we disagreed, I was right: NCAAF 8 of 25, NBA 5 of 23.")):
