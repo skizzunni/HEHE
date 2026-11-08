@@ -347,6 +347,7 @@
    "cost": 0.7731,
    "edge": 0.0199,
    "fair": 0.7885,
+   "fill": "touch",
    "id": "ncaaf:401856851",
    "label": "Houston Cougars",
    "league": "ncaaf",
@@ -359,8 +360,9 @@
     "team": "Houston Cougars"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07CINHOU-HOU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07CINHOU-HOU",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07CLEMSYR-CLEM|YES": {
    "ask": 0.53,
@@ -2977,6 +2979,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856851",
    "label": "Houston Cougars -10.5",
    "league": "ncaaf",
@@ -2990,8 +2993,9 @@
     "team": "Houston Cougars"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07CINHOU-HOU11"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07CINHOU-HOU11",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07CLEMSYR-CLEM2|NO": {
    "ask": 0.51,
@@ -3369,6 +3373,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401864534",
    "label": "Northern Illinois Huskies +11.5",
    "league": "ncaaf",
@@ -3382,8 +3387,9 @@
     "team": "Northern Illinois Huskies"
    },
    "start": "2026-11-07T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07NIUSJSU-SJSU12"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07NIUSJSU-SJSU12",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07ODUCCAR-CCAR7|YES": {
    "ask": 0.52,
@@ -3939,6 +3945,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401871076",
    "label": "Western Kentucky Hilltoppers -1.5",
    "league": "ncaaf",
@@ -3952,8 +3959,9 @@
     "team": "Western Kentucky Hilltoppers"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07WKUMTU-WKU2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07WKUMTU-WKU2",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07WKUMTU-WKU3|NO": {
    "ask": 0.51,
@@ -3961,6 +3969,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401871076",
    "label": "Middle Tennessee Blue Raiders +2.5",
    "league": "ncaaf",
@@ -3974,8 +3983,9 @@
     "team": "Middle Tennessee Blue Raiders"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07WKUMTU-WKU3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07WKUMTU-WKU3",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07WKUMTU-WKU3|YES": {
    "ask": 0.51,
@@ -3983,6 +3993,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401871076",
    "label": "Western Kentucky Hilltoppers -2.5",
    "league": "ncaaf",
@@ -3996,8 +4007,9 @@
     "team": "Western Kentucky Hilltoppers"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07WKUMTU-WKU3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07WKUMTU-WKU3",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07WVUTTU-TTU17|NO": {
    "ask": 0.51,
@@ -7398,6 +7410,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856851",
    "label": "under 61.5",
    "league": "ncaaf",
@@ -7410,8 +7423,9 @@
     "t": "under"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07CINHOU-62"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07CINHOU-62",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07CINHOU-62|YES": {
    "ask": 0.51,
@@ -7419,6 +7433,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856851",
    "label": "over 61.5",
    "league": "ncaaf",
@@ -7431,8 +7446,9 @@
     "t": "over"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07CINHOU-62"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07CINHOU-62",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07CLEMSYR-50|YES": {
    "ask": 0.51,
@@ -7658,6 +7674,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401871098",
    "label": "under 48.5",
    "league": "ncaaf",
@@ -7670,8 +7687,9 @@
     "t": "under"
    },
    "start": "2026-11-07T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07LTTROY-49"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07LTTROY-49",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07MDPUR-57|YES": {
    "ask": 0.51,
@@ -7767,6 +7785,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401864534",
    "label": "under 52.5",
    "league": "ncaaf",
@@ -7779,8 +7798,9 @@
     "t": "under"
    },
    "start": "2026-11-07T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07NIUSJSU-53"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07NIUSJSU-53",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07ODUCCAR-44|YES": {
    "ask": 0.52,
@@ -7970,6 +7990,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401858517",
    "label": "under 45.5",
    "league": "ncaaf",
@@ -7982,8 +8003,9 @@
     "t": "under"
    },
    "start": "2026-11-07T21:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07RUTGWIS-46"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07RUTGWIS-46",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07RUTGWIS-47|NO": {
    "ask": 0.52,
@@ -7991,6 +8013,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "ncaaf:401858517",
    "label": "under 46.5",
    "league": "ncaaf",
@@ -8003,8 +8026,9 @@
     "t": "under"
    },
    "start": "2026-11-07T21:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07RUTGWIS-47"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07RUTGWIS-47",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07SHSUJVST-46|YES": {
    "ask": 0.51,
@@ -8431,6 +8455,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "ncaaf:401871076",
    "label": "under 53.5",
    "league": "ncaaf",
@@ -8443,8 +8468,9 @@
     "t": "under"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07WKUMTU-54"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07WKUMTU-54",
+   "won": 0
   },
   "KXNCAAFTOTAL-26OCT22ECUMEM-54|YES": {
    "ask": 0.51,
