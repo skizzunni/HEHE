@@ -743,6 +743,17 @@ function likeNote(league, r){
   const pct = Math.round(100 * R[0] / R[1]);
   return '<div class="sbn">Calls like this: ' + R[0] + ' of ' + R[1] + ' (' + pct + '% vs ' + Math.round(R[2]) + '% stated)</div>';
 }
+// UFC: how price favourites in this chance band have done since 2021 at
+// real DraftKings prices (tools/ufc_bands.py); close fights flagged
+function ufcNote(league, r){
+  if(league !== 'ufc' || typeof r.mc !== 'number') return '';
+  const B = D.ufc_bands || {}, c = r.mc;
+  const k = c < 60 ? '50-60' : c < 70 ? '60-70' : c < 80 ? '70-80' : '80-100';
+  const x = B[k];
+  return (c < 60 ? '<div class="lgw"><b>Close fight:</b> near a coin flip; stake small or skip.</div>' : '')
+    + (x && x.n ? '<div class="sbn">UFC favourites at ' + k + '% since 2021: ' + x.won + ' of ' + x.n + ' won ('
+      + Math.round(100 * x.won / x.n) + '%), ' + (x.roi >= 0 ? '+' : '') + x.roi + '% a bet at DraftKings prices.</div>' : '');
+}
 function drawNote(r){
   const X = (D.results || {}).draw_losses;
   if(!r.sw || !X || !X.lost) return '';
@@ -1112,7 +1123,7 @@ function renderView(){
              + '<span class="stripe"></span>' + esc(r.mp) + dog + val + '</td>'
              + (mixed ? '<td class="comp">' + esc(r.lg) + '</td>' : '')
              + '<td class="state">' + esc(r.t) + '</td>' + conf
-             + '<td class="why">' + esc(r.why) + safeNote(r) + bandCaution(league, r.mc) + likeNote(league, r) + drawNote(r) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
+             + '<td class="why">' + esc(r.why) + safeNote(r) + bandCaution(league, r.mc) + likeNote(league, r) + ufcNote(league, r) + drawNote(r) + moveNote(r) + injNote(r) + '</td>' + price + '</tr>';
       }).join("")
     + '</tbody></table>';
 }

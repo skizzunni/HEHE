@@ -4213,3 +4213,6 @@ straight bet is the favourite, and underdogs lose about 11% a bet (2026-11-08).
 UFC tracking fix: the review now grades the latest UFC card's picks against ESPN results
 (`ufc_model.card_record`, `daily_review.ufc_line`), since ESPN's UFC prices carry no capture time and so
 never become graded calls in the ledger. Nov 7 card: 9-5 (all 14 fights now priced) (2026-11-08).
+UFC picks on the board carry their band's record (`tools/ufc_bands.py` -> ufc_bands.json, board `ufcNote`)
+and a "close fight" flag under 60%. Price favourites since 2021 at DraftKings prices: 50-60% 482/859
+(-3.6% a bet), 60-70% 670/1035 (-4.6%), 70-80% 507/650 (-0.4%), 80%+ 270/306 (-0.1%) (2026-11-08).
