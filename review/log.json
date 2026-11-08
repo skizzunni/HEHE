@@ -12001,13 +12001,13 @@
   "card_missing": null,
   "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NHL over on all saved lines 129/144 vs 84%; NHL spread on all saved lines 272/315 vs 83%; NHL teamover on all saved lines 167/191 vs 82%.",
   "clv": {
-   "avg": 1.28,
-   "beat": 62.0,
-   "n": 79
+   "avg": 1.33,
+   "beat": 62.5,
+   "n": 80
   },
   "cold": null,
   "day": "2026-11-08",
-  "ladder": "Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards, Jalen Coker: 30+ Receiving Yards); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.",
+  "ladder": "Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1)); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.",
   "leaks_14d": [],
   "locks": {
    "lost": [
@@ -12029,7 +12029,7 @@
    "blowout": 42,
    "close game": 116,
    "coin flip": 42,
-   "favourite lost": 150,
+   "favourite lost": 151,
    "price moved against it": 31,
    "upset": 51
   },
@@ -12218,6 +12218,23 @@
      "close game"
     ],
     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "par",
+    "like": null,
+    "match": "DEP @ CPT",
+    "pick": "Cerro Porte\u00f1o",
+    "price": "-310",
+    "said": 70,
+    "score": {
+     "Cerro Porte\u00f1o": 1,
+     "Deportivo Recoleta": 1
+    },
+    "tags": [
+     "favourite lost"
+    ],
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 70% \u00b7 favourite lost"
    }
   ],
   "lottery": [
@@ -12316,10 +12333,10 @@
    }
   ],
   "picks": {
-   "hit": 88.6,
-   "lost": 9,
-   "n": 79,
-   "roi": 14.5,
+   "hit": 87.5,
+   "lost": 10,
+   "n": 80,
+   "roi": 13.1,
    "said": 73.3,
    "won": 70
   },
@@ -12500,6 +12517,14 @@
     "said": 78.0,
     "won": 1
    },
+   "par": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 70.0,
+    "won": 0
+   },
    "sco": {
     "hit": 50.0,
     "lost": 1,
@@ -12565,17 +12590,17 @@
    "won": 2
   },
   "strong": {
-   "hit": 86.8,
-   "lost": 9,
-   "n": 68,
-   "roi": 9.7,
-   "said": 74.2,
+   "hit": 85.5,
+   "lost": 10,
+   "n": 69,
+   "roi": 8.1,
+   "said": 74.1,
    "won": 59
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 100.0,
-   "as_good_pct": 0.1,
+   "as_bad_pct": 99.9,
+   "as_good_pct": 0.2,
    "broke_on": "jpn Gamba Osaka or draw at 68%",
    "coin_flips": 0,
    "expected_by_league": {
@@ -12584,21 +12609,23 @@
     "fra": 1.7,
     "ger2": 0.8,
     "jpn": 1.2,
+    "par": 0.3,
     "sco": 0.3,
     "swe": 0.3
    },
-   "expected_losses": 21.1,
-   "lost": 9,
+   "expected_losses": 21.4,
+   "lost": 10,
    "lost_by_league": {
     "chn": 1,
     "epl": 1,
     "fra": 3,
     "ger2": 1,
     "jpn": 1,
+    "par": 1,
     "sco": 1,
     "swe": 1
    },
-   "open": 32,
+   "open": 31,
    "won": 70
   },
   "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
@@ -12608,10 +12635,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 77.2,
-    "lost": 243,
-    "n": 1065,
-    "roi": 2.4,
+    "hit": 77.1,
+    "lost": 244,
+    "n": 1066,
+    "roi": 2.3,
     "said": 71.8,
     "won": 822
    }
