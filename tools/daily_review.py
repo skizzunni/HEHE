@@ -478,6 +478,21 @@ def ufc_next_line(today=None, ahead=7, picks_fn=None):
     return None
 
 
+def prop_fair_line():
+    """Props won against the book's fair chance and our capped one, by band."""
+    try:
+        import props_ledger
+        B = props_ledger.fair_bands()
+    except Exception:
+        return None
+    if not B:
+        return None
+    pc = lambda x: f"{round(100 * x[0] / x[1])}%" if x[1] else "-"
+    return "Props by the book's fair chance (won, by half; fair / our stated): " + "; ".join(
+        f"{b['band']} {pc(b['halves'][0])}, {pc(b['halves'][1])} ({round(b['halves'][1][2] or 0)}% / {round(b['halves'][1][3] or 0)}%)"
+        for b in B) + "."
+
+
 def form_line(min_n=100, gap=5):
     """Bet types running cold over the last 7 pool days (locks.pool_form):
     5+ points under their stated chance on 100+ legs, one line or None.
@@ -979,6 +994,8 @@ def words(r, fit):
         out.append(r["cold"])
     if r.get("prereg"):
         out.append(r["prereg"])
+    if r.get("prop_fair"):
+        out.append(r["prop_fair"])
     if r.get("ufc"):
         out.append(r["ufc"])
     if r.get("ufc_next"):
@@ -1097,6 +1114,7 @@ def main():
     log[today.isoformat()]["cautions"] = caution_line()
     log[today.isoformat()]["cold"] = form_line()
     log[today.isoformat()]["prereg"] = prereg_line()
+    log[today.isoformat()]["prop_fair"] = prop_fair_line()
     log[today.isoformat()]["card_missing"] = card_check()
     log[today.isoformat()]["ufc"] = ufc_line(today)
     log[today.isoformat()]["ufc_next"] = ufc_next_line(today)

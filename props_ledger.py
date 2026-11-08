@@ -418,6 +418,30 @@ def form(days=7, min_n=20, book=None):
             for (lg, m), (w, n, p) in sorted(g.items(), key=lambda kv: (str(kv[0][0]), str(kv[0][1]))) if n >= min_n]
 
 
+def fair_bands(book=None):
+    """Graded props by the book's no-vig chance band, both date halves:
+    [{band, halves: [[won, n, fair%, stated%], ...]}] -- whether the cap on
+    our stated chance (cap()) matches what heavy props really win.
+    2026-11-08: fair 90-97% won 84.5% then 83.5% (fair said 93%, stated 85%)."""
+    R = [e for e in (book if book is not None else load()).values() if e.get("status") in ("won", "lost")
+         and isinstance(e.get("p_fair"), (int, float)) and isinstance(e.get("p"), (int, float)) and e.get("date")]
+    if not R:
+        return []
+    days = sorted({e["date"] for e in R})
+    mid = days[len(days) // 2]
+    out = []
+    for name, lo, hi in (("70-80%", .70, .80), ("80-85%", .80, .85), ("85-90%", .85, .90), ("90%+", .90, 1.01)):
+        H = []
+        for h in (False, True):
+            X = [e for e in R if lo <= e["p_fair"] < hi and (e["date"] >= mid) == h]
+            H.append([sum(e["status"] == "won" for e in X), len(X),
+                      round(100 * sum(e["p_fair"] for e in X) / len(X), 1) if X else None,
+                      round(100 * sum(e["p"] for e in X) / len(X), 1) if X else None])
+        if any(x[1] for x in H):
+            out.append(dict(band=name, halves=H))
+    return out
+
+
 _LIVE = {}
 
 

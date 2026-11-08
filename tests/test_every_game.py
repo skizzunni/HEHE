@@ -173,3 +173,12 @@ class Prereg(unittest.TestCase):
         self.assertEqual((s["won"], s["n"], s["said"], s["verdict"]), (70, 100, 80.0, "short"))
         s = self._run([i % 10 < 8 for i in range(100)])
         self.assertEqual(s["verdict"], "fine")
+
+
+class PropFairBands(unittest.TestCase):
+    def test_bands_and_halves(self):
+        import props_ledger
+        book = {str(i): dict(status="won" if i % 4 else "lost", p_fair=0.93, p=0.85, date=f"2026-11-0{1 + i % 4}") for i in range(8)}
+        b = props_ledger.fair_bands(book)
+        self.assertEqual([x["band"] for x in b], ["90%+"])
+        self.assertEqual([h[:2] for h in b[0]["halves"]], [[2, 4], [4, 4]])

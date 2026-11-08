@@ -4238,3 +4238,7 @@ Ladder preview says how many legs the 2x-5x rule chose and why (board `ladderPre
 Review ladder line shows each open prop leg's record at a similar chance ("props like it"). Study, no rule:
 NFL receiving yards at lines of 30 or less 92/114 then 75/86 (81%, 87% vs 82-83%), on par overall
 (2026-11-08).
+Review "Props by the book's fair chance" line (`props_ledger.fair_bands`). Study, no rule: props the book
+prices 90%+ fair won 250/296 then 283/339 (84.5%, 83.5% vs ~93% fair) -- the book's chance overstates heavy
+props by ~9 pts in both halves, and our capped stated chance (~85%) matches what they win; 80-85% fair props
+won 85% then 87% (2026-11-08).
