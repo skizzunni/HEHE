@@ -1,13 +1,13 @@
 # Review 2026-11-07
 
-Picks 79-24 (76.7% vs 72.2% claimed, ROI +2.2%).
+Picks 79-25 (76.0% vs 72.0% claimed, ROI +1.2%).
 Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 14/23 vs 75%; NFL teamunder on all saved lines 311/402 vs 82%; NCAAF calls at 70-80% 34/54 vs 75%. Running ahead: NBA under on all saved lines 1005/1132 vs 82%; NHL over on all saved lines 117/132 vs 83%; NHL spread on all saved lines 258/298 vs 83%; NHL teamover on all saved lines 161/184 vs 82%.
-Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 439/581 (76% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.5% for the rest (1524 and 6847 legs), so a cold week is noise, not a signal.
+Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NCAAF spread 464/606 (77% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.5% for the rest (1524 and 6918 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.
 Strong calls 63-20 (75.9% vs 73.6% claimed).
-Closing line value: +0.92 points on 103 picks; beat the close on 51.5%.
-Board sweep: 79-24, 66 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 28.6 losses expected from the settled picks' chances, so 24 or more by now had a 87.5% chance; losses by league: efl1 4 (2.4 expected), ncaaf 4 (5.7 expected), epl 2 (1 expected), ger2 2 (1.2 expected), mls 2 (2.2 expected), sco 2 (1.3 expected), arg 1 (1.4 expected), chi 1 (0.5 expected), ecu 1 (0.4 expected), esp 1 (1.1 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
+Closing line value: +0.92 points on 104 picks; beat the close on 51.9%.
+Board sweep: 79-25, 65 open -- broken (first loss: jpn Nagoya Grampus or draw at 76%); 29.1 losses expected from the settled picks' chances, so 25 or more by now had a 84.7% chance; losses by league: ncaaf 5 (6.2 expected), efl1 4 (2.4 expected), epl 2 (1 expected), ger2 2 (1.2 expected), mls 2 (2.2 expected), sco 2 (1.3 expected), arg 1 (1.4 expected), chi 1 (0.5 expected), ecu 1 (0.4 expected), esp 1 (1.1 expected), facup 1 (2.5 expected), ita 1 (0.9 expected), jpn 1 (1.4 expected), wsl 1 (0.3 expected).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 18 (72% vs 68% stated)
 - LOST ger2 Holstein Kiel or draw at 65% (-230), Arminia Bielefeld 2 - Holstein Kiel 1: margin 1 · the book had my side favoured too · called at 65% · favourite lost · close game; picks like it: 13 of 16 (81% vs 68% stated)
@@ -32,7 +32,8 @@ Board sweep: 79-24, 66 open -- broken (first loss: jpn Nagoya Grampus or draw at
 - LOST ncaaf Arkansas State Red Wolves at 86% (-675), Arkansas State Red Wolves 17 - UL Monroe Warhawks 19: margin 2 · the book had my side favoured too · called at 86% · upset · close game; picks like it: 31 of 37 (84% vs 85% stated)
 - LOST mls Chicago Fire FC or draw at 76% (-425), Chicago Fire FC 3 - Columbus Crew 4: margin 1 · the book had my side favoured too · called at 76% · upset · close game; picks like it: 20 of 24 (83% vs 76% stated)
 - LOST mls Inter Miami CF at 71% (-320), Charlotte FC 3 - Inter Miami CF 3: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 71% · favourite lost
-Why picks lost (14 days): favourite lost 150, close game 126, upset 63, coin flip 45, blowout 42, price moved against it 29.
+- LOST ncaaf Delaware Blue Hens at 52% (-118), Delaware Blue Hens 40 - Kennesaw State Owls 42: margin 2 · the book had my side favoured too · called at 52% · coin flip · close game; picks like it: 120 of 198 (61% vs 53% stated)
+Why picks lost (14 days): favourite lost 150, close game 127, upset 63, coin flip 46, blowout 42, price moved against it 29.
 Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 68%; 13.9 losses expected, 9 came in (96.6% chance of that many or more).
 - LOST arg San Lorenzo or draw at 68% (-270), Platense 2 - San Lorenzo 0: margin 2 · the book had my side favoured too · called at 68% · favourite lost; picks like it: 12 of 19 (63% vs 69% stated)
 - LOST col Internacional de Bogotá or draw at 68% (-280), Boyacá Chicó FC 2 - Internacional de Bogotá 1: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 9 of 14 (64% vs 68% stated)
@@ -47,16 +48,16 @@ LEAK epl: 62.5% hit vs 73.1% claimed on 24 calls (14 days)
 Locks 2/11 won, 8 open; Best play top 2 (59%) open; lost: NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack) Duke Blue Devils 41 - NC State Wolfpack 3.
 Safe Locks 3/11 won, 8 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: lost (1/8 legs won, killed by Iowa State Cyclones +7.5)
-Lottery 100: lost (0/6 legs won, killed by Missouri Tigers +3.5)
+Lottery 100: lost (1/6 legs won, killed by Missouri Tigers +3.5)
 Lottery 100: lost (0/5 legs won, killed by Kansas State Wildcats +1.5, Over 51.5 points, Purdue Boilermakers -10.5)
 Lottery 10k: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5, Kansas State Wildcats +1.5)
-Lottery 10k: lost (0/9 legs won, killed by Over 8.5 goals)
+Lottery 10k: lost (1/9 legs won, killed by Over 8.5 goals)
 Lottery 10k: lost (2/12 legs won, killed by Over 51.5 points, Over 55.5 points, Over 55.5 points)
-Lottery 10k+25: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
+Lottery 10k+25: lost (2/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
 Lottery 10k+50: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
 Lottery 10k+100: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Missouri Tigers +3.5)
 Ladder-consistency props (all time): 1722/2068 won (83.3%) vs 86.4% fair, 87.5% price.
 Props 4/5 vs 77.0% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=132), ncaaf 0.00 (n=194), nfl 0.00 (n=42), nhl 0.00 (n=149)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=132), ncaaf 0.00 (n=195), nfl 0.00 (n=42), nhl 0.00 (n=149)
