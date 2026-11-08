@@ -6213,6 +6213,45 @@
    "tip": "9:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909957|away|Kalshi": {
+   "dec": 2.9824,
+   "ev": 0.1664,
+   "fair": 0.3911,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909957",
+   "kind": "suspect",
+   "league": "nba",
+   "match": "DEN @ HOU",
+   "price": "+198",
+   "seen": "2026-11-08T22:31:00+00:00",
+   "side": "away",
+   "start": "2026-11-10T01:30Z",
+   "team": "Denver Nuggets",
+   "tip": "8:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909957|sure": {
+   "id": "nba:401909957",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+198",
+     "stake_share": 0.3495,
+     "team": "Denver Nuggets",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-166",
+     "stake_share": 0.6505,
+     "team": "Houston Rockets",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "DEN @ HOU",
+   "profit": 0.0424,
+   "seen": "2026-11-08T22:31:00+00:00"
+  },
   "nba:401909957|{\"line\": -4.5, \"t\": \"spread\", \"team\": \"Houston Rockets\"}|Kalshi": {
    "dec": 2.0513,
    "dk": "-110",
