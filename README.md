@@ -4242,3 +4242,5 @@ Review "Props by the book's fair chance" line (`props_ledger.fair_bands`). Study
 prices 90%+ fair won 250/296 then 283/339 (84.5%, 83.5% vs ~93% fair) -- the book's chance overstates heavy
 props by ~9 pts in both halves, and our capped stated chance (~85%) matches what they win; 80-85% fair props
 won 85% then 87% (2026-11-08).
+Review ladder line gives a live "N+" prop leg's pace (`daily_review.prop_pace`: stat so far over minutes
+played, from 25% of the game) (2026-11-08).

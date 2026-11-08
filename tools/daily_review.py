@@ -520,6 +520,41 @@ def form_line(min_n=100, gap=5):
 _PERIODS = {"nba": (4, 12), "wnba": (4, 10), "ncaab": (2, 20), "nfl": (4, 15), "ncaaf": (4, 15), "nhl": (3, 20)}
 
 
+def _elapsed(live, n, mins):
+    """Minutes played from a live clock like "9:23 - 2nd", or None."""
+    import re
+    c = re.search(r"(\d+):(\d+)\s*-\s*(\d)", live)
+    s = re.match(r"^\s*(\d+(?:\.\d+)?)\s*-\s*(\d)", live)
+    e = re.search(r"End of (\d)", live, re.I)
+    if c:
+        return (int(c.group(3)) - 1) * mins + (mins - (int(c.group(1)) + int(c.group(2)) / 60))
+    if s:
+        return (int(s.group(2)) - 1) * mins + (mins - float(s.group(1)) / 60)
+    if e:
+        return int(e.group(1)) * mins
+    if re.search(r"half", live, re.I):
+        return n * mins / 2
+    return None
+
+
+def prop_pace(L):
+    """A live "N+" prop's pace: "on pace for 14 (8 so far), behind the pace
+    it needs" -- None before 25% of the game or when it cannot be read."""
+    import re
+    F = _PERIODS.get(L.get("league") or "")
+    need = re.match(r"^\s*(\d+(?:\.\d+)?)\+\s*$", str(L.get("line") or ""))
+    if not (F and need and L.get("live") and L.get("so_far") is not None):
+        return None
+    v, target = float(L["so_far"]), float(need.group(1))
+    if v >= target:
+        return None
+    el = _elapsed(str(L["live"]), *F)
+    if not el or el < 0.25 * F[0] * F[1]:
+        return None
+    pace = v / el * F[0] * F[1]
+    return f"on pace for {round(pace)}, " + ("on track" if pace >= target else "behind the pace it needs")
+
+
 def pace_text(L):
     """The board's paceNote in words for a live game or team total: "on pace
     for 240, on track" / "already over" / "too early to project"; None when
@@ -591,6 +626,9 @@ def leg_text(L, mark=None):
                 if need:                    # "2+": reached, or how many more
                     left = float(need.group(1)) - float(v)
                     bit += ", line reached" if left <= 0 else f", needs {int(left) if left.is_integer() else left} more"
+                pp = prop_pace(L)
+                if pp:
+                    bit += f", {pp}"
             where.append(bit)
         else:
             where.append((f"{L['tip']}, " if L.get("tip") else "") + "open")

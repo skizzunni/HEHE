@@ -303,6 +303,17 @@ class ReviewLine(unittest.TestCase):
                          "Kyle Pitts: 25+ Receiving Yards (CIN @ ATL; 9:30 AM, open; props like it 144/176)")
 
 
+    def test_prop_pace(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review as d
+        L = dict(league="nfl", line="25+", so_far=8.0, live="3:19 - 2nd", label="Kyle Pitts: 25+ Receiving Yards", status="open",
+                 live_score="ATL 10 - CIN 21", match="CIN @ ATL")
+        self.assertEqual(d.prop_pace(L), "on pace for 18, behind the pace it needs")      # 8 in 26.7 of 60 minutes
+        self.assertIsNone(d.prop_pace(dict(L, live="10:00 - 1st")))                  # too early
+        self.assertIsNone(d.prop_pace(dict(L, so_far=30.0)))                         # already met
+        self.assertEqual(d.prop_pace(dict(L, so_far=20.0)), "on pace for 45, on track")
+        self.assertIn("8 so far, needs 17 more, on pace for 18, behind the pace it needs", d.leg_text(L))
+
     def test_pace_text(self):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
         import daily_review as d
