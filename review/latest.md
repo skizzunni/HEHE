@@ -8,7 +8,7 @@ Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting f
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Strong calls 1-0 (100.0% vs 74.0% claimed).
 Closing line value: +1.89 points on 1 picks; beat the close on 100.0%.
-Board sweep: 1-0, 95 open -- still clean.
+Board sweep: 1-0, 96 open -- still clean.
 Why picks lost (14 days): favourite lost 141, close game 110, upset 49, coin flip 42, blowout 39, price moved against it 28.
 Yesterday (2026-11-07): board 124-41, sweep broken by jpn Nagoya Grampus or draw at 76%; 47 losses expected, 41 came in (87.5% chance of that many or more).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 19 of 20 (95% vs 75% stated)
