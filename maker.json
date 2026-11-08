@@ -234,6 +234,7 @@
    "cost": 0.6739,
    "edge": 0.0129,
    "fair": 0.6826,
+   "fill": "strict",
    "id": "ncaaf:401856740",
    "label": "LSU Tigers",
    "league": "ncaaf",
@@ -246,8 +247,9 @@
     "team": "LSU Tigers"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07ALALSU-LSU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07ALALSU-LSU",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV07ARKAUB-AUB|YES": {
    "ask": 0.78,
@@ -7262,6 +7264,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401856740",
    "label": "over 52.5",
    "league": "ncaaf",
@@ -7274,8 +7277,9 @@
     "t": "over"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07ALALSU-53"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07ALALSU-53",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07ALALSU-54|NO": {
    "ask": 0.51,
@@ -7283,6 +7287,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856740",
    "label": "under 53.5",
    "league": "ncaaf",
@@ -7295,8 +7300,9 @@
     "t": "under"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07ALALSU-54"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07ALALSU-54",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07ARKAUB-55|NO": {
    "ask": 0.51,
