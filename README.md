@@ -4197,3 +4197,16 @@ UFC enrichment fix before any use: ESPN's away/home odds blocks are not in fight
 fighter), and a first pass keyed prices by block position -- the market "favourite" then won 35% and a fake
 +120% edge appeared for underdogs. Prices are now keyed by each block's own athlete id, as picks.ufc_picks
 already does; the 750 fights done the wrong way are being redone (2026-11-08).
+UFC studies on 2,850 fights with DraftKings prices since 2021 (`tools/ufc_study_rating.py`,
+`tools/ufc_study_stats.py`), date halves, real prices. No rule, nothing goes live:
+- Market favourite right 67.7%; the walk-forward fighter rating 55.8%.
+- Every favourite: 66% then 69% won, ROI -3.9% then -1.8%. Every underdog: 34% then 31%, ROI -11.1% both
+  halves (favourites slightly underpriced -- the usual longshot bias).
+- The rating's pick where it disagrees with the market: 36% then 30%, ROI -13.4% then -20.2%.
+- Newcomers (1st/2nd UFC fight) vs veterans: 24/61 then 26/50, ROI -21.6% then +7.2% -- mixed, too few.
+- Total rounds 2.5: unders -14.2% then +3.7%, overs -3.3% then -7.6%; "both finish 60%+" unders 9/19 then
+  14/27 (-21% then +41%) -- noise.
+- Market + rolling fight stats (strike differential per minute, takedowns, win rate, reach, age), fit on the
+  first half: test log loss 0.5873 vs the market's 0.5871 -- adds nothing; betting its 5+ pt "edges" -15.8%.
+Conclusion: on this data the UFC price already holds what results, stats, reach and age say; the least-bad
+straight bet is the favourite, and underdogs lose about 11% a bet (2026-11-08).
