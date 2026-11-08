@@ -55,10 +55,10 @@ LEAK epl: 62.5% hit vs 73.1% claimed on 24 calls (14 days)
 Locks 5/11 won, 4 open; Best play top 2 (59%) won; lost: NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack) Duke Blue Devils 41 - NC State Wolfpack 3; LSU Tigers +4.5 (Alabama Crimson Tide at LSU Tigers) Alabama Crimson Tide 31 - LSU Tigers 13.
 Safe Locks 3/11 won, 8 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
 Lottery 100: lost (2/8 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Over 56.5 points)
-Lottery 100: lost (1/6 legs won, killed by Missouri Tigers +3.5, Over 64.5 points)
+Lottery 100: lost (2/6 legs won, killed by Missouri Tigers +3.5, Over 64.5 points)
 Lottery 100: lost (0/5 legs won, killed by Kansas State Wildcats +1.5, Over 51.5 points, Purdue Boilermakers -10.5)
 Lottery 10k: lost (1/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points, Kansas State Wildcats +1.5)
-Lottery 10k: lost (1/9 legs won, killed by Over 8.5 goals)
+Lottery 10k: lost (2/9 legs won, killed by Over 8.5 goals)
 Lottery 10k: lost (3/12 legs won, killed by Over 51.5 points, Over 55.5 points, Rutgers Scarlet Knights +5.5, Over 55.5 points)
 Lottery 10k+25: lost (2/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points)
 Lottery 10k+50: lost (2/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Over 64.5 points)
