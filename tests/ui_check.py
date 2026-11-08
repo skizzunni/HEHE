@@ -217,7 +217,7 @@ PROBE = """<script>setTimeout(function(){
   D.prereg = undefined;
   D.pool_form = []; out.cautionsNone = cautionsHTML();
   D.pool_form = pfS3; D.cold_check = ccS3; D.watch_pool = wpS3; D.locks_record = lrS3; D.safe_locks_record = slS3;
-  var vS = D.value; D.value = {bets: [], sure: [], record: {n: 328, won: 137, roi: -5.6, est_ev: 3.1, dates: ["2026-10-22", "2026-11-06"],
+  var vS = D.value; D.value = {bets: [], sure: [], record: {n: 328, won: 137, roi: -5.6, est_ev: 3.1, dates: ["2026-10-22", "2026-11-06"], halves: [{n: 234, won: 99, fair: 44.0, roi: -2.3}, {n: 137, won: 52, fair: 45.0, roi: -19.3}],
                                                               recent: {n: 98, won: 40, fair: 46.3, roi: -14.2, since: "2026-10-31"},
                                                               by_edge: [{band: "2-4%", n: 128, won: 53, roi: 4.2}, {band: "4%+", n: 37, won: 11, roi: -37.3}]}};
   try { out.valueRec = valueBets(); } catch(e) { out.valueRec = "ERR " + e; }
@@ -545,6 +545,8 @@ def main():
     if "Last 7 days: 40 of 98 (41% vs 46.3% fair), ROI -14.2%." not in new.get("valueRec", "") \
             or "By stated edge: 2-4% 53 of 128 (ROI +4.2%), 4%+ 11 of 37 (ROI -37.3%)." not in new.get("valueRec", ""):
         fails.append("value last-7 line wrong: " + new.get("valueRec", "")[:300])
+    if "By half of the record: 99 of 234 (42% vs 44% fair, ROI -2.3%), then 52 of 137 (38% vs 45% fair, ROI -19.3%) &ndash; behind in both halves" not in new.get("valueRec", ""):
+        fails.append("value halves wrong: " + new.get("valueRec", "")[-400:])
     kr = new.get("kindRec") or ["", "", "x"]
     if not ("Like this before: Locks 8 of 11 &middot; Safe Locks 26 of 29" in kr[0] and "Like this before: Safe Locks 5 of 5" in kr[1]) or kr[2]:
         fails.append("kind record line wrong: " + repr(kr))

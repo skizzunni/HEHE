@@ -374,9 +374,20 @@ def report(path=None, kind="value"):
         if xs:
             bands.append(dict(band=name, n=len(xs), won=sum(f["status"] == "won" for f in xs),
                               roi=round(100 * sum((f["dec"] - 1) if f["status"] == "won" else -1 for f in xs) / len(xs), 1)))
+    # both date halves (by the day first seen): whether the edge holds on
+    # bets the first half never saw
+    ds = sorted({f["seen"][:10] for f in fs})
+    mid = ds[len(ds) // 2]
+    halves = []
+    for h in (False, True):
+        xs = [f for f in fs if (f["seen"][:10] >= mid) == h]
+        if xs:
+            halves.append(dict(n=len(xs), won=sum(f["status"] == "won" for f in xs),
+                               fair=round(100 * sum(f.get("fair") or 0 for f in xs) / len(xs), 1),
+                               roi=round(100 * sum((f["dec"] - 1) if f["status"] == "won" else -1 for f in xs) / len(xs), 1)))
     return dict(n=len(fs), won=sum(f["status"] == "won" for f in fs),
                 est_ev=round(100 * sum(f["ev"] for f in fs) / len(fs), 2),
-                roi=round(100 * sum(ret) / len(fs), 2), recent=recent, by_edge=bands,
+                roi=round(100 * sum(ret) / len(fs), 2), recent=recent, by_edge=bands, halves=halves,
                 dates=[min(f["seen"][:10] for f in fs), max(f["seen"][:10] for f in fs)])
 
 

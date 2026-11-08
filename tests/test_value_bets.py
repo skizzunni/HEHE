@@ -247,3 +247,16 @@ class LeaveOneOut(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class Halves(unittest.TestCase):
+    def test_report_halves(self):
+        import tempfile, json, value_bets
+        finds = {}
+        for i, (day, st) in enumerate([("2026-11-01", "won"), ("2026-11-02", "lost"), ("2026-11-03", "lost"), ("2026-11-04", "won")]):
+            finds[str(i)] = dict(kind="value", status=st, dec=2.0, ev=0.03, fair=0.5, seen=day + "T12:00:00+00:00", start=day + "T18:00Z")
+        with tempfile.NamedTemporaryFile("w", suffix=".json", delete=False) as fh:
+            json.dump({"finds": finds}, fh)
+        r = value_bets.report(fh.name)
+        self.assertEqual([(h["won"], h["n"]) for h in r["halves"]], [(1, 2), (1, 2)])
+        self.assertEqual([h["roi"] for h in r["halves"]], [0.0, 0.0])

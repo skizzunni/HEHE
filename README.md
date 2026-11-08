@@ -4221,3 +4221,8 @@ favourite with its chance, close fights (under 60%) flagged (2026-11-08).
 Review raises "MISSING today's 8 AM Locks card" after 8:15 AM Eastern when the card is not saved
 (`daily_review.card_check`), since the ladder ticket is set from it. Study, no rule: J-League double
 chance 19/24 then 9/14 (79%, 64% vs 72-75%) -- mixed, so Gamba Osaka's 2-3 (68%) is not a leak (2026-11-08).
+Value bets record shows both date halves (`value_bets.report` halves; board "By half of the record").
+Study, no rule: value bets 99/234 then 52/137 (42% vs 44% fair, ROI -2.3%; 38% vs 45% fair, ROI -19.3%)
+-- behind in both halves; stated 4%+ edges 8/27 then 5/14 (ROI -37.6%, -25.2%); favourites (fair 50%+)
+short in both halves (53% vs 57%, 55% vs 61%). Overall 151/371 vs 164.7 fair (z ~ -1.4): the edges are
+not showing in results yet, but not past the bar to drop the section (2026-11-08).
