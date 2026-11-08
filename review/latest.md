@@ -5,7 +5,7 @@ Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards); the n
 Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%; NFL spread on all saved lines 238/306 vs 82%; NFL teamunder on all saved lines 180/239 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NFL over on all saved lines 135/154 vs 81%; NHL over on all saved lines 128/143 vs 84%; NHL spread on all saved lines 269/312 vs 83%; NHL teamover on all saved lines 166/190 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 5/9 (56% vs 81% stated); waiting for 100 legs.
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 87% (83% / 84%); 85-90% 87%, 84% (88% / 85%); 90%+ 84%, 83% (93% / 85%).
-UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
+UFC 2026-10-31: picks (the price favourite) 9-3; close fights (under 60%) 1 of 3; lost: JeongYeong Lee (56%) lost to Julian Erosa, Francis Marshall (64%) lost to Dakota Hope, Renato Moicano (55%) lost to Tom Nolan.
 Next UFC card 2026-11-14 (12 fights priced, 3 close): Bilal Hasan 86%; Melquizael Costa 75%; Ciryl Gane 68%; Bia Mesquita 66%; Terrance McKinney 66%; Kayla Harrison 63%; Donte Johnson 60%; Chris Duncan 60%; Uroš Medić 60%; Caio Borralho 59% (close); Stephen Thompson 56% (close); Evan Elder 52% (close).
 Strong calls 46-8 (85.2% vs 73.6% claimed).
 Closing line value: +1.27 points on 55 picks; beat the close on 58.2%.
