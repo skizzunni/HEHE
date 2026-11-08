@@ -207,7 +207,11 @@ PROBE = """<script>setTimeout(function(){
   D.watch_pool = []; D.locks_record = {}; D.safe_locks_record = {};
   D.pool_form = [{league: "ncaaf", t: "spread", won: 185, n: 252, said: 82}, {league: "nhl", t: "over", won: 60, n: 69, said: 84}];
   D.cold_check = {cold: [1261, 1524, 81.7], rest: [4856, 5850, 81.7]};
+  D.prereg = {name: "college + NFL spreads getting 7-13.5 points", won: 30, n: 40, said: 82, need: 100, verdict: "waiting"};
   out.cautionsCold = cautionsHTML();
+  out.prereg = [preregNote({name: "x", won: 0, n: 0, said: null, need: 100, verdict: "waiting"}),
+                preregNote({name: "x", won: 70, n: 100, said: 82, need: 100, verdict: "short"}), preregNote(null)];
+  D.prereg = undefined;
   D.pool_form = []; out.cautionsNone = cautionsHTML();
   D.pool_form = pfS3; D.cold_check = ccS3; D.watch_pool = wpS3; D.locks_record = lrS3; D.safe_locks_record = slS3;
   var vS = D.value; D.value = {bets: [], sure: [], record: {n: 328, won: 137, roi: -5.6, est_ev: 3.1, dates: ["2026-10-22", "2026-11-06"],
@@ -432,6 +436,11 @@ def main():
     if not ("Calls like this: 21 of 30 (70% vs 57% stated)" in ln[0] and "Calls like this: 10 of 15 (67% vs 67% stated)" in ln[1]
             and not ln[2] and not ln[3]):
         fails.append("calls-like-this note wrong: " + repr(ln))
+    pr = new.get("prereg") or ["", "", "x"]
+    if not ("<b>Pre-registered test:</b> college + NFL spreads getting 7-13.5 points, on legs saved from Nov 8: 30 of 40 (75% vs 82% stated) &middot; waiting for 100 legs."
+            in new.get("cautionsCold", "") and "no legs graded yet &middot; waiting for 100 legs" in pr[0]
+            and "70 of 100 (70% vs 82% stated) &middot; short again &ndash; proposing to drop this band" in pr[1] and not pr[2]):
+        fails.append("prereg note wrong: " + repr(pr))
     dn = new.get("drawn") or ["", "x", "x"]
     if not ("Straight win: a draw loses it. 21 of the 38 losses on 234 straight-win soccer picks were draws" in dn[0] and not dn[1] and not dn[2]):
         fails.append("draw note wrong: " + repr(dn))

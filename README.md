@@ -4186,3 +4186,5 @@ band, 10+ graded). Study, no rule: college football calls at 50-65% beat their s
 (26/39 then 24/32, 67% and 75% vs ~57%; z ~ 2.3) -- under the 99.5% bar, so no recalibration; the
 college 70-80% band that carried a caution came back to par in the recent half (23/31, 74% vs 74%), so
 that caution will drop by itself if it holds (2026-11-08).
+Board cautions section shows the pre-registered test's live status (`D.prereg` from `locks.prereg_status`,
+board `preregNote`) (2026-11-08).

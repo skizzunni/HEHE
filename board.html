@@ -1920,7 +1920,17 @@ function cautionsHTML(){
         + Math.round(100 * f.won / f.n) + '% vs ' + Math.round(f.said) + '%)').join(' &middot; ') + '.'
       + (cc[1] && cr[1] ? ' Tested walk-forward: legs of a type running cold won ' + (100 * cc[0] / cc[1]).toFixed(1) + '% the next day against '
         + (100 * cr[0] / cr[1]).toFixed(1) + '% for the rest, so a cold week is noise, not a reason to drop a leg.' : '') + '</p>' : '')
+    + preregNote(D.prereg)
     + '</details></div>';
+}
+// the pre-registered test (locks.prereg_status): a caution only becomes a
+// rule if it keeps failing on legs saved after it was written down
+function preregNote(P){
+  if(!P || !P.need) return '';
+  const rec = P.n ? P.won + ' of ' + P.n + ' (' + Math.round(100 * P.won / P.n) + '% vs ' + Math.round(P.said) + '% stated)' : 'no legs graded yet';
+  const what = {waiting: 'waiting for ' + P.need + ' legs', short: 'short again &ndash; proposing to drop this band',
+                fine: 'fine &ndash; the caution comes off'}[P.verdict] || '';
+  return '<p class="note"><b>Pre-registered test:</b> ' + String(P.name || '').replace(/[<>&"]/g, '') + ', on legs saved from Nov 8: ' + rec + ' &middot; ' + what + '.</p>';
 }
 // legs that carried a caution when the card was set, against the rest
 // (locks.caution_record): the fair test before a caution becomes a rule

@@ -625,6 +625,7 @@ def snapshot():
             out["spread_sides"] = locks.spread_sides()  # + vs - spreads per league, both halves
             out["bright_pool"] = locks.bright_pool()   # bet types ahead of their chance in both halves
             out["cold_check"] = locks.cold_check()     # does a cold week carry into the next day
+            out["prereg"] = locks.prereg_status()       # the pre-registered spread-band test
             out["spread_band_watch"] = locks.spread_band_watch()   # spread bands short in both halves
         except Exception as e_:
             print(f"pool caution skipped ({e_})", file=sys.stderr)
