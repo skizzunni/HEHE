@@ -5907,6 +5907,23 @@
    "tip": "6:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909946|away|Kalshi": {
+   "dec": 3.2841,
+   "ev": 0.0284,
+   "fair": 0.3131,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909946",
+   "kind": "value",
+   "league": "nba",
+   "match": "LAL @ DET",
+   "price": "+228",
+   "seen": "2026-11-08T18:19:24+00:00",
+   "side": "away",
+   "start": "2026-11-08T23:00Z",
+   "team": "Los Angeles Lakers",
+   "tip": "6:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909946|home|FanDuel": {
    "dec": 1.5319,
    "ev": 0.013,
@@ -6006,6 +6023,54 @@
    },
    "start": "2026-11-08T23:00Z",
    "team": "under 220.5",
+   "tip": "6:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909946|{\"line\": 7.5, \"t\": \"spread\", \"team\": \"Los Angeles Lakers\"}|FanDuel": {
+   "dec": 1.8696,
+   "dk": "-108",
+   "ev": 0.01,
+   "fair": 0.5402,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909946",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "LAL @ DET",
+   "price": "-115",
+   "seen": "2026-11-08T18:19:24+00:00",
+   "side": "{\"line\": 7.5, \"t\": \"spread\", \"team\": \"Los Angeles Lakers\"}",
+   "spec": {
+    "line": 7.5,
+    "t": "spread",
+    "team": "Los Angeles Lakers"
+   },
+   "start": "2026-11-08T23:00Z",
+   "team": "Los Angeles Lakers +7.5",
+   "tip": "6:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909946|{\"line\": 7.5, \"t\": \"spread\", \"team\": \"Los Angeles Lakers\"}|Kalshi": {
+   "dec": 1.8957,
+   "dk": "-108",
+   "ev": 0.0241,
+   "fair": 0.5402,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909946",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "LAL @ DET",
+   "price": "-112",
+   "seen": "2026-11-08T18:19:24+00:00",
+   "side": "{\"line\": 7.5, \"t\": \"spread\", \"team\": \"Los Angeles Lakers\"}",
+   "spec": {
+    "line": 7.5,
+    "t": "spread",
+    "team": "Los Angeles Lakers"
+   },
+   "start": "2026-11-08T23:00Z",
+   "team": "Los Angeles Lakers +7.5",
    "tip": "6:00 PM",
    "venue": "Kalshi"
   },
@@ -13573,6 +13638,26 @@
    "prob": 0.1748,
    "seen": "2026-11-07T23:39:34+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909946:away": {
+   "ev": 0.0378,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0377,
+     "fair": 0.3145,
+     "id": "nba:401909946",
+     "price": "+230",
+     "side": "away",
+     "spec": null,
+     "team": "Los Angeles Lakers"
+    }
+   ],
+   "payout": 3.3,
+   "prob": 0.3145,
+   "seen": "2026-11-08T18:19:24+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
