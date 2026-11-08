@@ -1017,6 +1017,7 @@
    "cost": 0.872,
    "edge": 0.0015,
    "fair": 0.8733,
+   "fill": "strict",
    "id": "ncaaf:401871075",
    "label": "Jacksonville State Gamecocks",
    "league": "ncaaf",
@@ -1029,8 +1030,9 @@
     "team": "Jacksonville State Gamecocks"
    },
    "start": "2026-11-08T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07SHSUJVST-JVST"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07SHSUJVST-JVST",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07TEMNAVY-NAVY|YES": {
    "ask": 0.71,
@@ -3681,6 +3683,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401871075",
    "label": "Jacksonville State Gamecocks -16.5",
    "league": "ncaaf",
@@ -3694,8 +3697,9 @@
     "team": "Jacksonville State Gamecocks"
    },
    "start": "2026-11-08T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07SHSUJVST-JVST17"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07SHSUJVST-JVST17",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07SHSUJVST-JVST18|NO": {
    "ask": 0.51,
@@ -3703,6 +3707,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": null,
    "id": "ncaaf:401871075",
    "label": "Sam Houston Bearkats +17.5",
    "league": "ncaaf",
@@ -3716,8 +3721,9 @@
     "team": "Sam Houston Bearkats"
    },
    "start": "2026-11-08T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07SHSUJVST-JVST18"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07SHSUJVST-JVST18",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07TEMNAVY-NAVY8|NO": {
    "ask": 0.52,
@@ -8150,6 +8156,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401871075",
    "label": "over 45.5",
    "league": "ncaaf",
@@ -8162,8 +8169,9 @@
     "t": "over"
    },
    "start": "2026-11-08T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07SHSUJVST-46"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07SHSUJVST-46",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07SHSUJVST-48|YES": {
    "ask": 0.52,
@@ -8171,6 +8179,7 @@
    "cost": 0.5044,
    "edge": 0.0363,
    "fair": 0.5227,
+   "fill": "strict",
    "id": "ncaaf:401871075",
    "label": "over 47.5",
    "league": "ncaaf",
@@ -8183,8 +8192,9 @@
     "t": "over"
    },
    "start": "2026-11-08T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07SHSUJVST-48"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07SHSUJVST-48",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07TEMNAVY-55|YES": {
    "ask": 0.52,
