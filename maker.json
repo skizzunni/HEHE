@@ -699,6 +699,7 @@
    "cost": 0.664,
    "edge": 0.0003,
    "fair": 0.6642,
+   "fill": null,
    "id": "ncaaf:401871098",
    "label": "Louisiana Tech Bulldogs",
    "league": "ncaaf",
@@ -711,8 +712,9 @@
     "team": "Louisiana Tech Bulldogs"
    },
    "start": "2026-11-07T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07LTTROY-LT"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07LTTROY-LT",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07MDPUR-PUR|YES": {
    "ask": 0.65,
@@ -829,6 +831,7 @@
    "cost": 0.7632,
    "edge": 0.01,
    "fair": 0.7708,
+   "fill": null,
    "id": "ncaaf:401864534",
    "label": "San Jos\u00e9 State Spartans",
    "league": "ncaaf",
@@ -841,8 +844,9 @@
     "team": "San Jos\u00e9 State Spartans"
    },
    "start": "2026-11-07T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07NIUSJSU-SJSU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07NIUSJSU-SJSU",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07ODUCCAR-CCAR|YES": {
    "ask": 0.69,
@@ -917,6 +921,7 @@
    "cost": 0.7236,
    "edge": 0.0111,
    "fair": 0.7316,
+   "fill": "touch",
    "id": "ncaaf:401858514",
    "label": "Ohio State Buckeyes",
    "league": "ncaaf",
@@ -929,8 +934,9 @@
     "team": "Ohio State Buckeyes"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07OREOSU-OSU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07OREOSU-OSU",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV07PSUWASH-WASH|YES": {
    "ask": 0.55,
@@ -982,6 +988,7 @@
    "cost": 0.8918,
    "edge": 0.0002,
    "fair": 0.892,
+   "fill": "queue",
    "id": "ncaaf:401858517",
    "label": "Wisconsin Badgers",
    "league": "ncaaf",
@@ -994,8 +1001,9 @@
     "team": "Wisconsin Badgers"
    },
    "start": "2026-11-07T21:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07RUTGWIS-WIS"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07RUTGWIS-WIS",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV07SHSUJVST-JVST|YES": {
    "ask": 0.88,
@@ -1137,6 +1145,7 @@
    "cost": 0.5843,
    "edge": 0.0222,
    "fair": 0.5973,
+   "fill": null,
    "id": "ncaaf:401856850",
    "label": "Kansas Jayhawks",
    "league": "ncaaf",
@@ -1149,8 +1158,9 @@
     "team": "Kansas Jayhawks"
    },
    "start": "2026-11-07T20:45Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV07UCFKU-KU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV07UCFKU-KU",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV07UCLAMINN-UCLA|YES": {
    "ask": 0.65,
@@ -3511,6 +3521,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "queue",
    "id": "ncaaf:401858514",
    "label": "Ohio State Buckeyes -7.5",
    "league": "ncaaf",
@@ -3524,8 +3535,9 @@
     "team": "Ohio State Buckeyes"
    },
    "start": "2026-11-07T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07OREOSU-OSU8"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07OREOSU-OSU8",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV07PSUWASH-WASH3|NO": {
    "ask": 0.51,
@@ -3761,6 +3773,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856850",
    "label": "UCF Knights +3.5",
    "league": "ncaaf",
@@ -3774,8 +3787,9 @@
     "team": "UCF Knights"
    },
    "start": "2026-11-07T20:45Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07UCFKU-KU4"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07UCFKU-KU4",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07UCFKU-KU6|NO": {
    "ask": 0.51,
@@ -3783,6 +3797,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856850",
    "label": "UCF Knights +5.5",
    "league": "ncaaf",
@@ -3796,8 +3811,9 @@
     "team": "UCF Knights"
    },
    "start": "2026-11-07T20:45Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV07UCFKU-KU6"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV07UCFKU-KU6",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV07UCLAMINN-UCLA4|NO": {
    "ask": 0.51,
@@ -8237,6 +8253,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": null,
    "id": "ncaaf:401856850",
    "label": "over 47.5",
    "league": "ncaaf",
@@ -8249,8 +8266,9 @@
     "t": "over"
    },
    "start": "2026-11-07T20:45Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07UCFKU-48"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07UCFKU-48",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV07UCFKU-49|NO": {
    "ask": 0.51,
@@ -8258,6 +8276,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856850",
    "label": "under 48.5",
    "league": "ncaaf",
@@ -8270,8 +8289,9 @@
     "t": "under"
    },
    "start": "2026-11-07T20:45Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV07UCFKU-49"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV07UCFKU-49",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV07UCLAMINN-39|NO": {
    "ask": 0.51,
