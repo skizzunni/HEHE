@@ -49,15 +49,15 @@ Yesterday (2026-11-06): board 42-9, sweep broken by arg San Lorenzo or draw at 6
 LEAK epl: 62.5% hit vs 73.1% claimed on 24 calls (14 days)
 Locks 2/11 won, 7 open; Best play top 2 (59%) open; lost: NC State Wolfpack +15.5 (Duke Blue Devils at NC State Wolfpack) Duke Blue Devils 41 - NC State Wolfpack 3; LSU Tigers +4.5 (Alabama Crimson Tide at LSU Tigers) Alabama Crimson Tide 31 - LSU Tigers 13.
 Safe Locks 3/11 won, 8 open; Winners parlay top 2 (85%) open; Best play top 7 (55%) open.
-Lottery 100: lost (1/8 legs won, killed by Iowa State Cyclones +7.5, Over 56.5 points)
+Lottery 100: lost (1/8 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Over 56.5 points)
 Lottery 100: lost (1/6 legs won, killed by Missouri Tigers +3.5)
 Lottery 100: lost (0/5 legs won, killed by Kansas State Wildcats +1.5, Over 51.5 points, Purdue Boilermakers -10.5)
-Lottery 10k: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Kansas State Wildcats +1.5)
+Lottery 10k: lost (1/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5, Kansas State Wildcats +1.5)
 Lottery 10k: lost (1/9 legs won, killed by Over 8.5 goals)
 Lottery 10k: lost (2/12 legs won, killed by Over 51.5 points, Over 55.5 points, Over 55.5 points)
-Lottery 10k+25: lost (2/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5)
-Lottery 10k+50: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5)
-Lottery 10k+100: lost (1/11 legs won, killed by Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5)
+Lottery 10k+25: lost (2/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5)
+Lottery 10k+50: lost (1/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5)
+Lottery 10k+100: lost (1/11 legs won, killed by New Mexico State Aggies +30.5, Iowa State Cyclones +7.5, Purdue Boilermakers -14.5, Over 56.5 points, Missouri Tigers +3.5)
 Ladder-consistency props (all time): 1722/2068 won (83.3%) vs 86.4% fair, 87.5% price.
 Props 5/6 vs 75.2% claimed.
 
