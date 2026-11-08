@@ -4188,3 +4188,8 @@ college 70-80% band that carried a caution came back to par in the recent half (
 that caution will drop by itself if it holds (2026-11-08).
 Board cautions section shows the pre-registered test's live status (`D.prereg` from `locks.prereg_status`,
 board `preregNote`) (2026-11-08).
+UFC fighter model, started (user: pick UFC winners for real, not just favourites). `tools/ufc_history.py`
+collects every UFC fight ESPN lists (event calendar per year, both US and UTC dates per card);
+`ufc_model.py` rates fighters Elo-style from results (finishes count more than split decisions), walk-forward,
+plus per-fighter finish rates for method props. Not used for any pick until it beats the favourite on fights
+it has not seen (2026-11-08).
