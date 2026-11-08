@@ -1,15 +1,15 @@
 # Review 2026-11-08
 
-Picks 11-2 (84.6% vs 71.8% claimed, ROI +12.0%).
-Ladder: run 3 ended (peak $1.00, lost on NC State Wolfpack +15.5); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
-Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 860/1101 vs 82%; NFL teamunder on all saved lines 311/402 vs 82%. Running ahead: NBA under on all saved lines 1081/1225 vs 82%; NHL over on all saved lines 135/151 vs 84%; NHL spread on all saved lines 286/331 vs 83%; NHL teamover on all saved lines 180/205 vs 82%.
-Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 82.7% the next day vs 82.1% for the rest (1524 and 8928 legs), so a cold week is noise, not a signal.
+Picks 12-2 (85.7% vs 72.1% claimed, ROI +12.7%).
+Ladder: run 4, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.44x (41% est.); 11 wins to $10,000; legs: Kyle Pitts: 25+ Receiving Yards (CIN @ ATL; 9:30 AM, open), Harold Fannin Jr.: 25+ Receiving Yards (CLE @ NO; 1:00 PM, open), Keenan Allen: 25+ Receiving Yards (DAL @ IND; 1:00 PM, open), Jalen Coker: 30+ Receiving Yards (DEN @ CAR; 1:00 PM, open).
+Cautions in force: NBA over on Locks 15/24 vs 75%; NBA over on all saved lines 807/1027 vs 82%; NFL teamunder on all saved lines 166/224 vs 82%. Running ahead: NBA under on all saved lines 1005/1143 vs 82%; NFL over on all saved lines 126/145 vs 81%; NHL over on all saved lines 128/143 vs 84%; NHL spread on all saved lines 269/312 vs 83%; NHL teamover on all saved lines 166/190 vs 82%.
+Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 145/197 (74% vs 82%); NFL spread 193/250 (77% vs 82%). Walk-forward: legs of a type running cold won 83.3% the next day vs 82.1% for the rest (1369 and 8556 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 0/0; waiting for 100 legs.
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (5 fights priced, 1 close): Bilal Hasan 86%; Ciryl Gane 68%; Kayla Harrison 63%; Uroš Medić 60%; Caio Borralho 59% (close).
-Strong calls 11-2 (84.6% vs 71.8% claimed).
-Closing line value: +2.69 points on 13 picks; beat the close on 76.9%.
-Board sweep: 11-2, 86 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 3.7 losses expected from the settled picks' chances, so 2 or more by now had a 92% chance; 0 of the 2 were near coin flips (called under 60%), 2 were real misses; losses by league: chn 1 (1.9 expected), jpn 1 (1.2 expected).
+Strong calls 12-2 (85.7% vs 72.1% claimed).
+Closing line value: +2.5 points on 14 picks; beat the close on 71.4%.
+Board sweep: 12-2, 85 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 3.9 losses expected from the settled picks' chances, so 2 or more by now had a 93.5% chance; 0 of the 2 were near coin flips (called under 60%), 2 were real misses; losses by league: chn 1 (1.9 expected), jpn 1 (1.2 expected).
 - LOST jpn Gamba Osaka or draw at 68% (-270), Cerezo Osaka 3 - Gamba Osaka 2: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 13 of 21 (62% vs 69% stated)
 - LOST chn Shenzhen Xinpengcheng at 77% (-450), Qingdao Hainiu 2 - Shenzhen Xinpengcheng 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 77% · upset
 Why picks lost (14 days): favourite lost 144, close game 112, upset 50, coin flip 42, blowout 40, price moved against it 30.
@@ -57,6 +57,14 @@ Yesterday (2026-11-07): board 125-43, sweep broken by jpn Nagoya Grampus or draw
 - LOST aus Macarthur FC or draw at 63% (-220), Brisbane Roar FC 2 - Macarthur FC 1: margin 1 · the book had my side favoured too · called at 63% · favourite lost · close game
 - LOST ncaaf UNLV Rebels at 60% (-162), UNLV Rebels 35 - Wyoming Cowboys 41: margin 6 · the book had my side favoured too · called at 60% · favourite lost · close game · price moved against it (7 pts); picks like it: 220 of 281 (78% vs 60% stated)
 - LOST ncaaf Oregon State Beavers at 63% (-185), Oregon State Beavers 21 - Texas State Bobcats 42: margin 21 · the book had my side favoured too · called at 63% · favourite lost · blowout · price moved against it (7 pts); picks like it: 212 of 260 (82% vs 63% stated)
+Locks 0/11 won, 11 open; Best play top 3 (52%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (52%) open.
+Lottery 10k: open (0/10 legs won)
+Lottery 10k: open (0/9 legs won)
+Lottery 10k: open (0/8 legs won)
+Lottery 10k+25: open (0/10 legs won)
+Lottery 10k+50: open (0/10 legs won)
+Lottery 10k+100: open (0/10 legs won)
 Ladder-consistency props (all time): 1790/2146 won (83.4%) vs 86.4% fair, 87.5% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
