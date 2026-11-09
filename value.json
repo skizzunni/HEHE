@@ -6503,6 +6503,51 @@
    "profit": 0.0184,
    "seen": "2026-11-08T19:46:52+00:00"
   },
+  "nba:401909959|sure": {
+   "id": "nba:401909959",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+456",
+     "stake_share": 0.1804,
+     "team": "New Orleans Pelicans",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-448",
+     "stake_share": 0.8196,
+     "team": "Golden State Warriors",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "NO @ GS",
+   "profit": 0.0026,
+   "seen": "2026-11-09T21:49:57+00:00"
+  },
+  "nba:401909959|{\"line\": 231.5, \"t\": \"over\"}|Kalshi": {
+   "dec": 2.1867,
+   "dk": "-106",
+   "ev": 0.0124,
+   "fair": 0.463,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909959",
+   "kind": "value",
+   "league": "nba",
+   "market": "over",
+   "match": "NO @ GS",
+   "price": "+119",
+   "seen": "2026-11-09T21:49:57+00:00",
+   "side": "{\"line\": 231.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 231.5,
+    "t": "over"
+   },
+   "start": "2026-11-10T03:00Z",
+   "team": "over 231.5",
+   "tip": "10:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909961|{\"line\": 215.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0513,
    "dk": "-106",
