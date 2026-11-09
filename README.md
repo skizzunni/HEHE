@@ -4299,3 +4299,5 @@ since 2021 at DraftKings prices (`ufc_bands.json`) (2026-11-09).
 Best-combination sensitivity (`tools/ladder_study.combo_study`): pool of the 6 likeliest 10/22, of 8 or 12
 11/22; capping tickets at 4 or 6 legs changes nothing. BEST_POOL 12 and BEST_MAX 6 stay (2026-11-09).
 Review ladder line compares the day's best-chance combination with the plain top-4 ticket (2026-11-09).
+"What a Lock is" now spells out the parlay odds at the card's own hit rate (2, 3 and 4 together), so a
+Lock reads as likely, not certain (2026-11-09).

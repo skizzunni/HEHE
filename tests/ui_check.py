@@ -600,6 +600,8 @@ def main():
     if not ("What a Lock is:</b> the likeliest bets on FanDuel today, not sure things. They have won <b>187 of 227</b> (82%), so about 1 in 6 loses, and several" in lm[0]
             and "What a Safe Lock is:" in lm[1] and "about 1 in 11 loses." in lm[1]) or lm[2]:
         fails.append("lock meaning wrong: " + repr(lm))
+    if "At that rate, all of them win: 2 together about 68%, 3 about 56%, 4 about 46%." not in lm[0]:
+        fails.append("lock parlay odds wrong: " + lm[0][-200:])
     lc2 = new.get("lchart") or ["", "x"]
     if not ("<svg" in lc2[0] and lc2[0].count("<circle") == 4 and "Run 1 starts: $1" in lc2[0] and "2026-11-04: $9.57" in lc2[0]) or lc2[1]:
         fails.append("ladder chart wrong: " + repr(lc2)[:300])

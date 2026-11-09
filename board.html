@@ -2030,7 +2030,9 @@ function lockMeaning(R, SAFE){
   const hit = R.won / R.legs, miss = Math.max(1, Math.round(1 / Math.max(1 - hit, 0.001)));
   return '<p class="coinbar"><b>What a ' + (SAFE ? 'Safe Lock' : 'Lock') + ' is:</b> the likeliest bets on FanDuel today, not sure things. '
     + 'They have won <b>' + R.won + ' of ' + R.legs + '</b> (' + Math.round(100 * hit) + '%), so about 1 in ' + miss + ' loses'
-    + (SAFE ? '.' : ', and several together lose more often than not.') + '</p>';
+    + (SAFE ? '.' : ', and several together lose more often than not.')
+    + ' At that rate, all of them win: 2 together about ' + Math.round(100 * hit * hit) + '%, 3 about ' + Math.round(100 * Math.pow(hit, 3))
+    + '%, 4 about ' + Math.round(100 * Math.pow(hit, 4)) + '%.</p>';
 }
 function drawLocks(){
   const SAFE = LKMODE === "safe";
