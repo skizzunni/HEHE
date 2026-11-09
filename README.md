@@ -4296,3 +4296,5 @@ Tests for `ladder.best_combo` edge cases: equal-chance tickets go to fewer legs,
 are searched, and nothing is chosen when no combination reaches 2x (2026-11-09).
 The review's "Next UFC card" line adds how price favourites in each of that card's chance bands have done
 since 2021 at DraftKings prices (`ufc_bands.json`) (2026-11-09).
+Best-combination sensitivity (`tools/ladder_study.combo_study`): pool of the 6 likeliest 10/22, of 8 or 12
+11/22; capping tickets at 4 or 6 legs changes nothing. BEST_POOL 12 and BEST_MAX 6 stay (2026-11-09).

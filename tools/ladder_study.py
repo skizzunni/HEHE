@@ -42,6 +42,28 @@ def study(book=None, sizes=(3, 4, 5), prior=10):
     return out
 
 
+def combo_study(book=None, pools=(6, 8, 12), maxes=(4, 6)):
+    """ladder.best_combo on every saved card for each pool size and leg cap:
+    {(pool, max): dict(won, n)}. 2026-11-09: pool 6 10/22, pools 8 and 12
+    11/22, the cap (4 or 6) changing nothing -- BEST_POOL 12 stays."""
+    import ladder
+    b = book or locks.load()
+    out = {}
+    for pool in pools:
+        for mx in maxes:
+            won = n = 0
+            for d in sorted(b["days"]):
+                keys = b["days"][d]
+                keys = keys.get("legs") if isinstance(keys, dict) else keys
+                legs = [dict(b["legs"][k], key=k) for k in keys or [] if k in b["legs"]]
+                c = ladder.best_combo(legs, pool=pool, maxk=mx)
+                if c and all(x.get("status") in ("won", "lost") for x in c):
+                    n += 1
+                    won += all(x["status"] == "won" for x in c)
+            out[(pool, mx)] = dict(won=won, n=n)
+    return out
+
+
 def calls_study(book=None, sizes=(2, 3, 4, 5, 6)):
     """The same idea from the board's calls: each day's top K calls by stated
     chance as one parlay, by date half -- {(K, half): dict(won, n, pays)}.

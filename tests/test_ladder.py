@@ -439,3 +439,13 @@ class CallsStudy(unittest.TestCase):
         r = ladder_study.calls_study(book, sizes=(2,))
         self.assertEqual(r[(2, "first")], dict(won=1, n=2, pays=2.25))
         self.assertEqual(r[(2, "second")], dict(won=2, n=2, pays=2.25))
+
+
+class ComboStudy(unittest.TestCase):
+    def test_combo_study(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import ladder_study
+        legs = {f"d{i}": dict(gid=f"g{i}", label=str(i), price="-200", p=0.75, status="won") for i in range(3)}
+        b = {"days": {"2026-11-01": list(legs)}, "legs": legs}
+        r = ladder_study.combo_study(b, pools=(3,), maxes=(2,))
+        self.assertEqual(r[(3, 2)], dict(won=1, n=1))        # two -200 legs: 2.25x, both won
