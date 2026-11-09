@@ -2141,7 +2141,66 @@ function drawLocks(){
           + '</td><td>' + (d.open ? 'pending' : (d.all_hit ? 'yes' : 'no')) + '</td><td>'
           + playCell((d.plays || {}).winners) + '</td></tr>').join("")
         + '</tbody></table></details>' : '');
-  panel.innerHTML = h + '</div>';
+  panel.innerHTML = h + parlayCheckHTML() + '</div>';
+  wireParlayCheck();
+}
+// ------------------------------------------------------------ check a parlay
+// Tick legs from today's two-way games (either side), enter the stake and
+// the book's total payout: the joint chance is the product of the board's
+// chances (the other side is 100 minus mine), against the chance the payout
+// needs to break even. Soccer is left out: a three-way game has no simple
+// other side. Independence is assumed; two legs from one game are flagged.
+function parlayLegs(){
+  const out = [];
+  Object.entries((D.slots || {}).today || {}).forEach(([lg, v]) => (v.rows || []).forEach((r, i) => {
+    if(typeof r.mc !== 'number' || r.sw || / or draw$/.test(r.mp || '')) return;
+    const g = lg + ':' + i;
+    out.push({id: g + ':m', g, label: r.mp, p: r.mc / 100, lg: r.lg || lg.toUpperCase(), t: r.t || ''});
+    out.push({id: g + ':o', g, label: 'Other side of ' + r.mp, p: 1 - r.mc / 100, lg: r.lg || lg.toUpperCase(), t: r.t || ''});
+  }));
+  return out;
+}
+function parlayCheck(legs, stake, payout){
+  if(!legs.length) return null;
+  const p = legs.reduce((a, L) => a * L.p, 1);
+  const games = legs.map(L => L.g);
+  const same = games.length !== new Set(games).size;
+  const need = stake > 0 && payout > stake ? stake / payout : null;
+  return {p, need, ev: need ? p * payout - stake : null, same, fair: p > 0 ? 1 / p : null};
+}
+function parlayText(c, stake){
+  if(!c) return 'Tick some legs.';
+  const pct = x => x >= 0.01 ? (100 * x).toFixed(1) + '%' : (100 * x).toFixed(2) + '%';
+  let t = 'Board chance all hit: <b>' + pct(c.p) + '</b> (about 1 in ' + Math.round(c.fair).toLocaleString('en-US') + ').';
+  if(c.need) t += ' The payout needs ' + pct(c.need) + ' to break even, so on the board\u2019s numbers this ticket is worth about '
+    + (c.ev >= 0 ? '+' : '\u2212') + '$' + Math.abs(c.ev).toFixed(2) + ' on $' + (+stake).toFixed(2) + '.';
+  if(c.same) t += ' Two legs share a game, so the real chance differs from this product.';
+  return t;
+}
+function parlayCheckHTML(){
+  const L = parlayLegs();
+  if(!L.length) return '';
+  return '<details class="pcheck"><summary><b>Check a parlay</b> &middot; tick legs, enter the payout</summary>'
+    + '<p class="note">From today\u2019s board: my side or the other side of each two-way game. Soccer is not included.</p>'
+    + '<p><label>Stake $<input id="pcStake" type="number" min="0" step="0.01" value="5" style="width:6em"></label> '
+    + '<label>Total payout $<input id="pcPay" type="number" min="0" step="0.01" style="width:8em"></label></p>'
+    + '<p id="pcOut" class="note">Tick some legs.</p><ul class="pclist" style="list-style:none;padding-left:0">'
+    + L.map(x => '<li><label><input type="checkbox" data-pc="' + esc(x.id) + '"> ' + esc(x.lg) + ' ' + esc(x.label)
+      + ' <span style="color:var(--ink-dim)">' + Math.round(100 * x.p) + '% &middot; ' + esc(x.t) + '</span></label></li>').join('')
+    + '</ul></details>';
+}
+function wireParlayCheck(){
+  const box = panel.querySelector('.pcheck');
+  if(!box) return;
+  const L = parlayLegs(), by = Object.fromEntries(L.map(x => [x.id, x]));
+  const go = () => {
+    const sel = [...box.querySelectorAll('input[data-pc]:checked')].map(i => by[i.dataset.pc]).filter(Boolean);
+    const stake = parseFloat(document.getElementById('pcStake').value) || 0;
+    const pay = parseFloat(document.getElementById('pcPay').value) || 0;
+    document.getElementById('pcOut').innerHTML = parlayText(parlayCheck(sel, stake, pay), stake);
+  };
+  box.addEventListener('input', go);
+  box.addEventListener('change', go);
 }
 // the record of the two plays the card names, so the Winners parlay is
 // checked against what it promised, not only whether all legs hit

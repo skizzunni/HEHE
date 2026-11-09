@@ -166,6 +166,8 @@ PROBE = """<script>setTimeout(function(){
   D.locks = lkS; D.ladder = ldS;
   out.likeN = [likeNote("ncaaf", {mc: 57, mp: "Purdue"}), likeNote("epl", {mc: 66, mp: "Tottenham Hotspur or draw"}),
                likeNote("epl", {mc: 66, mp: "Tottenham Hotspur"}), likeNote("ncaaf", {mp: "X"})];
+  var pcA = parlayCheck([{p: 0.5, g: "a"}, {p: 0.5, g: "b"}], 5, 25), pcB = parlayCheck([{p: 0.5, g: "a"}, {p: 0.8, g: "a"}], 0, 0);
+  out.pcheck = [parlayText(pcA, 5), parlayText(pcB, 0), parlayText(null, 5), String(parlayLegs().every(x => typeof x.p === "number"))];
   out.lkinds = [ladderKinds({game: {won: 16, n: 18, said: 75.7}, prop: {won: 7, n: 10, said: 79.3}}), ladderKinds({}), ladderKinds(undefined)];
   out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({}), drawNote({sd: "a"}), drawNote({sd: "h"})];
   out.bandc = [bandCaution("ncaaf", 72.5), bandCaution("ncaaf", 81), bandCaution("nfl", 72), bandCaution("ncaaf", undefined)];
@@ -498,6 +500,11 @@ def main():
     dn = new.get("drawn") or ["", "x", "x"]
     if not ("Straight win: a draw loses it. 21 of the 38 losses on 234 straight-win soccer picks were draws" in dn[0] and not dn[1] and not dn[2]):
         fails.append("draw note wrong: " + repr(dn))
+    pc = new.get("pcheck") or ["", "", "", ""]
+    if not ("Board chance all hit: <b>25.0%</b> (about 1 in 4). The payout needs 20.0% to break even" in pc[0]
+            and "+$1.25 on $5.00" in pc[0] and "Two legs share a game" in pc[1] and "break even" not in pc[1]
+            and pc[2] == "Tick some legs." and pc[3] == "true"):
+        fails.append("parlay check wrong: " + repr(pc))
     lk = new.get("lkinds") or ["", "x", "x"]
     if not (lk[0] == " By kind: game lines 16 of 18 (89% vs 76%), player props 7 of 10 (70% vs 79%)." and not lk[1] and not lk[2]):
         fails.append("ladder kinds wrong: " + repr(lk))
