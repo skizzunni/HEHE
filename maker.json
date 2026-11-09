@@ -13279,6 +13279,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "nfl:401873046",
    "label": "Los Angeles Chargers +5.5",
    "league": "nfl",
@@ -13292,8 +13293,9 @@
     "team": "Los Angeles Chargers"
    },
    "start": "2026-11-08T21:05Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV08HOULAC-HOU6"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV08HOULAC-HOU6",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV08HOULAC-HOU6|YES": {
    "ask": 0.51,
@@ -13301,6 +13303,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873046",
    "label": "Houston Texans -5.5",
    "league": "nfl",
@@ -13314,8 +13317,9 @@
     "team": "Houston Texans"
    },
    "start": "2026-11-08T21:05Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV08HOULAC-HOU6"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV08HOULAC-HOU6",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV08LARWAS-LAR5|NO": {
    "ask": 0.51,
