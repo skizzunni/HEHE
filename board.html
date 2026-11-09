@@ -1677,7 +1677,11 @@ function ladderBest(legs){
   return best ? best[1] : [];
 }
 function ladderPreview(){
-  const K = (D.locks || {}).today || {};
+  // before 8 AM: today's card as it stands; once today's card is set (and its
+  // ticket settled), tomorrow's card as it stands
+  const T0 = (D.locks || {}).today || {}, T1 = (D.locks || {}).tomorrow || {};
+  const tmw = !T0.preview && (T1.locks || []).length > 0;
+  const K = tmw ? T1 : T0;
   const X = D.ladder || {};
   // leg kinds kept off the ladder (ladder.SKIP_KINDS), matched like locks.kind_key
   const skip = (X.skip || []).map(k => k[0] + '|' + k[1]);
@@ -1685,10 +1689,10 @@ function ladderPreview(){
   const off = L => skip.indexOf(kindOf(L)) >= 0 || (L.kind === 'prop' && skip.indexOf((L.league || '') + '|prop') >= 0);
   const all = (K.locks || []).filter(L => (!L.status || L.status === 'open') && !off(L)).slice().sort((a, b) => b.p - a.p);
   const P = (ladderBest(all).length ? ladderBest(all) : ladderFlex(all, X.ended ? 1 : (X.bank || 1), X.target || 10000));
-  const msg = '<p class="empty">Today&rsquo;s ladder ticket is set with the 8 AM Eastern Locks card.</p>';
-  if(!K.preview || !P.length) return msg;
+  const msg = '<p class="empty">' + (tmw ? 'Tomorrow&rsquo;s' : 'Today&rsquo;s') + ' ladder ticket is set with the 8 AM Eastern Locks card.</p>';
+  if((!K.preview && !tmw) || !P.length) return msg;
   const pays = P.reduce((a, L) => a * (callWin(L.price) / 10 + 1), 1), prob = P.reduce((a, L) => a * L.p, 1);
-  return msg + '<p class="note">Preview, if the card were set now:</p><ul class="betlegs">'
+  return msg + '<p class="note">' + (tmw ? 'Early look at tomorrow, if its card were set now:' : 'Preview, if the card were set now:') + '</p><ul class="betlegs">'
     + P.map(L => '<li>' + esc(L.label) + ' <b>' + esc(L.price) + '</b> &middot; ' + (100 * L.p).toFixed(0) + '% &middot; '
       + esc(L.match || '') + '</li>').join('') + '</ul><p class="note">' + P.length + ' leg' + (P.length > 1 ? 's' : '')
     + (pays >= 2 && pays <= 5 ? ', the combination paying 2&ndash;5&times; with the best chance of all winning' : ', the count paying nearest 2&ndash;5&times;')

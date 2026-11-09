@@ -4288,3 +4288,5 @@ set only on the user's word; tested (2026-11-09).
 The ladder publishes its skip list (`report` skip) and the board preview honours it, so the preview and the
 8 AM ticket agree if a leg kind is ever kept off. Study, no rule: Querétaro or draw 0-2 at Puebla (78%) --
 picks like it 17/19 (2026-11-09).
+Ladder preview looks ahead: once today's card is set and its ticket settled, the board shows an early look
+at tomorrow's ticket from tomorrow's card as it stands (`ladderPreview`) (2026-11-09).
