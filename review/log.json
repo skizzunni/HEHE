@@ -11897,17 +11897,17 @@
    },
    {
     "flag": false,
-    "hit": 40.6,
-    "n": 374,
+    "hit": 40.5,
+    "n": 375,
     "name": "value bets",
-    "said": 44.7
+    "said": 44.6
    },
    {
     "flag": false,
-    "hit": 52.8,
-    "n": 326,
+    "hit": 52.9,
+    "n": 327,
     "name": "kalshi maker bids (filled)",
-    "said": 54.2
+    "said": 54.3
    }
   ],
   "big_files": [],
@@ -11999,11 +11999,11 @@
    }
   },
   "card_missing": null,
-  "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%. Running ahead: NBA under on all saved lines 1019/1157 vs 82%; NFL over on all saved lines 195/231 vs 81%; NHL over on all saved lines 131/146 vs 84%; NHL spread on all saved lines 275/319 vs 83%; NHL teamover on all saved lines 168/193 vs 82%.",
+  "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%. Running ahead: NBA under on all saved lines 1019/1157 vs 82%; NHL over on all saved lines 131/146 vs 84%; NHL spread on all saved lines 275/319 vs 83%; NHL teamover on all saved lines 168/193 vs 82%.",
   "clv": {
-   "avg": 1.41,
-   "beat": 63.6,
-   "n": 88
+   "avg": 1.39,
+   "beat": 64.4,
+   "n": 90
   },
   "cold": null,
   "day": "2026-11-08",
@@ -12341,14 +12341,22 @@
    }
   ],
   "picks": {
-   "hit": 88.6,
+   "hit": 88.9,
    "lost": 10,
-   "n": 88,
-   "roi": 14.6,
-   "said": 73.4,
-   "won": 78
+   "n": 90,
+   "roi": 14.7,
+   "said": 73.6,
+   "won": 80
   },
   "picks_by_league": {
+   "arg": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 15.4,
+    "said": 82.0,
+    "won": 1
+   },
    "aus": {
     "hit": 100.0,
     "lost": 0,
@@ -12512,10 +12520,10 @@
    "nfl": {
     "hit": 100.0,
     "lost": 0,
-    "n": 9,
-    "roi": 43.4,
-    "said": 67.4,
-    "won": 9
+    "n": 10,
+    "roi": 41.1,
+    "said": 68.7,
+    "won": 10
    },
    "nhl": {
     "hit": 100.0,
@@ -12622,12 +12630,12 @@
    "won": 4
   },
   "strong": {
-   "hit": 86.5,
+   "hit": 86.7,
    "lost": 10,
-   "n": 74,
-   "roi": 8.9,
-   "said": 74.4,
-   "won": 64
+   "n": 75,
+   "roi": 9.0,
+   "said": 74.5,
+   "won": 65
   },
   "stuck": [],
   "sweep": {
@@ -12645,7 +12653,7 @@
     "sco": 0.3,
     "swe": 0.3
    },
-   "expected_losses": 23.4,
+   "expected_losses": 23.8,
    "lost": 10,
    "lost_by_league": {
     "chn": 1,
@@ -12657,8 +12665,8 @@
     "sco": 1,
     "swe": 1
    },
-   "open": 23,
-   "won": 78
+   "open": 21,
+   "won": 80
   },
   "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
   "ufc_next": "Next UFC card 2026-11-14 (12 fights priced, 4 close): Bilal Hasan 86%; Melquizael Costa 75%; Ciryl Gane 68%; Bia Mesquita 67%; Terrance McKinney 64%; Donte Johnson 63%; Kayla Harrison 63%; Chris Duncan 60%; Caio Borralho 59% (close); Uro\u0161 Medi\u0107 58% (close); Stephen Thompson 56% (close); Evan Elder 52% (close).",
@@ -12669,10 +12677,10 @@
    "agree": {
     "hit": 77.3,
     "lost": 244,
-    "n": 1074,
+    "n": 1076,
     "roi": 2.5,
     "said": 71.8,
-    "won": 830
+    "won": 832
    }
   },
   "weights": {
@@ -12697,10 +12705,10 @@
    "nfl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5886,
-    "market_only": 0.5886,
-    "model_40": 0.6152,
-    "n": 51,
+    "logloss": 0.5817,
+    "market_only": 0.5817,
+    "model_40": 0.6085,
+    "n": 52,
     "weight": 0.0
    },
    "nhl": {
