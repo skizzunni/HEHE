@@ -99,6 +99,20 @@ class Ladder(unittest.TestCase):
             r = ladder.report(b, start="2026-11-03")
         self.assertEqual([(g["n"], g["lost_on"]) for g in r["log"]], [(5, []), (5, ["2026-11-04|e"])])
 
+    def test_skip_kinds(self):
+        nfl_prop = dict(league="nfl", kind="prop", market="Receiving Yards")
+        self.assertFalse(ladder.skipped(nfl_prop))                                   # off by default
+        self.assertTrue(ladder.skipped(nfl_prop, skip=(("nfl", "prop"),)))
+        self.assertTrue(ladder.skipped(nfl_prop, skip=(("nfl", "prop:Receiving Yards"),)))
+        self.assertFalse(ladder.skipped(dict(league="nfl", spec=dict(t="over")), skip=(("nfl", "prop"),)))
+        legs = [dict(key=k, gid=k, label=k, price="-400", p=0.8, status="open", league="nfl",
+                     kind="prop" if k in "ab" else None, market="Receiving Yards" if k in "ab" else None, spec=dict(t="over"))
+                for k in "abcdef"]
+        b = {"days": {"2026-11-10": [L["key"] for L in legs]}, "legs": {L["key"]: L for L in legs}}
+        with mock.patch.object(ladder, "SKIP_KINDS", (("nfl", "prop"),)):
+            got = ladder.choose(b, "2026-11-10")
+        self.assertTrue(got and not any(L["key"] in "ab" for L in got))
+
     def test_miss_label(self):
         import props_ledger
         L = dict(label="Kyle Pitts: 25+ Receiving Yards", kind="prop", status="lost", market="Receiving Yards", line="25+",

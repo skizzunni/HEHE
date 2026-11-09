@@ -54,6 +54,12 @@ PAY_MIN, PAY_MAX = 2.0, 5.0
 # cashed 11 of 21 (6/11 then 5/10, ~2.0-2.5x) against 10/22 for the top 4,
 # 7/21 for the top 5, and the 6-leg tickets the reach chooser was picking.
 BEST_FROM, BEST_MAX, BEST_POOL = "2026-11-09", 6, 12
+# Leg kinds kept off the ladder, only on the user's word: (league, bet type)
+# or (league, "prop") for every prop in a league, matched against
+# locks.kind_key. Empty unless the user asks (2026-11-09: NFL props on the
+# Locks card were 5 of 10 vs ~80% stated, short in both halves on 10 legs --
+# offered, not applied).
+SKIP_KINDS = ()
 
 
 def games_ticket(book, day, n):
@@ -120,11 +126,20 @@ def best_combo(legs, lo=PAY_MIN, hi=PAY_MAX, maxk=BEST_MAX, pool=BEST_POOL):
     return best[1] if best else []
 
 
+def skipped(L, skip=None):
+    """Is this leg's kind kept off the ladder (SKIP_KINDS)?"""
+    skip = SKIP_KINDS if skip is None else skip
+    if not skip:
+        return False
+    lg, t = locks.kind_key(L)
+    return (lg, t) in skip or (L.get("kind") == "prop" and (lg, "prop") in skip)
+
+
 def _best(book, day):
     keys = book["days"].get(day) or []
     if isinstance(keys, dict):
         keys = keys.get("legs") or []
-    legs = [dict(book["legs"][k], key=k) for k in keys if k in book["legs"]]
+    legs = [dict(book["legs"][k], key=k) for k in keys if k in book["legs"] and not skipped(book["legs"][k])]
     got = best_combo(legs)
     return sorted(got, key=lambda L: -L["p"]) if got else []
 

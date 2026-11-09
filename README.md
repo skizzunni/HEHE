@@ -4283,3 +4283,5 @@ Small chances read "under 0.1%" (review) and "under 0.5%" (board) instead of a r
 TRAILING lines in the review show the split's two date halves and say whether it is short in both or one
 (`daily_review.trailing_line`, audit halves). Locks NFL props (since the prop cap): 3/5 then 2/5 vs ~80%
 stated -- short in both halves but on 10 legs (z ~ -2.3), under the 99.5% bar; on watch (2026-11-09).
+`ladder.SKIP_KINDS`: a switch to keep leg kinds off the ladder (e.g. ("nfl", "prop")), off by default and
+set only on the user's word; tested (2026-11-09).
