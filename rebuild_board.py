@@ -206,6 +206,7 @@ def snapshot():
                     ats.append(quote_at(r))
                 rows.append({"mp": r["mypick"] + (" or draw" if r.get("dc") else ""),
                              "sw": bool(k in SOCCER and not r.get("dc")),   # a straight win in a sport with draws
+                             "sd": (r.get("myside") or "")[:1] if k in SOCCER and r.get("dc") else None,  # or-draw side
                              "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
                              # below the league's cutoff, priced too long ago,

@@ -756,6 +756,9 @@ function ufcNote(league, r){
 }
 function drawNote(r){
   const X = (D.results || {}).draw_losses;
+  const S = (((D.results || {}).dc_sides) || {})[r.sd === 'h' ? 'home' : r.sd === 'a' ? 'away' : ''];
+  if(S && S[1]) return '<div class="sbn">&ldquo;Or draw&rdquo; picks on the ' + (r.sd === 'h' ? 'home' : 'away') + ' side: '
+    + S[0] + ' of ' + S[1] + ' won (' + Math.round(100 * S[0] / S[1]) + '% vs ' + Math.round(S[2]) + '% stated).</div>';
   if(!r.sw || !X || !X.lost) return '';
   return '<div class="sbn">Straight win: a draw loses it. ' + X.drawn + ' of the ' + X.lost + ' losses on ' + X.n
     + ' straight-win soccer picks were draws; the &ldquo;or draw&rdquo; bet covers that at a shorter price.</div>';

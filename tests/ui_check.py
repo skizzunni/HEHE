@@ -143,7 +143,7 @@ PROBE = """<script>setTimeout(function(){
   out.form = [watchNote({league: "mlb", t: "over"}), watchNote({league: "nhl", t: "spread"}), watchNote({league: "nhl", t: "under"}),
               watchNote({league: "nba", kind: "prop", market: "Assists"}), watchNote({league: "nba", kind: "prop", market: "Points"})];
   D.prop_form = ppSave;
-  var rsC = D.results; D.results = Object.assign({}, rsC, {call_cautions: [{league: "ncaaf", band: 70, won: 28, n: 47, said: 75}], draw_losses: {n: 234, lost: 38, drawn: 21}, band_records: {"ncaaf|0|55": [21, 30, 57.2], "epl|1|65": [10, 15, 67.0]}});
+  var rsC = D.results; D.results = Object.assign({}, rsC, {call_cautions: [{league: "ncaaf", band: 70, won: 28, n: 47, said: 75}], draw_losses: {n: 234, lost: 38, drawn: 21}, dc_sides: {home: [310, 402, 74.2], away: [147, 199, 72.6]}, band_records: {"ncaaf|0|55": [21, 30, 57.2], "epl|1|65": [10, 15, 67.0]}});
   var ubS = D.ufc_bands; D.ufc_bands = {"50-60": {won: 482, n: 859, roi: -3.6}, "70-80": {won: 507, n: 650, roi: -0.4}};
   out.ufcN = [ufcNote("ufc", {mc: 55}), ufcNote("ufc", {mc: 74}), ufcNote("nba", {mc: 55})];
   D.ufc_bands = ubS;
@@ -166,7 +166,7 @@ PROBE = """<script>setTimeout(function(){
   D.locks = lkS; D.ladder = ldS;
   out.likeN = [likeNote("ncaaf", {mc: 57, mp: "Purdue"}), likeNote("epl", {mc: 66, mp: "Tottenham Hotspur or draw"}),
                likeNote("epl", {mc: 66, mp: "Tottenham Hotspur"}), likeNote("ncaaf", {mp: "X"})];
-  out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({})];
+  out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({}), drawNote({sd: "a"}), drawNote({sd: "h"})];
   out.bandc = [bandCaution("ncaaf", 72.5), bandCaution("ncaaf", 81), bandCaution("nfl", 72), bandCaution("ncaaf", undefined)];
   D.results = rsC;
   var bpSave = D.bright_pool; D.bright_pool = [{league: "nhl", t: "over", won: 131, n: 149, said: 84}];
@@ -497,6 +497,9 @@ def main():
     dn = new.get("drawn") or ["", "x", "x"]
     if not ("Straight win: a draw loses it. 21 of the 38 losses on 234 straight-win soccer picks were draws" in dn[0] and not dn[1] and not dn[2]):
         fails.append("draw note wrong: " + repr(dn))
+    if not (len(dn) == 5 and "picks on the away side: 147 of 199 won (74% vs 73% stated)" in dn[3]
+            and "home side: 310 of 402 won (77% vs 74% stated)" in dn[4]):
+        fails.append("or-draw side note wrong: " + repr(dn))
     bc = new.get("bandc") or ["", "x"]
     if not ("<b>Caution:</b> NCAAF calls at 70-80% have won 28 of 47 against 75% stated, short in both halves" in bc[0] and not any(bc[1:])):
         fails.append("band caution wrong: " + repr(bc))

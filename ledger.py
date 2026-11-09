@@ -831,6 +831,22 @@ def draw_losses(book):
     return dict(n=len(S), lost=len(L), drawn=sum(len(set(e["scores"].values())) == 1 for e in L))
 
 
+def dc_sides(book):
+    """Soccer "or draw" picks, priced and graded, by the side taken:
+    {"home"|"away": [won, n, stated%]}. 2026-11-09: home 77% vs 74% on 402,
+    away 74% vs 73% on 199 -- both ahead in both date halves."""
+    out = {}
+    for e in book.values():
+        if not e.get("dc") or e.get("status") not in ("won", "lost") or e.get("record_excluded") \
+                or e.get("myside") not in ("home", "away") or e.get("conf") is None:
+            continue
+        r = out.setdefault(e["myside"], [0, 0, 0.0])
+        r[0] += e["status"] == "won"
+        r[1] += 1
+        r[2] += e["conf"]
+    return {k: [w, n, round(c / n, 1)] for k, (w, n, c) in out.items()}
+
+
 def moves_halves(book, move=0.03):
     """Every graded pick whose price moved `move`+ between the call and the
     start, all time, split by date half: {"for"|"against": [[won, n, close%],
@@ -1067,7 +1083,7 @@ def board_payload(limit=40):
                     ((lg_, sum(1 for e in todays if e["status"] == "lost" and e["league"] == lg_))
                      for lg_ in {e["league"] for e in todays if e["status"] == "lost"}), key=lambda x: -x[1])],
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), call_cautions=call_cautions(book), draw_losses=draw_losses(book), moves_halves=moves_halves(book), band_records=band_records(book), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
+                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), call_cautions=call_cautions(book), draw_losses=draw_losses(book), dc_sides=dc_sides(book), moves_halves=moves_halves(book), band_records=band_records(book), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))
