@@ -1597,7 +1597,8 @@ function ladderOptions(T){
   if(O.length < 2) return '';
   const B = O.some(o => o.in_band !== undefined) ? O.filter(o => o.in_band) : O;
   const best = (B.length ? B : O).reduce((a, o) => o.reach > a.reach ? o : a, (B.length ? B : O)[0]);
-  return '<details><summary>' + T.legs.length + ' legs, and what other counts would give</summary><table class="sweeptab"><thead><tr><th>Legs</th>'
+  return '<details><summary>' + (T.vs_top4 ? 'What the plain top 1 to 8 Locks would give instead' : T.legs.length + ' legs, and what other counts would give')
+    + '</summary><table class="sweeptab"><thead><tr><th>Legs</th>'
     + '<th class="num">Ticket wins</th><th class="num">Pays</th><th class="num">Wins needed</th><th class="num">Reach $10k</th></tr></thead><tbody>'
     + O.map(o => '<tr' + (o === best ? ' style="font-weight:700"' : '') + '><td>' + o.legs + '</td><td class="num">' + (100 * o.prob).toFixed(0)
       + '%</td><td class="num">' + o.pays.toFixed(2) + '&times;</td><td class="num">' + o.need + '</td><td class="num">'

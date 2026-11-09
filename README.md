@@ -4305,3 +4305,5 @@ Review "Ladder runs" line: every run's start, length, peak and the leg(s) that e
 (2026-11-09).
 The review also flags "MISSING today's ladder ticket" when the 8 AM card is saved but no ticket was built
 from it (`card_check`) (2026-11-09).
+With a best-combination ticket, the ladder's options table is labelled as what the plain top 1-8 Locks would
+give instead, not as the ticket's own choice (2026-11-09).

@@ -223,7 +223,8 @@ PROBE = """<script>setTimeout(function(){
                                     ended: {start: "2026-11-03", peak: 9.57, lost_on: ["Florida Atlantic Owls under 41.5 points"]}};
   try { out.ladEnded = ladderHTML(); } catch(e) { out.ladEnded = "ERR " + e; }
   D.ladder = {start: "2026-11-03", target: 10000, bank: 1, runs: 5, streak: 0, best: 9.57, history: [], wins_needed: 14,
-              today: {legs: [], stake: 1, pays: 2.08, prob: 0.48, vs_top4: {prob: 0.41, pays: 2.44}, options: []}};
+              today: {legs: [], stake: 1, pays: 2.08, prob: 0.48, vs_top4: {prob: 0.41, pays: 2.44},
+                     options: [{legs: 3, prob: 0.5, pays: 1.9, need: 12, reach: 0.0002, in_band: false}, {legs: 4, prob: 0.41, pays: 2.44, need: 10, reach: 0.0001, in_band: true}]}};
   try { out.ladBest = ladderHTML(); } catch(e) { out.ladBest = "ERR " + e; }
   D.ladder = ldS;
   out.caution = [cautionLine({flagged: {won: 3, n: 7, said: 75.3}, other: {won: 75, n: 90, said: 75.4}}), cautionLine({flagged: {won: 0, n: 0}})];
@@ -469,8 +470,12 @@ def main():
     lp = new.get("lprev", "")
     if not ("the combination paying 2&ndash;5&times; with the best chance of all winning: about" in lp and "Preview, if the card were set now" in lp):
         fails.append("ladder preview wrong: " + lp[:400])
+    if "What the plain top 1 to 8 Locks would give instead" in new.get("lopts", ""):
+        fails.append("options label changed for a non-combination ticket")
     if "the best chance of all winning: 48% at 2.08&times;, against 41% at 2.44&times; for the plain top 4." not in new.get("ladBest", ""):
         fails.append("ladder vs top-4 line wrong: " + new.get("ladBest", "")[:300])
+    if "What the plain top 1 to 8 Locks would give instead" not in new.get("ladBest", ""):
+        fails.append("options label for combination ticket wrong")
     lt = new.get("lprevTmw", "")
     if not ("Tomorrow&rsquo;s ladder ticket is set with the 8 AM" in lt and "Early look at tomorrow" in lt and "T1" in lt):
         fails.append("tomorrow preview wrong: " + lt[:400])
