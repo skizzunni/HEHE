@@ -703,6 +703,8 @@ def ladder_line(book=None):
     legs += now_text(t["legs"]) if t else ""
     return (f"Ladder: run {r['runs']}, bank ${r['bank']:.2f}, {r['streak']} win(s) in a row, best ${r['best']:.2f}"
             + (f"; today stakes ${t['stake']:.2f} at {t['pays']:.2f}x ({100 * t['prob']:.0f}% est.)" if t else "")
+            + (f", the best-chance 2x-5x combination ({len(t['legs'])} legs) against {100 * t['vs_top4']['prob']:.0f}%"
+               f" at {t['vs_top4']['pays']:.2f}x for the plain top 4" if t and t.get("vs_top4") else "")
             + f"; {r['wins_needed']} wins to ${r['target']:,.0f}" + legs + ".")
 
 

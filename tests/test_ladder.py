@@ -449,3 +449,16 @@ class ComboStudy(unittest.TestCase):
         b = {"days": {"2026-11-01": list(legs)}, "legs": legs}
         r = ladder_study.combo_study(b, pools=(3,), maxes=(2,))
         self.assertEqual(r[(3, 2)], dict(won=1, n=1))        # two -200 legs: 2.25x, both won
+
+
+class ReviewVsTop4(unittest.TestCase):
+    def test_vs_top4_in_ladder_line(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        rep = dict(runs=5, bank=1.0, streak=0, best=9.57, wins_needed=14, target=10000.0,
+                   today=dict(stake=1.0, pays=2.08, prob=0.48, legs=[dict(label="A", status="open"), dict(label="B", status="open")],
+                              vs_top4=dict(prob=0.41, pays=2.44)))
+        with mock.patch.object(ladder, "report", lambda bk=None: rep):
+            line = daily_review.ladder_line()
+        self.assertIn("today stakes $1.00 at 2.08x (48% est.), the best-chance 2x-5x combination (2 legs) against 41% at 2.44x"
+                      " for the plain top 4", line)
