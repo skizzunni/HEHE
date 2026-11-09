@@ -49679,11 +49679,13 @@
   "league": "nfl",
   "line": "175+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "C.J. Stroud",
   "p": 0.8521,
   "p_fair": 0.8396,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 384.0
  },
  "nfl:401873046|n:dalton schultz|Receiving Yards|15+": {
   "aid": null,
@@ -49695,11 +49697,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Dalton Schultz",
   "p": 0.8589,
   "p_fair": 0.7911,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 42.0
  },
  "nfl:401873046|n:kayshon boutte|Receptions|1+": {
   "aid": null,
@@ -49711,11 +49715,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Kayshon Boutte",
   "p": 0.7984,
   "p_fair": 0.7597,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nfl:401873046|n:keaton mitchell|Receptions|1+": {
   "aid": null,
@@ -49727,11 +49733,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Keaton Mitchell",
   "p": 0.796,
   "p_fair": 0.7848,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nfl:401873046|n:ladd mcconkey|Receptions|3+": {
   "aid": null,
@@ -49747,7 +49755,9 @@
   "p": 0.796,
   "p_fair": 0.7558,
   "price": "-400",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401873046|n:marvin harrison|Receiving Yards|10+": {
   "aid": null,
@@ -49759,11 +49769,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Marvin Harrison Jr.",
   "p": 0.7992,
   "p_fair": 0.7954,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nfl:401873046|n:nico collins|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -49775,11 +49787,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Nico Collins",
   "p": 0.3152,
   "p_fair": null,
   "price": "+150",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873046|n:omarion hampton|Rushing Yards|15+": {
   "aid": null,
@@ -49791,11 +49805,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Omarion Hampton",
   "p": 0.8482,
   "p_fair": 0.8589,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 60.0
  },
  "nfl:401873046|n:quentin johnston|Receiving Yards|15+": {
   "aid": null,
@@ -49807,11 +49823,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Quentin Johnston",
   "p": 0.7933,
   "p_fair": 0.7796,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 58.0
  },
  "nfl:401873046|n:tre harris|Receiving Yards|15+": {
   "aid": null,
@@ -49823,11 +49841,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Tre Harris",
   "p": 0.8016,
   "p_fair": 0.7796,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 6.0
  },
  "nfl:401873046|n:woody marks|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -49839,11 +49859,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Woody Marks",
   "p": 0.391,
   "p_fair": null,
   "price": "+105",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873047|n:ashton jeanty|Receiving Yards|20+": {
   "aid": null,
