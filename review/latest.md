@@ -78,7 +78,7 @@ Locks 7/11 won, 1 open; Best play top 3 (52%) lost; lost: Kyle Pitts: 25+ Receiv
 Safe Locks 9/11 won, 2 open; Winners parlay top 2 (84%) won; Best play top 7 (52%) open.
 Lottery 10k: lost (3/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points, Under 4.5 goals, New Orleans Saints -5.5)
 Lottery 10k: lost (2/9 legs won, killed by Over 8.5 goals, Under 239.5 points, Under 33.5 points, Washington Commanders to win, Denver Broncos -9.5, Over 8.5 goals)
-Lottery 10k: lost (2/8 legs won, killed by Over 8.5 goals, New England Patriots -10.5, Over 64.5 points, Over 47.5 points)
+Lottery 10k: lost (3/8 legs won, killed by Over 8.5 goals, New England Patriots -10.5, Over 64.5 points, Over 47.5 points)
 Lottery 10k+25: lost (4/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points, Under 4.5 goals)
 Lottery 10k+50: lost (3/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points, Under 4.5 goals)
 Lottery 10k+100: lost (3/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points, Under 4.5 goals)
