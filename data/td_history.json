@@ -20919,6 +20919,7 @@
 "name": "Carter Runyon",
 "p": 0.0495,
 "price": "+1300",
+"rechecked": "void",
 "status": "void",
 "total": 51.5
 },
@@ -20939,6 +20940,7 @@
 "name": "Cody White",
 "p": 0.0425,
 "price": "+1600",
+"rechecked": "ungradable",
 "status": "ungradable",
 "total": 51.5,
 "void_why": "identity_unresolved"
@@ -20950,6 +20952,7 @@
 "name": "Connor Heyward",
 "p": 0.0517,
 "price": "+1300",
+"rechecked": "void",
 "status": "void",
 "total": 51.5
 },
@@ -20990,6 +20993,7 @@
 "name": "Dont'e Thornton Jr.",
 "p": 0.0414,
 "price": "+1600",
+"rechecked": "void",
 "status": "void",
 "total": 51.5
 },
@@ -21040,6 +21044,7 @@
 "name": "Ian Thomas",
 "p": 0.0517,
 "price": "+1300",
+"rechecked": "void",
 "status": "void",
 "total": 51.5
 },
@@ -21140,6 +21145,7 @@
 "name": "Las Vegas Defense",
 "p": 0.0766,
 "price": "+850",
+"rechecked": "void",
 "status": "void",
 "total": 51.5
 },
@@ -21160,6 +21166,7 @@
 "name": "Malik Benson",
 "p": 0.0334,
 "price": "+2000",
+"rechecked": "void",
 "status": "void",
 "total": 51.5
 },
@@ -21200,6 +21207,7 @@
 "name": "San Francisco Defense",
 "p": 0.1128,
 "price": "+550",
+"rechecked": "void",
 "status": "void",
 "total": 51.5
 },
@@ -21220,7 +21228,7 @@
 "name": "AJ Barner",
 "p": 0.2227,
 "price": "+260",
-"status": "open",
+"status": "won",
 "total": 40.5
 },
 "nfl:401873048|Andrew Wingard": {
@@ -21230,7 +21238,7 @@
 "name": "Andrew Wingard",
 "p": 0.0095,
 "price": "+8000",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Arizona Defense": {
@@ -21240,7 +21248,7 @@
 "name": "Arizona Defense",
 "p": 0.0601,
 "price": "+1200",
-"status": "open",
+"status": "void",
 "total": 40.5
 },
 "nfl:401873048|Brady Russell": {
@@ -21250,7 +21258,7 @@
 "name": "Brady Russell",
 "p": 0.0277,
 "price": "+2700",
-"status": "open",
+"status": "void",
 "total": 40.5
 },
 "nfl:401873048|Cooper Kupp": {
@@ -21260,7 +21268,7 @@
 "name": "Cooper Kupp",
 "p": 0.1691,
 "price": "+370",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Demarcus Lawrence": {
@@ -21270,7 +21278,7 @@
 "name": "Demarcus Lawrence",
 "p": 0.0127,
 "price": "+6000",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Denzel Burke": {
@@ -21280,7 +21288,7 @@
 "name": "Denzel Burke",
 "p": 0.0168,
 "price": "+4500",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Devin Duvernay": {
@@ -21290,7 +21298,7 @@
 "name": "Devin Duvernay",
 "p": 0.0371,
 "price": "+2000",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Devon Witherspoon": {
@@ -21300,7 +21308,7 @@
 "name": "Devon Witherspoon",
 "p": 0.0189,
 "price": "+4000",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Drake Thomas": {
@@ -21310,7 +21318,7 @@
 "name": "Drake Thomas",
 "p": 0.0168,
 "price": "+4500",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Drew Lock": {
@@ -21320,7 +21328,7 @@
 "name": "Drew Lock",
 "p": 0.1125,
 "price": "+600",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Elijah Higgins": {
@@ -21330,7 +21338,7 @@
 "name": "Elijah Higgins",
 "p": 0.0783,
 "price": "+900",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Emanuel Wilson": {
@@ -21340,8 +21348,9 @@
 "name": "Emanuel Wilson",
 "p": 0.0338,
 "price": "+2200",
-"status": "open",
-"total": 40.5
+"status": "ungradable",
+"total": 40.5,
+"void_why": "identity_unresolved"
 },
 "nfl:401873048|Eric Saubert": {
 "date": "2026-11-08",
@@ -21350,7 +21359,7 @@
 "name": "Eric Saubert",
 "p": 0.0557,
 "price": "+1300",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Ernest Jones": {
@@ -21360,7 +21369,7 @@
 "name": "Ernest Jones",
 "p": 0.0228,
 "price": "+3300",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Evan Hull": {
@@ -21370,7 +21379,7 @@
 "name": "Evan Hull",
 "p": 0.0557,
 "price": "+1300",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Gardner Minshew II": {
@@ -21380,7 +21389,7 @@
 "name": "Gardner Minshew II",
 "p": 0.052,
 "price": "+1400",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|George Holani": {
@@ -21390,7 +21399,7 @@
 "name": "George Holani",
 "p": 0.0601,
 "price": "+1200",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Harrison Wallace III": {
@@ -21400,7 +21409,7 @@
 "name": "Harrison Wallace III",
 "p": 0.0251,
 "price": "+3000",
-"status": "open",
+"status": "void",
 "total": 40.5
 },
 "nfl:401873048|Irv Charles": {
@@ -21410,7 +21419,7 @@
 "name": "Irv Charles",
 "p": 0.0251,
 "price": "+3000",
-"status": "open",
+"status": "void",
 "total": 40.5
 },
 "nfl:401873048|Jadarian Price": {
@@ -21420,7 +21429,7 @@
 "name": "Jadarian Price",
 "p": 0.301,
 "price": "+170",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Jaxon Smith-Njigba": {
@@ -21430,7 +21439,7 @@
 "name": "Jaxon Smith-Njigba",
 "p": 0.4569,
 "price": "-120",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Jerome Ford": {
@@ -21440,7 +21449,7 @@
 "name": "Jerome Ford",
 "p": 0.0871,
 "price": "+800",
-"status": "open",
+"status": "void",
 "total": 40.5
 },
 "nfl:401873048|Josh Jobe": {
@@ -21450,7 +21459,7 @@
 "name": "Josh Jobe",
 "p": 0.0168,
 "price": "+4500",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Julian Love": {
@@ -21460,7 +21469,7 @@
 "name": "Julian Love",
 "p": 0.0152,
 "price": "+5000",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Leonard Williams": {
@@ -21470,7 +21479,7 @@
 "name": "Leonard Williams",
 "p": 0.0139,
 "price": "+5500",
-"status": "open",
+"status": "void",
 "total": 40.5
 },
 "nfl:401873048|Mack Wilson": {
@@ -21480,7 +21489,7 @@
 "name": "Mack Wilson",
 "p": 0.0095,
 "price": "+8000",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Michael Wilson": {
@@ -21490,7 +21499,7 @@
 "name": "Michael Wilson",
 "p": 0.1996,
 "price": "+300",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Montorie Foster Jr.": {
@@ -21500,7 +21509,7 @@
 "name": "Montorie Foster Jr.",
 "p": 0.0433,
 "price": "+1700",
-"status": "open",
+"status": "void",
 "total": 40.5
 },
 "nfl:401873048|Nick Emmanwori": {
@@ -21510,7 +21519,7 @@
 "name": "Nick Emmanwori",
 "p": 0.0118,
 "price": "+6500",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Nick Kallerup": {
@@ -21520,7 +21529,7 @@
 "name": "Nick Kallerup",
 "p": 0.0251,
 "price": "+3000",
-"status": "open",
+"status": "void",
 "total": 40.5
 },
 "nfl:401873048|Reggie Virgil": {
@@ -21530,7 +21539,7 @@
 "name": "Reggie Virgil",
 "p": 0.0711,
 "price": "+1000",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Seattle Defense": {
@@ -21540,7 +21549,7 @@
 "name": "Seattle Defense",
 "p": 0.1048,
 "price": "+650",
-"status": "open",
+"status": "void",
 "total": 40.5
 },
 "nfl:401873048|Shawn Bowman": {
@@ -21550,7 +21559,7 @@
 "name": "Shawn Bowman",
 "p": 0.0216,
 "price": "+3500",
-"status": "open",
+"status": "void",
 "total": 40.5
 },
 "nfl:401873048|Simi Fehoko": {
@@ -21560,7 +21569,7 @@
 "name": "Simi Fehoko",
 "p": 0.0389,
 "price": "+1900",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Teagan Quitoriano": {
@@ -21570,7 +21579,7 @@
 "name": "Teagan Quitoriano",
 "p": 0.0277,
 "price": "+2700",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Tory Horton": {
@@ -21580,7 +21589,7 @@
 "name": "Tory Horton",
 "p": 0.1524,
 "price": "+420",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Trey McBride": {
@@ -21590,7 +21599,7 @@
 "name": "Trey McBride",
 "p": 0.2438,
 "price": "+230",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Tyler Allgeier": {
@@ -21600,7 +21609,7 @@
 "name": "Tyler Allgeier",
 "p": 0.2843,
 "price": "+185",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873048|Zach Charbonnet": {
@@ -21610,7 +21619,7 @@
 "name": "Zach Charbonnet",
 "p": 0.3489,
 "price": "+135",
-"status": "open",
+"status": "lost",
 "total": 40.5
 },
 "nfl:401873049|Bo Melton": {
@@ -22018,7 +22027,7 @@
 "gid": "nfl:401873050",
 "imp": 0.0141,
 "name": "Alex Anzalone",
-"p": 0.0104,
+"p": 0.0103,
 "price": "+7000",
 "status": "open",
 "total": 47.5
@@ -22038,7 +22047,7 @@
 "gid": "nfl:401873050",
 "imp": 0.1538,
 "name": "Baker Mayfield",
-"p": 0.1152,
+"p": 0.1151,
 "price": "+550",
 "status": "open",
 "total": 47.5
@@ -22058,7 +22067,7 @@
 "gid": "nfl:401873050",
 "imp": 0.4878,
 "name": "Bucky Irving",
-"p": 0.3876,
+"p": 0.3874,
 "price": "+105",
 "status": "open",
 "total": 47.5
@@ -22068,7 +22077,7 @@
 "gid": "nfl:401873050",
 "imp": 0.2041,
 "name": "Cade Otton",
-"p": 0.1541,
+"p": 0.154,
 "price": "+390",
 "status": "open",
 "total": 47.5
@@ -22078,7 +22087,7 @@
 "gid": "nfl:401873050",
 "imp": 0.25,
 "name": "Caleb Williams",
-"p": 0.1901,
+"p": 0.19,
 "price": "+300",
 "status": "open",
 "total": 47.5
@@ -22088,7 +22097,7 @@
 "gid": "nfl:401873050",
 "imp": 0.1111,
 "name": "Chicago Defense",
-"p": 0.0827,
+"p": 0.0826,
 "price": "+800",
 "status": "open",
 "total": 47.5
@@ -22098,7 +22107,7 @@
 "gid": "nfl:401873050",
 "imp": 0.2439,
 "name": "Chris Godwin",
-"p": 0.1853,
+"p": 0.1852,
 "price": "+310",
 "status": "open",
 "total": 47.5
@@ -22106,10 +22115,10 @@
 "nfl:401873050|Colston Loveland": {
 "date": "2026-11-08",
 "gid": "nfl:401873050",
-"imp": 0.3704,
+"imp": 0.3846,
 "name": "Colston Loveland",
-"p": 0.2876,
-"price": "+170",
+"p": 0.2992,
+"price": "+160",
 "status": "open",
 "total": 47.5
 },
@@ -22118,7 +22127,7 @@
 "gid": "nfl:401873050",
 "imp": 0.6491,
 "name": "D'Andre Swift",
-"p": 0.5359,
+"p": 0.5356,
 "price": "-185",
 "status": "open",
 "total": 47.5
@@ -22148,7 +22157,7 @@
 "gid": "nfl:401873050",
 "imp": 0.2941,
 "name": "Emeka Egbuka",
-"p": 0.2253,
+"p": 0.2251,
 "price": "+240",
 "status": "open",
 "total": 47.5
@@ -22188,7 +22197,7 @@
 "gid": "nfl:401873050",
 "imp": 0.2,
 "name": "Kalif Raymond",
-"p": 0.1509,
+"p": 0.1508,
 "price": "+400",
 "status": "open",
 "total": 47.5
@@ -22198,7 +22207,7 @@
 "gid": "nfl:401873050",
 "imp": 0.0278,
 "name": "Kameron Johnson",
-"p": 0.0205,
+"p": 0.0204,
 "price": "+3500",
 "status": "open",
 "total": 47.5
@@ -22208,7 +22217,7 @@
 "gid": "nfl:401873050",
 "imp": 0.2,
 "name": "Kenneth Gainwell",
-"p": 0.1509,
+"p": 0.1508,
 "price": "+400",
 "status": "open",
 "total": 47.5
@@ -22238,7 +22247,7 @@
 "gid": "nfl:401873050",
 "imp": 0.3774,
 "name": "Luther Burden III",
-"p": 0.2934,
+"p": 0.2932,
 "price": "+165",
 "status": "open",
 "total": 47.5
@@ -22268,7 +22277,7 @@
 "gid": "nfl:401873050",
 "imp": 0.3509,
 "name": "Rome Odunze",
-"p": 0.2715,
+"p": 0.2713,
 "price": "+185",
 "status": "open",
 "total": 47.5
@@ -22278,7 +22287,7 @@
 "gid": "nfl:401873050",
 "imp": 0.2703,
 "name": "Roschon Johnson",
-"p": 0.2062,
+"p": 0.2061,
 "price": "+270",
 "status": "open",
 "total": 47.5
@@ -22306,10 +22315,10 @@
 "nfl:401873050|Sam Roush": {
 "date": "2026-11-08",
 "gid": "nfl:401873050",
-"imp": 0.1333,
+"imp": 0.1176,
 "name": "Sam Roush",
-"p": 0.0995,
-"price": "+650",
+"p": 0.0876,
+"price": "+750",
 "status": "open",
 "total": 47.5
 },
@@ -22318,7 +22327,7 @@
 "gid": "nfl:401873050",
 "imp": 0.1111,
 "name": "Sean Tucker",
-"p": 0.0827,
+"p": 0.0826,
 "price": "+800",
 "status": "open",
 "total": 47.5
@@ -22328,7 +22337,7 @@
 "gid": "nfl:401873050",
 "imp": 0.0435,
 "name": "Stephen Carlson",
-"p": 0.0321,
+"p": 0.032,
 "price": "+2200",
 "status": "open",
 "total": 47.5
@@ -22358,7 +22367,7 @@
 "gid": "nfl:401873050",
 "imp": 0.1538,
 "name": "Ted Hurst III",
-"p": 0.1152,
+"p": 0.1151,
 "price": "+550",
 "status": "open",
 "total": 47.5
