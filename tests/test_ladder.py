@@ -462,3 +462,16 @@ class ReviewVsTop4(unittest.TestCase):
             line = daily_review.ladder_line()
         self.assertIn("today stakes $1.00 at 2.08x (48% est.), the best-chance 2x-5x combination (2 legs) against 41% at 2.44x"
                       " for the plain top 4", line)
+
+
+class RunsLine(unittest.TestCase):
+    def test_runs_line(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        H = [dict(start="2026-11-03", status="lost", days=3, peak=9.57, lost_on=["FAU under 41.5"]),
+             dict(start="2026-11-09", status="live", days=1, peak=2.08, lost_on=[])]
+        with mock.patch.object(ladder, "report", lambda bk=None: dict(history=H)):
+            self.assertEqual(daily_review.runs_line(), "Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on FAU under 41.5;"
+                                                       " 2) 2026-11-09, 1 day, peak $2.08, live.")
+        with mock.patch.object(ladder, "report", lambda bk=None: dict(history=[])):
+            self.assertIsNone(daily_review.runs_line())

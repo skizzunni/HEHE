@@ -684,6 +684,22 @@ def rule_text(day=None):
     return f"the top {ladder.FIXED_LEGS} Locks"
 
 
+def runs_line(book=None):
+    """Every ladder run so far in one line: start, days, peak, and the leg
+    that ended it."""
+    try:
+        import ladder
+        H = ladder.report(book).get("history") or []
+    except Exception:
+        return None
+    if not H:
+        return None
+    return "Ladder runs: " + "; ".join(
+        f"{i + 1}) {h['start']}, {h['days']} day{'s' if h['days'] != 1 else ''}, peak ${h['peak']:.2f}"
+        + (f", lost on {', '.join(h.get('lost_on') or [])}" if h.get("status") == "lost" else f", {h.get('status')}")
+        for i, h in enumerate(H)) + "."
+
+
 def ladder_line(book=None):
     """One line on the $1 -> $10k ladder (ladder.py), or None before it starts."""
     try:
@@ -1075,6 +1091,8 @@ def words(r, fit):
         out.append("No picks settled yet.")
     if r.get("ladder"):
         out.append(r["ladder"])
+    if r.get("runs"):
+        out.append(r["runs"])
     if r.get("cautions"):
         out.append(r["cautions"])
     if r.get("cold"):
@@ -1198,6 +1216,7 @@ def main():
     log[today.isoformat()]["stuck"] = stuck(ledger, props, locks, lottery, today)
     log[today.isoformat()]["big_files"] = big_files()
     log[today.isoformat()]["ladder"] = ladder_line()
+    log[today.isoformat()]["runs"] = runs_line()
     log[today.isoformat()]["cautions"] = caution_line()
     log[today.isoformat()]["cold"] = form_line()
     log[today.isoformat()]["prereg"] = prereg_line()

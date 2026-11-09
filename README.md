@@ -4301,3 +4301,5 @@ Best-combination sensitivity (`tools/ladder_study.combo_study`): pool of the 6 l
 Review ladder line compares the day's best-chance combination with the plain top-4 ticket (2026-11-09).
 "What a Lock is" now spells out the parlay odds at the card's own hit rate (2, 3 and 4 together), so a
 Lock reads as likely, not certain (2026-11-09).
+Review "Ladder runs" line: every run's start, length, peak and the leg(s) that ended it (`runs_line`)
+(2026-11-09).
