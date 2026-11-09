@@ -24,6 +24,17 @@ class DcSide(unittest.TestCase):
         self.assertIn("away 30% vs 70% stated on 10 (halves 60%, 0%) SHORT", out)
         self.assertNotIn("home 75% vs 70% stated on 20 (halves 70%, 80%) SHORT", out)
 
+    def test_straight_wins_and_draws(self):
+        L = {f"h{i}": row("2026-10-01", "home", True) for i in range(30)}
+        for k in L.values():
+            k["league"] = "epl"
+        L["s1"] = dict(row("2026-10-02", "home", False), dc=False, league="epl", scores={"A": 1, "B": 1})
+        L["s2"] = dict(row("2026-10-02", "home", False), dc=False, league="epl", scores={"A": 0, "B": 2})
+        L["s3"] = dict(row("2026-10-02", "home", True), dc=False, league="epl")
+        L["n"] = dict(row("2026-10-02", "home", False), dc=False, league="nba", scores={"A": 9, "B": 9})
+        out = daily_review.dc_side_line(L, min_n=30)
+        self.assertIn("Straight wins: 33% vs 70% stated on 3; 1 of 2 losses were draws.", out)
+
     def test_too_few(self):
         self.assertIsNone(daily_review.dc_side_line({"a": row("2026-10-01", "home", True)}))
 

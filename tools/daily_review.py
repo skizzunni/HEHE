@@ -443,7 +443,17 @@ def dc_side_line(ledger=None, min_n=30):
         b = [v for v in s if (v.get("date") or "") >= mid]
         flag = " SHORT" if sum(v["status"] == "won" for v in s) / len(s) * 100 < said - 3 else ""
         parts.append(f"{side} {rec(s)} vs {said}% stated on {len(s)} (halves {rec(a)}, {rec(b)}){flag}")
-    return "Soccer or-draw picks by side: " + "; ".join(parts) + "."
+    out = "Soccer or-draw picks by side: " + "; ".join(parts) + "."
+    soc = {v.get("league") for v in rows}
+    sw = [v for v in ledger.values() if isinstance(v, dict) and not v.get("dc") and v.get("league") in soc
+          and v.get("status") in ("won", "lost") and not v.get("record_excluded") and v.get("conf") is not None]
+    if sw:
+        lost = [v for v in sw if v["status"] == "lost"]
+        drawn = sum(1 for v in lost if len(set((v.get("scores") or {}).values())) == 1 and v.get("scores"))
+        said = round(sum(v["conf"] for v in sw) / len(sw))
+        out += (f" Straight wins: {rec(sw)} vs {said}% stated on {len(sw)}"
+                + (f"; {drawn} of {len(lost)} losses were draws" if lost else "") + ".")
+    return out
 
 
 def ufc_line(today=None, back=8):

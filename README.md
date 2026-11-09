@@ -1158,6 +1158,10 @@ side, so the record was split by home and away with date halves. Home 77% vs
 Both sides run at or above their stated chance in both halves, so no side is
 cut. The split now prints in every review (`dc_side_line`) and flags SHORT if
 a side falls more than 3 points under its stated chance.
+Straight-win soccer picks were checked the same way: 66% won vs 65% stated
+on 279 (dated rows: 83% vs 72%, then 82% vs 74% by half), so they hold too.
+57 of their 96 losses were draws, which is the price of not taking "or draw";
+the line prints that count so draw-heavy weeks are visible.
 
 ## Rejected
 
