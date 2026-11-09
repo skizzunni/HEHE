@@ -166,6 +166,7 @@ PROBE = """<script>setTimeout(function(){
   D.locks = lkS; D.ladder = ldS;
   out.likeN = [likeNote("ncaaf", {mc: 57, mp: "Purdue"}), likeNote("epl", {mc: 66, mp: "Tottenham Hotspur or draw"}),
                likeNote("epl", {mc: 66, mp: "Tottenham Hotspur"}), likeNote("ncaaf", {mp: "X"})];
+  out.lkinds = [ladderKinds({game: {won: 16, n: 18, said: 75.7}, prop: {won: 7, n: 10, said: 79.3}}), ladderKinds({}), ladderKinds(undefined)];
   out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({}), drawNote({sd: "a"}), drawNote({sd: "h"})];
   out.bandc = [bandCaution("ncaaf", 72.5), bandCaution("ncaaf", 81), bandCaution("nfl", 72), bandCaution("ncaaf", undefined)];
   D.results = rsC;
@@ -497,6 +498,9 @@ def main():
     dn = new.get("drawn") or ["", "x", "x"]
     if not ("Straight win: a draw loses it. 21 of the 38 losses on 234 straight-win soccer picks were draws" in dn[0] and not dn[1] and not dn[2]):
         fails.append("draw note wrong: " + repr(dn))
+    lk = new.get("lkinds") or ["", "x", "x"]
+    if not (lk[0] == " By kind: game lines 16 of 18 (89% vs 76%), player props 7 of 10 (70% vs 79%)." and not lk[1] and not lk[2]):
+        fails.append("ladder kinds wrong: " + repr(lk))
     if not (len(dn) == 5 and "picks on the away side: 147 of 199 won (74% vs 73% stated)" in dn[3]
             and "home side: 310 of 402 won (77% vs 74% stated)" in dn[4]):
         fails.append("or-draw side note wrong: " + repr(dn))

@@ -754,6 +754,12 @@ function ufcNote(league, r){
     + (x && x.n ? '<div class="sbn">UFC favourites at ' + k + '% since 2021: ' + x.won + ' of ' + x.n + ' won ('
       + Math.round(100 * x.won / x.n) + '%), ' + (x.roi >= 0 ? '+' : '') + x.roi + '% a bet at DraftKings prices.</div>' : '');
 }
+// ladder legs, game lines and player props apart (ladder.legs_by_kind)
+function ladderKinds(K){
+  const one = (k, w) => K && K[k] && K[k].n ? w + ' ' + K[k].won + ' of ' + K[k].n + ' (' + Math.round(100 * K[k].won / K[k].n) + '% vs ' + Math.round(K[k].said) + '%)' : '';
+  const parts = [one('game', 'game lines'), one('prop', 'player props')].filter(Boolean);
+  return parts.length ? ' By kind: ' + parts.join(', ') + '.' : '';
+}
 function drawNote(r){
   const X = (D.results || {}).draw_losses;
   const S = (((D.results || {}).dc_sides) || {})[r.sd === 'h' ? 'home' : r.sd === 'a' ? 'away' : ''];
@@ -1791,7 +1797,8 @@ function ladderHTML(){
     + ladderBar(X.bank, X.target, money) + ladderChart(X.path || [])
     + (X.legs_record && X.legs_record.n ? '<p class="note">Ladder legs so far: <b>' + X.legs_record.won + ' of ' + X.legs_record.n + '</b> ('
        + Math.round(100 * X.legs_record.won / X.legs_record.n) + '% vs ' + X.legs_record.said + '% stated); tickets ' + (X.tickets || {}).won + ' of '
-       + (X.tickets || {}).n + '. One leg lost ends a ticket, which is why a ticket of likely legs still loses often.</p>' : '')
+       + (X.tickets || {}).n + '. One leg lost ends a ticket, which is why a ticket of likely legs still loses often.'
+       + ladderKinds(X.legs_by_kind) + '</p>' : '')
     + (T ? '<ul class="betlegs">' + T.legs.map(L => '<li>' + esc(L.label) + teamTag(L) + ' <b>' + esc(L.price) + '</b> &middot; '
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')

@@ -431,6 +431,14 @@ class ReviewLine(unittest.TestCase):
 ladder._report = ladder.report
 
 
+class LegsByKind(unittest.TestCase):
+    def test_split(self):
+        import ladder
+        G = [dict(kind="prop", status="won", p=0.8), dict(kind="prop", status="lost", p=0.8),
+             dict(kind="game", status="won", p=0.75), dict(status="won", p=0.75), dict(kind="game", status="open", p=0.7)]
+        self.assertEqual(ladder.legs_by_kind(G), {"prop": dict(won=1, n=2, said=80.0), "game": dict(won=2, n=2, said=75.0)})
+
+
 if __name__ == "__main__":
     unittest.main()
 

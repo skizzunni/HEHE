@@ -312,6 +312,21 @@ def live(legs):
                     pass
 
 
+def legs_by_kind(legs):
+    """Graded ladder legs split into game lines and player props:
+    {"game"|"prop": dict(won, n, said)}. 2026-11-09: games 16 of 18, props
+    7 of 10 (about 79% stated) -- too few props to act on."""
+    out = {}
+    for L in legs:
+        if L.get("status") not in ("won", "lost") or L.get("p") is None:
+            continue
+        a = out.setdefault("prop" if L.get("kind") == "prop" else "game", [0, 0, 0.0])
+        a[0] += L["status"] == "won"
+        a[1] += 1
+        a[2] += L["p"]
+    return {k: dict(won=w, n=n, said=round(100 * p / n, 1)) for k, (w, n, p) in out.items()}
+
+
 def report(book=None, start=START, target=TARGET):
     runs = replay(book, start, target)
     cur = runs[-1] if runs else None
@@ -363,6 +378,8 @@ def report(book=None, start=START, target=TARGET):
                 legs_record=(lambda G: dict(won=sum(L["status"] == "won" for L in G), n=len(G),
                                             said=round(100 * sum(L["p"] for L in G) / len(G), 1)) if G else None)(
                     [L for r in runs for d in r["days"] for L in d["legs"] if L.get("status") in ("won", "lost")]),
+                # the same, game lines and player props apart: which kind the ladder loses on
+                legs_by_kind=legs_by_kind([L for r in runs for d in r["days"] for L in d["legs"]]),
                 skip=[list(k) for k in SKIP_KINDS],    # leg kinds kept off the ladder (the board preview honours it)
         counts=count_record(book, ""),         # every saved Locks card, not just the ladder's
         counts_games=count_record(book, "", games_only=True),   # the same with game lines only
