@@ -1,9 +1,9 @@
 # Review 2026-11-09
 
 No picks settled yet.
-Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1)); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
-Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1).
-Cautions in force: NBA over on Locks 17/27 vs 75%. Running ahead: NBA under on all saved lines 1082/1224 vs 82%; NHL over on all saved lines 138/154 vs 84%; NHL spread on all saved lines 288/334 vs 83%; NHL teamover on all saved lines 173/198 vs 82%.
+Ladder: run 5, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 37% at 2.47x for the plain top 4; 14 wins to $10,000; legs: Dalton Kincaid: 20+ Receiving Yards (BUF @ MIN; 8:15 PM, open; props like it 111/143), San Antonio Spurs to win (San Antonio Spurs at Phoenix Suns; 9:00 PM, open), Over 222.5 points (Los Angeles Lakers at Atlanta Hawks; 7:00 PM, open).
+Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 1 day, peak $1.00, live.
+Cautions in force: NBA over on Locks 17/27 vs 75%. Running ahead: NBA under on all saved lines 972/1096 vs 82%; NHL over on all saved lines 132/148 vs 84%; NHL spread on all saved lines 281/324 vs 83%; NHL teamover on all saved lines 169/193 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 66/79 (84% vs 81% stated); waiting for 100 legs.
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 84% (88% / 85%); 90%+ 84%, 84% (93% / 85%).
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
@@ -31,6 +31,13 @@ Yesterday (2026-11-08): board 92-19, sweep broken by jpn Gamba Osaka or draw at 
 - LOST col Alianza FC or draw at 71% (-310), Alianza FC 1 - Llaneros FC 2: margin 1 · the book had my side favoured too · called at 71% · favourite lost · close game; picks like it: 15 of 21 (71% vs 71% stated)
 - LOST per Universitario at 76% (-500), Deportivo Moquegua 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76% · upset · price moved against it (5 pts)
 - LOST nba New Orleans Pelicans at 54% (-129), LA Clippers 139 - New Orleans Pelicans 123: margin 16 · the book had my side favoured too · called at 54% · coin flip · blowout; picks like it: 33 of 56 (59% vs 55% stated)
+Locks 0/11 won, 11 open; Best play top 2 (63%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 2 (82%) open; Best play top 6 (55%) open.
+Lottery 100: open (0/11 legs won)
+Lottery 10k: open (0/13 legs won)
+Lottery 10k+25: open (0/13 legs won)
+Lottery 10k+50: open (0/13 legs won)
+Lottery 10k+100: open (0/12 legs won)
 Ladder-consistency props (all time): 1928/2315 won (83.3%) vs 86.2% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
