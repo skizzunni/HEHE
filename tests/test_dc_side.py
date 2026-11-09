@@ -39,6 +39,18 @@ class DcSide(unittest.TestCase):
         self.assertIsNone(daily_review.dc_side_line({"a": row("2026-10-01", "home", True)}))
 
 
+class DcBands(unittest.TestCase):
+    def test_band_short_in_both_halves(self):
+        L = {}
+        for i in range(40):
+            L[f"a{i}"] = row("2026-10-01" if i < 20 else "2026-10-20", "home", i % 2 == 0, conf=82)
+        for i in range(40):
+            L[f"b{i}"] = row("2026-10-01" if i < 20 else "2026-10-20", "home", True, conf=72)
+        out = daily_review.dc_side_line(L)
+        self.assertIn("Short in both halves: 80-100% (50%, then 50%).", out)
+        self.assertNotIn("70-75%", out)
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}

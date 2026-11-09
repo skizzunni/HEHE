@@ -460,6 +460,14 @@ def dc_side_line(ledger=None, min_n=30):
         flag = " SHORT" if sum(v["status"] == "won" for v in s) / len(s) * 100 < said - 3 else ""
         parts.append(f"{side} {rec(s)} vs {said}% stated on {len(s)} (halves {rec(a)}, {rec(b)}){flag}")
     out = "Soccer or-draw picks by side: " + "; ".join(parts) + "."
+    short = []                      # chance bands 2+ points short of stated in both date halves
+    for lo, hi in ((60, 65), (65, 70), (70, 75), (75, 80), (80, 101)):
+        hv = [[v for v in rows if lo <= v["conf"] < hi and ((v.get("date") or "") < mid) == first] for first in (True, False)]
+        if all(len(h) >= 10 for h in hv) and all(
+                100 * sum(v["status"] == "won" for v in h) / len(h) < sum(v["conf"] for v in h) / len(h) - 2 for h in hv):
+            short.append(f"{lo}-{min(hi, 100)}% ({rec(hv[0])}, then {rec(hv[1])})")
+    if short:
+        out += " Short in both halves: " + ", ".join(short) + "."
     soc = {v.get("league") for v in rows}
     sw = [v for v in ledger.values() if isinstance(v, dict) and not v.get("dc") and v.get("league") in soc
           and v.get("status") in ("won", "lost") and not v.get("record_excluded") and v.get("conf") is not None]

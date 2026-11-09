@@ -1162,6 +1162,10 @@ Straight-win soccer picks were checked the same way: 66% won vs 65% stated
 on 279 (dated rows: 83% vs 72%, then 82% vs 74% by half), so they hold too.
 57 of their 96 losses were draws, which is the price of not taking "or draw";
 the line prints that count so draw-heavy weeks are visible.
+By chance band (2026-11-09, halves): 60-65% 77% then 47% (13 and 15 picks);
+65-70% 70% then 64% vs 67%; 70-75% 77%, 80% vs 72%; 75-80% 79%, 86% vs 77%;
+80%+ 82%, 79% vs 82%. No band is 2+ points short in both halves, so none is
+cut; the line flags any band that becomes so.
 
 **Checked, no change: the trailing Locks NFL props (2026-11-09).** Locks NFL
 props are 5 of 10 against about 80% stated. Every saved NFL prop line, the
