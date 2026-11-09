@@ -6265,6 +6265,51 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909952|sure": {
+   "id": "nba:401909952",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+124",
+     "stake_share": 0.4501,
+     "team": "Los Angeles Lakers",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "-120",
+     "stake_share": 0.5499,
+     "team": "Atlanta Hawks",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "LAL @ ATL",
+   "profit": 0.0082,
+   "seen": "2026-11-09T22:33:24+00:00"
+  },
+  "nba:401909952|{\"line\": 236.5, \"t\": \"over\"}|Kalshi": {
+   "dec": 2.0513,
+   "dk": "-114",
+   "ev": 0.0196,
+   "fair": 0.497,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909952",
+   "kind": "value",
+   "league": "nba",
+   "market": "over",
+   "match": "LAL @ ATL",
+   "price": "+105",
+   "seen": "2026-11-09T22:33:24+00:00",
+   "side": "{\"line\": 236.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 236.5,
+    "t": "over"
+   },
+   "start": "2026-11-10T00:00Z",
+   "team": "over 236.5",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909953|{\"line\": -9.5, \"t\": \"spread\", \"team\": \"Cleveland Cavaliers\"}|Kalshi": {
    "dec": 2.0947,
    "dk": "-112",
