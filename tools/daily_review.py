@@ -1005,8 +1005,11 @@ def yesterday_line(y):
     return (f"Yesterday ({y['day']}): board {ys.get('won', 0)}-{ys.get('lost', 0)}"
             + (f", sweep broken by {ys['broke_on']}" if ys.get("broke_on") else ", clean sweep" if ys.get("won") else "")
             + (f"; {ys['expected_losses']:g} losses expected, {ys.get('lost', 0)} came in"
-               f" ({ys['as_bad_pct']:g}% chance of that many or more)"
-               if ys.get("expected_losses") is not None and ys.get("lost") else "") + ".")
+               f" ({pct_text(ys['as_bad_pct'])} chance of that many or more)"
+               if ys.get("expected_losses") is not None and ys.get("lost") else "")
+            + (f" -- an unusually good day: only {pct_text(ys['as_good_pct'])} of days go this well"
+               if ys.get("as_good_pct") is not None and ys["as_good_pct"] < 10 and (ys.get("won") or 0) + (ys.get("lost") or 0) >= 10
+               else "") + ".")
 
 
 def trailing_line(a):

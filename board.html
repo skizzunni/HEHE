@@ -1910,7 +1910,10 @@ function yesterdayHTML(Y){
     + (Y.lost ? ' &middot; why each loss happened' : ' &middot; clean sweep') + '</summary>'
     + (Y.expected_losses != null && Y.lost ? '<p class="note">The chances said to expect about <b>' + Y.expected_losses + ' losses</b>; '
       + Y.lost + ' came in. A day with this many losses or more happens about <b>' + Math.round(Y.as_bad_pct) + '%</b> of the time'
-      + (Y.as_bad_pct < 5 ? ' &ndash; unusually bad, worth a look.' : ', so it was within normal swings.')
+      + (Y.as_bad_pct < 5 ? ' &ndash; unusually bad, worth a look.'
+         : Y.as_good_pct != null && Y.as_good_pct < 10 && Y.won + Y.lost >= 10 ? ' &ndash; an unusually good day: only '
+           + (Y.as_good_pct < 0.5 ? 'under 0.5' : Math.round(Y.as_good_pct)) + '% of days go this well.'
+         : ', so it was within normal swings.')
       + (Object.keys(Y.lost_by_league || {}).length ? ' Losses by league: ' + Object.keys(Y.lost_by_league).map(k => esc(k.toUpperCase()) + ' ' + Y.lost_by_league[k]
           + ((Y.expected_by_league || {})[k] != null ? ' (' + Y.expected_by_league[k] + ' expected)' : '')).join(', ') + '.' : '')
       + '</p>' : '')

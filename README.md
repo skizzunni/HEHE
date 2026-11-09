@@ -4290,3 +4290,5 @@ The ladder publishes its skip list (`report` skip) and the board preview honours
 picks like it 17/19 (2026-11-09).
 Ladder preview looks ahead: once today's card is set and its ticket settled, the board shows an early look
 at tomorrow's ticket from tomorrow's card as it stands (`ladderPreview`) (2026-11-09).
+The Yesterday line (review and board) names an unusually good day too, from `day_rarity` as_good_pct
+(2026-11-09).
