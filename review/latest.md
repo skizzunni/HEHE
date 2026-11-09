@@ -1,6 +1,6 @@
 # Review 2026-11-08
 
-Picks 82-14 (85.4% vs 73.1% claimed, ROI +10.4%).
+Picks 82-15 (84.5% vs 73.2% claimed, ROI +9.3%).
 Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1)); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Cautions in force: NBA over on Locks 15/24 vs 75%. Running ahead: NBA under on all saved lines 1029/1171 vs 82%; NHL over on all saved lines 133/148 vs 84%; NHL spread on all saved lines 279/323 vs 83%; NHL teamover on all saved lines 169/194 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 63/76 (83% vs 81% stated); waiting for 100 legs.
@@ -8,9 +8,9 @@ Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 7
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (12 fights priced, 4 close): Bilal Hasan 86%; Melquizael Costa 75%; Bia Mesquita 68%; Ciryl Gane 68%; Terrance McKinney 64%; Donte Johnson 63%; Kayla Harrison 63%; Chris Duncan 60%; Caio Borralho 59% (close); Uroš Medić 58% (close); Stephen Thompson 56% (close); Samuel Sanches 51% (close).
 TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10 (by half 3/5 then 2/5; short in both halves)
-Strong calls 66-11 (85.7% vs 74.4% claimed).
-Closing line value: +1.49 points on 96 picks; beat the close on 63.5%.
-Board sweep: 82-14, 15 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 25.8 losses expected from the settled picks' chances, so 14 or more by now had a 99.9% chance -- an unusually good day: only 0.3% of days go this well this far in; 1 of the 14 were near coin flips (called under 60%), 13 were real misses; losses by league: fra 3 (1.7 expected), chi 1 (1.6 expected), chn 1 (1.9 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), nba 1 (0.5 expected), nfl 1 (3.8 expected), nhl 1 (1.3 expected), par 1 (0.3 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
+Strong calls 66-12 (84.6% vs 74.4% claimed).
+Closing line value: +1.48 points on 97 picks; beat the close on 63.9%.
+Board sweep: 82-15, 14 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 26 losses expected from the settled picks' chances, so 15 or more by now had a 99.8% chance -- an unusually good day: only 0.5% of days go this well this far in; 1 of the 15 were near coin flips (called under 60%), 14 were real misses; losses by league: fra 3 (1.7 expected), chi 1 (1.6 expected), chn 1 (1.9 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), mex 1 (0.2 expected), nba 1 (0.5 expected), nfl 1 (3.8 expected), nhl 1 (1.3 expected), par 1 (0.3 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
 - LOST jpn Gamba Osaka or draw at 68% (-270), Cerezo Osaka 3 - Gamba Osaka 2: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 13 of 21 (62% vs 69% stated)
 - LOST chn Shenzhen Xinpengcheng at 77% (-450), Qingdao Hainiu 2 - Shenzhen Xinpengcheng 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 77% · upset
 - LOST ger2 St. Pauli or draw at 65% (-230), 1. FC Magdeburg 4 - St. Pauli 1: margin 3 · the book had my side favoured too · called at 65% · favourite lost · blowout; picks like it: 13 of 17 (76% vs 67% stated)
@@ -25,7 +25,8 @@ Board sweep: 82-14, 15 open -- broken (first loss: jpn Gamba Osaka or draw at 68
 - LOST chi O'Higgins or draw at 69% (-260), O'Higgins 2 - Universidad de Concepción 3: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game; picks like it: 12 of 15 (80% vs 70% stated)
 - LOST nba Detroit Pistons at 71% (-277), Detroit Pistons 116 - Los Angeles Lakers 121: margin 5 · the book had my side favoured too · called at 71% · favourite lost · close game; picks like it: 41 of 58 (71% vs 70% stated)
 - LOST nhl Tampa Bay Lightning at 59% (-162), Tampa Bay Lightning 3 - Winnipeg Jets 4: margin 1 · the book had my side favoured too · called at 59% · coin flip · close game; picks like it: 90 of 139 (65% vs 59% stated)
-Why picks lost (14 days): favourite lost 154, close game 119, upset 51, blowout 43, coin flip 43, price moved against it 31.
+- LOST mex Querétaro or draw at 78% (-475), Puebla 2 - Querétaro 0: margin 2 · the book had my side favoured too · called at 78% · upset; picks like it: 17 of 19 (89% vs 78% stated)
+Why picks lost (14 days): favourite lost 154, close game 119, upset 52, blowout 43, coin flip 43, price moved against it 31.
 Yesterday (2026-11-07): board 125-43, sweep broken by jpn Nagoya Grampus or draw at 76%; 47.9 losses expected, 43 came in (82.7% chance of that many or more).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 20 of 21 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 19 (68% vs 68% stated)

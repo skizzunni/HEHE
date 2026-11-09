@@ -2011,7 +2011,7 @@
    "status": "graded"
   },
   "col:401877901": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "C\u00facuta Deportivo",
    "home": "Atl\u00e9tico Junior",
    "league": "col",
@@ -2792,7 +2792,7 @@
    "status": "graded"
   },
   "ecu:401921367": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "Manta F.C.",
    "home": "T\u00e9cnico Universitario",
    "league": "ecu",
@@ -2807,7 +2807,7 @@
    "status": "open"
   },
   "ecu:401921368": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "Delf\u00edn",
    "home": "Mushuc Runa",
    "league": "ecu",
@@ -7044,6 +7044,7 @@
    "away": "Puebla",
    "home": "Quer\u00e9taro",
    "league": "mex",
+   "outcome": 2,
    "p3": {
     "dk": [
      0.5431,
@@ -7052,7 +7053,7 @@
     ]
    },
    "start": "2026-11-09T00:00Z",
-   "status": "open"
+   "status": "graded"
   },
   "mex:401876904": {
    "at": "2026-11-08T02:58:37+00:00",
@@ -10539,32 +10540,47 @@
    "start": "2026-11-09T02:00Z",
    "status": "open"
   },
+  "nba:401909954": {
+   "at": "2026-11-09T02:03:30+00:00",
+   "away": "Washington Wizards",
+   "home": "Detroit Pistons",
+   "league": "nba",
+   "p": {
+    "blend": 0.8011,
+    "dk": 0.7972,
+    "fd": 0.802,
+    "kalshi": 0.81,
+    "pm": 0.795
+   },
+   "start": "2026-11-10T00:00Z",
+   "status": "open"
+  },
   "nba:401909957": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "Denver Nuggets",
    "home": "Houston Rockets",
    "league": "nba",
    "p": {
-    "blend": 0.7359,
+    "blend": 0.7384,
     "dk": 0.7238,
     "fd": 0.7421,
     "kalshi": 0.7426,
-    "pm": 0.735
+    "pm": 0.745
    },
    "start": "2026-11-10T01:30Z",
    "status": "open"
   },
   "nba:401909958": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "San Antonio Spurs",
    "home": "Phoenix Suns",
    "league": "nba",
    "p": {
-    "blend": 0.2677,
+    "blend": 0.2609,
     "dk": 0.2832,
     "fd": 0.2579,
-    "kalshi": 0.2647,
-    "pm": 0.265
+    "kalshi": 0.2475,
+    "pm": 0.255
    },
    "start": "2026-11-10T02:00Z",
    "status": "open"
@@ -10614,7 +10630,7 @@
    "status": "graded"
   },
   "ncaab:401906759": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "Oakland Golden Grizzlies",
    "home": "Alabama Crimson Tide",
    "league": "ncaab",
@@ -10890,7 +10906,7 @@
    "status": "graded"
   },
   "ncaab:401919029": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "USC Trojans",
    "home": "Wichita State Shockers",
    "league": "ncaab",
@@ -14553,7 +14569,7 @@
    "status": "open"
   },
   "nfl:401873051": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "Buffalo Bills",
    "home": "Minnesota Vikings",
    "league": "nfl",
@@ -16629,7 +16645,7 @@
    "status": "open"
   },
   "nhl:401892680": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "New York Rangers",
    "home": "Edmonton Oilers",
    "league": "nhl",
@@ -16644,7 +16660,7 @@
    "status": "open"
   },
   "nhl:401892681": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "Philadelphia Flyers",
    "home": "Vancouver Canucks",
    "league": "nhl",
@@ -16659,7 +16675,7 @@
    "status": "open"
   },
   "nhl:401892682": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "New York Islanders",
    "home": "San Jose Sharks",
    "league": "nhl",
@@ -16866,7 +16882,7 @@
    "status": "graded"
   },
   "nor:401843480": {
-   "at": "2026-11-09T01:58:32+00:00",
+   "at": "2026-11-09T02:03:30+00:00",
    "away": "V\u00e5lerenga",
    "home": "Kristiansund BK",
    "league": "nor",

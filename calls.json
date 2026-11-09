@@ -6182,106 +6182,10 @@
     "nba": "2026-11-09T01:19:38+00:00",
     "nfl": "2026-11-08T20:18:03+00:00"
    },
-   "candidate_observations": {
-    "mex:401876902": {
-     "book": "FanDuel",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": false,
-     "conf": 75,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-09T01:58:22+00:00",
-      "conf": 75,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "mex:401876902",
-      "league": "mex",
-      "match": "GDL @ LEO",
-      "pick": "Guadalajara or draw",
-      "price": "-400",
-      "price_at": "2026-11-09T01:55:34+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.195285834:14552128",
-      "prob_at": "2026-11-09T01:55:13+00:00",
-      "rank": null,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "away",
-      "start": "2026-11-09T02:10Z"
-     },
-     "dc": true,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
-     },
-     "id": "mex:401876902",
-     "league": "mex",
-     "match": "GDL @ LEO",
-     "pick": "Guadalajara or draw",
-     "price": "-400",
-     "price_at": "2026-11-09T01:55:34+00:00",
-     "price_market": "double_chance",
-     "price_ref": "736.195285834:14552128",
-     "side": "away",
-     "start": "2026-11-09T02:10Z",
-     "tip": "9:10 PM"
-    },
-    "nba:401909951": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 83,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-09T01:58:22+00:00",
-      "conf": 83,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (3 listed)"
-      },
-      "id": "nba:401909951",
-      "league": "nba",
-      "match": "MIA @ SAC",
-      "pick": "Miami Heat",
-      "price": "-620",
-      "price_at": "2026-11-09T01:55:12+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34973496:0ML87124148_3",
-      "prob_at": "2026-11-09T01:55:12+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "away",
-      "start": "2026-11-09T02:00Z"
-     },
-     "dc": false,
-     "fp": "dca07c3e718c",
-     "gate": {
-      "ok": true,
-      "what": "injury report checked (3 listed)"
-     },
-     "id": "nba:401909951",
-     "league": "nba",
-     "match": "MIA @ SAC",
-     "news_at": "2026-11-09T01:19:38+00:00",
-     "pick": "Miami Heat",
-     "price": "-620",
-     "price_at": "2026-11-09T01:55:12+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34973496:0ML87124148_3",
-     "side": "away",
-     "start": "2026-11-09T02:00Z",
-     "tip": "9:00 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
-    "esp"
+    "esp",
+    "nba"
    ],
    "news": {
     "esp": "2026-11-08T16:38:29+00:00",
