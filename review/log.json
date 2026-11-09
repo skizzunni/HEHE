@@ -12001,9 +12001,9 @@
   "card_missing": null,
   "cautions": "Cautions in force: NBA over on Locks 15/24 vs 75%. Running ahead: NBA under on all saved lines 1019/1157 vs 82%; NHL over on all saved lines 131/146 vs 84%; NHL spread on all saved lines 275/319 vs 83%; NHL teamover on all saved lines 168/193 vs 82%.",
   "clv": {
-   "avg": 1.37,
-   "beat": 64.1,
-   "n": 92
+   "avg": 1.34,
+   "beat": 63.4,
+   "n": 93
   },
   "cold": null,
   "day": "2026-11-08",
@@ -12027,9 +12027,9 @@
   },
   "loss_reasons_14d": {
    "blowout": 43,
-   "close game": 116,
+   "close game": 117,
    "coin flip": 42,
-   "favourite lost": 152,
+   "favourite lost": 153,
    "price moved against it": 31,
    "upset": 51
   },
@@ -12257,6 +12257,28 @@
      "blowout"
     ],
     "why": "margin 18 \u00b7 the book had my side favoured too \u00b7 called at 62% \u00b7 favourite lost \u00b7 blowout"
+   },
+   {
+    "against_market": false,
+    "league": "chi",
+    "like": {
+     "n": 15,
+     "said": 70,
+     "won": 12
+    },
+    "match": "OHI @ UdeC",
+    "pick": "O'Higgins or draw",
+    "price": "-260",
+    "said": 69,
+    "score": {
+     "O'Higgins": 2,
+     "Universidad de Concepci\u00f3n": 3
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 69% \u00b7 favourite lost \u00b7 close game"
    }
   ],
   "lottery": [
@@ -12366,11 +12388,11 @@
    }
   ],
   "picks": {
-   "hit": 88.0,
-   "lost": 11,
-   "n": 92,
-   "roi": 13.7,
-   "said": 73.4,
+   "hit": 87.1,
+   "lost": 12,
+   "n": 93,
+   "roi": 12.5,
+   "said": 73.3,
    "won": 81
   },
   "picks_by_league": {
@@ -12415,11 +12437,11 @@
     "won": 1
    },
    "chi": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 5,
-    "roi": 26.2,
-    "said": 74.8,
+    "hit": 83.3,
+    "lost": 1,
+    "n": 6,
+    "roi": 5.2,
+    "said": 73.8,
     "won": 5
    },
    "chn": {
@@ -12655,20 +12677,21 @@
    "won": 5
   },
   "strong": {
-   "hit": 86.7,
-   "lost": 10,
-   "n": 75,
-   "roi": 9.0,
-   "said": 74.5,
+   "hit": 85.5,
+   "lost": 11,
+   "n": 76,
+   "roi": 7.6,
+   "said": 74.4,
    "won": 65
   },
   "stuck": [],
   "sweep": {
    "as_bad_pct": 100.0,
-   "as_good_pct": 0.0,
+   "as_good_pct": 0.1,
    "broke_on": "jpn Gamba Osaka or draw at 68%",
    "coin_flips": 0,
    "expected_by_league": {
+    "chi": 1.6,
     "chn": 1.9,
     "epl": 1.2,
     "fra": 1.7,
@@ -12679,9 +12702,10 @@
     "sco": 0.3,
     "swe": 0.3
    },
-   "expected_losses": 24.5,
-   "lost": 11,
+   "expected_losses": 24.8,
+   "lost": 12,
    "lost_by_league": {
+    "chi": 1,
     "chn": 1,
     "epl": 1,
     "fra": 3,
@@ -12692,20 +12716,20 @@
     "sco": 1,
     "swe": 1
    },
-   "open": 19,
+   "open": 18,
    "won": 81
   },
-  "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
-  "ufc_next": "Next UFC card 2026-11-14 (12 fights priced, 4 close): Bilal Hasan 86%; Melquizael Costa 75%; Ciryl Gane 68%; Bia Mesquita 67%; Terrance McKinney 64%; Donte Johnson 63%; Kayla Harrison 63%; Chris Duncan 60%; Caio Borralho 59% (close); Uro\u0161 Medi\u0107 58% (close); Stephen Thompson 56% (close); Evan Elder 52% (close).",
+  "ufc": "UFC 2026-10-31: picks (the price favourite) 9-3; close fights (under 60%) 1 of 3; lost: JeongYeong Lee (56%) lost to Julian Erosa, Francis Marshall (64%) lost to Dakota Hope, Renato Moicano (55%) lost to Tom Nolan.",
+  "ufc_next": "Next UFC card 2026-11-14 (12 fights priced, 4 close): Bilal Hasan 86%; Melquizael Costa 75%; Bia Mesquita 68%; Ciryl Gane 68%; Terrance McKinney 64%; Donte Johnson 63%; Kayla Harrison 63%; Chris Duncan 60%; Caio Borralho 59% (close); Uro\u0161 Medi\u0107 58% (close); Stephen Thompson 56% (close); Samuel Sanches 51% (close).",
   "vs_market_14d": {
    "against": {
     "n": 0
    },
    "agree": {
-    "hit": 77.3,
-    "lost": 245,
-    "n": 1078,
-    "roi": 2.5,
+    "hit": 77.2,
+    "lost": 246,
+    "n": 1079,
+    "roi": 2.4,
     "said": 71.8,
     "won": 833
    }
