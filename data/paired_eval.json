@@ -230,34 +230,34 @@
    "same": "11 legs a day, one per game, same price window, same quotes",
    "result": {
     "Locks (-400..-120)": {
-     "days": 25,
-     "picks": 88,
-     "old_won": 72,
-     "new_won": 73,
+     "days": 29,
+     "picks": 110,
+     "old_won": 91,
+     "new_won": 92,
      "diff": 1,
      "ci95_diff": [
-      0,
-      3
+      -2,
+      4
      ],
-     "new_won_old_missed": 4,
-     "old_won_new_missed": 3,
-     "promote": false,
-     "untouched_from": "2026-10-07"
-    },
-    "Safe (-2000..-500)": {
-     "days": 25,
-     "picks": 88,
-     "old_won": 87,
-     "new_won": 86,
-     "diff": -1,
-     "ci95_diff": [
-      -3,
-      0
-     ],
-     "new_won_old_missed": 1,
+     "new_won_old_missed": 3,
      "old_won_new_missed": 2,
      "promote": false,
-     "untouched_from": "2026-10-07"
+     "untouched_from": "2026-10-10"
+    },
+    "Safe (-2000..-500)": {
+     "days": 29,
+     "picks": 110,
+     "old_won": 105,
+     "new_won": 105,
+     "diff": 0,
+     "ci95_diff": [
+      0,
+      0
+     ],
+     "new_won_old_missed": 5,
+     "old_won_new_missed": 5,
+     "promote": false,
+     "untouched_from": "2026-10-10"
     }
    }
   },
