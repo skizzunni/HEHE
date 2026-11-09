@@ -4292,3 +4292,5 @@ Ladder preview looks ahead: once today's card is set and its ticket settled, the
 at tomorrow's ticket from tomorrow's card as it stands (`ladderPreview`) (2026-11-09).
 The Yesterday line (review and board) names an unusually good day too, from `day_rarity` as_good_pct
 (2026-11-09).
+Tests for `ladder.best_combo` edge cases: equal-chance tickets go to fewer legs, only the 12 likeliest legs
+are searched, and nothing is chosen when no combination reaches 2x (2026-11-09).

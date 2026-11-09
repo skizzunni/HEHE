@@ -99,6 +99,17 @@ class Ladder(unittest.TestCase):
             r = ladder.report(b, start="2026-11-03")
         self.assertEqual([(g["n"], g["lost_on"]) for g in r["log"]], [(5, []), (5, ["2026-11-04|e"])])
 
+    def test_best_combo_ties_and_pool(self):
+        mk = lambda k, pr, p: dict(key=k, gid=k, label=k, price=pr, p=p)
+        # two ways to 2.25x at the same chance: 2 legs (-200, -200) vs ... the first found (fewer legs) stays
+        legs = [mk("a", "-200", 0.75), mk("b", "-200", 0.75), mk("c", "+125", 0.5625)]
+        got = ladder.best_combo(legs)
+        self.assertEqual(len(got), 1)                       # +125 alone pays 2.25x at 56.25%, same as a+b; fewer legs wins the tie
+        # only the `pool` likeliest legs are considered
+        many = [mk(str(i), "-400", 0.8) for i in range(14)] + [mk("x", "+150", 0.5)]
+        self.assertNotIn("x", [L["key"] for L in ladder.best_combo(many, pool=12)])
+        self.assertEqual(ladder.best_combo([mk("z", "-2000", 0.97)]), [])   # nothing reaches 2x
+
     def test_skip_kinds(self):
         nfl_prop = dict(league="nfl", kind="prop", market="Receiving Yards")
         self.assertFalse(ladder.skipped(nfl_prop))                                   # off by default
