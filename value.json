@@ -6358,6 +6358,62 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909955|away|FanDuel": {
+   "dec": 2.14,
+   "ev": 0.0318,
+   "fair": 0.4821,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909955",
+   "kind": "value",
+   "league": "nba",
+   "match": "MEM @ TOR",
+   "price": "+114",
+   "seen": "2026-11-09T22:48:35+00:00",
+   "side": "away",
+   "start": "2026-11-10T00:30Z",
+   "team": "Memphis Grizzlies",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909955|home|Kalshi": {
+   "dec": 1.9324,
+   "ev": 0.0379,
+   "fair": 0.5371,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909955",
+   "kind": "value",
+   "league": "nba",
+   "match": "MEM @ TOR",
+   "price": "-107",
+   "seen": "2026-11-09T22:48:35+00:00",
+   "side": "home",
+   "start": "2026-11-10T00:30Z",
+   "team": "Toronto Raptors",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909955|sure": {
+   "id": "nba:401909955",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+114",
+     "stake_share": 0.4745,
+     "team": "Memphis Grizzlies",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-107",
+     "stake_share": 0.5255,
+     "team": "Toronto Raptors",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "MEM @ TOR",
+   "profit": 0.0155,
+   "seen": "2026-11-09T22:48:35+00:00"
+  },
   "nba:401909955|{\"line\": 230.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0947,
    "dk": "-113",
@@ -14594,6 +14650,26 @@
    "payout": 2.14,
    "prob": 0.475,
    "seen": "2026-11-09T19:50:18+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909955:away": {
+   "ev": 0.0317,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0318,
+     "fair": 0.4821,
+     "id": "nba:401909955",
+     "price": "+114",
+     "side": "away",
+     "spec": null,
+     "team": "Memphis Grizzlies"
+    }
+   ],
+   "payout": 2.14,
+   "prob": 0.4821,
+   "seen": "2026-11-09T22:48:35+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
