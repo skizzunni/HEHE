@@ -76,6 +76,42 @@ def finish_rates(book=None):
     return out
 
 
+def went_distance(f):
+    """True when a fight ran to the final bell of its scheduled rounds."""
+    return bool(f.get("round") and f.get("rounds") and f["round"] == f["rounds"]
+                and f.get("clock") in ("5:00", "05:00"))
+
+
+def distance_rates(hist):
+    """{fighter name: [fights that went the distance, fights]} from the
+    history file (tools/ufc_history.py), by name so the priced card's names
+    match. Walk-forward study 2026-11-09 on 3,099 fights where both men had
+    3+ earlier fights: the mean of the two rates sorted the fights cleanly in
+    both date halves -- under 0.30: 32% then 31% went the distance; 0.60-0.75:
+    64%, 63%; 0.75+: 68%, 78% (base 51%, 49%). No prop prices to test it
+    against, so it is shown as information, never a call."""
+    out = {}
+    for f in sorted(hist.values(), key=lambda f: f.get("date") or ""):
+        if not (f.get("round") and f.get("rounds") and f.get("clock")):
+            continue
+        d = went_distance(f)
+        for x in (f.get("a") or {}, f.get("b") or {}):
+            if x.get("name"):
+                a = out.setdefault(x["name"], [0, 0])
+                a[0] += d
+                a[1] += 1
+    return out
+
+
+def distance_lean(a, b, rates, min_n=3, hi=0.60, lo=0.30):
+    """'distance' / 'finish' / None for a fight between names a and b."""
+    ra, rb = rates.get(a), rates.get(b)
+    if not ra or not rb or ra[1] < min_n or rb[1] < min_n:
+        return None
+    m = (ra[0] / ra[1] + rb[0] / rb[1]) / 2
+    return "distance" if m >= hi else "finish" if m < lo else None
+
+
 def score(log, since="2024-01-01", min_fights=1):
     """Walk-forward accuracy and log loss on fights from `since`, both fighters
     with at least `min_fights` earlier UFC fights."""

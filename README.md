@@ -1171,6 +1171,25 @@ vs 83% / 82%, receptions 87% then 82% vs 82% / 83%. So the props themselves
 are not overstated; 10 legs is too few to cut them. The TRAILING line now
 prints that pool record beside any short Locks prop split.
 
+**UFC: does a fight go the distance? (2026-11-09, information only).** From
+`ufc_history.json`, each fighter's share of earlier UFC fights that ran to the
+final bell, walk-forward (only fights before the one being judged). On 3,099
+fights where both had 3+ earlier fights, the mean of the two shares sorted
+fights the same way in both date halves (split 2022-03-06):
+
+    mean share     went the distance (1st half / 2nd half)
+    under 0.30     32% on 245  /  31% on 272
+    0.30-0.45      43% on 384  /  43% on 418
+    0.45-0.60      55% on 477  /  51% on 466
+    0.60-0.75      64% on 288  /  63% on 297
+    0.75+          68% on 155  /  78% on  97
+    all            51%         /  49%
+
+There are no "goes the distance" prices in the data, so this cannot be
+tested against the book and is not a call. The review's next-card line lists
+the fights at either end (`ufc_model.distance_lean`): under 0.30 "likely to
+end early", 0.60+ "likely to go the distance".
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that

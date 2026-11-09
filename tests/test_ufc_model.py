@@ -48,15 +48,33 @@ class UFCModel(unittest.TestCase):
         import daily_review
         fake = lambda day: ({("A", "B"): dict(pick="A", conf=0.55), ("C", "D"): dict(pick="D", conf=0.8)}
                             if day == "20261114" else {})
-        line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake)
+        line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake, rates={})
         from unittest import mock
         with mock.patch.object(daily_review, "_ufc_bands", lambda: {}):
-            line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake)
+            line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake, rates={})
         self.assertEqual(line, "Next UFC card 2026-11-14 (2 fights priced, 1 close): D 80%; A 55% (close).")
         with mock.patch.object(daily_review, "_ufc_bands", lambda: {"80-100": dict(won=270, n=306, roi=-0.1), "50-60": dict(won=482, n=859, roi=-3.6)}):
-            line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake)
+            line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake, rates={})
         self.assertTrue(line.endswith("favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 50-60% won 56% (-3.6% a bet)."), line)
-        self.assertIsNone(daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=lambda d: {}))
+        self.assertIsNone(daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=lambda d: {}, rates={}))
+        R = {"A": [4, 5], "B": [3, 4], "C": [0, 4], "D": [1, 5]}
+        with mock.patch.object(daily_review, "_ufc_bands", lambda: {}):
+            line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake, rates=R)
+        self.assertIn("Likely to go the distance (both usually do; such fights went 63-78%): A v B.", line)
+        self.assertIn("Likely to end early (both usually finish or get finished; such fights went the distance 31-32%): C v D.", line)
+
+    def test_distance_rates(self):
+        H = {"1": dict(date="2026-01-01", round=3, rounds=3, clock="5:00", a=dict(name="A"), b=dict(name="B")),
+             "2": dict(date="2026-02-01", round=1, rounds=3, clock="2:10", a=dict(name="A"), b=dict(name="C")),
+             "3": dict(date="2026-03-01", round=5, rounds=5, clock="5:00", a=dict(name="A"), b=dict(name="C")),
+             "4": dict(date="2026-03-02", a=dict(name="A"), b=dict(name="C"))}
+        R = M.distance_rates(H)
+        self.assertEqual(R["A"], [2, 3])
+        self.assertEqual(R["C"], [1, 2])
+        self.assertIsNone(M.distance_lean("A", "C", R))          # C has under 3 fights
+        self.assertEqual(M.distance_lean("A", "B", {"A": [3, 3], "B": [2, 3]}), "distance")
+        self.assertEqual(M.distance_lean("A", "B", {"A": [0, 3], "B": [1, 3]}), "finish")
+        self.assertIsNone(M.distance_lean("A", "B", {"A": [1, 3], "B": [2, 3]}))
 
 
 if __name__ == "__main__":

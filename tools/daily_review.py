@@ -529,7 +529,7 @@ def _ufc_bands():
         return {}
 
 
-def ufc_next_line(today=None, ahead=7, picks_fn=None):
+def ufc_next_line(today=None, ahead=7, picks_fn=None, rates=None):
     """The next UFC card in the coming `ahead` days with prices posted: each
     fight's price favourite and chance, close fights (under 60%) flagged."""
     if picks_fn is None:
@@ -553,9 +553,26 @@ def ufc_next_line(today=None, ahead=7, picks_fn=None):
             used = sorted({band(100 * (v.get("conf") or 0)) for _, v in fights} & set(B), key=lambda k: -int(k.split("-")[0]))
             rec = ("; favourites since 2021 by band: " + ", ".join(
                 f"{k}% won {round(100 * B[k]['won'] / B[k]['n'])}% ({B[k]['roi']:+g}% a bet)" for k in used)) if used else ""
+            if rates is None:
+                try:
+                    import ufc_model
+                    rates = ufc_model.distance_rates(load("ufc_history.json", {}))
+                except Exception:
+                    rates = {}
+            lean = {}
+            if rates:
+                import ufc_model
+                for k, _ in fights:
+                    if isinstance(k, (tuple, list)) and len(k) == 2:
+                        lean[tuple(k)] = ufc_model.distance_lean(k[0], k[1], rates)
+            dl = [f"{k[0]} v {k[1]}" for k, x in lean.items() if x == "distance"]
+            fl = [f"{k[0]} v {k[1]}" for k, x in lean.items() if x == "finish"]
+            how = ((" Likely to go the distance (both usually do; such fights went 63-78%): " + ", ".join(dl) + ".") if dl else "") \
+                + ((" Likely to end early (both usually finish or get finished; such fights went the distance 31-32%): "
+                    + ", ".join(fl) + ".") if fl else "")
             return (f"Next UFC card {day[:4]}-{day[4:6]}-{day[6:]} ({len(fights)} fights priced, {close} close): "
                     + "; ".join(f"{v['pick']} {round(100 * (v.get('conf') or 0))}%" + (" (close)" if (v.get("conf") or 0) < 0.60 else "")
-                                for _, v in fights) + rec + ".")
+                                for _, v in fights) + rec + "." + how)
     return None
 
 
