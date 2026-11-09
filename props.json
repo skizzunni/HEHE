@@ -38454,6 +38454,7 @@
   "p": 0.853,
   "p_fair": 0.8391,
   "price": "-650",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -38472,6 +38473,7 @@
   "p": 0.8492,
   "p_fair": 0.9426,
   "price": "-1200",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -50511,11 +50513,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Bucky Irving",
   "p": 0.3686,
   "p_fair": null,
   "price": "+110",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873050|n:cade otton|Receiving Yards|15+": {
   "aid": null,
@@ -50527,11 +50531,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Cade Otton",
   "p": 0.8016,
   "p_fair": 0.7586,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 25.0
  },
  "nfl:401873050|n:cade otton|Receptions|2+": {
   "aid": null,
@@ -50543,11 +50549,13 @@
   "league": "nfl",
   "line": "2+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Cade Otton",
   "p": 0.8555,
   "p_fair": 0.834,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nfl:401873050|n:caleb williams|Passing Touchdowns|1+": {
   "aid": null,
@@ -50559,11 +50567,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Passing Touchdowns",
+  "matched": "name",
   "name": "Caleb Williams",
   "p": 0.8563,
   "p_fair": 0.8475,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873050|n:caleb williams|Passing Yards|175+": {
   "aid": null,
@@ -50575,11 +50585,13 @@
   "league": "nfl",
   "line": "175+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Caleb Williams",
   "p": 0.8446,
   "p_fair": 0.83,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 279.0
  },
  "nfl:401873050|n:dandre swift|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -50591,11 +50603,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "D'Andre Swift",
   "p": 0.531,
   "p_fair": null,
   "price": "-190",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873050|n:dandre swift|Receiving Yards|10+": {
   "aid": null,
@@ -50607,11 +50621,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "D'Andre Swift",
   "p": 0.7842,
   "p_fair": 0.7783,
   "price": "-360",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873050|n:kalif raymond|Receiving Yards|5+": {
   "aid": null,
@@ -50623,11 +50639,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Kalif Raymond",
   "p": 0.8436,
   "p_fair": 0.8557,
   "price": "-550",
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nfl:401873050|n:kenneth gainwell|Receptions|1+": {
   "aid": null,
@@ -50639,11 +50657,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "fuzzy",
   "name": "Kenneth Gainwell",
   "p": 0.8547,
   "p_fair": 0.8568,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nfl:401873050|n:luther burden|Receiving Yards|40+": {
   "aid": null,
@@ -50655,11 +50675,13 @@
   "league": "nfl",
   "line": "40+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Luther Burden III",
   "p": 0.8016,
   "p_fair": 0.7054,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 97.0
  },
  "nfl:401873050|n:luther burden|Receptions|4+": {
   "aid": null,
@@ -50671,11 +50693,13 @@
   "league": "nfl",
   "line": "4+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Luther Burden III",
   "p": 0.7877,
   "p_fair": 0.7637,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nfl:401873050|n:rome odunze|Receiving Yards|20+": {
   "aid": null,
@@ -50687,11 +50711,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Rome Odunze",
   "p": 0.8589,
   "p_fair": 0.8035,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 60.0
  },
  "nfl:401873050|n:rome odunze|Receptions|2+": {
   "aid": null,
@@ -50703,11 +50729,13 @@
   "league": "nfl",
   "line": "2+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Rome Odunze",
   "p": 0.8555,
   "p_fair": 0.8299,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nfl:401873050|n:ted hurst|Receptions|1+": {
   "aid": null,
@@ -50719,11 +50747,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Ted Hurst III",
   "p": 0.8529,
   "p_fair": 0.8297,
   "price": "-600",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873050|n:tez johnson|Receptions|1+": {
   "aid": null,
@@ -50735,11 +50765,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Tez Johnson",
   "p": 0.796,
   "p_fair": 0.7731,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401891807|n:chris kreider|Shots on Goal|1+": {
   "aid": null,
