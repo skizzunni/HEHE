@@ -11657,9 +11657,9 @@
  },
  "2026-11-08": {
   "clv": {
-   "avg": 1.45,
-   "beat": 62.7,
-   "n": 110
+   "avg": 1.43,
+   "beat": 62.2,
+   "n": 111
   },
   "day": "2026-11-08",
   "leaks_14d": [],
@@ -12204,12 +12204,12 @@
    }
   ],
   "picks": {
-   "hit": 82.7,
+   "hit": 82.9,
    "lost": 19,
-   "n": 110,
-   "roi": 7.1,
-   "said": 73.0,
-   "won": 91
+   "n": 111,
+   "roi": 7.4,
+   "said": 72.9,
+   "won": 92
   },
   "picks_by_league": {
    "arg": {
@@ -12375,10 +12375,10 @@
    "ncaab": {
     "hit": 100.0,
     "lost": 0,
-    "n": 3,
-    "roi": 20.3,
-    "said": 85.7,
-    "won": 3
+    "n": 4,
+    "roi": 24.9,
+    "said": 81.8,
+    "won": 4
    },
    "ned": {
     "hit": 100.0,
@@ -12515,8 +12515,8 @@
    "won": 67
   },
   "sweep": {
-   "as_bad_pct": 99.5,
-   "as_good_pct": 1.0,
+   "as_bad_pct": 99.6,
+   "as_good_pct": 0.9,
    "broke_on": "jpn Gamba Osaka or draw at 68%",
    "coin_flips": 3,
    "expected_by_league": {
@@ -12536,7 +12536,7 @@
     "sco": 0.3,
     "swe": 0.3
    },
-   "expected_losses": 29.7,
+   "expected_losses": 30.0,
    "lost": 19,
    "lost_by_league": {
     "chi": 1,
@@ -12555,8 +12555,8 @@
     "sco": 1,
     "swe": 1
    },
-   "open": 1,
-   "won": 91
+   "open": 0,
+   "won": 92
   },
   "vs_market_14d": {
    "against": {
@@ -12565,10 +12565,10 @@
    "agree": {
     "hit": 76.9,
     "lost": 253,
-    "n": 1096,
+    "n": 1097,
     "roi": 2.0,
     "said": 71.8,
-    "won": 843
+    "won": 844
    }
   }
  },
@@ -13386,10 +13386,10 @@
    "agree": {
     "hit": 76.6,
     "lost": 232,
-    "n": 992,
+    "n": 993,
     "roi": 1.5,
     "said": 71.8,
-    "won": 760
+    "won": 761
    }
   },
   "weights": {
@@ -13405,10 +13405,10 @@
    "ncaab": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.2043,
-    "market_only": 0.2043,
-    "model_40": 0.2233,
-    "n": 40,
+    "logloss": 0.2079,
+    "market_only": 0.2079,
+    "model_40": 0.2285,
+    "n": 41,
     "weight": 0.0
    },
    "ncaaf": {
@@ -13839,8 +13839,8 @@
     }
    ],
    "sweep": {
-    "as_bad_pct": 99.5,
-    "as_good_pct": 1.0,
+    "as_bad_pct": 99.6,
+    "as_good_pct": 0.9,
     "broke_on": "jpn Gamba Osaka or draw at 68%",
     "coin_flips": 3,
     "expected_by_league": {
@@ -13860,7 +13860,7 @@
      "sco": 0.3,
      "swe": 0.3
     },
-    "expected_losses": 29.7,
+    "expected_losses": 30.0,
     "lost": 19,
     "lost_by_league": {
      "chi": 1,
@@ -13879,8 +13879,8 @@
      "sco": 1,
      "swe": 1
     },
-    "open": 1,
-    "won": 91
+    "open": 0,
+    "won": 92
    }
   }
  }

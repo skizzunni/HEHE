@@ -10,7 +10,7 @@ Next UFC card 2026-11-14 (12 fights priced, 4 close): Bilal Hasan 86%; Melquizae
 TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10 (by half 3/5 then 2/5; short in both halves)
 Board sweep: 0-0, 19 open -- still clean.
 Why picks lost (14 days): favourite lost 142, close game 110, upset 46, coin flip 44, blowout 39, price moved against it 32.
-Yesterday (2026-11-08): board 91-19, sweep broken by jpn Gamba Osaka or draw at 68%; 29.7 losses expected, 19 came in (99.5% chance of that many or more) -- an unusually good day: only 1% of days go this well.
+Yesterday (2026-11-08): board 92-19, sweep broken by jpn Gamba Osaka or draw at 68%; 30 losses expected, 19 came in (99.6% chance of that many or more) -- an unusually good day: only 0.9% of days go this well.
 - LOST jpn Gamba Osaka or draw at 68% (-270), Cerezo Osaka 3 - Gamba Osaka 2: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 13 of 21 (62% vs 69% stated)
 - LOST chn Shenzhen Xinpengcheng at 77% (-450), Qingdao Hainiu 2 - Shenzhen Xinpengcheng 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 77% · upset
 - LOST ger2 St. Pauli or draw at 65% (-230), 1. FC Magdeburg 4 - St. Pauli 1: margin 3 · the book had my side favoured too · called at 65% · favourite lost · blowout; picks like it: 13 of 17 (76% vs 67% stated)
@@ -33,4 +33,4 @@ Yesterday (2026-11-08): board 91-19, sweep broken by jpn Gamba Osaka or draw at 
 Ladder-consistency props (all time): 1928/2315 won (83.3%) vs 86.2% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=146), ncaab 0.00 (n=40), ncaaf 0.00 (n=226), nfl 0.00 (n=55), nhl 0.00 (n=165)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=146), ncaab 0.00 (n=41), ncaaf 0.00 (n=226), nfl 0.00 (n=55), nhl 0.00 (n=165)
