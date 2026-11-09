@@ -746,8 +746,19 @@ def audit(graded, props, locks):
         said = sum(p_of(r) for r in rs) / n
         se = math.sqrt(max(said * (1 - said), 1e-6) / n)
         flag = " <- trailing" if hit < said - 2 * se else ""
+        # both date halves, so a short slump reads apart from a split that is
+        # short throughout
+        ds = sorted({r.get("date") for r in rs if r.get("date")})
+        halves = None
+        if len(ds) >= 2:
+            mid = ds[len(ds) // 2]
+            halves = []
+            for h in (False, True):
+                X = [r for r in rs if r.get("date") and (r["date"] >= mid) == h]
+                if X:
+                    halves.append([sum(won_of(r) for r in X), len(X), round(100 * sum(p_of(r) for r in X) / len(X), 1)])
         out.append(dict(name=name, n=n, hit=round(100 * hit, 1), said=round(100 * said, 1),
-                        flag=bool(flag)))
+                        flag=bool(flag), halves=halves))
 
     tennis = [e for e in graded if e.get("league") in ("atp", "wta")]
     for src, f in (("Kalshi-priced", lambda e: "Kalshi" in (e.get("why") or "")),
@@ -998,6 +1009,17 @@ def yesterday_line(y):
                if ys.get("expected_losses") is not None and ys.get("lost") else "") + ".")
 
 
+def trailing_line(a):
+    """A trailing split, with its two date halves when known."""
+    s = f"TRAILING {a['name']}: {a['hit']}% hit vs {a['said']}% stated on {a['n']}"
+    H = a.get("halves") or []
+    if len(H) == 2 and all(h[1] for h in H):
+        both = all(100 * h[0] / h[1] < h[2] for h in H)
+        s += (f" (by half {H[0][0]}/{H[0][1]} then {H[1][0]}/{H[1][1]}; "
+              + ("short in both halves" if both else "short in one half only -- a slump, not yet a pattern") + ")")
+    return s
+
+
 def pct_text(x):
     """A small percentage in words: 'under 0.1%' rather than a rounded 0%."""
     return "under 0.1%" if x is not None and x < 0.1 else f"{x:g}%"
@@ -1055,7 +1077,7 @@ def words(r, fit):
         out.append(f"STUCK {len(st)} record(s) open a week after their game -- grading is broken: "
                    + "; ".join(f"{a} {b}" for a, b in st[:5]))
     for a in [a for a in (r.get("audit") or []) if a["flag"]]:
-        out.append(f"TRAILING {a['name']}: {a['hit']}% hit vs {a['said']}% stated on {a['n']}")
+        out.append(trailing_line(a))
     sc = r.get("strong") or {}
     if sc.get("n"):
         out.append(f"Strong calls {sc['won']}-{sc['lost']} ({sc['hit']}% vs {sc['said']}% claimed).")
