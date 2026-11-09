@@ -6248,6 +6248,23 @@
    "tip": "9:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909952|away|FanDuel": {
+   "dec": 2.14,
+   "ev": 0.0165,
+   "fair": 0.475,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909952",
+   "kind": "value",
+   "league": "nba",
+   "match": "LAL @ ATL",
+   "price": "+114",
+   "seen": "2026-11-09T19:50:18+00:00",
+   "side": "away",
+   "start": "2026-11-10T00:00Z",
+   "team": "Los Angeles Lakers",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909953|{\"line\": -9.5, \"t\": \"spread\", \"team\": \"Cleveland Cavaliers\"}|Kalshi": {
    "dec": 2.0947,
    "dk": "-112",
@@ -14327,6 +14344,26 @@
    "prob": 0.1989,
    "seen": "2026-11-08T22:56:28+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909952:away": {
+   "ev": 0.0165,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0165,
+     "fair": 0.475,
+     "id": "nba:401909952",
+     "price": "+114",
+     "side": "away",
+     "spec": null,
+     "team": "Los Angeles Lakers"
+    }
+   ],
+   "payout": 2.14,
+   "prob": 0.475,
+   "seen": "2026-11-09T19:50:18+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
