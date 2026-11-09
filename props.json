@@ -70527,6 +70527,7 @@
   "p": 0.8517,
   "p_fair": null,
   "price": "-1050",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -70665,11 +70666,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Coronato",
   "p": 0.7294,
   "p_fair": null,
   "price": "-360",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892678|n:matvei michkov|Shots on Goal|1+": {
   "aid": null,
@@ -70681,11 +70684,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matvei Michkov",
   "p": 0.8432,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892678|n:mikael backlund|Shots on Goal|1+": {
   "aid": null,
@@ -70697,11 +70702,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikael Backlund",
   "p": 0.8619,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892678|n:trevor zegras|Shots on Goal|1+": {
   "aid": null,
@@ -70713,11 +70720,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Trevor Zegras",
   "p": 0.844,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892679|n:beckett sennecke|Shots on Goal|2+": {
   "aid": null,
