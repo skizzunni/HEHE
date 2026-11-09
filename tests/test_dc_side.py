@@ -50,5 +50,16 @@ class TrailingPool(unittest.TestCase):
         self.assertNotIn("saved", daily_review.trailing_line(dict(name="calls nba", hit=50, said=70, n=40), P))
 
 
+class PoolCtx(unittest.TestCase):
+    def test_card_caution_gets_pool(self):
+        F = {("nba", "over"): dict(league="nba", t="over", won=515, n=625, said=81.7, since="2026-11-02")}
+        self.assertEqual(daily_review.pool_ctx(dict(league="nba", t="over", where="Locks"), F),
+                         " (all saved lines since 2026-11-02: 515/625, 82% vs 82% -- pool on par)")
+        F2 = {("nba", "over"): dict(league="nba", t="over", won=450, n=625, said=81.7, since="2026-11-02")}
+        self.assertIn("pool short too", daily_review.pool_ctx(dict(league="nba", t="over", where="Safe Locks"), F2))
+        self.assertEqual(daily_review.pool_ctx(dict(league="nba", t="over", where="all saved lines"), F), "")
+        self.assertEqual(daily_review.pool_ctx(dict(league="nhl", t="over", where="Locks"), F), "")
+
+
 if __name__ == "__main__":
     unittest.main()

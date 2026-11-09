@@ -373,6 +373,18 @@ def _pick_stuck_days():
 PICK_STUCK_DAYS = _pick_stuck_days()
 
 
+def pool_ctx(w, F):
+    """For a Locks / Safe Locks caution, the same bet type across every saved
+    line over the last pool days, so a short card split can be read against
+    the pool it was drawn from. '' when not a card caution or no pool."""
+    f = F.get((w.get("league"), w.get("t"))) if w.get("where") in ("Locks", "Safe Locks") else None
+    if not f or not f.get("n"):
+        return ""
+    pct = 100 * f["won"] / f["n"]
+    return (f" (all saved lines since {f['since']}: {f['won']}/{f['n']}, {round(pct)}% vs {round(f['said'])}%"
+            + (" -- pool on par" if pct >= f["said"] - 2 else " -- pool short too") + ")")
+
+
 def caution_line():
     """The cautions in force (locks.watch_kinds per card, locks.watch_pool),
     one line, or None."""
@@ -392,7 +404,11 @@ def caution_line():
         B = locks.bright_pool()
     except Exception:
         B = []
-    parts = [f"{w['league'].upper()} {w['t']} on {w['where']} {w['won']}/{w['n']} vs {w['said']}%" for w in W]
+    try:                                  # last 7 pool days of every saved line (locks.pool_form)
+        F = {(f["league"], f["t"]): f for f in locks.pool_form()}
+    except Exception:
+        F = {}
+    parts = [f"{w['league'].upper()} {w['t']} on {w['where']} {w['won']}/{w['n']} vs {w['said']}%" + pool_ctx(w, F) for w in W]
     parts += [f"{c['league'].upper()} calls at {c['band']}-{c['band'] + 10}% {c['won']}/{c['n']} vs {c['said']}%" for c in C]
     out = ("Cautions in force: " + "; ".join(parts) + ".") if parts else None
     if B:
