@@ -415,6 +415,37 @@ def prereg_line():
     return f"Pre-registered test, {s['name']}: {rec}; {what}."
 
 
+def dc_side_line(ledger=None, min_n=30):
+    """Soccer "or draw" picks split by the side taken (home or away), each
+    with its date halves: won% against stated%. Priced, graded rows only.
+    A watch line, not a rule: on 2026-11-09 both sides ran at or above their
+    stated chance in both halves (home 77% vs 74% on 402, away 74% vs 72%
+    on 199), so nothing is cut."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    rows = sorted((v for v in ledger.values() if isinstance(v, dict) and v.get("dc")
+                   and v.get("status") in ("won", "lost") and not v.get("record_excluded")
+                   and v.get("myside") in ("home", "away") and v.get("conf") is not None),
+                  key=lambda v: v.get("date") or "")
+    if len(rows) < min_n:
+        return None
+    mid = rows[len(rows) // 2].get("date") or ""
+
+    def rec(s):
+        return f"{round(100 * sum(v['status'] == 'won' for v in s) / len(s))}%" if s else "-"
+    parts = []
+    for side in ("home", "away"):
+        s = [v for v in rows if v["myside"] == side]
+        if not s:
+            continue
+        said = round(sum(v["conf"] for v in s) / len(s))
+        a = [v for v in s if (v.get("date") or "") < mid]
+        b = [v for v in s if (v.get("date") or "") >= mid]
+        flag = " SHORT" if sum(v["status"] == "won" for v in s) / len(s) * 100 < said - 3 else ""
+        parts.append(f"{side} {rec(s)} vs {said}% stated on {len(s)} (halves {rec(a)}, {rec(b)}){flag}")
+    return "Soccer or-draw picks by side: " + "; ".join(parts) + "."
+
+
 def ufc_line(today=None, back=8):
     """The most recent UFC card in the last `back` days, its picks graded
     (ufc_model.card_record), one line or None."""
@@ -1111,6 +1142,8 @@ def words(r, fit):
         out.append(r["prereg"])
     if r.get("prop_fair"):
         out.append(r["prop_fair"])
+    if r.get("dc_side"):
+        out.append(r["dc_side"])
     if r.get("ufc"):
         out.append(r["ufc"])
     if r.get("ufc_next"):
@@ -1231,6 +1264,7 @@ def main():
     log[today.isoformat()]["cold"] = form_line()
     log[today.isoformat()]["prereg"] = prereg_line()
     log[today.isoformat()]["prop_fair"] = prop_fair_line()
+    log[today.isoformat()]["dc_side"] = dc_side_line(ledger)
     log[today.isoformat()]["card_missing"] = card_check()
     log[today.isoformat()]["ufc"] = ufc_line(today)
     log[today.isoformat()]["ufc_next"] = ufc_next_line(today)

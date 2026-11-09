@@ -1151,6 +1151,14 @@ conviction tiers were added to prevent.
 Pushed on the fair point that filtering the board is what a book does, and
 that the job is to find what the price does not contain. Four attempts.
 
+**Checked, no change: soccer "or draw" picks by side (2026-11-09).** Yesterday
+ten of the nineteen losses were double-chance picks, most of them on the away
+side, so the record was split by home and away with date halves. Home 77% vs
+74% stated on 402 (halves 78%, 77%); away 74% vs 73% on 199 (halves 73%, 75%).
+Both sides run at or above their stated chance in both halves, so no side is
+cut. The split now prints in every review (`dc_side_line`) and flags SHORT if
+a side falls more than 3 points under its stated chance.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
