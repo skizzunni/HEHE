@@ -169,6 +169,11 @@ PROBE = """<script>setTimeout(function(){
   var pcA = parlayCheck([{p: 0.5, g: "a"}, {p: 0.5, g: "b"}], 5, 25), pcB = parlayCheck([{p: 0.5, g: "a"}, {p: 0.8, g: "a"}], 0, 0);
   var lkP = D.locks; D.locks = {today: {locks: [{label: "Dalton Kincaid: 20+ Receiving Yards", price: "-417", p: 0.8, match: "BUF @ MIN", league: "nfl"}, {label: "x"}]}};
   out.pcLocks = parlayLegs().filter(x => x.id.startsWith("L:")).map(x => x.label + "|" + x.p + "|" + x.lg);
+  var slP = D.slots; D.slots = {today: {nba: {rows: [{mp: "Atlanta Hawks", mc: 52, t: "7:00 PM", lg: "NBA"}]}}};
+  D.locks = {today: {locks: [{label: "Over 222.5 points", p: 0.75, match: "Los Angeles Lakers at Atlanta Hawks"}]}};
+  var pl = parlayLegs();
+  out.pcLink = String(parlayCheck([pl.find(x => x.id === "nba:0:o"), pl.find(x => x.id === "L:0")], 5, 50).same);
+  D.slots = slP;
   D.locks = lkP;
   out.pcheck = [parlayText(pcA, 5), parlayText(pcB, 0), parlayText(null, 5), String(parlayLegs().every(x => typeof x.p === "number"))];
   out.lkinds = [ladderKinds({game: {won: 16, n: 18, said: 75.7}, prop: {won: 7, n: 10, said: 79.3}}), ladderKinds({}), ladderKinds(undefined)];
@@ -510,6 +515,8 @@ def main():
         fails.append("parlay check wrong: " + repr(pc))
     if new.get("pcLocks") != ["Dalton Kincaid: 20+ Receiving Yards (-417)|0.8|Lock NFL"]:
         fails.append("parlay check locks wrong: " + repr(new.get("pcLocks")))
+    if new.get("pcLink") != "true":
+        fails.append("parlay check same-game link wrong: " + repr(new.get("pcLink")))
     lk = new.get("lkinds") or ["", "x", "x"]
     if not (lk[0] == " By kind: game lines 16 of 18 (89% vs 76%), player props 7 of 10 (70% vs 79%)." and not lk[1] and not lk[2]):
         fails.append("ladder kinds wrong: " + repr(lk))

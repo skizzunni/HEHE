@@ -2159,9 +2159,13 @@ function parlayLegs(){
     out.push({id: g + ':o', g, label: 'Other side of ' + r.mp, p: 1 - r.mc / 100, lg: r.lg || lg.toUpperCase(), t: r.t || ''});
   }));
   // today's Locks too: totals, spreads and player props the board rates
+  // a Lock whose game names a team on the board shares that game's key, so a
+  // Lock and a side from one game are flagged as linked
+  const teamG = out.filter(x => x.id.endsWith(':m')).map(x => [x.label, x.g]);
   (((D.locks || {}).today || {}).locks || []).forEach((x, i) => {
     if(typeof x.p !== 'number') return;
-    out.push({id: 'L:' + i, g: 'L:' + (x.match || i), label: x.label + (x.price ? ' (' + x.price + ')' : ''), p: x.p,
+    const hit = teamG.find(([t]) => t && String(x.match || '').includes(t));
+    out.push({id: 'L:' + i, g: hit ? hit[1] : 'L:' + (x.match || i), label: x.label + (x.price ? ' (' + x.price + ')' : ''), p: x.p,
               lg: 'Lock' + (x.league ? ' ' + String(x.league).toUpperCase() : ''), t: x.match || ''});
   });
   return out;
@@ -2187,7 +2191,7 @@ function parlayCheckHTML(){
   const L = parlayLegs();
   if(!L.length) return '';
   return '<details class="pcheck"><summary><b>Check a parlay</b> &middot; tick legs, enter the payout</summary>'
-    + '<p class="note">From today\u2019s board: my side or the other side of each two-way game, then today\u2019s Locks (totals, spreads, player props). Soccer is not included. A Lock and a side from the same game are not flagged as linked.</p>'
+    + '<p class="note">From today\u2019s board: my side or the other side of each two-way game, then today\u2019s Locks (totals, spreads, player props). Soccer is not included. Legs from one game, a Lock included, are flagged as linked.</p>'
     + '<p><label>Stake $<input id="pcStake" type="number" min="0" step="0.01" value="5" style="width:6em"></label> '
     + '<label>Total payout $<input id="pcPay" type="number" min="0" step="0.01" style="width:8em"></label></p>'
     + '<p id="pcOut" class="note">Tick some legs.</p><ul class="pclist" style="list-style:none;padding-left:0">'
