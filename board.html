@@ -1678,8 +1678,12 @@ function ladderBest(legs){
 }
 function ladderPreview(){
   const K = (D.locks || {}).today || {};
-  const all = (K.locks || []).filter(L => !L.status || L.status === 'open').slice().sort((a, b) => b.p - a.p);
   const X = D.ladder || {};
+  // leg kinds kept off the ladder (ladder.SKIP_KINDS), matched like locks.kind_key
+  const skip = (X.skip || []).map(k => k[0] + '|' + k[1]);
+  const kindOf = L => (L.league || '') + '|' + (L.kind === 'prop' ? 'prop:' + (L.market || '') : ((L.spec || {}).t || L.t || ''));
+  const off = L => skip.indexOf(kindOf(L)) >= 0 || (L.kind === 'prop' && skip.indexOf((L.league || '') + '|prop') >= 0);
+  const all = (K.locks || []).filter(L => (!L.status || L.status === 'open') && !off(L)).slice().sort((a, b) => b.p - a.p);
   const P = (ladderBest(all).length ? ladderBest(all) : ladderFlex(all, X.ended ? 1 : (X.bank || 1), X.target || 10000));
   const msg = '<p class="empty">Today&rsquo;s ladder ticket is set with the 8 AM Eastern Locks card.</p>';
   if(!K.preview || !P.length) return msg;

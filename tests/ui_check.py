@@ -151,6 +151,11 @@ PROBE = """<script>setTimeout(function(){
   D.locks = {today: {preview: true, locks: [{label: "A", price: "-200", p: 0.95, match: "X @ Y"}, {label: "B", price: "-200", p: 0.95, match: "Z @ W"},
                                              {label: "C", price: "-200", p: 0.95, match: "Q @ R"}]}};
   out.lprev = ladderPreview();
+  D.ladder = {bank: 1, target: 10000, skip: [["nfl", "prop"]]};
+  D.locks = {today: {preview: true, locks: [{label: "PropA", price: "+110", p: 0.9, match: "A", league: "nfl", kind: "prop", market: "Receiving Yards"},
+                                             {label: "G1", price: "-200", p: 0.8, match: "B", league: "nfl", spec: {t: "over"}},
+                                             {label: "G2", price: "-200", p: 0.8, match: "C", league: "nba", spec: {t: "under"}}]}};
+  out.lprevSkip = ladderPreview();
   out.lbest = [ladderBest([{p: 0.8, price: "-400", gid: "a"}, {p: 0.8, price: "-400", gid: "b"}, {p: 0.8, price: "-400", gid: "c"},
                            {p: 0.8, price: "-400", gid: "d"}, {p: 0.6, price: "-150", gid: "e"}, {p: 0.95, price: "-5000", gid: "a"}]).map(x => x.gid).sort().join(""),
                ladderBest([{p: 0.97, price: "-2000", gid: "a"}]).length];
@@ -460,6 +465,9 @@ def main():
         fails.append("ladder preview wrong: " + lp[:400])
     if "the best chance of all winning: 48% at 2.08&times;, against 41% at 2.44&times; for the plain top 4." not in new.get("ladBest", ""):
         fails.append("ladder vs top-4 line wrong: " + new.get("ladBest", "")[:300])
+    ls = new.get("lprevSkip", "")
+    if "PropA" in ls or "G1" not in ls:
+        fails.append("ladder preview ignores skip: " + ls[:400])
     lb = new.get("lbest") or []
     if lb != ["ae", 0]:
         fails.append("ladder best combination wrong: " + repr(lb))

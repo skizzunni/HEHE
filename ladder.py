@@ -363,7 +363,8 @@ def report(book=None, start=START, target=TARGET):
                 legs_record=(lambda G: dict(won=sum(L["status"] == "won" for L in G), n=len(G),
                                             said=round(100 * sum(L["p"] for L in G) / len(G), 1)) if G else None)(
                     [L for r in runs for d in r["days"] for L in d["legs"] if L.get("status") in ("won", "lost")]),
-                counts=count_record(book, ""),         # every saved Locks card, not just the ladder's
+                skip=[list(k) for k in SKIP_KINDS],    # leg kinds kept off the ladder (the board preview honours it)
+        counts=count_record(book, ""),         # every saved Locks card, not just the ladder's
         counts_games=count_record(book, "", games_only=True),   # the same with game lines only
         tickets=dict(won=sum(1 for r in runs for d in r["days"] if d["result"] == "won"),
                              n=sum(1 for r in runs for d in r["days"] if d["result"] in ("won", "lost"))),
