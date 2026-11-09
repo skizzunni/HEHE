@@ -1163,6 +1163,14 @@ on 279 (dated rows: 83% vs 72%, then 82% vs 74% by half), so they hold too.
 57 of their 96 losses were draws, which is the price of not taking "or draw";
 the line prints that count so draw-heavy weeks are visible.
 
+**Checked, no change: the trailing Locks NFL props (2026-11-09).** Locks NFL
+props are 5 of 10 against about 80% stated. Every saved NFL prop line, the
+pool those 10 came from, is 505 of 653 (77% vs 76% stated), on par in both
+date halves (249/325, then 256/328). By market: receiving yards 83% then 82%
+vs 83% / 82%, receptions 87% then 82% vs 82% / 83%. So the props themselves
+are not overstated; 10 legs is too few to cut them. The TRAILING line now
+prints that pool record beside any short Locks prop split.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that

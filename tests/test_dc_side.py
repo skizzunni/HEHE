@@ -39,5 +39,16 @@ class DcSide(unittest.TestCase):
         self.assertIsNone(daily_review.dc_side_line({"a": row("2026-10-01", "home", True)}))
 
 
+class TrailingPool(unittest.TestCase):
+    def test_locks_prop_gets_pool(self):
+        P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
+        a = dict(name="locks nfl prop", hit=50.0, said=79.7, n=10)
+        out = daily_review.trailing_line(a, P)
+        self.assertIn("all 200 saved NFL prop lines 150/200 (75% vs 76% stated) -- the pool is on par", out)
+        P2 = {f"p{i}": dict(league="nfl", status="won" if i % 2 else "lost", p=0.76) for i in range(200)}
+        self.assertIn("the pool is short too", daily_review.trailing_line(a, P2))
+        self.assertNotIn("saved", daily_review.trailing_line(dict(name="calls nba", hit=50, said=70, n=40), P))
+
+
 if __name__ == "__main__":
     unittest.main()

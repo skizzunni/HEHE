@@ -47,10 +47,10 @@ class ReviewSweepLine(unittest.TestCase):
         self.assertIn("only under 0.1% of days go this well", tiny)
         self.assertEqual(daily_review.pct_text(12.5), "12.5%")
         a = dict(name="locks nfl prop", hit=50.0, said=79.7, n=10, flag=True, halves=[[4, 5, 79.0], [1, 5, 80.0]])
-        self.assertEqual(daily_review.trailing_line(a), "TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10"
+        self.assertEqual(daily_review.trailing_line(a, {}), "TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10"
                          " (by half 4/5 then 1/5; short in one half only -- a slump, not yet a pattern)")
         a["halves"] = [[2, 5, 79.0], [3, 5, 80.0]]
-        self.assertIn("short in both halves", daily_review.trailing_line(a))
+        self.assertIn("short in both halves", daily_review.trailing_line(a, {}))
         y = dict(day="2026-11-06", sweep=dict(won=40, lost=9, broke_on="arg San Lorenzo at 68%", expected_losses=13.3, as_bad_pct=95.0))
         self.assertEqual(daily_review.yesterday_line(y), "Yesterday (2026-11-06): board 40-9, sweep broken by arg San Lorenzo at 68%;"
                          " 13.3 losses expected, 9 came in (95% chance of that many or more).")

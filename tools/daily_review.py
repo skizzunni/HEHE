@@ -1095,14 +1095,38 @@ def yesterday_line(y):
                else "") + ".")
 
 
-def trailing_line(a):
-    """A trailing split, with its two date halves when known."""
+def pool_props(league, props=None):
+    """Every saved prop line in a league, graded: (won, n, stated%) or None.
+    The context for a short Locks prop split: Locks take a handful of these,
+    so a pool on par says the split is a small-sample slump, a pool short
+    says the props themselves are off."""
+    if props is None:
+        props = load("props.json", {})
+    R = [v for v in props.values() if isinstance(v, dict) and v.get("league") == league
+         and v.get("status") in ("won", "lost") and v.get("p") is not None]
+    if not R:
+        return None
+    return (sum(v["status"] == "won" for v in R), len(R), round(100 * sum(v["p"] for v in R) / len(R)))
+
+
+def trailing_line(a, props=None):
+    """A trailing split, with its two date halves when known, and for a
+    Locks prop split the record of every saved prop line in that league."""
     s = f"TRAILING {a['name']}: {a['hit']}% hit vs {a['said']}% stated on {a['n']}"
     H = a.get("halves") or []
     if len(H) == 2 and all(h[1] for h in H):
         both = all(100 * h[0] / h[1] < h[2] for h in H)
         s += (f" (by half {H[0][0]}/{H[0][1]} then {H[1][0]}/{H[1][1]}; "
               + ("short in both halves" if both else "short in one half only -- a slump, not yet a pattern") + ")")
+    bits = str(a.get("name") or "").split()
+    if len(bits) == 3 and bits[0] == "locks" and bits[2] == "prop":
+        P = pool_props(bits[1], props)
+        if P and P[1] >= 100:
+            w, n, said = P
+            par = 100 * w / n >= said - 2
+            s += (f"; all {n} saved {bits[1].upper()} prop lines {w}/{n} ({round(100 * w / n)}% vs {said}% stated) -- "
+                  + ("the pool is on par, so this looks like a small-sample slump on the few Locks take"
+                     if par else "the pool is short too"))
     return s
 
 
