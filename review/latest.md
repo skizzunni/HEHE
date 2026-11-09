@@ -1,16 +1,16 @@
 # Review 2026-11-08
 
-Picks 87-18 (82.9% vs 73.3% claimed, ROI +6.9%).
+Picks 88-18 (83.0% vs 73.1% claimed, ROI +7.6%).
 Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1)); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
-Running ahead: NBA under on all saved lines 1067/1209 vs 82%; NHL over on all saved lines 136/152 vs 83%; NHL spread on all saved lines 284/330 vs 83%; NHL teamover on all saved lines 171/196 vs 82%.
+Running ahead: NBA under on all saved lines 1067/1209 vs 82%; NHL over on all saved lines 138/154 vs 84%; NHL spread on all saved lines 288/334 vs 83%; NHL teamover on all saved lines 173/198 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 63/76 (83% vs 81% stated); waiting for 100 legs.
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 83% (88% / 85%); 90%+ 84%, 83% (93% / 85%).
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
-Next UFC card 2026-11-14 (12 fights priced, 4 close): Bilal Hasan 86%; Melquizael Costa 75%; Bia Mesquita 68%; Ciryl Gane 68%; Terrance McKinney 64%; Donte Johnson 63%; Kayla Harrison 63%; Chris Duncan 60%; Caio Borralho 59% (close); Uroš Medić 58% (close); Stephen Thompson 56% (close); Samuel Sanches 51% (close).
+Next UFC card 2026-11-14 (12 fights priced, 4 close): Bilal Hasan 86%; Melquizael Costa 76%; Bia Mesquita 68%; Ciryl Gane 68%; Terrance McKinney 64%; Donte Johnson 63%; Kayla Harrison 63%; Chris Duncan 60%; Caio Borralho 59% (close); Uroš Medić 58% (close); Stephen Thompson 56% (close); Samuel Sanches 51% (close).
 TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10 (by half 3/5 then 2/5; short in both halves)
 Strong calls 66-14 (82.5% vs 74.4% claimed).
-Closing line value: +1.39 points on 105 picks; beat the close on 61.9%.
-Board sweep: 87-18, 6 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 28.1 losses expected from the settled picks' chances, so 18 or more by now had a 99.3% chance -- an unusually good day: only 1.3% of days go this well this far in; 2 of the 18 were near coin flips (called under 60%), 16 were real misses; losses by league: fra 3 (1.7 expected), nhl 2 (2.2 expected), chi 1 (1.6 expected), chn 1 (1.9 expected), col 1 (1.3 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), mex 1 (0.2 expected), nba 1 (1.1 expected), nfl 1 (3.8 expected), par 1 (0.3 expected), per 1 (0.2 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
+Closing line value: +1.35 points on 106 picks; beat the close on 61.3%.
+Board sweep: 88-18, 5 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 28.6 losses expected from the settled picks' chances, so 18 or more by now had a 99.5% chance -- an unusually good day: only 1% of days go this well this far in; 2 of the 18 were near coin flips (called under 60%), 16 were real misses; losses by league: fra 3 (1.7 expected), nhl 2 (2.7 expected), chi 1 (1.6 expected), chn 1 (1.9 expected), col 1 (1.3 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), mex 1 (0.2 expected), nba 1 (1.1 expected), nfl 1 (3.8 expected), par 1 (0.3 expected), per 1 (0.2 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
 - LOST jpn Gamba Osaka or draw at 68% (-270), Cerezo Osaka 3 - Gamba Osaka 2: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 13 of 21 (62% vs 69% stated)
 - LOST chn Shenzhen Xinpengcheng at 77% (-450), Qingdao Hainiu 2 - Shenzhen Xinpengcheng 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 77% · upset
 - LOST ger2 St. Pauli or draw at 65% (-230), 1. FC Magdeburg 4 - St. Pauli 1: margin 3 · the book had my side favoured too · called at 65% · favourite lost · blowout; picks like it: 13 of 17 (76% vs 67% stated)
@@ -26,7 +26,7 @@ Board sweep: 87-18, 6 open -- broken (first loss: jpn Gamba Osaka or draw at 68%
 - LOST nba Detroit Pistons at 71% (-277), Detroit Pistons 116 - Los Angeles Lakers 121: margin 5 · the book had my side favoured too · called at 71% · favourite lost · close game; picks like it: 42 of 59 (71% vs 70% stated)
 - LOST nhl Tampa Bay Lightning at 59% (-162), Tampa Bay Lightning 3 - Winnipeg Jets 4: margin 1 · the book had my side favoured too · called at 59% · coin flip · close game; picks like it: 91 of 140 (65% vs 59% stated)
 - LOST mex Querétaro or draw at 78% (-475), Puebla 2 - Querétaro 0: margin 2 · the book had my side favoured too · called at 78% · upset; picks like it: 17 of 19 (89% vs 78% stated)
-- LOST nhl Philadelphia Flyers at 52% (-118), Calgary Flames 4 - Philadelphia Flyers 3: margin 1 · the book had my side favoured too · called at 52% · coin flip · close game; picks like it: 102 of 198 (52% vs 53% stated)
+- LOST nhl Philadelphia Flyers at 52% (-118), Calgary Flames 4 - Philadelphia Flyers 3: margin 1 · the book had my side favoured too · called at 52% · coin flip · close game; picks like it: 103 of 199 (52% vs 53% stated)
 - LOST col Alianza FC or draw at 71% (-310), Alianza FC 1 - Llaneros FC 2: margin 1 · the book had my side favoured too · called at 71% · favourite lost · close game; picks like it: 15 of 21 (71% vs 71% stated)
 - LOST per Universitario at 76% (-500), Deportivo Moquegua 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76% · upset · price moved against it (5 pts)
 Why picks lost (14 days): favourite lost 155, close game 121, upset 53, coin flip 44, blowout 43, price moved against it 32.
@@ -65,12 +65,12 @@ Yesterday (2026-11-07): board 125-43, sweep broken by jpn Nagoya Grampus or draw
 - LOST mex Atlas or draw at 64% (-220), Atlas 1 - Pachuca 4: margin 3 · the book had my side favoured too · called at 64% · favourite lost · blowout; picks like it: 6 of 10 (60% vs 66% stated)
 - LOST mls San Diego FC or draw at 77% (-450), San Diego FC 0 - Sporting Kansas City 1: margin 1 · the book had my side favoured too · called at 77% · upset · close game · price moved against it (5 pts); picks like it: 21 of 27 (78% vs 77% stated)
 - LOST mls Houston Dynamo FC or draw at 69% (-260), Houston Dynamo FC 0 - St. Louis CITY SC 1: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game; picks like it: 21 of 28 (75% vs 69% stated)
-- LOST nhl Utah Mammoth at 52% (-120), Ottawa Senators 4 - Utah Mammoth 2: margin 2 · the book had my side favoured too · called at 52% · coin flip; picks like it: 102 of 198 (52% vs 53% stated)
+- LOST nhl Utah Mammoth at 52% (-120), Ottawa Senators 4 - Utah Mammoth 2: margin 2 · the book had my side favoured too · called at 52% · coin flip; picks like it: 103 of 199 (52% vs 53% stated)
 - LOST ncaaf Army Black Knights at 62% (-175), Air Force Falcons 24 - Army Black Knights 21: margin 3 · the book had my side favoured too · called at 62% · favourite lost · close game; picks like it: 218 of 266 (82% vs 61% stated)
 - LOST ncaaf Florida Gators at 64% (-192), Florida Gators 7 - Oklahoma Sooners 23: margin 16 · the book had my side favoured too · called at 64% · favourite lost · price moved against it (5 pts); picks like it: 202 of 250 (81% vs 64% stated)
 - LOST ncaaf Michigan Wolverines at 84% (-600), Michigan State Spartans 15 - Michigan Wolverines 6: margin 9 · the book had my side favoured too · called at 84% · upset; picks like it: 44 of 52 (85% vs 84% stated)
 - LOST nba Houston Rockets at 70% (-264), Houston Rockets 99 - Phoenix Suns 102: margin 3 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 42 of 60 (70% vs 70% stated)
-- LOST nhl Los Angeles Kings at 53% (-122), Los Angeles Kings 2 - Pittsburgh Penguins 5: margin 3 · the book had my side favoured too · called at 53% · coin flip · blowout; picks like it: 110 of 210 (52% vs 53% stated)
+- LOST nhl Los Angeles Kings at 53% (-122), Los Angeles Kings 2 - Pittsburgh Penguins 5: margin 3 · the book had my side favoured too · called at 53% · coin flip · blowout; picks like it: 111 of 211 (53% vs 53% stated)
 - LOST aus Macarthur FC or draw at 63% (-220), Brisbane Roar FC 2 - Macarthur FC 1: margin 1 · the book had my side favoured too · called at 63% · favourite lost · close game
 - LOST ncaaf UNLV Rebels at 60% (-162), UNLV Rebels 35 - Wyoming Cowboys 41: margin 6 · the book had my side favoured too · called at 60% · favourite lost · close game · price moved against it (7 pts); picks like it: 220 of 281 (78% vs 60% stated)
 - LOST ncaaf Oregon State Beavers at 63% (-185), Oregon State Beavers 21 - Texas State Bobcats 42: margin 21 · the book had my side favoured too · called at 63% · favourite lost · blowout · price moved against it (7 pts); picks like it: 212 of 260 (82% vs 63% stated)
@@ -85,7 +85,7 @@ Lottery 10k+100: lost (3/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 
 Lottery 100: lost (9/14 legs won, killed by Brooklyn Nets +9.5, Devaughn Vele: 20+ Receiving Yards, Ashton Jeanty: 20+ Receiving Yards, Tee Higgins: 50+ Receiving Yards)
 Lottery 100: lost (4/11 legs won, killed by Tucker Kraft: 30+ Receiving Yards, Under 162.5 points, Under 239.5 points, Tampa Bay Lightning to win, Toronto Maple Leafs +1.5, Pittsburgh Penguins +1.5)
 Ladder-consistency props (all time): 1905/2290 won (83.2%) vs 86.2% fair, 87.3% price.
-Props 167/215 vs 78.4% claimed.
+Props 176/224 vs 78.6% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=144), ncaab 0.00 (n=40), ncaaf 0.00 (n=226), nfl 0.00 (n=54), nhl 0.00 (n=164)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=144), ncaab 0.00 (n=40), ncaaf 0.00 (n=226), nfl 0.00 (n=54), nhl 0.00 (n=165)
