@@ -1,16 +1,18 @@
 # Review 2026-11-09
 
-Picks 0-1 (0.0% vs 67.0% claimed, ROI -100.0%).
+Picks 1-1 (50.0% vs 73.5% claimed, ROI -40.9%).
 Ladder: run 5, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 37% at 2.47x for the plain top 4; 14 wins to $10,000; legs: Dalton Kincaid: 20+ Receiving Yards (BUF @ MIN; 8:15 PM, open; props like it 111/143), San Antonio Spurs to win (San Antonio Spurs at Phoenix Suns; 9:00 PM, open), Over 222.5 points (Los Angeles Lakers at Atlanta Hawks; 7:00 PM, open).
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 1 day, peak $1.00, live.
-Cautions in force: NBA over on Locks 17/27 vs 75% (all saved lines since 2026-11-02: 515/625, 82% vs 82% -- pool on par). Running ahead: NBA under on all saved lines 972/1096 vs 82%; NHL over on all saved lines 132/148 vs 84%; NHL spread on all saved lines 281/324 vs 83%; NHL teamover on all saved lines 169/193 vs 82%.
+Cautions in force: NBA over on Locks 17/27 vs 75% (all saved lines since 2026-11-03: 396/452, 88% vs 82% -- pool on par). Running ahead: NBA under on all saved lines 972/1096 vs 82%; NHL over on all saved lines 132/148 vs 84%; NHL spread on all saved lines 281/324 vs 83%; NHL teamover on all saved lines 169/193 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 66/79 (84% vs 81% stated); waiting for 100 legs.
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 84% (88% / 85%); 90%+ 84%, 84% (93% / 85%).
-Soccer or-draw picks by side: home 77% vs 74% stated on 402 (halves 78%, 77%); away 74% vs 73% stated on 200 (halves 73%, 74%). Straight wins: 66% vs 65% stated on 279; 57 of 96 losses were draws.
+Soccer or-draw picks by side: home 77% vs 74% stated on 403 (halves 78%, 77%); away 74% vs 73% stated on 200 (halves 73%, 74%). Straight wins: 66% vs 65% stated on 279; 57 of 96 losses were draws.
+UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
+Next UFC card 2026-11-14 (12 fights priced, 5 close): Bilal Hasan 88%; Melquizael Costa 76%; Bia Mesquita 69%; Ciryl Gane 67%; Terrance McKinney 64%; Donte Johnson 63%; Kayla Harrison 63%; Chris Duncan 58% (close); Stephen Thompson 58% (close); Caio Borralho 58% (close); Uroš Medić 57% (close); Samuel Sanches 50% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10 (by half 3/5 then 2/5; short in both halves); all 653 saved NFL prop lines 505/653 (77% vs 76% stated) -- the pool is on par, so this looks like a small-sample slump on the few Locks take
-Strong calls 0-1 (0.0% vs 67.0% claimed).
-Closing line value: +3.47 points on 1 picks; beat the close on 100.0%.
-Board sweep: 0-1, 18 open -- broken (first loss: nor Vålerenga or draw at 67%); 0.3 losses expected from the settled picks' chances, so 1 or more by now had a 33% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: nor 1 (0.3 expected).
+Strong calls 1-1 (50.0% vs 73.5% claimed).
+Closing line value: +1.74 points on 2 picks; beat the close on 50.0%.
+Board sweep: 1-1, 17 open -- broken (first loss: nor Vålerenga or draw at 67%); 0.5 losses expected from the settled picks' chances, so 1 or more by now had a 46.4% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: nor 1 (0.3 expected).
 - LOST nor Vålerenga or draw at 67% (-260), Kristiansund BK 1 - Vålerenga 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 7 of 13 (54% vs 65% stated)
 Why picks lost (14 days): favourite lost 143, close game 111, upset 46, coin flip 44, blowout 39, price moved against it 32.
 Yesterday (2026-11-08): board 92-19, sweep broken by jpn Gamba Osaka or draw at 68%; 30 losses expected, 19 came in (99.6% chance of that many or more) -- an unusually good day: only 0.9% of days go this well.
