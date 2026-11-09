@@ -4294,3 +4294,5 @@ The Yesterday line (review and board) names an unusually good day too, from `day
 (2026-11-09).
 Tests for `ladder.best_combo` edge cases: equal-chance tickets go to fewer legs, only the 12 likeliest legs
 are searched, and nothing is chosen when no combination reaches 2x (2026-11-09).
+The review's "Next UFC card" line adds how price favourites in each of that card's chance bands have done
+since 2021 at DraftKings prices (`ufc_bands.json`) (2026-11-09).

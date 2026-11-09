@@ -49,7 +49,13 @@ class UFCModel(unittest.TestCase):
         fake = lambda day: ({("A", "B"): dict(pick="A", conf=0.55), ("C", "D"): dict(pick="D", conf=0.8)}
                             if day == "20261114" else {})
         line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake)
+        from unittest import mock
+        with mock.patch.object(daily_review, "_ufc_bands", lambda: {}):
+            line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake)
         self.assertEqual(line, "Next UFC card 2026-11-14 (2 fights priced, 1 close): D 80%; A 55% (close).")
+        with mock.patch.object(daily_review, "_ufc_bands", lambda: {"80-100": dict(won=270, n=306, roi=-0.1), "50-60": dict(won=482, n=859, roi=-3.6)}):
+            line = daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=fake)
+        self.assertTrue(line.endswith("favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 50-60% won 56% (-3.6% a bet)."), line)
         self.assertIsNone(daily_review.ufc_next_line(dt.date(2026, 11, 8), picks_fn=lambda d: {}))
 
 

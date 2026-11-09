@@ -453,6 +453,15 @@ def card_check(now=None, book=None):
             " cannot be set until it is saved; check the board build.")
 
 
+def _ufc_bands():
+    """ufc_bands.json (tools/ufc_bands.py), or {}."""
+    try:
+        with open(os.path.join(ROOT, "ufc_bands.json")) as fh:
+            return json.load(fh)
+    except (OSError, ValueError):
+        return {}
+
+
 def ufc_next_line(today=None, ahead=7, picks_fn=None):
     """The next UFC card in the coming `ahead` days with prices posted: each
     fight's price favourite and chance, close fights (under 60%) flagged."""
@@ -472,9 +481,14 @@ def ufc_next_line(today=None, ahead=7, picks_fn=None):
         if r:
             fights = sorted(r.items(), key=lambda kv: -(kv[1].get("conf") or 0))
             close = sum((v.get("conf") or 0) < 0.60 for _, v in fights)
+            B = _ufc_bands()
+            band = lambda c: "50-60" if c < 60 else "60-70" if c < 70 else "70-80" if c < 80 else "80-100"
+            used = sorted({band(100 * (v.get("conf") or 0)) for _, v in fights} & set(B), key=lambda k: -int(k.split("-")[0]))
+            rec = ("; favourites since 2021 by band: " + ", ".join(
+                f"{k}% won {round(100 * B[k]['won'] / B[k]['n'])}% ({B[k]['roi']:+g}% a bet)" for k in used)) if used else ""
             return (f"Next UFC card {day[:4]}-{day[4:6]}-{day[6:]} ({len(fights)} fights priced, {close} close): "
                     + "; ".join(f"{v['pick']} {round(100 * (v.get('conf') or 0))}%" + (" (close)" if (v.get("conf") or 0) < 0.60 else "")
-                                for _, v in fights) + ".")
+                                for _, v in fights) + rec + ".")
     return None
 
 
