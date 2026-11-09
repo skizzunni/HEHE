@@ -419,7 +419,12 @@ class ReviewLine(unittest.TestCase):
         import datetime as dt
         at = lambda h, m: dt.datetime(2026, 11, 8, h, m, tzinfo=d.ET)
         self.assertIsNone(d.card_check(at(7, 59), {"days": {}}))                    # before the card is due
-        self.assertIsNone(d.card_check(at(9, 0), {"days": {"2026-11-08": []}}))     # saved
+        ok = lambda b: dict(today=dict(legs=[1]))
+        self.assertIsNone(d.card_check(at(9, 0), {"days": {"2026-11-08": []}}, report_fn=ok))     # saved, ticket built
+        settled = lambda b: dict(today=None, last=dict(day="2026-11-08"))
+        self.assertIsNone(d.card_check(at(23, 0), {"days": {"2026-11-08": []}}, report_fn=settled))
+        none = lambda b: dict(today=None, last=dict(day="2026-11-07"))
+        self.assertTrue(d.card_check(at(9, 0), {"days": {"2026-11-08": []}}, report_fn=none).startswith("MISSING today's ladder ticket"))
         self.assertTrue(d.card_check(at(8, 20), {"days": {"2026-11-07": []}}).startswith("MISSING today's 8 AM Locks card (2026-11-08)"))
 
 

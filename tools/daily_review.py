@@ -437,7 +437,7 @@ def ufc_line(today=None, back=8):
     return None
 
 
-def card_check(now=None, book=None):
+def card_check(now=None, book=None, report_fn=None):
     """After 8:15 AM Eastern, today's Locks card must be saved -- the ladder
     ticket is set from it. A MISSING line when it is not, else None."""
     now = now or dt.datetime.now(ET)
@@ -448,7 +448,17 @@ def card_check(now=None, book=None):
         book = locks.load()
     day = now.date().isoformat()
     if day in (book.get("days") or {}):
-        return None
+        # the card is saved: there must also be a ladder ticket for it (open
+        # today, or already settled today)
+        try:
+            import ladder
+            r = report_fn(book) if report_fn else ladder.report(book)
+        except Exception:
+            return None
+        if r.get("today") or (r.get("last") or {}).get("day") == day:
+            return None
+        return (f"MISSING today's ladder ticket ({day}): the 8 AM card is saved but no ticket was built from it"
+                " (no combination paying 2x-5x?); check ladder.choose.")
     return (f"MISSING today's 8 AM Locks card ({day}) at {now.strftime('%-I:%M %p')} ET -- the ladder ticket"
             " cannot be set until it is saved; check the board build.")
 
