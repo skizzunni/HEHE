@@ -12705,6 +12705,7 @@
    "cost": 0.7137,
    "edge": 0.0069,
    "fair": 0.7186,
+   "fill": "queue",
    "id": "nfl:401873050",
    "label": "Chicago Bears",
    "league": "nfl",
@@ -12717,8 +12718,9 @@
     "team": "Chicago Bears"
    },
    "start": "2026-11-09T01:20Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV08TBCHI-CHI"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV08TBCHI-CHI",
+   "won": 1
   },
   "KXNFLGAME-26OCT25CINBAL-CIN|YES": {
    "ask": 0.52,
