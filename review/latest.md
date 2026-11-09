@@ -1,16 +1,16 @@
 # Review 2026-11-08
 
-Picks 82-12 (87.2% vs 73.3% claimed, ROI +12.8%).
+Picks 82-14 (85.4% vs 73.1% claimed, ROI +10.4%).
 Ladder: run 4 ended (peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1)); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
-Cautions in force: NBA over on Locks 15/24 vs 75%. Running ahead: NBA under on all saved lines 1019/1157 vs 82%; NHL over on all saved lines 131/146 vs 84%; NHL spread on all saved lines 275/319 vs 83%; NHL teamover on all saved lines 168/193 vs 82%.
+Cautions in force: NBA over on Locks 15/24 vs 75%. Running ahead: NBA under on all saved lines 1029/1171 vs 82%; NHL over on all saved lines 133/148 vs 84%; NHL spread on all saved lines 279/323 vs 83%; NHL teamover on all saved lines 169/194 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 63/76 (83% vs 81% stated); waiting for 100 legs.
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 87% (83% / 84%); 85-90% 87%, 83% (88% / 85%); 90%+ 84%, 84% (93% / 85%).
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (12 fights priced, 4 close): Bilal Hasan 86%; Melquizael Costa 75%; Bia Mesquita 68%; Ciryl Gane 68%; Terrance McKinney 64%; Donte Johnson 63%; Kayla Harrison 63%; Chris Duncan 60%; Caio Borralho 59% (close); Uroš Medić 58% (close); Stephen Thompson 56% (close); Samuel Sanches 51% (close).
 TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10 (by half 3/5 then 2/5; short in both halves)
 Strong calls 66-11 (85.7% vs 74.4% claimed).
-Closing line value: +1.28 points on 94 picks; beat the close on 62.8%.
-Board sweep: 82-12, 17 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 25.1 losses expected from the settled picks' chances, so 12 or more by now had a 100% chance -- an unusually good day: only 0.1% of days go this well this far in; 0 of the 12 were near coin flips (called under 60%), 12 were real misses; losses by league: fra 3 (1.7 expected), chi 1 (1.6 expected), chn 1 (1.9 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), nfl 1 (3.8 expected), par 1 (0.3 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
+Closing line value: +1.49 points on 96 picks; beat the close on 63.5%.
+Board sweep: 82-14, 15 open -- broken (first loss: jpn Gamba Osaka or draw at 68%); 25.8 losses expected from the settled picks' chances, so 14 or more by now had a 99.9% chance -- an unusually good day: only 0.3% of days go this well this far in; 1 of the 14 were near coin flips (called under 60%), 13 were real misses; losses by league: fra 3 (1.7 expected), chi 1 (1.6 expected), chn 1 (1.9 expected), epl 1 (1.2 expected), ger2 1 (0.8 expected), jpn 1 (1.2 expected), nba 1 (0.5 expected), nfl 1 (3.8 expected), nhl 1 (1.3 expected), par 1 (0.3 expected), sco 1 (0.3 expected), swe 1 (0.3 expected).
 - LOST jpn Gamba Osaka or draw at 68% (-270), Cerezo Osaka 3 - Gamba Osaka 2: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 13 of 21 (62% vs 69% stated)
 - LOST chn Shenzhen Xinpengcheng at 77% (-450), Qingdao Hainiu 2 - Shenzhen Xinpengcheng 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 77% · upset
 - LOST ger2 St. Pauli or draw at 65% (-230), 1. FC Magdeburg 4 - St. Pauli 1: margin 3 · the book had my side favoured too · called at 65% · favourite lost · blowout; picks like it: 13 of 17 (76% vs 67% stated)
@@ -23,7 +23,9 @@ Board sweep: 82-12, 17 open -- broken (first loss: jpn Gamba Osaka or draw at 68
 - LOST par Cerro Porteño at 70% (-310), Cerro Porteño 1 - Deportivo Recoleta 1: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 70% · favourite lost
 - LOST nfl New England Patriots at 62% (-185), Green Bay Packers 45 - New England Patriots 27: margin 18 · the book had my side favoured too · called at 62% · favourite lost · blowout; picks like it: 37 of 58 (64% vs 62% stated)
 - LOST chi O'Higgins or draw at 69% (-260), O'Higgins 2 - Universidad de Concepción 3: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game; picks like it: 12 of 15 (80% vs 70% stated)
-Why picks lost (14 days): favourite lost 153, close game 117, upset 51, blowout 43, coin flip 42, price moved against it 31.
+- LOST nba Detroit Pistons at 71% (-277), Detroit Pistons 116 - Los Angeles Lakers 121: margin 5 · the book had my side favoured too · called at 71% · favourite lost · close game; picks like it: 41 of 58 (71% vs 70% stated)
+- LOST nhl Tampa Bay Lightning at 59% (-162), Tampa Bay Lightning 3 - Winnipeg Jets 4: margin 1 · the book had my side favoured too · called at 59% · coin flip · close game; picks like it: 90 of 139 (65% vs 59% stated)
+Why picks lost (14 days): favourite lost 154, close game 119, upset 51, blowout 43, coin flip 43, price moved against it 31.
 Yesterday (2026-11-07): board 125-43, sweep broken by jpn Nagoya Grampus or draw at 76%; 47.9 losses expected, 43 came in (82.7% chance of that many or more).
 - LOST jpn Nagoya Grampus or draw at 76% (-425), Kyoto Sanga 2 - Nagoya Grampus 0: margin 2 · the book had my side favoured too · called at 76% · upset; picks like it: 20 of 21 (95% vs 75% stated)
 - LOST ger2 VfL Osnabruck or draw at 67% (-240), Kaiserslautern 1 - VfL Osnabruck 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 13 of 19 (68% vs 68% stated)
@@ -63,23 +65,23 @@ Yesterday (2026-11-07): board 125-43, sweep broken by jpn Nagoya Grampus or draw
 - LOST ncaaf Army Black Knights at 62% (-175), Air Force Falcons 24 - Army Black Knights 21: margin 3 · the book had my side favoured too · called at 62% · favourite lost · close game; picks like it: 218 of 266 (82% vs 61% stated)
 - LOST ncaaf Florida Gators at 64% (-192), Florida Gators 7 - Oklahoma Sooners 23: margin 16 · the book had my side favoured too · called at 64% · favourite lost · price moved against it (5 pts); picks like it: 202 of 250 (81% vs 64% stated)
 - LOST ncaaf Michigan Wolverines at 84% (-600), Michigan State Spartans 15 - Michigan Wolverines 6: margin 9 · the book had my side favoured too · called at 84% · upset; picks like it: 44 of 52 (85% vs 84% stated)
-- LOST nba Houston Rockets at 70% (-264), Houston Rockets 99 - Phoenix Suns 102: margin 3 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 41 of 58 (71% vs 70% stated)
+- LOST nba Houston Rockets at 70% (-264), Houston Rockets 99 - Phoenix Suns 102: margin 3 · the book had my side favoured too · called at 70% · favourite lost · close game; picks like it: 41 of 59 (69% vs 70% stated)
 - LOST nhl Los Angeles Kings at 53% (-122), Los Angeles Kings 2 - Pittsburgh Penguins 5: margin 3 · the book had my side favoured too · called at 53% · coin flip · blowout; picks like it: 110 of 209 (53% vs 53% stated)
 - LOST aus Macarthur FC or draw at 63% (-220), Brisbane Roar FC 2 - Macarthur FC 1: margin 1 · the book had my side favoured too · called at 63% · favourite lost · close game
 - LOST ncaaf UNLV Rebels at 60% (-162), UNLV Rebels 35 - Wyoming Cowboys 41: margin 6 · the book had my side favoured too · called at 60% · favourite lost · close game · price moved against it (7 pts); picks like it: 220 of 281 (78% vs 60% stated)
 - LOST ncaaf Oregon State Beavers at 63% (-185), Oregon State Beavers 21 - Texas State Bobcats 42: margin 21 · the book had my side favoured too · called at 63% · favourite lost · blowout · price moved against it (7 pts); picks like it: 212 of 260 (82% vs 63% stated)
-Locks 4/11 won, 5 open; Best play top 3 (52%) lost; lost: Kyle Pitts: 25+ Receiving Yards (CIN @ ATL) 23; Jalen Coker: 30+ Receiving Yards (DEN @ CAR) 29.
-Safe Locks 5/11 won, 6 open; Winners parlay top 2 (84%) open; Best play top 7 (52%) open.
-Lottery 10k: lost (2/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points, New Orleans Saints -5.5)
+Locks 5/11 won, 4 open; Best play top 3 (52%) lost; lost: Kyle Pitts: 25+ Receiving Yards (CIN @ ATL) 23; Jalen Coker: 30+ Receiving Yards (DEN @ CAR) 29.
+Safe Locks 6/11 won, 5 open; Winners parlay top 2 (84%) open; Best play top 7 (52%) open.
+Lottery 10k: lost (3/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points, Under 4.5 goals, New Orleans Saints -5.5)
 Lottery 10k: lost (0/9 legs won, killed by Over 8.5 goals, Under 239.5 points, Under 33.5 points, Washington Commanders to win, Denver Broncos -9.5, Over 8.5 goals)
 Lottery 10k: lost (0/8 legs won, killed by New England Patriots -10.5, Over 64.5 points, Over 47.5 points)
-Lottery 10k+25: lost (2/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points)
-Lottery 10k+50: lost (2/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points)
-Lottery 10k+100: lost (2/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points)
-Lottery 100: lost (8/14 legs won, killed by Devaughn Vele: 20+ Receiving Yards, Ashton Jeanty: 20+ Receiving Yards, Tee Higgins: 50+ Receiving Yards)
-Lottery 100: lost (1/11 legs won, killed by Tucker Kraft: 30+ Receiving Yards, Under 162.5 points, Under 239.5 points)
-Ladder-consistency props (all time): 1867/2241 won (83.3%) vs 86.2% fair, 87.3% price.
-Props 109/143 vs 76.4% claimed.
+Lottery 10k+25: lost (3/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points, Under 4.5 goals)
+Lottery 10k+50: lost (3/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points, Under 4.5 goals)
+Lottery 10k+100: lost (3/10 legs won, killed by Dallas Cowboys -10.5, Over 58.5 points, Under 162.5 points, Under 51.5 points, Under 4.5 goals)
+Lottery 100: lost (9/14 legs won, killed by Devaughn Vele: 20+ Receiving Yards, Ashton Jeanty: 20+ Receiving Yards, Tee Higgins: 50+ Receiving Yards)
+Lottery 100: lost (1/11 legs won, killed by Tucker Kraft: 30+ Receiving Yards, Under 162.5 points, Under 239.5 points, Tampa Bay Lightning to win)
+Ladder-consistency props (all time): 1879/2254 won (83.4%) vs 86.2% fair, 87.3% price.
+Props 127/162 vs 77.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=140), ncaaf 0.00 (n=226), nfl 0.00 (n=54), nhl 0.00 (n=161)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=141), ncaaf 0.00 (n=226), nfl 0.00 (n=54), nhl 0.00 (n=162)
