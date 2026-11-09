@@ -37569,11 +37569,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Ace Bailey",
   "p": 0.8514,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909947|n:ace bailey|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -37585,11 +37587,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Ace Bailey",
   "p": 0.8499,
   "p_fair": 0.938,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 12.0
  },
  "nba:401909947|n:ayo dosunmu|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -37601,11 +37605,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Ayo Dosunmu",
   "p": 0.8568,
   "p_fair": 0.8883,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 31.0
  },
  "nba:401909947|n:jaden mcdaniels|Assists|2+": {
   "aid": null,
@@ -37617,11 +37623,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jaden McDaniels",
   "p": 0.8476,
   "p_fair": 0.8185,
   "price": "-620",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909947|n:jaden mcdaniels|Points|10+": {
   "aid": null,
@@ -37633,11 +37641,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Jaden McDaniels",
   "p": 0.8508,
   "p_fair": 0.9178,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909947|n:jaxson hayes|Rebounds|4+": {
   "aid": null,
@@ -37649,11 +37659,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Jaxson Hayes",
   "p": 0.8586,
   "p_fair": 0.9121,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909947|n:jonathan kuminga|Points|5+": {
   "aid": null,
@@ -37664,11 +37676,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Jonathan Kuminga",
   "p": 0.872,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401909947|n:keyonte george|Assists|4+": {
   "aid": null,
@@ -37680,11 +37694,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Keyonte George",
   "p": 0.853,
   "p_fair": 0.844,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909947|n:keyonte george|Threes Made|1+": {
   "aid": null,
@@ -37696,11 +37712,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Keyonte George",
   "p": 0.8511,
   "p_fair": 0.8927,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401909947|n:lamelo ball|Assists|6+": {
   "aid": null,
@@ -37712,11 +37730,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Assists",
+  "matched": "name",
   "name": "LaMelo Ball",
   "p": 0.7554,
   "p_fair": 0.7266,
   "price": "-330",
-  "status": "open"
+  "status": "lost",
+  "value": 5.0
  },
  "nba:401909947|n:lamelo ball|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -37728,11 +37748,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "LaMelo Ball",
   "p": 0.8499,
   "p_fair": 0.8628,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nba:401909947|n:lauri markkanen|Pts + Ast|15+": {
   "aid": null,
@@ -37748,7 +37770,9 @@
   "p": 0.8514,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909947|n:lauri markkanen|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -37764,7 +37788,9 @@
   "p": 0.8499,
   "p_fair": 0.9124,
   "price": "-900",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909947|n:terrence shannon|Points|5+": {
   "aid": null,
@@ -37776,11 +37802,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Terrence Shannon Jr.",
   "p": 0.8546,
   "p_fair": 0.9699,
   "price": "-1500",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909947|n:terrence shannon|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -37792,11 +37820,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Terrence Shannon Jr.",
   "p": 0.8499,
   "p_fair": 0.9583,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401909948|n:cooper flagg|Points|20+": {
   "aid": null,
