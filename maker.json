@@ -14400,6 +14400,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "nfl:401873050",
    "label": "under 47.5",
    "league": "nfl",
@@ -14412,8 +14413,9 @@
     "t": "under"
    },
    "start": "2026-11-09T01:20Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV08TBCHI-48"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV08TBCHI-48",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV09BUFMIN-44|YES": {
    "ask": 0.53,
