@@ -167,6 +167,9 @@ PROBE = """<script>setTimeout(function(){
   out.likeN = [likeNote("ncaaf", {mc: 57, mp: "Purdue"}), likeNote("epl", {mc: 66, mp: "Tottenham Hotspur or draw"}),
                likeNote("epl", {mc: 66, mp: "Tottenham Hotspur"}), likeNote("ncaaf", {mp: "X"})];
   var pcA = parlayCheck([{p: 0.5, g: "a"}, {p: 0.5, g: "b"}], 5, 25), pcB = parlayCheck([{p: 0.5, g: "a"}, {p: 0.8, g: "a"}], 0, 0);
+  var lkP = D.locks; D.locks = {today: {locks: [{label: "Dalton Kincaid: 20+ Receiving Yards", price: "-417", p: 0.8, match: "BUF @ MIN", league: "nfl"}, {label: "x"}]}};
+  out.pcLocks = parlayLegs().filter(x => x.id.startsWith("L:")).map(x => x.label + "|" + x.p + "|" + x.lg);
+  D.locks = lkP;
   out.pcheck = [parlayText(pcA, 5), parlayText(pcB, 0), parlayText(null, 5), String(parlayLegs().every(x => typeof x.p === "number"))];
   out.lkinds = [ladderKinds({game: {won: 16, n: 18, said: 75.7}, prop: {won: 7, n: 10, said: 79.3}}), ladderKinds({}), ladderKinds(undefined)];
   out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({}), drawNote({sd: "a"}), drawNote({sd: "h"})];
@@ -505,6 +508,8 @@ def main():
             and "+$1.25 on $5.00" in pc[0] and "Two legs share a game" in pc[1] and "break even" not in pc[1]
             and pc[2] == "Tick some legs." and pc[3] == "true"):
         fails.append("parlay check wrong: " + repr(pc))
+    if new.get("pcLocks") != ["Dalton Kincaid: 20+ Receiving Yards (-417)|0.8|Lock NFL"]:
+        fails.append("parlay check locks wrong: " + repr(new.get("pcLocks")))
     lk = new.get("lkinds") or ["", "x", "x"]
     if not (lk[0] == " By kind: game lines 16 of 18 (89% vs 76%), player props 7 of 10 (70% vs 79%)." and not lk[1] and not lk[2]):
         fails.append("ladder kinds wrong: " + repr(lk))
