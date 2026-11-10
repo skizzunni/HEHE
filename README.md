@@ -1267,6 +1267,25 @@ The board's "NHL over running ahead" (132/148 on saved FanDuel lines at
 70-95%) is about short alternate lines, a different market from the main
 total; it stays information, not a rule.
 
+**College football against the closing spread (2026-11-10): on watch, not
+adopted.** `LEAGUE=football/college-football tools/nba_history.py` (every FBS
+game, 2022-24) and `tools/spread_study.py`: 2,767 games, 1,283 with a
+closing spread both sides agree on (2023 and 2024 seasons; 2022 has none).
+Flat $1 on the underdog at the closing spread price, pushes dropped:
+
+    dog getting   2023                     2024
+    0.5-3.5       52.4% covered, +0.2%      55.1%, +6.1%
+    3.5-7.5       52.8%, +1.2%              46.0%, -13.2%
+    7.5-14        48.6%, -7.4%              55.8%, +6.8%
+    14-21         54.8%, +4.7%              48.8%, -6.4%
+    21+           47.8%, -8.8%              49.2%, -7.2%
+
+Only the smallest dogs (getting 0.5-3.5) were ahead in both seasons, and in
+2023 only by +0.2% -- break-even at -110. Big dogs (14+) are not
+under-priced; 21+ point dogs lost both seasons. Nothing changes; small dogs
+stay on watch for this season's games, and the pre-registered 7-13.5 band
+keeps its own count.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
