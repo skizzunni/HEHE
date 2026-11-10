@@ -1302,6 +1302,14 @@ band (66/79 so far against 81% stated on the alternate lines). With 30 and 51
 games it is not enough on its own; the pre-registered test keeps deciding at
 100 legs. Small NFL dogs (under 7.5) lost 11-18% a bet both seasons.
 
+**Rejected: football overs or unders at the closing total (2026-11-10).**
+`tools/totals_study.py`, pushes dropped, flat $1 at the closing price.
+College (2022-24, n 798-879 a season): overs 50.2%, 51.2%, 52.0%; every over
+-4.2%, -2.4%, -0.6%; every under -5.0%, -6.8%, -8.4%. NFL (2021-24, n about
+270 a season): overs 46.5%, 44.0%, 46.1%, 54.2%; unders +2.1%, +6.9%, +3.0%,
+then -12.6% in 2024. The NFL under was ahead three seasons running and then
+lost badly, so it fails the every-season bar; nothing changes.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
