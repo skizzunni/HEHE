@@ -8180,6 +8180,23 @@
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
+  "ncaab:401921740|away|FanDuel": {
+   "dec": 41.0,
+   "ev": 0.0352,
+   "fair": 0.0252,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaab:401921740",
+   "kind": "value",
+   "league": "ncaab",
+   "match": "QUC @ BYU",
+   "price": "+4000",
+   "seen": "2026-11-10T05:04:01+00:00",
+   "side": "away",
+   "start": "2026-11-11T02:00Z",
+   "team": "Queens University Royals",
+   "tip": "9:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaab:401921802|away|FanDuel": {
    "dec": 41.0,
    "ev": 0.1152,
@@ -15076,6 +15093,26 @@
    "prob": 0.0186,
    "seen": "2026-11-05T12:28:35+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaab:401921740:away": {
+   "ev": 0.0332,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0352,
+     "fair": 0.0252,
+     "id": "ncaab:401921740",
+     "price": "+4000",
+     "side": "away",
+     "spec": null,
+     "team": "Queens University Royals"
+    }
+   ],
+   "payout": 41.0,
+   "prob": 0.0252,
+   "seen": "2026-11-10T05:04:01+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
