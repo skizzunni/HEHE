@@ -1,7 +1,7 @@
 # Review 2026-11-09
 
-Picks 3-2 (60.0% vs 81.6% claimed, ROI -32.1%).
-Ladder: run 5, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 37% at 2.47x for the plain top 4; 14 wins to $10,000; legs: Dalton Kincaid: 20+ Receiving Yards (BUF @ MIN; live 13:26 - 2nd, Buffalo Bills 3 - Minnesota Vikings 0, 12 so far, needs 8 more, on pace for 43, on track; props like it 111/143), San Antonio Spurs to win (San Antonio Spurs at Phoenix Suns; 9:00 PM, open), Over 222.5 points (Los Angeles Lakers at Atlanta Hawks; live 9:07 - 4th, Atlanta Hawks 95 - Los Angeles Lakers 100, on pace for 241 (195 so far, line 222.5, needs 28 more), on track).
+Picks 4-2 (66.7% vs 84.7% claimed, ROI -26.8%).
+Ladder: run 5, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 37% at 2.47x for the plain top 4; 14 wins to $10,000; legs: Dalton Kincaid: 20+ Receiving Yards (BUF @ MIN; live 12:41 - 2nd, Buffalo Bills 3 - Minnesota Vikings 0, 12 so far, needs 8 more, on pace for 42, on track; props like it 111/143), San Antonio Spurs to win (San Antonio Spurs at Phoenix Suns; 9:00 PM, open), Over 222.5 points (Los Angeles Lakers at Atlanta Hawks; live 7:42 - 4th, Atlanta Hawks 100 - Los Angeles Lakers 106, on pace for 245 (206 so far, line 222.5, needs 17 more), on track).
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 1 day, peak $1.00, live.
 Cautions in force: NBA over on Locks 17/27 vs 75% (all saved lines since 2026-11-03: 396/452, 88% vs 82% -- pool on par). Running ahead: NBA under on all saved lines 972/1096 vs 82%; NHL over on all saved lines 132/148 vs 84%; NHL spread on all saved lines 281/324 vs 83%; NHL teamover on all saved lines 169/193 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 66/79 (84% vs 81% stated); waiting for 100 legs.
@@ -11,8 +11,8 @@ UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2
 Next UFC card 2026-11-14 (12 fights priced, 5 close): Bilal Hasan 88%; Melquizael Costa 76%; Bia Mesquita 69%; Ciryl Gane 66%; Terrance McKinney 64%; Kayla Harrison 63%; Donte Johnson 61%; Caio Borralho 60% (close); Chris Duncan 59% (close); Stephen Thompson 58% (close); Uroš Medić 57% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING locks nfl prop: 50.0% hit vs 79.7% stated on 10 (by half 3/5 then 2/5; short in both halves); all 653 saved NFL prop lines 505/653 (77% vs 76% stated) -- the pool is on par, so this looks like a small-sample slump on the few Locks take
 Strong calls 2-2 (50.0% vs 77.0% claimed).
-Closing line value: -0.12 points on 5 picks; beat the close on 20.0%.
-Board sweep: 3-2, 14 open -- broken (first loss: nor Vålerenga or draw at 67%); 0.9 losses expected from the settled picks' chances, so 2 or more by now had a 22.6% chance; 0 of the 2 were near coin flips (called under 60%), 2 were real misses; losses by league: ecu 1 (0.4 expected), nor 1 (0.3 expected).
+Closing line value: -0.08 points on 6 picks; beat the close on 33.3%.
+Board sweep: 4-2, 13 open -- broken (first loss: nor Vålerenga or draw at 67%); 0.9 losses expected from the settled picks' chances, so 2 or more by now had a 22.6% chance; 0 of the 2 were near coin flips (called under 60%), 2 were real misses; losses by league: ecu 1 (0.4 expected), nor 1 (0.3 expected).
 - LOST nor Vålerenga or draw at 67% (-260), Kristiansund BK 1 - Vålerenga 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 7 of 13 (54% vs 65% stated)
 - LOST ecu Técnico Universitario or draw at 83% (-700), Manta F.C. 2 - Técnico Universitario 1: margin 1 · the book had my side favoured too · called at 83% · upset · close game
 Why picks lost (14 days): favourite lost 143, close game 112, upset 47, coin flip 44, blowout 39, price moved against it 32.
@@ -46,4 +46,4 @@ Lottery 10k+100: open (0/12 legs won)
 Ladder-consistency props (all time): 1928/2315 won (83.3%) vs 86.2% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=146), ncaab 0.00 (n=42), ncaaf 0.00 (n=226), nfl 0.00 (n=55), nhl 0.00 (n=165)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=146), ncaab 0.00 (n=43), ncaaf 0.00 (n=226), nfl 0.00 (n=55), nhl 0.00 (n=165)
