@@ -6794,6 +6794,23 @@
    "tip": "9:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909963|home|Kalshi": {
+   "dec": 4.1254,
+   "ev": 0.0367,
+   "fair": 0.2513,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909963",
+   "kind": "value",
+   "league": "nba",
+   "match": "MIA @ UTAH",
+   "price": "+313",
+   "seen": "2026-11-10T18:26:37+00:00",
+   "side": "home",
+   "start": "2026-11-11T02:00Z",
+   "team": "Utah Jazz",
+   "tip": "9:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909963|sure": {
    "id": "nba:401909963",
    "kind": "sure",
@@ -6815,6 +6832,30 @@
    "match": "MIA @ UTAH",
    "profit": 0.0014,
    "seen": "2026-11-10T01:02:06+00:00"
+  },
+  "nba:401909963|{\"line\": 7.5, \"t\": \"spread\", \"team\": \"Utah Jazz\"}|Kalshi": {
+   "dec": 2.0947,
+   "dk": "-110",
+   "ev": 0.0421,
+   "fair": 0.4975,
+   "fair_source": "DraftKings (Shin) + Polymarket",
+   "id": "nba:401909963",
+   "kind": "value",
+   "league": "nba",
+   "market": "spread",
+   "match": "MIA @ UTAH",
+   "price": "+109",
+   "seen": "2026-11-10T18:26:37+00:00",
+   "side": "{\"line\": 7.5, \"t\": \"spread\", \"team\": \"Utah Jazz\"}",
+   "spec": {
+    "line": 7.5,
+    "t": "spread",
+    "team": "Utah Jazz"
+   },
+   "start": "2026-11-11T02:00Z",
+   "team": "Utah Jazz +7.5",
+   "tip": "9:00 PM",
+   "venue": "Kalshi"
   },
   "nba:401909963|{\"line\": 9.5, \"t\": \"spread\", \"team\": \"Utah Jazz\"}|FanDuel": {
    "dec": 1.9524,
