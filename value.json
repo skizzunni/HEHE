@@ -6507,6 +6507,23 @@
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909957|away|FanDuel": {
+   "dec": 2.66,
+   "ev": 0.0263,
+   "fair": 0.3858,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909957",
+   "kind": "value",
+   "league": "nba",
+   "match": "DEN @ HOU",
+   "price": "+166",
+   "seen": "2026-11-10T00:02:06+00:00",
+   "side": "away",
+   "start": "2026-11-10T01:30Z",
+   "team": "Denver Nuggets",
+   "tip": "8:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909957|away|Kalshi": {
    "dec": 2.9824,
    "ev": 0.1664,
@@ -14740,6 +14757,26 @@
    "payout": 2.14,
    "prob": 0.4821,
    "seen": "2026-11-09T22:48:35+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909957:away": {
+   "ev": 0.0262,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0263,
+     "fair": 0.3858,
+     "id": "nba:401909957",
+     "price": "+166",
+     "side": "away",
+     "spec": null,
+     "team": "Denver Nuggets"
+    }
+   ],
+   "payout": 2.66,
+   "prob": 0.3858,
+   "seen": "2026-11-10T00:02:06+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
