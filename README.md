@@ -1232,6 +1232,23 @@ the every-season bar and changes no pick. It is the closest thing to an own
 edge found so far; it stays on watch and is re-run when this season's games
 are added.
 
+**Rejected: blind underdogs by price band, NBA and NHL (2026-11-10).**
+`tools/band_roi_study.py` on the same three seasons: a flat bet on the
+favourite or the underdog at the close, by the favourite's no-vig chance,
+season by season (2022, 2023, 2024 starts).
+
+    NBA   fav 50-60%   dog -10.0%, -6.4%, -7.5%      fav 60-70%   dog +5.2%, -4.7%, +2.4%
+          fav 70-80%   dog -4.6%, -17.5%, +0.3%      fav 80%+     dog +19.5%, -14.5%, -28.2%
+    NHL   fav 50-60%   dog -3.9%, -7.1%, -6.8%       fav 60-70%   dog -5.6%, -1.9%, -3.9%
+          fav 70-80%   dog -11.5%, -17.7%, -21.0%    (80%+ has 2-9 games a season)
+
+No band has the underdog ahead in every season, home underdogs included
+(the NBA home dog against a 70-80% favourite went +13.4%, -45.4%, +17.4%).
+The clearest result runs the other way: NHL underdogs against a 70-80%
+favourite lose 11-21% a bet every season -- the long shot is over-bet, the
+classic favourite-longshot bias. So "take the dog" is never a rule here on
+its own; a dog needs a tested reason (a spot, news), not just a price.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
