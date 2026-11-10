@@ -1310,6 +1310,14 @@ College (2022-24, n 798-879 a season): overs 50.2%, 51.2%, 52.0%; every over
 then -12.6% in 2024. The NFL under was ahead three seasons running and then
 lost badly, so it fails the every-season bar; nothing changes.
 
+**Rejected: NFL rest (off a bye, short week) against the closing price
+(2026-11-10).** `tools/nfl_rest_study.py`, 2021-24. A team off its bye
+against one that was not: won 61.5%, 60.7%, 68.2%, 50.0% against 56.9%,
+59.7%, 46.9%, 52.4% priced; a flat bet at the close +5.5%, -8.2%, +54.0%
+(22 games), -13.2%. Two seasons up, two down: not an edge. Short-week spots
+where only one side is short are too rare to read (5 games); on Thursday
+both sides are usually short.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
