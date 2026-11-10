@@ -6881,6 +6881,23 @@
    "tip": "9:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909964|home|FanDuel": {
+   "dec": 3.05,
+   "ev": 0.0126,
+   "fair": 0.332,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909964",
+   "kind": "value",
+   "league": "nba",
+   "match": "ORL @ SAC",
+   "price": "+205",
+   "seen": "2026-11-10T21:02:45+00:00",
+   "side": "home",
+   "start": "2026-11-11T03:00Z",
+   "team": "Sacramento Kings",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909964|sure": {
    "id": "nba:401909964",
    "kind": "sure",
@@ -15166,6 +15183,26 @@
    "payout": 4.5,
    "prob": 0.2266,
    "seen": "2026-11-10T10:23:36+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909964:home": {
+   "ev": 0.0126,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0126,
+     "fair": 0.332,
+     "id": "nba:401909964",
+     "price": "+205",
+     "side": "home",
+     "spec": null,
+     "team": "Sacramento Kings"
+    }
+   ],
+   "payout": 3.05,
+   "prob": 0.332,
+   "seen": "2026-11-10T21:02:45+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
