@@ -1,125 +1,125 @@
 {
- "run": "2026-11-03",
- "games": 141,
+ "run": "2026-11-10",
+ "games": 210,
  "leagues": {
   "nfl": {
    "under": {
     "lock_band": {
-     "games": 41,
-     "rungs": 246,
+     "games": 56,
+     "rungs": 341,
      "said": 76.2,
-     "hit": 78.0,
-     "edge": 1.5,
-     "se": 6.1
+     "hit": 80.6,
+     "edge": 3.9,
+     "se": 5.1
     },
     "lock_older": {
-     "games": 18,
-     "rungs": 109,
+     "games": 28,
+     "rungs": 169,
      "said": 76.2,
-     "hit": 75.2,
-     "edge": -1.2,
-     "se": 9.9
+     "hit": 77.5,
+     "edge": 1.2,
+     "se": 7.6
     },
     "lock_newer": {
-     "games": 23,
-     "rungs": 137,
+     "games": 28,
+     "rungs": 172,
      "said": 76.2,
-     "hit": 80.3,
-     "edge": 3.6,
-     "se": 7.9
+     "hit": 83.7,
+     "edge": 6.7,
+     "se": 6.9
     },
     "by_offset": {
      "0-4": {
-      "games": 41,
-      "rungs": 287,
-      "said": 49.6,
-      "hit": 43.6,
-      "edge": -6.0,
-      "se": 7.1
+      "games": 56,
+      "rungs": 392,
+      "said": 49.5,
+      "hit": 45.2,
+      "edge": -4.3,
+      "se": 6.0
      },
      "4-8": {
-      "games": 41,
-      "rungs": 328,
-      "said": 49.4,
-      "hit": 49.7,
-      "edge": 0.3,
-      "se": 6.3
+      "games": 56,
+      "rungs": 448,
+      "said": 49.3,
+      "hit": 52.5,
+      "edge": 3.2,
+      "se": 5.2
      },
      "8-12": {
-      "games": 41,
-      "rungs": 328,
+      "games": 56,
+      "rungs": 448,
       "said": 49.0,
-      "hit": 53.7,
-      "edge": 4.6,
-      "se": 5.6
+      "hit": 54.5,
+      "edge": 5.5,
+      "se": 4.6
      },
      "12-16": {
-      "games": 41,
-      "rungs": 326,
-      "said": 49.0,
-      "hit": 53.7,
-      "edge": 4.6,
-      "se": 4.6
+      "games": 56,
+      "rungs": 446,
+      "said": 48.8,
+      "hit": 54.3,
+      "edge": 5.3,
+      "se": 4.0
      }
     }
    },
    "over": {
     "lock_band": {
-     "games": 41,
-     "rungs": 224,
-     "said": 76.1,
+     "games": 56,
+     "rungs": 301,
+     "said": 76.0,
      "hit": 70.1,
-     "edge": -6.1,
-     "se": 7.1
+     "edge": -5.9,
+     "se": 6.0
     },
     "lock_older": {
-     "games": 18,
-     "rungs": 100,
+     "games": 28,
+     "rungs": 152,
      "said": 76.0,
-     "hit": 67.0,
-     "edge": -9.3,
-     "se": 11.4
+     "hit": 67.1,
+     "edge": -8.2,
+     "se": 9.0
     },
     "lock_newer": {
-     "games": 23,
-     "rungs": 124,
+     "games": 28,
+     "rungs": 149,
      "said": 76.1,
-     "hit": 72.6,
-     "edge": -3.6,
-     "se": 9.3
+     "hit": 73.2,
+     "edge": -3.7,
+     "se": 8.2
     },
     "by_offset": {
      "0-4": {
-      "games": 41,
-      "rungs": 287,
-      "said": 50.4,
-      "hit": 56.4,
-      "edge": 6.0,
-      "se": 7.1
+      "games": 56,
+      "rungs": 392,
+      "said": 50.5,
+      "hit": 54.8,
+      "edge": 4.3,
+      "se": 6.0
      },
      "4-8": {
-      "games": 41,
-      "rungs": 328,
-      "said": 50.6,
-      "hit": 50.3,
-      "edge": -0.3,
-      "se": 6.3
+      "games": 56,
+      "rungs": 448,
+      "said": 50.7,
+      "hit": 47.5,
+      "edge": -3.2,
+      "se": 5.2
      },
      "8-12": {
-      "games": 41,
-      "rungs": 328,
+      "games": 56,
+      "rungs": 448,
       "said": 51.0,
-      "hit": 46.3,
-      "edge": -4.6,
-      "se": 5.6
+      "hit": 45.5,
+      "edge": -5.5,
+      "se": 4.6
      },
      "12-16": {
-      "games": 41,
-      "rungs": 326,
-      "said": 51.0,
-      "hit": 46.3,
-      "edge": -4.6,
-      "se": 4.6
+      "games": 56,
+      "rungs": 446,
+      "said": 51.2,
+      "hit": 45.7,
+      "edge": -5.3,
+      "se": 4.0
      }
     }
    }
@@ -127,121 +127,121 @@
   "ncaaf": {
    "under": {
     "lock_band": {
-     "games": 100,
-     "rungs": 725,
+     "games": 154,
+     "rungs": 1119,
      "said": 76.2,
-     "hit": 78.2,
-     "edge": 2.7,
-     "se": 3.9
+     "hit": 74.3,
+     "edge": -1.3,
+     "se": 3.3
     },
     "lock_older": {
-     "games": 52,
-     "rungs": 379,
+     "games": 77,
+     "rungs": 559,
      "said": 76.2,
-     "hit": 76.3,
-     "edge": 0.4,
-     "se": 5.7
+     "hit": 78.9,
+     "edge": 3.1,
+     "se": 4.5
     },
     "lock_newer": {
-     "games": 48,
-     "rungs": 346,
-     "said": 76.2,
-     "hit": 80.3,
-     "edge": 5.1,
-     "se": 5.3
+     "games": 77,
+     "rungs": 560,
+     "said": 76.1,
+     "hit": 69.6,
+     "edge": -5.7,
+     "se": 4.9
     },
     "by_offset": {
      "0-4": {
-      "games": 100,
-      "rungs": 700,
-      "said": 50.1,
-      "hit": 55.7,
-      "edge": 5.6,
-      "se": 4.6
+      "games": 154,
+      "rungs": 1078,
+      "said": 50.0,
+      "hit": 54.2,
+      "edge": 4.2,
+      "se": 3.8
      },
      "4-8": {
-      "games": 100,
-      "rungs": 800,
-      "said": 49.8,
-      "hit": 54.5,
-      "edge": 4.7,
-      "se": 4.0
+      "games": 154,
+      "rungs": 1232,
+      "said": 49.7,
+      "hit": 51.2,
+      "edge": 1.5,
+      "se": 3.3
      },
      "8-12": {
-      "games": 100,
-      "rungs": 800,
+      "games": 154,
+      "rungs": 1232,
       "said": 49.4,
-      "hit": 51.8,
-      "edge": 2.3,
-      "se": 3.6
+      "hit": 49.0,
+      "edge": -0.3,
+      "se": 3.0
      },
      "12-16": {
-      "games": 100,
-      "rungs": 800,
-      "said": 49.0,
-      "hit": 51.4,
-      "edge": 2.4,
-      "se": 3.1
+      "games": 154,
+      "rungs": 1232,
+      "said": 48.9,
+      "hit": 48.9,
+      "edge": -0.1,
+      "se": 2.6
      }
     }
    },
    "over": {
     "lock_band": {
-     "games": 100,
-     "rungs": 623,
+     "games": 154,
+     "rungs": 958,
      "said": 76.1,
-     "hit": 74.2,
-     "edge": -2.1,
-     "se": 4.2
+     "hit": 76.0,
+     "edge": -0.7,
+     "se": 3.3
     },
     "lock_older": {
-     "games": 52,
-     "rungs": 324,
+     "games": 77,
+     "rungs": 481,
      "said": 76.0,
-     "hit": 69.8,
-     "edge": -6.3,
-     "se": 6.1
+     "hit": 73.4,
+     "edge": -2.7,
+     "se": 4.9
     },
     "lock_newer": {
-     "games": 48,
-     "rungs": 299,
+     "games": 77,
+     "rungs": 477,
      "said": 76.2,
-     "hit": 78.9,
-     "edge": 2.5,
-     "se": 5.8
+     "hit": 78.6,
+     "edge": 1.3,
+     "se": 4.6
     },
     "by_offset": {
      "0-4": {
-      "games": 100,
-      "rungs": 700,
-      "said": 49.9,
-      "hit": 44.3,
-      "edge": -5.6,
-      "se": 4.6
+      "games": 154,
+      "rungs": 1078,
+      "said": 50.0,
+      "hit": 45.8,
+      "edge": -4.2,
+      "se": 3.8
      },
      "4-8": {
-      "games": 100,
-      "rungs": 800,
-      "said": 50.2,
-      "hit": 45.5,
-      "edge": -4.7,
-      "se": 4.0
+      "games": 154,
+      "rungs": 1232,
+      "said": 50.3,
+      "hit": 48.8,
+      "edge": -1.5,
+      "se": 3.3
      },
      "8-12": {
-      "games": 100,
-      "rungs": 800,
+      "games": 154,
+      "rungs": 1232,
       "said": 50.6,
-      "hit": 48.2,
-      "edge": -2.3,
-      "se": 3.6
+      "hit": 51.0,
+      "edge": 0.3,
+      "se": 3.0
      },
      "12-16": {
-      "games": 100,
-      "rungs": 800,
-      "said": 51.0,
-      "hit": 48.6,
-      "edge": -2.4,
-      "se": 3.1
+      "games": 154,
+      "rungs": 1232,
+      "said": 51.1,
+      "hit": 51.1,
+      "edge": 0.1,
+      "se": 2.6
      }
     }
    }
