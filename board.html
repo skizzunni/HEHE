@@ -2181,7 +2181,10 @@ function parlayCheck(legs, stake, payout){
 function parlayText(c, stake){
   if(!c) return 'Tick some legs.';
   const pct = x => x >= 0.01 ? (100 * x).toFixed(1) + '%' : (100 * x).toFixed(2) + '%';
-  let t = 'Board chance all hit: <b>' + pct(c.p) + '</b> (about 1 in ' + Math.round(c.fair).toLocaleString('en-US') + ').';
+  const am = c.p >= 0.5 ? '\u2212' + Math.round(100 * c.p / (1 - c.p)).toLocaleString('en-US')
+                        : '+' + Math.round(100 * (1 - c.p) / c.p).toLocaleString('en-US');
+  let t = 'Board chance all hit: <b>' + pct(c.p) + '</b> (about 1 in ' + Math.round(c.fair).toLocaleString('en-US')
+    + '; fair odds ' + (c.p > 0 && c.p < 1 ? am : 'n/a') + ').';
   if(c.need) t += ' The payout needs ' + pct(c.need) + ' to break even, so on the board\u2019s numbers this ticket is worth about '
     + (c.ev >= 0 ? '+' : '\u2212') + '$' + Math.abs(c.ev).toFixed(2) + ' on $' + (+stake).toFixed(2) + '.';
   if(c.same) t += ' Two legs share a game, so the real chance differs from this product.';

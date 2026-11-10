@@ -509,8 +509,8 @@ def main():
     if not ("Straight win: a draw loses it. 21 of the 38 losses on 234 straight-win soccer picks were draws" in dn[0] and not dn[1] and not dn[2]):
         fails.append("draw note wrong: " + repr(dn))
     pc = new.get("pcheck") or ["", "", "", ""]
-    if not ("Board chance all hit: <b>25.0%</b> (about 1 in 4). The payout needs 20.0% to break even" in pc[0]
-            and "+$1.25 on $5.00" in pc[0] and "Two legs share a game" in pc[1] and "break even" not in pc[1]
+    if not ("Board chance all hit: <b>25.0%</b> (about 1 in 4; fair odds +300). The payout needs 20.0% to break even" in pc[0]
+            and "+$1.25 on $5.00" in pc[0] and "fair odds +150" in pc[1] and "Two legs share a game" in pc[1] and "break even" not in pc[1]
             and pc[2] == "Tick some legs." and pc[3] == "true"):
         fails.append("parlay check wrong: " + repr(pc))
     if new.get("pcLocks") != ["Dalton Kincaid: 20+ Receiving Yards (-417)|0.8|Lock NFL"]:
