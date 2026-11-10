@@ -10,7 +10,7 @@ Soccer or-draw picks by side: home 77% vs 74% stated on 405 (halves 78%, 77%); a
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (12 fights priced, 5 close): Bilal Hasan 88%; Melquizael Costa 76%; Bia Mesquita 69%; Ciryl Gane 66%; Terrance McKinney 64%; Kayla Harrison 63%; Donte Johnson 61%; Caio Borralho 60% (close); Chris Duncan 59% (close); Stephen Thompson 57% (close); Uroš Medić 57% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING locks nfl prop: 54.5% hit vs 79.7% stated on 11 (by half 3/5 then 3/6; short in both halves); all 670 saved NFL prop lines 520/670 (78% vs 76% stated) -- the pool is on par, so this looks like a small-sample slump on the few Locks take
-Board sweep: 0-0, 23 open -- still clean.
+Board sweep: 0-0, 24 open -- still clean.
 Why picks lost (14 days): favourite lost 137, close game 110, upset 47, coin flip 43, blowout 36, price moved against it 32.
 Yesterday (2026-11-09): board 14-5, sweep broken by nor Vålerenga or draw at 67%; 5.2 losses expected, 5 came in (62.9% chance of that many or more).
 - LOST nor Vålerenga or draw at 67% (-260), Kristiansund BK 1 - Vålerenga 0: margin 1 · the book had my side favoured too · called at 67% · favourite lost · close game; picks like it: 7 of 13 (54% vs 65% stated)
