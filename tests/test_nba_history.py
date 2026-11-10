@@ -44,6 +44,15 @@ class OddsFor(unittest.TestCase):
         b.update(overUnder=221.5, overOdds=-110.0, underOdds=-110.0)
         self.assertEqual(self.run_with([b]), dict(book="DraftKings", home=-210.0, away=175.0, total=221.5, over=-110.0, under=-110.0))
 
+    def test_spread_from_home_side(self):
+        away = side("20", 400, "+400"); home = side("10", -550, "-550")
+        away["close"]["pointSpread"] = {"american": "+10.5"}; away["close"]["spread"] = {"american": "-110"}
+        home["close"]["pointSpread"] = {"american": "-10.5"}; home["close"]["spread"] = {"american": "-110"}
+        o = self.run_with([book("40", "DraftKings", away, home)])
+        self.assertEqual((o["home_spread"], o["home_spread_price"], o["away_spread_price"]), (-10.5, -110.0, -110.0))
+        home["close"]["pointSpread"] = {"american": "-9.5"}                 # sides disagree: no spread kept
+        self.assertNotIn("home_spread", self.run_with([book("40", "DraftKings", away, home)]))
+
     def test_imp(self):
         self.assertAlmostEqual(h._imp(100), 0.5)
         self.assertAlmostEqual(h._imp(-300), 0.75)

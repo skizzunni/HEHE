@@ -19,7 +19,8 @@ import urllib.request
 
 LEAGUE = os.environ.get("LEAGUE", "basketball/nba")          # or hockey/nhl
 _SPORT, _LG = LEAGUE.split("/")
-SITE = f"https://site.api.espn.com/apis/site/v2/sports/{LEAGUE}/scoreboard?dates={{}}"
+SITE = (f"https://site.api.espn.com/apis/site/v2/sports/{LEAGUE}/scoreboard?dates={{}}"
+        + ("&groups=80&limit=400" if _LG == "college-football" else ""))    # every FBS game, not just the top 25
 ODDS = f"https://sports.core.api.espn.com/v2/sports/{_SPORT}/leagues/{_LG}/events/{{0}}/competitions/{{0}}/odds"
 
 
@@ -34,8 +35,10 @@ def get(url, tries=3):
 
 
 def season_days(y):
-    """Oct 15 of year y to Apr 20 of y+1."""
-    d, end = dt.date(y, 10, 15), dt.date(y + 1, 4, 20)
+    """The regular season's days for a season starting in year y: Oct 15 to
+    Apr 20 for basketball and hockey, Aug 20 to Jan 20 for football."""
+    d, end = ((dt.date(y, 8, 20), dt.date(y + 1, 1, 20)) if _SPORT == "football"
+              else (dt.date(y, 10, 15), dt.date(y + 1, 4, 20)))
     while d <= end:
         yield d
         d += dt.timedelta(days=1)
@@ -76,6 +79,25 @@ def _imp(a):
     return 100 / (a + 100) if a > 0 else -a / (-a + 100)
 
 
+def _spread(it, g):
+    """The same book's closing point spread from the home side: home_spread
+    (negative = home favoured) and the two sides' prices, matched by team id."""
+    side = {}
+    for k in ("awayTeamOdds", "homeTeamOdds"):
+        x = it.get(k) or {}
+        m = re.search(r"/teams/(\d+)", ((x.get("team") or {}).get("$ref") or ""))
+        close = x.get("close") or {}
+        pt = _ml((close.get("pointSpread") or {}).get("american")) if isinstance(close.get("pointSpread"), dict) else None
+        pr = _ml((close.get("spread") or {}).get("american")) if isinstance(close.get("spread"), dict) else None
+        pr = pr if pr is not None else _ml(x.get("spreadOdds"))
+        if m and pt is not None and pr is not None:
+            side[m.group(1)] = (pt, pr)
+    h, a = side.get(g["home"]["id"]), side.get(g["away"]["id"])
+    if not h or not a or h[0] != -a[0] or not 1.0 <= _imp(h[1]) + _imp(a[1]) <= 1.12:
+        return None
+    return dict(home_spread=h[0], home_spread_price=h[1], away_spread_price=a[1])
+
+
 def odds_for(g):
     j = get(ODDS.format(g["id"])) or {}
     items = [i for i in j.get("items", []) if "Live" not in ((i.get("provider") or {}).get("name") or "")]
@@ -99,6 +121,9 @@ def odds_for(g):
                 ou, oo, uo = it.get("overUnder"), _ml(it.get("overOdds")), _ml(it.get("underOdds"))
                 if ou is not None and oo is not None and uo is not None and 1.0 <= _imp(oo) + _imp(uo) <= 1.12:
                     out.update(total=float(ou), over=oo, under=uo)      # same book's total line
+                sp = _spread(it, g)
+                if sp:
+                    out.update(sp)
                 return out
     return None
 
