@@ -1214,6 +1214,24 @@ spot that looks big (home side with 2+ more days of rest) is 74 games and
 lost money in 2023-24, so it fails the both-halves bar; it is noted to watch,
 not used. No pick rule changes.
 
+**Not adopted, on watch: NHL back-to-backs against the closing price
+(2026-11-10).** Same tools (`LEAGUE=hockey/nhl tools/nba_history.py`, then
+`tools/nba_rest_study.py`), 2022-23 to 2024-25, 3,843 games with closes
+(the first book whose two closing sides fit together). Favourites won 61.4%.
+
+    spot (team on a back-to-back, opponent rested)   b2b team vs its price, by season   betting against it at the close
+    home team on the b2b (n 178)                      -9.8, -0.6, -7.3 pts               +21.8%, -6.5%, +11.6%
+    away team on the b2b (n 590)                      -1.0, -2.5, -6.4 pts               -2.7%, -1.3%, +7.6%
+    both together                                     short in all three seasons         +2.3%, -2.6%, +8.5%
+    tired favourite vs rested underdog (n 273)        dog +1.6, -4.1, +5.6 pts           dog +4.9%, -16.1%, +11.3%
+
+Unlike the NBA, the direction is the same every season: an NHL team on the
+second night of a back-to-back against a rested side wins less than its
+closing price says. But betting against it lost money in 2023-24, so it fails
+the every-season bar and changes no pick. It is the closest thing to an own
+edge found so far; it stays on watch and is re-run when this season's games
+are added.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
