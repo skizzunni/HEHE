@@ -69,6 +69,17 @@ class NhlB2b(unittest.TestCase):
         self.assertIsNone(daily_review.nhl_b2b_line(dt.date(2026, 11, 10), games_fn=lambda d, finished=False: [], ledger={}))
 
 
+class PreregLine(unittest.TestCase):
+    def test_history_attached(self):
+        from unittest import mock
+        import locks
+        st = dict(name="college + NFL spreads getting 7-13.5 points", won=73, n=90, said=81.0, need=100, verdict="waiting")
+        with mock.patch.object(locks, "prereg_status", lambda: st):
+            out = daily_review.prereg_line()
+        self.assertTrue(out.startswith("Pre-registered test, college + NFL spreads getting 7-13.5 points: 73/90 (81% vs 81% stated); waiting for 100 legs."))
+        self.assertIn("dogs getting 7.5-14 covered 53% then 61% in the NFL", out)
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
