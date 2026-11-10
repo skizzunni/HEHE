@@ -3,6 +3,7 @@ seasons from ESPN (date, teams, final score) and its closing moneyline
 (DraftKings where posted, else the first book with both sides), cached.
 
     python tools/nba_history.py OUT.json 2022 2023 2024    # season start years
+    LEAGUE=hockey/nhl python tools/nba_history.py OUT.json 2022 2023 2024
 
 Odds are matched to teams by the team id in each side's $ref, never by
 position (the UFC enrichment once mapped by position and invented an edge).
@@ -16,8 +17,10 @@ import re
 import sys
 import urllib.request
 
-SITE = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={}"
-ODDS = "https://sports.core.api.espn.com/v2/sports/basketball/leagues/nba/events/{0}/competitions/{0}/odds"
+LEAGUE = os.environ.get("LEAGUE", "basketball/nba")          # or hockey/nhl
+_SPORT, _LG = LEAGUE.split("/")
+SITE = f"https://site.api.espn.com/apis/site/v2/sports/{LEAGUE}/scoreboard?dates={{}}"
+ODDS = f"https://sports.core.api.espn.com/v2/sports/{_SPORT}/leagues/{_LG}/events/{{0}}/competitions/{{0}}/odds"
 
 
 def get(url, tries=3):
@@ -67,6 +70,10 @@ def _ml(o):
         return None
 
 
+def _imp(a):
+    return 100 / (a + 100) if a > 0 else -a / (-a + 100)
+
+
 def odds_for(g):
     j = get(ODDS.format(g["id"])) or {}
     items = [i for i in j.get("items", []) if "Live" not in ((i.get("provider") or {}).get("name") or "")]
@@ -82,7 +89,11 @@ def odds_for(g):
             if m and ml is not None:
                 by[m.group(1)] = ml
         if g["home"]["id"] in by and g["away"]["id"] in by:
-            return dict(book=(it.get("provider") or {}).get("name"), home=by[g["home"]["id"]], away=by[g["away"]["id"]])
+            h, a = by[g["home"]["id"]], by[g["away"]["id"]]
+            # a book's two closing sides must fit together (overround 0-12%);
+            # some feeds pair a stale close with a fresh one -- skip those
+            if 1.0 <= _imp(h) + _imp(a) <= 1.12:
+                return dict(book=(it.get("provider") or {}).get("name"), home=h, away=a)
     return None
 
 
