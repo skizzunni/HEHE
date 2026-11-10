@@ -39,6 +39,11 @@ class OddsFor(unittest.TestCase):
         live = book("46", "Caesars - Live Odds", side("20", 500), side("10", -800))
         self.assertIsNone(self.run_with([live, bad]))
 
+    def test_total_kept_with_its_book(self):
+        b = book("40", "DraftKings", side("20", 175, "+175"), side("10", -210, "-210"))
+        b.update(overUnder=221.5, overOdds=-110.0, underOdds=-110.0)
+        self.assertEqual(self.run_with([b]), dict(book="DraftKings", home=-210.0, away=175.0, total=221.5, over=-110.0, under=-110.0))
+
     def test_imp(self):
         self.assertAlmostEqual(h._imp(100), 0.5)
         self.assertAlmostEqual(h._imp(-300), 0.75)

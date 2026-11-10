@@ -1249,6 +1249,16 @@ favourite lose 11-21% a bet every season -- the long shot is over-bet, the
 classic favourite-longshot bias. So "take the dog" is never a rule here on
 its own; a dog needs a tested reason (a spot, news), not just a price.
 
+**Rejected: NBA overs or unders at the closing total (2026-11-10).** The
+history fetcher now keeps the same book's closing total; 3,659 NBA games with
+one (pushes dropped). The over hit 51.4%, 49.6%, 52.6% by season against a
+50% price; flat over bets -2.0%, -5.3%, +0.3%; unders -7.1%, -3.8%, -9.5%. By
+line, no band is ahead every season (235+: under +6.3%, -1.7%, -7.1%; under
+215: under +0.2%, -26.0%, +15.1%), and October-November overs ran -3.7%,
++2.1%, -2.4%. The closing total is a coin flip either way, so the Locks NBA
+over caution stays a caution on the Locks' own legs and nothing is cut or
+added from this.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that

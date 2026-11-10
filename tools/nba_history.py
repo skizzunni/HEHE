@@ -95,7 +95,11 @@ def odds_for(g):
             # a book's two closing sides must fit together (overround 0-12%);
             # some feeds pair a stale close with a fresh one -- skip those
             if 1.0 <= _imp(h) + _imp(a) <= 1.12:
-                return dict(book=(it.get("provider") or {}).get("name"), home=h, away=a)
+                out = dict(book=(it.get("provider") or {}).get("name"), home=h, away=a)
+                ou, oo, uo = it.get("overUnder"), _ml(it.get("overOdds")), _ml(it.get("underOdds"))
+                if ou is not None and oo is not None and uo is not None and 1.0 <= _imp(oo) + _imp(uo) <= 1.12:
+                    out.update(total=float(ou), over=oo, under=uo)      # same book's total line
+                return out
     return None
 
 
@@ -110,7 +114,7 @@ def main(out, years):
         for gs in ex.map(games_on, days):
             for g in gs:
                 have.setdefault(g["id"], g)
-    todo = [g for g in have.values() if "odds" not in g]
+    todo = [g for g in have.values() if "odds" not in g or (g["odds"] and "total" not in g["odds"] and os.environ.get("REFETCH_TOTALS"))]
     with cf.ThreadPoolExecutor(8) as ex:
         for g, o in zip(todo, ex.map(odds_for, todo)):
             g["odds"] = o
