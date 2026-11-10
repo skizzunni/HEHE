@@ -2179,7 +2179,10 @@ function parlayCheck(legs, stake, payout){
   const games = legs.map(L => L.g);
   const same = games.length !== new Set(games).size;
   const need = stake > 0 && payout > stake ? stake / payout : null;
-  return {p, need, ev: need ? p * payout - stake : null, same, fair: p > 0 ? 1 / p : null};
+  // the leg most likely to sink it, and the chance without it
+  const weak = legs.length > 1 ? legs.reduce((a, L) => L.p < a.p ? L : a) : null;
+  return {p, need, ev: need ? p * payout - stake : null, same, fair: p > 0 ? 1 / p : null,
+          weak: weak ? {label: weak.label, p: weak.p, without: p / weak.p} : null};
 }
 function parlayText(c, stake){
   if(!c) return 'Tick some legs.';
@@ -2191,6 +2194,8 @@ function parlayText(c, stake){
   if(c.need) t += ' The payout needs ' + pct(c.need) + ' to break even, so on the board\u2019s numbers this ticket is worth about '
     + (c.ev >= 0 ? '+' : '\u2212') + '$' + Math.abs(c.ev).toFixed(2) + ' on $' + (+stake).toFixed(2) + '.';
   if(c.same) t += ' Two legs share a game, so the real chance differs from this product.';
+  if(c.weak) t += ' Most likely to sink it: <b>' + esc(c.weak.label) + '</b> (' + Math.round(100 * c.weak.p)
+    + '%); without it the rest hit ' + pct(c.weak.without) + ' of the time.';
   return t;
 }
 function parlayCheckHTML(){

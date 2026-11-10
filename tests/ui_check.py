@@ -167,7 +167,7 @@ PROBE = """<script>setTimeout(function(){
   D.locks = lkS; D.ladder = ldS;
   out.likeN = [likeNote("ncaaf", {mc: 57, mp: "Purdue"}), likeNote("epl", {mc: 66, mp: "Tottenham Hotspur or draw"}),
                likeNote("epl", {mc: 66, mp: "Tottenham Hotspur"}), likeNote("ncaaf", {mp: "X"})];
-  var pcA = parlayCheck([{p: 0.5, g: "a"}, {p: 0.5, g: "b"}], 5, 25), pcB = parlayCheck([{p: 0.5, g: "a"}, {p: 0.8, g: "a"}], 0, 0);
+  var pcA = parlayCheck([{p: 0.5, g: "a"}, {p: 0.5, g: "b"}], 5, 25), pcW = parlayCheck([{p: 0.19, g: "w", label: "Washington Wizards"}, {p: 0.8, g: "k", label: "Kincaid 20+"}], 5, 50), pcB = parlayCheck([{p: 0.5, g: "a"}, {p: 0.8, g: "a"}], 0, 0);
   var lkP = D.locks; D.locks = {today: {locks: [{label: "Dalton Kincaid: 20+ Receiving Yards", price: "-417", p: 0.8, match: "BUF @ MIN", league: "nfl"}, {label: "x"}]}};
   out.pcLocks = parlayLegs().filter(x => x.id.startsWith("L:")).map(x => x.label + "|" + x.p + "|" + x.lg);
   var slP = D.slots; D.slots = {today: {nba: {rows: [{mp: "Atlanta Hawks", mc: 52, t: "7:00 PM", lg: "NBA"}]}}};
@@ -176,6 +176,7 @@ PROBE = """<script>setTimeout(function(){
   out.pcLink = String(parlayCheck([pl.find(x => x.id === "nba:0:o"), pl.find(x => x.id === "L:0")], 5, 50).same);
   D.slots = slP;
   D.locks = lkP;
+  out.pcWeak = parlayText(pcW, 5);
   out.pcheck = [parlayText(pcA, 5), parlayText(pcB, 0), parlayText(null, 5), String(parlayLegs().every(x => typeof x.p === "number"))];
   out.lkinds = [ladderKinds({game: {won: 16, n: 18, said: 75.7}, prop: {won: 7, n: 10, said: 79.3}}), ladderKinds({}), ladderKinds(undefined)];
   out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({}), drawNote({sd: "a"}), drawNote({sd: "h"})];
@@ -509,6 +510,8 @@ def main():
     dn = new.get("drawn") or ["", "x", "x"]
     if not ("Straight win: a draw loses it. 21 of the 38 losses on 234 straight-win soccer picks were draws" in dn[0] and not dn[1] and not dn[2]):
         fails.append("draw note wrong: " + repr(dn))
+    if "Most likely to sink it: <b>Washington Wizards</b> (19%); without it the rest hit 80.0% of the time." not in (new.get("pcWeak") or ""):
+        fails.append("parlay weakest leg wrong: " + repr(new.get("pcWeak")))
     pc = new.get("pcheck") or ["", "", "", ""]
     if not ("Board chance all hit: <b>25.0%</b> (about 1 in 4; fair odds +300). The payout needs 20.0% to break even" in pc[0]
             and "+$1.25 on $5.00" in pc[0] and "fair odds +150" in pc[1] and "Two legs share a game" in pc[1] and "break even" not in pc[1]
