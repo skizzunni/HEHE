@@ -717,7 +717,8 @@ def own_view(book, today, since_days=30):
     the market's side. Graded head to head on the same games over the last
     since_days, plus today's games where the two disagree."""
     since = (dt.date.fromisoformat(today) - dt.timedelta(days=since_days)).isoformat()
-    n = own = mkt = 0
+    n = own = mkt = dog_n = 0
+    dog_pl = 0.0
     split = []
     split_rec = {}
     for k, e in book.items():
@@ -736,12 +737,19 @@ def own_view(book, today, since_days=30):
                 lg_ = k.split(":")[0]
                 a_, n_ = split_rec.get(lg_, (0, 0))
                 split_rec[lg_] = (a_ + (not mkt_won), n_ + 1)
+                # my side is the market's underdog here: a $1 bet on it at the
+                # no-vig price (a real book pays a little less)
+                p_dog = (1 - h["p_market_away"]) if mkt_away else h["p_market_away"]
+                if 0 < p_dog < 1:
+                    dog_n += 1
+                    dog_pl += (1 / p_dog - 1) if not mkt_won else -1
         elif e.get("status") == "open" and d == today and model_away != mkt_away and len(teams) == 2:
             split.append(dict(league=k.split(":")[0], match=e.get("matchup"), own=teams[0] if model_away else teams[1],
                               own_p=round(100 * (h["p_model_away"] if model_away else 1 - h["p_model_away"])),
                               market=teams[0] if mkt_away else teams[1],
                               market_p=round(100 * (h["p_market_away"] if mkt_away else 1 - h["p_market_away"]))))
     return dict(n=n, own=own, market=mkt, since=since, today=sorted(split, key=lambda x: x["league"]),
+                dog_roi=round(100 * dog_pl / dog_n, 1) if dog_n else None, dog_n=dog_n,
                 splits=[dict(league=k, mine=a_, n=n_) for k, (a_, n_) in sorted(split_rec.items(), key=lambda x: -x[1][1])])
 
 

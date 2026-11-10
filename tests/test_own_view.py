@@ -26,6 +26,8 @@ class OwnView(unittest.TestCase):
         finally:
             ledger.record_priced = orig
         self.assertEqual((v["n"], v["own"], v["market"]), (3, 2, 2))
+        # two disagreements, my side the market dog at 40%: one lost (-1), one won (+1.5)
+        self.assertEqual((v["dog_n"], v["dog_roi"]), (2, 25.0))
         self.assertEqual(v["today"], [dict(league="nba", match="AAA @ HHH", own="HHH", own_p=60, market="AAA", market_p=60)])
 
 

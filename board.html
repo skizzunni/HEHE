@@ -1975,7 +1975,10 @@ function ownHTML(O){
     + ')</b>, the market&rsquo;s favourite ' + O.market + ' (' + pc(O.market) + '). '
     + (O.own > O.market ? 'Mine are ahead.' : 'The market is ahead, so the board still follows it; mine are tracked here until they beat it.')
     + ((O.splits || []).length ? ' Where we disagreed, I was right: ' + O.splits.slice(0, 5).map(x => esc(String(x.league).toUpperCase()) + ' '
-        + x.mine + ' of ' + x.n).join(', ') + '.' : '') + '</p>'
+        + x.mine + ' of ' + x.n).join(', ') + '.' : '')
+    + (O.dog_n ? ' Those disagreements were my underdog against the market\u2019s favourite: $1 on each of the ' + O.dog_n
+        + ' at the no-vig price would be ' + (O.dog_roi >= 0 ? '+' : '\u2212') + Math.abs(O.dog_roi) + '% a bet (a real book pays a little less).' : '')
+    + '</p>'
     + ((O.today || []).length ? '<p class="note"><b>Today I disagree with the market on ' + O.today.length + ':</b></p><ul class="betlegs">'
       + O.today.map(x => '<li>' + esc(String(x.league).toUpperCase()) + ' ' + esc(x.match) + ': <b>I take ' + esc(x.own) + '</b> ('
         + x.own_p + '%), market has ' + esc(x.market) + ' (' + x.market_p + '%)</li>').join('') + '</ul>'
