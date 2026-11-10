@@ -1,0 +1,48 @@
+import os
+import sys
+import unittest
+from unittest import mock
+
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+import nba_history as h                                            # noqa: E402
+
+G = dict(id="1", home=dict(id="10", name="Home"), away=dict(id="20", name="Away"))
+
+
+def side(team, ml, close=None):
+    s = {"team": {"$ref": f"http://x/seasons/2024/teams/{team}?lang=en"}, "moneyLine": ml}
+    if close is not None:
+        s["close"] = {"moneyLine": {"american": close}}
+    return s
+
+
+def book(pid, name, away, home):
+    return {"provider": {"id": pid, "name": name}, "awayTeamOdds": away, "homeTeamOdds": home}
+
+
+class OddsFor(unittest.TestCase):
+    def run_with(self, items):
+        with mock.patch.object(h, "get", lambda url: {"items": items}):
+            return h.odds_for(G)
+
+    def test_matched_by_team_id_not_position(self):
+        # the feed lists the home team under awayTeamOdds: ids must still win
+        o = self.run_with([book("40", "DraftKings", side("10", -200, "-210"), side("20", 170, "+175"))])
+        self.assertEqual(o, dict(book="DraftKings", home=-210.0, away=175.0))
+
+    def test_inconsistent_close_skipped_draftkings_preferred(self):
+        bad = book("40", "DraftKings", side("20", 330, "+330"), side("10", -190, "-190"))     # sums to 0.89
+        good = book("47", "MGM", side("20", 220, "+222"), side("10", -270, "-278"))
+        other = book("58", "ESPN BET", side("20", 210), side("10", -260))
+        self.assertEqual(self.run_with([other, bad, good])["book"], "ESPN BET")
+        self.assertEqual(self.run_with([bad, good])["book"], "MGM")
+        live = book("46", "Caesars - Live Odds", side("20", 500), side("10", -800))
+        self.assertIsNone(self.run_with([live, bad]))
+
+    def test_imp(self):
+        self.assertAlmostEqual(h._imp(100), 0.5)
+        self.assertAlmostEqual(h._imp(-300), 0.75)
+
+
+if __name__ == "__main__":
+    unittest.main()
