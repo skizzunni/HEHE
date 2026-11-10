@@ -1194,6 +1194,26 @@ tested against the book and is not a call. The review's next-card line lists
 the fights at either end (`ufc_model.distance_lean`): under 0.30 "likely to
 end early", 0.60+ "likely to go the distance".
 
+**Rejected: NBA schedule spots against the closing price (2026-11-10).**
+`tools/nba_history.py` pulled the 2022-23, 2023-24 and 2024-25 regular seasons
+from ESPN (3,695 games with closing moneylines, DraftKings first, matched to
+teams by id); `tools/nba_rest_study.py` graded every rest spot against the
+no-vig close and a flat bet at the close, season by season. Favourites won
+68.3%.
+
+    spot                          n     won vs price, by season        ROI betting it, by season
+    tired favourite, rested dog   341   dog -1.0, -0.5, +2.8 pts        dog -9.5%, -12.4%, +2.0%
+    away team on a back-to-back   494   home +2.1, +0.6, +2.4 pts       home -1.2%, -5.2%, -0.1%
+    home team on a back-to-back   401   home +2.4, -4.7, -4.3 pts       away -10.5%, -0.1%, +3.0%
+    home team 2+ days more rest    74   home +15.4, +0.7, +22.7 pts     home +43.5%, -17.6%, +30.4%
+    away team 2+ days more rest    35   home -11.7, +14.4, +13.5 pts    (n 9-14 a season)
+
+The market already prices back-to-backs: the tired favourite's underdog wins
+about what its price says and loses money in two of three seasons. The one
+spot that looks big (home side with 2+ more days of rest) is 74 games and
+lost money in 2023-24, so it fails the both-halves bar; it is noted to watch,
+not used. No pick rule changes.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
