@@ -13522,20 +13522,20 @@
     "flag": false,
     "halves": [
      [
-      43,
-      48,
-      80.8
-     ],
-     [
       46,
       53,
-      87.9
+      79.5
+     ],
+     [
+      44,
+      49,
+      89.7
      ]
     ],
-    "hit": 88.1,
-    "n": 101,
+    "hit": 88.2,
+    "n": 102,
     "name": "daily calls",
-    "said": 84.5
+    "said": 84.4
    },
    {
     "flag": false,
@@ -13664,9 +13664,9 @@
   "card_missing": null,
   "cautions": "Running ahead: NBA under on all saved lines 1028/1147 vs 82%; NHL over on all saved lines 126/139 vs 84%; NHL spread on all saved lines 263/301 vs 83%; NHL teamover on all saved lines 163/181 vs 83%.",
   "clv": {
-   "avg": null,
-   "beat": null,
-   "n": 0
+   "avg": -3.03,
+   "beat": 0.0,
+   "n": 2
   },
   "cold": null,
   "day": "2026-11-10",
@@ -13747,9 +13747,23 @@
   ],
   "nhl_b2b": null,
   "picks": {
-   "n": 0
+   "hit": 100.0,
+   "lost": 0,
+   "n": 2,
+   "roi": 16.7,
+   "said": 83.0,
+   "won": 2
   },
-  "picks_by_league": {},
+  "picks_by_league": {
+   "cdr": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 2,
+    "roi": 16.7,
+    "said": 83.0,
+    "won": 2
+   }
+  },
   "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 73/90 (81% vs 81% stated); waiting for 100 legs. History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).",
   "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 76% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 84% (88% / 85%); 90%+ 84%, 83% (93% / 85%).",
   "props": {
@@ -13783,15 +13797,25 @@
    "won": 0
   },
   "strong": {
-   "n": 0
+   "hit": 100.0,
+   "lost": 0,
+   "n": 2,
+   "roi": 16.7,
+   "said": 83.0,
+   "won": 2
   },
   "stuck": [],
   "sweep": {
+   "as_bad_pct": 100.0,
+   "as_good_pct": 68.1,
    "broke_on": null,
    "coin_flips": 0,
+   "expected_by_league": {},
+   "expected_losses": 0.3,
    "lost": 0,
-   "open": 24,
-   "won": 0
+   "lost_by_league": {},
+   "open": 22,
+   "won": 2
   },
   "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
   "ufc_next": "Next UFC card 2026-11-14 (12 fights priced, 5 close): Bilal Hasan 88%; Melquizael Costa 76%; Bia Mesquita 70%; Ciryl Gane 66%; Terrance McKinney 64%; Kayla Harrison 63%; Donte Johnson 61%; Caio Borralho 60% (close); Chris Duncan 59% (close); Stephen Thompson 57% (close); Uro\u0161 Medi\u0107 57% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).",
@@ -13802,10 +13826,10 @@
    "agree": {
     "hit": 76.9,
     "lost": 227,
-    "n": 981,
+    "n": 983,
     "roi": 1.7,
     "said": 72.0,
-    "won": 754
+    "won": 756
    }
   },
   "weights": {
