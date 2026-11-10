@@ -1286,6 +1286,22 @@ under-priced; 21+ point dogs lost both seasons. Nothing changes; small dogs
 stay on watch for this season's games, and the pre-registered 7-13.5 band
 keeps its own count.
 
+**NFL against the closing spread (2026-11-10): supports the pre-registered
+test, adopts nothing.** 1,086 NFL games 2021-24 with closes; 456 with a
+closing spread both sides agree on (2023 and 2024 only).
+
+    dog getting   2023                      2024
+    0.5-3.5       42.3% covered, -18.2%      45.9%, -10.9%
+    3.5-7.5       45.6%, -13.0%              43.4%, -18.2%
+    7.5-14        53.3%, +2.2% (n 30)        60.8%, +13.8% (n 51)
+    14+           n 9 and n 6
+
+NFL dogs getting 7.5-14 points covered more than half the time in both
+seasons -- the same direction as the pre-registered college + NFL 7-13.5
+band (66/79 so far against 81% stated on the alternate lines). With 30 and 51
+games it is not enough on its own; the pre-registered test keeps deciding at
+100 legs. Small NFL dogs (under 7.5) lost 11-18% a bet both seasons.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
