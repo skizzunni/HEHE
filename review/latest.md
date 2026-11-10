@@ -1,9 +1,9 @@
 # Review 2026-11-10
 
 No picks settled yet.
-Ladder: run 5, bank $2.00, 1 win(s) in a row, best $9.57; 8 wins to $10,000.
-Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 1 day, peak $2.00, live.
-Running ahead: NBA under on all saved lines 1055/1202 vs 82%; NHL over on all saved lines 136/153 vs 84%; NHL spread on all saved lines 290/333 vs 83%; NHL teamover on all saved lines 173/197 vs 82%; NHL teamunder on all saved lines 266/307 vs 83%.
+Ladder: run 5, bank $2.00, 1 win(s) in a row, best $9.57; today stakes $2.00 at 2.45x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.45x for the plain top 4; 10 wins to $10,000; legs: Kyle Kuzma: 2+ Assists (MIL @ NY; 7:30 PM, open; props like it 92/119), Over 214.5 points (Miami Heat at Utah Jazz; 9:00 PM, open), Over 208.5 points (Orlando Magic at Sacramento Kings; 10:00 PM, open), Akron Zips under 23.5 points (Western Michigan Broncos at Akron Zips; 7:00 PM, open).
+Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, live.
+Running ahead: NBA under on all saved lines 1028/1147 vs 82%; NHL over on all saved lines 126/139 vs 84%; NHL spread on all saved lines 263/301 vs 83%; NHL teamover on all saved lines 163/181 vs 83%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 73/90 (81% vs 81% stated); waiting for 100 legs.
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 76% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 84% (88% / 85%); 90%+ 84%, 83% (93% / 85%).
 Soccer or-draw picks by side: home 77% vs 74% stated on 405 (halves 78%, 77%); away 74% vs 73% stated on 200 (halves 73%, 74%). Straight wins: 66% vs 65% stated on 279; 57 of 96 losses were draws.
@@ -18,6 +18,14 @@ Yesterday (2026-11-09): board 14-5, sweep broken by nor Vålerenga or draw at 67
 - LOST nba Atlanta Hawks at 57% (-144), Atlanta Hawks 114 - Los Angeles Lakers 124: margin 10 · the book had my side favoured too · called at 57% · coin flip; picks like it: 44 of 77 (57% vs 57% stated)
 - LOST nba Cleveland Cavaliers at 74% (-336), Charlotte Hornets 124 - Cleveland Cavaliers 112: margin 12 · the book had my side favoured too · called at 74% · favourite lost; picks like it: 42 of 53 (79% vs 73% stated)
 - LOST nhl New York Islanders at 56% (-142), New York Islanders 2 - San Jose Sharks 3: margin 1 · the book had my side favoured too · called at 56% · coin flip · close game; picks like it: 115 of 202 (57% vs 55% stated)
+Locks 0/11 won, 11 open; Best play top 2 (59%) open.
+Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (54%) open.
+Lottery 100: open (0/9 legs won)
+Lottery 10k: open (0/10 legs won)
+Lottery 10k: open (0/8 legs won)
+Lottery 10k+25: open (0/10 legs won)
+Lottery 10k+50: open (0/9 legs won)
+Lottery 10k+100: open (0/9 legs won)
 Ladder-consistency props (all time): 2036/2448 won (83.2%) vs 86.2% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
