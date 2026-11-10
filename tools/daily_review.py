@@ -480,6 +480,46 @@ def dc_side_line(ledger=None, min_n=30):
     return out
 
 
+def nhl_b2b_line(today=None, games_fn=None, ledger=None):
+    """NHL games today where one side played yesterday and the other did not,
+    and whether the board's pick is the tired side. Information only: in
+    2022-25 the team on a back-to-back ran under its closing price every
+    season (home -9.8/-0.6/-7.3 pts, away -1.0/-2.5/-6.4) but betting against
+    it lost in 2023-24, so it is on watch, not a rule (README)."""
+    today = today or dt.date.today()
+    if games_fn is None:
+        try:
+            os.environ.setdefault("LEAGUE", "hockey/nhl")
+            import nba_history as H
+            if H.LEAGUE != "hockey/nhl":
+                return None
+            games_fn = H.games_on
+        except Exception:
+            return None
+    try:
+        yest, now = games_fn(today - dt.timedelta(days=1), finished=False), games_fn(today, finished=False)
+    except Exception:
+        return None
+    played = {s["id"] for g in yest for s in (g["home"], g["away"])}
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    picks = {v.get("pick") for v in ledger.values() if isinstance(v, dict) and v.get("league") == "nhl"
+             and v.get("date") == today.isoformat()}
+    out = []
+    for g in now:
+        h, a = g["home"], g["away"]
+        if (h["id"] in played) == (a["id"] in played):
+            continue
+        tired, fresh = (h, a) if h["id"] in played else (a, h)
+        mark = " -- the board has the tired side" if tired["name"] in picks else (
+            " -- the board has the rested side" if fresh["name"] in picks else "")
+        out.append(f"{tired['name']} ({'home' if tired is h else 'away'}, played yesterday) v {fresh['name']} (rested){mark}")
+    if not out:
+        return None
+    return ("NHL back-to-backs today (watch, not a rule: tired teams ran under their price in each of the last 3 "
+            "seasons, betting against them lost in one): " + "; ".join(out) + ".")
+
+
 def ufc_line(today=None, back=8):
     """The most recent UFC card in the last `back` days, its picks graded
     (ufc_model.card_record), one line or None."""
@@ -1222,6 +1262,8 @@ def words(r, fit):
         out.append(r["prop_fair"])
     if r.get("dc_side"):
         out.append(r["dc_side"])
+    if r.get("nhl_b2b"):
+        out.append(r["nhl_b2b"])
     if r.get("ufc"):
         out.append(r["ufc"])
     if r.get("ufc_next"):
@@ -1343,6 +1385,7 @@ def main():
     log[today.isoformat()]["prereg"] = prereg_line()
     log[today.isoformat()]["prop_fair"] = prop_fair_line()
     log[today.isoformat()]["dc_side"] = dc_side_line(ledger)
+    log[today.isoformat()]["nhl_b2b"] = nhl_b2b_line(today, ledger=ledger)
     log[today.isoformat()]["card_missing"] = card_check()
     log[today.isoformat()]["ufc"] = ufc_line(today)
     log[today.isoformat()]["ufc_next"] = ufc_next_line(today)

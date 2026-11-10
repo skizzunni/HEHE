@@ -41,14 +41,16 @@ def season_days(y):
         d += dt.timedelta(days=1)
 
 
-def games_on(day):
+def games_on(day, finished=True):
+    """Regular-season games on `day`; with finished=False also games not yet
+    played (for today's schedule)."""
     j = get(SITE.format(day.strftime("%Y%m%d"))) or {}
     out = []
     for e in j.get("events", []):
         c = (e.get("competitions") or [{}])[0]
         if (e.get("season") or {}).get("type") != 2:          # regular season only
             continue
-        if not ((c.get("status") or {}).get("type") or {}).get("completed"):
+        if finished and not ((c.get("status") or {}).get("type") or {}).get("completed"):
             continue
         side = {}
         for t in c.get("competitors", []):

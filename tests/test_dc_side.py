@@ -51,6 +51,24 @@ class DcBands(unittest.TestCase):
         self.assertNotIn("70-75%", out)
 
 
+class NhlB2b(unittest.TestCase):
+    def test_line(self):
+        import datetime as dt
+        T = lambda i, n: dict(id=i, name=n)
+        def fn(day, finished=False):
+            if day == dt.date(2026, 11, 9):
+                return [dict(home=T("1", "Oilers"), away=T("2", "Rangers"))]
+            return [dict(home=T("3", "Kings"), away=T("2", "Rangers")),        # Rangers tired, away
+                    dict(home=T("1", "Oilers"), away=T("4", "Wild")),          # Oilers tired, home
+                    dict(home=T("5", "Jets"), away=T("6", "Devils"))]          # both rested
+        L = {"a": dict(league="nhl", date="2026-11-10", pick="Rangers"), "b": dict(league="nhl", date="2026-11-10", pick="Wild")}
+        out = daily_review.nhl_b2b_line(dt.date(2026, 11, 10), games_fn=fn, ledger=L)
+        self.assertIn("Rangers (away, played yesterday) v Kings (rested) -- the board has the tired side", out)
+        self.assertIn("Oilers (home, played yesterday) v Wild (rested) -- the board has the rested side", out)
+        self.assertNotIn("Jets", out)
+        self.assertIsNone(daily_review.nhl_b2b_line(dt.date(2026, 11, 10), games_fn=lambda d, finished=False: [], ledger={}))
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
