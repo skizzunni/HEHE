@@ -1,7 +1,7 @@
 # Review 2026-11-09
 
 Picks 8-4 (66.7% vs 77.6% claimed, ROI -16.6%).
-Ladder: run 5, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 37% at 2.47x for the plain top 4; 14 wins to $10,000; legs: Dalton Kincaid: 20+ Receiving Yards (BUF @ MIN; live 0:33 - 3rd, Buffalo Bills 13 - Minnesota Vikings 6, 23 so far, line reached; props like it 111/143), San Antonio Spurs to win (San Antonio Spurs at Phoenix Suns; live 4:33 - 3rd, Phoenix Suns 64 - San Antonio Spurs 81), Over 222.5 points (Los Angeles Lakers at Atlanta Hawks; won); 1 of 3 won, the ticket now rests on 2 legs, 60% on their stated chance before play.
+Ladder: run 5, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 37% at 2.47x for the plain top 4; 14 wins to $10,000; legs: Dalton Kincaid: 20+ Receiving Yards (BUF @ MIN; live 15:00 - 4th, Buffalo Bills 13 - Minnesota Vikings 6, 23 so far, line reached; props like it 111/143), San Antonio Spurs to win (San Antonio Spurs at Phoenix Suns; live 1:51 - 3rd, Phoenix Suns 68 - San Antonio Spurs 88), Over 222.5 points (Los Angeles Lakers at Atlanta Hawks; won); 1 of 3 won, the ticket now rests on 2 legs, 60% on their stated chance before play.
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 1 day, peak $1.00, live.
 Running ahead: NBA under on all saved lines 1014/1161 vs 82%; NHL over on all saved lines 132/148 vs 84%; NHL spread on all saved lines 281/324 vs 83%; NHL teamover on all saved lines 169/193 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 66/79 (84% vs 81% stated); waiting for 100 legs.
@@ -39,12 +39,12 @@ Yesterday (2026-11-08): board 92-19, sweep broken by jpn Gamba Osaka or draw at 
 - LOST per Universitario at 76% (-500), Deportivo Moquegua 2 - Universitario 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 76% · upset · price moved against it (5 pts)
 - LOST nba New Orleans Pelicans at 54% (-129), LA Clippers 139 - New Orleans Pelicans 123: margin 16 · the book had my side favoured too · called at 54% · coin flip · blowout; picks like it: 34 of 58 (59% vs 55% stated)
 Locks 5/11 won, 6 open; Best play top 2 (63%) open.
-Safe Locks 4/11 won, 7 open; Winners parlay top 2 (82%) open; Best play top 6 (55%) open.
-Lottery 100: lost (4/11 legs won, killed by Under 220.5 points)
-Lottery 10k: lost (4/13 legs won, killed by Under 220.5 points, Toronto Raptors to win)
-Lottery 10k+25: lost (4/13 legs won, killed by Under 220.5 points, Toronto Raptors to win)
-Lottery 10k+50: lost (4/13 legs won, killed by Under 220.5 points, Toronto Raptors to win)
-Lottery 10k+100: lost (4/12 legs won, killed by Under 220.5 points, Toronto Raptors to win)
+Safe Locks 5/11 won, 6 open; Winners parlay top 2 (82%) open; Best play top 6 (55%) open.
+Lottery 100: lost (5/11 legs won, killed by Under 220.5 points)
+Lottery 10k: lost (5/13 legs won, killed by Under 220.5 points, Toronto Raptors to win)
+Lottery 10k+25: lost (5/13 legs won, killed by Under 220.5 points, Toronto Raptors to win)
+Lottery 10k+50: lost (4/13 legs won, killed by Under 220.5 points, Toronto Raptors to win, Edmonton Oilers over 4.5 goals)
+Lottery 10k+100: lost (5/12 legs won, killed by Under 220.5 points, Toronto Raptors to win)
 Ladder-consistency props (all time): 1988/2389 won (83.2%) vs 86.2% fair, 87.3% price.
 Props 70/85 vs 83.0% claimed.
 
