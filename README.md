@@ -1,5 +1,24 @@
 # Picks system — post-mortem and rebuild
 
+## Beating Vegas: what has been tested (scoreboard)
+
+Every idea for an edge of our own, tested against the closing price on games
+it never saw, season by season. "Adopted" needs every season ahead; details
+are in the dated notes below.
+
+| Idea | Sport | Games | Verdict |
+|---|---|---|---|
+| My own picks with prices hidden, where they disagree with the market | all | 111 (30 days) | Behind: right 35 of 111, -21% a bet |
+| Back-to-backs, rest gaps, tired favourites | NBA | 3,695 | Priced in; rejected |
+| Back-to-back team vs a rested one | NHL | 3,843 | Short of its price every season, but betting it lost in 2023-24: **on watch** |
+| Underdogs by price band (home and road) | NBA, NHL | 7,538 | No band ahead every season; big NHL dogs lose 11-21% |
+| Overs / unders at the closing total | NBA, NHL, college, NFL | 11,600+ | Coin flip; NFL unders ahead 3 seasons then -12.6% |
+| Underdogs by size of spread | college | 1,283 | Small dogs (0.5-3.5) barely ahead both seasons: **on watch** |
+| Underdogs getting 7.5-14 | NFL | 81 | 53% and 61% covered: **supports the pre-registered test** (decides at 100 legs) |
+| Off a bye / short week | NFL | 106 | Mixed by season; rejected |
+| Fighter rating, fighter stats, rating disagreements | UFC | 2,850 | Behind the price; rejected |
+| Goes the distance (both fighters' finish history) | UFC | 3,099 | Sorts fights well in both halves; no prices to test: **shown as information** |
+
 ## What actually went wrong
 
 Not the picks. The bet structure.
