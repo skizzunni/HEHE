@@ -7,6 +7,8 @@ or repeats a change.
     python tools/ladder_watch.py STATE_FILE 2026-11-09 nba
         # also every board pick in that league on that day (GAME lines), for a
         # ticket of your own; exits 3 only once the ladder and those games settle
+    python tools/ladder_watch.py STATE_FILE [DAY LEAGUE] --loop 120 [--branch B]
+        # in a spare checkout: pull the branch, check, sleep, repeat until settled
 """
 import json
 import os
@@ -75,5 +77,31 @@ def main(state_path, day=None, league=None):
     return 3 if done(after) else 0
 
 
+def loop(args, every, branch, run=None, pull=None, sleep=None):
+    """Pull the branch, report changes, sleep; stop once main() says settled."""
+    import subprocess
+    import time
+    root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    pull = pull or (lambda: subprocess.run(
+        f"timeout 120 git fetch -q --no-tags --depth=20 origin {branch} && git reset -q --hard FETCH_HEAD",
+        shell=True, cwd=root, capture_output=True))
+    run = run or (lambda: subprocess.run([sys.executable, os.path.abspath(__file__)] + list(args), cwd=root).returncode)
+    sleep = sleep or time.sleep
+    while True:
+        pull()
+        if run() == 3:
+            print("DONE: the ladder ticket and the watched games have settled", flush=True)
+            return 0
+        sleep(every)
+
+
 if __name__ == "__main__":
-    sys.exit(main(*sys.argv[1:4]))
+    a = sys.argv[1:]
+    if "--loop" in a:
+        i = a.index("--loop")
+        every = int(a[i + 1])
+        branch = a[a.index("--branch") + 1] if "--branch" in a else "claude/mlb-picks-review-jlx9w1"
+        rest = [x for j, x in enumerate(a) if j not in (i, i + 1) and x != "--branch"
+                and not (j > 0 and a[j - 1] == "--branch")]
+        sys.exit(loop(rest, every, branch))
+    sys.exit(main(*a[:3]))

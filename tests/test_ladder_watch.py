@@ -41,5 +41,15 @@ class LadderWatch(unittest.TestCase):
                          ["CHANGE: GAME NO @ GS = board pick G = won | A 1, B 0"])
 
 
+    def test_loop_stops_when_settled(self):
+        calls = {"pull": 0, "sleep": 0}
+        codes = iter([0, 0, 3])
+        rc = w.loop(["state.json"], 120, "b",
+                    run=lambda: next(codes),
+                    pull=lambda: calls.__setitem__("pull", calls["pull"] + 1),
+                    sleep=lambda s: calls.__setitem__("sleep", calls["sleep"] + 1))
+        self.assertEqual((rc, calls["pull"], calls["sleep"]), (0, 3, 2))
+
+
 if __name__ == "__main__":
     unittest.main()
