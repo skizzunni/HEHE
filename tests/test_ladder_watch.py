@@ -51,5 +51,26 @@ class LadderWatch(unittest.TestCase):
         self.assertEqual((rc, calls["pull"], calls["sleep"]), (0, 3, 2))
 
 
+    def test_first_look_lists_legs(self):
+        import io
+        import json
+        import tempfile
+        from contextlib import redirect_stdout
+        from unittest import mock
+        import ladder
+        rep = dict(today=dict(legs=[dict(label="A", status="open")]))
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(ladder, "report", lambda: rep):
+            st = os.path.join(d, "s.json")
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                rc = w.main(st)
+            self.assertEqual((rc, buf.getvalue()), (0, "WATCHING: A = open\n"))
+            buf = io.StringIO()
+            with redirect_stdout(buf):
+                w.main(st)                               # second look, nothing changed: silent
+            self.assertEqual(buf.getvalue(), "")
+            self.assertEqual(json.load(open(st)), {"A": "open"})
+
+
 if __name__ == "__main__":
     unittest.main()

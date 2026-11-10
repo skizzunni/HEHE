@@ -70,6 +70,9 @@ def main(state_path, day=None, league=None):
                 after.update(games_snapshot(json.load(fh), day, league))
         except (OSError, ValueError):
             pass
+    if not before:                       # first look: say what is being watched
+        for k, v in after.items():
+            print(f"WATCHING: {k} = {v}", flush=True)
     for line in changes(before, after):
         print(line, flush=True)
     with open(state_path, "w") as fh:
