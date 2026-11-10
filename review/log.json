@@ -12574,16 +12574,16 @@
  },
  "2026-11-09": {
   "clv": {
-   "avg": 1.77,
-   "beat": 61.1,
-   "n": 18
+   "avg": 1.79,
+   "beat": 63.2,
+   "n": 19
   },
   "day": "2026-11-09",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      2,
@@ -12591,12 +12591,12 @@
      "won"
     ]
    },
-   "won": 10
+   "won": 11
   },
   "loss_reasons_14d": {
    "blowout": 39,
-   "close game": 112,
-   "coin flip": 45,
+   "close game": 113,
+   "coin flip": 46,
    "favourite lost": 144,
    "price moved against it": 32,
    "upset": 47
@@ -12683,15 +12683,38 @@
      "favourite lost"
     ],
     "why": "margin 12 \u00b7 the book had my side favoured too \u00b7 called at 74% \u00b7 favourite lost"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "like": {
+     "n": 202,
+     "said": 55,
+     "won": 115
+    },
+    "match": "NYI @ SJ",
+    "pick": "New York Islanders",
+    "price": "-142",
+    "said": 56,
+    "score": {
+     "New York Islanders": 2,
+     "San Jose Sharks": 3
+    },
+    "tags": [
+     "coin flip",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 56% \u00b7 coin flip \u00b7 close game"
    }
   ],
   "lottery": [
    {
     "killed_by": [
-     "Under 220.5 points"
+     "Under 220.5 points",
+     "New York Islanders to win"
     ],
     "legs": 11,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "100",
     "won": 9
@@ -12699,13 +12722,14 @@
    {
     "killed_by": [
      "Under 220.5 points",
+     "New York Islanders to win",
      "Over 216.5 points",
      "Vancouver Canucks to win",
      "Over 233.5 points",
      "Toronto Raptors to win"
     ],
     "legs": 13,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k",
     "won": 7
@@ -12713,13 +12737,14 @@
    {
     "killed_by": [
      "Under 220.5 points",
+     "New York Islanders to win",
      "Over 216.5 points",
      "Vancouver Canucks to win",
      "Toronto Raptors to win",
      "Over 229.5 points"
     ],
     "legs": 13,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k+25",
     "won": 7
@@ -12727,6 +12752,7 @@
    {
     "killed_by": [
      "Under 220.5 points",
+     "New York Islanders to win",
      "Over 216.5 points",
      "Vancouver Canucks to win",
      "Toronto Raptors to win",
@@ -12734,7 +12760,7 @@
      "Over 229.5 points"
     ],
     "legs": 13,
-    "lost": 6,
+    "lost": 7,
     "status": "lost",
     "tier": "10k+50",
     "won": 6
@@ -12742,23 +12768,24 @@
    {
     "killed_by": [
      "Under 220.5 points",
+     "New York Islanders to win",
      "Over 216.5 points",
      "Over 233.5 points",
      "Toronto Raptors to win"
     ],
     "legs": 12,
-    "lost": 4,
+    "lost": 5,
     "status": "lost",
     "tier": "10k+100",
     "won": 7
    }
   ],
   "picks": {
-   "hit": 77.8,
-   "lost": 4,
-   "n": 18,
-   "roi": 4.6,
-   "said": 73.8,
+   "hit": 73.7,
+   "lost": 5,
+   "n": 19,
+   "roi": -0.9,
+   "said": 72.9,
    "won": 14
   },
   "picks_by_league": {
@@ -12803,11 +12830,11 @@
     "won": 1
    },
    "nhl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 66.1,
-    "said": 57.5,
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": 10.7,
+    "said": 57.0,
     "won": 2
    },
    "nor": {
@@ -12826,14 +12853,14 @@
     "said_price": 87.3,
     "won": 2036
    },
-   "n": 166,
+   "n": 175,
    "said": 82.6,
-   "won": 136
+   "won": 145
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      6,
@@ -12846,7 +12873,7 @@
      "won"
     ]
    },
-   "won": 10
+   "won": 11
   },
   "strong": {
    "hit": 50.0,
@@ -12857,23 +12884,25 @@
    "won": 2
   },
   "sweep": {
-   "as_bad_pct": 74.9,
-   "as_good_pct": 46.5,
+   "as_bad_pct": 62.9,
+   "as_good_pct": 58.7,
    "broke_on": "nor V\u00e5lerenga or draw at 67%",
-   "coin_flips": 1,
+   "coin_flips": 2,
    "expected_by_league": {
     "ecu": 0.4,
     "nba": 2.6,
+    "nhl": 1.3,
     "nor": 0.3
    },
-   "expected_losses": 4.7,
-   "lost": 4,
+   "expected_losses": 5.2,
+   "lost": 5,
    "lost_by_league": {
     "ecu": 1,
     "nba": 2,
+    "nhl": 1,
     "nor": 1
    },
-   "open": 1,
+   "open": 0,
    "won": 14
   },
   "vs_market_14d": {
@@ -12881,11 +12910,11 @@
     "n": 0
    },
    "agree": {
-    "hit": 76.7,
-    "lost": 236,
-    "n": 1011,
-    "roi": 1.6,
-    "said": 71.9,
+    "hit": 76.6,
+    "lost": 237,
+    "n": 1012,
+    "roi": 1.5,
+    "said": 71.8,
     "won": 775
    }
   }
@@ -13167,13 +13196,13 @@
       80.7
      ],
      [
-      276,
-      335,
+      285,
+      344,
       81.3
      ]
     ],
-    "hit": 81.8,
-    "n": 685,
+    "hit": 82.0,
+    "n": 694,
     "name": "props nhl Shots on Goal",
     "said": 81.0
    },
@@ -13384,15 +13413,15 @@
       79.0
      ],
      [
-      6,
-      9,
-      75.0
+      7,
+      10,
+      74.9
      ]
     ],
-    "hit": 76.0,
-    "n": 25,
+    "hit": 76.9,
+    "n": 26,
     "name": "locks nhl under",
-    "said": 77.5
+    "said": 77.4
    },
    {
     "flag": false,
@@ -13479,15 +13508,15 @@
       91.5
      ],
      [
-      31,
       32,
+      33,
       91.2
      ]
     ],
-    "hit": 91.8,
-    "n": 61,
+    "hit": 91.9,
+    "n": 62,
     "name": "safe locks nhl under",
-    "said": 91.4
+    "said": 91.3
    },
    {
     "flag": false,
@@ -13517,13 +13546,13 @@
       90.4
      ],
      [
-      134,
-      146,
+      135,
+      147,
       86.2
      ]
     ],
-    "hit": 92.7,
-    "n": 234,
+    "hit": 92.8,
+    "n": 235,
     "name": "prop locks",
     "said": 87.8
    },
@@ -13633,7 +13662,7 @@
    }
   },
   "card_missing": null,
-  "cautions": "Running ahead: NBA under on all saved lines 1055/1202 vs 82%; NHL over on all saved lines 134/151 vs 84%; NHL spread on all saved lines 287/330 vs 83%; NHL teamover on all saved lines 171/195 vs 82%; NHL teamunder on all saved lines 262/303 vs 83%.",
+  "cautions": "Running ahead: NBA under on all saved lines 1055/1202 vs 82%; NHL over on all saved lines 136/153 vs 84%; NHL spread on all saved lines 290/333 vs 83%; NHL teamover on all saved lines 173/197 vs 82%; NHL teamunder on all saved lines 266/307 vs 83%.",
   "clv": {
    "avg": null,
    "beat": null,
@@ -13653,8 +13682,8 @@
   },
   "loss_reasons_14d": {
    "blowout": 36,
-   "close game": 109,
-   "coin flip": 42,
+   "close game": 110,
+   "coin flip": 43,
    "favourite lost": 137,
    "price moved against it": 32,
    "upset": 47
@@ -13705,9 +13734,9 @@
    },
    "agree": {
     "hit": 76.9,
-    "lost": 226,
-    "n": 980,
-    "roi": 1.8,
+    "lost": 227,
+    "n": 981,
+    "roi": 1.7,
     "said": 72.0,
     "won": 754
    }
@@ -13752,10 +13781,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6391,
-    "market_only": 0.6391,
-    "model_40": 0.6474,
-    "n": 167,
+    "logloss": 0.6403,
+    "market_only": 0.6403,
+    "model_40": 0.6483,
+    "n": 168,
     "weight": 0.0
    }
   },
@@ -13843,26 +13872,50 @@
       "favourite lost"
      ],
      "why": "margin 12 \u00b7 the book had my side favoured too \u00b7 called at 74% \u00b7 favourite lost"
+    },
+    {
+     "against_market": false,
+     "league": "nhl",
+     "like": {
+      "n": 202,
+      "said": 55,
+      "won": 115
+     },
+     "match": "NYI @ SJ",
+     "pick": "New York Islanders",
+     "price": "-142",
+     "said": 56,
+     "score": {
+      "New York Islanders": 2,
+      "San Jose Sharks": 3
+     },
+     "tags": [
+      "coin flip",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 56% \u00b7 coin flip \u00b7 close game"
     }
    ],
    "sweep": {
-    "as_bad_pct": 74.9,
-    "as_good_pct": 46.5,
+    "as_bad_pct": 62.9,
+    "as_good_pct": 58.7,
     "broke_on": "nor V\u00e5lerenga or draw at 67%",
-    "coin_flips": 1,
+    "coin_flips": 2,
     "expected_by_league": {
      "ecu": 0.4,
      "nba": 2.6,
+     "nhl": 1.3,
      "nor": 0.3
     },
-    "expected_losses": 4.7,
-    "lost": 4,
+    "expected_losses": 5.2,
+    "lost": 5,
     "lost_by_league": {
      "ecu": 1,
      "nba": 2,
+     "nhl": 1,
      "nor": 1
     },
-    "open": 1,
+    "open": 0,
     "won": 14
    }
   }
