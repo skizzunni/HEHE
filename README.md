@@ -1259,6 +1259,14 @@ line, no band is ahead every season (235+: under +6.3%, -1.7%, -7.1%; under
 over caution stays a caution on the Locks' own legs and nothing is cut or
 added from this.
 
+**Rejected: NHL overs or unders at the closing total (2026-11-10).** 3,732
+NHL games with a closing total (2022-25). Overs hit 50.8%, 49.2%, 48.2% by
+season against about 50% priced; every over -3.7%, -6.9%, -7.6%; every under
+-5.0%, -1.5%, -0.6%. By line (5.5 / 6 / 6.5) nothing is ahead every season.
+The board's "NHL over running ahead" (132/148 on saved FanDuel lines at
+70-95%) is about short alternate lines, a different market from the main
+total; it stays information, not a rule.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
