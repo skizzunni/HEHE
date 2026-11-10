@@ -6759,6 +6759,67 @@
    "tip": "8:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909963|home|FanDuel": {
+   "dec": 4.6,
+   "ev": 0.0459,
+   "fair": 0.2274,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909963",
+   "kind": "value",
+   "league": "nba",
+   "match": "MIA @ UTAH",
+   "price": "+360",
+   "seen": "2026-11-10T01:02:06+00:00",
+   "side": "home",
+   "start": "2026-11-11T02:00Z",
+   "team": "Utah Jazz",
+   "tip": "9:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909963|sure": {
+   "id": "nba:401909963",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-357",
+     "stake_share": 0.7823,
+     "team": "Miami Heat",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "+360",
+     "stake_share": 0.2177,
+     "team": "Utah Jazz",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "MIA @ UTAH",
+   "profit": 0.0014,
+   "seen": "2026-11-10T01:02:06+00:00"
+  },
+  "nba:401909964|sure": {
+   "id": "nba:401909964",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-188",
+     "stake_share": 0.6574,
+     "team": "Orlando Magic",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "+194",
+     "stake_share": 0.3426,
+     "team": "Sacramento Kings",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "ORL @ SAC",
+   "profit": 0.0071,
+   "seen": "2026-11-10T01:02:06+00:00"
+  },
   "ncaab:401906758|away|FanDuel": {
    "dec": 41.0,
    "ev": 0.0352,
