@@ -1,7 +1,7 @@
 # Review 2026-11-09
 
 Picks 4-2 (66.7% vs 84.7% claimed, ROI -26.8%).
-Ladder: run 5, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 37% at 2.47x for the plain top 4; 14 wins to $10,000; legs: Dalton Kincaid: 20+ Receiving Yards (BUF @ MIN; live 11:27 - 2nd, Buffalo Bills 3 - Minnesota Vikings 0, 12 so far, needs 8 more, on pace for 39, on track; props like it 111/143), San Antonio Spurs to win (San Antonio Spurs at Phoenix Suns; live 10:04 - 1st, Phoenix Suns 0 - San Antonio Spurs 5), Over 222.5 points (Los Angeles Lakers at Atlanta Hawks; live 4:44 - 4th, Atlanta Hawks 106 - Los Angeles Lakers 113, on pace for 243 (219 so far, line 222.5, needs 4 more), on track).
+Ladder: run 5, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 37% at 2.47x for the plain top 4; 14 wins to $10,000; legs: Dalton Kincaid: 20+ Receiving Yards (BUF @ MIN; live 8:44 - 2nd, Buffalo Bills 3 - Minnesota Vikings 0, 12 so far, needs 8 more, on pace for 34, on track; props like it 111/143), San Antonio Spurs to win (San Antonio Spurs at Phoenix Suns; live 7:14 - 1st, Phoenix Suns 7 - San Antonio Spurs 11), Over 222.5 points (Los Angeles Lakers at Atlanta Hawks; live 3:24 - 4th, Atlanta Hawks 111 - Los Angeles Lakers 115, already over (226, line 222.5)).
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 1 day, peak $1.00, live.
 Cautions in force: NBA over on Locks 17/27 vs 75% (all saved lines since 2026-11-03: 396/452, 88% vs 82% -- pool on par). Running ahead: NBA under on all saved lines 972/1096 vs 82%; NHL over on all saved lines 132/148 vs 84%; NHL spread on all saved lines 281/324 vs 83%; NHL teamover on all saved lines 169/193 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 66/79 (84% vs 81% stated); waiting for 100 legs.
@@ -38,11 +38,11 @@ Yesterday (2026-11-08): board 92-19, sweep broken by jpn Gamba Osaka or draw at 
 - LOST nba New Orleans Pelicans at 54% (-129), LA Clippers 139 - New Orleans Pelicans 123: margin 16 · the book had my side favoured too · called at 54% · coin flip · blowout; picks like it: 33 of 56 (59% vs 55% stated)
 Locks 0/11 won, 11 open; Best play top 2 (63%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (82%) open; Best play top 6 (55%) open.
-Lottery 100: open (0/11 legs won)
-Lottery 10k: open (0/13 legs won)
-Lottery 10k+25: open (0/13 legs won)
-Lottery 10k+50: open (0/13 legs won)
-Lottery 10k+100: open (0/12 legs won)
+Lottery 100: open (1/11 legs won)
+Lottery 10k: open (1/13 legs won)
+Lottery 10k+25: open (1/13 legs won)
+Lottery 10k+50: open (1/13 legs won)
+Lottery 10k+100: open (1/12 legs won)
 Ladder-consistency props (all time): 1928/2315 won (83.3%) vs 86.2% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
