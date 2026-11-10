@@ -735,8 +735,10 @@ def own_view(book, today, since_days=30):
             own += mkt_won if model_away == mkt_away else not mkt_won
             if model_away != mkt_away:              # the games where I would differ
                 lg_ = k.split(":")[0]
-                a_, n_ = split_rec.get(lg_, (0, 0))
-                split_rec[lg_] = (a_ + (not mkt_won), n_ + 1)
+                a_, n_, pl_ = split_rec.get(lg_, (0, 0, 0.0))
+                p_d = (1 - h["p_market_away"]) if mkt_away else h["p_market_away"]
+                split_rec[lg_] = (a_ + (not mkt_won), n_ + 1,
+                                  pl_ + (((1 / p_d - 1) if not mkt_won else -1) if 0 < p_d < 1 else 0.0))
                 # my side is the market's underdog here: a $1 bet on it at the
                 # no-vig price (a real book pays a little less)
                 p_dog = (1 - h["p_market_away"]) if mkt_away else h["p_market_away"]
@@ -750,7 +752,8 @@ def own_view(book, today, since_days=30):
                               market_p=round(100 * (h["p_market_away"] if mkt_away else 1 - h["p_market_away"]))))
     return dict(n=n, own=own, market=mkt, since=since, today=sorted(split, key=lambda x: x["league"]),
                 dog_roi=round(100 * dog_pl / dog_n, 1) if dog_n else None, dog_n=dog_n,
-                splits=[dict(league=k, mine=a_, n=n_) for k, (a_, n_) in sorted(split_rec.items(), key=lambda x: -x[1][1])])
+                splits=[dict(league=k, mine=a_, n=n_, roi=round(100 * pl_ / n_, 1))
+                        for k, (a_, n_, pl_) in sorted(split_rec.items(), key=lambda x: -x[1][1])])
 
 
 def _tip_min(tip):

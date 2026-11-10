@@ -119,7 +119,7 @@ PROBE = """<script>setTimeout(function(){
     .filter(function(t){return /Ladder/.test(t)}).join("");
   out.sweepTile = [].slice.call(document.querySelectorAll('#glance [data-goto="results"]')).map(function(e){return e.textContent}).join("|");
   out.oneIn = [oneIn(0.71), oneIn(4.22e-8)];
-  out.ownDog = ownHTML({n: 557, own: 355, market: 396, since: "2026-10-10", splits: [], today: [], dog_n: 111, dog_roi: -20.9});
+  out.ownDog = ownHTML({n: 557, own: 355, market: 396, since: "2026-10-10", splits: [{league: "nhl", mine: 13, n: 29, roi: 4.2}], today: [], dog_n: 111, dog_roi: -20.9});
   out.own = ownHTML({n: 382, own: 232, market: 260, since: "2026-10-05", splits: [{league: "ncaaf", mine: 8, n: 25}, {league: "nba", mine: 5, n: 23}], today: [{league: "nba", match: "MIA @ LAC", own: "LAC", own_p: 60, market: "MIA", market_p: 65}]});
   out.inj = [injNote({inj: {mine: ["Giannis Antetokounmpo (Day-To-Day)"], opp: ["Brandon Ingram (Out)", "Bradley Beal (Out)", "A (Out)", "B (Out)", "C (Out)"]}}), injNote({}), injNote({inj: {mine: [], opp: []}})];
   out.mv = [moveNote({mv: 5}), moveNote({mv: -4}), moveNote({mv: null}), moveNote({})];
@@ -519,7 +519,7 @@ def main():
     if new.get("pcLink") != "true":
         fails.append("parlay check same-game link wrong: " + repr(new.get("pcLink")))
     od = new.get("ownDog") or ""
-    if "$1 on each of the 111 at the no-vig price would be \u221220.9% a bet" not in od:
+    if "$1 on each of the 111 at the no-vig price would be \u221220.9% a bet" not in od or "NHL 13 of 29 (+4.2% a bet)" not in od:
         fails.append("own-view underdog ROI wrong: " + repr(od[-300:]))
     lk = new.get("lkinds") or ["", "x", "x"]
     if not (lk[0] == " By kind: game lines 16 of 18 (89% vs 76%), player props 7 of 10 (70% vs 79%)." and not lk[1] and not lk[2]):
