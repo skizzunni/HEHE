@@ -6795,7 +6795,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 100,
       "dc": false,
       "gate": {
@@ -6846,7 +6846,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 93,
       "dc": false,
       "gate": {
@@ -6896,12 +6896,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 88,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (2 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401909960",
       "league": "nba",
@@ -6913,15 +6913,16 @@
       "price_ref": "34983855:0ML87151635_1",
       "prob_at": "2026-11-10T16:54:33+00:00",
       "rank": 3,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-11-11T00:30Z"
      },
      "dc": false,
-     "fp": "6c9ffa0f695f",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (2 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401909960",
      "league": "nba",
@@ -6935,10 +6936,15 @@
        "event": "news",
        "t": "2026-11-10T13:59:00+00:00",
        "what": "injury report checked (2 listed)"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-10T17:06:21+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
       }
      ],
      "match": "MIL @ NY",
-     "news_at": "2026-11-10T13:59:00+00:00",
+     "news_at": "2026-11-10T17:06:21+00:00",
      "pick": "New York Knicks",
      "price": "-1080",
      "price_at": "2026-11-10T13:03:05+00:00",
@@ -6959,7 +6965,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 86,
       "dc": false,
       "gate": {
@@ -7009,7 +7015,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 73,
       "dc": false,
       "gate": {
@@ -7104,7 +7110,7 @@
     }
    ],
    "candidate_news": {
-    "nba": "2026-11-10T13:59:00+00:00"
+    "nba": "2026-11-10T17:06:21+00:00"
    },
    "candidate_observations": {
     "cdr:401928514": {
@@ -7115,7 +7121,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 92,
       "dc": false,
       "gate": {
@@ -7163,12 +7169,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 88,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (2 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401909960",
       "league": "nba",
@@ -7180,20 +7186,28 @@
       "price_ref": "34983855:0ML87151635_1",
       "prob_at": "2026-11-10T16:54:33+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-11-11T00:30Z"
      },
      "dc": false,
-     "fp": "6c9ffa0f695f",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (2 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401909960",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-10T17:06:21+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
+      }
+     ],
      "match": "MIL @ NY",
-     "news_at": "2026-11-10T13:59:00+00:00",
+     "news_at": "2026-11-10T17:06:21+00:00",
      "pick": "New York Knicks",
      "price": "-1040",
      "price_at": "2026-11-10T16:54:33+00:00",
@@ -7211,12 +7225,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (5 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401909963",
       "league": "nba",
@@ -7228,20 +7242,28 @@
       "price_ref": "34983858:0ML87151638_3",
       "prob_at": "2026-11-10T16:54:33+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "away",
       "start": "2026-11-11T02:00Z"
      },
      "dc": false,
-     "fp": "488a28448967",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (5 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401909963",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-10T17:06:21+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
+      }
+     ],
      "match": "MIA @ UTAH",
-     "news_at": "2026-11-10T13:59:00+00:00",
+     "news_at": "2026-11-10T17:06:21+00:00",
      "pick": "Miami Heat",
      "price": "-359",
      "price_at": "2026-11-10T16:54:33+00:00",
@@ -7259,7 +7281,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 82,
       "dc": false,
       "gate": {
@@ -7306,7 +7328,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -7353,7 +7375,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 93,
       "dc": false,
       "gate": {
@@ -7400,7 +7422,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 100,
       "dc": false,
       "gate": {
@@ -7448,7 +7470,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T16:57:40+00:00",
+      "checked_at": "2026-11-10T17:06:21+00:00",
       "conf": 86,
       "dc": false,
       "gate": {
@@ -7488,9 +7510,11 @@
      "tip": "7:00 PM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "nba"
+   ],
    "news": {
-    "nba": "2026-11-10T13:59:00+00:00"
+    "nba": "2026-11-10T17:06:21+00:00"
    },
    "shadow": {
     "pool": [
