@@ -6795,7 +6795,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T23:29:11+00:00",
+      "checked_at": "2026-11-10T23:34:23+00:00",
       "conf": 99,
       "dc": false,
       "gate": {
@@ -6807,10 +6807,10 @@
       "match": "QUC @ BYU",
       "pick": "BYU Cougars",
       "price": "-20000",
-      "price_at": "2026-11-10T23:28:52+00:00",
+      "price_at": "2026-11-10T23:34:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34993001:0ML87173602_1",
-      "prob_at": "2026-11-10T23:28:52+00:00",
+      "prob_at": "2026-11-10T23:34:01+00:00",
       "rank": 1,
       "ready": true,
       "side": "home",
@@ -6845,7 +6845,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T23:29:11+00:00",
+      "checked_at": "2026-11-10T23:34:23+00:00",
       "conf": 91,
       "dc": false,
       "gate": {
@@ -6857,10 +6857,10 @@
       "match": "MEM @ VAN",
       "pick": "Vanderbilt Commodores",
       "price": "-1200",
-      "price_at": "2026-11-10T23:28:52+00:00",
+      "price_at": "2026-11-10T23:34:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34992874:0ML87173344_1",
-      "prob_at": "2026-11-10T23:28:52+00:00",
+      "prob_at": "2026-11-10T23:34:01+00:00",
       "rank": 2,
       "ready": true,
       "side": "home",
@@ -6904,32 +6904,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T23:29:11+00:00",
-      "conf": 88,
+      "checked_at": "2026-11-10T23:34:23+00:00",
+      "conf": 89,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (3 listed)"
+       "what": "injury report checked (2 listed)"
       },
       "id": "nba:401909960",
       "league": "nba",
       "match": "MIL @ NY",
       "pick": "New York Knicks",
-      "price": "-1100",
-      "price_at": "2026-11-10T23:28:52+00:00",
+      "price": "-1180",
+      "price_at": "2026-11-10T23:34:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34983855:0ML87151635_1",
-      "prob_at": "2026-11-10T23:28:52+00:00",
+      "prob_at": "2026-11-10T23:34:01+00:00",
       "rank": 3,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-11T00:30Z"
      },
      "dc": false,
-     "fp": "cc371119c3e6",
+     "fp": "b0c703a74e2a",
      "gate": {
       "ok": true,
-      "what": "injury report checked (3 listed)"
+      "what": "injury report checked (2 listed)"
      },
      "id": "nba:401909960",
      "league": "nba",
@@ -6973,10 +6974,15 @@
        "event": "news",
        "t": "2026-11-10T23:24:04+00:00",
        "what": "injury report checked (3 listed)"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-10T23:34:23+00:00",
+       "what": "injury report checked (2 listed)"
       }
      ],
      "match": "MIL @ NY",
-     "news_at": "2026-11-10T23:24:04+00:00",
+     "news_at": "2026-11-10T23:34:23+00:00",
      "pick": "New York Knicks",
      "price": "-1080",
      "price_at": "2026-11-10T13:03:05+00:00",
@@ -6997,7 +7003,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T23:29:11+00:00",
+      "checked_at": "2026-11-10T23:34:23+00:00",
       "conf": 87,
       "dc": false,
       "gate": {
@@ -7009,10 +7015,10 @@
       "match": "WMU @ AKR",
       "pick": "Western Michigan Broncos",
       "price": "-750",
-      "price_at": "2026-11-10T23:28:52+00:00",
+      "price_at": "2026-11-10T23:34:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34964153:0ML87098622_3",
-      "prob_at": "2026-11-10T23:28:52+00:00",
+      "prob_at": "2026-11-10T23:34:01+00:00",
       "rank": 4,
       "ready": true,
       "side": "away",
@@ -7118,51 +7124,59 @@
     }
    ],
    "candidate_news": {
-    "nba": "2026-11-10T23:24:04+00:00"
+    "nba": "2026-11-10T23:34:23+00:00"
    },
    "candidate_observations": {
     "nba:401909960": {
      "book": "DraftKings",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
-     "conf": 88,
+     "conf": 89,
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T23:29:11+00:00",
-      "conf": 88,
+      "checked_at": "2026-11-10T23:34:23+00:00",
+      "conf": 89,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (3 listed)"
+       "what": "injury report checked (2 listed)"
       },
       "id": "nba:401909960",
       "league": "nba",
       "match": "MIL @ NY",
       "pick": "New York Knicks",
-      "price": "-1100",
-      "price_at": "2026-11-10T23:28:52+00:00",
+      "price": "-1180",
+      "price_at": "2026-11-10T23:34:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34983855:0ML87151635_1",
-      "prob_at": "2026-11-10T23:28:52+00:00",
+      "prob_at": "2026-11-10T23:34:01+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-11T00:30Z"
      },
      "dc": false,
-     "fp": "cc371119c3e6",
+     "fp": "b0c703a74e2a",
      "gate": {
       "ok": true,
-      "what": "injury report checked (3 listed)"
+      "what": "injury report checked (2 listed)"
      },
      "id": "nba:401909960",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-10T23:34:23+00:00",
+       "what": "injury report checked (2 listed)"
+      }
+     ],
      "match": "MIL @ NY",
-     "news_at": "2026-11-10T23:08:48+00:00",
+     "news_at": "2026-11-10T23:34:23+00:00",
      "pick": "New York Knicks",
-     "price": "-1100",
-     "price_at": "2026-11-10T23:28:52+00:00",
+     "price": "-1180",
+     "price_at": "2026-11-10T23:34:01+00:00",
      "price_market": "moneyline",
      "price_ref": "34983855:0ML87151635_1",
      "side": "home",
@@ -7177,7 +7191,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T23:29:11+00:00",
+      "checked_at": "2026-11-10T23:34:23+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
@@ -7189,10 +7203,10 @@
       "match": "MIA @ UTAH",
       "pick": "Miami Heat",
       "price": "-406",
-      "price_at": "2026-11-10T23:28:52+00:00",
+      "price_at": "2026-11-10T23:34:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34983858:0ML87151638_3",
-      "prob_at": "2026-11-10T23:28:52+00:00",
+      "prob_at": "2026-11-10T23:34:01+00:00",
       "rank": null,
       "ready": true,
       "side": "away",
@@ -7210,7 +7224,7 @@
      "news_at": "2026-11-10T23:24:04+00:00",
      "pick": "Miami Heat",
      "price": "-406",
-     "price_at": "2026-11-10T23:28:52+00:00",
+     "price_at": "2026-11-10T23:34:01+00:00",
      "price_market": "moneyline",
      "price_ref": "34983858:0ML87151638_3",
      "side": "away",
@@ -7225,7 +7239,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T23:29:11+00:00",
+      "checked_at": "2026-11-10T23:34:23+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -7237,10 +7251,10 @@
       "match": "MSU @ DUKE",
       "pick": "Duke Blue Devils",
       "price": "-340",
-      "price_at": "2026-11-10T23:28:52+00:00",
+      "price_at": "2026-11-10T23:34:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34958125:0ML87081886_1",
-      "prob_at": "2026-11-10T23:28:52+00:00",
+      "prob_at": "2026-11-10T23:34:01+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -7257,7 +7271,7 @@
      "match": "MSU @ DUKE",
      "pick": "Duke Blue Devils",
      "price": "-340",
-     "price_at": "2026-11-10T23:28:52+00:00",
+     "price_at": "2026-11-10T23:34:01+00:00",
      "price_market": "moneyline",
      "price_ref": "34958125:0ML87081886_1",
      "side": "home",
@@ -7272,7 +7286,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T23:29:11+00:00",
+      "checked_at": "2026-11-10T23:34:23+00:00",
       "conf": 91,
       "dc": false,
       "gate": {
@@ -7284,10 +7298,10 @@
       "match": "MEM @ VAN",
       "pick": "Vanderbilt Commodores",
       "price": "-1200",
-      "price_at": "2026-11-10T23:28:52+00:00",
+      "price_at": "2026-11-10T23:34:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34992874:0ML87173344_1",
-      "prob_at": "2026-11-10T23:28:52+00:00",
+      "prob_at": "2026-11-10T23:34:01+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -7304,7 +7318,7 @@
      "match": "MEM @ VAN",
      "pick": "Vanderbilt Commodores",
      "price": "-1200",
-     "price_at": "2026-11-10T23:28:52+00:00",
+     "price_at": "2026-11-10T23:34:01+00:00",
      "price_market": "moneyline",
      "price_ref": "34992874:0ML87173344_1",
      "side": "home",
@@ -7319,7 +7333,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T23:29:11+00:00",
+      "checked_at": "2026-11-10T23:34:23+00:00",
       "conf": 99,
       "dc": false,
       "gate": {
@@ -7331,10 +7345,10 @@
       "match": "QUC @ BYU",
       "pick": "BYU Cougars",
       "price": "-20000",
-      "price_at": "2026-11-10T23:28:52+00:00",
+      "price_at": "2026-11-10T23:34:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34993001:0ML87173602_1",
-      "prob_at": "2026-11-10T23:28:52+00:00",
+      "prob_at": "2026-11-10T23:34:01+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -7351,7 +7365,7 @@
      "match": "QUC @ BYU",
      "pick": "BYU Cougars",
      "price": "-20000",
-     "price_at": "2026-11-10T23:28:52+00:00",
+     "price_at": "2026-11-10T23:34:01+00:00",
      "price_market": "moneyline",
      "price_ref": "34993001:0ML87173602_1",
      "side": "home",
@@ -7366,7 +7380,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-10T23:29:11+00:00",
+      "checked_at": "2026-11-10T23:34:23+00:00",
       "conf": 87,
       "dc": false,
       "gate": {
@@ -7378,10 +7392,10 @@
       "match": "WMU @ AKR",
       "pick": "Western Michigan Broncos",
       "price": "-750",
-      "price_at": "2026-11-10T23:28:52+00:00",
+      "price_at": "2026-11-10T23:34:01+00:00",
       "price_market": "moneyline",
       "price_ref": "34964153:0ML87098622_3",
-      "prob_at": "2026-11-10T23:28:52+00:00",
+      "prob_at": "2026-11-10T23:34:01+00:00",
       "rank": null,
       "ready": true,
       "side": "away",
@@ -7398,7 +7412,7 @@
      "match": "WMU @ AKR",
      "pick": "Western Michigan Broncos",
      "price": "-750",
-     "price_at": "2026-11-10T23:28:52+00:00",
+     "price_at": "2026-11-10T23:34:01+00:00",
      "price_market": "moneyline",
      "price_ref": "34964153:0ML87098622_3",
      "side": "away",
@@ -7406,9 +7420,11 @@
      "tip": "7:00 PM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "nba"
+   ],
    "news": {
-    "nba": "2026-11-10T23:24:04+00:00"
+    "nba": "2026-11-10T23:34:23+00:00"
    },
    "shadow": {
     "pool": [
