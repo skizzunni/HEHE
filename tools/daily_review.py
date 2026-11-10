@@ -709,7 +709,10 @@ def pace_text(L):
         return f"{total} so far, line {line:g}, too early to project"
     pace = total / el * n * mins
     good = pace > line if side == "over" else pace < line
-    return f"on pace for {round(pace)} ({total} so far, line {line:g}), " + ("on track" if good else "behind the pace it needs")
+    # what is left to happen: points an over still needs, or room an under has
+    left = (f", needs {int(line) + 1 - total} more" if side == "over"
+            else f", room for {math.ceil(line) - 1 - total} more")
+    return f"on pace for {round(pace)} ({total} so far, line {line:g}{left}), " + ("on track" if good else "behind the pace it needs")
 
 
 def leg_text(L, mark=None):
