@@ -41258,6 +41258,7 @@
   "p": 0.7422,
   "p_fair": 0.8106,
   "price": "-350",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -41275,6 +41276,7 @@
   "p": 0.8738,
   "price": "-7000",
   "prop_lock": true,
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -41293,6 +41295,7 @@
   "p": 0.7401,
   "p_fair": 0.7675,
   "price": "-400",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -76065,11 +76068,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Blake Coleman",
   "p": 0.8378,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892684|n:joel eriksson ek|Shots on Goal|2+": {
   "aid": null,
@@ -76081,11 +76086,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Joel Eriksson Ek",
   "p": 0.7486,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892684|n:juraj slafkovsky|Shots on Goal|1+": {
   "aid": null,
@@ -76096,11 +76103,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Juraj Slafkovsky",
   "p": 0.8738,
   "price": "-2000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892684|n:juraj slafkovsky|Shots on Goal|2+": {
   "aid": null,
@@ -76112,11 +76121,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Juraj Slafkovsky",
   "p": 0.7259,
   "p_fair": null,
   "price": "-345",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892684|n:kirill kaprizov|Shots on Goal|2+": {
   "aid": null,
@@ -76128,11 +76139,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kirill Kaprizov",
   "p": 0.8315,
   "p_fair": null,
   "price": "-780",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892684|n:matt boldy|Shots on Goal|2+": {
   "aid": null,
@@ -76144,11 +76157,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Boldy",
   "p": 0.8378,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892684|n:matt boldy|Shots on Goal|3+": {
   "aid": null,
@@ -76160,11 +76175,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Boldy",
   "p": 0.6912,
   "p_fair": null,
   "price": "-280",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nhl:401892684|n:noah dobson|Shots on Goal|1+": {
   "aid": null,
@@ -76176,11 +76193,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Noah Dobson",
   "p": 0.8512,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892685|n:alex ovechkin|Shots on Goal|1+": {
   "aid": null,
