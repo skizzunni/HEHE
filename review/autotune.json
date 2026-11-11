@@ -13,9 +13,9 @@
     "per_sport": 2
    },
    "second": {
-    "hit": 80.7,
+    "hit": 81.3,
     "n": 171,
-    "roi": -0.4
+    "roi": 0.23
    }
   },
   "dates": [
@@ -31,8 +31,6 @@
      "n": 84,
      "roi": 3.43
     },
-    "gain": 0.17,
-    "gain_lower": -9.23,
     "rule": {
      "min_dec": 1.0,
      "per_sport": 1
@@ -40,7 +38,7 @@
     "second": {
      "hit": 78.4,
      "n": 139,
-     "roi": -0.33
+     "roi": -0.42
     }
    },
    {
@@ -70,9 +68,9 @@
      "per_sport": 2
     },
     "second": {
-     "hit": 80.7,
+     "hit": 81.3,
      "n": 171,
-     "roi": -0.4
+     "roi": 0.23
     }
    },
    {
@@ -102,9 +100,9 @@
      "per_sport": 3
     },
     "second": {
-     "hit": 81.8,
-     "n": 176,
-     "roi": -0.17
+     "hit": 81.9,
+     "n": 177,
+     "roi": -0.12
     }
    },
    {
@@ -134,9 +132,9 @@
      "per_sport": null
     },
     "second": {
-     "hit": 82.5,
-     "n": 177,
-     "roi": -0.52
+     "hit": 82.6,
+     "n": 178,
+     "roi": -0.47
     }
    },
    {
@@ -169,12 +167,12 @@
   },
   "ncaab": {
    "benched": false,
-   "hit": 89.6,
+   "hit": 89.8,
    "implied": 91.0,
-   "n": 48,
-   "roi": -1.1,
-   "upper95": 95.5,
-   "won": 43
+   "n": 49,
+   "roi": -0.9,
+   "upper95": 95.6,
+   "won": 44
   },
   "ncaaf": {
    "benched": false,
@@ -332,10 +330,10 @@
   "Kalshi middle, confirmed": {
    "benched": false,
    "breakeven": 46.8,
-   "hit": 40.7,
-   "n": 123,
-   "roi": -12.5,
-   "upper95": 49.5,
+   "hit": 40.3,
+   "n": 124,
+   "roi": -13.2,
+   "upper95": 49.1,
    "won": 50
   },
   "Kalshi middle, single": {
