@@ -139,8 +139,11 @@ class Ladder(unittest.TestCase):
         self.assertEqual(ladder.miss_label(dict(label="Florida Atlantic Owls under 41.5 points", status="lost",
                                                 score="Florida Atlantic Owls 45 - Rice Owls 10")),
                          "Florida Atlantic Owls under 41.5 points (45, missed by 3.5)")
-        self.assertEqual(ladder.miss_label(dict(label="NC State Wolfpack +15.5", status="lost", score="A 41 - B 3")),
-                         "NC State Wolfpack +15.5")
+        self.assertEqual(ladder.miss_label(dict(label="NC State Wolfpack +15.5", status="lost",
+                                                score="Georgia Tech Yellow Jackets 41 - NC State Wolfpack 3")),
+                         "NC State Wolfpack +15.5 (lost by 38, missed by 22.5)")
+        self.assertEqual(ladder.miss_label(dict(label="Akron Zips -3.5", status="lost", score="Akron Zips 20 - Kent State 18")),
+                         "Akron Zips -3.5 (won by 2, missed by 1.5)")
 
     def test_count_record_games_only(self):
         b = book({"2026-11-03": W5})

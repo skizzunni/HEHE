@@ -212,8 +212,9 @@ def count_record(book=None, start=START, hi=FLEX_MAX, games_only=False):
 
 
 def _game_miss(L):
-    """A lost game or team total with its final number and the miss:
-    "Over 208.5 points (207, missed by 1.5)". The label alone otherwise."""
+    """A lost game total, team total or spread with its final number and the
+    miss: "Over 208.5 points (207, missed by 1.5)", "NC State Wolfpack +15.5
+    (lost by 38, missed by 22.5)". The label alone otherwise."""
     import re
     lab, sc = str(L.get("label") or ""), str(L.get("score") or "")
     fmt = lambda x: int(x) if float(x).is_integer() else x
@@ -224,6 +225,18 @@ def _game_miss(L):
             return lab
         got, line = pts[-2] + pts[-1], float(m.group(2))
     else:
+        sp = re.match(r"^(.+?)\s+([+-]\d+(?:\.\d+)?)$", lab)
+        if sp:                                  # a spread: the team's margin plus the points
+            parts = re.split(r"\s+-\s+", sc)
+            mine = next((x for x in parts if x.startswith(sp.group(1))), None)
+            other = next((x for x in parts if not x.startswith(sp.group(1))), None)
+            a, b = (re.search(r"(-?\d+)\s*$", x or "") for x in (mine, other))
+            if not (a and b):
+                return lab
+            short = -(int(a.group(1)) - int(b.group(1)) + float(sp.group(2)))
+            d = int(a.group(1)) - int(b.group(1))
+            res = f"won by {d}" if d > 0 else ("tied" if d == 0 else f"lost by {-d}")
+            return f"{lab} ({res}, missed by {fmt(short)})" if short > 0 else lab
         t = re.match(r"^(.+?)\s+(over|under)\s+([\d.]+)", lab, re.I)
         if not t:
             return lab
