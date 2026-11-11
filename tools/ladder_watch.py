@@ -18,16 +18,15 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def safe_note(L):
-    """For an open leg already decided on the field: 'line reached (N so far)'
-    for an N+ prop, 'already over (T, line X)' for a game over, 'gone over ...
+    """For an open leg already decided on the field: 'line reached' for an N+
+    prop, 'already over (T, line X)' for a game over, 'gone over ...
     -- lost' for a game or team under. '' otherwise."""
     import re
     if (L.get("status") or "open") != "open":
         return ""
     need = re.match(r"^\s*(\d+(?:\.\d+)?)\+\s*$", str(L.get("line") or ""))
     if need and L.get("so_far") is not None and float(L["so_far"]) >= float(need.group(1)):
-        v = float(L["so_far"])
-        return f"line reached ({int(v) if v.is_integer() else v} so far)"
+        return "line reached"                # no running count: one alert, not one per stat
     m = re.match(r"^Over\s+([\d.]+)", str(L.get("label") or ""), re.I)
     pts = [int(x) for x in re.findall(r"-?\d+(?=\s*(?:-|$))", str(L.get("live_score") or ""))]
     if m and len(pts) >= 2 and pts[-2] + pts[-1] > float(m.group(1)):
