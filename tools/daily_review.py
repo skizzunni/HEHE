@@ -483,6 +483,32 @@ def dc_side_line(ledger=None, min_n=30):
     return out
 
 
+def draw_rate_line(ledger=None, min_n=20, top=5):
+    """How often board soccer games ended level, by league (graded games
+    with a two-team score), highest first: where a straight-win pick most
+    often loses to a draw. Information only (2026-11-10: 22% overall, EFL3
+    41% of 37 -- small samples)."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    soc = {v.get("league") for v in ledger.values() if isinstance(v, dict) and v.get("dc")}
+    c = {}
+    for v in ledger.values():
+        if isinstance(v, dict) and v.get("league") in soc and v.get("status") in ("won", "lost") \
+                and isinstance(v.get("scores"), dict) and len(v["scores"]) == 2:
+            a = c.setdefault(v["league"], [0, 0])
+            a[0] += len(set(v["scores"].values())) == 1
+            a[1] += 1
+    if not c:
+        return None
+    d, n = sum(a for a, _ in c.values()), sum(b for _, b in c.values())
+    rows = sorted(((a / b, b, k) for k, (a, b) in c.items() if b >= min_n), reverse=True)[:top]
+    if not rows:
+        return None
+    return (f"Soccer draws on the board: {round(100 * d / n)}% of {n} games; most in "
+            + ", ".join(f"{k.upper()} {round(100 * r)}% of {b}" for r, b, k in rows)
+            + " -- where a straight win most often loses to a draw.")
+
+
 def nhl_b2b_line(today=None, games_fn=None, ledger=None):
     """NHL games today where one side played yesterday and the other did not,
     and whether the board's pick is the tired side. Information only: in
@@ -1267,6 +1293,8 @@ def words(r, fit):
         out.append(r["dc_side"])
     if r.get("nhl_b2b"):
         out.append(r["nhl_b2b"])
+    if r.get("draws"):
+        out.append(r["draws"])
     if r.get("ufc"):
         out.append(r["ufc"])
     if r.get("ufc_next"):
@@ -1389,6 +1417,7 @@ def main():
     log[today.isoformat()]["prop_fair"] = prop_fair_line()
     log[today.isoformat()]["dc_side"] = dc_side_line(ledger)
     log[today.isoformat()]["nhl_b2b"] = nhl_b2b_line(today, ledger=ledger)
+    log[today.isoformat()]["draws"] = draw_rate_line(ledger)
     log[today.isoformat()]["card_missing"] = card_check()
     log[today.isoformat()]["ufc"] = ufc_line(today)
     log[today.isoformat()]["ufc_next"] = ufc_next_line(today)

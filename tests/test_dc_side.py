@@ -80,6 +80,19 @@ class PreregLine(unittest.TestCase):
         self.assertIn("dogs getting 7.5-14 covered 53% then 61% in the NFL", out)
 
 
+class DrawRate(unittest.TestCase):
+    def test_line(self):
+        L = {"dc": dict(dc=True, league="epl"), "dc2": dict(dc=True, league="mls")}
+        for i in range(20):
+            L[f"e{i}"] = dict(league="epl", status="won", scores={"A": 1, "B": 1 if i < 5 else 0})
+            L[f"m{i}"] = dict(league="mls", status="won", scores={"A": 2, "B": 2 if i < 10 else 0})
+        L["n"] = dict(league="nba", status="won", scores={"A": 100, "B": 100})
+        out = daily_review.draw_rate_line(L)
+        self.assertEqual(out, "Soccer draws on the board: 38% of 40 games; most in MLS 50% of 20, EPL 25% of 20"
+                              " -- where a straight win most often loses to a draw.")
+        self.assertIsNone(daily_review.draw_rate_line({}))
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
