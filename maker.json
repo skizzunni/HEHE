@@ -1432,6 +1432,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "ncaaf:401866460",
    "label": "Ohio Bobcats",
    "league": "ncaaf",
@@ -1444,8 +1445,9 @@
     "team": "Ohio Bobcats"
    },
    "start": "2026-11-11T01:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV10OHIOMOH-OHIO"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV10OHIOMOH-OHIO",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV10WMUAKR-WMU|YES": {
    "ask": 0.86,
@@ -1532,6 +1534,27 @@
    "start": "2026-11-12T00:30Z",
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV11SACCMU-CMU"
+  },
+  "KXNCAAFGAME-26NOV12MEMUSF-MEM|YES": {
+   "ask": 0.62,
+   "bid": 0.6,
+   "cost": 0.6042,
+   "edge": 0.0285,
+   "fair": 0.6214,
+   "id": "ncaaf:401862824",
+   "label": "Memphis Tigers",
+   "league": "ncaaf",
+   "match": "MEM @ USF",
+   "posted": "2026-11-11T05:01:37+00:00",
+   "queue": 12298.24,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Memphis Tigers"
+   },
+   "start": "2026-11-13T01:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV12MEMUSF-MEM"
   },
   "KXNCAAFGAME-26OCT22ECUMEM-MEM|YES": {
    "ask": 0.78,
@@ -4489,6 +4512,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401866460",
    "label": "Miami (OH) RedHawks +1.5",
    "league": "ncaaf",
@@ -4502,8 +4526,9 @@
     "team": "Miami (OH) RedHawks"
    },
    "start": "2026-11-11T01:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV10OHIOMOH-OHIO2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV10OHIOMOH-OHIO2",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV11BUFFBALL-BUFF2|NO": {
    "ask": 0.51,
@@ -9019,6 +9044,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401866460",
    "label": "over 46.5",
    "league": "ncaaf",
@@ -9031,8 +9057,9 @@
     "t": "over"
    },
    "start": "2026-11-11T01:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV10OHIOMOH-47"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV10OHIOMOH-47",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV10OHIOMOH-48|NO": {
    "ask": 0.53,
@@ -9040,6 +9067,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401866460",
    "label": "under 47.5",
    "league": "ncaaf",
@@ -9052,8 +9080,9 @@
     "t": "under"
    },
    "start": "2026-11-11T01:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV10OHIOMOH-48"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV10OHIOMOH-48",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV10OHIOMOH-48|YES": {
    "ask": 0.51,
@@ -9061,6 +9090,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401866460",
    "label": "over 47.5",
    "league": "ncaaf",
@@ -9073,8 +9103,9 @@
     "t": "over"
    },
    "start": "2026-11-11T01:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV10OHIOMOH-48"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV10OHIOMOH-48",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV10OHIOMOH-49|NO": {
    "ask": 0.51,
@@ -9082,6 +9113,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "ncaaf:401866460",
    "label": "under 48.5",
    "league": "ncaaf",
@@ -9094,8 +9126,9 @@
     "t": "under"
    },
    "start": "2026-11-11T01:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV10OHIOMOH-49"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV10OHIOMOH-49",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV10WMUAKR-48|YES": {
    "ask": 0.52,
