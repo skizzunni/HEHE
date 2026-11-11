@@ -594,6 +594,33 @@ def injury_check(legs, teams=None):
     return out
 
 
+def injury_context(legs, teams=None):
+    """Out / Doubtful players on both sides of each ladder game, one line:
+    context for every leg (a team missing its playmaker changes an assists
+    prop). Information only."""
+    if teams is None:
+        try:
+            import injuries
+            teams = injuries.fetch()
+        except Exception:
+            return None
+    parts, seen = [], set()
+    for L in legs or []:
+        T = (teams or {}).get(L.get("league")) or {}
+        key = (L.get("league"), L.get("home"), L.get("away"))
+        if key in seen or not L.get("home"):
+            continue
+        seen.add(key)
+        bits = []
+        for side in ("away", "home"):
+            out = [n for n, st in T.get(L.get(side)) or [] if st in ("Out", "Doubtful")]
+            if out:
+                bits.append(f"{L.get(side)} without {', '.join(out)}")
+        if bits:
+            parts.append(f"{L.get('match')}: " + "; ".join(bits))
+    return ("Ladder games, players out or doubtful: " + " | ".join(parts) + ".") if parts else None
+
+
 def draw_rate_line(ledger=None, min_n=20, top=5):
     """How often board soccer games ended level, by league (graded games
     with a two-team score), highest first: where a straight-win pick most
@@ -1420,6 +1447,8 @@ def words(r, fit):
         out.append(r["roster"])
     if r.get("injury"):
         out.append(r["injury"])
+    if r.get("injury_ctx"):
+        out.append(r["injury_ctx"])
     if r.get("ufc"):
         out.append(r["ufc"])
     if r.get("ufc_next"):
@@ -1557,6 +1586,10 @@ def main():
         _inj = []
     log[today.isoformat()]["injury"] = (("INJURY CHECK on today's ladder: " + "; ".join(_inj)
                                          + " -- check the status before betting.") if _inj else None)
+    try:
+        log[today.isoformat()]["injury_ctx"] = injury_context(with_teams(((_ld.report().get("today") or {}).get("legs")) or []))
+    except Exception:
+        log[today.isoformat()]["injury_ctx"] = None
     log[today.isoformat()]["card_missing"] = card_check()
     log[today.isoformat()]["ufc"] = ufc_line(today)
     log[today.isoformat()]["ufc_next"] = ufc_next_line(today)

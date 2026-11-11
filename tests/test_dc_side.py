@@ -144,6 +144,19 @@ class InjuryCheck(unittest.TestCase):
         self.assertEqual(daily_review.injury_check(legs, {}), [])
 
 
+class InjuryContext(unittest.TestCase):
+    def test_line(self):
+        teams = {"nba": {"New York Knicks": [["Josh Hart", "Out"], ["Y", "Day-To-Day"]],
+                         "Cleveland Cavaliers": [["Sam Merrill", "Out"]]}}
+        legs = [dict(league="nba", home="New York Knicks", away="Cleveland Cavaliers", match="CLE @ NY"),
+                dict(league="nba", home="New York Knicks", away="Cleveland Cavaliers", match="CLE @ NY"),
+                dict(league="ncaab", home="Cal", away="USC", match="USC @ CAL")]
+        self.assertEqual(daily_review.injury_context(legs, teams),
+                         "Ladder games, players out or doubtful: CLE @ NY: Cleveland Cavaliers without Sam Merrill;"
+                         " New York Knicks without Josh Hart.")
+        self.assertIsNone(daily_review.injury_context(legs[2:], teams))
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
