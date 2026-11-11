@@ -108,6 +108,11 @@ def main(state_path, day=None, league=None):
                 after.update(games_snapshot(json.load(fh), day, league))
         except (OSError, ValueError):
             pass
+    # a feed gap (live score briefly missing) must not undo a note already
+    # seen: an open leg with no note keeps the note it had
+    for k, v in list(after.items()):
+        if v == "open" and str(before.get(k, "")).startswith("open | "):
+            after[k] = before[k]
     if not before:                       # first look: say what is being watched
         for k, v in after.items():
             print(f"WATCHING: {k} = {v}", flush=True)

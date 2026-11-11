@@ -93,5 +93,28 @@ class LadderWatch(unittest.TestCase):
             self.assertEqual(json.load(open(st)), {"A": "open"})
 
 
+    def test_feed_gap_keeps_note(self):
+        import io
+        import json
+        import tempfile
+        from contextlib import redirect_stdout
+        from unittest import mock
+        import ladder
+        reps = iter([dict(today=dict(legs=[dict(label="Over 214.5 points", live_score="A 110 - B 109")])),
+                     dict(today=dict(legs=[dict(label="Over 214.5 points")])),                    # feed gap
+                     dict(today=dict(legs=[dict(label="Over 214.5 points", status="won", score="A 112 - B 109")]))])
+        with tempfile.TemporaryDirectory() as d, mock.patch.object(ladder, "report", lambda: next(reps)):
+            st = os.path.join(d, "s.json")
+            outs = []
+            for _ in range(3):
+                buf = io.StringIO()
+                with redirect_stdout(buf):
+                    w.main(st)
+                outs.append(buf.getvalue())
+        self.assertEqual(outs[0], "WATCHING: Over 214.5 points = open | already over (219, line 214.5)\n")
+        self.assertEqual(outs[1], "")                                   # no false "open" change
+        self.assertEqual(outs[2], "CHANGE: Over 214.5 points = won | A 112 - B 109\n")
+
+
 if __name__ == "__main__":
     unittest.main()
