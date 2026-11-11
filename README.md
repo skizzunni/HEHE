@@ -1337,6 +1337,16 @@ against one that was not: won 61.5%, 60.7%, 68.2%, 50.0% against 56.9%,
 where only one side is short are too rare to read (5 games); on Thursday
 both sides are usually short.
 
+**Locks by bet type (2026-11-11): props short in both halves, not yet
+significant.** All graded Locks + Safe Locks legs (549), split by date
+(mid 2026-10-28): wins 83% then 96% vs 81% / 82% stated; spreads 85%, 91% vs
+85%, 84%; totals 87%, 89% vs 83%, 84%; team totals 88%, 91% vs 86%, 86%;
+props 80%, 76% vs 86%, 79% (45 and 34 legs). Props are the only type behind
+in both halves; 62 of 79 against about 83% expected is about a 1-in-7 chance
+by luck, short of the 99.5% bar, so nothing is cut. The ladder already has a
+switch (`SKIP_KINDS`) that keeps a kind off the ticket, used only on the
+user's word. The review prints this split daily.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that

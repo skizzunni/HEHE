@@ -483,6 +483,37 @@ def dc_side_line(ledger=None, min_n=30):
     return out
 
 
+def locks_type_line(legs=None):
+    """Locks + Safe Locks legs by bet type (ladder.leg_type), each with its
+    two date halves against stated. Flags a type short in both halves.
+    2026-11-11: props 80.0% then 76.5% vs 86.2% / 78.8% stated -- the only
+    type short in both halves, on 79 legs (not yet significant)."""
+    import ladder
+    if legs is None:
+        try:
+            import locks
+            legs = [x for p_ in (None, locks.SAFE_LEDGER)
+                    for x in ((locks.load(p_) if p_ else locks.load()).get("legs") or {}).values()]
+        except Exception:
+            return None
+    G = sorted((x for x in legs if x.get("status") in ("won", "lost") and x.get("p") is not None and x.get("date")),
+               key=lambda x: x["date"])
+    if len(G) < 40:
+        return None
+    mid = G[len(G) // 2]["date"]
+    parts, short = [], []
+    for t in ("win", "spread", "total", "team total", "prop"):
+        hv = [[x for x in G if ladder.leg_type(x) == t and (x["date"] < mid) == first] for first in (True, False)]
+        if not all(hv):
+            continue
+        rec = [(sum(x["status"] == "won" for x in h) / len(h), sum(x["p"] for x in h) / len(h), len(h)) for h in hv]
+        parts.append(f"{t} {round(100 * rec[0][0])}% then {round(100 * rec[1][0])}% (vs {round(100 * rec[0][1])}%, {round(100 * rec[1][1])}%)")
+        if all(w < said for w, said, _ in rec):
+            short.append(t)
+    return ("Locks by bet type, by half: " + "; ".join(parts) + "."
+            + (f" Short in both halves: {', '.join(short)}." if short else ""))
+
+
 def draw_rate_line(ledger=None, min_n=20, top=5):
     """How often board soccer games ended level, by league (graded games
     with a two-team score), highest first: where a straight-win pick most
@@ -1295,6 +1326,8 @@ def words(r, fit):
         out.append(r["nhl_b2b"])
     if r.get("draws"):
         out.append(r["draws"])
+    if r.get("lock_types"):
+        out.append(r["lock_types"])
     if r.get("ufc"):
         out.append(r["ufc"])
     if r.get("ufc_next"):
@@ -1418,6 +1451,7 @@ def main():
     log[today.isoformat()]["dc_side"] = dc_side_line(ledger)
     log[today.isoformat()]["nhl_b2b"] = nhl_b2b_line(today, ledger=ledger)
     log[today.isoformat()]["draws"] = draw_rate_line(ledger)
+    log[today.isoformat()]["lock_types"] = locks_type_line()
     log[today.isoformat()]["card_missing"] = card_check()
     log[today.isoformat()]["ufc"] = ufc_line(today)
     log[today.isoformat()]["ufc_next"] = ufc_next_line(today)

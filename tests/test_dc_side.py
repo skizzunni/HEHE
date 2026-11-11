@@ -93,6 +93,20 @@ class DrawRate(unittest.TestCase):
         self.assertIsNone(daily_review.draw_rate_line({}))
 
 
+class LockTypes(unittest.TestCase):
+    def test_line(self):
+        legs = []
+        for i in range(20):
+            d = "2026-10-01" if i < 10 else "2026-10-20"
+            legs.append(dict(date=d, label=f"Over {i}.5", p=0.8, status="won" if i % 10 else "lost"))
+            legs.append(dict(date=d, label=f"P{i}: 2+ Assists", kind="prop", p=0.85, status="won" if i % 2 else "lost"))
+        out = daily_review.locks_type_line(legs)
+        self.assertIn("total 90% then 90% (vs 80%, 80%)", out)
+        self.assertIn("prop 50% then 50% (vs 85%, 85%)", out)
+        self.assertTrue(out.endswith("Short in both halves: prop."))
+        self.assertIsNone(daily_review.locks_type_line(legs[:10]))
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
