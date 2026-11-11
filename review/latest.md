@@ -1,7 +1,7 @@
 # Review 2026-11-10
 
 Picks 9-2 (81.8% vs 74.0% claimed, ROI +9.4%).
-Ladder: run 5, bank $2.00, 1 win(s) in a row, best $9.57; today stakes $2.00 at 2.45x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.45x for the plain top 4; 10 wins to $10,000; legs: Kyle Kuzma: 2+ Assists (MIL @ NY; won), Over 214.5 points (Miami Heat at Utah Jazz; live 5:23 - 2nd, Miami Heat 51 - Utah Jazz 39, on pace for 232 (90 so far, line 214.5, needs 125 more), on track), Over 208.5 points (Orlando Magic at Sacramento Kings; 10:00 PM, open), Akron Zips under 23.5 points (Western Michigan Broncos at Akron Zips; won); 2 of 4 won, the ticket now rests on 2 legs, 57% on their stated chance before play.
+Ladder: run 5, bank $2.00, 1 win(s) in a row, best $9.57; today stakes $2.00 at 2.45x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.45x for the plain top 4; 10 wins to $10,000; legs: Kyle Kuzma: 2+ Assists (MIL @ NY; won), Over 214.5 points (Miami Heat at Utah Jazz; live 2:52 - 2nd, Miami Heat 57 - Utah Jazz 42, on pace for 225 (99 so far, line 214.5, needs 116 more), on track), Over 208.5 points (Orlando Magic at Sacramento Kings; live 10:50 - 1st, Orlando Magic 2 - Sacramento Kings 2, 4 so far, line 208.5, too early to project), Akron Zips under 23.5 points (Western Michigan Broncos at Akron Zips; won); 2 of 4 won, the ticket now rests on 2 legs, 57% on their stated chance before play.
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, live.
 Running ahead: NBA under on all saved lines 1041/1160 vs 82%; NHL over on all saved lines 131/146 vs 84%; NHL spread on all saved lines 276/316 vs 83%; NHL teamover on all saved lines 168/187 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 73/90 (81% vs 81% stated); waiting for 100 legs. History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).
@@ -23,16 +23,16 @@ Yesterday (2026-11-09): board 14-5, sweep broken by nor Vålerenga or draw at 67
 - LOST nba Atlanta Hawks at 57% (-144), Atlanta Hawks 114 - Los Angeles Lakers 124: margin 10 · the book had my side favoured too · called at 57% · coin flip; picks like it: 44 of 77 (57% vs 57% stated)
 - LOST nba Cleveland Cavaliers at 74% (-336), Charlotte Hornets 124 - Cleveland Cavaliers 112: margin 12 · the book had my side favoured too · called at 74% · favourite lost; picks like it: 42 of 53 (79% vs 73% stated)
 - LOST nhl New York Islanders at 56% (-142), New York Islanders 2 - San Jose Sharks 3: margin 1 · the book had my side favoured too · called at 56% · coin flip · close game; picks like it: 118 of 206 (57% vs 55% stated)
-Locks 3/11 won, 7 open; Best play top 2 (59%) open; lost: New Jersey Devils +1.5 (New Jersey Devils at Winnipeg Jets) New Jersey Devils 2 - Winnipeg Jets 4.
-Safe Locks 5/11 won, 6 open; Winners parlay top 2 (84%) open; Best play top 7 (54%) open.
+Locks 4/11 won, 6 open; Best play top 2 (59%) open; lost: New Jersey Devils +1.5 (New Jersey Devils at Winnipeg Jets) New Jersey Devils 2 - Winnipeg Jets 4.
+Safe Locks 6/11 won, 5 open; Winners parlay top 2 (84%) open; Best play top 7 (54%) open.
 Lottery 100: lost (2/9 legs won, killed by Over 212.5 points, Ottawa Senators to win)
 Lottery 10k: lost (2/10 legs won, killed by Over 216.5 points, Over 56.5 points, Over 7.5 goals, New Jersey Devils to win)
-Lottery 10k: lost (1/8 legs won, killed by Minnesota Wild under 1.5 goals)
+Lottery 10k: lost (2/8 legs won, killed by Minnesota Wild under 1.5 goals)
 Lottery 10k+25: lost (2/10 legs won, killed by Over 216.5 points, Over 56.5 points, Over 7.5 goals, New Jersey Devils to win)
 Lottery 10k+50: lost (3/9 legs won, killed by Over 216.5 points, Over 56.5 points, Over 7.5 goals)
 Lottery 10k+100: lost (2/9 legs won, killed by Over 216.5 points, Over 56.5 points, Over 7.5 goals, New Jersey Devils to win)
 Ladder-consistency props (all time): 2049/2468 won (83.0%) vs 86.2% fair, 87.3% price.
-Props 42/64 vs 82.0% claimed.
+Props 48/74 vs 81.7% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=155), ncaab 0.00 (n=47), ncaaf 0.00 (n=227), nfl 0.00 (n=56), nhl 0.00 (n=172)
