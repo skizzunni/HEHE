@@ -126,6 +126,14 @@ class RosterCheck(unittest.TestCase):
         self.assertEqual(daily_review.roster_check([leg], boom), [])
 
 
+class WithTeams(unittest.TestCase):
+    def test_fill(self):
+        book = {"legs": {"k": dict(gid="nba:1", label="J: 2+ Assists", home="Milwaukee Bucks", away="Los Angeles Lakers")}}
+        out = daily_review.with_teams([dict(gid="nba:1", label="J: 2+ Assists"), dict(gid="nba:2", label="X")], book)
+        self.assertEqual((out[0]["home"], out[0]["away"]), ("Milwaukee Bucks", "Los Angeles Lakers"))
+        self.assertIsNone(out[1]["home"])
+
+
 class InjuryCheck(unittest.TestCase):
     def test_check(self):
         teams = {"nba": {"Milwaukee Bucks": [["Jaime Jaquez Jr.", "Questionable"]], "New York Knicks": [["X", "Out"]]}}

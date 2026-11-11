@@ -557,6 +557,22 @@ def roster_check(legs, fetch=None):
     return bad
 
 
+def with_teams(legs, book=None):
+    """Ladder legs carry no team names: fill home/away from the Locks store
+    (same game id and label)."""
+    try:
+        import locks
+        book = book or locks.load()
+        idx = {(v.get("gid"), v.get("label")): v for v in (book.get("legs") or {}).values()}
+    except Exception:
+        return legs or []
+    out = []
+    for L in legs or []:
+        src = idx.get((L.get("gid"), L.get("label"))) or {}
+        out.append(dict(L, home=L.get("home") or src.get("home"), away=L.get("away") or src.get("away")))
+    return out
+
+
 def injury_check(legs, teams=None):
     """Ladder prop legs whose player is on ESPN's injury report (Out,
     Doubtful, Questionable, Day-To-Day): ["Name: Status (MATCH)"]."""
@@ -1530,13 +1546,13 @@ def main():
     log[today.isoformat()]["lock_types"] = locks_type_line()
     try:                                  # ladder prop players on today's rosters
         import ladder as _ld
-        _bad = roster_check(((_ld.report().get("today") or {}).get("legs")) or [])
+        _bad = roster_check(with_teams(((_ld.report().get("today") or {}).get("legs")) or []))
     except Exception:
         _bad = []
     log[today.isoformat()]["roster"] = (("ROSTER CHECK: not on either team's current roster -- check before betting: "
                                          + ", ".join(_bad) + ".") if _bad else None)
     try:
-        _inj = injury_check(((_ld.report().get("today") or {}).get("legs")) or [])
+        _inj = injury_check(with_teams(((_ld.report().get("today") or {}).get("legs")) or []))
     except Exception:
         _inj = []
     log[today.isoformat()]["injury"] = (("INJURY CHECK on today's ladder: " + "; ".join(_inj)
