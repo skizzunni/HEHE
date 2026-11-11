@@ -1352,6 +1352,14 @@ best-chance 2x-5x ticket each day): with props 6/11 then 6/13 cashed at
 or one ticket better in each half and paying a little more -- the same
 direction, still too few tickets to call it proven.
 
+**Injuries at tip-off, early read (2026-11-11).** `tools/injury_study.py`
+grades board picks against the ESPN injury report as archived before each
+start (8 days of snapshots, 114 NBA/NHL/NFL games). Picks whose opponent had
+more players Out: 15/19 then 25/29 (79%, 86% vs 68%, 64% stated); whose own
+side had more Out: 8/13 then 19/24 (62%, 79% vs 62%, 66%). The direction is
+the expected one and both halves agree, but 114 games over 8 days is far too
+few; it is re-run as the archive grows, and nothing reads it yet.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
