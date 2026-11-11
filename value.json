@@ -7058,6 +7058,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909968|away|Kalshi": {
+   "dec": 1.5015,
+   "ev": 0.0299,
+   "fair": 0.6859,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909968",
+   "kind": "value",
+   "league": "nba",
+   "match": "BOS @ TOR",
+   "price": "-199",
+   "seen": "2026-11-11T17:50:34+00:00",
+   "side": "away",
+   "start": "2026-11-12T00:00Z",
+   "team": "Boston Celtics",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909968|home|FanDuel": {
    "dec": 3.15,
    "ev": 0.0101,
@@ -7074,6 +7091,28 @@
    "team": "Toronto Raptors",
    "tip": "7:00 PM",
    "venue": "FanDuel"
+  },
+  "nba:401909968|sure": {
+   "id": "nba:401909968",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-199",
+     "stake_share": 0.6664,
+     "team": "Boston Celtics",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "+200",
+     "stake_share": 0.3336,
+     "team": "Toronto Raptors",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "BOS @ TOR",
+   "profit": 0.0007,
+   "seen": "2026-11-11T17:50:34+00:00"
   },
   "nba:401909968|{\"line\": -7.5, \"t\": \"spread\", \"team\": \"Boston Celtics\"}|Kalshi": {
    "dec": 2.1395,
