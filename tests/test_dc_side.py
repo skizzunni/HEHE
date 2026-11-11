@@ -157,6 +157,18 @@ class InjuryContext(unittest.TestCase):
         self.assertIsNone(daily_review.injury_context(legs[2:], teams))
 
 
+class InjuryStudyLine(unittest.TestCase):
+    def test_line(self):
+        from unittest import mock
+        import injury_study
+        R = [dict(date="2026-11-0%d" % (1 + i % 8), mine=i % 2, theirs=(i + 1) % 2, won=i % 3 != 0, conf=65) for i in range(40)]
+        with mock.patch.object(injury_study, "rows", lambda led, days: R):
+            out = daily_review.injury_study_line({})
+        self.assertTrue(out.startswith("Injuries at tip-off (40 games, 8 days, early read): my side more out: 1st "))
+        with mock.patch.object(injury_study, "rows", lambda led, days: R[:5]):
+            self.assertIsNone(daily_review.injury_study_line({}))
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}

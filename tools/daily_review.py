@@ -621,6 +621,22 @@ def injury_context(legs, teams=None):
     return ("Ladder games, players out or doubtful: " + " | ".join(parts) + ".") if parts else None
 
 
+def injury_study_line(ledger=None):
+    """tools/injury_study.py in one line: board picks by who had more players
+    Out at tip-off, each with its two halves. Information only."""
+    try:
+        import injury_study
+        import injuries
+        days = {f[:-5] for f in os.listdir(injuries.DIR) if f.endswith(".json")}
+        R = injury_study.rows(ledger if ledger is not None else load("ledger.json", {}), days)
+    except Exception:
+        return None
+    if len(R) < 30:
+        return None
+    return (f"Injuries at tip-off ({len(R)} games, {len({r['date'] for r in R})} days, early read): "
+            + "; ".join(injury_study.table(R)) + ".")
+
+
 def draw_rate_line(ledger=None, min_n=20, top=5):
     """How often board soccer games ended level, by league (graded games
     with a two-team score), highest first: where a straight-win pick most
@@ -1443,6 +1459,8 @@ def words(r, fit):
         out.append(r["draws"])
     if r.get("lock_types"):
         out.append(r["lock_types"])
+    if r.get("inj_study"):
+        out.append(r["inj_study"])
     if r.get("roster"):
         out.append(r["roster"])
     if r.get("injury"):
@@ -1573,6 +1591,7 @@ def main():
     log[today.isoformat()]["nhl_b2b"] = nhl_b2b_line(today, ledger=ledger)
     log[today.isoformat()]["draws"] = draw_rate_line(ledger)
     log[today.isoformat()]["lock_types"] = locks_type_line()
+    log[today.isoformat()]["inj_study"] = injury_study_line(ledger)
     try:                                  # ladder prop players on today's rosters
         import ladder as _ld
         _bad = roster_check(with_teams(((_ld.report().get("today") or {}).get("legs")) or []))
