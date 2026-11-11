@@ -178,6 +178,7 @@ PROBE = """<script>setTimeout(function(){
   D.locks = lkP;
   out.pcWeak = parlayText(pcW, 5);
   out.pcheck = [parlayText(pcA, 5), parlayText(pcB, 0), parlayText(null, 5), String(parlayLegs().every(x => typeof x.p === "number"))];
+  out.outsN = [outsNote({outs: {"New York Knicks": ["Josh Hart"], "Cleveland Cavaliers": ["Sam Merrill", "Jaylon Tyson"]}}), outsNote({}), outsNote(null)];
   out.noprops = [noPropsNote({legs: [{kind: "prop"}, {kind: "game"}], no_props: {n: 3, pays: 2.05, prob: 0.43, labels: ["Over 1.5", "A +3.5", "B to win"]}}),
                  noPropsNote({legs: [{kind: "game"}], no_props: {n: 3, pays: 2.05, prob: 0.43, labels: ["x"]}}), noPropsNote({})];
   out.lskip = [ladderSkip({all: [12, 24, 2.22], without: [13, 24, 2.32]}), ladderSkip(null)];
@@ -528,6 +529,10 @@ def main():
     od = new.get("ownDog") or ""
     if "$1 on each of the 111 at the no-vig price would be \u221220.9% a bet" not in od or "NHL 13 of 29 (+4.2% a bet)" not in od:
         fails.append("own-view underdog ROI wrong: " + repr(od[-300:]))
+    on = new.get("outsN") or ["", "x", "x"]
+    if not ("Out tonight: New York Knicks &mdash; Josh Hart; Cleveland Cavaliers &mdash; Sam Merrill, Jaylon Tyson" in on[0]
+            and on[1] == "" and on[2] == ""):
+        fails.append("ladder outs note wrong: " + repr(on))
     npn = new.get("noprops") or ["", "x", "x"]
     if not ("Without player props the best ticket would be 3 legs at 2.05&times;, 43% to all win: Over 1.5, A +3.5, B to win." in npn[0]
             and npn[1] == "" and npn[2] == ""):

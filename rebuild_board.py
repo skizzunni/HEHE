@@ -638,6 +638,18 @@ def snapshot():
         try:                                    # $1 -> $10k on the day's 3-8 likeliest Locks (ladder.py)
             import ladder
             out["ladder"] = ladder.report()
+            try:                                # who is out on either side of each ladder leg's game
+                lk_legs = {(v.get("gid"), v.get("label")): v for v in (locks.load().get("legs") or {}).values()}
+                for L_ in ((out["ladder"].get("today") or {}).get("legs")) or []:
+                    src = lk_legs.get((L_.get("gid"), L_.get("label"))) or {}
+                    T_ = (INJ or {}).get(L_.get("league")) or {}
+                    outs = {tm: [n for n, st in T_.get(tm) or [] if st in ("Out", "Doubtful")]
+                            for tm in (src.get("away"), src.get("home")) if tm}
+                    outs = {k: v for k, v in outs.items() if v}
+                    if outs:
+                        L_["outs"] = outs
+            except Exception as e_:
+                print(f"ladder injuries skipped ({e_})", file=sys.stderr)
         except Exception as e_:
             print(f"ladder skipped ({e_})", file=sys.stderr)
         lk = out["locks"]["today"]

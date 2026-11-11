@@ -762,6 +762,13 @@ function noPropsNote(T){
   return '<p class="note">Without player props the best ticket would be ' + N.n + ' legs at ' + N.pays.toFixed(2)
     + '&times;, ' + (100 * N.prob).toFixed(0) + '% to all win: ' + N.labels.map(esc).join(', ') + '.</p>';
 }
+// players out or doubtful on either side of a ladder leg's game (ESPN injury
+// report, rebuild_board): context, not a rule
+function outsNote(L){
+  const O = (L || {}).outs;
+  if(!O || !Object.keys(O).length) return '';
+  return '<div class="sbn">Out tonight: ' + Object.keys(O).map(t => esc(t) + ' &mdash; ' + O[t].map(esc).join(', ')).join('; ') + '</div>';
+}
 // the ladder's ticket replayed on every saved card with props left out
 // (ladder.skip_compare): information for the user's call, not a rule
 function ladderSkip(S){
@@ -1827,6 +1834,7 @@ function ladderHTML(){
           + (L.live ? '<div class="sbn"><b>Live:</b> ' + esc(L.live) + ' &middot; ' + esc(L.live_score || '') + '</div>' : '')
           + ((L.status === 'open' || !L.status) && needLine(L) ? '<div class="sbn">Needs: ' + esc(needLine(L)) + '</div>' : '')
           + (L.live ? paceNote(L) + soFar(L) : '')
+          + ((L.status === 'open' || !L.status) ? outsNote(L) : '')
           + (L.kind_rec && (L.status === 'open' || !L.status) ? '<div class="sbn">Locks like this have won ' + L.kind_rec.won + ' of ' + L.kind_rec.n
              + (L.prop_rec ? '; every ' + esc(String(L.league || '').toUpperCase()) + ' ' + esc(L.market || '') + ' prop at a similar chance: '
                 + L.prop_rec.won + ' of ' + L.prop_rec.n + ' (' + Math.round(100 * L.prop_rec.won / L.prop_rec.n) + '% vs ' + L.prop_rec.said + '% stated)' : '') + '</div>' : '')
