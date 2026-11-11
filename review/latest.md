@@ -1,7 +1,7 @@
 # Review 2026-11-10
 
 Picks 2-0 (100.0% vs 83.0% claimed, ROI +16.7%).
-Ladder: run 5, bank $2.00, 1 win(s) in a row, best $9.57; today stakes $2.00 at 2.45x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.45x for the plain top 4; 10 wins to $10,000; legs: Kyle Kuzma: 2+ Assists (MIL @ NY; live 6:50 - 2nd, Milwaukee Bucks 26 - New York Knicks 38, 0 so far, needs 2 more, on pace for 0, behind the pace it needs; props like it 92/119), Over 214.5 points (Miami Heat at Utah Jazz; 9:00 PM, open), Over 208.5 points (Orlando Magic at Sacramento Kings; 10:00 PM, open), Akron Zips under 23.5 points (Western Michigan Broncos at Akron Zips; live 0:42 - 2nd, Akron Zips 7 - Western Michigan Broncos 21, on pace for 14 (7 so far, line 23.5, room for 16 more), on track).
+Ladder: run 5, bank $2.00, 1 win(s) in a row, best $9.57; today stakes $2.00 at 2.45x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.45x for the plain top 4; 10 wins to $10,000; legs: Kyle Kuzma: 2+ Assists (MIL @ NY; live 3:03 - 2nd, Milwaukee Bucks 28 - New York Knicks 48, 0 so far, needs 2 more, on pace for 0, behind the pace it needs; props like it 92/119), Over 214.5 points (Miami Heat at Utah Jazz; 9:00 PM, open), Over 208.5 points (Orlando Magic at Sacramento Kings; 10:00 PM, open), Akron Zips under 23.5 points (Western Michigan Broncos at Akron Zips; live End of 2nd, Akron Zips 7 - Western Michigan Broncos 21, on pace for 14 (7 so far, line 23.5, room for 16 more), on track).
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, live.
 Running ahead: NBA under on all saved lines 1028/1147 vs 82%; NHL over on all saved lines 126/139 vs 84%; NHL spread on all saved lines 263/301 vs 83%; NHL teamover on all saved lines 163/181 vs 83%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 73/90 (81% vs 81% stated); waiting for 100 legs. History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).
@@ -22,12 +22,12 @@ Yesterday (2026-11-09): board 14-5, sweep broken by nor Vålerenga or draw at 67
 - LOST nhl New York Islanders at 56% (-142), New York Islanders 2 - San Jose Sharks 3: margin 1 · the book had my side favoured too · called at 56% · coin flip · close game; picks like it: 115 of 202 (57% vs 55% stated)
 Locks 0/11 won, 11 open; Best play top 2 (59%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (84%) open; Best play top 7 (54%) open.
-Lottery 100: open (0/9 legs won)
-Lottery 10k: open (0/10 legs won)
+Lottery 100: open (1/9 legs won)
+Lottery 10k: open (1/10 legs won)
 Lottery 10k: open (0/8 legs won)
-Lottery 10k+25: open (0/10 legs won)
-Lottery 10k+50: open (0/9 legs won)
-Lottery 10k+100: open (0/9 legs won)
+Lottery 10k+25: open (1/10 legs won)
+Lottery 10k+50: open (1/9 legs won)
+Lottery 10k+100: open (1/9 legs won)
 Ladder-consistency props (all time): 2036/2448 won (83.2%) vs 86.2% fair, 87.3% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
