@@ -11,6 +11,12 @@ echo "unit tests: $(printf '%s\n' "$out" | tail -1)"
 ui=$(python tests/ui_check.py 2>&1); rc=$?
 echo "page check: $(printf '%s\n' "$ui" | tail -1 | cut -c1-80)"
 [ $rc -eq 0 ] || { printf '%s\n' "$ui" | grep "^FAIL" | head -10; fail=1; }
+# every shell script in tools/ must at least parse (a broken watcher fails silently at night)
+for f in tools/*.sh; do
+  bash -n "$f" 2>/dev/null || { echo "shell syntax error: $f"; fail=1; }
+done
+# and every Python file must compile
+pc=$(python -m py_compile *.py tools/*.py 2>&1) || { echo "python compile error: $(printf '%s' "$pc" | head -3)"; fail=1; }
 # the live data line in board.html is the bot's, never a hand commit's
 n=$(git diff -- board.html | grep -c '^[-+]const D' || true)
 n2=$(git diff --cached -- board.html | grep -c '^[-+]const D' || true)
