@@ -754,6 +754,14 @@ function ufcNote(league, r){
     + (x && x.n ? '<div class="sbn">UFC favourites at ' + k + '% since 2021: ' + x.won + ' of ' + x.n + ' won ('
       + Math.round(100 * x.won / x.n) + '%), ' + (x.roi >= 0 ? '+' : '') + x.roi + '% a bet at DraftKings prices.</div>' : '');
 }
+// today's best-chance ticket with player props left out (ladder report
+// today.no_props): shown beside the chosen ticket for the user's call
+function noPropsNote(T){
+  const N = (T || {}).no_props;
+  if(!N || !(T.legs || []).some(L => L.kind === 'prop')) return '';
+  return '<p class="note">Without player props the best ticket would be ' + N.n + ' legs at ' + N.pays.toFixed(2)
+    + '&times;, ' + (100 * N.prob).toFixed(0) + '% to all win: ' + N.labels.map(esc).join(', ') + '.</p>';
+}
 // the ladder's ticket replayed on every saved card with props left out
 // (ladder.skip_compare): information for the user's call, not a rule
 function ladderSkip(S){
@@ -1833,6 +1841,7 @@ function ladderHTML(){
         + (T.vs_top4 ? '<p class="note">Chosen as the 2&ndash;5&times; combination with the best chance of all winning: '
            + (100 * T.prob).toFixed(0) + '% at ' + T.pays.toFixed(2) + '&times;, against ' + (100 * T.vs_top4.prob).toFixed(0)
            + '% at ' + T.vs_top4.pays.toFixed(2) + '&times; for the plain top 4.</p>' : '')
+        + noPropsNote(T)
         + ladderOptions(T) + ladderCounts(X.counts || [], X.counts_games || [])
         + copyBtn("Ladder ticket", ['Ladder ticket: stake ' + money(T.stake) + ', ' + T.legs.length + '-leg parlay, about '
             + T.pays.toFixed(2) + 'x (pays ' + money(T.stake * T.pays) + ')']

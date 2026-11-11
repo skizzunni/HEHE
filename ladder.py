@@ -446,6 +446,16 @@ def report(book=None, start=START, target=TARGET):
                 if t4:
                     today["vs_top4"] = dict(prob=round(math.prod(L["p"] for L in t4), 4),
                                             pays=round(math.prod(locks._dec(L["price"]) for L in t4), 3))
+                # the same choice with player props left out, for the user's call
+                bk = book or locks.load()
+                keys = bk["days"].get(today["day"]) or []
+                keys = keys.get("legs") if isinstance(keys, dict) else keys
+                np_ = best_combo([dict(bk["legs"][k], key=k) for k in keys or []
+                                  if k in bk["legs"] and leg_type(bk["legs"][k]) != "prop"])
+                if np_:
+                    today["no_props"] = dict(n=len(np_), prob=round(math.prod(L["p"] for L in np_), 4),
+                                             pays=round(math.prod(locks._dec(L["price"]) for L in np_), 3),
+                                             labels=[L["label"] for L in sorted(np_, key=lambda L: -L["p"])])
         except Exception:
             pass
     pays = (today or {}).get("pays") or 3.05
