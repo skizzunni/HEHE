@@ -12,7 +12,7 @@ Soccer draws on the board: 22% of 1450 games; most in EFL3 41% of 37, AUS 38% of
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (13 fights priced, 5 close): Bilal Hasan 88%; Melquizael Costa 76%; Juan Diaz 74%; Bia Mesquita 70%; Ciryl Gane 66%; Terrance McKinney 64%; Kayla Harrison 63%; Donte Johnson 60%; Chris Duncan 59% (close); Caio Borralho 59% (close); Stephen Thompson 58% (close); Uroš Medić 57% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING locks nfl prop: 54.5% hit vs 79.7% stated on 11 (by half 3/5 then 3/6; short in both halves); all 670 saved NFL prop lines 520/670 (78% vs 76% stated) -- the pool is on par, so this looks like a small-sample slump on the few Locks take
-Board sweep: 0-0, 23 open -- still clean.
+Board sweep: 0-0, 24 open -- still clean.
 Why picks lost (14 days): favourite lost 135, close game 108, upset 46, coin flip 42, blowout 37, price moved against it 28.
 Yesterday (2026-11-10): board 18-5, sweep broken by ncaab Duke Blue Devils at 76%; 7.3 losses expected, 5 came in (91.2% chance of that many or more).
 - LOST ncaab Duke Blue Devils at 76% (-340), Duke Blue Devils 73 - Michigan State Spartans 79: margin 6 · the book had my side favoured too · called at 76% · upset
