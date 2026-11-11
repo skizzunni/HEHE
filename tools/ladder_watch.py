@@ -18,8 +18,9 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 def safe_note(L):
-    """For an open leg already won on the field: 'line reached (N so far)' for
-    an N+ prop, 'already over (T, line X)' for a game over. '' otherwise."""
+    """For an open leg already decided on the field: 'line reached (N so far)'
+    for an N+ prop, 'already over (T, line X)' for a game over, 'gone over ...
+    -- lost' for a game or team under. '' otherwise."""
     import re
     if (L.get("status") or "open") != "open":
         return ""
@@ -31,6 +32,16 @@ def safe_note(L):
     pts = [int(x) for x in re.findall(r"-?\d+(?=\s*(?:-|$))", str(L.get("live_score") or ""))]
     if m and len(pts) >= 2 and pts[-2] + pts[-1] > float(m.group(1)):
         return f"already over ({pts[-2] + pts[-1]}, line {m.group(1)})"
+    # an under that has already gone over is lost before the final
+    u = re.match(r"^Under\s+([\d.]+)", str(L.get("label") or ""), re.I)
+    if u and len(pts) >= 2 and pts[-2] + pts[-1] > float(u.group(1)):
+        return f"gone over ({pts[-2] + pts[-1]}, line {u.group(1)}) -- lost"
+    t = re.match(r"^(.+?)\s+under\s+([\d.]+)", str(L.get("label") or ""), re.I)
+    if t:
+        part = next((x for x in re.split(r"\s+-\s+", str(L.get("live_score") or "")) if x.startswith(t.group(1))), None)
+        v = re.search(r"(-?\d+)\s*$", part or "")
+        if v and int(v.group(1)) > float(t.group(2)):
+            return f"gone over ({v.group(1)}, line {t.group(2)}) -- lost"
     return ""
 
 

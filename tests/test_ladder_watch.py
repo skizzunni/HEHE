@@ -24,6 +24,13 @@ class LadderWatch(unittest.TestCase):
                          "already over (216, line 214.5)")
         self.assertEqual(w.safe_note(dict(label="Over 214.5 points", live_score="A 100 - B 100")), "")
         self.assertEqual(w.safe_note(dict(label="Over 214.5 points", status="won", live_score="A 110 - B 106")), "")
+        self.assertEqual(w.safe_note(dict(label="Akron Zips under 23.5 points",
+                                          live_score="Akron Zips 24 - Western Michigan Broncos 21")),
+                         "gone over (24, line 23.5) -- lost")
+        self.assertEqual(w.safe_note(dict(label="Akron Zips under 23.5 points",
+                                          live_score="Akron Zips 7 - Western Michigan Broncos 31")), "")
+        self.assertEqual(w.safe_note(dict(label="Under 41.5 points", live_score="A 21 - B 24")),
+                         "gone over (45, line 41.5) -- lost")
         s = w.snapshot(dict(today=dict(legs=[dict(label="K: 20+ Yds", line="20+", so_far=21)])))
         self.assertEqual(s, {"K: 20+ Yds": "open | line reached (21 so far)"})
 
