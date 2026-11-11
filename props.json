@@ -41128,11 +41128,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "AJ Green",
   "p": 0.848,
   "p_fair": 0.8867,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401909960|n:brayden burries|Assists|2+": {
   "aid": null,
@@ -41144,11 +41146,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Brayden Burries",
   "p": 0.8459,
   "p_fair": 0.8399,
   "price": "-620",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909960|n:brayden burries|Pts + Ast|10+": {
   "aid": null,
@@ -41160,11 +41164,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Brayden Burries",
   "p": 0.8419,
   "p_fair": 0.918,
   "price": "-750",
-  "status": "open"
+  "status": "lost",
+  "value": 6.0
  },
  "nba:401909960|n:brayden burries|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -41176,11 +41182,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Brayden Burries",
   "p": 0.8503,
   "p_fair": 0.9225,
   "price": "-950",
-  "status": "open"
+  "status": "lost",
+  "value": 9.0
  },
  "nba:401909960|n:jaime jaquez|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -41192,11 +41200,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jaime Jaquez Jr.",
   "p": 0.8503,
   "p_fair": 0.9235,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 24.0
  },
  "nba:401909960|n:jalen brunson|Pts + Ast|25+": {
   "aid": null,
@@ -41208,11 +41218,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Jalen Brunson",
   "p": 0.8419,
   "p_fair": 0.8175,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 25.0
  },
  "nba:401909960|n:jalen brunson|Pts + Reb + Ast|30+": {
   "aid": null,
@@ -41224,11 +41236,13 @@
   "league": "nba",
   "line": "30+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jalen Brunson",
   "p": 0.7519,
   "p_fair": 0.7571,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 29.0
  },
  "nba:401909960|n:josh hart|Pts + Ast|10+": {
   "aid": null,
@@ -41244,7 +41258,9 @@
   "p": 0.7422,
   "p_fair": 0.8106,
   "price": "-350",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909960|n:josh hart|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -41259,7 +41275,9 @@
   "p": 0.8738,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909960|n:josh hart|Threes Made|1+": {
   "aid": null,
@@ -41275,7 +41293,9 @@
   "p": 0.7401,
   "p_fair": 0.7675,
   "price": "-400",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909960|n:karl anthony towns|Points|10+": {
   "aid": null,
@@ -41286,11 +41306,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Karl-Anthony Towns",
   "p": 0.8738,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909960|n:karl anthony towns|Pts + Ast|20+": {
   "aid": null,
@@ -41302,11 +41324,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Karl-Anthony Towns",
   "p": 0.7634,
   "p_fair": 0.7707,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 24.0
  },
  "nba:401909960|n:kyle kuzma|Assists|2+": {
   "aid": null,
@@ -41318,11 +41342,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Kyle Kuzma",
   "p": 0.7818,
   "p_fair": null,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909960|n:kyle kuzma|Points|5+": {
   "aid": null,
@@ -41334,11 +41360,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Kyle Kuzma",
   "p": 0.851,
   "p_fair": 0.9646,
   "price": "-1350",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909960|n:kyle kuzma|Reb + Ast|5+": {
   "aid": null,
@@ -41350,11 +41378,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Kyle Kuzma",
   "p": 0.8593,
   "p_fair": 0.8735,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909960|n:landry shamet|Threes Made|1+": {
   "aid": null,
@@ -41366,11 +41396,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Landry Shamet",
   "p": 0.848,
   "p_fair": 0.8745,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909960|n:mikal bridges|Assists|2+": {
   "aid": null,
@@ -41382,11 +41414,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Mikal Bridges",
   "p": 0.7859,
   "p_fair": 0.7776,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401909960|n:mikal bridges|Points|5+": {
   "aid": null,
@@ -41398,11 +41432,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Mikal Bridges",
   "p": 0.8531,
   "p_fair": 0.9629,
   "price": "-1400",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401909960|n:mikal bridges|Reb + Ast|5+": {
   "aid": null,
@@ -41414,11 +41450,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Mikal Bridges",
   "p": 0.7451,
   "p_fair": 0.7771,
   "price": "-330",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909960|n:myles turner|Points|5+": {
   "aid": null,
@@ -41430,11 +41468,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Myles Turner",
   "p": 0.851,
   "p_fair": 0.962,
   "price": "-1350",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909960|n:og anunoby|Points|10+": {
   "aid": null,
@@ -41446,11 +41486,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "OG Anunoby",
   "p": 0.8551,
   "p_fair": 0.9222,
   "price": "-1450",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nba:401909960|n:og anunoby|Threes Made|1+": {
   "aid": null,
@@ -41462,11 +41504,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "OG Anunoby",
   "p": 0.8539,
   "p_fair": 0.8851,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909960|n:ryan rollins|Points|5+": {
   "aid": null,
@@ -41478,11 +41522,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Ryan Rollins",
   "p": 0.851,
   "p_fair": 0.9661,
   "price": "-1350",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401909960|n:ryan rollins|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -41494,11 +41540,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Ryan Rollins",
   "p": 0.8503,
   "p_fair": 0.9259,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909960|n:ryan rollins|Threes Made|1+": {
   "aid": null,
@@ -41510,11 +41558,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Ryan Rollins",
   "p": 0.848,
   "p_fair": 0.8892,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909961|n:jaylen brown|Points|10+": {
   "aid": null,
