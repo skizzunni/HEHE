@@ -442,6 +442,19 @@ class ReviewLine(unittest.TestCase):
 ladder._report = ladder.report
 
 
+class LegsByType(unittest.TestCase):
+    def test_types(self):
+        import ladder
+        T = ladder.leg_type
+        self.assertEqual([T(dict(label="Over 208.5 points")), T(dict(label="Akron Zips under 23.5 points")),
+                          T(dict(label="NC State Wolfpack +15.5")), T(dict(label="San Antonio Spurs to win")),
+                          T(dict(label="Kuzma: 2+ Assists", kind="prop")), T(dict(label="Chelsea or draw"))],
+                         ["total", "team total", "spread", "win", "prop", "win"])
+        G = [dict(label="Over 1.5", status="won", p=0.8), dict(label="Over 2.5", status="lost", p=0.7),
+             dict(label="A +3.5", status="won", p=0.75), dict(label="B to win", status="open", p=0.7)]
+        self.assertEqual(ladder.legs_by_type(G), {"total": dict(won=1, n=2, said=75.0), "spread": dict(won=1, n=1, said=75.0)})
+
+
 class LegsByKind(unittest.TestCase):
     def test_split(self):
         import ladder

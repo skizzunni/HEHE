@@ -353,6 +353,35 @@ def live(legs):
                     pass
 
 
+def leg_type(L):
+    """'prop' / 'total' / 'team total' / 'spread' / 'win' from a leg's kind
+    and label (ladder legs carry no spec)."""
+    import re
+    lab = str(L.get("label") or "")
+    if L.get("kind") == "prop":
+        return "prop"
+    if re.match(r"^(Over|Under)\s+[\d.]+", lab, re.I):
+        return "total"
+    if re.search(r"\s(over|under)\s+[\d.]+", lab, re.I):
+        return "team total"
+    if re.search(r"\s[+-]\d+(\.\d+)?$", lab):
+        return "spread"
+    return "win"
+
+
+def legs_by_type(legs):
+    """Graded ladder legs by bet type: {type: dict(won, n, said)}."""
+    out = {}
+    for L in legs:
+        if L.get("status") not in ("won", "lost") or L.get("p") is None:
+            continue
+        a = out.setdefault(leg_type(L), [0, 0, 0.0])
+        a[0] += L["status"] == "won"
+        a[1] += 1
+        a[2] += L["p"]
+    return {k: dict(won=w, n=n, said=round(100 * p / n, 1)) for k, (w, n, p) in out.items()}
+
+
 def legs_by_kind(legs):
     """Graded ladder legs split into game lines and player props:
     {"game"|"prop": dict(won, n, said)}. 2026-11-09: games 16 of 18, props
@@ -421,6 +450,7 @@ def report(book=None, start=START, target=TARGET):
                     [L for r in runs for d in r["days"] for L in d["legs"] if L.get("status") in ("won", "lost")]),
                 # the same, game lines and player props apart: which kind the ladder loses on
                 legs_by_kind=legs_by_kind([L for r in runs for d in r["days"] for L in d["legs"]]),
+                legs_by_type=legs_by_type([L for r in runs for d in r["days"] for L in d["legs"]]),
                 skip=[list(k) for k in SKIP_KINDS],    # leg kinds kept off the ladder (the board preview honours it)
         counts=count_record(book, ""),         # every saved Locks card, not just the ladder's
         counts_games=count_record(book, "", games_only=True),   # the same with game lines only

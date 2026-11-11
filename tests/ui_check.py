@@ -178,6 +178,7 @@ PROBE = """<script>setTimeout(function(){
   D.locks = lkP;
   out.pcWeak = parlayText(pcW, 5);
   out.pcheck = [parlayText(pcA, 5), parlayText(pcB, 0), parlayText(null, 5), String(parlayLegs().every(x => typeof x.p === "number"))];
+  out.ltypes = [ladderTypes({win: {won: 6, n: 6}, prop: {won: 9, n: 12}, total: {won: 8, n: 9}}), ladderTypes({})];
   out.lkinds = [ladderKinds({game: {won: 16, n: 18, said: 75.7}, prop: {won: 7, n: 10, said: 79.3}}), ladderKinds({}), ladderKinds(undefined)];
   out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({}), drawNote({sd: "a"}), drawNote({sd: "h"})];
   out.bandc = [bandCaution("ncaaf", 72.5), bandCaution("ncaaf", 81), bandCaution("nfl", 72), bandCaution("ncaaf", undefined)];
@@ -524,6 +525,9 @@ def main():
     od = new.get("ownDog") or ""
     if "$1 on each of the 111 at the no-vig price would be \u221220.9% a bet" not in od or "NHL 13 of 29 (+4.2% a bet)" not in od:
         fails.append("own-view underdog ROI wrong: " + repr(od[-300:]))
+    lt = new.get("ltypes") or ["", "x"]
+    if not (lt[0] == " By bet: wins 6/6, totals 8/9, props 9/12." and lt[1] == ""):
+        fails.append("ladder types wrong: " + repr(lt))
     lk = new.get("lkinds") or ["", "x", "x"]
     if not (lk[0] == " By kind: game lines 16 of 18 (89% vs 76%), player props 7 of 10 (70% vs 79%)." and not lk[1] and not lk[2]):
         fails.append("ladder kinds wrong: " + repr(lk))
