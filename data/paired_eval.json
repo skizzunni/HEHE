@@ -7,13 +7,13 @@
    "baseline": "the pick as published (hand-set model weights in NFL/WNBA/MLB/tennis)",
    "proposal": "the same-time market favourite (tested weight 0)",
    "same": "one pick per game, same game, same price",
-   "untouched_from": "2026-10-05",
+   "untouched_from": "2026-10-06",
    "result": {
     "all": {
      "days": 36,
      "picks": 824,
-     "old_won": 562,
-     "new_won": 569,
+     "old_won": 563,
+     "new_won": 570,
      "diff": 7,
      "ci95_diff": [
       -4,
@@ -138,10 +138,10 @@
      "promote": false
     },
     "ncaab": {
-     "days": 8,
-     "picks": 44,
-     "old_won": 41,
-     "new_won": 41,
+     "days": 9,
+     "picks": 45,
+     "old_won": 42,
+     "new_won": 42,
      "diff": 0,
      "ci95_diff": [
       0,
@@ -166,8 +166,8 @@
      "promote": false
     },
     "nfl": {
-     "days": 16,
-     "picks": 72,
+     "days": 15,
+     "picks": 71,
      "old_won": 50,
      "new_won": 51,
      "diff": 1,
