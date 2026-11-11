@@ -17,13 +17,35 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
+def safe_note(L):
+    """For an open leg already won on the field: 'line reached (N so far)' for
+    an N+ prop, 'already over (T, line X)' for a game over. '' otherwise."""
+    import re
+    if (L.get("status") or "open") != "open":
+        return ""
+    need = re.match(r"^\s*(\d+(?:\.\d+)?)\+\s*$", str(L.get("line") or ""))
+    if need and L.get("so_far") is not None and float(L["so_far"]) >= float(need.group(1)):
+        v = float(L["so_far"])
+        return f"line reached ({int(v) if v.is_integer() else v} so far)"
+    m = re.match(r"^Over\s+([\d.]+)", str(L.get("label") or ""), re.I)
+    pts = [int(x) for x in re.findall(r"-?\d+(?=\s*(?:-|$))", str(L.get("live_score") or ""))]
+    if m and len(pts) >= 2 and pts[-2] + pts[-1] > float(m.group(1)):
+        return f"already over ({pts[-2] + pts[-1]}, line {m.group(1)})"
+    return ""
+
+
 def snapshot(report):
     """{label: status/score} for today's legs, or {"SETTLED": "..."}."""
     t = report.get("today")
     if not t:
         last = report.get("last") or {}
         return {"SETTLED": f"{last.get('day')} {last.get('result')} bank {report.get('bank')}"}
-    return {L["label"]: (L.get("status") or "open") + (f" | {L['score']}" if L.get("score") else "") for L in t["legs"]}
+    out = {}
+    for L in t["legs"]:
+        v = (L.get("status") or "open") + (f" | {L['score']}" if L.get("score") else "")
+        note = safe_note(L)
+        out[L["label"]] = v + (f" | {note}" if note else "")
+    return out
 
 
 def games_snapshot(book, day, league):

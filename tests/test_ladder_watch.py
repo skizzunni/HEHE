@@ -16,6 +16,17 @@ class LadderWatch(unittest.TestCase):
         self.assertEqual(w.changes(s, s2), ["CHANGE: A = lost | X 0 - Y 3"])
         self.assertEqual(w.changes(s2, s2), [])
 
+    def test_safe_notes(self):
+        self.assertEqual(w.safe_note(dict(label="Dalton Kincaid: 20+ Receiving Yards", line="20+", so_far=23.0)),
+                         "line reached (23 so far)")
+        self.assertEqual(w.safe_note(dict(label="X: 2+ Assists", line="2+", so_far=1.0)), "")
+        self.assertEqual(w.safe_note(dict(label="Over 214.5 points", live_score="Miami Heat 110 - Utah Jazz 106")),
+                         "already over (216, line 214.5)")
+        self.assertEqual(w.safe_note(dict(label="Over 214.5 points", live_score="A 100 - B 100")), "")
+        self.assertEqual(w.safe_note(dict(label="Over 214.5 points", status="won", live_score="A 110 - B 106")), "")
+        s = w.snapshot(dict(today=dict(legs=[dict(label="K: 20+ Yds", line="20+", so_far=21)])))
+        self.assertEqual(s, {"K: 20+ Yds": "open | line reached (21 so far)"})
+
     def test_settled(self):
         done = w.snapshot(dict(today=None, last=dict(day="2026-11-07", result="lost"), bank=1.0))
         self.assertEqual(done, {"SETTLED": "2026-11-07 lost bank 1.0"})
