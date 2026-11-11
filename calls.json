@@ -6795,7 +6795,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-11T01:12:23+00:00",
+      "checked_at": "2026-11-11T01:17:35+00:00",
       "conf": 99,
       "dc": false,
       "gate": {
@@ -6807,10 +6807,10 @@
       "match": "QUC @ BYU",
       "pick": "BYU Cougars",
       "price": "-20000",
-      "price_at": "2026-11-11T01:12:02+00:00",
+      "price_at": "2026-11-11T01:17:16+00:00",
       "price_market": "moneyline",
       "price_ref": "34993001:0ML87173602_1",
-      "prob_at": "2026-11-11T01:12:02+00:00",
+      "prob_at": "2026-11-11T01:17:16+00:00",
       "rank": 1,
       "ready": true,
       "side": "home",
@@ -7054,7 +7054,7 @@
     }
    ],
    "candidate_news": {
-    "nba": "2026-11-10T23:34:23+00:00"
+    "nba": "2026-11-11T01:17:35+00:00"
    },
    "candidate_observations": {
     "nba:401909963": {
@@ -7065,39 +7065,48 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-11T01:12:23+00:00",
+      "checked_at": "2026-11-11T01:17:35+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (5 listed)"
+       "what": "injury report checked (4 listed)"
       },
       "id": "nba:401909963",
       "league": "nba",
       "match": "MIA @ UTAH",
       "pick": "Miami Heat",
       "price": "-352",
-      "price_at": "2026-11-11T01:12:02+00:00",
+      "price_at": "2026-11-11T01:17:16+00:00",
       "price_market": "moneyline",
       "price_ref": "34983858:0ML87151638_3",
-      "prob_at": "2026-11-11T01:12:02+00:00",
+      "prob_at": "2026-11-11T01:17:16+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "away",
       "start": "2026-11-11T02:00Z"
      },
      "dc": false,
-     "fp": "3cd49eaefeca",
+     "fp": "d17b3bcfcd6d",
      "gate": {
       "ok": true,
-      "what": "injury report checked (5 listed)"
+      "what": "injury report checked (4 listed)"
      },
      "id": "nba:401909963",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-11T01:17:35+00:00",
+       "what": "injury report checked (4 listed)"
+      }
+     ],
      "match": "MIA @ UTAH",
+     "news_at": "2026-11-11T01:17:35+00:00",
      "pick": "Miami Heat",
      "price": "-352",
-     "price_at": "2026-11-11T01:12:02+00:00",
+     "price_at": "2026-11-11T01:17:16+00:00",
      "price_market": "moneyline",
      "price_ref": "34983858:0ML87151638_3",
      "side": "away",
@@ -7112,7 +7121,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-11T01:12:23+00:00",
+      "checked_at": "2026-11-11T01:17:35+00:00",
       "conf": 99,
       "dc": false,
       "gate": {
@@ -7124,10 +7133,10 @@
       "match": "QUC @ BYU",
       "pick": "BYU Cougars",
       "price": "-20000",
-      "price_at": "2026-11-11T01:12:02+00:00",
+      "price_at": "2026-11-11T01:17:16+00:00",
       "price_market": "moneyline",
       "price_ref": "34993001:0ML87173602_1",
-      "prob_at": "2026-11-11T01:12:02+00:00",
+      "prob_at": "2026-11-11T01:17:16+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -7144,7 +7153,7 @@
      "match": "QUC @ BYU",
      "pick": "BYU Cougars",
      "price": "-20000",
-     "price_at": "2026-11-11T01:12:02+00:00",
+     "price_at": "2026-11-11T01:17:16+00:00",
      "price_market": "moneyline",
      "price_ref": "34993001:0ML87173602_1",
      "side": "home",
