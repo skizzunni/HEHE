@@ -126,6 +126,16 @@ class RosterCheck(unittest.TestCase):
         self.assertEqual(daily_review.roster_check([leg], boom), [])
 
 
+class InjuryCheck(unittest.TestCase):
+    def test_check(self):
+        teams = {"nba": {"Milwaukee Bucks": [["Jaime Jaquez Jr.", "Questionable"]], "New York Knicks": [["X", "Out"]]}}
+        legs = [dict(kind="prop", league="nba", name="Jaime Jaquez Jr.", home="Milwaukee Bucks", away="Los Angeles Lakers", match="LAL @ MIL"),
+                dict(kind="prop", league="nba", name="Mikal Bridges", home="New York Knicks", away="Cleveland Cavaliers", match="CLE @ NY"),
+                dict(kind="game", league="nba", label="Over 200.5", home="Milwaukee Bucks", away="Los Angeles Lakers")]
+        self.assertEqual(daily_review.injury_check(legs, teams), ["Jaime Jaquez Jr.: Questionable (LAL @ MIL)"])
+        self.assertEqual(daily_review.injury_check(legs, {}), [])
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}

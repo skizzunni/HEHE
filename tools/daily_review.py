@@ -557,6 +557,27 @@ def roster_check(legs, fetch=None):
     return bad
 
 
+def injury_check(legs, teams=None):
+    """Ladder prop legs whose player is on ESPN's injury report (Out,
+    Doubtful, Questionable, Day-To-Day): ["Name: Status (MATCH)"]."""
+    if teams is None:
+        try:
+            import injuries
+            teams = injuries.fetch()
+        except Exception:
+            return []
+    out = []
+    for L in legs or []:
+        if L.get("kind") != "prop" or not L.get("name"):
+            continue
+        T = (teams or {}).get(L.get("league")) or {}
+        for side in ("home", "away"):
+            for name, status in T.get(L.get(side)) or []:
+                if name == L["name"]:
+                    out.append(f"{name}: {status} ({L.get('match')})")
+    return out
+
+
 def draw_rate_line(ledger=None, min_n=20, top=5):
     """How often board soccer games ended level, by league (graded games
     with a two-team score), highest first: where a straight-win pick most
@@ -1381,6 +1402,8 @@ def words(r, fit):
         out.append(r["lock_types"])
     if r.get("roster"):
         out.append(r["roster"])
+    if r.get("injury"):
+        out.append(r["injury"])
     if r.get("ufc"):
         out.append(r["ufc"])
     if r.get("ufc_next"):
@@ -1512,6 +1535,12 @@ def main():
         _bad = []
     log[today.isoformat()]["roster"] = (("ROSTER CHECK: not on either team's current roster -- check before betting: "
                                          + ", ".join(_bad) + ".") if _bad else None)
+    try:
+        _inj = injury_check(((_ld.report().get("today") or {}).get("legs")) or [])
+    except Exception:
+        _inj = []
+    log[today.isoformat()]["injury"] = (("INJURY CHECK on today's ladder: " + "; ".join(_inj)
+                                         + " -- check the status before betting.") if _inj else None)
     log[today.isoformat()]["card_missing"] = card_check()
     log[today.isoformat()]["ufc"] = ufc_line(today)
     log[today.isoformat()]["ufc_next"] = ufc_next_line(today)
