@@ -17916,12 +17916,13 @@
    "match": "Kansas Jayhawks at Kentucky Wildcats",
    "p": 0.9389,
    "p_model": 0.9389,
+   "score": "Kansas Jayhawks 89 - Kentucky Wildcats 69",
    "spec": {
     "line": 12.5,
     "t": "nomargin",
     "team": "Kentucky Wildcats"
    },
-   "status": "open"
+   "status": "won"
   },
   "ncaab:401913527|No \u00b7 Illinois Fighting Illini wins by over 18.5 points": {
    "away": "Illinois Fighting Illini",
@@ -18259,6 +18260,23 @@
     "team": "St. John's Red Storm"
    },
    "status": "won"
+  },
+  "ncaab:401920680|No \u00b7 St. John's Red Storm wins by over 44.5 points": {
+   "away": "Colgate Raiders",
+   "date": "2026-11-11",
+   "home": "St. John's Red Storm",
+   "label": "No \u00b7 St. John's Red Storm wins by over 44.5 points",
+   "league": "ncaab",
+   "logged": "2026-11-11T00:06",
+   "match": "Colgate Raiders at St. John's Red Storm",
+   "p": 0.9271,
+   "p_model": 0.9271,
+   "spec": {
+    "line": 44.5,
+    "t": "nomargin",
+    "team": "St. John's Red Storm"
+   },
+   "status": "open"
   },
   "ncaab:401920685|No \u00b7 Michigan Wolverines wins by over 12.5 points": {
    "away": "UConn Huskies",
@@ -42045,7 +42063,7 @@
    "logged": "2026-11-10T00:04",
    "n": 4,
    "prob": 0.7727,
-   "status": "open"
+   "status": "won"
   },
   "20261110:4:1": {
    "fair": 1.32,
@@ -42150,7 +42168,7 @@
    "logged": "2026-11-10T00:04",
    "n": 8,
    "prob": 0.71,
-   "status": "open"
+   "status": "won"
   },
   "20261110:8:2": {
    "fair": 2.14,
@@ -42205,6 +42223,25 @@
    "logged": "2026-11-11T00:02",
    "n": 10,
    "prob": 0.4329,
+   "status": "open"
+  },
+  "20261111:10:2": {
+   "fair": 1.53,
+   "legs": [
+    "nba:401909967|No \u00b7 New York Knicks wins by over 19.5 points",
+    "nhl:401892691|Over 2.5 goals",
+    "ncaaf:401866462|No \u00b7 Sacramento State Hornets wins by over 10.5 points",
+    "ncaaf:401866463|No \u00b7 Massachusetts Minutemen wins by over 14.5 points",
+    "nhl:401892692|Over 2.5 goals",
+    "nba:401909971|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892693|Over 2.5 goals",
+    "nba:401909969|No \u00b7 Chicago Bulls wins by over 8.5 points",
+    "ncaab:401918054|No \u00b7 California Golden Bears wins by over 12.5 points",
+    "nhl:401892690|Over 2.5 goals"
+   ],
+   "logged": "2026-11-11T00:06",
+   "n": 10,
+   "prob": 0.6551,
    "status": "open"
   },
   "20261111:15:0": {
@@ -42306,6 +42343,64 @@
    "logged": "2026-11-11T00:02",
    "n": 20,
    "prob": 0.3118,
+   "status": "open"
+  },
+  "20261111:20:1": {
+   "fair": 3.07,
+   "legs": [
+    "nba:401909967|No \u00b7 New York Knicks wins by over 19.5 points",
+    "nhl:401892691|Over 2.5 goals",
+    "ncaaf:401866462|No \u00b7 Sacramento State Hornets wins by over 10.5 points",
+    "ncaaf:401866463|No \u00b7 Massachusetts Minutemen wins by over 14.5 points",
+    "nhl:401892692|Over 2.5 goals",
+    "nba:401909971|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892693|Over 2.5 goals",
+    "nba:401909969|No \u00b7 Chicago Bulls wins by over 8.5 points",
+    "ncaab:401918054|No \u00b7 California Golden Bears wins by over 12.5 points",
+    "nhl:401892690|Over 2.5 goals",
+    "nhl:401892694|Over 2.5 goals",
+    "nhl:401892695|Over 2.5 goals",
+    "intl:401930244|Over 0.5 goals",
+    "nba:401909968|No \u00b7 Toronto Raptors wins by over 12.5 points",
+    "ncaab:401920680|No \u00b7 St. John's Red Storm wins by over 44.5 points",
+    "ncaab:401909524|No \u00b7 Michigan Wolverines wins by over 19.5 points",
+    "nba:401909974|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "nba:401909970|No \u00b7 Memphis Grizzlies wins by over 12.5 points",
+    "nba:401909972|No \u00b7 Brooklyn Nets wins by over 12.5 points",
+    "ncaaf:401866461|Under 68.5 points"
+   ],
+   "logged": "2026-11-11T00:06",
+   "n": 20,
+   "prob": 0.326,
+   "status": "open"
+  },
+  "20261111:20:2": {
+   "fair": 3.08,
+   "legs": [
+    "nba:401909966|No \u00b7 Indiana Pacers wins by over 19.5 points",
+    "nba:401909967|No \u00b7 New York Knicks wins by over 19.5 points",
+    "nhl:401892691|Over 2.5 goals",
+    "ncaaf:401866462|No \u00b7 Sacramento State Hornets wins by over 10.5 points",
+    "ncaaf:401866463|No \u00b7 Massachusetts Minutemen wins by over 14.5 points",
+    "nhl:401892692|Over 2.5 goals",
+    "nba:401909971|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892693|Over 2.5 goals",
+    "nba:401909969|No \u00b7 Chicago Bulls wins by over 8.5 points",
+    "ncaab:401918054|No \u00b7 California Golden Bears wins by over 12.5 points",
+    "nhl:401892690|Over 2.5 goals",
+    "nhl:401892694|Over 2.5 goals",
+    "nhl:401892695|Over 2.5 goals",
+    "intl:401930244|Over 0.5 goals",
+    "nba:401909968|No \u00b7 Toronto Raptors wins by over 12.5 points",
+    "ncaab:401920680|No \u00b7 St. John's Red Storm wins by over 44.5 points",
+    "ncaab:401909524|No \u00b7 Michigan Wolverines wins by over 19.5 points",
+    "nba:401909974|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "nba:401909970|No \u00b7 Memphis Grizzlies wins by over 12.5 points",
+    "nba:401909972|No \u00b7 Brooklyn Nets wins by over 12.5 points"
+   ],
+   "logged": "2026-11-11T00:06",
+   "n": 20,
+   "prob": 0.3246,
    "status": "open"
   },
   "20261111:2:0": {
