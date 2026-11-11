@@ -211,30 +211,30 @@
  },
  "2026-W46": {
   "all": {
-   "beat_close_pct": 58.6,
-   "brier_close": 0.1785,
-   "brier_published": 0.1738,
+   "beat_close_pct": 60.0,
+   "brier_close": 0.1731,
+   "brier_published": 0.1687,
    "dates": [
     "2026-11-09",
     "2026-11-10"
    ],
-   "logloss_close": 0.5208,
-   "logloss_published": 0.5044,
-   "mean_clv_pts": 0.97,
-   "n": 29
+   "logloss_close": 0.5081,
+   "logloss_published": 0.493,
+   "mean_clv_pts": 1.0,
+   "n": 30
   },
   "calls": {
-   "beat_close_pct": 12.5,
-   "brier_close": 0.1105,
-   "brier_published": 0.0934,
+   "beat_close_pct": 22.2,
+   "brier_close": 0.1001,
+   "brier_published": 0.0855,
    "dates": [
     "2026-11-09",
     "2026-11-10"
    ],
-   "logloss_close": 0.3544,
-   "logloss_published": 0.2955,
-   "mean_clv_pts": -0.89,
-   "n": 8
+   "logloss_close": 0.3305,
+   "logloss_published": 0.2807,
+   "mean_clv_pts": -0.57,
+   "n": 9
   }
  }
 }
