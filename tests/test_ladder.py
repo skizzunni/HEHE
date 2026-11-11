@@ -522,5 +522,9 @@ class RunsLine(unittest.TestCase):
         with mock.patch.object(ladder, "report", lambda bk=None: dict(history=H)):
             self.assertEqual(daily_review.runs_line(), "Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on FAU under 41.5;"
                                                        " 2) 2026-11-09, 1 day, peak $2.08, live.")
+        S = dict(all=[12, 24, 2.22], without=[13, 24, 2.32], kinds=["prop"])
+        with mock.patch.object(ladder, "report", lambda bk=None: dict(history=H, skip_props=S)):
+            self.assertTrue(daily_review.runs_line().endswith(
+                " Replayed on every saved card: as ranked 12/24 cashed at 2.22x, without props 13/24 at 2.32x."))
         with mock.patch.object(ladder, "report", lambda bk=None: dict(history=[])):
             self.assertIsNone(daily_review.runs_line())

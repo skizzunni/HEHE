@@ -884,15 +884,20 @@ def runs_line(book=None):
     that ended it."""
     try:
         import ladder
-        H = ladder.report(book).get("history") or []
+        R = ladder.report(book)
+        H = R.get("history") or []
     except Exception:
         return None
     if not H:
         return None
+    S = R.get("skip_props") or {}
+    a, w = S.get("all") or [0, 0, None], S.get("without") or [0, 0, None]
+    skip = (f" Replayed on every saved card: as ranked {a[0]}/{a[1]} cashed at {a[2]}x, without props"
+            f" {w[0]}/{w[1]} at {w[2]}x." if a[1] and w[1] else "")
     return "Ladder runs: " + "; ".join(
         f"{i + 1}) {h['start']}, {h['days']} day{'s' if h['days'] != 1 else ''}, peak ${h['peak']:.2f}"
         + (f", lost on {', '.join(h.get('lost_on') or [])}" if h.get("status") == "lost" else f", {h.get('status')}")
-        for i, h in enumerate(H)) + "."
+        for i, h in enumerate(H)) + "." + skip
 
 
 def ladder_line(book=None):
