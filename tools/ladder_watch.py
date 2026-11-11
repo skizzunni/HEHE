@@ -35,6 +35,12 @@ def safe_note(L):
     u = re.match(r"^Under\s+([\d.]+)", str(L.get("label") or ""), re.I)
     if u and len(pts) >= 2 and pts[-2] + pts[-1] > float(u.group(1)):
         return f"gone over ({pts[-2] + pts[-1]}, line {u.group(1)}) -- lost"
+    to = re.match(r"^(.+?)\s+over\s+([\d.]+)", str(L.get("label") or ""), re.I)
+    if to:                                   # a team total over already cleared
+        part = next((x for x in re.split(r"\s+-\s+", str(L.get("live_score") or "")) if x.startswith(to.group(1))), None)
+        v = re.search(r"(-?\d+)\s*$", part or "")
+        if v and int(v.group(1)) > float(to.group(2)):
+            return f"already over ({v.group(1)}, line {to.group(2)})"
     t = re.match(r"^(.+?)\s+under\s+([\d.]+)", str(L.get("label") or ""), re.I)
     if t:
         part = next((x for x in re.split(r"\s+-\s+", str(L.get("live_score") or "")) if x.startswith(t.group(1))), None)
