@@ -1346,6 +1346,11 @@ in both halves; 62 of 79 against about 83% expected is about a 1-in-7 chance
 by luck, short of the 99.5% bar, so nothing is cut. The ladder already has a
 switch (`SKIP_KINDS`) that keeps a kind off the ticket, used only on the
 user's word. The review prints this split daily.
+Replayed on every saved card (`tools/ladder_study.py skip_study`, the
+best-chance 2x-5x ticket each day): with props 6/11 then 6/13 cashed at
+2.10x / 2.32x average; without props 6/11 then 7/13 at 2.21x / 2.41x. Equal
+or one ticket better in each half and paying a little more -- the same
+direction, still too few tickets to call it proven.
 
 ## Rejected
 

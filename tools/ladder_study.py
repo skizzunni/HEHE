@@ -64,6 +64,30 @@ def combo_study(book=None, pools=(6, 8, 12), maxes=(4, 6)):
     return out
 
 
+def skip_study(book=None, kinds=("prop",)):
+    """ladder.best_combo on every saved card with and without the given leg
+    types (ladder.leg_type), by date half: {(label, half): dict(won, n, pays)}
+    where label is "all" or "no <kinds>". Graded tickets only."""
+    import ladder
+    b = book or locks.load()
+    days = sorted(b["days"])
+    mid = days[len(days) // 2] if days else ""
+    out = {}
+    for d in days:
+        keys = b["days"][d]
+        keys = keys.get("legs") if isinstance(keys, dict) else keys
+        legs = [dict(b["legs"][k], key=k) for k in keys or [] if k in b["legs"]]
+        for lab, pool in (("all", legs), ("no " + "/".join(kinds), [x for x in legs if ladder.leg_type(x) not in kinds])):
+            c = ladder.best_combo(pool)
+            if not c or not all(x.get("status") in ("won", "lost") for x in c):
+                continue
+            a = out.setdefault((lab, "1st" if d < mid else "2nd"), dict(won=0, n=0, pays=0.0))
+            a["n"] += 1
+            a["won"] += all(x["status"] == "won" for x in c)
+            a["pays"] += math.prod(locks._dec(x["price"]) for x in c)
+    return out
+
+
 def calls_study(book=None, sizes=(2, 3, 4, 5, 6)):
     """The same idea from the board's calls: each day's top K calls by stated
     chance as one parlay, by date half -- {(K, half): dict(won, n, pays)}.
