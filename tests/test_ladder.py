@@ -455,6 +455,20 @@ class LegsByType(unittest.TestCase):
         self.assertEqual(ladder.legs_by_type(G), {"total": dict(won=1, n=2, said=75.0), "spread": dict(won=1, n=1, said=75.0)})
 
 
+class AddOuts(unittest.TestCase):
+    def test_outs(self):
+        import ladder
+        book = {"legs": {"k": dict(gid="nba:1", label="M: 2+ Assists", home="New York Knicks", away="Cleveland Cavaliers"),
+                         "u": dict(gid="nba:2", label="Under 254.5 points", home="Chicago Bulls", away="San Antonio Spurs")}}
+        inj = {"nba": {"New York Knicks": [["Josh Hart", "Out"], ["A", "Day-To-Day"]], "Chicago Bulls": [["B", "Questionable"]]}}
+        rep = dict(today=dict(legs=[dict(gid="nba:1", label="M: 2+ Assists", league="nba"),
+                                    dict(gid="nba:2", label="Under 254.5 points", league="nba")]))
+        ladder.add_outs(rep, inj, book)
+        self.assertEqual(rep["today"]["legs"][0]["outs"], {"New York Knicks": ["Josh Hart"]})
+        self.assertNotIn("outs", rep["today"]["legs"][1])
+        self.assertEqual(ladder.add_outs(dict(today=None), inj, book), dict(today=None))
+
+
 class SkipCompare(unittest.TestCase):
     def test_compare(self):
         import ladder

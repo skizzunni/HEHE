@@ -369,6 +369,27 @@ def leg_type(L):
     return "win"
 
 
+def add_outs(report, inj, book=None):
+    """Mark each of today's ladder legs with the players out or doubtful on
+    either side of its game: L["outs"] = {team: [names]}. `inj` is
+    injuries.fetch() output; teams come from the Locks store (ladder legs
+    carry none). Returns the report."""
+    legs = ((report or {}).get("today") or {}).get("legs") or []
+    if not legs or not inj:
+        return report
+    book = book if book is not None else locks.load()
+    idx = {(v.get("gid"), v.get("label")): v for v in (book.get("legs") or {}).values()}
+    for L in legs:
+        src = idx.get((L.get("gid"), L.get("label"))) or {}
+        T = inj.get(L.get("league")) or {}
+        outs = {tm: [n for n, st in T.get(tm) or [] if st in ("Out", "Doubtful")]
+                for tm in (src.get("away"), src.get("home")) if tm}
+        outs = {k: v for k, v in outs.items() if v}
+        if outs:
+            L["outs"] = outs
+    return report
+
+
 def skip_compare(book, kinds=("prop",)):
     """The best-chance 2x-5x ticket replayed on every saved Locks card, as
     ranked and with `kinds` left out: {"all": [won, n, avg pays],
