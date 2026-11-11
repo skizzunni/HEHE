@@ -12688,7 +12688,7 @@
     "against_market": false,
     "league": "nhl",
     "like": {
-     "n": 202,
+     "n": 203,
      "said": 55,
      "won": 115
     },
@@ -13196,13 +13196,13 @@
       80.7
      ],
      [
-      285,
-      344,
+      293,
+      357,
       81.3
      ]
     ],
-    "hit": 82.0,
-    "n": 694,
+    "hit": 81.6,
+    "n": 707,
     "name": "props nhl Shots on Goal",
     "said": 81.0
    },
@@ -13408,6 +13408,25 @@
     "flag": false,
     "halves": [
      [
+      5,
+      5,
+      74.9
+     ],
+     [
+      4,
+      5,
+      75.5
+     ]
+    ],
+    "hit": 90.0,
+    "n": 10,
+    "name": "locks nhl side",
+    "said": 75.2
+   },
+   {
+    "flag": false,
+    "halves": [
+     [
       13,
       16,
       79.0
@@ -13508,15 +13527,15 @@
       91.5
      ],
      [
-      32,
       33,
+      34,
       91.2
      ]
     ],
-    "hit": 91.9,
-    "n": 62,
+    "hit": 92.1,
+    "n": 63,
     "name": "safe locks nhl under",
-    "said": 91.3
+    "said": 91.4
    },
    {
     "flag": false,
@@ -13541,18 +13560,18 @@
     "flag": false,
     "halves": [
      [
-      83,
-      88,
-      90.4
+      96,
+      103,
+      89.3
      ],
      [
-      135,
-      147,
-      86.2
+      122,
+      133,
+      86.6
      ]
     ],
-    "hit": 92.8,
-    "n": 235,
+    "hit": 92.4,
+    "n": 236,
     "name": "prop locks",
     "said": 87.8
    },
@@ -13662,21 +13681,23 @@
    }
   },
   "card_missing": null,
-  "cautions": "Running ahead: NBA under on all saved lines 1028/1147 vs 82%; NHL over on all saved lines 126/139 vs 84%; NHL spread on all saved lines 263/301 vs 83%; NHL teamover on all saved lines 163/181 vs 83%.",
+  "cautions": "Running ahead: NBA under on all saved lines 1028/1147 vs 82%; NHL over on all saved lines 127/140 vs 84%; NHL spread on all saved lines 266/305 vs 83%; NHL teamover on all saved lines 164/182 vs 83%.",
   "clv": {
-   "avg": -0.35,
-   "beat": 40.0,
-   "n": 5
+   "avg": -0.29,
+   "beat": 33.3,
+   "n": 6
   },
   "cold": null,
   "day": "2026-11-10",
   "dc_side": "Soccer or-draw picks by side: home 77% vs 74% stated on 405 (halves 78%, 77%); away 74% vs 73% stated on 200 (halves 73%, 74%). Straight wins: 66% vs 65% stated on 279; 57 of 96 losses were draws.",
-  "ladder": "Ladder: run 5, bank $2.00, 1 win(s) in a row, best $9.57; today stakes $2.00 at 2.45x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.45x for the plain top 4; 10 wins to $10,000; legs: Kyle Kuzma: 2+ Assists (MIL @ NY; live 8:24 - 4th, Milwaukee Bucks 76 - New York Knicks 97, 2 so far, line reached; props like it 92/119), Over 214.5 points (Miami Heat at Utah Jazz; live 3:29 - 1st, Miami Heat 22 - Utah Jazz 21, 43 so far, line 214.5, too early to project), Over 208.5 points (Orlando Magic at Sacramento Kings; 10:00 PM, open), Akron Zips under 23.5 points (Western Michigan Broncos at Akron Zips; live 12:52 - 4th, Akron Zips 7 - Western Michigan Broncos 35, on pace for 9 (7 so far, line 23.5, room for 16 more), on track).",
+  "ladder": "Ladder: run 5, bank $2.00, 1 win(s) in a row, best $9.57; today stakes $2.00 at 2.45x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.45x for the plain top 4; 10 wins to $10,000; legs: Kyle Kuzma: 2+ Assists (MIL @ NY; live 6:28 - 4th, Milwaukee Bucks 78 - New York Knicks 106, 3 so far, line reached; props like it 92/119), Over 214.5 points (Miami Heat at Utah Jazz; live 1:40 - 1st, Miami Heat 26 - Utah Jazz 23, 49 so far, line 214.5, too early to project), Over 208.5 points (Orlando Magic at Sacramento Kings; 10:00 PM, open), Akron Zips under 23.5 points (Western Michigan Broncos at Akron Zips; live 11:44 - 4th, Akron Zips 14 - Western Michigan Broncos 35, on pace for 17 (14 so far, line 23.5, room for 9 more), on track).",
   "leaks_14d": [],
   "locks": {
-   "lost": [],
+   "lost": [
+    "New Jersey Devils +1.5 (New Jersey Devils at Winnipeg Jets) New Jersey Devils 2 - Winnipeg Jets 4"
+   ],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      2,
@@ -13689,7 +13710,7 @@
   "loss_reasons_14d": {
    "blowout": 36,
    "close game": 110,
-   "coin flip": 43,
+   "coin flip": 44,
    "favourite lost": 137,
    "price moved against it": 32,
    "upset": 48
@@ -13711,6 +13732,27 @@
      "upset"
     ],
     "why": "margin 6 \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "like": {
+     "n": 203,
+     "said": 55,
+     "won": 115
+    },
+    "match": "NJ @ WPG",
+    "pick": "New Jersey Devils",
+    "price": "-142",
+    "said": 56,
+    "score": {
+     "New Jersey Devils": 2,
+     "Winnipeg Jets": 4
+    },
+    "tags": [
+     "coin flip"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 56% \u00b7 coin flip"
    }
   ],
   "lottery": [
@@ -13723,10 +13765,12 @@
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "New Jersey Devils to win"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k",
     "won": 1
    },
@@ -13739,10 +13783,12 @@
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "New Jersey Devils to win"
+    ],
     "legs": 10,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+25",
     "won": 1
    },
@@ -13755,21 +13801,23 @@
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "New Jersey Devils to win"
+    ],
     "legs": 9,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "10k+100",
     "won": 1
    }
   ],
   "nhl_b2b": null,
   "picks": {
-   "hit": 80.0,
-   "lost": 1,
-   "n": 5,
-   "roi": -7.5,
-   "said": 83.0,
+   "hit": 66.7,
+   "lost": 2,
+   "n": 6,
+   "roi": -22.9,
+   "said": 78.5,
    "won": 4
   },
   "picks_by_league": {
@@ -13788,6 +13836,14 @@
     "roi": -23.7,
     "said": 83.0,
     "won": 2
+   },
+   "nhl": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 56.0,
+    "won": 0
    }
   },
   "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 73/90 (81% vs 81% stated); waiting for 100 legs. History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).",
@@ -13799,15 +13855,15 @@
     "said_price": 87.3,
     "won": 2036
    },
-   "n": 0,
-   "said": null,
-   "won": 0
+   "n": 13,
+   "said": 82.0,
+   "won": 8
   },
   "runs": "Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points; 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5; 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, live.",
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 11,
+   "open": 10,
    "plays": {
     "best": [
      7,
@@ -13820,7 +13876,7 @@
      "open"
     ]
    },
-   "won": 0
+   "won": 1
   },
   "strong": {
    "hit": 100.0,
@@ -13832,19 +13888,21 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 61.4,
-   "as_good_pct": 80.0,
+   "as_bad_pct": 38.2,
+   "as_good_pct": 89.3,
    "broke_on": "ncaab Duke Blue Devils at 76%",
-   "coin_flips": 0,
+   "coin_flips": 1,
    "expected_by_league": {
-    "ncaab": 0.5
+    "ncaab": 0.5,
+    "nhl": 0.4
    },
-   "expected_losses": 0.8,
-   "lost": 1,
+   "expected_losses": 1.3,
+   "lost": 2,
    "lost_by_league": {
-    "ncaab": 1
+    "ncaab": 1,
+    "nhl": 1
    },
-   "open": 19,
+   "open": 18,
    "won": 4
   },
   "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
@@ -13854,10 +13912,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 76.9,
-    "lost": 228,
-    "n": 986,
-    "roi": 1.7,
+    "hit": 76.8,
+    "lost": 229,
+    "n": 987,
+    "roi": 1.6,
     "said": 72.0,
     "won": 758
    }
@@ -13902,10 +13960,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6403,
-    "market_only": 0.6403,
-    "model_40": 0.6483,
-    "n": 168,
+    "logloss": 0.6414,
+    "market_only": 0.6414,
+    "model_40": 0.6495,
+    "n": 169,
     "weight": 0.0
    }
   },
@@ -13998,7 +14056,7 @@
      "against_market": false,
      "league": "nhl",
      "like": {
-      "n": 202,
+      "n": 203,
       "said": 55,
       "won": 115
      },
