@@ -7411,6 +7411,45 @@
    "tip": "9:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909975|away|Kalshi": {
+   "dec": 2.0947,
+   "ev": 0.0365,
+   "fair": 0.4948,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909975",
+   "kind": "value",
+   "league": "nba",
+   "match": "OKC @ POR",
+   "price": "+109",
+   "seen": "2026-11-11T21:19:44+00:00",
+   "side": "away",
+   "start": "2026-11-12T03:00Z",
+   "team": "Oklahoma City Thunder",
+   "tip": "10:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909975|sure": {
+   "id": "nba:401909975",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+109",
+     "stake_share": 0.4824,
+     "team": "Oklahoma City Thunder",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-105",
+     "stake_share": 0.5176,
+     "team": "Portland Trail Blazers",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "OKC @ POR",
+   "profit": 0.0105,
+   "seen": "2026-11-11T21:19:44+00:00"
+  },
   "ncaab:401906758|away|FanDuel": {
    "dec": 41.0,
    "ev": 0.0352,
