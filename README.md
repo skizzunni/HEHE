@@ -18,6 +18,11 @@ are in the dated notes below.
 | Off a bye / short week | NFL | 106 | Mixed by season; rejected |
 | Fighter rating, fighter stats, rating disagreements | UFC | 2,850 | Behind the price; rejected |
 | Goes the distance (both fighters' finish history) | UFC | 3,099 | Sorts fights well in both halves; no prices to test: **shown as information** |
+| Overs / unders at the closing total, football | college, NFL | 3,621 | Coin flip; NFL unders +2/+7/+3% then -12.6%: rejected |
+| Off a bye week | NFL | 106 | +5.5%, -8.2%, +54%, -13.2% by season: rejected |
+| Player props vs game lines on the Locks | all | 549 legs | Props the only type short in both halves (80%, 76% vs 86%, 79%): **user's call** |
+| Ladder ticket with props left out (replayed) | all | 24 tickets | 13/24 at 2.32x vs 12/24 at 2.22x: **user's call** |
+| Opponent has more players Out at tip-off | NBA, NHL, NFL | 114 | 79%, 86% vs 68%, 64% stated; 8 days only: **early read, collecting** |
 
 ## What actually went wrong
 
