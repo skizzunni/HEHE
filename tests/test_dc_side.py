@@ -107,6 +107,25 @@ class LockTypes(unittest.TestCase):
         self.assertIsNone(daily_review.locks_type_line(legs[:10]))
 
 
+class RosterCheck(unittest.TestCase):
+    def test_check(self):
+        teams = {"sports": [{"leagues": [{"teams": [{"team": {"displayName": "Milwaukee Bucks", "id": "15"}},
+                                                    {"team": {"displayName": "Los Angeles Lakers", "id": "13"}}]}]}]}
+        rosters = {"15": {"athletes": [{"displayName": "Jaime Jaquez Jr."}]},
+                   "13": {"athletes": [{"position": "G", "items": [{"displayName": "Luka Doncic"}]}]}}
+        def fetch(url):
+            if url.endswith("limit=500"):
+                return teams
+            return rosters[url.split("/teams/")[1].split("/")[0]]
+        leg = dict(kind="prop", league="nba", name="Jaime Jaquez Jr.", home="Milwaukee Bucks", away="Los Angeles Lakers", match="LAL @ MIL")
+        self.assertEqual(daily_review.roster_check([leg], fetch), [])
+        self.assertEqual(daily_review.roster_check([dict(leg, name="Bam Adebayo")], fetch), ["Bam Adebayo (LAL @ MIL)"])
+        self.assertEqual(daily_review.roster_check([dict(leg, home="Unknown Team")], fetch), [])      # unreadable: no alarm
+        def boom(url):
+            raise OSError("down")
+        self.assertEqual(daily_review.roster_check([leg], boom), [])
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}

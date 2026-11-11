@@ -514,6 +514,49 @@ def locks_type_line(legs=None):
             + (f" Short in both halves: {', '.join(short)}." if short else ""))
 
 
+_SPORT_PATH = {"nba": "basketball/nba", "nfl": "football/nfl", "nhl": "hockey/nhl", "wnba": "basketball/wnba",
+               "mlb": "baseball/mlb", "ncaab": "basketball/mens-college-basketball",
+               "ncaaf": "football/college-football"}
+
+
+def roster_check(legs, fetch=None):
+    """Today's ladder prop legs whose player is on neither team's current
+    ESPN roster: ["Name (AWAY @ HOME)"]. Empty when every player checks out
+    or a roster cannot be read (never a false alarm from a failed fetch)."""
+    import urllib.request
+    def _get(url):
+        with urllib.request.urlopen(url, timeout=20) as r:
+            return json.load(r)
+    fetch = fetch or _get
+    bad, ids = [], {}
+    for L in legs or []:
+        if L.get("kind") != "prop" or not L.get("name"):
+            continue
+        path = _SPORT_PATH.get(L.get("league"))
+        if not path:
+            continue
+        try:
+            if path not in ids:
+                T = fetch(f"https://site.api.espn.com/apis/site/v2/sports/{path}/teams?limit=500")
+                ids[path] = {t["team"]["displayName"]: t["team"]["id"]
+                             for lg in T["sports"][0]["leagues"] for t in lg["teams"]}
+            names = set()
+            for side in ("home", "away"):
+                tid = ids[path].get(L.get(side))
+                if tid is None:
+                    raise KeyError(side)
+                R = fetch(f"https://site.api.espn.com/apis/site/v2/sports/{path}/teams/{tid}/roster")
+                ath = R.get("athletes") or []
+                if ath and isinstance(ath[0], dict) and "items" in ath[0]:      # grouped by position
+                    ath = [a for g in ath for a in g.get("items") or []]
+                names |= {a.get("displayName") for a in ath}
+        except Exception:
+            continue
+        if names and L["name"] not in names:
+            bad.append(f"{L['name']} ({L.get('match')})")
+    return bad
+
+
 def draw_rate_line(ledger=None, min_n=20, top=5):
     """How often board soccer games ended level, by league (graded games
     with a two-team score), highest first: where a straight-win pick most
@@ -1336,6 +1379,8 @@ def words(r, fit):
         out.append(r["draws"])
     if r.get("lock_types"):
         out.append(r["lock_types"])
+    if r.get("roster"):
+        out.append(r["roster"])
     if r.get("ufc"):
         out.append(r["ufc"])
     if r.get("ufc_next"):
@@ -1460,6 +1505,13 @@ def main():
     log[today.isoformat()]["nhl_b2b"] = nhl_b2b_line(today, ledger=ledger)
     log[today.isoformat()]["draws"] = draw_rate_line(ledger)
     log[today.isoformat()]["lock_types"] = locks_type_line()
+    try:                                  # ladder prop players on today's rosters
+        import ladder as _ld
+        _bad = roster_check(((_ld.report().get("today") or {}).get("legs")) or [])
+    except Exception:
+        _bad = []
+    log[today.isoformat()]["roster"] = (("ROSTER CHECK: not on either team's current roster -- check before betting: "
+                                         + ", ".join(_bad) + ".") if _bad else None)
     log[today.isoformat()]["card_missing"] = card_check()
     log[today.isoformat()]["ufc"] = ufc_line(today)
     log[today.isoformat()]["ufc_next"] = ufc_next_line(today)
