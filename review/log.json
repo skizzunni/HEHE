@@ -13559,8 +13559,8 @@
    {
     "flag": false,
     "halves": null,
-    "hit": 40.1,
-    "n": 409,
+    "hit": 40.2,
+    "n": 410,
     "name": "value bets",
     "said": 44.4
    },
@@ -13664,14 +13664,14 @@
   "card_missing": null,
   "cautions": "Running ahead: NBA under on all saved lines 1028/1147 vs 82%; NHL over on all saved lines 126/139 vs 84%; NHL spread on all saved lines 263/301 vs 83%; NHL teamover on all saved lines 163/181 vs 83%.",
   "clv": {
-   "avg": -0.77,
-   "beat": 33.3,
-   "n": 3
+   "avg": 0.35,
+   "beat": 50.0,
+   "n": 4
   },
   "cold": null,
   "day": "2026-11-10",
   "dc_side": "Soccer or-draw picks by side: home 77% vs 74% stated on 405 (halves 78%, 77%); away 74% vs 73% stated on 200 (halves 73%, 74%). Straight wins: 66% vs 65% stated on 279; 57 of 96 losses were draws.",
-  "ladder": "Ladder: run 5, bank $2.00, 1 win(s) in a row, best $9.57; today stakes $2.00 at 2.45x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.45x for the plain top 4; 10 wins to $10,000; legs: Kyle Kuzma: 2+ Assists (MIL @ NY; live 11:28 - 4th, Milwaukee Bucks 74 - New York Knicks 85, 2 so far, line reached; props like it 92/119), Over 214.5 points (Miami Heat at Utah Jazz; live 6:48 - 1st, Miami Heat 18 - Utah Jazz 12, 30 so far, line 214.5, too early to project), Over 208.5 points (Orlando Magic at Sacramento Kings; 10:00 PM, open), Akron Zips under 23.5 points (Western Michigan Broncos at Akron Zips; live End of 3rd, Akron Zips 7 - Western Michigan Broncos 28, on pace for 9 (7 so far, line 23.5, room for 16 more), on track).",
+  "ladder": "Ladder: run 5, bank $2.00, 1 win(s) in a row, best $9.57; today stakes $2.00 at 2.45x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.45x for the plain top 4; 10 wins to $10,000; legs: Kyle Kuzma: 2+ Assists (MIL @ NY; live 10:47 - 4th, Milwaukee Bucks 74 - New York Knicks 91, 2 so far, line reached; props like it 92/119), Over 214.5 points (Miami Heat at Utah Jazz; live 5:18 - 1st, Miami Heat 22 - Utah Jazz 14, 36 so far, line 214.5, too early to project), Over 208.5 points (Orlando Magic at Sacramento Kings; 10:00 PM, open), Akron Zips under 23.5 points (Western Michigan Broncos at Akron Zips; live 13:44 - 4th, Akron Zips 7 - Western Michigan Broncos 28, on pace for 9 (7 so far, line 23.5, room for 16 more), on track).",
   "leaks_14d": [],
   "locks": {
    "lost": [],
@@ -13692,9 +13692,27 @@
    "coin flip": 43,
    "favourite lost": 137,
    "price moved against it": 32,
-   "upset": 47
+   "upset": 48
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "ncaab",
+    "like": null,
+    "match": "MSU @ DUKE",
+    "pick": "Duke Blue Devils",
+    "price": "-340",
+    "said": 76,
+    "score": {
+     "Duke Blue Devils": 73,
+     "Michigan State Spartans": 79
+    },
+    "tags": [
+     "upset"
+    ],
+    "why": "margin 6 \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -13747,11 +13765,11 @@
   ],
   "nhl_b2b": null,
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 3,
-   "roi": 18.0,
-   "said": 82.7,
+   "hit": 75.0,
+   "lost": 1,
+   "n": 4,
+   "roi": -11.5,
+   "said": 81.0,
    "won": 3
   },
   "picks_by_league": {
@@ -13764,11 +13782,11 @@
     "won": 2
    },
    "ncaab": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 20.6,
-    "said": 82.0,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -39.7,
+    "said": 79.0,
     "won": 1
    }
   },
@@ -13814,15 +13832,19 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 100.0,
-   "as_good_pct": 55.8,
-   "broke_on": null,
+   "as_bad_pct": 57.6,
+   "as_good_pct": 83.7,
+   "broke_on": "ncaab Duke Blue Devils at 76%",
    "coin_flips": 0,
-   "expected_by_league": {},
-   "expected_losses": 0.5,
-   "lost": 0,
-   "lost_by_league": {},
-   "open": 21,
+   "expected_by_league": {
+    "ncaab": 0.4
+   },
+   "expected_losses": 0.8,
+   "lost": 1,
+   "lost_by_league": {
+    "ncaab": 1
+   },
+   "open": 20,
    "won": 3
   },
   "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
@@ -13833,9 +13855,9 @@
    },
    "agree": {
     "hit": 76.9,
-    "lost": 227,
-    "n": 984,
-    "roi": 1.8,
+    "lost": 228,
+    "n": 985,
+    "roi": 1.7,
     "said": 72.0,
     "won": 757
    }
@@ -13853,10 +13875,10 @@
    "ncaab": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.1941,
-    "market_only": 0.1941,
-    "model_40": 0.216,
-    "n": 45,
+    "logloss": 0.2206,
+    "market_only": 0.2206,
+    "model_40": 0.2398,
+    "n": 46,
     "weight": 0.0
    },
    "ncaaf": {

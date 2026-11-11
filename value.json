@@ -7001,6 +7001,23 @@
    "profit": 0.0071,
    "seen": "2026-11-10T01:02:06+00:00"
   },
+  "nba:401909969|home|Kalshi": {
+   "dec": 8.5543,
+   "ev": 0.0316,
+   "fair": 0.1206,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909969",
+   "kind": "value",
+   "league": "nba",
+   "match": "SA @ CHI",
+   "price": "+755",
+   "seen": "2026-11-11T02:28:02+00:00",
+   "side": "home",
+   "start": "2026-11-12T01:00Z",
+   "team": "Chicago Bulls",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909969|sure": {
    "id": "nba:401909969",
    "kind": "sure",
@@ -7362,6 +7379,7 @@
     "t": "over"
    },
    "start": "2026-11-11T00:00Z",
+   "status": "won",
    "team": "over 147.5",
    "tip": "7:00 PM",
    "venue": "Kalshi"
@@ -7385,6 +7403,7 @@
     "t": "over"
    },
    "start": "2026-11-11T00:00Z",
+   "status": "won",
    "team": "over 149.5",
    "tip": "7:00 PM",
    "venue": "Kalshi"

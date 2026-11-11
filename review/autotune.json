@@ -13,9 +13,9 @@
     "per_sport": 2
    },
    "second": {
-    "hit": 81.2,
-    "n": 170,
-    "roi": 0.18
+    "hit": 80.7,
+    "n": 171,
+    "roi": -0.4
    }
   },
   "dates": [
@@ -31,6 +31,8 @@
      "n": 84,
      "roi": 3.43
     },
+    "gain": 0.17,
+    "gain_lower": -9.23,
     "rule": {
      "min_dec": 1.0,
      "per_sport": 1
@@ -68,9 +70,9 @@
      "per_sport": 2
     },
     "second": {
-     "hit": 81.2,
-     "n": 170,
-     "roi": 0.18
+     "hit": 80.7,
+     "n": 171,
+     "roi": -0.4
     }
    },
    {
@@ -84,9 +86,9 @@
      "per_sport": 2
     },
     "second": {
-     "hit": 78.1,
-     "n": 169,
-     "roi": 2.03
+     "hit": 77.6,
+     "n": 170,
+     "roi": 1.43
     }
    },
    {
@@ -100,9 +102,9 @@
      "per_sport": 3
     },
     "second": {
-     "hit": 82.3,
-     "n": 175,
-     "roi": 0.4
+     "hit": 81.8,
+     "n": 176,
+     "roi": -0.17
     }
    },
    {
@@ -116,9 +118,9 @@
      "per_sport": 3
     },
     "second": {
-     "hit": 78.7,
-     "n": 174,
-     "roi": 2.09
+     "hit": 78.3,
+     "n": 175,
+     "roi": 1.51
     }
    },
    {
@@ -132,9 +134,9 @@
      "per_sport": null
     },
     "second": {
-     "hit": 83.0,
-     "n": 176,
-     "roi": 0.04
+     "hit": 82.5,
+     "n": 177,
+     "roi": -0.52
     }
    },
    {
@@ -148,9 +150,9 @@
      "per_sport": null
     },
     "second": {
-     "hit": 80.0,
-     "n": 175,
-     "roi": 2.92
+     "hit": 79.5,
+     "n": 176,
+     "roi": 2.34
     }
    }
   ]
@@ -167,11 +169,11 @@
   },
   "ncaab": {
    "benched": false,
-   "hit": 91.5,
-   "implied": 91.2,
-   "n": 47,
-   "roi": 1.0,
-   "upper95": 96.6,
+   "hit": 89.6,
+   "implied": 91.0,
+   "n": 48,
+   "roi": -1.1,
+   "upper95": 95.5,
    "won": 43
   },
   "ncaaf": {
@@ -330,11 +332,11 @@
   "Kalshi middle, confirmed": {
    "benched": false,
    "breakeven": 46.8,
-   "hit": 40.2,
-   "n": 122,
-   "roi": -13.5,
-   "upper95": 49.0,
-   "won": 49
+   "hit": 40.7,
+   "n": 123,
+   "roi": -12.5,
+   "upper95": 49.5,
+   "won": 50
   },
   "Kalshi middle, single": {
    "benched": false,
