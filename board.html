@@ -754,6 +754,13 @@ function ufcNote(league, r){
     + (x && x.n ? '<div class="sbn">UFC favourites at ' + k + '% since 2021: ' + x.won + ' of ' + x.n + ' won ('
       + Math.round(100 * x.won / x.n) + '%), ' + (x.roi >= 0 ? '+' : '') + x.roi + '% a bet at DraftKings prices.</div>' : '');
 }
+// the ladder's ticket replayed on every saved card with props left out
+// (ladder.skip_compare): information for the user's call, not a rule
+function ladderSkip(S){
+  if(!S || !S.all || !S.without || !S.all[1] || !S.without[1]) return '';
+  const f = a => a[0] + ' of ' + a[1] + ' cashed at ' + a[2] + 'x';
+  return ' Replayed on every saved card: as ranked ' + f(S.all) + '; without player props ' + f(S.without) + '.';
+}
 // ladder legs by bet type (ladder.legs_by_type): which kind of leg loses
 function ladderTypes(T){
   const order = ['win', 'spread', 'total', 'team total', 'prop'];
@@ -1805,7 +1812,7 @@ function ladderHTML(){
     + (X.legs_record && X.legs_record.n ? '<p class="note">Ladder legs so far: <b>' + X.legs_record.won + ' of ' + X.legs_record.n + '</b> ('
        + Math.round(100 * X.legs_record.won / X.legs_record.n) + '% vs ' + X.legs_record.said + '% stated); tickets ' + (X.tickets || {}).won + ' of '
        + (X.tickets || {}).n + '. One leg lost ends a ticket, which is why a ticket of likely legs still loses often.'
-       + ladderKinds(X.legs_by_kind) + ladderTypes(X.legs_by_type) + '</p>' : '')
+       + ladderKinds(X.legs_by_kind) + ladderTypes(X.legs_by_type) + ladderSkip(X.skip_props) + '</p>' : '')
     + (T ? '<ul class="betlegs">' + T.legs.map(L => '<li>' + esc(L.label) + teamTag(L) + ' <b>' + esc(L.price) + '</b> &middot; '
           + (100 * L.p).toFixed(0) + '% &middot; ' + esc(L.match || '') + ' ' + res(L.status)
           + (L.score && (L.status === 'won' || L.status === 'lost') ? '<div class="sbn">' + esc(L.score) + '</div>' : '')

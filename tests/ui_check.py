@@ -178,6 +178,7 @@ PROBE = """<script>setTimeout(function(){
   D.locks = lkP;
   out.pcWeak = parlayText(pcW, 5);
   out.pcheck = [parlayText(pcA, 5), parlayText(pcB, 0), parlayText(null, 5), String(parlayLegs().every(x => typeof x.p === "number"))];
+  out.lskip = [ladderSkip({all: [12, 24, 2.22], without: [13, 24, 2.32]}), ladderSkip(null)];
   out.ltypes = [ladderTypes({win: {won: 6, n: 6}, prop: {won: 9, n: 12}, total: {won: 8, n: 9}}), ladderTypes({})];
   out.lkinds = [ladderKinds({game: {won: 16, n: 18, said: 75.7}, prop: {won: 7, n: 10, said: 79.3}}), ladderKinds({}), ladderKinds(undefined)];
   out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({}), drawNote({sd: "a"}), drawNote({sd: "h"})];
@@ -525,6 +526,9 @@ def main():
     od = new.get("ownDog") or ""
     if "$1 on each of the 111 at the no-vig price would be \u221220.9% a bet" not in od or "NHL 13 of 29 (+4.2% a bet)" not in od:
         fails.append("own-view underdog ROI wrong: " + repr(od[-300:]))
+    ls = new.get("lskip") or ["", "x"]
+    if not (ls[0] == " Replayed on every saved card: as ranked 12 of 24 cashed at 2.22x; without player props 13 of 24 cashed at 2.32x." and ls[1] == ""):
+        fails.append("ladder skip replay wrong: " + repr(ls))
     lt = new.get("ltypes") or ["", "x"]
     if not (lt[0] == " By bet: wins 6/6, totals 8/9, props 9/12." and lt[1] == ""):
         fails.append("ladder types wrong: " + repr(lt))

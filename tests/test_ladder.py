@@ -455,6 +455,18 @@ class LegsByType(unittest.TestCase):
         self.assertEqual(ladder.legs_by_type(G), {"total": dict(won=1, n=2, said=75.0), "spread": dict(won=1, n=1, said=75.0)})
 
 
+class SkipCompare(unittest.TestCase):
+    def test_compare(self):
+        import ladder
+        legs = {"a": dict(label="Over 200.5", p=0.8, price="-400", gid="g1", status="won"),
+                "b": dict(label="Over 210.5", p=0.8, price="-400", gid="g2", status="won"),
+                "c": dict(label="Over 220.5", p=0.8, price="-400", gid="g3", status="won"),
+                "d": dict(label="P: 2+ Assists", kind="prop", p=0.9, price="-400", gid="g4", status="lost"),
+                "e": dict(label="Over 230.5", p=0.78, price="-400", gid="g5", status="won")}
+        out = ladder.skip_compare(dict(days={"2026-11-01": list(legs)}, legs=legs))
+        self.assertEqual((out["all"][:2], out["without"][:2], out["kinds"]), ([0, 1], [1, 1], ["prop"]))
+
+
 class LegsByKind(unittest.TestCase):
     def test_split(self):
         import ladder

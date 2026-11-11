@@ -369,6 +369,28 @@ def leg_type(L):
     return "win"
 
 
+def skip_compare(book, kinds=("prop",)):
+    """The best-chance 2x-5x ticket replayed on every saved Locks card, as
+    ranked and with `kinds` left out: {"all": [won, n, avg pays],
+    "without": [won, n, avg pays], "kinds": [...]} over graded tickets."""
+    out = {"all": [0, 0, 0.0], "without": [0, 0, 0.0]}
+    for d in sorted((book or {}).get("days") or {}):
+        keys = book["days"][d]
+        keys = keys.get("legs") if isinstance(keys, dict) else keys
+        legs = [dict(book["legs"][k], key=k) for k in keys or [] if k in book.get("legs", {})]
+        for lab, pool in (("all", legs), ("without", [x for x in legs if leg_type(x) not in kinds])):
+            c = best_combo(pool)
+            if c and all(x.get("status") in ("won", "lost") for x in c):
+                a = out[lab]
+                a[0] += all(x["status"] == "won" for x in c)
+                a[1] += 1
+                a[2] += math.prod(locks._dec(x["price"]) for x in c)
+    for a in out.values():
+        a[2] = round(a[2] / a[1], 2) if a[1] else None
+    out["kinds"] = list(kinds)
+    return out
+
+
 def legs_by_type(legs):
     """Graded ladder legs by bet type: {type: dict(won, n, said)}."""
     out = {}
@@ -451,6 +473,7 @@ def report(book=None, start=START, target=TARGET):
                 # the same, game lines and player props apart: which kind the ladder loses on
                 legs_by_kind=legs_by_kind([L for r in runs for d in r["days"] for L in d["legs"]]),
                 legs_by_type=legs_by_type([L for r in runs for d in r["days"] for L in d["legs"]]),
+                skip_props=(lambda: skip_compare(book or locks.load()))(),
                 skip=[list(k) for k in SKIP_KINDS],    # leg kinds kept off the ladder (the board preview honours it)
         counts=count_record(book, ""),         # every saved Locks card, not just the ladder's
         counts_games=count_record(book, "", games_only=True),   # the same with game lines only
