@@ -211,9 +211,37 @@ def count_record(book=None, start=START, hi=FLEX_MAX, games_only=False):
     return out
 
 
+def _game_miss(L):
+    """A lost game or team total with its final number and the miss:
+    "Over 208.5 points (207, missed by 1.5)". The label alone otherwise."""
+    import re
+    lab, sc = str(L.get("label") or ""), str(L.get("score") or "")
+    fmt = lambda x: int(x) if float(x).is_integer() else x
+    m = re.match(r"^(Over|Under)\s+([\d.]+)", lab, re.I)
+    if m:
+        pts = [int(x) for x in re.findall(r"-?\d+(?=\s*(?:-|$))", sc)]
+        if len(pts) < 2:
+            return lab
+        got, line = pts[-2] + pts[-1], float(m.group(2))
+    else:
+        t = re.match(r"^(.+?)\s+(over|under)\s+([\d.]+)", lab, re.I)
+        if not t:
+            return lab
+        part = next((x for x in re.split(r"\s+-\s+", sc) if x.startswith(t.group(1))), None)
+        v = re.search(r"(-?\d+)\s*$", part or "")
+        if not v:
+            return lab
+        got, line, m = int(v.group(1)), float(t.group(3)), t
+        m = re.match(r"(over|under)", t.group(2), re.I)
+    miss = (line - got) if m.group(1).lower() == "over" else (got - line)
+    return f"{lab} ({got}, missed by {fmt(miss)})" if miss > 0 else lab
+
+
 def miss_label(L, pbook=None):
     """A lost leg's label, with a prop's final number and the miss when the
     props ledger has it: "Kyle Pitts: 25+ Receiving Yards (23, missed by 2)"."""
+    if L.get("status") == "lost" and L.get("kind") != "prop":
+        return _game_miss(L)
     if L.get("kind") != "prop" or L.get("status") != "lost" or not L.get("market"):
         return L["label"]
     try:
