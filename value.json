@@ -16175,6 +16175,38 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|nba:401909976:away|nba:401909979:{\"line\": 213.5, \"t\": \"over\"}": {
+   "ev": 0.0237,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0117,
+     "fair": 0.2065,
+     "id": "nba:401909976",
+     "price": "+390",
+     "side": "away",
+     "spec": null,
+     "team": "Toronto Raptors"
+    },
+    {
+     "ev": 0.0117,
+     "fair": 0.5182,
+     "id": "nba:401909979",
+     "price": "-105",
+     "side": "{\"line\": 213.5, \"t\": \"over\"}",
+     "spec": {
+      "line": 213.5,
+      "t": "over"
+     },
+     "team": "over 213.5"
+    }
+   ],
+   "payout": 9.567,
+   "prob": 0.107,
+   "seen": "2026-11-12T06:34:01+00:00",
+   "target": 5.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|nba:401909976:away|nhl:401892704:home": {
    "ev": 0.0296,
    "kind": "parlay",
