@@ -483,33 +483,50 @@ def dc_side_line(ledger=None, min_n=30):
     return out
 
 
+def _all_lock_legs():
+    """Every Locks + Safe Locks leg ever saved, or None when unreadable."""
+    try:
+        import locks
+        return [x for p_ in (None, locks.SAFE_LEDGER)
+                for x in ((locks.load(p_) if p_ else locks.load()).get("legs") or {}).values()]
+    except Exception:
+        return None
+
+
+def _halves_by(legs, keyfn, min_half=1):
+    """Graded legs grouped by keyfn, each split at the median date:
+    [(key, [(won%, stated%, n), (won%, stated%, n)])] for groups with
+    min_half+ legs in each half, or None when there are under 40 legs."""
+    G = sorted((x for x in legs or [] if x.get("status") in ("won", "lost") and x.get("p") is not None and x.get("date")),
+               key=lambda x: x["date"])
+    if len(G) < 40:
+        return None
+    mid = G[len(G) // 2]["date"]
+    by = {}
+    for x in G:
+        k = keyfn(x)
+        if k is not None:
+            by.setdefault(k, ([], []))[0 if x["date"] < mid else 1].append(x)
+    out = []
+    for k, hv in by.items():
+        if all(len(h) >= max(1, min_half) for h in hv):
+            out.append((k, [(100 * sum(x["status"] == "won" for x in h) / len(h), 100 * sum(x["p"] for x in h) / len(h), len(h)) for h in hv]))
+    return out
+
+
 def locks_type_line(legs=None):
     """Locks + Safe Locks legs by bet type (ladder.leg_type), each with its
     two date halves against stated. Flags a type short in both halves.
     2026-11-11: props 80.0% then 76.5% vs 86.2% / 78.8% stated -- the only
     type short in both halves, on 79 legs (not yet significant)."""
     import ladder
-    if legs is None:
-        try:
-            import locks
-            legs = [x for p_ in (None, locks.SAFE_LEDGER)
-                    for x in ((locks.load(p_) if p_ else locks.load()).get("legs") or {}).values()]
-        except Exception:
-            return None
-    G = sorted((x for x in legs if x.get("status") in ("won", "lost") and x.get("p") is not None and x.get("date")),
-               key=lambda x: x["date"])
-    if len(G) < 40:
+    H = _halves_by(legs if legs is not None else _all_lock_legs(), ladder.leg_type)
+    if H is None:
         return None
-    mid = G[len(G) // 2]["date"]
-    parts, short = [], []
-    for t in ("win", "spread", "total", "team total", "prop"):
-        hv = [[x for x in G if ladder.leg_type(x) == t and (x["date"] < mid) == first] for first in (True, False)]
-        if not all(hv):
-            continue
-        rec = [(sum(x["status"] == "won" for x in h) / len(h), sum(x["p"] for x in h) / len(h), len(h)) for h in hv]
-        parts.append(f"{t} {round(100 * rec[0][0])}% then {round(100 * rec[1][0])}% (vs {round(100 * rec[0][1])}%, {round(100 * rec[1][1])}%)")
-        if all(w < said for w, said, _ in rec):
-            short.append(t)
+    order = ("win", "spread", "total", "team total", "prop")
+    H = sorted(H, key=lambda kv: order.index(kv[0]) if kv[0] in order else 99)
+    parts = [f"{t} {round(r[0][0])}% then {round(r[1][0])}% (vs {round(r[0][1])}%, {round(r[1][1])}%)" for t, r in H]
+    short = [t for t, r in H if all(w < said for w, said, _ in r)]
     return ("Locks by bet type, by half: " + "; ".join(parts) + "."
             + (f" Short in both halves: {', '.join(short)}." if short else ""))
 
@@ -737,32 +754,12 @@ def locks_league_line(legs=None, min_half=15):
     """Locks + Safe Locks legs by league, each with its two date halves
     against stated; a league short in both halves (each half min_half+ legs)
     is flagged. 2026-11-12: none was."""
-    if legs is None:
-        try:
-            import locks
-            legs = [x for p_ in (None, locks.SAFE_LEDGER)
-                    for x in ((locks.load(p_) if p_ else locks.load()).get("legs") or {}).values()]
-        except Exception:
-            return None
-    G = sorted((x for x in legs if x.get("status") in ("won", "lost") and x.get("p") is not None
-                and x.get("date") and x.get("league")), key=lambda x: x["date"])
-    if len(G) < 40:
+    H = _halves_by(legs if legs is not None else _all_lock_legs(), lambda x: x.get("league"), min_half)
+    if not H:
         return None
-    mid = G[len(G) // 2]["date"]
-    by = {}
-    for x in G:
-        by.setdefault(x["league"], ([], []))[0 if x["date"] < mid else 1].append(x)
-    parts, short = [], []
-    for lg, hv in sorted(by.items(), key=lambda kv: -(len(kv[1][0]) + len(kv[1][1]))):
-        if any(len(h) < min_half for h in hv):
-            continue
-        rec = [(sum(x["status"] == "won" for x in h) / len(h), sum(x["p"] for x in h) / len(h)) for h in hv]
-        parts.append(f"{lg.upper()} {round(100 * rec[0][0])}% then {round(100 * rec[1][0])}% "
-                     f"(vs {round(100 * rec[0][1])}%, {round(100 * rec[1][1])}%)")
-        if all(w < said for w, said in rec):
-            short.append(lg.upper())
-    if not parts:
-        return None
+    H = sorted(H, key=lambda kv: -(kv[1][0][2] + kv[1][1][2]))
+    parts = [f"{lg.upper()} {round(r[0][0])}% then {round(r[1][0])}% (vs {round(r[0][1])}%, {round(r[1][1])}%)" for lg, r in H]
+    short = [lg.upper() for lg, r in H if all(w < said for w, said, _ in r)]
     return ("Locks by league, by half: " + "; ".join(parts) + "."
             + (f" Short in both halves: {', '.join(short)}." if short else " No league short in both halves."))
 
