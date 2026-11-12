@@ -7554,6 +7554,23 @@
    "tip": "10:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909976|away|FanDuel": {
+   "dec": 4.85,
+   "ev": 0.0175,
+   "fair": 0.2098,
+   "fair_source": "consensus of 3 other venues",
+   "id": "nba:401909976",
+   "kind": "value",
+   "league": "nba",
+   "match": "TOR @ PHI",
+   "price": "+385",
+   "seen": "2026-11-12T05:39:58+00:00",
+   "side": "away",
+   "start": "2026-11-13T00:00Z",
+   "team": "Toronto Raptors",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909979|{\"line\": -7.5, \"t\": \"spread\", \"team\": \"Phoenix Suns\"}|Kalshi": {
    "dec": 2.1395,
    "dk": "-105",
@@ -16111,6 +16128,55 @@
    "seen": "2026-11-11T06:36:02+00:00",
    "status": "lost",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909976:away": {
+   "ev": 0.0175,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0175,
+     "fair": 0.2098,
+     "id": "nba:401909976",
+     "price": "+385",
+     "side": "away",
+     "spec": null,
+     "team": "Toronto Raptors"
+    }
+   ],
+   "payout": 4.85,
+   "prob": 0.2098,
+   "seen": "2026-11-12T05:39:58+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909976:away|nhl:401892704:home": {
+   "ev": 0.0296,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0175,
+     "fair": 0.2098,
+     "id": "nba:401909976",
+     "price": "+385",
+     "side": "away",
+     "spec": null,
+     "team": "Toronto Raptors"
+    },
+    {
+     "ev": 0.0119,
+     "fair": 0.5477,
+     "id": "nhl:401892704",
+     "price": "-118",
+     "side": "home",
+     "spec": null,
+     "team": "Utah Mammoth"
+    }
+   ],
+   "payout": 8.96,
+   "prob": 0.1149,
+   "seen": "2026-11-12T05:39:58+00:00",
+   "target": 5.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaab:401906758:away": {
