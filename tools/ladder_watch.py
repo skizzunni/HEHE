@@ -104,15 +104,21 @@ def snapshot(report):
 
 def games_snapshot(book, day, league):
     """{"GAME <matchup>": "board pick <pick> = <status> | <score>"} for every
-    board pick in `league` on `day` (ledger.json rows)."""
+    board pick in `league` on `day` (ledger.json rows). league "all": every
+    league, keyed "GAME <league> <matchup>", with the stated chance and, for a
+    loss, the ledger's diagnosis (why it lost)."""
     out = {}
     for v in book.values():
-        if not isinstance(v, dict) or v.get("date") != day or v.get("league") != league:
+        if not isinstance(v, dict) or v.get("date") != day or (league != "all" and v.get("league") != league):
             continue
         st = v.get("status") or "open"
         sc = v.get("scores") or {}
-        out[f"GAME {v.get('matchup')}"] = (f"board pick {v.get('pick')} = {st}"
-                                          + (" | " + ", ".join(f"{k} {n}" for k, n in sc.items()) if st != "open" and sc else ""))
+        key = f"GAME {v.get('league')} {v.get('matchup')}" if league == "all" else f"GAME {v.get('matchup')}"
+        pick = v.get("pick") + (" or draw" if v.get("dc") else "")
+        conf = f" ({round(v['conf'])}%)" if league == "all" and v.get("conf") is not None else ""
+        why = f" | why: {v['diagnosis']}" if league == "all" and st == "lost" and v.get("diagnosis") else ""
+        out[key] = (f"board pick {pick}{conf} = {st}"
+                    + (" | " + ", ".join(f"{k} {n}" for k, n in sc.items()) if st != "open" and sc else "") + why)
     return out
 
 

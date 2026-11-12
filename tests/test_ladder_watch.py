@@ -78,6 +78,16 @@ class LadderWatch(unittest.TestCase):
                          ["CHANGE: GAME NO @ GS = board pick G = won | A 1, B 0"])
 
 
+    def test_all_leagues_with_why(self):
+        book = {"a": dict(date="2026-11-11", league="nba", matchup="NO @ BKN", pick="New Orleans Pelicans", conf=56.2,
+                          status="lost", scores={"Brooklyn Nets": 145, "New Orleans Pelicans": 111},
+                          diagnosis="margin 34 · coin flip · blowout"),
+                "b": dict(date="2026-11-11", league="epl", matchup="A @ B", pick="B", dc=True, conf=70, status="open")}
+        g = w.games_snapshot(book, "2026-11-11", "all")
+        self.assertEqual(g["GAME nba NO @ BKN"], "board pick New Orleans Pelicans (56%) = lost | Brooklyn Nets 145,"
+                                                 " New Orleans Pelicans 111 | why: margin 34 · coin flip · blowout")
+        self.assertEqual(g["GAME epl A @ B"], "board pick B or draw (70%) = open")
+
     def test_loop_stops_when_settled(self):
         calls = {"pull": 0, "sleep": 0}
         codes = iter([0, 0, 3])
