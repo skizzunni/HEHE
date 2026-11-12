@@ -180,6 +180,11 @@ PROBE = """<script>setTimeout(function(){
   out.pcheck = [parlayText(pcA, 5), parlayText(pcB, 0), parlayText(null, 5), String(parlayLegs().every(x => typeof x.p === "number"))];
   out.hiS = JSON.stringify(hiSweepParts({cut: 70, today: [8, 0, 2], swept: 3, days: 27, last: "2026-11-11"}));
   out.hiS0 = hiSweepParts({cut: 70, today: [0, 0, 0], swept: 3, days: 27, last: null});
+  var lkQ = D.locks, ldQ = D.ladder;
+  D.locks = {today: {locks: [{label: "Over 214.5 points", price: "-400", p: 0.75, match: "A at B"}, {label: "K: 2+ Assists", price: "-390", p: 0.78, match: "C @ D"}]}};
+  D.ladder = {today: {legs: [{label: "K: 2+ Assists"}], stake: 2.47, pays: 2.4}};
+  out.lids = ladderLegIds(parlayLegs()).join(",");
+  D.locks = lkQ; D.ladder = ldQ;
   out.outsN = [outsNote({outs: {"New York Knicks": ["Josh Hart"], "Cleveland Cavaliers": ["Sam Merrill", "Jaylon Tyson"]}}), outsNote({}), outsNote(null)];
   out.noprops = [noPropsNote({legs: [{kind: "prop"}, {kind: "game"}], no_props: {n: 3, pays: 2.05, prob: 0.43, labels: ["Over 1.5", "A +3.5", "B to win"]}}),
                  noPropsNote({legs: [{kind: "game"}], no_props: {n: 3, pays: 2.05, prob: 0.43, labels: ["x"]}}), noPropsNote({})];
@@ -534,6 +539,8 @@ def main():
     hs = new.get("hiS") or ""
     if not ("70%+ sweep" in hs and "8&ndash;0" in hs and "still clean, 2 to go &middot; swept 3 of 27 days (last 11-11)" in hs) or new.get("hiS0"):
         fails.append("70%+ sweep tile wrong: " + repr(hs) + " / " + repr(new.get("hiS0")))
+    if new.get("lids") != "L:1":
+        fails.append("ladder leg ids wrong: " + repr(new.get("lids")))
     on = new.get("outsN") or ["", "x", "x"]
     if not ("Out tonight: New York Knicks &mdash; Josh Hart; Cleveland Cavaliers &mdash; Sam Merrill, Jaylon Tyson" in on[0]
             and on[1] == "" and on[2] == ""):

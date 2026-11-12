@@ -2221,6 +2221,12 @@ function parlayLegs(){
   });
   return out;
 }
+// the parlay checker's ids for today's ladder legs (matched by label among
+// the Locks legs it lists)
+function ladderLegIds(L){
+  const want = new Set((((D.ladder || {}).today || {}).legs || []).map(x => x.label));
+  return (L || []).filter(x => x.id.startsWith('L:') && want.has(x.label.replace(/ \([+-]?\d+\)$/, ''))).map(x => x.id);
+}
 function parlayCheck(legs, stake, payout){
   if(!legs.length) return null;
   const p = legs.reduce((a, L) => a * L.p, 1);
@@ -2253,6 +2259,7 @@ function parlayCheckHTML(){
     + '<p class="note">From today\u2019s board: my side or the other side of each two-way game, then today\u2019s Locks (totals, spreads, player props). Soccer is not included. Legs from one game, a Lock included, are flagged as linked.</p>'
     + '<p><label>Stake $<input id="pcStake" type="number" min="0" step="0.01" value="5" style="width:6em"></label> '
     + '<label>Total payout $<input id="pcPay" type="number" min="0" step="0.01" style="width:8em"></label></p>'
+    + (ladderLegIds(L).length ? '<p><button type="button" id="pcLadder">Tick today\u2019s ladder legs</button></p>' : '')
     + '<p id="pcOut" class="note">Tick some legs.</p><ul class="pclist" style="list-style:none;padding-left:0">'
     + L.map(x => '<li><label><input type="checkbox" data-pc="' + esc(x.id) + '"> ' + esc(x.lg) + ' ' + esc(x.label)
       + ' <span style="color:var(--ink-dim)">' + Math.round(100 * x.p) + '% &middot; ' + esc(x.t) + '</span></label></li>').join('')
@@ -2270,6 +2277,15 @@ function wireParlayCheck(){
   };
   box.addEventListener('input', go);
   box.addEventListener('change', go);
+  const lb = document.getElementById('pcLadder');
+  if(lb) lb.onclick = () => {
+    const want = new Set(ladderLegIds(L));
+    box.querySelectorAll('input[data-pc]').forEach(i => { i.checked = want.has(i.dataset.pc); });
+    const T = (D.ladder || {}).today;
+    if(T && T.stake) document.getElementById('pcStake').value = T.stake;
+    if(T && T.stake && T.pays) document.getElementById('pcPay').value = (T.stake * T.pays).toFixed(2);
+    go();
+  };
 }
 // the record of the two plays the card names, so the Winners parlay is
 // checked against what it promised, not only whether all legs hit
