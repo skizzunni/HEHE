@@ -7678,6 +7678,45 @@
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
+  "ncaab:401906760|away|Kalshi": {
+   "dec": 13.4048,
+   "ev": 0.1092,
+   "fair": 0.0828,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaab:401906760",
+   "kind": "suspect",
+   "league": "ncaab",
+   "match": "HALL @ ALA",
+   "price": "+1240",
+   "seen": "2026-11-12T22:49:36+00:00",
+   "side": "away",
+   "start": "2026-11-14T02:00Z",
+   "team": "Seton Hall Pirates",
+   "tip": "9:00 PM",
+   "venue": "Kalshi"
+  },
+  "ncaab:401906760|sure": {
+   "id": "ncaab:401906760",
+   "kind": "sure",
+   "league": "ncaab",
+   "legs": [
+    {
+     "price": "+1240",
+     "stake_share": 0.0748,
+     "team": "Seton Hall Pirates",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-1200",
+     "stake_share": 0.9252,
+     "team": "Alabama Crimson Tide",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "HALL @ ALA",
+   "profit": 0.0023,
+   "seen": "2026-11-12T22:49:36+00:00"
+  },
   "ncaab:401906769|away|FanDuel": {
    "dec": 2.84,
    "ev": 0.0144,
