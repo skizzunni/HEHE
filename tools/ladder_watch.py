@@ -42,6 +42,22 @@ def safe_note(L):
     pts = [int(x) for x in re.findall(r"-?\d+(?=\s*(?:-|$))", str(L.get("live_score") or ""))]
     if m and len(pts) >= 2 and pts[-2] + pts[-1] > float(m.group(1)):
         return f"already over ({pts[-2] + pts[-1]}, line {m.group(1)})"
+    # a "to win" leg down big after halftime (basketball and football only:
+    # a 10-point hole means little in hockey or soccer scoring)
+    w = re.match(r"^(.+?)\s+to win$", str(L.get("label") or ""))
+    if w and L.get("live") and L.get("league") in ("nba", "ncaab", "wnba", "nfl", "ncaaf"):
+        try:
+            import daily_review as dr
+            F = dr._PERIODS.get(L.get("league") or "")
+            el = dr._elapsed(str(L["live"]), *F) if F else None
+            parts = re.split(r"\s+-\s+", str(L.get("live_score") or ""))
+            mine = next((x for x in parts if x.startswith(w.group(1))), None)
+            other = next((x for x in parts if not x.startswith(w.group(1))), None)
+            a, b = (re.search(r"(-?\d+)\s*$", x or "") for x in (mine, other))
+            if el and el >= 0.5 * F[0] * F[1] and a and b and int(b.group(1)) - int(a.group(1)) >= 10:
+                return "down 10+ after halftime"
+        except Exception:
+            pass
     # a game or team total past halftime whose pace is on the wrong side
     if re.search(r"(^(Over|Under)\s|\s(over|under)\s)[\d.]+", str(L.get("label") or ""), re.I) and L.get("live"):
         try:

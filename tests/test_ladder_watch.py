@@ -44,6 +44,12 @@ class LadderWatch(unittest.TestCase):
                                           live_score="Chicago Bulls 60 - San Antonio Spurs 56")), "")
         self.assertEqual(w.safe_note(dict(label="Under 254.5 points", league="nba", live="5:00 - 2nd",
                                           live_score="Chicago Bulls 70 - San Antonio Spurs 60")), "")
+        self.assertEqual(w.safe_note(dict(label="USC Trojans to win", league="ncaab", live="10:00 - 2nd",
+                                          live_score="USC Trojans 40 - California Golden Bears 52")), "down 10+ after halftime")
+        self.assertEqual(w.safe_note(dict(label="USC Trojans to win", league="ncaab", live="10:00 - 2nd",
+                                          live_score="USC Trojans 48 - California Golden Bears 52")), "")
+        self.assertEqual(w.safe_note(dict(label="USC Trojans to win", league="ncaab", live="10:00 - 1st",
+                                          live_score="USC Trojans 10 - California Golden Bears 30")), "")
         s = w.snapshot(dict(today=dict(legs=[dict(label="K: 20+ Yds", line="20+", so_far=21)])))
         self.assertEqual(s, {"K: 20+ Yds": "open | line reached"})
 
