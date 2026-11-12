@@ -80650,11 +80650,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Anders Lee",
   "p": 0.8457,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892693|n:dylan guenther|Shots on Goal|2+": {
   "aid": null,
@@ -80670,7 +80672,9 @@
   "p": 0.7219,
   "p_fair": null,
   "price": "-345",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nhl:401892693|n:jack eichel|Shots on Goal|1+": {
   "aid": null,
@@ -80681,11 +80685,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jack Eichel",
   "p": 0.8708,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892693|n:jack eichel|Shots on Goal|2+": {
   "aid": null,
@@ -80697,11 +80703,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jack Eichel",
   "p": 0.7423,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892693|n:logan cooley|Shots on Goal|1+": {
   "aid": null,
@@ -80717,7 +80725,9 @@
   "p": 0.8595,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nhl:401892693|n:mark stone|Shots on Goal|1+": {
   "aid": null,
@@ -80729,11 +80739,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mark Stone",
   "p": 0.8416,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892693|n:mikhail sergachev|Shots on Goal|1+": {
   "aid": null,
@@ -80745,11 +80757,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikhail Sergachev",
   "p": 0.8424,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892693|n:mitchell marner|Shots on Goal|1+": {
   "aid": null,
@@ -80761,11 +80775,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "fuzzy",
   "name": "Mitchell Marner",
   "p": 0.8535,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892693|n:nick schmaltz|Shots on Goal|1+": {
   "aid": null,
@@ -80777,11 +80793,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Nick Schmaltz",
   "p": 0.8646,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892693|n:tomas hertl|Shots on Goal|1+": {
   "aid": null,
@@ -80793,11 +80811,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Tomas Hertl",
   "p": 0.8535,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892694|n:beckett sennecke|Shots on Goal|2+": {
   "aid": null,
