@@ -45159,11 +45159,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Alperen Sengun",
   "p": 0.8435,
   "p_fair": 0.832,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 28.0
  },
  "nba:401909974|n:amen thompson|Assists|2+": {
   "aid": null,
@@ -45175,11 +45177,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Amen Thompson",
   "p": 0.8556,
   "p_fair": 0.8424,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909974|n:brandin podziemski|Assists|2+": {
   "aid": null,
@@ -45191,11 +45195,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Brandin Podziemski",
   "p": 0.8416,
   "p_fair": 0.8165,
   "price": "-590",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909974|n:brandin podziemski|Points|5+": {
   "aid": null,
@@ -45206,11 +45212,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Brandin Podziemski",
   "p": 0.8708,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 22.0
  },
  "nba:401909974|n:brandin podziemski|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -45222,11 +45230,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Brandin Podziemski",
   "p": 0.8552,
   "p_fair": 0.9235,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nba:401909974|n:brandin podziemski|Threes Made|1+": {
   "aid": null,
@@ -45238,11 +45248,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Brandin Podziemski",
   "p": 0.8531,
   "p_fair": 0.8968,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909974|n:jabari smith|Rebounds|4+": {
   "aid": null,
@@ -45254,11 +45266,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Jabari Smith",
   "p": 0.8578,
   "p_fair": 0.9017,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909974|n:stephen curry|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -45270,11 +45284,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Stephen Curry",
   "p": 0.8536,
   "p_fair": 0.8956,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909974|n:yaxel lendeborg|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -45286,11 +45302,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Yaxel Lendeborg",
   "p": 0.8552,
   "p_fair": 0.901,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 35.0
  },
  "nba:401909974|n:yaxel lendeborg|Rebounds|4+": {
   "aid": null,
@@ -45302,11 +45320,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Yaxel Lendeborg",
   "p": 0.8563,
   "p_fair": 0.9103,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909975|n:ajay mitchell|Assists|2+": {
   "aid": null,
@@ -45531,6 +45551,22 @@
   "price": "-1100",
   "status": "open"
  },
+ "nba:401909977|n:cade cunningham|Pts + Ast|25+": {
+  "aid": null,
+  "date": "2026-11-12",
+  "edge": -8.4,
+  "gid": "nba:401909977",
+  "imp": 0.9,
+  "label": "Cade Cunningham: 25+ Pts + Ast",
+  "league": "nba",
+  "line": "25+",
+  "market": "Pts + Ast",
+  "name": "Cade Cunningham",
+  "p": 0.8539,
+  "p_fair": 0.8247,
+  "price": "-900",
+  "status": "open"
+ },
  "nba:401909977|n:kyshawn george|Threes Made|1+": {
   "aid": null,
   "date": "2026-11-12",
@@ -45561,6 +45597,22 @@
   "p": 0.8488,
   "p_fair": 0.8851,
   "price": "-1100",
+  "status": "open"
+ },
+ "nba:401909979|n:devin booker|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-11-12",
+  "edge": -4.1,
+  "gid": "nba:401909979",
+  "imp": 0.9,
+  "label": "Devin Booker: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Devin Booker",
+  "p": 0.8341,
+  "p_fair": 0.8629,
+  "price": "-900",
   "status": "open"
  },
  "nba:401909979|n:miles bridges|Assists|2+": {
