@@ -637,6 +637,42 @@ def injury_study_line(ledger=None):
             + "; ".join(injury_study.table(R)) + ".")
 
 
+def lessons_line(ledger=None, min_half=12, gap=3.0):
+    """What the losses teach: every graded, priced board pick grouped by
+    league, bet (straight win / or draw) and 10-point chance band, each group
+    split by date half. A group short of its stated chance by `gap`+ points in
+    BOTH halves (each half `min_half`+ picks) is listed as a candidate fix --
+    to be tested, never applied from this line alone."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    rows = [v for v in ledger.values() if isinstance(v, dict) and v.get("status") in ("won", "lost")
+            and not v.get("record_excluded") and v.get("date") and v.get("conf") is not None and v.get("league")]
+    if len(rows) < 100:
+        return None
+    rows.sort(key=lambda v: v["date"])
+    mid = rows[len(rows) // 2]["date"]
+    G = {}
+    for v in rows:
+        band = min(90, int(v["conf"] // 10 * 10))
+        key = (v["league"], "or draw" if v.get("dc") else "win", band)
+        G.setdefault(key, ([], []))[0 if v["date"] < mid else 1].append(v)
+    flagged = []
+    for (lg, bet, band), halves in G.items():
+        if any(len(h) < min_half for h in halves):
+            continue
+        rec = [(100 * sum(x["status"] == "won" for x in h) / len(h), sum(x["conf"] for x in h) / len(h), len(h)) for h in halves]
+        if all(w < said - gap for w, said, _ in rec):
+            short = sum(said - w for w, said, _ in rec) / 2
+            flagged.append((short, lg, bet, band, rec))
+    if not flagged:
+        return f"Lessons from losses: no league / bet / chance band is {gap:g}+ points short in both halves ({len(rows)} picks)."
+    flagged.sort(reverse=True)
+    return ("Lessons from losses (short in both halves -- candidates to test, not rules): "
+            + "; ".join(f"{lg.upper()} {bet} {band}-{band + 10}%: {round(r[0][0])}% then {round(r[1][0])}% vs "
+                        f"{round(r[0][1])}%, {round(r[1][1])}% stated ({r[0][2]}+{r[1][2]})"
+                        for _, lg, bet, band, r in flagged[:5]) + ".")
+
+
 def draw_rate_line(ledger=None, min_n=20, top=5):
     """How often board soccer games ended level, by league (graded games
     with a two-team score), highest first: where a straight-win pick most
@@ -1461,6 +1497,8 @@ def words(r, fit):
         out.append(r["lock_types"])
     if r.get("inj_study"):
         out.append(r["inj_study"])
+    if r.get("lessons"):
+        out.append(r["lessons"])
     if r.get("roster"):
         out.append(r["roster"])
     if r.get("injury"):
@@ -1592,6 +1630,7 @@ def main():
     log[today.isoformat()]["draws"] = draw_rate_line(ledger)
     log[today.isoformat()]["lock_types"] = locks_type_line()
     log[today.isoformat()]["inj_study"] = injury_study_line(ledger)
+    log[today.isoformat()]["lessons"] = lessons_line(ledger)
     try:                                  # ladder prop players on today's rosters
         import ladder as _ld
         _bad = roster_check(with_teams(((_ld.report().get("today") or {}).get("legs")) or []))

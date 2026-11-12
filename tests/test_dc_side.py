@@ -169,6 +169,22 @@ class InjuryStudyLine(unittest.TestCase):
             self.assertIsNone(daily_review.injury_study_line({}))
 
 
+class Lessons(unittest.TestCase):
+    def test_flags_group_short_in_both_halves(self):
+        L = {}
+        for i in range(60):
+            d = "2026-10-01" if i < 30 else "2026-10-20"
+            L[f"a{i}"] = dict(league="nhl", status="won" if i % 2 else "lost", date=d, conf=65)      # 50% vs 65%
+            L[f"b{i}"] = dict(league="nba", status="won" if i % 5 else "lost", date=d, conf=75)      # 80% vs 75%
+        out = daily_review.lessons_line(L)
+        self.assertIn("NHL win 60-70%: 50% then 50% vs 65%, 65% stated (30+30)", out)
+        self.assertNotIn("NBA", out)
+        good = {k: v for k, v in L.items() if k.startswith("b")}
+        good.update({k + "x": v for k, v in good.items()})            # 120 picks, all ahead
+        self.assertTrue(daily_review.lessons_line(good).startswith("Lessons from losses: no league"))
+        self.assertIsNone(daily_review.lessons_line(dict(list(L.items())[:10])))
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
