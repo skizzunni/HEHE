@@ -209,6 +209,24 @@ class HiSweep(unittest.TestCase):
                               " | 80%+ today 1-0; swept 1 of 1 past days (last 2026-11-11).")
 
 
+class ReportCache(unittest.TestCase):
+    def test_once_per_review_only(self):
+        from unittest import mock
+        import ladder
+        calls = []
+        fake = lambda book=None: calls.append(book) or {"n": len(calls)}
+        with mock.patch.object(ladder, "report", fake):
+            daily_review._CACHE = {}
+            try:
+                self.assertEqual(daily_review._report(), {"n": 1})
+                self.assertEqual(daily_review._report(), {"n": 1})          # cached inside a review
+                self.assertEqual(daily_review._report({"x": 1}), {"n": 2})  # an explicit book is never cached
+            finally:
+                daily_review._CACHE = None
+            self.assertEqual(daily_review._report(), {"n": 3})              # outside a review: fresh each time
+            self.assertEqual(daily_review._report(), {"n": 4})
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
