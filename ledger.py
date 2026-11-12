@@ -842,6 +842,23 @@ def draw_losses(book):
     return dict(n=len(S), lost=len(L), drawn=sum(len(set(e["scores"].values())) == 1 for e in L))
 
 
+def hi_sweep(book, today, cut=70):
+    """The board's picks stated at `cut`%+ as their own sweep: today's
+    [won, lost, open], and on how many fully graded past days that set had no
+    loss: dict(today, swept, days, last)."""
+    days = {}
+    for e in book.values():
+        if not isinstance(e, dict) or not e.get("date") or e.get("record_excluded") or (e.get("conf") or 0) < cut:
+            continue
+        if e.get("status") not in ("won", "lost", "open"):
+            continue
+        a = days.setdefault(e["date"], [0, 0, 0])
+        a[{"won": 0, "lost": 1, "open": 2}[e["status"]]] += 1
+    done = [d for d, (w, l, o) in days.items() if d < today and o == 0 and w + l]
+    swept = sorted(d for d in done if days[d][1] == 0)
+    return dict(cut=cut, today=days.get(today, [0, 0, 0]), swept=len(swept), days=len(done), last=swept[-1] if swept else None)
+
+
 def dc_sides(book):
     """Soccer "or draw" picks, priced and graded, by the side taken:
     {"home"|"away": [won, n, stated%]}. 2026-11-09: home 77% vs 74% on 402,
@@ -1094,7 +1111,7 @@ def board_payload(limit=40):
                     ((lg_, sum(1 for e in todays if e["status"] == "lost" and e["league"] == lg_))
                      for lg_ in {e["league"] for e in todays if e["status"] == "lost"}), key=lambda x: -x[1])],
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), call_cautions=call_cautions(book), draw_losses=draw_losses(book), dc_sides=dc_sides(book), moves_halves=moves_halves(book), band_records=band_records(book), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
+                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), call_cautions=call_cautions(book), draw_losses=draw_losses(book), dc_sides=dc_sides(book), hi_sweep=hi_sweep(book, today), moves_halves=moves_halves(book), band_records=band_records(book), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))

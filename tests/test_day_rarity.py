@@ -123,5 +123,13 @@ class CallCautions(unittest.TestCase):
         self.assertEqual(ledger.call_cautions({}), [])
 
 
+class HiSweepLedger(unittest.TestCase):
+    def test_hi_sweep(self):
+        B = {"a": dict(date="2026-11-10", conf=75, status="won"), "b": dict(date="2026-11-10", conf=72, status="lost"),
+             "c": dict(date="2026-11-11", conf=85, status="won"), "d": dict(date="2026-11-11", conf=55, status="lost"),
+             "e": dict(date="2026-11-12", conf=90, status="open")}
+        self.assertEqual(ledger.hi_sweep(B, "2026-11-12"), dict(cut=70, today=[0, 0, 1], swept=1, days=2, last="2026-11-11"))
+
+
 if __name__ == "__main__":
     unittest.main()

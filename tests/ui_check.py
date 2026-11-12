@@ -178,6 +178,8 @@ PROBE = """<script>setTimeout(function(){
   D.locks = lkP;
   out.pcWeak = parlayText(pcW, 5);
   out.pcheck = [parlayText(pcA, 5), parlayText(pcB, 0), parlayText(null, 5), String(parlayLegs().every(x => typeof x.p === "number"))];
+  out.hiS = JSON.stringify(hiSweepParts({cut: 70, today: [8, 0, 2], swept: 3, days: 27, last: "2026-11-11"}));
+  out.hiS0 = hiSweepParts({cut: 70, today: [0, 0, 0], swept: 3, days: 27, last: null});
   out.outsN = [outsNote({outs: {"New York Knicks": ["Josh Hart"], "Cleveland Cavaliers": ["Sam Merrill", "Jaylon Tyson"]}}), outsNote({}), outsNote(null)];
   out.noprops = [noPropsNote({legs: [{kind: "prop"}, {kind: "game"}], no_props: {n: 3, pays: 2.05, prob: 0.43, labels: ["Over 1.5", "A +3.5", "B to win"]}}),
                  noPropsNote({legs: [{kind: "game"}], no_props: {n: 3, pays: 2.05, prob: 0.43, labels: ["x"]}}), noPropsNote({})];
@@ -529,6 +531,9 @@ def main():
     od = new.get("ownDog") or ""
     if "$1 on each of the 111 at the no-vig price would be \u221220.9% a bet" not in od or "NHL 13 of 29 (+4.2% a bet)" not in od:
         fails.append("own-view underdog ROI wrong: " + repr(od[-300:]))
+    hs = new.get("hiS") or ""
+    if not ("70%+ sweep" in hs and "8&ndash;0" in hs and "still clean, 2 to go &middot; swept 3 of 27 days (last 11-11)" in hs) or new.get("hiS0"):
+        fails.append("70%+ sweep tile wrong: " + repr(hs) + " / " + repr(new.get("hiS0")))
     on = new.get("outsN") or ["", "x", "x"]
     if not ("Out tonight: New York Knicks &mdash; Josh Hart; Cleveland Cavaliers &mdash; Sam Merrill, Jaylon Tyson" in on[0]
             and on[1] == "" and on[2] == ""):

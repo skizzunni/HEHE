@@ -865,6 +865,17 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
   };
   paint();
 })();
+// the 70%+ sweep tile's text (ledger.hi_sweep), top level so the page check
+// can read it: {label, big, sub, cls} or null
+function hiSweepParts(S){
+  if(!S || !S.today) return null;
+  const [w, l, o] = S.today;
+  if(!(w + l + o)) return null;
+  return {label: S.cut + "%+ sweep", big: !(w + l) ? o + " to play" : w + "&ndash;" + l,
+          sub: (l ? "broken" : w ? "still clean" : "clean so far") + (o ? ", " + o + " to go" : "")
+            + " &middot; swept " + S.swept + " of " + S.days + " days" + (S.last ? " (last " + S.last.slice(5) + ")" : ""),
+          cls: (w + l) && !l ? "good" : ""};
+}
 // At a glance: the four numbers that matter, from the same data the
 // sections show -- nothing computed here that the record does not hold.
 (function(){
@@ -891,7 +902,7 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
       : tile("Locks today", String(LK.length), "on FanDuel"))
   + tile("Prop Locks", PL.n ? PL.won + " of " + PL.n : "&mdash;",
          PL.n ? PL.hit + "% hit" : "none graded yet", PL.n && PL.hit >= 70 ? "good" : "")
-  + last7(D.safe_locks_record, "Safe Locks", 0.85) + last7(PL, "Prop Locks", 0.85) + ladderTile() + sweepTile() + ownTile() + nextTile();
+  + last7(D.safe_locks_record, "Safe Locks", 0.85) + last7(PL, "Prop Locks", 0.85) + ladderTile() + sweepTile() + hiSweepTile() + ownTile() + nextTile();
   // the next game to start today and my pick in it (ledger.next_up)
   function nextTile(){
     const N = (D.results || {}).next_up || [];
@@ -929,6 +940,12 @@ document.getElementById("stamp").textContent = "Researched " + D.at;
            + ((n => n ? ", " + n + " not winning now" : "")((R.live || []).filter(x => x.winning === false).length)) + ")" : "")
         + (!l && o && R.sweep_chance ? " (" + oneIn(R.sweep_chance) + " to stay clean)" : "") + (bestTxt ? " &middot; " + bestTxt : "");
     return tile("Board sweep", big, sub, (w + l) && !l ? "good" : "");
+  }
+  // the 70%+ picks as their own sweep (ledger.hi_sweep): the part of the
+  // board a sweep can aim at
+  function hiSweepTile(){
+    const T = hiSweepParts((D.results || {}).hi_sweep);
+    return T ? tile(T.label, T.big, T.sub, T.cls) : "";
   }
   // the $1 -> $10k ladder (ladder.py): bank and streak; tapping opens the Locks tab
   function ladderTile(){
