@@ -7,34 +7,22 @@
    "baseline": "the pick as published (hand-set model weights in NFL/WNBA/MLB/tennis)",
    "proposal": "the same-time market favourite (tested weight 0)",
    "same": "one pick per game, same game, same price",
-   "untouched_from": "2026-10-06",
+   "untouched_from": "2026-10-07",
    "result": {
     "all": {
      "days": 37,
-     "picks": 868,
-     "old_won": 598,
-     "new_won": 605,
-     "diff": 7,
+     "picks": 859,
+     "old_won": 592,
+     "new_won": 598,
+     "diff": 6,
      "ci95_diff": [
-      -4,
-      20
+      -5,
+      19
      ],
-     "new_won_old_missed": 23,
-     "old_won_new_missed": 16,
+     "new_won_old_missed": 21,
+     "old_won_new_missed": 15,
      "promote": false,
      "examples_new": [
-      {
-       "day": "2026-10-06",
-       "new": "opponent of Nashville Predators",
-       "game": "nhl:401892449",
-       "won": true
-      },
-      {
-       "day": "2026-10-06",
-       "new": "opponent of Ottawa Senators",
-       "game": "nhl:401892450",
-       "won": true
-      },
       {
        "day": "2026-10-07",
        "new": "opponent of Kennesaw State Owls",
@@ -70,15 +58,21 @@
        "new": "opponent of Penn State Nittany Lions",
        "game": "ncaaf:401858485",
        "won": true
+      },
+      {
+       "day": "2026-10-10",
+       "new": "opponent of Fresno State Bulldogs",
+       "game": "ncaaf:401860901",
+       "won": true
+      },
+      {
+       "day": "2026-10-10",
+       "new": "opponent of UTEP Miners",
+       "game": "ncaaf:401864517",
+       "won": true
       }
      ],
      "examples_old": [
-      {
-       "day": "2026-10-06",
-       "old": "Utah Mammoth",
-       "game": "nhl:401892451",
-       "won": true
-      },
       {
        "day": "2026-10-08",
        "old": "Western Kentucky Hilltoppers",
@@ -120,6 +114,12 @@
        "old": "California Golden Bears",
        "game": "ncaaf:401858259",
        "won": true
+      },
+      {
+       "day": "2026-10-10",
+       "old": "Minnesota Wild",
+       "game": "nhl:401891805",
+       "won": true
       }
      ]
     },
@@ -152,14 +152,14 @@
      "promote": false
     },
     "ncaaf": {
-     "days": 27,
-     "picks": 294,
-     "old_won": 203,
-     "new_won": 205,
+     "days": 26,
+     "picks": 293,
+     "old_won": 202,
+     "new_won": 204,
      "diff": 2,
      "ci95_diff": [
       -6,
-      13
+      12
      ],
      "new_won_old_missed": 9,
      "old_won_new_missed": 7,
@@ -181,16 +181,16 @@
     },
     "nhl": {
      "days": 37,
-     "picks": 255,
-     "old_won": 156,
-     "new_won": 162,
-     "diff": 6,
+     "picks": 247,
+     "old_won": 151,
+     "new_won": 156,
+     "diff": 5,
      "ci95_diff": [
-      0,
-      14
+      -1,
+      13
      ],
-     "new_won_old_missed": 12,
-     "old_won_new_missed": 6,
+     "new_won_old_missed": 10,
+     "old_won_new_missed": 5,
      "promote": false
     },
     "ufc": {

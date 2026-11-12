@@ -59162,11 +59162,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Andrei Svechnikov",
   "p": 0.7271,
   "p_fair": null,
   "price": "-355",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401891808|n:bobby mcmann|Shots on Goal|1+": {
   "aid": null,
@@ -59178,11 +59180,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Bobby McMann",
   "p": 0.8662,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401891808|n:brandon montour|Shots on Goal|1+": {
   "aid": null,
@@ -59194,11 +59198,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Brandon Montour",
   "p": 0.8551,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401891808|n:sebastian aho car|Shots on Goal|2+": {
   "aid": null,
@@ -59210,11 +59216,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Sebastian Aho (CAR)",
   "p": 0.7385,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401891808|n:taylor hall|Shots on Goal|1+": {
   "aid": null,
@@ -59226,11 +59234,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Taylor Hall",
   "p": 0.8359,
   "p_fair": null,
   "price": "-870",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892517|n:artturi lehkonen|Shots on Goal|1+": {
   "aid": null,
@@ -82697,6 +82707,22 @@
   "p": 0.7053,
   "p_fair": null,
   "price": "-310",
+  "status": "open"
+ },
+ "nhl:401892704|n:anders lee|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-12",
+  "edge": null,
+  "gid": "nhl:401892704",
+  "imp": 0.9091,
+  "label": "Anders Lee: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Anders Lee",
+  "p": 0.848,
+  "p_fair": null,
+  "price": "-1000",
   "status": "open"
  },
  "nhl:401892704|n:clayton keller|Shots on Goal|2+": {
