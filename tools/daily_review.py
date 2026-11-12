@@ -595,29 +595,24 @@ def injury_check(legs, teams=None):
 
 
 def injury_context(legs, teams=None):
-    """Out / Doubtful players on both sides of each ladder game, one line:
-    context for every leg (a team missing its playmaker changes an assists
-    prop). Information only."""
+    """Out / Doubtful players on both sides of each ladder game, one line
+    (ladder.mark_outs, the same notes the page shows). Information only."""
     if teams is None:
         try:
             import injuries
             teams = injuries.fetch()
         except Exception:
             return None
+    import ladder
+    legs = ladder.mark_outs([dict(L) for L in legs or []], teams)
     parts, seen = [], set()
-    for L in legs or []:
-        T = (teams or {}).get(L.get("league")) or {}
+    for L in legs:
         key = (L.get("league"), L.get("home"), L.get("away"))
-        if key in seen or not L.get("home"):
+        if key in seen or not L.get("outs"):
             continue
         seen.add(key)
-        bits = []
-        for side in ("away", "home"):
-            out = [n for n, st in T.get(L.get(side)) or [] if st in ("Out", "Doubtful")]
-            if out:
-                bits.append(f"{L.get(side)} without {', '.join(out)}")
-        if bits:
-            parts.append(f"{L.get('match')}: " + "; ".join(bits))
+        order = [t for t in (L.get("away"), L.get("home")) if t in L["outs"]]
+        parts.append(f"{L.get('match')}: " + "; ".join(f"{t} without {', '.join(L['outs'][t])}" for t in order))
     return ("Ladder games, players out or doubtful: " + " | ".join(parts) + ".") if parts else None
 
 
