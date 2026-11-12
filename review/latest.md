@@ -1,7 +1,7 @@
 # Review 2026-11-11
 
 Picks 4-0 (100.0% vs 76.0% claimed, ROI +34.2%).
-Ladder: run 6, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (35% est.), the best-chance 2x-5x combination (4 legs) against 35% at 2.47x for the plain top 4; without props it would be 4 legs at 2.46x (33%); 11 wins to $10,000; legs: Jaime Jaquez Jr.: 2+ Assists (LAL @ MIL; live 5:54 - 3rd, Los Angeles Lakers 77 - Milwaukee Bucks 60, 0 so far, needs 2 more, on pace for 0, behind the pace it needs; props like it 96/124), Mikal Bridges: 2+ Assists (CLE @ NY; live 1:50 - 4th, Cleveland Cavaliers 108 - New York Knicks 103, 2 so far, line reached; props like it 96/124), USC Trojans to win (USC Trojans at California Golden Bears; 11:00 PM, open), Under 254.5 points (San Antonio Spurs at Chicago Bulls; live 6:16 - 3rd, Chicago Bulls 76 - San Antonio Spurs 76, on pace for 245 (152 so far, line 254.5, room for 102 more), on track).
+Ladder: run 6, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (35% est.), the best-chance 2x-5x combination (4 legs) against 35% at 2.47x for the plain top 4; without props it would be 4 legs at 2.46x (33%); 11 wins to $10,000; legs: Jaime Jaquez Jr.: 2+ Assists (LAL @ MIL; live 4:25 - 3rd, Los Angeles Lakers 80 - Milwaukee Bucks 62, 1 so far, needs 1 more, on pace for 2, behind the pace it needs; props like it 96/124), Mikal Bridges: 2+ Assists (CLE @ NY; live 22.8 - 4th, Cleveland Cavaliers 113 - New York Knicks 107, 2 so far, line reached; props like it 96/124), USC Trojans to win (USC Trojans at California Golden Bears; 11:00 PM, open), Under 254.5 points (San Antonio Spurs at Chicago Bulls; live 3:09 - 3rd, Chicago Bulls 82 - San Antonio Spurs 83, on pace for 241 (165 so far, line 254.5, room for 89 more), on track).
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 12/24 cashed at 2.22x, without props 13/24 at 2.32x.
 Running ahead: NBA under on all saved lines 970/1078 vs 82%; NHL over on all saved lines 127/142 vs 84%; NHL spread on all saved lines 271/313 vs 83%; NHL teamover on all saved lines 161/179 vs 83%.
 Running cold (last 7 days, all saved lines at 70-95%): NCAAF teamunder 698/912 (77% vs 82%). Walk-forward: legs of a type running cold won 83.8% the next day vs 82.4% for the rest (722 and 7484 legs), so a cold week is noise, not a signal.
@@ -31,10 +31,10 @@ Locks 1/11 won, 10 open; Best play top 2 (61%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 2 (84%) open; Best play top 7 (53%) open.
 Lottery 100: open (0/9 legs won)
 Lottery 100: lost (0/8 legs won, killed by Washington Wizards +3.5)
-Lottery 10k: lost (0/12 legs won, killed by Washington Wizards +3.5)
-Lottery 10k+25: lost (0/12 legs won, killed by Washington Wizards +3.5)
-Lottery 10k+50: lost (0/12 legs won, killed by Washington Wizards +3.5)
-Lottery 10k+100: lost (0/12 legs won, killed by Washington Wizards +3.5)
+Lottery 10k: lost (1/12 legs won, killed by Washington Wizards +3.5)
+Lottery 10k+25: lost (1/12 legs won, killed by Washington Wizards +3.5)
+Lottery 10k+50: lost (1/12 legs won, killed by Washington Wizards +3.5)
+Lottery 10k+100: lost (1/12 legs won, killed by Washington Wizards +3.5)
 Ladder-consistency props (all time): 2113/2541 won (83.2%) vs 86.2% fair, 87.4% price.
 Props 9/11 vs 83.9% claimed.
 
