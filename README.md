@@ -1373,6 +1373,13 @@ halves: Germany 50% then 80% (vs 74%, 76%), college football 66% then 85%
 earlier half; NBA 84%, 86% and Italy 83%, 87% ran ahead in both. No league is
 dropped from the high-chance set.
 
+**Checked, no change: Locks legs by league (2026-11-12).** Locks + Safe
+Locks legs, date halves: NHL 85% then 95% (vs 87%, 88%); NBA 82%, 87% (vs
+83%, 82%); college football 84%, 84% (vs 83%, 79%); NFL 89% then 68% (vs 84%,
+82%; 37 and 22 legs). No league is short in both halves; NFL is short only in
+the recent half (its props, flagged separately, are most of that), so no
+league is kept off the Locks or the ladder.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
