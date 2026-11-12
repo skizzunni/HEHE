@@ -185,6 +185,19 @@ class Lessons(unittest.TestCase):
         self.assertIsNone(daily_review.lessons_line(dict(list(L.items())[:10])))
 
 
+class TeamLine(unittest.TestCase):
+    def test_line(self):
+        L = {}
+        for i in range(14):
+            L[f"k{i}"] = dict(league="nba", pick="New York Knicks", status="won" if i < 6 else "lost", conf=71)
+        for i in range(12):
+            L[f"c{i}"] = dict(league="nba", pick="Boston Celtics", status="won", conf=70)
+        out = daily_review.team_line(L)
+        self.assertTrue(out.startswith("Teams backed most, furthest behind (10+ picks): NBA New York Knicks 6/14 vs 71% stated ("))
+        self.assertNotIn("Celtics", out)
+        self.assertIsNone(daily_review.team_line({k: v for k, v in L.items() if k.startswith("c")}))
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}

@@ -673,6 +673,37 @@ def lessons_line(ledger=None, min_half=12, gap=3.0):
                         for _, lg, bet, band, r in flagged[:5]) + ".")
 
 
+def team_line(ledger=None, min_n=10, top=3):
+    """Teams the board has backed 10+ times, worst against their stated
+    chance, each with the chance of a record that bad by luck alone and how
+    many of the teams checked would be expected that far behind by chance
+    (with 50 teams, one or two always look bad). Information only."""
+    import math
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    c = {}
+    for v in ledger.values():
+        if isinstance(v, dict) and v.get("status") in ("won", "lost") and not v.get("record_excluded") \
+                and v.get("conf") is not None and v.get("pick") and v.get("league"):
+            a = c.setdefault((v["league"], v["pick"]), [0, 0, 0.0])
+            a[0] += v["status"] == "won"
+            a[1] += 1
+            a[2] += v["conf"] / 100
+    teams = [(k, w, n, p / n) for k, (w, n, p) in c.items() if n >= min_n]
+    if not teams:
+        return None
+
+    def low_tail(k, n, p):                 # P(X <= k), X ~ Binomial(n, p)
+        return sum(math.comb(n, i) * p ** i * (1 - p) ** (n - i) for i in range(k + 1))
+    rows = sorted((low_tail(w, n, p), k, w, n, p) for k, w, n, p in teams if w / n < p)
+    if not rows:
+        return None
+    bits = [f"{lg.upper()} {team} {w}/{n} vs {round(100 * p)}% stated "
+            f"({100 * pv:.1f}% by luck; about {pv * len(teams):.1f} of {len(teams)} teams expected this far behind by chance)"
+            for pv, (lg, team), w, n, p in rows[:top]]
+    return "Teams backed most, furthest behind (10+ picks): " + "; ".join(bits) + "."
+
+
 def draw_rate_line(ledger=None, min_n=20, top=5):
     """How often board soccer games ended level, by league (graded games
     with a two-team score), highest first: where a straight-win pick most
@@ -1499,6 +1530,8 @@ def words(r, fit):
         out.append(r["inj_study"])
     if r.get("lessons"):
         out.append(r["lessons"])
+    if r.get("teams"):
+        out.append(r["teams"])
     if r.get("roster"):
         out.append(r["roster"])
     if r.get("injury"):
@@ -1631,6 +1664,7 @@ def main():
     log[today.isoformat()]["lock_types"] = locks_type_line()
     log[today.isoformat()]["inj_study"] = injury_study_line(ledger)
     log[today.isoformat()]["lessons"] = lessons_line(ledger)
+    log[today.isoformat()]["teams"] = team_line(ledger)
     try:                                  # ladder prop players on today's rosters
         import ladder as _ld
         _bad = roster_check(with_teams(((_ld.report().get("today") or {}).get("legs")) or []))
