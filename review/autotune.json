@@ -15,7 +15,7 @@
    "second": {
     "hit": 81.4,
     "n": 177,
-    "roi": 0.2
+    "roi": -0.15
    }
   },
   "dates": [
@@ -31,6 +31,8 @@
      "n": 84,
      "roi": 3.43
     },
+    "gain": 0.22,
+    "gain_lower": -8.76,
     "rule": {
      "min_dec": 1.0,
      "per_sport": 1
@@ -70,7 +72,7 @@
     "second": {
      "hit": 81.4,
      "n": 177,
-     "roi": 0.2
+     "roi": -0.15
     }
    },
    {
@@ -102,7 +104,7 @@
     "second": {
      "hit": 82.4,
      "n": 182,
-     "roi": 0.41
+     "roi": 0.07
     }
    },
    {
@@ -134,7 +136,7 @@
     "second": {
      "hit": 83.1,
      "n": 183,
-     "roi": 0.06
+     "roi": -0.28
     }
    },
    {
@@ -167,12 +169,12 @@
   },
   "ncaab": {
    "benched": false,
-   "hit": 88.9,
-   "implied": 89.7,
-   "n": 54,
+   "hit": 89.1,
+   "implied": 89.9,
+   "n": 55,
    "roi": -0.7,
-   "upper95": 94.8,
-   "won": 48
+   "upper95": 94.9,
+   "won": 49
   },
   "ncaaf": {
    "benched": false,
