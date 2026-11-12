@@ -1365,6 +1365,14 @@ side had more Out: 8/13 then 19/24 (62%, 79% vs 62%, 66%). The direction is
 the expected one and both halves agree, but 114 games over 8 days is far too
 few; it is re-run as the archive grows, and nothing reads it yet.
 
+**Checked, no change: which sports' 70%+ picks break the sweep
+(2026-11-12).** 893 graded board picks stated at 70%+, split by date (mid
+2026-10-31), by league with 8+ picks in each half. None is short in both
+halves: Germany 50% then 80% (vs 74%, 76%), college football 66% then 85%
+(vs 81%, 81%), Mexico 69% then 78% (vs 76%, 78%) were short only in the
+earlier half; NBA 84%, 86% and Italy 83%, 87% ran ahead in both. No league is
+dropped from the high-chance set.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
