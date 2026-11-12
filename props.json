@@ -43518,11 +43518,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Caleb Wilson",
   "p": 0.8514,
   "p_fair": 0.8979,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nba:401909969|n:caleb wilson|Threes Made|1+": {
   "aid": null,
@@ -43534,11 +43536,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Caleb Wilson",
   "p": 0.8472,
   "p_fair": 0.8909,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401909969|n:deaaron fox|Assists|4+": {
   "aid": null,
@@ -43550,11 +43554,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "De'Aaron Fox",
   "p": 0.8505,
   "p_fair": 0.8418,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909969|n:devin vassell|Points|5+": {
   "aid": null,
@@ -43570,7 +43576,9 @@
   "p": 0.8554,
   "p_fair": 0.9641,
   "price": "-1500",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909969|n:dylan harper|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -43582,11 +43590,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Dylan Harper",
   "p": 0.8511,
   "p_fair": 0.8845,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 34.0
  },
  "nba:401909969|n:jalen smith|Rebounds|4+": {
   "aid": null,
@@ -43598,11 +43608,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Jalen Smith",
   "p": 0.8484,
   "p_fair": 0.9236,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909969|n:josh giddey|Assists|6+": {
   "aid": null,
@@ -43614,11 +43626,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Assists",
+  "matched": "name",
   "name": "Josh Giddey",
   "p": 0.8505,
   "p_fair": 0.8525,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909969|n:josh giddey|Pts + Ast|15+": {
   "aid": null,
@@ -43630,11 +43644,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Josh Giddey",
   "p": 0.8482,
   "p_fair": 0.8775,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909969|n:josh giddey|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -43646,11 +43662,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Josh Giddey",
   "p": 0.8511,
   "p_fair": 0.8967,
   "price": "-950",
-  "status": "open"
+  "status": "lost",
+  "value": 18.0
  },
  "nba:401909969|n:josh giddey|Rebounds|4+": {
   "aid": null,
@@ -43662,11 +43680,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Josh Giddey",
   "p": 0.8484,
   "p_fair": 0.9069,
   "price": "-1200",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nba:401909969|n:norman powell|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -43682,7 +43702,9 @@
   "p": 0.8536,
   "p_fair": 0.9353,
   "price": "-1000",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909969|n:stephon castle|Pts + Ast|15+": {
   "aid": null,
@@ -43694,11 +43716,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Stephon Castle",
   "p": 0.8482,
   "p_fair": 0.8754,
   "price": "-800",
-  "status": "open"
+  "status": "lost",
+  "value": 14.0
  },
  "nba:401909969|n:tre jones|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -43710,11 +43734,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Tre Jones",
   "p": 0.8511,
   "p_fair": 0.9577,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909969|n:victor wembanyama|Points|15+": {
   "aid": null,
@@ -43725,11 +43751,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.8708,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nba:401909969|n:victor wembanyama|Points|20+": {
   "aid": null,
@@ -43741,11 +43769,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Points",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.8516,
   "p_fair": 0.8576,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nba:401909969|n:victor wembanyama|Pts + Ast|25+": {
   "aid": null,
@@ -43757,11 +43787,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.8482,
   "p_fair": 0.8313,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 33.0
  },
  "nba:401909970|n:aaron gordon|Reb + Ast|5+": {
   "aid": null,
@@ -79913,11 +79945,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Alexis Lafreniere",
   "p": 0.8638,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892691|n:gabe perreault|Shots on Goal|1+": {
   "aid": null,
@@ -79929,11 +79963,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Gabe Perreault",
   "p": 0.8465,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892691|n:joel farabee|Shots on Goal|1+": {
   "aid": null,
@@ -79945,11 +79981,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Joel Farabee",
   "p": 0.8646,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892691|n:jt miller|Shots on Goal|1+": {
   "aid": null,
@@ -79961,11 +79999,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "J.T. Miller",
   "p": 0.8424,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892691|n:matt coronato|Shots on Goal|1+": {
   "aid": null,
@@ -79976,11 +80016,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Coronato",
   "p": 0.8708,
   "price": "-2000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892691|n:matt coronato|Shots on Goal|2+": {
   "aid": null,
@@ -79992,11 +80034,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Coronato",
   "p": 0.676,
   "p_fair": null,
   "price": "-265",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892691|n:matvei gridin|Shots on Goal|1+": {
   "aid": null,
@@ -80008,11 +80052,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matvei Gridin",
   "p": 0.8646,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892691|n:mika zibanejad|Shots on Goal|1+": {
   "aid": null,
@@ -80024,11 +80070,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mika Zibanejad",
   "p": 0.8465,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892691|n:pavel dorofeyev|Shots on Goal|2+": {
   "aid": null,
@@ -80040,11 +80088,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Pavel Dorofeyev",
   "p": 0.728,
   "p_fair": null,
   "price": "-360",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892691|n:will cuylle|Shots on Goal|1+": {
   "aid": null,
@@ -80056,11 +80106,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Will Cuylle",
   "p": 0.8501,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892692|n:evan bouchard|Shots on Goal|2+": {
   "aid": null,

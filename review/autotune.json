@@ -15,7 +15,7 @@
    "second": {
     "hit": 81.4,
     "n": 177,
-    "roi": -0.15
+    "roi": -0.39
    }
   },
   "dates": [
@@ -31,16 +31,16 @@
      "n": 84,
      "roi": 3.43
     },
-    "gain": 0.22,
-    "gain_lower": -8.76,
+    "gain": 1.66,
+    "gain_lower": -7.5,
     "rule": {
      "min_dec": 1.0,
      "per_sport": 1
     },
     "second": {
-     "hit": 78.8,
+     "hit": 79.5,
      "n": 146,
-     "roi": -0.0
+     "roi": 0.7
     }
    },
    {
@@ -56,7 +56,7 @@
     "second": {
      "hit": 78.9,
      "n": 142,
-     "roi": 6.09
+     "roi": 6.05
     }
    },
    {
@@ -72,7 +72,7 @@
     "second": {
      "hit": 81.4,
      "n": 177,
-     "roi": -0.15
+     "roi": -0.39
     }
    },
    {
@@ -86,9 +86,9 @@
      "per_sport": 2
     },
     "second": {
-     "hit": 77.8,
-     "n": 176,
-     "roi": 2.31
+     "hit": 78.0,
+     "n": 177,
+     "roi": 2.69
     }
    },
    {
@@ -104,7 +104,7 @@
     "second": {
      "hit": 82.4,
      "n": 182,
-     "roi": 0.07
+     "roi": -0.16
     }
    },
    {
@@ -120,7 +120,7 @@
     "second": {
      "hit": 78.6,
      "n": 182,
-     "roi": 2.7
+     "roi": 2.67
     }
    },
    {
@@ -136,7 +136,7 @@
     "second": {
      "hit": 83.1,
      "n": 183,
-     "roi": -0.28
+     "roi": -0.51
     }
    },
    {
@@ -152,7 +152,7 @@
     "second": {
      "hit": 79.8,
      "n": 183,
-     "roi": 3.5
+     "roi": 3.46
     }
    }
   ]
@@ -160,12 +160,12 @@
  "groups": {
   "nba": {
    "benched": false,
-   "hit": 73.0,
-   "implied": 69.3,
-   "n": 163,
-   "roi": 5.1,
-   "upper95": 79.2,
-   "won": 119
+   "hit": 73.2,
+   "implied": 69.4,
+   "n": 164,
+   "roi": 5.2,
+   "upper95": 79.4,
+   "won": 120
   },
   "ncaab": {
    "benched": false,
@@ -196,12 +196,12 @@
   },
   "nhl": {
    "benched": false,
-   "hit": 60.6,
+   "hit": 60.8,
    "implied": 60.8,
-   "n": 188,
-   "roi": -1.8,
-   "upper95": 67.3,
-   "won": 114
+   "n": 189,
+   "roi": -1.4,
+   "upper95": 67.5,
+   "won": 115
   },
   "soccer": {
    "benched": false,
@@ -313,11 +313,11 @@
   },
   "Kalshi longshot, confirmed": {
    "benched": false,
-   "breakeven": 17.0,
-   "hit": 7.7,
-   "n": 26,
-   "roi": -18.7,
-   "upper95": 24.1,
+   "breakeven": 16.8,
+   "hit": 7.4,
+   "n": 27,
+   "roi": -21.7,
+   "upper95": 23.4,
    "won": 2
   },
   "Kalshi longshot, single": {
