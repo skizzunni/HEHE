@@ -1,13 +1,13 @@
-# Review 2026-11-11
+# Review 2026-11-12
 
-Picks 16-2 (88.9% vs 71.3% claimed, ROI +24.4%).
+No picks settled yet.
 Ladder: run 6, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (35% est.), the best-chance 2x-5x combination (4 legs) against 35% at 2.47x for the plain top 4; without props it would be 4 legs at 2.46x (33%); 11 wins to $10,000; legs: Jaime Jaquez Jr.: 2+ Assists (LAL @ MIL; won), Mikal Bridges: 2+ Assists (CLE @ NY; won), USC Trojans to win (USC Trojans at California Golden Bears; live Halftime, California Golden Bears 30 - USC Trojans 39), Under 254.5 points (San Antonio Spurs at Chicago Bulls; won); 3 of 4 won, the ticket now rests on 1 leg, 76% on its stated chance before play.
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 12/24 cashed at 2.22x, without props 13/24 at 2.32x.
 Running ahead: NBA under on all saved lines 1046/1172 vs 82%; NHL over on all saved lines 131/147 vs 84%; NHL spread on all saved lines 280/323 vs 83%; NHL teamover on all saved lines 168/187 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 81/98 (83% vs 81% stated); waiting for 100 legs. History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 83% (88% / 85%); 90%+ 84%, 84% (93% / 85%).
 Soccer or-draw picks by side: home 77% vs 74% stated on 405 (halves 78%, 77%); away 74% vs 73% stated on 200 (halves 73%, 74%). Straight wins: 66% vs 65% stated on 279; 57 of 96 losses were draws.
-NHL back-to-backs today (watch, not a rule: tired teams ran under their price in each of the last 3 seasons, betting against them lost in one): Nashville Predators (away, played yesterday) v Anaheim Ducks (rested) -- the board has the rested side.
+NHL back-to-backs today (watch, not a rule: tired teams ran under their price in each of the last 3 seasons, betting against them lost in one): Tampa Bay Lightning (away, played yesterday) v Columbus Blue Jackets (rested) -- the board has the tired side; Buffalo Sabres (away, played yesterday) v Chicago Blackhawks (rested) -- the board has the tired side; Utah Mammoth (home, played yesterday) v St. Louis Blues (rested) -- the board has the tired side.
 Soccer draws on the board: 22% of 1450 games; most in EFL3 41% of 37, AUS 38% of 21, UECL 30% of 33, ARG 29% of 73, BRA2 29% of 28 -- where a straight win most often loses to a draw.
 Locks by bet type, by half: win 84% then 96% (vs 82%, 82%); spread 86% then 91% (vs 85%, 85%); total 86% then 88% (vs 84%, 83%); team total 87% then 90% (vs 86%, 85%); prop 80% then 77% (vs 86%, 78%). Short in both halves: prop.
 Injuries at tip-off (125 games, 8 days, early read): my side more out: 1st 8/13 62% vs 62% | 2nd 20/26 77% vs 65%; even: 1st 9/12 75% vs 62% | 2nd 15/20 75% vs 66%; their side more out: 1st 15/19 79% vs 68% | 2nd 30/35 86% vs 63%.
@@ -16,29 +16,12 @@ Ladder games, players out or doubtful: LAL @ MIL: Los Angeles Lakers without Que
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (13 fights priced, 4 close): Bilal Hasan 89%; Juan Diaz 77%; Melquizael Costa 77%; Bia Mesquita 69%; Terrance McKinney 66%; Ciryl Gane 64%; Chris Duncan 62%; Kayla Harrison 62%; Donte Johnson 61%; Uroš Medić 58% (close); Caio Borralho 58% (close); Stephen Thompson 57% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING locks nfl prop: 54.5% hit vs 79.7% stated on 11 (by half 3/5 then 3/6; short in both halves); all 670 saved NFL prop lines 520/670 (78% vs 76% stated) -- the pool is on par, so this looks like a small-sample slump on the few Locks take
-Strong calls 1-0 (100.0% vs 86.0% claimed).
-Closing line value: +0.1 points on 18 picks; beat the close on 55.6%.
-Board sweep: 16-2, 6 open -- broken (first loss: nba New York Knicks at 65%); 5.2 losses expected from the settled picks' chances, so 2 or more by now had a 98.6% chance -- an unusually good day: only 6.1% of days go this well this far in; 1 of the 2 were near coin flips (called under 60%), 1 were real misses; losses by league: nba 2 (2.6 expected).
+Board sweep: 0-0, 29 open -- still clean.
+Why picks lost (14 days): favourite lost 129, close game 103, upset 42, coin flip 41, blowout 37, price moved against it 24.
+Yesterday (2026-11-11): board 16-2, sweep broken by nba New York Knicks at 65%; 5.2 losses expected, 2 came in (98.6% chance of that many or more) -- an unusually good day: only 6.1% of days go this well.
 - LOST nba New York Knicks at 65% (-205), Cleveland Cavaliers 115 - New York Knicks 107: margin 8 · the book had my side favoured too · called at 65% · favourite lost; picks like it: 47 of 76 (62% vs 65% stated)
 - LOST nba New Orleans Pelicans at 56% (-142), Brooklyn Nets 145 - New Orleans Pelicans 111: margin 34 · the book had my side favoured too · called at 56% · coin flip · blowout · price moved against it (3 pts); picks like it: 43 of 75 (57% vs 56% stated)
-Why picks lost (14 days): favourite lost 136, close game 108, upset 46, coin flip 44, blowout 39, price moved against it 29.
-Yesterday (2026-11-10): board 18-6, sweep broken by ncaab Duke Blue Devils at 76%; 7.8 losses expected, 6 came in (85.5% chance of that many or more).
-- LOST ncaab Duke Blue Devils at 76% (-340), Duke Blue Devils 73 - Michigan State Spartans 79: margin 6 · the book had my side favoured too · called at 76% · upset
-- LOST nhl New Jersey Devils at 56% (-142), New Jersey Devils 2 - Winnipeg Jets 4: margin 2 · the book had my side favoured too · called at 56% · coin flip; picks like it: 122 of 211 (58% vs 55% stated)
-- LOST ncaab Illinois Fighting Illini at 57% (-142), Illinois Fighting Illini 78 - Texas Tech Red Raiders 84: margin 6 · the book had my side favoured too · called at 57% · coin flip
-- LOST ncaaf Ohio Bobcats at 52% (-118), Miami (OH) RedHawks 34 - Ohio Bobcats 17: margin 17 · the book had my side favoured too · called at 52% · coin flip · blowout; picks like it: 122 of 203 (60% vs 53% stated)
-- LOST nhl Los Angeles Kings at 53% (-125), Los Angeles Kings 0 - Nashville Predators 3: margin 3 · the book had my side favoured too · called at 53% · coin flip · blowout · price moved against it (3 pts); picks like it: 118 of 221 (53% vs 53% stated)
-- LOST nba Oklahoma City Thunder at 52% (-118), Oklahoma City Thunder 103 - Portland Trail Blazers 123: margin 20 · the book had my side favoured too · called at 52% · coin flip · blowout; picks like it: 28 of 49 (57% vs 54% stated)
-Locks 7/11 won, 1 open; Best play top 2 (61%) won; lost: Under 230.5 points (Orlando Magic at Utah Jazz) Orlando Magic 123 - Utah Jazz 108; Massachusetts Minutemen over 12.5 points (Massachusetts Minutemen at Toledo Rockets) Massachusetts Minutemen 0 - Toledo Rockets 24; Calgary Flames over 1.5 goals (New York Rangers at Calgary Flames) New York Rangers 3 - Calgary Flames 1.
-Safe Locks 6/11 won, 3 open; Winners parlay top 2 (84%) won; Best play top 7 (53%) open; lost: Over 192.5 points (Boston Celtics at Toronto Raptors) Boston Celtics 98 - Toronto Raptors 93; Under 254.5 points (Brooklyn Nets at New Orleans Pelicans) Brooklyn Nets 145 - New Orleans Pelicans 111.
-Lottery 100: lost (4/9 legs won, killed by Over 202.5 points, Utah Jazz +4.5, San Antonio Spurs -14.5)
-Lottery 100: lost (4/8 legs won, killed by Washington Wizards +3.5)
-Lottery 10k: lost (4/12 legs won, killed by Utah Jazz +4.5, Los Angeles Lakers -12.5, San Antonio Spurs -14.5, Central Michigan Chippewas -27.5, Washington Wizards +3.5)
-Lottery 10k+25: lost (5/12 legs won, killed by Utah Jazz +4.5, Los Angeles Lakers -12.5, San Antonio Spurs -14.5, Central Michigan Chippewas -27.5, Washington Wizards +3.5)
-Lottery 10k+50: lost (4/12 legs won, killed by Utah Jazz +4.5, Los Angeles Lakers -12.5, San Antonio Spurs -14.5, Central Michigan Chippewas -27.5, Washington Wizards +3.5)
-Lottery 10k+100: lost (4/12 legs won, killed by Utah Jazz +4.5, Los Angeles Lakers -12.5, San Antonio Spurs -14.5, Central Michigan Chippewas -27.5, Washington Wizards +3.5)
 Ladder-consistency props (all time): 2195/2640 won (83.1%) vs 86.3% fair, 87.4% price.
-Props 122/144 vs 83.8% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=168), ncaab 0.00 (n=53), ncaaf 0.00 (n=232), nfl 0.00 (n=56), nhl 0.00 (n=178)
