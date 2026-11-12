@@ -235,6 +235,18 @@ class B2BLine(unittest.TestCase):
         self.assertIsNone(daily_review.b2b_line({}))
 
 
+class LockLeagues(unittest.TestCase):
+    def test_line(self):
+        legs = []
+        for i in range(40):
+            d = "2026-10-01" if i < 20 else "2026-10-20"
+            legs.append(dict(date=d, league="nhl", p=0.85, status="won" if i % 10 else "lost"))     # 90%
+            legs.append(dict(date=d, league="nfl", p=0.85, status="won" if i % 2 else "lost"))      # 50%
+        out = daily_review.locks_league_line(legs)
+        self.assertIn("NHL 90% then 90% (vs 85%, 85%)", out)
+        self.assertTrue(out.endswith("Short in both halves: NFL."))
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}

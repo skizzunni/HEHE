@@ -733,6 +733,40 @@ def b2b_line(ledger=None, leagues=("nhl", "nba")):
     return ("Back-to-backs, board record so far: " + "; ".join(parts) + ".") if parts else None
 
 
+def locks_league_line(legs=None, min_half=15):
+    """Locks + Safe Locks legs by league, each with its two date halves
+    against stated; a league short in both halves (each half min_half+ legs)
+    is flagged. 2026-11-12: none was."""
+    if legs is None:
+        try:
+            import locks
+            legs = [x for p_ in (None, locks.SAFE_LEDGER)
+                    for x in ((locks.load(p_) if p_ else locks.load()).get("legs") or {}).values()]
+        except Exception:
+            return None
+    G = sorted((x for x in legs if x.get("status") in ("won", "lost") and x.get("p") is not None
+                and x.get("date") and x.get("league")), key=lambda x: x["date"])
+    if len(G) < 40:
+        return None
+    mid = G[len(G) // 2]["date"]
+    by = {}
+    for x in G:
+        by.setdefault(x["league"], ([], []))[0 if x["date"] < mid else 1].append(x)
+    parts, short = [], []
+    for lg, hv in sorted(by.items(), key=lambda kv: -(len(kv[1][0]) + len(kv[1][1]))):
+        if any(len(h) < min_half for h in hv):
+            continue
+        rec = [(sum(x["status"] == "won" for x in h) / len(h), sum(x["p"] for x in h) / len(h)) for h in hv]
+        parts.append(f"{lg.upper()} {round(100 * rec[0][0])}% then {round(100 * rec[1][0])}% "
+                     f"(vs {round(100 * rec[0][1])}%, {round(100 * rec[1][1])}%)")
+        if all(w < said for w, said in rec):
+            short.append(lg.upper())
+    if not parts:
+        return None
+    return ("Locks by league, by half: " + "; ".join(parts) + "."
+            + (f" Short in both halves: {', '.join(short)}." if short else " No league short in both halves."))
+
+
 def draw_rate_line(ledger=None, min_n=20, top=5):
     """How often board soccer games ended level, by league (graded games
     with a two-team score), highest first: where a straight-win pick most
@@ -1578,6 +1612,8 @@ def words(r, fit):
         out.append(r["draws"])
     if r.get("lock_types"):
         out.append(r["lock_types"])
+    if r.get("lock_leagues"):
+        out.append(r["lock_leagues"])
     if r.get("inj_study"):
         out.append(r["inj_study"])
     if r.get("lessons"):
@@ -1727,6 +1763,7 @@ def _main():
     log[today.isoformat()]["nhl_b2b"] = nhl_b2b_line(today, ledger=ledger)
     log[today.isoformat()]["draws"] = draw_rate_line(ledger)
     log[today.isoformat()]["lock_types"] = locks_type_line()
+    log[today.isoformat()]["lock_leagues"] = locks_league_line()
     log[today.isoformat()]["inj_study"] = injury_study_line(ledger)
     log[today.isoformat()]["lessons"] = lessons_line(ledger)
     log[today.isoformat()]["teams"] = team_line(ledger)
