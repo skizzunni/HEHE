@@ -14353,9 +14353,9 @@
   "card_missing": null,
   "cautions": "Running ahead: NBA under on all saved lines 1019/1142 vs 82%; NHL over on all saved lines 118/134 vs 84%; NHL spread on all saved lines 251/291 vs 83%; NHL teamover on all saved lines 151/168 vs 82%.",
   "clv": {
-   "avg": 3.93,
-   "beat": 66.7,
-   "n": 3
+   "avg": 2.95,
+   "beat": 50.0,
+   "n": 4
   },
   "cold": "Running cold (last 7 days, all saved lines at 70-95%): NFL over 97/129 (75% vs 81%). Walk-forward: legs of a type running cold won 85.3% the next day vs 83.2% for the rest (685 and 6984 legs), so a cold week is noise, not a signal.",
   "day": "2026-11-12",
@@ -14367,7 +14367,7 @@
   "injury_ctx": "Ladder games, players out or doubtful: Charlotte Hornets at Phoenix Suns: Charlotte Hornets without Brandon Miller, Kon Knueppel, Dennis Schroder; Phoenix Suns without Mark Williams | Toronto Raptors at Philadelphia 76ers: Toronto Raptors without Trayce Jackson-Davis, Scottie Barnes, Kawhi Leonard, Nate Bittle; Philadelphia 76ers without LeBron James, Dominick Barlow, Adem Bona, Ariel Hukporti | New York Islanders at Los Angeles Kings: New York Islanders without Ryan Pulock.",
   "ladder": "Ladder: run 6, bank $2.47, 1 win(s) in a row, best $9.57; today stakes $2.47 at 2.00x (42% est.), the best-chance 2x-5x combination (3 legs) against 35% at 2.44x for the plain top 4; 12 wins to $10,000; legs: Under 228.5 points (Charlotte Hornets at Phoenix Suns; 9:00 PM, open), Over 208.5 points (Toronto Raptors at Philadelphia 76ers; 7:00 PM, open), Under 7.5 goals (New York Islanders at Los Angeles Kings; 10:00 PM, open).",
   "leaks_14d": [],
-  "lessons": "Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1643 picks).",
+  "lessons": "Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1644 picks).",
   "lock_types": "Locks by bet type, by half: win 84% then 96% (vs 82%, 81%); spread 86% then 91% (vs 85%, 85%); total 86% then 88% (vs 84%, 83%); team total 87% then 90% (vs 86%, 85%); prop 80% then 77% (vs 86%, 78%). Short in both halves: prop.",
   "locks": {
    "lost": [],
@@ -14453,12 +14453,20 @@
   "picks": {
    "hit": 100.0,
    "lost": 0,
-   "n": 3,
-   "roi": 27.0,
-   "said": 74.0,
-   "won": 3
+   "n": 4,
+   "roi": 31.9,
+   "said": 71.8,
+   "won": 4
   },
   "picks_by_league": {
+   "cdr": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 46.5,
+    "said": 65.0,
+    "won": 1
+   },
    "intl": {
     "hit": 100.0,
     "lost": 0,
@@ -14512,23 +14520,23 @@
   "strong": {
    "hit": 100.0,
    "lost": 0,
-   "n": 3,
-   "roi": 27.0,
-   "said": 74.0,
-   "won": 3
+   "n": 4,
+   "roi": 31.9,
+   "said": 71.8,
+   "won": 4
   },
   "stuck": [],
   "sweep": {
    "as_bad_pct": 100.0,
-   "as_good_pct": 40.4,
+   "as_good_pct": 26.3,
    "broke_on": null,
    "coin_flips": 0,
    "expected_by_league": {},
-   "expected_losses": 0.8,
+   "expected_losses": 1.1,
    "lost": 0,
    "lost_by_league": {},
-   "open": 28,
-   "won": 3
+   "open": 27,
+   "won": 4
   },
   "teams": "Teams backed most, furthest behind (10+ picks): NBA New York Knicks 6/14 vs 71% stated (2.4% by luck; about 1.2 of 50 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 6.4 of 50 teams expected this far behind by chance); MLB Seattle Mariners 7/15 vs 57% stated (28.7% by luck; about 14.4 of 50 teams expected this far behind by chance).",
   "ufc": "UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavi\u010dius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.",
@@ -14540,10 +14548,10 @@
    "agree": {
     "hit": 77.4,
     "lost": 213,
-    "n": 942,
+    "n": 943,
     "roi": 2.6,
     "said": 72.0,
-    "won": 729
+    "won": 730
    }
   },
   "weights": {
