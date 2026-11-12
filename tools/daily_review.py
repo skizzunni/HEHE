@@ -705,28 +705,19 @@ def team_line(ledger=None, min_n=10, top=3):
 
 
 def hi_sweep_line(ledger=None, today=None, cuts=(70, 80)):
-    """The board's high-chance picks as their own sweep: today's record of
-    picks stated at 70%+ (and 80%+), and on how many graded days that set
-    went without a loss. A full-board sweep needs every coin flip too; the
-    70%+ set is the part a sweep can realistically aim at."""
+    """The board's high-chance picks as their own sweep (ledger.hi_sweep, the
+    same numbers as the page tile): today's record of picks stated at 70%+
+    and 80%+, and on how many graded days each set went without a loss."""
+    import ledger as _lg
     if ledger is None:
         ledger = load("ledger.json", {})
     today = (today or dt.date.today()).isoformat() if not isinstance(today, str) else today
     parts = []
     for cut in cuts:
-        days = {}
-        for v in ledger.values():
-            if isinstance(v, dict) and v.get("date") and not v.get("record_excluded") and (v.get("conf") or 0) >= cut \
-                    and v.get("status") in ("won", "lost", "open"):
-                a = days.setdefault(v["date"], [0, 0, 0])
-                a[0] += v["status"] == "won"
-                a[1] += v["status"] == "lost"
-                a[2] += v["status"] == "open"
-        done = [d for d, (w, l, o) in days.items() if o == 0 and d < today and w + l]
-        swept = sorted(d for d in done if days[d][1] == 0)
-        t = days.get(today, [0, 0, 0])
-        parts.append(f"{cut}%+ today {t[0]}-{t[1]}" + (f", {t[2]} open" if t[2] else "")
-                     + f"; swept {len(swept)} of {len(done)} past days" + (f" (last {swept[-1]})" if swept else ""))
+        S = _lg.hi_sweep(ledger, today, cut)
+        w, l, o = S["today"]
+        parts.append(f"{cut}%+ today {w}-{l}" + (f", {o} open" if o else "")
+                     + f"; swept {S['swept']} of {S['days']} past days" + (f" (last {S['last']})" if S["last"] else ""))
     return "High-chance sweep: " + " | ".join(parts) + "."
 
 
