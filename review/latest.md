@@ -20,7 +20,7 @@ Next UFC card 2026-11-14 (13 fights priced, 4 close): Bilal Hasan 89%; Juan Diaz
 TRAILING locks nfl prop: 54.5% hit vs 79.7% stated on 11 (by half 3/5 then 3/6; short in both halves); all 670 saved NFL prop lines 520/670 (78% vs 76% stated) -- the pool is on par, so this looks like a small-sample slump on the few Locks take
 Strong calls 1-0 (100.0% vs 78.0% claimed).
 Closing line value: +7.61 points on 1 picks; beat the close on 100.0%.
-Board sweep: 1-0, 29 open -- still clean.
+Board sweep: 1-0, 30 open -- still clean.
 Why picks lost (14 days): favourite lost 129, close game 103, upset 42, coin flip 42, blowout 37, price moved against it 24.
 Yesterday (2026-11-11): board 21-3, sweep broken by nba New York Knicks at 65%; 7.4 losses expected, 3 came in (99.3% chance of that many or more) -- an unusually good day: only 2.7% of days go this well.
 - LOST nba New York Knicks at 65% (-205), Cleveland Cavaliers 115 - New York Knicks 107: margin 8 · the book had my side favoured too · called at 65% · favourite lost; picks like it: 48 of 77 (62% vs 65% stated)
