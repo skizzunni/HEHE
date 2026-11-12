@@ -13,13 +13,13 @@ Locks by bet type, by half: win 84% then 96% (vs 82%, 81%); spread 86% then 91% 
 Injuries at tip-off (130 games, 8 days, early read): my side more out: 1st 12/17 71% vs 63% | 2nd 16/22 73% vs 65%; even: 1st 12/18 67% vs 62% | 2nd 14/16 88% vs 67%; their side more out: 1st 24/28 86% vs 67% | 2nd 23/29 79% vs 62%.
 Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1641 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 6/14 vs 71% stated (2.4% by luck; about 1.2 of 50 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 6.4 of 50 teams expected this far behind by chance); MLB Seattle Mariners 7/15 vs 57% stated (28.7% by luck; about 14.4 of 50 teams expected this far behind by chance).
-High-chance sweep: 70%+ today 1-0, 13 open; swept 3 of 27 past days (last 2026-11-11) | 80%+ today 0-0, 2 open; swept 8 of 26 past days (last 2026-11-11).
+High-chance sweep: 70%+ today 1-0, 14 open; swept 3 of 27 past days (last 2026-11-11) | 80%+ today 0-0, 2 open; swept 8 of 26 past days (last 2026-11-11).
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (13 fights priced, 4 close): Bilal Hasan 89%; Juan Diaz 77%; Melquizael Costa 77%; Bia Mesquita 69%; Terrance McKinney 66%; Ciryl Gane 64%; Chris Duncan 62%; Kayla Harrison 62%; Donte Johnson 61%; Uroš Medić 58% (close); Caio Borralho 58% (close); Stephen Thompson 57% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING locks nfl prop: 54.5% hit vs 79.7% stated on 11 (by half 3/5 then 3/6; short in both halves); all 670 saved NFL prop lines 520/670 (78% vs 76% stated) -- the pool is on par, so this looks like a small-sample slump on the few Locks take
 Strong calls 1-0 (100.0% vs 78.0% claimed).
 Closing line value: +7.61 points on 1 picks; beat the close on 100.0%.
-Board sweep: 1-0, 28 open -- still clean.
+Board sweep: 1-0, 29 open -- still clean.
 Why picks lost (14 days): favourite lost 129, close game 103, upset 42, coin flip 42, blowout 37, price moved against it 24.
 Yesterday (2026-11-11): board 21-3, sweep broken by nba New York Knicks at 65%; 7.4 losses expected, 3 came in (99.3% chance of that many or more) -- an unusually good day: only 2.7% of days go this well.
 - LOST nba New York Knicks at 65% (-205), Cleveland Cavaliers 115 - New York Knicks 107: margin 8 · the book had my side favoured too · called at 65% · favourite lost; picks like it: 48 of 77 (62% vs 65% stated)
