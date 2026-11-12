@@ -1,7 +1,7 @@
 # Review 2026-11-11
 
-Picks 1-0 (100.0% vs 86.0% claimed, ROI +10.0%).
-Ladder: run 6, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (35% est.), the best-chance 2x-5x combination (4 legs) against 35% at 2.47x for the plain top 4; without props it would be 4 legs at 2.46x (33%); 11 wins to $10,000; legs: Jaime Jaquez Jr.: 2+ Assists (LAL @ MIL; live 1:36 - 2nd, Los Angeles Lakers 55 - Milwaukee Bucks 48, 0 so far, needs 2 more, on pace for 0, behind the pace it needs; props like it 95/123), Mikal Bridges: 2+ Assists (CLE @ NY; live End of 3rd, Cleveland Cavaliers 82 - New York Knicks 76, 2 so far, line reached; props like it 95/123), USC Trojans to win (USC Trojans at California Golden Bears; 11:00 PM, open), Under 254.5 points (San Antonio Spurs at Chicago Bulls; live 1:12 - 2nd, Chicago Bulls 70 - San Antonio Spurs 54, on pace for 261 (124 so far, line 254.5, room for 130 more), behind the pace it needs).
+Picks 3-0 (100.0% vs 82.0% claimed, ROI +24.0%).
+Ladder: run 6, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (35% est.), the best-chance 2x-5x combination (4 legs) against 35% at 2.47x for the plain top 4; without props it would be 4 legs at 2.46x (33%); 11 wins to $10,000; legs: Jaime Jaquez Jr.: 2+ Assists (LAL @ MIL; live Halftime, Los Angeles Lakers 61 - Milwaukee Bucks 50, 0 so far, needs 2 more, on pace for 0, behind the pace it needs; props like it 95/123), Mikal Bridges: 2+ Assists (CLE @ NY; live 10:10 - 4th, Cleveland Cavaliers 90 - New York Knicks 81, 2 so far, line reached; props like it 95/123), USC Trojans to win (USC Trojans at California Golden Bears; 11:00 PM, open), Under 254.5 points (San Antonio Spurs at Chicago Bulls; live Halftime, Chicago Bulls 70 - San Antonio Spurs 56, on pace for 252 (126 so far, line 254.5, room for 128 more), on track).
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 12/24 cashed at 2.22x, without props 13/24 at 2.32x.
 Running ahead: NBA under on all saved lines 956/1064 vs 82%; NHL over on all saved lines 127/142 vs 84%; NHL spread on all saved lines 271/313 vs 83%; NHL teamover on all saved lines 161/179 vs 83%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 81/98 (83% vs 81% stated); waiting for 100 legs. History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).
@@ -16,8 +16,8 @@ UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2
 Next UFC card 2026-11-14 (13 fights priced, 5 close): Bilal Hasan 89%; Juan Diaz 77%; Melquizael Costa 77%; Bia Mesquita 69%; Ciryl Gane 64%; Terrance McKinney 64%; Kayla Harrison 62%; Chris Duncan 60%; Donte Johnson 59% (close); Stephen Thompson 58% (close); Uroš Medić 58% (close); Caio Borralho 58% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING locks nfl prop: 54.5% hit vs 79.7% stated on 11 (by half 3/5 then 3/6; short in both halves); all 670 saved NFL prop lines 520/670 (78% vs 76% stated) -- the pool is on par, so this looks like a small-sample slump on the few Locks take
 Strong calls 1-0 (100.0% vs 86.0% claimed).
-Closing line value: +2.67 points on 1 picks; beat the close on 100.0%.
-Board sweep: 1-0, 23 open -- still clean.
+Closing line value: -0.55 points on 3 picks; beat the close on 66.7%.
+Board sweep: 3-0, 21 open -- still clean.
 Why picks lost (14 days): favourite lost 135, close game 108, upset 46, coin flip 43, blowout 38, price moved against it 28.
 Yesterday (2026-11-10): board 18-6, sweep broken by ncaab Duke Blue Devils at 76%; 7.8 losses expected, 6 came in (85.5% chance of that many or more).
 - LOST ncaab Duke Blue Devils at 76% (-340), Duke Blue Devils 73 - Michigan State Spartans 79: margin 6 · the book had my side favoured too · called at 76% · upset
@@ -37,4 +37,4 @@ Lottery 10k+100: open (0/12 legs won)
 Ladder-consistency props (all time): 2105/2531 won (83.2%) vs 86.2% fair, 87.4% price.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=160), ncaab 0.00 (n=50), ncaaf 0.00 (n=229), nfl 0.00 (n=56), nhl 0.00 (n=175)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=160), ncaab 0.00 (n=52), ncaaf 0.00 (n=229), nfl 0.00 (n=56), nhl 0.00 (n=175)
