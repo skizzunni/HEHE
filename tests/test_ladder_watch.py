@@ -86,7 +86,7 @@ class LadderWatch(unittest.TestCase):
         g = w.games_snapshot(book, "2026-11-11", "all")
         self.assertEqual(g["GAME nba NO @ BKN"], "board pick New Orleans Pelicans (56%) = lost | Brooklyn Nets 145,"
                                                  " New Orleans Pelicans 111 | why: margin 34 · coin flip · blowout")
-        self.assertEqual(g["GAME epl A @ B"], "board pick B or draw (70%) = open")
+        self.assertEqual(g["GAME epl A @ B"], "board pick B or draw = open")          # no chance while open: drift is not news
 
     def test_loop_stops_when_settled(self):
         calls = {"pull": 0, "sleep": 0}
