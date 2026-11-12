@@ -469,6 +469,16 @@ class AddOuts(unittest.TestCase):
         self.assertEqual(ladder.add_outs(dict(today=None), inj, book), dict(today=None))
 
 
+class MarkOuts(unittest.TestCase):
+    def test_own_teams(self):
+        import ladder
+        legs = [dict(league="nba", home="New York Knicks", away="Cleveland Cavaliers", label="X"), dict(league="nba", label="Y")]
+        ladder.mark_outs(legs, {"nba": {"New York Knicks": [["Josh Hart", "Out"]]}})
+        self.assertEqual(legs[0]["outs"], {"New York Knicks": ["Josh Hart"]})
+        self.assertNotIn("outs", legs[1])
+        self.assertIsNone(ladder.mark_outs(None, {}))
+
+
 class SkipCompare(unittest.TestCase):
     def test_compare(self):
         import ladder

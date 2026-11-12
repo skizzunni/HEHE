@@ -1381,7 +1381,7 @@ function legHTML(x, opts){
     + (x.tip ? ' &middot; ' + esc(x.tip) : '') + '</div>'
     + (!done && needLine(x) ? '<div class="lgs">Needs: ' + esc(needLine(x)) + '</div>' : '')
     + (!done ? kindRec(x) : '')
-    + where + alt + (done ? '' : watchNote(x)) + '</li>';
+    + where + alt + (done ? '' : watchNote(x) + outsNote(x)) + '</li>';
 }
 // a player prop in play: the stat so far against the line it needs
 // (props_ledger.live_value), e.g. "2 so far, needs 4 (2 to go)"

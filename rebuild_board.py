@@ -640,6 +640,8 @@ def snapshot():
             out["ladder"] = ladder.report()
             try:                                # who is out on either side of each ladder leg's game
                 ladder.add_outs(out["ladder"], INJ)
+                for slot_ in ("today", "tomorrow"):           # every Locks leg too
+                    ladder.mark_outs(((out.get("locks") or {}).get(slot_) or {}).get("locks"), INJ)
             except Exception as e_:
                 print(f"ladder injuries skipped ({e_})", file=sys.stderr)
         except Exception as e_:
