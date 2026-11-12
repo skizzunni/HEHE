@@ -7278,7 +7278,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-12T00:19:36+00:00",
+      "checked_at": "2026-11-12T00:24:49+00:00",
       "conf": 91,
       "dc": false,
       "gate": {
@@ -7290,10 +7290,10 @@
       "match": "SAC @ CMU",
       "pick": "Central Michigan Chippewas",
       "price": "-1200",
-      "price_at": "2026-11-12T00:19:17+00:00",
+      "price_at": "2026-11-12T00:24:27+00:00",
       "price_market": "moneyline",
       "price_ref": "34964155:0ML87098624_1",
-      "prob_at": "2026-11-12T00:19:17+00:00",
+      "prob_at": "2026-11-12T00:24:27+00:00",
       "rank": 2,
       "ready": true,
       "side": "home",
@@ -7328,32 +7328,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-12T00:19:36+00:00",
+      "checked_at": "2026-11-12T00:24:49+00:00",
       "conf": 89,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (8 listed)"
+       "what": "injury report checked (7 listed)"
       },
       "id": "nba:401909969",
       "league": "nba",
       "match": "SA @ CHI",
       "pick": "San Antonio Spurs",
       "price": "-1180",
-      "price_at": "2026-11-12T00:19:17+00:00",
+      "price_at": "2026-11-12T00:24:26+00:00",
       "price_market": "moneyline",
       "price_ref": "34988945:0ML87164378_3",
-      "prob_at": "2026-11-12T00:19:17+00:00",
+      "prob_at": "2026-11-12T00:24:26+00:00",
       "rank": 3,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "away",
       "start": "2026-11-12T01:00Z"
      },
      "dc": false,
-     "fp": "22a733e186f1",
+     "fp": "8a96999d7113",
      "gate": {
       "ok": true,
-      "what": "injury report checked (8 listed)"
+      "what": "injury report checked (7 listed)"
      },
      "id": "nba:401909969",
      "league": "nba",
@@ -7407,10 +7408,15 @@
        "event": "news",
        "t": "2026-11-11T23:43:41+00:00",
        "what": "injury report checked (8 listed)"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-12T00:24:49+00:00",
+       "what": "injury report checked (7 listed)"
       }
      ],
      "match": "SA @ CHI",
-     "news_at": "2026-11-11T23:43:41+00:00",
+     "news_at": "2026-11-12T00:24:49+00:00",
      "pick": "San Antonio Spurs",
      "price": "-1200",
      "price_at": "2026-11-11T13:02:45+00:00",
@@ -7431,7 +7437,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-12T00:19:36+00:00",
+      "checked_at": "2026-11-12T00:24:49+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -7443,10 +7449,10 @@
       "match": "MASS @ TOL",
       "pick": "Toledo Rockets",
       "price": "-600",
-      "price_at": "2026-11-12T00:19:17+00:00",
+      "price_at": "2026-11-12T00:24:27+00:00",
       "price_market": "moneyline",
       "price_ref": "34964156:0ML87098625_1",
-      "prob_at": "2026-11-12T00:19:17+00:00",
+      "prob_at": "2026-11-12T00:24:27+00:00",
       "rank": 4,
       "ready": true,
       "side": "home",
@@ -7481,7 +7487,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-12T00:19:36+00:00",
+      "checked_at": "2026-11-12T00:24:49+00:00",
       "conf": 87,
       "dc": false,
       "gate": {
@@ -7493,10 +7499,10 @@
       "match": "LAL @ MIL",
       "pick": "Los Angeles Lakers",
       "price": "-930",
-      "price_at": "2026-11-12T00:19:17+00:00",
+      "price_at": "2026-11-12T00:24:26+00:00",
       "price_market": "moneyline",
       "price_ref": "34988947:0ML87164380_3",
-      "prob_at": "2026-11-12T00:19:17+00:00",
+      "prob_at": "2026-11-12T00:24:26+00:00",
       "rank": 5,
       "ready": true,
       "side": "away",
@@ -7579,7 +7585,7 @@
     }
    ],
    "candidate_news": {
-    "nba": "2026-11-11T23:43:41+00:00"
+    "nba": "2026-11-12T00:24:49+00:00"
    },
    "candidate_observations": {
     "nba:401909969": {
@@ -7590,40 +7596,48 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-12T00:19:36+00:00",
+      "checked_at": "2026-11-12T00:24:49+00:00",
       "conf": 89,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (8 listed)"
+       "what": "injury report checked (7 listed)"
       },
       "id": "nba:401909969",
       "league": "nba",
       "match": "SA @ CHI",
       "pick": "San Antonio Spurs",
       "price": "-1180",
-      "price_at": "2026-11-12T00:19:17+00:00",
+      "price_at": "2026-11-12T00:24:26+00:00",
       "price_market": "moneyline",
       "price_ref": "34988945:0ML87164378_3",
-      "prob_at": "2026-11-12T00:19:17+00:00",
+      "prob_at": "2026-11-12T00:24:26+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "away",
       "start": "2026-11-12T01:00Z"
      },
      "dc": false,
-     "fp": "22a733e186f1",
+     "fp": "8a96999d7113",
      "gate": {
       "ok": true,
-      "what": "injury report checked (8 listed)"
+      "what": "injury report checked (7 listed)"
      },
      "id": "nba:401909969",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-12T00:24:49+00:00",
+       "what": "injury report checked (7 listed)"
+      }
+     ],
      "match": "SA @ CHI",
-     "news_at": "2026-11-11T23:43:41+00:00",
+     "news_at": "2026-11-12T00:24:49+00:00",
      "pick": "San Antonio Spurs",
      "price": "-1180",
-     "price_at": "2026-11-12T00:19:17+00:00",
+     "price_at": "2026-11-12T00:24:26+00:00",
      "price_market": "moneyline",
      "price_ref": "34988945:0ML87164378_3",
      "side": "away",
@@ -7638,7 +7652,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-12T00:19:36+00:00",
+      "checked_at": "2026-11-12T00:24:49+00:00",
       "conf": 87,
       "dc": false,
       "gate": {
@@ -7650,10 +7664,10 @@
       "match": "LAL @ MIL",
       "pick": "Los Angeles Lakers",
       "price": "-930",
-      "price_at": "2026-11-12T00:19:17+00:00",
+      "price_at": "2026-11-12T00:24:26+00:00",
       "price_market": "moneyline",
       "price_ref": "34988947:0ML87164380_3",
-      "prob_at": "2026-11-12T00:19:17+00:00",
+      "prob_at": "2026-11-12T00:24:26+00:00",
       "rank": null,
       "ready": true,
       "side": "away",
@@ -7671,7 +7685,7 @@
      "news_at": "2026-11-11T19:22:17+00:00",
      "pick": "Los Angeles Lakers",
      "price": "-930",
-     "price_at": "2026-11-12T00:19:17+00:00",
+     "price_at": "2026-11-12T00:24:26+00:00",
      "price_market": "moneyline",
      "price_ref": "34988947:0ML87164380_3",
      "side": "away",
@@ -7686,7 +7700,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-12T00:19:36+00:00",
+      "checked_at": "2026-11-12T00:24:49+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
@@ -7698,10 +7712,10 @@
       "match": "USC @ CAL",
       "pick": "USC Trojans",
       "price": "-360",
-      "price_at": "2026-11-12T00:19:17+00:00",
+      "price_at": "2026-11-12T00:24:26+00:00",
       "price_market": "moneyline",
       "price_ref": "34998908:0ML87189177_3",
-      "prob_at": "2026-11-12T00:19:17+00:00",
+      "prob_at": "2026-11-12T00:24:26+00:00",
       "rank": null,
       "ready": true,
       "side": "away",
@@ -7718,7 +7732,7 @@
      "match": "USC @ CAL",
      "pick": "USC Trojans",
      "price": "-360",
-     "price_at": "2026-11-12T00:19:17+00:00",
+     "price_at": "2026-11-12T00:24:26+00:00",
      "price_market": "moneyline",
      "price_ref": "34998908:0ML87189177_3",
      "side": "away",
@@ -7733,7 +7747,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-12T00:19:36+00:00",
+      "checked_at": "2026-11-12T00:24:49+00:00",
       "conf": 100,
       "dc": false,
       "gate": {
@@ -7745,10 +7759,10 @@
       "match": "RMU @ ARK",
       "pick": "Arkansas Razorbacks",
       "price": "-100000",
-      "price_at": "2026-11-12T00:19:17+00:00",
+      "price_at": "2026-11-12T00:24:26+00:00",
       "price_market": "moneyline",
       "price_ref": "34998895:0ML87189164_1",
-      "prob_at": "2026-11-12T00:19:17+00:00",
+      "prob_at": "2026-11-12T00:24:26+00:00",
       "rank": null,
       "ready": false,
       "reason": "probability unavailable",
@@ -7766,7 +7780,7 @@
      "match": "RMU @ ARK",
      "pick": "Arkansas Razorbacks",
      "price": "-100000",
-     "price_at": "2026-11-12T00:19:17+00:00",
+     "price_at": "2026-11-12T00:24:26+00:00",
      "price_market": "moneyline",
      "price_ref": "34998895:0ML87189164_1",
      "side": "home",
@@ -7781,7 +7795,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-12T00:19:36+00:00",
+      "checked_at": "2026-11-12T00:24:49+00:00",
       "conf": 91,
       "dc": false,
       "gate": {
@@ -7793,10 +7807,10 @@
       "match": "SAC @ CMU",
       "pick": "Central Michigan Chippewas",
       "price": "-1200",
-      "price_at": "2026-11-12T00:19:17+00:00",
+      "price_at": "2026-11-12T00:24:27+00:00",
       "price_market": "moneyline",
       "price_ref": "34964155:0ML87098624_1",
-      "prob_at": "2026-11-12T00:19:17+00:00",
+      "prob_at": "2026-11-12T00:24:27+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -7813,7 +7827,7 @@
      "match": "SAC @ CMU",
      "pick": "Central Michigan Chippewas",
      "price": "-1200",
-     "price_at": "2026-11-12T00:19:17+00:00",
+     "price_at": "2026-11-12T00:24:27+00:00",
      "price_market": "moneyline",
      "price_ref": "34964155:0ML87098624_1",
      "side": "home",
@@ -7828,7 +7842,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-12T00:19:36+00:00",
+      "checked_at": "2026-11-12T00:24:49+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
@@ -7840,10 +7854,10 @@
       "match": "MASS @ TOL",
       "pick": "Toledo Rockets",
       "price": "-600",
-      "price_at": "2026-11-12T00:19:17+00:00",
+      "price_at": "2026-11-12T00:24:27+00:00",
       "price_market": "moneyline",
       "price_ref": "34964156:0ML87098625_1",
-      "prob_at": "2026-11-12T00:19:17+00:00",
+      "prob_at": "2026-11-12T00:24:27+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -7860,7 +7874,7 @@
      "match": "MASS @ TOL",
      "pick": "Toledo Rockets",
      "price": "-600",
-     "price_at": "2026-11-12T00:19:17+00:00",
+     "price_at": "2026-11-12T00:24:27+00:00",
      "price_market": "moneyline",
      "price_ref": "34964156:0ML87098625_1",
      "side": "home",
@@ -7868,21 +7882,23 @@
      "tip": "7:30 PM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "nba"
+   ],
    "news": {
-    "nba": "2026-11-11T23:43:41+00:00"
+    "nba": "2026-11-12T00:24:49+00:00"
    },
    "shadow_watch": {
     "best_at": "2026-11-11T13:28:47+00:00",
     "best_ceiling": 1.731,
-    "checks": 121,
-    "last": "2026-11-12T00:19:36+00:00",
+    "checks": 122,
+    "last": "2026-11-12T00:24:49+00:00",
     "max_ready": 5,
     "reasons": {
-     "awaiting this game's price after its lineup/news change": 13,
-     "below 75% leg standard or probability invalid": 160,
+     "awaiting this game's price after its lineup/news change": 14,
+     "below 75% leg standard or probability invalid": 161,
      "injury report not fetched or game summary unverifiable": 5,
-     "probability unavailable": 160
+     "probability unavailable": 161
     }
    }
   }
