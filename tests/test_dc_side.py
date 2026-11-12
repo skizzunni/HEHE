@@ -198,6 +198,17 @@ class TeamLine(unittest.TestCase):
         self.assertIsNone(daily_review.team_line({k: v for k, v in L.items() if k.startswith("c")}))
 
 
+class HiSweep(unittest.TestCase):
+    def test_line(self):
+        L = {"a": dict(date="2026-11-10", conf=75, status="won"), "b": dict(date="2026-11-10", conf=72, status="lost"),
+             "c": dict(date="2026-11-11", conf=85, status="won"), "d": dict(date="2026-11-11", conf=71, status="won"),
+             "e": dict(date="2026-11-11", conf=55, status="lost"),
+             "f": dict(date="2026-11-12", conf=90, status="won"), "g": dict(date="2026-11-12", conf=74, status="open")}
+        out = daily_review.hi_sweep_line(L, "2026-11-12")
+        self.assertEqual(out, "High-chance sweep: 70%+ today 1-0, 1 open; swept 1 of 2 past days (last 2026-11-11)"
+                              " | 80%+ today 1-0; swept 1 of 1 past days (last 2026-11-11).")
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
