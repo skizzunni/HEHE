@@ -45598,6 +45598,22 @@
   "price": "-1200",
   "status": "open"
  },
+ "nba:401909976|n:lebron james|Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-11-12",
+  "edge": -8.9,
+  "gid": "nba:401909976",
+  "imp": 0.8851,
+  "label": "LeBron James: 10+ Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Reb + Ast",
+  "name": "LeBron James",
+  "p": 0.8502,
+  "p_fair": 0.8063,
+  "price": "-770",
+  "status": "open"
+ },
  "nba:401909976|n:tyrese maxey|Pts + Ast|25+": {
   "aid": null,
   "date": "2026-11-12",
@@ -80942,11 +80958,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Beckett Sennecke",
   "p": 0.7364,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892694|n:cutter gauthier|Shots on Goal|2+": {
   "aid": null,
@@ -80958,11 +80976,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cutter Gauthier",
   "p": 0.8713,
   "p_fair": null,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nhl:401892694|n:cutter gauthier|Shots on Goal|3+": {
   "aid": null,
@@ -80974,11 +80994,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cutter Gauthier",
   "p": 0.743,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nhl:401892694|n:leo carlsson|Shots on Goal|1+": {
   "aid": null,
@@ -80990,11 +81012,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Leo Carlsson",
   "p": 0.8708,
   "p_fair": null,
   "price": "-2000",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892694|n:mavrik bourque|Shots on Goal|1+": {
   "aid": null,
@@ -81006,11 +81030,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mavrik Bourque",
   "p": 0.8595,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892694|n:mikael granlund|Shots on Goal|1+": {
   "aid": null,
@@ -81022,11 +81048,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikael Granlund",
   "p": 0.8465,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892694|n:roman josi|Shots on Goal|1+": {
   "aid": null,
@@ -81037,11 +81065,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Roman Josi",
   "p": 0.8708,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892694|n:steven stamkos|Shots on Goal|2+": {
   "aid": null,
@@ -81053,11 +81083,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Steven Stamkos",
   "p": 0.7287,
   "p_fair": null,
   "price": "-360",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892695|n:ben kindel|Shots on Goal|1+": {
   "aid": null,
