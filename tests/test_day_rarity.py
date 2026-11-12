@@ -144,5 +144,15 @@ class B2B(unittest.TestCase):
         self.assertIsNone(ledger.b2b_side("Q", "A", "B", P))
 
 
+class B2BRecord(unittest.TestCase):
+    def test_record(self):
+        B = {"y": dict(date="2026-11-11", league="nhl", status="won", conf=60, pick="A", scores={"A": 3, "B": 2}),
+             "t1": dict(date="2026-11-12", league="nhl", status="lost", conf=55, pick="A", scores={"A": 1, "C": 4}),
+             "t2": dict(date="2026-11-12", league="nhl", status="won", conf=65, pick="D", scores={"D": 3, "B": 1})}
+        R = ledger.b2b_record(B)
+        self.assertEqual(R["mine"], [0, 1, 55.0])        # A played the 11th, C did not; A lost
+        self.assertEqual(R["theirs"], [1, 1, 65.0])      # B played the 11th; D (rested) won
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -863,6 +863,32 @@ def b2b_side(pick, home, away, played):
     return "mine" if pick in played else "theirs"
 
 
+def b2b_record(book, league="nhl"):
+    """Board picks graded so far by back-to-back side (b2b_side against the
+    day before): {"mine": [won, n, stated%], "theirs": [...]} -- the live
+    record of the watched NHL spot, built up as the season goes."""
+    import datetime as _dt
+    out = {"mine": [0, 0, 0.0], "theirs": [0, 0, 0.0]}
+    cache = {}
+    for e in book.values():
+        if not isinstance(e, dict) or e.get("league") != league or e.get("status") not in ("won", "lost") \
+                or e.get("record_excluded") or not e.get("date") or e.get("conf") is None:
+            continue
+        teams = list((e.get("scores") or {}).keys())
+        if len(teams) != 2 or e.get("pick") not in teams:
+            continue
+        y = (_dt.date.fromisoformat(e["date"]) - _dt.timedelta(days=1)).isoformat()
+        if y not in cache:
+            cache[y] = played_on(book, y, league)
+        side = b2b_side(e["pick"], teams[0], teams[1], cache[y])
+        if side:
+            a = out[side]
+            a[0] += e["status"] == "won"
+            a[1] += 1
+            a[2] += e["conf"]
+    return {k: [w, n, round(c / n, 1) if n else None] for k, (w, n, c) in out.items()}
+
+
 def hi_sweep(book, today, cut=70):
     """The board's picks stated at `cut`%+ as their own sweep: today's
     [won, lost, open], and on how many fully graded past days that set had no

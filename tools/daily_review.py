@@ -776,10 +776,19 @@ def nhl_b2b_line(today=None, games_fn=None, ledger=None):
         mark = " -- the board has the tired side" if tired["name"] in picks else (
             " -- the board has the rested side" if fresh["name"] in picks else "")
         out.append(f"{tired['name']} ({'home' if tired is h else 'away'}, played yesterday) v {fresh['name']} (rested){mark}")
+    try:                                  # the board's own record in the spot, so far
+        import ledger as _lg
+        R = _lg.b2b_record(ledger)
+        so_far = (f" Board record so far: picks on the tired side {R['mine'][0]}/{R['mine'][1]}"
+                  + (f" vs {round(R['mine'][2])}% stated" if R['mine'][1] else "")
+                  + f"; against the tired side {R['theirs'][0]}/{R['theirs'][1]}"
+                  + (f" vs {round(R['theirs'][2])}% stated" if R['theirs'][1] else "") + ".")
+    except Exception:
+        so_far = ""
     if not out:
         return None
     return ("NHL back-to-backs today (watch, not a rule: tired teams ran under their price in each of the last 3 "
-            "seasons, betting against them lost in one): " + "; ".join(out) + ".")
+            "seasons, betting against them lost in one): " + "; ".join(out) + "." + so_far)
 
 
 def ufc_line(today=None, back=8):
