@@ -1081,12 +1081,26 @@ def rule_text(day=None):
     return f"the top {ladder.FIXED_LEGS} Locks"
 
 
+_CACHE = None          # set to {} only while main() runs: one ladder report per review
+
+
+def _report(book=None):
+    """ladder.report(book), built once per review run (main) -- it was being
+    rebuilt six times, about 5 s of a 25 s review. Outside main(), uncached."""
+    import ladder
+    if _CACHE is None or book is not None:
+        return ladder.report(book)
+    if "ladder" not in _CACHE:
+        _CACHE["ladder"] = ladder.report()
+    return _CACHE["ladder"]
+
+
 def runs_line(book=None):
     """Every ladder run so far in one line: start, days, peak, and the leg
     that ended it."""
     try:
         import ladder
-        R = ladder.report(book)
+        R = _report(book)
         H = R.get("history") or []
     except Exception:
         return None
@@ -1106,7 +1120,7 @@ def ladder_line(book=None):
     """One line on the $1 -> $10k ladder (ladder.py), or None before it starts."""
     try:
         import ladder
-        r = ladder.report(book)
+        r = _report(book)
     except Exception:
         return None
     if not r.get("runs"):
@@ -1624,6 +1638,15 @@ def words(r, fit):
 
 
 def main():
+    global _CACHE
+    _CACHE = {}
+    try:
+        return _main()
+    finally:
+        _CACHE = None
+
+
+def _main():
     ledger = load("ledger.json", {})
     locks = load("locks.json", {"days": {}, "legs": {}})
     lottery = load("lottery.json", {"days": {}})
@@ -1680,23 +1703,19 @@ def main():
     log[today.isoformat()]["lessons"] = lessons_line(ledger)
     log[today.isoformat()]["teams"] = team_line(ledger)
     log[today.isoformat()]["hi_sweep"] = hi_sweep_line(ledger, today)
-    try:                                  # ladder prop players on today's rosters
-        import ladder as _ld
-        _bad = roster_check(with_teams(((_ld.report().get("today") or {}).get("legs")) or []))
+    try:                                  # ladder prop players on today's rosters and injury report
+        import injuries as _injm
+        _legs = with_teams(((_report().get("today") or {}).get("legs")) or [])
+        _teams = _injm.fetch()            # one fetch for both injury lines
     except Exception:
-        _bad = []
+        _legs, _teams = [], {}
+    _bad = roster_check(_legs) if _legs else []
     log[today.isoformat()]["roster"] = (("ROSTER CHECK: not on either team's current roster -- check before betting: "
                                          + ", ".join(_bad) + ".") if _bad else None)
-    try:
-        _inj = injury_check(with_teams(((_ld.report().get("today") or {}).get("legs")) or []))
-    except Exception:
-        _inj = []
+    _inj = injury_check(_legs, _teams) if _legs else []
     log[today.isoformat()]["injury"] = (("INJURY CHECK on today's ladder: " + "; ".join(_inj)
                                          + " -- check the status before betting.") if _inj else None)
-    try:
-        log[today.isoformat()]["injury_ctx"] = injury_context(with_teams(((_ld.report().get("today") or {}).get("legs")) or []))
-    except Exception:
-        log[today.isoformat()]["injury_ctx"] = None
+    log[today.isoformat()]["injury_ctx"] = injury_context(_legs, _teams) if _legs else None
     log[today.isoformat()]["card_missing"] = card_check()
     log[today.isoformat()]["ufc"] = ufc_line(today)
     log[today.isoformat()]["ufc_next"] = ufc_next_line(today)
