@@ -793,8 +793,10 @@ function ladderKinds(K){
 // 2022-25: the tired team ran under its closing price every season, but
 // betting against it lost money in 2023-24 -- a watch, not a rule
 function b2bNote(r){
-  if(r.b2b === 'mine') return '<div class="lgw"><b>Back-to-back:</b> this pick played last night and its opponent did not. Teams in that spot won less than their price in each of the last 3 NHL seasons (a watch, not a rule).</div>';
-  if(r.b2b === 'theirs') return '<div class="sbn"><b>Rested edge:</b> the opponent played last night; this pick did not.</div>';
+  const R = ((D.results || {}).b2b) || {};
+  const rec = k => (R[k] && R[k][1]) ? ' Board picks in this spot so far: ' + R[k][0] + ' of ' + R[k][1] + ' (' + Math.round(100 * R[k][0] / R[k][1]) + '% vs ' + Math.round(R[k][2]) + '% stated).' : '';
+  if(r.b2b === 'mine') return '<div class="lgw"><b>Back-to-back:</b> this pick played last night and its opponent did not. Teams in that spot won less than their price in each of the last 3 NHL seasons (a watch, not a rule).' + rec('mine') + '</div>';
+  if(r.b2b === 'theirs') return '<div class="sbn"><b>Rested edge:</b> the opponent played last night; this pick did not.' + rec('theirs') + '</div>';
   return '';
 }
 function drawNote(r){
