@@ -191,6 +191,7 @@ PROBE = """<script>setTimeout(function(){
   out.lskip = [ladderSkip({all: [12, 24, 2.22], without: [13, 24, 2.32]}), ladderSkip(null)];
   out.ltypes = [ladderTypes({win: {won: 6, n: 6}, prop: {won: 9, n: 12}, total: {won: 8, n: 9}}), ladderTypes({})];
   out.lkinds = [ladderKinds({game: {won: 16, n: 18, said: 75.7}, prop: {won: 7, n: 10, said: 79.3}}), ladderKinds({}), ladderKinds(undefined)];
+  out.b2bN = [b2bNote({b2b: "mine"}), b2bNote({b2b: "theirs"}), b2bNote({})];
   out.drawn = [drawNote({sw: true}), drawNote({sw: false}), drawNote({}), drawNote({sd: "a"}), drawNote({sd: "h"})];
   out.bandc = [bandCaution("ncaaf", 72.5), bandCaution("ncaaf", 81), bandCaution("nfl", 72), bandCaution("ncaaf", undefined)];
   D.results = rsC;
@@ -555,6 +556,9 @@ def main():
     lt = new.get("ltypes") or ["", "x"]
     if not (lt[0] == " By bet: wins 6/6, totals 8/9, props 9/12." and lt[1] == ""):
         fails.append("ladder types wrong: " + repr(lt))
+    bn = new.get("b2bN") or ["", "", "x"]
+    if not ("<b>Back-to-back:</b> this pick played last night" in bn[0] and "<b>Rested edge:</b>" in bn[1] and bn[2] == ""):
+        fails.append("b2b note wrong: " + repr(bn))
     lk = new.get("lkinds") or ["", "x", "x"]
     if not (lk[0] == " By kind: game lines 16 of 18 (89% vs 76%), player props 7 of 10 (70% vs 79%)." and not lk[1] and not lk[2]):
         fails.append("ladder kinds wrong: " + repr(lk))

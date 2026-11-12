@@ -131,5 +131,18 @@ class HiSweepLedger(unittest.TestCase):
         self.assertEqual(ledger.hi_sweep(B, "2026-11-12"), dict(cut=70, today=[0, 0, 1], swept=1, days=2, last="2026-11-11"))
 
 
+class B2B(unittest.TestCase):
+    def test_played_and_side(self):
+        B = {"a": dict(date="2026-11-11", league="nhl", scores={"Tampa Bay Lightning": 8, "Buffalo Sabres": 3}),
+             "b": dict(date="2026-11-11", league="nba", scores={"X": 1, "Y": 2}),
+             "c": dict(date="2026-11-12", league="nhl", scores={"Z": 1, "W": 2})}
+        P = ledger.played_on(B, "2026-11-11", "nhl")
+        self.assertEqual(P, {"Tampa Bay Lightning", "Buffalo Sabres"})
+        self.assertEqual(ledger.b2b_side("Tampa Bay Lightning", "Columbus Blue Jackets", "Tampa Bay Lightning", P), "mine")
+        self.assertEqual(ledger.b2b_side("Columbus Blue Jackets", "Columbus Blue Jackets", "Tampa Bay Lightning", P), "theirs")
+        self.assertIsNone(ledger.b2b_side("Tampa Bay Lightning", "Buffalo Sabres", "Tampa Bay Lightning", P))
+        self.assertIsNone(ledger.b2b_side("Q", "A", "B", P))
+
+
 if __name__ == "__main__":
     unittest.main()

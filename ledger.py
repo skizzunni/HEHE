@@ -842,6 +842,27 @@ def draw_losses(book):
     return dict(n=len(S), lost=len(L), drawn=sum(len(set(e["scores"].values())) == 1 for e in L))
 
 
+def played_on(book, day, league):
+    """Team names (as scored) that played a graded or live `league` game on
+    `day` per the ledger -- for back-to-back flags."""
+    out = set()
+    for e in book.values():
+        if isinstance(e, dict) and e.get("date") == day and e.get("league") == league:
+            out |= set((e.get("scores") or {}).keys()) | set((e.get("live_score") or {}).keys())
+    return out
+
+
+def b2b_side(pick, home, away, played):
+    """'mine' / 'theirs' / None: which side of a game played the day before,
+    when exactly one did (both or neither: None)."""
+    if not (home and away) or pick not in (home, away):
+        return None
+    other = away if pick == home else home
+    if (pick in played) == (other in played):
+        return None
+    return "mine" if pick in played else "theirs"
+
+
 def hi_sweep(book, today, cut=70):
     """The board's picks stated at `cut`%+ as their own sweep: today's
     [won, lost, open], and on how many fully graded past days that set had no

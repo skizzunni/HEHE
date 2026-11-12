@@ -152,6 +152,23 @@ def snapshot():
             return None
         return round(100 * (b - a))
 
+    # NHL back-to-backs (tools/nba_rest_study.py on 2022-25 NHL: the team on
+    # the second night ran under its price every season, but betting against
+    # it lost in 2023-24): flagged on the row as information only
+    try:
+        import datetime as _dt
+        _d0 = d._STATE["dates"][0]
+        _yday = (_dt.date(int(_d0[:4]), int(_d0[4:6]), int(_d0[6:])) - _dt.timedelta(days=1)).isoformat()
+        _PLAYED = ledger.played_on(_LB, _yday, "nhl")
+    except Exception:
+        _PLAYED = set()
+
+    def b2b_of(k, r, slot):
+        if k != "nhl" or slot != "today" or not _PLAYED:
+            return None
+        m_ = r.get("mkt") or {}
+        return ledger.b2b_side(r.get("mypick"), m_.get("home"), m_.get("away"), _PLAYED)
+
     def inj_note(k, r):
         if k not in INJ:
             return None
@@ -206,6 +223,7 @@ def snapshot():
                     ats.append(quote_at(r))
                 rows.append({"mp": r["mypick"] + (" or draw" if r.get("dc") else ""),
                              "sw": bool(k in SOCCER and not r.get("dc")),   # a straight win in a sport with draws
+                             "b2b": b2b_of(k, r, slot),                  # NHL back-to-back side, information only
                              "sd": (r.get("myside") or "")[:1] if k in SOCCER and r.get("dc") else None,  # or-draw side
                              "t": r["tip"],
                              "mc": mc, "tk": tk, "tl": tl, "hd": hide,
