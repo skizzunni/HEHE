@@ -13,9 +13,9 @@
     "per_sport": 2
    },
    "second": {
-    "hit": 81.4,
+    "hit": 81.9,
     "n": 177,
-    "roi": -0.39
+    "roi": 0.22
    }
   },
   "dates": [
@@ -31,16 +31,16 @@
      "n": 84,
      "roi": 3.43
     },
-    "gain": 1.66,
-    "gain_lower": -7.5,
+    "gain": 0.66,
+    "gain_lower": -8.39,
     "rule": {
      "min_dec": 1.0,
      "per_sport": 1
     },
     "second": {
-     "hit": 79.5,
-     "n": 146,
-     "roi": 0.7
+     "hit": 79.6,
+     "n": 147,
+     "roi": 0.75
     }
    },
    {
@@ -70,9 +70,9 @@
      "per_sport": 2
     },
     "second": {
-     "hit": 81.4,
+     "hit": 81.9,
      "n": 177,
-     "roi": -0.39
+     "roi": 0.22
     }
    },
    {
@@ -102,9 +102,9 @@
      "per_sport": 3
     },
     "second": {
-     "hit": 82.4,
+     "hit": 83.0,
      "n": 182,
-     "roi": -0.16
+     "roi": 0.43
     }
    },
    {
@@ -120,7 +120,7 @@
     "second": {
      "hit": 78.6,
      "n": 182,
-     "roi": 2.67
+     "roi": 2.65
     }
    },
    {
@@ -134,9 +134,9 @@
      "per_sport": null
     },
     "second": {
-     "hit": 83.1,
+     "hit": 83.6,
      "n": 183,
-     "roi": -0.51
+     "roi": 0.08
     }
    },
    {
@@ -152,7 +152,7 @@
     "second": {
      "hit": 79.8,
      "n": 183,
-     "roi": 3.46
+     "roi": 3.41
     }
    }
   ]
@@ -160,12 +160,12 @@
  "groups": {
   "nba": {
    "benched": false,
-   "hit": 73.2,
+   "hit": 73.3,
    "implied": 69.4,
-   "n": 164,
-   "roi": 5.2,
-   "upper95": 79.4,
-   "won": 120
+   "n": 165,
+   "roi": 5.5,
+   "upper95": 79.5,
+   "won": 121
   },
   "ncaab": {
    "benched": false,
@@ -178,12 +178,12 @@
   },
   "ncaaf": {
    "benched": false,
-   "hit": 70.9,
-   "implied": 72.7,
-   "n": 234,
-   "roi": -1.0,
-   "upper95": 76.4,
-   "won": 166
+   "hit": 71.1,
+   "implied": 72.8,
+   "n": 235,
+   "roi": -0.9,
+   "upper95": 76.5,
+   "won": 167
   },
   "nfl": {
    "benched": false,
