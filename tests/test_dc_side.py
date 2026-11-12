@@ -247,6 +247,20 @@ class LockLeagues(unittest.TestCase):
         self.assertTrue(out.endswith("Short in both halves: NFL."))
 
 
+class HalvesBy(unittest.TestCase):
+    def test_split_and_filters(self):
+        legs = [dict(date="2026-10-0%d" % (1 + i % 9), league="nba" if i < 30 else "nhl", p=0.8,
+                     status="won" if i % 4 else "lost") for i in range(40)]
+        legs.append(dict(date="2026-10-01", league="nba", p=0.8, status="open"))          # ungraded: ignored
+        H = dict(daily_review._halves_by(legs, lambda x: x["league"]))
+        self.assertEqual(set(H), {"nba", "nhl"})
+        self.assertEqual(sum(n for _, _, n in H["nba"]), 30)
+        self.assertAlmostEqual(H["nba"][0][1], 80.0)
+        self.assertEqual(dict(daily_review._halves_by(legs, lambda x: x["league"], min_half=8)).keys(), {"nba"})
+        self.assertIsNone(daily_review._halves_by(legs[:39], lambda x: x["league"]))
+        self.assertEqual(daily_review._halves_by(legs, lambda x: None), [])
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
