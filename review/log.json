@@ -13287,9 +13287,9 @@
  },
  "2026-11-11": {
   "clv": {
-   "avg": 0.57,
-   "beat": 61.9,
-   "n": 21
+   "avg": 0.54,
+   "beat": 59.1,
+   "n": 22
   },
   "day": "2026-11-11",
   "leaks_14d": [],
@@ -13313,7 +13313,7 @@
   "loss_reasons_14d": {
    "blowout": 39,
    "close game": 108,
-   "coin flip": 44,
+   "coin flip": 45,
    "favourite lost": 136,
    "price moved against it": 29,
    "upset": 46
@@ -13362,6 +13362,27 @@
      "price moved against it (3 pts)"
     ],
     "why": "margin 34 \u00b7 the book had my side favoured too \u00b7 called at 56% \u00b7 coin flip \u00b7 blowout \u00b7 price moved against it (3 pts)"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "like": {
+     "n": 191,
+     "said": 56,
+     "won": 114
+    },
+    "match": "NSH @ ANA",
+    "pick": "Anaheim Ducks",
+    "price": "-148",
+    "said": 57,
+    "score": {
+     "Anaheim Ducks": 2,
+     "Nashville Predators": 4
+    },
+    "tags": [
+     "coin flip"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 57% \u00b7 coin flip"
    }
   ],
   "lottery": [
@@ -13446,11 +13467,11 @@
    }
   ],
   "picks": {
-   "hit": 90.5,
-   "lost": 2,
-   "n": 21,
-   "roi": 29.4,
-   "said": 69.8,
+   "hit": 86.4,
+   "lost": 3,
+   "n": 22,
+   "roi": 23.5,
+   "said": 69.2,
    "won": 19
   },
   "picks_by_league": {
@@ -13487,10 +13508,10 @@
     "won": 3
    },
    "nhl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 4,
-    "roi": 67.5,
+    "hit": 80.0,
+    "lost": 1,
+    "n": 5,
+    "roi": 34.0,
     "said": 57.2,
     "won": 4
    }
@@ -13536,19 +13557,21 @@
    "won": 1
   },
   "sweep": {
-   "as_bad_pct": 99.6,
-   "as_good_pct": 2.0,
+   "as_bad_pct": 98.7,
+   "as_good_pct": 4.8,
    "broke_on": "nba New York Knicks at 65%",
-   "coin_flips": 1,
+   "coin_flips": 2,
    "expected_by_league": {
-    "nba": 3.4
+    "nba": 3.4,
+    "nhl": 2.1
    },
-   "expected_losses": 6.4,
-   "lost": 2,
+   "expected_losses": 6.8,
+   "lost": 3,
    "lost_by_league": {
-    "nba": 2
+    "nba": 2,
+    "nhl": 1
    },
-   "open": 3,
+   "open": 2,
    "won": 19
   },
   "vs_market_14d": {
@@ -13556,10 +13579,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 77.3,
-    "lost": 226,
-    "n": 994,
-    "roi": 2.4,
+    "hit": 77.2,
+    "lost": 227,
+    "n": 995,
+    "roi": 2.3,
     "said": 72.0,
     "won": 768
    }
@@ -14327,7 +14350,7 @@
    }
   },
   "card_missing": null,
-  "cautions": "Running ahead: NBA under on all saved lines 1059/1185 vs 82%; NHL over on all saved lines 133/149 vs 84%; NHL spread on all saved lines 284/327 vs 83%; NHL teamover on all saved lines 170/189 vs 82%.",
+  "cautions": "Running ahead: NBA under on all saved lines 1059/1185 vs 82%; NHL over on all saved lines 135/151 vs 84%; NHL spread on all saved lines 287/331 vs 83%; NHL teamover on all saved lines 172/191 vs 82%.",
   "clv": {
    "avg": null,
    "beat": null,
@@ -14337,12 +14360,12 @@
   "day": "2026-11-12",
   "dc_side": "Soccer or-draw picks by side: home 77% vs 74% stated on 405 (halves 78%, 77%); away 74% vs 73% stated on 200 (halves 73%, 74%). Straight wins: 66% vs 65% stated on 279; 57 of 96 losses were draws.",
   "draws": "Soccer draws on the board: 22% of 1450 games; most in EFL3 41% of 37, AUS 38% of 21, UECL 30% of 33, ARG 29% of 73, BRA2 29% of 28 -- where a straight win most often loses to a draw.",
-  "inj_study": "Injuries at tip-off (128 games, 8 days, early read): my side more out: 1st 12/17 71% vs 63% | 2nd 16/22 73% vs 65%; even: 1st 12/18 67% vs 62% | 2nd 13/15 87% vs 68%; their side more out: 1st 24/28 86% vs 67% | 2nd 23/28 82% vs 62%.",
+  "inj_study": "Injuries at tip-off (129 games, 8 days, early read): my side more out: 1st 12/17 71% vs 63% | 2nd 16/22 73% vs 65%; even: 1st 12/18 67% vs 62% | 2nd 13/15 87% vs 68%; their side more out: 1st 24/28 86% vs 67% | 2nd 23/29 79% vs 62%.",
   "injury": null,
   "injury_ctx": "Ladder games, players out or doubtful: LAL @ MIL: Los Angeles Lakers without Quentin Grimes; Milwaukee Bucks without Myles Turner | CLE @ NY: Cleveland Cavaliers without Sam Merrill | San Antonio Spurs at Chicago Bulls: San Antonio Spurs without Devin Vassell, Tobias Harris, Jayden Quaintance; Chicago Bulls without Dailyn Swain, Norman Powell, Tobe Awaka.",
-  "ladder": "Ladder: run 6, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (35% est.), the best-chance 2x-5x combination (4 legs) against 35% at 2.47x for the plain top 4; without props it would be 4 legs at 2.46x (33%); 11 wins to $10,000; legs: Jaime Jaquez Jr.: 2+ Assists (LAL @ MIL; won), Mikal Bridges: 2+ Assists (CLE @ NY; won), USC Trojans to win (USC Trojans at California Golden Bears; live 9:43 - 2nd, California Golden Bears 51 - USC Trojans 57), Under 254.5 points (San Antonio Spurs at Chicago Bulls; won); 3 of 4 won, the ticket now rests on 1 leg, 76% on its stated chance before play.",
+  "ladder": "Ladder: run 6, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (35% est.), the best-chance 2x-5x combination (4 legs) against 35% at 2.47x for the plain top 4; without props it would be 4 legs at 2.46x (33%); 11 wins to $10,000; legs: Jaime Jaquez Jr.: 2+ Assists (LAL @ MIL; won), Mikal Bridges: 2+ Assists (CLE @ NY; won), USC Trojans to win (USC Trojans at California Golden Bears; live 7:39 - 2nd, California Golden Bears 56 - USC Trojans 61), Under 254.5 points (San Antonio Spurs at Chicago Bulls; won); 3 of 4 won, the ticket now rests on 1 leg, 76% on its stated chance before play.",
   "leaks_14d": [],
-  "lessons": "Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1637 picks).",
+  "lessons": "Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1638 picks).",
   "lock_types": "Locks by bet type, by half: win 84% then 96% (vs 82%, 82%); spread 86% then 91% (vs 85%, 85%); total 86% then 88% (vs 84%, 83%); team total 87% then 90% (vs 86%, 85%); prop 80% then 77% (vs 86%, 78%). Short in both halves: prop.",
   "locks": {
    "lost": [],
@@ -14354,7 +14377,7 @@
   "loss_reasons_14d": {
    "blowout": 37,
    "close game": 103,
-   "coin flip": 41,
+   "coin flip": 42,
    "favourite lost": 129,
    "price moved against it": 24,
    "upset": 42
@@ -14406,10 +14429,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 77.4,
-    "lost": 212,
-    "n": 936,
-    "roi": 2.5,
+    "hit": 77.3,
+    "lost": 213,
+    "n": 937,
+    "roi": 2.4,
     "said": 72.0,
     "won": 724
    }
@@ -14454,10 +14477,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6388,
-    "market_only": 0.6388,
-    "model_40": 0.6472,
-    "n": 179,
+    "logloss": 0.6399,
+    "market_only": 0.6399,
+    "model_40": 0.6478,
+    "n": 180,
     "weight": 0.0
    }
   },
@@ -14507,22 +14530,45 @@
       "price moved against it (3 pts)"
      ],
      "why": "margin 34 \u00b7 the book had my side favoured too \u00b7 called at 56% \u00b7 coin flip \u00b7 blowout \u00b7 price moved against it (3 pts)"
+    },
+    {
+     "against_market": false,
+     "league": "nhl",
+     "like": {
+      "n": 191,
+      "said": 56,
+      "won": 114
+     },
+     "match": "NSH @ ANA",
+     "pick": "Anaheim Ducks",
+     "price": "-148",
+     "said": 57,
+     "score": {
+      "Anaheim Ducks": 2,
+      "Nashville Predators": 4
+     },
+     "tags": [
+      "coin flip"
+     ],
+     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 57% \u00b7 coin flip"
     }
    ],
    "sweep": {
-    "as_bad_pct": 99.6,
-    "as_good_pct": 2.0,
+    "as_bad_pct": 98.7,
+    "as_good_pct": 4.8,
     "broke_on": "nba New York Knicks at 65%",
-    "coin_flips": 1,
+    "coin_flips": 2,
     "expected_by_league": {
-     "nba": 3.4
+     "nba": 3.4,
+     "nhl": 2.1
     },
-    "expected_losses": 6.4,
-    "lost": 2,
+    "expected_losses": 6.8,
+    "lost": 3,
     "lost_by_league": {
-     "nba": 2
+     "nba": 2,
+     "nhl": 1
     },
-    "open": 3,
+    "open": 2,
     "won": 19
    }
   }
