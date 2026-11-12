@@ -716,6 +716,23 @@ def hi_sweep_line(ledger=None, today=None, cuts=(70, 80)):
     return "High-chance sweep: " + " | ".join(parts) + "."
 
 
+def b2b_line(ledger=None, leagues=("nhl", "nba")):
+    """The board's running record when one side played the night before, per
+    league (ledger.b2b_record): picks on the tired side and against it. The
+    NHL study says tired teams fall short of their price; the NBA study says
+    the price already has it."""
+    import ledger as _lg
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    parts = []
+    for lg in leagues:
+        R = _lg.b2b_record(ledger, lg)
+        bits = [f"{lab} {R[k][0]}/{R[k][1]} vs {round(R[k][2])}%" for k, lab in (("mine", "on the tired side"), ("theirs", "against it")) if R[k][1]]
+        if bits:
+            parts.append(f"{lg.upper()} " + ", ".join(bits))
+    return ("Back-to-backs, board record so far: " + "; ".join(parts) + ".") if parts else None
+
+
 def draw_rate_line(ledger=None, min_n=20, top=5):
     """How often board soccer games ended level, by league (graded games
     with a two-team score), highest first: where a straight-win pick most
@@ -1569,6 +1586,8 @@ def words(r, fit):
         out.append(r["teams"])
     if r.get("hi_sweep"):
         out.append(r["hi_sweep"])
+    if r.get("b2b"):
+        out.append(r["b2b"])
     if r.get("roster"):
         out.append(r["roster"])
     if r.get("injury"):
@@ -1712,6 +1731,7 @@ def _main():
     log[today.isoformat()]["lessons"] = lessons_line(ledger)
     log[today.isoformat()]["teams"] = team_line(ledger)
     log[today.isoformat()]["hi_sweep"] = hi_sweep_line(ledger, today)
+    log[today.isoformat()]["b2b"] = b2b_line(ledger)
     try:                                  # ladder prop players on today's rosters and injury report
         import injuries as _injm
         _legs = with_teams(((_report().get("today") or {}).get("legs")) or [])

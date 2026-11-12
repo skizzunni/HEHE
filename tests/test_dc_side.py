@@ -227,6 +227,14 @@ class ReportCache(unittest.TestCase):
             self.assertEqual(daily_review._report(), {"n": 4})
 
 
+class B2BLine(unittest.TestCase):
+    def test_line(self):
+        B = {"y": dict(date="2026-11-11", league="nhl", status="won", conf=60, pick="A", scores={"A": 3, "B": 2}),
+             "t1": dict(date="2026-11-12", league="nhl", status="lost", conf=55, pick="A", scores={"A": 1, "C": 4})}
+        self.assertEqual(daily_review.b2b_line(B), "Back-to-backs, board record so far: NHL on the tired side 0/1 vs 55%.")
+        self.assertIsNone(daily_review.b2b_line({}))
+
+
 class TrailingPool(unittest.TestCase):
     def test_locks_prop_gets_pool(self):
         P = {f"p{i}": dict(league="nfl", status="won" if i % 4 else "lost", p=0.76) for i in range(200)}
