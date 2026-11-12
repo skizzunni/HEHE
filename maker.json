@@ -1478,6 +1478,7 @@
    "cost": 0.5444,
    "edge": 0.0169,
    "fair": 0.5536,
+   "fill": "strict",
    "id": "ncaaf:401866461",
    "label": "Buffalo Bulls",
    "league": "ncaaf",
@@ -1490,8 +1491,9 @@
     "team": "Buffalo Bulls"
    },
    "start": "2026-11-12T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV11BUFFBALL-BUFF"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV11BUFFBALL-BUFF",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV11MASSTOL-TOL|YES": {
    "ask": 0.84,
@@ -4540,6 +4542,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401866461",
    "label": "Ball State Cardinals +1.5",
    "league": "ncaaf",
@@ -4553,8 +4556,9 @@
     "team": "Ball State Cardinals"
    },
    "start": "2026-11-12T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV11BUFFBALL-BUFF2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV11BUFFBALL-BUFF2",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV11MASSTOL-TOL15|NO": {
    "ask": 0.52,
@@ -9257,6 +9261,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": null,
    "id": "ncaaf:401866461",
    "label": "over 50.5",
    "league": "ncaaf",
@@ -9269,8 +9274,9 @@
     "t": "over"
    },
    "start": "2026-11-12T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV11BUFFBALL-51"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV11BUFFBALL-51",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV11BUFFBALL-52|NO": {
    "ask": 0.52,
@@ -9278,6 +9284,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401866461",
    "label": "under 51.5",
    "league": "ncaaf",
@@ -9290,8 +9297,9 @@
     "t": "under"
    },
    "start": "2026-11-12T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV11BUFFBALL-52"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV11BUFFBALL-52",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV11BUFFBALL-54|NO": {
    "ask": 0.52,
@@ -9299,6 +9307,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401866461",
    "label": "under 53.5",
    "league": "ncaaf",
@@ -9311,8 +9320,9 @@
     "t": "under"
    },
    "start": "2026-11-12T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV11BUFFBALL-54"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV11BUFFBALL-54",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV11MASSTOL-52|YES": {
    "ask": 0.52,
