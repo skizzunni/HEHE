@@ -45342,7 +45342,9 @@
   "p": 0.8505,
   "p_fair": 0.8461,
   "price": "-650",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909975|n:ajay mitchell|Pts + Ast|15+": {
   "aid": null,
@@ -45358,7 +45360,9 @@
   "p": 0.8482,
   "p_fair": 0.887,
   "price": "-800",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909975|n:ajay mitchell|Reb + Ast|5+": {
   "aid": null,
@@ -45374,7 +45378,9 @@
   "p": 0.8512,
   "p_fair": 0.8612,
   "price": "-700",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909975|n:damian lillard|Assists|4+": {
   "aid": null,
@@ -45386,11 +45392,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Damian Lillard",
   "p": 0.7633,
   "p_fair": 0.7604,
   "price": "-350",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401909975|n:damian lillard|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -45402,11 +45410,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Damian Lillard",
   "p": 0.8552,
   "p_fair": 0.9073,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 24.0
  },
  "nba:401909975|n:deni avdija|Points|10+": {
   "aid": null,
@@ -45417,11 +45427,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Deni Avdija",
   "p": 0.8708,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 28.0
  },
  "nba:401909975|n:deni avdija|Reb + Ast|10+": {
   "aid": null,
@@ -45433,11 +45445,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Deni Avdija",
   "p": 0.8541,
   "p_fair": 0.8063,
   "price": "-720",
-  "status": "open"
+  "status": "lost",
+  "value": 9.0
  },
  "nba:401909975|n:donovan clingan|Points|5+": {
   "aid": null,
@@ -45449,11 +45463,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Donovan Clingan",
   "p": 0.8516,
   "p_fair": 0.9641,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909975|n:donovan clingan|Reb + Ast|10+": {
   "aid": null,
@@ -45465,11 +45481,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Donovan Clingan",
   "p": 0.7782,
   "p_fair": 0.7572,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401909975|n:isaiah hartenstein|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -45481,11 +45499,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Isaiah Hartenstein",
   "p": 0.8467,
   "p_fair": 0.9211,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 37.0
  },
  "nba:401909975|n:isaiah hartenstein|Rebounds|6+": {
   "aid": null,
@@ -45497,11 +45517,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Isaiah Hartenstein",
   "p": 0.8425,
   "p_fair": 0.9286,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401909975|n:scoot henderson|Points|5+": {
   "aid": null,
@@ -45513,11 +45535,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Scoot Henderson",
   "p": 0.8495,
   "p_fair": 0.9645,
   "price": "-1350",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909975|n:shai gilgeous alexander|Assists|4+": {
   "aid": null,
@@ -45529,11 +45553,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Shai Gilgeous-Alexander",
   "p": 0.7851,
   "p_fair": 0.7661,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nba:401909975|n:shai gilgeous alexander|Threes Made|1+": {
   "aid": null,
@@ -45545,11 +45571,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Shai Gilgeous-Alexander",
   "p": 0.8472,
   "p_fair": 0.8766,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401909976|n:jaylen brown|Rebounds|4+": {
   "aid": null,
