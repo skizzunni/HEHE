@@ -42,6 +42,17 @@ def safe_note(L):
     pts = [int(x) for x in re.findall(r"-?\d+(?=\s*(?:-|$))", str(L.get("live_score") or ""))]
     if m and len(pts) >= 2 and pts[-2] + pts[-1] > float(m.group(1)):
         return f"already over ({pts[-2] + pts[-1]}, line {m.group(1)})"
+    # a game or team total past halftime whose pace is on the wrong side
+    if re.search(r"(^(Over|Under)\s|\s(over|under)\s)[\d.]+", str(L.get("label") or ""), re.I) and L.get("live"):
+        try:
+            import daily_review as dr
+            F = dr._PERIODS.get(L.get("league") or "")
+            el = dr._elapsed(str(L["live"]), *F) if F else None
+            pt = dr.pace_text(L)
+            if el and el >= 0.5 * F[0] * F[1] and pt and "behind the pace" in pt:
+                return "off pace after halftime"
+        except Exception:
+            pass
     # an under that has already gone over is lost before the final
     u = re.match(r"^Under\s+([\d.]+)", str(L.get("label") or ""), re.I)
     if u and len(pts) >= 2 and pts[-2] + pts[-1] > float(u.group(1)):

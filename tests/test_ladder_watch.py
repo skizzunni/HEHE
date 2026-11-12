@@ -38,6 +38,12 @@ class LadderWatch(unittest.TestCase):
                          "behind pace after halftime")
         self.assertEqual(w.safe_note(dict(label="J: 2+ Assists", line="2+", so_far=0.0, league="nba", live="5:00 - 2nd")), "")
         self.assertEqual(w.safe_note(dict(label="J: 10+ Points", line="10+", so_far=6.0, league="nba", live="11:00 - 3rd")), "")   # on pace for 11.5
+        self.assertEqual(w.safe_note(dict(label="Under 254.5 points", league="nba", live="Halftime",
+                                          live_score="Chicago Bulls 70 - San Antonio Spurs 60")), "off pace after halftime")
+        self.assertEqual(w.safe_note(dict(label="Under 254.5 points", league="nba", live="Halftime",
+                                          live_score="Chicago Bulls 60 - San Antonio Spurs 56")), "")
+        self.assertEqual(w.safe_note(dict(label="Under 254.5 points", league="nba", live="5:00 - 2nd",
+                                          live_score="Chicago Bulls 70 - San Antonio Spurs 60")), "")
         s = w.snapshot(dict(today=dict(legs=[dict(label="K: 20+ Yds", line="20+", so_far=21)])))
         self.assertEqual(s, {"K: 20+ Yds": "open | line reached"})
 
