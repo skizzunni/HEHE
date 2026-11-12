@@ -15,6 +15,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 
 def safe_note(L):
@@ -27,6 +28,16 @@ def safe_note(L):
     need = re.match(r"^\s*(\d+(?:\.\d+)?)\+\s*$", str(L.get("line") or ""))
     if need and L.get("so_far") is not None and float(L["so_far"]) >= float(need.group(1)):
         return "line reached"                # no running count: one alert, not one per stat
+    if need and L.get("so_far") is not None and L.get("live"):
+        try:                                 # past halftime and behind the pace the line needs
+            import daily_review as dr
+            F = dr._PERIODS.get(L.get("league") or "")
+            el = dr._elapsed(str(L["live"]), *F) if F else None
+            pp = dr.prop_pace(L)
+            if el and el >= 0.5 * F[0] * F[1] and pp and "behind" in pp:
+                return "behind pace after halftime"
+        except Exception:
+            pass
     m = re.match(r"^Over\s+([\d.]+)", str(L.get("label") or ""), re.I)
     pts = [int(x) for x in re.findall(r"-?\d+(?=\s*(?:-|$))", str(L.get("live_score") or ""))]
     if m and len(pts) >= 2 and pts[-2] + pts[-1] > float(m.group(1)):
