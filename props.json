@@ -53382,8 +53382,9 @@
   "price": "-600",
   "rechecked": "ungradable",
   "rechecked_nick": true,
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nfl:401873026|n:jakobi lane|Receiving Yards|15+": {
   "aid": null,
@@ -54463,8 +54464,9 @@
   "price": "-580",
   "rechecked": "ungradable",
   "rechecked_nick": true,
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nfl:401873031|n:tee higgins|Receptions|4+": {
   "aid": null,
@@ -55577,8 +55579,9 @@
   "price": "-670",
   "rechecked": "ungradable",
   "rechecked_nick": true,
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nfl:401873035|n:rachaad white|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -59071,6 +59074,22 @@
   "p": 0.842,
   "p_fair": 0.8339,
   "price": "-600",
+  "status": "open"
+ },
+ "nfl:401873052|n:rachaad white|Anytime Touchdown Scorer|1+": {
+  "aid": null,
+  "date": "2026-11-12",
+  "edge": null,
+  "gid": "nfl:401873052",
+  "imp": 0.3636,
+  "label": "Rachaad White: anytime TD",
+  "league": "nfl",
+  "line": "1+",
+  "market": "Anytime Touchdown Scorer",
+  "name": "Rachaad White",
+  "p": 0.2861,
+  "p_fair": null,
+  "price": "+175",
   "status": "open"
  },
  "nfl:401873052|n:rachaad white|Receiving Yards|5+": {
@@ -82756,6 +82775,22 @@
   "p": 0.874,
   "price": "-1800",
   "prop_lock": true,
+  "status": "open"
+ },
+ "nhl:401892702|n:zach benson|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-11-12",
+  "edge": null,
+  "gid": "nhl:401892702",
+  "imp": 0.7468,
+  "label": "Zach Benson: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Zach Benson",
+  "p": 0.6967,
+  "p_fair": null,
+  "price": "-295",
   "status": "open"
  },
  "nhl:401892703|n:cole perfetti|Shots on Goal|1+": {

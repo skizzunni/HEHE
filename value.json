@@ -1856,6 +1856,29 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909296|{\"line\": 221.5, \"t\": \"over\"}|Kalshi": {
+   "dec": 2.0513,
+   "dk": "-110",
+   "ev": 0.0256,
+   "fair": 0.5,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401909296",
+   "kind": "single",
+   "league": "nba",
+   "market": "over",
+   "match": "NY @ IND",
+   "price": "+105",
+   "seen": "2026-11-13T00:02:05+00:00",
+   "side": "{\"line\": 221.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 221.5,
+    "t": "over"
+   },
+   "start": "2026-11-14T00:00Z",
+   "team": "over 221.5",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909297|away|Kalshi": {
    "dec": 4.3085,
    "ev": 0.0414,
@@ -1894,6 +1917,45 @@
    "match": "MIL @ ORL",
    "profit": 0.0066,
    "seen": "2026-11-12T23:33:49+00:00"
+  },
+  "nba:401909304|home|Kalshi": {
+   "dec": 3.7994,
+   "ev": 0.088,
+   "fair": 0.2864,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401909304",
+   "kind": "suspect",
+   "league": "nba",
+   "match": "OKC @ LAC",
+   "price": "+280",
+   "seen": "2026-11-13T00:02:05+00:00",
+   "side": "home",
+   "start": "2026-11-14T03:30Z",
+   "team": "LA Clippers",
+   "tip": "10:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909304|sure": {
+   "id": "nba:401909304",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-276",
+     "stake_share": 0.7361,
+     "team": "Oklahoma City Thunder",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "+280",
+     "stake_share": 0.2639,
+     "team": "LA Clippers",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "OKC @ LAC",
+   "profit": 0.0028,
+   "seen": "2026-11-13T00:02:05+00:00"
   },
   "nba:401909844|away|Kalshi": {
    "dec": 3.1776,
