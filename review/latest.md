@@ -10,6 +10,7 @@ Soccer or-draw picks by side: home 77% vs 74% stated on 407 (halves 78%, 77%); a
 Soccer draws on the board: 22% of 1460 games; most in EFL3 41% of 37, AUS 38% of 21, UECL 30% of 33, ARG 29% of 73, BRA2 29% of 28 -- where a straight win most often loses to a draw.
 Locks by bet type, by half: win 84% then 97% (vs 82%, 81%); spread 86% then 92% (vs 85%, 85%); total 86% then 89% (vs 84%, 83%); team total 87% then 90% (vs 86%, 86%); prop 80% then 78% (vs 86%, 79%). Short in both halves: prop.
 Locks by league, by half: NHL 85% then 96% (vs 87%, 88%); NBA 82% then 88% (vs 83%, 82%); NCAAF 84% then 85% (vs 83%, 79%); NFL 89% then 70% (vs 84%, 82%). No league short in both halves.
+Locks props by market, by half: NBA Assists 13/17 then 17/20 (vs 90%, 79%); NFL Receiving Yards 12/14 then 6/11 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.
 Injuries at tip-off (146 games, 9 days, early read): my side more out: 1st 12/17 71% vs 63% | 2nd 18/26 69% vs 64%; even: 1st 12/18 67% vs 62% | 2nd 17/22 77% vs 66%; their side more out: 1st 24/28 86% vs 67% | 2nd 28/35 80% vs 62%.
 Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1671 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 6/14 vs 71% stated (2.4% by luck; about 1.2 of 52 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 6.6 of 52 teams expected this far behind by chance); MLB Seattle Mariners 7/15 vs 57% stated (28.7% by luck; about 14.9 of 52 teams expected this far behind by chance).
