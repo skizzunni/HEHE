@@ -1518,8 +1518,10 @@ function needLine(L){
     return m[2] === '-' ? m[1] + ' must win by ' + Math.ceil(x) + ' or more'
       : m[1] + ' must win, or lose by ' + Math.floor(x) + ' or fewer';
   }
+  if((m = /^(.+?):\s*(\d+)\+\s+(.+)$/.exec(lab))) return m[1] + ': ' + m[2] + ' or more ' + m[3].toLowerCase();
   if((m = /:\s*(\d+)\+\s+(.+)$/.exec(lab))) return m[1] + ' or more ' + m[2].toLowerCase();
   if(/ or draw$/i.test(lab)) return lab.replace(/ or draw$/i, '') + ' must win or draw';
+  if((m = /^(.+?)\s+to win$/i.exec(lab))) return m[1] + ' must win outright' + (L.league && isSoccer(L.league) ? ' (a draw loses)' : '');
   return '';
 }
 // how card legs of this kind (league + bet type, or league + prop market)

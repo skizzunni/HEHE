@@ -184,6 +184,10 @@ PROBE = """<script>setTimeout(function(){
   D.locks = {today: {locks: [{label: "Over 214.5 points", price: "-400", p: 0.75, match: "A at B"}, {label: "K: 2+ Assists", price: "-390", p: 0.78, match: "C @ D"}]}};
   D.ladder = {today: {legs: [{label: "K: 2+ Assists"}], stake: 2.47, pays: 2.4}};
   out.lids = ladderLegIds(parlayLegs()).join(",");
+  var psN = D.paths; D.paths = Object.assign({}, psN, {epl: "soccer/eng.1"});
+  out.needs = [needLine({label: "Franz Wagner: 6+ Assists"}), needLine({label: "Houston Cougars to win", league: "ncaaf"}),
+               needLine({label: "Arsenal to win", league: "epl"}), needLine({label: "Under 241.5 points"}), needLine({label: "Something else"})];
+  D.paths = psN;
   out.pcal = [pricedCalHTML({mid: "2026-11-01", rows: [{group: "soccer win", halves: [[104, 127, 72.6], [88, 105, 74.4]]},
                                                         {group: "nhl", halves: [[45, 73, 58], [45, 83, 59]]}]}),
               pricedCalHTML(null), pricedCalHTML({rows: []})];
@@ -678,7 +682,8 @@ def main():
     nd = new.get("need") or []
     want = ["Utah Mammoth must score 4 or fewer goals", "Florida Atlantic Owls must score 41 or fewer points",
             "James Madison Dukes must win by 4 or more", "Sacramento State Hornets must win, or lose by 35 or fewer",
-            "5 or more receiving yards", "Both teams together: 206 or more points", "Real Madrid must win or draw", ""]
+            "Ja'Kobi Lane: 5 or more receiving yards", "Both teams together: 206 or more points", "Real Madrid must win or draw",
+            "Barcelona must win outright"]
     if nd != want:
         fails.append("need lines wrong: " + repr(nd))
     le = new.get("ladEnded", "")
@@ -759,6 +764,10 @@ def main():
     if not ("Soccer straight wins" in pc_[0] and "104 of 127 (82% vs 73%)" in pc_[0] and "at or ahead of stated in both halves" in pc_[0]
             and "NHL" in pc_[0] and "mixed" in pc_[0] and pc_[1] == "" and pc_[2] == ""):
         fails.append("priced calibration table wrong: " + repr(pc_)[:300])
+    nd = new.get("needs") or []
+    if nd != ["Franz Wagner: 6 or more assists", "Houston Cougars must win outright", "Arsenal must win outright (a draw loses)",
+              "Both teams together: 241 or fewer points", ""]:
+        fails.append("needs lines wrong: " + repr(nd))
     vc = new.get("vCau") or ["", "x", "x", "x"]
     if not ("180 of 448 won (40% vs 45% fair), ROI -11.47%" in vc[0] and "both halves" in vc[0]) or any(vc[1:]):
         fails.append("value-bet caution wrong: " + repr(vc))
