@@ -19,7 +19,7 @@ Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against i
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (13 fights priced, 5 close): Bilal Hasan 87%; Juan Diaz 77%; Melquizael Costa 76%; Bia Mesquita 69%; Terrance McKinney 66%; Ciryl Gane 66%; Donte Johnson 62%; Chris Duncan 62%; Kayla Harrison 60% (close); Caio Borralho 59% (close); Stephen Thompson 58% (close); Uroš Medić 58% (close); Samuel Sanches 51% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.7% hit vs 44.5% stated on 453
-Board sweep: 0-0, 35 open -- still clean.
+Board sweep: 0-0, 36 open -- still clean.
 Why picks lost (14 days): favourite lost 126, close game 102, coin flip 47, upset 42, blowout 38, price moved against it 24.
 Yesterday (2026-11-12): board 23-8, sweep broken by unl France or draw at 76%; 9.9 losses expected, 8 came in (83.3% chance of that many or more).
 - LOST unl France or draw at 76% (-425), France 1 - Italy 3: margin 2 · the book had my side favoured too · called at 76% · upset
