@@ -1,7 +1,7 @@
 # Review 2026-11-12
 
 Picks 14-4 (77.8% vs 69.9% claimed, ROI +2.3%).
-Ladder: run 6, bank $2.47, 1 win(s) in a row, best $9.57; today stakes $2.47 at 2.00x (42% est.), the best-chance 2x-5x combination (3 legs) against 35% at 2.44x for the plain top 4; 12 wins to $10,000; legs: Under 228.5 points (Charlotte Hornets at Phoenix Suns; live 9:31 - 2nd, Charlotte Hornets 27 - Phoenix Suns 38, on pace for 215 (65 so far, line 228.5, room for 163 more), on track), Over 208.5 points (Toronto Raptors at Philadelphia 76ers; won), Under 7.5 goals (New York Islanders at Los Angeles Kings; 10:00 PM, open); 1 of 3 won, the ticket now rests on 2 legs, 56% on their stated chance before play.
+Ladder: run 6, bank $2.47, 1 win(s) in a row, best $9.57; today stakes $2.47 at 2.00x (42% est.), the best-chance 2x-5x combination (3 legs) against 35% at 2.44x for the plain top 4; 12 wins to $10,000; legs: Under 228.5 points (Charlotte Hornets at Phoenix Suns; live 7:39 - 2nd, Charlotte Hornets 31 - Phoenix Suns 46, on pace for 226 (77 so far, line 228.5, room for 151 more), on track), Over 208.5 points (Toronto Raptors at Philadelphia 76ers; won), Under 7.5 goals (New York Islanders at Los Angeles Kings; 10:00 PM, open); 1 of 3 won, the ticket now rests on 2 legs, 56% on their stated chance before play.
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 2 days, peak $2.47, live. Replayed on every saved card: as ranked 13/25 cashed at 2.23x, without props 13/25 at 2.32x.
 Running ahead: NBA under on all saved lines 1028/1154 vs 82%; NHL over on all saved lines 126/143 vs 84%; NHL spread on all saved lines 266/310 vs 83%; NHL teamover on all saved lines 158/176 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NFL over 97/129 (75% vs 81%). Walk-forward: legs of a type running cold won 85.3% the next day vs 83.3% for the rest (685 and 7080 legs), so a cold week is noise, not a signal.
@@ -41,7 +41,7 @@ Lottery 10k+25: lost (0/8 legs won, killed by Toronto Raptors +10.5, Over 7.5 go
 Lottery 10k+50: lost (0/8 legs won, killed by Toronto Raptors +10.5, Over 7.5 goals)
 Lottery 10k+100: lost (0/8 legs won, killed by Toronto Raptors +10.5, Over 7.5 goals, Over 6.5 goals)
 Lottery 100: lost (0/8 legs won, killed by Toronto Raptors +10.5, Over 6.5 goals)
-Lottery 100: open (2/7 legs won)
+Lottery 100: open (3/7 legs won)
 Ladder-consistency props (all time): 2222/2673 won (83.1%) vs 86.3% fair, 87.4% price.
 Props 39/48 vs 82.1% claimed.
 
