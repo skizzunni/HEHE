@@ -368,11 +368,11 @@ LADDER = dict(start="2026-11-03", target=10000.0, bank=3.05, runs=1, streak=1, b
                                for i in range(5)]))
 
 
-def render(captured_ms, health=None):
+def render(captured_ms, health=None, skipped=None):
     s = open(os.path.join(ROOT, "board.html")).read()
     s = re.sub(r'"captured":\d+', f'"captured":{captured_ms}', s, count=1)
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
-                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + ',"ladder":' + json.dumps(LADDER) + ',"every_game":' + json.dumps(EVERY) + ',', 1)
+                  + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + (',"skipped_parts":' + json.dumps(skipped) if skipped else '') + ',"ladder":' + json.dumps(LADDER) + ',"every_game":' + json.dumps(EVERY) + ',', 1)
     s = s.replace('"live":[],"feed":', '"live":[{"pick":"X","winning":false},{"pick":"Y","winning":true}],"feed":', 1)
     s = s.replace('"results":{', '"results":{"today_losses_by":[{"league":"uel","n":6},{"league":"uecl","n":4}],"today_expected":5.4,"today_rarity":{"expected_losses":4.8,"as_bad_pct":18.1},"broke_on":{"pick":"Trabzonspor","conf":67},"moves":{"against":{"n":81,"won":48,"price":71.9}},"moves_halves":{"for":[[72,88,77.0],[116,146,77.0]],"against":[[39,50,70.0],[37,64,72.0]]},"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
     i = s.rfind("</body>")
@@ -397,7 +397,7 @@ def main():
                 trailing=[dict(name="props uel Shots", hit=40.0, said=84.3, n=20, flag=True)],
                 integrity=[["D.locks.today.locks[0].p", "chance outside 0-1", "1.3"]],
                 stale_inputs=[["football/nfl", 95]])
-    old = render(now - 45 * 60000, sick)
+    old = render(now - 45 * 60000, sick, ["pool_form: KeyError"])
     new = render(now, dict(day="2026-10-18", checked=5, stuck=[], trailing=[]))
     print("stale copy:", old)
     print("fresh copy:", new)
@@ -419,7 +419,7 @@ def main():
         fails.append("Safe Locks record must show the Winners parlay's own record: " + new["record"][-300:])
     if "Same-game ideas (1)" not in new["record"] or new["legs"] != 11:
         fails.append("same-game ideas must be listed apart from the card's 11 legs: " + new["record"][:200])
-    if "4 problems found" not in old["health"] or "Old input: football/nfl" not in old["health"] or "props uel Shots" not in old["health"] \
+    if "5 problems found" not in old["health"] or "Old input: football/nfl" not in old["health"] or "props uel Shots" not in old["health"] \
             or "Never settled" not in old["health"] or "Bad data: chance outside 0-1" not in old["health"]:
         fails.append("health box must list the trailing split and the stuck record: " + old["health"])
     if "2 losses against about 4.8 expected · within normal swings (18% of days this far in have as many or more)" not in new["results"]:
@@ -717,6 +717,10 @@ def main():
         fails.append("Locks must lead with the likeliest 2x ticket (betFirst)")
     if new.get("staleNow") != [True, False, True, False]:
         fails.append(f"a price 20 minutes old at viewing time must read stale: {new.get('staleNow')}")
+    if "Left out of this build: pool_form: KeyError" not in old.get("health", ""):
+        fails.append("a skipped build part must show under Checks: " + old.get("health", "")[:300])
+    if "Left out of this build" in new["health"]:
+        fails.append("a clean build must not list skipped parts")
     if "All checks passing" not in new["health"]:
         fails.append("clean review must read 'All checks passing': " + new["health"])
     if not all(x in new.get("current", "") for x in ("Current parlay choices", "67.6%", "2.10x", "DraftKings")):
