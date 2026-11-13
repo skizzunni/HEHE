@@ -1028,6 +1028,16 @@ def prereg_status(paths=None, led=None, test=PREREG):
     return dict(name=test["name"], won=w, n=n, said=said, need=test["need"], verdict=verdict)
 
 
+def apply_prereg(watch, status, test=PREREG):
+    """The spread-band cautions after the pre-registered test's verdict: once
+    the test reads "fine" (its own fresh legs were not short), the band it
+    covers is no longer cautioned, whatever the older record says -- the test
+    was written down to settle exactly that. Other bands are kept."""
+    if (status or {}).get("verdict") != "fine":
+        return list(watch or [])
+    return [w for w in watch or [] if not (w.get("league") in test["leagues"] and w.get("band") == test["band"])]
+
+
 def pool_form(paths=None, led=None, days=7, min_n=30):
     """Recent form of every (league, bet type) across the saved pools at
     70-95%: the last `days` pool days, graded off final scores. Shown beside

@@ -650,7 +650,8 @@ def snapshot():
                     out["ufc_bands"] = json.load(fh_)
             except (OSError, ValueError):
                 pass
-            out["spread_band_watch"] = locks.spread_band_watch()   # spread bands short in both halves
+            # spread bands short in both halves, less any band the pre-registered test cleared
+            out["spread_band_watch"] = locks.apply_prereg(locks.spread_band_watch(), out.get("prereg"))
         except Exception as e_:
             print(f"pool caution skipped ({e_})", file=sys.stderr)
         try:                                    # $1 -> $10k on the day's 3-8 likeliest Locks (ladder.py)

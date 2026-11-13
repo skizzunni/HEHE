@@ -427,7 +427,7 @@ def prereg_line():
         return None
     rec = f"{s['won']}/{s['n']}" + (f" ({round(100 * s['won'] / s['n'])}% vs {round(s['said'])}% stated)" if s["n"] else "")
     what = {"waiting": f"waiting for {s['need']} legs", "short": "SHORT again -- propose excluding the band",
-            "fine": "fine -- drop the caution"}[s["verdict"]]
+            "fine": "fine -- the caution on this band is off (locks.apply_prereg)"}[s["verdict"]]
     # the main-line history behind the band (README, 2026-11-10 spread studies)
     hist = (" History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL"
             " (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).")

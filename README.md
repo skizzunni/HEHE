@@ -1457,6 +1457,15 @@ return (-9.1%, -6.0% a bet). Totals + team totals together are about 2.0 and
 Locks show the same lean (totals 86%/89% vs 84%/83%). The review now prints
 this line daily (every_game_type_line).
 
+**Pre-registered test passed: college + NFL spreads getting 7-13.5
+(2026-11-13).** Written down on 2026-11-08 after college spreads getting
+7-13.5 ran 5+ points short in both halves: if the next 100 such legs also ran
+5+ short, propose excluding the band; if not, drop the caution. Legs from
+pools saved since: 103/121 (85% vs 81% stated) -- fine. locks.apply_prereg now
+makes that verdict binding: while the test reads "fine", the band carries no
+caution even if the older record dips again. NFL spreads getting 14+ (168/221
+vs 84%) keep theirs.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
