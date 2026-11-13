@@ -1473,6 +1473,17 @@ from pools saved from 2026-11-14 (locks.PREREG_NFL14). If they also run 5+
 points short, propose excluding the band to the user; otherwise the caution
 comes off (locks.apply_prereg). The review and the Locks tab show its count.
 
+**On watch, not adopted: soccer straight wins vs "or draw" (2026-11-13).**
+Prompted by Llaneros (69%) and Iraq (67%) both drawing 0-0. The review's
+"straight wins 66% vs 65% on 284" blended two eras: picks saved with their
+full price history won 82% vs 74% stated on 129, ahead in both halves (80% vs
+72%, then 85% vs 75%); older picks without it 52% vs 59% on 155. Against the
+no-vig 1X2 prices (271 picks, split 2026-11-01), the same picks taken as "or
+draw" also beat their fair chance in both halves (60-70%: 93% vs 86%, 87% vs
+86%; 70%+: 93% vs 90%, 97% vs 90%). So the straight wins are not leaking;
+draws are their normal way to lose, and switching to "or draw" is not
+supported. Nothing changed; the review now prints the two eras apart.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that

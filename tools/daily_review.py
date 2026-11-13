@@ -499,6 +499,19 @@ def dc_side_line(ledger=None, min_n=30):
         said = round(sum(v["conf"] for v in sw) / len(sw))
         out += (f" Straight wins: {rec(sw)} vs {said}% stated on {len(sw)}"
                 + (f"; {drawn} of {len(lost)} losses were draws" if lost else "") + ".")
+        # the blend hides two eras: picks saved with their full price history
+        # (first.prices, the current pipeline) and older ones without it
+        new_ = [v for v in sw if ((v.get("first") or {}).get("prices") or {}).get("draw") is not None]
+        old_ = [v for v in sw if v not in new_]
+        if new_ and old_:
+            nm = sorted(new_, key=lambda v: v.get("date") or "")
+            md = nm[len(nm) // 2].get("date") or ""
+            ha = [v for v in nm if (v.get("date") or "") < md]
+            hb = [v for v in nm if (v.get("date") or "") >= md]
+            sd = lambda x: round(sum(v["conf"] for v in x) / len(x)) if x else 0
+            out += (f" With full price history: {rec(new_)} vs {sd(new_)}% stated on {len(new_)}"
+                    f" (halves {rec(ha)} vs {sd(ha)}%, {rec(hb)} vs {sd(hb)}%); older picks without it:"
+                    f" {rec(old_)} vs {sd(old_)}% on {len(old_)}.")
     return out
 
 

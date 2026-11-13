@@ -80,6 +80,22 @@ class PreregLine(unittest.TestCase):
         self.assertIn("dogs getting 7.5-14 covered 53% then 61% in the NFL", out)
 
 
+class StraightEras(unittest.TestCase):
+    def test_split(self):
+        L = {}
+        for i in range(40):                                   # or-draw rows so the line runs
+            L[f"d{i}"] = dict(dc=True, league="epl", status="won", myside="home", conf=75, date=f"2026-10-{10 + i % 20:02d}")
+        for i in range(10):                                   # priced era: 9/10 vs 70%
+            L[f"n{i}"] = dict(league="epl", status="won" if i else "lost", conf=70, date=f"2026-11-{1 + i:02d}",
+                              first=dict(prices=dict(home="-200", draw="+300", away="+500")), scores={"A": 1, "B": 0 if i else 1})
+        for i in range(10):                                   # older: 5/10 vs 60%
+            L[f"o{i}"] = dict(league="epl", status="won" if i < 5 else "lost", conf=60, date=f"2026-10-{1 + i:02d}",
+                              scores={"A": 2, "B": 1})
+        out = daily_review.dc_side_line(L)
+        self.assertIn("With full price history: 90% vs 70% stated on 10", out)
+        self.assertIn("older picks without it: 50% vs 60% on 10.", out)
+
+
 class PreregMore(unittest.TestCase):
     def test_line(self):
         import locks
