@@ -9990,6 +9990,23 @@
    "tip": "10:15 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401856860|home|FanDuel": {
+   "dec": 4.1,
+   "ev": 0.0117,
+   "fair": 0.2468,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401856860",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "HOU @ COLO",
+   "price": "+310",
+   "seen": "2026-11-13T12:35:33+00:00",
+   "side": "home",
+   "start": "2026-11-14T03:15Z",
+   "team": "Colorado Buffaloes",
+   "tip": "10:15 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401858272|{\"line\": 6.5, \"t\": \"spread\", \"team\": \"Stanford Cardinal\"}|Kalshi": {
    "dec": 2.0513,
    "dk": "-108",
@@ -17058,6 +17075,26 @@
    "prob": 0.4773,
    "seen": "2026-10-30T04:05:30+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401856860:home": {
+   "ev": 0.0119,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0117,
+     "fair": 0.2468,
+     "id": "ncaaf:401856860",
+     "price": "+310",
+     "side": "home",
+     "spec": null,
+     "team": "Colorado Buffaloes"
+    }
+   ],
+   "payout": 4.1,
+   "prob": 0.2468,
+   "seen": "2026-11-13T12:35:33+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
