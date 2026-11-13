@@ -1472,7 +1472,11 @@ def review_day(day, ledger, locks, lottery, props):
     fair = [e for e in props.values() if e.get("p_fair") and e.get("status") in ("won", "lost")]
     fair_view = dict(n=len(fair), won=sum(e["status"] == "won" for e in fair),
                      said_fair=round(100 * sum(e["p_fair"] for e in fair) / len(fair), 1) if fair else None,
-                     said_price=round(100 * sum(e.get("imp") or 0 for e in fair) / len(fair), 1) if fair else None)
+                     said_price=round(100 * sum(e.get("imp") or 0 for e in fair) / len(fair), 1) if fair else None,
+                     # what the board actually states (props_ledger.cap holds heavy props
+                     # down): the honest comparison; fair and price are the inputs
+                     said_stated=round(100 * sum(e.get("p") or 0 for e in fair) / len(fair), 1)
+                     if fair and all(isinstance(e.get("p"), (int, float)) for e in fair) else None)
     pr_view = dict(fair=fair_view, n=len(pr), won=sum(e["status"] == "won" for e in pr),
                    said=round(100 * sum(e.get("p") or 0 for e in pr) / len(pr), 1) if pr else None)
     import sys
@@ -1683,7 +1687,9 @@ def words(r, fit):
     fv = (r["props"] or {}).get("fair") or {}
     if fv.get("n"):
         out.append(f"Ladder-consistency props (all time): {fv['won']}/{fv['n']} won "
-                   f"({100 * fv['won'] / fv['n']:.1f}%) vs {fv['said_fair']}% fair, {fv['said_price']}% price.")
+                   f"({100 * fv['won'] / fv['n']:.1f}%) vs {fv['said_fair']}% fair, {fv['said_price']}% price"
+                   + (f", {fv['said_stated']}% stated on the board (heavy props capped)" if fv.get("said_stated") is not None else "")
+                   + ".")
     if r["props"]["n"]:
         out.append(f"Props {r['props']['won']}/{r['props']['n']} vs {r['props']['said']}% claimed.")
     out.append("")

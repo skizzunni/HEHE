@@ -1418,6 +1418,16 @@ both, about 2.7 standard errors -- under the 99.5% bar); 55%+ 33/44 then
 filter clears the bar, so nothing is cut; the Value tab now shows a caution
 above the table while the record is behind in both halves.
 
+**Checked, no change: heavy props vs their fair chance (2026-11-13).** The
+review's ladder-consistency line read 2259/2714 (83.2%) against 86.3% fair --
+a leak, on its face. Split at 2026-10-30, props the main line calls 90%+ fair
+won 343/409 (83.9% vs 93.8%) then 372/440 (84.5% vs 93.2%), 7-8 standard
+errors short in both halves; 70-90% fair is on par. But the board never shows
+the fair number on those: props_ledger.cap() holds them to 85.3% then 85.1%
+stated, within noise of what they won, and since 2026-11-08 the fair chance no
+longer overrides the price in Locks. All 2714 together: 83.2% won vs 83.6%
+stated. The review line now prints the stated figure beside fair and price.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
