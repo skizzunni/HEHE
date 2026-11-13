@@ -15551,6 +15551,86 @@
    "tip": "10:00 PM",
    "venue": "Kalshi"
   },
+  "nhl:401892720|away|Kalshi": {
+   "dec": 2.5221,
+   "ev": 0.1,
+   "fair": 0.4362,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892720",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "CGY @ LA",
+   "price": "+152",
+   "seen": "2026-11-13T16:28:48+00:00",
+   "side": "away",
+   "start": "2026-11-15T03:00Z",
+   "team": "Calgary Flames",
+   "tip": "10:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892720|home|FanDuel": {
+   "dec": 1.9091,
+   "ev": 0.191,
+   "fair": 0.6239,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892720",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "CGY @ LA",
+   "price": "-110",
+   "seen": "2026-11-13T16:28:48+00:00",
+   "side": "home",
+   "start": "2026-11-15T03:00Z",
+   "team": "Los Angeles Kings",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892720|sure": {
+   "id": "nhl:401892720",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "+154",
+     "stake_share": 0.4291,
+     "team": "Calgary Flames",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-110",
+     "stake_share": 0.5709,
+     "team": "Los Angeles Kings",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "CGY @ LA",
+   "profit": 0.0899,
+   "seen": "2026-11-13T16:28:48+00:00"
+  },
+  "nhl:401892720|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Los Angeles Kings\"}|FanDuel": {
+   "dec": 3.1,
+   "dk": "+136",
+   "ev": 0.2484,
+   "fair": 0.4027,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892720",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "spread",
+   "match": "CGY @ LA",
+   "price": "+210",
+   "seen": "2026-11-13T16:28:48+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Los Angeles Kings\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Los Angeles Kings"
+   },
+   "start": "2026-11-15T03:00Z",
+   "team": "Los Angeles Kings -1.5",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
   "nor:401843366|away|FanDuel": {
    "dec": 3.0,
    "ev": 0.0126,
