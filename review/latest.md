@@ -29,7 +29,7 @@ Yesterday (2026-11-12): board 23-8, sweep broken by unl France or draw at 76%; 9
 - LOST nhl Dallas Stars at 58% (-155), Dallas Stars 3 - Winnipeg Jets 8: margin 5 · the book had my side favoured too · called at 58% · coin flip · blowout · price moved against it (6 pts); picks like it: 114 of 186 (61% vs 57% stated)
 - LOST nfl New York Giants at 53% (-122), New York Giants 21 - Washington Commanders 24: margin 3 · the book had my side favoured too · called at 53% · coin flip · close game; picks like it: 29 of 49 (59% vs 54% stated)
 - LOST nhl Los Angeles Kings at 53% (-125), Los Angeles Kings 2 - New York Islanders 5: margin 3 · the book had my side favoured too · called at 53% · coin flip · blowout; picks like it: 123 of 232 (53% vs 53% stated)
-Ladder-consistency props (all time): 2259/2714 won (83.2%) vs 86.3% fair, 87.5% price.
+Ladder-consistency props (all time): 2259/2714 won (83.2%) vs 86.3% fair, 87.5% price, 83.6% stated on the board (heavy props capped).
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=174), ncaab 0.00 (n=55), ncaaf 0.00 (n=234), nfl 0.00 (n=57), nhl 0.00 (n=192)
