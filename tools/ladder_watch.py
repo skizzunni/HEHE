@@ -124,10 +124,21 @@ def games_snapshot(book, day, league):
     return out
 
 
+def _same(a, b):
+    """Two states read alike once the running total inside a decided note
+    ('already over (219, ...)', 'gone over (9, ...)') is set aside: the leg
+    was decided at the first alert, so each later basket is not news."""
+    import re
+    if a is None or b is None:
+        return a == b
+    k = lambda v: re.sub(r"((?:already|gone) over \()[\d.]+,", r"\1#,", str(v))
+    return k(a) == k(b)
+
+
 def changes(before, after):
     """Lines for every leg or game whose state moved, plus the settle line."""
     out = [f"CHANGE: {k} = {v}" for k, v in after.items()
-           if k != "SETTLED" and before and before.get(k) != v]
+           if k != "SETTLED" and before and not _same(before.get(k), v)]
     if "SETTLED" in after and before.get("SETTLED") != after["SETTLED"]:
         out.append(f"SETTLED: {after['SETTLED']}")
     return out

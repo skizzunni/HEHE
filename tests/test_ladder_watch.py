@@ -144,3 +144,21 @@ class LadderWatch(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class DecidedNoteOnce(unittest.TestCase):
+    def test_running_total_after_decided_is_not_a_change(self):
+        import ladder_watch as w
+        a = {"Over 208.5 points": "open | already over (219, line 208.5)"}
+        b = {"Over 208.5 points": "open | already over (226, line 208.5)"}
+        self.assertEqual(w.changes(a, b), [])
+        self.assertEqual(w.changes({"Under 7.5 goals": "open | gone over (8, line 7.5) -- lost"},
+                                   {"Under 7.5 goals": "open | gone over (9, line 7.5) -- lost"}), [])
+
+    def test_first_alert_and_settle_still_report(self):
+        import ladder_watch as w
+        self.assertEqual(w.changes({"Over 208.5 points": "open"}, {"Over 208.5 points": "open | already over (219, line 208.5)"}),
+                         ["CHANGE: Over 208.5 points = open | already over (219, line 208.5)"])
+        self.assertEqual(w.changes({"Over 208.5 points": "open | already over (226, line 208.5)"}, {"Over 208.5 points": "won"}),
+                         ["CHANGE: Over 208.5 points = won"])
+
