@@ -1398,6 +1398,16 @@ barely overlap between halves (4 of 16: ECU, GER, MEX, UECL), so a league's draw
 rate on our small samples is not stable enough to steer picks. The same holds
 at 28% and 30% cuts. The review keeps the draw-rate line as information.
 
+**Rejected: skip picks whose price moved against them (2026-11-13).**
+Prompted by Dallas at 58% losing 3-8 after its price drifted 6 points the
+wrong way. Board picks with both a first and a closing price, split at
+2026-10-30. NHL, 3+ implied points against: 4/7 then 2/5 -- too few to read.
+All leagues, 3+ against: 48/70 (69% vs 67% stated, -2.6% a bet) then 42/66
+(64% vs 68%, -10.1%); the rest 472/638 (74% vs 70%) then 676/866 (78% vs
+72%). Over stated in one half and under in the other, so skipping them is not
+supported for the sweep; the return is negative in both halves at 2 and 3
+points, which keeps it on watch. tools/move_study.py reruns it.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
