@@ -453,6 +453,48 @@ def prereg_more_line(status_fn=None):
     return ("Pre-registered tests also running: " + "; ".join(parts) + ".") if parts else None
 
 
+def priced_calibration_line(ledger=None, min_half=15):
+    """Board picks saved with their full price history (first.prices), by
+    league -- soccer split into straight wins and "or draw" -- each date half
+    won% against stated% with a z-score. Older picks are left out: they were
+    called before the current pipeline and blur the record (2026-11-13:
+    soccer straight wins 66% on 284 blended, 82% vs 74% on the priced era).
+    Information only; a z of 2.8+ in both halves would meet the bar."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    soc = {v.get("league") for v in ledger.values() if isinstance(v, dict) and v.get("dc")}
+    R = [v for v in ledger.values() if isinstance(v, dict) and v.get("status") in ("won", "lost") and v.get("date")
+         and not v.get("record_excluded") and v.get("conf") is not None and (v.get("first") or {}).get("prices")]
+    if len(R) < 2 * min_half:
+        return None
+    days = sorted({v["date"] for v in R})
+    mid = days[len(days) // 2]
+    G = {}
+    for v in R:
+        k = ("soccer or-draw" if v.get("dc") else "soccer win") if v.get("league") in soc else str(v.get("league")).upper()
+        a = G.setdefault(k, [[0, 0, 0.0], [0, 0, 0.0]])[v["date"] >= mid]
+        a[0] += v["status"] == "won"
+        a[1] += 1
+        a[2] += v["conf"]
+
+    def cell(a):
+        p, w = a[2] / a[1] / 100, a[0] / a[1]
+        z = (w - p) / ((p * (1 - p) / a[1]) ** 0.5) if 0 < p < 1 else 0.0
+        return f"{round(100 * w)}% vs {round(100 * p)}% (z {z:+.1f})", z
+    parts, hot = [], []
+    for k, (A, B) in sorted(G.items(), key=lambda kv: -(kv[1][0][1] + kv[1][1][1])):
+        if A[1] < min_half or B[1] < min_half:
+            continue
+        (ta, za), (tb, zb) = cell(A), cell(B)
+        parts.append(f"{k} {ta} then {tb}")
+        if (za >= 2.8 and zb >= 2.8) or (za <= -2.8 and zb <= -2.8):
+            hot.append(k)
+    if not parts:
+        return None
+    return (f"Priced-era picks by league, by half (split {mid}): " + "; ".join(parts) + "."
+            + (f" Past the 99.5% bar in both halves: {', '.join(hot)}." if hot else " None past the 99.5% bar in both halves."))
+
+
 def dc_side_line(ledger=None, min_n=30):
     """Soccer "or draw" picks split by the side taken (home or away), each
     with its date halves: won% against stated%. Priced, graded rows only.
@@ -1719,6 +1761,8 @@ def words(r, fit):
         out.append(r["lock_prop_markets"])
     if r.get("every_game_types"):
         out.append(r["every_game_types"])
+    if r.get("priced_calibration"):
+        out.append(r["priced_calibration"])
     if r.get("inj_study"):
         out.append(r["inj_study"])
     if r.get("lessons"):
@@ -1870,6 +1914,7 @@ def _main():
     log[today.isoformat()]["lock_types"] = locks_type_line()
     log[today.isoformat()]["lock_leagues"] = locks_league_line()
     log[today.isoformat()]["lock_prop_markets"] = locks_prop_market_line()
+    log[today.isoformat()]["priced_calibration"] = priced_calibration_line()
     try:
         log[today.isoformat()]["every_game_types"] = every_game_type_line()
     except Exception as e:                                  # a broken pool file must not stop the review

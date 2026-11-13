@@ -96,6 +96,20 @@ class StraightEras(unittest.TestCase):
         self.assertIn("older picks without it: 50% vs 60% on 10.", out)
 
 
+class PricedCalibration(unittest.TestCase):
+    def test_line(self):
+        L = {"x": dict(dc=True, league="epl")}
+        fp = dict(prices=dict(home="-200", draw="+300", away="+500"))
+        for i in range(40):
+            day = f"2026-10-{1 + i % 10:02d}" if i < 20 else f"2026-11-{1 + i % 10:02d}"
+            L[f"n{i}"] = dict(league="nba", status="won" if i % 4 else "lost", conf=75, date=day, first=fp)
+            L[f"o{i}"] = dict(league="nba", status="lost", conf=75, date=day)          # no price history: left out
+        out = daily_review.priced_calibration_line(L)
+        self.assertIn("NBA 75% vs 75% (z +0.0) then 75% vs 75% (z +0.0)", out)
+        self.assertTrue(out.endswith("None past the 99.5% bar in both halves."))
+        self.assertIsNone(daily_review.priced_calibration_line({}))
+
+
 class PreregMore(unittest.TestCase):
     def test_line(self):
         import locks

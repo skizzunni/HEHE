@@ -1484,6 +1484,16 @@ draw" also beat their fair chance in both halves (60-70%: 93% vs 86%, 87% vs
 draws are their normal way to lose, and switching to "or draw" is not
 supported. Nothing changed; the review now prints the two eras apart.
 
+**On watch: the priced era runs at or above stated everywhere (2026-11-13).**
+Picks saved with their full price history (1,498, split 2026-11-01), won vs
+stated by half: soccer straight wins 82% vs 73% (z +2.4) then 84% vs 75%
+(+2.2); NBA 70% vs 65% (+1.0) then 78% vs 68% (+2.0); NFL 73% vs 63% then 83%
+vs 67%; NHL, NCAAF and soccer "or draw" a point or few ahead. Nothing is past
+the 99.5% bar (z 2.8) in both halves, and raising a stated chance above the
+market's own no-vig price would claim an edge on a few hundred picks, so the
+chances stay as the market sets them. The review prints this line daily
+(priced_calibration_line) and names any league that crosses the bar.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
