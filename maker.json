@@ -1837,6 +1837,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV14GASOGAST-GASO"
   },
+  "KXNCAAFGAME-26NOV14JMUCONN-JMU|YES": {
+   "ask": 0.65,
+   "bid": 0.64,
+   "cost": 0.6441,
+   "edge": 0.0105,
+   "fair": 0.6509,
+   "id": "ncaaf:401861967",
+   "label": "James Madison Dukes",
+   "league": "ncaaf",
+   "match": "JMU @ CONN",
+   "posted": "2026-11-13T18:30:16+00:00",
+   "queue": 65458.36,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "James Madison Dukes"
+   },
+   "start": "2026-11-14T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV14JMUCONN-JMU"
+  },
   "KXNCAAFGAME-26NOV14JVSTWKU-JVST|YES": {
    "ask": 0.73,
    "bid": 0.72,
@@ -5696,6 +5717,28 @@
    "start": "2026-11-14T17:00Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV14DUKEMIA-MIA14"
+  },
+  "KXNCAAFSPREAD-26NOV14JMUCONN-JMU5|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401861967",
+   "label": "James Madison Dukes -4.5",
+   "league": "ncaaf",
+   "match": "JMU @ CONN",
+   "posted": "2026-11-13T18:30:16+00:00",
+   "queue": 108350.94,
+   "side": "YES",
+   "spec": {
+    "line": -4.5,
+    "t": "spread",
+    "team": "James Madison Dukes"
+   },
+   "start": "2026-11-14T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV14JMUCONN-JMU5"
   },
   "KXNCAAFSPREAD-26NOV14JVSTWKU-JVST8|NO": {
    "ask": 0.51,
@@ -11115,6 +11158,27 @@
    "start": "2026-11-14T21:00Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV14FRESTXST-60"
+  },
+  "KXNCAAFTOTAL-26NOV14GTCLEM-49|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401858297",
+   "label": "over 48.5",
+   "league": "ncaaf",
+   "match": "GT @ CLEM",
+   "posted": "2026-11-13T18:30:16+00:00",
+   "queue": 26390.42,
+   "side": "YES",
+   "spec": {
+    "line": 48.5,
+    "t": "over"
+   },
+   "start": "2026-11-14T17:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV14GTCLEM-49"
   },
   "KXNCAAFTOTAL-26NOV14JVSTWKU-55|NO": {
    "ask": 0.51,
