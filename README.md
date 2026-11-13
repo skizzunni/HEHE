@@ -1380,6 +1380,13 @@ Locks legs, date halves: NHL 85% then 95% (vs 87%, 88%); NBA 82%, 87% (vs
 the recent half (its props, flagged separately, are most of that), so no
 league is kept off the Locks or the ladder.
 
+**Rejected: NFL Thursday-night unders (2026-11-13).** Both teams on a short
+week; 18-19 Thursday games a season with a closing total, 2021-24: unders
+67%, 63%, then 32%, 47%; a flat under +26.6%, +20.6%, then -39.5%, -9.7%.
+Two good seasons then two bad -- the old "Thursday under" angle is not
+holding. Other games: unders +0.3%, +5.9%, +6.2%, -12.8% (the same flip seen
+in the full NFL totals study).
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
