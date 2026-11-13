@@ -39,6 +39,19 @@ import freshness                # noqa: E402
 import calibration              # noqa: E402
 
 
+def fill_parts(out, parts):
+    """Run each (key, fn) and store its result in out[key]; a part that
+    raises is left out and named in the returned list ("key: Error"), so one
+    broken piece never takes the others down with it."""
+    skipped = []
+    for key, fn in parts:
+        try:
+            out[key] = fn()
+        except Exception as e:
+            skipped.append(f"{key}: {type(e).__name__}")
+    return skipped
+
+
 def snapshot():
     """Fresh research for both days, one row per game, best picks first.
 
@@ -637,27 +650,33 @@ def snapshot():
         for v_ in out["locks"].values():
             v_.pop("pool", None)                # saved in the ledger, not published
         out["locks_record"] = locks.report()
-        try:                                    # caution from the full saved pools (locks.watch_pool)
-            out["watch_pool"] = locks.watch_pool()
-            out["pool_form"] = locks.pool_form()    # last 7 days per league and bet type
-            out["prop_form"] = props_ledger.form()  # last 7 days per league and prop market
-            out["spread_sides"] = locks.spread_sides()  # + vs - spreads per league, both halves
-            out["bright_pool"] = locks.bright_pool()   # bet types ahead of their chance in both halves
-            out["cold_check"] = locks.cold_check()     # does a cold week carry into the next day
-            out["prereg"] = locks.prereg_status()       # the pre-registered spread-band test
-            out["preregs"] = [out["prereg"]] + [locks.prereg_status(test=t) for t in locks.PREREGS[1:]]
-            try:                                        # UFC favourites by chance band (tools/ufc_bands.py)
-                with open(os.path.join(HERE, "ufc_bands.json")) as fh_:
-                    out["ufc_bands"] = json.load(fh_)
-            except (OSError, ValueError):
-                pass
-            # spread bands short in both halves, less any band the pre-registered test cleared
-            _sbw = locks.spread_band_watch()
-            for _t, _st in zip(locks.PREREGS, out.get("preregs") or []):
-                _sbw = locks.apply_prereg(_sbw, _st, _t)
-            out["spread_band_watch"] = _sbw
-        except Exception as e_:
-            print(f"pool caution skipped ({e_})", file=sys.stderr)
+        # cautions from the full saved pools, each on its own: one failing part
+        # (it was one try block) used to drop every caution silently
+        _parts = [("watch_pool", locks.watch_pool),
+                  ("pool_form", locks.pool_form),             # last 7 days per league and bet type
+                  ("prop_form", props_ledger.form),           # last 7 days per league and prop market
+                  ("spread_sides", locks.spread_sides),       # + vs - spreads per league, both halves
+                  ("bright_pool", locks.bright_pool),         # bet types ahead of their chance in both halves
+                  ("cold_check", locks.cold_check),           # does a cold week carry into the next day
+                  ("preregs", lambda: [locks.prereg_status(test=t) for t in locks.PREREGS])]   # pre-registered tests
+        _skipped = fill_parts(out, _parts)
+        if out.get("preregs"):
+            out["prereg"] = out["preregs"][0]
+        try:                                    # UFC favourites by chance band (tools/ufc_bands.py)
+            with open(os.path.join(HERE, "ufc_bands.json")) as fh_:
+                out["ufc_bands"] = json.load(fh_)
+        except (OSError, ValueError):
+            pass
+
+        def _band_watch():                      # spread bands short in both halves, less any band a test cleared
+            w_ = locks.spread_band_watch()
+            for t_, st_ in zip(locks.PREREGS, out.get("preregs") or []):
+                w_ = locks.apply_prereg(w_, st_, t_)
+            return w_
+        _skipped += fill_parts(out, [("spread_band_watch", _band_watch)])
+        if _skipped:
+            out["skipped_parts"] = _skipped
+            print("cautions skipped: " + "; ".join(_skipped), file=sys.stderr)
         try:                                    # $1 -> $10k on the day's 3-8 likeliest Locks (ladder.py)
             import ladder
             out["ladder"] = ladder.report()
