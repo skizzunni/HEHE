@@ -13814,6 +13814,7 @@
    "cost": 0.5644,
    "edge": 0.003,
    "fair": 0.5661,
+   "fill": "strict",
    "id": "nfl:401873052",
    "label": "New York Giants",
    "league": "nfl",
@@ -13826,8 +13827,9 @@
     "team": "New York Giants"
    },
    "start": "2026-11-13T01:15Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV12WASNYG-NYG"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV12WASNYG-NYG",
+   "won": 0
   },
   "KXNFLGAME-26OCT25CINBAL-CIN|YES": {
    "ask": 0.52,
@@ -14534,6 +14536,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "nfl:401873052",
    "label": "New York Giants -1.5",
    "league": "nfl",
@@ -14547,8 +14550,9 @@
     "team": "New York Giants"
    },
    "start": "2026-11-13T01:15Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV12WASNYG-NYG2"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV12WASNYG-NYG2",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV12WASNYG-NYG3|NO": {
    "ask": 0.51,
@@ -14556,6 +14560,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "nfl:401873052",
    "label": "Washington Commanders +2.5",
    "league": "nfl",
@@ -14569,8 +14574,9 @@
     "team": "Washington Commanders"
    },
    "start": "2026-11-13T01:15Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV12WASNYG-NYG3"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV12WASNYG-NYG3",
+   "won": 1
   },
   "KXNFLSPREAD-26OCT25CINBAL-CIN2|NO": {
    "ask": 0.51,
