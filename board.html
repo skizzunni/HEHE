@@ -1431,7 +1431,8 @@ function paceNote(L){
   const lg = L.league || '';
   if(!m || !L.live || !L.live_score) return '';
   const F = {nba: [4, 12], wnba: [4, 10], ncaab: [2, 20], nfl: [4, 15], ncaaf: [4, 15], nhl: [3, 20]}[lg];
-  if(!F) return '';
+  const SOC = !F && isSoccer(lg);
+  if(!F && !SOC) return '';
   let total;
   if(team){
     // "Montreal Canadiens 2 - Utah Mammoth 2": this team's own number
@@ -1447,6 +1448,15 @@ function paceNote(L){
   const line0 = +m[2], over0 = /over/i.test(m[1]);
   if(over0 && total > line0) return '<div class="sbn"><b>Already over</b> (' + total + ', line ' + line0 + ')</div>';
   if(!over0 && total > line0) return '<div class="sbn"><b>Gone over</b> (' + total + ', line ' + line0 + ')</div>';
+  if(SOC){
+    // soccer clocks read "67'", "45'+2'" or "HT"; stoppage at the end counts
+    // as minute 89, so a lead late on reads very likely, never certain
+    const mm = /(\d+)'/.exec(L.live), mins = /^\s*HT\s*$/i.test(L.live) ? 45 : mm ? Math.min(+mm[1], 89) : null;
+    if(mins == null) return '';
+    const chS = liveGoalChance(lg, line0, over0, total, mins / 90, L.p);
+    return '<div class="sbn">' + total + ' so far, line ' + line0
+      + (chS != null ? ' &middot; about <b>' + Math.round(100 * chS) + '%</b> to win from here (est.)' : '') + '</div>';
+  }
   let el = null;
   // "9:23 - 2nd", or under a minute "20.2 - 4th"
   const c = /(\d+):(\d+)\s*-\s*(\d)/.exec(L.live), sec = /^\s*(\d+(?:\.\d+)?)\s*-\s*(\d)/.exec(L.live), e = /End of (\d)/i.exec(L.live);
@@ -1464,7 +1474,7 @@ function paceNote(L){
     + (good ? 'on track' : 'behind the pace it needs')
     + (ch != null ? ' &middot; about <b>' + Math.round(100 * ch) + '%</b> to win from here (est.)' : '') + '</div>';
 }
-// Hockey goals arrive roughly at random (Poisson). The leg's own pre-game
+// Hockey and soccer goals arrive roughly at random (Poisson). The leg's own pre-game
 // chance fixes the game's scoring rate (the rate at which P(final on our side
 // of the line) equals that chance), and the rest of the game is scored at that
 // rate. An estimate for reading a live leg: it ignores overtime and empty
@@ -1475,8 +1485,11 @@ function poisCdf(k, lam){
   for(let i = 1; i <= k; i++){ t *= lam / i; s += t; }
   return Math.min(1, s);
 }
+function isSoccer(lg){
+  return typeof D === 'object' && !!D && !!D.paths && /^soccer\//.test(D.paths[lg] || '');
+}
 function liveGoalChance(lg, line, over, total, frac, p){
-  if(lg !== 'nhl' || !(p > 0 && p < 1) || !(frac >= 0 && frac < 1)) return null;
+  if(!(lg === 'nhl' || isSoccer(lg)) || !(p > 0 && p < 1) || !(frac >= 0 && frac < 1)) return null;
   const K = Math.floor(line);                      // under wins at K or fewer
   const pre = lam => over ? 1 - poisCdf(K, lam) : poisCdf(K, lam);
   let lo = 0.05, hi = 30;                          // pre() rises with lam for an over, falls for an under

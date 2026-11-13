@@ -191,6 +191,12 @@ PROBE = """<script>setTimeout(function(){
                 liveGoalChance("nhl", 5.5, true, 6, 0.5, 0.6), liveGoalChance("nba", 220.5, false, 100, 0.5, 0.75),
                 liveGoalChance("nhl", 7.5, false, 5, 2 / 3, null),
                 paceNote({label: "Under 7.5 goals", league: "nhl", p: 0.7455, live: "End of 2nd", live_score: "Los Angeles Kings 2 - New York Islanders 3"})];
+  var psS = D.paths; D.paths = Object.assign({}, psS, {epl: "soccer/eng.1"});
+  out.socCh = [paceNote({label: "Under 3.5 goals", league: "epl", p: 0.7, live: "HT", live_score: "Arsenal 1 - Chelsea 1"}),
+               paceNote({label: "Under 3.5 goals", league: "epl", p: 0.7, live: "90'+4'", live_score: "Arsenal 2 - Chelsea 1"}),
+               paceNote({label: "Under 3.5 goals", league: "epl", p: 0.7, live: "Postponed", live_score: "Arsenal 0 - Chelsea 0"}),
+               liveGoalChance("epl", 2.5, true, 0, 0, 0.55)];
+  D.paths = psS;
   var evL = function (state, done, det) { return {competitions: [{status: {type: {state: state, completed: done, shortDetail: det}},
     competitors: [{homeAway: "away", score: "52", team: {displayName: "Toronto Raptors"}}, {homeAway: "home", score: "54", team: {displayName: "Philadelphia 76ers"}}]}]}; };
   out.legLive = [JSON.stringify(legLive(evL("in", false, "2:23 - 2nd"))), JSON.stringify(legLive(evL("post", true, "Final"))),
@@ -729,6 +735,10 @@ def main():
     if not (gc[0] is not None and abs(gc[0] - 0.677) < 0.01 and abs(gc[1] - 0.7455) < 0.001 and gc[2] == 1
             and gc[3] is None and gc[4] is None and "about <b>68%</b> to win from here" in (gc[5] or "")):
         fails.append("live goal-total chance wrong: " + repr(gc))
+    sc = new.get("socCh") or ["", "", "x", None]
+    if not ("2 so far, line 3.5" in sc[0] and "</b> to win from here" in sc[0] and re.search(r"about <b>9\d%</b>", sc[1])
+            and sc[2] == "" and sc[3] is not None and abs(sc[3] - 0.55) < 0.001):
+        fails.append("soccer live goal-total chance wrong: " + repr(sc))
     vc = new.get("vCau") or ["", "x", "x", "x"]
     if not ("180 of 448 won (40% vs 45% fair), ROI -11.47%" in vc[0] and "both halves" in vc[0]) or any(vc[1:]):
         fails.append("value-bet caution wrong: " + repr(vc))
