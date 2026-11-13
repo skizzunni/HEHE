@@ -1437,6 +1437,16 @@ line at a similar chance is on par (126/148, 85% vs 85%). No market cut; the
 review now prints this line daily (locks_prop_market_line) so a real leak in
 one market would show.
 
+**Rejected: a fixed 2-leg ladder (2026-11-13).** On all 27-28 saved Locks
+cards, 2-leg tickets (about 1.55x) had the best odds of the 22 straight wins
+$1 -> $10,000 takes (1 in 737, against 1 in 2,600-5,400 for the 2-5x counts).
+Split at 2026-10-29: earlier half 2 legs 10/13, 1 in 321 (3+ legs 1 in 10,000
+or worse); later half 2 legs 10/14, 1 in 1,171, while 5 legs went 7/13, 1 in
+263 and 7-8 legs 5/13, 1 in 309. The best count flips between halves -- the
+rate is raised to a large power, so 13-card halves cannot pick it. The 2-5x
+rule stays (the user's choice, and nothing beats it in both halves).
+tools/ladder_count_study.py reruns it.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
