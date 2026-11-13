@@ -39,6 +39,7 @@ Every script here, with the first paragraph of its own description.
 | `td_lab.py` | Touchdown lab: how accurate are anytime-TD chances, and can anything beat them? |
 | `ticket_backtest.py` | Whole-ticket backtest on the pick ledger's own games. |
 | `totals_lab.py` | Totals lab: do far unders and far overs hit equally often? |
+| `draw_league_study.py` | Straight-win soccer picks in high-draw leagues, walk-forward on the board ledger (draw rates fitted on one half, picks scored on the other). Rejected 2026-11-13. python tools/draw_league_study.py [ledger.json] [cut] |
 | `totals_study.py` | Overs and unders against the closing total, season by season, on tools/nba_history.py output (any league). Pushes dropped; returns are a flat $1 at the closing over / under price. python tools/totals_study.py... |
 | `ufc_bands.py` | How UFC favourites have done by their de-vigged chance band, at real DraftKings prices since 2021 (ufc_history.json): writes ufc_bands.json, a small summary the board shows beside each UFC pick. |
 | `ufc_enrich.py` | Add ESPN's detailed data to each fight in ufc_history.json: DraftKings odds (moneyline, open, total-rounds line and its prices), both fighters' fight stats, and fighter bio (age at the fight, height, reach, stance;... |

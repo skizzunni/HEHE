@@ -1387,6 +1387,17 @@ Two good seasons then two bad -- the old "Thursday under" angle is not
 holding. Other games: unders +0.3%, +5.9%, +6.2%, -12.8% (the same flip seen
 in the full NFL totals study).
 
+**Rejected: avoid straight-win soccer picks in high-draw leagues
+(2026-11-13).** Prompted by Llaneros FC at 69% drawing 0-0. The board's own
+graded soccer games, split at 2026-10-28; draw rates fitted on one half (12+
+games, 25%+ draws), straight-win picks scored on the other. Later half: picks
+in high-draw leagues 33/39 (85% vs 74% stated, +7.9% a bet), others 88/108
+(82% vs 74%, +3.2%). Earlier half: high-draw 13/23 (57% vs 68%, -14.6%),
+others 115/155 (74% vs 68%, +12.2%). The sign flips, and the flagged leagues
+barely overlap between halves (4 of 16: ECU, GER, MEX, UECL), so a league's draw
+rate on our small samples is not stable enough to steer picks. The same holds
+at 28% and 30% cuts. The review keeps the draw-rate line as information.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
