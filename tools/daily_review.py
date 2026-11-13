@@ -454,44 +454,29 @@ def prereg_more_line(status_fn=None):
 
 
 def priced_calibration_line(ledger=None, min_half=15):
-    """Board picks saved with their full price history (first.prices), by
-    league -- soccer split into straight wins and "or draw" -- each date half
-    won% against stated% with a z-score. Older picks are left out: they were
-    called before the current pipeline and blur the record (2026-11-13:
-    soccer straight wins 66% on 284 blended, 82% vs 74% on the priced era).
-    Information only; a z of 2.8+ in both halves would meet the bar."""
+    """ledger.priced_calibration as one review line: each group's date halves
+    won% against stated% with a z-score, naming any group past the 99.5% bar
+    (z 2.8) in both halves. Information only."""
+    import ledger as _L
     if ledger is None:
         ledger = load("ledger.json", {})
-    soc = {v.get("league") for v in ledger.values() if isinstance(v, dict) and v.get("dc")}
-    R = [v for v in ledger.values() if isinstance(v, dict) and v.get("status") in ("won", "lost") and v.get("date")
-         and not v.get("record_excluded") and v.get("conf") is not None and (v.get("first") or {}).get("prices")]
-    if len(R) < 2 * min_half:
+    P = _L.priced_calibration(ledger, min_half)
+    if not P:
         return None
-    days = sorted({v["date"] for v in R})
-    mid = days[len(days) // 2]
-    G = {}
-    for v in R:
-        k = ("soccer or-draw" if v.get("dc") else "soccer win") if v.get("league") in soc else str(v.get("league")).upper()
-        a = G.setdefault(k, [[0, 0, 0.0], [0, 0, 0.0]])[v["date"] >= mid]
-        a[0] += v["status"] == "won"
-        a[1] += 1
-        a[2] += v["conf"]
 
-    def cell(a):
-        p, w = a[2] / a[1] / 100, a[0] / a[1]
-        z = (w - p) / ((p * (1 - p) / a[1]) ** 0.5) if 0 < p < 1 else 0.0
-        return f"{round(100 * w)}% vs {round(100 * p)}% (z {z:+.1f})", z
+    def cell(h):
+        w, n, said = h
+        p, r = said / 100, w / n
+        z = (r - p) / ((p * (1 - p) / n) ** 0.5) if 0 < p < 1 else 0.0
+        return f"{round(100 * r)}% vs {round(said)}% (z {z:+.1f})", z
     parts, hot = [], []
-    for k, (A, B) in sorted(G.items(), key=lambda kv: -(kv[1][0][1] + kv[1][1][1])):
-        if A[1] < min_half or B[1] < min_half:
-            continue
-        (ta, za), (tb, zb) = cell(A), cell(B)
+    for row in P["rows"]:
+        k = row["group"] if row["group"].startswith("soccer") else row["group"].upper()
+        (ta, za), (tb, zb) = cell(row["halves"][0]), cell(row["halves"][1])
         parts.append(f"{k} {ta} then {tb}")
         if (za >= 2.8 and zb >= 2.8) or (za <= -2.8 and zb <= -2.8):
             hot.append(k)
-    if not parts:
-        return None
-    return (f"Priced-era picks by league, by half (split {mid}): " + "; ".join(parts) + "."
+    return (f"Priced-era picks by league, by half (split {P['mid']}): " + "; ".join(parts) + "."
             + (f" Past the 99.5% bar in both halves: {', '.join(hot)}." if hot else " None past the 99.5% bar in both halves."))
 
 

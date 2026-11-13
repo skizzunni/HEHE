@@ -906,6 +906,42 @@ def hi_sweep(book, today, cut=70):
     return dict(cut=cut, today=days.get(today, [0, 0, 0]), swept=len(swept), days=len(done), last=swept[-1] if swept else None)
 
 
+def priced_calibration(book, min_half=15):
+    """Graded picks saved with their full price history (first.prices), by
+    group -- league, with soccer split into "soccer win" and "soccer or-draw"
+    -- each date half as [won, n, stated%]: {"mid": date, "rows":
+    [{"group", "halves": [[w, n, said], [w, n, said]]}]}, largest first,
+    groups with min_half+ picks in each half. None when too few.
+    2026-11-13: every group at or above stated in both halves; soccer
+    straight wins most (82% vs 73%, then 84% vs 75%)."""
+    soc = {e.get("league") for e in book.values() if isinstance(e, dict) and e.get("dc")}
+    R = [e for e in book.values() if isinstance(e, dict) and e.get("status") in ("won", "lost") and e.get("date")
+         and not e.get("record_excluded") and e.get("conf") is not None and (e.get("first") or {}).get("prices")]
+    if len(R) < 2 * min_half:
+        return None
+    days = sorted({e["date"] for e in R})
+    mid = days[len(days) // 2]
+    G = {}
+    for e in R:
+        k = ("soccer or-draw" if e.get("dc") else "soccer win") if e.get("league") in soc else str(e.get("league"))
+        a = G.setdefault(k, [[0, 0, 0.0], [0, 0, 0.0]])[e["date"] >= mid]
+        a[0] += e["status"] == "won"
+        a[1] += 1
+        a[2] += e["conf"]
+    rows = [dict(group=k, halves=[[a[0], a[1], round(a[2] / a[1], 1)] for a in H])
+            for k, H in sorted(G.items(), key=lambda kv: -(kv[1][0][1] + kv[1][1][1]))
+            if H[0][1] >= min_half and H[1][1] >= min_half]
+    return dict(mid=mid, rows=rows) if rows else None
+
+
+def _try(fn, *a):
+    """fn(*a), or None if it raises: one optional view must not break the payload."""
+    try:
+        return fn(*a)
+    except Exception:
+        return None
+
+
 def dc_sides(book):
     """Soccer "or draw" picks, priced and graded, by the side taken:
     {"home"|"away": [won, n, stated%]}. 2026-11-09: home 77% vs 74% on 402,
@@ -1158,7 +1194,7 @@ def board_payload(limit=40):
                     ((lg_, sum(1 for e in todays if e["status"] == "lost" and e["league"] == lg_))
                      for lg_ in {e["league"] for e in todays if e["status"] == "lost"}), key=lambda x: -x[1])],
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), call_cautions=call_cautions(book), draw_losses=draw_losses(book), dc_sides=dc_sides(book), hi_sweep=hi_sweep(book, today), b2b=b2b_record(book), moves_halves=moves_halves(book), band_records=band_records(book), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
+                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), call_cautions=call_cautions(book), draw_losses=draw_losses(book), dc_sides=dc_sides(book), priced_cal=_try(priced_calibration, book), hi_sweep=hi_sweep(book, today), b2b=b2b_record(book), moves_halves=moves_halves(book), band_records=band_records(book), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))

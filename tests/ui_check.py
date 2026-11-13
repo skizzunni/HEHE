@@ -184,6 +184,9 @@ PROBE = """<script>setTimeout(function(){
   D.locks = {today: {locks: [{label: "Over 214.5 points", price: "-400", p: 0.75, match: "A at B"}, {label: "K: 2+ Assists", price: "-390", p: 0.78, match: "C @ D"}]}};
   D.ladder = {today: {legs: [{label: "K: 2+ Assists"}], stake: 2.47, pays: 2.4}};
   out.lids = ladderLegIds(parlayLegs()).join(",");
+  out.pcal = [pricedCalHTML({mid: "2026-11-01", rows: [{group: "soccer win", halves: [[104, 127, 72.6], [88, 105, 74.4]]},
+                                                        {group: "nhl", halves: [[45, 73, 58], [45, 83, 59]]}]}),
+              pricedCalHTML(null), pricedCalHTML({rows: []})];
   out.reach = [JSON.stringify(ladderReach(0.5, 2.42, 10000)), JSON.stringify(ladderReach(20 / 27, 1.55, 10000)),
                ladderReach(0.5, 1, 10000), ladderReach(0, 2, 10000), JSON.stringify(ladderReach(1, 10, 100))];
   out.vCau = [valueCaution({n: 448, won: 180, roi: -11.47, halves: [{n: 252, won: 104, fair: 44.1, roi: -5.0}, {n: 196, won: 76, fair: 45.1, roi: -19.7}]}),
@@ -752,6 +755,10 @@ def main():
     if not (len(rc) == 5 and rc[0] == '{"wins":11,"odds":0.00048828125}' and rc[1].startswith('{"wins":22,')
             and rc[2] is None and rc[3] is None and rc[4] == '{"wins":2,"odds":1}'):
         fails.append("ladder reach-by-leg-count wrong: " + repr(rc))
+    pc_ = new.get("pcal") or ["", "x", "x"]
+    if not ("Soccer straight wins" in pc_[0] and "104 of 127 (82% vs 73%)" in pc_[0] and "at or ahead of stated in both halves" in pc_[0]
+            and "NHL" in pc_[0] and "mixed" in pc_[0] and pc_[1] == "" and pc_[2] == ""):
+        fails.append("priced calibration table wrong: " + repr(pc_)[:300])
     vc = new.get("vCau") or ["", "x", "x", "x"]
     if not ("180 of 448 won (40% vs 45% fair), ROI -11.47%" in vc[0] and "both halves" in vc[0]) or any(vc[1:]):
         fails.append("value-bet caution wrong: " + repr(vc))

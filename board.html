@@ -2078,6 +2078,21 @@ function upsetHTML(U){
 // My own picks with the prices hidden (ledger.own_view): the model alone
 // against the market, head to head on the same games, and today's games
 // where they disagree -- tracked, not bet, until the model earns it.
+// picks saved with their full price history, won against stated, by league
+// and date half (ledger.priced_calibration): does the board's chance hold up?
+function pricedCalHTML(P){
+  if(!P || !(P.rows || []).length) return '';
+  const nm = g => /^soccer/.test(g) ? 'Soccer ' + g.slice(7).replace('win', 'straight wins').replace('or-draw', '&ldquo;or draw&rdquo;') : esc(String(g).toUpperCase());
+  const cell = h => h[0] + ' of ' + h[1] + ' (' + Math.round(100 * h[0] / h[1]) + '% vs ' + Math.round(h[2]) + '%)';
+  const tag = H => H.every(h => 100 * h[0] / h[1] >= h[2]) ? 'at or ahead of stated in both halves'
+    : H.every(h => 100 * h[0] / h[1] < h[2]) ? '<b>short of stated in both halves</b>' : 'mixed';
+  return '<div class="sweep"><h3>Do the stated chances hold up?</h3><p class="note">Every graded pick saved with its full price history, '
+    + 'split at ' + esc(P.mid) + ': won against the chance shown when it was picked.</p><table class="sweeptab"><thead><tr><th>Picks</th>'
+    + '<th class="num">Earlier half</th><th class="num">Later half</th><th>Verdict</th></tr></thead><tbody>'
+    + P.rows.map(r => '<tr><td>' + nm(r.group) + '</td><td class="num">' + cell(r.halves[0]) + '</td><td class="num">' + cell(r.halves[1])
+      + '</td><td>' + tag(r.halves) + '</td></tr>').join('')
+    + '</tbody></table><p class="note">A chance is only raised or cut when a group is past the 99.5% bar in both halves; none is yet.</p></div>';
+}
 function ownHTML(O){
   if(!O || !O.n) return '';
   const pc = x => (100 * x / O.n).toFixed(1) + '%';
@@ -3855,7 +3870,7 @@ function scoreboardHTML(){
         : '')
     + '<div class="rsub">' + live.length + ' in play &middot; ' + (R.today_open || 0)
     + ' still to finish</div></div>';
-  h += yesterdayHTML(R.yesterday) + reasonsHTML(R.loss_reasons) + upsetHTML(R.upsets) + ownHTML(R.own);
+  h += yesterdayHTML(R.yesterday) + reasonsHTML(R.loss_reasons) + upsetHTML(R.upsets) + ownHTML(R.own) + pricedCalHTML(R.priced_cal);
 
   h += '<p class="rsub">' + (R.excluded_unpriced || 0)
     + ' unpriced picks excluded from the record (all dates).</p>';
