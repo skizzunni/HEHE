@@ -11881,6 +11881,71 @@
    "tip": "4:25 PM",
    "venue": "FanDuel"
   },
+  "nhl:401891809|away|Kalshi": {
+   "dec": 3.7994,
+   "ev": 0.0218,
+   "fair": 0.269,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401891809",
+   "kind": "value",
+   "league": "nhl",
+   "match": "SEA @ CAR",
+   "price": "+280",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "away",
+   "start": "2026-11-14T18:00Z",
+   "team": "Seattle Kraken",
+   "tip": "1:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401891809|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Seattle Kraken\"}|FanDuel": {
+   "dec": 1.9804,
+   "dk": "-120",
+   "ev": 0.0352,
+   "fair": 0.5227,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401891809",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "SEA @ CAR",
+   "price": "-102",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Seattle Kraken\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Seattle Kraken"
+   },
+   "start": "2026-11-14T18:00Z",
+   "team": "Seattle Kraken +1.5",
+   "tip": "1:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401891809|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Seattle Kraken\"}|Kalshi": {
+   "dec": 2.0101,
+   "dk": "-120",
+   "ev": 0.0507,
+   "fair": 0.5227,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401891809",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "spread",
+   "match": "SEA @ CAR",
+   "price": "+101",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Seattle Kraken\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Seattle Kraken"
+   },
+   "start": "2026-11-14T18:00Z",
+   "team": "Seattle Kraken +1.5",
+   "tip": "1:00 PM",
+   "venue": "Kalshi"
+  },
   "nhl:401892558|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"St. Louis Blues\"}|FanDuel": {
    "dec": 1.4545,
    "dk": "-258",
@@ -14983,6 +15048,347 @@
    "start": "2026-11-14T20:30Z",
    "team": "Chicago Blackhawks +1.5",
    "tip": "3:30 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892709|away|FanDuel": {
+   "dec": 1.9091,
+   "ev": 0.0251,
+   "fair": 0.537,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892709",
+   "kind": "value",
+   "league": "nhl",
+   "match": "MIN @ BOS",
+   "price": "-110",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "away",
+   "start": "2026-11-15T00:00Z",
+   "team": "Minnesota Wild",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892709|sure": {
+   "id": "nhl:401892709",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "-110",
+     "stake_share": 0.5238,
+     "team": "Minnesota Wild",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+110",
+     "stake_share": 0.4762,
+     "team": "Boston Bruins",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "MIN @ BOS",
+   "profit": 0.0,
+   "seen": "2026-11-13T16:12:43+00:00"
+  },
+  "nhl:401892710|away|FanDuel": {
+   "dec": 1.9091,
+   "ev": 0.0866,
+   "fair": 0.5692,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892710",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "EDM @ TOR",
+   "price": "-110",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "away",
+   "start": "2026-11-15T00:00Z",
+   "team": "Edmonton Oilers",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892710|sure": {
+   "id": "nhl:401892710",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "-110",
+     "stake_share": 0.5399,
+     "team": "Edmonton Oilers",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+124",
+     "stake_share": 0.4601,
+     "team": "Toronto Maple Leafs",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "EDM @ TOR",
+   "profit": 0.0307,
+   "seen": "2026-11-13T16:12:43+00:00"
+  },
+  "nhl:401892712|away|Kalshi": {
+   "dec": 2.9824,
+   "ev": 0.2367,
+   "fair": 0.4146,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892712",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "DET @ TB",
+   "price": "+198",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "away",
+   "start": "2026-11-15T00:00Z",
+   "team": "Detroit Red Wings",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892712|home|FanDuel": {
+   "dec": 1.9091,
+   "ev": 0.2924,
+   "fair": 0.6769,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892712",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "DET @ TB",
+   "price": "-110",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "home",
+   "start": "2026-11-15T00:00Z",
+   "team": "Tampa Bay Lightning",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892712|sure": {
+   "id": "nhl:401892712",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "+198",
+     "stake_share": 0.3903,
+     "team": "Detroit Red Wings",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-110",
+     "stake_share": 0.6097,
+     "team": "Tampa Bay Lightning",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "DET @ TB",
+   "profit": 0.164,
+   "seen": "2026-11-13T16:12:43+00:00"
+  },
+  "nhl:401892712|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Tampa Bay Lightning\"}|FanDuel": {
+   "dec": 3.1,
+   "dk": "+105",
+   "ev": 0.445,
+   "fair": 0.4661,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892712",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "spread",
+   "match": "DET @ TB",
+   "price": "+210",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Tampa Bay Lightning\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Tampa Bay Lightning"
+   },
+   "start": "2026-11-15T00:00Z",
+   "team": "Tampa Bay Lightning -1.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892715|away|Kalshi": {
+   "dec": 2.2878,
+   "ev": 0.0683,
+   "fair": 0.4669,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892715",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "PHI @ CBJ",
+   "price": "+129",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "away",
+   "start": "2026-11-15T00:00Z",
+   "team": "Philadelphia Flyers",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892715|home|FanDuel": {
+   "dec": 1.9091,
+   "ev": 0.098,
+   "fair": 0.5752,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892715",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "PHI @ CBJ",
+   "price": "-110",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "home",
+   "start": "2026-11-15T00:00Z",
+   "team": "Columbus Blue Jackets",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892715|sure": {
+   "id": "nhl:401892715",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "+129",
+     "stake_share": 0.4549,
+     "team": "Philadelphia Flyers",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-110",
+     "stake_share": 0.5451,
+     "team": "Columbus Blue Jackets",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "PHI @ CBJ",
+   "profit": 0.0407,
+   "seen": "2026-11-13T16:12:43+00:00"
+  },
+  "nhl:401892715|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Columbus Blue Jackets\"}|FanDuel": {
+   "dec": 3.1,
+   "dk": "+170",
+   "ev": 0.0823,
+   "fair": 0.3491,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892715",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "spread",
+   "match": "PHI @ CBJ",
+   "price": "+210",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Columbus Blue Jackets\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Columbus Blue Jackets"
+   },
+   "start": "2026-11-15T00:00Z",
+   "team": "Columbus Blue Jackets -1.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892716|{\"line\": 6.5, \"t\": \"under\"}|FanDuel": {
+   "dec": 1.8929,
+   "dk": "-130",
+   "ev": 0.0307,
+   "fair": 0.5445,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892716",
+   "kind": "single",
+   "league": "nhl",
+   "market": "under",
+   "match": "FLA @ STL",
+   "price": "-112",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "{\"line\": 6.5, \"t\": \"under\"}",
+   "spec": {
+    "line": 6.5,
+    "t": "under"
+   },
+   "start": "2026-11-15T00:00Z",
+   "team": "under 6.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892717|away|Kalshi": {
+   "dec": 2.2878,
+   "ev": 0.0326,
+   "fair": 0.4513,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892717",
+   "kind": "value",
+   "league": "nhl",
+   "match": "BUF @ DAL",
+   "price": "+129",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "away",
+   "start": "2026-11-15T01:00Z",
+   "team": "Buffalo Sabres",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892717|home|FanDuel": {
+   "dec": 1.9091,
+   "ev": 0.1238,
+   "fair": 0.5887,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892717",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "BUF @ DAL",
+   "price": "-110",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "home",
+   "start": "2026-11-15T01:00Z",
+   "team": "Dallas Stars",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892717|sure": {
+   "id": "nhl:401892717",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "+136",
+     "stake_share": 0.4472,
+     "team": "Buffalo Sabres",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-110",
+     "stake_share": 0.5528,
+     "team": "Dallas Stars",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "BUF @ DAL",
+   "profit": 0.0554,
+   "seen": "2026-11-13T16:12:43+00:00"
+  },
+  "nhl:401892717|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Dallas Stars\"}|FanDuel": {
+   "dec": 3.1,
+   "dk": "+150",
+   "ev": 0.1736,
+   "fair": 0.3786,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892717",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "spread",
+   "match": "BUF @ DAL",
+   "price": "+210",
+   "seen": "2026-11-13T16:12:43+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Dallas Stars\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Dallas Stars"
+   },
+   "start": "2026-11-15T01:00Z",
+   "team": "Dallas Stars -1.5",
+   "tip": "8:00 PM",
    "venue": "FanDuel"
   },
   "nor:401843366|away|FanDuel": {
