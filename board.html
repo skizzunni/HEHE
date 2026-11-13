@@ -4322,6 +4322,19 @@ buildTabs(); render(); drawSlip();
   });
 })();
 
+// One ESPN scoreboard event -> what a ladder/Locks leg shows: the clock and
+// "Home S - Away S" (the shape the build writes), or null before tip-off.
+function legLive(ev) {
+  var c = ((ev || {}).competitions || [])[0] || {}, ty = (c.status || {}).type || {};
+  if (!ty.state || ty.state === "pre") return null;
+  var parts = (c.competitors || []).slice().sort(function (a, b) {
+    return a.homeAway === "home" ? -1 : b.homeAway === "home" ? 1 : 0;
+  }).map(function (x) {
+    return ((x.team || x.athlete || {}).displayName || "") + " " + x.score;
+  });
+  if (parts.length < 2) return null;
+  return {live: ty.completed ? "Final (grading soon)" : (ty.shortDetail || "Live"), live_score: parts.join(" - ")};
+}
 // The same browser poll for the ladder and Locks legs. Without it the ladder
 // card only moved on a rebuild, so an open Locks tab sat on the score from the
 // last build while the game played on. Matched by ESPN event id (gid
@@ -4365,16 +4378,9 @@ buildTabs(); render(); drawSlip();
           open.forEach(function (L) {
             var ev = byId[L.gid];
             if (!ev) return;
-            var c = (ev.competitions || [])[0] || {}, ty = (c.status || {}).type || {};
-            if (ty.state === "pre") return;
-            var parts = (c.competitors || []).slice().sort(function (a, b) {
-              return a.homeAway === "home" ? -1 : b.homeAway === "home" ? 1 : 0;
-            }).map(function (x) {
-              return ((x.team || x.athlete || {}).displayName || "") + " " + x.score;
-            });
-            if (parts.length < 2) return;
-            L.live = ty.completed ? "Final (grading soon)" : (ty.shortDetail || "Live");
-            L.live_score = parts.join(" - ");
+            var got = legLive(ev);
+            if (!got) return;
+            L.live = got.live; L.live_score = got.live_score;
             touched = true;
           });
         })
