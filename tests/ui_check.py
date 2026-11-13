@@ -184,6 +184,10 @@ PROBE = """<script>setTimeout(function(){
   D.locks = {today: {locks: [{label: "Over 214.5 points", price: "-400", p: 0.75, match: "A at B"}, {label: "K: 2+ Assists", price: "-390", p: 0.78, match: "C @ D"}]}};
   D.ladder = {today: {legs: [{label: "K: 2+ Assists"}], stake: 2.47, pays: 2.4}};
   out.lids = ladderLegIds(parlayLegs()).join(",");
+  out.goalCh = [liveGoalChance("nhl", 7.5, false, 5, 2 / 3, 0.7455), liveGoalChance("nhl", 7.5, false, 0, 0, 0.7455),
+                liveGoalChance("nhl", 5.5, true, 6, 0.5, 0.6), liveGoalChance("nba", 220.5, false, 100, 0.5, 0.75),
+                liveGoalChance("nhl", 7.5, false, 5, 2 / 3, null),
+                paceNote({label: "Under 7.5 goals", league: "nhl", p: 0.7455, live: "End of 2nd", live_score: "Los Angeles Kings 2 - New York Islanders 3"})];
   var evL = function (state, done, det) { return {competitions: [{status: {type: {state: state, completed: done, shortDetail: det}},
     competitors: [{homeAway: "away", score: "52", team: {displayName: "Toronto Raptors"}}, {homeAway: "home", score: "54", team: {displayName: "Philadelphia 76ers"}}]}]}; };
   out.legLive = [JSON.stringify(legLive(evL("in", false, "2:23 - 2nd"))), JSON.stringify(legLive(evL("post", true, "Final"))),
@@ -718,6 +722,10 @@ def main():
         fails.append("ladder tile must show the bank and streak: " + lt)
     if not all(x in lc for x in ("Ladder challenge: $1", "Ladder leg 5", "NHL · 7:30 PM", "1 of 5 won, 4 to play (1 live now)", "Live: 2nd 10:00 · A 1 - B 0", "A 3 - B 2", "stake $3.05", "8 straight wins", "1 in 15,244", "This run, day by day (1)", "Ladder legs so far: 13 of 14 (93% vs 76.4% stated); tickets 2 of 3.", "Past runs (1)", "on Under 9.5 goals", "would take 37 wins in a row", "Locks like this have won 13 of 17", "Locks like this have won 8 of 12; every NFL Receiving Yards prop at a similar chance: 126 of 148 (85% vs 85% stated)")):
         fails.append("ladder card must show today's 5 legs, stake, wins needed and odds: " + lc[:300])
+    gc = new.get("goalCh") or [None] * 6
+    if not (gc[0] is not None and abs(gc[0] - 0.677) < 0.01 and abs(gc[1] - 0.7455) < 0.001 and gc[2] == 1
+            and gc[3] is None and gc[4] is None and "about <b>68%</b> to win from here" in (gc[5] or "")):
+        fails.append("live goal-total chance wrong: " + repr(gc))
     ll2 = new.get("legLive") or []
     if ll2 != ['{"live":"2:23 - 2nd","live_score":"Philadelphia 76ers 54 - Toronto Raptors 52"}',
                '{"live":"Final (grading soon)","live_score":"Philadelphia 76ers 54 - Toronto Raptors 52"}', None, None, None]:

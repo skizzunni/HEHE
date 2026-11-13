@@ -1459,8 +1459,33 @@ function paceNote(L){
   if(el < 0.25 * F[0] * F[1]) return '<div class="sbn">' + total + ' so far, line ' + m[2] + ' &middot; too early to project</div>';
   const pace = total / el * F[0] * F[1], line = +m[2], over = /over/i.test(m[1]);
   const good = over ? pace > line : pace < line;
+  const ch = liveGoalChance(lg, line, over, total, el / (F[0] * F[1]), L.p);
   return '<div class="sbn">On pace for <b>' + Math.round(pace) + '</b> (' + total + ' so far, line ' + line + ') &middot; '
-    + (good ? 'on track' : 'behind the pace it needs') + '</div>';
+    + (good ? 'on track' : 'behind the pace it needs')
+    + (ch != null ? ' &middot; about <b>' + Math.round(100 * ch) + '%</b> to win from here (est.)' : '') + '</div>';
+}
+// Hockey goals arrive roughly at random (Poisson). The leg's own pre-game
+// chance fixes the game's scoring rate (the rate at which P(final on our side
+// of the line) equals that chance), and the rest of the game is scored at that
+// rate. An estimate for reading a live leg: it ignores overtime and empty
+// nets, and it changes no pick. null when it does not apply.
+function poisCdf(k, lam){
+  if(k < 0) return 0;
+  let t = Math.exp(-lam), s = t;
+  for(let i = 1; i <= k; i++){ t *= lam / i; s += t; }
+  return Math.min(1, s);
+}
+function liveGoalChance(lg, line, over, total, frac, p){
+  if(lg !== 'nhl' || !(p > 0 && p < 1) || !(frac >= 0 && frac < 1)) return null;
+  const K = Math.floor(line);                      // under wins at K or fewer
+  const pre = lam => over ? 1 - poisCdf(K, lam) : poisCdf(K, lam);
+  let lo = 0.05, hi = 30;                          // pre() rises with lam for an over, falls for an under
+  for(let i = 0; i < 60; i++){
+    const mid = (lo + hi) / 2;
+    if((pre(mid) < p) === over) lo = mid; else hi = mid;
+  }
+  const rest = (lo + hi) / 2 * (1 - frac);
+  return over ? 1 - poisCdf(K - total, rest) : poisCdf(K - total, rest);
 }
 // what a leg needs, in plain words: "Utah must score 4 or fewer goals",
 // "James Madison must win by 4 or more", "5 or more receiving yards"
