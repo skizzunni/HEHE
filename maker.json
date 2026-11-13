@@ -5866,6 +5866,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV14ARSTCCAR-CCAR2"
   },
+  "KXNCAAFSPREAD-26NOV14BAYBYU-BYU8|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401856858",
+   "label": "Baylor Bears +7.5",
+   "league": "ncaaf",
+   "match": "BAY @ BYU",
+   "posted": "2026-11-13T22:57:14+00:00",
+   "queue": 349.51,
+   "side": "NO",
+   "spec": {
+    "line": 7.5,
+    "t": "spread",
+    "team": "Baylor Bears"
+   },
+   "start": "2026-11-14T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV14BAYBYU-BYU8"
+  },
   "KXNCAAFSPREAD-26NOV14CALUVA-UVA11|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -11508,6 +11530,27 @@
    "start": "2026-11-14T23:00Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV14APPMRSH-55"
+  },
+  "KXNCAAFTOTAL-26NOV14ARSTCCAR-53|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401869937",
+   "label": "under 52.5",
+   "league": "ncaaf",
+   "match": "ARST @ CCU",
+   "posted": "2026-11-13T22:57:14+00:00",
+   "queue": 1239.86,
+   "side": "NO",
+   "spec": {
+    "line": 52.5,
+    "t": "under"
+   },
+   "start": "2026-11-14T18:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV14ARSTCCAR-53"
   },
   "KXNCAAFTOTAL-26NOV14ASUUCF-49|NO": {
    "ask": 0.52,
