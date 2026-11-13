@@ -549,6 +549,38 @@ def locks_prop_market_line(legs=None, min_half=3):
             + (f" Short in both halves: {', '.join(short)}." if short else " No market short in both halves."))
 
 
+def every_game_rows():
+    """The every-game list's graded legs from the frozen 8 AM pools, each
+    with its pool date (locks.every_game, as the board grades it)."""
+    import locks
+    import ledger
+    led, out = ledger.load(), []
+    for d, x in sorted((locks.load(locks.SAFE_LEDGER).get("pools") or {}).items()):
+        for g in locks.every_game(x.get("legs"), led):
+            if g.get("status") in ("won", "lost"):
+                out.append(dict(g, date=d))
+    return out
+
+
+def every_game_type_line(rows=None):
+    """Every game's safest line by bet type, both date halves against stated.
+    Information only (2026-11-13: totals 95% then 94% vs 90% stated, team
+    totals 96% then 93% vs 90%; straight wins 81% then 83% vs 85%, 84% --
+    under the 99.5% bar either way)."""
+    import ladder
+    H = _halves_by(rows if rows is not None else every_game_rows(), ladder.leg_type)
+    if not H:
+        return None
+    order = ("win", "spread", "total", "team total", "prop")
+    H = sorted(H, key=lambda kv: order.index(kv[0]) if kv[0] in order else 99)
+    parts = [f"{t} {round(r[0][0])}% then {round(r[1][0])}% (vs {round(r[0][1])}%, {round(r[1][1])}%)" for t, r in H]
+    short = [t for t, r in H if all(w < said for w, said, _ in r)]
+    ahead = [t for t, r in H if all(w > said for w, said, _ in r)]
+    return ("Every game's safest line by bet type, by half: " + "; ".join(parts) + "."
+            + (f" Short in both halves: {', '.join(short)}." if short else "")
+            + (f" Ahead in both halves: {', '.join(ahead)}." if ahead else ""))
+
+
 _SPORT_PATH = {"nba": "basketball/nba", "nfl": "football/nfl", "nhl": "hockey/nhl", "wnba": "basketball/wnba",
                "mlb": "baseball/mlb", "ncaab": "basketball/mens-college-basketball",
                "ncaaf": "football/college-football"}
@@ -1651,6 +1683,8 @@ def words(r, fit):
         out.append(r["lock_leagues"])
     if r.get("lock_prop_markets"):
         out.append(r["lock_prop_markets"])
+    if r.get("every_game_types"):
+        out.append(r["every_game_types"])
     if r.get("inj_study"):
         out.append(r["inj_study"])
     if r.get("lessons"):
@@ -1801,6 +1835,10 @@ def _main():
     log[today.isoformat()]["lock_types"] = locks_type_line()
     log[today.isoformat()]["lock_leagues"] = locks_league_line()
     log[today.isoformat()]["lock_prop_markets"] = locks_prop_market_line()
+    try:
+        log[today.isoformat()]["every_game_types"] = every_game_type_line()
+    except Exception as e:                                  # a broken pool file must not stop the review
+        log[today.isoformat()]["every_game_types"] = f"Every game's safest line by bet type: unavailable ({type(e).__name__})."
     log[today.isoformat()]["inj_study"] = injury_study_line(ledger)
     log[today.isoformat()]["lessons"] = lessons_line(ledger)
     log[today.isoformat()]["teams"] = team_line(ledger)

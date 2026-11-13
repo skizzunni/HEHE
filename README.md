@@ -1447,6 +1447,16 @@ rate is raised to a large power, so 13-card halves cannot pick it. The 2-5x
 rule stays (the user's choice, and nothing beats it in both halves).
 tools/ladder_count_study.py reruns it.
 
+**On watch, not adopted: the every-game list by bet type (2026-11-13).** Each
+game's single safest line from the frozen 8 AM pools, 425 graded, split at
+2026-11-06: totals 62/65 then 62/66 (95%, 94% vs 90% stated) and team totals
+49/51 then 41/44 (96%, 93% vs 90%) ran ahead in both halves; straight wins
+63/78 then 35/42 (81%, 83% vs 85%, 84%) ran short in both, with the worst
+return (-9.1%, -6.0% a bet). Totals + team totals together are about 2.0 and
+1.2 standard errors ahead -- under the 99.5% bar, so nothing is reordered. The
+Locks show the same lean (totals 86%/89% vs 84%/83%). The review now prints
+this line daily (every_game_type_line).
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
