@@ -15656,6 +15656,55 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|nba:401909296:home": {
+   "ev": 0.0397,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0395,
+     "fair": 0.2736,
+     "id": "nba:401909296",
+     "price": "+280",
+     "side": "home",
+     "spec": null,
+     "team": "Indiana Pacers"
+    }
+   ],
+   "payout": 3.8,
+   "prob": 0.2736,
+   "seen": "2026-11-13T13:20:51+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909296:home|nba:401909303:home": {
+   "ev": 0.075,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.034,
+     "fair": 0.188,
+     "id": "nba:401909303",
+     "price": "+450",
+     "side": "home",
+     "spec": null,
+     "team": "Sacramento Kings"
+    },
+    {
+     "ev": 0.0395,
+     "fair": 0.2736,
+     "id": "nba:401909296",
+     "price": "+280",
+     "side": "home",
+     "spec": null,
+     "team": "Indiana Pacers"
+    }
+   ],
+   "payout": 20.9,
+   "prob": 0.0514,
+   "seen": "2026-11-13T13:20:51+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|nba:401909303:home": {
    "ev": 0.0202,
    "kind": "parlay",
