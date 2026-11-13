@@ -45592,11 +45592,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Anfernee Simons",
   "p": 0.8484,
   "p_fair": 0.9629,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909976|n:collin murray boyles|Reb + Ast|5+": {
   "aid": null,
@@ -45608,11 +45610,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Collin Murray-Boyles",
   "p": 0.8435,
   "p_fair": 0.8703,
   "price": "-720",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401909976|n:immanuel quickley|Assists|4+": {
   "aid": null,
@@ -45624,11 +45628,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Immanuel Quickley",
   "p": 0.7805,
   "p_fair": 0.7781,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909976|n:immanuel quickley|Points|5+": {
   "aid": null,
@@ -45639,11 +45645,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Immanuel Quickley",
   "p": 0.874,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401909976|n:jakob poeltl|Points|5+": {
   "aid": null,
@@ -45655,11 +45663,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Jakob Poeltl",
   "p": 0.8557,
   "p_fair": 0.9629,
   "price": "-1350",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909976|n:jakob poeltl|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -45671,11 +45681,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jakob Poeltl",
   "p": 0.8503,
   "p_fair": 0.9201,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909976|n:jakobe walter|Points|5+": {
   "aid": null,
@@ -45687,11 +45699,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Ja'Kobe Walter",
   "p": 0.851,
   "p_fair": 0.9646,
   "price": "-1250",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909976|n:jakobe walter|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -45703,11 +45717,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Ja'Kobe Walter",
   "p": 0.8544,
   "p_fair": 0.9577,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401909976|n:jakobe walter|Threes Made|1+": {
   "aid": null,
@@ -45719,11 +45735,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Ja'Kobe Walter",
   "p": 0.8523,
   "p_fair": 0.898,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909976|n:jaylen brown|Pts + Ast|20+": {
   "aid": null,
@@ -45735,11 +45753,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Jaylen Brown",
   "p": 0.8539,
   "p_fair": 0.8584,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401909976|n:jaylen brown|Rebounds|4+": {
   "aid": null,
@@ -45751,11 +45771,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Jaylen Brown",
   "p": 0.8515,
   "p_fair": 0.8993,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909976|n:lebron james|Reb + Ast|10+": {
   "aid": null,
@@ -45771,7 +45793,9 @@
   "p": 0.8502,
   "p_fair": 0.8063,
   "price": "-770",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909976|n:tyrese maxey|Assists|4+": {
   "aid": null,
@@ -45783,11 +45807,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Tyrese Maxey",
   "p": 0.8489,
   "p_fair": 0.8395,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909976|n:tyrese maxey|Pts + Ast|25+": {
   "aid": null,
@@ -45799,11 +45825,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Tyrese Maxey",
   "p": 0.759,
   "p_fair": 0.7435,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 35.0
  },
  "nba:401909976|n:tyrese maxey|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -45815,11 +45843,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Tyrese Maxey",
   "p": 0.8544,
   "p_fair": 0.8665,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 37.0
  },
  "nba:401909976|n:vj edgecombe|Assists|2+": {
   "aid": null,
@@ -45831,11 +45861,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "VJ Edgecombe",
   "p": 0.8489,
   "p_fair": 0.837,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909977|n:aj dybantsa|Points|10+": {
   "aid": null,
