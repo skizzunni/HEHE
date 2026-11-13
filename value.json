@@ -10470,6 +10470,23 @@
    "tip": "4:15 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401858526|away|Kalshi": {
+   "dec": 4.5106,
+   "ev": 0.0104,
+   "fair": 0.224,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401858526",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "ILL @ UCLA",
+   "price": "+351",
+   "seen": "2026-11-13T17:54:43+00:00",
+   "side": "away",
+   "start": "2026-11-14T02:00Z",
+   "team": "Illinois Fighting Illini",
+   "tip": "9:00 PM",
+   "venue": "Kalshi"
+  },
   "ncaaf:401860905|{\"line\": 61.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0101,
    "dk": "-112",
@@ -17994,6 +18011,26 @@
    "prob": 0.0287,
    "seen": "2026-11-03T17:03:48+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaab:401906850:away": {
+   "ev": 0.0136,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0136,
+     "fair": 0.0181,
+     "id": "ncaab:401906850",
+     "price": "+5500",
+     "side": "away",
+     "spec": null,
+     "team": "Tennessee State Tigers"
+    }
+   ],
+   "payout": 56.0,
+   "prob": 0.0181,
+   "seen": "2026-11-13T17:54:43+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
