@@ -1469,14 +1469,7 @@ def review_day(day, ledger, locks, lottery, props):
     pr = [e for e in props.values() if e.get("date") == day and e.get("status") in ("won", "lost")]
     # the ladder-consistency idea, all time: do rungs the main line says are
     # cheap win more often than their price says?
-    fair = [e for e in props.values() if e.get("p_fair") and e.get("status") in ("won", "lost")]
-    fair_view = dict(n=len(fair), won=sum(e["status"] == "won" for e in fair),
-                     said_fair=round(100 * sum(e["p_fair"] for e in fair) / len(fair), 1) if fair else None,
-                     said_price=round(100 * sum(e.get("imp") or 0 for e in fair) / len(fair), 1) if fair else None,
-                     # what the board actually states (props_ledger.cap holds heavy props
-                     # down): the honest comparison; fair and price are the inputs
-                     said_stated=round(100 * sum(e.get("p") or 0 for e in fair) / len(fair), 1)
-                     if fair and all(isinstance(e.get("p"), (int, float)) for e in fair) else None)
+    fair_view = props_fair_view(props)
     pr_view = dict(fair=fair_view, n=len(pr), won=sum(e["status"] == "won" for e in pr),
                    said=round(100 * sum(e.get("p") or 0 for e in pr) / len(pr), 1) if pr else None)
     import sys
@@ -1562,6 +1555,29 @@ def trailing_line(a, props=None):
 def pct_text(x):
     """A small percentage in words: 'under 0.1%' rather than a rounded 0%."""
     return "under 0.1%" if x is not None and x < 0.1 else f"{x:g}%"
+
+
+def props_fair_view(props):
+    """The ladder-consistency idea, all time: graded props that carry the main
+    line's fair chance -- won, n, and the average fair, price and stated
+    chance. Stated is what the board shows (props_ledger.cap holds heavy props
+    down), so it is the honest comparison; fair and price are inputs."""
+    fair = [e for e in (props or {}).values() if isinstance(e, dict) and e.get("p_fair")
+            and e.get("status") in ("won", "lost")]
+    avg = lambda f: round(100 * sum(f(e) for e in fair) / len(fair), 1) if fair else None
+    return dict(n=len(fair), won=sum(e["status"] == "won" for e in fair),
+                said_fair=avg(lambda e: e["p_fair"]), said_price=avg(lambda e: e.get("imp") or 0),
+                said_stated=avg(lambda e: e["p"]) if fair and all(isinstance(e.get("p"), (int, float)) for e in fair) else None)
+
+
+def props_fair_line(fv):
+    """One review line from props_fair_view(); None without graded props."""
+    if not (fv or {}).get("n"):
+        return None
+    return (f"Ladder-consistency props (all time): {fv['won']}/{fv['n']} won "
+            f"({100 * fv['won'] / fv['n']:.1f}%) vs {fv['said_fair']}% fair, {fv['said_price']}% price"
+            + (f", {fv['said_stated']}% stated on the board (heavy props capped)" if fv.get("said_stated") is not None else "")
+            + ".")
 
 
 def sweep_line(sw):
@@ -1686,10 +1702,7 @@ def words(r, fit):
                    + (", killed by " + ", ".join(t["killed_by"]) if t["killed_by"] else "") + ")")
     fv = (r["props"] or {}).get("fair") or {}
     if fv.get("n"):
-        out.append(f"Ladder-consistency props (all time): {fv['won']}/{fv['n']} won "
-                   f"({100 * fv['won'] / fv['n']:.1f}%) vs {fv['said_fair']}% fair, {fv['said_price']}% price"
-                   + (f", {fv['said_stated']}% stated on the board (heavy props capped)" if fv.get("said_stated") is not None else "")
-                   + ".")
+        out.append(props_fair_line(fv))
     if r["props"]["n"]:
         out.append(f"Props {r['props']['won']}/{r['props']['n']} vs {r['props']['said']}% claimed.")
     out.append("")
