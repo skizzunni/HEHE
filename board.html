@@ -4321,4 +4321,77 @@ buildTabs(); render(); drawSlip();
     if (!document.hidden) refresh();
   });
 })();
+
+// The same browser poll for the ladder and Locks legs. Without it the ladder
+// card only moved on a rebuild, so an open Locks tab sat on the score from the
+// last build while the game played on. Matched by ESPN event id (gid
+// "league:id"); the bot still does all the grading -- this only shows the score.
+(function () {
+  if (typeof D !== "object" || !D || !D.paths) return;
+  var API = "https://site.api.espn.com/apis/site/v2/sports/";
+  function legs() {
+    var out = [];
+    [((D.ladder || {}).today || {}).legs,
+     ((D.locks || {}).today || {}).locks,
+     ((D.safe_locks || {}).today || {}).locks].forEach(function (a) {
+      (a || []).forEach(function (L) {
+        if (L && L.gid && (L.status == null || L.status === "open")) out.push(L);
+      });
+    });
+    return out;
+  }
+  // never repaint under someone mid-way through the parlay checker or a field
+  function busy() {
+    var a = document.activeElement;
+    return !!(a && /^(INPUT|SELECT|TEXTAREA)$/.test(a.tagName))
+      || !!document.querySelector('.pcheck input[data-pc]:checked');
+  }
+  function tick() {
+    var open = legs(), day = (D.dates && D.dates.today) || "";
+    if (!open.length || !day) return;
+    var want = {};
+    open.forEach(function (L) {
+      var lg = String(L.gid).split(":")[0];
+      if (D.paths[lg]) want[lg] = 1;
+    });
+    var keys = Object.keys(want), pending = keys.length, touched = false;
+    keys.forEach(function (lg) {
+      fetch(API + D.paths[lg] + "/scoreboard?dates=" + day, { cache: "no-store" })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (j) {
+          if (!j) return;
+          var byId = {};
+          (j.events || []).forEach(function (ev) { byId[lg + ":" + ev.id] = ev; });
+          open.forEach(function (L) {
+            var ev = byId[L.gid];
+            if (!ev) return;
+            var c = (ev.competitions || [])[0] || {}, ty = (c.status || {}).type || {};
+            if (ty.state === "pre") return;
+            var parts = (c.competitors || []).slice().sort(function (a, b) {
+              return a.homeAway === "home" ? -1 : b.homeAway === "home" ? 1 : 0;
+            }).map(function (x) {
+              return ((x.team || x.athlete || {}).displayName || "") + " " + x.score;
+            });
+            if (parts.length < 2) return;
+            L.live = ty.completed ? "Final (grading soon)" : (ty.shortDetail || "Live");
+            L.live_score = parts.join(" - ");
+            touched = true;
+          });
+        })
+        .catch(function () { /* transient: next tick */ })
+        .then(function () {
+          if (--pending === 0 && touched && typeof slot !== "undefined" && slot === "locks"
+              && typeof render === "function" && !busy()) {
+            var y = window.scrollY;
+            try { render(); window.scrollTo(0, y); } catch (err) { /* keep last render */ }
+          }
+        });
+    });
+  }
+  tick();
+  setInterval(tick, 60000);
+  document.addEventListener("visibilitychange", function () {
+    if (!document.hidden) tick();
+  });
+})();
 </script>
