@@ -1816,6 +1816,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV14FRESTXST-TXST"
   },
+  "KXNCAAFGAME-26NOV14GASOGAST-GASO|YES": {
+   "ask": 0.68,
+   "bid": 0.66,
+   "cost": 0.664,
+   "edge": 0.0101,
+   "fair": 0.6707,
+   "id": "ncaaf:401869952",
+   "label": "Georgia Southern Eagles",
+   "league": "ncaaf",
+   "match": "GASO @ GAST",
+   "posted": "2026-11-13T15:42:54+00:00",
+   "queue": 15388.56,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Georgia Southern Eagles"
+   },
+   "start": "2026-11-14T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV14GASOGAST-GASO"
+  },
   "KXNCAAFGAME-26NOV14JVSTWKU-JVST|YES": {
    "ask": 0.73,
    "bid": 0.72,
@@ -10752,6 +10773,27 @@
    "start": "2026-11-14T03:15Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV13HOUCOLO-52"
+  },
+  "KXNCAAFTOTAL-26NOV13ILLUCLA-49|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401858526",
+   "label": "under 48.5",
+   "league": "ncaaf",
+   "match": "ILL @ UCLA",
+   "posted": "2026-11-13T15:42:54+00:00",
+   "queue": 75631.33,
+   "side": "NO",
+   "spec": {
+    "line": 48.5,
+    "t": "under"
+   },
+   "start": "2026-11-14T02:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV13ILLUCLA-49"
   },
   "KXNCAAFTOTAL-26NOV14ASUUCF-49|NO": {
    "ask": 0.52,
