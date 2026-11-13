@@ -1494,6 +1494,13 @@ market's own no-vig price would claim an edge on a few hundred picks, so the
 chances stay as the market sets them. The review prints this line daily
 (priced_calibration_line) and names any league that crosses the bar.
 
+**Checked, no change: national-team soccer (2026-11-13).** Four national-team
+losses in two days (France or draw 1-3, Iraq 0-0, Slovakia 2-2, Luxembourg or
+draw 0-1). The board has only picked national teams since 2026-11-11, this
+international window: 16/20 (80% vs 76% stated), 2 of the 4 losses draws --
+ahead of stated, and too few to split by half. Club soccer 783/1082 (72% vs
+71%). No leak; the review now prints national_line so the window is tracked.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that

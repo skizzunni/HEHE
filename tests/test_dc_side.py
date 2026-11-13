@@ -110,6 +110,17 @@ class PricedCalibration(unittest.TestCase):
         self.assertIsNone(daily_review.priced_calibration_line({}))
 
 
+class National(unittest.TestCase):
+    def test_line(self):
+        L = {"x": dict(dc=True, league="epl")}
+        for i in range(4):
+            L[f"n{i}"] = dict(league="unl", status="won" if i else "lost", conf=70, scores={"A": 1, "B": 1 if not i else 0})
+            L[f"c{i}"] = dict(league="epl", status="won", conf=80)
+        out = daily_review.national_line(L)
+        self.assertEqual(out, "National-team soccer: 3/4 (75% vs 70% stated), 1 of 1 losses draws; club soccer 4/4 (100% vs 80% stated).")
+        self.assertIsNone(daily_review.national_line({"c": dict(league="epl", status="won", conf=80)}))
+
+
 class PreregMore(unittest.TestCase):
     def test_line(self):
         import locks

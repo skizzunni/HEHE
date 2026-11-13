@@ -480,6 +480,33 @@ def priced_calibration_line(ledger=None, min_half=15):
             + (f" Past the 99.5% bar in both halves: {', '.join(hot)}." if hot else " None past the 99.5% bar in both halves."))
 
 
+NATIONAL = ("intl", "unl", "wcq")          # national-team competitions on the board
+
+
+def national_line(ledger=None):
+    """National-team soccer picks (friendlies, Nations League, World Cup
+    qualifiers) against club soccer: won vs stated, and how many losses were
+    draws. Information only (2026-11-13: 16/20, 80% vs 77% -- the first
+    international window on the board; too few to split)."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    soc = {v.get("league") for v in ledger.values() if isinstance(v, dict) and v.get("dc")} | set(NATIONAL)
+    R = [v for v in ledger.values() if isinstance(v, dict) and v.get("league") in soc and v.get("status") in ("won", "lost")
+         and v.get("conf") is not None and not v.get("record_excluded")]
+    nat = [v for v in R if v["league"] in NATIONAL]
+    if not nat:
+        return None
+    club = [v for v in R if v["league"] not in NATIONAL]
+
+    def rec(x):
+        w = sum(v["status"] == "won" for v in x)
+        return f"{w}/{len(x)} ({round(100 * w / len(x))}% vs {round(sum(v['conf'] for v in x) / len(x))}% stated)"
+    lost = [v for v in nat if v["status"] == "lost"]
+    dr = sum(1 for v in lost if v.get("scores") and len(set(v["scores"].values())) == 1)
+    return (f"National-team soccer: {rec(nat)}" + (f", {dr} of {len(lost)} losses draws" if lost else "")
+            + (f"; club soccer {rec(club)}." if club else "."))
+
+
 def dc_side_line(ledger=None, min_n=30):
     """Soccer "or draw" picks split by the side taken (home or away), each
     with its date halves: won% against stated%. Priced, graded rows only.
@@ -1748,6 +1775,8 @@ def words(r, fit):
         out.append(r["every_game_types"])
     if r.get("priced_calibration"):
         out.append(r["priced_calibration"])
+    if r.get("national"):
+        out.append(r["national"])
     if r.get("inj_study"):
         out.append(r["inj_study"])
     if r.get("lessons"):
@@ -1900,6 +1929,7 @@ def _main():
     log[today.isoformat()]["lock_leagues"] = locks_league_line()
     log[today.isoformat()]["lock_prop_markets"] = locks_prop_market_line()
     log[today.isoformat()]["priced_calibration"] = priced_calibration_line()
+    log[today.isoformat()]["national"] = national_line()
     try:
         log[today.isoformat()]["every_game_types"] = every_game_type_line()
     except Exception as e:                                  # a broken pool file must not stop the review
