@@ -1729,15 +1729,30 @@ function ladderK(sorted, bank, target){
 }
 // every saved Locks card as if the ladder had always used the top K legs
 // (ladder.count_record): days it would have cashed, at what average payout
+// wins in a row from $1 to the target at a daily payout, and the chance of
+// that many straight cashes at a replayed cash rate ("1 in N"); null when
+// the payout cannot grow the bank or no card cashed
+function ladderReach(rate, pays, target){
+  if(!(pays > 1) || !(rate > 0) || !(target > 1)) return null;
+  const k = Math.ceil(Math.log(target) / Math.log(pays) - 1e-9);
+  return {wins: k, odds: Math.pow(Math.min(rate, 1), k)};
+}
 function ladderCounts(C, G){
   if(!C.length) return '';
   const g = k => (G || []).find(x => x.legs === k);
+  const tgt = (D.ladder || {}).target || 10000;
+  const one = r => !r ? '&ndash;' : r.odds >= 1 ? 'every time' : '1 in ' + Math.round(1 / r.odds).toLocaleString();
   return '<details><summary>If the ladder had always used the same number of legs</summary><table class="sweeptab"><thead><tr><th>Legs</th>'
-    + '<th class="num">Cashed</th><th class="num">Avg pays</th><th class="num">Game lines only</th></tr></thead><tbody>'
-    + C.map(c => '<tr><td>' + c.legs + '</td><td class="num">' + c.won + ' of ' + c.n + ' (' + Math.round(100 * c.won / c.n) + '%)</td><td class="num">'
+    + '<th class="num">Cashed</th><th class="num">Avg pays</th><th class="num">Wins to target</th><th class="num">Reach at this rate</th>'
+    + '<th class="num">Game lines only</th></tr></thead><tbody>'
+    + C.map(c => { const r = ladderReach(c.won / c.n, c.pays, tgt);
+      return '<tr><td>' + c.legs + '</td><td class="num">' + c.won + ' of ' + c.n + ' (' + Math.round(100 * c.won / c.n) + '%)</td><td class="num">'
       + c.pays.toFixed(2) + '&times;' + (c.pays >= 2 && c.pays <= 5 ? '' : ' <span class="sbn">(outside 2&ndash;5&times;)</span>') + '</td><td class="num">'
-      + (g(c.legs) ? g(c.legs).won + ' of ' + g(c.legs).n : '&ndash;') + '</td></tr>').join('')
-    + '</tbody></table><p class="note">Every saved 8 AM Locks card; a small record, so one day moves it a lot.</p></details>';
+      + (r ? r.wins : '&ndash;') + '</td><td class="num">' + one(r) + '</td><td class="num">'
+      + (g(c.legs) ? g(c.legs).won + ' of ' + g(c.legs).n : '&ndash;') + '</td></tr>'; }).join('')
+    + '</tbody></table><p class="note">Every saved 8 AM Locks card; a small record, so one day moves it a lot. '
+    + '&ldquo;Reach&rdquo; raises the cash rate to the number of straight wins the target takes from $1, so a few points of '
+    + 'luck in the rate change it many times over &mdash; a rough comparison of leg counts, not a forecast.</p></details>';
 }
 // from Nov 7 (ladder.FLEX_FROM, the user's "2x-5x my money per day"): of the
 // top 1..8 Locks, the count paying 2x-5x with the best chance of reaching the

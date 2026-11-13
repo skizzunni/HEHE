@@ -184,6 +184,8 @@ PROBE = """<script>setTimeout(function(){
   D.locks = {today: {locks: [{label: "Over 214.5 points", price: "-400", p: 0.75, match: "A at B"}, {label: "K: 2+ Assists", price: "-390", p: 0.78, match: "C @ D"}]}};
   D.ladder = {today: {legs: [{label: "K: 2+ Assists"}], stake: 2.47, pays: 2.4}};
   out.lids = ladderLegIds(parlayLegs()).join(",");
+  out.reach = [JSON.stringify(ladderReach(0.5, 2.42, 10000)), JSON.stringify(ladderReach(20 / 27, 1.55, 10000)),
+               ladderReach(0.5, 1, 10000), ladderReach(0, 2, 10000), JSON.stringify(ladderReach(1, 10, 100))];
   out.vCau = [valueCaution({n: 448, won: 180, roi: -11.47, halves: [{n: 252, won: 104, fair: 44.1, roi: -5.0}, {n: 196, won: 76, fair: 45.1, roi: -19.7}]}),
               valueCaution({n: 448, won: 180, roi: 1, halves: [{n: 252, won: 104, fair: 44.1, roi: 5.0}, {n: 196, won: 76, fair: 45.1, roi: -19.7}]}),
               valueCaution({}), valueCaution(null)];
@@ -739,6 +741,10 @@ def main():
     if not ("2 so far, line 3.5" in sc[0] and "</b> to win from here" in sc[0] and re.search(r"about <b>9\d%</b>", sc[1])
             and sc[2] == "" and sc[3] is not None and abs(sc[3] - 0.55) < 0.001):
         fails.append("soccer live goal-total chance wrong: " + repr(sc))
+    rc = new.get("reach") or []
+    if not (len(rc) == 5 and rc[0] == '{"wins":11,"odds":0.00048828125}' and rc[1].startswith('{"wins":22,')
+            and rc[2] is None and rc[3] is None and rc[4] == '{"wins":2,"odds":1}'):
+        fails.append("ladder reach-by-leg-count wrong: " + repr(rc))
     vc = new.get("vCau") or ["", "x", "x", "x"]
     if not ("180 of 448 won (40% vs 45% fair), ROI -11.47%" in vc[0] and "both halves" in vc[0]) or any(vc[1:]):
         fails.append("value-bet caution wrong: " + repr(vc))
