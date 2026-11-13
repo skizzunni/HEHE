@@ -531,6 +531,24 @@ def locks_type_line(legs=None):
             + (f" Short in both halves: {', '.join(short)}." if short else ""))
 
 
+def locks_prop_market_line(legs=None, min_half=3):
+    """Locks + Safe Locks prop legs by league and market, both date halves
+    against stated, for markets with min_half+ legs in each half: where the
+    props shortfall sits. Information only (2026-11-13: NFL Receiving Yards
+    6/7 then 6/11 while the whole saved NFL line pool is on par -- noise).
+    The halves split the prop legs' own dates."""
+    props = [x for x in (legs if legs is not None else _all_lock_legs()) if x.get("kind") == "prop"]
+    H = _halves_by(props, lambda x: f"{str(x.get('league') or '').upper()} {x.get('market') or '?'}", min_half)
+    if not H:
+        return None
+    H.sort(key=lambda kv: -(kv[1][0][2] + kv[1][1][2]))
+    parts = [f"{k} {round(r[0][2] * r[0][0] / 100)}/{r[0][2]} then {round(r[1][2] * r[1][0] / 100)}/{r[1][2]} "
+             f"(vs {round(r[0][1])}%, {round(r[1][1])}%)" for k, r in H]
+    short = [k for k, r in H if all(w < said for w, said, _ in r)]
+    return ("Locks props by market, by half: " + "; ".join(parts) + "."
+            + (f" Short in both halves: {', '.join(short)}." if short else " No market short in both halves."))
+
+
 _SPORT_PATH = {"nba": "basketball/nba", "nfl": "football/nfl", "nhl": "hockey/nhl", "wnba": "basketball/wnba",
                "mlb": "baseball/mlb", "ncaab": "basketball/mens-college-basketball",
                "ncaaf": "football/college-football"}
@@ -1631,6 +1649,8 @@ def words(r, fit):
         out.append(r["lock_types"])
     if r.get("lock_leagues"):
         out.append(r["lock_leagues"])
+    if r.get("lock_prop_markets"):
+        out.append(r["lock_prop_markets"])
     if r.get("inj_study"):
         out.append(r["inj_study"])
     if r.get("lessons"):
@@ -1780,6 +1800,7 @@ def _main():
     log[today.isoformat()]["draws"] = draw_rate_line(ledger)
     log[today.isoformat()]["lock_types"] = locks_type_line()
     log[today.isoformat()]["lock_leagues"] = locks_league_line()
+    log[today.isoformat()]["lock_prop_markets"] = locks_prop_market_line()
     log[today.isoformat()]["inj_study"] = injury_study_line(ledger)
     log[today.isoformat()]["lessons"] = lessons_line(ledger)
     log[today.isoformat()]["teams"] = team_line(ledger)

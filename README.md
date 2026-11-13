@@ -1428,6 +1428,15 @@ stated, within noise of what they won, and since 2026-11-08 the fair chance no
 longer overrides the price in Locks. All 2714 together: 83.2% won vs 83.6%
 stated. The review line now prints the stated figure beside fair and price.
 
+**Checked, no change: Locks props by market (2026-11-13).** Props are the one
+Locks bet type short in both halves, so which markets? Locks + Safe Locks
+prop legs, split at their median date: NBA Assists 13/17 (vs 90%) then 17/20
+(vs 79%) -- mixed; NFL Receiving Yards 12/14 (vs 88%) then 6/11 (vs 80%) --
+short in both halves, but on 25 legs, while every saved NFL Receiving Yards
+line at a similar chance is on par (126/148, 85% vs 85%). No market cut; the
+review now prints this line daily (locks_prop_market_line) so a real leak in
+one market would show.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
