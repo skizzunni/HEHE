@@ -14808,9 +14808,9 @@
   "card_missing": null,
   "cautions": "Running ahead: NBA under on all saved lines 1029/1163 vs 82%; NHL over on all saved lines 134/152 vs 84%; NHL teamover on all saved lines 168/187 vs 82%.",
   "clv": {
-   "avg": 0.0,
+   "avg": -0.42,
    "beat": 0.0,
-   "n": 1
+   "n": 2
   },
   "cold": null,
   "day": "2026-11-13",
@@ -14823,7 +14823,7 @@
   "injury_ctx": "Ladder games, players out or doubtful: MIL @ ORL: Orlando Magic without Jalen Suggs, Jonathan Isaac, Paolo Banchero, Noah Penda, Izaiyah Nelson | Portland Trail Blazers at Sacramento Kings: Portland Trail Blazers without Chris Youngblood, Vit Krejci, Ja Morant, Shaedon Sharpe; Sacramento Kings without Maxime Raynaud, Ben Simmons.",
   "ladder": "Ladder: run 6, bank $4.95, 2 win(s) in a row, best $9.57; today stakes $4.95 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 36% at 2.48x for the plain top 4; without props it would be 3 legs at 2.00x (44%); 11 wins to $10,000; legs: Franz Wagner: 6+ Assists (MIL @ ORL; 7:00 PM, open; props like it 107/138), Houston Cougars to win (Houston Cougars at Colorado Buffaloes; 10:15 PM, open), Under 241.5 points (Portland Trail Blazers at Sacramento Kings; 10:00 PM, open).",
   "leaks_14d": [],
-  "lessons": "Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1672 picks).",
+  "lessons": "Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1673 picks).",
   "lock_leagues": "Locks by league, by half: NHL 85% then 96% (vs 87%, 88%); NBA 82% then 88% (vs 83%, 82%); NCAAF 84% then 85% (vs 83%, 79%); NFL 89% then 70% (vs 84%, 82%). No league short in both halves.",
   "lock_prop_markets": "Locks props by market, by half: NBA Assists 13/17 then 17/20 (vs 90%, 79%); NFL Receiving Yards 12/14 then 6/11 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.",
   "lock_types": "Locks by bet type, by half: win 84% then 97% (vs 82%, 81%); spread 86% then 92% (vs 85%, 85%); total 86% then 89% (vs 84%, 83%); team total 87% then 90% (vs 86%, 86%); prop 80% then 78% (vs 86%, 79%). Short in both halves: prop.",
@@ -14844,11 +14844,29 @@
    "blowout": 38,
    "close game": 102,
    "coin flip": 47,
-   "favourite lost": 126,
+   "favourite lost": 127,
    "price moved against it": 24,
    "upset": 42
   },
-  "losses": [],
+  "losses": [
+   {
+    "against_market": false,
+    "league": "intl",
+    "like": null,
+    "match": "LIB @ IRQ",
+    "pick": "Iraq",
+    "price": "-240",
+    "said": 67,
+    "score": {
+     "Iraq": 0,
+     "Lebanon": 0
+    },
+    "tags": [
+     "favourite lost"
+    ],
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost"
+   }
+  ],
   "lottery": [
    {
     "killed_by": [],
@@ -14901,20 +14919,20 @@
   ],
   "nhl_b2b": null,
   "picks": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 1,
-   "roi": 7.1,
-   "said": 88.0,
+   "hit": 50.0,
+   "lost": 1,
+   "n": 2,
+   "roi": -46.4,
+   "said": 77.5,
    "won": 1
   },
   "picks_by_league": {
    "intl": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 7.1,
-    "said": 88.0,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -46.4,
+    "said": 77.5,
     "won": 1
    }
   },
@@ -14954,24 +14972,28 @@
    "won": 0
   },
   "strong": {
-   "hit": 100.0,
-   "lost": 0,
-   "n": 1,
-   "roi": 7.1,
-   "said": 88.0,
+   "hit": 50.0,
+   "lost": 1,
+   "n": 2,
+   "roi": -46.4,
+   "said": 77.5,
    "won": 1
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 100.0,
-   "as_good_pct": 88.0,
-   "broke_on": null,
+   "as_bad_pct": 41.0,
+   "as_good_pct": 96.0,
+   "broke_on": "intl Iraq at 67%",
    "coin_flips": 0,
-   "expected_by_league": {},
-   "expected_losses": 0.1,
-   "lost": 0,
-   "lost_by_league": {},
-   "open": 36,
+   "expected_by_league": {
+    "intl": 0.5
+   },
+   "expected_losses": 0.4,
+   "lost": 1,
+   "lost_by_league": {
+    "intl": 1
+   },
+   "open": 35,
    "won": 1
   },
   "teams": "Teams backed most, furthest behind (10+ picks): NBA New York Knicks 6/14 vs 71% stated (2.4% by luck; about 1.2 of 52 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 6.6 of 52 teams expected this far behind by chance); MLB Seattle Mariners 7/15 vs 57% stated (28.7% by luck; about 14.9 of 52 teams expected this far behind by chance).",
@@ -14982,10 +15004,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 77.1,
-    "lost": 215,
-    "n": 938,
-    "roi": 2.0,
+    "hit": 77.0,
+    "lost": 216,
+    "n": 939,
+    "roi": 1.9,
     "said": 72.0,
     "won": 723
    }
