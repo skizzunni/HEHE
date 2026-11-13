@@ -13590,16 +13590,16 @@
  },
  "2026-11-12": {
   "clv": {
-   "avg": 0.88,
-   "beat": 56.7,
-   "n": 30
+   "avg": 0.79,
+   "beat": 54.8,
+   "n": 31
   },
   "day": "2026-11-12",
   "leaks_14d": [],
   "locks": {
    "lost": [],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      2,
@@ -13607,12 +13607,12 @@
      "won"
     ]
    },
-   "won": 10
+   "won": 11
   },
   "loss_reasons_14d": {
-   "blowout": 39,
+   "blowout": 40,
    "close game": 105,
-   "coin flip": 47,
+   "coin flip": 48,
    "favourite lost": 130,
    "price moved against it": 25,
    "upset": 43
@@ -13656,7 +13656,7 @@
     "against_market": false,
     "league": "nhl",
     "like": {
-     "n": 231,
+     "n": 232,
      "said": 53,
      "won": 123
     },
@@ -13678,7 +13678,7 @@
     "against_market": false,
     "league": "nhl",
     "like": {
-     "n": 216,
+     "n": 217,
      "said": 53,
      "won": 114
     },
@@ -13699,7 +13699,7 @@
     "against_market": false,
     "league": "nhl",
     "like": {
-     "n": 185,
+     "n": 186,
      "said": 57,
      "won": 114
     },
@@ -13721,7 +13721,7 @@
     "against_market": false,
     "league": "nhl",
     "like": {
-     "n": 185,
+     "n": 186,
      "said": 57,
      "won": 114
     },
@@ -13761,6 +13761,28 @@
      "close game"
     ],
     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 53% \u00b7 coin flip \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "like": {
+     "n": 232,
+     "said": 53,
+     "won": 123
+    },
+    "match": "NYI @ LA",
+    "pick": "Los Angeles Kings",
+    "price": "-125",
+    "said": 53,
+    "score": {
+     "Los Angeles Kings": 2,
+     "New York Islanders": 5
+    },
+    "tags": [
+     "coin flip",
+     "blowout"
+    ],
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 53% \u00b7 coin flip \u00b7 blowout"
    }
   ],
   "lottery": [
@@ -13783,10 +13805,11 @@
      "Over 8.5 goals",
      "UL Monroe Warhawks to win",
      "Dallas Stars under 1.5 goals",
+     "Los Angeles Kings to win",
      "Seattle Kraken over 3.5 goals"
     ],
     "legs": 9,
-    "lost": 5,
+    "lost": 6,
     "status": "lost",
     "tier": "10k",
     "won": 3
@@ -13802,7 +13825,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "10k+25",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -13815,7 +13838,7 @@
     "lost": 4,
     "status": "lost",
     "tier": "10k+50",
-    "won": 3
+    "won": 4
    },
    {
     "killed_by": [
@@ -13835,10 +13858,11 @@
     "killed_by": [
      "Toronto Raptors +10.5",
      "Over 6.5 goals",
+     "Los Angeles Kings to win",
      "Under 232.5 points"
     ],
     "legs": 8,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "100",
     "won": 4
@@ -13856,11 +13880,11 @@
    }
   ],
   "picks": {
-   "hit": 76.7,
-   "lost": 7,
-   "n": 30,
-   "roi": 4.5,
-   "said": 68.4,
+   "hit": 74.2,
+   "lost": 8,
+   "n": 31,
+   "roi": 1.2,
+   "said": 67.9,
    "won": 23
   },
   "picks_by_league": {
@@ -13921,11 +13945,11 @@
     "won": 0
    },
    "nhl": {
-    "hit": 60.0,
-    "lost": 4,
-    "n": 10,
-    "roi": -4.0,
-    "said": 58.4,
+    "hit": 54.5,
+    "lost": 5,
+    "n": 11,
+    "roi": -12.7,
+    "said": 57.9,
     "won": 6
    },
    "unl": {
@@ -13952,19 +13976,19 @@
     "said_price": 87.5,
     "won": 2259
    },
-   "n": 132,
-   "said": 81.6,
-   "won": 109
+   "n": 140,
+   "said": 81.4,
+   "won": 115
   },
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      7,
      0.5409,
-     "open"
+     "won"
     ],
     "winners": [
      2,
@@ -13972,7 +13996,7 @@
      "won"
     ]
    },
-   "won": 10
+   "won": 11
   },
   "strong": {
    "hit": 83.3,
@@ -13983,25 +14007,25 @@
    "won": 10
   },
   "sweep": {
-   "as_bad_pct": 88.8,
-   "as_good_pct": 21.5,
+   "as_bad_pct": 83.3,
+   "as_good_pct": 28.8,
    "broke_on": "unl France or draw at 76%",
-   "coin_flips": 5,
+   "coin_flips": 6,
    "expected_by_league": {
     "col": 0.5,
     "nfl": 0.5,
-    "nhl": 4.2,
+    "nhl": 4.6,
     "unl": 1.8
    },
-   "expected_losses": 9.5,
-   "lost": 7,
+   "expected_losses": 9.9,
+   "lost": 8,
    "lost_by_league": {
     "col": 1,
     "nfl": 1,
-    "nhl": 4,
+    "nhl": 5,
     "unl": 1
    },
-   "open": 1,
+   "open": 0,
    "won": 23
   },
   "vs_market_14d": {
@@ -14009,10 +14033,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 77.3,
-    "lost": 220,
-    "n": 969,
-    "roi": 2.6,
+    "hit": 77.2,
+    "lost": 221,
+    "n": 970,
+    "roi": 2.5,
     "said": 71.9,
     "won": 749
    }
@@ -14295,13 +14319,13 @@
       80.9
      ],
      [
-      343,
-      427,
+      349,
+      435,
       81.3
      ]
     ],
     "hit": 80.9,
-    "n": 881,
+    "n": 889,
     "name": "props nhl Shots on Goal",
     "said": 81.1
    },
@@ -14531,15 +14555,15 @@
       78.7
      ],
      [
-      10,
-      13,
+      11,
+      14,
       75.0
      ]
     ],
-    "hit": 80.0,
-    "n": 30,
+    "hit": 80.6,
+    "n": 31,
     "name": "locks nhl under",
-    "said": 77.1
+    "said": 77.0
    },
    {
     "flag": false,
@@ -14626,13 +14650,13 @@
       91.5
      ],
      [
-      40,
-      40,
+      41,
+      41,
       91.3
      ]
     ],
     "hit": 93.2,
-    "n": 73,
+    "n": 74,
     "name": "safe locks nhl under",
     "said": 91.4
    },
@@ -14664,13 +14688,13 @@
       89.0
      ],
      [
-      147,
-      160,
+      148,
+      161,
       86.8
      ]
     ],
-    "hit": 92.4,
-    "n": 278,
+    "hit": 92.5,
+    "n": 279,
     "name": "prop locks",
     "said": 87.7
    },
@@ -14781,7 +14805,7 @@
    }
   },
   "card_missing": null,
-  "cautions": "Running ahead: NBA under on all saved lines 1054/1192 vs 82%; NHL over on all saved lines 133/151 vs 84%; NHL spread on all saved lines 282/328 vs 83%; NHL teamover on all saved lines 167/186 vs 82%.",
+  "cautions": "Running ahead: NBA under on all saved lines 1054/1192 vs 82%; NHL over on all saved lines 134/152 vs 84%; NHL teamover on all saved lines 168/187 vs 82%.",
   "clv": {
    "avg": null,
    "beat": null,
@@ -14792,12 +14816,12 @@
   "dc_side": "Soccer or-draw picks by side: home 77% vs 74% stated on 407 (halves 78%, 77%); away 74% vs 73% stated on 203 (halves 73%, 74%). Straight wins: 66% vs 65% stated on 284; 58 of 97 losses were draws.",
   "draws": "Soccer draws on the board: 22% of 1460 games; most in EFL3 41% of 37, AUS 38% of 21, UECL 30% of 33, ARG 29% of 73, BRA2 29% of 28 -- where a straight win most often loses to a draw.",
   "hi_sweep": "High-chance sweep: 70%+ today 0-0, 25 open; swept 3 of 28 past days (last 2026-11-11) | 80%+ today 0-0, 11 open; swept 9 of 27 past days (last 2026-11-12).",
-  "inj_study": "Injuries at tip-off (145 games, 9 days, early read): my side more out: 1st 12/17 71% vs 63% | 2nd 18/26 69% vs 64%; even: 1st 12/18 67% vs 62% | 2nd 17/21 81% vs 66%; their side more out: 1st 24/28 86% vs 67% | 2nd 28/35 80% vs 62%.",
+  "inj_study": "Injuries at tip-off (146 games, 9 days, early read): my side more out: 1st 12/17 71% vs 63% | 2nd 18/26 69% vs 64%; even: 1st 12/18 67% vs 62% | 2nd 17/22 77% vs 66%; their side more out: 1st 24/28 86% vs 67% | 2nd 28/35 80% vs 62%.",
   "injury": null,
-  "injury_ctx": "Ladder games, players out or doubtful: Charlotte Hornets at Phoenix Suns: Charlotte Hornets without Kon Knueppel, Dennis Schroder; Phoenix Suns without Mark Williams | Toronto Raptors at Philadelphia 76ers: Toronto Raptors without Scottie Barnes, Kawhi Leonard, Nate Bittle; Philadelphia 76ers without Dominick Barlow, Adem Bona, Ariel Hukporti | New York Islanders at Los Angeles Kings: New York Islanders without Jean-Gabriel Pageau; Los Angeles Kings without Erik Gustafsson.",
-  "ladder": "Ladder: run 6, bank $2.47, 1 win(s) in a row, best $9.57; today stakes $2.47 at 2.00x (42% est.), the best-chance 2x-5x combination (3 legs) against 35% at 2.44x for the plain top 4; 12 wins to $10,000; legs: Under 228.5 points (Charlotte Hornets at Phoenix Suns; won), Over 208.5 points (Toronto Raptors at Philadelphia 76ers; won), Under 7.5 goals (New York Islanders at Los Angeles Kings; live 1:07 - 3rd, Los Angeles Kings 2 - New York Islanders 5, on pace for 7 (7 so far, line 7.5, room for 0 more), on track); 2 of 3 won, the ticket now rests on 1 leg, 75% on its stated chance before play.",
+  "injury_ctx": null,
+  "ladder": "Ladder: run 6, bank $4.95, 2 win(s) in a row, best $9.57; 7 wins to $10,000.",
   "leaks_14d": [],
-  "lessons": "Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1670 picks).",
+  "lessons": "Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1671 picks).",
   "lock_leagues": "Locks by league, by half: NHL 85% then 96% (vs 87%, 88%); NBA 82% then 88% (vs 83%, 82%); NCAAF 84% then 85% (vs 83%, 79%); NFL 89% then 70% (vs 84%, 82%). No league short in both halves.",
   "lock_types": "Locks by bet type, by half: win 84% then 97% (vs 82%, 81%); spread 86% then 92% (vs 85%, 85%); total 86% then 89% (vs 84%, 83%); team total 87% then 90% (vs 86%, 86%); prop 80% then 78% (vs 86%, 79%). Short in both halves: prop.",
   "locks": {
@@ -14808,9 +14832,9 @@
    "won": 0
   },
   "loss_reasons_14d": {
-   "blowout": 37,
+   "blowout": 38,
    "close game": 102,
-   "coin flip": 46,
+   "coin flip": 47,
    "favourite lost": 126,
    "price moved against it": 24,
    "upset": 42
@@ -14836,7 +14860,7 @@
    "won": 0
   },
   "roster": null,
-  "runs": "Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 2 days, peak $2.47, live. Replayed on every saved card: as ranked 13/25 cashed at 2.23x, without props 13/25 at 2.32x.",
+  "runs": "Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 2 days, peak $4.95, live. Replayed on every saved card: as ranked 14/26 cashed at 2.22x, without props 14/26 at 2.31x.",
   "safe_locks": {
    "lost": [],
    "n": 0,
@@ -14864,9 +14888,9 @@
    },
    "agree": {
     "hit": 77.1,
-    "lost": 214,
-    "n": 936,
-    "roi": 2.1,
+    "lost": 215,
+    "n": 937,
+    "roi": 2.0,
     "said": 72.0,
     "won": 722
    }
@@ -14911,10 +14935,10 @@
    "nhl": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.6389,
-    "market_only": 0.6389,
-    "model_40": 0.6476,
-    "n": 191,
+    "logloss": 0.6395,
+    "market_only": 0.6395,
+    "model_40": 0.6481,
+    "n": 192,
     "weight": 0.0
    }
   },
@@ -14959,7 +14983,7 @@
      "against_market": false,
      "league": "nhl",
      "like": {
-      "n": 231,
+      "n": 232,
       "said": 53,
       "won": 123
      },
@@ -14981,7 +15005,7 @@
      "against_market": false,
      "league": "nhl",
      "like": {
-      "n": 216,
+      "n": 217,
       "said": 53,
       "won": 114
      },
@@ -15002,7 +15026,7 @@
      "against_market": false,
      "league": "nhl",
      "like": {
-      "n": 185,
+      "n": 186,
       "said": 57,
       "won": 114
      },
@@ -15024,7 +15048,7 @@
      "against_market": false,
      "league": "nhl",
      "like": {
-      "n": 185,
+      "n": 186,
       "said": 57,
       "won": 114
      },
@@ -15064,28 +15088,50 @@
       "close game"
      ],
      "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 53% \u00b7 coin flip \u00b7 close game"
+    },
+    {
+     "against_market": false,
+     "league": "nhl",
+     "like": {
+      "n": 232,
+      "said": 53,
+      "won": 123
+     },
+     "match": "NYI @ LA",
+     "pick": "Los Angeles Kings",
+     "price": "-125",
+     "said": 53,
+     "score": {
+      "Los Angeles Kings": 2,
+      "New York Islanders": 5
+     },
+     "tags": [
+      "coin flip",
+      "blowout"
+     ],
+     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 53% \u00b7 coin flip \u00b7 blowout"
     }
    ],
    "sweep": {
-    "as_bad_pct": 88.8,
-    "as_good_pct": 21.5,
+    "as_bad_pct": 83.3,
+    "as_good_pct": 28.8,
     "broke_on": "unl France or draw at 76%",
-    "coin_flips": 5,
+    "coin_flips": 6,
     "expected_by_league": {
      "col": 0.5,
      "nfl": 0.5,
-     "nhl": 4.2,
+     "nhl": 4.6,
      "unl": 1.8
     },
-    "expected_losses": 9.5,
-    "lost": 7,
+    "expected_losses": 9.9,
+    "lost": 8,
     "lost_by_league": {
      "col": 1,
      "nfl": 1,
-     "nhl": 4,
+     "nhl": 5,
      "unl": 1
     },
-    "open": 1,
+    "open": 0,
     "won": 23
    }
   }
