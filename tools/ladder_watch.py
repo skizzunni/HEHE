@@ -135,6 +135,21 @@ def _same(a, b):
     return k(a) == k(b)
 
 
+def first_look(after):
+    """The first look, short: every ladder leg (and SETTLED) in full, then the
+    board games as one count line -- won, lost (named), open. It used to print
+    every game, 40+ lines that cut off before the ladder legs could be read."""
+    out = [f"WATCHING: {k} = {v}" for k, v in after.items() if not k.startswith("GAME ")]
+    G = {k: str(v).split(" | ")[0] for k, v in after.items() if k.startswith("GAME ")}
+    if G:
+        won = sum(v.endswith("= won") for v in G.values())
+        lost = [k[5:] for k, v in G.items() if v.endswith("= lost")]
+        opn = sum(v.endswith("= open") for v in G.values())
+        out.append(f"WATCHING: {len(G)} board games -- {won} won, {len(lost)} lost"
+                   + (f" ({', '.join(lost)})" if lost else "") + f", {opn} open")
+    return out
+
+
 def changes(before, after):
     """Lines for every leg or game whose state moved, plus the settle line."""
     out = [f"CHANGE: {k} = {v}" for k, v in after.items()
@@ -171,8 +186,8 @@ def main(state_path, day=None, league=None):
         if v == "open" and str(before.get(k, "")).startswith("open | "):
             after[k] = before[k]
     if not before:                       # first look: say what is being watched
-        for k, v in after.items():
-            print(f"WATCHING: {k} = {v}", flush=True)
+        for line in first_look(after):
+            print(line, flush=True)
     for line in changes(before, after):
         print(line, flush=True)
     with open(state_path, "w") as fh:

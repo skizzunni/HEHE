@@ -162,3 +162,14 @@ class DecidedNoteOnce(unittest.TestCase):
         self.assertEqual(w.changes({"Over 208.5 points": "open | already over (226, line 208.5)"}, {"Over 208.5 points": "won"}),
                          ["CHANGE: Over 208.5 points = won"])
 
+
+class FirstLook(unittest.TestCase):
+    def test_summary(self):
+        import ladder_watch as w
+        after = {"Under 241.5 points": "open", "GAME nba POR @ SAC": "board pick Portland = open",
+                 "GAME unl FRO @ SVK": "board pick Slovakia (67%) = lost | Faroe Islands 2, Slovakia 2 | why: drawn",
+                 "GAME unl GER @ SRB": "board pick Germany (76%) = won | Germany 3, Serbia 1"}
+        self.assertEqual(w.first_look(after), ["WATCHING: Under 241.5 points = open",
+                                               "WATCHING: 3 board games -- 1 won, 1 lost (unl FRO @ SVK), 1 open"])
+        self.assertEqual(w.first_look({"A": "open"}), ["WATCHING: A = open"])
+
