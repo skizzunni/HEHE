@@ -2570,6 +2570,22 @@
    },
    "status": "won"
   },
+  "cdr:401928487|Over 0.5 goals": {
+   "away": "Celta Vigo",
+   "date": "2026-11-13",
+   "home": "Salamanca UDS",
+   "label": "Over 0.5 goals",
+   "league": "cdr",
+   "logged": "2026-11-13T00:04",
+   "match": "Celta Vigo at Salamanca UDS",
+   "p": 0.9706,
+   "p_model": 0.9681,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "cdr:401928492|Under 5.5 goals": {
    "away": "Sporting Gij\u00f3n",
    "date": "2026-10-29",
@@ -3257,6 +3273,39 @@
     "t": "under"
    },
    "status": "won"
+  },
+  "col:401877838|No \u00b7 Internacional de Bogot\u00e1 wins by over 2.5 goals": {
+   "away": "Independiente Santa Fe",
+   "date": "2026-11-13",
+   "home": "Internacional de Bogot\u00e1",
+   "label": "No \u00b7 Internacional de Bogot\u00e1 wins by over 2.5 goals",
+   "league": "col",
+   "logged": "2026-11-13T00:04",
+   "match": "Independiente Santa Fe at Internacional de Bogot\u00e1",
+   "p": 0.9666,
+   "p_model": 0.9637,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Internacional de Bogot\u00e1"
+   },
+   "status": "open"
+  },
+  "col:401877838|Over 0.5 goals": {
+   "away": "Independiente Santa Fe",
+   "date": "2026-11-13",
+   "home": "Internacional de Bogot\u00e1",
+   "label": "Over 0.5 goals",
+   "league": "col",
+   "logged": "2026-11-13T00:04",
+   "match": "Independiente Santa Fe at Internacional de Bogot\u00e1",
+   "p": 0.9408,
+   "p_model": 0.9357,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "col:401877840|No \u00b7 Llaneros FC wins by over 2.5 goals": {
    "away": "Independiente Santa Fe",
@@ -10254,6 +10303,54 @@
    },
    "status": "won"
   },
+  "intl:401916338|Over 0.5 goals": {
+   "away": "Paraguay",
+   "date": "2026-11-13",
+   "home": "Singapore",
+   "label": "Over 0.5 goals",
+   "league": "intl",
+   "logged": "2026-11-13T00:04",
+   "match": "Paraguay at Singapore",
+   "p": 0.9778,
+   "p_model": 0.9759,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "intl:401921325|Over 0.5 goals": {
+   "away": "Chile",
+   "date": "2026-11-13",
+   "home": "Colombia",
+   "label": "Over 0.5 goals",
+   "league": "intl",
+   "logged": "2026-11-13T00:04",
+   "match": "Chile at Colombia",
+   "p": 0.9362,
+   "p_model": 0.9307,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "intl:401921325|Under 5.5 goals": {
+   "away": "Chile",
+   "date": "2026-11-13",
+   "home": "Colombia",
+   "label": "Under 5.5 goals",
+   "league": "intl",
+   "logged": "2026-11-13T00:04",
+   "match": "Chile at Colombia",
+   "p": 0.9501,
+   "p_model": 0.9457,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "intl:401930244|Over 0.5 goals": {
    "away": "Chinese Taipei",
    "date": "2026-11-11",
@@ -10287,6 +10384,38 @@
     "t": "over"
    },
    "status": "won"
+  },
+  "intl:401930898|Over 0.5 goals": {
+   "away": "Costa Rica",
+   "date": "2026-11-13",
+   "home": "Ecuador",
+   "label": "Over 0.5 goals",
+   "league": "intl",
+   "logged": "2026-11-13T00:04",
+   "match": "Costa Rica at Ecuador",
+   "p": 0.9481,
+   "p_model": 0.9436,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "intl:401930898|Under 5.5 goals": {
+   "away": "Costa Rica",
+   "date": "2026-11-13",
+   "home": "Ecuador",
+   "label": "Under 5.5 goals",
+   "league": "intl",
+   "logged": "2026-11-13T00:04",
+   "match": "Costa Rica at Ecuador",
+   "p": 0.9339,
+   "p_model": 0.9282,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "ita2:401899590|No \u00b7 Sampdoria wins by over 3.5 goals": {
    "away": "Arezzo",
@@ -15203,6 +15332,209 @@
    },
    "status": "won"
   },
+  "nba:401909296|No \u00b7 Indiana Pacers wins by over 12.5 points": {
+   "away": "New York Knicks",
+   "date": "2026-11-13",
+   "home": "Indiana Pacers",
+   "label": "No \u00b7 Indiana Pacers wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "New York Knicks at Indiana Pacers",
+   "p": 0.9303,
+   "p_model": 0.9433,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Indiana Pacers"
+   },
+   "status": "open"
+  },
+  "nba:401909297|No \u00b7 Milwaukee Bucks wins by over 12.5 points": {
+   "away": "Milwaukee Bucks",
+   "date": "2026-11-13",
+   "home": "Orlando Magic",
+   "label": "No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Milwaukee Bucks at Orlando Magic",
+   "p": 0.9589,
+   "p_model": 0.9666,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Milwaukee Bucks"
+   },
+   "status": "open"
+  },
+  "nba:401909298|No \u00b7 Miami Heat wins by over 18.5 points": {
+   "away": "Cleveland Cavaliers",
+   "date": "2026-11-13",
+   "home": "Miami Heat",
+   "label": "No \u00b7 Miami Heat wins by over 18.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Cleveland Cavaliers at Miami Heat",
+   "p": 0.8878,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 18.5,
+    "t": "nomargin",
+    "team": "Miami Heat"
+   },
+   "status": "open"
+  },
+  "nba:401909299|No \u00b7 Chicago Bulls wins by over 12.5 points": {
+   "away": "Atlanta Hawks",
+   "date": "2026-11-13",
+   "home": "Chicago Bulls",
+   "label": "No \u00b7 Chicago Bulls wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Atlanta Hawks at Chicago Bulls",
+   "p": 0.9303,
+   "p_model": 0.9433,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Chicago Bulls"
+   },
+   "status": "open"
+  },
+  "nba:401909300|No \u00b7 Memphis Grizzlies wins by over 19.5 points": {
+   "away": "Memphis Grizzlies",
+   "date": "2026-11-13",
+   "home": "New Orleans Pelicans",
+   "label": "No \u00b7 Memphis Grizzlies wins by over 19.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Memphis Grizzlies at New Orleans Pelicans",
+   "p": 0.8878,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 19.5,
+    "t": "nomargin",
+    "team": "Memphis Grizzlies"
+   },
+   "status": "open"
+  },
+  "nba:401909301|Houston Rockets to win": {
+   "away": "Utah Jazz",
+   "date": "2026-11-13",
+   "home": "Houston Rockets",
+   "label": "Houston Rockets to win",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Utah Jazz at Houston Rockets",
+   "p": 0.896,
+   "p_model": 0.9154,
+   "spec": {
+    "t": "win",
+    "team": "Houston Rockets"
+   },
+   "status": "open"
+  },
+  "nba:401909301|No \u00b7 Utah Jazz wins by over 4.5 points": {
+   "away": "Utah Jazz",
+   "date": "2026-11-13",
+   "home": "Houston Rockets",
+   "label": "No \u00b7 Utah Jazz wins by over 4.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Utah Jazz at Houston Rockets",
+   "p": 0.9507,
+   "p_model": 0.9599,
+   "spec": {
+    "line": 4.5,
+    "t": "nomargin",
+    "team": "Utah Jazz"
+   },
+   "status": "open"
+  },
+  "nba:401909302|No \u00b7 Golden State Warriors wins by over 4.5 points": {
+   "away": "Golden State Warriors",
+   "date": "2026-11-13",
+   "home": "San Antonio Spurs",
+   "label": "No \u00b7 Golden State Warriors wins by over 4.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Golden State Warriors at San Antonio Spurs",
+   "p": 0.9037,
+   "p_model": 0.9217,
+   "spec": {
+    "line": 4.5,
+    "t": "nomargin",
+    "team": "Golden State Warriors"
+   },
+   "status": "open"
+  },
+  "nba:401909302|No \u00b7 Golden State Warriors wins by over 8.5 points": {
+   "away": "Golden State Warriors",
+   "date": "2026-11-13",
+   "home": "San Antonio Spurs",
+   "label": "No \u00b7 Golden State Warriors wins by over 8.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Golden State Warriors at San Antonio Spurs",
+   "p": 0.9507,
+   "p_model": 0.9599,
+   "spec": {
+    "line": 8.5,
+    "t": "nomargin",
+    "team": "Golden State Warriors"
+   },
+   "status": "open"
+  },
+  "nba:401909303|No \u00b7 Sacramento Kings wins by over 12.5 points": {
+   "away": "Portland Trail Blazers",
+   "date": "2026-11-13",
+   "home": "Sacramento Kings",
+   "label": "No \u00b7 Sacramento Kings wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Portland Trail Blazers at Sacramento Kings",
+   "p": 0.972,
+   "p_model": 0.9772,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Sacramento Kings"
+   },
+   "status": "open"
+  },
+  "nba:401909303|No \u00b7 Sacramento Kings wins by over 8.5 points": {
+   "away": "Portland Trail Blazers",
+   "date": "2026-11-13",
+   "home": "Sacramento Kings",
+   "label": "No \u00b7 Sacramento Kings wins by over 8.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Portland Trail Blazers at Sacramento Kings",
+   "p": 0.9412,
+   "p_model": 0.9522,
+   "spec": {
+    "line": 8.5,
+    "t": "nomargin",
+    "team": "Sacramento Kings"
+   },
+   "status": "open"
+  },
+  "nba:401909304|No \u00b7 LA Clippers wins by over 12.5 points": {
+   "away": "Oklahoma City Thunder",
+   "date": "2026-11-13",
+   "home": "LA Clippers",
+   "label": "No \u00b7 LA Clippers wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-13T00:04",
+   "match": "Oklahoma City Thunder at LA Clippers",
+   "p": 0.9412,
+   "p_model": 0.9522,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "LA Clippers"
+   },
+   "status": "open"
+  },
   "nba:401909834|No \u00b7 Orlando Magic wins by over 19.5 points": {
    "away": "Atlanta Hawks",
    "date": "2026-10-21",
@@ -17811,6 +18143,22 @@
    },
    "status": "won"
   },
+  "ncaab:401906760|Alabama Crimson Tide to win": {
+   "away": "Seton Hall Pirates",
+   "date": "2026-11-13",
+   "home": "Alabama Crimson Tide",
+   "label": "Alabama Crimson Tide to win",
+   "league": "ncaab",
+   "logged": "2026-11-13T00:04",
+   "match": "Seton Hall Pirates at Alabama Crimson Tide",
+   "p": 0.9442,
+   "p_model": 0.9442,
+   "spec": {
+    "t": "win",
+    "team": "Alabama Crimson Tide"
+   },
+   "status": "open"
+  },
   "ncaab:401906769|No \u00b7 Miami Hurricanes wins by over 12.5 points": {
    "away": "Miami Hurricanes",
    "date": "2026-11-02",
@@ -17900,6 +18248,23 @@
     "team": "Tennessee Volunteers"
    },
    "status": "won"
+  },
+  "ncaab:401906850|No \u00b7 Tennessee Volunteers wins by over 45.5 points": {
+   "away": "Tennessee State Tigers",
+   "date": "2026-11-13",
+   "home": "Tennessee Volunteers",
+   "label": "No \u00b7 Tennessee Volunteers wins by over 45.5 points",
+   "league": "ncaab",
+   "logged": "2026-11-13T00:04",
+   "match": "Tennessee State Tigers at Tennessee Volunteers",
+   "p": 0.9271,
+   "p_model": 0.9271,
+   "spec": {
+    "line": 45.5,
+    "t": "nomargin",
+    "team": "Tennessee Volunteers"
+   },
+   "status": "open"
   },
   "ncaab:401909524|No \u00b7 Michigan Wolverines wins by over 19.5 points": {
    "away": "Marquette Golden Eagles",
@@ -18008,6 +18373,23 @@
    },
    "status": "won"
   },
+  "ncaab:401909741|No \u00b7 Arizona Wildcats wins by over 18.5 points": {
+   "away": "Arizona Wildcats",
+   "date": "2026-11-13",
+   "home": "Auburn Tigers",
+   "label": "No \u00b7 Arizona Wildcats wins by over 18.5 points",
+   "league": "ncaab",
+   "logged": "2026-11-13T00:04",
+   "match": "Arizona Wildcats at Auburn Tigers",
+   "p": 0.9271,
+   "p_model": 0.9271,
+   "spec": {
+    "line": 18.5,
+    "t": "nomargin",
+    "team": "Arizona Wildcats"
+   },
+   "status": "open"
+  },
   "ncaab:401909771|No \u00b7 Memphis Tigers wins by over 4.5 points": {
    "away": "Memphis Tigers",
    "date": "2026-11-02",
@@ -18115,6 +18497,40 @@
    },
    "status": "won"
   },
+  "ncaab:401916297|No \u00b7 Maryland Terrapins wins by over 12.5 points": {
+   "away": "Virginia Cavaliers",
+   "date": "2026-11-13",
+   "home": "Maryland Terrapins",
+   "label": "No \u00b7 Maryland Terrapins wins by over 12.5 points",
+   "league": "ncaab",
+   "logged": "2026-11-13T00:04",
+   "match": "Virginia Cavaliers at Maryland Terrapins",
+   "p": 0.9491,
+   "p_model": 0.9491,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Maryland Terrapins"
+   },
+   "status": "open"
+  },
+  "ncaab:401916297|No \u00b7 Maryland Terrapins wins by over 8.5 points": {
+   "away": "Virginia Cavaliers",
+   "date": "2026-11-13",
+   "home": "Maryland Terrapins",
+   "label": "No \u00b7 Maryland Terrapins wins by over 8.5 points",
+   "league": "ncaab",
+   "logged": "2026-11-13T00:04",
+   "match": "Virginia Cavaliers at Maryland Terrapins",
+   "p": 0.8984,
+   "p_model": 0.8984,
+   "spec": {
+    "line": 8.5,
+    "t": "nomargin",
+    "team": "Maryland Terrapins"
+   },
+   "status": "open"
+  },
   "ncaab:401916313|No \u00b7 BYU Cougars wins by over 19.5 points": {
    "away": "Ohio State Buckeyes",
    "date": "2026-11-02",
@@ -18132,6 +18548,23 @@
     "team": "BYU Cougars"
    },
    "status": "won"
+  },
+  "ncaab:401916316|No \u00b7 Ohio State Buckeyes wins by over 8.5 points": {
+   "away": "Ohio State Buckeyes",
+   "date": "2026-11-13",
+   "home": "UConn Huskies",
+   "label": "No \u00b7 Ohio State Buckeyes wins by over 8.5 points",
+   "league": "ncaab",
+   "logged": "2026-11-13T00:04",
+   "match": "Ohio State Buckeyes at UConn Huskies",
+   "p": 0.9655,
+   "p_model": 0.9655,
+   "spec": {
+    "line": 8.5,
+    "t": "nomargin",
+    "team": "Ohio State Buckeyes"
+   },
+   "status": "open"
   },
   "ncaab:401917512|No \u00b7 North Dakota State Bison wins by over 4.5 points": {
    "away": "North Dakota State Bison",
@@ -18185,6 +18618,23 @@
     "team": "Queens University Royals"
    },
    "status": "won"
+  },
+  "ncaab:401917916|No \u00b7 Arkansas Razorbacks wins by over 41.5 points": {
+   "away": "Central Arkansas Bears",
+   "date": "2026-11-13",
+   "home": "Arkansas Razorbacks",
+   "label": "No \u00b7 Arkansas Razorbacks wins by over 41.5 points",
+   "league": "ncaab",
+   "logged": "2026-11-13T00:04",
+   "match": "Central Arkansas Bears at Arkansas Razorbacks",
+   "p": 0.9271,
+   "p_model": 0.9271,
+   "spec": {
+    "line": 41.5,
+    "t": "nomargin",
+    "team": "Arkansas Razorbacks"
+   },
+   "status": "open"
   },
   "ncaab:401918052|No \u00b7 Radford Highlanders wins by over 4.5 points": {
    "away": "Radford Highlanders",
@@ -18651,6 +19101,23 @@
    },
    "status": "won"
   },
+  "ncaab:401925755|No \u00b7 Michigan State Spartans wins by over 45.5 points": {
+   "away": "Northern Iowa Panthers",
+   "date": "2026-11-13",
+   "home": "Michigan State Spartans",
+   "label": "No \u00b7 Michigan State Spartans wins by over 45.5 points",
+   "league": "ncaab",
+   "logged": "2026-11-13T00:04",
+   "match": "Northern Iowa Panthers at Michigan State Spartans",
+   "p": 0.9271,
+   "p_model": 0.9271,
+   "spec": {
+    "line": 45.5,
+    "t": "nomargin",
+    "team": "Michigan State Spartans"
+   },
+   "status": "open"
+  },
   "ncaab:401926771|No \u00b7 USC Trojans wins by over 42.5 points": {
    "away": "Milwaukee Panthers",
    "date": "2026-11-02",
@@ -19064,6 +19531,23 @@
    },
    "status": "won"
   },
+  "ncaaf:401856860|No \u00b7 Colorado Buffaloes wins by over 14.5 points": {
+   "away": "Houston Cougars",
+   "date": "2026-11-13",
+   "home": "Colorado Buffaloes",
+   "label": "No \u00b7 Colorado Buffaloes wins by over 14.5 points",
+   "league": "ncaaf",
+   "logged": "2026-11-13T00:04",
+   "match": "Houston Cougars at Colorado Buffaloes",
+   "p": 0.9307,
+   "p_model": 0.9271,
+   "spec": {
+    "line": 14.5,
+    "t": "nomargin",
+    "team": "Colorado Buffaloes"
+   },
+   "status": "open"
+  },
   "ncaaf:401858263|No \u00b7 Florida State Seminoles wins by over 10.5 points": {
    "away": "Florida State Seminoles",
    "date": "2026-10-17",
@@ -19351,6 +19835,22 @@
    },
    "status": "won"
   },
+  "ncaaf:401858293|Under 69.5 points": {
+   "away": "Florida State Seminoles",
+   "date": "2026-11-13",
+   "home": "Pittsburgh Panthers",
+   "label": "Under 69.5 points",
+   "league": "ncaaf",
+   "logged": "2026-11-13T00:04",
+   "match": "Florida State Seminoles at Pittsburgh Panthers",
+   "p": 0.8906,
+   "p_model": 0.8848,
+   "spec": {
+    "line": 69.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "ncaaf:401858493|No \u00b7 Purdue Boilermakers wins by over 20.5 points": {
    "away": "Washington Huskies",
    "date": "2026-10-16",
@@ -19617,6 +20117,40 @@
     "team": "Rutgers Scarlet Knights"
    },
    "status": "won"
+  },
+  "ncaaf:401858526|No \u00b7 Illinois Fighting Illini wins by over 10.5 points": {
+   "away": "Illinois Fighting Illini",
+   "date": "2026-11-13",
+   "home": "UCLA Bruins",
+   "label": "No \u00b7 Illinois Fighting Illini wins by over 10.5 points",
+   "league": "ncaaf",
+   "logged": "2026-11-13T00:04",
+   "match": "Illinois Fighting Illini at UCLA Bruins",
+   "p": 0.8983,
+   "p_model": 0.893,
+   "spec": {
+    "line": 10.5,
+    "t": "nomargin",
+    "team": "Illinois Fighting Illini"
+   },
+   "status": "open"
+  },
+  "ncaaf:401858526|No \u00b7 Illinois Fighting Illini wins by over 14.5 points": {
+   "away": "Illinois Fighting Illini",
+   "date": "2026-11-13",
+   "home": "UCLA Bruins",
+   "label": "No \u00b7 Illinois Fighting Illini wins by over 14.5 points",
+   "league": "ncaaf",
+   "logged": "2026-11-13T00:04",
+   "match": "Illinois Fighting Illini at UCLA Bruins",
+   "p": 0.9346,
+   "p_model": 0.9312,
+   "spec": {
+    "line": 14.5,
+    "t": "nomargin",
+    "team": "Illinois Fighting Illini"
+   },
+   "status": "open"
   },
   "ncaaf:401859185|Notre Dame Fighting Irish to win": {
    "away": "Notre Dame Fighting Irish",
@@ -26445,6 +26979,54 @@
    },
    "status": "open"
   },
+  "nhl:401892706|Over 2.5 goals": {
+   "away": "New York Rangers",
+   "date": "2026-11-13",
+   "home": "Vancouver Canucks",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-13T00:04",
+   "match": "New York Rangers at Vancouver Canucks",
+   "p": 0.9708,
+   "p_model": 0.9682,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892706|Under 9.5 goals": {
+   "away": "New York Rangers",
+   "date": "2026-11-13",
+   "home": "Vancouver Canucks",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-13T00:04",
+   "match": "New York Rangers at Vancouver Canucks",
+   "p": 0.9015,
+   "p_model": 0.8929,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892707|Over 2.5 goals": {
+   "away": "Nashville Predators",
+   "date": "2026-11-13",
+   "home": "Vegas Golden Knights",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-13T00:04",
+   "match": "Nashville Predators at Vegas Golden Knights",
+   "p": 0.9623,
+   "p_model": 0.9591,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "nor:401843366|No \u00b7 IK Start wins by over 3.5 goals": {
    "away": "Sandefjord",
    "date": "2026-10-25",
@@ -31192,6 +31774,266 @@
    },
    "status": "won"
   },
+  "unl:401861153|Under 4.5 goals": {
+   "away": "Azerbaijan",
+   "date": "2026-11-13",
+   "home": "Liechtenstein",
+   "label": "Under 4.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Azerbaijan at Liechtenstein",
+   "p": 0.9022,
+   "p_model": 0.8937,
+   "spec": {
+    "line": 4.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "unl:401861153|Under 5.5 goals": {
+   "away": "Azerbaijan",
+   "date": "2026-11-13",
+   "home": "Liechtenstein",
+   "label": "Under 5.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Azerbaijan at Liechtenstein",
+   "p": 0.9625,
+   "p_model": 0.9592,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "unl:401861154|No \u00b7 Estonia wins by over 2.5 goals": {
+   "away": "Estonia",
+   "date": "2026-11-13",
+   "home": "Luxembourg",
+   "label": "No \u00b7 Estonia wins by over 2.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Estonia at Luxembourg",
+   "p": 0.9708,
+   "p_model": 0.9682,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Estonia"
+   },
+   "status": "open"
+  },
+  "unl:401861154|Over 0.5 goals": {
+   "away": "Estonia",
+   "date": "2026-11-13",
+   "home": "Luxembourg",
+   "label": "Over 0.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Estonia at Luxembourg",
+   "p": 0.8961,
+   "p_model": 0.8871,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "unl:401861154|Under 4.5 goals": {
+   "away": "Estonia",
+   "date": "2026-11-13",
+   "home": "Luxembourg",
+   "label": "Under 4.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Estonia at Luxembourg",
+   "p": 0.9352,
+   "p_model": 0.9295,
+   "spec": {
+    "line": 4.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "unl:401861156|No \u00b7 Switzerland wins by over 3.5 goals": {
+   "away": "Switzerland",
+   "date": "2026-11-13",
+   "home": "Slovenia",
+   "label": "No \u00b7 Switzerland wins by over 3.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Switzerland at Slovenia",
+   "p": 0.9723,
+   "p_model": 0.9699,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Switzerland"
+   },
+   "status": "open"
+  },
+  "unl:401861156|Under 4.5 goals": {
+   "away": "Switzerland",
+   "date": "2026-11-13",
+   "home": "Slovenia",
+   "label": "Under 4.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Switzerland at Slovenia",
+   "p": 0.9462,
+   "p_model": 0.9415,
+   "spec": {
+    "line": 4.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "unl:401861157|No \u00b7 Iceland wins by over 2.5 goals": {
+   "away": "Iceland",
+   "date": "2026-11-13",
+   "home": "Bulgaria",
+   "label": "No \u00b7 Iceland wins by over 2.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Iceland at Bulgaria",
+   "p": 0.8977,
+   "p_model": 0.8888,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Iceland"
+   },
+   "status": "open"
+  },
+  "unl:401861157|Under 5.5 goals": {
+   "away": "Iceland",
+   "date": "2026-11-13",
+   "home": "Bulgaria",
+   "label": "Under 5.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Iceland at Bulgaria",
+   "p": 0.9636,
+   "p_model": 0.9604,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "unl:401861158|Over 0.5 goals": {
+   "away": "Germany",
+   "date": "2026-11-13",
+   "home": "Serbia",
+   "label": "Over 0.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Germany at Serbia",
+   "p": 0.9717,
+   "p_model": 0.9692,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "unl:401861159|Over 0.5 goals": {
+   "away": "Greece",
+   "date": "2026-11-13",
+   "home": "Netherlands",
+   "label": "Over 0.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Greece at Netherlands",
+   "p": 0.9545,
+   "p_model": 0.9505,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "unl:401861160|Over 0.5 goals": {
+   "away": "Faroe Islands",
+   "date": "2026-11-13",
+   "home": "Slovakia",
+   "label": "Over 0.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Faroe Islands at Slovakia",
+   "p": 0.9408,
+   "p_model": 0.9357,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "unl:401861160|Under 5.5 goals": {
+   "away": "Faroe Islands",
+   "date": "2026-11-13",
+   "home": "Slovakia",
+   "label": "Under 5.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Faroe Islands at Slovakia",
+   "p": 0.9445,
+   "p_model": 0.9397,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "unl:401861161|Over 0.5 goals": {
+   "away": "North Macedonia",
+   "date": "2026-11-13",
+   "home": "Scotland",
+   "label": "Over 0.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "North Macedonia at Scotland",
+   "p": 0.9509,
+   "p_model": 0.9467,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "unl:401861162|No \u00b7 Kazakhstan wins by over 2.5 goals": {
+   "away": "Kazakhstan",
+   "date": "2026-11-13",
+   "home": "Moldova",
+   "label": "No \u00b7 Kazakhstan wins by over 2.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Kazakhstan at Moldova",
+   "p": 0.9598,
+   "p_model": 0.9564,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Kazakhstan"
+   },
+   "status": "open"
+  },
+  "unl:401861162|Under 4.5 goals": {
+   "away": "Kazakhstan",
+   "date": "2026-11-13",
+   "home": "Moldova",
+   "label": "Under 4.5 goals",
+   "league": "unl",
+   "logged": "2026-11-13T00:04",
+   "match": "Kazakhstan at Moldova",
+   "p": 0.937,
+   "p_model": 0.9315,
+   "spec": {
+    "line": 4.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "uru:401929243|No \u00b7 Racing (Montevideo) wins by over 3.5 goals": {
    "away": "Montevideo Wanderers",
    "date": "2026-10-17",
@@ -31508,6 +32350,56 @@
     "t": "under"
    },
    "status": "won"
+  },
+  "uru:401933237|No \u00b7 Montevideo City Torque wins by over 2.5 goals": {
+   "away": "Racing (Montevideo)",
+   "date": "2026-11-13",
+   "home": "Montevideo City Torque",
+   "label": "No \u00b7 Montevideo City Torque wins by over 2.5 goals",
+   "league": "uru",
+   "logged": "2026-11-13T00:04",
+   "match": "Racing (Montevideo) at Montevideo City Torque",
+   "p": 0.8956,
+   "p_model": 0.8865,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Montevideo City Torque"
+   },
+   "status": "open"
+  },
+  "uru:401933237|No \u00b7 Montevideo City Torque wins by over 3.5 goals": {
+   "away": "Racing (Montevideo)",
+   "date": "2026-11-13",
+   "home": "Montevideo City Torque",
+   "label": "No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+   "league": "uru",
+   "logged": "2026-11-13T00:04",
+   "match": "Racing (Montevideo) at Montevideo City Torque",
+   "p": 0.9637,
+   "p_model": 0.9605,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Montevideo City Torque"
+   },
+   "status": "open"
+  },
+  "uru:401933237|Over 0.5 goals": {
+   "away": "Racing (Montevideo)",
+   "date": "2026-11-13",
+   "home": "Montevideo City Torque",
+   "label": "Over 0.5 goals",
+   "league": "uru",
+   "logged": "2026-11-13T00:04",
+   "match": "Racing (Montevideo) at Montevideo City Torque",
+   "p": 0.9386,
+   "p_model": 0.9332,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "uru:401933238|Under 4.5 goals": {
    "away": "Progreso",
@@ -43877,6 +44769,426 @@
    "n": 8,
    "prob": 0.7501,
    "status": "void"
+  },
+  "20261113:10:0": {
+   "fair": 1.49,
+   "legs": [
+    "unl:401861162|No \u00b7 Kazakhstan wins by over 2.5 goals",
+    "nba:401909297|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892707|Over 2.5 goals",
+    "unl:401861153|Under 5.5 goals",
+    "unl:401861157|Under 5.5 goals",
+    "uru:401933237|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "unl:401861159|Over 0.5 goals",
+    "ncaab:401916316|No \u00b7 Ohio State Buckeyes wins by over 8.5 points",
+    "col:401877838|No \u00b7 Internacional de Bogot\u00e1 wins by over 2.5 goals",
+    "unl:401861161|Over 0.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 10,
+   "prob": 0.6705,
+   "status": "open"
+  },
+  "20261113:10:1": {
+   "fair": 1.5,
+   "legs": [
+    "nba:401909301|No \u00b7 Utah Jazz wins by over 4.5 points",
+    "nba:401909302|No \u00b7 Golden State Warriors wins by over 8.5 points",
+    "intl:401921325|Under 5.5 goals",
+    "cdr:401928487|Over 0.5 goals",
+    "nhl:401892706|Over 2.5 goals",
+    "unl:401861154|No \u00b7 Estonia wins by over 2.5 goals",
+    "ncaab:401916297|No \u00b7 Maryland Terrapins wins by over 12.5 points",
+    "unl:401861158|Over 0.5 goals",
+    "intl:401930898|Over 0.5 goals",
+    "nba:401909303|No \u00b7 Sacramento Kings wins by over 12.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 10,
+   "prob": 0.6677,
+   "status": "open"
+  },
+  "20261113:10:2": {
+   "fair": 1.8,
+   "legs": [
+    "unl:401861156|No \u00b7 Switzerland wins by over 3.5 goals",
+    "unl:401861160|Under 5.5 goals",
+    "ncaab:401906760|Alabama Crimson Tide to win",
+    "intl:401916338|Over 0.5 goals",
+    "nba:401909304|No \u00b7 LA Clippers wins by over 12.5 points",
+    "ncaaf:401858526|No \u00b7 Illinois Fighting Illini wins by over 14.5 points",
+    "ncaaf:401856860|No \u00b7 Colorado Buffaloes wins by over 14.5 points",
+    "nba:401909296|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401909299|No \u00b7 Chicago Bulls wins by over 12.5 points",
+    "ncaab:401925755|No \u00b7 Michigan State Spartans wins by over 45.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 10,
+   "prob": 0.557,
+   "status": "open"
+  },
+  "20261113:15:0": {
+   "fair": 1.84,
+   "legs": [
+    "unl:401861162|No \u00b7 Kazakhstan wins by over 2.5 goals",
+    "nba:401909297|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892707|Over 2.5 goals",
+    "unl:401861153|Under 5.5 goals",
+    "unl:401861157|Under 5.5 goals",
+    "uru:401933237|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "unl:401861159|Over 0.5 goals",
+    "ncaab:401916316|No \u00b7 Ohio State Buckeyes wins by over 8.5 points",
+    "col:401877838|No \u00b7 Internacional de Bogot\u00e1 wins by over 2.5 goals",
+    "unl:401861161|Over 0.5 goals",
+    "nba:401909301|No \u00b7 Utah Jazz wins by over 4.5 points",
+    "nba:401909302|No \u00b7 Golden State Warriors wins by over 8.5 points",
+    "intl:401921325|Under 5.5 goals",
+    "cdr:401928487|Over 0.5 goals",
+    "nhl:401892706|Over 2.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 15,
+   "prob": 0.5426,
+   "status": "open"
+  },
+  "20261113:15:1": {
+   "fair": 2.18,
+   "legs": [
+    "unl:401861154|No \u00b7 Estonia wins by over 2.5 goals",
+    "ncaab:401916297|No \u00b7 Maryland Terrapins wins by over 12.5 points",
+    "unl:401861158|Over 0.5 goals",
+    "intl:401930898|Over 0.5 goals",
+    "nba:401909303|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "unl:401861156|No \u00b7 Switzerland wins by over 3.5 goals",
+    "unl:401861160|Under 5.5 goals",
+    "ncaab:401906760|Alabama Crimson Tide to win",
+    "intl:401916338|Over 0.5 goals",
+    "nba:401909304|No \u00b7 LA Clippers wins by over 12.5 points",
+    "ncaaf:401858526|No \u00b7 Illinois Fighting Illini wins by over 14.5 points",
+    "ncaaf:401856860|No \u00b7 Colorado Buffaloes wins by over 14.5 points",
+    "nba:401909296|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401909299|No \u00b7 Chicago Bulls wins by over 12.5 points",
+    "ncaab:401925755|No \u00b7 Michigan State Spartans wins by over 45.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 15,
+   "prob": 0.4596,
+   "status": "open"
+  },
+  "20261113:15:2": {
+   "fair": 2.54,
+   "legs": [
+    "ncaab:401906850|No \u00b7 Tennessee Volunteers wins by over 45.5 points",
+    "ncaab:401917916|No \u00b7 Arkansas Razorbacks wins by over 41.5 points",
+    "ncaab:401909741|No \u00b7 Arizona Wildcats wins by over 18.5 points",
+    "ncaaf:401858293|Under 69.5 points",
+    "nba:401909298|No \u00b7 Miami Heat wins by over 18.5 points",
+    "nba:401909300|No \u00b7 Memphis Grizzlies wins by over 19.5 points",
+    "unl:401861162|No \u00b7 Kazakhstan wins by over 2.5 goals",
+    "nba:401909297|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892707|Over 2.5 goals",
+    "unl:401861153|Under 5.5 goals",
+    "unl:401861157|Under 5.5 goals",
+    "uru:401933237|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "unl:401861159|Over 0.5 goals",
+    "ncaab:401916316|No \u00b7 Ohio State Buckeyes wins by over 8.5 points",
+    "col:401877838|No \u00b7 Internacional de Bogot\u00e1 wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 15,
+   "prob": 0.3945,
+   "status": "open"
+  },
+  "20261113:20:0": {
+   "fair": 2.23,
+   "legs": [
+    "unl:401861162|No \u00b7 Kazakhstan wins by over 2.5 goals",
+    "nba:401909297|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892707|Over 2.5 goals",
+    "unl:401861153|Under 5.5 goals",
+    "unl:401861157|Under 5.5 goals",
+    "uru:401933237|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "unl:401861159|Over 0.5 goals",
+    "ncaab:401916316|No \u00b7 Ohio State Buckeyes wins by over 8.5 points",
+    "col:401877838|No \u00b7 Internacional de Bogot\u00e1 wins by over 2.5 goals",
+    "unl:401861161|Over 0.5 goals",
+    "nba:401909301|No \u00b7 Utah Jazz wins by over 4.5 points",
+    "nba:401909302|No \u00b7 Golden State Warriors wins by over 8.5 points",
+    "intl:401921325|Under 5.5 goals",
+    "cdr:401928487|Over 0.5 goals",
+    "nhl:401892706|Over 2.5 goals",
+    "unl:401861154|No \u00b7 Estonia wins by over 2.5 goals",
+    "ncaab:401916297|No \u00b7 Maryland Terrapins wins by over 12.5 points",
+    "unl:401861158|Over 0.5 goals",
+    "intl:401930898|Over 0.5 goals",
+    "nba:401909303|No \u00b7 Sacramento Kings wins by over 12.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 20,
+   "prob": 0.4477,
+   "status": "open"
+  },
+  "20261113:20:1": {
+   "fair": 3.77,
+   "legs": [
+    "unl:401861156|No \u00b7 Switzerland wins by over 3.5 goals",
+    "unl:401861160|Under 5.5 goals",
+    "ncaab:401906760|Alabama Crimson Tide to win",
+    "intl:401916338|Over 0.5 goals",
+    "nba:401909304|No \u00b7 LA Clippers wins by over 12.5 points",
+    "ncaaf:401858526|No \u00b7 Illinois Fighting Illini wins by over 14.5 points",
+    "ncaaf:401856860|No \u00b7 Colorado Buffaloes wins by over 14.5 points",
+    "nba:401909296|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401909299|No \u00b7 Chicago Bulls wins by over 12.5 points",
+    "ncaab:401925755|No \u00b7 Michigan State Spartans wins by over 45.5 points",
+    "ncaab:401906850|No \u00b7 Tennessee Volunteers wins by over 45.5 points",
+    "ncaab:401917916|No \u00b7 Arkansas Razorbacks wins by over 41.5 points",
+    "ncaab:401909741|No \u00b7 Arizona Wildcats wins by over 18.5 points",
+    "ncaaf:401858293|Under 69.5 points",
+    "nba:401909298|No \u00b7 Miami Heat wins by over 18.5 points",
+    "nba:401909300|No \u00b7 Memphis Grizzlies wins by over 19.5 points",
+    "unl:401861162|No \u00b7 Kazakhstan wins by over 2.5 goals",
+    "nba:401909297|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892707|Over 2.5 goals",
+    "unl:401861153|Under 5.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 20,
+   "prob": 0.2656,
+   "status": "open"
+  },
+  "20261113:20:2": {
+   "fair": 2.25,
+   "legs": [
+    "unl:401861157|Under 5.5 goals",
+    "uru:401933237|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "unl:401861159|Over 0.5 goals",
+    "ncaab:401916316|No \u00b7 Ohio State Buckeyes wins by over 8.5 points",
+    "col:401877838|No \u00b7 Internacional de Bogot\u00e1 wins by over 2.5 goals",
+    "unl:401861161|Over 0.5 goals",
+    "nba:401909301|No \u00b7 Utah Jazz wins by over 4.5 points",
+    "nba:401909302|No \u00b7 Golden State Warriors wins by over 8.5 points",
+    "intl:401921325|Under 5.5 goals",
+    "cdr:401928487|Over 0.5 goals",
+    "nhl:401892706|Over 2.5 goals",
+    "unl:401861154|No \u00b7 Estonia wins by over 2.5 goals",
+    "ncaab:401916297|No \u00b7 Maryland Terrapins wins by over 12.5 points",
+    "unl:401861158|Over 0.5 goals",
+    "intl:401930898|Over 0.5 goals",
+    "nba:401909303|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "unl:401861156|No \u00b7 Switzerland wins by over 3.5 goals",
+    "unl:401861160|Under 5.5 goals",
+    "ncaab:401906760|Alabama Crimson Tide to win",
+    "intl:401916338|Over 0.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 20,
+   "prob": 0.4453,
+   "status": "open"
+  },
+  "20261113:2:0": {
+   "fair": 1.23,
+   "legs": [
+    "nhl:401892706|Under 9.5 goals",
+    "ncaab:401916297|No \u00b7 Maryland Terrapins wins by over 8.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 2,
+   "prob": 0.8099,
+   "status": "open"
+  },
+  "20261113:2:1": {
+   "fair": 1.23,
+   "legs": [
+    "ncaaf:401858526|No \u00b7 Illinois Fighting Illini wins by over 10.5 points",
+    "unl:401861153|Under 4.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 2,
+   "prob": 0.8104,
+   "status": "open"
+  },
+  "20261113:2:2": {
+   "fair": 1.23,
+   "legs": [
+    "unl:401861157|No \u00b7 Iceland wins by over 2.5 goals",
+    "nba:401909302|No \u00b7 Golden State Warriors wins by over 4.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 2,
+   "prob": 0.8113,
+   "status": "open"
+  },
+  "20261113:3:0": {
+   "fair": 1.37,
+   "legs": [
+    "nhl:401892706|Under 9.5 goals",
+    "ncaab:401916297|No \u00b7 Maryland Terrapins wins by over 8.5 points",
+    "ncaaf:401858526|No \u00b7 Illinois Fighting Illini wins by over 10.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 3,
+   "prob": 0.7275,
+   "status": "open"
+  },
+  "20261113:3:1": {
+   "fair": 1.37,
+   "legs": [
+    "unl:401861153|Under 4.5 goals",
+    "unl:401861157|No \u00b7 Iceland wins by over 2.5 goals",
+    "nba:401909302|No \u00b7 Golden State Warriors wins by over 4.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 3,
+   "prob": 0.7319,
+   "status": "open"
+  },
+  "20261113:3:2": {
+   "fair": 1.39,
+   "legs": [
+    "unl:401861154|Over 0.5 goals",
+    "nba:401909301|Houston Rockets to win",
+    "uru:401933237|No \u00b7 Montevideo City Torque wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 3,
+   "prob": 0.7191,
+   "status": "open"
+  },
+  "20261113:4:0": {
+   "fair": 1.28,
+   "legs": [
+    "col:401877838|Over 0.5 goals",
+    "unl:401861160|Over 0.5 goals",
+    "nba:401909303|No \u00b7 Sacramento Kings wins by over 8.5 points",
+    "nba:401909304|No \u00b7 LA Clippers wins by over 12.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 4,
+   "prob": 0.784,
+   "status": "open"
+  },
+  "20261113:4:1": {
+   "fair": 1.29,
+   "legs": [
+    "uru:401933237|Over 0.5 goals",
+    "unl:401861162|Under 4.5 goals",
+    "intl:401921325|Over 0.5 goals",
+    "ncaab:401906760|Alabama Crimson Tide to win"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 4,
+   "prob": 0.7774,
+   "status": "open"
+  },
+  "20261113:4:2": {
+   "fair": 1.29,
+   "legs": [
+    "unl:401861154|Under 4.5 goals",
+    "ncaaf:401858526|No \u00b7 Illinois Fighting Illini wins by over 14.5 points",
+    "intl:401930898|Under 5.5 goals",
+    "unl:401861156|Under 4.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 4,
+   "prob": 0.7724,
+   "status": "open"
+  },
+  "20261113:6:0": {
+   "fair": 1.26,
+   "legs": [
+    "unl:401861162|No \u00b7 Kazakhstan wins by over 2.5 goals",
+    "nba:401909297|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892707|Over 2.5 goals",
+    "unl:401861153|Under 5.5 goals",
+    "unl:401861157|Under 5.5 goals",
+    "uru:401933237|No \u00b7 Montevideo City Torque wins by over 3.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 6,
+   "prob": 0.7916,
+   "status": "open"
+  },
+  "20261113:6:1": {
+   "fair": 1.31,
+   "legs": [
+    "unl:401861159|Over 0.5 goals",
+    "ncaab:401916316|No \u00b7 Ohio State Buckeyes wins by over 8.5 points",
+    "col:401877838|No \u00b7 Internacional de Bogot\u00e1 wins by over 2.5 goals",
+    "unl:401861161|Over 0.5 goals",
+    "nba:401909301|No \u00b7 Utah Jazz wins by over 4.5 points",
+    "nba:401909302|No \u00b7 Golden State Warriors wins by over 8.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 6,
+   "prob": 0.7657,
+   "status": "open"
+  },
+  "20261113:6:2": {
+   "fair": 1.25,
+   "legs": [
+    "intl:401921325|Under 5.5 goals",
+    "cdr:401928487|Over 0.5 goals",
+    "nhl:401892706|Over 2.5 goals",
+    "unl:401861154|No \u00b7 Estonia wins by over 2.5 goals",
+    "ncaab:401916297|No \u00b7 Maryland Terrapins wins by over 12.5 points",
+    "unl:401861158|Over 0.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 6,
+   "prob": 0.8016,
+   "status": "open"
+  },
+  "20261113:8:0": {
+   "fair": 1.37,
+   "legs": [
+    "unl:401861162|No \u00b7 Kazakhstan wins by over 2.5 goals",
+    "nba:401909297|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892707|Over 2.5 goals",
+    "unl:401861153|Under 5.5 goals",
+    "unl:401861157|Under 5.5 goals",
+    "uru:401933237|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "unl:401861159|Over 0.5 goals",
+    "ncaab:401916316|No \u00b7 Ohio State Buckeyes wins by over 8.5 points"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 8,
+   "prob": 0.7295,
+   "status": "open"
+  },
+  "20261113:8:1": {
+   "fair": 1.38,
+   "legs": [
+    "col:401877838|No \u00b7 Internacional de Bogot\u00e1 wins by over 2.5 goals",
+    "unl:401861161|Over 0.5 goals",
+    "nba:401909301|No \u00b7 Utah Jazz wins by over 4.5 points",
+    "nba:401909302|No \u00b7 Golden State Warriors wins by over 8.5 points",
+    "intl:401921325|Under 5.5 goals",
+    "cdr:401928487|Over 0.5 goals",
+    "nhl:401892706|Over 2.5 goals",
+    "unl:401861154|No \u00b7 Estonia wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 8,
+   "prob": 0.7221,
+   "status": "open"
+  },
+  "20261113:8:2": {
+   "fair": 1.39,
+   "legs": [
+    "ncaab:401916297|No \u00b7 Maryland Terrapins wins by over 12.5 points",
+    "unl:401861158|Over 0.5 goals",
+    "intl:401930898|Over 0.5 goals",
+    "nba:401909303|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "unl:401861156|No \u00b7 Switzerland wins by over 3.5 goals",
+    "unl:401861160|Under 5.5 goals",
+    "ncaab:401906760|Alabama Crimson Tide to win",
+    "intl:401916338|Over 0.5 goals"
+   ],
+   "logged": "2026-11-13T00:04",
+   "n": 8,
+   "prob": 0.7206,
+   "status": "open"
   }
  }
 }
