@@ -2257,6 +2257,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV14UABTEM-TEM"
   },
+  "KXNCAAFGAME-26NOV14UNTUTSA-UNT|YES": {
+   "ask": 0.55,
+   "bid": 0.54,
+   "cost": 0.5444,
+   "edge": 0.0002,
+   "fair": 0.5445,
+   "id": "ncaaf:401862827",
+   "label": "North Texas Mean Green",
+   "league": "ncaaf",
+   "match": "UNT @ UTSA",
+   "posted": "2026-11-13T15:47:58+00:00",
+   "queue": 4375.55,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "North Texas Mean Green"
+   },
+   "start": "2026-11-15T02:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV14UNTUTSA-UNT"
+  },
   "KXNCAAFGAME-26NOV14USCIND-IND|YES": {
    "ask": 0.74,
    "bid": 0.73,
@@ -5589,6 +5610,28 @@
    "start": "2026-11-14T20:30Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV14JVSTWKU-JVST8"
+  },
+  "KXNCAAFSPREAD-26NOV14KSUTCU-TCU12|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401856862",
+   "label": "TCU Horned Frogs -11.5",
+   "league": "ncaaf",
+   "match": "KSU @ TCU",
+   "posted": "2026-11-13T15:47:58+00:00",
+   "queue": 41871.38,
+   "side": "YES",
+   "spec": {
+    "line": -11.5,
+    "t": "spread",
+    "team": "TCU Horned Frogs"
+   },
+   "start": "2026-11-14T19:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV14KSUTCU-TCU12"
   },
   "KXNCAAFSPREAD-26NOV14NMSUMOSU-MOSU2|NO": {
    "ask": 0.52,
