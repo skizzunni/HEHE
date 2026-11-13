@@ -5958,6 +5958,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV14PURIOWA-IOWA18"
   },
+  "KXNCAAFSPREAD-26NOV14TTUOKST-OKST4|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401856863",
+   "label": "Texas Tech Red Raiders +3.5",
+   "league": "ncaaf",
+   "match": "TTU @ OKST",
+   "posted": "2026-11-13T21:28:11+00:00",
+   "queue": 149001.03,
+   "side": "NO",
+   "spec": {
+    "line": 3.5,
+    "t": "spread",
+    "team": "Texas Tech Red Raiders"
+   },
+   "start": "2026-11-15T02:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV14TTUOKST-OKST4"
+  },
   "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM15|NO": {
    "ask": 0.52,
    "bid": 0.5,
@@ -11247,6 +11269,27 @@
    "start": "2026-11-14T20:30Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV14ASUUCF-49"
+  },
+  "KXNCAAFTOTAL-26NOV14AUBMSST-52|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401856886",
+   "label": "under 51.5",
+   "league": "ncaaf",
+   "match": "AUB @ MSST",
+   "posted": "2026-11-13T21:28:11+00:00",
+   "queue": 4118.51,
+   "side": "NO",
+   "spec": {
+    "line": 51.5,
+    "t": "under"
+   },
+   "start": "2026-11-14T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV14AUBMSST-52"
   },
   "KXNCAAFTOTAL-26NOV14ECUCHAR-46|NO": {
    "ask": 0.51,
