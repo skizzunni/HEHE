@@ -986,6 +986,13 @@ def spread_band_watch(paths=None, led=None, min_n=100, gap=5.0):
 
 PREREG = dict(name="college + NFL spreads getting 7-13.5 points", since="2026-11-08", leagues=("ncaaf", "nfl"),
               band="getting 7-13.5", need=100, gap=5.0)
+# written down 2026-11-13, before any of its legs: the one spread band still
+# cautioned (NFL getting 14+, 168/221 vs 84% stated, short in both halves).
+# Same terms: 100 legs from pools saved from 2026-11-14; 5+ points short ->
+# propose excluding the band to the user; otherwise the caution comes off.
+PREREG_NFL14 = dict(name="NFL spreads getting 14+ points", since="2026-11-14", leagues=("nfl",),
+                    band="getting 14+", need=100, gap=5.0)
+PREREGS = (PREREG, PREREG_NFL14)
 
 
 def prereg_status(paths=None, led=None, test=PREREG):
@@ -1025,7 +1032,7 @@ def prereg_status(paths=None, led=None, test=PREREG):
                     p += L["p"]
     said = round(100 * p / n, 1) if n else None
     verdict = ("waiting" if n < test["need"] else "short" if 100 * w / n <= said - test["gap"] else "fine")
-    return dict(name=test["name"], won=w, n=n, said=said, need=test["need"], verdict=verdict)
+    return dict(name=test["name"], won=w, n=n, said=said, need=test["need"], verdict=verdict, since=test["since"])
 
 
 def apply_prereg(watch, status, test=PREREG):

@@ -434,6 +434,25 @@ def prereg_line():
     return f"Pre-registered test, {s['name']}: {rec}; {what}.{hist}"
 
 
+def prereg_more_line(status_fn=None):
+    """The later pre-registered tests (locks.PREREGS after the first), one
+    clause each: name, record since its start date, and verdict."""
+    try:
+        import locks
+        tests = locks.PREREGS[1:]
+        status_fn = status_fn or (lambda t: locks.prereg_status(test=t))
+        S = [status_fn(t) for t in tests]
+    except Exception:
+        return None
+    parts = []
+    for s in S:
+        rec = f"{s['won']}/{s['n']}" + (f" ({round(100 * s['won'] / s['n'])}% vs {round(s['said'])}% stated)" if s["n"] else "")
+        what = {"waiting": f"waiting for {s['need']} legs", "short": "SHORT again -- propose excluding the band",
+                "fine": "fine -- the caution on this band is off"}[s["verdict"]]
+        parts.append(f"{s['name']} (legs from {s.get('since')}): {rec}; {what}")
+    return ("Pre-registered tests also running: " + "; ".join(parts) + ".") if parts else None
+
+
 def dc_side_line(ledger=None, min_n=30):
     """Soccer "or draw" picks split by the side taken (home or away), each
     with its date halves: won% against stated%. Priced, graded rows only.
@@ -1669,6 +1688,8 @@ def words(r, fit):
         out.append(r["cold"])
     if r.get("prereg"):
         out.append(r["prereg"])
+    if r.get("prereg_more"):
+        out.append(r["prereg_more"])
     if r.get("prop_fair"):
         out.append(r["prop_fair"])
     if r.get("dc_side"):
@@ -1828,6 +1849,7 @@ def _main():
     log[today.isoformat()]["cautions"] = caution_line()
     log[today.isoformat()]["cold"] = form_line()
     log[today.isoformat()]["prereg"] = prereg_line()
+    log[today.isoformat()]["prereg_more"] = prereg_more_line()
     log[today.isoformat()]["prop_fair"] = prop_fair_line()
     log[today.isoformat()]["dc_side"] = dc_side_line(ledger)
     log[today.isoformat()]["nhl_b2b"] = nhl_b2b_line(today, ledger=ledger)

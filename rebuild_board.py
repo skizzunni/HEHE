@@ -645,13 +645,17 @@ def snapshot():
             out["bright_pool"] = locks.bright_pool()   # bet types ahead of their chance in both halves
             out["cold_check"] = locks.cold_check()     # does a cold week carry into the next day
             out["prereg"] = locks.prereg_status()       # the pre-registered spread-band test
+            out["preregs"] = [out["prereg"]] + [locks.prereg_status(test=t) for t in locks.PREREGS[1:]]
             try:                                        # UFC favourites by chance band (tools/ufc_bands.py)
                 with open(os.path.join(HERE, "ufc_bands.json")) as fh_:
                     out["ufc_bands"] = json.load(fh_)
             except (OSError, ValueError):
                 pass
             # spread bands short in both halves, less any band the pre-registered test cleared
-            out["spread_band_watch"] = locks.apply_prereg(locks.spread_band_watch(), out.get("prereg"))
+            _sbw = locks.spread_band_watch()
+            for _t, _st in zip(locks.PREREGS, out.get("preregs") or []):
+                _sbw = locks.apply_prereg(_sbw, _st, _t)
+            out["spread_band_watch"] = _sbw
         except Exception as e_:
             print(f"pool caution skipped ({e_})", file=sys.stderr)
         try:                                    # $1 -> $10k on the day's 3-8 likeliest Locks (ladder.py)

@@ -1466,6 +1466,13 @@ makes that verdict binding: while the test reads "fine", the band carries no
 caution even if the older record dips again. NFL spreads getting 14+ (168/221
 vs 84%) keep theirs.
 
+**Pre-registered (2026-11-13, before any of its legs): NFL spreads getting
+14+.** The one spread band still cautioned: 168/221 on every saved line (76%
+vs 84% stated), short in both halves. Terms, fixed now: the next 100 such legs
+from pools saved from 2026-11-14 (locks.PREREG_NFL14). If they also run 5+
+points short, propose excluding the band to the user; otherwise the caution
+comes off (locks.apply_prereg). The review and the Locks tab show its count.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that

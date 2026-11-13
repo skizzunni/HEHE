@@ -80,6 +80,16 @@ class PreregLine(unittest.TestCase):
         self.assertIn("dogs getting 7.5-14 covered 53% then 61% in the NFL", out)
 
 
+class PreregMore(unittest.TestCase):
+    def test_line(self):
+        import locks
+        st = lambda t: dict(name=t["name"], won=40, n=50, said=84.0, need=100, verdict="waiting", since=t["since"])
+        out = daily_review.prereg_more_line(st)
+        self.assertEqual(out, "Pre-registered tests also running: NFL spreads getting 14+ points (legs from 2026-11-14): "
+                              "40/50 (80% vs 84% stated); waiting for 100 legs.")
+        self.assertIn(locks.PREREG_NFL14, locks.PREREGS)
+
+
 class DrawRate(unittest.TestCase):
     def test_line(self):
         L = {"dc": dict(dc=True, league="epl"), "dc2": dict(dc=True, league="mls")}
