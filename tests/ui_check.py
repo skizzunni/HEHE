@@ -184,6 +184,9 @@ PROBE = """<script>setTimeout(function(){
   D.locks = {today: {locks: [{label: "Over 214.5 points", price: "-400", p: 0.75, match: "A at B"}, {label: "K: 2+ Assists", price: "-390", p: 0.78, match: "C @ D"}]}};
   D.ladder = {today: {legs: [{label: "K: 2+ Assists"}], stake: 2.47, pays: 2.4}};
   out.lids = ladderLegIds(parlayLegs()).join(",");
+  out.vCau = [valueCaution({n: 448, won: 180, roi: -11.47, halves: [{n: 252, won: 104, fair: 44.1, roi: -5.0}, {n: 196, won: 76, fair: 45.1, roi: -19.7}]}),
+              valueCaution({n: 448, won: 180, roi: 1, halves: [{n: 252, won: 104, fair: 44.1, roi: 5.0}, {n: 196, won: 76, fair: 45.1, roi: -19.7}]}),
+              valueCaution({}), valueCaution(null)];
   out.goalCh = [liveGoalChance("nhl", 7.5, false, 5, 2 / 3, 0.7455), liveGoalChance("nhl", 7.5, false, 0, 0, 0.7455),
                 liveGoalChance("nhl", 5.5, true, 6, 0.5, 0.6), liveGoalChance("nba", 220.5, false, 100, 0.5, 0.75),
                 liveGoalChance("nhl", 7.5, false, 5, 2 / 3, null),
@@ -726,6 +729,9 @@ def main():
     if not (gc[0] is not None and abs(gc[0] - 0.677) < 0.01 and abs(gc[1] - 0.7455) < 0.001 and gc[2] == 1
             and gc[3] is None and gc[4] is None and "about <b>68%</b> to win from here" in (gc[5] or "")):
         fails.append("live goal-total chance wrong: " + repr(gc))
+    vc = new.get("vCau") or ["", "x", "x", "x"]
+    if not ("180 of 448 won (40% vs 45% fair), ROI -11.47%" in vc[0] and "both halves" in vc[0]) or any(vc[1:]):
+        fails.append("value-bet caution wrong: " + repr(vc))
     ll2 = new.get("legLive") or []
     if ll2 != ['{"live":"2:23 - 2nd","live_score":"Philadelphia 76ers 54 - Toronto Raptors 52"}',
                '{"live":"Final (grading soon)","live_score":"Philadelphia 76ers 54 - Toronto Raptors 52"}', None, None, None]:

@@ -1408,6 +1408,16 @@ All leagues, 3+ against: 48/70 (69% vs 67% stated, -2.6% a bet) then 42/66
 supported for the sweep; the return is negative in both halves at 2 and 3
 points, which keeps it on watch. tools/move_study.py reruns it.
 
+**On watch, not adopted: value bets by fair chance (2026-11-13).** The
+review flagged value bets TRAILING (180/453, 39.7% vs 44.5% fair, -12.5% a
+bet). Split at 2026-11-02: short in both halves (105/252 41.7% vs 44.1%,
+-4.2%; then 75/201 37.3% vs 45.1%, -22.8%). By fair chance: under 25% 4/43
+then 2/37 (short both); 40-55% 53/129 then 39/98 (41% and 40% vs 49%, short
+both, about 2.7 standard errors -- under the 99.5% bar); 55%+ 33/44 then
+30/44 (75% and 68% vs 65% and 67%, ahead both, but 1.1 standard errors). No
+filter clears the bar, so nothing is cut; the Value tab now shows a caution
+above the table while the record is behind in both halves.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that

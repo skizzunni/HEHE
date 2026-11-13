@@ -2646,6 +2646,7 @@ function valueBets(){
   return '<h3 style="margin-top:18px">Value bets: a venue paying more than the fair price</h3>'
     + '<p class="note">The same pick, priced at FanDuel or Kalshi (fee included) above what DraftKings&rsquo; own no-vig chance says '
     + 'it is worth. Not a prediction &mdash; buying the market&rsquo;s own number below its price. ' + rec + sus + '</p>'
+    + valueCaution(R)
     + (S.length ? '<div class="parlays" style="margin:8px 0"><b>Sure bets</b><ul class="betlegs">' + S.map(x =>
         '<li>' + esc(x.match) + ': ' + x.legs.map(l => esc(l.team) + ' <b>' + esc(l.price) + '</b> at ' + esc(l.venue)
           + ' (' + (100 * l.stake_share).toFixed(1) + '% of stake)').join(' + ') + ' &rarr; <b>+' + (100 * x.profit).toFixed(2)
@@ -2660,6 +2661,18 @@ function valueBets(){
         + '<p>' + copyBtn("Value bets", B.map(x => legLine(x.team, x.price, x.venue, x.match))) + '</p>'
       : '<p class="empty">No venue is paying above the fair price on an open game right now.</p>')
     + valueParlays(V);
+}
+// When the forward record is behind in both halves, say so above the table in
+// plain words: the long note above holds the numbers, but the table right
+// under it still reads "+edge" with a stake. Display only -- the record is
+// short of the 99.5% bar, so the bets stay listed.
+function valueCaution(R){
+  const H = (R || {}).halves || [];
+  if(H.length !== 2 || !H.every(h => h.roi < 0) || !R.n) return '';
+  const fair = H.reduce((a, h) => a + h.fair * h.n, 0) / H.reduce((a, h) => a + h.n, 0);
+  return '<p class="coinbar"><b>Caution:</b> value bets have lost money in both halves of their record &mdash; '
+    + R.won + ' of ' + R.n + ' won (' + Math.round(100 * R.won / R.n) + '% vs ' + Math.round(fair) + '% fair), ROI '
+    + R.roi + '%. The edges below have not shown up in results yet; if you bet them, keep it to a small test.</p>';
 }
 // Parlays made only of value bets: each leg pays above fair, so the ticket
 // does too (value_bets.value_parlays). Forward record beside them.
