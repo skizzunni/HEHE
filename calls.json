@@ -7533,30 +7533,7 @@
      "close": true,
      "conf": 98,
      "conf_first": 98,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-13T01:59:29+00:00",
-      "conf": 98,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaab:401921741",
-      "league": "ncaab",
-      "match": "MTST @ BYU",
-      "pick": "BYU Cougars",
-      "price": "-5000",
-      "price_at": "2026-11-13T01:56:29+00:00",
-      "price_market": "moneyline",
-      "price_ref": "35006704:0ML87209424_1",
-      "prob_at": "2026-11-13T01:56:29+00:00",
-      "rank": 1,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-13T02:00Z"
-     },
+     "current": null,
      "dc": false,
      "fp": "6acf459eb5a7",
      "gate": {
@@ -7728,111 +7705,18 @@
     }
    ],
    "candidate_news": {},
-   "candidate_observations": {
-    "ncaab:401921741": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 98,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-13T01:59:29+00:00",
-      "conf": 98,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaab:401921741",
-      "league": "ncaab",
-      "match": "MTST @ BYU",
-      "pick": "BYU Cougars",
-      "price": "-5000",
-      "price_at": "2026-11-13T01:56:29+00:00",
-      "price_market": "moneyline",
-      "price_ref": "35006704:0ML87209424_1",
-      "prob_at": "2026-11-13T01:56:29+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-13T02:00Z"
-     },
-     "dc": false,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": true,
-      "what": "no lineup gate for this league"
-     },
-     "id": "ncaab:401921741",
-     "league": "ncaab",
-     "match": "MTST @ BYU",
-     "pick": "BYU Cougars",
-     "price": "-5000",
-     "price_at": "2026-11-13T01:56:29+00:00",
-     "price_market": "moneyline",
-     "price_ref": "35006704:0ML87209424_1",
-     "side": "home",
-     "start": "2026-11-13T02:00Z",
-     "tip": "9:00 PM"
-    },
-    "ncaaf:401869969": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 78,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-13T01:59:29+00:00",
-      "conf": 78,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaaf:401869969",
-      "league": "ncaaf",
-      "match": "UL @ ULM",
-      "pick": "Louisiana Ragin' Cajuns",
-      "price": "-395",
-      "price_at": "2026-11-13T01:56:29+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34964159:0ML87098628_3",
-      "prob_at": "2026-11-13T01:56:29+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "away",
-      "start": "2026-11-13T02:00Z"
-     },
-     "dc": false,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": true,
-      "what": "no lineup gate for this league"
-     },
-     "id": "ncaaf:401869969",
-     "league": "ncaaf",
-     "match": "UL @ ULM",
-     "pick": "Louisiana Ragin' Cajuns",
-     "price": "-395",
-     "price_at": "2026-11-13T01:56:29+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34964159:0ML87098628_3",
-     "side": "away",
-     "start": "2026-11-13T02:00Z",
-     "tip": "9:00 PM"
-    }
-   },
-   "frozen": [],
+   "candidate_observations": {},
+   "frozen": [
+    "nba"
+   ],
    "news": {
     "nba": "2026-11-12T23:44:04+00:00"
    },
    "shadow_watch": {
     "best_at": "2026-11-12T14:30:53+00:00",
     "best_ceiling": 1.966,
-    "checks": 158,
-    "last": "2026-11-13T01:59:29+00:00",
+    "checks": 159,
+    "last": "2026-11-13T02:04:39+00:00",
     "max_ready": 4,
     "reasons": {
      "awaiting confirmed XIs": 649
