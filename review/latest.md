@@ -50,7 +50,7 @@ Locks 1/11 won, 10 open; Best play top 2 (58%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 3 (80%) open; Best play top 8 (53%) open.
 Lottery 10k: open (0/12 legs won)
 Lottery 10k: lost (0/8 legs won, killed by Northwestern Wildcats to win, Under 4.5 goals, Rutgers Scarlet Knights +16.5)
-Lottery 10k: lost (0/9 legs won, killed by Over 61.5 points, SMU Mustangs to win)
+Lottery 10k: lost (0/9 legs won, killed by Over 61.5 points, SMU Mustangs to win, Over 55.5 points)
 Lottery 10k+25: open (0/12 legs won)
 Lottery 10k+50: open (0/12 legs won)
 Lottery 10k+100: open (0/12 legs won)
