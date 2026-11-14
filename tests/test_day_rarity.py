@@ -81,6 +81,28 @@ class LikeRecord(unittest.TestCase):
         self.assertTrue(line.endswith("[favourite lost]; picks like it: 9 of 12 (75% vs 66% stated)"), line)
 
 
+class LikeRecordSoccer(unittest.TestCase):
+    def test_small_soccer_league_falls_back_to_all_soccer(self):
+        import ledger
+        lost = dict(league="wsl", conf=66, dc=False, status="lost")
+        book = {"x": lost, "w": dict(league="wsl", conf=65, dc=False, status="won")}
+        for i in range(11):
+            book[f"e{i}"] = dict(league="epl", conf=66, dc=False, status="won" if i < 8 else "lost")
+        book["nba"] = dict(league="nba", conf=66, dc=False, status="won")       # not soccer
+        self.assertEqual(ledger.like_record(book, lost), dict(won=9, n=12, said=66, scope="soccer"))
+        self.assertNotIn("scope", ledger.like_record(book, book["e0"]))          # epl has its own 10+
+        nba = dict(league="nba", conf=66, dc=False, status="lost")
+        self.assertIsNone(ledger.like_record(dict(book, y=nba), nba))            # no fallback outside soccer
+
+    def test_line_says_soccer(self):
+        import os, sys
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        line = daily_review.loss_line(dict(league="wsl", pick="A", said=66, why="", tags=[],
+                                           like=dict(won=9, n=12, said=66, scope="soccer")))
+        self.assertTrue(line.endswith("; soccer picks like it: 9 of 12 (75% vs 66% stated)"), line)
+
+
 class DrawLosses(unittest.TestCase):
     def test_counts_draws_among_straight_win_losses(self):
         three = {"first": {"prices": {"home": "-200", "draw": "+300", "away": "+500"}}}

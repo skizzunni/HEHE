@@ -824,15 +824,22 @@ def call_cautions(book, min_n=40, gap=8.0):
 def like_record(book, e, band=5):
     """Graded picks like a lost one -- same league, same bet (win or double
     chance), called within `band` points: dict(won, n, said), or None under
-    10. Tells a bad beat on a sound kind of pick from a leak."""
+    10. Tells a bad beat on a sound kind of pick from a leak. A soccer
+    league with under 10 falls back to every soccer league (scope="soccer")."""
     c = e.get("conf")
     if c is None:
         return None
-    R = [x for x in book.values() if x is not e and x.get("status") in ("won", "lost") and x.get("league") == e.get("league")
-         and bool(x.get("dc")) == bool(e.get("dc")) and x.get("conf") is not None and abs(x["conf"] - c) <= band]
+    def pool(same):
+        return [x for x in book.values() if isinstance(x, dict) and x is not e and x.get("status") in ("won", "lost")
+                and same(x.get("league")) and bool(x.get("dc")) == bool(e.get("dc"))
+                and x.get("conf") is not None and abs(x["conf"] - c) <= band]
+    R, scope = pool(lambda lg: lg == e.get("league")), None
+    if len(R) < 10 and e.get("league") in SOCCER:     # small soccer leagues (wsl, intl, unl): all soccer, labelled
+        R, scope = pool(lambda lg: lg in SOCCER), "soccer"
     if len(R) < 10:
         return None
-    return dict(won=sum(x["status"] == "won" for x in R), n=len(R), said=round(sum(x["conf"] for x in R) / len(R)))
+    out = dict(won=sum(x["status"] == "won" for x in R), n=len(R), said=round(sum(x["conf"] for x in R) / len(R)))
+    return dict(out, scope=scope) if scope else out
 
 
 def draw_losses(book):

@@ -1714,7 +1714,7 @@ def loss_line(L):
             + (f", {score}" if score else "") + (" (against the market)" if L.get("against_market") else "")
             + f": {L.get('why') or ''}" + (lambda t: f" [{', '.join(t)}]" if t else "")(
                 [t for t in L.get("tags") or [] if t not in (L.get("why") or "")])
-            + (lambda k: f"; picks like it: {k['won']} of {k['n']} ({round(100 * k['won'] / k['n'])}% vs {k['said']}% stated)"
+            + (lambda k: f"; {'soccer ' if k.get('scope') == 'soccer' else ''}picks like it: {k['won']} of {k['n']} ({round(100 * k['won'] / k['n'])}% vs {k['said']}% stated)"
                if k else "")(L.get("like")))
 
 
