@@ -31,14 +31,16 @@
      "n": 86,
      "roi": 2.48
     },
+    "gain": 1.16,
+    "gain_lower": -7.86,
     "rule": {
      "min_dec": 1.0,
      "per_sport": 1
     },
     "second": {
-     "hit": 80.6,
+     "hit": 81.3,
      "n": 155,
-     "roi": 1.46
+     "roi": 2.26
     }
    },
    {
@@ -52,9 +54,9 @@
      "per_sport": 1
     },
     "second": {
-     "hit": 80.1,
+     "hit": 80.8,
      "n": 151,
-     "roi": 7.01
+     "roi": 7.82
     }
    },
    {
@@ -86,7 +88,7 @@
     "second": {
      "hit": 79.9,
      "n": 184,
-     "roi": 4.14
+     "roi": 4.05
     }
    },
    {
@@ -176,12 +178,12 @@
   },
   "ncaaf": {
    "benched": false,
-   "hit": 72.4,
+   "hit": 72.5,
    "implied": 73.2,
-   "n": 232,
-   "roi": 0.6,
-   "upper95": 77.8,
-   "won": 168
+   "n": 233,
+   "roi": 0.7,
+   "upper95": 77.9,
+   "won": 169
   },
   "nfl": {
    "benched": false,
@@ -311,11 +313,11 @@
   },
   "Kalshi longshot, confirmed": {
    "benched": false,
-   "breakeven": 17.1,
-   "hit": 6.7,
-   "n": 30,
-   "roi": -29.5,
-   "upper95": 21.3,
+   "breakeven": 17.3,
+   "hit": 6.5,
+   "n": 31,
+   "roi": -31.8,
+   "upper95": 20.7,
    "won": 2
   },
   "Kalshi longshot, single": {
