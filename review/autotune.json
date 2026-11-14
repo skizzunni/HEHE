@@ -13,9 +13,9 @@
     "per_sport": 2
    },
    "second": {
-    "hit": 83.7,
+    "hit": 84.2,
     "n": 184,
-    "roi": 0.99
+    "roi": 1.6
    }
   },
   "dates": [
@@ -31,8 +31,8 @@
      "n": 89,
      "roi": 2.59
     },
-    "gain": 3.16,
-    "gain_lower": -6.72,
+    "gain": 2.03,
+    "gain_lower": -7.36,
     "rule": {
      "min_dec": 1.0,
      "per_sport": 1
@@ -54,9 +54,9 @@
      "per_sport": 1
     },
     "second": {
-     "hit": 81.5,
+     "hit": 80.8,
      "n": 151,
-     "roi": 8.09
+     "roi": 7.31
     }
    },
    {
@@ -70,9 +70,9 @@
      "per_sport": 2
     },
     "second": {
-     "hit": 83.7,
+     "hit": 84.2,
      "n": 184,
-     "roi": 0.99
+     "roi": 1.6
     }
    },
    {
@@ -86,9 +86,9 @@
      "per_sport": 2
     },
     "second": {
-     "hit": 81.0,
+     "hit": 80.4,
      "n": 184,
-     "roi": 4.55
+     "roi": 3.92
     }
    },
    {
@@ -102,9 +102,9 @@
      "per_sport": 3
     },
     "second": {
-     "hit": 84.6,
+     "hit": 85.1,
      "n": 188,
-     "roi": 0.72
+     "roi": 1.31
     }
    },
    {
@@ -118,9 +118,9 @@
      "per_sport": 3
     },
     "second": {
-     "hit": 81.4,
+     "hit": 80.9,
      "n": 188,
-     "roi": 4.17
+     "roi": 3.53
     }
    },
    {
@@ -136,7 +136,7 @@
     "second": {
      "hit": 85.6,
      "n": 188,
-     "roi": 0.4
+     "roi": 0.38
     }
    },
    {
@@ -150,9 +150,9 @@
      "per_sport": null
     },
     "second": {
-     "hit": 82.4,
+     "hit": 81.9,
      "n": 188,
-     "roi": 4.39
+     "roi": 3.75
     }
    }
   ]
@@ -178,12 +178,12 @@
   },
   "ncaaf": {
    "benched": false,
-   "hit": 71.5,
+   "hit": 71.7,
    "implied": 73.2,
-   "n": 246,
-   "roi": -0.6,
-   "upper95": 76.8,
-   "won": 176
+   "n": 247,
+   "roi": -0.5,
+   "upper95": 76.9,
+   "won": 177
   },
   "nfl": {
    "benched": false,
@@ -205,12 +205,12 @@
   },
   "soccer": {
    "benched": false,
-   "hit": 79.2,
+   "hit": 78.9,
    "implied": 78.3,
-   "n": 955,
-   "roi": 1.2,
-   "upper95": 81.6,
-   "won": 756
+   "n": 959,
+   "roi": 0.9,
+   "upper95": 81.4,
+   "won": 757
   },
   "ufc": {
    "benched": false,
