@@ -565,7 +565,10 @@ def national_line(ledger=None):
     """National-team soccer picks (friendlies, Nations League, World Cup
     qualifiers) against club soccer: won vs stated, and how many losses were
     draws. Information only (2026-11-13: 16/20, 80% vs 77% -- the first
-    international window on the board; too few to split)."""
+    international window on the board; too few to split). Split by bet,
+    straight win vs "or draw" (2026-11-14: two Nations League "or draw"
+    picks at 79% and 81% lost the same night; "or draw" overall is on
+    par in both halves, national teams 7/10 vs 8.0 -- too few to judge)."""
     if ledger is None:
         ledger = load("ledger.json", {})
     soc = {v.get("league") for v in ledger.values() if isinstance(v, dict) and v.get("dc")} | set(NATIONAL)
@@ -581,7 +584,10 @@ def national_line(ledger=None):
         return f"{w}/{len(x)} ({round(100 * w / len(x))}% vs {round(sum(v['conf'] for v in x) / len(x))}% stated)"
     lost = [v for v in nat if v["status"] == "lost"]
     dr = sum(1 for v in lost if v.get("scores") and len(set(v["scores"].values())) == 1)
+    by_bet = [f"{name} {rec(x)}" for name, x in (("straight win", [v for v in nat if not v.get("dc")]),
+                                                 ("or draw", [v for v in nat if v.get("dc")])) if x]
     return (f"National-team soccer: {rec(nat)}" + (f", {dr} of {len(lost)} losses draws" if lost else "")
+            + (f" ({'; '.join(by_bet)})" if len(by_bet) == 2 else "")
             + (f"; club soccer {rec(club)}." if club else "."))
 
 

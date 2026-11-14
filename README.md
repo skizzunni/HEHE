@@ -1525,6 +1525,14 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Checked, no change: heavy soccer "or draw" picks (2026-11-14).** Portugal
+or draw (79%) lost 1-4 to Denmark and Poland or draw (81%) lost 1-2 at
+Romania the same evening. By date halves of 626 graded double-chance picks:
+75%+ ran 115/143 vs 113.4 (z 0.33) then 118/144 vs 114.5 (z 0.73); 65-75%
+z 1.45 then 0.39; home and away sides, club teams all on par. National
+teams alone: 7/10 vs 8.0, recent half only -- too few. Nothing changes; the
+review's national-team line now splits straight win from "or draw".
+
 **Rejected: college football straight-win picks are underrated
 (2026-11-14).** Three NCAAF losses today (SMU 55%, James Madison 65%,
 Wisconsin 75%) came with "picks like it" records far above stated --

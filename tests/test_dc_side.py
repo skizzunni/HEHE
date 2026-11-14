@@ -120,6 +120,13 @@ class National(unittest.TestCase):
         self.assertEqual(out, "National-team soccer: 3/4 (75% vs 70% stated), 1 of 1 losses draws; club soccer 4/4 (100% vs 80% stated).")
         self.assertIsNone(daily_review.national_line({"c": dict(league="epl", status="won", conf=80)}))
 
+    def test_split_by_bet(self):
+        L = {"a": dict(league="unl", status="won", conf=70), "b": dict(league="unl", status="lost", conf=80, dc=True),
+             "c": dict(league="unl", status="won", conf=80, dc=True)}
+        self.assertEqual(daily_review.national_line(L),
+                         "National-team soccer: 2/3 (67% vs 77% stated), 0 of 1 losses draws "
+                         "(straight win 1/1 (100% vs 70% stated); or draw 1/2 (50% vs 80% stated)).")
+
 
 class HomeAway(unittest.TestCase):
     def test_line(self):
