@@ -7949,6 +7949,45 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909981|home|Kalshi": {
+   "dec": 2.5221,
+   "ev": 0.0357,
+   "fair": 0.4107,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909981",
+   "kind": "value",
+   "league": "nba",
+   "match": "DAL @ CLE",
+   "price": "+152",
+   "seen": "2026-11-14T18:19:33+00:00",
+   "side": "home",
+   "start": "2026-11-15T00:30Z",
+   "team": "Cleveland Cavaliers",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909981|sure": {
+   "id": "nba:401909981",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-142",
+     "stake_share": 0.5968,
+     "team": "Dallas Mavericks",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "+152",
+     "stake_share": 0.4032,
+     "team": "Cleveland Cavaliers",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "DAL @ CLE",
+   "profit": 0.017,
+   "seen": "2026-11-14T18:19:33+00:00"
+  },
   "nba:401909984|away|FanDuel": {
    "dec": 8.0,
    "ev": 0.0168,
