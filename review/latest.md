@@ -10,7 +10,7 @@ Pre-registered tests also running: NFL spreads getting 14+ points (legs from 202
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 82% (88% / 85%); 90%+ 84%, 84% (93% / 85%).
 Soccer or-draw picks by side: home 77% vs 74% stated on 418 (halves 78%, 77%); away 74% vs 73% stated on 208 (halves 73%, 74%). Straight wins: 66% vs 66% stated on 289; 59 of 98 losses were draws. With full price history: 82% vs 74% stated on 134 (halves 80% vs 72%, 84% vs 75%); older picks without it: 52% vs 59% on 155.
 Soccer draws on the board: 22% of 1490 games; most in EFL3 41% of 37, AUS 38% of 21, UECL 30% of 33, BRA2 29% of 31, ARG 29% of 73 -- where a straight win most often loses to a draw.
-Locks by bet type, by half: win 84% then 94% (vs 82%, 81%); spread 88% then 91% (vs 85%, 85%); total 86% then 90% (vs 83%, 84%); team total 85% then 93% (vs 86%, 86%); prop 81% then 76% (vs 85%, 78%). Short in both halves: prop.
+Locks by bet type, by half: win 84% then 94% (vs 82%, 81%); spread 88% then 91% (vs 85%, 84%); total 86% then 90% (vs 83%, 84%); team total 85% then 93% (vs 86%, 86%); prop 81% then 76% (vs 85%, 78%). Short in both halves: prop.
 Locks by league, by half: NHL 84% then 98% (vs 87%, 88%); NBA 83% then 88% (vs 83%, 82%); NCAAF 85% then 83% (vs 83%, 78%); NFL 89% then 68% (vs 84%, 82%). No league short in both halves.
 Locks props by market, by half: NBA Assists 13/17 then 18/22 (vs 90%, 79%); NFL Receiving Yards 12/14 then 6/11 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.
 Every game's safest line by bet type, by half: win 76% then 84% (vs 84%, 84%); spread 85% then 87% (vs 91%, 90%); total 95% then 96% (vs 90%, 91%); team total 100% then 94% (vs 91%, 90%). Short in both halves: win, spread. Ahead in both halves: total, team total.
@@ -51,11 +51,11 @@ Yesterday (2026-11-13): board 28-9, sweep broken by intl Iraq at 67%; 8.7 losses
 - LOST nba Oklahoma City Thunder at 68% (-237), LA Clippers 113 - Oklahoma City Thunder 112: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game · price moved against it (3 pts); picks like it: 37 of 55 (67% vs 68% stated)
 - LOST nhl Vegas Golden Knights at 60% (-170), Nashville Predators 3 - Vegas Golden Knights 2: margin 1 · the book had my side favoured too · called at 60% · favourite lost · close game; picks like it: 67 of 97 (69% vs 59% stated)
 - LOST ncaaf Houston Cougars at 75% (-325), Colorado Buffaloes 42 - Houston Cougars 32: margin 10 · the book had my side favoured too · called at 75% · upset; picks like it: 44 of 66 (67% vs 75% stated)
-Locks 1/11 won, 10 open; Best play top 2 (58%) open.
+Locks 2/11 won, 9 open; Best play top 2 (58%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 3 (80%) open; Best play top 8 (53%) open.
 Lottery 10k: open (0/12 legs won)
 Lottery 10k: lost (0/8 legs won, killed by Northwestern Wildcats to win, Under 4.5 goals, Rutgers Scarlet Knights +16.5)
-Lottery 10k: lost (0/9 legs won, killed by Over 61.5 points, SMU Mustangs to win, Over 55.5 points)
+Lottery 10k: lost (0/9 legs won, killed by Over 55.5 points, Over 61.5 points, SMU Mustangs to win, Over 55.5 points)
 Lottery 10k+25: open (0/12 legs won)
 Lottery 10k+50: open (0/12 legs won)
 Lottery 10k+100: open (0/12 legs won)
