@@ -7932,6 +7932,23 @@
    "tip": "9:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909984|away|FanDuel": {
+   "dec": 8.0,
+   "ev": 0.0168,
+   "fair": 0.1271,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909984",
+   "kind": "value",
+   "league": "nba",
+   "match": "CHI @ MIN",
+   "price": "+700",
+   "seen": "2026-11-14T06:19:41+00:00",
+   "side": "away",
+   "start": "2026-11-15T01:00Z",
+   "team": "Chicago Bulls",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaab:401906758|away|FanDuel": {
    "dec": 41.0,
    "ev": 0.0352,
@@ -18287,6 +18304,26 @@
    "seen": "2026-11-12T05:39:58+00:00",
    "status": "lost",
    "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909984:away": {
+   "ev": 0.0168,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0168,
+     "fair": 0.1271,
+     "id": "nba:401909984",
+     "price": "+700",
+     "side": "away",
+     "spec": null,
+     "team": "Chicago Bulls"
+    }
+   ],
+   "payout": 8.0,
+   "prob": 0.1271,
+   "seen": "2026-11-14T06:19:41+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaab:401906758:away": {
