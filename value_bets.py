@@ -385,9 +385,22 @@ def report(path=None, kind="value"):
             halves.append(dict(n=len(xs), won=sum(f["status"] == "won" for f in xs),
                                fair=round(100 * sum(f.get("fair") or 0 for f in xs) / len(xs), 1),
                                roi=round(100 * sum((f["dec"] - 1) if f["status"] == "won" else -1 for f in xs) / len(xs), 1)))
+    # by the side bet, both halves: 2026-11-13 home finds ran short of fair in
+    # both halves (39% vs 46%, 29% vs 49%), away ahead (36% vs 32%, 42% vs 34%)
+    # -- under the 99.5% bar, shown, not acted on
+    by_side = []
+    for side in ("home", "away"):
+        H = []
+        for h in (False, True):
+            xs = [f for f in fs if f.get("side") == side and (f["seen"][:10] >= mid) == h]
+            H.append(dict(n=len(xs), won=sum(f["status"] == "won" for f in xs),
+                          fair=round(100 * sum(f.get("fair") or 0 for f in xs) / len(xs), 1) if xs else None,
+                          roi=round(100 * sum((f["dec"] - 1) if f["status"] == "won" else -1 for f in xs) / len(xs), 1) if xs else None))
+        if all(x["n"] for x in H):
+            by_side.append(dict(side=side, halves=H))
     return dict(n=len(fs), won=sum(f["status"] == "won" for f in fs),
                 est_ev=round(100 * sum(f["ev"] for f in fs) / len(fs), 2),
-                roi=round(100 * sum(ret) / len(fs), 2), recent=recent, by_edge=bands, halves=halves,
+                roi=round(100 * sum(ret) / len(fs), 2), recent=recent, by_edge=bands, halves=halves, by_side=by_side,
                 dates=[min(f["seen"][:10] for f in fs), max(f["seen"][:10] for f in fs)])
 
 

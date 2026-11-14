@@ -2683,6 +2683,8 @@ function valueBets(){
          + '% vs ' + h.fair + '% fair, ROI ' + (h.roi >= 0 ? '+' : '') + h.roi + '%)').join(', then ')
          + (R.halves.every(h => h.roi > 0) ? ' &ndash; ahead in both halves.' : R.halves.every(h => h.roi < 0)
             ? ' &ndash; behind in both halves: the stated edges are not showing up in results yet.' : ' &ndash; mixed.') : '')
+      + ((R.by_side || []).length ? ' By side: ' + R.by_side.map(b => esc(b.side) + ' ' + b.halves.map(h => h.won + ' of ' + h.n + ' ('
+         + Math.round(100 * h.won / h.n) + '% vs ' + h.fair + '% fair, ROI ' + (h.roi >= 0 ? '+' : '') + h.roi + '%)').join(' then ')).join('; ') + '.' : '')
     : 'No value bet has been graded yet: every one is archived when first seen and graded after its game.';
   const SR = V.suspect_record || {}, GR = V.single_record || {};
   const sus = ' Edges claiming more than 5% are held out as likely stale quotes (they won 5 of 17 before this rule) and graded apart'

@@ -1501,6 +1501,15 @@ international window: 16/20 (80% vs 76% stated), 2 of the 4 losses draws --
 ahead of stated, and too few to split by half. Club soccer 783/1082 (72% vs
 71%). No leak; the review now prints national_line so the window is tracked.
 
+**On watch, not adopted: value bets by side (2026-11-13).** Value bets trail
+their fair chance (180/453, 39.7% vs 44.5%). By venue both trail (Kalshi 38%
+then 37% vs 44%, 47%; FanDuel 45% then 38% vs 44%, 42%). By side, split at
+2026-11-02: home finds 22/57 then 17/59 (39%, 29% vs 46%, 49% fair; -18.2%,
+-55.3% a bet), away finds 30/84 then 25/60 (36%, 42% vs 32%, 34%; +8.4%,
++4.4%). The home shortfall is about 1.1 then 3.1 standard errors -- not past
+the bar in both halves -- so no side is cut; the Value tab now prints the
+split (value_bets.report by_side).
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
