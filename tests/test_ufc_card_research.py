@@ -31,5 +31,18 @@ class Research(unittest.TestCase):
         self.assertEqual(u.card("20261114", fetch=lambda url: sb), [("X", "1", "Y", "2", "Heavyweight")])
 
 
+class Flags(unittest.TestCase):
+    def test_flags(self):
+        me = dict(days_off=487, results=["L", "L", "L", "W", "L"], age=43, reach='72"')
+        opp = dict(results=["W", "W", "W", "W", "L"], reach='76"')
+        self.assertEqual(u.flags(me, opp), ["487 days since last fight", "lost last fight", "lost 4 of last 5", "age 43",
+                                             "opponent on 4-fight win streak", 'gives up 4" of reach'])
+        self.assertEqual(u.flags(dict(days_off=60, results=["W", "W"], age=30, reach='75"'), dict(results=["L"], reach='74"')), [])
+
+    def test_results_newest_first(self):
+        s = u.summarize(PROFILE, STATS, today=dt.date(2026, 11, 14))
+        self.assertEqual(s["results"], ["W", "L"])
+
+
 if __name__ == "__main__":
     unittest.main()

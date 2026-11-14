@@ -61,10 +61,45 @@ def summarize(profile, stats, events_map=None, today=None):
     days_off = None
     if dates and today:
         days_off = (today - dt.date.fromisoformat(dates[-1])).days
-    return dict(name=a.get("displayName"), age=a.get("age"), reach=a.get("displayReach"),
+    res = [e.get("gameResult") for e in sorted(M.values(), key=lambda e: e.get("gameDate") or "", reverse=True)
+           if e.get("gameResult") in ("W", "L", "D")]
+    return dict(name=a.get("displayName"), age=a.get("age"), reach=a.get("displayReach"), results=res[:5],
                 rec=ss.get("wins-losses-draws"), ko=ss.get("tkos-tkoLosses"), sub=ss.get("submissions-submissionLosses"),
                 ssl=ssl, acc=(100 * ssl / ssa if ssl and ssa else None), td=avg("TDL"), tda=avg("TDA"),
                 kd=sum(_num(r.get("KD")) or 0 for r in R), n=len(R), days_off=days_off)
+
+
+def _inches(r):
+    try:
+        return float(str(r).replace('"', "").strip())
+    except (TypeError, ValueError):
+        return None
+
+
+def flags(s, opp=None):
+    """Warning signs for one fighter, in words: a layoff of a year or more, a
+    loss last time out, 3+ losses in the last 5, age 38+, and -- against the
+    opponent -- a 4+ fight win streak or a reach gap of 4+ inches. Facts to
+    check, not a prediction: none of these beat the price on 2,850 fights."""
+    out = []
+    if (s.get("days_off") or 0) >= 365:
+        out.append(f"{s['days_off']} days since last fight")
+    R = s.get("results") or []
+    if R[:1] == ["L"]:
+        out.append("lost last fight")
+    if R[:5].count("L") >= 3:
+        out.append(f"lost {R[:5].count('L')} of last {len(R[:5])}")
+    if (s.get("age") or 0) >= 38:
+        out.append(f"age {s['age']}")
+    if opp:
+        OR = opp.get("results") or []
+        streak = next((i for i, r in enumerate(OR) if r != "W"), len(OR))
+        if streak >= 4:
+            out.append(f"opponent on {streak}-fight win streak")
+        a, b = _inches(s.get("reach")), _inches(opp.get("reach"))
+        if a is not None and b is not None and b - a >= 4:
+            out.append(f"gives up {b - a:g}\" of reach")
+    return out
 
 
 def line(s):
@@ -78,16 +113,22 @@ def main(day):
     today = dt.date(int(day[:4]), int(day[4:6]), int(day[6:]))
     for na, ia, nb, ib, wc in card(day):
         print(f"=== {na} vs {nb} ({wc})")
+        S = {}
         for nm, i in ((na, ia), (nb, ib)):
             try:
                 p = get(ATH + str(i))
-                s = summarize(p, get(ATH + str(i) + "/stats"), today=today)
-                print("   " + line(s))
+                S[nm] = summarize(p, get(ATH + str(i) + "/stats"), today=today)
+                print("   " + line(S[nm]))
                 news = (get(ATH + str(i) + "/overview").get("news") or [])[:1]
                 if news:
                     print(f"      news: {news[0]['headline']} ({news[0].get('lastModified', '')[:10]})")
             except Exception as e:
                 print(f"   {nm}: unavailable ({type(e).__name__})")
+        for me, them in ((na, nb), (nb, na)):
+            if me in S:
+                fl = flags(S[me], S.get(them))
+                if fl:
+                    print(f"   FLAGS {me}: " + "; ".join(fl))
 
 
 if __name__ == "__main__":
