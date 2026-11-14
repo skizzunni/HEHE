@@ -121,6 +121,19 @@ class National(unittest.TestCase):
         self.assertIsNone(daily_review.national_line({"c": dict(league="epl", status="won", conf=80)}))
 
 
+class HomeAway(unittest.TestCase):
+    def test_line(self):
+        fp = dict(prices=dict(home="-200", away="+170"))
+        L = {}
+        for i in range(32):
+            day = "2026-10-05" if i < 16 else "2026-11-05"
+            side = "home" if i % 2 else "away"
+            L[f"p{i}"] = dict(league="nba", status="won" if i % 4 != 1 else "lost", conf=70, date=day, myside=side, first=fp)
+        out = daily_review.home_away_line(L)
+        self.assertEqual(out, "Home and away picks, by half: NBA home 50% vs 70% then 50% vs 70%, away 100% vs 70% then 100% vs 70%.")
+        self.assertIsNone(daily_review.home_away_line({}))
+
+
 class PreregMore(unittest.TestCase):
     def test_line(self):
         import locks

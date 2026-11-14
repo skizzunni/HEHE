@@ -1510,6 +1510,13 @@ then 37% vs 44%, 47%; FanDuel 45% then 38% vs 44%, 42%). By side, split at
 the bar in both halves -- so no side is cut; the Value tab now prints the
 split (value_bets.report by_side).
 
+**Rejected: fade NBA road favourites (2026-11-13).** Prompted by the Knicks
+(73%, at Indiana) and Hawks (69%, at Chicago) both losing. Priced-era picks
+by side, split at 2026-11-01: NBA road picks 24/32 then 31/39 (75%, 79% vs
+63%, 68% stated) -- the board's best group; home 38/56 then 39/52 (68%, 75%
+vs 66%, 68%). NHL, college football and NFL show no side short in both halves
+either. The review prints home_away_line daily.
+
 ## Rejected
 
 **Tennis fatigue.** A rating knows how good a player is; it cannot know that
