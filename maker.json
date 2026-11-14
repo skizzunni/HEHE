@@ -1677,6 +1677,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV14APPMRSH-APP"
   },
+  "KXNCAAFGAME-26NOV14APPMRSH-MRSH|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401869928",
+   "label": "Marshall Thundering Herd",
+   "league": "ncaaf",
+   "match": "APP @ MRSH",
+   "posted": "2026-11-14T21:39:07+00:00",
+   "queue": 13458.17,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Marshall Thundering Herd"
+   },
+   "start": "2026-11-14T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV14APPMRSH-MRSH"
+  },
   "KXNCAAFGAME-26NOV14ARSTCCAR-CCAR|YES": {
    "ask": 0.53,
    "bid": 0.51,
@@ -6053,6 +6074,28 @@
    "status": "graded",
    "ticker": "KXNCAAFSPREAD-26NOV14ALAVAN-ALA18",
    "won": 1
+  },
+  "KXNCAAFSPREAD-26NOV14APPMRSH-MRSH2|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0273,
+   "fair": 0.5182,
+   "id": "ncaaf:401869928",
+   "label": "App State Mountaineers +1.5",
+   "league": "ncaaf",
+   "match": "APP @ MRSH",
+   "posted": "2026-11-14T21:39:07+00:00",
+   "queue": 81322.44,
+   "side": "NO",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "App State Mountaineers"
+   },
+   "start": "2026-11-14T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV14APPMRSH-MRSH2"
   },
   "KXNCAAFSPREAD-26NOV14ARSTCCAR-CCAR2|NO": {
    "ask": 0.51,
