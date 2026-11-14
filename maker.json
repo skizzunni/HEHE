@@ -6558,6 +6558,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV14PURIOWA-IOWA18"
   },
+  "KXNCAAFSPREAD-26NOV14SCARARK-SCAR8|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401856882",
+   "label": "Arkansas Razorbacks +7.5",
+   "league": "ncaaf",
+   "match": "SC @ ARK",
+   "posted": "2026-11-14T16:39:54+00:00",
+   "queue": 68906.14,
+   "side": "NO",
+   "spec": {
+    "line": 7.5,
+    "t": "spread",
+    "team": "Arkansas Razorbacks"
+   },
+   "start": "2026-11-15T00:45Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV14SCARARK-SCAR8"
+  },
   "KXNCAAFSPREAD-26NOV14SCARARK-SCAR8|YES": {
    "ask": 0.51,
    "bid": 0.5,
@@ -12907,6 +12929,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV14MTULIB-54"
   },
+  "KXNCAAFTOTAL-26NOV14NDSUHAW-40|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401864537",
+   "label": "under 39.5",
+   "league": "ncaaf",
+   "match": "NDSU @ HAW",
+   "posted": "2026-11-14T16:39:54+00:00",
+   "queue": 30575.24,
+   "side": "NO",
+   "spec": {
+    "line": 39.5,
+    "t": "under"
+   },
+   "start": "2026-11-15T04:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV14NDSUHAW-40"
+  },
   "KXNCAAFTOTAL-26NOV14NEBRUTG-52|YES": {
    "ask": 0.52,
    "bid": 0.5,
@@ -13133,6 +13176,27 @@
    "spec": {
     "line": 46.5,
     "t": "under"
+   },
+   "start": "2026-11-15T00:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV14TEXLSU-47"
+  },
+  "KXNCAAFTOTAL-26NOV14TEXLSU-47|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401856885",
+   "label": "over 46.5",
+   "league": "ncaaf",
+   "match": "TEX @ LSU",
+   "posted": "2026-11-14T16:39:54+00:00",
+   "queue": 61074.29,
+   "side": "YES",
+   "spec": {
+    "line": 46.5,
+    "t": "over"
    },
    "start": "2026-11-15T00:30Z",
    "status": "open",
