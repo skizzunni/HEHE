@@ -7949,6 +7949,23 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909981|home|FanDuel": {
+   "dec": 2.62,
+   "ev": 0.0183,
+   "fair": 0.3886,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909981",
+   "kind": "value",
+   "league": "nba",
+   "match": "DAL @ CLE",
+   "price": "+162",
+   "seen": "2026-11-14T18:35:10+00:00",
+   "side": "home",
+   "start": "2026-11-15T00:30Z",
+   "team": "Cleveland Cavaliers",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909981|home|Kalshi": {
    "dec": 2.5221,
    "ev": 0.0357,
@@ -18621,6 +18638,55 @@
    "payout": 10.338,
    "prob": 0.1021,
    "seen": "2026-11-14T15:17:51+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909981:home": {
+   "ev": 0.0181,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0183,
+     "fair": 0.3886,
+     "id": "nba:401909981",
+     "price": "+162",
+     "side": "home",
+     "spec": null,
+     "team": "Cleveland Cavaliers"
+    }
+   ],
+   "payout": 2.62,
+   "prob": 0.3886,
+   "seen": "2026-11-14T18:35:10+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909981:home|ncaaf:401856862:away": {
+   "ev": 0.0411,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0223,
+     "fair": 0.1794,
+     "id": "ncaaf:401856862",
+     "price": "+470",
+     "side": "away",
+     "spec": null,
+     "team": "Kansas State Wildcats"
+    },
+    {
+     "ev": 0.0183,
+     "fair": 0.3886,
+     "id": "nba:401909981",
+     "price": "+162",
+     "side": "home",
+     "spec": null,
+     "team": "Cleveland Cavaliers"
+    }
+   ],
+   "payout": 14.934,
+   "prob": 0.0697,
+   "seen": "2026-11-14T18:35:10+00:00",
    "target": 10.0,
    "venue": "FanDuel"
   },
