@@ -1525,6 +1525,14 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Pre-registered (2026-11-14, before any of its legs): college football
+team-total unders.** The one pool caution in force: 859/1111 on every saved
+line (77% vs 82% stated), short in both halves (78% then 77% vs 81%, 82%).
+Terms, fixed now: the next 150 such legs from pools saved from 2026-11-15
+(locks.PREREG_NCAAF_TU). If they also run 3+ points short, propose excluding
+them to the user; otherwise the caution comes off (locks.apply_prereg_pool).
+The pre-registered test code now takes a bet type as well as a spread band.
+
 **Rejected: fade NBA road favourites (2026-11-13).** Prompted by the Knicks
 (73%, at Indiana) and Hawks (69%, at Chicago) both losing. Priced-era picks
 by side, split at 2026-11-01: NBA road picks 24/32 then 31/39 (75%, 79% vs

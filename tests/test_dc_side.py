@@ -147,10 +147,11 @@ class LadderPool(unittest.TestCase):
 class PreregMore(unittest.TestCase):
     def test_line(self):
         import locks
-        st = lambda t: dict(name=t["name"], won=40, n=50, said=84.0, need=100, verdict="waiting", since=t["since"])
+        st = lambda t: dict(name=t["name"], won=40, n=50, said=84.0, need=t["need"], verdict="waiting", since=t["since"])
         out = daily_review.prereg_more_line(st)
         self.assertEqual(out, "Pre-registered tests also running: NFL spreads getting 14+ points (legs from 2026-11-14): "
-                              "40/50 (80% vs 84% stated); waiting for 100 legs.")
+                              "40/50 (80% vs 84% stated); waiting for 100 legs; college football team-total unders "
+                              "(legs from 2026-11-15): 40/50 (80% vs 84% stated); waiting for 150 legs.")
         self.assertIn(locks.PREREG_NFL14, locks.PREREGS)
 
 

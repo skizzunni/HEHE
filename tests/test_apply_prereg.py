@@ -22,5 +22,22 @@ class Prereg(unittest.TestCase):
         self.assertEqual(locks.apply_prereg(None, dict(verdict="fine")), [])
 
 
+class PreregPool(unittest.TestCase):
+    P = [dict(league="ncaaf", t="teamunder", won=859, n=1111, said=82), dict(league="nfl", t="teamunder", won=1, n=2, said=80)]
+
+    def test_fine_lifts_that_bet_type_only(self):
+        self.assertEqual(locks.apply_prereg_pool(self.P, dict(verdict="fine"), locks.PREREG_NCAAF_TU), [self.P[1]])
+
+    def test_waiting_or_band_tests_change_nothing(self):
+        self.assertEqual(locks.apply_prereg_pool(self.P, dict(verdict="waiting"), locks.PREREG_NCAAF_TU), self.P)
+        self.assertEqual(locks.apply_prereg_pool(self.P, dict(verdict="fine"), locks.PREREG), self.P)
+        self.assertEqual(locks.apply_prereg(W, dict(verdict="fine"), locks.PREREG_NCAAF_TU), W)
+
+    def test_registered(self):
+        self.assertIn(locks.PREREG_NCAAF_TU, locks.PREREGS)
+        self.assertEqual((locks.PREREG_NCAAF_TU["need"], locks.PREREG_NCAAF_TU["gap"], locks.PREREG_NCAAF_TU["since"]),
+                         (150, 3.0, "2026-11-15"))
+
+
 if __name__ == "__main__":
     unittest.main()

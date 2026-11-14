@@ -992,7 +992,13 @@ PREREG = dict(name="college + NFL spreads getting 7-13.5 points", since="2026-11
 # propose excluding the band to the user; otherwise the caution comes off.
 PREREG_NFL14 = dict(name="NFL spreads getting 14+ points", since="2026-11-14", leagues=("nfl",),
                     band="getting 14+", need=100, gap=5.0)
-PREREGS = (PREREG, PREREG_NFL14)
+# written down 2026-11-14, before any of its legs: the one pool caution in
+# force, college team-total unders (859/1111, 77% vs 82%, short in both
+# halves). The next 150 such legs from pools saved from 2026-11-15; 3+ points
+# short -> propose excluding them to the user; otherwise the caution comes off.
+PREREG_NCAAF_TU = dict(name="college football team-total unders", since="2026-11-15", leagues=("ncaaf",),
+                       t="teamunder", band=None, need=150, gap=3.0)
+PREREGS = (PREREG, PREREG_NFL14, PREREG_NCAAF_TU)
 
 
 def prereg_status(paths=None, led=None, test=PREREG):
@@ -1013,8 +1019,10 @@ def prereg_status(paths=None, led=None, test=PREREG):
                 continue
             for L in x.get("legs") or []:
                 sp = L.get("spec") or {}
-                if (L.get("league") not in test["leagues"] or sp.get("t") != "spread"
-                        or spread_band(sp.get("line")) != test["band"] or not (0.70 <= (L.get("p") or 0) < 0.95)):
+                # a test names its bet type (default the spread tests) and, for spreads, a band
+                if (L.get("league") not in test["leagues"] or sp.get("t") != test.get("t", "spread")
+                        or (test.get("band") and spread_band(sp.get("line")) != test["band"])
+                        or not (0.70 <= (L.get("p") or 0) < 0.95)):
                     continue
                 key = (L.get("gid"), L.get("label"))
                 if key in seen:
@@ -1035,12 +1043,21 @@ def prereg_status(paths=None, led=None, test=PREREG):
     return dict(name=test["name"], won=w, n=n, said=said, need=test["need"], verdict=verdict, since=test["since"])
 
 
+def apply_prereg_pool(watch, status, test):
+    """watch_pool cautions after a pre-registered test on a bet type (no
+    band): once it reads "fine", that league and bet type are no longer
+    cautioned. Spread-band tests are left to apply_prereg."""
+    if (status or {}).get("verdict") != "fine" or test.get("band"):
+        return list(watch or [])
+    return [w for w in watch or [] if not (w.get("league") in test["leagues"] and w.get("t") == test.get("t"))]
+
+
 def apply_prereg(watch, status, test=PREREG):
     """The spread-band cautions after the pre-registered test's verdict: once
     the test reads "fine" (its own fresh legs were not short), the band it
     covers is no longer cautioned, whatever the older record says -- the test
     was written down to settle exactly that. Other bands are kept."""
-    if (status or {}).get("verdict") != "fine":
+    if (status or {}).get("verdict") != "fine" or not test.get("band"):
         return list(watch or [])
     return [w for w in watch or [] if not (w.get("league") in test["leagues"] and w.get("band") == test["band"])]
 

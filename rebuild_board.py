@@ -662,6 +662,9 @@ def snapshot():
         _skipped = fill_parts(out, _parts)
         if out.get("preregs"):
             out["prereg"] = out["preregs"][0]
+            if "watch_pool" in out:             # a bet-type test that passed lifts its pool caution
+                for t_, st_ in zip(locks.PREREGS, out["preregs"]):
+                    out["watch_pool"] = locks.apply_prereg_pool(out["watch_pool"], st_, t_)
         try:                                    # UFC favourites by chance band (tools/ufc_bands.py)
             with open(os.path.join(HERE, "ufc_bands.json")) as fh_:
                 out["ufc_bands"] = json.load(fh_)
