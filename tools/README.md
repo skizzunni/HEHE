@@ -53,4 +53,4 @@ Every script here, with the first paragraph of its own description.
 | `weather_lab.py` | Weather lab: does kickoff weather beat the closing total? |
 | `whole_ticket.py` | Whole-ticket backtest: does the optimizer cash more tickets than the baseline at the same payout target? Individual hit rates do not count here. |
 | `check.sh` | Everything a change must pass before it is committed. Exits non-zero on the first failure, so `tools/check.sh && git commit ...` cannot commit past a failing test (2026-11-05: a pipe into `tail` hid a failing unit test). |
-| `watch_ladder.sh` | Live ladder tracking in one command, safe to re-run after a restart: tools/watch_ladder.sh WORKDIR [DAY LEAGUE] Makes WORKDIR a detached worktree of this repo if it is not one yet, keeps its state in... |
+| `watch_ladder.sh` | Live ladder tracking in one command, safe to re-run after a restart: tools/watch_ladder.sh [WORKDIR] [DAY LEAGUE]. WORKDIR defaults to ~/.cache/hehe-ladder-watch (a restart can wipe /tmp); DAY "auto" is the board day (ET, 3 AM rollover). Keeps state in WORKDIR.state.json and prints DONE when everything has settled. |
