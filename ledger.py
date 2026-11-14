@@ -512,7 +512,8 @@ def diagnose(e, res):
         bits.append("a starter was unannounced when I called it")
     c = e.get("conf") or 0
     bits.append(f"called at {c:.0f}%")
-    bits += [t for t in loss_tags(e, scores) if t not in bits]
+    bits += [t for t in loss_tags(e, scores) if t not in bits
+             and not (t == "drawn" and any(b.startswith("drawn") for b in bits))]   # said once, in full
     return " · ".join(bits)
 
 
@@ -533,13 +534,16 @@ def loss_tags(e, scores=None):
     """Short, countable reasons for one loss (description only, never a
     parameter): how likely it was ('coin flip' under 60%, 'upset' at 75%+,
     else 'favourite lost'), how it was lost ('close game' / 'blowout' by the
-    sport's margins; soccer: 1 goal is close), and 'price moved against it'
+    sport's margins; soccer: 1 goal is close), 'drawn' when the score
+    finished level (a draw sinks a straight-win pick), and 'price moved against it'
     when the line drifted 3+ points the other way between the call and the
     last price before the start -- the mark late news leaves."""
     tags = []
     c = e.get("conf") or 0
     tags.append("coin flip" if c < 60 else "upset" if c >= 75 else "favourite lost")
     sc = [v for v in (scores if scores is not None else e.get("scores") or {}).values() if isinstance(v, int)]
+    if len(sc) == 2 and sc[0] == sc[1]:
+        tags.append("drawn")                     # a level score sinks a straight-win pick (soccer, hockey ties)
     if len(sc) == 2 and sc[0] != sc[1]:
         m = abs(sc[0] - sc[1])
         close, blow = _MARGINS.get(e.get("league"), (1, 3))

@@ -19,6 +19,14 @@ class LossTags(unittest.TestCase):
         e = dict(league="nfl", conf=68, first_price="-200", price="-210", scores={"A": 20, "B": 30})
         self.assertEqual(ledger.loss_tags(e), ["favourite lost"])
 
+    def test_draw_tag(self):
+        e = dict(league="epl", conf=66, price="-245", scores={"A": 0, "B": 0})
+        self.assertEqual(ledger.loss_tags(e), ["favourite lost", "drawn"])
+
+    def test_diagnose_says_drawn_once(self):
+        d = ledger.diagnose(dict(league="epl", pick="A", conf=66, market_agrees=True), {"scores": {"A": 0, "B": 0}})
+        self.assertEqual(d.count("drawn"), 1, d)
+
     def test_diagnose_carries_the_tags(self):
         d = ledger.diagnose(dict(league="nhl", pick="A", conf=52, market_agrees=True), {"scores": {"A": 2, "B": 3}})
         self.assertIn("coin flip", d)
