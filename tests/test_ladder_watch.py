@@ -182,3 +182,17 @@ class NoHundred(unittest.TestCase):
         out = w.games_snapshot(book, "2026-11-13", "all")
         self.assertIn("Kentucky Wildcats (99%+) = won", list(out.values())[0])
 
+
+class FirstLookSettled(unittest.TestCase):
+    def test_settled_ticket_and_all_games_done(self):
+        import ladder_watch as w
+        after = {"Houston Cougars to win": "lost | Colorado Buffaloes 42 - Houston Cougars 32",
+                 "SETTLED": "2026-11-13 lost bank 1.0",
+                 "GAME ncaaf HOU @ COLO": "board pick Houston Cougars (75%) = lost | Colorado Buffaloes 42, Houston Cougars 32 | why: upset",
+                 "GAME nba POR @ SAC": "board pick Portland Trail Blazers (79%) = won | Portland Trail Blazers 120, Sacramento Kings 107"}
+        self.assertEqual(w.first_look(after), [
+            "WATCHING: Houston Cougars to win = lost | Colorado Buffaloes 42 - Houston Cougars 32",
+            "WATCHING: SETTLED = 2026-11-13 lost bank 1.0",
+            "WATCHING: 2 board games -- 1 won, 1 lost (ncaaf HOU @ COLO), 0 open"])
+        self.assertTrue(w.done(after))
+
