@@ -10899,6 +10899,45 @@
    "tip": "4:15 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401858521|home|Kalshi": {
+   "dec": 2.3419,
+   "ev": 0.0344,
+   "fair": 0.4417,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401858521",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "WASH @ MSU",
+   "price": "+134",
+   "seen": "2026-11-14T22:00:36+00:00",
+   "side": "home",
+   "start": "2026-11-14T22:30Z",
+   "team": "Michigan State Spartans",
+   "tip": "5:30 PM",
+   "venue": "Kalshi"
+  },
+  "ncaaf:401858521|sure": {
+   "id": "ncaaf:401858521",
+   "kind": "sure",
+   "league": "ncaaf",
+   "legs": [
+    {
+     "price": "-134",
+     "stake_share": 0.5728,
+     "team": "Washington Huskies",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+134",
+     "stake_share": 0.4272,
+     "team": "Michigan State Spartans",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "WASH @ MSU",
+   "profit": 0.0004,
+   "seen": "2026-11-14T22:00:36+00:00"
+  },
   "ncaaf:401858524|{\"line\": 41.5, \"t\": \"under\"}|Kalshi": {
    "dec": 2.0513,
    "dk": "-108",
