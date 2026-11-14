@@ -186,7 +186,8 @@ PROBE = """<script>setTimeout(function(){
   out.lids = ladderLegIds(parlayLegs()).join(",");
   out.pctS = [pctShown(99.8), pctShown(100), pctShown(99.4), pctShown(67.2), pctShown(undefined)];
   var vS = D.value; D.value = {bets: [], record: {n: 10, won: 4, roi: -5, est_ev: 2, dates: ["2026-10-22", "2026-11-12"],
-    by_side: [{side: "home", halves: [{n: 58, won: 23, fair: 46.5, roi: -16.9}, {n: 58, won: 16, fair: 48.4, roi: -57.3}]}]}};
+    by_side: [{side: "home", halves: [{n: 58, won: 23, fair: 46.5, roi: -16.9}, {n: 58, won: 16, fair: 48.4, roi: -57.3}]}],
+    prereg: {name: "home-side value bets", since: "2026-11-15", won: 0, n: 0, fair: null, need: 60, verdict: "waiting"}}};
   out.vSide = valueBets(); D.value = vS;
   var psN = D.paths; D.paths = Object.assign({}, psN, {epl: "soccer/eng.1"});
   out.needs = [needLine({label: "Franz Wagner: 6+ Assists"}), needLine({label: "Houston Cougars to win", league: "ncaaf"}),
@@ -774,6 +775,8 @@ def main():
         fails.append("needs lines wrong: " + repr(nd))
     if "By side: home 23 of 58 (40% vs 46.5% fair, ROI -16.9%) then 16 of 58 (28% vs 48.4% fair, ROI -57.3%)." not in new.get("vSide", ""):
         fails.append("value bets by side missing: " + new.get("vSide", "")[:200])
+    if "Pre-registered test, home-side value bets from 2026-11-15: none graded yet &middot; waiting for 60." not in new.get("vSide", ""):
+        fails.append("value prereg line missing: " + new.get("vSide", "")[:300])
     if new.get("pctS") != ["99%+", "99%+", "99%", "67%", "&mdash;"]:
         fails.append("chance display must never read 100%: " + repr(new.get("pctS")))
     vc = new.get("vCau") or ["", "x", "x", "x"]

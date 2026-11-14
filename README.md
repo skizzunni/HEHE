@@ -1510,6 +1510,13 @@ then 37% vs 44%, 47%; FanDuel 45% then 38% vs 44%, 42%). By side, split at
 the bar in both halves -- so no side is cut; the Value tab now prints the
 split (value_bets.report by_side).
 
+**Pre-registered (2026-11-14, before any of its finds): home-side value bets.**
+Home finds ran short of fair in both halves (39% vs 46%, 29% vs 49%; about
+1.1 then 3.1 standard errors). Terms, fixed now: the next 60 graded home-side
+value finds first seen from 2026-11-15 (value_bets.PREREG_HOME). If they also
+run 5+ points short of fair, propose dropping home value bets to the user;
+otherwise the concern is dropped. The Value tab shows its count.
+
 **Rejected: fade NBA road favourites (2026-11-13).** Prompted by the Knicks
 (73%, at Indiana) and Hawks (69%, at Chicago) both losing. Priced-era picks
 by side, split at 2026-11-01: NBA road picks 24/32 then 31/39 (75%, 79% vs

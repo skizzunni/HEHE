@@ -2690,6 +2690,9 @@ function valueBets(){
          + '% vs ' + h.fair + '% fair, ROI ' + (h.roi >= 0 ? '+' : '') + h.roi + '%)').join(', then ')
          + (R.halves.every(h => h.roi > 0) ? ' &ndash; ahead in both halves.' : R.halves.every(h => h.roi < 0)
             ? ' &ndash; behind in both halves: the stated edges are not showing up in results yet.' : ' &ndash; mixed.') : '')
+      + (R.prereg && R.prereg.need ? ' Pre-registered test, ' + esc(R.prereg.name) + ' from ' + esc(R.prereg.since) + ': '
+         + (R.prereg.n ? R.prereg.won + ' of ' + R.prereg.n + ' (' + Math.round(100 * R.prereg.won / R.prereg.n) + '% vs ' + R.prereg.fair + '% fair)' : 'none graded yet')
+         + ' &middot; ' + ({waiting: 'waiting for ' + R.prereg.need, short: 'short again &ndash; proposing to drop home value bets', fine: 'fine &ndash; concern dropped'}[R.prereg.verdict] || '') + '.' : '')
       + ((R.by_side || []).length ? ' By side: ' + R.by_side.map(b => esc(b.side) + ' ' + b.halves.map(h => h.won + ' of ' + h.n + ' ('
          + Math.round(100 * h.won / h.n) + '% vs ' + h.fair + '% fair, ROI ' + (h.roi >= 0 ? '+' : '') + h.roi + '%)').join(' then ')).join('; ') + '.' : '')
     : 'No value bet has been graded yet: every one is archived when first seen and graded after its game.';

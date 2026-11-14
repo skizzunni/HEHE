@@ -354,6 +354,26 @@ def grade(entries, path=None):
     return book
 
 
+# Written down 2026-11-14, before any of its finds: home-side value finds ran
+# short of fair in both halves (39% vs 46%, 29% vs 49% -- 1.1 then 3.1 SE).
+# The next 60 graded home finds first seen from 2026-11-15 settle it: 5+ points
+# short -> propose dropping home value bets to the user; otherwise drop the concern.
+PREREG_HOME = dict(name="home-side value bets", since="2026-11-15", side="home", need=60, gap=5.0)
+
+
+def prereg_status(path=None, test=PREREG_HOME, finds=None):
+    """The pre-registered home-side test: dict(won, n, fair, need, verdict,
+    since) on graded value finds of that side first seen on/after since."""
+    fs = finds if finds is not None else [f for f in load(path)["finds"].values()]
+    xs = [f for f in fs if f.get("kind") == "value" and f.get("status") in ("won", "lost")
+          and f.get("side") == test["side"] and str(f.get("seen") or "")[:10] >= test["since"]]
+    w = sum(f["status"] == "won" for f in xs)
+    fair = round(100 * sum(f.get("fair") or 0 for f in xs) / len(xs), 1) if xs else None
+    verdict = ("waiting" if len(xs) < test["need"] else
+               "short" if 100 * w / len(xs) <= fair - test["gap"] else "fine")
+    return dict(name=test["name"], won=w, n=len(xs), fair=fair, need=test["need"], verdict=verdict, since=test["since"])
+
+
 def report(path=None, kind="value"):
     fs = [f for f in load(path)["finds"].values() if f.get("kind") == kind and f.get("status") in ("won", "lost")]
     if not fs:
@@ -401,6 +421,7 @@ def report(path=None, kind="value"):
     return dict(n=len(fs), won=sum(f["status"] == "won" for f in fs),
                 est_ev=round(100 * sum(f["ev"] for f in fs) / len(fs), 2),
                 roi=round(100 * sum(ret) / len(fs), 2), recent=recent, by_edge=bands, halves=halves, by_side=by_side,
+                prereg=prereg_status(finds=list(load(path)["finds"].values())),
                 dates=[min(f["seen"][:10] for f in fs), max(f["seen"][:10] for f in fs)])
 
 

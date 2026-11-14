@@ -34,3 +34,15 @@ class BySide(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class PreregHome(unittest.TestCase):
+    def test_counts_only_home_finds_from_the_start(self):
+        fs = [f(i, "home", "2026-11-15", i < 30, fair=0.5) for i in range(60)]          # 30/60 vs 50%: fine
+        fs += [f(99, "home", "2026-11-14", False), f(98, "away", "2026-11-16", False)]   # before start / other side: out
+        st = V.prereg_status(finds=fs)
+        self.assertEqual((st["won"], st["n"], st["fair"], st["verdict"]), (30, 60, 50.0, "fine"))
+        short = [f(i, "home", "2026-11-16", i < 20, fair=0.5) for i in range(60)]        # 33% vs 50%: short
+        self.assertEqual(V.prereg_status(finds=short)["verdict"], "short")
+        self.assertEqual(V.prereg_status(finds=short[:10])["verdict"], "waiting")
+
