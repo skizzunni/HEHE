@@ -117,7 +117,8 @@ def games_snapshot(book, day, league):
         pick = v.get("pick") + (" or draw" if v.get("dc") else "")
         # the stated chance drifts with the price before tip-off: shown only
         # once settled, so drift alone never reads as a change
-        conf = f" ({round(v['conf'])}%)" if league == "all" and v.get("conf") is not None and st != "open" else ""
+        conf = (f" ({'99%+' if v['conf'] >= 99.5 else str(round(v['conf'])) + '%'})"     # never "100%", as on the page
+                if league == "all" and v.get("conf") is not None and st != "open" else "")
         why = f" | why: {v['diagnosis']}" if league == "all" and st == "lost" and v.get("diagnosis") else ""
         out[key] = (f"board pick {pick}{conf} = {st}"
                     + (" | " + ", ".join(f"{k} {n}" for k, n in sc.items()) if st != "open" and sc else "") + why)

@@ -1166,7 +1166,7 @@ function renderView(){
                      + '">' + r.pl.toUpperCase() + '</span>' : "";
         const conf = (r.mc === null || r.mc === undefined)
           ? '<td class="num none">&mdash;</td>'
-          : '<td class="num">' + r.mc.toFixed(0) + '%'
+          : '<td class="num">' + pctShown(r.mc)
             + (r.bv && r.bv.skip ? '<span class="tier lean" title="Favourites in the ' + r.bv.band + '% band returned ' + r.bv.roi
                + '% per $1 at their real price (' + r.bv.n + ' games, 95% range ' + r.bv.roi95[0] + ' to ' + r.bv.roi95[1]
                + '%): a bet that has reliably lost">skip</span>' : '')
@@ -2094,6 +2094,13 @@ function pricedCalHTML(P){
     + P.rows.map(r => '<tr><td>' + nm(r.group) + '</td><td class="num">' + cell(r.halves[0]) + '</td><td class="num">' + cell(r.halves[1])
       + '</td><td>' + tag(r.halves) + '</td></tr>').join('')
     + '</tbody></table><p class="note">A chance is only raised or cut when a group is past the 99.5% bar in both halves; none is yet.</p></div>';
+}
+// a pick's chance as shown: whole percent, but never "100%" -- the heaviest
+// prices (-100000 de-vigs to 99.8%) still lose sometimes, and Kentucky at
+// "100%" won by one point on 2026-11-13. 99.5 and up reads "99%+".
+function pctShown(v){
+  if(typeof v !== 'number' || isNaN(v)) return '&mdash;';
+  return v >= 99.5 ? '99%+' : v.toFixed(0) + '%';
 }
 function ownHTML(O){
   if(!O || !O.n) return '';
@@ -3549,7 +3556,7 @@ function drawCard(slot){
              + '<td class="mine"><span class="stripe"></span>' + esc(r.mp) + '</td>'
              + '<td class="comp">' + esc(r.lg) + '</td>'
              + '<td class="num">' + (r.mc === null || r.mc === undefined
-                 ? "&mdash;" : r.mc.toFixed(0) + '%') + tier + ev + '</td>'
+                 ? "&mdash;" : pctShown(r.mc)) + tier + ev + '</td>'
              + hit
              + '<td class="num fairp">' + (r.fv || "&mdash;") + '</td>'
              + price
@@ -3933,7 +3940,7 @@ function scoreboardHTML(){
           + '<td class="mine"><span class="lgpill">' + esc(f.league) + '</span>'
           + esc(f.pick) + (f.dog ? '<span class="dogtag">DOG</span>' : '') + '</td>'
           + '<td class="mkt">' + (scoreLine(f.score) || '&mdash;') + '</td>'
-          + '<td class="num">' + (f.conf ? f.conf.toFixed(0) + '%' : '&mdash;')
+          + '<td class="num">' + (f.conf ? pctShown(f.conf) : '&mdash;')
           + (f.strong === undefined ? '' : f.strong ? '<span class="tier call">strong</span>'
              : '<span class="tier lean">close</span>') + '</td>'
           + '<td class="diag">' + esc(f.why || '') + '</td>'

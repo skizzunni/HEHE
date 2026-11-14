@@ -173,3 +173,12 @@ class FirstLook(unittest.TestCase):
                                                "WATCHING: 3 board games -- 1 won, 1 lost (unl FRO @ SVK), 1 open"])
         self.assertEqual(w.first_look({"A": "open"}), ["WATCHING: A = open"])
 
+
+class NoHundred(unittest.TestCase):
+    def test_heavy_pick_reads_99_plus(self):
+        import ladder_watch as w
+        book = {"k": dict(date="2026-11-13", league="ncaab", matchup="NAU @ UK", pick="Kentucky Wildcats", conf=100,
+                          status="won", scores={"Kentucky Wildcats": 78, "Northern Arizona Lumberjacks": 77})}
+        out = w.games_snapshot(book, "2026-11-13", "all")
+        self.assertIn("Kentucky Wildcats (99%+) = won", list(out.values())[0])
+

@@ -184,6 +184,7 @@ PROBE = """<script>setTimeout(function(){
   D.locks = {today: {locks: [{label: "Over 214.5 points", price: "-400", p: 0.75, match: "A at B"}, {label: "K: 2+ Assists", price: "-390", p: 0.78, match: "C @ D"}]}};
   D.ladder = {today: {legs: [{label: "K: 2+ Assists"}], stake: 2.47, pays: 2.4}};
   out.lids = ladderLegIds(parlayLegs()).join(",");
+  out.pctS = [pctShown(99.8), pctShown(100), pctShown(99.4), pctShown(67.2), pctShown(undefined)];
   var vS = D.value; D.value = {bets: [], record: {n: 10, won: 4, roi: -5, est_ev: 2, dates: ["2026-10-22", "2026-11-12"],
     by_side: [{side: "home", halves: [{n: 58, won: 23, fair: 46.5, roi: -16.9}, {n: 58, won: 16, fair: 48.4, roi: -57.3}]}]}};
   out.vSide = valueBets(); D.value = vS;
@@ -773,6 +774,8 @@ def main():
         fails.append("needs lines wrong: " + repr(nd))
     if "By side: home 23 of 58 (40% vs 46.5% fair, ROI -16.9%) then 16 of 58 (28% vs 48.4% fair, ROI -57.3%)." not in new.get("vSide", ""):
         fails.append("value bets by side missing: " + new.get("vSide", "")[:200])
+    if new.get("pctS") != ["99%+", "99%+", "99%", "67%", "&mdash;"]:
+        fails.append("chance display must never read 100%: " + repr(new.get("pctS")))
     vc = new.get("vCau") or ["", "x", "x", "x"]
     if not ("180 of 448 won (40% vs 45% fair), ROI -11.47%" in vc[0] and "both halves" in vc[0]) or any(vc[1:]):
         fails.append("value-bet caution wrong: " + repr(vc))
