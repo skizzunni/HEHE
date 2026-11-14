@@ -1525,6 +1525,17 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Rejected: college football straight-win picks are underrated
+(2026-11-14).** Three NCAAF losses today (SMU 55%, James Madison 65%,
+Wisconsin 75%) came with "picks like it" records far above stated --
+67% vs 55%, 79% vs 65%. By settle-date halves of all 695 graded NCAAF
+straight-win picks: 50-60% ran 129/184 (z 4.1) then 68/112 vs 61.4
+(z 1.25); 60-70% ran 121/138 (z 5.8) then 62/93 vs 60.5 (z 0.33); 70-80%
+23/25 then 51/76 vs 56.6 (z -1.5). The edge is all September -- the
+recent half is on par -- so nothing changes. The early pool also held 80
+picks the board's record leaves out and 245 undated ones, which "picks
+like it" was counting; it now uses only the picks the record counts.
+
 **Pre-registered (2026-11-14, before any of its legs): college football
 team-total unders.** The one pool caution in force: 859/1111 on every saved
 line (77% vs 82% stated), short in both halves (78% then 77% vs 81%, 82%).

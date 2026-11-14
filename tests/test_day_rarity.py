@@ -69,10 +69,10 @@ class LikeRecord(unittest.TestCase):
         lost = dict(league="epl", conf=66, dc=False, status="lost")
         book = {"x": lost}
         for i in range(12):
-            book[f"w{i}"] = dict(league="epl", conf=64 + i % 4, dc=False, status="won" if i < 9 else "lost")
-        book["far"] = dict(league="epl", conf=80, dc=False, status="won")            # outside the band
-        book["dc"] = dict(league="epl", conf=66, dc=True, status="won")              # other bet
-        book["nfl"] = dict(league="nfl", conf=66, dc=False, status="won")            # other league
+            book[f"w{i}"] = dict(date="2026-11-01", league="epl", conf=64 + i % 4, dc=False, status="won" if i < 9 else "lost")
+        book["far"] = dict(date="2026-11-01", league="epl", conf=80, dc=False, status="won")            # outside the band
+        book["dc"] = dict(date="2026-11-01", league="epl", conf=66, dc=True, status="won")              # other bet
+        book["nfl"] = dict(date="2026-11-01", league="nfl", conf=66, dc=False, status="won")            # other league
         self.assertEqual(daily_review.like_record(book, lost), dict(won=9, n=12, said=66))
         self.assertIsNone(daily_review.like_record({"x": lost}, lost))
         line = daily_review.loss_line(dict(league="epl", pick="Tottenham Hotspur", said=66, price="-240",
@@ -85,14 +85,24 @@ class LikeRecordSoccer(unittest.TestCase):
     def test_small_soccer_league_falls_back_to_all_soccer(self):
         import ledger
         lost = dict(league="wsl", conf=66, dc=False, status="lost")
-        book = {"x": lost, "w": dict(league="wsl", conf=65, dc=False, status="won")}
+        book = {"x": lost, "w": dict(date="2026-11-01", league="wsl", conf=65, dc=False, status="won")}
         for i in range(11):
-            book[f"e{i}"] = dict(league="epl", conf=66, dc=False, status="won" if i < 8 else "lost")
-        book["nba"] = dict(league="nba", conf=66, dc=False, status="won")       # not soccer
+            book[f"e{i}"] = dict(date="2026-11-01", league="epl", conf=66, dc=False, status="won" if i < 8 else "lost")
+        book["nba"] = dict(date="2026-11-01", league="nba", conf=66, dc=False, status="won")       # not soccer
         self.assertEqual(ledger.like_record(book, lost), dict(won=9, n=12, said=66, scope="soccer"))
         self.assertNotIn("scope", ledger.like_record(book, book["e0"]))          # epl has its own 10+
         nba = dict(league="nba", conf=66, dc=False, status="lost")
         self.assertIsNone(ledger.like_record(dict(book, y=nba), nba))            # no fallback outside soccer
+
+    def test_skips_picks_the_record_leaves_out(self):
+        import ledger
+        lost = dict(league="nhl", conf=60, dc=False, status="lost")
+        book = {"x": lost}
+        for i in range(10):
+            book[f"d{i}"] = dict(date="2026-11-01", league="nhl", conf=60, dc=False, status="lost")
+            book[f"u{i}"] = dict(league="nhl", conf=60, dc=False, status="won")                # undated, early
+            book[f"r{i}"] = dict(date="2026-11-01", league="nhl", conf=60, dc=False, status="won", record_excluded=True)
+        self.assertEqual(ledger.like_record(book, lost), dict(won=0, n=10, said=60))
 
     def test_line_says_soccer(self):
         import os, sys

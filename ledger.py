@@ -825,12 +825,16 @@ def like_record(book, e, band=5):
     """Graded picks like a lost one -- same league, same bet (win or double
     chance), called within `band` points: dict(won, n, said), or None under
     10. Tells a bad beat on a sound kind of pick from a leak. A soccer
-    league with under 10 falls back to every soccer league (scope="soccer")."""
+    league with under 10 falls back to every soccer league (scope="soccer").
+    Only picks the board's record counts (dated, not record_excluded): the
+    undated early-season ones made NCAAF 50-60% look 67% vs 55% stated when
+    the recent half is on par (2026-11-14)."""
     c = e.get("conf")
     if c is None:
         return None
     def pool(same):
         return [x for x in book.values() if isinstance(x, dict) and x is not e and x.get("status") in ("won", "lost")
+                and x.get("date") and not x.get("record_excluded")     # the picks the board's record counts
                 and same(x.get("league")) and bool(x.get("dc")) == bool(e.get("dc"))
                 and x.get("conf") is not None and abs(x["conf"] - c) <= band]
     R, scope = pool(lambda lg: lg == e.get("league")), None
