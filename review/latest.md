@@ -9,8 +9,8 @@ Pre-registered tests also running: NFL spreads getting 14+ points (legs from 202
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 82% (88% / 85%); 90%+ 84%, 84% (93% / 85%).
 Soccer or-draw picks by side: home 77% vs 74% stated on 413 (halves 78%, 77%); away 74% vs 73% stated on 207 (halves 73%, 75%). Straight wins: 66% vs 66% stated on 289; 59 of 98 losses were draws. With full price history: 82% vs 74% stated on 134 (halves 80% vs 72%, 84% vs 75%); older picks without it: 52% vs 59% on 155.
 Soccer draws on the board: 22% of 1479 games; most in EFL3 41% of 37, AUS 38% of 21, UECL 30% of 33, URU 29% of 31, ARG 29% of 73 -- where a straight win most often loses to a draw.
-Locks by bet type, by half: win 84% then 94% (vs 82%, 81%); spread 88% then 91% (vs 85%, 85%); total 87% then 90% (vs 83%, 84%); team total 85% then 93% (vs 86%, 86%); prop 80% then 76% (vs 85%, 78%). Short in both halves: prop.
-Locks by league, by half: NHL 84% then 98% (vs 87%, 88%); NBA 83% then 87% (vs 83%, 82%); NCAAF 84% then 83% (vs 83%, 78%); NFL 89% then 68% (vs 84%, 82%). No league short in both halves.
+Locks by bet type, by half: win 84% then 94% (vs 82%, 81%); spread 88% then 91% (vs 85%, 85%); total 86% then 90% (vs 83%, 84%); team total 85% then 93% (vs 86%, 86%); prop 81% then 76% (vs 85%, 78%). Short in both halves: prop.
+Locks by league, by half: NHL 84% then 98% (vs 87%, 88%); NBA 83% then 88% (vs 83%, 82%); NCAAF 85% then 83% (vs 83%, 78%); NFL 89% then 68% (vs 84%, 82%). No league short in both halves.
 Locks props by market, by half: NBA Assists 13/17 then 18/22 (vs 90%, 79%); NFL Receiving Yards 12/14 then 6/11 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.
 Every game's safest line by bet type, by half: win 76% then 89% (vs 84%, 84%); spread 85% then 90% (vs 91%, 90%); total 95% then 95% (vs 90%, 91%); team total 100% then 93% (vs 91%, 90%). Short in both halves: spread. Ahead in both halves: total, team total.
 Priced-era picks by league, by half (split 2026-11-02): soccer or-draw 77% vs 74% (z +1.2) then 76% vs 74% (z +0.9); soccer win 82% vs 73% (z +2.6) then 83% vs 74% (z +1.9); NCAAF 73% vs 72% (z +0.3) then 70% vs 70% (z -0.0); NBA 71% vs 65% (z +1.1) then 77% vs 69% (z +1.7); NHL 60% vs 58% (z +0.4) then 64% vs 59% (z +0.9); NFL 78% vs 64% (z +1.5) then 82% vs 67% (z +1.3). None past the 99.5% bar in both halves.
@@ -41,7 +41,7 @@ Yesterday (2026-11-13): board 28-9, sweep broken by intl Iraq at 67%; 8.7 losses
 - LOST nba Oklahoma City Thunder at 68% (-237), LA Clippers 113 - Oklahoma City Thunder 112: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game · price moved against it (3 pts); picks like it: 51 of 75 (68% vs 68% stated)
 - LOST nhl Vegas Golden Knights at 60% (-170), Nashville Predators 3 - Vegas Golden Knights 2: margin 1 · the book had my side favoured too · called at 60% · favourite lost · close game; picks like it: 99 of 148 (67% vs 59% stated)
 - LOST ncaaf Houston Cougars at 75% (-325), Colorado Buffaloes 42 - Houston Cougars 32: margin 10 · the book had my side favoured too · called at 75% · upset; picks like it: 76 of 101 (75% vs 74% stated)
-Locks 0/11 won, 11 open; Best play top 2 (58%) open.
+Locks 1/11 won, 10 open; Best play top 2 (58%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 3 (80%) open; Best play top 8 (53%) open.
 Lottery 10k: open (0/12 legs won)
 Lottery 10k: open (0/8 legs won)
