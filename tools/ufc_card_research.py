@@ -109,10 +109,25 @@ def line(s):
             f"knockdowns {int(s['kd'])}" + (f" | {s['days_off']} days since last fight" if s["days_off"] is not None else ""))
 
 
+def board_pick(na, nb, picks):
+    """The board's pick for a bout and its chance, from {pick name: chance}
+    (line_moves.rows on the published page); None when neither fighter is."""
+    for nm in (na, nb):
+        if nm in picks:
+            return nm, picks[nm]
+    return None
+
+
 def main(day):
     today = dt.date(int(day[:4]), int(day[4:6]), int(day[6:]))
+    try:                                         # the board's pick and chance on each bout
+        import line_moves
+        picks = {r["pick"]: r["chance"] for r in line_moves.rows(line_moves.board(), "ufc").values()}
+    except Exception:
+        picks = {}
     for na, ia, nb, ib, wc in card(day):
-        print(f"=== {na} vs {nb} ({wc})")
+        bp = board_pick(na, nb, picks)
+        print(f"=== {na} vs {nb} ({wc})" + (f" | board pick {bp[0]} ({bp[1]}%)" if bp else ""))
         S = {}
         for nm, i in ((na, ia), (nb, ib)):
             try:

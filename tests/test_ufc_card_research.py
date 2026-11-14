@@ -31,6 +31,12 @@ class Research(unittest.TestCase):
         self.assertEqual(u.card("20261114", fetch=lambda url: sb), [("X", "1", "Y", "2", "Heavyweight")])
 
 
+class BoardPick(unittest.TestCase):
+    def test_pick(self):
+        self.assertEqual(u.board_pick("Josh Hokit", "Ciryl Gane", {"Ciryl Gane": 67}), ("Ciryl Gane", 67))
+        self.assertIsNone(u.board_pick("A", "B", {"C": 60}))
+
+
 class Flags(unittest.TestCase):
     def test_flags(self):
         me = dict(days_off=487, results=["L", "L", "L", "W", "L"], age=43, reach='72"')
