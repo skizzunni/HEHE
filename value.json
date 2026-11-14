@@ -18739,6 +18739,35 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|ncaaf:401858298:away|ncaaf:401864539:away": {
+   "ev": 0.0614,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0471,
+     "fair": 0.1277,
+     "id": "ncaaf:401864539",
+     "price": "+720",
+     "side": "away",
+     "spec": null,
+     "team": "UNLV Rebels"
+    },
+    {
+     "ev": 0.0136,
+     "fair": 0.6177,
+     "id": "ncaaf:401858298",
+     "price": "-156",
+     "side": "away",
+     "spec": null,
+     "team": "Louisville Cardinals"
+    }
+   ],
+   "payout": 13.456,
+   "prob": 0.0789,
+   "seen": "2026-11-14T15:06:51+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|ncaaf:401858501:away": {
    "ev": 0.0188,
    "kind": "parlay",
@@ -18885,6 +18914,26 @@
    "seen": "2026-10-24T15:53:52+00:00",
    "status": "lost",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401864539:away": {
+   "ev": 0.0471,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0471,
+     "fair": 0.1277,
+     "id": "ncaaf:401864539",
+     "price": "+720",
+     "side": "away",
+     "spec": null,
+     "team": "UNLV Rebels"
+    }
+   ],
+   "payout": 8.2,
+   "prob": 0.1277,
+   "seen": "2026-11-14T15:06:51+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401866452:away": {
