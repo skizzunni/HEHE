@@ -29,12 +29,12 @@ TRAILING value bets: 39.1% hit vs 44.3% stated on 466
 Strong calls 10-1 (90.9% vs 73.0% claimed).
 Closing line value: -0.75 points on 11 picks; beat the close on 54.5%.
 Board sweep: 10-1, 98 open -- broken (first loss: wsl Tottenham Hotspur at 66%); 3 losses expected from the settled picks' chances, so 1 or more by now had a 97% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: wsl 1 (0.6 expected).
-- LOST wsl Tottenham Hotspur at 66% (-245), Everton 0 - Tottenham Hotspur 0: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66% · favourite lost
+- LOST wsl Tottenham Hotspur at 66% (-245), Everton 0 - Tottenham Hotspur 0: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66% · favourite lost; soccer picks like it: 153 of 214 (71% vs 67% stated)
 Why picks lost (14 days): favourite lost 125, close game 103, coin flip 44, upset 43, blowout 32, price moved against it 24, drawn 17.
 Yesterday (2026-11-13): board 28-9, sweep broken by intl Iraq at 67%; 8.7 losses expected, 9 came in (51.4% chance of that many or more).
-- LOST intl Iraq at 67% (-240), Iraq 0 - Lebanon 0: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost
-- LOST unl Slovakia at 67% (-270), Faroe Islands 2 - Slovakia 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost
-- LOST unl Luxembourg or draw at 69% (-290), Estonia 1 - Luxembourg 0: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game · price moved against it (4 pts)
+- LOST intl Iraq at 67% (-240), Iraq 0 - Lebanon 0: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost; soccer picks like it: 161 of 214 (75% vs 67% stated)
+- LOST unl Slovakia at 67% (-270), Faroe Islands 2 - Slovakia 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost; soccer picks like it: 161 of 214 (75% vs 67% stated)
+- LOST unl Luxembourg or draw at 69% (-290), Estonia 1 - Luxembourg 0: margin 1 · the book had my side favoured too · called at 69% · favourite lost · close game · price moved against it (4 pts); soccer picks like it: 358 of 494 (72% vs 69% stated)
 - LOST nba New York Knicks at 73% (-321), Indiana Pacers 106 - New York Knicks 104: margin 2 · the book had my side favoured too · called at 73% · favourite lost · close game; picks like it: 47 of 63 (75% vs 72% stated)
 - LOST ncaaf Pittsburgh Panthers at 59% (-155), Florida State Seminoles 16 - Pittsburgh Panthers 10: margin 6 · the book had my side favoured too · called at 59% · coin flip · close game; picks like it: 216 of 282 (77% vs 59% stated)
 - LOST nba Atlanta Hawks at 69% (-257), Atlanta Hawks 117 - Chicago Bulls 125: margin 8 · the book had my side favoured too · called at 69% · favourite lost; picks like it: 48 of 72 (67% vs 69% stated)
