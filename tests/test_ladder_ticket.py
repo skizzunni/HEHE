@@ -35,6 +35,16 @@ class Ticket(unittest.TestCase):
         self.assertTrue(L[3].startswith("Without props: 3 legs at 2.00x, 44%"))
         self.assertEqual(L[4], "11 straight wins at this price reach the target, about 1 in 7,007.")
 
+    def test_new_run_line(self):
+        R = dict(runs=6, best=9.57, ended=dict(peak=4.95, lost_on=["Houston Cougars to win"]),
+                 history=[dict(status="lost", days=3, peak=4.95)],
+                 today=dict(stake=1.0, pays=2.1, prob=0.45, legs=[dict(label="A to win", price="-300", p=0.75, match="A @ B",
+                                                                      lg="NBA", tip="7:00 PM")]))
+        L = t.lines(R)
+        self.assertEqual(L[0], "New run: run 7 starts at $1. Run 6 lasted 3 day(s), peak $4.95, lost on Houston Cougars to win; "
+                               "best ever $9.57.")
+        self.assertTrue(L[1].startswith("Run 7, stake $1.00 (the whole bank) on 1 legs at 2.10x"))
+
     def test_no_ticket(self):
         self.assertEqual(t.lines({}), [])
         self.assertEqual(t.lines({"today": {"legs": []}}), [])

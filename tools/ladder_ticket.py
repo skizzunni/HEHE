@@ -66,7 +66,14 @@ def lines(R):
     T = (R or {}).get("today") or {}
     if not T.get("legs"):
         return []
-    out = [f"Run {R.get('runs')}, stake ${T['stake']:.2f} (the whole bank) on {len(T['legs'])} legs at "
+    out = []
+    E = (R or {}).get("ended")
+    H = [h for h in (R or {}).get("history") or [] if h.get("status") == "lost"]
+    if E:            # today's ticket opens a new run: say so, and how the last one ended
+        last = H[-1] if H else {}
+        out.append(f"New run: run {R.get('runs', 0) + 1} starts at $1. Run {R.get('runs')} lasted {last.get('days', '?')} day(s), "
+                   f"peak ${E.get('peak', 0):.2f}, lost on {', '.join(E.get('lost_on') or []) or '?'}; best ever ${R.get('best', 0):.2f}.")
+    out += [f"Run {R.get('runs', 0) + 1 if E else R.get('runs')}, stake ${T['stake']:.2f} (the whole bank) on {len(T['legs'])} legs at "
            f"{T['pays']:.2f}x -> ${T['stake'] * T['pays']:.2f}; {round(100 * T['prob'])}% est. all win."]
     for i, L in enumerate(T["legs"], 1):
         rec = L.get("kind_rec") or {}
