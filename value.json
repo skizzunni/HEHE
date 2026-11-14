@@ -7932,6 +7932,23 @@
    "tip": "9:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909980|home|FanDuel": {
+   "dec": 6.3,
+   "ev": 0.0411,
+   "fair": 0.1653,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909980",
+   "kind": "value",
+   "league": "nba",
+   "match": "DEN @ NO",
+   "price": "+530",
+   "seen": "2026-11-14T15:17:51+00:00",
+   "side": "home",
+   "start": "2026-11-15T00:00Z",
+   "team": "New Orleans Pelicans",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909984|away|FanDuel": {
    "dec": 8.0,
    "ev": 0.0168,
@@ -18356,6 +18373,55 @@
    "seen": "2026-11-12T05:39:58+00:00",
    "status": "lost",
    "target": 5.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909980:home": {
+   "ev": 0.0414,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0411,
+     "fair": 0.1653,
+     "id": "nba:401909980",
+     "price": "+530",
+     "side": "home",
+     "spec": null,
+     "team": "New Orleans Pelicans"
+    }
+   ],
+   "payout": 6.3,
+   "prob": 0.1653,
+   "seen": "2026-11-14T15:17:51+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909980:home|ncaaf:401858298:away": {
+   "ev": 0.0556,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0411,
+     "fair": 0.1653,
+     "id": "nba:401909980",
+     "price": "+530",
+     "side": "home",
+     "spec": null,
+     "team": "New Orleans Pelicans"
+    },
+    {
+     "ev": 0.0136,
+     "fair": 0.6177,
+     "id": "ncaaf:401858298",
+     "price": "-156",
+     "side": "away",
+     "spec": null,
+     "team": "Louisville Cardinals"
+    }
+   ],
+   "payout": 10.338,
+   "prob": 0.1021,
+   "seen": "2026-11-14T15:17:51+00:00",
+   "target": 10.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909984:away": {
