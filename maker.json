@@ -1922,6 +1922,7 @@
    "cost": 0.6242,
    "edge": 0.0056,
    "fair": 0.6277,
+   "fill": "touch",
    "id": "ncaaf:401871060",
    "label": "Delaware Blue Hens",
    "league": "ncaaf",
@@ -1934,8 +1935,9 @@
     "team": "Delaware Blue Hens"
    },
    "start": "2026-11-14T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14FIUDEL-DEL"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14FIUDEL-DEL",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV14FLAUK-UK|YES": {
    "ask": 0.6,
@@ -2480,6 +2482,7 @@
    "cost": 0.5444,
    "edge": 0.0169,
    "fair": 0.5536,
+   "fill": "strict",
    "id": "ncaaf:401856888",
    "label": "Tennessee Volunteers",
    "league": "ncaaf",
@@ -2492,8 +2495,9 @@
     "team": "Tennessee Volunteers"
    },
    "start": "2026-11-14T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14TENNTXAM-TENN"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14TENNTXAM-TENN",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV14TEXLSU-LSU|YES": {
    "ask": 0.63,
@@ -6905,6 +6909,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856888",
    "label": "Texas A&M Aggies +1.5",
    "league": "ncaaf",
@@ -6918,8 +6923,9 @@
     "team": "Texas A&M Aggies"
    },
    "start": "2026-11-14T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14TENNTXAM-TENN2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14TENNTXAM-TENN2",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14TENNTXAM-TENN3|NO": {
    "ask": 0.51,
@@ -6927,6 +6933,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401856888",
    "label": "Texas A&M Aggies +2.5",
    "league": "ncaaf",
@@ -6940,8 +6947,9 @@
     "team": "Texas A&M Aggies"
    },
    "start": "2026-11-14T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14TENNTXAM-TENN3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14TENNTXAM-TENN3",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14TEXLSU-LSU5|NO": {
    "ask": 0.51,
@@ -13869,6 +13877,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "ncaaf:401856888",
    "label": "under 44.5",
    "league": "ncaaf",
@@ -13881,8 +13890,9 @@
     "t": "under"
    },
    "start": "2026-11-14T20:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14TENNTXAM-45"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14TENNTXAM-45",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV14TEXLSU-47|NO": {
    "ask": 0.51,

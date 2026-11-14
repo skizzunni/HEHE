@@ -8022,6 +8022,23 @@
    "tip": "8:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909983|home|FanDuel": {
+   "dec": 1.7576,
+   "ev": 0.018,
+   "fair": 0.5792,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909983",
+   "kind": "value",
+   "league": "nba",
+   "match": "BKN @ MEM",
+   "price": "-132",
+   "seen": "2026-11-14T23:16:24+00:00",
+   "side": "home",
+   "start": "2026-11-15T01:00Z",
+   "team": "Memphis Grizzlies",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909983|home|Kalshi": {
    "dec": 1.7624,
    "ev": 0.0167,
@@ -8038,6 +8055,28 @@
    "team": "Memphis Grizzlies",
    "tip": "8:00 PM",
    "venue": "Kalshi"
+  },
+  "nba:401909983|sure": {
+   "id": "nba:401909983",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+146",
+     "stake_share": 0.4184,
+     "team": "Brooklyn Nets",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-130",
+     "stake_share": 0.5816,
+     "team": "Memphis Grizzlies",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "BKN @ MEM",
+   "profit": 0.0289,
+   "seen": "2026-11-14T23:16:24+00:00"
   },
   "nba:401909984|away|FanDuel": {
    "dec": 8.0,
@@ -18939,6 +18978,35 @@
    "prob": 0.4437,
    "seen": "2026-11-14T19:37:10+00:00",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909983:home|nba:401909984:away": {
+   "ev": 0.0394,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0215,
+     "fair": 0.1122,
+     "id": "nba:401909984",
+     "price": "+810",
+     "side": "away",
+     "spec": null,
+     "team": "Chicago Bulls"
+    },
+    {
+     "ev": 0.018,
+     "fair": 0.5792,
+     "id": "nba:401909983",
+     "price": "-132",
+     "side": "home",
+     "spec": null,
+     "team": "Memphis Grizzlies"
+    }
+   ],
+   "payout": 15.994,
+   "prob": 0.065,
+   "seen": "2026-11-14T23:16:24+00:00",
+   "target": 10.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909984:away": {
