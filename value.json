@@ -18378,6 +18378,35 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|nba:401909984:away|ncaaf:401858298:away": {
+   "ev": 0.0323,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0188,
+     "fair": 0.1227,
+     "id": "nba:401909984",
+     "price": "+730",
+     "side": "away",
+     "spec": null,
+     "team": "Chicago Bulls"
+    },
+    {
+     "ev": 0.0136,
+     "fair": 0.6177,
+     "id": "ncaaf:401858298",
+     "price": "-156",
+     "side": "away",
+     "spec": null,
+     "team": "Louisville Cardinals"
+    }
+   ],
+   "payout": 13.62,
+   "prob": 0.0758,
+   "seen": "2026-11-14T14:45:31+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|ncaab:401906758:away": {
    "ev": 0.0332,
    "kind": "parlay",
