@@ -10832,6 +10832,22 @@
   "price": "-650",
   "status": "open"
  },
+ "nba:401909298|n:giannis antetokounmpo|Points|20+": {
+  "aid": null,
+  "date": "2026-11-13",
+  "edge": -7.9,
+  "gid": "nba:401909298",
+  "imp": 0.9231,
+  "label": "Giannis Antetokounmpo: 20+ Points",
+  "league": "nba",
+  "line": "20+",
+  "market": "Points",
+  "name": "Giannis Antetokounmpo",
+  "p": 0.8492,
+  "p_fair": 0.85,
+  "price": "-1200",
+  "status": "open"
+ },
  "nba:401909298|n:giannis antetokounmpo|Rebounds|8+": {
   "aid": null,
   "date": "2026-11-13",
@@ -10927,6 +10943,22 @@
   "price": "-1100",
   "status": "open"
  },
+ "nba:401909298|n:jaylon tyson|Points|5+": {
+  "aid": null,
+  "date": "2026-11-13",
+  "edge": 4.0,
+  "gid": "nba:401909298",
+  "imp": 0.9259,
+  "label": "Jaylon Tyson: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Jaylon Tyson",
+  "p": 0.8518,
+  "p_fair": 0.9626,
+  "price": "-1250",
+  "status": "open"
+ },
  "nba:401909298|n:jaylon tyson|Reb + Ast|5+": {
   "aid": null,
   "date": "2026-11-13",
@@ -11005,6 +11037,22 @@
   "p": 0.8466,
   "p_fair": 0.9151,
   "price": "-800",
+  "status": "open"
+ },
+ "nba:401909299|n:aaron wiggins|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-11-13",
+  "edge": -4.0,
+  "gid": "nba:401909299",
+  "imp": 0.9167,
+  "label": "Aaron Wiggins: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Aaron Wiggins",
+  "p": 0.8496,
+  "p_fair": 0.8799,
+  "price": "-1100",
   "status": "open"
  },
  "nba:401909299|n:dyson daniels|Assists|4+": {
@@ -12357,6 +12405,22 @@
   "p": 0.754,
   "p_fair": 0.8392,
   "price": "-380",
+  "status": "open"
+ },
+ "nba:401909303|n:dylan cardwell|Rebounds|4+": {
+  "aid": null,
+  "date": "2026-11-13",
+  "edge": 1.0,
+  "gid": "nba:401909303",
+  "imp": 0.9167,
+  "label": "Dylan Cardwell: 4+ Rebounds",
+  "league": "nba",
+  "line": "4+",
+  "market": "Rebounds",
+  "name": "Dylan Cardwell",
+  "p": 0.8464,
+  "p_fair": 0.9262,
+  "price": "-1100",
   "status": "open"
  },
  "nba:401909303|n:jrue holiday|Pts + Ast|10+": {
@@ -32470,8 +32534,9 @@
   "price": "-1400",
   "rechecked": "ungradable",
   "rechecked_nick": true,
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nba:401909914|n:dejounte murray|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -32490,8 +32555,9 @@
   "price": "-1000",
   "rechecked": "ungradable",
   "rechecked_nick": true,
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nba:401909914|n:derik queen|Rebounds|4+": {
   "aid": null,
@@ -85721,6 +85787,22 @@
   "p": 0.863,
   "p_fair": null,
   "price": "-1300",
+  "status": "open"
+ },
+ "nhl:401892706|n:tye kartye|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-13",
+  "edge": null,
+  "gid": "nhl:401892706",
+  "imp": 0.8947,
+  "label": "Tye Kartye: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Tye Kartye",
+  "p": 0.8315,
+  "p_fair": null,
+  "price": "-850",
   "status": "open"
  },
  "nhl:401892707|n:filip forsberg|Shots on Goal|2+": {
