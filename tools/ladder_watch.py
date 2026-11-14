@@ -178,6 +178,26 @@ def board_picks(league):
         return {}
 
 
+def remembered_picks(path, now):
+    """The board's UFC picks merged with every one seen before (saved at
+    `path`). A fight leaves the published board once it starts, so without
+    this the watcher lost each pick at its walkout and never reported the
+    result (2026-11-14: the 5 PM prelims, Sanches's loss among them)."""
+    try:
+        with open(path) as fh:
+            seen = json.load(fh)
+    except (OSError, ValueError):
+        seen = {}
+    merged = dict(seen, **(now or {}))
+    if merged != seen:
+        try:
+            with open(path, "w") as fh:
+                json.dump(merged, fh)
+        except OSError:
+            pass
+    return merged
+
+
 def _same(a, b):
     """Two states read alike once the running total inside a decided note
     ('already over (219, ...)', 'gone over (9, ...)') is set aside: the leg
@@ -235,7 +255,7 @@ def main(state_path, day=None, league=None):
         except (OSError, ValueError):
             pass
         if league == "all":              # UFC results come from ESPN, not the ledger
-            picks = board_picks("ufc")
+            picks = remembered_picks(state_path + ".ufc_picks.json", board_picks("ufc"))
             if picks:
                 after.update(ufc_snapshot(day, picks))
     # a feed gap (live score briefly missing) must not undo a note already

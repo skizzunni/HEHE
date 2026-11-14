@@ -220,3 +220,13 @@ class UfcSnapshot(unittest.TestCase):
         self.assertFalse(w.done(after))
         self.assertIn("WATCHING: 2 board games -- 0 won, 1 lost (A vs B), 1 open", w.first_look(after))
 
+
+
+class RememberedPicks(unittest.TestCase):
+    def test_keeps_picks_that_left_the_board(self):
+        import tempfile
+        with tempfile.TemporaryDirectory() as d:
+            p = os.path.join(d, "s.json.ufc_picks.json")
+            self.assertEqual(w.remembered_picks(p, {"A": 54, "B": 80}), {"A": 54, "B": 80})
+            self.assertEqual(w.remembered_picks(p, {"B": 81}), {"A": 54, "B": 81})   # A started, kept
+            self.assertEqual(w.remembered_picks(p, {}), {"A": 54, "B": 81})          # page fetch failed
