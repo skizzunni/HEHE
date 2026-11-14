@@ -1,7 +1,7 @@
 # Review 2026-11-13
 
 Picks 12-3 (80.0% vs 77.4% claimed, ROI -4.6%).
-Ladder: run 6, bank $4.95, 2 win(s) in a row, best $9.57; today stakes $4.95 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 36% at 2.48x for the plain top 4; without props it would be 3 legs at 2.00x (44%); 11 wins to $10,000; legs: Franz Wagner: 6+ Assists (MIL @ ORL; live 5:28 - 4th, Milwaukee Bucks 82 - Orlando Magic 94, 10 so far, line reached; props like it 107/138), Houston Cougars to win (Houston Cougars at Colorado Buffaloes; 10:15 PM, open), Under 241.5 points (Portland Trail Blazers at Sacramento Kings; 10:00 PM, open).
+Ladder: run 6, bank $4.95, 2 win(s) in a row, best $9.57; today stakes $4.95 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 36% at 2.48x for the plain top 4; without props it would be 3 legs at 2.00x (44%); 11 wins to $10,000; legs: Franz Wagner: 6+ Assists (MIL @ ORL; live 2:34 - 4th, Milwaukee Bucks 86 - Orlando Magic 98, 12 so far, line reached; props like it 107/138), Houston Cougars to win (Houston Cougars at Colorado Buffaloes; 10:15 PM, open), Under 241.5 points (Portland Trail Blazers at Sacramento Kings; 10:00 PM, open).
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, live. Replayed on every saved card: as ranked 14/26 cashed at 2.22x, without props 14/26 at 2.31x.
 Running ahead: NBA under on all saved lines 1029/1163 vs 82%; NHL over on all saved lines 134/152 vs 84%; NHL teamover on all saved lines 168/187 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 103/121 (85% vs 81% stated); fine -- the caution on this band is off (locks.apply_prereg). History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).
@@ -22,7 +22,7 @@ High-chance sweep: 70%+ today 11-0, 15 open; swept 3 of 28 past days (last 2026-
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/27 vs 61%; NBA on the tired side 15/18 vs 66%, against it 17/19 vs 71%.
 Ladder games, players out or doubtful: MIL @ ORL: Orlando Magic without Jonathan Isaac, Paolo Banchero, Noah Penda, Izaiyah Nelson | Portland Trail Blazers at Sacramento Kings: Portland Trail Blazers without Chris Youngblood, Vit Krejci, Ja Morant, Shaedon Sharpe; Sacramento Kings without Precious Achiuwa, Maxime Raynaud, Ben Simmons.
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
-Next UFC card 2026-11-14 (13 fights priced, 5 close): Bilal Hasan 88%; Juan Diaz 77%; Melquizael Costa 76%; Bia Mesquita 70%; Ciryl Gane 67%; Terrance McKinney 64%; Donte Johnson 62%; Chris Duncan 62%; Kayla Harrison 60% (close); Caio Borralho 59% (close); Uroš Medić 58% (close); Stephen Thompson 56% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
+Next UFC card 2026-11-14 (13 fights priced, 5 close): Bilal Hasan 88%; Juan Diaz 77%; Melquizael Costa 77%; Bia Mesquita 70%; Ciryl Gane 67%; Terrance McKinney 64%; Donte Johnson 62%; Chris Duncan 62%; Kayla Harrison 60% (close); Caio Borralho 59% (close); Uroš Medić 58% (close); Stephen Thompson 56% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.7% hit vs 44.5% stated on 453
 Strong calls 11-3 (78.6% vs 75.8% claimed).
 Closing line value: +1.14 points on 15 picks; beat the close on 53.3%.
@@ -42,12 +42,12 @@ Yesterday (2026-11-12): board 23-8, sweep broken by unl France or draw at 76%; 9
 - LOST nhl Los Angeles Kings at 53% (-125), Los Angeles Kings 2 - New York Islanders 5: margin 3 · the book had my side favoured too · called at 53% · coin flip · blowout; picks like it: 123 of 232 (53% vs 53% stated)
 Locks 0/11 won, 11 open; Best play top 2 (61%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
+Lottery 100: open (1/7 legs won)
 Lottery 100: open (0/7 legs won)
-Lottery 100: open (0/7 legs won)
-Lottery 10k: open (0/13 legs won)
-Lottery 10k+25: open (0/13 legs won)
-Lottery 10k+50: open (0/13 legs won)
-Lottery 10k+100: open (0/12 legs won)
+Lottery 10k: open (1/13 legs won)
+Lottery 10k+25: open (1/13 legs won)
+Lottery 10k+50: open (1/13 legs won)
+Lottery 10k+100: open (1/12 legs won)
 Ladder-consistency props (all time): 2259/2714 won (83.2%) vs 86.3% fair, 87.5% price, 83.6% stated on the board (heavy props capped).
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
