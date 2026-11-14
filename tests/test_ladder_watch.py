@@ -230,3 +230,15 @@ class RememberedPicks(unittest.TestCase):
             self.assertEqual(w.remembered_picks(p, {"A": 54, "B": 80}), {"A": 54, "B": 80})
             self.assertEqual(w.remembered_picks(p, {"B": 81}), {"A": 54, "B": 81})   # A started, kept
             self.assertEqual(w.remembered_picks(p, {}), {"A": 54, "B": 81})          # page fetch failed
+
+    def test_another_days_picks_are_dropped(self):
+        import json, tempfile
+        with tempfile.TemporaryDirectory() as d:
+            p = os.path.join(d, "s.json.ufc_picks.json")
+            w.remembered_picks(p, {"A": 54}, "2026-11-14")
+            self.assertEqual(w.remembered_picks(p, {"B": 70}, "2026-11-14"), {"A": 54, "B": 70})
+            self.assertEqual(w.remembered_picks(p, {"A": 61}, "2026-11-21"), {"A": 61})       # new card
+            with open(p, "w") as fh:
+                json.dump({"A": 54}, fh)                                                    # older flat file
+            self.assertEqual(w.remembered_picks(p, {}, None), {"A": 54})
+            self.assertEqual(w.remembered_picks(p, {}, "2026-11-14"), {})

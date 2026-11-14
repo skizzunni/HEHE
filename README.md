@@ -1525,6 +1525,12 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Checked, no change: college basketball favourites (2026-11-14).**
+Gonzaga (67%) lost 80-81 at home to LSU. By date halves of the 66 graded
+NCAAB picks: all 29/33 vs 29.8 (z -0.5) then 30/33 vs 28.8 (z 0.7); 80%+
+24/25 then 22/22; home 28/31 then 24/26, on par. The 65-80% band is
+8/13 vs 9.3 -- too few to judge this early in the season.
+
 **Checked, no change: heavy soccer "or draw" picks (2026-11-14).** Portugal
 or draw (79%) lost 1-4 to Denmark and Poland or draw (81%) lost 1-2 at
 Romania the same evening. By date halves of 626 graded double-chance picks:

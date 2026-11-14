@@ -178,21 +178,26 @@ def board_picks(league):
         return {}
 
 
-def remembered_picks(path, now):
+def remembered_picks(path, now, day=None):
     """The board's UFC picks merged with every one seen before (saved at
     `path`). A fight leaves the published board once it starts, so without
     this the watcher lost each pick at its walkout and never reported the
-    result (2026-11-14: the 5 PM prelims, Sanches's loss among them)."""
+    result (2026-11-14: the 5 PM prelims, Sanches's loss among them).
+    Saved with its card day: another day's picks are dropped, so a fighter
+    back on a later card never carries an old chance."""
     try:
         with open(path) as fh:
-            seen = json.load(fh)
+            saved = json.load(fh)
     except (OSError, ValueError):
-        seen = {}
+        saved = {}
+    if not isinstance(saved.get("picks"), dict):           # older flat file: {name: chance}
+        saved = dict(day=None, picks={k: v for k, v in saved.items() if isinstance(v, (int, float))})
+    seen = saved["picks"] if saved.get("day") == (str(day) if day else None) else {}
     merged = dict(seen, **(now or {}))
-    if merged != seen:
+    if merged != seen or saved.get("day") != (str(day) if day else None):
         try:
             with open(path, "w") as fh:
-                json.dump(merged, fh)
+                json.dump(dict(day=str(day) if day else None, picks=merged), fh)
         except OSError:
             pass
     return merged
@@ -255,7 +260,7 @@ def main(state_path, day=None, league=None):
         except (OSError, ValueError):
             pass
         if league == "all":              # UFC results come from ESPN, not the ledger
-            picks = remembered_picks(state_path + ".ufc_picks.json", board_picks("ufc"))
+            picks = remembered_picks(state_path + ".ufc_picks.json", board_picks("ufc"), day)
             if picks:
                 after.update(ufc_snapshot(day, picks))
     # a feed gap (live score briefly missing) must not undo a note already
