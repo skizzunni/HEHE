@@ -11097,6 +11097,7 @@
   "p": 0.8528,
   "p_fair": 0.8569,
   "price": "-700",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -11115,6 +11116,7 @@
   "p": 0.8466,
   "p_fair": 0.9142,
   "price": "-800",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -11165,11 +11167,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Aaron Wiggins",
   "p": 0.8496,
   "p_fair": 0.8799,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909299|n:dyson daniels|Assists|4+": {
   "aid": null,
@@ -11181,11 +11185,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Dyson Daniels",
   "p": 0.8481,
   "p_fair": 0.8418,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909299|n:jalen johnson|Assists|6+": {
   "aid": null,
@@ -11197,11 +11203,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jalen Johnson",
   "p": 0.7797,
   "p_fair": 0.7629,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909299|n:jalen johnson|Points|10+": {
   "aid": null,
@@ -11212,11 +11220,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Jalen Johnson",
   "p": 0.8737,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 27.0
  },
  "nba:401909299|n:jalen johnson|Points|15+": {
   "aid": null,
@@ -11228,11 +11238,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Jalen Johnson",
   "p": 0.8492,
   "p_fair": 0.8667,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 27.0
  },
  "nba:401909299|n:jalen johnson|Pts + Reb + Ast|30+": {
   "aid": null,
@@ -11244,11 +11256,13 @@
   "league": "nba",
   "line": "30+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jalen Johnson",
   "p": 0.8491,
   "p_fair": 0.8398,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 48.0
  },
  "nba:401909299|n:jalen johnson|Rebounds|6+": {
   "aid": null,
@@ -11260,11 +11274,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Jalen Johnson",
   "p": 0.8464,
   "p_fair": 0.9143,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401909299|n:jalen smith|Pts + Ast|10+": {
   "aid": null,
@@ -11276,11 +11292,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Jalen Smith",
   "p": 0.8571,
   "p_fair": 0.934,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 18.0
  },
  "nba:401909299|n:jalen smith|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -11292,11 +11310,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jalen Smith",
   "p": 0.7509,
   "p_fair": 0.8036,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 30.0
  },
  "nba:401909299|n:jalen smith|Threes Made|1+": {
   "aid": null,
@@ -11308,11 +11328,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Jalen Smith",
   "p": 0.8425,
   "p_fair": 0.8759,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909299|n:josh giddey|Assists|6+": {
   "aid": null,
@@ -11324,11 +11346,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Assists",
+  "matched": "name",
   "name": "Josh Giddey",
   "p": 0.8447,
   "p_fair": 0.8476,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401909299|n:josh giddey|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -11340,11 +11364,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Josh Giddey",
   "p": 0.8491,
   "p_fair": 0.8948,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 39.0
  },
  "nba:401909299|n:josh giddey|Reb + Ast|10+": {
   "aid": null,
@@ -11356,11 +11382,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Josh Giddey",
   "p": 0.8514,
   "p_fair": 0.8244,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 24.0
  },
  "nba:401909299|n:josh giddey|Rebounds|4+": {
   "aid": null,
@@ -11372,11 +11400,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Josh Giddey",
   "p": 0.8523,
   "p_fair": 0.8993,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909299|n:kingston flemings|Points|5+": {
   "aid": null,
@@ -11388,11 +11418,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Kingston Flemings",
   "p": 0.8433,
   "p_fair": 0.9595,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401909299|n:matas buzelis|Pts + Ast|15+": {
   "aid": null,
@@ -11404,11 +11436,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Matas Buzelis",
   "p": 0.7407,
   "p_fair": 0.791,
   "price": "-350",
-  "status": "open"
+  "status": "lost",
+  "value": 13.0
  },
  "nba:401909299|n:matas buzelis|Reb + Ast|5+": {
   "aid": null,
@@ -11420,11 +11454,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Matas Buzelis",
   "p": 0.857,
   "p_fair": 0.8778,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909299|n:matas buzelis|Threes Made|1+": {
   "aid": null,
@@ -11436,11 +11472,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Matas Buzelis",
   "p": 0.8425,
   "p_fair": 0.8759,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909299|n:nickeil alexander walker|Assists|2+": {
   "aid": null,
@@ -11452,11 +11490,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Nickeil Alexander-Walker",
   "p": 0.7797,
   "p_fair": null,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401909299|n:nickeil alexander walker|Points|10+": {
   "aid": null,
@@ -11467,11 +11507,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Nickeil Alexander-Walker",
   "p": 0.8737,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909299|n:nickeil alexander walker|Points|15+": {
   "aid": null,
@@ -11483,11 +11525,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Nickeil Alexander-Walker",
   "p": 0.8492,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909299|n:nickeil alexander walker|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -11499,11 +11543,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Nickeil Alexander-Walker",
   "p": 0.8491,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 25.0
  },
  "nba:401909299|n:nickeil alexander walker|Threes Made|2+": {
   "aid": null,
@@ -11515,11 +11561,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Nickeil Alexander-Walker",
   "p": 0.8496,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401909299|n:norman powell|Pts + Ast|15+": {
   "aid": null,
@@ -11531,11 +11579,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Norman Powell",
   "p": 0.8571,
   "p_fair": 0.9008,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 35.0
  },
  "nba:401909299|n:norman powell|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -11547,11 +11597,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Norman Powell",
   "p": 0.7547,
   "p_fair": 0.8316,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 40.0
  },
  "nba:401909299|n:tre jones|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -11563,11 +11615,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Tre Jones",
   "p": 0.8491,
   "p_fair": 0.9577,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 8.0
  },
  "nba:401909300|n:cam spencer|Reb + Ast|5+": {
   "aid": null,
