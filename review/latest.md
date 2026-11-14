@@ -1,7 +1,7 @@
 # Review 2026-11-13
 
 Picks 19-5 (79.2% vs 79.0% claimed, ROI -6.7%).
-Ladder: run 6, bank $4.95, 2 win(s) in a row, best $9.57; today stakes $4.95 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 36% at 2.48x for the plain top 4; without props it would be 3 legs at 2.00x (44%); 11 wins to $10,000; legs: Franz Wagner: 6+ Assists (MIL @ ORL; won), Houston Cougars to win (Houston Cougars at Colorado Buffaloes; live 7:50 - 1st, Colorado Buffaloes 0 - Houston Cougars 3), Under 241.5 points (Portland Trail Blazers at Sacramento Kings; live 16.6 - 1st, Portland Trail Blazers 32 - Sacramento Kings 25, 57 so far, line 241.5, too early to project); 1 of 3 won, the ticket now rests on 2 legs, 57% on their stated chance before play.
+Ladder: run 6, bank $4.95, 2 win(s) in a row, best $9.57; today stakes $4.95 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 36% at 2.48x for the plain top 4; without props it would be 3 legs at 2.00x (44%); 11 wins to $10,000; legs: Franz Wagner: 6+ Assists (MIL @ ORL; won), Houston Cougars to win (Houston Cougars at Colorado Buffaloes; live 6:24 - 1st, Colorado Buffaloes 0 - Houston Cougars 3), Under 241.5 points (Portland Trail Blazers at Sacramento Kings; live 11:10 - 2nd, Portland Trail Blazers 34 - Sacramento Kings 27, on pace for 228 (61 so far, line 241.5, room for 180 more), on track); 1 of 3 won, the ticket now rests on 2 legs, 57% on their stated chance before play.
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, live. Replayed on every saved card: as ranked 14/26 cashed at 2.22x, without props 14/26 at 2.31x.
 Running ahead: NBA under on all saved lines 1061/1195 vs 82%; NHL over on all saved lines 134/152 vs 84%; NHL teamover on all saved lines 168/187 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 114/132 (86% vs 81% stated); fine -- the caution on this band is off (locks.apply_prereg). History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).
@@ -9,9 +9,9 @@ Pre-registered tests also running: NFL spreads getting 14+ points (legs from 202
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 78%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 83% (88% / 85%); 90%+ 84%, 85% (93% / 85%).
 Soccer or-draw picks by side: home 77% vs 74% stated on 411 (halves 78%, 77%); away 74% vs 73% stated on 206 (halves 73%, 75%). Straight wins: 66% vs 66% stated on 288; 59 of 98 losses were draws. With full price history: 82% vs 74% stated on 133 (halves 80% vs 72%, 84% vs 75%); older picks without it: 52% vs 59% on 155.
 Soccer draws on the board: 22% of 1471 games; most in EFL3 41% of 37, AUS 38% of 21, UECL 30% of 33, URU 29% of 31, ARG 29% of 73 -- where a straight win most often loses to a draw.
-Locks by bet type, by half: win 84% then 97% (vs 82%, 81%); spread 86% then 92% (vs 85%, 85%); total 86% then 89% (vs 84%, 83%); team total 87% then 90% (vs 86%, 86%); prop 80% then 79% (vs 86%, 78%).
-Locks by league, by half: NHL 85% then 96% (vs 87%, 88%); NBA 82% then 88% (vs 83%, 82%); NCAAF 84% then 85% (vs 83%, 78%); NFL 89% then 70% (vs 84%, 82%). No league short in both halves.
-Locks props by market, by half: NBA Assists 13/17 then 18/21 (vs 90%, 79%); NFL Receiving Yards 12/14 then 6/11 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.
+Locks by bet type, by half: win 84% then 97% (vs 82%, 81%); spread 86% then 92% (vs 85%, 85%); total 86% then 90% (vs 84%, 83%); team total 87% then 90% (vs 86%, 86%); prop 80% then 77% (vs 86%, 78%). Short in both halves: prop.
+Locks by league, by half: NHL 85% then 96% (vs 87%, 88%); NBA 82% then 87% (vs 83%, 82%); NCAAF 84% then 85% (vs 83%, 78%); NFL 89% then 70% (vs 84%, 82%). No league short in both halves.
+Locks props by market, by half: NBA Assists 13/17 then 18/22 (vs 90%, 79%); NFL Receiving Yards 12/14 then 6/11 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.
 Every game's safest line by bet type, by half: win 84% then 81% (vs 85%, 84%); spread 86% then 91% (vs 90%, 90%); total 97% then 94% (vs 90%, 90%); team total 95% then 94% (vs 90%, 91%). Short in both halves: win. Ahead in both halves: total, team total.
 Priced-era picks by league, by half (split 2026-11-01): soccer or-draw 77% vs 74% (z +1.3) then 76% vs 74% (z +0.8); soccer win 82% vs 72% (z +2.4) then 83% vs 74% (z +2.2); NCAAF 73% vs 72% (z +0.3) then 70% vs 70% (z +0.1); NBA 70% vs 65% (z +1.0) then 77% vs 68% (z +1.8); NHL 62% vs 58% (z +0.7) then 63% vs 59% (z +0.7); NFL 73% vs 63% (z +0.8) then 83% vs 67% (z +1.8). None past the 99.5% bar in both halves.
 National-team soccer: 18/22 (82% vs 76% stated), 2 of 4 losses draws; club soccer 784/1083 (72% vs 71% stated).
@@ -42,16 +42,16 @@ Yesterday (2026-11-12): board 23-8, sweep broken by unl France or draw at 76%; 9
 - LOST nhl Dallas Stars at 58% (-155), Dallas Stars 3 - Winnipeg Jets 8: margin 5 · the book had my side favoured too · called at 58% · coin flip · blowout · price moved against it (6 pts); picks like it: 114 of 186 (61% vs 57% stated)
 - LOST nfl New York Giants at 53% (-122), New York Giants 21 - Washington Commanders 24: margin 3 · the book had my side favoured too · called at 53% · coin flip · close game; picks like it: 29 of 49 (59% vs 54% stated)
 - LOST nhl Los Angeles Kings at 53% (-125), Los Angeles Kings 2 - New York Islanders 5: margin 3 · the book had my side favoured too · called at 53% · coin flip · blowout; picks like it: 123 of 232 (53% vs 53% stated)
-Locks 3/11 won, 8 open; Best play top 2 (61%) open.
-Safe Locks 3/11 won, 8 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
+Locks 3/11 won, 7 open; Best play top 2 (61%) lost; lost: Cameron Boozer: 4+ Assists (MEM @ NO) 3.
+Safe Locks 4/11 won, 7 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
 Lottery 100: lost (2/7 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5)
-Lottery 100: lost (0/7 legs won, killed by Under 154.5 points)
-Lottery 10k: lost (2/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points)
-Lottery 10k+25: lost (2/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points)
-Lottery 10k+50: lost (2/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points)
-Lottery 10k+100: lost (2/12 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points)
-Ladder-consistency props (all time): 2284/2742 won (83.3%) vs 86.3% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
-Props 28/31 vs 83.0% claimed.
+Lottery 100: lost (1/7 legs won, killed by Under 154.5 points)
+Lottery 10k: lost (3/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points)
+Lottery 10k+25: lost (3/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points)
+Lottery 10k+50: lost (3/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points)
+Lottery 10k+100: lost (3/12 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points)
+Ladder-consistency props (all time): 2300/2759 won (83.4%) vs 86.3% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
+Props 46/50 vs 82.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=176), ncaab 0.00 (n=61), ncaaf 0.00 (n=235), nfl 0.00 (n=57), nhl 0.00 (n=192)

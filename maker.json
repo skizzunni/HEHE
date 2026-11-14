@@ -1570,6 +1570,7 @@
    "cost": 0.5943,
    "edge": 0.0234,
    "fair": 0.6082,
+   "fill": "strict",
    "id": "ncaaf:401858293",
    "label": "Pittsburgh Panthers",
    "league": "ncaaf",
@@ -1582,8 +1583,9 @@
     "team": "Pittsburgh Panthers"
    },
    "start": "2026-11-14T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV13FSUPITT-PITT"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV13FSUPITT-PITT",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV13HOUCOLO-HOU|YES": {
    "ask": 0.77,
@@ -5759,6 +5761,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "ncaaf:401858293",
    "label": "Florida State Seminoles +3.5",
    "league": "ncaaf",
@@ -5772,8 +5775,9 @@
     "team": "Florida State Seminoles"
    },
    "start": "2026-11-14T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV13FSUPITT-PITT4"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV13FSUPITT-PITT4",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV13HOUCOLO-HOU10|NO": {
    "ask": 0.51,
@@ -11738,6 +11742,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858293",
    "label": "over 52.5",
    "league": "ncaaf",
@@ -11750,8 +11755,9 @@
     "t": "over"
    },
    "start": "2026-11-14T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV13FSUPITT-53"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV13FSUPITT-53",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV13FSUPITT-54|NO": {
    "ask": 0.52,
@@ -11759,6 +11765,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "ncaaf:401858293",
    "label": "under 53.5",
    "league": "ncaaf",
@@ -11771,8 +11778,9 @@
     "t": "under"
    },
    "start": "2026-11-14T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV13FSUPITT-54"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV13FSUPITT-54",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV13HOUCOLO-52|NO": {
    "ask": 0.51,
