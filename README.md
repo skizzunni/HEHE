@@ -1517,6 +1517,14 @@ value finds first seen from 2026-11-15 (value_bets.PREREG_HOME). If they also
 run 5+ points short of fair, propose dropping home value bets to the user;
 otherwise the concern is dropped. The Value tab shows its count.
 
+**Checked, no change: NBA overs on the ladder (2026-11-14).** Today's ticket
+has two NBA game overs, and the card shows Locks like them at 29/40 -- under
+their ~76% stated. Locks + Safe Locks NBA overs by half: 27/37 (73% vs 83%)
+then 37/41 (90% vs 82.5%) -- mixed. Every saved NBA over line at 70-95%, the
+much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
+ahead. No leak. The review now prints, for each ladder leg type, this
+whole-pool record by half (ladder_pool_line).
+
 **Rejected: fade NBA road favourites (2026-11-13).** Prompted by the Knicks
 (73%, at Indiana) and Hawks (69%, at Chicago) both losing. Priced-era picks
 by side, split at 2026-11-01: NBA road picks 24/32 then 31/39 (75%, 79% vs

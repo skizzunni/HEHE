@@ -507,6 +507,57 @@ def home_away_line(ledger=None, leagues=("nba", "nhl", "ncaaf", "nfl"), min_half
     return ("Home and away picks, by half: " + "; ".join(parts) + ".") if parts else None
 
 
+def pool_rows(league, t, led=None, lo=0.70, hi=0.95):
+    """Every saved pool line (Locks and Safe Locks pools, deduplicated) of one
+    league and game bet type at lo-hi stated, graded from the ledger score:
+    [{date, status, p}]. Props are not covered (they grade elsewhere)."""
+    import locks
+    import ledger
+    import stacks
+    led = led if led is not None else ledger.load()
+    rows, seen = [], set()
+    for path in (None, locks.SAFE_LEDGER):
+        for d, x in sorted((locks.load(path).get("pools") or {}).items()):
+            for L in x.get("legs") or []:
+                sp = L.get("spec") or {}
+                if L.get("league") != league or sp.get("t") != t or not (lo <= (L.get("p") or 0) < hi):
+                    continue
+                k = (L.get("gid"), L.get("label"))
+                if k in seen:
+                    continue
+                seen.add(k)
+                sc = (led.get(L.get("gid")) or {}).get("scores") or {}
+                h, a = sc.get(L.get("home")), sc.get(L.get("away"))
+                if isinstance(h, int) and isinstance(a, int):
+                    r = stacks.settle_score(sp, L["home"], L["away"], h, a)
+                    if r in ("won", "lost"):
+                        rows.append(dict(date=d, status=r, p=L["p"]))
+    return rows
+
+
+def ladder_pool_line(report=None, rows_fn=None):
+    """Today's ladder legs, each with its league and bet type's record on every
+    saved pool line, by half -- a far bigger sample than the Locks alone
+    (2026-11-14: NBA overs on Locks 73% then 90% vs 83%; every saved NBA over
+    82% then 88% vs 82%, on par). Information only."""
+    import ladder
+    R = report if report is not None else ladder.report()
+    legs = ((R or {}).get("today") or {}).get("legs") or []
+    rows_fn = rows_fn or pool_rows
+    parts, done = [], set()
+    for L in legs:
+        t = L.get("t") or (L.get("spec") or {}).get("t")
+        if L.get("kind") == "prop" or not t or (L.get("league"), t) in done:
+            continue
+        done.add((L.get("league"), t))
+        H = _halves_by(rows_fn(L.get("league"), t), lambda x: "x", 10)
+        if H:
+            (a, b) = H[0][1]
+            parts.append(f"{str(L.get('league')).upper()} {t} {round(a[0])}% then {round(b[0])}% vs {round(a[1])}%, {round(b[1])}% "
+                         f"on {a[2] + b[2]} saved lines")
+    return ("Ladder leg types on every saved pool line, by half: " + "; ".join(parts) + ".") if parts else None
+
+
 NATIONAL = ("intl", "unl", "wcq")          # national-team competitions on the board
 
 
@@ -1806,6 +1857,8 @@ def words(r, fit):
         out.append(r["national"])
     if r.get("home_away"):
         out.append(r["home_away"])
+    if r.get("ladder_pool"):
+        out.append(r["ladder_pool"])
     if r.get("inj_study"):
         out.append(r["inj_study"])
     if r.get("lessons"):
@@ -1960,6 +2013,10 @@ def _main():
     log[today.isoformat()]["priced_calibration"] = priced_calibration_line()
     log[today.isoformat()]["national"] = national_line()
     log[today.isoformat()]["home_away"] = home_away_line()
+    try:
+        log[today.isoformat()]["ladder_pool"] = ladder_pool_line()
+    except Exception as e:                                  # a broken pool file must not stop the review
+        log[today.isoformat()]["ladder_pool"] = f"Ladder leg types: unavailable ({type(e).__name__})."
     try:
         log[today.isoformat()]["every_game_types"] = every_game_type_line()
     except Exception as e:                                  # a broken pool file must not stop the review

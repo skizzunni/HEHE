@@ -134,6 +134,16 @@ class HomeAway(unittest.TestCase):
         self.assertIsNone(daily_review.home_away_line({}))
 
 
+class LadderPool(unittest.TestCase):
+    def test_line(self):
+        R = {"today": {"legs": [{"league": "nba", "t": "over", "kind": "game"}, {"league": "nba", "t": "over", "kind": "game"},
+                                {"league": "nfl", "kind": "prop", "market": "Receptions"}]}}
+        rows = [dict(date="2026-10-01", status="won", p=0.8)] * 20 + [dict(date="2026-11-01", status="won" if i % 2 else "lost", p=0.8) for i in range(20)]
+        out = daily_review.ladder_pool_line(R, rows_fn=lambda lg, t: rows)
+        self.assertEqual(out, "Ladder leg types on every saved pool line, by half: NBA over 100% then 50% vs 80%, 80% on 40 saved lines.")
+        self.assertIsNone(daily_review.ladder_pool_line({"today": {"legs": []}}, rows_fn=lambda lg, t: rows))
+
+
 class PreregMore(unittest.TestCase):
     def test_line(self):
         import locks
