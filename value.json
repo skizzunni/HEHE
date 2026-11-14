@@ -10160,6 +10160,23 @@
    "tip": "2:00 PM",
    "venue": "Kalshi"
   },
+  "ncaaf:401856882|away|FanDuel": {
+   "dec": 1.3636,
+   "ev": 0.0132,
+   "fair": 0.743,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401856882",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "SC @ ARK",
+   "price": "-275",
+   "seen": "2026-11-14T16:44:43+00:00",
+   "side": "away",
+   "start": "2026-11-15T00:45Z",
+   "team": "South Carolina Gamecocks",
+   "tip": "7:45 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401856884|home|FanDuel": {
    "dec": 1.7042,
    "ev": 0.0206,
@@ -18791,6 +18808,35 @@
    "seen": "2026-11-13T12:35:33+00:00",
    "status": "won",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401856882:away|ncaaf:401864539:away": {
+   "ev": 0.0385,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0254,
+     "fair": 0.125,
+     "id": "ncaaf:401864539",
+     "price": "+720",
+     "side": "away",
+     "spec": null,
+     "team": "UNLV Rebels"
+    },
+    {
+     "ev": 0.0132,
+     "fair": 0.743,
+     "id": "ncaaf:401856882",
+     "price": "-275",
+     "side": "away",
+     "spec": null,
+     "team": "South Carolina Gamecocks"
+    }
+   ],
+   "payout": 11.182,
+   "prob": 0.0929,
+   "seen": "2026-11-14T16:44:43+00:00",
+   "target": 10.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401856884:home|ncaaf:401858298:away": {
