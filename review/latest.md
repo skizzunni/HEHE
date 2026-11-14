@@ -24,11 +24,11 @@ High-chance sweep: 70%+ today 2-0, 52 open; swept 3 of 29 past days (last 2026-1
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/27 vs 61%; NBA on the tired side 15/18 vs 66%, against it 17/19 vs 71%.
 Ladder games, players out or doubtful: Chicago Bulls at Minnesota Timberwolves: Chicago Bulls without Dailyn Swain, Tobe Awaka, Caleb Wilson; Minnesota Timberwolves without Anthony Edwards, Donte DiVincenzo | Dallas Mavericks at Cleveland Cavaliers: Dallas Mavericks without Dereck Lively II, Tarik Biberovic, Sergio de Larrea; Cleveland Cavaliers without Evan Mobley, Sam Merrill, Nae'Qwan Tomlin.
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
-Next UFC card 2026-11-14 (13 fights priced, 5 close): Bilal Hasan 88%; Juan Diaz 77%; Melquizael Costa 77%; Bia Mesquita 69%; Ciryl Gane 67%; Donte Johnson 66%; Terrance McKinney 64%; Chris Duncan 62%; Kayla Harrison 60% (close); Caio Borralho 59% (close); Uroš Medić 58% (close); Stephen Thompson 56% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
+Next UFC card 2026-11-14 (13 fights priced, 5 close): Bilal Hasan 88%; Juan Diaz 77%; Melquizael Costa 76%; Bia Mesquita 69%; Ciryl Gane 67%; Donte Johnson 66%; Terrance McKinney 66%; Chris Duncan 62%; Kayla Harrison 60% (close); Caio Borralho 59% (close); Uroš Medić 58% (close); Stephen Thompson 56% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.1% hit vs 44.3% stated on 466
 Strong calls 2-0 (100.0% vs 80.0% claimed).
 Closing line value: +6.58 points on 2 picks; beat the close on 100.0%.
-Board sweep: 2-0, 106 open -- still clean.
+Board sweep: 2-0, 107 open -- still clean.
 Why picks lost (14 days): favourite lost 124, close game 103, coin flip 44, upset 43, blowout 32, price moved against it 24.
 Yesterday (2026-11-13): board 28-9, sweep broken by intl Iraq at 67%; 8.7 losses expected, 9 came in (51.4% chance of that many or more).
 - LOST intl Iraq at 67% (-240), Iraq 0 - Lebanon 0: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 67% · favourite lost
