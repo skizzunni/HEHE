@@ -2050,6 +2050,7 @@
    "cost": 0.7335,
    "edge": 0.0023,
    "fair": 0.7352,
+   "fill": null,
    "id": "ncaaf:401870769",
    "label": "Kennesaw State Owls",
    "league": "ncaaf",
@@ -2062,8 +2063,9 @@
     "team": "Kennesaw State Owls"
    },
    "start": "2026-11-14T19:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14KENNSHSU-KENN"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14KENNSHSU-KENN",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV14KSUTCU-TCU|YES": {
    "ask": 0.8,
@@ -6451,6 +6453,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401870769",
    "label": "Kennesaw State Owls -9.5",
    "league": "ncaaf",
@@ -6464,8 +6467,9 @@
     "team": "Kennesaw State Owls"
    },
    "start": "2026-11-14T19:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14KENNSHSU-KENN10"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14KENNSHSU-KENN10",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV14KENNSHSU-KENN8|NO": {
    "ask": 0.52,
@@ -6473,6 +6477,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401870769",
    "label": "Sam Houston Bearkats +7.5",
    "league": "ncaaf",
@@ -6486,8 +6491,9 @@
     "team": "Sam Houston Bearkats"
    },
    "start": "2026-11-14T19:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14KENNSHSU-KENN8"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14KENNSHSU-KENN8",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14KSUTCU-TCU12|YES": {
    "ask": 0.51,
@@ -13280,6 +13286,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401870769",
    "label": "over 44.5",
    "league": "ncaaf",
@@ -13292,8 +13299,9 @@
     "t": "over"
    },
    "start": "2026-11-14T19:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14KENNSHSU-45"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14KENNSHSU-45",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV14KENNSHSU-46|YES": {
    "ask": 0.51,
@@ -13301,6 +13309,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401870769",
    "label": "over 45.5",
    "league": "ncaaf",
@@ -13313,8 +13322,9 @@
     "t": "over"
    },
    "start": "2026-11-14T19:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14KENNSHSU-46"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14KENNSHSU-46",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV14KSUTCU-45|YES": {
    "ask": 0.52,
