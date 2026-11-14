@@ -1,7 +1,7 @@
 # Review 2026-11-13
 
 Picks 21-6 (77.8% vs 77.1% claimed, ROI -4.8%).
-Ladder: run 6, bank $4.95, 2 win(s) in a row, best $9.57; today stakes $4.95 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 36% at 2.48x for the plain top 4; without props it would be 3 legs at 2.00x (44%); 11 wins to $10,000; legs: Franz Wagner: 6+ Assists (MIL @ ORL; won), Houston Cougars to win (Houston Cougars at Colorado Buffaloes; live 13:03 - 2nd, Colorado Buffaloes 0 - Houston Cougars 10), Under 241.5 points (Portland Trail Blazers at Sacramento Kings; live 3:16 - 2nd, Portland Trail Blazers 55 - Sacramento Kings 48, on pace for 238 (103 so far, line 241.5, room for 138 more), on track); 1 of 3 won, the ticket now rests on 2 legs, 57% on their stated chance before play.
+Ladder: run 6, bank $4.95, 2 win(s) in a row, best $9.57; today stakes $4.95 at 2.00x (45% est.), the best-chance 2x-5x combination (3 legs) against 36% at 2.48x for the plain top 4; without props it would be 3 legs at 2.00x (44%); 11 wins to $10,000; legs: Franz Wagner: 6+ Assists (MIL @ ORL; won), Houston Cougars to win (Houston Cougars at Colorado Buffaloes; live 9:25 - 2nd, Colorado Buffaloes 7 - Houston Cougars 10), Under 241.5 points (Portland Trail Blazers at Sacramento Kings; live 9.9 - 2nd, Portland Trail Blazers 61 - Sacramento Kings 53, on pace for 230 (114 so far, line 241.5, room for 127 more), on track); 1 of 3 won, the ticket now rests on 2 legs, 57% on their stated chance before play.
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, live. Replayed on every saved card: as ranked 14/26 cashed at 2.22x, without props 14/26 at 2.31x.
 Running ahead: NBA under on all saved lines 1101/1248 vs 82%; NHL over on all saved lines 134/152 vs 84%; NHL teamover on all saved lines 168/187 vs 82%.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 114/132 (86% vs 81% stated); fine -- the caution on this band is off (locks.apply_prereg). History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).
@@ -45,13 +45,13 @@ Yesterday (2026-11-12): board 23-8, sweep broken by unl France or draw at 76%; 9
 - LOST nfl New York Giants at 53% (-122), New York Giants 21 - Washington Commanders 24: margin 3 · the book had my side favoured too · called at 53% · coin flip · close game; picks like it: 29 of 49 (59% vs 54% stated)
 - LOST nhl Los Angeles Kings at 53% (-125), Los Angeles Kings 2 - New York Islanders 5: margin 3 · the book had my side favoured too · called at 53% · coin flip · blowout; picks like it: 123 of 232 (53% vs 53% stated)
 Locks 5/11 won, 5 open; Best play top 2 (61%) lost; lost: Cameron Boozer: 4+ Assists (MEM @ NO) 3.
-Safe Locks 6/11 won, 5 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
-Lottery 100: lost (2/7 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5)
+Safe Locks 7/11 won, 4 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
+Lottery 100: lost (3/7 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5)
 Lottery 100: lost (1/7 legs won, killed by Under 154.5 points, Over 244.5 points)
-Lottery 10k: lost (3/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points, Under 238.5 points)
-Lottery 10k+25: lost (3/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points, Under 238.5 points)
-Lottery 10k+50: lost (3/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points, Under 238.5 points)
-Lottery 10k+100: lost (3/12 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points)
+Lottery 10k: lost (4/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points, Under 238.5 points)
+Lottery 10k+25: lost (4/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points, Under 238.5 points)
+Lottery 10k+50: lost (4/13 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points, Under 238.5 points)
+Lottery 10k+100: lost (4/12 legs won, killed by New York Knicks -7.5, Virginia Cavaliers -5.5, Under 154.5 points)
 Ladder-consistency props (all time): 2328/2794 won (83.3%) vs 86.3% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
 Props 81/93 vs 83.5% claimed.
 
