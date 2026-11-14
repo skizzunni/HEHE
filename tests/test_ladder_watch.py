@@ -196,3 +196,27 @@ class FirstLookSettled(unittest.TestCase):
             "WATCHING: 2 board games -- 1 won, 1 lost (ncaaf HOU @ COLO), 0 open"])
         self.assertTrue(w.done(after))
 
+
+class UfcSnapshot(unittest.TestCase):
+    SB = {"events": [{"competitions": [
+        {"format": {"regulation": {"periods": 3}}, "status": {"period": 1, "displayClock": "4:16", "type": {"completed": True}},
+         "competitors": [{"athlete": {"displayName": "A"}, "winner": False}, {"athlete": {"displayName": "B"}, "winner": True}]},
+        {"format": {"regulation": {"periods": 5}}, "status": {"period": 5, "displayClock": "5:00", "type": {"completed": True}},
+         "competitors": [{"athlete": {"displayName": "C"}, "winner": True}, {"athlete": {"displayName": "D"}, "winner": False}]},
+        {"status": {"period": 0, "type": {"completed": False}},
+         "competitors": [{"athlete": {"displayName": "E"}}, {"athlete": {"displayName": "F"}}]},
+        {"status": {"type": {"completed": True}}, "competitors": [{"athlete": {"displayName": "X"}}, {"athlete": {"displayName": "Y"}}]}]}]}
+
+    def test_results(self):
+        import ladder_watch as w
+        out = w.ufc_snapshot("2026-11-14", {"A": 70, "C": 60, "F": 55}, fetch=lambda u: self.SB)
+        self.assertEqual(out, {"UFC A vs B": "board pick A (70%) = lost | winner B, finish R1 4:16",
+                               "UFC C vs D": "board pick C (60%) = won | winner C, decision",
+                               "UFC E vs F": "board pick F = open"})
+
+    def test_counts_in_done_and_first_look(self):
+        import ladder_watch as w
+        after = {"SETTLED": "x", "UFC E vs F": "board pick F = open", "UFC A vs B": "board pick A (70%) = lost | winner B"}
+        self.assertFalse(w.done(after))
+        self.assertIn("WATCHING: 2 board games -- 0 won, 1 lost (A vs B), 1 open", w.first_look(after))
+

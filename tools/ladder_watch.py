@@ -125,6 +125,59 @@ def games_snapshot(book, day, league):
     return out
 
 
+UFC_SB = "https://site.api.espn.com/apis/site/v2/sports/mma/ufc/scoreboard?dates={}"
+
+
+def ufc_snapshot(day, picks, fetch=None):
+    """{"UFC A vs B": "board pick X (chance%) = won|lost|open | winner W, how"}
+    for the day's UFC card. UFC picks never reach ledger.json (ESPN's UFC
+    prices carry no capture time), so games_snapshot cannot see them; the
+    board's picks come from the published page (picks: {name: chance}) and
+    the results straight from ESPN. how: "finish R1 4:16" or "decision"."""
+    if fetch is None:
+        import urllib.request
+
+        def fetch(u):
+            with urllib.request.urlopen(u, timeout=30) as r:
+                return json.load(r)
+    try:
+        j = fetch(UFC_SB.format(str(day).replace("-", "")))
+    except Exception:
+        return {}
+    out = {}
+    for e in (j or {}).get("events", []):
+        for c in e.get("competitions", []):
+            cs = c.get("competitors") or []
+            names = [(x.get("athlete") or {}).get("displayName") for x in cs]
+            if len(names) != 2:
+                continue
+            pick = next((n for n in names if n in picks), None)
+            if pick is None:
+                continue
+            st = c.get("status") or {}
+            ty = st.get("type") or {}
+            key = f"UFC {names[0]} vs {names[1]}"
+            if not ty.get("completed"):
+                out[key] = f"board pick {pick} = open"
+                continue
+            win = next(((x.get("athlete") or {}).get("displayName") for x in cs if x.get("winner")), None)
+            rounds = ((c.get("format") or {}).get("regulation") or {}).get("periods") or 3
+            how = ("decision" if st.get("period") == rounds and st.get("displayClock") in ("5:00", "0:00")
+                   else f"finish R{st.get('period')} {st.get('displayClock')}")
+            res = "won" if win == pick else "lost" if win else "void"
+            out[key] = (f"board pick {pick} ({picks[pick]}%) = {res}" + (f" | winner {win}, {how}" if win else " | no winner (draw or no contest)"))
+    return out
+
+
+def board_picks(league):
+    """{pick name: chance} for a league from the published board (line_moves)."""
+    try:
+        import line_moves
+        return {r["pick"]: r["chance"] for r in line_moves.rows(line_moves.board(), league).values()}
+    except Exception:
+        return {}
+
+
 def _same(a, b):
     """Two states read alike once the running total inside a decided note
     ('already over (219, ...)', 'gone over (9, ...)') is set aside: the leg
@@ -140,11 +193,11 @@ def first_look(after):
     """The first look, short: every ladder leg (and SETTLED) in full, then the
     board games as one count line -- won, lost (named), open. It used to print
     every game, 40+ lines that cut off before the ladder legs could be read."""
-    out = [f"WATCHING: {k} = {v}" for k, v in after.items() if not k.startswith("GAME ")]
-    G = {k: str(v).split(" | ")[0] for k, v in after.items() if k.startswith("GAME ")}
+    out = [f"WATCHING: {k} = {v}" for k, v in after.items() if not k.startswith(("GAME ", "UFC "))]
+    G = {k: str(v).split(" | ")[0] for k, v in after.items() if k.startswith(("GAME ", "UFC "))}
     if G:
         won = sum(v.endswith("= won") for v in G.values())
-        lost = [k[5:] for k, v in G.items() if v.endswith("= lost")]
+        lost = [k.split(" ", 1)[1] for k, v in G.items() if v.endswith("= lost")]
         opn = sum(v.endswith("= open") for v in G.values())
         out.append(f"WATCHING: {len(G)} board games -- {won} won, {len(lost)} lost"
                    + (f" ({', '.join(lost)})" if lost else "") + f", {opn} open")
@@ -163,7 +216,7 @@ def changes(before, after):
 def done(after):
     """The ladder has settled and no watched game is still open."""
     return "SETTLED" in after and not any(str(v).split(" | ")[0].endswith("= open")
-                                         for k, v in after.items() if k.startswith("GAME "))
+                                         for k, v in after.items() if k.startswith(("GAME ", "UFC ")))
 
 
 def main(state_path, day=None, league=None):
@@ -181,6 +234,10 @@ def main(state_path, day=None, league=None):
                 after.update(games_snapshot(json.load(fh), day, league))
         except (OSError, ValueError):
             pass
+        if league == "all":              # UFC results come from ESPN, not the ledger
+            picks = board_picks("ufc")
+            if picks:
+                after.update(ufc_snapshot(day, picks))
     # a feed gap (live score briefly missing) must not undo a note already
     # seen: an open leg with no note keeps the note it had
     for k, v in list(after.items()):
