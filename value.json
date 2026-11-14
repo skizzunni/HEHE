@@ -15705,6 +15705,7 @@
     "team": "Chicago Blackhawks"
    },
    "start": "2026-11-14T20:30Z",
+   "status": "won",
    "team": "Chicago Blackhawks +1.5",
    "tip": "3:30 PM",
    "venue": "FanDuel"
@@ -18978,6 +18979,35 @@
    "prob": 0.4437,
    "seen": "2026-11-14T19:37:10+00:00",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909983:away|nba:401909984:away": {
+   "ev": 0.0531,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0215,
+     "fair": 0.1122,
+     "id": "nba:401909984",
+     "price": "+810",
+     "side": "away",
+     "spec": null,
+     "team": "Chicago Bulls"
+    },
+    {
+     "ev": 0.0313,
+     "fair": 0.4159,
+     "id": "nba:401909983",
+     "price": "+148",
+     "side": "away",
+     "spec": null,
+     "team": "Brooklyn Nets"
+    }
+   ],
+   "payout": 22.568,
+   "prob": 0.0467,
+   "seen": "2026-11-14T23:26:36+00:00",
+   "target": 10.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909983:home|nba:401909984:away": {
