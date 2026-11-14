@@ -1,6 +1,6 @@
 # Review 2026-11-14
 
-Picks 5-1 (83.3% vs 73.5% claimed, ROI +4.7%).
+Picks 6-1 (85.7% vs 72.3% claimed, ROI +10.0%).
 Ladder: run 7, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (33% est.), the best-chance 2x-5x combination (4 legs) against 33% at 2.47x for the plain top 4; 11 wins to $10,000; legs: Over 223.5 points (Chicago Bulls at Minnesota Timberwolves; 8:00 PM, open), New Mexico Lobos under 39.5 points (UNLV Rebels at New Mexico Lobos; 7:30 PM, open), UTEP Miners +17.5 (Wyoming Cowboys at UTEP Miners; 10:00 PM, open), Over 219.5 points (Dallas Mavericks at Cleveland Cavaliers; 7:30 PM, open).
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 7) 2026-11-14, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 14/27 cashed at 2.21x, without props 14/27 at 2.3x.
 Cautions in force: NCAAF teamunder on all saved lines 859/1111 vs 82%. Running ahead: NBA under on all saved lines 1054/1213 vs 82%; NHL over on all saved lines 122/139 vs 84%; NHL teamover on all saved lines 155/174 vs 82%; NHL teamunder on all saved lines 238/275 vs 83%; NHL under on all saved lines 179/204 vs 82%.
@@ -18,7 +18,7 @@ National-team soccer: 21/25 (84% vs 76% stated), 2 of 4 losses draws; club socce
 Home and away picks, by half: NBA home 68% vs 66% then 76% vs 68%, away 75% vs 63% then 78% vs 69%; NHL home 65% vs 59% then 60% vs 60%, away 54% vs 57% then 69% vs 57%; NCAAF home 76% vs 73% then 74% vs 72%, away 54% vs 66% then 77% vs 71%; NFL home 74% vs 65% then 62% vs 69%, away 88% vs 62% then 100% vs 66%.
 Ladder leg types on every saved pool line, by half: NBA over 82% then 88% vs 82%, 82% on 1100 saved lines; NCAAF teamunder 78% then 77% vs 81%, 82% on 1111 saved lines; NCAAF spread 73% then 82% vs 82%, 82% on 1374 saved lines.
 Injuries at tip-off (157 games, 10 days, early read): my side more out: 1st 12/17 71% vs 63% | 2nd 20/30 67% vs 65%; even: 1st 12/18 67% vs 62% | 2nd 18/24 75% vs 65%; their side more out: 1st 24/28 86% vs 67% | 2nd 32/40 80% vs 63%.
-Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1714 picks).
+Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1715 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 6/15 vs 71% stated (1.1% by luck; about 0.6 of 52 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 6.6 of 52 teams expected this far behind by chance); NBA Oklahoma City Thunder 8/14 vs 71% stated (20.1% by luck; about 10.5 of 52 teams expected this far behind by chance).
 High-chance sweep: 70%+ today 4-0, 49 open; swept 3 of 29 past days (last 2026-11-11) | 80%+ today 1-0, 29 open; swept 10 of 28 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/27 vs 61%; NBA on the tired side 15/18 vs 66%, against it 17/19 vs 71%.
@@ -26,9 +26,9 @@ Ladder games, players out or doubtful: Chicago Bulls at Minnesota Timberwolves: 
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
 Next UFC card 2026-11-14 (13 fights priced, 5 close): Bilal Hasan 87%; Juan Diaz 79%; Melquizael Costa 76%; Bia Mesquita 69%; Ciryl Gane 67%; Donte Johnson 66%; Terrance McKinney 66%; Chris Duncan 62%; Kayla Harrison 60% (close); Caio Borralho 59% (close); Uroš Medić 58% (close); Stephen Thompson 55% (close); Samuel Sanches 52% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.1% hit vs 44.3% stated on 466
-Strong calls 5-1 (83.3% vs 73.5% claimed).
-Closing line value: +1.26 points on 6 picks; beat the close on 50.0%.
-Board sweep: 5-1, 103 open -- broken (first loss: wsl Tottenham Hotspur at 66%); 1.6 losses expected from the settled picks' chances, so 1 or more by now had a 84.6% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: wsl 1 (0.6 expected).
+Strong calls 6-1 (85.7% vs 72.3% claimed).
+Closing line value: -1.69 points on 7 picks; beat the close on 42.9%.
+Board sweep: 6-1, 102 open -- broken (first loss: wsl Tottenham Hotspur at 66%); 1.9 losses expected from the settled picks' chances, so 1 or more by now had a 90% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: wsl 1 (0.6 expected).
 - LOST wsl Tottenham Hotspur at 66% (-245), Everton 0 - Tottenham Hotspur 0: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 66% · favourite lost
 Why picks lost (14 days): favourite lost 125, close game 103, coin flip 44, upset 43, blowout 32, price moved against it 24.
 Yesterday (2026-11-13): board 28-9, sweep broken by intl Iraq at 67%; 8.7 losses expected, 9 came in (51.4% chance of that many or more).
