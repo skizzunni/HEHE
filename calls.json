@@ -7838,32 +7838,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-14T02:04:01+00:00",
+      "checked_at": "2026-11-14T02:09:50+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (9 listed)"
+       "what": "injury report checked (7 listed)"
       },
       "id": "nba:401909302",
       "league": "nba",
       "match": "GS @ SA",
       "pick": "San Antonio Spurs",
       "price": "-700",
-      "price_at": "2026-11-14T02:03:42+00:00",
+      "price_at": "2026-11-14T02:09:07+00:00",
       "price_market": "moneyline",
       "price_ref": "34516403:0ML85860027_1",
-      "prob_at": "2026-11-14T02:03:42+00:00",
+      "prob_at": "2026-11-14T02:09:07+00:00",
       "rank": 4,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-14T02:30Z"
      },
      "dc": false,
-     "fp": "725b3594e5c7",
+     "fp": "2367b6650352",
      "gate": {
       "ok": true,
-      "what": "injury report checked (9 listed)"
+      "what": "injury report checked (7 listed)"
      },
      "id": "nba:401909302",
      "league": "nba",
@@ -7892,10 +7893,15 @@
        "event": "news",
        "t": "2026-11-14T01:55:00+00:00",
        "what": "injury report checked (9 listed)"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-14T02:09:50+00:00",
+       "what": "injury report checked (7 listed)"
       }
      ],
      "match": "GS @ SA",
-     "news_at": "2026-11-14T01:55:00+00:00",
+     "news_at": "2026-11-14T02:09:50+00:00",
      "pick": "San Antonio Spurs",
      "price": "-700",
      "price_at": "2026-11-13T13:04:06+00:00",
@@ -7936,7 +7942,7 @@
     }
    ],
    "candidate_news": {
-    "nba": "2026-11-14T01:55:00+00:00"
+    "nba": "2026-11-14T02:09:50+00:00"
    },
    "candidate_observations": {
     "nba:401909302": {
@@ -7947,40 +7953,48 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-14T02:04:01+00:00",
+      "checked_at": "2026-11-14T02:09:50+00:00",
       "conf": 84,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (9 listed)"
+       "what": "injury report checked (7 listed)"
       },
       "id": "nba:401909302",
       "league": "nba",
       "match": "GS @ SA",
       "pick": "San Antonio Spurs",
       "price": "-700",
-      "price_at": "2026-11-14T02:03:42+00:00",
+      "price_at": "2026-11-14T02:09:07+00:00",
       "price_market": "moneyline",
       "price_ref": "34516403:0ML85860027_1",
-      "prob_at": "2026-11-14T02:03:42+00:00",
+      "prob_at": "2026-11-14T02:09:07+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-14T02:30Z"
      },
      "dc": false,
-     "fp": "725b3594e5c7",
+     "fp": "2367b6650352",
      "gate": {
       "ok": true,
-      "what": "injury report checked (9 listed)"
+      "what": "injury report checked (7 listed)"
      },
      "id": "nba:401909302",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-14T02:09:50+00:00",
+       "what": "injury report checked (7 listed)"
+      }
+     ],
      "match": "GS @ SA",
-     "news_at": "2026-11-14T01:55:00+00:00",
+     "news_at": "2026-11-14T02:09:50+00:00",
      "pick": "San Antonio Spurs",
      "price": "-700",
-     "price_at": "2026-11-14T02:03:42+00:00",
+     "price_at": "2026-11-14T02:09:07+00:00",
      "price_market": "moneyline",
      "price_ref": "34516403:0ML85860027_1",
      "side": "home",
@@ -7995,7 +8009,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-14T02:04:01+00:00",
+      "checked_at": "2026-11-14T02:09:50+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
@@ -8007,10 +8021,10 @@
       "match": "POR @ SAC",
       "pick": "Portland Trail Blazers",
       "price": "-468",
-      "price_at": "2026-11-14T02:03:42+00:00",
+      "price_at": "2026-11-14T02:09:07+00:00",
       "price_market": "moneyline",
       "price_ref": "35010448:0ML87219876_3",
-      "prob_at": "2026-11-14T02:03:42+00:00",
+      "prob_at": "2026-11-14T02:09:07+00:00",
       "rank": null,
       "ready": true,
       "side": "away",
@@ -8028,7 +8042,7 @@
      "news_at": "2026-11-13T23:07:04+00:00",
      "pick": "Portland Trail Blazers",
      "price": "-468",
-     "price_at": "2026-11-14T02:03:42+00:00",
+     "price_at": "2026-11-14T02:09:07+00:00",
      "price_market": "moneyline",
      "price_ref": "35010448:0ML87219876_3",
      "side": "away",
@@ -8043,7 +8057,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-14T02:04:01+00:00",
+      "checked_at": "2026-11-14T02:09:50+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -8055,10 +8069,10 @@
       "match": "HOU @ COLO",
       "pick": "Houston Cougars",
       "price": "-325",
-      "price_at": "2026-11-14T02:03:42+00:00",
+      "price_at": "2026-11-14T02:09:07+00:00",
       "price_market": "moneyline",
       "price_ref": "34964164:0ML87098643_3",
-      "prob_at": "2026-11-14T02:03:42+00:00",
+      "prob_at": "2026-11-14T02:09:07+00:00",
       "rank": null,
       "ready": true,
       "side": "away",
@@ -8075,7 +8089,7 @@
      "match": "HOU @ COLO",
      "pick": "Houston Cougars",
      "price": "-325",
-     "price_at": "2026-11-14T02:03:42+00:00",
+     "price_at": "2026-11-14T02:09:07+00:00",
      "price_market": "moneyline",
      "price_ref": "34964164:0ML87098643_3",
      "side": "away",
@@ -8083,9 +8097,11 @@
      "tip": "10:15 PM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "nba"
+   ],
    "news": {
-    "nba": "2026-11-14T01:55:00+00:00"
+    "nba": "2026-11-14T02:09:50+00:00"
    },
    "shadow": {
     "pool": [
