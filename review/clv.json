@@ -3,14 +3,14 @@
  "enough": true,
  "last": {
   "beat_close_pct": 61.3,
-  "brier_close": 0.1602,
-  "brier_published": 0.1643,
+  "brier_close": 0.1598,
+  "brier_published": 0.164,
   "dates": [
    "2026-11-07",
    "2026-11-14"
   ],
-  "logloss_close": 0.4906,
-  "logloss_published": 0.5015,
+  "logloss_close": 0.4899,
+  "logloss_published": 0.5008,
   "mean_clv_pts": 1.09,
   "n": 300
  },
@@ -2821,6 +2821,15 @@
    "day": "2026-11-14",
    "league": "col",
    "published": 0.72,
+   "won": 1
+  },
+  "col:401878029": {
+   "call": false,
+   "close": 0.6915,
+   "clv": 3.15,
+   "day": "2026-11-14",
+   "league": "col",
+   "published": 0.66,
    "won": 1
   },
   "col:401878030": {
@@ -29538,5 +29547,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-14T22:34+00:00"
+ "updated": "2026-11-14T22:39+00:00"
 }
