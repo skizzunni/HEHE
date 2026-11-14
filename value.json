@@ -18681,6 +18681,35 @@
    "target": 2.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|ncaaf:401856884:home|ncaaf:401858298:away": {
+   "ev": 0.0265,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0126,
+     "fair": 0.5854,
+     "id": "ncaaf:401856884",
+     "price": "-137",
+     "side": "home",
+     "spec": null,
+     "team": "Kentucky Wildcats"
+    },
+    {
+     "ev": 0.0136,
+     "fair": 0.6177,
+     "id": "ncaaf:401858298",
+     "price": "-156",
+     "side": "away",
+     "spec": null,
+     "team": "Louisville Cardinals"
+    }
+   ],
+   "payout": 2.839,
+   "prob": 0.3616,
+   "seen": "2026-11-14T14:22:35+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|ncaaf:401858501:away": {
    "ev": 0.0188,
    "kind": "parlay",

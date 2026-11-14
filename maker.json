@@ -6096,6 +6096,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV14ECUCHAR-ECU11"
   },
+  "KXNCAAFSPREAD-26NOV14FIUDEL-DEL4|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401871060",
+   "label": "Delaware Blue Hens -3.5",
+   "league": "ncaaf",
+   "match": "FIU @ DEL",
+   "posted": "2026-11-14T14:22:35+00:00",
+   "queue": 108584.13,
+   "side": "YES",
+   "spec": {
+    "line": -3.5,
+    "t": "spread",
+    "team": "Delaware Blue Hens"
+   },
+   "start": "2026-11-14T20:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV14FIUDEL-DEL4"
+  },
   "KXNCAAFSPREAD-26NOV14FIUDEL-DEL5|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -12288,6 +12310,27 @@
    "start": "2026-11-14T21:00Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV14FRESTXST-60"
+  },
+  "KXNCAAFTOTAL-26NOV14GASOGAST-56|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401869952",
+   "label": "over 55.5",
+   "league": "ncaaf",
+   "match": "GASO @ GAST",
+   "posted": "2026-11-14T14:22:35+00:00",
+   "queue": 46659.23,
+   "side": "YES",
+   "spec": {
+    "line": 55.5,
+    "t": "over"
+   },
+   "start": "2026-11-14T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV14GASOGAST-56"
   },
   "KXNCAAFTOTAL-26NOV14GTCLEM-49|NO": {
    "ask": 0.52,
