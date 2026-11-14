@@ -242,3 +242,13 @@ class RememberedPicks(unittest.TestCase):
                 json.dump({"A": 54}, fh)                                                    # older flat file
             self.assertEqual(w.remembered_picks(p, {}, None), {"A": 54})
             self.assertEqual(w.remembered_picks(p, {}, "2026-11-14"), {})
+
+
+class How(unittest.TestCase):
+    def test_methods(self):
+        self.assertEqual(w._how(dict(period=3, displayClock="5:00"), 3), "decision")
+        self.assertEqual(w._how(dict(period=1, displayClock="3:23"), 3), "finish R1 3:23")
+        self.assertEqual(w._how(dict(period=3, displayClock="-"), 3), "method not posted yet")
+        self.assertEqual(w._how(dict(displayClock="5:00"), 3), "method not posted yet")
+        self.assertEqual(w._how(dict(period=5, displayClock="5:00"), 5), "decision")
+        self.assertEqual(w._how(dict(period=3, displayClock="5:00"), 5), "finish R3 5:00")

@@ -162,11 +162,23 @@ def ufc_snapshot(day, picks, fetch=None):
                 continue
             win = next(((x.get("athlete") or {}).get("displayName") for x in cs if x.get("winner")), None)
             rounds = ((c.get("format") or {}).get("regulation") or {}).get("periods") or 3
-            how = ("decision" if st.get("period") == rounds and st.get("displayClock") in ("5:00", "0:00")
-                   else f"finish R{st.get('period')} {st.get('displayClock')}")
+            how = _how(st, rounds)
             res = "won" if win == pick else "lost" if win else "void"
             out[key] = (f"board pick {pick} ({picks[pick]}%) = {res}" + (f" | winner {win}, {how}" if win else " | no winner (draw or no contest)"))
     return out
+
+
+def _how(st, rounds):
+    """How a finished fight ended: "decision", "finish R1 3:23", or "method
+    not posted yet" while ESPN shows a winner before the round and clock
+    (2026-11-14: Diaz's decision first read "finish R3 -")."""
+    import re
+    per, clk = st.get("period"), str(st.get("displayClock") or "")
+    if not isinstance(per, int) or not re.fullmatch(r"\d{1,2}:\d{2}", clk):
+        return "method not posted yet"
+    if per == rounds and clk in ("5:00", "0:00"):
+        return "decision"
+    return f"finish R{per} {clk}"
 
 
 def board_picks(league):
