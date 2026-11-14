@@ -10175,6 +10175,23 @@
    "tip": "10:15 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401856862|away|FanDuel": {
+   "dec": 5.7,
+   "ev": 0.0223,
+   "fair": 0.1794,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401856862",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "KSU @ TCU",
+   "price": "+470",
+   "seen": "2026-11-14T18:29:54+00:00",
+   "side": "away",
+   "start": "2026-11-14T19:00Z",
+   "team": "Kansas State Wildcats",
+   "tip": "2:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401856862|{\"line\": 10.5, \"t\": \"spread\", \"team\": \"Kansas State Wildcats\"}|Kalshi": {
    "dec": 2.0513,
    "dk": "-112",
@@ -18956,6 +18973,26 @@
    "prob": 0.2468,
    "seen": "2026-11-13T12:35:33+00:00",
    "status": "won",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401856862:away": {
+   "ev": 0.0226,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0223,
+     "fair": 0.1794,
+     "id": "ncaaf:401856862",
+     "price": "+470",
+     "side": "away",
+     "spec": null,
+     "team": "Kansas State Wildcats"
+    }
+   ],
+   "payout": 5.7,
+   "prob": 0.1794,
+   "seen": "2026-11-14T18:29:54+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
