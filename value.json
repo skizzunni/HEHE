@@ -11655,6 +11655,23 @@
    "tip": "10:30 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401864537|home|FanDuel": {
+   "dec": 3.5,
+   "ev": 0.0124,
+   "fair": 0.2893,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401864537",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "NDSU @ HAW",
+   "price": "+250",
+   "seen": "2026-11-15T01:31:46+00:00",
+   "side": "home",
+   "start": "2026-11-15T04:00Z",
+   "team": "Hawai'i Rainbow Warriors",
+   "tip": "11:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401864539|away|FanDuel": {
    "dec": 6.5,
    "ev": 0.027,
@@ -19759,6 +19776,26 @@
    "seen": "2026-10-24T15:53:52+00:00",
    "status": "lost",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401864537:home": {
+   "ev": 0.0126,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0124,
+     "fair": 0.2893,
+     "id": "ncaaf:401864537",
+     "price": "+250",
+     "side": "home",
+     "spec": null,
+     "team": "Hawai'i Rainbow Warriors"
+    }
+   ],
+   "payout": 3.5,
+   "prob": 0.2893,
+   "seen": "2026-11-15T01:31:46+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401864539:away": {
