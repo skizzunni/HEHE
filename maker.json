@@ -2382,6 +2382,7 @@
    "cost": 0.8424,
    "edge": 0.0038,
    "fair": 0.8456,
+   "fill": "touch",
    "id": "ncaaf:401860914",
    "label": "Boise State Broncos",
    "league": "ncaaf",
@@ -2394,8 +2395,9 @@
     "team": "Boise State Broncos"
    },
    "start": "2026-11-14T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14ORSTBSU-BSU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14ORSTBSU-BSU",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV14PURIOWA-IOWA|YES": {
    "ask": 0.89,
@@ -6750,6 +6752,28 @@
    "ticker": "KXNCAAFSPREAD-26NOV14MIZZUGA-UGA17",
    "won": 0
   },
+  "KXNCAAFSPREAD-26NOV14NDSUHAW-NDSU8|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401864537",
+   "label": "Hawai'i Rainbow Warriors +7.5",
+   "league": "ncaaf",
+   "match": "NDSU @ HAW",
+   "posted": "2026-11-15T02:46:46+00:00",
+   "queue": 75260.2,
+   "side": "NO",
+   "spec": {
+    "line": 7.5,
+    "t": "spread",
+    "team": "Hawai'i Rainbow Warriors"
+   },
+   "start": "2026-11-15T04:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV14NDSUHAW-NDSU8"
+  },
   "KXNCAAFSPREAD-26NOV14NEBRUTG-NEB15|YES": {
    "ask": 0.51,
    "bid": 0.5,
@@ -6828,6 +6852,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401860914",
    "label": "Boise State Broncos -16.5",
    "league": "ncaaf",
@@ -6841,8 +6866,9 @@
     "team": "Boise State Broncos"
    },
    "start": "2026-11-14T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14ORSTBSU-BSU17"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14ORSTBSU-BSU17",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14PURIOWA-IOWA18|NO": {
    "ask": 0.51,
@@ -13806,6 +13832,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401860914",
    "label": "under 64.5",
    "league": "ncaaf",
@@ -13818,8 +13845,9 @@
     "t": "under"
    },
    "start": "2026-11-14T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14ORSTBSU-65"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14ORSTBSU-65",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV14ORSTBSU-65|YES": {
    "ask": 0.51,
@@ -13827,6 +13855,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401860914",
    "label": "over 64.5",
    "league": "ncaaf",
@@ -13839,8 +13868,9 @@
     "t": "over"
    },
    "start": "2026-11-14T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14ORSTBSU-65"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14ORSTBSU-65",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV14ORSTBSU-66|NO": {
    "ask": 0.51,
@@ -13848,6 +13878,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401860914",
    "label": "under 65.5",
    "league": "ncaaf",
@@ -13860,8 +13891,9 @@
     "t": "under"
    },
    "start": "2026-11-14T23:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14ORSTBSU-66"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14ORSTBSU-66",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV14PURIOWA-48|YES": {
    "ask": 0.52,
