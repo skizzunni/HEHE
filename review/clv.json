@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 61.0,
-  "brier_close": 0.1647,
-  "brier_published": 0.168,
+  "beat_close_pct": 61.7,
+  "brier_close": 0.1658,
+  "brier_published": 0.1689,
   "dates": [
    "2026-11-08",
    "2026-11-14"
   ],
-  "logloss_close": 0.4984,
-  "logloss_published": 0.5077,
-  "mean_clv_pts": 1.05,
+  "logloss_close": 0.5019,
+  "logloss_published": 0.5104,
+  "mean_clv_pts": 1.08,
   "n": 300
  },
  "market_is_model": true,
@@ -15033,6 +15033,24 @@
    "published": 0.56,
    "won": 0
   },
+  "nba:401909983": {
+   "call": false,
+   "close": 0.6305,
+   "clv": 0.05,
+   "day": "2026-11-14",
+   "league": "nba",
+   "published": 0.63,
+   "won": 1
+  },
+  "nba:401909984": {
+   "call": true,
+   "close": 0.8785,
+   "clv": 1.85,
+   "day": "2026-11-14",
+   "league": "nba",
+   "published": 0.86,
+   "won": 0
+  },
   "nba:401914101": {
    "call": false,
    "close": 0.6309,
@@ -17094,6 +17112,15 @@
    "published": 0.59,
    "won": 0
   },
+  "ncaaf:401856858": {
+   "call": false,
+   "close": 0.7402,
+   "clv": 2.02,
+   "day": "2026-11-14",
+   "league": "ncaaf",
+   "published": 0.72,
+   "won": 1
+  },
   "ncaaf:401856859": {
    "call": false,
    "close": 0.5454,
@@ -17859,6 +17886,15 @@
    "published": 0.84,
    "won": 0
   },
+  "ncaaf:401858298": {
+   "call": false,
+   "close": 0.624,
+   "clv": 0.4,
+   "day": "2026-11-14",
+   "league": "ncaaf",
+   "published": 0.62,
+   "won": 1
+  },
   "ncaaf:401858300": {
    "call": false,
    "close": 0.5674,
@@ -18622,6 +18658,15 @@
    "day": "2026-11-14",
    "league": "ncaaf",
    "published": 0.79,
+   "won": 1
+  },
+  "ncaaf:401858524": {
+   "call": false,
+   "close": 0.8195,
+   "clv": 5.95,
+   "day": "2026-11-14",
+   "league": "ncaaf",
+   "published": 0.76,
    "won": 1
   },
   "ncaaf:401858525": {
@@ -20035,6 +20080,15 @@
    "day": "2026-11-14",
    "league": "ncaaf",
    "published": 0.71,
+   "won": 1
+  },
+  "ncaaf:401864538": {
+   "call": false,
+   "close": 0.8587,
+   "clv": 4.87,
+   "day": "2026-11-14",
+   "league": "ncaaf",
+   "published": 0.81,
    "won": 1
   },
   "ncaaf:401864571": {
@@ -29916,5 +29970,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-15T03:27+00:00"
+ "updated": "2026-11-15T03:32+00:00"
 }
