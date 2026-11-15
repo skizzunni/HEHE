@@ -49519,6 +49519,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nba:401909981|n:meleek thomas|Assists|2+": {
+  "aid": null,
+  "date": "2026-11-14",
+  "edge": -3.3,
+  "gid": "nba:401909981",
+  "imp": 0.8,
+  "label": "Meleek Thomas: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "Meleek Thomas",
+  "p": 0.7805,
+  "p_fair": 0.7737,
+  "price": "-400",
+  "status": "open"
+ },
  "nba:401909981|n:meleek thomas|Reb + Ast|5+": {
   "aid": null,
   "date": "2026-11-14",
@@ -91214,7 +91230,8 @@
   "p": 0.622,
   "p_fair": null,
   "price": "-184",
-  "status": "open"
+  "status": "lost",
+  "value": 1.67
  },
  "ufc:401931774|n:melquizael costa|Winner|win": {
   "aid": null,

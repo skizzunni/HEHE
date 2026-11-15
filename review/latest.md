@@ -25,7 +25,7 @@ High-chance sweep: 70%+ today 30-6, 19 open; swept 3 of 29 past days (last 2026-
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/27 vs 61%; NBA on the tired side 15/18 vs 66%, against it 17/19 vs 71%.
 Ladder games, players out or doubtful: Chicago Bulls at Minnesota Timberwolves: Chicago Bulls without Jalen Smith, Nic Claxton, Tobe Awaka, Caleb Wilson; Minnesota Timberwolves without Anthony Edwards, Donte DiVincenzo | Dallas Mavericks at Cleveland Cavaliers: Dallas Mavericks without Max Christie, Dereck Lively II, Tarik Biberovic, Sergio de Larrea; Cleveland Cavaliers without Peyton Watson, James Harden, Donovan Mitchell, Jarrett Allen, Evan Mobley, Sam Merrill, Nae'Qwan Tomlin.
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
-Next UFC card 2026-11-14 (13 fights priced, 4 close): Bilal Hasan 88%; Juan Diaz 80%; Melquizael Costa 77%; Bia Mesquita 69%; Ciryl Gane 66%; Donte Johnson 66%; Terrance McKinney 66%; Chris Duncan 62%; Kayla Harrison 60%; Uroš Medić 59% (close); Caio Borralho 59% (close); Stephen Thompson 54% (close); Samuel Sanches 53% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
+Next UFC card 2026-11-14 (13 fights priced, 4 close): Bilal Hasan 88%; Juan Diaz 80%; Melquizael Costa 77%; Bia Mesquita 69%; Donte Johnson 67%; Ciryl Gane 66%; Terrance McKinney 66%; Chris Duncan 62%; Kayla Harrison 60%; Uroš Medić 59% (close); Caio Borralho 59% (close); Stephen Thompson 54% (close); Samuel Sanches 53% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.0% hit vs 44.0% stated on 472
 Strong calls 24-6 (80.0% vs 74.5% claimed).
 Closing line value: +0.06 points on 61 picks; beat the close on 47.5%.
@@ -67,7 +67,7 @@ Lottery 100: lost (0/9 legs won, killed by Over 66.5 points)
 Lottery 100: lost (2/7 legs won, killed by Boston College Eagles +24.5, USC Trojans +4.5, Rutgers Scarlet Knights +16.5)
 Lottery 100: open (2/7 legs won)
 Ladder-consistency props (all time): 2361/2843 won (83.0%) vs 86.4% fair, 87.5% price, 83.6% stated on the board (heavy props capped).
-Props 3/4 vs 69.2% claimed.
+Props 3/5 vs 67.8% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=183), ncaab 0.00 (n=64), ncaaf 0.00 (n=265), nfl 0.00 (n=57), nhl 0.00 (n=196)
