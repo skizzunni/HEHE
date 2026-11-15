@@ -8154,6 +8154,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909991|home|FanDuel": {
+   "dec": 4.2,
+   "ev": 0.0156,
+   "fair": 0.2418,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909991",
+   "kind": "value",
+   "league": "nba",
+   "match": "HOU @ WSH",
+   "price": "+320",
+   "seen": "2026-11-15T13:23:59+00:00",
+   "side": "home",
+   "start": "2026-11-16T00:00Z",
+   "team": "Washington Wizards",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909991|home|Kalshi": {
    "dec": 4.5106,
    "ev": 0.0201,
@@ -19480,6 +19497,55 @@
    "target": 10.0,
    "venue": "FanDuel"
   },
+  "parlay|FanDuel|nba:401909991:home": {
+   "ev": 0.0156,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0156,
+     "fair": 0.2418,
+     "id": "nba:401909991",
+     "price": "+320",
+     "side": "home",
+     "spec": null,
+     "team": "Washington Wizards"
+    }
+   ],
+   "payout": 4.2,
+   "prob": 0.2418,
+   "seen": "2026-11-15T13:23:59+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909991:home|ncaab:401926063:away": {
+   "ev": 0.0356,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0156,
+     "fair": 0.2418,
+     "id": "nba:401909991",
+     "price": "+320",
+     "side": "home",
+     "spec": null,
+     "team": "Washington Wizards"
+    },
+    {
+     "ev": 0.0197,
+     "fair": 0.1854,
+     "id": "ncaab:401926063",
+     "price": "+450",
+     "side": "away",
+     "spec": null,
+     "team": "Boise State Broncos"
+    }
+   ],
+   "payout": 23.1,
+   "prob": 0.0448,
+   "seen": "2026-11-15T13:23:59+00:00",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
   "parlay|FanDuel|ncaab:401906758:away": {
    "ev": 0.0332,
    "kind": "parlay",
@@ -19709,6 +19775,26 @@
    "seen": "2026-11-02T05:48:57+00:00",
    "status": "lost",
    "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaab:401926063:away": {
+   "ev": 0.0197,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0197,
+     "fair": 0.1854,
+     "id": "ncaab:401926063",
+     "price": "+450",
+     "side": "away",
+     "spec": null,
+     "team": "Boise State Broncos"
+    }
+   ],
+   "payout": 5.5,
+   "prob": 0.1854,
+   "seen": "2026-11-15T13:23:59+00:00",
+   "target": 5.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|ncaaf:401856730:away|ncaaf:401871093:away": {
