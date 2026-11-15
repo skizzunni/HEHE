@@ -2214,6 +2214,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401856887",
    "label": "Oklahoma Sooners",
    "league": "ncaaf",
@@ -2226,8 +2227,9 @@
     "team": "Oklahoma Sooners"
    },
    "start": "2026-11-14T21:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14MISSOKLA-OKLA"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14MISSOKLA-OKLA",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV14MIZZUGA-UGA|YES": {
    "ask": 0.87,
@@ -6692,6 +6694,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401856887",
    "label": "Ole Miss Rebels +1.5",
    "league": "ncaaf",
@@ -6705,8 +6708,9 @@
     "team": "Ole Miss Rebels"
    },
    "start": "2026-11-14T21:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA2",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA2|YES": {
    "ask": 0.51,
@@ -6714,6 +6718,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": null,
    "id": "ncaaf:401856887",
    "label": "Oklahoma Sooners -1.5",
    "league": "ncaaf",
@@ -6727,8 +6732,9 @@
     "team": "Oklahoma Sooners"
    },
    "start": "2026-11-14T21:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA2"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA2",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA3|NO": {
    "ask": 0.51,
@@ -6736,6 +6742,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856887",
    "label": "Ole Miss Rebels +2.5",
    "league": "ncaaf",
@@ -6749,8 +6756,9 @@
     "team": "Ole Miss Rebels"
    },
    "start": "2026-11-14T21:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA3",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA3|YES": {
    "ask": 0.51,
@@ -6758,6 +6766,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401856887",
    "label": "Oklahoma Sooners -2.5",
    "league": "ncaaf",
@@ -6771,8 +6780,9 @@
     "team": "Oklahoma Sooners"
    },
    "start": "2026-11-14T21:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14MISSOKLA-OKLA3",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV14MIZZUGA-UGA17|NO": {
    "ask": 0.51,
@@ -13747,6 +13757,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401856887",
    "label": "under 49.5",
    "league": "ncaaf",
@@ -13759,8 +13770,9 @@
     "t": "under"
    },
    "start": "2026-11-14T21:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14MISSOKLA-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14MISSOKLA-50",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV14MIZZUGA-49|NO": {
    "ask": 0.51,
@@ -19983,6 +19995,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873059",
    "label": "Miami Dolphins +4.5",
    "league": "nfl",
@@ -19996,8 +20009,9 @@
     "team": "Miami Dolphins"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV15MIAIND-IND5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV15MIAIND-IND5",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV15MINGB-GB3|YES": {
    "ask": 0.53,

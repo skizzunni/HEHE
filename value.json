@@ -8137,6 +8137,62 @@
    "tip": "4:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909990|away|Kalshi": {
+   "dec": 1.547,
+   "ev": 0.0327,
+   "fair": 0.6675,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909990",
+   "kind": "value",
+   "league": "nba",
+   "match": "NY @ TOR",
+   "price": "-183",
+   "seen": "2026-11-15T21:23:51+00:00",
+   "side": "away",
+   "start": "2026-11-15T23:00Z",
+   "team": "New York Knicks",
+   "tip": "6:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909990|home|FanDuel": {
+   "dec": 2.88,
+   "ev": 0.0276,
+   "fair": 0.3568,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909990",
+   "kind": "value",
+   "league": "nba",
+   "match": "NY @ TOR",
+   "price": "+188",
+   "seen": "2026-11-15T21:23:51+00:00",
+   "side": "home",
+   "start": "2026-11-15T23:00Z",
+   "team": "Toronto Raptors",
+   "tip": "6:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909990|sure": {
+   "id": "nba:401909990",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-183",
+     "stake_share": 0.6506,
+     "team": "New York Knicks",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "+188",
+     "stake_share": 0.3494,
+     "team": "Toronto Raptors",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "NY @ TOR",
+   "profit": 0.0064,
+   "seen": "2026-11-15T21:23:51+00:00"
+  },
   "nba:401909991|away|Kalshi": {
    "dec": 1.294,
    "ev": 0.0116,
@@ -19537,6 +19593,55 @@
    "prob": 0.0758,
    "seen": "2026-11-14T14:45:31+00:00",
    "status": "won",
+   "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909990:home": {
+   "ev": 0.0276,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0276,
+     "fair": 0.3568,
+     "id": "nba:401909990",
+     "price": "+188",
+     "side": "home",
+     "spec": null,
+     "team": "Toronto Raptors"
+    }
+   ],
+   "payout": 2.88,
+   "prob": 0.3568,
+   "seen": "2026-11-15T21:23:51+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909990:home|nba:401909993:home": {
+   "ev": 0.0543,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0257,
+     "fair": 0.1973,
+     "id": "nba:401909993",
+     "price": "+420",
+     "side": "home",
+     "spec": null,
+     "team": "Sacramento Kings"
+    },
+    {
+     "ev": 0.0276,
+     "fair": 0.3568,
+     "id": "nba:401909990",
+     "price": "+188",
+     "side": "home",
+     "spec": null,
+     "team": "Toronto Raptors"
+    }
+   ],
+   "payout": 14.976,
+   "prob": 0.0704,
+   "seen": "2026-11-15T21:23:51+00:00",
    "target": 10.0,
    "venue": "FanDuel"
   },
