@@ -21405,6 +21405,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873061",
    "label": "under 38.5",
    "league": "nfl",
@@ -21417,8 +21418,9 @@
     "t": "under"
    },
    "start": "2026-11-15T21:05Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV15LARARI-39"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV15LARARI-39",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV15LARARI-39|YES": {
    "ask": 0.51,
@@ -21426,6 +21428,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "nfl:401873061",
    "label": "over 38.5",
    "league": "nfl",
@@ -21438,8 +21441,9 @@
     "t": "over"
    },
    "start": "2026-11-15T21:05Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV15LARARI-39"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV15LARARI-39",
+   "won": 1
   },
   "KXNFLTOTAL-26NOV15MINGB-43|NO": {
    "ask": 0.52,
