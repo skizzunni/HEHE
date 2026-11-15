@@ -12785,6 +12785,45 @@
    "tip": "4:25 PM",
    "venue": "FanDuel"
   },
+  "nfl:401873055|home|FanDuel": {
+   "dec": 1.9259,
+   "ev": 0.0347,
+   "fair": 0.5373,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nfl:401873055",
+   "kind": "value",
+   "league": "nfl",
+   "match": "CAR @ NO",
+   "price": "-108",
+   "seen": "2026-11-15T12:22:18+00:00",
+   "side": "home",
+   "start": "2026-11-15T18:00Z",
+   "team": "New Orleans Saints",
+   "tip": "1:00 PM",
+   "venue": "FanDuel"
+  },
+  "nfl:401873055|sure": {
+   "id": "nfl:401873055",
+   "kind": "sure",
+   "league": "nfl",
+   "legs": [
+    {
+     "price": "+110",
+     "stake_share": 0.4784,
+     "team": "Carolina Panthers",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-108",
+     "stake_share": 0.5216,
+     "team": "New Orleans Saints",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "CAR @ NO",
+   "profit": 0.0046,
+   "seen": "2026-11-15T12:22:18+00:00"
+  },
   "nfl:401873057|away|Kalshi": {
    "dec": 1.1772,
    "ev": 0.0111,
