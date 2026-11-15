@@ -43,6 +43,26 @@ class WatchLadderSh(unittest.TestCase):
         rc, out = self.run_sh("2026-11-13", "all")
         self.assertIn("tools/ladder_watch.py " + self.work + ".state.json 2026-11-13 all --loop 120", out)
 
+    def test_cleans_up_after_done(self):
+        with open(os.path.join(self.bin, "python"), "w") as fh:          # a watcher that settles at once
+            fh.write('#!/usr/bin/env bash\necho "CHANGE: x"\necho "DONE: settled"\n')
+        for f in (".state.json", ".state.json.ufc_picks.json"):
+            open(self.work + f, "w").close()
+        rc, out = self.run_sh("2026-11-13", "all")
+        self.assertEqual(rc, 0)
+        self.assertIn("DONE: settled", out)
+        self.assertIn("CLEANED UP", out)
+        for f in (".state.json", ".state.json.ufc_picks.json", ".done"):
+            self.assertFalse(os.path.exists(self.work + f), f)
+        self.assertFalse(os.path.exists(self.work))
+
+    def test_no_cleanup_without_done(self):
+        open(self.work + ".state.json", "w").close()
+        rc, out = self.run_sh("2026-11-13", "all")
+        self.assertNotIn("CLEANED UP", out)
+        self.assertTrue(os.path.exists(self.work + ".state.json"))
+        self.assertTrue(os.path.isfile(os.path.join(self.work, "tools", "ladder_watch.py")))
+
 
 if __name__ == "__main__":
     unittest.main()

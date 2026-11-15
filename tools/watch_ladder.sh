@@ -24,4 +24,20 @@ if [ ! -f "$WORK/tools/ladder_watch.py" ]; then
   git -C "$ROOT" worktree add -q --detach "$WORK" HEAD || exit 1
 fi
 cd "$WORK" || exit 1
-exec python -u tools/ladder_watch.py "$WORK.state.json" $DAY $LG --loop 120 2>&1
+# Once the watcher prints DONE (ticket and watched games settled) the state,
+# the saved UFC picks and the worktree go, so the next watch starts clean
+# instead of reading a settled day's state as "before".
+rm -f "$WORK.done"
+python -u tools/ladder_watch.py "$WORK.state.json" $DAY $LG --loop 120 2>&1 | while IFS= read -r line; do
+  printf '%s\n' "$line"
+  case $line in DONE:*) : > "$WORK.done" ;; esac
+done
+rc=${PIPESTATUS[0]}
+if [ -f "$WORK.done" ]; then
+  cd "$ROOT" || exit "$rc"
+  rm -f "$WORK.state.json" "$WORK.state.json.ufc_picks.json" "$WORK.done"
+  git -C "$ROOT" worktree remove --force "$WORK" 2>/dev/null || rm -rf "$WORK"
+  git -C "$ROOT" worktree prune
+  echo "CLEANED UP: watcher state and worktree removed"
+fi
+exit "$rc"
