@@ -2873,6 +2873,7 @@
    "cost": 0.7434,
    "edge": 0.0001,
    "fair": 0.7435,
+   "fill": "strict",
    "id": "ncaaf:401864540",
    "label": "Wyoming Cowboys",
    "league": "ncaaf",
@@ -2885,8 +2886,9 @@
     "team": "Wyoming Cowboys"
    },
    "start": "2026-11-15T03:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14WYOUTEP-WYO"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14WYOUTEP-WYO",
+   "won": 1
   },
   "KXNCAAFGAME-26OCT22ECUMEM-MEM|YES": {
    "ask": 0.78,
@@ -7746,6 +7748,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401864540",
    "label": "UTEP Miners +7.5",
    "league": "ncaaf",
@@ -7759,8 +7762,9 @@
     "team": "UTEP Miners"
    },
    "start": "2026-11-15T03:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14WYOUTEP-WYO8"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14WYOUTEP-WYO8",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14WYOUTEP-WYO8|YES": {
    "ask": 0.51,
@@ -7768,6 +7772,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401864540",
    "label": "Wyoming Cowboys -7.5",
    "league": "ncaaf",
@@ -7781,8 +7786,9 @@
     "team": "Wyoming Cowboys"
    },
    "start": "2026-11-15T03:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14WYOUTEP-WYO8"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14WYOUTEP-WYO8",
+   "won": 1
   },
   "KXNCAAFSPREAD-26OCT22ECUMEM-MEM11|NO": {
    "ask": 0.51,
