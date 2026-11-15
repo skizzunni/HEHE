@@ -194,12 +194,12 @@
   },
   "nhl": {
    "benched": false,
-   "hit": 61.4,
-   "implied": 61.2,
-   "n": 197,
-   "roi": -0.6,
-   "upper95": 67.9,
-   "won": 121
+   "hit": 61.8,
+   "implied": 61.1,
+   "n": 199,
+   "roi": 0.2,
+   "upper95": 68.3,
+   "won": 123
   },
   "soccer": {
    "benched": false,
@@ -229,13 +229,30 @@
    "won": 4
   }
  },
- "log": [],
+ "log": [
+  {
+   "day": "2026-11-14",
+   "evidence": {
+    "benched": true,
+    "breakeven": 46.9,
+    "hit": 38.7,
+    "n": 150,
+    "roi": -17.2,
+    "upper95": 46.7,
+    "won": 58
+   },
+   "group": "Kalshi middle, confirmed",
+   "what": "value benched"
+  }
+ ],
  "rule": {
   "min_dec": 1.0,
   "per_sport": 2
  },
  "updated": "2026-11-14",
- "value_benched": [],
+ "value_benched": [
+  "Kalshi middle, confirmed"
+ ],
  "value_slices": {
   "FanDuel favourite, confirmed": {
    "benched": false,
@@ -275,12 +292,12 @@
   },
   "FanDuel middle, confirmed": {
    "benched": false,
-   "breakeven": 47.8,
+   "breakeven": 47.9,
    "hit": 48.9,
-   "n": 88,
-   "roi": 1.6,
-   "upper95": 59.1,
-   "won": 43
+   "n": 90,
+   "roi": 1.5,
+   "upper95": 59.0,
+   "won": 44
   },
   "FanDuel middle, single": {
    "benched": false,
@@ -328,12 +345,12 @@
    "won": 2
   },
   "Kalshi middle, confirmed": {
-   "benched": false,
+   "benched": true,
    "breakeven": 46.9,
-   "hit": 38.9,
-   "n": 149,
-   "roi": -16.6,
-   "upper95": 46.9,
+   "hit": 38.7,
+   "n": 150,
+   "roi": -17.2,
+   "upper95": 46.7,
    "won": 58
   },
   "Kalshi middle, single": {
