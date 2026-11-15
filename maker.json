@@ -18804,6 +18804,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "nfl:401873055",
    "label": "Carolina Panthers",
    "league": "nfl",
@@ -18816,8 +18817,9 @@
     "team": "Carolina Panthers"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV15CARNO-CAR"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV15CARNO-CAR",
+   "won": 1
   },
   "KXNFLGAME-26NOV15CARNO-NO|YES": {
    "ask": 0.56,
@@ -18825,6 +18827,7 @@
    "cost": 0.5444,
    "edge": 0.0169,
    "fair": 0.5536,
+   "fill": "strict",
    "id": "nfl:401873055",
    "label": "New Orleans Saints",
    "league": "nfl",
@@ -18837,8 +18840,9 @@
     "team": "New Orleans Saints"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV15CARNO-NO"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV15CARNO-NO",
+   "won": 0
   },
   "KXNFLGAME-26NOV15HOUCLE-HOU|YES": {
    "ask": 0.68,
@@ -19807,6 +19811,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "nfl:401873054",
    "label": "Buffalo Bills -7.5",
    "league": "nfl",
@@ -19820,8 +19825,9 @@
     "team": "Buffalo Bills"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV15BUFNYJ-BUF8"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV15BUFNYJ-BUF8",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV15CARNO-NO2|YES": {
    "ask": 0.51,
@@ -19983,6 +19989,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "nfl:401873060",
    "label": "Green Bay Packers -2.5",
    "league": "nfl",
@@ -19996,8 +20003,9 @@
     "team": "Green Bay Packers"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV15MINGB-GB3"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV15MINGB-GB3",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV15NEDET-DET3|YES": {
    "ask": 0.52,
@@ -21229,6 +21237,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "nfl:401873054",
    "label": "over 50.5",
    "league": "nfl",
@@ -21241,8 +21250,9 @@
     "t": "over"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV15BUFNYJ-51"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV15BUFNYJ-51",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV15CARNO-49|YES": {
    "ask": 0.51,
