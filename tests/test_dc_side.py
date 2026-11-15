@@ -128,6 +128,19 @@ class National(unittest.TestCase):
                          "(straight win 1/1 (100% vs 70% stated); or draw 1/2 (50% vs 80% stated)).")
 
 
+class CoinFlips(unittest.TestCase):
+    def test_line(self):
+        L = {}
+        for i in range(20):
+            L[f"a{i}"] = dict(date=f"2026-11-{1 + i:02d}", status="won" if i % 2 else "lost", conf=55,
+                              first_price="-120", price="-150" if i < 4 else "-120")    # first 4 moved toward
+        L["fav"] = dict(date="2026-11-01", status="won", conf=80)                        # not a coin flip
+        out = daily_review.coin_flip_line(L)
+        self.assertTrue(out.startswith("Coin flips (called under 60%), by half: all 5/10 (50% vs 55%) then 5/10 (50% vs 55%)"), out)
+        self.assertIn("moved toward 3+ 2/4 (50% vs 55%) then none", out)
+        self.assertIsNone(daily_review.coin_flip_line({"x": L["a1"]}))
+
+
 class HomeAway(unittest.TestCase):
     def test_line(self):
         fp = dict(prices=dict(home="-200", away="+170"))

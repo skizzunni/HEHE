@@ -591,6 +591,38 @@ def national_line(ledger=None):
             + (f"; club soccer {rec(club)}." if club else "."))
 
 
+def coin_flip_line(ledger=None, cut=60):
+    """Board picks called under `cut`% (the near coin flips), won vs stated by
+    date half, split by how the price moved after the call (3+ points against,
+    steady, 3+ toward). Information only. 2026-11-14: against 10/17 then
+    10/15 (vs 9.2, 8.1) -- a move against a coin flip has not meant a loss."""
+    import ledger as L
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    R = [e for e in ledger.values() if isinstance(e, dict) and e.get("status") in ("won", "lost") and e.get("date")
+         and not e.get("record_excluded") and e.get("conf") is not None and e["conf"] < cut]
+    if len(R) < 20:
+        return None
+    R.sort(key=lambda e: e["date"])
+    h = len(R) // 2
+
+    def rec(S):
+        if not S:
+            return "none"
+        w = sum(e["status"] == "won" for e in S)
+        return f"{w}/{len(S)} ({round(100 * w / len(S))}% vs {round(sum(e['conf'] for e in S) / len(S))}%)"
+
+    def mv(e):
+        a, b = L._implied(e.get("first_price")), L._implied(e.get("price"))
+        return None if a is None or b is None else a - b
+    parts = [f"all {rec(R[:h])} then {rec(R[h:])}"]
+    for name, f in (("price moved against 3+", lambda m: m >= 0.03), ("steady", lambda m: abs(m) < 0.03),
+                    ("moved toward 3+", lambda m: m <= -0.03)):
+        pick = lambda S: [e for e in S if mv(e) is not None and f(mv(e))]
+        parts.append(f"{name} {rec(pick(R[:h]))} then {rec(pick(R[h:]))}")
+    return f"Coin flips (called under {cut}%), by half: " + "; ".join(parts) + "."
+
+
 def dc_side_line(ledger=None, min_n=30):
     """Soccer "or draw" picks split by the side taken (home or away), each
     with its date halves: won% against stated%. Priced, graded rows only.
@@ -1861,6 +1893,8 @@ def words(r, fit):
         out.append(r["priced_calibration"])
     if r.get("national"):
         out.append(r["national"])
+    if r.get("coin_flips"):
+        out.append(r["coin_flips"])
     if r.get("home_away"):
         out.append(r["home_away"])
     if r.get("ladder_pool"):
@@ -2018,6 +2052,7 @@ def _main():
     log[today.isoformat()]["lock_prop_markets"] = locks_prop_market_line()
     log[today.isoformat()]["priced_calibration"] = priced_calibration_line()
     log[today.isoformat()]["national"] = national_line()
+    log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
     log[today.isoformat()]["home_away"] = home_away_line()
     try:
         log[today.isoformat()]["ladder_pool"] = ladder_pool_line()

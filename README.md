@@ -1525,6 +1525,14 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Rejected: coin flips whose price moved against them (2026-11-14).**
+West Virginia (53%) lost 14-37 to Kansas after its price slid 3 points.
+The Nov 13 move study covered every pick; this narrows it to the 259
+priced picks called under 60%, by date halves: moved 3+ against 10/17 vs
+9.2 then 10/15 vs 8.1 (z 0.38, 0.99) -- ahead, not short; steady 63/100
+then 58/95 (z 1.76, 1.28); moved toward 5/12 then 13/20. Nothing to skip.
+The review now prints this by half (coin_flip_line).
+
 **Checked, no change: college basketball favourites (2026-11-14).**
 Gonzaga (67%) lost 80-81 at home to LSU. By date halves of the 66 graded
 NCAAB picks: all 29/33 vs 29.8 (z -0.5) then 30/33 vs 28.8 (z 0.7); 80%+
