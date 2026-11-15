@@ -50075,6 +50075,22 @@
   "price": "-1000",
   "status": "open"
  },
+ "nba:401909984|n:ayo dosunmu|Pts + Reb + Ast|20+": {
+  "aid": null,
+  "date": "2026-11-14",
+  "edge": -2.8,
+  "gid": "nba:401909984",
+  "imp": 0.9048,
+  "label": "Ayo Dosunmu: 20+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "20+",
+  "market": "Pts + Reb + Ast",
+  "name": "Ayo Dosunmu",
+  "p": 0.8503,
+  "p_fair": 0.8792,
+  "price": "-950",
+  "status": "open"
+ },
  "nba:401909984|n:jonathan kuminga|Points|5+": {
   "aid": null,
   "date": "2026-11-14",
@@ -90712,7 +90728,8 @@
   "p_fair": null,
   "price": "-2500",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 3.48
  },
  "ufc:401922643|n:terrance mckinney|Winner|win": {
   "aid": null,
@@ -90728,7 +90745,8 @@
   "p": 0.6613,
   "p_fair": null,
   "price": "-220",
-  "status": "open"
+  "status": "won",
+  "value": 3.48
  },
  "ufc:401922645|n:bia mesquita|Winner|win": {
   "aid": null,

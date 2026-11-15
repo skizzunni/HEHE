@@ -1,7 +1,7 @@
 # Review 2026-11-14
 
 Picks 48-14 (77.4% vs 73.2% claimed, ROI +2.1%).
-Ladder: run 7, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (33% est.), the best-chance 2x-5x combination (4 legs) against 33% at 2.47x for the plain top 4; 11 wins to $10,000; legs: Over 223.5 points (Chicago Bulls at Minnesota Timberwolves; 8:00 PM, open), New Mexico Lobos under 39.5 points (UNLV Rebels at New Mexico Lobos; live 14:55 - 1st, New Mexico Lobos 0 - UNLV Rebels 0, 0 so far, line 39.5, too early to project), UTEP Miners +17.5 (Wyoming Cowboys at UTEP Miners; 10:00 PM, open), Over 219.5 points (Dallas Mavericks at Cleveland Cavaliers; live 11:54 - 1st, Cleveland Cavaliers 0 - Dallas Mavericks 0, 0 so far, line 219.5, too early to project).
+Ladder: run 7, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (33% est.), the best-chance 2x-5x combination (4 legs) against 33% at 2.47x for the plain top 4; 11 wins to $10,000; legs: Over 223.5 points (Chicago Bulls at Minnesota Timberwolves; 8:00 PM, open), New Mexico Lobos under 39.5 points (UNLV Rebels at New Mexico Lobos; live 11:18 - 1st, New Mexico Lobos 0 - UNLV Rebels 0, 0 so far, line 39.5, too early to project), UTEP Miners +17.5 (Wyoming Cowboys at UTEP Miners; 10:00 PM, open), Over 219.5 points (Dallas Mavericks at Cleveland Cavaliers; live 7:58 - 1st, Cleveland Cavaliers 13 - Dallas Mavericks 10, 23 so far, line 219.5, too early to project).
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 7) 2026-11-14, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 14/27 cashed at 2.21x, without props 14/27 at 2.3x.
 Cautions in force: NCAAF calls at 70-80% 46/70 vs 75%. Running ahead: NBA under on all saved lines 1054/1213 vs 82%; NHL over on all saved lines 126/143 vs 84%; NHL teamover on all saved lines 158/177 vs 83%; NHL teamunder on all saved lines 243/281 vs 83%; NHL under on all saved lines 183/210 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NCAAF over 249/341 (73% vs 81%); NCAAF teamover 353/471 (75% vs 81%). Walk-forward: legs of a type running cold won 82.9% the next day vs 82.7% for the rest (1484 and 8002 legs), so a cold week is noise, not a signal.
@@ -67,7 +67,7 @@ Lottery 100: lost (0/9 legs won, killed by Over 66.5 points)
 Lottery 100: lost (2/7 legs won, killed by Boston College Eagles +24.5, USC Trojans +4.5, Rutgers Scarlet Knights +16.5)
 Lottery 100: open (2/7 legs won)
 Ladder-consistency props (all time): 2361/2843 won (83.0%) vs 86.4% fair, 87.5% price, 83.6% stated on the board (heavy props capped).
-Props 3/5 vs 67.8% claimed.
+Props 5/7 vs 70.8% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=183), ncaab 0.00 (n=64), ncaaf 0.00 (n=266), nfl 0.00 (n=57), nhl 0.00 (n=196)
