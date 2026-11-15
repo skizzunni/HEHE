@@ -2658,6 +2658,7 @@
    "cost": 0.8523,
    "edge": 0.0104,
    "fair": 0.8612,
+   "fill": null,
    "id": "ncaaf:401864539",
    "label": "New Mexico Lobos",
    "league": "ncaaf",
@@ -2670,8 +2671,9 @@
     "team": "New Mexico Lobos"
    },
    "start": "2026-11-15T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14UNLVUNM-UNM"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14UNLVUNM-UNM",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV14UNTUTSA-UNT|YES": {
    "ask": 0.55,
@@ -7190,6 +7192,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401864539",
    "label": "UNLV Rebels +14.5",
    "league": "ncaaf",
@@ -7203,8 +7206,9 @@
     "team": "UNLV Rebels"
    },
    "start": "2026-11-15T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM15"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM15",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM17|NO": {
    "ask": 0.51,
@@ -7212,6 +7216,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401864539",
    "label": "UNLV Rebels +16.5",
    "league": "ncaaf",
@@ -7225,8 +7230,9 @@
     "team": "UNLV Rebels"
    },
    "start": "2026-11-15T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM17"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM17",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM17|YES": {
    "ask": 0.52,
@@ -7234,6 +7240,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401864539",
    "label": "New Mexico Lobos -16.5",
    "league": "ncaaf",
@@ -7247,8 +7254,9 @@
     "team": "New Mexico Lobos"
    },
    "start": "2026-11-15T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM17"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM17",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM18|NO": {
    "ask": 0.51,
@@ -7256,6 +7264,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401864539",
    "label": "UNLV Rebels +17.5",
    "league": "ncaaf",
@@ -7269,8 +7278,9 @@
     "team": "UNLV Rebels"
    },
    "start": "2026-11-15T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM18"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM18",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM18|YES": {
    "ask": 0.51,
@@ -7278,6 +7288,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401864539",
    "label": "New Mexico Lobos -17.5",
    "league": "ncaaf",
@@ -7291,8 +7302,9 @@
     "team": "New Mexico Lobos"
    },
    "start": "2026-11-15T00:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM18"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14UNLVUNM-UNM18",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14UNTUTSA-UNT3|NO": {
    "ask": 0.51,
