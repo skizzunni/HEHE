@@ -13,9 +13,9 @@
     "per_sport": 2
    },
    "second": {
-    "hit": 84.5,
-    "n": 187,
-    "roi": 1.88
+    "hit": 84.1,
+    "n": 189,
+    "roi": 1.44
    }
   },
   "dates": [
@@ -31,14 +31,16 @@
      "n": 89,
      "roi": 2.59
     },
+    "gain": 0.99,
+    "gain_lower": -8.1,
     "rule": {
      "min_dec": 1.0,
      "per_sport": 1
     },
     "second": {
-     "hit": 81.1,
-     "n": 159,
-     "roi": 1.49
+     "hit": 81.2,
+     "n": 160,
+     "roi": 1.61
     }
    },
    {
@@ -52,9 +54,9 @@
      "per_sport": 1
     },
     "second": {
-     "hit": 80.6,
-     "n": 155,
-     "roi": 7.18
+     "hit": 80.8,
+     "n": 156,
+     "roi": 7.27
     }
    },
    {
@@ -68,9 +70,9 @@
      "per_sport": 2
     },
     "second": {
-     "hit": 84.5,
-     "n": 187,
-     "roi": 1.88
+     "hit": 84.1,
+     "n": 189,
+     "roi": 1.44
     }
    },
    {
@@ -84,9 +86,9 @@
      "per_sport": 2
     },
     "second": {
-     "hit": 80.7,
-     "n": 187,
-     "roi": 4.48
+     "hit": 80.4,
+     "n": 189,
+     "roi": 4.01
     }
    },
    {
@@ -100,9 +102,9 @@
      "per_sport": 3
     },
     "second": {
-     "hit": 85.4,
-     "n": 192,
-     "roi": 1.8
+     "hit": 85.0,
+     "n": 193,
+     "roi": 1.03
     }
    },
    {
@@ -116,9 +118,9 @@
      "per_sport": 3
     },
     "second": {
-     "hit": 81.2,
-     "n": 192,
-     "roi": 4.29
+     "hit": 80.8,
+     "n": 193,
+     "roi": 3.51
     }
    },
    {
@@ -132,9 +134,9 @@
      "per_sport": null
     },
     "second": {
-     "hit": 86.0,
+     "hit": 85.5,
      "n": 193,
-     "roi": 1.08
+     "roi": 0.12
     }
    },
    {
@@ -148,9 +150,9 @@
      "per_sport": null
     },
     "second": {
-     "hit": 82.8,
-     "n": 192,
-     "roi": 5.13
+     "hit": 82.4,
+     "n": 193,
+     "roi": 4.34
     }
    }
   ]
@@ -167,12 +169,12 @@
   },
   "ncaab": {
    "benched": false,
-   "hit": 89.4,
-   "implied": 89.5,
-   "n": 66,
-   "roi": 0.3,
-   "upper95": 94.8,
-   "won": 59
+   "hit": 88.2,
+   "implied": 89.3,
+   "n": 68,
+   "roi": -0.9,
+   "upper95": 93.9,
+   "won": 60
   },
   "ncaaf": {
    "benched": false,
@@ -277,12 +279,12 @@
   },
   "FanDuel longshot, confirmed": {
    "benched": false,
-   "breakeven": 18.0,
-   "hit": 25.5,
-   "n": 51,
-   "roi": 17.9,
-   "upper95": 38.9,
-   "won": 13
+   "breakeven": 18.2,
+   "hit": 26.4,
+   "n": 53,
+   "roi": 21.2,
+   "upper95": 39.6,
+   "won": 14
   },
   "FanDuel longshot, single": {
    "benched": false,
