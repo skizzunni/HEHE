@@ -49821,6 +49821,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nba:401909983|n:cameron boozer|Pts + Reb + Ast|25+": {
+  "aid": null,
+  "date": "2026-11-14",
+  "edge": -2.7,
+  "gid": "nba:401909983",
+  "imp": 0.9,
+  "label": "Cameron Boozer: 25+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "25+",
+  "market": "Pts + Reb + Ast",
+  "name": "Cameron Boozer",
+  "p": 0.8459,
+  "p_fair": 0.8761,
+  "price": "-900",
+  "status": "open"
+ },
  "nba:401909983|n:cedric coward|Points|5+": {
   "aid": null,
   "date": "2026-11-14",
@@ -49898,6 +49914,22 @@
   "p": 0.8379,
   "p_fair": 0.9604,
   "price": "-1000",
+  "status": "open"
+ },
+ "nba:401909983|n:egor demin|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-11-14",
+  "edge": -3.2,
+  "gid": "nba:401909983",
+  "imp": 0.9333,
+  "label": "Egor Demin: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Egor Demin",
+  "p": 0.8531,
+  "p_fair": 0.9034,
+  "price": "-1400",
   "status": "open"
  },
  "nba:401909983|n:jaylen wells|Pts + Reb + Ast|10+": {
@@ -62426,6 +62458,7 @@
  "nfl:401873051|n:dj moore|Receiving Yards|20+": {
   "aid": null,
   "date": "2026-11-09",
+  "date_retry": "2026-11-15",
   "edge": -7.5,
   "gid": "nfl:401873051",
   "imp": 0.8571,
@@ -62438,13 +62471,14 @@
   "p_fair": 0.7928,
   "price": "-600",
   "rechecked": "ungradable",
-  "status": "ungradable",
-  "unresolved": true,
-  "void_why": "identity_unresolved"
+  "rechecked_nick": true,
+  "status": "open",
+  "unresolved": true
  },
  "nfl:401873051|n:dj moore|Receiving Yards|25+": {
   "aid": null,
   "date": "2026-11-09",
+  "date_retry": "2026-11-15",
   "edge": -6.9,
   "gid": "nfl:401873051",
   "imp": 0.8,
@@ -62457,13 +62491,14 @@
   "p_fair": 0.7452,
   "price": "-400",
   "rechecked": "ungradable",
-  "status": "ungradable",
-  "unresolved": true,
-  "void_why": "identity_unresolved"
+  "rechecked_nick": true,
+  "status": "open",
+  "unresolved": true
  },
  "nfl:401873051|n:dj moore|Receiving Yards|30+": {
   "aid": null,
   "date": "2026-11-09",
+  "date_retry": "2026-11-15",
   "edge": -7.2,
   "gid": "nfl:401873051",
   "imp": 0.7674,
@@ -62476,9 +62511,9 @@
   "p_fair": 0.7121,
   "price": "-330",
   "rechecked": "ungradable",
-  "status": "ungradable",
-  "unresolved": true,
-  "void_why": "identity_unresolved"
+  "rechecked_nick": true,
+  "status": "open",
+  "unresolved": true
  },
  "nfl:401873051|n:james cook|Anytime Touchdown Scorer|1+": {
   "aid": null,

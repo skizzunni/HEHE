@@ -2035,6 +2035,7 @@
    "cost": 0.7236,
    "edge": 0.0051,
    "fair": 0.7273,
+   "fill": "touch",
    "id": "ncaaf:401870752",
    "label": "Jacksonville State Gamecocks",
    "league": "ncaaf",
@@ -2047,8 +2048,9 @@
     "team": "Jacksonville State Gamecocks"
    },
    "start": "2026-11-14T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14JVSTWKU-JVST"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14JVSTWKU-JVST",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV14KENNSHSU-KENN|YES": {
    "ask": 0.74,
@@ -12932,6 +12934,27 @@
    "ticker": "KXNCAAFTOTAL-26NOV14CALUVA-47",
    "won": 0
   },
+  "KXNCAAFTOTAL-26NOV14CSUWSU-65|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401860917",
+   "label": "over 64.5",
+   "league": "ncaaf",
+   "match": "CSU @ WSU",
+   "posted": "2026-11-15T00:13:01+00:00",
+   "queue": 5056.11,
+   "side": "YES",
+   "spec": {
+    "line": 64.5,
+    "t": "over"
+   },
+   "start": "2026-11-15T03:45Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV14CSUWSU-65"
+  },
   "KXNCAAFTOTAL-26NOV14DUKEMIA-55|YES": {
    "ask": 0.52,
    "bid": 0.5,
@@ -13317,6 +13340,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401870752",
    "label": "under 54.5",
    "league": "ncaaf",
@@ -13329,8 +13353,9 @@
     "t": "under"
    },
    "start": "2026-11-14T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14JVSTWKU-55"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14JVSTWKU-55",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV14KENNSHSU-45|YES": {
    "ask": 0.51,
