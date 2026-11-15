@@ -2102,6 +2102,7 @@
    "cost": 0.5644,
    "edge": 0.003,
    "fair": 0.5661,
+   "fill": "strict",
    "id": "ncaaf:401856861",
    "label": "West Virginia Mountaineers",
    "league": "ncaaf",
@@ -2114,8 +2115,9 @@
     "team": "West Virginia Mountaineers"
    },
    "start": "2026-11-14T22:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14KUWVU-WVU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14KUWVU-WVU",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV14LOUUNC-LOU|YES": {
    "ask": 0.62,
@@ -2144,6 +2146,7 @@
    "cost": 0.7831,
    "edge": 0.0069,
    "fair": 0.7885,
+   "fill": "strict",
    "id": "ncaaf:401858523",
    "label": "Oregon Ducks",
    "league": "ncaaf",
@@ -2156,8 +2159,9 @@
     "team": "Oregon Ducks"
    },
    "start": "2026-11-14T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14MICHORE-ORE"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14MICHORE-ORE",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV14MINNPSU-PSU|YES": {
    "ask": 0.76,
@@ -2207,6 +2211,7 @@
    "cost": 0.8622,
    "edge": 0.0062,
    "fair": 0.8675,
+   "fill": "touch",
    "id": "ncaaf:401856883",
    "label": "Georgia Bulldogs",
    "league": "ncaaf",
@@ -2219,8 +2224,9 @@
     "team": "Georgia Bulldogs"
    },
    "start": "2026-11-14T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14MIZZUGA-UGA"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14MIZZUGA-UGA",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV14MTULIB-LIB|YES": {
    "ask": 0.93,
@@ -2228,6 +2234,7 @@
    "cost": 0.9213,
    "edge": 0.0027,
    "fair": 0.9238,
+   "fill": "touch",
    "id": "ncaaf:401871061",
    "label": "Liberty Flames",
    "league": "ncaaf",
@@ -2240,8 +2247,9 @@
     "team": "Liberty Flames"
    },
    "start": "2026-11-14T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14MTULIB-LIB"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14MTULIB-LIB",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV14NDSUHAW-NDSU|YES": {
    "ask": 0.71,
@@ -6677,6 +6685,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856883",
    "label": "Missouri Tigers +16.5",
    "league": "ncaaf",
@@ -6690,8 +6699,9 @@
     "team": "Missouri Tigers"
    },
    "start": "2026-11-14T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14MIZZUGA-UGA17"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14MIZZUGA-UGA17",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14NEBRUTG-NEB15|YES": {
    "ask": 0.51,
@@ -12876,6 +12886,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401858294",
    "label": "over 51.5",
    "league": "ncaaf",
@@ -12888,8 +12899,9 @@
     "t": "over"
    },
    "start": "2026-11-14T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14BCND-52"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14BCND-52",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV14CALUVA-47|YES": {
    "ask": 0.52,
@@ -13498,6 +13510,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856883",
    "label": "under 48.5",
    "league": "ncaaf",
@@ -13510,8 +13523,9 @@
     "t": "under"
    },
    "start": "2026-11-14T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14MIZZUGA-49"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14MIZZUGA-49",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV14MTULIB-54|NO": {
    "ask": 0.51,
@@ -13519,6 +13533,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401871061",
    "label": "under 53.5",
    "league": "ncaaf",
@@ -13531,8 +13546,9 @@
     "t": "under"
    },
    "start": "2026-11-14T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14MTULIB-54"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14MTULIB-54",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV14NDSUHAW-40|NO": {
    "ask": 0.51,

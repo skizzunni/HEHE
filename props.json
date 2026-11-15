@@ -49409,6 +49409,22 @@
   "price": "-1000",
   "status": "open"
  },
+ "nba:401909981|n:cooper flagg|Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-11-14",
+  "edge": -10.6,
+  "gid": "nba:401909981",
+  "imp": 0.878,
+  "label": "Cooper Flagg: 10+ Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Reb + Ast",
+  "name": "Cooper Flagg",
+  "p": 0.8402,
+  "p_fair": 0.7847,
+  "price": "-720",
+  "status": "open"
+ },
  "nba:401909981|n:daniel gafford|Points|5+": {
   "aid": null,
   "date": "2026-11-14",
@@ -49597,6 +49613,22 @@
   "p": 0.8523,
   "p_fair": 0.9017,
   "price": "-1200",
+  "status": "open"
+ },
+ "nba:401909981|n:thomas bryant|Rebounds|4+": {
+  "aid": null,
+  "date": "2026-11-14",
+  "edge": -1.7,
+  "gid": "nba:401909981",
+  "imp": 0.9167,
+  "label": "Thomas Bryant: 4+ Rebounds",
+  "league": "nba",
+  "line": "4+",
+  "market": "Rebounds",
+  "name": "Thomas Bryant",
+  "p": 0.8464,
+  "p_fair": 0.901,
+  "price": "-1100",
   "status": "open"
  },
  "nba:401909982|n:ausar thompson|Points|5+": {
@@ -49818,6 +49850,22 @@
   "p": 0.8523,
   "p_fair": 0.9121,
   "price": "-1200",
+  "status": "open"
+ },
+ "nba:401909983|n:dayron sharpe|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-14",
+  "edge": 2.2,
+  "gid": "nba:401909983",
+  "imp": 0.9167,
+  "label": "Day'Ron Sharpe: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Day'Ron Sharpe",
+  "p": 0.8615,
+  "p_fair": 0.9364,
+  "price": "-1100",
   "status": "open"
  },
  "nba:401909983|n:egor demin|Assists|2+": {
@@ -62389,8 +62437,9 @@
   "p": 0.8537,
   "p_fair": 0.7928,
   "price": "-600",
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nfl:401873051|n:dj moore|Receiving Yards|25+": {
   "aid": null,
@@ -62406,8 +62455,9 @@
   "p": 0.7968,
   "p_fair": 0.7452,
   "price": "-400",
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nfl:401873051|n:dj moore|Receiving Yards|30+": {
   "aid": null,
@@ -62423,8 +62473,9 @@
   "p": 0.7644,
   "p_fair": 0.7121,
   "price": "-330",
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nfl:401873051|n:james cook|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -87986,6 +88037,22 @@
   "price": "-1000",
   "status": "open"
  },
+ "nhl:401892718|n:vincent trocheck|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-14",
+  "edge": null,
+  "gid": "nhl:401892718",
+  "imp": 0.9231,
+  "label": "Vincent Trocheck: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Vincent Trocheck",
+  "p": 0.8587,
+  "p_fair": null,
+  "price": "-1200",
+  "status": "open"
+ },
  "nhl:401892719|n:beckett sennecke|Shots on Goal|2+": {
   "aid": null,
   "date": "2026-11-14",
@@ -88016,6 +88083,22 @@
   "p": 0.8457,
   "p_fair": null,
   "price": "-1000",
+  "status": "open"
+ },
+ "nhl:401892719|n:leo carlsson|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-14",
+  "edge": null,
+  "gid": "nhl:401892719",
+  "imp": 0.9524,
+  "label": "Leo Carlsson: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Leo Carlsson",
+  "p": 0.8724,
+  "p_fair": null,
+  "price": "-2000",
   "status": "open"
  },
  "nhl:401892719|n:troy terry|Shots on Goal|1+": {
@@ -90416,6 +90499,22 @@
   "prop_lock": true,
   "status": "open"
  },
+ "ufc:401922641|n:fight|Ends by|KO/TKO": {
+  "aid": null,
+  "date": "2026-11-14",
+  "edge": null,
+  "gid": "ufc:401922641",
+  "imp": 0.8,
+  "label": "Fight ends by KO/TKO",
+  "league": "ufc",
+  "line": "KO/TKO",
+  "market": "Ends by",
+  "name": "Fight",
+  "p": 0.7463,
+  "p_fair": null,
+  "price": "-400",
+  "status": "open"
+ },
  "ufc:401922641|n:fight|Goes the distance|No": {
   "aid": null,
   "date": "2026-11-14",
@@ -91094,7 +91193,7 @@
   "p_fair": null,
   "price": "-370",
   "prop_lock": true,
-  "status": "open"
+  "status": "won"
  },
  "ufc:401932011|n:fight|Goes the distance|No": {
   "aid": null,
