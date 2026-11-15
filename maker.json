@@ -18928,6 +18928,7 @@
    "cost": 0.5743,
    "edge": 0.0015,
    "fair": 0.5752,
+   "fill": "touch",
    "id": "nfl:401873053",
    "label": "Detroit Lions",
    "league": "nfl",
@@ -18940,8 +18941,9 @@
     "team": "Detroit Lions"
    },
    "start": "2026-11-15T14:30Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV15NEDET-DET"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV15NEDET-DET",
+   "won": 1
   },
   "KXNFLGAME-26NOV15PITCIN-CIN|YES": {
    "ask": 0.63,
@@ -21346,6 +21348,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "nfl:401873053",
    "label": "over 49.5",
    "league": "nfl",
@@ -21358,8 +21361,9 @@
     "t": "over"
    },
    "start": "2026-11-15T14:30Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV15NEDET-50"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV15NEDET-50",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV15PITCIN-50|NO": {
    "ask": 0.51,
