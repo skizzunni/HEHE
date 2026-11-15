@@ -31,14 +31,16 @@
      "n": 89,
      "roi": 2.59
     },
+    "gain": 0.92,
+    "gain_lower": -8.17,
     "rule": {
      "min_dec": 1.0,
      "per_sport": 1
     },
     "second": {
-     "hit": 81.4,
-     "n": 161,
-     "roi": 1.36
+     "hit": 81.5,
+     "n": 162,
+     "roi": 1.81
     }
    },
    {
@@ -52,9 +54,9 @@
      "per_sport": 1
     },
     "second": {
-     "hit": 80.9,
-     "n": 157,
-     "roi": 7.11
+     "hit": 81.0,
+     "n": 158,
+     "roi": 7.53
     }
    },
    {
@@ -176,21 +178,21 @@
   },
   "ncaaf": {
    "benched": false,
-   "hit": 70.8,
+   "hit": 71.0,
    "implied": 72.8,
-   "n": 240,
-   "roi": -1.8,
-   "upper95": 76.2,
-   "won": 170
+   "n": 241,
+   "roi": -1.5,
+   "upper95": 76.3,
+   "won": 171
   },
   "nfl": {
    "benched": false,
-   "hit": 74.6,
-   "implied": 68.0,
-   "n": 63,
-   "roi": 10.2,
-   "upper95": 83.7,
-   "won": 47
+   "hit": 73.8,
+   "implied": 67.9,
+   "n": 65,
+   "roi": 9.1,
+   "upper95": 83.0,
+   "won": 48
   },
   "nhl": {
    "benched": false,

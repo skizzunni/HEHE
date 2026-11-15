@@ -51202,6 +51202,22 @@
   "price": "-1200",
   "status": "open"
  },
+ "nba:401909990|n:josh hart|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": 2.7,
+  "gid": "nba:401909990",
+  "imp": 0.8,
+  "label": "Josh Hart: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Josh Hart",
+  "p": 0.754,
+  "p_fair": 0.8217,
+  "price": "-400",
+  "status": "open"
+ },
  "nba:401909990|n:josh hart|Rebounds|4+": {
   "aid": null,
   "date": "2026-11-15",
@@ -65028,11 +65044,13 @@
   "league": "nfl",
   "line": "175+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "C.J. Stroud",
   "p": 0.847,
   "p_fair": 0.83,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 211.0
  },
  "nfl:401873056|n:dalton schultz|Receiving Yards|15+": {
   "aid": null,
@@ -65044,11 +65062,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Dalton Schultz",
   "p": 0.7865,
   "p_fair": 0.7503,
   "price": "-360",
-  "status": "open"
+  "status": "lost",
+  "value": 11.0
  },
  "nfl:401873056|n:deshaun watson|Rushing Yards|10+": {
   "aid": null,
@@ -65060,11 +65080,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Deshaun Watson",
   "p": 0.8514,
   "p_fair": 0.8672,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 49.0
  },
  "nfl:401873056|n:harold fannin|Receiving Yards|20+": {
   "aid": null,
@@ -65076,11 +65098,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Harold Fannin Jr.",
   "p": 0.8504,
   "p_fair": 0.7706,
   "price": "-550",
-  "status": "open"
+  "status": "won",
+  "value": 91.0
  },
  "nfl:401873056|n:nico collins|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -65092,11 +65116,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Nico Collins",
   "p": 0.2911,
   "p_fair": null,
   "price": "+175",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873056|n:nico collins|Receiving Yards|30+": {
   "aid": null,
@@ -65108,11 +65134,13 @@
   "league": "nfl",
   "line": "30+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Nico Collins",
   "p": 0.8504,
   "p_fair": 0.7606,
   "price": "-550",
-  "status": "open"
+  "status": "won",
+  "value": 94.0
  },
  "nfl:401873056|n:quinshon judkins|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -65124,11 +65152,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Quinshon Judkins",
   "p": 0.2887,
   "p_fair": null,
   "price": "+180",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873056|n:tank dell|Receiving Yards|20+": {
   "aid": null,
@@ -65140,11 +65170,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Tank Dell",
   "p": 0.804,
   "p_fair": 0.7706,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nfl:401873056|n:woody marks|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -65156,11 +65188,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Woody Marks",
   "p": 0.3401,
   "p_fair": null,
   "price": "+140",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873057|n:bhayshul tuten|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -65494,11 +65528,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Anthony Gould",
   "p": 0.804,
   "p_fair": 0.8447,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 28.0
  },
  "nfl:401873059|n:anthony gould|Receptions|1+": {
   "aid": null,
@@ -65510,11 +65546,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Anthony Gould",
   "p": 0.8453,
   "p_fair": 0.8508,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873059|n:jonathan taylor|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -65526,11 +65564,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Jonathan Taylor",
   "p": 0.4391,
   "p_fair": null,
   "price": "-110",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873059|n:laquon treadwell|Receptions|1+": {
   "aid": null,
@@ -65541,11 +65581,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Laquon Treadwell",
   "p": 0.872,
   "price": "-1800",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nfl:401873059|n:ollie gordon|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -65557,11 +65599,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Ollie Gordon II",
   "p": 0.4063,
   "p_fair": null,
   "price": "+105",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873059|n:ollie gordon|Rushing Yards|40+": {
   "aid": null,
@@ -65573,11 +65617,13 @@
   "league": "nfl",
   "line": "40+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Ollie Gordon II",
   "p": 0.8514,
   "p_fair": 0.796,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 76.0
  },
  "nfl:401873059|n:seth mcgowan|Rushing Yards|10+": {
   "aid": null,
@@ -65589,11 +65635,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Seth McGowan",
   "p": 0.8514,
   "p_fair": 0.873,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 77.0
  },
  "nfl:401873059|n:tyler warren|Receiving Yards|25+": {
   "aid": null,
@@ -65605,11 +65653,13 @@
   "league": "nfl",
   "line": "25+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Tyler Warren",
   "p": 0.8504,
   "p_fair": 0.7396,
   "price": "-550",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nfl:401873059|n:tyler warren|Receiving Yards|30+": {
   "aid": null,
@@ -65621,11 +65671,13 @@
   "league": "nfl",
   "line": "30+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Tyler Warren",
   "p": 0.7999,
   "p_fair": 0.6993,
   "price": "-390",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nfl:401873059|n:tyler warren|Receptions|4+": {
   "aid": null,
@@ -65637,11 +65689,13 @@
   "league": "nfl",
   "line": "4+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Tyler Warren",
   "p": 0.8453,
   "p_fair": 0.8511,
   "price": "-600",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nfl:401873060|n:aaron jones|Receiving Yards|5+": {
   "aid": null,
@@ -66127,6 +66181,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nfl:401873063|n:ceedee lamb|Receptions|5+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -1.9,
+  "gid": "nfl:401873063",
+  "imp": 0.8667,
+  "label": "CeeDee Lamb: 5+ Receptions",
+  "league": "nfl",
+  "line": "5+",
+  "market": "Receptions",
+  "name": "CeeDee Lamb",
+  "p": 0.8522,
+  "p_fair": 0.8503,
+  "price": "-650",
+  "status": "open"
+ },
  "nfl:401873063|n:christian mccaffrey|Anytime Touchdown Scorer|1+": {
   "aid": null,
   "date": "2026-11-15",
@@ -66223,6 +66293,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nfl:401873063|n:george kittle|Receptions|4+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -3.9,
+  "gid": "nfl:401873063",
+  "imp": 0.8,
+  "label": "George Kittle: 4+ Receptions",
+  "league": "nfl",
+  "line": "4+",
+  "market": "Receptions",
+  "name": "George Kittle",
+  "p": 0.7866,
+  "p_fair": 0.7687,
+  "price": "-400",
+  "status": "open"
+ },
  "nfl:401873063|n:george pickens|Receiving Yards|30+": {
   "aid": null,
   "date": "2026-11-15",
@@ -66287,6 +66373,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nfl:401873063|n:ryan flournoy|Receiving Yards|15+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -7.1,
+  "gid": "nfl:401873063",
+  "imp": 0.8667,
+  "label": "Ryan Flournoy: 15+ Receiving Yards",
+  "league": "nfl",
+  "line": "15+",
+  "market": "Receiving Yards",
+  "name": "Ryan Flournoy",
+  "p": 0.8522,
+  "p_fair": 0.8054,
+  "price": "-650",
+  "status": "open"
+ },
  "nfl:401873063|n:ryan flournoy|Receiving Yards|20+": {
   "aid": null,
   "date": "2026-11-15",
@@ -66317,6 +66419,22 @@
   "p": 0.399,
   "p_fair": null,
   "price": "-105",
+  "status": "open"
+ },
+ "nfl:401873064|n:darnell washington|Receiving Yards|10+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -3.4,
+  "gid": "nfl:401873064",
+  "imp": 0.8667,
+  "label": "Darnell Washington: 10+ Receiving Yards",
+  "league": "nfl",
+  "line": "10+",
+  "market": "Receiving Yards",
+  "name": "Darnell Washington",
+  "p": 0.8522,
+  "p_fair": 0.8373,
+  "price": "-650",
   "status": "open"
  },
  "nfl:401873064|n:darnell washington|Receiving Yards|15+": {

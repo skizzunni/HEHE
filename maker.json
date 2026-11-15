@@ -18850,6 +18850,7 @@
    "cost": 0.6739,
    "edge": 0.0129,
    "fair": 0.6826,
+   "fill": "strict",
    "id": "nfl:401873056",
    "label": "Houston Texans",
    "league": "nfl",
@@ -18862,8 +18863,9 @@
     "team": "Houston Texans"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV15HOUCLE-HOU"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV15HOUCLE-HOU",
+   "won": 0
   },
   "KXNFLGAME-26NOV15JACTEN-JAC|YES": {
    "ask": 0.84,
@@ -18871,6 +18873,7 @@
    "cost": 0.8325,
    "edge": 0.026,
    "fair": 0.8542,
+   "fill": "touch",
    "id": "nfl:401873057",
    "label": "Jacksonville Jaguars",
    "league": "nfl",
@@ -18883,8 +18886,9 @@
     "team": "Jacksonville Jaguars"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV15JACTEN-JAC"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV15JACTEN-JAC",
+   "won": 1
   },
   "KXNFLGAME-26NOV15LARARI-LAR|YES": {
    "ask": 0.81,
@@ -18913,6 +18917,7 @@
    "cost": 0.664,
    "edge": 0.0003,
    "fair": 0.6642,
+   "fill": "touch",
    "id": "nfl:401873059",
    "label": "Indianapolis Colts",
    "league": "nfl",
@@ -18925,8 +18930,9 @@
     "team": "Indianapolis Colts"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV15MIAIND-IND"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV15MIAIND-IND",
+   "won": 1
   },
   "KXNFLGAME-26NOV15MINGB-GB|YES": {
    "ask": 0.58,
@@ -19835,6 +19841,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "nfl:401873055",
    "label": "New Orleans Saints -1.5",
    "league": "nfl",
@@ -19848,8 +19855,9 @@
     "team": "New Orleans Saints"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV15CARNO-NO2"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV15CARNO-NO2",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV15CARNO-NO3|NO": {
    "ask": 0.51,
@@ -19857,6 +19865,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "nfl:401873055",
    "label": "Carolina Panthers +2.5",
    "league": "nfl",
@@ -19870,8 +19879,9 @@
     "team": "Carolina Panthers"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV15CARNO-NO3"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV15CARNO-NO3",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV15HOUCLE-HOU5|NO": {
    "ask": 0.51,
@@ -19879,6 +19889,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "nfl:401873056",
    "label": "Cleveland Browns +4.5",
    "league": "nfl",
@@ -19892,8 +19903,9 @@
     "team": "Cleveland Browns"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV15HOUCLE-HOU5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV15HOUCLE-HOU5",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV15HOUCLE-HOU5|YES": {
    "ask": 0.51,
@@ -19901,6 +19913,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "nfl:401873056",
    "label": "Houston Texans -4.5",
    "league": "nfl",
@@ -19914,8 +19927,9 @@
     "team": "Houston Texans"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV15HOUCLE-HOU5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV15HOUCLE-HOU5",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV15JACTEN-JAC11|YES": {
    "ask": 0.51,
@@ -19923,6 +19937,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "queue",
    "id": "nfl:401873057",
    "label": "Jacksonville Jaguars -10.5",
    "league": "nfl",
@@ -19936,8 +19951,9 @@
     "team": "Jacksonville Jaguars"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV15JACTEN-JAC11"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV15JACTEN-JAC11",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV15LARARI-LAR10|YES": {
    "ask": 0.51,
@@ -21260,6 +21276,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "nfl:401873055",
    "label": "over 48.5",
    "league": "nfl",
@@ -21272,8 +21289,9 @@
     "t": "over"
    },
    "start": "2026-11-15T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV15CARNO-49"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV15CARNO-49",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV15HOUCLE-41|YES": {
    "ask": 0.51,
