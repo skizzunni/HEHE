@@ -9,7 +9,6 @@ Pre-registered test, college + NFL spreads getting 7-13.5 points: 298/381 (78% v
 Pre-registered tests also running: NFL spreads getting 14+ points (legs from 2026-11-14): 0/0; waiting for 100 legs; college football team-total unders (legs from 2026-11-15): 0/0; waiting for 150 legs.
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 78% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 82% (88% / 85%); 90%+ 84%, 85% (93% / 85%).
 Soccer or-draw picks by side: home 77% vs 74% stated on 425 (halves 78%, 77%); away 74% vs 73% stated on 210 (halves 73%, 75%). Straight wins: 66% vs 66% stated on 291; 59 of 98 losses were draws. With full price history: 82% vs 74% stated on 136 (halves 80% vs 72%, 85% vs 75%); older picks without it: 52% vs 59% on 155.
-NHL back-to-backs today (watch, not a rule: tired teams ran under their price in each of the last 3 seasons, betting against them lost in one): San Jose Sharks (home, played yesterday) v Nashville Predators (rested) -- the board has the rested side. Board record so far: picks on the tired side 3/10 vs 56% stated; against the tired side 18/27 vs 61% stated.
 Soccer draws on the board: 22% of 1501 games; most in EFL3 41% of 37, AUS 38% of 21, URU 30% of 33, UECL 30% of 33, BRA2 29% of 31 -- where a straight win most often loses to a draw.
 Locks by bet type, by half: win 84% then 94% (vs 82%, 81%); spread 88% then 92% (vs 85%, 85%); total 86% then 89% (vs 83%, 84%); team total 85% then 92% (vs 86%, 85%); prop 81% then 76% (vs 85%, 78%). Short in both halves: prop.
 Locks by league, by half: NHL 84% then 98% (vs 87%, 88%); NBA 83% then 88% (vs 83%, 82%); NCAAF 85% then 81% (vs 83%, 78%); NFL 89% then 68% (vs 84%, 82%). No league short in both halves.
@@ -24,8 +23,6 @@ Lessons from losses: no league / bet / chance band is 3+ points short in both ha
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 6/15 vs 71% stated (1.1% by luck; about 0.6 of 54 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 6.9 of 54 teams expected this far behind by chance); NBA Oklahoma City Thunder 8/14 vs 71% stated (20.1% by luck; about 10.9 of 54 teams expected this far behind by chance).
 High-chance sweep: 70%+ today 0-0, 24 open; swept 3 of 30 past days (last 2026-11-11) | 80%+ today 0-0, 10 open; swept 10 of 29 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/27 vs 61%; NBA on the tired side 16/19 vs 66%, against it 18/23 vs 72%.
-UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
-Next UFC card 2026-11-21 (8 fights priced, 4 close): Ikram Aliskerov 74%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Jake Matthews 62%; Dan Hooker 59% (close); Navajo Stirling 57% (close); Alessandro Costa 54% (close); Kevin Vallejos 54% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.4% hit vs 44.0% stated on 498
 Board sweep: 0-0, 43 open -- still clean.
 Why picks lost (14 days): favourite lost 118, close game 101, coin flip 53, blowout 41, upset 40, price moved against it 24, drawn 14.
