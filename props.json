@@ -50440,6 +50440,86 @@
   "price": "-900",
   "status": "open"
  },
+ "nba:401909986|n:devin booker|Assists|4+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -5.3,
+  "gid": "nba:401909986",
+  "imp": 0.7959,
+  "label": "Devin Booker: 4+ Assists",
+  "league": "nba",
+  "line": "4+",
+  "market": "Assists",
+  "name": "Devin Booker",
+  "p": 0.7795,
+  "p_fair": 0.7535,
+  "price": "-390",
+  "status": "open"
+ },
+ "nba:401909986|n:luka doncic|Points|25+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -9.6,
+  "gid": "nba:401909986",
+  "imp": 0.9231,
+  "label": "Luka Doncic: 25+ Points",
+  "league": "nba",
+  "line": "25+",
+  "market": "Points",
+  "name": "Luka Doncic",
+  "p": 0.8515,
+  "p_fair": 0.8347,
+  "price": "-1200",
+  "status": "open"
+ },
+ "nba:401909988|n:julian champagnie|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -3.1,
+  "gid": "nba:401909988",
+  "imp": 0.9231,
+  "label": "Julian Champagnie: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Julian Champagnie",
+  "p": 0.8461,
+  "p_fair": 0.8942,
+  "price": "-1200",
+  "status": "open"
+ },
+ "nba:401909988|n:stephon castle|Assists|4+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -4.5,
+  "gid": "nba:401909988",
+  "imp": 0.8,
+  "label": "Stephon Castle: 4+ Assists",
+  "league": "nba",
+  "line": "4+",
+  "market": "Assists",
+  "name": "Stephon Castle",
+  "p": 0.7835,
+  "p_fair": 0.7637,
+  "price": "-400",
+  "status": "open"
+ },
+ "nba:401909990|n:karl anthony towns|Assists|2+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -4.3,
+  "gid": "nba:401909990",
+  "imp": 0.8667,
+  "label": "Karl-Anthony Towns: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "Karl-Anthony Towns",
+  "p": 0.8488,
+  "p_fair": 0.8299,
+  "price": "-650",
+  "status": "open"
+ },
  "nba:401909990|n:og anunoby|Points|10+": {
   "aid": null,
   "date": "2026-11-15",
@@ -89394,11 +89474,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Beckett Sennecke",
   "p": 0.7423,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892719|n:cutter gauthier|Shots on Goal|2+": {
   "aid": null,
@@ -89410,11 +89492,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cutter Gauthier",
   "p": 0.8721,
   "p_fair": null,
   "price": "-1500",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892719|n:cutter gauthier|Shots on Goal|3+": {
   "aid": null,
@@ -89426,11 +89510,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cutter Gauthier",
   "p": 0.7364,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892719|n:kyle palmieri|Shots on Goal|1+": {
   "aid": null,
@@ -89442,11 +89528,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kyle Palmieri",
   "p": 0.8457,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892719|n:leo carlsson|Shots on Goal|1+": {
   "aid": null,
@@ -89458,11 +89546,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Leo Carlsson",
   "p": 0.8724,
   "p_fair": null,
   "price": "-2000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892719|n:mikael granlund|Shots on Goal|1+": {
   "aid": null,
@@ -89474,11 +89564,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikael Granlund",
   "p": 0.8323,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892719|n:troy terry|Shots on Goal|1+": {
   "aid": null,
@@ -89490,11 +89582,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Troy Terry",
   "p": 0.8724,
   "p_fair": null,
   "price": "-1800",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892720|n:kevin fiala|Shots on Goal|2+": {
   "aid": null,

@@ -2689,6 +2689,7 @@
    "cost": 0.5444,
    "edge": 0.0002,
    "fair": 0.5445,
+   "fill": "touch",
    "id": "ncaaf:401862827",
    "label": "North Texas Mean Green",
    "league": "ncaaf",
@@ -2701,8 +2702,9 @@
     "team": "North Texas Mean Green"
    },
    "start": "2026-11-15T02:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV14UNTUTSA-UNT"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV14UNTUTSA-UNT",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV14USCIND-IND|YES": {
    "ask": 0.74,
@@ -7336,6 +7338,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401862827",
    "label": "UTSA Roadrunners +2.5",
    "league": "ncaaf",
@@ -7349,8 +7352,9 @@
     "team": "UTSA Roadrunners"
    },
    "start": "2026-11-15T02:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14UNTUTSA-UNT3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14UNTUTSA-UNT3",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV14UNTUTSA-UNT3|YES": {
    "ask": 0.51,
@@ -7358,6 +7362,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401862827",
    "label": "North Texas Mean Green -2.5",
    "league": "ncaaf",
@@ -7371,8 +7376,9 @@
     "team": "North Texas Mean Green"
    },
    "start": "2026-11-15T02:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV14UNTUTSA-UNT3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV14UNTUTSA-UNT3",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV14USCIND-IND10|NO": {
    "ask": 0.51,
@@ -14318,6 +14324,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401862827",
    "label": "over 75.5",
    "league": "ncaaf",
@@ -14330,8 +14337,9 @@
     "t": "over"
    },
    "start": "2026-11-15T02:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14UNTUTSA-76"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14UNTUTSA-76",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV14UNTUTSA-77|NO": {
    "ask": 0.52,
@@ -14339,6 +14347,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401862827",
    "label": "under 76.5",
    "league": "ncaaf",
@@ -14351,8 +14360,9 @@
     "t": "under"
    },
    "start": "2026-11-15T02:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV14UNTUTSA-77"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV14UNTUTSA-77",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV14USCIND-50|YES": {
    "ask": 0.51,
@@ -19669,6 +19679,28 @@
    "status": "graded",
    "ticker": "KXNFLSPREAD-26NOV12WASNYG-NYG3",
    "won": 1
+  },
+  "KXNFLSPREAD-26NOV15CARNO-NO2|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "nfl:401873055",
+   "label": "New Orleans Saints -1.5",
+   "league": "nfl",
+   "match": "CAR @ NO",
+   "posted": "2026-11-15T05:39:41+00:00",
+   "queue": 19908.81,
+   "side": "YES",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "New Orleans Saints"
+   },
+   "start": "2026-11-15T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26NOV15CARNO-NO2"
   },
   "KXNFLSPREAD-26NOV15CARNO-NO3|NO": {
    "ask": 0.51,
