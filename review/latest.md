@@ -1,7 +1,7 @@
 # Review 2026-11-14
 
 Picks 61-23 (72.6% vs 70.8% claimed, ROI -1.8%).
-Ladder: run 7, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (33% est.), the best-chance 2x-5x combination (4 legs) against 33% at 2.47x for the plain top 4; 11 wins to $10,000; legs: Over 223.5 points (Chicago Bulls at Minnesota Timberwolves; live 2:03 - 4th, Chicago Bulls 113 - Minnesota Timberwolves 102, on pace for 225 (215 so far, line 223.5, needs 9 more), on track), New Mexico Lobos under 39.5 points (UNLV Rebels at New Mexico Lobos; live 9:30 - 4th, New Mexico Lobos 17 - UNLV Rebels 14, on pace for 20 (17 so far, line 39.5, room for 22 more), on track), UTEP Miners +17.5 (Wyoming Cowboys at UTEP Miners; live 11:53 - 1st, UTEP Miners 0 - Wyoming Cowboys 0), Over 219.5 points (Dallas Mavericks at Cleveland Cavaliers; won); 1 of 4 won, the ticket now rests on 3 legs, 44% on their stated chance before play.
+Ladder: run 7, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (33% est.), the best-chance 2x-5x combination (4 legs) against 33% at 2.47x for the plain top 4; 11 wins to $10,000; legs: Over 223.5 points (Chicago Bulls at Minnesota Timberwolves; live 52.2 - 4th, Chicago Bulls 117 - Minnesota Timberwolves 106, on pace for 227 (223 so far, line 223.5, needs 1 more), on track), New Mexico Lobos under 39.5 points (UNLV Rebels at New Mexico Lobos; live 8:06 - 4th, New Mexico Lobos 17 - UNLV Rebels 14, on pace for 20 (17 so far, line 39.5, room for 22 more), on track), UTEP Miners +17.5 (Wyoming Cowboys at UTEP Miners; live 9:56 - 1st, UTEP Miners 0 - Wyoming Cowboys 0), Over 219.5 points (Dallas Mavericks at Cleveland Cavaliers; won); 1 of 4 won, the ticket now rests on 3 legs, 44% on their stated chance before play.
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 7) 2026-11-14, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 14/27 cashed at 2.21x, without props 14/27 at 2.3x.
 Cautions in force: NCAAF teamover on all saved lines 1051/1345 vs 81%; NCAAF calls at 70-80% 46/70 vs 75%. Running ahead: NBA under on all saved lines 1088/1249 vs 82%; NHL over on all saved lines 136/156 vs 84%; NHL teamunder on all saved lines 267/308 vs 84%; NHL under on all saved lines 199/229 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NCAAF over 314/425 (74% vs 81%); NCAAF teamover 435/586 (74% vs 81%). Walk-forward: legs of a type running cold won 82.9% the next day vs 82.4% for the rest (1484 and 8711 legs), so a cold week is noise, not a signal.
@@ -26,7 +26,7 @@ High-chance sweep: 70%+ today 36-7, 12 open; swept 3 of 29 past days (last 2026-
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/27 vs 61%; NBA on the tired side 15/18 vs 66%, against it 18/21 vs 72%.
 Ladder games, players out or doubtful: Chicago Bulls at Minnesota Timberwolves: Chicago Bulls without Jalen Smith, Nic Claxton, Tobe Awaka, Caleb Wilson; Minnesota Timberwolves without Jaylen Clark, Anthony Edwards, Donte DiVincenzo | Dallas Mavericks at Cleveland Cavaliers: Dallas Mavericks without Daniel Gafford, Max Christie, Dereck Lively II, Tarik Biberovic, Sergio de Larrea; Cleveland Cavaliers without Peyton Watson, James Harden, Donovan Mitchell, Jarrett Allen, Evan Mobley, Sam Merrill, Nae'Qwan Tomlin.
 UFC 2026-11-07: picks (the price favourite) 9-5; close fights (under 60%) 1 of 2; lost: Mantas Kondratavičius (74%) lost to Andre Petroski, Jose Delano (53%) lost to Murtazali Magomedov, Keiichiro Nakamura (76%) lost to Ollie Schmid, Marcos Degli (69%) lost to Mitch Raposo, Waldo Cortes Acosta (64%) lost to Johnny Walker.
-Next UFC card 2026-11-14 (13 fights priced, 5 close): Bilal Hasan 88%; Juan Diaz 80%; Melquizael Costa 77%; Bia Mesquita 69%; Donte Johnson 67%; Ciryl Gane 67%; Terrance McKinney 64%; Chris Duncan 64%; Kayla Harrison 60% (close); Uroš Medić 59% (close); Caio Borralho 57% (close); Samuel Sanches 53% (close); Stephen Thompson 53% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
+Next UFC card 2026-11-14 (13 fights priced, 5 close): Bilal Hasan 88%; Juan Diaz 80%; Melquizael Costa 77%; Bia Mesquita 69%; Donte Johnson 67%; Ciryl Gane 67%; Terrance McKinney 64%; Chris Duncan 64%; Kayla Harrison 60% (close); Uroš Medić 59% (close); Caio Borralho 58% (close); Samuel Sanches 53% (close); Stephen Thompson 53% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 38.9% hit vs 44.1% stated on 483
 Strong calls 27-6 (81.8% vs 74.6% claimed).
 Closing line value: +0.53 points on 84 picks; beat the close on 48.8%.
@@ -67,15 +67,15 @@ Yesterday (2026-11-13): board 28-9, sweep broken by intl Iraq at 67%; 8.7 losses
 - LOST ncaaf Houston Cougars at 75% (-325), Colorado Buffaloes 42 - Houston Cougars 32: margin 10 · the book had my side favoured too · called at 75% · upset; picks like it: 48 of 71 (68% vs 75% stated)
 Locks 5/11 won, 5 open; Best play top 2 (58%) open; lost: Over 55.5 points (Kansas Jayhawks at West Virginia Mountaineers) Kansas Jayhawks 37 - West Virginia Mountaineers 14.
 Safe Locks 7/11 won, 4 open; Winners parlay top 3 (80%) open; Best play top 8 (53%) open.
-Lottery 10k: lost (0/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Georgia State Panthers +3.5)
-Lottery 10k: lost (2/8 legs won, killed by Northwestern Wildcats to win, Under 4.5 goals, Rutgers Scarlet Knights +16.5)
+Lottery 10k: lost (1/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Georgia State Panthers +3.5)
+Lottery 10k: lost (3/8 legs won, killed by Northwestern Wildcats to win, Under 4.5 goals, Rutgers Scarlet Knights +16.5)
 Lottery 10k: lost (1/9 legs won, killed by Under 223.5 points, Over 55.5 points, Over 41.5 points, Over 61.5 points, SMU Mustangs to win, Over 55.5 points)
-Lottery 10k+25: lost (0/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5)
-Lottery 10k+50: lost (0/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Georgia State Panthers +7.5)
-Lottery 10k+100: lost (0/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Georgia State Panthers +7.5)
-Lottery 100: lost (0/9 legs won, killed by Over 235.5 points, Over 66.5 points)
+Lottery 10k+25: lost (1/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5)
+Lottery 10k+50: lost (1/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Georgia State Panthers +7.5)
+Lottery 10k+100: lost (1/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Georgia State Panthers +7.5)
+Lottery 100: lost (1/9 legs won, killed by Over 235.5 points, Over 66.5 points)
 Lottery 100: lost (2/7 legs won, killed by Boston College Eagles +24.5, USC Trojans +4.5, Rutgers Scarlet Knights +16.5)
-Lottery 100: lost (2/7 legs won, killed by Over 41.5 points)
+Lottery 100: lost (3/7 legs won, killed by Over 41.5 points)
 Ladder-consistency props (all time): 2382/2864 won (83.2%) vs 86.4% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
 Props 55/67 vs 79.5% claimed.
 
