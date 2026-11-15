@@ -1,6 +1,6 @@
 # Review 2026-11-15
 
-Picks 18-5 (78.3% vs 71.3% claimed, ROI +5.7%).
+Picks 19-5 (79.2% vs 70.8% claimed, ROI +8.0%).
 Ladder: run 8, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (44% est.), the best-chance 2x-5x combination (3 legs) against 42% at 2.44x for the plain top 4; without props it would be 3 legs at 2.00x (43%); 14 wins to $10,000; legs: Devin Booker: 4+ Assists (LAL @ PHX; live Halftime, Los Angeles Lakers 64 - Phoenix Suns 54, 6 so far, line reached; props like it 126/158), Over 212.5 points (Indiana Pacers at Philadelphia 76ers; won), Under 234.5 points (Oklahoma City Thunder at Sacramento Kings; 9:00 PM, open); 1 of 3 won, the ticket now rests on 2 legs, 59% on their stated chance before play.
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 7) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 8) 2026-11-15, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 14/28 cashed at 2.22x, without props 14/28 at 2.31x.
 Cautions in force: NCAAF teamover on all saved lines 1239/1603 vs 81%. Running ahead: NBA over on all saved lines 1001/1151 vs 82%; NFL teamunder on all saved lines 311/361 vs 82%; NFL under on all saved lines 238/276 vs 82%; NHL spread on all saved lines 286/331 vs 83%; NHL teamover on all saved lines 168/192 vs 82%; NHL teamunder on all saved lines 268/308 vs 83%; NHL under on all saved lines 194/224 vs 82%.
@@ -21,7 +21,7 @@ Coin flips (called under 60%), by half: all 84/148 (57% vs 55%) then 93/149 (62%
 Home and away picks, by half: NBA home 68% vs 66% then 76% vs 69%, away 76% vs 64% then 74% vs 69%; NHL home 62% vs 59% then 57% vs 60%, away 54% vs 57% then 74% vs 57%; NCAAF home 81% vs 74% then 65% vs 72%, away 60% vs 69% then 76% vs 69%; NFL home 74% vs 65% then 64% vs 66%, away 88% vs 62% then 93% vs 67%.
 Ladder leg types on every saved pool line, by half: NBA over 81% then 92% vs 82%, 83% on 1151 saved lines; NBA under 90% then 82% vs 82%, 83% on 1275 saved lines.
 Injuries at tip-off (185 games, 12 days, early read): my side more out: 1st 20/26 77% vs 66% | 2nd 21/35 60% vs 62%; even: 1st 18/25 72% vs 63% | 2nd 17/26 65% vs 63%; their side more out: 1st 31/38 82% vs 66% | 2nd 28/35 80% vs 65%.
-Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1840 picks).
+Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1841 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 6/15 vs 71% stated (1.1% by luck; about 0.6 of 55 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.0 of 55 teams expected this far behind by chance); NBA Oklahoma City Thunder 8/14 vs 71% stated (20.1% by luck; about 11.1 of 55 teams expected this far behind by chance).
 High-chance sweep: 70%+ today 10-1, 10 open; swept 3 of 30 past days (last 2026-11-11) | 80%+ today 6-1, 5 open; swept 10 of 29 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/27 vs 61%; NBA on the tired side 16/19 vs 66%, against it 18/23 vs 72%.
@@ -30,8 +30,8 @@ UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3
 Next UFC card 2026-11-21 (8 fights priced, 4 close): Ikram Aliskerov 74%; Shamil Gaziev 66%; Kyoji Horiguchi 64%; Jake Matthews 64%; Dan Hooker 60% (close); Navajo Stirling 58% (close); Kevin Vallejos 55% (close); Alessandro Costa 54% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.4% hit vs 44.1% stated on 502
 Strong calls 8-2 (80.0% vs 73.1% claimed).
-Closing line value: +0.8 points on 23 picks; beat the close on 52.2%.
-Board sweep: 18-5, 20 open -- broken (first loss: ncaab Louisville Cardinals at 81%); 6.6 losses expected from the settled picks' chances, so 5 or more by now had a 84.3% chance; 1 of the 5 were near coin flips (called under 60%), 4 were real misses; losses by league: nfl 2 (2.8 expected), ncaab 1 (0.4 expected), nwsl 1 (0.3 expected), unl 1 (1.8 expected).
+Closing line value: +0.48 points on 24 picks; beat the close on 50.0%.
+Board sweep: 19-5, 19 open -- broken (first loss: ncaab Louisville Cardinals at 81%); 7 losses expected from the settled picks' chances, so 5 or more by now had a 88% chance; 1 of the 5 were near coin flips (called under 60%), 4 were real misses; losses by league: nfl 2 (2.8 expected), ncaab 1 (0.8 expected), nwsl 1 (0.3 expected), unl 1 (1.8 expected).
 - LOST ncaab Louisville Cardinals at 81% (-470), Louisville Cardinals 78 - Memphis Tigers 98: margin 20 · the book had my side favoured too · called at 81% · upset · blowout
 - LOST nfl Green Bay Packers at 57% (-148), Green Bay Packers 10 - Minnesota Vikings 30: margin 20 · the book had my side favoured too · called at 57% · coin flip · blowout; picks like it: 20 of 29 (69% vs 58% stated)
 - LOST nfl Houston Texans at 64% (-198), Cleveland Browns 27 - Houston Texans 24: margin 3 · the book had my side favoured too · called at 64% · favourite lost · close game · price moved against it (4 pts); picks like it: 23 of 27 (85% vs 63% stated)
@@ -77,10 +77,10 @@ Locks 5/11 won, 6 open; Best play top 3 (52%) open.
 Safe Locks 1/11 won, 10 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
 Lottery 100: lost (4/13 legs won, killed by Tyler Warren: 30+ Receiving Yards, Sam LaPorta: 25+ Receiving Yards)
 Lottery 100: open (2/8 legs won)
-Lottery 100: lost (0/5 legs won, killed by Under 219.5 points, Under 163.5 points)
+Lottery 100: lost (1/5 legs won, killed by Under 219.5 points, Under 163.5 points)
 Lottery 10k: lost (2/11 legs won, killed by New Orleans Saints to win, New York Jets +3.5)
 Lottery 10k: lost (2/8 legs won, killed by Under 41.5 points, Over 58.5 points)
-Lottery 10k: lost (3/9 legs won, killed by Under 219.5 points)
+Lottery 10k: lost (4/9 legs won, killed by Under 219.5 points)
 Lottery 10k+25: lost (2/10 legs won, killed by New Orleans Saints to win, New York Jets +3.5)
 Lottery 10k+50: lost (2/10 legs won, killed by New Orleans Saints to win, Under 37.5 points)
 Lottery 10k+100: lost (2/10 legs won, killed by New Orleans Saints to win, Under 41.5 points)
@@ -88,4 +88,4 @@ Ladder-consistency props (all time): 2453/2955 won (83.0%) vs 86.3% fair, 87.5% 
 Props 58/79 vs 74.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=189), ncaab 0.00 (n=67), ncaaf 0.00 (n=293), nfl 0.00 (n=65), nhl 0.00 (n=208)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=189), ncaab 0.00 (n=68), ncaaf 0.00 (n=293), nfl 0.00 (n=65), nhl 0.00 (n=208)
