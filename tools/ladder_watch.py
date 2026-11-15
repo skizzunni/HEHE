@@ -241,10 +241,20 @@ def first_look(after):
     return out
 
 
+def ufc_record(after):
+    """Tonight's UFC board picks so far: "UFC tonight 6-3, 4 to go", or ""."""
+    st = [str(v).split(" | ")[0].rsplit("= ", 1)[-1] for k, v in after.items() if k.startswith("UFC ")]
+    w, l, o = st.count("won"), st.count("lost"), st.count("open")
+    return f"UFC tonight {w}-{l}" + (f", {o} to go" if o else ", card done") if w + l else ""
+
+
 def changes(before, after):
-    """Lines for every leg or game whose state moved, plus the settle line."""
-    out = [f"CHANGE: {k} = {v}" for k, v in after.items()
-           if k != "SETTLED" and before and not _same(before.get(k), v)]
+    """Lines for every leg or game whose state moved, plus the settle line. A
+    UFC result carries the night's running record (ufc_record)."""
+    rec = ufc_record(after)
+    out = [f"CHANGE: {k} = {v}" + (f" | {rec}" if k.startswith("UFC ") and rec
+                                    and not str(v).split(" | ")[0].endswith("= open") else "")
+           for k, v in after.items() if k != "SETTLED" and before and not _same(before.get(k), v)]
     if "SETTLED" in after and before.get("SETTLED") != after["SETTLED"]:
         out.append(f"SETTLED: {after['SETTLED']}")
     return out

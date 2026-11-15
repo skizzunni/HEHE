@@ -1525,6 +1525,13 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Checked, no change: NHL picks (2026-11-14).** Tampa Bay (64%) lost 0-2,
+Columbus (55%) 3-4 and St. Louis (50%) 1-4 the same night. By date halves
+of 212 graded NHL picks: all 64/106 vs 61.7 (z 0.46) then 66/106 vs 62.2
+(z 0.76); under 57% 23/48 vs 25.4 then 26/52 vs 27.7 (z -0.71, -0.48) --
+slightly short both times, nowhere near the bar; 57-65% and 65%+ mixed;
+home and away mixed. Nothing changes.
+
 **Rejected: coin flips whose price moved against them (2026-11-14).**
 West Virginia (53%) lost 14-37 to Kansas after its price slid 3 points.
 The Nov 13 move study covered every pick; this narrows it to the 259

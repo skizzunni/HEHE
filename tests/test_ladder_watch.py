@@ -252,3 +252,16 @@ class How(unittest.TestCase):
         self.assertEqual(w._how(dict(displayClock="5:00"), 3), "method not posted yet")
         self.assertEqual(w._how(dict(period=5, displayClock="5:00"), 5), "decision")
         self.assertEqual(w._how(dict(period=3, displayClock="5:00"), 5), "finish R3 5:00")
+
+
+class UfcRecord(unittest.TestCase):
+    def test_record_on_results(self):
+        before = {"UFC A vs B": "board pick B = open", "UFC C vs D": "board pick D = open", "Over 1": "open"}
+        after = {"UFC A vs B": "board pick B (88%) = lost | winner A, decision", "UFC C vs D": "board pick D = open",
+                 "UFC E vs F": "board pick F (60%) = won | winner F, decision", "Over 1": "open"}
+        self.assertEqual(w.ufc_record(after), "UFC tonight 1-1, 1 to go")
+        out = w.changes(before, after)
+        self.assertIn("CHANGE: UFC A vs B = board pick B (88%) = lost | winner A, decision | UFC tonight 1-1, 1 to go", out)
+        self.assertEqual(w.ufc_record({"Over 1": "open"}), "")
+        done = dict(after, **{"UFC C vs D": "board pick D (66%) = won | winner D, decision"})
+        self.assertEqual(w.ufc_record(done), "UFC tonight 2-1, card done")
