@@ -66,13 +66,13 @@ Yesterday (2026-11-13): board 28-9, sweep broken by intl Iraq at 67%; 8.7 losses
 - LOST ncaaf Houston Cougars at 75% (-325), Colorado Buffaloes 42 - Houston Cougars 32: margin 10 · the book had my side favoured too · called at 75% · upset; picks like it: 49 of 72 (68% vs 75% stated)
 Locks 6/11 won, 3 open; Best play top 2 (58%) lost; lost: Over 223.5 points (Chicago Bulls at Minnesota Timberwolves) Chicago Bulls 117 - Minnesota Timberwolves 106; Over 55.5 points (Kansas Jayhawks at West Virginia Mountaineers) Kansas Jayhawks 37 - West Virginia Mountaineers 14.
 Safe Locks 9/11 won, 2 open; Winners parlay top 3 (80%) open; Best play top 8 (53%) open.
-Lottery 10k: lost (2/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Louisville Cardinals -7.5, Georgia State Panthers +3.5)
+Lottery 10k: lost (3/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Louisville Cardinals -7.5, Georgia State Panthers +3.5)
 Lottery 10k: lost (3/8 legs won, killed by Northwestern Wildcats to win, Under 4.5 goals, Rutgers Scarlet Knights +16.5)
 Lottery 10k: lost (1/9 legs won, killed by Under 223.5 points, Over 55.5 points, Over 41.5 points, Over 61.5 points, SMU Mustangs to win, Over 55.5 points)
-Lottery 10k+25: lost (2/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Louisville Cardinals -7.5)
-Lottery 10k+50: lost (2/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Louisville Cardinals -7.5, Georgia State Panthers +7.5)
-Lottery 10k+100: lost (2/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Louisville Cardinals -7.5, Georgia State Panthers +7.5)
-Lottery 100: lost (3/9 legs won, killed by Over 235.5 points, Over 66.5 points)
+Lottery 10k+25: lost (3/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Louisville Cardinals -7.5)
+Lottery 10k+50: lost (3/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Louisville Cardinals -7.5, Georgia State Panthers +7.5)
+Lottery 10k+100: lost (3/12 legs won, killed by Over 235.5 points, Over 66.5 points, Boston College Eagles +24.5, USC Trojans +4.5, Louisville Cardinals -7.5, Georgia State Panthers +7.5)
+Lottery 100: lost (4/9 legs won, killed by Over 235.5 points, Over 66.5 points)
 Lottery 100: lost (2/7 legs won, killed by Boston College Eagles +24.5, USC Trojans +4.5, Rutgers Scarlet Knights +16.5)
 Lottery 100: lost (3/7 legs won, killed by Over 41.5 points)
 Ladder-consistency props (all time): 2401/2888 won (83.1%) vs 86.4% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
