@@ -8502,6 +8502,40 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909997|away|Kalshi": {
+   "dec": 1.5239,
+   "ev": 0.0209,
+   "fair": 0.6699,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909997",
+   "kind": "value",
+   "league": "nba",
+   "match": "PHI @ BKN",
+   "price": "-191",
+   "seen": "2026-11-16T18:04:18+00:00",
+   "side": "away",
+   "start": "2026-11-17T00:30Z",
+   "team": "Philadelphia 76ers",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909997|home|FanDuel": {
+   "dec": 2.9,
+   "ev": 0.0188,
+   "fair": 0.3513,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909997",
+   "kind": "value",
+   "league": "nba",
+   "match": "PHI @ BKN",
+   "price": "+190",
+   "seen": "2026-11-16T18:04:18+00:00",
+   "side": "home",
+   "start": "2026-11-17T00:30Z",
+   "team": "Brooklyn Nets",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909997|home|Kalshi": {
    "dec": 2.9824,
    "ev": 0.02,
@@ -20229,6 +20263,26 @@
    "prob": 0.1973,
    "seen": "2026-11-15T19:38:35+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909997:home": {
+   "ev": 0.0188,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0188,
+     "fair": 0.3513,
+     "id": "nba:401909997",
+     "price": "+190",
+     "side": "home",
+     "spec": null,
+     "team": "Brooklyn Nets"
+    }
+   ],
+   "payout": 2.9,
+   "prob": 0.3513,
+   "seen": "2026-11-16T18:04:18+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
