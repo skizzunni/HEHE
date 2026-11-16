@@ -7,7 +7,7 @@ Cautions in force: NCAAF teamover on all saved lines 1239/1603 vs 81%. Running a
 Running cold (last 7 days, all saved lines at 70-95%): NCAAF teamover 623/844 (74% vs 82%); NCAAF over 453/607 (75% vs 81%). Walk-forward: legs of a type running cold won 80.6% the next day vs 81.7% for the rest (1146 and 10585 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 358/457 (78% vs 81% stated); fine -- the caution on this band is off (locks.apply_prereg). History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).
 Pre-registered tests also running: NFL spreads getting 14+ points (legs from 2026-11-14): 62/86 (72% vs 84% stated); waiting for 100 legs; college football team-total unders (legs from 2026-11-15): 18/18 (100% vs 81% stated); waiting for 150 legs.
-Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 77% (76% / 79%); 80-85% 85%, 87% (83% / 84%); 85-90% 87%, 82% (88% / 85%); 90%+ 84%, 85% (93% / 85%).
+Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 82% (88% / 85%); 90%+ 84%, 85% (93% / 85%).
 Soccer or-draw picks by side: home 77% vs 74% stated on 428 (halves 78%, 76%); away 75% vs 73% stated on 214 (halves 73%, 76%). Straight wins: 67% vs 66% stated on 294; 59 of 98 losses were draws. With full price history: 83% vs 74% stated on 139 (halves 80% vs 72%, 85% vs 75%); older picks without it: 52% vs 59% on 155.
 NHL back-to-backs today (watch, not a rule: tired teams ran under their price in each of the last 3 seasons, betting against them lost in one): San Jose Sharks (home, played yesterday) v Nashville Predators (rested) -- the board has the rested side. Board record so far: picks on the tired side 3/10 vs 56% stated; against the tired side 18/27 vs 61% stated.
 Soccer draws on the board: 22% of 1512 games; most in EFL3 41% of 37, AUS 38% of 21, URU 31% of 35, UECL 30% of 33, BRA2 29% of 31 -- where a straight win most often loses to a draw.
@@ -74,18 +74,18 @@ Yesterday (2026-11-14): board 75-34, sweep broken by wsl Tottenham Hotspur at 66
 - LOST ncaaf Utah State Aggies at 59% (-155), San Diego State Aztecs 30 - Utah State Aggies 13: margin 17 · the book had my side favoured too · called at 59% · coin flip · blowout; picks like it: 49 of 76 (64% vs 59% stated)
 - LOST ncaaf Oklahoma State Cowboys at 64% (-192), Oklahoma State Cowboys 27 - Texas Tech Red Raiders 52: margin 25 · the book had my side favoured too · called at 64% · favourite lost · blowout; picks like it: 48 of 79 (61% vs 64% stated)
 Locks 8/11 won, 3 open; Best play top 3 (52%) open.
-Safe Locks 4/11 won, 7 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
+Safe Locks 5/11 won, 6 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
 Lottery 100: lost (7/13 legs won, killed by Tyler Warren: 30+ Receiving Yards, Sam LaPorta: 25+ Receiving Yards)
-Lottery 100: lost (2/8 legs won, killed by Trey McBride: 40+ Receiving Yards)
+Lottery 100: lost (2/8 legs won, killed by Trey McBride: 40+ Receiving Yards, Over 224.5 points)
 Lottery 100: lost (2/5 legs won, killed by Under 219.5 points, Under 163.5 points)
 Lottery 10k: lost (4/11 legs won, killed by San Francisco 49ers -16.5, New Orleans Saints to win, Las Vegas Raiders -1.5, New York Jets +3.5)
-Lottery 10k: lost (2/8 legs won, killed by Under 41.5 points, Over 58.5 points)
+Lottery 10k: lost (2/8 legs won, killed by Under 41.5 points, Over 224.5 points, Over 58.5 points)
 Lottery 10k: lost (6/9 legs won, killed by Under 219.5 points)
 Lottery 10k+25: lost (4/10 legs won, killed by San Francisco 49ers -16.5, New Orleans Saints to win, Las Vegas Raiders -1.5, New York Jets +3.5)
 Lottery 10k+50: lost (4/10 legs won, killed by San Francisco 49ers -16.5, New Orleans Saints to win, Las Vegas Raiders -1.5, Under 37.5 points)
 Lottery 10k+100: lost (4/10 legs won, killed by San Francisco 49ers -16.5, New Orleans Saints to win, Las Vegas Raiders -1.5, Under 41.5 points)
-Ladder-consistency props (all time): 2505/3018 won (83.0%) vs 86.2% fair, 87.4% price, 83.5% stated on the board (heavy props capped).
-Props 116/151 vs 76.8% claimed.
+Ladder-consistency props (all time): 2515/3029 won (83.0%) vs 86.2% fair, 87.4% price, 83.5% stated on the board (heavy props capped).
+Props 127/163 vs 77.2% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 78.9% on 564 (Wilson 75.3-82.1, 2026-10-20..2026-11-02)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=193), ncaab 0.00 (n=68), ncaaf 0.00 (n=293), nfl 0.00 (n=68), nhl 0.00 (n=208)

@@ -15572,11 +15572,11 @@
   },
   "props": {
    "fair": {
-    "n": 3018,
+    "n": 3029,
     "said_fair": 86.2,
     "said_price": 87.4,
     "said_stated": 83.5,
-    "won": 2505
+    "won": 2515
    },
    "n": 130,
    "said": 80.9,
@@ -15703,13 +15703,13 @@
       82.0
      ],
      [
-      131,
-      165,
+      133,
+      167,
       81.7
      ]
     ],
-    "hit": 79.4,
-    "n": 306,
+    "hit": 79.5,
+    "n": 308,
     "name": "props nba Assists",
     "said": 81.8
    },
@@ -15722,13 +15722,13 @@
       85.4
      ],
      [
-      190,
-      220,
-      85.5
+      192,
+      222,
+      85.6
      ]
     ],
     "hit": 87.3,
-    "n": 424,
+    "n": 426,
     "name": "props nba Points",
     "said": 85.5
    },
@@ -15741,15 +15741,15 @@
       83.1
      ],
      [
-      129,
-      157,
-      83.4
+      130,
+      158,
+      83.3
      ]
     ],
-    "hit": 83.5,
-    "n": 297,
+    "hit": 83.6,
+    "n": 298,
     "name": "props nba Pts + Ast",
-    "said": 83.3
+    "said": 83.2
    },
    {
     "flag": false,
@@ -15760,13 +15760,13 @@
       84.7
      ],
      [
-      140,
-      169,
-      84.2
+      141,
+      171,
+      84.1
      ]
     ],
-    "hit": 84.1,
-    "n": 333,
+    "hit": 83.9,
+    "n": 335,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.4
    },
@@ -15779,15 +15779,15 @@
       82.4
      ],
      [
-      73,
-      90,
-      82.0
+      74,
+      91,
+      81.9
      ]
     ],
-    "hit": 81.9,
-    "n": 155,
+    "hit": 82.1,
+    "n": 156,
     "name": "props nba Reb + Ast",
-    "said": 82.2
+    "said": 82.1
    },
    {
     "flag": false,
@@ -15798,13 +15798,13 @@
       84.6
      ],
      [
-      87,
-      97,
+      89,
+      99,
       85.0
      ]
     ],
-    "hit": 84.5,
-    "n": 181,
+    "hit": 84.7,
+    "n": 183,
     "name": "props nba Rebounds",
     "said": 84.8
    },
@@ -15817,13 +15817,13 @@
       84.5
      ],
      [
-      75,
-      91,
+      77,
+      93,
       84.3
      ]
     ],
-    "hit": 80.8,
-    "n": 167,
+    "hit": 81.1,
+    "n": 169,
     "name": "props nba Threes Made",
     "said": 84.4
    },
@@ -16224,15 +16224,15 @@
       90.3
      ],
      [
-      24,
       25,
+      26,
       91.1
      ]
     ],
-    "hit": 97.1,
-    "n": 35,
+    "hit": 97.2,
+    "n": 36,
     "name": "safe locks nba under",
-    "said": 90.8
+    "said": 90.9
    },
    {
     "flag": false,
@@ -16319,13 +16319,13 @@
       88.8
      ],
      [
-      168,
-      182,
+      169,
+      183,
       86.8
      ]
     ],
     "hit": 93.0,
-    "n": 314,
+    "n": 315,
     "name": "prop locks",
     "said": 87.6
    },
@@ -16608,10 +16608,11 @@
    },
    {
     "killed_by": [
-     "Trey McBride: 40+ Receiving Yards"
+     "Trey McBride: 40+ Receiving Yards",
+     "Over 224.5 points"
     ],
     "legs": 8,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "100",
     "won": 2
@@ -16643,10 +16644,11 @@
    {
     "killed_by": [
      "Under 41.5 points",
+     "Over 224.5 points",
      "Over 58.5 points"
     ],
     "legs": 8,
-    "lost": 2,
+    "lost": 3,
     "status": "lost",
     "tier": "10k",
     "won": 2
@@ -16780,25 +16782,25 @@
   "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 358/457 (78% vs 81% stated); fine -- the caution on this band is off (locks.apply_prereg). History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).",
   "prereg_more": "Pre-registered tests also running: NFL spreads getting 14+ points (legs from 2026-11-14): 62/86 (72% vs 84% stated); waiting for 100 legs; college football team-total unders (legs from 2026-11-15): 18/18 (100% vs 81% stated); waiting for 150 legs.",
   "priced_calibration": "Priced-era picks by league, by half (split 2026-11-02): soccer or-draw 77% vs 74% (z +1.2) then 76% vs 74% (z +0.7); soccer win 82% vs 73% (z +2.6) then 84% vs 74% (z +2.2); NCAAF 73% vs 72% (z +0.3) then 69% vs 70% (z -0.4); NBA 71% vs 65% (z +1.1) then 76% vs 69% (z +1.5); NHL 60% vs 58% (z +0.4) then 63% vs 59% (z +0.8); NFL 78% vs 64% (z +1.5) then 82% vs 67% (z +1.7). None past the 99.5% bar in both halves.",
-  "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 77% (76% / 79%); 80-85% 85%, 87% (83% / 84%); 85-90% 87%, 82% (88% / 85%); 90%+ 84%, 85% (93% / 85%).",
+  "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 77% (76% / 79%); 80-85% 85%, 86% (83% / 84%); 85-90% 87%, 82% (88% / 85%); 90%+ 84%, 85% (93% / 85%).",
   "props": {
    "fair": {
-    "n": 3018,
+    "n": 3029,
     "said_fair": 86.2,
     "said_price": 87.4,
     "said_stated": 83.5,
-    "won": 2505
+    "won": 2515
    },
-   "n": 151,
-   "said": 76.8,
-   "won": 116
+   "n": 163,
+   "said": 77.2,
+   "won": 127
   },
   "roster": null,
   "runs": "Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 7) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 8) 2026-11-15, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 14/28 cashed at 2.22x, without props 14/28 at 2.31x.",
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 7,
+   "open": 6,
    "plays": {
     "best": [
      9,
@@ -16811,7 +16813,7 @@
      "open"
     ]
    },
-   "won": 4
+   "won": 5
   },
   "strong": {
    "hit": 81.8,
