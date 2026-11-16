@@ -8396,6 +8396,45 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401909996|away|FanDuel": {
+   "dec": 1.5556,
+   "ev": 0.0265,
+   "fair": 0.6599,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909996",
+   "kind": "value",
+   "league": "nba",
+   "match": "MEM @ WSH",
+   "price": "-180",
+   "seen": "2026-11-16T03:17:11+00:00",
+   "side": "away",
+   "start": "2026-11-17T00:00Z",
+   "team": "Memphis Grizzlies",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909996|sure": {
+   "id": "nba:401909996",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-180",
+     "stake_share": 0.6469,
+     "team": "Memphis Grizzlies",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+185",
+     "stake_share": 0.3531,
+     "team": "Washington Wizards",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "MEM @ WSH",
+   "profit": 0.0063,
+   "seen": "2026-11-16T03:17:11+00:00"
+  },
   "nba:401909997|home|Kalshi": {
    "dec": 2.9824,
    "ev": 0.02,
@@ -8411,6 +8450,23 @@
    "start": "2026-11-17T00:30Z",
    "team": "Brooklyn Nets",
    "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401910001|away|Kalshi": {
+   "dec": 4.5106,
+   "ev": 0.0523,
+   "fair": 0.2333,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401910001",
+   "kind": "suspect",
+   "league": "nba",
+   "match": "PHX @ DEN",
+   "price": "+351",
+   "seen": "2026-11-16T03:17:11+00:00",
+   "side": "away",
+   "start": "2026-11-17T02:00Z",
+   "team": "Phoenix Suns",
+   "tip": "9:00 PM",
    "venue": "Kalshi"
   },
   "ncaab:401906758|away|FanDuel": {
@@ -17184,6 +17240,7 @@
     "t": "over"
    },
    "start": "2026-11-16T00:30Z",
+   "status": "won",
    "team": "over 6.5",
    "tip": "7:30 PM",
    "venue": "FanDuel"
