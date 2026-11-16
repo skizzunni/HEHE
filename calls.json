@@ -9235,8 +9235,8 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T17:07:19+00:00",
-      "conf": 86,
+      "checked_at": "2026-11-16T17:12:31+00:00",
+      "conf": 87,
       "dc": true,
       "gate": {
        "ok": false,
@@ -9247,10 +9247,10 @@
       "match": "SVN @ MKD",
       "pick": "Slovenia or draw",
       "price": "-1100",
-      "price_at": "2026-11-16T16:57:21+00:00",
+      "price_at": "2026-11-16T17:07:33+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196925064:14482088",
-      "prob_at": "2026-11-16T17:07:00+00:00",
+      "prob_at": "2026-11-16T17:12:11+00:00",
       "rank": 1,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -9313,36 +9313,45 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T17:07:19+00:00",
+      "checked_at": "2026-11-16T17:12:31+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (3 listed)"
+       "what": "injury report checked (2 listed)"
       },
       "id": "nba:401910001",
       "league": "nba",
       "match": "PHX @ DEN",
       "pick": "Denver Nuggets",
       "price": "-408",
-      "price_at": "2026-11-16T17:06:59+00:00",
+      "price_at": "2026-11-16T17:12:10+00:00",
       "price_market": "moneyline",
       "price_ref": "35020953:0ML87246920_1",
-      "prob_at": "2026-11-16T17:06:59+00:00",
+      "prob_at": "2026-11-16T17:12:10+00:00",
       "rank": 3,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-17T02:00Z"
      },
      "dc": false,
-     "fp": "c321f530dafb",
+     "fp": "49b58b6c5c37",
      "gate": {
       "ok": true,
-      "what": "injury report checked (3 listed)"
+      "what": "injury report checked (2 listed)"
      },
      "id": "nba:401910001",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-16T17:12:31+00:00",
+       "what": "injury report checked (2 listed)"
+      }
+     ],
      "match": "PHX @ DEN",
+     "news_at": "2026-11-16T17:12:31+00:00",
      "pick": "Denver Nuggets",
      "price": "-440",
      "price_at": "2026-11-16T13:01:42+00:00",
@@ -9363,7 +9372,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T17:07:19+00:00",
+      "checked_at": "2026-11-16T17:12:31+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -9375,10 +9384,10 @@
       "match": "ORL @ BOS",
       "pick": "Boston Celtics",
       "price": "-360",
-      "price_at": "2026-11-16T17:06:59+00:00",
+      "price_at": "2026-11-16T17:12:10+00:00",
       "price_market": "moneyline",
       "price_ref": "35020946:0ML87246913_1",
-      "prob_at": "2026-11-16T17:06:59+00:00",
+      "prob_at": "2026-11-16T17:12:10+00:00",
       "rank": 4,
       "ready": true,
       "side": "home",
@@ -9426,8 +9435,8 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T17:07:19+00:00",
-      "conf": 74,
+      "checked_at": "2026-11-16T17:12:31+00:00",
+      "conf": 75,
       "dc": false,
       "gate": {
        "ok": false,
@@ -9437,11 +9446,11 @@
       "league": "nhl",
       "match": "VAN @ UTA",
       "pick": "Utah Mammoth",
-      "price": "-340",
-      "price_at": "2026-11-16T17:06:59+00:00",
+      "price": "-355",
+      "price_at": "2026-11-16T17:12:10+00:00",
       "price_market": "moneyline",
       "price_ref": "34992067:0ML87172463_1",
-      "prob_at": "2026-11-16T17:06:59+00:00",
+      "prob_at": "2026-11-16T17:12:10+00:00",
       "rank": 5,
       "ready": false,
       "reason": "awaiting confirmed goalies (0 of 2)",
@@ -9483,7 +9492,7 @@
     }
    ],
    "candidate_news": {
-    "nba": "2026-11-16T14:58:15+00:00"
+    "nba": "2026-11-16T17:12:31+00:00"
    },
    "candidate_observations": {
     "nba:401909994": {
@@ -9494,7 +9503,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T17:07:19+00:00",
+      "checked_at": "2026-11-16T17:12:31+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -9506,10 +9515,10 @@
       "match": "ORL @ BOS",
       "pick": "Boston Celtics",
       "price": "-360",
-      "price_at": "2026-11-16T17:06:59+00:00",
+      "price_at": "2026-11-16T17:12:10+00:00",
       "price_market": "moneyline",
       "price_ref": "35020946:0ML87246913_1",
-      "prob_at": "2026-11-16T17:06:59+00:00",
+      "prob_at": "2026-11-16T17:12:10+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -9527,7 +9536,7 @@
      "news_at": "2026-11-16T14:58:15+00:00",
      "pick": "Boston Celtics",
      "price": "-360",
-     "price_at": "2026-11-16T17:06:59+00:00",
+     "price_at": "2026-11-16T17:12:10+00:00",
      "price_market": "moneyline",
      "price_ref": "35020946:0ML87246913_1",
      "side": "home",
@@ -9542,7 +9551,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T17:07:19+00:00",
+      "checked_at": "2026-11-16T17:12:31+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -9554,10 +9563,10 @@
       "match": "CHI @ CLE",
       "pick": "Cleveland Cavaliers",
       "price": "-359",
-      "price_at": "2026-11-16T17:06:59+00:00",
+      "price_at": "2026-11-16T17:12:10+00:00",
       "price_market": "moneyline",
       "price_ref": "35020947:0ML87246914_1",
-      "prob_at": "2026-11-16T17:06:59+00:00",
+      "prob_at": "2026-11-16T17:12:10+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -9574,7 +9583,7 @@
      "match": "CHI @ CLE",
      "pick": "Cleveland Cavaliers",
      "price": "-359",
-     "price_at": "2026-11-16T17:06:59+00:00",
+     "price_at": "2026-11-16T17:12:10+00:00",
      "price_market": "moneyline",
      "price_ref": "35020947:0ML87246914_1",
      "side": "home",
@@ -9589,39 +9598,48 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T17:07:19+00:00",
+      "checked_at": "2026-11-16T17:12:31+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (3 listed)"
+       "what": "injury report checked (2 listed)"
       },
       "id": "nba:401910001",
       "league": "nba",
       "match": "PHX @ DEN",
       "pick": "Denver Nuggets",
       "price": "-408",
-      "price_at": "2026-11-16T17:06:59+00:00",
+      "price_at": "2026-11-16T17:12:10+00:00",
       "price_market": "moneyline",
       "price_ref": "35020953:0ML87246920_1",
-      "prob_at": "2026-11-16T17:06:59+00:00",
+      "prob_at": "2026-11-16T17:12:10+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-17T02:00Z"
      },
      "dc": false,
-     "fp": "c321f530dafb",
+     "fp": "49b58b6c5c37",
      "gate": {
       "ok": true,
-      "what": "injury report checked (3 listed)"
+      "what": "injury report checked (2 listed)"
      },
      "id": "nba:401910001",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-16T17:12:31+00:00",
+       "what": "injury report checked (2 listed)"
+      }
+     ],
      "match": "PHX @ DEN",
+     "news_at": "2026-11-16T17:12:31+00:00",
      "pick": "Denver Nuggets",
      "price": "-408",
-     "price_at": "2026-11-16T17:06:59+00:00",
+     "price_at": "2026-11-16T17:12:10+00:00",
      "price_market": "moneyline",
      "price_ref": "35020953:0ML87246920_1",
      "side": "home",
@@ -9636,7 +9654,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T17:07:19+00:00",
+      "checked_at": "2026-11-16T17:12:31+00:00",
       "conf": 100,
       "dc": false,
       "gate": {
@@ -9648,10 +9666,10 @@
       "match": "GRAM @ UK",
       "pick": "Kentucky Wildcats",
       "price": "-50000",
-      "price_at": "2026-11-16T17:06:59+00:00",
+      "price_at": "2026-11-16T17:12:10+00:00",
       "price_market": "moneyline",
       "price_ref": "35032121:0ML87274295_1",
-      "prob_at": "2026-11-16T17:06:59+00:00",
+      "prob_at": "2026-11-16T17:12:10+00:00",
       "rank": null,
       "ready": false,
       "reason": "probability unavailable",
@@ -9669,12 +9687,60 @@
      "match": "GRAM @ UK",
      "pick": "Kentucky Wildcats",
      "price": "-50000",
-     "price_at": "2026-11-16T17:06:59+00:00",
+     "price_at": "2026-11-16T17:12:10+00:00",
      "price_market": "moneyline",
      "price_ref": "35032121:0ML87274295_1",
      "side": "home",
      "start": "2026-11-17T00:00Z",
      "tip": "7:00 PM"
+    },
+    "nhl:401892727": {
+     "book": "DraftKings",
+     "calib": "raw no-vig (calibration failed its untouched test)",
+     "close": true,
+     "conf": 75,
+     "current": {
+      "book": "DraftKings",
+      "calib": "raw no-vig (calibration failed its untouched test)",
+      "checked_at": "2026-11-16T17:12:31+00:00",
+      "conf": 75,
+      "dc": false,
+      "gate": {
+       "ok": false,
+       "what": "awaiting confirmed goalies (0 of 2)"
+      },
+      "id": "nhl:401892727",
+      "league": "nhl",
+      "match": "VAN @ UTA",
+      "pick": "Utah Mammoth",
+      "price": "-355",
+      "price_at": "2026-11-16T17:12:10+00:00",
+      "price_market": "moneyline",
+      "price_ref": "34992067:0ML87172463_1",
+      "prob_at": "2026-11-16T17:12:10+00:00",
+      "rank": null,
+      "ready": false,
+      "reason": "awaiting confirmed goalies (0 of 2)",
+      "side": "home",
+      "start": "2026-11-17T02:30Z"
+     },
+     "dc": false,
+     "fp": "735593061118",
+     "gate": {
+      "ok": false,
+      "what": "awaiting confirmed goalies (0 of 2)"
+     },
+     "id": "nhl:401892727",
+     "league": "nhl",
+     "match": "VAN @ UTA",
+     "pick": "Utah Mammoth",
+     "price": "-355",
+     "price_at": "2026-11-16T17:12:10+00:00",
+     "price_market": "moneyline",
+     "price_ref": "34992067:0ML87172463_1",
+     "side": "home",
+     "start": "2026-11-17T02:30Z",
+     "tip": "9:30 PM"
     },
     "unl:401861186": {
      "book": "FanDuel",
@@ -9684,7 +9750,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T17:07:19+00:00",
+      "checked_at": "2026-11-16T17:12:31+00:00",
       "conf": 76,
       "dc": true,
       "gate": {
@@ -9695,11 +9761,11 @@
       "league": "unl",
       "match": "SCO @ SUI",
       "pick": "Switzerland or draw",
-      "price": "-475",
-      "price_at": "2026-11-16T16:57:21+00:00",
+      "price": "-425",
+      "price_at": "2026-11-16T17:07:33+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196925318:14479680",
-      "prob_at": "2026-11-16T17:07:00+00:00",
+      "prob_at": "2026-11-16T17:12:11+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -9716,8 +9782,8 @@
      "league": "unl",
      "match": "SCO @ SUI",
      "pick": "Switzerland or draw",
-     "price": "-475",
-     "price_at": "2026-11-16T16:57:21+00:00",
+     "price": "-425",
+     "price_at": "2026-11-16T17:07:33+00:00",
      "price_market": "double_chance",
      "price_ref": "736.196925318:14479680",
      "side": "home",
@@ -9728,12 +9794,12 @@
      "book": "FanDuel",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": false,
-     "conf": 86,
+     "conf": 87,
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T17:07:19+00:00",
-      "conf": 86,
+      "checked_at": "2026-11-16T17:12:31+00:00",
+      "conf": 87,
       "dc": true,
       "gate": {
        "ok": false,
@@ -9744,10 +9810,10 @@
       "match": "SVN @ MKD",
       "pick": "Slovenia or draw",
       "price": "-1100",
-      "price_at": "2026-11-16T16:57:21+00:00",
+      "price_at": "2026-11-16T17:07:33+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196925064:14482088",
-      "prob_at": "2026-11-16T17:07:00+00:00",
+      "prob_at": "2026-11-16T17:12:11+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -9765,7 +9831,7 @@
      "match": "SVN @ MKD",
      "pick": "Slovenia or draw",
      "price": "-1100",
-     "price_at": "2026-11-16T16:57:21+00:00",
+     "price_at": "2026-11-16T17:07:33+00:00",
      "price_market": "double_chance",
      "price_ref": "736.196925064:14482088",
      "side": "away",
@@ -9773,9 +9839,11 @@
      "tip": "2:45 PM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "nba"
+   ],
    "news": {
-    "nba": "2026-11-16T14:58:15+00:00",
+    "nba": "2026-11-16T17:12:31+00:00",
     "nhl": "2026-11-16T14:58:15+00:00"
    },
    "shadow": {
