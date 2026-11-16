@@ -1,298 +1,298 @@
 {
- "run": "2026-11-09",
+ "run": "2026-11-16",
  "leagues": {
   "nhl": {
    "games": 1500,
    "test_games": 750,
    "test_range": [
-    "2026-01-19",
-    "2026-11-08"
+    "2026-01-22",
+    "2026-11-15"
    ],
    "close_favourite": {
-    "hit": 57.73,
-    "logloss": 0.6658
+    "hit": 58.8,
+    "logloss": 0.6635
    },
    "open_favourite": {
-    "hit": 56.4,
-    "logloss": 0.6654
+    "hit": 56.53,
+    "logloss": 0.6655
    },
    "spread_favourite": {
-    "hit": 57.6,
-    "logloss": 0.7471
+    "hit": 58.67,
+    "logloss": 0.7357
    },
    "home": {
-    "hit": 57.73,
-    "logloss": 0.6703,
+    "hit": 58.8,
+    "logloss": 0.6694,
     "weights": [
-     -0.012,
-     0.659
+     -0.006,
+     0.617
     ],
-    "picks_changed": 10,
+    "picks_changed": 0,
     "extra_wins": 0,
     "better": false,
     "significant": false
    },
    "drift": {
-    "hit": 57.6,
-    "logloss": 0.6718,
+    "hit": 58.53,
+    "logloss": 0.67,
     "weights": [
-     0.016,
-     0.612,
-     0.548
+     0.015,
+     0.578,
+     0.449
     ],
-    "picks_changed": 53,
-    "extra_wins": -1,
+    "picks_changed": 38,
+    "extra_wins": -2,
     "better": false,
     "significant": false
    },
    "spread": {
-    "hit": 59.2,
-    "logloss": 0.6684,
+    "hit": 59.07,
+    "logloss": 0.6688,
     "weights": [
-     -0.012,
-     0.812,
-     -0.13
+     -0.007,
+     0.668,
+     -0.043
     ],
-    "picks_changed": 189,
-    "extra_wins": 11,
+    "picks_changed": 76,
+    "extra_wins": 2,
     "better": false,
     "significant": false
    },
    "total": {
-    "hit": 57.87,
-    "logloss": 0.6703,
+    "hit": 58.8,
+    "logloss": 0.6696,
     "weights": [
-     -0.012,
-     0.662,
-     -0.128
+     -0.006,
+     0.626,
+     -0.408
     ],
-    "picks_changed": 7,
-    "extra_wins": 1,
-    "better": false,
-    "significant": false
-   },
-   "rest": {
-    "hit": 55.47,
-    "logloss": 0.6753,
-    "weights": [
-     -0.015,
-     0.616,
-     -0.102,
-     -0.359,
-     -0.002
-    ],
-    "picks_changed": 79,
-    "extra_wins": -17,
-    "better": false,
-    "significant": false
-   },
-   "form": {
-    "hit": 57.73,
-    "logloss": 0.6703,
-    "weights": [
-     -0.011,
-     0.659,
-     -0.041
-    ],
-    "picks_changed": 10,
+    "picks_changed": 0,
     "extra_wins": 0,
     "better": false,
     "significant": false
    },
-   "travel": {
-    "hit": 60.53,
-    "logloss": 0.6661,
+   "rest": {
+    "hit": 57.87,
+    "logloss": 0.6737,
     "weights": [
-     0.059,
-     0.642,
-     -0.096,
-     0.171,
-     -0.449
+     0.035,
+     0.574,
+     -0.078,
+     -0.329,
+     -0.041
     ],
-    "picks_changed": 101,
-    "extra_wins": 21,
+    "picks_changed": 83,
+    "extra_wins": -7,
+    "better": false,
+    "significant": false
+   },
+   "form": {
+    "hit": 58.27,
+    "logloss": 0.6698,
+    "weights": [
+     -0.006,
+     0.616,
+     0.074
+    ],
+    "picks_changed": 16,
+    "extra_wins": -4,
+    "better": false,
+    "significant": false
+   },
+   "travel": {
+    "hit": 60.93,
+    "logloss": 0.6656,
+    "weights": [
+     0.014,
+     0.601,
+     -0.061,
+     0.15,
+     -0.4
+    ],
+    "picks_changed": 90,
+    "extra_wins": 16,
     "better": false,
     "significant": false
    },
    "bias": {
-    "hit": 57.07,
-    "logloss": 0.671,
+    "hit": 59.33,
+    "logloss": 0.6696,
     "weights": [
-     -0.012,
-     0.659,
-     -0.274
+     -0.006,
+     0.617,
+     -0.074
     ],
-    "picks_changed": 23,
-    "extra_wins": -5,
+    "picks_changed": 8,
+    "extra_wins": 4,
     "better": false,
     "significant": false
    },
    "all": {
-    "hit": 57.2,
-    "logloss": 0.6749,
+    "hit": 58.0,
+    "logloss": 0.6741,
     "weights": [
-     0.008,
-     0.73,
-     -0.057,
-     -0.101,
-     -0.352,
-     -0.001,
-     0.493,
-     -0.127,
-     -0.225
+     0.052,
+     0.597,
+     0.073,
+     -0.079,
+     -0.326,
+     -0.04,
+     0.39,
+     -0.039,
+     -0.467
     ],
-    "picks_changed": 200,
-    "extra_wins": -4,
+    "picks_changed": 120,
+    "extra_wins": -6,
     "better": false,
     "significant": false
    },
    "devig": {
     "proportional": {
      "fit": {
-      "logloss": 0.6867,
+      "logloss": 0.688,
       "bands": [
        {
         "band": "50-60",
-        "n": 528,
+        "n": 529,
         "said": 54.8,
-        "won": 51.3
+        "won": 52.2
        },
        {
         "band": "60-70",
-        "n": 194,
+        "n": 191,
         "said": 63.4,
-        "won": 59.3
+        "won": 58.1
        },
        {
         "band": "70-80",
-        "n": 28,
-        "said": 72.6,
-        "won": 82.1
+        "n": 30,
+        "said": 72.5,
+        "won": 76.7
        }
       ]
      },
      "test": {
-      "logloss": 0.6658,
+      "logloss": 0.6635,
       "bands": [
        {
         "band": "50-60",
-        "n": 499,
+        "n": 496,
         "said": 54.8,
-        "won": 52.1
+        "won": 53.0
        },
        {
         "band": "60-70",
-        "n": 202,
+        "n": 205,
         "said": 63.6,
         "won": 66.3
        },
        {
         "band": "70-80",
         "n": 49,
-        "said": 73.3,
-        "won": 79.6
+        "said": 73.5,
+        "won": 81.6
        }
       ]
      }
     },
     "power": {
      "fit": {
-      "logloss": 0.6874,
+      "logloss": 0.6889,
       "bands": [
        {
         "band": "50-60",
-        "n": 509,
+        "n": 510,
         "said": 54.8,
-        "won": 51.5
-       },
-       {
-        "band": "60-70",
-        "n": 207,
-        "said": 63.7,
-        "won": 57.5
-       },
-       {
-        "band": "70-80",
-        "n": 34,
-        "said": 73.4,
-        "won": 82.4
-       }
-      ]
-     },
-     "test": {
-      "logloss": 0.6655,
-      "bands": [
-       {
-        "band": "50-60",
-        "n": 487,
-        "said": 54.9,
         "won": 52.2
        },
        {
         "band": "60-70",
-        "n": 207,
-        "said": 64.1,
-        "won": 64.7
+        "n": 205,
+        "said": 63.7,
+        "won": 57.1
        },
        {
         "band": "70-80",
-        "n": 53,
-        "said": 73.9,
-        "won": 81.1
+        "n": 35,
+        "said": 73.5,
+        "won": 77.1
+       }
+      ]
+     },
+     "test": {
+      "logloss": 0.663,
+      "bands": [
+       {
+        "band": "50-60",
+        "n": 484,
+        "said": 55.0,
+        "won": 53.1
+       },
+       {
+        "band": "60-70",
+        "n": 210,
+        "said": 64.0,
+        "won": 64.8
+       },
+       {
+        "band": "70-80",
+        "n": 52,
+        "said": 74.0,
+        "won": 84.6
        },
        {
         "band": "80-90",
-        "n": 3,
-        "said": 80.9,
-        "won": 66.7
+        "n": 4,
+        "said": 80.7,
+        "won": 50.0
        }
       ]
      }
     },
     "shin": {
      "fit": {
-      "logloss": 0.6872,
+      "logloss": 0.6886,
       "bands": [
        {
         "band": "50-60",
-        "n": 510,
+        "n": 511,
         "said": 54.8,
-        "won": 51.4
+        "won": 52.1
        },
        {
         "band": "60-70",
-        "n": 208,
-        "said": 63.5,
-        "won": 58.2
+        "n": 206,
+        "said": 63.6,
+        "won": 57.8
        },
        {
         "band": "70-80",
-        "n": 32,
-        "said": 73.1,
-        "won": 81.2
+        "n": 33,
+        "said": 73.2,
+        "won": 75.8
        }
       ]
      },
      "test": {
-      "logloss": 0.6656,
+      "logloss": 0.6632,
       "bands": [
        {
         "band": "50-60",
-        "n": 487,
-        "said": 54.8,
-        "won": 52.2
+        "n": 484,
+        "said": 54.9,
+        "won": 53.1
        },
        {
         "band": "60-70",
-        "n": 213,
+        "n": 216,
         "said": 63.9,
         "won": 65.7
        },
        {
         "band": "70-80",
         "n": 48,
-        "said": 74.0,
-        "won": 79.2
+        "said": 74.1,
+        "won": 81.2
        },
        {
         "band": "80-90",
@@ -306,71 +306,71 @@
    },
    "power_stretch": {
     "weights": [
-     -0.012,
-     0.622
+     -0.007,
+     0.582
     ],
-    "test_logloss": 0.6701,
-    "power_logloss": 0.6655,
+    "test_logloss": 0.6693,
+    "power_logloss": 0.663,
     "bands": [
      {
       "band": "50-60",
-      "n": 637,
+      "n": 663,
       "said": 54.2,
-      "won": 55.1
+      "won": 56.7
      },
      {
       "band": "60-70",
-      "n": 110,
-      "said": 63.2,
-      "won": 72.7
+      "n": 86,
+      "said": 63.4,
+      "won": 74.4
      },
      {
       "band": "70-80",
-      "n": 3,
-      "said": 70.8,
-      "won": 66.7
+      "n": 1,
+      "said": 70.2,
+      "won": 100.0
      }
     ]
    }
   },
   "nfl": {
-   "games": 405,
-   "test_games": 203,
+   "games": 419,
+   "test_games": 210,
    "test_range": [
-    "2025-12-07",
-    "2026-11-08"
+    "2025-12-14",
+    "2026-11-15"
    ],
    "close_favourite": {
-    "hit": 65.02,
-    "logloss": 0.6156
+    "hit": 66.19,
+    "logloss": 0.6091
    },
    "open_favourite": {
-    "hit": 62.07,
-    "logloss": 0.6456
+    "hit": 62.38,
+    "logloss": 0.6437
    },
    "spread_favourite": {
-    "hit": 65.52,
-    "logloss": 0.6153
+    "hit": 66.67,
+    "logloss": 0.6103
    },
    "home": {
-    "hit": 65.02,
-    "logloss": 0.6151,
+    "hit": 66.67,
+    "logloss": 0.608,
     "weights": [
-     -0.008,
-     0.963
+     -0.025,
+     0.969
     ],
-    "picks_changed": 0,
-    "extra_wins": 0,
+    "picks_changed": 1,
+    "extra_wins": 1,
     "better": true,
     "significant": false
    },
    "drift": {
-    "hit": 64.04,
-    "logloss": 0.6284,
+    "hit": 65.24,
+    "logloss": 0.6235,
     "weights": [
-     0.009,
-     0.996,
-     -0.601
+     -0.008,
+     1.001,
+     -0.602
     ],
     "picks_changed": 12,
     "extra_wins": -2,
@@ -378,12 +378,12 @@
     "significant": false
    },
    "spread": {
-    "hit": 65.52,
-    "logloss": 0.6147,
+    "hit": 66.67,
+    "logloss": 0.6077,
     "weights": [
-     -0.01,
-     0.99,
-     0.148
+     -0.026,
+     0.988,
+     0.106
     ],
     "picks_changed": 1,
     "extra_wins": 1,
@@ -391,40 +391,40 @@
     "significant": false
    },
    "total": {
-    "hit": 65.02,
-    "logloss": 0.6153,
+    "hit": 66.67,
+    "logloss": 0.6082,
     "weights": [
-     -0.009,
-     0.963,
-     0.089
+     -0.025,
+     0.969,
+     0.101
     ],
-    "picks_changed": 0,
-    "extra_wins": 0,
+    "picks_changed": 1,
+    "extra_wins": 1,
     "better": true,
     "significant": false
    },
    "rest": {
-    "hit": 65.02,
-    "logloss": 0.6155,
+    "hit": 66.19,
+    "logloss": 0.6099,
     "weights": [
-     0.022,
-     0.964,
+     0.02,
+     0.97,
      0.0,
      0.0,
-     -0.112
+     -0.159
     ],
     "picks_changed": 8,
     "extra_wins": 0,
-    "better": true,
+    "better": false,
     "significant": false
    },
    "form": {
-    "hit": 64.04,
-    "logloss": 0.6133,
+    "hit": 65.24,
+    "logloss": 0.6067,
     "weights": [
-     0.006,
-     0.919,
-     0.298
+     -0.007,
+     0.915,
+     0.363
     ],
     "picks_changed": 4,
     "extra_wins": -2,
@@ -432,74 +432,74 @@
     "significant": false
    },
    "travel": {
-    "hit": 64.53,
-    "logloss": 0.6127,
+    "hit": 66.67,
+    "logloss": 0.6077,
     "weights": [
-     0.05,
-     0.957,
-     -0.034,
-     0.023,
-     -0.071
+     -0.024,
+     0.964,
+     0.01,
+     -0.018,
+     -0.041
     ],
     "picks_changed": 1,
-    "extra_wins": -1,
-    "better": false,
+    "extra_wins": 1,
+    "better": true,
     "significant": false
    },
    "bias": {
-    "hit": 64.53,
-    "logloss": 0.6142,
+    "hit": 66.19,
+    "logloss": 0.6071,
     "weights": [
-     -0.005,
-     0.952,
-     0.221
+     -0.021,
+     0.955,
+     0.275
     ],
-    "picks_changed": 1,
-    "extra_wins": -1,
-    "better": false,
+    "picks_changed": 2,
+    "extra_wins": 0,
+    "better": true,
     "significant": false
    },
    "all": {
-    "hit": 64.04,
-    "logloss": 0.6261,
+    "hit": 65.71,
+    "logloss": 0.6229,
     "weights": [
-     0.048,
-     0.983,
-     0.28,
+     0.05,
+     0.971,
+     0.343,
      0.0,
      0.0,
-     -0.105,
+     -0.15,
      -0.583,
-     0.162,
-     0.161
+     0.122,
+     0.186
     ],
-    "picks_changed": 12,
-    "extra_wins": -2,
+    "picks_changed": 15,
+    "extra_wins": -1,
     "better": false,
     "significant": false
    },
    "devig": {
     "proportional": {
      "fit": {
-      "logloss": 0.6162,
+      "logloss": 0.6152,
       "bands": [
        {
         "band": "50-60",
-        "n": 66,
+        "n": 67,
         "said": 55.5,
-        "won": 54.5
+        "won": 53.7
        },
        {
         "band": "60-70",
-        "n": 65,
+        "n": 66,
         "said": 64.8,
-        "won": 63.1
+        "won": 62.1
        },
        {
         "band": "70-80",
-        "n": 51,
-        "said": 74.6,
-        "won": 76.5
+        "n": 56,
+        "said": 74.7,
+        "won": 76.8
        },
        {
         "band": "80-90",
@@ -510,31 +510,31 @@
       ]
      },
      "test": {
-      "logloss": 0.6156,
+      "logloss": 0.6091,
       "bands": [
        {
         "band": "50-60",
-        "n": 69,
+        "n": 72,
         "said": 56.1,
-        "won": 53.6
+        "won": 54.2
        },
        {
         "band": "60-70",
-        "n": 62,
+        "n": 67,
         "said": 64.6,
-        "won": 59.7
+        "won": 62.7
        },
        {
         "band": "70-80",
-        "n": 47,
+        "n": 45,
         "said": 75.3,
-        "won": 70.2
+        "won": 71.1
        },
        {
         "band": "80-90",
-        "n": 24,
-        "said": 85.1,
-        "won": 91.7
+        "n": 25,
+        "said": 85.0,
+        "won": 92.0
        },
        {
         "band": "90-100",
@@ -547,31 +547,31 @@
     },
     "power": {
      "fit": {
-      "logloss": 0.6166,
+      "logloss": 0.6156,
       "bands": [
        {
         "band": "50-60",
-        "n": 61,
+        "n": 62,
         "said": 55.4,
-        "won": 52.5
+        "won": 51.6
        },
        {
         "band": "60-70",
-        "n": 68,
+        "n": 69,
         "said": 65.1,
-        "won": 63.2
+        "won": 62.3
        },
        {
         "band": "70-80",
-        "n": 47,
-        "said": 75.5,
-        "won": 80.9
+        "n": 50,
+        "said": 75.4,
+        "won": 80.0
        },
        {
         "band": "80-90",
-        "n": 19,
-        "said": 84.3,
-        "won": 68.4
+        "n": 21,
+        "said": 84.0,
+        "won": 71.4
        },
        {
         "band": "90-100",
@@ -582,31 +582,31 @@
       ]
      },
      "test": {
-      "logloss": 0.616,
+      "logloss": 0.6088,
       "bands": [
        {
         "band": "50-60",
-        "n": 62,
+        "n": 65,
         "said": 56.0,
-        "won": 56.5
+        "won": 56.9
        },
        {
         "band": "60-70",
-        "n": 65,
+        "n": 70,
         "said": 64.7,
-        "won": 58.5
+        "won": 61.4
        },
        {
         "band": "70-80",
-        "n": 42,
+        "n": 40,
         "said": 75.5,
-        "won": 66.7
+        "won": 67.5
        },
        {
         "band": "80-90",
-        "n": 29,
+        "n": 30,
         "said": 84.9,
-        "won": 82.8
+        "won": 83.3
        },
        {
         "band": "90-100",
@@ -619,31 +619,31 @@
     },
     "shin": {
      "fit": {
-      "logloss": 0.6163,
+      "logloss": 0.6153,
       "bands": [
        {
         "band": "50-60",
-        "n": 61,
+        "n": 62,
         "said": 55.3,
-        "won": 52.5
+        "won": 51.6
        },
        {
         "band": "60-70",
-        "n": 68,
-        "said": 64.8,
-        "won": 63.2
+        "n": 69,
+        "said": 64.9,
+        "won": 62.3
        },
        {
         "band": "70-80",
-        "n": 50,
-        "said": 75.2,
-        "won": 78.0
+        "n": 53,
+        "said": 75.1,
+        "won": 77.4
        },
        {
         "band": "80-90",
-        "n": 18,
-        "said": 84.6,
-        "won": 77.8
+        "n": 20,
+        "said": 84.2,
+        "won": 80.0
        },
        {
         "band": "90-100",
@@ -654,30 +654,30 @@
       ]
      },
      "test": {
-      "logloss": 0.6158,
+      "logloss": 0.6089,
       "bands": [
        {
         "band": "50-60",
-        "n": 62,
+        "n": 65,
         "said": 55.9,
-        "won": 56.5
+        "won": 56.9
        },
        {
         "band": "60-70",
-        "n": 66,
+        "n": 71,
         "said": 64.5,
-        "won": 57.6
+        "won": 60.6
        },
        {
         "band": "70-80",
-        "n": 44,
-        "said": 75.3,
-        "won": 68.2
+        "n": 43,
+        "said": 75.5,
+        "won": 69.8
        },
        {
         "band": "80-90",
         "n": 26,
-        "said": 84.6,
+        "said": 84.7,
         "won": 84.6
        },
        {
@@ -692,35 +692,35 @@
    },
    "power_stretch": {
     "weights": [
-     -0.011,
-     0.882
+     -0.028,
+     0.888
     ],
-    "test_logloss": 0.6144,
-    "power_logloss": 0.616,
+    "test_logloss": 0.6074,
+    "power_logloss": 0.6088,
     "bands": [
      {
       "band": "50-60",
-      "n": 75,
-      "said": 56.0,
-      "won": 54.7
+      "n": 76,
+      "said": 55.9,
+      "won": 57.9
      },
      {
       "band": "60-70",
-      "n": 58,
-      "said": 64.4,
-      "won": 62.1
+      "n": 64,
+      "said": 64.2,
+      "won": 64.1
      },
      {
       "band": "70-80",
-      "n": 49,
+      "n": 48,
       "said": 74.9,
-      "won": 71.4
+      "won": 70.8
      },
      {
       "band": "80-90",
-      "n": 19,
-      "said": 85.6,
-      "won": 94.7
+      "n": 20,
+      "said": 85.5,
+      "won": 95.0
      },
      {
       "band": "90-100",
@@ -732,363 +732,363 @@
    }
   },
   "ncaaf": {
-   "games": 1323,
-   "test_games": 662,
+   "games": 1327,
+   "test_games": 664,
    "test_range": [
-    "2025-11-22",
-    "2026-11-07"
+    "2025-11-29",
+    "2026-11-14"
    ],
    "close_favourite": {
-    "hit": 76.74,
-    "logloss": 0.4781
+    "hit": 74.4,
+    "logloss": 0.5014
    },
    "open_favourite": {
-    "hit": 75.53,
-    "logloss": 0.4869
+    "hit": 74.7,
+    "logloss": 0.5081
    },
    "spread_favourite": {
-    "hit": 76.89,
-    "logloss": 0.4814
+    "hit": 74.7,
+    "logloss": 0.5033
    },
    "home": {
-    "hit": 77.64,
-    "logloss": 0.4784,
+    "hit": 75.15,
+    "logloss": 0.5017,
     "weights": [
-     0.147,
-     1.023
+     0.088,
+     1.045
     ],
-    "picks_changed": 30,
-    "extra_wins": 6,
-    "better": false,
-    "significant": false
-   },
-   "drift": {
-    "hit": 76.59,
-    "logloss": 0.4797,
-    "weights": [
-     0.146,
-     1.029,
-     -0.366
-    ],
-    "picks_changed": 27,
-    "extra_wins": -1,
-    "better": false,
-    "significant": false
-   },
-   "spread": {
-    "hit": 77.64,
-    "logloss": 0.4784,
-    "weights": [
-     0.139,
-     1.054,
-     0.717
-    ],
-    "picks_changed": 20,
-    "extra_wins": 6,
-    "better": false,
-    "significant": false
-   },
-   "total": {
-    "hit": 77.64,
-    "logloss": 0.4784,
-    "weights": [
-     0.147,
-     1.023,
-     0.081
-    ],
-    "picks_changed": 30,
-    "extra_wins": 6,
-    "better": false,
-    "significant": false
-   },
-   "rest": {
-    "hit": 76.59,
-    "logloss": 0.4804,
-    "weights": [
-     0.192,
-     1.025,
-     0.0,
-     0.0,
-     -0.194
-    ],
-    "picks_changed": 23,
-    "extra_wins": -1,
-    "better": false,
-    "significant": false
-   },
-   "form": {
-    "hit": 77.49,
-    "logloss": 0.4794,
-    "weights": [
-     0.156,
-     1.007,
-     0.361
-    ],
-    "picks_changed": 31,
+    "picks_changed": 17,
     "extra_wins": 5,
     "better": false,
     "significant": false
    },
-   "travel": {
-    "hit": 76.28,
-    "logloss": 0.479,
+   "drift": {
+    "hit": 74.7,
+    "logloss": 0.5018,
     "weights": [
-     0.02,
-     1.032,
-     0.049,
-     0.044,
-     0.003
+     0.085,
+     1.051,
+     -0.331
     ],
-    "picks_changed": 27,
-    "extra_wins": -3,
+    "picks_changed": 14,
+    "extra_wins": 2,
     "better": false,
     "significant": false
    },
-   "bias": {
-    "hit": 77.79,
-    "logloss": 0.4792,
+   "spread": {
+    "hit": 75.0,
+    "logloss": 0.5015,
     "weights": [
-     0.151,
-     1.013,
-     0.595
+     0.077,
+     1.085,
+     0.868
     ],
-    "picks_changed": 27,
+    "picks_changed": 4,
+    "extra_wins": 4,
+    "better": false,
+    "significant": false
+   },
+   "total": {
+    "hit": 75.15,
+    "logloss": 0.5018,
+    "weights": [
+     0.087,
+     1.044,
+     0.239
+    ],
+    "picks_changed": 17,
+    "extra_wins": 5,
+    "better": false,
+    "significant": false
+   },
+   "rest": {
+    "hit": 75.15,
+    "logloss": 0.5017,
+    "weights": [
+     0.089,
+     1.045,
+     0.0,
+     0.0,
+     -0.003
+    ],
+    "picks_changed": 17,
+    "extra_wins": 5,
+    "better": false,
+    "significant": false
+   },
+   "form": {
+    "hit": 75.45,
+    "logloss": 0.5052,
+    "weights": [
+     0.099,
+     1.026,
+     0.487
+    ],
+    "picks_changed": 17,
     "extra_wins": 7,
     "better": false,
     "significant": false
    },
-   "all": {
-    "hit": 75.83,
-    "logloss": 0.4833,
+   "travel": {
+    "hit": 74.85,
+    "logloss": 0.5006,
     "weights": [
-     0.196,
-     1.047,
-     0.376,
-     0.0,
-     0.0,
-     -0.212,
-     -0.287,
-     0.771,
-     0.042
+     0.046,
+     1.044,
+     0.001,
+     0.05,
+     -0.005
     ],
-    "picks_changed": 24,
-    "extra_wins": -6,
+    "picks_changed": 19,
+    "extra_wins": 3,
+    "better": true,
+    "significant": false
+   },
+   "bias": {
+    "hit": 74.25,
+    "logloss": 0.5046,
+    "weights": [
+     0.095,
+     1.032,
+     0.844
+    ],
+    "picks_changed": 11,
+    "extra_wins": -1,
+    "better": false,
+    "significant": false
+   },
+   "all": {
+    "hit": 75.15,
+    "logloss": 0.5061,
+    "weights": [
+     0.09,
+     1.072,
+     0.505,
+     0.0,
+     0.0,
+     -0.02,
+     -0.219,
+     0.932,
+     0.176
+    ],
+    "picks_changed": 13,
+    "extra_wins": 5,
     "better": false,
     "significant": false
    },
    "devig": {
     "proportional": {
      "fit": {
-      "logloss": 0.5151,
+      "logloss": 0.5185,
       "bands": [
        {
         "band": "50-60",
-        "n": 142,
-        "said": 55.7,
-        "won": 62.7
+        "n": 146,
+        "said": 55.6,
+        "won": 63.7
        },
        {
         "band": "60-70",
-        "n": 145,
-        "said": 64.8,
-        "won": 64.1
+        "n": 146,
+        "said": 64.9,
+        "won": 64.4
        },
        {
         "band": "70-80",
-        "n": 136,
-        "said": 74.4,
-        "won": 75.0
+        "n": 140,
+        "said": 74.5,
+        "won": 74.3
        },
        {
         "band": "80-90",
-        "n": 132,
-        "said": 84.4,
-        "won": 84.1
+        "n": 131,
+        "said": 84.3,
+        "won": 84.7
        },
        {
         "band": "90-100",
-        "n": 106,
-        "said": 93.9,
-        "won": 96.2
+        "n": 100,
+        "said": 93.7,
+        "won": 96.0
        }
       ]
      },
      "test": {
-      "logloss": 0.4781,
+      "logloss": 0.5014,
       "bands": [
        {
         "band": "50-60",
-        "n": 144,
+        "n": 146,
         "said": 55.2,
-        "won": 61.1
+        "won": 57.5
        },
        {
         "band": "60-70",
-        "n": 136,
+        "n": 133,
         "said": 65.0,
-        "won": 63.2
+        "won": 61.7
        },
        {
         "band": "70-80",
-        "n": 138,
-        "said": 75.1,
-        "won": 75.4
+        "n": 148,
+        "said": 75.0,
+        "won": 75.0
        },
        {
         "band": "80-90",
-        "n": 124,
-        "said": 84.7,
-        "won": 91.9
+        "n": 122,
+        "said": 84.9,
+        "won": 87.7
        },
        {
         "band": "90-100",
-        "n": 120,
+        "n": 115,
         "said": 94.1,
-        "won": 97.5
+        "won": 97.4
        }
       ]
      }
     },
     "power": {
      "fit": {
-      "logloss": 0.5148,
+      "logloss": 0.5181,
       "bands": [
        {
         "band": "50-60",
-        "n": 126,
-        "said": 55.5,
-        "won": 61.9
+        "n": 131,
+        "said": 55.4,
+        "won": 62.6
        },
        {
         "band": "60-70",
-        "n": 155,
-        "said": 64.9,
-        "won": 64.5
+        "n": 154,
+        "said": 65.0,
+        "won": 64.9
        },
        {
         "band": "70-80",
-        "n": 120,
+        "n": 124,
         "said": 74.9,
-        "won": 71.7
+        "won": 71.0
        },
        {
         "band": "80-90",
-        "n": 130,
-        "said": 85.4,
-        "won": 85.4
+        "n": 131,
+        "said": 85.3,
+        "won": 86.3
        },
        {
         "band": "90-100",
-        "n": 130,
-        "said": 96.1,
-        "won": 93.8
+        "n": 123,
+        "said": 96.0,
+        "won": 93.5
        }
       ]
      },
      "test": {
-      "logloss": 0.474,
+      "logloss": 0.4997,
       "bands": [
        {
         "band": "50-60",
-        "n": 138,
-        "said": 55.3,
-        "won": 60.9
+        "n": 142,
+        "said": 55.4,
+        "won": 57.7
        },
        {
         "band": "60-70",
-        "n": 129,
-        "said": 65.3,
-        "won": 62.8
+        "n": 126,
+        "said": 65.4,
+        "won": 61.9
        },
        {
         "band": "70-80",
-        "n": 127,
-        "said": 75.3,
-        "won": 75.6
+        "n": 130,
+        "said": 75.2,
+        "won": 73.1
        },
        {
         "band": "80-90",
-        "n": 119,
+        "n": 124,
         "said": 84.8,
-        "won": 89.1
+        "won": 86.3
        },
        {
         "band": "90-100",
-        "n": 149,
+        "n": 142,
         "said": 95.7,
-        "won": 95.3
+        "won": 94.4
        }
       ]
      }
     },
     "shin": {
      "fit": {
-      "logloss": 0.5144,
+      "logloss": 0.5178,
       "bands": [
        {
         "band": "50-60",
-        "n": 126,
-        "said": 55.4,
-        "won": 61.9
+        "n": 131,
+        "said": 55.3,
+        "won": 62.6
        },
        {
         "band": "60-70",
-        "n": 155,
-        "said": 64.6,
-        "won": 64.5
+        "n": 154,
+        "said": 64.7,
+        "won": 64.9
        },
        {
         "band": "70-80",
-        "n": 130,
+        "n": 134,
         "said": 74.8,
-        "won": 73.8
+        "won": 73.1
        },
        {
         "band": "80-90",
-        "n": 123,
-        "said": 84.9,
-        "won": 83.7
+        "n": 125,
+        "said": 84.8,
+        "won": 84.8
        },
        {
         "band": "90-100",
-        "n": 127,
-        "said": 94.9,
-        "won": 94.5
+        "n": 119,
+        "said": 94.8,
+        "won": 94.1
        }
       ]
      },
      "test": {
-      "logloss": 0.4753,
+      "logloss": 0.5001,
       "bands": [
        {
         "band": "50-60",
-        "n": 138,
-        "said": 55.2,
-        "won": 60.9
+        "n": 142,
+        "said": 55.3,
+        "won": 57.7
        },
        {
         "band": "60-70",
-        "n": 134,
+        "n": 129,
         "said": 65.2,
-        "won": 62.7
+        "won": 61.2
        },
        {
         "band": "70-80",
-        "n": 132,
-        "said": 75.3,
-        "won": 75.8
+        "n": 139,
+        "said": 75.2,
+        "won": 74.1
        },
        {
         "band": "80-90",
-        "n": 118,
+        "n": 120,
         "said": 84.8,
-        "won": 89.8
+        "won": 85.8
        },
        {
         "band": "90-100",
-        "n": 140,
+        "n": 134,
         "said": 94.9,
-        "won": 96.4
+        "won": 96.3
        }
       ]
      }
@@ -1096,41 +1096,41 @@
    },
    "power_stretch": {
     "weights": [
-     0.145,
-     0.881
+     0.085,
+     0.903
     ],
-    "test_logloss": 0.4784,
-    "power_logloss": 0.474,
+    "test_logloss": 0.5009,
+    "power_logloss": 0.4997,
     "bands": [
      {
       "band": "50-60",
-      "n": 139,
-      "said": 54.8,
-      "won": 64.7
+      "n": 137,
+      "said": 54.9,
+      "won": 63.5
      },
      {
       "band": "60-70",
-      "n": 144,
-      "said": 64.7,
-      "won": 64.6
+      "n": 156,
+      "said": 65.0,
+      "won": 60.9
      },
      {
       "band": "70-80",
-      "n": 135,
-      "said": 75.1,
-      "won": 75.6
+      "n": 129,
+      "said": 75.3,
+      "won": 74.4
      },
      {
       "band": "80-90",
-      "n": 108,
+      "n": 110,
       "said": 84.6,
-      "won": 90.7
+      "won": 87.3
      },
      {
       "band": "90-100",
-      "n": 136,
-      "said": 95.1,
-      "won": 96.3
+      "n": 132,
+      "said": 95.2,
+      "won": 96.2
      }
     ]
    }
@@ -1638,17 +1638,17 @@
     "significant": false
    },
    "travel": {
-    "hit": 73.87,
-    "logloss": 0.5135,
+    "hit": 73.66,
+    "logloss": 0.5117,
     "weights": [
-     0.118,
-     1.304,
-     0.011,
-     -0.193,
-     0.543
+     0.122,
+     1.295,
+     0.021,
+     -0.202,
+     0.333
     ],
-    "picks_changed": 15,
-    "extra_wins": -1,
+    "picks_changed": 16,
+    "extra_wins": -2,
     "better": false,
     "significant": false
    },
