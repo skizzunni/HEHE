@@ -177,18 +177,6 @@
     "awaiting confirmed goalies (0 of 2)": 150,
     "awaiting this game's price after its lineup/news change": 23
    }
-  },
-  "2026-11-16": {
-   "best_at": "2026-11-16T14:32:25+00:00",
-   "best_ceiling": 1.998,
-   "checks": 17,
-   "last": "2026-11-16T15:03:32+00:00",
-   "max_ready": 3,
-   "reasons": {
-    "awaiting confirmed XIs": 112,
-    "awaiting this game's price after its lineup/news change": 1,
-    "injury report not fetched or game summary unverifiable": 1
-   }
   }
  },
  "optimizer_2x": {
@@ -199,5 +187,11 @@
   ],
   "n": 10,
   "roi": 1.4
+ },
+ "strongest_2x": {
+  "cashed": 0,
+  "dates": null,
+  "n": 0,
+  "roi": null
  }
 }
