@@ -1,7 +1,7 @@
 # Review 2026-11-15
 
 Picks 34-5 (87.2% vs 70.5% claimed, ROI +21.1%).
-Ladder: run 8, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (44% est.), the best-chance 2x-5x combination (3 legs) against 42% at 2.44x for the plain top 4; without props it would be 3 legs at 2.00x (43%); 14 wins to $10,000; legs: Devin Booker: 4+ Assists (LAL @ PHX; won), Over 212.5 points (Indiana Pacers at Philadelphia 76ers; won), Under 234.5 points (Oklahoma City Thunder at Sacramento Kings; live 45.3 - 3rd, Oklahoma City Thunder 91 - Sacramento Kings 78, on pace for 230 (169 so far, line 234.5, room for 65 more), on track); 2 of 3 won, the ticket now rests on 1 leg, 76% on its stated chance before play.
+Ladder: run 8, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (44% est.), the best-chance 2x-5x combination (3 legs) against 42% at 2.44x for the plain top 4; without props it would be 3 legs at 2.00x (43%); 14 wins to $10,000; legs: Devin Booker: 4+ Assists (LAL @ PHX; won), Over 212.5 points (Indiana Pacers at Philadelphia 76ers; won), Under 234.5 points (Oklahoma City Thunder at Sacramento Kings; live End of 3rd, Oklahoma City Thunder 94 - Sacramento Kings 80, on pace for 232 (174 so far, line 234.5, room for 60 more), on track); 2 of 3 won, the ticket now rests on 1 leg, 76% on its stated chance before play.
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 7) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 8) 2026-11-15, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 14/28 cashed at 2.22x, without props 14/28 at 2.31x.
 Cautions in force: NCAAF teamover on all saved lines 1239/1603 vs 81%. Running ahead: NBA over on all saved lines 1085/1241 vs 82%; NFL over on all saved lines 221/258 vs 81%; NHL spread on all saved lines 293/341 vs 83%; NHL teamover on all saved lines 172/197 vs 82%; NHL teamunder on all saved lines 275/317 vs 83%; NHL under on all saved lines 200/230 vs 82%.
 Running cold (last 7 days, all saved lines at 70-95%): NCAAF teamover 623/844 (74% vs 82%); NCAAF over 453/607 (75% vs 81%). Walk-forward: legs of a type running cold won 80.6% the next day vs 81.7% for the rest (1146 and 10716 legs), so a cold week is noise, not a signal.
@@ -25,6 +25,9 @@ Lessons from losses: no league / bet / chance band is 3+ points short in both ha
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 7/16 vs 71% stated (2.2% by luck; about 1.2 of 56 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.2 of 56 teams expected this far behind by chance); NBA Oklahoma City Thunder 8/14 vs 71% stated (20.1% by luck; about 11.3 of 56 teams expected this far behind by chance).
 High-chance sweep: 70%+ today 18-1, 2 open; swept 3 of 30 past days (last 2026-11-11) | 80%+ today 11-1, 1 open; swept 10 of 29 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/27 vs 61%; NBA on the tired side 16/19 vs 66%, against it 19/24 vs 72%.
+Ladder games, players out or doubtful: LAL @ PHX: Los Angeles Lakers without Austin Reaves; Phoenix Suns without Mark Williams | Indiana Pacers at Philadelphia 76ers: Indiana Pacers without Tyrese Haliburton, Johnny Furphy, Ben Sheppard; Philadelphia 76ers without Dominick Barlow, Adem Bona, Ariel Hukporti | Oklahoma City Thunder at Sacramento Kings: Oklahoma City Thunder without Jaylin Williams, Thomas Sorber, Cason Wallace, Chet Holmgren, Jalen Williams; Sacramento Kings without De'Andre Hunter, Zach LaVine, Precious Achiuwa, Maxime Raynaud, Ben Simmons.
+UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
+Next UFC card 2026-11-21 (8 fights priced, 4 close): Ikram Aliskerov 74%; Jake Matthews 66%; Shamil Gaziev 66%; Kyoji Horiguchi 62%; Dan Hooker 60% (close); Navajo Stirling 58% (close); Kevin Vallejos 55% (close); Alessandro Costa 53% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.3% hit vs 44.1% stated on 512
 Strong calls 9-2 (81.8% vs 73.9% claimed).
 Closing line value: +0.38 points on 39 picks; beat the close on 46.2%.
@@ -73,14 +76,14 @@ Yesterday (2026-11-14): board 75-34, sweep broken by wsl Tottenham Hotspur at 66
 Locks 8/11 won, 2 open; Best play top 3 (52%) open; lost: Over 221.5 points (Atlanta Hawks at Milwaukee Bucks) Atlanta Hawks 113 - Milwaukee Bucks 106.
 Safe Locks 8/11 won, 2 open; Winners parlay top 3 (80%) lost; Best play top 9 (50%) lost; lost: Under 250.5 points (Houston Rockets at Washington Wizards) Houston Rockets 147 - Washington Wizards 119.
 Lottery 100: lost (7/13 legs won, killed by Washington Wizards +9.5, Tyler Warren: 30+ Receiving Yards, Sam LaPorta: 25+ Receiving Yards)
-Lottery 100: lost (3/8 legs won, killed by Trey McBride: 40+ Receiving Yards, Under 5.5 goals, Over 224.5 points)
+Lottery 100: lost (4/8 legs won, killed by Trey McBride: 40+ Receiving Yards, Under 5.5 goals, Over 224.5 points)
 Lottery 100: lost (2/5 legs won, killed by Under 219.5 points, Under 163.5 points, Over 7.5 goals)
-Lottery 10k: lost (5/11 legs won, killed by San Francisco 49ers -16.5, Washington Wizards +9.5, New Orleans Saints to win, Las Vegas Raiders -1.5, New York Jets +3.5)
+Lottery 10k: lost (6/11 legs won, killed by San Francisco 49ers -16.5, Washington Wizards +9.5, New Orleans Saints to win, Las Vegas Raiders -1.5, New York Jets +3.5)
 Lottery 10k: lost (2/8 legs won, killed by Under 41.5 points, Over 8.5 goals, Over 224.5 points, Over 58.5 points)
 Lottery 10k: lost (7/9 legs won, killed by Under 219.5 points)
-Lottery 10k+25: lost (4/10 legs won, killed by San Francisco 49ers -16.5, Washington Wizards +9.5, New Orleans Saints to win, Las Vegas Raiders -1.5, New York Jets +3.5)
+Lottery 10k+25: lost (5/10 legs won, killed by San Francisco 49ers -16.5, Washington Wizards +9.5, New Orleans Saints to win, Las Vegas Raiders -1.5, New York Jets +3.5)
 Lottery 10k+50: lost (5/10 legs won, killed by San Francisco 49ers -16.5, Washington Wizards +9.5, New Orleans Saints to win, Las Vegas Raiders -1.5, Under 37.5 points)
-Lottery 10k+100: lost (4/10 legs won, killed by San Francisco 49ers -16.5, Washington Wizards +9.5, New Orleans Saints to win, Las Vegas Raiders -1.5, Under 41.5 points)
+Lottery 10k+100: lost (5/10 legs won, killed by San Francisco 49ers -16.5, Washington Wizards +9.5, New Orleans Saints to win, Las Vegas Raiders -1.5, Under 41.5 points)
 Ladder-consistency props (all time): 2535/3051 won (83.1%) vs 86.2% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
 Props 172/213 vs 78.6% claimed.
 
