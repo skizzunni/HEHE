@@ -8610,6 +8610,23 @@
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
+  "nba:401909998|home|FanDuel": {
+   "dec": 2.22,
+   "ev": 0.0339,
+   "fair": 0.4657,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909998",
+   "kind": "value",
+   "league": "nba",
+   "match": "HOU @ MIA",
+   "price": "+122",
+   "seen": "2026-11-16T23:53:14+00:00",
+   "side": "home",
+   "start": "2026-11-17T00:30Z",
+   "team": "Miami Heat",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401909998|{\"line\": 2.5, \"t\": \"spread\", \"team\": \"Miami Heat\"}|Kalshi": {
    "dec": 2.0513,
    "dk": "-108",
@@ -20413,6 +20430,26 @@
    "payout": 2.9,
    "prob": 0.3513,
    "seen": "2026-11-16T18:04:18+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909998:home": {
+   "ev": 0.0339,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0339,
+     "fair": 0.4657,
+     "id": "nba:401909998",
+     "price": "+122",
+     "side": "home",
+     "spec": null,
+     "team": "Miami Heat"
+    }
+   ],
+   "payout": 2.22,
+   "prob": 0.4657,
+   "seen": "2026-11-16T23:53:14+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
