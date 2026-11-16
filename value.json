@@ -8281,6 +8281,7 @@
    "seen": "2026-11-15T02:36:54+00:00",
    "side": "home",
    "start": "2026-11-16T01:00Z",
+   "status": "lost",
    "team": "Milwaukee Bucks",
    "tip": "8:00 PM",
    "venue": "Kalshi"
@@ -8413,6 +8414,23 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401909996|home|Kalshi": {
+   "dec": 2.7322,
+   "ev": 0.0183,
+   "fair": 0.3727,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909996",
+   "kind": "value",
+   "league": "nba",
+   "match": "MEM @ WSH",
+   "price": "+173",
+   "seen": "2026-11-16T03:30:29+00:00",
+   "side": "home",
+   "start": "2026-11-17T00:00Z",
+   "team": "Washington Wizards",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909996|sure": {
    "id": "nba:401909996",
    "kind": "sure",
@@ -8451,6 +8469,23 @@
    "team": "Brooklyn Nets",
    "tip": "7:30 PM",
    "venue": "Kalshi"
+  },
+  "nba:401910001|away|FanDuel": {
+   "dec": 4.5,
+   "ev": 0.0102,
+   "fair": 0.2245,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910001",
+   "kind": "value",
+   "league": "nba",
+   "match": "PHX @ DEN",
+   "price": "+350",
+   "seen": "2026-11-16T03:30:29+00:00",
+   "side": "away",
+   "start": "2026-11-17T02:00Z",
+   "team": "Phoenix Suns",
+   "tip": "9:00 PM",
+   "venue": "FanDuel"
   },
   "nba:401910001|away|Kalshi": {
    "dec": 4.5106,
