@@ -51710,6 +51710,22 @@
   "price": "-670",
   "status": "open"
  },
+ "nba:401909992|n:brayden burries|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": 1.6,
+  "gid": "nba:401909992",
+  "imp": 0.9048,
+  "label": "Brayden Burries: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Brayden Burries",
+  "p": 0.8527,
+  "p_fair": 0.919,
+  "price": "-950",
+  "status": "open"
+ },
  "nba:401909992|n:dyson daniels|Assists|4+": {
   "aid": null,
   "date": "2026-11-15",
@@ -66269,11 +66285,13 @@
   "league": "nfl",
   "line": "2+",
   "market": "Receptions",
+  "matched": "name",
   "name": "AJ Barner",
   "p": 0.789,
   "p_fair": 0.7702,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nfl:401873062|n:ashton jeanty|Receiving Yards|10+": {
   "aid": null,
@@ -66285,11 +66303,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Ashton Jeanty",
   "p": 0.8504,
   "p_fair": 0.815,
   "price": "-550",
-  "status": "open"
+  "status": "won",
+  "value": 46.0
  },
  "nfl:401873062|n:ashton jeanty|Rushing Yards|15+": {
   "aid": null,
@@ -66301,11 +66321,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Ashton Jeanty",
   "p": 0.8506,
   "p_fair": 0.8634,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 18.0
  },
  "nfl:401873062|n:cooper kupp|Receiving Yards|5+": {
   "aid": null,
@@ -66317,11 +66339,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Cooper Kupp",
   "p": 0.8504,
   "p_fair": 0.8602,
   "price": "-550",
-  "status": "open"
+  "status": "won",
+  "value": 34.0
  },
  "nfl:401873062|n:jadarian price|Rushing Yards|20+": {
   "aid": null,
@@ -66333,11 +66357,13 @@
   "league": "nfl",
   "line": "20+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Jadarian Price",
   "p": 0.8506,
   "p_fair": 0.8324,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 36.0
  },
  "nfl:401873062|n:jaxon smith njigba|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -66349,11 +66375,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Jaxon Smith-Njigba",
   "p": 0.3981,
   "p_fair": null,
   "price": "+100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873062|n:jaxon smith njigba|Receiving Yards|60+": {
   "aid": null,
@@ -66365,11 +66393,13 @@
   "league": "nfl",
   "line": "60+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Jaxon Smith-Njigba",
   "p": 0.804,
   "p_fair": 0.6802,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 171.0
  },
  "nfl:401873062|n:michael mayer|Receiving Yards|10+": {
   "aid": null,
@@ -66381,11 +66411,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Michael Mayer",
   "p": 0.804,
   "p_fair": 0.7874,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nfl:401873062|n:rashid shaheed|Receiving Yards|5+": {
   "aid": null,
@@ -66397,11 +66429,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Rashid Shaheed",
   "p": 0.8529,
   "p_fair": 0.8602,
   "price": "-580",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nfl:401873062|n:zach charbonnet|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -66413,11 +66447,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Zach Charbonnet",
   "p": 0.3676,
   "p_fair": null,
   "price": "+115",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873063|n:ceedee lamb|Receiving Yards|60+": {
   "aid": null,
@@ -66817,6 +66853,22 @@
   "p": 0.8558,
   "p_fair": 0.7834,
   "price": "-750",
+  "status": "open"
+ },
+ "nfl:401873064|n:joe burrow|Passing Yards|250+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -12.2,
+  "gid": "nfl:401873064",
+  "imp": 0.7917,
+  "label": "Joe Burrow: 250+ Passing Yards",
+  "league": "nfl",
+  "line": "250+",
+  "market": "Passing Yards",
+  "name": "Joe Burrow",
+  "p": 0.7731,
+  "p_fair": 0.6947,
+  "price": "-380",
   "status": "open"
  },
  "nfl:401873064|n:samaje perine|Rushing Yards|5+": {
