@@ -230,34 +230,34 @@
    "same": "11 legs a day, one per game, same price window, same quotes",
    "result": {
     "Locks (-400..-120)": {
-     "days": 29,
+     "days": 30,
      "picks": 110,
-     "old_won": 91,
-     "new_won": 92,
-     "diff": 1,
+     "old_won": 89,
+     "new_won": 91,
+     "diff": 2,
      "ci95_diff": [
-      -2,
-      4
+      0,
+      5
      ],
-     "new_won_old_missed": 3,
+     "new_won_old_missed": 4,
      "old_won_new_missed": 2,
      "promote": false,
-     "untouched_from": "2026-10-10"
+     "untouched_from": "2026-10-16"
     },
     "Safe (-2000..-500)": {
-     "days": 29,
+     "days": 30,
      "picks": 110,
-     "old_won": 105,
-     "new_won": 105,
+     "old_won": 104,
+     "new_won": 104,
      "diff": 0,
      "ci95_diff": [
       0,
       0
      ],
-     "new_won_old_missed": 5,
-     "old_won_new_missed": 5,
+     "new_won_old_missed": 3,
+     "old_won_new_missed": 3,
      "promote": false,
-     "untouched_from": "2026-10-10"
+     "untouched_from": "2026-10-16"
     }
    }
   },
@@ -269,53 +269,53 @@
    "rule": "net >= 2 x sqrt(changed)",
    "result": {
     "nhl home": {
-     "changed": 10,
+     "changed": 0,
      "net": 0,
      "promote": false
     },
     "nhl drift": {
-     "changed": 53,
-     "net": -1,
+     "changed": 38,
+     "net": -2,
      "promote": false
     },
     "nhl spread": {
-     "changed": 189,
-     "net": 11,
+     "changed": 76,
+     "net": 2,
      "promote": false
     },
     "nhl total": {
-     "changed": 7,
-     "net": 1,
+     "changed": 0,
+     "net": 0,
      "promote": false
     },
     "nhl rest": {
-     "changed": 79,
-     "net": -17,
+     "changed": 83,
+     "net": -7,
      "promote": false
     },
     "nhl form": {
-     "changed": 10,
-     "net": 0,
-     "promote": false
-    },
-    "nhl travel": {
-     "changed": 101,
-     "net": 21,
-     "promote": false
-    },
-    "nhl bias": {
-     "changed": 23,
-     "net": -5,
-     "promote": false
-    },
-    "nhl all": {
-     "changed": 200,
+     "changed": 16,
      "net": -4,
      "promote": false
     },
+    "nhl travel": {
+     "changed": 90,
+     "net": 16,
+     "promote": false
+    },
+    "nhl bias": {
+     "changed": 8,
+     "net": 4,
+     "promote": false
+    },
+    "nhl all": {
+     "changed": 120,
+     "net": -6,
+     "promote": false
+    },
     "nfl home": {
-     "changed": 0,
-     "net": 0,
+     "changed": 1,
+     "net": 1,
      "promote": false
     },
     "nfl drift": {
@@ -329,8 +329,8 @@
      "promote": false
     },
     "nfl total": {
-     "changed": 0,
-     "net": 0,
+     "changed": 1,
+     "net": 1,
      "promote": false
     },
     "nfl rest": {
@@ -345,62 +345,62 @@
     },
     "nfl travel": {
      "changed": 1,
-     "net": -1,
+     "net": 1,
      "promote": false
     },
     "nfl bias": {
-     "changed": 1,
-     "net": -1,
+     "changed": 2,
+     "net": 0,
      "promote": false
     },
     "nfl all": {
-     "changed": 12,
-     "net": -2,
+     "changed": 15,
+     "net": -1,
      "promote": false
     },
     "ncaaf home": {
-     "changed": 30,
-     "net": 6,
-     "promote": false
-    },
-    "ncaaf drift": {
-     "changed": 27,
-     "net": -1,
-     "promote": false
-    },
-    "ncaaf spread": {
-     "changed": 20,
-     "net": 6,
-     "promote": false
-    },
-    "ncaaf total": {
-     "changed": 30,
-     "net": 6,
-     "promote": false
-    },
-    "ncaaf rest": {
-     "changed": 23,
-     "net": -1,
-     "promote": false
-    },
-    "ncaaf form": {
-     "changed": 31,
+     "changed": 17,
      "net": 5,
      "promote": false
     },
-    "ncaaf travel": {
-     "changed": 27,
-     "net": -3,
+    "ncaaf drift": {
+     "changed": 14,
+     "net": 2,
      "promote": false
     },
-    "ncaaf bias": {
-     "changed": 27,
+    "ncaaf spread": {
+     "changed": 4,
+     "net": 4,
+     "promote": false
+    },
+    "ncaaf total": {
+     "changed": 17,
+     "net": 5,
+     "promote": false
+    },
+    "ncaaf rest": {
+     "changed": 17,
+     "net": 5,
+     "promote": false
+    },
+    "ncaaf form": {
+     "changed": 17,
      "net": 7,
      "promote": false
     },
+    "ncaaf travel": {
+     "changed": 19,
+     "net": 3,
+     "promote": false
+    },
+    "ncaaf bias": {
+     "changed": 11,
+     "net": -1,
+     "promote": false
+    },
     "ncaaf all": {
-     "changed": 24,
-     "net": -6,
+     "changed": 13,
+     "net": 5,
      "promote": false
     },
     "nba home": {
@@ -479,8 +479,8 @@
      "promote": false
     },
     "ncaab travel": {
-     "changed": 15,
-     "net": -1,
+     "changed": 16,
+     "net": -2,
      "promote": false
     },
     "ncaab bias": {
