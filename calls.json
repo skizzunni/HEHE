@@ -9206,12 +9206,12 @@
      "book": "DraftKings",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
-     "conf": 79,
+     "conf": 82,
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T01:07:39+00:00",
-      "conf": 79,
+      "checked_at": "2026-11-16T01:12:58+00:00",
+      "conf": 82,
       "dc": false,
       "gate": {
        "ok": true,
@@ -9221,14 +9221,13 @@
       "league": "nba",
       "match": "OKC @ SAC",
       "pick": "Oklahoma City Thunder",
-      "price": "-468",
-      "price_at": "2026-11-16T01:07:18+00:00",
+      "price": "-597",
+      "price_at": "2026-11-16T01:12:39+00:00",
       "price_market": "moneyline",
       "price_ref": "35014775:0ML87230872_3",
-      "prob_at": "2026-11-16T01:07:18+00:00",
+      "prob_at": "2026-11-16T01:12:39+00:00",
       "rank": null,
-      "ready": false,
-      "reason": "awaiting this game's price after its lineup/news change",
+      "ready": true,
       "side": "away",
       "start": "2026-11-16T02:00Z"
      },
@@ -9240,18 +9239,11 @@
      },
      "id": "nba:401909993",
      "league": "nba",
-     "log": [
-      {
-       "event": "news",
-       "t": "2026-11-16T01:07:39+00:00",
-       "what": "injury report checked (9 listed)"
-      }
-     ],
      "match": "OKC @ SAC",
      "news_at": "2026-11-16T01:07:39+00:00",
      "pick": "Oklahoma City Thunder",
-     "price": "-468",
-     "price_at": "2026-11-16T01:07:18+00:00",
+     "price": "-597",
+     "price_at": "2026-11-16T01:12:39+00:00",
      "price_market": "moneyline",
      "price_ref": "35014775:0ML87230872_3",
      "side": "away",
@@ -9266,7 +9258,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T01:07:39+00:00",
+      "checked_at": "2026-11-16T01:12:58+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
@@ -9278,10 +9270,10 @@
       "match": "VAN @ VGK",
       "pick": "Vegas Golden Knights",
       "price": "-410",
-      "price_at": "2026-11-16T01:07:18+00:00",
+      "price_at": "2026-11-16T01:12:39+00:00",
       "price_market": "moneyline",
       "price_ref": "34992064:0ML87172457_1",
-      "prob_at": "2026-11-16T01:07:18+00:00",
+      "prob_at": "2026-11-16T01:12:39+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed goalies (0 of 2)",
@@ -9299,7 +9291,7 @@
      "match": "VAN @ VGK",
      "pick": "Vegas Golden Knights",
      "price": "-410",
-     "price_at": "2026-11-16T01:07:18+00:00",
+     "price_at": "2026-11-16T01:12:39+00:00",
      "price_market": "moneyline",
      "price_ref": "34992064:0ML87172457_1",
      "side": "home",
@@ -9315,12 +9307,12 @@
    "shadow_watch": {
     "best_at": "2026-11-15T13:39:06+00:00",
     "best_ceiling": 1.952,
-    "checks": 143,
-    "last": "2026-11-16T01:07:39+00:00",
+    "checks": 144,
+    "last": "2026-11-16T01:12:58+00:00",
     "max_ready": 11,
     "reasons": {
      "awaiting confirmed XIs": 306,
-     "awaiting confirmed goalies (0 of 2)": 143,
+     "awaiting confirmed goalies (0 of 2)": 144,
      "awaiting this game's price after its lineup/news change": 20
     }
    }

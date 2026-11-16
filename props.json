@@ -51152,11 +51152,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Cooper Flagg",
   "p": 0.872,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909989|n:cooper flagg|Pts + Ast|20+": {
   "aid": null,
@@ -51168,11 +51170,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Cooper Flagg",
   "p": 0.8531,
   "p_fair": 0.8703,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909989|n:cooper flagg|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -51184,11 +51188,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Cooper Flagg",
   "p": 0.8519,
   "p_fair": 0.8819,
   "price": "-950",
-  "status": "open"
+  "status": "lost",
+  "value": 24.0
  },
  "nba:401909989|n:derrick white|Assists|4+": {
   "aid": null,
@@ -51200,11 +51206,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Derrick White",
   "p": 0.7795,
   "p_fair": 0.7604,
   "price": "-390",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nba:401909989|n:derrick white|Threes Made|1+": {
   "aid": null,
@@ -51216,11 +51224,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Derrick White",
   "p": 0.8555,
   "p_fair": 0.8927,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909989|n:jayson tatum|Pts + Ast|25+": {
   "aid": null,
@@ -51232,11 +51242,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Jayson Tatum",
   "p": 0.8523,
   "p_fair": 0.8285,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 38.0
  },
  "nba:401909989|n:jayson tatum|Reb + Ast|10+": {
   "aid": null,
@@ -51248,11 +51260,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Jayson Tatum",
   "p": 0.8547,
   "p_fair": 0.7962,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nba:401909989|n:naji marshall|Points|5+": {
   "aid": null,
@@ -51264,11 +51278,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Naji Marshall",
   "p": 0.8515,
   "p_fair": 0.9606,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401909989|n:neemias queta|Points|5+": {
   "aid": null,
@@ -51280,11 +51296,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Neemias Queta",
   "p": 0.8515,
   "p_fair": 0.96,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909989|n:pj washington|Rebounds|4+": {
   "aid": null,
@@ -51296,11 +51314,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "P.J. Washington",
   "p": 0.8511,
   "p_fair": 0.8993,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401909990|n:immanuel quickley|Assists|4+": {
   "aid": null,
@@ -51939,6 +51959,22 @@
   "price": "-1200",
   "status": "open"
  },
+ "nba:401909993|n:aday mara|Rebounds|4+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -0.9,
+  "gid": "nba:401909993",
+  "imp": 0.9,
+  "label": "Aday Mara: 4+ Rebounds",
+  "league": "nba",
+  "line": "4+",
+  "market": "Rebounds",
+  "name": "Aday Mara",
+  "p": 0.8372,
+  "p_fair": 0.8915,
+  "price": "-900",
+  "status": "open"
+ },
  "nba:401909993|n:ajay mitchell|Assists|2+": {
   "aid": null,
   "date": "2026-11-15",
@@ -51969,6 +52005,22 @@
   "p": 0.8515,
   "p_fair": 0.9169,
   "price": "-1200",
+  "status": "open"
+ },
+ "nba:401909993|n:ajay mitchell|Pts + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -2.0,
+  "gid": "nba:401909993",
+  "imp": 0.9,
+  "label": "Ajay Mitchell: 15+ Pts + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Ast",
+  "name": "Ajay Mitchell",
+  "p": 0.8571,
+  "p_fair": 0.8823,
+  "price": "-900",
   "status": "open"
  },
  "nba:401909993|n:ajay mitchell|Reb + Ast|5+": {
