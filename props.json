@@ -50828,11 +50828,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Darryn Peterson",
   "p": 0.8456,
   "p_fair": 0.9341,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909988|n:darryn peterson|Pts + Ast|15+": {
   "aid": null,
@@ -50844,11 +50846,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Darryn Peterson",
   "p": 0.8523,
   "p_fair": 0.9143,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909988|n:deaaron fox|Assists|4+": {
   "aid": null,
@@ -50864,7 +50868,9 @@
   "p": 0.8488,
   "p_fair": 0.8395,
   "price": "-650",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909988|n:deaaron fox|Points|5+": {
   "aid": null,
@@ -50879,7 +50885,9 @@
   "p": 0.872,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909988|n:devin vassell|Assists|2+": {
   "aid": null,
@@ -50891,11 +50899,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Devin Vassell",
   "p": 0.7462,
   "p_fair": 0.7218,
   "price": "-320",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401909988|n:dylan harper|Points|10+": {
   "aid": null,
@@ -50907,11 +50917,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Dylan Harper",
   "p": 0.8456,
   "p_fair": 0.9176,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 31.0
  },
  "nba:401909988|n:dylan harper|Pts + Ast|15+": {
   "aid": null,
@@ -50923,11 +50935,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Dylan Harper",
   "p": 0.8523,
   "p_fair": 0.8823,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 35.0
  },
  "nba:401909988|n:julian champagnie|Points|5+": {
   "aid": null,
@@ -50939,11 +50953,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Julian Champagnie",
   "p": 0.8515,
   "p_fair": 0.9629,
   "price": "-1200",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401909988|n:julian champagnie|Threes Made|1+": {
   "aid": null,
@@ -50955,11 +50971,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Julian Champagnie",
   "p": 0.8461,
   "p_fair": 0.8942,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909988|n:stephon castle|Assists|4+": {
   "aid": null,
@@ -50971,11 +50989,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Stephon Castle",
   "p": 0.7835,
   "p_fair": 0.7637,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909988|n:stephon castle|Points|10+": {
   "aid": null,
@@ -50987,11 +51007,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Stephon Castle",
   "p": 0.8515,
   "p_fair": 0.912,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401909988|n:stephon castle|Pts + Ast|15+": {
   "aid": null,
@@ -51003,11 +51025,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Stephon Castle",
   "p": 0.8523,
   "p_fair": 0.8726,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 29.0
  },
  "nba:401909988|n:stephon castle|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -51019,11 +51043,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Stephon Castle",
   "p": 0.8519,
   "p_fair": 0.8922,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 33.0
  },
  "nba:401909988|n:stephon castle|Rebounds|4+": {
   "aid": null,
@@ -51035,11 +51061,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Stephon Castle",
   "p": 0.7383,
   "p_fair": 0.7637,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909988|n:victor wembanyama|Assists|2+": {
   "aid": null,
@@ -51051,11 +51079,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.7665,
   "p_fair": 0.7497,
   "price": "-360",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909988|n:victor wembanyama|Pts + Ast|25+": {
   "aid": null,
@@ -51067,11 +51097,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.7537,
   "p_fair": 0.755,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nba:401909988|n:victor wembanyama|Pts + Reb + Ast|35+": {
   "aid": null,
@@ -51083,11 +51115,13 @@
   "league": "nba",
   "line": "35+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.7533,
   "p_fair": 0.7567,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 43.0
  },
  "nba:401909988|n:victor wembanyama|Reb + Ast|10+": {
   "aid": null,
@@ -51099,11 +51133,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Victor Wembanyama",
   "p": 0.8547,
   "p_fair": 0.8192,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909989|n:cooper flagg|Points|10+": {
   "aid": null,
@@ -52042,6 +52078,22 @@
   "p": 0.8519,
   "p_fair": 0.9443,
   "price": "-950",
+  "status": "open"
+ },
+ "nba:401909993|n:shai gilgeous alexander|Assists|4+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -3.5,
+  "gid": "nba:401909993",
+  "imp": 0.8,
+  "label": "Shai Gilgeous-Alexander: 4+ Assists",
+  "league": "nba",
+  "line": "4+",
+  "market": "Assists",
+  "name": "Shai Gilgeous-Alexander",
+  "p": 0.782,
+  "p_fair": 0.7723,
+  "price": "-400",
   "status": "open"
  },
  "nba:401909993|n:shai gilgeous alexander|Pts + Ast|30+": {
@@ -66773,6 +66825,22 @@
   "p": 0.7956,
   "p_fair": 0.7732,
   "price": "-380",
+  "status": "open"
+ },
+ "nfl:401873064|n:dk metcalf|Receiving Yards|25+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": -10.3,
+  "gid": "nfl:401873064",
+  "imp": 0.8701,
+  "label": "DK Metcalf: 25+ Receiving Yards",
+  "league": "nfl",
+  "line": "25+",
+  "market": "Receiving Yards",
+  "name": "DK Metcalf",
+  "p": 0.8539,
+  "p_fair": 0.7806,
+  "price": "-670",
   "status": "open"
  },
  "nfl:401873064|n:dohnte meyers|Receiving Yards|10+": {
@@ -92576,6 +92644,22 @@
   "p": 0.6788,
   "p_fair": null,
   "price": "-270",
+  "status": "open"
+ },
+ "nhl:401892722|n:wyatt johnston|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-15",
+  "edge": null,
+  "gid": "nhl:401892722",
+  "imp": 0.9565,
+  "label": "Wyatt Johnston: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Wyatt Johnston",
+  "p": 0.8723,
+  "p_fair": null,
+  "price": "-2200",
   "status": "open"
  },
  "nhl:401892722|n:wyatt johnston|Shots on Goal|2+": {
