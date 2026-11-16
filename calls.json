@@ -9289,33 +9289,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T19:49:59+00:00",
+      "checked_at": "2026-11-16T19:53:40+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
-       "ok": false,
-       "what": "injury report not fetched or game summary unverifiable"
+       "ok": true,
+       "what": "injury report checked (2 listed)"
       },
       "id": "nba:401910001",
       "league": "nba",
       "match": "PHX @ DEN",
       "pick": "Denver Nuggets",
       "price": "-408",
-      "price_at": "2026-11-16T18:44:57+00:00",
+      "price_at": "2026-11-16T19:53:21+00:00",
       "price_market": "moneyline",
       "price_ref": "35020953:0ML87246920_1",
-      "prob_at": "2026-11-16T18:44:57+00:00",
+      "prob_at": "2026-11-16T19:53:21+00:00",
       "rank": 3,
       "ready": false,
-      "reason": "injury report not fetched or game summary unverifiable",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-17T02:00Z"
      },
      "dc": false,
-     "fp": "6acf459eb5a7",
+     "fp": "49b58b6c5c37",
      "gate": {
-      "ok": false,
-      "what": "injury report not fetched or game summary unverifiable"
+      "ok": true,
+      "what": "injury report checked (2 listed)"
      },
      "id": "nba:401910001",
      "league": "nba",
@@ -9329,10 +9329,15 @@
        "event": "news",
        "t": "2026-11-16T19:49:59+00:00",
        "what": "injury report not fetched or game summary unverifiable"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-16T19:53:40+00:00",
+       "what": "injury report checked (2 listed)"
       }
      ],
      "match": "PHX @ DEN",
-     "news_at": "2026-11-16T19:49:59+00:00",
+     "news_at": "2026-11-16T19:53:40+00:00",
      "pick": "Denver Nuggets",
      "price": "-440",
      "price_at": "2026-11-16T13:01:42+00:00",
@@ -9353,33 +9358,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T19:49:59+00:00",
+      "checked_at": "2026-11-16T19:53:40+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
-       "ok": false,
-       "what": "injury report not fetched or game summary unverifiable"
+       "ok": true,
+       "what": "injury report checked (5 listed)"
       },
       "id": "nba:401909994",
       "league": "nba",
       "match": "ORL @ BOS",
       "pick": "Boston Celtics",
       "price": "-360",
-      "price_at": "2026-11-16T18:44:57+00:00",
+      "price_at": "2026-11-16T19:53:21+00:00",
       "price_market": "moneyline",
       "price_ref": "35020946:0ML87246913_1",
-      "prob_at": "2026-11-16T18:44:57+00:00",
+      "prob_at": "2026-11-16T19:53:21+00:00",
       "rank": 4,
       "ready": false,
-      "reason": "injury report not fetched or game summary unverifiable",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-17T00:00Z"
      },
      "dc": false,
-     "fp": "6acf459eb5a7",
+     "fp": "f0d9c734ca33",
      "gate": {
-      "ok": false,
-      "what": "injury report not fetched or game summary unverifiable"
+      "ok": true,
+      "what": "injury report checked (5 listed)"
      },
      "id": "nba:401909994",
      "league": "nba",
@@ -9403,10 +9408,15 @@
        "event": "news",
        "t": "2026-11-16T19:49:59+00:00",
        "what": "injury report not fetched or game summary unverifiable"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-16T19:53:40+00:00",
+       "what": "injury report checked (5 listed)"
       }
      ],
      "match": "ORL @ BOS",
-     "news_at": "2026-11-16T19:49:59+00:00",
+     "news_at": "2026-11-16T19:53:40+00:00",
      "pick": "Boston Celtics",
      "price": "-378",
      "price_at": "2026-11-16T13:01:42+00:00",
@@ -9427,7 +9437,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T19:49:59+00:00",
+      "checked_at": "2026-11-16T19:53:40+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -9439,10 +9449,10 @@
       "match": "VAN @ UTA",
       "pick": "Utah Mammoth",
       "price": "-355",
-      "price_at": "2026-11-16T18:44:57+00:00",
+      "price_at": "2026-11-16T19:53:21+00:00",
       "price_market": "moneyline",
       "price_ref": "34992067:0ML87172463_1",
-      "prob_at": "2026-11-16T18:44:57+00:00",
+      "prob_at": "2026-11-16T19:53:21+00:00",
       "rank": 5,
       "ready": false,
       "reason": "awaiting confirmed goalies (1 of 2)",
@@ -9450,7 +9460,7 @@
       "start": "2026-11-17T02:30Z"
      },
      "dc": false,
-     "fp": "f41dfdc20bdd",
+     "fp": "62d372737dc5",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed goalies (1 of 2)"
@@ -9477,10 +9487,15 @@
        "event": "news",
        "t": "2026-11-16T19:49:59+00:00",
        "what": "awaiting confirmed goalies (1 of 2)"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-16T19:53:40+00:00",
+       "what": "awaiting confirmed goalies (1 of 2)"
       }
      ],
      "match": "VAN @ UTA",
-     "news_at": "2026-11-16T19:49:59+00:00",
+     "news_at": "2026-11-16T19:53:40+00:00",
      "pick": "Utah Mammoth",
      "price": "-340",
      "price_at": "2026-11-16T13:01:42+00:00",
@@ -9497,14 +9512,204 @@
     "nba": "2026-11-16T18:24:35+00:00",
     "nhl": "2026-11-16T18:24:35+00:00"
    },
-   "candidate_observations": {},
+   "candidate_observations": {
+    "nba:401909994": {
+     "book": "DraftKings",
+     "calib": "raw no-vig (calibration failed its untouched test)",
+     "close": true,
+     "conf": 75,
+     "current": {
+      "book": "DraftKings",
+      "calib": "raw no-vig (calibration failed its untouched test)",
+      "checked_at": "2026-11-16T19:53:40+00:00",
+      "conf": 75,
+      "dc": false,
+      "gate": {
+       "ok": true,
+       "what": "injury report checked (5 listed)"
+      },
+      "id": "nba:401909994",
+      "league": "nba",
+      "match": "ORL @ BOS",
+      "pick": "Boston Celtics",
+      "price": "-360",
+      "price_at": "2026-11-16T19:53:21+00:00",
+      "price_market": "moneyline",
+      "price_ref": "35020946:0ML87246913_1",
+      "prob_at": "2026-11-16T19:53:21+00:00",
+      "rank": null,
+      "ready": true,
+      "side": "home",
+      "start": "2026-11-17T00:00Z"
+     },
+     "dc": false,
+     "fp": "f0d9c734ca33",
+     "gate": {
+      "ok": true,
+      "what": "injury report checked (5 listed)"
+     },
+     "id": "nba:401909994",
+     "league": "nba",
+     "match": "ORL @ BOS",
+     "pick": "Boston Celtics",
+     "price": "-360",
+     "price_at": "2026-11-16T19:53:21+00:00",
+     "price_market": "moneyline",
+     "price_ref": "35020946:0ML87246913_1",
+     "side": "home",
+     "start": "2026-11-17T00:00Z",
+     "tip": "7:00 PM"
+    },
+    "nba:401909995": {
+     "book": "DraftKings",
+     "calib": "raw no-vig (calibration failed its untouched test)",
+     "close": true,
+     "conf": 75,
+     "current": {
+      "book": "DraftKings",
+      "calib": "raw no-vig (calibration failed its untouched test)",
+      "checked_at": "2026-11-16T19:53:40+00:00",
+      "conf": 75,
+      "dc": false,
+      "gate": {
+       "ok": true,
+       "what": "injury report checked (8 listed)"
+      },
+      "id": "nba:401909995",
+      "league": "nba",
+      "match": "CHI @ CLE",
+      "pick": "Cleveland Cavaliers",
+      "price": "-359",
+      "price_at": "2026-11-16T19:53:21+00:00",
+      "price_market": "moneyline",
+      "price_ref": "35020947:0ML87246914_1",
+      "prob_at": "2026-11-16T19:53:21+00:00",
+      "rank": null,
+      "ready": true,
+      "side": "home",
+      "start": "2026-11-17T00:00Z"
+     },
+     "dc": false,
+     "fp": "f55362b7f95c",
+     "gate": {
+      "ok": true,
+      "what": "injury report checked (8 listed)"
+     },
+     "id": "nba:401909995",
+     "league": "nba",
+     "match": "CHI @ CLE",
+     "pick": "Cleveland Cavaliers",
+     "price": "-359",
+     "price_at": "2026-11-16T19:53:21+00:00",
+     "price_market": "moneyline",
+     "price_ref": "35020947:0ML87246914_1",
+     "side": "home",
+     "start": "2026-11-17T00:00Z",
+     "tip": "7:00 PM"
+    },
+    "nba:401910001": {
+     "book": "DraftKings",
+     "calib": "raw no-vig (calibration failed its untouched test)",
+     "close": true,
+     "conf": 77,
+     "current": {
+      "book": "DraftKings",
+      "calib": "raw no-vig (calibration failed its untouched test)",
+      "checked_at": "2026-11-16T19:53:40+00:00",
+      "conf": 77,
+      "dc": false,
+      "gate": {
+       "ok": true,
+       "what": "injury report checked (2 listed)"
+      },
+      "id": "nba:401910001",
+      "league": "nba",
+      "match": "PHX @ DEN",
+      "pick": "Denver Nuggets",
+      "price": "-408",
+      "price_at": "2026-11-16T19:53:21+00:00",
+      "price_market": "moneyline",
+      "price_ref": "35020953:0ML87246920_1",
+      "prob_at": "2026-11-16T19:53:21+00:00",
+      "rank": null,
+      "ready": true,
+      "side": "home",
+      "start": "2026-11-17T02:00Z"
+     },
+     "dc": false,
+     "fp": "49b58b6c5c37",
+     "gate": {
+      "ok": true,
+      "what": "injury report checked (2 listed)"
+     },
+     "id": "nba:401910001",
+     "league": "nba",
+     "match": "PHX @ DEN",
+     "pick": "Denver Nuggets",
+     "price": "-408",
+     "price_at": "2026-11-16T19:53:21+00:00",
+     "price_market": "moneyline",
+     "price_ref": "35020953:0ML87246920_1",
+     "side": "home",
+     "start": "2026-11-17T02:00Z",
+     "tip": "9:00 PM"
+    },
+    "nhl:401892727": {
+     "book": "DraftKings",
+     "calib": "raw no-vig (calibration failed its untouched test)",
+     "close": true,
+     "conf": 75,
+     "current": {
+      "book": "DraftKings",
+      "calib": "raw no-vig (calibration failed its untouched test)",
+      "checked_at": "2026-11-16T19:53:40+00:00",
+      "conf": 75,
+      "dc": false,
+      "gate": {
+       "ok": false,
+       "what": "awaiting confirmed goalies (1 of 2)"
+      },
+      "id": "nhl:401892727",
+      "league": "nhl",
+      "match": "VAN @ UTA",
+      "pick": "Utah Mammoth",
+      "price": "-355",
+      "price_at": "2026-11-16T19:53:21+00:00",
+      "price_market": "moneyline",
+      "price_ref": "34992067:0ML87172463_1",
+      "prob_at": "2026-11-16T19:53:21+00:00",
+      "rank": null,
+      "ready": false,
+      "reason": "awaiting confirmed goalies (1 of 2)",
+      "side": "home",
+      "start": "2026-11-17T02:30Z"
+     },
+     "dc": false,
+     "fp": "62d372737dc5",
+     "gate": {
+      "ok": false,
+      "what": "awaiting confirmed goalies (1 of 2)"
+     },
+     "id": "nhl:401892727",
+     "league": "nhl",
+     "match": "VAN @ UTA",
+     "pick": "Utah Mammoth",
+     "price": "-355",
+     "price_at": "2026-11-16T19:53:21+00:00",
+     "price_market": "moneyline",
+     "price_ref": "34992067:0ML87172463_1",
+     "side": "home",
+     "start": "2026-11-17T02:30Z",
+     "tip": "9:30 PM"
+    }
+   },
    "frozen": [
     "nba",
     "nhl"
    ],
    "news": {
-    "nba": "2026-11-16T19:49:59+00:00",
-    "nhl": "2026-11-16T19:49:59+00:00"
+    "nba": "2026-11-16T19:53:40+00:00",
+    "nhl": "2026-11-16T19:53:40+00:00"
    },
    "shadow": {
     "pool": [
