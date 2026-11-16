@@ -20095,6 +20095,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873062",
    "label": "Seattle Seahawks -6.5",
    "league": "nfl",
@@ -20108,8 +20109,9 @@
     "team": "Seattle Seahawks"
    },
    "start": "2026-11-15T21:05Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV15SEALV-SEA7"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV15SEALV-SEA7",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV15SFDAL-SF4|YES": {
    "ask": 0.51,
@@ -21524,6 +21526,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873062",
    "label": "under 40.5",
    "league": "nfl",
@@ -21536,8 +21539,9 @@
     "t": "under"
    },
    "start": "2026-11-15T21:05Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV15SEALV-41"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV15SEALV-41",
+   "won": 1
   },
   "KXNFLTOTAL-26NOV15SEALV-41|YES": {
    "ask": 0.51,
@@ -21545,6 +21549,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873062",
    "label": "over 40.5",
    "league": "nfl",
@@ -21557,8 +21562,9 @@
     "t": "over"
    },
    "start": "2026-11-15T21:05Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV15SEALV-41"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV15SEALV-41",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV15SFDAL-56|YES": {
    "ask": 0.52,
