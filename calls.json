@@ -9202,105 +9202,9 @@
     "nfl": "2026-11-15T20:47:49+00:00",
     "nhl": "2026-11-16T01:48:56+00:00"
    },
-   "candidate_observations": {
-    "nba:401909993": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 83,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T01:59:08+00:00",
-      "conf": 83,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (10 listed)"
-      },
-      "id": "nba:401909993",
-      "league": "nba",
-      "match": "OKC @ SAC",
-      "pick": "Oklahoma City Thunder",
-      "price": "-620",
-      "price_at": "2026-11-16T01:58:47+00:00",
-      "price_market": "moneyline",
-      "price_ref": "35014775:0ML87230872_3",
-      "prob_at": "2026-11-16T01:58:47+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "away",
-      "start": "2026-11-16T02:00Z"
-     },
-     "dc": false,
-     "fp": "e52421c3495f",
-     "gate": {
-      "ok": true,
-      "what": "injury report checked (10 listed)"
-     },
-     "id": "nba:401909993",
-     "league": "nba",
-     "match": "OKC @ SAC",
-     "news_at": "2026-11-16T01:38:41+00:00",
-     "pick": "Oklahoma City Thunder",
-     "price": "-620",
-     "price_at": "2026-11-16T01:58:47+00:00",
-     "price_market": "moneyline",
-     "price_ref": "35014775:0ML87230872_3",
-     "side": "away",
-     "start": "2026-11-16T02:00Z",
-     "tip": "9:00 PM"
-    },
-    "nhl:401892724": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 78,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-16T01:59:08+00:00",
-      "conf": 78,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "both goalies confirmed"
-      },
-      "id": "nhl:401892724",
-      "league": "nhl",
-      "match": "VAN @ VGK",
-      "pick": "Vegas Golden Knights",
-      "price": "-440",
-      "price_at": "2026-11-16T01:58:47+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34992064:0ML87172457_1",
-      "prob_at": "2026-11-16T01:58:47+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-16T02:00Z"
-     },
-     "dc": false,
-     "fp": "a2c002fa070c",
-     "gate": {
-      "ok": true,
-      "what": "both goalies confirmed"
-     },
-     "id": "nhl:401892724",
-     "league": "nhl",
-     "match": "VAN @ VGK",
-     "news_at": "2026-11-16T01:48:56+00:00",
-     "pick": "Vegas Golden Knights",
-     "price": "-440",
-     "price_at": "2026-11-16T01:58:47+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34992064:0ML87172457_1",
-     "side": "home",
-     "start": "2026-11-16T02:00Z",
-     "tip": "9:00 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
+    "nba",
     "nfl"
    ],
    "news": {
@@ -9310,8 +9214,8 @@
    "shadow_watch": {
     "best_at": "2026-11-15T13:39:06+00:00",
     "best_ceiling": 1.952,
-    "checks": 153,
-    "last": "2026-11-16T01:59:08+00:00",
+    "checks": 154,
+    "last": "2026-11-16T02:04:18+00:00",
     "max_ready": 11,
     "reasons": {
      "awaiting confirmed XIs": 306,
