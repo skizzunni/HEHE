@@ -26,7 +26,7 @@ Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against i
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
 Next UFC card 2026-11-21 (8 fights priced, 2 close): Ikram Aliskerov 73%; Jake Matthews 68%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Dan Hooker 62%; Navajo Stirling 60%; Kevin Vallejos 54% (close); Amir Albazi 51% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.4% hit vs 44.1% stated on 523
-Board sweep: 0-0, 41 open -- still clean.
+Board sweep: 0-0, 42 open -- still clean.
 Why picks lost (14 days): favourite lost 98, close game 90, coin flip 50, upset 40, blowout 39, price moved against it 22, drawn 12.
 Yesterday (2026-11-16): board 14-7, sweep broken by nba Boston Celtics at 76%; 6.3 losses expected, 7 came in (44.7% chance of that many or more).
 - LOST nba Boston Celtics at 76% (-380), Boston Celtics 105 - Orlando Magic 115: margin 10 · the book had my side favoured too · called at 76% · upset; picks like it: 42 of 50 (84% vs 75% stated)
