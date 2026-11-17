@@ -9414,33 +9414,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-17T02:13:26+00:00",
+      "checked_at": "2026-11-17T02:18:24+00:00",
       "conf": 74,
       "dc": false,
       "gate": {
-       "ok": false,
-       "what": "awaiting confirmed goalies (1 of 2)"
+       "ok": true,
+       "what": "both goalies confirmed"
       },
       "id": "nhl:401892727",
       "league": "nhl",
       "match": "VAN @ UTA",
       "pick": "Utah Mammoth",
       "price": "-340",
-      "price_at": "2026-11-17T02:13:06+00:00",
+      "price_at": "2026-11-17T02:18:04+00:00",
       "price_market": "moneyline",
       "price_ref": "34992067:0ML87172463_1",
-      "prob_at": "2026-11-17T02:13:06+00:00",
+      "prob_at": "2026-11-17T02:18:04+00:00",
       "rank": 5,
       "ready": false,
-      "reason": "awaiting confirmed goalies (1 of 2)",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-17T02:30Z"
      },
      "dc": false,
-     "fp": "62d372737dc5",
+     "fp": "cbdf171e859a",
      "gate": {
-      "ok": false,
-      "what": "awaiting confirmed goalies (1 of 2)"
+      "ok": true,
+      "what": "both goalies confirmed"
      },
      "id": "nhl:401892727",
      "league": "nhl",
@@ -9479,10 +9479,15 @@
        "event": "news",
        "t": "2026-11-17T00:45:58+00:00",
        "what": "awaiting confirmed goalies (1 of 2)"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-17T02:18:24+00:00",
+       "what": "both goalies confirmed"
       }
      ],
      "match": "VAN @ UTA",
-     "news_at": "2026-11-17T00:45:58+00:00",
+     "news_at": "2026-11-17T02:18:24+00:00",
      "pick": "Utah Mammoth",
      "price": "-340",
      "price_at": "2026-11-16T13:01:42+00:00",
@@ -9501,11 +9506,12 @@
    },
    "candidate_observations": {},
    "frozen": [
-    "nba"
+    "nba",
+    "nhl"
    ],
    "news": {
     "nba": "2026-11-17T01:16:44+00:00",
-    "nhl": "2026-11-17T00:45:58+00:00"
+    "nhl": "2026-11-17T02:18:24+00:00"
    },
    "shadow": {
     "pool": [
