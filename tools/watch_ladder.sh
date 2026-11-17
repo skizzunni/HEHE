@@ -18,6 +18,14 @@ if [ "$DAY" = "auto" ] || { [ -z "$DAY" ] && [ -n "$LG" ]; }; then
 fi
 ROOT=$(cd "$(dirname "$0")/.." && pwd)
 mkdir -p "$(dirname "$WORK")"
+# State left by a watch that never printed DONE (the container stopped
+# mid-night, 2026-11-14) belongs to its own day: a watch for another day
+# starts fresh instead of reading it as "before".
+if [ -n "$DAY" ] && [ -f "$WORK.state.json" ] && [ "$(cat "$WORK.day" 2>/dev/null)" != "$DAY" ]; then
+  rm -f "$WORK.state.json" "$WORK.state.json.ufc_picks.json" "$WORK.done"
+  echo "FRESH START: dropped a watch state left from $(cat "$WORK.day" 2>/dev/null || echo 'an earlier day')"
+fi
+[ -n "$DAY" ] && printf '%s\n' "$DAY" > "$WORK.day"
 if [ ! -f "$WORK/tools/ladder_watch.py" ]; then
   git -C "$ROOT" worktree prune
   rm -rf "$WORK"
@@ -35,7 +43,7 @@ done
 rc=${PIPESTATUS[0]}
 if [ -f "$WORK.done" ]; then
   cd "$ROOT" || exit "$rc"
-  rm -f "$WORK.state.json" "$WORK.state.json.ufc_picks.json" "$WORK.done"
+  rm -f "$WORK.state.json" "$WORK.state.json.ufc_picks.json" "$WORK.done" "$WORK.day"
   git -C "$ROOT" worktree remove --force "$WORK" 2>/dev/null || rm -rf "$WORK"
   git -C "$ROOT" worktree prune
   echo "CLEANED UP: watcher state and worktree removed"

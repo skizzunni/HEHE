@@ -25,6 +25,9 @@ class WatchLadderSh(unittest.TestCase):
         subprocess.run(["git", "-C", ROOT, "worktree", "remove", "--force", self.work], capture_output=True)
         subprocess.run(["git", "-C", ROOT, "worktree", "prune"], capture_output=True)
         shutil.rmtree(self.tmp, ignore_errors=True)
+        for f in (".state.json", ".state.json.ufc_picks.json", ".done", ".day"):
+            if os.path.exists(self.work + f):
+                os.remove(self.work + f)
 
     def run_sh(self, *args, tz_now=None):
         env = dict(os.environ, PATH=self.bin + os.pathsep + os.environ["PATH"])
@@ -58,10 +61,31 @@ class WatchLadderSh(unittest.TestCase):
 
     def test_no_cleanup_without_done(self):
         open(self.work + ".state.json", "w").close()
+        with open(self.work + ".day", "w") as fh:                        # tonight's own state
+            fh.write("2026-11-13\n")
         rc, out = self.run_sh("2026-11-13", "all")
         self.assertNotIn("CLEANED UP", out)
         self.assertTrue(os.path.exists(self.work + ".state.json"))
         self.assertTrue(os.path.isfile(os.path.join(self.work, "tools", "ladder_watch.py")))
+
+    def test_state_from_another_day_dropped(self):
+        for f in (".state.json", ".state.json.ufc_picks.json"):
+            open(self.work + f, "w").close()
+        with open(self.work + ".day", "w") as fh:
+            fh.write("2026-11-14\n")
+        rc, out = self.run_sh("2026-11-17", "all")
+        self.assertIn("FRESH START: dropped a watch state left from 2026-11-14", out)
+        self.assertFalse(os.path.exists(self.work + ".state.json"))
+        with open(self.work + ".day") as fh:
+            self.assertEqual(fh.read().strip(), "2026-11-17")
+
+    def test_same_day_state_kept(self):
+        open(self.work + ".state.json", "w").close()
+        with open(self.work + ".day", "w") as fh:
+            fh.write("2026-11-17\n")
+        rc, out = self.run_sh("2026-11-17", "all")
+        self.assertNotIn("FRESH START", out)
+        self.assertTrue(os.path.exists(self.work + ".state.json"))
 
 
 if __name__ == "__main__":
