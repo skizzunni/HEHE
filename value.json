@@ -8685,6 +8685,47 @@
    "tip": "9:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910004|{\"line\": 7.5, \"t\": \"spread\", \"team\": \"Detroit Pistons\"}|Kalshi": {
+   "dec": 2.0947,
+   "dk": "-110",
+   "ev": 0.0474,
+   "fair": 0.5,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401910004",
+   "kind": "single",
+   "league": "nba",
+   "market": "spread",
+   "match": "DET @ SA",
+   "price": "+109",
+   "seen": "2026-11-17T01:01:37+00:00",
+   "side": "{\"line\": 7.5, \"t\": \"spread\", \"team\": \"Detroit Pistons\"}",
+   "spec": {
+    "line": 7.5,
+    "t": "spread",
+    "team": "Detroit Pistons"
+   },
+   "start": "2026-11-18T01:00Z",
+   "team": "Detroit Pistons +7.5",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401910005|away|FanDuel": {
+   "dec": 5.2,
+   "ev": 0.0738,
+   "fair": 0.2065,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910005",
+   "kind": "suspect",
+   "league": "nba",
+   "match": "CHA @ LAL",
+   "price": "+420",
+   "seen": "2026-11-17T01:01:37+00:00",
+   "side": "away",
+   "start": "2026-11-18T04:00Z",
+   "team": "Charlotte Hornets",
+   "tip": "11:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401910005|home|Kalshi": {
    "dec": 1.2183,
    "ev": 0.0113,
@@ -8701,6 +8742,28 @@
    "team": "Los Angeles Lakers",
    "tip": "11:00 PM",
    "venue": "Kalshi"
+  },
+  "nba:401910005|sure": {
+   "id": "nba:401910005",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+431",
+     "stake_share": 0.194,
+     "team": "Charlotte Hornets",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-360",
+     "stake_share": 0.806,
+     "team": "Los Angeles Lakers",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "CHA @ LAL",
+   "profit": 0.0301,
+   "seen": "2026-11-17T01:01:37+00:00"
   },
   "ncaab:401906758|away|FanDuel": {
    "dec": 41.0,
