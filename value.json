@@ -18173,6 +18173,46 @@
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
+  "nhl:401892741|away|FanDuel": {
+   "dec": 2.0,
+   "ev": 0.0145,
+   "fair": 0.5072,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892741",
+   "kind": "value",
+   "league": "nhl",
+   "match": "COL @ UTA",
+   "price": "+100",
+   "seen": "2026-11-17T16:49:08+00:00",
+   "side": "away",
+   "start": "2026-11-19T03:00Z",
+   "team": "Colorado Avalanche",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892741|{\"line\": 6.5, \"t\": \"over\"}|FanDuel": {
+   "dec": 2.08,
+   "dk": "-108",
+   "ev": 0.0306,
+   "fair": 0.4955,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892741",
+   "kind": "single",
+   "league": "nhl",
+   "market": "over",
+   "match": "COL @ UTA",
+   "price": "+108",
+   "seen": "2026-11-17T16:49:08+00:00",
+   "side": "{\"line\": 6.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 6.5,
+    "t": "over"
+   },
+   "start": "2026-11-19T03:00Z",
+   "team": "over 6.5",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
   "nor:401843366|away|FanDuel": {
    "dec": 3.0,
    "ev": 0.0126,
