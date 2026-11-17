@@ -9289,32 +9289,33 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-17T01:11:33+00:00",
+      "checked_at": "2026-11-17T01:16:44+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (3 listed)"
+       "what": "injury report checked (2 listed)"
       },
       "id": "nba:401910001",
       "league": "nba",
       "match": "PHX @ DEN",
       "pick": "Denver Nuggets",
       "price": "-426",
-      "price_at": "2026-11-17T01:11:14+00:00",
+      "price_at": "2026-11-17T01:16:23+00:00",
       "price_market": "moneyline",
       "price_ref": "35020953:0ML87246920_1",
-      "prob_at": "2026-11-17T01:11:14+00:00",
+      "prob_at": "2026-11-17T01:16:23+00:00",
       "rank": 3,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-17T02:00Z"
      },
      "dc": false,
-     "fp": "4b12bcfda595",
+     "fp": "49b58b6c5c37",
      "gate": {
       "ok": true,
-      "what": "injury report checked (3 listed)"
+      "what": "injury report checked (2 listed)"
      },
      "id": "nba:401910001",
      "league": "nba",
@@ -9348,10 +9349,15 @@
        "event": "news",
        "t": "2026-11-17T00:45:58+00:00",
        "what": "injury report checked (3 listed)"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-17T01:16:44+00:00",
+       "what": "injury report checked (2 listed)"
       }
      ],
      "match": "PHX @ DEN",
-     "news_at": "2026-11-17T00:45:58+00:00",
+     "news_at": "2026-11-17T01:16:44+00:00",
      "pick": "Denver Nuggets",
      "price": "-440",
      "price_at": "2026-11-16T13:01:42+00:00",
@@ -9432,7 +9438,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-17T01:11:33+00:00",
+      "checked_at": "2026-11-17T01:16:44+00:00",
       "conf": 74,
       "dc": false,
       "gate": {
@@ -9444,10 +9450,10 @@
       "match": "VAN @ UTA",
       "pick": "Utah Mammoth",
       "price": "-340",
-      "price_at": "2026-11-17T01:11:14+00:00",
+      "price_at": "2026-11-17T01:16:23+00:00",
       "price_market": "moneyline",
       "price_ref": "34992067:0ML87172463_1",
-      "prob_at": "2026-11-17T01:11:14+00:00",
+      "prob_at": "2026-11-17T01:16:23+00:00",
       "rank": 5,
       "ready": false,
       "reason": "awaiting confirmed goalies (1 of 2)",
@@ -9514,7 +9520,7 @@
     }
    ],
    "candidate_news": {
-    "nba": "2026-11-17T00:45:58+00:00",
+    "nba": "2026-11-17T01:16:44+00:00",
     "nhl": "2026-11-16T18:24:35+00:00"
    },
    "candidate_observations": {
@@ -9526,40 +9532,48 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-17T01:11:33+00:00",
+      "checked_at": "2026-11-17T01:16:44+00:00",
       "conf": 78,
       "dc": false,
       "gate": {
        "ok": true,
-       "what": "injury report checked (3 listed)"
+       "what": "injury report checked (2 listed)"
       },
       "id": "nba:401910001",
       "league": "nba",
       "match": "PHX @ DEN",
       "pick": "Denver Nuggets",
       "price": "-426",
-      "price_at": "2026-11-17T01:11:14+00:00",
+      "price_at": "2026-11-17T01:16:23+00:00",
       "price_market": "moneyline",
       "price_ref": "35020953:0ML87246920_1",
-      "prob_at": "2026-11-17T01:11:14+00:00",
+      "prob_at": "2026-11-17T01:16:23+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "home",
       "start": "2026-11-17T02:00Z"
      },
      "dc": false,
-     "fp": "4b12bcfda595",
+     "fp": "49b58b6c5c37",
      "gate": {
       "ok": true,
-      "what": "injury report checked (3 listed)"
+      "what": "injury report checked (2 listed)"
      },
      "id": "nba:401910001",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-17T01:16:44+00:00",
+       "what": "injury report checked (2 listed)"
+      }
+     ],
      "match": "PHX @ DEN",
-     "news_at": "2026-11-17T00:45:58+00:00",
+     "news_at": "2026-11-17T01:16:44+00:00",
      "pick": "Denver Nuggets",
      "price": "-426",
-     "price_at": "2026-11-17T01:11:14+00:00",
+     "price_at": "2026-11-17T01:16:23+00:00",
      "price_market": "moneyline",
      "price_ref": "35020953:0ML87246920_1",
      "side": "home",
@@ -9567,9 +9581,11 @@
      "tip": "9:00 PM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "nba"
+   ],
    "news": {
-    "nba": "2026-11-17T00:45:58+00:00",
+    "nba": "2026-11-17T01:16:44+00:00",
     "nhl": "2026-11-17T00:45:58+00:00"
    },
    "shadow": {
