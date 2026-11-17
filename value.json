@@ -12977,6 +12977,23 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401866465|away|FanDuel": {
+   "dec": 8.2,
+   "ev": 0.0471,
+   "fair": 0.1277,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401866465",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "EMU @ WMU",
+   "price": "+720",
+   "seen": "2026-11-17T22:34:43+00:00",
+   "side": "away",
+   "start": "2026-11-17T23:00Z",
+   "team": "Eastern Michigan Eagles",
+   "tip": "6:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401866466|home|Kalshi": {
    "dec": 3.9557,
    "ev": 0.0148,
@@ -21594,6 +21611,26 @@
    "prob": 0.1685,
    "seen": "2026-10-31T04:05:32+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401866465:away": {
+   "ev": 0.0471,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0471,
+     "fair": 0.1277,
+     "id": "ncaaf:401866465",
+     "price": "+720",
+     "side": "away",
+     "spec": null,
+     "team": "Eastern Michigan Eagles"
+    }
+   ],
+   "payout": 8.2,
+   "prob": 0.1277,
+   "seen": "2026-11-17T22:34:43+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
