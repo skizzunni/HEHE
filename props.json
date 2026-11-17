@@ -54581,6 +54581,22 @@
   "price": "-1000",
   "status": "open"
  },
+ "nba:401910004|n:cade cunningham|Assists|6+": {
+  "aid": null,
+  "date": "2026-11-17",
+  "edge": -3.5,
+  "gid": "nba:401910004",
+  "imp": 0.8701,
+  "label": "Cade Cunningham: 6+ Assists",
+  "league": "nba",
+  "line": "6+",
+  "market": "Assists",
+  "name": "Cade Cunningham",
+  "p": 0.8473,
+  "p_fair": 0.8399,
+  "price": "-670",
+  "status": "open"
+ },
  "nba:401910004|n:cade cunningham|Points|15+": {
   "aid": null,
   "date": "2026-11-17",
@@ -54595,6 +54611,22 @@
   "p": 0.8531,
   "p_fair": 0.8873,
   "price": "-1200",
+  "status": "open"
+ },
+ "nba:401910004|n:cade cunningham|Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-11-17",
+  "edge": -9.1,
+  "gid": "nba:401910004",
+  "imp": 0.878,
+  "label": "Cade Cunningham: 10+ Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Reb + Ast",
+  "name": "Cade Cunningham",
+  "p": 0.8484,
+  "p_fair": 0.7984,
+  "price": "-720",
   "status": "open"
  },
  "nba:401910004|n:dylan harper|Points|10+": {
@@ -95981,11 +96013,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Anders Lee",
   "p": 0.8551,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892727|n:anders lee|Shots on Goal|2+": {
   "aid": null,
@@ -95997,11 +96031,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Anders Lee",
   "p": 0.7232,
   "p_fair": null,
   "price": "-345",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892727|n:barrett hayton|Shots on Goal|1+": {
   "aid": null,
@@ -96013,11 +96049,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Barrett Hayton",
   "p": 0.8551,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892727|n:filip chytil|Shots on Goal|1+": {
   "aid": null,
@@ -96029,11 +96067,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Filip Chytil",
   "p": 0.8517,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892727|n:jake debrusk|Shots on Goal|1+": {
   "aid": null,
@@ -96045,11 +96085,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jake DeBrusk",
   "p": 0.8517,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892727|n:kailer yamamoto|Shots on Goal|1+": {
   "aid": null,
@@ -96061,11 +96103,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kailer Yamamoto",
   "p": 0.8517,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892727|n:lawson crouse|Shots on Goal|1+": {
   "aid": null,
@@ -96077,11 +96121,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Lawson Crouse",
   "p": 0.844,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892727|n:mackenzie weegar|Shots on Goal|1+": {
   "aid": null,
@@ -96093,11 +96139,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "MacKenzie Weegar",
   "p": 0.844,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892727|n:marco rossi|Shots on Goal|1+": {
   "aid": null,
@@ -96109,11 +96157,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Marco Rossi",
   "p": 0.7444,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892727|n:michael carcone|Shots on Goal|1+": {
   "aid": null,
@@ -96125,11 +96175,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Michael Carcone",
   "p": 0.8396,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892727|n:mikhail sergachev|Shots on Goal|1+": {
   "aid": null,
@@ -96140,11 +96192,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikhail Sergachev",
   "p": 0.8728,
   "price": "-1600",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nhl:401892727|n:mikhail sergachev|Shots on Goal|2+": {
   "aid": null,
@@ -96156,11 +96210,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikhail Sergachev",
   "p": 0.7232,
   "p_fair": null,
   "price": "-345",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nhl:401892727|n:vincent trocheck|Shots on Goal|2+": {
   "aid": null,
@@ -96172,11 +96228,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Vincent Trocheck",
   "p": 0.6773,
   "p_fair": null,
   "price": "-265",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892728|n:david pastrnak|Shots on Goal|2+": {
   "aid": null,
