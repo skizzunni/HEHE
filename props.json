@@ -69447,7 +69447,9 @@
   "p": 0.7859,
   "p_fair": 0.7848,
   "price": "-400",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nfl:401873065|n:derrick henry|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -69459,11 +69461,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Derrick Henry",
   "p": 0.4632,
   "p_fair": null,
   "price": "-140",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873065|n:derrick henry|Rushing Yards|40+": {
   "aid": null,
@@ -69475,11 +69479,13 @@
   "league": "nfl",
   "line": "40+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Derrick Henry",
   "p": 0.8571,
   "p_fair": 0.8137,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 10.0
  },
  "nfl:401873065|n:jakobi lane|Receiving Yards|5+": {
   "aid": null,
@@ -69491,11 +69497,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Ja'Kobi Lane",
   "p": 0.8403,
   "p_fair": 0.8641,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 61.0
  },
  "nfl:401873065|n:keandre lambert smith|Receiving Yards|5+": {
   "aid": null,
@@ -69511,7 +69519,8 @@
   "p": 0.7843,
   "p_fair": 0.8557,
   "price": "-400",
-  "status": "open"
+  "status": "open",
+  "unresolved": true
  },
  "nfl:401873065|n:keandre lambert smith|Receptions|1+": {
   "aid": null,
@@ -69527,7 +69536,8 @@
   "p": 0.7818,
   "p_fair": 0.7521,
   "price": "-390",
-  "status": "open"
+  "status": "open",
+  "unresolved": true
  },
  "nfl:401873065|n:omarion hampton|Rushing Yards|10+": {
   "aid": null,
@@ -69538,11 +69548,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Omarion Hampton",
   "p": 0.8728,
   "price": "-1800",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 105.0
  },
  "nfl:401873065|n:quentin johnston|Receiving Yards|10+": {
   "aid": null,
@@ -69554,11 +69566,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Quentin Johnston",
   "p": 0.8578,
   "p_fair": 0.8497,
   "price": "-700",
-  "status": "open"
+  "status": "lost",
+  "value": 6.0
  },
  "nfl:401873065|n:rashod bateman|Receiving Yards|10+": {
   "aid": null,
@@ -69570,11 +69584,13 @@
   "league": "nfl",
   "line": "10+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Rashod Bateman",
   "p": 0.7803,
   "p_fair": 0.8026,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 42.0
  },
  "nfl:401873065|n:tre harris|Receiving Yards|15+": {
   "aid": null,
@@ -69586,11 +69602,13 @@
   "league": "nfl",
   "line": "15+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Tre Harris",
   "p": 0.8578,
   "p_fair": 0.8205,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 86.0
  },
  "nfl:401873065|n:zay flowers|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -69602,11 +69620,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Zay Flowers",
   "p": 0.2918,
   "p_fair": null,
   "price": "+160",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873065|n:zay flowers|Receptions|4+": {
   "aid": null,
@@ -69618,11 +69638,13 @@
   "league": "nfl",
   "line": "4+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Zay Flowers",
   "p": 0.842,
   "p_fair": 0.8339,
   "price": "-600",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nhl:401891807|n:chris kreider|Shots on Goal|1+": {
   "aid": null,
