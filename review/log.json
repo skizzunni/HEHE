@@ -16037,11 +16037,11 @@
   },
   "props": {
    "fair": {
-    "n": 3117,
+    "n": 3132,
     "said_fair": 86.3,
     "said_price": 87.5,
     "said_stated": 83.5,
-    "won": 2591
+    "won": 2604
    },
    "n": 259,
    "said": 79.0,
@@ -16181,13 +16181,13 @@
       85.5
      ],
      [
-      184,
-      208,
+      185,
+      209,
       85.6
      ]
     ],
-    "hit": 87.3,
-    "n": 442,
+    "hit": 87.4,
+    "n": 443,
     "name": "props nba Points",
     "said": 85.5
    },
@@ -16200,13 +16200,13 @@
       83.3
      ],
      [
-      123,
-      146,
-      83.2
+      126,
+      150,
+      83.3
      ]
     ],
-    "hit": 83.9,
-    "n": 310,
+    "hit": 83.8,
+    "n": 314,
     "name": "props nba Pts + Ast",
     "said": 83.3
    },
@@ -16219,13 +16219,13 @@
       84.7
      ],
      [
-      145,
-      174,
+      149,
+      179,
       84.1
      ]
     ],
     "hit": 84.1,
-    "n": 353,
+    "n": 358,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.4
    },
@@ -16238,13 +16238,13 @@
       82.6
      ],
      [
-      68,
-      83,
-      81.9
+      69,
+      84,
+      82.0
      ]
     ],
-    "hit": 82.8,
-    "n": 163,
+    "hit": 82.9,
+    "n": 164,
     "name": "props nba Reb + Ast",
     "said": 82.3
    },
@@ -16257,13 +16257,13 @@
       84.8
      ],
      [
-      86,
-      94,
+      90,
+      98,
       84.9
      ]
     ],
-    "hit": 85.6,
-    "n": 194,
+    "hit": 85.9,
+    "n": 198,
     "name": "props nba Rebounds",
     "said": 84.8
    },
@@ -16276,13 +16276,13 @@
       84.6
      ],
      [
-      74,
-      89,
+      75,
+      90,
       84.3
      ]
     ],
-    "hit": 81.6,
-    "n": 179,
+    "hit": 81.7,
+    "n": 180,
     "name": "props nba Threes Made",
     "said": 84.4
    },
@@ -16488,18 +16488,18 @@
     "flag": false,
     "halves": [
      [
-      19,
       20,
+      22,
       75.3
      ],
      [
       14,
-      18,
+      17,
       75.3
      ]
     ],
-    "hit": 86.8,
-    "n": 38,
+    "hit": 87.2,
+    "n": 39,
     "name": "locks nba under",
     "said": 75.3
    },
@@ -16664,15 +16664,15 @@
       90.3
      ],
      [
-      26,
       27,
+      28,
       91.4
      ]
     ],
-    "hit": 93.5,
-    "n": 46,
+    "hit": 93.6,
+    "n": 47,
     "name": "safe locks nba over",
-    "said": 90.9
+    "said": 91.0
    },
    {
     "flag": false,
@@ -16778,13 +16778,13 @@
       88.6
      ],
      [
-      168,
-      179,
+      169,
+      180,
       86.8
      ]
     ],
     "hit": 93.3,
-    "n": 326,
+    "n": 327,
     "name": "prop locks",
     "said": 87.6
    },
@@ -16924,7 +16924,7 @@
     "Boston Celtics to win (Orlando Magic at Boston Celtics) Orlando Magic 115 - Boston Celtics 105"
    ],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      2,
@@ -16932,7 +16932,7 @@
      "open"
     ]
    },
-   "won": 2
+   "won": 3
   },
   "loss_reasons_14d": {
    "blowout": 40,
@@ -16969,40 +16969,44 @@
   "lottery": [
    {
     "killed_by": [
+     "Under 228.5 points",
      "Under 205.5 points"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k",
     "won": 2
    },
    {
     "killed_by": [
+     "Under 228.5 points",
      "Under 205.5 points"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+25",
     "won": 2
    },
    {
     "killed_by": [
+     "Under 228.5 points",
      "Under 205.5 points"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+50",
     "won": 2
    },
    {
     "killed_by": [
+     "Under 228.5 points",
      "Under 205.5 points"
     ],
     "legs": 10,
-    "lost": 1,
+    "lost": 2,
     "status": "lost",
     "tier": "10k+100",
     "won": 2
@@ -17015,7 +17019,7 @@
     "lost": 1,
     "status": "lost",
     "tier": "100",
-    "won": 2
+    "won": 3
    }
   ],
   "national": "National-team soccer: 42/49 (86% vs 76% stated), 2 of 7 losses draws (straight win 21/23 (91% vs 77% stated); or draw 21/26 (81% vs 75% stated)); club soccer 806/1110 (73% vs 71% stated).",
@@ -17057,25 +17061,25 @@
   "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 364/466 (78% vs 81% stated); fine -- the caution on this band is off (locks.apply_prereg). History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).",
   "prereg_more": "Pre-registered tests also running: NFL spreads getting 14+ points (legs from 2026-11-14): 63/93 (68% vs 84% stated); waiting for 100 legs; college football team-total unders (legs from 2026-11-15): 18/18 (100% vs 81% stated); waiting for 150 legs.",
   "priced_calibration": "Priced-era picks by league, by half (split 2026-11-03): soccer or-draw 77% vs 74% (z +1.4) then 76% vs 74% (z +0.7); soccer win 83% vs 73% (z +2.7) then 84% vs 74% (z +2.2); NCAAF 73% vs 72% (z +0.3) then 69% vs 70% (z -0.4); NBA 70% vs 66% (z +1.0) then 78% vs 69% (z +1.9); NHL 59% vs 58% (z +0.1) then 64% vs 59% (z +1.1); NFL 75% vs 64% (z +1.2) then 86% vs 67% (z +2.1). None past the 99.5% bar in both halves.",
-  "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 76% (76% / 79%); 80-85% 84%, 87% (83% / 84%); 85-90% 86%, 84% (88% / 85%); 90%+ 84%, 85% (93% / 85%).",
+  "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 76% (76% / 79%); 80-85% 84%, 87% (83% / 84%); 85-90% 86%, 83% (88% / 85%); 90%+ 84%, 85% (93% / 85%).",
   "props": {
    "fair": {
-    "n": 3117,
+    "n": 3132,
     "said_fair": 86.3,
     "said_price": 87.5,
     "said_stated": 83.5,
-    "won": 2591
+    "won": 2604
    },
-   "n": 43,
-   "said": 84.8,
-   "won": 41
+   "n": 59,
+   "said": 84.7,
+   "won": 55
   },
   "roster": null,
   "runs": "Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 7) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 8) 2026-11-15, 2 days, peak $2.00, lost on Boston Celtics to win. Replayed on every saved card: as ranked 15/29 cashed at 2.21x, without props 15/29 at 2.3x.",
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 8,
+   "open": 7,
    "plays": {
     "best": [
      9,
@@ -17088,7 +17092,7 @@
      "open"
     ]
    },
-   "won": 3
+   "won": 4
   },
   "strong": {
    "hit": 100.0,

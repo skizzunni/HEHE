@@ -53403,11 +53403,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Alperen Sengun",
   "p": 0.8427,
   "p_fair": 0.8339,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 25.0
  },
  "nba:401909998|n:alperen sengun|Pts + Reb + Ast|30+": {
   "aid": null,
@@ -53419,11 +53421,13 @@
   "league": "nba",
   "line": "30+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Alperen Sengun",
   "p": 0.7533,
   "p_fair": 0.7637,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nba:401909998|n:alperen sengun|Rebounds|6+": {
   "aid": null,
@@ -53435,11 +53439,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Alperen Sengun",
   "p": 0.8496,
   "p_fair": 0.9193,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909998|n:bam adebayo|Pts + Ast|15+": {
   "aid": null,
@@ -53451,11 +53457,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Bam Adebayo",
   "p": 0.849,
   "p_fair": 0.8796,
   "price": "-800",
-  "status": "open"
+  "status": "lost",
+  "value": 6.0
  },
  "nba:401909998|n:davion mitchell|Pts + Ast|15+": {
   "aid": null,
@@ -53467,11 +53475,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Davion Mitchell",
   "p": 0.849,
   "p_fair": 0.8676,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401909998|n:fred vanvleet|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -53483,11 +53493,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Fred VanVleet",
   "p": 0.8475,
   "p_fair": 0.9115,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nba:401909998|n:giannis antetokounmpo|Pts + Ast|25+": {
   "aid": null,
@@ -53499,11 +53511,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Giannis Antetokounmpo",
   "p": 0.849,
   "p_fair": 0.8313,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401909998|n:giannis antetokounmpo|Pts + Reb + Ast|35+": {
   "aid": null,
@@ -53515,11 +53529,13 @@
   "league": "nba",
   "line": "35+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Giannis Antetokounmpo",
   "p": 0.8475,
   "p_fair": 0.8422,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 39.0
  },
  "nba:401909998|n:giannis antetokounmpo|Rebounds|8+": {
   "aid": null,
@@ -53531,11 +53547,13 @@
   "league": "nba",
   "line": "8+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Giannis Antetokounmpo",
   "p": 0.8496,
   "p_fair": 0.9133,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401909998|n:jabari smith|Points|5+": {
   "aid": null,
@@ -53546,11 +53564,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Jabari Smith",
   "p": 0.8728,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nba:401909998|n:jabari smith|Rebounds|4+": {
   "aid": null,
@@ -53562,11 +53582,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Jabari Smith",
   "p": 0.8456,
   "p_fair": 0.8831,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909998|n:pelle larsson|Assists|2+": {
   "aid": null,
@@ -53578,11 +53600,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Pelle Larsson",
   "p": 0.852,
   "p_fair": 0.855,
   "price": "-700",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401909998|n:reed sheppard|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -53594,11 +53618,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Reed Sheppard",
   "p": 0.856,
   "p_fair": 0.9648,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 9.0
  },
  "nba:401909998|n:reed sheppard|Threes Made|1+": {
   "aid": null,
@@ -53610,11 +53636,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Reed Sheppard",
   "p": 0.8469,
   "p_fair": 0.8968,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909998|n:tari eason|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -53626,11 +53654,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Tari Eason",
   "p": 0.856,
   "p_fair": 0.9259,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909998|n:tari eason|Reb + Ast|5+": {
   "aid": null,
@@ -53642,11 +53672,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Tari Eason",
   "p": 0.847,
   "p_fair": 0.8703,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909998|n:tari eason|Rebounds|4+": {
   "aid": null,
@@ -53658,11 +53690,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Tari Eason",
   "p": 0.8496,
   "p_fair": 0.9017,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909999|n:ayo dosunmu|Points|10+": {
   "aid": null,
