@@ -53782,6 +53782,22 @@
   "price": "-900",
   "status": "open"
  },
+ "nba:401910000|n:deanthony melton|Assists|2+": {
+  "aid": null,
+  "date": "2026-11-16",
+  "edge": -2.5,
+  "gid": "nba:401910000",
+  "imp": 0.8701,
+  "label": "De'Anthony Melton: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "De'Anthony Melton",
+  "p": 0.8473,
+  "p_fair": 0.8488,
+  "price": "-670",
+  "status": "open"
+ },
  "nba:401910000|n:deanthony melton|Pts + Ast|10+": {
   "aid": null,
   "date": "2026-11-16",
@@ -63819,8 +63835,9 @@
   "price": "-400",
   "rechecked": "ungradable",
   "rechecked_nick": true,
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nfl:401873037|n:chris rodriguez|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -63875,8 +63892,9 @@
   "price": "-400",
   "rechecked": "ungradable",
   "rechecked_nick": true,
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nfl:401873037|n:jakobi lane|Receptions|1+": {
   "aid": null,
@@ -63895,8 +63913,9 @@
   "price": "-580",
   "rechecked": "ungradable",
   "rechecked_nick": true,
-  "status": "open",
-  "unresolved": true
+  "status": "ungradable",
+  "unresolved": true,
+  "void_why": "identity_unresolved"
  },
  "nfl:401873037|n:jakobi meyers|Receiving Yards|15+": {
   "aid": null,
