@@ -8701,6 +8701,23 @@
    "tip": "9:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910002|home|FanDuel": {
+   "dec": 2.5,
+   "ev": 0.025,
+   "fair": 0.41,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910002",
+   "kind": "value",
+   "league": "nba",
+   "match": "NY @ TOR",
+   "price": "+150",
+   "seen": "2026-11-17T17:31:33+00:00",
+   "side": "home",
+   "start": "2026-11-18T00:30Z",
+   "team": "Toronto Raptors",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401910002|home|Kalshi": {
    "dec": 2.3992,
    "ev": 0.041,
@@ -8717,6 +8734,28 @@
    "team": "Toronto Raptors",
    "tip": "7:30 PM",
    "venue": "Kalshi"
+  },
+  "nba:401910002|sure": {
+   "id": "nba:401910002",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-142",
+     "stake_share": 0.5946,
+     "team": "New York Knicks",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "+150",
+     "stake_share": 0.4054,
+     "team": "Toronto Raptors",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "NY @ TOR",
+   "profit": 0.0134,
+   "seen": "2026-11-17T17:31:33+00:00"
   },
   "nba:401910004|{\"line\": 220.5, \"t\": \"under\"}|Kalshi": {
    "dec": 2.0513,
@@ -20767,6 +20806,26 @@
    "prob": 0.4657,
    "seen": "2026-11-16T23:53:14+00:00",
    "status": "won",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401910002:home": {
+   "ev": 0.025,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.025,
+     "fair": 0.41,
+     "id": "nba:401910002",
+     "price": "+150",
+     "side": "home",
+     "spec": null,
+     "team": "Toronto Raptors"
+    }
+   ],
+   "payout": 2.5,
+   "prob": 0.41,
+   "seen": "2026-11-17T17:31:33+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
