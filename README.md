@@ -1525,6 +1525,12 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Checked, no change: NBA favourites (2026-11-17).** Boston (76%) and Denver
+(78%) lost on Nov 16. By date halves of 205 graded NBA picks: all 71/102
+vs 66.9 then 79/103 vs 70.9 (z 0.88, 1.77); 70-80% 20/26 vs 19.1 then
+18/26 vs 19.3 (z 0.41, -0.59); 80%+ 14/14 then 20/21; home and away 70%+
+on par or ahead. Nothing short; nothing changes.
+
 **Checked, no change: NHL picks (2026-11-14).** Tampa Bay (64%) lost 0-2,
 Columbus (55%) 3-4 and St. Louis (50%) 1-4 the same night. By date halves
 of 212 graded NHL picks: all 64/106 vs 61.7 (z 0.46) then 66/106 vs 62.2

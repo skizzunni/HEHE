@@ -242,10 +242,12 @@ def first_look(after):
 
 
 def ufc_record(after):
-    """Tonight's UFC board picks so far: "UFC tonight 6-3, 4 to go", or ""."""
+    """Tonight's UFC board picks so far: "UFC tonight 6-3, 1 draw/no contest,
+    3 to go" (a draw counts neither way), or ""."""
     st = [str(v).split(" | ")[0].rsplit("= ", 1)[-1] for k, v in after.items() if k.startswith("UFC ")]
-    w, l, o = st.count("won"), st.count("lost"), st.count("open")
-    return f"UFC tonight {w}-{l}" + (f", {o} to go" if o else ", card done") if w + l else ""
+    w, l, o, d = st.count("won"), st.count("lost"), st.count("open"), st.count("void")
+    return (f"UFC tonight {w}-{l}" + (f", {d} draw/no contest" if d else "")
+            + (f", {o} to go" if o else ", card done")) if w + l + d else ""
 
 
 def changes(before, after):

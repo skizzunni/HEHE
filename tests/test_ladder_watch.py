@@ -221,6 +221,25 @@ class UfcSnapshot(unittest.TestCase):
         self.assertIn("WATCHING: 2 board games -- 0 won, 1 lost (A vs B), 1 open", w.first_look(after))
 
 
+    def test_draw_is_void_and_settled(self):
+        import ladder_watch as w
+        sb = {"events": [{"competitions": [
+            {"status": {"period": 3, "displayClock": "5:00", "type": {"completed": True}},
+             "competitors": [{"athlete": {"displayName": "Holland"}, "winner": False},
+                             {"athlete": {"displayName": "Medic"}, "winner": False}]}]}]}
+        out = w.ufc_snapshot("2026-11-14", {"Medic": 60}, fetch=lambda u: sb)
+        self.assertEqual(out, {"UFC Holland vs Medic": "board pick Medic (60%) = void | no winner (draw or no contest)"})
+        self.assertTrue(w.done(dict(out, SETTLED="x")))
+        self.assertEqual(w.ufc_record(dict(out, **{"UFC A vs B": "board pick A (70%) = won | winner A, decision"})),
+                         "UFC tonight 1-0, 1 draw/no contest, card done")
+
+    def test_feed_failure_is_empty(self):
+        import ladder_watch as w
+
+        def boom(u):
+            raise OSError("down")
+        self.assertEqual(w.ufc_snapshot("2026-11-14", {"A": 70}, fetch=boom), {})
+
 
 class RememberedPicks(unittest.TestCase):
     def test_keeps_picks_that_left_the_board(self):
