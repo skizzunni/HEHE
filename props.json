@@ -54347,11 +54347,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Aaron Gordon",
   "p": 0.849,
   "p_fair": 0.9199,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nba:401910001|n:aaron gordon|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -54363,11 +54365,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Aaron Gordon",
   "p": 0.8475,
   "p_fair": 0.9104,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 13.0
  },
  "nba:401910001|n:aaron gordon|Reb + Ast|5+": {
   "aid": null,
@@ -54379,11 +54383,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Aaron Gordon",
   "p": 0.85,
   "p_fair": 0.8644,
   "price": "-720",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nba:401910001|n:collin gillespie|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -54395,11 +54401,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Collin Gillespie",
   "p": 0.856,
   "p_fair": 0.9633,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401910001|n:devin booker|Points|10+": {
   "aid": null,
@@ -54410,11 +54418,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Devin Booker",
   "p": 0.8728,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401910001|n:devin booker|Points|15+": {
   "aid": null,
@@ -54426,11 +54436,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Devin Booker",
   "p": 0.85,
   "p_fair": 0.8914,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401910001|n:devin booker|Pts + Ast|20+": {
   "aid": null,
@@ -54442,11 +54454,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Devin Booker",
   "p": 0.849,
   "p_fair": 0.8598,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 28.0
  },
  "nba:401910001|n:miles bridges|Points|5+": {
   "aid": null,
@@ -54457,11 +54471,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Miles Bridges",
   "p": 0.8728,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401910001|n:miles bridges|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -54473,11 +54489,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Miles Bridges",
   "p": 0.856,
   "p_fair": 0.9364,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401910001|n:nikola jokic|Rebounds|8+": {
   "aid": null,
@@ -54489,11 +54507,13 @@
   "league": "nba",
   "line": "8+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Nikola Jokic",
   "p": 0.8411,
   "p_fair": 0.9065,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nba:401910001|n:oso ighodaro|Reb + Ast|5+": {
   "aid": null,
@@ -54505,11 +54525,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Oso Ighodaro",
   "p": 0.85,
   "p_fair": 0.8821,
   "price": "-720",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nfl:401872996|n:bhayshul tuten|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -69447,6 +69469,7 @@
   "p": 0.7859,
   "p_fair": 0.7848,
   "price": "-400",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"

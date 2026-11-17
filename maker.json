@@ -19176,6 +19176,7 @@
    "cost": 0.664,
    "edge": 0.0101,
    "fair": 0.6707,
+   "fill": "queue",
    "id": "nfl:401873065",
    "label": "Baltimore Ravens",
    "league": "nfl",
@@ -19188,8 +19189,9 @@
     "team": "Baltimore Ravens"
    },
    "start": "2026-11-17T01:15Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV16LACBAL-BAL"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV16LACBAL-BAL",
+   "won": 0
   },
   "KXNFLGAME-26OCT25CINBAL-CIN|YES": {
    "ask": 0.52,
@@ -20256,6 +20258,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873065",
    "label": "Los Angeles Chargers +4.5",
    "league": "nfl",
@@ -20269,8 +20272,9 @@
     "team": "Los Angeles Chargers"
    },
    "start": "2026-11-17T01:15Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV16LACBAL-BAL5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV16LACBAL-BAL5",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV16LACBAL-BAL5|YES": {
    "ask": 0.51,
@@ -20278,6 +20282,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "nfl:401873065",
    "label": "Baltimore Ravens -4.5",
    "league": "nfl",
@@ -20291,8 +20296,9 @@
     "team": "Baltimore Ravens"
    },
    "start": "2026-11-17T01:15Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV16LACBAL-BAL5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV16LACBAL-BAL5",
+   "won": 0
   },
   "KXNFLSPREAD-26OCT25CINBAL-CIN2|NO": {
    "ask": 0.51,
