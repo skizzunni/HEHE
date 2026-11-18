@@ -98120,7 +98120,9 @@
   "p": 0.7451,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nhl:401892734|n:cutter gauthier|Shots on Goal|2+": {
   "aid": null,
@@ -98132,11 +98134,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cutter Gauthier",
   "p": 0.8755,
   "p_fair": null,
   "price": "-1600",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nhl:401892734|n:cutter gauthier|Shots on Goal|3+": {
   "aid": null,
@@ -98148,11 +98152,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cutter Gauthier",
   "p": 0.735,
   "p_fair": null,
   "price": "-370",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nhl:401892734|n:leo carlsson|Shots on Goal|1+": {
   "aid": null,
@@ -98164,11 +98170,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Leo Carlsson",
   "p": 0.867,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892734|n:mason mctavish|Shots on Goal|1+": {
   "aid": null,
@@ -98179,11 +98187,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mason McTavish",
   "p": 0.8755,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892734|n:mikael granlund|Shots on Goal|1+": {
   "aid": null,
@@ -98195,11 +98205,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikael Granlund",
   "p": 0.83,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892735|n:blake coleman|Shots on Goal|1+": {
   "aid": null,
