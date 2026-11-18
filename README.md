@@ -1525,6 +1525,25 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Daily 10-leg, every-player touchdowns, the daily card (2026-11-17).** The user
+asked for NFL first-TD and 2+ TD scorers, NBA team points and player props,
+winners for everything and a 10-leg every day -- "a fair chance of winning
+it, think about the props individually", not a lottery.
+- ten_leg.py: the ten likeliest every-game lines (each game's single safest
+  bet out of the 8 AM pool), American leagues first, others only to fill.
+  Replayed on every frozen 8 AM pool, 2026-11-04 to 11-16: cashed 11 of 13
+  days at about 1.64x against 41% stated. Heavy favourites, small payout.
+  On the Locks tab above Every game, and in the board data (ten_leg).
+- td_scorers: every listed player now also carries 2+ touchdowns and first
+  touchdown, from the same scaled expected-touchdown model (Poisson; first
+  TD = share of the game's expected touchdowns x P(any)). Model estimates:
+  grade() now keeps each player's touchdown count so the 2+ figure can be
+  checked; first TD has no play-by-play grading yet. Page: "Every player"
+  table under each touchdown game.
+- tools/daily_card.py: the 10-leg, scorers (NFL every player; with no NFL,
+  the likeliest NBA and NHL props, one per player), NBA team points (each
+  team's main team total and its lean) and every game's winner pick.
+
 **Rejected: straight-win ladder legs (2026-11-17).** Runs 6, 8 and 9 each
 died on a "to win" leg (Houston, Boston, Duke). Every saved pool "win"
 line at 70-95% (NBA, NCAAF, NHL, NFL, NCAAB; 98 lines) by date half:

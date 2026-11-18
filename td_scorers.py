@@ -11,6 +11,9 @@ large and uneven. So the chances are made to add up to the game itself:
         TD_PER_POINT * total  (minus the small share defences and returners score)
   * every lam_i scaled so they sum to that, and back to a chance
         p_i = 1 - exp(-lam_i * k)
+  * from the same scaled lam_i (model estimates, labelled so on the page):
+        2+ touchdowns   1 - exp(-lam)(1 + lam)
+        first touchdown (lam / game's expected TDs) * P(any touchdown)
 
 That removes the margin in one consistent step and ties every player's number
 to how much scoring the game is expected to have. Picks are recorded in the
@@ -53,13 +56,37 @@ def for_game(row, league, FD):
             k = target / sum(lam)
             basis = f"scaled to {target:.1f} expected touchdowns (total {total:g})"
     out = []
+    # the game's expected touchdowns, offence (the listed players) plus the
+    # defensive / return share, for who scores FIRST
+    lam_all = sum(l * k for l in lam) / (1 - NON_OFFENSE)
+    any_td = 1 - math.exp(-lam_all)
     for p, l in zip(props, lam):
-        q = 1 - math.exp(-l * k)
-        out.append(dict(p, p=round(q, 4), gid=row["id"], label=f'{p["name"]}: anytime TD'))
+        lk = l * k
+        q = 1 - math.exp(-lk)
+        out.append(dict(p, p=round(q, 4), gid=row["id"], label=f'{p["name"]}: anytime TD',
+                        p2=round(two_plus(lk), 4), pfirst=round(first_td(lk, lam_all, any_td), 4)))
     out.sort(key=lambda x: -x["p"])
     return dict(id=row["id"], lg=league.upper() if league == "nfl" else "NCAA FB",
                 match=row.get("label", ""), tip=row.get("tip"), total=total, basis=basis,
                 players=out[:SHOW], everyone=out)
+
+
+def two_plus(lam):
+    """P(2+ touchdowns) for a player expected to score `lam` (Poisson). A
+    model estimate from the anytime price, graded as td_history fills
+    (grade() keeps each player's touchdown count from 2026-11-18)."""
+    return 1 - math.exp(-lam) * (1 + lam)
+
+
+def first_td(lam, lam_all, any_td=None):
+    """P(this player scores the game's first touchdown): his share of the
+    game's expected touchdowns, times the chance there is one at all. A
+    model estimate: no play-by-play is graded, so it stays unvalidated."""
+    if lam_all <= 0:
+        return 0.0
+    if any_td is None:
+        any_td = 1 - math.exp(-lam_all)
+    return lam / lam_all * any_td
 
 
 def for_slot(board_slot):
@@ -146,6 +173,8 @@ def grade():
                 continue
             v = fn(s_)
             e["status"] = "ungradable" if v is None else ("won" if v >= 1 else "lost")
+            if v is not None:
+                e["tds"] = v                        # so the 2+ estimate can be checked too
     with open(HISTORY, "w") as fh:
         json.dump(book, fh, indent=0, sort_keys=True)
 

@@ -746,6 +746,12 @@ def snapshot():
                     if _g:
                         _r["safe"] = dict(label=_g["label"], price=_g.get("price"), p=_g["p"])
             print(f"every game: {len(_eg)} games, record {out['every_game']['record']}", file=sys.stderr)
+            try:                           # the daily 10-leg: the ten likeliest of those, American games first
+                import ten_leg
+                out["ten_leg"] = dict(today=ten_leg.build(_eg), preview=not _fz,
+                                      record=ten_leg.record(locks.SAFE_LEDGER))
+            except Exception as e_:
+                print(f"ten-leg skipped ({e_})", file=sys.stderr)
         except Exception as e_:
             print(f"every game skipped ({e_})", file=sys.stderr)
         for v_ in out["safe_locks"].values():
