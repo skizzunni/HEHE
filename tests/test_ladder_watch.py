@@ -284,3 +284,31 @@ class UfcRecord(unittest.TestCase):
         self.assertEqual(w.ufc_record({"Over 1": "open"}), "")
         done = dict(after, **{"UFC C vs D": "board pick D (66%) = won | winner D, decision"})
         self.assertEqual(w.ufc_record(done), "UFC tonight 2-1, card done")
+
+
+class TenLegWatch(unittest.TestCase):
+    def test_record_changes_and_done(self):
+        before = {"SETTLED": "x", "TEN Over 200.5 points (A @ B)": "open", "TEN Under 250.5 points (C @ D)": "open"}
+        after = dict(before, **{"TEN Over 200.5 points (A @ B)": "won | B 110 - A 101"})
+        self.assertEqual(w.ten_record(after), "10-leg: 1 won, 0 lost, 1 open")
+        self.assertIn("CHANGE: TEN Over 200.5 points (A @ B) = won | B 110 - A 101 | 10-leg: 1 won, 0 lost, 1 open",
+                      w.changes(before, after))
+        self.assertFalse(w.done(after))
+        lost = dict(after, **{"TEN Under 250.5 points (C @ D)": "lost | D 130 - C 125"})
+        self.assertEqual(w.ten_record(lost), "10-leg: 1 won, 1 lost, 0 open -- ticket lost")
+        self.assertTrue(w.done(lost))
+        self.assertIn("WATCHING: 10-leg: 1 won, 0 lost, 1 open", w.first_look(after))
+        self.assertEqual(w.ten_record({"SETTLED": "x"}), "")
+
+    def test_snapshot_from_pool(self):
+        import unittest.mock as m
+        import locks
+        eg = [dict(gid=f"g{i}", label=f"Over {200 + i}.5 points", price="-2000", p=0.93, league="nba",
+                   match=f"T{i} @ U{i}", status="won" if i == 0 else "open", score="U0 110 - T0 101" if i == 0 else None)
+              for i in range(10)]
+        with m.patch.object(locks, "every_game", lambda legs, led=None: [dict(g) for g in eg]):
+            snap = w.ten_snapshot("2026-11-18", {}, pool={"legs": []})
+        self.assertEqual(len(snap), 10)
+        self.assertEqual(snap["TEN Over 200.5 points (T0 @ U0)"], "won | U0 110 - T0 101")
+        self.assertEqual(snap["TEN Over 201.5 points (T1 @ U1)"], "open")
+        self.assertEqual(w.ten_snapshot("2026-11-18", {}, pool={}), {})

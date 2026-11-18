@@ -226,11 +226,44 @@ def _same(a, b):
     return k(a) == k(b)
 
 
+def ten_snapshot(day, led, pool=None):
+    """{"TEN <label> (<match>)": "open|won|lost|void[ | score]"} for the day's
+    10-leg (ten_leg.py): picked from the frozen 8 AM pool exactly as at 8 AM,
+    graded from the ledger like the Every game list."""
+    import locks
+    import ten_leg
+    if pool is None:
+        pool = locks.frozen_pool(day, locks.SAFE_LEDGER)
+    if not pool:
+        return {}
+    eg = locks.every_game(pool.get("legs"), led)
+    for g in eg:
+        g["_st"], g["status"] = g["status"], "open"
+    T = ten_leg.build(eg)
+    out = {}
+    for g in (T or {}).get("legs") or []:
+        out[f"TEN {g['label']} ({g.get('match') or ''})"] = g["_st"] + (
+            f" | {g['score']}" if g.get("score") and g["_st"] != "open" else "")
+    return out
+
+
+def ten_record(after):
+    """The 10-leg so far: "10-leg: 4 won, 0 lost, 6 open" (a loss means the
+    ticket is gone), or ""."""
+    st = [str(v).split(" | ")[0] for k, v in after.items() if k.startswith("TEN ")]
+    if not st:
+        return ""
+    w, l, o = st.count("won"), st.count("lost"), st.count("open")
+    return f"10-leg: {w} won, {l} lost, {o} open" + (" -- ticket lost" if l else " -- ticket cashed" if not o else "")
+
+
 def first_look(after):
     """The first look, short: every ladder leg (and SETTLED) in full, then the
     board games as one count line -- won, lost (named), open. It used to print
     every game, 40+ lines that cut off before the ladder legs could be read."""
-    out = [f"WATCHING: {k} = {v}" for k, v in after.items() if not k.startswith(("GAME ", "UFC "))]
+    out = [f"WATCHING: {k} = {v}" for k, v in after.items() if not k.startswith(("GAME ", "UFC ", "TEN "))]
+    if ten_record(after):
+        out.append(f"WATCHING: {ten_record(after)}")
     G = {k: str(v).split(" | ")[0] for k, v in after.items() if k.startswith(("GAME ", "UFC "))}
     if G:
         won = sum(v.endswith("= won") for v in G.values())
@@ -253,9 +286,10 @@ def ufc_record(after):
 def changes(before, after):
     """Lines for every leg or game whose state moved, plus the settle line. A
     UFC result carries the night's running record (ufc_record)."""
-    rec = ufc_record(after)
+    rec, ten = ufc_record(after), ten_record(after)
     out = [f"CHANGE: {k} = {v}" + (f" | {rec}" if k.startswith("UFC ") and rec
                                     and not str(v).split(" | ")[0].endswith("= open") else "")
+           + (f" | {ten}" if k.startswith("TEN ") and ten else "")
            for k, v in after.items() if k != "SETTLED" and before and not _same(before.get(k), v)]
     if "SETTLED" in after and before.get("SETTLED") != after["SETTLED"]:
         out.append(f"SETTLED: {after['SETTLED']}")
@@ -265,7 +299,8 @@ def changes(before, after):
 def done(after):
     """The ladder has settled and no watched game is still open."""
     return "SETTLED" in after and not any(str(v).split(" | ")[0].endswith("= open")
-                                         for k, v in after.items() if k.startswith(("GAME ", "UFC ")))
+                                         for k, v in after.items() if k.startswith(("GAME ", "UFC "))) \
+        and not any(str(v).split(" | ")[0] == "open" for k, v in after.items() if k.startswith("TEN "))
 
 
 def main(state_path, day=None, league=None):
@@ -280,7 +315,13 @@ def main(state_path, day=None, league=None):
         root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
         try:
             with open(os.path.join(root, "ledger.json")) as fh:
-                after.update(games_snapshot(json.load(fh), day, league))
+                led = json.load(fh)
+            after.update(games_snapshot(led, day, league))
+            if league == "all":          # the daily 10-leg, leg by leg
+                try:
+                    after.update(ten_snapshot(day, led))
+                except Exception:
+                    pass
         except (OSError, ValueError):
             pass
         if league == "all":              # UFC results come from ESPN, not the ledger
