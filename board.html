@@ -1551,11 +1551,16 @@ function watchNote(x){
   const nice = {over: 'overs', under: 'unders', teamover: 'team overs', teamunder: 'team unders', spread: 'spreads', win: 'wins', dc: 'double chances'};
   const ws = W.filter(v => v.league === lg && v.t === t);
   return ws.map(w => '<div class="lgw"><b>Caution:</b> ' + esc(String(lg).toUpperCase()) + ' ' + esc(nice[t] || t) + ' ' + w.card + ' have won '
-    + w.won + ' of ' + w.n + ' against ' + w.said + '% stated, short in both halves of the record.</div>').join('')
+    + w.won + ' of ' + w.n + gamesNote(w) + ' against ' + w.said + '% stated, short in both halves of the record.</div>').join('')
     + (D.bright_pool || []).filter(v => v.league === lg && v.t === t).map(w => '<div class="sbn"><b>Running ahead:</b> '
         + esc(String(lg).toUpperCase()) + ' ' + esc(nice[t] || t) + ' at 70-95% across every saved FanDuel line have won ' + w.won + ' of ' + w.n
-        + ' against ' + w.said + '% stated, ahead in both halves of the record.</div>').join('')
+        + gamesNote(w) + ' against ' + w.said + '% stated, ahead in both halves of the record.</div>').join('')
     + formNote(lg, t, nice[t] || t) + (t === 'spread' ? sideNote(lg, (x.spec || {}).line) : '');
+}
+// how many distinct games a pool record stands on (locks.pool_game_counts):
+// a game's alternate lines each count as a line and win or lose together
+function gamesNote(w){
+  return w.games && w.games < w.n ? ' lines (' + w.games + ' games)' : '';
 }
 // spreads by side (locks.spread_sides): how this league's spreads that get
 // points, or give them, have done at 70-95% across every saved line, both halves
@@ -2176,7 +2181,7 @@ function cautionsHTML(){
   return '<div class="sweep"><details><summary><b>Cautions in force</b> (' + W.length + ')' + (cold.length ? ' &middot; running cold (' + cold.length + ')' : '')
     + '</summary>' + (W.length ? '<ul class="betlegs">'
     + W.map(w => '<li>' + esc(String(w.league).toUpperCase()) + ' ' + esc(nice[w.t] || w.t) + ' ' + w.where + ': ' + w.won + ' of ' + w.n
-      + ' (' + Math.round(100 * w.won / w.n) + '% vs ' + w.said + '% stated)</li>').join('')
+      + gamesNote(w) + ' (' + Math.round(100 * w.won / w.n) + '% vs ' + w.said + '% stated)</li>').join('')
     + '</ul><p class="note">Short of their stated chance in both halves of the record. Legs of these kinds carry a caution; picks are not changed until '
     + 'cautioned legs, recorded at card time, keep losing on games decided after the flag.</p>' : '')
     + (cold.length ? '<p class="note"><b>Running cold, last 7 days</b> (every saved line at 70-95%): '
