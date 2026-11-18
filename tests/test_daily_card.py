@@ -89,6 +89,18 @@ class ReviewLine(unittest.TestCase):
         self.assertIsNone(daily_review.ticket_size_line({8: dict(days=0)}))
 
 
+class TdCalibration(unittest.TestCase):
+    def test_line(self):
+        import daily_review
+        B = {f"k{i}": dict(status="won" if i % 4 == 0 else "lost", p=0.25, date=f"2026-11-{1 + i // 4:02d}") for i in range(40)}
+        B["k0"]["tds"] = 2
+        B["k4"]["tds"] = 1
+        out = daily_review.td_calibration_line(B)
+        self.assertTrue(out.startswith("Anytime touchdown chances, by half: 5/20 scored vs 5.0 stated (z +0.0) to 2026-11-05"), out)
+        self.assertTrue(out.endswith("2+ touchdowns graded so far: 1 of 2 players."), out)
+        self.assertIsNone(daily_review.td_calibration_line({}))
+
+
 class ValueBands(unittest.TestCase):
     def test_line(self):
         import daily_review

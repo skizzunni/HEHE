@@ -576,6 +576,31 @@ def ten_leg_line(rec=None):
             + (f", at about {rec['pays']:.2f}x." if rec.get("pays") else "."))
 
 
+def td_calibration_line(book=None):
+    """Every graded anytime-touchdown chance (data/td_history.json, all
+    listed players) by date half: scored vs stated, with z. The 2+ and
+    first-TD estimates are built on these. 2026-11-18: 144/1061 vs 124.8
+    (z +2.0) then 150/1062 vs 123.6 (z +2.7) -- players score more than
+    stated; a raise needs both halves past 2.8."""
+    import math
+    if book is None:
+        book = load(os.path.join("data", "td_history.json"), {})
+    R = sorted((e for e in (book or {}).values() if isinstance(e, dict) and e.get("status") in ("won", "lost")
+                and e.get("p") and e.get("date")), key=lambda e: e["date"])
+    if len(R) < 40:
+        return None
+    h = len(R) // 2
+
+    def rec(S):
+        w = sum(e["status"] == "won" for e in S)
+        p = sum(e["p"] for e in S)
+        v = sum(e["p"] * (1 - e["p"]) for e in S) or 1
+        return f"{w}/{len(S)} scored vs {p:.1f} stated (z {(w - p) / math.sqrt(v):+.1f})"
+    two = [e for e in R if isinstance(e.get("tds"), (int, float))]
+    return (f"Anytime touchdown chances, by half: {rec(R[:h])} to {R[h - 1]['date']}, then {rec(R[h:])}"
+            + (f"; 2+ touchdowns graded so far: {sum(e['tds'] >= 2 for e in two)} of {len(two)} players." if two else "."))
+
+
 VALUE_BANDS = ((0, 0.3), (0.3, 0.45), (0.45, 0.6), (0.6, 1.01))
 
 
@@ -1996,6 +2021,8 @@ def words(r, fit):
         out.append(r["ticket_sizes"])
     if r.get("value_bands"):
         out.append(r["value_bands"])
+    if r.get("td_calibration"):
+        out.append(r["td_calibration"])
     if r.get("home_away"):
         out.append(r["home_away"])
     if r.get("ladder_pool"):
@@ -2155,6 +2182,7 @@ def _main():
     log[today.isoformat()]["national"] = national_line()
     log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
+    log[today.isoformat()]["td_calibration"] = td_calibration_line()
     try:
         log[today.isoformat()]["ticket_sizes"] = ticket_size_line()
     except Exception as e:                                  # a broken pool file must not stop the review

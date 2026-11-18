@@ -1525,6 +1525,15 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Checked, no change yet: anytime touchdown chances run low (2026-11-18).**
+The 2+ and first-TD estimates are built on the anytime chances, so those were
+checked first: 2,123 graded NFL player-games by date half, 144/1061 scored vs
+124.8 stated (z +1.99) then 150/1062 vs 123.6 (z +2.74). Players score more
+than the margin-removed price says, most in the 20-40% band (z +1.94, +1.59).
+The second half nearly clears the 2.8 bar, the first does not, so nothing is
+raised; the touchdown numbers lean conservative. The review prints this daily
+(td_calibration_line), with the 2+ record once grading has counts.
+
 **Checked, no change: where value bets fall short (2026-11-18).** The review
 has flagged value bets as trailing for days (39.3% vs 44.2% on 534). By
 fair-chance band and start-date half: 45-60% ran 54/130 vs 65.5 (z -2.03)
