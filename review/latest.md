@@ -18,6 +18,7 @@ Priced-era picks by league, by half (split 2026-11-03): soccer or-draw 77% vs 74
 National-team soccer: 55/63 (87% vs 76% stated), 2 of 8 losses draws (straight win 28/30 (93% vs 78% stated); or draw 27/33 (82% vs 75% stated)); club soccer 806/1110 (73% vs 71% stated).
 Coin flips (called under 60%), by half: all 92/158 (58% vs 55%) then 98/159 (62% vs 55%); price moved against 3+ 11/18 (61% vs 54%) then 12/19 (63% vs 54%); steady 70/111 (63% vs 54%) then 70/114 (61% vs 55%); moved toward 3+ 5/12 (42% vs 56%) then 16/26 (62% vs 57%).
 Pool game lines, every league and bet type, by half: 83.4% vs 81.6% (z +3.7) to 2026-11-11, then 80.2% vs 82.1% (z -4.0) on 13111 saved lines.
+Daily 10-leg, replayed on every 8 AM card: cashed 11 of 13 days (85%) vs 41% stated, at about 1.64x.
 Home and away picks, by half: NBA home 66% vs 66% then 78% vs 70%, away 78% vs 64% then 75% vs 68%; NHL home 61% vs 59% then 58% vs 60%, away 55% vs 57% then 70% vs 56%; NCAAF home 80% vs 74% then 66% vs 72%, away 60% vs 69% then 76% vs 68%; NFL home 70% vs 65% then 67% vs 67%, away 88% vs 62% then 94% vs 68%.
 Injuries at tip-off (225 games, 14 days, early read): my side more out: 1st 25/33 76% vs 66% | 2nd 28/43 65% vs 62%; even: 1st 19/26 73% vs 63% | 2nd 21/37 57% vs 63%; their side more out: 1st 34/42 81% vs 66% | 2nd 34/44 77% vs 66%.
 Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1917 picks).
