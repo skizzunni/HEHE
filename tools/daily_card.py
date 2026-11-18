@@ -42,9 +42,15 @@ def ten_leg_lines(D, day="today"):
     head = (f"Daily {T['n']}-leg: all win {pc(T['chance'])}" + (f", pays {T['pays']:.2f}x" if T.get("pays") else "")
             + (f" -- replayed, cashed {R['cashed']} of {R['days']} days" if R.get("days") else "")
             + (f" (only {T['n']} games priced so far; it fills to {ten_leg.N} at the 8 AM card)" if T["n"] < ten_leg.N else ""))
-    return [head] + [f"  {i}. {g['label']} {g.get('price') or ''} -- {pc(g['p'])} ({str(g.get('league') or '').upper()}, "
-                     f"{g.get('match') or ''}{', ' + g['tip'] if g.get('tip') else ''})"
-                     for i, g in enumerate(T["legs"], 1)]
+    from ladder_ticket import needs                        # the ladder ticket's plain-words wording
+    out = [head]
+    for i, g in enumerate(T["legs"], 1):
+        out.append(f"  {i}. {g['label']} {g.get('price') or ''} -- {pc(g['p'])} ({str(g.get('league') or '').upper()}, "
+                   f"{g.get('match') or ''}{', ' + g['tip'] if g.get('tip') else ''})")
+        n = needs(g["label"], g.get("league"))
+        if n and n != g["label"]:
+            out.append(f"     Needs: {n}")
+    return out
 
 
 FLOOR = 0.80          # a player's line must be at least this likely on its own

@@ -54,7 +54,7 @@ class Card(unittest.TestCase):
             dict(g="Team total", l="Y over 110.5", p=0.52), dict(g="Team total", l="Y under 110.5", p=0.48),
             dict(g="Team total", l="Y over 100.5", p=0.8)]}]},
          "slots": {"today": {"nba": {"rows": [dict(mp="Y", mc=70)]}}},
-         "every_game": {"today": [dict(gid="g", label="Y over 100.5", price="-400", p=0.8, league="nba", match="X @ Y", status="open")]}}
+         "every_game": {"today": [dict(gid="g", label="Y over 100.5 points", price="-400", p=0.8, league="nba", match="X @ Y", status="open")]}}
 
     def test_nfl_scorers_compact(self):
         E = [dict(name=f"P{i}", p=0.5 - i / 50, p2=0.1 + (i == 7) * 0.2, pfirst=0.12 - i / 100, price="+100") for i in range(10)]
@@ -97,6 +97,10 @@ class Card(unittest.TestCase):
         self.assertEqual(daily_card.winner_lines(D)[1:], ["  SOCCER (1): Flamengo 75%", "  SOCCER win or draw (1): Santos 73%"])
         self.assertTrue(daily_card.ten_leg_lines(self.D)[0].startswith("Daily 1-leg: all win 80%, pays 1.25x"))
         self.assertTrue(daily_card.ten_leg_lines(self.D)[0].endswith("(only 1 games priced so far; it fills to 10 at the 8 AM card)"))
+        self.assertEqual(daily_card.ten_leg_lines(self.D)[2], "     Needs: Y must score 101 or more points")
+        D = dict(self.D, every_game={"today": [dict(gid="g", label="Over 200.5 points", price="-2000", p=0.93,
+                                                   league="nba", match="A @ B", status="open")]})
+        self.assertEqual(daily_card.ten_leg_lines(D)[2], "     Needs: Both teams together: 201 or more points")
 
 
 class ReviewLine(unittest.TestCase):
