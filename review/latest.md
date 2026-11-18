@@ -22,16 +22,16 @@ Pool game lines, every league and bet type, by half: 83.4% vs 81.6% (z +3.8) to 
 Daily 10-leg, replayed on every 8 AM card: cashed 11 of 13 days (85%) vs 41% stated, at about 1.64x.
 Home and away picks, by half: NBA home 66% vs 66% then 76% vs 70%, away 78% vs 64% then 75% vs 68%; NHL home 61% vs 59% then 56% vs 60%, away 55% vs 57% then 70% vs 56%; NCAAF home 80% vs 74% then 66% vs 72%, away 60% vs 69% then 76% vs 68%; NFL home 70% vs 65% then 67% vs 67%, away 88% vs 62% then 94% vs 68%.
 Injuries at tip-off (228 games, 14 days, early read): my side more out: 1st 27/37 73% vs 65% | 2nd 26/39 67% vs 62%; even: 1st 21/29 72% vs 63% | 2nd 19/37 51% vs 62%; their side more out: 1st 40/48 83% vs 65% | 2nd 28/38 74% vs 67%.
-Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1921 picks).
+Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1922 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 8/17 vs 70% stated (4.2% by luck; about 2.4 of 58 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.4 of 58 teams expected this far behind by chance); NHL Utah Mammoth 8/18 vs 57% stated (20.8% by luck; about 12.1 of 58 teams expected this far behind by chance).
-High-chance sweep: 70%+ today 0-0, 10 open; swept 3 of 31 past days (last 2026-11-11) | 80%+ today 0-0, 2 open; swept 10 of 30 past days (last 2026-11-13).
+High-chance sweep: 70%+ today 0-0, 10 open; swept 3 of 31 past days (last 2026-11-11) | 80%+ today 0-0, 2 open; swept 10 of 31 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/29 vs 61%; NBA on the tired side 17/22 vs 66%, against it 20/26 vs 72%.
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
 Next UFC card 2026-11-21 (11 fights priced, 3 close): Aleksandre Topuria 71%; Ikram Aliskerov 71%; Diyar Nurgozhay 69%; Jake Matthews 69%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Dan Hooker 62%; Dom Mar Fan 60%; Navajo Stirling 58% (close); Kevin Vallejos 54% (close); Amir Albazi 51% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.3% hit vs 44.2% stated on 534
 Board sweep: 0-0, 24 open -- still clean.
 Why picks lost (14 days): favourite lost 96, close game 87, coin flip 53, blowout 44, upset 41, price moved against it 23, drawn 12.
-Yesterday (2026-11-17): board 29-11, sweep broken by unl Denmark or draw at 63%; 11.4 losses expected, 11 came in (62.2% chance of that many or more).
+Yesterday (2026-11-17): board 30-11, sweep broken by unl Denmark or draw at 63%; 11.4 losses expected, 11 came in (62.5% chance of that many or more).
 - LOST unl Denmark or draw at 63% (-210), Denmark 2 - Norway 3: margin 1 · the book had my side favoured too · called at 63% · favourite lost · close game; soccer picks like it: 96 of 147 (65% vs 66% stated)
 - LOST ncaab Duke Blue Devils at 81% (-455), Duke Blue Devils 78 - Illinois Fighting Illini 99: margin 21 · the book had my side favoured too · called at 81% · upset · blowout
 - LOST nhl Buffalo Sabres at 53% (-125), Buffalo Sabres 3 - Philadelphia Flyers 4: margin 1 · the book had my side favoured too · called at 53% · coin flip · close game; picks like it: 75 of 138 (54% vs 54% stated)
@@ -46,4 +46,4 @@ Yesterday (2026-11-17): board 29-11, sweep broken by unl Denmark or draw at 63%;
 Ladder-consistency props (all time): 2685/3234 won (83.0%) vs 86.3% fair, 87.5% price, 83.6% stated on the board (heavy props capped).
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=209), ncaab 0.00 (n=77), ncaaf 0.00 (n=296), nfl 0.00 (n=70), nhl 0.00 (n=226)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=209), ncaab 0.00 (n=78), ncaaf 0.00 (n=296), nfl 0.00 (n=70), nhl 0.00 (n=226)
