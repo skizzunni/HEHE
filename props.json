@@ -55393,6 +55393,22 @@
   "prop_lock": true,
   "status": "open"
  },
+ "nba:401910005|n:luka doncic|Pts + Ast|35+": {
+  "aid": null,
+  "date": "2026-11-17",
+  "edge": -12.0,
+  "gid": "nba:401910005",
+  "imp": 0.9,
+  "label": "Luka Doncic: 35+ Pts + Ast",
+  "league": "nba",
+  "line": "35+",
+  "market": "Pts + Ast",
+  "name": "Luka Doncic",
+  "p": 0.8555,
+  "p_fair": 0.7923,
+  "price": "-900",
+  "status": "open"
+ },
  "nba:401910005|n:luka doncic|Rebounds|6+": {
   "aid": null,
   "date": "2026-11-17",
@@ -97629,11 +97645,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jack Quinn",
   "p": 0.8755,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892732|n:jack quinn|Shots on Goal|2+": {
   "aid": null,
@@ -97645,11 +97663,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jack Quinn",
   "p": 0.7114,
   "p_fair": null,
   "price": "-320",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892732|n:matvei michkov|Shots on Goal|1+": {
   "aid": null,
@@ -97661,11 +97681,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matvei Michkov",
   "p": 0.8448,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892732|n:owen power|Shots on Goal|1+": {
   "aid": null,
@@ -97677,11 +97699,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Owen Power",
   "p": 0.7451,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892732|n:porter martone|Shots on Goal|1+": {
   "aid": null,
@@ -97693,11 +97717,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Porter Martone",
   "p": 0.8488,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892732|n:rasmus dahlin|Shots on Goal|2+": {
   "aid": null,
@@ -97709,11 +97735,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Rasmus Dahlin",
   "p": 0.7191,
   "p_fair": null,
   "price": "-335",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892732|n:travis konecny|Shots on Goal|1+": {
   "aid": null,
@@ -97725,11 +97753,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Travis Konecny",
   "p": 0.8559,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892732|n:travis sanheim|Shots on Goal|1+": {
   "aid": null,
@@ -97741,11 +97771,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Travis Sanheim",
   "p": 0.8448,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892732|n:trevor zegras|Shots on Goal|1+": {
   "aid": null,
@@ -97757,11 +97789,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Trevor Zegras",
   "p": 0.8488,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892732|n:tyson foerster|Shots on Goal|1+": {
   "aid": null,
@@ -97773,11 +97807,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Tyson Foerster",
   "p": 0.8525,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892733|n:anton frondell|Shots on Goal|1+": {
   "aid": null,
