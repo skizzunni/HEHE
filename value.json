@@ -9090,6 +9090,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910012|home|FanDuel": {
+   "dec": 1.4651,
+   "ev": 0.0152,
+   "fair": 0.6929,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910012",
+   "kind": "value",
+   "league": "nba",
+   "match": "WSH @ TOR",
+   "price": "-215",
+   "seen": "2026-11-18T17:40:32+00:00",
+   "side": "home",
+   "start": "2026-11-19T00:30Z",
+   "team": "Toronto Raptors",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401910013|home|FanDuel": {
    "dec": 3.6,
    "ev": 0.0109,
@@ -18812,6 +18829,30 @@
    "tip": "10:00 PM",
    "venue": "FanDuel"
   },
+  "nhl:401892744|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Tampa Bay Lightning\"}|FanDuel": {
+   "dec": 2.8,
+   "dk": "+154",
+   "ev": 0.0424,
+   "fair": 0.3723,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892744",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "EDM @ TB",
+   "price": "+180",
+   "seen": "2026-11-18T17:40:32+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Tampa Bay Lightning\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Tampa Bay Lightning"
+   },
+   "start": "2026-11-20T00:30Z",
+   "team": "Tampa Bay Lightning -1.5",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nhl:401892745|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Pittsburgh Penguins\"}|Kalshi": {
    "dec": 3.1776,
    "dk": "+190",
@@ -18835,6 +18876,30 @@
    "team": "Pittsburgh Penguins -1.5",
    "tip": "7:00 PM",
    "venue": "Kalshi"
+  },
+  "nhl:401892749|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Winnipeg Jets\"}|FanDuel": {
+   "dec": 3.2,
+   "dk": "+180",
+   "ev": 0.0746,
+   "fair": 0.3358,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892749",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "spread",
+   "match": "NYI @ WPG",
+   "price": "+220",
+   "seen": "2026-11-18T17:40:32+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Winnipeg Jets\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Winnipeg Jets"
+   },
+   "start": "2026-11-20T00:00Z",
+   "team": "Winnipeg Jets -1.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
   },
   "nhl:401892749|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Winnipeg Jets\"}|Kalshi": {
    "dec": 3.1776,
