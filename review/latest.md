@@ -28,7 +28,7 @@ Teams backed most, furthest behind (10+ picks): NBA New York Knicks 8/17 vs 70% 
 High-chance sweep: 70%+ today 0-0, 12 open; swept 3 of 32 past days (last 2026-11-11) | 80%+ today 0-0, 5 open; swept 10 of 31 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/29 vs 61%; NBA on the tired side 17/22 vs 66%, against it 20/26 vs 72%.
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
-Next UFC card 2026-11-21 (11 fights priced, 3 close): Aleksandre Topuria 71%; Ikram Aliskerov 71%; Diyar Nurgozhay 69%; Jake Matthews 69%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Dan Hooker 62%; Dom Mar Fan 60%; Navajo Stirling 58% (close); Kevin Vallejos 54% (close); Amir Albazi 51% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
+Next UFC card 2026-11-21 (11 fights priced, 4 close): Aleksandre Topuria 71%; Ikram Aliskerov 71%; Diyar Nurgozhay 69%; Jake Matthews 69%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Dan Hooker 62%; Dom Mar Fan 60% (close); Navajo Stirling 58% (close); Kevin Vallejos 54% (close); Amir Albazi 51% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.6% hit vs 44.3% stated on 536
 Board sweep: 0-0, 27 open -- still clean.
 Why picks lost (14 days): favourite lost 96, close game 87, coin flip 53, blowout 44, upset 41, price moved against it 23, drawn 12.
