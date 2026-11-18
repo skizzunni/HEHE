@@ -55553,6 +55553,22 @@
   "price": "-670",
   "status": "open"
  },
+ "nba:401910005|n:sion james|Reb + Ast|5+": {
+  "aid": null,
+  "date": "2026-11-17",
+  "edge": -0.9,
+  "gid": "nba:401910005",
+  "imp": 0.875,
+  "label": "Sion James: 5+ Reb + Ast",
+  "league": "nba",
+  "line": "5+",
+  "market": "Reb + Ast",
+  "name": "Sion James",
+  "p": 0.8454,
+  "p_fair": 0.8675,
+  "price": "-700",
+  "status": "open"
+ },
  "nfl:401872996|n:bhayshul tuten|Anytime Touchdown Scorer|1+": {
   "aid": null,
   "date": "2026-10-18",
@@ -97138,11 +97154,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "David Pastrnak",
   "p": 0.8488,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892728|n:elias lindholm|Shots on Goal|1+": {
   "aid": null,
@@ -97154,11 +97172,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Elias Lindholm",
   "p": 0.8448,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892728|n:morgan geekie|Shots on Goal|1+": {
   "aid": null,
@@ -97170,11 +97190,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Morgan Geekie",
   "p": 0.8448,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892728|n:pavel zacha|Shots on Goal|1+": {
   "aid": null,
@@ -97186,11 +97208,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Pavel Zacha",
   "p": 0.8403,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892728|n:quinton byfield|Shots on Goal|1+": {
   "aid": null,
@@ -97201,11 +97225,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Quinton Byfield",
   "p": 0.8755,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892728|n:quinton byfield|Shots on Goal|2+": {
   "aid": null,
@@ -97217,11 +97243,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Quinton Byfield",
   "p": 0.7392,
   "p_fair": null,
   "price": "-380",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892728|n:trevor moore|Shots on Goal|1+": {
   "aid": null,
@@ -97233,11 +97261,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Trevor Moore",
   "p": 0.8525,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892729|n:alex ovechkin|Shots on Goal|1+": {
   "aid": null,
