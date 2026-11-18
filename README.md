@@ -1543,6 +1543,13 @@ then 51/119 vs 60.7 (z -1.79) -- short both times, short of the 2.8 bar;
 (PREREG_HOME, since Nov 15) decides that one on new finds. Nothing changes;
 the review prints the bands daily (value_band_line).
 
+**Checked, no change: are the -2000 every-game lines really 93%? (2026-11-18)**
+Today's 10-leg is ten NBA totals at -2000 (93% each). Every graded every-game
+line by stated chance and date half (split Nov 11): 92%+ won 32/33 (97% vs
+93%, recent half only); 85-92% 152/166 then 136/147 (92%, 93% vs 90%);
+under 85% 30/38 then 17/20 (79%, 85% vs 82%). On par or ahead -- the top
+band is the right kind of leg. The review prints the bands daily.
+
 **Checked: how many legs keep a fair chance (2026-11-18).** The every-game
 ticket replayed on the 13 graded 8 AM cards at each size: 4 legs 12/13 at
 1.22x; 6 legs 12/13 at 1.34x; 8 legs 11/13 at 1.49x; 10 legs 11/13 at

@@ -131,6 +131,16 @@ class TdCalibration(unittest.TestCase):
         self.assertIsNone(daily_review.td_calibration_line({}))
 
 
+class EveryGameBands(unittest.TestCase):
+    def test_line(self):
+        import daily_review
+        rows = [(f"2026-11-{1 + i // 5:02d}", dict(p=0.93 if i % 2 else 0.88, status="won" if i % 7 else "lost")) for i in range(30)]
+        out = daily_review.every_game_band_line(rows)
+        self.assertTrue(out.startswith("Every game's safest line by chance, halves split 2026-11-04: 92%+ "), out)
+        self.assertIn("under 85% none then none", out)
+        self.assertIsNone(daily_review.every_game_band_line([]))
+
+
 class ValueBands(unittest.TestCase):
     def test_line(self):
         import daily_review

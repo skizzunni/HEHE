@@ -562,6 +562,36 @@ def ladder_pool_line(report=None, rows_fn=None):
     return ("Ladder leg types on every saved pool line, by half: " + "; ".join(parts) + ".") if parts else None
 
 
+EG_BANDS = ((0.92, 1.01, "92%+"), (0.85, 0.92, "85-92%"), (0, 0.85, "under 85%"))
+
+
+def every_game_band_line(rows=None):
+    """Every graded every-game line (each game's safest bet, frozen 8 AM
+    pools) by stated chance and date half -- the 10-leg is built from the top
+    band. 2026-11-18: 92%+ 32/33 (97% vs 93%), 85-92% 92% then 93% vs 90%."""
+    if rows is None:
+        import ledger
+        import locks
+        led = ledger.load()
+        rows = [(d, g) for d, x in sorted((locks.load(locks.SAFE_LEDGER).get("pools") or {}).items())
+                for g in locks.every_game(x.get("legs"), led) if g["status"] in ("won", "lost")]
+    days = sorted({d for d, _ in rows})
+    if len(rows) < 20 or len(days) < 2:
+        return None
+    mid = days[len(days) // 2]
+
+    def rec(S):
+        if not S:
+            return "none"
+        w = sum(g["status"] == "won" for g in S)
+        return f"{w}/{len(S)} ({round(100 * w / len(S))}% vs {round(100 * sum(g['p'] for g in S) / len(S))}%)"
+    parts = []
+    for lo, hi, name in EG_BANDS:
+        f = lambda half: [g for d, g in rows if (d < mid) == half and lo <= g["p"] < hi]
+        parts.append(f"{name} {rec(f(True))} then {rec(f(False))}")
+    return f"Every game's safest line by chance, halves split {mid}: " + "; ".join(parts) + "."
+
+
 def ten_leg_line(rec=None):
     """The daily 10-leg (ten_leg.py) replayed on every frozen 8 AM pool:
     days cashed vs the average stated all-win chance, and its payout."""
@@ -2017,6 +2047,8 @@ def words(r, fit):
         out.append(r["pool_overall"])
     if r.get("ten_leg"):
         out.append(r["ten_leg"])
+    if r.get("eg_bands"):
+        out.append(r["eg_bands"])
     if r.get("ticket_sizes"):
         out.append(r["ticket_sizes"])
     if r.get("value_bands"):
@@ -2183,6 +2215,10 @@ def _main():
     log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
     log[today.isoformat()]["td_calibration"] = td_calibration_line()
+    try:
+        log[today.isoformat()]["eg_bands"] = every_game_band_line()
+    except Exception as e:                                  # a broken pool file must not stop the review
+        log[today.isoformat()]["eg_bands"] = f"Every game by chance: unavailable ({type(e).__name__})."
     try:
         log[today.isoformat()]["ticket_sizes"] = ticket_size_line()
     except Exception as e:                                  # a broken pool file must not stop the review
