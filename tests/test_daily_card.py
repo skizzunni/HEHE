@@ -56,15 +56,21 @@ class Card(unittest.TestCase):
     def test_no_nfl_falls_back_to_props_one_per_player(self):
         D = dict(self.D, td={"today": []})
         out = daily_card.scorer_lines(D)
-        self.assertEqual(out[0], "No NFL today -- likeliest player props instead:")
+        self.assertEqual(out[0], "No NFL today -- player props instead, one per player (his best-paying line at 80%+):")
         self.assertEqual(sum("P1:" in l for l in out), 1)              # one prop per player
-        self.assertTrue(any("P1: 5+ Points" in l for l in out))        # the surest of P1's (ties by price)
+        self.assertTrue(any("P1: 10+ Points" in l for l in out))       # his longest price still 80%+
         self.assertTrue(any("P2: 4+ Rebounds" in l for l in out))
+
+    def test_best_per_player_floor(self):
+        P = [dict(name="A", p=0.88, imp=0.99), dict(name="A", p=0.82, imp=0.85), dict(name="A", p=0.6, imp=0.6),
+             dict(name="B", p=0.7, imp=0.7)]
+        self.assertEqual(daily_card.best_per_player(P), [dict(name="A", p=0.82, imp=0.85)])
 
     def test_team_points_and_winners_and_ten_leg(self):
         self.assertEqual(daily_card.team_points_lines(self.D)[1], "  X at Y: Y over 110.5 52%")
         self.assertEqual(daily_card.winner_lines(self.D)[1], "  NBA (1): Y 70%")
         self.assertTrue(daily_card.ten_leg_lines(self.D)[0].startswith("Daily 1-leg: all win 80%, pays 1.25x"))
+        self.assertTrue(daily_card.ten_leg_lines(self.D)[0].endswith("(only 1 games priced so far; it fills to 10 at the 8 AM card)"))
 
 
 class ReviewLine(unittest.TestCase):

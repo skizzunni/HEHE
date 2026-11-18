@@ -5,7 +5,9 @@
   1. the daily 10-leg (ten_leg.py), each leg with its own chance
   2. scorers: NFL touchdown scorers for every listed player -- anytime, 2+
      and first touchdown (td_scorers); on days with no NFL, NBA and NHL
-     player props instead, likeliest first (user, 2026-11-17)
+     player props instead: one line per player, the longest-priced line
+     still 80%+ likely on its own (user, 2026-11-17: "think ab the props
+     individually")
   3. NBA team points: each team's main team total and the side the price leans
   4. every game's winner pick, by league
 
@@ -38,10 +40,30 @@ def ten_leg_lines(D, day="today"):
         return ["Daily 10-leg: not set yet (the 8 AM card sets it)."]
     R = X.get("record") or {}
     head = (f"Daily {T['n']}-leg: all win {pc(T['chance'])}" + (f", pays {T['pays']:.2f}x" if T.get("pays") else "")
-            + (f" -- replayed, cashed {R['cashed']} of {R['days']} days" if R.get("days") else ""))
+            + (f" -- replayed, cashed {R['cashed']} of {R['days']} days" if R.get("days") else "")
+            + (f" (only {T['n']} games priced so far; it fills to {ten_leg.N} at the 8 AM card)" if T["n"] < ten_leg.N else ""))
     return [head] + [f"  {i}. {g['label']} {g.get('price') or ''} -- {pc(g['p'])} ({str(g.get('league') or '').upper()}, "
                      f"{g.get('match') or ''}{', ' + g['tip'] if g.get('tip') else ''})"
                      for i, g in enumerate(T["legs"], 1)]
+
+
+FLOOR = 0.80          # a player's line must be at least this likely on its own
+
+
+def best_per_player(props, floor=FLOOR):
+    """One line per player: of his lines at `floor`+ chance, the one the book
+    prices longest (lowest implied) -- the most that still has a fair chance
+    by itself, not his safest 5+ Points at -10000 that pays almost nothing.
+    Players with nothing at the floor are left out. Likeliest first."""
+    best = {}
+    for p in props:
+        if (p.get("p") or 0) < floor:
+            continue
+        k = p.get("name")
+        cur = best.get(k)
+        if cur is None or (p.get("imp") or 1) < (cur.get("imp") or 1):
+            best[k] = p
+    return sorted(best.values(), key=lambda p: (-p["p"], p.get("imp") or 1))
 
 
 def scorer_lines(D, day="today", per_game=None, top=15):
@@ -56,19 +78,10 @@ def scorer_lines(D, day="today", per_game=None, top=15):
                 out.append(f"    {x['name']}: {pc(x.get('p'))} / {pc(x.get('p2'))} / {pc(x.get('pfirst'))} ({x.get('price') or ''})")
         return out
     games = ((D.get("props") or {}).get(day) or {}).get("games") or []
-    out = ["No NFL today -- likeliest player props instead:"]
+    out = [f"No NFL today -- player props instead, one per player (his best-paying line at {round(100 * FLOOR)}%+):"]
     for lg, name in (("nba", "NBA"), ("nhl", "NHL")):
-        allp = sorted((dict(p, match=g.get("match")) for g in games if str(g.get("id", "")).startswith(lg + ":")
-                       for p in g.get("props") or [] if p.get("p") and p.get("plays", True)),
-                      key=lambda p: (-p["p"], -(p.get("imp") or 0)))
-        P, seen = [], set()
-        for p in allp:                      # one prop per player: more players, not one player's ladder
-            if p.get("name") in seen:
-                continue
-            seen.add(p.get("name"))
-            P.append(p)
-            if len(P) >= top:
-                break
+        P = best_per_player([dict(p, match=g.get("match")) for g in games if str(g.get("id", "")).startswith(lg + ":")
+                             for p in g.get("props") or [] if p.get("p") and p.get("plays", True)])[:top]
         if P:
             out.append(f"  {name}:")
             out += [f"    {p['label']} {p.get('price') or ''} -- {pc(p['p'])} ({p.get('match') or ''})" for p in P]
