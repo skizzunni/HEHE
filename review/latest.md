@@ -35,7 +35,7 @@ Ladder games, players out or doubtful: Utah Jazz at Los Angeles Lakers: Utah Jaz
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
 Next UFC card 2026-11-21 (11 fights priced, 4 close): Ikram Aliskerov 71%; Aleksandre Topuria 71%; Jake Matthews 69%; Diyar Nurgozhay 68%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Dan Hooker 62%; Dom Mar Fan 60% (close); Navajo Stirling 59% (close); Kevin Vallejos 54% (close); Amir Albazi 51% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.6% hit vs 44.3% stated on 536
-Board sweep: 0-0, 29 open -- still clean.
+Board sweep: 0-0, 28 open -- still clean.
 Why picks lost (14 days): favourite lost 96, close game 87, coin flip 53, blowout 44, upset 41, price moved against it 23, drawn 12.
 Yesterday (2026-11-17): board 31-11, sweep broken by unl Denmark or draw at 63%; 11.7 losses expected, 11 came in (66.3% chance of that many or more).
 - LOST unl Denmark or draw at 63% (-210), Denmark 2 - Norway 3: margin 1 · the book had my side favoured too · called at 63% · favourite lost · close game; soccer picks like it: 96 of 147 (65% vs 66% stated)
