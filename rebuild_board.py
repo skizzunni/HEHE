@@ -749,7 +749,8 @@ def snapshot():
             try:                           # the daily 10-leg: the ten likeliest of those, American games first
                 import ten_leg
                 out["ten_leg"] = dict(today=ten_leg.build(_eg), preview=not _fz,
-                                      record=ten_leg.record(locks.SAFE_LEDGER))
+                                      record=ten_leg.record(locks.SAFE_LEDGER),
+                                      sizes=ten_leg.sizes(locks.SAFE_LEDGER))
             except Exception as e_:
                 print(f"ten-leg skipped ({e_})", file=sys.stderr)
         except Exception as e_:

@@ -69,3 +69,20 @@ def record(path=None, led=None, n=N):
         return dict(days=0)
     return dict(days=days, cashed=cashed, stated=round(sum(stated) / len(stated), 3),
                 pays=round(sum(pays) / len(pays), 2) if pays else None)
+
+
+SIZES = (6, 8, 10, 12, 15)
+
+
+def sizes(path=None, led=None, ns=SIZES):
+    """record() at several ticket sizes, so the page can show the trade:
+    fewer legs cash more often and pay less. [dict(n, days, cashed, pays)]."""
+    if led is None:
+        import ledger
+        led = ledger.load()
+    out = []
+    for n in ns:
+        r = record(path, led=led, n=n)
+        if r.get("days"):
+            out.append(dict(n=n, days=r["days"], cashed=r["cashed"], pays=r.get("pays")))
+    return out

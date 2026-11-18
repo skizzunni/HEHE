@@ -27,6 +27,14 @@ class TenLeg(unittest.TestCase):
         self.assertIsNone(ten_leg.build([]))
 
 
+class Sizes(unittest.TestCase):
+    def test_sizes_skips_empty(self):
+        import unittest.mock as m
+        recs = {6: dict(days=13, cashed=12, pays=1.34), 8: dict(days=0)}
+        with m.patch.object(ten_leg, "record", lambda path=None, led=None, n=10: recs.get(n, dict(days=0))):
+            self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
+
+
 class TdModel(unittest.TestCase):
     def test_two_plus_and_first(self):
         self.assertAlmostEqual(td_scorers.two_plus(0.6), 0.1219, places=4)

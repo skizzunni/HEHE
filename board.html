@@ -2010,6 +2010,10 @@ function tenLegHTML(){
     + (R.days ? 'Replayed on every 8 AM card: <b>cashed ' + R.cashed + ' of ' + R.days + ' days</b> against about '
         + Math.round(100 * R.stated) + '% stated' + (R.pays ? ', at about ' + R.pays.toFixed(2) + 'x' : '') + '. ' : '')
     + 'One miss loses it &mdash; nothing is locked.</p>'
+    + ((X.sizes || []).length > 1 ? '<p class="note"><b>Other sizes, replayed the same way:</b> '
+        + X.sizes.map(z => (z.n === T.n ? '<b>' : '') + z.n + ' legs cashed ' + z.cashed + ' of ' + z.days
+          + (z.pays ? ' at ' + z.pays.toFixed(2) + 'x' : '') + (z.n === T.n ? '</b>' : '')).join('; ')
+        + '. Fewer legs win more often and pay less.</p>' : '')
     + '<ul class="betlegs">' + T.legs.map(g => '<li>' + esc(g.label) + teamTag(g) + ' <b>' + esc(g.price || '') + '</b> &middot; '
       + (100 * g.p).toFixed(0) + '% &middot; ' + esc(g.match || '') + res(g.status)
       + ((g.league || g.tip) ? '<div class="sbn">' + [String(g.league || '').toUpperCase(), g.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '')
