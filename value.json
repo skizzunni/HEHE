@@ -18916,6 +18916,45 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nhl:401892748|home|FanDuel": {
+   "dec": 2.5,
+   "ev": 0.0204,
+   "fair": 0.4082,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892748",
+   "kind": "value",
+   "league": "nhl",
+   "match": "CBJ @ CHI",
+   "price": "+150",
+   "seen": "2026-11-18T17:50:54+00:00",
+   "side": "home",
+   "start": "2026-11-20T01:00Z",
+   "team": "Chicago Blackhawks",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892748|sure": {
+   "id": "nhl:401892748",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "-148",
+     "stake_share": 0.5988,
+     "team": "Columbus Blue Jackets",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "+150",
+     "stake_share": 0.4012,
+     "team": "Chicago Blackhawks",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "CBJ @ CHI",
+   "profit": 0.0029,
+   "seen": "2026-11-18T17:50:54+00:00"
+  },
   "nhl:401892749|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Winnipeg Jets\"}|FanDuel": {
    "dec": 3.2,
    "dk": "+180",
