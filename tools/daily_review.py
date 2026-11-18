@@ -572,6 +572,36 @@ def ten_leg_line(rec=None):
             + (f", at about {rec['pays']:.2f}x." if rec.get("pays") else "."))
 
 
+VALUE_BANDS = ((0, 0.3), (0.3, 0.45), (0.45, 0.6), (0.6, 1.01))
+
+
+def value_band_line(finds=None):
+    """Graded value bets (value.json, kind value) by fair-chance band and
+    start-date half, won vs the fair chance, with z. Information only.
+    2026-11-18: 45-60% short both halves (z -2.03, -1.79); 60%+ on par."""
+    import math
+    if finds is None:
+        finds = (load("value.json", {}) or {}).get("finds") or {}
+    R = sorted((e for e in finds.values() if isinstance(e, dict) and e.get("status") in ("won", "lost")
+                and e.get("fair") and e.get("start") and e.get("kind", "value") == "value"), key=lambda e: e["start"])
+    if len(R) < 40:
+        return None
+    h = len(R) // 2
+
+    def rec(S):
+        if not S:
+            return "none"
+        w = sum(e["status"] == "won" for e in S)
+        p = sum(e["fair"] for e in S)
+        v = sum(e["fair"] * (1 - e["fair"]) for e in S) or 1
+        return f"{w}/{len(S)} (z {(w - p) / math.sqrt(v):+.1f})"
+    parts = []
+    for lo, hi in VALUE_BANDS:
+        f = lambda S: [e for e in S if lo <= e["fair"] < hi]
+        parts.append(f"{round(100 * lo)}-{min(100, round(100 * hi))}% {rec(f(R[:h]))} then {rec(f(R[h:]))}")
+    return "Value bets by fair chance, by half: " + "; ".join(parts) + "."
+
+
 def ticket_size_line(recs=None, sizes=(6, 8, 10, 12, 15)):
     """The every-game ticket replayed at several sizes: how often each
     cashed and what it paid -- does 10 legs still give a fair chance?
@@ -1955,6 +1985,8 @@ def words(r, fit):
         out.append(r["ten_leg"])
     if r.get("ticket_sizes"):
         out.append(r["ticket_sizes"])
+    if r.get("value_bands"):
+        out.append(r["value_bands"])
     if r.get("home_away"):
         out.append(r["home_away"])
     if r.get("ladder_pool"):
@@ -2113,6 +2145,7 @@ def _main():
     log[today.isoformat()]["priced_calibration"] = priced_calibration_line()
     log[today.isoformat()]["national"] = national_line()
     log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
+    log[today.isoformat()]["value_bands"] = value_band_line()
     try:
         log[today.isoformat()]["ticket_sizes"] = ticket_size_line()
     except Exception as e:                                  # a broken pool file must not stop the review

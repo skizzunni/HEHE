@@ -1525,6 +1525,15 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Checked, no change: where value bets fall short (2026-11-18).** The review
+has flagged value bets as trailing for days (39.3% vs 44.2% on 534). By
+fair-chance band and start-date half: 45-60% ran 54/130 vs 65.5 (z -2.03)
+then 51/119 vs 60.7 (z -1.79) -- short both times, short of the 2.8 bar;
+30-45% mixed (z +0.65, -2.61); under 30% and 60%+ on par. By side, home
+23/61 then 32/100 (z -1.53, -3.18) -- the pre-registered home test
+(PREREG_HOME, since Nov 15) decides that one on new finds. Nothing changes;
+the review prints the bands daily (value_band_line).
+
 **Checked: how many legs keep a fair chance (2026-11-18).** The every-game
 ticket replayed on the 13 graded 8 AM cards at each size: 4 legs 12/13 at
 1.22x; 6 legs 12/13 at 1.34x; 8 legs 11/13 at 1.49x; 10 legs 11/13 at

@@ -89,5 +89,17 @@ class ReviewLine(unittest.TestCase):
         self.assertIsNone(daily_review.ticket_size_line({8: dict(days=0)}))
 
 
+class ValueBands(unittest.TestCase):
+    def test_line(self):
+        import daily_review
+        F = {f"v{i}": dict(status="won" if i % 2 else "lost", fair=0.5, start=f"2026-11-{1 + i // 4:02d}T00:00Z", kind="value")
+             for i in range(40)}
+        F["parlay"] = dict(status="won", fair=0.5, start="2026-11-01T00:00Z", kind="parlay")
+        out = daily_review.value_band_line(F)
+        self.assertIn("45-60% 10/20 (z +0.0) then 10/20 (z +0.0)", out)
+        self.assertIn("0-30% none then none", out)
+        self.assertIsNone(daily_review.value_band_line({}))
+
+
 if __name__ == "__main__":
     unittest.main()
