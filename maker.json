@@ -2904,6 +2904,7 @@
    "cost": 0.8028,
    "edge": 0.001,
    "fair": 0.8036,
+   "fill": "strict",
    "id": "ncaaf:401866464",
    "label": "Ohio Bobcats",
    "league": "ncaaf",
@@ -2916,8 +2917,9 @@
     "team": "Ohio Bobcats"
    },
    "start": "2026-11-18T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV17BALLOHIO-OHIO"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV17BALLOHIO-OHIO",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV17EMUWMU-WMU|YES": {
    "ask": 0.86,
@@ -7931,6 +7933,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401866464",
    "label": "Ball State Cardinals +11.5",
    "league": "ncaaf",
@@ -7944,8 +7947,9 @@
     "team": "Ball State Cardinals"
    },
    "start": "2026-11-18T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV17BALLOHIO-OHIO12"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV17BALLOHIO-OHIO12",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV17EMUWMU-WMU18|NO": {
    "ask": 0.51,
@@ -14926,6 +14930,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401866464",
    "label": "over 49.5",
    "league": "ncaaf",
@@ -14938,8 +14943,9 @@
     "t": "over"
    },
    "start": "2026-11-18T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV17BALLOHIO-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV17BALLOHIO-50",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV17BALLOHIO-51|NO": {
    "ask": 0.51,
@@ -14947,6 +14953,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401866464",
    "label": "under 50.5",
    "league": "ncaaf",
@@ -14959,8 +14966,9 @@
     "t": "under"
    },
    "start": "2026-11-18T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV17BALLOHIO-51"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV17BALLOHIO-51",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV17EMUWMU-47|YES": {
    "ask": 0.51,

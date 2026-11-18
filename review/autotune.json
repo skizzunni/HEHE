@@ -36,9 +36,9 @@
      "per_sport": 1
     },
     "second": {
-     "hit": 79.8,
+     "hit": 79.2,
      "n": 168,
-     "roi": -0.94
+     "roi": -1.96
     }
    },
    {
@@ -52,9 +52,9 @@
      "per_sport": 1
     },
     "second": {
-     "hit": 78.7,
+     "hit": 78.0,
      "n": 164,
-     "roi": 4.13
+     "roi": 3.09
     }
    },
    {
@@ -84,9 +84,9 @@
      "per_sport": 2
     },
     "second": {
-     "hit": 79.9,
+     "hit": 79.4,
      "n": 194,
-     "roi": 2.71
+     "roi": 2.09
     }
    },
    {
@@ -116,9 +116,9 @@
      "per_sport": 3
     },
     "second": {
-     "hit": 80.3,
+     "hit": 79.8,
      "n": 198,
-     "roi": 2.22
+     "roi": 1.61
     }
    },
    {
@@ -148,9 +148,9 @@
      "per_sport": null
     },
     "second": {
-     "hit": 81.8,
+     "hit": 81.3,
      "n": 198,
-     "roi": 3.03
+     "roi": 2.42
     }
    }
   ]
@@ -158,12 +158,12 @@
  "groups": {
   "nba": {
    "benched": false,
-   "hit": 73.3,
+   "hit": 73.1,
    "implied": 70.0,
-   "n": 206,
-   "roi": 5.0,
-   "upper95": 78.9,
-   "won": 151
+   "n": 208,
+   "roi": 4.7,
+   "upper95": 78.6,
+   "won": 152
   },
   "ncaab": {
    "benched": false,
@@ -248,6 +248,20 @@
    },
    "group": "Kalshi middle, confirmed",
    "what": "value reinstated"
+  },
+  {
+   "day": "2026-11-17",
+   "evidence": {
+    "benched": true,
+    "breakeven": 46.6,
+    "hit": 38.8,
+    "n": 165,
+    "roi": -16.9,
+    "upper95": 46.4,
+    "won": 64
+   },
+   "group": "Kalshi middle, confirmed",
+   "what": "value benched"
   }
  ],
  "rule": {
@@ -255,7 +269,9 @@
   "per_sport": 2
  },
  "updated": "2026-11-17",
- "value_benched": [],
+ "value_benched": [
+  "Kalshi middle, confirmed"
+ ],
  "value_slices": {
   "FanDuel favourite, confirmed": {
    "benched": false,
@@ -295,11 +311,11 @@
   },
   "FanDuel middle, confirmed": {
    "benched": false,
-   "breakeven": 47.5,
-   "hit": 47.1,
-   "n": 102,
-   "roi": -2.2,
-   "upper95": 56.7,
+   "breakeven": 47.4,
+   "hit": 46.6,
+   "n": 103,
+   "roi": -3.2,
+   "upper95": 56.2,
    "won": 48
   },
   "FanDuel middle, single": {
@@ -348,12 +364,12 @@
    "won": 2
   },
   "Kalshi middle, confirmed": {
-   "benched": false,
+   "benched": true,
    "breakeven": 46.6,
-   "hit": 39.0,
-   "n": 164,
-   "roi": -16.4,
-   "upper95": 46.7,
+   "hit": 38.8,
+   "n": 165,
+   "roi": -16.9,
+   "upper95": 46.4,
    "won": 64
   },
   "Kalshi middle, single": {
