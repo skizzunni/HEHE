@@ -54871,6 +54871,7 @@
   "p": 0.852,
   "p_fair": 0.8339,
   "price": "-700",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -54889,6 +54890,7 @@
   "p": 0.8531,
   "p_fair": 0.8825,
   "price": "-1200",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -54907,6 +54909,7 @@
   "p": 0.7525,
   "p_fair": 0.7466,
   "price": "-380",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -54925,6 +54928,7 @@
   "p": 0.8483,
   "p_fair": 0.877,
   "price": "-900",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -98207,11 +98211,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Blake Coleman",
   "p": 0.8525,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892735|n:brock faber|Shots on Goal|1+": {
   "aid": null,
@@ -98223,11 +98229,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Brock Faber",
   "p": 0.8619,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892735|n:kirill kaprizov|Shots on Goal|2+": {
   "aid": null,
@@ -98239,11 +98247,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kirill Kaprizov",
   "p": 0.8488,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892735|n:matt boldy|Shots on Goal|2+": {
   "aid": null,
@@ -98255,11 +98265,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Boldy",
   "p": 0.8525,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892735|n:matt boldy|Shots on Goal|3+": {
   "aid": null,
@@ -98271,11 +98283,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Boldy",
   "p": 0.7032,
   "p_fair": null,
   "price": "-305",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892735|n:quinn hughes|Shots on Goal|1+": {
   "aid": null,
@@ -98286,11 +98300,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Quinn Hughes",
   "p": 0.8755,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892735|n:quinn hughes|Shots on Goal|2+": {
   "aid": null,
@@ -98302,11 +98318,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Quinn Hughes",
   "p": 0.7285,
   "p_fair": null,
   "price": "-355",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892735|n:roman josi|Shots on Goal|2+": {
   "aid": null,
@@ -98318,11 +98336,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Roman Josi",
   "p": 0.706,
   "p_fair": null,
   "price": "-310",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892735|n:steven stamkos|Shots on Goal|2+": {
   "aid": null,
@@ -98334,11 +98354,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Steven Stamkos",
   "p": 0.706,
   "p_fair": null,
   "price": "-310",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892736|n:cole perfetti|Shots on Goal|2+": {
   "aid": null,
