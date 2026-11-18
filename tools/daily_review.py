@@ -428,6 +428,19 @@ def _games(s):
     return f" -- by game, one line each: {s['games_won']}/{g} ({round(100 * s['games_won'] / g)}% vs {round(s['games_said'])}%)"
 
 
+MIN_GAMES = 30          # a "short" verdict on fewer games than this is reported, not acted on
+
+
+def _verdict(s, fine_text):
+    """The test's verdict in words. A registered "short" on fewer than
+    MIN_GAMES distinct games says so: legs count alternate lines, and a
+    dozen games are too few to drop a band (2026-11-18: NFL 14+ was 9/13)."""
+    if s["verdict"] == "short" and s.get("games") is not None and s["games"] < MIN_GAMES:
+        return f"short on legs, but only {s['games']} games -- too few to act on yet"
+    return {"waiting": f"waiting for {s['need']} legs", "short": "SHORT again -- propose excluding the band",
+            "fine": fine_text}[s["verdict"]]
+
+
 def prereg_line():
     """Where the pre-registered spread-band test stands (locks.prereg_status)."""
     try:
@@ -436,8 +449,7 @@ def prereg_line():
     except Exception:
         return None
     rec = f"{s['won']}/{s['n']}" + (f" ({round(100 * s['won'] / s['n'])}% vs {round(s['said'])}% stated)" if s["n"] else "")
-    what = {"waiting": f"waiting for {s['need']} legs", "short": "SHORT again -- propose excluding the band",
-            "fine": "fine -- the caution on this band is off (locks.apply_prereg)"}[s["verdict"]]
+    what = _verdict(s, "fine -- the caution on this band is off (locks.apply_prereg)")
     # the main-line history behind the band (README, 2026-11-10 spread studies)
     hist = (" History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL"
             " (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).")
@@ -457,8 +469,7 @@ def prereg_more_line(status_fn=None):
     parts = []
     for s in S:
         rec = f"{s['won']}/{s['n']}" + (f" ({round(100 * s['won'] / s['n'])}% vs {round(s['said'])}% stated)" if s["n"] else "")
-        what = {"waiting": f"waiting for {s['need']} legs", "short": "SHORT again -- propose excluding the band",
-                "fine": "fine -- the caution on this band is off"}[s["verdict"]]
+        what = _verdict(s, "fine -- the caution on this band is off")
         parts.append(f"{s['name']} (legs from {s.get('since')}): {rec}{_games(s)}; {what}")
     return ("Pre-registered tests also running: " + "; ".join(parts) + ".") if parts else None
 

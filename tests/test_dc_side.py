@@ -154,6 +154,13 @@ class PoolOverall(unittest.TestCase):
 
 
 class PreregGames(unittest.TestCase):
+    def test_short_on_few_games_is_not_acted_on(self):
+        s = dict(verdict="short", need=100, n=100, games=13)
+        self.assertEqual(daily_review._verdict(s, "fine"), "short on legs, but only 13 games -- too few to act on yet")
+        self.assertEqual(daily_review._verdict(dict(s, games=40), "fine"), "SHORT again -- propose excluding the band")
+        self.assertEqual(daily_review._verdict(dict(verdict="short", need=100), "fine"), "SHORT again -- propose excluding the band")
+        self.assertEqual(daily_review._verdict(dict(verdict="fine", need=100), "ok"), "ok")
+
     def test_game_count_shown_only_when_it_differs(self):
         self.assertEqual(daily_review._games(dict(n=100, games=13, games_won=9, games_said=83.1)),
                          " -- by game, one line each: 9/13 (69% vs 83%)")
