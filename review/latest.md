@@ -20,6 +20,7 @@ National-team soccer: 55/63 (87% vs 76% stated), 2 of 8 losses draws (straight w
 Coin flips (called under 60%), by half: all 93/159 (58% vs 55%) then 97/160 (61% vs 55%); price moved against 3+ 11/18 (61% vs 54%) then 12/19 (63% vs 54%); steady 71/112 (63% vs 54%) then 69/115 (60% vs 55%); moved toward 3+ 5/12 (42% vs 56%) then 16/26 (62% vs 57%).
 Pool game lines, every league and bet type, by half: 83.4% vs 81.6% (z +3.6) to 2026-11-12, then 80.0% vs 82.1% (z -4.3) on 12580 saved lines.
 Daily 10-leg, replayed on every 8 AM card: cashed 11 of 13 days (85%) vs 41% stated, at about 1.64x.
+Every game's safest line by chance, halves split 2026-11-11: 92%+ none then 32/33 (97% vs 93%); 85-92% 152/166 (92% vs 90%) then 136/147 (93% vs 90%); under 85% 30/38 (79% vs 82%) then 17/20 (85% vs 81%).
 Ticket size, replayed on every 8 AM card: 6 legs 12/13 at 1.34x; 8 legs 11/13 at 1.49x; 10 legs 11/13 at 1.64x; 12 legs 10/13 at 1.82x; 15 legs 6/11 at 2.18x.
 Value bets by fair chance, by half: 0-30% 11/57 (z +0.1) then 9/65 (z -0.8); 30-45% 17/40 (z +0.6) then 7/40 (z -2.6); 45-60% 54/130 (z -2.0) then 51/119 (z -1.8); 60-100% 31/41 (z +1.2) then 32/44 (z +0.0).
 Anytime touchdown chances, by half: 144/1061 scored vs 124.8 stated (z +2.0) to 2026-11-01, then 150/1062 scored vs 123.6 stated (z +2.7).
