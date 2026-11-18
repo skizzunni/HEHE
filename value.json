@@ -9065,6 +9065,29 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910015|{\"line\": 220.5, \"t\": \"under\"}|Kalshi": {
+   "dec": 2.0947,
+   "dk": "-110",
+   "ev": 0.0474,
+   "fair": 0.5,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401910015",
+   "kind": "single",
+   "league": "nba",
+   "market": "under",
+   "match": "BOS @ DEN",
+   "price": "+109",
+   "seen": "2026-11-18T03:10:58+00:00",
+   "side": "{\"line\": 220.5, \"t\": \"under\"}",
+   "spec": {
+    "line": 220.5,
+    "t": "under"
+   },
+   "start": "2026-11-19T02:30Z",
+   "team": "under 220.5",
+   "tip": "9:30 PM",
+   "venue": "Kalshi"
+  },
   "nba:401910018|home|Kalshi": {
    "dec": 3.1776,
    "ev": 0.0586,
@@ -18370,6 +18393,7 @@
    "seen": "2026-11-17T23:39:30+00:00",
    "side": "away",
    "start": "2026-11-18T00:30Z",
+   "status": "lost",
    "team": "Washington Capitals",
    "tip": "7:30 PM",
    "venue": "Kalshi"
@@ -18393,6 +18417,7 @@
     "t": "over"
    },
    "start": "2026-11-18T00:30Z",
+   "status": "won",
    "team": "over 6.5",
    "tip": "7:30 PM",
    "venue": "FanDuel"
