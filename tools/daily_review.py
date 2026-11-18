@@ -507,12 +507,17 @@ def home_away_line(ledger=None, leagues=("nba", "nhl", "ncaaf", "nfl"), min_half
     return ("Home and away picks, by half: " + "; ".join(parts) + ".") if parts else None
 
 
-def pool_rows(league, t, led=None, lo=0.70, hi=0.95, pools=None):
+def pool_rows(league, t, led=None, lo=0.70, hi=0.95, pools=None, one_per_game=True):
     """Every saved pool line (Locks and Safe Locks pools, deduplicated) of one
     league and game bet type at lo-hi stated, graded from the ledger score:
     [{date, status, p}]. Props are not covered (they grade elsewhere).
     `pools`: [(path, {day: pool})] already loaded, for callers that ask for
-    many league / type pairs (pool_overall_line: 30 reads became 2)."""
+    many league / type pairs (pool_overall_line: 30 reads became 2).
+    one_per_game: keep only the line nearest the band's middle per game and
+    bet type. A game's alternate lines (over 200.5, 202.5, 204.5 ...) win or
+    lose together, so counting them all inflated every z -- NBA overs at
+    80-95% read z +4.4 / +3.8 on 777 lines but +1.5 / +1.5 on 83 games
+    (2026-11-18)."""
     import locks
     import ledger
     import stacks
@@ -535,7 +540,14 @@ def pool_rows(league, t, led=None, lo=0.70, hi=0.95, pools=None):
                 if isinstance(h, int) and isinstance(a, int):
                     r = stacks.settle_score(sp, L["home"], L["away"], h, a)
                     if r in ("won", "lost"):
-                        rows.append(dict(date=d, status=r, p=L["p"]))
+                        rows.append(dict(date=d, status=r, p=L["p"], gid=L.get("gid")))
+    if one_per_game:
+        mid, best = (lo + hi) / 2, {}
+        for r in rows:
+            cur = best.get(r["gid"])
+            if cur is None or abs(r["p"] - mid) < abs(cur["p"] - mid):
+                best[r["gid"]] = r
+        rows = sorted(best.values(), key=lambda r: r["date"])
     return rows
 
 
@@ -558,8 +570,8 @@ def ladder_pool_line(report=None, rows_fn=None):
         if H:
             (a, b) = H[0][1]
             parts.append(f"{str(L.get('league')).upper()} {t} {round(a[0])}% then {round(b[0])}% vs {round(a[1])}%, {round(b[1])}% "
-                         f"on {a[2] + b[2]} saved lines")
-    return ("Ladder leg types on every saved pool line, by half: " + "; ".join(parts) + ".") if parts else None
+                         f"on {a[2] + b[2]} games")
+    return ("Ladder leg types on the saved pools, one line per game, by half: " + "; ".join(parts) + ".") if parts else None
 
 
 EG_BANDS = ((0.92, 1.01, "92%+"), (0.85, 0.92, "85-92%"), (0, 0.85, "under 85%"))
@@ -702,8 +714,8 @@ def pool_overall_line(rows_fn=None, leagues=("nba", "ncaaf", "nhl", "nfl", "ncaa
         p = sum(r["p"] for r in S)
         v = sum(r["p"] * (1 - r["p"]) for r in S) or 1
         return f"{100 * w / len(S):.1f}% vs {100 * p / len(S):.1f}% (z {(w - p) / math.sqrt(v):+.1f})"
-    return (f"Pool game lines, every league and bet type, by half: {rec(R[:h])} to {R[h - 1]['date']}, "
-            f"then {rec(R[h:])} on {len(R)} saved lines.")
+    return (f"Pool game lines (one per game and bet type), every league, by half: {rec(R[:h])} to {R[h - 1]['date']}, "
+            f"then {rec(R[h:])} on {len(R)} game lines.")
 
 
 NATIONAL = ("intl", "unl", "wcq")          # national-team competitions on the board

@@ -148,9 +148,26 @@ class PoolOverall(unittest.TestCase):
                 return []
             return [dict(date=f"2026-11-{1 + i // 4:02d}", status="won" if i % 5 else "lost", p=0.8) for i in range(40)]
         out = daily_review.pool_overall_line(rows_fn=rows)
-        self.assertTrue(out.startswith("Pool game lines, every league and bet type, by half: 80.0% vs 80.0% (z +0.0) to 2026-11-05"), out)
-        self.assertTrue(out.endswith("on 40 saved lines."), out)
+        self.assertTrue(out.startswith("Pool game lines (one per game and bet type), every league, by half: 80.0% vs 80.0% (z +0.0) to 2026-11-05"), out)
+        self.assertTrue(out.endswith("on 40 game lines."), out)
         self.assertIsNone(daily_review.pool_overall_line(rows_fn=lambda lg, t: []))
+
+
+class PoolRowsOnePerGame(unittest.TestCase):
+    def test_alt_lines_count_once(self):
+        import unittest.mock as m
+        import stacks
+        led = {"g1": {"scores": {"H": 110, "A": 100}}, "g2": {"scores": {"H": 90, "A": 95}}}
+        legs = [dict(gid="g1", label=f"Over {l}.5 points", league="nba", spec=dict(t="over", line=l + 0.5),
+                     home="H", away="A", p=p) for l, p in ((200, 0.93), (204, 0.88), (208, 0.82))]
+        legs.append(dict(gid="g2", label="Over 190.5 points", league="nba", spec=dict(t="over", line=190.5),
+                         home="H", away="A", p=0.85))
+        pools = [(None, {"2026-11-10": {"legs": legs}})]
+        with m.patch.object(stacks, "settle_score", lambda sp, h, a, hs, as_: "won"):
+            all_ = daily_review.pool_rows("nba", "over", led=led, lo=0.80, hi=0.95, pools=pools, one_per_game=False)
+            one = daily_review.pool_rows("nba", "over", led=led, lo=0.80, hi=0.95, pools=pools)
+        self.assertEqual(len(all_), 4)
+        self.assertEqual(sorted((r["gid"], r["p"]) for r in one), [("g1", 0.88), ("g2", 0.85)])   # nearest the middle
 
 
 class HomeAway(unittest.TestCase):
@@ -172,7 +189,7 @@ class LadderPool(unittest.TestCase):
                                 {"league": "nfl", "kind": "prop", "market": "Receptions"}]}}
         rows = [dict(date="2026-10-01", status="won", p=0.8)] * 20 + [dict(date="2026-11-01", status="won" if i % 2 else "lost", p=0.8) for i in range(20)]
         out = daily_review.ladder_pool_line(R, rows_fn=lambda lg, t: rows)
-        self.assertEqual(out, "Ladder leg types on every saved pool line, by half: NBA over 100% then 50% vs 80%, 80% on 40 saved lines.")
+        self.assertEqual(out, "Ladder leg types on the saved pools, one line per game, by half: NBA over 100% then 50% vs 80%, 80% on 40 games.")
         self.assertIsNone(daily_review.ladder_pool_line({"today": {"legs": []}}, rows_fn=lambda lg, t: rows))
 
 

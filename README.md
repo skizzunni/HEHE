@@ -1543,6 +1543,17 @@ then 51/119 vs 60.7 (z -1.79) -- short both times, short of the 2.8 bar;
 (PREREG_HOME, since Nov 15) decides that one on new finds. Nothing changes;
 the review prints the bands daily (value_band_line).
 
+**Rejected, and a correction: NBA game totals on the pools (2026-11-18).** Three
+of tonight's four ladder legs are NBA totals. Counting every saved pool line,
+NBA overs at 80-95% ran 363/388 then 365/389 (94% vs 86-87%, z +4.4 / +3.8) --
+past the bar on paper. But a game's alternate lines (over 200.5, 202.5, 204.5)
+win or lose together; with one line per game it is 39/41 then 40/42 (95% vs
+87-88%) at z +1.5 / +1.5 -- not past it. NBA unders, one per game: 93% then
+79% vs 87-88% (z +1.0 / -1.8), mixed. Nothing changes. Correction: the
+whole-pool line (z +3.8 / -4.0 earlier today) and the ladder leg-type lines
+counted every alternate line and overstated their certainty; pool_rows now
+keeps one line per game and bet type by default, and both lines say so.
+
 **Checked, no change: are the -2000 every-game lines really 93%? (2026-11-18)**
 Today's 10-leg is ten NBA totals at -2000 (93% each). Every graded every-game
 line by stated chance and date half (split Nov 11): 92%+ won 32/33 (97% vs
