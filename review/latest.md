@@ -21,6 +21,7 @@ Coin flips (called under 60%), by half: all 93/159 (58% vs 55%) then 97/160 (61%
 Pool game lines, every league and bet type, by half: 83.4% vs 81.6% (z +3.8) to 2026-11-11, then 80.2% vs 82.1% (z -4.0) on 13164 saved lines.
 Daily 10-leg, replayed on every 8 AM card: cashed 12 of 14 days (86%) vs 41% stated, at about 1.64x.
 Ticket size, replayed on every 8 AM card: 6 legs 13/14 at 1.34x; 8 legs 12/14 at 1.49x; 10 legs 12/14 at 1.64x; 12 legs 11/14 at 1.82x; 15 legs 6/12 at 2.17x.
+Value bets by fair chance, by half: 0-30% 11/57 (z +0.1) then 9/65 (z -0.8); 30-45% 17/40 (z +0.6) then 7/40 (z -2.6); 45-60% 54/130 (z -2.0) then 51/119 (z -1.8); 60-100% 31/41 (z +1.2) then 32/44 (z +0.0).
 Home and away picks, by half: NBA home 66% vs 66% then 77% vs 70%, away 78% vs 64% then 75% vs 68%; NHL home 61% vs 59% then 56% vs 60%, away 55% vs 57% then 70% vs 56%; NCAAF home 80% vs 74% then 66% vs 72%, away 60% vs 69% then 76% vs 68%; NFL home 70% vs 65% then 67% vs 67%, away 88% vs 62% then 94% vs 68%.
 Injuries at tip-off (229 games, 14 days, early read): my side more out: 1st 27/37 73% vs 65% | 2nd 26/39 67% vs 62%; even: 1st 21/29 72% vs 63% | 2nd 19/37 51% vs 62%; their side more out: 1st 40/48 83% vs 65% | 2nd 29/39 74% vs 67%.
 Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1923 picks).
