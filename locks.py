@@ -1027,6 +1027,7 @@ def prereg_status(paths=None, led=None, test=PREREG):
     w = n = 0
     p = 0.0
     seen = set()
+    games = {}
     for path in paths or (None, SAFE_LEDGER):
         for d, x in sorted((load(path).get("pools") or {}).items()):
             if d < test["since"]:
@@ -1052,9 +1053,19 @@ def prereg_status(paths=None, led=None, test=PREREG):
                     w += r == "won"
                     n += 1
                     p += L["p"]
+                    cur = games.get(L.get("gid"))       # one line per game, nearest 82.5%
+                    if cur is None or abs(L["p"] - 0.825) < abs(cur[1] - 0.825):
+                        games[L.get("gid")] = (r == "won", L["p"])
     said = round(100 * p / n, 1) if n else None
+    # The verdict counts legs as registered (a game's alternate lines each
+    # count). Alternate lines win or lose together, so the game count says how
+    # much independent evidence there is (2026-11-18); it does not move the
+    # registered bar.
     verdict = ("waiting" if n < test["need"] else "short" if 100 * w / n <= said - test["gap"] else "fine")
-    return dict(name=test["name"], won=w, n=n, said=said, need=test["need"], verdict=verdict, since=test["since"])
+    gw = sum(v[0] for v in games.values())
+    gs = round(100 * sum(v[1] for v in games.values()) / len(games), 1) if games else None
+    return dict(name=test["name"], won=w, n=n, said=said, need=test["need"], verdict=verdict, since=test["since"],
+                games=len(games), games_won=gw, games_said=gs)
 
 
 def apply_prereg_pool(watch, status, test):

@@ -153,6 +153,14 @@ class PoolOverall(unittest.TestCase):
         self.assertIsNone(daily_review.pool_overall_line(rows_fn=lambda lg, t: []))
 
 
+class PreregGames(unittest.TestCase):
+    def test_game_count_shown_only_when_it_differs(self):
+        self.assertEqual(daily_review._games(dict(n=100, games=13, games_won=9, games_said=83.1)),
+                         " -- by game, one line each: 9/13 (69% vs 83%)")
+        self.assertEqual(daily_review._games(dict(n=13, games=13, games_won=9, games_said=83.1)), "")
+        self.assertEqual(daily_review._games(dict(n=5)), "")
+
+
 class PoolRowsOnePerGame(unittest.TestCase):
     def test_alt_lines_count_once(self):
         import unittest.mock as m

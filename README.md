@@ -1543,6 +1543,15 @@ then 51/119 vs 60.7 (z -1.79) -- short both times, short of the 2.8 bar;
 (PREREG_HOME, since Nov 15) decides that one on new finds. Nothing changes;
 the review prints the bands daily (value_band_line).
 
+**Pre-registered tests now show their game counts (2026-11-18).** They count
+legs as registered, and a game's alternate lines each count. By game, one line
+each: college + NFL spreads 7-13.5 (fine) is 372/474 legs but 48/60 games; NFL
+spreads getting 14+ reads SHORT on 70/100 legs -- which is 9/13 games; college
+team-total unders 41/51 legs, 2/3 games. The registered bars are not moved
+(that would change a test after seeing its data), but the review now prints
+the game count beside each, and a verdict on a dozen games is not acted on:
+the NFL 14+ "short" is reported to the user as too few games to drop the band.
+
 **Rejected, and a correction: NBA game totals on the pools (2026-11-18).** Three
 of tonight's four ladder legs are NBA totals. Counting every saved pool line,
 NBA overs at 80-95% ran 363/388 then 365/389 (94% vs 86-87%, z +4.4 / +3.8) --

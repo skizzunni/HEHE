@@ -418,6 +418,15 @@ def caution_line():
     return out
 
 
+def _games(s):
+    """' -- by game, one line each: 31/38 (82% vs 82%)' when the test's legs
+    include several alternate lines of the same game."""
+    g = s.get("games")
+    if not g or g == s.get("n"):
+        return ""
+    return f" -- by game, one line each: {s['games_won']}/{g} ({round(100 * s['games_won'] / g)}% vs {round(s['games_said'])}%)"
+
+
 def prereg_line():
     """Where the pre-registered spread-band test stands (locks.prereg_status)."""
     try:
@@ -431,7 +440,7 @@ def prereg_line():
     # the main-line history behind the band (README, 2026-11-10 spread studies)
     hist = (" History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL"
             " (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).")
-    return f"Pre-registered test, {s['name']}: {rec}; {what}.{hist}"
+    return f"Pre-registered test, {s['name']}: {rec}{_games(s)}; {what}.{hist}"
 
 
 def prereg_more_line(status_fn=None):
@@ -449,7 +458,7 @@ def prereg_more_line(status_fn=None):
         rec = f"{s['won']}/{s['n']}" + (f" ({round(100 * s['won'] / s['n'])}% vs {round(s['said'])}% stated)" if s["n"] else "")
         what = {"waiting": f"waiting for {s['need']} legs", "short": "SHORT again -- propose excluding the band",
                 "fine": "fine -- the caution on this band is off"}[s["verdict"]]
-        parts.append(f"{s['name']} (legs from {s.get('since')}): {rec}; {what}")
+        parts.append(f"{s['name']} (legs from {s.get('since')}): {rec}{_games(s)}; {what}")
     return ("Pre-registered tests also running: " + "; ".join(parts) + ".") if parts else None
 
 
