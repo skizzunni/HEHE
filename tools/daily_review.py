@@ -408,12 +408,13 @@ def caution_line():
         F = {(f["league"], f["t"]): f for f in locks.pool_form()}
     except Exception:
         F = {}
-    parts = [f"{w['league'].upper()} {w['t']} on {w['where']} {w['won']}/{w['n']} vs {w['said']}%" + pool_ctx(w, F) for w in W]
+    gm = lambda x: f" ({x['games']} games)" if x.get("games") and x["games"] < x.get("n", 0) else ""
+    parts = [f"{w['league'].upper()} {w['t']} on {w['where']} {w['won']}/{w['n']} vs {w['said']}%" + gm(w) + pool_ctx(w, F) for w in W]
     parts += [f"{c['league'].upper()} calls at {c['band']}-{c['band'] + 10}% {c['won']}/{c['n']} vs {c['said']}%" for c in C]
     out = ("Cautions in force: " + "; ".join(parts) + ".") if parts else None
     if B:
         ahead = "Running ahead: " + "; ".join(f"{b['league'].upper()} {b['t']} on all saved lines {b['won']}/{b['n']} vs {b['said']}%"
-                                              for b in B) + "."
+                                              + gm(b) for b in B) + "."
         out = f"{out} {ahead}" if out else ahead
     return out
 

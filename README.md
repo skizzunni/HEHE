@@ -1543,6 +1543,13 @@ then 51/119 vs 60.7 (z -1.79) -- short both times, short of the 2.8 bar;
 (PREREG_HOME, since Nov 15) decides that one on new finds. Nothing changes;
 the review prints the bands daily (value_band_line).
 
+**Pool cautions and "running ahead" show their game counts (2026-11-18).**
+watch_pool and bright_pool judge (league, bet type) on 100+ saved lines, and
+alternate lines of one game each count. They now carry the distinct games
+behind them (locks.pool_game_counts) and the review prints it: e.g. NFL team
+overs running ahead on 374 lines is 29 games; NBA overs 1,109 lines, 83
+games. Rules unchanged; the count says how much to trust each.
+
 **Pre-registered tests now show their game counts (2026-11-18).** They count
 legs as registered, and a game's alternate lines each count. By game, one line
 each: college + NFL spreads 7-13.5 (fine) is 372/474 legs but 48/60 games; NFL

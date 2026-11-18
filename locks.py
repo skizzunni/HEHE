@@ -892,6 +892,35 @@ def _pool_rows(paths=None, led=None):
     return rows
 
 
+def pool_game_counts(paths=None, led=None):
+    """{(league, bet type): distinct games} behind _pool_rows' lines. A game's
+    alternate lines each count as a line there and win or lose together, so a
+    caution on "100+ legs" may stand on a couple of dozen games (2026-11-18)."""
+    if led is None:
+        import ledger
+        led = ledger.load()
+    games = {}
+    for path in paths or (None, SAFE_LEDGER):
+        for d, x in sorted((load(path).get("pools") or {}).items()):
+            for L in x.get("legs") or []:
+                sp = L.get("spec") or {}
+                if L.get("kind") == "prop" or not sp.get("t") or not (0.70 <= (L.get("p") or 0) < 0.95):
+                    continue
+                e = led.get(L.get("gid")) or {}
+                if e.get("status") not in ("won", "lost", "push"):
+                    continue
+                games.setdefault((L.get("league") or "", sp["t"]), set()).add(L.get("gid"))
+    return {k: len(v) for k, v in games.items()}
+
+
+def _with_games(out, paths, led):
+    try:
+        G = pool_game_counts(paths, led)
+    except Exception:
+        return out
+    return [dict(o, games=G.get((o["league"], o["t"]))) for o in out]
+
+
 def spread_sides(paths=None, led=None, min_n=50):
     """Spreads at 70-95% across the saved pools, split by side: getting points
     (+) or giving them (-), per league, with both date halves. Information
@@ -1165,7 +1194,7 @@ def watch_pool(paths=None, led=None):
                 and said(allx) - hit(allx) >= POOL_WATCH_GAP):
             out.append(dict(league=lg, t=t, won=sum(w for _, w in allx), n=len(allx), said=round(100 * said(allx)),
                             source="pool"))
-    return out
+    return _with_games(out, paths, led) if out else out
 
 
 def bright_pool(paths=None, led=None):
@@ -1191,7 +1220,7 @@ def bright_pool(paths=None, led=None):
                 and hit(allx) - said(allx) >= POOL_WATCH_GAP):
             out.append(dict(league=lg, t=t, won=sum(w for _, w in allx), n=len(allx), said=round(100 * said(allx)),
                             source="pool"))
-    return out
+    return _with_games(out, paths, led) if out else out
 
 
 def by_rank(book):

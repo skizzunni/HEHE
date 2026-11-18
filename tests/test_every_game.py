@@ -98,13 +98,14 @@ class BrightPool(unittest.TestCase):
         import locks
         rows = [(f"2026-11-0{d}", "nhl", "over", 0.8, i % 10 != 0) for d in range(1, 9) for i in range(20)]   # 90% vs 80%
         rows += [(f"2026-11-0{d}", "nba", "over", 0.8, i % 5 != 0 if d < 5 else i % 2 == 0) for d in range(1, 9) for i in range(20)]
-        orig = locks._pool_rows
+        orig, orig_g = locks._pool_rows, locks.pool_game_counts
         locks._pool_rows = lambda paths=None, led=None: rows
+        locks.pool_game_counts = lambda paths=None, led=None: {("nhl", "over"): 40}
         try:
             out = locks.bright_pool()
         finally:
-            locks._pool_rows = orig
-        self.assertEqual(out, [dict(league="nhl", t="over", won=144, n=160, said=80, source="pool")])
+            locks._pool_rows, locks.pool_game_counts = orig, orig_g
+        self.assertEqual(out, [dict(league="nhl", t="over", won=144, n=160, said=80, source="pool", games=40)])
 
 
 class KindHalves(unittest.TestCase):
@@ -182,3 +183,19 @@ class PropFairBands(unittest.TestCase):
         b = props_ledger.fair_bands(book)
         self.assertEqual([x["band"] for x in b], ["90%+"])
         self.assertEqual([h[:2] for h in b[0]["halves"]], [[2, 4], [4, 4]])
+
+
+class PoolGameCounts(unittest.TestCase):
+    def test_distinct_games(self):
+        import json, os, tempfile
+        import locks
+        legs = [dict(gid="g1", label=f"Over {l}.5", league="nba", spec=dict(t="over"), p=0.85) for l in (200, 202, 204)]
+        legs += [dict(gid="g2", label="Over 190.5", league="nba", spec=dict(t="over"), p=0.85),
+                 dict(gid="g3", label="Over 180.5", league="nba", spec=dict(t="over"), p=0.85),    # not graded yet
+                 dict(gid="g1", label="A: 5+ Points", league="nba", kind="prop", spec=dict(t="prop"), p=0.85)]
+        led = {"g1": {"status": "won"}, "g2": {"status": "lost"}, "g3": {"status": "open"}}
+        with tempfile.TemporaryDirectory() as d:
+            p = os.path.join(d, "x.json")
+            with open(p, "w") as fh:
+                json.dump({"pools": {"2026-11-10": {"legs": legs}}}, fh)
+            self.assertEqual(locks.pool_game_counts([p], led), {("nba", "over"): 2})
