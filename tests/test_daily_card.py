@@ -48,10 +48,15 @@ class Card(unittest.TestCase):
          "slots": {"today": {"nba": {"rows": [dict(mp="Y", mc=70)]}}},
          "every_game": {"today": [dict(gid="g", label="Y over 100.5", price="-400", p=0.8, league="nba", match="X @ Y", status="open")]}}
 
-    def test_nfl_scorers_every_player(self):
-        out = daily_card.scorer_lines(self.D)
-        self.assertEqual(out[0], "NFL touchdown scorers (anytime / 2+ / first TD):")
-        self.assertIn("    A: 45% / 12% / 11% (-110)", out)
+    def test_nfl_scorers_compact(self):
+        E = [dict(name=f"P{i}", p=0.5 - i / 50, p2=0.1 + (i == 7) * 0.2, pfirst=0.12 - i / 100, price="+100") for i in range(10)]
+        D = dict(self.D, td={"today": [{"lg": "NFL", "match": "BUF @ KC", "tip": "8:20 PM", "everyone": E}]})
+        out = daily_card.scorer_lines(D)
+        self.assertTrue(out[0].startswith("NFL touchdown scorers -- every player is on the page"))
+        self.assertEqual(out[1], "  BUF @ KC 8:20 PM (10 players listed):")
+        self.assertEqual(out[2].count(";"), 5)                                # top 6 anytime
+        self.assertTrue(out[3].startswith("    2+ TDs: P7 30%"), out[3])      # sorted by its own chance
+        self.assertTrue(out[4].startswith("    First TD: P0 12%; P1 11%; P2 10%"), out[4])
 
     def test_no_nfl_falls_back_to_props_one_per_player(self):
         D = dict(self.D, td={"today": []})

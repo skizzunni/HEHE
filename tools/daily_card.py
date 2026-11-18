@@ -71,11 +71,17 @@ def scorer_lines(D, day="today", per_game=None, top=15):
     likeliest NBA and NHL player props."""
     td = [g for g in ((D.get("td") or {}).get(day) or []) if g.get("lg") == "NFL"]
     if td:
-        out = ["NFL touchdown scorers (anytime / 2+ / first TD):"]
+        n = per_game or 6
+        out = ["NFL touchdown scorers -- every player is on the page's Props tab; here each game's likeliest "
+               "(first TD and 2+ are model estimates; even the top first-TD scorer is usually under 20%):"]
         for g in td:
-            out.append(f"  {g['match']}{' ' + g['tip'] if g.get('tip') else ''}:")
-            for x in (g.get("everyone") or g.get("players") or [])[:per_game]:
-                out.append(f"    {x['name']}: {pc(x.get('p'))} / {pc(x.get('p2'))} / {pc(x.get('pfirst'))} ({x.get('price') or ''})")
+            E = g.get("everyone") or g.get("players") or []
+            out.append(f"  {g['match']}{' ' + g['tip'] if g.get('tip') else ''} ({len(E)} players listed):")
+            out.append("    Anytime: " + "; ".join(f"{x['name']} {pc(x.get('p'))} ({x.get('price') or ''})" for x in E[:n]))
+            for key, name in (("p2", "2+ TDs"), ("pfirst", "First TD")):
+                top = sorted((x for x in E if x.get(key) is not None), key=lambda x: -x[key])[:3]
+                if top:
+                    out.append(f"    {name}: " + "; ".join(f"{x['name']} {pc(x[key])}" for x in top))
         return out
     games = ((D.get("props") or {}).get(day) or {}).get("games") or []
     out = [f"No NFL today -- player props instead, one per player (his best-paying line at {round(100 * FLOOR)}%+):"]
