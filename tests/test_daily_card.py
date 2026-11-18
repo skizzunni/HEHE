@@ -131,5 +131,22 @@ class ValueBands(unittest.TestCase):
         self.assertIsNone(daily_review.value_band_line({}))
 
 
+
+class FrozenPool(unittest.TestCase):
+    def test_either_date_form_finds_the_pool(self):
+        import json
+        import tempfile
+        import locks
+        self.assertEqual(locks.iso_day("20261118"), "2026-11-18")
+        self.assertEqual(locks.iso_day("2026-11-18"), "2026-11-18")
+        with tempfile.TemporaryDirectory() as d:
+            p = os.path.join(d, "safe.json")
+            with open(p, "w") as fh:
+                json.dump({"pools": {"2026-11-18": {"legs": [{"gid": "g"}]}}}, fh)
+            self.assertEqual(locks.frozen_pool("20261118", p), {"legs": [{"gid": "g"}]})   # the board's form
+            self.assertEqual(locks.frozen_pool("2026-11-18", p), {"legs": [{"gid": "g"}]})
+            self.assertIsNone(locks.frozen_pool("20261119", p))
+
+
 if __name__ == "__main__":
     unittest.main()

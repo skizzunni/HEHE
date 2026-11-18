@@ -666,6 +666,20 @@ def replay(day, path=None):
     return got == snap["card"], got, snap["card"]
 
 
+def iso_day(day):
+    """'20261118' or '2026-11-18' -> '2026-11-18' (the board's _STATE dates
+    are 8 digits; the ledgers key days with dashes)."""
+    day = str(day)
+    return f"{day[:4]}-{day[4:6]}-{day[6:]}" if len(day) == 8 and day.isdigit() else day
+
+
+def frozen_pool(day, path=None):
+    """The 8 AM pool saved for `day` (either date form), or None. The board
+    looked it up by the 8-digit date and never found it, so every_game and
+    the 10-leg fell back to an empty live pool after 8 AM (2026-11-18)."""
+    return (load(path).get("pools") or {}).get(iso_day(day))
+
+
 def frozen(day, path=None):
     """The recorded card for `day`, in build()'s shape, with results."""
     day = str(day)

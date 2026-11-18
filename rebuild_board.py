@@ -725,7 +725,7 @@ def snapshot():
         # every game, its likeliest line (locks.every_game): from the frozen
         # 8 AM pool once the card is set, the live pool before
         try:
-            _fz = (locks.load(locks.SAFE_LEDGER).get("pools") or {}).get(d._STATE["dates"][0]) if locks.card_time() else None
+            _fz = locks.frozen_pool(d._STATE["dates"][0], locks.SAFE_LEDGER) if locks.card_time() else None
             _eg = locks.every_game((_fz or {}).get("legs") or out["safe_locks"]["today"].get("pool"))
             try:
                 import ladder as _ld
