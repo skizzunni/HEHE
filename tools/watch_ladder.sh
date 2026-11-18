@@ -26,6 +26,21 @@ if [ -n "$DAY" ] && [ -f "$WORK.state.json" ] && [ "$(cat "$WORK.day" 2>/dev/nul
   echo "FRESH START: dropped a watch state left from $(cat "$WORK.day" 2>/dev/null || echo 'an earlier day')"
 fi
 [ -n "$DAY" ] && printf '%s\n' "$DAY" > "$WORK.day"
+# A restart with this day's state kept is otherwise silent until something
+# changes: say it resumed and where the ladder stands.
+if [ -f "$WORK.state.json" ]; then
+  python3 - "$WORK.state.json" <<'PY' || true
+import json, sys
+try:
+    d = json.load(open(sys.argv[1]))
+except Exception:
+    sys.exit(0)
+legs = [f"{k} = {v}" for k, v in d.items() if not k.startswith(("GAME ", "UFC "))]
+g = [str(v).split(" | ")[0] for k, v in d.items() if k.startswith(("GAME ", "UFC "))]
+print("RESUMED: " + "; ".join(legs + [f"{len(g)} board games -- {sum(x.endswith('= won') for x in g)} won, "
+      f"{sum(x.endswith('= lost') for x in g)} lost, {sum(x.endswith('= open') for x in g)} open"]))
+PY
+fi
 if [ ! -f "$WORK/tools/ladder_watch.py" ]; then
   git -C "$ROOT" worktree prune
   rm -rf "$WORK"
