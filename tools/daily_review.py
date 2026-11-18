@@ -507,17 +507,21 @@ def home_away_line(ledger=None, leagues=("nba", "nhl", "ncaaf", "nfl"), min_half
     return ("Home and away picks, by half: " + "; ".join(parts) + ".") if parts else None
 
 
-def pool_rows(league, t, led=None, lo=0.70, hi=0.95):
+def pool_rows(league, t, led=None, lo=0.70, hi=0.95, pools=None):
     """Every saved pool line (Locks and Safe Locks pools, deduplicated) of one
     league and game bet type at lo-hi stated, graded from the ledger score:
-    [{date, status, p}]. Props are not covered (they grade elsewhere)."""
+    [{date, status, p}]. Props are not covered (they grade elsewhere).
+    `pools`: [(path, {day: pool})] already loaded, for callers that ask for
+    many league / type pairs (pool_overall_line: 30 reads became 2)."""
     import locks
     import ledger
     import stacks
     led = led if led is not None else ledger.load()
+    if pools is None:
+        pools = [(path, locks.load(path).get("pools") or {}) for path in (None, locks.SAFE_LEDGER)]
     rows, seen = [], set()
-    for path in (None, locks.SAFE_LEDGER):
-        for d, x in sorted((locks.load(path).get("pools") or {}).items()):
+    for _path, P in pools:
+        for d, x in sorted(P.items()):
             for L in x.get("legs") or []:
                 sp = L.get("spec") or {}
                 if L.get("league") != league or sp.get("t") != t or not (lo <= (L.get("p") or 0) < hi):
@@ -627,7 +631,12 @@ def pool_overall_line(rows_fn=None, leagues=("nba", "ncaaf", "nhl", "nfl", "ncaa
     pool the Locks and the ladder draw from. 2026-11-17: 5288/6348 vs 5184.8
     (z +3.39) then 5102/6349 vs 5209.7 (z -3.57) -- ahead early, short lately."""
     import math
-    rows_fn = rows_fn or pool_rows
+    if rows_fn is None:                      # read the ledger and both pool files once, not per pair
+        import ledger
+        import locks
+        led = ledger.load()
+        pools = [(path, locks.load(path).get("pools") or {}) for path in (None, locks.SAFE_LEDGER)]
+        rows_fn = lambda lg, t: pool_rows(lg, t, led=led, pools=pools)
     R = sorted((r for lg in leagues for t in POOL_GAME_TYPES for r in rows_fn(lg, t)), key=lambda r: r["date"])
     if len(R) < 40:
         return None
