@@ -9107,6 +9107,45 @@
    "tip": "7:30 PM",
    "venue": "FanDuel"
   },
+  "nba:401910012|home|Kalshi": {
+   "dec": 1.547,
+   "ev": 0.0485,
+   "fair": 0.6777,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910012",
+   "kind": "value",
+   "league": "nba",
+   "match": "WSH @ TOR",
+   "price": "-183",
+   "seen": "2026-11-18T17:45:43+00:00",
+   "side": "home",
+   "start": "2026-11-19T00:30Z",
+   "team": "Toronto Raptors",
+   "tip": "7:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401910012|sure": {
+   "id": "nba:401910012",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+205",
+     "stake_share": 0.3365,
+     "team": "Washington Wizards",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-183",
+     "stake_share": 0.6635,
+     "team": "Toronto Raptors",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "WSH @ TOR",
+   "profit": 0.0264,
+   "seen": "2026-11-18T17:45:43+00:00"
+  },
   "nba:401910013|home|FanDuel": {
    "dec": 3.6,
    "ev": 0.0109,
