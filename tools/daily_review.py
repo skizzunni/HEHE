@@ -558,6 +558,20 @@ def ladder_pool_line(report=None, rows_fn=None):
     return ("Ladder leg types on every saved pool line, by half: " + "; ".join(parts) + ".") if parts else None
 
 
+def ten_leg_line(rec=None):
+    """The daily 10-leg (ten_leg.py) replayed on every frozen 8 AM pool:
+    days cashed vs the average stated all-win chance, and its payout."""
+    if rec is None:
+        import locks
+        import ten_leg
+        rec = ten_leg.record(locks.SAFE_LEDGER)
+    if not rec.get("days"):
+        return None
+    return (f"Daily 10-leg, replayed on every 8 AM card: cashed {rec['cashed']} of {rec['days']} days "
+            f"({round(100 * rec['cashed'] / rec['days'])}%) vs {round(100 * rec['stated'])}% stated"
+            + (f", at about {rec['pays']:.2f}x." if rec.get("pays") else "."))
+
+
 POOL_GAME_TYPES = ("spread", "over", "under", "teamunder", "teamover", "win")
 
 
@@ -1921,6 +1935,8 @@ def words(r, fit):
         out.append(r["coin_flips"])
     if r.get("pool_overall"):
         out.append(r["pool_overall"])
+    if r.get("ten_leg"):
+        out.append(r["ten_leg"])
     if r.get("home_away"):
         out.append(r["home_away"])
     if r.get("ladder_pool"):
@@ -2079,6 +2095,10 @@ def _main():
     log[today.isoformat()]["priced_calibration"] = priced_calibration_line()
     log[today.isoformat()]["national"] = national_line()
     log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
+    try:
+        log[today.isoformat()]["ten_leg"] = ten_leg_line()
+    except Exception as e:                                  # a broken pool file must not stop the review
+        log[today.isoformat()]["ten_leg"] = f"Daily 10-leg: unavailable ({type(e).__name__})."
     try:
         log[today.isoformat()]["pool_overall"] = pool_overall_line()
     except Exception as e:                                  # a broken pool file must not stop the review

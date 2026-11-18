@@ -67,5 +67,13 @@ class Card(unittest.TestCase):
         self.assertTrue(daily_card.ten_leg_lines(self.D)[0].startswith("Daily 1-leg: all win 80%, pays 1.25x"))
 
 
+class ReviewLine(unittest.TestCase):
+    def test_ten_leg_line(self):
+        import daily_review
+        self.assertEqual(daily_review.ten_leg_line(dict(days=13, cashed=11, stated=0.409, pays=1.64)),
+                         "Daily 10-leg, replayed on every 8 AM card: cashed 11 of 13 days (85%) vs 41% stated, at about 1.64x.")
+        self.assertIsNone(daily_review.ten_leg_line(dict(days=0)))
+
+
 if __name__ == "__main__":
     unittest.main()

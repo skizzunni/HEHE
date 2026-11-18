@@ -1525,6 +1525,14 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Rejected: drop game totals from the 10-leg (2026-11-18).** Both days the
+10-leg replay missed (Nov 11, Nov 15) died on a game total. Every-game safest
+lines by type and date half: totals 64/65 vs 58.6 (z 2.25) then 62/67 vs 61.3
+(z 0.30) -- the best type, ahead both times; team totals, spreads and
+straight wins on par or ahead; "or draw" 43/57 vs 47.9 (z -1.80) then 22/25.
+Without totals the 10-leg would have cashed 6 of 10 days instead of 11 of
+13. Kept as is; the review now prints the 10-leg's replayed record daily.
+
 **Daily 10-leg, every-player touchdowns, the daily card (2026-11-17).** The user
 asked for NFL first-TD and 2+ TD scorers, NBA team points and player props,
 winners for everything and a 10-leg every day -- "a fair chance of winning
