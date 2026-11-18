@@ -312,3 +312,12 @@ class TenLegWatch(unittest.TestCase):
         self.assertEqual(snap["TEN Over 200.5 points (T0 @ U0)"], "won | U0 110 - T0 101")
         self.assertEqual(snap["TEN Over 201.5 points (T1 @ U1)"], "open")
         self.assertEqual(w.ten_snapshot("2026-11-18", {}, pool={}), {})
+
+
+class FirstLookCountsAddUp(unittest.TestCase):
+    def test_void_counted(self):
+        after = {"GAME nba A @ B": "board pick B (70%) = won | x", "GAME nba C @ D": "board pick D (60%) = open",
+                 "GAME ncaab E @ F": "board pick F (90%) = void | postponed"}
+        self.assertIn("WATCHING: 3 board games -- 1 won, 0 lost, 1 open, 1 void or not graded", w.first_look(after))
+        self.assertIn("WATCHING: 2 board games -- 1 won, 0 lost, 1 open",
+                      w.first_look({k: v for k, v in after.items() if "E @ F" not in k}))

@@ -269,8 +269,10 @@ def first_look(after):
         won = sum(v.endswith("= won") for v in G.values())
         lost = [k.split(" ", 1)[1] for k, v in G.items() if v.endswith("= lost")]
         opn = sum(v.endswith("= open") for v in G.values())
+        other = len(G) - won - len(lost) - opn          # void, postponed, unpriced: so the counts add up
         out.append(f"WATCHING: {len(G)} board games -- {won} won, {len(lost)} lost"
-                   + (f" ({', '.join(lost)})" if lost else "") + f", {opn} open")
+                   + (f" ({', '.join(lost)})" if lost else "") + f", {opn} open"
+                   + (f", {other} void or not graded" if other else ""))
     return out
 
 
