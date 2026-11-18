@@ -9090,6 +9090,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910011|away|FanDuel": {
+   "dec": 2.2,
+   "ev": 0.0256,
+   "fair": 0.4662,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910011",
+   "kind": "value",
+   "league": "nba",
+   "match": "CHI @ BKN",
+   "price": "+120",
+   "seen": "2026-11-18T22:09:29+00:00",
+   "side": "away",
+   "start": "2026-11-19T00:30Z",
+   "team": "Chicago Bulls",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401910012|home|FanDuel": {
    "dec": 1.4651,
    "ev": 0.0152,
@@ -21780,6 +21797,26 @@
    "prob": 0.2776,
    "seen": "2026-11-18T02:09:27+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401910011:away": {
+   "ev": 0.0256,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0256,
+     "fair": 0.4662,
+     "id": "nba:401910011",
+     "price": "+120",
+     "side": "away",
+     "spec": null,
+     "team": "Chicago Bulls"
+    }
+   ],
+   "payout": 2.2,
+   "prob": 0.4662,
+   "seen": "2026-11-18T22:09:29+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
