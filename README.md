@@ -1525,6 +1525,13 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Checked: how many legs keep a fair chance (2026-11-18).** The every-game
+ticket replayed on the 13 graded 8 AM cards at each size: 4 legs 12/13 at
+1.22x; 6 legs 12/13 at 1.34x; 8 legs 11/13 at 1.49x; 10 legs 11/13 at
+1.64x; 12 legs 10/13 at 1.82x; 15 legs 6/11 at 2.18x. Ten is about the
+largest ticket that still cashes most days; past twelve it becomes a coin
+flip. The 10-leg stays at ten; the review prints the sizes daily.
+
 **Rejected: drop game totals from the 10-leg (2026-11-18).** Both days the
 10-leg replay missed (Nov 11, Nov 15) died on a game total. Every-game safest
 lines by type and date half: totals 64/65 vs 58.6 (z 2.25) then 62/67 vs 61.3

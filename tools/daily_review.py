@@ -572,6 +572,22 @@ def ten_leg_line(rec=None):
             + (f", at about {rec['pays']:.2f}x." if rec.get("pays") else "."))
 
 
+def ticket_size_line(recs=None, sizes=(6, 8, 10, 12, 15)):
+    """The every-game ticket replayed at several sizes: how often each
+    cashed and what it paid -- does 10 legs still give a fair chance?
+    2026-11-18: 6 legs 12/13 at 1.34x, 10 11/13 at 1.64x, 12 10/13 at 1.82x,
+    15 6/11 at 2.18x."""
+    if recs is None:
+        import ledger
+        import locks
+        import ten_leg
+        led = ledger.load()
+        recs = {n: ten_leg.record(locks.SAFE_LEDGER, led=led, n=n) for n in sizes}
+    parts = [f"{n} legs {r['cashed']}/{r['days']}" + (f" at {r['pays']:.2f}x" if r.get("pays") else "")
+             for n, r in sorted(recs.items()) if r.get("days")]
+    return ("Ticket size, replayed on every 8 AM card: " + "; ".join(parts) + ".") if parts else None
+
+
 POOL_GAME_TYPES = ("spread", "over", "under", "teamunder", "teamover", "win")
 
 
@@ -1937,6 +1953,8 @@ def words(r, fit):
         out.append(r["pool_overall"])
     if r.get("ten_leg"):
         out.append(r["ten_leg"])
+    if r.get("ticket_sizes"):
+        out.append(r["ticket_sizes"])
     if r.get("home_away"):
         out.append(r["home_away"])
     if r.get("ladder_pool"):
@@ -2095,6 +2113,10 @@ def _main():
     log[today.isoformat()]["priced_calibration"] = priced_calibration_line()
     log[today.isoformat()]["national"] = national_line()
     log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
+    try:
+        log[today.isoformat()]["ticket_sizes"] = ticket_size_line()
+    except Exception as e:                                  # a broken pool file must not stop the review
+        log[today.isoformat()]["ticket_sizes"] = f"Ticket size: unavailable ({type(e).__name__})."
     try:
         log[today.isoformat()]["ten_leg"] = ten_leg_line()
     except Exception as e:                                  # a broken pool file must not stop the review

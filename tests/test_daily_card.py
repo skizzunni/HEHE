@@ -80,6 +80,14 @@ class ReviewLine(unittest.TestCase):
                          "Daily 10-leg, replayed on every 8 AM card: cashed 11 of 13 days (85%) vs 41% stated, at about 1.64x.")
         self.assertIsNone(daily_review.ten_leg_line(dict(days=0)))
 
+    def test_ticket_size_line(self):
+        import daily_review
+        recs = {10: dict(days=13, cashed=11, stated=0.41, pays=1.64), 6: dict(days=13, cashed=12, stated=0.6, pays=1.34),
+                15: dict(days=0)}
+        self.assertEqual(daily_review.ticket_size_line(recs),
+                         "Ticket size, replayed on every 8 AM card: 6 legs 12/13 at 1.34x; 10 legs 11/13 at 1.64x.")
+        self.assertIsNone(daily_review.ticket_size_line({8: dict(days=0)}))
+
 
 if __name__ == "__main__":
     unittest.main()
