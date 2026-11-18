@@ -118,10 +118,14 @@ def winner_lines(D, day="today"):
     out = []
     S = (D.get("slots") or {}).get(day) or {}
     for lg in sorted(S, key=lambda k: LEAGUE_ORDER.index(k) if k in LEAGUE_ORDER else 99):
-        rows = [r for r in (S[lg] or {}).get("rows") or [] if r.get("mp")]
-        if rows:
-            out.append(f"  {lg.upper()} ({len(rows)}): " + "; ".join(
-                f"{r['mp']} {r.get('mc')}%" for r in sorted(rows, key=lambda r: -(r.get("mc") or 0))))
+        rows = sorted((r for r in (S[lg] or {}).get("rows") or [] if r.get("mp")), key=lambda r: -(r.get("mc") or 0))
+        win = [r for r in rows if not str(r["mp"]).endswith(" or draw")]
+        dc = [r for r in rows if str(r["mp"]).endswith(" or draw")]       # soccer double chance: a draw wins too
+        if win:
+            out.append(f"  {lg.upper()} ({len(win)}): " + "; ".join(f"{r['mp']} {r.get('mc')}%" for r in win))
+        if dc:
+            out.append(f"  {lg.upper()} win or draw ({len(dc)}): " + "; ".join(
+                f"{r['mp'][:-len(' or draw')]} {r.get('mc')}%" for r in dc))
     return (["Winners, every game (the board's pick and its chance):"] + out) if out else []
 
 

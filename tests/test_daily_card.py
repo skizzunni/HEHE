@@ -74,6 +74,8 @@ class Card(unittest.TestCase):
     def test_team_points_and_winners_and_ten_leg(self):
         self.assertEqual(daily_card.team_points_lines(self.D)[1], "  X at Y: Y over 110.5 52%")
         self.assertEqual(daily_card.winner_lines(self.D)[1], "  NBA (1): Y 70%")
+        D = dict(self.D, slots={"today": {"soccer": {"rows": [dict(mp="Flamengo", mc=75), dict(mp="Santos or draw", mc=73)]}}})
+        self.assertEqual(daily_card.winner_lines(D)[1:], ["  SOCCER (1): Flamengo 75%", "  SOCCER win or draw (1): Santos 73%"])
         self.assertTrue(daily_card.ten_leg_lines(self.D)[0].startswith("Daily 1-leg: all win 80%, pays 1.25x"))
         self.assertTrue(daily_card.ten_leg_lines(self.D)[0].endswith("(only 1 games priced so far; it fills to 10 at the 8 AM card)"))
 
