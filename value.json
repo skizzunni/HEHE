@@ -9069,6 +9069,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910013|home|FanDuel": {
+   "dec": 3.6,
+   "ev": 0.0109,
+   "fair": 0.2808,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910013",
+   "kind": "value",
+   "league": "nba",
+   "match": "DET @ NO",
+   "price": "+260",
+   "seen": "2026-11-18T05:04:27+00:00",
+   "side": "home",
+   "start": "2026-11-19T01:00Z",
+   "team": "New Orleans Pelicans",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401910015|{\"line\": 220.5, \"t\": \"under\"}|Kalshi": {
    "dec": 2.0947,
    "dk": "-110",
@@ -21261,6 +21278,26 @@
    "payout": 3.65,
    "prob": 0.2776,
    "seen": "2026-11-18T02:09:27+00:00",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401910013:home": {
+   "ev": 0.0109,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0109,
+     "fair": 0.2808,
+     "id": "nba:401910013",
+     "price": "+260",
+     "side": "home",
+     "spec": null,
+     "team": "New Orleans Pelicans"
+    }
+   ],
+   "payout": 3.6,
+   "prob": 0.2808,
+   "seen": "2026-11-18T05:04:27+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },

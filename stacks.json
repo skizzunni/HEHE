@@ -2638,6 +2638,39 @@
    },
    "status": "won"
   },
+  "bra:401841310|No \u00b7 Remo wins by over 3.5 goals": {
+   "away": "Chapecoense",
+   "date": "2026-11-18",
+   "home": "Remo",
+   "label": "No \u00b7 Remo wins by over 3.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Chapecoense at Remo",
+   "p": 0.9348,
+   "p_model": 0.9283,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Remo"
+   },
+   "status": "open"
+  },
+  "bra:401841310|Over 0.5 goals": {
+   "away": "Chapecoense",
+   "date": "2026-11-18",
+   "home": "Remo",
+   "label": "Over 0.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Chapecoense at Remo",
+   "p": 0.9558,
+   "p_model": 0.9514,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "bra:401841311|No \u00b7 Atl\u00e9tico-MG wins by over 2.5 goals": {
    "away": "Atl\u00e9tico-MG",
    "date": "2026-11-14",
@@ -2672,6 +2705,205 @@
     "t": "over"
    },
    "status": "lost"
+  },
+  "bra:401841312|No \u00b7 Bahia wins by over 2.5 goals": {
+   "away": "Bahia",
+   "date": "2026-11-18",
+   "home": "Gr\u00eamio",
+   "label": "No \u00b7 Bahia wins by over 2.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Bahia at Gr\u00eamio",
+   "p": 0.9518,
+   "p_model": 0.947,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Bahia"
+   },
+   "status": "open"
+  },
+  "bra:401841312|Under 5.5 goals": {
+   "away": "Bahia",
+   "date": "2026-11-18",
+   "home": "Gr\u00eamio",
+   "label": "Under 5.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Bahia at Gr\u00eamio",
+   "p": 0.933,
+   "p_model": 0.9264,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "bra:401841313|Over 0.5 goals": {
+   "away": "Athletico-PR",
+   "date": "2026-11-18",
+   "home": "Flamengo",
+   "label": "Over 0.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Athletico-PR at Flamengo",
+   "p": 0.9643,
+   "p_model": 0.9607,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "bra:401841313|Under 5.5 goals": {
+   "away": "Athletico-PR",
+   "date": "2026-11-18",
+   "home": "Flamengo",
+   "label": "Under 5.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Athletico-PR at Flamengo",
+   "p": 0.9001,
+   "p_model": 0.8903,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "bra:401841314|No \u00b7 Cruzeiro wins by over 2.5 goals": {
+   "away": "Palmeiras",
+   "date": "2026-11-18",
+   "home": "Cruzeiro",
+   "label": "No \u00b7 Cruzeiro wins by over 2.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Palmeiras at Cruzeiro",
+   "p": 0.9474,
+   "p_model": 0.9421,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Cruzeiro"
+   },
+   "status": "open"
+  },
+  "bra:401841314|No \u00b7 Palmeiras wins by over 2.5 goals": {
+   "away": "Palmeiras",
+   "date": "2026-11-18",
+   "home": "Cruzeiro",
+   "label": "No \u00b7 Palmeiras wins by over 2.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Palmeiras at Cruzeiro",
+   "p": 0.938,
+   "p_model": 0.9319,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Palmeiras"
+   },
+   "status": "open"
+  },
+  "bra:401841315|No \u00b7 Coritiba wins by over 2.5 goals": {
+   "away": "Santos",
+   "date": "2026-11-18",
+   "home": "Coritiba",
+   "label": "No \u00b7 Coritiba wins by over 2.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Santos at Coritiba",
+   "p": 0.9671,
+   "p_model": 0.9639,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Coritiba"
+   },
+   "status": "open"
+  },
+  "bra:401841315|No \u00b7 Santos wins by over 2.5 goals": {
+   "away": "Santos",
+   "date": "2026-11-18",
+   "home": "Coritiba",
+   "label": "No \u00b7 Santos wins by over 2.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Santos at Coritiba",
+   "p": 0.9071,
+   "p_model": 0.8979,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Santos"
+   },
+   "status": "open"
+  },
+  "bra:401841315|Under 5.5 goals": {
+   "away": "Santos",
+   "date": "2026-11-18",
+   "home": "Coritiba",
+   "label": "Under 5.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Santos at Coritiba",
+   "p": 0.9407,
+   "p_model": 0.9349,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "bra:401841316|No \u00b7 Corinthians wins by over 2.5 goals": {
+   "away": "Botafogo",
+   "date": "2026-11-18",
+   "home": "Corinthians",
+   "label": "No \u00b7 Corinthians wins by over 2.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Botafogo at Corinthians",
+   "p": 0.8944,
+   "p_model": 0.884,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Corinthians"
+   },
+   "status": "open"
+  },
+  "bra:401841316|No \u00b7 Corinthians wins by over 3.5 goals": {
+   "away": "Botafogo",
+   "date": "2026-11-18",
+   "home": "Corinthians",
+   "label": "No \u00b7 Corinthians wins by over 3.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Botafogo at Corinthians",
+   "p": 0.9632,
+   "p_model": 0.9596,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Corinthians"
+   },
+   "status": "open"
+  },
+  "bra:401841316|Over 0.5 goals": {
+   "away": "Botafogo",
+   "date": "2026-11-18",
+   "home": "Corinthians",
+   "label": "Over 0.5 goals",
+   "league": "bra",
+   "logged": "2026-11-18T00:04",
+   "match": "Botafogo at Corinthians",
+   "p": 0.9369,
+   "p_model": 0.9307,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "cdf:401932833|Over 0.5 goals": {
    "away": "Clermont Foot",
@@ -19059,6 +19291,227 @@
    },
    "status": "open"
   },
+  "nba:401910007|No \u00b7 Memphis Grizzlies wins by over 12.5 points": {
+   "away": "Memphis Grizzlies",
+   "date": "2026-11-18",
+   "home": "Cleveland Cavaliers",
+   "label": "No \u00b7 Memphis Grizzlies wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Memphis Grizzlies at Cleveland Cavaliers",
+   "p": 0.9158,
+   "p_model": 0.9332,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Memphis Grizzlies"
+   },
+   "status": "open"
+  },
+  "nba:401910008|No \u00b7 Indiana Pacers wins by over 12.5 points": {
+   "away": "Houston Rockets",
+   "date": "2026-11-18",
+   "home": "Indiana Pacers",
+   "label": "No \u00b7 Indiana Pacers wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Houston Rockets at Indiana Pacers",
+   "p": 0.9286,
+   "p_model": 0.9433,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Indiana Pacers"
+   },
+   "status": "open"
+  },
+  "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 4.5 points": {
+   "away": "Milwaukee Bucks",
+   "date": "2026-11-18",
+   "home": "Miami Heat",
+   "label": "No \u00b7 Milwaukee Bucks wins by over 4.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Milwaukee Bucks at Miami Heat",
+   "p": 0.9014,
+   "p_model": 0.9217,
+   "spec": {
+    "line": 4.5,
+    "t": "nomargin",
+    "team": "Milwaukee Bucks"
+   },
+   "status": "open"
+  },
+  "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 8.5 points": {
+   "away": "Milwaukee Bucks",
+   "date": "2026-11-18",
+   "home": "Miami Heat",
+   "label": "No \u00b7 Milwaukee Bucks wins by over 8.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Milwaukee Bucks at Miami Heat",
+   "p": 0.9495,
+   "p_model": 0.9599,
+   "spec": {
+    "line": 8.5,
+    "t": "nomargin",
+    "team": "Milwaukee Bucks"
+   },
+   "status": "open"
+  },
+  "nba:401910010|No \u00b7 Philadelphia 76ers wins by over 17.5 points": {
+   "away": "Philadelphia 76ers",
+   "date": "2026-11-18",
+   "home": "Orlando Magic",
+   "label": "No \u00b7 Philadelphia 76ers wins by over 17.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Philadelphia 76ers at Orlando Magic",
+   "p": 0.8851,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 17.5,
+    "t": "nomargin",
+    "team": "Philadelphia 76ers"
+   },
+   "status": "open"
+  },
+  "nba:401910011|No \u00b7 Brooklyn Nets wins by over 18.5 points": {
+   "away": "Chicago Bulls",
+   "date": "2026-11-18",
+   "home": "Brooklyn Nets",
+   "label": "No \u00b7 Brooklyn Nets wins by over 18.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Chicago Bulls at Brooklyn Nets",
+   "p": 0.8851,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 18.5,
+    "t": "nomargin",
+    "team": "Brooklyn Nets"
+   },
+   "status": "open"
+  },
+  "nba:401910012|No \u00b7 Washington Wizards wins by over 12.5 points": {
+   "away": "Washington Wizards",
+   "date": "2026-11-18",
+   "home": "Toronto Raptors",
+   "label": "No \u00b7 Washington Wizards wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Washington Wizards at Toronto Raptors",
+   "p": 0.9398,
+   "p_model": 0.9522,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Washington Wizards"
+   },
+   "status": "open"
+  },
+  "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 12.5 points": {
+   "away": "Detroit Pistons",
+   "date": "2026-11-18",
+   "home": "New Orleans Pelicans",
+   "label": "No \u00b7 New Orleans Pelicans wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Detroit Pistons at New Orleans Pelicans",
+   "p": 0.9495,
+   "p_model": 0.9599,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "New Orleans Pelicans"
+   },
+   "status": "open"
+  },
+  "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 8.5 points": {
+   "away": "Detroit Pistons",
+   "date": "2026-11-18",
+   "home": "New Orleans Pelicans",
+   "label": "No \u00b7 New Orleans Pelicans wins by over 8.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Detroit Pistons at New Orleans Pelicans",
+   "p": 0.9014,
+   "p_model": 0.9217,
+   "spec": {
+    "line": 8.5,
+    "t": "nomargin",
+    "team": "New Orleans Pelicans"
+   },
+   "status": "open"
+  },
+  "nba:401910014|No \u00b7 Atlanta Hawks wins by over 12.5 points": {
+   "away": "Atlanta Hawks",
+   "date": "2026-11-18",
+   "home": "Oklahoma City Thunder",
+   "label": "No \u00b7 Atlanta Hawks wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Atlanta Hawks at Oklahoma City Thunder",
+   "p": 0.9286,
+   "p_model": 0.9433,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Atlanta Hawks"
+   },
+   "status": "open"
+  },
+  "nba:401910015|No \u00b7 Boston Celtics wins by over 18.5 points": {
+   "away": "Boston Celtics",
+   "date": "2026-11-18",
+   "home": "Denver Nuggets",
+   "label": "No \u00b7 Boston Celtics wins by over 18.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Boston Celtics at Denver Nuggets",
+   "p": 0.8851,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 18.5,
+    "t": "nomargin",
+    "team": "Boston Celtics"
+   },
+   "status": "open"
+  },
+  "nba:401910016|No \u00b7 Golden State Warriors wins by over 12.5 points": {
+   "away": "Golden State Warriors",
+   "date": "2026-11-18",
+   "home": "Dallas Mavericks",
+   "label": "No \u00b7 Golden State Warriors wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Golden State Warriors at Dallas Mavericks",
+   "p": 0.9158,
+   "p_model": 0.9332,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Golden State Warriors"
+   },
+   "status": "open"
+  },
+  "nba:401910018|No \u00b7 Sacramento Kings wins by over 12.5 points": {
+   "away": "Phoenix Suns",
+   "date": "2026-11-18",
+   "home": "Sacramento Kings",
+   "label": "No \u00b7 Sacramento Kings wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-18T00:04",
+   "match": "Phoenix Suns at Sacramento Kings",
+   "p": 0.9286,
+   "p_model": 0.9433,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Sacramento Kings"
+   },
+   "status": "open"
+  },
   "ncaab:401902276|No \u00b7 Butler Bulldogs wins by over 40.5 points": {
    "away": "Fairleigh Dickinson Knights",
    "date": "2026-11-04",
@@ -19488,6 +19941,23 @@
     "team": "Arizona Wildcats"
    },
    "status": "won"
+  },
+  "ncaab:401909742|No \u00b7 Arizona Wildcats wins by over 19.5 points": {
+   "away": "UConn Huskies",
+   "date": "2026-11-18",
+   "home": "Arizona Wildcats",
+   "label": "No \u00b7 Arizona Wildcats wins by over 19.5 points",
+   "league": "ncaab",
+   "logged": "2026-11-18T00:04",
+   "match": "UConn Huskies at Arizona Wildcats",
+   "p": 0.9271,
+   "p_model": 0.9271,
+   "spec": {
+    "line": 19.5,
+    "t": "nomargin",
+    "team": "Arizona Wildcats"
+   },
+   "status": "open"
   },
   "ncaab:401909771|No \u00b7 Memphis Tigers wins by over 4.5 points": {
    "away": "Memphis Tigers",
@@ -20112,6 +20582,23 @@
     "team": "Rutgers Scarlet Knights"
    },
    "status": "won"
+  },
+  "ncaab:401920514|No \u00b7 Florida Gators wins by over 18.5 points": {
+   "away": "Houston Cougars",
+   "date": "2026-11-18",
+   "home": "Florida Gators",
+   "label": "No \u00b7 Florida Gators wins by over 18.5 points",
+   "league": "ncaab",
+   "logged": "2026-11-18T00:04",
+   "match": "Houston Cougars at Florida Gators",
+   "p": 0.9271,
+   "p_model": 0.9271,
+   "spec": {
+    "line": 18.5,
+    "t": "nomargin",
+    "team": "Florida Gators"
+   },
+   "status": "open"
   },
   "ncaab:401920679|No \u00b7 St. John's Red Storm wins by over 43.5 points": {
    "away": "Monmouth Hawks",
@@ -23109,6 +23596,38 @@
     "team": "Kent State Golden Flashes"
    },
    "status": "won"
+  },
+  "ncaaf:401866467|Over 29.5 points": {
+   "away": "Akron Zips",
+   "date": "2026-11-18",
+   "home": "Massachusetts Minutemen",
+   "label": "Over 29.5 points",
+   "league": "ncaaf",
+   "logged": "2026-11-18T00:04",
+   "match": "Akron Zips at Massachusetts Minutemen",
+   "p": 0.8891,
+   "p_model": 0.8795,
+   "spec": {
+    "line": 29.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "ncaaf:401866469|Under 62.5 points": {
+   "away": "Central Michigan Chippewas",
+   "date": "2026-11-18",
+   "home": "Buffalo Bulls",
+   "label": "Under 62.5 points",
+   "league": "ncaaf",
+   "logged": "2026-11-18T00:04",
+   "match": "Central Michigan Chippewas at Buffalo Bulls",
+   "p": 0.8911,
+   "p_model": 0.8816,
+   "spec": {
+    "line": 62.5,
+    "t": "under"
+   },
+   "status": "open"
   },
   "ncaaf:401869844|No \u00b7 Coastal Carolina Chanticleers wins by over 18.5 points": {
    "away": "App State Mountaineers",
@@ -29886,6 +30405,87 @@
    "spec": {
     "line": 2.5,
     "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892739|Over 2.5 goals": {
+   "away": "Boston Bruins",
+   "date": "2026-11-18",
+   "home": "Detroit Red Wings",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-18T00:04",
+   "match": "Boston Bruins at Detroit Red Wings",
+   "p": 0.9624,
+   "p_model": 0.9613,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892740|No \u00b7 Montreal Canadiens wins by over 2.5 goals": {
+   "away": "Montreal Canadiens",
+   "date": "2026-11-18",
+   "home": "New Jersey Devils",
+   "label": "No \u00b7 Montreal Canadiens wins by over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-18T00:04",
+   "match": "Montreal Canadiens at New Jersey Devils",
+   "p": 0.8999,
+   "p_model": 0.8968,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Montreal Canadiens"
+   },
+   "status": "open"
+  },
+  "nhl:401892740|Over 2.5 goals": {
+   "away": "Montreal Canadiens",
+   "date": "2026-11-18",
+   "home": "New Jersey Devils",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-18T00:04",
+   "match": "Montreal Canadiens at New Jersey Devils",
+   "p": 0.9604,
+   "p_model": 0.9592,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892741|Over 2.5 goals": {
+   "away": "Colorado Avalanche",
+   "date": "2026-11-18",
+   "home": "Utah Mammoth",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-18T00:04",
+   "match": "Colorado Avalanche at Utah Mammoth",
+   "p": 0.9696,
+   "p_model": 0.9687,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892741|Under 9.5 goals": {
+   "away": "Colorado Avalanche",
+   "date": "2026-11-18",
+   "home": "Utah Mammoth",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-18T00:04",
+   "match": "Colorado Avalanche at Utah Mammoth",
+   "p": 0.8961,
+   "p_model": 0.8929,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
    },
    "status": "open"
   },
@@ -51032,6 +51632,426 @@
    "n": 8,
    "prob": 0.7483,
    "status": "lost"
+  },
+  "20261118:10:0": {
+   "fair": 1.51,
+   "legs": [
+    "nhl:401892740|Over 2.5 goals",
+    "nhl:401892739|Over 2.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 3.5 goals",
+    "bra:401841310|Over 0.5 goals",
+    "bra:401841313|Over 0.5 goals",
+    "bra:401841315|No \u00b7 Coritiba wins by over 2.5 goals",
+    "bra:401841312|No \u00b7 Bahia wins by over 2.5 goals",
+    "nhl:401892741|Over 2.5 goals",
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 8.5 points",
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 12.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 10,
+   "prob": 0.6603,
+   "status": "open"
+  },
+  "20261118:10:1": {
+   "fair": 2.18,
+   "legs": [
+    "bra:401841314|No \u00b7 Cruzeiro wins by over 2.5 goals",
+    "nba:401910012|No \u00b7 Washington Wizards wins by over 12.5 points",
+    "nba:401910018|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "nba:401910008|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401910014|No \u00b7 Atlanta Hawks wins by over 12.5 points",
+    "ncaab:401920514|No \u00b7 Florida Gators wins by over 18.5 points",
+    "ncaab:401909742|No \u00b7 Arizona Wildcats wins by over 19.5 points",
+    "nba:401910007|No \u00b7 Memphis Grizzlies wins by over 12.5 points",
+    "nba:401910016|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "ncaaf:401866469|Under 62.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 10,
+   "prob": 0.4581,
+   "status": "open"
+  },
+  "20261118:10:2": {
+   "fair": 2.04,
+   "legs": [
+    "ncaaf:401866467|Over 29.5 points",
+    "nba:401910010|No \u00b7 Philadelphia 76ers wins by over 17.5 points",
+    "nba:401910011|No \u00b7 Brooklyn Nets wins by over 18.5 points",
+    "nba:401910015|No \u00b7 Boston Celtics wins by over 18.5 points",
+    "nhl:401892740|Over 2.5 goals",
+    "nhl:401892739|Over 2.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 3.5 goals",
+    "bra:401841310|Over 0.5 goals",
+    "bra:401841313|Over 0.5 goals",
+    "bra:401841315|No \u00b7 Coritiba wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 10,
+   "prob": 0.4892,
+   "status": "open"
+  },
+  "20261118:15:0": {
+   "fair": 2.12,
+   "legs": [
+    "nhl:401892740|Over 2.5 goals",
+    "nhl:401892739|Over 2.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 3.5 goals",
+    "bra:401841310|Over 0.5 goals",
+    "bra:401841313|Over 0.5 goals",
+    "bra:401841315|No \u00b7 Coritiba wins by over 2.5 goals",
+    "bra:401841312|No \u00b7 Bahia wins by over 2.5 goals",
+    "nhl:401892741|Over 2.5 goals",
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 8.5 points",
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 12.5 points",
+    "bra:401841314|No \u00b7 Cruzeiro wins by over 2.5 goals",
+    "nba:401910012|No \u00b7 Washington Wizards wins by over 12.5 points",
+    "nba:401910018|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "nba:401910008|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401910014|No \u00b7 Atlanta Hawks wins by over 12.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 15,
+   "prob": 0.4708,
+   "status": "open"
+  },
+  "20261118:15:1": {
+   "fair": 3.18,
+   "legs": [
+    "ncaab:401920514|No \u00b7 Florida Gators wins by over 18.5 points",
+    "ncaab:401909742|No \u00b7 Arizona Wildcats wins by over 19.5 points",
+    "nba:401910007|No \u00b7 Memphis Grizzlies wins by over 12.5 points",
+    "nba:401910016|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "ncaaf:401866469|Under 62.5 points",
+    "ncaaf:401866467|Over 29.5 points",
+    "nba:401910010|No \u00b7 Philadelphia 76ers wins by over 17.5 points",
+    "nba:401910011|No \u00b7 Brooklyn Nets wins by over 18.5 points",
+    "nba:401910015|No \u00b7 Boston Celtics wins by over 18.5 points",
+    "nhl:401892740|Over 2.5 goals",
+    "nhl:401892739|Over 2.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 3.5 goals",
+    "bra:401841310|Over 0.5 goals",
+    "bra:401841313|Over 0.5 goals",
+    "bra:401841315|No \u00b7 Coritiba wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 15,
+   "prob": 0.3143,
+   "status": "open"
+  },
+  "20261118:15:2": {
+   "fair": 2.95,
+   "legs": [
+    "bra:401841312|No \u00b7 Bahia wins by over 2.5 goals",
+    "nhl:401892741|Over 2.5 goals",
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 8.5 points",
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 12.5 points",
+    "bra:401841314|No \u00b7 Cruzeiro wins by over 2.5 goals",
+    "nba:401910012|No \u00b7 Washington Wizards wins by over 12.5 points",
+    "nba:401910018|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "nba:401910008|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401910014|No \u00b7 Atlanta Hawks wins by over 12.5 points",
+    "ncaab:401920514|No \u00b7 Florida Gators wins by over 18.5 points",
+    "ncaab:401909742|No \u00b7 Arizona Wildcats wins by over 19.5 points",
+    "nba:401910007|No \u00b7 Memphis Grizzlies wins by over 12.5 points",
+    "nba:401910016|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "ncaaf:401866469|Under 62.5 points",
+    "ncaaf:401866467|Over 29.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 15,
+   "prob": 0.3388,
+   "status": "open"
+  },
+  "20261118:20:0": {
+   "fair": 3.31,
+   "legs": [
+    "nhl:401892740|Over 2.5 goals",
+    "nhl:401892739|Over 2.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 3.5 goals",
+    "bra:401841310|Over 0.5 goals",
+    "bra:401841313|Over 0.5 goals",
+    "bra:401841315|No \u00b7 Coritiba wins by over 2.5 goals",
+    "bra:401841312|No \u00b7 Bahia wins by over 2.5 goals",
+    "nhl:401892741|Over 2.5 goals",
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 8.5 points",
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 12.5 points",
+    "bra:401841314|No \u00b7 Cruzeiro wins by over 2.5 goals",
+    "nba:401910012|No \u00b7 Washington Wizards wins by over 12.5 points",
+    "nba:401910018|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "nba:401910008|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401910014|No \u00b7 Atlanta Hawks wins by over 12.5 points",
+    "ncaab:401920514|No \u00b7 Florida Gators wins by over 18.5 points",
+    "ncaab:401909742|No \u00b7 Arizona Wildcats wins by over 19.5 points",
+    "nba:401910007|No \u00b7 Memphis Grizzlies wins by over 12.5 points",
+    "nba:401910016|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "ncaaf:401866469|Under 62.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 20,
+   "prob": 0.3025,
+   "status": "open"
+  },
+  "20261118:20:1": {
+   "fair": 3.72,
+   "legs": [
+    "ncaaf:401866467|Over 29.5 points",
+    "nba:401910010|No \u00b7 Philadelphia 76ers wins by over 17.5 points",
+    "nba:401910011|No \u00b7 Brooklyn Nets wins by over 18.5 points",
+    "nba:401910015|No \u00b7 Boston Celtics wins by over 18.5 points",
+    "nhl:401892740|Over 2.5 goals",
+    "nhl:401892739|Over 2.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 3.5 goals",
+    "bra:401841310|Over 0.5 goals",
+    "bra:401841313|Over 0.5 goals",
+    "bra:401841315|No \u00b7 Coritiba wins by over 2.5 goals",
+    "bra:401841312|No \u00b7 Bahia wins by over 2.5 goals",
+    "nhl:401892741|Over 2.5 goals",
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 8.5 points",
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 12.5 points",
+    "bra:401841314|No \u00b7 Cruzeiro wins by over 2.5 goals",
+    "nba:401910012|No \u00b7 Washington Wizards wins by over 12.5 points",
+    "nba:401910018|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "nba:401910008|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401910014|No \u00b7 Atlanta Hawks wins by over 12.5 points",
+    "ncaab:401920514|No \u00b7 Florida Gators wins by over 18.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 20,
+   "prob": 0.2691,
+   "status": "open"
+  },
+  "20261118:20:2": {
+   "fair": 3.98,
+   "legs": [
+    "ncaab:401909742|No \u00b7 Arizona Wildcats wins by over 19.5 points",
+    "nba:401910007|No \u00b7 Memphis Grizzlies wins by over 12.5 points",
+    "nba:401910016|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "ncaaf:401866469|Under 62.5 points",
+    "ncaaf:401866467|Over 29.5 points",
+    "nba:401910010|No \u00b7 Philadelphia 76ers wins by over 17.5 points",
+    "nba:401910011|No \u00b7 Brooklyn Nets wins by over 18.5 points",
+    "nba:401910015|No \u00b7 Boston Celtics wins by over 18.5 points",
+    "nhl:401892740|Over 2.5 goals",
+    "nhl:401892739|Over 2.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 3.5 goals",
+    "bra:401841310|Over 0.5 goals",
+    "bra:401841313|Over 0.5 goals",
+    "bra:401841315|No \u00b7 Coritiba wins by over 2.5 goals",
+    "bra:401841312|No \u00b7 Bahia wins by over 2.5 goals",
+    "nhl:401892741|Over 2.5 goals",
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 8.5 points",
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 12.5 points",
+    "bra:401841314|No \u00b7 Cruzeiro wins by over 2.5 goals",
+    "nba:401910012|No \u00b7 Washington Wizards wins by over 12.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 20,
+   "prob": 0.2511,
+   "status": "open"
+  },
+  "20261118:2:0": {
+   "fair": 1.23,
+   "legs": [
+    "nhl:401892740|No \u00b7 Montreal Canadiens wins by over 2.5 goals",
+    "bra:401841313|Under 5.5 goals"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 2,
+   "prob": 0.81,
+   "status": "open"
+  },
+  "20261118:2:1": {
+   "fair": 1.23,
+   "legs": [
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 4.5 points",
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 8.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 2,
+   "prob": 0.8125,
+   "status": "open"
+  },
+  "20261118:2:2": {
+   "fair": 1.25,
+   "legs": [
+    "nhl:401892741|Under 9.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 2,
+   "prob": 0.8015,
+   "status": "open"
+  },
+  "20261118:3:0": {
+   "fair": 1.37,
+   "legs": [
+    "nhl:401892740|No \u00b7 Montreal Canadiens wins by over 2.5 goals",
+    "bra:401841313|Under 5.5 goals",
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 4.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 3,
+   "prob": 0.7301,
+   "status": "open"
+  },
+  "20261118:3:1": {
+   "fair": 1.38,
+   "legs": [
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 8.5 points",
+    "nhl:401892741|Under 9.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 3,
+   "prob": 0.7224,
+   "status": "open"
+  },
+  "20261118:3:2": {
+   "fair": 1.39,
+   "legs": [
+    "bra:401841315|No \u00b7 Santos wins by over 2.5 goals",
+    "ncaaf:401866469|Under 62.5 points",
+    "ncaaf:401866467|Over 29.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 3,
+   "prob": 0.7187,
+   "status": "open"
+  },
+  "20261118:4:0": {
+   "fair": 1.29,
+   "legs": [
+    "nba:401910012|No \u00b7 Washington Wizards wins by over 12.5 points",
+    "bra:401841315|Under 5.5 goals",
+    "bra:401841314|No \u00b7 Palmeiras wins by over 2.5 goals",
+    "bra:401841316|Over 0.5 goals"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 4,
+   "prob": 0.7769,
+   "status": "open"
+  },
+  "20261118:4:1": {
+   "fair": 1.27,
+   "legs": [
+    "bra:401841310|No \u00b7 Remo wins by over 3.5 goals",
+    "bra:401841312|Under 5.5 goals",
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 8.5 points",
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 12.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 4,
+   "prob": 0.7864,
+   "status": "open"
+  },
+  "20261118:4:2": {
+   "fair": 1.35,
+   "legs": [
+    "nba:401910018|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "nba:401910008|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401910014|No \u00b7 Atlanta Hawks wins by over 12.5 points",
+    "ncaab:401920514|No \u00b7 Florida Gators wins by over 18.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 4,
+   "prob": 0.7424,
+   "status": "open"
+  },
+  "20261118:6:0": {
+   "fair": 1.26,
+   "legs": [
+    "nhl:401892740|Over 2.5 goals",
+    "nhl:401892739|Over 2.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 3.5 goals",
+    "bra:401841310|Over 0.5 goals",
+    "bra:401841313|Over 0.5 goals",
+    "bra:401841315|No \u00b7 Coritiba wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 6,
+   "prob": 0.7936,
+   "status": "open"
+  },
+  "20261118:6:1": {
+   "fair": 1.35,
+   "legs": [
+    "bra:401841312|No \u00b7 Bahia wins by over 2.5 goals",
+    "nhl:401892741|Over 2.5 goals",
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 8.5 points",
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 12.5 points",
+    "bra:401841314|No \u00b7 Cruzeiro wins by over 2.5 goals",
+    "nba:401910012|No \u00b7 Washington Wizards wins by over 12.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 6,
+   "prob": 0.7409,
+   "status": "open"
+  },
+  "20261118:6:2": {
+   "fair": 1.59,
+   "legs": [
+    "nba:401910018|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "nba:401910008|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401910014|No \u00b7 Atlanta Hawks wins by over 12.5 points",
+    "ncaab:401920514|No \u00b7 Florida Gators wins by over 18.5 points",
+    "ncaab:401909742|No \u00b7 Arizona Wildcats wins by over 19.5 points",
+    "nba:401910007|No \u00b7 Memphis Grizzlies wins by over 12.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 6,
+   "prob": 0.6303,
+   "status": "open"
+  },
+  "20261118:8:0": {
+   "fair": 1.37,
+   "legs": [
+    "nhl:401892740|Over 2.5 goals",
+    "nhl:401892739|Over 2.5 goals",
+    "bra:401841316|No \u00b7 Corinthians wins by over 3.5 goals",
+    "bra:401841310|Over 0.5 goals",
+    "bra:401841313|Over 0.5 goals",
+    "bra:401841315|No \u00b7 Coritiba wins by over 2.5 goals",
+    "bra:401841312|No \u00b7 Bahia wins by over 2.5 goals",
+    "nhl:401892741|Over 2.5 goals"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 8,
+   "prob": 0.7323,
+   "status": "open"
+  },
+  "20261118:8:1": {
+   "fair": 1.68,
+   "legs": [
+    "nba:401910009|No \u00b7 Milwaukee Bucks wins by over 8.5 points",
+    "nba:401910013|No \u00b7 New Orleans Pelicans wins by over 12.5 points",
+    "bra:401841314|No \u00b7 Cruzeiro wins by over 2.5 goals",
+    "nba:401910012|No \u00b7 Washington Wizards wins by over 12.5 points",
+    "nba:401910018|No \u00b7 Sacramento Kings wins by over 12.5 points",
+    "nba:401910008|No \u00b7 Indiana Pacers wins by over 12.5 points",
+    "nba:401910014|No \u00b7 Atlanta Hawks wins by over 12.5 points",
+    "ncaab:401920514|No \u00b7 Florida Gators wins by over 18.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 8,
+   "prob": 0.596,
+   "status": "open"
+  },
+  "20261118:8:2": {
+   "fair": 2.34,
+   "legs": [
+    "ncaab:401909742|No \u00b7 Arizona Wildcats wins by over 19.5 points",
+    "nba:401910007|No \u00b7 Memphis Grizzlies wins by over 12.5 points",
+    "nba:401910016|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "ncaaf:401866469|Under 62.5 points",
+    "ncaaf:401866467|Over 29.5 points",
+    "nba:401910010|No \u00b7 Philadelphia 76ers wins by over 17.5 points",
+    "nba:401910011|No \u00b7 Brooklyn Nets wins by over 18.5 points",
+    "nba:401910015|No \u00b7 Boston Celtics wins by over 18.5 points"
+   ],
+   "logged": "2026-11-18T00:04",
+   "n": 8,
+   "prob": 0.4271,
+   "status": "open"
   }
  }
 }
