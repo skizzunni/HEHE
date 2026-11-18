@@ -9203,6 +9203,23 @@
    "tip": "10:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910018|away|FanDuel": {
+   "dec": 1.4651,
+   "ev": 0.0302,
+   "fair": 0.7031,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910018",
+   "kind": "value",
+   "league": "nba",
+   "match": "PHX @ SAC",
+   "price": "-215",
+   "seen": "2026-11-18T16:44:50+00:00",
+   "side": "away",
+   "start": "2026-11-19T03:00Z",
+   "team": "Phoenix Suns",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401910018|home|Kalshi": {
    "dec": 3.1776,
    "ev": 0.0586,
@@ -9219,6 +9236,28 @@
    "team": "Sacramento Kings",
    "tip": "10:00 PM",
    "venue": "Kalshi"
+  },
+  "nba:401910018|sure": {
+   "id": "nba:401910018",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "-215",
+     "stake_share": 0.6915,
+     "team": "Phoenix Suns",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+228",
+     "stake_share": 0.3085,
+     "team": "Sacramento Kings",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "PHX @ SAC",
+   "profit": 0.0131,
+   "seen": "2026-11-18T16:44:50+00:00"
   },
   "nba:401910018|{\"line\": 229.5, \"t\": \"over\"}|Kalshi": {
    "dec": 2.0513,
