@@ -71,6 +71,17 @@ class Card(unittest.TestCase):
              dict(name="B", p=0.7, imp=0.7)]
         self.assertEqual(daily_card.best_per_player(P), [dict(name="A", p=0.82, imp=0.85)])
 
+    def test_team_points_under_lean_and_even(self):
+        D = {"markets": {"today": [{"lg": "NBA", "match": "X at Y", "m": [
+            dict(g="Team total", l="Y over 110.5", p=0.46), dict(g="Team total", l="Y under 110.5", p=0.54),
+            dict(g="Team total", l="Y over 104.5", p=0.71), dict(g="Team total", l="Y under 104.5", p=0.29),
+            dict(g="Team total", l="X over 101.5", p=0.5), dict(g="Team total", l="X under 101.5", p=0.5)]},
+            {"lg": "NHL", "match": "A at B", "m": [dict(g="Team total", l="B over 2.5", p=0.6)]}]}}
+        self.assertEqual(daily_card.team_points_lines(D),
+                         ["NBA team points (main team total, the side the price leans):",
+                          "  X at Y: Y under 110.5 54%; X over 101.5 50%"])       # NHL left out
+        self.assertEqual(daily_card.team_points_lines({}), [])
+
     def test_team_points_and_winners_and_ten_leg(self):
         self.assertEqual(daily_card.team_points_lines(self.D)[1], "  X at Y: Y over 110.5 52%")
         self.assertEqual(daily_card.winner_lines(self.D)[1], "  NBA (1): Y 70%")
