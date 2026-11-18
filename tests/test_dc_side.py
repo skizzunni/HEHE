@@ -141,6 +141,18 @@ class CoinFlips(unittest.TestCase):
         self.assertIsNone(daily_review.coin_flip_line({"x": L["a1"]}))
 
 
+class PoolOverall(unittest.TestCase):
+    def test_line(self):
+        def rows(lg, t):
+            if (lg, t) != ("nba", "over"):
+                return []
+            return [dict(date=f"2026-11-{1 + i // 4:02d}", status="won" if i % 5 else "lost", p=0.8) for i in range(40)]
+        out = daily_review.pool_overall_line(rows_fn=rows)
+        self.assertTrue(out.startswith("Pool game lines, every league and bet type, by half: 80.0% vs 80.0% (z +0.0) to 2026-11-05"), out)
+        self.assertTrue(out.endswith("on 40 saved lines."), out)
+        self.assertIsNone(daily_review.pool_overall_line(rows_fn=lambda lg, t: []))
+
+
 class HomeAway(unittest.TestCase):
     def test_line(self):
         fp = dict(prices=dict(home="-200", away="+170"))

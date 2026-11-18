@@ -1525,6 +1525,16 @@ much larger sample: 82% then 88% vs 82%, 82% on 1,100 lines -- on par or
 ahead. No leak. The review now prints, for each ladder leg type, this
 whole-pool record by half (ladder_pool_line).
 
+**Rejected: straight-win ladder legs (2026-11-17).** Runs 6, 8 and 9 each
+died on a "to win" leg (Houston, Boston, Duke). Every saved pool "win"
+line at 70-95% (NBA, NCAAF, NHL, NFL, NCAAB; 98 lines) by date half:
+42/49 vs 38.3 (z 1.29) then 37/49 vs 38.9 (z -0.67) -- mixed, too few.
+Not adopted. The comparison found the bigger thing: every other pool
+game line (spreads, totals, team totals; 12,697 lines) ran 5288/6348 vs
+5184.8 (z +3.39) then 5102/6349 vs 5209.7 (z -3.57) -- ahead early,
+short lately (80.4% vs 82.1%). Opposite signs fail the both-halves bar,
+so nothing changes; the review now prints it every day (pool_overall_line).
+
 **Checked, no change: NBA favourites (2026-11-17).** Boston (76%) and Denver
 (78%) lost on Nov 16. By date halves of 205 graded NBA picks: all 71/102
 vs 66.9 then 79/103 vs 70.9 (z 0.88, 1.77); 70-80% 20/26 vs 19.1 then

@@ -558,6 +558,30 @@ def ladder_pool_line(report=None, rows_fn=None):
     return ("Ladder leg types on every saved pool line, by half: " + "; ".join(parts) + ".") if parts else None
 
 
+POOL_GAME_TYPES = ("spread", "over", "under", "teamunder", "teamover", "win")
+
+
+def pool_overall_line(rows_fn=None, leagues=("nba", "ncaaf", "nhl", "nfl", "ncaab")):
+    """Every saved pool game line at 70-95% stated, all leagues and bet types
+    together, won vs stated by date half with z. Information only: the whole
+    pool the Locks and the ladder draw from. 2026-11-17: 5288/6348 vs 5184.8
+    (z +3.39) then 5102/6349 vs 5209.7 (z -3.57) -- ahead early, short lately."""
+    import math
+    rows_fn = rows_fn or pool_rows
+    R = sorted((r for lg in leagues for t in POOL_GAME_TYPES for r in rows_fn(lg, t)), key=lambda r: r["date"])
+    if len(R) < 40:
+        return None
+    h = len(R) // 2
+
+    def rec(S):
+        w = sum(r["status"] == "won" for r in S)
+        p = sum(r["p"] for r in S)
+        v = sum(r["p"] * (1 - r["p"]) for r in S) or 1
+        return f"{100 * w / len(S):.1f}% vs {100 * p / len(S):.1f}% (z {(w - p) / math.sqrt(v):+.1f})"
+    return (f"Pool game lines, every league and bet type, by half: {rec(R[:h])} to {R[h - 1]['date']}, "
+            f"then {rec(R[h:])} on {len(R)} saved lines.")
+
+
 NATIONAL = ("intl", "unl", "wcq")          # national-team competitions on the board
 
 
@@ -1895,6 +1919,8 @@ def words(r, fit):
         out.append(r["national"])
     if r.get("coin_flips"):
         out.append(r["coin_flips"])
+    if r.get("pool_overall"):
+        out.append(r["pool_overall"])
     if r.get("home_away"):
         out.append(r["home_away"])
     if r.get("ladder_pool"):
@@ -2053,6 +2079,10 @@ def _main():
     log[today.isoformat()]["priced_calibration"] = priced_calibration_line()
     log[today.isoformat()]["national"] = national_line()
     log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
+    try:
+        log[today.isoformat()]["pool_overall"] = pool_overall_line()
+    except Exception as e:                                  # a broken pool file must not stop the review
+        log[today.isoformat()]["pool_overall"] = f"Pool game lines: unavailable ({type(e).__name__})."
     log[today.isoformat()]["home_away"] = home_away_line()
     try:
         log[today.isoformat()]["ladder_pool"] = ladder_pool_line()
