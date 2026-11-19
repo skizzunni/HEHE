@@ -21,6 +21,7 @@ Coin flips (called under 60%), by half: all 95/162 (59% vs 55%) then 97/163 (60%
 Board picks by price move after the call, by half: moved 6+ against 14/21 (z +0.1) then 10/16 (z -0.1); 3-6 against 45/67 (z -0.2) then 39/62 (z -0.6); steady 548/734 (z +2.7) then 506/677 (z +1.6); moved 3+ toward 111/139 (z +2.1) then 169/207 (z +2.7).
 Pool game lines (one per game and bet type), every league, by half: 86.8% vs 82.3% (z +3.1) to 2026-11-12, then 80.7% vs 82.3% (z -1.0) on 1349 game lines.
 Daily 10-leg, replayed on every 8 AM card: cashed 12 of 14 days (86%) vs 42% stated, at about 1.64x.
+Ladder vs every-game ticket to 2x, same 13 days: ladder 1/6 then 3/7; every-game 4/6 then 4/7; only the every-game cashed on 7 days, only the ladder on 3.
 Every game's safest line by chance, halves split 2026-11-12: 92%+ none then 44/45 (98% vs 93%); 85-92% 167/183 (91% vs 90%) then 125/134 (93% vs 90%); under 85% 30/38 (79% vs 82%) then 19/22 (86% vs 81%).
 Ticket size, replayed on every 8 AM card: 6 legs 13/14 at 1.34x; 8 legs 12/14 at 1.49x; 10 legs 12/14 at 1.64x; 12 legs 11/14 at 1.82x; 15 legs 6/11 at 2.18x.
 Value bets by fair chance, by half: 0-30% 11/58 (z +0.1) then 9/66 (z -0.8); 30-45% 17/40 (z +0.6) then 8/41 (z -2.4); 45-60% 56/134 (z -2.0) then 51/118 (z -1.7); 60-100% 32/42 (z +1.2) then 34/50 (z -0.7).
@@ -31,7 +32,6 @@ Lessons from losses: no league / bet / chance band is 3+ points short in both ha
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 8/17 vs 70% stated (4.2% by luck; about 2.5 of 60 teams expected this far behind by chance); NHL Detroit Red Wings 3/10 vs 54% stated (11.7% by luck; about 7.0 of 60 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.7 of 60 teams expected this far behind by chance).
 High-chance sweep: 70%+ today 0-0, 8 open; swept 3 of 33 past days (last 2026-11-11) | 80%+ today 0-0, 4 open; swept 10 of 32 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/30 vs 61%; NBA on the tired side 18/24 vs 65%, against it 20/26 vs 72%.
-UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
 Next UFC card 2026-11-21 (11 fights priced, 3 close): Ikram Aliskerov 72%; Aleksandre Topuria 71%; Diyar Nurgozhay 68%; Jake Matthews 68%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Dan Hooker 63%; Navajo Stirling 61%; Dom Mar Fan 60% (close); Kevin Vallejos 54% (close); Alessandro Costa 50% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.7% hit vs 44.6% stated on 549
 Board sweep: 0-0, 24 open -- still clean.
