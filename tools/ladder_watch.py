@@ -66,6 +66,9 @@ def safe_note(L):
             el = dr._elapsed(str(L["live"]), *F) if F else None
             pt = dr.pace_text(L)
             if el and el >= 0.5 * F[0] * F[1] and pt and "behind the pace" in pt:
+                g = re.match(r"^(Over|Under)\s+([\d.]+)", str(L.get("label") or ""), re.I)
+                if g and len(pts) >= 2:              # a game total: the score and the line, once
+                    return f"off pace after halftime ({pts[-2] + pts[-1]} so far, line {g.group(2)})"
                 return "off pace after halftime"
         except Exception:
             pass
@@ -222,7 +225,8 @@ def _same(a, b):
     import re
     if a is None or b is None:
         return a == b
-    k = lambda v: re.sub(r"((?:already|gone) over \()[\d.]+,", r"\1#,", str(v))
+    k = lambda v: re.sub(r"\(\d+ so far,", "(# so far,",
+                         re.sub(r"((?:already|gone) over \()[\d.]+,", r"\1#,", str(v)))
     return k(a) == k(b)
 
 
