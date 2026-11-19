@@ -35,7 +35,7 @@ Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against i
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
 Next UFC card 2026-11-21 (11 fights priced, 2 close): Ikram Aliskerov 72%; Aleksandre Topuria 71%; Diyar Nurgozhay 68%; Jake Matthews 68%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Dan Hooker 63%; Navajo Stirling 61%; Dom Mar Fan 60%; Kevin Vallejos 54% (close); Alessandro Costa 50% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.6% hit vs 44.6% stated on 550
-Board sweep: 0-0, 27 open -- still clean.
+Board sweep: 0-0, 28 open -- still clean.
 Why picks lost (14 days): favourite lost 94, close game 88, coin flip 55, blowout 46, upset 40, price moved against it 22, drawn 11.
 Yesterday (2026-11-18): board 17-11, sweep broken by ncaab Florida Gators at 55%; 9 losses expected, 11 came in (26.7% chance of that many or more).
 - LOST ncaab Florida Gators at 55% (-130), Florida Gators 76 - Houston Cougars 86: margin 10 · the book had my side favoured too · called at 55% · coin flip
