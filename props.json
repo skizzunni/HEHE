@@ -56993,11 +56993,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "AJ Dybantsa",
   "p": 0.8488,
   "p_fair": 0.909,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nba:401910012|n:aj dybantsa|Reb + Ast|5+": {
   "aid": null,
@@ -57009,11 +57011,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "AJ Dybantsa",
   "p": 0.8533,
   "p_fair": 0.8703,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 14.0
  },
  "nba:401910012|n:anthony davis|Points|15+": {
   "aid": null,
@@ -57025,11 +57029,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Anthony Davis",
   "p": 0.8488,
   "p_fair": 0.8733,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 25.0
  },
  "nba:401910012|n:anthony davis|Pts + Ast|20+": {
   "aid": null,
@@ -57041,11 +57047,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Anthony Davis",
   "p": 0.758,
   "p_fair": 0.7919,
   "price": "-390",
-  "status": "open"
+  "status": "won",
+  "value": 27.0
  },
  "nba:401910012|n:anthony davis|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -57057,11 +57065,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Anthony Davis",
   "p": 0.8544,
   "p_fair": 0.8956,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 41.0
  },
  "nba:401910012|n:immanuel quickley|Pts + Ast|20+": {
   "aid": null,
@@ -57073,11 +57083,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Immanuel Quickley",
   "p": 0.8466,
   "p_fair": 0.8564,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 29.0
  },
  "nba:401910012|n:jakob poeltl|Points|5+": {
   "aid": null,
@@ -57089,11 +57101,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Jakob Poeltl",
   "p": 0.8488,
   "p_fair": 0.9612,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401910012|n:jakob poeltl|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -57105,11 +57119,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jakob Poeltl",
   "p": 0.8459,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 22.0
  },
  "nba:401910012|n:jakobe walter|Pts + Ast|10+": {
   "aid": null,
@@ -57121,11 +57137,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Ja'Kobe Walter",
   "p": 0.8466,
   "p_fair": 0.9329,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 24.0
  },
  "nba:401910012|n:jamal shead|Points|5+": {
   "aid": null,
@@ -57137,11 +57155,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Jamal Shead",
   "p": 0.8488,
   "p_fair": 0.9629,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nba:401910012|n:jamal shead|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -57153,11 +57173,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jamal Shead",
   "p": 0.8544,
   "p_fair": 0.9201,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 22.0
  },
  "nba:401910012|n:kyshawn george|Points|5+": {
   "aid": null,
@@ -57168,11 +57190,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Kyshawn George",
   "p": 0.8754,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401910012|n:rj barrett|Points|15+": {
   "aid": null,
@@ -57188,7 +57212,9 @@
   "p": 0.8488,
   "p_fair": 0.8749,
   "price": "-1100",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910012|n:rj barrett|Pts + Ast|20+": {
   "aid": null,
@@ -57204,7 +57230,9 @@
   "p": 0.8466,
   "p_fair": 0.8481,
   "price": "-800",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910012|n:rj barrett|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -57220,7 +57248,9 @@
   "p": 0.8459,
   "p_fair": 0.8679,
   "price": "-900",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910012|n:trae young|Points|10+": {
   "aid": null,
@@ -57232,11 +57262,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Trae Young",
   "p": 0.8418,
   "p_fair": 0.9085,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401910012|n:trae young|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -57248,11 +57280,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Trae Young",
   "p": 0.8503,
   "p_fair": 0.8948,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401910012|n:trae young|Threes Made|1+": {
   "aid": null,
@@ -57264,11 +57298,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Trae Young",
   "p": 0.8464,
   "p_fair": 0.8776,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401910013|n:ausar thompson|Assists|4+": {
   "aid": null,
