@@ -58494,7 +58494,9 @@
   "p": 0.7519,
   "p_fair": 0.7879,
   "price": "-400",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910017|n:austin reaves|Threes Made|1+": {
   "aid": null,
@@ -58510,7 +58512,9 @@
   "p": 0.8523,
   "p_fair": 0.8851,
   "price": "-1200",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910017|n:brice sensabaugh|Threes Made|1+": {
   "aid": null,
@@ -58522,11 +58526,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Brice Sensabaugh",
   "p": 0.8464,
   "p_fair": 0.8752,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401910017|n:collin sexton|Assists|2+": {
   "aid": null,
@@ -58538,11 +58544,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Collin Sexton",
   "p": 0.7782,
   "p_fair": 0.7857,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401910017|n:collin sexton|Pts + Ast|10+": {
   "aid": null,
@@ -58554,11 +58562,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Collin Sexton",
   "p": 0.8466,
   "p_fair": 0.9298,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401910017|n:darryn peterson|Pts + Ast|15+": {
   "aid": null,
@@ -58570,11 +58580,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Darryn Peterson",
   "p": 0.8571,
   "p_fair": 0.9033,
   "price": "-900",
-  "status": "open"
+  "status": "lost",
+  "value": 14.0
  },
  "nba:401910017|n:jake laravia|Reb + Ast|5+": {
   "aid": null,
@@ -58586,11 +58598,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Jake Laravia",
   "p": 0.7569,
   "p_fair": 0.788,
   "price": "-360",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401910017|n:keyonte george|Pts + Ast|25+": {
   "aid": null,
@@ -58602,11 +58616,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Keyonte George",
   "p": 0.7407,
   "p_fair": 0.7439,
   "price": "-350",
-  "status": "open"
+  "status": "won",
+  "value": 40.0
  },
  "nba:401910017|n:luka doncic|Assists|6+": {
   "aid": null,
@@ -58618,11 +58634,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Assists",
+  "matched": "name",
   "name": "Luka Doncic",
   "p": 0.8512,
   "p_fair": 0.8499,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401910017|n:luka doncic|Points|30+": {
   "aid": null,
@@ -58634,11 +58652,13 @@
   "league": "nba",
   "line": "30+",
   "market": "Points",
+  "matched": "name",
   "name": "Luka Doncic",
   "p": 0.7407,
   "p_fair": 0.7255,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 29.0
  },
  "nba:401910017|n:luka doncic|Pts + Ast|35+": {
   "aid": null,
@@ -58650,11 +58670,13 @@
   "league": "nba",
   "line": "35+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Luka Doncic",
   "p": 0.8403,
   "p_fair": 0.7995,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 36.0
  },
  "nba:401910017|n:luka doncic|Pts + Reb + Ast|45+": {
   "aid": null,
@@ -58666,11 +58688,13 @@
   "league": "nba",
   "line": "45+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Luka Doncic",
   "p": 0.7519,
   "p_fair": 0.7388,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 41.0
  },
  "nba:401910017|n:luka doncic|Rebounds|6+": {
   "aid": null,
@@ -58682,11 +58706,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Luka Doncic",
   "p": 0.7385,
   "p_fair": 0.7766,
   "price": "-370",
-  "status": "open"
+  "status": "lost",
+  "value": 5.0
  },
  "nba:401910017|n:matisse thybulle|Threes Made|1+": {
   "aid": null,
@@ -58698,11 +58724,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Matisse Thybulle",
   "p": 0.7387,
   "p_fair": 0.7651,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401910017|n:quentin grimes|Assists|2+": {
   "aid": null,
@@ -58714,11 +58742,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Quentin Grimes",
   "p": 0.7782,
   "p_fair": 0.7643,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401910017|n:quentin grimes|Points|10+": {
   "aid": null,
@@ -58730,11 +58760,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Quentin Grimes",
   "p": 0.8488,
   "p_fair": 0.9075,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401910017|n:quentin grimes|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -58746,11 +58778,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Quentin Grimes",
   "p": 0.8599,
   "p_fair": 0.9215,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 31.0
  },
  "nba:401910017|n:quentin grimes|Threes Made|1+": {
   "aid": null,
@@ -58762,11 +58796,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Quentin Grimes",
   "p": 0.8464,
   "p_fair": 0.8745,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401910017|n:sandro mamukelashvili|Points|5+": {
   "aid": null,
@@ -58778,11 +58814,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Sandro Mamukelashvili",
   "p": 0.8547,
   "p_fair": 0.9629,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401910017|n:walker kessler|Points|5+": {
   "aid": null,
@@ -58793,11 +58831,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Walker Kessler",
   "p": 0.8754,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401910017|n:walker kessler|Pts + Ast|10+": {
   "aid": null,
@@ -58809,11 +58849,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Walker Kessler",
   "p": 0.8571,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401910017|n:walker kessler|Reb + Ast|10+": {
   "aid": null,
@@ -58825,11 +58867,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Walker Kessler",
   "p": 0.7737,
   "p_fair": null,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nba:401910018|n:collin gillespie|Points|5+": {
   "aid": null,
