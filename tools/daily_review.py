@@ -651,6 +651,17 @@ def ladder_alt_line(ladder_days=None, alt_days=None):
             f"only the every-game cashed on {only_alt} days, only the ladder on {only_lad}.")
 
 
+def ladder_type_line(report=None):
+    """Every ladder leg so far by bet type, the weak spot named (the 8 AM
+    ticket's ladder_ticket.type_line), so the hourly review shows where
+    tickets break, not only the morning message."""
+    if report is None:
+        import ladder
+        report = ladder.report()
+    from ladder_ticket import type_line
+    return type_line(report)
+
+
 def ten_leg_line(rec=None):
     """The daily 10-leg (ten_leg.py) replayed on every frozen 8 AM pool:
     days cashed vs the average stated all-win chance, and its payout."""
@@ -2143,6 +2154,8 @@ def words(r, fit):
         out.append(r["ten_leg"])
     if r.get("ladder_alt"):
         out.append(r["ladder_alt"])
+    if r.get("ladder_types"):
+        out.append(r["ladder_types"])
     if r.get("eg_bands"):
         out.append(r["eg_bands"])
     if r.get("ticket_sizes"):
@@ -2316,6 +2329,10 @@ def _main():
         log[today.isoformat()]["ladder_alt"] = ladder_alt_line()
     except Exception as e:                                  # a broken pool or ladder file must not stop the review
         log[today.isoformat()]["ladder_alt"] = f"Ladder vs every-game: unavailable ({type(e).__name__})."
+    try:
+        log[today.isoformat()]["ladder_types"] = ladder_type_line()
+    except Exception as e:                                  # a broken ladder file must not stop the review
+        log[today.isoformat()]["ladder_types"] = f"Ladder legs by type: unavailable ({type(e).__name__})."
     try:
         log[today.isoformat()]["eg_bands"] = every_game_band_line()
     except Exception as e:                                  # a broken pool file must not stop the review

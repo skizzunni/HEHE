@@ -52,6 +52,16 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class LadderTypeLine(unittest.TestCase):
+    def test_review_reuses_ticket_wording(self):
+        import daily_review
+        R = dict(legs_by_type={"win": dict(won=7, n=12, said=76.0)}, tickets=dict(won=6, n=16))
+        self.assertEqual(daily_review.ladder_type_line(R),
+                         "Ladder legs so far: winners 7/12 (58% vs 76% stated). Tickets cashed 6 of 16. "
+                         "Weak spot: winners -- too few legs to cut them yet.")
+        self.assertIsNone(daily_review.ladder_type_line({}))
+
+
 class TdSlim(unittest.TestCase):
     def test_keeps_every_player_drops_extra_fields(self):
         g = dict(match="A @ B", players=[{"name": "X"}],
