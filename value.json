@@ -9493,6 +9493,23 @@
    "tip": "10:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910020|home|FanDuel": {
+   "dec": 4.15,
+   "ev": 0.0124,
+   "fair": 0.244,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910020",
+   "kind": "value",
+   "league": "nba",
+   "match": "POR @ MIL",
+   "price": "+315",
+   "seen": "2026-11-19T09:03:50+00:00",
+   "side": "home",
+   "start": "2026-11-20T01:00Z",
+   "team": "Milwaukee Bucks",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaab:401906758|away|FanDuel": {
    "dec": 41.0,
    "ev": 0.0352,
@@ -21959,6 +21976,26 @@
    "prob": 0.2808,
    "seen": "2026-11-18T05:04:27+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401910020:home": {
+   "ev": 0.0126,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0124,
+     "fair": 0.244,
+     "id": "nba:401910020",
+     "price": "+315",
+     "side": "home",
+     "spec": null,
+     "team": "Milwaukee Bucks"
+    }
+   ],
+   "payout": 4.15,
+   "prob": 0.244,
+   "seen": "2026-11-19T09:03:50+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
