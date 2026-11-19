@@ -53,6 +53,12 @@ def ten_leg_lines(D, day="today"):
     if A.get("n") and A.get("pays"):                       # the same lines stacked to the ladder's 2x, as on the page
         out.append(f"  The same lines to {A['pays']:.2f}x: {A['n']} legs, {pc(A.get('chance'))} stated all win"
                    + (f"; replayed, cashed {A['cashed']} of {A['days']} days" if A.get("days") else "") + ".")
+        T2 = ten_leg.to_target(((D.get("every_game") or {}).get(day)) or [], A["pays"])
+        mine = {(g.get("gid"), g.get("label")) for g in T["legs"]}
+        extra = [g for g in (T2 or {}).get("legs") or [] if (g.get("gid"), g.get("label")) not in mine]
+        if T2 and extra:                                   # so the 2x ticket can be placed: what it adds
+            out.append("    It adds: " + "; ".join(f"{g['label']} {g.get('price') or ''} {pc(g['p'])} ({g.get('match') or ''})"
+                                                    for g in extra))
     for i, g in enumerate(T["legs"], 1):
         out.append(f"  {i}. {g['label']} {g.get('price') or ''} -- {pc(g['p'])} ({str(g.get('league') or '').upper()}, "
                    f"{g.get('match') or ''}{', ' + g['tip'] if g.get('tip') else ''})")

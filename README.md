@@ -1561,6 +1561,11 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Checked: the 10-leg's American-leagues-first order (2026-11-19).** Replayed
+on the 13 frozen 8 AM cards, filling American leagues first (the user's ask)
+against the plain ten likeliest from any league: both cashed 5 then 6 by date
+half at about 1.64x, 42% stated. The order costs nothing; it stays.
+
 **Checked: which every-game safest lines break the 2x ticket (2026-11-19).**
 The 2x every-game ticket lost on NBA totals four of its six losing days
 (Under 254.5, Over 192.5, Under 250.5). By league and bet type on the 13
