@@ -59126,6 +59126,22 @@
   "price": "-700",
   "status": "open"
  },
+ "nba:401910021|n:josh hart|Points|5+": {
+  "aid": null,
+  "date": "2026-11-19",
+  "edge": 11.8,
+  "gid": "nba:401910021",
+  "imp": 0.8,
+  "label": "Josh Hart: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Josh Hart",
+  "p": 0.7414,
+  "p_fair": 0.8944,
+  "price": "-400",
+  "status": "open"
+ },
  "nba:401910021|n:karl anthony towns|Pts + Ast|20+": {
   "aid": null,
   "date": "2026-11-19",
@@ -102701,11 +102717,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Anders Lee",
   "p": 0.8557,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892741|n:brock nelson|Shots on Goal|1+": {
   "aid": null,
@@ -102717,11 +102735,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Brock Nelson",
   "p": 0.8591,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892741|n:logan cooley|Shots on Goal|1+": {
   "aid": null,
@@ -102733,11 +102753,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Logan Cooley",
   "p": 0.8443,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892741|n:mackenzie weegar|Shots on Goal|1+": {
   "aid": null,
@@ -102749,11 +102771,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "MacKenzie Weegar",
   "p": 0.8386,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892741|n:martin necas|Shots on Goal|2+": {
   "aid": null,
@@ -102765,11 +102789,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Martin Necas",
   "p": 0.7312,
   "p_fair": null,
   "price": "-355",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892741|n:mikhail sergachev|Shots on Goal|1+": {
   "aid": null,
@@ -102780,11 +102806,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikhail Sergachev",
   "p": 0.8754,
   "price": "-1800",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892741|n:mikhail sergachev|Shots on Goal|2+": {
   "aid": null,
@@ -102796,11 +102824,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mikhail Sergachev",
   "p": 0.6811,
   "p_fair": null,
   "price": "-265",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892741|n:nazem kadri|Shots on Goal|2+": {
   "aid": null,
@@ -102812,11 +102842,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Nazem Kadri",
   "p": 0.7486,
   "p_fair": null,
   "price": "-395",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892741|n:tj hughes|Shots on Goal|1+": {
   "aid": null,
@@ -102828,11 +102860,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "T.J. Hughes",
   "p": 0.8479,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892741|n:vincent trocheck|Shots on Goal|1+": {
   "aid": null,
@@ -102844,10 +102878,28 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Vincent Trocheck",
   "p": 0.8528,
   "p_fair": null,
   "price": "-1000",
+  "status": "won",
+  "value": 3.0
+ },
+ "nhl:401892742|n:auston matthews|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-11-19",
+  "edge": null,
+  "gid": "nhl:401892742",
+  "imp": 0.8824,
+  "label": "Auston Matthews: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Auston Matthews",
+  "p": 0.8285,
+  "p_fair": null,
+  "price": "-750",
   "status": "open"
  },
  "nhl:401892742|n:john tavares|Shots on Goal|1+": {
