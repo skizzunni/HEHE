@@ -251,6 +251,31 @@ def ten_snapshot(day, led, pool=None):
     return out
 
 
+def alt_snapshot(day, led, pool=None):
+    """{"ALT2X": ...}: the every-game ticket to 2x (ten_leg.to_target, the
+    ladder's alternative the user may choose) as one line -- "open | N legs
+    to 2.00x", then "lost | <the legs that lost>" or "won | all N legs". One
+    line, not one per leg: its legs are mostly the 10-leg's, already watched."""
+    import locks
+    import ten_leg
+    if pool is None:
+        pool = locks.frozen_pool(day, locks.SAFE_LEDGER)
+    if not pool:
+        return {}
+    eg = locks.every_game(pool.get("legs"), led)
+    for g in eg:
+        g["_st"], g["status"] = g["status"], "open"
+    T = ten_leg.to_target(eg, 2.0)
+    if not T:
+        return {}
+    lost = [g["label"] + (f" ({g['score']})" if g.get("score") else "") for g in T["legs"] if g["_st"] == "lost"]
+    if lost:
+        return {"ALT2X": "lost | " + "; ".join(lost)}
+    if all(g["_st"] in ("won", "void") for g in T["legs"]):
+        return {"ALT2X": f"won | all {T['n']} legs, {T['pays']:.2f}x"}
+    return {"ALT2X": f"open | {T['n']} legs to {T['pays']:.2f}x"}
+
+
 def ten_record(after):
     """The 10-leg so far: "10-leg: 4 won, 0 lost, 6 open" (a loss means the
     ticket is gone), or ""."""
@@ -326,6 +351,10 @@ def main(state_path, day=None, league=None):
             if league == "all":          # the daily 10-leg, leg by leg
                 try:
                     after.update(ten_snapshot(day, led))
+                except Exception:
+                    pass
+                try:                     # the ladder's 2x alternative, as one line
+                    after.update(alt_snapshot(day, led))
                 except Exception:
                     pass
         except (OSError, ValueError):

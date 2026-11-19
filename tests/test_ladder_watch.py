@@ -317,6 +317,23 @@ class TenLegWatch(unittest.TestCase):
         self.assertEqual(w.ten_snapshot("2026-11-18", {}, pool={}), {})
 
 
+class AltSnapshot(unittest.TestCase):
+    def _snap(self, st):
+        import unittest.mock as m
+        import locks
+        eg = [dict(gid=f"g{i}", label=f"Over {200 + i}.5 points", price="-200", p=0.9 - i / 100, league="nba",
+                   match=f"T{i} @ U{i}", status=st[i], score="U1 99 - T1 90" if st[i] == "lost" else None) for i in range(3)]
+        with m.patch.object(locks, "every_game", lambda legs, led=None: [dict(g) for g in eg]):
+            return w.alt_snapshot("2026-11-19", {}, pool={"legs": []})
+
+    def test_one_line_open_lost_won(self):
+        self.assertEqual(self._snap(["won", "open", "open"]), {"ALT2X": "open | 2 legs to 2.25x"})
+        self.assertEqual(self._snap(["won", "lost", "open"]), {"ALT2X": "lost | Over 201.5 points (U1 99 - T1 90)"})
+        self.assertEqual(self._snap(["won", "won", "open"]), {"ALT2X": "won | all 2 legs, 2.25x"})
+        self.assertEqual(w.alt_snapshot("2026-11-19", {}, pool={}), {})
+        self.assertIn("WATCHING: ALT2X = open | 2 legs to 2.25x", w.first_look({"ALT2X": "open | 2 legs to 2.25x"}))
+
+
 class FirstLookCountsAddUp(unittest.TestCase):
     def test_void_counted(self):
         after = {"GAME nba A @ B": "board pick B (70%) = won | x", "GAME nba C @ D": "board pick D (60%) = open",
