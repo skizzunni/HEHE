@@ -4,8 +4,8 @@
 
   1. the daily 10-leg (ten_leg.py), each leg with its own chance
   2. scorers: NFL touchdown scorers for every listed player -- anytime, 2+
-     and first touchdown (td_scorers); on days with no NFL, NBA and NHL
-     player props instead: one line per player, the longest-priced line
+     and first touchdown (td_scorers); then NBA and NHL player props (on
+     their own when no NFL plays): one line per player, the longest-priced line
      still 80%+ likely on its own (user, 2026-11-17: "think ab the props
      individually")
   3. NBA team points: each team's main team total and the side the price leans
@@ -77,32 +77,43 @@ def best_per_player(props, floor=FLOOR):
     return sorted(best.values(), key=lambda p: (-p["p"], p.get("imp") or 1))
 
 
-def scorer_lines(D, day="today", per_game=None, top=15):
-    """NFL touchdown scorers for every player when NFL plays; else the
-    likeliest NBA and NHL player props."""
-    td = [g for g in ((D.get("td") or {}).get(day) or []) if g.get("lg") == "NFL"]
-    if td:
-        n = per_game or 6
-        out = ["NFL touchdown scorers -- every player is on the page's Props tab; here each game's likeliest "
-               "(first TD and 2+ are model estimates; even the top first-TD scorer is usually under 20%):"]
-        for g in td:
-            E = g.get("everyone") or g.get("players") or []
-            out.append(f"  {g['match']}{' ' + g['tip'] if g.get('tip') else ''} ({len(E)} players listed):")
-            out.append("    Anytime: " + "; ".join(f"{x['name']} {pc(x.get('p'))} ({x.get('price') or ''})" for x in E[:n]))
-            for key, name in (("p2", "2+ TDs"), ("pfirst", "First TD")):
-                top = sorted((x for x in E if x.get(key) is not None), key=lambda x: -x[key])[:3]
-                if top:
-                    out.append(f"    {name}: " + "; ".join(f"{x['name']} {pc(x[key])}" for x in top))
-        return out
+def prop_lines(D, day="today", top=15, head=None):
+    """NBA and NHL player props, one per player: his best-paying line still
+    FLOOR+ likely on its own."""
     games = ((D.get("props") or {}).get(day) or {}).get("games") or []
-    out = [f"No NFL today -- player props instead, one per player (his best-paying line at {round(100 * FLOOR)}%+):"]
+    out = [head or f"NBA and NHL player props, one per player (his best-paying line at {round(100 * FLOOR)}%+):"]
     for lg, name in (("nba", "NBA"), ("nhl", "NHL")):
         P = best_per_player([dict(p, match=g.get("match")) for g in games if str(g.get("id", "")).startswith(lg + ":")
                              for p in g.get("props") or [] if p.get("p") and p.get("plays", True)])[:top]
         if P:
             out.append(f"  {name}:")
             out += [f"    {p['label']} {p.get('price') or ''} -- {pc(p['p'])} ({p.get('match') or ''})" for p in P]
-    return out if len(out) > 1 else ["No NFL today, and no NBA or NHL player props posted yet."]
+    return out if len(out) > 1 else []
+
+
+def scorer_lines(D, day="today", per_game=None, top=15):
+    """NFL touchdown scorers for every player when NFL plays, then the NBA
+    and NHL player props (user, 2026-11-17: "for nba, team points, player
+    props") -- on a one-game Thursday the basketball props are most of the
+    card, so they are no longer dropped when NFL plays."""
+    td = [g for g in ((D.get("td") or {}).get(day) or []) if g.get("lg") == "NFL"]
+    if not td:
+        P = prop_lines(D, day, top, head=f"No NFL today -- player props instead, one per player "
+                                         f"(his best-paying line at {round(100 * FLOOR)}%+):")
+        return P or ["No NFL today, and no NBA or NHL player props posted yet."]
+    n = per_game or 6
+    out = ["NFL touchdown scorers -- every player is on the page's Props tab; here each game's likeliest "
+           "(first TD and 2+ are model estimates; even the top first-TD scorer is usually under 20%):"]
+    for g in td:
+        E = g.get("everyone") or g.get("players") or []
+        out.append(f"  {g['match']}{' ' + g['tip'] if g.get('tip') else ''} ({len(E)} players listed):")
+        out.append("    Anytime: " + "; ".join(f"{x['name']} {pc(x.get('p'))} ({x.get('price') or ''})" for x in E[:n]))
+        for key, name in (("p2", "2+ TDs"), ("pfirst", "First TD")):
+            best = sorted((x for x in E if x.get(key) is not None), key=lambda x: -x[key])[:3]
+            if best:
+                out.append(f"    {name}: " + "; ".join(f"{x['name']} {pc(x[key])}" for x in best))
+    P = prop_lines(D, day, top)
+    return out + ([""] + P if P else [])
 
 
 def team_points_lines(D, day="today"):

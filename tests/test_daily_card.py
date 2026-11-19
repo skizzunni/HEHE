@@ -108,6 +108,14 @@ class Card(unittest.TestCase):
         self.assertTrue(out[3].startswith("    2+ TDs: P7 30%"), out[3])      # sorted by its own chance
         self.assertTrue(out[4].startswith("    First TD: P0 12%; P1 11%; P2 10%"), out[4])
 
+    def test_nfl_day_still_lists_nba_props(self):
+        out = daily_card.scorer_lines(self.D)
+        self.assertIn("NBA and NHL player props, one per player (his best-paying line at 80%+):", out)
+        self.assertTrue(any("P1: 10+ Points" in l for l in out))
+        self.assertLess(out.index("  NBA:"), len(out))
+        D = dict(self.D, props={})
+        self.assertFalse(any("player props" in l for l in daily_card.scorer_lines(D)))   # none posted: no empty heading
+
     def test_no_nfl_falls_back_to_props_one_per_player(self):
         D = dict(self.D, td={"today": []})
         out = daily_card.scorer_lines(D)
