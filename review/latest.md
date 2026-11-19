@@ -1,6 +1,6 @@
 # Review 2026-11-19
 
-Picks 2-1 (66.7% vs 74.0% claimed, ROI -15.7%).
+Picks 3-1 (75.0% vs 75.0% claimed, ROI -5.2%).
 Ladder: run 11, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.00x (43% est.), the best-chance 2x-5x combination (3 legs) against 35% at 2.48x for the plain top 4; without props it would be 3 legs at 2.00x (42%); 14 wins to $10,000; legs: Tank Dell: 2+ Receptions (IND @ HOU; 8:15 PM, open; props like it 41/52), Over 4.5 goals (Philadelphia Flyers at Ottawa Senators; 7:00 PM, open), Washington Capitals +1.5 (Buffalo Sabres at Washington Capitals; 7:00 PM, open).
 Ladder runs: 1) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 2) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 3) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 4) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 5) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 6) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 7) 2026-11-15, 2 days, peak $2.00, lost on Boston Celtics to win; 8) 2026-11-17, 1 day, peak $1.00, lost on San Antonio Spurs to win, Duke Blue Devils to win; 9) 2026-11-18, 1 day, peak $1.00, lost on Los Angeles Lakers to win, Under 235.5 points (237, missed by 1.5); 10) 2026-11-19, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 15/31 cashed at 2.22x, without props 15/32 at 2.28x.
 Running ahead: NBA over on all saved lines 1098/1251 vs 83% (93 games); NFL teamover on all saved lines 306/363 vs 81% (28 games); NHL over on all saved lines 125/143 vs 84% (85 games).
@@ -15,10 +15,10 @@ Locks by bet type, by half: win 87% then 79% (vs 83%, 79%); spread 88% then 90% 
 Locks by league, by half: NBA 84% then 86% (vs 83%, 83%); NHL 85% then 97% (vs 87%, 87%); NCAAF 88% then 78% (vs 82%, 77%); NFL 84% then 80% (vs 83%, 83%). No league short in both halves.
 Locks props by market, by half: NBA Assists 14/19 then 18/21 (vs 89%, 79%); NFL Receiving Yards 12/14 then 10/15 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.
 Every game's safest line by bet type, by half: win 82% then 92% (vs 84%, 84%); spread 89% then 91% (vs 90%, 90%); total 95% then 96% (vs 90%, 92%); team total 92% then 94% (vs 90%, 90%). Ahead in both halves: total, team total.
-Priced-era picks by league, by half (split 2026-11-04): soccer or-draw 77% vs 74% (z +1.7) then 76% vs 74% (z +0.5); soccer win 82% vs 73% (z +2.8) then 85% vs 74% (z +2.4); NCAAF 73% vs 72% (z +0.2) then 70% vs 70% (z -0.2); NBA 70% vs 66% (z +1.0) then 72% vs 69% (z +0.8); NHL 58% vs 58% (z +0.0) then 61% vs 58% (z +0.5); NCAAB 82% vs 88% (z -0.8) then 88% vs 87% (z +0.3); NFL 75% vs 64% (z +1.2) then 83% vs 67% (z +1.8). None past the 99.5% bar in both halves.
+Priced-era picks by league, by half (split 2026-11-04): soccer or-draw 77% vs 74% (z +1.7) then 76% vs 74% (z +0.5); soccer win 82% vs 73% (z +2.8) then 85% vs 74% (z +2.4); NCAAF 73% vs 72% (z +0.2) then 70% vs 70% (z -0.2); NBA 70% vs 66% (z +1.0) then 72% vs 69% (z +0.8); NHL 58% vs 58% (z +0.0) then 61% vs 58% (z +0.5); NCAAB 82% vs 88% (z -0.8) then 88% vs 87% (z +0.4); NFL 75% vs 64% (z +1.2) then 83% vs 67% (z +1.8). None past the 99.5% bar in both halves.
 National-team soccer: 55/63 (87% vs 76% stated), 2 of 8 losses draws (straight win 28/30 (93% vs 78% stated); or draw 27/33 (82% vs 75% stated)); club soccer 814/1119 (73% vs 71% stated).
 Coin flips (called under 60%), by half: all 96/163 (59% vs 55%) then 97/163 (60% vs 55%); price moved against 3+ 12/19 (63% vs 54%) then 12/21 (57% vs 54%); steady 73/115 (63% vs 54%) then 68/115 (59% vs 55%); moved toward 3+ 5/12 (42% vs 56%) then 17/27 (63% vs 57%).
-Board picks by price move after the call, by half: moved 6+ against 14/21 (z +0.1) then 10/16 (z -0.1); 3-6 against 45/67 (z -0.2) then 39/63 (z -0.8); steady 548/735 (z +2.6) then 509/679 (z +1.8); moved 3+ toward 112/140 (z +2.1) then 168/206 (z +2.7).
+Board picks by price move after the call, by half: moved 6+ against 14/21 (z +0.1) then 10/16 (z -0.1); 3-6 against 45/67 (z -0.2) then 39/63 (z -0.8); steady 548/736 (z +2.6) then 510/679 (z +1.8); moved 3+ toward 112/140 (z +2.1) then 168/206 (z +2.7).
 Pool game lines (one per game and bet type), every league, by half: 86.4% vs 82.2% (z +2.8) to 2026-11-12, then 80.6% vs 82.3% (z -1.1) on 1279 game lines.
 Daily 10-leg, replayed on every 8 AM card: cashed 11 of 13 days (85%) vs 42% stated, at about 1.64x.
 Ladder vs every-game ticket to 2x, same 13 days: ladder 2/6 then 2/7; every-game 3/6 then 5/7; only the every-game cashed on 7 days, only the ladder on 3.
@@ -30,17 +30,17 @@ Anytime touchdown chances, by half: 144/1061 scored vs 124.8 stated (z +2.0) to 
 Home and away picks, by half: NBA home 66% vs 66% then 70% vs 69%, away 78% vs 64% then 75% vs 68%; NHL home 62% vs 59% then 54% vs 60%, away 55% vs 57% then 70% vs 56%; NCAAF home 80% vs 74% then 66% vs 72%, away 60% vs 69% then 76% vs 68%; NFL home 70% vs 65% then 67% vs 67%, away 88% vs 62% then 94% vs 68%.
 Ladder leg types on the saved pools, one line per game, by half: NHL over 86% then 83% vs 82%, 83% on 85 games; NHL spread 89% then 77% vs 83%, 83% on 85 games.
 Injuries at tip-off (244 games, 15 days, early read): my side more out: 1st 27/37 73% vs 65% | 2nd 26/40 65% vs 62%; even: 1st 21/29 72% vs 63% | 2nd 20/39 51% vs 62%; their side more out: 1st 40/48 83% vs 65% | 2nd 34/51 67% vs 67%.
-Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1954 picks).
+Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1955 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 8/17 vs 70% stated (4.2% by luck; about 2.5 of 60 teams expected this far behind by chance); NHL Detroit Red Wings 3/10 vs 54% stated (11.7% by luck; about 7.0 of 60 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.7 of 60 teams expected this far behind by chance).
-High-chance sweep: 70%+ today 1-1, 8 open; swept 3 of 33 past days (last 2026-11-11) | 80%+ today 1-0, 5 open; swept 10 of 32 past days (last 2026-11-13).
+High-chance sweep: 70%+ today 2-1, 7 open; swept 3 of 33 past days (last 2026-11-11) | 80%+ today 1-0, 5 open; swept 10 of 32 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/30 vs 61%; NBA on the tired side 18/24 vs 65%, against it 20/26 vs 72%.
 Ladder games, players out or doubtful: IND @ HOU: Indianapolis Colts without Jalen Travis, Jerry Tillery, Charvarius Ward, Will Mallory, Bernhard Raimann; Houston Texans without Danielle Hunter, Brevin Jordan, Marvin Harrison Jr., Woody Marks.
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
 Next UFC card 2026-11-21 (11 fights priced, 3 close): Ikram Aliskerov 71%; Aleksandre Topuria 71%; Jake Matthews 69%; Diyar Nurgozhay 68%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Dan Hooker 63%; Navajo Stirling 61%; Dom Mar Fan 60% (close); Kevin Vallejos 55% (close); Alessandro Costa 50% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.6% hit vs 44.6% stated on 550
 Strong calls 2-1 (66.7% vs 74.0% claimed).
-Closing line value: -0.83 points on 3 picks; beat the close on 33.3%.
-Board sweep: 2-1, 26 open -- broken (first loss: uru Deportivo Maldonado or draw at 73%); 0.8 losses expected from the settled picks' chances, so 1 or more by now had a 60.1% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: uru 1 (0.8 expected).
+Closing line value: -0.93 points on 4 picks; beat the close on 25.0%.
+Board sweep: 3-1, 25 open -- broken (first loss: uru Deportivo Maldonado or draw at 73%); 1 losses expected from the settled picks' chances, so 1 or more by now had a 68.9% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: uru 1 (0.8 expected).
 - LOST uru Deportivo Maldonado or draw at 73% (-350), Boston River 1 - Deportivo Maldonado 0: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game · price moved against it (3 pts); picks like it: 10 of 13 (77% vs 73% stated)
 Why picks lost (14 days): favourite lost 95, close game 89, coin flip 55, blowout 46, upset 40, price moved against it 23, drawn 11.
 Yesterday (2026-11-18): board 17-11, sweep broken by ncaab Florida Gators at 55%; 9 losses expected, 11 came in (26.7% chance of that many or more).
@@ -66,4 +66,4 @@ Lottery 100: open (0/5 legs won)
 Ladder-consistency props (all time): 2821/3404 won (82.9%) vs 86.4% fair, 87.6% price, 83.6% stated on the board (heavy props capped).
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=222), ncaab 0.00 (n=83), ncaaf 0.00 (n=298), nfl 0.00 (n=70), nhl 0.00 (n=229)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=222), ncaab 0.00 (n=84), ncaaf 0.00 (n=298), nfl 0.00 (n=70), nhl 0.00 (n=229)
