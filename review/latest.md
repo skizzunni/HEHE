@@ -35,7 +35,6 @@ Teams backed most, furthest behind (10+ picks): NBA New York Knicks 8/17 vs 70% 
 High-chance sweep: 70%+ today 0-0, 10 open; swept 3 of 33 past days (last 2026-11-11) | 80%+ today 0-0, 5 open; swept 10 of 32 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/30 vs 61%; NBA on the tired side 18/24 vs 65%, against it 20/26 vs 72%.
 Ladder games, players out or doubtful: IND @ HOU: Indianapolis Colts without Jalen Travis, Jerry Tillery, Charvarius Ward, Will Mallory, Bernhard Raimann; Houston Texans without Danielle Hunter, Brevin Jordan, Marvin Harrison Jr., Woody Marks.
-UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
 Next UFC card 2026-11-21 (11 fights priced, 2 close): Ikram Aliskerov 72%; Aleksandre Topuria 71%; Diyar Nurgozhay 68%; Jake Matthews 68%; Shamil Gaziev 64%; Dan Hooker 63%; Kyoji Horiguchi 62%; Navajo Stirling 61%; Dom Mar Fan 60%; Kevin Vallejos 54% (close); Alessandro Costa 50% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.6% hit vs 44.6% stated on 550
 Board sweep: 0-0, 29 open -- still clean.
