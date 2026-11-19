@@ -11727,6 +11727,7 @@
   "p": 0.8576,
   "p_fair": 0.9201,
   "price": "-1000",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "unresolved": true,
   "void_why": "identity_unresolved"
@@ -56629,6 +56630,22 @@
   "p": 0.8488,
   "p_fair": 0.9538,
   "price": "-1100",
+  "status": "open"
+ },
+ "nba:401910011|n:jalen smith|Pts + Ast|10+": {
+  "aid": null,
+  "date": "2026-11-18",
+  "edge": 3.7,
+  "gid": "nba:401910011",
+  "imp": 0.9,
+  "label": "Jalen Smith: 10+ Pts + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Pts + Ast",
+  "name": "Jalen Smith",
+  "p": 0.8571,
+  "p_fair": 0.9333,
+  "price": "-900",
   "status": "open"
  },
  "nba:401910011|n:jalen smith|Rebounds|6+": {
