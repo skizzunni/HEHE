@@ -27,6 +27,23 @@ class TenLeg(unittest.TestCase):
         self.assertIsNone(ten_leg.build([]))
 
 
+class ToTarget(unittest.TestCase):
+    def test_adds_safest_until_2x(self):
+        G = [dict(gid=f"g{i}", label=f"L{i}", price="-400", p=0.9 - i / 100, league="nba", status="open") for i in range(6)]
+        T = ten_leg.to_target(G, 2.0)
+        self.assertEqual(T["n"], 4)                       # 1.25 ** 4 = 2.44, three legs only 1.95
+        self.assertEqual([g["label"] for g in T["legs"]], ["L0", "L1", "L2", "L3"])
+        self.assertIsNone(ten_leg.to_target(G[:2], 2.0))
+
+    def test_review_line(self):
+        import daily_review
+        lad = {f"2026-11-{d:02d}": d % 3 == 0 for d in range(5, 13)}
+        alt = {f"2026-11-{d:02d}": d % 2 == 0 for d in range(5, 14)}
+        out = daily_review.ladder_alt_line(lad, alt)
+        self.assertTrue(out.startswith("Ladder vs every-game ticket to 2x, same 8 days: ladder "), out)
+        self.assertIsNone(daily_review.ladder_alt_line({"2026-11-05": True}, {"2026-11-05": True}))
+
+
 class Sizes(unittest.TestCase):
     def test_sizes_skips_empty(self):
         import unittest.mock as m

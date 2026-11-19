@@ -1543,6 +1543,16 @@ then 51/119 vs 60.7 (z -1.79) -- short both times, short of the 2.8 bar;
 (PREREG_HOME, since Nov 15) decides that one on new finds. Nothing changes;
 the review prints the bands daily (value_band_line).
 
+**On watch, the user's call: the ladder's 2x from every-game lines (2026-11-19).**
+Nov 18 the ladder (4 Locks legs at ~76%) lost while the 10-leg (ten -2000
+lines) cashed. Replayed on the 13 graded 8 AM cards: stacking the safest
+every-game lines until the ticket pays 2x (13-15 legs, ~27% stated) cashed
+8 of 13 days (4/6 then 4/7); the real ladder on the same days won 4 (1/6 then
+3/7). Head to head: 7 days only the every-game ticket cashed, 3 only the
+ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
+ladder's rule is the user's to change; the review now prints this daily
+(ladder_alt_line) so the evidence builds.
+
 **Rejected: skip picks whose price moved far against them (2026-11-19).**
 Tonight's losers Toronto (price moved 10 points against), Brooklyn (5) and
 Detroit (3). Earlier move studies cut at 3 points; by size, on 1,920 priced

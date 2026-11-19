@@ -625,6 +625,32 @@ def every_game_band_line(rows=None):
     return f"Every game's safest line by chance, halves split {mid}: " + "; ".join(parts) + "."
 
 
+def ladder_alt_line(ladder_days=None, alt_days=None):
+    """The ladder's real days against the every-game ticket to 2x on the same
+    days (ten_leg.to_target): days cashed each, by half, and head to head.
+    Information only -- the ladder's rule is the user's. 2026-11-19: on 13
+    common days the every-game 2x cashed 8, the ladder 4 (7 days only the
+    every-game won, 3 only the ladder) -- too few days to call."""
+    if ladder_days is None:
+        import ladder
+        ladder_days = {e["day"]: e["result"] == "won" for r in ladder.replay() for e in r["days"]
+                       if e["result"] in ("won", "lost")}
+    if alt_days is None:
+        import locks
+        import ten_leg
+        alt_days = ten_leg.to_target_days(locks.SAFE_LEDGER)
+    days = sorted(set(ladder_days) & set(alt_days))
+    if len(days) < 4:
+        return None
+    h = len(days) // 2
+    rec = lambda D, src: f"{sum(src[d] for d in D)}/{len(D)}"
+    only_alt = sum(alt_days[d] and not ladder_days[d] for d in days)
+    only_lad = sum(ladder_days[d] and not alt_days[d] for d in days)
+    return (f"Ladder vs every-game ticket to 2x, same {len(days)} days: ladder {rec(days[:h], ladder_days)} then "
+            f"{rec(days[h:], ladder_days)}; every-game {rec(days[:h], alt_days)} then {rec(days[h:], alt_days)}; "
+            f"only the every-game cashed on {only_alt} days, only the ladder on {only_lad}.")
+
+
 def ten_leg_line(rec=None):
     """The daily 10-leg (ten_leg.py) replayed on every frozen 8 AM pool:
     days cashed vs the average stated all-win chance, and its payout."""
@@ -2115,6 +2141,8 @@ def words(r, fit):
         out.append(r["pool_overall"])
     if r.get("ten_leg"):
         out.append(r["ten_leg"])
+    if r.get("ladder_alt"):
+        out.append(r["ladder_alt"])
     if r.get("eg_bands"):
         out.append(r["eg_bands"])
     if r.get("ticket_sizes"):
@@ -2284,6 +2312,10 @@ def _main():
     log[today.isoformat()]["price_moves"] = price_move_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
     log[today.isoformat()]["td_calibration"] = td_calibration_line()
+    try:
+        log[today.isoformat()]["ladder_alt"] = ladder_alt_line()
+    except Exception as e:                                  # a broken pool or ladder file must not stop the review
+        log[today.isoformat()]["ladder_alt"] = f"Ladder vs every-game: unavailable ({type(e).__name__})."
     try:
         log[today.isoformat()]["eg_bands"] = every_game_band_line()
     except Exception as e:                                  # a broken pool file must not stop the review

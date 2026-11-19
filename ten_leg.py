@@ -86,3 +86,38 @@ def sizes(path=None, led=None, ns=SIZES):
         if r.get("days"):
             out.append(dict(n=n, days=r["days"], cashed=r["cashed"], pays=r.get("pays")))
     return out
+
+
+def to_target(games, target=2.0):
+    """Every-game lines, likeliest first, added until the ticket pays
+    `target`: dict(legs, n, chance, pays) or None when they cannot reach it.
+    The ladder's alternative (2026-11-19): its 2x from the safest lines on
+    the board rather than a few 75% Locks legs."""
+    legs = sorted((g for g in games or [] if g.get("status", "open") == "open" and g.get("p") and _dec(g.get("price"))),
+                  key=lambda g: -g["p"])
+    out, pay = [], 1.0
+    for g in legs:
+        out.append(g)
+        pay *= _dec(g["price"])
+        if pay >= target:
+            return dict(legs=out, n=len(out), chance=round(math.prod(x["p"] for x in out), 4), pays=round(pay, 2))
+    return None
+
+
+def to_target_days(path=None, led=None, target=2.0):
+    """{day: True/False} -- did the every-game ticket to `target` cash on each
+    graded 8 AM card (picked as at 8 AM)."""
+    import locks
+    if led is None:
+        import ledger
+        led = ledger.load()
+    out = {}
+    for d, x in sorted((locks.load(path).get("pools") or {}).items()):
+        eg = locks.every_game(x.get("legs"), led)
+        for g in eg:
+            g["_st"], g["status"] = g["status"], "open"
+        t = to_target(eg, target)
+        if not t or any(g["_st"] not in ("won", "lost", "void") for g in t["legs"]):
+            continue
+        out[d] = all(g["_st"] != "lost" for g in t["legs"])
+    return out
