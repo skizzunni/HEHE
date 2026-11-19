@@ -98,6 +98,46 @@ def lines(R):
     return out
 
 
+def alt_line(T, record=None):
+    """The ladder's 2x from the board's safest every-game lines instead
+    (ten_leg.to_target), beside its replayed record against the ladder --
+    the alternative the user may choose (2026-11-19). T: to_target's ticket."""
+    if not T:
+        return None
+    rec = ""
+    if record and record.get("days"):
+        rec = (f" Replayed on the same {record['days']} days: it cashed {record['alt']}, the ladder {record['ladder']}.")
+    return (f"Alternative (your call, not used): the {T['n']} safest every-game lines to {T['pays']:.2f}x, "
+            f"{round(100 * T['chance'])}% stated all win.{rec}")
+
+
+def alt_record():
+    """{days, alt, ladder}: the every-game ticket to 2x and the ladder on the
+    days both were graded."""
+    import ladder
+    import locks
+    import ten_leg
+    lad = {e["day"]: e["result"] == "won" for r in ladder.replay() for e in r["days"] if e["result"] in ("won", "lost")}
+    alt = ten_leg.to_target_days(locks.SAFE_LEDGER)
+    days = set(lad) & set(alt)
+    return dict(days=len(days), alt=sum(alt[d] for d in days), ladder=sum(lad[d] for d in days))
+
+
 if __name__ == "__main__":
     import ladder
-    print("\n".join(lines(ladder.report())) or "No ladder ticket today yet.")
+    out = lines(ladder.report())
+    print("\n".join(out) or "No ladder ticket today yet.")
+    try:                                     # the every-game alternative, from today's frozen 8 AM pool
+        import datetime as dt
+        import ledger
+        import locks
+        import ten_leg
+        from zoneinfo import ZoneInfo
+        day = dt.datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+        pool = locks.frozen_pool(day, locks.SAFE_LEDGER)
+        if pool and out:
+            a = alt_line(ten_leg.to_target(locks.every_game(pool.get("legs"), ledger.load()), 2.0), alt_record())
+            if a:
+                print(a)
+    except Exception:
+        pass
