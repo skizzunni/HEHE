@@ -63,3 +63,14 @@ class AltLine(unittest.TestCase):
                          " Replayed on the same 13 days: it cashed 8, the ladder 4.")
         self.assertEqual(lt.alt_line(T), "Alternative (your call, not used): the 14 safest every-game lines to 2.02x, 27% stated all win.")
         self.assertIsNone(lt.alt_line(None))
+
+
+class TypeLine(unittest.TestCase):
+    def test_types_and_weak_spot(self):
+        R = dict(legs_by_type={"win": dict(won=7, n=12, said=76.0), "total": dict(won=19, n=22, said=75.5),
+                               "spread": dict(won=1, n=4, said=75.6)}, tickets=dict(won=6, n=16))
+        self.assertEqual(t.type_line(R),
+                         "Ladder legs so far: totals 19/22 (86% vs 76% stated); winners 7/12 (58% vs 76% stated); "
+                         "spreads 1/4 (25% vs 76% stated). Tickets cashed 6 of 16. "
+                         "Weak spot: winners -- too few legs to cut them yet.")   # spreads: under 10 legs, not named
+        self.assertIsNone(t.type_line({}))

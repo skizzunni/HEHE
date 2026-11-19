@@ -92,10 +92,34 @@ def lines(R):
     if npr and any(L.get("kind") == "prop" for L in T["legs"]):
         out.append(f"Without props: {npr['n']} legs at {npr['pays']:.2f}x, {round(100 * npr['prob'])}% "
                    f"({', '.join(npr.get('labels') or [])}).")
+    tl = type_line(R)
+    if tl:
+        out.append(tl)
     if R.get("wins_needed"):
         out.append(f"{R['wins_needed']} straight wins at this price reach the target"
                    + (f", about 1 in {round(1 / R['chance_to_target']):,}." if R.get("chance_to_target") else "."))
     return out
+
+
+TYPE_NAMES = {"total": "totals", "prop": "props", "team total": "team totals", "spread": "spreads", "win": "winners"}
+
+
+def type_line(R):
+    """Every ladder leg so far by bet type -- where tickets actually break.
+    A type 10+ points under its stated rate on 10+ legs is named, but not
+    cut: that takes the date-halves test (README, 2026-11-19)."""
+    B = (R or {}).get("legs_by_type") or {}
+    rows = sorted(((k, v) for k, v in B.items() if v.get("n")), key=lambda kv: -kv[1]["n"])
+    if not rows:
+        return None
+    parts = [f"{TYPE_NAMES.get(k, k)} {v['won']}/{v['n']}" + (f" ({round(100 * v['won'] / v['n'])}% vs {round(v['said'])}% stated)"
+             if v.get("said") is not None else "") for k, v in rows]
+    weak = [TYPE_NAMES.get(k, k) for k, v in rows
+            if v["n"] >= 10 and v.get("said") is not None and 100 * v["won"] / v["n"] < v["said"] - 10]
+    tk = (R or {}).get("tickets") or {}
+    return ("Ladder legs so far: " + "; ".join(parts) + "."
+            + (f" Tickets cashed {tk['won']} of {tk['n']}." if tk.get("n") else "")
+            + (f" Weak spot: {', '.join(weak)} -- too few legs to cut them yet." if weak else ""))
 
 
 def alt_line(T, record=None):

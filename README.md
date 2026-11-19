@@ -1561,6 +1561,14 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Rejected: keep "to win" legs out of the ladder (2026-11-19).** Five of the
+last nine runs died on a straight winner leg (Houston, Boston, Spurs, Duke,
+Lakers); ladder winner legs are 7/12 against 76% stated. On every Locks leg
+by date halves: winners 10/13 then 8/13 (exp 9.9 each, z +0.1 / -1.2),
+totals and spreads on par, props on par. Short of the bar in both halves, so
+nothing is cut; the ladder ticket now prints its legs by bet type with the
+weak spot named (ladder_ticket.type_line) so the record builds in view.
+
 **Rejected: skip picks whose price moved far against them (2026-11-19).**
 Tonight's losers Toronto (price moved 10 points against), Brooklyn (5) and
 Detroit (3). Earlier move studies cut at 3 points; by size, on 1,920 priced
