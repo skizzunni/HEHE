@@ -49,6 +49,10 @@ def ten_leg_lines(D, day="today"):
         out.append("  Other sizes, replayed: " + "; ".join(
             f"{z['n']} legs cashed {z['cashed']}/{z['days']}" + (f" at {z['pays']:.2f}x" if z.get("pays") else "") for z in Z)
             + " -- fewer legs win more often, pay less.")
+    A = X.get("alt2x") or {}
+    if A.get("n") and A.get("pays"):                       # the same lines stacked to the ladder's 2x, as on the page
+        out.append(f"  The same lines to {A['pays']:.2f}x: {A['n']} legs, {pc(A.get('chance'))} stated all win"
+                   + (f"; replayed, cashed {A['cashed']} of {A['days']} days" if A.get("days") else "") + ".")
     for i, g in enumerate(T["legs"], 1):
         out.append(f"  {i}. {g['label']} {g.get('price') or ''} -- {pc(g['p'])} ({str(g.get('league') or '').upper()}, "
                    f"{g.get('match') or ''}{', ' + g['tip'] if g.get('tip') else ''})")

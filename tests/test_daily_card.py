@@ -136,6 +136,13 @@ class Card(unittest.TestCase):
                                  " -- fewer legs win more often, pay less.")
         self.assertFalse(any("Other sizes" in l for l in daily_card.ten_leg_lines(self.D)))
 
+    def test_ten_leg_alt2x_line(self):
+        D = dict(self.D, ten_leg={"alt2x": dict(n=14, chance=0.3034, pays=2.0, cashed=8, days=13)})
+        self.assertIn("  The same lines to 2.00x: 14 legs, 30% stated all win; replayed, cashed 8 of 13 days.",
+                      daily_card.ten_leg_lines(D))
+        D = dict(self.D, ten_leg={"alt2x": dict(n=None, chance=None, pays=None)})
+        self.assertFalse(any("same lines" in l for l in daily_card.ten_leg_lines(D)))
+
     def test_team_points_under_lean_and_even(self):
         D = {"markets": {"today": [{"lg": "NBA", "match": "X at Y", "m": [
             dict(g="Team total", l="Y over 110.5", p=0.46), dict(g="Team total", l="Y under 110.5", p=0.54),
