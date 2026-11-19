@@ -220,7 +220,8 @@ PROBE = """<script>setTimeout(function(){
   out.noprops = [noPropsNote({legs: [{kind: "prop"}, {kind: "game"}], no_props: {n: 3, pays: 2.05, prob: 0.43, labels: ["Over 1.5", "A +3.5", "B to win"]}}),
                  noPropsNote({legs: [{kind: "game"}], no_props: {n: 3, pays: 2.05, prob: 0.43, labels: ["x"]}}), noPropsNote({})];
   out.lskip = [ladderSkip({all: [12, 24, 2.22], without: [13, 24, 2.32]}), ladderSkip(null)];
-  out.ltypes = [ladderTypes({win: {won: 6, n: 6}, prop: {won: 9, n: 12}, total: {won: 8, n: 9}}), ladderTypes({})];
+  out.ltypes = [ladderTypes({win: {won: 6, n: 6}, prop: {won: 9, n: 12}, total: {won: 8, n: 9}}), ladderTypes({}),
+    ladderTypes({win: {won: 7, n: 12, said: 76}, total: {won: 19, n: 22, said: 75.5}})];
   out.lkinds = [ladderKinds({game: {won: 16, n: 18, said: 75.7}, prop: {won: 7, n: 10, said: 79.3}}), ladderKinds({}), ladderKinds(undefined)];
   var rsB = D.results; D.results = Object.assign({}, rsB, {b2b: {mine: [3, 9, 56.4], theirs: [17, 25, 61.1]}});
   out.b2bN = [b2bNote({b2b: "mine"}), b2bNote({b2b: "theirs"}), b2bNote({})];
@@ -602,7 +603,8 @@ def main():
     if not (ls[0] == " Replayed on every saved card: as ranked 12 of 24 cashed at 2.22x; without player props 13 of 24 cashed at 2.32x." and ls[1] == ""):
         fails.append("ladder skip replay wrong: " + repr(ls))
     lt = new.get("ltypes") or ["", "x"]
-    if not (lt[0] == " By bet: wins 6/6, totals 8/9, props 9/12." and lt[1] == ""):
+    if not (lt[0] == " By bet: wins 6/6, totals 8/9, props 9/12." and lt[1] == ""
+            and lt[2] == " By bet: wins 7/12, totals 19/22. Weak spot: wins (58% vs 76% stated) &mdash; too few legs to cut yet."):
         fails.append("ladder types wrong: " + repr(lt))
     bn = new.get("b2bN") or ["", "", "x"]
     if not ("<b>Back-to-back:</b> this pick played last night" in bn[0] and "so far: 3 of 9 (33% vs 56% stated)" in bn[0]

@@ -780,8 +780,13 @@ function ladderSkip(S){
 function ladderTypes(T){
   const order = ['win', 'spread', 'total', 'team total', 'prop'];
   const nice = {win: 'wins', spread: 'spreads', total: 'totals', 'team total': 'team totals', prop: 'props'};
-  const parts = order.filter(k => T && T[k] && T[k].n).map(k => nice[k] + ' ' + T[k].won + '/' + T[k].n);
-  return parts.length ? ' By bet: ' + parts.join(', ') + '.' : '';
+  const ks = order.filter(k => T && T[k] && T[k].n);
+  const parts = ks.map(k => nice[k] + ' ' + T[k].won + '/' + T[k].n);
+  // a type 10+ points under its stated rate on 10+ legs is named, not cut (README 2026-11-19)
+  const weak = ks.filter(k => T[k].n >= 10 && typeof T[k].said === 'number' && 100 * T[k].won / T[k].n < T[k].said - 10)
+    .map(k => nice[k] + ' (' + Math.round(100 * T[k].won / T[k].n) + '% vs ' + Math.round(T[k].said) + '% stated)');
+  return parts.length ? ' By bet: ' + parts.join(', ') + '.'
+    + (weak.length ? ' Weak spot: ' + weak.join(', ') + ' &mdash; too few legs to cut yet.' : '') : '';
 }
 // ladder legs, game lines and player props apart (ladder.legs_by_kind)
 function ladderKinds(K){
