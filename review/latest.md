@@ -1,6 +1,6 @@
 # Review 2026-11-18
 
-Picks 14-9 (60.9% vs 68.6% claimed, ROI -19.7%).
+Picks 15-9 (62.5% vs 68.3% claimed, ROI -16.4%).
 Ladder: run 10 ended (peak $1.00, lost on Under 235.5 points (237, missed by 1.5)); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.
 Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 7) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 8) 2026-11-15, 2 days, peak $2.00, lost on Boston Celtics to win; 9) 2026-11-17, 1 day, peak $1.00, lost on San Antonio Spurs to win, Duke Blue Devils to win; 10) 2026-11-18, 1 day, peak $1.00, lost on Under 235.5 points (237, missed by 1.5). Replayed on every saved card: as ranked 15/30 cashed at 2.21x, without props 15/31 at 2.28x.
 Running ahead: NBA over on all saved lines 1093/1235 vs 83% (92 games); NFL teamover on all saved lines 317/374 vs 81% (29 games); NHL over on all saved lines 139/160 vs 83% (95 games); NHL teamover on all saved lines 165/191 vs 82% (95 games); NHL under on all saved lines 195/225 vs 82% (95 games).
@@ -15,7 +15,7 @@ Locks by bet type, by half: win 87% then 82% (vs 83%, 79%); spread 88% then 90% 
 Locks by league, by half: NBA 84% then 87% (vs 83%, 83%); NHL 85% then 97% (vs 87%, 87%); NCAAF 88% then 78% (vs 82%, 77%); NFL 84% then 80% (vs 83%, 83%). No league short in both halves.
 Locks props by market, by half: NBA Assists 14/19 then 18/21 (vs 89%, 79%); NFL Receiving Yards 12/14 then 10/15 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.
 Every game's safest line by bet type, by half: win 78% then 91% (vs 84%, 84%); spread 90% then 92% (vs 90%, 90%); total 98% then 94% (vs 90%, 92%); team total 93% then 94% (vs 91%, 90%). Ahead in both halves: total, team total.
-Priced-era picks by league, by half (split 2026-11-04): soccer or-draw 77% vs 74% (z +1.7) then 76% vs 74% (z +0.6); soccer win 82% vs 73% (z +2.8) then 85% vs 74% (z +2.3); NCAAF 73% vs 72% (z +0.2) then 70% vs 70% (z -0.2); NBA 70% vs 66% (z +1.0) then 73% vs 69% (z +1.1); NHL 58% vs 58% (z +0.0) then 61% vs 58% (z +0.4); NCAAB 82% vs 88% (z -0.8) then 88% vs 88% (z +0.1); NFL 75% vs 64% (z +1.2) then 83% vs 67% (z +1.8). None past the 99.5% bar in both halves.
+Priced-era picks by league, by half (split 2026-11-04): soccer or-draw 77% vs 74% (z +1.7) then 76% vs 74% (z +0.6); soccer win 82% vs 73% (z +2.8) then 85% vs 74% (z +2.3); NCAAF 73% vs 72% (z +0.2) then 70% vs 70% (z -0.2); NBA 70% vs 66% (z +1.0) then 73% vs 69% (z +1.1); NHL 58% vs 58% (z +0.0) then 61% vs 58% (z +0.4); NCAAB 82% vs 88% (z -0.8) then 88% vs 87% (z +0.3); NFL 75% vs 64% (z +1.2) then 83% vs 67% (z +1.8). None past the 99.5% bar in both halves.
 National-team soccer: 55/63 (87% vs 76% stated), 2 of 8 losses draws (straight win 28/30 (93% vs 78% stated); or draw 27/33 (82% vs 75% stated)); club soccer 812/1116 (73% vs 71% stated).
 Coin flips (called under 60%), by half: all 95/162 (59% vs 55%) then 97/162 (60% vs 55%); price moved against 3+ 12/19 (63% vs 54%) then 12/21 (57% vs 54%); steady 72/114 (63% vs 54%) then 68/114 (60% vs 55%); moved toward 3+ 5/12 (42% vs 56%) then 17/27 (63% vs 57%).
 Pool game lines (one per game and bet type), every league, by half: 86.9% vs 82.3% (z +3.1) to 2026-11-12, then 80.9% vs 82.3% (z -0.9) on 1342 game lines.
@@ -26,7 +26,7 @@ Value bets by fair chance, by half: 0-30% 11/57 (z +0.1) then 9/67 (z -0.8); 30-
 Anytime touchdown chances, by half: 144/1061 scored vs 124.8 stated (z +2.0) to 2026-11-01, then 150/1062 scored vs 123.6 stated (z +2.7).
 Home and away picks, by half: NBA home 66% vs 66% then 71% vs 69%, away 78% vs 64% then 75% vs 68%; NHL home 62% vs 59% then 53% vs 60%, away 55% vs 57% then 70% vs 56%; NCAAF home 80% vs 74% then 66% vs 72%, away 60% vs 69% then 76% vs 68%; NFL home 70% vs 65% then 67% vs 67%, away 88% vs 62% then 94% vs 68%.
 Injuries at tip-off (240 games, 15 days, early read): my side more out: 1st 27/37 73% vs 65% | 2nd 26/40 65% vs 62%; even: 1st 21/29 72% vs 63% | 2nd 20/39 51% vs 62%; their side more out: 1st 40/48 83% vs 65% | 2nd 32/47 68% vs 67%.
-Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1946 picks).
+Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1947 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 8/17 vs 70% stated (4.2% by luck; about 2.5 of 60 teams expected this far behind by chance); NHL Detroit Red Wings 3/10 vs 54% stated (11.7% by luck; about 7.0 of 60 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.7 of 60 teams expected this far behind by chance).
 High-chance sweep: 70%+ today 8-1, 2 open; swept 3 of 32 past days (last 2026-11-11) | 80%+ today 4-0, 1 open; swept 10 of 31 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/30 vs 61%; NBA on the tired side 18/24 vs 65%, against it 20/26 vs 72%.
@@ -34,8 +34,8 @@ UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3
 Next UFC card 2026-11-21 (11 fights priced, 3 close): Ikram Aliskerov 72%; Aleksandre Topuria 71%; Diyar Nurgozhay 68%; Jake Matthews 68%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Dan Hooker 63%; Navajo Stirling 61%; Dom Mar Fan 60% (close); Kevin Vallejos 54% (close); Alessandro Costa 50% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.7% hit vs 44.5% stated on 547
 Strong calls 6-0 (100.0% vs 72.2% claimed).
-Closing line value: -0.53 points on 23 picks; beat the close on 34.8%.
-Board sweep: 14-9, 5 open -- broken (first loss: ncaab Florida Gators at 55%); 7.2 losses expected from the settled picks' chances, so 9 or more by now had a 27% chance; 3 of the 9 were near coin flips (called under 60%), 6 were real misses; losses by league: nba 5 (3.1 expected), nhl 2 (0.9 expected), ncaab 1 (0.7 expected), ncaaf 1 (0.8 expected).
+Closing line value: -0.44 points on 24 picks; beat the close on 37.5%.
+Board sweep: 15-9, 4 open -- broken (first loss: ncaab Florida Gators at 55%); 7.6 losses expected from the settled picks' chances, so 9 or more by now had a 33.6% chance; 3 of the 9 were near coin flips (called under 60%), 6 were real misses; losses by league: nba 5 (3.1 expected), nhl 2 (0.9 expected), ncaab 1 (1.1 expected), ncaaf 1 (0.8 expected).
 - LOST ncaab Florida Gators at 55% (-130), Florida Gators 76 - Houston Cougars 86: margin 10 · the book had my side favoured too · called at 55% · coin flip
 - LOST nba Cleveland Cavaliers at 62% (-185), Cleveland Cavaliers 121 - Memphis Grizzlies 124: margin 3 · the book had my side favoured too · called at 62% · favourite lost · close game; picks like it: 48 of 74 (65% vs 62% stated)
 - LOST nba Orlando Magic at 61% (-174), Orlando Magic 116 - Philadelphia 76ers 121: margin 5 · the book had my side favoured too · called at 61% · favourite lost · close game; picks like it: 55 of 81 (68% vs 61% stated)
@@ -70,4 +70,4 @@ Ladder-consistency props (all time): 2794/3365 won (83.0%) vs 86.4% fair, 87.6% 
 Props 120/144 vs 84.0% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=219), ncaab 0.00 (n=82), ncaaf 0.00 (n=298), nfl 0.00 (n=70), nhl 0.00 (n=228)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=219), ncaab 0.00 (n=83), ncaaf 0.00 (n=298), nfl 0.00 (n=70), nhl 0.00 (n=228)
