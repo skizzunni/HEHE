@@ -2638,6 +2638,73 @@
    },
    "status": "won"
   },
+  "bra:401841308|No \u00b7 Vasco da Gama wins by over 3.5 goals": {
+   "away": "Internacional",
+   "date": "2026-11-19",
+   "home": "Vasco da Gama",
+   "label": "No \u00b7 Vasco da Gama wins by over 3.5 goals",
+   "league": "bra",
+   "logged": "2026-11-19T00:03",
+   "match": "Internacional at Vasco da Gama",
+   "p": 0.9374,
+   "p_model": 0.9319,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Vasco da Gama"
+   },
+   "status": "open"
+  },
+  "bra:401841308|Over 0.5 goals": {
+   "away": "Internacional",
+   "date": "2026-11-19",
+   "home": "Vasco da Gama",
+   "label": "Over 0.5 goals",
+   "league": "bra",
+   "logged": "2026-11-19T00:03",
+   "match": "Internacional at Vasco da Gama",
+   "p": 0.9471,
+   "p_model": 0.9425,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "bra:401841309|No \u00b7 Fluminense wins by over 2.5 goals": {
+   "away": "Fluminense",
+   "date": "2026-11-19",
+   "home": "S\u00e3o Paulo",
+   "label": "No \u00b7 Fluminense wins by over 2.5 goals",
+   "league": "bra",
+   "logged": "2026-11-19T00:03",
+   "match": "Fluminense at S\u00e3o Paulo",
+   "p": 0.9601,
+   "p_model": 0.9566,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Fluminense"
+   },
+   "status": "open"
+  },
+  "bra:401841309|No \u00b7 S\u00e3o Paulo wins by over 2.5 goals": {
+   "away": "Fluminense",
+   "date": "2026-11-19",
+   "home": "S\u00e3o Paulo",
+   "label": "No \u00b7 S\u00e3o Paulo wins by over 2.5 goals",
+   "league": "bra",
+   "logged": "2026-11-19T00:03",
+   "match": "Fluminense at S\u00e3o Paulo",
+   "p": 0.945,
+   "p_model": 0.9402,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "S\u00e3o Paulo"
+   },
+   "status": "open"
+  },
   "bra:401841310|No \u00b7 Remo wins by over 3.5 goals": {
    "away": "Chapecoense",
    "date": "2026-11-18",
@@ -2918,6 +2985,39 @@
     "t": "over"
    },
    "status": "won"
+  },
+  "bra:401841317|No \u00b7 Vit\u00f3ria wins by over 2.5 goals": {
+   "away": "Red Bull Bragantino",
+   "date": "2026-11-19",
+   "home": "Vit\u00f3ria",
+   "label": "No \u00b7 Vit\u00f3ria wins by over 2.5 goals",
+   "league": "bra",
+   "logged": "2026-11-19T00:03",
+   "match": "Red Bull Bragantino at Vit\u00f3ria",
+   "p": 0.9483,
+   "p_model": 0.9438,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Vit\u00f3ria"
+   },
+   "status": "open"
+  },
+  "bra:401841317|Over 0.5 goals": {
+   "away": "Red Bull Bragantino",
+   "date": "2026-11-19",
+   "home": "Vit\u00f3ria",
+   "label": "Over 0.5 goals",
+   "league": "bra",
+   "logged": "2026-11-19T00:03",
+   "match": "Red Bull Bragantino at Vit\u00f3ria",
+   "p": 0.9397,
+   "p_model": 0.9345,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "cdf:401932833|Over 0.5 goals": {
    "away": "Clermont Foot",
@@ -14456,6 +14556,56 @@
    },
    "status": "won"
   },
+  "mls:401933535|No \u00b7 FC Cincinnati wins by over 3.5 goals": {
+   "away": "FC Cincinnati",
+   "date": "2026-11-19",
+   "home": "Orlando City SC",
+   "label": "No \u00b7 FC Cincinnati wins by over 3.5 goals",
+   "league": "mls",
+   "logged": "2026-11-19T00:03",
+   "match": "FC Cincinnati at Orlando City SC",
+   "p": 0.9687,
+   "p_model": 0.9659,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "FC Cincinnati"
+   },
+   "status": "open"
+  },
+  "mls:401933555|No \u00b7 Seattle Sounders FC wins by over 3.5 goals": {
+   "away": "Real Salt Lake",
+   "date": "2026-11-19",
+   "home": "Seattle Sounders FC",
+   "label": "No \u00b7 Seattle Sounders FC wins by over 3.5 goals",
+   "league": "mls",
+   "logged": "2026-11-19T00:03",
+   "match": "Real Salt Lake at Seattle Sounders FC",
+   "p": 0.9585,
+   "p_model": 0.9549,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Seattle Sounders FC"
+   },
+   "status": "open"
+  },
+  "mls:401933555|Under 5.5 goals": {
+   "away": "Real Salt Lake",
+   "date": "2026-11-19",
+   "home": "Seattle Sounders FC",
+   "label": "Under 5.5 goals",
+   "league": "mls",
+   "logged": "2026-11-19T00:03",
+   "match": "Real Salt Lake at Seattle Sounders FC",
+   "p": 0.8991,
+   "p_model": 0.8903,
+   "spec": {
+    "line": 5.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
   "mls:761773|No \u00b7 D.C. United wins by over 2.5 goals": {
    "away": "D.C. United",
    "date": "2026-10-21",
@@ -19539,6 +19689,91 @@
    },
    "status": "open"
   },
+  "nba:401910019|No \u00b7 Golden State Warriors wins by over 12.5 points": {
+   "away": "Golden State Warriors",
+   "date": "2026-11-19",
+   "home": "Memphis Grizzlies",
+   "label": "No \u00b7 Golden State Warriors wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-19T00:03",
+   "match": "Golden State Warriors at Memphis Grizzlies",
+   "p": 0.9495,
+   "p_model": 0.9599,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Golden State Warriors"
+   },
+   "status": "open"
+  },
+  "nba:401910019|No \u00b7 Golden State Warriors wins by over 8.5 points": {
+   "away": "Golden State Warriors",
+   "date": "2026-11-19",
+   "home": "Memphis Grizzlies",
+   "label": "No \u00b7 Golden State Warriors wins by over 8.5 points",
+   "league": "nba",
+   "logged": "2026-11-19T00:03",
+   "match": "Golden State Warriors at Memphis Grizzlies",
+   "p": 0.9014,
+   "p_model": 0.9217,
+   "spec": {
+    "line": 8.5,
+    "t": "nomargin",
+    "team": "Golden State Warriors"
+   },
+   "status": "open"
+  },
+  "nba:401910020|No \u00b7 Milwaukee Bucks wins by over 12.5 points": {
+   "away": "Portland Trail Blazers",
+   "date": "2026-11-19",
+   "home": "Milwaukee Bucks",
+   "label": "No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+   "league": "nba",
+   "logged": "2026-11-19T00:03",
+   "match": "Portland Trail Blazers at Milwaukee Bucks",
+   "p": 0.9579,
+   "p_model": 0.9666,
+   "spec": {
+    "line": 12.5,
+    "t": "nomargin",
+    "team": "Milwaukee Bucks"
+   },
+   "status": "open"
+  },
+  "nba:401910021|No \u00b7 New York Knicks wins by over 17.5 points": {
+   "away": "New York Knicks",
+   "date": "2026-11-19",
+   "home": "Minnesota Timberwolves",
+   "label": "No \u00b7 New York Knicks wins by over 17.5 points",
+   "league": "nba",
+   "logged": "2026-11-19T00:03",
+   "match": "New York Knicks at Minnesota Timberwolves",
+   "p": 0.8851,
+   "p_model": 0.9088,
+   "spec": {
+    "line": 17.5,
+    "t": "nomargin",
+    "team": "New York Knicks"
+   },
+   "status": "open"
+  },
+  "nba:401910022|No \u00b7 LA Clippers wins by over 4.5 points": {
+   "away": "LA Clippers",
+   "date": "2026-11-19",
+   "home": "San Antonio Spurs",
+   "label": "No \u00b7 LA Clippers wins by over 4.5 points",
+   "league": "nba",
+   "logged": "2026-11-19T00:03",
+   "match": "LA Clippers at San Antonio Spurs",
+   "p": 0.9495,
+   "p_model": 0.9599,
+   "spec": {
+    "line": 4.5,
+    "t": "nomargin",
+    "team": "LA Clippers"
+   },
+   "status": "open"
+  },
   "ncaab:401902276|No \u00b7 Butler Bulldogs wins by over 40.5 points": {
    "away": "Fairleigh Dickinson Knights",
    "date": "2026-11-04",
@@ -22863,6 +23098,22 @@
    },
    "status": "won"
   },
+  "ncaaf:401862830|Over 33.5 points": {
+   "away": "Rice Owls",
+   "date": "2026-11-19",
+   "home": "Temple Owls",
+   "label": "Over 33.5 points",
+   "league": "ncaaf",
+   "logged": "2026-11-19T00:03",
+   "match": "Rice Owls at Temple Owls",
+   "p": 0.8937,
+   "p_model": 0.8845,
+   "spec": {
+    "line": 33.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
   "ncaaf:401864520|No \u00b7 Nevada Wolf Pack wins by over 14.5 points": {
    "away": "Nevada Wolf Pack",
    "date": "2026-10-17",
@@ -25029,6 +25280,40 @@
     "t": "over"
    },
    "status": "won"
+  },
+  "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 10.5 points": {
+   "away": "Indianapolis Colts",
+   "date": "2026-11-19",
+   "home": "Houston Texans",
+   "label": "No \u00b7 Indianapolis Colts wins by over 10.5 points",
+   "league": "nfl",
+   "logged": "2026-11-19T00:03",
+   "match": "Indianapolis Colts at Houston Texans",
+   "p": 0.9558,
+   "p_model": 0.9558,
+   "spec": {
+    "line": 10.5,
+    "t": "nomargin",
+    "team": "Indianapolis Colts"
+   },
+   "status": "open"
+  },
+  "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 7.5 points": {
+   "away": "Indianapolis Colts",
+   "date": "2026-11-19",
+   "home": "Houston Texans",
+   "label": "No \u00b7 Indianapolis Colts wins by over 7.5 points",
+   "league": "nfl",
+   "logged": "2026-11-19T00:03",
+   "match": "Indianapolis Colts at Houston Texans",
+   "p": 0.9308,
+   "p_model": 0.9308,
+   "spec": {
+    "line": 7.5,
+    "t": "nomargin",
+    "team": "Indianapolis Colts"
+   },
+   "status": "open"
   },
   "nhl:401891807|Over 2.5 goals": {
    "away": "Montreal Canadiens",
@@ -30520,6 +30805,377 @@
    "match": "Colorado Avalanche at Utah Mammoth",
    "p": 0.8961,
    "p_model": 0.8929,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892742|Over 2.5 goals": {
+   "away": "Los Angeles Kings",
+   "date": "2026-11-19",
+   "home": "Toronto Maple Leafs",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Los Angeles Kings at Toronto Maple Leafs",
+   "p": 0.9669,
+   "p_model": 0.9656,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892742|Under 9.5 goals": {
+   "away": "Los Angeles Kings",
+   "date": "2026-11-19",
+   "home": "Toronto Maple Leafs",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Los Angeles Kings at Toronto Maple Leafs",
+   "p": 0.9065,
+   "p_model": 0.9026,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892743|Over 2.5 goals": {
+   "away": "Philadelphia Flyers",
+   "date": "2026-11-19",
+   "home": "Ottawa Senators",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Philadelphia Flyers at Ottawa Senators",
+   "p": 0.9579,
+   "p_model": 0.9561,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892743|Under 9.5 goals": {
+   "away": "Philadelphia Flyers",
+   "date": "2026-11-19",
+   "home": "Ottawa Senators",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Philadelphia Flyers at Ottawa Senators",
+   "p": 0.9274,
+   "p_model": 0.9244,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892744|Over 2.5 goals": {
+   "away": "Edmonton Oilers",
+   "date": "2026-11-19",
+   "home": "Tampa Bay Lightning",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Edmonton Oilers at Tampa Bay Lightning",
+   "p": 0.9661,
+   "p_model": 0.9647,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892745|Over 2.5 goals": {
+   "away": "St. Louis Blues",
+   "date": "2026-11-19",
+   "home": "Pittsburgh Penguins",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "St. Louis Blues at Pittsburgh Penguins",
+   "p": 0.9669,
+   "p_model": 0.9656,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892746|Over 2.5 goals": {
+   "away": "Buffalo Sabres",
+   "date": "2026-11-19",
+   "home": "Washington Capitals",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Buffalo Sabres at Washington Capitals",
+   "p": 0.9751,
+   "p_model": 0.9741,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892746|Over 3.5 goals": {
+   "away": "Buffalo Sabres",
+   "date": "2026-11-19",
+   "home": "Washington Capitals",
+   "label": "Over 3.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Buffalo Sabres at Washington Capitals",
+   "p": 0.8967,
+   "p_model": 0.8924,
+   "spec": {
+    "line": 3.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892747|No \u00b7 Montreal Canadiens wins by over 2.5 goals": {
+   "away": "Montreal Canadiens",
+   "date": "2026-11-19",
+   "home": "Carolina Hurricanes",
+   "label": "No \u00b7 Montreal Canadiens wins by over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Montreal Canadiens at Carolina Hurricanes",
+   "p": 0.936,
+   "p_model": 0.9333,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Montreal Canadiens"
+   },
+   "status": "open"
+  },
+  "nhl:401892747|Over 2.5 goals": {
+   "away": "Montreal Canadiens",
+   "date": "2026-11-19",
+   "home": "Carolina Hurricanes",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Montreal Canadiens at Carolina Hurricanes",
+   "p": 0.9746,
+   "p_model": 0.9735,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892747|Over 3.5 goals": {
+   "away": "Montreal Canadiens",
+   "date": "2026-11-19",
+   "home": "Carolina Hurricanes",
+   "label": "Over 3.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Montreal Canadiens at Carolina Hurricanes",
+   "p": 0.8967,
+   "p_model": 0.8924,
+   "spec": {
+    "line": 3.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892748|No \u00b7 Chicago Blackhawks wins by over 2.5 goals": {
+   "away": "Columbus Blue Jackets",
+   "date": "2026-11-19",
+   "home": "Chicago Blackhawks",
+   "label": "No \u00b7 Chicago Blackhawks wins by over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Columbus Blue Jackets at Chicago Blackhawks",
+   "p": 0.9013,
+   "p_model": 0.8972,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Chicago Blackhawks"
+   },
+   "status": "open"
+  },
+  "nhl:401892748|Over 2.5 goals": {
+   "away": "Columbus Blue Jackets",
+   "date": "2026-11-19",
+   "home": "Chicago Blackhawks",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Columbus Blue Jackets at Chicago Blackhawks",
+   "p": 0.9599,
+   "p_model": 0.9583,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892748|Under 9.5 goals": {
+   "away": "Columbus Blue Jackets",
+   "date": "2026-11-19",
+   "home": "Chicago Blackhawks",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Columbus Blue Jackets at Chicago Blackhawks",
+   "p": 0.9235,
+   "p_model": 0.9203,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892749|Over 2.5 goals": {
+   "away": "New York Islanders",
+   "date": "2026-11-19",
+   "home": "Winnipeg Jets",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "New York Islanders at Winnipeg Jets",
+   "p": 0.9628,
+   "p_model": 0.9613,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892750|No \u00b7 Calgary Flames wins by over 2.5 goals": {
+   "away": "Minnesota Wild",
+   "date": "2026-11-19",
+   "home": "Calgary Flames",
+   "label": "No \u00b7 Calgary Flames wins by over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Minnesota Wild at Calgary Flames",
+   "p": 0.9251,
+   "p_model": 0.922,
+   "spec": {
+    "line": 2.5,
+    "t": "nomargin",
+    "team": "Calgary Flames"
+   },
+   "status": "open"
+  },
+  "nhl:401892750|Over 2.5 goals": {
+   "away": "Minnesota Wild",
+   "date": "2026-11-19",
+   "home": "Calgary Flames",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Minnesota Wild at Calgary Flames",
+   "p": 0.9641,
+   "p_model": 0.9626,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892751|Over 2.5 goals": {
+   "away": "Anaheim Ducks",
+   "date": "2026-11-19",
+   "home": "Colorado Avalanche",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Anaheim Ducks at Colorado Avalanche",
+   "p": 0.9745,
+   "p_model": 0.9734,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892751|Over 3.5 goals": {
+   "away": "Anaheim Ducks",
+   "date": "2026-11-19",
+   "home": "Colorado Avalanche",
+   "label": "Over 3.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Anaheim Ducks at Colorado Avalanche",
+   "p": 0.8947,
+   "p_model": 0.8903,
+   "spec": {
+    "line": 3.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892752|Over 2.5 goals": {
+   "away": "Vancouver Canucks",
+   "date": "2026-11-19",
+   "home": "Seattle Kraken",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Vancouver Canucks at Seattle Kraken",
+   "p": 0.9704,
+   "p_model": 0.9692,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892752|Under 9.5 goals": {
+   "away": "Vancouver Canucks",
+   "date": "2026-11-19",
+   "home": "Seattle Kraken",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Vancouver Canucks at Seattle Kraken",
+   "p": 0.8948,
+   "p_model": 0.8904,
+   "spec": {
+    "line": 9.5,
+    "t": "under"
+   },
+   "status": "open"
+  },
+  "nhl:401892753|Over 2.5 goals": {
+   "away": "Dallas Stars",
+   "date": "2026-11-19",
+   "home": "Vegas Golden Knights",
+   "label": "Over 2.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Dallas Stars at Vegas Golden Knights",
+   "p": 0.9582,
+   "p_model": 0.9564,
+   "spec": {
+    "line": 2.5,
+    "t": "over"
+   },
+   "status": "open"
+  },
+  "nhl:401892753|Under 9.5 goals": {
+   "away": "Dallas Stars",
+   "date": "2026-11-19",
+   "home": "Vegas Golden Knights",
+   "label": "Under 9.5 goals",
+   "league": "nhl",
+   "logged": "2026-11-19T00:03",
+   "match": "Dallas Stars at Vegas Golden Knights",
+   "p": 0.9274,
+   "p_model": 0.9244,
    "spec": {
     "line": 9.5,
     "t": "under"
@@ -37183,6 +37839,39 @@
     "t": "under"
    },
    "status": "won"
+  },
+  "uru:401934703|No \u00b7 Montevideo City Torque wins by over 3.5 goals": {
+   "away": "Montevideo City Torque",
+   "date": "2026-11-19",
+   "home": "Progreso",
+   "label": "No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+   "league": "uru",
+   "logged": "2026-11-19T00:03",
+   "match": "Montevideo City Torque at Progreso",
+   "p": 0.9243,
+   "p_model": 0.9177,
+   "spec": {
+    "line": 3.5,
+    "t": "nomargin",
+    "team": "Montevideo City Torque"
+   },
+   "status": "open"
+  },
+  "uru:401934703|Over 0.5 goals": {
+   "away": "Montevideo City Torque",
+   "date": "2026-11-19",
+   "home": "Progreso",
+   "label": "Over 0.5 goals",
+   "league": "uru",
+   "logged": "2026-11-19T00:03",
+   "match": "Montevideo City Torque at Progreso",
+   "p": 0.9562,
+   "p_model": 0.9523,
+   "spec": {
+    "line": 0.5,
+    "t": "over"
+   },
+   "status": "open"
   },
   "usl:401842274|Over 0.5 goals": {
    "away": "Louisville City FC",
@@ -52088,6 +52777,426 @@
    "logged": "2026-11-18T00:04",
    "n": 8,
    "prob": 0.4271,
+   "status": "open"
+  },
+  "20261119:10:0": {
+   "fair": 1.52,
+   "legs": [
+    "nhl:401892748|Over 2.5 goals",
+    "bra:401841309|No \u00b7 Fluminense wins by over 2.5 goals",
+    "mls:401933555|No \u00b7 Seattle Sounders FC wins by over 3.5 goals",
+    "nhl:401892753|Over 2.5 goals",
+    "nba:401910020|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892743|Over 2.5 goals",
+    "nhl:401892749|Over 2.5 goals",
+    "uru:401934703|Over 0.5 goals",
+    "nhl:401892750|Over 2.5 goals",
+    "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 10.5 points"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 10,
+   "prob": 0.6589,
+   "status": "open"
+  },
+  "20261119:10:1": {
+   "fair": 1.49,
+   "legs": [
+    "nhl:401892744|Over 2.5 goals",
+    "nhl:401892742|Over 2.5 goals",
+    "nhl:401892745|Over 2.5 goals",
+    "mls:401933535|No \u00b7 FC Cincinnati wins by over 3.5 goals",
+    "nhl:401892752|Over 2.5 goals",
+    "nba:401910019|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "nba:401910022|No \u00b7 LA Clippers wins by over 4.5 points",
+    "bra:401841317|No \u00b7 Vit\u00f3ria wins by over 2.5 goals",
+    "bra:401841308|Over 0.5 goals",
+    "nhl:401892751|Over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 10,
+   "prob": 0.6699,
+   "status": "open"
+  },
+  "20261119:10:2": {
+   "fair": 1.71,
+   "legs": [
+    "nhl:401892747|Over 2.5 goals",
+    "nhl:401892746|Over 2.5 goals",
+    "ncaaf:401862830|Over 33.5 points",
+    "nba:401910021|No \u00b7 New York Knicks wins by over 17.5 points",
+    "nhl:401892748|Over 2.5 goals",
+    "bra:401841309|No \u00b7 Fluminense wins by over 2.5 goals",
+    "mls:401933555|No \u00b7 Seattle Sounders FC wins by over 3.5 goals",
+    "nhl:401892753|Over 2.5 goals",
+    "nba:401910020|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892743|Over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 10,
+   "prob": 0.5839,
+   "status": "open"
+  },
+  "20261119:15:0": {
+   "fair": 1.79,
+   "legs": [
+    "nhl:401892748|Over 2.5 goals",
+    "bra:401841309|No \u00b7 Fluminense wins by over 2.5 goals",
+    "mls:401933555|No \u00b7 Seattle Sounders FC wins by over 3.5 goals",
+    "nhl:401892753|Over 2.5 goals",
+    "nba:401910020|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892743|Over 2.5 goals",
+    "nhl:401892749|Over 2.5 goals",
+    "uru:401934703|Over 0.5 goals",
+    "nhl:401892750|Over 2.5 goals",
+    "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 10.5 points",
+    "nhl:401892744|Over 2.5 goals",
+    "nhl:401892742|Over 2.5 goals",
+    "nhl:401892745|Over 2.5 goals",
+    "mls:401933535|No \u00b7 FC Cincinnati wins by over 3.5 goals",
+    "nhl:401892752|Over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 15,
+   "prob": 0.5593,
+   "status": "open"
+  },
+  "20261119:15:1": {
+   "fair": 2.17,
+   "legs": [
+    "nba:401910019|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "nba:401910022|No \u00b7 LA Clippers wins by over 4.5 points",
+    "bra:401841317|No \u00b7 Vit\u00f3ria wins by over 2.5 goals",
+    "bra:401841308|Over 0.5 goals",
+    "nhl:401892751|Over 2.5 goals",
+    "nhl:401892747|Over 2.5 goals",
+    "nhl:401892746|Over 2.5 goals",
+    "ncaaf:401862830|Over 33.5 points",
+    "nba:401910021|No \u00b7 New York Knicks wins by over 17.5 points",
+    "nhl:401892748|Over 2.5 goals",
+    "bra:401841309|No \u00b7 Fluminense wins by over 2.5 goals",
+    "mls:401933555|No \u00b7 Seattle Sounders FC wins by over 3.5 goals",
+    "nhl:401892753|Over 2.5 goals",
+    "nba:401910020|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892743|Over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 15,
+   "prob": 0.4608,
+   "status": "open"
+  },
+  "20261119:15:2": {
+   "fair": 1.81,
+   "legs": [
+    "nhl:401892749|Over 2.5 goals",
+    "uru:401934703|Over 0.5 goals",
+    "nhl:401892750|Over 2.5 goals",
+    "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 10.5 points",
+    "nhl:401892744|Over 2.5 goals",
+    "nhl:401892742|Over 2.5 goals",
+    "nhl:401892745|Over 2.5 goals",
+    "mls:401933535|No \u00b7 FC Cincinnati wins by over 3.5 goals",
+    "nhl:401892752|Over 2.5 goals",
+    "nba:401910019|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "nba:401910022|No \u00b7 LA Clippers wins by over 4.5 points",
+    "bra:401841317|No \u00b7 Vit\u00f3ria wins by over 2.5 goals",
+    "bra:401841308|Over 0.5 goals",
+    "nhl:401892751|Over 2.5 goals",
+    "nhl:401892747|Over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 15,
+   "prob": 0.5539,
+   "status": "open"
+  },
+  "20261119:20:0": {
+   "fair": 2.27,
+   "legs": [
+    "nhl:401892748|Over 2.5 goals",
+    "bra:401841309|No \u00b7 Fluminense wins by over 2.5 goals",
+    "mls:401933555|No \u00b7 Seattle Sounders FC wins by over 3.5 goals",
+    "nhl:401892753|Over 2.5 goals",
+    "nba:401910020|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892743|Over 2.5 goals",
+    "nhl:401892749|Over 2.5 goals",
+    "uru:401934703|Over 0.5 goals",
+    "nhl:401892750|Over 2.5 goals",
+    "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 10.5 points",
+    "nhl:401892744|Over 2.5 goals",
+    "nhl:401892742|Over 2.5 goals",
+    "nhl:401892745|Over 2.5 goals",
+    "mls:401933535|No \u00b7 FC Cincinnati wins by over 3.5 goals",
+    "nhl:401892752|Over 2.5 goals",
+    "nba:401910019|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "nba:401910022|No \u00b7 LA Clippers wins by over 4.5 points",
+    "bra:401841317|No \u00b7 Vit\u00f3ria wins by over 2.5 goals",
+    "bra:401841308|Over 0.5 goals",
+    "nhl:401892751|Over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 20,
+   "prob": 0.4414,
+   "status": "open"
+  },
+  "20261119:20:1": {
+   "fair": 2.5,
+   "legs": [
+    "nhl:401892747|Over 2.5 goals",
+    "nhl:401892746|Over 2.5 goals",
+    "ncaaf:401862830|Over 33.5 points",
+    "nba:401910021|No \u00b7 New York Knicks wins by over 17.5 points",
+    "nhl:401892748|Over 2.5 goals",
+    "bra:401841309|No \u00b7 Fluminense wins by over 2.5 goals",
+    "mls:401933555|No \u00b7 Seattle Sounders FC wins by over 3.5 goals",
+    "nhl:401892753|Over 2.5 goals",
+    "nba:401910020|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892743|Over 2.5 goals",
+    "nhl:401892749|Over 2.5 goals",
+    "uru:401934703|Over 0.5 goals",
+    "nhl:401892750|Over 2.5 goals",
+    "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 10.5 points",
+    "nhl:401892744|Over 2.5 goals",
+    "nhl:401892742|Over 2.5 goals",
+    "nhl:401892745|Over 2.5 goals",
+    "mls:401933535|No \u00b7 FC Cincinnati wins by over 3.5 goals",
+    "nhl:401892752|Over 2.5 goals",
+    "nba:401910019|No \u00b7 Golden State Warriors wins by over 12.5 points"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 20,
+   "prob": 0.3993,
+   "status": "open"
+  },
+  "20261119:20:2": {
+   "fair": 2.6,
+   "legs": [
+    "nba:401910022|No \u00b7 LA Clippers wins by over 4.5 points",
+    "bra:401841317|No \u00b7 Vit\u00f3ria wins by over 2.5 goals",
+    "bra:401841308|Over 0.5 goals",
+    "nhl:401892751|Over 2.5 goals",
+    "nhl:401892747|Over 2.5 goals",
+    "nhl:401892746|Over 2.5 goals",
+    "ncaaf:401862830|Over 33.5 points",
+    "nba:401910021|No \u00b7 New York Knicks wins by over 17.5 points",
+    "nhl:401892748|Over 2.5 goals",
+    "bra:401841309|No \u00b7 Fluminense wins by over 2.5 goals",
+    "mls:401933555|No \u00b7 Seattle Sounders FC wins by over 3.5 goals",
+    "nhl:401892753|Over 2.5 goals",
+    "nba:401910020|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892743|Over 2.5 goals",
+    "nhl:401892749|Over 2.5 goals",
+    "uru:401934703|Over 0.5 goals",
+    "nhl:401892750|Over 2.5 goals",
+    "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 10.5 points",
+    "nhl:401892744|Over 2.5 goals",
+    "nhl:401892742|Over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 20,
+   "prob": 0.3845,
+   "status": "open"
+  },
+  "20261119:2:0": {
+   "fair": 1.23,
+   "legs": [
+    "mls:401933555|Under 5.5 goals",
+    "nhl:401892748|No \u00b7 Chicago Blackhawks wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 2,
+   "prob": 0.8104,
+   "status": "open"
+  },
+  "20261119:2:1": {
+   "fair": 1.24,
+   "legs": [
+    "nba:401910019|No \u00b7 Golden State Warriors wins by over 8.5 points",
+    "nhl:401892746|Over 3.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 2,
+   "prob": 0.8083,
+   "status": "open"
+  },
+  "20261119:2:2": {
+   "fair": 1.25,
+   "legs": [
+    "nhl:401892747|Over 3.5 goals",
+    "nhl:401892752|Under 9.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 2,
+   "prob": 0.8023,
+   "status": "open"
+  },
+  "20261119:3:0": {
+   "fair": 1.37,
+   "legs": [
+    "mls:401933555|Under 5.5 goals",
+    "nhl:401892748|No \u00b7 Chicago Blackhawks wins by over 2.5 goals",
+    "nba:401910019|No \u00b7 Golden State Warriors wins by over 8.5 points"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 3,
+   "prob": 0.7305,
+   "status": "open"
+  },
+  "20261119:3:1": {
+   "fair": 1.39,
+   "legs": [
+    "nhl:401892746|Over 3.5 goals",
+    "nhl:401892747|Over 3.5 goals",
+    "nhl:401892752|Under 9.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 3,
+   "prob": 0.7194,
+   "status": "open"
+  },
+  "20261119:3:2": {
+   "fair": 1.38,
+   "legs": [
+    "nhl:401892751|Over 3.5 goals",
+    "ncaaf:401862830|Over 33.5 points",
+    "nhl:401892742|Under 9.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 3,
+   "prob": 0.7248,
+   "status": "open"
+  },
+  "20261119:4:0": {
+   "fair": 1.28,
+   "legs": [
+    "bra:401841317|Over 0.5 goals",
+    "bra:401841308|No \u00b7 Vasco da Gama wins by over 3.5 goals",
+    "nhl:401892747|No \u00b7 Montreal Canadiens wins by over 2.5 goals",
+    "bra:401841309|No \u00b7 S\u00e3o Paulo wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 4,
+   "prob": 0.7792,
+   "status": "open"
+  },
+  "20261119:4:1": {
+   "fair": 1.28,
+   "legs": [
+    "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 7.5 points",
+    "nba:401910019|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "nba:401910022|No \u00b7 LA Clippers wins by over 4.5 points",
+    "nhl:401892753|Under 9.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 4,
+   "prob": 0.7783,
+   "status": "open"
+  },
+  "20261119:4:2": {
+   "fair": 1.37,
+   "legs": [
+    "nhl:401892743|Under 9.5 goals",
+    "nhl:401892750|No \u00b7 Calgary Flames wins by over 2.5 goals",
+    "uru:401934703|No \u00b7 Montevideo City Torque wins by over 3.5 goals",
+    "nhl:401892748|Under 9.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 4,
+   "prob": 0.7323,
+   "status": "open"
+  },
+  "20261119:6:0": {
+   "fair": 1.29,
+   "legs": [
+    "nhl:401892748|Over 2.5 goals",
+    "bra:401841309|No \u00b7 Fluminense wins by over 2.5 goals",
+    "mls:401933555|No \u00b7 Seattle Sounders FC wins by over 3.5 goals",
+    "nhl:401892753|Over 2.5 goals",
+    "nba:401910020|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892743|Over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 6,
+   "prob": 0.7767,
+   "status": "open"
+  },
+  "20261119:6:1": {
+   "fair": 1.26,
+   "legs": [
+    "nhl:401892749|Over 2.5 goals",
+    "uru:401934703|Over 0.5 goals",
+    "nhl:401892750|Over 2.5 goals",
+    "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 10.5 points",
+    "nhl:401892744|Over 2.5 goals",
+    "nhl:401892742|Over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 6,
+   "prob": 0.7923,
+   "status": "open"
+  },
+  "20261119:6:2": {
+   "fair": 1.29,
+   "legs": [
+    "nhl:401892745|Over 2.5 goals",
+    "mls:401933535|No \u00b7 FC Cincinnati wins by over 3.5 goals",
+    "nhl:401892752|Over 2.5 goals",
+    "nba:401910019|No \u00b7 Golden State Warriors wins by over 12.5 points",
+    "nba:401910022|No \u00b7 LA Clippers wins by over 4.5 points",
+    "bra:401841317|No \u00b7 Vit\u00f3ria wins by over 2.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 6,
+   "prob": 0.7771,
+   "status": "open"
+  },
+  "20261119:8:0": {
+   "fair": 1.4,
+   "legs": [
+    "nhl:401892748|Over 2.5 goals",
+    "bra:401841309|No \u00b7 Fluminense wins by over 2.5 goals",
+    "mls:401933555|No \u00b7 Seattle Sounders FC wins by over 3.5 goals",
+    "nhl:401892753|Over 2.5 goals",
+    "nba:401910020|No \u00b7 Milwaukee Bucks wins by over 12.5 points",
+    "nhl:401892743|Over 2.5 goals",
+    "nhl:401892749|Over 2.5 goals",
+    "uru:401934703|Over 0.5 goals"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 8,
+   "prob": 0.7151,
+   "status": "open"
+  },
+  "20261119:8:1": {
+   "fair": 1.35,
+   "legs": [
+    "nhl:401892750|Over 2.5 goals",
+    "nfl:401873066|No \u00b7 Indianapolis Colts wins by over 10.5 points",
+    "nhl:401892744|Over 2.5 goals",
+    "nhl:401892742|Over 2.5 goals",
+    "nhl:401892745|Over 2.5 goals",
+    "mls:401933535|No \u00b7 FC Cincinnati wins by over 3.5 goals",
+    "nhl:401892752|Over 2.5 goals",
+    "nba:401910019|No \u00b7 Golden State Warriors wins by over 12.5 points"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 8,
+   "prob": 0.7427,
+   "status": "open"
+  },
+  "20261119:8:2": {
+   "fair": 1.6,
+   "legs": [
+    "nba:401910022|No \u00b7 LA Clippers wins by over 4.5 points",
+    "bra:401841317|No \u00b7 Vit\u00f3ria wins by over 2.5 goals",
+    "bra:401841308|Over 0.5 goals",
+    "nhl:401892751|Over 2.5 goals",
+    "nhl:401892747|Over 2.5 goals",
+    "nhl:401892746|Over 2.5 goals",
+    "ncaaf:401862830|Over 33.5 points",
+    "nba:401910021|No \u00b7 New York Knicks wins by over 17.5 points"
+   ],
+   "logged": "2026-11-19T00:03",
+   "n": 8,
+   "prob": 0.6248,
    "status": "open"
   }
  }

@@ -12368,6 +12368,23 @@
    "tip": "7:30 PM",
    "venue": "Kalshi"
   },
+  "ncaaf:401858303|away|FanDuel": {
+   "dec": 5.7,
+   "ev": 0.0172,
+   "fair": 0.1784,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401858303",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "CLEM @ DUKE",
+   "price": "+470",
+   "seen": "2026-11-19T05:03:43+00:00",
+   "side": "away",
+   "start": "2026-11-21T00:30Z",
+   "team": "Clemson Tigers",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401858497|home|FanDuel": {
    "dec": 3.65,
    "ev": 0.0154,
@@ -22764,6 +22781,26 @@
    "prob": 0.3411,
    "seen": "2026-11-15T14:25:35+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nfl:401873066:away": {
+   "ev": 0.0191,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0191,
+     "fair": 0.1521,
+     "id": "nfl:401873066",
+     "price": "+570",
+     "side": "away",
+     "spec": null,
+     "team": "Indianapolis Colts"
+    }
+   ],
+   "payout": 6.7,
+   "prob": 0.1521,
+   "seen": "2026-11-19T05:03:43+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
