@@ -89,6 +89,18 @@ def first_td(lam, lam_all, any_td=None):
     return lam / lam_all * any_td
 
 
+SLIM = ("name", "p", "p2", "pfirst", "price")
+
+
+def slim(games):
+    """The page's copy: every listed player kept, each cut to what the
+    every-player table and the daily card read (name, the three chances,
+    price), so a 14-game Sunday stays small. In place; returns games."""
+    for g in games or []:
+        g["everyone"] = [{k: x.get(k) for k in SLIM} for x in g.get("everyone") or []]
+    return games
+
+
 def for_slot(board_slot):
     try:
         FD = fanduel.load()

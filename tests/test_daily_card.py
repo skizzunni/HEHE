@@ -52,6 +52,18 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class TdSlim(unittest.TestCase):
+    def test_keeps_every_player_drops_extra_fields(self):
+        g = dict(match="A @ B", players=[{"name": "X"}],
+                 everyone=[dict(name=f"P{i}", p=0.3, p2=0.05, pfirst=0.08, price="+200", fd="x", where="y", imp=0.33)
+                           for i in range(33)])
+        out = td_scorers.slim([g])
+        self.assertEqual(len(out[0]["everyone"]), 33)
+        self.assertEqual(set(out[0]["everyone"][0]), {"name", "p", "p2", "pfirst", "price"})
+        self.assertEqual(td_scorers.slim([dict(match="C @ D")])[0]["everyone"], [])
+        self.assertEqual(td_scorers.slim(None), None)
+
+
 class TwoPlusStudy(unittest.TestCase):
     def test_from_p_and_halves(self):
         sys.path.insert(0, os.path.join(ROOT, "tools"))

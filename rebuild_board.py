@@ -566,12 +566,8 @@ def snapshot():
             td_scorers.log(out["td"]["today"], d._STATE["dates"][0])
             td_scorers.log(out["td"]["tomorrow"], d._STATE["dates"][1])
             td_scorers.grade()
-            for s_ in out["td"]:
-                for g_ in out["td"][s_]:
-                    # every listed player, slimmed to what the page's table and the daily
-                    # card use (user, 2026-11-17: "analyze every player")
-                    g_["everyone"] = [{k: x.get(k) for k in ("name", "p", "p2", "pfirst", "price")}
-                                      for x in g_.pop("everyone", None) or []]
+            for s_ in out["td"]:              # every listed player, slimmed (user: "analyze every player")
+                td_scorers.slim(out["td"][s_])
             print("td scorers: " + ", ".join(f"{s_} {len(v)} games" for s_, v in out["td"].items()),
                   file=sys.stderr)
         except Exception as ex:
