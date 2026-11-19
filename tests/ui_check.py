@@ -232,6 +232,14 @@ PROBE = """<script>setTimeout(function(){
   out.bright = [watchNote({league: "nhl", t: "over"}), watchNote({league: "nhl", t: "under"})];
   D.bright_pool = [{league: "nhl", t: "over", won: 131, n: 149, said: 84, games: 40}];
   out.brightG = watchNote({league: "nhl", t: "over"});
+  var tlSave = D.ten_leg;
+  D.ten_leg = {today: {n: 1, chance: 0.93, pays: 1.05, us_only: true,
+                       legs: [{label: "Over 200.5 points", price: "-2000", p: 0.93, match: "A at B", league: "nba", status: "open"}]},
+               record: {days: 14, cashed: 12, stated: 0.41, pays: 1.64},
+               sizes: [{n: 6, days: 14, cashed: 13, pays: 1.34}, {n: 10, days: 14, cashed: 12, pays: 1.64}],
+               alt2x: {n: 14, chance: 0.27, pays: 2.02, cashed: 8, days: 13}};
+  out.tenLeg = tenLegHTML();
+  D.ten_leg = tlSave;
   D.bright_pool = bpSave;
   var ssSave = D.spread_sides; D.spread_sides = [{league: "nhl", side: "getting", all: [277, 322, 82.6], halves: [[141, 164, 82.6], [136, 158, 82.5]]},
                                                  {league: "nfl", side: "getting", all: [400, 502, 82.2], halves: [[214, 260, 82.0], [186, 242, 82.4]]}];
@@ -611,6 +619,10 @@ def main():
     if not ("<b>Running ahead:</b> NHL overs at 70-95% across every saved FanDuel line have won 131 of 149 against 84% stated, ahead in both halves" in br[0]
             and "Running ahead" not in br[1]):
         fails.append("running-ahead note wrong: " + repr(br))
+    tl = new.get("tenLeg") or ""
+    if not ("cashed 12 of 14 days" in tl and "6 legs cashed 13 of 14" in tl
+            and "<b>The same lines to 2x</b>" in tl and "14 legs today, 27% stated all win, pays 2.02x; replayed, cashed 8 of 13 days" in tl):
+        fails.append("10-leg box wrong: " + repr(tl[:400]))
     if "have won 131 of 149 lines (40 games) against 84% stated" not in (new.get("brightG") or ""):
         fails.append("running-ahead game count missing: " + repr(new.get("brightG")))
     sb = new.get("sband") or ["", "x"]

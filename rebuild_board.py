@@ -751,6 +751,10 @@ def snapshot():
                 out["ten_leg"] = dict(today=ten_leg.build(_eg), preview=not _fz,
                                       record=ten_leg.record(locks.SAFE_LEDGER),
                                       sizes=ten_leg.sizes(locks.SAFE_LEDGER))
+                _a2 = ten_leg.to_target(_eg, 2.0)
+                _ad = ten_leg.to_target_days(locks.SAFE_LEDGER)
+                out["ten_leg"]["alt2x"] = dict(n=_a2 and _a2["n"], chance=_a2 and _a2["chance"],
+                                               pays=_a2 and _a2["pays"], cashed=sum(_ad.values()), days=len(_ad))
             except Exception as e_:
                 print(f"ten-leg skipped ({e_})", file=sys.stderr)
         except Exception as e_:
