@@ -328,10 +328,12 @@ def changes(before, after):
 
 
 def done(after):
-    """The ladder has settled and no watched game is still open."""
+    """The ladder has settled and no watched game, 10-leg leg or 2x
+    alternative is still open -- so the night's last result is not missed."""
     return "SETTLED" in after and not any(str(v).split(" | ")[0].endswith("= open")
                                          for k, v in after.items() if k.startswith(("GAME ", "UFC "))) \
-        and not any(str(v).split(" | ")[0] == "open" for k, v in after.items() if k.startswith("TEN "))
+        and not any(str(v).split(" | ")[0] == "open" for k, v in after.items() if k.startswith("TEN ")) \
+        and str(after.get("ALT2X", "")).split(" | ")[0] != "open"     # the 2x alternative's result, too
 
 
 def main(state_path, day=None, league=None):

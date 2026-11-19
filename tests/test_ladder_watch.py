@@ -333,6 +333,11 @@ class AltSnapshot(unittest.TestCase):
         self.assertEqual(w.alt_snapshot("2026-11-19", {}, pool={}), {})
         self.assertIn("WATCHING: ALT2X = open | 2 legs to 2.25x", w.first_look({"ALT2X": "open | 2 legs to 2.25x"}))
 
+    def test_done_waits_for_alt(self):
+        self.assertFalse(w.done({"SETTLED": "x", "ALT2X": "open | 14 legs to 2.00x"}))
+        self.assertTrue(w.done({"SETTLED": "x", "ALT2X": "lost | Under 9.5 goals"}))
+        self.assertTrue(w.done({"SETTLED": "x"}))
+
 
 class FirstLookCountsAddUp(unittest.TestCase):
     def test_void_counted(self):
