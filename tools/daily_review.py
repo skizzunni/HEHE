@@ -842,6 +842,35 @@ def price_move_line(ledger=None):
     return "Board picks by price move after the call, by half: " + "; ".join(parts) + "."
 
 
+def dc_move_line(ledger=None, cut=0.03, min_n=20):
+    """Soccer win-or-draw board picks whose price moved `cut`+ against them
+    after the call, by date half, won vs stated with z. Information only.
+    2026-11-19 (Deportivo Maldonado or draw lost 0-1 after a 3-point move):
+    13/25 then 16/25 vs 18.0 / 17.6 expected (z -2.2 / -0.7) -- behind, short
+    of the 2.8 bar in both halves; steady or toward ran ahead (z +2.2 / +1.2)."""
+    import ledger as L
+    if ledger is None:
+        ledger = load("ledger.json", {})
+
+    def mv(e):
+        a, b = L._implied(e.get("first_price")), L._implied(e.get("price"))
+        return None if a is None or b is None else a - b
+    R = sorted((e for e in ledger.values() if isinstance(e, dict) and e.get("dc") and e.get("status") in ("won", "lost")
+                and e.get("date") and not e.get("record_excluded") and e.get("conf") is not None
+                and (mv(e) or 0) >= cut), key=lambda e: e["date"])
+    if len(R) < min_n:
+        return None
+    h = len(R) // 2
+
+    def rec(S):
+        w = sum(e["status"] == "won" for e in S)
+        p = sum(e["conf"] for e in S) / 100
+        v = sum(e["conf"] / 100 * (1 - e["conf"] / 100) for e in S) or 1
+        return f"{w}/{len(S)} vs {p:.1f} expected (z {(w - p) / math.sqrt(v):+.1f})"
+    return (f"Win-or-draw picks whose price moved {round(100 * cut)}+ points against, by half: "
+            f"{rec(R[:h])} then {rec(R[h:])} -- information only.")
+
+
 def coin_flip_line(ledger=None, cut=60):
     """Board picks called under `cut`% (the near coin flips), won vs stated by
     date half, split by how the price moved after the call (3+ points against,
@@ -2154,6 +2183,8 @@ def words(r, fit):
         out.append(r["ten_leg"])
     if r.get("ladder_alt"):
         out.append(r["ladder_alt"])
+    if r.get("dc_moves"):
+        out.append(r["dc_moves"])
     if r.get("ladder_types"):
         out.append(r["ladder_types"])
     if r.get("eg_bands"):
@@ -2323,6 +2354,7 @@ def _main():
     log[today.isoformat()]["national"] = national_line()
     log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
     log[today.isoformat()]["price_moves"] = price_move_line(ledger)
+    log[today.isoformat()]["dc_moves"] = dc_move_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
     log[today.isoformat()]["td_calibration"] = td_calibration_line()
     try:

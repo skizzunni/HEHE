@@ -1561,6 +1561,14 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**On watch: win-or-draw picks after the price moves against them (2026-11-19).**
+Deportivo Maldonado or draw (-350, 73%) lost 0-1 at home after its price
+slid 3 points. All 662 graded win-or-draw board picks by date half: moved 3+
+against 13/25 then 16/25 vs 18.0 / 17.6 expected (z -2.2 / -0.7); steady or
+toward 243/306 then 236/306 (z +2.2 / +1.2). Behind, but short of the 2.8
+bar in both halves -- nothing changes; the review prints it daily
+(dc_move_line).
+
 **Checked: the 10-leg's American-leagues-first order (2026-11-19).** Replayed
 on the 13 frozen 8 AM cards, filling American leagues first (the user's ask)
 against the plain ten likeliest from any league: both cashed 5 then 6 by date

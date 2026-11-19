@@ -52,6 +52,16 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class DcMoveLine(unittest.TestCase):
+    def test_moved_against_only(self):
+        import daily_review
+        led = {f"k{i}": dict(dc=True, status="won" if i % 2 else "lost", date=f"2026-11-{i + 1:02d}", conf=75,
+                             first_price="-300", price="-200" if i < 20 else "-300") for i in range(24)}
+        out = daily_review.dc_move_line(led)
+        self.assertTrue(out.startswith("Win-or-draw picks whose price moved 3+ points against, by half: 5/10 vs 7.5"), out)
+        self.assertIsNone(daily_review.dc_move_line({k: v for k, v in list(led.items())[:10]}))
+
+
 class LadderTypeLine(unittest.TestCase):
     def test_review_reuses_ticket_wording(self):
         import daily_review
