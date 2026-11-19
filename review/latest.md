@@ -31,7 +31,7 @@ Ladder leg types on the saved pools, one line per game, by half: NHL over 86% th
 Injuries at tip-off (244 games, 15 days, early read): my side more out: 1st 27/37 73% vs 65% | 2nd 26/40 65% vs 62%; even: 1st 21/29 72% vs 63% | 2nd 20/39 51% vs 62%; their side more out: 1st 40/48 83% vs 65% | 2nd 34/51 67% vs 67%.
 Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1951 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 8/17 vs 70% stated (4.2% by luck; about 2.5 of 60 teams expected this far behind by chance); NHL Detroit Red Wings 3/10 vs 54% stated (11.7% by luck; about 7.0 of 60 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.7 of 60 teams expected this far behind by chance).
-High-chance sweep: 70%+ today 0-0, 10 open; swept 3 of 33 past days (last 2026-11-11) | 80%+ today 0-0, 6 open; swept 10 of 32 past days (last 2026-11-13).
+High-chance sweep: 70%+ today 0-0, 10 open; swept 3 of 33 past days (last 2026-11-11) | 80%+ today 0-0, 5 open; swept 10 of 32 past days (last 2026-11-13).
 Back-to-backs, board record so far: NHL on the tired side 3/10 vs 56%, against it 18/30 vs 61%; NBA on the tired side 18/24 vs 65%, against it 20/26 vs 72%.
 Ladder games, players out or doubtful: IND @ HOU: Indianapolis Colts without Jalen Travis, Jerry Tillery, Charvarius Ward, Will Mallory, Bernhard Raimann; Houston Texans without Danielle Hunter, Brevin Jordan, Marvin Harrison Jr., Woody Marks.
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
