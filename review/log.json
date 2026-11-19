@@ -16726,7 +16726,7 @@
     "against_market": false,
     "league": "nba",
     "like": {
-     "n": 64,
+     "n": 65,
      "said": 67,
      "won": 43
     },
@@ -16913,11 +16913,11 @@
   },
   "props": {
    "fair": {
-    "n": 3257,
+    "n": 3280,
     "said_fair": 86.3,
     "said_price": 87.5,
     "said_stated": 83.6,
-    "won": 2705
+    "won": 2723
    },
    "n": 152,
    "said": 82.3,
@@ -17034,13 +17034,13 @@
       82.1
      ],
      [
-      121,
-      152,
+      123,
+      155,
       81.9
      ]
     ],
-    "hit": 79.6,
-    "n": 338,
+    "hit": 79.5,
+    "n": 341,
     "name": "props nba Assists",
     "said": 82.0
    },
@@ -17053,13 +17053,13 @@
       85.5
      ],
      [
-      206,
-      229,
+      211,
+      234,
       85.5
      ]
     ],
-    "hit": 87.8,
-    "n": 476,
+    "hit": 87.9,
+    "n": 481,
     "name": "props nba Points",
     "said": 85.5
    },
@@ -17072,13 +17072,13 @@
       83.4
      ],
      [
-      126,
-      154,
+      129,
+      157,
       83.2
      ]
     ],
-    "hit": 83.3,
-    "n": 330,
+    "hit": 83.5,
+    "n": 333,
     "name": "props nba Pts + Ast",
     "said": 83.3
    },
@@ -17091,13 +17091,13 @@
       84.5
      ],
      [
-      157,
-      189,
+      159,
+      192,
       84.2
      ]
     ],
-    "hit": 83.7,
-    "n": 386,
+    "hit": 83.5,
+    "n": 389,
     "name": "props nba Pts + Reb + Ast",
     "said": 84.4
    },
@@ -17110,13 +17110,13 @@
       82.5
      ],
      [
-      72,
-      89,
-      82.2
+      75,
+      94,
+      82.4
      ]
     ],
-    "hit": 82.7,
-    "n": 179,
+    "hit": 82.1,
+    "n": 184,
     "name": "props nba Reb + Ast",
     "said": 82.4
    },
@@ -17129,13 +17129,13 @@
       84.8
      ],
      [
-      91,
-      101,
+      93,
+      104,
       84.8
      ]
     ],
-    "hit": 85.6,
-    "n": 209,
+    "hit": 85.4,
+    "n": 212,
     "name": "props nba Rebounds",
     "said": 84.8
    },
@@ -17148,13 +17148,13 @@
       84.6
      ],
      [
-      75,
-      90,
+      79,
+      94,
       84.3
      ]
     ],
-    "hit": 82.2,
-    "n": 191,
+    "hit": 82.6,
+    "n": 195,
     "name": "props nba Threes Made",
     "said": 84.4
    },
@@ -17360,18 +17360,18 @@
     "flag": false,
     "halves": [
      [
-      20,
-      22,
+      21,
+      23,
       75.3
      ],
      [
-      16,
+      15,
       20,
       75.3
      ]
     ],
-    "hit": 85.7,
-    "n": 42,
+    "hit": 83.7,
+    "n": 43,
     "name": "locks nba under",
     "said": 75.3
    },
@@ -17536,13 +17536,13 @@
       90.3
      ],
      [
-      28,
       29,
-      91.7
+      30,
+      91.8
      ]
     ],
-    "hit": 94.1,
-    "n": 51,
+    "hit": 94.2,
+    "n": 52,
     "name": "safe locks nba over",
     "said": 91.1
    },
@@ -17645,18 +17645,18 @@
     "flag": false,
     "halves": [
      [
-      136,
-      147,
-      88.6
+      150,
+      162,
+      88.5
      ],
      [
+      179,
       191,
-      204,
       86.8
      ]
     ],
     "hit": 93.2,
-    "n": 351,
+    "n": 353,
     "name": "prop locks",
     "said": 87.6
    },
@@ -17756,35 +17756,37 @@
    }
   },
   "card_missing": null,
-  "cautions": "Running ahead: NBA over on all saved lines 997/1123 vs 83% (84 games); NFL teamover on all saved lines 317/374 vs 81% (29 games); NHL over on all saved lines 137/158 vs 83% (93 games); NHL teamover on all saved lines 161/186 vs 82% (93 games); NHL under on all saved lines 190/220 vs 82% (93 games).",
+  "cautions": "Running ahead: NBA over on all saved lines 1011/1137 vs 83% (85 games); NFL teamover on all saved lines 317/374 vs 81% (29 games); NHL over on all saved lines 137/158 vs 83% (93 games); NHL teamover on all saved lines 161/186 vs 82% (93 games); NHL under on all saved lines 190/220 vs 82% (93 games).",
   "clv": {
-   "avg": 0.97,
-   "beat": 44.4,
-   "n": 9
+   "avg": 0.74,
+   "beat": 40.0,
+   "n": 10
   },
   "coin_flips": "Coin flips (called under 60%), by half: all 94/160 (59% vs 55%) then 96/160 (60% vs 55%); price moved against 3+ 12/19 (63% vs 54%) then 11/18 (61% vs 54%); steady 71/112 (63% vs 54%) then 69/116 (59% vs 55%); moved toward 3+ 5/12 (42% vs 56%) then 16/26 (62% vs 57%).",
-  "cold": "Running cold (last 7 days, all saved lines at 70-95%): NCAAF teamover 603/816 (74% vs 82%); NBA under 478/620 (77% vs 84%); NFL teamunder 151/201 (75% vs 82%); NCAAF over 446/587 (76% vs 81%). Walk-forward: legs of a type running cold won 94.4% the next day vs 81.6% for the rest (252 and 8358 legs), so a cold week is noise, not a signal.",
+  "cold": "Running cold (last 7 days, all saved lines at 70-95%): NCAAF teamover 603/816 (74% vs 82%); NFL teamunder 151/201 (75% vs 82%); NBA under 495/637 (78% vs 84%); NCAAF over 446/587 (76% vs 81%). Walk-forward: legs of a type running cold won 94.8% the next day vs 81.7% for the rest (269 and 8372 legs), so a cold week is noise, not a signal.",
   "day": "2026-11-18",
   "dc_side": "Soccer or-draw picks by side: home 78% vs 74% stated on 442 (halves 79%, 76%); away 75% vs 73% stated on 218 (halves 72%, 78%). Straight wins: 67% vs 66% stated on 300; 59 of 98 losses were draws. With full price history: 83% vs 74% stated on 145 (halves 80% vs 72%, 86% vs 75%); older picks without it: 52% vs 59% on 155.",
   "draws": "Soccer draws on the board: 22% of 1536 games; most in EFL3 41% of 37, AUS 38% of 21, URU 31% of 36, UECL 30% of 33, BRA2 29% of 31 -- where a straight win most often loses to a draw.",
-  "eg_bands": "Every game's safest line by chance, halves split 2026-11-12: 92%+ none then 33/34 (97% vs 93%); 85-92% 167/183 (91% vs 90%) then 122/131 (93% vs 90%); under 85% 30/38 (79% vs 82%) then 19/22 (86% vs 81%).",
+  "eg_bands": "Every game's safest line by chance, halves split 2026-11-12: 92%+ none then 34/35 (97% vs 93%); 85-92% 167/183 (91% vs 90%) then 122/131 (93% vs 90%); under 85% 30/38 (79% vs 82%) then 19/22 (86% vs 81%).",
   "every_game_types": "Every game's safest line by bet type, by half: win 78% then 91% (vs 84%, 84%); spread 90% then 91% (vs 90%, 90%); total 98% then 93% (vs 90%, 92%); team total 93% then 94% (vs 91%, 90%). Ahead in both halves: total, team total.",
   "hi_sweep": "High-chance sweep: 70%+ today 5-0, 6 open; swept 3 of 32 past days (last 2026-11-11) | 80%+ today 2-0, 3 open; swept 10 of 31 past days (last 2026-11-13).",
-  "home_away": "Home and away picks, by half: NBA home 66% vs 66% then 77% vs 70%, away 78% vs 64% then 75% vs 68%; NHL home 61% vs 59% then 56% vs 60%, away 55% vs 57% then 70% vs 56%; NCAAF home 80% vs 74% then 66% vs 72%, away 60% vs 69% then 76% vs 68%; NFL home 70% vs 65% then 67% vs 67%, away 88% vs 62% then 94% vs 68%.",
-  "inj_study": "Injuries at tip-off (230 games, 15 days, early read): my side more out: 1st 27/37 73% vs 65% | 2nd 26/39 67% vs 62%; even: 1st 21/29 72% vs 63% | 2nd 19/37 51% vs 62%; their side more out: 1st 40/48 83% vs 65% | 2nd 30/40 75% vs 67%.",
+  "home_away": "Home and away picks, by half: NBA home 66% vs 66% then 75% vs 69%, away 78% vs 64% then 75% vs 68%; NHL home 61% vs 59% then 56% vs 60%, away 55% vs 57% then 70% vs 56%; NCAAF home 80% vs 74% then 66% vs 72%, away 60% vs 69% then 76% vs 68%; NFL home 70% vs 65% then 67% vs 67%, away 88% vs 62% then 94% vs 68%.",
+  "inj_study": "Injuries at tip-off (231 games, 15 days, early read): my side more out: 1st 27/37 73% vs 65% | 2nd 26/39 67% vs 62%; even: 1st 21/29 72% vs 63% | 2nd 19/37 51% vs 62%; their side more out: 1st 40/48 83% vs 65% | 2nd 30/41 73% vs 67%.",
   "injury": null,
-  "injury_ctx": "Ladder games, players out or doubtful: Utah Jazz at Los Angeles Lakers: Utah Jazz without Lauri Markkanen, Jusuf Nurkic, Jaren Jackson Jr.; Los Angeles Lakers without Austin Reaves | Houston Rockets at Indiana Pacers: Houston Rockets without Clint Capela; Indiana Pacers without Andrew Nembhard, Tyrese Haliburton, Johnny Furphy, Ben Sheppard | Philadelphia 76ers at Orlando Magic: Philadelphia 76ers without Tyrese Maxey, Dean Wade, Jaylen Brown, Dominick Barlow, Adem Bona, Ariel Hukporti; Orlando Magic without Izaiyah Nelson, Jonathan Isaac, Noah Penda, Paolo Banchero | Chicago Bulls at Brooklyn Nets: Chicago Bulls without Tobe Awaka, Caleb Wilson.",
-  "ladder": "Ladder: run 10, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.48x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.48x for the plain top 4; 11 wins to $10,000; legs: Los Angeles Lakers to win (Utah Jazz at Los Angeles Lakers; 10:00 PM, open), Over 212.5 points (Houston Rockets at Indiana Pacers; won), Under 235.5 points (Philadelphia 76ers at Orlando Magic; live 1:05 - 4th, Orlando Magic 112 - Philadelphia 76ers 114, on pace for 231 (226 so far, line 235.5, room for 9 more), on track), Under 252.5 points (Chicago Bulls at Brooklyn Nets; live 7:26 - 4th, Brooklyn Nets 90 - Chicago Bulls 124, on pace for 253 (214 so far, line 252.5, room for 38 more), behind the pace it needs); 1 of 4 won, the ticket now rests on 3 legs, 44% on their stated chance before play.",
-  "ladder_pool": "Ladder leg types on the saved pools, one line per game, by half: NBA over 89% then 94% vs 82%, 82% on 84 games; NBA under 89% then 77% vs 82%, 82% on 84 games.",
+  "injury_ctx": null,
+  "ladder": "Ladder: run 10 ended (peak $1.00, lost on Under 235.5 points (237, missed by 1.5)); the next ticket starts again at $1 with the 8 AM card (the top Locks paying 2x-5x, leg count 1-8 by the best chance of reaching $10,000); best ever $9.57.",
+  "ladder_pool": null,
   "leaks_14d": [],
-  "lessons": "Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1932 picks).",
-  "lock_leagues": "Locks by league, by half: NBA 83% then 87% (vs 83%, 83%); NHL 85% then 97% (vs 87%, 88%); NCAAF 88% then 78% (vs 82%, 77%); NFL 89% then 74% (vs 84%, 82%). No league short in both halves.",
+  "lessons": "Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1933 picks).",
+  "lock_leagues": "Locks by league, by half: NBA 84% then 86% (vs 83%, 83%); NHL 85% then 97% (vs 87%, 87%); NCAAF 88% then 78% (vs 82%, 77%); NFL 84% then 80% (vs 83%, 83%). No league short in both halves.",
   "lock_prop_markets": "Locks props by market, by half: NBA Assists 14/19 then 18/21 (vs 89%, 79%); NFL Receiving Yards 12/14 then 10/15 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.",
-  "lock_types": "Locks by bet type, by half: win 87% then 83% (vs 83%, 79%); spread 89% then 89% (vs 85%, 85%); total 87% then 89% (vs 83%, 84%); team total 87% then 92% (vs 86%, 86%); prop 81% then 79% (vs 85%, 78%).",
+  "lock_types": "Locks by bet type, by half: win 87% then 82% (vs 83%, 79%); spread 88% then 90% (vs 84%, 85%); total 87% then 89% (vs 83%, 84%); team total 87% then 92% (vs 86%, 86%); prop 79% then 82% (vs 85%, 78%).",
   "locks": {
-   "lost": [],
+   "lost": [
+    "Under 235.5 points (Philadelphia 76ers at Orlando Magic) Philadelphia 76ers 121 - Orlando Magic 116"
+   ],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      2,
@@ -17796,10 +17798,10 @@
   },
   "loss_reasons_14d": {
    "blowout": 44,
-   "close game": 87,
+   "close game": 88,
    "coin flip": 54,
    "drawn": 12,
-   "favourite lost": 96,
+   "favourite lost": 97,
    "price moved against it": 23,
    "upset": 41
   },
@@ -17820,54 +17822,92 @@
      "coin flip"
     ],
     "why": "margin 10 \u00b7 the book had my side favoured too \u00b7 called at 55% \u00b7 coin flip"
+   },
+   {
+    "against_market": false,
+    "league": "nba",
+    "like": {
+     "n": 70,
+     "said": 62,
+     "won": 46
+    },
+    "match": "MEM @ CLE",
+    "pick": "Cleveland Cavaliers",
+    "price": "-185",
+    "said": 62,
+    "score": {
+     "Cleveland Cavaliers": 121,
+     "Memphis Grizzlies": 124
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 62% \u00b7 favourite lost \u00b7 close game"
    }
   ],
   "lottery": [
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 231.5 points"
+    ],
     "legs": 7,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 215.5 points"
+    ],
     "legs": 6,
-    "lost": 0,
-    "status": "open",
+    "lost": 1,
+    "status": "lost",
     "tier": "100",
     "won": 0
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 231.5 points",
+     "Under 215.5 points"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k",
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 231.5 points",
+     "Under 215.5 points"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k+25",
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 231.5 points",
+     "Under 215.5 points"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k+50",
     "won": 1
    },
    {
-    "killed_by": [],
+    "killed_by": [
+     "Under 231.5 points",
+     "Under 215.5 points"
+    ],
     "legs": 11,
-    "lost": 0,
-    "status": "open",
+    "lost": 2,
+    "status": "lost",
     "tier": "10k+100",
     "won": 1
    }
@@ -17875,11 +17915,11 @@
   "national": "National-team soccer: 55/63 (87% vs 76% stated), 2 of 8 losses draws (straight win 28/30 (93% vs 78% stated); or draw 27/33 (82% vs 75% stated)); club soccer 812/1116 (73% vs 71% stated).",
   "nhl_b2b": "NHL back-to-backs today (watch, not a rule: tired teams ran under their price in each of the last 3 seasons, betting against them lost in one): Boston Bruins (away, played yesterday) v Detroit Red Wings (rested) -- the board has the rested side. Board record so far: picks on the tired side 3/10 vs 56% stated; against the tired side 18/29 vs 61% stated.",
   "picks": {
-   "hit": 88.9,
-   "lost": 1,
-   "n": 9,
-   "roi": 13.2,
-   "said": 73.4,
+   "hit": 80.0,
+   "lost": 2,
+   "n": 10,
+   "roi": 1.9,
+   "said": 72.3,
    "won": 8
   },
   "picks_by_league": {
@@ -17892,11 +17932,11 @@
     "won": 6
    },
    "nba": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 30.7,
-    "said": 73.0,
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -34.7,
+    "said": 67.5,
     "won": 1
    },
    "ncaab": {
@@ -17908,29 +17948,29 @@
     "won": 1
    }
   },
-  "pool_overall": "Pool game lines (one per game and bet type), every league, by half: 86.6% vs 82.3% (z +2.9) to 2026-11-11, then 81.2% vs 82.3% (z -0.7) on 1310 game lines.",
+  "pool_overall": "Pool game lines (one per game and bet type), every league, by half: 86.6% vs 82.3% (z +2.9) to 2026-11-11, then 81.2% vs 82.3% (z -0.7) on 1312 game lines.",
   "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 372/474 (78% vs 81% stated) -- by game, one line each: 48/60 (80% vs 84%); fine -- the caution on this band is off (locks.apply_prereg). History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).",
   "prereg_more": "Pre-registered tests also running: NFL spreads getting 14+ points (legs from 2026-11-14): 70/100 (70% vs 84% stated) -- by game, one line each: 9/13 (69% vs 83%); short on legs, but only 13 games -- too few to act on yet; college football team-total unders (legs from 2026-11-15): 41/51 (80% vs 82% stated) -- by game, one line each: 2/3 (67% vs 82%); waiting for 150 legs.",
-  "priced_calibration": "Priced-era picks by league, by half (split 2026-11-04): soccer or-draw 77% vs 74% (z +1.7) then 76% vs 74% (z +0.6); soccer win 82% vs 73% (z +2.8) then 85% vs 74% (z +2.3); NCAAF 73% vs 72% (z +0.2) then 70% vs 71% (z -0.2); NBA 70% vs 66% (z +1.0) then 76% vs 69% (z +1.5); NHL 58% vs 58% (z +0.0) then 62% vs 58% (z +0.7); NCAAB 82% vs 88% (z -0.8) then 88% vs 88% (z +0.0); NFL 75% vs 64% (z +1.2) then 83% vs 67% (z +1.8). None past the 99.5% bar in both halves.",
-  "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 77% (76% / 79%); 80-85% 84%, 87% (83% / 84%); 85-90% 86%, 82% (88% / 85%); 90%+ 84%, 85% (93% / 85%).",
+  "priced_calibration": "Priced-era picks by league, by half (split 2026-11-04): soccer or-draw 77% vs 74% (z +1.7) then 76% vs 74% (z +0.6); soccer win 82% vs 73% (z +2.8) then 85% vs 74% (z +2.3); NCAAF 73% vs 72% (z +0.2) then 70% vs 71% (z -0.2); NBA 70% vs 66% (z +1.0) then 75% vs 69% (z +1.4); NHL 58% vs 58% (z +0.0) then 62% vs 58% (z +0.7); NCAAB 82% vs 88% (z -0.8) then 88% vs 88% (z +0.0); NFL 75% vs 64% (z +1.2) then 83% vs 67% (z +1.8). None past the 99.5% bar in both halves.",
+  "prop_fair": "Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 77% (76% / 79%); 80-85% 84%, 86% (83% / 84%); 85-90% 86%, 82% (88% / 85%); 90%+ 84%, 85% (93% / 85%).",
   "props": {
    "fair": {
-    "n": 3257,
+    "n": 3280,
     "said_fair": 86.3,
     "said_price": 87.5,
     "said_stated": 83.6,
-    "won": 2705
+    "won": 2723
    },
-   "n": 11,
-   "said": 84.3,
-   "won": 9
+   "n": 37,
+   "said": 84.1,
+   "won": 30
   },
   "roster": null,
-  "runs": "Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 7) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 8) 2026-11-15, 2 days, peak $2.00, lost on Boston Celtics to win; 9) 2026-11-17, 1 day, peak $1.00, lost on San Antonio Spurs to win, Duke Blue Devils to win; 10) 2026-11-18, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 15/30 cashed at 2.21x, without props 15/31 at 2.28x.",
+  "runs": "Ladder runs: 1) 2026-11-03, 3 days, peak $9.57, lost on Florida Atlantic Owls under 41.5 points (60, missed by 18.5); 2) 2026-11-06, 1 day, peak $1.00, lost on Austin Reaves: 4+ Assists (2, missed by 2); 3) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 4) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 5) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 6) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 7) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 8) 2026-11-15, 2 days, peak $2.00, lost on Boston Celtics to win; 9) 2026-11-17, 1 day, peak $1.00, lost on San Antonio Spurs to win, Duke Blue Devils to win; 10) 2026-11-18, 1 day, peak $1.00, lost on Under 235.5 points (237, missed by 1.5). Replayed on every saved card: as ranked 15/30 cashed at 2.21x, without props 15/31 at 2.28x.",
   "safe_locks": {
    "lost": [],
    "n": 11,
-   "open": 10,
+   "open": 9,
    "plays": {
     "best": [
      9,
@@ -17943,7 +17983,7 @@
      "open"
     ]
    },
-   "won": 1
+   "won": 2
   },
   "strong": {
    "hit": 100.0,
@@ -17955,23 +17995,25 @@
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 94.4,
-   "as_good_pct": 25.3,
+   "as_bad_pct": 82.2,
+   "as_good_pct": 44.0,
    "broke_on": "ncaab Florida Gators at 55%",
    "coin_flips": 1,
    "expected_by_league": {
+    "nba": 0.6,
     "ncaab": 0.4
    },
-   "expected_losses": 2.4,
-   "lost": 1,
+   "expected_losses": 2.8,
+   "lost": 2,
    "lost_by_league": {
+    "nba": 1,
     "ncaab": 1
    },
-   "open": 19,
+   "open": 18,
    "won": 8
   },
   "td_calibration": "Anytime touchdown chances, by half: 144/1061 scored vs 124.8 stated (z +2.0) to 2026-11-01, then 150/1062 scored vs 123.6 stated (z +2.7).",
-  "teams": "Teams backed most, furthest behind (10+ picks): NBA New York Knicks 8/17 vs 70% stated (4.2% by luck; about 2.4 of 58 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.4 of 58 teams expected this far behind by chance); NHL Utah Mammoth 8/18 vs 57% stated (20.8% by luck; about 12.1 of 58 teams expected this far behind by chance).",
+  "teams": "Teams backed most, furthest behind (10+ picks): NBA New York Knicks 8/17 vs 70% stated (4.2% by luck; about 2.5 of 59 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.5 of 59 teams expected this far behind by chance); NHL Utah Mammoth 8/18 vs 57% stated (20.8% by luck; about 12.3 of 59 teams expected this far behind by chance).",
   "ten_leg": "Daily 10-leg, replayed on every 8 AM card: cashed 11 of 13 days (85%) vs 41% stated, at about 1.64x.",
   "ticket_sizes": "Ticket size, replayed on every 8 AM card: 6 legs 12/13 at 1.34x; 8 legs 11/13 at 1.49x; 10 legs 11/13 at 1.64x; 12 legs 10/13 at 1.82x; 15 legs 6/11 at 2.18x.",
   "ufc": "UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.",
@@ -17982,10 +18024,10 @@
     "n": 0
    },
    "agree": {
-    "hit": 76.2,
-    "lost": 191,
-    "n": 801,
-    "roi": 1.3,
+    "hit": 76.1,
+    "lost": 192,
+    "n": 802,
+    "roi": 1.1,
     "said": 71.9,
     "won": 610
    }
@@ -17994,10 +18036,10 @@
    "nba": {
     "fitted": 0.0,
     "held_out": false,
-    "logloss": 0.5579,
-    "market_only": 0.5579,
-    "model_40": 0.5684,
-    "n": 211,
+    "logloss": 0.5599,
+    "market_only": 0.5599,
+    "model_40": 0.5717,
+    "n": 212,
     "weight": 0.0
    },
    "ncaab": {
@@ -18235,7 +18277,7 @@
      "against_market": false,
      "league": "nba",
      "like": {
-      "n": 64,
+      "n": 65,
       "said": 67,
       "won": 43
      },
