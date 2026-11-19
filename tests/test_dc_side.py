@@ -128,6 +128,16 @@ class National(unittest.TestCase):
                          "(straight win 1/1 (100% vs 70% stated); or draw 1/2 (50% vs 80% stated)).")
 
 
+class PriceMoves(unittest.TestCase):
+    def test_line(self):
+        L = {f"a{i}": dict(date=f"2026-11-{1 + i // 2:02d}", status="won", conf=70, first_price="-200",
+                           price="-300" if i % 2 else "-200") for i in range(40)}
+        out = daily_review.price_move_line(L)
+        self.assertTrue(out.startswith("Board picks by price move after the call, by half: moved 6+ against none then none"), out)
+        self.assertIn("moved 3+ toward 10/10", out)
+        self.assertIsNone(daily_review.price_move_line({}))
+
+
 class CoinFlips(unittest.TestCase):
     def test_line(self):
         L = {}

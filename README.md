@@ -1543,6 +1543,15 @@ then 51/119 vs 60.7 (z -1.79) -- short both times, short of the 2.8 bar;
 (PREREG_HOME, since Nov 15) decides that one on new finds. Nothing changes;
 the review prints the bands daily (value_band_line).
 
+**Rejected: skip picks whose price moved far against them (2026-11-19).**
+Tonight's losers Toronto (price moved 10 points against), Brooklyn (5) and
+Detroit (3). Earlier move studies cut at 3 points; by size, on 1,920 priced
+picks and date halves: moved 6+ against 14/21 then 10/16 (z +0.1 / -0.1) --
+on par; 3-6 against z -0.2 / -0.6; steady 75% then 75% vs 70-72%; moved 3+
+toward 111/139 then 168/206 (80%, 82% vs 72-73%, z +2.1 / +2.7) -- ahead,
+just short of the bar. Nothing changes; the review prints it daily
+(price_move_line).
+
 **Pool cautions and "running ahead" show their game counts (2026-11-18).**
 watch_pool and bright_pool judge (league, bet type) on 100+ saved lines, and
 alternate lines of one game each count. They now carry the distinct games

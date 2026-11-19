@@ -772,6 +772,39 @@ def national_line(ledger=None):
             + (f"; club soccer {rec(club)}." if club else "."))
 
 
+MOVE_BANDS = (("moved 6+ against", lambda m: m >= 0.06), ("3-6 against", lambda m: 0.03 <= m < 0.06),
+              ("steady", lambda m: abs(m) < 0.03), ("moved 3+ toward", lambda m: m <= -0.03))
+
+
+def price_move_line(ledger=None):
+    """Every graded board pick by how its price moved after the call, by date
+    half, won vs stated with z. Information only. 2026-11-19: 6+ against on
+    par (14/21, 10/16); moved 3+ toward ahead both halves (z +2.1, +2.7) but
+    short of the 2.8 bar."""
+    import ledger as L
+    if ledger is None:
+        ledger = load("ledger.json", {})
+
+    def mv(e):
+        a, b = L._implied(e.get("first_price")), L._implied(e.get("price"))
+        return None if a is None or b is None else a - b
+    R = sorted((e for e in ledger.values() if isinstance(e, dict) and e.get("status") in ("won", "lost") and e.get("date")
+                and not e.get("record_excluded") and e.get("conf") is not None and mv(e) is not None), key=lambda e: e["date"])
+    if len(R) < 40:
+        return None
+    h = len(R) // 2
+
+    def rec(S):
+        if not S:
+            return "none"
+        w = sum(e["status"] == "won" for e in S)
+        p = sum(e["conf"] for e in S) / 100
+        v = sum(e["conf"] / 100 * (1 - e["conf"] / 100) for e in S) or 1
+        return f"{w}/{len(S)} (z {(w - p) / math.sqrt(v):+.1f})"
+    parts = [f"{name} {rec([e for e in R[:h] if f(mv(e))])} then {rec([e for e in R[h:] if f(mv(e))])}" for name, f in MOVE_BANDS]
+    return "Board picks by price move after the call, by half: " + "; ".join(parts) + "."
+
+
 def coin_flip_line(ledger=None, cut=60):
     """Board picks called under `cut`% (the near coin flips), won vs stated by
     date half, split by how the price moved after the call (3+ points against,
@@ -2076,6 +2109,8 @@ def words(r, fit):
         out.append(r["national"])
     if r.get("coin_flips"):
         out.append(r["coin_flips"])
+    if r.get("price_moves"):
+        out.append(r["price_moves"])
     if r.get("pool_overall"):
         out.append(r["pool_overall"])
     if r.get("ten_leg"):
@@ -2246,6 +2281,7 @@ def _main():
     log[today.isoformat()]["priced_calibration"] = priced_calibration_line()
     log[today.isoformat()]["national"] = national_line()
     log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
+    log[today.isoformat()]["price_moves"] = price_move_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
     log[today.isoformat()]["td_calibration"] = td_calibration_line()
     try:
