@@ -286,11 +286,19 @@ def ten_record(after):
     return f"10-leg: {w} won, {l} lost, {o} open" + (" -- ticket lost" if l else " -- ticket cashed" if not o else "")
 
 
+NAMES = {"ALT2X": "2x alternative (every-game lines)"}
+
+
+def _name(k):
+    """The words a key is shown with; the state file keeps the short key."""
+    return NAMES.get(k, k)
+
+
 def first_look(after):
     """The first look, short: every ladder leg (and SETTLED) in full, then the
     board games as one count line -- won, lost (named), open. It used to print
     every game, 40+ lines that cut off before the ladder legs could be read."""
-    out = [f"WATCHING: {k} = {v}" for k, v in after.items() if not k.startswith(("GAME ", "UFC ", "TEN "))]
+    out = [f"WATCHING: {_name(k)} = {v}" for k, v in after.items() if not k.startswith(("GAME ", "UFC ", "TEN "))]
     if ten_record(after):
         out.append(f"WATCHING: {ten_record(after)}")
     G = {k: str(v).split(" | ")[0] for k, v in after.items() if k.startswith(("GAME ", "UFC "))}
@@ -318,7 +326,7 @@ def changes(before, after):
     """Lines for every leg or game whose state moved, plus the settle line. A
     UFC result carries the night's running record (ufc_record)."""
     rec, ten = ufc_record(after), ten_record(after)
-    out = [f"CHANGE: {k} = {v}" + (f" | {rec}" if k.startswith("UFC ") and rec
+    out = [f"CHANGE: {_name(k)} = {v}" + (f" | {rec}" if k.startswith("UFC ") and rec
                                     and not str(v).split(" | ")[0].endswith("= open") else "")
            + (f" | {ten}" if k.startswith("TEN ") and ten else "")
            for k, v in after.items() if k != "SETTLED" and before and not _same(before.get(k), v)]

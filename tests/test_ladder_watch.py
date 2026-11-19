@@ -331,7 +331,11 @@ class AltSnapshot(unittest.TestCase):
         self.assertEqual(self._snap(["won", "lost", "open"]), {"ALT2X": "lost | Over 201.5 points (U1 99 - T1 90)"})
         self.assertEqual(self._snap(["won", "won", "open"]), {"ALT2X": "won | all 2 legs, 2.25x"})
         self.assertEqual(w.alt_snapshot("2026-11-19", {}, pool={}), {})
-        self.assertIn("WATCHING: ALT2X = open | 2 legs to 2.25x", w.first_look({"ALT2X": "open | 2 legs to 2.25x"}))
+        self.assertIn("WATCHING: 2x alternative (every-game lines) = open | 2 legs to 2.25x", w.first_look({"ALT2X": "open | 2 legs to 2.25x"}))
+
+    def test_change_line_named(self):
+        self.assertEqual(w.changes({"ALT2X": "open | 14 legs to 2.00x"}, {"ALT2X": "lost | Under 9.5 goals"}),
+                         ["CHANGE: 2x alternative (every-game lines) = lost | Under 9.5 goals"])
 
     def test_done_waits_for_alt(self):
         self.assertFalse(w.done({"SETTLED": "x", "ALT2X": "open | 14 legs to 2.00x"}))
