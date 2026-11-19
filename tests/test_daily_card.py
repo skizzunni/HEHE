@@ -52,6 +52,19 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class TwoPlusStudy(unittest.TestCase):
+    def test_from_p_and_halves(self):
+        sys.path.insert(0, os.path.join(ROOT, "tools"))
+        import td_two_plus_study as s
+        self.assertAlmostEqual(s.two_plus_from_p(1 - 2.718281828 ** -0.6), td_scorers.two_plus(0.6), places=4)
+        book = {f"k{i}": dict(date=f"2026-11-{1 + i // 5:02d}", p=0.45, status="won") for i in range(20)}
+        tds = {f"k{i}": (2 if i % 10 == 0 else 1) for i in range(20)}
+        H = s.study(book, tds)
+        self.assertEqual([h["n"] for h in H], [10, 10])
+        self.assertEqual([h["two_plus"] for h in H], [1, 1])
+        self.assertEqual(s.study({}, {}), [])
+
+
 class TdModel(unittest.TestCase):
     def test_two_plus_and_first(self):
         self.assertAlmostEqual(td_scorers.two_plus(0.6), 0.1219, places=4)

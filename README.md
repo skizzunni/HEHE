@@ -1543,6 +1543,14 @@ then 51/119 vs 60.7 (z -1.79) -- short both times, short of the 2.8 bar;
 (PREREG_HOME, since Nov 15) decides that one on new finds. Nothing changes;
 the review prints the bands daily (value_band_line).
 
+**Checked: the 2+ touchdown estimate holds (2026-11-19).** The page's 2+ TD
+chance comes from the same scaled expected-touchdown model as the anytime
+chance (Poisson). tools/td_two_plus_study.py rebuilds it for all 2,123 graded
+NFL player-games and counts touchdowns from the box scores: 21 of 1,061 scored
+2+ vs 18.2 expected (z +0.70), then 21 of 1,062 vs 17.4 (z +0.89). On par,
+slightly conservative -- like the anytime chances. First TD is still not
+graded.
+
 **On watch, the user's call: the ladder's 2x from every-game lines (2026-11-19).**
 Nov 18 the ladder (4 Locks legs at ~76%) lost while the 10-leg (ten -2000
 lines) cashed. Replayed on the 13 graded 8 AM cards: stacking the safest
