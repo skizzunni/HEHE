@@ -55942,11 +55942,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Alperen Sengun",
   "p": 0.8466,
   "p_fair": 0.8404,
   "price": "-800",
-  "status": "open"
+  "status": "lost",
+  "value": 8.0
  },
  "nba:401910008|n:alperen sengun|Rebounds|6+": {
   "aid": null,
@@ -55958,11 +55960,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Alperen Sengun",
   "p": 0.8528,
   "p_fair": 0.9172,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401910008|n:andrew nembhard|Points|5+": {
   "aid": null,
@@ -55977,7 +55981,9 @@
   "p": 0.8754,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910008|n:andrew nembhard|Pts + Ast|15+": {
   "aid": null,
@@ -55993,7 +55999,9 @@
   "p": 0.8466,
   "p_fair": 0.887,
   "price": "-800",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910008|n:fred vanvleet|Assists|4+": {
   "aid": null,
@@ -56005,11 +56013,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Fred VanVleet",
   "p": 0.7782,
   "p_fair": 0.7721,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401910008|n:fred vanvleet|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -56021,11 +56031,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Fred VanVleet",
   "p": 0.8459,
   "p_fair": 0.909,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nba:401910008|n:ivica zubac|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -56037,11 +56049,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Ivica Zubac",
   "p": 0.8544,
   "p_fair": 0.9335,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 11.0
  },
  "nba:401910008|n:jabari smith|Threes Made|1+": {
   "aid": null,
@@ -56053,11 +56067,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Jabari Smith",
   "p": 0.8515,
   "p_fair": 0.8867,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401910008|n:kevin durant|Points|15+": {
   "aid": null,
@@ -56069,11 +56085,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Kevin Durant",
   "p": 0.8488,
   "p_fair": 0.8733,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401910008|n:kevin durant|Pts + Ast|20+": {
   "aid": null,
@@ -56085,11 +56103,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Kevin Durant",
   "p": 0.8466,
   "p_fair": 0.8425,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 24.0
  },
  "nba:401910008|n:quenton jackson|Points|5+": {
   "aid": null,
@@ -56101,11 +56121,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Quenton Jackson",
   "p": 0.8488,
   "p_fair": 0.9699,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nba:401910008|n:quenton jackson|Reb + Ast|5+": {
   "aid": null,
@@ -56117,11 +56139,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Quenton Jackson",
   "p": 0.8492,
   "p_fair": 0.8823,
   "price": "-720",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401910008|n:tari eason|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -56133,11 +56157,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Tari Eason",
   "p": 0.8503,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 18.0
  },
  "nba:401910009|n:bam adebayo|Assists|2+": {
   "aid": null,
@@ -57733,6 +57759,22 @@
   "price": "-720",
   "status": "open"
  },
+ "nba:401910015|n:derrick white|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-11-18",
+  "edge": -3.8,
+  "gid": "nba:401910015",
+  "imp": 0.9167,
+  "label": "Derrick White: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Derrick White",
+  "p": 0.8472,
+  "p_fair": 0.882,
+  "price": "-1100",
+  "status": "open"
+ },
  "nba:401910015|n:jamal murray|Points|10+": {
   "aid": null,
   "date": "2026-11-18",
@@ -58400,6 +58442,22 @@
   "name": "Quentin Grimes",
   "p": 0.8488,
   "p_fair": 0.9075,
+  "price": "-1100",
+  "status": "open"
+ },
+ "nba:401910017|n:quentin grimes|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-18",
+  "edge": 0.5,
+  "gid": "nba:401910017",
+  "imp": 0.9167,
+  "label": "Quentin Grimes: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Quentin Grimes",
+  "p": 0.8599,
+  "p_fair": 0.9215,
   "price": "-1100",
   "status": "open"
  },
