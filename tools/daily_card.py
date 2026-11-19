@@ -81,14 +81,33 @@ def best_per_player(props, floor=FLOOR):
     return sorted(best.values(), key=lambda p: (-p["p"], p.get("imp") or 1))
 
 
+PER_GAME = 3          # at most this many players from one game, so the list covers the slate
+
+
+def spread_games(P, top, per_game=PER_GAME):
+    """The first `top` of P (likeliest first) with at most per_game from any
+    one match: a 15-name list from 3 games tells less than one from 8."""
+    out, seen = [], {}
+    for p in P:
+        m = p.get("match")
+        if seen.get(m, 0) >= per_game:
+            continue
+        seen[m] = seen.get(m, 0) + 1
+        out.append(p)
+        if len(out) >= top:
+            break
+    return out
+
+
 def prop_lines(D, day="today", top=15, head=None):
     """NBA and NHL player props, one per player: his best-paying line still
-    FLOOR+ likely on its own."""
+    FLOOR+ likely on its own, at most PER_GAME players from one game."""
     games = ((D.get("props") or {}).get(day) or {}).get("games") or []
     out = [head or f"NBA and NHL player props, one per player (his best-paying line at {round(100 * FLOOR)}%+):"]
     for lg, name in (("nba", "NBA"), ("nhl", "NHL")):
         P = best_per_player([dict(p, match=g.get("match")) for g in games if str(g.get("id", "")).startswith(lg + ":")
-                             for p in g.get("props") or [] if p.get("p") and p.get("plays", True)])[:top]
+                             for p in g.get("props") or [] if p.get("p") and p.get("plays", True)])
+        P = spread_games(P, top)
         if P:
             out.append(f"  {name}:")
             out += [f"    {p['label']} {p.get('price') or ''} -- {pc(p['p'])} ({p.get('match') or ''})" for p in P]

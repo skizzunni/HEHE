@@ -134,6 +134,11 @@ class Card(unittest.TestCase):
         self.assertTrue(any("P1: 10+ Points" in l for l in out))       # his longest price still 80%+
         self.assertTrue(any("P2: 4+ Rebounds" in l for l in out))
 
+    def test_spread_games_caps_one_match(self):
+        P = [dict(name=f"A{i}", match="G1") for i in range(5)] + [dict(name="B", match="G2")]
+        self.assertEqual([p["name"] for p in daily_card.spread_games(P, 15)], ["A0", "A1", "A2", "B"])
+        self.assertEqual(len(daily_card.spread_games(P, 2)), 2)
+
     def test_best_per_player_floor(self):
         P = [dict(name="A", p=0.88, imp=0.99), dict(name="A", p=0.82, imp=0.85), dict(name="A", p=0.6, imp=0.6),
              dict(name="B", p=0.7, imp=0.7)]
