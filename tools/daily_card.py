@@ -136,7 +136,16 @@ def team_points_lines(D, day="today"):
     return (["NBA team points (main team total, the side the price leans):"] + out) if out else []
 
 
+TOSS = 55          # a winner pick under this chance is called a toss-up on the card
+
+
+def _w(team, c):
+    return f"{team} {c}%" + (" (toss-up)" if c is not None and c < TOSS else "")
+
+
 def winner_lines(D, day="today"):
+    """Every game's winner pick by league, likeliest first; picks under
+    TOSS% say toss-up, so a 50% pick is not read like an 85% one."""
     out = []
     S = (D.get("slots") or {}).get(day) or {}
     for lg in sorted(S, key=lambda k: LEAGUE_ORDER.index(k) if k in LEAGUE_ORDER else 99):
@@ -144,10 +153,10 @@ def winner_lines(D, day="today"):
         win = [r for r in rows if not str(r["mp"]).endswith(" or draw")]
         dc = [r for r in rows if str(r["mp"]).endswith(" or draw")]       # soccer double chance: a draw wins too
         if win:
-            out.append(f"  {lg.upper()} ({len(win)}): " + "; ".join(f"{r['mp']} {r.get('mc')}%" for r in win))
+            out.append(f"  {lg.upper()} ({len(win)}): " + "; ".join(_w(r["mp"], r.get("mc")) for r in win))
         if dc:
             out.append(f"  {lg.upper()} win or draw ({len(dc)}): " + "; ".join(
-                f"{r['mp'][:-len(' or draw')]} {r.get('mc')}%" for r in dc))
+                _w(r["mp"][:-len(" or draw")], r.get("mc")) for r in dc))
     return (["Winners, every game (the board's pick and its chance):"] + out) if out else []
 
 

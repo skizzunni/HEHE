@@ -1561,6 +1561,14 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Checked: which every-game safest lines break the 2x ticket (2026-11-19).**
+The 2x every-game ticket lost on NBA totals four of its six losing days
+(Under 254.5, Over 192.5, Under 250.5). By league and bet type on the 13
+frozen 8 AM cards, date halves: NBA totals 43/46 then 45/47 (z +0.8 / +0.8,
+ahead), NCAAF spreads 23/28 then 25/28 (z -1.4 / -0.1), NCAAF and NHL team
+totals, NHL spreads and totals all on or ahead of stated. NBA totals lose
+the ticket only because there are so many of them; nothing to cut.
+
 **Rejected: keep "to win" legs out of the ladder (2026-11-19).** Five of the
 last nine runs died on a straight winner leg (Houston, Boston, Spurs, Duke,
 Lakers); ladder winner legs are 7/12 against 76% stated. On every Locks leg
