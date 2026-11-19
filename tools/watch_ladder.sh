@@ -35,7 +35,10 @@ try:
     d = json.load(open(sys.argv[1]))
 except Exception:
     sys.exit(0)
-legs = [f"{k} = {v}" for k, v in d.items() if not k.startswith(("GAME ", "UFC "))]
+legs = [f"{k} = {v}" for k, v in d.items() if not k.startswith(("GAME ", "UFC ", "TEN "))]
+ten = [str(v).split(" | ")[0] for k, v in d.items() if k.startswith("TEN ")]
+if ten:
+    legs.append(f"10-leg: {ten.count('won')} won, {ten.count('lost')} lost, {ten.count('open')} open")
 g = [str(v).split(" | ")[0] for k, v in d.items() if k.startswith(("GAME ", "UFC "))]
 print("RESUMED: " + "; ".join(legs + [f"{len(g)} board games -- {sum(x.endswith('= won') for x in g)} won, "
       f"{sum(x.endswith('= lost') for x in g)} lost, {sum(x.endswith('= open') for x in g)} open"]))

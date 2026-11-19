@@ -83,11 +83,13 @@ class WatchLadderSh(unittest.TestCase):
         import json
         with open(self.work + ".state.json", "w") as fh:
             json.dump({"Duke Blue Devils to win": "open", "GAME nba A @ B": "board pick B (70%) = won | x",
-                       "GAME nba C @ D": "board pick D (60%) = open"}, fh)
+                       "GAME nba C @ D": "board pick D (60%) = open", "TEN Over 200.5 points (A @ B)": "won | x",
+                       "TEN Under 250.5 points (C @ D)": "open"}, fh)
         with open(self.work + ".day", "w") as fh:
             fh.write("2026-11-17\n")
         rc, out = self.run_sh("2026-11-17", "all")
-        self.assertIn("RESUMED: Duke Blue Devils to win = open; 2 board games -- 1 won, 0 lost, 1 open", out)
+        self.assertIn("RESUMED: Duke Blue Devils to win = open; 10-leg: 1 won, 0 lost, 1 open; "
+                      "2 board games -- 1 won, 0 lost, 1 open", out)
 
     def test_same_day_state_kept(self):
         open(self.work + ".state.json", "w").close()
