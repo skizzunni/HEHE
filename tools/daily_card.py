@@ -44,6 +44,11 @@ def ten_leg_lines(D, day="today"):
             + (f" (only {T['n']} games priced so far; it fills to {ten_leg.N} at the 8 AM card)" if T["n"] < ten_leg.N else ""))
     from ladder_ticket import needs                        # the ladder ticket's plain-words wording
     out = [head]
+    Z = [z for z in X.get("sizes") or [] if z.get("days")]
+    if len(Z) > 1:                                         # the trade, as on the page's 10-leg box
+        out.append("  Other sizes, replayed: " + "; ".join(
+            f"{z['n']} legs cashed {z['cashed']}/{z['days']}" + (f" at {z['pays']:.2f}x" if z.get("pays") else "") for z in Z)
+            + " -- fewer legs win more often, pay less.")
     for i, g in enumerate(T["legs"], 1):
         out.append(f"  {i}. {g['label']} {g.get('price') or ''} -- {pc(g['p'])} ({str(g.get('league') or '').upper()}, "
                    f"{g.get('match') or ''}{', ' + g['tip'] if g.get('tip') else ''})")

@@ -79,6 +79,13 @@ class Card(unittest.TestCase):
              dict(name="B", p=0.7, imp=0.7)]
         self.assertEqual(daily_card.best_per_player(P), [dict(name="A", p=0.82, imp=0.85)])
 
+    def test_ten_leg_sizes_line(self):
+        D = dict(self.D, ten_leg={"sizes": [dict(n=6, days=13, cashed=12, pays=1.34), dict(n=10, days=13, cashed=11, pays=1.64)]})
+        out = daily_card.ten_leg_lines(D)
+        self.assertEqual(out[1], "  Other sizes, replayed: 6 legs cashed 12/13 at 1.34x; 10 legs cashed 11/13 at 1.64x"
+                                 " -- fewer legs win more often, pay less.")
+        self.assertFalse(any("Other sizes" in l for l in daily_card.ten_leg_lines(self.D)))
+
     def test_team_points_under_lean_and_even(self):
         D = {"markets": {"today": [{"lg": "NBA", "match": "X at Y", "m": [
             dict(g="Team total", l="Y over 110.5", p=0.46), dict(g="Team total", l="Y under 110.5", p=0.54),
