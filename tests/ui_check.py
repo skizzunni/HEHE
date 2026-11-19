@@ -240,6 +240,8 @@ PROBE = """<script>setTimeout(function(){
                alt2x: {n: 14, chance: 0.27, pays: 2.02, cashed: 8, days: 13}};
   out.tenLeg = tenLegHTML();
   D.ten_leg = tlSave;
+  out.tdAll = [tdEveryone({everyone: [{name: "A. Runner", p: 0.45, p2: 0.12, pfirst: 0.11, price: "-110"}]}),
+               tdEveryone({everyone: [{name: "Old", p: 0.4}]})];
   D.bright_pool = bpSave;
   var ssSave = D.spread_sides; D.spread_sides = [{league: "nhl", side: "getting", all: [277, 322, 82.6], halves: [[141, 164, 82.6], [136, 158, 82.5]]},
                                                  {league: "nfl", side: "getting", all: [400, 502, 82.2], halves: [[214, 260, 82.0], [186, 242, 82.4]]}];
@@ -619,6 +621,10 @@ def main():
     if not ("<b>Running ahead:</b> NHL overs at 70-95% across every saved FanDuel line have won 131 of 149 against 84% stated, ahead in both halves" in br[0]
             and "Running ahead" not in br[1]):
         fails.append("running-ahead note wrong: " + repr(br))
+    ta = new.get("tdAll") or ["", "x"]
+    if not ("Every player (1)" in ta[0] and "<td>A. Runner</td><td class=\"num\">45%</td><td class=\"num\">12%</td><td class=\"num\">11%</td>" in ta[0]
+            and "42 players scored 2+ against 35.6 expected" in ta[0] and ta[1] == ""):
+        fails.append("every-player TD table wrong: " + repr([x[:300] for x in ta]))
     tl = new.get("tenLeg") or ""
     if not ("cashed 12 of 14 days" in tl and "6 legs cashed 13 of 14" in tl
             and "<b>The same lines to 2x</b>" in tl and "14 legs today, 27% stated all win, pays 2.02x; replayed, cashed 8 of 13 days" in tl):
