@@ -55,12 +55,12 @@ Yesterday (2026-11-17): board 31-11, sweep broken by unl Denmark or draw at 63%;
 - LOST nhl Vegas Golden Knights at 54% (-130), Dallas Stars 4 - Vegas Golden Knights 3: margin 1 · the book had my side favoured too · called at 54% · coin flip · close game; picks like it: 83 of 148 (56% vs 54% stated)
 Locks 2/11 won, 8 open; Best play top 2 (58%) open; lost: Under 235.5 points (Philadelphia 76ers at Orlando Magic) Philadelphia 76ers 121 - Orlando Magic 116.
 Safe Locks 3/11 won, 8 open; Winners parlay top 3 (80%) open; Best play top 9 (51%) open.
-Lottery 100: lost (1/7 legs won, killed by Under 231.5 points)
+Lottery 100: lost (1/7 legs won, killed by Under 236.5 points, Under 231.5 points)
 Lottery 100: lost (1/6 legs won, killed by Under 215.5 points)
-Lottery 10k: lost (2/11 legs won, killed by Under 231.5 points, Under 215.5 points)
-Lottery 10k+25: lost (2/11 legs won, killed by Under 231.5 points, Under 215.5 points)
-Lottery 10k+50: lost (2/11 legs won, killed by Under 231.5 points, Under 215.5 points)
-Lottery 10k+100: lost (2/11 legs won, killed by Under 231.5 points, Under 215.5 points)
+Lottery 10k: lost (2/11 legs won, killed by Under 236.5 points, Under 231.5 points, Under 215.5 points)
+Lottery 10k+25: lost (2/11 legs won, killed by Under 236.5 points, Under 231.5 points, Under 215.5 points)
+Lottery 10k+50: lost (2/11 legs won, killed by Under 236.5 points, Under 231.5 points, Under 215.5 points)
+Lottery 10k+100: lost (2/11 legs won, killed by Under 236.5 points, Under 231.5 points, Under 215.5 points)
 Ladder-consistency props (all time): 2736/3296 won (83.0%) vs 86.4% fair, 87.6% price, 83.6% stated on the board (heavy props capped).
 Props 43/54 vs 84.4% claimed.
 
