@@ -342,6 +342,23 @@
    "tip": "10:00 AM",
    "venue": "FanDuel"
   },
+  "esp:401882799|away|FanDuel": {
+   "dec": 4.3,
+   "ev": 0.0167,
+   "fair": 0.2364,
+   "fair_source": "DraftKings (Shin)",
+   "id": "esp:401882799",
+   "kind": "single",
+   "league": "esp",
+   "match": "VAL @ RAY",
+   "price": "+330",
+   "seen": "2026-11-20T20:14:16+00:00",
+   "side": "away",
+   "start": "2026-11-21T15:15Z",
+   "team": "Valencia",
+   "tip": "10:15 AM",
+   "venue": "FanDuel"
+  },
   "esp:401882815|away|FanDuel": {
    "dec": 4.7,
    "ev": 0.1002,
@@ -2184,6 +2201,23 @@
    "match": "OKC @ LAC",
    "profit": 0.0028,
    "seen": "2026-11-13T00:02:05+00:00"
+  },
+  "nba:401909305|away|FanDuel": {
+   "dec": 3.35,
+   "ev": 0.0286,
+   "fair": 0.3071,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909305",
+   "kind": "value",
+   "league": "nba",
+   "match": "CHA @ ATL",
+   "price": "+235",
+   "seen": "2026-11-20T20:14:16+00:00",
+   "side": "away",
+   "start": "2026-11-21T00:00Z",
+   "team": "Charlotte Hornets",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
   },
   "nba:401909310|away|FanDuel": {
    "dec": 5.9,
@@ -11976,6 +12010,23 @@
    "tip": "3:00 PM",
    "venue": "Kalshi"
   },
+  "ncaaf:401856750|away|FanDuel": {
+   "dec": 21.0,
+   "ev": 0.0227,
+   "fair": 0.0487,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401856750",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "TNTC @ MSST",
+   "price": "+2000",
+   "seen": "2026-11-20T20:14:16+00:00",
+   "side": "away",
+   "start": "2026-11-21T18:00Z",
+   "team": "Tennessee Tech Golden Eagles",
+   "tip": "1:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401856750|{\"line\": -35.5, \"t\": \"spread\", \"team\": \"Mississippi State Bulldogs\"}|Kalshi": {
    "dec": 2.2361,
    "dk": "-110",
@@ -21020,6 +21071,26 @@
    "seen": "2026-11-13T12:40:36+00:00",
    "status": "lost",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909305:away": {
+   "ev": 0.0288,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0286,
+     "fair": 0.3071,
+     "id": "nba:401909305",
+     "price": "+235",
+     "side": "away",
+     "spec": null,
+     "team": "Charlotte Hornets"
+    }
+   ],
+   "payout": 3.35,
+   "prob": 0.3071,
+   "seen": "2026-11-20T20:14:16+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909310:away": {
