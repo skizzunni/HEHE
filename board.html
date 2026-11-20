@@ -1928,6 +1928,7 @@ function ladderHTML(){
           + (L.live ? paceNote(L) + soFar(L) : '')
           + ((L.status === 'open' || !L.status) ? outsNote(L) : '')
           + (L.kind_rec && (L.status === 'open' || !L.status) ? '<div class="sbn">Locks like this have won ' + L.kind_rec.won + ' of ' + L.kind_rec.n
+             + (L.kind_rec.n >= 10 ? ' (' + Math.round(100 * L.kind_rec.won / L.kind_rec.n) + '%, this leg ' + Math.round(100 * L.p) + '%)' : '')
              + (L.prop_rec ? '; every ' + esc(String(L.league || '').toUpperCase()) + ' ' + esc(L.market || '') + ' prop at a similar chance: '
                 + L.prop_rec.won + ' of ' + L.prop_rec.n + ' (' + Math.round(100 * L.prop_rec.won / L.prop_rec.n) + '% vs ' + L.prop_rec.said + '% stated)' : '') + '</div>' : '')
           + (L.status === 'open' || !L.status ? watchNote(L) : '')
