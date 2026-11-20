@@ -1561,6 +1561,16 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Checked: a 0.2% day for soccer (2026-11-20).** By mid-afternoon on Friday
+Nov 20 the board was 6-9 with all nine losses soccer favourites (3.4
+expected; Kashiwa, Kobe, East Bengal, Independiente del Valle, Bielefeld,
+Heidenheim, Bayern draw, Nacional, ...). Looked for a cause, not a cure:
+second-tier leagues' win-or-draw picks 27/34 then 24/36 vs 24.9 / 26.1
+(z +0.8 / -0.8), other leagues ahead both halves; soccer by weekday, Fridays
+43/56 then 40/58 (z +0.8 / -0.9), no weekday short in both halves. Nothing
+systematic found, nothing cut; the review prints the weekday split daily
+(soccer_weekday_line).
+
 **Checked: board picks by stated chance (2026-11-20).** After an 84% pick
 (Kashiwa Reysol or draw) lost 0-1: all graded board picks by band and date
 half -- 50-60% z +1.1 / +1.1, 60-70% +1.9 / -0.4, 70-80% 246/316 then

@@ -974,6 +974,44 @@ def board_band_line(ledger=None, bands=BOARD_BANDS, min_n=20):
     return ("Board picks by stated chance, by half: " + "; ".join(parts) + ".") if parts else None
 
 
+NOT_SOCCER = {"nba", "nhl", "nfl", "ncaaf", "ncaab", "mlb", "wnba", "atp", "wta", "ufc"}
+
+
+def soccer_weekday_line(ledger=None, min_n=20):
+    """Soccer board picks by weekday, split at the median date, won vs stated
+    with z, weekdays short in both halves named. Information only.
+    2026-11-20 (nine soccer losses by mid-afternoon on a Friday, 0.2% day):
+    Fridays 43/56 then 40/58 vs 40.5 / 43.0 (z +0.8 / -0.9) -- no weekday
+    short in both halves; Sundays ahead (z +2.1 / +1.8)."""
+    import datetime as _dt
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    R = sorted((e for e in ledger.values() if isinstance(e, dict) and e.get("status") in ("won", "lost") and e.get("date")
+                and not e.get("record_excluded") and e.get("conf") is not None and e.get("league") not in NOT_SOCCER),
+               key=lambda e: e["date"])
+    if len(R) < 40:
+        return None
+    mid = R[len(R) // 2]["date"]
+
+    def rec(X):
+        w = sum(e["status"] == "won" for e in X)
+        p = sum(e["conf"] for e in X) / 100
+        v = sum(e["conf"] / 100 * (1 - e["conf"] / 100) for e in X) or 1
+        return w, len(X), (w - p) / math.sqrt(v)
+    parts, short = [], []
+    for wd, name in enumerate(("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")):
+        day = [e for e in R if _dt.date.fromisoformat(e["date"]).weekday() == wd]
+        A, B = [e for e in day if e["date"] < mid], [e for e in day if e["date"] >= mid]
+        if len(day) < min_n or not A or not B:
+            continue
+        a, b = rec(A), rec(B)
+        parts.append(f"{name} {a[0]}/{a[1]} (z {a[2]:+.1f}) then {b[0]}/{b[1]} (z {b[2]:+.1f})")
+        if a[2] < 0 and b[2] < 0:
+            short.append(name)
+    return ("Soccer board picks by weekday, by half: " + "; ".join(parts) + " -- "
+            + (f"short in both halves: {', '.join(short)}." if short else "none short in both halves.")) if parts else None
+
+
 def board_league_line(ledger=None, min_n=40, top=3):
     """Graded board picks by league, split at the median date: the leagues
     weakest in their worse half, won vs stated with z. Information only.
@@ -2355,6 +2393,8 @@ def words(r, fit):
         out.append(r["board_leagues"])
     if r.get("board_bands"):
         out.append(r["board_bands"])
+    if r.get("soccer_weekdays"):
+        out.append(r["soccer_weekdays"])
     if r.get("ladder_types"):
         out.append(r["ladder_types"])
     if r.get("eg_bands"):
@@ -2531,6 +2571,7 @@ def _main():
     log[today.isoformat()]["dc_bands"] = dc_band_line(ledger)
     log[today.isoformat()]["board_leagues"] = board_league_line(ledger)
     log[today.isoformat()]["board_bands"] = board_band_line(ledger)
+    log[today.isoformat()]["soccer_weekdays"] = soccer_weekday_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
     log[today.isoformat()]["value_leagues"] = value_league_line()
     log[today.isoformat()]["td_calibration"] = td_calibration_line()

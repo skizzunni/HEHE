@@ -58,6 +58,18 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class SoccerWeekdayLine(unittest.TestCase):
+    def test_weekdays(self):
+        import daily_review
+        led = {f"k{i}": dict(league="epl", status="lost" if i % 14 in (0, 7) else "won", conf=70,
+                             date=f"2026-11-{2 + i % 14:02d}") for i in range(140)}      # Nov 2 and 9 are Mondays
+        led["nba"] = dict(league="nba", status="lost", conf=90, date="2026-11-02")
+        out = daily_review.soccer_weekday_line(led)
+        self.assertTrue(out.startswith("Soccer board picks by weekday, by half: Mon "), out)
+        self.assertIn("short in both halves: Mon", out)
+        self.assertIsNone(daily_review.soccer_weekday_line({}))
+
+
 class BoardBandLine(unittest.TestCase):
     def test_bands(self):
         import daily_review
