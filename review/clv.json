@@ -1,20 +1,20 @@
 {
- "beats_close": true,
+ "beats_close": false,
  "enough": true,
  "last": {
   "beat_close_pct": 53.3,
-  "brier_close": 0.1994,
-  "brier_published": 0.199,
+  "brier_close": 0.2009,
+  "brier_published": 0.2014,
   "dates": [
    "2026-11-13",
    "2026-11-20"
   ],
-  "logloss_close": 0.58,
-  "logloss_published": 0.5781,
-  "mean_clv_pts": 0.27,
+  "logloss_close": 0.5837,
+  "logloss_published": 0.5847,
+  "mean_clv_pts": 0.21,
   "n": 300
  },
- "market_is_model": false,
+ "market_is_model": true,
  "picks": {
   "afc:401912604": {
    "call": false,
@@ -5632,6 +5632,15 @@
    "league": "esp2",
    "published": 0.674,
    "record_excluded": "unpriced_or_unverifiable",
+   "won": 0
+  },
+  "esp:401882805": {
+   "call": false,
+   "close": 0.671,
+   "clv": -18.9,
+   "day": "2026-11-20",
+   "league": "esp",
+   "published": 0.86,
    "won": 0
   },
   "esp:401882807": {
@@ -31734,5 +31743,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-20T21:57+00:00"
+ "updated": "2026-11-20T22:02+00:00"
 }
