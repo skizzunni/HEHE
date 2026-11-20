@@ -294,6 +294,10 @@ def alt_snapshot(day, led, pool=None):
         return {"ALT2X": "lost | " + "; ".join(lost)}
     if all(g["_st"] in ("won", "void") for g in T["legs"]):
         return {"ALT2X": f"won | all {T['n']} legs, {T['pays']:.2f}x"}
+    left = [g for g in T["legs"] if g["_st"] == "open"]
+    if 0 < len(left) <= 2 and len(left) < T["n"]:   # near the end: name what it waits on (one line, at most twice)
+        return {"ALT2X": f"open | {T['n'] - len(left)} of {T['n']} legs won, waiting on "
+                         + "; ".join(f"{g['label']} ({g.get('match') or ''})" for g in left)}
     return {"ALT2X": f"open | {T['n']} legs to {T['pays']:.2f}x"}
 
 
