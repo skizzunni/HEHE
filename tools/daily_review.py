@@ -577,8 +577,7 @@ def ladder_pool_line(report=None, rows_fn=None):
     saved pool line, by half -- a far bigger sample than the Locks alone
     (2026-11-14: NBA overs on Locks 73% then 90% vs 83%; every saved NBA over
     82% then 88% vs 82%, on par). Information only."""
-    import ladder
-    R = report if report is not None else ladder.report()
+    R = report if report is not None else _report()
     legs = ((R or {}).get("today") or {}).get("legs") or []
     rows_fn = rows_fn or pool_rows
     parts, done = [], set()
@@ -667,8 +666,7 @@ def ladder_type_line(report=None):
     ticket's ladder_ticket.type_line), so the hourly review shows where
     tickets break, not only the morning message."""
     if report is None:
-        import ladder
-        report = ladder.report()
+        report = _report()                   # the run's one ladder.report()
     from ladder_ticket import type_line
     return type_line(report)
 
