@@ -3246,6 +3246,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV21DELNMSU-DEL"
   },
+  "KXNCAAFGAME-26NOV21ECUARMY-ARMY|YES": {
+   "ask": 0.69,
+   "bid": 0.67,
+   "cost": 0.6739,
+   "edge": 0.0129,
+   "fair": 0.6826,
+   "id": "ncaaf:401862831",
+   "label": "Army Black Knights",
+   "league": "ncaaf",
+   "match": "ECU @ ARMY",
+   "posted": "2026-11-20T13:23:01+00:00",
+   "queue": 3167.68,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Army Black Knights"
+   },
+   "start": "2026-11-21T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV21ECUARMY-ARMY"
+  },
   "KXNCAAFGAME-26NOV21FIUKENN-KENN|YES": {
    "ask": 0.59,
    "bid": 0.58,
@@ -16749,6 +16770,48 @@
    "start": "2026-11-21T20:30Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV21INDWASH-45"
+  },
+  "KXNCAAFTOTAL-26NOV21LSUTENN-46|YES": {
+   "ask": 0.52,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401856754",
+   "label": "over 45.5",
+   "league": "ncaaf",
+   "match": "LSU @ TENN",
+   "posted": "2026-11-20T13:23:01+00:00",
+   "queue": 22860.0,
+   "side": "YES",
+   "spec": {
+    "line": 45.5,
+    "t": "over"
+   },
+   "start": "2026-11-21T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV21LSUTENN-46"
+  },
+  "KXNCAAFTOTAL-26NOV21NCSTFSU-57|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401858304",
+   "label": "under 56.5",
+   "league": "ncaaf",
+   "match": "NCSU @ FSU",
+   "posted": "2026-11-20T13:23:01+00:00",
+   "queue": 330.0,
+   "side": "NO",
+   "spec": {
+    "line": 56.5,
+    "t": "under"
+   },
+   "start": "2026-11-21T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV21NCSTFSU-57"
   },
   "KXNCAAFTOTAL-26NOV21RUTGPSU-50|NO": {
    "ask": 0.52,
