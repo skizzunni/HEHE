@@ -648,7 +648,18 @@ def ladder_alt_line(ladder_days=None, alt_days=None):
     only_lad = sum(ladder_days[d] and not alt_days[d] for d in days)
     return (f"Ladder vs every-game ticket to 2x, same {len(days)} days: ladder {rec(days[:h], ladder_days)} then "
             f"{rec(days[h:], ladder_days)}; every-game {rec(days[:h], alt_days)} then {rec(days[h:], alt_days)}; "
-            f"only the every-game cashed on {only_alt} days, only the ladder on {only_lad}.")
+            f"only the every-game cashed on {only_alt} days, only the ladder on {only_lad}"
+            + (f" -- a fair coin splits {max(only_alt, only_lad)}-{min(only_alt, only_lad)} or wider "
+               f"{round(100 * sign_p(only_alt, only_lad))}% of the time" if only_alt + only_lad else "") + ".")
+
+
+def sign_p(a, b):
+    """Two-sided sign-test chance that a fair coin splits a+b days at least
+    as unevenly as a-b: how much a head-to-head record means."""
+    n, k = a + b, max(a, b)
+    if not n:
+        return 1.0
+    return min(1.0, 2 * sum(math.comb(n, i) for i in range(k, n + 1)) / 2 ** n)
 
 
 def ladder_type_line(report=None):

@@ -43,6 +43,12 @@ class ToTarget(unittest.TestCase):
         self.assertTrue(out.startswith("Ladder vs every-game ticket to 2x, same 8 days: ladder "), out)
         self.assertIsNone(daily_review.ladder_alt_line({"2026-11-05": True}, {"2026-11-05": True}))
 
+    def test_sign_p(self):
+        import daily_review
+        self.assertAlmostEqual(daily_review.sign_p(8, 3), 0.2266, places=3)
+        self.assertEqual(daily_review.sign_p(0, 0), 1.0)
+        self.assertEqual(daily_review.sign_p(2, 2), 1.0)
+
 
 class Sizes(unittest.TestCase):
     def test_sizes_skips_empty(self):
