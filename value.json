@@ -19587,6 +19587,69 @@
    "tip": "9:40 PM",
    "venue": "Kalshi"
   },
+  "nhl:401892756|home|FanDuel": {
+   "dec": 1.9259,
+   "ev": 0.1273,
+   "fair": 0.5854,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892756",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "BUF @ FLA",
+   "price": "-108",
+   "seen": "2026-11-20T16:10:04+00:00",
+   "side": "home",
+   "start": "2026-11-21T23:00Z",
+   "team": "Florida Panthers",
+   "tip": "6:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892756|sure": {
+   "id": "nhl:401892756",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "+130",
+     "stake_share": 0.4557,
+     "team": "Buffalo Sabres",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-108",
+     "stake_share": 0.5443,
+     "team": "Florida Panthers",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "BUF @ FLA",
+   "profit": 0.0482,
+   "seen": "2026-11-20T16:10:04+00:00"
+  },
+  "nhl:401892756|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Florida Panthers\"}|FanDuel": {
+   "dec": 3.35,
+   "dk": "+160",
+   "ev": 0.2179,
+   "fair": 0.3635,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892756",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "spread",
+   "match": "BUF @ FLA",
+   "price": "+235",
+   "seen": "2026-11-20T16:10:04+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Florida Panthers\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Florida Panthers"
+   },
+   "start": "2026-11-21T23:00Z",
+   "team": "Florida Panthers -1.5",
+   "tip": "6:00 PM",
+   "venue": "FanDuel"
+  },
   "nor:401843366|away|FanDuel": {
    "dec": 3.0,
    "ev": 0.0126,
