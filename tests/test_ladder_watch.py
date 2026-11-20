@@ -310,7 +310,7 @@ class TenLegWatch(unittest.TestCase):
                    match=f"T{i} @ U{i}", status="won" if i == 0 else "open", score="U0 110 - T0 101" if i == 0 else None)
               for i in range(10)]
         with m.patch.object(locks, "every_game", lambda legs, led=None: [dict(g) for g in eg]):
-            snap = w.ten_snapshot("2026-11-18", {}, pool={"legs": []})
+            snap = w.ten_snapshot("2026-11-18", {}, pool={"legs": []}, final_fn=lambda lg, eid, e: None)
         self.assertEqual(len(snap), 10)
         self.assertEqual(snap["TEN Over 200.5 points (T0 @ U0)"], "won | U0 110 - T0 101")
         self.assertEqual(snap["TEN Over 201.5 points (T1 @ U1)"], "open")
@@ -329,6 +329,21 @@ class FinalNote(unittest.TestCase):
         self.assertIsNone(w.final_note(L, lambda lg, eid, e: 1 / 0))           # a feed error is not a result
         snap = w.snapshot({"today": {"legs": [L]}}, final_fn=lambda lg, eid, e: res)
         self.assertEqual(snap["Washington Capitals +1.5"], "open | final, not graded yet (Washington Capitals 3, Buffalo Sabres 6)")
+
+
+class TenFinalNote(unittest.TestCase):
+    def test_open_ten_leg_final_before_graded(self):
+        import unittest.mock as m
+        import locks
+        eg = [dict(gid=f"nhl:{i}", label=f"Under {9 + i}.5 goals", price="-2000", p=0.92, league="nhl", kind="game",
+                   match=f"T{i} @ U{i}", status="open") for i in range(10)]
+        res = {"live": False, "winner": "U0", "scores": {"T0": 2, "U0": 3}}
+        with m.patch.object(locks, "every_game", lambda legs, led=None: [dict(g) for g in eg]):
+            snap = w.ten_snapshot("2026-11-19", {}, pool={"legs": []},
+                                  final_fn=lambda lg, eid, e: res if eid == "0" else None)
+        self.assertEqual(snap["TEN Under 9.5 goals (T0 @ U0)"], "open | final, not graded yet (T0 2, U0 3)")
+        self.assertEqual(snap["TEN Under 10.5 goals (T1 @ U1)"], "open")
+        self.assertEqual(w.ten_record(snap), "10-leg: 0 won, 0 lost, 10 open")    # the note does not count as graded
 
 
 class AltSnapshot(unittest.TestCase):

@@ -96,7 +96,7 @@ def final_note(L, final_fn=None):
     ledger has not graded yet: "final, not graded yet (A 3, B 6)", else None.
     2026-11-19: both ladder NHL games were final for an hour while the
     watcher still said open. Props are left to the grader (box scores)."""
-    if (L.get("status") or "open") != "open" or L.get("kind") == "prop" or not L.get("gid"):
+    if (L.get("status") or "open") != "open" or L.get("kind") == "prop" or ":" not in str(L.get("gid") or ""):
         return None
     if final_fn is None:
         import ledger
@@ -250,7 +250,7 @@ def _same(a, b):
     return k(a) == k(b)
 
 
-def ten_snapshot(day, led, pool=None):
+def ten_snapshot(day, led, pool=None, final_fn=None):
     """{"TEN <label> (<match>)": "open|won|lost|void[ | score]"} for the day's
     10-leg (ten_leg.py): picked from the frozen 8 AM pool exactly as at 8 AM,
     graded from the ledger like the Every game list."""
@@ -266,8 +266,9 @@ def ten_snapshot(day, led, pool=None):
     T = ten_leg.build(eg)
     out = {}
     for g in (T or {}).get("legs") or []:
+        note = final_note(dict(g, status=g["_st"], date=day), final_fn) if g["_st"] == "open" else None
         out[f"TEN {g['label']} ({g.get('match') or ''})"] = g["_st"] + (
-            f" | {g['score']}" if g.get("score") and g["_st"] != "open" else "")
+            f" | {g['score']}" if g.get("score") and g["_st"] != "open" else f" | {note}" if note else "")
     return out
 
 
