@@ -58,6 +58,16 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class ValueLeagueLine(unittest.TestCase):
+    def test_by_league_and_half(self):
+        import daily_review
+        finds = {f"v{i}": dict(status="won" if i % 2 else "lost", fair=0.5, start=f"2026-11-{1 + i // 4:02d}",
+                               league="nba" if i % 3 else "nhl") for i in range(60)}
+        out = daily_review.value_league_line(finds)
+        self.assertTrue(out.startswith("Value bets by league, by half: all 15/30 (z +0.0) then 15/30 (z +0.0); NBA "), out)
+        self.assertIsNone(daily_review.value_league_line({}))
+
+
 class DcBandLine(unittest.TestCase):
     def test_bands(self):
         import daily_review

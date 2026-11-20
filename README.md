@@ -1561,6 +1561,15 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Checked: where the value bets fall short (2026-11-20).** The review has
+flagged value bets TRAILING for days (39.6% hit vs 44.6% fair on 555). By
+start-date half: 118/277 then 102/278 vs 123.2 / 124.5 expected (z -0.7 /
+-3.0) -- on par early, short late. By league: NBA 58/126 then 66/166 (z
+-0.6 / -2.1), NCAAF z -0.7 / -0.1, NHL +1.0 / -1.9; by market, moneylines
+z -0.1 / -2.3, spreads -0.4 / -1.3, unders -1.9 / -1.1. No league or market
+is short past the bar in both halves, so nothing is cut; the later half's
+slide is the thing to watch (value_league_line, printed daily).
+
 **Checked: win-or-draw picks by stated chance (2026-11-20).** Four win-or-draw
 favourites lost on Nov 19 (Maldonado, Bragantino, Sao Paulo, Orlando), each
 by a goal or two. All graded win-or-draw board picks by band and date half:

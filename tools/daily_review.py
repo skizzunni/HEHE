@@ -715,6 +715,38 @@ def td_calibration_line(book=None):
 VALUE_BANDS = ((0, 0.3), (0.3, 0.45), (0.45, 0.6), (0.6, 1.01))
 
 
+def value_league_line(finds=None, min_n=30):
+    """Graded value bets by league and start-date half, won vs fair with z,
+    the leagues short in both halves named. Information only. 2026-11-20:
+    the value-bet shortfall is the later half, not one league -- all 555 at
+    118/277 then 102/278 vs 123.2 / 124.5 (z -0.7 / -3.0); NBA 58/126 then
+    66/166 (z -0.6 / -2.1); no league short in both halves past the bar."""
+    import math
+    if finds is None:
+        finds = (load("value.json", {}) or {}).get("finds") or {}
+    R = sorted((e for e in finds.values() if isinstance(e, dict) and e.get("status") in ("won", "lost")
+                and e.get("fair") and e.get("start") and e.get("kind", "value") == "value"), key=lambda e: e["start"])
+    if len(R) < 40:
+        return None
+    h = len(R) // 2
+
+    def z(S):
+        w = sum(e["status"] == "won" for e in S)
+        p = sum(e["fair"] for e in S)
+        v = sum(e["fair"] * (1 - e["fair"]) for e in S) or 1
+        return w, (w - p) / math.sqrt(v)
+    parts = []
+    for lg in sorted({e.get("league") for e in R}, key=lambda k: -sum(e.get("league") == k for e in R)):
+        A, B = [e for e in R[:h] if e.get("league") == lg], [e for e in R[h:] if e.get("league") == lg]
+        if len(A) + len(B) < min_n or not A or not B:
+            continue
+        (wa, za), (wb, zb) = z(A), z(B)
+        parts.append(f"{str(lg).upper()} {wa}/{len(A)} (z {za:+.1f}) then {wb}/{len(B)} (z {zb:+.1f})")
+    (wa, za), (wb, zb) = z(R[:h]), z(R[h:])
+    return (f"Value bets by league, by half: all {wa}/{h} (z {za:+.1f}) then {wb}/{len(R) - h} (z {zb:+.1f})"
+            + ("; " + "; ".join(parts) if parts else "") + ".")
+
+
 def value_band_line(finds=None):
     """Graded value bets (value.json, kind value) by fair-chance band and
     start-date half, won vs the fair chance, with z. Information only.
@@ -2257,6 +2289,8 @@ def words(r, fit):
         out.append(r["ticket_sizes"])
     if r.get("value_bands"):
         out.append(r["value_bands"])
+    if r.get("value_leagues"):
+        out.append(r["value_leagues"])
     if r.get("td_calibration"):
         out.append(r["td_calibration"])
     if r.get("home_away"):
@@ -2422,6 +2456,7 @@ def _main():
     log[today.isoformat()]["dc_moves"] = dc_move_line(ledger)
     log[today.isoformat()]["dc_bands"] = dc_band_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
+    log[today.isoformat()]["value_leagues"] = value_league_line()
     log[today.isoformat()]["td_calibration"] = td_calibration_line()
     try:
         log[today.isoformat()]["ladder_alt"] = ladder_alt_line()
