@@ -69,12 +69,30 @@ def snapshot(teams, now=None, root=None):
     return merged
 
 
+_SNAPS = {}
+
+
+def _snapshots(path):
+    """A day file's snapshots, parsed once per file version: the injury study
+    asks for each game's report, and re-reading the day's file for every
+    game took about 5 s of the review's 35 (262 parses of 14 files)."""
+    try:
+        key = (path, os.path.getmtime(path))
+    except OSError:
+        return None
+    if key not in _SNAPS:
+        try:
+            with open(path) as fh:
+                _SNAPS[key] = json.load(fh)["snapshots"]
+        except (OSError, ValueError, KeyError):
+            _SNAPS[key] = None
+    return _SNAPS[key]
+
+
 def before(day, start_iso, league, root=None):
     """The report as it stood at a game's start (the last snapshot before it)."""
-    try:
-        with open(os.path.join(root or DIR, day + ".json")) as fh:
-            snaps = json.load(fh)["snapshots"]
-    except (OSError, ValueError, KeyError):
+    snaps = _snapshots(os.path.join(root or DIR, day + ".json"))
+    if snaps is None:
         return {}
     start = dt.datetime.fromisoformat(start_iso.replace("Z", "+00:00"))
     ok = [s for s in snaps if dt.datetime.fromisoformat(s["t"]) <= start]

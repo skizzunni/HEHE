@@ -32,6 +32,19 @@ class Injuries(unittest.TestCase):
                              {"LA Clippers": [["Brandon Ingram", "Out"]]})
             self.assertEqual(len(injuries.before("2026-11-04", "2026-11-05T01:00Z", "nba", d)["LA Clippers"]), 2)
 
+    def test_before_reads_a_rewritten_file(self):
+        with tempfile.TemporaryDirectory() as d:
+            t0 = dt.datetime(2026, 11, 4, 15, tzinfo=dt.timezone.utc)
+            injuries.snapshot({"nba": injuries.parse(DOC)}, t0, d)
+            self.assertEqual(len(injuries.before("2026-11-04", "2026-11-05T01:00Z", "nba", d)["LA Clippers"]), 1)
+            p = os.path.join(d, "2026-11-04.json")
+            st = os.stat(p)
+            later = {"nba": {"LA Clippers": [["Brandon Ingram", "Out"], ["Bradley Beal", "Out"]]}}
+            injuries.snapshot(later, t0 + dt.timedelta(hours=5), d)
+            os.utime(p, ns=(st.st_atime_ns, st.st_mtime_ns + 10 ** 9))      # a new version, even on a coarse clock
+            self.assertEqual(len(injuries.before("2026-11-04", "2026-11-05T01:00Z", "nba", d)["LA Clippers"]), 2)
+            self.assertEqual(injuries.before("2026-11-09", "2026-11-09T17:00Z", "nba", d), {})   # no file
+
     def test_note_by_team(self):
         n = injuries.note({"nba": injuries.parse(DOC)}, "nba", "LA Clippers", "Miami Heat")
         self.assertEqual(n, dict(home=["Brandon Ingram (Out)"], away=[]))
