@@ -188,3 +188,19 @@ class B2BRecord(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class AuditStartDates(unittest.TestCase):
+    def test_value_bets_get_halves_from_start(self):
+        import os
+        import sys
+        import unittest.mock as m
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        finds = {f"v{i}": dict(kind="value", status="won" if i % 3 == 0 else "lost", fair=0.5,
+                               start=f"2026-11-{1 + i:02d}T19:00:00Z") for i in range(20)}
+        with m.patch.object(daily_review.json, "load", side_effect=lambda fh: {"finds": finds}):
+            out = daily_review.audit([], {}, {})
+        v = [a for a in out if a["name"] == "value bets"][0]
+        self.assertEqual(len(v["halves"]), 2)
+        self.assertEqual(sum(h[1] for h in v["halves"]), 20)

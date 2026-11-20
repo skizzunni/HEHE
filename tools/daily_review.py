@@ -1880,13 +1880,16 @@ def audit(graded, props, locks):
         flag = " <- trailing" if hit < said - 2 * se else ""
         # both date halves, so a short slump reads apart from a split that is
         # short throughout
-        ds = sorted({r.get("date") for r in rs if r.get("date")})
+        # value bets carry `start` (an ISO time), not `date`: read either, or
+        # their TRAILING line never showed which half the shortfall is in
+        day = lambda r: r.get("date") or str(r.get("start") or "")[:10] or None
+        ds = sorted({day(r) for r in rs if day(r)})
         halves = None
         if len(ds) >= 2:
             mid = ds[len(ds) // 2]
             halves = []
             for h in (False, True):
-                X = [r for r in rs if r.get("date") and (r["date"] >= mid) == h]
+                X = [r for r in rs if day(r) and (day(r) >= mid) == h]
                 if X:
                     halves.append([sum(won_of(r) for r in X), len(X), round(100 * sum(p_of(r) for r in X) / len(X), 1)])
         out.append(dict(name=name, n=n, hit=round(100 * hit, 1), said=round(100 * said, 1),
