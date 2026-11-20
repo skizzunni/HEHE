@@ -629,7 +629,8 @@ def main():
         fails.append("every-player TD table wrong: " + repr([x[:300] for x in ta]))
     tl = new.get("tenLeg") or ""
     if not ("cashed 12 of 14 days" in tl and "6 legs cashed 13 of 14" in tl
-            and "<b>The same lines to 2x</b>" in tl and "14 legs today, 27% stated all win, pays 2.02x; replayed, cashed 8 of 13 days" in tl
+            and "<b>The same lines to 2x</b>" in tl and "14 legs today, 27% stated all win, pays 2.02x; replayed, cashed 8 of the last 13 days" in tl
+            and "Replayed on the last 14 saved 8 AM cards (older ones drop off)" in tl
             and "on the 14 days both were graded this cashed 9, the ladder 4" in tl):
         fails.append("10-leg box wrong: " + repr(tl[:400]))
     if "have won 131 of 149 lines (40 games) against 84% stated" not in (new.get("brightG") or ""):
