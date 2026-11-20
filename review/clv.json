@@ -1,20 +1,20 @@
 {
- "beats_close": true,
+ "beats_close": false,
  "enough": true,
  "last": {
   "beat_close_pct": 53.0,
-  "brier_close": 0.1886,
-  "brier_published": 0.1885,
+  "brier_close": 0.187,
+  "brier_published": 0.1871,
   "dates": [
    "2026-11-13",
-   "2026-11-19"
+   "2026-11-20"
   ],
-  "logloss_close": 0.553,
-  "logloss_published": 0.552,
-  "mean_clv_pts": 0.31,
+  "logloss_close": 0.5493,
+  "logloss_published": 0.549,
+  "mean_clv_pts": 0.3,
   "n": 300
  },
- "market_is_model": false,
+ "market_is_model": true,
  "picks": {
   "afc:401912604": {
    "call": false,
@@ -747,6 +747,15 @@
    "day": "2026-11-06",
    "league": "arg",
    "published": 0.77,
+   "won": 1
+  },
+  "aus:401892138": {
+   "call": false,
+   "close": 0.8109,
+   "clv": 2.09,
+   "day": "2026-11-20",
+   "league": "aus",
+   "published": 0.79,
    "won": 1
   },
   "aus:401892139": {
@@ -31599,5 +31608,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-20T10:49+00:00"
+ "updated": "2026-11-20T10:53+00:00"
 }
