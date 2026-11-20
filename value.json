@@ -13536,6 +13536,23 @@
    "tip": "10:00 PM",
    "venue": "Kalshi"
   },
+  "ncaaf:401864542|home|FanDuel": {
+   "dec": 4.1,
+   "ev": 0.0174,
+   "fair": 0.2481,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401864542",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "UNM @ WYO",
+   "price": "+310",
+   "seen": "2026-11-20T14:05:16+00:00",
+   "side": "home",
+   "start": "2026-11-21T02:00Z",
+   "team": "Wyoming Cowboys",
+   "tip": "9:00 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401864542|home|Kalshi": {
    "dec": 3.7994,
    "ev": 0.0129,
@@ -14170,6 +14187,23 @@
    "status": "won",
    "team": "over 48.5",
    "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
+  "ncaaf:401871078|away|Kalshi": {
+   "dec": 2.2878,
+   "ev": 0.0213,
+   "fair": 0.4464,
+   "fair_source": "DraftKings (Shin)",
+   "id": "ncaaf:401871078",
+   "kind": "single",
+   "league": "ncaaf",
+   "match": "FIU @ KENN",
+   "price": "+129",
+   "seen": "2026-11-20T14:05:16+00:00",
+   "side": "away",
+   "start": "2026-11-21T20:00Z",
+   "team": "Florida International Panthers",
+   "tip": "3:00 PM",
    "venue": "Kalshi"
   },
   "ncaaf:401871093|away|FanDuel": {
@@ -22827,6 +22861,26 @@
    "prob": 0.1277,
    "seen": "2026-11-14T15:06:51+00:00",
    "status": "won",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401864542:home": {
+   "ev": 0.0172,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0174,
+     "fair": 0.2481,
+     "id": "ncaaf:401864542",
+     "price": "+310",
+     "side": "home",
+     "spec": null,
+     "team": "Wyoming Cowboys"
+    }
+   ],
+   "payout": 4.1,
+   "prob": 0.2481,
+   "seen": "2026-11-20T14:05:16+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },

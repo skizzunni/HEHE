@@ -3519,6 +3519,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV21PITTLOU-LOU"
   },
+  "KXNCAAFGAME-26NOV21RUTGPSU-PSU|YES": {
+   "ask": 0.96,
+   "bid": 0.95,
+   "cost": 0.9509,
+   "edge": 0.0006,
+   "fair": 0.9515,
+   "id": "ncaaf:401858532",
+   "label": "Penn State Nittany Lions",
+   "league": "ncaaf",
+   "match": "RUTG @ PSU",
+   "posted": "2026-11-20T14:05:16+00:00",
+   "queue": 11594.86,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Penn State Nittany Lions"
+   },
+   "start": "2026-11-21T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV21RUTGPSU-PSU"
+  },
   "KXNCAAFGAME-26NOV21SDSUBSU-BSU|YES": {
    "ask": 0.89,
    "bid": 0.88,
@@ -9005,6 +9026,28 @@
    "start": "2026-11-21T00:30Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV20CLEMDUKE-DUKE14"
+  },
+  "KXNCAAFSPREAD-26NOV20ISUUCF-ISU2|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0162,
+   "fair": 0.5227,
+   "id": "ncaaf:401856869",
+   "label": "UCF Knights +1.5",
+   "league": "ncaaf",
+   "match": "ISU @ UCF",
+   "posted": "2026-11-20T14:05:16+00:00",
+   "queue": 10791.43,
+   "side": "NO",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "UCF Knights"
+   },
+   "start": "2026-11-20T23:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV20ISUUCF-ISU2"
   },
   "KXNCAAFSPREAD-26NOV20ISUUCF-UCF2|NO": {
    "ask": 0.51,
