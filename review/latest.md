@@ -24,6 +24,7 @@ Daily 10-leg, replayed on every 8 AM card: cashed 11 of 13 days (85%) vs 42% sta
 Ladder vs every-game ticket to 2x, same 13 days (the last 14 saved cards only; older days drop off): ladder 3/6 then 1/7; every-game 4/6 then 5/7; only the every-game cashed on 8 days, only the ladder on 3 -- a fair coin splits 8-3 or wider 23% of the time.
 Win-or-draw picks whose price moved 3+ points against, by half: 13/25 vs 18.0 expected (z -2.2) then 16/25 vs 17.6 expected (z -0.7) -- information only.
 Win-or-draw picks by stated chance, by half: under 70% 68/98 (z +0.5) then 58/98 (z -1.6); 70-80% 127/161 (z +1.3) then 136/161 (z +3.0); 80%+ 63/75 (z +0.4) then 59/76 (z -1.1).
+Board picks by league, weakest first, by half: ARG 15/22 (z -0.8) then 20/23 (z +1.5); NCAAF 119/167 (z -0.2) then 93/135 (z -0.4); MLS 26/37 (z -0.3) then 15/20 (z +0.3) -- of 10 leagues; short in both halves: NCAAF.
 Ladder legs so far: totals 20/23 (87% vs 75% stated); props 15/18 (83% vs 79% stated); winners 7/12 (58% vs 76% stated); team totals 5/6 (83% vs 76% stated); spreads 3/5 (60% vs 75% stated). Tickets cashed 6 of 17. Weak spot: winners -- too few legs to cut them yet.
 Every game's safest line by chance, halves split 2026-11-13: 92%+ none then 47/48 (98% vs 93%); 85-92% 148/159 (93% vs 90%) then 121/129 (94% vs 90%); under 85% 18/23 (78% vs 82%) then 20/23 (87% vs 82%).
 Ticket size, replayed on every 8 AM card: 6 legs 12/13 at 1.34x; 8 legs 11/13 at 1.48x; 10 legs 11/13 at 1.64x; 12 legs 11/13 at 1.82x; 15 legs 7/11 at 2.17x.
