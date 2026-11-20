@@ -11476,6 +11476,23 @@
    "tip": "9:00 PM",
    "venue": "Kalshi"
   },
+  "ncaab:401921757|home|Kalshi": {
+   "dec": 1.07,
+   "ev": 0.0136,
+   "fair": 0.9473,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaab:401921757",
+   "kind": "value",
+   "league": "ncaab",
+   "match": "UCF @ VAN",
+   "price": "-1429",
+   "seen": "2026-11-20T04:08:46+00:00",
+   "side": "home",
+   "start": "2026-11-21T01:00Z",
+   "team": "Vanderbilt Commodores",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
   "ncaab:401921802|away|FanDuel": {
    "dec": 41.0,
    "ev": 0.1152,
@@ -14530,6 +14547,7 @@
    "seen": "2026-11-18T18:03:52+00:00",
    "side": "away",
    "start": "2026-11-20T01:15Z",
+   "status": "lost",
    "team": "Indianapolis Colts",
    "tip": "8:15 PM",
    "venue": "FanDuel"
@@ -14547,6 +14565,7 @@
    "seen": "2026-11-18T18:03:52+00:00",
    "side": "home",
    "start": "2026-11-20T01:15Z",
+   "status": "won",
    "team": "Houston Texans",
    "tip": "8:15 PM",
    "venue": "Kalshi"
@@ -22970,6 +22989,7 @@
    "payout": 6.7,
    "prob": 0.1521,
    "seen": "2026-11-19T05:03:43+00:00",
+   "status": "lost",
    "target": 2.0,
    "venue": "FanDuel"
   },
