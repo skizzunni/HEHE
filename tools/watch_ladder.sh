@@ -35,7 +35,8 @@ try:
     d = json.load(open(sys.argv[1]))
 except Exception:
     sys.exit(0)
-legs = [f"{k} = {v}" for k, v in d.items() if not k.startswith(("GAME ", "UFC ", "TEN "))]
+NAMES = {"ALT2X": "2x alternative (every-game lines)"}      # as ladder_watch.NAMES
+legs = [f"{NAMES.get(k, k)} = {v}" for k, v in d.items() if not k.startswith(("GAME ", "UFC ", "TEN "))]
 ten = [str(v).split(" | ")[0] for k, v in d.items() if k.startswith("TEN ")]
 if ten:
     legs.append(f"10-leg: {ten.count('won')} won, {ten.count('lost')} lost, {ten.count('open')} open")
