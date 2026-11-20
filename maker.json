@@ -3666,6 +3666,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV21USAUSM-USA"
   },
+  "KXNCAAFGAME-26NOV21UTAHTCU-UTAH|YES": {
+   "ask": 0.72,
+   "bid": 0.71,
+   "cost": 0.7137,
+   "edge": 0.0003,
+   "fair": 0.7139,
+   "id": "ncaaf:401856872",
+   "label": "Utah Utes",
+   "league": "ncaaf",
+   "match": "UTAH @ TCU",
+   "posted": "2026-11-20T05:19:17+00:00",
+   "queue": 13752.33,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Utah Utes"
+   },
+   "start": "2026-11-22T02:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV21UTAHTCU-UTAH"
+  },
   "KXNCAAFGAME-26NOV21UTSAUAB-UTSA|YES": {
    "ask": 0.69,
    "bid": 0.67,
@@ -16661,6 +16682,27 @@
    "start": "2026-11-22T00:00Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV21UNLVSJSU-48"
+  },
+  "KXNCAAFTOTAL-26NOV21UTAHTCU-47|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401856872",
+   "label": "over 46.5",
+   "league": "ncaaf",
+   "match": "UTAH @ TCU",
+   "posted": "2026-11-20T05:19:17+00:00",
+   "queue": 25508.23,
+   "side": "YES",
+   "spec": {
+    "line": 46.5,
+    "t": "over"
+   },
+   "start": "2026-11-22T02:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV21UTAHTCU-47"
   },
   "KXNCAAFTOTAL-26NOV21VTMIA-61|YES": {
    "ask": 0.51,
