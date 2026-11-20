@@ -24,6 +24,7 @@ Pool game lines (one per game and bet type), every league, by half: 85.9% vs 82.
 Daily 10-leg, replayed on every 8 AM card: cashed 11 of 13 days (85%) vs 42% stated, at about 1.64x.
 Ladder vs every-game ticket to 2x, same 13 days: ladder 2/6 then 2/7; every-game 3/6 then 5/7; only the every-game cashed on 7 days, only the ladder on 3.
 Win-or-draw picks whose price moved 3+ points against, by half: 13/25 vs 18.0 expected (z -2.2) then 16/25 vs 17.6 expected (z -0.7) -- information only.
+Win-or-draw picks by stated chance, by half: under 70% 68/98 (z +0.5) then 58/98 (z -1.6); 70-80% 127/161 (z +1.3) then 136/161 (z +3.0); 80%+ 62/74 (z +0.4) then 58/74 (z -0.9).
 Ladder legs so far: totals 20/23 (87% vs 75% stated); props 14/17 (82% vs 79% stated); winners 7/12 (58% vs 76% stated); team totals 5/6 (83% vs 76% stated); spreads 3/5 (60% vs 75% stated). Tickets cashed 6 of 17. Weak spot: winners -- too few legs to cut them yet.
 Every game's safest line by chance, halves split 2026-11-13: 92%+ none then 47/48 (98% vs 93%); 85-92% 164/176 (93% vs 90%) then 117/125 (94% vs 90%); under 85% 22/29 (76% vs 82%) then 20/23 (87% vs 82%).
 Ticket size, replayed on every 8 AM card: 6 legs 12/13 at 1.34x; 8 legs 11/13 at 1.49x; 10 legs 11/13 at 1.64x; 12 legs 10/13 at 1.82x; 15 legs 6/11 at 2.17x.
