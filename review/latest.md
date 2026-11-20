@@ -56,6 +56,10 @@ Yesterday (2026-11-19): board 18-10, sweep broken by uru Deportivo Maldonado or 
 - LOST nhl Toronto Maple Leafs at 54% (-130), Los Angeles Kings 4 - Toronto Maple Leafs 3: margin 1 · the book had my side favoured too · called at 54% · coin flip · close game; picks like it: 89 of 159 (56% vs 54% stated)
 - LOST ncaaf Temple Owls at 57% (-142), Rice Owls 31 - Temple Owls 27: margin 4 · the book had my side favoured too · called at 57% · coin flip · close game; picks like it: 52 of 82 (63% vs 57% stated)
 - LOST nhl Vegas Golden Knights at 53% (-125), Dallas Stars 4 - Vegas Golden Knights 3: margin 1 · the book had my side favoured too · called at 53% · coin flip · close game; picks like it: 80 of 148 (54% vs 54% stated)
+Lottery 10k: open (0/13 legs won)
+Lottery 10k+25: open (0/12 legs won)
+Lottery 10k+50: open (0/12 legs won)
+Lottery 10k+100: open (0/12 legs won)
 Ladder-consistency props (all time): 2864/3460 won (82.8%) vs 86.4% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
