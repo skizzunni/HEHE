@@ -19696,6 +19696,54 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nhl:401892759|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Toronto Maple Leafs\"}|FanDuel": {
+   "dec": 3.35,
+   "dk": "+200",
+   "ev": 0.0438,
+   "fair": 0.3116,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892759",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "CBJ @ TOR",
+   "price": "+235",
+   "seen": "2026-11-20T16:27:53+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Toronto Maple Leafs\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Toronto Maple Leafs"
+   },
+   "start": "2026-11-22T00:00Z",
+   "team": "Toronto Maple Leafs -1.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892761|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Los Angeles Kings\"}|FanDuel": {
+   "dec": 1.5556,
+   "dk": "-205",
+   "ev": 0.0125,
+   "fair": 0.6509,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892761",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "LA @ OTT",
+   "price": "-180",
+   "seen": "2026-11-20T16:27:53+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"Los Angeles Kings\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "Los Angeles Kings"
+   },
+   "start": "2026-11-22T00:00Z",
+   "team": "Los Angeles Kings +1.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "nhl:401892762|home|FanDuel": {
    "dec": 2.05,
    "ev": 0.0245,
@@ -19751,6 +19799,166 @@
    "match": "VGK @ WPG",
    "profit": 0.0067,
    "seen": "2026-11-20T16:15:20+00:00"
+  },
+  "nhl:401892765|away|Kalshi": {
+   "dec": 2.3419,
+   "ev": 0.061,
+   "fair": 0.453,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892765",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "ANA @ UTA",
+   "price": "+134",
+   "seen": "2026-11-20T16:27:53+00:00",
+   "side": "away",
+   "start": "2026-11-22T02:00Z",
+   "team": "Anaheim Ducks",
+   "tip": "9:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892765|home|FanDuel": {
+   "dec": 1.9259,
+   "ev": 0.1473,
+   "fair": 0.5957,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892765",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "ANA @ UTA",
+   "price": "-108",
+   "seen": "2026-11-20T16:27:53+00:00",
+   "side": "home",
+   "start": "2026-11-22T02:00Z",
+   "team": "Utah Mammoth",
+   "tip": "9:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892765|sure": {
+   "id": "nhl:401892765",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "+136",
+     "stake_share": 0.4494,
+     "team": "Anaheim Ducks",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-108",
+     "stake_share": 0.5506,
+     "team": "Utah Mammoth",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "ANA @ UTA",
+   "profit": 0.0605,
+   "seen": "2026-11-20T16:27:53+00:00"
+  },
+  "nhl:401892765|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Utah Mammoth\"}|FanDuel": {
+   "dec": 3.35,
+   "dk": "+154",
+   "ev": 0.2472,
+   "fair": 0.3723,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892765",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "spread",
+   "match": "ANA @ UTA",
+   "price": "+235",
+   "seen": "2026-11-20T16:27:53+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Utah Mammoth\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Utah Mammoth"
+   },
+   "start": "2026-11-22T02:00Z",
+   "team": "Utah Mammoth -1.5",
+   "tip": "9:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892766|away|FanDuel": {
+   "dec": 1.9009,
+   "ev": 0.3917,
+   "fair": 0.7321,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892766",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "MIN @ VAN",
+   "price": "-111",
+   "seen": "2026-11-20T16:27:53+00:00",
+   "side": "away",
+   "start": "2026-11-22T03:00Z",
+   "team": "Minnesota Wild",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892766|home|Kalshi": {
+   "dec": 3.5236,
+   "ev": 0.3478,
+   "fair": 0.3825,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892766",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "MIN @ VAN",
+   "price": "+252",
+   "seen": "2026-11-20T16:27:53+00:00",
+   "side": "home",
+   "start": "2026-11-22T03:00Z",
+   "team": "Vancouver Canucks",
+   "tip": "10:00 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892766|sure": {
+   "id": "nhl:401892766",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "-111",
+     "stake_share": 0.6496,
+     "team": "Minnesota Wild",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+252",
+     "stake_share": 0.3504,
+     "team": "Vancouver Canucks",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "MIN @ VAN",
+   "profit": 0.2348,
+   "seen": "2026-11-20T16:27:53+00:00"
+  },
+  "nhl:401892767|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"San Jose Sharks\"}|FanDuel": {
+   "dec": 3.35,
+   "dk": "+195",
+   "ev": 0.0634,
+   "fair": 0.3174,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892767",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "spread",
+   "match": "SEA @ SJ",
+   "price": "+235",
+   "seen": "2026-11-20T16:27:53+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"San Jose Sharks\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "San Jose Sharks"
+   },
+   "start": "2026-11-22T03:00Z",
+   "team": "San Jose Sharks -1.5",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
   },
   "nor:401843366|away|FanDuel": {
    "dec": 3.0,
