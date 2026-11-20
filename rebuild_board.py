@@ -754,6 +754,15 @@ def snapshot():
                 _ad = ten_leg.to_target_days(locks.SAFE_LEDGER)
                 out["ten_leg"]["alt2x"] = dict(n=_a2 and _a2["n"], chance=_a2 and _a2["chance"],
                                                pays=_a2 and _a2["pays"], cashed=sum(_ad.values()), days=len(_ad))
+                try:                       # against the ladder on the days both were graded
+                    import ladder as _lad
+                    _ld = {e["day"]: e["result"] == "won" for r in _lad.replay() for e in r["days"]
+                           if e["result"] in ("won", "lost")}
+                    _both = set(_ld) & set(_ad)
+                    out["ten_leg"]["alt2x"]["vs"] = dict(days=len(_both), alt=sum(_ad[d] for d in _both),
+                                                         ladder=sum(_ld[d] for d in _both))
+                except Exception as e_:
+                    print(f"ladder vs 2x skipped ({e_})", file=sys.stderr)
             except Exception as e_:
                 print(f"ten-leg skipped ({e_})", file=sys.stderr)
         except Exception as e_:

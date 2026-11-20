@@ -238,7 +238,7 @@ PROBE = """<script>setTimeout(function(){
                        legs: [{label: "Over 200.5 points", price: "-2000", p: 0.93, match: "A at B", league: "nba", status: "open"}]},
                record: {days: 14, cashed: 12, stated: 0.41, pays: 1.64},
                sizes: [{n: 6, days: 14, cashed: 13, pays: 1.34}, {n: 10, days: 14, cashed: 12, pays: 1.64}],
-               alt2x: {n: 14, chance: 0.27, pays: 2.02, cashed: 8, days: 13}};
+               alt2x: {n: 14, chance: 0.27, pays: 2.02, cashed: 8, days: 13, vs: {days: 14, alt: 9, ladder: 4}}};
   out.tenLeg = tenLegHTML();
   D.ten_leg = tlSave;
   out.tdAll = [tdEveryone({everyone: [{name: "A. Runner", p: 0.45, p2: 0.12, pfirst: 0.11, price: "-110"}]}),
@@ -629,7 +629,8 @@ def main():
         fails.append("every-player TD table wrong: " + repr([x[:300] for x in ta]))
     tl = new.get("tenLeg") or ""
     if not ("cashed 12 of 14 days" in tl and "6 legs cashed 13 of 14" in tl
-            and "<b>The same lines to 2x</b>" in tl and "14 legs today, 27% stated all win, pays 2.02x; replayed, cashed 8 of 13 days" in tl):
+            and "<b>The same lines to 2x</b>" in tl and "14 legs today, 27% stated all win, pays 2.02x; replayed, cashed 8 of 13 days" in tl
+            and "on the 14 days both were graded this cashed 9, the ladder 4" in tl):
         fails.append("10-leg box wrong: " + repr(tl[:400]))
     if "have won 131 of 149 lines (40 games) against 84% stated" not in (new.get("brightG") or ""):
         fails.append("running-ahead game count missing: " + repr(new.get("brightG")))

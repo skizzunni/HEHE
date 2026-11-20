@@ -2027,7 +2027,10 @@ function tenLegHTML(){
     + (X.alt2x && X.alt2x.n ? '<p class="note"><b>The same lines to 2x</b> (the ladder&rsquo;s minimum): ' + X.alt2x.n + ' legs today, '
         + Math.round(100 * X.alt2x.chance) + '% stated all win, pays ' + X.alt2x.pays.toFixed(2) + 'x'
         + (X.alt2x.days ? '; replayed, cashed ' + X.alt2x.cashed + ' of ' + X.alt2x.days + ' days' : '')
-        + '. The ladder itself uses fewer, riskier Locks legs.</p>' : '')
+        + '. The ladder itself uses fewer, riskier Locks legs'
+        + (X.alt2x.vs && X.alt2x.vs.days ? ' &mdash; on the ' + X.alt2x.vs.days + ' days both were graded this cashed '
+            + X.alt2x.vs.alt + ', the ladder ' + X.alt2x.vs.ladder + ' (too few days to call; the ladder&rsquo;s rule is yours)' : '')
+        + '.</p>' : '')
     + '<ul class="betlegs">' + T.legs.map(g => '<li>' + esc(g.label) + teamTag(g) + ' <b>' + esc(g.price || '') + '</b> &middot; '
       + (100 * g.p).toFixed(0) + '% &middot; ' + esc(g.match || '') + res(g.status)
       + ((g.league || g.tip) ? '<div class="sbn">' + [String(g.league || '').toUpperCase(), g.tip].filter(Boolean).map(esc).join(' &middot; ') + '</div>' : '')
