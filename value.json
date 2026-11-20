@@ -12027,6 +12027,23 @@
    "tip": "1:00 PM",
    "venue": "FanDuel"
   },
+  "ncaaf:401856750|home|Kalshi": {
+   "dec": 1.0489,
+   "ev": 0.0125,
+   "fair": 0.9652,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401856750",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "TNTC @ MSST",
+   "price": "-2046",
+   "seen": "2026-11-20T20:19:44+00:00",
+   "side": "home",
+   "start": "2026-11-21T18:00Z",
+   "team": "Mississippi State Bulldogs",
+   "tip": "1:00 PM",
+   "venue": "Kalshi"
+  },
   "ncaaf:401856750|{\"line\": -35.5, \"t\": \"spread\", \"team\": \"Mississippi State Bulldogs\"}|Kalshi": {
    "dec": 2.2361,
    "dk": "-110",
@@ -19719,6 +19736,29 @@
    "team": "Seattle Kraken -1.5",
    "tip": "9:40 PM",
    "venue": "Kalshi"
+  },
+  "nhl:401892754|{\"line\": 6.5, \"t\": \"under\"}|FanDuel": {
+   "dec": 1.8929,
+   "dk": "-125",
+   "ev": 0.0106,
+   "fair": 0.5339,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892754",
+   "kind": "single",
+   "league": "nhl",
+   "market": "under",
+   "match": "EDM @ CAR",
+   "price": "-112",
+   "seen": "2026-11-20T20:19:44+00:00",
+   "side": "{\"line\": 6.5, \"t\": \"under\"}",
+   "spec": {
+    "line": 6.5,
+    "t": "under"
+   },
+   "start": "2026-11-21T18:00Z",
+   "team": "under 6.5",
+   "tip": "1:00 PM",
+   "venue": "FanDuel"
   },
   "nhl:401892756|home|FanDuel": {
    "dec": 1.9259,
