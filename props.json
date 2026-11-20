@@ -59447,6 +59447,7 @@
   "p": 0.8416,
   "p_fair": 0.9351,
   "price": "-100000",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -59465,6 +59466,7 @@
   "p": 0.7378,
   "p_fair": 0.7866,
   "price": "-370",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -59479,11 +59481,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Brayden Burries",
   "p": 0.8518,
   "p_fair": 0.8715,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401910020|n:damian lillard|Points|10+": {
   "aid": null,
@@ -59494,11 +59498,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Damian Lillard",
   "p": 0.8748,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 33.0
  },
  "nba:401910020|n:damian lillard|Pts + Ast|20+": {
   "aid": null,
@@ -59510,11 +59516,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Damian Lillard",
   "p": 0.8474,
   "p_fair": 0.8613,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 33.0
  },
  "nba:401910020|n:donovan clingan|Assists|2+": {
   "aid": null,
@@ -59526,11 +59534,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Donovan Clingan",
   "p": 0.7782,
   "p_fair": 0.7574,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401910020|n:donovan clingan|Reb + Ast|10+": {
   "aid": null,
@@ -59542,11 +59552,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Donovan Clingan",
   "p": 0.8518,
   "p_fair": 0.8244,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nba:401910020|n:donovan clingan|Rebounds|8+": {
   "aid": null,
@@ -59558,11 +59570,13 @@
   "league": "nba",
   "line": "8+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Donovan Clingan",
   "p": 0.8479,
   "p_fair": 0.9133,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401910020|n:jaime jaquez|Assists|2+": {
   "aid": null,
@@ -59574,11 +59588,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Jaime Jaquez Jr.",
   "p": 0.8464,
   "p_fair": 0.8569,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nba:401910020|n:jaime jaquez|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -59590,11 +59606,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Jaime Jaquez Jr.",
   "p": 0.8551,
   "p_fair": 0.9345,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 12.0
  },
  "nba:401910020|n:jaime jaquez|Reb + Ast|5+": {
   "aid": null,
@@ -59606,11 +59624,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Jaime Jaquez Jr.",
   "p": 0.8518,
   "p_fair": 0.8821,
   "price": "-770",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401910020|n:kelel ware|Points|5+": {
   "aid": null,
@@ -59622,11 +59642,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Kel'el Ware",
   "p": 0.8496,
   "p_fair": 0.9629,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 11.0
  },
  "nba:401910020|n:myles turner|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -59642,7 +59664,9 @@
   "p": 0.848,
   "p_fair": 0.9518,
   "price": "-1000",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910020|n:myles turner|Reb + Ast|5+": {
   "aid": null,
@@ -59658,7 +59682,9 @@
   "p": 0.8451,
   "p_fair": 0.869,
   "price": "-720",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910020|n:ryan rollins|Pts + Ast|10+": {
   "aid": null,
@@ -59670,11 +59696,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Ryan Rollins",
   "p": 0.8474,
   "p_fair": 0.921,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401910020|n:scoot henderson|Points|5+": {
   "aid": null,
@@ -59686,11 +59714,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Scoot Henderson",
   "p": 0.8555,
   "p_fair": 0.9698,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 27.0
  },
  "nba:401910020|n:scoot henderson|Pts + Ast|10+": {
   "aid": null,
@@ -59702,11 +59732,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Scoot Henderson",
   "p": 0.8474,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 30.0
  },
  "nba:401910020|n:tyler herro|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -59718,11 +59750,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Tyler Herro",
   "p": 0.848,
   "p_fair": 0.9086,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401910021|n:ayo dosunmu|Pts + Ast|15+": {
   "aid": null,
@@ -104590,11 +104624,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Adam Fantilli",
   "p": 0.7392,
   "p_fair": null,
   "price": "-370",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nhl:401892748|n:anton frondell|Shots on Goal|1+": {
   "aid": null,
@@ -104606,11 +104642,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Anton Frondell",
   "p": 0.8443,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892748|n:frank nazar|Shots on Goal|1+": {
   "aid": null,
@@ -104622,11 +104660,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Frank Nazar",
   "p": 0.8422,
   "p_fair": null,
   "price": "-870",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892748|n:kent johnson|Shots on Goal|1+": {
   "aid": null,
@@ -104637,11 +104677,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kent Johnson",
   "p": 0.8748,
   "price": "-1800",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892748|n:kent johnson|Shots on Goal|2+": {
   "aid": null,
@@ -104653,11 +104695,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kent Johnson",
   "p": 0.6811,
   "p_fair": null,
   "price": "-265",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892748|n:matthew knies|Shots on Goal|1+": {
   "aid": null,
@@ -104669,11 +104713,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matthew Knies",
   "p": 0.8451,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892748|n:patrick kane|Shots on Goal|1+": {
   "aid": null,
@@ -104685,11 +104731,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Patrick Kane",
   "p": 0.8487,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892749|n:cole perfetti|Shots on Goal|1+": {
   "aid": null,
