@@ -15,10 +15,10 @@ Locks by league, by half: NBA 84% then 86% (vs 83%, 83%); NHL 85% then 96% (vs 8
 Locks by league and bet type, short in both halves: NFL prop 79% then 75% (vs 86%, 80%; 31 legs) -- of 10 pairs; information only.
 Locks props by market, by half: NBA Assists 14/19 then 18/21 (vs 89%, 79%); NFL Receiving Yards 12/14 then 10/15 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.
 Every game's safest line by bet type, by half: win 82% then 92% (vs 84%, 84%); spread 89% then 92% (vs 90%, 90%); total 95% then 96% (vs 90%, 92%); team total 92% then 95% (vs 90%, 90%). Ahead in both halves: total, team total.
-Priced-era picks by league, by half (split 2026-11-04): soccer or-draw 77% vs 74% (z +1.7) then 75% vs 74% (z +0.2); soccer win 82% vs 73% (z +2.8) then 85% vs 74% (z +2.4); NCAAF 73% vs 72% (z +0.2) then 69% vs 70% (z -0.3); NBA 70% vs 66% (z +1.0) then 73% vs 69% (z +1.0); NHL 58% vs 58% (z +0.0) then 61% vs 58% (z +0.5); NCAAB 82% vs 88% (z -0.8) then 89% vs 87% (z +0.4); NFL 75% vs 64% (z +1.2) then 83% vs 68% (z +1.8). None past the 99.5% bar in both halves.
+Priced-era picks by league, by half (split 2026-11-04): soccer or-draw 77% vs 74% (z +1.7) then 75% vs 74% (z +0.2); soccer win 82% vs 73% (z +2.8) then 85% vs 74% (z +2.4); NCAAF 73% vs 72% (z +0.2) then 69% vs 70% (z -0.3); NBA 70% vs 66% (z +1.0) then 73% vs 69% (z +1.0); NHL 58% vs 58% (z +0.0) then 61% vs 58% (z +0.5); NCAAB 82% vs 88% (z -0.8) then 89% vs 87% (z +0.5); NFL 75% vs 64% (z +1.2) then 83% vs 68% (z +1.8). None past the 99.5% bar in both halves.
 National-team soccer: 55/63 (87% vs 76% stated), 2 of 8 losses draws (straight win 28/30 (93% vs 78% stated); or draw 27/33 (82% vs 75% stated)); club soccer 815/1123 (73% vs 71% stated).
 Coin flips (called under 60%), by half: all 100/168 (60% vs 55%) then 99/169 (59% vs 55%); price moved against 3+ 12/19 (63% vs 54%) then 13/22 (59% vs 54%); steady 77/120 (64% vs 54%) then 69/119 (58% vs 55%); moved toward 3+ 5/12 (42% vs 56%) then 17/28 (61% vs 57%).
-Board picks by price move after the call, by half: moved 6+ against 14/21 (z +0.1) then 11/17 (z +0.1); 3-6 against 45/67 (z -0.2) then 40/64 (z -0.6); steady 558/747 (z +2.8) then 510/685 (z +1.5); moved 3+ toward 112/140 (z +2.1) then 170/210 (z +2.6).
+Board picks by price move after the call, by half: moved 6+ against 14/21 (z +0.1) then 11/17 (z +0.1); 3-6 against 45/67 (z -0.2) then 40/64 (z -0.6); steady 559/748 (z +2.8) then 509/684 (z +1.5); moved 3+ toward 112/140 (z +2.1) then 171/211 (z +2.6).
 Pool game lines (one per game and bet type), every league, by half: 86.1% vs 82.2% (z +2.7) to 2026-11-13, then 81.1% vs 82.3% (z -0.8) on 1357 game lines.
 Daily 10-leg, replayed on every 8 AM card: cashed 12 of 14 days (86%) vs 42% stated, at about 1.64x.
 Ladder vs every-game ticket to 2x, same 14 days: ladder 3/7 then 1/7; every-game 4/7 then 5/7; only the every-game cashed on 8 days, only the ladder on 3.
@@ -31,7 +31,7 @@ Value bets by fair chance, by half: 0-30% 11/58 (z +0.1) then 9/68 (z -0.9); 30-
 Anytime touchdown chances, by half: 145/1076 scored vs 126.0 stated (z +2.0) to 2026-11-01, then 152/1076 scored vs 126.0 stated (z +2.7); 2+ touchdowns graded so far: 0 of 29 players.
 Home and away picks, by half: NBA home 66% vs 67% then 72% vs 69%, away 78% vs 64% then 75% vs 68%; NHL home 62% vs 59% then 52% vs 59%, away 55% vs 57% then 72% vs 56%; NCAAF home 81% vs 74% then 65% vs 72%, away 62% vs 69% then 75% vs 68%; NFL home 70% vs 65% then 69% vs 68%, away 88% vs 62% then 94% vs 68%.
 Injuries at tip-off (261 games, 16 days, early read): my side more out: 1st 28/39 72% vs 64% | 2nd 28/42 67% vs 62%; even: 1st 26/34 76% vs 64% | 2nd 20/41 49% vs 62%; their side more out: 1st 47/57 82% vs 65% | 2nd 31/48 65% vs 67%.
-Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1978 picks).
+Lessons from losses: no league / bet / chance band is 3+ points short in both halves (1979 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 9/18 vs 69% stated (7.5% by luck; about 4.6 of 61 teams expected this far behind by chance); NHL Detroit Red Wings 3/10 vs 54% stated (11.7% by luck; about 7.1 of 61 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.8 of 61 teams expected this far behind by chance).
 High-chance sweep: 70%+ today 0-0, 26 open; swept 3 of 34 past days (last 2026-11-11) | 80%+ today 0-0, 13 open; swept 11 of 33 past days (last 2026-11-19).
 Back-to-backs, board record so far: NHL on the tired side 4/11 vs 56%, against it 18/31 vs 61%; NBA on the tired side 18/24 vs 65%, against it 21/27 vs 72%.
@@ -40,7 +40,7 @@ Next UFC card 2026-11-21 (12 fights priced, 4 close): Ikram Aliskerov 71%; Aleks
 TRAILING value bets: 39.6% hit vs 44.6% stated on 555
 Board sweep: 0-0, 41 open -- still clean.
 Why picks lost (14 days): favourite lost 88, close game 85, coin flip 57, blowout 45, upset 37, price moved against it 22, drawn 10.
-Yesterday (2026-11-19): board 17-10, sweep broken by uru Deportivo Maldonado or draw at 73%; 9 losses expected, 10 came in (41.7% chance of that many or more).
+Yesterday (2026-11-19): board 18-10, sweep broken by uru Deportivo Maldonado or draw at 73%; 9.4 losses expected, 10 came in (48.3% chance of that many or more).
 - LOST uru Deportivo Maldonado or draw at 73% (-350), Boston River 1 - Deportivo Maldonado 0: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game · price moved against it (3 pts); picks like it: 10 of 13 (77% vs 73% stated)
 - LOST bra Red Bull Bragantino or draw at 64% (-220), Red Bull Bragantino 1 - Vitória 2: margin 1 · the book had my side favoured too · called at 64% · favourite lost · close game; picks like it: 7 of 10 (70% vs 67% stated)
 - LOST bra São Paulo or draw at 68% (-260), Fluminense 1 - São Paulo 0: margin 1 · the book had my side favoured too · called at 68% · favourite lost · close game; picks like it: 15 of 18 (83% vs 69% stated)
@@ -54,4 +54,4 @@ Yesterday (2026-11-19): board 17-10, sweep broken by uru Deportivo Maldonado or 
 Ladder-consistency props (all time): 2864/3460 won (82.8%) vs 86.4% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
-Weights for tomorrow (model's share vs the price): nba 0.00 (n=226), ncaab 0.00 (n=85), ncaaf 0.00 (n=299), nfl 0.00 (n=71), nhl 0.00 (n=241)
+Weights for tomorrow (model's share vs the price): nba 0.00 (n=226), ncaab 0.00 (n=86), ncaaf 0.00 (n=299), nfl 0.00 (n=71), nhl 0.00 (n=241)
