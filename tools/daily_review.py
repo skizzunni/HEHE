@@ -944,6 +944,38 @@ def dc_band_line(ledger=None, bands=DC_BANDS, min_n=20):
     return ("Win-or-draw picks by stated chance, by half: " + "; ".join(parts) + ".") if parts else None
 
 
+BOARD_BANDS = ((50, 60), (60, 70), (70, 80), (80, 90), (90, 101))
+
+
+def board_band_line(ledger=None, bands=BOARD_BANDS, min_n=20):
+    """Graded board picks by stated chance, split at the median date, won vs
+    stated with z. Information only. 2026-11-20: every band on or ahead in
+    both halves; 70-80% ahead most, 246/316 then 279/337 vs 234.3 / 250.1
+    (z +1.5 / +3.6) -- the picks there are under-stated, not over, but the
+    first half misses the 2.8 bar, so the stated chances stay as they are."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    R = sorted((e for e in ledger.values() if isinstance(e, dict) and e.get("status") in ("won", "lost") and e.get("date")
+                and not e.get("record_excluded") and e.get("conf") is not None), key=lambda e: e["date"])
+    if len(R) < 40:
+        return None
+    mid = R[len(R) // 2]["date"]
+
+    def rec(X):
+        w = sum(e["status"] == "won" for e in X)
+        p = sum(e["conf"] for e in X) / 100
+        v = sum(e["conf"] / 100 * (1 - e["conf"] / 100) for e in X) or 1
+        return f"{w}/{len(X)} (z {(w - p) / math.sqrt(v):+.1f})"
+    parts = []
+    for lo, hi in bands:
+        A = [e for e in R if lo <= e["conf"] < hi and e["date"] < mid]
+        B = [e for e in R if lo <= e["conf"] < hi and e["date"] >= mid]
+        if len(A) + len(B) < min_n or not A or not B:
+            continue
+        parts.append(f"{lo}{'%+' if hi > 100 else '-' + str(hi) + '%'} {rec(A)} then {rec(B)}")
+    return ("Board picks by stated chance, by half: " + "; ".join(parts) + ".") if parts else None
+
+
 def board_league_line(ledger=None, min_n=40, top=3):
     """Graded board picks by league, split at the median date: the leagues
     weakest in their worse half, won vs stated with z. Information only.
@@ -2323,6 +2355,8 @@ def words(r, fit):
         out.append(r["dc_bands"])
     if r.get("board_leagues"):
         out.append(r["board_leagues"])
+    if r.get("board_bands"):
+        out.append(r["board_bands"])
     if r.get("ladder_types"):
         out.append(r["ladder_types"])
     if r.get("eg_bands"):
@@ -2498,6 +2532,7 @@ def _main():
     log[today.isoformat()]["dc_moves"] = dc_move_line(ledger)
     log[today.isoformat()]["dc_bands"] = dc_band_line(ledger)
     log[today.isoformat()]["board_leagues"] = board_league_line(ledger)
+    log[today.isoformat()]["board_bands"] = board_band_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
     log[today.isoformat()]["value_leagues"] = value_league_line()
     log[today.isoformat()]["td_calibration"] = td_calibration_line()

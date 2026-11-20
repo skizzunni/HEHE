@@ -1561,6 +1561,14 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Checked: board picks by stated chance (2026-11-20).** After an 84% pick
+(Kashiwa Reysol or draw) lost 0-1: all graded board picks by band and date
+half -- 50-60% z +1.1 / +1.1, 60-70% +1.9 / -0.4, 70-80% 246/316 then
+279/337 (z +1.5 / +3.6, ahead), 80-90% +0.1 / +0.6, 90%+ -0.8 / +0.1. No
+band is short in both halves; 70-80% runs ahead of its stated chance but
+misses the 2.8 bar in the first half, so the stated chances stay. The review
+prints it daily (board_band_line).
+
 **Note: the 10-leg and 2x replays are a rolling 14-day window (2026-11-20).**
 Safe Locks keeps 14 days of frozen 8 AM pools (locks.POOLS_KEPT), so every
 replayed record built from them -- the 10-leg, its sizes, the 2x every-game

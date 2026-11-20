@@ -58,6 +58,18 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class BoardBandLine(unittest.TestCase):
+    def test_bands(self):
+        import daily_review
+        led = {f"k{i}": dict(status="won" if i % 4 else "lost", conf=75 if i % 2 else 95, date=f"2026-11-{1 + i % 20:02d}")
+               for i in range(80)}
+        out = daily_review.board_band_line(led)
+        self.assertTrue(out.startswith("Board picks by stated chance, by half: 70-80% "), out)
+        self.assertIn("; 90%+ ", out)
+        self.assertNotIn("50-60%", out)
+        self.assertIsNone(daily_review.board_band_line({}))
+
+
 class BoardLeagueLine(unittest.TestCase):
     def test_weakest_first(self):
         import daily_review
