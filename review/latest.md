@@ -21,7 +21,7 @@ Coin flips (called under 60%), by half: all 100/168 (60% vs 55%) then 99/169 (59
 Board picks by price move after the call, by half: moved 6+ against 14/21 (z +0.1) then 11/17 (z +0.1); 3-6 against 45/67 (z -0.2) then 40/64 (z -0.6); steady 559/748 (z +2.8) then 509/684 (z +1.5); moved 3+ toward 112/140 (z +2.1) then 171/211 (z +2.6).
 Pool game lines (one per game and bet type), every league, by half: 86.1% vs 82.2% (z +2.7) to 2026-11-13, then 81.1% vs 82.3% (z -0.8) on 1357 game lines.
 Daily 10-leg, replayed on every 8 AM card: cashed 12 of 14 days (86%) vs 42% stated, at about 1.64x.
-Ladder vs every-game ticket to 2x, same 14 days: ladder 3/7 then 1/7; every-game 4/7 then 5/7; only the every-game cashed on 8 days, only the ladder on 3.
+Ladder vs every-game ticket to 2x, same 14 days: ladder 3/7 then 1/7; every-game 4/7 then 5/7; only the every-game cashed on 8 days, only the ladder on 3 -- a fair coin splits 8-3 or wider 23% of the time.
 Win-or-draw picks whose price moved 3+ points against, by half: 13/25 vs 18.0 expected (z -2.2) then 16/25 vs 17.6 expected (z -0.7) -- information only.
 Win-or-draw picks by stated chance, by half: under 70% 68/98 (z +0.5) then 58/98 (z -1.6); 70-80% 127/161 (z +1.3) then 136/161 (z +3.0); 80%+ 62/74 (z +0.4) then 58/74 (z -0.9).
 Ladder legs so far: totals 20/23 (87% vs 75% stated); props 15/18 (83% vs 79% stated); winners 7/12 (58% vs 76% stated); team totals 5/6 (83% vs 76% stated); spreads 3/5 (60% vs 75% stated). Tickets cashed 6 of 17. Weak spot: winners -- too few legs to cut them yet.
