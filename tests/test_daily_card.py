@@ -214,6 +214,9 @@ class Card(unittest.TestCase):
         D = dict(self.D, every_game={"today": eg}, ten_leg={"today": dict(legs=eg[:1], n=1, chance=0.9, pays=1.67),
                                                            "alt2x": dict(n=2, chance=0.8, pays=2.0)})
         self.assertIn("    It adds: L1 -150 89% (M1)", daily_card.ten_leg_lines(D))
+        low = dict(gid="g9", label="L9", price="-150", p=0.5, league="nba", match="M9", status="open")
+        D2 = dict(D, every_game={"today": eg + [low]}, ten_leg=dict(D["ten_leg"], today=dict(legs=[low], n=1, chance=0.5, pays=1.67)))
+        self.assertIn("    It leaves out: L9 (M9)", daily_card.ten_leg_lines(D2))
         D = dict(self.D, ten_leg={"alt2x": dict(n=None, chance=None, pays=None)})
         self.assertFalse(any("same lines" in l for l in daily_card.ten_leg_lines(D)))
 

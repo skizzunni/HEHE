@@ -59,6 +59,10 @@ def ten_leg_lines(D, day="today"):
         if T2 and extra:                                   # so the 2x ticket can be placed: what it adds
             out.append("    It adds: " + "; ".join(f"{g['label']} {g.get('price') or ''} {pc(g['p'])} ({g.get('match') or ''})"
                                                     for g in extra))
+        theirs = {(g.get("gid"), g.get("label")) for g in (T2 or {}).get("legs") or []}
+        drop = [g for g in T["legs"] if (g.get("gid"), g.get("label")) not in theirs]
+        if T2 and drop:                                    # the 10-leg fills American games first; the 2x does not
+            out.append("    It leaves out: " + "; ".join(f"{g['label']} ({g.get('match') or ''})" for g in drop))
     for i, g in enumerate(T["legs"], 1):
         out.append(f"  {i}. {g['label']} {g.get('price') or ''} -- {pc(g['p'])} ({str(g.get('league') or '').upper()}, "
                    f"{g.get('match') or ''}{', ' + g['tip'] if g.get('tip') else ''})")
