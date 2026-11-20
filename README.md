@@ -1561,6 +1561,14 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Checked: win-or-draw picks by stated chance (2026-11-20).** Four win-or-draw
+favourites lost on Nov 19 (Maldonado, Bragantino, Sao Paulo, Orlando), each
+by a goal or two. All graded win-or-draw board picks by band and date half:
+under 70% 68/98 then 58/98 (z +0.5 / -1.6), 70-80% 127/161 then 136/161
+(z +1.3 / +3.0, ahead), 80%+ 62/74 then 58/74 (z +0.4 / -0.9). No band is
+short in both halves; nothing changes. The review prints it daily
+(dc_band_line).
+
 **On watch: win-or-draw picks after the price moves against them (2026-11-19).**
 Deportivo Maldonado or draw (-350, 73%) lost 0-1 at home after its price
 slid 3 points. All 662 graded win-or-draw board picks by date half: moved 3+

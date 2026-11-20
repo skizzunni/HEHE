@@ -871,6 +871,36 @@ def dc_move_line(ledger=None, cut=0.03, min_n=20):
             f"{rec(R[:h])} then {rec(R[h:])} -- information only.")
 
 
+DC_BANDS = ((0, 70), (70, 80), (80, 101))
+
+
+def dc_band_line(ledger=None, bands=DC_BANDS, min_n=20):
+    """Soccer win-or-draw board picks by stated chance, by date half, won vs
+    stated with z. Information only. 2026-11-20 (four win-or-draw losses on
+    Nov 19, all favourites by one goal or two): under 70% 68/98 then 58/98
+    (z +0.5 / -1.6); 70-80% ahead in both (z +1.3 / +3.0); 80%+ on par
+    (z +0.4 / -0.9) -- no band short in both halves."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    R = sorted((e for e in ledger.values() if isinstance(e, dict) and e.get("dc") and e.get("status") in ("won", "lost")
+                and e.get("date") and not e.get("record_excluded") and e.get("conf") is not None), key=lambda e: e["date"])
+    parts = []
+    for lo, hi in bands:
+        S = [e for e in R if lo <= e["conf"] < hi]
+        if len(S) < min_n:
+            continue
+        h = len(S) // 2
+
+        def rec(X):
+            w = sum(e["status"] == "won" for e in X)
+            p = sum(e["conf"] for e in X) / 100
+            v = sum(e["conf"] / 100 * (1 - e["conf"] / 100) for e in X) or 1
+            return f"{w}/{len(X)} (z {(w - p) / math.sqrt(v):+.1f})"
+        name = f"under {hi}%" if lo == 0 else f"{lo}%+" if hi > 100 else f"{lo}-{hi}%"
+        parts.append(f"{name} {rec(S[:h])} then {rec(S[h:])}")
+    return ("Win-or-draw picks by stated chance, by half: " + "; ".join(parts) + ".") if parts else None
+
+
 def coin_flip_line(ledger=None, cut=60):
     """Board picks called under `cut`% (the near coin flips), won vs stated by
     date half, split by how the price moved after the call (3+ points against,
@@ -2206,6 +2236,8 @@ def words(r, fit):
         out.append(r["ladder_alt"])
     if r.get("dc_moves"):
         out.append(r["dc_moves"])
+    if r.get("dc_bands"):
+        out.append(r["dc_bands"])
     if r.get("ladder_types"):
         out.append(r["ladder_types"])
     if r.get("eg_bands"):
@@ -2377,6 +2409,7 @@ def _main():
     log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
     log[today.isoformat()]["price_moves"] = price_move_line(ledger)
     log[today.isoformat()]["dc_moves"] = dc_move_line(ledger)
+    log[today.isoformat()]["dc_bands"] = dc_band_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
     log[today.isoformat()]["td_calibration"] = td_calibration_line()
     try:

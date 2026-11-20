@@ -52,6 +52,18 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class DcBandLine(unittest.TestCase):
+    def test_bands(self):
+        import daily_review
+        led = {f"k{i}": dict(dc=True, status="won" if i % 4 else "lost", date=f"2026-11-{1 + i % 28:02d}",
+                             conf=65 if i < 40 else 85) for i in range(80)}
+        out = daily_review.dc_band_line(led)
+        self.assertTrue(out.startswith("Win-or-draw picks by stated chance, by half: under 70% 14/20"), out)
+        self.assertIn("80%+ ", out)
+        self.assertNotIn("70-80%", out)                      # too few picks in that band
+        self.assertIsNone(daily_review.dc_band_line({}))
+
+
 class LocksLeagueTypeLine(unittest.TestCase):
     def test_short_pairs_named(self):
         import daily_review
