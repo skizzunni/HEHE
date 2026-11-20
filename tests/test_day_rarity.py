@@ -197,6 +197,7 @@ class AuditStartDates(unittest.TestCase):
         import unittest.mock as m
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
         import daily_review
+        import props_ledger  # noqa: F401 -- loaded before json.load is patched (it reads its own files on import)
         finds = {f"v{i}": dict(kind="value", status="won" if i % 3 == 0 else "lost", fair=0.5,
                                start=f"2026-11-{1 + i:02d}T19:00:00Z") for i in range(20)}
         with m.patch.object(daily_review.json, "load", side_effect=lambda fh: {"finds": finds}):
