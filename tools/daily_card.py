@@ -40,7 +40,7 @@ def ten_leg_lines(D, day="today"):
         return ["Daily 10-leg: not set yet (the 8 AM card sets it)."]
     R = X.get("record") or {}
     head = (f"Daily {T['n']}-leg: all win {pc(T['chance'])}" + (f", pays {T['pays']:.2f}x" if T.get("pays") else "")
-            + (f" -- replayed, cashed {R['cashed']} of {R['days']} days" if R.get("days") else "")
+            + (f" -- replayed, cashed {R['cashed']} of the last {R['days']} days" if R.get("days") else "")
             + (f" (only {T['n']} games priced so far; it fills to {ten_leg.N} at the 8 AM card)" if T["n"] < ten_leg.N else ""))
     from ladder_ticket import needs                        # the ladder ticket's plain-words wording
     out = [head]
@@ -52,7 +52,7 @@ def ten_leg_lines(D, day="today"):
     A = X.get("alt2x") or {}
     if A.get("n") and A.get("pays"):                       # the same lines stacked to the ladder's 2x, as on the page
         out.append(f"  The same lines to {A['pays']:.2f}x: {A['n']} legs, {pc(A.get('chance'))} stated all win"
-                   + (f"; replayed, cashed {A['cashed']} of {A['days']} days" if A.get("days") else "") + ".")
+                   + (f"; replayed, cashed {A['cashed']} of the last {A['days']} days" if A.get("days") else "") + ".")
         T2 = ten_leg.to_target(((D.get("every_game") or {}).get(day)) or [], A["pays"])
         mine = {(g.get("gid"), g.get("label")) for g in T["legs"]}
         extra = [g for g in (T2 or {}).get("legs") or [] if (g.get("gid"), g.get("label")) not in mine]

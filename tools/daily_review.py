@@ -646,7 +646,7 @@ def ladder_alt_line(ladder_days=None, alt_days=None):
     rec = lambda D, src: f"{sum(src[d] for d in D)}/{len(D)}"
     only_alt = sum(alt_days[d] and not ladder_days[d] for d in days)
     only_lad = sum(ladder_days[d] and not alt_days[d] for d in days)
-    return (f"Ladder vs every-game ticket to 2x, same {len(days)} days: ladder {rec(days[:h], ladder_days)} then "
+    return (f"Ladder vs every-game ticket to 2x, same {len(days)} days (the last 14 saved cards only; older days drop off): ladder {rec(days[:h], ladder_days)} then "
             f"{rec(days[h:], ladder_days)}; every-game {rec(days[:h], alt_days)} then {rec(days[h:], alt_days)}; "
             f"only the every-game cashed on {only_alt} days, only the ladder on {only_lad}"
             + (f" -- a fair coin splits {max(only_alt, only_lad)}-{min(only_alt, only_lad)} or wider "

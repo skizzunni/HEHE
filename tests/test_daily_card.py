@@ -40,7 +40,7 @@ class ToTarget(unittest.TestCase):
         lad = {f"2026-11-{d:02d}": d % 3 == 0 for d in range(5, 13)}
         alt = {f"2026-11-{d:02d}": d % 2 == 0 for d in range(5, 14)}
         out = daily_review.ladder_alt_line(lad, alt)
-        self.assertTrue(out.startswith("Ladder vs every-game ticket to 2x, same 8 days: ladder "), out)
+        self.assertTrue(out.startswith("Ladder vs every-game ticket to 2x, same 8 days (the last 14 saved cards only; older days drop off): ladder "), out)
         self.assertIsNone(daily_review.ladder_alt_line({"2026-11-05": True}, {"2026-11-05": True}))
 
     def test_sign_p(self):
@@ -207,7 +207,7 @@ class Card(unittest.TestCase):
 
     def test_ten_leg_alt2x_line(self):
         D = dict(self.D, ten_leg={"alt2x": dict(n=14, chance=0.3034, pays=2.0, cashed=8, days=13)})
-        self.assertIn("  The same lines to 2.00x: 14 legs, 30% stated all win; replayed, cashed 8 of 13 days.",
+        self.assertIn("  The same lines to 2.00x: 14 legs, 30% stated all win; replayed, cashed 8 of the last 13 days.",
                       daily_card.ten_leg_lines(D))
         eg = [dict(gid=f"g{i}", label=f"L{i}", price="-150", p=0.9 - i / 100, league="nba", match=f"M{i}", status="open")
               for i in range(3)]

@@ -1561,6 +1561,14 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Note: the 10-leg and 2x replays are a rolling 14-day window (2026-11-20).**
+Safe Locks keeps 14 days of frozen 8 AM pools (locks.POOLS_KEPT), so every
+replayed record built from them -- the 10-leg, its sizes, the 2x every-game
+ticket and its head to head with the ladder -- counts the last 14 cards
+only; older days drop off (Nov 6 dropped today, 14 shared days became 13).
+The card, ticket and review now say "the last N days" so the counts are not
+read as all-time.
+
 **Checked: where the value bets fall short (2026-11-20).** The review has
 flagged value bets TRAILING for days (39.6% hit vs 44.6% fair on 555). By
 start-date half: 118/277 then 102/278 vs 123.2 / 124.5 expected (z -0.7 /

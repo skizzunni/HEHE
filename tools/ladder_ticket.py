@@ -130,7 +130,7 @@ def alt_line(T, record=None):
         return None
     rec = ""
     if record and record.get("days"):
-        rec = (f" Replayed on the same {record['days']} days: it cashed {record['alt']}, the ladder {record['ladder']}.")
+        rec = (f" Replayed on the same {record['days']} recent days (cards are kept 14 days): it cashed {record['alt']}, the ladder {record['ladder']}.")
         a, b = record.get("only_alt"), record.get("only_ladder")
         if a is not None and b is not None and a + b:
             from daily_review import sign_p

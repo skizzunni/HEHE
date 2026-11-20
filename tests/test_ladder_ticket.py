@@ -60,7 +60,7 @@ class AltLine(unittest.TestCase):
         T = dict(n=14, pays=2.02, chance=0.27, legs=[])
         self.assertEqual(lt.alt_line(T, dict(days=13, alt=8, ladder=4)),
                          "Alternative (your call, not used): the 14 safest every-game lines to 2.02x, 27% stated all win."
-                         " Replayed on the same 13 days: it cashed 8, the ladder 4.")
+                         " Replayed on the same 13 recent days (cards are kept 14 days): it cashed 8, the ladder 4.")
         self.assertEqual(lt.alt_line(T), "Alternative (your call, not used): the 14 safest every-game lines to 2.02x, 27% stated all win.")
         self.assertIsNone(lt.alt_line(None))
         self.assertTrue(lt.alt_line(T, dict(days=14, alt=9, ladder=4, only_alt=8, only_ladder=3)).endswith(
