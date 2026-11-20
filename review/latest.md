@@ -71,7 +71,7 @@ Lottery 10k+25: lost (6/11 legs won, killed by Minnesota Timberwolves to win, Ch
 Lottery 10k+50: lost (7/11 legs won, killed by Minnesota Timberwolves to win, Chicago Blackhawks to win, Over 50.5 points)
 Lottery 10k+100: lost (7/11 legs won, killed by Minnesota Timberwolves to win, Chicago Blackhawks to win, Over 50.5 points)
 Lottery 100: lost (3/6 legs won, killed by Minnesota Timberwolves to win, Golden State Warriors +6.5)
-Lottery 100: lost (3/5 legs won, killed by Washington Capitals -1.5)
+Lottery 100: lost (4/5 legs won, killed by Washington Capitals -1.5)
 Ladder-consistency props (all time): 2864/3460 won (82.8%) vs 86.4% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
 Props 97/124 vs 81.2% claimed.
 
