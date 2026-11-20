@@ -2165,7 +2165,8 @@ def trailing_line(a, props=None):
     H = a.get("halves") or []
     if len(H) == 2 and all(h[1] for h in H):
         both = all(100 * h[0] / h[1] < h[2] for h in H)
-        s += (f" (by half {H[0][0]}/{H[0][1]} then {H[1][0]}/{H[1][1]}; "
+        s += (f" (by half {H[0][0]}/{H[0][1]} then {H[1][0]}/{H[1][1]}, "
+              f"{round(100 * H[0][0] / H[0][1])}% / {round(100 * H[1][0] / H[1][1])}% vs {round(H[0][2])}% / {round(H[1][2])}% stated; "
               + ("short in both halves" if both else "short in one half only -- a slump, not yet a pattern") + ")")
     bits = str(a.get("name") or "").split()
     if len(bits) == 3 and bits[0] == "locks" and bits[2] == "prop":
