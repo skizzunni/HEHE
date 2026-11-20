@@ -91,7 +91,27 @@ def safe_note(L):
     return ""
 
 
-def snapshot(report):
+def final_note(L, final_fn=None):
+    """For an open game leg whose game ESPN already shows final but the
+    ledger has not graded yet: "final, not graded yet (A 3, B 6)", else None.
+    2026-11-19: both ladder NHL games were final for an hour while the
+    watcher still said open. Props are left to the grader (box scores)."""
+    if (L.get("status") or "open") != "open" or L.get("kind") == "prop" or not L.get("gid"):
+        return None
+    if final_fn is None:
+        import ledger
+        final_fn = ledger._final
+    lg, eid = str(L["gid"]).split(":", 1)
+    try:
+        res = final_fn(lg, eid, {"date": L.get("date")} if L.get("date") else {})
+    except Exception:
+        return None
+    if not res or res.get("live") or not res.get("winner"):
+        return None
+    return "final, not graded yet (" + ", ".join(f"{k} {n}" for k, n in (res.get("scores") or {}).items()) + ")"
+
+
+def snapshot(report, final_fn=None):
     """{label: status/score} for today's legs, or {"SETTLED": "..."}."""
     t = report.get("today")
     if not t:
@@ -100,7 +120,7 @@ def snapshot(report):
     out = {}
     for L in t["legs"]:
         v = (L.get("status") or "open") + (f" | {L['score']}" if L.get("score") else "")
-        note = safe_note(L)
+        note = final_note(L, final_fn) or safe_note(L)
         out[L["label"]] = v + (f" | {note}" if note else "")
     return out
 

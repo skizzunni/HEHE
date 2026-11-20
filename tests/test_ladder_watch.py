@@ -317,6 +317,20 @@ class TenLegWatch(unittest.TestCase):
         self.assertEqual(w.ten_snapshot("2026-11-18", {}, pool={}), {})
 
 
+class FinalNote(unittest.TestCase):
+    def test_final_before_graded(self):
+        res = {"live": False, "winner": "Buffalo Sabres", "scores": {"Washington Capitals": 3, "Buffalo Sabres": 6}}
+        L = dict(label="Washington Capitals +1.5", gid="nhl:1", kind="game", status="open")
+        self.assertEqual(w.final_note(L, lambda lg, eid, e: res),
+                         "final, not graded yet (Washington Capitals 3, Buffalo Sabres 6)")
+        self.assertIsNone(w.final_note(L, lambda lg, eid, e: {"live": True, "state": "2nd"}))
+        self.assertIsNone(w.final_note(dict(L, status="won"), lambda lg, eid, e: res))
+        self.assertIsNone(w.final_note(dict(L, kind="prop"), lambda lg, eid, e: res))
+        self.assertIsNone(w.final_note(L, lambda lg, eid, e: 1 / 0))           # a feed error is not a result
+        snap = w.snapshot({"today": {"legs": [L]}}, final_fn=lambda lg, eid, e: res)
+        self.assertEqual(snap["Washington Capitals +1.5"], "open | final, not graded yet (Washington Capitals 3, Buffalo Sabres 6)")
+
+
 class AltSnapshot(unittest.TestCase):
     def _snap(self, st):
         import unittest.mock as m
