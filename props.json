@@ -13349,6 +13349,22 @@
   "price": "-750",
   "status": "open"
  },
+ "nba:401909310|n:jeremiah fears|Points|10+": {
+  "aid": null,
+  "date": "2026-11-20",
+  "edge": -0.6,
+  "gid": "nba:401909310",
+  "imp": 0.9167,
+  "label": "Jeremiah Fears: 10+ Points",
+  "league": "nba",
+  "line": "10+",
+  "market": "Points",
+  "name": "Jeremiah Fears",
+  "p": 0.8503,
+  "p_fair": 0.9109,
+  "price": "-1100",
+  "status": "open"
+ },
  "nba:401909310|n:saddiq bey|Threes Made|1+": {
   "aid": null,
   "date": "2026-11-20",
@@ -13555,6 +13571,22 @@
   "p": 0.8567,
   "p_fair": 0.9269,
   "price": "-1100",
+  "status": "open"
+ },
+ "nba:401909312|n:jabari smith|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-11-20",
+  "edge": -3.9,
+  "gid": "nba:401909312",
+  "imp": 0.9333,
+  "label": "Jabari Smith: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Jabari Smith",
+  "p": 0.8524,
+  "p_fair": 0.8968,
+  "price": "-1400",
   "status": "open"
  },
  "nba:401909313|n:collin sexton|Pts + Ast|10+": {
@@ -105934,11 +105966,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Bobby McMann",
   "p": 0.7231,
   "p_fair": null,
   "price": "-335",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892752|n:brandon montour|Shots on Goal|2+": {
   "aid": null,
@@ -105950,11 +105984,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Brandon Montour",
   "p": 0.7147,
   "p_fair": null,
   "price": "-320",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892752|n:brock boeser|Shots on Goal|1+": {
   "aid": null,
@@ -105966,11 +106002,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Brock Boeser",
   "p": 0.8414,
   "p_fair": null,
   "price": "-870",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892752|n:jake debrusk|Shots on Goal|1+": {
   "aid": null,
@@ -105981,11 +106019,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jake DeBrusk",
   "p": 0.8748,
   "price": "-2000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892752|n:jordan eberle|Shots on Goal|1+": {
   "aid": null,
@@ -105997,11 +106037,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jordan Eberle",
   "p": 0.8443,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892752|n:vince dunn|Shots on Goal|1+": {
   "aid": null,
@@ -106013,11 +106055,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Vince Dunn",
   "p": 0.8573,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892753|n:jack eichel|Shots on Goal|2+": {
   "aid": null,

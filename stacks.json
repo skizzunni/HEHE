@@ -15138,7 +15138,7 @@
     "t": "nomargin",
     "team": "Seattle Sounders FC"
    },
-   "status": "open"
+   "status": "void"
   },
   "mls:401933555|Under 5.5 goals": {
    "away": "Real Salt Lake",
@@ -15154,7 +15154,7 @@
     "line": 5.5,
     "t": "under"
    },
-   "status": "open"
+   "status": "void"
   },
   "mls:761773|No \u00b7 D.C. United wins by over 2.5 goals": {
    "away": "D.C. United",
@@ -32094,11 +32094,12 @@
    "match": "Vancouver Canucks at Seattle Kraken",
    "p": 0.9704,
    "p_model": 0.9692,
+   "score": "Vancouver Canucks 1 - Seattle Kraken 5",
    "spec": {
     "line": 2.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892752|Under 9.5 goals": {
    "away": "Vancouver Canucks",
@@ -32110,11 +32111,12 @@
    "match": "Vancouver Canucks at Seattle Kraken",
    "p": 0.8948,
    "p_model": 0.8904,
+   "score": "Vancouver Canucks 1 - Seattle Kraken 5",
    "spec": {
     "line": 9.5,
     "t": "under"
    },
-   "status": "open"
+   "status": "won"
   },
   "nhl:401892753|Over 2.5 goals": {
    "away": "Dallas Stars",
@@ -53816,7 +53818,7 @@
    "logged": "2026-11-19T00:03",
    "n": 10,
    "prob": 0.6699,
-   "status": "open"
+   "status": "won"
   },
   "20261119:10:2": {
    "fair": 1.71,
@@ -53907,7 +53909,7 @@
    "logged": "2026-11-19T00:03",
    "n": 15,
    "prob": 0.5539,
-   "status": "open"
+   "status": "won"
   },
   "20261119:20:0": {
    "fair": 2.27,
@@ -54005,7 +54007,7 @@
    "logged": "2026-11-19T00:03",
    "n": 2,
    "prob": 0.8104,
-   "status": "open"
+   "status": "void"
   },
   "20261119:2:1": {
    "fair": 1.24,
@@ -54039,7 +54041,7 @@
    "logged": "2026-11-19T00:03",
    "n": 3,
    "prob": 0.7305,
-   "status": "open"
+   "status": "void"
   },
   "20261119:3:1": {
    "fair": 1.39,
@@ -54147,7 +54149,7 @@
    "logged": "2026-11-19T00:03",
    "n": 6,
    "prob": 0.7771,
-   "status": "open"
+   "status": "won"
   },
   "20261119:8:0": {
    "fair": 1.4,
@@ -54181,7 +54183,7 @@
    "logged": "2026-11-19T00:03",
    "n": 8,
    "prob": 0.7427,
-   "status": "open"
+   "status": "won"
   },
   "20261119:8:2": {
    "fair": 1.6,
