@@ -81,7 +81,8 @@ def lines(R):
         outs = "; ".join(f"{t} without {', '.join(p)}" for t, p in (L.get("outs") or {}).items())
         out.append(f"{i}. {L['label']} {L['price']} ({round(100 * L['p'])}%) -- {L.get('match')}, {L.get('lg')} "
                    f"{L.get('tip')} ET. Needs: {needs(L['label'], L.get('league'))}."
-                   + (f" Locks like it: {rec['won']} of {rec['n']}." if rec.get("n") else "")
+                   + (f" Locks like it: {rec['won']} of {rec['n']}" + (f" ({round(100 * rec['won'] / rec['n'])}%)" if rec["n"] >= 10 else "")
+                      + "." if rec.get("n") else "")
                    + (f" Every {str(L.get('league') or '').upper()} {L.get('market')} line at a similar chance: "
                       f"{pr['won']} of {pr['n']} ({round(100 * pr['won'] / pr['n'])}% vs {pr['said']}% stated)." if pr.get("n") else "")
                    + (f" Out: {outs}." if outs else ""))

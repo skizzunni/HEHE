@@ -29,7 +29,7 @@ class Ticket(unittest.TestCase):
                                        outs={"Orlando Magic": ["X"]})]))
         L = t.lines(R)
         self.assertEqual(L[0], "Run 6, stake $4.95 (the whole bank) on 1 legs at 2.00x -> $9.90; 45% est. all win.")
-        self.assertIn("Needs: Franz Wagner: 6 or more assists. Locks like it: 21 of 24.", L[1])
+        self.assertIn("Needs: Franz Wagner: 6 or more assists. Locks like it: 21 of 24 (88%).", L[1])
         self.assertIn("107 of 138 (78% vs 78% stated). Out: Orlando Magic without X.", L[1])
         self.assertEqual(L[2], "Plain top 4 instead: 36% at 2.48x.")
         self.assertTrue(L[3].startswith("Without props: 3 legs at 2.00x, 44%"))
