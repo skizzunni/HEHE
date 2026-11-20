@@ -794,6 +794,8 @@ function ladderKinds(K){
   const parts = [one('game', 'game lines'), one('prop', 'player props')].filter(Boolean);
   return parts.length ? ' By kind: ' + parts.join(', ') + '.' : '';
 }
+// leagues that are not soccer (as tools/daily_review.NOT_SOCCER)
+const NOT_SOCCER = new Set(['nba', 'nhl', 'nfl', 'ncaaf', 'ncaab', 'mlb', 'wnba', 'atp', 'wta', 'ufc']);
 // NHL back-to-back (rebuild_board b2b_of): which side played last night.
 // 2022-25: the tired team ran under its closing price every season, but
 // betting against it lost money in 2023-24 -- a watch, not a rule
@@ -3936,7 +3938,10 @@ function scoreboardHTML(){
                   : R.today_rarity.as_good_pct != null && R.today_rarity.as_good_pct < 10 && w + l >= 10
                     ? 'an unusually good day so far (only ' + (R.today_rarity.as_good_pct < 0.5 ? 'under 0.5' : Math.round(R.today_rarity.as_good_pct)) + '% of days go this well this far in)'
                   : 'within normal swings (' + Math.round(R.today_rarity.as_bad_pct) + '% of days this far in have as many or more)') + '</div>' : '')
-          + ((R.today_losses_by || []).length ? '<div class="rsub">Losses by competition: ' + R.today_losses_by.map(x => esc(String(x.league).toUpperCase()) + ' ' + x.n).join(', ') + '</div>' : '')
+          + ((R.today_losses_by || []).length ? '<div class="rsub">Losses by competition: ' + R.today_losses_by.map(x => esc(String(x.league).toUpperCase()) + ' ' + x.n).join(', ')
+             // a day like Nov 20 (ten soccer favourites down before the American games began): say so plainly
+             + (l >= 4 && R.today_losses_by.every(x => !NOT_SOCCER.has(String(x.league))) ? ' &mdash; every loss so far is soccer; the American games are untouched' : '')
+             + '</div>' : '')
         : '<div class="rbig">&mdash;</div>'
           + '<div class="rsub">no call has finished yet today</div>')
     + (R.today_strong_won + R.today_strong_lost

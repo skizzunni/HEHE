@@ -449,6 +449,8 @@ def main():
         fails.append("health box must list the trailing split and the stuck record: " + old["health"])
     if "2 losses against about 4.8 expected · within normal swings (18% of days this far in have as many or more)" not in new["results"]:
         fails.append("today rarity line missing: " + new["results"][:600])
+    if "every loss so far is soccer" in new["results"]:
+        fails.append("the all-soccer note needs 4+ losses (the fixture has 2)")
     if "their chances said about 5.4 wins" not in new["results"] or "Losses by competition: UEL 6, UECL 4" not in new["results"]:
         fails.append("Results header must give the expected wins: " + new["results"][:200])
     if "Changes tested" not in new["results"] or "New right, old wrong" not in new["results"] \
