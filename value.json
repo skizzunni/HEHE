@@ -2168,6 +2168,62 @@
    "profit": 0.0028,
    "seen": "2026-11-13T00:02:05+00:00"
   },
+  "nba:401909310|away|FanDuel": {
+   "dec": 5.9,
+   "ev": 0.0139,
+   "fair": 0.1719,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909310",
+   "kind": "value",
+   "league": "nba",
+   "match": "NO @ OKC",
+   "price": "+490",
+   "seen": "2026-11-20T15:23:46+00:00",
+   "side": "away",
+   "start": "2026-11-21T01:00Z",
+   "team": "New Orleans Pelicans",
+   "tip": "8:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909310|home|Kalshi": {
+   "dec": 1.2042,
+   "ev": 0.0155,
+   "fair": 0.8433,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909310",
+   "kind": "value",
+   "league": "nba",
+   "match": "NO @ OKC",
+   "price": "-490",
+   "seen": "2026-11-20T15:23:46+00:00",
+   "side": "home",
+   "start": "2026-11-21T01:00Z",
+   "team": "Oklahoma City Thunder",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909310|sure": {
+   "id": "nba:401909310",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+490",
+     "stake_share": 0.1695,
+     "team": "New Orleans Pelicans",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "-490",
+     "stake_share": 0.8305,
+     "team": "Oklahoma City Thunder",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "NO @ OKC",
+   "profit": 0.0001,
+   "seen": "2026-11-20T15:23:46+00:00"
+  },
   "nba:401909311|{\"line\": 226.5, \"t\": \"under\"}|Kalshi": {
    "dec": 2.0101,
    "dk": "-114",
@@ -20462,6 +20518,26 @@
    "seen": "2026-11-13T12:40:36+00:00",
    "status": "lost",
    "target": 10.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401909310:away": {
+   "ev": 0.0142,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0139,
+     "fair": 0.1719,
+     "id": "nba:401909310",
+     "price": "+490",
+     "side": "away",
+     "spec": null,
+     "team": "New Orleans Pelicans"
+    }
+   ],
+   "payout": 5.9,
+   "prob": 0.1719,
+   "seen": "2026-11-20T15:23:46+00:00",
+   "target": 2.0,
    "venue": "FanDuel"
   },
   "parlay|FanDuel|nba:401909847:away|nba:401909848:home": {

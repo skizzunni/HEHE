@@ -3351,6 +3351,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV21HOUWVU-HOU"
   },
+  "KXNCAAFGAME-26NOV21INDWASH-IND|YES": {
+   "ask": 0.74,
+   "bid": 0.73,
+   "cost": 0.7335,
+   "edge": 0.0023,
+   "fair": 0.7352,
+   "id": "ncaaf:401858535",
+   "label": "Indiana Hoosiers",
+   "league": "ncaaf",
+   "match": "IU @ WASH",
+   "posted": "2026-11-20T15:23:46+00:00",
+   "queue": 35900.88,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Indiana Hoosiers"
+   },
+   "start": "2026-11-21T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV21INDWASH-IND"
+  },
   "KXNCAAFGAME-26NOV21LSUTENN-LSU|YES": {
    "ask": 0.51,
    "bid": 0.5,
@@ -9114,6 +9135,28 @@
    "start": "2026-11-21T01:00Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV20OREMSU-ORE18"
+  },
+  "KXNCAAFSPREAD-26NOV20UNMWYO-UNM10|NO": {
+   "ask": 0.52,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401864542",
+   "label": "Wyoming Cowboys +9.5",
+   "league": "ncaaf",
+   "match": "UNM @ WYO",
+   "posted": "2026-11-20T15:23:46+00:00",
+   "queue": 62577.79,
+   "side": "NO",
+   "spec": {
+    "line": 9.5,
+    "t": "spread",
+    "team": "Wyoming Cowboys"
+   },
+   "start": "2026-11-21T02:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV20UNMWYO-UNM10"
   },
   "KXNCAAFSPREAD-26NOV20UNMWYO-UNM8|NO": {
    "ask": 0.52,
