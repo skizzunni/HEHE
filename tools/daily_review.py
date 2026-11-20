@@ -2330,7 +2330,22 @@ def sweep_line(sw):
                if sw.get("lost") and sw.get("coin_flips") is not None else "")
             + ("; losses by league: " + ", ".join(f"{k} {v} ({(sw.get('expected_by_league') or {}).get(k, 0):g} expected)"
                                                   for k, v in sw["lost_by_league"].items())
-               if sw.get("lost") and sw.get("lost_by_league") else "") + ".")
+               if sw.get("lost") and sw.get("lost_by_league") else "")
+            + _one_sport(sw) + ".")
+
+
+def _one_sport(sw, min_lost=4):
+    """'; all N losses in soccer' when every loss so far is one sport -- on a
+    day like 2026-11-20 (ten soccer favourites down by mid-afternoon) the
+    league list alone hides that the American card is untouched."""
+    L = sw.get("lost_by_league") or {}
+    if (sw.get("lost") or 0) < min_lost or not L:
+        return ""
+    soccer = all(k not in NOT_SOCCER for k in L)
+    if soccer:
+        return f"; all {sw['lost']} losses are soccer -- nothing from the American games yet"
+    sports = {k for k in L}
+    return f"; all {sw['lost']} losses are {next(iter(sports)).upper()}" if len(sports) == 1 else ""
 
 
 def words(r, fit):

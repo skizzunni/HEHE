@@ -1564,7 +1564,9 @@ ladder's rule is the user's to change; the review now prints this daily
 **Checked: a 0.2% day for soccer (2026-11-20).** By mid-afternoon on Friday
 Nov 20 the board was 6-9 with all nine losses soccer favourites (3.4
 expected; Kashiwa, Kobe, East Bengal, Independiente del Valle, Bielefeld,
-Heidenheim, Bayern draw, Nacional, ...). Looked for a cause, not a cure:
+Heidenheim, Bayern draw, Nacional, ...). Looked for a cause, not a cure
+(also: soccer "to win" lines in the saved every-game pools, 27/37 then 24/37
+vs 23.5 / 23.3 expected, on par):
 second-tier leagues' win-or-draw picks 27/34 then 24/36 vs 24.9 / 26.1
 (z +0.8 / -0.8), other leagues ahead both halves; soccer by weekday, Fridays
 43/56 then 40/58 (z +0.8 / -0.9), no weekday short in both halves. Nothing

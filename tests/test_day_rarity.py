@@ -205,3 +205,16 @@ class AuditStartDates(unittest.TestCase):
         v = [a for a in out if a["name"] == "value bets"][0]
         self.assertEqual(len(v["halves"]), 2)
         self.assertEqual(sum(h[1] for h in v["halves"]), 20)
+
+
+class OneSport(unittest.TestCase):
+    def test_soccer_only_losses_named(self):
+        import os
+        import sys
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        sw = dict(won=6, lost=10, open=27, broke_on="jpn X", lost_by_league={"jpn": 2, "ger2": 2, "uru": 3, "esp": 1, "ecu": 1, "ind": 1})
+        self.assertTrue(daily_review.sweep_line(sw).endswith("; all 10 losses are soccer -- nothing from the American games yet."))
+        self.assertEqual(daily_review._one_sport(dict(sw, lost=3)), "")
+        self.assertEqual(daily_review._one_sport(dict(lost=5, lost_by_league={"nba": 5})), "; all 5 losses are NBA")
+        self.assertEqual(daily_review._one_sport(dict(lost=5, lost_by_league={"nba": 3, "epl": 2})), "")
