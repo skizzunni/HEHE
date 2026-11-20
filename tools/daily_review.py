@@ -944,6 +944,42 @@ def dc_band_line(ledger=None, bands=DC_BANDS, min_n=20):
     return ("Win-or-draw picks by stated chance, by half: " + "; ".join(parts) + ".") if parts else None
 
 
+def board_league_line(ledger=None, min_n=40, top=3):
+    """Graded board picks by league, split at the median date: the leagues
+    weakest in their worse half, won vs stated with z. Information only.
+    2026-11-20 (three soccer losses before noon): of 10 leagues with 40+
+    picks only NCAAF is short in both halves, and barely -- 119/167 then
+    93/135 (z -0.2 / -0.4); ARG z -0.8 / +1.5. Nothing near the bar."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    R = sorted((e for e in ledger.values() if isinstance(e, dict) and e.get("status") in ("won", "lost") and e.get("date")
+                and not e.get("record_excluded") and e.get("conf") is not None), key=lambda e: e["date"])
+    if len(R) < 2 * min_n:
+        return None
+    mid = R[len(R) // 2]["date"]
+
+    def rec(X):
+        w = sum(e["status"] == "won" for e in X)
+        p = sum(e["conf"] for e in X) / 100
+        v = sum(e["conf"] / 100 * (1 - e["conf"] / 100) for e in X) or 1
+        return w, len(X), (w - p) / math.sqrt(v)
+    rows = []
+    for lg in {e.get("league") for e in R}:
+        A = [e for e in R if e.get("league") == lg and e["date"] < mid]
+        B = [e for e in R if e.get("league") == lg and e["date"] >= mid]
+        if len(A) + len(B) < min_n or not A or not B:
+            continue
+        a, b = rec(A), rec(B)
+        rows.append((min(a[2], b[2]), str(lg).upper(), a, b))
+    if not rows:
+        return None
+    rows.sort()
+    short = [r[1] for r in rows if r[2][2] < 0 and r[3][2] < 0]
+    return ("Board picks by league, weakest first, by half: " + "; ".join(
+        f"{lg} {a[0]}/{a[1]} (z {a[2]:+.1f}) then {b[0]}/{b[1]} (z {b[2]:+.1f})" for _, lg, a, b in rows[:top])
+        + f" -- of {len(rows)} leagues; " + (f"short in both halves: {', '.join(short)}." if short else "none short in both halves."))
+
+
 def coin_flip_line(ledger=None, cut=60):
     """Board picks called under `cut`% (the near coin flips), won vs stated by
     date half, split by how the price moved after the call (3+ points against,
@@ -2285,6 +2321,8 @@ def words(r, fit):
         out.append(r["dc_moves"])
     if r.get("dc_bands"):
         out.append(r["dc_bands"])
+    if r.get("board_leagues"):
+        out.append(r["board_leagues"])
     if r.get("ladder_types"):
         out.append(r["ladder_types"])
     if r.get("eg_bands"):
@@ -2459,6 +2497,7 @@ def _main():
     log[today.isoformat()]["price_moves"] = price_move_line(ledger)
     log[today.isoformat()]["dc_moves"] = dc_move_line(ledger)
     log[today.isoformat()]["dc_bands"] = dc_band_line(ledger)
+    log[today.isoformat()]["board_leagues"] = board_league_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
     log[today.isoformat()]["value_leagues"] = value_league_line()
     log[today.isoformat()]["td_calibration"] = td_calibration_line()

@@ -58,6 +58,20 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class BoardLeagueLine(unittest.TestCase):
+    def test_weakest_first(self):
+        import daily_review
+        led = {}
+        for i in range(100):
+            d = f"2026-11-{1 + i % 20:02d}"
+            led[f"a{i}"] = dict(league="nba", status="won", conf=60, date=d)
+            led[f"b{i}"] = dict(league="nhl", status="won" if i % 2 else "lost", conf=70, date=d)
+        out = daily_review.board_league_line(led)
+        self.assertTrue(out.startswith("Board picks by league, weakest first, by half: NHL "), out)
+        self.assertIn("short in both halves: NHL.", out)
+        self.assertIsNone(daily_review.board_league_line({}))
+
+
 class ValueLeagueLine(unittest.TestCase):
     def test_by_league_and_half(self):
         import daily_review
