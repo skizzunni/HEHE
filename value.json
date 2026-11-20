@@ -2167,6 +2167,63 @@
    "profit": 0.0028,
    "seen": "2026-11-13T00:02:05+00:00"
   },
+  "nba:401909311|{\"line\": 226.5, \"t\": \"under\"}|Kalshi": {
+   "dec": 2.0101,
+   "dk": "-114",
+   "ev": 0.0233,
+   "fair": 0.5091,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nba:401909311",
+   "kind": "single",
+   "league": "nba",
+   "market": "under",
+   "match": "PHX @ UTAH",
+   "price": "+101",
+   "seen": "2026-11-20T02:44:35+00:00",
+   "side": "{\"line\": 226.5, \"t\": \"under\"}",
+   "spec": {
+    "line": 226.5,
+    "t": "under"
+   },
+   "start": "2026-11-21T02:30Z",
+   "team": "under 226.5",
+   "tip": "9:30 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401909313|away|FanDuel": {
+   "dec": 8.0,
+   "ev": 0.0236,
+   "fair": 0.128,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909313",
+   "kind": "value",
+   "league": "nba",
+   "match": "SAC @ LAL",
+   "price": "+700",
+   "seen": "2026-11-20T02:44:35+00:00",
+   "side": "away",
+   "start": "2026-11-21T03:00Z",
+   "team": "Sacramento Kings",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401909313|home|Kalshi": {
+   "dec": 1.139,
+   "ev": 0.0177,
+   "fair": 0.8935,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401909313",
+   "kind": "value",
+   "league": "nba",
+   "match": "SAC @ LAL",
+   "price": "-720",
+   "seen": "2026-11-20T02:44:35+00:00",
+   "side": "home",
+   "start": "2026-11-21T03:00Z",
+   "team": "Los Angeles Lakers",
+   "tip": "10:00 PM",
+   "venue": "Kalshi"
+  },
   "nba:401909844|away|Kalshi": {
    "dec": 3.1776,
    "ev": 0.031,
@@ -19214,6 +19271,7 @@
     "team": "Pittsburgh Penguins"
    },
    "start": "2026-11-20T00:00Z",
+   "status": "lost",
    "team": "Pittsburgh Penguins -1.5",
    "tip": "7:00 PM",
    "venue": "Kalshi"
