@@ -19650,6 +19650,108 @@
    "tip": "6:00 PM",
    "venue": "FanDuel"
   },
+  "nhl:401892756|{\"line\": 6.5, \"t\": \"over\"}|FanDuel": {
+   "dec": 2.08,
+   "dk": "-105",
+   "ev": 0.0164,
+   "fair": 0.4887,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892756",
+   "kind": "single",
+   "league": "nhl",
+   "market": "over",
+   "match": "BUF @ FLA",
+   "price": "+108",
+   "seen": "2026-11-20T16:15:20+00:00",
+   "side": "{\"line\": 6.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 6.5,
+    "t": "over"
+   },
+   "start": "2026-11-21T23:00Z",
+   "team": "over 6.5",
+   "tip": "6:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892758|{\"line\": 6.5, \"t\": \"over\"}|FanDuel": {
+   "dec": 2.04,
+   "dk": "-120",
+   "ev": 0.0664,
+   "fair": 0.5227,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892758",
+   "kind": "suspect",
+   "league": "nhl",
+   "market": "over",
+   "match": "WSH @ BOS",
+   "price": "+104",
+   "seen": "2026-11-20T16:15:20+00:00",
+   "side": "{\"line\": 6.5, \"t\": \"over\"}",
+   "spec": {
+    "line": 6.5,
+    "t": "over"
+   },
+   "start": "2026-11-22T00:00Z",
+   "team": "over 6.5",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892762|home|FanDuel": {
+   "dec": 2.05,
+   "ev": 0.0245,
+   "fair": 0.4997,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892762",
+   "kind": "value",
+   "league": "nhl",
+   "match": "NYI @ DET",
+   "price": "+105",
+   "seen": "2026-11-20T16:15:20+00:00",
+   "side": "home",
+   "start": "2026-11-22T00:00Z",
+   "team": "Detroit Red Wings",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892764|away|FanDuel": {
+   "dec": 1.9009,
+   "ev": 0.0532,
+   "fair": 0.554,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nhl:401892764",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "VGK @ WPG",
+   "price": "-111",
+   "seen": "2026-11-20T16:15:20+00:00",
+   "side": "away",
+   "start": "2026-11-22T00:00Z",
+   "team": "Vegas Golden Knights",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
+  "nhl:401892764|sure": {
+   "id": "nhl:401892764",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "-111",
+     "stake_share": 0.5296,
+     "team": "Vegas Golden Knights",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "+114",
+     "stake_share": 0.4704,
+     "team": "Winnipeg Jets",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "VGK @ WPG",
+   "profit": 0.0067,
+   "seen": "2026-11-20T16:15:20+00:00"
+  },
   "nor:401843366|away|FanDuel": {
    "dec": 3.0,
    "ev": 0.0126,
