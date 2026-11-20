@@ -52,6 +52,22 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class LocksLeagueTypeLine(unittest.TestCase):
+    def test_short_pairs_named(self):
+        import daily_review
+        legs = []
+        for i in range(48):
+            d = f"2026-11-{1 + i % 24:02d}"
+            legs.append(dict(league="nba", label="Over 220.5 points", spec={"t": "over"}, kind="game", p=0.8, date=d,
+                             status="won" if i % 2 else "lost"))
+            legs.append(dict(league="nhl", label="Under 6.5 goals", spec={"t": "under"}, kind="game", p=0.6, date=d,
+                             status="won"))
+        out = daily_review.locks_league_type_line(legs)
+        self.assertTrue(out.startswith("Locks by league and bet type, short in both halves: NBA total 50% then 50%"), out)
+        self.assertNotIn("NHL", out)
+        self.assertIsNone(daily_review.locks_league_type_line(legs[:10]))
+
+
 class DcMoveLine(unittest.TestCase):
     def test_moved_against_only(self):
         import daily_review

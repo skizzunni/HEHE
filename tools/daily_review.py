@@ -1013,6 +1013,25 @@ def locks_type_line(legs=None):
             + (f" Short in both halves: {', '.join(short)}." if short else ""))
 
 
+def locks_league_type_line(legs=None, min_half=4):
+    """Locks + Safe Locks legs by league AND bet type, both date halves: the
+    pairs short of stated in both halves, worst first (an empty list says
+    so). Information only. 2026-11-20: of 10 pairs only NFL props, 79% then
+    73% vs 86% / 80% stated on 30 legs -- a few legs short, far from the bar."""
+    import ladder
+    H = _halves_by(legs if legs is not None else _all_lock_legs(),
+                   lambda x: f"{str(x.get('league') or '').upper()} {ladder.leg_type(x)}", min_half)
+    if H is None:
+        return None
+    short = sorted(((k, r) for k, r in H if all(w < said for w, said, _ in r)),
+                   key=lambda kv: sum(w - said for w, said, _ in kv[1]))
+    if not short:
+        return f"Locks by league and bet type: none of {len(H)} pairs short of stated in both halves."
+    return ("Locks by league and bet type, short in both halves: " + "; ".join(
+        f"{k} {round(r[0][0])}% then {round(r[1][0])}% (vs {round(r[0][1])}%, {round(r[1][1])}%; {r[0][2] + r[1][2]} legs)"
+        for k, r in short[:4]) + f" -- of {len(H)} pairs; information only.")
+
+
 def locks_prop_market_line(legs=None, min_half=3):
     """Locks + Safe Locks prop legs by league and market, both date halves
     against stated, for markets with min_half+ legs in each half: where the
@@ -2165,6 +2184,8 @@ def words(r, fit):
         out.append(r["lock_types"])
     if r.get("lock_leagues"):
         out.append(r["lock_leagues"])
+    if r.get("lock_league_types"):
+        out.append(r["lock_league_types"])
     if r.get("lock_prop_markets"):
         out.append(r["lock_prop_markets"])
     if r.get("every_game_types"):
@@ -2348,6 +2369,7 @@ def _main():
     log[today.isoformat()]["nhl_b2b"] = nhl_b2b_line(today, ledger=ledger)
     log[today.isoformat()]["draws"] = draw_rate_line(ledger)
     log[today.isoformat()]["lock_types"] = locks_type_line()
+    log[today.isoformat()]["lock_league_types"] = locks_league_type_line()
     log[today.isoformat()]["lock_leagues"] = locks_league_line()
     log[today.isoformat()]["lock_prop_markets"] = locks_prop_market_line()
     log[today.isoformat()]["priced_calibration"] = priced_calibration_line()
