@@ -131,6 +131,11 @@ def alt_line(T, record=None):
     rec = ""
     if record and record.get("days"):
         rec = (f" Replayed on the same {record['days']} days: it cashed {record['alt']}, the ladder {record['ladder']}.")
+        a, b = record.get("only_alt"), record.get("only_ladder")
+        if a is not None and b is not None and a + b:
+            from daily_review import sign_p
+            rec += (f" Only it cashed on {a} days, only the ladder on {b}; a fair coin splits that unevenly "
+                    f"{round(100 * sign_p(a, b))}% of the time.")
     return (f"Alternative (your call, not used): the {T['n']} safest every-game lines to {T['pays']:.2f}x, "
             f"{round(100 * T['chance'])}% stated all win.{rec}")
 
@@ -144,7 +149,8 @@ def alt_record():
     lad = {e["day"]: e["result"] == "won" for r in ladder.replay() for e in r["days"] if e["result"] in ("won", "lost")}
     alt = ten_leg.to_target_days(locks.SAFE_LEDGER)
     days = set(lad) & set(alt)
-    return dict(days=len(days), alt=sum(alt[d] for d in days), ladder=sum(lad[d] for d in days))
+    return dict(days=len(days), alt=sum(alt[d] for d in days), ladder=sum(lad[d] for d in days),
+                only_alt=sum(alt[d] and not lad[d] for d in days), only_ladder=sum(lad[d] and not alt[d] for d in days))
 
 
 if __name__ == "__main__":

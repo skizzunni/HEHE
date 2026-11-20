@@ -63,6 +63,8 @@ class AltLine(unittest.TestCase):
                          " Replayed on the same 13 days: it cashed 8, the ladder 4.")
         self.assertEqual(lt.alt_line(T), "Alternative (your call, not used): the 14 safest every-game lines to 2.02x, 27% stated all win.")
         self.assertIsNone(lt.alt_line(None))
+        self.assertTrue(lt.alt_line(T, dict(days=14, alt=9, ladder=4, only_alt=8, only_ladder=3)).endswith(
+            "Only it cashed on 8 days, only the ladder on 3; a fair coin splits that unevenly 23% of the time."))
 
 
 class TypeLine(unittest.TestCase):
