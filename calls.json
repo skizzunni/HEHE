@@ -10228,7 +10228,7 @@
      "conf": 99,
      "conf_first": 99,
      "current": {
-      "checked_at": "2026-11-20T01:13:07+00:00",
+      "checked_at": "2026-11-20T01:18:07+00:00",
       "dc": false,
       "gate": {
        "ok": true,
@@ -10320,30 +10320,7 @@
      "close": true,
      "conf": 85,
      "conf_first": 85,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-20T01:13:07+00:00",
-      "conf": 85,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "nfl:401873066",
-      "league": "nfl",
-      "match": "IND @ HOU",
-      "pick": "Houston Texans",
-      "price": "-750",
-      "price_at": "2026-11-20T01:12:44+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34118011:0ML84695444_1",
-      "prob_at": "2026-11-20T01:12:44+00:00",
-      "rank": 3,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-20T01:15Z"
-     },
+     "current": null,
      "dc": false,
      "fp": "dd47dce068a0",
      "gate": {
@@ -10481,58 +10458,10 @@
     "nba": "2026-11-20T00:25:17+00:00",
     "nfl": "2026-11-20T00:51:11+00:00"
    },
-   "candidate_observations": {
-    "nfl:401873066": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 85,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-20T01:13:07+00:00",
-      "conf": 85,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "nfl:401873066",
-      "league": "nfl",
-      "match": "IND @ HOU",
-      "pick": "Houston Texans",
-      "price": "-750",
-      "price_at": "2026-11-20T01:12:44+00:00",
-      "price_market": "moneyline",
-      "price_ref": "34118011:0ML84695444_1",
-      "prob_at": "2026-11-20T01:12:44+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-20T01:15Z"
-     },
-     "dc": false,
-     "fp": "dd47dce068a0",
-     "gate": {
-      "ok": true,
-      "what": "no lineup gate for this league"
-     },
-     "id": "nfl:401873066",
-     "league": "nfl",
-     "match": "IND @ HOU",
-     "news_at": "2026-11-20T00:51:11+00:00",
-     "pick": "Houston Texans",
-     "price": "-750",
-     "price_at": "2026-11-20T01:12:44+00:00",
-     "price_market": "moneyline",
-     "price_ref": "34118011:0ML84695444_1",
-     "side": "home",
-     "start": "2026-11-20T01:15Z",
-     "tip": "8:15 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
-    "nba"
+    "nba",
+    "nfl"
    ],
    "news": {
     "nba": "2026-11-19T23:51:54+00:00",
@@ -10541,8 +10470,8 @@
    "shadow_watch": {
     "best_at": "2026-11-19T22:50:04+00:00",
     "best_ceiling": 1.764,
-    "checks": 147,
-    "last": "2026-11-20T01:13:07+00:00",
+    "checks": 148,
+    "last": "2026-11-20T01:18:07+00:00",
     "max_ready": 5,
     "reasons": {
      "awaiting confirmed XIs": 199,
