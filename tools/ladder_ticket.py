@@ -96,6 +96,13 @@ def lines(R):
     tl = type_line(R)
     if tl:
         out.append(tl)
+    try:                                      # how lost runs died: one leg, often by a point or two
+        from daily_review import ladder_misses_line
+        ml = ladder_misses_line(R)
+        if ml:
+            out.append(ml)
+    except Exception:
+        pass
     if R.get("wins_needed"):
         out.append(f"{R['wins_needed']} straight wins at this price reach the target"
                    + (f", about 1 in {round(1 / R['chance_to_target']):,}." if R.get("chance_to_target") else "."))

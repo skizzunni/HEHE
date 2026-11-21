@@ -76,3 +76,12 @@ class TypeLine(unittest.TestCase):
                          "spreads 1/4 (25% vs 76% stated). Tickets cashed 6 of 16. "
                          "Weak spot: winners -- too few legs to cut them yet.")   # spreads: under 10 legs, not named
         self.assertIsNone(t.type_line({}))
+
+
+class MissesInTicket(unittest.TestCase):
+    def test_line_follows_types(self):
+        R = dict(today=dict(stake=1.0, pays=2.0, prob=0.5, legs=[dict(label="Over 200.5 points", price="-200", p=0.7,
+                                                                      match="A @ B", lg="NBA", tip="7:00 PM")]),
+                 runs=3, history=[dict(status="lost", lost_on=["Over 223.5 points (223, missed by 0.5)"])])
+        L = t.lines(R)
+        self.assertIn("Ladder runs lost: 1 of 1 died on a single leg, 1 of those by 2 or less (0.5); 0 on two or more.", L)
