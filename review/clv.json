@@ -2,16 +2,16 @@
  "beats_close": false,
  "enough": true,
  "last": {
-  "beat_close_pct": 53.3,
-  "brier_close": 0.1936,
-  "brier_published": 0.1958,
+  "beat_close_pct": 52.7,
+  "brier_close": 0.1952,
+  "brier_published": 0.1975,
   "dates": [
    "2026-11-14",
    "2026-11-21"
   ],
-  "logloss_close": 0.5656,
-  "logloss_published": 0.5714,
-  "mean_clv_pts": 0.33,
+  "logloss_close": 0.5693,
+  "logloss_published": 0.5753,
+  "mean_clv_pts": 0.29,
   "n": 300
  },
  "market_is_model": true,
@@ -3888,6 +3888,24 @@
    "published": 0.72,
    "won": 1
   },
+  "efl1:401880150": {
+   "call": false,
+   "close": 0.7626,
+   "clv": -2.74,
+   "day": "2026-11-21",
+   "league": "efl1",
+   "published": 0.79,
+   "won": 0
+  },
+  "efl1:401880152": {
+   "call": false,
+   "close": 0.6699,
+   "clv": -2.01,
+   "day": "2026-11-21",
+   "league": "efl1",
+   "published": 0.69,
+   "won": 0
+  },
   "efl1:401880153": {
    "call": false,
    "close": 0.8414,
@@ -3931,6 +3949,15 @@
    "day": "2026-11-21",
    "league": "efl1",
    "published": 0.65,
+   "won": 1
+  },
+  "efl1:401880160": {
+   "call": false,
+   "close": 0.6455,
+   "clv": -3.45,
+   "day": "2026-11-21",
+   "league": "efl1",
+   "published": 0.68,
    "won": 1
   },
   "efl1:401880161": {
@@ -5293,6 +5320,15 @@
    "published": 0.691,
    "won": 0
   },
+  "epl:401878754": {
+   "call": false,
+   "close": 0.8415,
+   "clv": 1.15,
+   "day": "2026-11-21",
+   "league": "epl",
+   "published": 0.83,
+   "won": 1
+  },
   "epl:401878756": {
    "call": false,
    "close": 0.8086,
@@ -5448,6 +5484,15 @@
    "league": "epl",
    "published": 0.69,
    "won": 0
+  },
+  "epl:401879235": {
+   "call": false,
+   "close": 0.6467,
+   "clv": -1.33,
+   "day": "2026-11-21",
+   "league": "epl",
+   "published": 0.66,
+   "won": 1
   },
   "epl:401879238": {
    "call": false,
@@ -29228,6 +29273,15 @@
    "published": 0.77,
    "won": 1
   },
+  "sco:401878338": {
+   "call": false,
+   "close": 0.8024,
+   "clv": -0.76,
+   "day": "2026-11-21",
+   "league": "sco",
+   "published": 0.81,
+   "won": 1
+  },
   "sco:401878339": {
    "call": false,
    "close": 0.8188,
@@ -32292,5 +32346,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-21T16:57+00:00"
+ "updated": "2026-11-21T17:02+00:00"
 }
