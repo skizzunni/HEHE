@@ -254,6 +254,12 @@ class Card(unittest.TestCase):
                                  " -- fewer legs win more often, pay less.")
         self.assertFalse(any("Other sizes" in l for l in daily_card.ten_leg_lines(self.D)))
 
+    def test_ten_leg_preview_flagged(self):
+        D = dict(self.D, ten_leg={"preview": True, "today": dict(legs=self.D["every_game"]["today"], n=10, chance=0.4, pays=1.6)})
+        self.assertIn("PREVIEW: the board has not rebuilt on the 8 AM card yet", daily_card.ten_leg_lines(D)[0])
+        D["ten_leg"]["preview"] = False
+        self.assertNotIn("PREVIEW", daily_card.ten_leg_lines(D)[0])
+
     def test_ten_leg_alt2x_line(self):
         D = dict(self.D, ten_leg={"alt2x": dict(n=14, chance=0.3034, pays=2.0, cashed=8, days=13)})
         self.assertIn("  The same lines to 2.00x: 14 legs, 30% stated all win; replayed, cashed 8 of the last 13 days.",

@@ -41,7 +41,11 @@ def ten_leg_lines(D, day="today"):
     R = X.get("record") or {}
     head = (f"Daily {T['n']}-leg: all win {pc(T['chance'])}" + (f", pays {T['pays']:.2f}x" if T.get("pays") else "")
             + (f" -- replayed, cashed {R['cashed']} of the last {R['days']} days" if R.get("days") else "")
-            + (f" (only {T['n']} games priced so far; it fills to {ten_leg.N} at the 8 AM card)" if T["n"] < ten_leg.N else ""))
+            + (f" (only {T['n']} games priced so far; it fills to {ten_leg.N} at the 8 AM card)" if T["n"] < ten_leg.N else "")
+            # 2026-11-20: the card was read at 8:06, before the board rebuilt on the 8 AM pool, so
+            # it showed a preview (Iowa State) while the real ticket had Bowling Green
+            + (" -- PREVIEW: the board has not rebuilt on the 8 AM card yet; these legs can still change"
+               if X.get("preview") and day == "today" else ""))
     from ladder_ticket import needs                        # the ladder ticket's plain-words wording
     out = [head]
     Z = [z for z in X.get("sizes") or [] if z.get("days")]
