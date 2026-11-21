@@ -9821,6 +9821,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV21GASTMRSH-MRSH3"
   },
+  "KXNCAAFSPREAD-26NOV21HAWNEV-NEV7|YES": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401864541",
+   "label": "Nevada Wolf Pack -6.5",
+   "league": "ncaaf",
+   "match": "HAW @ NEV",
+   "posted": "2026-11-21T15:44:00+00:00",
+   "queue": 131698.83,
+   "side": "YES",
+   "spec": {
+    "line": -6.5,
+    "t": "spread",
+    "team": "Nevada Wolf Pack"
+   },
+   "start": "2026-11-22T03:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV21HAWNEV-NEV7"
+  },
   "KXNCAAFSPREAD-26NOV21HOUWVU-HOU8|NO": {
    "ask": 0.52,
    "bid": 0.51,
@@ -18197,6 +18219,27 @@
    "spec": {
     "line": 71.5,
     "t": "under"
+   },
+   "start": "2026-11-21T18:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV21HOUWVU-72"
+  },
+  "KXNCAAFTOTAL-26NOV21HOUWVU-72|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401856868",
+   "label": "over 71.5",
+   "league": "ncaaf",
+   "match": "HOU @ WVU",
+   "posted": "2026-11-21T15:44:00+00:00",
+   "queue": 61850.59,
+   "side": "YES",
+   "spec": {
+    "line": 71.5,
+    "t": "over"
    },
    "start": "2026-11-21T18:00Z",
    "status": "open",

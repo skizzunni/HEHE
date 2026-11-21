@@ -20398,6 +20398,93 @@
    "tip": "10:00 PM",
    "venue": "Kalshi"
   },
+  "nhl:401892768|home|Kalshi": {
+   "dec": 2.2878,
+   "ev": 0.0816,
+   "fair": 0.4727,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892768",
+   "kind": "suspect",
+   "league": "nhl",
+   "match": "CAR @ NYR",
+   "price": "+129",
+   "seen": "2026-11-21T15:44:00+00:00",
+   "side": "home",
+   "start": "2026-11-22T17:30Z",
+   "team": "New York Rangers",
+   "tip": "12:30 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892768|sure": {
+   "id": "nhl:401892768",
+   "kind": "sure",
+   "league": "nhl",
+   "legs": [
+    {
+     "price": "-122",
+     "stake_share": 0.557,
+     "team": "Carolina Hurricanes",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "+129",
+     "stake_share": 0.443,
+     "team": "New York Rangers",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "CAR @ NYR",
+   "profit": 0.0135,
+   "seen": "2026-11-21T15:44:00+00:00"
+  },
+  "nhl:401892768|{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New York Rangers\"}|Kalshi": {
+   "dec": 1.5015,
+   "dk": "-245",
+   "ev": 0.0336,
+   "fair": 0.6884,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892768",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "CAR @ NYR",
+   "price": "-199",
+   "seen": "2026-11-21T15:44:00+00:00",
+   "side": "{\"line\": 1.5, \"t\": \"spread\", \"team\": \"New York Rangers\"}",
+   "spec": {
+    "line": 1.5,
+    "t": "spread",
+    "team": "New York Rangers"
+   },
+   "start": "2026-11-22T17:30Z",
+   "team": "New York Rangers +1.5",
+   "tip": "12:30 PM",
+   "venue": "Kalshi"
+  },
+  "nhl:401892770|{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Edmonton Oilers\"}|Kalshi": {
+   "dec": 3.0769,
+   "dk": "+185",
+   "ev": 0.0132,
+   "fair": 0.3293,
+   "fair_source": "DraftKings (Shin)",
+   "id": "nhl:401892770",
+   "kind": "single",
+   "league": "nhl",
+   "market": "spread",
+   "match": "EDM @ STL",
+   "price": "+208",
+   "seen": "2026-11-21T15:44:00+00:00",
+   "side": "{\"line\": -1.5, \"t\": \"spread\", \"team\": \"Edmonton Oilers\"}",
+   "spec": {
+    "line": -1.5,
+    "t": "spread",
+    "team": "Edmonton Oilers"
+   },
+   "start": "2026-11-23T00:00Z",
+   "team": "Edmonton Oilers -1.5",
+   "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
   "nor:401843366|away|FanDuel": {
    "dec": 3.0,
    "ev": 0.0126,
