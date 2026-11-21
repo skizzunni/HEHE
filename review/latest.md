@@ -44,7 +44,7 @@ High-chance sweep: 70%+ today 10-4, 73 open; swept 3 of 35 past days (last 2026-
 Back-to-backs, board record so far: NHL on the tired side 4/11 vs 56%, against it 18/31 vs 61%; NBA on the tired side 18/24 vs 65%, against it 21/27 vs 72%.
 Ladder games, players out or doubtful: Portland Trail Blazers at New York Knicks: Portland Trail Blazers without Chris Youngblood, Vit Krejci, Ja Morant, Shaedon Sharpe; New York Knicks without Jordan Clarkson | Milwaukee Bucks at Philadelphia 76ers: Milwaukee Bucks without Ousmane Dieng; Philadelphia 76ers without Dominick Barlow, Dean Wade, Adem Bona, Jaylen Brown, Ariel Hukporti.
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
-Next UFC card 2026-11-21 (12 fights priced, 3 close): Diyar Nurgozhay 81%; Ikram Aliskerov 73%; Aleksandre Topuria 70%; Jake Matthews 69%; Dan Hooker 64%; Shamil Gaziev 63%; Navajo Stirling 63%; Dom Mar Fan 62%; Kyoji Horiguchi 62%; John Mitchell 57% (close); Kevin Vallejos 52% (close); Alessandro Costa 50% (close); favourites since 2021 by band: 80-100% won 88% (-0.1% a bet), 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
+Next UFC card 2026-11-21 (12 fights priced, 3 close): Diyar Nurgozhay 75%; Ikram Aliskerov 73%; Aleksandre Topuria 70%; Jake Matthews 69%; Dan Hooker 64%; Shamil Gaziev 63%; Navajo Stirling 63%; Dom Mar Fan 62%; Kyoji Horiguchi 62%; John Mitchell 57% (close); Kevin Vallejos 52% (close); Alessandro Costa 50% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.6% hit vs 44.6% stated on 565 (by half 136/321 then 88/244, 42% / 36% vs 45% / 44% stated; short in both halves)
 Strong calls 12-7 (63.2% vs 74.9% claimed).
 Closing line value: +0.64 points on 19 picks; beat the close on 42.1%.
@@ -86,7 +86,7 @@ Lottery 10k+25: open (0/11 legs won)
 Lottery 10k+50: open (0/11 legs won)
 Lottery 10k+100: open (0/10 legs won)
 Ladder-consistency props (all time): 2971/3586 won (82.8%) vs 86.4% fair, 87.6% price, 83.6% stated on the board (heavy props capped).
-Props 1/1 vs 56.4% claimed.
+Props 3/3 vs 71.0% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=235), ncaab 0.00 (n=88), ncaaf 0.00 (n=305), nfl 0.00 (n=71), nhl 0.00 (n=241)
