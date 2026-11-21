@@ -13429,6 +13429,23 @@
    "tip": "10:30 PM",
    "venue": "Kalshi"
   },
+  "ncaaf:401860925|away|FanDuel": {
+   "dec": 9.6,
+   "ev": 0.0229,
+   "fair": 0.1065,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401860925",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "SDSU @ BOIS",
+   "price": "+860",
+   "seen": "2026-11-21T15:27:46+00:00",
+   "side": "away",
+   "start": "2026-11-22T02:30Z",
+   "team": "San Diego State Aztecs",
+   "tip": "9:30 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401860925|away|Kalshi": {
    "dec": 8.5543,
    "ev": 0.0269,
@@ -23608,6 +23625,26 @@
    "prob": 0.1073,
    "seen": "2026-11-07T07:13:24+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401860925:away": {
+   "ev": 0.0224,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0229,
+     "fair": 0.1065,
+     "id": "ncaaf:401860925",
+     "price": "+860",
+     "side": "away",
+     "spec": null,
+     "team": "San Diego State Aztecs"
+    }
+   ],
+   "payout": 9.6,
+   "prob": 0.1065,
+   "seen": "2026-11-21T15:27:46+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
