@@ -3974,6 +3974,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV21UNLVSJSU-UNLV"
   },
+  "KXNCAAFGAME-26NOV21UNTTULN-UNT|YES": {
+   "ask": 0.72,
+   "bid": 0.71,
+   "cost": 0.7137,
+   "edge": 0.0124,
+   "fair": 0.7225,
+   "id": "ncaaf:401862835",
+   "label": "North Texas Mean Green",
+   "league": "ncaaf",
+   "match": "UNT @ TULN",
+   "posted": "2026-11-21T14:43:04+00:00",
+   "queue": 50881.62,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "North Texas Mean Green"
+   },
+   "start": "2026-11-21T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV21UNTTULN-UNT"
+  },
   "KXNCAAFGAME-26NOV21USAUSM-USA|YES": {
    "ask": 0.63,
    "bid": 0.62,
@@ -10176,6 +10197,28 @@
    "start": "2026-11-21T17:30Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV21UNCUVA-UVA2"
+  },
+  "KXNCAAFSPREAD-26NOV21UNTTULN-UNT8|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0162,
+   "fair": 0.5227,
+   "id": "ncaaf:401862835",
+   "label": "Tulane Green Wave +7.5",
+   "league": "ncaaf",
+   "match": "UNT @ TULN",
+   "posted": "2026-11-21T14:43:04+00:00",
+   "queue": 2540.0,
+   "side": "NO",
+   "spec": {
+    "line": 7.5,
+    "t": "spread",
+    "team": "Tulane Green Wave"
+   },
+   "start": "2026-11-21T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV21UNTTULN-UNT8"
   },
   "KXNCAAFSPREAD-26NOV21USAUSM-USA5|YES": {
    "ask": 0.51,
