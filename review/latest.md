@@ -67,6 +67,15 @@ Yesterday (2026-11-20): board 26-16, sweep broken by jpn Kashiwa Reysol or draw 
 - LOST nba Chicago Bulls at 54% (-130), Chicago Bulls 94 - Washington Wizards 98: margin 4 · the book had my side favoured too · called at 54% · coin flip · close game; picks like it: 43 of 68 (63% vs 55% stated)
 - LOST ncaaf Duke Blue Devils at 82% (-520), Clemson Tigers 20 - Duke Blue Devils 10: margin 10 · the book had my side favoured too · called at 82% · upset; picks like it: 61 of 74 (82% vs 82% stated)
 - LOST nba Houston Rockets at 53% (-122), Denver Nuggets 133 - Houston Rockets 124: margin 9 · the book had my side favoured too · called at 53% · coin flip; picks like it: 35 of 58 (60% vs 54% stated)
+Lottery 100: open (0/7 legs won)
+Lottery 100: open (0/6 legs won)
+Lottery 100: open (0/6 legs won)
+Lottery 10k: open (0/11 legs won)
+Lottery 10k: open (0/10 legs won)
+Lottery 10k: open (0/10 legs won)
+Lottery 10k+25: open (0/11 legs won)
+Lottery 10k+50: open (0/11 legs won)
+Lottery 10k+100: open (0/10 legs won)
 Ladder-consistency props (all time): 2971/3586 won (82.8%) vs 86.4% fair, 87.6% price, 83.6% stated on the board (heavy props capped).
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
