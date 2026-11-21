@@ -671,6 +671,24 @@ def ladder_type_line(report=None):
     return type_line(report)
 
 
+def ladder_misses_line(report=None):
+    """How the ladder's lost runs died: on one leg or more, and how close the
+    one-leg misses were. Information only. 2026-11-21: 7 of 10 lost runs died
+    on a single leg, three of them by 2 points or less (0.5, 1.5, 1.5)."""
+    import re
+    if report is None:
+        report = _report()
+    H = [h for h in (report or {}).get("history") or [] if h.get("status") == "lost" and h.get("lost_on")]
+    if not H:
+        return None
+    one = [h for h in H if len(h["lost_on"]) == 1]
+    by = [float(m.group(1)) for h in one for m in [re.search(r"missed by ([\d.]+)", h["lost_on"][0])] if m]
+    close = [b for b in by if b <= 2]
+    return (f"Ladder runs lost: {len(one)} of {len(H)} died on a single leg"
+            + (f", {len(close)} of those by 2 or less ({', '.join(f'{b:g}' for b in sorted(close))})" if close else "")
+            + f"; {len(H) - len(one)} on two or more.")
+
+
 def ten_leg_line(rec=None):
     """The daily 10-leg (ten_leg.py) replayed on every frozen 8 AM pool:
     days cashed vs the average stated all-win chance, and its payout."""
@@ -2477,6 +2495,8 @@ def words(r, fit):
         out.append(r["soccer_weekdays"])
     if r.get("ladder_types"):
         out.append(r["ladder_types"])
+    if r.get("ladder_misses"):
+        out.append(r["ladder_misses"])
     if r.get("eg_bands"):
         out.append(r["eg_bands"])
     if r.get("ticket_sizes"):
@@ -2662,6 +2682,10 @@ def _main():
         log[today.isoformat()]["ladder_alt"] = ladder_alt_line()
     except Exception as e:                                  # a broken pool or ladder file must not stop the review
         log[today.isoformat()]["ladder_alt"] = f"Ladder vs every-game: unavailable ({type(e).__name__})."
+    try:
+        log[today.isoformat()]["ladder_misses"] = ladder_misses_line()
+    except Exception as e:                                  # a broken ladder file must not stop the review
+        log[today.isoformat()]["ladder_misses"] = f"Ladder misses: unavailable ({type(e).__name__})."
     try:
         log[today.isoformat()]["ladder_types"] = ladder_type_line()
     except Exception as e:                                  # a broken ladder file must not stop the review

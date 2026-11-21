@@ -170,6 +170,18 @@ class DcMoveLine(unittest.TestCase):
         self.assertIsNone(daily_review.dc_move_line({k: v for k, v in list(led.items())[:10]}))
 
 
+class LadderMissesLine(unittest.TestCase):
+    def test_single_leg_and_close(self):
+        import daily_review
+        R = {"history": [dict(status="lost", lost_on=["Over 223.5 points (223, missed by 0.5)"]),
+                         dict(status="lost", lost_on=["Boston Celtics to win"]),
+                         dict(status="lost", lost_on=["A to win", "B to win"]),
+                         dict(status="live", lost_on=[])]}
+        self.assertEqual(daily_review.ladder_misses_line(R),
+                         "Ladder runs lost: 2 of 3 died on a single leg, 1 of those by 2 or less (0.5); 1 on two or more.")
+        self.assertIsNone(daily_review.ladder_misses_line({"history": []}))
+
+
 class LadderTypeLine(unittest.TestCase):
     def test_review_reuses_ticket_wording(self):
         import daily_review
