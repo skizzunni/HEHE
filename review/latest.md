@@ -1,7 +1,7 @@
 # Review 2026-11-20
 
 Picks 14-13 (51.9% vs 74.3% claimed, ROI -34.4%).
-Ladder: run 12, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.48x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.48x for the plain top 4; without props it would be 4 legs at 2.49x (33%); 11 wins to $10,000; legs: Shai Gilgeous-Alexander: 4+ Assists (NO @ OKC; live 3:13 - 4th, New Orleans Pelicans 110 - Oklahoma City Thunder 114, 7 so far, line reached; props like it 145/186), Under 232.5 points (Charlotte Hornets at Atlanta Hawks; won), Over 226.5 points (Washington Wizards at Chicago Bulls; live 3:03 - 4th, Chicago Bulls 92 - Washington Wizards 96, on pace for 201 (188 so far, line 226.5, needs 39 more), behind the pace it needs), Over 220.5 points (Indiana Pacers at Cleveland Cavaliers; won); 2 of 4 won, the ticket now rests on 2 legs, 59% on their stated chance before play.
+Ladder: run 12, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.48x (34% est.), the best-chance 2x-5x combination (4 legs) against 34% at 2.48x for the plain top 4; without props it would be 4 legs at 2.49x (33%); 11 wins to $10,000; legs: Shai Gilgeous-Alexander: 4+ Assists (NO @ OKC; live 45.9 - 4th, New Orleans Pelicans 116 - Oklahoma City Thunder 121, 7 so far, line reached; props like it 145/186), Under 232.5 points (Charlotte Hornets at Atlanta Hawks; won), Over 226.5 points (Washington Wizards at Chicago Bulls; live 58.7 - 4th, Chicago Bulls 92 - Washington Wizards 96, on pace for 192 (188 so far, line 226.5, needs 39 more), behind the pace it needs), Over 220.5 points (Indiana Pacers at Cleveland Cavaliers; won); 2 of 4 won, the ticket now rests on 2 legs, 59% on their stated chance before play.
 Ladder runs: 1) 2026-11-07, 1 day, peak $1.00, lost on NC State Wolfpack +15.5 (lost by 38, missed by 22.5); 2) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 3) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 4) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 5) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 6) 2026-11-15, 2 days, peak $2.00, lost on Boston Celtics to win; 7) 2026-11-17, 1 day, peak $1.00, lost on San Antonio Spurs to win, Duke Blue Devils to win; 8) 2026-11-18, 1 day, peak $1.00, lost on Los Angeles Lakers to win, Under 235.5 points (237, missed by 1.5); 9) 2026-11-19, 1 day, peak $1.00, lost on Washington Capitals +1.5 (lost by 3, missed by 1.5); 10) 2026-11-20, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 15/32 cashed at 2.21x, without props 15/33 at 2.27x.
 Running ahead: NBA over on all saved lines 1087/1242 vs 83% (91 games); NHL under on all saved lines 195/219 vs 83% (94 games).
 Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 149/199 (75% vs 82%); NCAAF teamover 597/798 (75% vs 82%). Walk-forward: legs of a type running cold won 93.8% the next day vs 81.0% for the rest (453 and 7771 legs), so a cold week is noise, not a signal.
@@ -75,11 +75,11 @@ Yesterday (2026-11-19): board 18-10, sweep broken by uru Deportivo Maldonado or 
 - LOST nhl Vegas Golden Knights at 53% (-125), Dallas Stars 4 - Vegas Golden Knights 3: margin 1 · the book had my side favoured too · called at 53% · coin flip · close game; picks like it: 80 of 148 (54% vs 54% stated)
 Locks 2/11 won, 8 open; Best play top 2 (59%) open; lost: Iowa State Cyclones +10.5 (Iowa State Cyclones at UCF Knights) Iowa State Cyclones 17 - UCF Knights 48.
 Safe Locks 4/11 won, 6 open; Winners parlay top 3 (80%) open; Best play top 8 (55%) open; lost: Bayern Munich to win (FC Cologne at Bayern Munich) FC Cologne 1 - Bayern Munich 1.
-Lottery 10k: lost (2/13 legs won, killed by Iowa State Cyclones +1.5, Indiana Pacers +7.5)
-Lottery 10k+25: lost (1/12 legs won, killed by Iowa State Cyclones +1.5, Indiana Pacers +7.5, Under 219.5 points)
-Lottery 10k+50: lost (1/12 legs won, killed by Iowa State Cyclones +1.5, Indiana Pacers +7.5)
-Lottery 10k+100: lost (2/12 legs won, killed by Iowa State Cyclones +1.5, Indiana Pacers +7.5)
-Lottery 100: lost (2/8 legs won, killed by Iowa State Cyclones +1.5, Indiana Pacers +7.5)
+Lottery 10k: lost (2/13 legs won, killed by Iowa State Cyclones +1.5, Over 156.5 points, Indiana Pacers +7.5)
+Lottery 10k+25: lost (1/12 legs won, killed by Iowa State Cyclones +1.5, Over 156.5 points, Indiana Pacers +7.5, Under 219.5 points)
+Lottery 10k+50: lost (1/12 legs won, killed by Iowa State Cyclones +1.5, Over 156.5 points, Indiana Pacers +7.5)
+Lottery 10k+100: lost (2/12 legs won, killed by Iowa State Cyclones +1.5, Over 156.5 points, Indiana Pacers +7.5)
+Lottery 100: lost (2/8 legs won, killed by Iowa State Cyclones +1.5, Indiana Pacers +7.5, Over 156.5 points)
 Ladder-consistency props (all time): 2912/3516 won (82.8%) vs 86.4% fair, 87.6% price, 83.5% stated on the board (heavy props capped).
 Props 58/66 vs 84.7% claimed.
 
