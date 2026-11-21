@@ -10636,104 +10636,7 @@
     "ger": "2026-11-20T18:45:12+00:00",
     "nba": "2026-11-21T02:20:41+00:00"
    },
-   "candidate_observations": {
-    "mex:401877052": {
-     "book": "FanDuel",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": false,
-     "conf": 84,
-     "current": {
-      "book": "FanDuel",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-21T02:58:02+00:00",
-      "conf": 84,
-      "dc": true,
-      "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
-      },
-      "id": "mex:401877052",
-      "league": "mex",
-      "match": "ATL @ TIJ",
-      "pick": "Tijuana or draw",
-      "price": "-700",
-      "price_at": "2026-11-21T02:53:02+00:00",
-      "price_market": "double_chance",
-      "price_ref": "736.197526826:22200797",
-      "prob_at": "2026-11-21T02:57:42+00:00",
-      "rank": null,
-      "ready": false,
-      "reason": "awaiting confirmed XIs",
-      "side": "home",
-      "start": "2026-11-21T03:10Z"
-     },
-     "dc": true,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
-     },
-     "id": "mex:401877052",
-     "league": "mex",
-     "match": "ATL @ TIJ",
-     "pick": "Tijuana or draw",
-     "price": "-700",
-     "price_at": "2026-11-21T02:53:02+00:00",
-     "price_market": "double_chance",
-     "price_ref": "736.197526826:22200797",
-     "side": "home",
-     "start": "2026-11-21T03:10Z",
-     "tip": "10:10 PM"
-    },
-    "nba:401909313": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 86,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-21T02:58:02+00:00",
-      "conf": 86,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "injury report checked (4 listed)"
-      },
-      "id": "nba:401909313",
-      "league": "nba",
-      "match": "SAC @ LAL",
-      "pick": "Los Angeles Lakers",
-      "price": "-840",
-      "price_at": "2026-11-21T02:57:42+00:00",
-      "price_market": "moneyline",
-      "price_ref": "35039366:0ML87292658_1",
-      "prob_at": "2026-11-21T02:57:42+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-21T03:00Z"
-     },
-     "dc": false,
-     "fp": "49e6dfdb6f9f",
-     "gate": {
-      "ok": true,
-      "what": "injury report checked (4 listed)"
-     },
-     "id": "nba:401909313",
-     "league": "nba",
-     "match": "SAC @ LAL",
-     "news_at": "2026-11-21T02:20:41+00:00",
-     "pick": "Los Angeles Lakers",
-     "price": "-840",
-     "price_at": "2026-11-21T02:57:42+00:00",
-     "price_market": "moneyline",
-     "price_ref": "35039366:0ML87292658_1",
-     "side": "home",
-     "start": "2026-11-21T03:00Z",
-     "tip": "10:00 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
     "ger"
    ],
@@ -10743,8 +10646,8 @@
    "shadow_watch": {
     "best_at": "2026-11-20T23:37:50+00:00",
     "best_ceiling": 1.826,
-    "checks": 146,
-    "last": "2026-11-21T02:58:02+00:00",
+    "checks": 147,
+    "last": "2026-11-21T03:03:23+00:00",
     "max_ready": 10,
     "reasons": {
      "awaiting confirmed XIs": 674,
