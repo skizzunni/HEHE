@@ -14041,6 +14041,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "ncaaf:401866468|away|FanDuel": {
+   "dec": 8.2,
+   "ev": 0.0471,
+   "fair": 0.1277,
+   "fair_source": "consensus of 2 other venues",
+   "id": "ncaaf:401866468",
+   "kind": "value",
+   "league": "ncaaf",
+   "match": "BGSU @ TOL",
+   "price": "+720",
+   "seen": "2026-11-21T00:15:26+00:00",
+   "side": "away",
+   "start": "2026-11-21T00:30Z",
+   "team": "Bowling Green Falcons",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "ncaaf:401869935|home|FanDuel": {
    "dec": 2.26,
    "ev": 0.0534,
@@ -23653,6 +23670,26 @@
    "prob": 0.1277,
    "seen": "2026-11-17T22:34:43+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|ncaaf:401866468:away": {
+   "ev": 0.0471,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0471,
+     "fair": 0.1277,
+     "id": "ncaaf:401866468",
+     "price": "+720",
+     "side": "away",
+     "spec": null,
+     "team": "Bowling Green Falcons"
+    }
+   ],
+   "payout": 8.2,
+   "prob": 0.1277,
+   "seen": "2026-11-21T00:15:26+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
