@@ -45,7 +45,7 @@ Next UFC card 2026-11-21 (12 fights priced, 3 close): Ikram Aliskerov 72%; Aleks
 TRAILING value bets: 39.6% hit vs 44.6% stated on 565 (by half 136/321 then 88/244, 42% / 36% vs 45% / 44% stated; short in both halves)
 Strong calls 3-1 (75.0% vs 78.0% claimed).
 Closing line value: +0.44 points on 4 picks; beat the close on 25.0%.
-Board sweep: 3-1, 142 open -- broken (first loss: jpn Urawa Red Diamonds or draw at 71%); 0.9 losses expected from the settled picks' chances, so 1 or more by now had a 63.5% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: jpn 1 (0.9 expected).
+Board sweep: 3-1, 143 open -- broken (first loss: jpn Urawa Red Diamonds or draw at 71%); 0.9 losses expected from the settled picks' chances, so 1 or more by now had a 63.5% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: jpn 1 (0.9 expected).
 - LOST jpn Urawa Red Diamonds or draw at 71% (-300), Kyoto Sanga 2 - Urawa Red Diamonds 1: margin 1 · the book had my side favoured too · called at 71% · favourite lost · close game; picks like it: 16 of 23 (70% vs 71% stated)
 Why picks lost (14 days): favourite lost 91, close game 90, coin flip 58, blowout 45, upset 41, price moved against it 22, drawn 12.
 Yesterday (2026-11-20): board 26-16, sweep broken by jpn Kashiwa Reysol or draw at 84%; 10.4 losses expected, 16 came in (3.2% chance of that many or more); tickets: ladder lost, 10-leg cashed, 2x every-game lost.
