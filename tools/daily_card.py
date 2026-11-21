@@ -197,8 +197,24 @@ def winner_lines(D, day="today"):
     return (["Winners, every game (the board's pick and its chance):"] + out) if out else []
 
 
+def yesterday_lines(today_iso=None, tickets_fn=None):
+    """'Yesterday (Nov 20): ladder lost, 10-leg cashed, 2x every-game lost'
+    -- how the three ways to play the card did, so the morning message
+    starts from the last result (daily_review.tickets_text)."""
+    import datetime as dt
+    if today_iso is None:
+        from zoneinfo import ZoneInfo
+        today_iso = dt.datetime.now(ZoneInfo("America/New_York")).date().isoformat()
+    y = (dt.date.fromisoformat(today_iso) - dt.timedelta(days=1)).isoformat()
+    if tickets_fn is None:
+        from daily_review import tickets_text as tickets_fn
+    t = tickets_fn(y)
+    return [f"Yesterday ({y}): " + t[len("; tickets: "):] + "."] if t else []
+
+
 def card(D, day="today"):
-    parts = [ten_leg_lines(D, day), scorer_lines(D, day), team_points_lines(D, day), winner_lines(D, day)]
+    parts = [yesterday_lines() if day == "today" else [], ten_leg_lines(D, day), scorer_lines(D, day),
+             team_points_lines(D, day), winner_lines(D, day)]
     return "\n\n".join("\n".join(p) for p in parts if p)
 
 

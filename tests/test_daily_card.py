@@ -58,6 +58,13 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class YesterdayLines(unittest.TestCase):
+    def test_from_tickets_text(self):
+        out = daily_card.yesterday_lines("2026-11-21", lambda d: "; tickets: ladder lost, 10-leg cashed" if d == "2026-11-20" else "")
+        self.assertEqual(out, ["Yesterday (2026-11-20): ladder lost, 10-leg cashed."])
+        self.assertEqual(daily_card.yesterday_lines("2026-11-21", lambda d: ""), [])
+
+
 class TicketsText(unittest.TestCase):
     def test_three_tickets(self):
         import daily_review
