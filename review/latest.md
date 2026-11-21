@@ -45,7 +45,6 @@ High-chance sweep: 70%+ today 35-13, 51 open; swept 3 of 35 past days (last 2026
 Back-to-backs, board record so far: NHL on the tired side 4/11 vs 56%, against it 18/31 vs 61%; NBA on the tired side 18/24 vs 65%, against it 21/27 vs 72%.
 Ladder games, players out or doubtful: Portland Trail Blazers at New York Knicks: Portland Trail Blazers without Chris Youngblood, Vit Krejci, Ja Morant, Shaedon Sharpe; New York Knicks without Jordan Clarkson | Milwaukee Bucks at Philadelphia 76ers: Milwaukee Bucks without Ousmane Dieng; Philadelphia 76ers without Dean Wade, Adem Bona, Jaylen Brown, Ariel Hukporti.
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
-Next UFC card 2026-11-21 (5 fights priced, 2 close): Ikram Aliskerov 75%; Shamil Gaziev 62%; Dom Mar Fan 61%; John Mitchell 57% (close); Alessandro Costa 52% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.9% hit vs 44.6% stated on 567 (by half 136/321 then 90/246, 42% / 37% vs 45% / 44% stated; short in both halves)
 Strong calls 44-19 (69.8% vs 73.7% claimed).
 Closing line value: +0.08 points on 78 picks; beat the close on 42.3%.
