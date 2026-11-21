@@ -35,6 +35,22 @@ class ToTarget(unittest.TestCase):
         self.assertEqual([g["label"] for g in T["legs"]], ["L0", "L1", "L2", "L3"])
         self.assertIsNone(ten_leg.to_target(G[:2], 2.0))
 
+    def test_days_graded_as_at_8am(self):
+        import unittest.mock as m
+        import locks
+        rows = {"2026-11-01": ["won", "void", "won"],      # a void leg does not lose the ticket
+                "2026-11-02": ["won", "lost", "won"],
+                "2026-11-03": ["won", "open", "won"]}      # not fully graded: left out
+        pools = {"pools": {d: {"legs": [d]} for d in rows}}
+
+        def eg(legs, led=None):
+            d = legs[0]
+            return [dict(gid=f"{d}{i}", label=f"L{i}", price="-300", p=0.9 - i / 100, league="nba", status=s)
+                    for i, s in enumerate(rows[d])]
+        with m.patch.object(locks, "load", lambda path=None: pools), m.patch.object(locks, "every_game", eg):
+            out = ten_leg.to_target_days(None, {})
+        self.assertEqual(out, {"2026-11-01": True, "2026-11-02": False})
+
     def test_review_line(self):
         import daily_review
         lad = {f"2026-11-{d:02d}": d % 3 == 0 for d in range(5, 13)}
