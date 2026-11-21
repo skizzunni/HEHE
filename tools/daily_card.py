@@ -67,13 +67,22 @@ def ten_leg_lines(D, day="today"):
         drop = [g for g in T["legs"] if (g.get("gid"), g.get("label")) not in theirs]
         if T2 and drop:                                    # the 10-leg fills American games first; the 2x does not
             out.append("    It leaves out: " + "; ".join(f"{g['label']} ({g.get('match') or ''})" for g in drop))
-    for i, g in enumerate(T["legs"], 1):
+    for i, g in enumerate(sorted(T["legs"], key=_tip_key), 1):          # in start order, so it reads as the night runs
         out.append(f"  {i}. {g['label']} {g.get('price') or ''} -- {pc(g['p'])} ({str(g.get('league') or '').upper()}, "
                    f"{g.get('match') or ''}{', ' + g['tip'] if g.get('tip') else ''})")
         n = needs(g["label"], g.get("league"))
         if n and n != g["label"]:
             out.append(f"     Needs: {n}")
     return out
+
+
+def _tip_key(g):
+    """Sort key for a leg by its ET start ('7:30 PM'); legs without one last."""
+    import datetime as dt
+    try:
+        return (0, dt.datetime.strptime(str(g.get("tip") or ""), "%I:%M %p").time())
+    except ValueError:
+        return (1, dt.time(0))
 
 
 FLOOR = 0.80          # a player's line must be at least this likely on its own

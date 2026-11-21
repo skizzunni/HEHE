@@ -281,6 +281,12 @@ class Card(unittest.TestCase):
                                  " -- fewer legs win more often, pay less.")
         self.assertFalse(any("Other sizes" in l for l in daily_card.ten_leg_lines(self.D)))
 
+    def test_ten_leg_in_start_order(self):
+        legs = [dict(label=f"L{t}", p=0.93, price="-2000", league="nba", match="M", tip=t) for t in ("10:00 PM", "7:00 PM", "", "7:30 PM")]
+        D = dict(self.D, ten_leg={"today": dict(legs=legs, n=4, chance=0.7, pays=1.2)})
+        out = [l for l in daily_card.ten_leg_lines(D) if l.startswith("  ") and ". L" in l]
+        self.assertEqual([l.split(". ")[1].split(" ")[0] for l in out], ["L7:00", "L7:30", "L10:00", "L"])
+
     def test_ten_leg_preview_flagged(self):
         D = dict(self.D, ten_leg={"preview": True, "today": dict(legs=self.D["every_game"]["today"], n=10, chance=0.4, pays=1.6)})
         self.assertIn("PREVIEW: the board has not rebuilt on the 8 AM card yet", daily_card.ten_leg_lines(D)[0])

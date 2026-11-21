@@ -1561,6 +1561,11 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Checked: J-League board picks (2026-11-21).** Kashiwa, Kobe, Urawa and
+Gamba all lost by one goal across Nov 20-21. All 40 graded J-League picks
+by date half: 15/20 then 13/20 vs 14.3 / 14.9 expected (z +0.4 / -1.0) --
+a little short lately, not short in both halves; nothing changes.
+
 **Rejected: skip value bets with a 4%+ stated edge (2026-11-21).** The
 bigger a value bet's stated edge, the worse it has done: 4%+ edges 14 of 57
 (ROI -48%), under 2% 123/281 (-5%). By start-date half the 4%+ band went
