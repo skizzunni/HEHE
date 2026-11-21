@@ -331,6 +331,14 @@ class FinalNote(unittest.TestCase):
         self.assertEqual(snap["Washington Capitals +1.5"], "open | final, not graded yet (Washington Capitals 3, Buffalo Sabres 6)")
 
 
+class PickOf(unittest.TestCase):
+    def test_pick_from_value(self):
+        self.assertEqual(w._pick_of("board pick Vasco da Gama or draw (84%) = won | x"), "Vasco da Gama or draw")
+        self.assertEqual(w._pick_of("board pick Kentucky Wildcats (99%+) = lost | why: upset"), "Kentucky Wildcats")
+        self.assertEqual(w._pick_of("board pick Portland = open"), "Portland")
+        self.assertIsNone(w._pick_of("open | already over (4, line 0.5)"))
+
+
 class DecidedNote(unittest.TestCase):
     def test_totals_and_team_totals(self):
         sc = {"Edmonton Oilers": 4, "Carolina Hurricanes": 4}
