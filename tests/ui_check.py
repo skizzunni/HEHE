@@ -781,6 +781,8 @@ def main():
         fails.append("ladder tile must show the bank and streak: " + lt)
     if not all(x in lc for x in ("Ladder challenge: $1", "Ladder leg 5", "NHL · 7:30 PM", "1 of 5 won, 4 to play (1 live now)", "Live: 2nd 10:00 · A 1 - B 0", "A 3 - B 2", "stake $3.05", "8 straight wins", "1 in 15,244", "This run, day by day (1)", "Ladder legs so far: 13 of 14 (93% vs 76.4% stated); tickets 2 of 3.", "Past runs (1) · 1 of 1 lost on a single leg", "on Under 9.5 goals", "would take 37 wins in a row", "Locks like this have won 13 of 17 (76%, this leg ", "Locks like this have won 8 of 12 (67%, this leg ", "; every NFL Receiving Yards prop at a similar chance: 126 of 148 (85% vs 85% stated)")):
         fails.append("ladder card must show today's 5 legs, stake, wins needed and odds: " + lc[:300])
+    if "under this leg" in lc:
+        fails.append("the under-chance note needs 30+ Locks like it (the fixture has 17 and 12)")
     gc = new.get("goalCh") or [None] * 6
     if not (gc[0] is not None and abs(gc[0] - 0.677) < 0.01 and abs(gc[1] - 0.7455) < 0.001 and gc[2] == 1
             and gc[3] is None and gc[4] is None and "about <b>68%</b> to win from here" in (gc[5] or "")):
