@@ -110,6 +110,21 @@ class TicketsText(unittest.TestCase):
         self.assertEqual(daily_review.tickets_text("2026-11-20", {"2026-11-20": "open"}, {}, {}), "")
 
 
+class SoccerSideLine(unittest.TestCase):
+    def test_kinds_and_draws(self):
+        import daily_review
+        led = {}
+        for i in range(80):
+            lost = i % 4 == 0
+            led[f"k{i}"] = dict(league="epl", conf=70, date=f"2026-11-{1 + i % 20:02d}", dc=i % 2 == 1,
+                                status="lost" if lost else "won", diagnosis="margin 0 · drawn" if lost and i % 8 == 0 else "")
+        out = daily_review.soccer_side_line(led)
+        self.assertTrue(out.startswith("Soccer picks by kind, by half: to win "), out)
+        self.assertIn("lost to draws", out)
+        self.assertIn("; win or draw ", out)
+        self.assertIsNone(daily_review.soccer_side_line({}))
+
+
 class SoccerWeekdayLine(unittest.TestCase):
     def test_weekdays(self):
         import daily_review

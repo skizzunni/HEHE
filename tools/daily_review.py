@@ -1029,6 +1029,43 @@ def board_band_line(ledger=None, bands=BOARD_BANDS, min_n=20):
 NOT_SOCCER = {"nba", "nhl", "nfl", "ncaaf", "ncaab", "mlb", "wnba", "atp", "wta", "ufc"}
 
 
+def soccer_side_line(ledger=None):
+    """Soccer board picks split into straight 'to win' sides and 'win or
+    draw' picks, by date half, won vs stated with z and the draws that sank
+    the straight sides. Information only. 2026-11-21 (Man City, West Ham and
+    Chelsea Women all drew): straight sides 153/184 then 153/184 vs 133.4 /
+    137.1 expected (z +3.3 / +2.7) with 22 then 19 lost to draws -- they win
+    more than stated, so a draw-heavy day is noise, not a broken side."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    R = sorted((e for e in ledger.values() if isinstance(e, dict) and e.get("status") in ("won", "lost") and e.get("date")
+                and not e.get("record_excluded") and e.get("conf") is not None and e.get("league") not in NOT_SOCCER),
+               key=lambda e: e["date"])
+    if len(R) < 40:
+        return None
+
+    def halves(X):
+        h = len(X) // 2
+        out = []
+        for S in (X[:h], X[h:]):
+            w = sum(e["status"] == "won" for e in S)
+            p = sum(e["conf"] for e in S) / 100
+            v = sum(e["conf"] / 100 * (1 - e["conf"] / 100) for e in S) or 1
+            d = sum(e["status"] == "lost" and "drawn" in (e.get("diagnosis") or "") for e in S)
+            out.append((w, len(S), (w - p) / math.sqrt(v), d))
+        return out
+    ml = [e for e in R if not e.get("dc")]
+    dc = [e for e in R if e.get("dc")]
+    parts = []
+    if len(ml) >= 20:
+        (a, b) = halves(ml)
+        parts.append(f"to win {a[0]}/{a[1]} (z {a[2]:+.1f}, {a[3]} lost to draws) then {b[0]}/{b[1]} (z {b[2]:+.1f}, {b[3]} to draws)")
+    if len(dc) >= 20:
+        (a, b) = halves(dc)
+        parts.append(f"win or draw {a[0]}/{a[1]} (z {a[2]:+.1f}) then {b[0]}/{b[1]} (z {b[2]:+.1f})")
+    return ("Soccer picks by kind, by half: " + "; ".join(parts) + ".") if parts else None
+
+
 def soccer_weekday_line(ledger=None, min_n=20):
     """Soccer board picks by weekday, split at the median date, won vs stated
     with z, weekdays short in both halves named. Information only.
@@ -2493,6 +2530,8 @@ def words(r, fit):
         out.append(r["board_bands"])
     if r.get("soccer_weekdays"):
         out.append(r["soccer_weekdays"])
+    if r.get("soccer_sides"):
+        out.append(r["soccer_sides"])
     if r.get("ladder_types"):
         out.append(r["ladder_types"])
     if r.get("ladder_misses"):
@@ -2674,6 +2713,7 @@ def _main():
     log[today.isoformat()]["board_leagues"] = board_league_line(ledger)
     log[today.isoformat()]["board_bands"] = board_band_line(ledger)
     log[today.isoformat()]["soccer_weekdays"] = soccer_weekday_line(ledger)
+    log[today.isoformat()]["soccer_sides"] = soccer_side_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
     log[today.isoformat()]["value_leagues"] = value_league_line()
     log[today.isoformat()]["value_edges"] = value_edge_line()

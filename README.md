@@ -1561,6 +1561,14 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Checked: soccer "to win" sides after a day of draws (2026-11-21).** Man
+City, West Ham and Chelsea Women all drew on Nov 21 (a draw loses a "to
+win" pick). Straight soccer sides by date half: 153/184 then 153/184 vs
+133.4 / 137.1 expected (z +3.3 / +2.7), 22 then 19 lost to draws. They win
+more often than stated, not less -- a draw-heavy day is noise. The second
+half misses the 2.8 bar, so the stated chances are not raised; the review
+prints it daily (soccer_side_line).
+
 **Checked: J-League board picks (2026-11-21).** Kashiwa, Kobe, Urawa and
 Gamba all lost by one goal across Nov 20-21. All 40 graded J-League picks
 by date half: 15/20 then 13/20 vs 14.3 / 14.9 expected (z +0.4 / -1.0) --
