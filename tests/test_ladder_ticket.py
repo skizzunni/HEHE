@@ -93,5 +93,10 @@ class UnderChance(unittest.TestCase):
             return dict(label="Over 204.5 points", price="-390", p=0.76, match="A @ B", lg="NBA", tip="7:30 PM",
                         kind_rec=dict(won=won, n=n))
         R = lambda L: dict(today=dict(stake=1.0, pays=2.0, prob=0.5, legs=[L]), runs=1)
-        self.assertIn("Locks like it: 37 of 55 (67%) -- under this leg's chance; information, not a cut.", t.lines(R(leg(37, 55)))[1])
+        self.assertIn("Locks like it: 37 of 55 (67%) -- under this leg's chance; information, not a cut.",
+                      t.lines(R(leg(37, 55)), pool_fn=lambda *a, **k: [])[1])
+        pool = [dict(status="won" if i % 5 else "lost", p=0.75) for i in range(40)]
+        L = dict(leg(37, 55), t="over", league="nba", kind="game")
+        self.assertIn("; every saved NBA over line near this chance, one per game: 32 of 40 (80% vs 75% stated).",
+                      t.lines(R(L), pool_fn=lambda *a, **k: pool)[1])
         self.assertIn("Locks like it: 7 of 10 (70%).", t.lines(R(leg(7, 10)))[1])

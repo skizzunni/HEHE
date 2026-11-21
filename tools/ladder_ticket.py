@@ -61,7 +61,29 @@ def needs(label, league=None):
     return lab
 
 
-def lines(R):
+def pool_context(L, pool_fn=None, band=0.06):
+    """'; every saved NBA over line near this chance, one per game: 70 of 89
+    (79% vs 75% stated)' -- the bigger sample behind a short Locks record
+    (2026-11-21: Locks NBA overs 37 of 55, 67%, but every saved NBA over at
+    70-82% 79% on 89 games, on par). '' when not a game line or too few."""
+    t = L.get("t") or (L.get("spec") or {}).get("t")
+    if L.get("kind") == "prop" or not t or not L.get("league") or not L.get("p"):
+        return ""
+    try:
+        if pool_fn is None:
+            from daily_review import pool_rows as pool_fn
+        rows = pool_fn(L["league"], t, lo=L["p"] - band, hi=L["p"] + band)
+    except Exception:
+        return ""
+    if len(rows) < 30:
+        return ""
+    w = sum(r["status"] == "won" for r in rows)
+    said = sum(r["p"] for r in rows) / len(rows)
+    return (f"; every saved {str(L['league']).upper()} {t} line near this chance, one per game: {w} of {len(rows)} "
+            f"({round(100 * w / len(rows))}% vs {round(100 * said)}% stated)")
+
+
+def lines(R, pool_fn=None):
     """The ticket as a list of strings; [] when there is no ticket today."""
     T = (R or {}).get("today") or {}
     if not T.get("legs"):
@@ -82,8 +104,8 @@ def lines(R):
         out.append(f"{i}. {L['label']} {L['price']} ({round(100 * L['p'])}%) -- {L.get('match')}, {L.get('lg')} "
                    f"{L.get('tip')} ET. Needs: {needs(L['label'], L.get('league'))}."
                    + (f" Locks like it: {rec['won']} of {rec['n']}" + (f" ({round(100 * rec['won'] / rec['n'])}%)" if rec["n"] >= 10 else "")
-                      + (" -- under this leg's chance; information, not a cut" if rec["n"] >= 30
-                         and 100 * rec["won"] / rec["n"] < 100 * L["p"] - 8 else "")
+                      + ((" -- under this leg's chance; information, not a cut" + pool_context(L, pool_fn))
+                         if rec["n"] >= 30 and 100 * rec["won"] / rec["n"] < 100 * L["p"] - 8 else "")
                       + "." if rec.get("n") else "")
                    + (f" Every {str(L.get('league') or '').upper()} {L.get('market')} line at a similar chance: "
                       f"{pr['won']} of {pr['n']} ({round(100 * pr['won'] / pr['n'])}% vs {pr['said']}% stated)." if pr.get("n") else "")
