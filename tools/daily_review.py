@@ -745,6 +745,40 @@ def value_league_line(finds=None, min_n=30):
             + ("; " + "; ".join(parts) if parts else "") + ".")
 
 
+VALUE_EDGES = ((0, 0.02, "under 2%"), (0.02, 0.04, "2-4%"), (0.04, 9, "4%+"))
+
+
+def value_edge_line(finds=None):
+    """Graded value bets by their stated edge (ev) and start-date half, won
+    vs fair with z. Information only. 2026-11-21: the bigger the stated edge
+    the worse -- 4%+ 11/31 then 3/26 vs 13.2 / 9.4 expected (z -0.9 / -2.9,
+    ROI -48%); under 2% z -0.5 / -1.6. Short both halves but only the second
+    past the 2.8 bar, so no edge cap is adopted; a large stated edge is
+    more likely a wrong fair price than a real one."""
+    import math
+    if finds is None:
+        finds = (load("value.json", {}) or {}).get("finds") or {}
+    R = sorted((e for e in finds.values() if isinstance(e, dict) and e.get("status") in ("won", "lost")
+                and e.get("fair") and e.get("start") and e.get("ev") is not None and e.get("kind", "value") == "value"),
+               key=lambda e: e["start"])
+    if len(R) < 40:
+        return None
+    mid = R[len(R) // 2]["start"]
+
+    def rec(S):
+        if not S:
+            return "none"
+        w = sum(e["status"] == "won" for e in S)
+        p = sum(e["fair"] for e in S)
+        v = sum(e["fair"] * (1 - e["fair"]) for e in S) or 1
+        return f"{w}/{len(S)} (z {(w - p) / math.sqrt(v):+.1f})"
+    parts = []
+    for lo, hi, name in VALUE_EDGES:
+        f = lambda X: [e for e in X if lo <= e["ev"] < hi]
+        parts.append(f"{name} {rec(f([e for e in R if e['start'] < mid]))} then {rec(f([e for e in R if e['start'] >= mid]))}")
+    return "Value bets by stated edge, by half: " + "; ".join(parts) + "."
+
+
 def value_band_line(finds=None):
     """Graded value bets (value.json, kind value) by fair-chance band and
     start-date half, won vs the fair chance, with z. Information only.
@@ -2420,6 +2454,8 @@ def words(r, fit):
         out.append(r["value_bands"])
     if r.get("value_leagues"):
         out.append(r["value_leagues"])
+    if r.get("value_edges"):
+        out.append(r["value_edges"])
     if r.get("td_calibration"):
         out.append(r["td_calibration"])
     if r.get("home_away"):
@@ -2589,6 +2625,7 @@ def _main():
     log[today.isoformat()]["soccer_weekdays"] = soccer_weekday_line(ledger)
     log[today.isoformat()]["value_bands"] = value_band_line()
     log[today.isoformat()]["value_leagues"] = value_league_line()
+    log[today.isoformat()]["value_edges"] = value_edge_line()
     log[today.isoformat()]["td_calibration"] = td_calibration_line()
     try:
         log[today.isoformat()]["ladder_alt"] = ladder_alt_line()

@@ -1561,6 +1561,14 @@ ladder -- a paired z of about 1.3, far short of the bar on 13 days. The
 ladder's rule is the user's to change; the review now prints this daily
 (ladder_alt_line) so the evidence builds.
 
+**Rejected: skip value bets with a 4%+ stated edge (2026-11-21).** The
+bigger a value bet's stated edge, the worse it has done: 4%+ edges 14 of 57
+(ROI -48%), under 2% 123/281 (-5%). By start-date half the 4%+ band went
+11/31 then 3/26 vs 13.2 / 9.4 expected (z -0.9 / -2.9) -- short both times
+but past the 2.8 bar only in the second, so no cap. A large stated edge is
+likelier a wrong fair price than a real edge; the review prints the split
+daily (value_edge_line) so the next half can settle it.
+
 **Checked: a 0.2% day for soccer (2026-11-20).** By mid-afternoon on Friday
 Nov 20 the board was 6-9 with all nine losses soccer favourites (3.4
 expected; Kashiwa, Kobe, East Bengal, Independiente del Valle, Bielefeld,

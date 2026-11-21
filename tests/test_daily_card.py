@@ -96,6 +96,17 @@ class BoardLeagueLine(unittest.TestCase):
         self.assertIsNone(daily_review.board_league_line({}))
 
 
+class ValueEdgeLine(unittest.TestCase):
+    def test_by_edge(self):
+        import daily_review
+        finds = {f"v{i}": dict(status="won" if i % 2 else "lost", fair=0.5, ev=0.01 if i % 3 else 0.05,
+                               start=f"2026-11-{1 + i // 4:02d}T19:00Z") for i in range(60)}
+        out = daily_review.value_edge_line(finds)
+        self.assertTrue(out.startswith("Value bets by stated edge, by half: under 2% "), out)
+        self.assertIn("; 2-4% none then none; 4%+ ", out)
+        self.assertIsNone(daily_review.value_edge_line({}))
+
+
 class ValueLeagueLine(unittest.TestCase):
     def test_by_league_and_half(self):
         import daily_review
