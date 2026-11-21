@@ -4058,6 +4058,27 @@
    "status": "open",
    "ticker": "KXNCAAFGAME-26NOV21USAUSM-USA"
   },
+  "KXNCAAFGAME-26NOV21USFFAU-USF|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401862833",
+   "label": "South Florida Bulls",
+   "league": "ncaaf",
+   "match": "USF @ FAU",
+   "posted": "2026-11-21T15:17:11+00:00",
+   "queue": 52525.73,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "South Florida Bulls"
+   },
+   "start": "2026-11-21T19:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV21USFFAU-USF"
+  },
   "KXNCAAFGAME-26NOV21USUORST-ORST|YES": {
    "ask": 0.75,
    "bid": 0.74,
@@ -9822,6 +9843,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV21HOUWVU-HOU8"
   },
+  "KXNCAAFSPREAD-26NOV21INDWASH-IND10|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401858535",
+   "label": "Washington Huskies +9.5",
+   "league": "ncaaf",
+   "match": "IU @ WASH",
+   "posted": "2026-11-21T15:17:11+00:00",
+   "queue": 170970.34,
+   "side": "NO",
+   "spec": {
+    "line": 9.5,
+    "t": "spread",
+    "team": "Washington Huskies"
+   },
+   "start": "2026-11-21T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV21INDWASH-IND10"
+  },
   "KXNCAAFSPREAD-26NOV21LSUTENN-LSU2|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -10173,6 +10216,28 @@
    "start": "2026-11-21T20:30Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV21TTUBAY-TTU5"
+  },
+  "KXNCAAFSPREAD-26NOV21TTUBAY-TTU6|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401856871",
+   "label": "Baylor Bears +5.5",
+   "league": "ncaaf",
+   "match": "TTU @ BAY",
+   "posted": "2026-11-21T15:17:11+00:00",
+   "queue": 9325.58,
+   "side": "NO",
+   "spec": {
+    "line": 5.5,
+    "t": "spread",
+    "team": "Baylor Bears"
+   },
+   "start": "2026-11-21T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV21TTUBAY-TTU6"
   },
   "KXNCAAFSPREAD-26NOV21UCLAMICH-UCLA4|NO": {
    "ask": 0.51,
@@ -24368,6 +24433,28 @@
    "start": "2026-11-22T18:00Z",
    "status": "open",
    "ticker": "KXNFLSPREAD-26NOV22MIABUF-BUF17"
+  },
+  "KXNFLSPREAD-26NOV22MINSF-SF4|NO": {
+   "ask": 0.53,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0097,
+   "fair": 0.5194,
+   "id": "nfl:401873077",
+   "label": "Minnesota Vikings +3.5",
+   "league": "nfl",
+   "match": "MIN @ SF",
+   "posted": "2026-11-21T15:17:11+00:00",
+   "queue": 668955.27,
+   "side": "NO",
+   "spec": {
+    "line": 3.5,
+    "t": "spread",
+    "team": "Minnesota Vikings"
+   },
+   "start": "2026-11-23T01:20Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26NOV22MINSF-SF4"
   },
   "KXNFLSPREAD-26NOV22TENDAL-DAL8|YES": {
    "ask": 0.51,
