@@ -92,6 +92,28 @@ def safe_note(L):
     return ""
 
 
+_FINAL = {}
+FINAL_TTL = 60          # seconds: a poll looks up each game once, not once per note
+
+
+def cached_final(lg, eid, e=None, now=None, fetch=None):
+    """ledger._final, remembered for FINAL_TTL seconds per game. Each poll
+    asked ESPN about every open ladder and 10-leg game twice (the final note
+    and the live score), over two scoreboard days each -- up to ~50
+    requests every two minutes for the same few games."""
+    import time
+    now = time.time() if now is None else now
+    hit = _FINAL.get((lg, eid))
+    if hit and now - hit[0] < FINAL_TTL:
+        return hit[1]
+    if fetch is None:
+        import ledger
+        fetch = ledger._final
+    res = fetch(lg, eid, e or {})
+    _FINAL[(lg, eid)] = (now, res)
+    return res
+
+
 def final_note(L, final_fn=None):
     """For an open game leg whose game ESPN already shows final but the
     ledger has not graded yet: "final, not graded yet (A 3, B 6)", else None.
@@ -100,8 +122,7 @@ def final_note(L, final_fn=None):
     if (L.get("status") or "open") != "open" or L.get("kind") == "prop" or ":" not in str(L.get("gid") or ""):
         return None
     if final_fn is None:
-        import ledger
-        final_fn = ledger._final
+        final_fn = cached_final
     lg, eid = str(L["gid"]).split(":", 1)
     try:
         res = final_fn(lg, eid, {"date": L.get("date")} if L.get("date") else {})
@@ -120,8 +141,7 @@ def fresh_live(L, final_fn=None):
     if (L.get("status") or "open") != "open" or L.get("kind") == "prop" or ":" not in str(L.get("gid") or ""):
         return L
     if final_fn is None:
-        import ledger
-        final_fn = ledger._final
+        final_fn = cached_final
     lg, eid = str(L["gid"]).split(":", 1)
     try:
         res = final_fn(lg, eid, {"date": L.get("date")} if L.get("date") else {})

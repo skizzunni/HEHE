@@ -331,6 +331,20 @@ class FinalNote(unittest.TestCase):
         self.assertEqual(snap["Washington Capitals +1.5"], "open | final, not graded yet (Washington Capitals 3, Buffalo Sabres 6)")
 
 
+class CachedFinal(unittest.TestCase):
+    def test_one_lookup_per_game_per_minute(self):
+        calls = []
+        f = lambda lg, eid, e: calls.append(eid) or {"live": True, "n": len(calls)}
+        w._FINAL.clear()
+        a = w.cached_final("nba", "1", {}, now=100.0, fetch=f)
+        b = w.cached_final("nba", "1", {}, now=130.0, fetch=f)
+        c = w.cached_final("nba", "1", {}, now=170.0, fetch=f)
+        w.cached_final("nba", "2", {}, now=130.0, fetch=f)
+        self.assertEqual((a["n"], b["n"], c["n"]), (1, 1, 2))
+        self.assertEqual(calls, ["1", "1", "2"])
+        w._FINAL.clear()
+
+
 class FreshLive(unittest.TestCase):
     def test_espn_score_replaces_stale_report(self):
         L = dict(label="Over 226.5 points", gid="nba:9", kind="game", status="open",
