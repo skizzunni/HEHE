@@ -331,6 +331,27 @@ class FinalNote(unittest.TestCase):
         self.assertEqual(snap["Washington Capitals +1.5"], "open | final, not graded yet (Washington Capitals 3, Buffalo Sabres 6)")
 
 
+class DecidedNote(unittest.TestCase):
+    def test_totals_and_team_totals(self):
+        sc = {"Edmonton Oilers": 4, "Carolina Hurricanes": 4}
+        self.assertEqual(w.decided_note("Edmonton Oilers over 0.5 goals", None, None, sc), "already over (4, line 0.5)")
+        self.assertEqual(w.decided_note("Under 9.5 goals", None, None, {"A": 6, "B": 4}), "gone over (10, line 9.5) -- lost")
+        self.assertIsNone(w.decided_note("Under 9.5 goals", None, None, sc))
+        self.assertIsNone(w.decided_note("Minnesota Wild +2.5", None, None, sc))
+        self.assertIsNone(w.decided_note("Over 202.5 points", None, None, {"A": 1}))
+
+    def test_ten_leg_live_note(self):
+        import unittest.mock as m
+        import locks
+        eg = [dict(gid=f"nhl:{i}", label="Edmonton Oilers over 0.5 goals" if i == 0 else f"Under {9 + i}.5 goals",
+                   price="-2000", p=0.92, league="nhl", kind="game", match=f"T{i} @ U{i}", status="open") for i in range(10)]
+        res = {"live": True, "state": "2:41 - 2nd", "scores": {"Carolina Hurricanes": 4, "Edmonton Oilers": 4}}
+        with m.patch.object(locks, "every_game", lambda legs, led=None: [dict(g) for g in eg]):
+            snap = w.ten_snapshot("2026-11-21", {}, pool={"legs": []}, final_fn=lambda lg, eid, e: res if eid == "0" else None)
+        self.assertEqual(snap["TEN Edmonton Oilers over 0.5 goals (T0 @ U0)"], "open | already over (4, line 0.5)")
+        self.assertEqual(snap["TEN Under 10.5 goals (T1 @ U1)"], "open")
+
+
 class CachedFinal(unittest.TestCase):
     def test_one_lookup_per_game_per_minute(self):
         calls = []

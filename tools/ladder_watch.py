@@ -292,6 +292,26 @@ def _same(a, b):
     return k(a) == k(b)
 
 
+def decided_note(label, home, away, scores):
+    """For a live total or team-total leg already settled by the score:
+    'already over (T, line X)' for an over past its line, 'gone over (T,
+    line X) -- lost' for an under past it; None otherwise. scores: {team: n}."""
+    import re
+    if not scores or len(scores) != 2:
+        return None
+    m = re.match(r"^(Over|Under)\s+([\d.]+)", label, re.I)
+    if m:
+        side, x, tot = m.group(1).lower(), float(m.group(2)), sum(scores.values())
+    else:
+        m = re.match(r"^(.+?)\s+(over|under)\s+([\d.]+)", label, re.I)
+        if not m or m.group(1) not in scores:
+            return None
+        side, x, tot = m.group(2).lower(), float(m.group(3)), scores[m.group(1)]
+    if tot <= x:
+        return None
+    return f"already over ({tot}, line {x:g})" if side == "over" else f"gone over ({tot}, line {x:g}) -- lost"
+
+
 def ten_snapshot(day, led, pool=None, final_fn=None):
     """{"TEN <label> (<match>)": "open|won|lost|void[ | score]"} for the day's
     10-leg (ten_leg.py): picked from the frozen 8 AM pool exactly as at 8 AM,
@@ -309,6 +329,15 @@ def ten_snapshot(day, led, pool=None, final_fn=None):
     out = {}
     for g in (T or {}).get("legs") or []:
         note = final_note(dict(g, status=g["_st"], date=day), final_fn) if g["_st"] == "open" else None
+        if g["_st"] == "open" and not note:   # live and already settled by the score (10-leg legs had no live notes)
+            F = fresh_live(dict(g, status="open", date=day), final_fn)
+            if F is not g and F.get("live_score"):
+                sc = {}
+                for part in str(F["live_score"]).split(" - "):
+                    bits = part.rsplit(" ", 1)
+                    if len(bits) == 2 and bits[1].lstrip("-").isdigit():
+                        sc[bits[0]] = int(bits[1])
+                note = decided_note(g.get("label") or "", g.get("home"), g.get("away"), sc)
         out[f"TEN {g['label']} ({g.get('match') or ''})"] = g["_st"] + (
             f" | {g['score']}" if g.get("score") and g["_st"] != "open" else f" | {note}" if note else "")
     return out
