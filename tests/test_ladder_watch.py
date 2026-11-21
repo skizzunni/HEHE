@@ -331,6 +331,21 @@ class FinalNote(unittest.TestCase):
         self.assertEqual(snap["Washington Capitals +1.5"], "open | final, not graded yet (Washington Capitals 3, Buffalo Sabres 6)")
 
 
+class FreshLive(unittest.TestCase):
+    def test_espn_score_replaces_stale_report(self):
+        L = dict(label="Over 226.5 points", gid="nba:9", kind="game", status="open",
+                 live="10:37 - 4th", live_score="Chicago Bulls 73 - Washington Wizards 75")
+        res = {"live": True, "state": "8:01 - 4th", "scores": {"Chicago Bulls": 78, "Washington Wizards": 87}}
+        F = w.fresh_live(L, lambda lg, eid, e: res)
+        self.assertEqual((F["live"], F["live_score"]), ("8:01 - 4th", "Chicago Bulls 78 - Washington Wizards 87"))
+        self.assertIs(w.fresh_live(L, lambda lg, eid, e: {"missing": True}), L)
+        self.assertIs(w.fresh_live(L, lambda lg, eid, e: 1 / 0), L)
+        self.assertIs(w.fresh_live(dict(L, kind="prop"), lambda lg, eid, e: res)["live"], "10:37 - 4th")
+        over = dict(L, label="Over 160.5 points")
+        snap = w.snapshot({"today": {"legs": [over]}}, final_fn=lambda lg, eid, e: res)
+        self.assertEqual(snap["Over 160.5 points"], "open | already over (165, line 160.5)")
+
+
 class TenFinalNote(unittest.TestCase):
     def test_open_ten_leg_final_before_graded(self):
         import unittest.mock as m

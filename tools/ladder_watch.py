@@ -112,6 +112,27 @@ def final_note(L, final_fn=None):
     return "final, not graded yet (" + ", ".join(f"{k} {n}" for k, n in (res.get("scores") or {}).items()) + ")"
 
 
+def fresh_live(L, final_fn=None):
+    """L with its live clock and score taken from the grader's own ESPN
+    lookup when the game is in progress -- the report's copy is only as new
+    as the last board build, and on 2026-11-20 it read 144 points while the
+    game had 158 with nine minutes left. Props and settled legs unchanged."""
+    if (L.get("status") or "open") != "open" or L.get("kind") == "prop" or ":" not in str(L.get("gid") or ""):
+        return L
+    if final_fn is None:
+        import ledger
+        final_fn = ledger._final
+    lg, eid = str(L["gid"]).split(":", 1)
+    try:
+        res = final_fn(lg, eid, {"date": L.get("date")} if L.get("date") else {})
+    except Exception:
+        return L
+    if not res or not res.get("live") or not res.get("state") or len(res.get("scores") or {}) != 2:
+        return L
+    (a, x), (b, y) = list(res["scores"].items())
+    return dict(L, live=res["state"], live_score=f"{a} {x} - {b} {y}")
+
+
 def snapshot(report, final_fn=None):
     """{label: status/score} for today's legs, or {"SETTLED": "..."}."""
     t = report.get("today")
@@ -121,7 +142,7 @@ def snapshot(report, final_fn=None):
     out = {}
     for L in t["legs"]:
         v = (L.get("status") or "open") + (f" | {L['score']}" if L.get("score") else "")
-        note = final_note(L, final_fn) or safe_note(L)
+        note = final_note(L, final_fn) or safe_note(fresh_live(L, final_fn))
         out[L["label"]] = v + (f" | {note}" if note else "")
     return out
 
