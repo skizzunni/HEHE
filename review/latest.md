@@ -1,7 +1,7 @@
 # Review 2026-11-21
 
 Picks 46-21 (68.7% vs 73.4% claimed, ROI -12.1%).
-Ladder: run 13, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (33% est.), the best-chance 2x-5x combination (4 legs) against 33% at 2.47x for the plain top 4; 11 wins to $10,000; legs: Over 204.5 points (Portland Trail Blazers at New York Knicks; 7:30 PM, open), Georgia Bulldogs under 41.5 points (Georgia Bulldogs at South Carolina Gamecocks; 7:30 PM, open), UTSA Roadrunners over 20.5 points (UTSA Roadrunners at UAB Blazers; 8:00 PM, open), Over 216.5 points (Milwaukee Bucks at Philadelphia 76ers; live 24.6 - 4th, Milwaukee Bucks 124 - Philadelphia 76ers 128, already over (252, line 216.5)).
+Ladder: run 13, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (33% est.), the best-chance 2x-5x combination (4 legs) against 33% at 2.47x for the plain top 4; 11 wins to $10,000; legs: Over 204.5 points (Portland Trail Blazers at New York Knicks; 7:30 PM, open), Georgia Bulldogs under 41.5 points (Georgia Bulldogs at South Carolina Gamecocks; 7:30 PM, open), UTSA Roadrunners over 20.5 points (UTSA Roadrunners at UAB Blazers; 8:00 PM, open), Over 216.5 points (Milwaukee Bucks at Philadelphia 76ers; live 1.5 - 4th, Milwaukee Bucks 129 - Philadelphia 76ers 131, already over (260, line 216.5)).
 Ladder runs: 1) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 2) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 3) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 4) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 5) 2026-11-15, 2 days, peak $2.00, lost on Boston Celtics to win; 6) 2026-11-17, 1 day, peak $1.00, lost on San Antonio Spurs to win, Duke Blue Devils to win; 7) 2026-11-18, 1 day, peak $1.00, lost on Los Angeles Lakers to win, Under 235.5 points (237, missed by 1.5); 8) 2026-11-19, 1 day, peak $1.00, lost on Washington Capitals +1.5 (lost by 3, missed by 1.5); 9) 2026-11-20, 1 day, peak $1.00, lost on Over 226.5 points (192, missed by 34.5); 10) 2026-11-21, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 15/33 cashed at 2.22x, without props 15/34 at 2.28x.
 Running ahead: NHL under on all saved lines 169/189 vs 83% (82 games).
 Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 149/199 (75% vs 82%). Walk-forward: legs of a type running cold won 88.1% the next day vs 80.4% for the rest (678 and 7944 legs), so a cold week is noise, not a signal.
@@ -89,17 +89,17 @@ Yesterday (2026-11-20): board 26-16, sweep broken by jpn Kashiwa Reysol or draw 
 - LOST nba Chicago Bulls at 54% (-130), Chicago Bulls 94 - Washington Wizards 98: margin 4 · the book had my side favoured too · called at 54% · coin flip · close game; picks like it: 43 of 68 (63% vs 55% stated)
 - LOST ncaaf Duke Blue Devils at 82% (-520), Clemson Tigers 20 - Duke Blue Devils 10: margin 10 · the book had my side favoured too · called at 82% · upset; picks like it: 61 of 74 (82% vs 82% stated)
 - LOST nba Houston Rockets at 53% (-122), Denver Nuggets 133 - Houston Rockets 124: margin 9 · the book had my side favoured too · called at 53% · coin flip; picks like it: 35 of 58 (60% vs 54% stated)
-Locks 0/11 won, 11 open; Best play top 2 (58%) open.
+Locks 1/11 won, 10 open; Best play top 2 (58%) open.
 Safe Locks 0/11 won, 11 open; Winners parlay top 2 (86%) open; Best play top 8 (53%) open.
-Lottery 100: open (0/7 legs won)
+Lottery 100: open (1/7 legs won)
 Lottery 100: open (1/6 legs won)
 Lottery 100: lost (0/6 legs won, killed by North Texas Mean Green to win)
-Lottery 10k: open (0/11 legs won)
+Lottery 10k: open (1/11 legs won)
 Lottery 10k: open (1/10 legs won)
 Lottery 10k: open (0/10 legs won)
-Lottery 10k+25: open (0/11 legs won)
-Lottery 10k+50: open (1/11 legs won)
-Lottery 10k+100: open (0/10 legs won)
+Lottery 10k+25: open (1/11 legs won)
+Lottery 10k+50: open (2/11 legs won)
+Lottery 10k+100: open (1/10 legs won)
 Ladder-consistency props (all time): 2971/3586 won (82.8%) vs 86.4% fair, 87.6% price, 83.6% stated on the board (heavy props capped).
 Props 9/14 vs 68.6% claimed.
 
