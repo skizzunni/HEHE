@@ -206,7 +206,19 @@ def winner_lines(D, day="today"):
     return (["Winners, every game (the board's pick and its chance):"] + out) if out else []
 
 
-def yesterday_lines(today_iso=None, tickets_fn=None):
+def board_record(day, book=None):
+    """(won, lost) for the board picks graded on `day` (record-excluded and
+    unpriced picks left out, as the board's own record does)."""
+    if book is None:
+        import ledger
+        book = ledger.load()
+    from record_eligibility import record_priced          # the board record's own filter
+    R = [e for e in book.values() if isinstance(e, dict) and e.get("date") == day
+         and e.get("status") in ("won", "lost") and not e.get("record_excluded") and record_priced(e)]
+    return sum(e["status"] == "won" for e in R), sum(e["status"] == "lost" for e in R)
+
+
+def yesterday_lines(today_iso=None, tickets_fn=None, book=None):
     """'Yesterday (Nov 20): ladder lost, 10-leg cashed, 2x every-game lost'
     -- how the three ways to play the card did, so the morning message
     starts from the last result (daily_review.tickets_text)."""
@@ -218,7 +230,9 @@ def yesterday_lines(today_iso=None, tickets_fn=None):
     if tickets_fn is None:
         from daily_review import tickets_text as tickets_fn
     t = tickets_fn(y)
-    return [f"Yesterday ({y}): " + t[len("; tickets: "):] + "."] if t else []
+    w, l = board_record(y, book)
+    bits = ([f"board {w}-{l}"] if w + l else []) + ([t[len("; tickets: "):]] if t else [])
+    return [f"Yesterday ({y}): " + "; ".join(bits) + "."] if bits else []
 
 
 def card(D, day="today"):

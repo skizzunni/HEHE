@@ -60,9 +60,13 @@ class Sizes(unittest.TestCase):
 
 class YesterdayLines(unittest.TestCase):
     def test_from_tickets_text(self):
-        out = daily_card.yesterday_lines("2026-11-21", lambda d: "; tickets: ladder lost, 10-leg cashed" if d == "2026-11-20" else "")
-        self.assertEqual(out, ["Yesterday (2026-11-20): ladder lost, 10-leg cashed."])
-        self.assertEqual(daily_card.yesterday_lines("2026-11-21", lambda d: ""), [])
+        book = {"a": dict(date="2026-11-20", status="won", price="-150"), "b": dict(date="2026-11-20", status="lost", price="-150"),
+                "c": dict(date="2026-11-20", status="won", price="-150", record_excluded=True),
+                "e": dict(date="2026-11-20", status="won"),                     # unpriced: off the record
+                "d": dict(date="2026-11-19", status="won", price="-150")}
+        out = daily_card.yesterday_lines("2026-11-21", lambda d: "; tickets: ladder lost, 10-leg cashed" if d == "2026-11-20" else "", book)
+        self.assertEqual(out, ["Yesterday (2026-11-20): board 1-1; ladder lost, 10-leg cashed."])
+        self.assertEqual(daily_card.yesterday_lines("2026-11-21", lambda d: "", {}), [])
 
 
 class TicketsText(unittest.TestCase):
