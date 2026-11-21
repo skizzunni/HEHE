@@ -39,14 +39,14 @@ Home and away picks, by half: NBA home 66% vs 67% then 71% vs 70%, away 78% vs 6
 Injuries at tip-off (270 games, 17 days, early read): my side more out: 1st 28/39 72% vs 64% | 2nd 31/45 69% vs 63%; even: 1st 26/34 76% vs 64% | 2nd 21/44 48% vs 62%; their side more out: 1st 47/57 82% vs 65% | 2nd 33/51 65% vs 67%.
 Lessons from losses: no league / bet / chance band is 3+ points short in both halves (2028 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 9/18 vs 69% stated (7.5% by luck; about 4.7 of 62 teams expected this far behind by chance); NHL Detroit Red Wings 3/10 vs 54% stated (11.7% by luck; about 7.3 of 62 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.9 of 62 teams expected this far behind by chance).
-High-chance sweep: 70%+ today 5-1, 76 open; swept 3 of 35 past days (last 2026-11-11) | 80%+ today 3-0, 36 open; swept 11 of 34 past days (last 2026-11-19).
+High-chance sweep: 70%+ today 5-1, 77 open; swept 3 of 35 past days (last 2026-11-11) | 80%+ today 3-0, 36 open; swept 11 of 34 past days (last 2026-11-19).
 Back-to-backs, board record so far: NHL on the tired side 4/11 vs 56%, against it 18/31 vs 61%; NBA on the tired side 18/24 vs 65%, against it 21/27 vs 72%.
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
 Next UFC card 2026-11-21 (12 fights priced, 3 close): Ikram Aliskerov 72%; Aleksandre Topuria 71%; Diyar Nurgozhay 69%; Jake Matthews 68%; Shamil Gaziev 64%; Kyoji Horiguchi 64%; Dan Hooker 62%; Dom Mar Fan 62%; Navajo Stirling 62%; John Mitchell 56% (close); Kevin Vallejos 54% (close); Amir Albazi 50% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.6% hit vs 44.6% stated on 565 (by half 136/321 then 88/244, 42% / 36% vs 45% / 44% stated; short in both halves)
 Strong calls 6-1 (85.7% vs 76.6% claimed).
 Closing line value: +0.46 points on 7 picks; beat the close on 28.6%.
-Board sweep: 6-1, 140 open -- broken (first loss: jpn Urawa Red Diamonds or draw at 71%); 1.6 losses expected from the settled picks' chances, so 1 or more by now had a 85% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: jpn 1 (1.3 expected).
+Board sweep: 6-1, 141 open -- broken (first loss: jpn Urawa Red Diamonds or draw at 71%); 1.6 losses expected from the settled picks' chances, so 1 or more by now had a 85% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: jpn 1 (1.3 expected).
 - LOST jpn Urawa Red Diamonds or draw at 71% (-300), Kyoto Sanga 2 - Urawa Red Diamonds 1: margin 1 · the book had my side favoured too · called at 71% · favourite lost · close game; picks like it: 16 of 23 (70% vs 71% stated)
 Why picks lost (14 days): favourite lost 91, close game 90, coin flip 58, blowout 45, upset 41, price moved against it 22, drawn 12.
 Yesterday (2026-11-20): board 26-16, sweep broken by jpn Kashiwa Reysol or draw at 84%; 10.4 losses expected, 16 came in (3.2% chance of that many or more); tickets: ladder lost, 10-leg cashed, 2x every-game lost.
