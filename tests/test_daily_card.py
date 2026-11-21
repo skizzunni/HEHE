@@ -212,6 +212,16 @@ class LocksLeagueTypeLine(unittest.TestCase):
         self.assertIsNone(daily_review.locks_league_type_line(legs[:10]))
 
 
+class SwitchedLine(unittest.TestCase):
+    def test_only_switched_picks(self):
+        import daily_review
+        led = {f"k{i}": dict(status="won" if i % 2 else "lost", conf=60, date=f"2026-11-{1 + i % 20:02d}", pick="A",
+                             first=dict(pick="B" if i < 24 else "A")) for i in range(40)}
+        out = daily_review.switched_line(led)
+        self.assertTrue(out.startswith("Picks that switched side before kick-off, by half: 6/12 vs 7.2"), out)
+        self.assertIsNone(daily_review.switched_line({k: v for k, v in led.items() if v["first"]["pick"] == "A"}))
+
+
 class DcMoveLine(unittest.TestCase):
     def test_moved_against_only(self):
         import daily_review

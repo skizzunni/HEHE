@@ -1137,6 +1137,30 @@ def board_league_line(ledger=None, min_n=40, top=3):
         + f" -- of {len(rows)} leagues; " + (f"short in both halves: {', '.join(short)}." if short else "none short in both halves."))
 
 
+def switched_line(ledger=None, min_n=20):
+    """Board picks whose side changed between the first call and kick-off
+    (the price moved past the other team), by date half, won vs stated with
+    z. Information only. 2026-11-21 (Iowa State, North Carolina, the Blazers
+    all switched late; the first two lost): 47/68 then 45/69 vs 41.7 / 43.1
+    expected (z +1.3 / +0.5) -- a switched pick has done no worse."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    R = sorted((e for e in ledger.values() if isinstance(e, dict) and e.get("status") in ("won", "lost") and e.get("date")
+                and not e.get("record_excluded") and e.get("conf") is not None and (e.get("first") or {}).get("pick")
+                and (e["first"]["pick"] != e.get("pick") or bool(e["first"].get("dc")) != bool(e.get("dc")))),
+               key=lambda e: e["date"])
+    if len(R) < min_n:
+        return None
+    h = len(R) // 2
+
+    def rec(X):
+        w = sum(e["status"] == "won" for e in X)
+        p = sum(e["conf"] for e in X) / 100
+        v = sum(e["conf"] / 100 * (1 - e["conf"] / 100) for e in X) or 1
+        return f"{w}/{len(X)} vs {p:.1f} expected (z {(w - p) / math.sqrt(v):+.1f})"
+    return f"Picks that switched side before kick-off, by half: {rec(R[:h])} then {rec(R[h:])} -- information only."
+
+
 def coin_flip_line(ledger=None, cut=60):
     """Board picks called under `cut`% (the near coin flips), won vs stated by
     date half, split by how the price moved after the call (3+ points against,
@@ -2522,6 +2546,8 @@ def words(r, fit):
         out.append(r["ladder_alt"])
     if r.get("dc_moves"):
         out.append(r["dc_moves"])
+    if r.get("switched"):
+        out.append(r["switched"])
     if r.get("dc_bands"):
         out.append(r["dc_bands"])
     if r.get("board_leagues"):
@@ -2709,6 +2735,7 @@ def _main():
     log[today.isoformat()]["coin_flips"] = coin_flip_line(ledger)
     log[today.isoformat()]["price_moves"] = price_move_line(ledger)
     log[today.isoformat()]["dc_moves"] = dc_move_line(ledger)
+    log[today.isoformat()]["switched"] = switched_line(ledger)
     log[today.isoformat()]["dc_bands"] = dc_band_line(ledger)
     log[today.isoformat()]["board_leagues"] = board_league_line(ledger)
     log[today.isoformat()]["board_bands"] = board_band_line(ledger)
