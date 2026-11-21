@@ -62737,6 +62737,22 @@
   "prop_lock": true,
   "status": "open"
  },
+ "nba:401910024|n:jalen brunson|Points|20+": {
+  "aid": null,
+  "date": "2026-11-21",
+  "edge": -7.8,
+  "gid": "nba:401910024",
+  "imp": 0.9091,
+  "label": "Jalen Brunson: 20+ Points",
+  "league": "nba",
+  "line": "20+",
+  "market": "Points",
+  "name": "Jalen Brunson",
+  "p": 0.8425,
+  "p_fair": 0.8381,
+  "price": "-1000",
+  "status": "open"
+ },
  "nba:401910024|n:landry shamet|Threes Made|1+": {
   "aid": null,
   "date": "2026-11-21",
@@ -63101,6 +63117,22 @@
   "price": "-1200",
   "status": "open"
  },
+ "nba:401910028|n:baylor scheierman|Points|5+": {
+  "aid": null,
+  "date": "2026-11-21",
+  "edge": 4.0,
+  "gid": "nba:401910028",
+  "imp": 0.9167,
+  "label": "Baylor Scheierman: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Baylor Scheierman",
+  "p": 0.8496,
+  "p_fair": 0.9538,
+  "price": "-1100",
+  "status": "open"
+ },
  "nba:401910028|n:darius acuff|Points|10+": {
   "aid": null,
   "date": "2026-11-21",
@@ -63241,6 +63273,22 @@
   "p": 0.8575,
   "p_fair": 0.8589,
   "price": "-1100",
+  "status": "open"
+ },
+ "nba:401910028|n:paul george|Reb + Ast|10+": {
+  "aid": null,
+  "date": "2026-11-21",
+  "edge": -9.0,
+  "gid": "nba:401910028",
+  "imp": 0.8,
+  "label": "Paul George: 10+ Reb + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Reb + Ast",
+  "name": "Paul George",
+  "p": 0.7685,
+  "p_fair": 0.7277,
+  "price": "-400",
   "status": "open"
  },
  "nba:401910028|n:zach lavine|Pts + Reb + Ast|15+": {
@@ -109195,6 +109243,22 @@
   "price": "-1000",
   "status": "open"
  },
+ "nhl:401892765|n:anders lee|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-21",
+  "edge": null,
+  "gid": "nhl:401892765",
+  "imp": 0.913,
+  "label": "Anders Lee: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Anders Lee",
+  "p": 0.8565,
+  "p_fair": null,
+  "price": "-1050",
+  "status": "open"
+ },
  "nhl:401892765|n:cutter gauthier|Shots on Goal|3+": {
   "aid": null,
   "date": "2026-11-21",
@@ -111636,7 +111700,8 @@
   "p": 0.7643,
   "p_fair": null,
   "price": "-450",
-  "status": "open"
+  "status": "won",
+  "value": 9.97
  },
  "ufc:401922277|n:fight|Goes the distance|No": {
   "aid": null,
@@ -111653,7 +111718,8 @@
   "p_fair": null,
   "price": "-750",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 9.97
  },
  "ufc:401922277|n:navajo stirling|Winner|win": {
   "aid": null,
@@ -111669,7 +111735,8 @@
   "p": 0.6155,
   "p_fair": null,
   "price": "-178",
-  "status": "open"
+  "status": "won",
+  "value": 9.97
  },
  "ufc:401922278|n:dan hooker|Winner|win": {
   "aid": null,
