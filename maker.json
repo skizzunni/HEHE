@@ -3266,6 +3266,7 @@
    "cost": 0.664,
    "edge": 0.0101,
    "fair": 0.6707,
+   "fill": "strict",
    "id": "ncaaf:401856866",
    "label": "BYU Cougars",
    "league": "ncaaf",
@@ -3278,8 +3279,9 @@
     "team": "BYU Cougars"
    },
    "start": "2026-11-21T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21BYUKU-BYU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21BYUKU-BYU",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV21CCARULL-ULL|YES": {
    "ask": 0.78,
@@ -9777,6 +9779,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "queue",
    "id": "ncaaf:401856866",
    "label": "BYU Cougars -4.5",
    "league": "ncaaf",
@@ -9790,8 +9793,9 @@
     "team": "BYU Cougars"
    },
    "start": "2026-11-21T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21BYUKU-BYU5"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21BYUKU-BYU5",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV21BYUKU-BYU6|NO": {
    "ask": 0.51,
@@ -9799,6 +9803,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401856866",
    "label": "Kansas Jayhawks +5.5",
    "league": "ncaaf",
@@ -9812,8 +9817,9 @@
     "team": "Kansas Jayhawks"
    },
    "start": "2026-11-21T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21BYUKU-BYU6"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21BYUKU-BYU6",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV21BYUKU-BYU6|YES": {
    "ask": 0.51,
@@ -9821,6 +9827,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856866",
    "label": "BYU Cougars -5.5",
    "league": "ncaaf",
@@ -9834,8 +9841,9 @@
     "team": "BYU Cougars"
    },
    "start": "2026-11-21T17:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21BYUKU-BYU6"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21BYUKU-BYU6",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV21CCARULL-ULL11|NO": {
    "ask": 0.51,
