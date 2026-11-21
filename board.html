@@ -1873,7 +1873,13 @@ function restsOn(legs, lost){
 function ladderRuns(R, money){
   if(!R.length) return '';
   const how = s => s === "reached" ? '<span class="wl won">REACHED</span>' : '<span class="wl lost">BUSTED</span>';
-  return '<details><summary>Past runs (' + R.length + ')</summary><table class="sweeptab"><thead><tr><th>Started</th>'
+  // how lost runs died: on one leg, and how often by a point or two (daily_review.ladder_misses_line)
+  const L = R.filter(r => r.status !== 'reached' && (r.lost_on || []).length);
+  const one = L.filter(r => r.lost_on.length === 1);
+  const close = one.filter(r => { const m = /missed by ([\d.]+)/.exec(r.lost_on[0]); return m && +m[1] <= 2; });
+  const misses = L.length ? ' &middot; ' + one.length + ' of ' + L.length + ' lost on a single leg'
+    + (close.length ? ' (' + close.length + ' by 2 or less)' : '') : '';
+  return '<details><summary>Past runs (' + R.length + ')' + misses + '</summary><table class="sweeptab"><thead><tr><th>Started</th>'
     + '<th>Days</th><th>Peak</th><th>Ended</th></tr></thead><tbody>'
     + R.map(r => '<tr><td>' + esc(r.start) + '</td><td>' + r.days + '</td><td>' + money(r.peak) + '</td><td>' + how(r.status)
       + ((r.lost_on || []).length ? '<div class="sbn">on ' + r.lost_on.map(esc).join(', ') + '</div>' : '')
