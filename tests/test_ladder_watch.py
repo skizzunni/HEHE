@@ -173,7 +173,7 @@ class FirstLook(unittest.TestCase):
                  "GAME unl FRO @ SVK": "board pick Slovakia (67%) = lost | Faroe Islands 2, Slovakia 2 | why: drawn",
                  "GAME unl GER @ SRB": "board pick Germany (76%) = won | Germany 3, Serbia 1"}
         self.assertEqual(w.first_look(after), ["WATCHING: Under 241.5 points = open",
-                                               "WATCHING: 3 board games -- 1 won, 1 lost (unl FRO @ SVK), 1 open"])
+                                               "WATCHING: 3 board games -- 1 won, 1 lost (Slovakia), 1 open"])
         self.assertEqual(w.first_look({"A": "open"}), ["WATCHING: A = open"])
 
 
@@ -196,7 +196,7 @@ class FirstLookSettled(unittest.TestCase):
         self.assertEqual(w.first_look(after), [
             "WATCHING: Houston Cougars to win = lost | Colorado Buffaloes 42 - Houston Cougars 32",
             "WATCHING: SETTLED = 2026-11-13 lost bank 1.0",
-            "WATCHING: 2 board games -- 1 won, 1 lost (ncaaf HOU @ COLO), 0 open"])
+            "WATCHING: 2 board games -- 1 won, 1 lost (Houston Cougars), 0 open"])
         self.assertTrue(w.done(after))
 
 
@@ -221,7 +221,7 @@ class UfcSnapshot(unittest.TestCase):
         import ladder_watch as w
         after = {"SETTLED": "x", "UFC E vs F": "board pick F = open", "UFC A vs B": "board pick A (70%) = lost | winner B"}
         self.assertFalse(w.done(after))
-        self.assertIn("WATCHING: 2 board games -- 0 won, 1 lost (A vs B), 1 open", w.first_look(after))
+        self.assertIn("WATCHING: 2 board games -- 0 won, 1 lost (A), 1 open", w.first_look(after))
 
 
     def test_draw_is_void_and_settled(self):

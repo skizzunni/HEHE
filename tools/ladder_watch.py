@@ -11,6 +11,7 @@ or repeats a change.
         # in a spare checkout: pull the branch, check, sleep, repeat until settled
 """
 import json
+import re
 import os
 import sys
 
@@ -319,6 +320,12 @@ def _name(k):
     return NAMES.get(k, k)
 
 
+def _pick_of(v):
+    """'board pick Vasco da Gama or draw (84%) = won | ...' -> 'Vasco da Gama or draw'."""
+    m = re.match(r"board pick (.+?)(?: \([\d%+]+\))? = ", str(v))
+    return m.group(1) if m else None
+
+
 def first_look(after):
     """The first look, short: every ladder leg (and SETTLED) in full, then the
     board games as one count line -- won, lost (named), open. It used to print
@@ -329,7 +336,8 @@ def first_look(after):
     G = {k: str(v).split(" | ")[0] for k, v in after.items() if k.startswith(("GAME ", "UFC "))}
     if G:
         won = sum(v.endswith("= won") for v in G.values())
-        lost = [k.split(" ", 1)[1] for k, v in G.items() if v.endswith("= lost")]
+        # name the pick that lost (from its value), not the ESPN abbreviations in the key
+        lost = [_pick_of(after[k]) or k.split(" ", 1)[1] for k, v in G.items() if v.endswith("= lost")]
         opn = sum(v.endswith("= open") for v in G.values())
         other = len(G) - won - len(lost) - opn          # void, postponed, unpriced: so the counts add up
         out.append(f"WATCHING: {len(G)} board games -- {won} won, {len(lost)} lost"
