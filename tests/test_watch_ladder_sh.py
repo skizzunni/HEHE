@@ -92,6 +92,15 @@ class WatchLadderSh(unittest.TestCase):
                       "10-leg: 1 won, 0 lost, 1 open; "
                       "2 board games -- 1 won, 0 lost, 1 open", out)
 
+    def test_resume_counts_ufc(self):
+        import json
+        with open(self.work + ".state.json", "w") as fh:
+            json.dump({"UFC A vs B": "board pick A (70%) = won | winner A", "UFC C vs D": "board pick D = open"}, fh)
+        with open(self.work + ".day", "w") as fh:
+            fh.write("2026-11-21\n")
+        rc, out = self.run_sh("2026-11-21", "all")
+        self.assertIn("UFC tonight 1-0, 1 to go", out)
+
     def test_same_day_state_kept(self):
         open(self.work + ".state.json", "w").close()
         with open(self.work + ".day", "w") as fh:

@@ -41,6 +41,9 @@ ten = [str(v).split(" | ")[0] for k, v in d.items() if k.startswith("TEN ")]
 if ten:
     legs.append(f"10-leg: {ten.count('won')} won, {ten.count('lost')} lost, {ten.count('open')} open")
 g = [str(v).split(" | ")[0] for k, v in d.items() if k.startswith(("GAME ", "UFC "))]
+u = [str(v).split(" | ")[0].rsplit("= ", 1)[-1] for k, v in d.items() if k.startswith("UFC ")]
+if any(x != "open" for x in u):          # tonight's UFC picks so far, as the watcher's own record line
+    legs.append(f"UFC tonight {u.count('won')}-{u.count('lost')}, {u.count('open')} to go")
 print("RESUMED: " + "; ".join(legs + [f"{len(g)} board games -- {sum(x.endswith('= won') for x in g)} won, "
       f"{sum(x.endswith('= lost') for x in g)} lost, {sum(x.endswith('= open') for x in g)} open"]))
 PY
