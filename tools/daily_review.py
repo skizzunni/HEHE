@@ -2279,7 +2279,38 @@ def yesterday_line(y):
                if ys.get("expected_losses") is not None and ys.get("lost") else "")
             + (f" -- an unusually good day: only {pct_text(ys['as_good_pct'])} of days go this well"
                if ys.get("as_good_pct") is not None and ys["as_good_pct"] < 10 and (ys.get("won") or 0) + (ys.get("lost") or 0) >= 10
-               else "") + ".")
+               else "") + (tickets_text(y["day"]) if y.get("tickets") else "") + ".")
+
+
+def tickets_text(day, ladder_days=None, ten_days=None, alt_days=None):
+    """'; tickets: ladder lost, 10-leg cashed, 2x every-game lost' for one
+    graded day -- the three ways to play the card side by side, from the
+    same replays the review already uses. '' when none is graded."""
+    try:
+        import locks
+        import ten_leg
+        if ladder_days is None:
+            import ladder
+            ladder_days = {e["day"]: e["result"] for r in ladder.replay() for e in r["days"]}
+        if alt_days is None:
+            alt_days = ten_leg.to_target_days(locks.SAFE_LEDGER)
+        if ten_days is None:
+            ten_days = {}
+            import ledger
+            pool = (locks.load(locks.SAFE_LEDGER).get("pools") or {}).get(day)
+            if pool:
+                eg = locks.every_game(pool.get("legs"), ledger.load())
+                for g in eg:
+                    g["_st"], g["status"] = g["status"], "open"
+                T = ten_leg.build(eg)
+                if T and all(g["_st"] in ("won", "lost", "void") for g in T["legs"]):
+                    ten_days[day] = all(g["_st"] != "lost" for g in T["legs"])
+    except Exception:
+        return ""
+    word = lambda v: "cashed" if v is True or v == "won" else "lost" if v is False or v == "lost" else None
+    parts = [f"{name} {word(src.get(day))}" for name, src in (("ladder", ladder_days), ("10-leg", ten_days), ("2x every-game", alt_days))
+             if word(src.get(day))]
+    return ("; tickets: " + ", ".join(parts)) if parts else ""
 
 
 def pool_props(league, props=None):
@@ -2508,7 +2539,7 @@ def words(r, fit):
         out.append("Why picks lost (14 days): " + ", ".join(f"{k} {v}" for k, v in rs.items()) + ".")
     y = r.get("yesterday") or {}
     if y.get("day"):
-        out.append(yesterday_line(y))
+        out.append(yesterday_line(dict(y, tickets=True)))
         for L in y.get("losses") or []:
             out.append(loss_line(L))
     for k in r["leaks_14d"]:

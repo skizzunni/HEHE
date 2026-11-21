@@ -58,6 +58,14 @@ class Sizes(unittest.TestCase):
             self.assertEqual(ten_leg.sizes(led={}, ns=(6, 8)), [dict(n=6, days=13, cashed=12, pays=1.34)])
 
 
+class TicketsText(unittest.TestCase):
+    def test_three_tickets(self):
+        import daily_review
+        self.assertEqual(daily_review.tickets_text("2026-11-20", {"2026-11-20": "lost"}, {"2026-11-20": True}, {"2026-11-20": False}),
+                         "; tickets: ladder lost, 10-leg cashed, 2x every-game lost")
+        self.assertEqual(daily_review.tickets_text("2026-11-20", {"2026-11-20": "open"}, {}, {}), "")
+
+
 class SoccerWeekdayLine(unittest.TestCase):
     def test_weekdays(self):
         import daily_review
