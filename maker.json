@@ -18015,6 +18015,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV21ARIZKSU-54"
   },
+  "KXNCAAFTOTAL-26NOV21ARKTEX-47|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401856755",
+   "label": "over 46.5",
+   "league": "ncaaf",
+   "match": "ARK @ TEX",
+   "posted": "2026-11-21T15:59:04+00:00",
+   "queue": 0.0,
+   "side": "YES",
+   "spec": {
+    "line": 46.5,
+    "t": "over"
+   },
+   "start": "2026-11-21T20:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV21ARKTEX-47"
+  },
   "KXNCAAFTOTAL-26NOV21ARKTEX-48|YES": {
    "ask": 0.51,
    "bid": 0.5,
@@ -24629,6 +24650,28 @@
    "status": "open",
    "ticker": "KXNFLSPREAD-26NOV22MINSF-SF4"
   },
+  "KXNFLSPREAD-26NOV22TBDET-DET5|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0161,
+   "fair": 0.5125,
+   "id": "nfl:401873072",
+   "label": "Detroit Lions -4.5",
+   "league": "nfl",
+   "match": "TB @ DET",
+   "posted": "2026-11-21T15:59:04+00:00",
+   "queue": 982135.45,
+   "side": "YES",
+   "spec": {
+    "line": -4.5,
+    "t": "spread",
+    "team": "Detroit Lions"
+   },
+   "start": "2026-11-22T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLSPREAD-26NOV22TBDET-DET5"
+  },
   "KXNFLSPREAD-26NOV22TENDAL-DAL8|YES": {
    "ask": 0.51,
    "bid": 0.5,
@@ -26215,6 +26258,27 @@
    "start": "2026-11-22T21:05Z",
    "status": "open",
    "ticker": "KXNFLTOTAL-26NOV22NYJLAC-43"
+  },
+  "KXNFLTOTAL-26NOV22TBDET-47|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0026,
+   "fair": 0.5057,
+   "id": "nfl:401873072",
+   "label": "under 46.5",
+   "league": "nfl",
+   "match": "TB @ DET",
+   "posted": "2026-11-21T15:59:04+00:00",
+   "queue": 464526.05,
+   "side": "NO",
+   "spec": {
+    "line": 46.5,
+    "t": "under"
+   },
+   "start": "2026-11-22T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV22TBDET-47"
   },
   "KXNFLTOTAL-26OCT22NECHI-51|YES": {
    "ask": 0.52,
