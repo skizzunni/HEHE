@@ -85,3 +85,13 @@ class MissesInTicket(unittest.TestCase):
                  runs=3, history=[dict(status="lost", lost_on=["Over 223.5 points (223, missed by 0.5)"])])
         L = t.lines(R)
         self.assertIn("Ladder runs lost: 1 of 1 died on a single leg, 1 of those by 2 or less (0.5); 0 on two or more.", L)
+
+
+class UnderChance(unittest.TestCase):
+    def test_flag_only_with_30_plus(self):
+        def leg(won, n):
+            return dict(label="Over 204.5 points", price="-390", p=0.76, match="A @ B", lg="NBA", tip="7:30 PM",
+                        kind_rec=dict(won=won, n=n))
+        R = lambda L: dict(today=dict(stake=1.0, pays=2.0, prob=0.5, legs=[L]), runs=1)
+        self.assertIn("Locks like it: 37 of 55 (67%) -- under this leg's chance; information, not a cut.", t.lines(R(leg(37, 55)))[1])
+        self.assertIn("Locks like it: 7 of 10 (70%).", t.lines(R(leg(7, 10)))[1])
