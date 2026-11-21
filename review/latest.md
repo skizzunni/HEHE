@@ -10,8 +10,8 @@ Pre-registered tests also running: NFL spreads getting 14+ points (legs from 202
 Props by the book's fair chance (won, by half; fair / our stated): 70-80% 76%, 77% (76% / 78%); 80-85% 85%, 86% (83% / 84%); 85-90% 86%, 82% (88% / 85%); 90%+ 85%, 85% (93% / 85%).
 Soccer or-draw picks by side: home 76% vs 74% stated on 489 (halves 79%, 74%); away 74% vs 73% stated on 242 (halves 72%, 75%). Straight wins: 67% vs 66% stated on 315; 62 of 103 losses were draws. With full price history: 82% vs 74% stated on 160 (halves 80% vs 72%, 84% vs 75%); older picks without it: 52% vs 59% on 155.
 Soccer draws on the board: 22% of 1630 games; most in AUS 44% of 25, EFL3 41% of 37, UECL 30% of 33, URU 29% of 41, JPN 29% of 79 -- where a straight win most often loses to a draw.
-Locks by bet type, by half: win 85% then 80% (vs 83%, 79%); spread 89% then 88% (vs 84%, 85%); total 86% then 90% (vs 83%, 85%); team total 88% then 90% (vs 86%, 85%); prop 79% then 84% (vs 84%, 78%).
-Locks by league, by half: NBA 83% then 86% (vs 83%, 84%); NHL 86% then 96% (vs 87%, 87%); NCAAF 88% then 76% (vs 82%, 77%); NFL 82% then 87% (vs 83%, 83%). No league short in both halves.
+Locks by bet type, by half: win 85% then 80% (vs 83%, 79%); spread 89% then 88% (vs 84%, 85%); total 86% then 90% (vs 83%, 85%); team total 88% then 89% (vs 86%, 85%); prop 79% then 84% (vs 84%, 78%).
+Locks by league, by half: NBA 83% then 86% (vs 83%, 84%); NHL 86% then 96% (vs 87%, 87%); NCAAF 88% then 75% (vs 82%, 77%); NFL 82% then 87% (vs 83%, 83%). No league short in both halves.
 Locks by league and bet type: none of 10 pairs short of stated in both halves.
 Locks props by market, by half: NBA Assists 14/19 then 19/22 (vs 89%, 79%); NFL Receiving Yards 12/14 then 10/15 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.
 Every game's safest line by bet type, by half: win 96% then 86% (vs 84%, 84%); spread 100% then 92% (vs 91%, 90%); total 94% then 97% (vs 91%, 92%); team total 96% then 94% (vs 91%, 90%). Ahead in both halves: win, spread, total, team total.
@@ -45,6 +45,7 @@ High-chance sweep: 70%+ today 35-13, 51 open; swept 3 of 35 past days (last 2026
 Back-to-backs, board record so far: NHL on the tired side 4/11 vs 56%, against it 18/31 vs 61%; NBA on the tired side 18/24 vs 65%, against it 21/27 vs 72%.
 Ladder games, players out or doubtful: Portland Trail Blazers at New York Knicks: Portland Trail Blazers without Chris Youngblood, Vit Krejci, Ja Morant, Shaedon Sharpe; New York Knicks without Jordan Clarkson | Milwaukee Bucks at Philadelphia 76ers: Milwaukee Bucks without Ousmane Dieng; Philadelphia 76ers without Dean Wade, Adem Bona, Jaylen Brown, Ariel Hukporti.
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
+Next UFC card 2026-11-21 (11 fights priced, 2 close): Ikram Aliskerov 75%; Aleksandre Topuria 71%; Diyar Nurgozhay 70%; Jake Matthews 69%; Navajo Stirling 66%; Dan Hooker 64%; Shamil Gaziev 62%; Kyoji Horiguchi 62%; Dom Mar Fan 61%; John Mitchell 57% (close); Alessandro Costa 52% (close); favourites since 2021 by band: 70-80% won 78% (-0.4% a bet), 60-70% won 65% (-4.6% a bet), 50-60% won 56% (-3.6% a bet).
 TRAILING value bets: 39.9% hit vs 44.6% stated on 567 (by half 136/321 then 90/246, 42% / 37% vs 45% / 44% stated; short in both halves)
 Strong calls 44-19 (69.8% vs 73.7% claimed).
 Closing line value: +0.08 points on 78 picks; beat the close on 42.3%.
@@ -93,7 +94,7 @@ Yesterday (2026-11-20): board 26-16, sweep broken by jpn Kashiwa Reysol or draw 
 - LOST nba Chicago Bulls at 54% (-130), Chicago Bulls 94 - Washington Wizards 98: margin 4 · the book had my side favoured too · called at 54% · coin flip · close game; picks like it: 43 of 68 (63% vs 55% stated)
 - LOST ncaaf Duke Blue Devils at 82% (-520), Clemson Tigers 20 - Duke Blue Devils 10: margin 10 · the book had my side favoured too · called at 82% · upset; picks like it: 62 of 75 (83% vs 82% stated)
 - LOST nba Houston Rockets at 53% (-122), Denver Nuggets 133 - Houston Rockets 124: margin 9 · the book had my side favoured too · called at 53% · coin flip; picks like it: 35 of 58 (60% vs 54% stated)
-Locks 2/11 won, 9 open; Best play top 2 (58%) open.
+Locks 2/11 won, 8 open; Best play top 2 (58%) open; lost: Mississippi State Bulldogs over 37.5 points (Tennessee Tech Golden Eagles at Mississippi State Bulldogs) Tennessee Tech Golden Eagles 16 - Mississippi State Bulldogs 34.
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (86%) open; Best play top 8 (53%) open.
 Lottery 100: lost (1/7 legs won, killed by Ohio State Buckeyes to win)
 Lottery 100: lost (2/6 legs won, killed by BYU Cougars -9.5)
