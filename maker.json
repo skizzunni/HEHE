@@ -10330,6 +10330,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV21WAKEGT-WAKE21"
   },
+  "KXNCAAFSPREAD-26NOV21WAKEGT-WAKE22|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401858310",
+   "label": "Georgia Tech Yellow Jackets +21.5",
+   "league": "ncaaf",
+   "match": "WAKE @ GT",
+   "posted": "2026-11-21T14:48:47+00:00",
+   "queue": 111528.3,
+   "side": "NO",
+   "spec": {
+    "line": 21.5,
+    "t": "spread",
+    "team": "Georgia Tech Yellow Jackets"
+   },
+   "start": "2026-11-21T17:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV21WAKEGT-WAKE22"
+  },
   "KXNCAAFSPREAD-26NOV21WSUTXST-TXST14|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -18069,6 +18091,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV21LSUTENN-46"
   },
+  "KXNCAAFTOTAL-26NOV21MDUSC-58|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401858534",
+   "label": "under 57.5",
+   "league": "ncaaf",
+   "match": "MD @ USC",
+   "posted": "2026-11-21T14:48:47+00:00",
+   "queue": 5464.77,
+   "side": "NO",
+   "spec": {
+    "line": 57.5,
+    "t": "under"
+   },
+   "start": "2026-11-21T23:15Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV21MDUSC-58"
+  },
   "KXNCAAFTOTAL-26NOV21MEMNAVY-68|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -25764,6 +25807,27 @@
    "status": "graded",
    "ticker": "KXNFLTOTAL-26NOV19INDHOU-45",
    "won": 1
+  },
+  "KXNFLTOTAL-26NOV22ARIKC-41|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0116,
+   "fair": 0.5103,
+   "id": "nfl:401873067",
+   "label": "over 40.5",
+   "league": "nfl",
+   "match": "ARI @ KC",
+   "posted": "2026-11-21T14:48:47+00:00",
+   "queue": 176141.05,
+   "side": "YES",
+   "spec": {
+    "line": 40.5,
+    "t": "over"
+   },
+   "start": "2026-11-22T18:00Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV22ARIKC-41"
   },
   "KXNFLTOTAL-26NOV22MIABUF-45|YES": {
    "ask": 0.51,
