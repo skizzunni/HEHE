@@ -100,7 +100,7 @@ Yesterday (2026-11-20): board 26-16, sweep broken by jpn Kashiwa Reysol or draw 
 - LOST nba Houston Rockets at 53% (-122), Denver Nuggets 133 - Houston Rockets 124: margin 9 · the book had my side favoured too · called at 53% · coin flip; picks like it: 35 of 58 (60% vs 54% stated)
 Locks 2/11 won, 8 open; Best play top 2 (58%) open; lost: Mississippi State Bulldogs over 37.5 points (Tennessee Tech Golden Eagles at Mississippi State Bulldogs) Tennessee Tech Golden Eagles 16 - Mississippi State Bulldogs 34.
 Safe Locks 2/11 won, 9 open; Winners parlay top 2 (86%) open; Best play top 8 (53%) open.
-Lottery 100: lost (1/7 legs won, killed by Ohio State Buckeyes to win)
+Lottery 100: lost (2/7 legs won, killed by Ohio State Buckeyes to win)
 Lottery 100: lost (2/6 legs won, killed by BYU Cougars -9.5)
 Lottery 100: lost (1/6 legs won, killed by North Texas Mean Green to win)
 Lottery 10k: open (2/11 legs won)
