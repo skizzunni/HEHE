@@ -14123,11 +14123,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "AJ Dybantsa",
   "p": 0.849,
   "p_fair": 0.8775,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 26.0
  },
  "nba:401909309|n:aj dybantsa|Rebounds|4+": {
   "aid": null,
@@ -14139,11 +14141,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "AJ Dybantsa",
   "p": 0.8512,
   "p_fair": 0.8856,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 10.0
  },
  "nba:401909309|n:isaac okoro|Points|5+": {
   "aid": null,
@@ -14155,11 +14159,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Isaac Okoro",
   "p": 0.8503,
   "p_fair": 0.9612,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 9.0
  },
  "nba:401909309|n:isaac okoro|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -14171,11 +14177,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Isaac Okoro",
   "p": 0.8496,
   "p_fair": 0.9532,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401909309|n:jalen smith|Points|5+": {
   "aid": null,
@@ -14190,7 +14198,9 @@
   "p": 0.8741,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401909309|n:kyshawn george|Threes Made|1+": {
   "aid": null,
@@ -14202,11 +14212,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Kyshawn George",
   "p": 0.8524,
   "p_fair": 0.8968,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909309|n:matas buzelis|Points|10+": {
   "aid": null,
@@ -14218,11 +14230,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Matas Buzelis",
   "p": 0.8503,
   "p_fair": 0.9169,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 9.0
  },
  "nba:401909309|n:matas buzelis|Reb + Ast|5+": {
   "aid": null,
@@ -14234,11 +14248,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Matas Buzelis",
   "p": 0.8506,
   "p_fair": 0.8735,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nba:401909309|n:matas buzelis|Threes Made|1+": {
   "aid": null,
@@ -14250,11 +14266,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Matas Buzelis",
   "p": 0.8524,
   "p_fair": 0.8968,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401909309|n:nic claxton|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -14266,11 +14284,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Nic Claxton",
   "p": 0.8496,
   "p_fair": 0.9663,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nba:401909309|n:nic claxton|Reb + Ast|5+": {
   "aid": null,
@@ -14282,11 +14302,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Nic Claxton",
   "p": 0.8506,
   "p_fair": 0.9022,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401909309|n:nic claxton|Rebounds|4+": {
   "aid": null,
@@ -14298,11 +14320,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Nic Claxton",
   "p": 0.8512,
   "p_fair": 0.9251,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401909309|n:norman powell|Points|10+": {
   "aid": null,
@@ -14313,11 +14337,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Norman Powell",
   "p": 0.8741,
   "price": "-10000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909309|n:norman powell|Points|15+": {
   "aid": null,
@@ -14329,11 +14355,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Norman Powell",
   "p": 0.8503,
   "p_fair": 0.8807,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401909309|n:norman powell|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -14345,11 +14373,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Norman Powell",
   "p": 0.8496,
   "p_fair": 0.9073,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909309|n:trae young|Assists|8+": {
   "aid": null,
@@ -14361,11 +14391,13 @@
   "league": "nba",
   "line": "8+",
   "market": "Assists",
+  "matched": "name",
   "name": "Trae Young",
   "p": 0.7742,
   "p_fair": 0.7935,
   "price": "-390",
-  "status": "open"
+  "status": "lost",
+  "value": 5.0
  },
  "nba:401909309|n:trae young|Pts + Ast|20+": {
   "aid": null,
@@ -14377,11 +14409,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Trae Young",
   "p": 0.849,
   "p_fair": 0.8506,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401909309|n:trae young|Threes Made|1+": {
   "aid": null,
@@ -14393,11 +14427,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Trae Young",
   "p": 0.8524,
   "p_fair": 0.8916,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401909309|n:tre jones|Pts + Ast|10+": {
   "aid": null,
@@ -14409,11 +14445,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Tre Jones",
   "p": 0.849,
   "p_fair": 0.9325,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nba:401909310|n:aday mara|Points|5+": {
   "aid": null,
