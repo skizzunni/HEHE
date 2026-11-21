@@ -10393,6 +10393,28 @@
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV21UNCUVA-UVA2"
   },
+  "KXNCAAFSPREAD-26NOV21UNLVSJSU-UNLV7|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0138,
+   "fair": 0.5113,
+   "id": "ncaaf:401864544",
+   "label": "UNLV Rebels -6.5",
+   "league": "ncaaf",
+   "match": "UNLV @ SJSU",
+   "posted": "2026-11-21T16:10:54+00:00",
+   "queue": 79548.59,
+   "side": "YES",
+   "spec": {
+    "line": -6.5,
+    "t": "spread",
+    "team": "UNLV Rebels"
+   },
+   "start": "2026-11-22T00:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV21UNLVSJSU-UNLV7"
+  },
   "KXNCAAFSPREAD-26NOV21UNTTULN-UNT8|NO": {
    "ask": 0.52,
    "bid": 0.51,
@@ -10590,6 +10612,28 @@
    "start": "2026-11-21T17:00Z",
    "status": "open",
    "ticker": "KXNCAAFSPREAD-26NOV21WAKEGT-WAKE22"
+  },
+  "KXNCAAFSPREAD-26NOV21WKULIB-LIB18|YES": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401871080",
+   "label": "Liberty Flames -17.5",
+   "league": "ncaaf",
+   "match": "WKU @ LIB",
+   "posted": "2026-11-21T16:10:54+00:00",
+   "queue": 88707.65,
+   "side": "YES",
+   "spec": {
+    "line": -17.5,
+    "t": "spread",
+    "team": "Liberty Flames"
+   },
+   "start": "2026-11-21T18:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV21WKULIB-LIB18"
   },
   "KXNCAAFSPREAD-26NOV21WSUTXST-TXST14|NO": {
    "ask": 0.51,
@@ -18246,6 +18290,27 @@
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV21GASTMRSH-56"
   },
+  "KXNCAAFTOTAL-26NOV21GASTMRSH-57|NO": {
+   "ask": 0.51,
+   "bid": 0.5,
+   "cost": 0.5044,
+   "edge": 0.0003,
+   "fair": 0.5045,
+   "id": "ncaaf:401869958",
+   "label": "under 56.5",
+   "league": "ncaaf",
+   "match": "GAST @ MRSH",
+   "posted": "2026-11-21T16:10:54+00:00",
+   "queue": 620.0,
+   "side": "NO",
+   "spec": {
+    "line": 56.5,
+    "t": "under"
+   },
+   "start": "2026-11-21T21:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV21GASTMRSH-57"
+  },
   "KXNCAAFTOTAL-26NOV21HOUWVU-72|NO": {
    "ask": 0.51,
    "bid": 0.5,
@@ -18875,6 +18940,27 @@
    "start": "2026-11-21T19:30Z",
    "status": "open",
    "ticker": "KXNCAAFTOTAL-26NOV21USFFAU-64"
+  },
+  "KXNCAAFTOTAL-26NOV21USUORST-52|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401860919",
+   "label": "under 51.5",
+   "league": "ncaaf",
+   "match": "USU @ ORST",
+   "posted": "2026-11-21T16:10:54+00:00",
+   "queue": 5600.0,
+   "side": "NO",
+   "spec": {
+    "line": 51.5,
+    "t": "under"
+   },
+   "start": "2026-11-22T03:30Z",
+   "status": "open",
+   "ticker": "KXNCAAFTOTAL-26NOV21USUORST-52"
   },
   "KXNCAAFTOTAL-26NOV21UTAHTCU-47|NO": {
    "ask": 0.51,

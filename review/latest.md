@@ -40,7 +40,7 @@ Ladder leg types on the saved pools, one line per game, by half: NBA over 95% th
 Injuries at tip-off (270 games, 17 days, early read): my side more out: 1st 28/39 72% vs 64% | 2nd 31/45 69% vs 63%; even: 1st 26/34 76% vs 64% | 2nd 21/44 48% vs 62%; their side more out: 1st 47/57 82% vs 65% | 2nd 33/51 65% vs 67%.
 Lessons from losses: no league / bet / chance band is 3+ points short in both halves (2042 picks).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 9/18 vs 69% stated (7.5% by luck; about 4.7 of 62 teams expected this far behind by chance); NHL Detroit Red Wings 3/10 vs 54% stated (11.7% by luck; about 7.3 of 62 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.9 of 62 teams expected this far behind by chance).
-High-chance sweep: 70%+ today 12-4, 73 open; swept 3 of 35 past days (last 2026-11-11) | 80%+ today 7-0, 36 open; swept 11 of 34 past days (last 2026-11-19).
+High-chance sweep: 70%+ today 12-4, 72 open; swept 3 of 35 past days (last 2026-11-11) | 80%+ today 7-0, 35 open; swept 11 of 34 past days (last 2026-11-19).
 Back-to-backs, board record so far: NHL on the tired side 4/11 vs 56%, against it 18/31 vs 61%; NBA on the tired side 18/24 vs 65%, against it 21/27 vs 72%.
 Ladder games, players out or doubtful: Portland Trail Blazers at New York Knicks: Portland Trail Blazers without Chris Youngblood, Vit Krejci, Ja Morant, Shaedon Sharpe; New York Knicks without Jordan Clarkson | Milwaukee Bucks at Philadelphia 76ers: Milwaukee Bucks without Ousmane Dieng; Philadelphia 76ers without Dominick Barlow, Dean Wade, Adem Bona, Jaylen Brown, Ariel Hukporti.
 UFC 2026-11-14: picks (the price favourite) 9-3; close fights (under 60%) 2 of 3; lost: Samuel Sanches (53%) lost to Evan Elder, Donte Johnson (67%) lost to Cesar Almeida, Bilal Hasan (88%) lost to Luis Gurule.
@@ -86,7 +86,7 @@ Lottery 10k+25: open (0/11 legs won)
 Lottery 10k+50: open (0/11 legs won)
 Lottery 10k+100: open (0/10 legs won)
 Ladder-consistency props (all time): 2971/3586 won (82.8%) vs 86.4% fair, 87.6% price, 83.6% stated on the board (heavy props capped).
-Props 3/3 vs 71.0% claimed.
+Props 4/4 vs 68.2% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=235), ncaab 0.00 (n=88), ncaaf 0.00 (n=305), nfl 0.00 (n=71), nhl 0.00 (n=241)
