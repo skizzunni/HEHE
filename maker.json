@@ -3473,6 +3473,7 @@
    "cost": 0.5444,
    "edge": 0.0399,
    "fair": 0.5661,
+   "fill": null,
    "id": "ncaaf:401869958",
    "label": "Marshall Thundering Herd",
    "league": "ncaaf",
@@ -3485,8 +3486,9 @@
     "team": "Marshall Thundering Herd"
    },
    "start": "2026-11-21T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21GASTMRSH-MRSH"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21GASTMRSH-MRSH",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV21HAWNEV-NEV|YES": {
    "ask": 0.68,
@@ -3718,6 +3720,7 @@
    "cost": 0.9509,
    "edge": 0.0006,
    "fair": 0.9515,
+   "fill": "touch",
    "id": "ncaaf:401864543",
    "label": "North Dakota State Bison",
    "league": "ncaaf",
@@ -3730,8 +3733,9 @@
     "team": "North Dakota State Bison"
    },
    "start": "2026-11-21T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21NIUNDSU-NDSU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21NIUNDSU-NDSU",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV21NWMINN-NW|YES": {
    "ask": 0.55,
@@ -4160,6 +4164,7 @@
    "cost": 0.6242,
    "edge": 0.0056,
    "fair": 0.6277,
+   "fill": null,
    "id": "ncaaf:401871101",
    "label": "South Alabama Jaguars",
    "league": "ncaaf",
@@ -4172,8 +4177,9 @@
     "team": "South Alabama Jaguars"
    },
    "start": "2026-11-21T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21USAUSM-USA"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21USAUSM-USA",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV21USFFAU-USF|YES": {
    "ask": 0.51,
@@ -10081,6 +10087,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": null,
    "id": "ncaaf:401869958",
    "label": "Marshall Thundering Herd -2.5",
    "league": "ncaaf",
@@ -10094,8 +10101,9 @@
     "team": "Marshall Thundering Herd"
    },
    "start": "2026-11-21T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21GASTMRSH-MRSH3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21GASTMRSH-MRSH3",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV21HAWNEV-NEV7|YES": {
    "ask": 0.52,
@@ -10313,6 +10321,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401864543",
    "label": "Northern Illinois Huskies +25.5",
    "league": "ncaaf",
@@ -10326,8 +10335,9 @@
     "team": "Northern Illinois Huskies"
    },
    "start": "2026-11-21T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21NIUNDSU-NDSU26"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21NIUNDSU-NDSU26",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV21NIUNDSU-NDSU26|YES": {
    "ask": 0.51,
@@ -10335,6 +10345,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401864543",
    "label": "North Dakota State Bison -25.5",
    "league": "ncaaf",
@@ -10348,8 +10359,9 @@
     "team": "North Dakota State Bison"
    },
    "start": "2026-11-21T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21NIUNDSU-NDSU26"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21NIUNDSU-NDSU26",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV21NWMINN-NW3|NO": {
    "ask": 0.51,
@@ -10885,6 +10897,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401871101",
    "label": "South Alabama Jaguars -4.5",
    "league": "ncaaf",
@@ -10898,8 +10911,9 @@
     "team": "South Alabama Jaguars"
    },
    "start": "2026-11-21T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21USAUSM-USA5"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21USAUSM-USA5",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV21USFFAU-USF2|NO": {
    "ask": 0.51,
@@ -18859,6 +18873,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401869958",
    "label": "under 55.5",
    "league": "ncaaf",
@@ -18871,8 +18886,9 @@
     "t": "under"
    },
    "start": "2026-11-21T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21GASTMRSH-56"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21GASTMRSH-56",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV21GASTMRSH-57|NO": {
    "ask": 0.51,
@@ -18880,6 +18896,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "ncaaf:401869958",
    "label": "under 56.5",
    "league": "ncaaf",
@@ -18892,8 +18909,9 @@
     "t": "under"
    },
    "start": "2026-11-21T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21GASTMRSH-57"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21GASTMRSH-57",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV21HOUWVU-72|NO": {
    "ask": 0.51,
@@ -19724,6 +19742,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401871101",
    "label": "over 65.5",
    "league": "ncaaf",
@@ -19736,8 +19755,9 @@
     "t": "over"
    },
    "start": "2026-11-21T21:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21USAUSM-66"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21USAUSM-66",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV21USFFAU-64|NO": {
    "ask": 0.51,
