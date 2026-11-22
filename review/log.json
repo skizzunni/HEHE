@@ -19914,11 +19914,12 @@
    {
     "killed_by": [
      "BYU Cougars -9.5",
+     "Over 8.5 goals",
      "Indiana Hoosiers -13.5",
      "Over 51.5 points"
     ],
     "legs": 10,
-    "lost": 3,
+    "lost": 4,
     "status": "lost",
     "tier": "10k",
     "won": 5
@@ -19927,6 +19928,7 @@
     "killed_by": [
      "New York Islanders -1.5",
      "Winnipeg Jets to win",
+     "Utah Utes -23.5",
      "South Florida Bulls to win",
      "Ohio State Buckeyes -3.5",
      "Florida State Seminoles -13.5",
@@ -19934,7 +19936,7 @@
      "Over 51.5 points"
     ],
     "legs": 10,
-    "lost": 7,
+    "lost": 8,
     "status": "lost",
     "tier": "10k",
     "won": 2
@@ -20243,21 +20245,21 @@
     "said_stated": 83.6,
     "won": 3014
    },
-   "n": 135,
-   "said": 81.1,
-   "won": 109
+   "n": 140,
+   "said": 81.2,
+   "won": 111
   },
   "safe_locks": {
    "lost": [
     "Under 9.5 goals (New Jersey Devils at St. Louis Blues) New Jersey Devils 6 - St. Louis Blues 9"
    ],
    "n": 11,
-   "open": 1,
+   "open": 0,
    "plays": {
     "best": [
      8,
      0.5323,
-     "open"
+     "won"
     ],
     "winners": [
      2,
@@ -20265,7 +20267,7 @@
      "won"
     ]
    },
-   "won": 9
+   "won": 10
   },
   "strong": {
    "hit": 64.0,
@@ -20630,13 +20632,13 @@
       81.0
      ],
      [
-      520,
-      628,
+      522,
+      633,
       81.2
      ]
     ],
-    "hit": 82.0,
-    "n": 1265,
+    "hit": 81.8,
+    "n": 1270,
     "name": "props nhl Shots on Goal",
     "said": 81.1
    },
@@ -20961,13 +20963,13 @@
       91.3
      ],
      [
-      31,
-      31,
+      32,
+      32,
       91.5
      ]
     ],
-    "hit": 96.6,
-    "n": 59,
+    "hit": 96.7,
+    "n": 60,
     "name": "safe locks nhl side",
     "said": 91.4
    },
@@ -21019,12 +21021,12 @@
      ],
      [
       216,
-      230,
+      231,
       86.8
      ]
     ],
-    "hit": 93.6,
-    "n": 407,
+    "hit": 93.4,
+    "n": 408,
     "name": "prop locks",
     "said": 87.5
    },
@@ -21178,7 +21180,7 @@
   "lock_league_types": "Locks by league and bet type: none of 10 pairs short of stated in both halves.",
   "lock_leagues": "Locks by league, by half: NBA 83% then 85% (vs 83%, 84%); NHL 86% then 96% (vs 87%, 87%); NCAAF 88% then 73% (vs 82%, 77%); NFL 82% then 87% (vs 83%, 83%). No league short in both halves.",
   "lock_prop_markets": "Locks props by market, by half: NBA Assists 14/19 then 19/22 (vs 89%, 79%); NFL Receiving Yards 12/14 then 10/15 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.",
-  "lock_types": "Locks by bet type, by half: win 85% then 80% (vs 83%, 79%); spread 89% then 87% (vs 84%, 84%); total 86% then 89% (vs 83%, 85%); team total 88% then 87% (vs 86%, 84%); prop 79% then 84% (vs 84%, 78%).",
+  "lock_types": "Locks by bet type, by half: win 85% then 80% (vs 83%, 79%); spread 89% then 88% (vs 84%, 85%); total 86% then 89% (vs 83%, 85%); team total 88% then 87% (vs 86%, 84%); prop 79% then 84% (vs 84%, 78%).",
   "locks": {
    "lost": [],
    "n": 0,

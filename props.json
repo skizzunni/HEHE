@@ -64123,6 +64123,22 @@
   "price": "-1100",
   "status": "open"
  },
+ "nba:401910033|n:naji marshall|Assists|2+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": -1.3,
+  "gid": "nba:401910033",
+  "imp": 0.875,
+  "label": "Naji Marshall: 2+ Assists",
+  "league": "nba",
+  "line": "2+",
+  "market": "Assists",
+  "name": "Naji Marshall",
+  "p": 0.8495,
+  "p_fair": 0.8635,
+  "price": "-700",
+  "status": "open"
+ },
  "nba:401910034|n:andrew nembhard|Assists|6+": {
   "aid": null,
   "date": "2026-11-22",
@@ -64171,6 +64187,22 @@
   "price": "-700",
   "status": "open"
  },
+ "nba:401910034|n:ivica zubac|Pts + Ast|10+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": 7.2,
+  "gid": "nba:401910034",
+  "imp": 0.8,
+  "label": "Ivica Zubac: 10+ Pts + Ast",
+  "league": "nba",
+  "line": "10+",
+  "market": "Pts + Ast",
+  "name": "Ivica Zubac",
+  "p": 0.7626,
+  "p_fair": 0.8575,
+  "price": "-400",
+  "status": "open"
+ },
  "nba:401910034|n:ivica zubac|Pts + Reb + Ast|15+": {
   "aid": null,
   "date": "2026-11-22",
@@ -64185,6 +64217,22 @@
   "p": 0.8315,
   "p_fair": 0.9211,
   "price": "-800",
+  "status": "open"
+ },
+ "nba:401910034|n:josh hart|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": 1.5,
+  "gid": "nba:401910034",
+  "imp": 0.9091,
+  "label": "Josh Hart: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Josh Hart",
+  "p": 0.8504,
+  "p_fair": 0.9225,
+  "price": "-1000",
   "status": "open"
  },
  "nba:401910034|n:pascal siakam|Pts + Reb + Ast|20+": {
@@ -79634,6 +79682,22 @@
   "p": 0.5771,
   "p_fair": null,
   "price": "-220",
+  "status": "open"
+ },
+ "nfl:401873067|n:emmett johnson|Rushing Yards|50+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": -13.6,
+  "gid": "nfl:401873067",
+  "imp": 0.9091,
+  "label": "Emmett Johnson: 50+ Rushing Yards",
+  "league": "nfl",
+  "line": "50+",
+  "market": "Rushing Yards",
+  "name": "Emmett Johnson",
+  "p": 0.852,
+  "p_fair": 0.7851,
+  "price": "-1000",
   "status": "open"
  },
  "nfl:401873067|n:josh downs|Receiving Yards|15+": {
@@ -111317,11 +111381,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Blake Coleman",
   "p": 0.8528,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892766|n:jake debrusk|Shots on Goal|1+": {
   "aid": null,
@@ -111332,11 +111398,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jake DeBrusk",
   "p": 0.8741,
   "price": "-1600",
   "prop_lock": true,
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892766|n:kirill kaprizov|Shots on Goal|2+": {
   "aid": null,
@@ -111348,11 +111416,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kirill Kaprizov",
   "p": 0.8315,
   "p_fair": null,
   "price": "-780",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892766|n:matt boldy|Shots on Goal|2+": {
   "aid": null,
@@ -111364,11 +111434,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Boldy",
   "p": 0.8599,
   "p_fair": null,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892766|n:matt boldy|Shots on Goal|3+": {
   "aid": null,
@@ -111380,11 +111452,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Matt Boldy",
   "p": 0.7006,
   "p_fair": null,
   "price": "-295",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nhl:401892767|n:bobby mcmann|Shots on Goal|1+": {
   "aid": null,
