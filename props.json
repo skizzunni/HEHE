@@ -1401,7 +1401,8 @@
   "p": 0.805,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "ger:401884736|323790|Goalkeeper Saves|1+": {
   "aid": "323790",
@@ -64463,6 +64464,22 @@
   "price": "-370",
   "status": "open"
  },
+ "nba:401910033|n:cooper flagg|Assists|4+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": -2.7,
+  "gid": "nba:401910033",
+  "imp": 0.875,
+  "label": "Cooper Flagg: 4+ Assists",
+  "league": "nba",
+  "line": "4+",
+  "market": "Assists",
+  "name": "Cooper Flagg",
+  "p": 0.8495,
+  "p_fair": 0.8511,
+  "price": "-700",
+  "status": "open"
+ },
  "nba:401910033|n:cooper flagg|Pts + Ast|20+": {
   "aid": null,
   "date": "2026-11-22",
@@ -80616,6 +80633,22 @@
   "price": "-110",
   "status": "open"
  },
+ "nfl:401873069|n:bhayshul tuten|Receiving Yards|5+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": 3.7,
+  "gid": "nfl:401873069",
+  "imp": 0.8,
+  "label": "Bhayshul Tuten: 5+ Receiving Yards",
+  "league": "nfl",
+  "line": "5+",
+  "market": "Receiving Yards",
+  "name": "Bhayshul Tuten",
+  "p": 0.782,
+  "p_fair": 0.8295,
+  "price": "-400",
+  "status": "open"
+ },
  "nfl:401873069|n:cam skattebo|Anytime Touchdown Scorer|1+": {
   "aid": null,
   "date": "2026-11-22",
@@ -80662,6 +80695,22 @@
   "p": 0.782,
   "p_fair": 0.7687,
   "price": "-400",
+  "status": "open"
+ },
+ "nfl:401873069|n:jj mccarthy|Passing Yards|150+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": -3.0,
+  "gid": "nfl:401873069",
+  "imp": 0.8701,
+  "label": "J.J McCarthy: 150+ Passing Yards",
+  "league": "nfl",
+  "line": "150+",
+  "market": "Passing Yards",
+  "name": "J.J McCarthy",
+  "p": 0.8464,
+  "p_fair": 0.8438,
+  "price": "-670",
   "status": "open"
  },
  "nfl:401873069|n:malik nabers|Receptions|4+": {
@@ -112996,6 +113045,22 @@
   "p": 0.8422,
   "p_fair": null,
   "price": "-870",
+  "status": "open"
+ },
+ "nhl:401892771|n:wyatt johnston|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": null,
+  "gid": "nhl:401892771",
+  "imp": 0.7938,
+  "label": "Wyatt Johnston: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Wyatt Johnston",
+  "p": 0.744,
+  "p_fair": null,
+  "price": "-385",
   "status": "open"
  },
  "nhl:401892772|n:anton frondell|Shots on Goal|1+": {
