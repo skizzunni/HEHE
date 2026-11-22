@@ -3801,6 +3801,7 @@
    "cost": 0.5644,
    "edge": 0.003,
    "fair": 0.5661,
+   "fill": "strict",
    "id": "ncaaf:401856870",
    "label": "Oklahoma State Cowboys",
    "league": "ncaaf",
@@ -3813,8 +3814,9 @@
     "team": "Oklahoma State Cowboys"
    },
    "start": "2026-11-22T03:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21OKSTASU-OKST"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21OKSTASU-OKST",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV21OSUNEB-OSU|YES": {
    "ask": 0.63,
@@ -10465,6 +10467,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "queue",
    "id": "ncaaf:401856870",
    "label": "Oklahoma State Cowboys -2.5",
    "league": "ncaaf",
@@ -10478,8 +10481,9 @@
     "team": "Oklahoma State Cowboys"
    },
    "start": "2026-11-22T03:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21OKSTASU-OKST3"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21OKSTASU-OKST3",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV21OSUNEB-OSU4|NO": {
    "ask": 0.51,
@@ -19353,6 +19357,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856870",
    "label": "under 60.5",
    "league": "ncaaf",
@@ -19365,8 +19370,9 @@
     "t": "under"
    },
    "start": "2026-11-22T03:15Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21OKSTASU-61"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21OKSTASU-61",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV21PITTLOU-51|YES": {
    "ask": 0.51,
