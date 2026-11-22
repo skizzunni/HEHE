@@ -31834,7 +31834,8 @@
 "name": "Adonai Mitchell",
 "p": 0.2267,
 "price": "+260",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Andrew Beck": {
@@ -31844,7 +31845,8 @@
 "name": "Andrew Beck",
 "p": 0.0345,
 "price": "+2200",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Azareye'h Thomas": {
@@ -31854,7 +31856,8 @@
 "name": "Azareye'h Thomas",
 "p": 0.013,
 "price": "+6000",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Braelon Allen": {
@@ -31864,7 +31867,8 @@
 "name": "Braelon Allen",
 "p": 0.2203,
 "price": "+270",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Brandon Stephens": {
@@ -31874,7 +31878,8 @@
 "name": "Brandon Stephens",
 "p": 0.0097,
 "price": "+8000",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Breece Hall": {
@@ -31884,7 +31889,8 @@
 "name": "Breece Hall",
 "p": 0.3002,
 "price": "+175",
-"status": "open",
+"status": "won",
+"tds": 1.0,
 "total": 43.5
 },
 "nfl:401873074|Cam Hart": {
@@ -31894,7 +31900,8 @@
 "name": "Cam Hart",
 "p": 0.0142,
 "price": "+5500",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Charlie Kolar": {
@@ -31904,7 +31911,8 @@
 "name": "Charlie Kolar",
 "p": 0.1439,
 "price": "+460",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|David Njoku": {
@@ -31914,7 +31922,8 @@
 "name": "David Njoku",
 "p": 0.1068,
 "price": "+650",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Demario Davis": {
@@ -31924,7 +31933,8 @@
 "name": "Demario Davis",
 "p": 0.0097,
 "price": "+8000",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Derius Davis": {
@@ -31934,7 +31944,8 @@
 "name": "Derius Davis",
 "p": 0.0568,
 "price": "+1300",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Donte Jackson": {
@@ -31944,7 +31955,8 @@
 "name": "Donte Jackson",
 "p": 0.0193,
 "price": "+4000",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Elijah Molden": {
@@ -31954,7 +31966,8 @@
 "name": "Elijah Molden",
 "p": 0.012,
 "price": "+6500",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Garrett Wilson": {
@@ -31964,7 +31977,8 @@
 "name": "Garrett Wilson",
 "p": 0.2946,
 "price": "+180",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Geno Smith": {
@@ -31974,7 +31988,8 @@
 "name": "Geno Smith",
 "p": 0.0531,
 "price": "+1400",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Isaiah Davis": {
@@ -31984,7 +31999,8 @@
 "name": "Isaiah Davis",
 "p": 0.0345,
 "price": "+2200",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Isas Waxter": {
@@ -31994,7 +32010,7 @@
 "name": "Isas Waxter",
 "p": 0.0104,
 "price": "+7500",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873074|Jelani Woods": {
@@ -32004,7 +32020,7 @@
 "name": "Jelani Woods",
 "p": 0.0391,
 "price": "+1900",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873074|Jeremy Ruckert": {
@@ -32014,7 +32030,7 @@
 "name": "Jeremy Ruckert",
 "p": 0.0418,
 "price": "+1800",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873074|Justin Herbert": {
@@ -32024,7 +32040,8 @@
 "name": "Justin Herbert",
 "p": 0.18,
 "price": "+350",
-"status": "open",
+"status": "won",
+"tds": 1.0,
 "total": 43.5
 },
 "nfl:401873074|KeAndre Lambert-Smith": {
@@ -32034,8 +32051,9 @@
 "name": "KeAndre Lambert-Smith",
 "p": 0.046,
 "price": "+1600",
-"status": "open",
-"total": 43.5
+"status": "ungradable",
+"total": 43.5,
+"void_why": "identity_unresolved"
 },
 "nfl:401873074|Keaton Mitchell": {
 "date": "2026-11-22",
@@ -32044,7 +32062,8 @@
 "name": "Keaton Mitchell",
 "p": 0.1413,
 "price": "+470",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Kene Nwangwu": {
@@ -32054,7 +32073,8 @@
 "name": "Kene Nwangwu",
 "p": 0.022,
 "price": "+3500",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Kenyon Sadiq": {
@@ -32064,7 +32084,8 @@
 "name": "Kenyon Sadiq",
 "p": 0.1236,
 "price": "+550",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Khalil Mack": {
@@ -32074,7 +32095,8 @@
 "name": "Khalil Mack",
 "p": 0.0112,
 "price": "+7000",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Kimani Vidal": {
@@ -32084,7 +32106,8 @@
 "name": "Kimani Vidal",
 "p": 0.1388,
 "price": "+480",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|LA Chargers Defense": {
@@ -32094,7 +32117,7 @@
 "name": "LA Chargers Defense",
 "p": 0.1147,
 "price": "+600",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873074|Ladd McConkey": {
@@ -32104,7 +32127,8 @@
 "name": "Ladd McConkey",
 "p": 0.2481,
 "price": "+230",
-"status": "open",
+"status": "won",
+"tds": 2.0,
 "total": 43.5
 },
 "nfl:401873074|Malik McClain": {
@@ -32114,7 +32138,7 @@
 "name": "Malik McClain",
 "p": 0.0378,
 "price": "+2000",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873074|Mason Taylor": {
@@ -32124,7 +32148,8 @@
 "name": "Mason Taylor",
 "p": 0.1494,
 "price": "+440",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|New York Jets Defense": {
@@ -32134,7 +32159,7 @@
 "name": "New York Jets Defense",
 "p": 0.1068,
 "price": "+650",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873074|Omarion Hampton": {
@@ -32144,7 +32169,8 @@
 "name": "Omarion Hampton",
 "p": 0.3804,
 "price": "+120",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Oronde Gadsden": {
@@ -32154,7 +32180,7 @@
 "name": "Oronde Gadsden",
 "p": 0.1068,
 "price": "+650",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873074|Quentin Johnston": {
@@ -32164,7 +32190,8 @@
 "name": "Quentin Johnston",
 "p": 0.1466,
 "price": "+450",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Scott Matlock": {
@@ -32174,7 +32201,7 @@
 "name": "Scott Matlock",
 "p": 0.022,
 "price": "+3500",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873074|Sterling Shepard": {
@@ -32184,7 +32211,8 @@
 "name": "Sterling Shepard",
 "p": 0.0442,
 "price": "+1700",
-"status": "open",
+"status": "won",
+"tds": 2.0,
 "total": 43.5
 },
 "nfl:401873074|Tarheeb Still": {
@@ -32194,7 +32222,7 @@
 "name": "Tarheeb Still",
 "p": 0.0155,
 "price": "+5000",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873074|Theo Wease Jr.": {
@@ -32204,7 +32232,7 @@
 "name": "Theo Wease Jr.",
 "p": 0.0345,
 "price": "+2200",
-"status": "open",
+"status": "void",
 "total": 43.5
 },
 "nfl:401873074|Tim Patrick": {
@@ -32214,7 +32242,8 @@
 "name": "Tim Patrick",
 "p": 0.0725,
 "price": "+1000",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Tre Harris": {
@@ -32224,7 +32253,8 @@
 "name": "Tre Harris",
 "p": 0.2203,
 "price": "+270",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873074|Tuli Tuipulotu": {
@@ -32234,7 +32264,8 @@
 "name": "Tuli Tuipulotu",
 "p": 0.0112,
 "price": "+7000",
-"status": "open",
+"status": "lost",
+"tds": 0,
 "total": 43.5
 },
 "nfl:401873075|Adam Prentice": {
