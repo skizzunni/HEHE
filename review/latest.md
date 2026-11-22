@@ -1,7 +1,7 @@
 # Review 2026-11-21
 
 Picks 85-44 (65.9% vs 73.0% claimed, ROI -14.6%).
-Ladder: run 13, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (33% est.), the best-chance 2x-5x combination (4 legs) against 33% at 2.47x for the plain top 4; 11 wins to $10,000; legs: Over 204.5 points (Portland Trail Blazers at New York Knicks; live 8:31 - 4th, New York Knicks 91 - Portland Trail Blazers 79, on pace for 207 (170 so far, line 204.5, needs 35 more), on track), Georgia Bulldogs under 41.5 points (Georgia Bulldogs at South Carolina Gamecocks; live Halftime, Georgia Bulldogs 10 - South Carolina Gamecocks 6, on pace for 20 (10 so far, line 41.5, room for 31 more), on track), UTSA Roadrunners over 20.5 points (UTSA Roadrunners at UAB Blazers; live 0:47 - 2nd, UAB Blazers 7 - UTSA Roadrunners 14, on pace for 29 (14 so far, line 20.5, needs 7 more), on track), Over 216.5 points (Milwaukee Bucks at Philadelphia 76ers; won); 1 of 4 won, the ticket now rests on 3 legs, 44% on their stated chance before play.
+Ladder: run 13, bank $1.00, 0 win(s) in a row, best $9.57; today stakes $1.00 at 2.47x (33% est.), the best-chance 2x-5x combination (4 legs) against 33% at 2.47x for the plain top 4; 11 wins to $10,000; legs: Over 204.5 points (Portland Trail Blazers at New York Knicks; live 6:07 - 4th, New York Knicks 92 - Portland Trail Blazers 82, on pace for 199 (174 so far, line 204.5, needs 31 more), behind the pace it needs), Georgia Bulldogs under 41.5 points (Georgia Bulldogs at South Carolina Gamecocks; live Halftime, Georgia Bulldogs 10 - South Carolina Gamecocks 6, on pace for 20 (10 so far, line 41.5, room for 31 more), on track), UTSA Roadrunners over 20.5 points (UTSA Roadrunners at UAB Blazers; live 0:41 - 2nd, UAB Blazers 13 - UTSA Roadrunners 14, on pace for 29 (14 so far, line 20.5, needs 7 more), on track), Over 216.5 points (Milwaukee Bucks at Philadelphia 76ers; won); 1 of 4 won, the ticket now rests on 3 legs, 44% on their stated chance before play.
 Ladder runs: 1) 2026-11-08, 1 day, peak $1.00, lost on Kyle Pitts: 25+ Receiving Yards (23, missed by 2), Jalen Coker: 30+ Receiving Yards (29, missed by 1); 2) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 3) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 4) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 5) 2026-11-15, 2 days, peak $2.00, lost on Boston Celtics to win; 6) 2026-11-17, 1 day, peak $1.00, lost on San Antonio Spurs to win, Duke Blue Devils to win; 7) 2026-11-18, 1 day, peak $1.00, lost on Los Angeles Lakers to win, Under 235.5 points (237, missed by 1.5); 8) 2026-11-19, 1 day, peak $1.00, lost on Washington Capitals +1.5 (lost by 3, missed by 1.5); 9) 2026-11-20, 1 day, peak $1.00, lost on Over 226.5 points (192, missed by 34.5); 10) 2026-11-21, 1 day, peak $1.00, live. Replayed on every saved card: as ranked 15/33 cashed at 2.22x, without props 15/34 at 2.28x.
 Running ahead: NHL under on all saved lines 174/197 vs 83% (86 games).
 Running cold (last 7 days, all saved lines at 70-95%): NFL teamunder 149/199 (75% vs 82%). Walk-forward: legs of a type running cold won 87.2% the next day vs 81.0% for the rest (1067 and 9404 legs), so a cold week is noise, not a signal.
@@ -114,18 +114,18 @@ Yesterday (2026-11-20): board 26-16, sweep broken by jpn Kashiwa Reysol or draw 
 - LOST ncaaf Duke Blue Devils at 82% (-520), Clemson Tigers 20 - Duke Blue Devils 10: margin 10 · the book had my side favoured too · called at 82% · upset; picks like it: 67 of 81 (83% vs 82% stated)
 - LOST nba Houston Rockets at 53% (-122), Denver Nuggets 133 - Houston Rockets 124: margin 9 · the book had my side favoured too · called at 53% · coin flip; picks like it: 35 of 58 (60% vs 54% stated)
 Locks 3/11 won, 5 open; Best play top 2 (58%) open; lost: Mississippi State Bulldogs over 37.5 points (Tennessee Tech Golden Eagles at Mississippi State Bulldogs) Tennessee Tech Golden Eagles 16 - Mississippi State Bulldogs 34; LSU Tigers over 15.5 points (LSU Tigers at Tennessee Volunteers) LSU Tigers 13 - Tennessee Volunteers 27; Arkansas Razorbacks +30.5 (Arkansas Razorbacks at Texas Longhorns) Arkansas Razorbacks 3 - Texas Longhorns 45.
-Safe Locks 2/11 won, 9 open; Winners parlay top 2 (86%) open; Best play top 8 (53%) open.
+Safe Locks 3/11 won, 8 open; Winners parlay top 2 (86%) open; Best play top 8 (53%) open.
 Lottery 100: lost (2/7 legs won, killed by Ohio State Buckeyes to win)
 Lottery 100: lost (2/6 legs won, killed by Over 52.5 points, BYU Cougars -9.5)
 Lottery 100: lost (3/6 legs won, killed by Indiana Hoosiers -13.5, North Texas Mean Green to win)
 Lottery 10k: lost (2/11 legs won, killed by Over 52.5 points)
 Lottery 10k: lost (4/10 legs won, killed by BYU Cougars -9.5, Indiana Hoosiers -13.5, Over 51.5 points)
-Lottery 10k: lost (0/10 legs won, killed by South Florida Bulls to win, Ohio State Buckeyes -3.5, Florida State Seminoles -13.5, Over 58.5 points)
+Lottery 10k: lost (0/10 legs won, killed by New York Islanders -1.5, South Florida Bulls to win, Ohio State Buckeyes -3.5, Florida State Seminoles -13.5, Over 58.5 points)
 Lottery 10k+25: lost (2/11 legs won, killed by Over 52.5 points)
 Lottery 10k+50: open (3/11 legs won)
 Lottery 10k+100: lost (2/10 legs won, killed by South Florida Bulls to win)
 Ladder-consistency props (all time): 2971/3586 won (82.8%) vs 86.4% fair, 87.6% price, 83.6% stated on the board (heavy props capped).
-Props 24/31 vs 75.6% claimed.
+Props 29/36 vs 75.9% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=236), ncaab 0.00 (n=90), ncaaf 0.00 (n=343), nfl 0.00 (n=71), nhl 0.00 (n=245)
