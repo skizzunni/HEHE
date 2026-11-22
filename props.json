@@ -132,7 +132,8 @@
   "p": 0.8303,
   "p_fair": null,
   "price": "-1800",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "epl:401879240|301425|Goalkeeper Saves|1+": {
   "aid": "301425",
@@ -2345,7 +2346,8 @@
   "p": 0.8555,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "mlb:401908026|n:chandler simpson|RBIs|1+": {
   "aid": null,
@@ -64765,6 +64767,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nba:401910035|n:deanthony melton|Points|5+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": 4.3,
+  "gid": "nba:401910035",
+  "imp": 0.9231,
+  "label": "De'Anthony Melton: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "De'Anthony Melton",
+  "p": 0.8555,
+  "p_fair": 0.9629,
+  "price": "-1200",
+  "status": "open"
+ },
  "nba:401910035|n:derrick white|Assists|4+": {
   "aid": null,
   "date": "2026-11-22",
@@ -80390,6 +80408,22 @@
   "price": "-650",
   "status": "open"
  },
+ "nfl:401873067|n:trey mcbride|Receptions|4+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": -1.4,
+  "gid": "nfl:401873067",
+  "imp": 0.8701,
+  "label": "Trey McBride: 4+ Receptions",
+  "league": "nfl",
+  "line": "4+",
+  "market": "Receptions",
+  "name": "Trey McBride",
+  "p": 0.8506,
+  "p_fair": 0.8583,
+  "price": "-670",
+  "status": "open"
+ },
  "nfl:401873068|n:chuba hubbard|Anytime Touchdown Scorer|1+": {
   "aid": null,
   "date": "2026-11-22",
@@ -81364,6 +81398,22 @@
   "p": 0.4406,
   "p_fair": null,
   "price": "-135",
+  "status": "open"
+ },
+ "nfl:401873075|n:michael mayer|Receptions|2+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": -2.5,
+  "gid": "nfl:401873075",
+  "imp": 0.8,
+  "label": "Michael Mayer: 2+ Receptions",
+  "league": "nfl",
+  "line": "2+",
+  "market": "Receptions",
+  "name": "Michael Mayer",
+  "p": 0.782,
+  "p_fair": 0.7797,
+  "price": "-400",
   "status": "open"
  },
  "nfl:401873076|n:germie bernard|Receiving Yards|15+": {
@@ -112815,6 +112865,22 @@
   "line": "1+",
   "market": "Shots on Goal",
   "name": "Roope Hintz",
+  "p": 0.8557,
+  "p_fair": null,
+  "price": "-1050",
+  "status": "open"
+ },
+ "nhl:401892771|n:sidney crosby|Shots on Goal|1+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": null,
+  "gid": "nhl:401892771",
+  "imp": 0.913,
+  "label": "Sidney Crosby: 1+ Shots on Goal",
+  "league": "nhl",
+  "line": "1+",
+  "market": "Shots on Goal",
+  "name": "Sidney Crosby",
   "p": 0.8557,
   "p_fair": null,
   "price": "-1050",

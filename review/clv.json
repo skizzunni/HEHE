@@ -3,15 +3,15 @@
  "enough": true,
  "last": {
   "beat_close_pct": 55.0,
-  "brier_close": 0.2084,
-  "brier_published": 0.2105,
+  "brier_close": 0.2115,
+  "brier_published": 0.2136,
   "dates": [
    "2026-11-17",
    "2026-11-22"
   ],
-  "logloss_close": 0.6029,
-  "logloss_published": 0.6085,
-  "mean_clv_pts": 0.33,
+  "logloss_close": 0.611,
+  "logloss_published": 0.6162,
+  "mean_clv_pts": 0.31,
   "n": 300
  },
  "market_is_model": true,
@@ -5701,6 +5701,15 @@
    "published": 0.69,
    "won": 0
   },
+  "epl:401879234": {
+   "call": true,
+   "close": 0.8539,
+   "clv": 1.39,
+   "day": "2026-11-22",
+   "league": "epl",
+   "published": 0.84,
+   "won": 0
+  },
   "epl:401879235": {
    "call": false,
    "close": 0.6467,
@@ -6650,6 +6659,15 @@
    "league": "fra",
    "published": 0.69,
    "won": 0
+  },
+  "fra:401876397": {
+   "call": false,
+   "close": 0.7278,
+   "clv": 0.78,
+   "day": "2026-11-22",
+   "league": "fra",
+   "published": 0.72,
+   "won": 1
   },
   "fra:401876398": {
    "call": false,
@@ -7889,6 +7907,15 @@
    "record_excluded": "unpriced_or_unverifiable",
    "won": 0
   },
+  "ind:401925408": {
+   "call": false,
+   "close": 0.6567,
+   "clv": -0.33,
+   "day": "2026-11-22",
+   "league": "ind",
+   "published": 0.66,
+   "won": 1
+  },
   "ind:401925412": {
    "call": false,
    "close": 0.6354,
@@ -8476,6 +8503,15 @@
    "published": 0.7,
    "won": 1
   },
+  "ita:401874960": {
+   "call": false,
+   "close": 0.6574,
+   "clv": 0.74,
+   "day": "2026-11-22",
+   "league": "ita",
+   "published": 0.65,
+   "won": 0
+  },
   "ita:401874961": {
    "call": false,
    "close": 0.8452,
@@ -8673,6 +8709,15 @@
    "day": "2026-10-25",
    "league": "ita",
    "published": 0.69,
+   "won": 1
+  },
+  "ita:401875047": {
+   "call": false,
+   "close": 0.789,
+   "clv": -1.1,
+   "day": "2026-11-22",
+   "league": "ita",
+   "published": 0.8,
    "won": 1
   },
   "ita:401875056": {
@@ -33597,5 +33642,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-22T15:54+00:00"
+ "updated": "2026-11-22T16:00+00:00"
 }
