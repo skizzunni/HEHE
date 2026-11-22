@@ -3247,6 +3247,7 @@
    "cost": 0.8325,
    "edge": 0.0042,
    "fair": 0.836,
+   "fill": null,
    "id": "ncaaf:401869938",
    "label": "Louisiana Tech Bulldogs",
    "league": "ncaaf",
@@ -3259,8 +3260,9 @@
     "team": "Louisiana Tech Bulldogs"
    },
    "start": "2026-11-22T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21ARSTLT-LT"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21ARSTLT-LT",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV21BYUKU-BYU|YES": {
    "ask": 0.67,
@@ -18668,6 +18670,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "ncaaf:401869938",
    "label": "over 54.5",
    "league": "ncaaf",
@@ -18680,8 +18683,9 @@
     "t": "over"
    },
    "start": "2026-11-22T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21ARSTLT-55"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21ARSTLT-55",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV21CCARULL-49|YES": {
    "ask": 0.51,
