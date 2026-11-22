@@ -3889,6 +3889,7 @@
    "cost": 0.8819,
    "edge": 0.0017,
    "fair": 0.8834,
+   "fill": "touch",
    "id": "ncaaf:401860925",
    "label": "Boise State Broncos",
    "league": "ncaaf",
@@ -3901,8 +3902,9 @@
     "team": "Boise State Broncos"
    },
    "start": "2026-11-22T02:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21SDSUBSU-BSU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21SDSUBSU-BSU",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV21SMUND-ND|YES": {
    "ask": 0.92,
@@ -10647,6 +10649,7 @@
    "cost": 0.5044,
    "edge": 0.0273,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401860925",
    "label": "San Diego State Aztecs +17.5",
    "league": "ncaaf",
@@ -10660,8 +10663,9 @@
     "team": "San Diego State Aztecs"
    },
    "start": "2026-11-22T02:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21SDSUBSU-BSU18"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21SDSUBSU-BSU18",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV21SMUND-ND21|YES": {
    "ask": 0.51,
@@ -19456,6 +19460,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401860925",
    "label": "over 60.5",
    "league": "ncaaf",
@@ -19468,8 +19473,9 @@
     "t": "over"
    },
    "start": "2026-11-22T02:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21SDSUBSU-61"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21SDSUBSU-61",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV21SMUND-56|YES": {
    "ask": 0.51,
