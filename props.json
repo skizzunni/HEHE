@@ -63660,6 +63660,22 @@
   "price": "-400",
   "status": "open"
  },
+ "nba:401910028|n:paul george|Pts + Reb + Ast|25+": {
+  "aid": null,
+  "date": "2026-11-21",
+  "edge": -3.2,
+  "gid": "nba:401910028",
+  "imp": 0.9167,
+  "label": "Paul George: 25+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "25+",
+  "market": "Pts + Reb + Ast",
+  "name": "Paul George",
+  "p": 0.8575,
+  "p_fair": 0.8877,
+  "price": "-1100",
+  "status": "open"
+ },
  "nba:401910028|n:paul george|Reb + Ast|10+": {
   "aid": null,
   "date": "2026-11-21",
@@ -109542,11 +109558,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Nick Suzuki",
   "p": 0.6912,
   "p_fair": null,
   "price": "-280",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892760|n:noah dobson|Shots on Goal|1+": {
   "aid": null,
@@ -109558,11 +109576,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Noah Dobson",
   "p": 0.8339,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892760|n:owen tippett|Shots on Goal|1+": {
   "aid": null,
@@ -109574,11 +109594,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Owen Tippett",
   "p": 0.8528,
   "p_fair": null,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892761|n:alex laferriere|Shots on Goal|2+": {
   "aid": null,
