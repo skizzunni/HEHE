@@ -24613,6 +24613,27 @@
    "status": "open",
    "ticker": "KXNFLGAME-26NOV22BALCAR-CAR"
   },
+  "KXNFLGAME-26NOV22JACNYG-JAC|YES": {
+   "ask": 0.71,
+   "bid": 0.7,
+   "cost": 0.7037,
+   "edge": 0.0042,
+   "fair": 0.7066,
+   "id": "nfl:401873069",
+   "label": "Jacksonville Jaguars",
+   "league": "nfl",
+   "match": "JAX @ NYG",
+   "posted": "2026-11-22T13:29:41+00:00",
+   "queue": 194960.71,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Jacksonville Jaguars"
+   },
+   "start": "2026-11-22T21:25Z",
+   "status": "open",
+   "ticker": "KXNFLGAME-26NOV22JACNYG-JAC"
+  },
   "KXNFLGAME-26NOV22LVDEN-DEN|YES": {
    "ask": 0.83,
    "bid": 0.82,
@@ -27669,6 +27690,27 @@
    "start": "2026-11-22T18:00Z",
    "status": "open",
    "ticker": "KXNFLTOTAL-26NOV22TBDET-48"
+  },
+  "KXNFLTOTAL-26NOV23CINWAS-55|YES": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0008,
+   "fair": 0.5148,
+   "id": "nfl:401873078",
+   "label": "over 54.5",
+   "league": "nfl",
+   "match": "CIN @ WSH",
+   "posted": "2026-11-22T13:29:41+00:00",
+   "queue": 331581.75,
+   "side": "YES",
+   "spec": {
+    "line": 54.5,
+    "t": "over"
+   },
+   "start": "2026-11-24T01:15Z",
+   "status": "open",
+   "ticker": "KXNFLTOTAL-26NOV23CINWAS-55"
   },
   "KXNFLTOTAL-26OCT22NECHI-51|YES": {
    "ask": 0.52,
