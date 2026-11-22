@@ -9921,6 +9921,45 @@
    "profit": 0.0309,
    "seen": "2026-11-21T20:46:11+00:00"
   },
+  "nba:401910030|home|FanDuel": {
+   "dec": 1.5952,
+   "ev": 0.0422,
+   "fair": 0.6534,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910030",
+   "kind": "value",
+   "league": "nba",
+   "match": "OKC @ MIA",
+   "price": "-168",
+   "seen": "2026-11-22T21:32:05+00:00",
+   "side": "home",
+   "start": "2026-11-22T23:00Z",
+   "team": "Miami Heat",
+   "tip": "6:00 PM",
+   "venue": "FanDuel"
+  },
+  "nba:401910030|sure": {
+   "id": "nba:401910030",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+208",
+     "stake_share": 0.3414,
+     "team": "Oklahoma City Thunder",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-168",
+     "stake_share": 0.6586,
+     "team": "Miami Heat",
+     "venue": "FanDuel"
+    }
+   ],
+   "match": "OKC @ MIA",
+   "profit": 0.0505,
+   "seen": "2026-11-22T21:32:05+00:00"
+  },
   "nba:401910032|home|FanDuel": {
    "dec": 4.8,
    "ev": 0.0255,
@@ -12163,6 +12202,28 @@
    "team": "Boise State Broncos +8.5",
    "tip": "1:00 PM",
    "venue": "Kalshi"
+  },
+  "ncaab:401926774|sure": {
+   "id": "ncaab:401926774",
+   "kind": "sure",
+   "league": "ncaab",
+   "legs": [
+    {
+     "price": "+9246",
+     "stake_share": 0.0108,
+     "team": "Louisiana Ragin' Cajuns",
+     "venue": "Kalshi"
+    },
+    {
+     "price": "-4000",
+     "stake_share": 0.9892,
+     "team": "USC Trojans",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "UL @ USC",
+   "profit": 0.0139,
+   "seen": "2026-11-22T21:32:05+00:00"
   },
   "ncaab:401928788|away|FanDuel": {
    "dec": 51.0,
