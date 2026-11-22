@@ -3538,6 +3538,7 @@
    "cost": 0.7335,
    "edge": 0.0023,
    "fair": 0.7352,
+   "fill": "touch",
    "id": "ncaaf:401858535",
    "label": "Indiana Hoosiers",
    "league": "ncaaf",
@@ -3550,8 +3551,9 @@
     "team": "Indiana Hoosiers"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21INDWASH-IND"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21INDWASH-IND",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV21IOWAILL-IOWA|YES": {
    "ask": 0.75,
@@ -3848,6 +3850,7 @@
    "cost": 0.9509,
    "edge": 0.0006,
    "fair": 0.9515,
+   "fill": "touch",
    "id": "ncaaf:401858532",
    "label": "Penn State Nittany Lions",
    "league": "ncaaf",
@@ -3860,8 +3863,9 @@
     "team": "Penn State Nittany Lions"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21RUTGPSU-PSU"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21RUTGPSU-PSU",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV21SDSUBSU-BSU|YES": {
    "ask": 0.89,
@@ -3980,6 +3984,7 @@
    "cost": 0.7137,
    "edge": 0.0124,
    "fair": 0.7225,
+   "fill": "touch",
    "id": "ncaaf:401856752",
    "label": "Oklahoma Sooners",
    "league": "ncaaf",
@@ -3992,8 +3997,9 @@
     "team": "Oklahoma Sooners"
    },
    "start": "2026-11-21T20:45Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21TXAMOKLA-OKLA"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21TXAMOKLA-OKLA",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV21UCLAMICH-UCLA|YES": {
    "ask": 0.63,
@@ -10167,6 +10173,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858535",
    "label": "Washington Huskies +9.5",
    "league": "ncaaf",
@@ -10180,8 +10187,9 @@
     "team": "Washington Huskies"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21INDWASH-IND10"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21INDWASH-IND10",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV21LSUTENN-LSU2|NO": {
    "ask": 0.51,
@@ -10555,6 +10563,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "touch",
    "id": "ncaaf:401858532",
    "label": "Penn State Nittany Lions -24.5",
    "league": "ncaaf",
@@ -10568,8 +10577,9 @@
     "team": "Penn State Nittany Lions"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21RUTGPSU-PSU25"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21RUTGPSU-PSU25",
+   "won": 0
   },
   "KXNCAAFSPREAD-26NOV21SDSUBSU-BSU18|NO": {
    "ask": 0.51,
@@ -18983,6 +18993,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "touch",
    "id": "ncaaf:401858535",
    "label": "over 43.5",
    "league": "ncaaf",
@@ -18995,8 +19006,9 @@
     "t": "over"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21INDWASH-44"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21INDWASH-44",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV21INDWASH-45|NO": {
    "ask": 0.53,
@@ -19004,6 +19016,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401858535",
    "label": "under 44.5",
    "league": "ncaaf",
@@ -19016,8 +19029,9 @@
     "t": "under"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21INDWASH-45"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21INDWASH-45",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV21LSUTENN-46|NO": {
    "ask": 0.51,
@@ -19224,6 +19238,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "touch",
    "id": "ncaaf:401858532",
    "label": "under 48.5",
    "league": "ncaaf",
@@ -19236,8 +19251,9 @@
     "t": "under"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21RUTGPSU-49"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21RUTGPSU-49",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV21RUTGPSU-50|NO": {
    "ask": 0.52,
@@ -19245,6 +19261,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858532",
    "label": "under 49.5",
    "league": "ncaaf",
@@ -19257,8 +19274,9 @@
     "t": "under"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21RUTGPSU-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21RUTGPSU-50",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV21RUTGPSU-50|YES": {
    "ask": 0.51,
@@ -19266,6 +19284,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858532",
    "label": "over 49.5",
    "league": "ncaaf",
@@ -19278,8 +19297,9 @@
     "t": "over"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21RUTGPSU-50"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21RUTGPSU-50",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV21SDSUBSU-61|YES": {
    "ask": 0.52,
@@ -19486,6 +19506,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856752",
    "label": "over 37.5",
    "league": "ncaaf",
@@ -19498,8 +19519,9 @@
     "t": "over"
    },
    "start": "2026-11-21T20:45Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21TXAMOKLA-38"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21TXAMOKLA-38",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV21UCLAMICH-37|YES": {
    "ask": 0.52,
