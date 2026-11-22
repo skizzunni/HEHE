@@ -10664,30 +10664,7 @@
      "close": true,
      "conf": 100,
      "conf_first": 100,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T03:57:08+00:00",
-      "conf": 98,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaab:401909567",
-      "league": "ncaab",
-      "match": "WSU @ DUKE",
-      "pick": "Duke Blue Devils",
-      "price": "-8000",
-      "price_at": "2026-11-22T03:56:45+00:00",
-      "price_market": "moneyline",
-      "price_ref": "35058606:0ML87342926_1",
-      "prob_at": "2026-11-22T03:56:45+00:00",
-      "rank": 1,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-22T04:00Z"
-     },
+     "current": null,
      "dc": false,
      "fp": "6acf459eb5a7",
      "gate": {
@@ -10861,55 +10838,7 @@
     "mls": "2026-11-21T22:49:34+00:00",
     "nba": "2026-11-22T02:11:01+00:00"
    },
-   "candidate_observations": {
-    "ncaab:401909567": {
-     "book": "DraftKings",
-     "calib": "raw no-vig (calibration failed its untouched test)",
-     "close": true,
-     "conf": 98,
-     "current": {
-      "book": "DraftKings",
-      "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T03:57:08+00:00",
-      "conf": 98,
-      "dc": false,
-      "gate": {
-       "ok": true,
-       "what": "no lineup gate for this league"
-      },
-      "id": "ncaab:401909567",
-      "league": "ncaab",
-      "match": "WSU @ DUKE",
-      "pick": "Duke Blue Devils",
-      "price": "-8000",
-      "price_at": "2026-11-22T03:56:45+00:00",
-      "price_market": "moneyline",
-      "price_ref": "35058606:0ML87342926_1",
-      "prob_at": "2026-11-22T03:56:45+00:00",
-      "rank": null,
-      "ready": true,
-      "side": "home",
-      "start": "2026-11-22T04:00Z"
-     },
-     "dc": false,
-     "fp": "6acf459eb5a7",
-     "gate": {
-      "ok": true,
-      "what": "no lineup gate for this league"
-     },
-     "id": "ncaab:401909567",
-     "league": "ncaab",
-     "match": "WSU @ DUKE",
-     "pick": "Duke Blue Devils",
-     "price": "-8000",
-     "price_at": "2026-11-22T03:56:45+00:00",
-     "price_market": "moneyline",
-     "price_ref": "35058606:0ML87342926_1",
-     "side": "home",
-     "start": "2026-11-22T04:00Z",
-     "tip": "11:00 PM"
-    }
-   },
+   "candidate_observations": {},
    "frozen": [
     "ita",
     "nba"

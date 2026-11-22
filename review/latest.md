@@ -124,7 +124,7 @@ Lottery 100: lost (3/6 legs won, killed by Over 227.5 points, Over 52.5 points, 
 Lottery 100: lost (3/6 legs won, killed by Indiana Hoosiers -13.5, North Texas Mean Green to win)
 Lottery 10k: lost (6/11 legs won, killed by Over 227.5 points, Over 52.5 points, Over 224.5 points)
 Lottery 10k: lost (5/10 legs won, killed by BYU Cougars -9.5, Indiana Hoosiers -13.5, Over 51.5 points)
-Lottery 10k: lost (0/10 legs won, killed by New York Islanders -1.5, Winnipeg Jets to win, South Florida Bulls to win, Ohio State Buckeyes -3.5, Florida State Seminoles -13.5, Over 58.5 points, Over 51.5 points)
+Lottery 10k: lost (1/10 legs won, killed by New York Islanders -1.5, Winnipeg Jets to win, South Florida Bulls to win, Ohio State Buckeyes -3.5, Florida State Seminoles -13.5, Over 58.5 points, Over 51.5 points)
 Lottery 10k+25: lost (6/11 legs won, killed by Over 227.5 points, Over 52.5 points, Over 224.5 points)
 Lottery 10k+50: lost (7/11 legs won, killed by Over 227.5 points, Over 224.5 points)
 Lottery 10k+100: lost (6/10 legs won, killed by Over 227.5 points, South Florida Bulls to win)
