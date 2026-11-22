@@ -7,28 +7,22 @@
    "baseline": "the pick as published (hand-set model weights in NFL/WNBA/MLB/tennis)",
    "proposal": "the same-time market favourite (tested weight 0)",
    "same": "one pick per game, same game, same price",
-   "untouched_from": "2026-10-11",
+   "untouched_from": "2026-10-12",
    "result": {
     "all": {
      "days": 42,
-     "picks": 1093,
-     "old_won": 755,
-     "new_won": 758,
-     "diff": 3,
+     "picks": 1079,
+     "old_won": 746,
+     "new_won": 748,
+     "diff": 2,
      "ci95_diff": [
       -4,
       12
      ],
-     "new_won_old_missed": 10,
+     "new_won_old_missed": 9,
      "old_won_new_missed": 7,
      "promote": false,
      "examples_new": [
-      {
-       "day": "2026-10-11",
-       "new": "opponent of Cleveland Browns",
-       "game": "nfl:401872983",
-       "won": true
-      },
       {
        "day": "2026-10-13",
        "new": "opponent of Buffalo Sabres",
@@ -69,6 +63,12 @@
        "day": "2026-10-15",
        "new": "opponent of St. Louis Blues",
        "game": "nhl:401892514",
+       "won": true
+      },
+      {
+       "day": "2026-10-15",
+       "new": "opponent of Edmonton Oilers",
+       "game": "nhl:401892515",
        "won": true
       }
      ],
@@ -132,10 +132,10 @@
      "promote": false
     },
     "ncaab": {
-     "days": 19,
-     "picks": 91,
-     "old_won": 80,
-     "new_won": 80,
+     "days": 20,
+     "picks": 92,
+     "old_won": 81,
+     "new_won": 81,
      "diff": 0,
      "ci95_diff": [
       0,
@@ -160,24 +160,24 @@
      "promote": false
     },
     "nfl": {
-     "days": 18,
-     "picks": 85,
-     "old_won": 61,
-     "new_won": 62,
-     "diff": 1,
+     "days": 17,
+     "picks": 73,
+     "old_won": 53,
+     "new_won": 53,
+     "diff": 0,
      "ci95_diff": [
       0,
-      3
+      0
      ],
-     "new_won_old_missed": 2,
+     "new_won_old_missed": 1,
      "old_won_new_missed": 1,
      "promote": false
     },
     "nhl": {
-     "days": 41,
-     "picks": 289,
-     "old_won": 170,
-     "new_won": 174,
+     "days": 40,
+     "picks": 286,
+     "old_won": 168,
+     "new_won": 172,
      "diff": 4,
      "ci95_diff": [
       -1,
