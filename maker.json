@@ -27913,6 +27913,7 @@
    "cost": 0.5144,
    "edge": 0.0053,
    "fair": 0.5171,
+   "fill": "strict",
    "id": "nfl:401873073",
    "label": "over 54.5",
    "league": "nfl",
@@ -27925,8 +27926,9 @@
     "t": "over"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV22TENDAL-55"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV22TENDAL-55",
+   "won": 1
   },
   "KXNFLTOTAL-26NOV23CINWAS-55|YES": {
    "ask": 0.52,
