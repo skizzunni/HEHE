@@ -11550,7 +11550,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 90,
       "dc": false,
       "gate": {
@@ -11562,10 +11562,10 @@
       "match": "MIA @ BUF",
       "pick": "Buffalo Bills",
       "price": "-1480",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34118202:0ML84695635_1",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": 1,
       "ready": true,
       "side": "home",
@@ -11600,7 +11600,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 89,
       "dc": false,
       "gate": {
@@ -11612,10 +11612,10 @@
       "match": "ARI @ KC",
       "pick": "Kansas City Chiefs",
       "price": "-1320",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34118264:0ML84695707_1",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": 2,
       "ready": true,
       "side": "home",
@@ -11650,7 +11650,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 88,
       "dc": false,
       "gate": {
@@ -11662,10 +11662,10 @@
       "match": "NEB @ BTLR",
       "pick": "Nebraska Cornhuskers",
       "price": "-850",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "35064671:0ML87358688_3",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": 3,
       "ready": true,
       "side": "away",
@@ -11700,12 +11700,12 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 85,
       "dc": true,
       "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
+       "ok": true,
+       "what": "both XIs confirmed"
       },
       "id": "epl:401879234",
       "league": "epl",
@@ -11715,22 +11715,30 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196392089:13473193",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": 4,
       "ready": false,
-      "reason": "awaiting confirmed XIs",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "away",
       "start": "2026-11-22T14:00Z"
      },
      "dc": true,
-     "fp": "da633e97a432",
+     "fp": "ab109a58aa58",
      "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
+      "ok": true,
+      "what": "both XIs confirmed"
      },
      "id": "epl:401879234",
      "league": "epl",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-22T13:13:50+00:00",
+       "what": "both XIs confirmed"
+      }
+     ],
      "match": "BHA @ HUL",
+     "news_at": "2026-11-22T13:13:50+00:00",
      "pick": "Brighton & Hove Albion or draw",
      "price": "-900",
      "price_at": "2026-11-22T12:58:30+00:00",
@@ -11751,7 +11759,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
@@ -11763,10 +11771,10 @@
       "match": "EYU @ TRAB",
       "pick": "Trabzonspor",
       "price": "-900",
-      "price_at": "2026-11-22T13:08:25+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34998430:0ML87187873_1",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": 5,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -11794,7 +11802,9 @@
      "tip": "11:00 AM"
     }
    ],
-   "candidate_news": {},
+   "candidate_news": {
+    "epl": "2026-11-22T13:13:50+00:00"
+   },
    "candidate_observations": {
     "aut:401881747": {
      "book": "FanDuel",
@@ -11804,7 +11814,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 76,
       "dc": true,
       "gate": {
@@ -11819,7 +11829,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.197458359:13368344",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -11852,7 +11862,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 84,
       "dc": true,
       "gate": {
@@ -11867,7 +11877,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.198256468:36914153",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -11900,7 +11910,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 78,
       "dc": true,
       "gate": {
@@ -11915,7 +11925,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.193067078:13472693",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -11948,12 +11958,12 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 85,
       "dc": true,
       "gate": {
-       "ok": false,
-       "what": "awaiting confirmed XIs"
+       "ok": true,
+       "what": "both XIs confirmed"
       },
       "id": "epl:401879234",
       "league": "epl",
@@ -11963,22 +11973,30 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196392089:13473193",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
-      "reason": "awaiting confirmed XIs",
+      "reason": "awaiting this game's price after its lineup/news change",
       "side": "away",
       "start": "2026-11-22T14:00Z"
      },
      "dc": true,
-     "fp": "da633e97a432",
+     "fp": "ab109a58aa58",
      "gate": {
-      "ok": false,
-      "what": "awaiting confirmed XIs"
+      "ok": true,
+      "what": "both XIs confirmed"
      },
      "id": "epl:401879234",
      "league": "epl",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-22T13:13:50+00:00",
+       "what": "both XIs confirmed"
+      }
+     ],
      "match": "BHA @ HUL",
+     "news_at": "2026-11-22T13:13:50+00:00",
      "pick": "Brighton & Hove Albion or draw",
      "price": "-900",
      "price_at": "2026-11-22T13:08:46+00:00",
@@ -11996,7 +12014,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 78,
       "dc": true,
       "gate": {
@@ -12011,7 +12029,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196465137:14056304",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12044,7 +12062,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 85,
       "dc": true,
       "gate": {
@@ -12059,7 +12077,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196437004:13579713",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12092,7 +12110,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
@@ -12104,10 +12122,10 @@
       "match": "OFI @ PAO",
       "pick": "Panathinaikos",
       "price": "-450",
-      "price_at": "2026-11-22T13:08:25+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34997500:0ML87185829_1",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12125,7 +12143,7 @@
      "match": "OFI @ PAO",
      "pick": "Panathinaikos",
      "price": "-450",
-     "price_at": "2026-11-22T13:08:25+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "34997500:0ML87185829_1",
      "side": "home",
@@ -12140,7 +12158,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 81,
       "dc": false,
       "gate": {
@@ -12152,10 +12170,10 @@
       "match": "IRAK @ OLY",
       "pick": "Olympiacos",
       "price": "-575",
-      "price_at": "2026-11-22T13:08:25+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34997506:0ML87185828_1",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12173,7 +12191,7 @@
      "match": "IRAK @ OLY",
      "pick": "Olympiacos",
      "price": "-575",
-     "price_at": "2026-11-22T13:08:25+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "34997506:0ML87185828_1",
      "side": "home",
@@ -12188,7 +12206,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 80,
       "dc": true,
       "gate": {
@@ -12203,7 +12221,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196436026:13501627",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12236,7 +12254,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -12251,7 +12269,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196436402:15800799",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12284,7 +12302,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 81,
       "dc": true,
       "gate": {
@@ -12299,7 +12317,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196393153:13731454",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12332,7 +12350,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 82,
       "dc": true,
       "gate": {
@@ -12347,7 +12365,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.198502743:13130798",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12380,7 +12398,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 80,
       "dc": true,
       "gate": {
@@ -12395,7 +12413,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196740288:13129108",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12428,7 +12446,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 83,
       "dc": true,
       "gate": {
@@ -12443,7 +12461,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.198470722:23255496",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12476,7 +12494,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 76,
       "dc": false,
       "gate": {
@@ -12488,10 +12506,10 @@
       "match": "DEN @ CHI",
       "pick": "Denver Nuggets",
       "price": "-374",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "35056412:0ML87336715_3",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": true,
       "side": "away",
@@ -12508,7 +12526,7 @@
      "match": "DEN @ CHI",
      "pick": "Denver Nuggets",
      "price": "-374",
-     "price_at": "2026-11-22T13:08:24+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "35056412:0ML87336715_3",
      "side": "away",
@@ -12519,12 +12537,12 @@
      "book": "DraftKings",
      "calib": "raw no-vig (calibration failed its untouched test)",
      "close": true,
-     "conf": 76,
+     "conf": 75,
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
-      "conf": 76,
+      "checked_at": "2026-11-22T13:13:50+00:00",
+      "conf": 75,
       "dc": false,
       "gate": {
        "ok": true,
@@ -12534,11 +12552,11 @@
       "league": "nba",
       "match": "IND @ NY",
       "pick": "New York Knicks",
-      "price": "-380",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price": "-360",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "35056424:0ML87336793_1",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -12554,8 +12572,8 @@
      "league": "nba",
      "match": "IND @ NY",
      "pick": "New York Knicks",
-     "price": "-380",
-     "price_at": "2026-11-22T13:08:24+00:00",
+     "price": "-360",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "35056424:0ML87336793_1",
      "side": "home",
@@ -12570,7 +12588,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 75,
       "dc": false,
       "gate": {
@@ -12582,10 +12600,10 @@
       "match": "BOS @ GS",
       "pick": "Boston Celtics",
       "price": "-359",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "35056429:0ML87336798_3",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": true,
       "side": "away",
@@ -12602,7 +12620,7 @@
      "match": "BOS @ GS",
      "pick": "Boston Celtics",
      "price": "-359",
-     "price_at": "2026-11-22T13:08:24+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "35056429:0ML87336798_3",
      "side": "away",
@@ -12617,7 +12635,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 88,
       "dc": false,
       "gate": {
@@ -12629,10 +12647,10 @@
       "match": "NEB @ BTLR",
       "pick": "Nebraska Cornhuskers",
       "price": "-850",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "35064671:0ML87358688_3",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": true,
       "side": "away",
@@ -12649,7 +12667,7 @@
      "match": "NEB @ BTLR",
      "pick": "Nebraska Cornhuskers",
      "price": "-850",
-     "price_at": "2026-11-22T13:08:24+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "35064671:0ML87358688_3",
      "side": "away",
@@ -12664,7 +12682,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 77,
       "dc": false,
       "gate": {
@@ -12676,10 +12694,10 @@
       "match": "ADO @ AJA",
       "pick": "Ajax Amsterdam",
       "price": "-450",
-      "price_at": "2026-11-22T13:08:25+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34994514:0ML87178458_1",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12697,7 +12715,7 @@
      "match": "ADO @ AJA",
      "pick": "Ajax Amsterdam",
      "price": "-450",
-     "price_at": "2026-11-22T13:08:25+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "34994514:0ML87178458_1",
      "side": "home",
@@ -12712,7 +12730,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 89,
       "dc": false,
       "gate": {
@@ -12724,10 +12742,10 @@
       "match": "ARI @ KC",
       "pick": "Kansas City Chiefs",
       "price": "-1320",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34118264:0ML84695707_1",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -12744,7 +12762,7 @@
      "match": "ARI @ KC",
      "pick": "Kansas City Chiefs",
      "price": "-1320",
-     "price_at": "2026-11-22T13:08:24+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "34118264:0ML84695707_1",
      "side": "home",
@@ -12759,7 +12777,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 90,
       "dc": false,
       "gate": {
@@ -12771,10 +12789,10 @@
       "match": "MIA @ BUF",
       "pick": "Buffalo Bills",
       "price": "-1480",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34118202:0ML84695635_1",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -12791,7 +12809,7 @@
      "match": "MIA @ BUF",
      "pick": "Buffalo Bills",
      "price": "-1480",
-     "price_at": "2026-11-22T13:08:24+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "34118202:0ML84695635_1",
      "side": "home",
@@ -12806,7 +12824,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
@@ -12818,10 +12836,10 @@
       "match": "NO @ CHI",
       "pick": "Chicago Bears",
       "price": "-660",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34118023:0ML84695456_1",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -12838,7 +12856,7 @@
      "match": "NO @ CHI",
      "pick": "Chicago Bears",
      "price": "-660",
-     "price_at": "2026-11-22T13:08:24+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "34118023:0ML84695456_1",
      "side": "home",
@@ -12853,7 +12871,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
@@ -12864,11 +12882,11 @@
       "league": "nfl",
       "match": "LV @ DEN",
       "pick": "Denver Broncos",
-      "price": "-610",
-      "price_at": "2026-11-22T13:08:24+00:00",
+      "price": "-640",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34118267:0ML84695710_1",
-      "prob_at": "2026-11-22T13:08:24+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": true,
       "side": "home",
@@ -12884,8 +12902,8 @@
      "league": "nfl",
      "match": "LV @ DEN",
      "pick": "Denver Broncos",
-     "price": "-610",
-     "price_at": "2026-11-22T13:08:24+00:00",
+     "price": "-640",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "34118267:0ML84695710_1",
      "side": "home",
@@ -12900,7 +12918,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 77,
       "dc": true,
       "gate": {
@@ -12915,7 +12933,7 @@
       "price_at": "2026-11-22T13:08:46+00:00",
       "price_market": "double_chance",
       "price_ref": "736.197566571:14114450",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12948,7 +12966,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
@@ -12960,10 +12978,10 @@
       "match": "EYU @ TRAB",
       "pick": "Trabzonspor",
       "price": "-900",
-      "price_at": "2026-11-22T13:08:25+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "34998430:0ML87187873_1",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -12981,7 +12999,7 @@
      "match": "EYU @ TRAB",
      "pick": "Trabzonspor",
      "price": "-900",
-     "price_at": "2026-11-22T13:08:25+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "34998430:0ML87187873_1",
      "side": "home",
@@ -12996,7 +13014,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-22T13:08:47+00:00",
+      "checked_at": "2026-11-22T13:13:50+00:00",
       "conf": 80,
       "dc": false,
       "gate": {
@@ -13008,10 +13026,10 @@
       "match": "WHU @ ARS",
       "pick": "Arsenal",
       "price": "-650",
-      "price_at": "2026-11-22T13:08:25+00:00",
+      "price_at": "2026-11-22T13:13:31+00:00",
       "price_market": "moneyline",
       "price_ref": "35032285:0ML87274726_1",
-      "prob_at": "2026-11-22T13:08:25+00:00",
+      "prob_at": "2026-11-22T13:13:31+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -13029,7 +13047,7 @@
      "match": "WHU @ ARS",
      "pick": "Arsenal",
      "price": "-650",
-     "price_at": "2026-11-22T13:08:25+00:00",
+     "price_at": "2026-11-22T13:13:31+00:00",
      "price_market": "moneyline",
      "price_ref": "35032285:0ML87274726_1",
      "side": "home",
@@ -13037,7 +13055,12 @@
      "tip": "9:30 AM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "epl"
+   ],
+   "news": {
+    "epl": "2026-11-22T13:13:50+00:00"
+   },
    "shadow": {
     "pool": [
      {
