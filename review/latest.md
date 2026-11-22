@@ -119,7 +119,7 @@ Locks 3/11 won, 7 open; Best play top 2 (61%) lost; lost: Elijah Higgins: 5+ Rec
 Safe Locks 1/11 won, 10 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
 Lottery 10k: lost (0/9 legs won, killed by Arizona Cardinals +16.5, Tennessee Titans +5.5)
 Lottery 10k: lost (2/8 legs won, killed by Detroit Lions -16.5, Pittsburgh Steelers -13.5)
-Lottery 10k: lost (0/6 legs won, killed by New York Rangers under 1.5 goals)
+Lottery 10k: lost (0/6 legs won, killed by New York Rangers under 1.5 goals, Baltimore Ravens -8.5)
 Lottery 10k+25: lost (1/9 legs won, killed by Arizona Cardinals +16.5)
 Lottery 10k+50: lost (0/9 legs won, killed by Arizona Cardinals +16.5)
 Lottery 10k+100: lost (0/9 legs won, killed by Arizona Cardinals +16.5)
