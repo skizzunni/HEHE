@@ -15442,6 +15442,23 @@
    "tip": "1:00 PM",
    "venue": "FanDuel"
   },
+  "nfl:401873075|away|FanDuel": {
+   "dec": 6.0,
+   "ev": 0.0182,
+   "fair": 0.1697,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nfl:401873075",
+   "kind": "value",
+   "league": "nfl",
+   "match": "LV @ DEN",
+   "price": "+500",
+   "seen": "2026-11-22T12:58:44+00:00",
+   "side": "away",
+   "start": "2026-11-22T21:25Z",
+   "team": "Las Vegas Raiders",
+   "tip": "4:25 PM",
+   "venue": "FanDuel"
+  },
   "nhl:401891809|away|Kalshi": {
    "dec": 3.7994,
    "ev": 0.0218,
@@ -24712,6 +24729,26 @@
    "prob": 0.1521,
    "seen": "2026-11-19T05:03:43+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nfl:401873075:away": {
+   "ev": 0.0182,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0182,
+     "fair": 0.1697,
+     "id": "nfl:401873075",
+     "price": "+500",
+     "side": "away",
+     "spec": null,
+     "team": "Las Vegas Raiders"
+    }
+   ],
+   "payout": 6.0,
+   "prob": 0.1697,
+   "seen": "2026-11-22T12:58:44+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },

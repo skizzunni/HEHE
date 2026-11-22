@@ -103,6 +103,12 @@ Yesterday (2026-11-21): board 113-54, sweep broken by jpn Urawa Red Diamonds or 
 - LOST nba Boston Celtics at 83% (-650), Boston Celtics 96 - Sacramento Kings 97: margin 1 · the book had my side favoured too · called at 83% · upset · close game; picks like it: 41 of 45 (91% vs 82% stated)
 - LOST nhl Minnesota Wild at 73% (-310), Minnesota Wild 3 - Vancouver Canucks 4: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game; picks like it: 18 of 23 (78% vs 72% stated)
 - LOST ncaaf Boise State Broncos at 93% (-1450), Boise State Broncos 20 - San Diego State Aztecs 22: margin 2 · the book had my side favoured too · called at 93% · upset · close game; picks like it: 42 of 48 (88% vs 92% stated)
+Lottery 10k: open (0/9 legs won)
+Lottery 10k: open (0/8 legs won)
+Lottery 10k: open (0/6 legs won)
+Lottery 10k+25: open (0/9 legs won)
+Lottery 10k+50: open (0/9 legs won)
+Lottery 10k+100: open (0/9 legs won)
 Ladder-consistency props (all time): 3014/3641 won (82.8%) vs 86.5% fair, 87.6% price, 83.6% stated on the board (heavy props capped).
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
