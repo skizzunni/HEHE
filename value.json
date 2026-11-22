@@ -9920,6 +9920,23 @@
    "profit": 0.0309,
    "seen": "2026-11-21T20:46:11+00:00"
   },
+  "nba:401910032|home|FanDuel": {
+   "dec": 4.8,
+   "ev": 0.0255,
+   "fair": 0.2137,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910032",
+   "kind": "value",
+   "league": "nba",
+   "match": "DEN @ CHI",
+   "price": "+380",
+   "seen": "2026-11-22T15:32:44+00:00",
+   "side": "home",
+   "start": "2026-11-23T00:00Z",
+   "team": "Chicago Bulls",
+   "tip": "7:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401910034|{\"line\": -10.5, \"t\": \"spread\", \"team\": \"New York Knicks\"}|Kalshi": {
    "dec": 2.0947,
    "dk": "-110",
@@ -23812,6 +23829,26 @@
    "prob": 0.1657,
    "seen": "2026-11-22T00:41:46+00:00",
    "status": "won",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401910032:home": {
+   "ev": 0.0258,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0255,
+     "fair": 0.2137,
+     "id": "nba:401910032",
+     "price": "+380",
+     "side": "home",
+     "spec": null,
+     "team": "Chicago Bulls"
+    }
+   ],
+   "payout": 4.8,
+   "prob": 0.2137,
+   "seen": "2026-11-22T15:32:44+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
