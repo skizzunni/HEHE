@@ -4011,6 +4011,7 @@
    "cost": 0.6142,
    "edge": 0.0118,
    "fair": 0.6214,
+   "fill": "touch",
    "id": "ncaaf:401858528",
    "label": "UCLA Bruins",
    "league": "ncaaf",
@@ -4023,8 +4024,9 @@
     "team": "UCLA Bruins"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21UCLAMICH-UCLA"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21UCLAMICH-UCLA",
+   "won": 0
   },
   "KXNCAAFGAME-26NOV21UGASCAR-UGA|YES": {
    "ask": 0.86,
@@ -10737,6 +10739,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401858528",
    "label": "Michigan Wolverines +3.5",
    "league": "ncaaf",
@@ -10750,8 +10753,9 @@
     "team": "Michigan Wolverines"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21UCLAMICH-UCLA4"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21UCLAMICH-UCLA4",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV21UGASCAR-UGA16|NO": {
    "ask": 0.51,
@@ -19547,6 +19551,7 @@
    "cost": 0.5144,
    "edge": 0.0073,
    "fair": 0.5182,
+   "fill": "strict",
    "id": "ncaaf:401858528",
    "label": "over 36.5",
    "league": "ncaaf",
@@ -19559,8 +19564,9 @@
     "t": "over"
    },
    "start": "2026-11-21T20:30Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21UCLAMICH-37"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21UCLAMICH-37",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV21UGASCAR-51|YES": {
    "ask": 0.53,
