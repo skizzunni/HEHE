@@ -63490,11 +63490,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Baylor Scheierman",
   "p": 0.779,
   "p_fair": 0.7702,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nba:401910028|n:baylor scheierman|Points|5+": {
   "aid": null,
@@ -63506,11 +63508,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Baylor Scheierman",
   "p": 0.8496,
   "p_fair": 0.9538,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401910028|n:baylor scheierman|Reb + Ast|5+": {
   "aid": null,
@@ -63522,11 +63526,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Baylor Scheierman",
   "p": 0.8539,
   "p_fair": 0.8766,
   "price": "-800",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nba:401910028|n:darius acuff|Assists|4+": {
   "aid": null,
@@ -63538,11 +63544,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Darius Acuff Jr.",
   "p": 0.8618,
   "p_fair": 0.8636,
   "price": "-770",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nba:401910028|n:darius acuff|Points|10+": {
   "aid": null,
@@ -63553,11 +63561,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Darius Acuff Jr.",
   "p": 0.8741,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401910028|n:darius acuff|Points|15+": {
   "aid": null,
@@ -63569,11 +63579,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Darius Acuff Jr.",
   "p": 0.8425,
   "p_fair": 0.88,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401910028|n:darius acuff|Pts + Ast|20+": {
   "aid": null,
@@ -63585,11 +63597,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Darius Acuff Jr.",
   "p": 0.8588,
   "p_fair": 0.8771,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 29.0
  },
  "nba:401910028|n:derrick white|Assists|4+": {
   "aid": null,
@@ -63601,11 +63615,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Derrick White",
   "p": 0.7573,
   "p_fair": 0.7637,
   "price": "-350",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401910028|n:derrick white|Points|5+": {
   "aid": null,
@@ -63616,11 +63632,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Derrick White",
   "p": 0.8741,
   "price": "-8000",
   "prop_lock": true,
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401910028|n:derrick white|Threes Made|1+": {
   "aid": null,
@@ -63632,11 +63650,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Derrick White",
   "p": 0.858,
   "p_fair": 0.9038,
   "price": "-1600",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401910028|n:domantas sabonis|Assists|4+": {
   "aid": null,
@@ -63648,11 +63668,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Domantas Sabonis",
   "p": 0.7524,
   "p_fair": 0.7447,
   "price": "-340",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nba:401910028|n:domantas sabonis|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -63664,11 +63686,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Domantas Sabonis",
   "p": 0.8504,
   "p_fair": 0.9059,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 36.0
  },
  "nba:401910028|n:jayson tatum|Pts + Ast|25+": {
   "aid": null,
@@ -63684,7 +63708,9 @@
   "p": 0.8482,
   "p_fair": 0.8224,
   "price": "-800",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910028|n:jayson tatum|Pts + Reb + Ast|30+": {
   "aid": null,
@@ -63700,7 +63726,9 @@
   "p": 0.8575,
   "p_fair": 0.8589,
   "price": "-1100",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910028|n:neemias queta|Pts + Ast|10+": {
   "aid": null,
@@ -63712,11 +63740,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Neemias Queta",
   "p": 0.8482,
   "p_fair": 0.9005,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401910028|n:neemias queta|Rebounds|6+": {
   "aid": null,
@@ -63728,11 +63758,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Neemias Queta",
   "p": 0.8433,
   "p_fair": 0.9001,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nba:401910028|n:paul george|Points|15+": {
   "aid": null,
@@ -63744,11 +63776,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Paul George",
   "p": 0.8555,
   "p_fair": 0.89,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nba:401910028|n:paul george|Pts + Ast|25+": {
   "aid": null,
@@ -63760,11 +63794,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Paul George",
   "p": 0.7634,
   "p_fair": 0.7525,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 24.0
  },
  "nba:401910028|n:paul george|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -63776,11 +63812,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Paul George",
   "p": 0.8575,
   "p_fair": 0.8877,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 32.0
  },
  "nba:401910028|n:paul george|Reb + Ast|10+": {
   "aid": null,
@@ -63792,11 +63830,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Paul George",
   "p": 0.7685,
   "p_fair": 0.7277,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401910028|n:payton pritchard|Pts + Ast|20+": {
   "aid": null,
@@ -63808,11 +63848,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Payton Pritchard",
   "p": 0.8482,
   "p_fair": 0.8481,
   "price": "-800",
-  "status": "open"
+  "status": "lost",
+  "value": 17.0
  },
  "nba:401910028|n:zach lavine|Assists|2+": {
   "aid": null,
@@ -63824,11 +63866,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Zach LaVine",
   "p": 0.7524,
   "p_fair": 0.7434,
   "price": "-340",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nba:401910028|n:zach lavine|Points|10+": {
   "aid": null,
@@ -63840,11 +63884,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Zach LaVine",
   "p": 0.8555,
   "p_fair": 0.9243,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nba:401910028|n:zach lavine|Pts + Reb + Ast|15+": {
   "aid": null,
@@ -63856,11 +63902,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Zach LaVine",
   "p": 0.8575,
   "p_fair": 0.9384,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 16.0
  },
  "nba:401910029|n:jalen johnson|Rebounds|6+": {
   "aid": null,
@@ -63940,6 +63988,22 @@
   "p": 0.85,
   "p_fair": 0.8973,
   "price": "-1400",
+  "status": "open"
+ },
+ "nba:401910030|n:shai gilgeous alexander|Pts + Reb + Ast|30+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": -5.5,
+  "gid": "nba:401910030",
+  "imp": 0.9091,
+  "label": "Shai Gilgeous-Alexander: 30+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "30+",
+  "market": "Pts + Reb + Ast",
+  "name": "Shai Gilgeous-Alexander",
+  "p": 0.8504,
+  "p_fair": 0.8589,
+  "price": "-1000",
   "status": "open"
  },
  "nba:401910031|n:franz wagner|Pts + Reb + Ast|30+": {
@@ -79965,6 +80029,22 @@
   "p": 0.782,
   "p_fair": 0.7797,
   "price": "-400",
+  "status": "open"
+ },
+ "nfl:401873072|n:cade otton|Receptions|2+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": -2.5,
+  "gid": "nfl:401873072",
+  "imp": 0.8701,
+  "label": "Cade Otton: 2+ Receptions",
+  "league": "nfl",
+  "line": "2+",
+  "market": "Receptions",
+  "name": "Cade Otton",
+  "p": 0.8506,
+  "p_fair": 0.8486,
+  "price": "-670",
   "status": "open"
  },
  "nfl:401873072|n:jahmyr gibbs|Anytime Touchdown Scorer|1+": {
