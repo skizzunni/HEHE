@@ -62833,6 +62833,38 @@
   "price": "-1000",
   "status": "open"
  },
+ "nba:401910024|n:josh hart|Points|5+": {
+  "aid": null,
+  "date": "2026-11-21",
+  "edge": 4.9,
+  "gid": "nba:401910024",
+  "imp": 0.9167,
+  "label": "Josh Hart: 5+ Points",
+  "league": "nba",
+  "line": "5+",
+  "market": "Points",
+  "name": "Josh Hart",
+  "p": 0.8496,
+  "p_fair": 0.9613,
+  "price": "-1100",
+  "status": "open"
+ },
+ "nba:401910024|n:josh hart|Pts + Reb + Ast|15+": {
+  "aid": null,
+  "date": "2026-11-21",
+  "edge": 1.8,
+  "gid": "nba:401910024",
+  "imp": 0.9091,
+  "label": "Josh Hart: 15+ Pts + Reb + Ast",
+  "league": "nba",
+  "line": "15+",
+  "market": "Pts + Reb + Ast",
+  "name": "Josh Hart",
+  "p": 0.8504,
+  "p_fair": 0.9259,
+  "price": "-1000",
+  "status": "open"
+ },
  "nba:401910024|n:jrue holiday|Reb + Ast|5+": {
   "aid": null,
   "date": "2026-11-21",
@@ -78626,6 +78658,7 @@
   "p": 0.7843,
   "p_fair": 0.8557,
   "price": "-400",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "unresolved": true,
   "void_why": "identity_unresolved"
@@ -78644,6 +78677,7 @@
   "p": 0.7818,
   "p_fair": 0.7521,
   "price": "-390",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "unresolved": true,
   "void_why": "identity_unresolved"
@@ -109703,6 +109737,22 @@
   "p": 0.8565,
   "p_fair": null,
   "price": "-1050",
+  "status": "open"
+ },
+ "nhl:401892765|n:cutter gauthier|Shots on Goal|2+": {
+  "aid": null,
+  "date": "2026-11-21",
+  "edge": null,
+  "gid": "nhl:401892765",
+  "imp": 0.9231,
+  "label": "Cutter Gauthier: 2+ Shots on Goal",
+  "league": "nhl",
+  "line": "2+",
+  "market": "Shots on Goal",
+  "name": "Cutter Gauthier",
+  "p": 0.8659,
+  "p_fair": null,
+  "price": "-1200",
   "status": "open"
  },
  "nhl:401892765|n:cutter gauthier|Shots on Goal|3+": {
