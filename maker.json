@@ -24663,6 +24663,7 @@
    "cost": 0.9115,
    "edge": 0.0118,
    "fair": 0.9222,
+   "fill": "touch",
    "id": "nfl:401873070",
    "label": "Buffalo Bills",
    "league": "nfl",
@@ -24675,8 +24676,9 @@
     "team": "Buffalo Bills"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV22MIABUF-BUF"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV22MIABUF-BUF",
+   "won": 1
   },
   "KXNFLGAME-26NOV22MINSF-SF|YES": {
    "ask": 0.62,
@@ -24705,6 +24707,7 @@
    "cost": 0.8424,
    "edge": 0.0005,
    "fair": 0.8429,
+   "fill": "touch",
    "id": "nfl:401873071",
    "label": "Chicago Bears",
    "league": "nfl",
@@ -24717,8 +24720,9 @@
     "team": "Chicago Bears"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV22NOCHI-CHI"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV22NOCHI-CHI",
+   "won": 1
   },
   "KXNFLGAME-26NOV22NYJLAC-LAC|YES": {
    "ask": 0.61,
@@ -24747,6 +24751,7 @@
    "cost": 0.6441,
    "edge": 0.0041,
    "fair": 0.6468,
+   "fill": "touch",
    "id": "nfl:401873076",
    "label": "Pittsburgh Steelers",
    "league": "nfl",
@@ -24759,8 +24764,9 @@
     "team": "Pittsburgh Steelers"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV22PITPHI-PIT"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV22PITPHI-PIT",
+   "won": 0
   },
   "KXNFLGAME-26NOV22TBDET-DET|YES": {
    "ask": 0.67,
@@ -24768,6 +24774,7 @@
    "cost": 0.664,
    "edge": 0.0046,
    "fair": 0.6671,
+   "fill": "strict",
    "id": "nfl:401873072",
    "label": "Detroit Lions",
    "league": "nfl",
@@ -24780,8 +24787,9 @@
     "team": "Detroit Lions"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV22TBDET-DET"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV22TBDET-DET",
+   "won": 1
   },
   "KXNFLGAME-26NOV22TENDAL-DAL|YES": {
    "ask": 0.77,
@@ -24789,6 +24797,7 @@
    "cost": 0.7632,
    "edge": 0.0125,
    "fair": 0.7727,
+   "fill": "touch",
    "id": "nfl:401873073",
    "label": "Dallas Cowboys",
    "league": "nfl",
@@ -24801,8 +24810,9 @@
     "team": "Dallas Cowboys"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV22TENDAL-DAL"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV22TENDAL-DAL",
+   "won": 1
   },
   "KXNFLGAME-26NOV23CINWAS-CIN|YES": {
    "ask": 0.73,
@@ -25960,6 +25970,7 @@
    "cost": 0.5044,
    "edge": 0.0026,
    "fair": 0.5057,
+   "fill": "strict",
    "id": "nfl:401873070",
    "label": "Miami Dolphins +16.5",
    "league": "nfl",
@@ -25973,8 +25984,9 @@
     "team": "Miami Dolphins"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV22MIABUF-BUF17"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV22MIABUF-BUF17",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV22MINSF-SF4|NO": {
    "ask": 0.53,
@@ -26026,6 +26038,7 @@
    "cost": 0.5044,
    "edge": 0.0026,
    "fair": 0.5057,
+   "fill": "strict",
    "id": "nfl:401873072",
    "label": "Detroit Lions -3.5",
    "league": "nfl",
@@ -26039,8 +26052,9 @@
     "team": "Detroit Lions"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV22TBDET-DET4"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV22TBDET-DET4",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV22TBDET-DET5|NO": {
    "ask": 0.51,
@@ -26048,6 +26062,7 @@
    "cost": 0.5044,
    "edge": 0.0116,
    "fair": 0.5103,
+   "fill": "touch",
    "id": "nfl:401873072",
    "label": "Tampa Bay Buccaneers +4.5",
    "league": "nfl",
@@ -26061,8 +26076,9 @@
     "team": "Tampa Bay Buccaneers"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV22TBDET-DET5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV22TBDET-DET5",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV22TBDET-DET5|YES": {
    "ask": 0.51,
@@ -26070,6 +26086,7 @@
    "cost": 0.5044,
    "edge": 0.0161,
    "fair": 0.5125,
+   "fill": "strict",
    "id": "nfl:401873072",
    "label": "Detroit Lions -4.5",
    "league": "nfl",
@@ -26083,8 +26100,9 @@
     "team": "Detroit Lions"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV22TBDET-DET5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV22TBDET-DET5",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV22TENDAL-DAL8|NO": {
    "ask": 0.51,
@@ -26092,6 +26110,7 @@
    "cost": 0.5044,
    "edge": 0.0071,
    "fair": 0.508,
+   "fill": "strict",
    "id": "nfl:401873073",
    "label": "Tennessee Titans +7.5",
    "league": "nfl",
@@ -26105,8 +26124,9 @@
     "team": "Tennessee Titans"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV22TENDAL-DAL8"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV22TENDAL-DAL8",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV22TENDAL-DAL8|YES": {
    "ask": 0.51,
@@ -26114,6 +26134,7 @@
    "cost": 0.5044,
    "edge": 0.0116,
    "fair": 0.5103,
+   "fill": "strict",
    "id": "nfl:401873073",
    "label": "Dallas Cowboys -7.5",
    "league": "nfl",
@@ -26127,8 +26148,9 @@
     "team": "Dallas Cowboys"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV22TENDAL-DAL8"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV22TENDAL-DAL8",
+   "won": 1
   },
   "KXNFLSPREAD-26OCT25CINBAL-CIN2|NO": {
    "ask": 0.51,
@@ -27730,6 +27752,7 @@
    "cost": 0.5044,
    "edge": 0.0116,
    "fair": 0.5103,
+   "fill": "touch",
    "id": "nfl:401873070",
    "label": "over 44.5",
    "league": "nfl",
@@ -27742,8 +27765,9 @@
     "t": "over"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV22MIABUF-45"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV22MIABUF-45",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV22NOCHI-48|YES": {
    "ask": 0.51,
@@ -27751,6 +27775,7 @@
    "cost": 0.5044,
    "edge": 0.0071,
    "fair": 0.508,
+   "fill": "touch",
    "id": "nfl:401873071",
    "label": "over 47.5",
    "league": "nfl",
@@ -27763,8 +27788,9 @@
     "t": "over"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV22NOCHI-48"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV22NOCHI-48",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV22NOCHI-49|NO": {
    "ask": 0.51,
@@ -27772,6 +27798,7 @@
    "cost": 0.5044,
    "edge": 0.0048,
    "fair": 0.5068,
+   "fill": "strict",
    "id": "nfl:401873071",
    "label": "under 48.5",
    "league": "nfl",
@@ -27784,8 +27811,9 @@
     "t": "under"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV22NOCHI-49"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV22NOCHI-49",
+   "won": 1
   },
   "KXNFLTOTAL-26NOV22NOCHI-49|YES": {
    "ask": 0.51,
@@ -27793,6 +27821,7 @@
    "cost": 0.5044,
    "edge": 0.0026,
    "fair": 0.5057,
+   "fill": "strict",
    "id": "nfl:401873071",
    "label": "over 48.5",
    "league": "nfl",
@@ -27805,8 +27834,9 @@
     "t": "over"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV22NOCHI-49"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV22NOCHI-49",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV22NYJLAC-43|NO": {
    "ask": 0.51,
@@ -27898,6 +27928,7 @@
    "cost": 0.5044,
    "edge": 0.0026,
    "fair": 0.5057,
+   "fill": "strict",
    "id": "nfl:401873072",
    "label": "under 46.5",
    "league": "nfl",
@@ -27910,8 +27941,9 @@
     "t": "under"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV22TBDET-47"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV22TBDET-47",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV22TBDET-48|NO": {
    "ask": 0.52,
@@ -27919,6 +27951,7 @@
    "cost": 0.5044,
    "edge": 0.0207,
    "fair": 0.5148,
+   "fill": "strict",
    "id": "nfl:401873072",
    "label": "under 47.5",
    "league": "nfl",
@@ -27931,8 +27964,9 @@
     "t": "under"
    },
    "start": "2026-11-22T18:00Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV22TBDET-48"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV22TBDET-48",
+   "won": 0
   },
   "KXNFLTOTAL-26NOV22TENDAL-55|YES": {
    "ask": 0.52,
