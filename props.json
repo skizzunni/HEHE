@@ -63644,6 +63644,22 @@
   "price": "-850",
   "status": "open"
  },
+ "nba:401910028|n:paul george|Points|15+": {
+  "aid": null,
+  "date": "2026-11-21",
+  "edge": -3.6,
+  "gid": "nba:401910028",
+  "imp": 0.9231,
+  "label": "Paul George: 15+ Points",
+  "league": "nba",
+  "line": "15+",
+  "market": "Points",
+  "name": "Paul George",
+  "p": 0.8555,
+  "p_fair": 0.89,
+  "price": "-1200",
+  "status": "open"
+ },
  "nba:401910028|n:paul george|Pts + Ast|25+": {
   "aid": null,
   "date": "2026-11-21",
@@ -109414,11 +109430,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Cole Hutson",
   "p": 0.8393,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892758|n:david pastrnak|Shots on Goal|2+": {
   "aid": null,
@@ -109430,11 +109448,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "David Pastrnak",
   "p": 0.8659,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892758|n:david pastrnak|Shots on Goal|3+": {
   "aid": null,
@@ -109446,11 +109466,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "David Pastrnak",
   "p": 0.7065,
   "p_fair": null,
   "price": "-305",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892758|n:jakob chychrun|Shots on Goal|2+": {
   "aid": null,
@@ -109462,11 +109484,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jakob Chychrun",
   "p": 0.7093,
   "p_fair": null,
   "price": "-310",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892758|n:jj peterka|Shots on Goal|1+": {
   "aid": null,
@@ -109478,11 +109502,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "JJ Peterka",
   "p": 0.8565,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nhl:401892759|n:adam fantilli|Shots on Goal|2+": {
   "aid": null,
@@ -109494,11 +109520,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Adam Fantilli",
   "p": 0.7224,
   "p_fair": null,
   "price": "-335",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nhl:401892759|n:auston matthews|Shots on Goal|2+": {
   "aid": null,
@@ -109510,11 +109538,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Auston Matthews",
   "p": 0.8315,
   "p_fair": null,
   "price": "-780",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892759|n:john tavares|Shots on Goal|1+": {
   "aid": null,
@@ -109526,11 +109556,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "John Tavares",
   "p": 0.8711,
   "p_fair": null,
   "price": "-1300",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892759|n:kent johnson|Shots on Goal|1+": {
   "aid": null,
@@ -109542,11 +109574,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kent Johnson",
   "p": 0.8659,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892760|n:nick suzuki|Shots on Goal|2+": {
   "aid": null,
@@ -109612,11 +109646,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Alex Laferriere",
   "p": 0.6976,
   "p_fair": null,
   "price": "-290",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892761|n:drake batherson|Shots on Goal|1+": {
   "aid": null,
@@ -109628,11 +109664,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Drake Batherson",
   "p": 0.8487,
   "p_fair": null,
   "price": "-950",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892761|n:kevin fiala|Shots on Goal|1+": {
   "aid": null,
@@ -109644,11 +109682,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Kevin Fiala",
   "p": 0.8565,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892762|n:alex debrincat|Shots on Goal|2+": {
   "aid": null,
