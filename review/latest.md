@@ -42,7 +42,7 @@ Home and away picks, by half: NBA home 67% vs 66% then 72% vs 70%, away 78% vs 6
 Injuries at tip-off (290 games, 18 days, early read): my side more out: 1st 28/39 72% vs 64% | 2nd 35/52 67% vs 63%; even: 1st 26/34 76% vs 64% | 2nd 25/50 50% vs 62%; their side more out: 1st 47/57 82% vs 65% | 2nd 38/58 66% vs 67%.
 Lessons from losses (short in both halves -- candidates to test, not rules): NCAAF win 90-100%: 86% then 86% vs 93%, 93% stated (14+22).
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 9/18 vs 69% stated (7.5% by luck; about 4.7 of 62 teams expected this far behind by chance); NHL Detroit Red Wings 3/10 vs 54% stated (11.7% by luck; about 7.3 of 62 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.9 of 62 teams expected this far behind by chance).
-High-chance sweep: 70%+ today 0-0, 38 open; swept 3 of 36 past days (last 2026-11-11) | 80%+ today 0-0, 23 open; swept 11 of 35 past days (last 2026-11-19).
+High-chance sweep: 70%+ today 0-0, 37 open; swept 3 of 36 past days (last 2026-11-11) | 80%+ today 0-0, 22 open; swept 11 of 35 past days (last 2026-11-19).
 Back-to-backs, board record so far: NHL on the tired side 4/11 vs 56%, against it 18/31 vs 61%; NBA on the tired side 18/24 vs 65%, against it 22/29 vs 73%.
 UFC 2026-11-21: picks (the price favourite) 8-4; close fights (under 60%) 2 of 3; lost: Jake Matthews (69%) lost to Tahir Abdullayev, Alessandro Costa (52%) lost to Amir Albazi, Shamil Gaziev (62%) lost to Tallison Teixeira, Aleksandre Topuria (71%) lost to Santiago Luna.
 TRAILING value bets: 40.3% hit vs 44.7% stated on 580 (by half 138/328 then 96/252, 42% / 38% vs 45% / 44% stated; short in both halves)
