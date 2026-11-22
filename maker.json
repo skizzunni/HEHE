@@ -3203,6 +3203,7 @@
    "cost": 0.7434,
    "edge": 0.0001,
    "fair": 0.7435,
+   "fill": "touch",
    "id": "ncaaf:401856865",
    "label": "Arizona Wildcats",
    "league": "ncaaf",
@@ -3215,8 +3216,9 @@
     "team": "Arizona Wildcats"
    },
    "start": "2026-11-22T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFGAME-26NOV21ARIZKSU-ARIZ"
+   "status": "graded",
+   "ticker": "KXNCAAFGAME-26NOV21ARIZKSU-ARIZ",
+   "won": 1
   },
   "KXNCAAFGAME-26NOV21ARKTEX-TEX|YES": {
    "ask": 0.92,
@@ -9827,6 +9829,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856865",
    "label": "Kansas State Wildcats +7.5",
    "league": "ncaaf",
@@ -9840,8 +9843,9 @@
     "team": "Kansas State Wildcats"
    },
    "start": "2026-11-22T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFSPREAD-26NOV21ARIZKSU-ARIZ8"
+   "status": "graded",
+   "ticker": "KXNCAAFSPREAD-26NOV21ARIZKSU-ARIZ8",
+   "won": 1
   },
   "KXNCAAFSPREAD-26NOV21BYUKU-BYU5|YES": {
    "ask": 0.51,
@@ -18591,6 +18595,7 @@
    "cost": 0.5044,
    "edge": 0.0138,
    "fair": 0.5113,
+   "fill": "strict",
    "id": "ncaaf:401856865",
    "label": "under 52.5",
    "league": "ncaaf",
@@ -18603,8 +18608,9 @@
     "t": "under"
    },
    "start": "2026-11-22T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21ARIZKSU-53"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21ARIZKSU-53",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV21ARIZKSU-54|NO": {
    "ask": 0.51,
@@ -18612,6 +18618,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856865",
    "label": "under 53.5",
    "league": "ncaaf",
@@ -18624,8 +18631,9 @@
     "t": "under"
    },
    "start": "2026-11-22T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21ARIZKSU-54"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21ARIZKSU-54",
+   "won": 0
   },
   "KXNCAAFTOTAL-26NOV21ARIZKSU-54|YES": {
    "ask": 0.51,
@@ -18633,6 +18641,7 @@
    "cost": 0.5044,
    "edge": 0.0003,
    "fair": 0.5045,
+   "fill": "strict",
    "id": "ncaaf:401856865",
    "label": "over 53.5",
    "league": "ncaaf",
@@ -18645,8 +18654,9 @@
     "t": "over"
    },
    "start": "2026-11-22T00:00Z",
-   "status": "open",
-   "ticker": "KXNCAAFTOTAL-26NOV21ARIZKSU-54"
+   "status": "graded",
+   "ticker": "KXNCAAFTOTAL-26NOV21ARIZKSU-54",
+   "won": 1
   },
   "KXNCAAFTOTAL-26NOV21ARKTEX-47|YES": {
    "ask": 0.51,
