@@ -9878,6 +9878,23 @@
    "tip": "10:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910028|home|FanDuel": {
+   "dec": 6.2,
+   "ev": 0.027,
+   "fair": 0.1657,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910028",
+   "kind": "value",
+   "league": "nba",
+   "match": "BOS @ SAC",
+   "price": "+520",
+   "seen": "2026-11-22T00:41:46+00:00",
+   "side": "home",
+   "start": "2026-11-22T03:00Z",
+   "team": "Sacramento Kings",
+   "tip": "10:00 PM",
+   "venue": "FanDuel"
+  },
   "nba:401910028|sure": {
    "id": "nba:401910028",
    "kind": "sure",
@@ -23633,6 +23650,26 @@
    "prob": 0.244,
    "seen": "2026-11-19T09:03:50+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401910028:home": {
+   "ev": 0.0273,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.027,
+     "fair": 0.1657,
+     "id": "nba:401910028",
+     "price": "+520",
+     "side": "home",
+     "spec": null,
+     "team": "Sacramento Kings"
+    }
+   ],
+   "payout": 6.2,
+   "prob": 0.1657,
+   "seen": "2026-11-22T00:41:46+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
