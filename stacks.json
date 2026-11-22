@@ -14119,12 +14119,13 @@
    "match": "Venezia at Juventus",
    "p": 0.9016,
    "p_model": 0.8907,
+   "score": "Venezia 0 - Juventus 4",
    "spec": {
     "line": 3.5,
     "t": "nomargin",
     "team": "Juventus"
    },
-   "status": "open"
+   "status": "lost"
   },
   "ita:401875008|Over 0.5 goals": {
    "away": "Venezia",
@@ -14136,11 +14137,12 @@
    "match": "Venezia at Juventus",
    "p": 0.9546,
    "p_model": 0.9496,
+   "score": "Venezia 0 - Juventus 4",
    "spec": {
     "line": 0.5,
     "t": "over"
    },
-   "status": "open"
+   "status": "won"
   },
   "ita:401875018|Under 5.5 goals": {
    "away": "AC Milan",
@@ -58095,7 +58097,7 @@
    "logged": "2026-11-22T00:04",
    "n": 2,
    "prob": 0.8097,
-   "status": "open"
+   "status": "lost"
   },
   "20261122:3:0": {
    "fair": 1.38,
@@ -58119,7 +58121,7 @@
    "logged": "2026-11-22T00:04",
    "n": 3,
    "prob": 0.7299,
-   "status": "open"
+   "status": "lost"
   },
   "20261122:3:2": {
    "fair": 1.38,
