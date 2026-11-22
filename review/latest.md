@@ -44,6 +44,7 @@ Lessons from losses (short in both halves -- candidates to test, not rules): NCA
 Teams backed most, furthest behind (10+ picks): NBA New York Knicks 9/18 vs 69% stated (7.5% by luck; about 4.7 of 62 teams expected this far behind by chance); NHL Detroit Red Wings 3/10 vs 54% stated (11.7% by luck; about 7.3 of 62 teams expected this far behind by chance); MLB Texas Rangers 3/10 vs 53% stated (12.8% by luck; about 7.9 of 62 teams expected this far behind by chance).
 High-chance sweep: 70%+ today 0-0, 36 open; swept 3 of 36 past days (last 2026-11-11) | 80%+ today 0-0, 21 open; swept 11 of 35 past days (last 2026-11-19).
 Back-to-backs, board record so far: NHL on the tired side 4/11 vs 56%, against it 18/31 vs 61%; NBA on the tired side 18/24 vs 65%, against it 22/29 vs 73%.
+UFC 2026-11-21: picks (the price favourite) 8-4; close fights (under 60%) 2 of 3; lost: Jake Matthews (69%) lost to Tahir Abdullayev, Alessandro Costa (52%) lost to Amir Albazi, Shamil Gaziev (62%) lost to Tallison Teixeira, Aleksandre Topuria (71%) lost to Santiago Luna.
 TRAILING value bets: 40.2% hit vs 44.7% stated on 579 (by half 138/328 then 95/251, 42% / 38% vs 45% / 44% stated; short in both halves)
 Board sweep: 0-0, 71 open -- still clean.
 Why picks lost (14 days): close game 101, favourite lost 91, coin flip 63, blowout 47, upset 46, price moved against it 21, drawn 14.
