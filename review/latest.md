@@ -46,7 +46,7 @@ High-chance sweep: 70%+ today 0-0, 35 open; swept 3 of 35 past days (last 2026-1
 Back-to-backs, board record so far: NHL on the tired side 4/11 vs 56%, against it 18/31 vs 61%; NBA on the tired side 18/24 vs 65%, against it 22/29 vs 73%.
 UFC 2026-11-21: picks (the price favourite) 8-4; close fights (under 60%) 2 of 3; lost: Jake Matthews (69%) lost to Tahir Abdullayev, Alessandro Costa (52%) lost to Amir Albazi, Shamil Gaziev (62%) lost to Tallison Teixeira, Aleksandre Topuria (71%) lost to Santiago Luna.
 TRAILING value bets: 40.2% hit vs 44.7% stated on 579 (by half 138/328 then 95/251, 42% / 38% vs 45% / 44% stated; short in both halves)
-Board sweep: 0-0, 70 open -- still clean.
+Board sweep: 0-0, 71 open -- still clean.
 Why picks lost (14 days): close game 101, favourite lost 91, coin flip 63, blowout 47, upset 46, price moved against it 21, drawn 14.
 Yesterday (2026-11-21): board 110-54, sweep broken by jpn Urawa Red Diamonds or draw at 71%; 44.7 losses expected, 54 came in (5.8% chance of that many or more); tickets: ladder lost, 10-leg cashed, 2x every-game lost.
 - LOST jpn Urawa Red Diamonds or draw at 71% (-300), Kyoto Sanga 2 - Urawa Red Diamonds 1: margin 1 · the book had my side favoured too · called at 71% · favourite lost · close game; picks like it: 16 of 24 (67% vs 71% stated)
