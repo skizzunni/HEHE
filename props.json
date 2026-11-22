@@ -63620,6 +63620,7 @@
   "p": 0.7573,
   "p_fair": 0.7637,
   "price": "-350",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -63637,6 +63638,7 @@
   "p": 0.8741,
   "price": "-8000",
   "prop_lock": true,
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -63655,6 +63657,7 @@
   "p": 0.858,
   "p_fair": 0.9038,
   "price": "-1600",
+  "rechecked": "ungradable",
   "status": "ungradable",
   "void_why": "schema_error"
  },
@@ -63708,6 +63711,7 @@
   "p": 0.8482,
   "p_fair": 0.8224,
   "price": "-800",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -63726,6 +63730,7 @@
   "p": 0.8575,
   "p_fair": 0.8589,
   "price": "-1100",
+  "rechecked": "void",
   "state": "dnp",
   "status": "void",
   "void_why": "not in box score"
@@ -111390,11 +111395,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Bobby McMann",
   "p": 0.8741,
   "price": "-2200",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892767|n:ivar stenberg|Shots on Goal|1+": {
   "aid": null,
@@ -111406,11 +111413,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Ivar Stenberg",
   "p": 0.8659,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892767|n:mackie samoskevich|Shots on Goal|1+": {
   "aid": null,
@@ -111422,11 +111431,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Mackie Samoskevich",
   "p": 0.8393,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892767|n:macklin celebrini|Shots on Goal|2+": {
   "aid": null,
@@ -111438,11 +111449,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Macklin Celebrini",
   "p": 0.8659,
   "p_fair": null,
   "price": "-1200",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892767|n:macklin celebrini|Shots on Goal|3+": {
   "aid": null,
@@ -111454,11 +111467,13 @@
   "league": "nhl",
   "line": "3+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Macklin Celebrini",
   "p": 0.7147,
   "p_fair": null,
   "price": "-320",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892767|n:vince dunn|Shots on Goal|1+": {
   "aid": null,
@@ -111470,11 +111485,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Vince Dunn",
   "p": 0.8443,
   "p_fair": null,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892767|n:will smith|Shots on Goal|1+": {
   "aid": null,
@@ -111485,11 +111502,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Will Smith",
   "p": 0.8741,
   "price": "-2000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nhl:401892767|n:will smith|Shots on Goal|2+": {
   "aid": null,
@@ -111501,11 +111520,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Will Smith",
   "p": 0.7147,
   "p_fair": null,
   "price": "-320",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nhl:401892769|n:brayden point|Shots on Goal|2+": {
   "aid": null,
