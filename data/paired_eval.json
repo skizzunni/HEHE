@@ -1,5 +1,5 @@
 {
- "run": "2026-11-21",
+ "run": "2026-11-22",
  "rule": "promote only if the day-bootstrap 95% interval of (new wins - old wins) on untouched later days is above zero (lab inputs: net >= 2 SE)",
  "studies": [
   {
@@ -11,9 +11,9 @@
    "result": {
     "all": {
      "days": 42,
-     "picks": 1043,
-     "old_won": 719,
-     "new_won": 722,
+     "picks": 1046,
+     "old_won": 721,
+     "new_won": 724,
      "diff": 3,
      "ci95_diff": [
       -4,
@@ -147,9 +147,9 @@
     },
     "ncaaf": {
      "days": 31,
-     "picks": 336,
-     "old_won": 237,
-     "new_won": 235,
+     "picks": 339,
+     "old_won": 239,
+     "new_won": 237,
      "diff": -2,
      "ci95_diff": [
       -6,
