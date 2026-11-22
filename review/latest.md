@@ -50,7 +50,7 @@ UFC 2026-11-21: picks (the price favourite) 8-4; close fights (under 60%) 2 of 3
 TRAILING value bets: 40.3% hit vs 44.7% stated on 580 (by half 138/328 then 96/252, 42% / 38% vs 45% / 44% stated; short in both halves)
 Strong calls 9-1 (90.0% vs 75.4% claimed).
 Closing line value: +1.2 points on 10 picks; beat the close on 70.0%.
-Board sweep: 9-1, 69 open -- broken (first loss: wsl Manchester City at 68%); 2.5 losses expected from the settled picks' chances, so 1 or more by now had a 94.4% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: wsl 1 (0.3 expected).
+Board sweep: 9-1, 70 open -- broken (first loss: wsl Manchester City at 68%); 2.5 losses expected from the settled picks' chances, so 1 or more by now had a 94.4% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: wsl 1 (0.3 expected).
 - LOST wsl Manchester City at 68% (-270), Manchester City 1 - Tottenham Hotspur 3: margin 2 · the book had my side favoured too · called at 68% · favourite lost; soccer picks like it: 180 of 224 (80% vs 69% stated)
 Why picks lost (14 days): close game 101, favourite lost 92, coin flip 63, blowout 47, upset 46, price moved against it 21, drawn 14.
 Yesterday (2026-11-21): board 113-54, sweep broken by jpn Urawa Red Diamonds or draw at 71%; 45.7 losses expected, 54 came in (8.3% chance of that many or more); tickets: ladder lost, 10-leg cashed, 2x every-game lost.
