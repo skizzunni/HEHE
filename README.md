@@ -37,6 +37,7 @@ are in the dated notes below.
 | Favourites, draws, win-or-draw, home/away, totals, Asian handicap, promoted teams, congestion (364 rules) | soccer, 38 leagues | 83,806 | None positive every season; win-or-draw and favourites lose at the close every season: rejected (8 on watch) |
 | Home dogs, big favourites, conference/Nov, blowouts, pace totals (54 rules) | college basketball | 24,602 | None positive every season; non-conference home dogs faded (-8.2% in 2025-26): rejected (2 on watch) |
 | Home/road dogs, run lines, unders, starter FIP/ERA gap, bullpen fatigue, day-after-night, streaks (49 rules) | MLB | 9,723 | None adopted; road dogs +130 to +159 on watch (z +2.10/+1.06) |
+| Price bands, surface, ranking gap, fatigue, round/tier, absences, home country, Elo blend (148 rules) | ATP, WTA | 2018-26 | None positive every season; ranking-points model -7.6% to -13.0% a season: rejected (6 on watch) |
 
 ## What actually went wrong
 
@@ -5102,7 +5103,7 @@ made "road dog +1.5" look like an edge (+8.2%, z 2.81 / 6.19) and "-200 favourit
 +30%, both artefacts. value_bets.line_markets now also skips any spread where the moneyline
 favourite is shown getting points (a swapped label passes the old "lines mirror" check).
 
-**Overnight total: 638 strategies across ten families; one adopted (already in place).**
+**Running total after the third wave: 638 strategies; one adopted, already in place.**
 
 **Pre-registered (2026-11-23, before any of its games): NHL underdog +1.5 against a -200
 favourite.** The overnight lab's strongest on-watch rule (+10.1, +5.7, +2.4, +7.3% by past
@@ -5113,3 +5114,17 @@ at its closing price whenever the moneyline favourite closes -200 or shorter, on
 if it beats its no-vig puck-line price by z 2.0 or more and shows a profit, else dropped. About 9
 games a week qualify (9 in Nov 15-22, a parsing check only), so it decides around March. The
 result goes to the user either way; it changes no pick by itself.
+
+**Tennis, 148 rules (74 per tour), 2018-2026 at the Pinnacle close (tennis-data.co.uk files via
+an unchanged GitHub copy; that site blocks this machine).** No rule is positive every season.
+Price bands, surface specialists, ranking gaps, fatigue (games played the day before), round and
+tier, best-of-5, returns from absence, home country (home dogs -13 to -15%), and a surface Elo
+blend (-4 to -12%) are all rejected. A model of the kind the board used for tennis
+(0.8 x log ranking points) loses every season, -7.6% to -13.0% (z down to -4.5) -- consistent
+with the board's tennis picks being out of the record as unpriced since Oct 18. On watch: WTA
+favourites at 1.15 or shorter (92.1% vs 88.7%, z +3.90 / +2.56, but negative in 3 seasons), and
+five weaker spots (ATP favourites ranked twice as low as the dog, WTA fatigue gap, ATP Masters
+late-round dogs, ATP 500 early favourites, WTA top-50 players back from 60+ days off).
+
+**Overnight total, final: about 790 strategies across eleven families; one adopted, already in
+place.**

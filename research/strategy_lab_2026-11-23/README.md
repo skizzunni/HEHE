@@ -2,8 +2,8 @@
 
 Scripts and result tables behind the README's 2026-11-23 strategy-lab notes:
 NBA (49 rules), NHL (25), NFL + college football (51), Locks/ladder tickets and
-staking, player props, soccer (364), college basketball + MLB (103). Tennis did
-not finish.
+staking, player props, soccer (364), college basketball + MLB (103), tennis (148, finished after the
+morning report).
 
 Every rule uses only pre-game information and is graded at the real closing price,
 season by season. Adoption needs a profit every season and z >= 2.8 in both date
