@@ -35,6 +35,8 @@ are in the dated notes below.
 | Two props on the same player in the same game | props | 1,377 player-games | Lose together: other leg 55% vs 83% stated after one lost, z +4.8/+4.7: **adopted -- already enforced** (one per player / one per game on every ticket) |
 | Prop markets, sides, line height, usage, last-5 form, league, chance band | props | 6,447 | All on par with stated; last-5 form adds nothing: rejected (NBA players under 20 min on watch) |
 | Favourites, draws, win-or-draw, home/away, totals, Asian handicap, promoted teams, congestion (364 rules) | soccer, 38 leagues | 83,806 | None positive every season; win-or-draw and favourites lose at the close every season: rejected (8 on watch) |
+| Home dogs, big favourites, conference/Nov, blowouts, pace totals (54 rules) | college basketball | 24,602 | None positive every season; non-conference home dogs faded (-8.2% in 2025-26): rejected (2 on watch) |
+| Home/road dogs, run lines, unders, starter FIP/ERA gap, bullpen fatigue, day-after-night, streaks (49 rules) | MLB | 9,723 | None adopted; road dogs +130 to +159 on watch (z +2.10/+1.06) |
 
 ## What actually went wrong
 
@@ -5085,7 +5087,19 @@ seasons and negative at average prices), the side against a promoted team on the
 in its first 6 matches (z +1.33 / +3.87), and Asian handicap dogs getting 1.75+. Draws in two
 leagues (Serie B, Eredivisie) were picked from 38 and are likely chance.
 
-**Overnight total: 535 strategies across eight families; one adopted, and it was already in
-place.** Public pre-game information is in the closing price. What remains is information that
+**Running total after the second wave: 535 strategies; one adopted, already in place.** Public pre-game information is in the closing price. What remains is information that
 lands after the line was read (late scratches, goalie confirmations, weather updates), which
 needs timestamped price-and-news snapshots to test.
+
+**College basketball and MLB, 103 rules (2022-23 to 2025-26 college, 24,602 games; MLB
+2022-25, 9,723 games).** Nothing adopted. College home dogs in non-conference games ran +7.0,
++6.1, +0.8 then -8.2% (z +2.81 / +0.16) and in November +8.8, +11.4, +4.6 then -20.2%: faded,
+on watch. Favourites -15 or more lost every season (-6 to -8%). MLB: the better starter by FIP
+or ERA, bullpen fatigue, unders by band, -200 favourites on the run line and streaks are all
+at or below their price; road dogs at +130 to +159 are on watch (+6.2, +4.6, -8.0, +8.9%).
+**Data trap found:** ESPN labels the MLB home side "+1.5" in every game; taken at face value it
+made "road dog +1.5" look like an edge (+8.2%, z 2.81 / 6.19) and "-200 favourite at -1.5"
++30%, both artefacts. value_bets.line_markets now also skips any spread where the moneyline
+favourite is shown getting points (a swapped label passes the old "lines mirror" check).
+
+**Overnight total: 638 strategies across ten families; one adopted (already in place).**

@@ -76,7 +76,12 @@ def line_markets(row):
     m = row.get("mkt") or {}
     out = []
     h, a = m.get("ps_home"), m.get("ps_away")
-    if h and a and abs(h[0] + a[0]) < 1e-9:
+    # the moneyline favourite gives the points: a feed that labels the
+    # favourite +1.5 has swapped the sides (ESPN tags the MLB home side +1.5
+    # in every game -- strategy lab 2026-11-23), so that spread is skipped
+    fav = m.get("fav")
+    swapped = bool(h and a and fav in ("home", "away") and (h if fav == "home" else a)[0] > 0)
+    if h and a and abs(h[0] + a[0]) < 1e-9 and not swapped:
         fv = devig.fair_decimal(venues.dec(h[1]), venues.dec(a[1]), method=FAIR_METHOD)
         if fv:
             for (side, (line, price)), p in zip((("home", h), ("away", a)), fv):

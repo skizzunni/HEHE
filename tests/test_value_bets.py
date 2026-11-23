@@ -118,6 +118,16 @@ class Lines(unittest.TestCase):
         r["mkt"]["ps_away"] = [2.5, "-180"]                            # lines that do not mirror: skipped
         self.assertNotIn("Toronto Maple Leafs -1.5", {lab for _, lab, _, _ in V.line_markets(r)})
 
+    def test_swapped_run_line_is_skipped(self):
+        # the moneyline favourite must be the side giving the points
+        r = row(0.6, "-160", "+135")
+        r["mkt"].update(fav="home", ps_home=[1.5, "+150"], ps_away=[-1.5, "-180"])
+        self.assertEqual([lab for _, lab, _, _ in V.line_markets(r) if "1.5" in lab], [])
+        r["mkt"].update(ps_home=[-1.5, "+150"], ps_away=[1.5, "-180"])
+        self.assertIn("Toronto Maple Leafs -1.5", {lab for _, lab, _, _ in V.line_markets(r)})
+        r["mkt"].update(fav=None, ps_home=[1.5, "+150"], ps_away=[-1.5, "-180"])   # no favourite known: kept
+        self.assertEqual(len([1 for _, lab, _, _ in V.line_markets(r) if "1.5" in lab]), 2)
+
 
 class PropValue(unittest.TestCase):
     def game(self, props):
