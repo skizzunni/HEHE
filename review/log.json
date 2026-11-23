@@ -20401,6 +20401,926 @@
   }
  },
  "2026-11-22": {
+  "clv": {
+   "avg": 0.8,
+   "beat": 52.4,
+   "n": 82
+  },
+  "day": "2026-11-22",
+  "leaks_14d": [],
+  "locks": {
+   "lost": [
+    "Elijah Higgins: 5+ Receiving Yards (ARI @ KC) 4",
+    "Mark Andrews: 20+ Receiving Yards (BAL @ CAR) 14",
+    "Isaiah Likely: 4+ Receptions (JAX @ NYG) 1",
+    "Under 250.5 points (Denver Nuggets at Chicago Bulls) Denver Nuggets 151 - Chicago Bulls 145"
+   ],
+   "n": 11,
+   "open": 0,
+   "plays": {
+    "best": [
+     2,
+     0.6115,
+     "lost"
+    ]
+   },
+   "won": 7
+  },
+  "loss_reasons_14d": {
+   "blowout": 49,
+   "close game": 113,
+   "coin flip": 64,
+   "drawn": 15,
+   "favourite lost": 105,
+   "price moved against it": 21,
+   "upset": 52
+  },
+  "losses": [
+   {
+    "against_market": false,
+    "league": "wsl",
+    "like": {
+     "n": 231,
+     "said": 69,
+     "scope": "soccer",
+     "won": 187
+    },
+    "match": "TOT @ MNC",
+    "pick": "Manchester City",
+    "price": "-270",
+    "said": 68,
+    "score": {
+     "Manchester City": 1,
+     "Tottenham Hotspur": 3
+    },
+    "tags": [
+     "favourite lost"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 68% \u00b7 favourite lost"
+   },
+   {
+    "against_market": false,
+    "league": "aut",
+    "like": {
+     "n": 443,
+     "said": 71,
+     "scope": "soccer",
+     "won": 323
+    },
+    "match": "STG @ SCR",
+    "pick": "SK Sturm Graz or draw",
+    "price": "-310",
+    "said": 71,
+    "score": {
+     "SC Rheindorf Altach": 1,
+     "SK Sturm Graz": 0
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 71% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "epl",
+    "like": {
+     "n": 183,
+     "said": 82,
+     "scope": "soccer",
+     "won": 146
+    },
+    "match": "BHA @ HUL",
+    "pick": "Brighton & Hove Albion or draw",
+    "price": "-900",
+    "said": 85,
+    "score": {
+     "Brighton & Hove Albion": 0,
+     "Hull City": 2
+    },
+    "tags": [
+     "upset"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 85% \u00b7 upset"
+   },
+   {
+    "against_market": false,
+    "league": "ita",
+    "like": {
+     "n": 278,
+     "said": 67,
+     "scope": "soccer",
+     "won": 178
+    },
+    "match": "GEN @ SAS",
+    "pick": "Sassuolo or draw",
+    "price": "-240",
+    "said": 65,
+    "score": {
+     "Genoa": 2,
+     "Sassuolo": 0
+    },
+    "tags": [
+     "favourite lost"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 65% \u00b7 favourite lost"
+   },
+   {
+    "against_market": false,
+    "league": "ger",
+    "like": {
+     "n": 10,
+     "said": 68,
+     "won": 6
+    },
+    "match": "M05 @ FCA",
+    "pick": "Mainz or draw",
+    "price": "-270",
+    "said": 67,
+    "score": {
+     "FC Augsburg": 3,
+     "Mainz": 1
+    },
+    "tags": [
+     "favourite lost"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost"
+   },
+   {
+    "against_market": false,
+    "league": "wsl",
+    "like": {
+     "n": 119,
+     "said": 79,
+     "scope": "soccer",
+     "won": 104
+    },
+    "match": "WHU @ ARS",
+    "pick": "Arsenal",
+    "price": "-650",
+    "said": 80,
+    "score": {
+     "Arsenal": 0,
+     "West Ham United": 0
+    },
+    "tags": [
+     "upset",
+     "drawn"
+    ],
+    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 80% \u00b7 upset"
+   },
+   {
+    "against_market": false,
+    "league": "esp",
+    "like": {
+     "n": 11,
+     "said": 70,
+     "won": 8
+    },
+    "match": "RSO @ RAC",
+    "pick": "Real Sociedad or draw",
+    "price": "-300",
+    "said": 69,
+    "score": {
+     "Racing Santander": 3,
+     "Real Sociedad": 2
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 69% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "aut",
+    "like": {
+     "n": 386,
+     "said": 77,
+     "scope": "soccer",
+     "won": 311
+    },
+    "match": "SLZ @ VIE",
+    "pick": "RB Salzburg or draw",
+    "price": "-475",
+    "said": 77,
+    "score": {
+     "Austria Vienna": 1,
+     "RB Salzburg": 0
+    },
+    "tags": [
+     "upset",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 77% \u00b7 upset \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "nor",
+    "like": {
+     "n": 11,
+     "said": 71,
+     "won": 8
+    },
+    "match": "LSK @ SAR",
+    "pick": "Sarpsborg FK or draw",
+    "price": "-320",
+    "said": 71,
+    "score": {
+     "Lillestrom": 2,
+     "Sarpsborg FK": 0
+    },
+    "tags": [
+     "favourite lost"
+    ],
+    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 71% \u00b7 favourite lost"
+   },
+   {
+    "against_market": false,
+    "league": "nfl",
+    "like": {
+     "n": 34,
+     "said": 63,
+     "won": 27
+    },
+    "match": "PIT @ PHI",
+    "pick": "Pittsburgh Steelers",
+    "price": "-196",
+    "said": 64,
+    "score": {
+     "Philadelphia Eagles": 19,
+     "Pittsburgh Steelers": 16
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 64% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "fra",
+    "like": {
+     "n": 213,
+     "said": 82,
+     "scope": "soccer",
+     "won": 173
+    },
+    "match": "MNS @ OLM",
+    "pick": "Marseille or draw",
+    "price": "-900",
+    "said": 84,
+    "score": {
+     "Le Mans": 3,
+     "Marseille": 2
+    },
+    "tags": [
+     "upset",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 84% \u00b7 upset \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "nba",
+    "like": {
+     "n": 79,
+     "said": 55,
+     "won": 49
+    },
+    "match": "DET @ ATL",
+    "pick": "Detroit Pistons",
+    "price": "-135",
+    "said": 55,
+    "score": {
+     "Atlanta Hawks": 107,
+     "Detroit Pistons": 97
+    },
+    "tags": [
+     "coin flip"
+    ],
+    "why": "margin 10 \u00b7 the book had my side favoured too \u00b7 called at 55% \u00b7 coin flip"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
+    "like": {
+     "n": 14,
+     "said": 81,
+     "won": 9
+    },
+    "match": "CIN @ NSH",
+    "pick": "Nashville SC or draw",
+    "price": "-750",
+    "said": 83,
+    "score": {
+     "FC Cincinnati": 1,
+     "Nashville SC": 0
+    },
+    "tags": [
+     "upset",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 83% \u00b7 upset \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "nfl",
+    "like": {
+     "n": 39,
+     "said": 62,
+     "won": 28
+    },
+    "match": "NYJ @ LAC",
+    "pick": "Los Angeles Chargers",
+    "price": "-181",
+    "said": 62,
+    "score": {
+     "Los Angeles Chargers": 24,
+     "New York Jets": 27
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 62% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "bra",
+    "like": {
+     "n": 16,
+     "said": 68,
+     "won": 12
+    },
+    "match": "VAS @ BRA",
+    "pick": "Vasco da Gama or draw",
+    "price": "-240",
+    "said": 66,
+    "score": {
+     "Red Bull Bragantino": 1,
+     "Vasco da Gama": 0
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "nhl",
+    "like": {
+     "n": 68,
+     "said": 65,
+     "won": 48
+    },
+    "match": "BUF @ TB",
+    "pick": "Tampa Bay Lightning",
+    "price": "-218",
+    "said": 66,
+    "score": {
+     "Buffalo Sabres": 6,
+     "Tampa Bay Lightning": 2
+    },
+    "tags": [
+     "favourite lost",
+     "blowout"
+    ],
+    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 blowout"
+   },
+   {
+    "against_market": false,
+    "league": "nfl",
+    "like": {
+     "n": 23,
+     "said": 69,
+     "won": 19
+    },
+    "match": "JAX @ NYG",
+    "pick": "Jacksonville Jaguars",
+    "price": "-262",
+    "said": 70,
+    "score": {
+     "Jacksonville Jaguars": 18,
+     "New York Giants": 23
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 70% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "chi",
+    "like": {
+     "n": 15,
+     "said": 67,
+     "won": 11
+    },
+    "match": "LSE @ LIM",
+    "pick": "Deportes Limache or draw",
+    "price": "-250",
+    "said": 67,
+    "score": {
+     "Deportes Limache": 1,
+     "La Serena": 2
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "mls",
+    "like": {
+     "n": 18,
+     "said": 80,
+     "won": 12
+    },
+    "match": "CLT @ CHI",
+    "pick": "Chicago Fire FC or draw",
+    "price": "-600",
+    "said": 82,
+    "score": {
+     "Charlotte FC": 2,
+     "Chicago Fire FC": 1
+    },
+    "tags": [
+     "upset",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 82% \u00b7 upset \u00b7 close game"
+   },
+   {
+    "against_market": false,
+    "league": "nba",
+    "like": {
+     "n": 80,
+     "said": 63,
+     "won": 56
+    },
+    "match": "ORL @ WSH",
+    "pick": "Orlando Magic",
+    "price": "-196",
+    "said": 64,
+    "score": {
+     "Orlando Magic": 96,
+     "Washington Wizards": 116
+    },
+    "tags": [
+     "favourite lost",
+     "blowout"
+    ],
+    "why": "margin 20 \u00b7 the book had my side favoured too \u00b7 called at 64% \u00b7 favourite lost \u00b7 blowout"
+   },
+   {
+    "against_market": false,
+    "league": "nba",
+    "like": {
+     "n": 68,
+     "said": 73,
+     "won": 50
+    },
+    "match": "BOS @ GS",
+    "pick": "Boston Celtics",
+    "price": "-336",
+    "said": 74,
+    "score": {
+     "Boston Celtics": 87,
+     "Golden State Warriors": 88
+    },
+    "tags": [
+     "favourite lost",
+     "close game"
+    ],
+    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 74% \u00b7 favourite lost \u00b7 close game"
+   }
+  ],
+  "lottery": [
+   {
+    "killed_by": [
+     "Las Vegas Raiders to win",
+     "Boston Celtics -8.5",
+     "Arizona Cardinals +16.5",
+     "Under 218.5 points",
+     "Under 224.5 points",
+     "Tennessee Titans +5.5"
+    ],
+    "legs": 9,
+    "lost": 6,
+    "status": "lost",
+    "tier": "10k",
+    "won": 3
+   },
+   {
+    "killed_by": [
+     "Detroit Lions -16.5",
+     "Under 230.5 points",
+     "Pittsburgh Steelers -13.5"
+    ],
+    "legs": 8,
+    "lost": 3,
+    "status": "lost",
+    "tier": "10k",
+    "won": 5
+   },
+   {
+    "killed_by": [
+     "Dallas Stars over 5.5 goals",
+     "Chicago Blackhawks under 1.5 goals",
+     "New York Rangers under 1.5 goals",
+     "Baltimore Ravens -8.5"
+    ],
+    "legs": 6,
+    "lost": 4,
+    "status": "lost",
+    "tier": "10k",
+    "won": 2
+   },
+   {
+    "killed_by": [
+     "Las Vegas Raiders to win",
+     "Boston Celtics -8.5",
+     "Arizona Cardinals +16.5",
+     "Under 218.5 points",
+     "Under 224.5 points"
+    ],
+    "legs": 9,
+    "lost": 5,
+    "status": "lost",
+    "tier": "10k+25",
+    "won": 4
+   },
+   {
+    "killed_by": [
+     "Las Vegas Raiders to win",
+     "Boston Celtics -8.5",
+     "Arizona Cardinals +16.5",
+     "Under 218.5 points",
+     "Under 224.5 points"
+    ],
+    "legs": 9,
+    "lost": 5,
+    "status": "lost",
+    "tier": "10k+50",
+    "won": 4
+   },
+   {
+    "killed_by": [
+     "Las Vegas Raiders to win",
+     "Boston Celtics -8.5",
+     "Arizona Cardinals +16.5",
+     "Under 218.5 points",
+     "Under 224.5 points"
+    ],
+    "legs": 9,
+    "lost": 5,
+    "status": "lost",
+    "tier": "10k+100",
+    "won": 4
+   },
+   {
+    "killed_by": [
+     "Boston Celtics -8.5",
+     "Arizona Cardinals +16.5",
+     "Under 218.5 points",
+     "Tampa Bay Lightning to win"
+    ],
+    "legs": 7,
+    "lost": 4,
+    "status": "lost",
+    "tier": "100",
+    "won": 3
+   }
+  ],
+  "picks": {
+   "hit": 74.4,
+   "lost": 21,
+   "n": 82,
+   "roi": -2.8,
+   "said": 73.3,
+   "won": 61
+  },
+  "picks_by_league": {
+   "arg": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 3,
+    "roi": 25.2,
+    "said": 76.3,
+    "won": 3
+   },
+   "aut": {
+    "hit": 33.3,
+    "lost": 2,
+    "n": 3,
+    "roi": -54.3,
+    "said": 72.3,
+    "won": 1
+   },
+   "bel": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 31.2,
+    "said": 72.0,
+    "won": 1
+   },
+   "bra": {
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": -25.6,
+    "said": 79.0,
+    "won": 2
+   },
+   "chi": {
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": -6.0,
+    "said": 67.0,
+    "won": 2
+   },
+   "den": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 4,
+    "roi": 32.3,
+    "said": 71.8,
+    "won": 4
+   },
+   "ecu": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 41.7,
+    "said": 67.0,
+    "won": 1
+   },
+   "efl1": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 20.0,
+    "said": 78.0,
+    "won": 1
+   },
+   "epl": {
+    "hit": 50.0,
+    "lost": 1,
+    "n": 2,
+    "roi": -38.2,
+    "said": 81.0,
+    "won": 1
+   },
+   "esp": {
+    "hit": 75.0,
+    "lost": 1,
+    "n": 4,
+    "roi": -13.1,
+    "said": 78.8,
+    "won": 3
+   },
+   "fra": {
+    "hit": 66.7,
+    "lost": 1,
+    "n": 3,
+    "roi": -14.6,
+    "said": 77.7,
+    "won": 2
+   },
+   "ger": {
+    "hit": 0.0,
+    "lost": 1,
+    "n": 1,
+    "roi": -100.0,
+    "said": 67.0,
+    "won": 0
+   },
+   "ger2": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 3,
+    "roi": 27.2,
+    "said": 74.3,
+    "won": 3
+   },
+   "gre": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 3,
+    "roi": 23.0,
+    "said": 77.3,
+    "won": 3
+   },
+   "ind": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 40.8,
+    "said": 66.0,
+    "won": 1
+   },
+   "ita": {
+    "hit": 80.0,
+    "lost": 1,
+    "n": 5,
+    "roi": -1.4,
+    "said": 73.8,
+    "won": 4
+   },
+   "mex": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 2,
+    "roi": 37.0,
+    "said": 67.5,
+    "won": 2
+   },
+   "mls": {
+    "hit": 33.3,
+    "lost": 2,
+    "n": 3,
+    "roi": -52.8,
+    "said": 76.7,
+    "won": 1
+   },
+   "nba": {
+    "hit": 57.1,
+    "lost": 3,
+    "n": 7,
+    "roi": -15.4,
+    "said": 65.3,
+    "won": 4
+   },
+   "ncaab": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 3,
+    "roi": 5.4,
+    "said": 94.3,
+    "won": 3
+   },
+   "ned": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 2,
+    "roi": 15.3,
+    "said": 82.0,
+    "won": 2
+   },
+   "nfl": {
+    "hit": 72.7,
+    "lost": 3,
+    "n": 11,
+    "roi": -5.9,
+    "said": 73.3,
+    "won": 8
+   },
+   "nhl": {
+    "hit": 80.0,
+    "lost": 1,
+    "n": 5,
+    "roi": 34.8,
+    "said": 59.2,
+    "won": 4
+   },
+   "nor": {
+    "hit": 75.0,
+    "lost": 1,
+    "n": 4,
+    "roi": 0.4,
+    "said": 70.5,
+    "won": 3
+   },
+   "per": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 40.8,
+    "said": 66.0,
+    "won": 1
+   },
+   "tur": {
+    "hit": 100.0,
+    "lost": 0,
+    "n": 1,
+    "roi": 8.3,
+    "said": 88.0,
+    "won": 1
+   },
+   "wsl": {
+    "hit": 0.0,
+    "lost": 2,
+    "n": 2,
+    "roi": -100.0,
+    "said": 74.0,
+    "won": 0
+   }
+  },
+  "props": {
+   "fair": {
+    "n": 3829,
+    "said_fair": 86.4,
+    "said_price": 87.5,
+    "said_stated": 83.5,
+    "won": 3170
+   },
+   "n": 264,
+   "said": 79.0,
+   "won": 214
+  },
+  "safe_locks": {
+   "lost": [
+    "Under 266.5 points (Denver Nuggets at Chicago Bulls) Denver Nuggets 151 - Chicago Bulls 145",
+    "Pittsburgh Penguins over 0.5 goals (Pittsburgh Penguins at Dallas Stars) Pittsburgh Penguins 0 - Dallas Stars 1"
+   ],
+   "n": 11,
+   "open": 0,
+   "plays": {
+    "best": [
+     9,
+     0.5028,
+     "lost"
+    ],
+    "winners": [
+     3,
+     0.8017,
+     "won"
+    ]
+   },
+   "won": 9
+  },
+  "strong": {
+   "hit": 75.0,
+   "lost": 14,
+   "n": 56,
+   "roi": -4.5,
+   "said": 74.4,
+   "won": 42
+  },
+  "sweep": {
+   "as_bad_pct": 63.4,
+   "as_good_pct": 46.6,
+   "broke_on": "wsl Manchester City at 68%",
+   "coin_flips": 1,
+   "expected_by_league": {
+    "aut": 0.8,
+    "bra": 0.6,
+    "chi": 1.0,
+    "epl": 0.4,
+    "esp": 0.9,
+    "fra": 0.7,
+    "ger": 0.3,
+    "ita": 1.3,
+    "mls": 0.7,
+    "nba": 2.4,
+    "nfl": 2.9,
+    "nhl": 2.0,
+    "nor": 1.2,
+    "wsl": 0.5
+   },
+   "expected_losses": 21.9,
+   "lost": 21,
+   "lost_by_league": {
+    "aut": 2,
+    "bra": 1,
+    "chi": 1,
+    "epl": 1,
+    "esp": 1,
+    "fra": 1,
+    "ger": 1,
+    "ita": 1,
+    "mls": 2,
+    "nba": 3,
+    "nfl": 3,
+    "nhl": 1,
+    "nor": 1,
+    "wsl": 2
+   },
+   "open": 0,
+   "won": 61
+  },
+  "vs_market_14d": {
+   "against": {
+    "n": 0
+   },
+   "agree": {
+    "hit": 72.6,
+    "lost": 221,
+    "n": 808,
+    "roi": -3.3,
+    "said": 71.8,
+    "won": 587
+   }
+  }
+ },
+ "2026-11-23": {
   "audit": [
    {
     "flag": false,
@@ -21216,20 +22136,20 @@
   "card_missing": null,
   "cautions": "Cautions in force: NFL teamunder on all saved lines 295/380 vs 82% (27 games). Running ahead: NFL over on all saved lines 218/247 vs 81% (27 games); NFL teamover on all saved lines 292/339 vs 81% (27 games).",
   "clv": {
-   "avg": 0.8,
-   "beat": 52.4,
-   "n": 82
+   "avg": null,
+   "beat": null,
+   "n": 0
   },
   "coin_flips": "Coin flips (called under 60%), by half: all 107/184 (58% vs 54%) then 108/184 (59% vs 55%); price moved against 3+ 13/20 (65% vs 54%) then 14/24 (58% vs 54%); steady 81/131 (62% vs 54%) then 76/131 (58% vs 55%); moved toward 3+ 7/16 (44% vs 56%) then 18/29 (62% vs 57%).",
   "cold": "Running cold (last 7 days, all saved lines at 70-95%): NBA over 532/708 (75% vs 84%); NFL under 105/140 (75% vs 82%). Walk-forward: legs of a type running cold won 84.0% the next day vs 81.1% for the rest (1533 and 10742 legs), so a cold week is noise, not a signal.",
-  "day": "2026-11-22",
+  "day": "2026-11-23",
   "dc_bands": "Win-or-draw picks by stated chance, by half: under 70% 80/117 (z +0.4) then 72/117 (z -1.2); 70-80% 149/187 (z +1.7) then 144/188 (z +0.7); 80%+ 77/92 (z +0.4) then 69/92 (z -1.9).",
   "dc_moves": "Win-or-draw picks whose price moved 3+ points against, by half: 14/28 vs 20.0 expected (z -2.5) then 21/29 vs 20.4 expected (z +0.2) -- information only.",
   "dc_side": "Soccer or-draw picks by side: home 75% vs 74% stated on 527 (halves 79%, 71%); away 73% vs 73% stated on 266 (halves 72%, 75%). Short in both halves: 60-65% (60%, then 47%). Straight wins: 68% vs 66% stated on 322; 63 of 104 losses were draws. With full price history: 82% vs 73% stated on 167 (halves 81% vs 72%, 83% vs 74%); older picks without it: 52% vs 59% on 155.",
   "draws": "Soccer draws on the board: 22% of 1710 games; most in AUS 42% of 26, EFL3 41% of 37, UECL 30% of 33, URU 29% of 41, JPN 29% of 79 -- where a straight win most often loses to a draw.",
   "eg_bands": "Every game's safest line by chance, halves split 2026-11-16: 92%+ 20/21 (95% vs 93%) then 47/48 (98% vs 93%); 85-92% 145/154 (94% vs 90%) then 126/138 (91% vs 90%); under 85% 18/22 (82% vs 82%) then 22/26 (85% vs 82%).",
   "every_game_types": "Every game's safest line by bet type, by half: win 87% then 83% (vs 83%, 85%); spread 91% then 95% (vs 90%, 90%); total 93% then 96% (vs 91%, 92%); team total 98% then 94% (vs 90%, 90%). Ahead in both halves: spread, total, team total.",
-  "hi_sweep": "High-chance sweep: 70%+ today 36-10; swept 3 of 36 past days (last 2026-11-11) | 80%+ today 20-5; swept 11 of 35 past days (last 2026-11-19).",
+  "hi_sweep": "High-chance sweep: 70%+ today 0-0, 20 open; swept 3 of 37 past days (last 2026-11-11) | 80%+ today 0-0, 8 open; swept 11 of 36 past days (last 2026-11-19).",
   "home_away": "Home and away picks, by half: NBA home 67% vs 66% then 73% vs 70%, away 78% vs 64% then 69% vs 68%; NHL home 61% vs 59% then 55% vs 59%, away 54% vs 57% then 73% vs 57%; NCAAF home 81% vs 74% then 70% vs 74%, away 62% vs 70% then 71% vs 67%; NFL home 70% vs 65% then 77% vs 71%, away 89% vs 64% then 83% vs 67%.",
   "inj_study": "Injuries at tip-off (313 games, 19 days, early read): my side more out: 1st 30/43 70% vs 64% | 2nd 38/55 69% vs 64%; even: 1st 29/40 72% vs 64% | 2nd 27/51 53% vs 63%; their side more out: 1st 52/63 83% vs 64% | 2nd 39/61 64% vs 67%.",
   "injury": null,
@@ -21246,822 +22166,29 @@
   "lock_prop_markets": "Locks props by market, by half: NBA Assists 14/19 then 20/23 (vs 89%, 79%); NFL Receiving Yards 12/14 then 11/18 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.",
   "lock_types": "Locks by bet type, by half: win 86% then 78% (vs 82%, 79%); spread 90% then 87% (vs 84%, 85%); total 86% then 88% (vs 84%, 85%); team total 88% then 85% (vs 86%, 84%); prop 79% then 77% (vs 84%, 78%). Short in both halves: prop.",
   "locks": {
-   "lost": [
-    "Elijah Higgins: 5+ Receiving Yards (ARI @ KC) 4",
-    "Mark Andrews: 20+ Receiving Yards (BAL @ CAR) 14",
-    "Isaiah Likely: 4+ Receptions (JAX @ NYG) 1",
-    "Under 250.5 points (Denver Nuggets at Chicago Bulls) Denver Nuggets 151 - Chicago Bulls 145"
-   ],
-   "n": 11,
+   "lost": [],
+   "n": 0,
    "open": 0,
-   "plays": {
-    "best": [
-     2,
-     0.6115,
-     "lost"
-    ]
-   },
-   "won": 7
+   "plays": {},
+   "won": 0
   },
   "loss_reasons_14d": {
-   "blowout": 49,
-   "close game": 113,
-   "coin flip": 64,
-   "drawn": 15,
-   "favourite lost": 105,
-   "price moved against it": 21,
-   "upset": 52
+   "blowout": 45,
+   "close game": 103,
+   "coin flip": 61,
+   "drawn": 12,
+   "favourite lost": 93,
+   "price moved against it": 19,
+   "upset": 48
   },
-  "losses": [
-   {
-    "against_market": false,
-    "league": "wsl",
-    "like": {
-     "n": 231,
-     "said": 69,
-     "scope": "soccer",
-     "won": 187
-    },
-    "match": "TOT @ MNC",
-    "pick": "Manchester City",
-    "price": "-270",
-    "said": 68,
-    "score": {
-     "Manchester City": 1,
-     "Tottenham Hotspur": 3
-    },
-    "tags": [
-     "favourite lost"
-    ],
-    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 68% \u00b7 favourite lost"
-   },
-   {
-    "against_market": false,
-    "league": "aut",
-    "like": {
-     "n": 443,
-     "said": 71,
-     "scope": "soccer",
-     "won": 323
-    },
-    "match": "STG @ SCR",
-    "pick": "SK Sturm Graz or draw",
-    "price": "-310",
-    "said": 71,
-    "score": {
-     "SC Rheindorf Altach": 1,
-     "SK Sturm Graz": 0
-    },
-    "tags": [
-     "favourite lost",
-     "close game"
-    ],
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 71% \u00b7 favourite lost \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "epl",
-    "like": {
-     "n": 183,
-     "said": 82,
-     "scope": "soccer",
-     "won": 146
-    },
-    "match": "BHA @ HUL",
-    "pick": "Brighton & Hove Albion or draw",
-    "price": "-900",
-    "said": 85,
-    "score": {
-     "Brighton & Hove Albion": 0,
-     "Hull City": 2
-    },
-    "tags": [
-     "upset"
-    ],
-    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 85% \u00b7 upset"
-   },
-   {
-    "against_market": false,
-    "league": "ita",
-    "like": {
-     "n": 278,
-     "said": 67,
-     "scope": "soccer",
-     "won": 178
-    },
-    "match": "GEN @ SAS",
-    "pick": "Sassuolo or draw",
-    "price": "-240",
-    "said": 65,
-    "score": {
-     "Genoa": 2,
-     "Sassuolo": 0
-    },
-    "tags": [
-     "favourite lost"
-    ],
-    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 65% \u00b7 favourite lost"
-   },
-   {
-    "against_market": false,
-    "league": "ger",
-    "like": {
-     "n": 10,
-     "said": 68,
-     "won": 6
-    },
-    "match": "M05 @ FCA",
-    "pick": "Mainz or draw",
-    "price": "-270",
-    "said": 67,
-    "score": {
-     "FC Augsburg": 3,
-     "Mainz": 1
-    },
-    "tags": [
-     "favourite lost"
-    ],
-    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost"
-   },
-   {
-    "against_market": false,
-    "league": "wsl",
-    "like": {
-     "n": 119,
-     "said": 79,
-     "scope": "soccer",
-     "won": 104
-    },
-    "match": "WHU @ ARS",
-    "pick": "Arsenal",
-    "price": "-650",
-    "said": 80,
-    "score": {
-     "Arsenal": 0,
-     "West Ham United": 0
-    },
-    "tags": [
-     "upset",
-     "drawn"
-    ],
-    "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 80% \u00b7 upset"
-   },
-   {
-    "against_market": false,
-    "league": "esp",
-    "like": {
-     "n": 11,
-     "said": 70,
-     "won": 8
-    },
-    "match": "RSO @ RAC",
-    "pick": "Real Sociedad or draw",
-    "price": "-300",
-    "said": 69,
-    "score": {
-     "Racing Santander": 3,
-     "Real Sociedad": 2
-    },
-    "tags": [
-     "favourite lost",
-     "close game"
-    ],
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 69% \u00b7 favourite lost \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "aut",
-    "like": {
-     "n": 386,
-     "said": 77,
-     "scope": "soccer",
-     "won": 311
-    },
-    "match": "SLZ @ VIE",
-    "pick": "RB Salzburg or draw",
-    "price": "-475",
-    "said": 77,
-    "score": {
-     "Austria Vienna": 1,
-     "RB Salzburg": 0
-    },
-    "tags": [
-     "upset",
-     "close game"
-    ],
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 77% \u00b7 upset \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "nor",
-    "like": {
-     "n": 11,
-     "said": 71,
-     "won": 8
-    },
-    "match": "LSK @ SAR",
-    "pick": "Sarpsborg FK or draw",
-    "price": "-320",
-    "said": 71,
-    "score": {
-     "Lillestrom": 2,
-     "Sarpsborg FK": 0
-    },
-    "tags": [
-     "favourite lost"
-    ],
-    "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 71% \u00b7 favourite lost"
-   },
-   {
-    "against_market": false,
-    "league": "nfl",
-    "like": {
-     "n": 34,
-     "said": 63,
-     "won": 27
-    },
-    "match": "PIT @ PHI",
-    "pick": "Pittsburgh Steelers",
-    "price": "-196",
-    "said": 64,
-    "score": {
-     "Philadelphia Eagles": 19,
-     "Pittsburgh Steelers": 16
-    },
-    "tags": [
-     "favourite lost",
-     "close game"
-    ],
-    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 64% \u00b7 favourite lost \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "fra",
-    "like": {
-     "n": 213,
-     "said": 82,
-     "scope": "soccer",
-     "won": 173
-    },
-    "match": "MNS @ OLM",
-    "pick": "Marseille or draw",
-    "price": "-900",
-    "said": 84,
-    "score": {
-     "Le Mans": 3,
-     "Marseille": 2
-    },
-    "tags": [
-     "upset",
-     "close game"
-    ],
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 84% \u00b7 upset \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "nba",
-    "like": {
-     "n": 79,
-     "said": 55,
-     "won": 49
-    },
-    "match": "DET @ ATL",
-    "pick": "Detroit Pistons",
-    "price": "-135",
-    "said": 55,
-    "score": {
-     "Atlanta Hawks": 107,
-     "Detroit Pistons": 97
-    },
-    "tags": [
-     "coin flip"
-    ],
-    "why": "margin 10 \u00b7 the book had my side favoured too \u00b7 called at 55% \u00b7 coin flip"
-   },
-   {
-    "against_market": false,
-    "league": "mls",
-    "like": {
-     "n": 14,
-     "said": 81,
-     "won": 9
-    },
-    "match": "CIN @ NSH",
-    "pick": "Nashville SC or draw",
-    "price": "-750",
-    "said": 83,
-    "score": {
-     "FC Cincinnati": 1,
-     "Nashville SC": 0
-    },
-    "tags": [
-     "upset",
-     "close game"
-    ],
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 83% \u00b7 upset \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "nfl",
-    "like": {
-     "n": 39,
-     "said": 62,
-     "won": 28
-    },
-    "match": "NYJ @ LAC",
-    "pick": "Los Angeles Chargers",
-    "price": "-181",
-    "said": 62,
-    "score": {
-     "Los Angeles Chargers": 24,
-     "New York Jets": 27
-    },
-    "tags": [
-     "favourite lost",
-     "close game"
-    ],
-    "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 62% \u00b7 favourite lost \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "bra",
-    "like": {
-     "n": 16,
-     "said": 68,
-     "won": 12
-    },
-    "match": "VAS @ BRA",
-    "pick": "Vasco da Gama or draw",
-    "price": "-240",
-    "said": 66,
-    "score": {
-     "Red Bull Bragantino": 1,
-     "Vasco da Gama": 0
-    },
-    "tags": [
-     "favourite lost",
-     "close game"
-    ],
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "nhl",
-    "like": {
-     "n": 68,
-     "said": 65,
-     "won": 48
-    },
-    "match": "BUF @ TB",
-    "pick": "Tampa Bay Lightning",
-    "price": "-218",
-    "said": 66,
-    "score": {
-     "Buffalo Sabres": 6,
-     "Tampa Bay Lightning": 2
-    },
-    "tags": [
-     "favourite lost",
-     "blowout"
-    ],
-    "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 blowout"
-   },
-   {
-    "against_market": false,
-    "league": "nfl",
-    "like": {
-     "n": 23,
-     "said": 69,
-     "won": 19
-    },
-    "match": "JAX @ NYG",
-    "pick": "Jacksonville Jaguars",
-    "price": "-262",
-    "said": 70,
-    "score": {
-     "Jacksonville Jaguars": 18,
-     "New York Giants": 23
-    },
-    "tags": [
-     "favourite lost",
-     "close game"
-    ],
-    "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 70% \u00b7 favourite lost \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "chi",
-    "like": {
-     "n": 15,
-     "said": 67,
-     "won": 11
-    },
-    "match": "LSE @ LIM",
-    "pick": "Deportes Limache or draw",
-    "price": "-250",
-    "said": 67,
-    "score": {
-     "Deportes Limache": 1,
-     "La Serena": 2
-    },
-    "tags": [
-     "favourite lost",
-     "close game"
-    ],
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "mls",
-    "like": {
-     "n": 18,
-     "said": 80,
-     "won": 12
-    },
-    "match": "CLT @ CHI",
-    "pick": "Chicago Fire FC or draw",
-    "price": "-600",
-    "said": 82,
-    "score": {
-     "Charlotte FC": 2,
-     "Chicago Fire FC": 1
-    },
-    "tags": [
-     "upset",
-     "close game"
-    ],
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 82% \u00b7 upset \u00b7 close game"
-   },
-   {
-    "against_market": false,
-    "league": "nba",
-    "like": {
-     "n": 80,
-     "said": 63,
-     "won": 56
-    },
-    "match": "ORL @ WSH",
-    "pick": "Orlando Magic",
-    "price": "-196",
-    "said": 64,
-    "score": {
-     "Orlando Magic": 96,
-     "Washington Wizards": 116
-    },
-    "tags": [
-     "favourite lost",
-     "blowout"
-    ],
-    "why": "margin 20 \u00b7 the book had my side favoured too \u00b7 called at 64% \u00b7 favourite lost \u00b7 blowout"
-   },
-   {
-    "against_market": false,
-    "league": "nba",
-    "like": {
-     "n": 68,
-     "said": 73,
-     "won": 50
-    },
-    "match": "BOS @ GS",
-    "pick": "Boston Celtics",
-    "price": "-336",
-    "said": 74,
-    "score": {
-     "Boston Celtics": 87,
-     "Golden State Warriors": 88
-    },
-    "tags": [
-     "favourite lost",
-     "close game"
-    ],
-    "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 74% \u00b7 favourite lost \u00b7 close game"
-   }
-  ],
-  "lottery": [
-   {
-    "killed_by": [
-     "Las Vegas Raiders to win",
-     "Boston Celtics -8.5",
-     "Arizona Cardinals +16.5",
-     "Under 218.5 points",
-     "Under 224.5 points",
-     "Tennessee Titans +5.5"
-    ],
-    "legs": 9,
-    "lost": 6,
-    "status": "lost",
-    "tier": "10k",
-    "won": 3
-   },
-   {
-    "killed_by": [
-     "Detroit Lions -16.5",
-     "Under 230.5 points",
-     "Pittsburgh Steelers -13.5"
-    ],
-    "legs": 8,
-    "lost": 3,
-    "status": "lost",
-    "tier": "10k",
-    "won": 5
-   },
-   {
-    "killed_by": [
-     "Dallas Stars over 5.5 goals",
-     "Chicago Blackhawks under 1.5 goals",
-     "New York Rangers under 1.5 goals",
-     "Baltimore Ravens -8.5"
-    ],
-    "legs": 6,
-    "lost": 4,
-    "status": "lost",
-    "tier": "10k",
-    "won": 2
-   },
-   {
-    "killed_by": [
-     "Las Vegas Raiders to win",
-     "Boston Celtics -8.5",
-     "Arizona Cardinals +16.5",
-     "Under 218.5 points",
-     "Under 224.5 points"
-    ],
-    "legs": 9,
-    "lost": 5,
-    "status": "lost",
-    "tier": "10k+25",
-    "won": 4
-   },
-   {
-    "killed_by": [
-     "Las Vegas Raiders to win",
-     "Boston Celtics -8.5",
-     "Arizona Cardinals +16.5",
-     "Under 218.5 points",
-     "Under 224.5 points"
-    ],
-    "legs": 9,
-    "lost": 5,
-    "status": "lost",
-    "tier": "10k+50",
-    "won": 4
-   },
-   {
-    "killed_by": [
-     "Las Vegas Raiders to win",
-     "Boston Celtics -8.5",
-     "Arizona Cardinals +16.5",
-     "Under 218.5 points",
-     "Under 224.5 points"
-    ],
-    "legs": 9,
-    "lost": 5,
-    "status": "lost",
-    "tier": "10k+100",
-    "won": 4
-   },
-   {
-    "killed_by": [
-     "Boston Celtics -8.5",
-     "Arizona Cardinals +16.5",
-     "Under 218.5 points",
-     "Tampa Bay Lightning to win"
-    ],
-    "legs": 7,
-    "lost": 4,
-    "status": "lost",
-    "tier": "100",
-    "won": 3
-   }
-  ],
+  "losses": [],
+  "lottery": [],
   "national": "National-team soccer: 55/63 (87% vs 76% stated), 2 of 8 losses draws (straight win 28/30 (93% vs 78% stated); or draw 27/33 (82% vs 75% stated)); club soccer 925/1290 (72% vs 71% stated).",
-  "nhl_b2b": "NHL back-to-backs today (watch, not a rule: tired teams ran under their price in each of the last 3 seasons, betting against them lost in one): Carolina Hurricanes (away, played yesterday) v New York Rangers (rested) -- the board has the tired side; Buffalo Sabres (away, played yesterday) v Tampa Bay Lightning (rested) -- the board has the rested side; Pittsburgh Penguins (away, played yesterday) v Dallas Stars (rested) -- the board has the rested side. Board record so far: picks on the tired side 5/12 vs 56% stated; against the tired side 19/33 vs 61% stated.",
+  "nhl_b2b": null,
   "picks": {
-   "hit": 74.4,
-   "lost": 21,
-   "n": 82,
-   "roi": -2.8,
-   "said": 73.3,
-   "won": 61
+   "n": 0
   },
-  "picks_by_league": {
-   "arg": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": 25.2,
-    "said": 76.3,
-    "won": 3
-   },
-   "aut": {
-    "hit": 33.3,
-    "lost": 2,
-    "n": 3,
-    "roi": -54.3,
-    "said": 72.3,
-    "won": 1
-   },
-   "bel": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 31.2,
-    "said": 72.0,
-    "won": 1
-   },
-   "bra": {
-    "hit": 66.7,
-    "lost": 1,
-    "n": 3,
-    "roi": -25.6,
-    "said": 79.0,
-    "won": 2
-   },
-   "chi": {
-    "hit": 66.7,
-    "lost": 1,
-    "n": 3,
-    "roi": -6.0,
-    "said": 67.0,
-    "won": 2
-   },
-   "den": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 4,
-    "roi": 32.3,
-    "said": 71.8,
-    "won": 4
-   },
-   "ecu": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 41.7,
-    "said": 67.0,
-    "won": 1
-   },
-   "efl1": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 20.0,
-    "said": 78.0,
-    "won": 1
-   },
-   "epl": {
-    "hit": 50.0,
-    "lost": 1,
-    "n": 2,
-    "roi": -38.2,
-    "said": 81.0,
-    "won": 1
-   },
-   "esp": {
-    "hit": 75.0,
-    "lost": 1,
-    "n": 4,
-    "roi": -13.1,
-    "said": 78.8,
-    "won": 3
-   },
-   "fra": {
-    "hit": 66.7,
-    "lost": 1,
-    "n": 3,
-    "roi": -14.6,
-    "said": 77.7,
-    "won": 2
-   },
-   "ger": {
-    "hit": 0.0,
-    "lost": 1,
-    "n": 1,
-    "roi": -100.0,
-    "said": 67.0,
-    "won": 0
-   },
-   "ger2": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": 27.2,
-    "said": 74.3,
-    "won": 3
-   },
-   "gre": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": 23.0,
-    "said": 77.3,
-    "won": 3
-   },
-   "ind": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 40.8,
-    "said": 66.0,
-    "won": 1
-   },
-   "ita": {
-    "hit": 80.0,
-    "lost": 1,
-    "n": 5,
-    "roi": -1.4,
-    "said": 73.8,
-    "won": 4
-   },
-   "mex": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 37.0,
-    "said": 67.5,
-    "won": 2
-   },
-   "mls": {
-    "hit": 33.3,
-    "lost": 2,
-    "n": 3,
-    "roi": -52.8,
-    "said": 76.7,
-    "won": 1
-   },
-   "nba": {
-    "hit": 57.1,
-    "lost": 3,
-    "n": 7,
-    "roi": -15.4,
-    "said": 65.3,
-    "won": 4
-   },
-   "ncaab": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 3,
-    "roi": 5.4,
-    "said": 94.3,
-    "won": 3
-   },
-   "ned": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 2,
-    "roi": 15.3,
-    "said": 82.0,
-    "won": 2
-   },
-   "nfl": {
-    "hit": 72.7,
-    "lost": 3,
-    "n": 11,
-    "roi": -5.9,
-    "said": 73.3,
-    "won": 8
-   },
-   "nhl": {
-    "hit": 80.0,
-    "lost": 1,
-    "n": 5,
-    "roi": 34.8,
-    "said": 59.2,
-    "won": 4
-   },
-   "nor": {
-    "hit": 75.0,
-    "lost": 1,
-    "n": 4,
-    "roi": 0.4,
-    "said": 70.5,
-    "won": 3
-   },
-   "per": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 40.8,
-    "said": 66.0,
-    "won": 1
-   },
-   "tur": {
-    "hit": 100.0,
-    "lost": 0,
-    "n": 1,
-    "roi": 8.3,
-    "said": 88.0,
-    "won": 1
-   },
-   "wsl": {
-    "hit": 0.0,
-    "lost": 2,
-    "n": 2,
-    "roi": -100.0,
-    "said": 74.0,
-    "won": 0
-   }
-  },
+  "picks_by_league": {},
   "pool_overall": "Pool game lines (one per game and bet type), every league, by half: 83.4% vs 82.4% (z +0.7) to 2026-11-15, then 82.1% vs 82.4% (z -0.2) on 1363 game lines.",
   "prereg": "Pre-registered test, college + NFL spreads getting 7-13.5 points: 549/674 (81% vs 81% stated) -- by game, one line each: 76/89 (85% vs 84%); fine -- the caution on this band is off (locks.apply_prereg). History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).",
   "prereg_more": "Pre-registered tests also running: NFL spreads getting 14+ points (legs from 2026-11-14): 149/196 (76% vs 84% stated) -- by game, one line each: 20/25 (80% vs 83%); short on legs, but only 25 games -- too few to act on yet; college football team-total unders (legs from 2026-11-15): 855/1010 (85% vs 82% stated) -- by game, one line each: 46/57 (81% vs 82%); fine -- the caution on this band is off.",
@@ -22076,85 +22203,31 @@
     "said_stated": 83.5,
     "won": 3170
    },
-   "n": 264,
-   "said": 79.0,
-   "won": 214
+   "n": 0,
+   "said": null,
+   "won": 0
   },
   "roster": null,
   "runs": "Ladder runs: 1) 2026-11-09, 2 days, peak $2.00, lost on Over 208.5 points (207, missed by 1.5); 2) 2026-11-11, 3 days, peak $4.95, lost on Houston Cougars to win; 3) 2026-11-14, 1 day, peak $1.00, lost on Over 223.5 points (223, missed by 0.5); 4) 2026-11-15, 2 days, peak $2.00, lost on Boston Celtics to win; 5) 2026-11-17, 1 day, peak $1.00, lost on San Antonio Spurs to win, Duke Blue Devils to win; 6) 2026-11-18, 1 day, peak $1.00, lost on Los Angeles Lakers to win, Under 235.5 points (237, missed by 1.5); 7) 2026-11-19, 1 day, peak $1.00, lost on Washington Capitals +1.5 (lost by 3, missed by 1.5); 8) 2026-11-20, 1 day, peak $1.00, lost on Over 226.5 points (192, missed by 34.5); 9) 2026-11-21, 1 day, peak $1.00, lost on Over 204.5 points (193, missed by 11.5), UTSA Roadrunners over 20.5 points (19, missed by 1.5); 10) 2026-11-22, 1 day, peak $1.00, lost on Elijah Higgins: 5+ Receiving Yards (4, missed by 1). Replayed on every saved card: as ranked 15/35 cashed at 2.22x, without props 15/36 at 2.28x.",
   "safe_locks": {
-   "lost": [
-    "Under 266.5 points (Denver Nuggets at Chicago Bulls) Denver Nuggets 151 - Chicago Bulls 145",
-    "Pittsburgh Penguins over 0.5 goals (Pittsburgh Penguins at Dallas Stars) Pittsburgh Penguins 0 - Dallas Stars 1"
-   ],
-   "n": 11,
+   "lost": [],
+   "n": 0,
    "open": 0,
-   "plays": {
-    "best": [
-     9,
-     0.5028,
-     "lost"
-    ],
-    "winners": [
-     3,
-     0.8017,
-     "won"
-    ]
-   },
-   "won": 9
+   "plays": {},
+   "won": 0
   },
   "soccer_sides": "Soccer picks by kind, by half: to win 165/198 (z +3.4, 23 lost to draws) then 166/199 (z +3.0, 20 to draws); win or draw 305/396 (z +1.5) then 286/397 (z -1.0).",
   "soccer_weekdays": "Soccer board picks by weekday, by half: Mon 16/19 (z +1.2) then 32/37 (z +1.8); Tue 18/22 (z +0.8) then 39/43 (z +2.4); Wed 36/47 (z +0.3) then 22/28 (z +0.4); Thu 42/51 (z +1.3) then 41/58 (z -0.7); Fri 43/56 (z +0.8) then 48/68 (z -0.6); Sat 168/218 (z +1.3) then 160/222 (z -0.6); Sun 140/174 (z +2.1) then 117/147 (z +1.5) -- none short in both halves.",
   "strong": {
-   "hit": 75.0,
-   "lost": 14,
-   "n": 56,
-   "roi": -4.5,
-   "said": 74.4,
-   "won": 42
+   "n": 0
   },
   "stuck": [],
   "sweep": {
-   "as_bad_pct": 63.4,
-   "as_good_pct": 46.6,
-   "broke_on": "wsl Manchester City at 68%",
-   "coin_flips": 1,
-   "expected_by_league": {
-    "aut": 0.8,
-    "bra": 0.6,
-    "chi": 1.0,
-    "epl": 0.4,
-    "esp": 0.9,
-    "fra": 0.7,
-    "ger": 0.3,
-    "ita": 1.3,
-    "mls": 0.7,
-    "nba": 2.4,
-    "nfl": 2.9,
-    "nhl": 2.0,
-    "nor": 1.2,
-    "wsl": 0.5
-   },
-   "expected_losses": 21.9,
-   "lost": 21,
-   "lost_by_league": {
-    "aut": 2,
-    "bra": 1,
-    "chi": 1,
-    "epl": 1,
-    "esp": 1,
-    "fra": 1,
-    "ger": 1,
-    "ita": 1,
-    "mls": 2,
-    "nba": 3,
-    "nfl": 3,
-    "nhl": 1,
-    "nor": 1,
-    "wsl": 2
-   },
-   "open": 0,
-   "won": 61
+   "broke_on": null,
+   "coin_flips": 0,
+   "lost": 0,
+   "open": 32,
+   "won": 0
   },
   "switched": "Picks that switched side before kick-off, by half: 50/72 vs 44.3 expected (z +1.4) then 47/72 vs 44.9 expected (z +0.5) -- information only.",
   "td_calibration": "Anytime touchdown chances, by half: 175/1250 scored vs 147.3 stated (z +2.6) to 2026-11-05, then 170/1250 scored vs 143.8 stated (z +2.5); 2+ touchdowns graded so far: 9 of 377 players.",
@@ -22171,12 +22244,12 @@
     "n": 0
    },
    "agree": {
-    "hit": 72.6,
-    "lost": 221,
-    "n": 808,
-    "roi": -3.3,
-    "said": 71.8,
-    "won": 587
+    "hit": 71.0,
+    "lost": 202,
+    "n": 697,
+    "roi": -5.0,
+    "said": 71.6,
+    "won": 495
    }
   },
   "weights": {
@@ -22227,23 +22300,46 @@
    }
   },
   "yesterday": {
-   "day": "2026-11-21",
+   "day": "2026-11-22",
    "losses": [
     {
      "against_market": false,
-     "league": "jpn",
+     "league": "wsl",
      "like": {
-      "n": 24,
-      "said": 71,
-      "won": 16
+      "n": 231,
+      "said": 69,
+      "scope": "soccer",
+      "won": 187
      },
-     "match": "URA @ KYO",
-     "pick": "Urawa Red Diamonds or draw",
-     "price": "-300",
+     "match": "TOT @ MNC",
+     "pick": "Manchester City",
+     "price": "-270",
+     "said": 68,
+     "score": {
+      "Manchester City": 1,
+      "Tottenham Hotspur": 3
+     },
+     "tags": [
+      "favourite lost"
+     ],
+     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 68% \u00b7 favourite lost"
+    },
+    {
+     "against_market": false,
+     "league": "aut",
+     "like": {
+      "n": 443,
+      "said": 71,
+      "scope": "soccer",
+      "won": 323
+     },
+     "match": "STG @ SCR",
+     "pick": "SK Sturm Graz or draw",
+     "price": "-310",
      "said": 71,
      "score": {
-      "Kyoto Sanga": 2,
-      "Urawa Red Diamonds": 1
+      "SC Rheindorf Altach": 1,
+      "SK Sturm Graz": 0
      },
      "tags": [
       "favourite lost",
@@ -22253,908 +22349,107 @@
     },
     {
      "against_market": false,
-     "league": "jpn",
-     "like": {
-      "n": 22,
-      "said": 72,
-      "won": 15
-     },
-     "match": "OKA @ GAM",
-     "pick": "Gamba Osaka or draw",
-     "price": "-310",
-     "said": 72,
-     "score": {
-      "Fagiano Okayama": 1,
-      "Gamba Osaka": 0
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 72% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ger2",
-     "like": {
-      "n": 17,
-      "said": 75,
-      "won": 13
-     },
-     "match": "EBS @ FCN",
-     "pick": "1. FC N\u00fcrnberg or draw",
-     "price": "-450",
-     "said": 76,
-     "score": {
-      "1. FC N\u00fcrnberg": 1,
-      "TSV Eintracht Braunschweig": 2
-     },
-     "tags": [
-      "upset",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset \u00b7 close game"
-    },
-    {
-     "against_market": false,
      "league": "epl",
      "like": {
-      "n": 248,
-      "said": 69,
+      "n": 183,
+      "said": 82,
       "scope": "soccer",
-      "won": 201
+      "won": 146
      },
-     "match": "FUL @ MNC",
-     "pick": "Manchester City",
-     "price": "-270",
-     "said": 69,
+     "match": "BHA @ HUL",
+     "pick": "Brighton & Hove Albion or draw",
+     "price": "-900",
+     "said": 85,
      "score": {
-      "Fulham": 1,
-      "Manchester City": 1
+      "Brighton & Hove Albion": 0,
+      "Hull City": 2
      },
      "tags": [
-      "favourite lost",
-      "drawn"
+      "upset"
      ],
-     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 69% \u00b7 favourite lost"
+     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 85% \u00b7 upset"
     },
     {
      "against_market": false,
-     "league": "efl2",
+     "league": "ita",
      "like": {
-      "n": 192,
-      "said": 68,
+      "n": 278,
+      "said": 67,
       "scope": "soccer",
-      "won": 149
+      "won": 178
      },
-     "match": "BRO @ REA",
-     "pick": "Reading",
+     "match": "GEN @ SAS",
+     "pick": "Sassuolo or draw",
      "price": "-240",
-     "said": 66,
+     "said": 65,
      "score": {
-      "Bromley": 1,
-      "Reading": 0
+      "Genoa": 2,
+      "Sassuolo": 0
      },
      "tags": [
-      "favourite lost",
-      "close game"
+      "favourite lost"
      ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "wsl",
-     "like": {
-      "n": 248,
-      "said": 69,
-      "scope": "soccer",
-      "won": 201
-     },
-     "match": "CHE @ LIV",
-     "pick": "Chelsea",
-     "price": "-310",
-     "said": 69,
-     "score": {
-      "Chelsea": 0,
-      "Liverpool": 0
-     },
-     "tags": [
-      "favourite lost",
-      "drawn"
-     ],
-     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 69% \u00b7 favourite lost"
-    },
-    {
-     "against_market": false,
-     "league": "nor",
-     "like": {
-      "n": 424,
-      "said": 74,
-      "scope": "soccer",
-      "won": 325
-     },
-     "match": "VFK @ TRO",
-     "pick": "Viking FK or draw",
-     "price": "-360",
-     "said": 74,
-     "score": {
-      "Tromso": 3,
-      "Viking FK": 2
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 74% \u00b7 favourite lost \u00b7 close game"
+     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 65% \u00b7 favourite lost"
     },
     {
      "against_market": false,
      "league": "ger",
      "like": {
-      "n": 142,
-      "said": 65,
-      "scope": "soccer",
-      "won": 95
-     },
-     "match": "TSG @ SGE",
-     "pick": "TSG Hoffenheim or draw",
-     "price": "-195",
-     "said": 62,
-     "score": {
-      "Eintracht Frankfurt": 1,
-      "TSG Hoffenheim": 0
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 62% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "sco",
-     "like": {
-      "n": 320,
+      "n": 10,
       "said": 68,
-      "scope": "soccer",
-      "won": 211
+      "won": 6
      },
-     "match": "ABE @ KIL",
-     "pick": "Kilmarnock or draw",
-     "price": "-240",
-     "said": 66,
+     "match": "M05 @ FCA",
+     "pick": "Mainz or draw",
+     "price": "-270",
+     "said": 67,
      "score": {
-      "Aberdeen": 4,
-      "Kilmarnock": 2
+      "FC Augsburg": 3,
+      "Mainz": 1
      },
      "tags": [
       "favourite lost"
      ],
-     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost"
+     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost"
     },
     {
      "against_market": false,
-     "league": "sco",
+     "league": "wsl",
      "like": {
-      "n": 13,
-      "said": 71,
-      "won": 11
-     },
-     "match": "DUN @ HIBS",
-     "pick": "Hibernian or draw",
-     "price": "-300",
-     "said": 70,
-     "score": {
-      "Dundee United": 4,
-      "Hibernian": 0
-     },
-     "tags": [
-      "favourite lost",
-      "blowout"
-     ],
-     "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 70% \u00b7 favourite lost \u00b7 blowout"
-    },
-    {
-     "against_market": false,
-     "league": "efl1",
-     "like": {
-      "n": 158,
-      "said": 75,
+      "n": 119,
+      "said": 79,
       "scope": "soccer",
-      "won": 142
+      "won": 104
      },
-     "match": "PNE @ WHU",
-     "pick": "West Ham United",
-     "price": "-400",
-     "said": 76,
+     "match": "WHU @ ARS",
+     "pick": "Arsenal",
+     "price": "-650",
+     "said": 80,
      "score": {
-      "Preston North End": 1,
-      "West Ham United": 1
+      "Arsenal": 0,
+      "West Ham United": 0
      },
      "tags": [
       "upset",
       "drawn"
      ],
-     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset"
-    },
-    {
-     "against_market": false,
-     "league": "efl1",
-     "like": {
-      "n": 21,
-      "said": 67,
-      "won": 16
-     },
-     "match": "BIR @ STK",
-     "pick": "Birmingham City or draw",
-     "price": "-250",
-     "said": 66,
-     "score": {
-      "Birmingham City": 0,
-      "Stoke City": 1
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "epl",
-     "like": {
-      "n": 18,
-      "said": 74,
-      "won": 13
-     },
-     "match": "LEE @ CHE",
-     "pick": "Chelsea or draw",
-     "price": "-390",
-     "said": 75,
-     "score": {
-      "Chelsea": 1,
-      "Leeds United": 4
-     },
-     "tags": [
-      "upset",
-      "blowout"
-     ],
-     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 75% \u00b7 upset \u00b7 blowout"
+     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 80% \u00b7 upset"
     },
     {
      "against_market": false,
      "league": "esp",
      "like": {
-      "n": 16,
-      "said": 76,
-      "won": 12
-     },
-     "match": "VAL @ RAY",
-     "pick": "Rayo Vallecano or draw",
-     "price": "-425",
-     "said": 76,
-     "score": {
-      "Rayo Vallecano": 0,
-      "Valencia": 1
-     },
-     "tags": [
-      "upset",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "aut",
-     "like": {
-      "n": 386,
-      "said": 76,
-      "scope": "soccer",
-      "won": 310
-     },
-     "match": "ALU @ WST",
-     "pick": "WSG Swarovski Tirol or draw",
-     "price": "-390",
-     "said": 76,
-     "score": {
-      "Austria Lustenau": 1,
-      "WSG Swarovski Tirol": 0
-     },
-     "tags": [
-      "upset",
-      "close game",
-      "price moved against it (3 pts)"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset \u00b7 close game \u00b7 price moved against it (3 pts)"
-    },
-    {
-     "against_market": false,
-     "league": "nor",
-     "like": {
-      "n": 278,
-      "said": 81,
-      "scope": "soccer",
-      "won": 223
-     },
-     "match": "IKS @ VAL",
-     "pick": "V\u00e5lerenga or draw",
-     "price": "-650",
-     "said": 82,
-     "score": {
-      "IK Start": 2,
-      "V\u00e5lerenga": 1
-     },
-     "tags": [
-      "upset",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 82% \u00b7 upset \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ned",
-     "like": {
-      "n": 158,
-      "said": 75,
-      "scope": "soccer",
-      "won": 142
-     },
-     "match": "EXC @ FEY",
-     "pick": "Feyenoord Rotterdam",
-     "price": "-400",
-     "said": 76,
-     "score": {
-      "Excelsior": 3,
-      "Feyenoord Rotterdam": 2
-     },
-     "tags": [
-      "upset",
-      "close game",
-      "price moved against it (4 pts)"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset \u00b7 close game \u00b7 price moved against it (4 pts)"
-    },
-    {
-     "against_market": false,
-     "league": "arg",
-     "like": {
-      "n": 27,
-      "said": 78,
-      "won": 22
-     },
-     "match": "BAR @ DYJ",
-     "pick": "Defensa y Justicia or draw",
-     "price": "-475",
-     "said": 78,
-     "score": {
-      "Barracas Central": 1,
-      "Defensa y Justicia": 0
-     },
-     "tags": [
-      "upset",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 78% \u00b7 upset \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 91,
-      "said": 65,
-      "won": 59
-     },
-     "match": "ECU @ ARMY",
-     "pick": "Army Black Knights",
-     "price": "-205",
-     "said": 65,
-     "score": {
-      "Army Black Knights": 6,
-      "East Carolina Pirates": 10
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 65% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 95,
-      "said": 73,
-      "won": 66
-     },
-     "match": "UNT @ TULN",
-     "pick": "North Texas Mean Green",
-     "price": "-290",
-     "said": 73,
-     "score": {
-      "North Texas Mean Green": 24,
-      "Tulane Green Wave": 28
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 73% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 92,
-      "said": 58,
-      "won": 56
-     },
-     "match": "NU @ MINN",
-     "pick": "Northwestern Wildcats",
-     "price": "-148",
-     "said": 58,
-     "score": {
-      "Minnesota Golden Gophers": 20,
-      "Northwestern Wildcats": 17
-     },
-     "tags": [
-      "coin flip",
-      "close game"
-     ],
-     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 58% \u00b7 coin flip \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 67,
-      "said": 54,
-      "won": 43
-     },
-     "match": "MEM @ NAVY",
-     "pick": "Memphis Tigers",
-     "price": "-122",
-     "said": 53,
-     "score": {
-      "Memphis Tigers": 34,
-      "Navy Midshipmen": 38
-     },
-     "tags": [
-      "coin flip",
-      "close game",
-      "price moved against it (5 pts)"
-     ],
-     "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 53% \u00b7 coin flip \u00b7 close game \u00b7 price moved against it (5 pts)"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 88,
-      "said": 59,
-      "won": 55
-     },
-     "match": "SYR @ BC",
-     "pick": "Syracuse Orange",
-     "price": "-155",
-     "said": 59,
-     "score": {
-      "Boston College Eagles": 27,
-      "Syracuse Orange": 15
-     },
-     "tags": [
-      "coin flip"
-     ],
-     "why": "margin 12 \u00b7 the book had my side favoured too \u00b7 called at 59% \u00b7 coin flip"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 99,
-      "said": 63,
-      "won": 63
-     },
-     "match": "OSU @ NEB",
-     "pick": "Ohio State Buckeyes",
-     "price": "-185",
-     "said": 63,
-     "score": {
-      "Nebraska Cornhuskers": 31,
-      "Ohio State Buckeyes": 28
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 63% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 45,
-      "said": 53,
-      "won": 25
-     },
-     "match": "UNC @ UVA",
-     "pick": "North Carolina Tar Heels",
-     "price": "-115",
-     "said": 51,
-     "score": {
-      "North Carolina Tar Heels": 24,
-      "Virginia Cavaliers": 41
-     },
-     "tags": [
-      "coin flip",
-      "blowout"
-     ],
-     "why": "margin 17 \u00b7 the book had my side favoured too \u00b7 called at 51% \u00b7 coin flip \u00b7 blowout"
-    },
-    {
-     "against_market": false,
-     "league": "mls",
-     "like": {
-      "n": 28,
-      "said": 69,
-      "won": 21
-     },
-     "match": "PHI @ NE",
-     "pick": "Philadelphia Union or draw",
-     "price": "-280",
-     "said": 69,
-     "score": {
-      "New England Revolution": 2,
-      "Philadelphia Union": 0
-     },
-     "tags": [
-      "favourite lost"
-     ],
-     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 69% \u00b7 favourite lost"
-    },
-    {
-     "against_market": false,
-     "league": "fra",
-     "like": {
-      "n": 17,
-      "said": 69,
-      "won": 10
-     },
-     "match": "BRE @ STR",
-     "pick": "Strasbourg or draw",
-     "price": "-300",
-     "said": 70,
-     "score": {
-      "Brest": 1,
-      "Strasbourg": 0
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "fra",
-     "like": {
-      "n": 17,
-      "said": 69,
-      "won": 10
-     },
-     "match": "LYON @ LILL",
-     "pick": "Lille or draw",
-     "price": "-300",
-     "said": 70,
-     "score": {
-      "Lille": 0,
-      "Lyon": 1
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "fra",
-     "like": {
-      "n": 256,
-      "said": 69,
-      "scope": "soccer",
-      "won": 209
-     },
-     "match": "AUX @ MON",
-     "pick": "AS Monaco",
-     "price": "-270",
-     "said": 70,
-     "score": {
-      "AJ Auxerre": 1,
-      "AS Monaco": 1
-     },
-     "tags": [
-      "favourite lost",
-      "drawn"
-     ],
-     "why": "margin 0 \u00b7 drawn -- a draw loses a moneyline side \u00b7 the book had my side favoured too \u00b7 called at 70% \u00b7 favourite lost"
-    },
-    {
-     "against_market": false,
-     "league": "arg",
-     "like": {
-      "n": 23,
-      "said": 75,
-      "won": 17
-     },
-     "match": "IND @ ARGJ",
-     "pick": "Argentinos Juniors or draw",
-     "price": "-360",
-     "said": 74,
-     "score": {
-      "Argentinos Juniors": 1,
-      "Independiente": 2
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 74% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "bra",
-     "like": {
       "n": 11,
-      "said": 83,
-      "won": 11
-     },
-     "match": "CFC @ BAH",
-     "pick": "Bahia or draw",
-     "price": "-900",
-     "said": 84,
-     "score": {
-      "Bahia": 0,
-      "Coritiba": 1
-     },
-     "tags": [
-      "upset",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 84% \u00b7 upset \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "nhl",
-     "like": {
-      "n": 148,
-      "said": 58,
-      "won": 95
-     },
-     "match": "CHI @ CGY",
-     "pick": "Calgary Flames",
-     "price": "-162",
-     "said": 59,
-     "score": {
-      "Calgary Flames": 3,
-      "Chicago Blackhawks": 4
-     },
-     "tags": [
-      "coin flip",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 59% \u00b7 coin flip \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ecu",
-     "like": {
-      "n": 11,
-      "said": 79,
-      "won": 6
-     },
-     "match": "BAR @ UCA",
-     "pick": "Universidad Cat\u00f3lica (Quito) or draw",
-     "price": "-550",
-     "said": 80,
-     "score": {
-      "Barcelona SC": 1,
-      "Universidad Cat\u00f3lica (Quito)": 0
-     },
-     "tags": [
-      "upset",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 80% \u00b7 upset \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 88,
-      "said": 77,
-      "won": 65
-     },
-     "match": "NCSU @ FSU",
-     "pick": "Florida State Seminoles",
-     "price": "-395",
-     "said": 78,
-     "score": {
-      "Florida State Seminoles": 10,
-      "NC State Wolfpack": 28
-     },
-     "tags": [
-      "upset",
-      "blowout"
-     ],
-     "why": "margin 18 \u00b7 the book had my side favoured too \u00b7 called at 78% \u00b7 upset \u00b7 blowout"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 29,
-      "said": 94,
-      "won": 26
-     },
-     "match": "RUTG @ PSU",
-     "pick": "Penn State Nittany Lions",
-     "price": "-2800",
-     "said": 96,
-     "score": {
-      "Penn State Nittany Lions": 24,
-      "Rutgers Scarlet Knights": 25
-     },
-     "tags": [
-      "upset",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 96% \u00b7 upset \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 86,
-      "said": 76,
-      "won": 62
-     },
-     "match": "IU @ WASH",
-     "pick": "Indiana Hoosiers",
-     "price": "-355",
-     "said": 76,
-     "score": {
-      "Indiana Hoosiers": 24,
-      "Washington Huskies": 27
-     },
-     "tags": [
-      "upset",
-      "close game"
-     ],
-     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 98,
-      "said": 62,
-      "won": 63
-     },
-     "match": "UCLA @ MICH",
-     "pick": "UCLA Bruins",
-     "price": "-180",
-     "said": 62,
-     "score": {
-      "Michigan Wolverines": 18,
-      "UCLA Bruins": 16
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 62% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 67,
-      "said": 54,
-      "won": 43
-     },
-     "match": "LSU @ TENN",
-     "pick": "LSU Tigers",
-     "price": "-122",
-     "said": 53,
-     "score": {
-      "LSU Tigers": 13,
-      "Tennessee Volunteers": 27
-     },
-     "tags": [
-      "coin flip"
-     ],
-     "why": "margin 14 \u00b7 the book had my side favoured too \u00b7 called at 53% \u00b7 coin flip"
-    },
-    {
-     "against_market": false,
-     "league": "mex",
-     "like": {
-      "n": 13,
-      "said": 67,
+      "said": 70,
       "won": 8
      },
-     "match": "TOL @ PAC",
-     "pick": "Toluca or draw",
-     "price": "-220",
-     "said": 64,
-     "score": {
-      "Pachuca": 2,
-      "Toluca": 0
-     },
-     "tags": [
-      "favourite lost"
-     ],
-     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 64% \u00b7 favourite lost"
-    },
-    {
-     "against_market": false,
-     "league": "mex",
-     "like": {
-      "n": 19,
-      "said": 68,
-      "won": 12
-     },
-     "match": "LEO @ SAN",
-     "pick": "Santos or draw",
-     "price": "-280",
-     "said": 68,
-     "score": {
-      "Le\u00f3n": 2,
-      "Santos": 1
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 68% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "mls",
-     "like": {
-      "n": 25,
-      "said": 78,
-      "won": 18
-     },
-     "match": "CLB @ MIA",
-     "pick": "Inter Miami CF or draw",
-     "price": "-550",
-     "said": 79,
-     "score": {
-      "Columbus Crew": 3,
-      "Inter Miami CF": 0
-     },
-     "tags": [
-      "upset",
-      "blowout"
-     ],
-     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 79% \u00b7 upset \u00b7 blowout"
-    },
-    {
-     "against_market": false,
-     "league": "chi",
-     "like": {
-      "n": 21,
-      "said": 69,
-      "won": 16
-     },
-     "match": "\u00d1UB @ UdeC",
-     "pick": "Universidad de Concepci\u00f3n or draw",
-     "price": "-280",
+     "match": "RSO @ RAC",
+     "pick": "Real Sociedad or draw",
+     "price": "-300",
      "said": 69,
      "score": {
-      "Universidad de Concepci\u00f3n": 2,
-      "\u00d1ublense": 3
+      "Racing Santander": 3,
+      "Real Sociedad": 2
      },
      "tags": [
       "favourite lost",
@@ -23164,218 +22459,129 @@
     },
     {
      "against_market": false,
-     "league": "ncaaf",
-     "like": {
-      "n": 67,
-      "said": 54,
-      "won": 43
-     },
-     "match": "USF @ FAU",
-     "pick": "South Florida Bulls",
-     "price": "-125",
-     "said": 53,
-     "score": {
-      "Florida Atlantic Owls": 35,
-      "South Florida Bulls": 14
-     },
-     "tags": [
-      "coin flip",
-      "blowout"
-     ],
-     "why": "margin 21 \u00b7 the book had my side favoured too \u00b7 called at 53% \u00b7 coin flip \u00b7 blowout"
-    },
-    {
-     "against_market": false,
-     "league": "ncaab",
-     "like": {
-      "n": 11,
-      "said": 62,
-      "won": 8
-     },
-     "match": "MICH @ VILL",
-     "pick": "Michigan Wolverines",
-     "price": "-175",
-     "said": 62,
-     "score": {
-      "Michigan Wolverines": 73,
-      "Villanova Wildcats": 79
-     },
-     "tags": [
-      "favourite lost"
-     ],
-     "why": "margin 6 \u00b7 the book had my side favoured too \u00b7 called at 62% \u00b7 favourite lost"
-    },
-    {
-     "against_market": false,
-     "league": "nhl",
-     "like": {
-      "n": 148,
-      "said": 58,
-      "won": 95
-     },
-     "match": "PHI @ MTL",
-     "pick": "Montreal Canadiens",
-     "price": "-162",
-     "said": 59,
-     "score": {
-      "Montreal Canadiens": 3,
-      "Philadelphia Flyers": 4
-     },
-     "tags": [
-      "coin flip",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 59% \u00b7 coin flip \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "nhl",
-     "like": {
-      "n": 166,
-      "said": 57,
-      "won": 98
-     },
-     "match": "NJ @ STL",
-     "pick": "New Jersey Devils",
-     "price": "-155",
-     "said": 58,
-     "score": {
-      "New Jersey Devils": 6,
-      "St. Louis Blues": 9
-     },
-     "tags": [
-      "coin flip",
-      "blowout"
-     ],
-     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 58% \u00b7 coin flip \u00b7 blowout"
-    },
-    {
-     "against_market": false,
-     "league": "nhl",
-     "like": {
-      "n": 146,
-      "said": 54,
-      "won": 81
-     },
-     "match": "CBJ @ TOR",
-     "pick": "Toronto Maple Leafs",
-     "price": "-118",
-     "said": 52,
-     "score": {
-      "Columbus Blue Jackets": 4,
-      "Toronto Maple Leafs": 3
-     },
-     "tags": [
-      "coin flip",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 52% \u00b7 coin flip \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "nba",
-     "like": {
-      "n": 61,
-      "said": 54,
-      "won": 36
-     },
-     "match": "POR @ NY",
-     "pick": "Portland Trail Blazers",
-     "price": "-121",
-     "said": 53,
-     "score": {
-      "New York Knicks": 97,
-      "Portland Trail Blazers": 96
-     },
-     "tags": [
-      "coin flip",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 53% \u00b7 coin flip \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "nwsl",
-     "like": {
-      "n": 432,
-      "said": 70,
-      "scope": "soccer",
-      "won": 315
-     },
-     "match": "KC @ WAS",
-     "pick": "Washington Spirit or draw",
-     "price": "-280",
-     "said": 70,
-     "score": {
-      "Kansas City Current": 2,
-      "Washington Spirit": 1
-     },
-     "tags": [
-      "favourite lost",
-      "close game"
-     ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 70% \u00b7 favourite lost \u00b7 close game"
-    },
-    {
-     "against_market": false,
-     "league": "aus",
+     "league": "aut",
      "like": {
       "n": 386,
-      "said": 76,
+      "said": 77,
       "scope": "soccer",
-      "won": 310
+      "won": 311
      },
-     "match": "MAC @ WEL",
-     "pick": "Wellington Phoenix or draw",
-     "price": "-400",
-     "said": 76,
+     "match": "SLZ @ VIE",
+     "pick": "RB Salzburg or draw",
+     "price": "-475",
+     "said": 77,
      "score": {
-      "Macarthur FC": 2,
-      "Wellington Phoenix": 1
+      "Austria Vienna": 1,
+      "RB Salzburg": 0
      },
      "tags": [
       "upset",
       "close game"
      ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 76% \u00b7 upset \u00b7 close game"
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 77% \u00b7 upset \u00b7 close game"
     },
     {
      "against_market": false,
-     "league": "mex",
+     "league": "nor",
      "like": {
-      "n": 19,
-      "said": 72,
-      "won": 14
+      "n": 11,
+      "said": 71,
+      "won": 8
      },
-     "match": "AME @ UANL",
-     "pick": "Am\u00e9rica or draw",
+     "match": "LSK @ SAR",
+     "pick": "Sarpsborg FK or draw",
      "price": "-320",
-     "said": 72,
+     "said": 71,
      "score": {
-      "Am\u00e9rica": 0,
-      "Tigres UANL": 1
+      "Lillestrom": 2,
+      "Sarpsborg FK": 0
+     },
+     "tags": [
+      "favourite lost"
+     ],
+     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 71% \u00b7 favourite lost"
+    },
+    {
+     "against_market": false,
+     "league": "nfl",
+     "like": {
+      "n": 34,
+      "said": 63,
+      "won": 27
+     },
+     "match": "PIT @ PHI",
+     "pick": "Pittsburgh Steelers",
+     "price": "-196",
+     "said": 64,
+     "score": {
+      "Philadelphia Eagles": 19,
+      "Pittsburgh Steelers": 16
      },
      "tags": [
       "favourite lost",
       "close game"
      ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 72% \u00b7 favourite lost \u00b7 close game"
+     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 64% \u00b7 favourite lost \u00b7 close game"
+    },
+    {
+     "against_market": false,
+     "league": "fra",
+     "like": {
+      "n": 213,
+      "said": 82,
+      "scope": "soccer",
+      "won": 173
+     },
+     "match": "MNS @ OLM",
+     "pick": "Marseille or draw",
+     "price": "-900",
+     "said": 84,
+     "score": {
+      "Le Mans": 3,
+      "Marseille": 2
+     },
+     "tags": [
+      "upset",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 84% \u00b7 upset \u00b7 close game"
     },
     {
      "against_market": false,
      "league": "nba",
      "like": {
-      "n": 46,
-      "said": 82,
-      "won": 42
+      "n": 79,
+      "said": 55,
+      "won": 49
      },
-     "match": "BOS @ SAC",
-     "pick": "Boston Celtics",
-     "price": "-650",
+     "match": "DET @ ATL",
+     "pick": "Detroit Pistons",
+     "price": "-135",
+     "said": 55,
+     "score": {
+      "Atlanta Hawks": 107,
+      "Detroit Pistons": 97
+     },
+     "tags": [
+      "coin flip"
+     ],
+     "why": "margin 10 \u00b7 the book had my side favoured too \u00b7 called at 55% \u00b7 coin flip"
+    },
+    {
+     "against_market": false,
+     "league": "mls",
+     "like": {
+      "n": 14,
+      "said": 81,
+      "won": 9
+     },
+     "match": "CIN @ NSH",
+     "pick": "Nashville SC or draw",
+     "price": "-750",
      "said": 83,
      "score": {
-      "Boston Celtics": 96,
-      "Sacramento Kings": 97
+      "FC Cincinnati": 1,
+      "Nashville SC": 0
      },
      "tags": [
       "upset",
@@ -23385,112 +22591,222 @@
     },
     {
      "against_market": false,
-     "league": "nhl",
+     "league": "nfl",
      "like": {
-      "n": 23,
-      "said": 72,
-      "won": 18
+      "n": 39,
+      "said": 62,
+      "won": 28
      },
-     "match": "MIN @ VAN",
-     "pick": "Minnesota Wild",
-     "price": "-310",
-     "said": 73,
+     "match": "NYJ @ LAC",
+     "pick": "Los Angeles Chargers",
+     "price": "-181",
+     "said": 62,
      "score": {
-      "Minnesota Wild": 3,
-      "Vancouver Canucks": 4
+      "Los Angeles Chargers": 24,
+      "New York Jets": 27
      },
      "tags": [
       "favourite lost",
       "close game"
      ],
-     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 73% \u00b7 favourite lost \u00b7 close game"
+     "why": "margin 3 \u00b7 the book had my side favoured too \u00b7 called at 62% \u00b7 favourite lost \u00b7 close game"
     },
     {
      "against_market": false,
-     "league": "ncaaf",
+     "league": "bra",
      "like": {
-      "n": 48,
-      "said": 92,
-      "won": 42
+      "n": 16,
+      "said": 68,
+      "won": 12
      },
-     "match": "SDSU @ BOIS",
-     "pick": "Boise State Broncos",
-     "price": "-1450",
-     "said": 93,
+     "match": "VAS @ BRA",
+     "pick": "Vasco da Gama or draw",
+     "price": "-240",
+     "said": 66,
      "score": {
-      "Boise State Broncos": 20,
-      "San Diego State Aztecs": 22
+      "Red Bull Bragantino": 1,
+      "Vasco da Gama": 0
+     },
+     "tags": [
+      "favourite lost",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 close game"
+    },
+    {
+     "against_market": false,
+     "league": "nhl",
+     "like": {
+      "n": 68,
+      "said": 65,
+      "won": 48
+     },
+     "match": "BUF @ TB",
+     "pick": "Tampa Bay Lightning",
+     "price": "-218",
+     "said": 66,
+     "score": {
+      "Buffalo Sabres": 6,
+      "Tampa Bay Lightning": 2
+     },
+     "tags": [
+      "favourite lost",
+      "blowout"
+     ],
+     "why": "margin 4 \u00b7 the book had my side favoured too \u00b7 called at 66% \u00b7 favourite lost \u00b7 blowout"
+    },
+    {
+     "against_market": false,
+     "league": "nfl",
+     "like": {
+      "n": 23,
+      "said": 69,
+      "won": 19
+     },
+     "match": "JAX @ NYG",
+     "pick": "Jacksonville Jaguars",
+     "price": "-262",
+     "said": 70,
+     "score": {
+      "Jacksonville Jaguars": 18,
+      "New York Giants": 23
+     },
+     "tags": [
+      "favourite lost",
+      "close game"
+     ],
+     "why": "margin 5 \u00b7 the book had my side favoured too \u00b7 called at 70% \u00b7 favourite lost \u00b7 close game"
+    },
+    {
+     "against_market": false,
+     "league": "chi",
+     "like": {
+      "n": 15,
+      "said": 67,
+      "won": 11
+     },
+     "match": "LSE @ LIM",
+     "pick": "Deportes Limache or draw",
+     "price": "-250",
+     "said": 67,
+     "score": {
+      "Deportes Limache": 1,
+      "La Serena": 2
+     },
+     "tags": [
+      "favourite lost",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 67% \u00b7 favourite lost \u00b7 close game"
+    },
+    {
+     "against_market": false,
+     "league": "mls",
+     "like": {
+      "n": 18,
+      "said": 80,
+      "won": 12
+     },
+     "match": "CLT @ CHI",
+     "pick": "Chicago Fire FC or draw",
+     "price": "-600",
+     "said": 82,
+     "score": {
+      "Charlotte FC": 2,
+      "Chicago Fire FC": 1
      },
      "tags": [
       "upset",
       "close game"
      ],
-     "why": "margin 2 \u00b7 the book had my side favoured too \u00b7 called at 93% \u00b7 upset \u00b7 close game"
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 82% \u00b7 upset \u00b7 close game"
+    },
+    {
+     "against_market": false,
+     "league": "nba",
+     "like": {
+      "n": 80,
+      "said": 63,
+      "won": 56
+     },
+     "match": "ORL @ WSH",
+     "pick": "Orlando Magic",
+     "price": "-196",
+     "said": 64,
+     "score": {
+      "Orlando Magic": 96,
+      "Washington Wizards": 116
+     },
+     "tags": [
+      "favourite lost",
+      "blowout"
+     ],
+     "why": "margin 20 \u00b7 the book had my side favoured too \u00b7 called at 64% \u00b7 favourite lost \u00b7 blowout"
+    },
+    {
+     "against_market": false,
+     "league": "nba",
+     "like": {
+      "n": 68,
+      "said": 73,
+      "won": 50
+     },
+     "match": "BOS @ GS",
+     "pick": "Boston Celtics",
+     "price": "-336",
+     "said": 74,
+     "score": {
+      "Boston Celtics": 87,
+      "Golden State Warriors": 88
+     },
+     "tags": [
+      "favourite lost",
+      "close game"
+     ],
+     "why": "margin 1 \u00b7 the book had my side favoured too \u00b7 called at 74% \u00b7 favourite lost \u00b7 close game"
     }
    ],
    "sweep": {
-    "as_bad_pct": 8.3,
-    "as_good_pct": 94.0,
-    "broke_on": "jpn Urawa Red Diamonds or draw at 71%",
-    "coin_flips": 11,
+    "as_bad_pct": 63.4,
+    "as_good_pct": 46.6,
+    "broke_on": "wsl Manchester City at 68%",
+    "coin_flips": 1,
     "expected_by_league": {
-     "arg": 0.5,
-     "aus": 1.0,
-     "aut": 0.9,
-     "bra": 0.7,
-     "chi": 0.9,
-     "ecu": 0.5,
-     "efl1": 2.7,
-     "efl2": 0.3,
-     "epl": 1.7,
-     "esp": 1.0,
-     "fra": 1.5,
-     "ger": 1.6,
-     "ger2": 0.9,
-     "jpn": 1.6,
-     "mex": 1.3,
-     "mls": 0.8,
-     "nba": 1.6,
-     "ncaab": 0.4,
-     "ncaaf": 14.3,
-     "ned": 0.2,
-     "nhl": 5.8,
-     "nor": 0.4,
-     "nwsl": 0.3,
-     "sco": 1.6,
+     "aut": 0.8,
+     "bra": 0.6,
+     "chi": 1.0,
+     "epl": 0.4,
+     "esp": 0.9,
+     "fra": 0.7,
+     "ger": 0.3,
+     "ita": 1.3,
+     "mls": 0.7,
+     "nba": 2.4,
+     "nfl": 2.9,
+     "nhl": 2.0,
+     "nor": 1.2,
      "wsl": 0.5
     },
-    "expected_losses": 45.7,
-    "lost": 54,
+    "expected_losses": 21.9,
+    "lost": 21,
     "lost_by_league": {
-     "arg": 2,
-     "aus": 1,
-     "aut": 1,
+     "aut": 2,
      "bra": 1,
      "chi": 1,
-     "ecu": 1,
-     "efl1": 2,
-     "efl2": 1,
-     "epl": 2,
+     "epl": 1,
      "esp": 1,
-     "fra": 3,
+     "fra": 1,
      "ger": 1,
-     "ger2": 1,
-     "jpn": 2,
-     "mex": 3,
+     "ita": 1,
      "mls": 2,
-     "nba": 2,
-     "ncaab": 1,
-     "ncaaf": 14,
-     "ned": 1,
-     "nhl": 5,
-     "nor": 2,
-     "nwsl": 1,
-     "sco": 2,
-     "wsl": 1
+     "nba": 3,
+     "nfl": 3,
+     "nhl": 1,
+     "nor": 1,
+     "wsl": 2
     },
     "open": 0,
-    "won": 113
+    "won": 61
    }
   }
  }

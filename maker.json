@@ -4439,6 +4439,27 @@
    "ticker": "KXNCAAFGAME-26NOV21WSUTXST-TXST",
    "won": 1
   },
+  "KXNCAAFGAME-26NOV24KENTEMU-EMU|YES": {
+   "ask": 0.67,
+   "bid": 0.65,
+   "cost": 0.654,
+   "edge": 0.0256,
+   "fair": 0.6707,
+   "id": "ncaaf:401866470",
+   "label": "Eastern Michigan Eagles",
+   "league": "ncaaf",
+   "match": "KENT @ EMU",
+   "posted": "2026-11-23T05:03:17+00:00",
+   "queue": 1.0,
+   "side": "YES",
+   "spec": {
+    "t": "win",
+    "team": "Eastern Michigan Eagles"
+   },
+   "start": "2026-11-25T00:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFGAME-26NOV24KENTEMU-EMU"
+  },
   "KXNCAAFGAME-26OCT22ECUMEM-MEM|YES": {
    "ask": 0.78,
    "bid": 0.77,
@@ -11276,6 +11297,28 @@
    "status": "graded",
    "ticker": "KXNCAAFSPREAD-26NOV21WSUTXST-TXST14",
    "won": 1
+  },
+  "KXNCAAFSPREAD-26NOV24MOHWMU-WMU8|NO": {
+   "ask": 0.52,
+   "bid": 0.51,
+   "cost": 0.5144,
+   "edge": 0.0073,
+   "fair": 0.5182,
+   "id": "ncaaf:401866471",
+   "label": "Miami (OH) RedHawks +7.5",
+   "league": "ncaaf",
+   "match": "M-OH @ WMU",
+   "posted": "2026-11-23T05:03:17+00:00",
+   "queue": 108.24,
+   "side": "NO",
+   "spec": {
+    "line": 7.5,
+    "t": "spread",
+    "team": "Miami (OH) RedHawks"
+   },
+   "start": "2026-11-25T00:00Z",
+   "status": "open",
+   "ticker": "KXNCAAFSPREAD-26NOV24MOHWMU-WMU8"
   },
   "KXNCAAFSPREAD-26OCT22ECUMEM-MEM11|NO": {
    "ask": 0.51,
