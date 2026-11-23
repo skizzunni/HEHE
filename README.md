@@ -13,7 +13,7 @@ are in the dated notes below.
 | Back-to-back team vs a rested one | NHL | 3,843 | Short of its price every season, but betting it lost in 2023-24: **on watch** |
 | Underdogs by price band (home and road) | NBA, NHL | 7,538 | No band ahead every season; big NHL dogs lose 11-21% |
 | Overs / unders at the closing total | NBA, NHL, college, NFL | 11,600+ | Coin flip; NFL unders ahead 3 seasons then -12.6% |
-| Underdogs by size of spread | college | 1,283 | Small dogs (0.5-3.5) barely ahead both seasons: **on watch** |
+| Underdogs by size of spread | college | 1,283 | Small dogs (0.5-3.5) barely ahead both seasons; re-run on 804 (2022-25): +0.9/+4.8/+4.0/-12.2%, z +1.91/-0.29: rejected (2026-11-23) |
 | Underdogs getting 7.5-14 | NFL | 81 | 53% and 61% covered: **supports the pre-registered test** (decides at 100 legs) |
 | Off a bye / short week | NFL | 106 | Mixed by season; rejected |
 | Fighter rating, fighter stats, rating disagreements | UFC | 2,850 | Behind the price; rejected |
@@ -29,6 +29,9 @@ are in the dated notes below.
 | Underdog +1.5 vs a -200 or shorter favourite | NHL | 753 | +10, +6, +2, +7% by season, z +2.86 / +1.76, -22% this season (n 49): **on watch** |
 | Ticket size, leg count, leg filters, calibration shrink, one-league clumping, Kelly staking | Locks / ladder | 39 cards | Every size cashes at its stated rate; no staking positive in both halves: rejected |
 | Every-game safest lines to 1.5x | 8 AM pools | 14 days | 11/14 vs 6.7 expected, beat the ladder 9 days to 2 (z 2.1): **on watch, the user's call** |
+| Line moves, key numbers, weather, primetime, divisional, blowouts (51 rules) | NFL, college | 2022-26 | None positive every season with z 2.8 both halves: rejected (8 on watch) |
+| NFL divisional underdog against the spread | NFL | 381 | 53.8% vs 50%; +10, -10, +4, +5% by season, z +0.79/+1.33: **on watch** |
+| Weather unders (wind 15+ or rain) | NFL | 104 | +35, +45 then -23, -27%: faded, rejected |
 
 ## What actually went wrong
 
@@ -5036,3 +5039,20 @@ fractions 0.1-0.5 flip sign between halves. The ladder as run cashed 6/20 vs 7.3
 of 14 lost runs on a single leg. Only the every-game safest lines lead: to 1.5x 11/14 vs 6.7
 (beat the ladder head to head 9 days to 2, paired z 2.1), to 2x 7/14 vs 4.0, top 10 11/14 vs
 6.1 -- 14 days, far short of the bar; changing the ladder stays the user's call.
+
+**Football, 51 rules (24 NFL, 27 college) on 2022-25 plus 2026 to Nov 22.** Following or fading
+spread and total moves (open lines only from 2023), key numbers (2.5, 3, 3.5, 7, both sides),
+weather (wind 15+ mph or rain against the total, observed weather so an upper bound), primetime
+unders, divisional and home dogs, road favourites, college favourites -20 or more, conference
+games, teams off a blowout. Nothing adopted. Weather and primetime unders were strong in 2022-23
+and lost in 2024-25 (wind or rain under +34.5, +44.8, -23.4, -27.4%), the classic faded edge.
+On watch, all short of the bar: NFL divisional dogs ATS (z +0.79/+1.33), NFL dogs getting
+7.5-14 (the pre-registered test; 56.9% vs 50.3% on 211, z +1.47/+1.24, 2026 16/31), NFL
+favourites at exactly 2.5 (z +0.12/+1.57), college teams off a 28+ point loss (z +1.15/+1.83),
+and thin key-number spots (NFL -7, college +3 and -7; ESPN BET rarely posted 3 or 7 in 2024-25).
+College small dogs 0.5-3.5 leave the watch list (-12.2% in 2025). tools/edge_lab.py, run here for
+the first time, ranks winners but finds no betting edge (its flags rest on 4-11 changed picks).
+
+**Overnight total: 165 strategies across NBA, NHL, NFL, college and tickets; none adopted.**
+The closing price already holds the public information these rules use. What is left to test is
+news after the line was read, which needs timestamped snapshots the board has only begun saving.
