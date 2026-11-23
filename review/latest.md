@@ -7,7 +7,7 @@ Cautions in force: NFL teamunder on all saved lines 285/366 vs 82% (26 games). R
 Running cold (last 7 days, all saved lines at 70-95%): NFL under 94/129 (73% vs 82%); NBA over 532/695 (77% vs 84%). Walk-forward: legs of a type running cold won 84.9% the next day vs 81.2% for the rest (1506 and 10673 legs), so a cold week is noise, not a signal.
 Pre-registered test, college + NFL spreads getting 7-13.5 points: 543/663 (82% vs 81% stated) -- by game, one line each: 75/88 (85% vs 84%); fine -- the caution on this band is off (locks.apply_prereg). History at the main closing spread: dogs getting 7.5-14 covered 53% then 61% in the NFL (2023, 2024; n 30, 51) and 49% then 56% in college (n 105, 208).
 Pre-registered tests also running: NFL spreads getting 14+ points (legs from 2026-11-14): 149/189 (79% vs 84% stated) -- by game, one line each: 20/24 (83% vs 83%); fine -- the caution on this band is off; college football team-total unders (legs from 2026-11-15): 855/1010 (85% vs 82% stated) -- by game, one line each: 46/57 (81% vs 82%); fine -- the caution on this band is off.
-Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 76% (76% / 78%); 80-85% 85%, 84% (83% / 84%); 85-90% 86%, 82% (88% / 85%); 90%+ 85%, 85% (93% / 85%).
+Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 76% (76% / 78%); 80-85% 85%, 84% (83% / 84%); 85-90% 86%, 82% (88% / 85%); 90%+ 85%, 84% (93% / 85%).
 Soccer or-draw picks by side: home 75% vs 74% stated on 527 (halves 79%, 71%); away 73% vs 73% stated on 266 (halves 72%, 75%). Short in both halves: 60-65% (60%, then 47%). Straight wins: 68% vs 66% stated on 322; 63 of 104 losses were draws. With full price history: 82% vs 73% stated on 167 (halves 81% vs 72%, 83% vs 74%); older picks without it: 52% vs 59% on 155.
 NHL back-to-backs today (watch, not a rule: tired teams ran under their price in each of the last 3 seasons, betting against them lost in one): Carolina Hurricanes (away, played yesterday) v New York Rangers (rested) -- the board has the tired side; Buffalo Sabres (away, played yesterday) v Tampa Bay Lightning (rested) -- the board has the rested side; Pittsburgh Penguins (away, played yesterday) v Dallas Stars (rested) -- the board has the rested side. Board record so far: picks on the tired side 5/12 vs 56% stated; against the tired side 19/33 vs 61% stated.
 Soccer draws on the board: 22% of 1710 games; most in AUS 42% of 26, EFL3 41% of 37, UECL 30% of 33, URU 29% of 41, JPN 29% of 79 -- where a straight win most often loses to a draw.
@@ -126,16 +126,16 @@ Yesterday (2026-11-21): board 113-54, sweep broken by jpn Urawa Red Diamonds or 
 - LOST nhl Minnesota Wild at 73% (-310), Minnesota Wild 3 - Vancouver Canucks 4: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game; picks like it: 18 of 23 (78% vs 72% stated)
 - LOST ncaaf Boise State Broncos at 93% (-1450), Boise State Broncos 20 - San Diego State Aztecs 22: margin 2 · the book had my side favoured too · called at 93% · upset · close game; picks like it: 42 of 48 (88% vs 92% stated)
 Locks 7/11 won, 0 open; Best play top 2 (61%) lost; lost: Elijah Higgins: 5+ Receiving Yards (ARI @ KC) 4; Mark Andrews: 20+ Receiving Yards (BAL @ CAR) 14; Isaiah Likely: 4+ Receptions (JAX @ NYG) 1; Under 250.5 points (Denver Nuggets at Chicago Bulls) Denver Nuggets 151 - Chicago Bulls 145.
-Safe Locks 8/11 won, 1 open; Winners parlay top 3 (80%) won; Best play top 9 (50%) lost; lost: Under 266.5 points (Denver Nuggets at Chicago Bulls) Denver Nuggets 151 - Chicago Bulls 145; Pittsburgh Penguins over 0.5 goals (Pittsburgh Penguins at Dallas Stars) Pittsburgh Penguins 0 - Dallas Stars 1.
-Lottery 10k: lost (3/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5, Under 218.5 points, Under 224.5 points, Tennessee Titans +5.5)
+Safe Locks 9/11 won, 0 open; Winners parlay top 3 (80%) won; Best play top 9 (50%) lost; lost: Under 266.5 points (Denver Nuggets at Chicago Bulls) Denver Nuggets 151 - Chicago Bulls 145; Pittsburgh Penguins over 0.5 goals (Pittsburgh Penguins at Dallas Stars) Pittsburgh Penguins 0 - Dallas Stars 1.
+Lottery 10k: lost (3/9 legs won, killed by Las Vegas Raiders to win, Boston Celtics -8.5, Arizona Cardinals +16.5, Under 218.5 points, Under 224.5 points, Tennessee Titans +5.5)
 Lottery 10k: lost (4/8 legs won, killed by Detroit Lions -16.5, Under 230.5 points, Pittsburgh Steelers -13.5)
 Lottery 10k: lost (2/6 legs won, killed by Dallas Stars over 5.5 goals, Chicago Blackhawks under 1.5 goals, New York Rangers under 1.5 goals, Baltimore Ravens -8.5)
-Lottery 10k+25: lost (4/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5, Under 218.5 points, Under 224.5 points)
-Lottery 10k+50: lost (4/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5, Under 218.5 points, Under 224.5 points)
-Lottery 10k+100: lost (4/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5, Under 218.5 points, Under 224.5 points)
-Lottery 100: lost (3/7 legs won, killed by Arizona Cardinals +16.5, Under 218.5 points, Tampa Bay Lightning to win)
-Ladder-consistency props (all time): 3146/3802 won (82.7%) vs 86.4% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
-Props 188/234 vs 78.8% claimed.
+Lottery 10k+25: lost (4/9 legs won, killed by Las Vegas Raiders to win, Boston Celtics -8.5, Arizona Cardinals +16.5, Under 218.5 points, Under 224.5 points)
+Lottery 10k+50: lost (4/9 legs won, killed by Las Vegas Raiders to win, Boston Celtics -8.5, Arizona Cardinals +16.5, Under 218.5 points, Under 224.5 points)
+Lottery 10k+100: lost (4/9 legs won, killed by Las Vegas Raiders to win, Boston Celtics -8.5, Arizona Cardinals +16.5, Under 218.5 points, Under 224.5 points)
+Lottery 100: lost (3/7 legs won, killed by Boston Celtics -8.5, Arizona Cardinals +16.5, Under 218.5 points, Tampa Bay Lightning to win)
+Ladder-consistency props (all time): 3156/3814 won (82.7%) vs 86.4% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
+Props 199/247 vs 79.1% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=247), ncaab 0.00 (n=94), ncaaf 0.00 (n=360), nfl 0.00 (n=81), nhl 0.00 (n=260)
