@@ -24,6 +24,7 @@ Board picks by price move after the call, by half: moved 6+ against 15/22 (z +0.
 Pool game lines (one per game and bet type), every league, by half: 83.4% vs 82.4% (z +0.7) to 2026-11-15, then 82.1% vs 82.4% (z -0.2) on 1363 game lines.
 Daily 10-leg, replayed on every 8 AM card: cashed 11 of 14 days (79%) vs 44% stated, at about 1.64x.
 Ladder vs every-game ticket to 2x, same 14 days (the last 14 saved cards only; older days drop off): ladder 4/7 then 0/7; every-game 4/7 then 3/7; only the every-game cashed on 6 days, only the ladder on 3 -- a fair coin splits 6-3 or wider 51% of the time.
+Ladder vs every-game ticket to 1.5x, same 14 days (the last 14 saved cards only; older days drop off): ladder 4/7 then 0/7; every-game 5/7 then 6/7; only the every-game cashed on 9 days, only the ladder on 2 -- a fair coin splits 9-2 or wider 7% of the time.
 Win-or-draw picks whose price moved 3+ points against, by half: 14/28 vs 20.0 expected (z -2.5) then 21/29 vs 20.4 expected (z +0.2) -- information only.
 Picks that switched side before kick-off, by half: 50/72 vs 44.3 expected (z +1.4) then 47/72 vs 44.9 expected (z +0.5) -- information only.
 Win-or-draw picks by stated chance, by half: under 70% 80/117 (z +0.4) then 72/117 (z -1.2); 70-80% 149/187 (z +1.7) then 144/188 (z +0.7); 80%+ 77/92 (z +0.4) then 69/92 (z -1.9).
