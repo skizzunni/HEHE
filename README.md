@@ -32,6 +32,9 @@ are in the dated notes below.
 | Line moves, key numbers, weather, primetime, divisional, blowouts (51 rules) | NFL, college | 2022-26 | None positive every season with z 2.8 both halves: rejected (8 on watch) |
 | NFL divisional underdog against the spread | NFL | 381 | 53.8% vs 50%; +10, -10, +4, +5% by season, z +0.79/+1.33: **on watch** |
 | Weather unders (wind 15+ or rain) | NFL | 104 | +35, +45 then -23, -27%: faded, rejected |
+| Two props on the same player in the same game | props | 1,377 player-games | Lose together: other leg 55% vs 83% stated after one lost, z +4.8/+4.7: **adopted -- already enforced** (one per player / one per game on every ticket) |
+| Prop markets, sides, line height, usage, last-5 form, league, chance band | props | 6,447 | All on par with stated; last-5 form adds nothing: rejected (NBA players under 20 min on watch) |
+| Favourites, draws, win-or-draw, home/away, totals, Asian handicap, promoted teams, congestion (364 rules) | soccer, 38 leagues | 83,806 | None positive every season; win-or-draw and favourites lose at the close every season: rejected (8 on watch) |
 
 ## What actually went wrong
 
@@ -5053,6 +5056,36 @@ and thin key-number spots (NFL -7, college +3 and -7; ESPN BET rarely posted 3 o
 College small dogs 0.5-3.5 leave the watch list (-12.2% in 2025). tools/edge_lab.py, run here for
 the first time, ranks winners but finds no betting edge (its flags rest on 4-11 changed picks).
 
-**Overnight total: 165 strategies across NBA, NHL, NFL, college and tickets; none adopted.**
+**Running total after the first wave: 165 strategies, none adopted.**
 The closing price already holds the public information these rules use. What is left to test is
 news after the line was read, which needs timestamped snapshots the board has only begun saving.
+
+**Props, 6,447 graded props (Oct 15 - Nov 22), halves split Nov 4.** Every market, side, line
+height (lowest alt line vs main), chance band, league, NBA starter/bench and minutes, NHL ice
+time, NFL targets and carries, and the player's last-5 and season hit rate at the line were
+checked against the stated chance. All on par: last-5 form adds nothing past the stated chance
+(5/5 at the line 84.8% vs 84.0%), and low NFL receiving-yard lines are on par with the main
+line (5+ yards 80.5% vs 82.0%; Elijah Higgins had cleared 5+ in 3 of 3 before his 4-yard
+game). One rule clears the bar: **two props on one player in one game fail together** -- after
+one leg lost, the other still won only 55% vs 83% stated; both lost 98 times vs 36 expected (z
++4.77 / +4.71 per player-game). Every ticket here already prevents it: the ladder, 10-leg,
+every-game ticket and lottery take one leg per game, and Prop Locks one per player. On watch:
+NBA props of players under 20 minutes over their last 5 (71.8% vs 83.5%, z -3.97 / -1.54) and
+bench players (z -2.11 / -1.37); anytime TDs and Prop Locks run ahead of stated.
+
+**Soccer, 364 rules on 83,806 league matches (football-data.co.uk, Pinnacle or average
+close, 2019-20 to 2025-26).** Favourite and long-shot bands by tier, draws by league and when
+evenly matched, win-or-draw built from 1X2 closes, home and away, over/under 2.5 by league and
+scoring form, Asian handicap sides, teams after a 3+ goal loss, congestion, promoted teams,
+late season, open-to-close moves. None is positive every season. Win-or-draw and favourites
+win about a point more than the margin-free price but lose 1.6-6.7% a season at the close in
+every band -- the board's win-or-draw picks win often but are not value. On watch: favourites
+at 75-85% outside the big five (84.0% vs 79.2%, z +3.39 / +3.34, but -1.5% and -2.5% in two
+seasons and negative at average prices), the side against a promoted team on the Asian handicap
+in its first 6 matches (z +1.33 / +3.87), and Asian handicap dogs getting 1.75+. Draws in two
+leagues (Serie B, Eredivisie) were picked from 38 and are likely chance.
+
+**Overnight total: 535 strategies across eight families; one adopted, and it was already in
+place.** Public pre-game information is in the closing price. What remains is information that
+lands after the line was read (late scratches, goalie confirmations, weather updates), which
+needs timestamped price-and-news snapshots to test.
