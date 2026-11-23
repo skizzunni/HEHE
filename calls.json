@@ -11961,7 +11961,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 95,
       "dc": false,
       "gate": {
@@ -12011,7 +12011,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 87,
       "dc": false,
       "gate": {
@@ -12061,12 +12061,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (5 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401910044",
       "league": "nba",
@@ -12078,15 +12078,16 @@
       "price_ref": "35062798:0ML87354226_1",
       "prob_at": "2026-11-23T18:15:23+00:00",
       "rank": 3,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-11-24T03:00Z"
      },
      "dc": false,
-     "fp": "e27c60c4f264",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (5 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401910044",
      "league": "nba",
@@ -12115,10 +12116,15 @@
        "event": "news",
        "t": "2026-11-23T15:28:02+00:00",
        "what": "injury report checked (5 listed)"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-23T18:24:28+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
       }
      ],
      "match": "UTAH @ LAL",
-     "news_at": "2026-11-23T15:28:02+00:00",
+     "news_at": "2026-11-23T18:24:28+00:00",
      "pick": "Los Angeles Lakers",
      "price": "-790",
      "price_at": "2026-11-23T13:01:54+00:00",
@@ -12139,12 +12145,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (4 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401910040",
       "league": "nba",
@@ -12156,15 +12162,16 @@
       "price_ref": "35062793:0ML87354221_1",
       "prob_at": "2026-11-23T18:15:23+00:00",
       "rank": 4,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-11-24T00:30Z"
      },
      "dc": false,
-     "fp": "267e6000461c",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (4 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401910040",
      "league": "nba",
@@ -12183,10 +12190,15 @@
        "event": "news",
        "t": "2026-11-23T17:36:14+00:00",
        "what": "injury report checked (4 listed)"
+      },
+      {
+       "event": "news",
+       "t": "2026-11-23T18:24:28+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
       }
      ],
      "match": "BKN @ MIN",
-     "news_at": "2026-11-23T17:36:14+00:00",
+     "news_at": "2026-11-23T18:24:28+00:00",
      "pick": "Minnesota Timberwolves",
      "price": "-620",
      "price_at": "2026-11-23T13:01:54+00:00",
@@ -12207,7 +12219,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 83,
       "dc": true,
       "gate": {
@@ -12219,7 +12231,7 @@
       "match": "VIT @ INT",
       "pick": "Internacional or draw",
       "price": "-750",
-      "price_at": "2026-11-23T18:10:32+00:00",
+      "price_at": "2026-11-23T18:24:25+00:00",
       "price_market": "double_chance",
       "price_ref": "736.198423199:13129695",
       "prob_at": "2026-11-23T18:15:23+00:00",
@@ -12251,8 +12263,8 @@
     }
    ],
    "candidate_news": {
-    "ita": "2026-11-23T16:23:07+00:00",
-    "nba": "2026-11-23T17:46:28+00:00"
+    "ita": "2026-11-23T18:24:28+00:00",
+    "nba": "2026-11-23T18:24:28+00:00"
    },
    "candidate_observations": {
     "arg:401933756": {
@@ -12263,7 +12275,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 75,
       "dc": true,
       "gate": {
@@ -12275,7 +12287,7 @@
       "match": "NOB @ GLP",
       "pick": "Gimnasia La Plata or draw",
       "price": "-370",
-      "price_at": "2026-11-23T18:10:32+00:00",
+      "price_at": "2026-11-23T18:24:25+00:00",
       "price_market": "double_chance",
       "price_ref": "736.198010806:13270298",
       "prob_at": "2026-11-23T18:15:23+00:00",
@@ -12296,7 +12308,7 @@
      "match": "NOB @ GLP",
      "pick": "Gimnasia La Plata or draw",
      "price": "-370",
-     "price_at": "2026-11-23T18:10:32+00:00",
+     "price_at": "2026-11-23T18:24:25+00:00",
      "price_market": "double_chance",
      "price_ref": "736.198010806:13270298",
      "side": "home",
@@ -12311,7 +12323,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 80,
       "dc": true,
       "gate": {
@@ -12323,7 +12335,7 @@
       "match": "GRE @ SAN",
       "pick": "Santos or draw",
       "price": "-550",
-      "price_at": "2026-11-23T18:10:32+00:00",
+      "price_at": "2026-11-23T18:24:25+00:00",
       "price_market": "double_chance",
       "price_ref": "736.198260688:13132185",
       "prob_at": "2026-11-23T18:15:23+00:00",
@@ -12344,7 +12356,7 @@
      "match": "GRE @ SAN",
      "pick": "Santos or draw",
      "price": "-550",
-     "price_at": "2026-11-23T18:10:32+00:00",
+     "price_at": "2026-11-23T18:24:25+00:00",
      "price_market": "double_chance",
      "price_ref": "736.198260688:13132185",
      "side": "home",
@@ -12359,7 +12371,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 83,
       "dc": true,
       "gate": {
@@ -12371,7 +12383,7 @@
       "match": "VIT @ INT",
       "pick": "Internacional or draw",
       "price": "-750",
-      "price_at": "2026-11-23T18:10:32+00:00",
+      "price_at": "2026-11-23T18:24:25+00:00",
       "price_market": "double_chance",
       "price_ref": "736.198423199:13129695",
       "prob_at": "2026-11-23T18:15:23+00:00",
@@ -12392,7 +12404,7 @@
      "match": "VIT @ INT",
      "pick": "Internacional or draw",
      "price": "-750",
-     "price_at": "2026-11-23T18:10:32+00:00",
+     "price_at": "2026-11-23T18:24:25+00:00",
      "price_market": "double_chance",
      "price_ref": "736.198423199:13129695",
      "side": "home",
@@ -12407,7 +12419,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 75,
       "dc": true,
       "gate": {
@@ -12419,7 +12431,7 @@
       "match": "FIO @ MON",
       "pick": "Fiorentina or draw",
       "price": "-390",
-      "price_at": "2026-11-23T18:10:32+00:00",
+      "price_at": "2026-11-23T18:24:25+00:00",
       "price_market": "double_chance",
       "price_ref": "736.196834580:13731095",
       "prob_at": "2026-11-23T18:15:23+00:00",
@@ -12430,18 +12442,25 @@
       "start": "2026-11-23T19:45Z"
      },
      "dc": true,
-     "fp": "471938de0b3c",
+     "fp": "6acf459eb5a7",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed XIs"
      },
      "id": "ita:401875009",
      "league": "ita",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-23T18:24:28+00:00",
+       "what": "awaiting confirmed XIs"
+      }
+     ],
      "match": "FIO @ MON",
-     "news_at": "2026-11-23T16:23:07+00:00",
+     "news_at": "2026-11-23T18:24:28+00:00",
      "pick": "Fiorentina or draw",
      "price": "-390",
-     "price_at": "2026-11-23T18:10:32+00:00",
+     "price_at": "2026-11-23T18:24:25+00:00",
      "price_market": "double_chance",
      "price_ref": "736.196834580:13731095",
      "side": "away",
@@ -12456,12 +12475,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 79,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (6 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401910039",
       "league": "nba",
@@ -12473,20 +12492,28 @@
       "price_ref": "35062794:0ML87354222_1",
       "prob_at": "2026-11-23T18:15:23+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-11-24T00:30Z"
      },
      "dc": false,
-     "fp": "4ac29f860dde",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (6 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401910039",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-23T18:24:28+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
+      }
+     ],
      "match": "MIL @ TOR",
-     "news_at": "2026-11-23T17:46:28+00:00",
+     "news_at": "2026-11-23T18:24:28+00:00",
      "pick": "Toronto Raptors",
      "price": "-467",
      "price_at": "2026-11-23T18:15:23+00:00",
@@ -12504,12 +12531,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (4 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401910040",
       "league": "nba",
@@ -12521,20 +12548,28 @@
       "price_ref": "35062793:0ML87354221_1",
       "prob_at": "2026-11-23T18:15:23+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-11-24T00:30Z"
      },
      "dc": false,
-     "fp": "267e6000461c",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (4 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401910040",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-23T18:24:28+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
+      }
+     ],
      "match": "BKN @ MIN",
-     "news_at": "2026-11-23T17:36:14+00:00",
+     "news_at": "2026-11-23T18:24:28+00:00",
      "pick": "Minnesota Timberwolves",
      "price": "-620",
      "price_at": "2026-11-23T18:15:23+00:00",
@@ -12552,12 +12587,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 83,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (2 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401910043",
       "league": "nba",
@@ -12569,19 +12604,28 @@
       "price_ref": "35062797:0ML87354225_1",
       "prob_at": "2026-11-23T18:15:23+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-11-24T01:30Z"
      },
      "dc": false,
-     "fp": "64e0e14170ef",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (2 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401910043",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-23T18:24:28+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
+      }
+     ],
      "match": "LAC @ HOU",
+     "news_at": "2026-11-23T18:24:28+00:00",
      "pick": "Houston Rockets",
      "price": "-650",
      "price_at": "2026-11-23T18:15:23+00:00",
@@ -12599,12 +12643,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 85,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (5 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401910044",
       "league": "nba",
@@ -12616,20 +12660,28 @@
       "price_ref": "35062798:0ML87354226_1",
       "prob_at": "2026-11-23T18:15:23+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "home",
       "start": "2026-11-24T03:00Z"
      },
      "dc": false,
-     "fp": "e27c60c4f264",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (5 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401910044",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-23T18:24:28+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
+      }
+     ],
      "match": "UTAH @ LAL",
-     "news_at": "2026-11-23T15:28:02+00:00",
+     "news_at": "2026-11-23T18:24:28+00:00",
      "pick": "Los Angeles Lakers",
      "price": "-800",
      "price_at": "2026-11-23T18:15:23+00:00",
@@ -12647,12 +12699,12 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 80,
       "dc": false,
       "gate": {
-       "ok": true,
-       "what": "injury report checked (7 listed)"
+       "ok": false,
+       "what": "injury report not fetched or game summary unverifiable"
       },
       "id": "nba:401910045",
       "league": "nba",
@@ -12664,20 +12716,28 @@
       "price_ref": "35062799:0ML87354227_3",
       "prob_at": "2026-11-23T18:15:23+00:00",
       "rank": null,
-      "ready": true,
+      "ready": false,
+      "reason": "injury report not fetched or game summary unverifiable",
       "side": "away",
       "start": "2026-11-24T03:00Z"
      },
      "dc": false,
-     "fp": "0cf4b37a2678",
+     "fp": "6acf459eb5a7",
      "gate": {
-      "ok": true,
-      "what": "injury report checked (7 listed)"
+      "ok": false,
+      "what": "injury report not fetched or game summary unverifiable"
      },
      "id": "nba:401910045",
      "league": "nba",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-23T18:24:28+00:00",
+       "what": "injury report not fetched or game summary unverifiable"
+      }
+     ],
      "match": "SA @ SAC",
-     "news_at": "2026-11-23T14:24:37+00:00",
+     "news_at": "2026-11-23T18:24:28+00:00",
      "pick": "San Antonio Spurs",
      "price": "-484",
      "price_at": "2026-11-23T18:15:23+00:00",
@@ -12695,7 +12755,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 95,
       "dc": false,
       "gate": {
@@ -12742,7 +12802,7 @@
      "current": {
       "book": "DraftKings",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T18:15:42+00:00",
+      "checked_at": "2026-11-23T18:24:28+00:00",
       "conf": 87,
       "dc": false,
       "gate": {
@@ -12782,20 +12842,22 @@
      "tip": "5:00 PM"
     }
    },
-   "frozen": [],
+   "frozen": [
+    "nba"
+   ],
    "news": {
-    "nba": "2026-11-23T17:36:14+00:00"
+    "nba": "2026-11-23T18:24:28+00:00"
    },
    "shadow_watch": {
     "best_at": "2026-11-23T18:15:42+00:00",
     "best_ceiling": 1.701,
-    "checks": 63,
-    "last": "2026-11-23T18:15:42+00:00",
+    "checks": 64,
+    "last": "2026-11-23T18:24:28+00:00",
     "max_ready": 7,
     "reasons": {
-     "awaiting confirmed XIs": 287,
+     "awaiting confirmed XIs": 291,
      "awaiting this game's price after its lineup/news change": 7,
-     "injury report not fetched or game summary unverifiable": 4
+     "injury report not fetched or game summary unverifiable": 9
     }
    }
   }

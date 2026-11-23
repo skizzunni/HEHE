@@ -10130,6 +10130,23 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910038|home|FanDuel": {
+   "dec": 2.84,
+   "ev": 0.0231,
+   "fair": 0.3602,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910038",
+   "kind": "value",
+   "league": "nba",
+   "match": "OKC @ IND",
+   "price": "+184",
+   "seen": "2026-11-23T18:24:47+00:00",
+   "side": "home",
+   "start": "2026-11-24T00:30Z",
+   "team": "Indiana Pacers",
+   "tip": "7:30 PM",
+   "venue": "FanDuel"
+  },
   "nba:401910041|{\"line\": -9.5, \"t\": \"spread\", \"team\": \"Cleveland Cavaliers\"}|Kalshi": {
    "dec": 2.2361,
    "dk": "-110",
@@ -24475,6 +24492,26 @@
    "prob": 0.2137,
    "seen": "2026-11-22T15:32:44+00:00",
    "status": "lost",
+   "target": 2.0,
+   "venue": "FanDuel"
+  },
+  "parlay|FanDuel|nba:401910038:home": {
+   "ev": 0.023,
+   "kind": "parlay",
+   "legs": [
+    {
+     "ev": 0.0231,
+     "fair": 0.3602,
+     "id": "nba:401910038",
+     "price": "+184",
+     "side": "home",
+     "spec": null,
+     "team": "Indiana Pacers"
+    }
+   ],
+   "payout": 2.84,
+   "prob": 0.3602,
+   "seen": "2026-11-23T18:24:47+00:00",
    "target": 2.0,
    "venue": "FanDuel"
   },
