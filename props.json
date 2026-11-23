@@ -81506,11 +81506,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Bhayshul Tuten",
   "p": 0.4126,
   "p_fair": null,
   "price": "-110",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873069|n:bhayshul tuten|Receiving Yards|5+": {
   "aid": null,
@@ -81522,11 +81524,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Bhayshul Tuten",
   "p": 0.782,
   "p_fair": 0.8295,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nfl:401873069|n:brian thomas|Receptions|1+": {
   "aid": null,
@@ -81538,11 +81542,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Brian Thomas Jr.",
   "p": 0.782,
   "p_fair": 0.7521,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873069|n:cam skattebo|Anytime Touchdown Scorer|1+": {
   "aid": null,
@@ -81554,11 +81560,13 @@
   "league": "nfl",
   "line": "1+",
   "market": "Anytime Touchdown Scorer",
+  "matched": "name",
   "name": "Cam Skattebo",
   "p": 0.3917,
   "p_fair": null,
   "price": "+100",
-  "status": "open"
+  "status": "lost",
+  "value": 0
  },
  "nfl:401873069|n:chris rodriguez|Rushing Yards|5+": {
   "aid": null,
@@ -81570,11 +81578,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Chris Rodriguez Jr.",
   "p": 0.852,
   "p_fair": 0.9221,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 28.0
  },
  "nfl:401873069|n:darnell mooney|Receiving Yards|5+": {
   "aid": null,
@@ -81586,11 +81596,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Darnell Mooney",
   "p": 0.765,
   "p_fair": 0.8447,
   "price": "-360",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873069|n:isaiah likely|Receptions|4+": {
   "aid": null,
@@ -81602,11 +81614,13 @@
   "league": "nfl",
   "line": "4+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Isaiah Likely",
   "p": 0.782,
   "p_fair": 0.7687,
   "price": "-400",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nfl:401873069|n:jakobi meyers|Receptions|2+": {
   "aid": null,
@@ -81618,11 +81632,13 @@
   "league": "nfl",
   "line": "2+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Jakobi Meyers",
   "p": 0.8509,
   "p_fair": 0.8442,
   "price": "-750",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nfl:401873069|n:jj mccarthy|Passing Yards|150+": {
   "aid": null,
@@ -81634,11 +81650,13 @@
   "league": "nfl",
   "line": "150+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "J.J McCarthy",
   "p": 0.8464,
   "p_fair": 0.8438,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 173.0
  },
  "nfl:401873069|n:jj mccarthy|Rushing Yards|5+": {
   "aid": null,
@@ -81650,11 +81668,13 @@
   "league": "nfl",
   "line": "5+",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "J.J McCarthy",
   "p": 0.8475,
   "p_fair": 0.907,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 33.0
  },
  "nfl:401873069|n:malik nabers|Receptions|4+": {
   "aid": null,
@@ -81666,11 +81686,13 @@
   "league": "nfl",
   "line": "4+",
   "market": "Receptions",
+  "matched": "name",
   "name": "Malik Nabers",
   "p": 0.8472,
   "p_fair": 0.8395,
   "price": "-650",
-  "status": "open"
+  "status": "won",
+  "value": 7.0
  },
  "nfl:401873069|n:trevor lawrence|Passing Yards|175+": {
   "aid": null,
@@ -81682,11 +81704,13 @@
   "league": "nfl",
   "line": "175+",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Trevor Lawrence",
   "p": 0.8464,
   "p_fair": 0.8198,
   "price": "-670",
-  "status": "open"
+  "status": "won",
+  "value": 301.0
  },
  "nfl:401873070|n:caleb douglas|Receiving Yards|20+": {
   "aid": null,
@@ -83070,6 +83094,22 @@
   "price": "-670",
   "status": "lost",
   "value": 0.0
+ },
+ "nfl:401873077|n:aaron jones|Receptions|1+": {
+  "aid": null,
+  "date": "2026-11-22",
+  "edge": -2.9,
+  "gid": "nfl:401873077",
+  "imp": 0.8889,
+  "label": "Aaron Jones: 1+ Receptions",
+  "league": "nfl",
+  "line": "1+",
+  "market": "Receptions",
+  "name": "Aaron Jones",
+  "p": 0.8506,
+  "p_fair": 0.8629,
+  "price": "-800",
+  "status": "open"
  },
  "nfl:401873077|n:brock purdy|Passing Yards|175+": {
   "aid": null,

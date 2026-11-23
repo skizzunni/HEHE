@@ -11,9 +11,9 @@ Props by the book's fair chance (won, by half; fair / our stated): 70-80% 77%, 7
 Soccer or-draw picks by side: home 75% vs 74% stated on 522 (halves 79%, 71%); away 73% vs 73% stated on 266 (halves 72%, 75%). Short in both halves: 60-65% (60%, then 47%). Straight wins: 68% vs 66% stated on 321; 63 of 104 losses were draws. With full price history: 82% vs 74% stated on 166 (halves 81% vs 72%, 83% vs 75%); older picks without it: 52% vs 59% on 155.
 NHL back-to-backs today (watch, not a rule: tired teams ran under their price in each of the last 3 seasons, betting against them lost in one): Carolina Hurricanes (away, played yesterday) v New York Rangers (rested) -- the board has the tired side; Buffalo Sabres (away, played yesterday) v Tampa Bay Lightning (rested) -- the board has the rested side; Pittsburgh Penguins (away, played yesterday) v Dallas Stars (rested) -- the board has the rested side. Board record so far: picks on the tired side 5/12 vs 56% stated; against the tired side 18/32 vs 61% stated.
 Soccer draws on the board: 22% of 1704 games; most in AUS 42% of 26, EFL3 41% of 37, UECL 30% of 33, URU 29% of 41, JPN 29% of 79 -- where a straight win most often loses to a draw.
-Locks by bet type, by half: win 86% then 78% (vs 82%, 79%); spread 90% then 86% (vs 84%, 84%); total 86% then 89% (vs 84%, 85%); team total 88% then 86% (vs 86%, 84%); prop 79% then 79% (vs 84%, 78%).
-Locks by league, by half: NBA 83% then 86% (vs 83%, 84%); NHL 88% then 95% (vs 87%, 88%); NCAAF 88% then 72% (vs 82%, 77%); NFL 82% then 81% (vs 83%, 81%). No league short in both halves.
-Locks by league and bet type, short in both halves: NFL prop 75% then 71% (vs 85%, 79%; 34 legs) -- of 10 pairs; information only.
+Locks by bet type, by half: win 86% then 78% (vs 82%, 79%); spread 90% then 86% (vs 84%, 84%); total 86% then 89% (vs 84%, 85%); team total 88% then 86% (vs 86%, 84%); prop 79% then 76% (vs 84%, 78%). Short in both halves: prop.
+Locks by league, by half: NBA 83% then 86% (vs 83%, 84%); NHL 88% then 95% (vs 87%, 88%); NCAAF 88% then 72% (vs 82%, 77%); NFL 82% then 77% (vs 83%, 81%). Short in both halves: NFL.
+Locks by league and bet type, short in both halves: NFL prop 75% then 67% (vs 85%, 79%; 35 legs) -- of 10 pairs; information only.
 Locks props by market, by half: NBA Assists 14/19 then 19/22 (vs 89%, 79%); NFL Receiving Yards 12/14 then 11/18 (vs 88%, 80%). Short in both halves: NFL Receiving Yards.
 Every game's safest line by bet type, by half: win 87% then 84% (vs 83%, 85%); spread 91% then 97% (vs 90%, 90%); total 93% then 97% (vs 91%, 92%); team total 98% then 96% (vs 90%, 90%). Ahead in both halves: spread, total, team total.
 Priced-era picks by league, by half (split 2026-11-06): soccer or-draw 77% vs 74% (z +1.5) then 72% vs 74% (z -1.0); NCAAF 73% vs 72% (z +0.2) then 70% vs 72% (z -0.4); soccer win 82% vs 73% (z +2.6) then 81% vs 74% (z +1.8); NBA 71% vs 66% (z +1.2) then 71% vs 69% (z +0.5); NHL 58% vs 58% (z -0.0) then 61% vs 58% (z +0.7); NCAAB 88% vs 90% (z -0.5) then 87% vs 86% (z +0.3); NFL 76% vs 65% (z +1.3) then 82% vs 69% (z +1.7). None past the 99.5% bar in both halves.
@@ -37,7 +37,7 @@ Ticket size, replayed on every 8 AM card: 6 legs 12/13 at 1.34x; 8 legs 11/13 at
 Value bets by fair chance, by half: 0-30% 11/63 (z -0.1) then 14/78 (z +0.0); 30-45% 17/41 (z +0.5) then 10/45 (z -2.1); 45-60% 60/144 (z -2.1) then 49/112 (z -1.6); 60-100% 35/45 (z +1.5) then 41/59 (z -1.0).
 Value bets by league, by half: all 123/293 (z -0.8) then 114/294 (z -2.4); NBA 62/135 (z -0.7) then 66/165 (z -2.0); NCAAF 20/50 (z -0.8) then 22/48 (z +1.0); NHL 28/46 (z +0.9) then 13/38 (z -2.0); NCAAB 1/6 (z +0.1) then 8/29 (z -1.4).
 Value bets by stated edge, by half: under 2% 61/140 (z -0.6) then 76/163 (z -1.1); 2-4% 50/118 (z +0.0) then 36/108 (z -1.4); 4%+ 11/33 (z -1.1) then 3/25 (z -2.7).
-Anytime touchdown chances, by half: 171/1218 scored vs 143.4 stated (z +2.7) to 2026-11-02, then 167/1218 scored vs 140.3 stated (z +2.6); 2+ touchdowns graded so far: 8 of 313 players.
+Anytime touchdown chances, by half: 173/1233 scored vs 144.8 stated (z +2.7) to 2026-11-02, then 167/1233 scored vs 142.5 stated (z +2.4); 2+ touchdowns graded so far: 8 of 343 players.
 Home and away picks, by half: NBA home 67% vs 66% then 72% vs 70%, away 78% vs 64% then 71% vs 68%; NHL home 61% vs 59% then 54% vs 59%, away 54% vs 57% then 73% vs 57%; NCAAF home 81% vs 74% then 70% vs 74%, away 62% vs 70% then 71% vs 67%; NFL home 70% vs 65% then 76% vs 71%, away 89% vs 64% then 88% vs 67%.
 Injuries at tip-off (302 games, 19 days, early read): my side more out: 1st 30/43 70% vs 64% | 2nd 36/53 68% vs 64%; even: 1st 29/40 72% vs 64% | 2nd 26/49 53% vs 63%; their side more out: 1st 52/63 83% vs 64% | 2nd 34/54 63% vs 67%.
 Lessons from losses (short in both halves -- candidates to test, not rules): NCAAF win 90-100%: 86% then 86% vs 93%, 93% stated (14+22).
@@ -121,17 +121,17 @@ Yesterday (2026-11-21): board 113-54, sweep broken by jpn Urawa Red Diamonds or 
 - LOST nba Boston Celtics at 83% (-650), Boston Celtics 96 - Sacramento Kings 97: margin 1 · the book had my side favoured too · called at 83% · upset · close game; picks like it: 41 of 45 (91% vs 82% stated)
 - LOST nhl Minnesota Wild at 73% (-310), Minnesota Wild 3 - Vancouver Canucks 4: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game; picks like it: 18 of 23 (78% vs 72% stated)
 - LOST ncaaf Boise State Broncos at 93% (-1450), Boise State Broncos 20 - San Diego State Aztecs 22: margin 2 · the book had my side favoured too · called at 93% · upset · close game; picks like it: 42 of 48 (88% vs 92% stated)
-Locks 5/11 won, 4 open; Best play top 2 (61%) lost; lost: Elijah Higgins: 5+ Receiving Yards (ARI @ KC) 4; Mark Andrews: 20+ Receiving Yards (BAL @ CAR) 14.
+Locks 5/11 won, 3 open; Best play top 2 (61%) lost; lost: Elijah Higgins: 5+ Receiving Yards (ARI @ KC) 4; Mark Andrews: 20+ Receiving Yards (BAL @ CAR) 14; Isaiah Likely: 4+ Receptions (JAX @ NYG) 1.
 Safe Locks 2/11 won, 9 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
 Lottery 10k: lost (1/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5, Tennessee Titans +5.5)
-Lottery 10k: lost (2/8 legs won, killed by Detroit Lions -16.5, Pittsburgh Steelers -13.5)
+Lottery 10k: lost (3/8 legs won, killed by Detroit Lions -16.5, Pittsburgh Steelers -13.5)
 Lottery 10k: lost (2/6 legs won, killed by New York Rangers under 1.5 goals, Baltimore Ravens -8.5)
 Lottery 10k+25: lost (2/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5)
 Lottery 10k+50: lost (1/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5)
 Lottery 10k+100: lost (1/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5)
 Lottery 100: lost (2/7 legs won, killed by Arizona Cardinals +16.5, Tampa Bay Lightning to win)
-Ladder-consistency props (all time): 3079/3725 won (82.7%) vs 86.4% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
-Props 99/129 vs 76.4% claimed.
+Ladder-consistency props (all time): 3087/3735 won (82.7%) vs 86.4% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
+Props 107/141 vs 76.2% claimed.
 
 Strong-call cut-offs (frozen; under them a call is a close call): soccer 55.0% -> 79.4% on 383 (Wilson 75.0-83.1, 2026-11-03..2026-11-16)
 Weights for tomorrow (model's share vs the price): nba 0.00 (n=242), ncaab 0.00 (n=92), ncaaf 0.00 (n=360), nfl 0.00 (n=80), nhl 0.00 (n=257)
