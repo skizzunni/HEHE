@@ -11,6 +11,7 @@ Every script here, with the first paragraph of its own description.
 | `blind_model.py` | Price-blind team numbers from results only (no odds), walk-forward tested against the ledger's no-vig price. Information only: it lost to the market in every league (README 2026-11-23). |
 | `slate_sheet.py` | A day's NBA/NHL/NFL games with our price-blind number printed first, then the DraftKings line, no-vig chance and the gap (research first, lines second). Information only. |
 | `nba_minutes.py` | Each NBA player's minutes over his last 5 games (ESPN rosters + game logs), for the daily card's low-minutes prop caution. Information only. |
+| `nba_injury_report.py` | The newest official NBA injury report PDF (walks back in 15-minute steps), parsed into team / player / status rows plus teams NOT YET SUBMITTED. `python3 tools/nba_injury_report.py OKC IND`. |
 | `prereg_nhl_dog.py` | Pre-registered forward test (2026-11-23): NHL underdog +1.5 when the favourite closes -200 or shorter, graded from ESPN closing lines on games from 2026-11-24; decides at 150 games. Information only. |
 | `clv.py` | Closing line value: the primary scoreboard. |
 | `daily_review.py` | The daily review: what lost, why, and what to change for tomorrow. |
