@@ -23,6 +23,12 @@ are in the dated notes below.
 | Player props vs game lines on the Locks | all | 549 legs | Props the only type short in both halves (80%, 76% vs 86%, 79%): **user's call** |
 | Ladder ticket with props left out (replayed) | all | 24 tickets | 13/24 at 2.32x vs 12/24 at 2.22x: **user's call** |
 | Opponent has more players Out at tip-off | NBA, NHL, NFL | 313 | 83% then 64% vs 64%, 67% stated (z +3.1, -0.5): faded in the later half; **rejected, still re-run** |
+| Price-blind team ratings vs the market (results only, no odds) | NBA, NHL, NFL | 473 | Market better in every league and both halves; right 25-40% when they disagree: rejected |
+| Streaks, blowout bounce-backs, revenge, 3-in-4 nights, travel, early season, Elo blend (49 rules) | NBA | 4,926 | None positive every season; best z 3.4 only in one half: rejected (2 on watch, weak) |
+| Backup / hot / tired goalies, save% gaps, puck lines, totals, streaks, home dogs (25 rules) | NHL | 5,617 | Goalie news priced in; rejected except 2 on watch |
+| Underdog +1.5 vs a -200 or shorter favourite | NHL | 753 | +10, +6, +2, +7% by season, z +2.86 / +1.76, -22% this season (n 49): **on watch** |
+| Ticket size, leg count, leg filters, calibration shrink, one-league clumping, Kelly staking | Locks / ladder | 39 cards | Every size cashes at its stated rate; no staking positive in both halves: rejected |
+| Every-game safest lines to 1.5x | 8 AM pools | 14 days | 11/14 vs 6.7 expected, beat the ladder 9 days to 2 (z 2.1): **on watch, the user's call** |
 
 ## What actually went wrong
 
@@ -4997,3 +5003,36 @@ did not hold up on new games: the public injury report looks priced in by tip-of
 which fits the price-blind result above. Not adopted; the study keeps re-running as the
 archive grows. The lead left to test is news that lands after the line was read
 (late scratches, goalie confirmations), not the report itself.
+
+## Strategy lab, overnight 2026-11-23: three families tested, nothing adopted
+
+The user asked for every strategy to be tried. Each one was tested only on information known
+before the start, at the real closing price, season by season, with the usual bar (ROI positive
+every season and z 2.8 in both halves). Scripts and full tables are in work/strategy_lab/
+(kept locally, not committed).
+
+**NBA, 49 rules on 4,926 games (2022-23 to 2025-24) plus 248 this season.** Fading 3+ and 5+
+win streaks, backing losing streaks, the game after a 20+ point win or loss, home and road dogs
+by spread size, totals after a game far over or under its line, pace pairs, 3 games in 4
+nights, 1,500+ mile trips and time-zone changes, revenge (lost the last meeting), the first 15
+games, and a 5-20% Elo blend with the close. None is positive every season. On watch, weak:
+backing a team off a 20+ point win against the spread (z +0.11 / +3.36; chosen after its fade
+looked bad, so not pre-registered) and a 5% Elo blend in the first 15 games (48 bets). Baselines
+(always the favourite, home, over) lose the margin every season, as expected.
+
+**NHL, 25 rules on 5,617 games (2022-23 to now).** Backing or fading backup goalies, save%
+gaps, goalies on a second straight night or on a hot run, favourites -1.5 at plus money,
+unders and overs at 5.5 and 6.5 and after high-scoring games, the game after a 4+ goal loss,
+fading 5-game win streaks, home dogs, shot share against results. Goalie identity is in the
+price. On watch: the underdog +1.5 when the favourite is -200 or shorter (+10.1, +5.7, +2.4,
++7.3% by season, z +2.86 / +1.76, but -22% on 49 this season), and last-10 shot share ahead of
+goal share (z +2.51 / +1.44, 2025-26 -1.8%).
+
+**Tickets, 39 graded 8 AM Locks cards.** Targets 1.5x-10x and 1-8 legs all cash about their
+stated rate (|z| 1.3 or less); no leg type, league, price band or start-time spread is short in
+both halves; shrinking stated chances or a walk-forward Platt fit changes no ticket or makes
+log-loss worse; same-league legs do not lose together more than independence says; Kelly
+fractions 0.1-0.5 flip sign between halves. The ladder as run cashed 6/20 vs 7.3 expected, 10
+of 14 lost runs on a single leg. Only the every-game safest lines lead: to 1.5x 11/14 vs 6.7
+(beat the ladder head to head 9 days to 2, paired z 2.1), to 2x 7/14 vs 4.0, top 10 11/14 vs
+6.1 -- 14 days, far short of the bar; changing the ladder stays the user's call.
