@@ -9998,6 +9998,45 @@
    "tip": "7:00 PM",
    "venue": "FanDuel"
   },
+  "nba:401910034|home|Kalshi": {
+   "dec": 1.4184,
+   "ev": 0.0183,
+   "fair": 0.718,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910034",
+   "kind": "value",
+   "league": "nba",
+   "match": "IND @ NY",
+   "price": "-239",
+   "seen": "2026-11-23T00:39:10+00:00",
+   "side": "home",
+   "start": "2026-11-23T01:00Z",
+   "team": "New York Knicks",
+   "tip": "8:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401910034|sure": {
+   "id": "nba:401910034",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+248",
+     "stake_share": 0.2896,
+     "team": "Indiana Pacers",
+     "venue": "DraftKings"
+    },
+    {
+     "price": "-239",
+     "stake_share": 0.7104,
+     "team": "New York Knicks",
+     "venue": "Kalshi"
+    }
+   ],
+   "match": "IND @ NY",
+   "profit": 0.0077,
+   "seen": "2026-11-23T00:39:10+00:00"
+  },
   "nba:401910034|{\"line\": -10.5, \"t\": \"spread\", \"team\": \"New York Knicks\"}|Kalshi": {
    "dec": 2.0947,
    "dk": "-110",
@@ -21132,6 +21171,7 @@
    "seen": "2026-11-21T15:59:04+00:00",
    "side": "away",
    "start": "2026-11-22T22:00Z",
+   "status": "won",
    "team": "Buffalo Sabres",
    "tip": "5:00 PM",
    "venue": "FanDuel"
@@ -21149,6 +21189,7 @@
    "seen": "2026-11-21T15:49:05+00:00",
    "side": "away",
    "start": "2026-11-22T22:00Z",
+   "status": "won",
    "team": "Buffalo Sabres",
    "tip": "5:00 PM",
    "venue": "Kalshi"
