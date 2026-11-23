@@ -14,6 +14,7 @@ Every script here, with the first paragraph of its own description.
 | `nba_injury_report.py` | The newest official NBA injury report PDF (walks back in 15-minute steps), parsed into team / player / status rows plus teams NOT YET SUBMITTED. `python3 tools/nba_injury_report.py OKC IND`. |
 | `nhl_goalies.py` | The day's NHL starting goalies from DailyFaceoff with each one's status (Confirmed / Likely / Unconfirmed) and when it was posted, ET. |
 | `pregame_brief.py` | One pre-game brief for a day: slate_sheet (our number first, then the line), the official NBA injury report, NHL goalies; each section fails on its own. |
+| `grade_picks.py` | Grades a saved JSON list of researched picks (spread / ml / over / under) from ESPN final scores: each pick won / lost / push / open, the record and flat $1 return. |
 | `prereg_nhl_dog.py` | Pre-registered forward test (2026-11-23): NHL underdog +1.5 when the favourite closes -200 or shorter, graded from ESPN closing lines on games from 2026-11-24; decides at 150 games. Information only. |
 | `clv.py` | Closing line value: the primary scoreboard. |
 | `daily_review.py` | The daily review: what lost, why, and what to change for tomorrow. |
