@@ -122,29 +122,54 @@ def spread_games(P, top, per_game=PER_GAME):
     return out
 
 
-def prop_lines(D, day="today", top=15, head=None):
+def _minutes_note(P, minutes_fn):
+    """{label: caution} for NBA props on players under nba_minutes.LOW_MPG
+    over their last 5 games (strategy lab 2026-11-23; information only)."""
+    import nba_minutes
+    by_game = {}
+    for p in P:
+        by_game.setdefault(p.get("gid"), []).append(p["name"])
+    notes = {}
+    for gid, names in by_game.items():
+        if not gid:
+            continue
+        try:
+            mp = minutes_fn(gid, names)
+        except Exception:
+            continue
+        for p in P:
+            m = mp.get(p["name"]) if p.get("gid") == gid else None
+            if m is not None and m < nba_minutes.LOW_MPG:
+                notes[p["label"]] = f" -- {m:g} min a game over his last 5: {nba_minutes.NOTE}"
+    return notes
+
+
+def prop_lines(D, day="today", top=15, head=None, minutes_fn=None):
     """NBA and NHL player props, one per player: his best-paying line still
-    FLOOR+ likely on its own, at most PER_GAME players from one game."""
+    FLOOR+ likely on its own, at most PER_GAME players from one game. NBA
+    props on low-minute players carry a caution (minutes_fn; None skips it)."""
     games = ((D.get("props") or {}).get(day) or {}).get("games") or []
     out = [head or f"NBA and NHL player props, one per player (his best-paying line at {round(100 * FLOOR)}%+):"]
     for lg, name in (("nba", "NBA"), ("nhl", "NHL")):
         P = best_per_player([dict(p, match=g.get("match")) for g in games if str(g.get("id", "")).startswith(lg + ":")
                              for p in g.get("props") or [] if p.get("p") and p.get("plays", True)])
         P = spread_games(P, top)
+        notes = _minutes_note(P, minutes_fn) if (lg == "nba" and minutes_fn and P) else {}
         if P:
             out.append(f"  {name}:")
-            out += [f"    {p['label']} {p.get('price') or ''} -- {pc(p['p'])} ({p.get('match') or ''})" for p in P]
+            out += [f"    {p['label']} {p.get('price') or ''} -- {pc(p['p'])} ({p.get('match') or ''}){notes.get(p['label'], '')}"
+                    for p in P]
     return out if len(out) > 1 else []
 
 
-def scorer_lines(D, day="today", per_game=None, top=15):
+def scorer_lines(D, day="today", per_game=None, top=15, minutes_fn=None):
     """NFL touchdown scorers for every player when NFL plays, then the NBA
     and NHL player props (user, 2026-11-17: "for nba, team points, player
     props") -- on a one-game Thursday the basketball props are most of the
     card, so they are no longer dropped when NFL plays."""
     td = [g for g in ((D.get("td") or {}).get(day) or []) if g.get("lg") == "NFL"]
     if not td:
-        P = prop_lines(D, day, top, head=f"No NFL today -- player props instead, one per player "
+        P = prop_lines(D, day, top, minutes_fn=minutes_fn, head=f"No NFL today -- player props instead, one per player "
                                          f"(his best-paying line at {round(100 * FLOOR)}%+):")
         return P or ["No NFL today, and no NBA or NHL player props posted yet."]
     n = per_game or 6
@@ -158,7 +183,7 @@ def scorer_lines(D, day="today", per_game=None, top=15):
             best = sorted((x for x in E if x.get(key) is not None), key=lambda x: -x[key])[:3]
             if best:
                 out.append(f"    {name}: " + "; ".join(f"{x['name']} {pc(x[key])}" for x in best))
-    P = prop_lines(D, day, top)
+    P = prop_lines(D, day, top, minutes_fn=minutes_fn)
     return out + ([""] + P if P else [])
 
 
@@ -235,12 +260,13 @@ def yesterday_lines(today_iso=None, tickets_fn=None, book=None):
     return [f"Yesterday ({y}): " + "; ".join(bits) + "."] if bits else []
 
 
-def card(D, day="today"):
-    parts = [yesterday_lines() if day == "today" else [], ten_leg_lines(D, day), scorer_lines(D, day),
+def card(D, day="today", minutes_fn=None):
+    parts = [yesterday_lines() if day == "today" else [], ten_leg_lines(D, day), scorer_lines(D, day, minutes_fn=minutes_fn),
              team_points_lines(D, day), winner_lines(D, day)]
     return "\n\n".join("\n".join(p) for p in parts if p)
 
 
 if __name__ == "__main__":
     import line_moves
-    print(card(line_moves.board(), sys.argv[1] if len(sys.argv) > 1 else "today"))
+    import nba_minutes
+    print(card(line_moves.board(), sys.argv[1] if len(sys.argv) > 1 else "today", minutes_fn=nba_minutes.mpg_last5))
