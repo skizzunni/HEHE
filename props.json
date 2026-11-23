@@ -115021,7 +115021,9 @@
   "p": 0.8401,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nhl:401892772|n:brock boeser|Shots on Goal|1+": {
   "aid": null,
@@ -115033,11 +115035,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Brock Boeser",
   "p": 0.8557,
   "p_fair": null,
   "price": "-1050",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892772|n:jake debrusk|Shots on Goal|1+": {
   "aid": null,
@@ -115048,11 +115052,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jake DeBrusk",
   "p": 0.8736,
   "price": "-2000",
   "prop_lock": true,
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892772|n:jake debrusk|Shots on Goal|2+": {
   "aid": null,
@@ -115064,11 +115070,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jake DeBrusk",
   "p": 0.7348,
   "p_fair": null,
   "price": "-360",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892772|n:jonathan lekkerimaki|Shots on Goal|1+": {
   "aid": null,
@@ -115080,11 +115088,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Jonathan Lekkerimaki",
   "p": 0.8386,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nhl:401892772|n:patrick kane|Shots on Goal|2+": {
   "aid": null,
@@ -115096,11 +115106,13 @@
   "league": "nhl",
   "line": "2+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Patrick Kane",
   "p": 0.6969,
   "p_fair": null,
   "price": "-290",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nhl:401892772|n:roman kantserov|Shots on Goal|1+": {
   "aid": null,
@@ -115112,11 +115124,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Roman Kantserov",
   "p": 0.8386,
   "p_fair": null,
   "price": "-850",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nhl:401892772|n:sam rinzel|Shots on Goal|1+": {
   "aid": null,
@@ -115128,11 +115142,13 @@
   "league": "nhl",
   "line": "1+",
   "market": "Shots on Goal",
+  "matched": "name",
   "name": "Sam Rinzel",
   "p": 0.8331,
   "p_fair": null,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "ucl:401915307|335870|Goalkeeper Saves|2+": {
   "aid": "335870",
