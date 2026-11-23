@@ -2153,6 +2153,15 @@ function upsetHTML(U){
 // where they disagree -- tracked, not bet, until the model earns it.
 // picks saved with their full price history, won against stated, by league
 // and date half (ledger.priced_calibration): does the board's chance hold up?
+// $1 a pick at the price taken, by type and date half (ledger.roi_by_type)
+function roiHTML(R){
+  if(!R || !R.length) return '';
+  const f = v => (v > 0 ? '+' : '') + v.toFixed(1) + '%';
+  return '<div class="sweep"><h3>Winning often vs winning money</h3><p class="note">$1 on every graded pick of a type, at the price it was taken, earlier half then later half.</p>'
+    + '<table class="sweeptab"><thead><tr><th>Picks</th><th class="num">Earlier half</th><th class="num">Later half</th><th class="num">Picks graded</th></tr></thead><tbody>'
+    + R.map(r => '<tr><td>' + esc(r.group) + '</td><td class="num">' + f(r.halves[0]) + '</td><td class="num">' + f(r.halves[1]) + '</td><td class="num">' + r.n + '</td></tr>').join('')
+    + '</tbody></table><p class="note">A type can win most of its picks and still lose money: heavy favourites pay little when they win.</p></div>';
+}
 function pricedCalHTML(P){
   if(!P || !(P.rows || []).length) return '';
   const nm = g => /^soccer/.test(g) ? 'Soccer ' + g.slice(7).replace('win', 'straight wins').replace('or-draw', '&ldquo;or draw&rdquo;') : esc(String(g).toUpperCase());
@@ -3958,7 +3967,7 @@ function scoreboardHTML(){
         : '')
     + '<div class="rsub">' + live.length + ' in play &middot; ' + (R.today_open || 0)
     + ' still to finish</div></div>';
-  h += yesterdayHTML(R.yesterday) + reasonsHTML(R.loss_reasons) + upsetHTML(R.upsets) + ownHTML(R.own) + pricedCalHTML(R.priced_cal);
+  h += yesterdayHTML(R.yesterday) + reasonsHTML(R.loss_reasons) + upsetHTML(R.upsets) + ownHTML(R.own) + pricedCalHTML(R.priced_cal) + roiHTML(R.roi_types);
 
   h += '<p class="rsub">' + (R.excluded_unpriced || 0)
     + ' unpriced picks excluded from the record (all dates).</p>';

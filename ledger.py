@@ -949,6 +949,35 @@ def priced_calibration(book, min_half=15):
     return dict(mid=mid, rows=rows) if rows else None
 
 
+ROI_TYPES = (("Soccer win-or-draw", lambda e: bool(e.get("dc"))),
+             ("NBA", lambda e: e.get("league") == "nba"), ("NHL", lambda e: e.get("league") == "nhl"),
+             ("NFL", lambda e: e.get("league") == "nfl"), ("College football", lambda e: e.get("league") == "ncaaf"))
+
+
+def roi_by_type(book, min_n=40):
+    """$1 on every graded, priced board pick of a type, at the price it was
+    taken, by date half: [{group, n, halves: [roi%, roi%]}]. Winning often is
+    not winning money (2026-11-23: win-or-draw -1.9% then -8.7% on 793)."""
+    def dec(a):
+        a = float(str(a).replace("+", ""))
+        return 1 + (a / 100 if a > 0 else 100 / -a)
+    R = sorted((e for e in book.values() if isinstance(e, dict) and e.get("status") in ("won", "lost")
+                and e.get("price") and e.get("date") and not e.get("record_excluded")), key=lambda e: e["date"])
+    out = []
+    for name, f in ROI_TYPES:
+        S = [e for e in R if f(e)]
+        if len(S) < min_n:
+            continue
+        h = len(S) // 2
+        try:
+            halves = [round(100 * sum((dec(e["price"]) - 1) if e["status"] == "won" else -1 for e in X) / len(X), 1) + 0.0
+                      for X in (S[:h], S[h:])]
+        except (TypeError, ValueError):
+            continue
+        out.append(dict(group=name, n=len(S), halves=halves))
+    return out
+
+
 def _try(fn, *a):
     """fn(*a), or None if it raises: one optional view must not break the payload."""
     try:
@@ -1209,7 +1238,7 @@ def board_payload(limit=40):
                     ((lg_, sum(1 for e in todays if e["status"] == "lost" and e["league"] == lg_))
                      for lg_ in {e["league"] for e in todays if e["status"] == "lost"}), key=lambda x: -x[1])],
                 today_lost=sum(e["status"] == "lost" for e in todays),
-                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), call_cautions=call_cautions(book), draw_losses=draw_losses(book), dc_sides=dc_sides(book), priced_cal=_try(priced_calibration, book), hi_sweep=hi_sweep(book, today), b2b=b2b_record(book), moves_halves=moves_halves(book), band_records=band_records(book), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
+                today_open=open_today, feed_today=feed_today, board_days=board_days, broke_on=broke_on, sweep_chance=sweep_chance, own=own, moves=moves, upsets=upset_view(book, today), call_cautions=call_cautions(book), draw_losses=draw_losses(book), dc_sides=dc_sides(book), priced_cal=_try(priced_calibration, book), roi_types=_try(roi_by_type, book), hi_sweep=hi_sweep(book, today), b2b=b2b_record(book), moves_halves=moves_halves(book), band_records=band_records(book), yesterday=yesterday, loss_reasons=loss_reasons, next_up=next_up(book, today),
                 # the same split the pick tabs use: strong calls vs close games
                 today_strong_won=sum(e["status"] == "won" for e in todays if _strong(e)),
                 today_strong_lost=sum(e["status"] == "lost" for e in todays if _strong(e)))

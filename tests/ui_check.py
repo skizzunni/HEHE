@@ -399,7 +399,7 @@ def render(captured_ms, health=None, skipped=None):
     s = s.replace("const D = {", 'const D = {"safe_locks":' + json.dumps(safe_card())
                   + ',"safe_locks_record":' + json.dumps(RECORD) + ',"paired":' + json.dumps(PAIRED) + ',"frontier":' + json.dumps(frontier_fixture()) + ',"call_targets":' + json.dumps(call_targets_fixture(captured_ms)) + ',"health":' + json.dumps(health) + (',"skipped_parts":' + json.dumps(skipped) if skipped else '') + ',"ladder":' + json.dumps(LADDER) + ',"every_game":' + json.dumps(EVERY) + ',', 1)
     s = s.replace('"live":[],"feed":', '"live":[{"pick":"X","winning":false},{"pick":"Y","winning":true}],"feed":', 1)
-    s = s.replace('"results":{', '"results":{"today_losses_by":[{"league":"uel","n":6},{"league":"uecl","n":4}],"today_expected":5.4,"today_rarity":{"expected_losses":4.8,"as_bad_pct":18.1},"broke_on":{"pick":"Trabzonspor","conf":67},"moves":{"against":{"n":81,"won":48,"price":71.9}},"moves_halves":{"for":[[72,88,77.0],[116,146,77.0]],"against":[[39,50,70.0],[37,64,72.0]]},"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
+    s = s.replace('"results":{', '"results":{"roi_types":[{"group":"Soccer win-or-draw","n":793,"halves":[-1.9,-8.7]},{"group":"NFL","n":83,"halves":[3.3,8.4]}],"today_losses_by":[{"league":"uel","n":6},{"league":"uecl","n":4}],"today_expected":5.4,"today_rarity":{"expected_losses":4.8,"as_bad_pct":18.1},"broke_on":{"pick":"Trabzonspor","conf":67},"moves":{"against":{"n":81,"won":48,"price":71.9}},"moves_halves":{"for":[[72,88,77.0],[116,146,77.0]],"against":[[39,50,70.0],[37,64,72.0]]},"own":{"n":382,"own":232,"market":260,"today":[{},{}]},"next_up":[{"tip":"12:45 PM","league":"ucl","match":"RMA @ AEK","conf":78,"pick":"Real Madrid","price":"-450"}],', 1)
     i = s.rfind("</body>")
     s = s[:i] + PROBE + s[i:]
     with tempfile.NamedTemporaryFile("w", suffix=".html", delete=False) as fh:
@@ -449,6 +449,9 @@ def main():
         fails.append("health box must list the trailing split and the stuck record: " + old["health"])
     if "2 losses against about 4.8 expected · within normal swings (18% of days this far in have as many or more)" not in new["results"]:
         fails.append("today rarity line missing: " + new["results"][:600])
+    if "Winning often vs winning money" not in new["results"] or "Soccer win-or-draw-1.9%-8.7%793" not in new["results"] \
+            or "NFL+3.3%+8.4%83" not in new["results"]:
+        fails.append("Results must show the money-at-taken-price table: " + new["results"][-800:])
     if "every loss so far is soccer" in new["results"]:
         fails.append("the all-soccer note needs 4+ losses (the fixture has 2)")
     if "their chances said about 5.4 wins" not in new["results"] or "Losses by competition: UEL 6, UECL 4" not in new["results"]:

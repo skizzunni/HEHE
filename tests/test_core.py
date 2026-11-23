@@ -807,5 +807,15 @@ class BotFreshness(unittest.TestCase):
         self.assertEqual((s["settled"], s["profit"]), (1, 1.0))      # expired kept out of the record
 
 
+class RoiByTypeTest(unittest.TestCase):
+    def test_halves_and_floor(self):
+        import ledger
+        book = {f"k{i}": dict(status="won" if i % 2 else "lost", price="+100", date=f"2026-11-{1 + i // 5:02d}", league="nfl")
+                for i in range(40)}
+        r = ledger.roi_by_type(book)
+        self.assertEqual(r, [dict(group="NFL", n=40, halves=[0.0, 0.0])])
+        self.assertEqual(ledger.roi_by_type({"a": dict(status="won", price="-200", date="2026-11-01", dc=True)}), [])
+
+
 if __name__ == "__main__":
     unittest.main()
