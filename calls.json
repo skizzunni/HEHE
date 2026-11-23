@@ -11725,7 +11725,7 @@
     "epl": "2026-11-22T15:37:37+00:00",
     "esp": "2026-11-22T19:12:53+00:00",
     "ita": "2026-11-22T19:33:26+00:00",
-    "mls": "2026-11-22T22:38:17+00:00",
+    "mls": "2026-11-23T00:44:07+00:00",
     "nba": "2026-11-22T22:17:45+00:00",
     "nfl": "2026-11-22T20:14:25+00:00"
    },
@@ -11738,7 +11738,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T00:38:55+00:00",
+      "checked_at": "2026-11-23T00:44:07+00:00",
       "conf": 77,
       "dc": true,
       "gate": {
@@ -11749,11 +11749,11 @@
       "league": "arg",
       "match": "HUR @ IACC",
       "pick": "Instituto (C\u00f3rdoba) or draw",
-      "price": "-475",
-      "price_at": "2026-11-23T00:33:46+00:00",
+      "price": "-450",
+      "price_at": "2026-11-23T00:44:06+00:00",
       "price_market": "double_chance",
       "price_ref": "736.197934796:21316832",
-      "prob_at": "2026-11-23T00:38:36+00:00",
+      "prob_at": "2026-11-23T00:43:45+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -11770,8 +11770,8 @@
      "league": "arg",
      "match": "HUR @ IACC",
      "pick": "Instituto (C\u00f3rdoba) or draw",
-     "price": "-475",
-     "price_at": "2026-11-23T00:33:46+00:00",
+     "price": "-450",
+     "price_at": "2026-11-23T00:44:06+00:00",
      "price_market": "double_chance",
      "price_ref": "736.197934796:21316832",
      "side": "home",
@@ -11786,7 +11786,7 @@
      "current": {
       "book": "FanDuel",
       "calib": "raw no-vig (calibration failed its untouched test)",
-      "checked_at": "2026-11-23T00:38:55+00:00",
+      "checked_at": "2026-11-23T00:44:07+00:00",
       "conf": 84,
       "dc": true,
       "gate": {
@@ -11798,10 +11798,10 @@
       "match": "RSL @ VAN",
       "pick": "Vancouver Whitecaps or draw",
       "price": "-800",
-      "price_at": "2026-11-23T00:33:46+00:00",
+      "price_at": "2026-11-23T00:44:06+00:00",
       "price_market": "double_chance",
       "price_ref": "736.198502743:13130798",
-      "prob_at": "2026-11-23T00:38:36+00:00",
+      "prob_at": "2026-11-23T00:43:46+00:00",
       "rank": null,
       "ready": false,
       "reason": "awaiting confirmed XIs",
@@ -11809,18 +11809,25 @@
       "start": "2026-11-23T01:30Z"
      },
      "dc": true,
-     "fp": "812b80f11e07",
+     "fp": "6acf459eb5a7",
      "gate": {
       "ok": false,
       "what": "awaiting confirmed XIs"
      },
      "id": "mls:401933729",
      "league": "mls",
+     "log": [
+      {
+       "event": "news",
+       "t": "2026-11-23T00:44:07+00:00",
+       "what": "awaiting confirmed XIs"
+      }
+     ],
      "match": "RSL @ VAN",
-     "news_at": "2026-11-22T17:35:47+00:00",
+     "news_at": "2026-11-23T00:44:07+00:00",
      "pick": "Vancouver Whitecaps or draw",
      "price": "-800",
-     "price_at": "2026-11-23T00:33:46+00:00",
+     "price_at": "2026-11-23T00:44:06+00:00",
      "price_market": "double_chance",
      "price_ref": "736.198502743:13130798",
      "side": "home",
