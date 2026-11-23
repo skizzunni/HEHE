@@ -122,14 +122,14 @@ Yesterday (2026-11-21): board 113-54, sweep broken by jpn Urawa Red Diamonds or 
 - LOST nba Boston Celtics at 83% (-650), Boston Celtics 96 - Sacramento Kings 97: margin 1 · the book had my side favoured too · called at 83% · upset · close game; picks like it: 41 of 45 (91% vs 82% stated)
 - LOST nhl Minnesota Wild at 73% (-310), Minnesota Wild 3 - Vancouver Canucks 4: margin 1 · the book had my side favoured too · called at 73% · favourite lost · close game; picks like it: 18 of 23 (78% vs 72% stated)
 - LOST ncaaf Boise State Broncos at 93% (-1450), Boise State Broncos 20 - San Diego State Aztecs 22: margin 2 · the book had my side favoured too · called at 93% · upset · close game; picks like it: 42 of 48 (88% vs 92% stated)
-Locks 5/11 won, 3 open; Best play top 2 (61%) lost; lost: Elijah Higgins: 5+ Receiving Yards (ARI @ KC) 4; Mark Andrews: 20+ Receiving Yards (BAL @ CAR) 14; Isaiah Likely: 4+ Receptions (JAX @ NYG) 1.
-Safe Locks 2/11 won, 9 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
-Lottery 10k: lost (1/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5, Tennessee Titans +5.5)
+Locks 6/11 won, 2 open; Best play top 2 (61%) lost; lost: Elijah Higgins: 5+ Receiving Yards (ARI @ KC) 4; Mark Andrews: 20+ Receiving Yards (BAL @ CAR) 14; Isaiah Likely: 4+ Receptions (JAX @ NYG) 1.
+Safe Locks 3/11 won, 8 open; Winners parlay top 3 (80%) open; Best play top 9 (50%) open.
+Lottery 10k: lost (1/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5, Under 224.5 points, Tennessee Titans +5.5)
 Lottery 10k: lost (3/8 legs won, killed by Detroit Lions -16.5, Pittsburgh Steelers -13.5)
 Lottery 10k: lost (2/6 legs won, killed by New York Rangers under 1.5 goals, Baltimore Ravens -8.5)
-Lottery 10k+25: lost (2/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5)
-Lottery 10k+50: lost (1/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5)
-Lottery 10k+100: lost (1/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5)
+Lottery 10k+25: lost (2/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5, Under 224.5 points)
+Lottery 10k+50: lost (1/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5, Under 224.5 points)
+Lottery 10k+100: lost (1/9 legs won, killed by Las Vegas Raiders to win, Arizona Cardinals +16.5, Under 224.5 points)
 Lottery 100: lost (2/7 legs won, killed by Arizona Cardinals +16.5, Tampa Bay Lightning to win)
 Ladder-consistency props (all time): 3087/3735 won (82.7%) vs 86.4% fair, 87.5% price, 83.5% stated on the board (heavy props capped).
 Props 107/141 vs 76.2% claimed.
