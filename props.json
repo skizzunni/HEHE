@@ -355,7 +355,8 @@
   "p": 0.8718,
   "p_fair": null,
   "price": "-3000",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "esp:401882803|149622|Goalkeeper Saves|1+": {
   "aid": "149622",
@@ -66157,6 +66158,22 @@
   "price": "-720",
   "status": "open"
  },
+ "nba:401910037|n:lebron james|Points|10+": {
+  "aid": null,
+  "date": "2026-11-23",
+  "edge": -0.3,
+  "gid": "nba:401910037",
+  "imp": 0.9167,
+  "label": "LeBron James: 10+ Points",
+  "league": "nba",
+  "line": "10+",
+  "market": "Points",
+  "name": "LeBron James",
+  "p": 0.8496,
+  "p_fair": 0.9143,
+  "price": "-1100",
+  "status": "open"
+ },
  "nba:401910037|n:lebron james|Points|5+": {
   "aid": null,
   "date": "2026-11-23",
@@ -67172,6 +67189,22 @@
   "p": 0.8488,
   "p_fair": 0.9097,
   "price": "-1000",
+  "status": "open"
+ },
+ "nba:401910044|n:darryn peterson|Threes Made|1+": {
+  "aid": null,
+  "date": "2026-11-23",
+  "edge": -3.1,
+  "gid": "nba:401910044",
+  "imp": 0.9333,
+  "label": "Darryn Peterson: 1+ Threes Made",
+  "league": "nba",
+  "line": "1+",
+  "market": "Threes Made",
+  "name": "Darryn Peterson",
+  "p": 0.8508,
+  "p_fair": 0.9046,
+  "price": "-1400",
   "status": "open"
  },
  "nba:401910044|n:keyonte george|Assists|6+": {
