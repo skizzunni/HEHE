@@ -24692,6 +24692,7 @@
    "cost": 0.6142,
    "edge": 0.0084,
    "fair": 0.6193,
+   "fill": null,
    "id": "nfl:401873077",
    "label": "San Francisco 49ers",
    "league": "nfl",
@@ -24704,8 +24705,9 @@
     "team": "San Francisco 49ers"
    },
    "start": "2026-11-23T01:20Z",
-   "status": "open",
-   "ticker": "KXNFLGAME-26NOV22MINSF-SF"
+   "status": "graded",
+   "ticker": "KXNFLGAME-26NOV22MINSF-SF",
+   "won": 1
   },
   "KXNFLGAME-26NOV22NOCHI-CHI|YES": {
    "ask": 0.85,
@@ -26004,6 +26006,7 @@
    "cost": 0.5144,
    "edge": 0.0097,
    "fair": 0.5194,
+   "fill": "strict",
    "id": "nfl:401873077",
    "label": "Minnesota Vikings +3.5",
    "league": "nfl",
@@ -26017,8 +26020,9 @@
     "team": "Minnesota Vikings"
    },
    "start": "2026-11-23T01:20Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV22MINSF-SF4"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV22MINSF-SF4",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV22MINSF-SF4|YES": {
    "ask": 0.51,
@@ -26026,6 +26030,7 @@
    "cost": 0.5044,
    "edge": 0.0026,
    "fair": 0.5057,
+   "fill": "touch",
    "id": "nfl:401873077",
    "label": "San Francisco 49ers -3.5",
    "league": "nfl",
@@ -26039,8 +26044,9 @@
     "team": "San Francisco 49ers"
    },
    "start": "2026-11-23T01:20Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV22MINSF-SF4"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV22MINSF-SF4",
+   "won": 1
   },
   "KXNFLSPREAD-26NOV22MINSF-SF5|NO": {
    "ask": 0.53,
@@ -26048,6 +26054,7 @@
    "cost": 0.5144,
    "edge": 0.0008,
    "fair": 0.5148,
+   "fill": "strict",
    "id": "nfl:401873077",
    "label": "Minnesota Vikings +4.5",
    "league": "nfl",
@@ -26061,8 +26068,9 @@
     "team": "Minnesota Vikings"
    },
    "start": "2026-11-23T01:20Z",
-   "status": "open",
-   "ticker": "KXNFLSPREAD-26NOV22MINSF-SF5"
+   "status": "graded",
+   "ticker": "KXNFLSPREAD-26NOV22MINSF-SF5",
+   "won": 0
   },
   "KXNFLSPREAD-26NOV22TBDET-DET4|YES": {
    "ask": 0.51,
@@ -27832,6 +27840,7 @@
    "cost": 0.5044,
    "edge": 0.0161,
    "fair": 0.5125,
+   "fill": "strict",
    "id": "nfl:401873077",
    "label": "under 45.5",
    "league": "nfl",
@@ -27844,8 +27853,9 @@
     "t": "under"
    },
    "start": "2026-11-23T01:20Z",
-   "status": "open",
-   "ticker": "KXNFLTOTAL-26NOV22MINSF-46"
+   "status": "graded",
+   "ticker": "KXNFLTOTAL-26NOV22MINSF-46",
+   "won": 1
   },
   "KXNFLTOTAL-26NOV22NOCHI-48|YES": {
    "ask": 0.51,
