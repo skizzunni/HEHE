@@ -5103,3 +5103,13 @@ made "road dog +1.5" look like an edge (+8.2%, z 2.81 / 6.19) and "-200 favourit
 favourite is shown getting points (a swapped label passes the old "lines mirror" check).
 
 **Overnight total: 638 strategies across ten families; one adopted (already in place).**
+
+**Pre-registered (2026-11-23, before any of its games): NHL underdog +1.5 against a -200
+favourite.** The overnight lab's strongest on-watch rule (+10.1, +5.7, +2.4, +7.3% by past
+season, z +2.86 / +1.76) was found by looking at the data, so it must prove itself on games
+played after it was written down. Terms fixed in `tools/prereg_nhl_dog.py`: the underdog +1.5
+at its closing price whenever the moneyline favourite closes -200 or shorter, one book's lines
+(DraftKings first) matched by team id, games from 2026-11-24, decided at 150 games -- "supports"
+if it beats its no-vig puck-line price by z 2.0 or more and shows a profit, else dropped. About 9
+games a week qualify (9 in Nov 15-22, a parsing check only), so it decides around March. The
+result goes to the user either way; it changes no pick by itself.
