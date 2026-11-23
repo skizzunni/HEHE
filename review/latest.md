@@ -50,7 +50,7 @@ Back-to-backs, board record so far: NHL on the tired side 5/12 vs 56%, against i
 Ladder games, players out or doubtful: CIN @ WSH: Cincinnati Bengals without Dalton Risner | Oklahoma City Thunder at Indiana Pacers: Oklahoma City Thunder without Thomas Sorber, Cason Wallace, Chet Holmgren, Jalen Williams; Indiana Pacers without Tyrese Haliburton, Johnny Furphy, Ben Sheppard | Utah Jazz at Los Angeles Lakers: Utah Jazz without Jusuf Nurkic, Lauri Markkanen, Jaren Jackson Jr.; Los Angeles Lakers without Austin Reaves.
 UFC 2026-11-21: picks (the price favourite) 8-4; close fights (under 60%) 2 of 3; lost: Jake Matthews (69%) lost to Tahir Abdullayev, Alessandro Costa (52%) lost to Amir Albazi, Shamil Gaziev (62%) lost to Tallison Teixeira, Aleksandre Topuria (71%) lost to Santiago Luna.
 TRAILING value bets: 40.5% hit vs 44.7% stated on 593 (by half 138/328 then 102/265, 42% / 38% vs 45% / 44% stated; short in both halves)
-Board sweep: 0-0, 32 open -- still clean.
+Board sweep: 0-0, 33 open -- still clean.
 Why picks lost (14 days): close game 103, favourite lost 93, coin flip 61, upset 48, blowout 45, price moved against it 19, drawn 12.
 Yesterday (2026-11-22): board 61-21, sweep broken by wsl Manchester City at 68%; 21.9 losses expected, 21 came in (63.4% chance of that many or more); tickets: ladder lost, 10-leg lost, 2x every-game lost.
 - LOST wsl Manchester City at 68% (-270), Manchester City 1 - Tottenham Hotspur 3: margin 2 · the book had my side favoured too · called at 68% · favourite lost; soccer picks like it: 187 of 231 (81% vs 69% stated)
