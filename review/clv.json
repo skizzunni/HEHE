@@ -3,15 +3,15 @@
  "enough": true,
  "last": {
   "beat_close_pct": 57.7,
-  "brier_close": 0.2092,
-  "brier_published": 0.211,
+  "brier_close": 0.2107,
+  "brier_published": 0.212,
   "dates": [
    "2026-11-19",
-   "2026-11-22"
+   "2026-11-23"
   ],
-  "logloss_close": 0.6073,
-  "logloss_published": 0.6122,
-  "mean_clv_pts": 0.44,
+  "logloss_close": 0.6107,
+  "logloss_published": 0.6141,
+  "mean_clv_pts": 0.47,
   "n": 300
  },
  "market_is_model": true,
@@ -42,6 +42,15 @@
    "league": "afc",
    "published": 0.65,
    "won": 1
+  },
+  "afc:401912612": {
+   "call": false,
+   "close": 0.7893,
+   "clv": 10.93,
+   "day": "2026-11-23",
+   "league": "afc",
+   "published": 0.68,
+   "won": 0
   },
   "afc:401912618": {
    "call": false,
@@ -34218,5 +34227,5 @@
    "won": 0
   }
  },
- "updated": "2026-11-23T15:40+00:00"
+ "updated": "2026-11-23T15:45+00:00"
 }
