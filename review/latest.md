@@ -25,6 +25,7 @@ Pool game lines (one per game and bet type), every league, by half: 82.9% vs 82.
 Daily 10-leg, replayed on every 8 AM card: cashed 10 of 13 days (77%) vs 44% stated, at about 1.64x.
 Ladder vs every-game ticket to 2x, same 13 days (the last 14 saved cards only; older days drop off): ladder 3/6 then 0/7; every-game 4/6 then 3/7; only the every-game cashed on 6 days, only the ladder on 2 -- a fair coin splits 6-2 or wider 29% of the time.
 Ladder vs every-game ticket to 1.5x, same 13 days (the last 14 saved cards only; older days drop off): ladder 3/6 then 0/7; every-game 4/6 then 6/7; only the every-game cashed on 9 days, only the ladder on 2 -- a fair coin splits 9-2 or wider 7% of the time.
+Money at the taken price, $1 a pick, by date half: soccer win-or-draw -1.9% then -8.7% (n 793); NBA +3.4% then -1.0% (n 248); NHL -3.9% then +0.1% (n 270); NFL +3.3% then +8.4% (n 83); college football -1.3% then -4.7% (n 363) -- winning often is not winning money.
 Win-or-draw picks whose price moved 3+ points against, by half: 14/28 vs 20.0 expected (z -2.5) then 21/29 vs 20.4 expected (z +0.2) -- information only.
 Picks that switched side before kick-off, by half: 50/72 vs 44.3 expected (z +1.4) then 47/72 vs 44.9 expected (z +0.5) -- information only.
 Win-or-draw picks by stated chance, by half: under 70% 80/117 (z +0.4) then 72/117 (z -1.2); 70-80% 149/187 (z +1.7) then 144/188 (z +0.7); 80%+ 77/92 (z +0.4) then 69/92 (z -1.9).
