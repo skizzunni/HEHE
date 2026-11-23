@@ -1,91 +1,91 @@
 {
- "run": "2026-11-16",
+ "run": "2026-11-23",
  "leagues": {
   "nfl": {
-   "games": 305,
-   "test_games": 153,
+   "games": 315,
+   "test_games": 158,
    "close": {
-    "hit": 44.44,
-    "logloss": 0.6937
+    "hit": 44.94,
+    "logloss": 0.6936
    },
    "weather": {
-    "hit": 48.37,
-    "logloss": 0.6998,
+    "hit": 47.47,
+    "logloss": 0.7067,
     "weights": [
-     -0.231,
-     0.069,
-     0.156,
-     0.124,
-     0.131,
-     -0.228
+     -0.184,
+     0.088,
+     0.027,
+     0.212,
+     0.254,
+     -0.25
     ],
     "picks_changed": 60,
-    "extra_wins": 6,
+    "extra_wins": 4,
     "significant": false
    },
    "windiest_quarter": {
-    "under_hit": 47.4,
-    "under_price": 49.9,
-    "min_wind": 9.0
+    "under_hit": 46.2,
+    "under_price": 50.0,
+    "min_wind": 8.8
    },
    "calmest_quarter": {
-    "under_hit": 47.4,
+    "under_hit": 46.2,
     "under_price": 49.9
    },
    "wind_rule": {
-    "windy_at": 8.0,
+    "windy_at": 8.1,
     "calm_at": 3.4,
     "fit": {
-     "n": 80,
-     "hit": 57.5
+     "n": 83,
+     "hit": 55.4
     },
     "test": {
      "n": 93,
-     "hit": 51.6
+     "hit": 52.7
     }
    }
   },
   "ncaaf": {
-   "games": 1444,
-   "test_games": 722,
+   "games": 1441,
+   "test_games": 721,
    "close": {
-    "hit": 51.66,
+    "hit": 51.32,
     "logloss": 0.694
    },
    "weather": {
-    "hit": 48.75,
-    "logloss": 0.6962,
+    "hit": 51.46,
+    "logloss": 0.6946,
     "weights": [
-     -0.142,
-     0.677,
-     0.24,
-     -0.194,
-     -0.218,
-     0.025
+     -0.117,
+     0.711,
+     0.235,
+     -0.154,
+     -0.247,
+     0.023
     ],
-    "picks_changed": 271,
-    "extra_wins": -21,
+    "picks_changed": 305,
+    "extra_wins": 1,
     "significant": false
    },
    "windiest_quarter": {
-    "under_hit": 54.4,
-    "under_price": 49.9,
-    "min_wind": 8.1
+    "under_hit": 52.2,
+    "under_price": 50.0,
+    "min_wind": 8.3
    },
    "calmest_quarter": {
-    "under_hit": 47.8,
+    "under_hit": 44.4,
     "under_price": 50.0
    },
    "wind_rule": {
-    "windy_at": 7.9,
-    "calm_at": 3.5,
+    "windy_at": 8.0,
+    "calm_at": 3.6,
     "fit": {
-     "n": 364,
-     "hit": 52.7
+     "n": 365,
+     "hit": 52.1
     },
     "test": {
-     "n": 371,
-     "hit": 53.4
+     "n": 382,
+     "hit": 54.7
     }
    }
   },
