@@ -50,3 +50,29 @@ class StatusTest(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class UpdateTest(unittest.TestCase):
+    def test_incremental_and_review_line(self):
+        import datetime as dt
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "c.json")
+        calls = []
+
+        def fake(a, b):
+            calls.append((a, b))
+            return [dict(id=a, p=0.6, price=-150, won=True)]
+        c = P.update(path, today=dt.date(2026, 11, 26), collect_fn=fake)
+        self.assertEqual(calls, [("2026-11-24", "2026-11-25")])
+        self.assertEqual(c["through"], "2026-11-25")
+        c = P.update(path, today=dt.date(2026, 11, 26), collect_fn=fake)   # nothing new
+        self.assertEqual(len(calls), 1)
+        c = P.update(path, today=dt.date(2026, 11, 28), collect_fn=fake)
+        self.assertEqual(calls[-1], ("2026-11-26", "2026-11-27"))
+        self.assertEqual(len(c["bets"]), 2)
+        import daily_review
+        line = daily_review.nhl_dog_prereg_line(update_fn=lambda: c)
+        self.assertIn("2/2 covered", line)
+        self.assertIn("148 more to decide", line)
+        empty = daily_review.nhl_dog_prereg_line(update_fn=lambda: dict(through=None, bets=[]))
+        self.assertIn("no games yet", empty)

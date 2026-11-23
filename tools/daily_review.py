@@ -501,6 +501,23 @@ def value_prereg_line(status_fn=None, finds=None):
             f"{s['won']}/{s['n']} ({round(100 * s['won'] / s['n'])}% vs {s['fair']}% fair){away}; {what}.")
 
 
+def nhl_dog_prereg_line(update_fn=None):
+    """The pre-registered NHL dog +1.5 vs -200 favourite test (2026-11-23):
+    grades the new days since the last run, then its record and verdict."""
+    try:
+        import prereg_nhl_dog as P
+        c = (update_fn or P.update)()
+        s = P.status(c["bets"])
+    except Exception:
+        return None
+    if not s["n"]:
+        return f"Pre-registered test, NHL dog +1.5 vs a -200 favourite (games from {P.SINCE}): no games yet; decides at {P.NEED}."
+    what = {"waiting": f"{s['need'] - s['n']} more to decide",
+            "supports": "SUPPORTS it -- put it to the user", "dropped": "dropped -- it did not hold up"}[s["verdict"]]
+    return (f"Pre-registered test, NHL dog +1.5 vs a -200 favourite (games from {P.SINCE}): "
+            f"{s['won']}/{s['n']} covered vs {s['expected']} expected (z {s['z']:+.2f}, ROI {s['roi']:+.1f}%); {what}.")
+
+
 def priced_calibration_line(ledger=None, min_half=15):
     """ledger.priced_calibration as one review line: each group's date halves
     won% against stated% with a z-score, naming any group past the 99.5% bar
@@ -2541,6 +2558,8 @@ def words(r, fit):
         out.append(r["prereg_more"])
     if r.get("value_prereg"):
         out.append(r["value_prereg"])
+    if r.get("nhl_dog_prereg"):
+        out.append(r["nhl_dog_prereg"])
     if r.get("prop_fair"):
         out.append(r["prop_fair"])
     if r.get("dc_side"):
@@ -2752,6 +2771,7 @@ def _main():
     log[today.isoformat()]["prereg"] = prereg_line()
     log[today.isoformat()]["prereg_more"] = prereg_more_line()
     log[today.isoformat()]["value_prereg"] = value_prereg_line()
+    log[today.isoformat()]["nhl_dog_prereg"] = nhl_dog_prereg_line()
     log[today.isoformat()]["prop_fair"] = prop_fair_line()
     log[today.isoformat()]["dc_side"] = dc_side_line(ledger)
     log[today.isoformat()]["nhl_b2b"] = nhl_b2b_line(today, ledger=ledger)

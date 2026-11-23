@@ -139,11 +139,31 @@ def collect(since=SINCE, until=None):
     return bets
 
 
+def load(path=CACHE):
+    """{"through": last graded day, "bets": [...]}; empty before the first run."""
+    try:
+        with open(path) as f:
+            c = json.load(f)
+        return c if isinstance(c, dict) else dict(through=None, bets=c)
+    except (OSError, ValueError):
+        return dict(through=None, bets=[])
+
+
+def update(path=CACHE, today=None, collect_fn=None):
+    """Grade only the days since the last run (yesterday at the latest) and save."""
+    today = today or dt.date.today()
+    c = load(path)
+    start = (dt.date.fromisoformat(c["through"]) + dt.timedelta(1)).isoformat() if c.get("through") else SINCE
+    end = (today - dt.timedelta(1)).isoformat()
+    if start > end:
+        return c
+    new = (collect_fn or collect)(start, end)
+    seen = {b["id"] for b in c["bets"]}
+    c = dict(through=end, bets=c["bets"] + [b for b in new if b["id"] not in seen])
+    with open(path, "w") as f:
+        json.dump(c, f)
+    return c
+
+
 if __name__ == "__main__":
-    if dt.date.today().isoformat() <= SINCE:
-        print(json.dumps(dict(status([]), since=SINCE)))
-        sys.exit(0)
-    bs = collect()
-    with open(CACHE, "w") as f:
-        json.dump(bs, f)
-    print(json.dumps(dict(status(bs), since=SINCE)))
+    print(json.dumps(dict(status(update()["bets"]), since=SINCE)))
