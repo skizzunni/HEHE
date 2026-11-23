@@ -500,5 +500,21 @@ class LadderAlt15Test(unittest.TestCase):
         self.assertIn("every-game ticket to 2x", daily_review.ladder_alt_line(lad, alt))
 
 
+class BoardRoiLineTest(unittest.TestCase):
+    def test_roi_by_half(self):
+        import daily_review
+        L = {}
+        for i in range(40):
+            L[f"a{i}"] = dict(status="won" if i % 4 else "lost", price="-300", date=f"2026-11-{1 + i // 4:02d}", dc=True)
+        line = daily_review.board_roi_line(L)
+        # 3 of 4 won at -300: 3 x 0.333 - 1 = 0 per 4 bets -> 0.0%
+        self.assertIn("soccer win-or-draw +0.0% then +0.0% (n 40)", line)
+        self.assertNotIn("NBA", line)
+
+    def test_too_few_gives_none(self):
+        import daily_review
+        self.assertIsNone(daily_review.board_roi_line({"x": dict(status="won", price="-200", date="2026-11-01", dc=True)}))
+
+
 if __name__ == "__main__":
     unittest.main()

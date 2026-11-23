@@ -1040,6 +1040,46 @@ def dc_band_line(ledger=None, bands=DC_BANDS, min_n=20):
 
 BOARD_BANDS = ((50, 60), (60, 70), (70, 80), (80, 90), (90, 101))
 
+ROI_GROUPS = (("soccer win-or-draw", lambda e: bool(e.get("dc"))),
+              ("NBA", lambda e: e.get("league") == "nba"), ("NHL", lambda e: e.get("league") == "nhl"),
+              ("NFL", lambda e: e.get("league") == "nfl"), ("college football", lambda e: e.get("league") == "ncaaf"))
+
+
+def _dec(a):
+    a = float(str(a).replace("+", ""))
+    return 1 + (a / 100 if a > 0 else 100 / -a)
+
+
+def board_roi_line(ledger=None, groups=ROI_GROUPS, min_n=40):
+    """What $1 on every graded board pick of a type returned at the price it
+    was taken, by date half. Winning often is not the same as winning money:
+    2026-11-23 the strategy lab found win-or-draw loses at the close in every
+    league and season (83,806 matches), and the board's own record agrees
+    (-1.9% then -8.7% on 793). Information only."""
+    if ledger is None:
+        ledger = load("ledger.json", {})
+    R = sorted((e for e in ledger.values() if isinstance(e, dict) and e.get("status") in ("won", "lost")
+                and e.get("price") and e.get("date") and not e.get("record_excluded")), key=lambda e: e["date"])
+    parts = []
+    for name, f in groups:
+        S = [e for e in R if f(e)]
+        if len(S) < min_n:
+            continue
+        h = len(S) // 2
+
+        def roi(X):
+            try:
+                return 100 * sum((_dec(e["price"]) - 1) if e["status"] == "won" else -1 for e in X) / len(X)
+            except (TypeError, ValueError, ZeroDivisionError):
+                return None
+        a, b = roi(S[:h]), roi(S[h:])
+        if a is None or b is None:
+            continue
+        a, b = round(a, 1) + 0.0, round(b, 1) + 0.0          # no "-0.0%"
+        parts.append(f"{name} {a:+.1f}% then {b:+.1f}% (n {len(S)})")
+    return ("Money at the taken price, $1 a pick, by date half: " + "; ".join(parts)
+            + " -- winning often is not winning money.") if parts else None
+
 
 def board_band_line(ledger=None, bands=BOARD_BANDS, min_n=20):
     """Graded board picks by stated chance, split at the median date, won vs
@@ -2594,6 +2634,8 @@ def words(r, fit):
         out.append(r["ladder_alt"])
     if r.get("ladder_alt15"):
         out.append(r["ladder_alt15"])
+    if r.get("board_roi"):
+        out.append(r["board_roi"])
     if r.get("dc_moves"):
         out.append(r["dc_moves"])
     if r.get("switched"):
@@ -2773,6 +2815,7 @@ def _main():
     log[today.isoformat()]["prereg"] = prereg_line()
     log[today.isoformat()]["prereg_more"] = prereg_more_line()
     log[today.isoformat()]["value_prereg"] = value_prereg_line()
+    log[today.isoformat()]["board_roi"] = board_roi_line(ledger)
     log[today.isoformat()]["nhl_dog_prereg"] = nhl_dog_prereg_line()
     log[today.isoformat()]["prop_fair"] = prop_fair_line()
     log[today.isoformat()]["dc_side"] = dc_side_line(ledger)
