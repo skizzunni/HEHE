@@ -59,5 +59,26 @@ class CardCautionTest(unittest.TestCase):
         self.assertTrue(any("X: 5+ Points" in l for l in daily_card.prop_lines(D, minutes_fn=boom)))
 
 
+class LadderCautionTest(unittest.TestCase):
+    def R(self, leg):
+        return {"runs": 3, "today": {"stake": 1.0, "pays": 2.0, "prob": 0.5,
+                                     "legs": [dict(dict(label="Bench Guy: 5+ Points", price="-500", p=0.83, match="A @ B",
+                                                        lg="NBA", tip="7:00 PM", league="nba", kind="prop",
+                                                        name="Bench Guy", gid="nba:9"), **leg)]}}
+
+    def test_nba_prop_leg_flagged(self):
+        import ladder_ticket
+        out = ladder_ticket.lines(self.R({}), minutes_fn=lambda gid, names: {"Bench Guy": 14.2})
+        self.assertIn("Caution: 14.2 min a game over his last 5", out[1])
+
+    def test_other_legs_untouched(self):
+        import ladder_ticket
+        fn = lambda gid, names: {"Bench Guy": 14.2}
+        self.assertNotIn("Caution", ladder_ticket.lines(self.R(dict(league="nfl")), minutes_fn=fn)[1])
+        self.assertNotIn("Caution", ladder_ticket.lines(self.R(dict(kind="total")), minutes_fn=fn)[1])
+        self.assertNotIn("Caution", ladder_ticket.lines(self.R({}))[1])
+        self.assertNotIn("Caution", ladder_ticket.lines(self.R({}), minutes_fn=lambda g, n: {"Bench Guy": 31.0})[1])
+
+
 if __name__ == "__main__":
     unittest.main()

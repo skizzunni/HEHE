@@ -83,8 +83,22 @@ def pool_context(L, pool_fn=None, band=0.06):
             f"({round(100 * w / len(rows))}% vs {round(100 * said)}% stated)")
 
 
-def lines(R, pool_fn=None):
-    """The ticket as a list of strings; [] when there is no ticket today."""
+def _low_minutes(L, minutes_fn):
+    """A caution for an NBA prop leg on a player under 20 minutes a game over
+    his last 5 (strategy lab 2026-11-23; information only), else ''."""
+    if not minutes_fn or L.get("kind") != "prop" or L.get("league") != "nba" or not L.get("name"):
+        return ""
+    try:
+        import nba_minutes
+        m = (minutes_fn(L.get("gid"), [L["name"]]) or {}).get(L["name"])
+    except Exception:
+        return ""
+    return f" Caution: {m:g} min a game over his last 5 -- {nba_minutes.NOTE}." if m is not None and m < nba_minutes.LOW_MPG else ""
+
+
+def lines(R, pool_fn=None, minutes_fn=None):
+    """The ticket as a list of strings; [] when there is no ticket today.
+    minutes_fn (nba_minutes.mpg_last5) adds the low-minutes caution."""
     T = (R or {}).get("today") or {}
     if not T.get("legs"):
         return []
@@ -109,7 +123,8 @@ def lines(R, pool_fn=None):
                       + "." if rec.get("n") else "")
                    + (f" Every {str(L.get('league') or '').upper()} {L.get('market')} line at a similar chance: "
                       f"{pr['won']} of {pr['n']} ({round(100 * pr['won'] / pr['n'])}% vs {pr['said']}% stated)." if pr.get("n") else "")
-                   + (f" Out: {outs}." if outs else ""))
+                   + (f" Out: {outs}." if outs else "")
+                   + _low_minutes(L, minutes_fn))
     v = T.get("vs_top4") or {}
     if v:
         out.append(f"Plain top 4 instead: {round(100 * v['prob'])}% at {v['pays']:.2f}x.")
@@ -187,7 +202,8 @@ def alt_record():
 
 if __name__ == "__main__":
     import ladder
-    out = lines(ladder.report())
+    import nba_minutes
+    out = lines(ladder.report(), minutes_fn=nba_minutes.mpg_last5)
     print("\n".join(out) or "No ladder ticket today yet.")
     try:                                     # the every-game alternative, from today's frozen 8 AM pool
         import datetime as dt
