@@ -53,7 +53,7 @@ UFC 2026-11-21: picks (the price favourite) 8-4; close fights (under 60%) 2 of 3
 TRAILING value bets: 40.5% hit vs 44.7% stated on 593 (by half 138/328 then 102/265, 42% / 38% vs 45% / 44% stated; short in both halves)
 Strong calls 0-1 (0.0% vs 79.0% claimed).
 Closing line value: +11.03 points on 1 picks; beat the close on 100.0%.
-Board sweep: 0-1, 32 open -- broken (first loss: afc Al Hilal at 79%); 0.2 losses expected from the settled picks' chances, so 1 or more by now had a 21% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: afc 1 (0.2 expected).
+Board sweep: 0-1, 33 open -- broken (first loss: afc Al Hilal at 79%); 0.2 losses expected from the settled picks' chances, so 1 or more by now had a 21% chance; 0 of the 1 were near coin flips (called under 60%), 1 were real misses; losses by league: afc 1 (0.2 expected).
 - LOST afc Al Hilal at 79% (-525), Al Hilal 2 - Neftchi Fergana 2: margin 0 · drawn -- a draw loses a moneyline side · the book had my side favoured too · called at 79% · upset; soccer picks like it: 112 of 130 (86% vs 79% stated)
 Why picks lost (14 days): close game 103, favourite lost 93, coin flip 61, upset 49, blowout 45, price moved against it 19, drawn 13.
 Yesterday (2026-11-22): board 61-21, sweep broken by wsl Manchester City at 68%; 21.9 losses expected, 21 came in (63.4% chance of that many or more); tickets: ladder lost, 10-leg lost, 2x every-game lost.
