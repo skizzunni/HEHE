@@ -8,6 +8,7 @@ Every script here, with the first paragraph of its own description.
 | `autotune.py` | Re-decide the calls' selection rule and bench from the record (autotune.py). |
 | `backtest.py` | Backtest stacks.py on real closing lines and real final scores. |
 | `band_roi_study.py` | Favourite / underdog return by price band at the close, season by season, on tools/nba_history.py output (any league). Answers: where, if anywhere, is the underdog under-priced? python tools/band_roi_study.py... |
+| `blind_model.py` | Price-blind team numbers from results only (no odds), walk-forward tested against the ledger's no-vig price. Information only: it lost to the market in every league (README 2026-11-23). |
 | `clv.py` | Closing line value: the primary scoreboard. |
 | `daily_review.py` | The daily review: what lost, why, and what to change for tomorrow. |
 | `devig_study.py` | Ledger study for the de-vig change (README, accuracy plan item 3). |

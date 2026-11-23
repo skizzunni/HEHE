@@ -4960,3 +4960,28 @@ The review also flags "MISSING today's ladder ticket" when the 8 AM card is save
 from it (`card_check`) (2026-11-09).
 With a best-combination ticket, the ladder's options table is labelled as what the plain top 1-8 Locks would
 give instead, not as the ticket's own choice (2026-11-09).
+
+## Rejected: price-blind team numbers as a pick filter (2026-11-23)
+
+Asked to research first and look at lines second, so nothing anchors on the price.
+`tools/blind_model.py` builds our own number from game results only (ridge team
+ratings plus home edge, recency-weighted; offence/defence for totals), predicts each
+day only from earlier games, and then compares with the DraftKings no-vig price saved
+in the ledger for the same game.
+
+| league | games | Brier market / blind | winner market / blind | blind right when they disagree |
+|---|---|---|---|---|
+| NBA | 180 | 0.195 / 0.213 | 72% / 68% | 9 of 24 (38%) |
+| NHL | 224 | 0.238 / 0.248 | 57% / 53% | 19 of 47 (40%) |
+| NFL | 69 | 0.178 / 0.199 | 75% / 70% | 2 of 8 (25%) |
+
+The market was better in every league and in both date halves. Filters on the market
+favourite, pooled across the three leagues, by date half: blind agrees 68.4% vs 63.2%
+stated (z +1.52) then 63.9% vs 64.9% (z -0.31); blind disagrees z +2.23 then +0.02;
+blind more confident z +0.11 then -0.28; blind 5+ points more confident z -0.95 then
++0.39. None reaches z 2.8 in both halves, so none is adopted. Two NBA injury layers
+(minutes-weighted plus/minus on-off, and game-score above replacement) made the blind
+number worse in the untouched half (Brier 0.227 -> 0.234 to 0.280), so they are not
+used either. The blind number stays information: it is written down before lines are
+read, and a pick still needs evidence the price has not absorbed yet (late injury,
+goalie or rest news), not just a disagreement with it.
