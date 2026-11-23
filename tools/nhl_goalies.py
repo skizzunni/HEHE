@@ -56,19 +56,62 @@ def parse(html):
     return out
 
 
+NHL = "https://api-web.nhle.com/v1/{}"
+
+
+def _nhl(path):
+    req = urllib.request.Request(NHL.format(path), headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return json.load(r)
+    except Exception:
+        return None
+
+
+def team_goalies(get=_nhl):
+    """{team name: [(goalie full name, starts, save %)]} for this season, from
+    the NHL's own stats; {} when it cannot be reached."""
+    st = (get("standings/now") or {}).get("standings") or []
+    out = {}
+    for t in st:
+        name, tri = (t.get("teamName") or {}).get("default"), (t.get("teamAbbrev") or {}).get("default")
+        cs = get(f"club-stats/{tri}/now") or {}
+        out[name] = [(f"{g['firstName']['default']} {g['lastName']['default']}", g.get("gamesStarted") or 0,
+                      g.get("savePercentage")) for g in cs.get("goalies") or []]
+    return out
+
+
+def flag(goalie, roster):
+    """A note when the listed starter is not this team's usual one: absent from
+    its season stats, or with fewer starts than another goalie."""
+    if not goalie or not roster:
+        return ""
+    by = {n.lower(): (n, gs, sv) for n, gs, sv in roster}
+    top = max(roster, key=lambda r: r[1])
+    me = by.get(goalie.lower())
+    if not me:
+        return f" -- NOT among this team's goalies this season (usual: {top[0]}, {top[1]} starts); verify"
+    if me[1] < top[1]:
+        sv = f", .{round(1000 * me[2]):03d}" if me[2] else ""
+        return f" -- not the usual starter ({me[1]} starts{sv}; {top[0]} has {top[1]})"
+    return ""
+
+
 def fetch(day):
     req = urllib.request.Request(URL.format(day), headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=30) as r:
         return r.read().decode("utf-8", "replace")
 
 
-def text(rows):
+def text(rows, rosters=None):
     if not rows:
         return "No goalie data found on DailyFaceoff."
-    f = lambda r, s: f"{r[s + '_goalie'] or '?'} ({r[s + '_status']}" + (f", {r[s + '_at']} ET" if r[s + "_at"] else "") + ")"
+    rosters = rosters or {}
+    f = lambda r, s: (f"{r[s + '_goalie'] or '?'} ({r[s + '_status']}" + (f", {r[s + '_at']} ET" if r[s + "_at"] else "") + ")"
+                      + flag(r[s + "_goalie"], rosters.get(r[s])))
     return "\n".join(f"{r['away']} @ {r['home']}: {f(r, 'away')} vs {f(r, 'home')}" for r in rows)
 
 
 if __name__ == "__main__":
     day = sys.argv[1] if len(sys.argv) > 1 else dt.datetime.now(ET).date().isoformat()
-    print(text(parse(fetch(day))))
+    print(text(parse(fetch(day)), team_goalies()))

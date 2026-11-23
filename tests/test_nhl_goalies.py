@@ -30,5 +30,27 @@ class ParseTest(unittest.TestCase):
         self.assertIn("No goalie data", G.text([]))
 
 
+class FlagTest(unittest.TestCase):
+    R = [("Jesper Wallstedt", 22, 0.924), ("Calvin Pickard", 3, 0.855)]
+
+    def test_flags(self):
+        self.assertEqual(G.flag("Jesper Wallstedt", self.R), "")
+        self.assertIn("not the usual starter (3 starts, .855; Jesper Wallstedt has 22)", G.flag("Calvin Pickard", self.R))
+        self.assertIn("NOT among this team's goalies", G.flag("Filip Gustavsson", self.R))
+        self.assertEqual(G.flag("Anyone", []), "")
+
+    def test_text_uses_rosters(self):
+        rows = [dict(away="Minnesota Wild", home="San Jose Sharks", away_goalie="Filip Gustavsson", away_status="Confirmed",
+                     away_at=None, home_goalie="Yaroslav Askarov", home_status="Confirmed", home_at=None)]
+        t = G.text(rows, {"Minnesota Wild": self.R})
+        self.assertIn("Filip Gustavsson (Confirmed) -- NOT among", t)
+
+    def test_team_goalies_from_api(self):
+        pages = {"standings/now": {"standings": [{"teamName": {"default": "Minnesota Wild"}, "teamAbbrev": {"default": "MIN"}}]},
+                 "club-stats/MIN/now": {"goalies": [{"firstName": {"default": "Jesper"}, "lastName": {"default": "Wallstedt"},
+                                                     "gamesStarted": 22, "savePercentage": 0.924}]}}
+        self.assertEqual(G.team_goalies(get=pages.get), {"Minnesota Wild": [("Jesper Wallstedt", 22, 0.924)]})
+
+
 if __name__ == "__main__":
     unittest.main()
