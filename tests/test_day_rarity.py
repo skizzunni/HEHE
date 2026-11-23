@@ -186,10 +186,6 @@ class B2BRecord(unittest.TestCase):
         self.assertEqual(R["theirs"], [1, 1, 65.0])      # B played the 11th; D (rested) won
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class AuditStartDates(unittest.TestCase):
     def test_value_bets_get_halves_from_start(self):
         import os
@@ -218,3 +214,7 @@ class OneSport(unittest.TestCase):
         self.assertEqual(daily_review._one_sport(dict(sw, lost=3)), "")
         self.assertEqual(daily_review._one_sport(dict(lost=5, lost_by_league={"nba": 5})), "; all 5 losses are NBA")
         self.assertEqual(daily_review._one_sport(dict(lost=5, lost_by_league={"nba": 3, "epl": 2})), "")
+
+
+if __name__ == "__main__":
+    unittest.main()

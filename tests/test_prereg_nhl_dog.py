@@ -48,10 +48,6 @@ class StatusTest(unittest.TestCase):
         self.assertEqual(P.status(flat)["verdict"], "dropped")
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class UpdateTest(unittest.TestCase):
     def test_incremental_and_review_line(self):
         import datetime as dt
@@ -76,3 +72,7 @@ class UpdateTest(unittest.TestCase):
         self.assertIn("148 more to decide", line)
         empty = daily_review.nhl_dog_prereg_line(update_fn=lambda: dict(through=None, bets=[]))
         self.assertIn("no games yet", empty)
+
+
+if __name__ == "__main__":
+    unittest.main()

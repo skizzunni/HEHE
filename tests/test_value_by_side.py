@@ -32,10 +32,6 @@ class BySide(unittest.TestCase):
         self.assertEqual(bs["home"][0]["roi"], 30.0)                  # (1.6 + 1.6 - 1 - 1) / 4
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class PreregHome(unittest.TestCase):
     def test_counts_only_home_finds_from_the_start(self):
         fs = [f(i, "home", "2026-11-15", i < 30, fair=0.5) for i in range(60)]          # 30/60 vs 50%: fine
@@ -46,3 +42,6 @@ class PreregHome(unittest.TestCase):
         self.assertEqual(V.prereg_status(finds=short)["verdict"], "short")
         self.assertEqual(V.prereg_status(finds=short[:10])["verdict"], "waiting")
 
+
+if __name__ == "__main__":
+    unittest.main()

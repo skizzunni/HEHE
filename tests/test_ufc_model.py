@@ -77,10 +77,6 @@ class UFCModel(unittest.TestCase):
         self.assertIsNone(M.distance_lean("A", "B", {"A": [1, 3], "B": [2, 3]}))
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class UFCBands(unittest.TestCase):
     def test_bands_pick_the_price_favourite(self):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
@@ -118,3 +114,7 @@ class UFCReviewLines(unittest.TestCase):
         with mock.patch.object(props_ledger, "fair_bands", lambda *a, **k: B):
             self.assertEqual(daily_review.prop_fair_line(),
                              "Props by the book's fair chance (won, by half; fair / our stated): 90%+ 84%, 83% (93% / 85%).")
+
+
+if __name__ == "__main__":
+    unittest.main()

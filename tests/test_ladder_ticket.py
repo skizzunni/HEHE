@@ -50,10 +50,6 @@ class Ticket(unittest.TestCase):
         self.assertEqual(t.lines({"today": {"legs": []}}), [])
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class AltLine(unittest.TestCase):
     def test_alt_line(self):
         import ladder_ticket as lt
@@ -100,3 +96,7 @@ class UnderChance(unittest.TestCase):
         self.assertIn("; every saved NBA over line near this chance, one per game: 32 of 40 (80% vs 75% stated).",
                       t.lines(R(L), pool_fn=lambda *a, **k: pool)[1])
         self.assertIn("Locks like it: 7 of 10 (70%).", t.lines(R(leg(7, 10)))[1])
+
+
+if __name__ == "__main__":
+    unittest.main()

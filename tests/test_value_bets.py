@@ -255,10 +255,6 @@ class LeaveOneOut(unittest.TestCase):
                          fd_home_fair * (1 + 100 / 140) - 1 > V.MIN_EV)
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class Halves(unittest.TestCase):
     def test_report_halves(self):
         import tempfile, json, value_bets
@@ -270,3 +266,7 @@ class Halves(unittest.TestCase):
         r = value_bets.report(fh.name)
         self.assertEqual([(h["won"], h["n"]) for h in r["halves"]], [(1, 2), (1, 2)])
         self.assertEqual([h["roi"] for h in r["halves"]], [0.0, 0.0])
+
+
+if __name__ == "__main__":
+    unittest.main()

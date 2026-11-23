@@ -41,10 +41,6 @@ class Record(unittest.TestCase):
         self.assertEqual((r["n"], r["won"], r["by_league"], r["swept"]), (2, 1, [dict(league="NHL", won=1, n=2)], 0))
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class PoolForm(unittest.TestCase):
     def test_last_days_only(self):
         import locks
@@ -199,3 +195,7 @@ class PoolGameCounts(unittest.TestCase):
             with open(p, "w") as fh:
                 json.dump({"pools": {"2026-11-10": {"legs": legs}}}, fh)
             self.assertEqual(locks.pool_game_counts([p], led), {("nba", "over"): 2})
+
+
+if __name__ == "__main__":
+    unittest.main()

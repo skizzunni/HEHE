@@ -463,10 +463,6 @@ class FrozenPool(unittest.TestCase):
             self.assertIsNone(locks.frozen_pool("20261119", p))
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class ValuePreregLineTest(unittest.TestCase):
     def _finds(self):
         return [dict(kind="value", status="won", side="away", seen="2026-11-16", fair=0.4),
@@ -502,3 +498,7 @@ class LadderAlt15Test(unittest.TestCase):
         line = daily_review.ladder_alt_line(lad, alt, target=1.5)
         self.assertIn("every-game ticket to 1.5x, same 8 days", line)
         self.assertIn("every-game ticket to 2x", daily_review.ladder_alt_line(lad, alt))
+
+
+if __name__ == "__main__":
+    unittest.main()

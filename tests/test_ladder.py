@@ -499,10 +499,6 @@ class LegsByKind(unittest.TestCase):
         self.assertEqual(ladder.legs_by_kind(G), {"prop": dict(won=1, n=2, said=80.0), "game": dict(won=2, n=2, said=75.0)})
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class CallsStudy(unittest.TestCase):
     def test_calls_study(self):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
@@ -552,3 +548,7 @@ class RunsLine(unittest.TestCase):
                 " Replayed on every saved card: as ranked 12/24 cashed at 2.22x, without props 13/24 at 2.32x."))
         with mock.patch.object(ladder, "report", lambda bk=None: dict(history=[])):
             self.assertIsNone(daily_review.runs_line())
+
+
+if __name__ == "__main__":
+    unittest.main()

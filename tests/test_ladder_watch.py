@@ -145,10 +145,6 @@ class LadderWatch(unittest.TestCase):
         self.assertEqual(outs[2], "CHANGE: Over 214.5 points = won | A 112 - B 109\n")
 
 
-if __name__ == "__main__":
-    unittest.main()
-
-
 class DecidedNoteOnce(unittest.TestCase):
     def test_running_total_after_decided_is_not_a_change(self):
         import ladder_watch as w
@@ -439,3 +435,7 @@ class FirstLookCountsAddUp(unittest.TestCase):
         self.assertIn("WATCHING: 3 board games -- 1 won, 0 lost, 1 open, 1 void or not graded", w.first_look(after))
         self.assertIn("WATCHING: 2 board games -- 1 won, 0 lost, 1 open",
                       w.first_look({k: v for k, v in after.items() if "E @ F" not in k}))
+
+
+if __name__ == "__main__":
+    unittest.main()
