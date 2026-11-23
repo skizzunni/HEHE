@@ -10123,6 +10123,28 @@
    "tip": "7:00 PM",
    "venue": "Kalshi"
   },
+  "nba:401910037|sure": {
+   "id": "nba:401910037",
+   "kind": "sure",
+   "league": "nba",
+   "legs": [
+    {
+     "price": "+122",
+     "stake_share": 0.4572,
+     "team": "Portland Trail Blazers",
+     "venue": "FanDuel"
+    },
+    {
+     "price": "-115",
+     "stake_share": 0.5428,
+     "team": "Philadelphia 76ers",
+     "venue": "DraftKings"
+    }
+   ],
+   "match": "POR @ PHI",
+   "profit": 0.0149,
+   "seen": "2026-11-23T22:50:03+00:00"
+  },
   "nba:401910037|{\"line\": 2.5, \"t\": \"spread\", \"team\": \"Portland Trail Blazers\"}|Kalshi": {
    "dec": 2.0947,
    "dk": "-110",
@@ -10145,6 +10167,23 @@
    "start": "2026-11-24T00:00Z",
    "team": "Portland Trail Blazers +2.5",
    "tip": "7:00 PM",
+   "venue": "Kalshi"
+  },
+  "nba:401910038|away|Kalshi": {
+   "dec": 1.5015,
+   "ev": 0.014,
+   "fair": 0.6754,
+   "fair_source": "consensus of 2 other venues",
+   "id": "nba:401910038",
+   "kind": "value",
+   "league": "nba",
+   "match": "OKC @ IND",
+   "price": "-199",
+   "seen": "2026-11-23T22:50:03+00:00",
+   "side": "away",
+   "start": "2026-11-24T00:30Z",
+   "team": "Oklahoma City Thunder",
+   "tip": "7:30 PM",
    "venue": "Kalshi"
   },
   "nba:401910038|home|FanDuel": {
