@@ -64311,11 +64311,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Aday Mara",
   "p": 0.8504,
   "p_fair": 0.9258,
   "price": "-1000",
-  "status": "open"
+  "status": "ungradable",
+  "void_why": "schema_error"
  },
  "nba:401910030|n:ajay mitchell|Points|15+": {
   "aid": null,
@@ -64327,11 +64329,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Points",
+  "matched": "name",
   "name": "Ajay Mitchell",
   "p": 0.8496,
   "p_fair": 0.883,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 17.0
  },
  "nba:401910030|n:ajay mitchell|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -64343,11 +64347,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Ajay Mitchell",
   "p": 0.8504,
   "p_fair": 0.9108,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nba:401910030|n:ajay mitchell|Pts + Reb + Ast|25+": {
   "aid": null,
@@ -64359,11 +64365,13 @@
   "league": "nba",
   "line": "25+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Ajay Mitchell",
   "p": 0.8504,
   "p_fair": 0.8806,
   "price": "-1000",
-  "status": "open"
+  "status": "lost",
+  "value": 23.0
  },
  "nba:401910030|n:bam adebayo|Rebounds|6+": {
   "aid": null,
@@ -64375,11 +64383,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Rebounds",
+  "matched": "name",
   "name": "Bam Adebayo",
   "p": 0.8491,
   "p_fair": 0.8934,
   "price": "-900",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nba:401910030|n:bennett stirtz|Pts + Reb + Ast|10+": {
   "aid": null,
@@ -64391,11 +64401,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Bennett Stirtz",
   "p": 0.8504,
   "p_fair": 0.9565,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 29.0
  },
  "nba:401910030|n:davion mitchell|Assists|4+": {
   "aid": null,
@@ -64406,11 +64418,13 @@
   "league": "nba",
   "line": "4+",
   "market": "Assists",
+  "matched": "name",
   "name": "Davion Mitchell",
   "p": 0.8736,
   "price": "-7000",
   "prop_lock": true,
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401910030|n:davion mitchell|Assists|6+": {
   "aid": null,
@@ -64422,11 +64436,13 @@
   "league": "nba",
   "line": "6+",
   "market": "Assists",
+  "matched": "name",
   "name": "Davion Mitchell",
   "p": 0.8495,
   "p_fair": 0.8449,
   "price": "-700",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nba:401910030|n:davion mitchell|Pts + Reb + Ast|20+": {
   "aid": null,
@@ -64438,11 +64454,13 @@
   "league": "nba",
   "line": "20+",
   "market": "Pts + Reb + Ast",
+  "matched": "name",
   "name": "Davion Mitchell",
   "p": 0.8496,
   "p_fair": 0.8844,
   "price": "-1000",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401910030|n:davion mitchell|Threes Made|1+": {
   "aid": null,
@@ -64454,11 +64472,13 @@
   "league": "nba",
   "line": "1+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Davion Mitchell",
   "p": 0.8493,
   "p_fair": 0.8968,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nba:401910030|n:giannis antetokounmpo|Assists|4+": {
   "aid": null,
@@ -64474,7 +64494,9 @@
   "p": 0.8473,
   "p_fair": 0.8418,
   "price": "-670",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910030|n:giannis antetokounmpo|Pts + Reb + Ast|35+": {
   "aid": null,
@@ -64490,7 +64512,9 @@
   "p": 0.8504,
   "p_fair": 0.8534,
   "price": "-1000",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910030|n:isaiah hartenstein|Points|5+": {
   "aid": null,
@@ -64502,11 +64526,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Isaiah Hartenstein",
   "p": 0.8496,
   "p_fair": 0.9539,
   "price": "-1100",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nba:401910030|n:jared mccain|Points|10+": {
   "aid": null,
@@ -64518,11 +64544,13 @@
   "league": "nba",
   "line": "10+",
   "market": "Points",
+  "matched": "name",
   "name": "Jared McCain",
   "p": 0.8496,
   "p_fair": 0.9341,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 20.0
  },
  "nba:401910030|n:jared mccain|Pts + Ast|15+": {
   "aid": null,
@@ -64534,11 +64562,13 @@
   "league": "nba",
   "line": "15+",
   "market": "Pts + Ast",
+  "matched": "name",
   "name": "Jared McCain",
   "p": 0.8474,
   "p_fair": 0.8979,
   "price": "-800",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nba:401910030|n:jared mccain|Reb + Ast|5+": {
   "aid": null,
@@ -64550,11 +64580,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Reb + Ast",
+  "matched": "name",
   "name": "Jared McCain",
   "p": 0.7641,
   "p_fair": 0.8084,
   "price": "-400",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401910030|n:klay thompson|Threes Made|2+": {
   "aid": null,
@@ -64566,11 +64598,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Threes Made",
+  "matched": "name",
   "name": "Klay Thompson",
   "p": 0.85,
   "p_fair": 0.8973,
   "price": "-1400",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nba:401910030|n:pelle larsson|Assists|2+": {
   "aid": null,
@@ -64582,11 +64616,13 @@
   "league": "nba",
   "line": "2+",
   "market": "Assists",
+  "matched": "name",
   "name": "Pelle Larsson",
   "p": 0.8495,
   "p_fair": 0.8505,
   "price": "-700",
-  "status": "open"
+  "status": "won",
+  "value": 5.0
  },
  "nba:401910030|n:pelle larsson|Points|5+": {
   "aid": null,
@@ -64598,11 +64634,13 @@
   "league": "nba",
   "line": "5+",
   "market": "Points",
+  "matched": "name",
   "name": "Pelle Larsson",
   "p": 0.8496,
   "p_fair": 0.9629,
   "price": "-1100",
-  "status": "open"
+  "status": "won",
+  "value": 21.0
  },
  "nba:401910030|n:shai gilgeous alexander|Pts + Reb + Ast|30+": {
   "aid": null,
@@ -64618,7 +64656,9 @@
   "p": 0.8504,
   "p_fair": 0.8589,
   "price": "-1000",
-  "status": "open"
+  "state": "dnp",
+  "status": "void",
+  "void_why": "not in box score"
  },
  "nba:401910031|n:aj dybantsa|Rebounds|4+": {
   "aid": null,
