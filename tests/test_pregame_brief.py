@@ -18,5 +18,14 @@ class BriefTest(unittest.TestCase):
         self.assertIn("goalies 2026-11-24", out)
 
 
+    def test_save_names_file_by_time(self):
+        import datetime as dt
+        import tempfile
+        d = tempfile.mkdtemp()
+        p = P.save("hello", os.path.join(d, "x"), now=dt.datetime(2026, 11, 23, 18, 40, tzinfo=P.ET))
+        self.assertTrue(p.endswith("brief_1840.txt"))
+        self.assertEqual(open(p).read(), "hello\n")
+
+
 if __name__ == "__main__":
     unittest.main()
