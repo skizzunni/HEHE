@@ -465,3 +465,30 @@ class FrozenPool(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class ValuePreregLineTest(unittest.TestCase):
+    def _finds(self):
+        return [dict(kind="value", status="won", side="away", seen="2026-11-16", fair=0.4),
+                dict(kind="value", status="lost", side="away", seen="2026-11-17", fair=0.4),
+                dict(kind="value", status="won", side="away", seen="2026-11-10", fair=0.4)]
+
+    def test_waiting_with_away_context(self):
+        import daily_review
+        s = dict(name="home-side value bets", won=23, n=52, fair=54.6, need=60, verdict="waiting", since="2026-11-15")
+        line = daily_review.value_prereg_line(status_fn=lambda: s, finds=self._finds())
+        self.assertIn("23/52 (44% vs 54.6% fair)", line)
+        self.assertIn("away finds the same days 1/2 (50% vs 40% fair)", line)
+        self.assertIn("8 more to decide", line)
+
+    def test_short_verdict_names_the_proposal(self):
+        import daily_review
+        s = dict(name="home-side value bets", won=20, n=60, fair=55.0, need=60, verdict="short", since="2026-11-15")
+        line = daily_review.value_prereg_line(status_fn=lambda: s, finds=[])
+        self.assertIn("propose dropping home value bets", line)
+        self.assertNotIn("away finds", line)
+
+    def test_nothing_graded_gives_none(self):
+        import daily_review
+        s = dict(name="x", won=0, n=0, fair=None, need=60, verdict="waiting", since="2026-11-15")
+        self.assertIsNone(daily_review.value_prereg_line(status_fn=lambda: s, finds=[]))

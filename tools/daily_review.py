@@ -474,6 +474,33 @@ def prereg_more_line(status_fn=None):
     return ("Pre-registered tests also running: " + "; ".join(parts) + ".") if parts else None
 
 
+def value_prereg_line(status_fn=None, finds=None):
+    """The pre-registered home-side value-bet test (value_bets.PREREG_HOME,
+    registered 2026-11-14): home finds since its start, against fair, with
+    the away finds of the same days beside it, and its verdict."""
+    try:
+        import value_bets
+        s = (status_fn or value_bets.prereg_status)()
+        if finds is None:
+            finds = list(value_bets.load()["finds"].values())
+    except Exception:
+        return None
+    if not s or not s.get("n"):
+        return None
+    xs = [f for f in finds if f.get("kind") == "value" and f.get("status") in ("won", "lost")
+          and f.get("side") == "away" and str(f.get("seen") or "")[:10] >= s["since"]]
+    away = ""
+    if xs:
+        aw = sum(f["status"] == "won" for f in xs)
+        af = 100 * sum(f.get("fair") or 0 for f in xs) / len(xs)
+        away = f"; away finds the same days {aw}/{len(xs)} ({round(100 * aw / len(xs))}% vs {round(af)}% fair)"
+    what = {"waiting": f"{s['need'] - s['n']} more to decide",
+            "short": "SHORT by 5+ points -- propose dropping home value bets to the user",
+            "fine": "fine -- the concern is dropped"}[s["verdict"]]
+    return (f"Pre-registered test, {s['name']} (finds from {s['since']}, needs {s['need']}): "
+            f"{s['won']}/{s['n']} ({round(100 * s['won'] / s['n'])}% vs {s['fair']}% fair){away}; {what}.")
+
+
 def priced_calibration_line(ledger=None, min_half=15):
     """ledger.priced_calibration as one review line: each group's date halves
     won% against stated% with a z-score, naming any group past the 99.5% bar
@@ -2512,6 +2539,8 @@ def words(r, fit):
         out.append(r["prereg"])
     if r.get("prereg_more"):
         out.append(r["prereg_more"])
+    if r.get("value_prereg"):
+        out.append(r["value_prereg"])
     if r.get("prop_fair"):
         out.append(r["prop_fair"])
     if r.get("dc_side"):
@@ -2722,6 +2751,7 @@ def _main():
     log[today.isoformat()]["cold"] = form_line()
     log[today.isoformat()]["prereg"] = prereg_line()
     log[today.isoformat()]["prereg_more"] = prereg_more_line()
+    log[today.isoformat()]["value_prereg"] = value_prereg_line()
     log[today.isoformat()]["prop_fair"] = prop_fair_line()
     log[today.isoformat()]["dc_side"] = dc_side_line(ledger)
     log[today.isoformat()]["nhl_b2b"] = nhl_b2b_line(today, ledger=ledger)
