@@ -226,32 +226,32 @@
     "Locks (-400..-120)": {
      "days": 30,
      "picks": 110,
-     "old_won": 89,
-     "new_won": 91,
-     "diff": 2,
+     "old_won": 86,
+     "new_won": 87,
+     "diff": 1,
      "ci95_diff": [
       0,
-      5
+      3
      ],
-     "new_won_old_missed": 4,
-     "old_won_new_missed": 2,
+     "new_won_old_missed": 2,
+     "old_won_new_missed": 1,
      "promote": false,
-     "untouched_from": "2026-10-16"
+     "untouched_from": "2026-10-23"
     },
     "Safe (-2000..-500)": {
      "days": 30,
      "picks": 110,
-     "old_won": 104,
-     "new_won": 104,
-     "diff": 0,
+     "old_won": 101,
+     "new_won": 100,
+     "diff": -1,
      "ci95_diff": [
-      0,
+      -3,
       0
      ],
-     "new_won_old_missed": 3,
+     "new_won_old_missed": 2,
      "old_won_new_missed": 3,
      "promote": false,
-     "untouched_from": "2026-10-16"
+     "untouched_from": "2026-10-23"
     }
    }
   },
