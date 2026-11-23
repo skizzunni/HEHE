@@ -492,3 +492,13 @@ class ValuePreregLineTest(unittest.TestCase):
         import daily_review
         s = dict(name="x", won=0, n=0, fair=None, need=60, verdict="waiting", since="2026-11-15")
         self.assertIsNone(daily_review.value_prereg_line(status_fn=lambda: s, finds=[]))
+
+
+class LadderAlt15Test(unittest.TestCase):
+    def test_target_named_in_line(self):
+        import daily_review
+        lad = {f"2026-11-{d:02d}": d % 3 == 0 for d in range(1, 9)}
+        alt = {f"2026-11-{d:02d}": d % 2 == 0 for d in range(1, 9)}
+        line = daily_review.ladder_alt_line(lad, alt, target=1.5)
+        self.assertIn("every-game ticket to 1.5x, same 8 days", line)
+        self.assertIn("every-game ticket to 2x", daily_review.ladder_alt_line(lad, alt))

@@ -668,7 +668,7 @@ def every_game_band_line(rows=None):
     return f"Every game's safest line by chance, halves split {mid}: " + "; ".join(parts) + "."
 
 
-def ladder_alt_line(ladder_days=None, alt_days=None):
+def ladder_alt_line(ladder_days=None, alt_days=None, target=2.0):
     """The ladder's real days against the every-game ticket to 2x on the same
     days (ten_leg.to_target): days cashed each, by half, and head to head.
     Information only -- the ladder's rule is the user's. 2026-11-19: on 13
@@ -681,7 +681,7 @@ def ladder_alt_line(ladder_days=None, alt_days=None):
     if alt_days is None:
         import locks
         import ten_leg
-        alt_days = ten_leg.to_target_days(locks.SAFE_LEDGER)
+        alt_days = ten_leg.to_target_days(locks.SAFE_LEDGER, target=target)
     days = sorted(set(ladder_days) & set(alt_days))
     if len(days) < 4:
         return None
@@ -689,7 +689,7 @@ def ladder_alt_line(ladder_days=None, alt_days=None):
     rec = lambda D, src: f"{sum(src[d] for d in D)}/{len(D)}"
     only_alt = sum(alt_days[d] and not ladder_days[d] for d in days)
     only_lad = sum(ladder_days[d] and not alt_days[d] for d in days)
-    return (f"Ladder vs every-game ticket to 2x, same {len(days)} days (the last 14 saved cards only; older days drop off): ladder {rec(days[:h], ladder_days)} then "
+    return (f"Ladder vs every-game ticket to {target:g}x, same {len(days)} days (the last 14 saved cards only; older days drop off): ladder {rec(days[:h], ladder_days)} then "
             f"{rec(days[h:], ladder_days)}; every-game {rec(days[:h], alt_days)} then {rec(days[h:], alt_days)}; "
             f"only the every-game cashed on {only_alt} days, only the ladder on {only_lad}"
             + (f" -- a fair coin splits {max(only_alt, only_lad)}-{min(only_alt, only_lad)} or wider "
@@ -2592,6 +2592,8 @@ def words(r, fit):
         out.append(r["ten_leg"])
     if r.get("ladder_alt"):
         out.append(r["ladder_alt"])
+    if r.get("ladder_alt15"):
+        out.append(r["ladder_alt15"])
     if r.get("dc_moves"):
         out.append(r["dc_moves"])
     if r.get("switched"):
@@ -2799,6 +2801,11 @@ def _main():
         log[today.isoformat()]["ladder_alt"] = ladder_alt_line()
     except Exception as e:                                  # a broken pool or ladder file must not stop the review
         log[today.isoformat()]["ladder_alt"] = f"Ladder vs every-game: unavailable ({type(e).__name__})."
+    try:
+        # the 1.5x version led the overnight lab (11/14 vs 6.7 expected; README 2026-11-23)
+        log[today.isoformat()]["ladder_alt15"] = ladder_alt_line(target=1.5)
+    except Exception as e:
+        log[today.isoformat()]["ladder_alt15"] = f"Ladder vs every-game to 1.5x: unavailable ({type(e).__name__})."
     try:
         log[today.isoformat()]["ladder_misses"] = ladder_misses_line()
     except Exception as e:                                  # a broken ladder file must not stop the review
