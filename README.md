@@ -22,7 +22,7 @@ are in the dated notes below.
 | Off a bye week | NFL | 106 | +5.5%, -8.2%, +54%, -13.2% by season: rejected |
 | Player props vs game lines on the Locks | all | 549 legs | Props the only type short in both halves (80%, 76% vs 86%, 79%): **user's call** |
 | Ladder ticket with props left out (replayed) | all | 24 tickets | 13/24 at 2.32x vs 12/24 at 2.22x: **user's call** |
-| Opponent has more players Out at tip-off | NBA, NHL, NFL | 114 | 79%, 86% vs 68%, 64% stated; 8 days only: **early read, collecting** |
+| Opponent has more players Out at tip-off | NBA, NHL, NFL | 313 | 83% then 64% vs 64%, 67% stated (z +3.1, -0.5): faded in the later half; **rejected, still re-run** |
 
 ## What actually went wrong
 
@@ -4985,3 +4985,15 @@ number worse in the untouched half (Brier 0.227 -> 0.234 to 0.280), so they are 
 used either. The blind number stays information: it is written down before lines are
 read, and a pick still needs evidence the price has not absorbed yet (late injury,
 goalie or rest news), not just a disagreement with it.
+
+## Rejected: opponent has more players Out at tip-off (2026-11-23)
+
+Re-run of the 2026-11-11 early read (`tools/injury_study.py`, ESPN injury report as
+archived before each start), now on 313 graded NBA/NHL/NFL board picks instead of 114.
+Picks whose opponent had more players Out: 52/63 (83% vs 64% stated, z about +3.1) in
+the earlier half, then 39/61 (64% vs 67%, z about -0.5) in the later half. Own side
+more Out: 70% then 69% vs 64%, 64%; even: 72% then 53% vs 64%, 63%. The early edge
+did not hold up on new games: the public injury report looks priced in by tip-off,
+which fits the price-blind result above. Not adopted; the study keeps re-running as the
+archive grows. The lead left to test is news that lands after the line was read
+(late scratches, goalie confirmations), not the report itself.
