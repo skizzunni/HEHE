@@ -263,139 +263,139 @@
    "rule": "net >= 2 x sqrt(changed)",
    "result": {
     "nhl home": {
-     "changed": 0,
-     "net": 0,
+     "changed": 15,
+     "net": 3,
      "promote": false
     },
     "nhl drift": {
-     "changed": 38,
-     "net": -2,
+     "changed": 36,
+     "net": 4,
      "promote": false
     },
     "nhl spread": {
-     "changed": 76,
-     "net": 2,
+     "changed": 178,
+     "net": 4,
      "promote": false
     },
     "nhl total": {
-     "changed": 0,
-     "net": 0,
+     "changed": 15,
+     "net": 3,
      "promote": false
     },
     "nhl rest": {
-     "changed": 83,
+     "changed": 63,
      "net": -7,
      "promote": false
     },
     "nhl form": {
-     "changed": 16,
-     "net": -4,
-     "promote": false
-    },
-    "nhl travel": {
-     "changed": 90,
-     "net": 16,
-     "promote": false
-    },
-    "nhl bias": {
-     "changed": 8,
-     "net": 4,
-     "promote": false
-    },
-    "nhl all": {
-     "changed": 120,
+     "changed": 22,
      "net": -6,
      "promote": false
     },
+    "nhl travel": {
+     "changed": 95,
+     "net": 11,
+     "promote": false
+    },
+    "nhl bias": {
+     "changed": 14,
+     "net": 0,
+     "promote": false
+    },
+    "nhl all": {
+     "changed": 185,
+     "net": -1,
+     "promote": false
+    },
     "nfl home": {
-     "changed": 1,
-     "net": 1,
+     "changed": 4,
+     "net": 2,
      "promote": false
     },
     "nfl drift": {
-     "changed": 12,
+     "changed": 14,
      "net": -2,
      "promote": false
     },
     "nfl spread": {
-     "changed": 1,
-     "net": 1,
+     "changed": 4,
+     "net": 2,
      "promote": false
     },
     "nfl total": {
-     "changed": 1,
-     "net": 1,
+     "changed": 4,
+     "net": 2,
      "promote": false
     },
     "nfl rest": {
-     "changed": 8,
-     "net": 0,
+     "changed": 7,
+     "net": 3,
      "promote": false
     },
     "nfl form": {
-     "changed": 4,
-     "net": -2,
-     "promote": false
-    },
-    "nfl travel": {
-     "changed": 1,
-     "net": 1,
-     "promote": false
-    },
-    "nfl bias": {
-     "changed": 2,
+     "changed": 6,
      "net": 0,
      "promote": false
     },
+    "nfl travel": {
+     "changed": 6,
+     "net": 0,
+     "promote": false
+    },
+    "nfl bias": {
+     "changed": 4,
+     "net": 4,
+     "promote": true
+    },
     "nfl all": {
-     "changed": 15,
+     "changed": 17,
      "net": -1,
      "promote": false
     },
     "ncaaf home": {
-     "changed": 17,
-     "net": 5,
+     "changed": 9,
+     "net": 1,
      "promote": false
     },
     "ncaaf drift": {
-     "changed": 14,
-     "net": 2,
+     "changed": 7,
+     "net": 1,
      "promote": false
     },
     "ncaaf spread": {
      "changed": 4,
      "net": 4,
-     "promote": false
+     "promote": true
     },
     "ncaaf total": {
-     "changed": 17,
-     "net": 5,
+     "changed": 9,
+     "net": 1,
      "promote": false
     },
     "ncaaf rest": {
-     "changed": 17,
-     "net": 5,
+     "changed": 7,
+     "net": 3,
      "promote": false
     },
     "ncaaf form": {
-     "changed": 17,
+     "changed": 11,
      "net": 7,
      "promote": false
     },
     "ncaaf travel": {
-     "changed": 19,
+     "changed": 9,
      "net": 3,
      "promote": false
     },
     "ncaaf bias": {
-     "changed": 11,
-     "net": -1,
+     "changed": 12,
+     "net": 6,
      "promote": false
     },
     "ncaaf all": {
-     "changed": 13,
-     "net": 5,
-     "promote": false
+     "changed": 11,
+     "net": 7,
+     "promote": true
     },
     "nba home": {
      "changed": 18,
@@ -473,8 +473,8 @@
      "promote": false
     },
     "ncaab travel": {
-     "changed": 16,
-     "net": -2,
+     "changed": 15,
+     "net": -1,
      "promote": false
     },
     "ncaab bias": {
@@ -578,7 +578,11 @@
      "promote": false
     }
    },
-   "promoted": []
+   "promoted": [
+    "ncaaf all",
+    "ncaaf spread",
+    "nfl bias"
+   ]
   }
  ]
 }
