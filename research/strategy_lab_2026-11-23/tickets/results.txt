@@ -1,0 +1,121 @@
+{'card_days': 39, 'card_first': '2026-10-15', 'card_last': '2026-11-22', 'card_mid': '2026-11-03', 'pool_days': 14, 'pool_first': '2026-11-09', 'pool_last': '2026-11-22', 'pool_mid': '2026-11-16', 'bar': 2.8}
+ladder as run (2026-11-03..)                                   n= 20 cash 6/7.31 | H1 5/3.3 z1.16 | H2 1/4.01 z-1.95 | pays None legs None roi -0.267 geo.1 0.967 geo.25 0.8958 full 0.0 peak 9.56 streak 2 chg  -> baseline
+   10/14
+current rule 2-5x best combo, all 39 cards                     n= 38 cash 15/15.67 | H1 9/7.87 z0.54 | H2 6/7.8 z-0.83 | pays 2.21 legs 3.45 roi -0.147 geo.1 0.9797 geo.25 0.9288 full 0.0 peak 12.05 streak 3 chg  -> baseline
+   
+
+# 1 size
+best combo paying 1.5-2.0x                                     n= 38 cash 23/23.22 | H1 12/11.15 z0.41 | H2 11/12.07 z-0.49 | pays 1.57 legs 2.0 roi -0.054 geo.1 0.9915 geo.25 0.9665 full 0.0 peak 10.11 streak 5 chg  -> rejected
+best combo paying 2.0-3.0x                                     n= 38 cash 15/15.67 | H1 9/7.87 z0.54 | H2 6/7.8 z-0.83 | pays 2.21 legs 3.45 roi -0.147 geo.1 0.9797 geo.25 0.9288 full 0.0 peak 12.05 streak 3 chg  -> rejected
+best combo paying 3.0-5.0x                                     n= 37 cash 10/10.22 | H1 4/4.86 z-0.47 | H2 6/5.36 z0.32 | pays 3.1 legs 5.0 roi -0.184 geo.1 0.9732 geo.25 0.9052 full 0.0 peak 9.56 streak 2 chg  -> rejected
+best combo paying 5.0-10.0x                                    n= 36 cash 6/4.7 | H1 2/2.29 z-0.21 | H2 4/2.41 z1.09 | pays 5.77 legs 7.72 roi -0.023 geo.1 0.9784 geo.25 0.8982 full 0.0 peak 36.47 streak 2 chg  -> rejected
+best combo paying 1.5-2.5x                                     n= 38 cash 23/23.22 | H1 12/11.15 z0.41 | H2 11/12.07 z-0.49 | pays 1.57 legs 2.0 roi -0.054 geo.1 0.9915 geo.25 0.9665 full 0.0 peak 10.11 streak 5 chg  -> rejected
+top 1 Locks legs                                               n= 39 cash 28/30.93 | H1 13/15.29 z-1.34 | H2 15/15.64 z-0.35 | pays 1.25 legs 1.0 roi -0.125 geo.1 0.9859 geo.25 0.9579 full 0.0 peak 3.31 streak 5 chg  -> rejected
+top 2 Locks legs                                               n= 39 cash 24/24.16 | H1 13/12.09 z0.44 | H2 11/12.07 z-0.49 | pays 1.56 legs 2.0 roi -0.053 geo.1 0.9918 geo.25 0.9675 full 0.0 peak 10.11 streak 5 chg  -> rejected
+top 3 Locks legs                                               n= 39 cash 17/18.81 | H1 10/9.57 z0.2 | H2 7/9.24 z-1.01 | pays 1.95 legs 3.0 roi -0.178 geo.1 0.9777 geo.25 0.9271 full 0.0 peak 7.55 streak 3 chg  -> rejected
+top 4 Locks legs                                               n= 39 cash 14/14.62 | H1 8/7.56 z0.21 | H2 6/7.06 z-0.5 | pays 2.43 legs 4.0 roi -0.166 geo.1 0.9772 geo.25 0.9205 full 0.0 peak 15.07 streak 3 chg  -> rejected
+top 5 Locks legs                                               n= 38 cash 11/11.08 | H1 5/5.72 z-0.38 | H2 6/5.36 z0.32 | pays 3.05 legs 5.0 roi -0.177 geo.1 0.974 geo.25 0.9079 full 0.0 peak 9.56 streak 2 chg  -> rejected
+top 6 Locks legs                                               n= 37 cash 8/8.37 | H1 3/4.32 z-0.78 | H2 5/4.05 z0.53 | pays 3.81 legs 6.0 roi -0.261 geo.1 0.9643 geo.25 0.8816 full 0.0 peak 14.94 streak 2 chg  -> rejected
+top 7 Locks legs                                               n= 37 cash 8/6.52 | H1 3/3.46 z-0.3 | H2 5/3.06 z1.21 | pays 4.77 legs 7.0 roi -0.08 geo.1 0.9775 geo.25 0.904 full 0.0 peak 23.34 streak 2 chg  -> rejected
+top 8 Locks legs                                               n= 37 cash 7/5.09 | H1 3/2.79 z0.15 | H2 4/2.3 z1.19 | pays 5.98 legs 8.0 roi 0.015 geo.1 0.9816 geo.25 0.9051 full 0.0 peak 36.47 streak 2 chg  -> on watch
+
+# 2 filters
+walk-forward drop of short (league,type) kinds, 2-5x combo     n= 38 cash 15/15.67 | H1 9/7.87 z0.54 | H2 6/7.8 z-0.83 | pays 2.21 legs 3.45 roi -0.147 geo.1 0.9797 geo.25 0.9288 full 0.0 peak 12.05 streak 3 chg 0 -> rejected
+props out, 2-5x combo                                          n= 37 cash 15/13.81 | H1 8/6.41 z0.8 | H2 7/7.4 z-0.19 | pays 2.27 legs 3.59 roi -0.08 geo.1 0.9858 geo.25 0.9421 full 0.0 peak 6.01 streak 2 chg  -> rejected
+current-rule tickets, tip spread tight (<=3h)                  n= 24 cash 8/9.83 | H1 5/5.21 z-0.12 | H2 3/4.62 z-0.96 | pays 2.22 legs 3.46 roi -0.274 geo.1 0.9674 geo.25 0.8994 full 0.0 peak 4.96 streak 2 chg  -> rejected
+current-rule tickets, tip spread wide (>3h)                    n= 14 cash 7/5.84 | H1 4/2.66 z1.11 | H2 3/3.18 z-0.13 | pays 2.2 legs 3.43 roi 0.07 geo.1 1.0013 geo.25 0.9814 full 0.0 peak 10.02 streak 3 chg  -> rejected
+  card_leg_groups
+    league=nba                               48/60 exp 45.84 z0.66 | 73/97 exp 73.75 z-0.18  keep
+    league=ncaaf                             36/43 exp 33.81 z0.82 | 38/55 exp 41.58 z-1.12  keep
+   *league=nfl                               26/34 exp 26.58 z-0.24 | 13/18 exp 14.18 z-0.68  keep
+    league=nhl                               29/37 exp 28.83 z0.07 | 30/35 exp 26.25 z1.47  keep
+    price=-499..-350                         141/178 exp 136.4 z0.82 | 165/217 exp 164.8 z0.03  keep
+   *tip=1-6 PM                               34/44 exp 34.23 z-0.08 | 28/37 exp 28.36 z-0.14  keep
+    tip=6 PM+                                113/138 exp 107.08 z1.22 | 130/171 exp 129.58 z0.07  keep
+    tip=before 1 PM                          11/13 exp 10.18 z0.55 | 7/9 exp 6.86 z0.11  keep
+    type=prop                                32/40 exp 31.69 z0.12 | 28/36 exp 28.19 z-0.08  keep
+    type=spread                              22/26 exp 20.02 z0.93 | 22/31 exp 23.37 z-0.57  keep
+    type=team total                          24/29 exp 22.69 z0.6 | 26/37 exp 27.87 z-0.71  keep
+    type=total                               65/82 exp 63.57 z0.38 | 69/88 exp 66.39 z0.65  keep
+    type=win                                 15/18 exp 13.51 z0.81 | 20/25 exp 18.97 z0.48  keep
+    type_league=nba:prop                     16/18 exp 14.21 z1.04 | 17/20 exp 15.55 z0.78  keep
+   *type_league=nba:total                    30/40 exp 30.12 z-0.04 | 52/70 exp 52.86 z-0.24  keep
+    type_league=ncaaf:spread                 7/8 exp 6.04 z0.79 | 18/23 exp 17.36 z0.31  keep
+    type_league=ncaaf:team total             12/13 exp 10.24 z1.21 | 13/23 exp 17.37 z-2.12  keep
+   *type_league=nfl:prop                     9/13 exp 10.4 z-0.97 | 10/15 exp 11.91 z-1.22  keep
+    type_league=nhl:team total               9/13 exp 10.19 z-0.82 | 12/13 exp 9.75 z1.44  keep
+    type_league=nhl:total                    13/16 exp 12.64 z0.23 | 13/13 exp 9.75 z2.08  keep
+  pool_leg_groups
+    league=nba                               100/106 exp 95.86 z1.37 | 93/102 exp 94.05 z-0.39  keep
+    league=ncaaf                             220/246 exp 219.49 z0.1 | 222/239 exp 213.39 z1.8  keep
+    league=nfl                               66/72 exp 64.26 z0.66 | 66/70 exp 62.53 z1.34  keep
+    league=nhl                               217/240 exp 210.83 z1.23 | 215/235 exp 206.45 z1.72  keep
+    price=-500 or shorter                    629/694 exp 615.47 z1.63 | 635/694 exp 616.84 z2.2  keep
+    type=spread                              108/120 exp 107.33 z0.2 | 110/116 exp 104.0 z1.83  keep
+    type=team total                          220/240 exp 212.54 z1.52 | 215/232 exp 205.5 z1.97  keep
+    type=total                               251/276 exp 246.84 z0.82 | 248/272 exp 244.51 z0.71  keep
+    type=win                                 50/58 exp 48.76 z0.45 | 62/74 exp 62.83 z-0.27  keep
+    type_league=nba:total                    89/94 exp 85.62 z1.22 | 88/96 exp 88.93 z-0.36  keep
+    type_league=ncaaf:spread                 51/58 exp 52.04 z-0.45 | 53/56 exp 50.21 z1.22  keep
+    type_league=ncaaf:team total             107/116 exp 103.78 z0.97 | 103/112 exp 100.16 z0.87  keep
+    type_league=ncaaf:total                  51/58 exp 51.83 z-0.35 | 53/56 exp 50.08 z1.27  keep
+    type_league=nfl:team total               25/28 exp 24.99 z0.0 | 26/26 exp 23.24 z1.76  keep
+    type_league=nfl:total                    27/28 exp 25.09 z1.18 | 23/26 exp 23.27 z-0.17  keep
+    type_league=nhl:spread                   45/48 exp 42.76 z1.04 | 45/47 exp 42.13 z1.38  keep
+    type_league=nhl:team total               88/96 exp 83.77 z1.3 | 86/94 exp 82.1 z1.22  keep
+    type_league=nhl:total                    84/96 exp 84.3 z-0.09 | 84/94 exp 82.22 z0.56  keep
+
+# 3 shrink {'lambda 1.0': {'1st': 0.486, '2nd': 0.5527}, 'lambda 0.9': {'1st': 0.4933, '2nd': 0.5542}, 'lambda 0.8': {'1st': 0.5043, '2nd': 0.559}, 'lambda 0.7': {'1st': 0.5183, '2nd': 0.5668}, 'lambda 0.5': {'1st': 0.5548, '2nd': 0.5904}} {'1st': {'n': 195, 'won': 158, 'exp': 151.49, 'z': 1.13}, '2nd': {'n': 217, 'won': 165, 'exp': 164.8, 'z': 0.03}}
+shrink toward 50% lambda=1.0, 2-5x combo                       n= 38 cash 15/15.67 | H1 9/7.87 z0.54 | H2 6/7.8 z-0.83 | pays 2.21 legs 3.45 roi -0.147 geo.1 0.9797 geo.25 0.9288 full 0.0 peak 12.05 streak 3 chg 0 -> rejected
+shrink toward 50% lambda=0.9, 2-5x combo                       n= 38 cash 15/15.67 | H1 9/7.87 z0.54 | H2 6/7.8 z-0.83 | pays 2.21 legs 3.45 roi -0.147 geo.1 0.9797 geo.25 0.9288 full 0.0 peak 12.05 streak 3 chg 0 -> rejected
+shrink toward 50% lambda=0.8, 2-5x combo                       n= 38 cash 15/15.67 | H1 9/7.87 z0.54 | H2 6/7.8 z-0.83 | pays 2.21 legs 3.45 roi -0.147 geo.1 0.9797 geo.25 0.9288 full 0.0 peak 12.05 streak 3 chg 0 -> rejected
+shrink toward 50% lambda=0.7, 2-5x combo                       n= 38 cash 15/15.67 | H1 9/7.87 z0.54 | H2 6/7.8 z-0.83 | pays 2.21 legs 3.45 roi -0.147 geo.1 0.9797 geo.25 0.9288 full 0.0 peak 12.05 streak 3 chg 0 -> rejected
+shrink toward 50% lambda=0.5, 2-5x combo                       n= 38 cash 15/15.67 | H1 9/7.87 z0.54 | H2 6/7.8 z-0.83 | pays 2.21 legs 3.45 roi -0.147 geo.1 0.9797 geo.25 0.9288 full 0.0 peak 12.05 streak 3 chg 0 -> rejected
+walk-forward Platt (global), 2-5x combo                        n= 38 cash 15/15.67 | H1 9/7.87 z0.54 | H2 6/7.8 z-0.83 | pays 2.21 legs 3.45 roi -0.147 geo.1 0.9797 geo.25 0.9288 full 0.0 peak 12.05 streak 3 chg 0 -> rejected
+    leg logloss fit vs raw {'1st': [0.4871, 0.486], '2nd': [0.5551, 0.5527]}
+walk-forward Platt (per type), 2-5x combo                      n= 38 cash 17/15.62 | H1 9/7.85 z0.55 | H2 8/7.77 z0.11 | pays 2.21 legs 3.45 roi -0.054 geo.1 0.989 geo.25 0.9519 full 0.0 peak 12.02 streak 3 chg 15 -> rejected
+    leg logloss fit vs raw {'1st': [0.4874, 0.486], '2nd': [0.5569, 0.5527]}
+
+# 4 correlation
+  card_pairs {"1st": {"legs": 195, "same_day_league_pairs": 439, "obs": -1.867, "null_mean": -1.067, "z": -0.26, "p_one_sided": 0.5605}, "2nd": {"legs": 217, "same_day_league_pairs": 463, "obs": -2.666, "null_mean": 0.111, "z": -0.72, "p_one_sided": 0.7495}, "verdict": "rejected (no clumping found)"}
+  pool_pairs {"1st": {"legs": 197, "same_day_league_pairs": 1581, "obs": 1.933, "null_mean": 2.666, "z": -0.35, "p_one_sided": 0.551}, "2nd": {"legs": 212, "same_day_league_pairs": 1535, "obs": 6.76, "null_mean": 7.4, "z": -0.31, "p_one_sided": 0.5155}, "verdict": "rejected (no clumping found)"}
+  card_single_league {"strategy": "top-K (2-5) Locks tickets all one league", "h1": {"n": 15, "won": 7, "exp": 7.84, "z": -0.44}, "h2": {"n": 34, "won": 11, "exp": 15.81, "z": -1.71}}
+  card_mixed {"strategy": "top-K (2-5) Locks tickets mixed leagues", "h1": {"n": 60, "won": 29, "exp": 27.11, "z": 0.52}, "h2": {"n": 46, "won": 19, "exp": 17.92, "z": 0.34}}
+  pool_single_league {"strategy": "top-K every-game tickets all one league", "h1": {"n": 32, "won": 27, "exp": 23.2, "z": 1.54}, "h2": {"n": 32, "won": 29, "exp": 23.75, "z": 2.18}}
+  pool_mixed {"strategy": "top-K every-game tickets mixed leagues", "h1": {"n": 10, "won": 9, "exp": 5.63, "z": 2.19}, "h2": {"n": 10, "won": 9, "exp": 6.09, "z": 1.91}}
+
+# 5 staking
+  flat all picks {"1st": {"n": 1122, "roi": 0.0011, "stated_ev": -0.0498, "z_vs_zero": 0.05, "hit": 0.735, "stated_hit": 0.699}, "2nd": {"n": 1182, "roi": -0.0125, "stated_ev": -0.0459, "z_vs_zero": -0.68, "hit": 0.737, "stated_hit": 0.714}, "strategy": "flat $1 on every graded board pick", "verdict": "rejected"}
+  flat stated-edge>0 {"1st": {"n": 38, "roi": -0.3457, "stated_ev": 0.0768, "z_vs_zero": -2.8, "hit": 0.447, "stated_hit": 0.701}, "2nd": {"n": 19, "roi": 0.003, "stated_ev": 0.0014, "z_vs_zero": 0.32, "hit": 1.0, "stated_hit": 0.998}, "strategy": "flat $1 where stated chance x price > 1", "verdict": "rejected"}
+  kelly 0.1 stated {"1st": {"days": 19, "bets": 38, "growth": 0.86, "geo_per_day": 0.99209}, "2nd": {"days": 20, "bets": 19, "growth": 1.0026, "geo_per_day": 1.00013}, "strategy": "Kelly x0.1 on stated chance", "verdict": "rejected"}
+  kelly 0.25 stated {"1st": {"days": 19, "bets": 38, "growth": 0.6775, "geo_per_day": 0.97972}, "2nd": {"days": 20, "bets": 19, "growth": 1.0065, "geo_per_day": 1.00032}, "strategy": "Kelly x0.25 on stated chance", "verdict": "rejected"}
+  kelly 0.5 stated {"1st": {"days": 19, "bets": 38, "growth": 0.4374, "geo_per_day": 0.95741}, "2nd": {"days": 20, "bets": 19, "growth": 1.0117, "geo_per_day": 1.00058}, "strategy": "Kelly x0.5 on stated chance", "verdict": "rejected"}
+  kelly 0.1 wf-band {"1st": {"days": 19, "bets": 237, "growth": 1.102, "geo_per_day": 1.00513}, "2nd": {"days": 20, "bets": 513, "growth": 0.9081, "geo_per_day": 0.99519}, "strategy": "Kelly x0.1 on walk-forward band hit rate", "verdict": "rejected"}
+  kelly 0.25 wf-band {"1st": {"days": 19, "bets": 237, "growth": 1.2609, "geo_per_day": 1.01228}, "2nd": {"days": 20, "bets": 513, "growth": 0.8382, "geo_per_day": 0.99122}, "strategy": "Kelly x0.25 on walk-forward band hit rate", "verdict": "rejected"}
+  kelly 0.5 wf-band {"1st": {"days": 19, "bets": 237, "growth": 1.5805, "geo_per_day": 1.02439}, "2nd": {"days": 20, "bets": 513, "growth": 0.8208, "geo_per_day": 0.99017}, "strategy": "Kelly x0.5 on walk-forward band hit rate", "verdict": "rejected"}
+  flat wf-band edge>0 {"1st": {"n": 237, "roi": 0.0258, "stated_ev": -0.0501, "z_vs_zero": 0.57, "hit": 0.705, "stated_hit": 0.652}, "2nd": {"n": 513, "roi": -0.0543, "stated_ev": -0.0444, "z_vs_zero": -1.78, "hit": 0.657, "stated_hit": 0.664}, "strategy": "flat $1 where walk-forward band rate x price > 1", "verdict": "rejected"}
+  ladder ticket stated EV {"n": 38, "mean_stated_ev": -0.0971, "positive_ev_tickets": 5, "note": "Kelly stakes 0 on a ticket with stated EV <= 0"}
+  _mid "2026-11-03"
+
+# 7 every-game
+current ladder rule, pool days                                 n= 14 cash 4/5.56 | H1 4/2.78 z0.95 | H2 0/2.78 z-2.16 | pays 2.2 legs 3.43 roi -0.394 geo.1 0.956 geo.25 0.8736 full 0.0 peak 4.96 streak 2 chg  -> None
+every-game safest lines to 1.5x                                n= 14 cash 11/6.68 | H1 5/3.21 z1.36 | H2 6/3.47 z1.91 | pays 1.56 legs 9.0 roi 0.222 geo.1 1.0201 geo.25 1.0414 full 0.0 peak 13.94 streak 6 chg  -> on watch
+    paired {'days': 14, 'only_everygame': 9, 'only_ladder': 2, 'z': 2.11}
+every-game safest lines to 2.0x                                n= 14 cash 7/4.01 | H1 4/1.89 z1.8 | H2 3/2.12 z0.72 | pays 2.04 legs 14.14 roi 0.021 geo.1 0.9968 geo.25 0.9722 full 0.0 peak 8.5 streak 3 chg  -> on watch
+    paired {'days': 14, 'only_everygame': 6, 'only_ladder': 3, 'z': 1.0}
+every-game safest lines to 3.0x                                n=  9 cash 4/1.21 | H1 2/0.52 z2.2 | H2 2/0.69 z1.71 | pays 3.18 legs 20.89 roi 0.45 geo.1 1.0326 geo.25 1.0401 full 0.0 peak 11.34 streak 2 chg  -> on watch
+    paired {'days': 9, 'only_everygame': 4, 'only_ladder': 2, 'z': 0.82}
+Locks best 1.5-2x combo, pool days                             n= 14 cash 8/8.43 | H1 5/4.28 z0.56 | H2 3/4.15 z-0.88 | pays 1.57 legs 2.0 roi -0.126 geo.1 0.9844 geo.25 0.9489 full 0.0 peak 6.02 streak 4 chg  -> comparison
+                                                               n=    cash / | H1 None/None zNone | H2 None/None zNone | pays None legs None roi None geo.1 None geo.25 None full None peak None streak None chg  -> None
+every-game safest lines to 1.25x                               n= 14 cash 12/9.42 | H1 6/4.62 z1.1 | H2 6/4.8 z0.98 | pays 1.28 legs 5.0 roi 0.095 geo.1 1.0085 geo.25 1.0166 full 0.0 peak 4.39 streak 6 chg  -> on watch
+top 1 every-game lines                                         n= 14 cash 14/12.96 | H1 7/6.45 z0.77 | H2 7/6.51 z0.73 | pays 1.05 legs 1.0 roi 0.05 geo.1 1.005 geo.25 1.0126 full 1.0504 peak 1.99 streak 14 chg  -> rejected
+top 2 every-game lines                                         n= 14 cash 14/11.98 | H1 7/5.94 z1.12 | H2 7/6.04 z1.06 | pays 1.1 legs 2.0 roi 0.103 geo.1 1.0103 geo.25 1.0258 full 1.1033 peak 3.96 streak 14 chg  -> on watch
+top 3 every-game lines                                         n= 14 cash 13/11.07 | H1 6/5.47 z0.48 | H2 7/5.6 z1.32 | pays 1.16 legs 3.0 roi 0.076 geo.1 1.0071 geo.25 1.0157 full 0.0 peak 2.79 streak 7 chg  -> on watch
+top 4 every-game lines                                         n= 14 cash 12/10.22 | H1 6/5.03 z0.81 | H2 6/5.19 z0.7 | pays 1.22 legs 4.0 roi 0.043 geo.1 1.0033 geo.25 1.0041 full 0.0 peak 3.26 streak 6 chg  -> rejected
+top 5 every-game lines                                         n= 14 cash 12/9.42 | H1 6/4.62 z1.1 | H2 6/4.8 z0.98 | pays 1.28 legs 5.0 roi 0.095 geo.1 1.0085 geo.25 1.0166 full 0.0 peak 4.39 streak 6 chg  -> on watch
+top 6 every-game lines                                         n= 14 cash 12/8.66 | H1 6/4.23 z1.37 | H2 6/4.43 z1.23 | pays 1.34 legs 6.0 roi 0.151 geo.1 1.014 geo.25 1.0299 full 0.0 peak 5.95 streak 6 chg  -> on watch
+top 8 every-game lines                                         n= 14 cash 11/7.3 | H1 5/3.53 z1.11 | H2 6/3.77 z1.69 | pays 1.48 legs 8.0 roi 0.164 geo.1 1.0144 geo.25 1.028 full 0.0 peak 10.4 streak 6 chg  -> on watch
+top 10 every-game lines                                        n= 14 cash 11/6.1 | H1 5/2.92 z1.6 | H2 6/3.18 z2.14 | pays 1.64 legs 10.0 roi 0.285 geo.1 1.0261 geo.25 1.0556 full 0.0 peak 18.78 streak 6 chg  -> on watch
+top 12 every-game lines                                        n= 14 cash 9/5.0 | H1 5/2.38 z2.09 | H2 4/2.62 z1.07 | pays 1.82 legs 12.0 roi 0.171 geo.1 1.0132 geo.25 1.0175 full 0.0 peak 10.86 streak 4 chg  -> on watch
+top 15 every-game lines                                        n= 12 cash 5/3.16 | H1 3/1.47 z1.47 | H2 2/1.69 z0.28 | pays 2.17 legs 15.0 roi -0.124 geo.1 0.9823 geo.25 0.9358 full 0.0 peak 9.37 streak 3 chg  -> on watch
+                                                               n=    cash / | H1 None/None zNone | H2 None/None zNone | pays None legs None roi None geo.1 None geo.25 None full None peak None streak None chg  -> None

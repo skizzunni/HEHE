@@ -1,0 +1,19 @@
+== TD history (all graded anytime-TD player-games)
+td_history all                                   | H1 1240: 14.0% vs 11.7% z+2.62 roi-33.9   | H2 1260: 13.7% vs 11.5% z+2.54 roi-9.2    | ALL 2500: 13.8% vs 11.6% z+3.65 roi-21.4   | watch
+td p in [0,0.1)                                  | H1 706: 2.8% vs 3.3% z-0.65 roi-59.7      | H2 731: 4.7% vs 3.3% z+2.16 roi-6.8       | ALL 1437: 3.8% vs 3.3% z+1.08 roi-32.8     | rejected
+td p in [0.1,0.2)                                | H1 283: 19.4% vs 14.6% z+2.33 roi2.8      | H2 265: 15.1% vs 14.6% z+0.25 roi-16.9    | ALL 548: 17.3% vs 14.6% z+1.85 roi-6.7     | rejected
+td p in [0.2,0.3)                                | H1 131: 30.5% vs 24.5% z+1.6 roi-1.8      | H2 153: 28.1% vs 24.2% z+1.13 roi-8.7     | ALL 284: 29.2% vs 24.4% z+1.92 roi-5.5     | rejected
+td p in [0.3,0.4)                                | H1 66: 45.5% vs 34.7% z+1.84 roi3.5       | H2 56: 33.9% vs 34.6% z-0.11 roi-20.8     | ALL 122: 40.2% vs 34.6% z+1.29 roi-7.7     | rejected
+td p in [0.4,0.5)                                | H1 37: 51.4% vs 45.0% z+0.78 roi-7.1      | H2 33: 51.5% vs 44.1% z+0.86 roi-5.6      | ALL 70: 51.4% vs 44.6% z+1.16 roi-6.4      | rejected
+td p in [0.5,1)                                  | H1 17: 52.9% vs 56.9% z-0.33 roi-21.9     | H2 22: 86.4% vs 55.4% z+2.94 roi28.8      | ALL 39: 71.8% vs 56.0% z+1.99 roi6.7       | rejected
+== Locks card prop legs (locks.json legs, kind=prop)
+Locks prop legs                                  | H1 41: 80.5% vs 79.1% z+0.22 roi1.5       | H2 35: 77.1% vs 78.4% z-0.19 roi-3.3      | ALL 76: 78.9% vs 78.8% z+0.03 roi-0.7      | rejected
+Locks game legs                                  | H1 154: 81.2% vs 75.8% z+1.57 roi1.9      | H2 171: 74.3% vs 75.5% z-0.37 roi-6.8     | ALL 325: 77.5% vs 75.6% z+0.81 roi-2.7     | rejected
+  Locks nba Assists                              | H1 14: 85.7% vs 79.5% z+0.57 roi7.9       | H2 15: 86.7% vs 78.2% z+0.79 roi8.7       | ALL 29: 86.2% vs 78.9% z+0.97 roi8.3       | rejected
+  Locks nfl Receiving Yards                      | H1 12: 66.7% vs 80.1% z-1.17 roi-16.6     | H2 13: 69.2% vs 79.6% z-0.92 roi-13.4     | ALL 25: 68.0% vs 79.8% z-1.47 roi-14.9     | rejected
+  Locks mlb Hits + Runs + RBIs                   | H1 6: 100.0% vs 78.3% z+1.29 roi28.8      | H2 0: -                                   | ALL 6: 100.0% vs 78.3% z+1.29 roi28.8      | rejected (too few)
+== Elijah Higgins records in props.json
+  2026-10-18 Elijah Higgins: 5+ Receiving Yards -380 0.7399 won 28.0
+  2026-11-01 Elijah Higgins: 5+ Receiving Yards -600 0.8512 won 10.0
+  2026-11-08 Elijah Higgins: 5+ Receiving Yards -400 0.8016 won 11.0
+  2026-11-22 Elijah Higgins: 5+ Receiving Yards -400 0.782 lost 4.0

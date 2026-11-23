@@ -1,0 +1,45 @@
+joined 6022 of 6022 {}
+== 7. last-5 hit rate at this exact line, prior games only (>=5 prior games)
+has >=5 prior games                              | H1 1628: 80.5% vs 80.1% z+0.49 roi-6.0    | H2 3152: 82.5% vs 82.0% z+0.76 roi-5.4    | ALL 4780: 81.8% vs 81.3% z+0.9 roi-5.6     | rejected
+fewer than 5 prior games                         | H1 1170: 84.2% vs 83.7% z+0.43 roi-5.7    | H2 72: 73.6% vs 78.7% z-1.12 roi-13.8     | ALL 1242: 83.6% vs 83.4% z+0.13 roi-6.2    | rejected
+last5 at line 5/5                                | H1 605: 84.8% vs 83.8% z+0.68 roi-5.6     | H2 1333: 84.8% vs 84.1% z+0.77 roi-5.7    | ALL 1938: 84.8% vs 84.0% z+1.01 roi-5.6    | rejected
+last5 at line 4/5                                | H1 637: 80.7% vs 81.0% z-0.19 roi-6.4     | H2 1156: 81.2% vs 82.3% z-0.99 roi-7.1    | ALL 1793: 81.0% vs 81.8% z-0.9 roi-6.9     | rejected
+last5 at line 3/5                                | H1 263: 79.8% vs 76.4% z+1.38 roi-1.5     | H2 491: 81.7% vs 79.5% z+1.23 roi-2.5     | ALL 754: 81.0% vs 78.4% z+1.82 roi-2.2     | rejected
+last5 at line <=2/5                              | H1 123: 60.2% vs 65.0% z-1.22 roi-14.8    | H2 172: 75.6% vs 71.0% z+1.46 roi-0.8     | ALL 295: 69.2% vs 68.5% z+0.28 roi-6.6     | rejected
+last5 at line <=3/5                              | H1 386: 73.6% vs 72.7% z+0.4 roi-5.8      | H2 663: 80.1% vs 77.3% z+1.82 roi-2.0     | ALL 1049: 77.7% vs 75.6% z+1.67 roi-3.4    | rejected
+  nba last5 <=3/5                                | H1 69: 75.4% vs 83.2% z-1.75 roi-14.6     | H2 365: 84.4% vs 82.4% z+1.0 roi-2.7      | ALL 434: 82.9% vs 82.5% z+0.23 roi-4.6     | rejected
+  nba last5 5/5                                  | H1 148: 85.1% vs 85.0% z+0.05 roi-6.5     | H2 827: 86.1% vs 84.9% z+0.94 roi-5.6     | ALL 975: 85.9% vs 84.9% z+0.88 roi-5.8     | rejected
+  nhl last5 <=3/5                                | H1 182: 74.7% vs 75.0% z-0.07 roi-8.2     | H2 139: 80.6% vs 76.8% z+1.06 roi-2.2     | ALL 321: 77.3% vs 75.8% z+0.63 roi-5.6     | rejected
+  nhl last5 5/5                                  | H1 336: 84.5% vs 83.5% z+0.52 roi-6.1     | H2 381: 84.5% vs 83.2% z+0.7 roi-5.5      | ALL 717: 84.5% vs 83.3% z+0.87 roi-5.8     | rejected
+  nfl last5 <=3/5                                | H1 135: 71.1% vs 64.4% z+1.82 roi2.0      | H2 159: 69.8% vs 65.9% z+1.16 roi-0.5     | ALL 294: 70.4% vs 65.2% z+2.09 roi0.6      | watch
+  nfl last5 5/5                                  | H1 121: 85.1% vs 83.2% z+0.58 roi-3.0     | H2 125: 77.6% vs 81.3% z-1.08 roi-6.5     | ALL 246: 81.3% vs 82.2% z-0.38 roi-4.8     | rejected
+  l5 rate - p <= -0.25                           | H1 137: 75.9% vs 80.1% z-1.25 roi-11.0    | H2 268: 84.3% vs 81.7% z+1.13 roi-1.9     | ALL 405: 81.5% vs 81.2% z+0.17 roi-5.0     | rejected
+  -0.25..-0.05                                   | H1 419: 82.8% vs 79.8% z+1.57 roi-2.3     | H2 798: 83.0% vs 82.7% z+0.23 roi-5.4     | ALL 1217: 82.9% vs 81.7% z+1.13 roi-4.3    | rejected
+  -0.05..+0.10                                   | H1 420: 75.7% vs 78.3% z-1.34 roi-9.3     | H2 689: 78.8% vs 80.0% z-0.77 roi-7.0     | ALL 1109: 77.6% vs 79.3% z-1.43 roi-7.9    | rejected
+  >= +0.10                                       | H1 652: 83.1% vs 81.3% z+1.22 roi-5.1     | H2 1397: 83.8% vs 82.7% z+1.05 roi-5.3    | ALL 2049: 83.6% vs 82.3% z+1.56 roi-5.3    | rejected
+  season rate at line < p-0.15                   | H1 215: 79.1% vs 80.7% z-0.61 roi-7.1     | H2 390: 81.0% vs 82.3% z-0.66 roi-6.0     | ALL 605: 80.3% vs 81.7% z-0.89 roi-6.4     | rejected
+  season rate within +-0.15 of p                 | H1 1161: 81.3% vs 80.8% z+0.41 roi-6.2    | H2 2491: 83.1% vs 82.5% z+0.81 roi-5.5    | ALL 3652: 82.6% vs 82.0% z+0.9 roi-5.7     | rejected
+  season rate > p+0.15                           | H1 252: 78.2% vs 75.9% z+0.87 roi-4.0     | H2 271: 79.0% vs 76.8% z+0.88 roi-4.2     | ALL 523: 78.6% vs 76.4% z+1.24 roi-4.1     | rejected
+== 3. role / usage
+NBA starter (this game)                          | H1 1217: 84.9% vs 84.4% z+0.45 roi-5.9    | H2 1672: 84.7% vs 83.9% z+0.93 roi-5.2    | ALL 2889: 84.8% vs 84.1% z+1.0 roi-5.5     | rejected
+NBA bench (this game)                            | H1 161: 78.3% vs 84.3% z-2.11 roi-12.6    | H2 267: 80.9% vs 84.0% z-1.37 roi-9.2     | ALL 428: 79.9% vs 84.1% z-2.37 roi-10.5    | watch
+NBA prior-5 avg minutes <20                      | H1 28: 57.1% vs 84.3% z-3.97 roi-35.8     | H2 82: 76.8% vs 83.2% z-1.54 roi-12.9     | ALL 110: 71.8% vs 83.5% z-3.3 roi-18.7     | watch
+NBA prior-5 avg minutes 20-28                    | H1 206: 82.0% vs 84.1% z-0.79 roi-8.0     | H2 566: 84.3% vs 83.9% z+0.23 roi-5.4     | ALL 772: 83.7% vs 84.0% z-0.21 roi-6.1     | rejected
+NBA prior-5 avg minutes 28-34                    | H1 365: 86.0% vs 84.2% z+0.97 roi-3.3     | H2 887: 83.9% vs 83.9% z-0.05 roi-6.2     | ALL 1252: 84.5% vs 84.0% z+0.48 roi-5.4    | rejected
+NBA prior-5 avg minutes 34+                      | H1 163: 79.8% vs 83.5% z-1.3 roi-10.8     | H2 401: 86.8% vs 84.0% z+1.5 roi-3.3      | ALL 564: 84.8% vs 83.9% z+0.57 roi-5.5     | rejected
+NHL defencemen                                   | H1 146: 79.5% vs 80.7% z-0.38 roi-9.0     | H2 125: 83.2% vs 80.3% z+0.84 roi-3.2     | ALL 271: 81.2% vs 80.5% z+0.3 roi-6.3      | rejected
+NHL forwards                                     | H1 762: 81.1% vs 80.4% z+0.49 roi-6.4     | H2 723: 82.0% vs 81.3% z+0.49 roi-6.1     | ALL 1485: 81.5% vs 80.9% z+0.69 roi-6.3    | rejected
+NHL prior-5 avg TOI <14                          | H1 27: 81.5% vs 81.0% z+0.06 roi-6.6      | H2 15: 86.7% vs 83.9% z+0.3 roi-3.2       | ALL 42: 83.3% vs 82.0% z+0.22 roi-5.4      | rejected
+NHL prior-5 avg TOI 14-17                        | H1 189: 76.2% vs 82.9% z-2.47 roi-14.8    | H2 158: 82.3% vs 83.8% z-0.53 roi-8.4     | ALL 347: 79.0% vs 83.3% z-2.19 roi-11.9    | rejected
+NHL prior-5 avg TOI 17-20                        | H1 373: 82.8% vs 80.0% z+1.38 roi-4.1     | H2 333: 81.4% vs 81.0% z+0.16 roi-6.4     | ALL 706: 82.2% vs 80.5% z+1.12 roi-5.2     | rejected
+NHL prior-5 avg TOI 20+                          | H1 309: 81.6% vs 79.4% z+0.96 roi-4.8     | H2 335: 82.7% vs 79.9% z+1.3 roi-3.8      | ALL 644: 82.1% vs 79.6% z+1.6 roi-4.3      | rejected
+NFL rec props, prior-5 avg targets <3            | H1 32: 87.5% vs 79.9% z+1.07 roi8.0       | H2 32: 71.9% vs 82.6% z-1.6 roi-14.0      | ALL 64: 79.7% vs 81.2% z-0.32 roi-3.0      | rejected
+NFL rec props, prior-5 avg targets 3-5           | H1 89: 80.9% vs 82.1% z-0.3 roi-3.9       | H2 98: 78.6% vs 81.6% z-0.77 roi-5.0      | ALL 187: 79.7% vs 81.8% z-0.77 roi-4.5     | rejected
+NFL rec props, prior-5 avg targets 5-7           | H1 94: 86.2% vs 82.5% z+0.94 roi2.4       | H2 82: 78.0% vs 82.7% z-1.12 roi-6.8      | ALL 176: 82.4% vs 82.6% z-0.08 roi-1.9     | rejected
+NFL rec props, prior-5 avg targets 7+            | H1 90: 83.3% vs 83.3% z-0.0 roi-2.3       | H2 58: 75.9% vs 82.4% z-1.32 roi-9.3      | ALL 148: 80.4% vs 83.0% z-0.84 roi-5.1     | rejected
+NFL rec yds <=10+ & prior targets <4             | H1 40: 82.5% vs 80.7% z+0.28 roi0.9       | H2 38: 78.9% vs 81.3% z-0.37 roi-4.1      | ALL 78: 80.8% vs 81.0% z-0.06 roi-1.5      | rejected
+NFL rush yds, prior-5 avg carries <8             | H1 16: 75.0% vs 82.3% z-0.77 roi-15.5     | H2 14: 78.6% vs 84.9% z-0.66 roi-11.8     | ALL 30: 76.7% vs 83.5% z-1.01 roi-13.7     | rejected
+NFL rush yds, prior-5 avg carries >=8            | H1 28: 85.7% vs 84.2% z+0.22 roi-7.9      | H2 15: 80.0% vs 85.5% z-0.61 roi-11.5     | ALL 43: 83.7% vs 84.7% z-0.18 roi-9.2      | rejected
+== 6b. cluster check: per player-game with >=2 props, all-won vs product of stated
+same player-game, any markets                    | H1 {'n': 611, 'all_won': 70.0, 'said': 61.0, 'z': 4.77, 'all_lost': 48, 'all_lost_exp': 16.4} | H2 {'n': 766, 'all_won': 70.4, 'said': 62.3, 'z': 4.71, 'all_lost': 50, 'all_lost_exp': 19.6} | ALL {'n': 1377, 'all_won': 70.2, 'said': 61.7, 'z': 6.69, 'all_lost': 98, 'all_lost_exp': 36.0} | ADOPT
+same player-game, all different markets          | H1 {'n': 439, 'all_won': 70.6, 'said': 62.3, 'z': 3.74, 'all_lost': 34, 'all_lost_exp': 10.6} | H2 {'n': 582, 'all_won': 70.6, 'said': 63.1, 'z': 3.9, 'all_lost': 37, 'all_lost_exp': 14.2} | ALL {'n': 1021, 'all_won': 70.6, 'said': 62.7, 'z': 5.39, 'all_lost': 71, 'all_lost_exp': 24.8} | ADOPT

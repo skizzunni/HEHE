@@ -1,0 +1,92 @@
+== 0. all graded props
+ALL props.json graded                            | H1 3133: 81.0% vs 81.0% z+0.06 roi-6.4    | H2 3314: 82.1% vs 81.7% z+0.61 roi-5.6    | ALL 6447: 81.6% vs 81.4% z+0.48 roi-6.0    | rejected
+Prop Locks legs (prop_lock=True)                 | H1 147: 92.5% vs 88.6% z+1.51 roi-3.2     | H2 276: 93.1% vs 86.9% z+3.06 roi-3.6     | ALL 423: 92.9% vs 87.5% z+3.38 roi-3.5     | watch
+== 1. market (league x market, n>=40)
+mkt nhl Shots on Goal                            | H1 908: 80.8% vs 80.4% z+0.3 roi-6.9      | H2 848: 82.2% vs 81.2% z+0.78 roi-5.7     | ALL 1756: 81.5% vs 80.8% z+0.75 roi-6.3    | rejected
+mkt nba Points                                   | H1 287: 86.8% vs 85.2% z+0.73 roi-8.4     | H2 439: 87.7% vs 85.5% z+1.32 roi-6.8     | ALL 726: 87.3% vs 85.4% z+1.49 roi-7.4     | rejected
+mkt nba Pts + Reb + Ast                          | H1 232: 84.5% vs 84.7% z-0.11 roi-6.7     | H2 360: 83.9% vs 84.3% z-0.23 roi-6.6     | ALL 592: 84.1% vs 84.5% z-0.25 roi-6.6     | rejected
+mkt nba Assists                                  | H1 236: 83.5% vs 84.1% z-0.27 roi-2.6     | H2 299: 80.3% vs 81.9% z-0.71 roi-4.1     | ALL 535: 81.7% vs 82.8% z-0.72 roi-3.5     | rejected
+mkt nba Pts + Ast                                | H1 178: 87.1% vs 83.9% z+1.17 roi-2.8     | H2 304: 82.6% vs 83.2% z-0.32 roi-5.2     | ALL 482: 84.2% vs 83.5% z+0.45 roi-4.3     | rejected
+mkt nfl Receiving Yards                          | H1 221: 83.7% vs 82.4% z+0.5 roi0.4       | H2 176: 77.3% vs 81.8% z-1.55 roi-6.5     | ALL 397: 80.9% vs 82.1% z-0.67 roi-2.6     | rejected
+mkt nba Rebounds                                 | H1 137: 80.3% vs 84.3% z-1.3 roi-9.9      | H2 188: 89.9% vs 84.7% z+1.97 roi-2.1     | ALL 325: 85.8% vs 84.6% z+0.65 roi-5.4     | rejected
+mkt nba Threes Made                              | H1 133: 82.7% vs 84.2% z-0.48 roi-9.0     | H2 171: 83.0% vs 84.5% z-0.53 roi-9.5     | ALL 304: 82.9% vs 84.4% z-0.72 roi-9.3     | rejected
+mkt nba Reb + Ast                                | H1 122: 84.4% vs 83.3% z+0.33 roi-3.1     | H2 178: 80.9% vs 82.5% z-0.55 roi-5.3     | ALL 300: 82.3% vs 82.8% z-0.23 roi-4.4     | rejected
+mkt nfl Receptions                               | H1 104: 86.5% vs 82.3% z+1.13 roi0.8      | H2 104: 76.9% vs 83.0% z-1.65 roi-9.0     | ALL 208: 81.7% vs 82.6% z-0.35 roi-4.1     | rejected
+mkt soccer Goalkeeper Saves                      | H1 135: 82.2% vs 81.3% z+0.29 roi-4.8     | H2 39: 87.2% vs 81.0% z+1.03 roi-5.0      | ALL 174: 83.3% vs 81.2% z+0.75 roi-4.8     | rejected
+mkt nfl Anytime Touchdown Scorer                 | H1 83: 49.4% vs 42.4% z+1.31 roi-5.8      | H2 87: 54.0% vs 41.9% z+2.33 roi0.0       | ALL 170: 51.8% vs 42.2% z+2.58 roi-2.8     | watch
+mkt nfl Rushing Yards                            | H1 54: 85.2% vs 83.2% z+0.39 roi-6.1      | H2 32: 81.2% vs 85.2% z-0.63 roi-9.4      | ALL 86: 83.7% vs 84.0% z-0.06 roi-7.3      | rejected
+mkt nfl Passing Yards                            | H1 37: 83.8% vs 83.5% z+0.04 roi-4.6      | H2 33: 93.9% vs 84.3% z+1.53 roi7.4       | ALL 70: 88.6% vs 83.9% z+1.07 roi1.1       | rejected
+mkt ufc Winner                                   | H1 34: 70.6% vs 66.4% z+0.53 roi4.2       | H2 33: 69.7% vs 67.6% z+0.26 roi1.5       | ALL 67: 70.1% vs 67.0% z+0.56 roi2.9       | rejected
+mkt nba Pts + Reb                                | H1 53: 73.6% vs 84.6% z-2.22 roi-22.0     | H2 0: -                                   | ALL 53: 73.6% vs 84.6% z-2.22 roi-22.0     | rejected (too few)
+== 1b. side
+side under/No                                    | H1 15: 73.3% vs 73.5% z-0.01 roi-2.1      | H2 9: 66.7% vs 82.0% z-1.2 roi-23.4       | ALL 24: 70.8% vs 76.7% z-0.7 roi-10.1      | rejected (too few)
+side over / N+                                   | H1 3118: 81.0% vs 81.0% z+0.06 roi-6.4    | H2 3305: 82.2% vs 81.7% z+0.68 roi-5.6    | ALL 6423: 81.6% vs 81.4% z+0.53 roi-6.0    | rejected
+== 4. league
+league nba                                       | H1 1378: 84.1% vs 84.4% z-0.3 roi-6.7     | H2 1939: 84.2% vs 83.9% z+0.35 roi-5.7    | ALL 3317: 84.2% vs 84.1% z+0.08 roi-6.1    | rejected
+league nhl                                       | H1 908: 80.8% vs 80.4% z+0.3 roi-6.9      | H2 848: 82.2% vs 81.2% z+0.78 roi-5.7     | ALL 1756: 81.5% vs 80.8% z+0.75 roi-6.3    | rejected
+league nfl                                       | H1 512: 78.7% vs 76.1% z+1.49 roi-1.9     | H2 437: 74.1% vs 74.6% z-0.24 roi-5.0     | ALL 949: 76.6% vs 75.4% z+0.93 roi-3.3     | rejected
+league soccer                                    | H1 172: 70.9% vs 77.4% z-2.24 roi-16.8    | H2 41: 85.4% vs 78.8% z+1.09 roi-4.8      | ALL 213: 73.7% vs 77.7% z-1.53 roi-14.5    | rejected
+league ufc                                       | H1 54: 75.9% vs 67.7% z+1.33 roi9.4       | H2 49: 67.3% vs 71.0% z-0.58 roi-7.2      | ALL 103: 71.8% vs 69.3% z+0.57 roi1.5      | rejected
+league wnba                                      | H1 61: 75.4% vs 80.3% z-0.96 roi-13.6     | H2 0: -                                   | ALL 61: 75.4% vs 80.3% z-0.96 roi-13.6     | rejected (too few)
+league mlb                                       | H1 48: 68.8% vs 72.7% z-0.64 roi-7.3      | H2 0: -                                   | ALL 48: 68.8% vs 72.7% z-0.64 roi-7.3      | rejected (too few)
+== 2. line height: lowest rung of its market vs higher
+lowest rung (1+ SOG, 5+ yds, 1+ 3PM...)          | H1 1530: 81.9% vs 82.0% z-0.1 roi-6.9     | H2 1692: 82.6% vs 82.3% z+0.35 roi-6.4    | ALL 3222: 82.3% vs 82.2% z+0.18 roi-6.7    | rejected
+higher rungs                                     | H1 1532: 81.0% vs 80.9% z+0.15 roi-5.7    | H2 1571: 82.1% vs 81.5% z+0.63 roi-4.8    | ALL 3103: 81.6% vs 81.2% z+0.55 roi-5.2    | rejected
+  nba Points 5+                                  | H1 133: 85.0% vs 85.3% z-0.1 roi-10.3     | H2 221: 86.4% vs 85.6% z+0.33 roi-8.4     | ALL 354: 85.9% vs 85.5% z+0.2 roi-9.1      | rejected
+  nba Points 10+                                 | H1 91: 90.1% vs 85.4% z+1.26 roi-5.4      | H2 137: 87.6% vs 85.8% z+0.61 roi-7.7     | ALL 228: 88.6% vs 85.7% z+1.27 roi-6.7     | rejected
+  nba Points 15+                                 | H1 55: 85.5% vs 85.2% z+0.05 roi-9.4      | H2 63: 90.5% vs 84.8% z+1.26 roi-2.1      | ALL 118: 88.1% vs 85.0% z+0.96 roi-5.5     | rejected
+  nba Threes Made 1+                             | H1 114: 83.3% vs 84.6% z-0.38 roi-8.9     | H2 159: 82.4% vs 84.5% z-0.75 roi-10.2    | ALL 273: 82.8% vs 84.6% z-0.82 roi-9.7     | rejected
+  nba Threes Made 2+                             | H1 18: 77.8% vs 82.3% z-0.51 roi-11.8     | H2 12: 91.7% vs 84.0% z+0.73 roi0.7       | ALL 30: 83.3% vs 83.0% z+0.05 roi-6.8      | rejected
+  nba Assists 2+                                 | H1 140: 85.0% vs 84.9% z+0.05 roi-1.2     | H2 147: 80.3% vs 82.3% z-0.65 roi-4.7     | ALL 287: 82.6% vs 83.6% z-0.45 roi-3.0     | rejected
+  nba Assists 4+                                 | H1 65: 83.1% vs 83.7% z-0.15 roi-2.6      | H2 113: 79.6% vs 81.6% z-0.54 roi-4.7     | ALL 178: 80.9% vs 82.4% z-0.53 roi-4.0     | rejected
+  nba Assists 6+                                 | H1 21: 71.4% vs 84.6% z-1.72 roi-19.1     | H2 35: 82.9% vs 81.3% z+0.23 roi-0.2      | ALL 56: 78.6% vs 82.6% z-0.8 roi-7.3       | rejected
+  nba Rebounds 4+                                | H1 82: 80.5% vs 84.3% z-0.95 roi-9.4      | H2 130: 87.7% vs 84.9% z+0.88 roi-4.7     | ALL 212: 84.9% vs 84.7% z+0.1 roi-6.5      | rejected
+  nba Rebounds 6+                                | H1 36: 83.3% vs 84.3% z-0.16 roi-6.4      | H2 40: 92.5% vs 84.1% z+1.46 roi1.2       | ALL 76: 88.2% vs 84.2% z+0.96 roi-2.4      | rejected
+  nba Rebounds 8+                                | H1 14: 71.4% vs 85.1% z-1.43 roi-20.6     | H2 18: 100.0% vs 84.9% z+1.79 roi9.2      | ALL 32: 87.5% vs 85.0% z+0.4 roi-3.8       | rejected
+  nhl Shots on Goal 1+                           | H1 560: 85.4% vs 84.6% z+0.47 roi-6.4     | H2 529: 86.0% vs 85.3% z+0.47 roi-6.2     | ALL 1089: 85.7% vs 85.0% z+0.67 roi-6.3    | rejected
+  nhl Shots on Goal 2+                           | H1 319: 72.7% vs 74.1% z-0.55 roi-9.0     | H2 283: 76.0% vs 74.7% z+0.5 roi-5.2      | ALL 602: 74.3% vs 74.4% z-0.06 roi-7.2     | rejected
+  nhl Shots on Goal 3+                           | H1 28: 85.7% vs 71.2% z+1.7 roi12.6       | H2 35: 74.3% vs 71.3% z+0.39 roi-2.9      | ALL 63: 79.4% vs 71.3% z+1.42 roi4.0       | rejected
+  nfl Receiving Yards 5+                         | H1 42: 83.3% vs 82.0% z+0.22 roi0.3       | H2 35: 77.1% vs 82.1% z-0.76 roi-7.3      | ALL 77: 80.5% vs 82.0% z-0.35 roi-3.2      | rejected
+  nfl Receiving Yards 10+                        | H1 30: 86.7% vs 82.8% z+0.57 roi4.5       | H2 33: 78.8% vs 81.3% z-0.37 roi-3.8      | ALL 63: 82.5% vs 82.0% z+0.11 roi0.2       | rejected
+  nfl Receiving Yards 15+                        | H1 35: 80.0% vs 82.6% z-0.42 roi-4.8      | H2 29: 79.3% vs 82.9% z-0.51 roi-5.9      | ALL 64: 79.7% vs 82.8% z-0.66 roi-5.3      | rejected
+  nfl Receiving Yards 20+                        | H1 39: 89.7% vs 83.3% z+1.08 roi5.9       | H2 27: 81.5% vs 82.0% z-0.07 roi-1.7      | ALL 66: 86.4% vs 82.8% z+0.78 roi2.8       | rejected
+  nfl Receiving Yards 25+                        | H1 26: 84.6% vs 84.0% z+0.08 roi0.7       | H2 17: 70.6% vs 81.2% z-1.13 roi-13.5     | ALL 43: 79.1% vs 82.9% z-0.68 roi-4.9      | rejected
+  nfl Receiving Yards 30+                        | H1 21: 71.4% vs 80.1% z-1.02 roi-11.2     | H2 18: 72.2% vs 81.3% z-0.99 roi-12.4     | ALL 39: 71.8% vs 80.7% z-1.42 roi-11.7     | rejected
+  nfl Receptions 1+                              | H1 26: 88.5% vs 82.8% z+0.77 roi2.2       | H2 35: 80.0% vs 82.9% z-0.45 roi-5.2      | ALL 61: 83.6% vs 82.8% z+0.16 roi-2.0      | rejected
+  nfl Receptions 2+                              | H1 34: 82.4% vs 82.2% z+0.02 roi-3.8      | H2 32: 84.4% vs 82.8% z+0.24 roi0.2       | ALL 66: 83.3% vs 82.5% z+0.18 roi-1.9      | rejected
+  nfl Receptions 3+                              | H1 22: 95.5% vs 83.0% z+1.56 roi10.7      | H2 17: 64.7% vs 84.4% z-2.25 roi-24.5     | ALL 39: 82.1% vs 83.6% z-0.27 roi-4.6      | rejected
+  nfl Receptions 4+                              | H1 12: 91.7% vs 80.8% z+0.97 roi8.2       | H2 13: 53.8% vs 81.3% z-2.55 roi-35.4     | ALL 25: 72.0% vs 81.1% z-1.16 roi-14.4     | rejected
+NFL rec yds lines <=10+                          | H1 72: 84.7% vs 82.3% z+0.54 roi2.0       | H2 68: 77.9% vs 81.7% z-0.8 roi-5.6       | ALL 140: 81.4% vs 82.0% z-0.19 roi-1.7     | rejected
+NFL rec yds lines 15+..25+                       | H1 100: 85.0% vs 83.3% z+0.47 roi0.8      | H2 73: 78.1% vs 82.2% z-0.92 roi-6.1      | ALL 173: 82.1% vs 82.8% z-0.25 roi-2.1     | rejected
+NFL rec yds lines >=30+                          | H1 49: 79.6% vs 80.9% z-0.24 roi-2.6      | H2 35: 74.3% vs 81.0% z-1.02 roi-9.2      | ALL 84: 77.4% vs 81.0% z-0.84 roi-5.3      | rejected
+== 5. stated chance bands (distance from 50%)
+p in [0.00,0.50)                                 | H1 104: 43.3% vs 39.3% z+0.83 roi-9.6     | H2 73: 45.2% vs 38.3% z+1.23 roi-7.5      | ALL 177: 44.1% vs 38.9% z+1.42 roi-8.7     | rejected
+p in [0.50,0.60)                                 | H1 32: 65.6% vs 55.4% z+1.16 roi8.2       | H2 22: 81.8% vs 55.0% z+2.54 roi26.8      | ALL 54: 72.2% vs 55.2% z+2.52 roi15.8      | watch
+p in [0.60,0.70)                                 | H1 97: 61.9% vs 66.9% z-1.06 roi-14.3     | H2 76: 67.1% vs 67.0% z+0.02 roi-6.5      | ALL 173: 64.2% vs 66.9% z-0.78 roi-10.9    | rejected
+p in [0.70,0.75)                                 | H1 347: 72.0% vs 73.2% z-0.46 roi-7.9     | H2 264: 74.6% vs 72.9% z+0.61 roi-4.1     | ALL 611: 73.2% vs 73.1% z+0.05 roi-6.3     | rejected
+p in [0.75,0.80)                                 | H1 232: 75.9% vs 77.7% z-0.66 roi-4.6     | H2 353: 75.6% vs 77.5% z-0.83 roi-5.1     | ALL 585: 75.7% vs 77.6% z-1.06 roi-4.9     | rejected
+p in [0.80,0.85)                                 | H1 1136: 84.0% vs 84.3% z-0.3 roi-6.5     | H2 1158: 84.5% vs 84.4% z+0.18 roi-5.5    | ALL 2294: 84.3% vs 84.3% z-0.09 roi-6.0    | rejected
+p in [0.85,0.90)                                 | H1 1119: 87.0% vs 85.7% z+1.16 roi-5.5    | H2 1367: 86.0% vs 85.9% z+0.16 roi-6.5    | ALL 2486: 86.4% vs 85.8% z+0.9 roi-6.1     | rejected
+p in [0.90,1.01)                                 | H1 66: 89.4% vs 93.9% z-1.55 roi-7.3      | H2 1: 100.0% vs 90.6% z+0.32 roi4.0       | ALL 67: 89.6% vs 93.9% z-1.48 roi-7.1      | rejected (too few)
+== 5b. very short prices
+  price -1000 or shorter                         | H1 1102: 87.7% vs 86.1% z+1.62 roi-6.6    | H2 1111: 87.0% vs 85.9% z+1.14 roi-7.1    | ALL 2213: 87.4% vs 86.0% z+1.95 roi-6.9    | rejected
+  -1000..-500                                    | H1 1148: 83.9% vs 84.7% z-0.72 roi-5.7    | H2 1381: 84.7% vs 84.8% z-0.03 roi-4.7    | ALL 2529: 84.3% vs 84.7% z-0.51 roi-5.2    | rejected
+  -500..-300                                     | H1 645: 74.1% vs 75.8% z-1.01 roi-6.2     | H2 644: 74.2% vs 75.8% z-0.94 roi-6.0     | ALL 1289: 74.2% vs 75.8% z-1.38 roi-6.1    | rejected
+  -300..-100                                     | H1 179: 59.8% vs 59.6% z+0.05 roi-9.1     | H2 137: 66.4% vs 60.1% z+1.55 roi-0.8     | ALL 316: 62.7% vs 59.8% z+1.05 roi-5.5     | rejected
+  plus money                                     | H1 59: 39.0% vs 35.2% z+0.62 roi-7.3      | H2 41: 39.0% vs 34.0% z+0.68 roi-8.8      | ALL 100: 39.0% vs 34.7% z+0.91 roi-7.9     | rejected
+  -1000 or shorter, dated >= CAP_SINCE 2026-10-27 | H1 586: 87.5% vs 85.6% z+1.31 roi-6.1     | H2 1346: 87.3% vs 85.7% z+1.68 roi-6.3    | ALL 1932: 87.4% vs 85.7% z+2.13 roi-6.2    | watch
+== 8. stated vs book implied: our p minus imp
+p-imp in [-1,-0.065)                             | H1 979: 84.7% vs 81.3% z+2.84 roi-6.0     | H2 996: 84.4% vs 81.6% z+2.45 roi-6.2     | ALL 1975: 84.6% vs 81.5% z+3.74 roi-6.1    | watch
+p-imp in [-0.065,-0.045)                         | H1 1199: 79.6% vs 80.9% z-1.12 roi-8.0    | H2 1195: 82.7% vs 81.8% z+0.76 roi-5.4    | ALL 2394: 81.2% vs 81.4% z-0.26 roi-6.7    | rejected
+p-imp in [-0.045,-0.025)                         | H1 450: 79.3% vs 80.8% z-0.81 roi-6.3     | H2 511: 80.6% vs 82.2% z-0.95 roi-6.1     | ALL 961: 80.0% vs 81.6% z-1.25 roi-6.2     | rejected
+p-imp in [-0.025,1)                              | H1 483: 78.7% vs 80.0% z-0.75 roi-2.4     | H2 608: 78.9% vs 81.4% z-1.54 roi-4.3     | ALL 1091: 78.8% vs 80.8% z-1.65 roi-3.5    | rejected
+== 8b. fair chance (p_fair) above stated by >=5 pts
+p_fair - p >= 0.05                               | H1 562: 84.3% vs 84.5% z-0.07 roi-8.7     | H2 690: 84.6% vs 84.5% z+0.11 roi-6.6     | ALL 1252: 84.5% vs 84.5% z+0.04 roi-7.5    | rejected
+p_fair - p < 0.05                                | H1 1193: 82.8% vs 83.2% z-0.32 roi-4.5    | H2 1384: 81.2% vs 83.0% z-1.73 roi-6.0    | ALL 2577: 82.0% vs 83.1% z-1.49 roi-5.3    | rejected
+== 8c. name match quality
+matched fuzzy                                    | H1 12: 75.0% vs 78.5% z-0.3 roi-11.6      | H2 19: 89.5% vs 83.4% z+0.71 roi0.8       | ALL 31: 83.9% vs 81.5% z+0.34 roi-4.0      | rejected
+== 6. same-game / same-player pairs: P(both win) vs product of stated
+same player, same game (2 props)                 | H1 {'n': 1202, 'both_won': 73.2, 'said': 67.2, 'z': 4.59, 'both_lost': 97, 'both_lost_exp': 38.7} | H2 {'n': 1487, 'both_won': 74.0, 'said': 68.1, 'z': 5.01, 'both_lost': 106, 'both_lost_exp': 45.2} | ALL {'n': 2689, 'both_won': 73.7, 'said': 67.7, 'z': 6.8, 'both_lost': 203, 'both_lost_exp': 83.8} | ADOPT
+same game, different players                     | H1 {'n': 15099, 'both_won': 67.7, 'said': 67.1, 'z': 1.73, 'both_lost': 522, 'both_lost_exp': 510.4} | H2 {'n': 17703, 'both_won': 67.5, 'said': 67.9, 'z': -1.01, 'both_lost': 598, 'both_lost_exp': 563.0} | ALL {'n': 32802, 'both_won': 67.6, 'said': 67.5, 'z': 0.43, 'both_lost': 1120, 'both_lost_exp': 1073.5} | rejected
+  same player: other leg's hit when one lost: {'n': 911, 'hit': 55.4, 'said': 82.8, 'z': -22.38, 'roi': -37.5, 'n_priced': 911}
+  same game diff player: other leg's hit when one lost: {'n': 5599, 'hit': 80.0, 'said': 81.8, 'z': -3.67, 'roi': -8.3, 'n_priced': 5599}
