@@ -59,6 +59,25 @@ class UnsubmittedTest(unittest.TestCase):
         self.assertTrue(R.text([], "05:00 PM").endswith("no leg affected."))
 
 
+class PriceLogTest(unittest.TestCase):
+    def test_appends_a_snapshot(self):
+        import datetime as dt
+        import json
+        import tempfile
+        d = tempfile.mkdtemp()
+        path = os.path.join(d, "ticket.json")
+        legs = [dict(kind="prop", player="Tomas Hertl", market="Shots on Goal", line_text="1+", label="Hertl"),
+                dict(kind="ml", id="8", team="BOS", label="BOS")]
+        cur = {("Tomas Hertl", "Shots on Goal", "1+"): "-950"}
+        rows = [dict(id="8", home="WSH", away="BOS", home_ml=351, away_ml=-453)]
+        now = dt.datetime(2026, 11, 24, 18, 45, tzinfo=dt.timezone.utc)
+        out = R.log_prices(path, legs, cur, rows, now)
+        R.log_prices(path, legs, cur, rows, now)
+        lines = [json.loads(x) for x in open(out)]
+        self.assertEqual(len(lines), 2)
+        self.assertEqual(lines[0], {"t": "2026-11-24T18:45:00", "prices": {"Hertl": "-950", "BOS": -453}})
+
+
 class FinalViewTest(unittest.TestCase):
     def test_keep_caution_drop(self):
         legs = [dict(id="1", label="A"), dict(id="1", label="B"), dict(id="2", label="C"), dict(id="2", label="D")]

@@ -122,6 +122,28 @@ def recheck(legs, status_fn, team_out_fn=None):
     return out
 
 
+def log_prices(path, legs, current, rows, now=None):
+    """Append one line to price_log.jsonl beside the saved ticket: every leg's
+    current price (FanDuel for props, DraftKings for winners) with the time.
+    2026-11-24: prices moved a lot through the day (Hertl 1+ shots -1300 ->
+    -950) and nothing kept the path, so "does a drifting price predict a
+    loss?" could never be tested. This builds that history."""
+    import datetime as dt
+    by = {str(r.get("id")): r for r in rows or []}
+    snap = {}
+    for L in legs:
+        if L.get("kind") == "prop":
+            snap[L.get("label")] = current.get((L.get("player"), L.get("market"), L.get("line_text")))
+        elif L.get("kind") == "ml":
+            r = by.get(str(L.get("id"))) or {}
+            snap[L.get("label")] = r.get("home_ml") if L.get("team") == r.get("home") else r.get("away_ml")
+    rec = dict(t=(now or dt.datetime.now(dt.timezone.utc)).isoformat()[:19], prices=snap)
+    out = os.path.join(os.path.dirname(os.path.abspath(path)), "price_log.jsonl")
+    with open(out, "a") as f:
+        f.write(json.dumps(rec) + "\n")
+    return out
+
+
 def unsubmitted(rep, mmdd, legs, rows):
     """Teams in the ticket's NBA games that the report lists as NOT YET
     SUBMITTED for the day: their players' statuses are not in yet, so 'no
@@ -173,6 +195,10 @@ def main(path, day, final=False):
         pg = B._fd_props(rows)
         current = {(p["name"], p.get("market"), str(p.get("line"))): p.get("price") for g in pg for p in g["props"]}
         prices = (price_check(legs, current) if current else []) + ml_check(legs, rows)
+        try:
+            log_prices(path, legs, current, rows)
+        except OSError:
+            pass
     except Exception:
         prices, rows = [], []
     allf = flags + recheck_nhl(legs, lineups) + prices
