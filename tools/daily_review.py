@@ -2206,6 +2206,22 @@ def big_files(root=None, limit_mb=BIG_MB):
 GRADER_HOURS = 2.0
 
 
+def preview_losses_line(preview_fn=None):
+    """While the grader is stale: what the board's own grader would settle now
+    (tools/grade_preview.py, nothing saved), every would-be loss with its score
+    and diagnosis -- so the "why it lost" log keeps going while the board is off."""
+    try:
+        import grade_preview as GP
+        S = (preview_fn or GP.preview)()
+    except Exception:
+        return None
+    if not S:
+        return None
+    lost = [GP.line(k, e) for k, e in S if e.get("status") == "lost"]
+    return ("Not yet graded by the board, from ESPN: " + GP.summary(S)
+            + "".join("\n- " + x for x in lost))
+
+
 def grader_stale_line(now=None, last_fn=None):
     """STALE GRADER when the board's last "Grade the ledger" commit is more
     than GRADER_HOURS old. 2026-11-24: every GitHub workflow was switched off
@@ -2788,6 +2804,8 @@ def words(r, fit):
         out.append(f"BIG FILE {name} is {mb} MB -- GitHub refuses files over 100 MB and the board stops; trim it")
     if r.get("grader_stale"):
         out.append(r["grader_stale"])
+    if r.get("grader_preview"):
+        out.append(r["grader_preview"])
     st = r.get("stuck") or []
     if st:
         out.append(f"STUCK {len(st)} record(s) open a week after their game -- grading is broken: "
@@ -2902,6 +2920,8 @@ def _main():
     log[today.isoformat()]["audit"] = audit(graded, props, locks)
     log[today.isoformat()]["stuck"] = stuck(ledger, props, locks, lottery, today)
     log[today.isoformat()]["grader_stale"] = grader_stale_line()
+    log[today.isoformat()]["grader_preview"] = (preview_losses_line()
+                                                if log[today.isoformat()]["grader_stale"] else None)
     log[today.isoformat()]["big_files"] = big_files()
     log[today.isoformat()]["ladder"] = ladder_line()
     log[today.isoformat()]["runs"] = runs_line()

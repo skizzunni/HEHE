@@ -30,5 +30,17 @@ class PreviewTest(unittest.TestCase):
                          "Would settle 3: 1 won, 1 lost, 1 void (preview only, nothing saved)")
 
 
+class ReviewLineTest(unittest.TestCase):
+    def test_preview_losses_line(self):
+        import daily_review
+        S = [("nba:1", dict(status="lost", pick="Raptors", conf=79, price="-449", matchup="MIL @ TOR",
+                            scores={"TOR": 111, "MIL": 116}, diagnosis="upset")),
+             ("nba:2", dict(status="won", pick="Lakers", conf=85, price="-800"))]
+        line = daily_review.preview_losses_line(lambda: S)
+        self.assertTrue(line.startswith("Not yet graded by the board, from ESPN: Would settle 2: 1 won, 1 lost"))
+        self.assertIn("\n- LOST nba Raptors at 79% (-449)", line)
+        self.assertIsNone(daily_review.preview_losses_line(lambda: []))
+
+
 if __name__ == "__main__":
     unittest.main()
