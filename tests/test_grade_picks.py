@@ -87,6 +87,15 @@ class BoardPropTest(unittest.TestCase):
         self.assertEqual(G.grade(dict(pk, line=6.0, line_text="6+"), {}, False, NHL_BOX), "open")
         self.assertEqual(G.grade(dict(pk, player="Nobody Else"), {}, True, NHL_BOX), "push")   # did not play: void
 
+    def test_nickname_in_box_score(self):
+        # FanDuel's "Mitchell Marner" is ESPN's "Mitch Marner" (Nov 24 ticket leg)
+        box = {"boxscore": {"players": [{"team": {"abbreviation": "VGK"}, "statistics": [
+            {"name": "forwards", "keys": ["shotsTotal"], "labels": ["S"],
+             "athletes": [{"athlete": {"id": "1", "displayName": "Mitch Marner"}, "stats": ["3"]}]}]}]}}
+        pk = dict(kind="prop", lg="nhl", market="Shots on Goal", player="Mitchell Marner", line=1.0, line_text="1+",
+                  stat="Shots on Goal")
+        self.assertEqual(G.grade(pk, {}, False, box), "won")
+
     def test_live_shows_nhl_shots_count(self):
         import json
         import tempfile
