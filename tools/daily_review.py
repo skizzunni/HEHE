@@ -2170,6 +2170,35 @@ def big_files(root=None, limit_mb=BIG_MB):
     return out
 
 
+GRADER_HOURS = 2.0
+
+
+def grader_stale_line(now=None, last_fn=None):
+    """STALE GRADER when the board's last "Grade the ledger" commit is more
+    than GRADER_HOURS old. 2026-11-24: every GitHub workflow was switched off
+    at 8 PM ET; nothing graded for six hours and the review said nothing,
+    because STUCK only fires a week after a game."""
+    import subprocess
+    import time
+    now = now if now is not None else time.time()
+    if last_fn is None:
+        def last_fn():
+            out = subprocess.run(["git", "log", "-1", "--grep=Grade the ledger", "--format=%ct"],
+                                 cwd=ROOT, capture_output=True, text=True, timeout=30).stdout.strip()
+            return int(out) if out.isdigit() else None
+    try:
+        last = last_fn()
+    except Exception:
+        return None
+    if last is None:
+        return "STALE GRADER: no 'Grade the ledger' commit in the fetched history -- is the board workflow running?"
+    hours = (now - last) / 3600
+    if hours <= GRADER_HOURS:
+        return None
+    return (f"STALE GRADER: the board last graded {hours:.1f} hours ago -- check that the board workflow "
+            f"is enabled and its runs succeed (GitHub Actions).")
+
+
 def stuck(ledger, props, locks, lottery, today):
     """Records still open a week after their game: by then every grader has
     settled or voided them, so anything left means grading broke somewhere
@@ -2724,6 +2753,8 @@ def words(r, fit):
         out.append(r["card_missing"])
     for name, mb in r.get("big_files") or []:
         out.append(f"BIG FILE {name} is {mb} MB -- GitHub refuses files over 100 MB and the board stops; trim it")
+    if r.get("grader_stale"):
+        out.append(r["grader_stale"])
     st = r.get("stuck") or []
     if st:
         out.append(f"STUCK {len(st)} record(s) open a week after their game -- grading is broken: "
@@ -2837,6 +2868,7 @@ def _main():
     log[today.isoformat()]["calls"] = cfg["detail"]
     log[today.isoformat()]["audit"] = audit(graded, props, locks)
     log[today.isoformat()]["stuck"] = stuck(ledger, props, locks, lottery, today)
+    log[today.isoformat()]["grader_stale"] = grader_stale_line()
     log[today.isoformat()]["big_files"] = big_files()
     log[today.isoformat()]["ladder"] = ladder_line()
     log[today.isoformat()]["runs"] = runs_line()

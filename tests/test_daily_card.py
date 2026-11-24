@@ -536,5 +536,15 @@ class ResearchPicksLineTest(unittest.TestCase):
         self.assertIsNone(daily_review.research_picks_line(os.path.join(tempfile.mkdtemp(), "*.json")))
 
 
+class GraderStaleTest(unittest.TestCase):
+    def test_flags_only_when_old(self):
+        import daily_review
+        now = 1_000_000
+        self.assertIsNone(daily_review.grader_stale_line(now, lambda: now - 3600))
+        line = daily_review.grader_stale_line(now, lambda: now - 6 * 3600)
+        self.assertIn("STALE GRADER: the board last graded 6.0 hours ago", line)
+        self.assertIn("no 'Grade the ledger' commit", daily_review.grader_stale_line(now, lambda: None))
+
+
 if __name__ == "__main__":
     unittest.main()
