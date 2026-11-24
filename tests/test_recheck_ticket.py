@@ -125,8 +125,19 @@ class MainEndToEndTest(unittest.TestCase):
         self.assertIn("KEEP    Steady 5+", out)
         self.assertIn("KEEP    BOS ML -- DraftKings now -550 (was -453), 83% no-vig, the market rates it more likely", out)
         self.assertIn("KEEP    Marner 1+ -- FanDuel now -1800 (was -2000), the market rates it less likely", out)   # Mitch / Mitchell: in the lines
-        self.assertTrue(out.endswith("3 of 4 legs stay."))
+        self.assertIn("3 of 4 legs stay.", out)
+        self.assertIn("All 3 kept legs win: about", out)                        # the dropped Cam leg is left out
         self.assertTrue(os.path.exists(os.path.join(d, "price_log.jsonl")))
+
+
+class AllWinTest(unittest.TestCase):
+    def test_current_price_bands(self):
+        kept = [dict(kind="prop", lg="nhl", label="Hertl", price="-1300"), dict(kind="ml", label="BOS", price="-453")]
+        rec = {("nhl", (-1000, -500)): (80, 100), ("nhl", (-1500, -1000)): (87, 100)}
+        line = R.all_win_line(kept, {"Hertl": "-950", "BOS": -453}, {"BOS": 0.79}, rec)
+        self.assertEqual(line, "All 2 kept legs win: about 63% -- pays about 1.35x at current prices. "
+                               "Each leg stands on its own; the size is your call.")      # 0.80 * 0.79, (1+100/950)(1+100/453)
+        self.assertIn("unavailable", R.all_win_line([dict(kind="prop", label="X", price=None)], {}, {}, {}))
 
 
 class FinalViewTest(unittest.TestCase):

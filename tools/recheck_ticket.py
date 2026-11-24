@@ -139,13 +139,8 @@ def recheck(legs, status_fn, team_out_fn=None):
     return out
 
 
-def log_prices(path, legs, current, rows, now=None):
-    """Append one line to price_log.jsonl beside the saved ticket: every leg's
-    current price (FanDuel for props, DraftKings for winners) with the time.
-    2026-11-24: prices moved a lot through the day (Hertl 1+ shots -1300 ->
-    -950) and nothing kept the path, so "does a drifting price predict a
-    loss?" could never be tested. This builds that history."""
-    import datetime as dt
+def snapshot(legs, current, rows):
+    """{leg label: current price} -- FanDuel for props, DraftKings for winners."""
     by = {str(r.get("id")): r for r in rows or []}
     snap = {}
     for L in legs:
@@ -154,6 +149,28 @@ def log_prices(path, legs, current, rows, now=None):
         elif L.get("kind") == "ml":
             r = by.get(str(L.get("id"))) or {}
             snap[L.get("label")] = r.get("home_ml") if L.get("team") == r.get("home") else r.get("away_ml")
+    return snap
+
+
+def ml_chance(legs, rows):
+    """{leg label: DraftKings no-vig chance now} for moneyline legs."""
+    by = {str(r.get("id")): r for r in rows or []}
+    out = {}
+    for L in legs:
+        r = by.get(str(L.get("id"))) or {}
+        if L.get("kind") == "ml" and r.get("market_home") is not None:
+            out[L.get("label")] = r["market_home"] if L.get("team") == r.get("home") else 1 - r["market_home"]
+    return out
+
+
+def log_prices(path, legs, current, rows, now=None):
+    """Append one line to price_log.jsonl beside the saved ticket: every leg's
+    current price (FanDuel for props, DraftKings for winners) with the time.
+    2026-11-24: prices moved a lot through the day (Hertl 1+ shots -1300 ->
+    -950) and nothing kept the path, so "does a drifting price predict a
+    loss?" could never be tested. This builds that history."""
+    import datetime as dt
+    snap = snapshot(legs, current, rows)
     rec = dict(t=(now or dt.datetime.now(dt.timezone.utc)).isoformat()[:19], prices=snap)
     out = os.path.join(os.path.dirname(os.path.abspath(path)), "price_log.jsonl")
     with open(out, "a") as f:
@@ -213,17 +230,23 @@ def main(path, day, final=False):
         pg = B._fd_props(rows)
         current = {(p["name"], p.get("market"), str(p.get("line"))): p.get("price") for g in pg for p in g["props"]}
         prices = (price_check(legs, current) if current else []) + ml_check(legs, rows)
+        snap = snapshot(legs, current, rows)
         try:
             log_prices(path, legs, current, rows)
         except OSError:
             pass
     except Exception:
-        prices, rows = [], []
+        prices, rows, snap = [], [], None
     allf = flags + recheck_nhl(legs, lineups) + prices
     pending = unsubmitted(rep, mmdd, legs, rows)
     if final:
         games = {str(r.get("id")): r.get("game") for r in rows or []}
-        out = final_text(legs, allf, games, rep.get("asof"))
+        try:
+            import build_ticket as B
+            rec = B.prop_record()
+        except Exception:
+            rec = {}
+        out = final_text(legs, allf, games, rep.get("asof"), now_prices=snap, now_chance=ml_chance(legs, rows), record=rec)
         return "\n".join([f"NOTE: {t} has NOT YET SUBMITTED its injury report -- recheck before tip." for t in pending] + [out])
     return text(allf, rep.get("asof"), pending)
 
@@ -243,9 +266,12 @@ def verdict(notes):
     return "KEEP", notes
 
 
-def final_text(legs, flags, games=None, asof=None):
+def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=None, record=None):
     """The final ticket by game: each leg KEEP / CAUTION / DROP with its notes,
-    then the kept count. games: {event id: 'AWAY @ HOME'}."""
+    then the kept count and -- when prices are known -- the kept legs' all-win
+    chance and payout at the current prices (a price move can move a prop into
+    another band of the record: Hertl -1300 -> -950, 2026-11-24).
+    games: {event id: 'AWAY @ HOME'}."""
     notes = {}
     for lab, note in flags:
         notes.setdefault(lab, []).append(note)
@@ -261,7 +287,33 @@ def final_text(legs, flags, games=None, asof=None):
             kept += v != "DROP"
             out.append(f"    {v:7} {L.get('label')}" + (f" -- {'; '.join(why)}" if why else ""))
     out.append(f"{kept} of {len(legs)} legs stay.")
+    if now_prices is not None:
+        out.append(all_win_line([L for L in legs if verdict(notes.get(L.get("label"), []))[0] != "DROP"],
+                                now_prices, now_chance or {}, record or {}))
     return "\n".join(out)
+
+
+def all_win_line(kept, now_prices, now_chance, record):
+    """'All 13 kept legs win: about 12% -- pays about 2.70x at current prices.'
+    A prop's chance is the lower of the board cap and its band's record at the
+    current price (build_ticket.apply_record's rule); a winner's is the
+    no-vig chance now."""
+    import build_ticket as B
+    import math
+    p, pays = 1.0, 1.0
+    for L in kept:
+        price = now_prices.get(L.get("label")) or L.get("price")
+        try:
+            pays *= B._dec(price)
+        except (TypeError, ValueError):
+            return "All-win chance at current prices: unavailable (a price is missing)."
+        if L.get("kind") == "prop":
+            w, n = record.get((L.get("lg"), B._band(price)), (0, 0))
+            p *= min(B.PROP_CAP, w / n) if n >= B.RECORD_MIN else B.PROP_CAP
+        else:
+            p *= now_chance.get(L.get("label"), 1 / B._dec(price))
+    return (f"All {len(kept)} kept legs win: about {100 * p:.0f}% -- pays about {pays:.2f}x at current prices. "
+            "Each leg stands on its own; the size is your call.")
 
 
 if __name__ == "__main__":

@@ -33,6 +33,7 @@ ET = ZoneInfo("America/New_York")
 MIN_WIN = 75
 WIN_LEAGUES = ("nba", "nfl", "nhl")
 PROP_FLOOR = 0.85
+PROP_CAP = 0.8727      # FanDuel props read at most this (props_ledger.cap) -- the ticket's stated prop chance
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PER_GAME = 3
 BLOWOUT = 80
