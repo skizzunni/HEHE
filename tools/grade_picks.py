@@ -10,7 +10,10 @@ The file is a list of picks:
     {"id": "401910036", "lg": "nba", "kind": "spread", "team": "MEM", "line": -2.5, "price": -116}
     {"id": "401910040", "lg": "nba", "kind": "under", "line": 222.5, "price": -105}
     {"id": "401892773", "lg": "nhl", "kind": "ml", "team": "NJ", "price": -205}
-kind is spread (team + line), ml (team), over or under (line). Each pick is
+    {"id": "401910045", "lg": "nba", "kind": "prop", "player": "Keegan Murray", "stat": "PTS", "line": 5, "price": -4500}
+kind is spread (team + line), ml (team), over or under (line), or prop: a
+player reaching `line` or more of `stat` (PTS, REB, AST, 3PM, STL, BLK, or a
+sum like PTS+AST) from the box score -- won as soon as he reaches it. Each pick is
 graded won / lost / push / open from ESPN's final score, and the file's
 record and flat $1 return are printed.
 """
@@ -23,7 +26,36 @@ SPORT = {"nba": "basketball/nba", "nhl": "hockey/nhl", "nfl": "football/nfl", "n
 SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/{}/summary?event={}"
 
 
-def final(lg, gid, get=None, with_clock=False):
+def _num(v):
+    try:
+        return float(str(v).split("-")[0])
+    except (TypeError, ValueError):
+        return None
+
+
+def player_stat(summary, player, stat):
+    """A player's stat (or a sum like PTS+AST) from an ESPN summary's box
+    score; 3PM is made threes. None when he is not in the box score."""
+    for t in ((summary or {}).get("boxscore") or {}).get("players") or []:
+        for cat in t.get("statistics") or []:
+            row = {a["athlete"]["displayName"]: dict(zip(cat.get("labels") or [], a.get("stats") or []))
+                   for a in cat.get("athletes") or []}
+            if player not in row:
+                continue
+            got = row[player]
+            if not got:
+                return 0.0                      # listed, did not play
+            total = 0.0
+            for part in stat.upper().split("+"):
+                v = _num(got.get("3PT")) if part == "3PM" else _num(got.get(part))
+                if v is None:
+                    return None
+                total += v
+            return total
+    return None
+
+
+def final(lg, gid, get=None, with_clock=False, raw=False):
     """{abbr: score} and completed flag for one game, from ESPN (and the
     game clock text, e.g. "9:51 - 3rd", when with_clock)."""
     def fetch(u):
@@ -41,8 +73,9 @@ def final(lg, gid, get=None, with_clock=False):
         except (KeyError, TypeError, ValueError):
             pass
     if with_clock:
-        return scores, done, ((comp.get("status") or {}).get("type") or {}).get("shortDetail") or ""
-    return scores, done
+        clock = ((comp.get("status") or {}).get("type") or {}).get("shortDetail") or ""
+        return (scores, done, clock, d) if raw else (scores, done, clock)
+    return (scores, done, d) if raw else (scores, done)
 
 
 def standing(pick, scores):
@@ -68,7 +101,12 @@ def standing(pick, scores):
     return f"{so_far}, {word}"
 
 
-def grade(pick, scores, done):
+def grade(pick, scores, done, summary=None):
+    if pick["kind"] == "prop":
+        v = player_stat(summary, pick["player"], pick["stat"])
+        if v is not None and v >= pick["line"]:
+            return "won"
+        return "lost" if done else "open"
     if not done or len(scores) != 2:
         return "open"
     total = sum(scores.values())
@@ -101,8 +139,8 @@ def main(path, get=None):
     picks = json.load(open(path))
     results = []
     for p in picks:
-        scores, done = final(p["lg"], p["id"], get)
-        results.append(grade(p, scores, done))
+        scores, done, d = final(p["lg"], p["id"], get, raw=True)
+        results.append(grade(p, scores, done, d))
     return picks, results, summary(picks, results)
 
 
@@ -110,14 +148,45 @@ def live(path, get=None):
     """One line per pick: WON/LOST/PUSH when final, else the clock and where it stands."""
     out = []
     for p in json.load(open(path)):
-        scores, done, clock = final(p["lg"], p["id"], get, with_clock=True)
-        r = grade(p, scores, done)
+        scores, done, clock, d = final(p["lg"], p["id"], get, with_clock=True, raw=True)
+        r = grade(p, scores, done, d)
+        if p["kind"] == "prop" and r == "open":
+            v = player_stat(d, p["player"], p["stat"])
+            have = "not in the box score yet" if v is None else f"{v:g} of {p['line']:g}"
+            out.append(f"OPEN  {p.get('label') or p} -- {clock}: {have}")
+            continue
         tail = "" if r != "open" else f" -- {clock}: {standing(p, scores)}" if scores and any(scores.values()) else f" -- {clock or 'not started'}"
         out.append(f"{r.upper():5} {p.get('label') or p}{tail}")
     return out
 
 
+def watch(path, every=120, get=None, sleep=None, emit=print):
+    """Print each pick once when it settles (WON / LOST / PUSH), then a last
+    line when none is left open."""
+    import time
+    seen = {}
+    while True:
+        picks = json.load(open(path))
+        open_n = 0
+        for p in picks:
+            scores, done, d = final(p["lg"], p["id"], get, raw=True)
+            r = grade(p, scores, done, d)
+            key = p.get("label") or json.dumps(p, sort_keys=True)
+            if r == "open":
+                open_n += 1
+            elif seen.get(key) != r:
+                seen[key] = r
+                emit(f"{r.upper()} {key}")
+        if not open_n:
+            emit("all picks settled")
+            return seen
+        (sleep or time.sleep)(every)
+
+
 if __name__ == "__main__":
+    if "--watch" in sys.argv:
+        watch([a for a in sys.argv[1:] if a != "--watch"][0], emit=lambda m: print(m, flush=True))
+        sys.exit(0)
     if "--live" in sys.argv:
         print("\n".join(live([a for a in sys.argv[1:] if a != "--live"][0])))
         sys.exit(0)

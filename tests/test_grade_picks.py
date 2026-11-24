@@ -40,5 +40,36 @@ class StandingTest(unittest.TestCase):
         self.assertEqual(G.standing(dict(kind="ml", team="X"), {}), "not started")
 
 
+BOX = {"header": {"competitions": [{"status": {"type": {"completed": False}}, "competitors": [
+    {"team": {"abbreviation": "SA"}, "score": "35"}, {"team": {"abbreviation": "SAC"}, "score": "36"}]}]},
+       "boxscore": {"players": [{"statistics": [{"labels": ["MIN", "PTS", "REB", "AST", "3PT"], "athletes": [
+           {"athlete": {"displayName": "Keegan Murray"}, "stats": ["20", "5", "3", "1", "1-4"]},
+           {"athlete": {"displayName": "Bench Guy"}, "stats": []}]}]}]}}
+
+
+class PropTest(unittest.TestCase):
+    def test_player_stat(self):
+        self.assertEqual(G.player_stat(BOX, "Keegan Murray", "PTS"), 5.0)
+        self.assertEqual(G.player_stat(BOX, "Keegan Murray", "PTS+REB+AST"), 9.0)
+        self.assertEqual(G.player_stat(BOX, "Keegan Murray", "3PM"), 1.0)
+        self.assertEqual(G.player_stat(BOX, "Bench Guy", "PTS"), 0.0)
+        self.assertIsNone(G.player_stat(BOX, "Nobody", "PTS"))
+
+    def test_prop_settles_when_reached(self):
+        self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="PTS", line=5), {}, False, BOX), "won")
+        self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, False, BOX), "open")
+        self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, True, BOX), "lost")
+
+    def test_watch_emits_each_settle_once(self):
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        json.dump([dict(label="Murray 5+", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)],
+                  open(path, "w"))
+        out = []
+        G.watch(path, get=lambda u: BOX, sleep=lambda s: None, emit=out.append)
+        self.assertEqual(out, ["WON Murray 5+", "all picks settled"])
+
+
 if __name__ == "__main__":
     unittest.main()
