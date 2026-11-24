@@ -112,6 +112,18 @@ class PropTest(unittest.TestCase):
         G.watch(path, get=lambda u: box, sleep=sleep, emit=out.append)
         self.assertEqual(out, ["WON Murray 5+", "LOST Murray 9 reb", "all picks settled"])
 
+    def test_restarted_watch_does_not_repeat(self):
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        json.dump([dict(label="Murray 5+", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)],
+                  open(path, "w"))
+        first, second = [], []
+        G.watch(path, get=lambda u: BOX, sleep=lambda s: None, emit=first.append)
+        G.watch(path, get=lambda u: BOX, sleep=lambda s: None, emit=second.append)      # the Monitor re-armed
+        self.assertEqual(first, ["WON Murray 5+", "all picks settled"])
+        self.assertEqual(second, ["all picks settled"])
+
     def test_watch_emits_each_settle_once(self):
         import json
         import tempfile

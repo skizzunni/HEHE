@@ -259,11 +259,33 @@ def live(path, get=None):
     return out
 
 
-def watch(path, every=120, get=None, sleep=None, emit=print):
+def _seen_path(path):
+    return path + ".seen"
+
+
+def _load_seen(path):
+    try:
+        with open(_seen_path(path)) as f:
+            return json.load(f)
+    except (OSError, ValueError):
+        return {}
+
+
+def _save_seen(path, seen):
+    try:
+        with open(_seen_path(path), "w") as f:
+            json.dump(seen, f)
+    except OSError:
+        pass
+
+
+def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
     """Print each pick once when it settles (WON / LOST / PUSH), then a last
-    line when none is left open."""
+    line when none is left open. Settles already printed are remembered in
+    <path>.seen, so a restarted watch (the live Monitor is re-armed every 30
+    minutes) does not announce them again (2026-11-24)."""
     import time
-    seen = {}
+    seen = _load_seen(path) if remember else {}
     picks = None
     while True:
         try:
@@ -284,6 +306,8 @@ def watch(path, every=120, get=None, sleep=None, emit=print):
             elif seen.get(key) != r:
                 seen[key] = r
                 emit(f"{r.upper()} {key}")
+                if remember:
+                    _save_seen(path, seen)
         if not open_n:
             emit("all picks settled")
             return seen
