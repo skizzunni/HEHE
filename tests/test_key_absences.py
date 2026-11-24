@@ -39,5 +39,13 @@ class RecentMinutesTest(unittest.TestCase):
         self.assertEqual(got, {"A B": 30.0, "Hurt Guy": 34.0})        # Cameo played 1 game: not counted
 
 
+class BackToBackDayTest(unittest.TestCase):
+    def test_played_day_before_in_et(self):
+        pages = {K.SCHED.format("bos"): {"events": [{"date": "2026-11-24T03:30Z"}, {"date": "2026-11-25T00:00Z"}]}}
+        # 03:30Z on Nov 24 is 10:30 PM ET on Nov 23 -- the night before Nov 24
+        self.assertTrue(K.played_day_before("BOS", "2026-11-24", get=pages.get))
+        self.assertFalse(K.played_day_before("BOS", "2026-11-26", get=pages.get))
+
+
 if __name__ == "__main__":
     unittest.main()

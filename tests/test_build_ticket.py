@@ -93,5 +93,17 @@ class FallbackTest(unittest.TestCase):
         self.assertIn("NOTE: The board has not rebuilt", B.text(t))
 
 
+class BackToBackTest(unittest.TestCase):
+    def test_caution_on_board_and_fallback_legs(self):
+        t = B.build({"nba": [row("Celtics", 80, "nba:1")]}, [], key_out_fn=lambda r: [], blind_fn=lambda r: 0.7,
+                    status_fn=lambda n: None, fav_fn=lambda g: 0, b2b_fn=lambda r: True)
+        legs = [L for g in t["games"].values() for L in g]
+        self.assertIn("back-to-back", legs[0]["label"])
+        rows = [dict(lg="nba", game="BOS @ WSH", id="8", home="WSH", away="BOS", home_ml=351, away_ml=-453,
+                     market_home=0.21, blind_home=0.28)]
+        f = B.fallback("2026-11-24", rows, b2b_fn=lambda team, day: team == "BOS")
+        self.assertIn("back-to-back", [L for g in f["games"].values() for L in g][0]["label"])
+
+
 if __name__ == "__main__":
     unittest.main()

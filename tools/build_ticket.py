@@ -70,7 +70,7 @@ def judge_prop(p, status):
 LOCK_NOTE = " [Prop Lock: confirmed playing; Prop Locks hit 93% then 94% vs ~87% stated]"
 
 
-def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop_locks=()):
+def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop_locks=(), b2b_fn=None):
     """Pure core: returns {"games": {match: [legs]}, "left_off": [(label, reason)]}.
     key_out_fn(row) -> [(name, min, status)]; blind_fn(row) -> p or None;
     status_fn(player) -> report status or None; fav_fn(gid) -> favourite chance %."""
@@ -82,6 +82,8 @@ def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop
                 continue
             ok, why = judge_winner(r, key_out_fn(r), blind_fn(r))
             label = f"{r['mp']} moneyline {r['p']} ({r.get('mc')}%)" + (f" -- {why}" if ok and why else "")
+            if ok and b2b_fn and b2b_fn(r):
+                label += " -- caution: second night of a back-to-back (priced in on the record)"
             if ok:
                 games.setdefault(r.get("match") or r["id"], []).append(dict(
                     label=label, id=str(r["id"]).split(":")[-1], lg=lg, kind="ml", team=r.get("abbr") or r["mp"],
@@ -135,7 +137,7 @@ def text(t):
     return "\n".join(out)
 
 
-def fallback(day, rows=None):
+def fallback(day, rows=None, b2b_fn=None):
     """Winners only, from DraftKings prices on ESPN (no-vig), when the board has
     not rebuilt for `day` (2026-11-24: every GitHub workflow switched off). Same
     winner checks: 75%+, our price-blind number not on the other side. Props
@@ -143,6 +145,12 @@ def fallback(day, rows=None):
     if rows is None:
         import slate_sheet
         rows = slate_sheet.main(day)
+    if b2b_fn is None:
+        try:
+            import key_absences
+            b2b_fn = key_absences.played_day_before
+        except ImportError:
+            b2b_fn = None
     games, left = {}, []
     for r in rows:
         mh = r.get("market_home")
@@ -156,6 +164,8 @@ def fallback(day, rows=None):
         price_s = f"{int(price):+d}" if isinstance(price, (int, float)) else str(price)
         ok, why = judge_winner(dict(mc=chance), [], blind)
         label = f"{team} moneyline {price_s} ({chance}%, DraftKings no-vig)"
+        if ok and r.get("lg") == "nba" and b2b_fn and b2b_fn(team, day):
+            label += " -- caution: second night of a back-to-back (priced in on the record)"
         if ok:
             games.setdefault(r["game"], []).append(dict(label=label, id=str(r.get("id")), lg=r["lg"], kind="ml", team=team,
                                                         price=price_s, chance=chance / 100))
@@ -230,6 +240,10 @@ def main(day):
             minutes_cache[abbr] = K.recent_minutes(abbr, day)
         return K.key_missing(minutes_cache[abbr], by_team.get(g[s]["displayName"], {}))
 
+    def b2b(r):
+        g, s = side(r)
+        return bool(s and g["lg"] == "nba" and K.played_day_before(g[s]["abbreviation"], day))
+
     def blind(r):
         g, s = side(r)
         m = models.get(g.get("lg")) if s else None
@@ -260,7 +274,7 @@ def main(day):
     except (OSError, ValueError):
         lock_names = set()
     return build(rows_by_lg, props_games, key_out, blind,
-                 lambda name: status.get(K.report_name(name)), fav, prop_locks=lock_names)
+                 lambda name: status.get(K.report_name(name)), fav, prop_locks=lock_names, b2b_fn=b2b)
 
 
 if __name__ == "__main__":

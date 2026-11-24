@@ -69,6 +69,23 @@ def recent_minutes(abbr, before, get=_get):
     return {k: v / played[k] for k, v in tot.items() if played.get(k, 0) >= MIN_PLAYED} if n else {}
 
 
+def played_day_before(abbr, day, get=_get):
+    """True when the team played on the calendar day before `day` (ISO, ET)
+    -- the second night of a back-to-back. Priced in on the record (README,
+    NBA back-to-backs, 3,695 games), so callers show it, not cut on it."""
+    import datetime as _dt
+    prev = (_dt.date.fromisoformat(day) - _dt.timedelta(1)).isoformat()
+    for e in (get(SCHED.format(abbr.lower())) or {}).get("events") or []:
+        when = str(e.get("date") or "")
+        try:
+            et = _dt.datetime.fromisoformat(when.replace("Z", "+00:00")).astimezone(ET).date().isoformat()
+        except ValueError:
+            continue
+        if et == prev:
+            return True
+    return False
+
+
 def report_name(display):
     """'Kawhi Leonard' -> 'Leonard, Kawhi' (the official report's order)."""
     parts = display.split(" ")
