@@ -2255,7 +2255,7 @@ def preview_losses_line(preview_fn=None):
             + "".join("\n- " + x for x in lost))
 
 
-def grader_stale_line(now=None, last_fn=None):
+def grader_stale_line(now=None, last_fn=None, oldest_fn=None):
     """STALE GRADER when the board's last "Grade the ledger" commit is more
     than GRADER_HOURS old. 2026-11-24: every GitHub workflow was switched off
     at 8 PM ET; nothing graded for six hours and the review said nothing,
@@ -2273,6 +2273,21 @@ def grader_stale_line(now=None, last_fn=None):
     except Exception:
         return None
     if last is None:
+        # 2026-11-24: in a shallow clone the last grade fell out of the fetched
+        # history after a day of commits; the oldest fetched commit still bounds
+        # how long ago it was
+        if oldest_fn is None:
+            def oldest_fn():
+                out = subprocess.run(["git", "log", "--reverse", "--format=%ct"], cwd=ROOT, capture_output=True,
+                                     text=True, timeout=30).stdout.split()
+                return int(out[0]) if out and out[0].isdigit() else None
+        try:
+            oldest = oldest_fn()
+        except Exception:
+            oldest = None
+        if oldest is not None and (now - oldest) / 3600 > GRADER_HOURS:
+            return (f"STALE GRADER: the board has not graded in the fetched history (over {(now - oldest) / 3600:.1f} "
+                    "hours) -- check that the board workflow is enabled and its runs succeed (GitHub Actions).")
         return "STALE GRADER: no 'Grade the ledger' commit in the fetched history -- is the board workflow running?"
     hours = (now - last) / 3600
     if hours <= GRADER_HOURS:

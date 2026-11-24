@@ -543,7 +543,9 @@ class GraderStaleTest(unittest.TestCase):
         self.assertIsNone(daily_review.grader_stale_line(now, lambda: now - 3600))
         line = daily_review.grader_stale_line(now, lambda: now - 6 * 3600)
         self.assertIn("STALE GRADER: the board last graded 6.0 hours ago", line)
-        self.assertIn("no 'Grade the ledger' commit", daily_review.grader_stale_line(now, lambda: None))
+        self.assertIn("no 'Grade the ledger' commit", daily_review.grader_stale_line(now, lambda: None, lambda: None))
+        self.assertIn("has not graded in the fetched history (over 25.0 hours)",
+                      daily_review.grader_stale_line(now, lambda: None, lambda: now - 25 * 3600))
 
 
 class StaleNoteTest(unittest.TestCase):
