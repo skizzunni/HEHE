@@ -202,6 +202,29 @@ class GoalieNoteTest(unittest.TestCase):
         self.assertIn("goalie: Devon Levi", t["games"]["VGK @ EDM"][0]["label"])
 
 
+class NcaabOptInTest(unittest.TestCase):
+    def test_only_90_plus_favourites(self):
+        rows = [dict(lg="ncaab", game="JAX @ IU", id="1", home="IU", away="JAX", home_ml=-100000, away_ml=5000, market_home=0.981),
+                dict(lg="ncaab", game="GONZ VS KSU", id="2", home="KSU", away="GONZ", home_ml=900, away_ml=-1600, market_home=0.096),
+                dict(lg="ncaab", game="A @ B", id="3", home="B", away="A", home_ml=-400, away_ml=300, market_home=0.78),
+                dict(lg="ncaab", game="C @ D", id="4", home="D", away="C", home_ml=None, away_ml=None, market_home=None)]
+        g = B.ncaab_legs(rows)
+        self.assertEqual(sorted(g), ["GONZ VS KSU", "JAX @ IU"])
+        self.assertEqual(g["GONZ VS KSU"][0]["team"], "GONZ")
+        self.assertEqual(g["GONZ VS KSU"][0]["price"], "-1600")
+        self.assertIn("opt-in", g["JAX @ IU"][0]["label"])
+
+    def test_rows_from_espn_shape(self):
+        ev = {"id": "9", "date": "2026-11-24T23:00Z", "competitions": [{"competitors": [
+            {"homeAway": "home", "team": {"abbreviation": "IU", "displayName": "Indiana"}},
+            {"homeAway": "away", "team": {"abbreviation": "JAX", "displayName": "Jacksonville"}}]}]}
+        sm = {"pickcenter": [{"homeTeamOdds": {"moneyLine": -2000}, "awayTeamOdds": {"moneyLine": 1000}}]}
+        get = lambda u: {"events": [ev]} if "scoreboard" in u else sm
+        r = B.ncaab_rows("2026-11-24", get=get)
+        self.assertEqual((r[0]["home"], r[0]["home_ml"], r[0]["blind_home"]), ("IU", -2000, None))
+        self.assertGreater(r[0]["market_home"], 0.9)
+
+
 class LadderFallbackTest(unittest.TestCase):
     def test_one_leg_per_game_in_band(self):
         t = {"games": {f"G{i}": [dict(label=f"leg{i}", price="-400", chance=0.80, lg="nba", id=str(i), gid=f"nba:{i}"),

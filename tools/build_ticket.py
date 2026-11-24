@@ -214,6 +214,50 @@ def text(t):
     return "\n".join(out)
 
 
+NCAAB_FLOOR = 0.90
+NCAAB_URL = ("https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/"
+             "scoreboard?dates={}&groups=50&limit=400")
+
+
+def ncaab_rows(day, get=None):
+    """Slate-sheet-shaped rows for the day's men's college basketball games
+    with a DraftKings moneyline on ESPN (no price-blind number: the blind
+    model has no college data). For --ncaab only."""
+    import slate_sheet as S
+    get = get or S._get
+    sb = get(NCAAB_URL.format(day.replace("-", ""))) or {}
+    out = []
+    for ev in sb.get("events") or []:
+        sm = get(S.SUMMARY.format("basketball/mens-college-basketball", ev["id"])) or {}
+        r = S.row("ncaab", None, ev, sm)
+        r["blind_home"] = None
+        out.append(r)
+    return out
+
+
+def ncaab_legs(rows, floor=NCAAB_FLOOR):
+    """College favourites at `floor`+ no-vig as ticket legs (opt-in, --ncaab).
+    Not on the default ticket: the user's Nov 23-24 ticket rules name NBA /
+    NFL / NHL winners. The board's own record on college winners stated 90%+
+    is 59 of 60 (33/34 then 26/26 by date half, 2026-11-24) -- calibrated,
+    not ahead -- and each pays little (-1600 to -100000)."""
+    games = {}
+    for r in rows:
+        mh = r.get("market_home")
+        if mh is None or r.get("home_ml") is None or r.get("away_ml") is None:
+            continue
+        home = mh >= 0.5
+        p = mh if home else 1 - mh
+        if p < floor:
+            continue
+        team, price = (r["home"], r["home_ml"]) if home else (r["away"], r["away_ml"])
+        price_s = f"{int(price):+d}" if isinstance(price, (int, float)) else str(price)
+        games.setdefault(r["game"], []).append(dict(
+            label=f"{team} moneyline {price_s} ({round(100 * p)}%, DraftKings no-vig; college, opt-in)",
+            id=str(r.get("id")), lg="ncaab", kind="ml", team=team, price=price_s, chance=p))
+    return games
+
+
 def _goalie_fn(day):
     """team full name -> the NHL goalie note (tools/nhl_goalies.leg_note); a
     function giving "" when DailyFaceoff or the NHL cannot be reached."""
@@ -444,7 +488,7 @@ def main(day):
 if __name__ == "__main__":
     args = sys.argv[1:]
     save = None
-    args = [a for a in args if a != "--fallback"]
+    args = [a for a in args if a not in ("--fallback", "--ncaab")]
     if "--save" in args:
         i = args.index("--save")
         save = args[i + 1]
@@ -459,6 +503,9 @@ if __name__ == "__main__":
         t["ladder"] = ladder_text(ladder_fallback(t))
     else:
         apply_record(t, prop_record())
+    if "--ncaab" in sys.argv:
+        for m, L in ncaab_legs(ncaab_rows(args[0] if args else dt.datetime.now(ET).date().isoformat())).items():
+            t["games"].setdefault(m, []).extend(L)
     print(text(t))
     if save:
         os.makedirs(os.path.dirname(save) or ".", exist_ok=True)
