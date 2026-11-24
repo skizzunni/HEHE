@@ -516,5 +516,25 @@ class BoardRoiLineTest(unittest.TestCase):
         self.assertIsNone(daily_review.board_roi_line({"x": dict(status="won", price="-200", date="2026-11-01", dc=True)}))
 
 
+class ResearchPicksLineTest(unittest.TestCase):
+    def test_totals_across_lists(self):
+        import tempfile
+        import daily_review
+        d = tempfile.mkdtemp()
+        for name in ("slate_a", "slate_b"):
+            os.makedirs(os.path.join(d, name))
+            open(os.path.join(d, name, "final_picks.json"), "w").write("[]")
+        fake = {"slate_a": dict(won=6, lost=3, push=1, open=0, units=1.5),
+                "slate_b": dict(won=0, lost=0, push=0, open=10, units=0.0)}
+        line = daily_review.research_picks_line(os.path.join(d, "slate_*", "final_picks.json"),
+                                                grade_fn=lambda f: (None, None, fake[os.path.basename(os.path.dirname(f))]))
+        self.assertEqual(line, "Researched pick lists (2 saved): 6-3-1 (67%), 10 open, +1.50 units at $1 a pick.")
+
+    def test_none_saved(self):
+        import tempfile
+        import daily_review
+        self.assertIsNone(daily_review.research_picks_line(os.path.join(tempfile.mkdtemp(), "*.json")))
+
+
 if __name__ == "__main__":
     unittest.main()

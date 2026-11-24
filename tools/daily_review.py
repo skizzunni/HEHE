@@ -518,6 +518,33 @@ def nhl_dog_prereg_line(update_fn=None):
             f"{s['won']}/{s['n']} covered vs {s['expected']} expected (z {s['z']:+.2f}, ROI {s['roi']:+.1f}%); {what}.")
 
 
+def research_picks_line(pattern=None, grade_fn=None):
+    """The researched pick lists (work/slate_*/final_picks.json, graded by
+    tools/grade_picks.py from final scores): record and flat $1 return, all
+    lists together. Information only -- they are the user's lists, judged on
+    results apart from the board."""
+    import glob
+    pattern = pattern or os.path.join(ROOT, "work", "slate_*", "final_picks.json")
+    files = sorted(glob.glob(pattern))
+    if not files:
+        return None
+    try:
+        import grade_picks
+        grade_fn = grade_fn or grade_picks.main
+        tot = dict(won=0, lost=0, push=0, open=0, units=0.0)
+        for f in files:
+            _, _, s = grade_fn(f)
+            for k in tot:
+                tot[k] += s[k]
+    except Exception:
+        return None
+    done = tot["won"] + tot["lost"]
+    return (f"Researched pick lists ({len(files)} saved): {tot['won']}-{tot['lost']}"
+            + (f"-{tot['push']}" if tot["push"] else "")
+            + (f" ({round(100 * tot['won'] / done)}%)" if done else "")
+            + f", {tot['open']} open, {tot['units']:+.2f} units at $1 a pick.")
+
+
 def priced_calibration_line(ledger=None, min_half=15):
     """ledger.priced_calibration as one review line: each group's date halves
     won% against stated% with a z-score, naming any group past the 99.5% bar
@@ -2636,6 +2663,8 @@ def words(r, fit):
         out.append(r["ladder_alt15"])
     if r.get("board_roi"):
         out.append(r["board_roi"])
+    if r.get("research_picks"):
+        out.append(r["research_picks"])
     if r.get("dc_moves"):
         out.append(r["dc_moves"])
     if r.get("switched"):
@@ -2816,6 +2845,7 @@ def _main():
     log[today.isoformat()]["prereg_more"] = prereg_more_line()
     log[today.isoformat()]["value_prereg"] = value_prereg_line()
     log[today.isoformat()]["board_roi"] = board_roi_line(ledger)
+    log[today.isoformat()]["research_picks"] = research_picks_line()
     log[today.isoformat()]["nhl_dog_prereg"] = nhl_dog_prereg_line()
     log[today.isoformat()]["prop_fair"] = prop_fair_line()
     log[today.isoformat()]["dc_side"] = dc_side_line(ledger)
