@@ -31,6 +31,17 @@ class GradeTest(unittest.TestCase):
         self.assertEqual((scores, done), ({"NJ": 4.0, "CBJ": 2.0}, True))
 
 
+class PostponedTest(unittest.TestCase):
+    def test_postponed_game_settles_as_push(self):
+        page = {"header": {"competitions": [{"status": {"type": {"completed": False, "name": "STATUS_POSTPONED"}},
+                                             "competitors": []}]}}
+        scores, done = G.final("nba", "1", get=lambda u: page)
+        self.assertTrue(done)
+        for pk in (dict(kind="ml", team="BOS"), dict(kind="prop", player="X", stat="PTS", line=5),
+                   dict(kind="prop", lg="nba", market="Points", player="X", line=5.0, line_text="5+")):
+            self.assertEqual(G.grade(pk, scores, done, page), "push")
+
+
 class StandingTest(unittest.TestCase):
     def test_words(self):
         S = {"MEM": 89.0, "CHA": 81.0}

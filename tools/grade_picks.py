@@ -25,6 +25,7 @@ import urllib.request
 SPORT = {"nba": "basketball/nba", "nhl": "hockey/nhl", "nfl": "football/nfl", "ncaaf": "football/college-football",
          "ncaab": "basketball/mens-college-basketball"}
 SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/{}/summary?event={}"
+VOID_STATES = ("STATUS_POSTPONED", "STATUS_CANCELED", "STATUS_CANCELLED", "STATUS_SUSPENDED", "STATUS_FORFEIT")
 
 
 def _num(v):
@@ -66,8 +67,13 @@ def final(lg, gid, get=None, with_clock=False, raw=False):
             return None
     d = (get or fetch)(SUMMARY.format(SPORT[lg], gid)) or {}
     comp = ((d.get("header") or {}).get("competitions") or [{}])[0]
-    done = bool(((comp.get("status") or {}).get("type") or {}).get("completed"))
+    stype = (comp.get("status") or {}).get("type") or {}
+    done = bool(stype.get("completed"))
     scores = {}
+    if stype.get("name") in VOID_STATES:
+        # 2026-11-24: a postponed game never reads "completed", so --watch would
+        # wait on it forever; books void such legs, so it settles as a push
+        scores, done = {"_void": stype.get("name")}, True
     for c in comp.get("competitors") or []:
         try:
             scores[c["team"]["abbreviation"]] = float(c["score"])
@@ -142,6 +148,8 @@ def board_prop(pick, summary):
 
 
 def grade(pick, scores, done, summary=None):
+    if scores.get("_void"):
+        return "push"
     if pick["kind"] == "prop" and pick.get("market"):
         r = board_prop(pick, summary)
         if r == "won":
