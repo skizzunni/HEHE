@@ -65,7 +65,8 @@ def price_check(legs, current):
             continue
         key = (L.get("player"), L.get("market"), L.get("line_text"))
         if key not in current:
-            out.append((L.get("label"), "this line is no longer posted at FanDuel"))
+            out.append((L.get("label"), "this line is no longer posted at FanDuel (pulled -- often a late scratch "
+                                        "in the game being repriced; see game news)"))
             continue
         now, was = current[key], L.get("price")
         try:
@@ -178,6 +179,28 @@ def log_prices(path, legs, current, rows, now=None):
     return out
 
 
+def game_news(legs, rows, team_out_fn):
+    """['DET @ ORL: Detroit Pistons without Cade Cunningham (34.1 min, Out)', ...]
+    -- top-minutes players out or doubtful/questionable on EITHER team of each
+    NBA game on the ticket. 2026-11-24: Cade Cunningham went Out at 6:30 PM;
+    the re-check only looked at ticket players, so all it said was that two
+    Detroit prop lines had vanished (FanDuel repricing after the news)."""
+    ids = {str(L.get("id")) for L in legs if L.get("lg") == "nba"}
+    out = []
+    for r in rows or []:
+        if str(r.get("id")) not in ids or r.get("lg") != "nba":
+            continue
+        for abbr, name in ((r.get("away"), r.get("away_name")), (r.get("home"), r.get("home_name"))):
+            try:
+                miss = team_out_fn(abbr) or []
+            except Exception:
+                miss = []
+            if miss:
+                out.append(f"{r.get('game')}: {name or abbr} without " +
+                           ", ".join(f"{n} ({m:g} min, {st})" for n, m, st in miss))
+    return out
+
+
 def unsubmitted(rep, mmdd, legs, rows):
     """Teams in the ticket's NBA games that the report lists as NOT YET
     SUBMITTED for the day: their players' statuses are not in yet, so 'no
@@ -239,6 +262,7 @@ def main(path, day, final=False):
         prices, rows, snap = [], [], None
     allf = flags + recheck_nhl(legs, lineups) + prices
     pending = unsubmitted(rep, mmdd, legs, rows)
+    news = game_news(legs, rows, team_out)
     if final:
         games = {str(r.get("id")): r.get("game") for r in rows or []}
         try:
@@ -247,8 +271,10 @@ def main(path, day, final=False):
         except Exception:
             rec = {}
         out = final_text(legs, allf, games, rep.get("asof"), now_prices=snap, now_chance=ml_chance(legs, rows), record=rec)
-        return "\n".join([f"NOTE: {t} has NOT YET SUBMITTED its injury report -- recheck before tip." for t in pending] + [out])
-    return text(allf, rep.get("asof"), pending)
+        return "\n".join([f"NOTE: {t} has NOT YET SUBMITTED its injury report -- recheck before tip." for t in pending]
+                         + [out] + (["Game news (either team, top minutes):"] + [f"  {n}" for n in news] if news else []))
+    return text(allf, rep.get("asof"), pending) + ("\nGame news (either team, top minutes):\n" + "\n".join(f"  {n}" for n in news)
+                                                    if news else "")
 
 
 DROP_WORDS = ("is now Out", "is now Doubtful", "is now Questionable", "on the injured list", "no longer posted")

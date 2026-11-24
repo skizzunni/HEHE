@@ -34,8 +34,9 @@ class PriceCheckTest(unittest.TestCase):
                 dict(kind="prop", player="Gone Guy", market="Points", line_text="5+", price="-900", label="Gone"),
                 dict(kind="ml", team="BOS", price="-453", label="BOS")]
         cur = {("Trae Young", "Pts + Ast", "15+"): "-1250", ("Paul Reed", "Rebounds", "4+"): "-1200"}
-        self.assertEqual(R.price_check(legs, cur), [("Trae", "FanDuel now -1250 (was -1500), the market rates it less likely (93.8% -> 92.6%)"),
-                                                    ("Gone", "this line is no longer posted at FanDuel")])
+        got = R.price_check(legs, cur)
+        self.assertEqual(got[0], ("Trae", "FanDuel now -1250 (was -1500), the market rates it less likely (93.8% -> 92.6%)"))
+        self.assertTrue(got[1][1].startswith("this line is no longer posted at FanDuel"))
 
 
 class MlCheckTest(unittest.TestCase):
@@ -152,6 +153,16 @@ class Best2xTest(unittest.TestCase):
                     if math.prod(x[1] for x in c) >= 2.0)
         self.assertAlmostEqual(b["chance"], bestp)
         self.assertIsNone(R.best_2x([("a", 1.1, 0.9)]))
+
+
+class GameNewsTest(unittest.TestCase):
+    def test_either_team(self):
+        legs = [dict(lg="nba", id="14", kind="prop", player="Jalen Suggs", label="Suggs")]
+        rows = [dict(lg="nba", id="14", game="DET @ ORL", away="DET", home="ORL", away_name="Detroit Pistons",
+                     home_name="Orlando Magic")]
+        news = R.game_news(legs, rows, lambda a: [("Cade Cunningham", 34.1, "Out")] if a == "DET" else [])
+        self.assertEqual(news, ["DET @ ORL: Detroit Pistons without Cade Cunningham (34.1 min, Out)"])
+        self.assertEqual(R.game_news(legs, rows, lambda a: []), [])
 
 
 class FinalViewTest(unittest.TestCase):
