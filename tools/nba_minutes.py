@@ -77,7 +77,7 @@ PARTS = {"Points": ["PTS"], "Rebounds": ["REB"], "Assists": ["AST"], "Pts + Ast"
          "Pts + Reb + Ast": ["PTS", "REB", "AST"], "Reb + Ast": ["REB", "AST"], "Pts + Reb": ["PTS", "REB"],
          "Threes Made": ["3PT"]}
 L10_LOW = 0.7
-L10_NOTE = "props like it hit 76% then 81% vs 85% stated (short in both date halves, past the bar in one)"
+L10_NOTE = "props like it hit 81% then 82% vs 85% stated (short in both date halves, under the bar)"
 
 
 def games(gamelog):

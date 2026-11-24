@@ -5192,21 +5192,24 @@ shorter 88.7% then 87.2%; -999 to -500 84.1% then 83.8% (difference z about 2.1 
 The card picks each player's longest-priced line at the floor, which lands in the weaker price group --
 on watch as props accumulate.
 
-**Caution, not a cut: props on players who rarely reach the line (2026-11-24).** 2,751 graded NBA
-props priced -500 or shorter, each player's last 10 games before the prop day in ET (ESPN game logs),
-split at Nov 6. Reached the line in under 70% of them: 88/116 (75.9% vs 85.1% stated, z -2.81) then
-107/133 (80.5% vs 85.0%, z -1.48). 70-84%: 82.1% then 85.4%; 85%+: 89.5% then 85.6%. Short in both
-halves but past the 2.8 bar in one only, so the ticket shows it beside the leg
-(tools/nba_minutes.last10_hits) and never drops one. Today: Daniel Gafford 4+ rebounds, 6 of 10.
-Correction, same day: the first run compared ESPN's UTC game times with ET prop dates, which left out
-the night-before game, and read 82.2% / 80.0% (z -0.90 / -1.64); fixed above. Same data, second
-night of a back-to-back: 85.3% then 84.9% vs 85.5% / 85.2% stated -- no effect.
+**Caution, not a cut: props on players who rarely reach the line (2026-11-24).** 2,749 graded NBA
+props priced -500 or shorter; each player's last 10 games before the prop's own game (anchored on the
+game's ESPN event id in his log), split at Nov 7. Reached the line in under 70% of them: 101/124 (81.5%
+vs 85.1% stated, z -1.16) then 103/125 (82.4% vs 85.0%, z -0.83). 70-84%: 84.1% then 85.8%; 85%+:
+86.3% then 85.9%. Missed the line in his last game: 83.7% then 87.8% -- no effect. Short in both halves
+but weak and under the bar, so the ticket shows it beside the leg (tools/nba_minutes.last10_hits) and
+never drops one.
+Corrections, same day: (1) the first run compared ESPN's UTC game times with ET dates (82.2% / 80.0%);
+(2) the second read 75.9% / 80.5% (z -2.81 / -1.48) -- inflated by a leak: props.json dates many props
+by the UTC day, one day after an evening game, so "games before the prop date" took in the prop's own
+game. Anchoring on the event id removes it; the numbers above are the clean ones.
 
 **Checked, no change: the last-10 test on NHL shots props (2026-11-24).** 1,119 graded NHL Shots on
 Goal props priced -500 or shorter, each player's last 10 games from the NHL's game logs, split at Nov 3.
 Reached the line in under 70% of them: 18/20 then 8/8; 70-84%: 86.2% then 87.6%; 85-99%: 89.7% then
 85.4%; all 10: 86.1% then 87.7% (vs ~85% stated throughout). Nothing short, so the NBA-only caution
-stays NBA-only.
+stays NBA-only. (This run used the prop's date, which can be a day late -- see the NBA correction; a
+leak could only make low-hit props look worse, and none looked worse.)
 
 **On watch: the heaviest props are understated (2026-11-24).** All graded props priced -2500 or
 shorter: 180/196 (91.8%) then 162/168 (96.4%) vs ~87% stated, split at Nov 4 (z about +1.8 / +3.6);

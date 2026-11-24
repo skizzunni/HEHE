@@ -172,9 +172,9 @@ def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop
 
 def _l10_caution(legs, gid, logs_fn):
     """Adds a caution to NBA prop legs whose player reached the line in under
-    70% of his last 10 games (2026-11-24: 2,751 graded heavy NBA props -- under
-    70% hit 75.9% then 80.5% vs 85% stated, z -2.81 / -1.48: short in both date
-    halves, past the 2.8 bar in one only, so a caution, never a cut)."""
+    70% of his last 10 games (2026-11-24: 2,749 graded heavy NBA props, leak-free
+    -- under 70% hit 81.5% then 82.4% vs 85% stated, z -1.16 / -0.83: short in
+    both date halves but weak, so a caution, never a cut; README)."""
     import nba_minutes as M
     props = [L for L in legs if L["kind"] == "prop" and L.get("lg") == "nba"]
     if not props or not logs_fn:
