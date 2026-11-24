@@ -398,11 +398,34 @@ class StaleBoard(Exception):
     """The board's data is not for the requested day (the board did not rebuild)."""
 
 
-def board_slot(D, day):
+MAX_AGE_H = 6.0
+
+
+def board_age_h(D, now=None):
+    """Hours since the board last built, from D["at"] ("Nov 23, 7:56 PM ET");
+    None when it cannot be read."""
+    at = str(D.get("at") or "").replace(" ET", "").strip()
+    now = (now or dt.datetime.now(ET)).astimezone(ET)
+    try:
+        t = dt.datetime.strptime(f"{at} {now.year}", "%b %d, %I:%M %p %Y").replace(tzinfo=ET)
+    except ValueError:
+        return None
+    if t > now + dt.timedelta(days=1):          # built in December, read in January
+        t = t.replace(year=now.year - 1)
+    return (now - t).total_seconds() / 3600
+
+
+def board_slot(D, day, now=None):
     """The board slot ("today" / "tomorrow") holding `day` (ISO date). 2026-11-24:
     with the board workflow switched off, board.html still called Nov 23
     "today" -- a ticket for Nov 24 read from "today" would have used the wrong
-    day's games without a word."""
+    day's games without a word. And its "tomorrow" slot held Nov 24 from a
+    build 12 hours old (last night's prices and props), which the 8 AM ticket
+    then used -- so a board older than MAX_AGE_H hours is stale too."""
+    age = board_age_h(D, now)
+    if age is not None and age > MAX_AGE_H:
+        raise StaleBoard(f"the board last built {age:.0f} hours ago ({D.get('at')}) -- "
+                         "is the board workflow running?")
     want = day.replace("-", "")
     for slot, d in (D.get("dates") or {}).items():
         if str(d) == want:

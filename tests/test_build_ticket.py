@@ -75,6 +75,19 @@ class BoardSlotTest(unittest.TestCase):
         with self.assertRaises(B.StaleBoard):
             B.board_slot(D, "2026-11-25")
 
+    def test_old_build_is_stale(self):
+        import datetime as dt
+        D = {"dates": {"today": "20261123", "tomorrow": "20261124"}, "at": "Nov 23, 7:56 PM ET"}
+        at8 = dt.datetime(2026, 11, 24, 13, 5, tzinfo=dt.timezone.utc)          # 8:05 AM ET
+        self.assertAlmostEqual(B.board_age_h(D, at8), 12.15, places=2)
+        with self.assertRaises(B.StaleBoard):
+            B.board_slot(D, "2026-11-24", now=at8)
+        at9pm = dt.datetime(2026, 11, 24, 2, 0, tzinfo=dt.timezone.utc)          # 9 PM ET Nov 23
+        self.assertEqual(B.board_slot(D, "2026-11-24", now=at9pm), "tomorrow")
+        self.assertIsNone(B.board_age_h({"at": "soon"}, at8))
+        jan = dt.datetime(2027, 1, 1, 6, 0, tzinfo=dt.timezone.utc)
+        self.assertAlmostEqual(B.board_age_h({"at": "Dec 31, 11:00 PM ET"}, jan), 2.0)
+
 
 class FallbackTest(unittest.TestCase):
     def test_winners_from_prices(self):
