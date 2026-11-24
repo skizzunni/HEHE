@@ -111,7 +111,8 @@ def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop
                 " -- caution: big favourite in this game (blowout minutes)" if (fav_fn(g["id"]) or 0) >= BLOWOUT else "")
             games.setdefault(g.get("match") or g["id"], []).append(dict(
                 label=label + caution, id=str(g["id"]).split(":")[-1], lg=str(g["id"]).split(":")[0], kind="prop",
-                player=p["name"], stat=STAT.get(p.get("market"), p.get("market")),
+                player=p["name"], stat=STAT.get(p.get("market"), p.get("market")), market=p.get("market"),
+                line_text=str(p.get("line", "")),
                 line=float(str(p.get("line", "0")).rstrip("+") or 0), price=p.get("price"), chance=p["p"], gid=g["id"]))
             n += 1
     return dict(games=games, left_off=left)

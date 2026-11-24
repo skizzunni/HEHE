@@ -71,5 +71,22 @@ class PropTest(unittest.TestCase):
         self.assertEqual(out, ["WON Murray 5+", "all picks settled"])
 
 
+NHL_BOX = {"boxscore": {"players": [{"team": {"abbreviation": "MIN"}, "statistics": [
+    {"name": "forwards", "keys": ["goals", "assists", "shotsTotal"],
+     "labels": ["G", "A", "S"],
+     "athletes": [{"athlete": {"id": "1", "displayName": "Matt Boldy"}, "stats": ["1", "0", "5"]}]}]}]}}
+
+
+class BoardPropTest(unittest.TestCase):
+    def test_nhl_shots_graded_like_the_board(self):
+        pk = dict(kind="prop", lg="nhl", market="Shots on Goal", player="Matt Boldy", line=2.0, line_text="2+",
+                  stat="Shots on Goal")
+        self.assertEqual(G.board_prop(pk, NHL_BOX), "won")
+        self.assertEqual(G.grade(pk, {}, True, NHL_BOX), "won")
+        self.assertEqual(G.grade(dict(pk, line=6.0, line_text="6+"), {}, True, NHL_BOX), "lost")
+        self.assertEqual(G.grade(dict(pk, line=6.0, line_text="6+"), {}, False, NHL_BOX), "open")
+        self.assertEqual(G.grade(dict(pk, player="Nobody Else"), {}, True, NHL_BOX), "push")   # did not play: void
+
+
 if __name__ == "__main__":
     unittest.main()

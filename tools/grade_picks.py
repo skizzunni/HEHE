@@ -18,6 +18,7 @@ graded won / lost / push / open from ESPN's final score, and the file's
 record and flat $1 return are printed.
 """
 import json
+import os
 import sys
 import urllib.request
 
@@ -101,7 +102,46 @@ def standing(pick, scores):
     return f"{so_far}, {word}"
 
 
+def board_prop(pick, summary):
+    """('won'|'lost'|'void'|None) for a prop graded exactly as the board grades
+    it (props_ledger: its market -> stat map, player matching, line rules);
+    None when the pick carries no market the board knows. 2026-11-24: NHL
+    'Shots on Goal' has no plain box-score label, so the label path returned
+    nothing and a winning shots prop would have been graded LOST."""
+    lg, market = pick.get("lg"), pick.get("market")
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        import props_ledger
+        fn = (props_ledger.MARKETS.get(lg) or {}).get(market)
+    except Exception:
+        return None
+    if not fn or not summary:
+        return None
+    stats = props_ledger.box_stats(summary)
+    st, how = props_ledger.resolve(stats, {"name": pick["player"]})
+    if how == "absent":
+        return "void"
+    if st is None:
+        return None
+    try:
+        value = fn(st)
+    except Exception:
+        return None
+    if value is None:
+        return None
+    ok = props_ledger.won(lg, market, pick.get("line_text") or f"{pick['line']:g}+", value)
+    return None if ok is None else ("won" if ok else "lost")
+
+
 def grade(pick, scores, done, summary=None):
+    if pick["kind"] == "prop" and pick.get("market"):
+        r = board_prop(pick, summary)
+        if r == "won":
+            return "won"
+        if r == "lost":
+            return "lost" if done else "open"
+        if r == "void":
+            return "push" if done else "open"
     if pick["kind"] == "prop":
         v = player_stat(summary, pick["player"], pick["stat"])
         if v is not None and v >= pick["line"]:
