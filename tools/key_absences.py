@@ -125,4 +125,4 @@ def main(day, get=_get):
 
 
 if __name__ == "__main__":
-    print("\n".join(main(sys.argv[1] if len(sys.argv) > 1 else dt.datetime.now(ET).date().isoformat())))
+    print("\n".join(main(__import__("build_ticket").resolve_day(sys.argv[1] if len(sys.argv) > 1 else None))))

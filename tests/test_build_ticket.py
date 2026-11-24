@@ -225,6 +225,18 @@ class NcaabOptInTest(unittest.TestCase):
         self.assertGreater(r[0]["market_home"], 0.9)
 
 
+class ResolveDayTest(unittest.TestCase):
+    def test_words_and_dates(self):
+        import datetime as dt
+        now = dt.datetime(2026, 11, 24, 3, 0, tzinfo=dt.timezone.utc)      # 10 PM Nov 23 in ET
+        self.assertEqual(B.resolve_day("today", now), "2026-11-23")
+        self.assertEqual(B.resolve_day(None, now), "2026-11-23")
+        self.assertEqual(B.resolve_day("tomorrow", now), "2026-11-24")
+        self.assertEqual(B.resolve_day("2026-11-25", now), "2026-11-25")
+        with self.assertRaises(ValueError):
+            B.resolve_day("tday", now)
+
+
 class LadderFallbackTest(unittest.TestCase):
     def test_one_leg_per_game_in_band(self):
         t = {"games": {f"G{i}": [dict(label=f"leg{i}", price="-400", chance=0.80, lg="nba", id=str(i), gid=f"nba:{i}"),

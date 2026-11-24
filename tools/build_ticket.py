@@ -187,6 +187,18 @@ def _minutes_caution(legs, gid, minutes_fn):
             L["label"] += f" -- caution: {m:g} min a game over his last 5 ({nba_minutes.NOTE})"
 
 
+def resolve_day(arg, now=None):
+    """ISO date from the command line: none / 'today' / 'tomorrow' / YYYY-MM-DD
+    (ET). 2026-11-24: the morning routine runs `build_ticket.py today` and
+    the literal 'today' crashed the fallback deep in the price-blind model."""
+    base = (now or dt.datetime.now(ET)).astimezone(ET).date()
+    if not arg or arg == "today":
+        return base.isoformat()
+    if arg == "tomorrow":
+        return (base + dt.timedelta(days=1)).isoformat()
+    return dt.date.fromisoformat(arg).isoformat()
+
+
 def ticket_legs(t):
     """The ticket's legs in tools/grade_picks.py's file format (what --save writes)."""
     return [{k: v for k, v in L.items() if k not in ("chance", "gid")} for g in t["games"].values() for L in g]
@@ -493,18 +505,19 @@ if __name__ == "__main__":
         i = args.index("--save")
         save = args[i + 1]
         del args[i:i + 2]
+    day = resolve_day(args[0] if args else None)
     try:
-        t = main(args[0] if args else dt.datetime.now(ET).date().isoformat())
+        t = main(day)
     except StaleBoard as e:
         if "--fallback" not in sys.argv:
             print(f"No ticket: {e} (add --fallback for winners from DraftKings prices)")
             sys.exit(2)
-        t = apply_record(fallback(args[0] if args else dt.datetime.now(ET).date().isoformat()), prop_record())
+        t = apply_record(fallback(day), prop_record())
         t["ladder"] = ladder_text(ladder_fallback(t))
     else:
         apply_record(t, prop_record())
     if "--ncaab" in sys.argv:
-        for m, L in ncaab_legs(ncaab_rows(args[0] if args else dt.datetime.now(ET).date().isoformat())).items():
+        for m, L in ncaab_legs(ncaab_rows(day)).items():
             t["games"].setdefault(m, []).extend(L)
     print(text(t))
     if save:

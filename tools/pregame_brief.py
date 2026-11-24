@@ -72,7 +72,7 @@ if __name__ == "__main__":
         i = args.index("--save")
         folder = args[i + 1] if i + 1 < len(args) else "."
         del args[i:i + 2]
-    out = brief(args[0] if args else dt.datetime.now(ET).date().isoformat())
+    out = brief(__import__("build_ticket").resolve_day(args[0] if args else None))
     print(out)
     if folder:
         print(f"\nsaved: {save(out, folder)}")
