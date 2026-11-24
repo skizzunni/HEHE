@@ -76,5 +76,22 @@ class BoardSlotTest(unittest.TestCase):
             B.board_slot(D, "2026-11-25")
 
 
+class FallbackTest(unittest.TestCase):
+    def test_winners_from_prices(self):
+        rows = [dict(lg="nba", game="DAL @ DEN", id="9", home="DEN", away="DAL", home_ml=-322, away_ml=260,
+                     market_home=0.73, blind_home=0.59),
+                dict(lg="nba", game="BOS @ WSH", id="8", home="WSH", away="BOS", home_ml=351, away_ml=-453,
+                     market_home=0.21, blind_home=0.28),
+                dict(lg="nhl", game="X @ Y", id="7", home="Y", away="X", home_ml=-400, away_ml=300,
+                     market_home=0.78, blind_home=0.40)]
+        t = B.fallback("2026-11-24", rows)
+        legs = [L for g in t["games"].values() for L in g]
+        self.assertEqual([(L["team"], L["price"]) for L in legs], [("BOS", "-453")])
+        reasons = dict(t["left_off"])
+        self.assertTrue(any("under 75%" in v for v in reasons.values()))         # Denver 73%
+        self.assertTrue(any("other side" in v for v in reasons.values()))       # Y: our number 40%
+        self.assertIn("NOTE: The board has not rebuilt", B.text(t))
+
+
 if __name__ == "__main__":
     unittest.main()

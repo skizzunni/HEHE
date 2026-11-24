@@ -117,7 +117,7 @@ def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop
 
 def text(t):
     legs = [L for g in t["games"].values() for L in g]
-    out = [f"Your ticket, by game -- {len(legs)} legs, each judged on its own:"]
+    out = ([f"NOTE: {t['note']}"] if t.get("note") else []) + [f"Your ticket, by game -- {len(legs)} legs, each judged on its own:"]
     for match, L in t["games"].items():
         out.append(f"  {match}")
         out += [f"    {x['label']}" for x in L]
@@ -133,6 +133,36 @@ def text(t):
         out.append("Left off, and why:")
         out += [f"  {lab} -- {why}" for lab, why in t["left_off"]]
     return "\n".join(out)
+
+
+def fallback(day, rows=None):
+    """Winners only, from DraftKings prices on ESPN (no-vig), when the board has
+    not rebuilt for `day` (2026-11-24: every GitHub workflow switched off). Same
+    winner checks: 75%+, our price-blind number not on the other side. Props
+    need the board's FanDuel feed, so there are none here."""
+    if rows is None:
+        import slate_sheet
+        rows = slate_sheet.main(day)
+    games, left = {}, []
+    for r in rows:
+        mh = r.get("market_home")
+        if mh is None or r.get("home_ml") is None or r.get("away_ml") is None:
+            continue
+        home = mh >= 0.5
+        team, price = (r["home"], r["home_ml"]) if home else (r["away"], r["away_ml"])
+        chance = round(100 * (mh if home else 1 - mh))
+        bh = r.get("blind_home")
+        blind = None if bh is None else (bh if home else 1 - bh)
+        price_s = f"{int(price):+d}" if isinstance(price, (int, float)) else str(price)
+        ok, why = judge_winner(dict(mc=chance), [], blind)
+        label = f"{team} moneyline {price_s} ({chance}%, DraftKings no-vig)"
+        if ok:
+            games.setdefault(r["game"], []).append(dict(label=label, id=str(r.get("id")), lg=r["lg"], kind="ml", team=team,
+                                                        price=price_s, chance=chance / 100))
+        elif chance >= MIN_WIN - 15:
+            left.append((label, why))
+    return dict(games=games, left_off=left, note="The board has not rebuilt for this day: winners only, from "
+                "DraftKings prices on ESPN; no props. Check tools/key_absences.py before using any NBA leg.")
 
 
 class StaleBoard(Exception):
@@ -236,6 +266,7 @@ def main(day):
 if __name__ == "__main__":
     args = sys.argv[1:]
     save = None
+    args = [a for a in args if a != "--fallback"]
     if "--save" in args:
         i = args.index("--save")
         save = args[i + 1]
@@ -243,8 +274,10 @@ if __name__ == "__main__":
     try:
         t = main(args[0] if args else dt.datetime.now(ET).date().isoformat())
     except StaleBoard as e:
-        print(f"No ticket: {e}")
-        sys.exit(2)
+        if "--fallback" not in sys.argv:
+            print(f"No ticket: {e} (add --fallback for winners from DraftKings prices)")
+            sys.exit(2)
+        t = fallback(args[0] if args else dt.datetime.now(ET).date().isoformat())
     print(text(t))
     if save:
         os.makedirs(os.path.dirname(save) or ".", exist_ok=True)
