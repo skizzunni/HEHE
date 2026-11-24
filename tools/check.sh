@@ -5,7 +5,8 @@
 set -u
 cd "$(dirname "$0")/.."
 fail=0
-out=$(python -m unittest discover -s tests -q 2>&1); rc=$?
+# offline: tests/nonet/sitecustomize.py makes any network call fail (2026-11-24)
+out=$(PYTHONPATH=tests/nonet${PYTHONPATH:+:$PYTHONPATH} python -m unittest discover -s tests -q 2>&1); rc=$?
 echo "unit tests: $(printf '%s\n' "$out" | tail -1)"
 [ $rc -eq 0 ] || { printf '%s\n' "$out" | grep -E -A12 "^(FAIL|ERROR):" | head -40; fail=1; }
 ui=$(python tests/ui_check.py 2>&1); rc=$?
