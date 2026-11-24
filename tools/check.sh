@@ -18,6 +18,11 @@ for f in tools/*.sh; do
 done
 # and every Python file must compile
 pc=$(python -m py_compile *.py tools/*.py 2>&1) || { echo "python compile error: $(printf '%s' "$pc" | head -3)"; fail=1; }
+# ... under CI's Python 3.11 too (3.12+ syntax such as reused quotes inside an
+# f-string would pass here and fail every CI run), when 3.11 is installed
+if command -v python3.11 >/dev/null 2>&1; then
+  pc=$(python3.11 -m py_compile *.py tools/*.py tests/*.py 2>&1) || { echo "python 3.11 compile error: $(printf '%s' "$pc" | head -3)"; fail=1; }
+fi
 # the live data line in board.html is the bot's, never a hand commit's
 n=$(git diff -- board.html | grep -c '^[-+]const D' || true)
 n2=$(git diff --cached -- board.html | grep -c '^[-+]const D' || true)
