@@ -33,7 +33,7 @@ class PriceCheckTest(unittest.TestCase):
                 dict(kind="prop", player="Gone Guy", market="Points", line_text="5+", price="-900", label="Gone"),
                 dict(kind="ml", team="BOS", price="-453", label="BOS")]
         cur = {("Trae Young", "Pts + Ast", "15+"): "-1250", ("Paul Reed", "Rebounds", "4+"): "-1200"}
-        self.assertEqual(R.price_check(legs, cur), [("Trae", "FanDuel now -1250 (was -1500)"),
+        self.assertEqual(R.price_check(legs, cur), [("Trae", "FanDuel now -1250 (was -1500), the market rates it less likely (93.8% -> 92.6%)"),
                                                     ("Gone", "this line is no longer posted at FanDuel")])
 
 
@@ -43,7 +43,7 @@ class MlCheckTest(unittest.TestCase):
                 dict(kind="ml", id="9", team="DEN", price="-324", label="DEN ML")]
         rows = [dict(id="8", home="WSH", away="BOS", home_ml=400, away_ml=-550, market_home=0.17),
                 dict(id="9", home="DEN", away="DAL", home_ml=-324, away_ml=260, market_home=0.73)]
-        self.assertEqual(R.ml_check(legs, rows), [("BOS ML", "DraftKings now -550 (was -453), 83% no-vig")])
+        self.assertEqual(R.ml_check(legs, rows), [("BOS ML", "DraftKings now -550 (was -453), 83% no-vig, the market rates it more likely (81.9% -> 84.6%)")])
 
 
 class UnsubmittedTest(unittest.TestCase):
@@ -123,8 +123,8 @@ class MainEndToEndTest(unittest.TestCase):
         self.assertIn("  BOS @ WSH", out)
         self.assertIn("DROP    Cam 10+ -- Cam Johnson is now Out", out)        # nickname matched to 'Johnson, Cameron'
         self.assertIn("KEEP    Steady 5+", out)
-        self.assertIn("KEEP    BOS ML -- DraftKings now -550 (was -453), 83% no-vig", out)
-        self.assertIn("KEEP    Marner 1+ -- FanDuel now -1800 (was -2000)", out)   # Mitch / Mitchell: in the lines
+        self.assertIn("KEEP    BOS ML -- DraftKings now -550 (was -453), 83% no-vig, the market rates it more likely", out)
+        self.assertIn("KEEP    Marner 1+ -- FanDuel now -1800 (was -2000), the market rates it less likely", out)   # Mitch / Mitchell: in the lines
         self.assertTrue(out.endswith("3 of 4 legs stay."))
         self.assertTrue(os.path.exists(os.path.join(d, "price_log.jsonl")))
 
@@ -132,7 +132,7 @@ class MainEndToEndTest(unittest.TestCase):
 class FinalViewTest(unittest.TestCase):
     def test_keep_caution_drop(self):
         legs = [dict(id="1", label="A"), dict(id="1", label="B"), dict(id="2", label="C"), dict(id="2", label="D")]
-        flags = [("A", "A Guy is now Out on the official report"), ("B", "FanDuel now -900 (was -1100)"),
+        flags = [("A", "A Guy is now Out on the official report"), ("B", "FanDuel now -900 (was -1100), the market rates it less likely (91.7% -> 90.0%)"),
                  ("C", "C Guy: a game-time decision"), ("C", "FanDuel now -1300 (was -1200)")]
         out = R.final_text(legs, flags, {"1": "DET @ ORL", "2": "VGK @ EDM"}, "05:30 PM")
         self.assertIn("  DET @ ORL", out)

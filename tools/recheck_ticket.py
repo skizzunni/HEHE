@@ -73,8 +73,25 @@ def price_check(legs, current):
         except (TypeError, ValueError):
             moved = False
         if moved:
-            out.append((L.get("label"), f"FanDuel now {now} (was {was})"))
+            out.append((L.get("label"), f"FanDuel now {now} (was {was}){_direction(was, now)}"))
     return out
+
+
+def _implied(price):
+    try:
+        a = float(str(price).replace("+", ""))
+    except (TypeError, ValueError):
+        return None
+    return -a / (100 - a) if a < 0 else 100 / (100 + a)
+
+
+def _direction(was, now):
+    """', the market rates it less likely (92.9% -> 90.5%)' in plain words."""
+    a, b = _implied(was), _implied(now)
+    if a is None or b is None or a == b:
+        return ""
+    word = "more" if b > a else "less"
+    return f", the market rates it {word} likely ({100 * a:.1f}% -> {100 * b:.1f}%)"
 
 
 def ml_check(legs, rows):
@@ -97,7 +114,7 @@ def ml_check(legs, rows):
         if moved:
             mh = r.get("market_home")
             p = "" if mh is None else f", {round(100 * (mh if home else 1 - mh))}% no-vig"
-            out.append((L.get("label"), f"DraftKings now {int(now):+d} (was {L.get('price')}){p}"))
+            out.append((L.get("label"), f"DraftKings now {int(now):+d} (was {L.get('price')}){p}{_direction(L.get('price'), now)}"))
     return out
 
 
