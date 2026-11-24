@@ -130,5 +130,21 @@ class FallbackPropsTest(unittest.TestCase):
         self.assertEqual(len(t["games"]["BOS @ WSH"]), 1)
 
 
+class LadderFallbackTest(unittest.TestCase):
+    def test_one_leg_per_game_in_band(self):
+        t = {"games": {f"G{i}": [dict(label=f"leg{i}", price="-400", chance=0.80, lg="nba", id=str(i), gid=f"nba:{i}"),
+                                  dict(label=f"leg{i}b", price="-400", chance=0.79, lg="nba", id=str(i), gid=f"nba:{i}")]
+                       for i in range(8)}, "left_off": []}
+        combo = B.ladder_fallback(t)
+        self.assertTrue(combo)
+        self.assertEqual(len({L["gid"] for L in combo}), len(combo))      # one per game
+        pays = 1
+        for L in combo:
+            pays *= B._dec(L["price"])
+        self.assertTrue(2.0 <= pays <= 5.0)
+        self.assertIn("Ladder stand-in", B.ladder_text(combo))
+        self.assertIn("nothing", B.ladder_text([]))
+
+
 if __name__ == "__main__":
     unittest.main()

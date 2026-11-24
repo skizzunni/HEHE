@@ -131,6 +131,8 @@ def text(t):
                        f"Each leg stands on its own; the size is your call.")
         except (TypeError, ValueError):
             out.append(f"All {len(legs)} win: about {100 * allwin:.0f}%.")
+    if t.get("ladder"):
+        out.append(t["ladder"])
     if t["left_off"]:
         out.append("Left off, and why:")
         out += [f"  {lab} -- {why}" for lab, why in t["left_off"]]
@@ -191,6 +193,28 @@ def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None):
             games.setdefault(m, []).extend(L)
         left += tp["left_off"]
     return dict(games=games, left_off=left, note=note)
+
+
+def ladder_fallback(t):
+    """The ladder's own picker (ladder.best_combo: one leg per game, paying 2x-5x,
+    highest chance that all win) run on the fallback ticket's legs, for a day the
+    board's 8 AM Locks card does not exist. Labelled as a stand-in: the usual
+    ladder legs are the Locks. [] when nothing pays in the band."""
+    import ladder
+    legs = [dict(L, p=L["chance"], gid=L.get("gid") or f"{L.get('lg')}:{L.get('id')}")
+            for g in t["games"].values() for L in g]
+    return ladder.best_combo(legs)
+
+
+def ladder_text(combo):
+    if not combo:
+        return ("Ladder stand-in: nothing on today's fallback legs pays 2x-5x with one leg per game "
+                "(the ladder allows 6 legs; ~87% props near -1000 pay about 1.1x each).")
+    pays = math.prod(_dec(L["price"]) for L in combo)
+    p = math.prod(L["chance"] for L in combo)
+    return ("Ladder stand-in (the board's 8 AM Locks are missing -- your call whether to use it): "
+            f"{len(combo)} legs, pays {pays:.2f}x, about {100 * p:.0f}% all win: "
+            + "; ".join(L["label"] for L in sorted(combo, key=lambda L: -L["chance"])))
 
 
 def _fd_props(rows):
@@ -337,6 +361,7 @@ if __name__ == "__main__":
             print(f"No ticket: {e} (add --fallback for winners from DraftKings prices)")
             sys.exit(2)
         t = fallback(args[0] if args else dt.datetime.now(ET).date().isoformat())
+        t["ladder"] = ladder_text(ladder_fallback(t))
     print(text(t))
     if save:
         os.makedirs(os.path.dirname(save) or ".", exist_ok=True)
