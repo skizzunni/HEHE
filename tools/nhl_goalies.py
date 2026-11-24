@@ -81,16 +81,53 @@ def team_goalies(get=_nhl):
     return out
 
 
-def flag(goalie, roster):
+SEARCH = "https://search.d3.nhle.com/api/v1/search/player?culture=en-us&limit=10&q={}"
+CAREER_OK = 50          # career NHL games: an established goalie, not an unknown call-up
+
+
+def career(goalie, get=None):
+    """(career regular-season games, save %) for an NHL goalie by name, from the
+    NHL's own search and player pages; None when not found."""
+    import urllib.parse
+    get = get or (lambda u: _nhl_url(u))
+    hits = get(SEARCH.format(urllib.parse.quote(goalie))) or []
+    pid = next((h.get("playerId") for h in hits if h.get("positionCode") == "G"
+                and str(h.get("name", "")).lower() == goalie.lower()), None)
+    if not pid:
+        return None
+    ct = ((get(NHL.format(f"player/{pid}/landing")) or {}).get("careerTotals") or {}).get("regularSeason") or {}
+    gp = ct.get("gamesPlayed")
+    return (gp, ct.get("savePctg")) if gp is not None else None
+
+
+def _nhl_url(url):
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=20) as r:
+            return json.load(r)
+    except Exception:
+        return None
+
+
+def flag(goalie, roster, career_fn=None):
     """A note when the listed starter is not this team's usual one: absent from
-    its season stats, or with fewer starts than another goalie."""
+    its season stats, or with fewer starts than another goalie. 2026-11-24:
+    Minnesota's Gustavsson had no games this season and was flagged "verify";
+    he is a 220-game NHL goalie, started, saved .917 and the Wild won 5-2 --
+    so an absent goalie is now looked up by career before he is called a risk."""
     if not goalie or not roster:
         return ""
     by = {n.lower(): (n, gs, sv) for n, gs, sv in roster}
     top = max(roster, key=lambda r: r[1])
     me = by.get(goalie.lower())
     if not me:
-        return f" -- NOT among this team's goalies this season (usual: {top[0]}, {top[1]} starts); verify"
+        c = (career_fn or career)(goalie)
+        if c and c[0] >= CAREER_OK:
+            sv = f", .{round(1000 * c[1]):03d}" if c[1] else ""
+            return (f" -- first game for this team this season, but an established NHL goalie "
+                    f"({c[0]} career games{sv}); usual: {top[0]}, {top[1]} starts")
+        exp = f"{c[0]} career NHL games" if c else "no NHL career found"
+        return f" -- NOT among this team's goalies this season and {exp} (usual: {top[0]}, {top[1]} starts); verify"
     if me[1] < top[1]:
         sv = f", .{round(1000 * me[2]):03d}" if me[2] else ""
         return f" -- not the usual starter ({me[1]} starts{sv}; {top[0]} has {top[1]})"
@@ -103,12 +140,12 @@ def fetch(day):
         return r.read().decode("utf-8", "replace")
 
 
-def text(rows, rosters=None):
+def text(rows, rosters=None, career_fn=None):
     if not rows:
         return "No goalie data found on DailyFaceoff."
     rosters = rosters or {}
     f = lambda r, s: (f"{r[s + '_goalie'] or '?'} ({r[s + '_status']}" + (f", {r[s + '_at']} ET" if r[s + "_at"] else "") + ")"
-                      + flag(r[s + "_goalie"], rosters.get(r[s])))
+                      + flag(r[s + "_goalie"], rosters.get(r[s]), career_fn))
     return "\n".join(f"{r['away']} @ {r['home']}: {f(r, 'away')} vs {f(r, 'home')}" for r in rows)
 
 
