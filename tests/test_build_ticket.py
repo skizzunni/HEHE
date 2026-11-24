@@ -54,5 +54,18 @@ class BuildTest(unittest.TestCase):
         self.assertIn("Left off, and why:", out)
 
 
+    def test_prop_locks_go_first_and_are_labelled(self):
+        props = [{"id": "nba:1", "match": "A @ B", "props": [
+            dict(name=f"P{i}", label=f"P{i}: 5+ Points", p=0.87, imp=0.9 - i / 100, price="-900", market="Points", line="5+")
+            for i in range(5)]}]
+        t = B.build({}, props, key_out_fn=lambda r: [], blind_fn=lambda r: None, status_fn=lambda n: None,
+                    fav_fn=lambda gid: 0, prop_locks={"P4"})
+        legs = [L for g in t["games"].values() for L in g]
+        self.assertEqual(legs[0]["player"], "P4")
+        self.assertIn("Prop Lock", legs[0]["label"])
+        self.assertEqual(len(legs), B.PER_GAME)
+        self.assertNotIn("Prop Lock", legs[1]["label"])
+
+
 if __name__ == "__main__":
     unittest.main()

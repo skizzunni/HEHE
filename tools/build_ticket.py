@@ -67,7 +67,10 @@ def judge_prop(p, status):
     return True, "", ""
 
 
-def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn):
+LOCK_NOTE = " [Prop Lock: confirmed playing; Prop Locks hit 93% then 94% vs ~87% stated]"
+
+
+def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop_locks=()):
     """Pure core: returns {"games": {match: [legs]}, "left_off": [(label, reason)]}.
     key_out_fn(row) -> [(name, min, status)]; blind_fn(row) -> p or None;
     status_fn(player) -> report status or None; fav_fn(gid) -> favourite chance %."""
@@ -88,6 +91,11 @@ def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn):
     for g in props_games:
         cand = daily_card.best_per_player([dict(p, match=g.get("match")) for p in g.get("props") or []
                                            if p.get("plays", True)], floor=PROP_FLOOR)
+        # the day's Prop Locks first (player confirmed to play): 93.0% then 93.9%
+        # vs ~87% stated by date half (z +1.89, +3.05; README 2026-11-24) -- an
+        # ordering and a label, not a cut
+        locks = {k for k in prop_locks}
+        cand = sorted(cand, key=lambda p: (p["name"] not in locks,))
         n = 0
         for p in cand:
             if n >= PER_GAME:
@@ -97,7 +105,8 @@ def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn):
             if not ok:
                 left.append((label, why))
                 continue
-            caution = " -- caution: big favourite in this game (blowout minutes)" if (fav_fn(g["id"]) or 0) >= BLOWOUT else ""
+            caution = (LOCK_NOTE if p["name"] in locks else "") + (
+                " -- caution: big favourite in this game (blowout minutes)" if (fav_fn(g["id"]) or 0) >= BLOWOUT else "")
             games.setdefault(g.get("match") or g["id"], []).append(dict(
                 label=label + caution, id=str(g["id"]).split(":")[-1], lg=str(g["id"]).split(":")[0], kind="prop",
                 player=p["name"], stat=STAT.get(p.get("market"), p.get("market")),
@@ -197,8 +206,13 @@ def main(day):
             if s:
                 r["abbr"] = g[s]["abbreviation"]
                 r["match"] = g["match"]
+    try:
+        pl = json.load(open(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "prop_locks.json")))
+        lock_names = {L["name"] for L in ((pl.get("days") or {}).get(day) or {}).get("legs") or []}
+    except (OSError, ValueError):
+        lock_names = set()
     return build(rows_by_lg, props_games, key_out, blind,
-                 lambda name: status.get(K.report_name(name)), fav)
+                 lambda name: status.get(K.report_name(name)), fav, prop_locks=lock_names)
 
 
 if __name__ == "__main__":

@@ -5164,3 +5164,12 @@ points against the pick: 28/44 (64% vs 61% stated, z +0.36) then 32/49 (65% vs 6
 toward: 68% vs 68% then 74% vs 70%; steady 71% vs 68% then 71% vs 70%. A late move against a leg does
 not make it lose more than its stated chance, so the pre-game recheck shows a move but does not drop a
 leg for it (soccer win-or-draw moves are tracked separately, dc_move_line).
+
+**Checked: the props on the user's ticket (2026-11-24).** Graded NBA / NHL / NFL props stated at 85-90%
+(the card's band), by date half: 972/1115 (87.2% vs 85.7%, z +1.43) then 1084/1259 (86.1% vs 85.9%, z
++0.24) -- on par. Of those, the day's Prop Locks (player confirmed to play) 106/114 (93.0% vs 87.0%, z
++1.89) then 229/244 (93.9% vs 87.4%, z +3.05); the rest 86.5% then 84.2%. Same band by price: -1000 or
+shorter 88.7% then 87.2%; -999 to -500 84.1% then 83.8% (difference z about 2.1 and 1.6). Neither clears
+2.8 in both halves, so no prop is cut; build_ticket lists the day's Prop Locks first and labels them.
+The card picks each player's longest-priced line at the floor, which lands in the weaker price group --
+on watch as props accumulate.
