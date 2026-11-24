@@ -2575,6 +2575,9 @@ def yesterday_line(y):
     """Yesterday's board in one line, with the losses its chances expected."""
     ys = y.get("sweep") or {}
     return (f"Yesterday ({y['day']}): board {ys.get('won', 0)}-{ys.get('lost', 0)}"
+            # 2026-11-24: with the grader off, "board 7-5" read as the day's result
+            # while 41 of its picks were still ungraded
+            + (f" so far, {ys['open']} still ungraded" if ys.get("open") else "")
             + (f", sweep broken by {ys['broke_on']}" if ys.get("broke_on") else ", clean sweep" if ys.get("won") else "")
             + (f"; {ys['expected_losses']:g} losses expected, {ys.get('lost', 0)} came in"
                f" ({pct_text(ys['as_bad_pct'])} chance of that many or more)"

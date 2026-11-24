@@ -216,5 +216,12 @@ class OneSport(unittest.TestCase):
         self.assertEqual(daily_review._one_sport(dict(lost=5, lost_by_league={"nba": 3, "epl": 2})), "")
 
 
+class PartialYesterdayTest(unittest.TestCase):
+    def test_ungraded_picks_are_named(self):
+        import daily_review
+        line = daily_review.yesterday_line(dict(day="2026-11-23", sweep=dict(won=7, lost=5, open=41, broke_on="afc Al Hilal at 79%")))
+        self.assertTrue(line.startswith("Yesterday (2026-11-23): board 7-5 so far, 41 still ungraded, sweep broken by afc Al Hilal at 79%"))
+
+
 if __name__ == "__main__":
     unittest.main()
