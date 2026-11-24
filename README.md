@@ -988,6 +988,24 @@ what the model prints is noise wearing a number.
 
 ## What was tested and rejected
 
+### Value bets: the bigger the claimed edge, the worse (2026-11-24) -- rejected as a rule, on watch
+
+899 graded value finds (value.json, every kind), split at 2026-11-08:
+
+| slice | first half | second half |
+|---|---|---|
+| claimed edge under 4% | 161/373, ROI -4.4% (z -0.62) | 161/349, ROI +6.4% (z +0.80) |
+| claimed edge 4%+ | 23/73, ROI -30.0% (z -2.41) | 32/104, ROI -27.4% (z -2.44) |
+| of which shown (4-5%) | 8/28, ROI -38.4% (z -2.05) | 13/40, ROI -29.0% (z -1.74) |
+| of which held back as suspect (over 5%) | 15/45, ROI -24.7% | 19/64, ROI -26.4% |
+
+A big claimed edge looks like a stale or wrong fair price rather than a real
+one: it loses about 30% in both halves, but at z -2.4 in each it is short
+of the 2.8 bar, so MAX_EV stays 0.05 (value_bets.py) and nothing is cut.
+Same check by side: home finds 37/98 then 46/134 (z -2.2, -3.0), which is
+the home value-bet pre-registration already running. Away finds, small
+edges and FanDuel finds are on par.
+
 **MLB park factors.** Built point-in-time (a park's runs per game against the
 league, shrunk by sample size, from prior games only), used both to de-park
 team run rates and to re-park the run estimate for the game being played.
