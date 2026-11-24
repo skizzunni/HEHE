@@ -5204,6 +5204,13 @@ Corrections, same day: (1) the first run compared ESPN's UTC game times with ET 
 by the UTC day, one day after an evening game, so "games before the prop date" took in the prop's own
 game. Anchoring on the event id removes it; the numbers above are the clean ones.
 
+**Re-checked leak-free: the low-minutes prop caution holds (2026-11-24).** After the date leak above,
+the Nov 23 minutes caution (NBA props on players under 20 min a game over their last 5) was re-run
+anchored on each game's event id: 38/54 (70.4% vs 83.9% stated, z -2.72) then 56/73 (76.7% vs 83.7%,
+z -1.62); priced -500 or shorter, 30/44 (68.2%, z -3.18) then 49/62 (79.0%, z -1.31). 20+ minutes: on
+par (84.6% / 84.3%). The original figures (71.8% vs 83.5%) stand; still short of the bar in the later
+half, so still a caution, and the stronger of the two prop cautions.
+
 **Checked, no change: the last-10 test on NHL shots props (2026-11-24).** 1,119 graded NHL Shots on
 Goal props priced -500 or shorter, each player's last 10 games from the NHL's game logs, split at Nov 3.
 Reached the line in under 70% of them: 18/20 then 8/8; 70-84%: 86.2% then 87.6%; 85-99%: 89.7% then
