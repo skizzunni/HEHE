@@ -135,15 +135,33 @@ def text(t):
     return "\n".join(out)
 
 
+class StaleBoard(Exception):
+    """The board's data is not for the requested day (the board did not rebuild)."""
+
+
+def board_slot(D, day):
+    """The board slot ("today" / "tomorrow") holding `day` (ISO date). 2026-11-24:
+    with the board workflow switched off, board.html still called Nov 23
+    "today" -- a ticket for Nov 24 read from "today" would have used the wrong
+    day's games without a word."""
+    want = day.replace("-", "")
+    for slot, d in (D.get("dates") or {}).items():
+        if str(d) == want:
+            return slot
+    raise StaleBoard(f"the board has no data for {day} (it holds {D.get('dates')}) -- "
+                     "it has not rebuilt; is the board workflow running?")
+
+
 def main(day):
     import line_moves
     import blind_model as bm
     import key_absences as K
     import nba_injury_report as R
     D = line_moves.board()
-    slots = (D.get("slots") or {}).get("today") or {}
+    slot = board_slot(D, day)
+    slots = (D.get("slots") or {}).get(slot) or {}
     rows_by_lg = {lg: (slots.get(lg) or {}).get("rows") or [] for lg in WIN_LEAGUES}
-    props_games = [g for g in ((D.get("props") or {}).get("today") or {}).get("games") or []
+    props_games = [g for g in ((D.get("props") or {}).get(slot) or {}).get("games") or []
                    if str(g.get("id", "")).split(":")[0] in ("nba", "nhl", "nfl")]
     # official report statuses, by player and team
     _, rep = R.latest()
@@ -222,7 +240,11 @@ if __name__ == "__main__":
         i = args.index("--save")
         save = args[i + 1]
         del args[i:i + 2]
-    t = main(args[0] if args else dt.datetime.now(ET).date().isoformat())
+    try:
+        t = main(args[0] if args else dt.datetime.now(ET).date().isoformat())
+    except StaleBoard as e:
+        print(f"No ticket: {e}")
+        sys.exit(2)
     print(text(t))
     if save:
         os.makedirs(os.path.dirname(save) or ".", exist_ok=True)

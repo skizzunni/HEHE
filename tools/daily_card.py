@@ -266,7 +266,26 @@ def card(D, day="today", minutes_fn=None):
     return "\n\n".join("\n".join(p) for p in parts if p)
 
 
+def stale_note(D, day="today", now=None):
+    """A warning line when the board's `day` slot is not today's date (ET):
+    2026-11-24, with the board workflow switched off, board.html still called
+    Nov 23 "today" and the card would have shown yesterday's games as today's."""
+    import datetime as dt
+    from zoneinfo import ZoneInfo
+    if day != "today":
+        return ""
+    now = now or dt.datetime.now(ZoneInfo("America/New_York"))
+    have = str((D.get("dates") or {}).get("today") or "")
+    want = now.strftime("%Y%m%d")
+    if have and have != want:
+        return (f"WARNING: the board has not rebuilt -- its 'today' is {have[:4]}-{have[4:6]}-{have[6:]}, not "
+                f"{now:%Y-%m-%d}. This card is an old day's; is the board workflow running?\n\n")
+    return ""
+
+
 if __name__ == "__main__":
     import line_moves
     import nba_minutes
-    print(card(line_moves.board(), sys.argv[1] if len(sys.argv) > 1 else "today", minutes_fn=nba_minutes.mpg_last5))
+    D = line_moves.board()
+    day = sys.argv[1] if len(sys.argv) > 1 else "today"
+    print(stale_note(D, day) + card(D, day, minutes_fn=nba_minutes.mpg_last5))

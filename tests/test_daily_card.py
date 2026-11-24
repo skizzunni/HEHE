@@ -546,5 +546,15 @@ class GraderStaleTest(unittest.TestCase):
         self.assertIn("no 'Grade the ledger' commit", daily_review.grader_stale_line(now, lambda: None))
 
 
+class StaleNoteTest(unittest.TestCase):
+    def test_warns_only_when_today_is_another_day(self):
+        import datetime as dt
+        import daily_card
+        now = dt.datetime(2026, 11, 24, 8, 5)
+        self.assertIn("board has not rebuilt", daily_card.stale_note({"dates": {"today": "20261123"}}, "today", now))
+        self.assertEqual(daily_card.stale_note({"dates": {"today": "20261124"}}, "today", now), "")
+        self.assertEqual(daily_card.stale_note({"dates": {"today": "20261123"}}, "tomorrow", now), "")
+
+
 if __name__ == "__main__":
     unittest.main()

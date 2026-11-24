@@ -67,5 +67,14 @@ class BuildTest(unittest.TestCase):
         self.assertNotIn("Prop Lock", legs[1]["label"])
 
 
+class BoardSlotTest(unittest.TestCase):
+    def test_slot_by_date_and_stale(self):
+        D = {"dates": {"today": "20261123", "tomorrow": "20261124"}}
+        self.assertEqual(B.board_slot(D, "2026-11-23"), "today")
+        self.assertEqual(B.board_slot(D, "2026-11-24"), "tomorrow")
+        with self.assertRaises(B.StaleBoard):
+            B.board_slot(D, "2026-11-25")
+
+
 if __name__ == "__main__":
     unittest.main()
