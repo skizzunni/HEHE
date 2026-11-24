@@ -118,6 +118,11 @@ def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop
     return dict(games=games, left_off=left)
 
 
+def ticket_legs(t):
+    """The ticket's legs in tools/grade_picks.py's file format (what --save writes)."""
+    return [{k: v for k, v in L.items() if k not in ("chance", "gid")} for g in t["games"].values() for L in g]
+
+
 def text(t):
     legs = [L for g in t["games"].values() for L in g]
     out = ([f"NOTE: {t['note']}"] if t.get("note") else []) + [f"Your ticket, by game -- {len(legs)} legs, each judged on its own:"]
@@ -366,6 +371,5 @@ if __name__ == "__main__":
     print(text(t))
     if save:
         os.makedirs(os.path.dirname(save) or ".", exist_ok=True)
-        json.dump([{k: v for k, v in L.items() if k not in ("chance", "gid")} for g in t["games"].values() for L in g],
-                  open(save, "w"), indent=1)
+        json.dump(ticket_legs(t), open(save, "w"), indent=1)
         print(f"\nsaved: {save}")

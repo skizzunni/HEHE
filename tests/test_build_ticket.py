@@ -146,5 +146,26 @@ class LadderFallbackTest(unittest.TestCase):
         self.assertIn("nothing", B.ladder_text([]))
 
 
+class SaveThenGradeTest(unittest.TestCase):
+    def test_saved_ticket_grades(self):
+        import grade_picks as G
+        rows = [dict(lg="nhl", game="VGK @ EDM", id="5", home="EDM", away="VGK", home_ml=-500, away_ml=380,
+                     market_home=0.82, blind_home=0.7)]
+        pg = [{"id": "nhl:5", "match": "VGK @ EDM", "props": [
+            dict(name="Matt Boldy", label="Matt Boldy: 2+ Shots on Goal", p=0.87, imp=0.9, price="-900",
+                 market="Shots on Goal", line="2+")]}]
+        t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=lambda r: pg, status_fn=lambda n: None)
+        legs = B.ticket_legs(t)
+        self.assertEqual([L["kind"] for L in legs], ["ml", "prop"])
+        self.assertTrue(all("chance" not in L and "gid" not in L for L in legs))
+        box = {"header": {"competitions": [{"status": {"type": {"completed": True}}, "competitors": [
+                   {"team": {"abbreviation": "EDM"}, "score": "4"}, {"team": {"abbreviation": "VGK"}, "score": "2"}]}]},
+               "boxscore": {"players": [{"team": {"abbreviation": "EDM"}, "statistics": [
+                   {"name": "forwards", "keys": ["shotsTotal"], "labels": ["S"],
+                    "athletes": [{"athlete": {"id": "9", "displayName": "Matt Boldy"}, "stats": ["3"]}]}]}]}}
+        got = [G.grade(L, {"EDM": 4.0, "VGK": 2.0}, True, box) for L in legs]
+        self.assertEqual(got, ["won", "won"])
+
+
 if __name__ == "__main__":
     unittest.main()
