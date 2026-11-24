@@ -70,7 +70,7 @@ def judge_prop(p, status):
 LOCK_NOTE = " [Prop Lock: confirmed playing; Prop Locks hit 93% then 94% vs ~87% stated]"
 
 
-def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop_locks=(), b2b_fn=None):
+def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop_locks=(), b2b_fn=None, minutes_fn=None):
     """Pure core: returns {"games": {match: [legs]}, "left_off": [(label, reason)]}.
     key_out_fn(row) -> [(name, min, status)]; blind_fn(row) -> p or None;
     status_fn(player) -> report status or None; fav_fn(gid) -> favourite chance %."""
@@ -115,7 +115,27 @@ def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop
                 line_text=str(p.get("line", "")),
                 line=float(str(p.get("line", "0")).rstrip("+") or 0), price=p.get("price"), chance=p["p"], gid=g["id"]))
             n += 1
+        _minutes_caution(games.get(g.get("match") or g["id"]) or [], g["id"], minutes_fn)
     return dict(games=games, left_off=left)
+
+
+def _minutes_caution(legs, gid, minutes_fn):
+    """Adds the daily card's low-minutes caution to this game's NBA prop legs
+    (tools/nba_minutes.py: under 20 min a game over his last 5 -> such props hit
+    72% vs 84% stated; past the 2.8 bar in one date half only, so a caution,
+    never a cut). 2026-11-24: the card showed it, the user's ticket did not."""
+    import nba_minutes
+    props = [L for L in legs if L["kind"] == "prop" and L.get("lg") == "nba"]
+    if not props or not minutes_fn:
+        return
+    try:
+        mp = minutes_fn(gid, sorted({L["player"] for L in props})) or {}
+    except Exception:
+        return
+    for L in props:
+        m = mp.get(L["player"])
+        if m is not None and m < nba_minutes.LOW_MPG:
+            L["label"] += f" -- caution: {m:g} min a game over his last 5 ({nba_minutes.NOTE})"
 
 
 def ticket_legs(t):
@@ -145,7 +165,7 @@ def text(t):
     return "\n".join(out)
 
 
-def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None):
+def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None, minutes_fn=None):
     """Winners only, from DraftKings prices on ESPN (no-vig), when the board has
     not rebuilt for `day` (2026-11-24: every GitHub workflow switched off). Same
     winner checks: 75%+, our price-blind number not on the other side. Props
@@ -190,11 +210,14 @@ def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None):
         pg = []
         note = note.replace("props straight from FanDuel", "no props (FanDuel unreachable)")
     if pg:
+        if minutes_fn is None:
+            import nba_minutes
+            minutes_fn = nba_minutes.mpg_last5
         st = status_fn or _report_status(day)
         fav = {f"{r['lg']}:{r.get('id')}": round(100 * max(r["market_home"], 1 - r["market_home"]))
                for r in rows if r.get("market_home") is not None}
         tp = build({}, pg, key_out_fn=lambda r: [], blind_fn=lambda r: None, status_fn=st,
-                   fav_fn=lambda gid: fav.get(gid, 0), prop_locks=())
+                   fav_fn=lambda gid: fav.get(gid, 0), prop_locks=(), minutes_fn=minutes_fn)
         for m, L in tp["games"].items():
             games.setdefault(m, []).extend(L)
         left += tp["left_off"]
@@ -349,7 +372,8 @@ def main(day):
     except (OSError, ValueError):
         lock_names = set()
     return build(rows_by_lg, props_games, key_out, blind,
-                 lambda name: status.get(K.report_name(name)), fav, prop_locks=lock_names, b2b_fn=b2b)
+                 lambda name: status.get(K.report_name(name)), fav, prop_locks=lock_names, b2b_fn=b2b,
+                 minutes_fn=__import__("nba_minutes").mpg_last5)
 
 
 if __name__ == "__main__":

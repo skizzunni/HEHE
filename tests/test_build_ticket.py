@@ -113,7 +113,7 @@ class FallbackPropsTest(unittest.TestCase):
             dict(name="Jaylen Brown", label="Jaylen Brown: 15+ Points", p=0.87, imp=0.9, price="-900", market="Points", line="15+"),
             dict(name="Hurt Guy", label="Hurt Guy: 5+ Points", p=0.87, imp=0.95, price="-2000", market="Points", line="5+")]}]
         t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=lambda r: pg,
-                       status_fn=lambda n: "Out" if n == "Hurt Guy" else None)
+                       status_fn=lambda n: "Out" if n == "Hurt Guy" else None, minutes_fn=lambda g, n: {})
         legs = t["games"]["BOS @ WSH"]
         self.assertEqual([L["kind"] for L in legs], ["ml", "prop"])
         self.assertEqual(legs[1]["player"], "Jaylen Brown")
@@ -128,6 +128,33 @@ class FallbackPropsTest(unittest.TestCase):
         t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=boom)
         self.assertIn("no props (FanDuel unreachable)", t["note"])
         self.assertEqual(len(t["games"]["BOS @ WSH"]), 1)
+
+
+class MinutesCautionTest(unittest.TestCase):
+    def test_low_minutes_props_carry_the_card_caution(self):
+        props = [{"id": "nba:1", "match": "A @ B", "props": [
+            dict(name="Bench Guy", label="Bench Guy: 4+ Rebounds", p=0.87, imp=0.9, price="-1200", market="Rebounds", line="4+"),
+            dict(name="Starter", label="Starter: 15+ Points", p=0.87, imp=0.9, price="-1000", market="Points", line="15+")]}]
+        seen = []
+        def mins(gid, names):
+            seen.append((gid, names))
+            return {"Bench Guy": 14.2, "Starter": 33.0}
+        t = B.build({}, props, key_out_fn=lambda r: [], blind_fn=lambda r: None, status_fn=lambda n: None,
+                    fav_fn=lambda g: 0, minutes_fn=mins)
+        legs = {L["player"]: L["label"] for L in t["games"]["A @ B"]}
+        self.assertIn("caution: 14.2 min a game over his last 5", legs["Bench Guy"])
+        self.assertNotIn("caution", legs["Starter"])
+        self.assertEqual(seen, [("nba:1", ["Bench Guy", "Starter"])])     # one lookup per game
+        self.assertEqual(len(t["games"]["A @ B"]), 2)                      # a caution, not a cut
+
+    def test_minutes_failure_leaves_ticket_alone(self):
+        props = [{"id": "nba:1", "match": "A @ B", "props": [
+            dict(name="X", label="X: 4+ Rebounds", p=0.87, imp=0.9, price="-1200", market="Rebounds", line="4+")]}]
+        def boom(g, n):
+            raise OSError("down")
+        t = B.build({}, props, key_out_fn=lambda r: [], blind_fn=lambda r: None, status_fn=lambda n: None,
+                    fav_fn=lambda g: 0, minutes_fn=boom)
+        self.assertEqual(t["games"]["A @ B"][0]["label"], "X: 4+ Rebounds -1200 (87%)")
 
 
 class LadderFallbackTest(unittest.TestCase):
