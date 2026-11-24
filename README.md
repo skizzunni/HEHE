@@ -5157,3 +5157,10 @@ missing 2+: 70% vs 60% then 67% vs 66%. No shortfall -- the price counts the abs
 shows key absences as a caution and does not cut them. (tools/key_absences.py now ranks by minutes per
 game played; per team game it had missed Mobley, who had played 3 of 8.) Box-score absence is a slight
 look-ahead proxy for the injury report.
+
+**Checked, no cut: American-sports picks whose price moved against them (2026-11-24).** Graded board
+NBA / NHL / NFL / college picks with a first and a later logged price (1,034), by date half. Moved 3+
+points against the pick: 28/44 (64% vs 61% stated, z +0.36) then 32/49 (65% vs 62%, z +0.47); moved
+toward: 68% vs 68% then 74% vs 70%; steady 71% vs 68% then 71% vs 70%. A late move against a leg does
+not make it lose more than its stated chance, so the pre-game recheck shows a move but does not drop a
+leg for it (soccer win-or-draw moves are tracked separately, dc_move_line).
