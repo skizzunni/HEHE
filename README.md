@@ -5208,6 +5208,12 @@ Reached the line in under 70% of them: 18/20 then 8/8; 70-84%: 86.2% then 87.6%;
 85.4%; all 10: 86.1% then 87.7% (vs ~85% stated throughout). Nothing short, so the NBA-only caution
 stays NBA-only.
 
+**On watch: the heaviest props are understated (2026-11-24).** All graded props priced -2500 or
+shorter: 180/196 (91.8%) then 162/168 (96.4%) vs ~87% stated, split at Nov 4 (z about +1.8 / +3.6);
+-1000 to -2500 is on par (86.2% / 85.6% and 87.0% / 88.7% vs 85-87%). The board's cap (props_ledger.cap,
+~87%) holds them down. Past the bar in one half only, so the cap stays; the daily review now prints
+this line every day ("Props priced -2500 or shorter").
+
 **Checked: the ticket's 75%+ winners (2026-11-24).** Graded board NBA / NHL / NFL / college basketball
 winners stated 75%+ (180, split Nov 8): 77/90 (86% vs 87% stated, z -0.30) then 80/90 (89% vs 88%, z
 +0.37). NBA 80% vs 82% then 82% vs 83%; college basketball 94% vs 96% then 93% vs 93%; NFL 75% vs 79% then

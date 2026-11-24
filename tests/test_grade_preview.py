@@ -42,5 +42,16 @@ class ReviewLineTest(unittest.TestCase):
         self.assertIsNone(daily_review.preview_losses_line(lambda: []))
 
 
+class HeavyPropsLineTest(unittest.TestCase):
+    def test_line(self):
+        import daily_review
+        props = {f"k{i}": dict(price="-3000", p=0.87, status="won" if i % 10 else "lost", date=f"2026-11-{1 + i // 10:02d}")
+                 for i in range(60)}
+        props["light"] = dict(price="-1000", p=0.85, status="lost", date="2026-11-01")
+        line = daily_review.heavy_props_line(props)
+        self.assertTrue(line.startswith("Props priced -2500 or shorter, by half: 27/30 (90.0% vs 87.0% stated"))
+        self.assertIsNone(daily_review.heavy_props_line({}))
+
+
 if __name__ == "__main__":
     unittest.main()

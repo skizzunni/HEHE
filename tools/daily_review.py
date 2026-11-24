@@ -2206,6 +2206,39 @@ def big_files(root=None, limit_mb=BIG_MB):
 GRADER_HOURS = 2.0
 
 
+HEAVY = -2500
+
+
+def heavy_props_line(props):
+    """Props priced HEAVY or shorter: record vs stated chance by date half.
+    2026-11-24: the board caps every prop at ~87% (props_ledger.cap), but these
+    went 180/196 (91.8%) then 162/168 (96.4%) vs ~87% stated split at Nov 4 (z about +1.8 /
+    +3.6) -- understated, past the bar in one half only, so the cap stays and
+    this line watches it."""
+    rows = []
+    for e in (props or {}).values():
+        if not isinstance(e, dict) or e.get("status") not in ("won", "lost") or not e.get("p"):
+            continue
+        try:
+            v = float(str(e.get("price")).replace("+", ""))
+        except (TypeError, ValueError):
+            continue
+        if v <= HEAVY:
+            rows.append(e)
+    if len(rows) < 40:
+        return None
+    rows.sort(key=lambda e: e.get("date") or "")
+    H = [rows[:len(rows) // 2], rows[len(rows) // 2:]]
+    bits = []
+    for h in H:
+        w = sum(e["status"] == "won" for e in h)
+        p = sum(e["p"] for e in h)
+        sd = (sum(e["p"] * (1 - e["p"]) for e in h)) ** 0.5 or 1
+        bits.append(f"{w}/{len(h)} ({100 * w / len(h):.1f}% vs {100 * p / len(h):.1f}% stated, z {(w - p) / sd:+.1f})")
+    return (f"Props priced {HEAVY} or shorter, by half: " + " then ".join(bits)
+            + " -- the board's ~87% cap understates them; on watch, cap unchanged until both halves pass z 2.8.")
+
+
 def preview_losses_line(preview_fn=None):
     """While the grader is stale: what the board's own grader would settle now
     (tools/grade_preview.py, nothing saved), every would-be loss with its score
@@ -2806,6 +2839,8 @@ def words(r, fit):
         out.append(r["grader_stale"])
     if r.get("grader_preview"):
         out.append(r["grader_preview"])
+    if r.get("heavy_props"):
+        out.append(r["heavy_props"])
     st = r.get("stuck") or []
     if st:
         out.append(f"STUCK {len(st)} record(s) open a week after their game -- grading is broken: "
@@ -2920,6 +2955,7 @@ def _main():
     log[today.isoformat()]["audit"] = audit(graded, props, locks)
     log[today.isoformat()]["stuck"] = stuck(ledger, props, locks, lottery, today)
     log[today.isoformat()]["grader_stale"] = grader_stale_line()
+    log[today.isoformat()]["heavy_props"] = heavy_props_line(props)
     log[today.isoformat()]["grader_preview"] = (preview_losses_line()
                                                 if log[today.isoformat()]["grader_stale"] else None)
     log[today.isoformat()]["big_files"] = big_files()
