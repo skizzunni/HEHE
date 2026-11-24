@@ -172,7 +172,8 @@ def main(path, day, final=False):
     mmdd = dt.date.fromisoformat(day).strftime("%m/%d/%Y")
     status = {r["player"]: r["status"] for r in rep["rows"] if r["date"] == mmdd}   # report names are unique enough
     team_out = lambda abbr: K.key_missing(K.recent_minutes(abbr, day), status)
-    legs = json.load(open(path))
+    with open(path) as f:
+        legs = json.load(f)
     flags = recheck(legs, lambda n: K.status_of(n, status), team_out)
     import nhl_goalies as NG
     import urllib.request

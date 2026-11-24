@@ -194,6 +194,11 @@ def grade(pick, scores, done, summary=None):
     return "won" if d > 0 else "lost" if d < 0 else "push"
 
 
+def load(path):
+    with open(path) as f:
+        return json.load(f)
+
+
 def payout(price):
     price = float(price)
     return price / 100 if price > 0 else 100 / -price
@@ -208,7 +213,7 @@ def summary(picks, results):
 
 
 def main(path, get=None):
-    picks = json.load(open(path))
+    picks = load(path)
     results = []
     for p in picks:
         scores, done, d = final(p["lg"], p["id"], get, raw=True)
@@ -239,7 +244,7 @@ def live(path, get=None):
     """One line per pick: WON/LOST/PUSH when final, else the clock and where it stands."""
     out = []
     get = _once(get)
-    for p in json.load(open(path)):
+    for p in load(path):
         scores, done, clock, d = final(p["lg"], p["id"], get, with_clock=True, raw=True)
         r = grade(p, scores, done, d)
         if p["kind"] == "prop" and r == "open":
@@ -259,8 +264,15 @@ def watch(path, every=120, get=None, sleep=None, emit=print):
     line when none is left open."""
     import time
     seen = {}
+    picks = None
     while True:
-        picks = json.load(open(path))
+        try:
+            picks = load(path)
+        except (OSError, ValueError):
+            # 2026-11-24: a read that lands mid-write (or a moved file) must not
+            # end hours of live tracking; keep the last good list and go on
+            if picks is None:
+                raise
         open_n = 0
         fetch = _once(get)                      # fresh each round, shared within it
         for p in picks:

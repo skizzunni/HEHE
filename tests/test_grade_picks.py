@@ -90,6 +90,28 @@ class PropTest(unittest.TestCase):
         G.watch(path, get=lambda u: calls.append(u) or BOX, sleep=lambda s: None, emit=lambda m: None)
         self.assertEqual(len(calls), 1)
 
+    def test_watch_survives_a_bad_read(self):
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        json.dump([dict(label="Murray 5+", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500),
+                   dict(label="Murray 9 reb", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="REB", line=9, price=-500)],
+                  open(path, "w"))
+        rounds = []
+
+        def sleep(s):
+            rounds.append(s)
+            if len(rounds) == 1:
+                open(path, "w").write("[{")            # half-written file on the next read
+            else:
+                done = dict(BOX, header={"competitions": [{"status": {"type": {"completed": True}},
+                                                           "competitors": BOX["header"]["competitions"][0]["competitors"]}]})
+                box.update(done)
+        box = dict(BOX)
+        out = []
+        G.watch(path, get=lambda u: box, sleep=sleep, emit=out.append)
+        self.assertEqual(out, ["WON Murray 5+", "LOST Murray 9 reb", "all picks settled"])
+
     def test_watch_emits_each_settle_once(self):
         import json
         import tempfile
