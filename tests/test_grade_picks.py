@@ -31,5 +31,14 @@ class GradeTest(unittest.TestCase):
         self.assertEqual((scores, done), ({"NJ": 4.0, "CBJ": 2.0}, True))
 
 
+class StandingTest(unittest.TestCase):
+    def test_words(self):
+        S = {"MEM": 89.0, "CHA": 81.0}
+        self.assertEqual(G.standing(dict(kind="spread", team="MEM", line=-2.5), S), "89-81, ahead by 5.5")
+        self.assertEqual(G.standing(dict(kind="under", line=222.5), {"MIN": 74.0, "BKN": 61.0}), "135 so far, 87.5 to spare before the line")
+        self.assertEqual(G.standing(dict(kind="over", line=6.5), {"A": 3.0, "B": 2.0}), "5 so far, needs 1.5 more")
+        self.assertEqual(G.standing(dict(kind="ml", team="X"), {}), "not started")
+
+
 if __name__ == "__main__":
     unittest.main()

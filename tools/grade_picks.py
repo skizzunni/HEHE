@@ -23,8 +23,9 @@ SPORT = {"nba": "basketball/nba", "nhl": "hockey/nhl", "nfl": "football/nfl", "n
 SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/{}/summary?event={}"
 
 
-def final(lg, gid, get=None):
-    """{abbr: score} and completed flag for one game, from ESPN."""
+def final(lg, gid, get=None, with_clock=False):
+    """{abbr: score} and completed flag for one game, from ESPN (and the
+    game clock text, e.g. "9:51 - 3rd", when with_clock)."""
     def fetch(u):
         try:
             return json.load(urllib.request.urlopen(u, timeout=30))
@@ -39,7 +40,32 @@ def final(lg, gid, get=None):
             scores[c["team"]["abbreviation"]] = float(c["score"])
         except (KeyError, TypeError, ValueError):
             pass
+    if with_clock:
+        return scores, done, ((comp.get("status") or {}).get("type") or {}).get("shortDetail") or ""
     return scores, done
+
+
+def standing(pick, scores):
+    """How an unfinished pick stands right now, in plain words: the margin
+    against its line so far ('ahead by 4.5', 'behind by 2', 'level')."""
+    if len(scores) != 2:
+        return "not started"
+    total = sum(scores.values())
+    if pick["kind"] == "over":
+        need = pick["line"] - total
+        return f"{total:g} so far, " + (f"needs {need:g} more" if need > 0 else "already over")
+    if pick["kind"] == "under":
+        room = pick["line"] - total
+        return f"{total:g} so far, " + (f"{room:g} to spare before the line" if room > 0 else "already over the line -- lost")
+    else:
+        me = scores.get(pick["team"])
+        if me is None:
+            return "team not found"
+        them = next(v for k, v in scores.items() if k != pick["team"])
+        d = (me - them) + ((pick.get("line") or 0) if pick["kind"] == "spread" else 0)
+        so_far = f"{me:g}-{them:g}"
+    word = f"ahead by {d:g}" if d > 0 else f"behind by {-d:g}" if d < 0 else "level"
+    return f"{so_far}, {word}"
 
 
 def grade(pick, scores, done):
@@ -80,7 +106,21 @@ def main(path, get=None):
     return picks, results, summary(picks, results)
 
 
+def live(path, get=None):
+    """One line per pick: WON/LOST/PUSH when final, else the clock and where it stands."""
+    out = []
+    for p in json.load(open(path)):
+        scores, done, clock = final(p["lg"], p["id"], get, with_clock=True)
+        r = grade(p, scores, done)
+        tail = "" if r != "open" else f" -- {clock}: {standing(p, scores)}" if scores and any(scores.values()) else f" -- {clock or 'not started'}"
+        out.append(f"{r.upper():5} {p.get('label') or p}{tail}")
+    return out
+
+
 if __name__ == "__main__":
+    if "--live" in sys.argv:
+        print("\n".join(live([a for a in sys.argv[1:] if a != "--live"][0])))
+        sys.exit(0)
     picks, results, s = main(sys.argv[1])
     for p, r in zip(picks, results):
         print(f"{r.upper():5} {p.get('label') or p}")
