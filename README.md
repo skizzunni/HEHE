@@ -5187,3 +5187,10 @@ Jazz-Lakers over 214.5 (203). Locks NBA overs: 19/29 then 20/30 (66%, 67% vs 75%
 ahead, then short, so not cut. Terms (locks.PREREG_NBA_OVER): the next 150 NBA over legs from pools saved
 from 2026-11-24; 5+ points short of stated -> propose excluding NBA overs from the Locks and ladder to the
 user; otherwise the concern is dropped. The review prints its count (prereg_more_line).
+
+**Checked: the 10-leg's very safe lines (2026-11-24).** Every saved 8 AM pool line stated 90-97%
+(738 graded, 13 days), one per game and bet type (317), by date half: 148/158 (93.7% vs 91.6% stated, z
++0.94) then 145/159 (91.2% vs 91.8%, z -0.30) -- calibrated, so the 10-leg's stated all-win chance is
+honest. Game-total unders ran a little short both times, 55/62 then 56/63 (88.7%, 88.9% vs 91.7%,
+92.1%; z -0.85 / -0.94): far from the bar, on watch since the 10-leg leans on them. Overs, spreads, team
+totals and NBA / NHL lines on par.
