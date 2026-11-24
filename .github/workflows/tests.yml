@@ -18,6 +18,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      # numpy: tools/blind_model.py's ridge fit (its tests failed to import without it, 2026-11-23)
+      - run: python3 -m pip install --quiet numpy
       - run: python3 -W ignore -m unittest discover -s tests -v
       # the page itself, in a real browser: stale banner, Safe Locks, Winners parlay
       - run: CHROME=$(which google-chrome) python3 tests/ui_check.py

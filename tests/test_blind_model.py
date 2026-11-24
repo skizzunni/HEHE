@@ -5,6 +5,9 @@ import unittest
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'tools'))
 import blind_model as bm  # noqa: E402
 
+if bm.np is None:          # the ridge fit needs numpy
+    raise unittest.SkipTest("numpy not installed")
+
 
 def g(date, home, away, hs, as_, gid=None):
     return dict(id=gid or f'{date}{home}{away}', date=date, home=home, away=away,

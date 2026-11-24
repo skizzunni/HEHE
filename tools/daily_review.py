@@ -935,7 +935,8 @@ def pool_overall_line(rows_fn=None, leagues=("nba", "ncaaf", "nhl", "nfl", "ncaa
         w = sum(r["status"] == "won" for r in S)
         p = sum(r["p"] for r in S)
         v = sum(r["p"] * (1 - r["p"]) for r in S) or 1
-        return f"{100 * w / len(S):.1f}% vs {100 * p / len(S):.1f}% (z {(w - p) / math.sqrt(v):+.1f})"
+        z = round((w - p) / math.sqrt(v), 1) + 0.0          # no "-0.0" (CI's float rounding differs)
+        return f"{100 * w / len(S):.1f}% vs {100 * p / len(S):.1f}% (z {z:+.1f})"
     return (f"Pool game lines (one per game and bet type), every league, by half: {rec(R[:h])} to {R[h - 1]['date']}, "
             f"then {rec(R[h:])} on {len(R)} game lines.")
 

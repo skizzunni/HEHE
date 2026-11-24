@@ -23,7 +23,10 @@ import os
 import sys
 import urllib.request
 
-import numpy as np
+try:                       # numpy only for the fit; the board's CI did not have it (2026-11-24)
+    import numpy as np
+except ImportError:        # pragma: no cover
+    np = None
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SPORT = {'nba': 'basketball/nba', 'nhl': 'hockey/nhl', 'nfl': 'football/nfl'}

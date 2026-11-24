@@ -6,6 +6,9 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 import blind_model as bm  # noqa: E402
 import slate_sheet as S  # noqa: E402
 
+if bm.np is None:          # the ridge fit needs numpy
+    raise unittest.SkipTest("numpy not installed")
+
 
 def ev(home, away):
     return {"id": "1", "date": "2026-11-24T00:00Z", "competitions": [{"neutralSite": False, "competitors": [
