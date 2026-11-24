@@ -221,6 +221,22 @@ def resolve_day(arg, now=None):
     return dt.date.fromisoformat(arg).isoformat()
 
 
+def two_x_text(legs):
+    """'Most likely 2x from these legs: ...' -- the subset of the ticket's legs
+    paying 2x+ with the highest all-win chance (recheck_ticket.best_2x; legs
+    from one game may go together). '' when nothing reaches 2x."""
+    import recheck_ticket as R
+    try:
+        odds = [(L, _dec(L["price"]), L["chance"]) for L in legs]
+    except (KeyError, TypeError, ValueError):
+        return ""
+    b = R.best_2x(odds)
+    if not b or len(b["legs"]) == len(legs):
+        return ""
+    return (f"Most likely 2x from these legs: {len(b['legs'])} legs, about {100 * b['chance']:.0f}% all win, "
+            f"pays {b['pays']:.2f}x -- " + "; ".join(L["label"].split(" (")[0] for L in b["legs"]) + ".")
+
+
 def ticket_legs(t):
     """The ticket's legs in tools/grade_picks.py's file format (what --save writes)."""
     return [{k: v for k, v in L.items() if k not in ("chance", "gid")} for g in t["games"].values() for L in g]
@@ -242,6 +258,9 @@ def text(t):
             out.append(f"All {len(legs)} win: about {100 * allwin:.0f}%.")
     if t.get("ladder"):
         out.append(t["ladder"])
+    two = two_x_text(legs)
+    if two:
+        out.append(two)
     if t["left_off"]:
         out.append("Left off, and why:")
         out += [f"  {lab} -- {why}" for lab, why in t["left_off"]]

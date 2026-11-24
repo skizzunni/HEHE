@@ -291,6 +291,16 @@ class NhlBackToBackTest(unittest.TestCase):
         self.assertIn("back-to-back (often the backup goalie", t["games"]["VGK @ EDM"][0]["label"])
 
 
+class TwoXTest(unittest.TestCase):
+    def test_two_x_line(self):
+        legs = [dict(label=f"L{i} -1000 (87%)", price="-1000", chance=0.86) for i in range(9)]
+        out = B.two_x_text(legs)
+        self.assertTrue(out.startswith("Most likely 2x from these legs: 8 legs"))     # 1.1^8 = 2.14x
+        self.assertEqual(B.two_x_text(legs[:3]), "")                                 # cannot reach 2x
+        t = {"games": {"G": legs}, "left_off": []}
+        self.assertIn("Most likely 2x", B.text(t))
+
+
 class LadderFallbackTest(unittest.TestCase):
     def test_one_leg_per_game_in_band(self):
         t = {"games": {f"G{i}": [dict(label=f"leg{i}", price="-400", chance=0.80, lg="nba", id=str(i), gid=f"nba:{i}"),
