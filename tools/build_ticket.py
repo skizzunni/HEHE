@@ -214,7 +214,19 @@ def text(t):
     return "\n".join(out)
 
 
-def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None, minutes_fn=None):
+def _goalie_fn(day):
+    """team full name -> the NHL goalie note (tools/nhl_goalies.leg_note); a
+    function giving "" when DailyFaceoff or the NHL cannot be reached."""
+    try:
+        import nhl_goalies as NG
+        rows = NG.parse(NG.fetch(day))
+        rosters = NG.team_goalies()
+    except Exception:
+        return lambda team: ""
+    return lambda team: NG.leg_note(team, rows, rosters)
+
+
+def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None, minutes_fn=None, goalie_fn=None):
     """Winners only, from DraftKings prices on ESPN (no-vig), when the board has
     not rebuilt for `day` (2026-11-24: every GitHub workflow switched off). Same
     winner checks: 75%+, our price-blind number not on the other side. Props
@@ -243,6 +255,10 @@ def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None, minutes
         label = f"{team} moneyline {price_s} ({chance}%, DraftKings no-vig)"
         if ok and r.get("lg") == "nba" and b2b_fn and b2b_fn(team, day):
             label += " -- caution: second night of a back-to-back (priced in on the record)"
+        if ok and r.get("lg") == "nhl":
+            if goalie_fn is None:
+                goalie_fn = _goalie_fn(day)
+            label += goalie_fn(r.get("home_name") if home else r.get("away_name"))
         if ok:
             games.setdefault(r["game"], []).append(dict(label=label, id=str(r.get("id")), lg=r["lg"], kind="ml", team=team,
                                                         price=price_s, chance=chance / 100))

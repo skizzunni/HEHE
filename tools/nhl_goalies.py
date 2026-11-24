@@ -134,6 +134,26 @@ def flag(goalie, roster, career_fn=None):
     return ""
 
 
+def leg_note(team, rows, rosters=None, career_fn=None):
+    """The ticket's note for an NHL leg on `team` (full name): its listed
+    starter, DailyFaceoff's status, and flag()'s warning; "" when the team is
+    not listed. Information only -- no record yet says how much an
+    unconfirmed or backup goalie moves a 75%+ favourite."""
+    for r in rows or []:
+        for side in ("away", "home"):
+            if (r.get(side) or "").lower() == (team or "").lower() and r.get(side + "_goalie"):
+                st = r.get(side + "_status") or "Unconfirmed"
+                note = f" -- goalie: {r[side + '_goalie']} ({st})"
+                try:
+                    note += flag(r[side + "_goalie"], (rosters or {}).get(r[side]), career_fn)
+                except Exception:
+                    pass
+                if st != "Confirmed":
+                    note += "; check the confirmed starter before using it"
+                return note
+    return ""
+
+
 def fetch(day):
     req = urllib.request.Request(URL.format(day), headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=30) as r:
