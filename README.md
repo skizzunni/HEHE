@@ -5233,6 +5233,12 @@ expected if independent (z -0.38), 143 of 220 had all three (vs 144.0, z -0.14);
 +0.07) and 104/158 (106.0, -0.35); NFL 26/31 and 13/17 (on par). No sign of linked losses, so the
 product stays the honest all-win figure.
 
+**Checked, no change: NHL shots props by line (2026-11-24).** Graded NHL Shots on Goal props priced -500
+or shorter, split at Nov 3. 1+ shots: 397/460 (86.3%) then 511/590 (86.6%) vs 85% stated (z +0.67 /
++0.77) -- but FanDuel's price implies ~92%, so a 1+ shots leg near -1100 is about 5 points short of
+its price and on par with the board's capped chance. 2+ shots at those prices: 54/58 (93.1%) then 62/69
+(89.9%) vs 85% (z +1.78 / +1.13) -- ahead, but too few to act on. The ticket's NHL legs stay as they are.
+
 **Checked: the ticket's 75%+ winners (2026-11-24).** Graded board NBA / NHL / NFL / college basketball
 winners stated 75%+ (180, split Nov 8): 77/90 (86% vs 87% stated, z -0.30) then 80/90 (89% vs 88%, z
 +0.37). NBA 80% vs 82% then 82% vs 83%; college basketball 94% vs 96% then 93% vs 93%; NFL 75% vs 79% then
