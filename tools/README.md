@@ -12,6 +12,7 @@ Every script here, with the first paragraph of its own description.
 | `slate_sheet.py` | A day's NBA/NHL/NFL games with our price-blind number printed first, then the DraftKings line, no-vig chance and the gap (research first, lines second). Information only. |
 | `nba_minutes.py` | Each NBA player's minutes over his last 5 games (ESPN rosters + game logs), for the daily card's low-minutes prop caution. Information only. |
 | `nba_injury_report.py` | The newest official NBA injury report PDF (walks back in 15-minute steps), parsed into team / player / status rows plus teams NOT YET SUBMITTED. `python3 tools/nba_injury_report.py OKC IND`. |
+| `key_absences.py` | For each NBA game, players among a team's top 6 by minutes over its last 10 games who are Out / Doubtful / Questionable on the official report -- the ticket's "no favourite missing key players" check. |
 | `nhl_goalies.py` | The day's NHL starting goalies from DailyFaceoff with each one's status (Confirmed / Likely / Unconfirmed) and when it was posted, ET. |
 | `pregame_brief.py` | One pre-game brief for a day: slate_sheet (our number first, then the line), the official NBA injury report, NHL goalies; each section fails on its own. |
 | `grade_picks.py` | Grades a saved JSON list of researched picks (spread / ml / over / under) from ESPN final scores: each pick won / lost / push / open, the record and flat $1 return. |
