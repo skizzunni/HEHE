@@ -66,6 +66,15 @@ class PropTest(unittest.TestCase):
         self.assertEqual(G.player_stat(BOX, "Bench Guy", "PTS"), 0.0)
         self.assertIsNone(G.player_stat(BOX, "Nobody", "PTS"))
 
+    def test_dressed_but_did_not_play_is_a_push(self):
+        box = {"boxscore": {"players": [{"team": {"abbreviation": "GS"}, "statistics": [
+            {"name": "", "keys": ["points"], "labels": ["PTS"], "athletes": [
+                {"athlete": {"id": "7", "displayName": "Kevon Looney"}, "didNotPlay": True, "reason": "COACH'S DECISION", "stats": []}]}]}]}}
+        pk = dict(kind="prop", lg="nba", market="Points", player="Kevon Looney", line=5.0, line_text="5+", stat="PTS")
+        self.assertEqual(G.grade(pk, {"A": 1.0, "B": 2.0}, True, box), "push")
+        self.assertEqual(G.grade(pk, {}, False, box), "open")
+        self.assertEqual(G.grade(dict(kind="prop", player="Kevon Looney", stat="PTS", line=5), {}, True, box), "push")
+
     def test_prop_settles_when_reached(self):
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="PTS", line=5), {}, False, BOX), "won")
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, False, BOX), "open")

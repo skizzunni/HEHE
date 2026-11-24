@@ -57,6 +57,16 @@ def player_stat(summary, player, stat):
     return None
 
 
+def _dnp(summary, player):
+    """True when the player is in the box score with no stats (did not play)."""
+    for t in ((summary or {}).get("boxscore") or {}).get("players") or []:
+        for cat in t.get("statistics") or []:
+            for a in cat.get("athletes") or []:
+                if (a.get("athlete") or {}).get("displayName") == player:
+                    return bool(a.get("didNotPlay")) or not a.get("stats")
+    return False
+
+
 def final(lg, gid, get=None, with_clock=False, raw=False):
     """{abbr: score} and completed flag for one game, from ESPN (and the
     game clock text, e.g. "9:51 - 3rd", when with_clock)."""
@@ -125,6 +135,10 @@ def board_value(pick, summary):
     st, how = props_ledger.resolve(props_ledger.box_stats(summary), {"name": pick["player"]})
     if how == "absent" or st is None:
         return None, how
+    if not st:
+        # listed but no stats: dressed, did not play (ESPN didNotPlay, e.g. a
+        # coach's decision). FanDuel voids such props; 2026-11-24 this graded LOST
+        return None, "absent"
     try:
         return fn(st), how
     except Exception:
@@ -159,6 +173,8 @@ def grade(pick, scores, done, summary=None):
         if r == "void":
             return "push" if done else "open"
     if pick["kind"] == "prop":
+        if _dnp(summary, pick["player"]):
+            return "push" if done else "open"
         v = player_stat(summary, pick["player"], pick["stat"])
         if v is not None and v >= pick["line"]:
             return "won"
