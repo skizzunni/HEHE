@@ -16,16 +16,15 @@ class JudgeWinnerTest(unittest.TestCase):
     def test_nov23_mistakes_are_left_off(self):
         # Thunder: 63%
         self.assertFalse(B.judge_winner(row("Thunder", 63), [], 0.6)[0])
-        # Raptors: key players out
+        # Raptors: key players out -- a caution, not a cut (priced in on the record)
         ok, why = B.judge_winner(row("Raptors", 79), [("Kawhi Leonard", 33.0, "Out")], 0.75)
-        self.assertFalse(ok)
-        self.assertIn("Kawhi Leonard (Out)", why)
+        self.assertTrue(ok)
+        self.assertIn("caution: Kawhi Leonard (Out)", why)
         # Cavaliers-like: our number on the other side
         ok, why = B.judge_winner(row("Cavaliers", 76), [], 0.38)
         self.assertFalse(ok)
         self.assertIn("other side", why)
-        # questionable key player: held
-        self.assertIn("held", B.judge_winner(row("X", 80), [("Star", 34.0, "Questionable")], 0.7)[1])
+        self.assertIn("Star (Questionable)", B.judge_winner(row("X", 80), [("Star", 34.0, "Questionable")], 0.7)[1])
         # clean favourite passes
         self.assertEqual(B.judge_winner(row("Lakers", 85), [], 0.72), (True, ""))
         self.assertTrue(B.judge_winner(row("Lakers", 85), [], None)[0])
@@ -43,15 +42,15 @@ class BuildTest(unittest.TestCase):
                     status_fn=lambda n: "Questionable" if n == "Hurt Player" else None,
                     fav_fn=lambda gid: 85)
         legs = [L for g in t["games"].values() for L in g]
-        self.assertEqual([L["kind"] for L in legs], ["ml", "prop"])
-        self.assertEqual(legs[1]["stat"], "PTS")
-        self.assertEqual(legs[1]["line"], 10.0)
-        self.assertIn("blowout", legs[1]["label"])
+        self.assertEqual([L["kind"] for L in legs], ["ml", "ml", "prop"])
+        self.assertIn("caution: Kawhi Leonard (Out)", legs[1]["label"])
+        self.assertEqual(legs[2]["stat"], "PTS")
+        self.assertEqual(legs[2]["line"], 10.0)
+        self.assertIn("blowout", legs[2]["label"])
         reasons = dict(t["left_off"])
-        self.assertTrue(any("Kawhi" in v for v in reasons.values()))
         self.assertTrue(any("Questionable" in v for v in reasons.values()))
         out = B.text(t)
-        self.assertIn("2 legs", out)
+        self.assertIn("3 legs", out)
         self.assertIn("Left off, and why:", out)
 
 

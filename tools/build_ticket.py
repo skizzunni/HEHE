@@ -9,8 +9,9 @@ off is listed with the reason.
 
 Winners (NBA, NFL, NHL moneylines from the board):
   * the board's chance is MIN_WIN (75%) or more          -- Thunder were 63%
-  * none of the team's key players is Out or Doubtful    -- Raptors without Leonard / Barrett
-    (tools/key_absences.py: top 6 by minutes, last 10 games); Questionable = held
+  * key players Out / Doubtful / Questionable (tools/key_absences.py) are SHOWN as a
+    caution, not cut: tested 2026-11-24 on 174 board NBA picks, the side missing
+    a key player won 76% then 73% vs 66%, 69% stated -- the price counts it
   * our price-blind number does not favour the other side -- Cavaliers: blind had them by 4 vs -8.5
 Props (the card's ~87% lines, one per player, at most PER_GAME per game):
   * the player is not Out / Doubtful / Questionable on the official report
@@ -50,15 +51,13 @@ def judge_winner(row, key_out, blind_pick_p):
     c = row.get("mc") or 0
     if c < MIN_WIN:
         return False, f"board chance {c}% is under {MIN_WIN}%"
-    out = [f"{n} ({s})" for n, m, s in key_out if s in ("Out", "Doubtful")]
-    if out:
-        return False, "key player(s) missing: " + ", ".join(out)
-    q = [f"{n} (Questionable)" for n, m, s in key_out if s == "Questionable"]
-    if q:
-        return False, "held until decided: " + ", ".join(q)
     if blind_pick_p is not None and blind_pick_p < 0.5:
         return False, f"our own number favours the other side ({round(100 * blind_pick_p)}% for this pick)"
-    return True, ""
+    # Key players out is a caution, not a cut: on 174 graded board NBA picks the
+    # side missing a top-6 player won 76% then 73% vs 66%, 69% stated (README
+    # 2026-11-24) -- the price already counts the absence.
+    miss = [f"{n} ({s})" for n, m, s in key_out if s in ("Out", "Doubtful", "Questionable")]
+    return True, ("caution: " + ", ".join(miss) + " -- priced in on the record so far") if miss else ""
 
 
 def judge_prop(p, status):
@@ -79,7 +78,7 @@ def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn):
             if not r.get("mp") or not r.get("p"):
                 continue
             ok, why = judge_winner(r, key_out_fn(r), blind_fn(r))
-            label = f"{r['mp']} moneyline {r['p']} ({r.get('mc')}%)"
+            label = f"{r['mp']} moneyline {r['p']} ({r.get('mc')}%)" + (f" -- {why}" if ok and why else "")
             if ok:
                 games.setdefault(r.get("match") or r["id"], []).append(dict(
                     label=label, id=str(r["id"]).split(":")[-1], lg=lg, kind="ml", team=r.get("abbr") or r["mp"],

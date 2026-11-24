@@ -5147,3 +5147,13 @@ both sides of the full board captured over time. Scripts: research/strategy_lab_
 big the game's favourite was (no-vig moneyline) and by date half. Favourite 80%+: 179/208 (86.1% vs
 83.9%, z +0.85) then 237/302 (78.5% vs 83.7%, z -2.48); 70-80% and closer games on par in both
 halves. Short only in the later half, so nothing is cut; it is re-run as props accumulate.
+
+**Checked, no cut: favourites missing a key player (2026-11-24).** After the user's Nov 23 ticket lost
+on the Raptors (-450, no Leonard / Barrett), Thunder (-190, eight out) and Cavaliers (-350, no Mobley):
+graded board NBA picks (174 matched to box scores), "key" = top 6 by minutes per game played over the
+team's last 10 (3+ games played), missing = did not play. Picked side missing 1+ key player: 29/38 (76%
+vs 66% stated, z +1.39) then 35/48 (73% vs 69%, z +0.62); none missing: 73% vs 69% then 62% vs 69%;
+missing 2+: 70% vs 60% then 67% vs 66%. No shortfall -- the price counts the absence -- so the ticket
+shows key absences as a caution and does not cut them. (tools/key_absences.py now ranks by minutes per
+game played; per team game it had missed Mobley, who had played 3 of 8.) Box-score absence is a slight
+look-ahead proxy for the injury report.

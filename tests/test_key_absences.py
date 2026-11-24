@@ -27,11 +27,16 @@ class RecentMinutesTest(unittest.TestCase):
     def test_average_over_completed_games(self):
         def ev(i, done=True, date="2026-11-2%d"):
             return {"id": str(i), "date": (date % i), "competitions": [{"status": {"type": {"completed": done}}}]}
-        pages = {K.SCHED.format("tor"): {"events": [ev(1), ev(2), ev(3, done=False)]}}
-        for i, m in ((1, "30"), (2, "20")):
+        pages = {K.SCHED.format("tor"): {"events": [ev(i) for i in range(1, 6)] + [ev(6, done=False)]}}
+        # A B plays every game at 30; Hurt Guy plays 3 of 5 at 34 then sits (0) -- per game played he is 34, key
+        for i in range(1, 6):
+            hurt = "34" if i <= 3 else "0"
             pages[K.SUMMARY.format(str(i))] = {"boxscore": {"players": [{"team": {"abbreviation": "TOR"}, "statistics": [
-                {"labels": ["MIN"], "athletes": [{"athlete": {"displayName": "A B"}, "stats": [m]}]}]}]}}
-        self.assertEqual(K.recent_minutes("TOR", "2026-11-24", get=pages.get), {"A B": 25.0})
+                {"labels": ["MIN"], "athletes": [{"athlete": {"displayName": "A B"}, "stats": ["30"]},
+                                                  {"athlete": {"displayName": "Hurt Guy"}, "stats": [hurt]},
+                                                  {"athlete": {"displayName": "Cameo"}, "stats": ["40" if i == 1 else "0"]}]}]}]}}
+        got = K.recent_minutes("TOR", "2026-11-24", get=pages.get)
+        self.assertEqual(got, {"A B": 30.0, "Hurt Guy": 34.0})        # Cameo played 1 game: not counted
 
 
 if __name__ == "__main__":

@@ -23,6 +23,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 ET = ZoneInfo("America/New_York")
 KEY_N = 6
 LAST_GAMES = 10
+MIN_PLAYED = 3        # games played (of the last LAST_GAMES) to count a player's minutes
 SCHED = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/teams/{}/schedule"
 SUMMARY = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/summary?event={}"
 SCORE = "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={}"
@@ -38,13 +39,17 @@ def _get(url):
 
 
 def recent_minutes(abbr, before, get=_get):
-    """{player display name: average minutes} over the team's last
-    LAST_GAMES completed games before `before` (an ISO date)."""
+    """{player display name: minutes per game PLAYED} over the team's last
+    LAST_GAMES completed games before `before` (an ISO date), for players who
+    played at least MIN_PLAYED of them. Per game played, not per team game:
+    2026-11-23 audit -- Evan Mobley (Out, toe) had played 3 of Cleveland's last
+    8, so his per-team-game average left him off the key list and the
+    Cavaliers (-350) were not flagged; they lost by 14."""
     ev = [e for e in ((get(SCHED.format(abbr.lower())) or {}).get("events") or [])
           if ((e.get("competitions") or [{}])[0].get("status") or {}).get("type", {}).get("completed")
           and str(e.get("date", ""))[:10] < before]
     ev = ev[-LAST_GAMES:]
-    tot, n = {}, 0
+    tot, played, n = {}, {}, 0
     for e in ev:
         box = (get(SUMMARY.format(e["id"])) or {}).get("boxscore") or {}
         for t in box.get("players") or []:
@@ -58,8 +63,10 @@ def recent_minutes(abbr, before, get=_get):
                     m = float(st.get("MIN") or 0)
                 except ValueError:
                     m = 0.0
-                tot[a["athlete"]["displayName"]] = tot.get(a["athlete"]["displayName"], 0.0) + m
-    return {k: v / n for k, v in tot.items()} if n else {}
+                nm = a["athlete"]["displayName"]
+                tot[nm] = tot.get(nm, 0.0) + m
+                played[nm] = played.get(nm, 0) + (1 if m > 0 else 0)
+    return {k: v / played[k] for k, v in tot.items() if played.get(k, 0) >= MIN_PLAYED} if n else {}
 
 
 def report_name(display):
