@@ -2142,8 +2142,11 @@ def runs_line(book=None):
         for i, h in enumerate(H)) + "." + skip
 
 
-def ladder_line(book=None):
-    """One line on the $1 -> $10k ladder (ladder.py), or None before it starts."""
+def ladder_line(book=None, today=None):
+    """One line on the $1 -> $10k ladder (ladder.py), or None before it starts.
+    An open ticket from an earlier day is marked STALE (2026-11-24: with the
+    board workflow off, Nov 23's ticket read as "today stakes" with its legs
+    "live 3:49 - 1st" from the night before)."""
     try:
         import ladder
         r = _report(book)
@@ -2166,7 +2169,17 @@ def ladder_line(book=None):
             + (f"; without props it would be {t['no_props']['n']} legs at {t['no_props']['pays']:.2f}x"
                f" ({100 * t['no_props']['prob']:.0f}%)" if t and t.get("no_props")
                and any(L.get("kind") == "prop" for L in t.get("legs") or []) else "")
-            + f"; {r['wins_needed']} wins to ${r['target']:,.0f}" + legs + ".")
+            + f"; {r['wins_needed']} wins to ${r['target']:,.0f}" + legs + "."
+            + _ladder_stale(t, today))
+
+
+def _ladder_stale(t, today=None):
+    day = (t or {}).get("day")
+    today = today or dt.datetime.now(ET).date().isoformat()
+    if not day or day >= today:
+        return ""
+    return (f" STALE: that open ticket is from {day}, not {today} -- the board has not graded it or built"
+            " today's (is the board workflow running?); its leg states above are from the last build.")
 
 
 BIG_MB = 60     # GitHub refuses any file over 100 MB, and every build then fails

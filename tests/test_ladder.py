@@ -533,6 +533,19 @@ class ReviewVsTop4(unittest.TestCase):
                       " for the plain top 4", line)
 
 
+class StaleLadderLine(unittest.TestCase):
+    def test_old_open_ticket_is_marked(self):
+        sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
+        import daily_review
+        rep = dict(runs=15, bank=1.0, streak=0, best=9.57, wins_needed=14, target=10000.0,
+                   today=dict(day="2026-11-23", stake=1.0, pays=2.0, prob=0.44, legs=[dict(label="A", status="open")]))
+        with mock.patch.object(ladder, "report", lambda bk=None: rep):
+            old = daily_review.ladder_line(today="2026-11-24")
+            cur = daily_review.ladder_line(today="2026-11-23")
+        self.assertIn("STALE: that open ticket is from 2026-11-23, not 2026-11-24", old)
+        self.assertNotIn("STALE", cur)
+
+
 class RunsLine(unittest.TestCase):
     def test_runs_line(self):
         sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
