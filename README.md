@@ -5192,6 +5192,13 @@ shorter 88.7% then 87.2%; -999 to -500 84.1% then 83.8% (difference z about 2.1 
 The card picks each player's longest-priced line at the floor, which lands in the weaker price group --
 on watch as props accumulate.
 
+**Caution, not a cut: props on players who rarely reach the line (2026-11-24).** 2,748 graded NBA
+props priced -500 or shorter, each player's last 10 games before the prop (ESPN game logs), split at
+Nov 6. Reached the line in under 70% of them: 97/118 (82.2% vs 85.1% stated, z -0.90) then 108/135
+(80.0% vs 85.0%, z -1.64). 70-84%: 84.2% then 86.4%; 85-94%: 86.8% then 84.5%; all 10: 87.5% then
+85.7% -- all on par. Short in both halves but under the 2.8 bar, so the ticket shows it beside the
+leg (tools/nba_minutes.last10_hits) and never drops one. Today: Daniel Gafford 4+ rebounds, 6 of 10.
+
 **Checked: the ticket's 75%+ winners (2026-11-24).** Graded board NBA / NHL / NFL / college basketball
 winners stated 75%+ (180, split Nov 8): 77/90 (86% vs 87% stated, z -0.30) then 80/90 (89% vs 88%, z
 +0.37). NBA 80% vs 82% then 82% vs 83%; college basketball 94% vs 96% then 93% vs 93%; NFL 75% vs 79% then

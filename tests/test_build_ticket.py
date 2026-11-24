@@ -126,7 +126,8 @@ class FallbackPropsTest(unittest.TestCase):
             dict(name="Jaylen Brown", label="Jaylen Brown: 15+ Points", p=0.87, imp=0.9, price="-900", market="Points", line="15+"),
             dict(name="Hurt Guy", label="Hurt Guy: 5+ Points", p=0.87, imp=0.95, price="-2000", market="Points", line="5+")]}]
         t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=lambda r: pg,
-                       status_fn=lambda n: "Out" if n == "Hurt Guy" else None, minutes_fn=lambda g, n: {})
+                       status_fn=lambda n: "Out" if n == "Hurt Guy" else None, minutes_fn=lambda g, n: {},
+                       logs_fn=lambda g, n: {})
         legs = t["games"]["BOS @ WSH"]
         self.assertEqual([L["kind"] for L in legs], ["ml", "prop"])
         self.assertEqual(legs[1]["player"], "Jaylen Brown")
@@ -248,6 +249,32 @@ class ResolveDayTest(unittest.TestCase):
         self.assertEqual(B.resolve_day("2026-11-25", now), "2026-11-25")
         with self.assertRaises(ValueError):
             B.resolve_day("tday", now)
+
+
+class Last10CautionTest(unittest.TestCase):
+    def test_under_70_percent_flagged(self):
+        import nba_minutes as M
+        reb = [4, 10, 6, 4, 3, 3, 2, 5, 1, 4]            # Gafford's last 10: 4+ in 6
+        rows = [dict(d=f"2026-11-{20 - i:02d}", MIN=20.0, PTS=8.0, REB=float(r), AST=1.0) for i, r in enumerate(reb)]
+        self.assertEqual(M.last10_hits(rows, "Rebounds", 4.0), (6, 10))
+        self.assertIsNone(M.last10_hits(rows[:4], "Rebounds", 4.0))
+        self.assertIsNone(M.last10_hits(rows, "Blocks", 1.0))
+        props = [{"id": "nba:1", "match": "A @ B", "props": [
+            dict(name="Daniel Gafford", label="Daniel Gafford: 4+ Rebounds", p=0.87, imp=0.9, price="-1600", market="Rebounds", line="4+"),
+            dict(name="Steady", label="Steady: 4+ Rebounds", p=0.87, imp=0.9, price="-1600", market="Rebounds", line="4+")]}]
+        t = B.build({}, props, key_out_fn=lambda r: [], blind_fn=lambda r: None, status_fn=lambda n: None,
+                    fav_fn=lambda g: 0, logs_fn=lambda g, n: {"Daniel Gafford": rows,
+                                                             "Steady": [dict(r, REB=8.0) for r in rows]})
+        lab = {L["player"]: L["label"] for L in t["games"]["A @ B"]}
+        self.assertIn("caution: reached it in 6 of his last 10", lab["Daniel Gafford"])
+        self.assertNotIn("caution", lab["Steady"])
+
+    def test_games_sorted_newest_first(self):
+        import nba_minutes as M
+        log = {"labels": ["MIN", "PTS", "REB", "AST"], "events": {"1": {"gameDate": "2026-11-01"}, "2": {"gameDate": "2026-11-20"}},
+               "seasonTypes": [{"displayName": "2026-27 Regular Season", "categories": [{"events": [
+                   {"eventId": "1", "stats": ["30", "10", "5", "2"]}, {"eventId": "2", "stats": ["31", "20", "6", "3"]}]}]}]}
+        self.assertEqual([r["PTS"] for r in M.games(log)], [20.0, 10.0])
 
 
 class LadderFallbackTest(unittest.TestCase):

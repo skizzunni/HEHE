@@ -71,3 +71,60 @@ def mpg_last5(gid, names, get=_get):
         if v is not None:
             out[name] = v
     return out
+
+
+PARTS = {"Points": ["PTS"], "Rebounds": ["REB"], "Assists": ["AST"], "Pts + Ast": ["PTS", "AST"],
+         "Pts + Reb + Ast": ["PTS", "REB", "AST"], "Reb + Ast": ["REB", "AST"], "Pts + Reb": ["PTS", "REB"],
+         "Threes Made": ["3PT"]}
+L10_LOW = 0.7
+L10_NOTE = "props like it hit 82% then 80% vs 85% stated (short in both date halves, under the bar)"
+
+
+def games(gamelog):
+    """[{"d": date, "MIN": .., "PTS": ..}] regular-season games played, newest first."""
+    if not gamelog:
+        return []
+    labels = gamelog.get("labels") or []
+    ix = {k: labels.index(k) for k in ("MIN", "PTS", "REB", "AST", "3PT") if k in labels}
+    if "MIN" not in ix:
+        return []
+    dates = {k: (v or {}).get("gameDate") or "" for k, v in (gamelog.get("events") or {}).items()}
+    out = []
+    for st in gamelog.get("seasonTypes") or []:
+        if "Regular" not in (st.get("displayName") or ""):
+            continue
+        for cat in st.get("categories") or []:
+            for ev in cat.get("events") or []:
+                try:
+                    r = {k: float(str(ev["stats"][i]).split("-")[0]) for k, i in ix.items()}
+                except (KeyError, IndexError, TypeError, ValueError):
+                    continue
+                if r["MIN"] > 0:
+                    r["d"] = dates.get(ev.get("eventId"), "")
+                    out.append(r)
+    return sorted(out, key=lambda r: r["d"], reverse=True)
+
+
+def last10_hits(rows, market, line):
+    """(hits, n) of his last 10 games reaching `line` in `market`; None when unknown."""
+    parts = PARTS.get(market)
+    g = rows[:10]
+    if not parts or len(g) < 5 or not all(all(p in r for p in parts) for r in g):
+        return None
+    return sum(sum(r[p] for p in parts) >= line for r in g), len(g)
+
+
+def gamelogs(gid, names, get=_get):
+    """{name: games(...)} for the named players in this NBA game."""
+    eid = str(gid).split(":")[-1]
+    s = get(SUMMARY.format(eid)) or {}
+    comps = (((s.get("header") or {}).get("competitions") or [{}])[0]).get("competitors") or []
+    want = {n.lower(): n for n in names}
+    ids = {}
+    for c in comps:
+        r = get(ROSTER.format((c.get("team") or {}).get("id"))) or {}
+        for a in r.get("athletes") or []:
+            n = (a.get("displayName") or "").lower()
+            if n in want:
+                ids[want[n]] = a.get("id")
+    return {name: games(get(GAMELOG.format(aid))) for name, aid in ids.items()}
