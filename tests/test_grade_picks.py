@@ -80,6 +80,16 @@ class PropTest(unittest.TestCase):
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, False, BOX), "open")
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, True, BOX), "lost")
 
+    def test_watch_fetches_each_game_once_per_round(self):
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        json.dump([dict(label=f"leg{i}", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)
+                   for i in range(3)], open(path, "w"))
+        calls = []
+        G.watch(path, get=lambda u: calls.append(u) or BOX, sleep=lambda s: None, emit=lambda m: None)
+        self.assertEqual(len(calls), 1)
+
     def test_watch_emits_each_settle_once(self):
         import json
         import tempfile

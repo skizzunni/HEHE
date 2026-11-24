@@ -216,9 +216,29 @@ def main(path, get=None):
     return picks, results, summary(picks, results)
 
 
+def _once(get):
+    """A fetch that reads each URL once per round: legs on the same game share
+    one ESPN call (13 legs on 4 games were 13 calls every 2 minutes)."""
+    seen = {}
+
+    def fetch(u):
+        if u not in seen:
+            seen[u] = (get or _fetch)(u)
+        return seen[u]
+    return fetch
+
+
+def _fetch(u):
+    try:
+        return json.load(urllib.request.urlopen(u, timeout=30))
+    except Exception:
+        return None
+
+
 def live(path, get=None):
     """One line per pick: WON/LOST/PUSH when final, else the clock and where it stands."""
     out = []
+    get = _once(get)
     for p in json.load(open(path)):
         scores, done, clock, d = final(p["lg"], p["id"], get, with_clock=True, raw=True)
         r = grade(p, scores, done, d)
@@ -242,8 +262,9 @@ def watch(path, every=120, get=None, sleep=None, emit=print):
     while True:
         picks = json.load(open(path))
         open_n = 0
+        fetch = _once(get)                      # fresh each round, shared within it
         for p in picks:
-            scores, done, d = final(p["lg"], p["id"], get, raw=True)
+            scores, done, d = final(p["lg"], p["id"], fetch, raw=True)
             r = grade(p, scores, done, d)
             key = p.get("label") or json.dumps(p, sort_keys=True)
             if r == "open":
