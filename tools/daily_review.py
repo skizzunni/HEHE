@@ -501,7 +501,7 @@ def value_prereg_line(status_fn=None, finds=None):
             f"{s['won']}/{s['n']} ({round(100 * s['won'] / s['n'])}% vs {s['fair']}% fair){away}; {what}.")
 
 
-def nhl_dog_prereg_line(update_fn=None):
+def nhl_dog_prereg_line(update_fn=None, today=None):
     """The pre-registered NHL dog +1.5 vs -200 favourite test (2026-11-23):
     grades the new days since the last run, then its record and verdict."""
     try:
@@ -510,9 +510,13 @@ def nhl_dog_prereg_line(update_fn=None):
         s = P.status(c["bets"])
     except Exception:
         return None
+    today = today or dt.datetime.now(ET).date()
+    when = P.eta(c["bets"], today)
+    pace = f" (about {when:%b %-d, %Y} at the current pace)" if when else ""
     if not s["n"]:
-        return f"Pre-registered test, NHL dog +1.5 vs a -200 favourite (games from {P.SINCE}): no games yet; decides at {P.NEED}."
-    what = {"waiting": f"{s['need'] - s['n']} more to decide",
+        return (f"Pre-registered test, NHL dog +1.5 vs a -200 favourite (games from {P.SINCE}): no games yet; "
+                f"decides at {P.NEED}{pace}.")
+    what = {"waiting": f"{s['need'] - s['n']} more to decide{pace}",
             "supports": "SUPPORTS it -- put it to the user", "dropped": "dropped -- it did not hold up"}[s["verdict"]]
     return (f"Pre-registered test, NHL dog +1.5 vs a -200 favourite (games from {P.SINCE}): "
             f"{s['won']}/{s['n']} covered vs {s['expected']} expected (z {s['z']:+.2f}, ROI {s['roi']:+.1f}%); {what}.")

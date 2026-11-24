@@ -106,6 +106,19 @@ def status(bets, need=NEED):
     return dict(n=n, need=need, won=w, expected=round(e, 1), z=round(z, 2), roi=round(100 * roi, 1), verdict=verdict)
 
 
+PRIOR_PER_DAY = 8 / 7   # qualifying games Nov 17-23, 2026 (checked 2026-11-24 with collect())
+
+
+def eta(bets, today, need=NEED, since=SINCE):
+    """Rough date the test reaches `need` games: its own pace once it has 5+
+    games, else last week's (PRIOR_PER_DAY). 2026-11-24: about 1.1 qualifying
+    games a day, so 150 takes months -- said plainly rather than left implied."""
+    days = max(1, (today - dt.date.fromisoformat(since)).days)
+    rate = len(bets) / days if len(bets) >= 5 else PRIOR_PER_DAY
+    left = max(0, need - len(bets))
+    return today + dt.timedelta(days=math.ceil(left / rate)) if rate > 0 else None
+
+
 def _get(url):
     for _ in range(3):
         try:

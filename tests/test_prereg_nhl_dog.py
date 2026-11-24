@@ -73,6 +73,18 @@ class UpdateTest(unittest.TestCase):
         empty = daily_review.nhl_dog_prereg_line(update_fn=lambda: dict(through=None, bets=[]))
         self.assertIn("no games yet", empty)
 
+    def test_eta(self):
+        import datetime as dt
+        # no games yet: last week's pace, 8 a week -> 150 in 132 days
+        self.assertEqual(P.eta([], dt.date(2026, 11, 24)), dt.date(2026, 11, 24) + dt.timedelta(days=132))
+        # own pace once 5+: 10 games in 10 days -> 140 more days
+        bets = [dict(won=True)] * 10
+        self.assertEqual(P.eta(bets, dt.date(2026, 12, 4)), dt.date(2026, 12, 4) + dt.timedelta(days=140))
+        self.assertEqual(P.eta([dict()] * 150, dt.date(2027, 3, 1)), dt.date(2027, 3, 1))
+        import daily_review
+        line = daily_review.nhl_dog_prereg_line(update_fn=lambda: dict(through=None, bets=[]), today=dt.date(2026, 11, 24))
+        self.assertIn("decides at 150 (about Apr 5, 2027 at the current pace)", line)
+
 
 if __name__ == "__main__":
     unittest.main()
