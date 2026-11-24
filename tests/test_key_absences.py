@@ -39,6 +39,24 @@ class RecentMinutesTest(unittest.TestCase):
         self.assertEqual(got, {"A B": 30.0, "Hurt Guy": 34.0})        # Cameo played 1 game: not counted
 
 
+class LastNightCountsTest(unittest.TestCase):
+    def test_last_nights_game_is_before_today(self):
+        # a 7 PM ET Nov 23 game is 2026-11-24T00:00Z: it is before Nov 24 in ET
+        sched = {"events": [{"id": "9", "date": "2026-11-24T00:00Z",
+                             "competitions": [{"status": {"type": {"completed": True}}}]}]}
+        box = {"boxscore": {"players": [{"team": {"abbreviation": "BOS"}, "statistics": [
+            {"labels": ["MIN"], "athletes": [{"athlete": {"displayName": "A B"}, "stats": ["33"]}]}]}]}}
+        pages = {K.SCHED.format("bos"): sched, K.SUMMARY.format("9"): box}
+        old_min = K.MIN_PLAYED
+        try:
+            K.MIN_PLAYED = 1
+            self.assertEqual(K.recent_minutes("BOS", "2026-11-24", get=pages.get), {"A B": 33.0})
+        finally:
+            K.MIN_PLAYED = old_min
+        self.assertEqual(K._et_day("2026-11-24T00:00Z"), "2026-11-23")
+        self.assertEqual(K._et_day("2026-11-24"), "2026-11-24")
+
+
 class BackToBackDayTest(unittest.TestCase):
     def test_played_day_before_in_et(self):
         pages = {K.SCHED.format("bos"): {"events": [{"date": "2026-11-24T03:30Z"}, {"date": "2026-11-25T00:00Z"}]}}

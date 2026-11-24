@@ -38,6 +38,19 @@ def _get(url):
         return None
 
 
+def _et_day(when):
+    """ISO ET calendar day of an ESPN UTC timestamp ('2026-11-24T00:00Z' -> '2026-11-23').
+    2026-11-24: comparing the raw UTC date left out the team's game from the
+    night before (7 PM ET is the next day in UTC)."""
+    import datetime as _dt
+    if "T" not in str(when or ""):
+        return str(when or "")[:10]                 # a bare date is already a calendar day
+    try:
+        return _dt.datetime.fromisoformat(str(when).replace("Z", "+00:00")).astimezone(ET).date().isoformat()
+    except ValueError:
+        return str(when or "")[:10]
+
+
 def recent_minutes(abbr, before, get=_get):
     """{player display name: minutes per game PLAYED} over the team's last
     LAST_GAMES completed games before `before` (an ISO date), for players who
@@ -47,7 +60,7 @@ def recent_minutes(abbr, before, get=_get):
     Cavaliers (-350) were not flagged; they lost by 14."""
     ev = [e for e in ((get(SCHED.format(abbr.lower())) or {}).get("events") or [])
           if ((e.get("competitions") or [{}])[0].get("status") or {}).get("type", {}).get("completed")
-          and str(e.get("date", ""))[:10] < before]
+          and _et_day(e.get("date")) < before]
     ev = ev[-LAST_GAMES:]
     tot, played, n = {}, {}, 0
     for e in ev:
