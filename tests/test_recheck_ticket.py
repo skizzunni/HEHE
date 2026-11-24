@@ -46,6 +46,21 @@ class MlCheckTest(unittest.TestCase):
         self.assertEqual(R.ml_check(legs, rows), [("BOS ML", "DraftKings now -550 (was -453), 83% no-vig")])
 
 
+class FinalViewTest(unittest.TestCase):
+    def test_keep_caution_drop(self):
+        legs = [dict(id="1", label="A"), dict(id="1", label="B"), dict(id="2", label="C"), dict(id="2", label="D")]
+        flags = [("A", "A Guy is now Out on the official report"), ("B", "FanDuel now -900 (was -1100)"),
+                 ("C", "C Guy: a game-time decision"), ("C", "FanDuel now -1300 (was -1200)")]
+        out = R.final_text(legs, flags, {"1": "DET @ ORL", "2": "VGK @ EDM"}, "05:30 PM")
+        self.assertIn("  DET @ ORL", out)
+        self.assertIn("DROP    A -- A Guy is now Out", out)
+        self.assertIn("KEEP    B -- FanDuel now -900", out)
+        self.assertIn("CAUTION C -- C Guy: a game-time decision; FanDuel now -1300", out)
+        self.assertIn("KEEP    D", out)
+        self.assertTrue(out.endswith("3 of 4 legs stay."))
+        self.assertEqual(R.verdict(["this line is no longer posted at FanDuel"])[0], "DROP")
+
+
 class NhlLineupTest(unittest.TestCase):
     def test_lineup_page_and_flags(self):
         import json

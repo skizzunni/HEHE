@@ -12,6 +12,7 @@ latest report, and prints every leg that now needs attention:
     Questionable (a caution: priced in on the record, README 2026-11-24)
 
     python3 tools/recheck_ticket.py work/slate_nov24/ticket.json [today]
+    python3 tools/recheck_ticket.py work/slate_nov24/ticket.json today --final   # by game, KEEP / CAUTION / DROP
 """
 import json
 import os
@@ -128,7 +129,7 @@ def text(flags, asof=None):
     return "\n".join([head] + [f"  {lab} -- {note}" for lab, note in flags])
 
 
-def main(path, day):
+def main(path, day, final=False):
     import datetime as dt
     import key_absences as K
     import nba_injury_report as R
@@ -161,10 +162,51 @@ def main(path, day):
         current = {(p["name"], p.get("market"), str(p.get("line"))): p.get("price") for g in pg for p in g["props"]}
         prices = (price_check(legs, current) if current else []) + ml_check(legs, rows)
     except Exception:
-        prices = []
-    return text(flags + recheck_nhl(legs, lineups) + prices, rep.get("asof"))
+        prices, rows = [], []
+    allf = flags + recheck_nhl(legs, lineups) + prices
+    if final:
+        games = {str(r.get("id")): r.get("game") for r in rows or []}
+        return final_text(legs, allf, games, rep.get("asof"))
+    return text(allf, rep.get("asof"))
+
+
+DROP_WORDS = ("is now Out", "is now Doubtful", "is now Questionable", "on the injured list", "no longer posted")
+
+
+def verdict(notes):
+    """('DROP' | 'CAUTION' | 'KEEP', reasons) for one leg's re-check notes. A
+    drop follows the ticket's own build rules (a prop player Out / Doubtful /
+    Questionable is left off; a line no longer posted cannot be bet); anything
+    else that changed is a caution and the leg stays -- the user decides."""
+    if any(w in n for n in notes for w in DROP_WORDS):
+        return "DROP", notes
+    if any(not n.startswith(("FanDuel now", "DraftKings now")) for n in notes):
+        return "CAUTION", notes
+    return "KEEP", notes
+
+
+def final_text(legs, flags, games=None, asof=None):
+    """The final ticket by game: each leg KEEP / CAUTION / DROP with its notes,
+    then the kept count. games: {event id: 'AWAY @ HOME'}."""
+    notes = {}
+    for lab, note in flags:
+        notes.setdefault(lab, []).append(note)
+    by = {}
+    for L in legs:
+        by.setdefault(str(L.get("id")), []).append(L)
+    out = [f"Final ticket, re-checked{f' (injury report {asof})' if asof else ''}:"]
+    kept = 0
+    for gid, ls in by.items():
+        out.append(f"  {(games or {}).get(gid) or gid}")
+        for L in ls:
+            v, why = verdict(notes.get(L.get("label"), []))
+            kept += v != "DROP"
+            out.append(f"    {v:7} {L.get('label')}" + (f" -- {'; '.join(why)}" if why else ""))
+    out.append(f"{kept} of {len(legs)} legs stay.")
+    return "\n".join(out)
 
 
 if __name__ == "__main__":
     import build_ticket as B
-    print(main(sys.argv[1], B.resolve_day(sys.argv[2] if len(sys.argv) > 2 else None)))
+    args = [a for a in sys.argv[1:] if a != "--final"]
+    print(main(args[0], B.resolve_day(args[1] if len(args) > 1 else None), final="--final" in sys.argv))
