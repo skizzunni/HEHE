@@ -5166,6 +5166,13 @@ big the game's favourite was (no-vig moneyline) and by date half. Favourite 80%+
 83.9%, z +0.85) then 237/302 (78.5% vs 83.7%, z -2.48); 70-80% and closer games on par in both
 halves. Short only in the later half, so nothing is cut; it is re-run as props accumulate.
 
+**Re-checked by side: NBA props in lopsided games (2026-11-24).** The 80%+ favourite games above (39
+games with a board pick at 80%+, 597 graded props matched to box scores), split by the player's side,
+date halves at Nov 8. On the favourite: 136/153 (88.9% vs 83.9% stated, z +1.68) then 139/179 (77.7%
+vs 83.3%, z -2.03). On the underdog: 118/136 (86.8%, z +0.86) then 96/129 (74.4%, z -3.06). Both sides
+ahead early and short late -- the later half is short in these games whichever side, so it is not the
+favourite's starters resting. The blowout caution stays a caution on every prop in such a game.
+
 **Checked, no cut: favourites missing a key player (2026-11-24).** After the user's Nov 23 ticket lost
 on the Raptors (-450, no Leonard / Barrett), Thunder (-190, eight out) and Cavaliers (-350, no Mobley):
 graded board NBA picks (174 matched to box scores), "key" = top 6 by minutes per game played over the
