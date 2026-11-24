@@ -5246,6 +5246,14 @@ or shorter, split at Nov 3. 1+ shots: 397/460 (86.3%) then 511/590 (86.6%) vs 85
 its price and on par with the board's capped chance. 2+ shots at those prices: 54/58 (93.1%) then 62/69
 (89.9%) vs 85% (z +1.78 / +1.13) -- ahead, but too few to act on. The ticket's NHL legs stay as they are.
 
+**Checked: a heavy prop's hit rate barely moves with its price inside -700 to -1300 (2026-11-24).**
+All graded props by the price's implied chance, split at the median date. Implied 88-90%: 83.8% then
+83.9%; 90-91%: 85.2% / 85.9%; 91-92%: 85.6% / 84.3%; 92-93%: 86.3% / 83.3%; 93-94%: 88.6% / 90.0%;
+98%+: 93.0% / 96.2%. Inside roughly -700 to -1300 the record is flat at 84-86% whatever the price, so a
+leg drifting from -1300 to -950 (92.9% -> 90.5% implied) is not measurably less likely -- it now just
+pays more. That is why the ticket's "most likely 2x" may lean on drifted legs, and it is right to:
+the chances it uses are the record's, not the price's.
+
 **Checked: the ticket's 75%+ winners (2026-11-24).** Graded board NBA / NHL / NFL / college basketball
 winners stated 75%+ (180, split Nov 8): 77/90 (86% vs 87% stated, z -0.30) then 80/90 (89% vs 88%, z
 +0.37). NBA 80% vs 82% then 82% vs 83%; college basketball 94% vs 96% then 93% vs 93%; NFL 75% vs 79% then
