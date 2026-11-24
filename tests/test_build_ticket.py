@@ -212,7 +212,8 @@ class GoalieNoteTest(unittest.TestCase):
         rows = [dict(lg="nhl", game="VGK @ EDM", id="5", home="EDM", away="VGK", home_name="Edmonton Oilers",
                      away_name="Vegas Golden Knights", home_ml=-500, away_ml=380, market_home=0.82, blind_home=0.7)]
         t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=lambda r: [],
-                       goalie_fn=lambda team: NG.leg_note(team, gr, ros, career_fn=lambda g: None))
+                       goalie_fn=lambda team: NG.leg_note(team, gr, ros, career_fn=lambda g: None),
+                       nhl_b2b_fn=lambda *a: False)
         self.assertIn("goalie: Devon Levi", t["games"]["VGK @ EDM"][0]["label"])
 
 
@@ -277,6 +278,19 @@ class Last10CautionTest(unittest.TestCase):
         self.assertEqual([r["PTS"] for r in M.games(log)], [20.0, 10.0])
 
 
+class NhlBackToBackTest(unittest.TestCase):
+    def test_nhl_b2b_caution(self):
+        import nhl_goalies as NG
+        sched = {"club-schedule/EDM/week/2026-11-23": {"games": [{"gameDate": "2026-11-23"}, {"gameDate": "2026-11-24"}]}}
+        self.assertTrue(NG.played_day_before("EDM", "2026-11-24", get=sched.get))
+        self.assertFalse(NG.played_day_before("VGK", "2026-11-24", get=sched.get))
+        rows = [dict(lg="nhl", game="VGK @ EDM", id="5", home="EDM", away="VGK", home_name="Edmonton Oilers",
+                     away_name="Vegas Golden Knights", home_ml=-500, away_ml=380, market_home=0.82, blind_home=0.7)]
+        t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=lambda r: [], goalie_fn=lambda t: "",
+                       nhl_b2b_fn=lambda tri, d: tri == "EDM")
+        self.assertIn("back-to-back (often the backup goalie", t["games"]["VGK @ EDM"][0]["label"])
+
+
 class LadderFallbackTest(unittest.TestCase):
     def test_one_leg_per_game_in_band(self):
         t = {"games": {f"G{i}": [dict(label=f"leg{i}", price="-400", chance=0.80, lg="nba", id=str(i), gid=f"nba:{i}"),
@@ -302,7 +316,7 @@ class SaveThenGradeTest(unittest.TestCase):
             dict(name="Matt Boldy", label="Matt Boldy: 2+ Shots on Goal", p=0.87, imp=0.9, price="-900",
                  market="Shots on Goal", line="2+")]}]
         t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=lambda r: pg, status_fn=lambda n: None,
-                       goalie_fn=lambda team: "")
+                       goalie_fn=lambda team: "", nhl_b2b_fn=lambda *a: False)
         legs = B.ticket_legs(t)
         self.assertEqual([L["kind"] for L in legs], ["ml", "prop"])
         self.assertTrue(all("chance" not in L and "gid" not in L for L in legs))

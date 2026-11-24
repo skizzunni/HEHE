@@ -154,6 +154,15 @@ def leg_note(team, rows, rosters=None, career_fn=None):
     return ""
 
 
+def played_day_before(tri, day, get=_nhl):
+    """True when NHL team `tri` (e.g. 'VGK') played on the day before `day`
+    (ISO), from the NHL's own schedule (local game dates). For the ticket's
+    back-to-back caution on NHL winners -- information only, not tested."""
+    prev = (dt.date.fromisoformat(day) - dt.timedelta(days=1)).isoformat()
+    week = get(f"club-schedule/{tri}/week/{prev}") or {}
+    return any(g.get("gameDate") == prev for g in week.get("games") or [])
+
+
 LINES = "https://www.dailyfaceoff.com/teams/{}/line-combinations"
 
 

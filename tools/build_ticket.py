@@ -303,7 +303,8 @@ def _goalie_fn(day):
     return lambda team: NG.leg_note(team, rows, rosters)
 
 
-def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None, minutes_fn=None, goalie_fn=None, logs_fn=None):
+def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None, minutes_fn=None, goalie_fn=None, logs_fn=None,
+             nhl_b2b_fn=None):
     """Winners only, from DraftKings prices on ESPN (no-vig), when the board has
     not rebuilt for `day` (2026-11-24: every GitHub workflow switched off). Same
     winner checks: 75%+, our price-blind number not on the other side. Props
@@ -332,6 +333,14 @@ def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None, minutes
         label = f"{team} moneyline {price_s} ({chance}%, DraftKings no-vig)"
         if ok and r.get("lg") == "nba" and b2b_fn and b2b_fn(team, day):
             label += " -- caution: second night of a back-to-back (priced in on the record)"
+        if ok and r.get("lg") == "nhl":
+            try:
+                import nhl_goalies as NG
+                tri = {"UTAH": "UTA"}.get(team, team)
+                if (nhl_b2b_fn or NG.played_day_before)(tri, day):
+                    label += " -- caution: second night of a back-to-back (often the backup goalie; not tested)"
+            except Exception:
+                pass
         if ok and r.get("lg") == "nhl":
             if goalie_fn is None:
                 goalie_fn = _goalie_fn(day)
