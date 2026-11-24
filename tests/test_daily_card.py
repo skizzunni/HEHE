@@ -556,5 +556,21 @@ class StaleNoteTest(unittest.TestCase):
         self.assertEqual(daily_card.stale_note({"dates": {"today": "20261123"}}, "tomorrow", now), "")
 
 
+class ResearchPassesTest(unittest.TestCase):
+    def test_passes_beside_picks(self):
+        import tempfile
+        import daily_review
+        d = tempfile.mkdtemp()
+        os.makedirs(os.path.join(d, "slate_a"))
+        for f in ("final_picks.json", "passed_picks.json"):
+            open(os.path.join(d, "slate_a", f), "w").write("[]")
+        res = {"final_picks.json": dict(won=4, lost=6, push=0, open=0, units=-2.36),
+               "passed_picks.json": dict(won=4, lost=7, push=0, open=0, units=-2.93)}
+        line = daily_review.research_picks_line(os.path.join(d, "slate_*", "final_picks.json"),
+                                                grade_fn=lambda f: (None, None, res[os.path.basename(f)]))
+        self.assertIn("4-6 (40%)", line)
+        self.assertIn("passed, held or withdrawn: 4-7, -2.93 units", line)
+
+
 if __name__ == "__main__":
     unittest.main()

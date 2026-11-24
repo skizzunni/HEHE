@@ -539,10 +539,26 @@ def research_picks_line(pattern=None, grade_fn=None):
     except Exception:
         return None
     done = tot["won"] + tot["lost"]
-    return (f"Researched pick lists ({len(files)} saved): {tot['won']}-{tot['lost']}"
+    line = (f"Researched pick lists ({len(files)} saved): {tot['won']}-{tot['lost']}"
             + (f"-{tot['push']}" if tot["push"] else "")
             + (f" ({round(100 * tot['won'] / done)}%)" if done else "")
             + f", {tot['open']} open, {tot['units']:+.2f} units at $1 a pick.")
+    # the legs researched and then passed, held or withdrawn (passed_picks.json beside
+    # each list): does the judgement add anything? 2026-11-23: picks 4-6 (-2.36),
+    # passes 4-7 (-2.93) -- one night says nothing yet; this keeps the count.
+    passed = sorted(glob.glob(os.path.join(os.path.dirname(os.path.dirname(pattern)), "*", "passed_picks.json")))
+    if passed:
+        pt = dict(won=0, lost=0, push=0, open=0, units=0.0)
+        try:
+            for f in passed:
+                _, _, s = grade_fn(f)
+                for k in pt:
+                    pt[k] += s[k]
+        except Exception:
+            return line
+        line += (f" The ones passed, held or withdrawn: {pt['won']}-{pt['lost']}, {pt['units']:+.2f} units"
+                 " -- if they keep beating the picks, the filtering is costing money.")
+    return line
 
 
 def priced_calibration_line(ledger=None, min_half=15):
