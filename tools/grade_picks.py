@@ -309,7 +309,10 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
                 if remember:
                     _save_seen(path, seen)
         if not open_n:
-            emit("all picks settled")
+            res = [seen.get(p.get("label") or json.dumps(p, sort_keys=True), "open").lower() for p in picks]
+            sm = summary(picks, res)
+            emit(f"all picks settled: {sm['won']}-{sm['lost']}" + (f", {sm['push']} void" if sm["push"] else "")
+                 + f"; all won: {'YES' if not sm['lost'] and sm['won'] else 'no'}")
             return seen
         (sleep or time.sleep)(every)
 
