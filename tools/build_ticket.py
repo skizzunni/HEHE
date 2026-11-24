@@ -416,7 +416,7 @@ def _report_status(day):
     rows = R.parse(txt or "")["rows"] if txt else []
     mmdd = dt.date.fromisoformat(day).strftime("%m/%d/%Y")
     status = {r["player"]: r["status"] for r in rows if r["date"] == mmdd}
-    return lambda name: status.get(K.report_name(name))
+    return lambda name: K.status_of(name, status)
 
 
 class StaleBoard(Exception):
@@ -541,7 +541,7 @@ def main(day):
     except (OSError, ValueError):
         lock_names = set()
     return build(rows_by_lg, props_games, key_out, blind,
-                 lambda name: status.get(K.report_name(name)), fav, prop_locks=lock_names, b2b_fn=b2b,
+                 lambda name: K.status_of(name, status), fav, prop_locks=lock_names, b2b_fn=b2b,
                  minutes_fn=__import__("nba_minutes").mpg_last5, logs_fn=__import__("nba_minutes").gamelogs)
 
 

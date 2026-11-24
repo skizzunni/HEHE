@@ -91,7 +91,7 @@ def main(path, day):
     status = {r["player"]: r["status"] for r in rep["rows"] if r["date"] == mmdd}   # report names are unique enough
     team_out = lambda abbr: K.key_missing(K.recent_minutes(abbr, day), status)
     legs = json.load(open(path))
-    flags = recheck(legs, lambda n: status.get(K.report_name(n)), team_out)
+    flags = recheck(legs, lambda n: K.status_of(n, status), team_out)
     import nhl_goalies as NG
     import urllib.request
     cache = {}

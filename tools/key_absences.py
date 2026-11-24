@@ -107,13 +107,31 @@ def report_name(display):
     return f"{parts[-1]}, {' '.join(parts[:-1])}" if len(parts) > 1 else display
 
 
+def status_of(display, statuses):
+    """A player's official-report status from {report name: status}, matching
+    across nicknames: exact 'Last, First' first, else the same last name with
+    one first name starting with the other. 2026-11-24: FanDuel's 'Cam Johnson'
+    is the report's 'Johnson, Cameron' -- an exact lookup would let a
+    Questionable player onto the ticket. None when unmatched or ambiguous."""
+    rn = report_name(display or "")
+    if rn in statuses:
+        return statuses[rn]
+    if ", " not in rn:
+        return None
+    last, first = rn.split(", ", 1)
+    first = first.lower().replace(".", "")
+    hits = [v for k, v in statuses.items() if ", " in k and k.split(", ", 1)[0].lower() == last.lower()
+            and (lambda f: f.startswith(first) or first.startswith(f))(k.split(", ", 1)[1].lower().replace(".", ""))]
+    return hits[0] if len(hits) == 1 else None
+
+
 def key_missing(minutes, statuses, n=KEY_N):
     """[(display name, avg min, status)] for top-n minute players whose
     report status is Out/Doubtful (missing) or Questionable (watch)."""
     top = sorted(minutes.items(), key=lambda kv: -kv[1])[:n]
     out = []
     for name, m in top:
-        st = statuses.get(report_name(name))
+        st = status_of(name, statuses)
         if st in FLAG + WATCH:
             out.append((name, round(m, 1), st))
     return out

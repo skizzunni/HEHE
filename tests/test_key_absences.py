@@ -39,6 +39,17 @@ class RecentMinutesTest(unittest.TestCase):
         self.assertEqual(got, {"A B": 30.0, "Hurt Guy": 34.0})        # Cameo played 1 game: not counted
 
 
+class StatusOfTest(unittest.TestCase):
+    def test_nicknames(self):
+        st = {"Johnson, Cameron": "Questionable", "Lively II, Dereck": "Out", "Jones, Isaac": "Out", "Jones, Tre": "Probable"}
+        self.assertEqual(K.status_of("Cam Johnson", st), "Questionable")
+        self.assertEqual(K.status_of("Dereck Lively II", st), "Out")
+        self.assertEqual(K.status_of("Tre Jones", st), "Probable")
+        self.assertIsNone(K.status_of("Tyus Jones", st))
+        self.assertIsNone(K.status_of("Nobody", st))
+        self.assertIsNone(K.status_of("I Jones", {"Jones, Isaac": "Out", "Jones, Ian": "Out"}))   # ambiguous
+
+
 class LastNightCountsTest(unittest.TestCase):
     def test_last_nights_game_is_before_today(self):
         # a 7 PM ET Nov 23 game is 2026-11-24T00:00Z: it is before Nov 24 in ET
