@@ -1,0 +1,34 @@
+import os
+import sys
+import unittest
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, os.path.join(ROOT, "tools"))
+sys.path.insert(0, ROOT)
+import grade_preview as GP  # noqa: E402
+
+
+class PreviewTest(unittest.TestCase):
+    def test_nothing_is_saved(self):
+        import ledger
+        calls = []
+        real = ledger.save
+        try:
+            ledger.save = lambda d: calls.append(d)
+
+            def fake_grade():
+                ledger.save({"x": 1})          # the grader saves at its end
+                return [("nba:1", dict(status="lost", pick="Raptors", conf=79, price="-449", matchup="MIL @ TOR",
+                                       scores={"TOR": 111, "MIL": 116}, diagnosis="upset · close game"))]
+            out = GP.preview(fake_grade)
+            self.assertEqual(calls, [])          # patched out during the preview
+        finally:
+            ledger.save = real
+        self.assertEqual(GP.line(*out[0]),
+                         "LOST nba Raptors at 79% (-449), MIL @ TOR TOR 111 - MIL 116 -- upset · close game")
+        self.assertEqual(GP.summary(out + [("nhl:2", dict(status="won")), ("x:3", dict(status="void"))]),
+                         "Would settle 3: 1 won, 1 lost, 1 void (preview only, nothing saved)")
+
+
+if __name__ == "__main__":
+    unittest.main()

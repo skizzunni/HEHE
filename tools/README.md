@@ -16,6 +16,7 @@ Every script here, with the first paragraph of its own description.
 | `build_ticket.py` | The user's daily ticket by game: board winners at 75%+ with no key player out and no price-blind disagreement, plus the card's ~87% props (not on the injury report; blowout games flagged), every leg left off listed with its reason. `--save` writes a grade_picks file. |
 | `nhl_goalies.py` | The day's NHL starting goalies from DailyFaceoff with each one's status (Confirmed / Likely / Unconfirmed) and when it was posted, ET. |
 | `pregame_brief.py` | One pre-game brief for a day: slate_sheet (our number first, then the line), the official NBA injury report, NHL goalies; each section fails on its own. |
+| `grade_preview.py` | Runs the board's own grader (ledger.grade) with saving switched off and prints what it would settle -- result, score and loss diagnosis -- so the record can be read while the board workflow is off. Writes nothing. |
 | `grade_picks.py` | Grades a saved JSON list of researched picks (spread / ml / over / under) from ESPN final scores: each pick won / lost / push / open, the record and flat $1 return. |
 | `prereg_nhl_dog.py` | Pre-registered forward test (2026-11-23): NHL underdog +1.5 when the favourite closes -200 or shorter, graded from ESPN closing lines on games from 2026-11-24; decides at 150 games. Information only. |
 | `clv.py` | Closing line value: the primary scoreboard. |
