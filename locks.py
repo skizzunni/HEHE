@@ -1041,7 +1041,16 @@ PREREG_NFL14 = dict(name="NFL spreads getting 14+ points", since="2026-11-14", l
 # short -> propose excluding them to the user; otherwise the caution comes off.
 PREREG_NCAAF_TU = dict(name="college football team-total unders", since="2026-11-15", leagues=("ncaaf",),
                        t="teamunder", band=None, need=150, gap=3.0)
-PREREGS = (PREREG, PREREG_NFL14, PREREG_NCAAF_TU)
+# written down 2026-11-24 (1:55 AM ET), before any of its legs: NBA game overs.
+# Locks NBA overs ran 19/29 then 20/30 (66%, 67% vs 75%, 76% stated, z -1.22 /
+# -1.14 by date half) and the 2026-11-23 ladder lost on one (Jazz-Lakers over
+# 214.5, 203); every saved pool line, one per game, was 44/47 then 28/40 (vs
+# ~82%) -- ahead, then short. Terms: the next 150 NBA over legs from pools saved
+# from 2026-11-24; 5+ points short -> propose excluding NBA overs from the
+# Locks and ladder to the user; otherwise the concern is dropped.
+PREREG_NBA_OVER = dict(name="NBA game overs", since="2026-11-24", leagues=("nba",),
+                       t="over", band=None, need=150, gap=5.0)
+PREREGS = (PREREG, PREREG_NFL14, PREREG_NCAAF_TU, PREREG_NBA_OVER)
 
 
 def prereg_status(paths=None, led=None, test=PREREG):

@@ -225,8 +225,10 @@ class PreregMore(unittest.TestCase):
         out = daily_review.prereg_more_line(st)
         self.assertEqual(out, "Pre-registered tests also running: NFL spreads getting 14+ points (legs from 2026-11-14): "
                               "40/50 (80% vs 84% stated); waiting for 100 legs; college football team-total unders "
-                              "(legs from 2026-11-15): 40/50 (80% vs 84% stated); waiting for 150 legs.")
+                              "(legs from 2026-11-15): 40/50 (80% vs 84% stated); waiting for 150 legs; NBA game overs "
+                              "(legs from 2026-11-24): 40/50 (80% vs 84% stated); waiting for 150 legs.")
         self.assertIn(locks.PREREG_NFL14, locks.PREREGS)
+        self.assertIn(locks.PREREG_NBA_OVER, locks.PREREGS)
 
 
 class DrawRate(unittest.TestCase):

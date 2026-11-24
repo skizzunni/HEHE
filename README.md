@@ -5180,3 +5180,10 @@ winners stated 75%+ (180, split Nov 8): 77/90 (86% vs 87% stated, z -0.30) then 
 12/12; NHL 7 picks. By band 75-80% z +1.43 / -0.23, 80-85% -1.36 / -0.15, 85%+ -1.18 / +1.14. No league
 or band short in both halves, so the ticket's 75% floor stands as is. Road favourites ran ahead (11/11
 then 21/23 vs ~80%, z +1.64 / +1.25): on watch, too few to act on.
+
+**Pre-registered (2026-11-24, before any of its legs): NBA game overs.** The Nov 23 ladder lost on
+Jazz-Lakers over 214.5 (203). Locks NBA overs: 19/29 then 20/30 (66%, 67% vs 75%, 76% stated, z -1.22 /
+-1.14), unders 92% then 77% (vs 75%, 76%). Every saved pool line, one per game: 44/47 then 28/40 vs ~82% --
+ahead, then short, so not cut. Terms (locks.PREREG_NBA_OVER): the next 150 NBA over legs from pools saved
+from 2026-11-24; 5+ points short of stated -> propose excluding NBA overs from the Locks and ladder to the
+user; otherwise the concern is dropped. The review prints its count (prereg_more_line).
