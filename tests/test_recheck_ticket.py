@@ -1,5 +1,6 @@
 import os
 import sys
+import math
 import unittest
 
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "tools"))
@@ -138,6 +139,19 @@ class AllWinTest(unittest.TestCase):
         self.assertEqual(line, "All 2 kept legs win: about 63% -- pays about 1.35x at current prices. "
                                "Each leg stands on its own; the size is your call.")      # 0.80 * 0.79, (1+100/950)(1+100/453)
         self.assertIn("unavailable", R.all_win_line([dict(kind="prop", label="X", price=None)], {}, {}, {}))
+
+
+class Best2xTest(unittest.TestCase):
+    def test_smallest_risk_reaching_2x(self):
+        odds = [("a", 1.10, 0.86), ("b", 1.10, 0.86), ("c", 1.25, 0.79), ("d", 1.05, 0.90), ("e", 1.50, 0.60)]
+        b = R.best_2x(odds)
+        self.assertGreaterEqual(b["pays"], 2.0)
+        # brute-force check: no subset reaching 2x is more likely
+        import itertools
+        bestp = max(math.prod(x[2] for x in c) for k in range(1, 6) for c in itertools.combinations(odds, k)
+                    if math.prod(x[1] for x in c) >= 2.0)
+        self.assertAlmostEqual(b["chance"], bestp)
+        self.assertIsNone(R.best_2x([("a", 1.1, 0.9)]))
 
 
 class FinalViewTest(unittest.TestCase):

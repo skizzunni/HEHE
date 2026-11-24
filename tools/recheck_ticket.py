@@ -288,9 +288,65 @@ def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=N
             out.append(f"    {v:7} {L.get('label')}" + (f" -- {'; '.join(why)}" if why else ""))
     out.append(f"{kept} of {len(legs)} legs stay.")
     if now_prices is not None:
-        out.append(all_win_line([L for L in legs if verdict(notes.get(L.get("label"), []))[0] != "DROP"],
-                                now_prices, now_chance or {}, record or {}))
+        kept_legs = [L for L in legs if verdict(notes.get(L.get("label"), []))[0] != "DROP"]
+        out.append(all_win_line(kept_legs, now_prices, now_chance or {}, record or {}))
+        b = best_2x(leg_odds(kept_legs, now_prices, now_chance or {}, record or {}) or [])
+        if b:
+            out.append(f"Most likely 2x from these legs: {len(b['legs'])} legs, about {100 * b['chance']:.0f}% all win, "
+                       f"pays {b['pays']:.2f}x -- " + "; ".join(_short(L, now_prices) for L in b["legs"]) + ".")
     return "\n".join(out)
+
+
+def leg_odds(kept, now_prices, now_chance, record):
+    """[(leg, decimal payout now, chance)] -- the chances all_win_line uses."""
+    import build_ticket as B
+    out = []
+    for L in kept:
+        price = now_prices.get(L.get("label")) or L.get("price")
+        try:
+            d = B._dec(price)
+        except (TypeError, ValueError):
+            return None
+        if L.get("kind") == "prop":
+            w, n = record.get((L.get("lg"), B._band(price)), (0, 0))
+            c = min(B.PROP_CAP, w / n) if n >= B.RECORD_MIN else B.PROP_CAP
+        else:
+            c = now_chance.get(L.get("label"), 1 / d)
+        out.append((L, d, c))
+    return out
+
+
+def best_2x(odds, target=2.0, cap=16):
+    """The subset of legs paying at least `target` with the highest chance that
+    all win (exhaustive up to `cap` legs). Several legs from one game may go
+    together: same-game heavy props won together as often as independent ones
+    (README 2026-11-24). None when even all of them do not reach it."""
+    import math
+    if not odds or len(odds) > cap:
+        return None
+    best = None
+    n = len(odds)
+    for mask in range(1, 1 << n):
+        pays, p = 1.0, 1.0
+        for i in range(n):
+            if mask >> i & 1:
+                pays *= odds[i][1]
+                p *= odds[i][2]
+        if pays >= target and (best is None or p > best[0] or (p == best[0] and pays > best[1])):
+            best = (p, pays, mask)
+    if not best:
+        return None
+    p, pays, mask = best
+    return dict(chance=p, pays=pays, legs=[odds[i][0] for i in range(n) if mask >> i & 1])
+
+
+def _short(L, now_prices):
+    """'Trae Young 15+ Pts + Ast at -1100 now' / 'BOS moneyline at -453 now'."""
+    now = now_prices.get(L.get("label")) or L.get("price")
+    now = f"{int(now):+d}" if isinstance(now, (int, float)) else now
+    what = (f"{L.get('player')} {L.get('line_text')} {L.get('market')}" if L.get("kind") == "prop"
+            else f"{L.get('team')} moneyline")
+    return f"{what} at {now} now"
 
 
 def all_win_line(kept, now_prices, now_chance, record):
