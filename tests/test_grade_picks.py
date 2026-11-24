@@ -110,7 +110,7 @@ class PropTest(unittest.TestCase):
         box = dict(BOX)
         out = []
         G.watch(path, get=lambda u: box, sleep=sleep, emit=out.append)
-        self.assertEqual(out, ["WON Murray 5+", "LOST Murray 9 reb", "all picks settled: 1-1; all won: no"])
+        self.assertEqual(out, ["WON Murray 5+ -- had 5", "LOST Murray 9 reb -- had 3", "all picks settled: 1-1; all won: no"])
 
     def test_restarted_watch_does_not_repeat(self):
         import json
@@ -121,7 +121,7 @@ class PropTest(unittest.TestCase):
         first, second = [], []
         G.watch(path, get=lambda u: BOX, sleep=lambda s: None, emit=first.append)
         G.watch(path, get=lambda u: BOX, sleep=lambda s: None, emit=second.append)      # the Monitor re-armed
-        self.assertEqual(first, ["WON Murray 5+", "all picks settled: 1-0; all won: YES"])
+        self.assertEqual(first, ["WON Murray 5+ -- had 5", "all picks settled: 1-0; all won: YES"])
         self.assertEqual(second, ["all picks settled: 1-0; all won: YES"])
 
     def test_watch_emits_each_settle_once(self):
@@ -132,7 +132,7 @@ class PropTest(unittest.TestCase):
                   open(path, "w"))
         out = []
         G.watch(path, get=lambda u: BOX, sleep=lambda s: None, emit=out.append)
-        self.assertEqual(out, ["WON Murray 5+", "all picks settled: 1-0; all won: YES"])
+        self.assertEqual(out, ["WON Murray 5+ -- had 5", "all picks settled: 1-0; all won: YES"])
 
 
 NHL_BOX = {"boxscore": {"players": [{"team": {"abbreviation": "MIN"}, "statistics": [

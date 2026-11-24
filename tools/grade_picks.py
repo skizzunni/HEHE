@@ -279,6 +279,22 @@ def _save_seen(path, seen):
         pass
 
 
+def detail(pick, scores, summary):
+    """' -- had 7' for a prop, ' -- 112-104' for a game leg: what settled it,
+    for the live check-ins (2026-11-24: 'WON <label>' alone told the user nothing)."""
+    try:
+        if pick.get("kind") == "prop":
+            v = board_value(pick, summary)[0] if pick.get("market") else None
+            if v is None:
+                v = player_stat(summary, pick["player"], pick.get("stat") or "")
+            return f" -- had {v:g}" if v is not None else ""
+        if len(scores) == 2 and not scores.get("_void"):
+            return " -- " + ", ".join(f"{k} {v:g}" for k, v in scores.items())
+    except Exception:
+        pass
+    return ""
+
+
 def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
     """Print each pick once when it settles (WON / LOST / PUSH), then a last
     line when none is left open. Settles already printed are remembered in
@@ -305,7 +321,7 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
                 open_n += 1
             elif seen.get(key) != r:
                 seen[key] = r
-                emit(f"{r.upper()} {key}")
+                emit(f"{r.upper()} {key}{detail(p, scores, d)}")
                 if remember:
                     _save_seen(path, seen)
         if not open_n:
