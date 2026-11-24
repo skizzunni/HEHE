@@ -26,5 +26,34 @@ class RecheckTest(unittest.TestCase):
         self.assertEqual(R.recheck(legs, lambda n: "Probable", boom), [])
 
 
+class NhlLineupTest(unittest.TestCase):
+    def test_lineup_page_and_flags(self):
+        import json
+        import nhl_goalies as NG
+        data = {"props": {"pageProps": {"combinations": {"sourceName": "Last Game (2026-11-21)", "players": [
+            dict(name="Mitch Marner", categoryIdentifier="ev", groupIdentifier="f1", injuryStatus=None, gameTimeDecision=False),
+            dict(name="Mitch Marner", categoryIdentifier="pp", groupIdentifier="pp1", injuryStatus=None, gameTimeDecision=False),
+            dict(name="Hurt Guy", categoryIdentifier="oi", groupIdentifier="ir", injuryStatus="ir", gameTimeDecision=False),
+            dict(name="Maybe Guy", categoryIdentifier="ev", groupIdentifier="f4", injuryStatus=None, gameTimeDecision=True)]}}}}
+        html = '<script id="__NEXT_DATA__" type="application/json">' + json.dumps(data) + "</script>"
+        pg = NG.lineup(html)
+        self.assertEqual(pg["Mitch Marner"], "")
+        self.assertTrue(R._same("Mitch Marner", "Mitchell Marner"))
+        self.assertFalse(R._same("Matt Boldy", "Mike Boldy"))
+        self.assertIn("injured list", pg["Hurt Guy"])
+        self.assertEqual(pg["Maybe Guy"], "a game-time decision")
+        self.assertEqual(NG.lineup("<html></html>"), {})
+        self.assertEqual(NG.slug("Montréal Canadiens"), "montreal-canadiens")
+        self.assertEqual(NG.slug("St. Louis Blues"), "st-louis-blues")
+        legs = [dict(lg="nhl", kind="prop", id="5", player=n, label=n) for n in
+                ("Mitchell Marner", "Hurt Guy", "Maybe Guy", "Scratched Guy")]
+        flags = dict(R.recheck_nhl(legs, lambda gid: [pg, {}]))
+        self.assertNotIn("Mitchell Marner", flags)
+        self.assertIn("injured list", flags["Hurt Guy"])
+        self.assertIn("game-time decision", flags["Maybe Guy"])
+        self.assertIn("not in either team's projected lines (Last Game (2026-11-21))", flags["Scratched Guy"])
+        self.assertEqual(R.recheck_nhl(legs, lambda gid: [{}, {}]), [])       # unreachable: silent
+
+
 if __name__ == "__main__":
     unittest.main()

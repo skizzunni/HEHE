@@ -154,6 +154,51 @@ def leg_note(team, rows, rosters=None, career_fn=None):
     return ""
 
 
+LINES = "https://www.dailyfaceoff.com/teams/{}/line-combinations"
+
+
+def slug(team):
+    """'Vegas Golden Knights' -> 'vegas-golden-knights' (DailyFaceoff's team URL); 'Montréal' -> 'montreal'."""
+    import unicodedata
+    t = unicodedata.normalize("NFKD", team or "").encode("ascii", "ignore").decode().lower().replace(".", "")
+    return re.sub(r"[^a-z0-9]+", "-", t).strip("-")
+
+
+def lineup(html):
+    """{player name: note or ""} from a DailyFaceoff line-combinations page:
+    "" for a skater in the projected even-strength lines, else why not
+    (injured list, game-time decision). {} when the page cannot be read."""
+    m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', html or "", re.S)
+    if not m:
+        return {}
+    try:
+        c = json.loads(m.group(1))["props"]["pageProps"]["combinations"]
+    except (KeyError, ValueError, TypeError):
+        return {}
+    out = {}
+    for p in c.get("players") or []:
+        n = p.get("name")
+        if not n:
+            continue
+        if p.get("categoryIdentifier") == "oi" or p.get("injuryStatus"):
+            out[n] = f"on the injured list ({p.get('injuryStatus') or 'out'})"
+        elif p.get("gameTimeDecision"):
+            out.setdefault(n, "a game-time decision")
+        elif p.get("categoryIdentifier") == "ev":
+            out.setdefault(n, "")
+    src = c.get("sourceName")
+    return dict(out, **({"__source__": src} if src else {}))
+
+
+def fetch_lineup(team):
+    req = urllib.request.Request(LINES.format(slug(team)), headers={"User-Agent": "Mozilla/5.0"})
+    try:
+        with urllib.request.urlopen(req, timeout=30) as r:
+            return lineup(r.read().decode("utf-8", "replace"))
+    except Exception:
+        return {}
+
+
 def fetch(day):
     req = urllib.request.Request(URL.format(day), headers={"User-Agent": "Mozilla/5.0"})
     with urllib.request.urlopen(req, timeout=30) as r:
