@@ -5141,3 +5141,9 @@ Props where the model is 5+ points above the price went 6/10 (-22.6%) then 32/39
 0/3 then 2/2. Nothing clears the bar. The graded records are nearly all heavy "N+" overs, so the
 test could not see unders, alternate lines or two-book disagreements -- the next prop test needs
 both sides of the full board captured over time. Scripts: research/strategy_lab_2026-11-23/props_model/.
+
+**Checked, no change: NBA props in lopsided games (2026-11-23).** After LaMelo Ball's 4+ assists
+(-700) lost with 3 in 30 minutes of a 26-point win, all 3,317 graded NBA props were split by how
+big the game's favourite was (no-vig moneyline) and by date half. Favourite 80%+: 179/208 (86.1% vs
+83.9%, z +0.85) then 237/302 (78.5% vs 83.7%, z -2.48); 70-80% and closer games on par in both
+halves. Short only in the later half, so nothing is cut; it is re-run as props accumulate.
