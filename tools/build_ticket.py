@@ -33,10 +33,59 @@ ET = ZoneInfo("America/New_York")
 MIN_WIN = 75
 WIN_LEAGUES = ("nba", "nfl", "nhl")
 PROP_FLOOR = 0.85
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PER_GAME = 3
 BLOWOUT = 80
 STAT = {"Points": "PTS", "Rebounds": "REB", "Assists": "AST", "Threes Made": "3PM", "Pts + Ast": "PTS+AST",
         "Pts + Reb": "PTS+REB", "Reb + Ast": "REB+AST", "Pts + Reb + Ast": "PTS+REB+AST", "Steals": "STL", "Blocks": "BLK"}
+
+
+BANDS = ((-500, -300), (-1000, -500), (-1500, -1000), (-2500, -1500), (-10 ** 6, -2500))
+RECORD_MIN = 100
+
+
+def prop_record(props=None):
+    """{(league, band): (won, n)} for graded board props (props.json) by
+    American-price band. 2026-11-24: FanDuel's straight props all read 87%
+    (the cap), while the record at those prices is about 85% -- the ticket's
+    all-win chance should use what props like it have actually done."""
+    if props is None:
+        try:
+            props = json.load(open(os.path.join(ROOT, "props.json")))
+        except (OSError, ValueError):
+            return {}
+    out = {}
+    for e in props.values():
+        if not isinstance(e, dict) or e.get("status") not in ("won", "lost"):
+            continue
+        b = _band(e.get("price"))
+        if b is None:
+            continue
+        w, n = out.get((e.get("league"), b), (0, 0))
+        out[(e.get("league"), b)] = (w + (e["status"] == "won"), n + 1)
+    return out
+
+
+def _band(price):
+    try:
+        a = float(str(price).replace("+", ""))
+    except (TypeError, ValueError):
+        return None
+    return next((b for b in BANDS if b[0] < a <= b[1]), None)
+
+
+def apply_record(t, record):
+    """Each prop leg's chance becomes the lower of its stated chance and the
+    record for its league and price band (RECORD_MIN+ graded), labelled."""
+    for L in (x for g in t["games"].values() for x in g):
+        if L["kind"] != "prop":
+            continue
+        w, n = record.get((L.get("lg"), _band(L.get("price"))), (0, 0))
+        if n >= RECORD_MIN:
+            rate = w / n
+            L["label"] += f" [props like it {100 * rate:.0f}% on {n:,}]"
+            L["chance"] = min(L["chance"], rate)
+    return t
 
 
 def _dec(price):
@@ -390,8 +439,10 @@ if __name__ == "__main__":
         if "--fallback" not in sys.argv:
             print(f"No ticket: {e} (add --fallback for winners from DraftKings prices)")
             sys.exit(2)
-        t = fallback(args[0] if args else dt.datetime.now(ET).date().isoformat())
+        t = apply_record(fallback(args[0] if args else dt.datetime.now(ET).date().isoformat()), prop_record())
         t["ladder"] = ladder_text(ladder_fallback(t))
+    else:
+        apply_record(t, prop_record())
     print(text(t))
     if save:
         os.makedirs(os.path.dirname(save) or ".", exist_ok=True)

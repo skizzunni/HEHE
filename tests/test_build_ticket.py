@@ -157,6 +157,32 @@ class MinutesCautionTest(unittest.TestCase):
         self.assertEqual(t["games"]["A @ B"][0]["label"], "X: 4+ Rebounds -1200 (87%)")
 
 
+class PropRecordTest(unittest.TestCase):
+    def test_chance_uses_the_record_for_its_price_band(self):
+        props = {f"k{i}": dict(league="nba", price="-1200", status="won" if i < 85 else "lost") for i in range(100)}
+        props["open"] = dict(league="nba", price="-1200", status="open")
+        props["nhl"] = dict(league="nhl", price="-1200", status="won")
+        rec = B.prop_record(props)
+        self.assertEqual(rec[("nba", (-1500, -1000))], (85, 100))
+        t = {"games": {"A @ B": [dict(kind="prop", lg="nba", price="-1200", chance=0.8727, label="X: 4+ Rebounds"),
+                                 dict(kind="prop", lg="nhl", price="-1200", chance=0.8727, label="Y: 1+ Shots"),
+                                 dict(kind="ml", lg="nba", price="-453", chance=0.79, label="BOS")]}}
+        B.apply_record(t, rec)
+        legs = t["games"]["A @ B"]
+        self.assertAlmostEqual(legs[0]["chance"], 0.85)
+        self.assertIn("[props like it 85% on 100]", legs[0]["label"])
+        self.assertEqual(legs[1]["chance"], 0.8727)                 # under RECORD_MIN graded: left as stated
+        self.assertEqual(legs[2]["label"], "BOS")
+        self.assertEqual(B._band("-300"), (-500, -300))
+        self.assertIsNone(B._band("+150"))
+
+    def test_record_never_raises_a_chance(self):
+        rec = {("nba", (-10 ** 6, -2500)): (96, 100)}
+        t = {"games": {"G": [dict(kind="prop", lg="nba", price="-3000", chance=0.8727, label="Z")]}}
+        B.apply_record(t, rec)
+        self.assertEqual(t["games"]["G"][0]["chance"], 0.8727)
+
+
 class LadderFallbackTest(unittest.TestCase):
     def test_one_leg_per_game_in_band(self):
         t = {"games": {f"G{i}": [dict(label=f"leg{i}", price="-400", chance=0.80, lg="nba", id=str(i), gid=f"nba:{i}"),
