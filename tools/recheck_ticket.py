@@ -122,11 +122,23 @@ def recheck(legs, status_fn, team_out_fn=None):
     return out
 
 
-def text(flags, asof=None):
+def unsubmitted(rep, mmdd, legs, rows):
+    """Teams in the ticket's NBA games that the report lists as NOT YET
+    SUBMITTED for the day: their players' statuses are not in yet, so 'no
+    leg affected' would be false comfort (2026-11-24)."""
+    ids = {str(L.get("id")) for L in legs if L.get("lg") == "nba"}
+    names = {n for r in rows or [] if str(r.get("id")) in ids for n in (r.get("home_name"), r.get("away_name")) if n}
+    return sorted({t for d, _, t in rep.get("not_submitted") or [] if d == mmdd and (not names or t in names)})
+
+
+def text(flags, asof=None, pending=()):
     head = f"Ticket re-check against the official NBA injury report{f' of {asof}' if asof else ''}:"
-    if not flags:
+    wait = [f"  {t}: report NOT YET SUBMITTED -- its players' statuses are not in; check again" for t in pending]
+    if not flags and not wait:
         return head + " no leg affected."
-    return "\n".join([head] + [f"  {lab} -- {note}" for lab, note in flags])
+    if not flags:
+        return "\n".join([head] + wait + ["  no leg affected among the teams that have reported."])
+    return "\n".join([head] + wait + [f"  {lab} -- {note}" for lab, note in flags])
 
 
 def main(path, day, final=False):
@@ -164,10 +176,12 @@ def main(path, day, final=False):
     except Exception:
         prices, rows = [], []
     allf = flags + recheck_nhl(legs, lineups) + prices
+    pending = unsubmitted(rep, mmdd, legs, rows)
     if final:
         games = {str(r.get("id")): r.get("game") for r in rows or []}
-        return final_text(legs, allf, games, rep.get("asof"))
-    return text(allf, rep.get("asof"))
+        out = final_text(legs, allf, games, rep.get("asof"))
+        return "\n".join([f"NOTE: {t} has NOT YET SUBMITTED its injury report -- recheck before tip." for t in pending] + [out])
+    return text(allf, rep.get("asof"), pending)
 
 
 DROP_WORDS = ("is now Out", "is now Doubtful", "is now Questionable", "on the injured list", "no longer posted")

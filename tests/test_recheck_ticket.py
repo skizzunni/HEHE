@@ -46,6 +46,19 @@ class MlCheckTest(unittest.TestCase):
         self.assertEqual(R.ml_check(legs, rows), [("BOS ML", "DraftKings now -550 (was -453), 83% no-vig")])
 
 
+class UnsubmittedTest(unittest.TestCase):
+    def test_pending_teams_are_named(self):
+        rep = {"not_submitted": [("11/24/2026", "BOS@WAS", "Boston Celtics"), ("11/24/2026", "MIA@PHI", "Miami Heat"),
+                                 ("11/25/2026", "BOS@WAS", "Washington Wizards")]}
+        legs = [dict(lg="nba", id="8", kind="ml", team="BOS", label="BOS")]
+        rows = [dict(id="8", home_name="Washington Wizards", away_name="Boston Celtics")]
+        self.assertEqual(R.unsubmitted(rep, "11/24/2026", legs, rows), ["Boston Celtics"])
+        out = R.text([], "05:00 PM", ["Boston Celtics"])
+        self.assertIn("Boston Celtics: report NOT YET SUBMITTED", out)
+        self.assertIn("no leg affected among the teams that have reported", out)
+        self.assertTrue(R.text([], "05:00 PM").endswith("no leg affected."))
+
+
 class FinalViewTest(unittest.TestCase):
     def test_keep_caution_drop(self):
         legs = [dict(id="1", label="A"), dict(id="1", label="B"), dict(id="2", label="C"), dict(id="2", label="D")]
