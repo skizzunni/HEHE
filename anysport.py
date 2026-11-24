@@ -205,7 +205,11 @@ def fetch_games(league, dates, workers=14, cache=True, tag="", ttl=3600):
                         continue          # draws carry no Elo signal here
                     seen[c["id"]] = dict(
                         id=c["id"],
-                        date=(c.get("date") or "")[:10],
+                        # the scoreboard's own (ET) day, not the UTC timestamp's:
+                        # a 7 PM ET game is the next day in UTC, and the cache
+                        # drops games by refetched day, so every refresh lost the
+                        # evening games of the day before the first one refetched
+                        date=f"{ds[:4]}-{ds[4:6]}-{ds[6:]}",
                         home=(h.get("team") or {}).get("displayName"),
                         away=(a.get("team") or {}).get("displayName"),
                         hs=hs, as_=as_)
