@@ -5214,6 +5214,13 @@ shorter: 180/196 (91.8%) then 162/168 (96.4%) vs ~87% stated, split at Nov 4 (z 
 ~87%) holds them down. Past the bar in one half only, so the cap stays; the daily review now prints
 this line every day ("Props priced -2500 or shorter").
 
+**Checked, no change: same-game props win together about as often as independent ones (2026-11-24).**
+The ticket's "all win" chance multiplies its legs, and it holds up to 3 props from one game. Graded props
+priced -1000 or shorter, one per player, games with 2+ (3+): NBA 174 of 229 games had both win vs 176.4
+expected if independent (z -0.38), 143 of 220 had all three (vs 144.0, z -0.14); NHL 171/215 (170.6,
++0.07) and 104/158 (106.0, -0.35); NFL 26/31 and 13/17 (on par). No sign of linked losses, so the
+product stays the honest all-win figure.
+
 **Checked: the ticket's 75%+ winners (2026-11-24).** Graded board NBA / NHL / NFL / college basketball
 winners stated 75%+ (180, split Nov 8): 77/90 (86% vs 87% stated, z -0.30) then 80/90 (89% vs 88%, z
 +0.37). NBA 80% vs 82% then 82% vs 83%; college basketball 94% vs 96% then 93% vs 93%; NFL 75% vs 79% then
