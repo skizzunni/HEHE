@@ -78,6 +78,57 @@ class PriceLogTest(unittest.TestCase):
         self.assertEqual(lines[0], {"t": "2026-11-24T18:45:00", "prices": {"Hertl": "-950", "BOS": -453}})
 
 
+class MainEndToEndTest(unittest.TestCase):
+    """main() with every network source faked: the glue between the injury
+    report, NHL lines, FanDuel / DraftKings prices and the final view."""
+    def test_main_final(self):
+        import io
+        import json
+        import tempfile
+        from unittest import mock
+        import build_ticket as B
+        import key_absences as K
+        import nba_injury_report as NR
+        import nhl_goalies as NG
+        import slate_sheet
+        d = tempfile.mkdtemp()
+        path = os.path.join(d, "ticket.json")
+        legs = [dict(lg="nba", id="8", kind="ml", team="BOS", price="-453", label="BOS ML"),
+                dict(lg="nba", id="8", kind="prop", player="Cam Johnson", market="Points", line_text="10+", line=10.0,
+                     price="-1000", label="Cam 10+"),
+                dict(lg="nba", id="8", kind="prop", player="Steady Guy", market="Points", line_text="5+", line=5.0,
+                     price="-1000", label="Steady 5+"),
+                dict(lg="nhl", id="5", kind="prop", player="Mitchell Marner", market="Shots on Goal", line_text="1+",
+                     line=1.0, price="-2000", label="Marner 1+")]
+        json.dump(legs, open(path, "w"))
+        rep = {"asof": "11/24/26 05:30 PM", "rows": [dict(date="11/24/2026", matchup="BOS@WAS", team="Boston Celtics",
+                                                           player="Johnson, Cameron", status="Out")],
+               "not_submitted": [("11/24/2026", "BOS@WAS", "Washington Wizards")]}
+        rows = [dict(lg="nba", id="8", game="BOS @ WSH", home="WSH", away="BOS", home_name="Washington Wizards",
+                     away_name="Boston Celtics", home_ml=400, away_ml=-550, market_home=0.17),
+                dict(lg="nhl", id="5", game="VGK @ EDM", home="EDM", away="VGK", home_name="Edmonton Oilers",
+                     away_name="Vegas Golden Knights", home_ml=-102, away_ml=-118, market_home=0.48)]
+        fd = [{"id": "nba:8", "props": [dict(name="Cam Johnson", market="Points", line="10+", price="-1000"),
+                                        dict(name="Steady Guy", market="Points", line="5+", price="-1000")]},
+              {"id": "nhl:5", "props": [dict(name="Mitchell Marner", market="Shots on Goal", line="1+", price="-1800")]}]
+        summary = {"header": {"competitions": [{"competitors": [{"team": {"displayName": "Edmonton Oilers"}},
+                                                                {"team": {"displayName": "Vegas Golden Knights"}}]}]}}
+        with mock.patch.object(NR, "latest", lambda: ("u", "txt")), mock.patch.object(NR, "parse", lambda t: rep), \
+                mock.patch.object(K, "recent_minutes", lambda a, d: {}), \
+                mock.patch.object(NG, "fetch_lineup", lambda team: {"Mitch Marner": ""} if "Vegas" in team else {"X Y": ""}), \
+                mock.patch("urllib.request.urlopen", lambda *a, **k: io.StringIO(json.dumps(summary))), \
+                mock.patch.object(slate_sheet, "main", lambda day: rows), mock.patch.object(B, "_fd_props", lambda r: fd):
+            out = R.main(path, "2026-11-24", final=True)
+        self.assertIn("NOTE: Washington Wizards has NOT YET SUBMITTED", out)
+        self.assertIn("  BOS @ WSH", out)
+        self.assertIn("DROP    Cam 10+ -- Cam Johnson is now Out", out)        # nickname matched to 'Johnson, Cameron'
+        self.assertIn("KEEP    Steady 5+", out)
+        self.assertIn("KEEP    BOS ML -- DraftKings now -550 (was -453), 83% no-vig", out)
+        self.assertIn("KEEP    Marner 1+ -- FanDuel now -1800 (was -2000)", out)   # Mitch / Mitchell: in the lines
+        self.assertTrue(out.endswith("3 of 4 legs stay."))
+        self.assertTrue(os.path.exists(os.path.join(d, "price_log.jsonl")))
+
+
 class FinalViewTest(unittest.TestCase):
     def test_keep_caution_drop(self):
         legs = [dict(id="1", label="A"), dict(id="1", label="B"), dict(id="2", label="C"), dict(id="2", label="D")]
