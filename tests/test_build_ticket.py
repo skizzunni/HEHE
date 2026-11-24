@@ -84,7 +84,7 @@ class FallbackTest(unittest.TestCase):
                      market_home=0.21, blind_home=0.28),
                 dict(lg="nhl", game="X @ Y", id="7", home="Y", away="X", home_ml=-400, away_ml=300,
                      market_home=0.78, blind_home=0.40)]
-        t = B.fallback("2026-11-24", rows)
+        t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=lambda rows: [])
         legs = [L for g in t["games"].values() for L in g]
         self.assertEqual([(L["team"], L["price"]) for L in legs], [("BOS", "-453")])
         reasons = dict(t["left_off"])
@@ -101,8 +101,33 @@ class BackToBackTest(unittest.TestCase):
         self.assertIn("back-to-back", legs[0]["label"])
         rows = [dict(lg="nba", game="BOS @ WSH", id="8", home="WSH", away="BOS", home_ml=351, away_ml=-453,
                      market_home=0.21, blind_home=0.28)]
-        f = B.fallback("2026-11-24", rows, b2b_fn=lambda team, day: team == "BOS")
+        f = B.fallback("2026-11-24", rows, b2b_fn=lambda team, day: team == "BOS", props_fn=lambda rows: [])
         self.assertIn("back-to-back", [L for g in f["games"].values() for L in g][0]["label"])
+
+
+class FallbackPropsTest(unittest.TestCase):
+    def test_fanduel_props_join_the_ticket(self):
+        rows = [dict(lg="nba", game="BOS @ WSH", id="8", home="WSH", away="BOS", home_ml=500, away_ml=-700,
+                     market_home=0.15, blind_home=0.28)]
+        pg = [{"id": "nba:8", "match": "BOS @ WSH", "props": [
+            dict(name="Jaylen Brown", label="Jaylen Brown: 15+ Points", p=0.87, imp=0.9, price="-900", market="Points", line="15+"),
+            dict(name="Hurt Guy", label="Hurt Guy: 5+ Points", p=0.87, imp=0.95, price="-2000", market="Points", line="5+")]}]
+        t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=lambda r: pg,
+                       status_fn=lambda n: "Out" if n == "Hurt Guy" else None)
+        legs = t["games"]["BOS @ WSH"]
+        self.assertEqual([L["kind"] for L in legs], ["ml", "prop"])
+        self.assertEqual(legs[1]["player"], "Jaylen Brown")
+        self.assertIn("big favourite", legs[1]["label"])          # 85% favourite: blowout flag
+        self.assertTrue(any("Out on the official injury report" in why for _, why in t["left_off"]))
+
+    def test_fanduel_down_still_gives_winners(self):
+        def boom(rows):
+            raise OSError("down")
+        rows = [dict(lg="nba", game="BOS @ WSH", id="8", home="WSH", away="BOS", home_ml=351, away_ml=-453,
+                     market_home=0.21, blind_home=0.28)]
+        t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=boom)
+        self.assertIn("no props (FanDuel unreachable)", t["note"])
+        self.assertEqual(len(t["games"]["BOS @ WSH"]), 1)
 
 
 if __name__ == "__main__":

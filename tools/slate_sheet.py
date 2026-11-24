@@ -43,12 +43,14 @@ def row(lg, model, ev, summary):
     """One game: our numbers (from results only) and the market's, or None."""
     comp = ev["competitions"][0]
     t = {x["homeAway"]: x["team"]["abbreviation"] for x in comp["competitors"]}
+    names = {x["homeAway"]: x["team"].get("displayName") for x in comp["competitors"]}
     h, a = t["home"], t["away"]
     al = ALIAS.get(lg, {})
     p = bm.predict(model, al.get(h, h), al.get(a, a), bool(comp.get("neutralSite"))) if model else None
     pc = ((summary or {}).get("pickcenter") or [{}])[0] if summary else {}
     hm, am = (pc.get("homeTeamOdds") or {}).get("moneyLine"), (pc.get("awayTeamOdds") or {}).get("moneyLine")
     return dict(lg=lg, game=f"{a} @ {h}", start=ev.get("date"), id=ev.get("id"), home=h, away=a,
+                home_name=names.get("home"), away_name=names.get("away"),
                 blind_home_margin=round(p[0], 1) if p else None, blind_total=round(p[1], 1) if p else None,
                 blind_home=round(p[2], 3) if p else None,
                 line=pc.get("details"), total=pc.get("overUnder"), home_ml=hm, away_ml=am,

@@ -137,7 +137,7 @@ def text(t):
     return "\n".join(out)
 
 
-def fallback(day, rows=None, b2b_fn=None):
+def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None):
     """Winners only, from DraftKings prices on ESPN (no-vig), when the board has
     not rebuilt for `day` (2026-11-24: every GitHub workflow switched off). Same
     winner checks: 75%+, our price-blind number not on the other side. Props
@@ -171,8 +171,53 @@ def fallback(day, rows=None, b2b_fn=None):
                                                         price=price_s, chance=chance / 100))
         elif chance >= MIN_WIN - 15:
             left.append((label, why))
-    return dict(games=games, left_off=left, note="The board has not rebuilt for this day: winners only, from "
-                "DraftKings prices on ESPN; no props. Check tools/key_absences.py before using any NBA leg.")
+    note = ("The board has not rebuilt for this day: winners from DraftKings prices on ESPN, props straight "
+            "from FanDuel (the card's ~87% lines, players on the official injury report left off). "
+            "Check tools/key_absences.py before using any NBA leg.")
+    if props_fn is None:
+        props_fn = _fd_props
+    try:
+        pg = props_fn(rows)
+    except Exception:
+        pg = []
+        note = note.replace("props straight from FanDuel", "no props (FanDuel unreachable)")
+    if pg:
+        st = status_fn or _report_status(day)
+        fav = {f"{r['lg']}:{r.get('id')}": round(100 * max(r["market_home"], 1 - r["market_home"]))
+               for r in rows if r.get("market_home") is not None}
+        tp = build({}, pg, key_out_fn=lambda r: [], blind_fn=lambda r: None, status_fn=st,
+                   fav_fn=lambda gid: fav.get(gid, 0), prop_locks=())
+        for m, L in tp["games"].items():
+            games.setdefault(m, []).extend(L)
+        left += tp["left_off"]
+    return dict(games=games, left_off=left, note=note)
+
+
+def _fd_props(rows):
+    """[{id, match, props}] from FanDuel for each NBA / NHL / NFL game in the
+    slate rows (fd_props, the board's own FanDuel reader and prop pricing)."""
+    import fanduel
+    import fd_props
+    book = fanduel.load()
+    out = []
+    for r in rows:
+        if r.get("lg") not in ("nba", "nhl", "nfl") or not r.get("home_name"):
+            continue
+        g = fanduel.find(book, r["lg"], r.get("away_name"), r.get("home_name"))
+        if g:
+            out.append(dict(id=f"{r['lg']}:{r.get('id')}", match=r["game"], props=fd_props.for_game(g, r["lg"])))
+    return out
+
+
+def _report_status(day):
+    """player display name -> official injury report status for `day`."""
+    import key_absences as K
+    import nba_injury_report as R
+    _, txt = R.latest()
+    rows = R.parse(txt or "")["rows"] if txt else []
+    mmdd = dt.date.fromisoformat(day).strftime("%m/%d/%Y")
+    status = {r["player"]: r["status"] for r in rows if r["date"] == mmdd}
+    return lambda name: status.get(K.report_name(name))
 
 
 class StaleBoard(Exception):
