@@ -5202,6 +5202,12 @@ Correction, same day: the first run compared ESPN's UTC game times with ET prop 
 the night-before game, and read 82.2% / 80.0% (z -0.90 / -1.64); fixed above. Same data, second
 night of a back-to-back: 85.3% then 84.9% vs 85.5% / 85.2% stated -- no effect.
 
+**Checked, no change: the last-10 test on NHL shots props (2026-11-24).** 1,119 graded NHL Shots on
+Goal props priced -500 or shorter, each player's last 10 games from the NHL's game logs, split at Nov 3.
+Reached the line in under 70% of them: 18/20 then 8/8; 70-84%: 86.2% then 87.6%; 85-99%: 89.7% then
+85.4%; all 10: 86.1% then 87.7% (vs ~85% stated throughout). Nothing short, so the NBA-only caution
+stays NBA-only.
+
 **Checked: the ticket's 75%+ winners (2026-11-24).** Graded board NBA / NHL / NFL / college basketball
 winners stated 75%+ (180, split Nov 8): 77/90 (86% vs 87% stated, z -0.30) then 80/90 (89% vs 88%, z
 +0.37). NBA 80% vs 82% then 82% vs 83%; college basketball 94% vs 96% then 93% vs 93%; NFL 75% vs 79% then
