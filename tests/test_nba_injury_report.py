@@ -59,5 +59,26 @@ class LatestTest(unittest.TestCase):
         self.assertEqual(len(asked), 3)
 
 
+class RealReportTest(unittest.TestCase):
+    """The official 2026-11-23 6:30 PM report, as pdftotext -layout gives it."""
+    def test_every_status_parsed_and_teams_right(self):
+        import collections
+        import re
+        path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "fixtures", "nba_injury_2026-11-23_0630PM.txt")
+        text = open(path).read()
+        r = R.parse(text)
+        statuses = sum(len(re.findall(r"\b(Out|Doubtful|Questionable|Probable|Available)\b", l)) for l in text.splitlines())
+        self.assertEqual(len(r["rows"]), statuses)
+        self.assertEqual(len(r["rows"]), 124)
+        teams = collections.defaultdict(set)
+        for x in r["rows"]:
+            teams[(x["date"], x["matchup"])].add(x["team"])
+        self.assertTrue(all(len(v) <= 2 and None not in v for v in teams.values()))
+        got = {(x["player"], x["team"], x["status"]) for x in r["rows"]}
+        self.assertIn(("Mobley, Evan", "Cleveland Cavaliers", "Out"), got)
+        self.assertIn(("Embiid, Joel", "Philadelphia 76ers", "Out"), got)
+        self.assertFalse(any(x["player"].startswith("Gilgeous-Alexander") for x in r["rows"]))
+
+
 if __name__ == "__main__":
     unittest.main()
