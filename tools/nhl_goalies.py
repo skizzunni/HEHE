@@ -224,5 +224,5 @@ def text(rows, rosters=None, career_fn=None):
 
 
 if __name__ == "__main__":
-    day = sys.argv[1] if len(sys.argv) > 1 else dt.datetime.now(ET).date().isoformat()
+    day = __import__("build_ticket").resolve_day(sys.argv[1] if len(sys.argv) > 1 else None)
     print(text(parse(fetch(day)), team_goalies()))

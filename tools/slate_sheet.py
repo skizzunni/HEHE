@@ -82,6 +82,7 @@ def main(day):
 
 
 if __name__ == "__main__":
-    day = sys.argv[1] if len(sys.argv) > 1 else __import__("datetime").date.today().isoformat()
+    # 'today' / 'tomorrow' / YYYY-MM-DD in ET (date.today() is the UTC day after 7 PM ET)
+    day = __import__("build_ticket").resolve_day(sys.argv[1] if len(sys.argv) > 1 else None)
     for r in main(day):
         print(text(r))
