@@ -5173,3 +5173,10 @@ shorter 88.7% then 87.2%; -999 to -500 84.1% then 83.8% (difference z about 2.1 
 2.8 in both halves, so no prop is cut; build_ticket lists the day's Prop Locks first and labels them.
 The card picks each player's longest-priced line at the floor, which lands in the weaker price group --
 on watch as props accumulate.
+
+**Checked: the ticket's 75%+ winners (2026-11-24).** Graded board NBA / NHL / NFL / college basketball
+winners stated 75%+ (180, split Nov 8): 77/90 (86% vs 87% stated, z -0.30) then 80/90 (89% vs 88%, z
++0.37). NBA 80% vs 82% then 82% vs 83%; college basketball 94% vs 96% then 93% vs 93%; NFL 75% vs 79% then
+12/12; NHL 7 picks. By band 75-80% z +1.43 / -0.23, 80-85% -1.36 / -0.15, 85%+ -1.18 / +1.14. No league
+or band short in both halves, so the ticket's 75% floor stands as is. Road favourites ran ahead (11/11
+then 21/23 vs ~80%, z +1.64 / +1.25): on watch, too few to act on.
