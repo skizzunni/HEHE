@@ -37,6 +37,15 @@ class PriceCheckTest(unittest.TestCase):
                                                     ("Gone", "this line is no longer posted at FanDuel")])
 
 
+class MlCheckTest(unittest.TestCase):
+    def test_moneyline_move(self):
+        legs = [dict(kind="ml", id="8", team="BOS", price="-453", label="BOS ML"),
+                dict(kind="ml", id="9", team="DEN", price="-324", label="DEN ML")]
+        rows = [dict(id="8", home="WSH", away="BOS", home_ml=400, away_ml=-550, market_home=0.17),
+                dict(id="9", home="DEN", away="DAL", home_ml=-324, away_ml=260, market_home=0.73)]
+        self.assertEqual(R.ml_check(legs, rows), [("BOS ML", "DraftKings now -550 (was -453), 83% no-vig")])
+
+
 class NhlLineupTest(unittest.TestCase):
     def test_lineup_page_and_flags(self):
         import json

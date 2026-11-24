@@ -76,6 +76,30 @@ def price_check(legs, current):
     return out
 
 
+def ml_check(legs, rows):
+    """[(label, note)] for moneyline legs whose DraftKings price (ESPN) has
+    moved since the ticket, with the no-vig chance now. rows: slate_sheet rows."""
+    out = []
+    by = {str(r.get("id")): r for r in rows or []}
+    for L in legs:
+        if L.get("kind") != "ml":
+            continue
+        r = by.get(str(L.get("id")))
+        if not r or r.get("home_ml") is None or r.get("away_ml") is None:
+            continue
+        home = L.get("team") == r.get("home")
+        now = r["home_ml"] if home else r["away_ml"]
+        try:
+            moved = float(now) != float(str(L.get("price")).replace("+", ""))
+        except (TypeError, ValueError):
+            continue
+        if moved:
+            mh = r.get("market_home")
+            p = "" if mh is None else f", {round(100 * (mh if home else 1 - mh))}% no-vig"
+            out.append((L.get("label"), f"DraftKings now {int(now):+d} (was {L.get('price')}){p}"))
+    return out
+
+
 def recheck(legs, status_fn, team_out_fn=None):
     """[(leg label, note)] for legs that need a look. status_fn(display name)
     -> report status or None; team_out_fn(team abbr) -> [(name, min, status)]."""
@@ -132,9 +156,10 @@ def main(path, day):
     try:
         import build_ticket as B
         import slate_sheet
-        pg = B._fd_props(slate_sheet.main(day))
+        rows = slate_sheet.main(day)
+        pg = B._fd_props(rows)
         current = {(p["name"], p.get("market"), str(p.get("line"))): p.get("price") for g in pg for p in g["props"]}
-        prices = price_check(legs, current) if current else []
+        prices = (price_check(legs, current) if current else []) + ml_check(legs, rows)
     except Exception:
         prices = []
     return text(flags + recheck_nhl(legs, lineups) + prices, rep.get("asof"))
