@@ -87,6 +87,17 @@ class BoardPropTest(unittest.TestCase):
         self.assertEqual(G.grade(dict(pk, line=6.0, line_text="6+"), {}, False, NHL_BOX), "open")
         self.assertEqual(G.grade(dict(pk, player="Nobody Else"), {}, True, NHL_BOX), "push")   # did not play: void
 
+    def test_live_shows_nhl_shots_count(self):
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        json.dump([dict(label="Boldy 6+ SOG", id="1", lg="nhl", kind="prop", market="Shots on Goal",
+                        player="Matt Boldy", stat="Shots on Goal", line=6.0, line_text="6+", price=-150)], open(path, "w"))
+        box = dict(NHL_BOX, header={"competitions": [{"status": {"type": {"completed": False, "shortDetail": "10:00 - 2nd"}},
+                                                     "competitors": []}]})
+        out = G.live(path, get=lambda u: box)
+        self.assertEqual(out, ["OPEN  Boldy 6+ SOG -- 10:00 - 2nd: 5 of 6"])
+
 
 if __name__ == "__main__":
     unittest.main()

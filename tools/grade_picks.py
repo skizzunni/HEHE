@@ -102,34 +102,42 @@ def standing(pick, scores):
     return f"{so_far}, {word}"
 
 
-def board_prop(pick, summary):
-    """('won'|'lost'|'void'|None) for a prop graded exactly as the board grades
-    it (props_ledger: its market -> stat map, player matching, line rules);
-    None when the pick carries no market the board knows. 2026-11-24: NHL
-    'Shots on Goal' has no plain box-score label, so the label path returned
-    nothing and a winning shots prop would have been graded LOST."""
+def board_value(pick, summary):
+    """(value, how) for a prop's player stat the way the board reads it
+    (props_ledger's market -> stat map and player matching). value is None
+    when the market is unknown or the player is not found; how is
+    props_ledger's match note ('absent' = did not play)."""
     lg, market = pick.get("lg"), pick.get("market")
     try:
         sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
         import props_ledger
         fn = (props_ledger.MARKETS.get(lg) or {}).get(market)
     except Exception:
-        return None
+        return None, None
     if not fn or not summary:
-        return None
-    stats = props_ledger.box_stats(summary)
-    st, how = props_ledger.resolve(stats, {"name": pick["player"]})
+        return None, None
+    st, how = props_ledger.resolve(props_ledger.box_stats(summary), {"name": pick["player"]})
+    if how == "absent" or st is None:
+        return None, how
+    try:
+        return fn(st), how
+    except Exception:
+        return None, how
+
+
+def board_prop(pick, summary):
+    """('won'|'lost'|'void'|None) for a prop graded exactly as the board grades
+    it (props_ledger: its market -> stat map, player matching, line rules);
+    None when the pick carries no market the board knows. 2026-11-24: NHL
+    'Shots on Goal' has no plain box-score label, so the label path returned
+    nothing and a winning shots prop would have been graded LOST."""
+    value, how = board_value(pick, summary)
     if how == "absent":
         return "void"
-    if st is None:
-        return None
-    try:
-        value = fn(st)
-    except Exception:
-        return None
     if value is None:
         return None
-    ok = props_ledger.won(lg, market, pick.get("line_text") or f"{pick['line']:g}+", value)
+    import props_ledger
+    ok = props_ledger.won(pick.get("lg"), pick.get("market"), pick.get("line_text") or f"{pick['line']:g}+", value)
     return None if ok is None else ("won" if ok else "lost")
 
 
@@ -191,7 +199,9 @@ def live(path, get=None):
         scores, done, clock, d = final(p["lg"], p["id"], get, with_clock=True, raw=True)
         r = grade(p, scores, done, d)
         if p["kind"] == "prop" and r == "open":
-            v = player_stat(d, p["player"], p["stat"])
+            v = board_value(p, d)[0] if p.get("market") else None
+            if v is None:
+                v = player_stat(d, p["player"], p["stat"])
             have = "not in the box score yet" if v is None else f"{v:g} of {p['line']:g}"
             out.append(f"OPEN  {p.get('label') or p} -- {clock}: {have}")
             continue
