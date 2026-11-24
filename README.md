@@ -5200,11 +5200,13 @@ vs 85.1% stated, z -1.16) then 103/125 (82.4% vs 85.0%, z -0.83). 70-84%: 84.1% 
 but weak and under the bar, so the ticket shows it beside the leg (tools/nba_minutes.last10_hits) and
 never drops one.
 Corrections, same day: (1) the first run compared ESPN's UTC game times with ET dates (82.2% / 80.0%);
-(2) the second read 75.9% / 80.5% (z -2.81 / -1.48) -- inflated by a leak: props.json dates many props
-by the UTC day, one day after an evening game, so "games before the prop date" took in the prop's own
-game. Anchoring on the event id removes it; the numbers above are the clean ones.
+(2) the second read 75.9% / 80.5% (z -2.81 / -1.48) -- inflated by a leak in my own script: it kept
+only the UTC calendar day of each game and then converted that day to ET again, which moved games
+before 8 PM ET (all of them under daylight time, to Nov 1) back a day, so a prop's own game counted as
+"before" it. props.json itself is right: all 3,561 NBA prop dates match their game's ET date.
+Anchoring on the event id removes the leak; the numbers above are the clean ones.
 
-**Re-checked leak-free: the low-minutes prop caution holds (2026-11-24).** After the date leak above,
+**Re-checked leak-free: the low-minutes prop caution holds (2026-11-24).** After the script leak above,
 the Nov 23 minutes caution (NBA props on players under 20 min a game over their last 5) was re-run
 anchored on each game's event id: 38/54 (70.4% vs 83.9% stated, z -2.72) then 56/73 (76.7% vs 83.7%,
 z -1.62); priced -500 or shorter, 30/44 (68.2%, z -3.18) then 49/62 (79.0%, z -1.31). 20+ minutes: on
@@ -5215,8 +5217,8 @@ half, so still a caution, and the stronger of the two prop cautions.
 Goal props priced -500 or shorter, each player's last 10 games from the NHL's game logs, split at Nov 3.
 Reached the line in under 70% of them: 18/20 then 8/8; 70-84%: 86.2% then 87.6%; 85-99%: 89.7% then
 85.4%; all 10: 86.1% then 87.7% (vs ~85% stated throughout). Nothing short, so the NBA-only caution
-stays NBA-only. (This run used the prop's date, which can be a day late -- see the NBA correction; a
-leak could only make low-hit props look worse, and none looked worse.)
+stays NBA-only. (NHL game logs carry local calendar dates, so this run did not have the NBA script's
+leak; a leak could only have made low-hit props look worse, and none looked worse.)
 
 **On watch: the heaviest props are understated (2026-11-24).** All graded props priced -2500 or
 shorter: 180/196 (91.8%) then 162/168 (96.4%) vs ~87% stated, split at Nov 4 (z about +1.8 / +3.6);
