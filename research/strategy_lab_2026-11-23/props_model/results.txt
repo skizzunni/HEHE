@@ -1,0 +1,93 @@
+NBA props model test. split 2026-11-06. joined 3317 {'imp from price': 16, 'grade mismatch': 5}. imp = with-vig (overs only; no under prices exist).
+
+== test H2 (fit on H1, n_fit 1567, n_test 1750)  hit 83.7%  mean imp 89.4%  mean model 84.8%  corr(model,imp) 0.684
+   adj c1=0.624 c2={'pts': 0.113, 'reb': -0.112, 'ast': -0.105, 'tpm': -0.023}  platt model [np.float64(1.332), np.float64(0.247)] imp [np.float64(0.56), np.float64(0.502)]
+   stack coef [a, b_imp, c_model] [0.557, 0.535, -0.047]   raw-model calibration (lo, hi, n, hit, mean p_raw): [(0, 0.6, 45, 0.756, 0.534), (0.6, 0.8, 660, 0.806, 0.734), (0.8, 0.9, 758, 0.855, 0.85), (0.9, 0.95, 193, 0.824, 0.925), (0.95, 0.98, 83, 0.976, 0.965), (0.98, 1.01, 11, 1.0, 0.981)]
+   model_cal    brier 0.1354  logloss 0.4404
+   model_raw    brier 0.1394  logloss 0.4512
+   imp_withvig  brier 0.1376  logloss 0.4543
+   imp_recal    brier 0.1343  logloss 0.4357
+   stack_imp_model brier 0.1343  logloss 0.4358
+   bot_p        brier 0.1350  logloss 0.4396
+   >=5 cur-season games (n 1735): model {'brier': 0.1347, 'logloss': 0.439}  imp {'brier': 0.1369, 'logloss': 0.4522}
+   over edge>=3                             {'n': 141, 'hit': 74.5, 'imp': 78.9, 'z': -1.28, 'roi': -5.4}
+   under signal (model over < imp-3)        {'n': 1310, 'hit': 85.6, 'imp': 91.6, 'z': -7.78, 'roi': None}
+   over edge>=5                             {'n': 39, 'hit': 82.1, 'imp': 77.9, 'z': 0.63, 'roi': 5.6}
+   under signal (model over < imp-5)        {'n': 964, 'hit': 86.9, 'imp': 92.4, 'z': -6.47, 'roi': None}
+   over edge>=8                             {'n': 2, 'hit': 100.0, 'imp': 71.2, 'z': 0.9, 'roi': 40.8}
+   under signal (model over < imp-8)        {'n': 296, 'hit': 88.2, 'imp': 95.2, 'z': -5.76, 'roi': None}
+   Points           n 394  model 0.1090/0.3722  imp 0.1129/0.3951  edge5 {'n': 2, 'hit': 100.0, 'imp': 78.4, 'z': 0.74, 'roi': 27.5}
+   Rebounds         n 172  model 0.0904/0.3287  imp 0.0873/0.3136  edge5 {'n': 0}
+   Assists          n 264  model 0.1637/0.5102  imp 0.1645/0.5239  edge5 {'n': 18, 'hit': 83.3, 'imp': 77.8, 'z': 0.57, 'roi': 7.0}
+   Threes Made      n 158  model 0.1462/0.4687  imp 0.1539/0.5114  edge5 {'n': 0}
+   Pts + Ast        n 276  model 0.1405/0.4536  imp 0.1425/0.4619  edge5 {'n': 6, 'hit': 83.3, 'imp': 78.3, 'z': 0.3, 'roi': 6.6}
+   Pts + Reb + Ast  n 318  model 0.1466/0.4715  imp 0.1500/0.4876  edge5 {'n': 6, 'hit': 83.3, 'imp': 77.1, 'z': 0.37, 'roi': 9.3}
+   Reb + Ast        n 168  model 0.1587/0.4985  imp 0.1583/0.4987  edge5 {'n': 7, 'hit': 71.4, 'imp': 78.1, 'z': -0.43, 'roi': -8.5}
+
+== test H1 (fit on H2, n_fit 1750, n_test 1567)  hit 84.7%  mean imp 90.0%  mean model 83.5%  corr(model,imp) 0.578
+   adj c1=0.614 c2={'pts': 0.23, 'reb': -0.048, 'ast': 0.266, 'tpm': 0.111}  platt model [np.float64(1.054), np.float64(0.369)] imp [np.float64(0.374), np.float64(0.574)]
+   stack coef [a, b_imp, c_model] [0.374, 0.57, 0.005]   raw-model calibration (lo, hi, n, hit, mean p_raw): [(0, 0.6, 66, 0.848, 0.497), (0.6, 0.8, 529, 0.826, 0.728), (0.8, 0.9, 669, 0.845, 0.851), (0.9, 0.95, 240, 0.863, 0.922), (0.95, 0.98, 61, 0.984, 0.961), (0.98, 1.01, 2, 1.0, 0.982)]
+   model_cal    brier 0.1297  logloss 0.4272
+   model_raw    brier 0.1388  logloss 0.4505
+   imp_withvig  brier 0.1306  logloss 0.4413
+   imp_recal    brier 0.1278  logloss 0.4214
+   stack_imp_model brier 0.1278  logloss 0.4214
+   bot_p        brier 0.1280  logloss 0.4230
+   >=5 cur-season games (n 511): model {'brier': 0.1273, 'logloss': 0.4193}  imp {'brier': 0.1284, 'logloss': 0.4258}
+   over edge>=3                             {'n': 36, 'hit': 77.8, 'imp': 76.7, 'z': 0.15, 'roi': -1.2}
+   under signal (model over < imp-3)        {'n': 1306, 'hit': 85.9, 'imp': 91.7, 'z': -7.61, 'roi': None}
+   over edge>=5                             {'n': 10, 'hit': 60.0, 'imp': 71.3, 'z': -0.83, 'roi': -22.6}
+   under signal (model over < imp-5)        {'n': 1099, 'hit': 86.4, 'imp': 92.2, 'z': -7.19, 'roi': None}
+   over edge>=8                             {'n': 3, 'hit': 0.0, 'imp': 56.2, 'z': -2.06, 'roi': -100.0}
+   under signal (model over < imp-8)        {'n': 557, 'hit': 88.9, 'imp': 93.5, 'z': -4.43, 'roi': None}
+   Points           n 332  model 0.1102/0.3777  imp 0.1137/0.4094  edge5 {'n': 0}
+   Rebounds         n 153  model 0.1547/0.4886  imp 0.1611/0.5252  edge5 {'n': 2, 'hit': 100.0, 'imp': 77.0, 'z': 0.77, 'roi': 30.1}
+   Assists          n 271  model 0.1350/0.4388  imp 0.1304/0.4274  edge5 {'n': 4, 'hit': 25.0, 'imp': 60.7, 'z': -1.54, 'roi': -66.4}
+   Threes Made      n 146  model 0.1356/0.4397  imp 0.1383/0.4538  edge5 {'n': 1, 'hit': 100.0, 'imp': 79.6, 'z': 0.51, 'roi': 25.6}
+   Pts + Ast        n 206  model 0.1222/0.4101  imp 0.1208/0.4104  edge5 {'n': 2, 'hit': 100.0, 'imp': 78.9, 'z': 0.73, 'roi': 26.7}
+   Pts + Reb + Ast  n 274  model 0.1221/0.4103  imp 0.1199/0.4047  edge5 {'n': 0}
+   Pts + Reb        n 53   model 0.2110/0.6342  imp 0.2333/0.8170  edge5 {'n': 1, 'hit': 0.0, 'imp': 78.7, 'z': -1.92, 'roi': -100.0}
+   Reb + Ast        n 132  model 0.1276/0.4211  imp 0.1257/0.4129  edge5 {'n': 0}
+
+== line height (terciles within market) {'Points': (5, 10), 'Rebounds': (4, 6), 'Assists': (2, 4), 'Threes Made': (1, 1), 'Pts + Ast': (10, 20), 'Pts + Reb + Ast': (15, 20), 'Pts + Reb': (10, 15), 'Reb + Ast': (5, 10)}
+   H1 low   n 825  model 0.1331/0.4345  imp 0.1374/0.4610  edge5 {'n': 3, 'hit': 100.0, 'imp': 76.1, 'z': 0.97, 'roi': 31.5}
+   H1 mid   n 470  model 0.1161/0.3938  imp 0.1131/0.3908  edge5 {'n': 2, 'hit': 100.0, 'imp': 78.9, 'z': 0.73, 'roi': 26.7}
+   H1 high  n 272  model 0.1430/0.4625  imp 0.1401/0.4690  edge5 {'n': 5, 'hit': 20.0, 'imp': 65.4, 'z': -2.27, 'roi': -74.9}
+   H2 low   n 975  model 0.1364/0.4432  imp 0.1398/0.4639  edge5 {'n': 13, 'hit': 69.2, 'imp': 78.1, 'z': -0.77, 'roi': -11.6}
+   H2 mid   n 520  model 0.1424/0.4576  imp 0.1443/0.4692  edge5 {'n': 15, 'hit': 86.7, 'imp': 78.2, 'z': 0.8, 'roi': 11.0}
+   H2 high  n 255  model 0.1172/0.3951  imp 0.1159/0.3872  edge5 {'n': 11, 'hit': 90.9, 'imp': 77.1, 'z': 1.09, 'roi': 18.5}
+
+== rule verdicts (ADOPTED: z>=2.8 & ROI>0 both halves; on watch: ROI>0 both halves)
+   rejected   over edge>=3                 H1 {'n': 36, 'hit': 77.8, 'imp': 76.7, 'z': 0.15, 'roi': -1.2}  H2 {'n': 141, 'hit': 74.5, 'imp': 78.9, 'z': -1.28, 'roi': -5.4}
+   rejected   over edge>=5                 H1 {'n': 10, 'hit': 60.0, 'imp': 71.3, 'z': -0.83, 'roi': -22.6}  H2 {'n': 39, 'hit': 82.1, 'imp': 77.9, 'z': 0.63, 'roi': 5.6}
+   rejected   over edge>=8                 H1 {'n': 3, 'hit': 0.0, 'imp': 56.2, 'z': -2.06, 'roi': -100.0}  H2 {'n': 2, 'hit': 100.0, 'imp': 71.2, 'z': 0.9, 'roi': 40.8}
+   no sample  Points edge>=3               H1 {'n': 0}  H2 {'n': 6, 'hit': 83.3, 'imp': 79.5, 'z': 0.23, 'roi': 5.0}
+   no sample  Points edge>=5               H1 {'n': 0}  H2 {'n': 2, 'hit': 100.0, 'imp': 78.4, 'z': 0.74, 'roi': 27.5}
+   no sample  Points edge>=8               H1 {'n': 0}  H2 {'n': 0}
+   rejected   Rebounds edge>=3             H1 {'n': 3, 'hit': 100.0, 'imp': 77.2, 'z': 0.94, 'roi': 29.6}  H2 {'n': 2, 'hit': 50.0, 'imp': 78.5, 'z': -0.98, 'roi': -36.5}
+   no sample  Rebounds edge>=5             H1 {'n': 2, 'hit': 100.0, 'imp': 77.0, 'z': 0.77, 'roi': 30.1}  H2 {'n': 0}
+   no sample  Rebounds edge>=8             H1 {'n': 0}  H2 {'n': 0}
+   rejected   Assists edge>=3              H1 {'n': 17, 'hit': 64.7, 'imp': 74.2, 'z': -0.93, 'roi': -17.6}  H2 {'n': 65, 'hit': 73.8, 'imp': 78.8, 'z': -0.98, 'roi': -6.2}
+   rejected   Assists edge>=5              H1 {'n': 4, 'hit': 25.0, 'imp': 60.7, 'z': -1.54, 'roi': -66.4}  H2 {'n': 18, 'hit': 83.3, 'imp': 77.8, 'z': 0.57, 'roi': 7.0}
+   rejected   Assists edge>=8              H1 {'n': 3, 'hit': 0.0, 'imp': 56.2, 'z': -2.06, 'roi': -100.0}  H2 {'n': 1, 'hit': 100.0, 'imp': 74.7, 'z': 0.58, 'roi': 33.9}
+   rejected   Threes Made edge>=3          H1 {'n': 3, 'hit': 100.0, 'imp': 79.7, 'z': 0.87, 'roi': 25.4}  H2 {'n': 2, 'hit': 0.0, 'imp': 80.0, 'z': -2.83, 'roi': -100.0}
+   no sample  Threes Made edge>=5          H1 {'n': 1, 'hit': 100.0, 'imp': 79.6, 'z': 0.51, 'roi': 25.6}  H2 {'n': 0}
+   no sample  Threes Made edge>=8          H1 {'n': 0}  H2 {'n': 0}
+   on watch   Pts + Ast edge>=3            H1 {'n': 7, 'hit': 100.0, 'imp': 78.8, 'z': 1.37, 'roi': 26.9}  H2 {'n': 24, 'hit': 87.5, 'imp': 78.8, 'z': 1.04, 'roi': 11.1}
+   on watch   Pts + Ast edge>=5            H1 {'n': 2, 'hit': 100.0, 'imp': 78.9, 'z': 0.73, 'roi': 26.7}  H2 {'n': 6, 'hit': 83.3, 'imp': 78.3, 'z': 0.3, 'roi': 6.6}
+   no sample  Pts + Ast edge>=8            H1 {'n': 0}  H2 {'n': 0}
+   rejected   Pts + Reb + Ast edge>=3      H1 {'n': 2, 'hit': 50.0, 'imp': 79.8, 'z': -1.05, 'roi': -37.2}  H2 {'n': 14, 'hit': 71.4, 'imp': 78.4, 'z': -0.64, 'roi': -8.2}
+   no sample  Pts + Reb + Ast edge>=5      H1 {'n': 0}  H2 {'n': 6, 'hit': 83.3, 'imp': 77.1, 'z': 0.37, 'roi': 9.3}
+   no sample  Pts + Reb + Ast edge>=8      H1 {'n': 0}  H2 {'n': 1, 'hit': 100.0, 'imp': 67.7, 'z': 0.69, 'roi': 47.6}
+   no sample  Pts + Reb edge>=3            H1 {'n': 1, 'hit': 0.0, 'imp': 78.7, 'z': -1.92, 'roi': -100.0}  H2 {'n': 0}
+   no sample  Pts + Reb edge>=5            H1 {'n': 1, 'hit': 0.0, 'imp': 78.7, 'z': -1.92, 'roi': -100.0}  H2 {'n': 0}
+   no sample  Pts + Reb edge>=8            H1 {'n': 0}  H2 {'n': 0}
+   rejected   Reb + Ast edge>=3            H1 {'n': 3, 'hit': 100.0, 'imp': 79.9, 'z': 0.87, 'roi': 25.2}  H2 {'n': 28, 'hit': 71.4, 'imp': 79.1, 'z': -1.0, 'roi': -9.7}
+   no sample  Reb + Ast edge>=5            H1 {'n': 0}  H2 {'n': 7, 'hit': 71.4, 'imp': 78.1, 'z': -0.43, 'roi': -8.5}
+   no sample  Reb + Ast edge>=8            H1 {'n': 0}  H2 {'n': 0}
+   rejected   low line edge>=3             H1 {'n': 20, 'hit': 90.0, 'imp': 78.5, 'z': 1.25, 'roi': 14.3}  H2 {'n': 57, 'hit': 73.7, 'imp': 79.2, 'z': -1.02, 'roi': -6.9}
+   rejected   low line edge>=5             H1 {'n': 3, 'hit': 100.0, 'imp': 76.1, 'z': 0.97, 'roi': 31.5}  H2 {'n': 13, 'hit': 69.2, 'imp': 78.1, 'z': -0.77, 'roi': -11.6}
+   rejected   mid line edge>=3             H1 {'n': 8, 'hit': 87.5, 'imp': 78.9, 'z': 0.6, 'roi': 10.6}  H2 {'n': 55, 'hit': 74.5, 'imp': 79.0, 'z': -0.81, 'roi': -5.5}
+   on watch   mid line edge>=5             H1 {'n': 2, 'hit': 100.0, 'imp': 78.9, 'z': 0.73, 'roi': 26.7}  H2 {'n': 15, 'hit': 86.7, 'imp': 78.2, 'z': 0.8, 'roi': 11.0}
+   rejected   high line edge>=3            H1 {'n': 8, 'hit': 37.5, 'imp': 70.2, 'z': -2.13, 'roi': -52.0}  H2 {'n': 29, 'hit': 75.9, 'imp': 78.1, 'z': -0.3, 'roi': -2.3}
+   rejected   high line edge>=5            H1 {'n': 5, 'hit': 20.0, 'imp': 65.4, 'z': -2.27, 'roi': -74.9}  H2 {'n': 11, 'hit': 90.9, 'imp': 77.1, 'z': 1.09, 'roi': 18.5}

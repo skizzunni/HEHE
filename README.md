@@ -34,6 +34,7 @@ are in the dated notes below.
 | Weather unders (wind 15+ or rain) | NFL | 104 | +35, +45 then -23, -27%: faded, rejected |
 | Two props on the same player in the same game | props | 1,377 player-games | Lose together: other leg 55% vs 83% stated after one lost, z +4.8/+4.7: **adopted -- already enforced** (one per player / one per game on every ticket) |
 | Prop markets, sides, line height, usage, last-5 form, league, chance band | props | 6,447 | All on par with stated; last-5 form adds nothing: rejected (NBA players under 20 min on watch) |
+| Player-level model (projected minutes with teammates out x shrunk per-minute rates) vs prop prices | NBA props | 3,317 | Better projections than last-5 averages, but the price is better calibrated in both halves; edge picks -22.6% / +5.6%: rejected |
 | Favourites, draws, win-or-draw, home/away, totals, Asian handicap, promoted teams, congestion (364 rules) | soccer, 38 leagues | 83,806 | None positive every season; win-or-draw and favourites lose at the close every season: rejected (8 on watch) |
 | Home dogs, big favourites, conference/Nov, blowouts, pace totals (54 rules) | college basketball | 24,602 | None positive every season; non-conference home dogs faded (-8.2% in 2025-26): rejected (2 on watch) |
 | Home/road dogs, run lines, unders, starter FIP/ERA gap, bullpen fatigue, day-after-night, streaks (49 rules) | MLB | 9,723 | None adopted; road dogs +130 to +159 on watch (z +2.10/+1.06) |
@@ -5128,3 +5129,15 @@ late-round dogs, ATP 500 early favourites, WTA top-50 players back from 60+ days
 
 **Overnight total, final: about 790 strategies across eleven families; one adopted, already in
 place.**
+
+**Rejected: a player-level NBA prop model (2026-11-23).** Asked to "find the right angle", the
+props were modelled player by player: projected minutes (recent games, adjusted for teammates out),
+per-minute rates shrunk toward the season and position, and a count or points distribution mixed
+over minutes, fitted on one date half and tested on the other (3,317 graded NBA props, split Nov 6;
+2025-26 box scores as the prior). The projections are good (minutes error 4.65 vs 4.83 for a
+last-5 average) but the price is better: Brier 0.1343 vs 0.1354 and 0.1278 vs 0.1297 once the
+price is recalibrated the same way, and a combined fit gives the model a weight of about zero.
+Props where the model is 5+ points above the price went 6/10 (-22.6%) then 32/39 (+5.6%); 8+ went
+0/3 then 2/2. Nothing clears the bar. The graded records are nearly all heavy "N+" overs, so the
+test could not see unders, alternate lines or two-book disagreements -- the next prop test needs
+both sides of the full board captured over time. Scripts: research/strategy_lab_2026-11-23/props_model/.
