@@ -13,6 +13,7 @@ dead feed prints a one-line note, the rest still prints):
   1. tools/slate_sheet.py      -- price-blind number first, then the DraftKings line
   2. tools/nba_injury_report.py -- the league's official injury report, incl. teams not yet submitted
   3. tools/nhl_goalies.py      -- starting goalies, confirmed or not, flagged when not the usual starter
+  4. tools/recheck_ticket.py   -- the day's saved ticket against the latest news and FanDuel prices
 """
 import datetime as dt
 import os
@@ -39,9 +40,28 @@ def _goalies(day):
     return nhl_goalies.text(nhl_goalies.parse(nhl_goalies.fetch(day)), nhl_goalies.team_goalies())
 
 
+def ticket_path(day, root=None):
+    """work/slate_<mon><dd>/ticket.json for `day` (ISO), e.g. work/slate_nov24/ticket.json."""
+    root = root or os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    d = dt.date.fromisoformat(day)
+    return os.path.join(root, "work", f"slate_{d:%b%d}".lower(), "ticket.json")
+
+
+def _ticket(day):
+    """The saved ticket re-checked (tools/recheck_ticket.py): injury report,
+    NHL lines, FanDuel prices. 2026-11-24: the afternoon and evening routines
+    run this brief; the re-check was a separate step they did not name."""
+    path = ticket_path(day)
+    if not os.path.exists(path):
+        return f"no saved ticket ({os.path.relpath(path)})"
+    import recheck_ticket
+    return recheck_ticket.main(path, day)
+
+
 SECTIONS = (("Our number first, then the line", _slate),
             ("Official NBA injury report", _injuries),
-            ("NHL starting goalies", _goalies))
+            ("NHL starting goalies", _goalies),
+            ("Your saved ticket, re-checked", _ticket))
 
 
 def brief(day, sections=SECTIONS):

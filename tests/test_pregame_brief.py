@@ -27,5 +27,13 @@ class BriefTest(unittest.TestCase):
         self.assertEqual(open(p).read(), "hello\n")
 
 
+class TicketSectionTest(unittest.TestCase):
+    def test_path_and_missing(self):
+        import tempfile
+        self.assertTrue(P.ticket_path("2026-11-24", "/r").endswith(os.path.join("work", "slate_nov24", "ticket.json")))
+        self.assertTrue(P.ticket_path("2026-12-05", "/r").endswith(os.path.join("work", "slate_dec05", "ticket.json")))
+        self.assertIn(("Your saved ticket, re-checked", P._ticket), P.SECTIONS)
+
+
 if __name__ == "__main__":
     unittest.main()
