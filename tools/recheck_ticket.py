@@ -53,6 +53,29 @@ def recheck_nhl(legs, lineups):
     return out
 
 
+def price_check(legs, current):
+    """[(label, note)] for prop legs whose line is no longer posted, or whose
+    price has moved, at FanDuel. current: {(player, market, line_text): price}.
+    2026-11-24: told the user four legs had gone from FanDuel when they were
+    still posted (the re-run had only chosen other players) -- look, don't guess."""
+    out = []
+    for L in legs:
+        if L.get("kind") != "prop":
+            continue
+        key = (L.get("player"), L.get("market"), L.get("line_text"))
+        if key not in current:
+            out.append((L.get("label"), "this line is no longer posted at FanDuel"))
+            continue
+        now, was = current[key], L.get("price")
+        try:
+            moved = float(str(now).replace("+", "")) != float(str(was).replace("+", ""))
+        except (TypeError, ValueError):
+            moved = False
+        if moved:
+            out.append((L.get("label"), f"FanDuel now {now} (was {was})"))
+    return out
+
+
 def recheck(legs, status_fn, team_out_fn=None):
     """[(leg label, note)] for legs that need a look. status_fn(display name)
     -> report status or None; team_out_fn(team abbr) -> [(name, min, status)]."""
@@ -106,7 +129,15 @@ def main(path, day):
             except Exception:
                 cache[gid] = []
         return cache[gid]
-    return text(flags + recheck_nhl(legs, lineups), rep.get("asof"))
+    try:
+        import build_ticket as B
+        import slate_sheet
+        pg = B._fd_props(slate_sheet.main(day))
+        current = {(p["name"], p.get("market"), str(p.get("line"))): p.get("price") for g in pg for p in g["props"]}
+        prices = price_check(legs, current) if current else []
+    except Exception:
+        prices = []
+    return text(flags + recheck_nhl(legs, lineups) + prices, rep.get("asof"))
 
 
 if __name__ == "__main__":

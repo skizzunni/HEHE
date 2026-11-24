@@ -26,6 +26,17 @@ class RecheckTest(unittest.TestCase):
         self.assertEqual(R.recheck(legs, lambda n: "Probable", boom), [])
 
 
+class PriceCheckTest(unittest.TestCase):
+    def test_moved_and_gone(self):
+        legs = [dict(kind="prop", player="Trae Young", market="Pts + Ast", line_text="15+", price="-1500", label="Trae"),
+                dict(kind="prop", player="Paul Reed", market="Rebounds", line_text="4+", price="-1200", label="Reed"),
+                dict(kind="prop", player="Gone Guy", market="Points", line_text="5+", price="-900", label="Gone"),
+                dict(kind="ml", team="BOS", price="-453", label="BOS")]
+        cur = {("Trae Young", "Pts + Ast", "15+"): "-1250", ("Paul Reed", "Rebounds", "4+"): "-1200"}
+        self.assertEqual(R.price_check(legs, cur), [("Trae", "FanDuel now -1250 (was -1500)"),
+                                                    ("Gone", "this line is no longer posted at FanDuel")])
+
+
 class NhlLineupTest(unittest.TestCase):
     def test_lineup_page_and_flags(self):
         import json
