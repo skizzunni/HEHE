@@ -78,6 +78,17 @@ class PropTest(unittest.TestCase):
         self.assertEqual(G.grade(pk, {}, False, box), "open")
         self.assertEqual(G.grade(dict(kind="prop", player="Kevon Looney", stat="PTS", line=5), {}, True, box), "push")
 
+    def test_absent_player_with_a_surname_twin_is_a_push(self):
+        """2026-11-25: Dejounte Murray did not play; Kris Murray did, so the
+        name was 'unresolved' and the prop graded LOST. FanDuel voids a DNP."""
+        from unittest import mock
+        pk = dict(kind="prop", lg="nba", market="Points", player="Dejounte Murray", line=5.0, line_text="5+", stat="PTS")
+        with mock.patch.object(G, "board_value", lambda p, s: (None, "unresolved")):
+            self.assertEqual(G.grade(pk, {"A": 1.0, "B": 2.0}, True, BOX_DONE), "push")
+            self.assertEqual(G.grade(pk, {}, False, BOX_DONE), "open")
+        kp = dict(pk, player="Keegan Murray", market=None)    # the one who did play still grades (label path)
+        self.assertEqual(G.grade(kp, {"A": 1.0, "B": 2.0}, True, BOX_DONE), "won")
+
     def test_prop_settles_when_reached(self):
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="PTS", line=5), {}, False, BOX), "won")
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, False, BOX), "open")

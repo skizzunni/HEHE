@@ -152,7 +152,11 @@ def board_prop(pick, summary):
     'Shots on Goal' has no plain box-score label, so the label path returned
     nothing and a winning shots prop would have been graded LOST."""
     value, how = board_value(pick, summary)
-    if how == "absent":
+    if how in ("absent", "unresolved"):
+        # 'unresolved': only a surname matches (exact, alias and first-name
+        # forms all failed), i.e. he is not in the box score -- a DNP, which
+        # FanDuel voids. 2026-11-25: Dejounte Murray (did not play Nov 13,
+        # Kris Murray did) graded LOST here.
         return "void"
     if value is None:
         return None
