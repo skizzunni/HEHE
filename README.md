@@ -5206,6 +5206,9 @@ numbers, grouped by p_fair - implied (over +1 pt "value", under -3 pts "short"),
 and price band, split at Nov 5. Value 274/327 (z +0.09) then 364/443 (z -0.34); short -0.37 then +1.29;
 middle +0.29 then -0.86. Being better priced than the consensus does not make a prop win more -- the
 price band already says what it will do, so the ticket does not prefer "value" props.
+NBA props at home vs on the road (2026-11-25): 3,269 of 3,308 graded props placed by ESPN's game summary
+(team from current rosters), split at Nov 6, each against its band. Home 661/778 (z +0.12) then 691/837
+(z -0.96); road 649/766 (z -0.13) then 751/888 (z +0.93). No side effect -- no change.
 
 **Checked, no rule: NBA prop cushion over the line (2026-11-25).** Cushion = (his last-10 average in
 the market - the line) / the spread of those 10 games, from ESPN game logs anchored on the prop's own
