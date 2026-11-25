@@ -5350,6 +5350,11 @@ rosters (31 unmatched), split at Nov 3, against the board's stated chance. Centr
 80.6%, z +1.66) then 312/381 (81.9% vs 81.2%, z +0.33); defencemen 94/122 (77.0% vs 80.4%, z -0.94)
 then 125/148 (84.5% vs 80.5%, z +1.22); left wings z -1.21 then +0.06; right wings +0.52 then +0.31.
 No position is off in both halves, so the ticket's three-per-game NHL legs are not reordered by position.
+By side (2026-11-25): 1,601 graded NHL Shots on Goal props matched to the board's call on the game (team
+from ESPN's current rosters), each against its price band, split at Nov 3. On the favourite: 363/446
+(81.4% vs 82.1%, z -0.42) then 416/507 (82.1% vs 83.4%, z -0.81); on the underdog: 236/283 (83.4% vs
+82.2%, z +0.52) then 312/365 (85.5% vs 83.7%, z +0.96). Underdogs (trailing teams shoot more) a point or
+two ahead both times, far under the bar -- watched, not used.
 
 **Checked: a heavy prop's hit rate barely moves with its price inside -700 to -1300 (2026-11-24).**
 All graded props by the price's implied chance, split at the median date. Implied 88-90%: 83.8% then
