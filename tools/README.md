@@ -19,6 +19,7 @@ Every script here, with the first paragraph of its own description.
 | `price_drift.py` | From each day's price_log.jsonl (recheck_ticket.py) and the graded ticket: legs whose price drifted vs firmed vs flat, and how each group did. Information only until enough days pass the usual bar. |
 | `recheck_ticket.py` | Re-checks a saved ticket (build_ticket.py --save) against the latest official NBA injury report: props on players now Out / Doubtful / Questionable, and NBA winners whose team now has a top-minutes player out (caution). Run before tip-off. |
 | `grade_preview.py` | Runs the board's own grader (ledger.grade) with saving switched off and prints what it would settle -- result, score and loss diagnosis -- so the record can be read while the board workflow is off. Writes nothing. |
+| `grader_agreement.py` | Re-grades the last N graded board props of a league (and market) with the ticket grader and counts agreements with the board -- a check before trusting the live tracker on a market (NFL yards: 25 of 25, Nov 25). |
 | `grade_picks.py` | Grades a saved JSON list of researched picks (spread / ml / over / under) from ESPN final scores: each pick won / lost / push / open, the record and flat $1 return. |
 | `prereg_nhl_dog.py` | Pre-registered forward test (2026-11-23): NHL underdog +1.5 when the favourite closes -200 or shorter, graded from ESPN closing lines on games from 2026-11-24; decides at 150 games. Information only. |
 | `clv.py` | Closing line value: the primary scoreboard. |
