@@ -303,6 +303,13 @@ def _played_on(comp):
     return None
 
 
+# ESPN's default college-basketball scoreboard lists only a featured handful of
+# games (2026-11-16: 1 of 33). Kentucky's 88-59 win over Grambling was not on
+# it, so the pick stayed open for a week and was about to be voided as "no
+# result". groups=50 is every Division I game.
+SCOREBOARD_ALL = {"ncaab": "&groups=50&limit=400"}
+
+
 def _search_days(e):
     """Scoreboard dates to look for a pick's game on, most likely first."""
     now = dt.datetime.now(ET).date()
@@ -331,7 +338,7 @@ def _final(lg, comp_id, e=None):
         return None
     reached = True
     for day in _search_days(e or {}):
-        d = get(f"{ESPN}/{path}/scoreboard?dates={day}")
+        d = get(f"{ESPN}/{path}/scoreboard?dates={day}{SCOREBOARD_ALL.get(lg, '')}")
         if not d:
             reached = False              # fetch failed -- absence proves nothing
         for ev in d.get("events", []):
