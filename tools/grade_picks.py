@@ -240,6 +240,39 @@ def _fetch(u):
         return None
 
 
+def short(p):
+    """'Trae Young 15+ Pts + Ast' / 'IOWA ML' / 'BOS -2.5' -- a leg in a few words."""
+    k = p.get("kind")
+    if k == "prop":
+        return f"{p.get('player')} {p.get('line_text') or format(p.get('line', 0), 'g') + '+'} {p.get('market') or p.get('stat')}"
+    if k == "ml":
+        return f"{p.get('team')} ML"
+    if k == "spread":
+        return f"{p.get('team')} {p.get('line'):+g}"
+    if k in ("over", "under"):
+        return f"{k} {p.get('line'):g}"
+    return p.get("label") or str(p)
+
+
+def brief(path, get=None):
+    """The live view in short words, legs not yet started left out and counted:
+    for check-ins during games (2026-11-24: the full labels ran 150 characters)."""
+    rows = live(path, get)
+    picks = load(path)
+    out, waiting = [], 0
+    for p, line in zip(picks, rows):
+        tail = line.split(" -- ", 1)[1] if " -- " in line else ""
+        if line.startswith("OPEN") and ("not in the box score yet" in tail or tail.endswith(("PM EST", "AM EST")) or "not started" in tail):
+            waiting += 1
+            continue
+        state = line.split()[0]
+        clock = tail.split(" -- ")[-1] if tail else ""
+        out.append(f"{state:5} {short(p)}" + (f" -- {clock}" if clock else ""))
+    if waiting:
+        out.append(f"({waiting} not started yet)")
+    return out
+
+
 def live(path, get=None):
     """One line per pick: WON/LOST/PUSH when final, else the clock and where it stands."""
     out = []
@@ -336,6 +369,9 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
 if __name__ == "__main__":
     if "--watch" in sys.argv:
         watch([a for a in sys.argv[1:] if a != "--watch"][0], emit=lambda m: print(m, flush=True))
+        sys.exit(0)
+    if "--brief" in sys.argv:
+        print("\n".join(brief([a for a in sys.argv[1:] if a != "--brief"][0])))
         sys.exit(0)
     if "--live" in sys.argv:
         print("\n".join(live([a for a in sys.argv[1:] if a != "--live"][0])))

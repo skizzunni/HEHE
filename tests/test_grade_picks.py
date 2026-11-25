@@ -124,6 +124,23 @@ class PropTest(unittest.TestCase):
         self.assertEqual(first, ["WON Murray 5+ -- had 5", "all picks settled: 1-0; all won: YES"])
         self.assertEqual(second, ["all picks settled: 1-0; all won: YES"])
 
+    def test_brief_view(self):
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        json.dump([dict(label="Murray 5+ long label", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS",
+                        line=5, price=-500),
+                   dict(label="Murray 9 reb", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="REB", line=9,
+                        price=-500),
+                   dict(label="Nobody 5+", id="1", lg="nba", kind="prop", player="Nobody Here", stat="PTS", line=5, price=-500)],
+                  open(path, "w"))
+        out = G.brief(path, get=lambda u: BOX)
+        self.assertEqual(out[0], "WON   Keegan Murray 5+ PTS")
+        self.assertTrue(out[1].startswith("OPEN  Keegan Murray 9+ REB -- "))
+        self.assertEqual(out[-1], "(1 not started yet)")
+        self.assertEqual(G.short(dict(kind="ml", team="IOWA")), "IOWA ML")
+        self.assertEqual(G.short(dict(kind="spread", team="BOS", line=-2.5)), "BOS -2.5")
+
     def test_watch_emits_each_settle_once(self):
         import json
         import tempfile
