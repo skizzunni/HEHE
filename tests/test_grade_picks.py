@@ -97,6 +97,25 @@ class PropTest(unittest.TestCase):
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, False, BOX), "open")
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, True, BOX), "lost")
 
+    def test_watch_picks_up_a_drop_made_while_it_runs(self):
+        """A recheck at 6:30 PM may drop a leg after the watch started; the
+        next round must leave it out of the record (2026-11-25)."""
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        json.dump([dict(label="keep", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500),
+                   dict(label="drop", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="REB", line=50, price=-500)],
+                  open(path, "w"))
+        state = {"box": BOX}
+
+        def nap(s):
+            json.dump(["drop"], open(path + ".dropped", "w"))
+            state["box"] = BOX_DONE
+        out = []
+        G.watch(path, get=lambda u: state["box"], sleep=nap, emit=out.append, remember=False)
+        self.assertEqual(out[-1], "all picks settled: 1-0; all won: YES")
+        self.assertFalse(any("drop" in m for m in out))
+
     def test_watch_fetches_each_game_once_per_round(self):
         import json
         import tempfile
