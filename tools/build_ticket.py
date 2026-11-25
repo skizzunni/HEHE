@@ -399,15 +399,52 @@ def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None, minutes
     return dict(games=games, left_off=left, note=note)
 
 
-def ladder_fallback(t):
-    """The ladder's own picker (ladder.best_combo: one leg per game, paying 2x-5x,
-    highest chance that all win) run on the fallback ticket's legs, for a day the
-    board's 8 AM Locks card does not exist. Labelled as a stand-in: the usual
-    ladder legs are the Locks. [] when nothing pays in the band."""
-    import ladder
-    legs = [dict(L, p=L["chance"], gid=L.get("gid") or f"{L.get('lg')}:{L.get('id')}")
-            for g in t["games"].values() for L in g]
-    return ladder.best_combo(legs)
+def ladder_fallback(t, lo=2.0, hi=5.0, maxk=6, step=0.002):
+    """The ladder's rule (one leg per game, up to 6, paying 2x-5x, highest
+    chance that all win) on the fallback ticket's legs, for a day the board's
+    8 AM Locks card does not exist. Labelled as a stand-in: the usual ladder
+    legs are the Locks. [] when nothing pays in the band.
+
+    2026-11-25: this ran ladder.best_combo, which only searches the 12
+    likeliest legs; on the fallback those are 87% NHL shots legs at ~1.06x,
+    so it said "nothing pays 2x" while six legs from six games paid 2.1x.
+    An exact search instead: a knapsack over games on log payout (floored to
+    `step`, so a found combo truly pays >= lo), every leg of every game."""
+    games = []
+    for g in t["games"].values():
+        opts = []
+        for L in g:
+            try:
+                d = _dec(L["price"])
+            except (KeyError, TypeError, ValueError):
+                continue
+            if L.get("chance") and d > 1:
+                opts.append((math.log(L["chance"]), int(math.log(d) / step), L))
+        if opts:
+            games.append(opts)
+    cap = int(math.log(hi) / step)
+    # best[(k, b)] = (log chance, legs) over the games seen so far
+    best = {(0, 0): (0.0, ())}
+    for opts in games:
+        nxt = dict(best)
+        for (k, b), (lp, legs) in best.items():
+            if k == maxk:
+                continue
+            for olp, ob, L in opts:
+                nb = b + ob
+                if nb > cap:
+                    continue
+                key, val = (k + 1, nb), (lp + olp, legs + (L,))
+                if key not in nxt or val[0] > nxt[key][0] + 1e-12:
+                    nxt[key] = val
+        best = nxt
+    need = math.log(lo) / step
+    ok = [(lp, legs) for (k, b), (lp, legs) in best.items()
+          if k and b >= need and lo <= math.prod(_dec(L["price"]) for L in legs) <= hi]
+    if not ok:
+        return []
+    top = max(lp for lp, _ in ok)
+    return list(min((legs for lp, legs in ok if lp >= top - 1e-12), key=len))
 
 
 def ladder_text(combo):

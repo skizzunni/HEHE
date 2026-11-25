@@ -1,5 +1,6 @@
 import os
 import sys
+import math
 import unittest
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -331,6 +332,27 @@ class LadderFallbackTest(unittest.TestCase):
         self.assertTrue(2.0 <= pays <= 5.0)
         self.assertIn("Ladder stand-in", B.ladder_text(combo))
         self.assertIn("nothing", B.ladder_text([]))
+
+    def test_finds_combo_outside_the_likeliest_dozen(self):
+        """2026-11-25: 12 likeliest legs were 1.06x shots legs; six games at
+        1.1x-1.25x paid 2x and the old search said nothing did."""
+        games = {f"H{i}": [dict(label=f"h{i}", price="-1600", chance=0.87, lg="nhl", id=f"h{i}")] for i in range(14)}
+        games.update({f"N{i}": [dict(label=f"n{i}", price="-850", chance=0.84, lg="nba", id=f"n{i}")] for i in range(5)})
+        games["ML"] = [dict(label="ml", price="-400", chance=0.77, lg="nba", id="ml")]
+        combo = B.ladder_fallback({"games": games, "left_off": []})
+        pays = math.prod(B._dec(L["price"]) for L in combo)
+        self.assertTrue(2.0 <= pays <= 5.0, pays)
+        self.assertLessEqual(len(combo), 6)
+        self.assertEqual(len(combo), len({L["id"] for L in combo}))
+
+    def test_one_leg_per_game_and_best_chance(self):
+        g = {"A": [dict(label="a1", price="-400", chance=0.80), dict(label="a2", price="-300", chance=0.70)],
+             "B": [dict(label="b1", price="-400", chance=0.80)], "C": [dict(label="c1", price="-400", chance=0.80)],
+             "D": [dict(label="d1", price="-400", chance=0.80)]}
+        combo = B.ladder_fallback({"games": g})
+        # a2 + b1 + c1 pays 2.60x at 44.8%, beating four -400s (2.44x at 41.0%)
+        self.assertEqual(sorted(L["label"] for L in combo), ["a2", "b1", "c1"])
+        self.assertEqual(B.ladder_fallback({"games": {"A": g["A"]}}), [])     # one game cannot reach 2x
 
 
 class SaveThenGradeTest(unittest.TestCase):
