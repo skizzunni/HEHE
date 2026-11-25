@@ -209,11 +209,15 @@ def load(path):
     (<ticket>.dropped, written by recheck_ticket --final)."""
     with open(path) as f:
         legs = json.load(f)
-    try:
-        with open(path + ".dropped") as f:
-            gone = set(json.load(f))
-    except (OSError, ValueError):
-        return legs
+    gone = set()
+    # its own drops, and the main ticket's for a file beside it (the ladder
+    # stand-in is a subset of ticket.json; a leg dropped there is gone here too)
+    for side in {path + ".dropped", os.path.join(os.path.dirname(path), "ticket.json.dropped")}:
+        try:
+            with open(side) as f:
+                gone |= set(json.load(f))
+        except (OSError, ValueError):
+            pass
     return [L for L in legs if L.get("label") not in gone]
 
 

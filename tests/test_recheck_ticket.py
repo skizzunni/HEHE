@@ -259,6 +259,9 @@ class NoteDroppedTest(unittest.TestCase):
         self.assertEqual(R.note_dropped(path, legs, []), ["Malkin 1+ SOG"])           # earlier drops kept
         self.assertEqual([L["label"] for L in G.load(path)], ["Karlsson 1+ SOG"])
         self.assertEqual(len(json.load(open(path))), 2)                                # the ticket is untouched
+        lad = os.path.join(os.path.dirname(path), "ticket_ladder.json")
+        json.dump([legs[0]], open(lad, "w"))
+        self.assertEqual(G.load(lad), [])                                              # the stand-in follows
 
 
 if __name__ == "__main__":
