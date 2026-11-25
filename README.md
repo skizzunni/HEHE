@@ -5189,6 +5189,17 @@ event id (only games before it, minutes > 0, at least 8). 3,138 graded props, qu
 ahead (z +0.70, +1.16). It overlaps the last-10 caution, which already flags these legs, so no new
 note. Murray (cushion 0.85, second quarter) was not a thin leg; Gafford (0.08) was, and won.
 
+**Found, not changed: the board sees about 1 in 9 college-basketball games (2026-11-25).** ESPN's
+college-basketball scoreboard without `groups=50` lists only a featured handful: on Nov 15, 18, 21 and
+22 it listed 23 games against 214 with `groups=50&limit=400`. The grader used it and missed Kentucky's
+Nov 16 win (fixed: `ledger.SCOREBOARD_ALL`). The same default URL is still what `dashboard.collect`
+builds the NCAAB slate from and what `anysport.fetch_games` builds NCAAB ratings from, so the board
+has priced 107 NCAAB games all season out of several thousand. Picks there are the market's no-vig
+price (calibration failed its untouched test), so the ratings do not set any chance today; widening
+the slate would add many more NCAAB picks to the sweep and the every-game line. That changes what the
+board shows, so it waits for the user's word; the 25-leg ticket's college legs already came from the
+full list (`build_ticket --ncaab`).
+
 **Checked, no cut: favourites missing a key player (2026-11-24).** After the user's Nov 23 ticket lost
 on the Raptors (-450, no Leonard / Barrett), Thunder (-190, eight out) and Cavaliers (-350, no Mobley):
 graded board NBA picks (174 matched to box scores), "key" = top 6 by minutes per game played over the
