@@ -257,10 +257,20 @@ def short(p):
 def brief(path, get=None):
     """The live view in short words, legs not yet started left out and counted:
     for check-ins during games (2026-11-24: the full labels ran 150 characters)."""
+    get = _once(get)
     rows = live(path, get)
     picks = load(path)
     out, waiting = [], 0
     for p, line in zip(picks, rows):
+        if line.split()[0] in ("WON", "LOST"):
+            # what settled it -- "had 3" for a prop, the score for a game leg
+            # (2026-11-25: Murray's LOST said nothing until a second lookup)
+            try:
+                scores, _, _, d = final(p["lg"], p["id"], get, with_clock=True, raw=True)
+                out.append(f"{line.split()[0]:5} {short(p)}{detail(p, scores, d)}")
+            except Exception:
+                out.append(f"{line.split()[0]:5} {short(p)}")
+            continue
         tail = line.split(" -- ", 1)[1] if " -- " in line else ""
         if line.startswith("OPEN") and ("not in the box score yet" in tail or tail.endswith(("PM EST", "AM EST")) or "not started" in tail):
             waiting += 1

@@ -140,7 +140,7 @@ class PropTest(unittest.TestCase):
                   open(path, "w"))
         out = G.brief(path, get=lambda u: BOX)
         self.assertEqual(out[0], "1 won, 0 lost, 2 still open")
-        self.assertEqual(out[1], "WON   Keegan Murray 5+ PTS")
+        self.assertEqual(out[1], "WON   Keegan Murray 5+ PTS -- had 5")     # what settled it, not the label note
         self.assertTrue(out[2].startswith("OPEN  Keegan Murray 9+ REB -- "))
         self.assertEqual(out[-1], "(1 not started yet)")
         self.assertEqual(G.short(dict(kind="ml", team="IOWA")), "IOWA ML")
