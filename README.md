@@ -5282,6 +5282,12 @@ or shorter, split at Nov 3. 1+ shots: 397/460 (86.3%) then 511/590 (86.6%) vs 85
 its price and on par with the board's capped chance. 2+ shots at those prices: 54/58 (93.1%) then 62/69
 (89.9%) vs 85% (z +1.78 / +1.13) -- ahead, but too few to act on. The ticket's NHL legs stay as they are.
 
+By position (2026-11-25): all 1,756 graded NHL Shots on Goal props, positions from ESPN's current
+rosters (31 unmatched), split at Nov 3, against the board's stated chance. Centres 248/294 (84.4% vs
+80.6%, z +1.66) then 312/381 (81.9% vs 81.2%, z +0.33); defencemen 94/122 (77.0% vs 80.4%, z -0.94)
+then 125/148 (84.5% vs 80.5%, z +1.22); left wings z -1.21 then +0.06; right wings +0.52 then +0.31.
+No position is off in both halves, so the ticket's three-per-game NHL legs are not reordered by position.
+
 **Checked: a heavy prop's hit rate barely moves with its price inside -700 to -1300 (2026-11-24).**
 All graded props by the price's implied chance, split at the median date. Implied 88-90%: 83.8% then
 83.9%; 90-91%: 85.2% / 85.9%; 91-92%: 85.6% / 84.3%; 92-93%: 86.3% / 83.3%; 93-94%: 88.6% / 90.0%;
