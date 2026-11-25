@@ -393,9 +393,32 @@ def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=N
         if b:
             out.append(f"Most likely 2x from these legs: {len(b['legs'])} legs, about {100 * b['chance']:.0f}% all win, "
                        f"pays {b['pays']:.2f}x -- " + "; ".join(_short(L, now_prices) for L in b["legs"]) + ".")
+        lad = ladder_now(kept_legs, now_prices, now_chance or {}, record or {})
+        if lad:
+            out.append(lad)
         for name, labels in (saved or {}).items():
             out.append(saved_line(name, labels, legs, notes, now_prices, now_chance or {}, record or {}))
     return "\n".join(out)
+
+
+def ladder_now(kept, now_prices, now_chance, record):
+    """The ladder stand-in worked out again on the kept legs at current prices
+    (one leg per game, up to 6, paying 2x-5x, likeliest) -- 2026-11-25: the
+    morning's stand-in slid to 1.93x by 1 PM, under the ladder's 2x floor,
+    and nothing offered one that still fits. "" when nothing does."""
+    import math
+    import build_ticket as B
+    odds = leg_odds(kept, now_prices, now_chance, record) or []
+    games = {}
+    for L, d, c in odds:
+        price = now_prices.get(L.get("label")) or L.get("price")
+        games.setdefault(str(L.get("id")), []).append(dict(L, price=price, chance=c))
+    combo = B.ladder_fallback({"games": games})
+    if not combo:
+        return ""
+    return (f"Ladder stand-in now (one leg per game, 2x-5x): {len(combo)} legs, about "
+            f"{100 * math.prod(L['chance'] for L in combo):.0f}% all win, pays "
+            f"{math.prod(B._dec(L['price']) for L in combo):.2f}x -- " + "; ".join(_short(L, now_prices) for L in combo) + ".")
 
 
 def saved_line(name, labels, legs, notes, now_prices, now_chance, record):

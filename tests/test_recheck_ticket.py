@@ -279,5 +279,14 @@ class SavedLineTest(unittest.TestCase):
         self.assertIn("Your morning 2x: 1 of its 2 legs now DROP", out)
 
 
+class LadderNowTest(unittest.TestCase):
+    def test_one_per_game_at_current_prices(self):
+        legs = [dict(label=f"G{i}", kind="ml", price="-400", lg="nba", id=str(i)) for i in range(4)]
+        legs.append(dict(label="G0b", kind="ml", price="-400", lg="nba", id="0"))
+        out = R.ladder_now(legs, {}, {L["label"]: 0.8 for L in legs}, {})
+        self.assertTrue(out.startswith("Ladder stand-in now (one leg per game, 2x-5x): 4 legs, about 41% all win, pays 2.44x"), out)
+        self.assertEqual(R.ladder_now(legs[:2], {}, {"G0": 0.8, "G1": 0.8}, {}), "")
+
+
 if __name__ == "__main__":
     unittest.main()
