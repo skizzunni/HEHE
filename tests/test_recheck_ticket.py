@@ -298,5 +298,17 @@ class LadderNowTest(unittest.TestCase):
         self.assertNotIn("G0", out.split("Ladder stand-in now")[1])
 
 
+class FreshFnTest(unittest.TestCase):
+    def test_undo_only_when_the_legs_own_sources_were_read(self):
+        nba, nhl, nfl = dict(lg="nba", id="1"), dict(lg="nhl", id="7"), dict(lg="nfl", id="9")
+        f = R.fresh_fn(True, True, {"7": [{"lines": 1}, {"lines": 2}]})
+        self.assertTrue(f(nba) and f(nhl))
+        self.assertFalse(f(nfl))                                              # NFL drops are kept
+        self.assertFalse(R.fresh_fn(True, False, {"7": [1, 1]})(nba))         # prices not read
+        self.assertFalse(R.fresh_fn(False, True, {})(nba))                    # report not read
+        self.assertFalse(R.fresh_fn(True, True, {"7": [{"lines": 1}, None]})(nhl))   # one team's lines failed
+        self.assertFalse(R.fresh_fn(True, True, {})(nhl))
+
+
 if __name__ == "__main__":
     unittest.main()

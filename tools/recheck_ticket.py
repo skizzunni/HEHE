@@ -318,14 +318,7 @@ def main(path, day, final=False):
         back = [d for d in (json.load(open(path + ".dropped")) if os.path.exists(path + ".dropped") else [])]
         rep_ok = bool(rep.get("asof") and rep.get("rows"))
 
-        def fresh(L):   # its own sources were read on this run: FanDuel's prices (a pulled line is a
-            # drop -- 2026-11-25 Holloway) and the NBA report or this game's NHL lines
-            if not prices_ok:
-                return False
-            if L.get("lg") == "nhl":
-                got = cache.get(L.get("id"), cache.get(str(L.get("id"))))
-                return bool(got) and all(got)
-            return rep_ok and L.get("lg") == "nba"
+        fresh = fresh_fn(rep_ok, prices_ok, cache)
         now = note_dropped(path, legs, allf, fresh=fresh)
         back = [d for d in back if d not in now]
         if back:
@@ -334,6 +327,21 @@ def main(path, day, final=False):
                          + [out] + (["Game news (either team, top minutes):"] + [f"  {n}" for n in news] if news else []))
     return text(allf, rep.get("asof"), pending) + ("\nGame news (either team, top minutes):\n" + "\n".join(f"  {n}" for n in news)
                                                     if news else "")
+
+
+def fresh_fn(rep_ok, prices_ok, lineups):
+    """fn(leg) -> may a drop on this leg be undone on this run? Only when its
+    own sources were read: FanDuel's prices (a pulled line is a drop --
+    2026-11-25 Holloway), and the NBA report (NBA legs) or that game's NHL
+    lines (NHL legs). Anything else (NFL, college) keeps its drop."""
+    def fresh(L):
+        if not prices_ok:
+            return False
+        if L.get("lg") == "nhl":
+            got = lineups.get(L.get("id"), lineups.get(str(L.get("id"))))
+            return bool(got) and all(got)
+        return bool(rep_ok) and L.get("lg") == "nba"
+    return fresh
 
 
 def note_dropped(path, legs, flags, fresh=False):
