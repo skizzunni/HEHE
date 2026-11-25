@@ -311,5 +311,29 @@ class FreshFnTest(unittest.TestCase):
         self.assertFalse(R.fresh_fn(True, True, {})(nhl))
 
 
+class StartedNeverDroppedTest(unittest.TestCase):
+    def test_a_leg_in_a_started_game_is_not_dropped_and_old_drops_stand(self):
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "ticket.json")
+        legs = [dict(label="Klay 5+", id="7"), dict(label="Malkin 1+", id="8")]
+        json.dump(legs, open(path, "w"))
+        R.note_dropped(path, legs, [("Malkin 1+", "Evgeni Malkin: on the injured list (dtd)")])
+        pulled = [("Klay 5+", "this line is no longer posted at FanDuel (pulled)"),
+                  ("Malkin 1+", "Evgeni Malkin: on the injured list (dtd)")]
+        got = R.note_dropped(path, legs, pulled, fresh=True, started={"7", "8"})
+        self.assertEqual(got, ["Malkin 1+"])       # Klay's game began: not dropped; Malkin's earlier drop stands
+
+    def test_final_text_shows_started_legs_live_not_dropped(self):
+        legs = [dict(label="Klay 5+", kind="ml", price="-400", lg="nba", id="7"),
+                dict(label="Other", kind="ml", price="-400", lg="nba", id="9")]
+        out = R.final_text(legs, [("Klay 5+", "this line is no longer posted at FanDuel")], now_prices={},
+                           now_chance={"Klay 5+": 0.8, "Other": 0.8}, record={}, saved={"ladder": ["Klay 5+", "Other"]},
+                           started={"7"})
+        self.assertIn("LIVE    Klay 5+", out)
+        self.assertIn("2 of 2 legs stay.", out)
+        self.assertNotIn("now DROP", out)
+
+
 if __name__ == "__main__":
     unittest.main()

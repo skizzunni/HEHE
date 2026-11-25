@@ -319,7 +319,7 @@ def main(path, day, final=False):
         rep_ok = bool(rep.get("asof") and rep.get("rows"))
 
         fresh = fresh_fn(rep_ok, prices_ok, cache)
-        now = note_dropped(path, legs, allf, fresh=fresh)
+        now = note_dropped(path, legs, allf, fresh=fresh, started=started)
         back = [d for d in back if d not in now]
         if back:
             out += "\nBack on the ticket (no longer a drop on this report): " + "; ".join(back)
@@ -344,7 +344,7 @@ def fresh_fn(rep_ok, prices_ok, lineups):
     return fresh
 
 
-def note_dropped(path, legs, flags, fresh=False):
+def note_dropped(path, legs, flags, fresh=False, started=()):
     """Record the legs this --final run DROPs in <ticket>.dropped (labels,
     added to any earlier drops), so grade_picks grades the ticket the user
     keeps. The saved ticket itself is never rewritten. 2026-11-25: Evgeni
@@ -352,7 +352,13 @@ def note_dropped(path, legs, flags, fresh=False):
     notes = {}
     for lab, why in flags:
         notes.setdefault(lab, []).append(why)
-    drop = [L.get("label") for L in legs if verdict(notes.get(L.get("label"), []))[0] == "DROP"]
+    # a leg whose game has started is already bet and can no longer be dropped:
+    # FanDuel takes pre-game lines down at tip, which read as "no longer posted"
+    # (2026-11-25 6:45 PM: Klay, Edgecombe -- both reached -- and Brown dropped
+    # mid-game in MIA @ PHI). Drops made before the start stand.
+    begun = {str(x) for x in started}
+    drop = [L.get("label") for L in legs if verdict(notes.get(L.get("label"), []))[0] == "DROP"
+            and str(L.get("id")) not in begun]
     side = path + ".dropped"
     try:
         old = json.load(open(side))
@@ -364,7 +370,7 @@ def note_dropped(path, legs, flags, fresh=False):
     # fresh: True / False, or fn(leg) -> was this leg's own source read this run
     ok = fresh if callable(fresh) else (lambda L: fresh)
     by = {L.get("label"): L for L in legs}
-    keep_old = [d for d in old if d not in drop and not (d in by and ok(by[d]))]
+    keep_old = [d for d in old if d not in drop and (not (d in by and ok(by[d])) or str(by[d].get("id")) in begun)]
     new = [d for d in old if d in drop or d in keep_old] + [d for d in drop if d not in old]
     if new != old:
         json.dump(new, open(side, "w"), indent=1)
@@ -405,11 +411,15 @@ def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=N
         out.append(f"  {(games or {}).get(gid) or gid}")
         for L in ls:
             v, why = verdict(notes.get(L.get("label"), []))
+            if str(L.get("id")) in {str(x) for x in started}:
+                # under way: already bet; a pulled pre-game line means nothing now
+                v, why = "LIVE", []
             kept += v != "DROP"
             out.append(f"    {v:7} {L.get('label')}" + (f" -- {'; '.join(why)}" if why else ""))
     out.append(f"{kept} of {len(legs)} legs stay.")
     if now_prices is not None:
-        kept_legs = [L for L in legs if verdict(notes.get(L.get("label"), []))[0] != "DROP"]
+        kept_legs = [L for L in legs if verdict(notes.get(L.get("label"), []))[0] != "DROP"
+                     or str(L.get("id")) in {str(x) for x in started}]
         out.append(all_win_line(kept_legs, now_prices, now_chance or {}, record or {}))
         # fresh suggestions only from games not yet started: a 6:45 PM recheck
         # must not offer a leg in the 5 PM game already under way (2026-11-25)
@@ -421,8 +431,10 @@ def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=N
         lad = ladder_now(open_legs, now_prices, now_chance or {}, record or {})
         if lad:
             out.append(lad)
+        live = {L.get("label") for L in legs if str(L.get("id")) in {str(x) for x in started}}
+        quiet = {k: v for k, v in notes.items() if k not in live}      # started legs are not drops
         for name, labels in (saved or {}).items():
-            out.append(saved_line(name, labels, legs, notes, now_prices, now_chance or {}, record or {}))
+            out.append(saved_line(name, labels, legs, quiet, now_prices, now_chance or {}, record or {}))
     return "\n".join(out)
 
 
