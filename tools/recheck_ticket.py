@@ -305,14 +305,18 @@ def main(path, day, final=False):
                 pass
         out = final_text(legs, allf, games, rep.get("asof"), now_prices=snap, now_chance=ml_chance(legs, rows), record=rec,
                          saved=saved)
-        note_dropped(path, legs, allf)
+        back = [d for d in (json.load(open(path + ".dropped")) if os.path.exists(path + ".dropped") else [])]
+        now = note_dropped(path, legs, allf, fresh=bool(rep.get("asof") and rep.get("rows")))
+        back = [d for d in back if d not in now]
+        if back:
+            out += "\nBack on the ticket (no longer a drop on this report): " + "; ".join(back)
         return "\n".join([f"NOTE: {t} has NOT YET SUBMITTED its injury report -- recheck before tip." for t in pending]
                          + [out] + (["Game news (either team, top minutes):"] + [f"  {n}" for n in news] if news else []))
     return text(allf, rep.get("asof"), pending) + ("\nGame news (either team, top minutes):\n" + "\n".join(f"  {n}" for n in news)
                                                     if news else "")
 
 
-def note_dropped(path, legs, flags):
+def note_dropped(path, legs, flags, fresh=False):
     """Record the legs this --final run DROPs in <ticket>.dropped (labels,
     added to any earlier drops), so grade_picks grades the ticket the user
     keeps. The saved ticket itself is never rewritten. 2026-11-25: Evgeni
@@ -326,7 +330,10 @@ def note_dropped(path, legs, flags):
         old = json.load(open(side))
     except (OSError, ValueError):
         old = []
-    new = old + [d for d in drop if d not in old]
+    # With a fresh injury report the current drops are the whole list: a player
+    # upgraded since (2026-11-25: Brunson Questionable at 12:45 PM) comes back.
+    # Without one (report unreadable) earlier drops are kept, never cleared.
+    new = list(drop) if fresh else old + [d for d in drop if d not in old]
     if new != old:
         json.dump(new, open(side, "w"), indent=1)
     return new
