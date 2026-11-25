@@ -5374,6 +5374,10 @@ All graded props by the price's implied chance, split at the median date. Implie
 leg drifting from -1300 to -950 (92.9% -> 90.5% implied) is not measurably less likely -- it now just
 pays more. That is why the ticket's "most likely 2x" may lean on drifted legs, and it is right to:
 the chances it uses are the record's, not the price's.
+For the same reason the pre-game recheck shows a price move ("FanDuel now -580 (was -900), the market
+rates it less likely") but keeps the leg as KEEP, not CAUTION (2026-11-25: Jordan Love 200+ passing
+yards drifted -900 -> -580 by 3 PM). A move matters only when the line is pulled (a drop) or the player's
+status changes (a drop), or when it crosses a price band, which the recheck's chances already use.
 
 **Research pick, Nov 24: Magic +110 after Cade Cunningham was ruled Out -- LOST 86-104.** The 6:30 PM
 report moved Cunningham (Detroit's top minutes, 35.9 a game) from Probable to Out; ESPN's DraftKings
