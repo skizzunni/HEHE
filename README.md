@@ -5215,6 +5215,11 @@ Day-To-Day that morning who then played won 33/38 (86.8% vs 84.1% stated, z +0.4
 were voided (did not play), and a void is a push on FanDuel, parlay leg included. So the morning drop
 does not protect the record -- it only removes choices -- but the sample is small (85 graded), so the
 rule stays; it is noted here for the user's call. (ESPN's NBA feed says Day-To-Day, not Questionable.)
+Found on the way: ESPN's NBA injury feed is not a game-day source. Players it listed Out at 8 AM who
+still had a FanDuel prop played 11 times of 13 (Luka Doncic Nov 9, Derrick White Nov 22, Walker
+Kessler Nov 18, ...). The ticket and the recheck read the NBA's official report for NBA legs, not ESPN,
+so nothing is wrong there; ESPN is used only for NFL legs, where it carries the league's own game
+designations. Anything that ever reads ESPN's NBA list for a cut should not.
 
 **Found, not changed: the board sees about 1 in 9 college-basketball games (2026-11-25).** ESPN's
 college-basketball scoreboard without `groups=50` lists only a featured handful: on Nov 15, 18, 21 and
