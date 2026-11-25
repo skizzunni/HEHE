@@ -263,6 +263,7 @@ class NoteDroppedTest(unittest.TestCase):
         R.note_dropped(path, legs, flags)
         self.assertEqual([L["label"] for L in G.load(path)], ["Karlsson 1+ SOG"])
         self.assertEqual(len(json.load(open(path))), 2)                                # the ticket is untouched
+        self.assertEqual(G.dropped_count(path), 1)
         lad = os.path.join(os.path.dirname(path), "ticket_ladder.json")
         json.dump([legs[0]], open(lad, "w"))
         self.assertEqual(G.load(lad), [])                                              # the stand-in follows

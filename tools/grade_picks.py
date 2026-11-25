@@ -204,6 +204,16 @@ def grade(pick, scores, done, summary=None):
     return "won" if d > 0 else "lost" if d < 0 else "push"
 
 
+def dropped_count(path):
+    """How many of the saved ticket's legs the pre-game recheck dropped."""
+    try:
+        with open(path) as f:
+            labels = {L.get("label") for L in json.load(f)}
+    except (OSError, ValueError):
+        return 0
+    return len(labels) - len(load(path))
+
+
 def load(path):
     """The ticket's legs, less any the pre-game recheck dropped
     (<ticket>.dropped, written by recheck_ticket --final)."""
@@ -307,6 +317,9 @@ def brief(path, get=None):
     states = [r.split()[0] for r in rows]
     won, lost, push = states.count("WON"), states.count("LOST"), states.count("PUSH")
     head = f"{won} won, {lost} lost" + (f", {push} void" if push else "") + f", {len(rows) - won - lost - push} still open"
+    gone = dropped_count(path)
+    if gone:
+        head += f" ({gone} dropped before tip, not counted)"
     return [head] + out
 
 
