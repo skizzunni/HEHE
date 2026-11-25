@@ -522,6 +522,24 @@ def nhl_dog_prereg_line(update_fn=None, today=None):
             f"{s['won']}/{s['n']} covered vs {s['expected']} expected (z {s['z']:+.2f}, ROI {s['roi']:+.1f}%); {what}.")
 
 
+def slate_day(path, today=None):
+    """The ET date a work/slate_<mon><dd> folder is for (slate_nov24 -> Nov 24,
+    in the latest year not after today). 2026-11-25: folders were ordered by
+    modification time, so writing a brief into an old slate's folder moved it
+    to "latest". A folder name that does not parse sorts first."""
+    import datetime as _dt
+    today = today or _dt.date.today()
+    name = os.path.basename(os.path.normpath(path)).replace("slate_", "")
+    for year in (today.year, today.year - 1):
+        try:
+            d = _dt.datetime.strptime(f"{name[:5].title()}{year}", "%b%d%Y").date()
+        except ValueError:
+            continue
+        if d <= today + _dt.timedelta(days=1):
+            return d
+    return _dt.date.min
+
+
 def user_tickets_line(root=None, grade_fn=None, last=3):
     """The user's saved tickets (work/slate_*/ticket*.json) for the last `last`
     slates: each one's legs won-lost and whether every leg won -- the record
@@ -532,7 +550,7 @@ def user_tickets_line(root=None, grade_fn=None, last=3):
     files = sorted(glob.glob(os.path.join(root, "work", "slate_*", "ticket*.json")))
     if not files:
         return None
-    dirs = sorted({os.path.dirname(f) for f in files}, key=os.path.getmtime)[-last:]
+    dirs = sorted({os.path.dirname(f) for f in files}, key=slate_day)[-last:]
     try:
         import grade_picks
         grade_fn = grade_fn or grade_picks.main

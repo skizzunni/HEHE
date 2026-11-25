@@ -50,6 +50,18 @@ class ReviewLineTest(unittest.TestCase):
 
 
 class UserTicketsLineTest(unittest.TestCase):
+    def test_slate_day_orders_by_name_not_mtime(self):
+        import datetime as dt
+        import daily_review as R
+        today = dt.date(2026, 11, 25)
+        self.assertEqual(R.slate_day("work/slate_nov24", today), dt.date(2026, 11, 24))
+        self.assertEqual(R.slate_day("work/slate_dec30/", today), dt.date(2025, 12, 30))   # last year
+        self.assertEqual(R.slate_day("work/slate_nov26", today), dt.date(2026, 11, 26))    # tomorrow's
+        self.assertEqual(R.slate_day("work/slate_feb29", dt.date(2028, 3, 1)), dt.date(2028, 2, 29))
+        self.assertEqual(R.slate_day("work/slate_x", today), dt.date.min)
+        order = sorted(["work/slate_nov3", "work/slate_nov24", "work/slate_oct30"], key=lambda p: R.slate_day(p, today))
+        self.assertEqual(order[-1], "work/slate_nov24")
+
     def test_line(self):
         import json
         import tempfile
