@@ -350,10 +350,28 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
             scores, done, d = final(p["lg"], p["id"], fetch, raw=True)
             r = grade(p, scores, done, d)
             key = p.get("label") or json.dumps(p, sort_keys=True)
+            was = seen.get(key)
+            if not done:
+                # 2026-11-24: a prop read "won" the moment the box score reached
+                # the line -- Suggs 5 reb+ast -- then ESPN corrected him to 4.
+                # Mid-game it is only REACHED; it settles when the game is final.
+                open_n += 1
+                if r == "won" and was not in ("won", "reached"):
+                    seen[key] = "reached"
+                    emit(f"REACHED {key}{detail(p, scores, d)} (settles when the game ends)")
+                elif r != "won" and was in ("won", "reached"):
+                    seen[key] = "open"
+                    emit(f"BACK BELOW {key}{detail(p, scores, d)} -- the box score was corrected; not won yet")
+                else:
+                    continue
+                if remember:
+                    _save_seen(path, seen)
+                continue
             if r == "open":
                 open_n += 1
-            elif seen.get(key) != r:
+            elif was != r or not seen.get(key + "|final"):
                 seen[key] = r
+                seen[key + "|final"] = True
                 emit(f"{r.upper()} {key}{detail(p, scores, d)}")
                 if remember:
                     _save_seen(path, seen)

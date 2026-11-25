@@ -57,6 +57,9 @@ BOX = {"header": {"competitions": [{"status": {"type": {"completed": False}}, "c
            {"athlete": {"displayName": "Keegan Murray"}, "stats": ["20", "5", "3", "1", "1-4"]},
            {"athlete": {"displayName": "Bench Guy"}, "stats": []}]}]}]}}
 
+BOX_DONE = dict(BOX, header={"competitions": [{"status": {"type": {"completed": True}},
+                                               "competitors": BOX["header"]["competitions"][0]["competitors"]}]})
+
 
 class PropTest(unittest.TestCase):
     def test_player_stat(self):
@@ -87,7 +90,7 @@ class PropTest(unittest.TestCase):
         json.dump([dict(label=f"leg{i}", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)
                    for i in range(3)], open(path, "w"))
         calls = []
-        G.watch(path, get=lambda u: calls.append(u) or BOX, sleep=lambda s: None, emit=lambda m: None)
+        G.watch(path, get=lambda u: calls.append(u) or BOX_DONE, sleep=lambda s: None, emit=lambda m: None)
         self.assertEqual(len(calls), 1)
 
     def test_watch_survives_a_bad_read(self):
@@ -110,7 +113,8 @@ class PropTest(unittest.TestCase):
         box = dict(BOX)
         out = []
         G.watch(path, get=lambda u: box, sleep=sleep, emit=out.append)
-        self.assertEqual(out, ["WON Murray 5+ -- had 5", "LOST Murray 9 reb -- had 3", "all picks settled: 1-1; all won: no"])
+        self.assertEqual(out, ["REACHED Murray 5+ -- had 5 (settles when the game ends)",
+                               "WON Murray 5+ -- had 5", "LOST Murray 9 reb -- had 3", "all picks settled: 1-1; all won: no"])
 
     def test_restarted_watch_does_not_repeat(self):
         import json
@@ -119,8 +123,8 @@ class PropTest(unittest.TestCase):
         json.dump([dict(label="Murray 5+", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)],
                   open(path, "w"))
         first, second = [], []
-        G.watch(path, get=lambda u: BOX, sleep=lambda s: None, emit=first.append)
-        G.watch(path, get=lambda u: BOX, sleep=lambda s: None, emit=second.append)      # the Monitor re-armed
+        G.watch(path, get=lambda u: BOX_DONE, sleep=lambda s: None, emit=first.append)
+        G.watch(path, get=lambda u: BOX_DONE, sleep=lambda s: None, emit=second.append)      # the Monitor re-armed
         self.assertEqual(first, ["WON Murray 5+ -- had 5", "all picks settled: 1-0; all won: YES"])
         self.assertEqual(second, ["all picks settled: 1-0; all won: YES"])
 
@@ -148,8 +152,29 @@ class PropTest(unittest.TestCase):
         json.dump([dict(label="Murray 5+", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)],
                   open(path, "w"))
         out = []
-        G.watch(path, get=lambda u: BOX, sleep=lambda s: None, emit=out.append)
+        G.watch(path, get=lambda u: BOX_DONE, sleep=lambda s: None, emit=out.append)
         self.assertEqual(out, ["WON Murray 5+ -- had 5", "all picks settled: 1-0; all won: YES"])
+
+    def test_stat_correction_mid_game(self):
+        # Nov 24: Suggs reached 5 reb+ast, then ESPN corrected him to 4 before the end
+        import copy
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        json.dump([dict(label="Murray 5+", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)],
+                  open(path, "w"))
+        lower = copy.deepcopy(BOX)
+        lower["boxscore"]["players"][0]["statistics"][0]["athletes"][0]["stats"][1] = "4"
+        frames = [BOX, lower, BOX_DONE]
+        state = {"i": 0}
+
+        def sleep(s):
+            state["i"] = min(state["i"] + 1, len(frames) - 1)
+        out = []
+        G.watch(path, get=lambda u: frames[state["i"]], sleep=sleep, emit=out.append)
+        self.assertEqual(out, ["REACHED Murray 5+ -- had 5 (settles when the game ends)",
+                               "BACK BELOW Murray 5+ -- had 4 -- the box score was corrected; not won yet",
+                               "WON Murray 5+ -- had 5", "all picks settled: 1-0; all won: YES"])
 
 
 NHL_BOX = {"boxscore": {"players": [{"team": {"abbreviation": "MIN"}, "statistics": [
