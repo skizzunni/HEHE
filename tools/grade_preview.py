@@ -41,8 +41,21 @@ def summary(settled):
     return f"Would settle {len(settled)}: {w} won, {l} lost" + (f", {v} void" if v else "") + " (preview only, nothing saved)"
 
 
+def by_day(settled):
+    """'2026-11-24 30-15, 2026-11-23 9-6' -- won-lost by the day each game was
+    played, newest first. 2026-11-25: the one summary mixed two slates, and the
+    review's "Yesterday" line read 0-0 with 41 ungraded while ESPN had them final."""
+    days = {}
+    for _, e in settled:
+        d = e.get("played") or e.get("date") or "?"
+        w, l = days.get(d, (0, 0))
+        days[d] = (w + (e.get("status") == "won"), l + (e.get("status") == "lost"))
+    return ", ".join(f"{d} {w}-{l}" for d, (w, l) in sorted(days.items(), reverse=True))
+
+
 if __name__ == "__main__":
     S = sorted(preview(), key=lambda kv: (kv[1].get("status") != "lost", kv[1].get("played") or "", kv[0]))
     for k, e in S:
         print(line(k, e))
     print(summary(S))
+    print("By day played: " + by_day(S))

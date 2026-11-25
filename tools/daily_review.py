@@ -2279,6 +2279,7 @@ def preview_losses_line(preview_fn=None):
         return None
     lost = [GP.line(k, e) for k, e in S if e.get("status") == "lost"]
     return ("Not yet graded by the board, from ESPN: " + GP.summary(S)
+            + "; by day played: " + GP.by_day(S)
             + "".join("\n- " + x for x in lost))
 
 

@@ -39,7 +39,14 @@ class ReviewLineTest(unittest.TestCase):
         line = daily_review.preview_losses_line(lambda: S)
         self.assertTrue(line.startswith("Not yet graded by the board, from ESPN: Would settle 2: 1 won, 1 lost"))
         self.assertIn("\n- LOST nba Raptors at 79% (-449)", line)
+        self.assertIn("; by day played: ? 1-1", line)
         self.assertIsNone(daily_review.preview_losses_line(lambda: []))
+
+    def test_by_day_newest_first(self):
+        import grade_preview as GP
+        S = [("a", dict(status="won", played="2026-11-23")), ("b", dict(status="lost", played="2026-11-24")),
+             ("c", dict(status="won", played="2026-11-24")), ("d", dict(status="void", date="2026-11-16"))]
+        self.assertEqual(GP.by_day(S), "2026-11-24 1-1, 2026-11-23 1-0, 2026-11-16 0-0")
 
 
 class UserTicketsLineTest(unittest.TestCase):
