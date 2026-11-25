@@ -79,8 +79,12 @@ class UserTicketsLineTest(unittest.TestCase):
         res = {"ticket.json": dict(won=13, lost=0, push=0, open=0), "ticket25.json": dict(won=24, lost=0, push=0, open=1)}
         g = lambda f: ([{}] * (13 if f.endswith("ticket.json") else 25), [], res[os.path.basename(f)])
         line = daily_review.user_tickets_line(root, g)
-        self.assertEqual(line, "Your tickets: nov24 13-leg 13-0 (all won); nov24 25-leg 24-0 (1 open).")
+        self.assertEqual(line, "Your tickets: nov24 13-leg ticket 13-0 (all won); nov24 25-leg ticket 24-0 (1 open).")
         self.assertIsNone(daily_review.user_tickets_line(tempfile.mkdtemp(), g))
+        json.dump([{}], open(os.path.join(d, "ticket_ladder.json"), "w"))
+        res["ticket_ladder.json"] = dict(won=6, lost=0, push=0, open=0)
+        g2 = lambda f: ([{}] * 6, [], res[os.path.basename(f)]) if f.endswith("ladder.json") else g(f)
+        self.assertIn("6-leg ladder stand-in 6-0 (all won)", daily_review.user_tickets_line(root, g2))
 
 
 class HeavyPropsLineTest(unittest.TestCase):

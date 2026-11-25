@@ -558,7 +558,8 @@ def user_tickets_line(root=None, grade_fn=None, last=3):
         for d in dirs:
             for f in sorted(glob.glob(os.path.join(d, "ticket*.json"))):
                 picks, res, sm = grade_fn(f)
-                tag = f"{os.path.basename(d).replace('slate_', '')} {len(picks)}-leg"
+                kind = "ladder stand-in" if os.path.basename(f) == "ticket_ladder.json" else "ticket"
+                tag = f"{os.path.basename(d).replace('slate_', '')} {len(picks)}-leg {kind}"
                 state = ("all won" if not sm["lost"] and not sm["open"] else
                          f"{sm['open']} open" if not sm["lost"] else "lost")
                 bits.append(f"{tag} {sm['won']}-{sm['lost']}" + (f"-{sm['push']}" if sm["push"] else "") + f" ({state})")
