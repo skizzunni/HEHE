@@ -11,6 +11,7 @@ margin removed and scaled to the game's expected touchdowns.
 for "who will score first touchdown, score 2+ touchdown" on NFL days.
 
     python3 tools/td_fallback.py tomorrow
+    python3 tools/td_fallback.py today --save work/slate_nov26/ticket_td.json
 """
 import json
 import os
@@ -70,7 +71,34 @@ def main(day, rows_fn=rows, fd=None):
     return [g for g in (td_scorers.for_game(r, "nfl", FD) for r in rows_fn(day)) if g]
 
 
+def legs(games, top=2):
+    """The likeliest `top` anytime scorers per game as ticket legs, in
+    grade_picks' file format (the board grades this market from the box
+    score), so a saved list keeps its own record."""
+    out = []
+    for g in games:
+        for p in g["players"][:top]:
+            out.append(dict(label=f"{p['name']}: anytime TD {p.get('price')} ({100 * p['p']:.0f}%)",
+                            id=str(g["id"]).split(":")[-1], lg="nfl", kind="prop", player=p["name"], stat="TD",
+                            market="Anytime Touchdown Scorer", line=1.0, line_text="1+", price=p.get("price")))
+    return out
+
+
 if __name__ == "__main__":
     import build_ticket as B
-    day = B.resolve_day(sys.argv[1] if len(sys.argv) > 1 else None)
-    print(text(main(day)))
+    args = sys.argv[1:]
+    save = None
+    if "--save" in args:
+        i = args.index("--save")
+        save = args[i + 1]
+        del args[i:i + 2]
+    day = B.resolve_day(args[0] if args else None)
+    games = main(day)
+    print(text(games))
+    if save and games:
+        if os.path.exists(save) and "--force" not in sys.argv:
+            print(f"\nnot saved: {save} already exists")
+        else:
+            os.makedirs(os.path.dirname(save) or ".", exist_ok=True)
+            json.dump(legs(games), open(save, "w"), indent=1)
+            print(f"\nsaved: {save} (the top 2 anytime scorers per game; grade with tools/grade_picks.py)")

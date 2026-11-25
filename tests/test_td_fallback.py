@@ -6,6 +6,20 @@ sys.path.insert(0, os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(
 import td_fallback as T  # noqa: E402
 
 
+class LegsTest(unittest.TestCase):
+    def test_top_two_per_game_in_grader_format(self):
+        import grade_picks as G
+        g = [dict(id="nfl:9", players=[dict(name="A B", p=0.6, price="-150"), dict(name="C D", p=0.5, price="+100"),
+                                       dict(name="E F", p=0.4, price="+150")])]
+        L = T.legs(g)
+        self.assertEqual([x["player"] for x in L], ["A B", "C D"])
+        box = {"header": {"competitions": [{"status": {"type": {"completed": True}}}]},
+               "boxscore": {"players": [{"team": {"abbreviation": "X"}, "statistics": [
+                   {"name": "rushing", "keys": ["rushingTouchdowns"], "labels": ["TD"],
+                    "athletes": [{"athlete": {"id": "1", "displayName": "A B"}, "stats": ["1"]}]}]}]}}
+        self.assertIn(G.board_prop(L[0], box), ("won", None))
+
+
 class RowsTest(unittest.TestCase):
     def test_rows_from_scoreboard_and_summary(self):
         sb = {"events": [{"id": "9", "shortName": "CHI @ DET", "date": "2026-11-26T17:30Z", "competitions": [{"competitors": [
