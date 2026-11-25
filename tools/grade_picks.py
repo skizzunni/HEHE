@@ -266,7 +266,9 @@ def brief(path, get=None):
             waiting += 1
             continue
         state = line.split()[0]
-        clock = tail.split(" -- ")[-1] if tail else ""
+        # only an open leg has a clock; a settled leg's tail is the label's own note
+        # (2026-11-25: Gafford's "caution: reached it in 6 of his last 10" showed after WON)
+        clock = tail.split(" -- ")[-1] if tail and state == "OPEN" else ""
         out.append(f"{state:5} {short(p)}" + (f" -- {clock}" if clock else ""))
     if waiting:
         out.append(f"({waiting} not started yet)")

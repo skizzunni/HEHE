@@ -132,7 +132,7 @@ class PropTest(unittest.TestCase):
         import json
         import tempfile
         path = os.path.join(tempfile.mkdtemp(), "t.json")
-        json.dump([dict(label="Murray 5+ long label", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS",
+        json.dump([dict(label="Murray 5+ long label -- caution: reached it in 6 of his last 10", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS",
                         line=5, price=-500),
                    dict(label="Murray 9 reb", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="REB", line=9,
                         price=-500),
