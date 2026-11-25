@@ -97,6 +97,17 @@ class PropTest(unittest.TestCase):
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, False, BOX), "open")
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, True, BOX), "lost")
 
+    def test_slate_lists_every_saved_ticket(self):
+        import json
+        import tempfile
+        d = tempfile.mkdtemp()
+        leg = dict(label="k", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)
+        json.dump([leg, dict(leg, label="r", stat="REB", line=50)], open(os.path.join(d, "ticket.json"), "w"))
+        json.dump([leg], open(os.path.join(d, "ticket_ladder.json"), "w"))
+        out = G.slate(d, get=lambda u: BOX_DONE)
+        self.assertEqual(out[0], "ticket, 2 legs: 1 won, 1 lost, 0 still open")
+        self.assertEqual(out[1], "ladder stand-in, 1 legs: 1 won, 0 lost, 0 still open -- every leg won")
+
     def test_watch_picks_up_a_drop_made_while_it_runs(self):
         """A recheck at 6:30 PM may drop a leg after the watch started; the
         next round must leave it out of the record (2026-11-25)."""

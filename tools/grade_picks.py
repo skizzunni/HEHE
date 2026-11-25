@@ -310,6 +310,28 @@ def brief(path, get=None):
     return [head] + out
 
 
+NAMES = {"ticket.json": "ticket", "ticket_2x.json": "2x combo", "ticket_ladder.json": "ladder stand-in"}
+
+
+def slate(folder, get=None):
+    """One line per saved ticket in a slate folder (the ticket, the 2x combo,
+    the ladder stand-in, any other ticket*.json): 'ladder stand-in, 6 legs:
+    5 won, 0 lost, 1 still open' -- the end-of-night record in one call."""
+    import glob
+    get = _once(get)
+    out = []
+    files = sorted(glob.glob(os.path.join(folder, "ticket*.json")),
+                   key=lambda f: (os.path.basename(f) not in NAMES, list(NAMES).index(os.path.basename(f))
+                                  if os.path.basename(f) in NAMES else 0, f))
+    for f in files:
+        picks = load(f)
+        head = brief(f, get)[0]
+        all_won = head.startswith(f"{len(picks)} won")
+        out.append(f"{NAMES.get(os.path.basename(f), os.path.basename(f))}, {len(picks)} legs: {head}"
+                   + (" -- every leg won" if all_won and picks else ""))
+    return out
+
+
 def live(path, get=None):
     """One line per pick: WON/LOST/PUSH when final, else the clock and where it stands."""
     out = []
@@ -424,6 +446,9 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
 if __name__ == "__main__":
     if "--watch" in sys.argv:
         watch([a for a in sys.argv[1:] if a != "--watch"][0], emit=lambda m: print(m, flush=True))
+        sys.exit(0)
+    if "--slate" in sys.argv:
+        print("\n".join(slate([a for a in sys.argv[1:] if a != "--slate"][0])))
         sys.exit(0)
     if "--brief" in sys.argv:
         print("\n".join(brief([a for a in sys.argv[1:] if a != "--brief"][0])))
