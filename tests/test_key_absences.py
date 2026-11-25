@@ -83,5 +83,18 @@ class BackToBackDayTest(unittest.TestCase):
         self.assertFalse(K.played_day_before("BOS", "2026-11-26", get=pages.get))
 
 
+class TeamNameGuardTest(unittest.TestCase):
+    def test_report_team_names_are_espn_display_names(self):
+        """main() joins the report to ESPN by team display name; a name that
+        differs would read 'no key player out' in silence (all 30 matched on
+        2026-11-25). The report's spellings the parser knows must stay ESPN's."""
+        import nba_injury_report as R
+        names = getattr(R, "TEAMS", None)
+        if not names:
+            self.skipTest("parser keeps no team list")
+        espn = set(['Atlanta Hawks', 'Boston Celtics', 'Brooklyn Nets', 'Charlotte Hornets', 'Chicago Bulls', 'Cleveland Cavaliers', 'Dallas Mavericks', 'Denver Nuggets', 'Detroit Pistons', 'Golden State Warriors', 'Houston Rockets', 'Indiana Pacers', 'LA Clippers', 'Los Angeles Lakers', 'Memphis Grizzlies', 'Miami Heat', 'Milwaukee Bucks', 'Minnesota Timberwolves', 'New Orleans Pelicans', 'New York Knicks', 'Oklahoma City Thunder', 'Orlando Magic', 'Philadelphia 76ers', 'Phoenix Suns', 'Portland Trail Blazers', 'Sacramento Kings', 'San Antonio Spurs', 'Toronto Raptors', 'Utah Jazz', 'Washington Wizards'])  # ESPN team displayName, 2026-11-25
+        self.assertEqual(sorted(set(names) - espn), [])
+
+
 if __name__ == "__main__":
     unittest.main()
