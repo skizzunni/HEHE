@@ -218,6 +218,14 @@ class GoalieNoteTest(unittest.TestCase):
         self.assertIn("goalie: Devon Levi", t["games"]["VGK @ EDM"][0]["label"])
 
 
+class ChanceTextTest(unittest.TestCase):
+    def test_small_chances_read_as_odds(self):
+        self.assertEqual(B.chance_text(0.354), "about 35%")
+        self.assertEqual(B.chance_text(0.87 ** 70), "about 1 in 17,000")
+        self.assertEqual(B.chance_text(0.004), "about 1 in 250")
+        self.assertEqual(B.chance_text(0.0), "about 0%")
+
+
 class SaveTicketTest(unittest.TestCase):
     def test_saves_ticket_and_stand_in_and_never_overwrites(self):
         import json

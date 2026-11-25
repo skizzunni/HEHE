@@ -247,6 +247,18 @@ def ticket_legs(t):
     return [{k: v for k, v in L.items() if k not in ("chance", "gid")} for g in t["games"].values() for L in g]
 
 
+def chance_text(p):
+    """'about 35%', or 'about 1 in 17,000' under 1% -- 2026-11-25: a 70-leg
+    ticket read 'about 0%', which says impossible rather than how unlikely."""
+    if p >= 0.01:
+        return f"about {100 * p:.0f}%"
+    if p <= 0:
+        return "about 0%"
+    n = 1 / p
+    mag = 10 ** max(0, len(str(int(n))) - 2)
+    return f"about 1 in {int(round(n / mag) * mag):,}"
+
+
 def text(t):
     legs = [L for g in t["games"].values() for L in g]
     out = ([f"NOTE: {t['note']}"] if t.get("note") else []) + [f"Your ticket, by game -- {len(legs)} legs, each judged on its own:"]
@@ -257,10 +269,10 @@ def text(t):
         allwin = math.prod(x["chance"] for x in legs)
         try:
             pays = math.prod(_dec(x["price"]) for x in legs)
-            out.append(f"All {len(legs)} win: about {100 * allwin:.0f}% -- pays about {pays:.2f}x as one ticket. "
+            out.append(f"All {len(legs)} win: {chance_text(allwin)} -- pays about {pays:.2f}x as one ticket. "
                        f"Each leg stands on its own; the size is your call.")
         except (TypeError, ValueError):
-            out.append(f"All {len(legs)} win: about {100 * allwin:.0f}%.")
+            out.append(f"All {len(legs)} win: {chance_text(allwin)}.")
     if t.get("ladder"):
         out.append(t["ladder"])
     two = two_x_text(legs)

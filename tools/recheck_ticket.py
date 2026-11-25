@@ -471,7 +471,8 @@ def all_win_line(kept, now_prices, now_chance, record):
             p *= min(B.PROP_CAP, w / n) if n >= B.RECORD_MIN else B.PROP_CAP
         else:
             p *= now_chance.get(L.get("label"), 1 / B._dec(price))
-    return (f"All {len(kept)} kept legs win: about {100 * p:.0f}% -- pays about {pays:.2f}x at current prices. "
+    import build_ticket as B
+    return (f"All {len(kept)} kept legs win: {B.chance_text(p)} -- pays about {pays:.2f}x at current prices. "
             "Each leg stands on its own; the size is your call.")
 
 
