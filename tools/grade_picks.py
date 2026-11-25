@@ -270,7 +270,10 @@ def brief(path, get=None):
         out.append(f"{state:5} {short(p)}" + (f" -- {clock}" if clock else ""))
     if waiting:
         out.append(f"({waiting} not started yet)")
-    return out
+    states = [r.split()[0] for r in rows]
+    won, lost, push = states.count("WON"), states.count("LOST"), states.count("PUSH")
+    head = f"{won} won, {lost} lost" + (f", {push} void" if push else "") + f", {len(rows) - won - lost - push} still open"
+    return [head] + out
 
 
 def live(path, get=None):

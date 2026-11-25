@@ -139,8 +139,9 @@ class PropTest(unittest.TestCase):
                    dict(label="Nobody 5+", id="1", lg="nba", kind="prop", player="Nobody Here", stat="PTS", line=5, price=-500)],
                   open(path, "w"))
         out = G.brief(path, get=lambda u: BOX)
-        self.assertEqual(out[0], "WON   Keegan Murray 5+ PTS")
-        self.assertTrue(out[1].startswith("OPEN  Keegan Murray 9+ REB -- "))
+        self.assertEqual(out[0], "1 won, 0 lost, 2 still open")
+        self.assertEqual(out[1], "WON   Keegan Murray 5+ PTS")
+        self.assertTrue(out[2].startswith("OPEN  Keegan Murray 9+ REB -- "))
         self.assertEqual(out[-1], "(1 not started yet)")
         self.assertEqual(G.short(dict(kind="ml", team="IOWA")), "IOWA ML")
         self.assertEqual(G.short(dict(kind="spread", team="BOS", line=-2.5)), "BOS -2.5")
