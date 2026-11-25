@@ -5,6 +5,8 @@ agreements -- a check before trusting the live tracker on a market.
 
 2026-11-25: run before the first NFL props on a fallback ticket (GB @ LAR):
 25 of 25 recent NFL Passing / Receiving Yards props agreed.
+Same day: NHL Shots on Goal 30 of 30; NBA Assists, Points, Pts + Ast, Pts + Reb + Ast,
+Reb + Ast and Rebounds 15 of 15 each -- every market on that day's ticket.
 
     python3 tools/grader_agreement.py nfl 25
     python3 tools/grader_agreement.py nba 40 "Pts + Reb + Ast"
