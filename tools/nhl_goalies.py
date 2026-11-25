@@ -92,7 +92,7 @@ def career(goalie, get=None):
     get = get or (lambda u: _nhl_url(u))
     hits = get(SEARCH.format(urllib.parse.quote(goalie))) or []
     pid = next((h.get("playerId") for h in hits if h.get("positionCode") == "G"
-                and str(h.get("name", "")).lower() == goalie.lower()), None)
+                and _key(str(h.get("name", ""))) == _key(goalie)), None)
     if not pid:
         return None
     ct = ((get(NHL.format(f"player/{pid}/landing")) or {}).get("careerTotals") or {}).get("regularSeason") or {}
@@ -109,6 +109,14 @@ def _nhl_url(url):
         return None
 
 
+def _key(name):
+    """A name for matching: accents and case dropped ('Meriläinen' == 'Merilainen').
+    2026-11-25: DailyFaceoff's 'Leevi Merilainen' was flagged "NOT among this
+    team's goalies ... (usual: Leevi Meriläinen)" -- the same man."""
+    import unicodedata
+    return unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower().strip()
+
+
 def flag(goalie, roster, career_fn=None):
     """A note when the listed starter is not this team's usual one: absent from
     its season stats, or with fewer starts than another goalie. 2026-11-24:
@@ -117,9 +125,9 @@ def flag(goalie, roster, career_fn=None):
     so an absent goalie is now looked up by career before he is called a risk."""
     if not goalie or not roster:
         return ""
-    by = {n.lower(): (n, gs, sv) for n, gs, sv in roster}
+    by = {_key(n): (n, gs, sv) for n, gs, sv in roster}
     top = max(roster, key=lambda r: r[1])
-    me = by.get(goalie.lower())
+    me = by.get(_key(goalie))
     if not me:
         c = (career_fn or career)(goalie)
         if c and c[0] >= CAREER_OK:

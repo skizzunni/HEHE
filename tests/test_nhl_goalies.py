@@ -41,6 +41,11 @@ class CareerTest(unittest.TestCase):
 
 
 class FlagTest(unittest.TestCase):
+    def test_accents_do_not_make_a_stranger(self):
+        roster = [("Leevi Meriläinen", 16, 0.905), ("Kevin Lankinen", 4, 0.890)]
+        self.assertEqual(G.flag("Leevi Merilainen", roster, career_fn=lambda g: None), "")
+        self.assertIn("not the usual starter", G.flag("Kevin Lankinen", roster, career_fn=lambda g: None))
+
     R = [("Jesper Wallstedt", 22, 0.924), ("Calvin Pickard", 3, 0.855)]
 
     def test_flags(self):
