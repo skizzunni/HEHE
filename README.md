@@ -5237,6 +5237,14 @@ the slate would add many more NCAAB picks to the sweep and the every-game line. 
 board shows, so it waits for the user's word; the 25-leg ticket's college legs already came from the
 full list (`build_ticket --ncaab`).
 
+**Checked: college favourites at 90%+ beat their no-vig price (2026-11-25).** The ticket's college
+opt-in takes DraftKings moneyline favourites at 90%+ no-vig. Four seasons of DraftKings closing lines
+(research/strategy_lab_2026-11-23 data, 2,781 such games): 2022-23 + 2023-24 won 1,262/1,325 (95.25% vs
+93.56% fair, z +2.51), 2024-25 + 2025-26 1,404/1,456 (96.43% vs 93.75%, z +4.24); November only
+591/622 (z +0.93) then 606/630 (z +2.00). The favourite-longshot lean: these legs win about 2 points more
+than their price says. Past the bar in one half only, so the legs keep their no-vig chance -- which
+makes the ticket's all-win figure for them slightly conservative, not optimistic.
+
 **Checked, no cut: favourites missing a key player (2026-11-24).** After the user's Nov 23 ticket lost
 on the Raptors (-450, no Leonard / Barrett), Thunder (-190, eight out) and Cavaliers (-350, no Mobley):
 graded board NBA picks (174 matched to box scores), "key" = top 6 by minutes per game played over the
