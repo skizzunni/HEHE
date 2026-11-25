@@ -647,6 +647,30 @@ def main(day):
                  minutes_fn=__import__("nba_minutes").mpg_last5, logs_fn=__import__("nba_minutes").gamelogs)
 
 
+def save_ticket(t, save, combo=(), force=False):
+    """Write the ticket (and the ladder stand-in as ticket_ladder.json beside
+    it); returns the lines to print. Never replaces an existing file without
+    `force`. 2026-11-24: a second run at 9:20 AM overwrote the 8 AM ticket the
+    user had been sent -- FanDuel's lines had moved, so 4 of its 13 legs changed.
+    2026-11-25: the stand-in was printed but never saved, so nothing graded it."""
+    out = []
+    if not save:
+        return out
+    if os.path.exists(save) and not force:
+        return [f"\nnot saved: {save} already holds the ticket sent earlier (add --force to replace it)"]
+    os.makedirs(os.path.dirname(save) or ".", exist_ok=True)
+    json.dump(ticket_legs(t), open(save, "w"), indent=1)
+    out.append(f"\nsaved: {save}")
+    if combo:
+        lpath = os.path.join(os.path.dirname(save) or ".", "ticket_ladder.json")
+        if os.path.exists(lpath) and not force:
+            out.append(f"not saved: {lpath} already exists")
+        else:
+            json.dump(ticket_legs({"games": {"ladder": list(combo)}}), open(lpath, "w"), indent=1)
+            out.append(f"saved: {lpath} (the ladder stand-in, {len(combo)} legs)")
+    return out
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
     save = None
@@ -675,21 +699,5 @@ if __name__ == "__main__":
         combo = ladder_fallback(t)
         t["ladder"] = ladder_text(combo)
     print(text(t))
-    if save and os.path.exists(save) and "--force" not in sys.argv:
-        # 2026-11-24: a second run at 9:20 AM overwrote the 8 AM ticket the user
-        # had been sent -- FanDuel's lines had moved, so 4 of its 13 legs changed
-        print(f"\nnot saved: {save} already holds the ticket sent earlier (add --force to replace it)")
-        save = None
-    if save:
-        os.makedirs(os.path.dirname(save) or ".", exist_ok=True)
-        json.dump(ticket_legs(t), open(save, "w"), indent=1)
-        print(f"\nsaved: {save}")
-        if combo:
-            # the stand-in as its own ticket file, so grade_picks and the daily
-            # review keep its record (it is a subset of the legs just saved)
-            lpath = os.path.join(os.path.dirname(save) or ".", "ticket_ladder.json")
-            if os.path.exists(lpath) and "--force" not in sys.argv:
-                print(f"not saved: {lpath} already exists")
-            else:
-                json.dump(ticket_legs({"games": {"ladder": combo}}), open(lpath, "w"), indent=1)
-                print(f"saved: {lpath} (the ladder stand-in, {len(combo)} legs)")
+    for line in save_ticket(t, save, combo, force="--force" in sys.argv):
+        print(line)

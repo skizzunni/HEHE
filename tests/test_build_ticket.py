@@ -218,6 +218,26 @@ class GoalieNoteTest(unittest.TestCase):
         self.assertIn("goalie: Devon Levi", t["games"]["VGK @ EDM"][0]["label"])
 
 
+class SaveTicketTest(unittest.TestCase):
+    def test_saves_ticket_and_stand_in_and_never_overwrites(self):
+        import json
+        import tempfile
+        d = tempfile.mkdtemp()
+        path = os.path.join(d, "slate_x", "ticket.json")
+        leg = dict(label="L", price="-500", chance=0.8, gid="nba:1", lg="nba", id="1", kind="ml", team="BOS")
+        t = {"games": {"G": [leg, dict(leg, label="M", id="2")]}}
+        out = B.save_ticket(t, path, combo=[leg])
+        self.assertIn("saved:", out[0])
+        self.assertEqual(len(json.load(open(path))), 2)
+        lad = json.load(open(os.path.join(d, "slate_x", "ticket_ladder.json")))
+        self.assertEqual([L["label"] for L in lad], ["L"])
+        self.assertNotIn("chance", lad[0])                       # grade_picks' file format
+        again = B.save_ticket({"games": {"G": [leg]}}, path, combo=[leg])
+        self.assertIn("not saved", again[0])
+        self.assertEqual(len(json.load(open(path))), 2)          # the sent ticket is untouched
+        self.assertEqual(B.save_ticket(t, None), [])
+
+
 class QuestionableNoteTest(unittest.TestCase):
     def test_note_only_when_someone_was_left_off_as_questionable(self):
         t = {"games": {}, "left_off": [("Giannis 4+ Assists", "Questionable on the official injury report")]}
