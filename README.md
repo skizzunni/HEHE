@@ -5285,6 +5285,15 @@ expected if independent (z -0.38), 143 of 220 had all three (vs 144.0, z -0.14);
 +0.07) and 104/158 (106.0, -0.35); NFL 26/31 and 13/17 (on par). No sign of linked losses, so the
 product stays the honest all-win figure.
 
+NFL quarterback with his own receivers (2026-11-25), since the 2x line put Jordan Love's passing yards
+with two Packers receivers. 949 graded NFL props, team from ESPN's current rosters; 244 pairs of a
+Passing Yards prop and a same-team Receiving Yards / Receptions prop. The receiver won 183 of 224
+(82%) when the quarterback's leg won and 11 of 20 (55%) when it lost; both won 183 times against 178.1
+from the two legs' own hit rates (91.8%, 79.5%) taken as independent. Linked, but in the direction
+that helps an all-win ticket: a stacked pair wins together a little more often than the product says,
+so the product is, if anything, low. Small (20 quarterback misses) and on today's rosters, so no
+change; the stack's real cost is that one bad passing day can sink two or three legs at once.
+
 **Checked, no change: NHL shots props by line (2026-11-24).** Graded NHL Shots on Goal props priced -500
 or shorter, split at Nov 3. 1+ shots: 397/460 (86.3%) then 511/590 (86.6%) vs 85% stated (z +0.67 /
 +0.77) -- but FanDuel's price implies ~92%, so a 1+ shots leg near -1100 is about 5 points short of
