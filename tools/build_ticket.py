@@ -663,12 +663,17 @@ if __name__ == "__main__":
             print(f"No ticket: {e} (add --fallback for winners from DraftKings prices)")
             sys.exit(2)
         t = apply_record(fallback(day), prop_record())
-        t["ladder"] = ladder_text(ladder_fallback(t))
+        t["ladder_pending"] = True
     else:
         apply_record(t, prop_record())
     if "--ncaab" in sys.argv:
         for m, L in ncaab_legs(ncaab_rows(day)).items():
             t["games"].setdefault(m, []).extend(L)
+    combo = []
+    if t.pop("ladder_pending", False):
+        # after the college legs join, so the stand-in sees what the 2x line sees
+        combo = ladder_fallback(t)
+        t["ladder"] = ladder_text(combo)
     print(text(t))
     if save and os.path.exists(save) and "--force" not in sys.argv:
         # 2026-11-24: a second run at 9:20 AM overwrote the 8 AM ticket the user
@@ -679,3 +684,12 @@ if __name__ == "__main__":
         os.makedirs(os.path.dirname(save) or ".", exist_ok=True)
         json.dump(ticket_legs(t), open(save, "w"), indent=1)
         print(f"\nsaved: {save}")
+        if combo:
+            # the stand-in as its own ticket file, so grade_picks and the daily
+            # review keep its record (it is a subset of the legs just saved)
+            lpath = os.path.join(os.path.dirname(save) or ".", "ticket_ladder.json")
+            if os.path.exists(lpath) and "--force" not in sys.argv:
+                print(f"not saved: {lpath} already exists")
+            else:
+                json.dump(ticket_legs({"games": {"ladder": combo}}), open(lpath, "w"), indent=1)
+                print(f"saved: {lpath} (the ladder stand-in, {len(combo)} legs)")
