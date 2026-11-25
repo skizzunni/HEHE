@@ -5260,6 +5260,15 @@ shorter: 180/196 (91.8%) then 162/168 (96.4%) vs ~87% stated, split at Nov 4 (z 
 ~87%) holds them down. Past the bar in one half only, so the cap stays; the daily review now prints
 this line every day ("Props priced -2500 or shorter").
 
+Re-checked 2026-11-25 on the 364 graded props at -2500 or shorter, split at their median date (Nov 2):
+164/180 (91.1% vs 87.5% stated, z +1.49) then 178/184 (96.7% vs 87.3%, z +3.86) -- still one half
+under the bar, so the cap stays. NBA alone by price band, split at Nov 6 (looked at after the fact, so
+it is a description, not a test): -2500 or shorter 93.1% then 95.8%; -1500 to -2500 83.2% (143) then
+82.4% (17); -1000 to -1500 85.8% then 84.8%; -500 to -1000 84.4% then 83.3%. On the fallback ticket an
+NBA leg at -1500 to -2500 has been no safer than one at -500 to -1500 and pays less (about 1.05x
+against 1.1x); the ticket's all-win chance already uses each band's record, so it is priced right,
+and no ordering changes on a one-half result.
+
 **Checked, no change: same-game props win together about as often as independent ones (2026-11-24).**
 The ticket's "all win" chance multiplies its legs, and it holds up to 3 props from one game. Graded props
 priced -1000 or shorter, one per player, games with 2+ (3+): NBA 174 of 229 games had both win vs 176.4
