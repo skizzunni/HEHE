@@ -5254,6 +5254,14 @@ leg drifting from -1300 to -950 (92.9% -> 90.5% implied) is not measurably less 
 pays more. That is why the ticket's "most likely 2x" may lean on drifted legs, and it is right to:
 the chances it uses are the record's, not the price's.
 
+**Research pick, Nov 24: Magic +110 after Cade Cunningham was ruled Out -- LOST 86-104.** The 6:30 PM
+report moved Cunningham (Detroit's top minutes, 35.9 a game) from Probable to Out; ESPN's DraftKings
+line still read Detroit -130 / -2.5, so it was taken as news the price had not absorbed. Detroit won by
+18. Lesson for the research list: one team's late scratch is not an edge when the other side is as
+short (Orlando had Banchero, Isaac, Castleton, Nelson and Penda out), and an unmoved feed line may be a
+stale feed rather than a slow market. Research picks so far: Nov 23 4-6, Nov 24 0-1 -- no edge shown;
+the board's own record stays the guide.
+
 **Checked: the ticket's 75%+ winners (2026-11-24).** Graded board NBA / NHL / NFL / college basketball
 winners stated 75%+ (180, split Nov 8): 77/90 (86% vs 87% stated, z -0.30) then 80/90 (89% vs 88%, z
 +0.37). NBA 80% vs 82% then 82% vs 83%; college basketball 94% vs 96% then 93% vs 93%; NFL 75% vs 79% then
