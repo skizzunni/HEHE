@@ -5194,7 +5194,7 @@ college-basketball scoreboard without `groups=50` lists only a featured handful:
 22 it listed 23 games against 214 with `groups=50&limit=400`. The grader used it and missed Kentucky's
 Nov 16 win (fixed: `ledger.SCOREBOARD_ALL`). The same default URL is still what `dashboard.collect`
 builds the NCAAB slate from and what `anysport.fetch_games` builds NCAAB ratings from, so the board
-has priced 107 NCAAB games all season out of several thousand. Picks there are the market's no-vig
+has priced 107 NCAAB games since Nov 1, at a time when about 53 a day were played (the four days counted). Picks there are the market's no-vig
 price (calibration failed its untouched test), so the ratings do not set any chance today; widening
 the slate would add many more NCAAB picks to the sweep and the every-game line. That changes what the
 board shows, so it waits for the user's word; the 25-leg ticket's college legs already came from the
