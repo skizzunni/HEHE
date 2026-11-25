@@ -210,6 +210,9 @@ class GoalieNoteTest(unittest.TestCase):
         self.assertNotIn("check the confirmed", n)
         self.assertIn("check the confirmed starter", NG.leg_note("Vegas Golden Knights", gr, {}, career_fn=lambda g: None))
         self.assertEqual(NG.leg_note("Boston Bruins", gr), "")
+        mtl = [dict(away="Montréal Canadiens", away_goalie="Jacob Fowler", away_status="Confirmed", home="Colorado Avalanche")]
+        self.assertIn("goalie: Jacob Fowler", NG.leg_note("Montreal Canadiens", mtl, {}, career_fn=lambda g: None))
+        self.assertEqual(NG.leg_note("", mtl), "")
         rows = [dict(lg="nhl", game="VGK @ EDM", id="5", home="EDM", away="VGK", home_name="Edmonton Oilers",
                      away_name="Vegas Golden Knights", home_ml=-500, away_ml=380, market_home=0.82, blind_home=0.7)]
         t = B.fallback("2026-11-24", rows, b2b_fn=lambda *a: False, props_fn=lambda r: [],

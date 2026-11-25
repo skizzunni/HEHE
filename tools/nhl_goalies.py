@@ -149,7 +149,8 @@ def leg_note(team, rows, rosters=None, career_fn=None):
     unconfirmed or backup goalie moves a 75%+ favourite."""
     for r in rows or []:
         for side in ("away", "home"):
-            if (r.get(side) or "").lower() == (team or "").lower() and r.get(side + "_goalie"):
+            # slug(): accents and case dropped ('Montréal Canadiens' == 'Montreal Canadiens')
+            if slug(r.get(side)) == slug(team) and team and r.get(side + "_goalie"):
                 st = r.get(side + "_status") or "Unconfirmed"
                 note = f" -- goalie: {r[side + '_goalie']} ({st})"
                 try:
