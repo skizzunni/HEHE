@@ -85,6 +85,10 @@ class UserTicketsLineTest(unittest.TestCase):
         res["ticket_ladder.json"] = dict(won=6, lost=0, push=0, open=0)
         g2 = lambda f: ([{}] * 6, [], res[os.path.basename(f)]) if f.endswith("ladder.json") else g(f)
         self.assertIn("6-leg ladder stand-in 6-0 (all won)", daily_review.user_tickets_line(root, g2))
+        json.dump([{}], open(os.path.join(d, "ticket_2x.json"), "w"))
+        res["ticket_2x.json"] = dict(won=5, lost=1, push=0, open=0)
+        g3 = lambda f: ([{}] * 6, [], res[os.path.basename(f)]) if f.endswith("2x.json") else g2(f)
+        self.assertIn("6-leg 2x combo 5-1 (lost)", daily_review.user_tickets_line(root, g3))
 
 
 class HeavyPropsLineTest(unittest.TestCase):
