@@ -35,5 +35,20 @@ class TicketSectionTest(unittest.TestCase):
         self.assertIn(("Your saved ticket, re-checked", P._ticket), P.SECTIONS)
 
 
+    def test_ticket_section_runs_the_final_recheck(self):
+        import tempfile
+        from unittest import mock
+        import recheck_ticket
+        root = tempfile.mkdtemp()
+        path = P.ticket_path("2026-11-25", root)
+        os.makedirs(os.path.dirname(path))
+        open(path, "w").write("[]")
+        seen = {}
+        with mock.patch.object(P, "ticket_path", lambda d, root=None: path), \
+                mock.patch.object(recheck_ticket, "main", lambda p, d, final=False: seen.update(final=final) or "ok"):
+            self.assertEqual(P._ticket("2026-11-25"), "ok")
+        self.assertTrue(seen["final"])
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -55,7 +55,10 @@ def _ticket(day):
     if not os.path.exists(path):
         return f"no saved ticket ({os.path.relpath(path)})"
     import recheck_ticket
-    return recheck_ticket.main(path, day)
+    # --final: KEEP / CAUTION / DROP by game, drops recorded for the grader,
+    # the morning 2x and stand-in at current prices, a fresh stand-in from
+    # games not yet started (2026-11-25: the brief showed only raw flags)
+    return recheck_ticket.main(path, day, final=True)
 
 
 SECTIONS = (("Our number first, then the line", _slate),
