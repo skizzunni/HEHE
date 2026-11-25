@@ -345,6 +345,26 @@ class LadderFallbackTest(unittest.TestCase):
         self.assertLessEqual(len(combo), 6)
         self.assertEqual(len(combo), len({L["id"] for L in combo}))
 
+    def test_matches_brute_force(self):
+        """2026-11-25: a rounded-payout knapsack missed or under-picked 19 of 300
+        random slates; the search must equal trying every combination."""
+        import itertools
+        import random
+        rnd = random.Random(7)
+        prices = ["-250", "-300", "-400", "-500", "-700", "-900", "-1100", "-1600", "+110"]
+        for _ in range(60):
+            g = {f"G{i}": [dict(label=f"{i}{j}", price=rnd.choice(prices), chance=round(rnd.uniform(.5, .9), 3))
+                           for j in range(rnd.randint(1, 3))] for i in range(rnd.randint(1, 7))}
+            best = 0.0
+            for k in range(1, 7):
+                for gs in itertools.combinations(g, k):
+                    for pick in itertools.product(*[g[x] for x in gs]):
+                        pay = math.prod(B._dec(L["price"]) for L in pick)
+                        if 2 - 1e-12 <= pay <= 5 + 1e-12:
+                            best = max(best, math.prod(L["chance"] for L in pick))
+            got = B.ladder_fallback({"games": g})
+            self.assertAlmostEqual(math.prod(L["chance"] for L in got) if got else 0.0, best, places=9)
+
     def test_one_leg_per_game_and_best_chance(self):
         g = {"A": [dict(label="a1", price="-400", chance=0.80), dict(label="a2", price="-300", chance=0.70)],
              "B": [dict(label="b1", price="-400", chance=0.80)], "C": [dict(label="c1", price="-400", chance=0.80)],

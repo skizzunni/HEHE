@@ -399,7 +399,7 @@ def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None, minutes
     return dict(games=games, left_off=left, note=note)
 
 
-def ladder_fallback(t, lo=2.0, hi=5.0, maxk=6, step=0.002):
+def ladder_fallback(t, lo=2.0, hi=5.0, maxk=6):
     """The ladder's rule (one leg per game, up to 6, paying 2x-5x, highest
     chance that all win) on the fallback ticket's legs, for a day the board's
     8 AM Locks card does not exist. Labelled as a stand-in: the usual ladder
@@ -408,8 +408,11 @@ def ladder_fallback(t, lo=2.0, hi=5.0, maxk=6, step=0.002):
     2026-11-25: this ran ladder.best_combo, which only searches the 12
     likeliest legs; on the fallback those are 87% NHL shots legs at ~1.06x,
     so it said "nothing pays 2x" while six legs from six games paid 2.1x.
-    An exact search instead: a knapsack over games on log payout (floored to
-    `step`, so a found combo truly pays >= lo), every leg of every game."""
+    Then a knapsack on rounded payouts, which a brute-force check showed
+    missing or under-picking 19 of 300 random slates. Now an exact search:
+    depth-first over games (skip, or one of its legs), cut when the chance
+    so far cannot beat the best found (adding a leg only lowers it), when
+    the payout passes `hi`, or at `maxk` legs. Ties go to fewer legs."""
     games = []
     for g in t["games"].values():
         opts = []
@@ -419,32 +422,35 @@ def ladder_fallback(t, lo=2.0, hi=5.0, maxk=6, step=0.002):
             except (KeyError, TypeError, ValueError):
                 continue
             if L.get("chance") and d > 1:
-                opts.append((math.log(L["chance"]), int(math.log(d) / step), L))
+                opts.append((L["chance"], d, L))
         if opts:
-            games.append(opts)
-    cap = int(math.log(hi) / step)
-    # best[(k, b)] = (log chance, legs) over the games seen so far
-    best = {(0, 0): (0.0, ())}
-    for opts in games:
-        nxt = dict(best)
-        for (k, b), (lp, legs) in best.items():
-            if k == maxk:
-                continue
-            for olp, ob, L in opts:
-                nb = b + ob
-                if nb > cap:
-                    continue
-                key, val = (k + 1, nb), (lp + olp, legs + (L,))
-                if key not in nxt or val[0] > nxt[key][0] + 1e-12:
-                    nxt[key] = val
-        best = nxt
-    need = math.log(lo) / step
-    ok = [(lp, legs) for (k, b), (lp, legs) in best.items()
-          if k and b >= need and lo <= math.prod(_dec(L["price"]) for L in legs) <= hi]
-    if not ok:
-        return []
-    top = max(lp for lp, _ in ok)
-    return list(min((legs for lp, legs in ok if lp >= top - 1e-12), key=len))
+            games.append(sorted(opts, key=lambda o: -o[0]))
+    games.sort(key=lambda g: -g[0][0])
+    # reach[i][r]: the most r more legs from games i.. can multiply the payout by
+    tops = [max(o[1] for o in g) for g in games]
+    reach = []
+    for i in range(len(games) + 1):
+        rest = sorted(tops[i:], reverse=True)
+        reach.append([math.prod(rest[:r]) for r in range(maxk + 1)])
+    best = [0.0, []]
+
+    def go(i, p, pay, legs):
+        if legs and pay >= lo - 1e-12:
+            if p > best[0] + 1e-12 or (abs(p - best[0]) <= 1e-12 and len(legs) < len(best[1])):
+                best[0], best[1] = p, list(legs)
+        if i == len(games) or len(legs) == maxk or p <= best[0] + 1e-12:
+            return
+        if pay * reach[i][maxk - len(legs)] < lo - 1e-12:
+            return                       # 2x is out of reach from here
+        for c, d, L in games[i]:
+            if pay * d <= hi + 1e-12 and p * c > best[0] + 1e-12:
+                legs.append(L)
+                go(i + 1, p * c, pay * d, legs)
+                legs.pop()
+        go(i + 1, p, pay, legs)
+
+    go(0, 1.0, 1.0, [])
+    return best[1]
 
 
 def ladder_text(combo):
