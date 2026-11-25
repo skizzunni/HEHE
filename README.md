@@ -5207,6 +5207,15 @@ event id (both dates in ET, the prop's day confirmed against the log), split at 
 (574): 206/247 (83.4% vs 84.2% stated, z -0.36) then 271/327 (82.9% vs 83.6%, z -0.34); rested: z
 +0.56 then -0.15. Under a point short in both halves -- no caution, no change.
 
+**Checked: players listed day-to-day in the morning hit as often once they play (2026-11-25).** The
+ticket leaves off anyone Out / Doubtful / Questionable. From the saved ESPN injury snapshots (20 days,
+the last snapshot before 8:05 AM ET), 1,939 graded NBA props, split at Nov 13: players listed
+Day-To-Day that morning who then played won 33/38 (86.8% vs 84.1% stated, z +0.47) then 42/47 (89.4% vs
+84.5%, z +0.93); everyone else 84.1% then 83.9% (on par). 43 more props of morning day-to-day players
+were voided (did not play), and a void is a push on FanDuel, parlay leg included. So the morning drop
+does not protect the record -- it only removes choices -- but the sample is small (85 graded), so the
+rule stays; it is noted here for the user's call. (ESPN's NBA feed says Day-To-Day, not Questionable.)
+
 **Found, not changed: the board sees about 1 in 9 college-basketball games (2026-11-25).** ESPN's
 college-basketball scoreboard without `groups=50` lists only a featured handful: on Nov 15, 18, 21 and
 22 it listed 23 games against 214 with `groups=50&limit=400`. The grader used it and missed Kentucky's
