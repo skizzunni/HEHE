@@ -303,8 +303,17 @@ def main(path, day, final=False):
                 saved[name] = [L.get("label") for L in json.load(open(os.path.join(os.path.dirname(path), fname)))]
             except (OSError, ValueError):
                 pass
+        import datetime as _dt
+        now_utc = _dt.datetime.now(_dt.timezone.utc)
+
+        def _begun(r):
+            try:
+                return _dt.datetime.fromisoformat(str(r.get("start")).replace("Z", "+00:00")) <= now_utc
+            except ValueError:
+                return False
+        started = {str(r.get("id")) for r in rows or [] if r.get("start") and _begun(r)}
         out = final_text(legs, allf, games, rep.get("asof"), now_prices=snap, now_chance=ml_chance(legs, rows), record=rec,
-                         saved=saved)
+                         saved=saved, started=started)
         back = [d for d in (json.load(open(path + ".dropped")) if os.path.exists(path + ".dropped") else [])]
         rep_ok = bool(rep.get("asof") and rep.get("rows"))
 
@@ -365,7 +374,8 @@ def verdict(notes):
     return "KEEP", notes
 
 
-def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=None, record=None, saved=None):
+def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=None, record=None, saved=None,
+               started=()):
     """The final ticket by game: each leg KEEP / CAUTION / DROP with its notes,
     then the kept count and -- when prices are known -- the kept legs' all-win
     chance and payout at the current prices (a price move can move a prop into
@@ -389,11 +399,14 @@ def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=N
     if now_prices is not None:
         kept_legs = [L for L in legs if verdict(notes.get(L.get("label"), []))[0] != "DROP"]
         out.append(all_win_line(kept_legs, now_prices, now_chance or {}, record or {}))
-        b = best_2x(leg_odds(kept_legs, now_prices, now_chance or {}, record or {}) or [])
+        # fresh suggestions only from games not yet started: a 6:45 PM recheck
+        # must not offer a leg in the 5 PM game already under way (2026-11-25)
+        open_legs = [L for L in kept_legs if str(L.get("id")) not in {str(x) for x in started}]
+        b = best_2x(leg_odds(open_legs, now_prices, now_chance or {}, record or {}) or [])
         if b:
             out.append(f"Most likely 2x from these legs: {len(b['legs'])} legs, about {100 * b['chance']:.0f}% all win, "
                        f"pays {b['pays']:.2f}x -- " + "; ".join(_short(L, now_prices) for L in b["legs"]) + ".")
-        lad = ladder_now(kept_legs, now_prices, now_chance or {}, record or {})
+        lad = ladder_now(open_legs, now_prices, now_chance or {}, record or {})
         if lad:
             out.append(lad)
         for name, labels in (saved or {}).items():

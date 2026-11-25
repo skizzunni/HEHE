@@ -287,6 +287,16 @@ class LadderNowTest(unittest.TestCase):
         self.assertTrue(out.startswith("Ladder stand-in now (one leg per game, 2x-5x): 4 legs, about 41% all win, pays 2.44x"), out)
         self.assertEqual(R.ladder_now(legs[:2], {}, {"G0": 0.8, "G1": 0.8}, {}), "")
 
+    def test_started_games_left_out_of_fresh_suggestions(self):
+        legs = [dict(label=f"G{i}", kind="ml", price="-400", lg="nba", id=str(i)) for i in range(5)]
+        ch = {L["label"]: 0.8 for L in legs}
+        out = R.final_text(legs, [], now_prices={}, now_chance=ch, record={}, started={"0", "1"})
+        lad = [x for x in out.splitlines() if x.startswith("Ladder stand-in now")]
+        self.assertEqual(lad, [])                                   # 3 open games at 1.25x cannot reach 2x
+        out = R.final_text(legs, [], now_prices={}, now_chance=ch, record={}, started={"0"})
+        self.assertIn("Ladder stand-in now (one leg per game, 2x-5x): 4 legs", out)
+        self.assertNotIn("G0", out.split("Ladder stand-in now")[1])
+
 
 if __name__ == "__main__":
     unittest.main()
