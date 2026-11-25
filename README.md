@@ -5201,6 +5201,12 @@ top-minutes players (this season, 5+ games, teams from ESPN's current rosters) h
 game. 3,259 graded props, split at Nov 6, each against its price band: star out 84/94 (89.4% vs 84.6%,
 z +1.28) then 461/555 (83.1% vs 83.3%, z -0.18); star in on par both times. The extra usage is already
 in the line -- no note, no change.
+**Checked: the touchdown model runs low (2026-11-25).** data/td_history.json, 2,500 graded NFL anytime-TD
+props, split at Nov 5: 173/1,240 scored (14.0%) vs the model's 11.7% (z +2.62), then 172/1,260 (13.7%) vs
+11.5% (z +2.54) -- low in both halves, each just under the 2.8 bar. FanDuel's own implied chance was
+closer (15.1% / 14.8%, z -1.20 / -1.28, a little high). By band, model 35-50%: 54.4% / 47.4% scored.
+The true chance has sat between the model and the price; nothing is changed (one more half at this
+size settles it), but tools/td_fallback.py now prints FanDuel's chance beside the model's with this note.
 Props whose FanDuel price beats the consensus fair price (2026-11-25): 3,789 graded props with both
 numbers, grouped by p_fair - implied (over +1 pt "value", under -3 pts "short"), each against its league
 and price band, split at Nov 5. Value 274/327 (z +0.09) then 364/443 (z -0.34); short -0.37 then +1.29;

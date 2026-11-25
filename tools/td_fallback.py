@@ -44,12 +44,21 @@ def rows(day, get=_get):
     return out
 
 
+# README 2026-11-25: on 2,500 graded NFL anytime-TD props the model ran low in
+# both date halves (14.0% hit vs 11.7% stated, z +2.62; 13.7% vs 11.5%, z
+# +2.54 -- just under the 2.8 bar), while FanDuel's own price was close
+# (15.1% / 14.8%, z -1.20 / -1.28). Both are shown; neither is changed.
+NOTE = ("(Model chances have run about 2 points low on 2,500 graded NFL TD props, in both halves; "
+        "FanDuel's own price has been closer -- the true chance has sat between the two.)")
+
+
 def text(games):
-    lines = []
+    lines = [NOTE] if games else []
     for g in games:
         lines.append(f"{g['match']} (total {g['total']:g}; {g['basis']})" if g.get("total") else f"{g['match']} ({g['basis']})")
         for p in g["players"]:
-            lines.append(f"  {p['name']}: anytime {100 * p['p']:.0f}% ({p.get('price')}), 2+ {100 * p['p2']:.0f}%, "
+            fd = f", FanDuel {100 * p['imp']:.0f}%" if p.get("imp") else ""
+            lines.append(f"  {p['name']}: anytime {100 * p['p']:.0f}% ({p.get('price')}{fd}), 2+ {100 * p['p2']:.0f}%, "
                          f"first TD {100 * p['pfirst']:.0f}%")
     return "\n".join(lines) or "No NFL anytime-TD market posted yet."
 

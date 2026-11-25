@@ -19,7 +19,11 @@ class RowsTest(unittest.TestCase):
     def test_text(self):
         g = [dict(match="CHI @ DET", total=55.5, basis="scaled", players=[
             dict(name="Jahmyr Gibbs", p=0.61, price="-290", p2=0.24, pfirst=0.16)])]
-        self.assertEqual(T.text(g), "CHI @ DET (total 55.5; scaled)\n  Jahmyr Gibbs: anytime 61% (-290), 2+ 24%, first TD 16%")
+        self.assertEqual(T.text(g).splitlines()[1:], ["CHI @ DET (total 55.5; scaled)",
+                                                     "  Jahmyr Gibbs: anytime 61% (-290), 2+ 24%, first TD 16%"])
+        self.assertEqual(T.text(g).splitlines()[0], T.NOTE)
+        g[0]["players"][0]["imp"] = 0.744
+        self.assertIn("(-290, FanDuel 74%)", T.text(g))
         self.assertEqual(T.text([]), "No NFL anytime-TD market posted yet.")
 
 
