@@ -35,16 +35,22 @@ def _num(v):
         return None
 
 
+def _fold(name):
+    """A name with accents and case dropped: FanDuel 'Luka Doncic' is ESPN's 'Luka Dončić'."""
+    import unicodedata
+    return unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower().strip()
+
+
 def player_stat(summary, player, stat):
     """A player's stat (or a sum like PTS+AST) from an ESPN summary's box
     score; 3PM is made threes. None when he is not in the box score."""
     for t in ((summary or {}).get("boxscore") or {}).get("players") or []:
         for cat in t.get("statistics") or []:
-            row = {a["athlete"]["displayName"]: dict(zip(cat.get("labels") or [], a.get("stats") or []))
+            row = {_fold(a["athlete"]["displayName"]): dict(zip(cat.get("labels") or [], a.get("stats") or []))
                    for a in cat.get("athletes") or []}
-            if player not in row:
+            if _fold(player) not in row:
                 continue
-            got = row[player]
+            got = row[_fold(player)]
             if not got:
                 return 0.0                      # listed, did not play
             total = 0.0
@@ -62,7 +68,7 @@ def _dnp(summary, player):
     for t in ((summary or {}).get("boxscore") or {}).get("players") or []:
         for cat in t.get("statistics") or []:
             for a in cat.get("athletes") or []:
-                if (a.get("athlete") or {}).get("displayName") == player:
+                if _fold((a.get("athlete") or {}).get("displayName")) == _fold(player):
                     return bool(a.get("didNotPlay")) or not a.get("stats")
     return False
 

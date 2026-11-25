@@ -68,6 +68,9 @@ class PropTest(unittest.TestCase):
         self.assertEqual(G.player_stat(BOX, "Keegan Murray", "3PM"), 1.0)
         self.assertEqual(G.player_stat(BOX, "Bench Guy", "PTS"), 0.0)
         self.assertIsNone(G.player_stat(BOX, "Nobody", "PTS"))
+        box = {"boxscore": {"players": [{"statistics": [{"labels": ["PTS"], "athletes": [
+            {"athlete": {"displayName": "Luka Dončić"}, "stats": ["31"]}]}]}]}}
+        self.assertEqual(G.player_stat(box, "Luka Doncic", "PTS"), 31.0)               # accents
 
     def test_dressed_but_did_not_play_is_a_push(self):
         box = {"boxscore": {"players": [{"team": {"abbreviation": "GS"}, "statistics": [
