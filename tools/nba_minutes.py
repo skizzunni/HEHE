@@ -52,19 +52,41 @@ def last5(gamelog):
     return round(sum(m for _, m in rows) / len(rows), 1) if rows else None
 
 
+SUFFIXES = {"jr", "sr", "ii", "iii", "iv", "v"}
+
+
+def name_key(name):
+    """A name for matching across FanDuel and ESPN: accents, punctuation, case
+    and a generational suffix dropped. 2026-11-25: FanDuel's 'Jabari Smith' is
+    ESPN's 'Jabari Smith Jr.', so his minutes and last-10 notes were silently
+    skipped (an exact match found 23 of 24 players)."""
+    import unicodedata
+    t = unicodedata.normalize("NFKD", name or "").encode("ascii", "ignore").decode().lower()
+    words = [w for w in "".join(c if c.isalnum() or c == " " else " " for c in t).split()]
+    while len(words) > 2 and words[-1] in SUFFIXES:
+        words.pop()
+    return " ".join(words)
+
+
+def _ids(get, comps, names):
+    """{wanted name: ESPN athlete id} from both teams' rosters."""
+    want = {name_key(n): n for n in names}
+    ids = {}
+    for c in comps:
+        r = get(ROSTER.format((c.get("team") or {}).get("id"))) or {}
+        for a in r.get("athletes") or []:
+            k = name_key(a.get("displayName"))
+            if k in want:
+                ids[want[k]] = a.get("id")
+    return ids
+
+
 def mpg_last5(gid, names, get=_get):
     """{name: mpg over last 5} for the named players in this NBA game."""
     eid = str(gid).split(":")[-1]
     s = get(SUMMARY.format(eid)) or {}
     comps = (((s.get("header") or {}).get("competitions") or [{}])[0]).get("competitors") or []
-    want = {n.lower(): n for n in names}
-    ids = {}
-    for c in comps:
-        r = get(ROSTER.format((c.get("team") or {}).get("id"))) or {}
-        for a in r.get("athletes") or []:
-            n = (a.get("displayName") or "").lower()
-            if n in want:
-                ids[want[n]] = a.get("id")
+    ids = _ids(get, comps, names)
     out = {}
     for name, aid in ids.items():
         v = last5(get(GAMELOG.format(aid)))
@@ -119,12 +141,5 @@ def gamelogs(gid, names, get=_get):
     eid = str(gid).split(":")[-1]
     s = get(SUMMARY.format(eid)) or {}
     comps = (((s.get("header") or {}).get("competitions") or [{}])[0]).get("competitors") or []
-    want = {n.lower(): n for n in names}
-    ids = {}
-    for c in comps:
-        r = get(ROSTER.format((c.get("team") or {}).get("id"))) or {}
-        for a in r.get("athletes") or []:
-            n = (a.get("displayName") or "").lower()
-            if n in want:
-                ids[want[n]] = a.get("id")
+    ids = _ids(get, comps, names)
     return {name: games(get(GAMELOG.format(aid))) for name, aid in ids.items()}

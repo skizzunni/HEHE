@@ -16,6 +16,21 @@ def gamelog(mins_by_date):
             "seasonTypes": [{"displayName": "2026-27 Regular Season", "categories": [{"events": rows}]}]}
 
 
+class NameKeyTest(unittest.TestCase):
+    def test_fanduel_and_espn_names_meet(self):
+        self.assertEqual(M.name_key("Jabari Smith Jr."), M.name_key("Jabari Smith"))
+        self.assertEqual(M.name_key("Luka Dončić"), M.name_key("Luka Doncic"))
+        self.assertEqual(M.name_key("Gary Payton II"), M.name_key("Gary Payton"))
+        self.assertEqual(M.name_key("De'Aaron Fox"), M.name_key("De'Aaron Fox"))
+        self.assertNotEqual(M.name_key("Jalen Williams"), M.name_key("Jaylin Williams"))
+
+    def test_roster_lookup_uses_it(self):
+        rosters = {"1": {"athletes": [{"displayName": "Jabari Smith Jr.", "id": "77"}]}, "2": {"athletes": []}}
+        comps = [{"team": {"id": "1"}}, {"team": {"id": "2"}}]
+        get = lambda u: rosters["1"] if "/teams/1/" in u else rosters["2"]
+        self.assertEqual(M._ids(get, comps, ["Jabari Smith"]), {"Jabari Smith": "77"})
+
+
 class Last5Test(unittest.TestCase):
     def test_newest_five_played_games(self):
         g = gamelog([("2026-11-0%d" % d, m) for d, m in ((1, 40), (2, 10), (3, 0), (4, 12), (5, 14), (6, 16), (7, 18))])
