@@ -437,15 +437,30 @@ def _fd_props(rows):
     return out
 
 
-def _report_status(day):
-    """player display name -> official injury report status for `day`."""
+def _report_status(day, nfl_fetch=None):
+    """player display name -> injury status for `day`: the NBA's official
+    report, plus ESPN's NFL report. 2026-11-25: NFL legs (GB @ LAR) went on
+    the ticket with no injury check at all -- only the NBA report was read."""
     import key_absences as K
     import nba_injury_report as R
     _, txt = R.latest()
     rows = R.parse(txt or "")["rows"] if txt else []
     mmdd = dt.date.fromisoformat(day).strftime("%m/%d/%Y")
     status = {r["player"]: r["status"] for r in rows if r["date"] == mmdd}
+    status.update(nfl_status(nfl_fetch))
     return lambda name: K.status_of(name, status)
+
+
+def nfl_status(fetch=None):
+    """{player: status} from ESPN's NFL injury report ({} when it cannot be read)."""
+    try:
+        if fetch is None:
+            sys.path.insert(0, ROOT)
+            import injuries
+            fetch = lambda: injuries.fetch({"nfl": "football/nfl"}).get("nfl") or {}
+        return {p: st for rows in (fetch() or {}).values() for p, st in rows}
+    except Exception:
+        return {}
 
 
 class StaleBoard(Exception):

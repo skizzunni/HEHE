@@ -217,6 +217,22 @@ class GoalieNoteTest(unittest.TestCase):
         self.assertIn("goalie: Devon Levi", t["games"]["VGK @ EDM"][0]["label"])
 
 
+class NflStatusTest(unittest.TestCase):
+    def test_nfl_report_flattened(self):
+        rows = {"Green Bay Packers": [["Josh Jacobs", "Questionable"], ["Luke Musgrave", "Out"]]}
+        self.assertEqual(B.nfl_status(lambda: rows), {"Josh Jacobs": "Questionable", "Luke Musgrave": "Out"})
+
+    def test_unreadable_report_is_empty(self):
+        def boom():
+            raise OSError("down")
+        self.assertEqual(B.nfl_status(boom), {})
+
+    def test_questionable_nfl_player_left_off(self):
+        ok, why, _ = B.judge_prop({"name": "Josh Jacobs"}, B.nfl_status(lambda: {"GB": [["Josh Jacobs", "Questionable"]]})["Josh Jacobs"])
+        self.assertFalse(ok)
+        self.assertIn("Questionable", why)
+
+
 class NcaabOptInTest(unittest.TestCase):
     def test_only_90_plus_favourites(self):
         rows = [dict(lg="ncaab", game="JAX @ IU", id="1", home="IU", away="JAX", home_ml=-100000, away_ml=5000, market_home=0.981),
