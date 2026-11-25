@@ -522,6 +522,33 @@ def nhl_dog_prereg_line(update_fn=None, today=None):
             f"{s['won']}/{s['n']} covered vs {s['expected']} expected (z {s['z']:+.2f}, ROI {s['roi']:+.1f}%); {what}.")
 
 
+def user_tickets_line(root=None, grade_fn=None, last=3):
+    """The user's saved tickets (work/slate_*/ticket*.json) for the last `last`
+    slates: each one's legs won-lost and whether every leg won -- the record
+    the user actually plays, beside the board's. 2026-11-24: the 13- and
+    25-leg tickets were tracked live but kept no record anywhere."""
+    import glob
+    root = root or ROOT
+    files = sorted(glob.glob(os.path.join(root, "work", "slate_*", "ticket*.json")))
+    if not files:
+        return None
+    dirs = sorted({os.path.dirname(f) for f in files}, key=os.path.getmtime)[-last:]
+    try:
+        import grade_picks
+        grade_fn = grade_fn or grade_picks.main
+        bits = []
+        for d in dirs:
+            for f in sorted(glob.glob(os.path.join(d, "ticket*.json"))):
+                picks, res, sm = grade_fn(f)
+                tag = f"{os.path.basename(d).replace('slate_', '')} {len(picks)}-leg"
+                state = ("all won" if not sm["lost"] and not sm["open"] else
+                         f"{sm['open']} open" if not sm["lost"] else "lost")
+                bits.append(f"{tag} {sm['won']}-{sm['lost']}" + (f"-{sm['push']}" if sm["push"] else "") + f" ({state})")
+    except Exception:
+        return None
+    return "Your tickets: " + "; ".join(bits) + "."
+
+
 def research_picks_line(pattern=None, grade_fn=None):
     """The researched pick lists (work/slate_*/final_picks.json, graded by
     tools/grade_picks.py from final scores): record and flat $1 return, all
@@ -2795,6 +2822,8 @@ def words(r, fit):
         out.append(r["board_roi"])
     if r.get("research_picks"):
         out.append(r["research_picks"])
+    if r.get("user_tickets"):
+        out.append(r["user_tickets"])
     if r.get("dc_moves"):
         out.append(r["dc_moves"])
     if r.get("switched"):
@@ -2986,6 +3015,7 @@ def _main():
     log[today.isoformat()]["value_prereg"] = value_prereg_line()
     log[today.isoformat()]["board_roi"] = board_roi_line(ledger)
     log[today.isoformat()]["research_picks"] = research_picks_line()
+    log[today.isoformat()]["user_tickets"] = user_tickets_line()
     log[today.isoformat()]["nhl_dog_prereg"] = nhl_dog_prereg_line()
     log[today.isoformat()]["prop_fair"] = prop_fair_line()
     log[today.isoformat()]["dc_side"] = dc_side_line(ledger)

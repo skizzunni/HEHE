@@ -42,6 +42,23 @@ class ReviewLineTest(unittest.TestCase):
         self.assertIsNone(daily_review.preview_losses_line(lambda: []))
 
 
+class UserTicketsLineTest(unittest.TestCase):
+    def test_line(self):
+        import json
+        import tempfile
+        import daily_review
+        root = tempfile.mkdtemp()
+        d = os.path.join(root, "work", "slate_nov24")
+        os.makedirs(d)
+        for name in ("ticket.json", "ticket25.json"):
+            json.dump([{}], open(os.path.join(d, name), "w"))
+        res = {"ticket.json": dict(won=13, lost=0, push=0, open=0), "ticket25.json": dict(won=24, lost=0, push=0, open=1)}
+        g = lambda f: ([{}] * (13 if f.endswith("ticket.json") else 25), [], res[os.path.basename(f)])
+        line = daily_review.user_tickets_line(root, g)
+        self.assertEqual(line, "Your tickets: nov24 13-leg 13-0 (all won); nov24 25-leg 24-0 (1 open).")
+        self.assertIsNone(daily_review.user_tickets_line(tempfile.mkdtemp(), g))
+
+
 class HeavyPropsLineTest(unittest.TestCase):
     def test_line(self):
         import daily_review
