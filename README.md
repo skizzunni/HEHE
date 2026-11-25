@@ -5181,6 +5181,14 @@ off in both halves -- Rebounds -1.28 then +2.01, Points +0.10 then -0.37, Threes
 Pts + Reb 39/53 (z -3.40) has no later-half sample (under 40). The band record already covers the
 market, so nothing is cut; Murray's was an ordinary miss at a price that loses about 1 in 6.
 
+**Checked, no rule: NBA prop cushion over the line (2026-11-25).** Cushion = (his last-10 average in
+the market - the line) / the spread of those 10 games, from ESPN game logs anchored on the prop's own
+event id (only games before it, minutes > 0, at least 8). 3,138 graded props, quartiles cut at 0.59 /
+0.92 / 1.29, split at Nov 7. Thinnest quarter: 308/390 (79.0% vs 82.4% stated, z -1.77) then 316/395
+(80.0% vs 81.8%, z -0.93) -- short in both halves but far under the bar; the thickest quarter ran
+ahead (z +0.70, +1.16). It overlaps the last-10 caution, which already flags these legs, so no new
+note. Murray (cushion 0.85, second quarter) was not a thin leg; Gafford (0.08) was, and won.
+
 **Checked, no cut: favourites missing a key player (2026-11-24).** After the user's Nov 23 ticket lost
 on the Raptors (-450, no Leonard / Barrett), Thunder (-190, eight out) and Cavaliers (-350, no Mobley):
 graded board NBA picks (174 matched to box scores), "key" = top 6 by minutes per game played over the
