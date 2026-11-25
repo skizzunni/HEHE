@@ -5192,6 +5192,10 @@ market, so nothing is cut; Murray's was an ordinary miss at a price whose props 
 NFL the same way (2026-11-25): 475 graded props at -500 or shorter, split at Nov 1. Receiving Yards
 62/68 then 99/114 (z +0.60 / +0.74 against their band), Receptions +0.35 / -0.94, Rushing Yards -1.48 /
 -0.45, Passing Yards -0.50 / +0.96: none off in both halves, so today's NFL legs stand as priced.
+NBA by line size (2026-11-25): props below their market's median line (bench-sized: under 2 assists,
+under 10 points, under 20 PRA) against those at or above it, each against its price band, split at
+Nov 6. Low lines 304/363 (83.7% vs 86.0%, z -1.27) then 399/467 (85.4% vs 85.5%, z -0.01); high lines
++0.67 then +0.01. A small line is no safer or riskier than its price says -- no change.
 
 **Checked, no rule: NBA prop cushion over the line (2026-11-25).** Cushion = (his last-10 average in
 the market - the line) / the spread of those 10 games, from ESPN game logs anchored on the prop's own
