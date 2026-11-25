@@ -5201,6 +5201,12 @@ event id (only games before it, minutes > 0, at least 8). 3,138 graded props, qu
 ahead (z +0.70, +1.16). It overlaps the last-10 caution, which already flags these legs, so no new
 note. Murray (cushion 0.85, second quarter) was not a thin leg; Gafford (0.08) was, and won.
 
+**Checked, no rule: NBA props on the second night of a back-to-back (2026-11-25).** The ticket warns on
+NHL back-to-backs; the NBA had no check. 3,257 graded NBA props matched to the player's ESPN game log by
+event id (both dates in ET, the prop's day confirmed against the log), split at Nov 6. Second night
+(574): 206/247 (83.4% vs 84.2% stated, z -0.36) then 271/327 (82.9% vs 83.6%, z -0.34); rested: z
++0.56 then -0.15. Under a point short in both halves -- no caution, no change.
+
 **Found, not changed: the board sees about 1 in 9 college-basketball games (2026-11-25).** ESPN's
 college-basketball scoreboard without `groups=50` lists only a featured handful: on Nov 15, 18, 21 and
 22 it listed 23 games against 214 with `groups=50&limit=400`. The grader used it and missed Kentucky's
