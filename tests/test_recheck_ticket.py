@@ -208,6 +208,7 @@ class NhlLineupTest(unittest.TestCase):
         self.assertTrue(R._same("Mitch Marner", "Mitchell Marner"))
         self.assertFalse(R._same("Matt Boldy", "Mike Boldy"))
         self.assertTrue(R._same("Juraj Slafkovsky", "Juraj Slafkovský"))                   # accents
+        self.assertTrue(R._same("Sebastian Aho (CAR)", "Sebastian Aho"))                   # FanDuel team tag
         self.assertIn("injured list", pg["Hurt Guy"])
         self.assertEqual(pg["Maybe Guy"], "a game-time decision")
         self.assertEqual(NG.lineup("<html></html>"), {})

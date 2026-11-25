@@ -16,6 +16,7 @@ latest report, and prints every leg that now needs attention:
     python3 tools/recheck_ticket.py work/slate_nov24/ticket.json today --final   # by game, KEEP / CAUTION / DROP
 """
 import json
+import re
 import os
 import sys
 
@@ -31,7 +32,10 @@ def _same(a, b):
     import unicodedata
 
     def fold(x):   # accents dropped: DailyFaceoff 'Slafkovsky', the NHL 'Slafkovský'
-        return unicodedata.normalize("NFKD", x or "").encode("ascii", "ignore").decode().lower().replace(".", "").split()
+        # and FanDuel's team tag: 'Sebastian Aho (CAR)' is Carolina's Aho (2026-11-25:
+        # the tag read as his surname and he was flagged as missing from the lines)
+        x = re.sub(r"\s*\([A-Za-z]{2,4}\)\s*$", "", x or "")
+        return unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode().lower().replace(".", "").split()
     a, b = fold(a), fold(b)
     if len(a) < 2 or len(b) < 2 or a[-1] != b[-1]:
         return a == b
