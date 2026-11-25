@@ -97,6 +97,15 @@ class PropTest(unittest.TestCase):
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, False, BOX), "open")
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, True, BOX), "lost")
 
+    def test_record_counts_a_prop_only_at_the_final(self):
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        json.dump([dict(label="k", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)],
+                  open(path, "w"))
+        self.assertEqual(G.main(path, get=lambda u: BOX)[1], ["open"])        # reached mid-game
+        self.assertEqual(G.main(path, get=lambda u: BOX_DONE)[1], ["won"])
+
     def test_dropped_count_without_and_with_sidecar(self):
         import json
         import tempfile

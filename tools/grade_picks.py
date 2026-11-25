@@ -249,7 +249,10 @@ def main(path, get=None):
     results = []
     for p in picks:
         scores, done, d = final(p["lg"], p["id"], get, raw=True)
-        results.append(grade(p, scores, done, d))
+        r = grade(p, scores, done, d)
+        # a record counts a prop only at the final: reached mid-game is still
+        # open (the daily review reads this; 2026-11-25 Klay read won in the 1st)
+        results.append("open" if r == "won" and not done else r)
     return picks, results, summary(picks, results)
 
 
