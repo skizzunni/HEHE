@@ -163,6 +163,11 @@ class GameNewsTest(unittest.TestCase):
         news = R.game_news(legs, rows, lambda a: [("Cade Cunningham", 34.1, "Out")] if a == "DET" else [])
         self.assertEqual(news, ["DET @ ORL: Detroit Pistons without Cade Cunningham (34.1 min, Out)"])
         self.assertEqual(R.game_news(legs, rows, lambda a: []), [])
+        rep = [dict(date="11/24/2026", team="Orlando Magic", player="Banchero, Paolo", status="Out"),
+               dict(date="11/24/2026", team="Orlando Magic", player="Isaac, Jonathan", status="Out"),
+               dict(date="11/24/2026", team="Orlando Magic", player="Jones, Tre", status="Probable")]
+        news = R.game_news(legs, rows, lambda a: [], rep, "11/24/2026")
+        self.assertEqual(news, ["DET @ ORL: Orlando Magic has 2 Out on the report -- Jonathan Isaac, Paolo Banchero"])
 
 
 class FinalViewTest(unittest.TestCase):

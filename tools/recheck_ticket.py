@@ -179,7 +179,7 @@ def log_prices(path, legs, current, rows, now=None):
     return out
 
 
-def game_news(legs, rows, team_out_fn):
+def game_news(legs, rows, team_out_fn, report_rows=None, mmdd=None):
     """['DET @ ORL: Detroit Pistons without Cade Cunningham (34.1 min, Out)', ...]
     -- top-minutes players out or doubtful/questionable on EITHER team of each
     NBA game on the ticket. 2026-11-24: Cade Cunningham went Out at 6:30 PM;
@@ -198,6 +198,15 @@ def game_news(legs, rows, team_out_fn):
             if miss:
                 out.append(f"{r.get('game')}: {name or abbr} without " +
                            ", ".join(f"{n} ({m:g} min, {st})" for n, m, st in miss))
+            # 2026-11-24: Orlando had Banchero, Isaac and three more out all
+            # along -- long absences are not in "recent minutes", so the news
+            # showed only Detroit's scratch and the Magic pick missed that both
+            # sides were short. List every player Out on the report too.
+            outs = sorted(x["player"].split(", ")[-1] + " " + x["player"].split(", ")[0]
+                          for x in report_rows or [] if x.get("date") == mmdd and x.get("team") == name
+                          and x.get("status") == "Out")
+            if outs:
+                out.append(f"{r.get('game')}: {name} has {len(outs)} Out on the report -- " + ", ".join(outs))
     return out
 
 
@@ -262,7 +271,7 @@ def main(path, day, final=False):
         prices, rows, snap = [], [], None
     allf = flags + recheck_nhl(legs, lineups) + prices
     pending = unsubmitted(rep, mmdd, legs, rows)
-    news = game_news(legs, rows, team_out)
+    news = game_news(legs, rows, team_out, rep.get("rows"), mmdd)
     if final:
         games = {str(r.get("id")): r.get("game") for r in rows or []}
         try:
