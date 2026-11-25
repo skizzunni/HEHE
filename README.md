@@ -5220,6 +5220,11 @@ still had a FanDuel prop played 11 times of 13 (Luka Doncic Nov 9, Derrick White
 Kessler Nov 18, ...). The ticket and the recheck read the NBA's official report for NBA legs, not ESPN,
 so nothing is wrong there; ESPN is used only for NFL legs, where it carries the league's own game
 designations. Anything that ever reads ESPN's NBA list for a cut should not.
+One thing does: the board's participation gate (participation.status, which decides "confirmed playing"
+for Prop Locks) reads ESPN's per-game injury list and blocks Out / Doubtful / Questionable. It costs no
+losses -- a blocked prop is only left off, and Prop Locks hit 93% then 94% -- but by the 11-of-13 figure
+above it can keep good props off the Locks. Its name matching already folds accents and suffixes
+(props_ledger.norm_name); the ticket's own report lookup was brought to the same standard today.
 
 **Found, not changed: the board sees about 1 in 9 college-basketball games (2026-11-25).** ESPN's
 college-basketball scoreboard without `groups=50` lists only a featured handful: on Nov 15, 18, 21 and
