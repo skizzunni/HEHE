@@ -174,7 +174,7 @@ def main(day, get=_get):
         for c in e["competitions"][0]["competitors"]:
             abbr, name = c["team"]["abbreviation"], c["team"]["displayName"]
             miss = key_missing(recent_minutes(abbr, day, get), by_team.get(name, {}))
-            out.append(f"{e['shortName']} {name}: " + ("; ".join(f"{p} ({m} min) {s}" for p, m, s in miss) or "no key player out"))
+            out.append(f"{e['shortName']} {name}: " + ("; ".join(f"{p} ({m} min) {s}" for p, m, s in miss) or f"no key player out (of the {KEY_N} who have played most lately; players out for weeks are already in the price)"))
     return out
 
 
