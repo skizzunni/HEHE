@@ -5363,6 +5363,9 @@ from ESPN's current rosters), each against its price band, split at Nov 3. On th
 (81.4% vs 82.1%, z -0.42) then 416/507 (82.1% vs 83.4%, z -0.81); on the underdog: 236/283 (83.4% vs
 82.2%, z +0.52) then 312/365 (85.5% vs 83.7%, z +0.96). Underdogs (trailing teams shoot more) a point or
 two ahead both times, far under the bar -- watched, not used.
+Home vs road (2026-11-25): 1,598 of 1,627 graded NHL Shots on Goal props placed by ESPN's game summary,
+split at Nov 3, against their band: home 328/399 (z -0.17) then 394/473 (z -0.15); road 269/327 (z +0.18)
+then 334/399 (z +0.17). On par -- no change.
 
 **Checked: a heavy prop's hit rate barely moves with its price inside -700 to -1300 (2026-11-24).**
 All graded props by the price's implied chance, split at the median date. Implied 88-90%: 83.8% then
