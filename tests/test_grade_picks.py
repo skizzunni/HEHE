@@ -97,6 +97,18 @@ class PropTest(unittest.TestCase):
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, False, BOX), "open")
         self.assertEqual(G.grade(dict(kind="prop", player="Keegan Murray", stat="REB", line=6), {}, True, BOX), "lost")
 
+    def test_dropped_count_without_and_with_sidecar(self):
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "ticket.json")
+        json.dump([dict(label=x, id="1", lg="nba", kind="ml", team="BOS") for x in ("a", "b")], open(path, "w"))
+        self.assertEqual(G.dropped_count(path), 0)
+        self.assertEqual(G.dropped_count(path + ".missing"), 0)
+        json.dump(["b", "not on this ticket"], open(path + ".dropped", "w"))
+        self.assertEqual(G.dropped_count(path), 1)
+        head = G.brief(path, get=lambda u: {})[0]
+        self.assertTrue(head.endswith("(1 dropped before tip, not counted)"), head)
+
     def test_slate_lists_every_saved_ticket(self):
         import json
         import tempfile
