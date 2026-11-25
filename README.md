@@ -5385,6 +5385,13 @@ rates it less likely") but keeps the leg as KEEP, not CAUTION (2026-11-25: Jorda
 yards drifted -900 -> -580 by 3 PM). A move matters only when the line is pulled (a drop) or the player's
 status changes (a drop), or when it crosses a price band, which the recheck's chances already use.
 
+**Fixed: the recheck dropped legs in a game already under way (2026-11-25, 6:45 PM).** FanDuel takes its
+pre-game prop lines down at tip; the recheck read that as "no longer posted -- often a late scratch" and
+dropped Klay Thompson 5+ points and VJ Edgecombe 2+ assists (both already reached) and Jaylen Brown 2+
+assists in the 3rd quarter of MIA @ PHI, which would have cut them from the night's record. Now a leg
+whose game has started is LIVE: never dropped, never counted as a drop in a saved combo, and left out of
+fresh suggestions; drops made before the tip stand. The three legs were restored the same minute.
+
 **Research pick, Nov 24: Magic +110 after Cade Cunningham was ruled Out -- LOST 86-104.** The 6:30 PM
 report moved Cunningham (Detroit's top minutes, 35.9 a game) from Probable to Out; ESPN's DraftKings
 line still read Detroit -130 / -2.5, so it was taken as news the price had not absorbed. Detroit won by
