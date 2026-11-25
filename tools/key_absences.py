@@ -107,30 +107,44 @@ def report_name(display):
     return f"{parts[-1]}, {' '.join(parts[:-1])}" if len(parts) > 1 else display
 
 
+SUFFIX = ("jr", "sr", "ii", "iii", "iv", "v")
+
+
+def _parts(report):
+    """'Butler III, Jimmy' -> ('butler', 'jimmy'): accents, dots and a
+    generational suffix dropped, for matching only."""
+    import unicodedata
+    t = unicodedata.normalize("NFKD", report).encode("ascii", "ignore").decode().lower().replace(".", "")
+    if ", " not in t:
+        return None
+    last, first = t.split(", ", 1)
+    words = last.split()
+    while len(words) > 1 and words[-1] in SUFFIX:
+        words.pop()
+    return " ".join(words), first.strip()
+
+
 def status_of(display, statuses):
     """A player's official-report status from {report name: status}, matching
-    across nicknames: exact 'Last, First' first, else the same last name with
-    one first name starting with the other. 2026-11-24: FanDuel's 'Cam Johnson'
-    is the report's 'Johnson, Cameron' -- an exact lookup would let a
-    Questionable player onto the ticket. None when unmatched or ambiguous."""
+    across nicknames, accents and suffixes: exact 'Last, First' first, else the
+    same last name with one first name starting with the other. None when
+    unmatched or ambiguous.
+    2026-11-24: FanDuel's 'Cam Johnson' is the report's 'Johnson, Cameron'.
+    2026-11-25: 'Dončić, Luka' vs 'Luka Doncic'; and the report's 'Butler III,
+    Jimmy' (Out) did not match a 'Jimmy Butler' prop at all, so an Out player
+    could have gone on the ticket."""
     rn = report_name(display or "")
     if rn in statuses:
         return statuses[rn]
-    import unicodedata
-
-    def fold(x):   # 'Dončić, Luka' and 'Doncic, Luka' are one man (2026-11-25)
-        return unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode()
-    if any(fold(k) != k for k in statuses) or fold(rn) != rn:
-        statuses = {fold(k): v for k, v in statuses.items()}
-        rn = fold(rn)
-        if rn in statuses:
-            return statuses[rn]
-    if ", " not in rn:
+    me = _parts(rn)
+    if not me:
         return None
-    last, first = rn.split(", ", 1)
-    first = first.lower().replace(".", "")
-    hits = [v for k, v in statuses.items() if ", " in k and k.split(", ", 1)[0].lower() == last.lower()
-            and (lambda f: f.startswith(first) or first.startswith(f))(k.split(", ", 1)[1].lower().replace(".", ""))]
+    keyed = [(_parts(k), v) for k, v in statuses.items()]
+    exact = [v for k, v in keyed if k == me]
+    if exact:
+        return exact[0] if len(set(exact)) == 1 else None
+    last, first = me
+    hits = [v for k, v in keyed if k and k[0] == last and (k[1].startswith(first) or first.startswith(k[1]))]
     return hits[0] if len(hits) == 1 else None
 
 

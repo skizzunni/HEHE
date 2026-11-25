@@ -45,6 +45,11 @@ class StatusOfTest(unittest.TestCase):
         self.assertEqual(K.status_of("Cam Johnson", st), "Questionable")
         self.assertEqual(K.status_of("Dereck Lively II", st), "Out")
         self.assertEqual(K.status_of("Luka Doncic", {"Dončić, Luka": "Out"}), "Out")          # accents
+        # suffixes: the report's 'Butler III, Jimmy' (Out) must meet FanDuel's 'Jimmy Butler'
+        self.assertEqual(K.status_of("Jimmy Butler", {"Butler III, Jimmy": "Out"}), "Out")
+        self.assertEqual(K.status_of("Jabari Smith", {"Smith Jr., Jabari": "Questionable"}), "Questionable")
+        self.assertEqual(K.status_of("Jaren Jackson Jr.", {"Jackson Jr., Jaren": "Out"}), "Out")
+        self.assertIsNone(K.status_of("Jalen Williams", {"Williams, Jaylin": "Out"}))
         self.assertEqual(K.status_of("Luka Dončić", {"Doncic, Luka": "Questionable"}), "Questionable")
         self.assertEqual(K.status_of("Tre Jones", st), "Probable")
         self.assertIsNone(K.status_of("Tyus Jones", st))
