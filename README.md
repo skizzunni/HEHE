@@ -5179,7 +5179,7 @@ were scored against their own price band's record (the figure the ticket already
 Assists 226/266 (85.0% vs 82.8%, z +0.92) then 208/262 (79.4% vs 80.2%, z -0.33): on par. No market is
 off in both halves -- Rebounds -1.28 then +2.01, Points +0.10 then -0.37, Threes -0.34 then -0.73;
 Pts + Reb 39/53 (z -3.40) has no later-half sample (under 40). The band record already covers the
-market, so nothing is cut; Murray's was an ordinary miss at a price that loses about 1 in 6.
+market, so nothing is cut; Murray's was an ordinary miss at a price whose props won 85% (about 1 loss in 7).
 
 **Checked, no rule: NBA prop cushion over the line (2026-11-25).** Cushion = (his last-10 average in
 the market - the line) / the spread of those 10 games, from ESPN game logs anchored on the prop's own
