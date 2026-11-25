@@ -264,7 +264,17 @@ def text(t):
     if t["left_off"]:
         out.append("Left off, and why:")
         out += [f"  {lab} -- {why}" for lab, why in t["left_off"]]
+        if any("Questionable" in why for _, why in t["left_off"]):
+            out.append("  " + QUESTIONABLE_NOTE)
     return "\n".join(out)
+
+
+# README 2026-11-25: on the saved ESPN snapshots, NBA players day-to-day at
+# 8 AM who then played won 75 of 85 props (88% vs 84% stated); 43 more were
+# voided (did not play), a push on FanDuel. The drop stays; the user decides.
+QUESTIONABLE_NOTE = ("(Questionable players are left off by rule. On the record, NBA players listed day-to-day "
+                     "that morning who then played hit 75 of 85 props (88% vs 84% stated), and a no-show is voided, "
+                     "not lost -- adding one back is your call.)")
 
 
 NCAAB_FLOOR = 0.90

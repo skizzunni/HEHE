@@ -218,6 +218,14 @@ class GoalieNoteTest(unittest.TestCase):
         self.assertIn("goalie: Devon Levi", t["games"]["VGK @ EDM"][0]["label"])
 
 
+class QuestionableNoteTest(unittest.TestCase):
+    def test_note_only_when_someone_was_left_off_as_questionable(self):
+        t = {"games": {}, "left_off": [("Giannis 4+ Assists", "Questionable on the official injury report")]}
+        self.assertIn(B.QUESTIONABLE_NOTE, B.text(t))
+        t = {"games": {}, "left_off": [("NY moneyline", "board chance 60% is under 75%")]}
+        self.assertNotIn(B.QUESTIONABLE_NOTE, B.text(t))
+
+
 class NflStatusTest(unittest.TestCase):
     def test_nfl_report_flattened(self):
         rows = {"Green Bay Packers": [["Josh Jacobs", "Questionable"], ["Luke Musgrave", "Out"]]}
