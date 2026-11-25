@@ -323,7 +323,8 @@ def brief(path, get=None):
     return [head] + out
 
 
-NAMES = {"ticket.json": "ticket", "ticket_2x.json": "2x combo", "ticket_ladder.json": "ladder stand-in"}
+NAMES = {"ticket.json": "ticket", "ticket_2x.json": "2x combo", "ticket_ladder.json": "ladder stand-in",
+         "ticket_td.json": "touchdown scorers"}
 
 
 def slate(folder, get=None):
