@@ -257,6 +257,7 @@ class NoteDroppedTest(unittest.TestCase):
         flags = [("Malkin 1+ SOG", "Evgeni Malkin: on the injured list (dtd)"), ("Karlsson 1+ SOG", "FanDuel now -2100")]
         self.assertEqual(R.note_dropped(path, legs, flags), ["Malkin 1+ SOG"])
         self.assertEqual(R.note_dropped(path, legs, []), ["Malkin 1+ SOG"])           # earlier drops kept
+        self.assertEqual(R.note_dropped(path, legs, [], fresh=lambda L: False), ["Malkin 1+ SOG"])  # source not read
         self.assertEqual(R.note_dropped(path, legs, [], fresh=True), [])              # upgraded since: back on
         self.assertEqual([L["label"] for L in G.load(path)], ["Malkin 1+ SOG", "Karlsson 1+ SOG"])
         R.note_dropped(path, legs, flags)

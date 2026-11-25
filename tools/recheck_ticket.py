@@ -306,7 +306,14 @@ def main(path, day, final=False):
         out = final_text(legs, allf, games, rep.get("asof"), now_prices=snap, now_chance=ml_chance(legs, rows), record=rec,
                          saved=saved)
         back = [d for d in (json.load(open(path + ".dropped")) if os.path.exists(path + ".dropped") else [])]
-        now = note_dropped(path, legs, allf, fresh=bool(rep.get("asof") and rep.get("rows")))
+        rep_ok = bool(rep.get("asof") and rep.get("rows"))
+
+        def fresh(L):   # its own source was read on this run: NBA report, or this game's NHL lines
+            if L.get("lg") == "nhl":
+                got = cache.get(L.get("id"), cache.get(str(L.get("id"))))
+                return bool(got) and all(got)
+            return rep_ok and L.get("lg") == "nba"
+        now = note_dropped(path, legs, allf, fresh=fresh)
         back = [d for d in back if d not in now]
         if back:
             out += "\nBack on the ticket (no longer a drop on this report): " + "; ".join(back)
@@ -333,7 +340,11 @@ def note_dropped(path, legs, flags, fresh=False):
     # With a fresh injury report the current drops are the whole list: a player
     # upgraded since (2026-11-25: Brunson Questionable at 12:45 PM) comes back.
     # Without one (report unreadable) earlier drops are kept, never cleared.
-    new = list(drop) if fresh else old + [d for d in drop if d not in old]
+    # fresh: True / False, or fn(leg) -> was this leg's own source read this run
+    ok = fresh if callable(fresh) else (lambda L: fresh)
+    by = {L.get("label"): L for L in legs}
+    keep_old = [d for d in old if d not in drop and not (d in by and ok(by[d]))]
+    new = [d for d in old if d in drop or d in keep_old] + [d for d in drop if d not in old]
     if new != old:
         json.dump(new, open(side, "w"), indent=1)
     return new
