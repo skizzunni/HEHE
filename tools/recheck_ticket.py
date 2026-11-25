@@ -297,7 +297,14 @@ def main(path, day, final=False):
             rec = B.prop_record()
         except Exception:
             rec = {}
-        out = final_text(legs, allf, games, rep.get("asof"), now_prices=snap, now_chance=ml_chance(legs, rows), record=rec)
+        saved = {}
+        for fname, name in (("ticket_2x.json", "2x"), ("ticket_ladder.json", "ladder stand-in")):
+            try:
+                saved[name] = [L.get("label") for L in json.load(open(os.path.join(os.path.dirname(path), fname)))]
+            except (OSError, ValueError):
+                pass
+        out = final_text(legs, allf, games, rep.get("asof"), now_prices=snap, now_chance=ml_chance(legs, rows), record=rec,
+                         saved=saved)
         note_dropped(path, legs, allf)
         return "\n".join([f"NOTE: {t} has NOT YET SUBMITTED its injury report -- recheck before tip." for t in pending]
                          + [out] + (["Game news (either team, top minutes):"] + [f"  {n}" for n in news] if news else []))
@@ -340,7 +347,7 @@ def verdict(notes):
     return "KEEP", notes
 
 
-def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=None, record=None):
+def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=None, record=None, saved=None):
     """The final ticket by game: each leg KEEP / CAUTION / DROP with its notes,
     then the kept count and -- when prices are known -- the kept legs' all-win
     chance and payout at the current prices (a price move can move a prop into
@@ -368,7 +375,27 @@ def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=N
         if b:
             out.append(f"Most likely 2x from these legs: {len(b['legs'])} legs, about {100 * b['chance']:.0f}% all win, "
                        f"pays {b['pays']:.2f}x -- " + "; ".join(_short(L, now_prices) for L in b["legs"]) + ".")
+        for name, labels in (saved or {}).items():
+            out.append(saved_line(name, labels, legs, notes, now_prices, now_chance or {}, record or {}))
     return "\n".join(out)
+
+
+def saved_line(name, labels, legs, notes, now_prices, now_chance, record):
+    """The morning's saved combination (the one the user may have placed) at
+    current prices -- 2026-11-25: the recheck's own 'most likely 2x' moved to
+    other legs during the day and said nothing about the one sent at 8 AM."""
+    import math
+    by = {L.get("label"): L for L in legs}
+    mine = [by[x] for x in labels if x in by]
+    gone = [L for L in mine if verdict(notes.get(L.get("label"), []))[0] == "DROP"]
+    if gone:
+        return (f"Your morning {name}: {len(gone)} of its {len(mine)} legs now DROP ("
+                + "; ".join(_short(L, now_prices) for L in gone) + ") -- check it before tip.")
+    odds = leg_odds(mine, now_prices, now_chance, record)
+    if not odds:
+        return f"Your morning {name}: {len(mine)} legs, a price is missing now."
+    return (f"Your morning {name}: {len(mine)} legs, now about {100 * math.prod(c for _, _, c in odds):.0f}% all win, "
+            f"pays {math.prod(d for _, d, _ in odds):.2f}x at current prices.")
 
 
 def leg_odds(kept, now_prices, now_chance, record):

@@ -659,7 +659,7 @@ def main(day):
                  minutes_fn=__import__("nba_minutes").mpg_last5, logs_fn=__import__("nba_minutes").gamelogs)
 
 
-def save_ticket(t, save, combo=(), force=False):
+def save_ticket(t, save, combo=(), force=False, two=()):
     """Write the ticket (and the ladder stand-in as ticket_ladder.json beside
     it); returns the lines to print. Never replaces an existing file without
     `force`. 2026-11-24: a second run at 9:20 AM overwrote the 8 AM ticket the
@@ -673,14 +673,28 @@ def save_ticket(t, save, combo=(), force=False):
     os.makedirs(os.path.dirname(save) or ".", exist_ok=True)
     json.dump(ticket_legs(t), open(save, "w"), indent=1)
     out.append(f"\nsaved: {save}")
-    if combo:
-        lpath = os.path.join(os.path.dirname(save) or ".", "ticket_ladder.json")
+    for legs, fname, what in ((combo, "ticket_ladder.json", "the ladder stand-in"),
+                              (two, "ticket_2x.json", "the most likely 2x")):
+        if not legs:
+            continue
+        lpath = os.path.join(os.path.dirname(save) or ".", fname)
         if os.path.exists(lpath) and not force:
             out.append(f"not saved: {lpath} already exists")
         else:
-            json.dump(ticket_legs({"games": {"ladder": list(combo)}}), open(lpath, "w"), indent=1)
-            out.append(f"saved: {lpath} (the ladder stand-in, {len(combo)} legs)")
+            json.dump(ticket_legs({"games": {"x": list(legs)}}), open(lpath, "w"), indent=1)
+            out.append(f"saved: {lpath} ({what}, {len(legs)} legs)")
     return out
+
+
+def two_x_legs(t):
+    """The legs of the ticket's 'most likely 2x' line ([] when none)."""
+    import recheck_ticket as R
+    legs = [L for g in t["games"].values() for L in g]
+    try:
+        b = R.best_2x([(L, _dec(L["price"]), L["chance"]) for L in legs])
+    except (KeyError, TypeError, ValueError):
+        return []
+    return b["legs"] if b and len(b["legs"]) < len(legs) else []
 
 
 if __name__ == "__main__":
@@ -711,5 +725,5 @@ if __name__ == "__main__":
         combo = ladder_fallback(t)
         t["ladder"] = ladder_text(combo)
     print(text(t))
-    for line in save_ticket(t, save, combo, force="--force" in sys.argv):
+    for line in save_ticket(t, save, combo, force="--force" in sys.argv, two=two_x_legs(t) if save else ()):
         print(line)

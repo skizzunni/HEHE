@@ -264,5 +264,16 @@ class NoteDroppedTest(unittest.TestCase):
         self.assertEqual(G.load(lad), [])                                              # the stand-in follows
 
 
+class SavedLineTest(unittest.TestCase):
+    def test_morning_combo_at_current_prices_and_drops(self):
+        legs = [dict(label="A", kind="ml", price="-400", lg="nba"), dict(label="B", kind="ml", price="-400", lg="nba")]
+        out = R.final_text(legs, [], now_prices={"A": "-300"}, now_chance={"A": 0.74, "B": 0.79}, record={},
+                           saved={"2x": ["A", "B"]})
+        self.assertIn("Your morning 2x: 2 legs, now about 58% all win, pays 1.67x at current prices.", out)
+        out = R.final_text(legs, [("B", "B is now Out on the official report")], now_prices={}, now_chance={}, record={},
+                           saved={"2x": ["A", "B"]})
+        self.assertIn("Your morning 2x: 1 of its 2 legs now DROP", out)
+
+
 if __name__ == "__main__":
     unittest.main()
