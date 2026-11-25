@@ -42,6 +42,11 @@ class ReviewLineTest(unittest.TestCase):
         self.assertIn("; by day played: ? 1-1", line)
         self.assertIsNone(daily_review.preview_losses_line(lambda: []))
 
+    def test_line_carries_the_day_played(self):
+        import grade_preview as GP
+        e = dict(status="lost", pick="Thunder", conf=63, price="-191", matchup="OKC @ IND", played="2026-11-23")
+        self.assertTrue(GP.line("nba:1", e).startswith("LOST Nov 23 nba Thunder at 63% (-191)"))
+
     def test_by_day_newest_first(self):
         import grade_preview as GP
         S = [("a", dict(status="won", played="2026-11-23")), ("b", dict(status="lost", played="2026-11-24")),

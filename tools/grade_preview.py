@@ -28,7 +28,16 @@ def line(key, e):
     lg = key.split(":", 1)[0]
     sc = e.get("scores")
     score = (" " + " - ".join(f"{k} {v}" for k, v in sc.items())) if isinstance(sc, dict) else (f" {sc}" if sc else "")
-    s = f"{e.get('status', '?').upper():4} {lg} {e.get('pick')} at {e.get('conf')}% ({e.get('price')}), {e.get('matchup') or ''}{score}"
+    # the day played, so a list spanning two slates is not read as one
+    # (2026-11-25: eight Nov 23 losses were reported under "Nov 24")
+    day = e.get("played") or e.get("date") or ""
+    try:
+        import datetime as _dt
+        d = _dt.date.fromisoformat(day)
+        day = f"{d:%b} {d.day} "
+    except ValueError:
+        day = ""
+    s = f"{e.get('status', '?').upper():4} {day}{lg} {e.get('pick')} at {e.get('conf')}% ({e.get('price')}), {e.get('matchup') or ''}{score}"
     if e.get("status") == "lost" and e.get("diagnosis"):
         s += f" -- {e['diagnosis']}"
     return s
