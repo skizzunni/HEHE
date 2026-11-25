@@ -310,13 +310,15 @@ def brief(path, get=None):
         state = line.split()[0]
         # only an open leg has a clock; a settled leg's tail is the label's own note
         # (2026-11-25: Gafford's "caution: reached it in 6 of his last 10" showed after WON)
-        clock = tail.split(" -- ")[-1] if tail and state == "OPEN" else ""
+        clock = tail.split(" -- ")[-1] if tail and state in ("OPEN", "REACHED") else ""
         out.append(f"{state:5} {short(p)}" + (f" -- {clock}" if clock else ""))
     if waiting:
         out.append(f"({waiting} not started yet)")
     states = [r.split()[0] for r in rows]
     won, lost, push = states.count("WON"), states.count("LOST"), states.count("PUSH")
-    head = f"{won} won, {lost} lost" + (f", {push} void" if push else "") + f", {len(rows) - won - lost - push} still open"
+    reached = states.count("REACHED")
+    head = (f"{won} won, {lost} lost" + (f", {push} void" if push else "") + f", {len(rows) - won - lost - push} still open"
+            + (f" ({reached} reached, settles at the final)" if reached else ""))
     gone = dropped_count(path)
     if gone:
         head += f" ({gone} dropped before tip, not counted)"
@@ -353,12 +355,14 @@ def live(path, get=None):
     for p in load(path):
         scores, done, clock, d = final(p["lg"], p["id"], get, with_clock=True, raw=True)
         r = grade(p, scores, done, d)
-        if p["kind"] == "prop" and r == "open":
+        if p["kind"] == "prop" and (r == "open" or (r == "won" and not done)):
             v = board_value(p, d)[0] if p.get("market") else None
             if v is None:
                 v = player_stat(d, p["player"], p["stat"])
             have = "not in the box score yet" if v is None else f"{v:g} of {p['line']:g}"
-            out.append(f"OPEN  {p.get('label') or p} -- {clock}: {have}")
+            # reached mid-game is not won: a stat can be corrected before the
+            # final (2026-11-24 Suggs 5 -> 4; 2026-11-25 Klay showed WON in the 1st)
+            out.append(f"{'REACHED' if r == 'won' else 'OPEN':5} {p.get('label') or p} -- {clock}: {have}")
             continue
         tail = "" if r != "open" else f" -- {clock}: {standing(p, scores)}" if scores and any(scores.values()) else f" -- {clock or 'not started'}"
         out.append(f"{r.upper():5} {p.get('label') or p}{tail}")

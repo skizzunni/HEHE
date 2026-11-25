@@ -194,11 +194,13 @@ class PropTest(unittest.TestCase):
                         price=-500),
                    dict(label="Nobody 5+", id="1", lg="nba", kind="prop", player="Nobody Here", stat="PTS", line=5, price=-500)],
                   open(path, "w"))
-        out = G.brief(path, get=lambda u: BOX)
-        self.assertEqual(out[0], "1 won, 0 lost, 2 still open")
-        self.assertEqual(out[1], "WON   Keegan Murray 5+ PTS -- had 5")     # what settled it, not the label note
+        out = G.brief(path, get=lambda u: BOX)                 # game in progress
+        self.assertEqual(out[0], "0 won, 0 lost, 3 still open (1 reached, settles at the final)")
+        self.assertTrue(out[1].startswith("REACHED Keegan Murray 5+ PTS -- "), out[1])   # not WON mid-game
         self.assertTrue(out[2].startswith("OPEN  Keegan Murray 9+ REB -- "))
         self.assertEqual(out[-1], "(1 not started yet)")
+        done = G.brief(path, get=lambda u: BOX_DONE)            # final
+        self.assertEqual(done[1], "WON   Keegan Murray 5+ PTS -- had 5")     # what settled it, not the label note
         self.assertEqual(G.short(dict(kind="ml", team="IOWA")), "IOWA ML")
         self.assertEqual(G.short(dict(kind="spread", team="BOS", line=-2.5)), "BOS -2.5")
 
