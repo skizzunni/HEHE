@@ -5196,6 +5196,11 @@ NBA by line size (2026-11-25): props below their market's median line (bench-siz
 under 10 points, under 20 PRA) against those at or above it, each against its price band, split at
 Nov 6. Low lines 304/363 (83.7% vs 86.0%, z -1.27) then 399/467 (85.4% vs 85.5%, z -0.01); high lines
 +0.67 then +0.01. A small line is no safer or riskier than its price says -- no change.
+NBA teammates of an absent star (2026-11-25): a prop counts as "star out" when one of his team's two
+top-minutes players (this season, 5+ games, teams from ESPN's current rosters) has no minutes in that
+game. 3,259 graded props, split at Nov 6, each against its price band: star out 84/94 (89.4% vs 84.6%,
+z +1.28) then 461/555 (83.1% vs 83.3%, z -0.18); star in on par both times. The extra usage is already
+in the line -- no note, no change.
 
 **Checked, no rule: NBA prop cushion over the line (2026-11-25).** Cushion = (his last-10 average in
 the market - the line) / the spread of those 10 games, from ESPN game logs anchored on the prop's own
