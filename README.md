@@ -1616,6 +1616,15 @@ but past the 2.8 bar only in the second, so no cap. A large stated edge is
 likelier a wrong fair price than a real edge; the review prints the split
 daily (value_edge_line) so the next half can settle it.
 
+**Checked, no rule: where the TRAILING value bets fall short (2026-11-25).** The review flags value bets
+short in both halves (40.4% vs 44.7% stated on 594). All 899 graded finds in value.json, scored against
+their own fair chance, split at Nov 8, by every cut on file: fair-price source (DraftKings Shin z -1.30
+/ +0.99; two-venue consensus -0.29 / -1.04; DraftKings + Polymarket -0.43 / -1.62), side (favourites
+-0.25 / -1.19, underdogs -0.64 / -0.32, longshots under 25% -1.67 / +0.47), venue (Kalshi -1.58 /
+-0.85, FanDuel +0.05 / -0.34), kind ("value" -1.44 / -1.84, "single" -0.29 / +1.60) and sport. Short
+nearly everywhere by a few points, past the 2.8 bar nowhere: a small, even overstatement of the fair
+price rather than one bad corner. Nothing is cut; the TRAILING flag stays as the warning.
+
 **Checked: a 0.2% day for soccer (2026-11-20).** By mid-afternoon on Friday
 Nov 20 the board was 6-9 with all nine losses soccer favourites (3.4
 expected; Kashiwa, Kobe, East Bengal, Independiente del Valle, Bielefeld,
