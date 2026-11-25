@@ -246,5 +246,20 @@ class BestCoverTest(unittest.TestCase):
         self.assertEqual(len(mixed["legs"]), 12)                 # all three 1.1s, then 1.05^8 = 1.97x, ^9 = 2.06x
 
 
+class NoteDroppedTest(unittest.TestCase):
+    def test_drops_recorded_beside_ticket_and_grader_skips_them(self):
+        import json
+        import tempfile
+        import grade_picks as G
+        path = os.path.join(tempfile.mkdtemp(), "ticket.json")
+        legs = [dict(label="Malkin 1+ SOG"), dict(label="Karlsson 1+ SOG")]
+        json.dump(legs, open(path, "w"))
+        flags = [("Malkin 1+ SOG", "Evgeni Malkin: on the injured list (dtd)"), ("Karlsson 1+ SOG", "FanDuel now -2100")]
+        self.assertEqual(R.note_dropped(path, legs, flags), ["Malkin 1+ SOG"])
+        self.assertEqual(R.note_dropped(path, legs, []), ["Malkin 1+ SOG"])           # earlier drops kept
+        self.assertEqual([L["label"] for L in G.load(path)], ["Karlsson 1+ SOG"])
+        self.assertEqual(len(json.load(open(path))), 2)                                # the ticket is untouched
+
+
 if __name__ == "__main__":
     unittest.main()

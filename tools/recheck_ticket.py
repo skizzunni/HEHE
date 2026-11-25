@@ -298,10 +298,31 @@ def main(path, day, final=False):
         except Exception:
             rec = {}
         out = final_text(legs, allf, games, rep.get("asof"), now_prices=snap, now_chance=ml_chance(legs, rows), record=rec)
+        note_dropped(path, legs, allf)
         return "\n".join([f"NOTE: {t} has NOT YET SUBMITTED its injury report -- recheck before tip." for t in pending]
                          + [out] + (["Game news (either team, top minutes):"] + [f"  {n}" for n in news] if news else []))
     return text(allf, rep.get("asof"), pending) + ("\nGame news (either team, top minutes):\n" + "\n".join(f"  {n}" for n in news)
                                                     if news else "")
+
+
+def note_dropped(path, legs, flags):
+    """Record the legs this --final run DROPs in <ticket>.dropped (labels,
+    added to any earlier drops), so grade_picks grades the ticket the user
+    keeps. The saved ticket itself is never rewritten. 2026-11-25: Evgeni
+    Malkin was dropped (injured list) but the tracker still counted all 70."""
+    notes = {}
+    for lab, why in flags:
+        notes.setdefault(lab, []).append(why)
+    drop = [L.get("label") for L in legs if verdict(notes.get(L.get("label"), []))[0] == "DROP"]
+    side = path + ".dropped"
+    try:
+        old = json.load(open(side))
+    except (OSError, ValueError):
+        old = []
+    new = old + [d for d in drop if d not in old]
+    if new != old:
+        json.dump(new, open(side, "w"), indent=1)
+    return new
 
 
 DROP_WORDS = ("is now Out", "is now Doubtful", "is now Questionable", "on the injured list", "no longer posted")

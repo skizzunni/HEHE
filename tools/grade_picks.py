@@ -205,8 +205,16 @@ def grade(pick, scores, done, summary=None):
 
 
 def load(path):
+    """The ticket's legs, less any the pre-game recheck dropped
+    (<ticket>.dropped, written by recheck_ticket --final)."""
     with open(path) as f:
-        return json.load(f)
+        legs = json.load(f)
+    try:
+        with open(path + ".dropped") as f:
+            gone = set(json.load(f))
+    except (OSError, ValueError):
+        return legs
+    return [L for L in legs if L.get("label") not in gone]
 
 
 def payout(price):
