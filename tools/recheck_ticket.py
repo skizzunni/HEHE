@@ -285,8 +285,9 @@ def main(path, day, final=False):
             log_prices(path, legs, current, rows)
         except OSError:
             pass
+        prices_ok = bool(current)
     except Exception:
-        prices, rows, snap = [], [], None
+        prices, rows, snap, prices_ok = [], [], None, False
     allf = flags + recheck_nhl(legs, lineups) + prices
     pending = unsubmitted(rep, mmdd, legs, rows)
     news = game_news(legs, rows, team_out, rep.get("rows"), mmdd)
@@ -317,7 +318,10 @@ def main(path, day, final=False):
         back = [d for d in (json.load(open(path + ".dropped")) if os.path.exists(path + ".dropped") else [])]
         rep_ok = bool(rep.get("asof") and rep.get("rows"))
 
-        def fresh(L):   # its own source was read on this run: NBA report, or this game's NHL lines
+        def fresh(L):   # its own sources were read on this run: FanDuel's prices (a pulled line is a
+            # drop -- 2026-11-25 Holloway) and the NBA report or this game's NHL lines
+            if not prices_ok:
+                return False
             if L.get("lg") == "nhl":
                 got = cache.get(L.get("id"), cache.get(str(L.get("id"))))
                 return bool(got) and all(got)
