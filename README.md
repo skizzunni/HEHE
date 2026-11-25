@@ -5173,6 +5173,14 @@ vs 83.3%, z -2.03). On the underdog: 118/136 (86.8%, z +0.86) then 96/129 (74.4%
 ahead early and short late -- the later half is short in these games whichever side, so it is not the
 favourite's starters resting. The blowout caution stays a caution on every prop in such a game.
 
+**Checked, no change: NBA props by market against their price band (2026-11-25).** After Jamal
+Murray's 4+ assists (-1000) lost with 3 in 36 minutes of a 101-120 loss, the 3,308 graded NBA props
+were scored against their own price band's record (the figure the ticket already uses), split at Nov 6.
+Assists 226/266 (85.0% vs 82.8%, z +0.92) then 208/262 (79.4% vs 80.2%, z -0.33): on par. No market is
+off in both halves -- Rebounds -1.28 then +2.01, Points +0.10 then -0.37, Threes -0.34 then -0.73;
+Pts + Reb 39/53 (z -3.40) has no later-half sample (under 40). The band record already covers the
+market, so nothing is cut; Murray's was an ordinary miss at a price that loses about 1 in 6.
+
 **Checked, no cut: favourites missing a key player (2026-11-24).** After the user's Nov 23 ticket lost
 on the Raptors (-450, no Leonard / Barrett), Thunder (-190, eight out) and Cavaliers (-350, no Mobley):
 graded board NBA picks (174 matched to box scores), "key" = top 6 by minutes per game played over the
