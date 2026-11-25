@@ -44,6 +44,8 @@ class StatusOfTest(unittest.TestCase):
         st = {"Johnson, Cameron": "Questionable", "Lively II, Dereck": "Out", "Jones, Isaac": "Out", "Jones, Tre": "Probable"}
         self.assertEqual(K.status_of("Cam Johnson", st), "Questionable")
         self.assertEqual(K.status_of("Dereck Lively II", st), "Out")
+        self.assertEqual(K.status_of("Luka Doncic", {"Dončić, Luka": "Out"}), "Out")          # accents
+        self.assertEqual(K.status_of("Luka Dončić", {"Doncic, Luka": "Questionable"}), "Questionable")
         self.assertEqual(K.status_of("Tre Jones", st), "Probable")
         self.assertIsNone(K.status_of("Tyus Jones", st))
         self.assertIsNone(K.status_of("Nobody", st))

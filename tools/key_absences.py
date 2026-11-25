@@ -116,6 +116,15 @@ def status_of(display, statuses):
     rn = report_name(display or "")
     if rn in statuses:
         return statuses[rn]
+    import unicodedata
+
+    def fold(x):   # 'Dončić, Luka' and 'Doncic, Luka' are one man (2026-11-25)
+        return unicodedata.normalize("NFKD", x).encode("ascii", "ignore").decode()
+    if any(fold(k) != k for k in statuses) or fold(rn) != rn:
+        statuses = {fold(k): v for k, v in statuses.items()}
+        rn = fold(rn)
+        if rn in statuses:
+            return statuses[rn]
     if ", " not in rn:
         return None
     last, first = rn.split(", ", 1)

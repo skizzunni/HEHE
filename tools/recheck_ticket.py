@@ -28,7 +28,11 @@ def _same(a, b):
     """Same player across sources: same last name, and one first name starts
     with the other ('Mitch Marner' / 'Mitchell Marner', 2026-11-24 -- an exact
     match flagged Marner as missing from Vegas's lines)."""
-    a, b = (a or "").lower().replace(".", "").split(), (b or "").lower().replace(".", "").split()
+    import unicodedata
+
+    def fold(x):   # accents dropped: DailyFaceoff 'Slafkovsky', the NHL 'Slafkovský'
+        return unicodedata.normalize("NFKD", x or "").encode("ascii", "ignore").decode().lower().replace(".", "").split()
+    a, b = fold(a), fold(b)
     if len(a) < 2 or len(b) < 2 or a[-1] != b[-1]:
         return a == b
     return a[0].startswith(b[0]) or b[0].startswith(a[0])
