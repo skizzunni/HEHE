@@ -221,6 +221,17 @@ class GoalieNoteTest(unittest.TestCase):
         self.assertIn("goalie: Devon Levi", t["games"]["VGK @ EDM"][0]["label"])
 
 
+class TwoXLegsTest(unittest.TestCase):
+    def test_the_saved_2x_is_the_printed_2x(self):
+        legs = [dict(label=f"L{i}", price="-1000", chance=0.86) for i in range(9)]
+        t = {"games": {"G": legs}}
+        got = B.two_x_legs(t)
+        self.assertEqual(len(got), 8)                                   # 1.1^8 = 2.14x, as two_x_text says
+        self.assertIn(f"{len(got)} legs", B.two_x_text(legs))
+        self.assertEqual(B.two_x_legs({"games": {"G": legs[:3]}}), [])  # cannot reach 2x
+        self.assertEqual(B.two_x_legs({"games": {"G": [dict(label="x", price=None, chance=0.9)]}}), [])
+
+
 class ChanceTextTest(unittest.TestCase):
     def test_small_chances_read_as_odds(self):
         self.assertEqual(B.chance_text(0.354), "about 35%")
