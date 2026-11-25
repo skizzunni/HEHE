@@ -26,6 +26,14 @@ class RecheckTest(unittest.TestCase):
             raise OSError
         self.assertEqual(R.recheck(legs, lambda n: "Probable", boom), [])
 
+    def test_nfl_props_rechecked(self):
+        legs = [dict(lg="nfl", kind="prop", player="Josh Jacobs", label="Jacobs 50+ Rush Yds"),
+                dict(lg="nfl", kind="prop", player="Jordan Love", label="Love 200+")]
+        nfl = {"Josh Jacobs": "Out"}
+        self.assertEqual(R.recheck(legs, lambda n: None, nfl_status_fn=nfl.get),
+                         [("Jacobs 50+ Rush Yds", "Josh Jacobs is now Out on ESPN's NFL injury report")])
+        self.assertEqual(R.recheck(legs, lambda n: "Out"), [])     # the NBA report never judges an NFL leg
+
 
 class PriceCheckTest(unittest.TestCase):
     def test_moved_and_gone(self):

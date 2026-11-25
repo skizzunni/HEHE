@@ -8,6 +8,7 @@ latest report, and prints every leg that now needs attention:
 
   * a prop on a player now Out / Doubtful / Questionable (build_ticket drops
     those at build time; here they are flagged, the ticket is the user's)
+  * an NFL prop on a player now Out / Doubtful / Questionable on ESPN's NFL report
   * an NBA moneyline whose team now has a top-minutes player Out / Doubtful /
     Questionable (a caution: priced in on the record, README 2026-11-24)
 
@@ -119,11 +120,18 @@ def ml_check(legs, rows):
     return out
 
 
-def recheck(legs, status_fn, team_out_fn=None):
+def recheck(legs, status_fn, team_out_fn=None, nfl_status_fn=None):
     """[(leg label, note)] for legs that need a look. status_fn(display name)
-    -> report status or None; team_out_fn(team abbr) -> [(name, min, status)]."""
+    -> report status or None; team_out_fn(team abbr) -> [(name, min, status)];
+    nfl_status_fn(display name) -> ESPN NFL report status or None (2026-11-25:
+    NFL prop legs were never re-checked)."""
     out = []
     for L in legs:
+        if L.get("lg") == "nfl" and L.get("kind") == "prop" and nfl_status_fn:
+            st = nfl_status_fn(L.get("player") or "")
+            if st in BAD:
+                out.append((L.get("label"), f"{L.get('player')} is now {st} on ESPN's NFL injury report"))
+            continue
         if L.get("lg") != "nba":
             continue
         if L.get("kind") == "prop":
@@ -240,7 +248,9 @@ def main(path, day, final=False):
     team_out = lambda abbr: K.key_missing(K.recent_minutes(abbr, day), status)
     with open(path) as f:
         legs = json.load(f)
-    flags = recheck(legs, lambda n: K.status_of(n, status), team_out)
+    import build_ticket as BT
+    nfl = BT.nfl_status() if any(L.get("lg") == "nfl" for L in legs) else {}
+    flags = recheck(legs, lambda n: K.status_of(n, status), team_out, lambda n: K.status_of(n, nfl))
     import nhl_goalies as NG
     import urllib.request
     cache = {}
