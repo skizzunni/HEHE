@@ -185,6 +185,11 @@ def _l10_caution(legs, gid, logs_fn):
     except Exception:
         return
     for L in props:
+        if L["player"] not in logs:
+            # say so rather than skip in silence (2026-11-25: 'Jabari Smith'
+            # never matched ESPN's 'Jabari Smith Jr.' and nobody could tell)
+            L["label"] += " -- note: no ESPN game log found, last-10 check skipped"
+            continue
         h = M.last10_hits(logs.get(L["player"]) or [], L.get("market"), L.get("line") or 0)
         if h and h[0] / h[1] < M.L10_LOW:
             L["label"] += f" -- caution: reached it in {h[0]} of his last {h[1]} ({M.L10_NOTE})"

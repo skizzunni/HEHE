@@ -294,6 +294,14 @@ class Last10CautionTest(unittest.TestCase):
         lab = {L["player"]: L["label"] for L in t["games"]["A @ B"]}
         self.assertIn("caution: reached it in 6 of his last 10", lab["Daniel Gafford"])
         self.assertNotIn("caution", lab["Steady"])
+        self.assertNotIn("no ESPN game log", lab["Steady"])
+
+    def test_missing_game_log_is_said_not_skipped(self):
+        props = [{"id": "nba:1", "match": "A @ B", "props": [
+            dict(name="Ghost", label="Ghost: 4+ Rebounds", p=0.87, imp=0.9, price="-1600", market="Rebounds", line="4+")]}]
+        t = B.build({}, props, key_out_fn=lambda r: [], blind_fn=lambda r: None, status_fn=lambda n: None,
+                    fav_fn=lambda g: 0, logs_fn=lambda g, n: {})
+        self.assertIn("no ESPN game log found, last-10 check skipped", t["games"]["A @ B"][0]["label"])
 
     def test_games_sorted_newest_first(self):
         import nba_minutes as M
