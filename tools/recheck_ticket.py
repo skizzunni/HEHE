@@ -367,8 +367,10 @@ def best_2x(odds, target=2.0, cap=16):
     together: same-game heavy props won together as often as independent ones
     (README 2026-11-24). None when even all of them do not reach it."""
     import math
-    if not odds or len(odds) > cap:
+    if not odds:
         return None
+    if len(odds) > cap:
+        return _best_cover(odds, target)
     best = None
     n = len(odds)
     for mask in range(1, 1 << n):
@@ -383,6 +385,54 @@ def best_2x(odds, target=2.0, cap=16):
         return None
     p, pays, mask = best
     return dict(chance=p, pays=pays, legs=[odds[i][0] for i in range(n) if mask >> i & 1])
+
+
+def _best_cover(odds, target):
+    """best_2x for any number of legs, exactly: the cheapest cover of log
+    `target` where a leg costs -log(chance) and brings log(payout).
+    Branch and bound over groups of identical legs (same payout and chance --
+    a fallback ticket has dozens of 87% legs at -1000, and treating them one
+    by one makes the search explode), sorted by cost per unit of payout, cut
+    by the fractional (greedy) bound. 2026-11-25: best_2x gave up past 16
+    legs, so a 70-leg fallback ticket printed no "most likely 2x" at all."""
+    import math
+    W = math.log(target)
+    groups = {}
+    for i, (_, d, c) in enumerate(odds):
+        if d > 1 and 0 < c <= 1:
+            groups.setdefault((round(-math.log(c), 12), round(math.log(d), 12)), []).append(i)
+    G = sorted(((c, w, ix) for (c, w), ix in groups.items()), key=lambda g: g[0] / g[1])
+    if sum(w * len(ix) for _, w, ix in G) < W - 1e-12:
+        return None
+    best = [math.inf, None]
+
+    def bound(k, need):
+        lb = 0.0
+        for c, w, ix in G[k:]:
+            if w * len(ix) >= need:
+                return lb + c * need / w
+            lb += c * len(ix)
+            need -= w * len(ix)
+        return math.inf
+
+    def go(k, cost, need, chosen):
+        if need <= 1e-12:
+            if cost < best[0] - 1e-12:
+                best[0], best[1] = cost, list(chosen)
+            return
+        if k == len(G) or cost + bound(k, need) >= best[0] - 1e-12:
+            return
+        c, w, ix = G[k]
+        top = min(len(ix), math.ceil(need / w - 1e-12))   # more than that overshoots for nothing
+        for m in range(top, -1, -1):
+            go(k + 1, cost + c * m, need - w * m, chosen + ix[:m])
+
+    go(0, 0.0, W, [])
+    if best[1] is None:
+        return None
+    idx = sorted(best[1])
+    pays = math.prod(odds[i][1] for i in idx)
+    return dict(chance=math.prod(odds[i][2] for i in idx), pays=pays, legs=[odds[i][0] for i in idx])
 
 
 def _short(L, now_prices):

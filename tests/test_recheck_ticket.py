@@ -222,5 +222,27 @@ class NhlLineupTest(unittest.TestCase):
         self.assertEqual(R.recheck_nhl(legs, lambda gid: [{}, {}]), [])       # unreachable: silent
 
 
+class BestCoverTest(unittest.TestCase):
+    def test_large_ticket_matches_exhaustive_and_has_an_answer(self):
+        """2026-11-25: past 16 legs best_2x returned None, so a 70-leg ticket
+        printed no 2x line; the search past the cap must equal exhaustive."""
+        import random
+        rnd = random.Random(11)
+        for _ in range(80):
+            odds = [(i, 1 + rnd.choice([.06, .1, .15, .25, .33, 1.1]), round(rnd.uniform(.5, .95), 3))
+                    for i in range(rnd.randint(1, 12))]
+            a, b = R.best_2x(odds), R._best_cover(odds, 2.0)
+            self.assertEqual(a is None, b is None)
+            if a:
+                self.assertAlmostEqual(a["chance"], b["chance"], places=9)
+                self.assertGreaterEqual(b["pays"], 2.0 - 1e-9)
+        big = [(i, 1.1, 0.86) for i in range(70)]
+        got = R.best_2x(big)
+        self.assertEqual(len(got["legs"]), 8)                   # 1.1^8 = 2.14x, fewest legs, best chance
+        mixed = R.best_2x([(0, 1.1, 0.9)] * 3 + [(1, 1.05, 0.9)] * 14)              # 17 legs: past the cap
+        self.assertGreaterEqual(mixed["pays"], 2.0)
+        self.assertEqual(len(mixed["legs"]), 12)                 # all three 1.1s, then 1.05^8 = 1.97x, ^9 = 2.06x
+
+
 if __name__ == "__main__":
     unittest.main()
