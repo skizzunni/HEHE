@@ -328,6 +328,34 @@ def short(p):
     return p.get("label") or str(p)
 
 
+PERIODS = {"nfl": (4, 15), "ncaaf": (4, 15), "nba": (4, 12), "wnba": (4, 10), "nhl": (3, 20), "ncaab": (2, 20)}
+ORD = {"1st": 1, "2nd": 2, "3rd": 3, "4th": 4}
+
+
+def pace(clock, lg):
+    """'on pace for 22' from a live line '0:06 - 2nd: 11 of 15' -- the stat
+    scaled to a full game at the current rate (2026-11-26: at half time a leg
+    at 11 of 15 says nothing about whether it is on track). A rate, not a
+    forecast; '' when the clock cannot be read or under a fifth has gone."""
+    import re
+    clock = re.sub(r"^\s*Halftime\b", "0:00 - 2nd", clock or "")               # ESPN's half-time clock
+    clock = re.sub(r"^\s*End of (1st|2nd|3rd|4th)\b", r"0:00 - \1", clock)
+    m = re.match(r"^\s*(\d+):(\d+)\s*-\s*(1st|2nd|3rd|4th)\s*:\s*(\d+(?:\.\d+)?) of (\d+(?:\.\d+)?)", clock)
+    if not m or lg not in PERIODS:
+        return ""
+    n, length = PERIODS[lg]
+    per = ORD[m.group(3)]
+    if per > n:
+        return ""
+    elapsed = (per - 1) * length + (length - (int(m.group(1)) + int(m.group(2)) / 60))
+    total = n * length
+    if elapsed < total / 5:
+        return ""
+    v, need = float(m.group(4)), float(m.group(5))
+    proj = v * total / elapsed
+    return f"on pace for {proj:.0f}" + (" -- behind" if proj < need else "")
+
+
 def brief(path, get=None):
     """The live view in short words, legs not yet started left out and counted:
     for check-ins during games (2026-11-24: the full labels ran 150 characters)."""
@@ -360,7 +388,8 @@ def brief(path, get=None):
         # only an open leg has a clock; a settled leg's tail is the label's own note
         # (2026-11-25: Gafford's "caution: reached it in 6 of his last 10" showed after WON)
         clock = tail.split(" -- ")[-1] if tail and state in ("OPEN", "REACHED") else ""
-        out.append(f"{state:5} {short(p)}" + (f" -- {clock}" if clock else ""))
+        pc = pace(clock, p.get("lg")) if state == "OPEN" else ""
+        out.append(f"{state:5} {short(p)}" + (f" -- {clock}" if clock else "") + (f" ({pc})" if pc else ""))
     if waiting:
         out.append(f"({waiting} not started yet)")
     states = [r.split()[0] for r in rows]

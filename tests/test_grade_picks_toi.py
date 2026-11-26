@@ -106,5 +106,19 @@ class WatchMany(unittest.TestCase):
         self.assertEqual(out, ["WON y"])
 
 
+class Pace(unittest.TestCase):
+    def test_pace_at_half_time(self):
+        # 2026-11-26: LaPorta 11 of 15 with 0:06 left in the 2nd -> about 22 over 60 minutes
+        self.assertEqual(G.pace("0:06 - 2nd: 11 of 15", "nfl"), "on pace for 22")
+        self.assertEqual(G.pace("0:06 - 2nd: 5 of 10", "nfl"), "on pace for 10")
+        self.assertEqual(G.pace("0:06 - 2nd: 1 of 3", "nfl"), "on pace for 2 -- behind")
+
+    def test_too_early_or_unreadable(self):
+        self.assertEqual(G.pace("12:00 - 1st: 1 of 3", "nfl"), "")
+        self.assertEqual(G.pace("Halftime: 11 of 15", "nfl"), "on pace for 22")
+        self.assertEqual(G.pace("End of 1st: 1 of 3", "nhl"), "on pace for 3")
+        self.assertEqual(G.pace("5:00 - 2nd: 1 of 3", "mlb"), "")
+
+
 if __name__ == "__main__":
     unittest.main()
