@@ -119,6 +119,10 @@ class Pace(unittest.TestCase):
         self.assertEqual(G.pace("End of 1st: 1 of 3", "nhl"), "on pace for 3")
         self.assertEqual(G.pace("5:00 - 2nd: 1 of 3", "mlb"), "")
 
+    def test_nba_quarters_are_12_minutes(self):
+        self.assertEqual(G.pace("0:00 - 2nd: 12 of 25", "nba"), "on pace for 24 -- behind")
+        self.assertEqual(G.pace("6:00 - 4th: 3 of 2", "nba"), "on pace for 3")
+
 
 if __name__ == "__main__":
     unittest.main()
