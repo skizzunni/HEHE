@@ -584,7 +584,8 @@ def user_tickets_line(root=None, grade_fn=None, last=3):
                 kind = {"ticket_ladder.json": "ladder stand-in", "ticket_2x.json": "2x combo",
                          "ticket_td.json": "touchdown scorers", "ticket_safe.json": "safest ticket",
                          "ticket_safe_2x.json": "safest 2x combo",
-                         "ticket_safe_ladder.json": "safest ladder stand-in"}.get(os.path.basename(f), "ticket")
+                         "ticket_safe_ladder.json": "safest ladder stand-in",
+                         "ticket_other.json": "other-side card"}.get(os.path.basename(f), "ticket")
                 tag = f"{os.path.basename(d).replace('slate_', '')} {len(picks)}-leg {kind}"
                 state = ("all won" if not sm["lost"] and not sm["open"] else
                          f"{sm['open']} open" if not sm["lost"] else "lost")
