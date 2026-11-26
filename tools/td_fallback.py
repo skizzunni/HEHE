@@ -58,7 +58,9 @@ def text(games):
     for g in games:
         lines.append(f"{g['match']} (total {g['total']:g}; {g['basis']})" if g.get("total") else f"{g['match']} ({g['basis']})")
         for p in g["players"]:
-            fd = f", FanDuel {100 * p['imp']:.0f}%" if p.get("imp") else ""
+            # 2026-11-26: 'FanDuel 74%' next to 'anytime 60%' read as a 14-point
+            # disagreement; FanDuel's figure is its raw price, margin included
+            fd = f", FanDuel's price implies {100 * p['imp']:.0f}% with its margin" if p.get("imp") else ""
             hurt = (f" -- {p['status']} on the injury report" + (", left off the saved list" if p["status"] in OFF else "")
                     if p.get("status") else "")
             lines.append(f"  {p['name']}: anytime {100 * p['p']:.0f}% ({p.get('price')}{fd}), 2+ {100 * p['p2']:.0f}%, "

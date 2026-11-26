@@ -37,7 +37,7 @@ class RowsTest(unittest.TestCase):
                                                      "  Jahmyr Gibbs: anytime 61% (-290), 2+ 24%, first TD 16%"])
         self.assertEqual(T.text(g).splitlines()[0], T.NOTE)
         g[0]["players"][0]["imp"] = 0.744
-        self.assertIn("(-290, FanDuel 74%)", T.text(g))
+        self.assertIn("(-290, FanDuel's price implies 74% with its margin)", T.text(g))
         self.assertEqual(T.text([]), "No NFL anytime-TD market posted yet.")
 
 
