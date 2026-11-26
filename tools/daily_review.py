@@ -540,6 +540,29 @@ def slate_day(path, today=None):
     return _dt.date.min
 
 
+def both_sides_line(book=None):
+    """Over vs under on every two-sided FanDuel main line (tools/both_sides.py),
+    one clause per side: 'Both sides: over 40/70 (57%, -3.1%), under 30/70 ...'.
+    The user, 2026-11-25: "see what other side brings". None before any grade."""
+    try:
+        import both_sides as BS
+        book = BS.load() if book is None else book
+    except Exception:
+        return None
+    done = [e for e in book.values() if e.get("status") in ("won", "lost")]
+    if not done:
+        return None
+    parts = []
+    for side in ("over", "under"):
+        s = [e for e in done if e.get("side") == side]
+        if s:
+            w = sum(e["status"] == "won" for e in s)
+            parts.append(f"{side} {w}/{len(s)} ({round(100 * w / len(s))}%, return "
+                         f"{100 * sum(BS._ret(e) for e in s) / len(s):+.1f}%)")
+    return ("Both sides of FanDuel's main prop lines: " + ", ".join(parts) +
+            " -- information only until a side holds in both date halves (tools/both_sides.py report).")
+
+
 def user_tickets_line(root=None, grade_fn=None, last=3):
     """The user's saved tickets (work/slate_*/ticket*.json) for the last `last`
     slates: each one's legs won-lost and whether every leg won -- the record
@@ -2847,6 +2870,8 @@ def words(r, fit):
         out.append(r["research_picks"])
     if r.get("user_tickets"):
         out.append(r["user_tickets"])
+    if r.get("both_sides"):
+        out.append(r["both_sides"])
     if r.get("dc_moves"):
         out.append(r["dc_moves"])
     if r.get("switched"):
@@ -3039,6 +3064,7 @@ def _main():
     log[today.isoformat()]["board_roi"] = board_roi_line(ledger)
     log[today.isoformat()]["research_picks"] = research_picks_line()
     log[today.isoformat()]["user_tickets"] = user_tickets_line()
+    log[today.isoformat()]["both_sides"] = both_sides_line()
     log[today.isoformat()]["nhl_dog_prereg"] = nhl_dog_prereg_line()
     log[today.isoformat()]["prop_fair"] = prop_fair_line()
     log[today.isoformat()]["dc_side"] = dc_side_line(ledger)

@@ -51,5 +51,19 @@ class BothSides(unittest.TestCase):
         self.assertFalse(PL.won("nfl", "Receiving Yards", "u13.5", 14))
 
 
+class ReviewLine(unittest.TestCase):
+    def test_daily_review_line(self):
+        import daily_review as DR
+        book = {"a": dict(side="over", price="-110", status="won", date="2026-11-26"),
+                "b": dict(side="under", price="-110", status="lost", date="2026-11-26"),
+                "c": dict(side="under", price="+120", status="won", date="2026-11-26"),
+                "d": dict(side="over", price="-110", status="open", date="2026-11-26")}
+        self.assertEqual(DR.both_sides_line(book),
+                         "Both sides of FanDuel's main prop lines: over 1/1 (100%, return +90.9%), "
+                         "under 1/2 (50%, return +10.0%) -- information only until a side holds in both "
+                         "date halves (tools/both_sides.py report).")
+        self.assertIsNone(DR.both_sides_line({}))
+
+
 if __name__ == "__main__":
     unittest.main()
