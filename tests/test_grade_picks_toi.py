@@ -74,5 +74,23 @@ class SafeDrops(unittest.TestCase):
         self.assertEqual([L["label"] for L in G.load(os.path.join(d, "ticket_safe_2x.json"))], ["b"])
 
 
+class BriefInProgress(unittest.TestCase):
+    def test_no_stat_yet_in_a_live_game_is_not_not_started(self):
+        """2026-11-26: LaPorta at 8:31 of the 1st, no catch yet, read 'not started'."""
+        import json
+        import tempfile
+        from unittest import mock
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        legs = [dict(label="a", id="1", lg="nfl", kind="prop", player="A", stat="YDS", line=15),
+                dict(label="b", id="2", lg="nfl", kind="prop", player="B", stat="YDS", line=15)]
+        json.dump(legs, open(path, "w"))
+        rows = ["OPEN  a -- 8:31 - 1st: not in the box score yet",
+                "OPEN  b -- 11/26 - 4:30 PM EST: not in the box score yet"]
+        with mock.patch.object(G, "live", lambda p, get=None: rows):
+            out = G.brief(path, get=lambda u: {})
+        self.assertIn("OPEN  A 15+ YDS -- 8:31 - 1st: none yet", out)
+        self.assertEqual(out[-1], "(1 not started yet)")
+
+
 if __name__ == "__main__":
     unittest.main()

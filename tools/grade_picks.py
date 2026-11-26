@@ -346,8 +346,15 @@ def brief(path, get=None):
                 out.append(f"{line.split()[0]:5} {short(p)}")
             continue
         tail = line.split(" -- ", 1)[1] if " -- " in line else ""
-        if line.startswith("OPEN") and ("not in the box score yet" in tail or tail.endswith(("PM EST", "AM EST")) or "not started" in tail):
+        pre = tail.split(": not in the box score yet")[0]
+        # 2026-11-26: a player with no stat yet in a game already under way
+        # (LaPorta at 8:31 of the 1st) was counted "not started"; only a game
+        # whose clock is still its start time (or none) is waiting
+        if line.startswith("OPEN") and ("not started" in tail or "EST" in pre or "EDT" in pre or not pre):
             waiting += 1
+            continue
+        if "not in the box score yet" in tail:
+            out.append(f"OPEN  {short(p)} -- {pre}: none yet")
             continue
         state = line.split()[0]
         # only an open leg has a clock; a settled leg's tail is the label's own note
