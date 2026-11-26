@@ -551,5 +551,17 @@ class KickoffTest(unittest.TestCase):
         self.assertIn("  CHI @ DET -- Thu 1:00 PM ET", B.text(t))
 
 
+class SharedSiblingTest(unittest.TestCase):
+    def test_names_players_on_the_other_ticket(self):
+        import json
+        import tempfile
+        d = tempfile.mkdtemp()
+        json.dump([{"player": "Colston Loveland"}, {"player": "Sam LaPorta"}], open(os.path.join(d, "ticket_safe.json"), "w"))
+        json.dump([{"player": "Colston Loveland"}], open(os.path.join(d, "ticket.json"), "w"))
+        self.assertEqual(B.shared_with_siblings(os.path.join(d, "ticket.json")),
+                         "Also on ticket_safe.json (one bad game loses the leg on both): Colston Loveland")
+        self.assertEqual(B.shared_with_siblings(os.path.join(d, "nothing.json")), "")
+
+
 if __name__ == "__main__":
     unittest.main()

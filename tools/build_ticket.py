@@ -810,6 +810,30 @@ def two_x_legs(t):
 
 
 
+def shared_with_siblings(save):
+    """'Also on ticket.json: Loveland, ...' when a player on the ticket just
+    saved has a leg on the other saved ticket beside it (2026-11-26: Colston
+    Loveland, 1 target, lost on both the safest ticket and the backup)."""
+    folder = os.path.dirname(save) or "."
+    me = os.path.basename(save)
+    try:
+        mine = {L.get("player") for L in json.load(open(save)) if L.get("player")}
+    except (OSError, ValueError):
+        return ""
+    out = []
+    for other in ("ticket.json", "ticket_safe.json"):
+        if other == me or not os.path.exists(os.path.join(folder, other)):
+            continue
+        try:
+            theirs = {L.get("player") for L in json.load(open(os.path.join(folder, other))) if L.get("player")}
+        except (OSError, ValueError):
+            continue
+        both = sorted(mine & theirs)
+        if both:
+            out.append(f"Also on {other} (one bad game loses the leg on both): " + ", ".join(both))
+    return "\n".join(out)
+
+
 def record_both_sides(day, record_fn=None):
     """Log both sides of every FanDuel main line (tools/both_sides.py) whenever
     a ticket is saved, so the over-vs-under record (2026-11-25, the user: "see
@@ -864,4 +888,7 @@ if __name__ == "__main__":
         print(line)
     if save:
         print(record_both_sides(day))
+        shared = shared_with_siblings(save)
+        if shared:
+            print(shared)
 
