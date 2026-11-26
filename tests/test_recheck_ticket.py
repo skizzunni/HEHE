@@ -335,5 +335,13 @@ class StartedNeverDroppedTest(unittest.TestCase):
         self.assertNotIn("now DROP", out)
 
 
+class SavedFilesTest(unittest.TestCase):
+    def test_each_ticket_reads_its_own_2x_and_ladder(self):
+        import recheck_ticket as RT
+        self.assertEqual(RT.saved_files("w/ticket.json"), [("ticket_2x.json", "2x"), ("ticket_ladder.json", "ladder stand-in")])
+        self.assertEqual(RT.saved_files("w/ticket_safe.json"),
+                         [("ticket_safe_2x.json", "2x"), ("ticket_safe_ladder.json", "ladder stand-in")])
+
+
 if __name__ == "__main__":
     unittest.main()

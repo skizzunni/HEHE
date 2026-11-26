@@ -128,6 +128,13 @@ def ml_check(legs, rows):
     return out
 
 
+def saved_files(path):
+    """[(file name, what)] of the 2x and ladder saved with this ticket."""
+    stem = os.path.splitext(os.path.basename(path))[0]
+    pre = "ticket_" if stem == "ticket" else stem + "_"
+    return [(pre + "2x.json", "2x"), (pre + "ladder.json", "ladder stand-in")]
+
+
 def recheck(legs, status_fn, team_out_fn=None, nfl_status_fn=None):
     """[(leg label, note)] for legs that need a look. status_fn(display name)
     -> report status or None; team_out_fn(team abbr) -> [(name, min, status)];
@@ -299,7 +306,9 @@ def main(path, day, final=False):
         except Exception:
             rec = {}
         saved = {}
-        for fname, name in (("ticket_2x.json", "2x"), ("ticket_ladder.json", "ladder stand-in")):
+        # the 2x and ladder saved with THIS ticket: ticket_2x.json beside
+        # ticket.json, ticket_safe_2x.json beside ticket_safe.json (2026-11-25)
+        for fname, name in saved_files(path):
             try:
                 saved[name] = [L.get("label") for L in json.load(open(os.path.join(os.path.dirname(path), fname)))]
             except (OSError, ValueError):
