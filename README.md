@@ -5392,6 +5392,14 @@ assists in the 3rd quarter of MIA @ PHI, which would have cut them from the nigh
 whose game has started is LIVE: never dropped, never counted as a drop in a saved combo, and left out of
 fresh suggestions; drops made before the tip stand. The three legs were restored the same minute.
 
+**New: `build_ticket --safest` (2026-11-25).** The user: "if u know what the losses are, how are u not
+doing anything to improve it". On every graded board prop: priced -2500 or shorter 342/364 (94.0%; 91.1%
+then 96.7% by date half); NHL -1500 to -2500 206/224 (92.0%); -1000 to -2500 elsewhere 85.6%; -500 to
+-1000 83.9%; longer 69.8%. A 6-leg day of -2500-or-shorter props won every leg on 17 of 26 days (65%),
+against about 38% for six ~87% legs. `--safest` keeps only those bands (and moneylines at 90%+), taking
+each player's best-paying line inside them -- the default picks his longest line near -1000, which is
+why heavy lines never reached the ticket. The cost is payout: six legs at -3000 pay about 1.2x.
+
 **Research pick, Nov 24: Magic +110 after Cade Cunningham was ruled Out -- LOST 86-104.** The 6:30 PM
 report moved Cunningham (Detroit's top minutes, 35.9 a game) from Probable to Out; ESPN's DraftKings
 line still read Detroit -130 / -2.5, so it was taken as news the price had not absorbed. Detroit won by

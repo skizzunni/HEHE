@@ -142,8 +142,9 @@ def build(rows_by_lg, props_games, key_out_fn, blind_fn, status_fn, fav_fn, prop
             elif (r.get("mc") or 0) >= MIN_WIN - 15:
                 left.append((label, why))
     for g in props_games:
-        cand = daily_card.best_per_player([dict(p, match=g.get("match")) for p in g.get("props") or []
-                                           if p.get("plays", True)], floor=PROP_FLOOR)
+        pool = [dict(p, match=g.get("match")) for p in g.get("props") or [] if p.get("plays", True)]
+        cand = (safest_per_player(pool, str(g.get("id")).split(":")[0]) if SAFEST_MODE["on"]
+                else daily_card.best_per_player(pool, floor=PROP_FLOOR))
         # the day's Prop Locks first (player confirmed to play): 93.0% then 93.9%
         # vs ~87% stated by date half (z +1.89, +3.05; README 2026-11-24) -- an
         # ordering and a label, not a cut
@@ -659,6 +660,58 @@ def main(day):
                  minutes_fn=__import__("nba_minutes").mpg_last5, logs_fn=__import__("nba_minutes").gamelogs)
 
 
+# README 2026-11-25 "safest legs": on every graded board prop, priced -2500 or
+# shorter won 342/364 (94.0%; 91.1% then 96.7% by date half), NHL -1500 to
+# -2500 won 206/224 (92.0%); everything from -500 to -2500 elsewhere 84-86%.
+# Built from those alone, a 6-leg day won every leg on 17 of 26 days.
+SAFEST = ((None, -2500), ("nhl", -1500))
+
+
+SAFEST_MODE = {"on": False}
+
+
+def safest_per_player(props, lg):
+    """--safest: per player, his best-paying line that is still in a safest
+    band (any prop at -2500 or shorter, NHL at -1500 or shorter); players
+    with none are left out. The default picks each player's LONGEST line at
+    the floor (~-1000), so the heavy lines never reached the ticket."""
+    best = {}
+    for p in props:
+        try:
+            a = float(str(p.get("price")).replace("+", ""))
+        except (TypeError, ValueError):
+            continue
+        if not any((g is None or g == lg) and a <= cut for g, cut in SAFEST):
+            continue
+        cur = best.get(p.get("name"))
+        if cur is None or a > cur[0]:
+            best[p.get("name")] = (a, p)
+    return sorted((p for _, p in best.values()), key=lambda p: float(str(p.get("price")).replace("+", "")))
+
+
+def safest(t):
+    """Only the legs in the price bands that have lost least: any prop at
+    -2500 or shorter, an NHL prop at -1500 or shorter, and a moneyline the
+    market makes 90%+ (college favourites at 90%+ won 96% over 4 seasons).
+    The user (2026-11-25): "if u know what the losses are, how are u not
+    doing anything to improve it". Fewer, safer legs; each pays little."""
+    keep = {}
+    for m, legs in t["games"].items():
+        ok = []
+        for L in legs:
+            try:
+                a = float(str(L.get("price")).replace("+", ""))
+            except (TypeError, ValueError):
+                continue
+            if L.get("kind") == "prop" and any((lg is None or L.get("lg") == lg) and a <= cut for lg, cut in SAFEST):
+                ok.append(L)
+            elif L.get("kind") == "ml" and (L.get("chance") or 0) >= 0.90:
+                ok.append(L)
+        if ok:
+            keep[m] = ok
+    return dict(t, games=keep)
+
+
 def save_ticket(t, save, combo=(), force=False, two=()):
     """Write the ticket (and the ladder stand-in as ticket_ladder.json beside
     it); returns the lines to print. Never replaces an existing file without
@@ -706,6 +759,7 @@ if __name__ == "__main__":
         save = args[i + 1]
         del args[i:i + 2]
     day = resolve_day(args[0] if args else None)
+    SAFEST_MODE["on"] = "--safest" in sys.argv
     try:
         t = main(day)
     except StaleBoard as e:
@@ -719,6 +773,10 @@ if __name__ == "__main__":
     if "--ncaab" in sys.argv:
         for m, L in ncaab_legs(ncaab_rows(day)).items():
             t["games"].setdefault(m, []).extend(L)
+    if "--safest" in sys.argv:
+        t = safest(t)
+        t["note"] = ((t.get("note") or "") + " SAFEST LEGS ONLY: props at -2500 or shorter, NHL props at -1500 or "
+                     "shorter, moneylines at 90%+ (these won 94% / 92% / 96% on the record).").strip()
     combo = []
     if t.pop("ladder_pending", False):
         # after the college legs join, so the stand-in sees what the 2x line sees

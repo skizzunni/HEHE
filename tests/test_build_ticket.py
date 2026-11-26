@@ -221,6 +221,28 @@ class GoalieNoteTest(unittest.TestCase):
         self.assertIn("goalie: Devon Levi", t["games"]["VGK @ EDM"][0]["label"])
 
 
+class SafestTest(unittest.TestCase):
+    def test_keeps_only_the_safest_bands(self):
+        t = {"games": {"G": [dict(kind="prop", lg="nba", price="-3000", label="a"),
+                             dict(kind="prop", lg="nba", price="-1600", label="b"),
+                             dict(kind="prop", lg="nhl", price="-1600", label="c"),
+                             dict(kind="ml", lg="ncaab", price="-2000", chance=0.94, label="d"),
+                             dict(kind="ml", lg="nba", price="-400", chance=0.78, label="e")],
+                       "H": [dict(kind="prop", lg="nba", price="-900", label="f")]}}
+        got = B.safest(t)
+        self.assertEqual([L["label"] for L in got["games"]["G"]], ["a", "c", "d"])
+        self.assertNotIn("H", got["games"])
+
+
+class SafestPerPlayerTest(unittest.TestCase):
+    def test_best_paying_line_inside_the_safe_band(self):
+        props = [dict(name="A", price="-1000"), dict(name="A", price="-3000"), dict(name="A", price="-6000"),
+                 dict(name="B", price="-900"), dict(name="C", price="-1600")]
+        self.assertEqual([(p["name"], p["price"]) for p in B.safest_per_player(props, "nba")], [("A", "-3000")])
+        self.assertEqual([(p["name"], p["price"]) for p in B.safest_per_player(props, "nhl")],
+                         [("A", "-3000"), ("C", "-1600")])
+
+
 class TwoXLegsTest(unittest.TestCase):
     def test_the_saved_2x_is_the_printed_2x(self):
         legs = [dict(label=f"L{i}", price="-1000", chance=0.86) for i in range(9)]
