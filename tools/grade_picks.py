@@ -479,6 +479,14 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
             r = grade(p, scores, done, d)
             key = p.get("label") or json.dumps(p, sort_keys=True)
             was = seen.get(key)
+            if not done and (not (d or {}).get("header") or seen.get(key + "|final")):
+                # 2026-11-25: a failed ESPN read (empty summary) on games already
+                # final announced BACK BELOW for Kent Johnson, Hamilton and Coyle,
+                # who had won. No data is not a correction, and a leg settled at
+                # the final never goes back: skip this round, keep what we had.
+                if not seen.get(key + "|final"):
+                    open_n += 1
+                continue
             if not done:
                 # 2026-11-24: a prop read "won" the moment the box score reached
                 # the line -- Suggs 5 reb+ast -- then ESPN corrected him to 4.

@@ -148,6 +148,30 @@ class PropTest(unittest.TestCase):
         self.assertEqual(out[-1], "all picks settled: 1-0; all won: YES")
         self.assertFalse(any("drop" in m for m in out))
 
+    def test_failed_read_on_a_final_game_is_not_a_correction(self):
+        """2026-11-25: an empty ESPN read on finished games announced BACK BELOW
+        for three legs that had won (Kent Johnson, Hamilton, Coyle)."""
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        json.dump([dict(label="done", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500),
+                   dict(label="late", id="2", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)],
+                  open(path, "w"))
+        rnd = {"n": 0}
+
+        def get(u):
+            if "event=1" in u:
+                return BOX_DONE if rnd["n"] != 1 else None     # round 2: the read fails
+            return BOX if rnd["n"] < 2 else BOX_DONE
+
+        def nap(s):
+            rnd["n"] += 1
+        out = []
+        G.watch(path, get=get, sleep=nap, emit=out.append, remember=False)
+        self.assertFalse(any(m.startswith("BACK BELOW") for m in out), out)
+        self.assertEqual(sum(m.startswith("WON done") for m in out), 1, out)
+        self.assertEqual(out[-1], "all picks settled: 2-0; all won: YES")
+
     def test_watch_fetches_each_game_once_per_round(self):
         import json
         import tempfile
