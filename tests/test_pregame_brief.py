@@ -66,6 +66,7 @@ class TicketSectionTest(unittest.TestCase):
 
     def test_weather_section_listed(self):
         self.assertIn(("NFL kickoff weather", P._weather), P.SECTIONS)
+        self.assertIn(("Other side (NFL underdogs getting 7.5-14)", P._other), P.SECTIONS)
 
 
 if __name__ == "__main__":

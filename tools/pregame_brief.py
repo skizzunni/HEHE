@@ -14,6 +14,7 @@ dead feed prints a one-line note, the rest still prints):
   2. tools/nba_injury_report.py -- the league's official injury report, incl. teams not yet submitted
   3. tools/nhl_goalies.py      -- starting goalies, confirmed or not, flagged when not the usual starter
   4. tools/nfl_weather.py      -- kickoff weather for outdoor NFL games (information only)
+     tools/other_side.py       -- the NFL 7.5-14 underdog card at the current line
   5. tools/recheck_ticket.py   -- the day's saved tickets (ticket.json and, when saved,
                                   ticket_safe.json) against the latest news and FanDuel prices
 """
@@ -68,6 +69,14 @@ def _ticket(day):
     return "\n\n".join(parts)
 
 
+def _other(day):
+    """The other-side card (tools/other_side.py): NFL dogs getting 7.5-14, with
+    the line as it stands now -- a moved line changes whether it qualifies."""
+    import other_side
+    import slate_sheet
+    return other_side.text(other_side.dogs(slate_sheet.main(day)))
+
+
 def _weather(day):
     import nfl_weather
     import slate_sheet
@@ -78,6 +87,7 @@ SECTIONS = (("Our number first, then the line", _slate),
             ("Official NBA injury report", _injuries),
             ("NHL starting goalies", _goalies),
             ("NFL kickoff weather", _weather),
+            ("Other side (NFL underdogs getting 7.5-14)", _other),
             ("Your saved ticket, re-checked", _ticket))
 
 
