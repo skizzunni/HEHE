@@ -59,8 +59,10 @@ def text(games):
         lines.append(f"{g['match']} (total {g['total']:g}; {g['basis']})" if g.get("total") else f"{g['match']} ({g['basis']})")
         for p in g["players"]:
             fd = f", FanDuel {100 * p['imp']:.0f}%" if p.get("imp") else ""
+            hurt = (f" -- {p['status']} on the injury report" + (", left off the saved list" if p["status"] in OFF else "")
+                    if p.get("status") else "")
             lines.append(f"  {p['name']}: anytime {100 * p['p']:.0f}% ({p.get('price')}{fd}), 2+ {100 * p['p2']:.0f}%, "
-                         f"first TD {100 * p['pfirst']:.0f}%")
+                         f"first TD {100 * p['pfirst']:.0f}%{hurt}")
     return "\n".join(lines) or "No NFL anytime-TD market posted yet."
 
 
@@ -71,13 +73,30 @@ def main(day, rows_fn=rows, fd=None):
     return [g for g in (td_scorers.for_game(r, "nfl", FD) for r in rows_fn(day)) if g]
 
 
+OFF = ("Out", "Doubtful", "Questionable")
+
+
+def mark_injured(games, status_fn):
+    """Attach each player's injury-report status (status_fn: name -> status or
+    None); 2026-11-26: the TD list had no injury check at all."""
+    for g in games:
+        for p in g["players"]:
+            try:
+                st = status_fn(p["name"])
+            except Exception:
+                st = None
+            if st:
+                p["status"] = st
+    return games
+
+
 def legs(games, top=2):
     """The likeliest `top` anytime scorers per game as ticket legs, in
     grade_picks' file format (the board grades this market from the box
     score), so a saved list keeps its own record."""
     out = []
     for g in games:
-        for p in g["players"][:top]:
+        for p in [p for p in g["players"] if p.get("status") not in OFF][:top]:   # injured players left off
             out.append(dict(label=f"{p['name']}: anytime TD {p.get('price')} ({100 * p['p']:.0f}%)",
                             id=str(g["id"]).split(":")[-1], lg="nfl", kind="prop", player=p["name"], stat="TD",
                             market="Anytime Touchdown Scorer", line=1.0, line_text="1+", price=p.get("price")))
@@ -94,6 +113,10 @@ if __name__ == "__main__":
         del args[i:i + 2]
     day = B.resolve_day(args[0] if args else None)
     games = main(day)
+    try:
+        mark_injured(games, B._report_status(day))
+    except Exception as ex:                       # the list still prints, and says so
+        print(f"(injury report unavailable: {type(ex).__name__} -- check players before betting)")
     print(text(games))
     if save and games:
         if os.path.exists(save) and "--force" not in sys.argv:

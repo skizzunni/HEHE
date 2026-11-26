@@ -41,5 +41,18 @@ class RowsTest(unittest.TestCase):
         self.assertEqual(T.text([]), "No NFL anytime-TD market posted yet.")
 
 
+class InjuryCheck(unittest.TestCase):
+    def test_questionable_player_marked_and_left_off_the_saved_list(self):
+        import td_fallback as T
+        g = [{"id": "nfl:1", "match": "KC @ BUF", "basis": "b", "players": [
+            dict(name="Dalton Kincaid", p=0.5, p2=0.1, pfirst=0.1, price="-110"),
+            dict(name="James Cook", p=0.4, p2=0.1, pfirst=0.1, price="+100"),
+            dict(name="Josh Allen", p=0.3, p2=0.1, pfirst=0.1, price="+120")]}]
+        T.mark_injured(g, {"Dalton Kincaid": "Questionable"}.get)
+        self.assertIn("Dalton Kincaid: anytime 50% (-110), 2+ 10%, first TD 10% -- Questionable on the injury report, "
+                      "left off the saved list", T.text(g))
+        self.assertEqual([L["player"] for L in T.legs(g)], ["James Cook", "Josh Allen"])
+
+
 if __name__ == "__main__":
     unittest.main()
