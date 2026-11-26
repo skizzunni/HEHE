@@ -243,6 +243,9 @@ class SafestPerPlayerTest(unittest.TestCase):
         self.assertEqual([(p["name"], p["price"]) for p in B.safest_per_player(props, "nba")], [("A", "-3000")])
         self.assertEqual([(p["name"], p["price"]) for p in B.safest_per_player(props, "nhl")],
                          [("A", "-3000"), ("C", "-1600")])
+        # NFL: ladders stop near -1800, so its own band is -1000 or shorter
+        self.assertEqual([(p["name"], p["price"]) for p in B.safest_per_player(props, "nfl")],
+                         [("C", "-1600"), ("A", "-1000")])
 
 
 class TwoXLegsTest(unittest.TestCase):

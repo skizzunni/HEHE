@@ -664,7 +664,11 @@ def main(day):
 # shorter won 342/364 (94.0%; 91.1% then 96.7% by date half), NHL -1500 to
 # -2500 won 206/224 (92.0%); everything from -500 to -2500 elsewhere 84-86%.
 # Built from those alone, a 6-leg day won every leg on 17 of 26 days.
-SAFEST = ((None, -2500), ("nhl", -1500))
+# NFL (2026-11-25, Thanksgiving was an NFL-only day): FanDuel's NFL ladders stop
+# near -1800, so the -2500 band left the safest ticket empty. NFL props at -1000
+# or shorter won 119/130 (91.5%; 97/105 then 22/25 by date half, split 11-05)
+# against 293/345 (84.9%) from -500 to -1000 -- the NFL's own safest band.
+SAFEST = ((None, -2500), ("nhl", -1500), ("nfl", -1000))
 
 
 SAFEST_MODE = {"on": False}
@@ -672,7 +676,7 @@ SAFEST_MODE = {"on": False}
 
 def safest_per_player(props, lg):
     """--safest: per player, his best-paying line that is still in a safest
-    band (any prop at -2500 or shorter, NHL at -1500 or shorter); players
+    band (any prop at -2500 or shorter, NHL at -1500, NFL at -1000); players
     with none are left out. The default picks each player's LONGEST line at
     the floor (~-1000), so the heavy lines never reached the ticket."""
     best = {}
@@ -781,7 +785,8 @@ if __name__ == "__main__":
     if "--safest" in sys.argv:
         t = safest(t)
         t["note"] = ((t.get("note") or "") + " SAFEST LEGS ONLY: props at -2500 or shorter, NHL props at -1500 or "
-                     "shorter, moneylines at 90%+ (these won 94% / 92% / 96% on the record).").strip()
+                     "shorter, NFL props at -1000 or shorter, moneylines at 90%+ (these won "
+                     "94% / 92% / 91.5% / 96% on the record).").strip()
     combo = []
     if t.pop("ladder_pending", False):
         # after the college legs join, so the stand-in sees what the 2x line sees
