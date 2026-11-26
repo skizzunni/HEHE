@@ -13,6 +13,7 @@ the evidence a rule needs before it changes a ticket.
   python3 tools/both_sides.py record [today|YYYY-MM-DD]   log today's lines
   python3 tools/both_sides.py grade                       settle finished games
   python3 tools/both_sides.py report                      over vs under
+  python3 tools/both_sides.py markets                     the same by league and market
 """
 import datetime as dt
 import json
@@ -127,6 +128,26 @@ def report(book=None):
     return "\n".join(lines)
 
 
+def by_market(book=None, min_n=10):
+    """Under minus over, win rate and flat return, per league and market with
+    min_n graded lines a side: where the other side does better, if anywhere."""
+    book = load() if book is None else book
+    done = [e for e in book.values() if e.get("status") in ("won", "lost")]
+    groups = {}
+    for e in done:
+        groups.setdefault((e.get("league"), e.get("market")), {}).setdefault(e["side"], []).append(e)
+    out = []
+    for (lg, mk), sides in sorted(groups.items(), key=lambda kv: str(kv[0])):
+        o, u = sides.get("over", []), sides.get("under", [])
+        if len(o) < min_n or len(u) < min_n:
+            continue
+        r = lambda s: (sum(e["status"] == "won" for e in s), len(s), 100 * sum(map(_ret, s)) / len(s))
+        (ow, on, oret), (uw, un, uret) = r(o), r(u)
+        out.append(f"  {lg} {mk}: over {ow}/{on} ({oret:+.1f}%), under {uw}/{un} ({uret:+.1f}%)")
+    return "\n".join(["both sides by market (10+ graded a side):"] + out) if out else \
+        "both sides by market: no market has 10 graded lines a side yet"
+
+
 def main(argv):
     cmd = argv[1] if len(argv) > 1 else "report"
     if cmd == "record":
@@ -137,6 +158,9 @@ def main(argv):
     elif cmd == "grade":
         grade()
         print(report())
+        print(by_market())
+    elif cmd == "markets":
+        print(by_market())
     else:
         print(report())
 

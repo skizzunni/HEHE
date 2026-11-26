@@ -65,5 +65,14 @@ class ReviewLine(unittest.TestCase):
         self.assertIsNone(DR.both_sides_line({}))
 
 
+class ByMarket(unittest.TestCase):
+    def test_needs_ten_a_side(self):
+        mk = lambda side, st: dict(league="nfl", market="Receiving Yards", side=side, price="-110", status=st, date="d")
+        book = {f"o{i}": mk("over", "won" if i < 4 else "lost") for i in range(10)}
+        book.update({f"u{i}": mk("under", "won" if i < 7 else "lost") for i in range(10)})
+        self.assertIn("nfl Receiving Yards: over 4/10 (-23.6%), under 7/10 (+33.6%)", B.by_market(book))
+        self.assertIn("no market has 10", B.by_market({}))
+
+
 if __name__ == "__main__":
     unittest.main()
