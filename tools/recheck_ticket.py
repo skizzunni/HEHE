@@ -327,7 +327,7 @@ def main(path, day, final=False):
         back = [d for d in (json.load(open(path + ".dropped")) if os.path.exists(path + ".dropped") else [])]
         rep_ok = bool(rep.get("asof") and rep.get("rows"))
 
-        fresh = fresh_fn(rep_ok, prices_ok, cache)
+        fresh = fresh_fn(rep_ok, prices_ok, cache, nfl_ok=bool(nfl))
         now = note_dropped(path, legs, allf, fresh=fresh, started=started)
         back = [d for d in back if d not in now]
         if back:
@@ -338,7 +338,7 @@ def main(path, day, final=False):
                                                     if news else "")
 
 
-def fresh_fn(rep_ok, prices_ok, lineups):
+def fresh_fn(rep_ok, prices_ok, lineups, nfl_ok=False):
     """fn(leg) -> may a drop on this leg be undone on this run? Only when its
     own sources were read: FanDuel's prices (a pulled line is a drop --
     2026-11-25 Holloway), and the NBA report (NBA legs) or that game's NHL
@@ -349,6 +349,12 @@ def fresh_fn(rep_ok, prices_ok, lineups):
         if L.get("lg") == "nhl":
             got = lineups.get(L.get("id"), lineups.get(str(L.get("id"))))
             return bool(got) and all(got)
+        if L.get("lg") == "nfl":
+            # 2026-11-26: Worthy was dropped at 12:15 PM (FanDuel pulled his line),
+            # the line came back and the 4:10 PM recheck said KEEP, but an NFL drop
+            # was never undone -- the grader kept leaving him out. With prices and
+            # ESPN's NFL report both read this run, the current drops are the list.
+            return bool(nfl_ok)
         return bool(rep_ok) and L.get("lg") == "nba"
     return fresh
 

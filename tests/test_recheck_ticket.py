@@ -319,6 +319,10 @@ class FreshFnTest(unittest.TestCase):
         self.assertFalse(R.fresh_fn(False, True, {})(nba))                    # report not read
         self.assertFalse(R.fresh_fn(True, True, {"7": [{"lines": 1}, None]})(nhl))   # one team's lines failed
         self.assertFalse(R.fresh_fn(True, True, {})(nhl))
+        nfl = dict(lg="nfl", id="9")
+        self.assertFalse(R.fresh_fn(True, True, {})(nfl))                       # NFL report not read
+        self.assertTrue(R.fresh_fn(True, True, {}, nfl_ok=True)(nfl))           # both read: drop can be undone
+        self.assertFalse(R.fresh_fn(True, False, {}, nfl_ok=True)(nfl))         # prices not read
 
 
 class StartedNeverDroppedTest(unittest.TestCase):
