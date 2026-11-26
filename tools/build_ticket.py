@@ -279,6 +279,16 @@ def text(t):
     two = two_x_text(legs)
     if two:
         out.append(two)
+    elif legs:
+        # 2026-11-25: the safest ticket (9 legs near -1450) printed no 2x line at
+        # all, so it read as if one had been forgotten -- say why there is none
+        try:
+            pays = math.prod(_dec(x["price"]) for x in legs)
+        except (TypeError, ValueError):
+            pays = None
+        if pays is not None and pays < 2:
+            out.append(f"No 2x from these legs: all {len(legs)} together pay {pays:.2f}x. "
+                       "Reaching 2x means adding riskier legs (the wider ticket's 2x).")
     if t["left_off"]:
         out.append("Left off, and why:")
         out += [f"  {lab} -- {why}" for lab, why in t["left_off"]]

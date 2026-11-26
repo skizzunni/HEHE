@@ -413,6 +413,8 @@ class TwoXTest(unittest.TestCase):
         out = B.two_x_text(legs)
         self.assertTrue(out.startswith("Most likely 2x from these legs: 8 legs"))     # 1.1^8 = 2.14x
         self.assertEqual(B.two_x_text(legs[:3]), "")                                 # cannot reach 2x
+        short = {"games": {"G": [dict(L, kind="prop") for L in legs[:3]]}, "left_off": []}
+        self.assertIn("No 2x from these legs: all 3 together pay", B.text(short))
         t = {"games": {"G": legs}, "left_off": []}
         self.assertIn("Most likely 2x", B.text(t))
 
