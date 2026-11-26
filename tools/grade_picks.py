@@ -369,7 +369,8 @@ def brief(path, get=None):
 
 NAMES = {"ticket.json": "ticket", "ticket_2x.json": "2x combo", "ticket_ladder.json": "ladder stand-in",
          "ticket_td.json": "touchdown scorers", "ticket_safe.json": "safest ticket",
-         "ticket_safe_2x.json": "safest 2x combo", "ticket_safe_ladder.json": "safest ladder stand-in"}
+         "ticket_safe_2x.json": "safest 2x combo", "ticket_safe_ladder.json": "safest ladder stand-in",
+         "ticket_other.json": "other-side card"}
 
 
 def slate(folder, get=None):
