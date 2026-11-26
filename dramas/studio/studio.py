@@ -626,6 +626,9 @@ def build_ass(events, w, h):
            "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, "
            "BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, "
            "BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding"]
+    if vertical:  # Shorts: put subtitles in the band under the centred 16:9 frame
+        styles = [st[:11] + (8, int(h * 0.67)) if st[0] in ("Narr", "Dial") else st
+                  for st in styles]
     for n, f, s, pc, oc, bc, b, i, bs, o, sh, al, mv in styles:
         out.append(f"Style: {n},{f},{s},{pc},&H000000FF,{oc},{bc},{b},{i},0,0,100,100,0,0,"
                    f"{bs},{o},{sh},{al},60,60,{mv},1")
