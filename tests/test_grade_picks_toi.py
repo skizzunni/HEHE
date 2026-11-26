@@ -92,5 +92,19 @@ class BriefInProgress(unittest.TestCase):
         self.assertEqual(out[-1], "(1 not started yet)")
 
 
+class WatchMany(unittest.TestCase):
+    def test_each_ticket_tagged(self):
+        out = []
+        G.watch_many(["w/ticket_safe.json", "w/ticket_other.json"], emit=out.append,
+                     watch_fn=lambda p, emit: emit(f"WON x in {os.path.basename(p)}"))
+        self.assertEqual(sorted(out), ["[other-side card] WON x in ticket_other.json",
+                                       "[safest ticket] WON x in ticket_safe.json"])
+
+    def test_one_file_untagged(self):
+        out = []
+        G.watch_many(["w/ticket.json"], emit=out.append, watch_fn=lambda p, emit: emit("WON y"))
+        self.assertEqual(out, ["WON y"])
+
+
 if __name__ == "__main__":
     unittest.main()

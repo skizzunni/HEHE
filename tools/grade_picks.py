@@ -567,9 +567,33 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
         (sleep or time.sleep)(every)
 
 
+def watch_many(paths, emit=print, watch_fn=None):
+    """One watch per ticket file, in parallel, each line tagged with the
+    ticket's name -- 2026-11-26: the safest ticket, the backup, the TD list and
+    the other-side card each needed its own Monitor."""
+    import threading
+    watch_fn = watch_fn or watch
+    if len(paths) == 1:
+        return watch_fn(paths[0], emit=emit)
+    lock = threading.Lock()
+
+    def run(path):
+        name = NAMES.get(os.path.basename(path), os.path.basename(path))
+
+        def tagged(m):
+            with lock:
+                emit(f"[{name}] {m}")
+        watch_fn(path, emit=tagged)
+    threads = [threading.Thread(target=run, args=(p,), daemon=True) for p in paths]
+    for t in threads:
+        t.start()
+    for t in threads:
+        t.join()
+
+
 if __name__ == "__main__":
     if "--watch" in sys.argv:
-        watch([a for a in sys.argv[1:] if a != "--watch"][0], emit=lambda m: print(m, flush=True))
+        watch_many([a for a in sys.argv[1:] if a != "--watch"], emit=lambda m: print(m, flush=True))
         sys.exit(0)
     if "--slate" in sys.argv:
         print("\n".join(slate([a for a in sys.argv[1:] if a != "--slate"][0])))
