@@ -531,5 +531,14 @@ class WeatherBlockTest(unittest.TestCase):
                          "Kickoff weather unavailable (OSError)")
 
 
+class BothSidesOnSaveTest(unittest.TestCase):
+    def test_logged_and_failure_named(self):
+        self.assertEqual(B.record_both_sides("2026-11-26", lambda d: 262),
+                         "both sides: 262 new lines logged (data/both_sides.json)")
+        def boom(d):
+            raise OSError
+        self.assertEqual(B.record_both_sides("d", boom), "both sides: not logged (OSError)")
+
+
 if __name__ == "__main__":
     unittest.main()

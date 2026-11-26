@@ -14,6 +14,9 @@ __pycache__/
 !stacks.json
 # Every recommended prop and how it settled -- prop prices vanish after the game.
 !props.json
+# Both sides (over and under) of every FanDuel main prop line, graded -- the
+# under's record cannot be refetched once the prices are gone (2026-11-26).
+!data/both_sides.json
 # Every day's locks and how they settled.
 !locks.json
 # graded lottery tickets

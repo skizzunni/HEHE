@@ -797,6 +797,20 @@ def two_x_legs(t):
     return b["legs"] if b and len(b["legs"]) < len(legs) else []
 
 
+
+def record_both_sides(day, record_fn=None):
+    """Log both sides of every FanDuel main line (tools/both_sides.py) whenever
+    a ticket is saved, so the over-vs-under record (2026-11-25, the user: "see
+    what other side brings") never depends on a step being remembered."""
+    try:
+        if record_fn is None:
+            import both_sides
+            record_fn = both_sides.record
+        return f"both sides: {record_fn(day)} new lines logged (data/both_sides.json)"
+    except Exception as ex:                       # never block the ticket
+        return f"both sides: not logged ({type(ex).__name__})"
+
+
 if __name__ == "__main__":
     args = sys.argv[1:]
     save = None
@@ -836,3 +850,6 @@ if __name__ == "__main__":
         print(w)
     for line in save_ticket(t, save, combo, force="--force" in sys.argv, two=two_x_legs(t) if save else ()):
         print(line)
+    if save:
+        print(record_both_sides(day))
+
