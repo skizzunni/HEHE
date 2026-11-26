@@ -600,6 +600,9 @@ def main(day):
     rows = R.parse(rep or "")["rows"] if rep else []
     mmdd = dt.date.fromisoformat(day).strftime("%m/%d/%Y")
     status = {r["player"]: r["status"] for r in rows if r["date"] == mmdd}
+    # 2026-11-26: the board path read only the NBA report, so NFL props built
+    # from the board had no injury check (the fallback path already had one)
+    status.update(nfl_status())
     by_team = {}
     for r in rows:
         if r["date"] == mmdd:
