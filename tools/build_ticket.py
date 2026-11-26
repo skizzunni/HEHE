@@ -731,6 +731,25 @@ def safest(t):
     return dict(t, games=keep)
 
 
+def weather_block(day, t, rows_fn=None, lines_fn=None):
+    """Kickoff weather for the ticket's NFL games (tools/nfl_weather.py), or ''.
+    Information only. 2026-11-26: three KC @ BUF passing / receiving legs sat
+    in an all-game rain forecast and the ticket said nothing."""
+    games = {m for m, legs in (t.get("games") or {}).items() if any(L.get("lg") == "nfl" for L in legs)}
+    if not games:
+        return ""
+    try:
+        if rows_fn is None:
+            import slate_sheet
+            rows_fn = slate_sheet.main
+        if lines_fn is None:
+            import nfl_weather
+            lines_fn = nfl_weather.lines
+        return "\n".join(lines_fn([r for r in rows_fn(day) if r.get("game") in games]))
+    except Exception as ex:                       # never block the ticket
+        return f"Kickoff weather unavailable ({type(ex).__name__})"
+
+
 def save_ticket(t, save, combo=(), force=False, two=()):
     """Write the ticket (and the ladder stand-in as ticket_ladder.json beside
     it); returns the lines to print. Never replaces an existing file without
@@ -809,5 +828,8 @@ if __name__ == "__main__":
         combo = ladder_fallback(t)
         t["ladder"] = ladder_text(combo)
     print(text(t))
+    w = weather_block(day, t)
+    if w:
+        print(w)
     for line in save_ticket(t, save, combo, force="--force" in sys.argv, two=two_x_legs(t) if save else ()):
         print(line)

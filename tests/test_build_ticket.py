@@ -498,5 +498,22 @@ class SaveThenGradeTest(unittest.TestCase):
         self.assertEqual(got, ["won", "won"])
 
 
+class WeatherBlockTest(unittest.TestCase):
+    def test_only_the_tickets_nfl_games(self):
+        t = {"games": {"KC @ BUF": [{"lg": "nfl"}], "BOS @ NYR": [{"lg": "nhl"}]}}
+        rows = lambda d: [{"game": "KC @ BUF", "lg": "nfl"}, {"game": "CHI @ DET", "lg": "nfl"}]
+        seen = []
+        out = B.weather_block("2026-11-26", t, rows_fn=rows, lines_fn=lambda r: seen.append(r) or ["w"])
+        self.assertEqual(out, "w")
+        self.assertEqual([r["game"] for r in seen[0]], ["KC @ BUF"])
+
+    def test_no_nfl_no_block_and_failures_named(self):
+        self.assertEqual(B.weather_block("d", {"games": {"A @ B": [{"lg": "nba"}]}}), "")
+        def boom(d):
+            raise OSError
+        self.assertEqual(B.weather_block("d", {"games": {"A @ B": [{"lg": "nfl"}]}}, rows_fn=boom),
+                         "Kickoff weather unavailable (OSError)")
+
+
 if __name__ == "__main__":
     unittest.main()
