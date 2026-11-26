@@ -77,6 +77,26 @@ def _toi(summary, player):
     return None
 
 
+def _completed(summary):
+    """True when an ESPN summary is for a finished game (never mid-game or pre-game)."""
+    if (summary or {}).get("completed"):
+        return True
+    comp = (((summary or {}).get("header") or {}).get("competitions") or [{}])[0]
+    return bool(((comp.get("status") or {}).get("type") or {}).get("completed"))
+
+
+def _dnp_or_absent(summary, player):
+    """True when the player is listed without stats, or not in the box at all."""
+    if _dnp(summary, player):
+        return True
+    for t in ((summary or {}).get("boxscore") or {}).get("players") or []:
+        for cat in t.get("statistics") or []:
+            for a in cat.get("athletes") or []:
+                if _fold((a.get("athlete") or {}).get("displayName")) == _fold(player):
+                    return False
+    return True
+
+
 def _dnp(summary, player):
     """True when the player is in the box score with no stats (did not play)."""
     for t in ((summary or {}).get("boxscore") or {}).get("players") or []:
@@ -311,7 +331,7 @@ def brief(path, get=None):
     picks = load(path)
     out, waiting = [], 0
     for p, line in zip(picks, rows):
-        if line.split()[0] in ("WON", "LOST"):
+        if line.split()[0] in ("WON", "LOST", "PUSH"):
             # what settled it -- "had 3" for a prop, the score for a game leg
             # (2026-11-25: Murray's LOST said nothing until a second lookup)
             try:
@@ -414,7 +434,11 @@ def detail(pick, scores, summary):
             v = board_value(pick, summary)[0] if pick.get("market") else None
             if v is None:
                 v = player_stat(summary, pick["player"], pick.get("stat") or "")
-            if v is None:
+            if v is None or _dnp(summary, pick["player"]):
+                # 2026-11-25: "PUSH CJ Daniels: 5+ Receiving Yards" said nothing --
+                # he was a game-day inactive, absent from the box score: a void
+                if _completed(summary) and _dnp_or_absent(summary, pick["player"]):
+                    return " -- did not play (not in the box score): void, the parlay pays on the rest"
                 return ""
             if pick.get("lg") == "nhl":
                 # ice time beside the stat: 2026-11-25 Lafreniere lost 1+ shots with 0

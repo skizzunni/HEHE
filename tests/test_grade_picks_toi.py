@@ -27,5 +27,25 @@ class IceTime(unittest.TestCase):
         self.assertEqual(G.detail(pick, {}, s), " -- had 1 in 17 min")
 
 
+FIN = {"completed": True, "boxscore": {"players": [{"statistics": [{"labels": ["REC", "YDS"], "athletes": [
+    {"athlete": {"displayName": "Tucker Kraft"}, "stats": ["3", "24"]}]}]}]}}
+
+
+class DidNotPlay(unittest.TestCase):
+    def test_absent_from_final_box_says_void(self):
+        """2026-11-25: 'PUSH CJ Daniels' said nothing -- a game-day inactive."""
+        pick = {"kind": "prop", "lg": "nfl", "player": "CJ Daniels", "stat": "YDS"}
+        self.assertIn("did not play", G.detail(pick, {}, FIN))
+
+    def test_not_said_before_the_final(self):
+        live = dict(FIN, completed=False)
+        pick = {"kind": "prop", "lg": "nfl", "player": "CJ Daniels", "stat": "YDS"}
+        self.assertEqual(G.detail(pick, {}, live), "")
+
+    def test_player_who_played_unchanged(self):
+        pick = {"kind": "prop", "lg": "nfl", "player": "Tucker Kraft", "stat": "YDS"}
+        self.assertEqual(G.detail(pick, {}, FIN), " -- had 24")
+
+
 if __name__ == "__main__":
     unittest.main()
