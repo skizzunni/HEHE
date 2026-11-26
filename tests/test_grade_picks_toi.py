@@ -63,5 +63,16 @@ class SafestBand(unittest.TestCase):
             self.assertEqual(G.band_split("x"), "  safest bands 1/1 (100%), the rest 1/2 (50%)")
 
 
+class SafeDrops(unittest.TestCase):
+    def test_safe_2x_honours_the_safe_tickets_drops(self):
+        import json
+        import tempfile
+        d = tempfile.mkdtemp()
+        legs = [{"label": "a"}, {"label": "b"}]
+        json.dump(legs, open(os.path.join(d, "ticket_safe_2x.json"), "w"))
+        json.dump(["a"], open(os.path.join(d, "ticket_safe.json.dropped"), "w"))
+        self.assertEqual([L["label"] for L in G.load(os.path.join(d, "ticket_safe_2x.json"))], ["b"])
+
+
 if __name__ == "__main__":
     unittest.main()

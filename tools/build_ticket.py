@@ -735,8 +735,14 @@ def save_ticket(t, save, combo=(), force=False, two=()):
     os.makedirs(os.path.dirname(save) or ".", exist_ok=True)
     json.dump(ticket_legs(t), open(save, "w"), indent=1)
     out.append(f"\nsaved: {save}")
-    for legs, fname, what in ((combo, "ticket_ladder.json", "the ladder stand-in"),
-                              (two, "ticket_2x.json", "the most likely 2x")):
+    # beside ticket.json: ticket_ladder.json / ticket_2x.json; beside any other
+    # name (ticket_safe.json): ticket_safe_ladder.json / ticket_safe_2x.json --
+    # 2026-11-25: saving the safest ticket next to the wide one would have taken
+    # the wide one's file names, and the second save printed "not saved"
+    stem = os.path.splitext(os.path.basename(save))[0]
+    pre = "ticket_" if stem == "ticket" else stem + "_"
+    for legs, fname, what in ((combo, pre + "ladder.json", "the ladder stand-in"),
+                              (two, pre + "2x.json", "the most likely 2x")):
         if not legs:
             continue
         lpath = os.path.join(os.path.dirname(save) or ".", fname)

@@ -287,6 +287,20 @@ class SaveTicketTest(unittest.TestCase):
         self.assertEqual(B.save_ticket(t, None), [])
 
 
+    def test_safest_ticket_gets_its_own_2x_and_ladder_files(self):
+        """2026-11-25: --save ticket_safe.json beside ticket.json must not take
+        the wide ticket's ticket_ladder.json / ticket_2x.json."""
+        import json
+        import tempfile
+        d = tempfile.mkdtemp()
+        leg = dict(label="L", price="-500", chance=0.8, gid="nba:1", lg="nba", id="1", kind="ml", team="BOS")
+        t = {"games": {"G": [leg]}}
+        B.save_ticket(t, os.path.join(d, "ticket_safe.json"), combo=[leg], two=[leg])
+        B.save_ticket(t, os.path.join(d, "ticket.json"), combo=[leg], two=[leg])
+        self.assertEqual(sorted(os.listdir(d)), ["ticket.json", "ticket_2x.json", "ticket_ladder.json",
+                                                 "ticket_safe.json", "ticket_safe_2x.json", "ticket_safe_ladder.json"])
+        self.assertEqual(len(json.load(open(os.path.join(d, "ticket_safe_2x.json")))), 1)
+
 class QuestionableNoteTest(unittest.TestCase):
     def test_note_only_when_someone_was_left_off_as_questionable(self):
         t = {"games": {}, "left_off": [("Giannis 4+ Assists", "Questionable on the official injury report")]}

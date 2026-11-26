@@ -256,7 +256,12 @@ def load(path):
     gone = set()
     # its own drops, and the main ticket's for a file beside it (the ladder
     # stand-in is a subset of ticket.json; a leg dropped there is gone here too)
-    for side in {path + ".dropped", os.path.join(os.path.dirname(path), "ticket.json.dropped")}:
+    sides = {path + ".dropped", os.path.join(os.path.dirname(path), "ticket.json.dropped")}
+    base = os.path.basename(path)
+    for tail in ("_2x.json", "_ladder.json"):          # ticket_safe_2x.json -> ticket_safe.json's drops
+        if base.endswith(tail) and base != "ticket" + tail:
+            sides.add(os.path.join(os.path.dirname(path), base[:-len(tail)] + ".json.dropped"))
+    for side in sides:
         try:
             with open(side) as f:
                 gone |= set(json.load(f))
@@ -363,7 +368,8 @@ def brief(path, get=None):
 
 
 NAMES = {"ticket.json": "ticket", "ticket_2x.json": "2x combo", "ticket_ladder.json": "ladder stand-in",
-         "ticket_td.json": "touchdown scorers", "ticket_safe.json": "safest ticket"}
+         "ticket_td.json": "touchdown scorers", "ticket_safe.json": "safest ticket",
+         "ticket_safe_2x.json": "safest 2x combo", "ticket_safe_ladder.json": "safest ladder stand-in"}
 
 
 def slate(folder, get=None):
