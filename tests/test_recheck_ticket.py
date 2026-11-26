@@ -34,6 +34,16 @@ class RecheckTest(unittest.TestCase):
                          [("Jacobs 50+ Rush Yds", "Josh Jacobs is now Out on ESPN's NFL injury report")])
         self.assertEqual(R.recheck(legs, lambda n: "Out"), [])     # the NBA report never judges an NFL leg
 
+    def test_nfl_status_through_the_real_name_lookup(self):
+        """2026-11-26: main() wraps the NFL dict in key_absences.status_of, which
+        read only 'Last, First' keys; ESPN's 'First Last' never matched. This test
+        goes through the same wrapper (the one above used dict.get directly)."""
+        import key_absences as K
+        legs = [dict(lg="nfl", kind="prop", player="Dalton Kincaid", label="Kincaid 10+ Rec Yds")]
+        nfl = {"Dalton Kincaid": "Questionable"}
+        self.assertEqual(R.recheck(legs, lambda n: None, nfl_status_fn=lambda n: K.status_of(n, nfl)),
+                         [("Kincaid 10+ Rec Yds", "Dalton Kincaid is now Questionable on ESPN's NFL injury report")])
+
 
 class PriceCheckTest(unittest.TestCase):
     def test_moved_and_gone(self):
