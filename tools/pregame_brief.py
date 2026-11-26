@@ -66,7 +66,23 @@ def _ticket(day):
     # 2026-11-26: the safest ticket became the main one; both are re-checked.
     parts = [(f"[{os.path.basename(p)}]\n" if len(found) > 1 else "") + recheck_ticket.main(p, day, final=True)
              for p in found]
+    both = shared_players(found)
+    if both:
+        parts.append("On both tickets (one bad game sinks both -- 2026-11-26: Loveland, 1 target, lost on each): "
+                     + ", ".join(both))
     return "\n\n".join(parts)
+
+
+def shared_players(paths):
+    """Players with a leg on every one of the saved tickets."""
+    import json
+    sets = []
+    for p in paths:
+        try:
+            sets.append({L.get("player") for L in json.load(open(p)) if L.get("player")})
+        except (OSError, ValueError):
+            return []
+    return sorted(set.intersection(*sets)) if len(sets) > 1 else []
 
 
 def _other(day):

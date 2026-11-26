@@ -69,5 +69,17 @@ class TicketSectionTest(unittest.TestCase):
         self.assertIn(("Other side (NFL underdogs getting 7.5-14)", P._other), P.SECTIONS)
 
 
+class SharedPlayersTest(unittest.TestCase):
+    def test_players_on_both_tickets(self):
+        import json
+        import tempfile
+        d = tempfile.mkdtemp()
+        a, b = os.path.join(d, "ticket_safe.json"), os.path.join(d, "ticket.json")
+        json.dump([{"player": "Colston Loveland"}, {"player": "Sam LaPorta"}], open(a, "w"))
+        json.dump([{"player": "Colston Loveland"}, {"team": "DAL"}], open(b, "w"))
+        self.assertEqual(P.shared_players([a, b]), ["Colston Loveland"])
+        self.assertEqual(P.shared_players([a]), [])
+
+
 if __name__ == "__main__":
     unittest.main()
