@@ -699,6 +699,11 @@ def safest(t):
     for m, legs in t["games"].items():
         ok = []
         for L in legs:
+            if "caution:" in (L.get("label") or ""):
+                # a leg the ticket already warns about (last-10 under 70%, low
+                # minutes, blowout, unusual goalie) stays off the safest ticket:
+                # last-10 cautions hit 81-82%, low minutes 70-77% (README)
+                continue
             try:
                 a = float(str(L.get("price")).replace("+", ""))
             except (TypeError, ValueError):

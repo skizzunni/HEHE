@@ -232,6 +232,8 @@ class SafestTest(unittest.TestCase):
         got = B.safest(t)
         self.assertEqual([L["label"] for L in got["games"]["G"]], ["a", "c", "d"])
         self.assertNotIn("H", got["games"])
+        warned = {"games": {"G": [dict(kind="prop", lg="nba", price="-3000", label="x -- caution: reached it in 5 of his last 10")]}}
+        self.assertEqual(B.safest(warned)["games"], {})                   # a warned leg is not "safest"
 
 
 class SafestPerPlayerTest(unittest.TestCase):
