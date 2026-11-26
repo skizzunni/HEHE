@@ -63,6 +63,20 @@ def player_stat(summary, player, stat):
     return None
 
 
+def _toi(summary, player):
+    """An NHL skater's time on ice as ESPN prints it ('19:43'), or None."""
+    for t in ((summary or {}).get("boxscore") or {}).get("players") or []:
+        for cat in t.get("statistics") or []:
+            labels = cat.get("labels") or cat.get("names") or []
+            if "TOI" not in labels:
+                continue
+            for a in cat.get("athletes") or []:
+                if _fold((a.get("athlete") or {}).get("displayName")) == _fold(player):
+                    s = dict(zip(labels, a.get("stats") or [])).get("TOI")
+                    return s if s and ":" in s else None
+    return None
+
+
 def _dnp(summary, player):
     """True when the player is in the box score with no stats (did not play)."""
     for t in ((summary or {}).get("boxscore") or {}).get("players") or []:
@@ -402,6 +416,11 @@ def detail(pick, scores, summary):
                 v = player_stat(summary, pick["player"], pick.get("stat") or "")
             if v is None:
                 return ""
+            if pick.get("lg") == "nhl":
+                # ice time beside the stat: 2026-11-25 Lafreniere lost 1+ shots with 0
+                # in 19:43 -- it tells a full-shift miss from a short night or injury
+                toi = _toi(summary, pick["player"])
+                return f" -- had {v:g}" + (f" in {toi} of ice time" if toi else "")
             m = player_stat(summary, pick["player"], "MIN") if pick.get("lg") in ("nba", "ncaab", "wnba") else None
             # minutes beside the stat: 2026-11-25 Jaylen Brown lost 2+ assists with 1
             # in 17 minutes (31.2 a game) -- the minutes are the story of the loss
