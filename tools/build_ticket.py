@@ -260,11 +260,20 @@ def chance_text(p):
     return f"about 1 in {int(round(n / mag) * mag):,}"
 
 
+def kickoff_et(start):
+    """'2026-11-26T18:00Z' -> 'Thu 1:00 PM ET'; '' when unreadable."""
+    try:
+        t = dt.datetime.fromisoformat(str(start).replace("Z", "+00:00")).astimezone(ET)
+    except ValueError:
+        return ""
+    return t.strftime("%a %I:%M %p ET").replace(" 0", " ")
+
+
 def text(t):
     legs = [L for g in t["games"].values() for L in g]
     out = ([f"NOTE: {t['note']}"] if t.get("note") else []) + [f"Your ticket, by game -- {len(legs)} legs, each judged on its own:"]
     for match, L in t["games"].items():
-        out.append(f"  {match}")
+        out.append(f"  {match}" + (f" -- {kickoff_et(t['starts'][match])}" if (t.get("starts") or {}).get(match) else ""))
         out += [f"    {x['label']}" for x in L]
     if legs:
         allwin = math.prod(x["chance"] for x in legs)
@@ -434,7 +443,10 @@ def fallback(day, rows=None, b2b_fn=None, props_fn=None, status_fn=None, minutes
         for m, L in tp["games"].items():
             games.setdefault(m, []).extend(L)
         left += tp["left_off"]
-    return dict(games=games, left_off=left, note=note)
+    # kickoff per game (2026-11-26: the ticket had none, and a 1:00 PM kickoff
+    # was told to the user as 12:30) -- shown beside each game header
+    starts = {r.get("game"): r.get("start") for r in rows if r.get("game") and r.get("start")}
+    return dict(games=games, left_off=left, note=note, starts=starts)
 
 
 def ladder_fallback(t, lo=2.0, hi=5.0, maxk=6):

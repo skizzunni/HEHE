@@ -540,5 +540,16 @@ class BothSidesOnSaveTest(unittest.TestCase):
         self.assertEqual(B.record_both_sides("d", boom), "both sides: not logged (OSError)")
 
 
+class KickoffTest(unittest.TestCase):
+    def test_kickoff_shown_in_et(self):
+        """2026-11-26: CHI @ DET was 1:00 PM ET; the ticket showed no time."""
+        self.assertEqual(B.kickoff_et("2026-11-26T18:00Z"), "Thu 1:00 PM ET")
+        self.assertEqual(B.kickoff_et("2026-11-27T01:20Z"), "Thu 8:20 PM ET")
+        self.assertEqual(B.kickoff_et("junk"), "")
+        t = {"games": {"CHI @ DET": [dict(label="L", price="-500", chance=0.8)]}, "left_off": [],
+             "starts": {"CHI @ DET": "2026-11-26T18:00Z"}}
+        self.assertIn("  CHI @ DET -- Thu 1:00 PM ET", B.text(t))
+
+
 if __name__ == "__main__":
     unittest.main()
