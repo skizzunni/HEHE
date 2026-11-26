@@ -400,7 +400,12 @@ def detail(pick, scores, summary):
             v = board_value(pick, summary)[0] if pick.get("market") else None
             if v is None:
                 v = player_stat(summary, pick["player"], pick.get("stat") or "")
-            return f" -- had {v:g}" if v is not None else ""
+            if v is None:
+                return ""
+            m = player_stat(summary, pick["player"], "MIN") if pick.get("lg") in ("nba", "ncaab", "wnba") else None
+            # minutes beside the stat: 2026-11-25 Jaylen Brown lost 2+ assists with 1
+            # in 17 minutes (31.2 a game) -- the minutes are the story of the loss
+            return f" -- had {v:g}" + (f" in {m:g} min" if m else "")
         if len(scores) == 2 and not scores.get("_void"):
             return " -- " + ", ".join(f"{k} {v:g}" for k, v in scores.items())
     except Exception:
