@@ -563,5 +563,17 @@ class SharedSiblingTest(unittest.TestCase):
         self.assertEqual(B.shared_with_siblings(os.path.join(d, "nothing.json")), "")
 
 
+class NflNotesTest(unittest.TestCase):
+    def test_low_rushing_line_noted_not_cautioned(self):
+        L = dict(label="Kyle Monangai: 10+ Rushing Yards -1450 (87%)", lg="nfl", kind="prop",
+                 market="Rushing Yards", line=10.0, price="-1450", chance=0.87)
+        hi = dict(L, label="Saquon Barkley: 30+ Rushing Yards -1450 (87%)", line=30.0)
+        t = B.nfl_notes({"games": {"G": [L, hi]}})
+        self.assertIn("note: low rushing line", t["games"]["G"][0]["label"])
+        self.assertNotIn("caution:", t["games"]["G"][0]["label"])            # --safest keeps it
+        self.assertNotIn("note:", t["games"]["G"][1]["label"])
+        self.assertEqual(B.safest(t)["games"]["G"][0]["label"].count("note:"), 1)
+
+
 if __name__ == "__main__":
     unittest.main()

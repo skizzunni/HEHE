@@ -810,6 +810,21 @@ def two_x_legs(t):
 
 
 
+LOW_RUSH_NOTE = (" -- note: low rushing line (under 15 yards) -- 24/30 (80%) at -700 or shorter vs 90% for 15-39"
+                 " (README 2026-11-26, on watch)")
+
+
+def nfl_notes(t):
+    """Information-only notes on NFL legs, from studies that did not reach the
+    bar (README 2026-11-26). 'note:' never 'caution:', so --safest keeps them."""
+    for legs in (t.get("games") or {}).values():
+        for L in legs:
+            if L.get("lg") == "nfl" and L.get("market") == "Rushing Yards" and (L.get("line") or 99) < 15 \
+                    and "low rushing line" not in L.get("label", ""):
+                L["label"] = L["label"] + LOW_RUSH_NOTE
+    return t
+
+
 def shared_with_siblings(save):
     """'Also on ticket.json: Loveland, ...' when a player on the ticket just
     saved has a leg on the other saved ticket beside it (2026-11-26: Colston
@@ -875,6 +890,7 @@ if __name__ == "__main__":
         t["note"] = ((t.get("note") or "") + " SAFEST LEGS ONLY: props at -2500 or shorter, NHL props at -1500 or "
                      "shorter, NFL props at -1000 or shorter, moneylines at 90%+ (these won "
                      "94% / 92% / 91.5% / 96% on the record).").strip()
+    t = nfl_notes(t)
     combo = []
     if t.pop("ladder_pending", False):
         # after the college legs join, so the stand-in sees what the 2x line sees
