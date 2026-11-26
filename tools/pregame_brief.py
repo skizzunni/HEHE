@@ -13,7 +13,9 @@ dead feed prints a one-line note, the rest still prints):
   1. tools/slate_sheet.py      -- price-blind number first, then the DraftKings line
   2. tools/nba_injury_report.py -- the league's official injury report, incl. teams not yet submitted
   3. tools/nhl_goalies.py      -- starting goalies, confirmed or not, flagged when not the usual starter
-  4. tools/recheck_ticket.py   -- the day's saved ticket against the latest news and FanDuel prices
+  4. tools/nfl_weather.py      -- kickoff weather for outdoor NFL games (information only)
+  5. tools/recheck_ticket.py   -- the day's saved tickets (ticket.json and, when saved,
+                                  ticket_safe.json) against the latest news and FanDuel prices
 """
 import datetime as dt
 import os
@@ -52,18 +54,30 @@ def _ticket(day):
     NHL lines, FanDuel prices. 2026-11-24: the afternoon and evening routines
     run this brief; the re-check was a separate step they did not name."""
     path = ticket_path(day)
-    if not os.path.exists(path):
+    safe = os.path.join(os.path.dirname(path), "ticket_safe.json")
+    found = [p for p in (safe, path) if os.path.exists(p)]
+    if not found:
         return f"no saved ticket ({os.path.relpath(path)})"
     import recheck_ticket
     # --final: KEEP / CAUTION / DROP by game, drops recorded for the grader,
     # the morning 2x and stand-in at current prices, a fresh stand-in from
-    # games not yet started (2026-11-25: the brief showed only raw flags)
-    return recheck_ticket.main(path, day, final=True)
+    # games not yet started (2026-11-25: the brief showed only raw flags).
+    # 2026-11-26: the safest ticket became the main one; both are re-checked.
+    parts = [(f"[{os.path.basename(p)}]\n" if len(found) > 1 else "") + recheck_ticket.main(p, day, final=True)
+             for p in found]
+    return "\n\n".join(parts)
+
+
+def _weather(day):
+    import nfl_weather
+    import slate_sheet
+    return "\n".join(nfl_weather.lines(slate_sheet.main(day))) or "No NFL games."
 
 
 SECTIONS = (("Our number first, then the line", _slate),
             ("Official NBA injury report", _injuries),
             ("NHL starting goalies", _goalies),
+            ("NFL kickoff weather", _weather),
             ("Your saved ticket, re-checked", _ticket))
 
 

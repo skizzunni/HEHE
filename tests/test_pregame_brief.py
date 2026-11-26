@@ -50,5 +50,23 @@ class TicketSectionTest(unittest.TestCase):
         self.assertTrue(seen["final"])
 
 
+    def test_both_tickets_rechecked_safest_first(self):
+        import tempfile
+        from unittest import mock
+        import recheck_ticket
+        root = tempfile.mkdtemp()
+        path = P.ticket_path("2026-11-26", root)
+        os.makedirs(os.path.dirname(path))
+        open(path, "w").write("[]")
+        open(os.path.join(os.path.dirname(path), "ticket_safe.json"), "w").write("[]")
+        with mock.patch.object(P, "ticket_path", lambda d, root=None: path), \
+                mock.patch.object(recheck_ticket, "main", lambda p, d, final=False: os.path.basename(p)):
+            self.assertEqual(P._ticket("2026-11-26"),
+                             "[ticket_safe.json]\nticket_safe.json\n\n[ticket.json]\nticket.json")
+
+    def test_weather_section_listed(self):
+        self.assertIn(("NFL kickoff weather", P._weather), P.SECTIONS)
+
+
 if __name__ == "__main__":
     unittest.main()
