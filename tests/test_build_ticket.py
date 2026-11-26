@@ -319,6 +319,22 @@ class NflStatusTest(unittest.TestCase):
             raise OSError("down")
         self.assertEqual(B.nfl_status(boom), {})
 
+    def test_nfl_names_match_through_the_real_lookup(self):
+        """2026-11-26: ESPN's NFL report keys are 'First Last'; key_absences.status_of
+        expected 'Last, First', so every NFL player read as not listed (Dalton
+        Kincaid, Questionable, sat on the safest ticket). The old test above
+        looked the dict up directly and never exercised status_of."""
+        import key_absences as K
+        from unittest import mock
+        import nba_injury_report as R
+        nfl = lambda: {"BUF": [["Dalton Kincaid", "Questionable"], ["Marvin Harrison Jr.", "Out"]]}
+        with mock.patch.object(R, "latest", lambda: (None, "")):
+            st = B._report_status("2026-11-26", nfl_fetch=nfl)
+        self.assertEqual(st("Dalton Kincaid"), "Questionable")
+        self.assertEqual(st("Marvin Harrison Jr."), "Out")
+        self.assertIsNone(st("Patrick Mahomes"))
+        self.assertEqual(K.status_of("Kawhi Leonard", {"Leonard, Kawhi": "Out"}), "Out")   # NBA form unchanged
+
     def test_questionable_nfl_player_left_off(self):
         ok, why, _ = B.judge_prop({"name": "Josh Jacobs"}, B.nfl_status(lambda: {"GB": [["Josh Jacobs", "Questionable"]]})["Josh Jacobs"])
         self.assertFalse(ok)

@@ -139,7 +139,10 @@ def status_of(display, statuses):
     me = _parts(rn)
     if not me:
         return None
-    keyed = [(_parts(k), v) for k, v in statuses.items()]
+    # 2026-11-26: ESPN's NFL report names players 'First Last', not the NBA
+    # report's 'Last, First'; those keys never matched, so a Questionable NFL
+    # player (Dalton Kincaid) passed every injury check. Both forms read now.
+    keyed = [(_parts(k if ", " in k else report_name(k)), v) for k, v in statuses.items()]
     exact = [v for k, v in keyed if k == me]
     if exact:
         return exact[0] if len(set(exact)) == 1 else None
