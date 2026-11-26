@@ -382,7 +382,40 @@ def slate(folder, get=None):
         all_won = head.startswith(f"{len(picks)} won")
         out.append(f"{NAMES.get(os.path.basename(f), os.path.basename(f))}, {len(picks)} legs: {head}"
                    + (" -- every leg won" if all_won and picks else ""))
+        if os.path.basename(f) == "ticket.json":
+            b = band_split(f, get)
+            if b:
+                out.append(b)
     return out
+
+
+def in_safest(p):
+    """Is this leg in build_ticket's safest bands (the --safest ticket's rule)?"""
+    import build_ticket
+    try:
+        a = float(str(p.get("price")).replace("+", ""))
+    except (TypeError, ValueError):
+        return False
+    if p.get("kind") == "ml":
+        return (p.get("chance") or 0) >= 0.90
+    return p.get("kind") == "prop" and any((lg is None or p.get("lg") == lg) and a <= cut
+                                            for lg, cut in build_ticket.SAFEST)
+
+
+def band_split(path, get=None):
+    """'safest bands 22/25 (88%), the rest 33/42 (79%)' for a graded ticket --
+    the nightly forward check of --safest (2026-11-25, counted by hand)."""
+    picks, results, _ = main(path, get)
+    cell = {True: [0, 0], False: [0, 0]}
+    for p, r in zip(picks, results):
+        if r in ("won", "lost"):
+            c = cell[in_safest(p)]
+            c[0] += r == "won"
+            c[1] += 1
+    if not (cell[True][1] or cell[False][1]):
+        return ""
+    fmt = lambda c: f"{c[0]}/{c[1]}" + (f" ({round(100 * c[0] / c[1])}%)" if c[1] else "")
+    return f"  safest bands {fmt(cell[True])}, the rest {fmt(cell[False])}"
 
 
 def live(path, get=None):

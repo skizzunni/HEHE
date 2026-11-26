@@ -127,7 +127,8 @@ class PropTest(unittest.TestCase):
         json.dump([leg], open(os.path.join(d, "ticket_ladder.json"), "w"))
         out = G.slate(d, get=lambda u: BOX_DONE)
         self.assertEqual(out[0], "ticket, 2 legs: 1 won, 1 lost, 0 still open")
-        self.assertEqual(out[1], "ladder stand-in, 1 legs: 1 won, 0 lost, 0 still open -- every leg won")
+        self.assertEqual(out[1], "  safest bands 0/0, the rest 1/2 (50%)")     # the main ticket's band split
+        self.assertEqual(out[2], "ladder stand-in, 1 legs: 1 won, 0 lost, 0 still open -- every leg won")
 
     def test_watch_picks_up_a_drop_made_while_it_runs(self):
         """A recheck at 6:30 PM may drop a leg after the watch started; the

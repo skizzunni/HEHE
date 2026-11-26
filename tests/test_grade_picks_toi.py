@@ -47,5 +47,21 @@ class DidNotPlay(unittest.TestCase):
         self.assertEqual(G.detail(pick, {}, FIN), " -- had 24")
 
 
+class SafestBand(unittest.TestCase):
+    def test_in_safest_follows_build_ticket(self):
+        self.assertTrue(G.in_safest({"kind": "prop", "lg": "nba", "price": "-3000"}))
+        self.assertFalse(G.in_safest({"kind": "prop", "lg": "nba", "price": "-1500"}))
+        self.assertTrue(G.in_safest({"kind": "prop", "lg": "nhl", "price": "-1500"}))
+        self.assertTrue(G.in_safest({"kind": "prop", "lg": "nfl", "price": "-1000"}))
+        self.assertFalse(G.in_safest({"kind": "ml", "price": "-424", "chance": 0.78}))
+
+    def test_split_line(self):
+        from unittest.mock import patch
+        picks = [{"kind": "prop", "lg": "nba", "price": "-3000"}, {"kind": "prop", "lg": "nba", "price": "-1100"},
+                 {"kind": "prop", "lg": "nba", "price": "-1100"}]
+        with patch.object(G, "main", lambda path, get=None: (picks, ["won", "lost", "won"], {})):
+            self.assertEqual(G.band_split("x"), "  safest bands 1/1 (100%), the rest 1/2 (50%)")
+
+
 if __name__ == "__main__":
     unittest.main()
