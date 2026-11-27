@@ -96,9 +96,19 @@ class WatchMany(unittest.TestCase):
     def test_each_ticket_tagged(self):
         out = []
         G.watch_many(["w/ticket_safe.json", "w/ticket_other.json"], emit=out.append,
-                     watch_fn=lambda p, emit: emit(f"WON x in {os.path.basename(p)}"))
+                     watch_fn=lambda p, emit, get=None: emit(f"WON x in {os.path.basename(p)}"))
         self.assertEqual(sorted(out), ["[other-side card] WON x in ticket_other.json",
                                        "[safest ticket] WON x in ticket_safe.json"])
+
+    def test_tickets_share_one_read_per_game(self):
+        """2026-11-27: three watched tickets read each shared game once a minute, not three times."""
+        calls, now = [], [0.0]
+        get = G.shared_get(lambda u: calls.append(u) or {"u": u}, ttl=60, clock=lambda: now[0])
+        get("a"); get("a"); get("b")
+        self.assertEqual(calls, ["a", "b"])
+        now[0] = 61.0
+        get("a")
+        self.assertEqual(calls, ["a", "b", "a"])            # stale after the ttl: read again
 
     def test_one_file_untagged(self):
         out = []

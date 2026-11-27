@@ -604,6 +604,27 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
         (sleep or time.sleep)(every)
 
 
+def shared_get(get=None, ttl=60, clock=None):
+    """One ESPN read per URL per ttl seconds across every watched ticket.
+    2026-11-27: the safest ticket, the backup and the TD card share most of
+    their games, and each watch read every game itself each round."""
+    import threading
+    import time
+    clock = clock or time.monotonic
+    cache, lock = {}, threading.Lock()
+
+    def fetch(u):
+        with lock:
+            hit = cache.get(u)
+            if hit and clock() - hit[0] < ttl:
+                return hit[1]
+        d = (get or _fetch)(u)
+        with lock:
+            cache[u] = (clock(), d)
+        return d
+    return fetch
+
+
 def watch_many(paths, emit=print, watch_fn=None):
     """One watch per ticket file, in parallel, each line tagged with the
     ticket's name -- 2026-11-26: the safest ticket, the backup, the TD list and
@@ -613,6 +634,7 @@ def watch_many(paths, emit=print, watch_fn=None):
     if len(paths) == 1:
         return watch_fn(paths[0], emit=emit)
     lock = threading.Lock()
+    get = shared_get()
 
     def run(path):
         name = NAMES.get(os.path.basename(path), os.path.basename(path))
@@ -620,7 +642,7 @@ def watch_many(paths, emit=print, watch_fn=None):
         def tagged(m):
             with lock:
                 emit(f"[{name}] {m}")
-        watch_fn(path, emit=tagged)
+        watch_fn(path, emit=tagged, get=get)
     threads = [threading.Thread(target=run, args=(p,), daemon=True) for p in paths]
     for t in threads:
         t.start()
