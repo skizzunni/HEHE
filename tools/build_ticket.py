@@ -812,6 +812,8 @@ def two_x_legs(t):
 
 LOW_RUSH_NOTE = (" -- note: low rushing line (under 15 yards) -- 24/30 (80%) at -700 or shorter vs 90% for 15-39"
                  " (README 2026-11-26, on watch)")
+CATCH3_NOTE = (" -- note: 3+ catches -- 25/37 (68%) since Nov 5 against 85% priced, 39/44 before"
+               " (README 2026-11-27, on watch)")
 
 
 def nfl_notes(t):
@@ -822,6 +824,9 @@ def nfl_notes(t):
             if L.get("lg") == "nfl" and L.get("market") == "Rushing Yards" and (L.get("line") or 99) < 15 \
                     and "low rushing line" not in L.get("label", ""):
                 L["label"] = L["label"] + LOW_RUSH_NOTE
+            if L.get("lg") == "nfl" and L.get("market") == "Receptions" and (L.get("line") or 0) >= 3 \
+                    and "3+ catches" not in L.get("label", ""):
+                L["label"] = L["label"] + CATCH3_NOTE
     return t
 
 

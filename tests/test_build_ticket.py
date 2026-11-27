@@ -574,6 +574,17 @@ class NflNotesTest(unittest.TestCase):
         self.assertNotIn("note:", t["games"]["G"][1]["label"])
         self.assertEqual(B.safest(t)["games"]["G"][0]["label"].count("note:"), 1)
 
+    def test_three_plus_catches_noted(self):
+        """README 2026-11-27: NFL Receptions 3+ won 68% since Nov 5 against 85%
+        priced (fine before) -- on watch, so a note, never a cut."""
+        L = dict(label="Colston Loveland: 3+ Receptions -1400 (87%)", lg="nfl", kind="prop",
+                 market="Receptions", line=3.0, price="-1400", chance=0.87)
+        lo = dict(L, label="Ty Johnson: 1+ Receptions -1400 (87%)", line=1.0)
+        t = B.nfl_notes(B.nfl_notes({"games": {"G": [L, lo]}}))       # twice: noted once
+        self.assertEqual(t["games"]["G"][0]["label"].count("note: 3+ catches"), 1)
+        self.assertNotIn("note:", t["games"]["G"][1]["label"])
+        self.assertEqual(len(B.safest(t)["games"]["G"]), 2)
+
 
 if __name__ == "__main__":
     unittest.main()
