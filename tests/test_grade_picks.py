@@ -328,6 +328,16 @@ class StuckLineTest(unittest.TestCase):
         self.assertIn("the grader has not run", D.stuck_line(st, "STALE GRADER: ..."))
         self.assertTrue(D.stuck_line(st).startswith("STUCK 1 record(s)"))
 
+class ValueLongshotClauseTest(unittest.TestCase):
+    def test_counts_longshots_claiming_big_edges(self):
+        import daily_review as D
+        mk = lambda st, fair=0.15, ev=0.04, kind="value": dict(kind=kind, status=st, fair=fair, ev=ev)
+        finds = [mk("lost")] * 11 + [mk("won", ev=0.02)] * 5 + [mk("lost", kind="suspect")] * 5
+        out = D.value_longshot_clause(finds)
+        self.assertEqual(out, "; longshots claiming a 3%+ edge (fair under 25%): 0/11 against 1.6 expected "
+                              "(README 2026-11-27, caution)")
+        self.assertEqual(D.value_longshot_clause(finds[:5]), "")      # too few: nothing said
+
 
 if __name__ == "__main__":
     unittest.main()

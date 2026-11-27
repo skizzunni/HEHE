@@ -2792,7 +2792,26 @@ def trailing_line(a, props=None):
             s += (f"; all {n} saved {bits[1].upper()} prop lines {w}/{n} ({round(100 * w / n)}% vs {said}% stated) -- "
                   + ("the pool is on par, so this looks like a small-sample slump on the few Locks take"
                      if par else "the pool is short too"))
+    if a.get("name") == "value bets":
+        s += value_longshot_clause()
     return s
+
+
+def value_longshot_clause(finds=None):
+    """'; longshots claiming 3%+ (fair under 25%): 0/34 against 4.4 expected
+    (README 2026-11-27)' -- where the value-bet shortfall sits. None-safe."""
+    if finds is None:
+        try:
+            finds = (load("value.json", {"finds": {}}).get("finds") or {}).values()
+        except Exception:
+            return ""
+    s = [f for f in finds if f.get("kind") == "value" and f.get("status") in ("won", "lost")
+         and (f.get("fair") or 1) < 0.25 and (f.get("ev") or 0) >= 0.03]
+    if len(s) < 10:
+        return ""
+    w = sum(f["status"] == "won" for f in s)
+    return (f"; longshots claiming a 3%+ edge (fair under 25%): {w}/{len(s)} against "
+            f"{sum(f['fair'] for f in s):.1f} expected (README 2026-11-27, caution)")
 
 
 def pct_text(x):
