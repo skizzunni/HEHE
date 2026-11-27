@@ -306,6 +306,15 @@ class BoardPropTest(unittest.TestCase):
         out = G.live(path, get=lambda u: box)
         self.assertEqual(out, ["OPEN  Boldy 6+ SOG -- 10:00 - 2nd: 5 of 6"])
 
+class StuckLineTest(unittest.TestCase):
+    def test_names_the_cause(self):
+        import daily_review as D
+        st = [("picks", "ncaab:401921804")]
+        self.assertIn("grading is broken", D.stuck_line(st))
+        self.assertIn("the grader has not run", D.stuck_line(st, "STALE GRADER: ..."))
+        self.assertTrue(D.stuck_line(st).startswith("STUCK 1 record(s)"))
+
 
 if __name__ == "__main__":
     unittest.main()
+

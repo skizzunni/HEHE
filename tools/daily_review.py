@@ -2807,6 +2807,16 @@ def _one_sport(sw, min_lost=4):
     return f"; all {sw['lost']} losses are {next(iter(sports)).upper()}" if len(sports) == 1 else ""
 
 
+def stuck_line(st, stale=None):
+    """The STUCK review line. 2026-11-27: with the workflows off it read
+    "grading is broken" for a Kentucky pick whose final ESPN serves fine --
+    the grader had simply not run; it now says which it is."""
+    why = ("the grader has not run (see STALE GRADER) -- they settle on its next run"
+           if stale else "grading is broken")
+    return (f"STUCK {len(st)} record(s) open a week after their game -- {why}: "
+            + "; ".join(f"{a} {b}" for a, b in st[:5]))
+
+
 def words(r, fit):
     p = r["picks"]
     out = [f"# Review {r['day']}", ""]
@@ -2939,8 +2949,7 @@ def words(r, fit):
         out.append(r["heavy_props"])
     st = r.get("stuck") or []
     if st:
-        out.append(f"STUCK {len(st)} record(s) open a week after their game -- grading is broken: "
-                   + "; ".join(f"{a} {b}" for a, b in st[:5]))
+        out.append(stuck_line(st, r.get("grader_stale")))
     for a in [a for a in (r.get("audit") or []) if a["flag"]]:
         out.append(trailing_line(a))
     sc = r.get("strong") or {}
