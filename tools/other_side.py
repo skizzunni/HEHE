@@ -20,8 +20,24 @@ import sys
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path[:0] = [HERE, os.path.dirname(HERE)]
 LO, HI = 7.5, 14.0
-NOTE = ("NFL underdogs getting 7.5-14 points: 56.3% covered on 112 games over three seasons "
-        "(53.3%, 60.8%, then 51.6% this season) -- a modest lean, not a strong pick.")
+# covered / games: earlier seasons, this season to 2026-11-23 (ESPN line on
+# each game), then each card shown since -- the record counts itself forward
+SEASONS = {2023: (16, 30), 2024: (31, 51), 2026: (16, 31)}
+FORWARD = [("2026-11-26", "PHI +8.5 at DAL", True)]       # PHI won 39-38
+
+
+def note(seasons=SEASONS, forward=FORWARD):
+    s = dict(seasons)
+    w, n = s[2026]
+    s[2026] = (w + sum(1 for f in forward if f[2]), n + len(forward))
+    cw, cn = sum(v[0] for v in s.values()), sum(v[1] for v in s.values())
+    pct = lambda a, b: f"{int(1000 * a / b + 0.5) / 10:.1f}%"      # half up: 63/112 is 56.3%
+    return (f"NFL underdogs getting 7.5-14 points: {pct(cw, cn)} covered on {cn} games over three seasons "
+            f"({', '.join(pct(*s[y]) for y in sorted(s)[:-1])}, then {pct(*s[2026])} this season, "
+            f"{sum(1 for f in forward if f[2])}/{len(forward)} on cards shown here) -- a modest lean, not a strong pick.")
+
+
+NOTE = note()
 
 
 def dogs(rows):
