@@ -88,10 +88,14 @@ def legs(found):
             for r, dog, pts in found]
 
 
-def text(found, forward=None):
-    """forward: the graded cards (forward_from_slates); NOTE's fixed list when None."""
+def text(found, forward=None, rows=None):
+    """forward: the graded cards (forward_from_slates); NOTE's fixed list when None.
+    rows: the day's slate rows -- with no qualifying dog, the NFL lines seen are
+    named, so 'none today' is checkable (2026-11-27: DEN @ PIT only)."""
     if not found:
-        return "Other side: no NFL underdog getting 7.5-14 today."
+        seen = [f"{r.get('game')} {r.get('line')}" for r in rows or [] if r.get("lg") == "nfl" and r.get("line")]
+        return ("Other side: no NFL underdog getting 7.5-14 today."
+                + (f" NFL lines: {'; '.join(seen)}." if seen else ""))
     head = note(forward=forward) if forward else NOTE
     return "\n".join(["Other side (information only): " + head] +
                      [f"  {dog} +{pts:g} -- {r['game']}" for r, dog, pts in found])
@@ -107,8 +111,9 @@ def main(argv):
         save = args[i + 1]
         del args[i:i + 2]
     day = build_ticket.resolve_day(args[0] if args else None)
-    found = dogs(slate_sheet.main(day))
-    print(text(found, forward_from_slates()))
+    rows = slate_sheet.main(day)
+    found = dogs(rows)
+    print(text(found, forward_from_slates(), rows))
     if save and found:
         if os.path.exists(save):
             print(f"not saved: {save} already exists")

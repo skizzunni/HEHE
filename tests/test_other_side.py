@@ -25,6 +25,9 @@ class OtherSide(unittest.TestCase):
     def test_text(self):
         self.assertIn("PHI +8.5 -- PHI @ DAL", O.text(O.dogs(ROWS)))
         self.assertEqual(O.text([]), "Other side: no NFL underdog getting 7.5-14 today.")
+        self.assertEqual(O.text([], rows=[dict(lg="nfl", game="DEN @ PIT", line="PIT -2.5"),
+                                          dict(lg="nba", game="X @ Y", line="Y -3")]),
+                         "Other side: no NFL underdog getting 7.5-14 today. NFL lines: DEN @ PIT PIT -2.5.")
 
 class ForwardNoteTest(unittest.TestCase):
     def test_counts_cards_forward(self):
