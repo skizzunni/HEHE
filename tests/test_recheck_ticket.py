@@ -356,6 +356,9 @@ class StartedNeverDroppedTest(unittest.TestCase):
                 {"t": "2026-11-27T16:13:47", "prices": {"Kuminga: 5+ Points": "-10000", "Shead: 2+ Assists": None}}]
         open(os.path.join(d, "price_log.jsonl"), "w").write("\n".join(json.dumps(r) for r in recs) + "\n")
         self.assertEqual(R.pull_history(path), "Pulled earlier and posted again: Kuminga (down 15:53-15:55 UTC)")
+        recs.append({"t": "2026-11-27T16:40:00", "prices": {"Kuminga: 5+ Points": "-10000", "Shead: 2+ Assists": None}})
+        open(os.path.join(d, "price_log.jsonl"), "w").write("\n".join(json.dumps(r) for r in recs) + "\n")
+        self.assertIn("Still not posted across checks: Shead (down since 16:13 UTC, 2 checks)", R.pull_history(path))
         self.assertEqual(R.pull_history(os.path.join(tempfile.mkdtemp(), "t.json")), "")
 
     def test_injured_list_needs_a_second_source(self):

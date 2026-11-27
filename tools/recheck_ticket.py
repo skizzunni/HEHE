@@ -262,15 +262,21 @@ def pull_history(path):
     if len(recs) < 2:
         return ""
     last = recs[-1].get("prices") or {}
-    back = []
+    back, still = [], []
     for lab, now in last.items():
-        if now is None:
-            continue
         down = [r["t"][11:16] for r in recs[:-1] if lab in (r.get("prices") or {}) and r["prices"][lab] is None]
-        if down:
-            who = lab.split(":")[0]
+        who = lab.split(":")[0]
+        if now is None and down:
+            # missing now and at an earlier check too: say since when
+            still.append(f"{who} (down since {down[0]} UTC, {len(down) + 1} checks)")
+        elif now is not None and down:
             back.append(f"{who} (down {down[0]}" + (f"-{down[-1]}" if down[-1] != down[0] else "") + " UTC)")
-    return ("Pulled earlier and posted again: " + "; ".join(back)) if back else ""
+    out = []
+    if back:
+        out.append("Pulled earlier and posted again: " + "; ".join(back))
+    if still:
+        out.append("Still not posted across checks: " + "; ".join(still))
+    return "\n".join(out)
 
 
 def game_news(legs, rows, team_out_fn, report_rows=None, mmdd=None):
