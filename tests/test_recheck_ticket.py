@@ -346,6 +346,21 @@ class StartedNeverDroppedTest(unittest.TestCase):
         got = R.note_dropped(path, legs, pulled, fresh=True, started={"7", "8"})
         self.assertEqual(got, ["Malkin 1+"])       # Klay's game began: not dropped; Malkin's earlier drop stands
 
+    def test_injured_list_needs_a_second_source(self):
+        leg = [dict(label="Kirill Marchenko: 1+ Shots on Goal -1500", lg="nhl", kind="prop",
+                    player="Kirill Marchenko", id="1")]
+        pages = lambda gid: [{"Kirill Marchenko": "on the injured list (ir)"}, {"x": ""}]
+        alone = R.recheck_nhl(leg, pages, espn_injured={"Max Domi"})
+        self.assertEqual(R.verdict([alone[0][1]])[0], "CAUTION")
+        self.assertIn("DailyFaceoff only", alone[0][1])
+        both = R.recheck_nhl(leg, pages, espn_injured={"Kirill Marchenko"})
+        self.assertEqual(R.verdict([both[0][1]])[0], "DROP")
+        unread = R.recheck_nhl(leg, pages)                 # ESPN not read: DailyFaceoff stands
+        self.assertEqual(R.verdict([unread[0][1]])[0], "DROP")
+        feed = {"injuries": [{"injuries": [{"athlete": {"displayName": "Max Domi"}}]}]}
+        self.assertEqual(R.espn_nhl_injured(lambda u: feed), {"Max Domi"})
+        self.assertIsNone(R.espn_nhl_injured(lambda u: 1 / 0))
+
     def test_pulled_hours_before_is_a_caution(self):
         import datetime as dt
         legs = [dict(label="Shead: 2+ Assists", kind="prop", player="Jamal Shead", market="Assists",

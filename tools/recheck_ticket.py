@@ -42,7 +42,21 @@ def _same(a, b):
     return a[0].startswith(b[0]) or b[0].startswith(a[0])
 
 
-def recheck_nhl(legs, lineups):
+ESPN_NHL_INJURIES = "https://site.api.espn.com/apis/site/v2/sports/hockey/nhl/injuries"
+
+
+def espn_nhl_injured(get=None):
+    """Set of player names on ESPN's NHL injury list (any status); None when
+    it cannot be read -- then DailyFaceoff's word stands alone."""
+    import urllib.request
+    try:
+        d = (get or (lambda u: json.load(urllib.request.urlopen(u, timeout=30))))(ESPN_NHL_INJURIES)
+        return {i["athlete"]["displayName"] for t in d.get("injuries") or [] for i in t.get("injuries") or []}
+    except Exception:
+        return None
+
+
+def recheck_nhl(legs, lineups, espn_injured=None):
     """[(label, note)] for NHL prop legs whose player is not in either team's
     projected lines (DailyFaceoff), is on the injured list, or is a game-time
     decision. lineups: [{name: note}] for the game's two teams."""
@@ -59,6 +73,13 @@ def recheck_nhl(legs, lineups):
             out.append((L.get("label"), f"{L.get('player')} is not in either team's projected lines"
                         + (f" ({src})" if src else "") + " -- check he is dressing"))
         elif note:
+            if note.startswith("on the injured list") and espn_injured is not None \
+                    and not any(_same(n, L.get("player")) for n in espn_injured):
+                # 2026-11-27: DailyFaceoff had Kirill Marchenko (TOR) on the injured
+                # list; ESPN's NHL injury list did not, and FanDuel still priced
+                # and shortened his line -- one source alone is a caution, not a drop
+                note = ("listed as injured by DailyFaceoff only -- ESPN's injury list does not have him; "
+                        "check he is dressing")
             out.append((L.get("label"), f"{L.get('player')}: {note}"))
     return out
 
@@ -334,7 +355,8 @@ def main(path, day, final=False):
         prices_ok = bool(current)
     except Exception:
         prices, rows, snap, prices_ok = [], [], None, False
-    allf = flags + recheck_nhl(legs, lineups) + prices
+    inj = espn_nhl_injured() if any(L.get("lg") == "nhl" for L in legs) else None
+    allf = flags + recheck_nhl(legs, lineups, inj) + prices
     pending = unsubmitted(rep, mmdd, legs, rows)
     news = game_news(legs, rows, team_out, rep.get("rows"), mmdd)
     if final:
