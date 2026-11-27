@@ -199,6 +199,15 @@ class PropTest(unittest.TestCase):
         G.watch(path, get=get, sleep=lambda s: rounds.append(s), emit=lambda m: None, remember=False)
         self.assertEqual(sum("event=1" in u for u in calls), 1, calls)    # read once, then skipped
 
+    def test_final_score(self):
+        sm = {"header": {"competitions": [{"status": {"type": {"detail": "Final/SO"}},
+                                           "competitors": [{"team": {"abbreviation": "NSH"}, "score": "5"},
+                                                           {"team": {"abbreviation": "UTA"}, "score": "6"}]}]}}
+        self.assertEqual(G._final_score(sm), " (final: UTA 6, NSH 5, Final/SO)")
+        sm["header"]["competitions"][0]["status"]["type"]["detail"] = "Final"
+        self.assertEqual(G._final_score(sm), " (final: UTA 6, NSH 5)")
+        self.assertEqual(G._final_score({}), "")
+
     def test_short_clause(self):
         picks = [dict(id=str(g), price=p) for g in range(6) for p in ("-1500", "-6000")]
         res = ["lost", "won"] * 6
@@ -226,7 +235,7 @@ class PropTest(unittest.TestCase):
         out = []
         G.watch(path, get=lambda u: box, sleep=sleep, emit=out.append)
         self.assertEqual(out, ["REACHED Murray 5+ -- had 5 in 20 min (settles when the game ends)",
-                               "WON Murray 5+ -- had 5 in 20 min", "LOST Murray 9 reb -- had 3 in 20 min", "all picks settled: 1-1; all won: no"])
+                               "WON Murray 5+ -- had 5 in 20 min (final: SAC 36, SA 35)", "LOST Murray 9 reb -- had 3 in 20 min (final: SAC 36, SA 35)", "all picks settled: 1-1; all won: no"])
 
     def test_restarted_watch_does_not_repeat(self):
         import json
@@ -237,7 +246,7 @@ class PropTest(unittest.TestCase):
         first, second = [], []
         G.watch(path, get=lambda u: BOX_DONE, sleep=lambda s: None, emit=first.append)
         G.watch(path, get=lambda u: BOX_DONE, sleep=lambda s: None, emit=second.append)      # the Monitor re-armed
-        self.assertEqual(first, ["WON Murray 5+ -- had 5 in 20 min", "all picks settled: 1-0; all won: YES"])
+        self.assertEqual(first, ["WON Murray 5+ -- had 5 in 20 min (final: SAC 36, SA 35)", "all picks settled: 1-0; all won: YES"])
         self.assertEqual(second, ["all picks settled: 1-0; all won: YES"])
 
     def test_brief_view(self):
@@ -256,7 +265,7 @@ class PropTest(unittest.TestCase):
         self.assertTrue(out[2].startswith("OPEN  Keegan Murray 9+ REB -- "))
         self.assertEqual(out[-1], "(1 not started yet)")
         done = G.brief(path, get=lambda u: BOX_DONE)            # final
-        self.assertEqual(done[1], "WON   Keegan Murray 5+ PTS -- had 5 in 20 min")     # what settled it, not the label note
+        self.assertEqual(done[1], "WON   Keegan Murray 5+ PTS -- had 5 in 20 min (final: SAC 36, SA 35)")     # what settled it, not the label note
         self.assertEqual(G.short(dict(kind="ml", team="IOWA")), "IOWA ML")
         self.assertEqual(G.short(dict(kind="spread", team="BOS", line=-2.5)), "BOS -2.5")
 
@@ -268,7 +277,7 @@ class PropTest(unittest.TestCase):
                   open(path, "w"))
         out = []
         G.watch(path, get=lambda u: BOX_DONE, sleep=lambda s: None, emit=out.append)
-        self.assertEqual(out, ["WON Murray 5+ -- had 5 in 20 min", "all picks settled: 1-0; all won: YES"])
+        self.assertEqual(out, ["WON Murray 5+ -- had 5 in 20 min (final: SAC 36, SA 35)", "all picks settled: 1-0; all won: YES"])
 
     def test_stat_correction_mid_game(self):
         # Nov 24: Suggs reached 5 reb+ast, then ESPN corrected him to 4 before the end
@@ -289,7 +298,7 @@ class PropTest(unittest.TestCase):
         G.watch(path, get=lambda u: frames[state["i"]], sleep=sleep, emit=out.append)
         self.assertEqual(out, ["REACHED Murray 5+ -- had 5 in 20 min (settles when the game ends)",
                                "BACK BELOW Murray 5+ -- had 4 in 20 min -- the box score was corrected; not won yet",
-                               "WON Murray 5+ -- had 5 in 20 min", "all picks settled: 1-0; all won: YES"])
+                               "WON Murray 5+ -- had 5 in 20 min (final: SAC 36, SA 35)", "all picks settled: 1-0; all won: YES"])
 
 
 NHL_BOX = {"boxscore": {"players": [{"team": {"abbreviation": "MIN"}, "statistics": [

@@ -505,6 +505,18 @@ def _save_seen(path, seen):
         pass
 
 
+def _final_score(summary):
+    """' (final: UTA 6, NSH 5, Final/SO)' from an ESPN summary; '' when unreadable."""
+    try:
+        c = summary["header"]["competitions"][0]
+        teams = ", ".join(f"{x['team']['abbreviation']} {x['score']}"
+                          for x in sorted(c["competitors"], key=lambda x: -int(x.get("score") or 0)))
+        det = ((c.get("status") or {}).get("type") or {}).get("detail") or ""
+        return f" (final: {teams}" + (f", {det}" if det and det != "Final" else "") + ")"
+    except (KeyError, IndexError, TypeError, ValueError):
+        return ""
+
+
 def detail(pick, scores, summary):
     """' -- had 7' for a prop, ' -- 112-104' for a game leg: what settled it,
     for the live check-ins (2026-11-24: 'WON <label>' alone told the user nothing)."""
@@ -519,15 +531,18 @@ def detail(pick, scores, summary):
                 if _completed(summary) and _dnp_or_absent(summary, pick["player"]):
                     return " -- did not play (not in the box score): void, the parlay pays on the rest"
                 return ""
+            # 2026-11-27: Stamkos lost 1+ shots with 0 in 17:27 -- in a 6-5 shootout;
+            # the final score beside a settled prop says what kind of game it was
+            fin = _final_score(summary) if _completed(summary) else ""
             if pick.get("lg") == "nhl":
                 # ice time beside the stat: 2026-11-25 Lafreniere lost 1+ shots with 0
                 # in 19:43 -- it tells a full-shift miss from a short night or injury
                 toi = _toi(summary, pick["player"])
-                return f" -- had {v:g}" + (f" in {toi} of ice time" if toi else "")
+                return f" -- had {v:g}" + (f" in {toi} of ice time" if toi else "") + fin
             m = player_stat(summary, pick["player"], "MIN") if pick.get("lg") in ("nba", "ncaab", "wnba") else None
             # minutes beside the stat: 2026-11-25 Jaylen Brown lost 2+ assists with 1
             # in 17 minutes (31.2 a game) -- the minutes are the story of the loss
-            return f" -- had {v:g}" + (f" in {m:g} min" if m else "")
+            return f" -- had {v:g}" + (f" in {m:g} min" if m else "") + fin
         if len(scores) == 2 and not scores.get("_void"):
             return " -- " + ", ".join(f"{k} {v:g}" for k, v in scores.items())
     except Exception:
