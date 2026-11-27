@@ -1,5 +1,13 @@
 # Picks system — post-mortem and rebuild
 
+## Where the record stands (2026-11-27, from the rows below)
+
+- **Single props lose about FanDuel's margin at every price**: -3% to -7% a bet on 6,402 graded props, plus-money no better than -1000 legs; 18 league x market x price cells, only NFL Receiving Yards at -500 to -999 breaks even (+0.0% / +3.1%).
+- **Parlays of heavy legs lose more the longer they get**: 3 legs -10% / -14%, 6 legs -34% / -27%, 10 legs -64% / -38% a day. Every ticket Nov 24-26 lost by one or two legs; the ticket's short-ticket line (6 safest legs, one per game: all won on 23 of 38 replayed days) shows the trade-off.
+- **What does not find value**: the props model's own 'edge', the source that likes a side more than DraftKings, back-to-backs, the team's chance to win, low vs high milestone lines, weather, home / road.
+- **The other side, on watch** (none at the bar yet): NFL underdogs getting 7.5-14 (56.6% covered on 113 games; the other-side card counts itself forward), unders on FanDuel's main prop lines (80/144, +2.5%, vs overs 64/144, -16.4% -- graded nightly in data/both_sides.json), NHL Shots on Goal on back-to-backs (better than rested in both halves, z +0.72 / +1.49).
+- **Cautions shown on tickets**: NFL 3+ catches (68% vs 85% priced since Nov 5), low NFL rushing lines; value bets on longshots claiming a 3%+ edge have won 0 of 34.
+
 ## Beating Vegas: what has been tested (scoreboard)
 
 Every idea for an edge of our own, tested against the closing price on games
