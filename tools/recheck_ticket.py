@@ -249,7 +249,20 @@ def text(flags, asof=None, pending=()):
         return head + " no leg affected."
     if not flags:
         return "\n".join([head] + wait + ["  no leg affected among the teams that have reported."])
-    return "\n".join([head] + wait + [f"  {lab} -- {note}" for lab, note in flags])
+    # 2026-11-27: Marchenko printed "on the injured list" and, on a later line,
+    # "FanDuel now -1600 ... more likely" -- read alone it looked like two
+    # answers. One line per leg, its drop reasons first, says it once.
+    by, order = {}, []
+    for lab, note in flags:
+        if lab not in by:
+            order.append(lab)
+        by.setdefault(lab, []).append(note)
+    lines = []
+    for lab in order:
+        ns = sorted(by[lab], key=lambda n: not any(w in n for w in DROP_WORDS))
+        tag = "DROP: " if any(w in n for n in ns for w in DROP_WORDS) else ""
+        lines.append(f"  {tag}{lab} -- " + "; ".join(ns))
+    return "\n".join([head] + wait + lines)
 
 
 def main(path, day, final=False):

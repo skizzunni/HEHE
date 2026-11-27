@@ -346,6 +346,18 @@ class StartedNeverDroppedTest(unittest.TestCase):
         got = R.note_dropped(path, legs, pulled, fresh=True, started={"7", "8"})
         self.assertEqual(got, ["Malkin 1+"])       # Klay's game began: not dropped; Malkin's earlier drop stands
 
+    def test_text_one_line_per_leg_drop_first(self):
+        """2026-11-27: Marchenko's injured-list note and his price move printed
+        on separate lines; now one line, the drop reason first."""
+        flags = [("K M: 1+ Shots on Goal -1500", "FanDuel now -1600 (was -1500)"),
+                 ("X: 5+ Points -4000", "FanDuel now -3500 (was -4000)"),
+                 ("K M: 1+ Shots on Goal -1500", "K M: on the injured list (ir)")]
+        out = R.text(flags).split("\n")
+        self.assertEqual(out[1], "  DROP: K M: 1+ Shots on Goal -1500 -- K M: on the injured list (ir); "
+                                 "FanDuel now -1600 (was -1500)")
+        self.assertEqual(out[2], "  X: 5+ Points -4000 -- FanDuel now -3500 (was -4000)")
+        self.assertEqual(len(out), 3)
+
     def test_final_text_shows_started_legs_live_not_dropped(self):
         legs = [dict(label="Klay 5+", kind="ml", price="-400", lg="nba", id="7"),
                 dict(label="Other", kind="ml", price="-400", lg="nba", id="9")]
