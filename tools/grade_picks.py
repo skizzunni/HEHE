@@ -554,9 +554,14 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
         open_n = 0
         fetch = _once(get)                      # fresh each round, shared within it
         for p in picks:
+            key = p.get("label") or json.dumps(p, sort_keys=True)
+            if seen.get(key + "|final"):
+                # 2026-11-27: a leg settled at the final never changes again (see
+                # below) -- skip its ESPN read; a 61-leg ticket otherwise re-read
+                # every finished game every two minutes until the last one ended
+                continue
             scores, done, d = final(p["lg"], p["id"], fetch, raw=True)
             r = grade(p, scores, done, d)
-            key = p.get("label") or json.dumps(p, sort_keys=True)
             was = seen.get(key)
             if not done and (not (d or {}).get("header") or seen.get(key + "|final")):
                 # 2026-11-25: a failed ESPN read (empty summary) on games already

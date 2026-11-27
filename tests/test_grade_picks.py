@@ -183,6 +183,22 @@ class PropTest(unittest.TestCase):
         G.watch(path, get=lambda u: calls.append(u) or BOX_DONE, sleep=lambda s: None, emit=lambda m: None)
         self.assertEqual(len(calls), 1)
 
+    def test_watch_skips_legs_already_final(self):
+        """2026-11-27: once a game's legs are settled, later rounds do not read it."""
+        import json
+        import tempfile
+        path = os.path.join(tempfile.mkdtemp(), "t.json")
+        legs = [dict(label="done", id="1", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500),
+                dict(label="later", id="2", lg="nba", kind="prop", player="Keegan Murray", stat="PTS", line=5, price=-500)]
+        json.dump(legs, open(path, "w"))
+        calls, rounds = [], []
+        live = {"header": {"competitions": [{"status": {"type": {"completed": False, "state": "in"}}}]}}
+        def get(u):
+            calls.append(u)
+            return BOX_DONE if "event=1" in u or len(rounds) >= 2 else live
+        G.watch(path, get=get, sleep=lambda s: rounds.append(s), emit=lambda m: None, remember=False)
+        self.assertEqual(sum("event=1" in u for u in calls), 1, calls)    # read once, then skipped
+
     def test_watch_survives_a_bad_read(self):
         import json
         import tempfile
