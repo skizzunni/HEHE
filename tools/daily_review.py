@@ -578,6 +578,7 @@ def user_tickets_line(root=None, grade_fn=None, last=3):
         import grade_picks
         grade_fn = grade_fn or grade_picks.main
         bits = []
+        lost = {}
         for d in dirs:
             for f in sorted(glob.glob(os.path.join(d, "ticket*.json"))):
                 picks, res, sm = grade_fn(f)
@@ -590,9 +591,34 @@ def user_tickets_line(root=None, grade_fn=None, last=3):
                 state = ("all won" if not sm["lost"] and not sm["open"] else
                          f"{sm['open']} open" if not sm["lost"] else "lost")
                 bits.append(f"{tag} {sm['won']}-{sm['lost']}" + (f"-{sm['push']}" if sm["push"] else "") + f" ({state})")
+                for pk, rr in zip(picks, res):
+                    if rr == "lost":
+                        lost.setdefault((os.path.basename(d), pk.get("label")), (pk, set()))[1].add(kind)
     except Exception:
         return None
-    return "Your tickets: " + "; ".join(bits) + "."
+    return "Your tickets: " + "; ".join(bits) + "." + (" " + lost_legs_clause(lost) if lost else "")
+
+
+def lost_legs_clause(lost):
+    """'Legs that lost them (each counted once a slate): nfl Receptions 2, ...;
+    on two tickets at once: Colston Loveland (nov26)'. 2026-11-27: Nov 24-26
+    every ticket lost by one or two legs; which kinds, and which legs sank
+    two tickets at once, was nowhere in the review."""
+    by = {}
+    who = {}                    # (slate, player or short label) -> tickets it lost on
+    for (slate, label), (pk, kinds) in lost.items():
+        m = pk.get("market") or {"ml": "moneyline", "spread": "spread", "total": "total"}.get(pk.get("kind"), pk.get("kind") or "?")
+        k = f"{pk.get('lg') or '?'} {m}"
+        by[k] = by.get(k, 0) + 1
+        name = pk.get("player") or str(label or "?").split(" (")[0]
+        who.setdefault((slate, name), set()).update(kinds)
+    multi = [f"{name} ({slate.replace('slate_', '')})" for (slate, name), kinds in sorted(who.items())
+             if len(kinds) > 1]
+    out = "Legs that lost them (each counted once a slate): " + ", ".join(
+        f"{k} {n}" for k, n in sorted(by.items(), key=lambda kv: (-kv[1], kv[0]))) + "."
+    if multi:
+        out += " Lost on more than one ticket at once: " + ", ".join(multi) + "."
+    return out
 
 
 def research_picks_line(pattern=None, grade_fn=None):

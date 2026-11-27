@@ -105,6 +105,23 @@ class HeavyPropsLineTest(unittest.TestCase):
         self.assertTrue(line.startswith("Props priced -2500 or shorter, by half: 27/30 (90.0% vs 87.0% stated"))
         self.assertIsNone(daily_review.heavy_props_line({}))
 
+class LostLegsClauseTest(unittest.TestCase):
+    def test_counts_once_and_flags_repeats(self):
+        """2026-11-27: Loveland lost on both Nov 26 tickets (two different props)."""
+        import daily_review
+        a = dict(lg="nfl", market="Receptions", player="Colston Loveland", label="Colston Loveland: 3+ Receptions")
+        b = dict(lg="nfl", market="Receiving Yards", player="Colston Loveland", label="Colston Loveland: 25+ Receiving Yards")
+        ml = dict(lg="nfl", kind="ml", label="DAL moneyline -434 (78%)")
+        lost = {("slate_nov26", a["label"]): (a, {"safest ticket"}),
+                ("slate_nov26", b["label"]): (b, {"ticket"}),
+                ("slate_nov26", ml["label"]): (ml, {"ticket", "2x combo"})}
+        out = daily_review.lost_legs_clause(lost)
+        self.assertIn("nfl Receiving Yards 1, nfl Receptions 1, nfl moneyline 1", out)
+        self.assertIn("Colston Loveland (nov26)", out)
+        self.assertIn("DAL moneyline -434 (nov26)", out)
+        one = daily_review.lost_legs_clause({("slate_nov26", a["label"]): (a, {"safest ticket"})})
+        self.assertNotIn("more than one ticket", one)
+
 
 if __name__ == "__main__":
     unittest.main()
