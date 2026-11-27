@@ -37,6 +37,32 @@ def note(seasons=SEASONS, forward=FORWARD):
             f"{sum(1 for f in forward if f[2])}/{len(forward)} on cards shown here) -- a modest lean, not a strong pick.")
 
 
+def forward_from_slates(root=None, grade_fn=None, since="2026-11-24"):
+    """[(day, label, covered)] for every saved other-side card (work/slate_*/
+    ticket_other.json) from `since` on whose game is settled, graded by
+    tools/grade_picks.py -- so the forward count keeps itself without a hand
+    edit of FORWARD. None when there is nothing to read (no work/ folder)."""
+    import glob
+    root = root or os.path.dirname(HERE)
+    files = glob.glob(os.path.join(root, "work", "slate_*", "ticket_other.json"))
+    if not files:
+        return None
+    try:
+        import daily_review
+        import grade_picks
+        grade_fn = grade_fn or grade_picks.main
+        out = []
+        for f in files:
+            day = daily_review.slate_day(os.path.dirname(f)).isoformat()
+            if day < since:
+                continue
+            picks, res, _ = grade_fn(f)
+            out += [(day, p.get("label"), r == "won") for p, r in zip(picks, res) if r in ("won", "lost")]
+        return sorted(out)
+    except Exception:
+        return None
+
+
 NOTE = note()
 
 
@@ -62,10 +88,12 @@ def legs(found):
             for r, dog, pts in found]
 
 
-def text(found):
+def text(found, forward=None):
+    """forward: the graded cards (forward_from_slates); NOTE's fixed list when None."""
     if not found:
         return "Other side: no NFL underdog getting 7.5-14 today."
-    return "\n".join(["Other side (information only): " + NOTE] +
+    head = note(forward=forward) if forward else NOTE
+    return "\n".join(["Other side (information only): " + head] +
                      [f"  {dog} +{pts:g} -- {r['game']}" for r, dog, pts in found])
 
 
@@ -80,7 +108,7 @@ def main(argv):
         del args[i:i + 2]
     day = build_ticket.resolve_day(args[0] if args else None)
     found = dogs(slate_sheet.main(day))
-    print(text(found))
+    print(text(found, forward_from_slates()))
     if save and found:
         if os.path.exists(save):
             print(f"not saved: {save} already exists")

@@ -37,6 +37,24 @@ class ForwardNoteTest(unittest.TestCase):
         self.assertIn("53.1% this season, 1/1 on cards", one)
         self.assertIn("55.8% covered on 113", O.note(forward=[("d", "x", False)]))
 
+class ForwardFromSlatesTest(unittest.TestCase):
+    def test_reads_saved_cards(self):
+        import json
+        import tempfile
+        import other_side as O
+        root = tempfile.mkdtemp()
+        for name in ("slate_nov23", "slate_nov26", "slate_nov30"):
+            os.makedirs(os.path.join(root, "work", name))
+            json.dump([{"label": name}], open(os.path.join(root, "work", name, "ticket_other.json"), "w"))
+        res = {"slate_nov23": "won", "slate_nov26": "won", "slate_nov30": "open"}
+        g = lambda f: ([{"label": os.path.basename(os.path.dirname(f))}],
+                       [res[os.path.basename(os.path.dirname(f))]], {})
+        fw = O.forward_from_slates(root, g)
+        self.assertEqual([x[1] for x in fw], ["slate_nov26"])      # before Nov 24 and unsettled left out
+        self.assertTrue(fw[0][2])
+        self.assertIsNone(O.forward_from_slates(tempfile.mkdtemp(), g))
+        self.assertIn("1/1 on cards", O.text([({"game": "PHI @ DAL"}, "PHI", 8.5)], fw))
+
 
 if __name__ == "__main__":
     unittest.main()

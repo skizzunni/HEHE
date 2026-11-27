@@ -90,7 +90,7 @@ def _other(day):
     the line as it stands now -- a moved line changes whether it qualifies."""
     import other_side
     import slate_sheet
-    return other_side.text(other_side.dogs(slate_sheet.main(day)))
+    return other_side.text(other_side.dogs(slate_sheet.main(day)), other_side.forward_from_slates())
 
 
 def _weather(day):
