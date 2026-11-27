@@ -68,9 +68,16 @@ def _ticket(day):
              for p in found]
     both = shared_players(found)
     if both:
-        parts.append("On both tickets (one bad game sinks both -- 2026-11-26: Loveland, 1 target, lost on each): "
-                     + ", ".join(both))
+        parts.append(shared_text(both))
     return "\n\n".join(parts)
+
+
+def shared_text(both):
+    """'On both tickets, 32 players (one bad game sinks both -- ...): ...'.
+    2026-11-27: the list ran to 32 names with no count; Stamkos, Raymond and
+    Marner (all on it) each lost a leg on both tickets at once."""
+    return (f"On both tickets, {len(both)} player{'s' if len(both) != 1 else ''} (one bad game sinks both -- "
+            "2026-11-26: Loveland, 1 target, lost on each): " + ", ".join(both))
 
 
 def shared_players(paths):

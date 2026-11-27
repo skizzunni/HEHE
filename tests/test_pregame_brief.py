@@ -80,6 +80,13 @@ class SharedPlayersTest(unittest.TestCase):
         self.assertEqual(P.shared_players([a, b]), ["Colston Loveland"])
         self.assertEqual(P.shared_players([a]), [])
 
+class SharedTextTest(unittest.TestCase):
+    def test_counts_names(self):
+        import pregame_brief as PB
+        self.assertTrue(PB.shared_text(["A", "B"]).startswith("On both tickets, 2 players (one bad game"))
+        self.assertTrue(PB.shared_text(["A"]).startswith("On both tickets, 1 player (one bad game"))
+        self.assertTrue(PB.shared_text(["A", "B"]).endswith(": A, B"))
+
 
 if __name__ == "__main__":
     unittest.main()
