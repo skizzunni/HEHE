@@ -203,6 +203,8 @@ class PropTest(unittest.TestCase):
         picks = [dict(label=f"L{i}") for i in range(5)]
         seen = {"L0": "won", "L0|final": True, "L1": "lost", "L1|final": True, "L2": "reached"}
         self.assertEqual(G._standing(picks, seen), " (ticket now 1-1, 3 to go)")
+        seen.update({"L3": "push", "L3|final": True})
+        self.assertEqual(G._standing(picks, seen), " (ticket now 1-1, 1 void, 2 to go)")
 
     def test_final_score(self):
         sm = {"header": {"competitions": [{"status": {"type": {"detail": "Final/SO"}},

@@ -624,8 +624,10 @@ def _standing(picks, seen):
     2026-11-27, Stamkos's loss read alone gave no sense of the rest of the day."""
     keys = [p.get("label") or json.dumps(p, sort_keys=True) for p in picks]
     fin = [seen.get(k) for k in keys if seen.get(k + "|final")]
-    w, l = fin.count("won"), fin.count("lost")
-    return f" (ticket now {w}-{l}, {len(keys) - len(fin)} to go)"
+    w, l, v = fin.count("won"), fin.count("lost"), fin.count("push")
+    # 2026-11-27: Owen Tippett's void (did not play) went uncounted, so the
+    # live line and the brief disagreed by one; voids are named now
+    return f" (ticket now {w}-{l}" + (f", {v} void" if v else "") + f", {len(keys) - len(fin)} to go)"
 
 
 def _short_clause(picks, res):
