@@ -595,6 +595,17 @@ class NflNotesTest(unittest.TestCase):
         self.assertNotIn("note:", t["games"]["G"][1]["label"])
         self.assertEqual(len(B.safest(t)["games"]["G"]), 2)
 
+class NbaNotesTest(unittest.TestCase):
+    def test_pts_reb_noted_once(self):
+        L = dict(label="Bam Adebayo: 15+ Pts + Reb -4000 (82%)", lg="nba", kind="prop", market="Pts + Reb",
+                 line=15.0, price="-4000", chance=0.82)
+        pts = dict(L, label="Jayson Tatum: 15+ Points -5000 (87%)", market="Points")
+        t = B.nba_notes(B.nba_notes({"games": {"G": [L, pts]}}))
+        self.assertEqual(t["games"]["G"][0]["label"].count("Pts + Reb at -1000"), 1)
+        self.assertNotIn("note:", t["games"]["G"][1]["label"])
+        self.assertEqual(len(B.safest(t)["games"]["G"]), 2)
+
+
 class FavTwoXNoteTest(unittest.TestCase):
     def test_all_moneyline_2x_says_so(self):
         ml = lambda team, p: dict(label=f"{team} moneyline {p} (76%, DraftKings no-vig)", kind="ml", lg="nba",

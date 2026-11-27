@@ -875,6 +875,19 @@ def _early_et(start):
     return t.hour < 15
 
 
+PTS_REB_NOTE = (" -- note: NBA Pts + Reb at -1000 or shorter won 39/52 (75%) against 94% priced, 19.4 points short"
+                " (z -4.18) -- all from Oct 21 to Nov 5; none graded since, so one half only (README 2026-11-27, caution)")
+
+
+def nba_notes(t):
+    """Information-only notes on NBA legs (README 2026-11-27): a note, never a cut."""
+    for legs in (t.get("games") or {}).values():
+        for L in legs:
+            if L.get("lg") == "nba" and L.get("market") == "Pts + Reb" and "Pts + Reb at -1000" not in L.get("label", ""):
+                L["label"] = L["label"] + PTS_REB_NOTE
+    return t
+
+
 def nfl_notes(t):
     """Information-only notes on NFL legs, from studies that did not reach the
     bar (README 2026-11-26). 'note:' never 'caution:', so --safest keeps them."""
@@ -958,7 +971,7 @@ if __name__ == "__main__":
         t["note"] = ((t.get("note") or "") + " SAFEST LEGS ONLY: props at -2500 or shorter, NHL props at -1500 or "
                      "shorter, NFL props at -1000 or shorter, moneylines at 90%+ (these won "
                      "94% / 92% / 91.5% / 96% on the record).").strip()
-    t = nfl_notes(t)
+    t = nba_notes(nfl_notes(t))
     combo = []
     if t.pop("ladder_pending", False):
         # after the college legs join, so the stand-in sees what the 2x line sees
