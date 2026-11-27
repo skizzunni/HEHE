@@ -560,7 +560,33 @@ def both_sides_line(book=None):
             parts.append(f"{side} {w}/{len(s)} ({round(100 * w / len(s))}%, return "
                          f"{100 * sum(BS._ret(e) for e in s) / len(s):+.1f}%)")
     return ("Both sides of FanDuel's main prop lines: " + ", ".join(parts) +
+            widest_side_gap(done, BS._ret) +
             " -- information only until a side holds in both date halves (tools/both_sides.py report).")
+
+
+def widest_side_gap(done, ret, min_n=10):
+    """'; widest gap: nfl Receiving Yards, under 28/47 (+12.3%) vs over 19/47
+    (-23.8%)' -- the league and market where the two sides' flat returns differ
+    most, with min_n graded lines a side. 2026-11-27: the review gave only the
+    totals, so where the other side does better was a separate command."""
+    groups = {}
+    for e in done:
+        groups.setdefault((e.get("league"), e.get("market")), {}).setdefault(e.get("side"), []).append(e)
+    best = None
+    for (lg, mk), sides in groups.items():
+        o, u = sides.get("over", []), sides.get("under", [])
+        if len(o) < min_n or len(u) < min_n:
+            continue
+        ro, ru = sum(map(ret, o)) / len(o), sum(map(ret, u)) / len(u)
+        if best is None or abs(ru - ro) > abs(best[0]):
+            best = (ru - ro, lg, mk, o, u, ro, ru)
+    if not best:
+        return ""
+    _, lg, mk, o, u, ro, ru = best
+    w = lambda s: sum(e["status"] == "won" for e in s)
+    hi, lo = (("under", u, ru), ("over", o, ro)) if ru >= ro else (("over", o, ro), ("under", u, ru))
+    return (f"; widest gap: {lg} {mk}, {hi[0]} {w(hi[1])}/{len(hi[1])} ({100 * hi[2]:+.1f}%) "
+            f"vs {lo[0]} {w(lo[1])}/{len(lo[1])} ({100 * lo[2]:+.1f}%)")
 
 
 def user_tickets_line(root=None, grade_fn=None, last=3):

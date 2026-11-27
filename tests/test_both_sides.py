@@ -64,6 +64,18 @@ class ReviewLine(unittest.TestCase):
                          "date halves (tools/both_sides.py report).")
         self.assertIsNone(DR.both_sides_line({}))
 
+    def test_widest_gap(self):
+        import daily_review as DR
+        import both_sides as BS
+        mk = lambda side, st, lg="nfl", m="Receptions": dict(side=side, price="-110", status=st, league=lg, market=m)
+        done = ([mk("under", "won")] * 7 + [mk("under", "lost")] * 3 + [mk("over", "won")] * 3 + [mk("over", "lost")] * 7
+                + [mk("under", "won", "nba", "Points")] * 5 + [mk("under", "lost", "nba", "Points")] * 5
+                + [mk("over", "won", "nba", "Points")] * 5 + [mk("over", "lost", "nba", "Points")] * 5)
+        out = DR.widest_side_gap(done, BS._ret)
+        self.assertTrue(out.startswith("; widest gap: nfl Receptions, under 7/10"))
+        self.assertIn("vs over 3/10", out)
+        self.assertEqual(DR.widest_side_gap(done[:5], BS._ret), "")      # under 10 a side: none
+
 
 class ByMarket(unittest.TestCase):
     def test_needs_ten_a_side(self):
