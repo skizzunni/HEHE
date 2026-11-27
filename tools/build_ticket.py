@@ -851,11 +851,28 @@ CATCH3_NOTE = (" -- note: 3+ catches -- 25/37 (68%) since Nov 5 against 85% pric
                " (README 2026-11-27, on watch)")
 
 
+EARLY_NOTE = (" -- note: early kickoff (before 3 PM ET) -- NFL props there ran 7.9 / 4.6 points under their"
+              " price by date half vs about even later in the day (README 2026-11-27, on watch)")
+
+
+def _early_et(start):
+    """True when an ISO start is before 3 PM Eastern (EST, UTC-5; NFL season)."""
+    try:
+        t = dt.datetime.fromisoformat(str(start).replace("Z", "+00:00")) - dt.timedelta(hours=5)
+    except ValueError:
+        return False
+    return t.hour < 15
+
+
 def nfl_notes(t):
     """Information-only notes on NFL legs, from studies that did not reach the
     bar (README 2026-11-26). 'note:' never 'caution:', so --safest keeps them."""
-    for legs in (t.get("games") or {}).values():
+    starts = t.get("starts") or {}
+    for match, legs in (t.get("games") or {}).items():
+        early = _early_et(starts[match]) if starts.get(match) else False
         for L in legs:
+            if L.get("lg") == "nfl" and L.get("kind") == "prop" and early and "early kickoff" not in L.get("label", ""):
+                L["label"] = L["label"] + EARLY_NOTE
             if L.get("lg") == "nfl" and L.get("market") == "Rushing Yards" and (L.get("line") or 99) < 15 \
                     and "low rushing line" not in L.get("label", ""):
                 L["label"] = L["label"] + LOW_RUSH_NOTE

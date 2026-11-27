@@ -574,6 +574,16 @@ class NflNotesTest(unittest.TestCase):
         self.assertNotIn("note:", t["games"]["G"][1]["label"])
         self.assertEqual(B.safest(t)["games"]["G"][0]["label"].count("note:"), 1)
 
+    def test_early_kickoff_noted(self):
+        L = dict(label="DK Metcalf: 5+ Receiving Yards -1450 (87%)", lg="nfl", kind="prop",
+                 market="Receiving Yards", line=5.0, price="-1450", chance=0.87)
+        t = {"games": {"A @ B": [dict(L)], "C @ D": [dict(L)]},
+             "starts": {"A @ B": "2026-11-29T18:00Z", "C @ D": "2026-11-27T20:00Z"}}     # 1 PM / 3 PM ET
+        t = B.nfl_notes(B.nfl_notes(t))
+        self.assertEqual(t["games"]["A @ B"][0]["label"].count("early kickoff"), 1)
+        self.assertNotIn("early kickoff", t["games"]["C @ D"][0]["label"])
+        self.assertEqual(len(B.safest(t)["games"]["A @ B"]), 1)          # a note, never a cut
+
     def test_three_plus_catches_noted(self):
         """README 2026-11-27: NFL Receptions 3+ won 68% since Nov 5 against 85%
         priced (fine before) -- on watch, so a note, never a cut."""
