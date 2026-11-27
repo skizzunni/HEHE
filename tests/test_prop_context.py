@@ -54,5 +54,10 @@ class PropContextTest(unittest.TestCase):
         self.assertEqual([(e["name"], dog) for e, dog in rows], [("Jayson Tatum", False), ("Bam Adebayo", True)])
 
 
+    def test_weekend_tag(self):
+        rows = C.weekend_tag([dict(date="2026-11-28"), dict(date="2026-11-27")])     # Sat, Fri
+        self.assertEqual([b for _, b in rows], [True, False])
+
+
 if __name__ == "__main__":
     unittest.main()

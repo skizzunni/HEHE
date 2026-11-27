@@ -12,7 +12,10 @@ The same props can be split by the player's team's chance to win instead
 DOG_MAX or under (blowout risk, starters sit) with the team at FAV_MIN or over,
 the README rows "NBA / NHL player props by the player's team's chance to win".
 
-  python3 tools/prop_context.py nba|nhl [--by chance] [--cache DIR]
+`--by weekend` splits by Saturday / Sunday vs Monday-Friday (no fetch needed),
+the README row "NBA / NHL props on weekends vs weekdays" (on watch).
+
+  python3 tools/prop_context.py nba|nhl [--by chance|weekend] [--cache DIR]
 """
 import datetime as dt
 import json
@@ -113,6 +116,11 @@ def chance_tag(props, maps, games, dog_max=DOG_MAX, fav_min=FAV_MIN):
     return out
 
 
+def weekend_tag(props):
+    """[(prop, on_a_weekend)] by the prop's ET date."""
+    return [(e, dt.date.fromisoformat(e["date"]).weekday() >= 5) for e in props]
+
+
 def compare(rows):
     """Per date half: (b2b won, n, gap), (rested won, n, gap), z of the gap
     difference -- gap is points won above (+) or below FanDuel's implied chance."""
@@ -144,6 +152,12 @@ def main(argv):
     if not props:
         print(f"no graded {lg} props")
         return
+    by = argv[argv.index("--by") + 1] if "--by" in argv else None
+    if by == "weekend":
+        for i, (a, r, z) in enumerate(compare(weekend_tag(props))):
+            print(f"{('earlier', 'later')[i]} half: weekend {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
+                  f"weekday {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
+        return
     days = sorted(e["date"] for e in props)
     sched = schedule(lg, dt.date.fromisoformat(days[0]) - dt.timedelta(days=1), dt.date.fromisoformat(days[-1]))
     maps = {}
@@ -160,7 +174,7 @@ def main(argv):
             os.makedirs(cache, exist_ok=True)
             json.dump(maps[eid], open(f, "w"))
         time.sleep(0.15)
-    if "--by" in argv and argv[argv.index("--by") + 1] == "chance":
+    if by == "chance":
         src = (json.load(open(os.path.join(os.path.dirname(HERE), "sources.json"))).get("games") or {})
         games = {k.split(":", 1)[1]: v for k, v in src.items() if k.startswith(lg + ":")}
         rows, labels = chance_tag(props, maps, games), (f"team {int(100 * DOG_MAX)}% or under",
