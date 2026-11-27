@@ -452,6 +452,26 @@ class PropIdentity(unittest.TestCase):
         self.assertEqual(PL.resolve(st, dict(name="Kenneth Gainwell")), (st["9"], "fuzzy"))
         self.assertEqual(PL.resolve(st, dict(name="Joseph Smith"))[1], "unresolved")   # John? Jake? neither
 
+    def test_surname_only_matches(self):
+        """2026-11-27: props sat unsettled for weeks behind a same-surname
+        teammate -- Dejounte Murray (out) vs Kris Murray, D.J. vs DJ Moore,
+        Marquise vs 'Hollywood' Brown."""
+        import props_ledger as PL
+        box = self.box()
+        ath = box["boxscore"]["players"][1]["statistics"][0]["athletes"]
+        ath += [dict(athlete=dict(id="20", displayName="Kris Murray"), stats=["1"]),
+                dict(athlete=dict(id="21", displayName="DJ Moore"), stats=["5"]),
+                dict(athlete=dict(id="22", displayName="Hollywood Brown"), stats=["3"]),
+                dict(athlete=dict(id="23", displayName="Bryan Thomas"), stats=["0"])]
+        st = PL.box_stats(box)
+        get = lambda n: PL.resolve(st, dict(name=n))
+        self.assertEqual(get("Dejounte Murray"), (None, "absent"))          # Kris is someone else
+        self.assertEqual(get("D.J. Moore"), (st["21"], "initials"))
+        self.assertEqual(get("Marquise Brown"), (st["22"], "alias"))
+        self.assertEqual(get("Brian Thomas Jr.")[1], "unresolved")         # one letter off: review
+        self.assertEqual(get("Jim Smith")[1], "unresolved")                # same first letter as John / Jake
+        self.assertEqual(get("Kris Murray"), (st["20"], "name"))
+
     def test_football_missing_group_is_zero(self):
         """A player in the box with no receiving line caught nothing: lost,
         not ungradable (Josh Cameron, 2026-10-18, kick returns only)."""

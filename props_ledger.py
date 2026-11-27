@@ -352,7 +352,17 @@ def team_hint(n):
 
 # Reviewed spellings that differ between FanDuel and ESPN beyond accents and
 # short first names. Keys and values are norm_name() forms.
-ALIASES = {}
+ALIASES = {
+    # 2026-11-27: FanDuel's "Marquise Brown" is ESPN's "Hollywood Brown"
+    # (PHI); his Nov 1 prop sat unsettled beside Dyami Brown
+    "marquise brown": "hollywood brown",
+}
+
+
+def _squash(nm):
+    """'d j moore' -> 'dj moore': FanDuel's "D.J." against ESPN's "DJ"
+    (2026-11-27: four D.J. Moore props sat unsettled)."""
+    return re.sub(r"\b([a-z]) (?=[a-z]\b)", r"\1", nm)
 
 
 # Given names and the familiar forms that are not simple prefixes of them
@@ -500,6 +510,10 @@ def resolve(stats, e):
         got = pick([c for c in people if c[0] == ALIASES[nm]], "alias")
         if got:
             return got
+    if _squash(nm) != nm or any(_squash(c[0]) != c[0] for c in people):
+        got = pick([c for c in people if _squash(c[0]) == _squash(nm)], "initials")
+        if got:
+            return got
     w = nm.split()
     if not w:
         return None, "unresolved"
@@ -509,6 +523,15 @@ def resolve(stats, e):
         return got
     if not people and "name:" + nm in stats:      # older callers: name keys only
         return stats["name:" + nm], "name"
+    # 2026-11-27: Dejounte Murray (out) sat unsettled for two weeks because
+    # Kris Murray played; LeBron James beside Sion James, Michael Carter beside
+    # Barrett Carter. A same-surname player whose first name starts with
+    # another letter, and is no familiar form of it, is someone else -- the
+    # player is absent. Same first letter (Joseph / John, Brian / Bryan) stays
+    # unresolved for review, as before.
+    other = lambda f: f[:1] != w[0][:1] and not _first_ok(f, w[0]) and _squash(f) != _squash(w[0])
+    if same_last and all(other(c[0].split()[0]) for c in same_last) and len(w) > 1:
+        return None, "absent"
     return (None, "unresolved") if same_last else (None, "absent")
 
 
