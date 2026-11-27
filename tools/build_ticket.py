@@ -239,8 +239,19 @@ def two_x_text(legs):
     b = R.best_2x(odds)
     if not b or len(b["legs"]) == len(legs):
         return ""
-    return (f"Most likely 2x from these legs: {len(b['legs'])} legs, about {100 * b['chance']:.0f}% all win, "
-            f"pays {b['pays']:.2f}x -- " + "; ".join(L["label"].split(" (")[0] for L in b["legs"]) + ".")
+    out = (f"Most likely 2x from these legs: {len(b['legs'])} legs, about {100 * b['chance']:.0f}% all win, "
+           f"pays {b['pays']:.2f}x -- " + "; ".join(L["label"].split(" (")[0] for L in b["legs"]) + ".")
+    if all(L.get("kind") == "ml" for L in b["legs"]):
+        out += FAV_2X_NOTE
+    return out
+
+
+# 2026-11-27: the wide ticket's 2x was three -378 to -395 favourites (DET, BOS,
+# POR) -- the user, Nov 25: "favorites be losing us hella slips bc u always just
+# pick them". Board moneylines at a 75-80% market chance won 68 of 82 (34/41 in
+# each date half), so each leg holds up; stacking them is what loses slips.
+FAV_2X_NOTE = (" Note: every leg is a favourite's moneyline -- board moneylines at a 75-80% market chance"
+               " won 68 of 82 (83%, 34/41 in each half), so one upset in any of them loses the whole 2x.")
 
 
 SHORT_LEGS = 6

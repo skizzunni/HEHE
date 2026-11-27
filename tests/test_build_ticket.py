@@ -595,6 +595,18 @@ class NflNotesTest(unittest.TestCase):
         self.assertNotIn("note:", t["games"]["G"][1]["label"])
         self.assertEqual(len(B.safest(t)["games"]["G"]), 2)
 
+class FavTwoXNoteTest(unittest.TestCase):
+    def test_all_moneyline_2x_says_so(self):
+        ml = lambda team, p: dict(label=f"{team} moneyline {p} (76%, DraftKings no-vig)", kind="ml", lg="nba",
+                                  price=str(p), chance=0.76)
+        legs = [ml("DET", -378), ml("BOS", -378), ml("POR", -395), ml("X", -5000)]
+        out = B.two_x_text(legs)
+        self.assertIn("every leg is a favourite's moneyline", out)
+        props = [dict(label=f"P{i}: 5+ Points -1000 (87%)", kind="prop", lg="nba", price="-1000", chance=0.9)
+                 for i in range(9)]
+        self.assertNotIn("favourite's moneyline", B.two_x_text(props))
+
+
 class ShortTicketTest(unittest.TestCase):
     def test_six_safest_one_per_game(self):
         mk = lambda g, i, p, c=0.87: dict(label=f"P{g}{i}: 5+ Points {p} ({int(c * 100)}%)", price=str(p), chance=c)
