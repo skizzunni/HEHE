@@ -100,6 +100,26 @@ class WatchMany(unittest.TestCase):
         self.assertEqual(sorted(out), ["[other-side card] WON x in ticket_other.json",
                                        "[safest ticket] WON x in ticket_safe.json"])
 
+    def test_shared_leg_printed_once_with_both_tickets(self):
+        import threading
+        out, timers = [], []
+
+        class T:
+            def __init__(self, wait, fn, args=()):
+                self.fn, self.args, self.daemon = fn, args, False
+                timers.append(self)
+
+            def start(self):
+                pass
+        put = G.merged_emit(out.append, threading.Lock(), timer=T)
+        put("safest ticket", "REACHED Raddysh 1+ SOG")
+        put("ticket", "REACHED Raddysh 1+ SOG")
+        put("ticket", "all picks settled: 3-0; all won: YES")
+        for t in timers:
+            t.fn(*t.args)
+        self.assertEqual(out, ["[ticket] all picks settled: 3-0; all won: YES",
+                               "[safest ticket, ticket] REACHED Raddysh 1+ SOG"])
+
     def test_tickets_share_one_read_per_game(self):
         """2026-11-27: three watched tickets read each shared game once a minute, not three times."""
         calls, now = [], [0.0]

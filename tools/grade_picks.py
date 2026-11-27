@@ -636,6 +636,41 @@ def shared_get(get=None, ttl=60, clock=None):
     return fetch
 
 
+def merged_emit(emit, lock, wait=20.0, timer=None):
+    """emit(name, msg) that prints one line per message with every ticket it
+    came from: '[safest ticket, ticket] REACHED ...'. 2026-11-27: a leg on both
+    tickets printed twice a few seconds apart (Raddysh, Marchenko); the watches
+    run their rounds together, so messages within `wait` seconds are joined.
+    'all picks settled' lines differ per ticket and print on their own."""
+    import threading
+    timer = timer or threading.Timer
+    pending = {}
+
+    def flush(msg):
+        with lock:
+            names = pending.pop(msg, [])
+            if names:
+                emit(f"[{', '.join(names)}] {msg}")
+
+    def put(name, msg):
+        if msg.startswith("all picks settled"):
+            with lock:
+                emit(f"[{name}] {msg}")
+            return
+        with lock:
+            first = msg not in pending
+            pending.setdefault(msg, [])
+            if name not in pending[msg]:
+                pending[msg].append(name)
+        if first:
+            t = timer(wait, flush, args=(msg,))
+            t.daemon = True
+            t.start()
+    put.flush = flush
+    put.flush_all = lambda: [flush(m) for m in list(pending)]
+    return put
+
+
 def watch_many(paths, emit=print, watch_fn=None):
     """One watch per ticket file, in parallel, each line tagged with the
     ticket's name -- 2026-11-26: the safest ticket, the backup, the TD list and
@@ -646,19 +681,17 @@ def watch_many(paths, emit=print, watch_fn=None):
         return watch_fn(paths[0], emit=emit)
     lock = threading.Lock()
     get = shared_get()
+    merge = merged_emit(emit, lock)
 
     def run(path):
         name = NAMES.get(os.path.basename(path), os.path.basename(path))
-
-        def tagged(m):
-            with lock:
-                emit(f"[{name}] {m}")
-        watch_fn(path, emit=tagged, get=get)
+        watch_fn(path, emit=lambda m: merge(name, m), get=get)
     threads = [threading.Thread(target=run, args=(p,), daemon=True) for p in paths]
     for t in threads:
         t.start()
     for t in threads:
         t.join()
+    merge.flush_all()                  # every ticket done: print what is still waiting
 
 
 if __name__ == "__main__":
