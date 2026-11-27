@@ -247,7 +247,9 @@ SHORT_LEGS = 6
 # replayed 2026-11-27 on 38 graded prop days (props at -1000 or shorter, the
 # shortest price in each game, the 6 shortest): README
 SHORT_RECORD = (" Replayed on 38 past days: all 6 won on 23 (10/19 then 13/19), paying 1.24x then 1.10x on"
-                " average; six such legs taken at random won together 41% then 47% of the time.")
+                " average; six such legs taken at random won together 41% then 47% of the time. It still lost"
+                " money: a $1 ticket every day returned -34% then -27% (3 legs -10% / -14%, 10 legs -64% / -38%)"
+                " -- legs this short pay too little to cover one miss.")
 
 
 def short_text(t, n=SHORT_LEGS):
