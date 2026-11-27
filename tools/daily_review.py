@@ -617,12 +617,44 @@ def user_tickets_line(root=None, grade_fn=None, last=3):
                 state = ("all won" if not sm["lost"] and not sm["open"] else
                          f"{sm['open']} open" if not sm["lost"] else "lost")
                 bits.append(f"{tag} {sm['won']}-{sm['lost']}" + (f"-{sm['push']}" if sm["push"] else "") + f" ({state})")
+                if kind in ("ticket", "safest ticket"):
+                    sh = short_ticket_result(picks, res)
+                    if sh:
+                        bits[-1] += f" [{sh}]"
                 for pk, rr in zip(picks, res):
                     if rr == "lost":
                         lost.setdefault((os.path.basename(d), pk.get("label")), (pk, set()))[1].add(kind)
     except Exception:
         return None
     return "Your tickets: " + "; ".join(bits) + "." + (" " + lost_legs_clause(lost) if lost else "")
+
+
+def short_ticket_result(picks, res, n=6):
+    """'short 6: 6-0' -- the ticket's short-ticket line replayed on its own
+    graded legs: the shortest price in each game, then the n shortest
+    (build_ticket.short_text). '' until the ticket has n+ games and every one
+    of those legs is settled. 2026-11-27: the short ticket is information on
+    every ticket; this keeps its forward record on the tickets actually saved."""
+    def price(p):
+        try:
+            return int(str(p.get("price")).replace("+", ""))
+        except (TypeError, ValueError):
+            return None
+    best = {}
+    for pk, r in zip(picks, res):
+        pr = price(pk)
+        if pr is None or not pk.get("id"):
+            continue
+        if pk["id"] not in best or pr < best[pk["id"]][0]:
+            best[pk["id"]] = (pr, r)
+    if len(best) < n:
+        return ""
+    pick = sorted(best.values())[:n]
+    if any(r not in ("won", "lost", "push") for _, r in pick):
+        return ""
+    w = sum(r == "won" for _, r in pick)
+    l = sum(r == "lost" for _, r in pick)
+    return f"short {n}: {w}-{l}" + (" (all won)" if not l else "")
 
 
 def lost_legs_clause(lost):

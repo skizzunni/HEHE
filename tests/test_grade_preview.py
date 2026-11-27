@@ -122,6 +122,20 @@ class LostLegsClauseTest(unittest.TestCase):
         one = daily_review.lost_legs_clause({("slate_nov26", a["label"]): (a, {"safest ticket"})})
         self.assertNotIn("more than one ticket", one)
 
+class ShortTicketResultTest(unittest.TestCase):
+    def test_shortest_leg_per_game_six_shortest(self):
+        import daily_review
+        picks = [dict(id=str(g), price=p) for g in range(7) for p in ("-1500", "-6000")]
+        res = ["lost", "won"] * 7                       # every -6000 leg won, every -1500 lost
+        self.assertEqual(daily_review.short_ticket_result(picks, res), "short 6: 6-0 (all won)")
+        res2 = list(res)
+        res2[1] = "lost"
+        self.assertEqual(daily_review.short_ticket_result(picks, res2), "short 6: 5-1")
+        res3 = list(res)
+        res3[3] = "open"
+        self.assertEqual(daily_review.short_ticket_result(picks, res3), "")      # not settled yet
+        self.assertEqual(daily_review.short_ticket_result(picks[:6], res[:6]), "")  # 3 games only
+
 
 if __name__ == "__main__":
     unittest.main()
