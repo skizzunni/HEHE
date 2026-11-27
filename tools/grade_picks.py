@@ -63,6 +63,24 @@ def player_stat(summary, player, stat):
     return None
 
 
+def _same_player(a, b):
+    """Box-score name a is player b: equal, or the same surname with a first
+    name that can be the same person ('Mitch' / 'Mitchell' -- 2026-11-27,
+    Marner's lost leg printed no ice time because ESPN says 'Mitch')."""
+    fa, fb = _fold(a), _fold(b)
+    if fa == fb:
+        return True
+    wa, wb = fa.split(), fb.split()
+    if len(wa) < 2 or len(wb) < 2 or wa[-1] != wb[-1]:
+        return False
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+        import props_ledger
+        return props_ledger._first_ok(wa[0], wb[0])
+    except Exception:
+        return False
+
+
 def _toi(summary, player):
     """An NHL skater's time on ice as ESPN prints it ('19:43'), or None."""
     for t in ((summary or {}).get("boxscore") or {}).get("players") or []:
@@ -71,7 +89,7 @@ def _toi(summary, player):
             if "TOI" not in labels:
                 continue
             for a in cat.get("athletes") or []:
-                if _fold((a.get("athlete") or {}).get("displayName")) == _fold(player):
+                if _same_player((a.get("athlete") or {}).get("displayName"), player):
                     s = dict(zip(labels, a.get("stats") or [])).get("TOI")
                     return s if s and ":" in s else None
     return None

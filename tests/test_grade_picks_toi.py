@@ -92,6 +92,14 @@ class BriefInProgress(unittest.TestCase):
         self.assertEqual(out[-1], "(1 not started yet)")
 
 
+class SamePlayer(unittest.TestCase):
+    def test_short_first_name(self):
+        self.assertTrue(G._same_player("Mitch Marner", "Mitchell Marner"))
+        self.assertTrue(G._same_player("Tim Stützle", "Tim Stutzle"))
+        self.assertFalse(G._same_player("Kris Murray", "Dejounte Murray"))
+        self.assertFalse(G._same_player("Mitch Marner", "Mitchell Marchand"))
+
+
 class WatchMany(unittest.TestCase):
     def test_each_ticket_tagged(self):
         out = []
