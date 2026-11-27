@@ -309,6 +309,14 @@ class LadderNowTest(unittest.TestCase):
         self.assertNotIn("G0", out.split("Ladder stand-in now")[1])
 
 
+class StartedPriceTest(unittest.TestCase):
+    def test_started_leg_keeps_its_saved_price_in_the_payout(self):
+        """2026-11-26 8 PM: in-play prices on games under way read '3.73x'."""
+        legs = [dict(label="A", id="1", kind="ml", price="-500"), dict(label="B", id="2", kind="ml", price="-500")]
+        out = R.final_text(legs, [], now_prices={"A": "+400", "B": "-500"}, now_chance={"A": 0.8, "B": 0.8},
+                           record={}, started={"1"})
+        self.assertIn("pays about 1.44x", out)                                     # 1.2 x 1.2, not 5.0 x 1.2
+
 class FreshFnTest(unittest.TestCase):
     def test_undo_only_when_the_legs_own_sources_were_read(self):
         nba, nhl, nfl = dict(lg="nba", id="1"), dict(lg="nhl", id="7"), dict(lg="nfl", id="9")

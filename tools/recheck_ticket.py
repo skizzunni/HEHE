@@ -435,7 +435,13 @@ def final_text(legs, flags, games=None, asof=None, now_prices=None, now_chance=N
     if now_prices is not None:
         kept_legs = [L for L in legs if verdict(notes.get(L.get("label"), []))[0] != "DROP"
                      or str(L.get("id")) in {str(x) for x in started}]
-        out.append(all_win_line(kept_legs, now_prices, now_chance or {}, record or {}))
+        # 2026-11-26 8 PM: two of three games were under way and the line read
+        # "pays about 3.73x at current prices" -- in-play prices on legs already
+        # bet. A started leg keeps its saved price; only open games are repriced.
+        began = {str(x) for x in started}
+        pre = {k: v for k, v in (now_prices or {}).items()
+               if not any(L.get("label") == k and str(L.get("id")) in began for L in legs)}
+        out.append(all_win_line(kept_legs, pre, now_chance or {}, record or {}))
         # fresh suggestions only from games not yet started: a 6:45 PM recheck
         # must not offer a leg in the 5 PM game already under way (2026-11-25)
         open_legs = [L for L in kept_legs if str(L.get("id")) not in {str(x) for x in started}]
