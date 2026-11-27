@@ -452,6 +452,23 @@ class PropIdentity(unittest.TestCase):
         self.assertEqual(PL.resolve(st, dict(name="Kenneth Gainwell")), (st["9"], "fuzzy"))
         self.assertEqual(PL.resolve(st, dict(name="Joseph Smith"))[1], "unresolved")   # John? Jake? neither
 
+    def test_played_without_a_stat_is_not_a_dnp(self):
+        """2026-11-27: David Njoku (two targets, no catch) is missing from
+        ESPN's football box -- named in the play-by-play, he played: 0."""
+        import props_ledger as PL
+        sm = dict(drives=dict(previous=[dict(plays=[
+            dict(text="(Shotgun) J.Herbert pass incomplete short middle to D.Njoku (T.Buchanan)."),
+            dict(text="Injury Update: DAL-J.Ferguson has returned to the game."),
+            dict(text="A.St. Brown 12 yard pass from J.Goff")])]))
+        names = PL.pbp_names(sm)
+        self.assertTrue(PL.in_pbp(names, "David Njoku"))
+        self.assertTrue(PL.in_pbp(names, "Jake Ferguson"))
+        self.assertTrue(PL.in_pbp(names, "Amon-Ra St. Brown"))
+        self.assertFalse(PL.in_pbp(names, "Tyler Warren"))
+        self.assertFalse(PL.in_pbp(names, "Kevin Njoku"))               # initial must agree
+        self.assertEqual(PL.MARKETS["nfl"]["Receptions"]({"_played": 1.0}), 0.0)
+        self.assertEqual(PL.pbp_names(dict(pbp_names=["d njoku"])), ["d njoku"])   # cached form
+
     def test_surname_only_matches(self):
         """2026-11-27: props sat unsettled for weeks behind a same-surname
         teammate -- Dejounte Murray (out) vs Kris Murray, D.J. vs DJ Moore,

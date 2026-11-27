@@ -326,10 +326,44 @@ def summary(league, eid):
     comp = ((d.get("header") or {}).get("competitions") or [{}])[0]
     if ((comp.get("status") or {}).get("type") or {}).get("completed"):
         keep = {"boxscore": d.get("boxscore"), "rosters": d.get("rosters"), "completed": True}
+        if league in ("nfl", "ncaaf"):
+            keep["pbp_names"] = pbp_names(d)
         with open(f, "w") as fh:
             json.dump(keep, fh)
         return keep
     return {"completed": False}
+
+
+_PBP = re.compile(r"\b([A-Z][A-Za-z]?)\.\s?((?:St\. ?)?[A-Z][A-Za-z'\-]+)")
+
+
+def pbp_names(sm):
+    """Sorted 'd njoku'-style tokens (first initial(s), surname) of every
+    player named in a football game's play-by-play ('D.Njoku', 'Ja.Williams')."""
+    if sm and "pbp_names" in sm:
+        return sm["pbp_names"]
+    out = set()
+    for dr in ((sm or {}).get("drives") or {}).get("previous") or []:
+        for pl in dr.get("plays") or []:
+            for ini, sur in _PBP.findall(pl.get("text") or ""):
+                out.add(f"{ini.lower()} {norm_name(sur)}")
+    return sorted(out)
+
+
+def in_pbp(names, player):
+    """Is `player` ('David Njoku') named in the play-by-play tokens? ESPN's
+    football box score lists only players who recorded a stat, so a receiver
+    targeted twice without a catch is missing from it -- he played, and
+    FanDuel grades his Receptions 1+ lost, not void (2026-11-27: Njoku, Nov 16,
+    two targets, voided here as 'not in box score')."""
+    w = norm_name(player).split()
+    if len(w) < 2 or not names:
+        return False
+    for tok in names:
+        ini, _, sur = tok.partition(" ")
+        if w[0].startswith(ini) and (" " + " ".join(w[1:])).endswith(" " + sur):
+            return True
+    return False
 
 
 def norm_name(n):
@@ -639,6 +673,9 @@ def grade():
         stats = box_stats(sm)
         for e in es:
             st, how = resolve(stats, e)
+            if how == "absent" and league in ("nfl", "ncaaf") and in_pbp(pbp_names(sm), e.get("name")):
+                st, how = {"_played": 1.0}, "pbp"      # played, no stat: graded at 0
+                e["matched"] = "pbp"
             if how == "absent":
                 e["status"], e["void_why"] = "void", "not in box score"   # did not play
                 e["state"] = "dnp"                                         # explicit: a DNP void

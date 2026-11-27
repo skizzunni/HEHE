@@ -173,6 +173,9 @@ def board_value(pick, summary):
     if not fn or not summary:
         return None, None
     st, how = props_ledger.resolve(props_ledger.box_stats(summary), {"name": pick["player"]})
+    if how == "absent" and lg in ("nfl", "ncaaf") and \
+            props_ledger.in_pbp(props_ledger.pbp_names(summary), pick["player"]):
+        st, how = {"_played": 1.0}, "pbp"      # in the play-by-play, no stat: he played, 0
     if how == "absent" or st is None:
         return None, how
     if not st:
