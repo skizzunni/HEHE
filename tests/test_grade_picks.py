@@ -199,6 +199,11 @@ class PropTest(unittest.TestCase):
         G.watch(path, get=get, sleep=lambda s: rounds.append(s), emit=lambda m: None, remember=False)
         self.assertEqual(sum("event=1" in u for u in calls), 1, calls)    # read once, then skipped
 
+    def test_standing_after_a_loss(self):
+        picks = [dict(label=f"L{i}") for i in range(5)]
+        seen = {"L0": "won", "L0|final": True, "L1": "lost", "L1|final": True, "L2": "reached"}
+        self.assertEqual(G._standing(picks, seen), " (ticket now 1-1, 3 to go)")
+
     def test_final_score(self):
         sm = {"header": {"competitions": [{"status": {"type": {"detail": "Final/SO"}},
                                            "competitors": [{"team": {"abbreviation": "NSH"}, "score": "5"},
@@ -235,7 +240,7 @@ class PropTest(unittest.TestCase):
         out = []
         G.watch(path, get=lambda u: box, sleep=sleep, emit=out.append)
         self.assertEqual(out, ["REACHED Murray 5+ -- had 5 in 20 min (settles when the game ends)",
-                               "WON Murray 5+ -- had 5 in 20 min (final: SAC 36, SA 35)", "LOST Murray 9 reb -- had 3 in 20 min (final: SAC 36, SA 35)", "all picks settled: 1-1; all won: no"])
+                               "WON Murray 5+ -- had 5 in 20 min (final: SAC 36, SA 35)", "LOST Murray 9 reb -- had 3 in 20 min (final: SAC 36, SA 35) (ticket now 1-1, 0 to go)", "all picks settled: 1-1; all won: no"])
 
     def test_restarted_watch_does_not_repeat(self):
         import json

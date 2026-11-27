@@ -607,7 +607,7 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
             elif was != r or not seen.get(key + "|final"):
                 seen[key] = r
                 seen[key + "|final"] = True
-                emit(f"{r.upper()} {key}{detail(p, scores, d)}")
+                emit(f"{r.upper()} {key}{detail(p, scores, d)}" + (_standing(picks, seen) if r == "lost" else ""))
                 if remember:
                     _save_seen(path, seen)
         if not open_n:
@@ -617,6 +617,15 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
                  + f"; all won: {'YES' if not sm['lost'] and sm['won'] else 'no'}" + _short_clause(picks, res))
             return seen
         (sleep or time.sleep)(every)
+
+
+def _standing(picks, seen):
+    """' (ticket now 6-1, 54 to go)' after a loss: where the ticket stands --
+    2026-11-27, Stamkos's loss read alone gave no sense of the rest of the day."""
+    keys = [p.get("label") or json.dumps(p, sort_keys=True) for p in picks]
+    fin = [seen.get(k) for k in keys if seen.get(k + "|final")]
+    w, l = fin.count("won"), fin.count("lost")
+    return f" (ticket now {w}-{l}, {len(keys) - len(fin)} to go)"
 
 
 def _short_clause(picks, res):
