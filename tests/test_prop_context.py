@@ -39,6 +39,20 @@ class PropContextTest(unittest.TestCase):
         self.assertGreater(z, 0)
         self.assertEqual(C.compare(rows[:2]), [])          # one date: no halves
 
+    def test_chance_tag(self):
+        maps = {"9": {"jayson tatum": "BOS", "bam adebayo": "MIA"}}
+        games = {"9": {"home": "Boston Celtics", "away": "Miami Heat", "p": {"dk": 0.75}}}
+        props = [dict(gid="nba:9", name="Jayson Tatum"), dict(gid="nba:9", name="Bam Adebayo")]
+        # one game cannot tell the two names apart; with a second game it can
+        maps["8"] = {"jayson tatum": "BOS", "x": "NYK"}
+        games["8"] = {"home": "Boston Celtics", "away": "New York Knicks", "p": {"dk": 0.5}}
+        maps["7"] = {"bam adebayo": "MIA", "y": "NYK"}
+        games["7"] = {"home": "New York Knicks", "away": "Miami Heat", "p": {"dk": 0.5}}
+        names = C.abbr_names(maps, games)
+        self.assertEqual((names["BOS"], names["MIA"]), ("Boston Celtics", "Miami Heat"))
+        rows = C.chance_tag(props, maps, games)
+        self.assertEqual([(e["name"], dog) for e, dog in rows], [("Jayson Tatum", False), ("Bam Adebayo", True)])
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -7,7 +7,12 @@ graded prop gets its player's team (from ESPN's box score for that game) and
 whether that team also played the day before (ESPN's scoreboard), then the
 two groups are compared with FanDuel's price by date half.
 
-  python3 tools/prop_context.py nba|nhl [--cache DIR]
+The same props can be split by the player's team's chance to win instead
+(DraftKings no-vig from sources.json): `--by chance` compares the team at
+DOG_MAX or under (blowout risk, starters sit) with the team at FAV_MIN or over,
+the README rows "NBA / NHL player props by the player's team's chance to win".
+
+  python3 tools/prop_context.py nba|nhl [--by chance] [--cache DIR]
 """
 import datetime as dt
 import json
@@ -70,6 +75,44 @@ def tag(props, maps, sched):
     return out
 
 
+DOG_MAX, FAV_MIN = 0.4, 0.6
+
+
+def abbr_names(maps, games):
+    """{team abbr: full name} -- the name that sits beside the abbr in every
+    game it played (box scores carry abbrs, sources.json full names)."""
+    import collections
+    cand = {}
+    for eid, m in maps.items():
+        g = games.get(eid)
+        ab = sorted(set(m.values()))
+        if not g or len(ab) != 2:
+            continue
+        for a in ab:
+            cand.setdefault(a, collections.Counter()).update([g["home"], g["away"]])
+    return {a: c.most_common(1)[0][0] for a, c in cand.items()}
+
+
+def chance_tag(props, maps, games, dog_max=DOG_MAX, fav_min=FAV_MIN):
+    """[(prop, team_is_underdog)] for props whose player's team is at dog_max
+    or under, or fav_min or over (DK no-vig chance; the middle is left out).
+    games: {event id: sources.json game with p.dk the home chance}."""
+    import props_ledger as PL
+    names = abbr_names(maps, games)
+    out = []
+    for e in props:
+        eid = e["gid"].split(":", 1)[1]
+        g, m = games.get(eid), maps.get(eid) or {}
+        tm = m.get(PL.norm_name(e["name"]))
+        ph = ((g or {}).get("p") or {}).get("dk") if isinstance((g or {}).get("p"), dict) else None
+        if not tm or ph is None or names.get(tm) not in (g["home"], g["away"]):
+            continue
+        p = ph if names[tm] == g["home"] else 1 - ph
+        if p <= dog_max or p >= fav_min:
+            out.append((e, p <= dog_max))
+    return out
+
+
 def compare(rows):
     """Per date half: (b2b won, n, gap), (rested won, n, gap), z of the gap
     difference -- gap is points won above (+) or below FanDuel's implied chance."""
@@ -117,10 +160,16 @@ def main(argv):
             os.makedirs(cache, exist_ok=True)
             json.dump(maps[eid], open(f, "w"))
         time.sleep(0.15)
-    rows = tag(props, maps, sched)
+    if "--by" in argv and argv[argv.index("--by") + 1] == "chance":
+        src = (json.load(open(os.path.join(os.path.dirname(HERE), "sources.json"))).get("games") or {})
+        games = {k.split(":", 1)[1]: v for k, v in src.items() if k.startswith(lg + ":")}
+        rows, labels = chance_tag(props, maps, games), (f"team {int(100 * DOG_MAX)}% or under",
+                                                         f"team {int(100 * FAV_MIN)}%+")
+    else:
+        rows, labels = tag(props, maps, sched), ("back-to-back", "rested")
     for i, (a, r, z) in enumerate(compare(rows)):
-        print(f"{('earlier', 'later')[i]} half: back-to-back {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
-              f"rested {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
+        print(f"{('earlier', 'later')[i]} half: {labels[0]} {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
+              f"{labels[1]} {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
     print(f"{len(rows)} of {len(props)} props placed")
 
 
