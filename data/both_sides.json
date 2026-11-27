@@ -963,6 +963,7 @@
   "name": "Luke Schoonmaker",
   "p": 0.5,
   "price": "-113",
+  "rechecked": "void",
   "side": "over",
   "state": "dnp",
   "status": "void",
@@ -980,6 +981,7 @@
   "name": "Luke Schoonmaker",
   "p": 0.5,
   "price": "-113",
+  "rechecked": "void",
   "side": "under",
   "state": "dnp",
   "status": "void",
@@ -997,6 +999,7 @@
   "name": "Luke Schoonmaker",
   "p": 0.5785,
   "price": "-162",
+  "rechecked": "void",
   "side": "over",
   "state": "dnp",
   "status": "void",
@@ -1014,6 +1017,7 @@
   "name": "Luke Schoonmaker",
   "p": 0.4215,
   "price": "+122",
+  "rechecked": "void",
   "side": "under",
   "state": "dnp",
   "status": "void",
@@ -1133,6 +1137,7 @@
   "name": "Ryan Flournoy",
   "p": 0.5,
   "price": "-113",
+  "rechecked": "void",
   "side": "over",
   "state": "dnp",
   "status": "void",
@@ -1150,6 +1155,7 @@
   "name": "Ryan Flournoy",
   "p": 0.5,
   "price": "-113",
+  "rechecked": "void",
   "side": "over",
   "state": "dnp",
   "status": "void",
@@ -1167,6 +1173,7 @@
   "name": "Ryan Flournoy",
   "p": 0.5,
   "price": "-113",
+  "rechecked": "void",
   "side": "under",
   "state": "dnp",
   "status": "void",
@@ -1184,6 +1191,7 @@
   "name": "Ryan Flournoy",
   "p": 0.5,
   "price": "-113",
+  "rechecked": "void",
   "side": "under",
   "state": "dnp",
   "status": "void",
@@ -1201,6 +1209,7 @@
   "name": "Ryan Flournoy",
   "p": 0.3831,
   "price": "+144",
+  "rechecked": "void",
   "side": "over",
   "state": "dnp",
   "status": "void",
@@ -1218,6 +1227,7 @@
   "name": "Ryan Flournoy",
   "p": 0.6169,
   "price": "-194",
+  "rechecked": "void",
   "side": "under",
   "state": "dnp",
   "status": "void",
@@ -1643,6 +1653,7 @@
   "name": "Zach Ertz",
   "p": 0.4533,
   "price": "+108",
+  "rechecked": "void",
   "side": "over",
   "state": "dnp",
   "status": "void",
@@ -1660,6 +1671,7 @@
   "name": "Zach Ertz",
   "p": 0.5467,
   "price": "-138",
+  "rechecked": "void",
   "side": "under",
   "state": "dnp",
   "status": "void",
@@ -1677,6 +1689,7 @@
   "name": "Zach Ertz",
   "p": 0.5142,
   "price": "-122",
+  "rechecked": "void",
   "side": "over",
   "state": "dnp",
   "status": "void",
@@ -1694,6 +1707,7 @@
   "name": "Zach Ertz",
   "p": 0.4858,
   "price": "-108",
+  "rechecked": "void",
   "side": "under",
   "state": "dnp",
   "status": "void",
@@ -3340,11 +3354,13 @@
   "league": "nfl",
   "line": "11.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Cyrus Allen",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nfl:401873082|n:cyrus allen|Receiving Yards|u11.5": {
   "aid": null,
@@ -3355,11 +3371,13 @@
   "league": "nfl",
   "line": "u11.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Cyrus Allen",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 19.0
  },
  "nfl:401873082|n:cyrus allen|Receptions|1.5": {
   "aid": null,
@@ -3370,11 +3388,13 @@
   "league": "nfl",
   "line": "1.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Cyrus Allen",
   "p": 0.357,
   "price": "+162",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nfl:401873082|n:cyrus allen|Receptions|u1.5": {
   "aid": null,
@@ -3385,11 +3405,13 @@
   "league": "nfl",
   "line": "u1.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Cyrus Allen",
   "p": 0.643,
   "price": "-220",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873082|n:dalton kincaid|Receiving Yards|38.5": {
   "aid": null,
@@ -3400,11 +3422,13 @@
   "league": "nfl",
   "line": "38.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Dalton Kincaid",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 13.0
  },
  "nfl:401873082|n:dalton kincaid|Receiving Yards|u38.5": {
   "aid": null,
@@ -3415,11 +3439,13 @@
   "league": "nfl",
   "line": "u38.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Dalton Kincaid",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nfl:401873082|n:dalton kincaid|Receptions|3.5": {
   "aid": null,
@@ -3430,11 +3456,13 @@
   "league": "nfl",
   "line": "3.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Dalton Kincaid",
   "p": 0.3993,
   "price": "+134",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nfl:401873082|n:dalton kincaid|Receptions|u3.5": {
   "aid": null,
@@ -3445,11 +3473,13 @@
   "league": "nfl",
   "line": "u3.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Dalton Kincaid",
   "p": 0.6007,
   "price": "-180",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873082|n:dawson knox|Receiving Yards|11.5": {
   "aid": null,
@@ -3460,11 +3490,13 @@
   "league": "nfl",
   "line": "11.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Dawson Knox",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:dawson knox|Receiving Yards|9.5": {
   "aid": null,
@@ -3475,11 +3507,13 @@
   "league": "nfl",
   "line": "9.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Dawson Knox",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:dawson knox|Receiving Yards|u11.5": {
   "aid": null,
@@ -3490,11 +3524,13 @@
   "league": "nfl",
   "line": "u11.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Dawson Knox",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:dawson knox|Receiving Yards|u9.5": {
   "aid": null,
@@ -3505,11 +3541,13 @@
   "league": "nfl",
   "line": "u9.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Dawson Knox",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:dawson knox|Receptions|1.5": {
   "aid": null,
@@ -3520,11 +3558,13 @@
   "league": "nfl",
   "line": "1.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Dawson Knox",
   "p": 0.4542,
   "price": "+106",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:dawson knox|Receptions|u1.5": {
   "aid": null,
@@ -3535,11 +3575,13 @@
   "league": "nfl",
   "line": "u1.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Dawson Knox",
   "p": 0.5458,
   "price": "-140",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:dj moore|Receiving Yards|48.5": {
   "aid": null,
@@ -3550,11 +3592,13 @@
   "league": "nfl",
   "line": "48.5",
   "market": "Receiving Yards",
+  "matched": "initials",
   "name": "D.J. Moore",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 15.0
  },
  "nfl:401873082|n:dj moore|Receiving Yards|49.5": {
   "aid": null,
@@ -3565,11 +3609,13 @@
   "league": "nfl",
   "line": "49.5",
   "market": "Receiving Yards",
+  "matched": "initials",
   "name": "D.J. Moore",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 15.0
  },
  "nfl:401873082|n:dj moore|Receiving Yards|u48.5": {
   "aid": null,
@@ -3580,11 +3626,13 @@
   "league": "nfl",
   "line": "u48.5",
   "market": "Receiving Yards",
+  "matched": "initials",
   "name": "D.J. Moore",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nfl:401873082|n:dj moore|Receiving Yards|u49.5": {
   "aid": null,
@@ -3595,11 +3643,13 @@
   "league": "nfl",
   "line": "u49.5",
   "market": "Receiving Yards",
+  "matched": "initials",
   "name": "D.J. Moore",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 15.0
  },
  "nfl:401873082|n:dj moore|Receptions|3.5": {
   "aid": null,
@@ -3610,11 +3660,13 @@
   "league": "nfl",
   "line": "3.5",
   "market": "Receptions",
+  "matched": "initials",
   "name": "D.J. Moore",
   "p": 0.5585,
   "price": "-148",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nfl:401873082|n:dj moore|Receptions|u3.5": {
   "aid": null,
@@ -3625,11 +3677,13 @@
   "league": "nfl",
   "line": "u3.5",
   "market": "Receptions",
+  "matched": "initials",
   "name": "D.J. Moore",
   "p": 0.4415,
   "price": "+112",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873082|n:emmett johnson|Receiving Yards|30.5": {
   "aid": null,
@@ -3640,11 +3694,13 @@
   "league": "nfl",
   "line": "30.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 24.0
  },
  "nfl:401873082|n:emmett johnson|Receiving Yards|u30.5": {
   "aid": null,
@@ -3655,11 +3711,13 @@
   "league": "nfl",
   "line": "u30.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 24.0
  },
  "nfl:401873082|n:emmett johnson|Receptions|3.5": {
   "aid": null,
@@ -3670,11 +3728,13 @@
   "league": "nfl",
   "line": "3.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5142,
   "price": "-122",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nfl:401873082|n:emmett johnson|Receptions|u3.5": {
   "aid": null,
@@ -3685,11 +3745,13 @@
   "league": "nfl",
   "line": "u3.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.4858,
   "price": "-108",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nfl:401873082|n:emmett johnson|Rushing + Receiving Yards|116.5": {
   "aid": null,
@@ -3700,11 +3762,13 @@
   "league": "nfl",
   "line": "116.5",
   "market": "Rushing + Receiving Yards",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 96.0
  },
  "nfl:401873082|n:emmett johnson|Rushing + Receiving Yards|117.5": {
   "aid": null,
@@ -3715,11 +3779,13 @@
   "league": "nfl",
   "line": "117.5",
   "market": "Rushing + Receiving Yards",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 96.0
  },
  "nfl:401873082|n:emmett johnson|Rushing + Receiving Yards|u116.5": {
   "aid": null,
@@ -3730,11 +3796,13 @@
   "league": "nfl",
   "line": "u116.5",
   "market": "Rushing + Receiving Yards",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 96.0
  },
  "nfl:401873082|n:emmett johnson|Rushing + Receiving Yards|u117.5": {
   "aid": null,
@@ -3745,11 +3813,13 @@
   "league": "nfl",
   "line": "u117.5",
   "market": "Rushing + Receiving Yards",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 96.0
  },
  "nfl:401873082|n:emmett johnson|Rushing Yards|80.5": {
   "aid": null,
@@ -3760,11 +3830,13 @@
   "league": "nfl",
   "line": "80.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 72.0
  },
  "nfl:401873082|n:emmett johnson|Rushing Yards|81.5": {
   "aid": null,
@@ -3775,11 +3847,13 @@
   "league": "nfl",
   "line": "81.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 72.0
  },
  "nfl:401873082|n:emmett johnson|Rushing Yards|u80.5": {
   "aid": null,
@@ -3790,11 +3864,13 @@
   "league": "nfl",
   "line": "u80.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 72.0
  },
  "nfl:401873082|n:emmett johnson|Rushing Yards|u81.5": {
   "aid": null,
@@ -3805,11 +3881,13 @@
   "league": "nfl",
   "line": "u81.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Emmett Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 72.0
  },
  "nfl:401873082|n:james cook|Receiving Yards|7.5": {
   "aid": null,
@@ -3820,11 +3898,13 @@
   "league": "nfl",
   "line": "7.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 8.0
  },
  "nfl:401873082|n:james cook|Receiving Yards|u7.5": {
   "aid": null,
@@ -3835,11 +3915,13 @@
   "league": "nfl",
   "line": "u7.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 8.0
  },
  "nfl:401873082|n:james cook|Receptions|1.5": {
   "aid": null,
@@ -3850,11 +3932,13 @@
   "league": "nfl",
   "line": "1.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.4064,
   "price": "+130",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nfl:401873082|n:james cook|Receptions|u1.5": {
   "aid": null,
@@ -3865,11 +3949,13 @@
   "league": "nfl",
   "line": "u1.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.5936,
   "price": "-174",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873082|n:james cook|Rushing + Receiving Yards|94.5": {
   "aid": null,
@@ -3880,11 +3966,13 @@
   "league": "nfl",
   "line": "94.5",
   "market": "Rushing + Receiving Yards",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.4958,
   "price": "-111",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 125.0
  },
  "nfl:401873082|n:james cook|Rushing + Receiving Yards|99.5": {
   "aid": null,
@@ -3895,11 +3983,13 @@
   "league": "nfl",
   "line": "99.5",
   "market": "Rushing + Receiving Yards",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.4958,
   "price": "-111",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 125.0
  },
  "nfl:401873082|n:james cook|Rushing + Receiving Yards|u94.5": {
   "aid": null,
@@ -3910,11 +4000,13 @@
   "league": "nfl",
   "line": "u94.5",
   "market": "Rushing + Receiving Yards",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.5042,
   "price": "-115",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 125.0
  },
  "nfl:401873082|n:james cook|Rushing + Receiving Yards|u99.5": {
   "aid": null,
@@ -3925,11 +4017,13 @@
   "league": "nfl",
   "line": "u99.5",
   "market": "Rushing + Receiving Yards",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.5042,
   "price": "-115",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 125.0
  },
  "nfl:401873082|n:james cook|Rushing Yards|82.5": {
   "aid": null,
@@ -3940,11 +4034,13 @@
   "league": "nfl",
   "line": "82.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 117.0
  },
  "nfl:401873082|n:james cook|Rushing Yards|87.5": {
   "aid": null,
@@ -3955,11 +4051,13 @@
   "league": "nfl",
   "line": "87.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 117.0
  },
  "nfl:401873082|n:james cook|Rushing Yards|u82.5": {
   "aid": null,
@@ -3970,11 +4068,13 @@
   "league": "nfl",
   "line": "u82.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 117.0
  },
  "nfl:401873082|n:james cook|Rushing Yards|u87.5": {
   "aid": null,
@@ -3985,11 +4085,13 @@
   "league": "nfl",
   "line": "u87.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "James Cook",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 117.0
  },
  "nfl:401873082|n:jaydn ott|Rushing Yards|5.5": {
   "aid": null,
@@ -4000,11 +4102,13 @@
   "league": "nfl",
   "line": "5.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Jaydn Ott",
   "p": 0.4854,
   "price": "-106",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:jaydn ott|Rushing Yards|u5.5": {
   "aid": null,
@@ -4015,11 +4119,13 @@
   "league": "nfl",
   "line": "u5.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Jaydn Ott",
   "p": 0.5146,
   "price": "-120",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:josh allen|Passing Touchdowns|1.5": {
   "aid": null,
@@ -4030,11 +4136,13 @@
   "league": "nfl",
   "line": "1.5",
   "market": "Passing Touchdowns",
+  "matched": "name",
   "name": "Josh Allen",
   "p": 0.4116,
   "price": "+128",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:josh allen|Passing Touchdowns|u1.5": {
   "aid": null,
@@ -4045,11 +4153,13 @@
   "league": "nfl",
   "line": "u1.5",
   "market": "Passing Touchdowns",
+  "matched": "name",
   "name": "Josh Allen",
   "p": 0.5884,
   "price": "-168",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:josh allen|Passing Yards|215.5": {
   "aid": null,
@@ -4060,11 +4170,13 @@
   "league": "nfl",
   "line": "215.5",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Josh Allen",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 81.0
  },
  "nfl:401873082|n:josh allen|Passing Yards|u215.5": {
   "aid": null,
@@ -4075,11 +4187,13 @@
   "league": "nfl",
   "line": "u215.5",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Josh Allen",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 81.0
  },
  "nfl:401873082|n:josh allen|Rushing Yards|38.5": {
   "aid": null,
@@ -4090,11 +4204,13 @@
   "league": "nfl",
   "line": "38.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Josh Allen",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 43.0
  },
  "nfl:401873082|n:josh allen|Rushing Yards|u38.5": {
   "aid": null,
@@ -4105,11 +4221,13 @@
   "league": "nfl",
   "line": "u38.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Josh Allen",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 43.0
  },
  "nfl:401873082|n:josh downs|Receiving Yards|36.5": {
   "aid": null,
@@ -4120,11 +4238,13 @@
   "league": "nfl",
   "line": "36.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Josh Downs",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 13.0
  },
  "nfl:401873082|n:josh downs|Receiving Yards|37.5": {
   "aid": null,
@@ -4135,11 +4255,13 @@
   "league": "nfl",
   "line": "37.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Josh Downs",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 13.0
  },
  "nfl:401873082|n:josh downs|Receiving Yards|u36.5": {
   "aid": null,
@@ -4150,11 +4272,13 @@
   "league": "nfl",
   "line": "u36.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Josh Downs",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nfl:401873082|n:josh downs|Receiving Yards|u37.5": {
   "aid": null,
@@ -4165,11 +4289,13 @@
   "league": "nfl",
   "line": "u37.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Josh Downs",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 13.0
  },
  "nfl:401873082|n:josh downs|Receptions|3.5": {
   "aid": null,
@@ -4180,11 +4306,13 @@
   "league": "nfl",
   "line": "3.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Josh Downs",
   "p": 0.433,
   "price": "+116",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 1.0
  },
  "nfl:401873082|n:josh downs|Receptions|u3.5": {
   "aid": null,
@@ -4195,11 +4323,13 @@
   "league": "nfl",
   "line": "u3.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Josh Downs",
   "p": 0.567,
   "price": "-154",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 1.0
  },
  "nfl:401873082|n:keon coleman|Receiving Yards|21.5": {
   "aid": null,
@@ -4210,11 +4340,13 @@
   "league": "nfl",
   "line": "21.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Keon Coleman",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:keon coleman|Receiving Yards|u21.5": {
   "aid": null,
@@ -4225,11 +4357,13 @@
   "league": "nfl",
   "line": "u21.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Keon Coleman",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:keon coleman|Receptions|1.5": {
   "aid": null,
@@ -4240,11 +4374,13 @@
   "league": "nfl",
   "line": "1.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Keon Coleman",
   "p": 0.6104,
   "price": "-188",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:keon coleman|Receptions|u1.5": {
   "aid": null,
@@ -4255,11 +4391,13 @@
   "league": "nfl",
   "line": "u1.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Keon Coleman",
   "p": 0.3896,
   "price": "+140",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:khalil shakir|Receiving Yards|39.5": {
   "aid": null,
@@ -4270,11 +4408,13 @@
   "league": "nfl",
   "line": "39.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Khalil Shakir",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 33.0
  },
  "nfl:401873082|n:khalil shakir|Receiving Yards|u39.5": {
   "aid": null,
@@ -4285,11 +4425,13 @@
   "league": "nfl",
   "line": "u39.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Khalil Shakir",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 33.0
  },
  "nfl:401873082|n:khalil shakir|Receptions|3.5": {
   "aid": null,
@@ -4300,11 +4442,13 @@
   "league": "nfl",
   "line": "3.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Khalil Shakir",
   "p": 0.4858,
   "price": "-108",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nfl:401873082|n:khalil shakir|Receptions|u3.5": {
   "aid": null,
@@ -4315,11 +4459,13 @@
   "league": "nfl",
   "line": "u3.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Khalil Shakir",
   "p": 0.5142,
   "price": "-122",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nfl:401873082|n:noah gray|Receiving Yards|12.5": {
   "aid": null,
@@ -4330,11 +4476,13 @@
   "league": "nfl",
   "line": "12.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Noah Gray",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 23.0
  },
  "nfl:401873082|n:noah gray|Receiving Yards|u12.5": {
   "aid": null,
@@ -4345,11 +4493,13 @@
   "league": "nfl",
   "line": "u12.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Noah Gray",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 23.0
  },
  "nfl:401873082|n:noah gray|Receptions|1.5": {
   "aid": null,
@@ -4360,11 +4510,13 @@
   "league": "nfl",
   "line": "1.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Noah Gray",
   "p": 0.4718,
   "price": "-102",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 3.0
  },
  "nfl:401873082|n:noah gray|Receptions|u1.5": {
   "aid": null,
@@ -4375,11 +4527,13 @@
   "league": "nfl",
   "line": "u1.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Noah Gray",
   "p": 0.5282,
   "price": "-130",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 3.0
  },
  "nfl:401873082|n:patrick mahomes|Passing Touchdowns|1.5": {
   "aid": null,
@@ -4390,11 +4544,13 @@
   "league": "nfl",
   "line": "1.5",
   "market": "Passing Touchdowns",
+  "matched": "name",
   "name": "Patrick Mahomes",
   "p": 0.4466,
   "price": "+110",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:patrick mahomes|Passing Touchdowns|u1.5": {
   "aid": null,
@@ -4405,11 +4561,13 @@
   "league": "nfl",
   "line": "u1.5",
   "market": "Passing Touchdowns",
+  "matched": "name",
   "name": "Patrick Mahomes",
   "p": 0.5534,
   "price": "-144",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:patrick mahomes|Passing Yards|232.5": {
   "aid": null,
@@ -4420,11 +4578,13 @@
   "league": "nfl",
   "line": "232.5",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Patrick Mahomes",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 174.0
  },
  "nfl:401873082|n:patrick mahomes|Passing Yards|236.5": {
   "aid": null,
@@ -4435,11 +4595,13 @@
   "league": "nfl",
   "line": "236.5",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Patrick Mahomes",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 174.0
  },
  "nfl:401873082|n:patrick mahomes|Passing Yards|u232.5": {
   "aid": null,
@@ -4450,11 +4612,13 @@
   "league": "nfl",
   "line": "u232.5",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Patrick Mahomes",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 174.0
  },
  "nfl:401873082|n:patrick mahomes|Passing Yards|u236.5": {
   "aid": null,
@@ -4465,11 +4629,13 @@
   "league": "nfl",
   "line": "u236.5",
   "market": "Passing Yards",
+  "matched": "name",
   "name": "Patrick Mahomes",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 174.0
  },
  "nfl:401873082|n:patrick mahomes|Rushing Yards|11.5": {
   "aid": null,
@@ -4480,11 +4646,13 @@
   "league": "nfl",
   "line": "11.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Patrick Mahomes",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nfl:401873082|n:patrick mahomes|Rushing Yards|u11.5": {
   "aid": null,
@@ -4495,11 +4663,13 @@
   "league": "nfl",
   "line": "u11.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Patrick Mahomes",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873082|n:rashee rice|Receiving Yards|44.5": {
   "aid": null,
@@ -4510,11 +4680,13 @@
   "league": "nfl",
   "line": "44.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Rashee Rice",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 19.0
  },
  "nfl:401873082|n:rashee rice|Receiving Yards|47.5": {
   "aid": null,
@@ -4525,11 +4697,13 @@
   "league": "nfl",
   "line": "47.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Rashee Rice",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 19.0
  },
  "nfl:401873082|n:rashee rice|Receiving Yards|u44.5": {
   "aid": null,
@@ -4540,11 +4714,13 @@
   "league": "nfl",
   "line": "u44.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Rashee Rice",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nfl:401873082|n:rashee rice|Receiving Yards|u47.5": {
   "aid": null,
@@ -4555,11 +4731,13 @@
   "league": "nfl",
   "line": "u47.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Rashee Rice",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 19.0
  },
  "nfl:401873082|n:rashee rice|Receptions|4.5": {
   "aid": null,
@@ -4570,11 +4748,13 @@
   "league": "nfl",
   "line": "4.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Rashee Rice",
   "p": 0.4808,
   "price": "-106",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nfl:401873082|n:rashee rice|Receptions|u4.5": {
   "aid": null,
@@ -4585,11 +4765,13 @@
   "league": "nfl",
   "line": "u4.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Rashee Rice",
   "p": 0.5192,
   "price": "-125",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873082|n:ray davis|Rushing Yards|3.5": {
   "aid": null,
@@ -4600,11 +4782,13 @@
   "league": "nfl",
   "line": "3.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Ray Davis",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 6.0
  },
  "nfl:401873082|n:ray davis|Rushing Yards|u3.5": {
   "aid": null,
@@ -4615,11 +4799,13 @@
   "league": "nfl",
   "line": "u3.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Ray Davis",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 6.0
  },
  "nfl:401873082|n:travis kelce|Receiving Yards|44.5": {
   "aid": null,
@@ -4630,11 +4816,13 @@
   "league": "nfl",
   "line": "44.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Travis Kelce",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 71.0
  },
  "nfl:401873082|n:travis kelce|Receiving Yards|46.5": {
   "aid": null,
@@ -4645,11 +4833,13 @@
   "league": "nfl",
   "line": "46.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Travis Kelce",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "won",
+  "value": 71.0
  },
  "nfl:401873082|n:travis kelce|Receiving Yards|u44.5": {
   "aid": null,
@@ -4660,11 +4850,13 @@
   "league": "nfl",
   "line": "u44.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Travis Kelce",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 71.0
  },
  "nfl:401873082|n:travis kelce|Receiving Yards|u46.5": {
   "aid": null,
@@ -4675,11 +4867,13 @@
   "league": "nfl",
   "line": "u46.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Travis Kelce",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "lost",
+  "value": 71.0
  },
  "nfl:401873082|n:travis kelce|Receptions|4.5": {
   "aid": null,
@@ -4690,11 +4884,13 @@
   "league": "nfl",
   "line": "4.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Travis Kelce",
   "p": 0.417,
   "price": "+124",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 4.0
  },
  "nfl:401873082|n:travis kelce|Receptions|u4.5": {
   "aid": null,
@@ -4705,11 +4901,13 @@
   "league": "nfl",
   "line": "u4.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Travis Kelce",
   "p": 0.583,
   "price": "-166",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 4.0
  },
  "nfl:401873082|n:ty johnson|Receiving Yards|15.5": {
   "aid": null,
@@ -4720,11 +4918,13 @@
   "league": "nfl",
   "line": "15.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Ty Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 12.0
  },
  "nfl:401873082|n:ty johnson|Receiving Yards|u15.5": {
   "aid": null,
@@ -4735,11 +4935,13 @@
   "league": "nfl",
   "line": "u15.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Ty Johnson",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nfl:401873082|n:ty johnson|Receptions|2.5": {
   "aid": null,
@@ -4750,11 +4952,13 @@
   "league": "nfl",
   "line": "2.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Ty Johnson",
   "p": 0.4248,
   "price": "+120",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 2.0
  },
  "nfl:401873082|n:ty johnson|Receptions|u2.5": {
   "aid": null,
@@ -4765,11 +4969,13 @@
   "league": "nfl",
   "line": "u2.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Ty Johnson",
   "p": 0.5752,
   "price": "-160",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 2.0
  },
  "nfl:401873082|n:ty johnson|Rushing + Receiving Yards|20.5": {
   "aid": null,
@@ -4780,11 +4986,13 @@
   "league": "nfl",
   "line": "20.5",
   "market": "Rushing + Receiving Yards",
+  "matched": "name",
   "name": "Ty Johnson",
   "p": 0.4958,
   "price": "-111",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 12.0
  },
  "nfl:401873082|n:ty johnson|Rushing + Receiving Yards|u20.5": {
   "aid": null,
@@ -4795,11 +5003,13 @@
   "league": "nfl",
   "line": "u20.5",
   "market": "Rushing + Receiving Yards",
+  "matched": "name",
   "name": "Ty Johnson",
   "p": 0.5042,
   "price": "-115",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 12.0
  },
  "nfl:401873082|n:ty johnson|Rushing Yards|1.5": {
   "aid": null,
@@ -4810,11 +5020,13 @@
   "league": "nfl",
   "line": "1.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Ty Johnson",
   "p": 0.4669,
   "price": "+102",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:ty johnson|Rushing Yards|u1.5": {
   "aid": null,
@@ -4825,11 +5037,13 @@
   "league": "nfl",
   "line": "u1.5",
   "market": "Rushing Yards",
+  "matched": "name",
   "name": "Ty Johnson",
   "p": 0.5331,
   "price": "-130",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:xavier worthy|Receiving Yards|19.5": {
   "aid": null,
@@ -4840,11 +5054,13 @@
   "league": "nfl",
   "line": "19.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Xavier Worthy",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:xavier worthy|Receiving Yards|20.5": {
   "aid": null,
@@ -4855,11 +5071,13 @@
   "league": "nfl",
   "line": "20.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Xavier Worthy",
   "p": 0.5,
   "price": "-113",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:xavier worthy|Receiving Yards|u19.5": {
   "aid": null,
@@ -4870,11 +5088,13 @@
   "league": "nfl",
   "line": "u19.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Xavier Worthy",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:xavier worthy|Receiving Yards|u20.5": {
   "aid": null,
@@ -4885,11 +5105,13 @@
   "league": "nfl",
   "line": "u20.5",
   "market": "Receiving Yards",
+  "matched": "name",
   "name": "Xavier Worthy",
   "p": 0.5,
   "price": "-113",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  },
  "nfl:401873082|n:xavier worthy|Receptions|2.5": {
   "aid": null,
@@ -4900,11 +5122,13 @@
   "league": "nfl",
   "line": "2.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Xavier Worthy",
   "p": 0.3993,
   "price": "+134",
   "side": "over",
-  "status": "open"
+  "status": "lost",
+  "value": 0.0
  },
  "nfl:401873082|n:xavier worthy|Receptions|u2.5": {
   "aid": null,
@@ -4915,10 +5139,12 @@
   "league": "nfl",
   "line": "u2.5",
   "market": "Receptions",
+  "matched": "name",
   "name": "Xavier Worthy",
   "p": 0.6007,
   "price": "-180",
   "side": "under",
-  "status": "open"
+  "status": "won",
+  "value": 0.0
  }
 }
