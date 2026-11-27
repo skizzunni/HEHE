@@ -7,10 +7,10 @@ prints, for each NFL game of a day: indoor (no weather) or the National Weather
 Service hourly forecast for the kickoff hours -- temperature, wind, sky and
 chance of rain.
 
-It changes no pick. Props were never tested against weather (no reachable
-source keeps game-time weather; ESPN keeps none), and indoor vs outdoor showed
-nothing (README, 770 legs). It is there so a rain or wind game is seen before
-the ticket is placed.
+It changes no pick. Tested 2026-11-26 on 117 outdoor games (Open-Meteo archive
+at kickoff): passing / receiving props in rain or 15 mph+ wind won 83.9% then
+85.7% by date half vs 82.1% then 79.4% in calm games -- no weather penalty
+(README); indoor vs outdoor showed nothing either (770 legs).
 
   python3 tools/nfl_weather.py [today|tomorrow|YYYY-MM-DD]
 """
@@ -94,8 +94,8 @@ def lines(rows, get=_get):
         except Exception as ex:                     # one game's failure never hides the rest
             out.append(f"  {r.get('game')}: weather unavailable ({type(ex).__name__})")
     if out:
-        out.insert(0, "Kickoff weather (National Weather Service; information only -- props were never tested "
-                      "against weather, indoor vs outdoor showed nothing):")
+        out.insert(0, "Kickoff weather (National Weather Service; information only -- on 117 outdoor games, "
+                      "passing / receiving props in rain or wind won as often as in calm weather):")
     return out
 
 
