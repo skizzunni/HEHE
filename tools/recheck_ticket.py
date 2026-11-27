@@ -63,7 +63,10 @@ def recheck_nhl(legs, lineups):
     return out
 
 
-def price_check(legs, current):
+PULL_HOURS = 2
+
+
+def price_check(legs, current, starts=None, now=None):
     """[(label, note)] for prop legs whose line is no longer posted, or whose
     price has moved, at FanDuel. current: {(player, market, line_text): price}.
     2026-11-24: told the user four legs had gone from FanDuel when they were
@@ -74,8 +77,16 @@ def price_check(legs, current):
             continue
         key = (L.get("player"), L.get("market"), L.get("line_text"))
         if key not in current:
-            out.append((L.get("label"), "this line is no longer posted at FanDuel (pulled -- often a late scratch "
-                                        "in the game being repriced; see game news)"))
+            if _hours_to(starts, L.get("id"), now) > PULL_HOURS:
+                # 2026-11-27: at 10:53 AM ET six lines were down; 20 minutes later
+                # Kuminga's was back and Shead's had gone -- hours before a game
+                # FanDuel pulls and re-posts lines, so this is a caution, not a drop
+                out.append((L.get("label"), f"not posted at FanDuel right now -- hours before the game lines come and "
+                                            f"go (Nov 27: Kuminga's was back in 20 minutes); recheck within "
+                                            f"{PULL_HOURS} hours of the start"))
+            else:
+                out.append((L.get("label"), "this line is no longer posted at FanDuel (pulled -- often a late scratch "
+                                            "in the game being repriced; see game news)"))
             continue
         now, was = current[key], L.get("price")
         try:
@@ -85,6 +96,20 @@ def price_check(legs, current):
         if moved:
             out.append((L.get("label"), f"FanDuel now {now} (was {was}){_direction(was, now)}"))
     return out
+
+
+def _hours_to(starts, gid, now=None):
+    """Hours until a leg's game starts; 0 when unknown (unknown keeps the drop)."""
+    import datetime as dt
+    st = (starts or {}).get(str(gid))
+    if not st:
+        return 0.0
+    try:
+        t = dt.datetime.fromisoformat(str(st).replace("Z", "+00:00"))
+    except ValueError:
+        return 0.0
+    now = now or dt.datetime.now(dt.timezone.utc)
+    return (t - now).total_seconds() / 3600
 
 
 def _implied(price):
@@ -299,7 +324,8 @@ def main(path, day, final=False):
         rows = slate_sheet.main(day)
         pg = B._fd_props(rows)
         current = {(p["name"], p.get("market"), str(p.get("line"))): p.get("price") for g in pg for p in g["props"]}
-        prices = (price_check(legs, current) if current else []) + ml_check(legs, rows)
+        starts = {str(r.get("id")): r.get("start") for r in rows}
+        prices = (price_check(legs, current, starts) if current else []) + ml_check(legs, rows)
         snap = snapshot(legs, current, rows)
         try:
             log_prices(path, legs, current, rows)

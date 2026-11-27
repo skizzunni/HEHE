@@ -346,6 +346,18 @@ class StartedNeverDroppedTest(unittest.TestCase):
         got = R.note_dropped(path, legs, pulled, fresh=True, started={"7", "8"})
         self.assertEqual(got, ["Malkin 1+"])       # Klay's game began: not dropped; Malkin's earlier drop stands
 
+    def test_pulled_hours_before_is_a_caution(self):
+        import datetime as dt
+        legs = [dict(label="Shead: 2+ Assists", kind="prop", player="Jamal Shead", market="Assists",
+                     line_text="2+", price="-7000", id="9")]
+        now = dt.datetime(2026, 11, 27, 16, 0, tzinfo=dt.timezone.utc)
+        early = R.price_check(legs, {("x", "y", "z"): "-100"}, {"9": "2026-11-28T00:30Z"}, now)
+        self.assertIn("not posted at FanDuel right now", early[0][1])
+        self.assertEqual(R.verdict([early[0][1]])[0], "CAUTION")
+        late = R.price_check(legs, {("x", "y", "z"): "-100"}, {"9": "2026-11-27T17:00Z"}, now)
+        self.assertEqual(R.verdict([late[0][1]])[0], "DROP")
+        self.assertEqual(R.verdict([R.price_check(legs, {("x", "y", "z"): "-100"})[0][1]])[0], "DROP")   # start unknown
+
     def test_text_one_line_per_leg_drop_first(self):
         """2026-11-27: Marchenko's injured-list note and his price move printed
         on separate lines; now one line, the drop reason first."""
