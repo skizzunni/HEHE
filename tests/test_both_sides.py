@@ -74,5 +74,15 @@ class ByMarket(unittest.TestCase):
         self.assertIn("no market has 10", B.by_market({}))
 
 
+class OneDay(unittest.TestCase):
+    def test_one_day_has_no_halves(self):
+        book = {"a": dict(side="over", price="-110", status="won", date="2026-11-26"),
+                "b": dict(side="over", price="-110", status="lost", date="2026-11-26")}
+        r = B.report(book)
+        self.assertIn("one day so far", r)
+        self.assertIn("over -150..100: all 1/2 = 50%", r)
+        self.assertNotIn("second", r)
+
+
 if __name__ == "__main__":
     unittest.main()

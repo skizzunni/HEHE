@@ -113,11 +113,16 @@ def report(book=None):
         return "both sides: nothing graded yet (record daily, then grade)"
     dates = sorted({e["date"] for e in done})
     mid = dates[len(dates) // 2]
-    lines = [f"both sides: {len(done)} graded lines, {dates[0]} to {dates[-1]} (halves split at {mid})"]
+    one_day = len(dates) < 2
+    # 2026-11-26: with one day graded every line fell in the "second" half --
+    # a split needs two dates; until then the report says so and shows totals
+    lines = [f"both sides: {len(done)} graded lines, {dates[0]} to {dates[-1]} "
+             + ("(one day so far -- no date halves yet)" if one_day else f"(halves split at {mid})")]
     for side in ("over", "under"):
         for lo, hi in BANDS:
             cells = []
-            for name, f in (("first", lambda d: d < mid), ("second", lambda d: d >= mid)):
+            for name, f in ((("all", lambda d: True),) if one_day else
+                            (("first", lambda d: d < mid), ("second", lambda d: d >= mid))):
                 s = [e for e in done if e["side"] == side and lo < int(e["price"]) <= hi and f(e["date"])]
                 if s:
                     w = sum(e["status"] == "won" for e in s)
