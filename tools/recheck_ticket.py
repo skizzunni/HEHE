@@ -248,6 +248,31 @@ def log_prices(path, legs, current, rows, now=None):
     return out
 
 
+def pull_history(path):
+    """'Pulled earlier and posted again: Jonathan Kuminga (down 15:53-15:55 UTC)'
+    from price_log.jsonl beside the ticket: legs whose line was missing at an
+    earlier re-check and is posted in the latest one. 2026-11-27: six lines
+    went down at 10:53 AM ET and were back within the hour -- a pull is not
+    news until it lasts. '' when nothing came back."""
+    try:
+        with open(os.path.join(os.path.dirname(os.path.abspath(path)), "price_log.jsonl")) as f:
+            recs = [json.loads(x) for x in f if x.strip()]
+    except (OSError, ValueError):
+        return ""
+    if len(recs) < 2:
+        return ""
+    last = recs[-1].get("prices") or {}
+    back = []
+    for lab, now in last.items():
+        if now is None:
+            continue
+        down = [r["t"][11:16] for r in recs[:-1] if lab in (r.get("prices") or {}) and r["prices"][lab] is None]
+        if down:
+            who = lab.split(":")[0]
+            back.append(f"{who} (down {down[0]}" + (f"-{down[-1]}" if down[-1] != down[0] else "") + " UTC)")
+    return ("Pulled earlier and posted again: " + "; ".join(back)) if back else ""
+
+
 def game_news(legs, rows, team_out_fn, report_rows=None, mmdd=None):
     """['DET @ ORL: Detroit Pistons without Cade Cunningham (34.1 min, Out)', ...]
     -- top-minutes players out or doubtful/questionable on EITHER team of each
@@ -393,10 +418,13 @@ def main(path, day, final=False):
         back = [d for d in back if d not in now]
         if back:
             out += "\nBack on the ticket (no longer a drop on this report): " + "; ".join(back)
+        ph = pull_history(path)
         return "\n".join([f"NOTE: {t} has NOT YET SUBMITTED its injury report -- recheck before tip." for t in pending]
-                         + [out] + (["Game news (either team, top minutes):"] + [f"  {n}" for n in news] if news else []))
-    return text(allf, rep.get("asof"), pending) + ("\nGame news (either team, top minutes):\n" + "\n".join(f"  {n}" for n in news)
-                                                    if news else "")
+                         + [out] + ([ph] if ph else [])
+                         + (["Game news (either team, top minutes):"] + [f"  {n}" for n in news] if news else []))
+    ph = pull_history(path)
+    return text(allf, rep.get("asof"), pending) + (f"\n{ph}" if ph else "") + (
+        "\nGame news (either team, top minutes):\n" + "\n".join(f"  {n}" for n in news) if news else "")
 
 
 def fresh_fn(rep_ok, prices_ok, lineups, nfl_ok=False):

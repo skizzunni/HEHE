@@ -1,3 +1,4 @@
+import json
 import os
 import sys
 import math
@@ -345,6 +346,17 @@ class StartedNeverDroppedTest(unittest.TestCase):
                   ("Malkin 1+", "Evgeni Malkin: on the injured list (dtd)")]
         got = R.note_dropped(path, legs, pulled, fresh=True, started={"7", "8"})
         self.assertEqual(got, ["Malkin 1+"])       # Klay's game began: not dropped; Malkin's earlier drop stands
+
+    def test_pull_history(self):
+        import tempfile
+        d = tempfile.mkdtemp()
+        path = os.path.join(d, "ticket_safe.json")
+        recs = [{"t": "2026-11-27T15:53:48", "prices": {"Kuminga: 5+ Points": None, "Shead: 2+ Assists": "-7000"}},
+                {"t": "2026-11-27T15:55:08", "prices": {"Kuminga: 5+ Points": None, "Shead: 2+ Assists": "-7000"}},
+                {"t": "2026-11-27T16:13:47", "prices": {"Kuminga: 5+ Points": "-10000", "Shead: 2+ Assists": None}}]
+        open(os.path.join(d, "price_log.jsonl"), "w").write("\n".join(json.dumps(r) for r in recs) + "\n")
+        self.assertEqual(R.pull_history(path), "Pulled earlier and posted again: Kuminga (down 15:53-15:55 UTC)")
+        self.assertEqual(R.pull_history(os.path.join(tempfile.mkdtemp(), "t.json")), "")
 
     def test_injured_list_needs_a_second_source(self):
         leg = [dict(label="Kirill Marchenko: 1+ Shots on Goal -1500", lg="nhl", kind="prop",
