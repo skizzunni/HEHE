@@ -54,6 +54,11 @@ class PropContextTest(unittest.TestCase):
         self.assertEqual([(e["name"], dog) for e, dog in rows], [("Jayson Tatum", False), ("Bam Adebayo", True)])
 
 
+    def test_early_tag(self):
+        games = {"1": {"start": "2026-11-29T18:00Z"}, "2": {"start": "2026-11-29T21:25Z"}}
+        rows = C.early_tag([dict(gid="nfl:1"), dict(gid="nfl:2"), dict(gid="nfl:3")], games)
+        self.assertEqual([b for _, b in rows], [True, False])          # 1 PM ET early, 4:25 PM not; no start skipped
+
     def test_weekend_tag(self):
         rows = C.weekend_tag([dict(date="2026-11-28"), dict(date="2026-11-27")])     # Sat, Fri
         self.assertEqual([b for _, b in rows], [True, False])

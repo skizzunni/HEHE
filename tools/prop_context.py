@@ -15,7 +15,10 @@ the README rows "NBA / NHL player props by the player's team's chance to win".
 `--by weekend` splits by Saturday / Sunday vs Monday-Friday (no fetch needed),
 the README row "NBA / NHL props on weekends vs weekdays" (on watch).
 
-  python3 tools/prop_context.py nba|nhl [--by chance|weekend] [--cache DIR]
+`--by early` splits by kickoff before 3 PM ET vs later (start from sources.json;
+EST, UTC-5), the README row "NFL props by kickoff slot" (on watch).
+
+  python3 tools/prop_context.py nba|nhl|nfl [--by chance|weekend|early] [--cache DIR]
 """
 import datetime as dt
 import json
@@ -27,7 +30,7 @@ import urllib.request
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path[:0] = [HERE, os.path.dirname(HERE)]
-SPORT = {"nba": "basketball/nba", "nhl": "hockey/nhl"}
+SPORT = {"nba": "basketball/nba", "nhl": "hockey/nhl", "nfl": "football/nfl"}
 SITE = "https://site.api.espn.com/apis/site/v2/sports/{}/{}"
 
 
@@ -116,6 +119,22 @@ def chance_tag(props, maps, games, dog_max=DOG_MAX, fav_min=FAV_MIN):
     return out
 
 
+def early_tag(props, games, hour=15):
+    """[(prop, kickoff_before_hour_ET)] for props whose game has a start in
+    sources.json (games: {event id: game})."""
+    out = []
+    for e in props:
+        st = (games.get(e["gid"].split(":", 1)[1]) or {}).get("start")
+        if not st:
+            continue
+        try:
+            t = dt.datetime.fromisoformat(str(st).replace("Z", "+00:00")) - dt.timedelta(hours=5)
+        except ValueError:
+            continue
+        out.append((e, t.hour < hour))
+    return out
+
+
 def weekend_tag(props):
     """[(prop, on_a_weekend)] by the prop's ET date."""
     return [(e, dt.date.fromisoformat(e["date"]).weekday() >= 5) for e in props]
@@ -153,6 +172,13 @@ def main(argv):
         print(f"no graded {lg} props")
         return
     by = argv[argv.index("--by") + 1] if "--by" in argv else None
+    if by == "early":
+        src = (json.load(open(os.path.join(os.path.dirname(HERE), "sources.json"))).get("games") or {})
+        games = {k.split(":", 1)[1]: v for k, v in src.items() if k.startswith(lg + ":")}
+        for i, (a, r, z) in enumerate(compare(early_tag(props, games))):
+            print(f"{('earlier', 'later')[i]} half: before 3 PM ET {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
+                  f"later {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
+        return
     if by == "weekend":
         for i, (a, r, z) in enumerate(compare(weekend_tag(props))):
             print(f"{('earlier', 'later')[i]} half: weekend {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
