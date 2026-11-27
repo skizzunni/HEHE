@@ -585,6 +585,19 @@ class NflNotesTest(unittest.TestCase):
         self.assertNotIn("note:", t["games"]["G"][1]["label"])
         self.assertEqual(len(B.safest(t)["games"]["G"]), 2)
 
+class ShortTicketTest(unittest.TestCase):
+    def test_six_safest_one_per_game(self):
+        mk = lambda g, i, p, c=0.87: dict(label=f"P{g}{i}: 5+ Points {p} ({int(c * 100)}%)", price=str(p), chance=c)
+        t = {"games": {f"G{g}": [mk(g, 0, -1500), mk(g, 1, -6000)] for g in range(7)}}
+        out = B.short_text(t)
+        self.assertTrue(out.startswith("Short ticket: the 6 safest legs, one per game -- about 43% all win"))
+        self.assertIn("P01: 5+ Points -6000", out)          # the shorter price in each game
+        self.assertNotIn("-1500", out)
+        self.assertNotIn("P61", out.split("--")[-1].split(";")[0])
+        small = {"games": {f"G{g}": [mk(g, 0, -1500)] for g in range(7)}}
+        self.assertEqual(B.short_text(small), "")            # a 7-leg ticket is short already
+        self.assertIn("Short ticket:", B.text(dict(t, left_off=[])))
+
 
 if __name__ == "__main__":
     unittest.main()

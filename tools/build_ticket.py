@@ -243,6 +243,32 @@ def two_x_text(legs):
             f"pays {b['pays']:.2f}x -- " + "; ".join(L["label"].split(" (")[0] for L in b["legs"]) + ".")
 
 
+SHORT_LEGS = 6
+
+
+def short_text(t, n=SHORT_LEGS):
+    """'Short ticket: the 6 safest legs, one per game ...' when the ticket is
+    much longer. 2026-11-27: the safest ticket for Nov 27 had 58 legs -- all
+    win about 1 in 3,000 -- and Nov 24-26 every long ticket lost by one or two
+    legs; the shortest version of it was nowhere on the page. Information
+    only: the full ticket is unchanged."""
+    best = []
+    for legs in t["games"].values():
+        try:
+            g = sorted(legs, key=lambda L: (-L["chance"], _dec(L["price"])))
+        except (KeyError, TypeError, ValueError):
+            continue
+        if g:
+            best.append(g[0])
+    if len(best) < n or sum(len(v) for v in t["games"].values()) < 2 * n:
+        return ""
+    pick = sorted(best, key=lambda L: (-L["chance"], _dec(L["price"])))[:n]
+    allwin = math.prod(L["chance"] for L in pick)
+    pays = math.prod(_dec(L["price"]) for L in pick)
+    return (f"Short ticket: the {n} safest legs, one per game -- about {100 * allwin:.0f}% all win, pays about "
+            f"{pays:.2f}x -- " + "; ".join(L["label"].split(" (")[0] for L in pick) + ".")
+
+
 def ticket_legs(t):
     """The ticket's legs in tools/grade_picks.py's file format (what --save writes)."""
     return [{k: v for k, v in L.items() if k not in ("chance", "gid")} for g in t["games"].values() for L in g]
@@ -283,6 +309,9 @@ def text(t):
                        f"Each leg stands on its own; the size is your call.")
         except (TypeError, ValueError):
             out.append(f"All {len(legs)} win: {chance_text(allwin)}.")
+    short = short_text(t)
+    if short:
+        out.append(short)
     if t.get("ladder"):
         out.append(t["ladder"])
     two = two_x_text(legs)
