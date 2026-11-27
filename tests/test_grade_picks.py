@@ -199,6 +199,12 @@ class PropTest(unittest.TestCase):
         G.watch(path, get=get, sleep=lambda s: rounds.append(s), emit=lambda m: None, remember=False)
         self.assertEqual(sum("event=1" in u for u in calls), 1, calls)    # read once, then skipped
 
+    def test_short_clause(self):
+        picks = [dict(id=str(g), price=p) for g in range(6) for p in ("-1500", "-6000")]
+        res = ["lost", "won"] * 6
+        self.assertEqual(G._short_clause(picks, res), "; short 6: 6-0 (all won)")
+        self.assertEqual(G._short_clause(picks[:4], res[:4]), "")
+
     def test_watch_survives_a_bad_read(self):
         import json
         import tempfile

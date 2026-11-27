@@ -599,9 +599,20 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
             res = [seen.get(p.get("label") or json.dumps(p, sort_keys=True), "open").lower() for p in picks]
             sm = summary(picks, res)
             emit(f"all picks settled: {sm['won']}-{sm['lost']}" + (f", {sm['push']} void" if sm["push"] else "")
-                 + f"; all won: {'YES' if not sm['lost'] and sm['won'] else 'no'}")
+                 + f"; all won: {'YES' if not sm['lost'] and sm['won'] else 'no'}" + _short_clause(picks, res))
             return seen
         (sleep or time.sleep)(every)
+
+
+def _short_clause(picks, res):
+    """'; short 6: 6-0 (all won)' -- the ticket's short-ticket line on its own
+    results (daily_review.short_ticket_result), '' when it has no short ticket."""
+    try:
+        import daily_review
+        sh = daily_review.short_ticket_result(picks, res)
+    except Exception:
+        return ""
+    return f"; {sh}" if sh else ""
 
 
 def shared_get(get=None, ttl=60, clock=None):
