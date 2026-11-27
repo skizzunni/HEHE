@@ -286,6 +286,20 @@ class BoardPropTest(unittest.TestCase):
         self.assertEqual(G.grade(dict(pk, line=6.0, line_text="6+"), {}, False, NHL_BOX), "open")
         self.assertEqual(G.grade(dict(pk, player="Nobody Else"), {}, True, NHL_BOX), "push")   # did not play: void
 
+    def test_football_player_in_plays_only_is_lost_not_void(self):
+        """2026-11-27: a receiver targeted without a catch is missing from
+        ESPN's football box; named in the play-by-play he played -- 0, lost."""
+        box = {"boxscore": {"players": [{"team": {"abbreviation": "LAC"}, "statistics": [
+            {"name": "receiving", "keys": ["receptions", "receivingYards"], "labels": ["REC", "YDS"],
+             "athletes": [{"athlete": {"id": "7", "displayName": "Keenan Allen"}, "stats": ["6", "71"]}]}]}]},
+               "drives": {"previous": [{"plays": [
+                   {"text": "(Shotgun) J.Herbert pass incomplete short middle to D.Njoku (T.Buchanan)."}]}]}}
+        pk = dict(kind="prop", lg="nfl", market="Receptions", player="David Njoku", line=1.0, line_text="1+",
+                  stat="Receptions")
+        self.assertEqual(G.board_prop(pk, box), "lost")
+        self.assertEqual(G.board_prop(dict(pk, player="Tyler Warren"), box), "void")    # never named: DNP
+        self.assertEqual(G.board_prop(dict(pk, player="D.J. Allen"), box), "void")      # another first letter
+
     def test_nickname_in_box_score(self):
         # FanDuel's "Mitchell Marner" is ESPN's "Mitch Marner" (Nov 24 ticket leg)
         box = {"boxscore": {"players": [{"team": {"abbreviation": "VGK"}, "statistics": [
