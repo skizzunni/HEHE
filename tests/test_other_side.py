@@ -27,10 +27,10 @@ class OtherSide(unittest.TestCase):
         self.assertIn("PHI +8.5 -- PHI @ DAL (road dog: 89/170", O.text(O.dogs(ROWS)))
         home = [dict(ROWS[0], line="PHI -9.5")]                # DAL the home dog
         self.assertIn("DAL +9.5 -- PHI @ DAL (home dog: 47/72", O.text(O.dogs(home)))
-        self.assertEqual(O.text([]), "Other side: no NFL underdog getting 7.5-14 today.")
+        self.assertEqual(O.text([]), "Other side: no NFL underdog getting 7.5-14 on the lines posted so far.")
         self.assertEqual(O.text([], rows=[dict(lg="nfl", game="DEN @ PIT", line="PIT -2.5"),
                                           dict(lg="nba", game="X @ Y", line="Y -3")]),
-                         "Other side: no NFL underdog getting 7.5-14 today. NFL lines: DEN @ PIT PIT -2.5.")
+                         "Other side: no NFL underdog getting 7.5-14 on the lines posted so far. NFL lines: DEN @ PIT PIT -2.5.")
 
 class ForwardNoteTest(unittest.TestCase):
     def test_counts_cards_forward(self):
