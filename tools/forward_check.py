@@ -11,7 +11,11 @@ implies, with z, by league and price band.
 Bands follow the safest ticket's cuts: NBA props -2500 or shorter, NHL props
 -1500 or shorter, NFL props -1000 or shorter; moneylines are left out.
 
-  python3 tools/forward_check.py [--since 2026-11-24] [--root work]
+`--scoring` also splits the NBA and NFL legs by whether the game finished
+under or over its ESPN pickcenter total (README row 2026-11-28: the NBA legs'
+shortfall came from games that went under their total -- known only after).
+
+  python3 tools/forward_check.py [--since 2026-11-24] [--root work] [--scoring]
 """
 import glob
 import math
@@ -32,14 +36,14 @@ def implied(price):
 
 
 def legs(graded):
-    """{(day, league, label): (price, won)} from [(day, picks, results)] --
+    """{(day, league, label): (price, won, event id)} from [(day, picks, results)] --
     props only, settled only, each label once per day."""
     out = {}
     for day, picks, results in graded:
         for p, r in zip(picks, results):
             if p.get("kind") != "prop" or r not in ("won", "lost") or p.get("lg") not in CUTS:
                 continue
-            out[(day, p["lg"], p.get("label", "").split(" -- ")[0])] = (int(p["price"]), r == "won")
+            out[(day, p["lg"], p.get("label", "").split(" -- ")[0])] = (int(p["price"]), r == "won", p.get("id"))
     return out
 
 
@@ -48,7 +52,7 @@ def table(found):
     rows = []
     for lg, cut in CUTS.items():
         for heavy in (True, False):
-            t = [(pr, w) for (d, l, _), (pr, w) in found.items() if l == lg and (pr <= cut) == heavy]
+            t = [(pr, w) for (d, l, _), (pr, w, *_) in found.items() if l == lg and (pr <= cut) == heavy]
             if not t:
                 continue
             won = sum(w for _, w in t)
@@ -56,6 +60,40 @@ def table(found):
             ex, v = sum(imp), sum(i * (1 - i) for i in imp)
             rows.append((lg, f"{cut} or shorter" if heavy else f"longer than {cut}", won, len(t), ex,
                          (won - ex) / math.sqrt(v) if v else 0.0))
+    return rows
+
+
+def _z(t):
+    """(won, n, priced, z) for [(price, won)]."""
+    won = sum(w for _, w in t)
+    imp = [implied(pr) for pr, _ in t]
+    ex, v = sum(imp), sum(i * (1 - i) for i in imp)
+    return won, len(t), ex, (won - ex) / math.sqrt(v) if v else 0.0
+
+
+def by_scoring(found, scoring):
+    """[(league, 'under' | 'over', games, won, n, priced, z)] -- legs split by
+    whether their game finished under its total. scoring(lg, event id) ->
+    (final points, total) or None."""
+    cache, rows = {}, []
+    for lg in ("nba", "nfl"):
+        tagged = []
+        for (d, l, _), (pr, w, eid) in found.items():
+            if l != lg or not eid:
+                continue
+            if (lg, eid) not in cache:
+                try:
+                    cache[(lg, eid)] = scoring(lg, eid)
+                except Exception:
+                    cache[(lg, eid)] = None
+            sc = cache[(lg, eid)]
+            if sc:
+                tagged.append((sc[0] < sc[1], pr, w, eid))
+        for under in (True, False):
+            t = [(pr, w) for u, pr, w, _ in tagged if u == under]
+            if t:
+                games = len({e for u, _, _, e in tagged if u == under})
+                rows.append((lg, "under" if under else "over", games) + _z(t))
     return rows
 
 
@@ -86,6 +124,11 @@ def main(argv):
     print(f"{len(found)} settled prop legs, each once per day, from {len(graded)} saved tickets")
     for lg, band, won, n, ex, z in table(found):
         print(f"  {lg} {band}: {won}/{n} against {ex:.1f} priced (z {z:+.2f})")
+    if "--scoring" in argv:
+        import both_sides
+        print("by how the game scored against its ESPN total (known only after the game):")
+        for lg, side, games, won, n, ex, z in by_scoring(found, both_sides.scoring):
+            print(f"  {lg} games that went {side} ({games}): {won}/{n} against {ex:.1f} priced (z {z:+.2f})")
 
 
 if __name__ == "__main__":

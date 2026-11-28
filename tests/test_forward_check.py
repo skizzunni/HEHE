@@ -20,6 +20,14 @@ class ForwardCheckTest(unittest.TestCase):
         self.assertEqual(rows[("nhl", "-1500 or shorter")], (0, 1))
         self.assertEqual(rows[("nhl", "longer than -1500")], (1, 1))
 
+    def test_by_scoring(self):
+        found = {("11-27", "nba", "A"): (-2500, False, "1"), ("11-27", "nba", "B"): (-2500, True, "1"),
+                 ("11-27", "nba", "C"): (-2500, True, "2"), ("11-27", "nba", "D"): (-2500, True, None)}
+        sc = {"1": (198, 230.5), "2": (224, 218.5)}
+        rows = {(lg, side): (g, w, n) for lg, side, g, w, n, ex, z in F.by_scoring(found, lambda lg, e: sc.get(e))}
+        self.assertEqual(rows[("nba", "under")], (1, 1, 2))
+        self.assertEqual(rows[("nba", "over")], (1, 1, 1))
+
     def test_implied_and_day(self):
         self.assertAlmostEqual(F.implied("-1500"), 0.9375)
         self.assertAlmostEqual(F.implied("+150"), 0.4)
