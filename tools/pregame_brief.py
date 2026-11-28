@@ -12,6 +12,7 @@ Three sections, each from its own tool, each allowed to fail on its own (a
 dead feed prints a one-line note, the rest still prints):
   1. tools/slate_sheet.py      -- price-blind number first, then the DraftKings line
   2. tools/nba_injury_report.py -- the league's official injury report, incl. teams not yet submitted
+     tools/key_absences.py     -- only the teams missing one of their 6 most-used players lately
   3. tools/nhl_goalies.py      -- starting goalies, confirmed or not, flagged when not the usual starter
   4. tools/nfl_weather.py      -- kickoff weather for outdoor NFL games (information only)
      tools/other_side.py       -- the NFL 7.5-14 underdog card at the current line
@@ -36,6 +37,14 @@ def _injuries(day):
     import nba_injury_report
     d = dt.date.fromisoformat(day)
     return nba_injury_report.report(day=d.strftime("%m/%d/%Y"))
+
+
+def _key_absences(day):
+    """tools/key_absences.py, teams with a key player out or in doubt only.
+    2026-11-28: the morning check ran it by hand; the brief now carries it."""
+    import key_absences
+    lines = [x for x in key_absences.main(day) if "no key player out" not in x]
+    return "\n".join(lines) or "No NBA team is missing one of its 6 most-used players."
 
 
 def _goalies(day):
@@ -109,6 +118,7 @@ def _weather(day):
 
 SECTIONS = (("Our number first, then the line", _slate),
             ("Official NBA injury report", _injuries),
+            ("NBA key players out or in doubt", _key_absences),
             ("NHL starting goalies", _goalies),
             ("NFL kickoff weather", _weather),
             ("Other side (NFL underdogs getting 7.5-14)", _other),

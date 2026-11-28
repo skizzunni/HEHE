@@ -64,6 +64,17 @@ class TicketSectionTest(unittest.TestCase):
             self.assertEqual(P._ticket("2026-11-26"),
                              "[ticket_safe.json]\nticket_safe.json\n\n[ticket.json]\nticket.json")
 
+    def test_key_absences_section(self):
+        import key_absences
+        from unittest.mock import patch
+        names = [n for n, _ in P.SECTIONS]
+        self.assertIn("NBA key players out or in doubt", names)
+        rows = ["A @ B Team A: X (30.1 min) Out", "A @ B Team B: no key player out (of the 6 who ...)"]
+        with patch.object(key_absences, "main", return_value=rows):
+            self.assertEqual(P._key_absences("2026-11-28"), "A @ B Team A: X (30.1 min) Out")
+        with patch.object(key_absences, "main", return_value=rows[1:]):
+            self.assertIn("No NBA team is missing", P._key_absences("2026-11-28"))
+
     def test_weather_section_listed(self):
         self.assertIn(("NFL kickoff weather", P._weather), P.SECTIONS)
         self.assertIn(("Other side (NFL underdogs getting 7.5-14)", P._other), P.SECTIONS)
