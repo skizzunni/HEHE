@@ -1448,8 +1448,10 @@ no fade.** Today's slate is the last regular-season Saturday, where "anything
 happens in a rivalry game" says the favourite is overrated. Favourites' straight
 wins against the no-vig moneyline, rivalry week vs every other week: 2022 45 vs
 45.1 (z -0.04; other weeks -1.36), 2023 49 vs 45.0 (+1.15; +0.79), 2024 86 vs
-85.5 (+0.10; -0.21), 2025 176 vs 168.9 (+1.08; +1.44); against the spread they
-covered 44.3%, 51.6%, 52.4%, 54.9%. Rivalry-week favourites win what their
+85.5 (+0.10; -0.21), 2025 87/117 vs 84.1 (+0.64; +0.96); against the spread
+they covered 44.4%, 50.8%, 52.7%, 54.4% (`tools/cfb_study.py`, each game once --
+the first draft of this row counted the 2025 games twice, from two overlapping
+files). Rivalry-week favourites win what their
 price says, as in every other week -- the underdog side is no better: **rejected**.
 
 **NFL against the closing spread (2026-11-10): supports the pre-registered
