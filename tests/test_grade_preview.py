@@ -94,6 +94,22 @@ class UserTicketsLineTest(unittest.TestCase):
         g4 = lambda f: ([{}], [], res[os.path.basename(f)]) if f.endswith("other.json") else g3(f)
         self.assertIn("1-leg other-side card 1-0 (all won)", daily_review.user_tickets_line(root, g4))
 
+    def test_short_ticket_tally(self):
+        import json
+        import tempfile
+        import daily_review
+        root = tempfile.mkdtemp()
+        d = os.path.join(root, "work", "slate_nov27")
+        os.makedirs(d)
+        for f in ("ticket.json", "ticket_safe.json"):
+            json.dump([{}], open(os.path.join(d, f), "w"))
+        picks = [dict(id=str(i), price="-2000") for i in range(6)]
+        res = {"ticket.json": ["won"] * 5 + ["lost"], "ticket_safe.json": ["won"] * 6}
+        g = lambda f: (picks, res[os.path.basename(f)],
+                       dict(won=res[os.path.basename(f)].count("won"), lost=res[os.path.basename(f)].count("lost"),
+                            push=0, open=0))
+        self.assertIn("Short tickets: 1 of 2 all won", daily_review.user_tickets_line(root, g))
+
 
 class HeavyPropsLineTest(unittest.TestCase):
     def test_line(self):

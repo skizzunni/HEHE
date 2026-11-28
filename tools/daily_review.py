@@ -605,6 +605,7 @@ def user_tickets_line(root=None, grade_fn=None, last=3):
         grade_fn = grade_fn or grade_picks.main
         bits = []
         lost = {}
+        shorts = []
         for d in dirs:
             for f in sorted(glob.glob(os.path.join(d, "ticket*.json"))):
                 picks, res, sm = grade_fn(f)
@@ -621,12 +622,16 @@ def user_tickets_line(root=None, grade_fn=None, last=3):
                     sh = short_ticket_result(picks, res)
                     if sh:
                         bits[-1] += f" [{sh}]"
+                        shorts.append(sh.endswith("(all won)"))
                 for pk, rr in zip(picks, res):
                     if rr == "lost":
                         lost.setdefault((os.path.basename(d), pk.get("label")), (pk, set()))[1].add(kind)
     except Exception:
         return None
-    return "Your tickets: " + "; ".join(bits) + "." + (" " + lost_legs_clause(lost) if lost else "")
+    # 2026-11-28: the short ticket's forward record in one place, not read off each bracket
+    tally = (f" Short tickets: {sum(shorts)} of {len(shorts)} all won (each pays about 1.1x; the 38-day"
+             " replay still lost money)." if shorts else "")
+    return "Your tickets: " + "; ".join(bits) + "." + tally + (" " + lost_legs_clause(lost) if lost else "")
 
 
 def short_ticket_result(picks, res, n=6):
