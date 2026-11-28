@@ -32,6 +32,15 @@ class OtherSide(unittest.TestCase):
                                           dict(lg="nba", game="X @ Y", line="Y -3")]),
                          "Other side: no NFL underdog getting 7.5-14 on the lines posted so far. NFL lines: DEN @ PIT PIT -2.5.")
 
+class VenueNoteTest(unittest.TestCase):
+    def test_home_road_and_unknown(self):
+        r = {"home": "DAL", "away": "PHI"}
+        self.assertTrue(O.venue_note(r, "DAL").startswith(" (home dog"))
+        self.assertTrue(O.venue_note(r, "PHI").startswith(" (road dog"))
+        self.assertEqual(O.venue_note(r, "NYG"), "")          # a team the row does not name: no claim
+        self.assertEqual(O.venue_note({}, "DAL"), "")
+
+
 class ForwardNoteTest(unittest.TestCase):
     def test_counts_cards_forward(self):
         import other_side as O

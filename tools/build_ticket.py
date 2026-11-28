@@ -909,7 +909,7 @@ def without_heavy_nhl(legs):
     except (TypeError, ValueError, KeyError):
         pays = ""
     return (f"Without the {n} heavy NHL shots leg{'s' if n != 1 else ''} (your call, nothing is dropped): "
-            f"{len(keep)} legs, {chance_text(allwin)} all win{pays}.")
+            f"{len(keep)} leg{'s' if len(keep) != 1 else ''}, {chance_text(allwin)} all win{pays}.")
 
 
 def nhl_notes(t):

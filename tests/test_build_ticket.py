@@ -624,6 +624,17 @@ class NhlNotesTest(unittest.TestCase):
         self.assertEqual(B.without_heavy_nhl([cheap]), "")
 
 
+class WithoutHeavyNhlTest(unittest.TestCase):
+    def test_unpriced_leg_drops_the_payout_not_the_line(self):
+        tag = B.NHL_SOG_TAG
+        legs = [dict(label="A: 1+ Shots on Goal -2000" + tag, chance=0.9, price="-2000"),
+                dict(label="B: 5+ Points", chance=0.9, price=None)]
+        line = B.without_heavy_nhl(legs)
+        self.assertIn(" 1 leg, ", line)
+        self.assertNotIn("pays about", line)                  # no price on the kept leg: no payout claimed
+        self.assertEqual(B.without_heavy_nhl([legs[0]]), "")  # nothing would remain
+
+
 class FavTwoXNoteTest(unittest.TestCase):
     def test_all_moneyline_2x_says_so(self):
         ml = lambda team, p: dict(label=f"{team} moneyline {p} (76%, DraftKings no-vig)", kind="ml", lg="nba",
