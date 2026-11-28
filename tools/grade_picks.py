@@ -95,6 +95,30 @@ def _toi(summary, player):
     return None
 
 
+DEFAULT_REASONS = {"COACH'S DECISION", "COACHES DECISION"}
+
+
+def _box_note(summary, player):
+    """' (ESPN: right ankle sprain)' / ' (ESPN: ejected)' when ESPN's box score
+    carries a real reason or an ejection beside a player who played; ''
+    otherwise. ESPN prints "COACH'S DECISION" beside nearly every player,
+    starters on full minutes included (2026-11-27: all 26 in DAL-PHX), so that
+    default says nothing and is left out -- reading it as a benching was wrong
+    (Jalen Green, 5 in 19 minutes)."""
+    for t in ((summary or {}).get("boxscore") or {}).get("players") or []:
+        for cat in t.get("statistics") or []:
+            for a in cat.get("athletes") or []:
+                if not _same_player((a.get("athlete") or {}).get("displayName"), player):
+                    continue
+                if a.get("ejected"):
+                    return " (ESPN: ejected)"
+                r = (a.get("reason") or "").strip()
+                if not r or not a.get("stats") or r.upper() in DEFAULT_REASONS:
+                    return ""
+                return f" (ESPN: {r.lower()})"
+    return ""
+
+
 def _completed(summary):
     """True when an ESPN summary is for a finished game (never mid-game or pre-game)."""
     if (summary or {}).get("completed"):
@@ -556,11 +580,12 @@ def detail(pick, scores, summary):
                 # ice time beside the stat: 2026-11-25 Lafreniere lost 1+ shots with 0
                 # in 19:43 -- it tells a full-shift miss from a short night or injury
                 toi = _toi(summary, pick["player"])
-                return f" -- had {v:g}" + (f" in {toi} of ice time" if toi else "") + fin
+                return (f" -- had {v:g}" + (f" in {toi} of ice time" if toi else "")
+                        + _box_note(summary, pick["player"]) + fin)
             m = player_stat(summary, pick["player"], "MIN") if pick.get("lg") in ("nba", "ncaab", "wnba") else None
             # minutes beside the stat: 2026-11-25 Jaylen Brown lost 2+ assists with 1
             # in 17 minutes (31.2 a game) -- the minutes are the story of the loss
-            return f" -- had {v:g}" + (f" in {m:g} min" if m else "") + fin
+            return f" -- had {v:g}" + (f" in {m:g} min" if m else "") + _box_note(summary, pick["player"]) + fin
         if len(scores) == 2 and not scores.get("_void"):
             return " -- " + ", ".join(f"{k} {v:g}" for k, v in scores.items())
     except Exception:

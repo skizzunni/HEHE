@@ -377,6 +377,24 @@ class ValueLongshotClauseTest(unittest.TestCase):
         self.assertEqual(D.value_longshot_clause(finds[:5]), "")      # too few: nothing said
 
 
+class BoxNoteTest(unittest.TestCase):
+    def _summary(self, **extra):
+        a = dict(athlete={"displayName": "Jalen Green"}, stats=["19", "5"], **extra)
+        return {"boxscore": {"players": [{"statistics": [{"athletes": [a]}]}]}}
+
+    def test_reason_and_ejection(self):
+        # ESPN's default, printed beside nearly everyone, says nothing
+        self.assertEqual(G._box_note(self._summary(reason="COACH'S DECISION"), "Jalen Green"), "")
+        self.assertEqual(G._box_note(self._summary(reason="LEFT ANKLE SPRAIN"), "Jalen Green"),
+                         " (ESPN: left ankle sprain)")
+        self.assertEqual(G._box_note(self._summary(ejected=True), "Jalen Green"), " (ESPN: ejected)")
+        self.assertEqual(G._box_note(self._summary(), "Jalen Green"), "")
+        self.assertEqual(G._box_note(self._summary(reason="X"), "Someone Else"), "")
+        # a DNP (no stats) is the void path's business, not this note's
+        dnp = {"boxscore": {"players": [{"statistics": [{"athletes": [
+            dict(athlete={"displayName": "Jalen Green"}, stats=[], reason="INJURY")]}]}]}}
+        self.assertEqual(G._box_note(dnp, "Jalen Green"), "")
+
 if __name__ == "__main__":
     unittest.main()
 
