@@ -1435,6 +1435,14 @@ in both. Home dogs getting 7.5-14 covered 59.4% this season (n 69) but 50.6%
 in 2025, and road dogs getting 7.5-14 covered 45.0% / 41.9%. Nothing is
 adopted; the college "other side" stays off the ticket.
 
+**College football unders on low totals (under 45), five seasons (2026-11-28):
+rejected.** The 2025-26 pull showed unders at totals under 45 winning 57.3% /
+56.7% (+9.1% / +8.5% flat), the "other side" a ticket never takes. Run on the
+strategy lab's 2022-24 games too (work/strategy_lab/football/ncaaf.json, its
+own book's lines): 2022 52.5% (+0.0%), 2023 51.6% (-1.6%), 2024 38.3% (-26.1%),
+2025 56.5% (+7.4%), 2026 57.8% (+10.5%). Two good seasons after a very bad one
+is not an edge -- the band was also picked by looking at four. Nothing changes.
+
 **NFL against the closing spread (2026-11-10): supports the pre-registered
 test, adopts nothing.** 1,086 NFL games 2021-24 with closes; 456 with a
 closing spread both sides agree on (2023 and 2024 only).
