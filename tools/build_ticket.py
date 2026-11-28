@@ -879,6 +879,26 @@ PTS_REB_NOTE = (" -- note: NBA Pts + Reb at -1000 or shorter won 39/52 (75%) aga
                 " (z -4.18) -- all from Oct 21 to Nov 5; none graded since, so one half only (README 2026-11-27, caution)")
 
 
+NHL_SOG_NOTE = (" -- note: NHL 1+ shots at -1500 or shorter went 42/51 (82%) on the saved tickets Nov 24-27"
+                " against 95% priced -- worse than the -1000 to -1499 legs (34/38); past the bar on one night"
+                " only (README 2026-11-28, caution)")
+
+
+def nhl_notes(t):
+    """Information-only note on NHL 1+ Shots on Goal legs at -1500 or shorter
+    (README 2026-11-28): a note, never a cut, so --safest keeps them."""
+    for legs in (t.get("games") or {}).values():
+        for L in legs:
+            try:
+                heavy = int(str(L.get("price"))) <= -1500
+            except ValueError:
+                heavy = False
+            if L.get("lg") == "nhl" and L.get("market") == "Shots on Goal" and (L.get("line") or 0) == 1 \
+                    and heavy and "NHL 1+ shots at -1500" not in L.get("label", ""):
+                L["label"] = L["label"] + NHL_SOG_NOTE
+    return t
+
+
 def nba_notes(t):
     """Information-only notes on NBA legs (README 2026-11-27): a note, never a cut."""
     for legs in (t.get("games") or {}).values():
@@ -971,7 +991,7 @@ if __name__ == "__main__":
         t["note"] = ((t.get("note") or "") + " SAFEST LEGS ONLY: props at -2500 or shorter, NHL props at -1500 or "
                      "shorter, NFL props at -1000 or shorter, moneylines at 90%+ (these won "
                      "94% / 92% / 91.5% / 96% on the record).").strip()
-    t = nba_notes(nfl_notes(t))
+    t = nhl_notes(nba_notes(nfl_notes(t)))
     combo = []
     if t.pop("ladder_pending", False):
         # after the college legs join, so the stand-in sees what the 2x line sees

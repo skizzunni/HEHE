@@ -606,6 +606,20 @@ class NbaNotesTest(unittest.TestCase):
         self.assertEqual(len(B.safest(t)["games"]["G"]), 2)
 
 
+class NhlNotesTest(unittest.TestCase):
+    def test_heavy_one_shot_noted_once(self):
+        L = dict(label="William Nylander: 1+ Shots on Goal -1800 (87%)", lg="nhl", kind="prop",
+                 market="Shots on Goal", line=1.0, price="-1800", chance=0.87)
+        cheap = dict(L, label="Mark Scheifele: 1+ Shots on Goal -1050 (86%)", price="-1050")
+        two = dict(L, label="Cutter Gauthier: 2+ Shots on Goal -1500 (87%)", line=2.0, price="-1500")
+        t = B.nhl_notes(B.nhl_notes({"games": {"G": [L, cheap, two]}}))
+        g = t["games"]["G"]
+        self.assertEqual(g[0]["label"].count("NHL 1+ shots at -1500"), 1)
+        self.assertNotIn("note:", g[1]["label"])
+        self.assertNotIn("note:", g[2]["label"])
+        self.assertEqual(len(B.safest(t)["games"]["G"]), len(B.safest({"games": {"G": [dict(L), cheap, two]}})["games"]["G"]))
+
+
 class FavTwoXNoteTest(unittest.TestCase):
     def test_all_moneyline_2x_says_so(self):
         ml = lambda team, p: dict(label=f"{team} moneyline {p} (76%, DraftKings no-vig)", kind="ml", lg="nba",
