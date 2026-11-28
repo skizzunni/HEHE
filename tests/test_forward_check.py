@@ -34,6 +34,32 @@ class ForwardCheckTest(unittest.TestCase):
         self.assertIsNone(F.grade_one("x.json", bad))
         self.assertEqual(F.grade_one("x.json", lambda p: ([1], ["won"], {})), ([1], ["won"]))
 
+    def test_main_reads_slates_since_and_skips_bad(self):
+        import io
+        import os
+        import tempfile
+        from contextlib import redirect_stdout
+        from unittest.mock import patch
+        import grade_picks
+        root = tempfile.mkdtemp()
+        for d in ("slate_nov23", "slate_nov27"):
+            os.makedirs(os.path.join(root, d))
+            open(os.path.join(root, d, "ticket.json"), "w").write("[]")
+        open(os.path.join(root, "slate_nov27", "ticket_safe.json"), "w").write("[]")
+        leg = dict(kind="prop", lg="nba", label="A: 5+ Points -3000 (87%)", price="-3000", id="1")
+
+        def fake(path):
+            if path.endswith("ticket_safe.json"):
+                raise ValueError("bad file")
+            return [leg], ["won"], {}
+        out = io.StringIO()
+        with patch.object(grade_picks, "main", fake), redirect_stdout(out):
+            F.main(["x", "--root", root, "--since", "2026-11-24"])
+        text = out.getvalue()
+        self.assertIn("1 settled prop legs, each once per day, from 1 saved tickets", text)   # nov23 left out
+        self.assertIn("could not grade:", text)
+        self.assertIn("nba -2500 or shorter: 1/1", text)
+
     def test_implied_and_day(self):
         self.assertAlmostEqual(F.implied("-1500"), 0.9375)
         self.assertAlmostEqual(F.implied("+150"), 0.4)
