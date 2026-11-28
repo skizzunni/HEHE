@@ -614,10 +614,12 @@ class NhlNotesTest(unittest.TestCase):
         two = dict(L, label="Cutter Gauthier: 2+ Shots on Goal -1500 (87%)", line=2.0, price="-1500")
         t = B.nhl_notes(B.nhl_notes({"games": {"G": [L, cheap, two]}}))
         g = t["games"]["G"]
-        self.assertEqual(g[0]["label"].count("NHL 1+ shots at -1500"), 1)
+        self.assertEqual(g[0]["label"].count(B.NHL_SOG_TAG), 1)
         self.assertNotIn("note:", g[1]["label"])
         self.assertNotIn("note:", g[2]["label"])
         self.assertEqual(len(B.safest(t)["games"]["G"]), len(B.safest({"games": {"G": [dict(L), cheap, two]}})["games"]["G"]))
+        out = B.text(dict(games=t["games"], left_off=[]))
+        self.assertEqual(out.count("NHL 1+ shots at -1500 or shorter went 42/51"), 1)     # once, below the legs
 
 
 class FavTwoXNoteTest(unittest.TestCase):

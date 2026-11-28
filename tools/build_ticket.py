@@ -326,6 +326,9 @@ def text(t):
                        f"Each leg stands on its own; the size is your call.")
         except (TypeError, ValueError):
             out.append(f"All {len(legs)} win: {chance_text(allwin)}.")
+    # 2026-11-28: the full note once, not on every leg (29 of 38 legs carried it in a dry run)
+    if any(NHL_SOG_TAG in x.get("label", "") for x in legs):
+        out.append(NHL_SOG_NOTE)
     short = short_text(t)
     if short:
         out.append(short)
@@ -879,14 +882,16 @@ PTS_REB_NOTE = (" -- note: NBA Pts + Reb at -1000 or shorter won 39/52 (75%) aga
                 " (z -4.18) -- all from Oct 21 to Nov 5; none graded since, so one half only (README 2026-11-27, caution)")
 
 
-NHL_SOG_NOTE = (" -- note: NHL 1+ shots at -1500 or shorter went 42/51 (82%) on the saved tickets Nov 24-27"
-                " against 95% priced -- worse than the -1000 to -1499 legs (34/38); past the bar on one night"
-                " only (README 2026-11-28, caution)")
+NHL_SOG_TAG = " -- note: heavy NHL shots (see below)"
+NHL_SOG_NOTE = ("Note on the legs marked 'heavy NHL shots': NHL 1+ shots at -1500 or shorter went 42/51 (82%) on"
+                " the saved tickets Nov 24-27 against 95% priced -- worse than the -1000 to -1499 legs (34/38);"
+                " past the bar on one night only (README 2026-11-28, caution, not a cut).")
 
 
 def nhl_notes(t):
-    """Information-only note on NHL 1+ Shots on Goal legs at -1500 or shorter
-    (README 2026-11-28): a note, never a cut, so --safest keeps them."""
+    """Information-only tag on NHL 1+ Shots on Goal legs at -1500 or shorter
+    (README 2026-11-28): a note, never a cut, so --safest keeps them. The leg
+    carries a short tag; text() prints NHL_SOG_NOTE once below the ticket."""
     for legs in (t.get("games") or {}).values():
         for L in legs:
             try:
@@ -894,8 +899,8 @@ def nhl_notes(t):
             except ValueError:
                 heavy = False
             if L.get("lg") == "nhl" and L.get("market") == "Shots on Goal" and (L.get("line") or 0) == 1 \
-                    and heavy and "NHL 1+ shots at -1500" not in L.get("label", ""):
-                L["label"] = L["label"] + NHL_SOG_NOTE
+                    and heavy and NHL_SOG_TAG not in L.get("label", ""):
+                L["label"] = L["label"] + NHL_SOG_TAG
     return t
 
 
