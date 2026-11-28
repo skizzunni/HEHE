@@ -18,7 +18,7 @@ the evidence a rule needs before it changes a ticket.
                                                           FanDuel's price (z) and in how many
                                                           games the over fell short; --totals
                                                           also reads each game's final points
-                                                          against its ESPN total (NBA, NFL)
+                                                          against its ESPN total (NBA, NFL, NHL)
 """
 import datetime as dt
 import json
@@ -158,7 +158,7 @@ def by_market(book=None, min_n=10):
         "both sides by market: no market has 10 graded lines a side yet"
 
 
-SPORTS = {"nba": "basketball/nba", "nfl": "football/nfl"}
+SPORTS = {"nba": "basketball/nba", "nfl": "football/nfl", "nhl": "hockey/nhl"}
 
 
 def scoring(lg, eid, get=None):

@@ -11,7 +11,7 @@ implies, with z, by league and price band.
 Bands follow the safest ticket's cuts: NBA props -2500 or shorter, NHL props
 -1500 or shorter, NFL props -1000 or shorter; moneylines are left out.
 
-`--scoring` also splits the NBA and NFL legs by whether the game finished
+`--scoring` also splits the NBA, NFL and NHL legs by whether the game finished
 under or over its ESPN pickcenter total (README row 2026-11-28: the NBA legs'
 shortfall came from games that went under their total -- known only after).
 
@@ -76,7 +76,7 @@ def by_scoring(found, scoring):
     whether their game finished under its total. scoring(lg, event id) ->
     (final points, total) or None."""
     cache, rows = {}, []
-    for lg in ("nba", "nfl"):
+    for lg in ("nba", "nfl", "nhl"):
         tagged = []
         for (d, l, _), (pr, w, eid) in found.items():
             if l != lg or not eid:
