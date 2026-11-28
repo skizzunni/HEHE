@@ -887,8 +887,11 @@ PTS_REB_NOTE = (" -- note: NBA Pts + Reb at -1000 or shorter won 39/52 (75%) aga
 
 NHL_SOG_TAG = " -- note: heavy NHL shots (see below)"
 NHL_SOG_NOTE = ("Note on the legs marked 'heavy NHL shots': NHL 1+ shots at -1500 or shorter went 42/51 (82%) on"
-                " the saved tickets Nov 24-27 against 95% priced -- worse than the -1000 to -1499 legs (34/38);"
-                " past the bar on one night only (README 2026-11-28, caution, not a cut).")
+                " the saved tickets Nov 24-27 against 95% priced, worse than the -1000 to -1499 legs (34/38). The"
+                " longer record says the opposite: before Nov 24 the heavy band ran closer to its price (195/213,"
+                " z -1.53 / -1.78) than the -1000 to -1499 band (424/492, z -2.49 / -4.05) -- every NHL 1+ shots"
+                " band runs short of FanDuel's price, so swapping heavy legs for cheaper ones is not shown to help"
+                " (README 2026-11-28, caution, not a cut).")
 
 
 def without_heavy_nhl(legs):
