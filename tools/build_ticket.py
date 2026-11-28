@@ -329,6 +329,9 @@ def text(t):
     # 2026-11-28: the full note once, not on every leg (29 of 38 legs carried it in a dry run)
     if any(NHL_SOG_TAG in x.get("label", "") for x in legs):
         out.append(NHL_SOG_NOTE)
+        rest = without_heavy_nhl(legs)
+        if rest:
+            out.append(rest)
     short = short_text(t)
     if short:
         out.append(short)
@@ -886,6 +889,24 @@ NHL_SOG_TAG = " -- note: heavy NHL shots (see below)"
 NHL_SOG_NOTE = ("Note on the legs marked 'heavy NHL shots': NHL 1+ shots at -1500 or shorter went 42/51 (82%) on"
                 " the saved tickets Nov 24-27 against 95% priced -- worse than the -1000 to -1499 legs (34/38);"
                 " past the bar on one night only (README 2026-11-28, caution, not a cut).")
+
+
+def without_heavy_nhl(legs):
+    """'Without the heavy NHL shots legs: 9 legs, about 50% all win, pays
+    about 1.6x' -- the ticket with the tagged legs taken out, for the user to
+    weigh (2026-11-28: 29 of the dry run's 38 safest legs were tagged). Their
+    call; nothing is dropped. '' when no leg is tagged or none would remain."""
+    keep = [x for x in legs if NHL_SOG_TAG not in x.get("label", "")]
+    n = len(legs) - len(keep)
+    if not n or not keep:
+        return ""
+    allwin = math.prod(x["chance"] for x in keep)
+    try:
+        pays = f", pays about {math.prod(_dec(x['price']) for x in keep):.2f}x"
+    except (TypeError, ValueError, KeyError):
+        pays = ""
+    return (f"Without the {n} heavy NHL shots leg{'s' if n != 1 else ''} (your call, nothing is dropped): "
+            f"{len(keep)} legs, {chance_text(allwin)} all win{pays}.")
 
 
 def nhl_notes(t):

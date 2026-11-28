@@ -620,6 +620,8 @@ class NhlNotesTest(unittest.TestCase):
         self.assertEqual(len(B.safest(t)["games"]["G"]), len(B.safest({"games": {"G": [dict(L), cheap, two]}})["games"]["G"]))
         out = B.text(dict(games=t["games"], left_off=[]))
         self.assertEqual(out.count("NHL 1+ shots at -1500 or shorter went 42/51"), 1)     # once, below the legs
+        self.assertIn("Without the 1 heavy NHL shots leg (your call, nothing is dropped): 2 legs,", out)
+        self.assertEqual(B.without_heavy_nhl([cheap]), "")
 
 
 class FavTwoXNoteTest(unittest.TestCase):
