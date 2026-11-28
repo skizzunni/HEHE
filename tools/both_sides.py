@@ -14,9 +14,11 @@ the evidence a rule needs before it changes a ticket.
   python3 tools/both_sides.py grade                       settle finished games
   python3 tools/both_sides.py report                      over vs under
   python3 tools/both_sides.py markets                     the same by league and market
-  python3 tools/both_sides.py games                       by league and day: each side vs
+  python3 tools/both_sides.py games [--totals]            by league and day: each side vs
                                                           FanDuel's price (z) and in how many
-                                                          games the over fell short
+                                                          games the over fell short; --totals
+                                                          also reads each game's final points
+                                                          against its ESPN total (NBA, NFL)
 """
 import datetime as dt
 import json
@@ -156,7 +158,50 @@ def by_market(book=None, min_n=10):
         "both sides by market: no market has 10 graded lines a side yet"
 
 
-def by_game(book=None):
+SPORTS = {"nba": "basketball/nba", "nfl": "football/nfl"}
+
+
+def scoring(lg, eid, get=None):
+    """(final points, ESPN pickcenter total) for a finished game, or None."""
+    import prop_context as PC
+    get = get or PC._get
+    s = get(PC.SITE.format(SPORTS[lg], f"summary?event={eid}"))
+    try:
+        comp = s["header"]["competitions"][0]
+        pts = sum(int(c["score"]) for c in comp["competitors"])
+    except (KeyError, IndexError, TypeError, ValueError):
+        return None
+    for pc in s.get("pickcenter") or []:
+        try:
+            return pts, float(pc["overUnder"])
+        except (KeyError, TypeError, ValueError):
+            continue
+    return None
+
+
+def totals_line(book, lg, day, get=None):
+    """'games under their total: 8 of 10, by 13.7 a game on average' --
+    2026-11-28: Nov 27's NBA prop overs fell short in 9 of 10 games because
+    8 of the 10 games went under their own total; an over/under night means
+    little until it is set beside how the games scored."""
+    gids = sorted({e["gid"] for e in book.values() if e.get("league") == lg and e["date"] == day
+                   and e.get("status") in ("won", "lost")})
+    got = []
+    for g in gids:
+        try:
+            r = scoring(lg, g.split(":", 1)[1], get)
+        except Exception:
+            r = None
+        if r:
+            got.append(r)
+    if not got:
+        return ""
+    under = sum(p < t for p, t in got)
+    miss = sum(p - t for p, t in got) / len(got)
+    return f"; games under their total: {under} of {len(got)}, final minus total {miss:+.1f} a game"
+
+
+def by_game(book=None, totals=False, get=None):
     """Per league and day: over and under won against FanDuel's implied chance
     (z), and the count of games where the overs fell short of it. 2026-11-28:
     lines in one game rise and fall together (pace, blowouts), so 459 NBA
@@ -186,7 +231,8 @@ def by_game(book=None):
                 g[0] += e["status"] == "won"
                 g[1] += e["imp"]
         short = sum(w < ex for w, ex in games.values())
-        out.append(f"  {lg} {day}: " + "; ".join(cells) + f"; overs short in {short} of {len(games)} games")
+        extra = totals_line(book, lg, day, get) if totals and lg in SPORTS else ""
+        out.append(f"  {lg} {day}: " + "; ".join(cells) + f"; overs short in {short} of {len(games)} games" + extra)
     return "\n".join(["both sides by league and day:"] + out) if out else "both sides by day: nothing graded yet"
 
 
@@ -205,7 +251,7 @@ def main(argv):
     elif cmd == "markets":
         print(by_market())
     elif cmd == "games":
-        print(by_game())
+        print(by_game(totals="--totals" in argv))
     else:
         print(report())
 

@@ -109,5 +109,18 @@ class ByGameTest(unittest.TestCase):
         self.assertIn("overs short in 1 of 2 games", out)
         self.assertEqual(B.by_game({}), "both sides by day: nothing graded yet")
 
+    def test_totals_line(self):
+        def get(u):
+            eid = u.rsplit("=", 1)[1]
+            pts = {"1": ("100", "98"), "2": ("120", "115")}[eid]
+            return {"header": {"competitions": [{"competitors": [{"score": pts[0]}, {"score": pts[1]}]}]},
+                    "pickcenter": [{"overUnder": 220.5}]}
+        mk = lambda k, gid: (k, dict(league="nba", date="2026-11-27", gid=gid, side="over",
+                                     status="lost", imp=0.5, price="-110"))
+        book = dict([mk("a", "nba:1"), mk("b", "nba:2")])
+        self.assertEqual(B.totals_line(book, "nba", "2026-11-27", get),
+                         "; games under their total: 1 of 2, final minus total -4.0 a game")
+        self.assertIn("games under their total: 1 of 2", B.by_game(book, totals=True, get=get))
+
 if __name__ == "__main__":
     unittest.main()
