@@ -547,6 +547,26 @@ def _save_seen(path, seen):
         pass
 
 
+def _vs_total(summary, comp):
+    """'; total 224.5, went under by 51.5' from ESPN's pickcenter, '' without one.
+    2026-11-28: this week's ticket legs lost in games that went under their
+    total (NBA 57/67 vs 22/24 over -- tools/forward_check.py --scoring); the
+    settled line now shows which kind of game it was."""
+    try:
+        pts = sum(int(x["score"]) for x in comp["competitors"])
+    except (KeyError, TypeError, ValueError):
+        return ""
+    for pc in (summary or {}).get("pickcenter") or []:
+        try:
+            t = float(pc["overUnder"])
+        except (KeyError, TypeError, ValueError):
+            continue
+        if pts == t:
+            return f"; total {t:g}, landed on it"
+        return f"; total {t:g}, went {'under' if pts < t else 'over'} by {abs(pts - t):g}"
+    return ""
+
+
 def _final_score(summary):
     """' (final: UTA 6, NSH 5, Final/SO)' from an ESPN summary; '' when unreadable."""
     try:
@@ -554,7 +574,7 @@ def _final_score(summary):
         teams = ", ".join(f"{x['team']['abbreviation']} {x['score']}"
                           for x in sorted(c["competitors"], key=lambda x: -int(x.get("score") or 0)))
         det = ((c.get("status") or {}).get("type") or {}).get("detail") or ""
-        return f" (final: {teams}" + (f", {det}" if det and det != "Final" else "") + ")"
+        return f" (final: {teams}" + (f", {det}" if det and det != "Final" else "") + _vs_total(summary, c) + ")"
     except (KeyError, IndexError, TypeError, ValueError):
         return ""
 

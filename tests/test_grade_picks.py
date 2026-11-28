@@ -214,6 +214,10 @@ class PropTest(unittest.TestCase):
         sm["header"]["competitions"][0]["status"]["type"]["detail"] = "Final"
         self.assertEqual(G._final_score(sm), " (final: UTA 6, NSH 5)")
         self.assertEqual(G._final_score({}), "")
+        sm["pickcenter"] = [{"provider": "x"}, {"overUnder": 6.5}]
+        self.assertEqual(G._final_score(sm), " (final: UTA 6, NSH 5; total 6.5, went over by 4.5)")
+        sm["pickcenter"] = [{"overUnder": 11}]
+        self.assertEqual(G._final_score(sm), " (final: UTA 6, NSH 5; total 11, landed on it)")
 
     def test_short_clause(self):
         picks = [dict(id=str(g), price=p) for g in range(6) for p in ("-1500", "-6000")]
