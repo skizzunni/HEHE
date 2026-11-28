@@ -1419,6 +1419,22 @@ under-priced; 21+ point dogs lost both seasons. Nothing changes; small dogs
 stay on watch for this season's games, and the pre-registered 7-13.5 band
 keeps its own count.
 
+**College football small dogs, out of sample (2026-11-28): rejected.** The
+same tools on the 2025 season and the 2026 season so far (1,544 games against
+the closing spread, none in the study above):
+
+    dog getting   2025                     2026 so far
+    0.5-3.5       47.0% covered, -9.2%     48.1%, -8.5%
+    3.5-7.5       49.8%, -5.0%             52.5%, +0.3%
+    7.5-14        47.2%, -10.2%            48.9%, -7.0%
+    14-21         50.0%, -4.6%             49.2%, -6.2%
+    21+           46.5%, -10.9%            51.7%, -0.8%
+
+The small dogs that led in 2023-24 lost in both new seasons; no band is ahead
+in both. Home dogs getting 7.5-14 covered 59.4% this season (n 69) but 50.6%
+in 2025, and road dogs getting 7.5-14 covered 45.0% / 41.9%. Nothing is
+adopted; the college "other side" stays off the ticket.
+
 **NFL against the closing spread (2026-11-10): supports the pre-registered
 test, adopts nothing.** 1,086 NFL games 2021-24 with closes; 456 with a
 closing spread both sides agree on (2023 and 2024 only).
