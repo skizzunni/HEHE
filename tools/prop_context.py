@@ -18,7 +18,13 @@ the README row "NBA / NHL props on weekends vs weekdays" (on watch).
 `--by early` splits by kickoff before 3 PM ET vs later (start from sources.json;
 EST, UTC-5), the README row "NFL props by kickoff slot" (on watch).
 
-  python3 tools/prop_context.py nba|nhl|nfl [--by chance|weekend|early] [--cache DIR]
+NHL only, from ESPN box scores (position and ice time per player per game):
+`--by position` splits Shots on Goal props by defencemen vs forwards (README
+row 2026-11-28, rejected); `--by icetime` splits 1+ Shots on Goal props by the
+player's average ice time over his last 3-5 box scores, under ICE_CUT minutes
+vs more (README row 2026-11-28, on watch).
+
+  python3 tools/prop_context.py nba|nhl|nfl [--by chance|weekend|early|position|icetime] [--cache DIR]
 """
 import datetime as dt
 import json
@@ -135,6 +141,65 @@ def early_tag(props, games, hour=15):
     return out
 
 
+ICE_CUT, ICE_GAMES = 19.0, 5
+
+
+def _mins(v):
+    """'17:27' -> 17.45 minutes; None when it is not a clock."""
+    try:
+        m, sec = str(v).split(":")
+        return int(m) + int(sec) / 60
+    except ValueError:
+        return None
+
+
+def nhl_box(eid, get=_get):
+    """{normalised player name: (position abbr, ice time in minutes or None)}
+    from one NHL game's ESPN box score."""
+    import props_ledger as PL
+    s = get(SITE.format(SPORT["nhl"], f"summary?event={eid}"))
+    out = {}
+    for t in (s.get("boxscore") or {}).get("players") or []:
+        for grp in t.get("statistics") or []:
+            keys = grp.get("keys") or []
+            for a in grp.get("athletes") or []:
+                st = dict(zip(keys, a.get("stats") or []))
+                pos = (a["athlete"].get("position") or {}).get("abbreviation")
+                out[PL.norm_name(a["athlete"]["displayName"])] = (pos, _mins(st.get("timeOnIce")))
+    return out
+
+
+def position_tag(props, boxes):
+    """[(prop, is_defenceman)] for props whose player has a skater position."""
+    import props_ledger as PL
+    out = []
+    for e in props:
+        pos = ((boxes.get(e["gid"].split(":", 1)[1]) or {}).get(PL.norm_name(e["name"])) or (None,))[0]
+        if pos in ("D", "C", "LW", "RW", "F"):
+            out.append((e, pos == "D"))
+    return out
+
+
+def icetime_tag(props, boxes, cut=ICE_CUT, games=ICE_GAMES, min_games=3):
+    """[(prop, recent_ice_time_under_cut)] -- the average of the player's last
+    `games` box scores dated before the prop (at least min_games of them).
+    boxes: {event id: nhl_box()}; each event's date comes from the props."""
+    import collections
+    import props_ledger as PL
+    day = {e["gid"].split(":", 1)[1]: e["date"] for e in props}
+    hist = collections.defaultdict(list)
+    for eid, m in boxes.items():
+        for n, (_, toi) in m.items():
+            if toi is not None and eid in day:
+                hist[n].append((day[eid], toi))
+    out = []
+    for e in props:
+        prev = sorted(x for x in hist[PL.norm_name(e["name"])] if x[0] < e["date"])[-games:]
+        if len(prev) >= min_games:
+            out.append((e, sum(v for _, v in prev) / len(prev) < cut))
+    return out
+
+
 def weekend_tag(props):
     """[(prop, on_a_weekend)] by the prop's ET date."""
     return [(e, dt.date.fromisoformat(e["date"]).weekday() >= 5) for e in props]
@@ -183,6 +248,35 @@ def main(argv):
         for i, (a, r, z) in enumerate(compare(weekend_tag(props))):
             print(f"{('earlier', 'later')[i]} half: weekend {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
                   f"weekday {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
+        return
+    if by in ("position", "icetime"):
+        if lg != "nhl":
+            print("--by position / icetime are NHL only")
+            return
+        props = [e for e in props if e.get("market") == "Shots on Goal"]
+        boxes = {}
+        for eid in sorted({e["gid"].split(":", 1)[1] for e in props}):
+            f = os.path.join(cache, f"box-{eid}.json") if cache else None
+            if f and os.path.exists(f):
+                boxes[eid] = {k: tuple(v) for k, v in json.load(open(f)).items()}
+                continue
+            try:
+                boxes[eid] = nhl_box(eid)
+            except Exception:
+                continue
+            if f:
+                os.makedirs(cache, exist_ok=True)
+                json.dump(boxes[eid], open(f, "w"))
+            time.sleep(0.1)
+        if by == "position":
+            rows, labels = position_tag(props, boxes), ("defencemen", "forwards")
+        else:
+            rows = icetime_tag([e for e in props if e.get("line") == "1+"], boxes)
+            labels = (f"under {ICE_CUT:g} min lately", f"{ICE_CUT:g} min+")
+        for i, (a, r, z) in enumerate(compare(rows)):
+            print(f"{('earlier', 'later')[i]} half: {labels[0]} {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
+                  f"{labels[1]} {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
+        print(f"{len(rows)} of {len(props)} props placed")
         return
     days = sorted(e["date"] for e in props)
     sched = schedule(lg, dt.date.fromisoformat(days[0]) - dt.timedelta(days=1), dt.date.fromisoformat(days[-1]))

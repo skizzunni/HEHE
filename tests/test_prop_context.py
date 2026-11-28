@@ -63,6 +63,24 @@ class PropContextTest(unittest.TestCase):
         rows = C.weekend_tag([dict(date="2026-11-28"), dict(date="2026-11-27")])     # Sat, Fri
         self.assertEqual([b for _, b in rows], [True, False])
 
+    def test_nhl_box_position_and_icetime(self):
+        def get(u):
+            eid = u.rsplit("=", 1)[1]
+            toi = {"1": "15:00", "2": "16:00", "3": "17:00", "4": "22:00"}[eid]
+            return {"boxscore": {"players": [{"statistics": [{"keys": ["shotsTotal", "timeOnIce"], "athletes": [
+                {"athlete": {"displayName": "Steven Stamkos", "position": {"abbreviation": "C"}}, "stats": ["0", toi]},
+                {"athlete": {"displayName": "Roman Josi", "position": {"abbreviation": "D"}}, "stats": ["2", "24:30"]},
+                {"athlete": {"displayName": "Juuse Saros", "position": {"abbreviation": "G"}}, "stats": ["", "--"]}]}]}]}}
+        boxes = {e: C.nhl_box(e, get) for e in "1234"}
+        self.assertEqual(boxes["1"]["steven stamkos"], ("C", 15.0))
+        self.assertEqual(boxes["1"]["juuse saros"], ("G", None))
+        props = [dict(gid=f"nhl:{e}", name=n, date=f"2026-11-0{e}") for e in "1234"
+                 for n in ("Steven Stamkos", "Roman Josi", "Juuse Saros")]
+        pos = C.position_tag(props, boxes)
+        self.assertEqual({(e["name"], d) for e, d in pos}, {("Steven Stamkos", False), ("Roman Josi", True)})
+        ice = C.icetime_tag(props, boxes)          # only game 4 has 3 earlier box scores
+        self.assertEqual([(e["name"], u) for e, u in ice], [("Steven Stamkos", True), ("Roman Josi", False)])
+
 
 if __name__ == "__main__":
     unittest.main()
