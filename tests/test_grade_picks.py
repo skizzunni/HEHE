@@ -254,7 +254,7 @@ class PropTest(unittest.TestCase):
         G.watch(path, get=lambda u: BOX_DONE, sleep=lambda s: None, emit=first.append)
         G.watch(path, get=lambda u: BOX_DONE, sleep=lambda s: None, emit=second.append)      # the Monitor re-armed
         self.assertEqual(first, ["WON Murray 5+ -- had 5 in 20 min (final: SAC 36, SA 35)", "all picks settled: 1-0; all won: YES"])
-        self.assertEqual(second, ["all picks settled: 1-0; all won: YES"])
+        self.assertEqual(second, [])           # 2026-11-27: the closing line is said once too
 
     def test_brief_view(self):
         import json

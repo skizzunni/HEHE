@@ -631,8 +631,15 @@ def watch(path, every=120, get=None, sleep=None, emit=print, remember=True):
         if not open_n:
             res = [seen.get(p.get("label") or json.dumps(p, sort_keys=True), "open").lower() for p in picks]
             sm = summary(picks, res)
-            emit(f"all picks settled: {sm['won']}-{sm['lost']}" + (f", {sm['push']} void" if sm["push"] else "")
-                 + f"; all won: {'YES' if not sm['lost'] and sm['won'] else 'no'}" + _short_clause(picks, res))
+            line = (f"all picks settled: {sm['won']}-{sm['lost']}" + (f", {sm['push']} void" if sm["push"] else "")
+                    + f"; all won: {'YES' if not sm['lost'] and sm['won'] else 'no'}" + _short_clause(picks, res))
+            # 2026-11-27: every 30-minute re-arm re-announced the finished TD card;
+            # the closing line is said once per ticket, like each settle
+            if seen.get("__settled__") != line:
+                seen["__settled__"] = line
+                emit(line)
+                if remember:
+                    _save_seen(path, seen)
             return seen
         (sleep or time.sleep)(every)
 
