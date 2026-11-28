@@ -27,11 +27,15 @@ split 1+ Shots on Goal props by the player's team's shots for, or the
 opponent's shots allowed, over each team's last 4-10 box scores -- bottom third
 vs the rest (README row 2026-11-28: rejected / on watch).
 
+`--by band` (NHL): 1+ Shots on Goal by FanDuel price band (-1500 or shorter,
+-1000 to -1499, -500 to -999), each band against its own price by date half
+(README row 2026-11-28: every band short, the heavy band the closest).
+
 `--by total` (NBA): props split by the game's over/under from ESPN's pickcenter,
 highest third vs the rest and lowest third vs the rest (README row 2026-11-28,
 "NBA player props by the game's total": high on watch, low rejected).
 
-  python3 tools/prop_context.py nba|nhl|nfl [--by chance|weekend|early|position|icetime|teamshots|oppshots|total] [--cache DIR]
+  python3 tools/prop_context.py nba|nhl|nfl [--by chance|weekend|early|position|icetime|teamshots|oppshots|total|band] [--cache DIR]
 """
 import datetime as dt
 import json
@@ -289,6 +293,33 @@ def total_tag(props, totals, third="high"):
     return [(e, t >= hi if third == "high" else t < lo) for e, t in rows]
 
 
+BANDS = ((-10**6, -1500, "-1500 or shorter"), (-1499, -1000, "-1000 to -1499"), (-999, -500, "-500 to -999"))
+
+
+def band_halves(props, bands=BANDS):
+    """[(band, half, won, n, priced, z)] -- each price band against FanDuel's
+    implied chance, split at the band's own median date."""
+    def price(e):
+        try:
+            return int(str(e.get("price")))
+        except ValueError:
+            return None
+    out = []
+    for lo, hi, name in bands:
+        t = [e for e in props if price(e) is not None and lo <= price(e) <= hi]
+        dates = sorted({e["date"] for e in t})
+        if len(dates) < 2:
+            continue
+        mid = dates[len(dates) // 2]
+        for half, f in (("first", lambda d: d < mid), ("second", lambda d: d >= mid)):
+            x = [e for e in t if f(e["date"])]
+            imp = [-price(e) / (-price(e) + 100) for e in x]
+            w = sum(e["status"] == "won" for e in x)
+            ex, v = sum(imp), sum(i * (1 - i) for i in imp)
+            out.append((name, half, w, len(x), ex, (w - ex) / math.sqrt(v) if v else 0.0))
+    return out
+
+
 def weekend_tag(props):
     """[(prop, on_a_weekend)] by the prop's ET date."""
     return [(e, dt.date.fromisoformat(e["date"]).weekday() >= 5) for e in props]
@@ -366,6 +397,11 @@ def main(argv):
             print(f"{('earlier', 'later')[i]} half: {labels[0]} {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
                   f"{labels[1]} {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
         print(f"{len(rows)} of {len(props)} props placed")
+        return
+    if by == "band":
+        sog = [e for e in props if e.get("market") == "Shots on Goal" and e.get("line") == "1+"]
+        for name, half, w, n, ex, z in band_halves(sog):
+            print(f"{name}, {half} half: {w}/{n} against {ex:.1f} priced (z {z:+.2f})")
         return
     if by == "total":
         totals = {}

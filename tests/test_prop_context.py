@@ -109,6 +109,16 @@ class PropContextTest(unittest.TestCase):
         self.assertEqual([b for _, b in C.total_tag(props, totals, "low")], [True, False, False])
         self.assertEqual(C.total_tag(props, {}), [])
 
+    def test_band_halves(self):
+        props = [dict(price="-2000", date="2026-11-01", status="won"), dict(price="-2000", date="2026-11-02", status="lost"),
+                 dict(price="-1200", date="2026-11-01", status="won"), dict(price="-1200", date="2026-11-03", status="won"),
+                 dict(price="+100", date="2026-11-01", status="won")]
+        rows = {(b, h): (w, n) for b, h, w, n, ex, z in C.band_halves(props)}
+        self.assertEqual(rows[("-1500 or shorter", "first")], (1, 1))
+        self.assertEqual(rows[("-1500 or shorter", "second")], (0, 1))
+        self.assertEqual(rows[("-1000 to -1499", "second")], (1, 1))
+        self.assertNotIn(("-500 to -999", "first"), rows)
+
 
 if __name__ == "__main__":
     unittest.main()
