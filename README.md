@@ -39,7 +39,7 @@ are in the dated notes below.
 | Price-blind team ratings vs the market (results only, no odds) | NBA, NHL, NFL | 473 | Market better in every league and both halves; right 25-40% when they disagree: rejected |
 | Streaks, blowout bounce-backs, revenge, 3-in-4 nights, travel, early season, Elo blend (49 rules) | NBA | 4,926 | None positive every season; best z 3.4 only in one half: rejected (2 on watch, weak) |
 | Backup / hot / tired goalies, save% gaps, puck lines, totals, streaks, home dogs (25 rules) | NHL | 5,617 | Goalie news priced in; rejected except 2 on watch |
-| Underdog +1.5 vs a -200 or shorter favourite | NHL | 753 | +10, +6, +2, +7% by season, z +2.86 / +1.76, -22% this season (n 49): **on watch** |
+| Underdog +1.5 vs a -200 or shorter favourite | NHL | 753 | +10, +6, +2, +7% by season, z +2.86 / +1.76, -22% this season (n 49): **on watch**. Forward Nov 23-27 (fresh ESPN pull, 2026-11-28): 3/6 covered, -11.4% -- this season now 50.0% on 40 at -13.0% on that pull's lines (it carries 34 of the lab's 49 games before Nov 23; books differ). Still losing this season |
 | Ticket size, leg count, leg filters, calibration shrink, one-league clumping, Kelly staking | Locks / ladder | 39 cards | Every size cashes at its stated rate; no staking positive in both halves: rejected |
 | Every-game safest lines to 1.5x | 8 AM pools | 14 days | 11/14 vs 6.7 expected, beat the ladder 9 days to 2 (z 2.1): **on watch, the user's call** |
 | Line moves, key numbers, weather, primetime, divisional, blowouts (51 rules) | NFL, college | 2022-26 | None positive every season with z 2.8 both halves: rejected (8 on watch) |
