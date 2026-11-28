@@ -28,6 +28,12 @@ class ForwardCheckTest(unittest.TestCase):
         self.assertEqual(rows[("nba", "under")], (1, 1, 2))
         self.assertEqual(rows[("nba", "over")], (1, 1, 1))
 
+    def test_grade_one_survives_a_bad_ticket(self):
+        def bad(path):
+            raise ValueError("half-written")
+        self.assertIsNone(F.grade_one("x.json", bad))
+        self.assertEqual(F.grade_one("x.json", lambda p: ([1], ["won"], {})), ([1], ["won"]))
+
     def test_implied_and_day(self):
         self.assertAlmostEqual(F.implied("-1500"), 0.9375)
         self.assertAlmostEqual(F.implied("+150"), 0.4)

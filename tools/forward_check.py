@@ -97,6 +97,17 @@ def by_scoring(found, scoring):
     return rows
 
 
+def grade_one(path, grade_fn):
+    """(picks, results) for one saved ticket, or None when it cannot be read
+    or graded -- one bad file (a half-written save, a feed down) must not
+    stop the whole forward count."""
+    try:
+        picks, results, _ = grade_fn(path)
+        return picks, results
+    except Exception:
+        return None
+
+
 def day_of(folder):
     """'slate_nov27' -> '11-27' (sortable within a season); None if unreadable."""
     b = os.path.basename(folder).replace("slate_", "")
@@ -110,7 +121,7 @@ def main(argv):
     import grade_picks
     root = argv[argv.index("--root") + 1] if "--root" in argv else os.path.join(os.path.dirname(HERE), "work")
     since = (argv[argv.index("--since") + 1] if "--since" in argv else "2026-11-24")[5:]
-    graded = []
+    graded, skipped = [], []
     for folder in sorted(glob.glob(os.path.join(root, "slate_*"))):
         day = day_of(folder)
         if not day or day < since:
@@ -118,10 +129,14 @@ def main(argv):
         for name in ("ticket_safe.json", "ticket.json"):
             path = os.path.join(folder, name)
             if os.path.exists(path):
-                picks, results, _ = grade_picks.main(path)
-                graded.append((day, picks, results))
+                g = grade_one(path, grade_picks.main)
+                if g:
+                    graded.append((day,) + g)
+                else:
+                    skipped.append(os.path.relpath(path))
     found = legs(graded)
-    print(f"{len(found)} settled prop legs, each once per day, from {len(graded)} saved tickets")
+    print(f"{len(found)} settled prop legs, each once per day, from {len(graded)} saved tickets"
+          + (f" (could not grade: {', '.join(skipped)})" if skipped else ""))
     for lg, band, won, n, ex, z in table(found):
         print(f"  {lg} {band}: {won}/{n} against {ex:.1f} priced (z {z:+.2f})")
     if "--scoring" in argv:
