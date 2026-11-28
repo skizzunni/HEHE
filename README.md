@@ -1443,6 +1443,15 @@ own book's lines): 2022 52.5% (+0.0%), 2023 51.6% (-1.6%), 2024 38.3% (-26.1%),
 2025 56.5% (+7.4%), 2026 57.8% (+10.5%). Two good seasons after a very bad one
 is not an edge -- the band was also picked by looking at four. Nothing changes.
 
+**College football rivalry week (games Nov 22-30), five seasons (2026-11-28):
+no fade.** Today's slate is the last regular-season Saturday, where "anything
+happens in a rivalry game" says the favourite is overrated. Favourites' straight
+wins against the no-vig moneyline, rivalry week vs every other week: 2022 45 vs
+45.1 (z -0.04; other weeks -1.36), 2023 49 vs 45.0 (+1.15; +0.79), 2024 86 vs
+85.5 (+0.10; -0.21), 2025 176 vs 168.9 (+1.08; +1.44); against the spread they
+covered 44.3%, 51.6%, 52.4%, 54.9%. Rivalry-week favourites win what their
+price says, as in every other week -- the underdog side is no better: **rejected**.
+
 **NFL against the closing spread (2026-11-10): supports the pre-registered
 test, adopts nothing.** 1,086 NFL games 2021-24 with closes; 456 with a
 closing spread both sides agree on (2023 and 2024 only).
