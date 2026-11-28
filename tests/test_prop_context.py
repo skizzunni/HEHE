@@ -99,6 +99,16 @@ class PropContextTest(unittest.TestCase):
         self.assertEqual([e["gid"] for e, _ in rows], ["nhl:5", "nhl:6"])
         self.assertEqual(C.shots_tag(props, teams, "opp"), [])   # opponents never reach 4 earlier games
 
+    def test_game_total_and_total_tag(self):
+        get = lambda u: {"pickcenter": [{"provider": "x"}, {"overUnder": 231.5}]}
+        self.assertEqual(C.game_total("nba", "1", get), 231.5)
+        self.assertIsNone(C.game_total("nba", "1", lambda u: {}))
+        totals = {"1": 220.0, "2": 228.0, "3": 236.0, "4": None}
+        props = [dict(gid=f"nba:{i}") for i in "1234"]
+        self.assertEqual([b for _, b in C.total_tag(props, totals, "high")], [False, False, True])
+        self.assertEqual([b for _, b in C.total_tag(props, totals, "low")], [True, False, False])
+        self.assertEqual(C.total_tag(props, {}), [])
+
 
 if __name__ == "__main__":
     unittest.main()

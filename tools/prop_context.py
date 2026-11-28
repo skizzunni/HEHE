@@ -27,7 +27,11 @@ split 1+ Shots on Goal props by the player's team's shots for, or the
 opponent's shots allowed, over each team's last 4-10 box scores -- bottom third
 vs the rest (README row 2026-11-28: rejected / on watch).
 
-  python3 tools/prop_context.py nba|nhl|nfl [--by chance|weekend|early|position|icetime|teamshots|oppshots] [--cache DIR]
+`--by total` (NBA): props split by the game's over/under from ESPN's pickcenter,
+highest third vs the rest and lowest third vs the rest (README row 2026-11-28,
+"NBA player props by the game's total": high on watch, low rejected).
+
+  python3 tools/prop_context.py nba|nhl|nfl [--by chance|weekend|early|position|icetime|teamshots|oppshots|total] [--cache DIR]
 """
 import datetime as dt
 import json
@@ -260,6 +264,31 @@ def shots_tag(props, teams, side="opp", games=10, min_games=4):
     return [(e, v < cut) for e, v in vals]
 
 
+def game_total(lg, eid, get=_get):
+    """The game's over/under from ESPN's pickcenter (the first provider with
+    one), or None."""
+    s = get(SITE.format(SPORT[lg], f"summary?event={eid}"))
+    for pc in s.get("pickcenter") or []:
+        try:
+            return float(pc["overUnder"])
+        except (KeyError, TypeError, ValueError):
+            continue
+    return None
+
+
+def total_tag(props, totals, third="high"):
+    """[(prop, game_in_that_third)] for props whose game has a total:
+    third "high" -- total at or above the upper-third cut; "low" -- under the
+    lower-third cut. totals: {event id: over/under}."""
+    rows = [(e, totals.get(e["gid"].split(":", 1)[1])) for e in props]
+    rows = [(e, t) for e, t in rows if t]
+    if not rows:
+        return []
+    v = sorted(t for _, t in rows)
+    lo, hi = v[len(v) // 3], v[2 * len(v) // 3]
+    return [(e, t >= hi if third == "high" else t < lo) for e, t in rows]
+
+
 def weekend_tag(props):
     """[(prop, on_a_weekend)] by the prop's ET date."""
     return [(e, dt.date.fromisoformat(e["date"]).weekday() >= 5) for e in props]
@@ -337,6 +366,26 @@ def main(argv):
             print(f"{('earlier', 'later')[i]} half: {labels[0]} {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
                   f"{labels[1]} {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
         print(f"{len(rows)} of {len(props)} props placed")
+        return
+    if by == "total":
+        totals = {}
+        for eid in sorted({e["gid"].split(":", 1)[1] for e in props}):
+            f = os.path.join(cache, f"total-{lg}-{eid}.json") if cache else None
+            if f and os.path.exists(f):
+                totals[eid] = json.load(open(f))
+                continue
+            try:
+                totals[eid] = game_total(lg, eid)
+            except Exception:
+                continue
+            if f:
+                os.makedirs(cache, exist_ok=True)
+                json.dump(totals[eid], open(f, "w"))
+            time.sleep(0.1)
+        for third in ("high", "low"):
+            for i, (a, r, z) in enumerate(compare(total_tag(props, totals, third))):
+                print(f"{('earlier', 'later')[i]} half: {third}est third of totals {a[0]}/{a[1]} "
+                      f"({100 * a[2]:+.1f} vs price), rest {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
         return
     if by in ("teamshots", "oppshots"):
         if lg != "nhl":
