@@ -14,6 +14,9 @@ the evidence a rule needs before it changes a ticket.
   python3 tools/both_sides.py grade                       settle finished games
   python3 tools/both_sides.py report                      over vs under
   python3 tools/both_sides.py markets                     the same by league and market
+  python3 tools/both_sides.py games                       by league and day: each side vs
+                                                          FanDuel's price (z) and in how many
+                                                          games the over fell short
 """
 import datetime as dt
 import json
@@ -153,6 +156,40 @@ def by_market(book=None, min_n=10):
         "both sides by market: no market has 10 graded lines a side yet"
 
 
+def by_game(book=None):
+    """Per league and day: over and under won against FanDuel's implied chance
+    (z), and the count of games where the overs fell short of it. 2026-11-28:
+    lines in one game rise and fall together (pace, blowouts), so 459 NBA
+    lines on one night were about six results -- the game count is the honest
+    sample size; this prints it instead of leaving it to hand arithmetic."""
+    import math
+    book = load() if book is None else book
+    done = [e for e in book.values() if e.get("status") in ("won", "lost") and e.get("imp")]
+    keys = sorted({(e.get("league"), e["date"]) for e in done}, key=str)
+    out = []
+    for lg, day in keys:
+        cells = []
+        for side in ("over", "under"):
+            t = [e for e in done if e.get("league") == lg and e["date"] == day and e["side"] == side]
+            if not t:
+                continue
+            w = sum(e["status"] == "won" for e in t)
+            ex = sum(e["imp"] for e in t)
+            v = sum(e["imp"] * (1 - e["imp"]) for e in t)
+            z = (w - ex) / math.sqrt(v) if v else 0.0
+            cells.append(f"{side} {w}/{len(t)} vs {ex:.1f} priced (z {z:+.2f}, return "
+                         f"{100 * sum(map(_ret, t)) / len(t):+.1f}%)")
+        games = {}
+        for e in done:
+            if e.get("league") == lg and e["date"] == day and e["side"] == "over":
+                g = games.setdefault(e["gid"], [0, 0.0])
+                g[0] += e["status"] == "won"
+                g[1] += e["imp"]
+        short = sum(w < ex for w, ex in games.values())
+        out.append(f"  {lg} {day}: " + "; ".join(cells) + f"; overs short in {short} of {len(games)} games")
+    return "\n".join(["both sides by league and day:"] + out) if out else "both sides by day: nothing graded yet"
+
+
 def main(argv):
     cmd = argv[1] if len(argv) > 1 else "report"
     if cmd == "record":
@@ -164,8 +201,11 @@ def main(argv):
         grade()
         print(report())
         print(by_market())
+        print(by_game())
     elif cmd == "markets":
         print(by_market())
+    elif cmd == "games":
+        print(by_game())
     else:
         print(report())
 

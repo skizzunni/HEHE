@@ -96,5 +96,18 @@ class OneDay(unittest.TestCase):
         self.assertNotIn("second", r)
 
 
+class ByGameTest(unittest.TestCase):
+    def test_by_game_counts_games_short(self):
+        mk = lambda k, gid, side, st: (k, dict(league="nba", date="2026-11-27", gid=gid, side=side,
+                                                status=st, imp=0.5, price="-110"))
+        book = dict([mk("a", "nba:1", "over", "lost"), mk("b", "nba:1", "under", "won"),
+                     mk("c", "nba:2", "over", "won"), mk("d", "nba:2", "under", "lost"),
+                     mk("e", "nba:2", "over", "won")])
+        out = B.by_game(book)
+        self.assertIn("nba 2026-11-27: over 2/3 vs 1.5 priced", out)
+        self.assertIn("under 1/2 vs 1.0 priced (z +0.00", out)
+        self.assertIn("overs short in 1 of 2 games", out)
+        self.assertEqual(B.by_game({}), "both sides by day: nothing graded yet")
+
 if __name__ == "__main__":
     unittest.main()
