@@ -247,7 +247,9 @@ def main(argv):
         grade()
         print(report())
         print(by_market())
-        print(by_game())
+        # 2026-11-28: the nightly grade sets each night beside how its games scored
+        # (Nov 27 NBA: overs short in 9 of 10, and 8 of 10 games went under their total)
+        print(by_game(totals=True))
     elif cmd == "markets":
         print(by_market())
     elif cmd == "games":

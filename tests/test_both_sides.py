@@ -109,6 +109,15 @@ class ByGameTest(unittest.TestCase):
         self.assertIn("overs short in 1 of 2 games", out)
         self.assertEqual(B.by_game({}), "both sides by day: nothing graded yet")
 
+    def test_grade_prints_totals(self):
+        import io
+        from contextlib import redirect_stdout
+        with patch.object(B, "grade"), patch.object(B, "report", return_value="r"), \
+                patch.object(B, "by_market", return_value="m"), patch.object(B, "by_game", return_value="g") as bg:
+            with redirect_stdout(io.StringIO()):
+                B.main(["x", "grade"])
+        bg.assert_called_once_with(totals=True)
+
     def test_totals_line(self):
         def get(u):
             eid = u.rsplit("=", 1)[1]
