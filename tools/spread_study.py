@@ -37,20 +37,31 @@ def rows(G):
 BANDS = ((0.5, 3.5), (3.5, 7.5), (7.5, 14), (14, 21), (21, 99))
 
 
+def verdict(rois):
+    """' -- ahead in every season' when every season's flat return is above
+    zero (the bar a band must clear before it is called a rule), else
+    ' -- not ahead in every season'. 2026-11-28: college small dogs led in
+    2023-24 and lost in 2025 and 2026; the line now says which kind it is."""
+    if len(rois) < 2:
+        return " -- one season only"
+    return " -- ahead in every season" if all(r > 0 for r in rois) else " -- not ahead in every season"
+
+
 def table(R):
     seasons = sorted({r["season"] for r in R})
     lines = []
     for lo, hi in BANDS:
         b = [r for r in R if lo <= r["pts"] < hi]
-        cells = []
+        cells, rois = [], []
         for s in seasons:
             x = [r for r in b if r["season"] == s]
             if not x:
                 continue
             cov = 100 * sum(r["dog_cov"] for r in x) / len(x)
             roi = 100 * sum((dec(r["dp"]) - 1) if r["dog_cov"] else -1 for r in x) / len(x)
+            rois.append(roi)
             cells.append(f"{s} n{len(x)} dog covered {cov:.1f}% roi {roi:+.1f}%")
-        lines.append(f"dog getting {lo}-{hi}: " + " | ".join(cells))
+        lines.append(f"dog getting {lo}-{hi}: " + " | ".join(cells) + (verdict(rois) if cells else ""))
     return lines
 
 

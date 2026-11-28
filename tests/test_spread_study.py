@@ -28,6 +28,15 @@ class SpreadStudy(unittest.TestCase):
              dict(season="2024", pts=10, dog_cov=False, home_dog=True, dp=-110, fp=-110)]
         line = [x for x in s.table(R) if x.startswith("dog getting 7.5-14")][0]
         self.assertIn("2024 n2 dog covered 50.0% roi -4.5%", line)
+        self.assertTrue(line.endswith(" -- one season only"))
+
+    def test_verdict(self):
+        self.assertEqual(s.verdict([0.2, 6.1]), " -- ahead in every season")
+        self.assertEqual(s.verdict([0.2, -9.2]), " -- not ahead in every season")
+        R = [dict(season=y, pts=2, dog_cov=c, home_dog=True, dp=-110, fp=-110)
+             for y, c in (("2023", True), ("2024", True), ("2025", False))]
+        line = [x for x in s.table(R) if x.startswith("dog getting 0.5-3.5")][0]
+        self.assertTrue(line.endswith(" -- not ahead in every season"))
 
 
 if __name__ == "__main__":
