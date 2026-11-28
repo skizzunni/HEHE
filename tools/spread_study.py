@@ -3,6 +3,10 @@ and season, on tools/nba_history.py output with spreads (football).
 Pushes are dropped; returns are a flat $1 at the closing spread price.
 
     python tools/spread_study.py HISTORY.json
+
+Also reads the strategy lab's football files (work/strategy_lab/football/
+nfl.json and ncaaf.json: odds keys h_sp / h_sp_pr / a_sp_pr, a list or a
+dict, a 'season' field) -- 2026-11-28, the five-season NFL dog rows.
 """
 import json
 import sys
@@ -12,25 +16,37 @@ def dec(a):
     return 1 + (a / 100 if a > 0 else 100 / -a)
 
 
+def _spread(o):
+    """(home spread, home price, away price) from either layout, or None."""
+    if o.get("home_spread") is not None:
+        return o["home_spread"], o.get("home_spread_price"), o.get("away_spread_price")
+    if o.get("h_sp") is not None:
+        return o["h_sp"], o.get("h_sp_pr") or -110, o.get("a_sp_pr") or -110
+    return None
+
+
 def rows(G):
     out = []
-    for g in G.values():
+    for g in (G.values() if isinstance(G, dict) else G):
         o = g.get("odds") or {}
-        if "home_spread" not in o:
+        sp = _spread(o)
+        if not sp:
             continue
-        hs = o["home_spread"]
+        hs, hp, ap = sp
         if hs == 0:
             continue
-        margin = g["home"]["score"] - g["away"]["score"]          # home points minus away points
+        try:
+            margin = g["home"]["score"] - g["away"]["score"]      # home points minus away points
+        except (KeyError, TypeError):
+            continue
         cover = margin + hs                                       # >0 home covers, <0 away covers
         if cover == 0:
             continue
         home_dog = hs > 0
         dog_cov = (cover > 0) == home_dog
-        season = g["day"][:4] if g["day"][5:7] >= "06" else str(int(g["day"][:4]) - 1)
+        season = str(g.get("season") or (g["day"][:4] if g["day"][5:7] >= "06" else int(g["day"][:4]) - 1))
         out.append(dict(season=season, pts=abs(hs), dog_cov=dog_cov, home_dog=home_dog,
-                        dp=o["home_spread_price"] if home_dog else o["away_spread_price"],
-                        fp=o["away_spread_price"] if home_dog else o["home_spread_price"]))
+                        dp=hp if home_dog else ap, fp=ap if home_dog else hp))
     return out
 
 

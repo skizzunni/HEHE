@@ -30,6 +30,15 @@ class SpreadStudy(unittest.TestCase):
         self.assertIn("2024 n2 dog covered 50.0% roi -4.5%", line)
         self.assertTrue(line.endswith(" -- one season only"))
 
+    def test_lab_layout(self):
+        G = [dict(day="2025-10-12", season=2025, home=dict(score=20), away=dict(score=24),
+                  odds=dict(h_sp=9.5, h_sp_pr=-105, a_sp_pr=-115)),
+             dict(day="2025-10-12", season=2025, home=dict(score=None), away=dict(score=None),
+                  odds=dict(h_sp=3.0))]
+        R = s.rows(G)
+        self.assertEqual([(r["season"], r["pts"], r["dog_cov"], r["home_dog"], r["dp"]) for r in R],
+                         [("2025", 9.5, True, True, -105)])
+
     def test_verdict(self):
         self.assertEqual(s.verdict([0.2, 6.1]), " -- ahead in every season")
         self.assertEqual(s.verdict([0.2, -9.2]), " -- not ahead in every season")
