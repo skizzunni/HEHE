@@ -22,9 +22,12 @@ NHL only, from ESPN box scores (position and ice time per player per game):
 `--by position` splits Shots on Goal props by defencemen vs forwards (README
 row 2026-11-28, rejected); `--by icetime` splits 1+ Shots on Goal props by the
 player's average ice time over his last 3-5 box scores, under ICE_CUT minutes
-vs more (README row 2026-11-28, on watch).
+vs more (README row 2026-11-28, on watch). `--by teamshots` / `--by oppshots`
+split 1+ Shots on Goal props by the player's team's shots for, or the
+opponent's shots allowed, over each team's last 4-10 box scores -- bottom third
+vs the rest (README row 2026-11-28: rejected / on watch).
 
-  python3 tools/prop_context.py nba|nhl|nfl [--by chance|weekend|early|position|icetime] [--cache DIR]
+  python3 tools/prop_context.py nba|nhl|nfl [--by chance|weekend|early|position|icetime|teamshots|oppshots] [--cache DIR]
 """
 import datetime as dt
 import json
@@ -200,6 +203,63 @@ def icetime_tag(props, boxes, cut=ICE_CUT, games=ICE_GAMES, min_games=3):
     return out
 
 
+def nhl_team_box(eid, get=_get):
+    """{"shots": {team abbr: shots on goal}, "players": {normalised name: team abbr}}
+    from one NHL game's ESPN box score."""
+    import props_ledger as PL
+    s = get(SITE.format(SPORT["nhl"], f"summary?event={eid}"))
+    box = s.get("boxscore") or {}
+    shots = {}
+    for t in box.get("teams") or []:
+        st = {x.get("name"): x.get("displayValue") for x in t.get("statistics") or []}
+        v = st.get("shotsTotal")
+        try:
+            shots[t["team"]["abbreviation"]] = float(v)
+        except (TypeError, ValueError):
+            shots[t["team"]["abbreviation"]] = None
+    players = {}
+    for t in box.get("players") or []:
+        for grp in t.get("statistics") or []:
+            for a in grp.get("athletes") or []:
+                players[PL.norm_name(a["athlete"]["displayName"])] = t["team"]["abbreviation"]
+    return {"shots": shots, "players": players}
+
+
+def shots_tag(props, teams, side="opp", games=10, min_games=4):
+    """[(prop, in_bottom_third)] -- side "team": the player's team's shots for;
+    "opp": the opponent's shots allowed; each averaged over that team's last
+    `games` box scores dated before the prop (at least min_games).
+    teams: {event id: nhl_team_box()}; event dates come from the props."""
+    import collections
+    import props_ledger as PL
+    day = {e["gid"].split(":", 1)[1]: e["date"] for e in props}
+    hist = collections.defaultdict(list)          # abbr -> [(date, shots for, shots against)]
+    for eid, d in teams.items():
+        ab = list(d["shots"])
+        if len(ab) != 2 or eid not in day:
+            continue
+        for a, o in (ab, ab[::-1]):
+            hist[a].append((day[eid], d["shots"][a], d["shots"][o]))
+
+    def avg(tm, date, i):
+        v = [x[i] for x in sorted(x for x in hist[tm] if x[0] < date)[-games:] if x[i] is not None]
+        return sum(v) / len(v) if len(v) >= min_games else None
+    vals = []
+    for e in props:
+        d = teams.get(e["gid"].split(":", 1)[1])
+        tm = d and d["players"].get(PL.norm_name(e["name"]))
+        if not tm or len(d["shots"]) != 2:
+            continue
+        opp = next(x for x in d["shots"] if x != tm)
+        a = avg(tm, e["date"], 1) if side == "team" else avg(opp, e["date"], 2)
+        if a is not None:
+            vals.append((e, a))
+    if not vals:
+        return []
+    cut = sorted(v for _, v in vals)[len(vals) // 3]
+    return [(e, v < cut) for e, v in vals]
+
+
 def weekend_tag(props):
     """[(prop, on_a_weekend)] by the prop's ET date."""
     return [(e, dt.date.fromisoformat(e["date"]).weekday() >= 5) for e in props]
@@ -276,6 +336,32 @@ def main(argv):
         for i, (a, r, z) in enumerate(compare(rows)):
             print(f"{('earlier', 'later')[i]} half: {labels[0]} {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
                   f"{labels[1]} {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
+        print(f"{len(rows)} of {len(props)} props placed")
+        return
+    if by in ("teamshots", "oppshots"):
+        if lg != "nhl":
+            print("--by teamshots / oppshots are NHL only")
+            return
+        props = [e for e in props if e.get("market") == "Shots on Goal" and e.get("line") == "1+"]
+        teams = {}
+        for eid in sorted({e["gid"].split(":", 1)[1] for e in props}):
+            f = os.path.join(cache, f"team-{eid}.json") if cache else None
+            if f and os.path.exists(f):
+                teams[eid] = json.load(open(f))
+                continue
+            try:
+                teams[eid] = nhl_team_box(eid)
+            except Exception:
+                continue
+            if f:
+                os.makedirs(cache, exist_ok=True)
+                json.dump(teams[eid], open(f, "w"))
+            time.sleep(0.1)
+        rows = shots_tag(props, teams, "team" if by == "teamshots" else "opp")
+        lab = "team shoots least (bottom third)" if by == "teamshots" else "opponent allows fewest (bottom third)"
+        for i, (a, r, z) in enumerate(compare(rows)):
+            print(f"{('earlier', 'later')[i]} half: {lab} {a[0]}/{a[1]} ({100 * a[2]:+.1f} vs price), "
+                  f"rest {r[0]}/{r[1]} ({100 * r[2]:+.1f}), z {z:+.2f}")
         print(f"{len(rows)} of {len(props)} props placed")
         return
     days = sorted(e["date"] for e in props)

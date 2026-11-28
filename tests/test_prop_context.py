@@ -81,6 +81,24 @@ class PropContextTest(unittest.TestCase):
         ice = C.icetime_tag(props, boxes)          # only game 4 has 3 earlier box scores
         self.assertEqual([(e["name"], u) for e, u in ice], [("Steven Stamkos", True), ("Roman Josi", False)])
 
+    def test_nhl_team_box_and_shots_tag(self):
+        def get(u):
+            eid = int(u.rsplit("=", 1)[1])
+            a, b = ("BOS", "TOR") if eid % 2 else ("BOS", "MTL")
+            return {"boxscore": {
+                "teams": [{"team": {"abbreviation": a}, "statistics": [{"name": "shotsTotal", "displayValue": "30"}]},
+                          {"team": {"abbreviation": b}, "statistics": [{"name": "shotsTotal",
+                                                                         "displayValue": str(10 + eid)}]}],
+                "players": [{"team": {"abbreviation": a}, "statistics": [{"athletes": [
+                    {"athlete": {"displayName": "David Pastrnak"}}]}]}]}}
+        teams = {str(i): C.nhl_team_box(str(i), get) for i in range(1, 7)}
+        self.assertEqual(teams["1"]["shots"], {"BOS": 30.0, "TOR": 11.0})
+        self.assertEqual(teams["1"]["players"], {"david pastrnak": "BOS"})
+        props = [dict(gid=f"nhl:{i}", name="David Pastrnak", date=f"2026-11-0{i}") for i in range(1, 7)]
+        rows = C.shots_tag(props, teams, "team")            # only game 5 and 6 have 4 earlier BOS games
+        self.assertEqual([e["gid"] for e, _ in rows], ["nhl:5", "nhl:6"])
+        self.assertEqual(C.shots_tag(props, teams, "opp"), [])   # opponents never reach 4 earlier games
+
 
 if __name__ == "__main__":
     unittest.main()
