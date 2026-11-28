@@ -24,6 +24,9 @@ class OtherSide(unittest.TestCase):
 
     def test_text(self):
         self.assertIn("PHI +8.5 -- PHI @ DAL", O.text(O.dogs(ROWS)))
+        self.assertIn("PHI +8.5 -- PHI @ DAL (road dog: 89/170", O.text(O.dogs(ROWS)))
+        home = [dict(ROWS[0], line="PHI -9.5")]                # DAL the home dog
+        self.assertIn("DAL +9.5 -- PHI @ DAL (home dog: 47/72", O.text(O.dogs(home)))
         self.assertEqual(O.text([]), "Other side: no NFL underdog getting 7.5-14 today.")
         self.assertEqual(O.text([], rows=[dict(lg="nfl", game="DEN @ PIT", line="PIT -2.5"),
                                           dict(lg="nba", game="X @ Y", line="Y -3")]),

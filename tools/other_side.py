@@ -98,7 +98,22 @@ def text(found, forward=None, rows=None):
                 + (f" NFL lines: {'; '.join(seen)}." if seen else ""))
     head = note(forward=forward) if forward else NOTE
     return "\n".join(["Other side (information only): " + head] +
-                     [f"  {dog} +{pts:g} -- {r['game']}" for r, dog, pts in found])
+                     [f"  {dog} +{pts:g} -- {r['game']}{venue_note(r, dog)}" for r, dog, pts in found])
+
+
+HOME_NOTE = " (home dog: 47/72 covered over 2022-26, ahead in 3 of 5 seasons)"
+ROAD_NOTE = " (road dog: 89/170 covered over 2022-26, about break-even)"
+
+
+def venue_note(r, dog):
+    """Home or road beside a dog -- README 2026-11-28: the 7.5-14 count's edge
+    sits with home dogs (47/72) while road dogs ran about break-even (89/170).
+    Information only; neither cleared the bar."""
+    if dog == r.get("home"):
+        return HOME_NOTE
+    if dog == r.get("away"):
+        return ROAD_NOTE
+    return ""
 
 
 def main(argv):
